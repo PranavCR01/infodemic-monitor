@@ -1,0 +1,36 @@
+# Base dependencies for Railway deployment.
+# ML deps (faster-whisper, ctranslate2, easyocr, opencv) are intentionally
+# excluded — WHISPER_PROVIDER=openai and OCR is disabled on Railway.
+# For local dev with ML: pip install -e ".[ml]"
+
+# Web / API
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pydantic>=2.6
+pydantic-settings>=2.2
+python-multipart>=0.0.9
+
+# Task queue
+celery>=5.3
+redis>=5.0
+
+# Database
+sqlalchemy>=2.0
+asyncpg>=0.29
+psycopg2-binary>=2.9
+alembic>=1.13
+aiofiles>=23.0
+
+# Storage / auth
+supabase>=2.0.0
+PyJWT>=2.8.0
+httpx>=0.26
+
+# Inference
+anthropic>=0.28
+openai>=1.13
+tiktoken>=0.6
+
+# Utilities
+requests>=2.31
+tenacity>=8.2
