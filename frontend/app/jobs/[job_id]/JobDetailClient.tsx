@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { apiFetch } from "../../../lib/api";
+import { SignOutButton } from "../../components/SignOutButton";
 
 type JobStatus = "PENDING" | "STARTED" | "SUCCESS" | "FAILED";
 
@@ -116,6 +117,7 @@ export function JobDetailClient({
             <Link href="/jobs" className="text-gray-500 hover:text-gray-900 transition-colors">
               ← Job History
             </Link>
+            <SignOutButton />
           </nav>
         </div>
       </header>

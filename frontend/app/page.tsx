@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { apiFetch } from "../lib/api";
+import { SignOutButton } from "./components/SignOutButton";
 
 export default function UploadPage() {
   const [file, setFile] = useState<File | null>(null);
@@ -78,10 +79,11 @@ function PageHeader() {
           </div>
           <span className="font-semibold text-gray-900 text-sm">Infodemic Monitor</span>
         </div>
-        <nav className="text-sm">
+        <nav className="flex items-center gap-4 text-sm">
           <Link href="/jobs" className="text-gray-500 hover:text-gray-900 transition-colors">
             Job History
           </Link>
+          <SignOutButton />
         </nav>
       </div>
     </header>
