@@ -82,7 +82,7 @@ async def ground_transcript(transcript: str) -> list[PubMedCitation]:
 
     async with httpx.AsyncClient(timeout=15) as client:
         results = await asyncio.gather(
-            *[_query_claim(client, claim) for claim in claims],
+            *[_staggered_query(client, claim, i) for i, claim in enumerate(claims)],
             return_exceptions=True,
         )
 
@@ -146,6 +146,14 @@ def _parse_claims(text: str) -> list[str]:
         except Exception:
             continue
     return []
+
+
+async def _staggered_query(
+    client: httpx.AsyncClient, claim: str, index: int
+) -> list[PubMedCitation]:
+    """Delay each claim by index * 0.5 s so NCBI requests are staggered, not simultaneous."""
+    await asyncio.sleep(index * 0.5)
+    return await _query_claim(client, claim)
 
 
 @retry(
