@@ -1,0 +1,32 @@
+# Git
+.git/
+.gitignore
+
+# Secrets — never send to Docker daemon
+backend/.env
+frontend/.env.local
+.env
+.env.local
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+backend/who_infodemic_monitor_backend.egg-info/
+backend/dist/
+backend/build/
+backend/.pytest_cache/
+
+# Frontend build artifacts — not needed for backend image
+frontend/node_modules/
+frontend/.next/
+
+# Slice docs and planning — not needed in image
+slices/
+.railway/
+
+# OS
+.DS_Store
+Thumbs.db

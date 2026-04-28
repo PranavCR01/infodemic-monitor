@@ -3,32 +3,43 @@ name = "who-infodemic-monitor-backend"
 version = "0.1.0"
 requires-python = ">=3.11"
 dependencies = [
+  # Web / API
   "fastapi>=0.110",
   "uvicorn[standard]>=0.27",
   "pydantic>=2.6",
   "pydantic-settings>=2.2",
   "python-multipart>=0.0.9",
+  # Task queue
   "celery>=5.3",
   "redis>=5.0",
+  # Database
   "sqlalchemy>=2.0",
   "psycopg[binary]>=3.1",
+  "alembic>=1.13",
   "aiofiles>=23.0",
+  # Storage / auth
+  "supabase>=2.0.0",
+  "PyJWT>=2.8.0",
+  "httpx>=0.26",
+  # Inference
+  "anthropic>=0.28",
+  "openai>=1.13",
+  "tiktoken>=0.6",
+  # Utilities
+  "requests>=2.31",
+  "tenacity>=8.2",
+]
+
+[project.optional-dependencies]
+# Heavy ML deps — only needed when WHISPER_PROVIDER=faster_whisper or OCR is enabled.
+# Not installed on Railway (WHISPER_PROVIDER=openai, OCR disabled).
+# Install locally with: pip install -e ".[ml]"
+ml = [
   "faster-whisper>=1.0.1",
   "ctranslate2>=4.3.1",
   "easyocr>=1.7.0",
   "opencv-python-headless>=4.9",
-  "anthropic>=0.28",
-  "openai>=1.13",
-  "tiktoken>=0.6",
-  "requests>=2.31",
-  "httpx>=0.26",
-  "tenacity>=8.2",
-  "alembic>=1.13",
-  "supabase>=2.0.0",
-  "PyJWT>=2.8.0",
 ]
-
-[project.optional-dependencies]
 test = [
   "pytest>=8.0",
 ]

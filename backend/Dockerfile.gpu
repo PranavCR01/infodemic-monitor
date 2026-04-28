@@ -27,7 +27,7 @@ RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.11 1 \
 WORKDIR /app
 
 COPY backend/ ./backend/
-RUN pip install --no-cache-dir -e ./backend
+RUN pip install --no-cache-dir -e "./backend[ml]"
 
 # Pre-download Whisper weights (GPU not available at build time — CPU mode)
 RUN python -c "from faster_whisper import WhisperModel; WhisperModel('base', device='cpu', compute_type='int8')"
