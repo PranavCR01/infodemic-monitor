@@ -2,9 +2,9 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    # Database
-    DATABASE_URL: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/infodemic"
-    DATABASE_URL_SYNC: str = "postgresql://postgres:postgres@localhost:5432/infodemic"
+    # Database — no defaults: missing env var must fail loudly, not connect to localhost
+    DATABASE_URL: str
+    DATABASE_URL_SYNC: str
 
     # Redis
     REDIS_URL: str = "redis://localhost:6379"

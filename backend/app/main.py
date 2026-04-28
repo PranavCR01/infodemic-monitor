@@ -13,7 +13,8 @@ async def lifespan(app: FastAPI):
         from alembic.config import Config as AlembicConfig
 
         try:
-            alembic_cfg = AlembicConfig("alembic.ini")
+            # alembic.ini lives at /app/backend/alembic.ini in the container
+            alembic_cfg = AlembicConfig("/app/backend/alembic.ini")
             alembic_command.upgrade(alembic_cfg, "head")
         except Exception:
             from app.db.base import Base
