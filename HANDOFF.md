@@ -129,16 +129,16 @@ Upstash Redis (TLS)   ← Celery broker + result backend
 
 | Variable | What it is | Where to find it | Example format |
 |---|---|---|---|
-| `DATABASE_URL` | Supabase pooler connection (async) | Supabase → Settings → Database → Transaction pooler | `postgresql+asyncpg://postgres.xxxx:pw%40@aws-x.pooler.supabase.com:6543/postgres` |
-| `DATABASE_URL_SYNC` | Supabase direct connection (sync, for Alembic) | Supabase → Settings → Database → Direct connection | `postgresql://postgres.xxxx:pw@db.xxxx.supabase.co:5432/postgres` |
-| `REDIS_URL` | Upstash Redis TLS URL | Upstash Console → your DB | `rediss://default:TOKEN@host.upstash.io:6379` |
-| `SUPABASE_URL` | Supabase project URL | Supabase → Settings → API → Project URL | `https://xxxx.supabase.co` |
-| `SUPABASE_SERVICE_KEY` | Supabase service role key (server-side only) | Supabase → Settings → API → service_role | `sb_secret_...` |
+| `DATABASE_URL` | Supabase pooler connection (async) | Supabase → Settings → Database → Transaction pooler | `postgresql+asyncpg://postgres.YOUR_REF:YOUR_PASSWORD@aws-0-region.pooler.supabase.com:6543/postgres` |
+| `DATABASE_URL_SYNC` | Supabase direct connection (sync, for Alembic) | Supabase → Settings → Database → Direct connection | `postgresql://postgres.YOUR_REF:YOUR_PASSWORD@db.YOUR_REF.supabase.co:5432/postgres` |
+| `REDIS_URL` | Upstash Redis TLS URL | Upstash Console → your DB | `rediss://default:YOUR_UPSTASH_TOKEN@YOUR_DB_NAME.upstash.io:6379` |
+| `SUPABASE_URL` | Supabase project URL | Supabase → Settings → API → Project URL | `https://YOUR_PROJECT_REF.supabase.co` |
+| `SUPABASE_SERVICE_KEY` | Supabase service role key (server-side only) | Supabase → Settings → API → service_role | service_role key from Supabase dashboard |
 | `SUPABASE_STORAGE_BUCKET` | Storage bucket name | You created it in step 3a | `videos` |
-| `SUPABASE_JWT_SECRET` | Supabase JWT secret (for verifying auth tokens) | Supabase → Settings → API → JWT Secret | long base64 string |
+| `SUPABASE_JWT_SECRET` | Supabase JWT secret (for verifying auth tokens) | Supabase → Settings → API → JWT Secret | long base64 string from Supabase dashboard |
 | `INFERENCE_PROVIDER` | Which LLM to use | Set manually | `openai` or `anthropic` |
-| `OPENAI_API_KEY` | OpenAI API key | platform.openai.com → API keys | `sk-proj-...` |
-| `ANTHROPIC_API_KEY` | Anthropic API key | console.anthropic.com → API keys | `sk-ant-api03-...` |
+| `OPENAI_API_KEY` | OpenAI API key | platform.openai.com → API keys | API key from OpenAI dashboard |
+| `ANTHROPIC_API_KEY` | Anthropic API key | console.anthropic.com → API keys | API key from Anthropic dashboard |
 | `WHISPER_PROVIDER` | Transcription engine | Set manually | `openai` (Railway) or `faster_whisper` (local) |
 | `WHISPER_MODEL_SIZE` | faster-whisper model size | Set manually | `base` (good default) |
 | `STORAGE_BACKEND` | Where to store video files | Set manually | `supabase` (production) |
@@ -174,14 +174,14 @@ start_worker.bat
 On macOS/Linux, run equivalent shell commands:
 
 ```bash
-export REDIS_URL=rediss://default:TOKEN@host.upstash.io:6379?ssl_cert_reqs=CERT_NONE
-export DATABASE_URL=postgresql+asyncpg://...
+export REDIS_URL=rediss://default:YOUR_UPSTASH_TOKEN@YOUR_DB_NAME.upstash.io:6379?ssl_cert_reqs=CERT_NONE
+export DATABASE_URL=postgresql+asyncpg://postgres.YOUR_REF:YOUR_PASSWORD@aws-0-region.pooler.supabase.com:6543/postgres
 export INFERENCE_PROVIDER=anthropic
-export ANTHROPIC_API_KEY=sk-ant-...
+export ANTHROPIC_API_KEY=YOUR_ANTHROPIC_API_KEY
 export WHISPER_PROVIDER=faster_whisper
 export STORAGE_BACKEND=supabase
-export SUPABASE_URL=https://xxxx.supabase.co
-export SUPABASE_SERVICE_KEY=sb_secret_...
+export SUPABASE_URL=https://YOUR_PROJECT_REF.supabase.co
+export SUPABASE_SERVICE_KEY=YOUR_SUPABASE_SERVICE_ROLE_KEY
 export RUN_MIGRATIONS=false
 export REQUIRE_AUTH=false
 
@@ -208,7 +208,7 @@ cd backend
 source .venv/bin/activate     # macOS/Linux
 
 # Set the sync DB URL (Alembic uses psycopg2, not asyncpg)
-export DATABASE_URL_SYNC=postgresql://postgres.xxxx:password@db.xxxx.supabase.co:5432/postgres
+export DATABASE_URL_SYNC=postgresql://postgres.YOUR_REF:YOUR_PASSWORD@db.YOUR_REF.supabase.co:5432/postgres
 
 # Run all migrations
 alembic upgrade head
@@ -282,8 +282,8 @@ Or connect the GitHub repo in the Vercel dashboard and it deploys on every push 
 Set in Vercel Dashboard → Project → Settings → Environment Variables:
 
 ```
-NEXT_PUBLIC_SUPABASE_URL      = https://YOUR_REF.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY = sb_publishable_...
+NEXT_PUBLIC_SUPABASE_URL      = https://YOUR_PROJECT_REF.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY = YOUR_SUPABASE_ANON_KEY
 NEXT_PUBLIC_API_URL           = https://YOUR_RAILWAY_API_URL.railway.app
 ```
 
@@ -321,7 +321,7 @@ Set `REQUIRE_AUTH=false` in `backend/.env` for local development to bypass JWT c
 
 **Fix:** Append `?ssl_cert_reqs=CERT_NONE` to `REDIS_URL`:
 ```
-REDIS_URL=rediss://default:TOKEN@host.upstash.io:6379?ssl_cert_reqs=CERT_NONE
+REDIS_URL=rediss://default:YOUR_UPSTASH_TOKEN@YOUR_DB_NAME.upstash.io:6379?ssl_cert_reqs=CERT_NONE
 ```
 This is safe for local dev. On Railway, Upstash certs are valid and this flag is not needed.
 
