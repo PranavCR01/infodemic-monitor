@@ -32,3 +32,13 @@ start_worker.bat
 # One-off utility scripts — not for commit
 cleanup.py
 test_openai.py
+"" 
+"# Claude Code session data" 
+".claude/" 
+"" 
+"# Python cache" 
+"**/__pycache__/" 
+"*.pyc" 
+"" 
+"# Internal context/research files" 
+"docs/CODEBASE_QUESTIONS.md" 
