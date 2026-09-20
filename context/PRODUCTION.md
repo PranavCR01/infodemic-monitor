@@ -95,9 +95,9 @@ file if you touch anything adjacent to it, but the hardening sprint is scoped to
 
 ### 5d. Dead Ollama config
 
-`OLLAMA_BASE_URL` and `OLLAMA_MODEL` still exist in `backend/app/core/config.py` — a
-leftover from a provider that was removed when the Anthropic/OpenAI provider abstraction
-was built. Nothing reads them anymore. Delete both fields.
+Resolved. `OLLAMA_BASE_URL` and `OLLAMA_MODEL` were removed from
+`backend/app/core/config.py`. The Ollama provider had already been removed, and no active
+code referenced these settings.
 
 ## 6. New Features — After Hardening
 

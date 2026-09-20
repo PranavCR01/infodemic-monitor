@@ -42,10 +42,6 @@ class Settings(BaseSettings):
     REQUIRE_AUTH: bool = True
     ALLOWED_ORIGINS: str = "http://localhost:3000"
 
-    # Temporary: replaced by main inference provider in Slice C
-    OLLAMA_BASE_URL: str = "http://localhost:11434"
-    OLLAMA_MODEL: str = "mistral"
-
     @property
     def allowed_origins_list(self) -> list[str]:
         return [o.strip() for o in self.ALLOWED_ORIGINS.split(",")]
