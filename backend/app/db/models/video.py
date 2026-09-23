@@ -15,6 +15,12 @@ class Video(Base):
     filename: Mapped[str] = mapped_column(String)
     file_path: Mapped[str] = mapped_column(String)
     file_size: Mapped[int] = mapped_column(Integer)
+    file_hash: Mapped[Optional[str]] = mapped_column(
+        String(64),
+        unique=True,
+        index=True,
+        nullable=True,
+        )
     storage_key: Mapped[Optional[str]] = mapped_column(String, nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
