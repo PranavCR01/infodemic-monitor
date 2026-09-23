@@ -134,9 +134,6 @@ see `context/CLAIM_LEVEL.md`):
   plus real Supabase/Upstash accounts, not containerized.
 - **No per-user job isolation** — `GET /jobs` returns every job in the database regardless
   of who created it. Any authenticated user can see any other user's history.
-- **Dead Ollama config** — `OLLAMA_BASE_URL` and `OLLAMA_MODEL` still exist in
-  `backend/app/core/config.py` from an earlier provider that was removed. Nothing reads
-  them.
 
 ## 10. Team Structure This Semester
 
