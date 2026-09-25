@@ -60,17 +60,15 @@ before starting each one.
 
 ### 5a. SHA-256 dedup
 
-Never implemented. Every upload gets a fresh UUID and is reprocessed from scratch, even if
-the exact same file was already analyzed.
+Implemented in Issue #1.
 
 **Implementation:**
-- In `video_service.py`, compute `hashlib.sha256` over the uploaded content bytes at
-  upload time.
+- In `video_service.py`, compute `hashlib.sha256` over the uploaded content bytes at upload time.
 - Check the `Video` table for an existing row with that `file_hash`.
-- If a match exists, return the existing `video_id` instead of creating a new video/job.
-- Needs a new column: `Video.file_hash`. Write it as **Migration 0005**
-  (`alembic revision --autogenerate -m "add file_hash to videos"`), following the existing
-  numbering in `backend/app/db/migrations/versions/` (0001–0004 are taken).
+- If a match exists, return the existing `Video` instead of creating a duplicate record or uploading the same file again.
+- Job creation reuses an existing `PENDING` `STARTED`, or `SUCCESS` job for the same video instead of enqueuing duplicate processing.
+- A previously `FAILED` job may be retried with a new job.
+- `Video.file_hash` is added by Alembic migration `0005`.
 
 ### 5b. No tests
 
