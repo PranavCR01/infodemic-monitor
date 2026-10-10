@@ -171,6 +171,7 @@ async def _query_claim(client: httpx.AsyncClient, claim: str) -> list[PubMedCita
             "term": claim,
             "retmax": settings.PUBMED_RESULTS_PER_CLAIM,
             "retmode": "json",
+            "sort": "relevance",  # ESearch defaults to most-recent-first
         },
         headers=_NCBI_HEADERS,
     )
