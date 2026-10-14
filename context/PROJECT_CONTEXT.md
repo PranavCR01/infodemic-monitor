@@ -84,8 +84,7 @@ see `context/CLAIM_LEVEL.md`):
 ## 6. Pipeline, In Order
 
 1. **Upload** — video file received by the API, stored in Supabase Storage
-2. **SHA-256 dedup check** — *not yet implemented* (see `context/PRODUCTION.md`); every
-   upload currently gets a fresh UUID even if the same file was analyzed before
+2. **SHA-256 dedup check** — uploaded file bytes are hashed with SHA-256; if the same file was already uploaded, the existing video record is reused instead of creating a new UUID. Existing non-failed jobs for that video are also reused to avoid duplicate processing.
 3. **Transcription** — Whisper (faster-whisper locally, OpenAI Whisper API on Railway)
 4. **Fusion** — `MultimodalFusion` combines transcript (and OCR text, when enabled) into
    one text payload for the classifier
@@ -123,13 +122,10 @@ see `context/CLAIM_LEVEL.md`):
 
 ## 9. Known Technical Debt
 
-- **No SHA-256 dedup** — planned, never implemented. Same video re-uploaded gets
-  reprocessed from scratch under a new UUID.
 - **No async DB session** — `DATABASE_URL` is asyncpg-formatted but unused; every router
   and service uses sync SQLAlchemy. Fixing this touches nearly every file that talks to
   the DB, so it's deliberately deferred.
-- **No tests** — `pyproject.toml` points `pytest` at `backend/app/tests/`, which doesn't
-  exist yet.
+- **Limited tests** — pytest is configured under `backend/app/tests/`; dedup behavior now has coverage, but broader backend coverage is still incomplete.
 - **No docker-compose for local dev** — local development runs against a Python venv
   plus real Supabase/Upstash accounts, not containerized.
 - **No per-user job isolation** — `GET /jobs` returns every job in the database regardless
