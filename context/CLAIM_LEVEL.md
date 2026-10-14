@@ -85,7 +85,17 @@ claim #2. This is the central design problem for this track, not an afterthought
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
--
+- **2026-10-10 (Kiara)** — PubMed grounding relevance fix.
+  - **Found:** `_query_claim()` called ESearch without a `sort` parameter, so PubMed returned
+    the most recently published papers matching the query terms, not the most relevant ones.
+    With `PUBMED_RESULTS_PER_CLAIM=2`, citations were often off-topic. Example: the query
+    "vaccines cause autism" returned a 2026 paper on GAD2 variants and one on antidepressant
+    mortality in autism.
+  - **Done:** added `sort=relevance` to the ESearch call. The same query now returns the 2014
+    meta-analysis "Vaccines are not associated with autism" first.
+  - **Next:** consider preferring systematic reviews / meta-analyses per claim, with a
+    fallback to an unfiltered relevance search. Not done here — it belongs with the
+    per-claim grounding design in the prototype (#12).
 
 ## 8. PR Requirements
 
