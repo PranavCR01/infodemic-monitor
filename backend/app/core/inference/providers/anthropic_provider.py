@@ -7,7 +7,7 @@ import anthropic as _anthropic
 from tenacity import retry, retry_if_exception, stop_after_attempt, wait_exponential
 
 from app.core.exceptions import InferenceProviderError
-from app.core.schemas.pipeline import ClassificationResult, FusionResult, MisinfoLabel
+from app.core.schemas.pipeline import ClassificationResult, FusionResult, MisinfoLabel, Claim 
 
 
 def _is_retryable(exc: BaseException) -> bool:
@@ -36,8 +36,23 @@ _CLASSIFICATION_TOOL = {
                 "type": "array",
                 "items": {"type": "string"},
                 "description": "1-3 exact quotes from the content that influenced the decision.",
-            },
-        },
+            }, 
+            "claims": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "claim_id": {"type": "string", "description": "Short stable ID, e.g. 'c1', 'c2'."},
+                        "text": {"type": "string", "description": "The specific health claim, verbatim or near-verbatim."},
+                        "label": {"type": "string", "enum": ["MISINFO", "NO_MISINFO", "DEBUNKING", "CANNOT_RECOGNIZE"]},
+                        "confidence": {"type": "number"},
+                        "evidence": {"type": "array", "items": {"type": "string"}},
+                    },
+                    "required": ["claim_id", "text", "label", "confidence"],   
+                },                                                            
+                "description": "Each discrete health claim in the content, individually verdicted.",  
+            },                                                                 
+        },                                                                   
         "required": ["label", "confidence", "explanation", "evidence_snippets"],
     },
 }
@@ -96,6 +111,7 @@ class AnthropicProvider:
                 confidence=float(tool_input.get("confidence", 0.5)),
                 explanation=str(tool_input.get("explanation", "")),
                 evidence_snippets=_safe_list(tool_input.get("evidence_snippets")),
+                claims=_safe_claims(tool_input.get("claims")), 
                 provider="anthropic",
                 model_used=self._model,
                 latency_ms=latency_ms,
@@ -117,3 +133,22 @@ def _safe_list(raw) -> list[str]:
     if isinstance(raw, list):
         return [str(i).strip() for i in raw if str(i).strip()]
     return []
+
+def _safe_claims(raw) -> list[Claim]:
+    if not isinstance(raw, list):
+        return []
+    safe_claims = []
+    for claim in raw:
+        if not isinstance(claim, dict):
+            continue
+        try:
+            safe_claims.append(Claim(
+                claim_id=str(claim.get("claim_id", "")).strip(),
+                text=str(claim.get("text", "")).strip(),
+                label=_safe_label(claim.get("label")),
+                confidence=float(claim.get("confidence", 0.5)),
+                evidence=_safe_list(claim.get("evidence")),
+            ))
+        except (TypeError, ValueError):
+            continue
+    return safe_claims
