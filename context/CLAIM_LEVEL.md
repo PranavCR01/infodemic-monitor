@@ -46,10 +46,14 @@ line up — the classifier's claim #2 might not be the same real-world claim as 
 claim #2. This is the central design problem for this track, not an afterthought.
 
 ## 5. Schema Change Needed
-
-- **New `Claim` schema:**
+- **`Claim` schema** (designed and validated, pending production-student sign-off):
   ```
   Claim {
+    claim_id: str 
+# NEW — not in original spec. PubMedCitation.claim was free
+# text (the search-query string pubmed.py generated), not a
+# stable ID, so citations couldn’t be reliably matched back
+# to the classifier’s claims without one.
     text: str
     label: MisinfoLabel
     confidence: float
@@ -57,35 +61,42 @@ claim #2. This is the central design problem for this track, not an afterthought
     citations: list[PubMedCitation]
   }
   ```
-- `ClassificationResult.claims: list[Claim]` — added **alongside** the existing
-  video-level `label`/`confidence`/`explanation` fields, for backward compatibility.
-  Nothing that reads the video-level fields today should break.
-- DB migration: a `claims` JSON column on the `results` table. Migration number is
-  **0006 or 0007** depending on what the production track has already merged — check
-  `backend/app/db/migrations/versions/` before naming your revision, and coordinate with
-  the production student so you don't collide.
-- Rewrite the classification tool schema (whatever structured-output/tool-call schema the
-  Anthropic/OpenAI providers use) to return per-claim verdicts instead of one flat verdict.
-- Unify claim extraction so `pubmed.py` grounds the **same** claims the classifier
-  identified, instead of re-extracting its own set.
+- `PubMedCitation` also gets `claim_id: str` added, alongside existing `claim: str`.
+- `ClassificationResult.claims: list[Claim]` — additive, backward compatible.
+- DB migration: `claims` JSON column on `results`. Number TBD (0006 or 0007) —
+  check `backend/app/db/migrations/versions/` and coordinate with the production
+  student before naming it. Not yet created.
+- **Both providers' tool/prompt schemas** need a `claims` array (per-claim
+  `claim_id`/`text`/`label`/`confidence`/`evidence`), plus a `_safe_claims()`
+  parser in each. Fully designed against current code.
+- **`pubmed.py`**: `ground_transcript()` now takes `claims: list[Claim]` instead
+  of raw transcript — removes its old independent claim-extraction step
+  entirely. `claim_id` threads through to each returned `PubMedCitation`.
+  `run_pipeline()` passes the classifier's claims into grounding and regroups
+  citations back onto each `Claim` by `claim_id`. This is the actual fix for
+  the flat-citations problem in §3/§4.
+- Open question: claim text may need converting to a shorter PubMed search
+  term — current design searches on the full claim text as-is.
 
 ## 6. Objectives This Semester
 
-1. **Define the `Claim` schema** — coordinate with the production student before
-   finalizing, since it touches `ClassificationResult` and the DB schema they own.
-2. **Build a prototype claim-level classifier** — can run standalone (a script, not wired
-   into `run_pipeline`) for this semester.
-3. **Create a labeled dataset** of at least 20 videos with **per-claim** ground truth
-   (not just video-level labels — this is the ground-truth evaluation last semester
-   skipped).
-4. **Produce a written integration spec** detailed enough for the production student to
-   implement without needing to re-derive design decisions.
+1. ~~**Define the `Claim` schema**~~ — design complete, pending
+   production-student coordination.
+2. **Build a prototype claim-level classifier** — design validated, not yet
+   built. Next: standalone script in `research/claim-level/`.
+3. **Create a labeled dataset** of ≥20 videos with per-claim ground truth —
+   not started.
+4. **Produce a written integration spec** - Section 5 is the draft 
 
 ## 7. Check-In Log
 
-_(Add a dated entry each week with what was done, what was found, and what's next.)_
-
--
+- **2026-10-19**: Finished full design pass against current `backend/` code
+  (schemas, both providers, `pubmed.py`, `run_pipeline`). `Claim` schema
+  finalized with `claim_id` addition. Full chain validated: classifier
+  extracts claims with stable IDs → grounding uses those same claims →
+  citations regrouped by `claim_id`. Closes the coordination problem in §4.
+  Nothing implemented in `backend/` yet — prototyping standalone next. Next:
+  build prototype, open issue + PR, start dataset.
 
 ## 8. PR Requirements
 
