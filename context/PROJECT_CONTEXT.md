@@ -125,7 +125,7 @@ see `context/CLAIM_LEVEL.md`):
 - **No async DB session** — `DATABASE_URL` is asyncpg-formatted but unused; every router
   and service uses sync SQLAlchemy. Fixing this touches nearly every file that talks to
   the DB, so it's deliberately deferred.
-- **Limited tests** — pytest is configured under `backend/app/tests/`; dedup behavior now has coverage, but broader backend coverage is still incomplete.
+- **Limited tests** — `backend/app/tests/` covers dedup, job reuse, the transcription singleton, label normalisation and pipeline error codes (#2). Inference providers, PubMed grounding and the API routes are not yet tested end to end.
 - **No docker-compose for local dev** — local development runs against a Python venv
   plus real Supabase/Upstash accounts, not containerized.
 - **No per-user job isolation** — `GET /jobs` returns every job in the database regardless
