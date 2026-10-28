@@ -10,10 +10,6 @@ assignees: ''
 
 <!-- What needs to be researched, designed, or built, and why. -->
 
-## Subteam
-
-<!-- Pair A / Pair B / Trio -->
-
 ## Relevant Context Doc
 
 [context/MULTI_AGENT.md](../../context/MULTI_AGENT.md)

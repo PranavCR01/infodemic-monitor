@@ -2,87 +2,127 @@
 
 ## 1. What This Role Is
 
-Seven students, **greenfield** research + implementation. No designated lead — the team is
-supervised directly by Pranav. Split into 2 pairs and 1 trio (Student-MA1 through
-Student-MA7); **subteam assignments are TBD** once names are known.
+Pranav and Jared are building the **evidence-grounded LangGraph pipeline**. Jared starts
+with the shared graph skeleton (#29) that every node plugs into.
 
-This track has no prior semester's work to build on — unlike the other four tracks, you're
-starting from a blank slate. That also means more of the early work is design, not code.
+The design is set out in [`docs/architecture.md`](../docs/architecture.md). Issues #29–#39
+refer to its sections as "Proposed architecture §N"; read those sections before starting
+your issue.
 
 ## 2. The Problem This Solves
 
-The current pipeline classifies a video in **one LLM call, one shot, no verification
-step**. Whatever the primary provider (Anthropic) returns is the final answer. A
-multi-agent approach adds **deliberation**: multiple agents with different roles debate the
-classification before a verdict is returned. This is most valuable for the cases the
-single-shot classifier is least confident about — clear-cut cases don't need a committee.
+Today `run_pipeline()` classifies the whole video in **one LLM call**, then queries PubMed
+afterwards, and only for `MISINFO` / `DEBUNKING`. The classifier never sees the papers, so
+the citations cannot inform the verdict, and a `NO_MISINFO` result has no evidence at all.
 
-## 3. Proposed Architecture (Not Mandatory — Propose Alternatives)
+The LangGraph pipeline reverses that order: extract the specific claims, decide what the
+speaker does with each one, retrieve and verify evidence, challenge the result with a
+critic, and only then decide the video's label.
 
-This is a starting point to react to, not a spec to implement blindly:
+## 3. Target Pipeline
 
-- **Extractor agent** — reads the transcript, pulls out specific health claims.
-- **Verifier agent** — checks each claim against PubMed evidence.
-- **Critic agent** — challenges the verifier's conclusions, flags weak evidence.
-- **Coordinator** — runs the group chat, terminates when agents reach agreement or a max
-  turn count is hit.
-- **Trigger:** runs only when single-LLM confidence < 0.60 — the same threshold under
-  investigation by the modality track for the OCR trigger (see `context/MODALITY.md`).
-  Consider coordinating with that track on threshold findings.
+```
+Transcribe + OCR → Fuse → Extract claims → Analyze stance → Retrieve evidence → Rerank
+  → Verify → Critic ─┬─ approve ──────────────→ Judge → Validate → Persist
+                     ├─ more evidence (within budget) → back to Retrieve
+                     └─ unresolved ────────────→ Human review
+```
 
-## 4. Relevant Prior Work
+Full diagram and node inventory: `docs/architecture.md` §4. State schema: §5. Agent
+specifications: §6.
 
-- **AutoGen GroupChat pattern** — explored during project planning as a candidate
-  framework for the agent-to-agent conversation.
-- **LlamaIndex for PubMed retrieval** — explored as a candidate for the verifier agent's
-  evidence lookup.
+## 4. Design Rules (apply to every issue)
 
-Neither is implemented in production — both are options for the team to evaluate, not
-requirements.
+- **Deterministic code** for ingestion, retrieval, validation, routing and persistence;
+  LLMs only for claims, stance, verification, critique and judgment.
+- **Typed Pydantic schemas**; each node writes only its own state fields (§5.1).
+- **Citations come from tools:** PMIDs, DOIs, titles and URLs come from PubMed responses,
+  never from the model.
+- **Insufficient evidence is its own outcome**, not a contradiction.
+- **Bounded loops:** every loop has a budget and every claim reaches a terminal state
+  (initially 2 retrieval reformulations and 1 verification revision per claim, §6.5).
+- **Untrusted inputs:** transcripts and abstracts are data, never instructions (§7.4).
+- **Compatible output:** the final result maps onto `ClassificationResult` and the four
+  labels (`MISINFO`, `NO_MISINFO`, `DEBUNKING`, `CANNOT_RECOGNIZE`).
+- **No regressions:** the single-LLM path keeps working; the graph sits behind a flag with a
+  fallback to it.
 
-## 5. System Context
+## 5. Issues
 
-Read `context/PRODUCTION.md` and `context/PROJECT_CONTEXT.md` before designing anything.
+| Issue | Work | Depends on |
+|---|---|---|
+| #29 | Skeleton: typed state, stub nodes, conditional edges, Postgres checkpointing (Jared) | — |
+| #30 | Stance Analyzer node (`ENDORSES` / `REFUTES` / `NEUTRAL` / `QUOTES` / `UNCLEAR`) | #29 |
+| #31 | Retrieval planning and PubMed evidence retriever (abstracts, PMID dedup, cache) | #29 |
+| #32 | Rerank and filter evidence | #31 |
+| #33 | Evidence Verifier node (`SUPPORTED` / `CONTRADICTED` / `MIXED` / `INSUFFICIENT_EVIDENCE` / `NOT_VERIFIABLE`) | #31, #32 |
+| #34 | Critic node and bounded retrieval loop | #33 |
+| #35 | Judge node and mixed-video classification policy | #30, #33 |
+| #36 | Deterministic validation and human-review routing | #35 |
+| #37 | Guardrails: prompt injection, tool limits, adversarial test set | #29 |
+| #38 | Integrate the graph into `run_pipeline` behind a flag, with fallback | #29–#36 |
+| #39 | Evaluate the graph against the single-LLM baseline | #38, labelled data |
 
-The multi-agent system should be designed to integrate with the existing pipeline as an
-**optional step**, not a replacement for the single-LLM path. The `InferenceProvider`
-Protocol in `backend/app/core/inference/classifier.py` is the interface to understand — a
-multi-agent provider could implement this same Protocol (`classify(fusion: FusionResult) ->
-ClassificationResult`), which would let it slot into `run_pipeline` the same way the
-Anthropic/OpenAI providers do today.
+Nodes can be designed before #29 lands: draft the prompt, the output schema and the test
+cases against the state schema in `docs/architecture.md` §5, then plug in once the skeleton
+is merged.
 
-## 6. Constraints
+**Claim extraction is not a separate issue here.** The Claim Extractor node wraps the
+claim-level track's work: the `Claim` schema (#11, merged) and the prototype (#12, Kiara).
+See `context/CLAIM_LEVEL.md`.
 
-- Output must be compatible with the existing `ClassificationResult` schema.
-- Must integrate as an **optional** pipeline step — the single-LLM path must keep working
-  unmodified for everyone not opted into the multi-agent path.
-- Must have a **fallback to single-LLM** if the agent system fails (times out, errors,
-  hits max turns without agreement) — a broken multi-agent run should never take down a
-  classification that the single-LLM path would have handled fine.
+## 6. System Context
 
-## 7. Objectives This Semester
+Read `context/PRODUCTION.md` and `context/PROJECT_CONTEXT.md` first.
 
-- **Weeks 1–3:** research and architecture proposal. **Present to Pranav before building
-  anything.**
-- **Weeks 4–8:** prototype implementation.
-- **Weeks 9–12:** evaluation against the single-LLM baseline on the same video set.
-- Produce a written comparison: **accuracy, latency, and cost per video** vs. single-LLM.
+- **Interface:** the graph is exposed to the pipeline as an `InferenceProvider`
+  (`backend/app/core/inference/classifier.py`): `classify(fusion: FusionResult) ->
+  ClassificationResult`. That lets it slot into `run_pipeline` like the Anthropic and
+  OpenAI providers (#38).
+- **Schemas:** `Claim`, `PubMedCitation` and `ClassificationResult` live in
+  `backend/app/core/schemas/pipeline.py`.
+- **PubMed:** `backend/app/core/grounding/pubmed.py` is today's retrieval code (ESearch with
+  `sort=relevance`, titles only). #31 replaces it for the graph.
+- **Tests:** `backend/app/tests/` (pytest, SQLite and fakes, no external services). New nodes
+  come with tests that don't call real APIs.
 
-## 8. Subteam Split (2 Pairs + 1 Trio)
+## 7. Open Decisions
 
-TBD once student names are assigned. **Update this section when the split is decided** —
-this file is the source of truth for who's on which subteam.
+- **When does the graph run?** On every video (as `docs/architecture.md` describes), or only
+  when the single-LLM confidence is below a threshold (the original plan used 0.60)? Note
+  that today's confidence is the model's own, uncalibrated estimate. Decide before #38.
+- **Shared evaluation data:** #39 should use the same labelled videos as Model Evaluation
+  (#6) and the claim-level dataset (#13), not a separate set.
 
-## 9. Check-In Log
+## 8. Team
+
+| Person | Issues |
+|---|---|
+| Pranav | TBD |
+| Jared | #29 (skeleton), then TBD |
+
+**Update this table as issues are picked up**; this file is the source of truth for who
+owns which issue.
+
+## 9. Superseded Plan
+
+The original proposal (an AutoGen group chat with Extractor, Verifier, Critic and a
+Coordinator, triggered only below 0.60 confidence) was replaced by the LangGraph design.
+The issues that tracked it (#14, #15, #16, #19, #20, #21) are closed; each links to its
+replacement.
+
+## 10. Check-In Log
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
--
+- **2026-10-28**: Moved the track to the LangGraph architecture. Added
+  `docs/architecture.md`, opened #29–#39, closed the superseded issues, and rewrote this
+  file (#43, #44).
 
-## 10. PR Requirements
+## 11. PR Requirements
 
 - All code goes up as PRs, using `.github/ISSUE_TEMPLATE/multi-agent.md` for the
-  originating issue (note the template has a Subteam field).
+  originating issue.
 - Reference the GitHub issue (`Closes #N`).
-- Update this file as architecture decisions are made — this file should reflect the
-  *current* design, not just the original proposal, as it evolves.
+- Update this file as decisions are made (who owns which issue, trigger decision, budget changes),
+  so it reflects the *current* design.
