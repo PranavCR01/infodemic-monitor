@@ -77,7 +77,7 @@ claim #2. This is the central design problem for this track, not an afterthought
    into `run_pipeline`) for this semester.
 3. **Create a labeled dataset** of at least 20 videos with **per-claim** ground truth
    (not just video-level labels — this is the ground-truth evaluation last semester
-   skipped).
+   skipped). *In progress: scaffold and labeling guidelines created, no videos labeled yet.*
 4. **Produce a written integration spec** detailed enough for the production student to
    implement without needing to re-derive design decisions.
 
@@ -96,6 +96,9 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   - **Next:** consider preferring systematic reviews / meta-analyses per claim, with a
     fallback to an unfiltered relevance search. Not done here — it belongs with the
     per-claim grounding design in the prototype (#12).
+  - **2026-10-26**: Created dataset scaffold under `research/claim-level/dataset/`
+  (`videos.csv`, `claims.csv`, labeling guidelines in `README.md`). No videos
+  labeled yet. Next: label first ~5 videos to test the process, then scale to 20+.
 
 ## 8. PR Requirements
 
