@@ -70,19 +70,16 @@ Implemented in Issue #1.
 - A previously `FAILED` job may be retried with a new job.
 - `Video.file_hash` is added by Alembic migration `0005`.
 
-### 5b. No tests
+### 5b. Tests
 
-`pyproject.toml` points `pytest` at `backend/app/tests/`, which does not exist yet.
+Done in #2. `backend/app/tests/` covers:
 
-**Implementation:**
-- Create `backend/app/tests/`.
-- Write unit tests for, at minimum:
-  - the transcription singleton (whatever caches/reuses the Whisper model instance)
-  - provider label normalization (both Anthropic and OpenAI providers must produce one of
-    the four `MisinfoLabel` values, regardless of how the raw LLM output is formatted)
-  - pipeline error propagation (a failure partway through `run_pipeline` surfaces as a
-    typed exception / `Job.error_code`, not a silent failure)
-  - dedup logic, once 5a is implemented
+- **Dedup** (`test_dedup.py`): duplicate upload reuses the video, a different file creates a new one, the stored hash is `sha256(content)`, an existing job is reused, and a failed job can be retried.
+- **Transcription singleton** (`test_transcription.py`): the faster-whisper model is loaded once and reused.
+- **Label normalisation** (`test_label_normalization.py`): both providers map messy model output to one of the four `MisinfoLabel` values, with anything unknown becoming `CANNOT_RECOGNIZE`. Note: the OpenAI provider strips a trailing `.` and the Anthropic one does not (its tool schema already restricts the label to the enum).
+- **Error propagation** (`test_error_propagation.py`): each typed pipeline error marks the job `FAILED` with the matching `error_code` and writes no result.
+
+Run from `backend/` with `python -m pytest`. Tests use SQLite and fakes only, so no database, Redis or API keys are needed.
 
 ### 5c. Async DB session — leave it alone this sprint
 
