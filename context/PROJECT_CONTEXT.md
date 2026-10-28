@@ -139,7 +139,7 @@ see `context/CLAIM_LEVEL.md`):
 | **Model Eval & Disagreement** | 2 students (Student-ME1, Student-ME2) | Expanding Task 4 — stress-testing last semester's 100% agreement finding at scale |
 | **Modality Comparison** | 2 students (Student-MC1, Student-MC2) | Expanding Task 3 — validating whether OCR adds value at scale, and at what confidence threshold |
 | **Claim-Level Classification** | 1 student (Student-CL1) | Continuing Task 5 — schema design and prototype for per-claim verdicts |
-| **Multi-Agent** | 7 students in 2 pairs + 1 trio (Student-MA1–MA7) | Greenfield — deliberation/verification layer for low-confidence classifications |
+| **Multi-Agent** | Pranav, Jared | Evidence-grounded LangGraph pipeline: claims, stance, PubMed verification, critic and judge (see `context/MULTI_AGENT.md`) |
 
 Domain files: `context/PRODUCTION.md`, `context/MODEL_EVAL.md`, `context/MODALITY.md`,
 `context/CLAIM_LEVEL.md`, `context/MULTI_AGENT.md`.
