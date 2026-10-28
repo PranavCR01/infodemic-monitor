@@ -47,39 +47,60 @@ claim #2. This is the central design problem for this track, not an afterthought
 
 ## 5. Schema Change Needed
 
-- **New `Claim` schema:**
+**Merged (#11):** the schema types in `backend/app/core/schemas/pipeline.py`. Nothing in
+the pipeline uses them yet, so production behaviour is unchanged.
+
+- **`Claim` schema:**
   ```
   Claim {
+    claim_id: str        # stable ID per video, e.g. "c1"
     text: str
     label: MisinfoLabel
-    confidence: float
+    confidence: float    # clamped to [0, 1]
     evidence: list[str]
     citations: list[PubMedCitation]
   }
   ```
-- `ClassificationResult.claims: list[Claim]` — added **alongside** the existing
-  video-level `label`/`confidence`/`explanation` fields, for backward compatibility.
-  Nothing that reads the video-level fields today should break.
-- DB migration: a `claims` JSON column on the `results` table. Migration number is
-  **0006 or 0007** depending on what the production track has already merged — check
-  `backend/app/db/migrations/versions/` before naming your revision, and coordinate with
-  the production student so you don't collide.
-- Rewrite the classification tool schema (whatever structured-output/tool-call schema the
-  Anthropic/OpenAI providers use) to return per-claim verdicts instead of one flat verdict.
-- Unify claim extraction so `pubmed.py` grounds the **same** claims the classifier
-  identified, instead of re-extracting its own set.
+  `claim_id` is new compared with the original spec. `PubMedCitation.claim` was free
+  text (the search-query string `pubmed.py` generated), not a stable ID, so citations
+  could not be reliably matched back to the classifier's claims without one.
+- `PubMedCitation.claim_id: Optional[str] = None`, alongside the existing `claim: str`.
+  Optional until grounding passes claim IDs through; required fields would break the
+  current `pubmed.py`, which builds citations without an ID.
+- `ClassificationResult.claims: Optional[list[Claim]] = None`: additive and backward
+  compatible.
+
+**Integration spec (draft; to be built and tested in the #12 prototype first):**
+
+- DB migration: `claims` JSON column on `results`. Number TBD (0006 or 0007): check
+  `backend/app/db/migrations/versions/` and coordinate with the production student
+  before naming it. Not yet created.
+- **Both providers' tool/prompt schemas** need a `claims` array (per-claim
+  `claim_id`/`text`/`label`/`confidence`/`evidence`), plus a `_safe_claims()` parser
+  in each.
+- **`pubmed.py`**: `ground_transcript()` takes `claims: list[Claim]` instead of the raw
+  transcript, removing its independent claim-extraction step. `claim_id` threads
+  through to each returned `PubMedCitation`. `run_pipeline()` passes the classifier's
+  claims into grounding and regroups citations onto each `Claim` by `claim_id`. This is
+  the fix for the flat-citations problem in §3/§4.
+- **Open questions for the prototype:**
+  - Full claim sentences make poor PubMed search terms compared with the current 3–7
+    word queries; claims probably need converting to a short search term first.
+  - If grounding depends on the model returning `claims`, flagged videos must not lose
+    all citations when the model omits them: either make `claims` required in the tool
+    schema or keep the transcript-based search as a fallback.
 
 ## 6. Objectives This Semester
 
-1. **Define the `Claim` schema** — coordinate with the production student before
-   finalizing, since it touches `ClassificationResult` and the DB schema they own.
-2. **Build a prototype claim-level classifier** — can run standalone (a script, not wired
-   into `run_pipeline`) for this semester.
+1. ~~**Define the `Claim` schema**~~: done, schema types merged (#11).
+2. **Build a prototype claim-level classifier** (#12, Kiara): standalone script in
+   `research/claim-level/`, not wired into `run_pipeline`. Starting point: the design
+   in §5.
 3. **Create a labeled dataset** of at least 20 videos with **per-claim** ground truth
-   (not just video-level labels — this is the ground-truth evaluation last semester
-   skipped). *In progress: scaffold and labeling guidelines created, no videos labeled yet.*
+   (#13, Delia). *In progress: scaffold and labeling guidelines created, no videos
+   labeled yet.*
 4. **Produce a written integration spec** detailed enough for the production student to
-   implement without needing to re-derive design decisions.
+   implement without needing to re-derive design decisions. §5 is the draft.
 
 ## 7. Check-In Log
 
@@ -96,9 +117,17 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   - **Next:** consider preferring systematic reviews / meta-analyses per claim, with a
     fallback to an unfiltered relevance search. Not done here — it belongs with the
     per-claim grounding design in the prototype (#12).
-  - **2026-10-26**: Created dataset scaffold under `research/claim-level/dataset/`
-  (`videos.csv`, `claims.csv`, labeling guidelines in `README.md`). No videos
-  labeled yet. Next: label first ~5 videos to test the process, then scale to 20+.
+- **2026-10-19 (Delia)**: Finished a full design pass against current `backend/` code
+  (schemas, both providers, `pubmed.py`, `run_pipeline`). `Claim` schema finalized with
+  the `claim_id` addition. Full chain designed: classifier extracts claims with stable
+  IDs → grounding uses those same claims → citations regrouped by `claim_id`. Next:
+  build the prototype and start the dataset.
+- **2026-10-26 (Delia)**: Created dataset scaffold under `research/claim-level/dataset/`
+  (`videos.csv`, `claims.csv`, labeling guidelines in `README.md`). No videos labeled
+  yet. Next: label first ~5 videos to test the process, then scale to 20+.
+- **2026-10-28**: PR #40 trimmed to the schema types only, so the live pipeline is
+  unchanged; the provider, `pubmed.py` and `run_pipeline` changes are carried forward as
+  the §5 integration spec for the #12 prototype.
 
 ## 8. PR Requirements
 

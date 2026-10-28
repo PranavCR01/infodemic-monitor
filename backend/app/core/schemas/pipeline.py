@@ -24,10 +24,26 @@ class MisinfoLabel(str, enum.Enum):
 
 class PubMedCitation(BaseModel):
     """A single PubMed citation linked to a specific health claim in the transcript."""
+    claim_id: Optional[str] = None
     claim: str
     title: str
     pmid: str
     url: str
+
+
+class Claim(BaseModel):
+    """One health claim in a video, with its own verdict and citations."""
+    claim_id: str
+    text: str
+    label: MisinfoLabel
+    confidence: float
+    evidence: list[str] = []
+    citations: list[PubMedCitation] = []
+
+    @field_validator("confidence")
+    @classmethod
+    def clamp_confidence(cls, v: float) -> float:
+        return max(0.0, min(1.0, v))
 
 
 class FusionResult(BaseModel):
@@ -55,6 +71,7 @@ class ClassificationResult(BaseModel):
     model_used: str
     latency_ms: int
     citations: Optional[list[PubMedCitation]] = None
+    claims: Optional[list[Claim]] = None
 
     @field_validator("confidence")
     @classmethod
