@@ -96,10 +96,10 @@ Read `context/PRODUCTION.md` and `context/PROJECT_CONTEXT.md` first.
 
 ## 8. Team
 
-| Person | Issues |
-|---|---|
-| Pranav | TBD |
-| Jared | #29 (skeleton), then TBD |
+| Person | Current issue | Notes |
+|---|---|---|
+| Jared | #29 LangGraph skeleton | Start after agreeing the `PipelineState` schema with Pranav |
+| Pranav | #31 Retrieval planning and PubMed evidence retriever | Designed against the agreed state schema with recorded PubMed responses; plugs in once #29 merges |
 
 **Update this table as issues are picked up**; this file is the source of truth for who
 owns which issue.
