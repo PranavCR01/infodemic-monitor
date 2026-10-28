@@ -2,9 +2,8 @@
 
 ## 1. What This Role Is
 
-Seven students building the **evidence-grounded LangGraph pipeline**, supervised directly by
-Pranav, split into 2 pairs and 1 trio. Jared (Production) builds the shared graph skeleton
-(#29) that every node plugs into.
+Pranav and Jared are building the **evidence-grounded LangGraph pipeline**. Jared starts
+with the shared graph skeleton (#29) that every node plugs into.
 
 The design is set out in [`docs/architecture.md`](../docs/architecture.md). Issues #29–#39
 refer to its sections as "Proposed architecture §N"; read those sections before starting
@@ -95,19 +94,14 @@ Read `context/PRODUCTION.md` and `context/PROJECT_CONTEXT.md` first.
 - **Shared evaluation data:** #39 should use the same labelled videos as Model Evaluation
   (#6) and the claim-level dataset (#13), not a separate set.
 
-## 8. Team and Subteam Split
+## 8. Team
 
-| Student | Subteam | Issues |
-|---|---|---|
-| Cherubin Hernandez | TBD | |
-| Ranveer Ganna | TBD | |
-| Rishabh Sahoo | TBD | |
-| Darshan Dhene | TBD | |
-| Haoxuan Lyu | TBD | |
-| Nathan Chien | TBD | |
-| York Li | TBD | |
+| Person | Issues |
+|---|---|
+| Pranav | TBD |
+| Jared | #29 (skeleton), then TBD |
 
-**Update this table when the split is decided**; this file is the source of truth for who
+**Update this table as issues are picked up**; this file is the source of truth for who
 owns which issue.
 
 ## 9. Superseded Plan
@@ -128,7 +122,7 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
 ## 11. PR Requirements
 
 - All code goes up as PRs, using `.github/ISSUE_TEMPLATE/multi-agent.md` for the
-  originating issue (note the template has a Subteam field).
+  originating issue.
 - Reference the GitHub issue (`Closes #N`).
-- Update this file as decisions are made (subteam split, trigger decision, budget changes),
+- Update this file as decisions are made (who owns which issue, trigger decision, budget changes),
   so it reflects the *current* design.
