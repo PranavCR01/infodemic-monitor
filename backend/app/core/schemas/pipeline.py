@@ -24,13 +24,15 @@ class MisinfoLabel(str, enum.Enum):
 
 class PubMedCitation(BaseModel):
     """A single PubMed citation linked to a specific health claim in the transcript."""
-    claim_id: str
+    claim_id: Optional[str] = None
     claim: str
     title: str
     pmid: str
     url: str
 
+
 class Claim(BaseModel):
+    """One health claim in a video, with its own verdict and citations."""
     claim_id: str
     text: str
     label: MisinfoLabel
@@ -42,6 +44,7 @@ class Claim(BaseModel):
     @classmethod
     def clamp_confidence(cls, v: float) -> float:
         return max(0.0, min(1.0, v))
+
 
 class FusionResult(BaseModel):
     """Output of MultimodalFusion.fuse() — combined transcript + OCR signals.
@@ -75,4 +78,3 @@ class ClassificationResult(BaseModel):
     def clamp_confidence(cls, v: float) -> float:
         """Clamp confidence to [0.0, 1.0]. LLM outputs are not always in range."""
         return max(0.0, min(1.0, v))
-

@@ -60,17 +60,15 @@ before starting each one.
 
 ### 5a. SHA-256 dedup
 
-Never implemented. Every upload gets a fresh UUID and is reprocessed from scratch, even if
-the exact same file was already analyzed.
+Implemented in Issue #1.
 
 **Implementation:**
-- In `video_service.py`, compute `hashlib.sha256` over the uploaded content bytes at
-  upload time.
+- In `video_service.py`, compute `hashlib.sha256` over the uploaded content bytes at upload time.
 - Check the `Video` table for an existing row with that `file_hash`.
-- If a match exists, return the existing `video_id` instead of creating a new video/job.
-- Needs a new column: `Video.file_hash`. Write it as **Migration 0005**
-  (`alembic revision --autogenerate -m "add file_hash to videos"`), following the existing
-  numbering in `backend/app/db/migrations/versions/` (0001–0004 are taken).
+- If a match exists, return the existing `Video` instead of creating a duplicate record or uploading the same file again.
+- Job creation reuses an existing `PENDING` `STARTED`, or `SUCCESS` job for the same video instead of enqueuing duplicate processing.
+- A previously `FAILED` job may be retried with a new job.
+- `Video.file_hash` is added by Alembic migration `0005`.
 
 ### 5b. No tests
 
@@ -95,9 +93,9 @@ file if you touch anything adjacent to it, but the hardening sprint is scoped to
 
 ### 5d. Dead Ollama config
 
-`OLLAMA_BASE_URL` and `OLLAMA_MODEL` still exist in `backend/app/core/config.py` — a
-leftover from a provider that was removed when the Anthropic/OpenAI provider abstraction
-was built. Nothing reads them anymore. Delete both fields.
+Resolved. `OLLAMA_BASE_URL` and `OLLAMA_MODEL` were removed from
+`backend/app/core/config.py`. The Ollama provider had already been removed, and no active
+code referenced these settings.
 
 ## 6. New Features — After Hardening
 

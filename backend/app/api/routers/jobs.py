@@ -41,6 +41,28 @@ def create_job(
     if not video:
         raise HTTPException(status_code=404, detail="Video not found")
 
+    existing_job = (
+        db.query(Job)
+        .filter(
+            Job.video_id == payload.video_id,
+            Job.status.in_([
+                JobStatus.PENDING,
+                JobStatus.STARTED,
+                JobStatus.SUCCESS,
+            ]),
+        )
+        .order_by(Job.created_at.desc())
+        .first()
+    )
+
+    if existing_job:
+        return {
+            "job_id": existing_job.id,
+            "video_id": existing_job.video_id,
+            "status": existing_job.status,
+            "celery_task_id": existing_job.celery_task_id,
+        }
+
     job_id = str(uuid.uuid4())
     job = Job(id=job_id, video_id=payload.video_id, status=JobStatus.PENDING)
     db.add(job)

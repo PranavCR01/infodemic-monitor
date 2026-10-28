@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import os
 import uuid
 
@@ -10,6 +11,14 @@ from app.db.models.video import Video
 
 
 def save_video(db: Session, content: bytes, filename: str) -> Video:
+    file_hash = hashlib.sha256(content).hexdigest()
+
+    existing_video = (
+        db.query(Video).filter(Video.file_hash == file_hash).first()
+    )
+    if existing_video:
+        return existing_video
+
     video_id = str(uuid.uuid4())
 
     os.makedirs(settings.LOCAL_STORAGE_ROOT, exist_ok=True)
@@ -33,6 +42,7 @@ def save_video(db: Session, content: bytes, filename: str) -> Video:
         filename=filename,
         file_path=local_path,
         file_size=len(content),
+        file_hash=file_hash,
         storage_key=storage_key,
     )
     db.add(video)

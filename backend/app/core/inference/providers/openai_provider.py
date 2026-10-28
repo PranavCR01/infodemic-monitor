@@ -9,7 +9,7 @@ import openai
 from tenacity import retry, retry_if_exception, stop_after_attempt, wait_exponential
 
 from app.core.exceptions import InferenceProviderError
-from app.core.schemas.pipeline import ClassificationResult, FusionResult, MisinfoLabel, Claim
+from app.core.schemas.pipeline import ClassificationResult, FusionResult, MisinfoLabel
 
 
 def _is_retryable(exc: BaseException) -> bool:
@@ -23,7 +23,7 @@ Analyze the video content and respond with a JSON object containing exactly thes
 - "confidence": float between 0.0 and 1.0
 - "explanation": 2-4 sentence explanation of your decision
 - "evidence_snippets": array of 1-3 exact quotes from the content
-- "claims": array of objects, each with "claim_id" (short string like "c1"), "text" (the specific health claim), "label" (one of the four labels above), "confidence" (float), and "evidence" (array of quote strings)
+
 Labels:
 - MISINFO: video contains false or misleading health information
 - NO_MISINFO: video contains accurate health information
@@ -64,7 +64,6 @@ class OpenAIProvider:
                 confidence=float(parsed.get("confidence", 0.5)),
                 explanation=str(parsed.get("explanation", "")),
                 evidence_snippets=_safe_list(parsed.get("evidence_snippets")),
-                claims=_safe_claims(parsed.get("claims")),
                 provider="openai",
                 model_used=self._model,
                 latency_ms=latency_ms,
@@ -99,22 +98,3 @@ def _safe_list(raw) -> list[str]:
     if isinstance(raw, str):
         return [s.strip() for s in raw.split("\n") if s.strip()]
     return []
-
-def _safe_claims(raw) -> list[Claim]:
-    if not isinstance(raw, list):
-        return []
-    safe_claims = []
-    for claim in raw:
-        if not isinstance(claim, dict):
-            continue
-        try:
-            safe_claims.append(Claim(
-                claim_id=str(claim.get("claim_id", "")).strip(),
-                text=str(claim.get("text", "")).strip(),
-                label=_safe_label(claim.get("label")),
-                confidence=float(claim.get("confidence", 0.5)),
-                evidence=_safe_list(claim.get("evidence")),
-            ))
-        except (TypeError, ValueError):
-            continue
-    return safe_claims
