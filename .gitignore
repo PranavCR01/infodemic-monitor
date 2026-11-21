@@ -42,3 +42,9 @@ test_openai.py
 
 # Internal context/research files
 docs/CODEBASE_QUESTIONS.md
+# Raw videos for labelling: never commit (public repo)
+research/claim-level/dataset/videos/
+*.mp4
+*.mov
+*.webm
+*.mkv
