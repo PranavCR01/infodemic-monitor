@@ -12,7 +12,7 @@ starts the next ready task, and records progress here.
 | ID | Task | Issue | Doc § | Depends on | Status | Session | Started (UTC) | PR | Notes |
 |---|---|---|---|---|---|---|---|---|---|
 | T01 | Evaluation framework and routing harness (mocked models; no paid runs) | new | 13, 14 | — | in_progress | session_013cWxpykbHfbgKcp3qazzmb | 2026-11-21 23:51 | | Paid runs and the routing decision wait for API keys; build and test everything with mocks |
-| T02 | LangGraph skeleton: typed state, stub nodes, Postgres checkpointing | #29 | 4, 5 | — | todo | | | | Taken over from Jared by decision of the project lead; checkpoint tests use InMemorySaver plus local Postgres in Docker if available |
+| T02 | LangGraph skeleton: typed state, stub nodes, Postgres checkpointing | #29 | 4, 5 | — | in_progress | session_013cWxq2fmACtMefWPTdEkMT | 2026-11-21 23:53 | | Taken over from Jared by decision of the project lead; checkpoint tests use InMemorySaver plus local Postgres in Docker if available |
 | T03 | Retrieval planning and PubMed evidence retriever | #31 | 6 | T02 | todo | | | | Record PubMed responses as fixtures; tests make no network calls |
 | T04 | Stance analyzer node | #30 | 5 | T02 | todo | | | | |
 | T05 | Rerank and filter evidence | #32 | 6 | T03 | todo | | | | |
@@ -31,4 +31,5 @@ starts the next ready task, and records progress here.
 
 Newest first. One line per event: date, task, what happened.
 
+- 2026-11-21 23:53 UTC — T02 started in session session_013cWxq2fmACtMefWPTdEkMT (parallel with T01, per 23d9d35).
 - 2026-11-21 23:51 UTC — T01 started in session session_013cWxpykbHfbgKcp3qazzmb.
