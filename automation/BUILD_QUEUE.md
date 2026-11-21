@@ -5,7 +5,7 @@ this list one task at a time. The orchestrator session reads this file every hou
 starts the next ready task, and records progress here.
 
 - **Integration branch:** `langgraph-build`. Every task merges into it. `main` is never touched.
-- **One task at a time.** A task is *ready* when it is `todo` and every dependency is `done`.
+- **Up to 3 tasks at a time.** A task is *ready* when it is `todo` and every dependency is `done`. Ready tasks start immediately; nobody waits for the hourly wake-up.
 - **Statuses:** `todo` · `in_progress` · `done` · `blocked` (with the reason in Notes).
 - **People merge `langgraph-build` into `main`**, in reviewed chunks. Automation never does.
 

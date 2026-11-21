@@ -1,7 +1,7 @@
 # Prompt for one automated build task
 
-The orchestrator fills in `<TASK>`, `<ISSUE>` and `<SECTIONS>` from `automation/BUILD_QUEUE.md`
-and sends this to a fresh session.
+The orchestrator fills in `<TASK>`, `<ISSUE>`, `<SECTIONS>` and `<ORCHESTRATOR_SESSION_ID>` from
+`automation/BUILD_QUEUE.md` and sends this to a fresh session.
 
 ```
 You are building one task of the WHO Infodemic Monitor target system, unattended.
@@ -37,13 +37,19 @@ Task: <TASK>   Issue: <ISSUE>   Design sections: §<SECTIONS>
 ## Finish
 1. Update context/MULTI_AGENT.md: add a dated check-in log line for this task and any
    design decision you made.
-2. Push auto/<task-id> and open a PR into langgraph-build titled
+2. Other tasks run in parallel and merge into langgraph-build too. Before merging:
+   git fetch origin; rebase auto/<task-id> onto the latest origin/langgraph-build;
+   resolve any conflicts (keep both sides' work); run the full test suite again.
+3. Push auto/<task-id> and open a PR into langgraph-build titled
    "[auto] <task-id>: <TASK>", with: what was built, test results, decisions and
    deviations from the doc, and anything left for a person.
-3. If the full test suite passes, merge the PR into langgraph-build yourself
+4. If the full test suite passes, merge the PR into langgraph-build yourself
    (squash). If it doesn't pass and you can't fix it, leave the PR open and explain
    why in the PR.
-4. In automation/BUILD_QUEUE.md on langgraph-build, set this task to `done` (merged)
+5. In automation/BUILD_QUEUE.md on langgraph-build, set this task to `done` (merged)
    or `blocked` (with the reason), fill in the PR link, and add a Log line. Commit
-   that directly to langgraph-build (git pull --rebase first).
+   that directly to langgraph-build (git pull --rebase first; retry on conflict).
+6. Immediately tell the orchestrator, so the next tasks start without waiting:
+   send_message to session <ORCHESTRATOR_SESSION_ID> with
+   "Task finished: <task-id> <done|blocked> <PR link>". This is your last action.
 ```
