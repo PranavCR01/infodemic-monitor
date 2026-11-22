@@ -56,13 +56,32 @@ def _decision(state: PipelineState, claim_id: str) -> CriticDecision | None:
     return result.decision if result else None
 
 
-def claims_to_retrieve(state: PipelineState, budgets: Budgets = DEFAULT_BUDGETS) -> list[str]:
-    """Claims that need a (first or further) search round now."""
+def claims_to_broaden(state: PipelineState, budgets: Budgets = DEFAULT_BUDGETS) -> list[str]:
+    """Claims whose searches so far found nothing and that have budget left: planning
+    retries them with broader terms before anything else happens (§6 "When nothing
+    comes back"). Only claims the retriever has already searched count (their key is
+    present in ``retrieved_evidence``)."""
     attempts = state.get("retrieval_attempts", {})
+    evidence = state.get("retrieved_evidence", {})
+    return [
+        cid
+        for cid in verifiable_claim_ids(state)
+        if cid in evidence
+        and not evidence[cid]
+        and 0 < attempts.get(cid, 0) < budgets.max_retrieval_attempts
+    ]
+
+
+def claims_to_retrieve(state: PipelineState, budgets: Budgets = DEFAULT_BUDGETS) -> list[str]:
+    """Claims that need a (first or further) search round now: never searched, the
+    critic asked for more evidence, or every search so far came back empty. All three
+    draw on the same per-claim budget."""
+    attempts = state.get("retrieval_attempts", {})
+    broaden = set(claims_to_broaden(state, budgets))
     out = []
     for cid in verifiable_claim_ids(state):
         n = attempts.get(cid, 0)
-        if n == 0:
+        if n == 0 or cid in broaden:
             out.append(cid)
         elif _decision(state, cid) == CriticDecision.RETRIEVE_MORE and n < budgets.max_retrieval_attempts:
             out.append(cid)
@@ -126,6 +145,15 @@ def exhausted_claim_ids(state: PipelineState, budgets: Budgets = DEFAULT_BUDGETS
 def route_after_stance(state: PipelineState) -> str:
     """No verifiable claims → straight to the judge (§4 "no claims at all")."""
     return PLAN_RETRIEVAL if verifiable_claim_ids(state) else JUDGE_CLASSIFICATION
+
+
+def make_route_after_retrieval(budgets: Budgets = DEFAULT_BUDGETS):
+    """Empty results with budget left → plan a broader query; otherwise rerank (§6)."""
+
+    def route_after_retrieval(state: PipelineState) -> str:
+        return PLAN_RETRIEVAL if claims_to_broaden(state, budgets) else RERANK_EVIDENCE
+
+    return route_after_retrieval
 
 
 def make_route_after_critic(budgets: Budgets = DEFAULT_BUDGETS):

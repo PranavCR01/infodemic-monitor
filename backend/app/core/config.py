@@ -35,6 +35,12 @@ class Settings(BaseSettings):
     MAX_INPUT_CHARS: int = 128_000
     PUBMED_RESULTS_PER_CLAIM: int = 2
 
+    # Evidence retrieval for the LangGraph pipeline (app/core/retrieval).
+    # Both NCBI values are optional: a key raises NCBI's limit from 3 to 10 requests/s.
+    NCBI_API_KEY: str = ""
+    NCBI_EMAIL: str = ""
+    RETRIEVAL_MAX_RESULTS_PER_QUERY: int = 20
+
     # Migrations
     RUN_MIGRATIONS: bool = True  # set False on Railway worker service
 

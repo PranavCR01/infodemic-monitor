@@ -1,0 +1,21 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "0",
+  "retmax": "0",
+  "retstart": "0",
+  "idlist": [],
+  "translationset": [],
+  "querytranslation": "(\"hot drinks\"[tiab] OR \"hot beverages\"[tiab] OR \"hot water\"[tiab]) AND (\"Influenza, Human\"[MeSH Terms] OR influenza[tiab] OR flu[tiab])",
+  "warninglist": {
+   "phrasesignored": [],
+   "quotedphrasesnotfound": [],
+   "outputmessages": [
+    "No items found."
+   ]
+  }
+ }
+}
