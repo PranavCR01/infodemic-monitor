@@ -31,6 +31,11 @@ anthropic>=0.28
 openai>=1.13
 tiktoken>=0.6
 
+# LangGraph pipeline (app/core/graph); the Postgres checkpointer uses psycopg 3
+langgraph>=1.0
+langgraph-checkpoint-postgres>=3.0
+psycopg[binary]>=3.1
+
 # Utilities
 requests>=2.31
 tenacity>=8.2
