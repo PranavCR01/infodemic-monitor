@@ -385,3 +385,39 @@ def test_metrics_macro_f1_counts_a_missed_class_as_zero():
     classes = se.per_class(["A", "B"], ["A", "A"], labels=("A", "B"))
     assert classes["B"]["f1"] == 0.0
     assert se.macro_f1(classes) == pytest.approx((2 / 3 + 0) / 2)
+
+
+# ------------------------------------------------------------------ T01 router
+
+
+def test_runs_through_the_real_model_router_and_routing_yaml():
+    """The node takes T01's ModelRouter as-is: model and prompt come from routing.yaml."""
+    from app.core.routing import ModelRouter, ModelTimeoutError, load_routing
+    from app.core.routing.mock import MockModelClient
+
+    config = load_routing()
+    route = config.route(sa.STEP)
+    client = MockModelClient(lambda model, req: refutes("c1", req))
+    router = ModelRouter(config, {route.provider: client})
+    out = sa.make_analyze_stance(router)(garlic_state())
+    res = out["stance_results"]["c1"]
+    assert res.stance == Stance.REFUTES
+    assert res.model == route.model and res.prompt_version == route.prompt == "stance_v1"
+    (model, request), = client.calls
+    assert model == route.model and request.step == sa.STEP
+    assert request.input["tool_choice"]["name"] == "record_stance"
+    assert request.system == sa.load_prompt(route.prompt)
+
+    # Primary and fallback both time out → RoutingError → UNCLEAR, retryable.
+    failing = MockModelClient(None, failures=[ModelTimeoutError()] * 10)
+    fb = config.fallback_for(sa.STEP)
+    clients = {route.provider: failing, **({fb.provider: failing} if fb else {})}
+    out = sa.make_analyze_stance(ModelRouter(config, clients))(garlic_state())
+    assert out["stance_results"]["c1"].stance == Stance.UNCLEAR
+    assert out["errors"][0].retryable
+
+
+def test_every_routed_prompt_version_for_stance_has_a_file():
+    from app.core.routing import load_routing
+
+    assert sa.load_prompt(load_routing().route(sa.STEP).prompt)

@@ -35,9 +35,8 @@ UNCLEAR 0.00 (it never answers UNCLEAR, so every sarcasm and two-speaker case is
 Full per-example output is in `keyword_baseline_results.json`.
 
 **The LLM row is empty on purpose.** No API keys were available to the automated build,
-and inventing numbers would defeat the point. The run is one command once T01's router
-is merged and keys exist: build a `ModelRouter` from `config/routing.yaml` and call
-`stance_eval.run_examples(router)`.
+and inventing numbers would defeat the point. Once keys and real provider clients exist, build a `ModelRouter` from
+`backend/config/routing.yaml` and call `stance_eval.run_examples(router)`.
 
 What the numbers above do and don't say:
 

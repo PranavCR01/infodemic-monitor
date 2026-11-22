@@ -17,10 +17,10 @@ two offline callers, neither of which is a measurement of an LLM:
 
     python -m app.core.graph.stance_eval --caller keyword [--out results.json]
 
-A real model run passes T01's ``ModelRouter`` (see ``run_examples``) once keys exist.
+A real model run, once keys exist: ``run_examples(ModelRouter(load_routing(), clients))``.
 
-Metric functions are local because T01's ``app.evaluation.metrics`` isn't merged yet;
-fold them into it when it lands.
+Metric functions are local (written before T01's ``app.evaluation.metrics`` merged);
+fold them into it later.
 """
 from __future__ import annotations
 
