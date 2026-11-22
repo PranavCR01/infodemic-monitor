@@ -1,0 +1,604 @@
+{
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "on_screen": {
+  "frames_sampled": 76,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.706
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.979
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.973
+   },
+   {
+    "time": 4.0,
+    "text": "@1_pr Ince_1",
+    "confidence": 0.692
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 0.576
+   },
+   {
+    "time": 30.0,
+    "text": "~prince_ 1",
+    "confidence": 0.706
+   },
+   {
+    "time": 32.0,
+    "text": "@_prnce_",
+    "confidence": 0.673
+   },
+   {
+    "time": 38.0,
+    "text": "TikTok",
+    "confidence": 0.75
+   },
+   {
+    "time": 42.0,
+    "text": "Tiktok",
+    "confidence": 0.808
+   },
+   {
+    "time": 44.0,
+    "text": "prInce_ 1",
+    "confidence": 0.547
+   },
+   {
+    "time": 44.0,
+    "text": "@",
+    "confidence": 0.961
+   },
+   {
+    "time": 46.0,
+    "text": "@ 1_prince _",
+    "confidence": 0.556
+   },
+   {
+    "time": 48.0,
+    "text": "ikTok",
+    "confidence": 0.706
+   },
+   {
+    "time": 52.0,
+    "text": "ik Tok",
+    "confidence": 0.542
+   },
+   {
+    "time": 60.0,
+    "text": "kok",
+    "confidence": 0.997
+   },
+   {
+    "time": 64.0,
+    "text": "Tiktok",
+    "confidence": 0.642
+   },
+   {
+    "time": 68.0,
+    "text": "TikTok",
+    "confidence": 0.969
+   },
+   {
+    "time": 70.0,
+    "text": "TikTok",
+    "confidence": 0.964
+   },
+   {
+    "time": 70.0,
+    "text": "@ 1_prnce_",
+    "confidence": 0.771
+   },
+   {
+    "time": 72.0,
+    "text": "J",
+    "confidence": 0.593
+   },
+   {
+    "time": 72.0,
+    "text": "TikTok",
+    "confidence": 0.839
+   },
+   {
+    "time": 74.0,
+    "text": "TikTok",
+    "confidence": 0.521
+   },
+   {
+    "time": 76.0,
+    "text": "@ 1_ prnce_1",
+    "confidence": 0.75
+   },
+   {
+    "time": 80.0,
+    "text": "TikTok",
+    "confidence": 0.575
+   },
+   {
+    "time": 86.0,
+    "text": "d",
+    "confidence": 0.53
+   },
+   {
+    "time": 86.0,
+    "text": "@ 1_prnce_",
+    "confidence": 0.704
+   },
+   {
+    "time": 88.0,
+    "text": "d'",
+    "confidence": 0.558
+   },
+   {
+    "time": 92.0,
+    "text": "JikTok",
+    "confidence": 0.514
+   },
+   {
+    "time": 92.0,
+    "text": "@ 1_prInce",
+    "confidence": 0.751
+   },
+   {
+    "time": 94.0,
+    "text": "@1_prince_",
+    "confidence": 0.763
+   },
+   {
+    "time": 96.0,
+    "text": "Tiktok",
+    "confidence": 0.684
+   },
+   {
+    "time": 98.0,
+    "text": "TikTok",
+    "confidence": 0.584
+   },
+   {
+    "time": 98.0,
+    "text": "@ 1_prrnce _",
+    "confidence": 0.517
+   },
+   {
+    "time": 100.0,
+    "text": "iktok",
+    "confidence": 0.601
+   },
+   {
+    "time": 102.0,
+    "text": "J",
+    "confidence": 0.518
+   },
+   {
+    "time": 102.0,
+    "text": "JikTok",
+    "confidence": 0.725
+   },
+   {
+    "time": 102.0,
+    "text": "prince",
+    "confidence": 0.624
+   },
+   {
+    "time": 106.0,
+    "text": "TikTok",
+    "confidence": 0.767
+   },
+   {
+    "time": 110.0,
+    "text": "Tik Tok",
+    "confidence": 0.684
+   },
+   {
+    "time": 112.0,
+    "text": "@1_prUnce_",
+    "confidence": 0.569
+   },
+   {
+    "time": 114.0,
+    "text": "Tiklok",
+    "confidence": 0.587
+   },
+   {
+    "time": 116.0,
+    "text": "prince",
+    "confidence": 0.737
+   },
+   {
+    "time": 122.0,
+    "text": "d",
+    "confidence": 0.824
+   },
+   {
+    "time": 122.0,
+    "text": "@1_puce_",
+    "confidence": 0.627
+   },
+   {
+    "time": 126.0,
+    "text": "@1_prluce",
+    "confidence": 0.836
+   },
+   {
+    "time": 128.0,
+    "text": "Tikok",
+    "confidence": 0.989
+   },
+   {
+    "time": 130.0,
+    "text": "@ 1_prince_",
+    "confidence": 0.598
+   },
+   {
+    "time": 138.0,
+    "text": "@1_prlce_",
+    "confidence": 0.806
+   },
+   {
+    "time": 142.0,
+    "text": "TikTok",
+    "confidence": 0.547
+   },
+   {
+    "time": 148.0,
+    "text": "J",
+    "confidence": 0.697
+   },
+   {
+    "time": 148.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 150.0,
+    "text": "J",
+    "confidence": 0.526
+   },
+   {
+    "time": 150.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   }
+  ],
+  "captions": [
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 4.0,
+    "confidence": 0.979,
+    "id": "o1"
+   },
+   {
+    "text": "@1_pr Ince_1",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.692,
+    "id": "o2"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.576,
+    "id": "o3"
+   },
+   {
+    "text": "~prince_ 1",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.706,
+    "id": "o4"
+   },
+   {
+    "text": "@_prnce_",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.673,
+    "id": "o5"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.0,
+    "end": 42.0,
+    "confidence": 0.808,
+    "id": "o6"
+   },
+   {
+    "text": "prInce_ 1",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.547,
+    "id": "o7"
+   },
+   {
+    "text": "@",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.961,
+    "id": "o8"
+   },
+   {
+    "text": "@ 1_prince _",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.556,
+    "id": "o9"
+   },
+   {
+    "text": "ikTok",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.706,
+    "id": "o10"
+   },
+   {
+    "text": "ik Tok",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.542,
+    "id": "o11"
+   },
+   {
+    "text": "kok",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.997,
+    "id": "o12"
+   },
+   {
+    "text": "Tiktok",
+    "start": 64.0,
+    "end": 70.0,
+    "confidence": 0.969,
+    "id": "o13"
+   },
+   {
+    "text": "@ 1_prnce_",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.771,
+    "id": "o14"
+   },
+   {
+    "text": "J",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.593,
+    "id": "o15"
+   },
+   {
+    "text": "TikTok",
+    "start": 72.0,
+    "end": 74.0,
+    "confidence": 0.839,
+    "id": "o16"
+   },
+   {
+    "text": "@ 1_ prnce_1",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.75,
+    "id": "o17"
+   },
+   {
+    "text": "TikTok",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.575,
+    "id": "o18"
+   },
+   {
+    "text": "d",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.53,
+    "id": "o19"
+   },
+   {
+    "text": "@ 1_prnce_",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.704,
+    "id": "o20"
+   },
+   {
+    "text": "d'",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.558,
+    "id": "o21"
+   },
+   {
+    "text": "JikTok",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.514,
+    "id": "o22"
+   },
+   {
+    "text": "@ 1_prInce",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.751,
+    "id": "o23"
+   },
+   {
+    "text": "@1_prince_",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.763,
+    "id": "o24"
+   },
+   {
+    "text": "Tiktok",
+    "start": 96.0,
+    "end": 98.0,
+    "confidence": 0.684,
+    "id": "o25"
+   },
+   {
+    "text": "@ 1_prrnce _",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.517,
+    "id": "o26"
+   },
+   {
+    "text": "iktok",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.601,
+    "id": "o27"
+   },
+   {
+    "text": "J",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.518,
+    "id": "o28"
+   },
+   {
+    "text": "JikTok",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.725,
+    "id": "o29"
+   },
+   {
+    "text": "prince",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.624,
+    "id": "o30"
+   },
+   {
+    "text": "TikTok",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.767,
+    "id": "o31"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.684,
+    "id": "o32"
+   },
+   {
+    "text": "@1_prUnce_",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.569,
+    "id": "o33"
+   },
+   {
+    "text": "Tiklok",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 0.587,
+    "id": "o34"
+   },
+   {
+    "text": "prince",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 0.737,
+    "id": "o35"
+   },
+   {
+    "text": "d",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.824,
+    "id": "o36"
+   },
+   {
+    "text": "@1_puce_",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.627,
+    "id": "o37"
+   },
+   {
+    "text": "@1_prluce",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.836,
+    "id": "o38"
+   },
+   {
+    "text": "Tikok",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.989,
+    "id": "o39"
+   },
+   {
+    "text": "@ 1_prince_",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.598,
+    "id": "o40"
+   },
+   {
+    "text": "@1_prlce_",
+    "start": 138.0,
+    "end": 138.0,
+    "confidence": 0.806,
+    "id": "o41"
+   },
+   {
+    "text": "TikTok",
+    "start": 142.0,
+    "end": 142.0,
+    "confidence": 0.547,
+    "id": "o42"
+   },
+   {
+    "text": "J",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 0.697,
+    "id": "o43"
+   },
+   {
+    "text": "TikTok",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 0.999,
+    "id": "o44"
+   },
+   {
+    "text": "J",
+    "start": 150.0,
+    "end": 150.0,
+    "confidence": 0.526,
+    "id": "o45"
+   },
+   {
+    "text": "TikTok",
+    "start": 150.0,
+    "end": 150.0,
+    "confidence": 0.999,
+    "id": "o46"
+   }
+  ]
+ }
+}

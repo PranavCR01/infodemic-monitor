@@ -1,0 +1,850 @@
+{
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "on_screen": {
+  "frames_sampled": 79,
+  "detections": [
+   {
+    "time": 2.0,
+    "text": "aehonblejoryou",
+    "confidence": 0.63
+   },
+   {
+    "time": 4.0,
+    "text": "whatieveryones",
+    "confidence": 0.52
+   },
+   {
+    "time": 6.01,
+    "text": "L",
+    "confidence": 0.831
+   },
+   {
+    "time": 8.01,
+    "text": "SEED",
+    "confidence": 0.991
+   },
+   {
+    "time": 8.01,
+    "text": "OILS",
+    "confidence": 0.955
+   },
+   {
+    "time": 12.01,
+    "text": "SEED",
+    "confidence": 0.691
+   },
+   {
+    "time": 12.01,
+    "text": "CAZE",
+    "confidence": 0.818
+   },
+   {
+    "time": 14.01,
+    "text": "SEED",
+    "confidence": 0.693
+   },
+   {
+    "time": 14.01,
+    "text": "L'4",
+    "confidence": 0.516
+   },
+   {
+    "time": 16.02,
+    "text": "SEED",
+    "confidence": 0.669
+   },
+   {
+    "time": 16.02,
+    "text": "LLL",
+    "confidence": 0.962
+   },
+   {
+    "time": 20.02,
+    "text": "SEED",
+    "confidence": 0.708
+   },
+   {
+    "time": 22.02,
+    "text": "iwe) could",
+    "confidence": 0.637
+   },
+   {
+    "time": 24.02,
+    "text": "RODE",
+    "confidence": 0.59
+   },
+   {
+    "time": 26.03,
+    "text": "RODE",
+    "confidence": 0.953
+   },
+   {
+    "time": 32.03,
+    "text": "L",
+    "confidence": 0.575
+   },
+   {
+    "time": 32.03,
+    "text": "DOZENS",
+    "confidence": 0.683
+   },
+   {
+    "time": 32.03,
+    "text": "CONTROLLED TRIALS",
+    "confidence": 0.562
+   },
+   {
+    "time": 42.04,
+    "text": "Soifseedoils",
+    "confidence": 0.888
+   },
+   {
+    "time": 44.04,
+    "text": "RODE",
+    "confidence": 0.664
+   },
+   {
+    "time": 44.04,
+    "text": "thesepeople",
+    "confidence": 0.595
+   },
+   {
+    "time": 52.05,
+    "text": "THE SAME",
+    "confidence": 0.635
+   },
+   {
+    "time": 56.06,
+    "text": "TRAINBLOOM",
+    "confidence": 0.984
+   },
+   {
+    "time": 58.06,
+    "text": "FANTASTICSOURCE",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.06,
+    "text": "ONSOCIALMEDIA",
+    "confidence": 0.658
+   },
+   {
+    "time": 62.06,
+    "text": "BUT SEED",
+    "confidence": 0.585
+   },
+   {
+    "time": 64.06,
+    "text": "THAT MOST PEOPLE",
+    "confidence": 0.672
+   },
+   {
+    "time": 66.07,
+    "text": "1960S,JAPAN",
+    "confidence": 0.782
+   },
+   {
+    "time": 70.07,
+    "text": "FORMOFCANOLA",
+    "confidence": 0.86
+   },
+   {
+    "time": 72.07,
+    "text": "THEIXACT OILS",
+    "confidence": 0.868
+   },
+   {
+    "time": 74.07,
+    "text": "THEYRE",
+    "confidence": 0.995
+   },
+   {
+    "time": 76.08,
+    "text": "ANDTHEYLIVE",
+    "confidence": 0.996
+   },
+   {
+    "time": 78.08,
+    "text": "THBIARTH",
+    "confidence": 0.622
+   },
+   {
+    "time": 80.08,
+    "text": "THAATHONGKONG",
+    "confidence": 0.662
+   },
+   {
+    "time": 82.08,
+    "text": "BUTSAMESTORY:",
+    "confidence": 0.984
+   },
+   {
+    "time": 84.08,
+    "text": "JAPAN",
+    "confidence": 1.0
+   },
+   {
+    "time": 86.09,
+    "text": "FATTESTCOUNTRIES",
+    "confidence": 0.536
+   },
+   {
+    "time": 88.09,
+    "text": "HERE'S",
+    "confidence": 0.746
+   },
+   {
+    "time": 90.09,
+    "text": "CHANGEDINAMERICA",
+    "confidence": 0.609
+   },
+   {
+    "time": 92.09,
+    "text": "WEEATABOUT 500",
+    "confidence": 0.746
+   },
+   {
+    "time": 94.09,
+    "text": "OR MORE CALORIES",
+    "confidence": 0.752
+   },
+   {
+    "time": 96.1,
+    "text": "PORTIONS GREW",
+    "confidence": 0.939
+   },
+   {
+    "time": 98.1,
+    "text": "ANDALSOJATHOME:",
+    "confidence": 0.779
+   },
+   {
+    "time": 100.1,
+    "text": "THAT USED",
+    "confidence": 0.992
+   },
+   {
+    "time": 102.1,
+    "text": "BYIMORE",
+    "confidence": 0.948
+   },
+   {
+    "time": 104.1,
+    "text": "AND MOST",
+    "confidence": 0.94
+   },
+   {
+    "time": 106.11,
+    "text": "ISULTRA PROCESSED.",
+    "confidence": 0.563
+   },
+   {
+    "time": 108.11,
+    "text": "IN A METABOLICWARD",
+    "confidence": 0.998
+   },
+   {
+    "time": 110.11,
+    "text": "TWODIETS, MATCHED",
+    "confidence": 0.884
+   },
+   {
+    "time": 114.11,
+    "text": "ONE ISPROCESSED,",
+    "confidence": 0.559
+   },
+   {
+    "time": 116.12,
+    "text": "PEOPLE ATE",
+    "confidence": 0.681
+   },
+   {
+    "time": 118.12,
+    "text": "MOREADAYAND",
+    "confidence": 0.992
+   },
+   {
+    "time": 120.12,
+    "text": "TALKSABOUT",
+    "confidence": 0.999
+   },
+   {
+    "time": 122.12,
+    "text": "ULTRA PROCESSED",
+    "confidence": 0.727
+   },
+   {
+    "time": 124.12,
+    "text": "ITSENGINEERED",
+    "confidence": 0.987
+   },
+   {
+    "time": 126.13,
+    "text": "BEFORE YOUR BODY",
+    "confidence": 0.988
+   },
+   {
+    "time": 128.13,
+    "text": "SOJAPAN DIDN'T",
+    "confidence": 0.981
+   },
+   {
+    "time": 130.13,
+    "text": "AVOIDSEED OILS:",
+    "confidence": 0.734
+   },
+   {
+    "time": 132.13,
+    "text": "NEVERLEARNED",
+    "confidence": 0.793
+   },
+   {
+    "time": 134.13,
+    "text": "AND [VEBEENPART",
+    "confidence": 0.598
+   },
+   {
+    "time": 136.14,
+    "text": "2OYEARS",
+    "confidence": 0.583
+   },
+   {
+    "time": 138.14,
+    "text": "FAT THE ENEMY:",
+    "confidence": 0.806
+   },
+   {
+    "time": 140.14,
+    "text": "THBENEMY",
+    "confidence": 0.689
+   },
+   {
+    "time": 142.14,
+    "text": "ANDNNOW",
+    "confidence": 0.996
+   },
+   {
+    "time": 144.14,
+    "text": "ANDWECAN BE",
+    "confidence": 0.671
+   },
+   {
+    "time": 148.15,
+    "text": "LIKE OBESITY,",
+    "confidence": 0.747
+   },
+   {
+    "time": 150.15,
+    "text": "A MULTIIFACTORIAL",
+    "confidence": 0.714
+   },
+   {
+    "time": 152.15,
+    "text": "THAT HASMMORETO DO",
+    "confidence": 0.922
+   },
+   {
+    "time": 154.15,
+    "text": "OF YOURLIFESTYLE",
+    "confidence": 0.981
+   },
+   {
+    "time": 156.16,
+    "text": "INGREDIENTIN",
+    "confidence": 1.0
+   }
+  ],
+  "captions": [
+   {
+    "text": "aehonblejoryou",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.63,
+    "id": "o1"
+   },
+   {
+    "text": "whatieveryones",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.52,
+    "id": "o2"
+   },
+   {
+    "text": "L",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.831,
+    "id": "o3"
+   },
+   {
+    "text": "SEED",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.991,
+    "id": "o4"
+   },
+   {
+    "text": "OILS",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.955,
+    "id": "o5"
+   },
+   {
+    "text": "SEED",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.691,
+    "id": "o6"
+   },
+   {
+    "text": "CAZE",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.818,
+    "id": "o7"
+   },
+   {
+    "text": "SEED",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.693,
+    "id": "o8"
+   },
+   {
+    "text": "L'4",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.516,
+    "id": "o9"
+   },
+   {
+    "text": "SEED",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.669,
+    "id": "o10"
+   },
+   {
+    "text": "LLL",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.962,
+    "id": "o11"
+   },
+   {
+    "text": "SEED",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.708,
+    "id": "o12"
+   },
+   {
+    "text": "iwe) could",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.637,
+    "id": "o13"
+   },
+   {
+    "text": "RODE",
+    "start": 24.02,
+    "end": 26.03,
+    "confidence": 0.953,
+    "id": "o14"
+   },
+   {
+    "text": "L",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.575,
+    "id": "o15"
+   },
+   {
+    "text": "DOZENS",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.683,
+    "id": "o16"
+   },
+   {
+    "text": "CONTROLLED TRIALS",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.562,
+    "id": "o17"
+   },
+   {
+    "text": "Soifseedoils",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.888,
+    "id": "o18"
+   },
+   {
+    "text": "RODE",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.664,
+    "id": "o19"
+   },
+   {
+    "text": "thesepeople",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.595,
+    "id": "o20"
+   },
+   {
+    "text": "THE SAME",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.635,
+    "id": "o21"
+   },
+   {
+    "text": "TRAINBLOOM",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.984,
+    "id": "o22"
+   },
+   {
+    "text": "FANTASTICSOURCE",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 1.0,
+    "id": "o23"
+   },
+   {
+    "text": "ONSOCIALMEDIA",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 0.658,
+    "id": "o24"
+   },
+   {
+    "text": "BUT SEED",
+    "start": 62.06,
+    "end": 62.06,
+    "confidence": 0.585,
+    "id": "o25"
+   },
+   {
+    "text": "THAT MOST PEOPLE",
+    "start": 64.06,
+    "end": 64.06,
+    "confidence": 0.672,
+    "id": "o26"
+   },
+   {
+    "text": "1960S,JAPAN",
+    "start": 66.07,
+    "end": 66.07,
+    "confidence": 0.782,
+    "id": "o27"
+   },
+   {
+    "text": "FORMOFCANOLA",
+    "start": 70.07,
+    "end": 70.07,
+    "confidence": 0.86,
+    "id": "o28"
+   },
+   {
+    "text": "THEIXACT OILS",
+    "start": 72.07,
+    "end": 72.07,
+    "confidence": 0.868,
+    "id": "o29"
+   },
+   {
+    "text": "THEYRE",
+    "start": 74.07,
+    "end": 74.07,
+    "confidence": 0.995,
+    "id": "o30"
+   },
+   {
+    "text": "ANDTHEYLIVE",
+    "start": 76.08,
+    "end": 76.08,
+    "confidence": 0.996,
+    "id": "o31"
+   },
+   {
+    "text": "THBIARTH",
+    "start": 78.08,
+    "end": 78.08,
+    "confidence": 0.622,
+    "id": "o32"
+   },
+   {
+    "text": "THAATHONGKONG",
+    "start": 80.08,
+    "end": 80.08,
+    "confidence": 0.662,
+    "id": "o33"
+   },
+   {
+    "text": "BUTSAMESTORY:",
+    "start": 82.08,
+    "end": 82.08,
+    "confidence": 0.984,
+    "id": "o34"
+   },
+   {
+    "text": "JAPAN",
+    "start": 84.08,
+    "end": 84.08,
+    "confidence": 1.0,
+    "id": "o35"
+   },
+   {
+    "text": "FATTESTCOUNTRIES",
+    "start": 86.09,
+    "end": 86.09,
+    "confidence": 0.536,
+    "id": "o36"
+   },
+   {
+    "text": "HERE'S",
+    "start": 88.09,
+    "end": 88.09,
+    "confidence": 0.746,
+    "id": "o37"
+   },
+   {
+    "text": "CHANGEDINAMERICA",
+    "start": 90.09,
+    "end": 90.09,
+    "confidence": 0.609,
+    "id": "o38"
+   },
+   {
+    "text": "WEEATABOUT 500",
+    "start": 92.09,
+    "end": 92.09,
+    "confidence": 0.746,
+    "id": "o39"
+   },
+   {
+    "text": "OR MORE CALORIES",
+    "start": 94.09,
+    "end": 94.09,
+    "confidence": 0.752,
+    "id": "o40"
+   },
+   {
+    "text": "PORTIONS GREW",
+    "start": 96.1,
+    "end": 96.1,
+    "confidence": 0.939,
+    "id": "o41"
+   },
+   {
+    "text": "ANDALSOJATHOME:",
+    "start": 98.1,
+    "end": 98.1,
+    "confidence": 0.779,
+    "id": "o42"
+   },
+   {
+    "text": "THAT USED",
+    "start": 100.1,
+    "end": 100.1,
+    "confidence": 0.992,
+    "id": "o43"
+   },
+   {
+    "text": "BYIMORE",
+    "start": 102.1,
+    "end": 102.1,
+    "confidence": 0.948,
+    "id": "o44"
+   },
+   {
+    "text": "AND MOST",
+    "start": 104.1,
+    "end": 104.1,
+    "confidence": 0.94,
+    "id": "o45"
+   },
+   {
+    "text": "ISULTRA PROCESSED.",
+    "start": 106.11,
+    "end": 106.11,
+    "confidence": 0.563,
+    "id": "o46"
+   },
+   {
+    "text": "IN A METABOLICWARD",
+    "start": 108.11,
+    "end": 108.11,
+    "confidence": 0.998,
+    "id": "o47"
+   },
+   {
+    "text": "TWODIETS, MATCHED",
+    "start": 110.11,
+    "end": 110.11,
+    "confidence": 0.884,
+    "id": "o48"
+   },
+   {
+    "text": "ONE ISPROCESSED,",
+    "start": 114.11,
+    "end": 114.11,
+    "confidence": 0.559,
+    "id": "o49"
+   },
+   {
+    "text": "PEOPLE ATE",
+    "start": 116.12,
+    "end": 116.12,
+    "confidence": 0.681,
+    "id": "o50"
+   },
+   {
+    "text": "MOREADAYAND",
+    "start": 118.12,
+    "end": 118.12,
+    "confidence": 0.992,
+    "id": "o51"
+   },
+   {
+    "text": "TALKSABOUT",
+    "start": 120.12,
+    "end": 120.12,
+    "confidence": 0.999,
+    "id": "o52"
+   },
+   {
+    "text": "ULTRA PROCESSED",
+    "start": 122.12,
+    "end": 122.12,
+    "confidence": 0.727,
+    "id": "o53"
+   },
+   {
+    "text": "ITSENGINEERED",
+    "start": 124.12,
+    "end": 124.12,
+    "confidence": 0.987,
+    "id": "o54"
+   },
+   {
+    "text": "BEFORE YOUR BODY",
+    "start": 126.13,
+    "end": 126.13,
+    "confidence": 0.988,
+    "id": "o55"
+   },
+   {
+    "text": "SOJAPAN DIDN'T",
+    "start": 128.13,
+    "end": 128.13,
+    "confidence": 0.981,
+    "id": "o56"
+   },
+   {
+    "text": "AVOIDSEED OILS:",
+    "start": 130.13,
+    "end": 130.13,
+    "confidence": 0.734,
+    "id": "o57"
+   },
+   {
+    "text": "NEVERLEARNED",
+    "start": 132.13,
+    "end": 132.13,
+    "confidence": 0.793,
+    "id": "o58"
+   },
+   {
+    "text": "AND [VEBEENPART",
+    "start": 134.13,
+    "end": 134.13,
+    "confidence": 0.598,
+    "id": "o59"
+   },
+   {
+    "text": "2OYEARS",
+    "start": 136.14,
+    "end": 136.14,
+    "confidence": 0.583,
+    "id": "o60"
+   },
+   {
+    "text": "FAT THE ENEMY:",
+    "start": 138.14,
+    "end": 138.14,
+    "confidence": 0.806,
+    "id": "o61"
+   },
+   {
+    "text": "THBENEMY",
+    "start": 140.14,
+    "end": 140.14,
+    "confidence": 0.689,
+    "id": "o62"
+   },
+   {
+    "text": "ANDNNOW",
+    "start": 142.14,
+    "end": 142.14,
+    "confidence": 0.996,
+    "id": "o63"
+   },
+   {
+    "text": "ANDWECAN BE",
+    "start": 144.14,
+    "end": 144.14,
+    "confidence": 0.671,
+    "id": "o64"
+   },
+   {
+    "text": "LIKE OBESITY,",
+    "start": 148.15,
+    "end": 148.15,
+    "confidence": 0.747,
+    "id": "o65"
+   },
+   {
+    "text": "A MULTIIFACTORIAL",
+    "start": 150.15,
+    "end": 150.15,
+    "confidence": 0.714,
+    "id": "o66"
+   },
+   {
+    "text": "THAT HASMMORETO DO",
+    "start": 152.15,
+    "end": 152.15,
+    "confidence": 0.922,
+    "id": "o67"
+   },
+   {
+    "text": "OF YOURLIFESTYLE",
+    "start": 154.15,
+    "end": 154.15,
+    "confidence": 0.981,
+    "id": "o68"
+   },
+   {
+    "text": "INGREDIENTIN",
+    "start": 156.16,
+    "end": 156.16,
+    "confidence": 1.0,
+    "id": "o69"
+   }
+  ]
+ }
+}

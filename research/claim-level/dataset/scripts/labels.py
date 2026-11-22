@@ -4698,4 +4698,308 @@ LABELS = [
             },
         ],
     },
+    {
+        "video_id": "v62",
+        "topic": "vaccines / autism",
+        "case_tags": ["debunking"],
+        "confidence": "medium",
+        "notes": "A six-minute piece by a scientist responding to the CDC "
+                 "updating its site to say vaccines may cause autism, opening "
+                 "with 'they're lying to us' and an explicit statement of "
+                 "independence. Structurally the hardest stance case in the "
+                 "set after v32: the opening 25 seconds are "
+                 "indistinguishable from anti-institutional misinformation -- "
+                 "distrust of the CDC, a lone-truth-teller framing, no "
+                 "funders -- and only at around 38 seconds does it become "
+                 "clear he is defending the vaccine-autism consensus against "
+                 "the agency. A classifier reading the first quarter of this "
+                 "video would label it MISINFO. DEBUNKING. Collectors filed "
+                 "it under DEBUNKING, which agrees.",
+        "claims": [
+            {
+                "text": "[the CDC] updated their site to say that vaccines "
+                        "may cause autism",
+                "start": 19.8, "end": 24.2,
+                "stance": "REFUTES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:24814559", "PMID:32309885",
+                                  "PMID:18482737"],
+                "confidence": "high",
+                "notes": "The health claim inside the reported agency change, "
+                         "which he refutes. Contradicted by the "
+                         "evidence-based meta-analysis titled 'Vaccines are "
+                         "not associated with autism', the Cochrane review, "
+                         "and the thimerosal medical-records study.",
+            },
+            {
+                "text": "this is one of the most studied questions in the "
+                        "entirety of medicine. Dozens of studies conducted "
+                        "over decades in countries all over the world in "
+                        "millions of children have found no link between "
+                        "vaccines and autism",
+                "start": 33.7, "end": 48.0,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:24814559", "PMID:32309885"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "His own positive claim, supported by the "
+                         "meta-analysis of case-control and cohort studies "
+                         "and the Cochrane review. Note the contrast with "
+                         "v30: a claim about what the literature collectively "
+                         "shows is verifiable when the literature is this "
+                         "large, where a claim about a single registry's date "
+                         "range is not.",
+            },
+        ],
+    },
+    {
+        "video_id": "v65",
+        "topic": "nutrition / sodium",
+        "case_tags": ["debunking", "uncertain_science"],
+        "confidence": "medium",
+        "notes": "Dr. Rubin taking apart a viral 'things they told us were "
+                 "unhealthy' video point by point, and explaining the "
+                 "technique as he goes: flash a citation too briefly to read, "
+                 "take a kernel of truth, shroud it in things out of context. "
+                 "The salt segment is the best-documented example in the "
+                 "bundle of citation misuse -- he names the PURE study, the "
+                 "journal and the year, and then explains why spot urine "
+                 "sodium samples cannot carry the conclusion drawn from them. "
+                 "That is a methodological critique, not a contradiction, so "
+                 "the refuted claim lands on MIXED and the video comes out "
+                 "NO_MISINFO rather than DEBUNKING -- the sixth instance of "
+                 "that section 9 gap. Collectors filed it under DEBUNKING.",
+        "claims": [
+            {
+                "text": "salt we were told is this devil white powder that if "
+                        "you eat it you're going to give yourself a heart "
+                        "attack and you're going to shut down your kidneys",
+                "start": 42.2, "end": 49.9,
+                "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "A caricature of public-health advice rather than a "
+                         "claim anyone made in those terms, so nothing tests "
+                         "it as stated.",
+            },
+            {
+                "text": "there are gigantic studies of over a hundred "
+                        "thousand people that proved that eating too little "
+                        "salt is actually more dangerous than eating too much",
+                "start": 49.9, "end": 58.2,
+                "stance": "REFUTES", "verdict": "MIXED",
+                "supporting": ["PMID:41243115"],
+                "contradicting": ["PMID:23558162"],
+                "confidence": "medium",
+                "notes": "The claim he refutes, and it is genuinely "
+                         "contested rather than false. The umbrella review of "
+                         "dietary salt intake and cardiovascular outcomes "
+                         "covers the J-shaped-curve literature the quoted "
+                         "speaker is leaning on; the Cochrane review of modest "
+                         "salt reduction supports benefit from lowering "
+                         "intake. His actual objection is methodological -- "
+                         "spot urine sodium estimation -- which the rubric has "
+                         "no verdict for.",
+            },
+            {
+                "text": "This study ... is called the Pure Study that was "
+                        "published in the Lancet in 2018 and what they did was "
+                        "they looked at tens of thousands of adults and got "
+                        "spot urine sodium samples ... And that is not the most "
+                        "accurate way to do it. This is more observational in "
+                        "nature",
+                "start": 72.4, "end": 100.1,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "A correct and well-sourced methodological point "
+                         "about exposure measurement, and the rubric has "
+                         "nowhere to put it: it is not a health claim, so no "
+                         "verdict fits. The most valuable claim in the video "
+                         "and the one the pipeline can do least with. Grouped "
+                         "in the PR description with v73's pseudoscience "
+                         "anatomy and v53's absence-of-evidence claim.",
+            },
+        ],
+    },
+    {
+        "video_id": "v67",
+        "topic": "health equity / quality of care",
+        "case_tags": ["debunking"],
+        "confidence": "medium",
+        "notes": "A rebuttal to a clinician claiming that race, income, "
+                 "insurance, sex and occupation make no difference to the care "
+                 "you receive. Sits at the edge of this dataset's scope: the "
+                 "claims are about health *care delivery* rather than about "
+                 "the human body, and the README's definition of a claim "
+                 "('X cures Y', 'Z causes W') does not obviously cover them. "
+                 "They are included, because disparities in care quality are a "
+                 "health outcome with a large epidemiological literature and "
+                 "excluding them would mean a health-misinformation dataset "
+                 "with no room for misinformation about health systems. "
+                 "Flagged as a scope judgement in the PR description. "
+                 "DEBUNKING. Collectors filed it under DEBUNKING, which "
+                 "agrees.",
+        "claims": [
+            {
+                "text": "Nothing influences your care. the color of your skin "
+                        "makes no difference. How much money you have makes no "
+                        "difference. What insurance you have makes no "
+                        "difference",
+                "start": 1.7, "end": 10.2,
+                "stance": "REFUTES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:27079342", "PMID:40109246",
+                                  "PMID:35985567", "PMID:32981641"],
+                "confidence": "medium",
+                "notes": "Contradicted across several independent literatures: "
+                         "race, ethnicity and social determinants in diabetes "
+                         "outcomes; an American Heart Association scientific "
+                         "statement on disparities in pulmonary embolism "
+                         "management; racial disparities in treatment of "
+                         "ruptured abdominal aortic aneurysms; and "
+                         "socioeconomic status and outcomes in systemic lupus. "
+                         "Medium confidence only because the claim is a "
+                         "sweeping universal and each paper addresses one "
+                         "setting.",
+            },
+            {
+                "text": "other things outside of your medical care needs does "
+                        "impact the quality of your care needs, such as racial "
+                        "demographics, socioeconomic statuses, and "
+                        "disabilities",
+                "start": 31.6, "end": 43.3,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:27079342", "PMID:32981641",
+                               "PMID:40109246"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The positive form of the same claim, supported by "
+                         "the same literature. The disability limb is the "
+                         "least directly evidenced of the three named "
+                         "factors.",
+            },
+        ],
+    },
+    {
+        "video_id": "v76",
+        "topic": "food additives / food dyes",
+        "case_tags": ["debunking"],
+        "confidence": "medium",
+        "notes": "A rebuttal of a 'you're being poisoned' food-dye video, "
+                 "turning on a point of nomenclature: Tartrazine, Sunset "
+                 "Yellow, Brilliant Blue and Allura Red are not secretly "
+                 "renamed chemicals, they are the international names for the "
+                 "same dyes called Yellow 5, Yellow 6, Blue 1 and Red 40 in "
+                 "the US. Also notes the original video proving its case with "
+                 "AI output. Connects back to v03, which cites real studies on "
+                 "the same dyes: between them the set contains a video "
+                 "overstating the dye evidence, a video inventing a conspiracy "
+                 "about dye names, and the actual literature. CANNOT_RECOGNIZE: "
+                 "the refuted claim is about naming rather than health. "
+                 "Collectors filed it under DEBUNKING.",
+        "claims": [
+            {
+                "text": "They've changed the names to other names, like "
+                        "Tartrazine and Sunset Yellow and Brilliant Blue. So "
+                        "they're not even getting rid of the ingredients. "
+                        "They're changing the names",
+                "start": 9.5, "end": 19.6,
+                "stance": "REFUTES", "verdict": "NOT_VERIFIABLE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "The claim being refuted is about chemical "
+                         "nomenclature and regulatory intent, not about a "
+                         "health effect, so no study tests it. The rebuttal is "
+                         "correct and checkable against any food-additive "
+                         "reference; it is simply not a health claim. Same "
+                         "shape as v70.",
+            },
+            {
+                "text": "This is the scientific agency in the EU. See how "
+                        "they're assessing the safety of allura red? That's "
+                        "just what we call red 40 here. It's the same dye",
+                "start": 32.8, "end": 40.3,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:28458012", "PMID:26364875"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The identity of Allura Red AC and FD&C Red No. 40 "
+                         "is stated directly in the retrieved genotoxicity "
+                         "papers, which name it as 'Allura Red AC ... in the "
+                         "United States as food color ... Red No. 40, and in "
+                         "Europe as food color additive with E number 129'. "
+                         "The same two papers the v03 red-40 row turns on, "
+                         "used here for a different purpose.",
+            },
+        ],
+    },
+    {
+        "video_id": "v82",
+        "topic": "supplements / creatine",
+        "case_tags": ["debunking"],
+        "confidence": "high",
+        "notes": "A stitch rebutting a wellness consultant who says she "
+                 "would not touch creatine, citing dehydration, cortisol "
+                 "curves and coronary calcium. DEBUNKING, and the "
+                 "best-matched evidence in the set: the debunker names a "
+                 "meta-analysis on dehydration and thermoregulation and "
+                 "placebo-controlled trials on cortisol, and both exist and "
+                 "say what he says. Also contains the clearest example of a "
+                 "claim that is unfalsifiable by construction -- inventing a "
+                 "contraindication, as he puts it -- which lands on "
+                 "INSUFFICIENT_EVIDENCE for exactly the reason he gives: "
+                 "'based on what? there is zero human evidence'. This "
+                 "collector's folder carried no label.",
+        "claims": [
+            {
+                "text": "How it's being used now, I think it's extremely "
+                        "dehydrating",
+                "start": 12.4, "end": 14.7,
+                "stance": "REFUTES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:33557850", "PMID:29059531"],
+                "confidence": "high",
+                "notes": "Contradicted directly. The review of common "
+                         "questions and misconceptions about creatine "
+                         "supplementation addresses the dehydration and "
+                         "cramping claims specifically and reports no "
+                         "evidence for them.",
+            },
+            {
+                "text": "we test cortisol curves after people have been doing "
+                        "creatine on a regular basis",
+                "start": 14.7, "end": 19.5,
+                "stance": "REFUTES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:11252073", "PMID:14685870"],
+                "confidence": "medium",
+                "notes": "The implied claim -- that creatine disturbs "
+                         "cortisol -- is contradicted by the trial titled "
+                         "'Short-term creatine supplementation does not alter "
+                         "the hormonal response to resistance training'. The "
+                         "original speaker never states an outcome, only that "
+                         "she measures it, so the claim had to be read from "
+                         "the implication, which is itself worth a reviewer's "
+                         "eye.",
+            },
+            {
+                "text": "if you have elevated genetic ... lipoprotein little "
+                        "A, and you have a tendency to get elevated calcium "
+                        "score, I do not touch it",
+                "start": 19.5, "end": 31.6,
+                "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "An invented contraindication. Nothing retrieved "
+                         "tests creatine against coronary artery calcium "
+                         "progression or lipoprotein(a), which is precisely "
+                         "the debunker's point: 'based on what? there is zero "
+                         "human evidence'. A case where the honest verdict and "
+                         "the debunker's argument coincide, and where "
+                         "INSUFFICIENT_EVIDENCE is doing real work rather than "
+                         "hedging.",
+            },
+        ],
+    },
 ]
