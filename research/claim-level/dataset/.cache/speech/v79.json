@@ -1,0 +1,80 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 34.85,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.2,
+    "text": "So at year one, you should have five separate visits for vaccines rather than giving them all in the same day."
+   },
+   {
+    "id": "t2",
+    "start": 5.2,
+    "end": 8.72,
+    "text": "An executive order does not replace scientific evidence."
+   },
+   {
+    "id": "t3",
+    "start": 8.72,
+    "end": 11.92,
+    "text": "The combination MMR vaccine has been shown to be safe."
+   },
+   {
+    "id": "t4",
+    "start": 11.92,
+    "end": 14.48,
+    "text": "There is no evidence that it needs to be separated."
+   },
+   {
+    "id": "t5",
+    "start": 14.48,
+    "end": 17.2,
+    "text": "That just means unnecessary extra visits."
+   },
+   {
+    "id": "t6",
+    "start": 17.2,
+    "end": 19.44,
+    "text": "More days off to take your babies in."
+   },
+   {
+    "id": "t7",
+    "start": 19.44,
+    "end": 20.64,
+    "text": "More co-pays."
+   },
+   {
+    "id": "t8",
+    "start": 20.64,
+    "end": 21.92,
+    "text": "More needle sticks."
+   },
+   {
+    "id": "t9",
+    "start": 21.92,
+    "end": 24.56,
+    "text": "And a higher likelihood of missing doses."
+   },
+   {
+    "id": "t10",
+    "start": 24.56,
+    "end": 28.48,
+    "text": "Also, there has been no evidence that any of the childhood vaccinations cause autism."
+   },
+   {
+    "id": "t11",
+    "start": 28.48,
+    "end": 30.8,
+    "text": "Leave healthcare to the healthcare professionals."
+   }
+  ]
+ }
+}

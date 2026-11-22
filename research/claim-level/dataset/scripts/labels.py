@@ -3750,4 +3750,413 @@ LABELS = [
             },
         ],
     },
+    {
+        "video_id": "v71",
+        "topic": "cardiovascular disease / clotting",
+        "case_tags": ["uncertain_science"],
+        "confidence": "medium",
+        "notes": "An alternative-medicine framing of heart attacks as clotting "
+                 "events rather than plaque events, then a list of clot "
+                 "triggers and ways to raise nitric oxide. The most mixed "
+                 "video in the set: the framing claim overreaches, several of "
+                 "the risk-factor claims are solidly supported, and the "
+                 "'2,000%' bereavement figure turns out to match a real study "
+                 "almost exactly -- which is why it is worth having. Comes "
+                 "out NO_MISINFO because the overreaching framing lands on "
+                 "MIXED rather than CONTRADICTED. In the blind subset. This "
+                 "collector's folder carried no label.",
+        "claims": [
+            {
+                "text": "Over 80% of heart attacks and strokes are not plaque "
+                        "cholesterol or calcium that's blocking your arteries",
+                "start": 0.0, "end": 7.7,
+                "stance": "ENDORSES", "verdict": "MIXED",
+                "supporting": ["PMID:40935270", "PMID:42416600"],
+                "contradicting": ["PMID:42735223", "PMID:23629150"],
+                "confidence": "low",
+                "notes": "Genuinely split, which is why it is MIXED and not "
+                         "CONTRADICTED. Plaque erosion and infarction with "
+                         "non-obstructive coronary disease are both recognised "
+                         "and account for a real share of events, which "
+                         "supports the spirit of the claim; the clinical "
+                         "management and thrombus-composition literature still "
+                         "treats atherothrombosis on plaque as the dominant "
+                         "mechanism, which contradicts '80%'. The specific "
+                         "percentage is not supported by anything retrieved. "
+                         "Low confidence -- this row most needs a cardiologist.",
+            },
+            {
+                "text": "Number one, and people know this, is the inhalation "
+                        "of smoke from cigarettes. Now your arteries are "
+                        "exposed to all these chemicals and it's going to "
+                        "create inflammation",
+                "start": 17.5, "end": 27.0,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:30800285"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Smoking as a leading cardiovascular risk factor is "
+                         "supported by the same systematic review used for "
+                         "v56.",
+            },
+            {
+                "text": "Birth control pills or hormone replacement therapy "
+                        "is another thing that can actually affect the "
+                        "arteries because of the hormonal interaction, "
+                        "increasing the risk of a stroke and heart attacks",
+                "start": 40.9, "end": 55.7,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:26310586", "PMID:39938934"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "Directly supported for combined oral "
+                         "contraceptives by the risk review and the "
+                         "contemporary nationwide prospective study. Note the "
+                         "absolute risks are small, which the video does not "
+                         "say.",
+            },
+            {
+                "text": "there's something called the broken heart syndrome, "
+                        "where someone has a loss of a loved one. And their "
+                        "risk of having a heart attack goes up by 2,000%",
+                "start": 55.7, "end": 67.1,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:22230481"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "A surprise, and a good lesson against dismissing "
+                         "claims by how they sound: the study of myocardial "
+                         "infarction risk after the death of a significant "
+                         "person reports a sharply elevated risk in the days "
+                         "immediately after bereavement, of roughly the order "
+                         "the speaker quotes. Medium confidence because the "
+                         "retrieved abstract does not state the figure as a "
+                         "percentage and the elevation is transient, which the "
+                         "video does not mention.",
+            },
+            {
+                "text": "one of the best sources of L-arginine is meat and "
+                        "liver, the exact things that they tell you not to eat",
+                "start": 82.8, "end": 91.1,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "Nothing retrieved ranks dietary L-arginine sources "
+                         "or tests dietary arginine against clotting in "
+                         "people.",
+            },
+            {
+                "text": "sunlight, that can penetrate deep into the body and "
+                        "help increase nitric oxide in the inside of the "
+                        "arteries",
+                "start": 91.1, "end": 101.5,
+                "stance": "ENDORSES", "verdict": "MIXED",
+                "supporting": ["PMID:28894213", "PMID:40465176",
+                               "PMID:35792235"],
+                "contradicting": ["PMID:30374900"],
+                "confidence": "medium",
+                "notes": "Ultraviolet-induced nitric oxide production is real "
+                         "and has a cardiovascular literature behind it, "
+                         "including a seasonal-synthesis study, which is the "
+                         "supporting side. 'Penetrate deep into the body' "
+                         "misdescribes the mechanism, which is cutaneous, and "
+                         "the photoprotection review addresses the spectral "
+                         "trade-off the video ignores.",
+            },
+        ],
+    },
+    {
+        "video_id": "v72",
+        "topic": "liver health / dietary fat",
+        "case_tags": ["clearly_false"],
+        "confidence": "high",
+        "notes": "The fifth and final seed-oil video, and the most "
+                 "aggressive: seed oil as the single most dangerous food for "
+                 "the liver, ahead of alcohol, plus a bile-salt product "
+                 "recommendation. MISINFO. Together with v11, v19, v39 and "
+                 "v42 this makes seed oils the most densely covered topic in "
+                 "the set -- five videos, five creators, labels spanning "
+                 "MISINFO, DEBUNKING and NO_MISINFO. Collectors filed it "
+                 "under MISINFO, which agrees.",
+        "claims": [
+            {
+                "text": "The most dangerous food for your liver is not "
+                        "alcohol ... The most dangerous food for the liver is "
+                        "seed oil",
+                "start": 0.0, "end": 32.1,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:34071962", "PMID:15560048",
+                                  "PMID:28752873"],
+                "confidence": "high",
+                "notes": "Contradicted on the comparison it makes. Alcohol is "
+                         "the archetypal dietary hepatotoxin, with a "
+                         "pathophysiology literature and a named disease; "
+                         "seed oils have a randomised-trial meta-analysis "
+                         "showing no effect on inflammatory markers. Ranking "
+                         "seed oil above alcohol inverts the evidence.",
+            },
+            {
+                "text": "It's very high in omega-6 fatty acids. It causes "
+                        "inflammation",
+                "start": 26.3, "end": 29.5,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:28752873", "PMID:22889633"],
+                "confidence": "high",
+                "notes": "Same contradiction as v42: no significant effect of "
+                         "higher linoleic acid intake on tumour necrosis "
+                         "factor, interleukin-6, adiponectin or monocyte "
+                         "chemoattractant protein 1 across randomised trials.",
+            },
+            {
+                "text": "this food can penetrate deep into the fat cells, "
+                        "including your liver, and can get lodged in there for "
+                        "a year and a half",
+                "start": 6.3, "end": 12.4,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "A specific residence time with nothing behind it. "
+                         "Nothing retrieved tests an eighteen-month "
+                         "persistence of dietary fat in hepatocytes.",
+            },
+            {
+                "text": "seed oil, which is an industrial oil exposed to "
+                        "hexane, which is a solvent that's a gasoline",
+                "start": 32.1, "end": 36.5,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:39536137"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Labelled SUPPORTED for the same reason as v42's "
+                         "hexane row: n-hexane is a real solvent and a "
+                         "petroleum constituent. The true fragment is doing "
+                         "the persuasive work for the false conclusion above "
+                         "it, and separating the two is the point of recording "
+                         "claims individually.",
+            },
+            {
+                "text": "One of the best things to help with a fatty liver is "
+                        "to take something called cut cut [TUDCA]. That's a "
+                        "special bile salt that can help reduce the "
+                        "inflammation in your liver",
+                "start": 43.4, "end": 50.1,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "The product name is not recoverable from the "
+                         "transcript -- whisper renders it 'cut cut' -- so the "
+                         "claim could not be searched for as a named "
+                         "intervention. A concrete case where a transcription "
+                         "failure blocks retrieval, which belongs with the "
+                         "extraction-track findings alongside v33's 'growl in' "
+                         "and v66's 'epimercary'.",
+            },
+        ],
+    },
+    {
+        "video_id": "v73",
+        "topic": "nutrition / fruit",
+        "case_tags": ["debunking"],
+        "confidence": "high",
+        "notes": "A dietitian stitching a podcast clip claiming fruit makes "
+                 "Americans fat. The most useful video in the set for the "
+                 "project's own purposes, because it names the exact pattern "
+                 "this annotation pass kept running into independently: start "
+                 "from a true or somewhat true mechanism, omit the dose and "
+                 "the food matrix, then leap to a conclusion the totality of "
+                 "evidence contradicts. That is v27, v42 and v72 described "
+                 "from the outside. DEBUNKING. Collectors filed it under "
+                 "DEBUNKING, which agrees.",
+        "claims": [
+            {
+                "text": "all fruit breaks down to sugar, but then it also "
+                        "breaks down to fructose, which creates a lot of "
+                        "visceral fat ... they're loaded with fat inside. All "
+                        "their organs are suffocating in fat",
+                "start": 4.4, "end": 26.6,
+                "stance": "REFUTES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:28338764", "PMID:23990623",
+                                  "PMID:33641343"],
+                "confidence": "medium",
+                "notes": "The quoted claim. Contradicted by the fruit and "
+                         "vegetable intake literature: higher intake is "
+                         "associated with lower cardiovascular disease, cancer "
+                         "and all-cause mortality, and fruit consumption with "
+                         "lower type 2 diabetes risk. No retrieved study "
+                         "supports whole fruit driving visceral adiposity.",
+            },
+            {
+                "text": "actual scientific research consistently shows that "
+                        "higher fruit intakes are linked to lower risk of "
+                        "obesity, heart disease, and fatty liver disease",
+                "start": 43.5, "end": 51.0,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:28338764", "PMID:33641343",
+                               "PMID:23990623"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Supported for cardiovascular disease and mortality "
+                         "and for type 2 diabetes. The fatty-liver limb is the "
+                         "weakest: nothing retrieved tests fruit intake "
+                         "against NAFLD directly.",
+            },
+            {
+                "text": "88% of Americans don't even meet fruit intake "
+                        "guidelines. And the state with the lowest fruit "
+                        "intake is West Virginia, which is the state with the "
+                        "highest obesity rates in the country",
+                "start": 34.8, "end": 43.5,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "Two population statistics from national survey "
+                         "data, not the biomedical literature. Worth noting "
+                         "that the state-level pairing is itself an ecological "
+                         "correlation of the kind the video criticises "
+                         "elsewhere.",
+            },
+            {
+                "text": "They'll start with a true or somewhat true "
+                        "mechanism ... But then they won't provide any context "
+                        "for that, like the dose necessary to elicit that "
+                        "response ... And then they'll leap to an unsupported "
+                        "or unjustified conclusion",
+                "start": 57.8, "end": 87.4,
+                "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "A claim about the structure of an argument rather "
+                         "than about health, so no study tests it. Kept as a "
+                         "row because it is the most quotable description of "
+                         "the dominant misinformation pattern in this bundle, "
+                         "and because it shows the rubric has no verdict for a "
+                         "correct methodological observation.",
+            },
+        ],
+    },
+    {
+        "video_id": "v74",
+        "topic": "cancer / diet",
+        "case_tags": ["missing_evidence"],
+        "confidence": "medium",
+        "notes": "A two-person conversation about an anti-cancer diet, "
+                 "referring to an unnamed ten-year study of 'nine tumour "
+                 "markers' and ending on a cleanse the speaker designed. "
+                 "CANNOT_RECOGNIZE: the central claim points at a specific "
+                 "study that could not be identified from the description, and "
+                 "the rest is a list of foods with no asserted outcome. This "
+                 "collector's folder carried no label.",
+        "claims": [
+            {
+                "text": "radicchio ... spinach ... all the cruciferous "
+                        "vegetables ... all the onions, garlic, leek "
+                        "vegetables. All of those foods actually lowered all "
+                        "nine of those tumor markers across the board. They "
+                        "did, like, a 10-year study on this",
+                "start": 11.9, "end": 30.2,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "Which nine markers, measured how, in whom, is never "
+                         "said, and the study could not be located from the "
+                         "description. A clean example of a claim that sounds "
+                         "specific -- a number, a duration -- while carrying "
+                         "nothing a retrieval step can act on.",
+            },
+            {
+                "text": "we know that ... antioxidant foods and spices and "
+                        "green tea and just, like, berries and really good "
+                        "whole foods",
+                "start": 32.7, "end": 43.6,
+                "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "A list of foods with no stated outcome -- 'we know "
+                         "that' trails off without saying what we know. There "
+                         "is no proposition to test.",
+            },
+        ],
+    },
+    {
+        "video_id": "v75",
+        "topic": "sunscreen / chemical exposure",
+        "case_tags": ["uncertain_science"],
+        "confidence": "medium",
+        "notes": "A creator explaining why she switched to a beef-tallow and "
+                 "non-nano zinc oxide sunscreen bought on Amazon, because "
+                 "'chemicals in sunscreens enter your bloodstream'. A "
+                 "collector disagreement worth examining: filed under MISINFO, "
+                 "but the absorption claim is simply true -- two JAMA "
+                 "randomised trials measured plasma concentrations of "
+                 "sunscreen actives above the FDA threshold after a single "
+                 "day's use. What is unsupported is the leap from absorption "
+                 "to harm, and that leap lands on INSUFFICIENT_EVIDENCE rather "
+                 "than CONTRADICTED. The video is also careful in a way the "
+                 "genre usually is not: she says she still thinks sun "
+                 "protection matters because of skin cancer in her family. "
+                 "Comes out NO_MISINFO.",
+        "claims": [
+            {
+                "text": "There's a new study out that says after just one "
+                        "day, chemicals and sunscreens enter your bloodstream",
+                "start": 0.0, "end": 10.3,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:31961417", "PMID:31058986"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "Accurate, and accurately dated as recent at the "
+                         "time: the two randomised clinical trials of sunscreen "
+                         "application under maximal use conditions measured "
+                         "plasma concentrations of the active ingredients. "
+                         "This row is why the collectors' MISINFO label does "
+                         "not survive.",
+            },
+            {
+                "text": "Dr. Margaret Husami ... recommends using a sunscreen "
+                        "with the following ingredients. They're titanium "
+                        "dioxide and zinc oxide",
+                "start": 10.3, "end": 21.0,
+                "stance": "QUOTES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:18271305"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "A QUOTES row: she relays a named dermatologist's "
+                         "recommendation without arguing for it herself. "
+                         "Mineral filters are effective photoprotectants, so "
+                         "the relayed advice is sound.",
+            },
+            {
+                "text": "putting a toxic sunscreen from the grocery store "
+                        "that's going to absorb in your skin after just one "
+                        "use and be in your bloodstream is not going to help "
+                        "your body",
+                "start": 46.1, "end": 55.0,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:31961417"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The actual overreach, and the row a reviewer should "
+                         "look at. The trials that establish absorption say "
+                         "explicitly that systemic absorption does not by "
+                         "itself establish harm, and nothing retrieved tests a "
+                         "health outcome from conventional sunscreen use. "
+                         "Insufficient, not contradicted -- section 7 again.",
+            },
+            {
+                "text": "literally you could eat this sunscreen and you'd be "
+                        "perfectly fine",
+                "start": 55.0, "end": 63.8,
+                "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "Rhetorical rather than testable, and no study would "
+                         "be designed to test it. Recorded because 'you could "
+                         "eat it' is a recurring persuasion move in "
+                         "clean-product content.",
+            },
+        ],
+    },
 ]

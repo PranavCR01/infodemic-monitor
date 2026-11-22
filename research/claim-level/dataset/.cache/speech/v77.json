@@ -1,0 +1,230 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 81.9,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.88,
+    "text": "The most common foods and things I was consuming on a daily basis that were rotting my hormone"
+   },
+   {
+    "id": "t2",
+    "start": 3.88,
+    "end": 5.4,
+    "text": "system that I had to learn the hard way."
+   },
+   {
+    "id": "t3",
+    "start": 5.4,
+    "end": 7.28,
+    "text": "Two acronyms that seem to show up over and over."
+   },
+   {
+    "id": "t4",
+    "start": 7.28,
+    "end": 8.28,
+    "text": "First one is BPA."
+   },
+   {
+    "id": "t5",
+    "start": 8.28,
+    "end": 12.76,
+    "text": "Stands for Bisfinal A. A chemical that we've made a staple of the American diet that just"
+   },
+   {
+    "id": "t6",
+    "start": 12.76,
+    "end": 17.52,
+    "text": "so happens to perfectly mirror estrogen in the human body, just a shittier version."
+   },
+   {
+    "id": "t7",
+    "start": 17.52,
+    "end": 21.28,
+    "text": "Found in more than two thirds of all canned food in the United States, nearly all plastic"
+   },
+   {
+    "id": "t8",
+    "start": 21.28,
+    "end": 25.08,
+    "text": "water bottles, as well as an exorbitant amount of our plastic food packaging, including my"
+   },
+   {
+    "id": "t9",
+    "start": 25.08,
+    "end": 26.08,
+    "text": "ground beef."
+   },
+   {
+    "id": "t10",
+    "start": 26.08,
+    "end": 27.08,
+    "text": "Don't mess with a man's beef."
+   },
+   {
+    "id": "t11",
+    "start": 27.08,
+    "end": 32.32,
+    "text": "What's messed up part is a receipt carries 250 times more BPAs than any of the food I"
+   },
+   {
+    "id": "t12",
+    "start": 32.32,
+    "end": 33.32,
+    "text": "just mentioned."
+   },
+   {
+    "id": "t13",
+    "start": 33.32,
+    "end": 35.0,
+    "text": "It doesn't matter what I buy, I'm still gonna get hit with it."
+   },
+   {
+    "id": "t14",
+    "start": 35.0,
+    "end": 37.52,
+    "text": "Her body doesn't know the difference between this and real estrogen."
+   },
+   {
+    "id": "t15",
+    "start": 37.52,
+    "end": 39.24,
+    "text": "That's why men look the way they look now."
+   },
+   {
+    "id": "t16",
+    "start": 39.24,
+    "end": 41.84,
+    "text": "Don't worry, if you find a way to filter these out of your body, they actually leave"
+   },
+   {
+    "id": "t17",
+    "start": 41.84,
+    "end": 42.84,
+    "text": "pretty quickly."
+   },
+   {
+    "id": "t18",
+    "start": 42.84,
+    "end": 46.64,
+    "text": "Unlike the second chemical, PFA's, otherwise known as forever chemicals."
+   },
+   {
+    "id": "t19",
+    "start": 46.64,
+    "end": 47.64,
+    "text": "You know why they call them that?"
+   },
+   {
+    "id": "t20",
+    "start": 47.64,
+    "end": 48.88,
+    "text": "Because they don't leave the body."
+   },
+   {
+    "id": "t21",
+    "start": 48.88,
+    "end": 53.0,
+    "text": "These ones surprisingly also disrupt our hormones and make it harder to lose weight and cause"
+   },
+   {
+    "id": "t22",
+    "start": 53.0,
+    "end": 54.0,
+    "text": "reactions."
+   },
+   {
+    "id": "t23",
+    "start": 54.0,
+    "end": 56.6,
+    "text": "Surely these must be in much more obvious food to avoid, right?"
+   },
+   {
+    "id": "t24",
+    "start": 56.6,
+    "end": 58.44,
+    "text": "No, it's in fruit and vegetables."
+   },
+   {
+    "id": "t25",
+    "start": 58.44,
+    "end": 59.96,
+    "text": "This group of fruits and vegetables goes by"
+   },
+   {
+    "id": "t26",
+    "start": 59.96,
+    "end": 62.12,
+    "text": "the dirty dozen, consisting of healthy things"
+   },
+   {
+    "id": "t27",
+    "start": 62.12,
+    "end": 64.36,
+    "text": "like spinach, kale, strawberries, grapes."
+   },
+   {
+    "id": "t28",
+    "start": 64.36,
+    "end": 65.36,
+    "text": "You know how many grapes I've eaten?"
+   },
+   {
+    "id": "t29",
+    "start": 65.36,
+    "end": 67.32,
+    "text": "Nearly all of these that come from the United States"
+   },
+   {
+    "id": "t30",
+    "start": 67.32,
+    "end": 69.24,
+    "text": "are sprayed with such harmful pesticides"
+   },
+   {
+    "id": "t31",
+    "start": 69.24,
+    "end": 71.34,
+    "text": "to keep bugs off them that they're rotting us"
+   },
+   {
+    "id": "t32",
+    "start": 71.34,
+    "end": 72.18,
+    "text": "from the inside."
+   },
+   {
+    "id": "t33",
+    "start": 72.18,
+    "end": 73.12,
+    "text": "Think about the logic."
+   },
+   {
+    "id": "t34",
+    "start": 73.12,
+    "end": 75.28,
+    "text": "We spray such a toxic chemical to make sure"
+   },
+   {
+    "id": "t35",
+    "start": 75.28,
+    "end": 77.36,
+    "text": "no animal would ever want to go near it,"
+   },
+   {
+    "id": "t36",
+    "start": 77.36,
+    "end": 78.2,
+    "text": "and then we eat it."
+   }
+  ]
+ }
+}
