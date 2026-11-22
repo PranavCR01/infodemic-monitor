@@ -64,6 +64,32 @@ def _throttle():
         _last[0] = time.time()
 
 
+def _get(url, **kw):
+    """GET with the rate limit applied and a few backoff retries.
+
+    E-utilities intermittently drops TLS connections mid-handshake
+    (SSL: UNEXPECTED_EOF_WHILE_READING) under sustained use. One dropped
+    connection must not become a missing citation, so each request is retried
+    with growing delays before it is allowed to fail.
+    """
+    last = None
+    for attempt in range(5):
+        _throttle()
+        try:
+            r = requests.get(url, **kw)
+            if r.status_code in (429, 500, 502, 503, 504):
+                last = "HTTP %d" % r.status_code
+                time.sleep(2 ** attempt)
+                continue
+            r.raise_for_status()
+            return r
+        except Exception as e:
+            last = "%s: %s" % (type(e).__name__, str(e)[:120])
+            time.sleep(2 ** attempt)
+    raise RuntimeError("request failed after 5 attempts (%s): %s"
+                       % (last, url))
+
+
 def _cache_path(kind, key):
     h = hashlib.sha256(key.encode("utf-8")).hexdigest()[:20]
     d = CACHE / kind
@@ -95,27 +121,23 @@ def pubmed_search(query, retmax=5, sort="relevance"):
     key = "search::%s::%d::%s" % (query, retmax, sort)
 
     def produce():
-        _throttle()
-        r = requests.get(
+        r = _get(
             "%s/esearch.fcgi" % EUTILS,
             params={"db": "pubmed", "term": query, "retmode": "json",
                     "retmax": retmax, "sort": sort, "tool": TOOL,
                     "email": EMAIL},
             timeout=30,
         )
-        r.raise_for_status()
         ids = r.json().get("esearchresult", {}).get("idlist", [])
         out = {"query": query, "sort": sort, "pmids": ids, "records": []}
         if not ids:
             return out
-        _throttle()
-        s = requests.get(
+        s = _get(
             "%s/esummary.fcgi" % EUTILS,
             params={"db": "pubmed", "id": ",".join(ids), "retmode": "json",
                     "tool": TOOL, "email": EMAIL},
             timeout=30,
         )
-        s.raise_for_status()
         res = s.json().get("result", {})
         for pid in ids:
             d = res.get(pid) or {}
@@ -139,14 +161,12 @@ def pubmed_abstract(pmid):
     key = "abstract::%s" % pmid
 
     def produce():
-        _throttle()
-        r = requests.get(
+        r = _get(
             "%s/efetch.fcgi" % EUTILS,
             params={"db": "pubmed", "id": pmid, "rettype": "abstract",
                     "retmode": "text", "tool": TOOL, "email": EMAIL},
             timeout=30,
         )
-        r.raise_for_status()
         return {"pmid": pmid, "status": r.status_code, "text": r.text.strip()}
 
     return _cached("abstract", key, produce)
@@ -162,9 +182,8 @@ def fetch_page(url):
     key = "page::%s" % url
 
     def produce():
-        _throttle()
         try:
-            r = requests.get(url, timeout=30, headers={
+            r = _get(url, timeout=30, headers={
                 "User-Agent": "%s (%s)" % (TOOL, EMAIL)})
             body = r.text
             # crude tag strip: enough to confirm the topic terms are present

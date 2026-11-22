@@ -156,7 +156,11 @@ A discrete, checkable health assertion, e.g. "X cures Y" or "Z causes W".
   population, disease. "1000 mg a day for adults" is not the same claim as
   "vitamin C" (§4).
 - **Quote, don't invent.** Stay close to the original words; never fill in
-  missing context.
+  missing context. Where the sentence starts with a pronoun whose referent is in
+  an earlier segment, name the referent in **square brackets** —
+  "[Fructose] produces more body fat" — so the row is readable on its own
+  without inventing wording. Brackets are the only editorial addition allowed;
+  `…` marks words dropped from the middle of a quote.
 - **Separate quoting from asserting.** Record the claim either way; what the
   speaker does with it is `speaker_stance`'s job.
 - **Each claim once, with all its sources.** Said and shown at the same moment is

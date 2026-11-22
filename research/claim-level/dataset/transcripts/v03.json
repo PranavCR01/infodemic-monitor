@@ -1,0 +1,8921 @@
+{
+ "video_id": "v03",
+ "filename": "2e7098868447b3152bc32f3446db5c9a.mp4",
+ "relative_path": "Misinfo Dataset/Haoran Zhang/Misinformation/2e7098868447b3152bc32f3446db5c9a.mp4",
+ "collector": "Haoran Zhang",
+ "collector_label": "MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T16:28:37",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 220.94,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.36,
+    "text": "Five food additives I avoid and they're healthy alternatives."
+   },
+   {
+    "id": "t2",
+    "start": 3.36,
+    "end": 5.32,
+    "text": "Everything I'm about to show you is all backed"
+   },
+   {
+    "id": "t3",
+    "start": 5.32,
+    "end": 9.2,
+    "text": "by published medical data, not just one, but multiple sources."
+   },
+   {
+    "id": "t4",
+    "start": 9.2,
+    "end": 10.44,
+    "text": "Number one is fructose."
+   },
+   {
+    "id": "t5",
+    "start": 10.44,
+    "end": 11.92,
+    "text": "It's fine when you eat it with fruit"
+   },
+   {
+    "id": "t6",
+    "start": 11.92,
+    "end": 13.92,
+    "text": "because of the fiber that's associated with it."
+   },
+   {
+    "id": "t7",
+    "start": 13.92,
+    "end": 15.88,
+    "text": "However, when you have commercially prepared"
+   },
+   {
+    "id": "t8",
+    "start": 15.88,
+    "end": 18.76,
+    "text": "crystalline fructose or high fructose corn syrup,"
+   },
+   {
+    "id": "t9",
+    "start": 18.76,
+    "end": 21.84,
+    "text": "the body absorbs it and it has damaging effects."
+   },
+   {
+    "id": "t10",
+    "start": 21.84,
+    "end": 24.7,
+    "text": "It drives dopamine receptors down and is highly addictive."
+   },
+   {
+    "id": "t11",
+    "start": 24.7,
+    "end": 26.64,
+    "text": "It does not satiate you the same way"
+   },
+   {
+    "id": "t12",
+    "start": 26.64,
+    "end": 28.4,
+    "text": "that normal table sugar does,"
+   },
+   {
+    "id": "t13",
+    "start": 28.4,
+    "end": 31.28,
+    "text": "keeps you hungry compared to regular sugar,"
+   },
+   {
+    "id": "t14",
+    "start": 31.28,
+    "end": 34.72,
+    "text": "produces more body fat and physical inactivity."
+   },
+   {
+    "id": "t15",
+    "start": 34.72,
+    "end": 36.6,
+    "text": "In other words, it makes you more sedentary,"
+   },
+   {
+    "id": "t16",
+    "start": 36.6,
+    "end": 38.96,
+    "text": "but also inhibits three enzymes critical"
+   },
+   {
+    "id": "t17",
+    "start": 38.96,
+    "end": 40.44,
+    "text": "for mitochondrial function,"
+   },
+   {
+    "id": "t18",
+    "start": 40.44,
+    "end": 43.8,
+    "text": "AMPA kinase, ACADL, and CPT1."
+   },
+   {
+    "id": "t19",
+    "start": 43.8,
+    "end": 45.16,
+    "text": "It's also been shown to contribute"
+   },
+   {
+    "id": "t20",
+    "start": 45.16,
+    "end": 47.24,
+    "text": "to non-alcoholic fatty liver disease."
+   },
+   {
+    "id": "t21",
+    "start": 47.24,
+    "end": 50.08,
+    "text": "And yes, finally, it causes what's called leaky gut."
+   },
+   {
+    "id": "t22",
+    "start": 50.08,
+    "end": 52.24,
+    "text": "When fructose is absorbed without fiber,"
+   },
+   {
+    "id": "t23",
+    "start": 52.24,
+    "end": 55.8,
+    "text": "it causes the tight junctions in the epithelial cells."
+   },
+   {
+    "id": "t24",
+    "start": 55.8,
+    "end": 57.96,
+    "text": "Those are the cells within your intestinal walls"
+   },
+   {
+    "id": "t25",
+    "start": 57.96,
+    "end": 61.08,
+    "text": "to start to separate and there is some permeability"
+   },
+   {
+    "id": "t26",
+    "start": 61.08,
+    "end": 62.76,
+    "text": "that happens where the stuff that's flowing"
+   },
+   {
+    "id": "t27",
+    "start": 62.76,
+    "end": 65.4,
+    "text": "through those intestines permeates causing inflammation"
+   },
+   {
+    "id": "t28",
+    "start": 65.4,
+    "end": 67.56,
+    "text": "and all other sorts of inflammatory syndromes."
+   },
+   {
+    "id": "t29",
+    "start": 67.56,
+    "end": 69.96,
+    "text": "Number two on the list is high fructose corn syrup."
+   },
+   {
+    "id": "t30",
+    "start": 69.96,
+    "end": 72.76,
+    "text": "We just talked about fructose, now you put it into a syrup"
+   },
+   {
+    "id": "t31",
+    "start": 72.76,
+    "end": 74.32,
+    "text": "and it does all of the same things"
+   },
+   {
+    "id": "t32",
+    "start": 74.32,
+    "end": 76.44,
+    "text": "that crystalline fructose does, but even more."
+   },
+   {
+    "id": "t33",
+    "start": 76.44,
+    "end": 78.12,
+    "text": "It contributes to cancer."
+   },
+   {
+    "id": "t34",
+    "start": 78.12,
+    "end": 80.0,
+    "text": "It can contribute to metabolic disorders"
+   },
+   {
+    "id": "t35",
+    "start": 80.0,
+    "end": 83.68,
+    "text": "and dopamine down regulation even without obesity"
+   },
+   {
+    "id": "t36",
+    "start": 83.68,
+    "end": 84.52,
+    "text": "being present."
+   },
+   {
+    "id": "t37",
+    "start": 84.52,
+    "end": 86.52,
+    "text": "It's been shown to contribute to diabetes"
+   },
+   {
+    "id": "t38",
+    "start": 86.52,
+    "end": 88.56,
+    "text": "and it puts you at greater risk for heart disease."
+   },
+   {
+    "id": "t39",
+    "start": 88.56,
+    "end": 90.4,
+    "text": "For both of these, what are healthy alternatives?"
+   },
+   {
+    "id": "t40",
+    "start": 90.4,
+    "end": 93.48,
+    "text": "Well, we could use monk fruit, stevia, or aulose."
+   },
+   {
+    "id": "t41",
+    "start": 93.48,
+    "end": 95.12,
+    "text": "Number three is synthetic food dyes."
+   },
+   {
+    "id": "t42",
+    "start": 95.12,
+    "end": 97.96,
+    "text": "These are red 40, yellow number five, and yellow number six."
+   },
+   {
+    "id": "t43",
+    "start": 97.96,
+    "end": 101.56,
+    "text": "A 2023 study showed that red 40 causes DNA damage"
+   },
+   {
+    "id": "t44",
+    "start": 101.56,
+    "end": 104.76,
+    "text": "and colonic inflammation and affects the gut microbiome."
+   },
+   {
+    "id": "t45",
+    "start": 104.76,
+    "end": 107.08,
+    "text": "A 2022 study showed that synthetic food dyes"
+   },
+   {
+    "id": "t46",
+    "start": 107.08,
+    "end": 108.84,
+    "text": "are linked to ADHD in children,"
+   },
+   {
+    "id": "t47",
+    "start": 108.84,
+    "end": 112.68,
+    "text": "and a 2015 study showed that it is linked directly to cancer."
+   },
+   {
+    "id": "t48",
+    "start": 112.68,
+    "end": 114.44,
+    "text": "Healthy alternatives for synthetic dyes"
+   },
+   {
+    "id": "t49",
+    "start": 114.44,
+    "end": 115.96,
+    "text": "and the ingredients you wanna look for things"
+   },
+   {
+    "id": "t50",
+    "start": 115.96,
+    "end": 118.56,
+    "text": "such as paprika and turmeric for yellow,"
+   },
+   {
+    "id": "t51",
+    "start": 118.56,
+    "end": 121.28,
+    "text": "for the reds, beet juice, blueberries, beta carotene,"
+   },
+   {
+    "id": "t52",
+    "start": 121.28,
+    "end": 123.64,
+    "text": "cherries, beet powder, pomegranate juice,"
+   },
+   {
+    "id": "t53",
+    "start": 123.64,
+    "end": 125.16,
+    "text": "cranberries, or strawberries."
+   },
+   {
+    "id": "t54",
+    "start": 125.16,
+    "end": 127.44,
+    "text": "Those are all natural red dyes."
+   },
+   {
+    "id": "t55",
+    "start": 127.44,
+    "end": 129.28,
+    "text": "Number four is nitrates found commonly"
+   },
+   {
+    "id": "t56",
+    "start": 129.28,
+    "end": 131.56,
+    "text": "in deli-sliced meat, cross-sets meats,"
+   },
+   {
+    "id": "t57",
+    "start": 131.56,
+    "end": 132.84,
+    "text": "bacon, those sorts of things."
+   },
+   {
+    "id": "t58",
+    "start": 132.84,
+    "end": 135.16,
+    "text": "A 2022 study showed that nitrates"
+   },
+   {
+    "id": "t59",
+    "start": 135.16,
+    "end": 137.96,
+    "text": "show an increased risk of cancer when ingested."
+   },
+   {
+    "id": "t60",
+    "start": 137.96,
+    "end": 140.32,
+    "text": "Alternatives for nitrates when it comes to meat,"
+   },
+   {
+    "id": "t61",
+    "start": 140.32,
+    "end": 143.84,
+    "text": "simply buying fresh meat rather than the pre-packaged stuff"
+   },
+   {
+    "id": "t62",
+    "start": 143.84,
+    "end": 146.48,
+    "text": "or look for packaged meat, deli sliced meat"
+   },
+   {
+    "id": "t63",
+    "start": 146.48,
+    "end": 148.44,
+    "text": "that says no nitrates."
+   },
+   {
+    "id": "t64",
+    "start": 148.44,
+    "end": 150.96,
+    "text": "Number five, agave syrup."
+   },
+   {
+    "id": "t65",
+    "start": 150.96,
+    "end": 153.12,
+    "text": "I know it's supposed to be healthy for us."
+   },
+   {
+    "id": "t66",
+    "start": 153.12,
+    "end": 155.64,
+    "text": "However, it is simply high fructose corn syrup"
+   },
+   {
+    "id": "t67",
+    "start": 155.64,
+    "end": 158.68,
+    "text": "masquerading as this thing called agave syrup."
+   },
+   {
+    "id": "t68",
+    "start": 158.68,
+    "end": 160.12,
+    "text": "Because the fiber's been removed"
+   },
+   {
+    "id": "t69",
+    "start": 160.12,
+    "end": 161.28,
+    "text": "and it's now just a syrup"
+   },
+   {
+    "id": "t70",
+    "start": 161.28,
+    "end": 162.96,
+    "text": "and it's very high in fructose,"
+   },
+   {
+    "id": "t71",
+    "start": 162.96,
+    "end": 166.32,
+    "text": "usually about 57 to 90% fructose,"
+   },
+   {
+    "id": "t72",
+    "start": 166.32,
+    "end": 169.52,
+    "text": "you have the same effects as high fructose corn syrup"
+   },
+   {
+    "id": "t73",
+    "start": 169.52,
+    "end": 171.4,
+    "text": "and that crystalline fructose happening"
+   },
+   {
+    "id": "t74",
+    "start": 171.4,
+    "end": 172.8,
+    "text": "that I mentioned earlier."
+   },
+   {
+    "id": "t75",
+    "start": 172.8,
+    "end": 175.0,
+    "text": "Again, great alternatives for this sweetener"
+   },
+   {
+    "id": "t76",
+    "start": 175.0,
+    "end": 176.88,
+    "text": "would be Stevia or Alulose."
+   },
+   {
+    "id": "t77",
+    "start": 176.88,
+    "end": 179.12,
+    "text": "Can we avoid all of these all the time?"
+   },
+   {
+    "id": "t78",
+    "start": 179.12,
+    "end": 179.96,
+    "text": "Probably not."
+   },
+   {
+    "id": "t79",
+    "start": 179.96,
+    "end": 181.8,
+    "text": "Do I get some of these things in mind nutrition"
+   },
+   {
+    "id": "t80",
+    "start": 181.8,
+    "end": 182.64,
+    "text": "from time to time?"
+   },
+   {
+    "id": "t81",
+    "start": 182.64,
+    "end": 186.04,
+    "text": "Sure, absolutely, because life is about balance."
+   },
+   {
+    "id": "t82",
+    "start": 186.04,
+    "end": 187.96,
+    "text": "However, the more education you have,"
+   },
+   {
+    "id": "t83",
+    "start": 187.96,
+    "end": 189.38,
+    "text": "the better choices you can make"
+   },
+   {
+    "id": "t84",
+    "start": 189.38,
+    "end": 191.36,
+    "text": "for your own personal health goals."
+   },
+   {
+    "id": "t85",
+    "start": 191.36,
+    "end": 193.32,
+    "text": "And if you want this in a simple form,"
+   },
+   {
+    "id": "t86",
+    "start": 193.32,
+    "end": 195.48,
+    "text": "I do have it in a downloadable PDF."
+   },
+   {
+    "id": "t87",
+    "start": 195.48,
+    "end": 197.96,
+    "text": "That link is in my profile, in my link tree."
+   },
+   {
+    "id": "t88",
+    "start": 197.96,
+    "end": 198.8,
+    "text": "It's totally free."
+   },
+   {
+    "id": "t89",
+    "start": 198.8,
+    "end": 200.44,
+    "text": "You don't have to fill out a form or anything."
+   },
+   {
+    "id": "t90",
+    "start": 200.44,
+    "end": 201.28,
+    "text": "Just click the link."
+   },
+   {
+    "id": "t91",
+    "start": 201.28,
+    "end": 202.64,
+    "text": "It'll take you right to the PDF."
+   },
+   {
+    "id": "t92",
+    "start": 202.64,
+    "end": 206.76,
+    "text": "If you want more help with your fitness and nutrition, I'm here for you and so is my team."
+   },
+   {
+    "id": "t93",
+    "start": 206.76,
+    "end": 210.76,
+    "text": "There's always details in my profile for my online one-on-one fitness and nutrition coaching"
+   },
+   {
+    "id": "t94",
+    "start": 210.76,
+    "end": 213.24,
+    "text": "or you can just simply go to coachgabby.com."
+   },
+   {
+    "id": "t95",
+    "start": 213.24,
+    "end": 217.76,
+    "text": "Cheers to a happy, healthier, more energetic you."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 111,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.994
+   },
+   {
+    "time": 0.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "5",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "FOOD",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "ADDITIVES",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "AVOID",
+    "confidence": 0.997
+   },
+   {
+    "time": 2.0,
+    "text": "AND THEIR",
+    "confidence": 0.956
+   },
+   {
+    "time": 2.0,
+    "text": "HEALTHY",
+    "confidence": 0.9
+   },
+   {
+    "time": 2.0,
+    "text": "ALTERNATIVES",
+    "confidence": 0.998
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.817
+   },
+   {
+    "time": 2.0,
+    "text": "AVOID AND",
+    "confidence": 0.995
+   },
+   {
+    "time": 2.0,
+    "text": "ThEIR HEALTHY",
+    "confidence": 0.527
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.969
+   },
+   {
+    "time": 4.0,
+    "text": "EVERYTHING I'M",
+    "confidence": 0.648
+   },
+   {
+    "time": 4.0,
+    "text": "ABOUT TO",
+    "confidence": 0.983
+   },
+   {
+    "time": 6.0,
+    "text": "PUBLISHED",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.0,
+    "text": "MEDICAL",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.0,
+    "text": "DATA",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 0.612
+   },
+   {
+    "time": 6.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "NOT JUST",
+    "confidence": 0.861
+   },
+   {
+    "time": 8.0,
+    "text": "ONE BUT",
+    "confidence": 0.998
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 0.776
+   },
+   {
+    "time": 8.0,
+    "text": "gabbituft",
+    "confidence": 0.972
+   },
+   {
+    "time": 10.0,
+    "text": "NO.1",
+    "confidence": 0.715
+   },
+   {
+    "time": 10.0,
+    "text": "IS FRUCTOSE",
+    "confidence": 0.825
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 0.766
+   },
+   {
+    "time": 10.0,
+    "text": "gabbituft",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.0,
+    "text": "BECAUSE OF",
+    "confidence": 0.827
+   },
+   {
+    "time": 12.0,
+    "text": "Tik Tok",
+    "confidence": 0.818
+   },
+   {
+    "time": 12.0,
+    "text": "gabbituft",
+    "confidence": 0.998
+   },
+   {
+    "time": 14.0,
+    "text": "THAT'S ASSOCIATED",
+    "confidence": 0.823
+   },
+   {
+    "time": 14.0,
+    "text": "WITH IT",
+    "confidence": 0.637
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.0,
+    "text": "gabbituft",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.0,
+    "text": "COMMERCIALLY",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "PREPARED",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.0,
+    "text": "CRYSTALLINE",
+    "confidence": 0.992
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 0.771
+   },
+   {
+    "time": 16.0,
+    "text": "gabbituft",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.0,
+    "text": "OR HIGH",
+    "confidence": 0.922
+   },
+   {
+    "time": 18.0,
+    "text": "FRUCTOSE CORN",
+    "confidence": 0.592
+   },
+   {
+    "time": 18.0,
+    "text": "Tiktok",
+    "confidence": 0.539
+   },
+   {
+    "time": 18.0,
+    "text": "gabbituft",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.0,
+    "text": "THE BODY",
+    "confidence": 0.991
+   },
+   {
+    "time": 20.0,
+    "text": "ABSORBS IT",
+    "confidence": 0.537
+   },
+   {
+    "time": 20.0,
+    "text": "gabbituft",
+    "confidence": 0.727
+   },
+   {
+    "time": 22.0,
+    "text": "IT DRIVES",
+    "confidence": 0.809
+   },
+   {
+    "time": 22.0,
+    "text": "DOPAMINE",
+    "confidence": 0.999
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 0.773
+   },
+   {
+    "time": 22.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "HIGHLY",
+    "confidence": 0.995
+   },
+   {
+    "time": 24.0,
+    "text": "gabbituft",
+    "confidence": 0.758
+   },
+   {
+    "time": 26.0,
+    "text": "IT DOES",
+    "confidence": 0.986
+   },
+   {
+    "time": 26.0,
+    "text": "NOT SATIATB",
+    "confidence": 0.964
+   },
+   {
+    "time": 26.0,
+    "text": "Tiktok",
+    "confidence": 0.624
+   },
+   {
+    "time": 26.0,
+    "text": "gabbituft",
+    "confidence": 0.997
+   },
+   {
+    "time": 28.0,
+    "text": "THAT NORMAL",
+    "confidence": 0.985
+   },
+   {
+    "time": 28.0,
+    "text": "TABLE SUGAr",
+    "confidence": 0.615
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "REGULAR SUGAR",
+    "confidence": 0.892
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 0.84
+   },
+   {
+    "time": 30.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "PRODUCES MORE",
+    "confidence": 0.944
+   },
+   {
+    "time": 32.0,
+    "text": "BODY FAT",
+    "confidence": 0.987
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 0.64
+   },
+   {
+    "time": 32.0,
+    "text": "gabbituft",
+    "confidence": 0.999
+   },
+   {
+    "time": 34.0,
+    "text": "scientific reports",
+    "confidence": 0.996
+   },
+   {
+    "time": 34.0,
+    "text": "Log",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "Search",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "Publish",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "Content",
+    "confidence": 0.74
+   },
+   {
+    "time": 34.0,
+    "text": "About",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "articles",
+    "confidence": 0.946
+   },
+   {
+    "time": 34.0,
+    "text": "article",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "Download PDF",
+    "confidence": 0.776
+   },
+   {
+    "time": 34.0,
+    "text": "Qpen access",
+    "confidence": 0.865
+   },
+   {
+    "time": 34.0,
+    "text": "Published: 20 April 2015",
+    "confidence": 0.755
+   },
+   {
+    "time": 34.0,
+    "text": "Article",
+    "confidence": 0.795
+   },
+   {
+    "time": 34.0,
+    "text": "Fructose decreases physical",
+    "confidence": 0.971
+   },
+   {
+    "time": 34.0,
+    "text": "activity and increases body fat",
+    "confidence": 0.835
+   },
+   {
+    "time": 34.0,
+    "text": "without affecting hippocampal",
+    "confidence": 0.858
+   },
+   {
+    "time": 34.0,
+    "text": "neurogenesis and learning",
+    "confidence": 0.982
+   },
+   {
+    "time": 34.0,
+    "text": "relative to an isocaloric glucose",
+    "confidence": 0.959
+   },
+   {
+    "time": 34.0,
+    "text": "diet",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "AND PHYSICAL",
+    "confidence": 0.992
+   },
+   {
+    "time": 34.0,
+    "text": "Cata",
+    "confidence": 0.973
+   },
+   {
+    "time": 34.0,
+    "text": "INACTIVITY",
+    "confidence": 0.999
+   },
+   {
+    "time": 34.0,
+    "text": "Rhodes",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "Scientific Reports",
+    "confidence": 0.99
+   },
+   {
+    "time": 34.0,
+    "text": "5, Article number: 9589",
+    "confidence": 0.994
+   },
+   {
+    "time": 34.0,
+    "text": "(2015)",
+    "confidence": 0.97
+   },
+   {
+    "time": 34.0,
+    "text": "Cite thisarticle",
+    "confidence": 0.795
+   },
+   {
+    "time": 34.0,
+    "text": "19k",
+    "confidence": 0.997
+   },
+   {
+    "time": 34.0,
+    "text": "31 Citations",
+    "confidence": 0.966
+   },
+   {
+    "time": 34.0,
+    "text": "Accesses",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "gabbituft",
+    "confidence": 0.973
+   },
+   {
+    "time": 36.0,
+    "text": "MAKES YOU",
+    "confidence": 0.846
+   },
+   {
+    "time": 36.0,
+    "text": "MORE SEDENTARY",
+    "confidence": 0.996
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 0.974
+   },
+   {
+    "time": 36.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "ENZYMES CRITICAL",
+    "confidence": 0.927
+   },
+   {
+    "time": 38.0,
+    "text": "FOR MITOCHONDRIAL",
+    "confidence": 0.877
+   },
+   {
+    "time": 38.0,
+    "text": "ikuok",
+    "confidence": 0.554
+   },
+   {
+    "time": 38.0,
+    "text": "gabbituft",
+    "confidence": 0.999
+   },
+   {
+    "time": 40.0,
+    "text": "ENZYMES CRITICAL",
+    "confidence": 0.999
+   },
+   {
+    "time": 40.0,
+    "text": "FOR",
+    "confidence": 0.999
+   },
+   {
+    "time": 40.0,
+    "text": "MITOCHONDRIAL",
+    "confidence": 0.995
+   },
+   {
+    "time": 42.0,
+    "text": "AMPA KINASE",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.0,
+    "text": "AcADL",
+    "confidence": 0.658
+   },
+   {
+    "time": 42.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "gabbituft",
+    "confidence": 0.984
+   },
+   {
+    "time": 44.0,
+    "text": "OT'SALSO",
+    "confidence": 0.549
+   },
+   {
+    "time": 44.0,
+    "text": "BEEN SHOWNTO",
+    "confidence": 0.99
+   },
+   {
+    "time": 44.0,
+    "text": "Tik Tok",
+    "confidence": 0.774
+   },
+   {
+    "time": 44.0,
+    "text": "gabbituft",
+    "confidence": 0.935
+   },
+   {
+    "time": 46.0,
+    "text": "PMC _PubMed Central\"",
+    "confidence": 0.586
+   },
+   {
+    "time": 46.0,
+    "text": "Author Manuscript",
+    "confidence": 0.819
+   },
+   {
+    "time": 46.0,
+    "text": "publication by",
+    "confidence": 0.891
+   },
+   {
+    "time": 46.0,
+    "text": "Dig Dis_Sci_ Author manuscript; available in PMC",
+    "confidence": 0.63
+   },
+   {
+    "time": 46.0,
+    "text": "Dig",
+    "confidence": 0.995
+   },
+   {
+    "time": 46.0,
+    "text": "2017 May 1. Published in final edited form as:",
+    "confidence": 0.937
+   },
+   {
+    "time": 46.0,
+    "text": "Dis Sci_2016 May; 61(5). 1282-1293_ Published",
+    "confidence": 0.63
+   },
+   {
+    "time": 46.0,
+    "text": "online 2016 Feb 8. doi: 10.1007/s10620-016_",
+    "confidence": 0.679
+   },
+   {
+    "time": 46.0,
+    "text": "4054-0",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "PMCID: PMC4838515",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "NIHMSID: NIHMS758570",
+    "confidence": 0.999
+   },
+   {
+    "time": 46.0,
+    "text": "PMID: 26856717",
+    "confidence": 0.59
+   },
+   {
+    "time": 46.0,
+    "text": "NONALCOHOLIC",
+    "confidence": 0.899
+   },
+   {
+    "time": 46.0,
+    "text": "FATTY LiveR DISEASE",
+    "confidence": 0.689
+   },
+   {
+    "time": 46.0,
+    "text": "C_Ronald Kahn'",
+    "confidence": 0.796
+   },
+   {
+    "time": 46.0,
+    "text": "TikTok",
+    "confidence": 0.793
+   },
+   {
+    "time": 46.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "AND YES",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "FINALLY",
+    "confidence": 0.987
+   },
+   {
+    "time": 48.0,
+    "text": "TikTok",
+    "confidence": 0.975
+   },
+   {
+    "time": 48.0,
+    "text": "gabbituft",
+    "confidence": 0.997
+   },
+   {
+    "time": 50.0,
+    "text": "LEAKY GUT",
+    "confidence": 0.615
+   },
+   {
+    "time": 50.0,
+    "text": "TikTok",
+    "confidence": 0.955
+   },
+   {
+    "time": 50.0,
+    "text": "gabbituft",
+    "confidence": 0.992
+   },
+   {
+    "time": 52.0,
+    "text": "WITHOUT FIBER",
+    "confidence": 0.952
+   },
+   {
+    "time": 52.0,
+    "text": "Tik Tok",
+    "confidence": 0.818
+   },
+   {
+    "time": 52.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "JUNCTIONS IN",
+    "confidence": 0.982
+   },
+   {
+    "time": 54.0,
+    "text": "ThE EPITHELIAL",
+    "confidence": 0.857
+   },
+   {
+    "time": 54.0,
+    "text": "Tik Tok",
+    "confidence": 0.602
+   },
+   {
+    "time": 54.0,
+    "text": "gabbituft",
+    "confidence": 0.999
+   },
+   {
+    "time": 56.0,
+    "text": "Gastrointestinal Synthetic Epithelial Linings",
+    "confidence": 0.809
+   },
+   {
+    "time": 56.0,
+    "text": "Giancarlo Traverso",
+    "confidence": 0.993
+   },
+   {
+    "time": 56.0,
+    "text": "THOSBARE",
+    "confidence": 0.724
+   },
+   {
+    "time": 56.0,
+    "text": "ThE CELLS",
+    "confidence": 0.815
+   },
+   {
+    "time": 56.0,
+    "text": "Tikto",
+    "confidence": 0.602
+   },
+   {
+    "time": 56.0,
+    "text": "gabbituft",
+    "confidence": 0.926
+   },
+   {
+    "time": 58.0,
+    "text": "Gastrointestinal Synthetic Epithelial Linings",
+    "confidence": 0.887
+   },
+   {
+    "time": 58.0,
+    "text": "Giancarlo Traverso",
+    "confidence": 0.947
+   },
+   {
+    "time": 58.0,
+    "text": "WITHIN YOUR",
+    "confidence": 0.999
+   },
+   {
+    "time": 58.0,
+    "text": "INTESTINAL WALLS",
+    "confidence": 0.752
+   },
+   {
+    "time": 58.0,
+    "text": "kTok",
+    "confidence": 0.819
+   },
+   {
+    "time": 58.0,
+    "text": "gabbituft",
+    "confidence": 0.999
+   },
+   {
+    "time": 60.0,
+    "text": "AND THERE",
+    "confidence": 0.687
+   },
+   {
+    "time": 60.0,
+    "text": "IS SOME",
+    "confidence": 0.868
+   },
+   {
+    "time": 60.0,
+    "text": "Tiktok",
+    "confidence": 0.65
+   },
+   {
+    "time": 62.0,
+    "text": "WHERE THE",
+    "confidence": 0.948
+   },
+   {
+    "time": 62.0,
+    "text": "STUFF THAT'S",
+    "confidence": 0.514
+   },
+   {
+    "time": 62.0,
+    "text": "TikTok",
+    "confidence": 0.976
+   },
+   {
+    "time": 62.0,
+    "text": "gabbituft",
+    "confidence": 0.998
+   },
+   {
+    "time": 64.0,
+    "text": "PERMEATES",
+    "confidence": 0.572
+   },
+   {
+    "time": 64.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 64.0,
+    "text": "gabbituft",
+    "confidence": 0.988
+   },
+   {
+    "time": 66.0,
+    "text": "ALL OTHER",
+    "confidence": 0.988
+   },
+   {
+    "time": 66.0,
+    "text": "SORTS OF",
+    "confidence": 0.979
+   },
+   {
+    "time": 66.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 66.0,
+    "text": "gabbituft",
+    "confidence": 0.731
+   },
+   {
+    "time": 68.0,
+    "text": "NO.3",
+    "confidence": 0.565
+   },
+   {
+    "time": 68.0,
+    "text": "ON THE",
+    "confidence": 0.874
+   },
+   {
+    "time": 68.0,
+    "text": "Tik Tok",
+    "confidence": 0.587
+   },
+   {
+    "time": 68.0,
+    "text": "gabbituft",
+    "confidence": 0.998
+   },
+   {
+    "time": 70.0,
+    "text": "Cobn",
+    "confidence": 0.592
+   },
+   {
+    "time": 70.0,
+    "text": "TALKED ABOUT",
+    "confidence": 0.994
+   },
+   {
+    "time": 70.0,
+    "text": "TikTok",
+    "confidence": 0.958
+   },
+   {
+    "time": 70.0,
+    "text": "gabbltuft",
+    "confidence": 0.781
+   },
+   {
+    "time": 72.0,
+    "text": "NOW YOU",
+    "confidence": 0.841
+   },
+   {
+    "time": 72.0,
+    "text": "PUT IT INTO",
+    "confidence": 0.575
+   },
+   {
+    "time": 74.0,
+    "text": "OF THE",
+    "confidence": 0.597
+   },
+   {
+    "time": 74.0,
+    "text": "SAME THINGS",
+    "confidence": 0.976
+   },
+   {
+    "time": 74.0,
+    "text": "Tik Tok",
+    "confidence": 0.643
+   },
+   {
+    "time": 74.0,
+    "text": "gabbituft",
+    "confidence": 0.994
+   },
+   {
+    "time": 76.0,
+    "text": "BUT EVEN",
+    "confidence": 0.64
+   },
+   {
+    "time": 76.0,
+    "text": "MOREIT",
+    "confidence": 0.988
+   },
+   {
+    "time": 76.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 76.0,
+    "text": "gabbituft",
+    "confidence": 0.997
+   },
+   {
+    "time": 78.0,
+    "text": "PMC PubMed Central\"",
+    "confidence": 0.909
+   },
+   {
+    "time": 78.0,
+    "text": "numan neann conanions",
+    "confidence": 0.539
+   },
+   {
+    "time": 78.0,
+    "text": "(12.13). Fructose is primarily metabolized by",
+    "confidence": 0.898
+   },
+   {
+    "time": 78.0,
+    "text": "requires enzymatie pathways",
+    "confidence": 0.887
+   },
+   {
+    "time": 78.0,
+    "text": "the liver and",
+    "confidence": 0.998
+   },
+   {
+    "time": 78.0,
+    "text": "distinct from those involved in glycolysis",
+    "confidence": 0.76
+   },
+   {
+    "time": 78.0,
+    "text": "(14). As a result; tumor cells utilizing frue-",
+    "confidence": 0.538
+   },
+   {
+    "time": 78.0,
+    "text": "tose rather than glucose for energy assume",
+    "confidence": 0.908
+   },
+   {
+    "time": 78.0,
+    "text": "an altered metabolic phenotype (L5). In vivo",
+    "confidence": 0.715
+   },
+   {
+    "time": 78.0,
+    "text": "studies have demonstrated that oral adminis-",
+    "confidence": 0.909
+   },
+   {
+    "time": 78.0,
+    "text": "tration of high-fructose corn syrup t0 mice",
+    "confidence": 0.676
+   },
+   {
+    "time": 78.0,
+    "text": "increases the development of intestinal tU -",
+    "confidence": 0.577
+   },
+   {
+    "time": 78.0,
+    "text": "independent of obesity (L6). But how",
+    "confidence": 0.548
+   },
+   {
+    "time": 78.0,
+    "text": "mors",
+    "confidence": 0.996
+   },
+   {
+    "time": 78.0,
+    "text": "dietary fructose impaets human cancer pro-",
+    "confidence": 0.838
+   },
+   {
+    "time": 78.0,
+    "text": "gression and the response t0 immunotherapy",
+    "confidence": 0.792
+   },
+   {
+    "time": 78.0,
+    "text": "remains unresolved.",
+    "confidence": 0.808
+   },
+   {
+    "time": 78.0,
+    "text": "CONTRIBUTESTO",
+    "confidence": 0.999
+   },
+   {
+    "time": 78.0,
+    "text": "We",
+    "confidence": 1.0
+   },
+   {
+    "time": 78.0,
+    "text": "I -",
+    "confidence": 0.605
+   },
+   {
+    "time": 78.0,
+    "text": "CANCER",
+    "confidence": 0.959
+   },
+   {
+    "time": 78.0,
+    "text": "duced obesiu",
+    "confidence": 0.595
+   },
+   {
+    "time": 78.0,
+    "text": "er im-",
+    "confidence": 0.98
+   },
+   {
+    "time": 78.0,
+    "text": "munotherapy outcomes:",
+    "confidence": 0.603
+   },
+   {
+    "time": 78.0,
+    "text": "explored",
+    "confidence": 0.998
+   },
+   {
+    "time": 78.0,
+    "text": "using",
+    "confidence": 0.728
+   },
+   {
+    "time": 78.0,
+    "text": "this in the B[6 melanoma model",
+    "confidence": 0.704
+   },
+   {
+    "time": 78.0,
+    "text": "B6",
+    "confidence": 0.979
+   },
+   {
+    "time": 78.0,
+    "text": "mice On a western diet high in saturated fats",
+    "confidence": 0.689
+   },
+   {
+    "time": 78.0,
+    "text": "gabbituft",
+    "confidence": 0.656
+   },
+   {
+    "time": 80.0,
+    "text": "National Library of Medicine",
+    "confidence": 0.777
+   },
+   {
+    "time": 80.0,
+    "text": "Log",
+    "confidence": 1.0
+   },
+   {
+    "time": 80.0,
+    "text": "National Center tor Biotechnology Information",
+    "confidence": 0.758
+   },
+   {
+    "time": 80.0,
+    "text": "PublMed",
+    "confidence": 0.978
+   },
+   {
+    "time": 80.0,
+    "text": "Advanced",
+    "confidence": 1.0
+   },
+   {
+    "time": 80.0,
+    "text": "User Guide",
+    "confidence": 0.934
+   },
+   {
+    "time": 80.0,
+    "text": "The role of fructose in",
+    "confidence": 0.829
+   },
+   {
+    "time": 80.0,
+    "text": "metabolism and cancer",
+    "confidence": 0.733
+   },
+   {
+    "time": 80.0,
+    "text": "Berenice Charrez et al. Horm Mol Biol Clin",
+    "confidence": 0.778
+   },
+   {
+    "time": 80.0,
+    "text": "May.",
+    "confidence": 0.945
+   },
+   {
+    "time": 80.0,
+    "text": "Investig: 2015",
+    "confidence": 0.798
+   },
+   {
+    "time": 80.0,
+    "text": "Show details",
+    "confidence": 0.725
+   },
+   {
+    "time": 80.0,
+    "text": "Full text links",
+    "confidence": 0.98
+   },
+   {
+    "time": 80.0,
+    "text": "66",
+    "confidence": 0.724
+   },
+   {
+    "time": 80.0,
+    "text": "Cite",
+    "confidence": 1.0
+   },
+   {
+    "time": 80.0,
+    "text": "METABOLIC",
+    "confidence": 1.0
+   },
+   {
+    "time": 80.0,
+    "text": "DISORDERSAND",
+    "confidence": 0.771
+   },
+   {
+    "time": 80.0,
+    "text": "Fructose consumption has dramatically",
+    "confidence": 0.91
+   },
+   {
+    "time": 80.0,
+    "text": "increased in the last 30 years. The principal",
+    "confidence": 0.65
+   },
+   {
+    "time": 80.0,
+    "text": "form has been in the form of high-fructose corn",
+    "confidence": 0.839
+   },
+   {
+    "time": 80.0,
+    "text": "foundin",
+    "confidence": 0.882
+   },
+   {
+    "time": 80.0,
+    "text": "gabbituft",
+    "confidence": 0.736
+   },
+   {
+    "time": 82.0,
+    "text": "REGULATOn",
+    "confidence": 0.561
+   },
+   {
+    "time": 82.0,
+    "text": "Tik Tok",
+    "confidence": 0.931
+   },
+   {
+    "time": 82.0,
+    "text": "gabbituft",
+    "confidence": 0.99
+   },
+   {
+    "time": 84.0,
+    "text": "EVEN WITHOUT",
+    "confidence": 0.998
+   },
+   {
+    "time": 84.0,
+    "text": "OBESITY BEING",
+    "confidence": 0.705
+   },
+   {
+    "time": 84.0,
+    "text": "TikTok",
+    "confidence": 0.926
+   },
+   {
+    "time": 84.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 86.0,
+    "text": "PMC PubMed Central\"",
+    "confidence": 0.777
+   },
+   {
+    "time": 86.0,
+    "text": "eases.26",
+    "confidence": 0.905
+   },
+   {
+    "time": 86.0,
+    "text": "A similar association has been shown in (WO",
+    "confidence": 0.717
+   },
+   {
+    "time": 86.0,
+    "text": "ecologieal analyses (or the prevalenee",
+    "confidence": 0.659
+   },
+   {
+    "time": 86.0,
+    "text": "of type 2 diabetes. One study of 43 countries",
+    "confidence": 0.695
+   },
+   {
+    "time": 86.0,
+    "text": "and the Other of [75 countries showed a sig-",
+    "confidence": 0.705
+   },
+   {
+    "time": 86.0,
+    "text": "availability of",
+    "confidence": 0.792
+   },
+   {
+    "time": 86.0,
+    "text": "nilicant association with the",
+    "confidence": 0.763
+   },
+   {
+    "time": 86.0,
+    "text": "prevalence of diabetes was 20 % higher in",
+    "confidence": 0.724
+   },
+   {
+    "time": 86.0,
+    "text": "countries that use HFCS eompared with",
+    "confidence": 0.743
+   },
+   {
+    "time": 86.0,
+    "text": "countries that do not",
+    "confidence": 0.899
+   },
+   {
+    "time": 86.0,
+    "text": "and increased by",
+    "confidence": 0.81
+   },
+   {
+    "time": 86.0,
+    "text": "% for every [50 kcalperson/day increase in",
+    "confidence": 0.571
+   },
+   {
+    "time": 86.0,
+    "text": "total sugar availability  Although these",
+    "confidence": 0.609
+   },
+   {
+    "time": 86.0,
+    "text": "studies did attempt t0 control for some poten -",
+    "confidence": 0.759
+   },
+   {
+    "time": 86.0,
+    "text": "CONTRIBUTETO",
+    "confidence": 0.828
+   },
+   {
+    "time": 86.0,
+    "text": "tial &",
+    "confidence": 0.598
+   },
+   {
+    "time": 86.0,
+    "text": "nporant",
+    "confidence": 0.509
+   },
+   {
+    "time": 86.0,
+    "text": "confounde",
+    "confidence": 0.996
+   },
+   {
+    "time": 86.0,
+    "text": "esti-",
+    "confidence": 1.0
+   },
+   {
+    "time": 86.0,
+    "text": "pooling of het-",
+    "confidence": 0.98
+   },
+   {
+    "time": 86.0,
+    "text": "males were also based on the",
+    "confidence": 0.719
+   },
+   {
+    "time": 86.0,
+    "text": "erogeneous measurements ol exposure (both",
+    "confidence": 0.794
+   },
+   {
+    "time": 86.0,
+    "text": "for the availability of HFCS or sugars and the",
+    "confidence": 0.917
+   },
+   {
+    "time": 86.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 86.0,
+    "text": "gabbituft",
+    "confidence": 0.999
+   },
+   {
+    "time": 88.0,
+    "text": "Harvard Health",
+    "confidence": 0.708
+   },
+   {
+    "time": 88.0,
+    "text": "Publishing",
+    "confidence": 0.564
+   },
+   {
+    "time": 88.0,
+    "text": "HARVARD MEDICAL SCHOOL",
+    "confidence": 0.999
+   },
+   {
+    "time": 88.0,
+    "text": "HARVARD HEALTH BLOG",
+    "confidence": 0.849
+   },
+   {
+    "time": 88.0,
+    "text": "Eating too much added",
+    "confidence": 0.856
+   },
+   {
+    "time": 88.0,
+    "text": "sugar increases the risk",
+    "confidence": 1.0
+   },
+   {
+    "time": 88.0,
+    "text": "of dying with heart",
+    "confidence": 0.848
+   },
+   {
+    "time": 88.0,
+    "text": "disease",
+    "confidence": 1.0
+   },
+   {
+    "time": 88.0,
+    "text": "HEART DISEASE",
+    "confidence": 0.997
+   },
+   {
+    "time": 88.0,
+    "text": "ikTok",
+    "confidence": 0.935
+   },
+   {
+    "time": 88.0,
+    "text": "abbituft",
+    "confidence": 0.996
+   },
+   {
+    "time": 88.0,
+    "text": "February 6,2014",
+    "confidence": 1.0
+   },
+   {
+    "time": 90.0,
+    "text": "TikTok",
+    "confidence": 0.755
+   },
+   {
+    "time": 90.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 92.0,
+    "text": "microingredients",
+    "confidence": 0.942
+   },
+   {
+    "time": 92.0,
+    "text": "organic",
+    "confidence": 1.0
+   },
+   {
+    "time": 92.0,
+    "text": "stevia",
+    "confidence": 0.997
+   },
+   {
+    "time": 92.0,
+    "text": "extract",
+    "confidence": 0.886
+   },
+   {
+    "time": 92.0,
+    "text": "zero calories",
+    "confidence": 0.816
+   },
+   {
+    "time": 92.0,
+    "text": "natural sweetener",
+    "confidence": 0.96
+   },
+   {
+    "time": 92.0,
+    "text": "STEVIA OR",
+    "confidence": 0.977
+   },
+   {
+    "time": 92.0,
+    "text": "ALLULOSE NO.",
+    "confidence": 0.8
+   },
+   {
+    "time": 92.0,
+    "text": "Tio",
+    "confidence": 0.618
+   },
+   {
+    "time": 92.0,
+    "text": "GMO",
+    "confidence": 0.962
+   },
+   {
+    "time": 92.0,
+    "text": "sugar",
+    "confidence": 1.0
+   },
+   {
+    "time": 92.0,
+    "text": "free",
+    "confidence": 0.994
+   },
+   {
+    "time": 92.0,
+    "text": "8 0z (227 g) Powder",
+    "confidence": 0.902
+   },
+   {
+    "time": 94.0,
+    "text": "3IS",
+    "confidence": 0.861
+   },
+   {
+    "time": 94.0,
+    "text": "SYNTHETIC FOOD DYES",
+    "confidence": 0.988
+   },
+   {
+    "time": 94.0,
+    "text": "TikTok",
+    "confidence": 0.657
+   },
+   {
+    "time": 94.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 96.0,
+    "text": "THESE ARE",
+    "confidence": 0.991
+   },
+   {
+    "time": 96.0,
+    "text": "RED40",
+    "confidence": 0.998
+   },
+   {
+    "time": 98.0,
+    "text": "NO. 6",
+    "confidence": 0.611
+   },
+   {
+    "time": 98.0,
+    "text": "TikTok",
+    "confidence": 0.899
+   },
+   {
+    "time": 98.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 100.0,
+    "text": "PMC PubMed Central\"",
+    "confidence": 0.677
+   },
+   {
+    "time": 100.0,
+    "text": "tordcobgy",
+    "confidence": 0.68
+   },
+   {
+    "time": 100.0,
+    "text": "Toxicology Reports",
+    "confidence": 0.996
+   },
+   {
+    "time": 100.0,
+    "text": "Toxicol",
+    "confidence": 0.537
+   },
+   {
+    "time": 100.0,
+    "text": "Published",
+    "confidence": 0.81
+   },
+   {
+    "time": 100.0,
+    "text": "Sep",
+    "confidence": 1.0
+   },
+   {
+    "time": 100.0,
+    "text": "online 2023",
+    "confidence": 0.977
+   },
+   {
+    "time": 100.0,
+    "text": "doi: 10.1016/j.toxrep 2023.08.006",
+    "confidence": 0.787
+   },
+   {
+    "time": 100.0,
+    "text": "PMID: 37719200",
+    "confidence": 0.936
+   },
+   {
+    "time": 100.0,
+    "text": "PMCID: PMC10502305",
+    "confidence": 0.994
+   },
+   {
+    "time": 100.0,
+    "text": "The synthetic food dye, Red 40.",
+    "confidence": 0.865
+   },
+   {
+    "time": 100.0,
+    "text": "causes DNA damage, causes colonic",
+    "confidence": 0.84
+   },
+   {
+    "time": 100.0,
+    "text": "inflammation, and impacts the",
+    "confidence": 0.803
+   },
+   {
+    "time": 100.0,
+    "text": "microbiome in mice",
+    "confidence": 0.914
+   },
+   {
+    "time": 100.0,
+    "text": "QiZhang;",
+    "confidence": 0.983
+   },
+   {
+    "time": 100.0,
+    "text": "Anastasiya A_Chumanevich; a",
+    "confidence": 0.563
+   },
+   {
+    "time": 100.0,
+    "text": "Ly_Nguyen;",
+    "confidence": 0.715
+   },
+   {
+    "time": 100.0,
+    "text": "THATRED hazan;",
+    "confidence": 0.878
+   },
+   {
+    "time": 100.0,
+    "text": "Nora Sartawi;",
+    "confidence": 0.815
+   },
+   {
+    "time": 100.0,
+    "text": "Quinn Harri",
+    "confidence": 0.983
+   },
+   {
+    "time": 100.0,
+    "text": "Joulia Cha",
+    "confidence": 0.961
+   },
+   {
+    "time": 100.0,
+    "text": "Carolyn E_Banister;",
+    "confidence": 0.746
+   },
+   {
+    "time": 100.0,
+    "text": "Michael Winth;",
+    "confidence": 0.622
+   },
+   {
+    "time": 100.0,
+    "text": "TikTok",
+    "confidence": 0.895
+   },
+   {
+    "time": 100.0,
+    "text": "gabbituft",
+    "confidence": 0.983
+   },
+   {
+    "time": 102.0,
+    "text": "PMC PubMed Central\"",
+    "confidence": 0.941
+   },
+   {
+    "time": 102.0,
+    "text": "ELSEVIER",
+    "confidence": 0.827
+   },
+   {
+    "time": 102.0,
+    "text": "torepolgy",
+    "confidence": 0.627
+   },
+   {
+    "time": 102.0,
+    "text": "Toxicology Reports",
+    "confidence": 1.0
+   },
+   {
+    "time": 102.0,
+    "text": "Toxicol Rep_ 2023 Dec; 11: 221-232. Published",
+    "confidence": 0.803
+   },
+   {
+    "time": 102.0,
+    "text": "Sep",
+    "confidence": 1.0
+   },
+   {
+    "time": 102.0,
+    "text": "online 2023",
+    "confidence": 0.965
+   },
+   {
+    "time": 102.0,
+    "text": "doi: 10.1016/j.toxrep.2023.08.006",
+    "confidence": 0.576
+   },
+   {
+    "time": 102.0,
+    "text": "PMCID: PMC10502305",
+    "confidence": 0.988
+   },
+   {
+    "time": 102.0,
+    "text": "PMID: 37719200",
+    "confidence": 0.976
+   },
+   {
+    "time": 102.0,
+    "text": "The synthetic food dye, Red 40,",
+    "confidence": 0.943
+   },
+   {
+    "time": 102.0,
+    "text": "causes DNA damage, causes colonic",
+    "confidence": 0.992
+   },
+   {
+    "time": 102.0,
+    "text": "inflammation, and impacts the",
+    "confidence": 0.663
+   },
+   {
+    "time": 102.0,
+    "text": "microbiome in mice",
+    "confidence": 0.878
+   },
+   {
+    "time": 102.0,
+    "text": "QiZhang;a AlexanderAChumanevich;&,.",
+    "confidence": 0.545
+   },
+   {
+    "time": 102.0,
+    "text": "Ly_Nguven",
+    "confidence": 0.66
+   },
+   {
+    "time": 102.0,
+    "text": "Chuumanevich",
+    "confidence": 0.883
+   },
+   {
+    "time": 102.0,
+    "text": "Anactasiva",
+    "confidence": 0.786
+   },
+   {
+    "time": 102.0,
+    "text": "AND COLONIC",
+    "confidence": 0.669
+   },
+   {
+    "time": 102.0,
+    "text": "Nora S",
+    "confidence": 0.857
+   },
+   {
+    "time": 102.0,
+    "text": "Qui",
+    "confidence": 0.973
+   },
+   {
+    "time": 102.0,
+    "text": "INFLAMMATIONAND",
+    "confidence": 1.0
+   },
+   {
+    "time": 102.0,
+    "text": "lou",
+    "confidence": 0.912
+   },
+   {
+    "time": 102.0,
+    "text": "Carolyn EBanister;",
+    "confidence": 0.886
+   },
+   {
+    "time": 102.0,
+    "text": "Michael Winth",
+    "confidence": 0.843
+   },
+   {
+    "time": 102.0,
+    "text": "TikTok",
+    "confidence": 0.994
+   },
+   {
+    "time": 102.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 104.0,
+    "text": "AfFECTS THE",
+    "confidence": 0.766
+   },
+   {
+    "time": 104.0,
+    "text": "GUT MICROBIOME",
+    "confidence": 0.633
+   },
+   {
+    "time": 104.0,
+    "text": "TikTok",
+    "confidence": 0.994
+   },
+   {
+    "time": 104.0,
+    "text": "gabbituft",
+    "confidence": 0.999
+   },
+   {
+    "time": 106.0,
+    "text": "PMC_PubMed Central\"",
+    "confidence": 0.62
+   },
+   {
+    "time": 106.0,
+    "text": "Environmental",
+    "confidence": 0.804
+   },
+   {
+    "time": 106.0,
+    "text": "Fiealth",
+    "confidence": 0.935
+   },
+   {
+    "time": 106.0,
+    "text": "PMCID: PMC9052604",
+    "confidence": 0.997
+   },
+   {
+    "time": 106.0,
+    "text": "PMID: 35484553",
+    "confidence": 0.916
+   },
+   {
+    "time": 106.0,
+    "text": "Polential impaets ol synthetie fuod",
+    "confidence": 0.519
+   },
+   {
+    "time": 106.0,
+    "text": "aelivity and altention in",
+    "confidence": 0.61
+   },
+   {
+    "time": 106.0,
+    "text": "dyes on",
+    "confidence": 0.636
+   },
+   {
+    "time": 106.0,
+    "text": "children: a revicw of the human and",
+    "confidence": 0.727
+   },
+   {
+    "time": 106.0,
+    "text": "aninial evidence",
+    "confidence": 0.685
+   },
+   {
+    "time": 106.0,
+    "text": "Mark DMiller\"1 Craig Steinmaus,",
+    "confidence": 0.871
+   },
+   {
+    "time": 106.0,
+    "text": "A2022",
+    "confidence": 0.973
+   },
+   {
+    "time": 106.0,
+    "text": "STUDY SHOWED",
+    "confidence": 0.625
+   },
+   {
+    "time": 106.0,
+    "text": "TikTok",
+    "confidence": 0.993
+   },
+   {
+    "time": 106.0,
+    "text": "gabbituft",
+    "confidence": 0.996
+   },
+   {
+    "time": 108.0,
+    "text": "PMC PubMed Central\"",
+    "confidence": 0.946
+   },
+   {
+    "time": 108.0,
+    "text": "Environmental",
+    "confidence": 1.0
+   },
+   {
+    "time": 108.0,
+    "text": "Health",
+    "confidence": 0.94
+   },
+   {
+    "time": 108.0,
+    "text": "BMC",
+    "confidence": 0.998
+   },
+   {
+    "time": 108.0,
+    "text": "Environ Health 2022; 21: 45_",
+    "confidence": 0.723
+   },
+   {
+    "time": 108.0,
+    "text": "Published online",
+    "confidence": 0.789
+   },
+   {
+    "time": 108.0,
+    "text": "2022 Apr 29. doi: 10.1186/s12940-022-00849-9",
+    "confidence": 0.609
+   },
+   {
+    "time": 108.0,
+    "text": "PMCID: PMC9052604",
+    "confidence": 0.998
+   },
+   {
+    "time": 108.0,
+    "text": "PMID: 35484553",
+    "confidence": 0.966
+   },
+   {
+    "time": 108.0,
+    "text": "Potential impacts of synthetic food",
+    "confidence": 0.931
+   },
+   {
+    "time": 108.0,
+    "text": "dyes on activity and attention in",
+    "confidence": 0.84
+   },
+   {
+    "time": 108.0,
+    "text": "children:",
+    "confidence": 0.853
+   },
+   {
+    "time": 108.0,
+    "text": "review of the human and",
+    "confidence": 0.997
+   },
+   {
+    "time": 108.0,
+    "text": "animal evidence",
+    "confidence": 0.999
+   },
+   {
+    "time": 108.0,
+    "text": "Mark DMiller;\"1 Craig_Steinmaus,",
+    "confidence": 0.618
+   },
+   {
+    "time": 108.0,
+    "text": "MariS_Golub,",
+    "confidence": 0.61
+   },
+   {
+    "time": 108.0,
+    "text": "Bosemary_Castorina; 2",
+    "confidence": 0.796
+   },
+   {
+    "time": 108.0,
+    "text": "Buwan Thilakartne ? Asa Bradman 2,3 and",
+    "confidence": 0.63
+   },
+   {
+    "time": 108.0,
+    "text": "ARE LINKED",
+    "confidence": 0.804
+   },
+   {
+    "time": 108.0,
+    "text": "Melanie A",
+    "confidence": 0.973
+   },
+   {
+    "time": 108.0,
+    "text": "TOADHDINyright",
+    "confidence": 0.697
+   },
+   {
+    "time": 108.0,
+    "text": "Author",
+    "confidence": 1.0
+   },
+   {
+    "time": 108.0,
+    "text": "and License information",
+    "confidence": 0.979
+   },
+   {
+    "time": 108.0,
+    "text": "PMC Disclaimer",
+    "confidence": 0.862
+   },
+   {
+    "time": 108.0,
+    "text": "TikTok",
+    "confidence": 0.843
+   },
+   {
+    "time": 108.0,
+    "text": "gabbituft",
+    "confidence": 0.942
+   },
+   {
+    "time": 110.0,
+    "text": "0",
+    "confidence": 0.988
+   },
+   {
+    "time": 110.0,
+    "text": "Q",
+    "confidence": 0.528
+   },
+   {
+    "time": 110.0,
+    "text": "ANTICANCER RESEARCH",
+    "confidence": 1.0
+   },
+   {
+    "time": 110.0,
+    "text": "Research Article",
+    "confidence": 0.973
+   },
+   {
+    "time": 110.0,
+    "text": "Experimenial Studies",
+    "confidence": 0.74
+   },
+   {
+    "time": 110.0,
+    "text": "Effects on DNA Repair in",
+    "confidence": 0.897
+   },
+   {
+    "time": 110.0,
+    "text": "Human Lymphocytes",
+    "confidence": 0.982
+   },
+   {
+    "time": 110.0,
+    "text": "Exposed to the Food Dye",
+    "confidence": 0.844
+   },
+   {
+    "time": 110.0,
+    "text": "Tartrazine Yellow",
+    "confidence": 0.862
+   },
+   {
+    "time": 110.0,
+    "text": "BRUNO MOREIRA SOARES, TAiSSA MAIRA THOMAZ",
+    "confidence": 0.567
+   },
+   {
+    "time": 110.0,
+    "text": "ARAUJO, JORGE AMANDO BATISTA RAMOS; LAINE",
+    "confidence": 0.658
+   },
+   {
+    "time": 110.0,
+    "text": "CELESTINO PINTO,BRUNA MEIRELES KHAYAT ,",
+    "confidence": 0.836
+   },
+   {
+    "time": 110.0,
+    "text": "MARCELO DE OLIVEIRA BAHIA, RAQUEL CARVALHO",
+    "confidence": 0.961
+   },
+   {
+    "time": 110.0,
+    "text": "MONTENEGRO, ROMMEL MARIO RODRIGUEZ",
+    "confidence": 0.722
+   },
+   {
+    "time": 110.0,
+    "text": "BURBANO and ANDRE SALIM KHAYAT",
+    "confidence": 0.966
+   },
+   {
+    "time": 110.0,
+    "text": "Anticancer Research March 2015, 35 (3) 1465-1474;",
+    "confidence": 0.754
+   },
+   {
+    "time": 110.0,
+    "text": "CHILDRENAND",
+    "confidence": 0.853
+   },
+   {
+    "time": 110.0,
+    "text": "Anticle",
+    "confidence": 0.691
+   },
+   {
+    "time": 110.0,
+    "text": "Info & Metrics",
+    "confidence": 0.989
+   },
+   {
+    "time": 110.0,
+    "text": "TikTok",
+    "confidence": 0.957
+   },
+   {
+    "time": 110.0,
+    "text": "gabbituft",
+    "confidence": 0.745
+   },
+   {
+    "time": 112.0,
+    "text": "0 Q",
+    "confidence": 0.947
+   },
+   {
+    "time": 112.0,
+    "text": "ANTICANCER RESEARCH",
+    "confidence": 0.998
+   },
+   {
+    "time": 112.0,
+    "text": "Research Article",
+    "confidence": 1.0
+   },
+   {
+    "time": 112.0,
+    "text": "Experimental Studies",
+    "confidence": 0.965
+   },
+   {
+    "time": 112.0,
+    "text": "Effects on DNA Repair in",
+    "confidence": 0.778
+   },
+   {
+    "time": 112.0,
+    "text": "Human Lymphocytes",
+    "confidence": 0.99
+   },
+   {
+    "time": 112.0,
+    "text": "Exposed to the Food Dye",
+    "confidence": 0.869
+   },
+   {
+    "time": 112.0,
+    "text": "Tartrazine Yellow",
+    "confidence": 0.936
+   },
+   {
+    "time": 112.0,
+    "text": "BRUNO MOREIRA SOARES, TAiSSA MAIRA THOMAZ",
+    "confidence": 0.76
+   },
+   {
+    "time": 112.0,
+    "text": "ARAUJO, JORGE AMANDO BATISTA RAMOS, LAINE",
+    "confidence": 0.861
+   },
+   {
+    "time": 112.0,
+    "text": "CELESTINO PINTO, BRUNA MEIRELES KHAYAT ,",
+    "confidence": 0.55
+   },
+   {
+    "time": 112.0,
+    "text": "MARCELO DE OLIVEIRA BAHIA, RAQUEL CARVALHO",
+    "confidence": 0.56
+   },
+   {
+    "time": 112.0,
+    "text": "MONTENEGRO, ROMMEL MARIO RODRIGUEZ",
+    "confidence": 0.666
+   },
+   {
+    "time": 112.0,
+    "text": "BURBANO and ANDRE SALIM KHAYAT",
+    "confidence": 0.912
+   },
+   {
+    "time": 112.0,
+    "text": "Anticancer Research March 2015,35 (3) 1465-1474;",
+    "confidence": 0.765
+   },
+   {
+    "time": 112.0,
+    "text": "IS LINKED",
+    "confidence": 0.937
+   },
+   {
+    "time": 112.0,
+    "text": "DIREGTLYTO",
+    "confidence": 0.593
+   },
+   {
+    "time": 112.0,
+    "text": "Info & Metrics",
+    "confidence": 0.996
+   },
+   {
+    "time": 112.0,
+    "text": "TikTok",
+    "confidence": 0.731
+   },
+   {
+    "time": 112.0,
+    "text": "gabbituft",
+    "confidence": 0.886
+   },
+   {
+    "time": 114.0,
+    "text": "SYNTHETIC DYES",
+    "confidence": 0.965
+   },
+   {
+    "time": 114.0,
+    "text": "IN THE",
+    "confidence": 0.997
+   },
+   {
+    "time": 114.0,
+    "text": "TikTok",
+    "confidence": 0.952
+   },
+   {
+    "time": 114.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 116.0,
+    "text": "THINGS SUCH",
+    "confidence": 0.561
+   },
+   {
+    "time": 116.0,
+    "text": "As PAPRIKA",
+    "confidence": 0.964
+   },
+   {
+    "time": 116.0,
+    "text": "TikTok",
+    "confidence": 0.927
+   },
+   {
+    "time": 116.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 118.0,
+    "text": "AND TURMERIG",
+    "confidence": 0.965
+   },
+   {
+    "time": 118.0,
+    "text": "FOR YELLOW",
+    "confidence": 0.938
+   },
+   {
+    "time": 118.0,
+    "text": "TikTok",
+    "confidence": 0.954
+   },
+   {
+    "time": 118.0,
+    "text": "gabbituft",
+    "confidence": 0.999
+   },
+   {
+    "time": 120.0,
+    "text": "BLUEBERRIES BETA",
+    "confidence": 0.981
+   },
+   {
+    "time": 120.0,
+    "text": "CAROTENES",
+    "confidence": 1.0
+   },
+   {
+    "time": 120.0,
+    "text": "kTok",
+    "confidence": 0.981
+   },
+   {
+    "time": 120.0,
+    "text": "gabbituft",
+    "confidence": 0.999
+   },
+   {
+    "time": 122.0,
+    "text": "BEST POWDER",
+    "confidence": 0.955
+   },
+   {
+    "time": 122.0,
+    "text": "POMEGRANATEJUICE",
+    "confidence": 0.714
+   },
+   {
+    "time": 124.0,
+    "text": "CRANBERRIES OR",
+    "confidence": 0.99
+   },
+   {
+    "time": 124.0,
+    "text": "STRAWBERRIES",
+    "confidence": 0.974
+   },
+   {
+    "time": 124.0,
+    "text": "HikTok",
+    "confidence": 0.613
+   },
+   {
+    "time": 124.0,
+    "text": "'gabbituft",
+    "confidence": 0.926
+   },
+   {
+    "time": 126.0,
+    "text": "THOSE ARE",
+    "confidence": 0.746
+   },
+   {
+    "time": 126.0,
+    "text": "ALL NATURAL",
+    "confidence": 0.87
+   },
+   {
+    "time": 126.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 126.0,
+    "text": "gabbituft",
+    "confidence": 0.954
+   },
+   {
+    "time": 128.0,
+    "text": "NO.4",
+    "confidence": 0.876
+   },
+   {
+    "time": 128.0,
+    "text": "ISNITRATES",
+    "confidence": 0.781
+   },
+   {
+    "time": 128.0,
+    "text": "TikTok",
+    "confidence": 0.867
+   },
+   {
+    "time": 128.0,
+    "text": "gabbituft",
+    "confidence": 0.999
+   },
+   {
+    "time": 130.0,
+    "text": "SLICEDMEATS",
+    "confidence": 0.963
+   },
+   {
+    "time": 130.0,
+    "text": "gabbituft",
+    "confidence": 0.99
+   },
+   {
+    "time": 132.0,
+    "text": "THOSE SORTS",
+    "confidence": 0.986
+   },
+   {
+    "time": 132.0,
+    "text": "OF THINGS",
+    "confidence": 0.827
+   },
+   {
+    "time": 134.0,
+    "text": "National Library of Medicine",
+    "confidence": 0.963
+   },
+   {
+    "time": 134.0,
+    "text": "NIH",
+    "confidence": 0.998
+   },
+   {
+    "time": 134.0,
+    "text": "Log in",
+    "confidence": 0.783
+   },
+   {
+    "time": 134.0,
+    "text": "Publ Med",
+    "confidence": 0.638
+   },
+   {
+    "time": 134.0,
+    "text": "Advanced",
+    "confidence": 1.0
+   },
+   {
+    "time": 134.0,
+    "text": "Usar Guide",
+    "confidence": 0.878
+   },
+   {
+    "time": 134.0,
+    "text": "Nitrites and nitrates from food",
+    "confidence": 0.828
+   },
+   {
+    "time": 134.0,
+    "text": "additives and natural sources and",
+    "confidence": 0.633
+   },
+   {
+    "time": 134.0,
+    "text": "cancer risk: results from the",
+    "confidence": 0.856
+   },
+   {
+    "time": 134.0,
+    "text": "NutriNet-Sante cohort",
+    "confidence": 0.784
+   },
+   {
+    "time": 134.0,
+    "text": "Chazelas et al. Int J Epidemiol: 2022",
+    "confidence": 0.714
+   },
+   {
+    "time": 134.0,
+    "text": "Eloi",
+    "confidence": 0.991
+   },
+   {
+    "time": 134.0,
+    "text": "Show details",
+    "confidence": 0.65
+   },
+   {
+    "time": 134.0,
+    "text": "Full text links",
+    "confidence": 0.704
+   },
+   {
+    "time": 134.0,
+    "text": "Cite",
+    "confidence": 0.97
+   },
+   {
+    "time": 134.0,
+    "text": "A2022",
+    "confidence": 0.714
+   },
+   {
+    "time": 134.0,
+    "text": "STUDY SHOWED",
+    "confidence": 0.955
+   },
+   {
+    "time": 134.0,
+    "text": "gabbituft",
+    "confidence": 0.885
+   },
+   {
+    "time": 136.0,
+    "text": "National Library of Medicine",
+    "confidence": 0.947
+   },
+   {
+    "time": 136.0,
+    "text": "NIH",
+    "confidence": 0.991
+   },
+   {
+    "time": 136.0,
+    "text": "Log in",
+    "confidence": 0.999
+   },
+   {
+    "time": 136.0,
+    "text": "National Contor for Biotochnology Intormation",
+    "confidence": 0.617
+   },
+   {
+    "time": 136.0,
+    "text": "Publ Med",
+    "confidence": 0.543
+   },
+   {
+    "time": 136.0,
+    "text": "User Guide",
+    "confidence": 0.66
+   },
+   {
+    "time": 136.0,
+    "text": "Advanced",
+    "confidence": 1.0
+   },
+   {
+    "time": 136.0,
+    "text": "Nitrites and nitrates from food",
+    "confidence": 0.882
+   },
+   {
+    "time": 136.0,
+    "text": "additives and natural sources and",
+    "confidence": 0.849
+   },
+   {
+    "time": 136.0,
+    "text": "cancer risk: results from the",
+    "confidence": 0.922
+   },
+   {
+    "time": 136.0,
+    "text": "NutriNet-Sante cohort",
+    "confidence": 0.814
+   },
+   {
+    "time": 136.0,
+    "text": "Eloi Chazelas et al. Int J Epidemiol: 2022",
+    "confidence": 0.566
+   },
+   {
+    "time": 136.0,
+    "text": "Show details",
+    "confidence": 1.0
+   },
+   {
+    "time": 136.0,
+    "text": "Full text links",
+    "confidence": 0.785
+   },
+   {
+    "time": 136.0,
+    "text": "Cite",
+    "confidence": 1.0
+   },
+   {
+    "time": 136.0,
+    "text": "66",
+    "confidence": 0.975
+   },
+   {
+    "time": 136.0,
+    "text": "INCREASED RISK",
+    "confidence": 0.998
+   },
+   {
+    "time": 136.0,
+    "text": "OF CANCER",
+    "confidence": 0.81
+   },
+   {
+    "time": 136.0,
+    "text": "TikTok",
+    "confidence": 0.964
+   },
+   {
+    "time": 136.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 138.0,
+    "text": "WHEN INGESTED",
+    "confidence": 0.84
+   },
+   {
+    "time": 138.0,
+    "text": "ALTERNATIVES FOR",
+    "confidence": 0.843
+   },
+   {
+    "time": 138.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 138.0,
+    "text": "gabbituft",
+    "confidence": 0.998
+   },
+   {
+    "time": 140.0,
+    "text": "TO MEAT",
+    "confidence": 0.582
+   },
+   {
+    "time": 140.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 140.0,
+    "text": "gabbituft",
+    "confidence": 0.89
+   },
+   {
+    "time": 142.0,
+    "text": "SIMPLY BUYING",
+    "confidence": 0.994
+   },
+   {
+    "time": 142.0,
+    "text": "FRESH MEAT",
+    "confidence": 0.687
+   },
+   {
+    "time": 142.0,
+    "text": "gabbituft",
+    "confidence": 0.799
+   },
+   {
+    "time": 144.0,
+    "text": "OR LOOK",
+    "confidence": 0.924
+   },
+   {
+    "time": 144.0,
+    "text": "FOR PACKAGED MEAT",
+    "confidence": 0.988
+   },
+   {
+    "time": 144.0,
+    "text": "gabbituft",
+    "confidence": 0.848
+   },
+   {
+    "time": 146.0,
+    "text": "MEAT THAT SAYS",
+    "confidence": 0.933
+   },
+   {
+    "time": 146.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 146.0,
+    "text": "gabbituft",
+    "confidence": 0.976
+   },
+   {
+    "time": 148.0,
+    "text": "NATURAL",
+    "confidence": 0.963
+   },
+   {
+    "time": 148.0,
+    "text": "EVER",
+    "confidence": 1.0
+   },
+   {
+    "time": 148.0,
+    "text": "RREAST",
+    "confidence": 0.861
+   },
+   {
+    "time": 148.0,
+    "text": "US:",
+    "confidence": 0.907
+   },
+   {
+    "time": 148.0,
+    "text": "PER 2 0z SERVING",
+    "confidence": 0.857
+   },
+   {
+    "time": 148.0,
+    "text": "70",
+    "confidence": 0.999
+   },
+   {
+    "time": 148.0,
+    "text": "0.59",
+    "confidence": 0.574
+   },
+   {
+    "time": 148.0,
+    "text": "PROTEIM",
+    "confidence": 0.612
+   },
+   {
+    "time": 148.0,
+    "text": "NO NITRATES",
+    "confidence": 0.998
+   },
+   {
+    "time": 148.0,
+    "text": "Tktok",
+    "confidence": 0.661
+   },
+   {
+    "time": 150.0,
+    "text": "S",
+    "confidence": 0.846
+   },
+   {
+    "time": 150.0,
+    "text": "NO:",
+    "confidence": 0.735
+   },
+   {
+    "time": 150.0,
+    "text": "15",
+    "confidence": 0.967
+   },
+   {
+    "time": 152.0,
+    "text": "IKNOW",
+    "confidence": 0.865
+   },
+   {
+    "time": 152.0,
+    "text": "IT'S SUPPOSED",
+    "confidence": 0.507
+   },
+   {
+    "time": 152.0,
+    "text": "TikTok",
+    "confidence": 0.605
+   },
+   {
+    "time": 152.0,
+    "text": "gabbituft",
+    "confidence": 0.98
+   },
+   {
+    "time": 154.0,
+    "text": "HOWEVER IT",
+    "confidence": 0.957
+   },
+   {
+    "time": 154.0,
+    "text": "IS SIMPLY",
+    "confidence": 0.536
+   },
+   {
+    "time": 154.0,
+    "text": "TikTok",
+    "confidence": 0.707
+   },
+   {
+    "time": 154.0,
+    "text": "gabbituft",
+    "confidence": 0.999
+   },
+   {
+    "time": 156.0,
+    "text": "MASQUERADINGAS",
+    "confidence": 0.987
+   },
+   {
+    "time": 156.0,
+    "text": "Tik Tok",
+    "confidence": 0.619
+   },
+   {
+    "time": 156.0,
+    "text": "gabbituft",
+    "confidence": 0.999
+   },
+   {
+    "time": 158.0,
+    "text": "5",
+    "confidence": 0.988
+   },
+   {
+    "time": 158.0,
+    "text": "#",
+    "confidence": 0.704
+   },
+   {
+    "time": 158.0,
+    "text": "AGAVE SYRUP",
+    "confidence": 0.926
+   },
+   {
+    "time": 158.0,
+    "text": "TikTok",
+    "confidence": 0.886
+   },
+   {
+    "time": 158.0,
+    "text": "gabbituft",
+    "confidence": 0.988
+   },
+   {
+    "time": 160.0,
+    "text": "BEEN REMOVED",
+    "confidence": 0.696
+   },
+   {
+    "time": 160.0,
+    "text": "Tiktok",
+    "confidence": 0.543
+   },
+   {
+    "time": 162.0,
+    "text": "ASYRUP",
+    "confidence": 0.571
+   },
+   {
+    "time": 162.0,
+    "text": "AND IT'S",
+    "confidence": 0.932
+   },
+   {
+    "time": 164.0,
+    "text": "USUALLY ABOUT",
+    "confidence": 0.999
+   },
+   {
+    "time": 164.0,
+    "text": "57% TO",
+    "confidence": 0.584
+   },
+   {
+    "time": 164.0,
+    "text": "Tiktok",
+    "confidence": 0.65
+   },
+   {
+    "time": 166.0,
+    "text": "90% FRUCTOSB",
+    "confidence": 0.783
+   },
+   {
+    "time": 166.0,
+    "text": "TikTok",
+    "confidence": 0.988
+   },
+   {
+    "time": 166.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 168.0,
+    "text": "HIGH FRUCTOSE",
+    "confidence": 0.975
+   },
+   {
+    "time": 168.0,
+    "text": "TikTok",
+    "confidence": 0.609
+   },
+   {
+    "time": 168.0,
+    "text": "gabbituft",
+    "confidence": 0.921
+   },
+   {
+    "time": 170.0,
+    "text": "AND THAT",
+    "confidence": 0.967
+   },
+   {
+    "time": 170.0,
+    "text": "CRYSTALLINE",
+    "confidence": 0.998
+   },
+   {
+    "time": 172.0,
+    "text": "MENTIONED",
+    "confidence": 1.0
+   },
+   {
+    "time": 172.0,
+    "text": "TikTok",
+    "confidence": 0.601
+   },
+   {
+    "time": 172.0,
+    "text": "gabbituft",
+    "confidence": 0.879
+   },
+   {
+    "time": 174.0,
+    "text": "AGAIN GREAT",
+    "confidence": 0.815
+   },
+   {
+    "time": 174.0,
+    "text": "ALTERNATIVES FOR",
+    "confidence": 0.999
+   },
+   {
+    "time": 174.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 174.0,
+    "text": "gabbituft",
+    "confidence": 0.891
+   },
+   {
+    "time": 176.0,
+    "text": "microingredients",
+    "confidence": 0.818
+   },
+   {
+    "time": 176.0,
+    "text": "organic",
+    "confidence": 1.0
+   },
+   {
+    "time": 176.0,
+    "text": "stevia",
+    "confidence": 0.765
+   },
+   {
+    "time": 176.0,
+    "text": "extract",
+    "confidence": 0.789
+   },
+   {
+    "time": 176.0,
+    "text": "zero calories",
+    "confidence": 1.0
+   },
+   {
+    "time": 176.0,
+    "text": "natural sweetener",
+    "confidence": 0.992
+   },
+   {
+    "time": 176.0,
+    "text": "OR ALLULOSE",
+    "confidence": 0.792
+   },
+   {
+    "time": 176.0,
+    "text": "USDA",
+    "confidence": 0.998
+   },
+   {
+    "time": 176.0,
+    "text": "sugar",
+    "confidence": 1.0
+   },
+   {
+    "time": 176.0,
+    "text": "free",
+    "confidence": 0.893
+   },
+   {
+    "time": 176.0,
+    "text": "8 0z (227 g) Powder",
+    "confidence": 0.763
+   },
+   {
+    "time": 178.0,
+    "text": "CAN WE",
+    "confidence": 0.635
+   },
+   {
+    "time": 178.0,
+    "text": "AVOIDALL",
+    "confidence": 0.52
+   },
+   {
+    "time": 178.0,
+    "text": "Tik Tok",
+    "confidence": 0.961
+   },
+   {
+    "time": 178.0,
+    "text": "gabbituft",
+    "confidence": 0.942
+   },
+   {
+    "time": 180.0,
+    "text": "DO",
+    "confidence": 0.761
+   },
+   {
+    "time": 180.0,
+    "text": "GET SOME",
+    "confidence": 0.984
+   },
+   {
+    "time": 180.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 180.0,
+    "text": "gabbituft",
+    "confidence": 0.902
+   },
+   {
+    "time": 182.0,
+    "text": "MY NUTRITION",
+    "confidence": 0.989
+   },
+   {
+    "time": 182.0,
+    "text": "FROM TIME",
+    "confidence": 0.994
+   },
+   {
+    "time": 182.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 182.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 184.0,
+    "text": "4",
+    "confidence": 0.824
+   },
+   {
+    "time": 184.0,
+    "text": "DECAUSE LIFE",
+    "confidence": 0.554
+   },
+   {
+    "time": 184.0,
+    "text": "IS ABOUT BALANCE",
+    "confidence": 0.982
+   },
+   {
+    "time": 184.0,
+    "text": "TikTok",
+    "confidence": 0.685
+   },
+   {
+    "time": 184.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 186.0,
+    "text": "BECAUSE LIFE",
+    "confidence": 0.792
+   },
+   {
+    "time": 186.0,
+    "text": "IS ABOUT BALANCE",
+    "confidence": 0.859
+   },
+   {
+    "time": 186.0,
+    "text": "TikTok",
+    "confidence": 0.785
+   },
+   {
+    "time": 186.0,
+    "text": "gabbituft",
+    "confidence": 0.996
+   },
+   {
+    "time": 188.0,
+    "text": "YOU HAVE",
+    "confidence": 0.96
+   },
+   {
+    "time": 188.0,
+    "text": "TikTok",
+    "confidence": 0.817
+   },
+   {
+    "time": 188.0,
+    "text": "gabbituft",
+    "confidence": 0.894
+   },
+   {
+    "time": 190.0,
+    "text": "OWN PERSONAL",
+    "confidence": 0.996
+   },
+   {
+    "time": 190.0,
+    "text": "MEALTH GOALS",
+    "confidence": 0.605
+   },
+   {
+    "time": 190.0,
+    "text": "Tik Tok",
+    "confidence": 0.704
+   },
+   {
+    "time": 190.0,
+    "text": "gabbituft",
+    "confidence": 0.986
+   },
+   {
+    "time": 192.0,
+    "text": "AND IF",
+    "confidence": 0.991
+   },
+   {
+    "time": 192.0,
+    "text": "YOU WANT",
+    "confidence": 0.9
+   },
+   {
+    "time": 192.0,
+    "text": "Tiklok",
+    "confidence": 0.688
+   },
+   {
+    "time": 192.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 194.0,
+    "text": "IDO",
+    "confidence": 0.996
+   },
+   {
+    "time": 194.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 194.0,
+    "text": "gabbituft",
+    "confidence": 0.999
+   },
+   {
+    "time": 196.0,
+    "text": "Food",
+    "confidence": 0.994
+   },
+   {
+    "time": 196.0,
+    "text": "5",
+    "confidence": 1.0
+   },
+   {
+    "time": 196.0,
+    "text": "Toavoid & HEALTHY ALTERNATIVES",
+    "confidence": 0.652
+   },
+   {
+    "time": 196.0,
+    "text": "aon",
+    "confidence": 0.549
+   },
+   {
+    "time": 196.0,
+    "text": "pacrcgod",
+    "confidence": 0.675
+   },
+   {
+    "time": 196.0,
+    "text": "THAT LINK",
+    "confidence": 0.982
+   },
+   {
+    "time": 196.0,
+    "text": "LSN: CPT,",
+    "confidence": 0.818
+   },
+   {
+    "time": 196.0,
+    "text": "IS IN",
+    "confidence": 0.997
+   },
+   {
+    "time": 196.0,
+    "text": "Researchher",
+    "confidence": 0.96
+   },
+   {
+    "time": 196.0,
+    "text": "Nutriioncoaching",
+    "confidence": 0.801
+   },
+   {
+    "time": 196.0,
+    "text": "SUCCESS",
+    "confidence": 0.728
+   },
+   {
+    "time": 196.0,
+    "text": "gabbituft",
+    "confidence": 0.974
+   },
+   {
+    "time": 198.0,
+    "text": "IT\"S TOTALLY",
+    "confidence": 0.948
+   },
+   {
+    "time": 198.0,
+    "text": "FREE YOU",
+    "confidence": 0.923
+   },
+   {
+    "time": 198.0,
+    "text": "TikTok",
+    "confidence": 0.692
+   },
+   {
+    "time": 198.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 200.0,
+    "text": "OUT A",
+    "confidence": 0.846
+   },
+   {
+    "time": 200.0,
+    "text": "CORM OR",
+    "confidence": 0.53
+   },
+   {
+    "time": 200.0,
+    "text": "ANYTHING",
+    "confidence": 0.691
+   },
+   {
+    "time": 200.0,
+    "text": "TikTok",
+    "confidence": 0.97
+   },
+   {
+    "time": 200.0,
+    "text": "gabbituft",
+    "confidence": 0.999
+   },
+   {
+    "time": 202.0,
+    "text": "TO THE",
+    "confidence": 0.708
+   },
+   {
+    "time": 202.0,
+    "text": "PDF",
+    "confidence": 0.999
+   },
+   {
+    "time": 202.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 202.0,
+    "text": "gabbituft",
+    "confidence": 0.999
+   },
+   {
+    "time": 204.0,
+    "text": "HELP WITH",
+    "confidence": 0.776
+   },
+   {
+    "time": 204.0,
+    "text": "YOUR FITNESS",
+    "confidence": 0.595
+   },
+   {
+    "time": 204.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 204.0,
+    "text": "gabbituft",
+    "confidence": 0.999
+   },
+   {
+    "time": 206.0,
+    "text": "AND SO",
+    "confidence": 0.887
+   },
+   {
+    "time": 206.0,
+    "text": "IS MY TEAM",
+    "confidence": 0.794
+   },
+   {
+    "time": 206.0,
+    "text": "TikTok",
+    "confidence": 0.979
+   },
+   {
+    "time": 206.0,
+    "text": "gabbituft",
+    "confidence": 0.665
+   },
+   {
+    "time": 208.0,
+    "text": "MY PROFILE",
+    "confidence": 0.946
+   },
+   {
+    "time": 208.0,
+    "text": "FORMY",
+    "confidence": 1.0
+   },
+   {
+    "time": 208.0,
+    "text": "TikTok",
+    "confidence": 0.9
+   },
+   {
+    "time": 208.0,
+    "text": "'gabbituft",
+    "confidence": 0.742
+   },
+   {
+    "time": 210.0,
+    "text": "ONLINE 1",
+    "confidence": 0.962
+   },
+   {
+    "time": 210.0,
+    "text": "ON1FITNESSAND",
+    "confidence": 0.812
+   },
+   {
+    "time": 210.0,
+    "text": "TikTok",
+    "confidence": 0.965
+   },
+   {
+    "time": 210.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 212.0,
+    "text": "COACH GABBI.COM",
+    "confidence": 0.562
+   },
+   {
+    "time": 212.0,
+    "text": "Tik Tok",
+    "confidence": 0.712
+   },
+   {
+    "time": 212.0,
+    "text": "gabbituft",
+    "confidence": 0.996
+   },
+   {
+    "time": 214.0,
+    "text": "CHEERS TO",
+    "confidence": 0.816
+   },
+   {
+    "time": 214.0,
+    "text": "HAPPY",
+    "confidence": 0.883
+   },
+   {
+    "time": 214.0,
+    "text": "A",
+    "confidence": 0.97
+   },
+   {
+    "time": 214.0,
+    "text": "Tik Tok",
+    "confidence": 0.639
+   },
+   {
+    "time": 214.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 216.0,
+    "text": "HEALTHIER MORE",
+    "confidence": 0.617
+   },
+   {
+    "time": 216.0,
+    "text": "ENERGETIC YOU",
+    "confidence": 0.707
+   },
+   {
+    "time": 216.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 216.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 218.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 218.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   },
+   {
+    "time": 220.0,
+    "text": "J",
+    "confidence": 0.874
+   },
+   {
+    "time": 220.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 220.0,
+    "text": "gabbituft",
+    "confidence": 1.0
+   }
+  ],
+  "captions": [
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.994,
+    "id": "o1"
+   },
+   {
+    "text": "gabbituft",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o2"
+   },
+   {
+    "text": "5",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o3"
+   },
+   {
+    "text": "FOOD",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.999,
+    "id": "o4"
+   },
+   {
+    "text": "ADDITIVES",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o5"
+   },
+   {
+    "text": "AVOID",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.997,
+    "id": "o6"
+   },
+   {
+    "text": "AND THEIR",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.956,
+    "id": "o7"
+   },
+   {
+    "text": "HEALTHY",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.9,
+    "id": "o8"
+   },
+   {
+    "text": "ALTERNATIVES",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.998,
+    "id": "o9"
+   },
+   {
+    "text": "TikTok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.817,
+    "id": "o10"
+   },
+   {
+    "text": "AVOID AND",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.995,
+    "id": "o11"
+   },
+   {
+    "text": "ThEIR HEALTHY",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.527,
+    "id": "o12"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.969,
+    "id": "o13"
+   },
+   {
+    "text": "EVERYTHING I'M",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.648,
+    "id": "o14"
+   },
+   {
+    "text": "ABOUT TO",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.983,
+    "id": "o15"
+   },
+   {
+    "text": "PUBLISHED",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.999,
+    "id": "o16"
+   },
+   {
+    "text": "MEDICAL",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.999,
+    "id": "o17"
+   },
+   {
+    "text": "DATA",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o18"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.612,
+    "id": "o19"
+   },
+   {
+    "text": "gabbituft",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o20"
+   },
+   {
+    "text": "NOT JUST",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.861,
+    "id": "o21"
+   },
+   {
+    "text": "ONE BUT",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.998,
+    "id": "o22"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.776,
+    "id": "o23"
+   },
+   {
+    "text": "gabbituft",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.972,
+    "id": "o24"
+   },
+   {
+    "text": "NO.1",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.715,
+    "id": "o25"
+   },
+   {
+    "text": "IS FRUCTOSE",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.825,
+    "id": "o26"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.766,
+    "id": "o27"
+   },
+   {
+    "text": "gabbituft",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o28"
+   },
+   {
+    "text": "BECAUSE OF",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.827,
+    "id": "o29"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.818,
+    "id": "o30"
+   },
+   {
+    "text": "gabbituft",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.998,
+    "id": "o31"
+   },
+   {
+    "text": "THAT'S ASSOCIATED",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.823,
+    "id": "o32"
+   },
+   {
+    "text": "WITH IT",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.637,
+    "id": "o33"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.999,
+    "id": "o34"
+   },
+   {
+    "text": "gabbituft",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.999,
+    "id": "o35"
+   },
+   {
+    "text": "COMMERCIALLY",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o36"
+   },
+   {
+    "text": "PREPARED",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.999,
+    "id": "o37"
+   },
+   {
+    "text": "CRYSTALLINE",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.992,
+    "id": "o38"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.771,
+    "id": "o39"
+   },
+   {
+    "text": "gabbituft",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.999,
+    "id": "o40"
+   },
+   {
+    "text": "OR HIGH",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.922,
+    "id": "o41"
+   },
+   {
+    "text": "FRUCTOSE CORN",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.592,
+    "id": "o42"
+   },
+   {
+    "text": "Tiktok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.539,
+    "id": "o43"
+   },
+   {
+    "text": "gabbituft",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.999,
+    "id": "o44"
+   },
+   {
+    "text": "THE BODY",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.991,
+    "id": "o45"
+   },
+   {
+    "text": "ABSORBS IT",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.537,
+    "id": "o46"
+   },
+   {
+    "text": "gabbituft",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.727,
+    "id": "o47"
+   },
+   {
+    "text": "IT DRIVES",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.809,
+    "id": "o48"
+   },
+   {
+    "text": "DOPAMINE",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.999,
+    "id": "o49"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.773,
+    "id": "o50"
+   },
+   {
+    "text": "gabbituft",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o51"
+   },
+   {
+    "text": "HIGHLY",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.995,
+    "id": "o52"
+   },
+   {
+    "text": "gabbituft",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.758,
+    "id": "o53"
+   },
+   {
+    "text": "IT DOES",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.986,
+    "id": "o54"
+   },
+   {
+    "text": "NOT SATIATB",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.964,
+    "id": "o55"
+   },
+   {
+    "text": "Tiktok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.624,
+    "id": "o56"
+   },
+   {
+    "text": "gabbituft",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.997,
+    "id": "o57"
+   },
+   {
+    "text": "THAT NORMAL",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.985,
+    "id": "o58"
+   },
+   {
+    "text": "TABLE SUGAr",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.615,
+    "id": "o59"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o60"
+   },
+   {
+    "text": "REGULAR SUGAR",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.892,
+    "id": "o61"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.84,
+    "id": "o62"
+   },
+   {
+    "text": "gabbituft",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o63"
+   },
+   {
+    "text": "PRODUCES MORE",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.944,
+    "id": "o64"
+   },
+   {
+    "text": "BODY FAT",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.987,
+    "id": "o65"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.64,
+    "id": "o66"
+   },
+   {
+    "text": "gabbituft",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.999,
+    "id": "o67"
+   },
+   {
+    "text": "scientific reports",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.996,
+    "id": "o68"
+   },
+   {
+    "text": "Log",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o69"
+   },
+   {
+    "text": "Search",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o70"
+   },
+   {
+    "text": "Publish",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o71"
+   },
+   {
+    "text": "Content",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.74,
+    "id": "o72"
+   },
+   {
+    "text": "About",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o73"
+   },
+   {
+    "text": "articles",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.946,
+    "id": "o74"
+   },
+   {
+    "text": "article",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o75"
+   },
+   {
+    "text": "Download PDF",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.776,
+    "id": "o76"
+   },
+   {
+    "text": "Qpen access",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.865,
+    "id": "o77"
+   },
+   {
+    "text": "Published: 20 April 2015",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.755,
+    "id": "o78"
+   },
+   {
+    "text": "Article",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.795,
+    "id": "o79"
+   },
+   {
+    "text": "Fructose decreases physical",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.971,
+    "id": "o80"
+   },
+   {
+    "text": "activity and increases body fat",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.835,
+    "id": "o81"
+   },
+   {
+    "text": "without affecting hippocampal",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.858,
+    "id": "o82"
+   },
+   {
+    "text": "neurogenesis and learning",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.982,
+    "id": "o83"
+   },
+   {
+    "text": "relative to an isocaloric glucose",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.959,
+    "id": "o84"
+   },
+   {
+    "text": "diet",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o85"
+   },
+   {
+    "text": "AND PHYSICAL",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.992,
+    "id": "o86"
+   },
+   {
+    "text": "Cata",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.973,
+    "id": "o87"
+   },
+   {
+    "text": "INACTIVITY",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.999,
+    "id": "o88"
+   },
+   {
+    "text": "Rhodes",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o89"
+   },
+   {
+    "text": "Scientific Reports",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.99,
+    "id": "o90"
+   },
+   {
+    "text": "5, Article number: 9589",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.994,
+    "id": "o91"
+   },
+   {
+    "text": "(2015)",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.97,
+    "id": "o92"
+   },
+   {
+    "text": "Cite thisarticle",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.795,
+    "id": "o93"
+   },
+   {
+    "text": "19k",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.997,
+    "id": "o94"
+   },
+   {
+    "text": "31 Citations",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.966,
+    "id": "o95"
+   },
+   {
+    "text": "Accesses",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o96"
+   },
+   {
+    "text": "gabbituft",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.973,
+    "id": "o97"
+   },
+   {
+    "text": "MAKES YOU",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.846,
+    "id": "o98"
+   },
+   {
+    "text": "MORE SEDENTARY",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.996,
+    "id": "o99"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.974,
+    "id": "o100"
+   },
+   {
+    "text": "gabbituft",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o101"
+   },
+   {
+    "text": "ENZYMES CRITICAL",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.927,
+    "id": "o102"
+   },
+   {
+    "text": "FOR MITOCHONDRIAL",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.877,
+    "id": "o103"
+   },
+   {
+    "text": "ikuok",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.554,
+    "id": "o104"
+   },
+   {
+    "text": "gabbituft",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.999,
+    "id": "o105"
+   },
+   {
+    "text": "ENZYMES CRITICAL",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.999,
+    "id": "o106"
+   },
+   {
+    "text": "FOR",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.999,
+    "id": "o107"
+   },
+   {
+    "text": "MITOCHONDRIAL",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.995,
+    "id": "o108"
+   },
+   {
+    "text": "AMPA KINASE",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.999,
+    "id": "o109"
+   },
+   {
+    "text": "AcADL",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.658,
+    "id": "o110"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o111"
+   },
+   {
+    "text": "gabbituft",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.984,
+    "id": "o112"
+   },
+   {
+    "text": "OT'SALSO",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.549,
+    "id": "o113"
+   },
+   {
+    "text": "BEEN SHOWNTO",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.99,
+    "id": "o114"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.774,
+    "id": "o115"
+   },
+   {
+    "text": "gabbituft",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.935,
+    "id": "o116"
+   },
+   {
+    "text": "PMC _PubMed Central\"",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.586,
+    "id": "o117"
+   },
+   {
+    "text": "Author Manuscript",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.819,
+    "id": "o118"
+   },
+   {
+    "text": "publication by",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.891,
+    "id": "o119"
+   },
+   {
+    "text": "Dig Dis_Sci_ Author manuscript; available in PMC",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.63,
+    "id": "o120"
+   },
+   {
+    "text": "Dig",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.995,
+    "id": "o121"
+   },
+   {
+    "text": "2017 May 1. Published in final edited form as:",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.937,
+    "id": "o122"
+   },
+   {
+    "text": "Dis Sci_2016 May; 61(5). 1282-1293_ Published",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.63,
+    "id": "o123"
+   },
+   {
+    "text": "online 2016 Feb 8. doi: 10.1007/s10620-016_",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.679,
+    "id": "o124"
+   },
+   {
+    "text": "4054-0",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o125"
+   },
+   {
+    "text": "PMCID: PMC4838515",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o126"
+   },
+   {
+    "text": "NIHMSID: NIHMS758570",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.999,
+    "id": "o127"
+   },
+   {
+    "text": "PMID: 26856717",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.59,
+    "id": "o128"
+   },
+   {
+    "text": "NONALCOHOLIC",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.899,
+    "id": "o129"
+   },
+   {
+    "text": "FATTY LiveR DISEASE",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.689,
+    "id": "o130"
+   },
+   {
+    "text": "C_Ronald Kahn'",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.796,
+    "id": "o131"
+   },
+   {
+    "text": "TikTok",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.793,
+    "id": "o132"
+   },
+   {
+    "text": "gabbituft",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o133"
+   },
+   {
+    "text": "AND YES",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o134"
+   },
+   {
+    "text": "FINALLY",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.987,
+    "id": "o135"
+   },
+   {
+    "text": "TikTok",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.975,
+    "id": "o136"
+   },
+   {
+    "text": "gabbituft",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.997,
+    "id": "o137"
+   },
+   {
+    "text": "LEAKY GUT",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.615,
+    "id": "o138"
+   },
+   {
+    "text": "TikTok",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.955,
+    "id": "o139"
+   },
+   {
+    "text": "gabbituft",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.992,
+    "id": "o140"
+   },
+   {
+    "text": "WITHOUT FIBER",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.952,
+    "id": "o141"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.818,
+    "id": "o142"
+   },
+   {
+    "text": "gabbituft",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o143"
+   },
+   {
+    "text": "JUNCTIONS IN",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.982,
+    "id": "o144"
+   },
+   {
+    "text": "ThE EPITHELIAL",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.857,
+    "id": "o145"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.602,
+    "id": "o146"
+   },
+   {
+    "text": "gabbituft",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.999,
+    "id": "o147"
+   },
+   {
+    "text": "Gastrointestinal Synthetic Epithelial Linings",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.809,
+    "id": "o148"
+   },
+   {
+    "text": "Giancarlo Traverso",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.993,
+    "id": "o149"
+   },
+   {
+    "text": "THOSBARE",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.724,
+    "id": "o150"
+   },
+   {
+    "text": "ThE CELLS",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.815,
+    "id": "o151"
+   },
+   {
+    "text": "Tikto",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.602,
+    "id": "o152"
+   },
+   {
+    "text": "gabbituft",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.926,
+    "id": "o153"
+   },
+   {
+    "text": "Gastrointestinal Synthetic Epithelial Linings",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.887,
+    "id": "o154"
+   },
+   {
+    "text": "Giancarlo Traverso",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.947,
+    "id": "o155"
+   },
+   {
+    "text": "WITHIN YOUR",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.999,
+    "id": "o156"
+   },
+   {
+    "text": "INTESTINAL WALLS",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.752,
+    "id": "o157"
+   },
+   {
+    "text": "kTok",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.819,
+    "id": "o158"
+   },
+   {
+    "text": "gabbituft",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.999,
+    "id": "o159"
+   },
+   {
+    "text": "AND THERE",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.687,
+    "id": "o160"
+   },
+   {
+    "text": "IS SOME",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.868,
+    "id": "o161"
+   },
+   {
+    "text": "Tiktok",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.65,
+    "id": "o162"
+   },
+   {
+    "text": "WHERE THE",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.948,
+    "id": "o163"
+   },
+   {
+    "text": "STUFF THAT'S",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.514,
+    "id": "o164"
+   },
+   {
+    "text": "TikTok",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.976,
+    "id": "o165"
+   },
+   {
+    "text": "gabbituft",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.998,
+    "id": "o166"
+   },
+   {
+    "text": "PERMEATES",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.572,
+    "id": "o167"
+   },
+   {
+    "text": "TikTok",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 1.0,
+    "id": "o168"
+   },
+   {
+    "text": "gabbituft",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.988,
+    "id": "o169"
+   },
+   {
+    "text": "ALL OTHER",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.988,
+    "id": "o170"
+   },
+   {
+    "text": "SORTS OF",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.979,
+    "id": "o171"
+   },
+   {
+    "text": "TikTok",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 1.0,
+    "id": "o172"
+   },
+   {
+    "text": "gabbituft",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.731,
+    "id": "o173"
+   },
+   {
+    "text": "NO.3",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.565,
+    "id": "o174"
+   },
+   {
+    "text": "ON THE",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.874,
+    "id": "o175"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.587,
+    "id": "o176"
+   },
+   {
+    "text": "gabbituft",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.998,
+    "id": "o177"
+   },
+   {
+    "text": "Cobn",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.592,
+    "id": "o178"
+   },
+   {
+    "text": "TALKED ABOUT",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.994,
+    "id": "o179"
+   },
+   {
+    "text": "TikTok",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.958,
+    "id": "o180"
+   },
+   {
+    "text": "gabbltuft",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.781,
+    "id": "o181"
+   },
+   {
+    "text": "NOW YOU",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.841,
+    "id": "o182"
+   },
+   {
+    "text": "PUT IT INTO",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.575,
+    "id": "o183"
+   },
+   {
+    "text": "OF THE",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.597,
+    "id": "o184"
+   },
+   {
+    "text": "SAME THINGS",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.976,
+    "id": "o185"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.643,
+    "id": "o186"
+   },
+   {
+    "text": "gabbituft",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.994,
+    "id": "o187"
+   },
+   {
+    "text": "BUT EVEN",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.64,
+    "id": "o188"
+   },
+   {
+    "text": "MOREIT",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.988,
+    "id": "o189"
+   },
+   {
+    "text": "TikTok",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 1.0,
+    "id": "o190"
+   },
+   {
+    "text": "gabbituft",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.997,
+    "id": "o191"
+   },
+   {
+    "text": "PMC PubMed Central\"",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.909,
+    "id": "o192"
+   },
+   {
+    "text": "numan neann conanions",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.539,
+    "id": "o193"
+   },
+   {
+    "text": "(12.13). Fructose is primarily metabolized by",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.898,
+    "id": "o194"
+   },
+   {
+    "text": "requires enzymatie pathways",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.887,
+    "id": "o195"
+   },
+   {
+    "text": "the liver and",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.998,
+    "id": "o196"
+   },
+   {
+    "text": "distinct from those involved in glycolysis",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.76,
+    "id": "o197"
+   },
+   {
+    "text": "(14). As a result; tumor cells utilizing frue-",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.538,
+    "id": "o198"
+   },
+   {
+    "text": "tose rather than glucose for energy assume",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.908,
+    "id": "o199"
+   },
+   {
+    "text": "an altered metabolic phenotype (L5). In vivo",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.715,
+    "id": "o200"
+   },
+   {
+    "text": "studies have demonstrated that oral adminis-",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.909,
+    "id": "o201"
+   },
+   {
+    "text": "tration of high-fructose corn syrup t0 mice",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.676,
+    "id": "o202"
+   },
+   {
+    "text": "increases the development of intestinal tU -",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.577,
+    "id": "o203"
+   },
+   {
+    "text": "independent of obesity (L6). But how",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.548,
+    "id": "o204"
+   },
+   {
+    "text": "mors",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.996,
+    "id": "o205"
+   },
+   {
+    "text": "dietary fructose impaets human cancer pro-",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.838,
+    "id": "o206"
+   },
+   {
+    "text": "gression and the response t0 immunotherapy",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.792,
+    "id": "o207"
+   },
+   {
+    "text": "remains unresolved.",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.808,
+    "id": "o208"
+   },
+   {
+    "text": "CONTRIBUTESTO",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.999,
+    "id": "o209"
+   },
+   {
+    "text": "We",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 1.0,
+    "id": "o210"
+   },
+   {
+    "text": "I -",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.605,
+    "id": "o211"
+   },
+   {
+    "text": "CANCER",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.959,
+    "id": "o212"
+   },
+   {
+    "text": "duced obesiu",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.595,
+    "id": "o213"
+   },
+   {
+    "text": "er im-",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.98,
+    "id": "o214"
+   },
+   {
+    "text": "munotherapy outcomes:",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.603,
+    "id": "o215"
+   },
+   {
+    "text": "explored",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.998,
+    "id": "o216"
+   },
+   {
+    "text": "using",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.728,
+    "id": "o217"
+   },
+   {
+    "text": "this in the B[6 melanoma model",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.704,
+    "id": "o218"
+   },
+   {
+    "text": "B6",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.979,
+    "id": "o219"
+   },
+   {
+    "text": "mice On a western diet high in saturated fats",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.689,
+    "id": "o220"
+   },
+   {
+    "text": "gabbituft",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.656,
+    "id": "o221"
+   },
+   {
+    "text": "National Library of Medicine",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.777,
+    "id": "o222"
+   },
+   {
+    "text": "Log",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 1.0,
+    "id": "o223"
+   },
+   {
+    "text": "National Center tor Biotechnology Information",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.758,
+    "id": "o224"
+   },
+   {
+    "text": "PublMed",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.978,
+    "id": "o225"
+   },
+   {
+    "text": "Advanced",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 1.0,
+    "id": "o226"
+   },
+   {
+    "text": "User Guide",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.934,
+    "id": "o227"
+   },
+   {
+    "text": "The role of fructose in",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.829,
+    "id": "o228"
+   },
+   {
+    "text": "metabolism and cancer",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.733,
+    "id": "o229"
+   },
+   {
+    "text": "Berenice Charrez et al. Horm Mol Biol Clin",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.778,
+    "id": "o230"
+   },
+   {
+    "text": "May.",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.945,
+    "id": "o231"
+   },
+   {
+    "text": "Investig: 2015",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.798,
+    "id": "o232"
+   },
+   {
+    "text": "Show details",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.725,
+    "id": "o233"
+   },
+   {
+    "text": "Full text links",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.98,
+    "id": "o234"
+   },
+   {
+    "text": "66",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.724,
+    "id": "o235"
+   },
+   {
+    "text": "Cite",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 1.0,
+    "id": "o236"
+   },
+   {
+    "text": "METABOLIC",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 1.0,
+    "id": "o237"
+   },
+   {
+    "text": "DISORDERSAND",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.771,
+    "id": "o238"
+   },
+   {
+    "text": "Fructose consumption has dramatically",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.91,
+    "id": "o239"
+   },
+   {
+    "text": "increased in the last 30 years. The principal",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.65,
+    "id": "o240"
+   },
+   {
+    "text": "form has been in the form of high-fructose corn",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.839,
+    "id": "o241"
+   },
+   {
+    "text": "foundin",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.882,
+    "id": "o242"
+   },
+   {
+    "text": "gabbituft",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.736,
+    "id": "o243"
+   },
+   {
+    "text": "REGULATOn",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.561,
+    "id": "o244"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.931,
+    "id": "o245"
+   },
+   {
+    "text": "gabbituft",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.99,
+    "id": "o246"
+   },
+   {
+    "text": "EVEN WITHOUT",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.998,
+    "id": "o247"
+   },
+   {
+    "text": "OBESITY BEING",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.705,
+    "id": "o248"
+   },
+   {
+    "text": "TikTok",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.926,
+    "id": "o249"
+   },
+   {
+    "text": "gabbituft",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 1.0,
+    "id": "o250"
+   },
+   {
+    "text": "PMC PubMed Central\"",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.777,
+    "id": "o251"
+   },
+   {
+    "text": "eases.26",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.905,
+    "id": "o252"
+   },
+   {
+    "text": "A similar association has been shown in (WO",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.717,
+    "id": "o253"
+   },
+   {
+    "text": "ecologieal analyses (or the prevalenee",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.659,
+    "id": "o254"
+   },
+   {
+    "text": "of type 2 diabetes. One study of 43 countries",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.695,
+    "id": "o255"
+   },
+   {
+    "text": "and the Other of [75 countries showed a sig-",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.705,
+    "id": "o256"
+   },
+   {
+    "text": "availability of",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.792,
+    "id": "o257"
+   },
+   {
+    "text": "nilicant association with the",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.763,
+    "id": "o258"
+   },
+   {
+    "text": "prevalence of diabetes was 20 % higher in",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.724,
+    "id": "o259"
+   },
+   {
+    "text": "countries that use HFCS eompared with",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.743,
+    "id": "o260"
+   },
+   {
+    "text": "countries that do not",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.899,
+    "id": "o261"
+   },
+   {
+    "text": "and increased by",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.81,
+    "id": "o262"
+   },
+   {
+    "text": "% for every [50 kcalperson/day increase in",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.571,
+    "id": "o263"
+   },
+   {
+    "text": "total sugar availability  Although these",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.609,
+    "id": "o264"
+   },
+   {
+    "text": "studies did attempt t0 control for some poten -",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.759,
+    "id": "o265"
+   },
+   {
+    "text": "CONTRIBUTETO",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.828,
+    "id": "o266"
+   },
+   {
+    "text": "tial &",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.598,
+    "id": "o267"
+   },
+   {
+    "text": "nporant",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.509,
+    "id": "o268"
+   },
+   {
+    "text": "confounde",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.996,
+    "id": "o269"
+   },
+   {
+    "text": "esti-",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 1.0,
+    "id": "o270"
+   },
+   {
+    "text": "pooling of het-",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.98,
+    "id": "o271"
+   },
+   {
+    "text": "males were also based on the",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.719,
+    "id": "o272"
+   },
+   {
+    "text": "erogeneous measurements ol exposure (both",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.794,
+    "id": "o273"
+   },
+   {
+    "text": "for the availability of HFCS or sugars and the",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.917,
+    "id": "o274"
+   },
+   {
+    "text": "TikTok",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.999,
+    "id": "o275"
+   },
+   {
+    "text": "gabbituft",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.999,
+    "id": "o276"
+   },
+   {
+    "text": "Harvard Health",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.708,
+    "id": "o277"
+   },
+   {
+    "text": "Publishing",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.564,
+    "id": "o278"
+   },
+   {
+    "text": "HARVARD MEDICAL SCHOOL",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.999,
+    "id": "o279"
+   },
+   {
+    "text": "HARVARD HEALTH BLOG",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.849,
+    "id": "o280"
+   },
+   {
+    "text": "Eating too much added",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.856,
+    "id": "o281"
+   },
+   {
+    "text": "sugar increases the risk",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 1.0,
+    "id": "o282"
+   },
+   {
+    "text": "of dying with heart",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.848,
+    "id": "o283"
+   },
+   {
+    "text": "disease",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 1.0,
+    "id": "o284"
+   },
+   {
+    "text": "HEART DISEASE",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.997,
+    "id": "o285"
+   },
+   {
+    "text": "ikTok",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.935,
+    "id": "o286"
+   },
+   {
+    "text": "abbituft",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.996,
+    "id": "o287"
+   },
+   {
+    "text": "February 6,2014",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 1.0,
+    "id": "o288"
+   },
+   {
+    "text": "TikTok",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.755,
+    "id": "o289"
+   },
+   {
+    "text": "gabbituft",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 1.0,
+    "id": "o290"
+   },
+   {
+    "text": "microingredients",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.942,
+    "id": "o291"
+   },
+   {
+    "text": "organic",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 1.0,
+    "id": "o292"
+   },
+   {
+    "text": "stevia",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.997,
+    "id": "o293"
+   },
+   {
+    "text": "extract",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.886,
+    "id": "o294"
+   },
+   {
+    "text": "zero calories",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.816,
+    "id": "o295"
+   },
+   {
+    "text": "natural sweetener",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.96,
+    "id": "o296"
+   },
+   {
+    "text": "STEVIA OR",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.977,
+    "id": "o297"
+   },
+   {
+    "text": "ALLULOSE NO.",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.8,
+    "id": "o298"
+   },
+   {
+    "text": "Tio",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.618,
+    "id": "o299"
+   },
+   {
+    "text": "GMO",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.962,
+    "id": "o300"
+   },
+   {
+    "text": "sugar",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 1.0,
+    "id": "o301"
+   },
+   {
+    "text": "free",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.994,
+    "id": "o302"
+   },
+   {
+    "text": "8 0z (227 g) Powder",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.902,
+    "id": "o303"
+   },
+   {
+    "text": "3IS",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.861,
+    "id": "o304"
+   },
+   {
+    "text": "SYNTHETIC FOOD DYES",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.988,
+    "id": "o305"
+   },
+   {
+    "text": "TikTok",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.657,
+    "id": "o306"
+   },
+   {
+    "text": "gabbituft",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 1.0,
+    "id": "o307"
+   },
+   {
+    "text": "THESE ARE",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.991,
+    "id": "o308"
+   },
+   {
+    "text": "RED40",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.998,
+    "id": "o309"
+   },
+   {
+    "text": "NO. 6",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.611,
+    "id": "o310"
+   },
+   {
+    "text": "TikTok",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.899,
+    "id": "o311"
+   },
+   {
+    "text": "gabbituft",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 1.0,
+    "id": "o312"
+   },
+   {
+    "text": "PMC PubMed Central\"",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.677,
+    "id": "o313"
+   },
+   {
+    "text": "tordcobgy",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.68,
+    "id": "o314"
+   },
+   {
+    "text": "Toxicology Reports",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.996,
+    "id": "o315"
+   },
+   {
+    "text": "Toxicol",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.537,
+    "id": "o316"
+   },
+   {
+    "text": "Published",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.81,
+    "id": "o317"
+   },
+   {
+    "text": "Sep",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 1.0,
+    "id": "o318"
+   },
+   {
+    "text": "online 2023",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.977,
+    "id": "o319"
+   },
+   {
+    "text": "doi: 10.1016/j.toxrep 2023.08.006",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.787,
+    "id": "o320"
+   },
+   {
+    "text": "PMID: 37719200",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.936,
+    "id": "o321"
+   },
+   {
+    "text": "PMCID: PMC10502305",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.994,
+    "id": "o322"
+   },
+   {
+    "text": "The synthetic food dye, Red 40.",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.865,
+    "id": "o323"
+   },
+   {
+    "text": "causes DNA damage, causes colonic",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.84,
+    "id": "o324"
+   },
+   {
+    "text": "inflammation, and impacts the",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.803,
+    "id": "o325"
+   },
+   {
+    "text": "microbiome in mice",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.914,
+    "id": "o326"
+   },
+   {
+    "text": "QiZhang;",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.983,
+    "id": "o327"
+   },
+   {
+    "text": "Anastasiya A_Chumanevich; a",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.563,
+    "id": "o328"
+   },
+   {
+    "text": "Ly_Nguyen;",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.715,
+    "id": "o329"
+   },
+   {
+    "text": "THATRED hazan;",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.878,
+    "id": "o330"
+   },
+   {
+    "text": "Nora Sartawi;",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.815,
+    "id": "o331"
+   },
+   {
+    "text": "Quinn Harri",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.983,
+    "id": "o332"
+   },
+   {
+    "text": "Joulia Cha",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.961,
+    "id": "o333"
+   },
+   {
+    "text": "Carolyn E_Banister;",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.746,
+    "id": "o334"
+   },
+   {
+    "text": "Michael Winth;",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.622,
+    "id": "o335"
+   },
+   {
+    "text": "TikTok",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.895,
+    "id": "o336"
+   },
+   {
+    "text": "gabbituft",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.983,
+    "id": "o337"
+   },
+   {
+    "text": "PMC PubMed Central\"",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.941,
+    "id": "o338"
+   },
+   {
+    "text": "ELSEVIER",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.827,
+    "id": "o339"
+   },
+   {
+    "text": "torepolgy",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.627,
+    "id": "o340"
+   },
+   {
+    "text": "Toxicology Reports",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 1.0,
+    "id": "o341"
+   },
+   {
+    "text": "Toxicol Rep_ 2023 Dec; 11: 221-232. Published",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.803,
+    "id": "o342"
+   },
+   {
+    "text": "Sep",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 1.0,
+    "id": "o343"
+   },
+   {
+    "text": "online 2023",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.965,
+    "id": "o344"
+   },
+   {
+    "text": "doi: 10.1016/j.toxrep.2023.08.006",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.576,
+    "id": "o345"
+   },
+   {
+    "text": "PMCID: PMC10502305",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.988,
+    "id": "o346"
+   },
+   {
+    "text": "PMID: 37719200",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.976,
+    "id": "o347"
+   },
+   {
+    "text": "The synthetic food dye, Red 40,",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.943,
+    "id": "o348"
+   },
+   {
+    "text": "causes DNA damage, causes colonic",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.992,
+    "id": "o349"
+   },
+   {
+    "text": "inflammation, and impacts the",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.663,
+    "id": "o350"
+   },
+   {
+    "text": "microbiome in mice",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.878,
+    "id": "o351"
+   },
+   {
+    "text": "QiZhang;a AlexanderAChumanevich;&,.",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.545,
+    "id": "o352"
+   },
+   {
+    "text": "Ly_Nguven",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.66,
+    "id": "o353"
+   },
+   {
+    "text": "Chuumanevich",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.883,
+    "id": "o354"
+   },
+   {
+    "text": "Anactasiva",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.786,
+    "id": "o355"
+   },
+   {
+    "text": "AND COLONIC",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.669,
+    "id": "o356"
+   },
+   {
+    "text": "Nora S",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.857,
+    "id": "o357"
+   },
+   {
+    "text": "Qui",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.973,
+    "id": "o358"
+   },
+   {
+    "text": "INFLAMMATIONAND",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 1.0,
+    "id": "o359"
+   },
+   {
+    "text": "lou",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.912,
+    "id": "o360"
+   },
+   {
+    "text": "Carolyn EBanister;",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.886,
+    "id": "o361"
+   },
+   {
+    "text": "Michael Winth",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.843,
+    "id": "o362"
+   },
+   {
+    "text": "TikTok",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.994,
+    "id": "o363"
+   },
+   {
+    "text": "gabbituft",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 1.0,
+    "id": "o364"
+   },
+   {
+    "text": "AfFECTS THE",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.766,
+    "id": "o365"
+   },
+   {
+    "text": "GUT MICROBIOME",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.633,
+    "id": "o366"
+   },
+   {
+    "text": "TikTok",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.994,
+    "id": "o367"
+   },
+   {
+    "text": "gabbituft",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.999,
+    "id": "o368"
+   },
+   {
+    "text": "PMC_PubMed Central\"",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.62,
+    "id": "o369"
+   },
+   {
+    "text": "Environmental",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.804,
+    "id": "o370"
+   },
+   {
+    "text": "Fiealth",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.935,
+    "id": "o371"
+   },
+   {
+    "text": "PMCID: PMC9052604",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.997,
+    "id": "o372"
+   },
+   {
+    "text": "PMID: 35484553",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.916,
+    "id": "o373"
+   },
+   {
+    "text": "Polential impaets ol synthetie fuod",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.519,
+    "id": "o374"
+   },
+   {
+    "text": "aelivity and altention in",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.61,
+    "id": "o375"
+   },
+   {
+    "text": "dyes on",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.636,
+    "id": "o376"
+   },
+   {
+    "text": "children: a revicw of the human and",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.727,
+    "id": "o377"
+   },
+   {
+    "text": "aninial evidence",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.685,
+    "id": "o378"
+   },
+   {
+    "text": "Mark DMiller\"1 Craig Steinmaus,",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.871,
+    "id": "o379"
+   },
+   {
+    "text": "A2022",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.973,
+    "id": "o380"
+   },
+   {
+    "text": "STUDY SHOWED",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.625,
+    "id": "o381"
+   },
+   {
+    "text": "TikTok",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.993,
+    "id": "o382"
+   },
+   {
+    "text": "gabbituft",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.996,
+    "id": "o383"
+   },
+   {
+    "text": "PMC PubMed Central\"",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.946,
+    "id": "o384"
+   },
+   {
+    "text": "Environmental",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 1.0,
+    "id": "o385"
+   },
+   {
+    "text": "Health",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.94,
+    "id": "o386"
+   },
+   {
+    "text": "BMC",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.998,
+    "id": "o387"
+   },
+   {
+    "text": "Environ Health 2022; 21: 45_",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.723,
+    "id": "o388"
+   },
+   {
+    "text": "Published online",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.789,
+    "id": "o389"
+   },
+   {
+    "text": "2022 Apr 29. doi: 10.1186/s12940-022-00849-9",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.609,
+    "id": "o390"
+   },
+   {
+    "text": "PMCID: PMC9052604",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.998,
+    "id": "o391"
+   },
+   {
+    "text": "PMID: 35484553",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.966,
+    "id": "o392"
+   },
+   {
+    "text": "Potential impacts of synthetic food",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.931,
+    "id": "o393"
+   },
+   {
+    "text": "dyes on activity and attention in",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.84,
+    "id": "o394"
+   },
+   {
+    "text": "children:",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.853,
+    "id": "o395"
+   },
+   {
+    "text": "review of the human and",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.997,
+    "id": "o396"
+   },
+   {
+    "text": "animal evidence",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.999,
+    "id": "o397"
+   },
+   {
+    "text": "Mark DMiller;\"1 Craig_Steinmaus,",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.618,
+    "id": "o398"
+   },
+   {
+    "text": "MariS_Golub,",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.61,
+    "id": "o399"
+   },
+   {
+    "text": "Bosemary_Castorina; 2",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.796,
+    "id": "o400"
+   },
+   {
+    "text": "Buwan Thilakartne ? Asa Bradman 2,3 and",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.63,
+    "id": "o401"
+   },
+   {
+    "text": "ARE LINKED",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.804,
+    "id": "o402"
+   },
+   {
+    "text": "Melanie A",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.973,
+    "id": "o403"
+   },
+   {
+    "text": "TOADHDINyright",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.697,
+    "id": "o404"
+   },
+   {
+    "text": "Author",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 1.0,
+    "id": "o405"
+   },
+   {
+    "text": "and License information",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.979,
+    "id": "o406"
+   },
+   {
+    "text": "PMC Disclaimer",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.862,
+    "id": "o407"
+   },
+   {
+    "text": "TikTok",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.843,
+    "id": "o408"
+   },
+   {
+    "text": "gabbituft",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.942,
+    "id": "o409"
+   },
+   {
+    "text": "0",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.988,
+    "id": "o410"
+   },
+   {
+    "text": "Q",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.528,
+    "id": "o411"
+   },
+   {
+    "text": "ANTICANCER RESEARCH",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 1.0,
+    "id": "o412"
+   },
+   {
+    "text": "Research Article",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.973,
+    "id": "o413"
+   },
+   {
+    "text": "Experimenial Studies",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.74,
+    "id": "o414"
+   },
+   {
+    "text": "Effects on DNA Repair in",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.897,
+    "id": "o415"
+   },
+   {
+    "text": "Human Lymphocytes",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.982,
+    "id": "o416"
+   },
+   {
+    "text": "Exposed to the Food Dye",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.844,
+    "id": "o417"
+   },
+   {
+    "text": "Tartrazine Yellow",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.862,
+    "id": "o418"
+   },
+   {
+    "text": "BRUNO MOREIRA SOARES, TAiSSA MAIRA THOMAZ",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.567,
+    "id": "o419"
+   },
+   {
+    "text": "ARAUJO, JORGE AMANDO BATISTA RAMOS; LAINE",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.658,
+    "id": "o420"
+   },
+   {
+    "text": "CELESTINO PINTO,BRUNA MEIRELES KHAYAT ,",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.836,
+    "id": "o421"
+   },
+   {
+    "text": "MARCELO DE OLIVEIRA BAHIA, RAQUEL CARVALHO",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.961,
+    "id": "o422"
+   },
+   {
+    "text": "MONTENEGRO, ROMMEL MARIO RODRIGUEZ",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.722,
+    "id": "o423"
+   },
+   {
+    "text": "BURBANO and ANDRE SALIM KHAYAT",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.966,
+    "id": "o424"
+   },
+   {
+    "text": "Anticancer Research March 2015, 35 (3) 1465-1474;",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.754,
+    "id": "o425"
+   },
+   {
+    "text": "CHILDRENAND",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.853,
+    "id": "o426"
+   },
+   {
+    "text": "Anticle",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.691,
+    "id": "o427"
+   },
+   {
+    "text": "Info & Metrics",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.989,
+    "id": "o428"
+   },
+   {
+    "text": "TikTok",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.957,
+    "id": "o429"
+   },
+   {
+    "text": "gabbituft",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.745,
+    "id": "o430"
+   },
+   {
+    "text": "0 Q",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.947,
+    "id": "o431"
+   },
+   {
+    "text": "ANTICANCER RESEARCH",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.998,
+    "id": "o432"
+   },
+   {
+    "text": "Research Article",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 1.0,
+    "id": "o433"
+   },
+   {
+    "text": "Experimental Studies",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.965,
+    "id": "o434"
+   },
+   {
+    "text": "Effects on DNA Repair in",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.778,
+    "id": "o435"
+   },
+   {
+    "text": "Human Lymphocytes",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.99,
+    "id": "o436"
+   },
+   {
+    "text": "Exposed to the Food Dye",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.869,
+    "id": "o437"
+   },
+   {
+    "text": "Tartrazine Yellow",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.936,
+    "id": "o438"
+   },
+   {
+    "text": "BRUNO MOREIRA SOARES, TAiSSA MAIRA THOMAZ",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.76,
+    "id": "o439"
+   },
+   {
+    "text": "ARAUJO, JORGE AMANDO BATISTA RAMOS, LAINE",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.861,
+    "id": "o440"
+   },
+   {
+    "text": "CELESTINO PINTO, BRUNA MEIRELES KHAYAT ,",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.55,
+    "id": "o441"
+   },
+   {
+    "text": "MARCELO DE OLIVEIRA BAHIA, RAQUEL CARVALHO",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.56,
+    "id": "o442"
+   },
+   {
+    "text": "MONTENEGRO, ROMMEL MARIO RODRIGUEZ",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.666,
+    "id": "o443"
+   },
+   {
+    "text": "BURBANO and ANDRE SALIM KHAYAT",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.912,
+    "id": "o444"
+   },
+   {
+    "text": "Anticancer Research March 2015,35 (3) 1465-1474;",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.765,
+    "id": "o445"
+   },
+   {
+    "text": "IS LINKED",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.937,
+    "id": "o446"
+   },
+   {
+    "text": "DIREGTLYTO",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.593,
+    "id": "o447"
+   },
+   {
+    "text": "Info & Metrics",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.996,
+    "id": "o448"
+   },
+   {
+    "text": "TikTok",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.731,
+    "id": "o449"
+   },
+   {
+    "text": "gabbituft",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.886,
+    "id": "o450"
+   },
+   {
+    "text": "SYNTHETIC DYES",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 0.965,
+    "id": "o451"
+   },
+   {
+    "text": "IN THE",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 0.997,
+    "id": "o452"
+   },
+   {
+    "text": "TikTok",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 0.952,
+    "id": "o453"
+   },
+   {
+    "text": "gabbituft",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 1.0,
+    "id": "o454"
+   },
+   {
+    "text": "THINGS SUCH",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 0.561,
+    "id": "o455"
+   },
+   {
+    "text": "As PAPRIKA",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 0.964,
+    "id": "o456"
+   },
+   {
+    "text": "TikTok",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 0.927,
+    "id": "o457"
+   },
+   {
+    "text": "gabbituft",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 1.0,
+    "id": "o458"
+   },
+   {
+    "text": "AND TURMERIG",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.965,
+    "id": "o459"
+   },
+   {
+    "text": "FOR YELLOW",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.938,
+    "id": "o460"
+   },
+   {
+    "text": "TikTok",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.954,
+    "id": "o461"
+   },
+   {
+    "text": "gabbituft",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.999,
+    "id": "o462"
+   },
+   {
+    "text": "BLUEBERRIES BETA",
+    "start": 120.0,
+    "end": 120.0,
+    "confidence": 0.981,
+    "id": "o463"
+   },
+   {
+    "text": "CAROTENES",
+    "start": 120.0,
+    "end": 120.0,
+    "confidence": 1.0,
+    "id": "o464"
+   },
+   {
+    "text": "kTok",
+    "start": 120.0,
+    "end": 120.0,
+    "confidence": 0.981,
+    "id": "o465"
+   },
+   {
+    "text": "gabbituft",
+    "start": 120.0,
+    "end": 120.0,
+    "confidence": 0.999,
+    "id": "o466"
+   },
+   {
+    "text": "BEST POWDER",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.955,
+    "id": "o467"
+   },
+   {
+    "text": "POMEGRANATEJUICE",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.714,
+    "id": "o468"
+   },
+   {
+    "text": "CRANBERRIES OR",
+    "start": 124.0,
+    "end": 124.0,
+    "confidence": 0.99,
+    "id": "o469"
+   },
+   {
+    "text": "STRAWBERRIES",
+    "start": 124.0,
+    "end": 124.0,
+    "confidence": 0.974,
+    "id": "o470"
+   },
+   {
+    "text": "HikTok",
+    "start": 124.0,
+    "end": 124.0,
+    "confidence": 0.613,
+    "id": "o471"
+   },
+   {
+    "text": "'gabbituft",
+    "start": 124.0,
+    "end": 124.0,
+    "confidence": 0.926,
+    "id": "o472"
+   },
+   {
+    "text": "THOSE ARE",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.746,
+    "id": "o473"
+   },
+   {
+    "text": "ALL NATURAL",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.87,
+    "id": "o474"
+   },
+   {
+    "text": "TikTok",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 1.0,
+    "id": "o475"
+   },
+   {
+    "text": "gabbituft",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.954,
+    "id": "o476"
+   },
+   {
+    "text": "NO.4",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.876,
+    "id": "o477"
+   },
+   {
+    "text": "ISNITRATES",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.781,
+    "id": "o478"
+   },
+   {
+    "text": "TikTok",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.867,
+    "id": "o479"
+   },
+   {
+    "text": "gabbituft",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.999,
+    "id": "o480"
+   },
+   {
+    "text": "SLICEDMEATS",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.963,
+    "id": "o481"
+   },
+   {
+    "text": "gabbituft",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.99,
+    "id": "o482"
+   },
+   {
+    "text": "THOSE SORTS",
+    "start": 132.0,
+    "end": 132.0,
+    "confidence": 0.986,
+    "id": "o483"
+   },
+   {
+    "text": "OF THINGS",
+    "start": 132.0,
+    "end": 132.0,
+    "confidence": 0.827,
+    "id": "o484"
+   },
+   {
+    "text": "National Library of Medicine",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.963,
+    "id": "o485"
+   },
+   {
+    "text": "NIH",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.998,
+    "id": "o486"
+   },
+   {
+    "text": "Log in",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.783,
+    "id": "o487"
+   },
+   {
+    "text": "Publ Med",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.638,
+    "id": "o488"
+   },
+   {
+    "text": "Advanced",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 1.0,
+    "id": "o489"
+   },
+   {
+    "text": "Usar Guide",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.878,
+    "id": "o490"
+   },
+   {
+    "text": "Nitrites and nitrates from food",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.828,
+    "id": "o491"
+   },
+   {
+    "text": "additives and natural sources and",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.633,
+    "id": "o492"
+   },
+   {
+    "text": "cancer risk: results from the",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.856,
+    "id": "o493"
+   },
+   {
+    "text": "NutriNet-Sante cohort",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.784,
+    "id": "o494"
+   },
+   {
+    "text": "Chazelas et al. Int J Epidemiol: 2022",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.714,
+    "id": "o495"
+   },
+   {
+    "text": "Eloi",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.991,
+    "id": "o496"
+   },
+   {
+    "text": "Show details",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.65,
+    "id": "o497"
+   },
+   {
+    "text": "Full text links",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.704,
+    "id": "o498"
+   },
+   {
+    "text": "Cite",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.97,
+    "id": "o499"
+   },
+   {
+    "text": "A2022",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.714,
+    "id": "o500"
+   },
+   {
+    "text": "STUDY SHOWED",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.955,
+    "id": "o501"
+   },
+   {
+    "text": "gabbituft",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.885,
+    "id": "o502"
+   },
+   {
+    "text": "National Library of Medicine",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.947,
+    "id": "o503"
+   },
+   {
+    "text": "NIH",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.991,
+    "id": "o504"
+   },
+   {
+    "text": "Log in",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.999,
+    "id": "o505"
+   },
+   {
+    "text": "National Contor for Biotochnology Intormation",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.617,
+    "id": "o506"
+   },
+   {
+    "text": "Publ Med",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.543,
+    "id": "o507"
+   },
+   {
+    "text": "User Guide",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.66,
+    "id": "o508"
+   },
+   {
+    "text": "Advanced",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 1.0,
+    "id": "o509"
+   },
+   {
+    "text": "Nitrites and nitrates from food",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.882,
+    "id": "o510"
+   },
+   {
+    "text": "additives and natural sources and",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.849,
+    "id": "o511"
+   },
+   {
+    "text": "cancer risk: results from the",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.922,
+    "id": "o512"
+   },
+   {
+    "text": "NutriNet-Sante cohort",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.814,
+    "id": "o513"
+   },
+   {
+    "text": "Eloi Chazelas et al. Int J Epidemiol: 2022",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.566,
+    "id": "o514"
+   },
+   {
+    "text": "Show details",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 1.0,
+    "id": "o515"
+   },
+   {
+    "text": "Full text links",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.785,
+    "id": "o516"
+   },
+   {
+    "text": "Cite",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 1.0,
+    "id": "o517"
+   },
+   {
+    "text": "66",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.975,
+    "id": "o518"
+   },
+   {
+    "text": "INCREASED RISK",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.998,
+    "id": "o519"
+   },
+   {
+    "text": "OF CANCER",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.81,
+    "id": "o520"
+   },
+   {
+    "text": "TikTok",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.964,
+    "id": "o521"
+   },
+   {
+    "text": "gabbituft",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 1.0,
+    "id": "o522"
+   },
+   {
+    "text": "WHEN INGESTED",
+    "start": 138.0,
+    "end": 138.0,
+    "confidence": 0.84,
+    "id": "o523"
+   },
+   {
+    "text": "ALTERNATIVES FOR",
+    "start": 138.0,
+    "end": 138.0,
+    "confidence": 0.843,
+    "id": "o524"
+   },
+   {
+    "text": "TikTok",
+    "start": 138.0,
+    "end": 138.0,
+    "confidence": 0.998,
+    "id": "o525"
+   },
+   {
+    "text": "gabbituft",
+    "start": 138.0,
+    "end": 138.0,
+    "confidence": 0.998,
+    "id": "o526"
+   },
+   {
+    "text": "TO MEAT",
+    "start": 140.0,
+    "end": 140.0,
+    "confidence": 0.582,
+    "id": "o527"
+   },
+   {
+    "text": "TikTok",
+    "start": 140.0,
+    "end": 140.0,
+    "confidence": 1.0,
+    "id": "o528"
+   },
+   {
+    "text": "gabbituft",
+    "start": 140.0,
+    "end": 140.0,
+    "confidence": 0.89,
+    "id": "o529"
+   },
+   {
+    "text": "SIMPLY BUYING",
+    "start": 142.0,
+    "end": 142.0,
+    "confidence": 0.994,
+    "id": "o530"
+   },
+   {
+    "text": "FRESH MEAT",
+    "start": 142.0,
+    "end": 142.0,
+    "confidence": 0.687,
+    "id": "o531"
+   },
+   {
+    "text": "gabbituft",
+    "start": 142.0,
+    "end": 142.0,
+    "confidence": 0.799,
+    "id": "o532"
+   },
+   {
+    "text": "OR LOOK",
+    "start": 144.0,
+    "end": 144.0,
+    "confidence": 0.924,
+    "id": "o533"
+   },
+   {
+    "text": "FOR PACKAGED MEAT",
+    "start": 144.0,
+    "end": 144.0,
+    "confidence": 0.988,
+    "id": "o534"
+   },
+   {
+    "text": "gabbituft",
+    "start": 144.0,
+    "end": 144.0,
+    "confidence": 0.848,
+    "id": "o535"
+   },
+   {
+    "text": "MEAT THAT SAYS",
+    "start": 146.0,
+    "end": 146.0,
+    "confidence": 0.933,
+    "id": "o536"
+   },
+   {
+    "text": "TikTok",
+    "start": 146.0,
+    "end": 146.0,
+    "confidence": 1.0,
+    "id": "o537"
+   },
+   {
+    "text": "gabbituft",
+    "start": 146.0,
+    "end": 146.0,
+    "confidence": 0.976,
+    "id": "o538"
+   },
+   {
+    "text": "NATURAL",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 0.963,
+    "id": "o539"
+   },
+   {
+    "text": "EVER",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 1.0,
+    "id": "o540"
+   },
+   {
+    "text": "RREAST",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 0.861,
+    "id": "o541"
+   },
+   {
+    "text": "US:",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 0.907,
+    "id": "o542"
+   },
+   {
+    "text": "PER 2 0z SERVING",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 0.857,
+    "id": "o543"
+   },
+   {
+    "text": "70",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 0.999,
+    "id": "o544"
+   },
+   {
+    "text": "0.59",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 0.574,
+    "id": "o545"
+   },
+   {
+    "text": "PROTEIM",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 0.612,
+    "id": "o546"
+   },
+   {
+    "text": "NO NITRATES",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 0.998,
+    "id": "o547"
+   },
+   {
+    "text": "Tktok",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 0.661,
+    "id": "o548"
+   },
+   {
+    "text": "S",
+    "start": 150.0,
+    "end": 150.0,
+    "confidence": 0.846,
+    "id": "o549"
+   },
+   {
+    "text": "NO:",
+    "start": 150.0,
+    "end": 150.0,
+    "confidence": 0.735,
+    "id": "o550"
+   },
+   {
+    "text": "15",
+    "start": 150.0,
+    "end": 150.0,
+    "confidence": 0.967,
+    "id": "o551"
+   },
+   {
+    "text": "IKNOW",
+    "start": 152.0,
+    "end": 152.0,
+    "confidence": 0.865,
+    "id": "o552"
+   },
+   {
+    "text": "IT'S SUPPOSED",
+    "start": 152.0,
+    "end": 152.0,
+    "confidence": 0.507,
+    "id": "o553"
+   },
+   {
+    "text": "TikTok",
+    "start": 152.0,
+    "end": 152.0,
+    "confidence": 0.605,
+    "id": "o554"
+   },
+   {
+    "text": "gabbituft",
+    "start": 152.0,
+    "end": 152.0,
+    "confidence": 0.98,
+    "id": "o555"
+   },
+   {
+    "text": "HOWEVER IT",
+    "start": 154.0,
+    "end": 154.0,
+    "confidence": 0.957,
+    "id": "o556"
+   },
+   {
+    "text": "IS SIMPLY",
+    "start": 154.0,
+    "end": 154.0,
+    "confidence": 0.536,
+    "id": "o557"
+   },
+   {
+    "text": "TikTok",
+    "start": 154.0,
+    "end": 154.0,
+    "confidence": 0.707,
+    "id": "o558"
+   },
+   {
+    "text": "gabbituft",
+    "start": 154.0,
+    "end": 154.0,
+    "confidence": 0.999,
+    "id": "o559"
+   },
+   {
+    "text": "MASQUERADINGAS",
+    "start": 156.0,
+    "end": 156.0,
+    "confidence": 0.987,
+    "id": "o560"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 156.0,
+    "end": 156.0,
+    "confidence": 0.619,
+    "id": "o561"
+   },
+   {
+    "text": "gabbituft",
+    "start": 156.0,
+    "end": 156.0,
+    "confidence": 0.999,
+    "id": "o562"
+   },
+   {
+    "text": "5",
+    "start": 158.0,
+    "end": 158.0,
+    "confidence": 0.988,
+    "id": "o563"
+   },
+   {
+    "text": "#",
+    "start": 158.0,
+    "end": 158.0,
+    "confidence": 0.704,
+    "id": "o564"
+   },
+   {
+    "text": "AGAVE SYRUP",
+    "start": 158.0,
+    "end": 158.0,
+    "confidence": 0.926,
+    "id": "o565"
+   },
+   {
+    "text": "TikTok",
+    "start": 158.0,
+    "end": 158.0,
+    "confidence": 0.886,
+    "id": "o566"
+   },
+   {
+    "text": "gabbituft",
+    "start": 158.0,
+    "end": 158.0,
+    "confidence": 0.988,
+    "id": "o567"
+   },
+   {
+    "text": "BEEN REMOVED",
+    "start": 160.0,
+    "end": 160.0,
+    "confidence": 0.696,
+    "id": "o568"
+   },
+   {
+    "text": "Tiktok",
+    "start": 160.0,
+    "end": 160.0,
+    "confidence": 0.543,
+    "id": "o569"
+   },
+   {
+    "text": "ASYRUP",
+    "start": 162.0,
+    "end": 162.0,
+    "confidence": 0.571,
+    "id": "o570"
+   },
+   {
+    "text": "AND IT'S",
+    "start": 162.0,
+    "end": 162.0,
+    "confidence": 0.932,
+    "id": "o571"
+   },
+   {
+    "text": "USUALLY ABOUT",
+    "start": 164.0,
+    "end": 164.0,
+    "confidence": 0.999,
+    "id": "o572"
+   },
+   {
+    "text": "57% TO",
+    "start": 164.0,
+    "end": 164.0,
+    "confidence": 0.584,
+    "id": "o573"
+   },
+   {
+    "text": "Tiktok",
+    "start": 164.0,
+    "end": 164.0,
+    "confidence": 0.65,
+    "id": "o574"
+   },
+   {
+    "text": "90% FRUCTOSB",
+    "start": 166.0,
+    "end": 166.0,
+    "confidence": 0.783,
+    "id": "o575"
+   },
+   {
+    "text": "TikTok",
+    "start": 166.0,
+    "end": 166.0,
+    "confidence": 0.988,
+    "id": "o576"
+   },
+   {
+    "text": "gabbituft",
+    "start": 166.0,
+    "end": 166.0,
+    "confidence": 1.0,
+    "id": "o577"
+   },
+   {
+    "text": "HIGH FRUCTOSE",
+    "start": 168.0,
+    "end": 168.0,
+    "confidence": 0.975,
+    "id": "o578"
+   },
+   {
+    "text": "TikTok",
+    "start": 168.0,
+    "end": 168.0,
+    "confidence": 0.609,
+    "id": "o579"
+   },
+   {
+    "text": "gabbituft",
+    "start": 168.0,
+    "end": 168.0,
+    "confidence": 0.921,
+    "id": "o580"
+   },
+   {
+    "text": "AND THAT",
+    "start": 170.0,
+    "end": 170.0,
+    "confidence": 0.967,
+    "id": "o581"
+   },
+   {
+    "text": "CRYSTALLINE",
+    "start": 170.0,
+    "end": 170.0,
+    "confidence": 0.998,
+    "id": "o582"
+   },
+   {
+    "text": "MENTIONED",
+    "start": 172.0,
+    "end": 172.0,
+    "confidence": 1.0,
+    "id": "o583"
+   },
+   {
+    "text": "TikTok",
+    "start": 172.0,
+    "end": 172.0,
+    "confidence": 0.601,
+    "id": "o584"
+   },
+   {
+    "text": "gabbituft",
+    "start": 172.0,
+    "end": 172.0,
+    "confidence": 0.879,
+    "id": "o585"
+   },
+   {
+    "text": "AGAIN GREAT",
+    "start": 174.0,
+    "end": 174.0,
+    "confidence": 0.815,
+    "id": "o586"
+   },
+   {
+    "text": "ALTERNATIVES FOR",
+    "start": 174.0,
+    "end": 174.0,
+    "confidence": 0.999,
+    "id": "o587"
+   },
+   {
+    "text": "TikTok",
+    "start": 174.0,
+    "end": 174.0,
+    "confidence": 1.0,
+    "id": "o588"
+   },
+   {
+    "text": "gabbituft",
+    "start": 174.0,
+    "end": 174.0,
+    "confidence": 0.891,
+    "id": "o589"
+   },
+   {
+    "text": "microingredients",
+    "start": 176.0,
+    "end": 176.0,
+    "confidence": 0.818,
+    "id": "o590"
+   },
+   {
+    "text": "organic",
+    "start": 176.0,
+    "end": 176.0,
+    "confidence": 1.0,
+    "id": "o591"
+   },
+   {
+    "text": "stevia",
+    "start": 176.0,
+    "end": 176.0,
+    "confidence": 0.765,
+    "id": "o592"
+   },
+   {
+    "text": "extract",
+    "start": 176.0,
+    "end": 176.0,
+    "confidence": 0.789,
+    "id": "o593"
+   },
+   {
+    "text": "zero calories",
+    "start": 176.0,
+    "end": 176.0,
+    "confidence": 1.0,
+    "id": "o594"
+   },
+   {
+    "text": "natural sweetener",
+    "start": 176.0,
+    "end": 176.0,
+    "confidence": 0.992,
+    "id": "o595"
+   },
+   {
+    "text": "OR ALLULOSE",
+    "start": 176.0,
+    "end": 176.0,
+    "confidence": 0.792,
+    "id": "o596"
+   },
+   {
+    "text": "USDA",
+    "start": 176.0,
+    "end": 176.0,
+    "confidence": 0.998,
+    "id": "o597"
+   },
+   {
+    "text": "sugar",
+    "start": 176.0,
+    "end": 176.0,
+    "confidence": 1.0,
+    "id": "o598"
+   },
+   {
+    "text": "free",
+    "start": 176.0,
+    "end": 176.0,
+    "confidence": 0.893,
+    "id": "o599"
+   },
+   {
+    "text": "8 0z (227 g) Powder",
+    "start": 176.0,
+    "end": 176.0,
+    "confidence": 0.763,
+    "id": "o600"
+   },
+   {
+    "text": "CAN WE",
+    "start": 178.0,
+    "end": 178.0,
+    "confidence": 0.635,
+    "id": "o601"
+   },
+   {
+    "text": "AVOIDALL",
+    "start": 178.0,
+    "end": 178.0,
+    "confidence": 0.52,
+    "id": "o602"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 178.0,
+    "end": 178.0,
+    "confidence": 0.961,
+    "id": "o603"
+   },
+   {
+    "text": "gabbituft",
+    "start": 178.0,
+    "end": 178.0,
+    "confidence": 0.942,
+    "id": "o604"
+   },
+   {
+    "text": "DO",
+    "start": 180.0,
+    "end": 180.0,
+    "confidence": 0.761,
+    "id": "o605"
+   },
+   {
+    "text": "GET SOME",
+    "start": 180.0,
+    "end": 180.0,
+    "confidence": 0.984,
+    "id": "o606"
+   },
+   {
+    "text": "TikTok",
+    "start": 180.0,
+    "end": 180.0,
+    "confidence": 0.999,
+    "id": "o607"
+   },
+   {
+    "text": "gabbituft",
+    "start": 180.0,
+    "end": 180.0,
+    "confidence": 0.902,
+    "id": "o608"
+   },
+   {
+    "text": "MY NUTRITION",
+    "start": 182.0,
+    "end": 182.0,
+    "confidence": 0.989,
+    "id": "o609"
+   },
+   {
+    "text": "FROM TIME",
+    "start": 182.0,
+    "end": 182.0,
+    "confidence": 0.994,
+    "id": "o610"
+   },
+   {
+    "text": "TikTok",
+    "start": 182.0,
+    "end": 182.0,
+    "confidence": 1.0,
+    "id": "o611"
+   },
+   {
+    "text": "gabbituft",
+    "start": 182.0,
+    "end": 182.0,
+    "confidence": 1.0,
+    "id": "o612"
+   },
+   {
+    "text": "4",
+    "start": 184.0,
+    "end": 184.0,
+    "confidence": 0.824,
+    "id": "o613"
+   },
+   {
+    "text": "DECAUSE LIFE",
+    "start": 184.0,
+    "end": 184.0,
+    "confidence": 0.554,
+    "id": "o614"
+   },
+   {
+    "text": "IS ABOUT BALANCE",
+    "start": 184.0,
+    "end": 184.0,
+    "confidence": 0.982,
+    "id": "o615"
+   },
+   {
+    "text": "TikTok",
+    "start": 184.0,
+    "end": 184.0,
+    "confidence": 0.685,
+    "id": "o616"
+   },
+   {
+    "text": "gabbituft",
+    "start": 184.0,
+    "end": 184.0,
+    "confidence": 1.0,
+    "id": "o617"
+   },
+   {
+    "text": "BECAUSE LIFE",
+    "start": 186.0,
+    "end": 186.0,
+    "confidence": 0.792,
+    "id": "o618"
+   },
+   {
+    "text": "IS ABOUT BALANCE",
+    "start": 186.0,
+    "end": 186.0,
+    "confidence": 0.859,
+    "id": "o619"
+   },
+   {
+    "text": "TikTok",
+    "start": 186.0,
+    "end": 186.0,
+    "confidence": 0.785,
+    "id": "o620"
+   },
+   {
+    "text": "gabbituft",
+    "start": 186.0,
+    "end": 186.0,
+    "confidence": 0.996,
+    "id": "o621"
+   },
+   {
+    "text": "YOU HAVE",
+    "start": 188.0,
+    "end": 188.0,
+    "confidence": 0.96,
+    "id": "o622"
+   },
+   {
+    "text": "TikTok",
+    "start": 188.0,
+    "end": 188.0,
+    "confidence": 0.817,
+    "id": "o623"
+   },
+   {
+    "text": "gabbituft",
+    "start": 188.0,
+    "end": 188.0,
+    "confidence": 0.894,
+    "id": "o624"
+   },
+   {
+    "text": "OWN PERSONAL",
+    "start": 190.0,
+    "end": 190.0,
+    "confidence": 0.996,
+    "id": "o625"
+   },
+   {
+    "text": "MEALTH GOALS",
+    "start": 190.0,
+    "end": 190.0,
+    "confidence": 0.605,
+    "id": "o626"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 190.0,
+    "end": 190.0,
+    "confidence": 0.704,
+    "id": "o627"
+   },
+   {
+    "text": "gabbituft",
+    "start": 190.0,
+    "end": 190.0,
+    "confidence": 0.986,
+    "id": "o628"
+   },
+   {
+    "text": "AND IF",
+    "start": 192.0,
+    "end": 192.0,
+    "confidence": 0.991,
+    "id": "o629"
+   },
+   {
+    "text": "YOU WANT",
+    "start": 192.0,
+    "end": 192.0,
+    "confidence": 0.9,
+    "id": "o630"
+   },
+   {
+    "text": "Tiklok",
+    "start": 192.0,
+    "end": 192.0,
+    "confidence": 0.688,
+    "id": "o631"
+   },
+   {
+    "text": "gabbituft",
+    "start": 192.0,
+    "end": 192.0,
+    "confidence": 1.0,
+    "id": "o632"
+   },
+   {
+    "text": "IDO",
+    "start": 194.0,
+    "end": 194.0,
+    "confidence": 0.996,
+    "id": "o633"
+   },
+   {
+    "text": "TikTok",
+    "start": 194.0,
+    "end": 194.0,
+    "confidence": 0.997,
+    "id": "o634"
+   },
+   {
+    "text": "gabbituft",
+    "start": 194.0,
+    "end": 194.0,
+    "confidence": 0.999,
+    "id": "o635"
+   },
+   {
+    "text": "Food",
+    "start": 196.0,
+    "end": 196.0,
+    "confidence": 0.994,
+    "id": "o636"
+   },
+   {
+    "text": "5",
+    "start": 196.0,
+    "end": 196.0,
+    "confidence": 1.0,
+    "id": "o637"
+   },
+   {
+    "text": "Toavoid & HEALTHY ALTERNATIVES",
+    "start": 196.0,
+    "end": 196.0,
+    "confidence": 0.652,
+    "id": "o638"
+   },
+   {
+    "text": "aon",
+    "start": 196.0,
+    "end": 196.0,
+    "confidence": 0.549,
+    "id": "o639"
+   },
+   {
+    "text": "pacrcgod",
+    "start": 196.0,
+    "end": 196.0,
+    "confidence": 0.675,
+    "id": "o640"
+   },
+   {
+    "text": "THAT LINK",
+    "start": 196.0,
+    "end": 196.0,
+    "confidence": 0.982,
+    "id": "o641"
+   },
+   {
+    "text": "LSN: CPT,",
+    "start": 196.0,
+    "end": 196.0,
+    "confidence": 0.818,
+    "id": "o642"
+   },
+   {
+    "text": "IS IN",
+    "start": 196.0,
+    "end": 196.0,
+    "confidence": 0.997,
+    "id": "o643"
+   },
+   {
+    "text": "Researchher",
+    "start": 196.0,
+    "end": 196.0,
+    "confidence": 0.96,
+    "id": "o644"
+   },
+   {
+    "text": "Nutriioncoaching",
+    "start": 196.0,
+    "end": 196.0,
+    "confidence": 0.801,
+    "id": "o645"
+   },
+   {
+    "text": "SUCCESS",
+    "start": 196.0,
+    "end": 196.0,
+    "confidence": 0.728,
+    "id": "o646"
+   },
+   {
+    "text": "gabbituft",
+    "start": 196.0,
+    "end": 196.0,
+    "confidence": 0.974,
+    "id": "o647"
+   },
+   {
+    "text": "IT\"S TOTALLY",
+    "start": 198.0,
+    "end": 198.0,
+    "confidence": 0.948,
+    "id": "o648"
+   },
+   {
+    "text": "FREE YOU",
+    "start": 198.0,
+    "end": 198.0,
+    "confidence": 0.923,
+    "id": "o649"
+   },
+   {
+    "text": "TikTok",
+    "start": 198.0,
+    "end": 198.0,
+    "confidence": 0.692,
+    "id": "o650"
+   },
+   {
+    "text": "gabbituft",
+    "start": 198.0,
+    "end": 198.0,
+    "confidence": 1.0,
+    "id": "o651"
+   },
+   {
+    "text": "OUT A",
+    "start": 200.0,
+    "end": 200.0,
+    "confidence": 0.846,
+    "id": "o652"
+   },
+   {
+    "text": "CORM OR",
+    "start": 200.0,
+    "end": 200.0,
+    "confidence": 0.53,
+    "id": "o653"
+   },
+   {
+    "text": "ANYTHING",
+    "start": 200.0,
+    "end": 200.0,
+    "confidence": 0.691,
+    "id": "o654"
+   },
+   {
+    "text": "TikTok",
+    "start": 200.0,
+    "end": 200.0,
+    "confidence": 0.97,
+    "id": "o655"
+   },
+   {
+    "text": "gabbituft",
+    "start": 200.0,
+    "end": 200.0,
+    "confidence": 0.999,
+    "id": "o656"
+   },
+   {
+    "text": "TO THE",
+    "start": 202.0,
+    "end": 202.0,
+    "confidence": 0.708,
+    "id": "o657"
+   },
+   {
+    "text": "PDF",
+    "start": 202.0,
+    "end": 202.0,
+    "confidence": 0.999,
+    "id": "o658"
+   },
+   {
+    "text": "TikTok",
+    "start": 202.0,
+    "end": 202.0,
+    "confidence": 0.999,
+    "id": "o659"
+   },
+   {
+    "text": "gabbituft",
+    "start": 202.0,
+    "end": 202.0,
+    "confidence": 0.999,
+    "id": "o660"
+   },
+   {
+    "text": "HELP WITH",
+    "start": 204.0,
+    "end": 204.0,
+    "confidence": 0.776,
+    "id": "o661"
+   },
+   {
+    "text": "YOUR FITNESS",
+    "start": 204.0,
+    "end": 204.0,
+    "confidence": 0.595,
+    "id": "o662"
+   },
+   {
+    "text": "TikTok",
+    "start": 204.0,
+    "end": 204.0,
+    "confidence": 0.999,
+    "id": "o663"
+   },
+   {
+    "text": "gabbituft",
+    "start": 204.0,
+    "end": 204.0,
+    "confidence": 0.999,
+    "id": "o664"
+   },
+   {
+    "text": "AND SO",
+    "start": 206.0,
+    "end": 206.0,
+    "confidence": 0.887,
+    "id": "o665"
+   },
+   {
+    "text": "IS MY TEAM",
+    "start": 206.0,
+    "end": 206.0,
+    "confidence": 0.794,
+    "id": "o666"
+   },
+   {
+    "text": "TikTok",
+    "start": 206.0,
+    "end": 206.0,
+    "confidence": 0.979,
+    "id": "o667"
+   },
+   {
+    "text": "gabbituft",
+    "start": 206.0,
+    "end": 206.0,
+    "confidence": 0.665,
+    "id": "o668"
+   },
+   {
+    "text": "MY PROFILE",
+    "start": 208.0,
+    "end": 208.0,
+    "confidence": 0.946,
+    "id": "o669"
+   },
+   {
+    "text": "FORMY",
+    "start": 208.0,
+    "end": 208.0,
+    "confidence": 1.0,
+    "id": "o670"
+   },
+   {
+    "text": "TikTok",
+    "start": 208.0,
+    "end": 208.0,
+    "confidence": 0.9,
+    "id": "o671"
+   },
+   {
+    "text": "'gabbituft",
+    "start": 208.0,
+    "end": 208.0,
+    "confidence": 0.742,
+    "id": "o672"
+   },
+   {
+    "text": "ONLINE 1",
+    "start": 210.0,
+    "end": 210.0,
+    "confidence": 0.962,
+    "id": "o673"
+   },
+   {
+    "text": "ON1FITNESSAND",
+    "start": 210.0,
+    "end": 210.0,
+    "confidence": 0.812,
+    "id": "o674"
+   },
+   {
+    "text": "TikTok",
+    "start": 210.0,
+    "end": 210.0,
+    "confidence": 0.965,
+    "id": "o675"
+   },
+   {
+    "text": "gabbituft",
+    "start": 210.0,
+    "end": 210.0,
+    "confidence": 1.0,
+    "id": "o676"
+   },
+   {
+    "text": "COACH GABBI.COM",
+    "start": 212.0,
+    "end": 212.0,
+    "confidence": 0.562,
+    "id": "o677"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 212.0,
+    "end": 212.0,
+    "confidence": 0.712,
+    "id": "o678"
+   },
+   {
+    "text": "gabbituft",
+    "start": 212.0,
+    "end": 212.0,
+    "confidence": 0.996,
+    "id": "o679"
+   },
+   {
+    "text": "CHEERS TO",
+    "start": 214.0,
+    "end": 214.0,
+    "confidence": 0.816,
+    "id": "o680"
+   },
+   {
+    "text": "HAPPY",
+    "start": 214.0,
+    "end": 214.0,
+    "confidence": 0.883,
+    "id": "o681"
+   },
+   {
+    "text": "A",
+    "start": 214.0,
+    "end": 214.0,
+    "confidence": 0.97,
+    "id": "o682"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 214.0,
+    "end": 214.0,
+    "confidence": 0.639,
+    "id": "o683"
+   },
+   {
+    "text": "gabbituft",
+    "start": 214.0,
+    "end": 214.0,
+    "confidence": 1.0,
+    "id": "o684"
+   },
+   {
+    "text": "HEALTHIER MORE",
+    "start": 216.0,
+    "end": 216.0,
+    "confidence": 0.617,
+    "id": "o685"
+   },
+   {
+    "text": "ENERGETIC YOU",
+    "start": 216.0,
+    "end": 216.0,
+    "confidence": 0.707,
+    "id": "o686"
+   },
+   {
+    "text": "TikTok",
+    "start": 216.0,
+    "end": 216.0,
+    "confidence": 0.999,
+    "id": "o687"
+   },
+   {
+    "text": "gabbituft",
+    "start": 216.0,
+    "end": 216.0,
+    "confidence": 1.0,
+    "id": "o688"
+   },
+   {
+    "text": "TikTok",
+    "start": 218.0,
+    "end": 218.0,
+    "confidence": 0.999,
+    "id": "o689"
+   },
+   {
+    "text": "gabbituft",
+    "start": 218.0,
+    "end": 218.0,
+    "confidence": 1.0,
+    "id": "o690"
+   },
+   {
+    "text": "J",
+    "start": 220.0,
+    "end": 220.0,
+    "confidence": 0.874,
+    "id": "o691"
+   },
+   {
+    "text": "TikTok",
+    "start": 220.0,
+    "end": 220.0,
+    "confidence": 0.999,
+    "id": "o692"
+   },
+   {
+    "text": "gabbituft",
+    "start": 220.0,
+    "end": 220.0,
+    "confidence": 1.0,
+    "id": "o693"
+   }
+  ]
+ }
+}

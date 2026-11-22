@@ -162,6 +162,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--device", choices=["auto", "cpu"], default="auto")
     ap.add_argument("--only", default="", help="comma-separated video_ids")
+    ap.add_argument("--skip", default="",
+                    help="comma-separated video_ids to leave out, so one "
+                         "pathological video cannot block the batch")
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--no-ocr", action="store_true")
     args = ap.parse_args()
@@ -172,6 +175,9 @@ def main():
     if args.only:
         want = set(s.strip() for s in args.only.split(","))
         rows = [r for r in rows if r["video_id"] in want]
+    if args.skip:
+        drop = set(s.strip() for s in args.skip.split(",") if s.strip())
+        rows = [r for r in rows if r["video_id"] not in drop]
     if args.limit:
         rows = rows[: args.limit]
 
