@@ -147,11 +147,30 @@ def test_graph_runs_start_to_finish_on_sample_transcript():
     assert out["final_result"].classification == MisinfoLabel.MISINFO
     assert out["final_result"].claim_ids == ["c1"]
     assert out["validation_errors"] == []
-    assert out["requires_human_review"] is False
+    # The sample endorses one false claim and refutes another: a mixed video, which
+    # the judge (T08, §9) flags for a person without changing the label.
+    assert out["review_reasons"] == ["judge:mixed_video"]
     assert out["persisted_result_ref"] == f"artifacts/{JOB}/result.json"
+    assert set(h.calls) == set(NODE_OUTPUTS)
+    assert all(n == 1 for n in h.calls.values())
+
+
+def _c2_neutral(state):
+    """Stance stub with the sample's second claim NEUTRAL, so the video isn't mixed."""
+    out = make_stub_nodes()[r.ANALYZE_STANCE](state)
+    res = dict(out["stance_results"])
+    if "c2" in res:
+        res["c2"] = res["c2"].model_copy(update={"stance": Stance.NEUTRAL})
+    return {"stance_results": res}
+
+
+def test_unflagged_video_takes_the_pass_path_without_review():
+    h = Harness({r.ANALYZE_STANCE: _c2_neutral})
+    out = h.run()
+    assert out["final_result"].classification == MisinfoLabel.MISINFO
+    assert out["requires_human_review"] is False
     assert "review_status" not in out
-    expected = set(NODE_OUTPUTS) - {r.HUMAN_REVIEW}
-    assert set(h.calls) == expected
+    assert set(h.calls) == set(NODE_OUTPUTS) - {r.HUMAN_REVIEW}
     assert all(n == 1 for n in h.calls.values())
 
 
@@ -208,7 +227,7 @@ def test_critic_retrieve_more_loops_back_to_retrieval_once():
     assert out["retrieval_attempts"] == {"c1": 2, "c2": 1}
     assert out["retrieval_queries"]["c1"][-1] == "broader query 1"
     assert len(out["retrieved_evidence"]["c1"]) == 2
-    assert out["requires_human_review"] is False
+    assert out["review_reasons"] == ["judge:mixed_video"]  # no loop-related reason
 
 
 def test_retrieval_loop_is_bounded_by_budget_then_review():
@@ -241,7 +260,7 @@ def test_critic_revise_verification_reruns_verifier_only():
     assert h.calls[r.PLAN_RETRIEVAL] == 1
     assert h.calls[r.VERIFY_CLAIMS] == 2
     assert out["verification_revisions"] == {"c2": 1}
-    assert out["requires_human_review"] is False
+    assert out["review_reasons"] == ["judge:mixed_video"]  # no loop-related reason
 
 
 def test_revision_loop_is_bounded_by_budget():
@@ -267,7 +286,7 @@ def test_mixed_decisions_in_one_pass():
     assert h.calls[r.VERIFY_CLAIMS] == 2
     assert out["retrieval_attempts"] == {"c1": 2, "c2": 1}
     assert out["verification_revisions"] == {"c2": 1}
-    assert out["requires_human_review"] is False
+    assert out["review_reasons"] == ["judge:mixed_video"]  # no loop-related reason
 
 
 def test_critic_escalation_still_judged_then_sent_to_review():

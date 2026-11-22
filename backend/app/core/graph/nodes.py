@@ -122,35 +122,13 @@ def fuse_by_overlap(
 
 
 def judge_by_rules(state: PipelineState) -> FinalClassification:
-    """The §9 judge policy, applied to whatever stance and verdicts exist."""
-    stances = state.get("stance_results", {})
-    verdicts = state.get("verification_results", {})
-    rows = [
-        (cid, stances[cid].stance if cid in stances else None, v)
-        for cid, v in verdicts.items()
-    ]
-    endorsed_false = [(c, v) for c, s, v in rows if s == Stance.ENDORSES and v.verdict == Verdict.CONTRADICTED]
-    refuted_false = [(c, v) for c, s, v in rows if s == Stance.REFUTES and v.verdict == Verdict.CONTRADICTED]
-    judged = [(c, v) for c, s, v in rows if v.verdict in (Verdict.SUPPORTED, Verdict.CONTRADICTED)]
-    if endorsed_false:
-        label, deciding = MisinfoLabel.MISINFO, endorsed_false
-    elif refuted_false:
-        label, deciding = MisinfoLabel.DEBUNKING, refuted_false
-    elif judged:
-        label, deciding = MisinfoLabel.NO_MISINFO, judged
-    else:
-        label, deciding = MisinfoLabel.CANNOT_RECOGNIZE, []
-    evidence_ids = sorted(
-        {e for _, v in deciding for e in (*v.supporting_evidence_ids, *v.contradicting_evidence_ids)}
-    )
-    reason = "no checkable health claims" if not state.get("claims") else "stub judge"
-    return FinalClassification(
-        video_id=state["video_id"],
-        classification=label,
-        claim_ids=[c for c, _ in deciding],
-        evidence_ids=evidence_ids,
-        explanation=f"{label.value}: {reason}",
-    )
+    """The §9 judge policy (T08's deterministic rules, template explanation, no model).
+
+    Kept for callers written against the T02 stub; the real node is
+    ``judge.make_judge_classification``."""
+    from app.core.graph.judge import judge  # local import: judge imports this package's state
+
+    return judge(state)[0]
 
 
 # -------------------------------------------------------------------- stubs
@@ -258,7 +236,11 @@ def make_stub_nodes(
         return {"critic_results": results}
 
     def judge_classification(state: PipelineState) -> dict:
-        return {"final_result": judge_by_rules(state)}
+        # T08: the real judge is deterministic, so the default graph uses it (template
+        # explanation, no model). Pass make_judge_classification(router) for the LLM text.
+        from app.core.graph.judge import make_judge_classification
+
+        return make_judge_classification()(state)
 
     def validate_result(state: PipelineState) -> dict:
         errors = []
@@ -293,6 +275,10 @@ def make_stub_nodes(
             s = stances.get(cid)
             if s and s.stance == Stance.UNCLEAR:
                 reasons.append(f"unclear_stance:{cid}")
+        # §9: patterns the judge's rules can't settle (mixed video, unclear stance on a
+        # false claim, ...) go to a person. T09: keep this when replacing the stub.
+        if final:
+            reasons += [f"judge:{f}" for f in final.review_flags if f"judge:{f}" not in reasons]
         # §15: suspected injections and guardrail rejections always go to review.
         # T09: keep this call when replacing the stub.
         reasons += [x for x in guardrail_review_reasons(state) if x not in reasons]
