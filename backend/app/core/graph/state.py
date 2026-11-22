@@ -159,6 +159,10 @@ class VerificationResult(_Record):
     explanation: str = ""
     limitations: list[str] = Field(default_factory=list)
     raw_confidence: Optional[float] = None
+    # Which model and prompt produced this verdict (§13). Optional and additive (T06),
+    # so earlier checkpoints still load; ``None`` for stub results.
+    model: Optional[str] = None
+    prompt_version: Optional[str] = None
 
 
 class CriticResult(_Record):

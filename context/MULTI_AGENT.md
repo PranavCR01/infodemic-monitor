@@ -411,6 +411,60 @@ the lexicon's "antibiotic". Narrative reviews of cell and animal work ("citrus f
 in cancer biology") still pass. Fixes belong in the MeSH lexicon (which also changes T03's
 queries and fixtures) or in a learned relevance model, judged on the real labelled set.
 
+## 7g. Evidence Verifier Decisions (T06, #33)
+
+The node is `backend/app/core/graph/verifier.py` (`make_verify_claims(caller)`); the
+prompt is `app/core/graph/prompts/verify_v1.md`; the labelled set and runner are
+`app/tests/fixtures/verify/` and `app/core/graph/verify_eval.py`. The default graph still
+uses the stub until T11.
+
+- **Same caller contract as stance (T04).** The node takes a `StepCaller`; T01's
+  `ModelRouter` is passed in as-is. Step `verify_claims`, prompt version from
+  `router.route("verify_claims").prompt` (default `verify_v1`); no model id in code
+  (a test greps for one). Request: `{messages, tools: [record_verdict], tool_choice:
+  forced, max_tokens: 1024, temperature: 0}`.
+- **Prompt built with T10's guardrails.** `verification_prompt` fences the claim, titles
+  and abstracts; the system prompt ends with `UNTRUSTED_DATA_NOTICE`; critic notes on a
+  revision are fenced as `model_output`. PubMed metadata (study type, publication type,
+  year) goes in a trusted "evidence index" in the instructions, stripped to plain
+  characters. The node does not go through `GuardedRouter`, because that router sends a
+  plain string and can't carry the forced tool; it calls the `ModelRouter` with the
+  guarded prompt's rendered text and system prompt instead.
+- **Schema.** `VerifierToolOutput` = T10's strict `VerificationOutput` (unknown keys
+  rejected, no URLs) + `raw_confidence` in [0, 1] and no URLs in limitations either.
+- **Invalid citations reject the whole answer; they are not trimmed** (issue: "invalid →
+  rejected, not silently dropped"). Rejected: an ID not retrieved for *this* claim
+  (another claim's paper counts as invalid), a paper in both lists, SUPPORTED without a
+  supporting ID, CONTRADICTED without a contradicting ID, MIXED without both. One repair
+  call names the problem and the allowed IDs (`max_repairs=1`); a successful repair is
+  logged as a plain `NodeError` (no review on its own). If the repair fails too, the
+  verdict is INSUFFICIENT_EVIDENCE with a `guardrail:<kind>` error, which
+  `guardrail_review_reasons` turns into a review reason (§11 "validation failed after
+  repair"). This differs from T10's `check_verification`, which drops bad IDs and
+  downgrades; that helper is left in place for the adversarial harness.
+- **Absence of evidence is not contradiction, in code.** No reranked evidence → 
+  INSUFFICIENT_EVIDENCE without a model call (so NOT_VERIFIABLE is only reachable when
+  something was retrieved). CONTRADICTED without a cited contradicting paper is rejected.
+- **Cap of 10 papers** enforced here too; papers past 10 are neither shown nor citable.
+- **Model failure** → INSUFFICIENT_EVIDENCE, `retryable=True`, *not* a guardrail error.
+  For T08/T09: a claim whose verifier failed only reaches review if it is a deciding
+  claim; consider making a verifier failure a review reason on its own.
+- **Ownership.** Writes `verification_results` and `verification_revisions` (the T02
+  map). The issue says "writes only `verification_results`"; the doc and T02 put the
+  revision counter on this node, so the doc wins.
+- **`VerificationResult` gained optional `model` and `prompt_version`** (same additive
+  rule as T04; schema version unchanged). `raw_confidence` is stored raw; calibration is
+  T15.
+- **Labelled set: 20 synthetic claims, self-labelled.** All five verdicts, six
+  insufficient-not-contradicted cases (animal-only, off-topic, lab-only, wrong
+  population, case report, symptom relief vs cure). Heuristic floor: accuracy 0.85, macro
+  F1 0.87, 0 insufficient-called-contradicted; per-verdict precision/recall in
+  `fixtures/verify/RESULTS.md`. The heuristic, abstracts and labels were all written by
+  the build agent, so the floor is inflated by construction; the LLM row waits for API
+  keys (T14) and a real check needs real abstracts labelled by two people.
+- **Not done:** the T10 adversarial harness (`evaluation/adversarial/graph_system.py`)
+  still uses its own reference verifier; switching it to this node is for T11/T14.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -431,6 +485,13 @@ replacement.
 ## 10. Check-In Log
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
+
+- **2026-11-22**: T06 (#33) evidence verifier built by the automated build: forced
+  `record_verdict` tool call through the routed `verify_claims` step, prompt `verify_v1`
+  fenced with T10's builders, invalid citations reject the answer (one repair, then
+  INSUFFICIENT_EVIDENCE + review), no evidence → INSUFFICIENT_EVIDENCE without a model
+  call. 20-claim synthetic, self-labelled set; heuristic floor macro F1 0.87 (inflated by
+  construction); LLM run waits for API keys. Decisions in §7g.
 
 - **2026-11-22**: T05 (#32) reranker built by the automated build: deterministic lexical
   relevance over the claim's PICO frame, plus a study-type lookup kept as a separate
