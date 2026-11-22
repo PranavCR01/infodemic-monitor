@@ -20,7 +20,7 @@ starts the next ready task, and records progress here.
 | T07 | Critic node and bounded retrieval loop | #34 | 8 | T06 | todo | | | | |
 | T08 | Judge node and mixed-video policy | #35 | 9 | T04, T06 | todo | | | | |
 | T09 | Deterministic validation and human-review routing | #36 | 10, 11, 12 | T08 | todo | | | | |
-| T10 | Guardrails: prompt injection, tool limits, adversarial tests | #37 | 15 | T02 | in_progress | session_013cWxq2Ly4NrwzhcpZMfmkx | 2026-11-22 00:04 | | |
+| T10 | Guardrails: prompt injection, tool limits, adversarial tests | #37 | 15 | T02 | done | session_013cWxq2Ly4NrwzhcpZMfmkx | 2026-11-22 00:04 | https://github.com/PranavCR01/infodemic-monitor/pull/53 | Simulated always-fooled model: graph 5/34 unsafe, baseline 23/34. Input limits built but not wired (T11). Judge-policy finding for T08 (QUOTES/UNCLEAR + CONTRADICTED gives NO_MISINFO). Held-out red-team set and real-model run (T14) left for people |
 | T11 | Integrate the graph into run_pipeline behind a flag, with fallback | #38 | 4 | T02–T10 | todo | | | | Must keep the single-call path working when the flag is off |
 | T12 | Offline library fallback (OCR, embeddings, pgvector, hybrid search) | new | 6 | T03, T05 | todo | | | | Library ingestion tested on generated sample PDFs only |
 | T13 | Retrieval MCP server | new | 6, 15 | T03, T05, T12 | todo | | | | |
@@ -31,6 +31,7 @@ starts the next ready task, and records progress here.
 
 Newest first. One line per event: date, task, what happened.
 
+- 2026-11-22 UTC — T10 done: PR #53 squash-merged into langgraph-build (374 passed, 1 skipped). Adversarial set: 5 unsafe out of 34 (guarded graph) vs 23 out of 34 (single-call baseline), simulated model.
 - 2026-11-22 00:16 UTC — T05 started in session session_013cWxq2fKcmqBDmwsYQQwEz.
 - 2026-11-22 UTC — T03 done: PR #52 squash-merged into langgraph-build (250 passed, 1 skipped). T05 now unblocked. Live PubMed sample still needs a person (no NCBI access in the build env).
 - 2026-11-22 00:10 UTC — T04 done: PR #51 squash-merged into langgraph-build (193 passed, 1 skipped).
