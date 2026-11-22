@@ -536,6 +536,37 @@ Decisions and deviations:
   SUPPORTED or CONTRADICTED, so "a deciding claim is INSUFFICIENT_EVIDENCE or MIXED" can't
   fire; `mixed_evidence:<cid>` now covers MIXED instead.
 
+**T16 revision (§9 as revised in commit f238dab, after the first golden-set batch).** Two
+new rules; the table above is now, in order:
+
+| # | Rule (`decision_rule`) | Label | Deciding claims | Evidence cited | Rule's own review reason |
+|---|---|---|---|---|---|
+| 1 | `endorsed_contradicted` | MISINFO | ENDORSES + CONTRADICTED | contradicting IDs | — |
+| 2 | `refuted_supported` (new) | MISINFO | REFUTES + SUPPORTED | **supporting** IDs | `denies_supported:<cid>` (always reviewed) |
+| 3 | `refuted_contradicted` | DEBUNKING | REFUTES + CONTRADICTED | contradicting IDs | — |
+| 4 | `judged_nothing_false_endorsed` | NO_MISINFO | SUPPORTED/CONTRADICTED | supporting + contradicting | — |
+| 5 | `refuted_unsettled` (new) | CANNOT_RECOGNIZE | REFUTES + MIXED/INSUFFICIENT | supporting + contradicting | `possible_debunk:<cid>` |
+| 6 | `nothing_judged` / `no_claims` | CANNOT_RECOGNIZE | none | none | — |
+
+- **"The judge returns its review reasons"** = `Decision.rule_review_reasons` (§9's third
+  return value). They travel in the existing `final_result.review_flags`, so the review
+  policy already turns them into `judge:denies_supported:<cid>` /
+  `judge:possible_debunk:<cid>`. No new state field (state schema §4–5 unchanged).
+- **Per-claim reasons, not the doc's prose strings.** The doc sketch returns
+  `"speaker denies a supported claim"`; we use `denies_supported:<cid>` like every other
+  flag, so a reviewer sees which claim. `flag_text` renders the prose in the explanation.
+- **Rule 5 is checked after NO_MISINFO, as the doc's order says.** So a refuted unsettled
+  claim next to any judged claim does *not* raise `possible_debunk` (the issue title reads
+  as unconditional; the doc wins). `REFUTES + NOT_VERIFIABLE` is not a possible debunk.
+- **Abstaining claims count.** A claim whose critic budget ran out abstains as
+  INSUFFICIENT_EVIDENCE (T07); if its stance is REFUTES it now decides a `refuted_unsettled`
+  CANNOT_RECOGNIZE. The stub sample's exhausted-budget test now expects `claim_ids == ["c2"]`.
+- `review_policy.rule_weak_evidence` treats `refuted_unsettled` like `nothing_judged` (every
+  uncertain claim gets `weak_evidence:<cid>`). `claim_label` (per-claim label) gives
+  REFUTES + SUPPORTED → MISINFO. The evaluation's `metrics.judge_label` (gold-label sanity
+  check) was updated to the same rules, with a test that it agrees with the node on every
+  two-claim combination. T10's adversarial report is unchanged (still current).
+
 ## 7i. Critic and Bounded Loop Decisions (T07, #34)
 
 The node is `backend/app/core/graph/critic.py` (`make_critique_verification(caller)`); the
@@ -946,6 +977,14 @@ replacement.
 ## 10. Check-In Log
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
+
+- **2026-11-22**: T16 (#35) judge updated to the revised §9 rules by the automated build:
+  REFUTES + SUPPORTED → MISINFO (`refuted_supported`, always reviewed via
+  `denies_supported:<cid>`); REFUTES + MIXED/INSUFFICIENT → CANNOT_RECOGNIZE
+  (`refuted_unsettled`, `possible_debunk:<cid>`), checked after NO_MISINFO per the doc's
+  order; `Decision.rule_review_reasons` returns the rule's reasons. Eval `judge_label` and
+  per-claim `claim_label` aligned. Decisions in §7h. Needs Pranav's agreement with the rest
+  of the §9 policy.
 
 - **2026-11-22**: T11 (#38) integration built by the automated build: `GraphProvider`
   behind `USE_GRAPH_PIPELINE` (default off; single-call path unchanged), graph on every

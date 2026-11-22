@@ -171,7 +171,6 @@ def test_rule2_endorsed_supported_does_not_block_debunking():
 
 @pytest.mark.parametrize("rows", [
     [(E, SUP)],                    # §9 probe: only claim supported and endorsed
-    [(RF, SUP)],                   # refuting a true claim isn't misinformation by these rules
     [(N, SUP), (E, INS)],          # one judged claim is enough
     [(E, SUP), (E, MIX)],          # MIXED alone doesn't make a video MISINFO
 ])
@@ -188,10 +187,122 @@ def test_rule3_deciding_claims_are_the_judged_ones_with_all_their_evidence():
     assert final.evidence_ids == ["ev_c1", "ev_c3"]
 
 
+# ------------------------- T16 rule: REFUTES + SUPPORTED → MISINFO (always reviewed)
+
+
+def test_refuted_supported_is_misinfo_and_always_reviewed():
+    # "Vaccines don't prevent measles, that's a lie" — the speaker denies something true.
+    final, _ = run_judge(make_state((RF, SUP)))
+    assert final.classification == MisinfoLabel.MISINFO
+    assert final.decision_rule == jg.RULE_REFUTED_SUPPORTED
+    assert final.claim_ids == ["c1"]
+    assert final.evidence_ids == ["ev_c1"]  # the evidence that shows it true
+    assert final.review_flags == [f"{jg.FLAG_DENIES_SUPPORTED}:c1"]
+    assert final.explanation.startswith("MISINFO because claim c1")
+    assert "denied by the speaker but supported by the evidence (ev_c1)" in final.explanation
+
+
+def test_refuted_supported_returns_its_review_reason():
+    d = jg.decide(jg.claim_views(make_state((RF, SUP), (E, SUP)))[0])
+    assert d.rule_review_reasons == [f"{jg.FLAG_DENIES_SUPPORTED}:c1"]
+    assert d.claim_ids == ["c1"]
+
+
+@pytest.mark.parametrize("rows,label,rule", [
+    ([(E, CON), (RF, SUP)], MisinfoLabel.MISINFO, jg.RULE_ENDORSED_CONTRADICTED),  # rule 1 first
+    ([(RF, SUP), (RF, CON)], MisinfoLabel.MISINFO, jg.RULE_REFUTED_SUPPORTED),     # beats DEBUNKING
+    ([(RF, SUP), (E, SUP)], MisinfoLabel.MISINFO, jg.RULE_REFUTED_SUPPORTED),      # beats NO_MISINFO
+])
+def test_refuted_supported_rule_order(rows, label, rule):
+    final, _ = run_judge(make_state(*rows))
+    assert (final.classification, final.decision_rule) == (label, rule)
+
+
+def test_refuted_supported_reason_only_when_its_rule_fires():
+    # Rule 1 decided: the denied-true claim isn't the deciding one, so no rule reason.
+    final, _ = run_judge(make_state((E, CON), (RF, SUP)))
+    assert not any(f.startswith(jg.FLAG_DENIES_SUPPORTED) for f in final.review_flags)
+
+
+def test_refuted_supported_goes_to_review_in_the_graph():
+    s = make_state((RF, SUP))
+    s["final_result"] = run_judge(s)[0]
+    s["validation_errors"] = []
+    out = make_stub_nodes()[r.ROUTE_FOR_REVIEW](s)
+    assert out["requires_human_review"] is True
+    assert f"judge:{jg.FLAG_DENIES_SUPPORTED}:c1" in out["review_reasons"]
+
+
+# -------------- T16 rule: REFUTES + MIXED/INSUFFICIENT → CANNOT_RECOGNIZE, possible debunk
+
+
+@pytest.mark.parametrize("verdict", [MIX, INS])
+def test_refuted_unsettled_is_cannot_recognize_possible_debunk(verdict):
+    final, _ = run_judge(make_state((RF, verdict)))
+    assert final.classification == MisinfoLabel.CANNOT_RECOGNIZE
+    assert final.decision_rule == jg.RULE_REFUTED_UNSETTLED
+    assert final.claim_ids == ["c1"]
+    assert f"{jg.FLAG_POSSIBLE_DEBUNK}:c1" in final.review_flags
+    assert "may be a debunk" in final.explanation
+    assert "possible debunk of unsettled claim c1" in final.explanation
+
+
+def test_refuted_unsettled_returns_its_review_reasons():
+    d = jg.decide(jg.claim_views(make_state((RF, INS), (E, NV), (RF, MIX)))[0])
+    assert d.label == MisinfoLabel.CANNOT_RECOGNIZE
+    assert d.claim_ids == ["c1", "c3"]
+    assert d.rule_review_reasons == [f"{jg.FLAG_POSSIBLE_DEBUNK}:c1", f"{jg.FLAG_POSSIBLE_DEBUNK}:c3"]
+
+
+@pytest.mark.parametrize("rows,label", [
+    ([(RF, INS), (E, SUP)], MisinfoLabel.NO_MISINFO),   # a judged claim wins (doc order)
+    ([(RF, INS), (RF, CON)], MisinfoLabel.DEBUNKING),
+    ([(RF, MIX), (E, CON)], MisinfoLabel.MISINFO),
+])
+def test_refuted_unsettled_comes_after_the_judged_rules(rows, label):
+    final, _ = run_judge(make_state(*rows))
+    assert final.classification == label
+    assert not any(f.startswith(jg.FLAG_POSSIBLE_DEBUNK) for f in final.review_flags)
+
+
+def test_refuted_not_verifiable_is_not_a_possible_debunk():
+    final, _ = run_judge(make_state((RF, NV)))
+    assert final.decision_rule == jg.RULE_NOTHING_JUDGED
+    assert final.review_flags == []
+
+
+def test_possible_debunk_goes_to_review_in_the_graph():
+    s = make_state((RF, INS), (E, NV))
+    s["final_result"] = run_judge(s)[0]
+    s["validation_errors"] = []
+    out = make_stub_nodes()[r.ROUTE_FOR_REVIEW](s)
+    assert out["requires_human_review"] is True
+    assert f"judge:{jg.FLAG_POSSIBLE_DEBUNK}:c1" in out["review_reasons"]
+    assert "weak_evidence:c1" in out["review_reasons"]
+
+
+def test_rules_without_their_own_reasons_return_none():
+    for rows in ([(E, CON)], [(RF, CON)], [(E, SUP)], [(E, INS)], []):
+        assert jg.decide(jg.claim_views(make_state(*rows))[0]).rule_review_reasons == [], rows
+
+
+def test_evaluation_judge_label_matches_the_node():
+    """The eval's gold-label sanity check (metrics.judge_label) is the same §9 policy."""
+    import itertools
+
+    from app.evaluation.metrics import judge_label
+
+    stances, verdicts = [E, RF, Q, N, U], [SUP, CON, MIX, INS, NV]
+    for combo in itertools.product(itertools.product(stances, verdicts), repeat=2):
+        node = run_judge(make_state(*combo))[0].classification.value
+        assert judge_label([(s.value, v.value) for s, v in combo]) == node, combo
+
+
 # ------------------------------------------------------ rule 4: CANNOT_RECOGNIZE
 
 
-@pytest.mark.parametrize("rows", [[(E, INS)], [(E, NV)], [(E, MIX)], [(E, INS), (RF, NV), (Q, MIX)]])
+@pytest.mark.parametrize("rows", [[(E, INS)], [(E, NV)], [(E, MIX)], [(E, INS), (RF, NV), (Q, MIX)],
+                                  [(U, INS), (N, MIX)]])
 def test_rule4_nothing_judged_is_cannot_recognize(rows):
     final, _ = run_judge(make_state(*rows))
     assert final.classification == MisinfoLabel.CANNOT_RECOGNIZE
@@ -482,6 +593,8 @@ def test_mapping_records_the_explanation_model():
 
 @pytest.mark.parametrize("stance,verdict,label", [
     (E, CON, MisinfoLabel.MISINFO), (RF, CON, MisinfoLabel.DEBUNKING), (Q, CON, MisinfoLabel.NO_MISINFO),
+    (RF, SUP, MisinfoLabel.MISINFO), (RF, MIX, MisinfoLabel.CANNOT_RECOGNIZE),
+    (RF, INS, MisinfoLabel.CANNOT_RECOGNIZE),
     (E, SUP, MisinfoLabel.NO_MISINFO), (E, MIX, MisinfoLabel.CANNOT_RECOGNIZE),
     (None, INS, MisinfoLabel.CANNOT_RECOGNIZE), (U, NV, MisinfoLabel.CANNOT_RECOGNIZE),
 ])

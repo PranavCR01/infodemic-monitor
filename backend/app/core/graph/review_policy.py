@@ -18,7 +18,7 @@ overturn them (§12 "what if review becomes a bottleneck?").
 | ``validation_failed``    | ``validation_failed:<check>[:<cid>]`` | §10/§11: a validation check failed after repair |
 | ``low_confidence``       | ``low_confidence``             | §11: calibrated confidence below the threshold (dormant until T15) |
 | ``high_risk_uncertain``  | ``high_risk_uncertain:<cid>``  | issue #36: an endorsed high-risk claim the evidence couldn't settle |
-| ``judge_flags``          | ``judge:<flag>``               | §9: patterns the judge's rules can't settle (T08) |
+| ``judge_flags``          | ``judge:<flag>``               | §9: patterns the judge's rules can't settle (T08), and the reasons the rules add themselves (``denies_supported:<cid>``, ``possible_debunk:<cid>``; T16) |
 | ``guardrails``           | ``prompt_injection_suspected:...``, ``guardrail:...`` | §15: suspected injection or a guardrail rejection (T10) |
 
 The node writes ``requires_human_review`` and ``review_reasons``. The reasons are
@@ -123,14 +123,14 @@ RuleFn = Callable[[ReviewContext], list[str]]
 
 
 def rule_weak_evidence(ctx: ReviewContext) -> list[str]:
-    """A deciding claim is INSUFFICIENT_EVIDENCE or MIXED. Under the §9 rules deciding
-    claims are always SUPPORTED or CONTRADICTED, so this also fires on the abstention
-    case: label CANNOT_RECOGNIZE because nothing could be judged, for every checkable
+    """A deciding claim is INSUFFICIENT_EVIDENCE or MIXED (under the §9 rules, only
+    the ``refuted_unsettled`` possible-debunk case has such deciding claims). It also
+    fires on the abstention case: label CANNOT_RECOGNIZE because nothing could be judged, for every checkable
     claim whose evidence was insufficient or mixed (NOT_VERIFIABLE alone doesn't)."""
-    from app.core.graph.judge import RULE_NOTHING_JUDGED
+    from app.core.graph.judge import RULE_NOTHING_JUDGED, RULE_REFUTED_UNSETTLED
 
     out = [cid for cid in ctx.deciding if ctx.verdicts.get(cid) and ctx.verdicts[cid].verdict in UNCERTAIN_VERDICTS]
-    if ctx.final and ctx.final.decision_rule == RULE_NOTHING_JUDGED:
+    if ctx.final and ctx.final.decision_rule in (RULE_NOTHING_JUDGED, RULE_REFUTED_UNSETTLED):
         out += [
             cid for cid, v in ctx.verdicts.items()
             if cid in ctx.claims and v.verdict in UNCERTAIN_VERDICTS and cid not in out

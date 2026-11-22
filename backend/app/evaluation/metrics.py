@@ -22,10 +22,13 @@ def judge_label(claims: Iterable[tuple[str, str]]) -> str:
     claims = list(claims)
     if any(s == "ENDORSES" and v == "CONTRADICTED" for s, v in claims):
         return "MISINFO"
+    if any(s == "REFUTES" and v == "SUPPORTED" for s, v in claims):
+        return "MISINFO"  # the speaker denies something true (always reviewed)
     if any(s == "REFUTES" and v == "CONTRADICTED" for s, v in claims):
         return "DEBUNKING"
     if any(v in ("SUPPORTED", "CONTRADICTED") for _, v in claims):
         return "NO_MISINFO"
+    # REFUTES + MIXED/INSUFFICIENT also lands here (sent to review as a possible debunk).
     return "CANNOT_RECOGNIZE"
 
 
