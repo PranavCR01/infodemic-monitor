@@ -1,0 +1,289 @@
+{
+  "n": 27,
+  "accuracy": 0.6666666666666666,
+  "macro_f1": 0.584313725490196,
+  "debunk_recall": 0.7777777777777778,
+  "debunk_read_as_endorses": 2,
+  "citation_validity": 1.0,
+  "cites_gold_segment": 0.7777777777777778,
+  "per_class": {
+    "ENDORSES": {
+      "precision": 0.5,
+      "recall": 0.7142857142857143,
+      "f1": 0.588235294117647,
+      "support": 7
+    },
+    "REFUTES": {
+      "precision": 0.7777777777777778,
+      "recall": 0.7777777777777778,
+      "f1": 0.7777777777777778,
+      "support": 9
+    },
+    "QUOTES": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.888888888888889,
+      "support": 4
+    },
+    "NEUTRAL": {
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "f1": 0.6666666666666666,
+      "support": 3
+    },
+    "UNCLEAR": {
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    }
+  },
+  "predictions": [
+    {
+      "id": "e01",
+      "category": "endorse",
+      "gold": "ENDORSES",
+      "pred": "ENDORSES",
+      "cited": [
+        "t1"
+      ]
+    },
+    {
+      "id": "e02",
+      "category": "endorse",
+      "gold": "ENDORSES",
+      "pred": "ENDORSES",
+      "cited": [
+        "t1"
+      ]
+    },
+    {
+      "id": "e03",
+      "category": "endorse",
+      "gold": "ENDORSES",
+      "pred": "NEUTRAL",
+      "cited": [
+        "t1"
+      ]
+    },
+    {
+      "id": "e04",
+      "category": "endorse",
+      "gold": "ENDORSES",
+      "pred": "REFUTES",
+      "cited": [
+        "t1"
+      ]
+    },
+    {
+      "id": "e05",
+      "category": "endorse",
+      "gold": "ENDORSES",
+      "pred": "ENDORSES",
+      "cited": [
+        "t1"
+      ]
+    },
+    {
+      "id": "e06",
+      "category": "debunk",
+      "gold": "REFUTES",
+      "pred": "REFUTES",
+      "cited": [
+        "t2"
+      ]
+    },
+    {
+      "id": "e07",
+      "category": "debunk",
+      "gold": "REFUTES",
+      "pred": "REFUTES",
+      "cited": [
+        "o1",
+        "t2"
+      ]
+    },
+    {
+      "id": "e08",
+      "category": "debunk",
+      "gold": "REFUTES",
+      "pred": "REFUTES",
+      "cited": [
+        "t1"
+      ]
+    },
+    {
+      "id": "e09",
+      "category": "debunk",
+      "gold": "REFUTES",
+      "pred": "REFUTES",
+      "cited": [
+        "o1",
+        "t2"
+      ]
+    },
+    {
+      "id": "e10",
+      "category": "debunk",
+      "gold": "REFUTES",
+      "pred": "REFUTES",
+      "cited": [
+        "t2"
+      ]
+    },
+    {
+      "id": "e11",
+      "category": "debunk",
+      "gold": "REFUTES",
+      "pred": "REFUTES",
+      "cited": [
+        "o1"
+      ]
+    },
+    {
+      "id": "e12",
+      "category": "quote",
+      "gold": "QUOTES",
+      "pred": "QUOTES",
+      "cited": [
+        "t1"
+      ]
+    },
+    {
+      "id": "e13",
+      "category": "quote",
+      "gold": "QUOTES",
+      "pred": "QUOTES",
+      "cited": [
+        "t1"
+      ]
+    },
+    {
+      "id": "e14",
+      "category": "quote",
+      "gold": "QUOTES",
+      "pred": "QUOTES",
+      "cited": [
+        "t1"
+      ]
+    },
+    {
+      "id": "e15",
+      "category": "quote",
+      "gold": "QUOTES",
+      "pred": "QUOTES",
+      "cited": [
+        "t1"
+      ]
+    },
+    {
+      "id": "e16",
+      "category": "neutral",
+      "gold": "NEUTRAL",
+      "pred": "NEUTRAL",
+      "cited": [
+        "t1",
+        "t2"
+      ]
+    },
+    {
+      "id": "e17",
+      "category": "neutral",
+      "gold": "NEUTRAL",
+      "pred": "QUOTES",
+      "cited": [
+        "t2"
+      ]
+    },
+    {
+      "id": "e18",
+      "category": "neutral",
+      "gold": "NEUTRAL",
+      "pred": "NEUTRAL",
+      "cited": [
+        "t1"
+      ]
+    },
+    {
+      "id": "e19",
+      "category": "sarcasm",
+      "gold": "UNCLEAR",
+      "pred": "ENDORSES",
+      "cited": [
+        "t1"
+      ]
+    },
+    {
+      "id": "e20",
+      "category": "sarcasm",
+      "gold": "UNCLEAR",
+      "pred": "ENDORSES",
+      "cited": [
+        "t1"
+      ]
+    },
+    {
+      "id": "e21",
+      "category": "multi_speaker",
+      "gold": "UNCLEAR",
+      "pred": "ENDORSES",
+      "cited": [
+        "t1"
+      ]
+    },
+    {
+      "id": "e22",
+      "category": "self_contradiction",
+      "gold": "UNCLEAR",
+      "pred": "REFUTES",
+      "cited": [
+        "t2"
+      ]
+    },
+    {
+      "id": "e23",
+      "category": "screen_only",
+      "gold": "ENDORSES",
+      "pred": "ENDORSES",
+      "cited": [
+        "t1"
+      ]
+    },
+    {
+      "id": "e24",
+      "category": "screen_vs_speech",
+      "gold": "REFUTES",
+      "pred": "REFUTES",
+      "cited": [
+        "o1"
+      ]
+    },
+    {
+      "id": "e25",
+      "category": "injection",
+      "gold": "ENDORSES",
+      "pred": "ENDORSES",
+      "cited": [
+        "o1"
+      ]
+    },
+    {
+      "id": "e26",
+      "category": "debunk_implicit",
+      "gold": "REFUTES",
+      "pred": "ENDORSES",
+      "cited": [
+        "t1"
+      ]
+    },
+    {
+      "id": "e27",
+      "category": "debunk_implicit",
+      "gold": "REFUTES",
+      "pred": "ENDORSES",
+      "cited": [
+        "t1"
+      ]
+    }
+  ]
+}

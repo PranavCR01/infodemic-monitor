@@ -165,6 +165,42 @@ signature `(state) -> dict` and the field ownership below.
   the PMIDs the labellers recorded for that claim (`relevant_pmids`). Real per-citation
   support labels are still needed.
 
+## 7c. Stance Analyzer Decisions (T04, #30)
+
+The node is `app/core/graph/stance.py` (`make_analyze_stance(caller)`); the prompt is
+`app/core/graph/prompts/stance_v1.md`; the test set and runner are
+`app/tests/fixtures/stance/` and `app/core/graph/stance_eval.py`.
+
+- **Model choice is injected, never named.** The node takes a `StepCaller`: anything with
+  `call(step, input, *, system=None)` returning `.output` (and `.record.model` /
+  `.record.prompt_version`). T01's `ModelRouter` has that shape, so the router built from
+  `backend/config/routing.yaml` is passed in as-is; the prompt version comes from
+  `router.route("analyze_stance").prompt` (default `stance_v1`), and a missing prompt
+  file fails when the node is built, not mid-run.
+- **Request contract for provider clients:** `input` is a provider-neutral dict
+  `{messages, tools: [record_stance], tool_choice: {type: tool, name: record_stance},
+  max_tokens, temperature: 0}`; the client must return the tool's input dict as `output`.
+  T01's real Anthropic/OpenAI clients need to honour `tools`/`tool_choice` (T11 or
+  whoever writes the real clients).
+- **One call per claim**, with the claim's own segments plus every speech/caption
+  segment within 15 s (max 40), because the deciding words ("That's a myth.") are often
+  the next sentence. Segments are the transcript and OCR pieces (`t*`, `o*`); fused
+  segments are used only when a claim cites them or no pieces exist.
+- **Strict validation.** Unknown stance, no citation, or any cited ID not shown to the
+  model (including a real ID outside the window) → UNCLEAR citing the claim's own
+  source segments, plus a `NodeError`. A failed call → UNCLEAR, `retryable=True`. So
+  every stance cites at least one input segment ID; the only exception is a claim with no
+  segments at all, which is UNCLEAR with an error.
+- **confidence is always `None`**; a confidence the model volunteers is dropped.
+- **`StanceResult` gained optional `model` and `prompt_version`** (§13 "every result
+  records which model and prompt version produced it"). Additive with defaults, so
+  `STATE_SCHEMA_VERSION` stays 1.0.0 and old checkpoints still load.
+- **Test set results.** 27 examples. Keyword heuristic floor: macro F1 0.58, debunk
+  recall 0.78 (misses the two implicit corrections). LLM row is empty until API keys
+  exist; see `app/tests/fixtures/stance/RESULTS.md`. Single labeller; not a substitute for
+  the shared §14 set. Metrics are local to `stance_eval.py` (written before T01's
+  `app.evaluation.metrics` merged); fold them into it later.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -185,6 +221,12 @@ replacement.
 ## 10. Check-In Log
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
+
+- **2026-11-22**: T04 (#30) stance analyzer built by the automated build: forced
+  `record_stance` tool call through an injected router, versioned prompt `stance_v1`,
+  invalid output → UNCLEAR, every stance cites an input segment, confidence left empty.
+  27-example test set with debunk recall reported separately; keyword floor 0.78 debunk
+  recall, LLM run waits for API keys. Decisions in §7c.
 
 - **2026-11-22** (T01, automated): Built the evaluation framework (`backend/app/evaluation/`:
   dataset loader with versions, hashes, by-video splits, hard-case coverage and Cohen's kappa;
