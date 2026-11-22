@@ -19,6 +19,15 @@ rules find no concept in a claim.
   and that claim falls back to its first 10 papers in PubMed's order, unscored. With an
   offline library injected (T12), a claim left with no paper that clears the threshold
   falls back to the library (owns ``library_evidence`` too).
+- Authoritative references (T17, §6 "Trusted sources beyond PubMed"): with a
+  ``ReferenceSearcher`` injected, ``retrieve_evidence`` also searches the allow-listed
+  references for every claim whose ``claim_kind`` is ``fact_of_record``, once, in the
+  claim's first round, alongside PubMed (not as a fallback). The ``ref_<hash>`` records
+  join the claim's ``retrieved_evidence``, so citation checks, the judge and
+  persistence treat them like papers. ``rerank_evidence`` passes the claim's kind to
+  the reranker: references first for facts of record, studies first otherwise.
+  Research questions never touch the references. A reference failure is recorded in
+  ``errors`` and the claim goes on with PubMed.
 
 Use them by overriding the stubs:
 
@@ -38,6 +47,7 @@ from app.core.graph.state import NodeError, PipelineState
 from app.core.retrieval.library.fallback import LibraryFallback, merge_library_evidence, should_fire
 from app.core.retrieval.planning import QueryPlanner
 from app.core.retrieval.pubmed import PubMedClient
+from app.core.retrieval.references.search import ReferenceSearcher
 from app.core.retrieval.rerank import MAX_EVIDENCE_PER_CLAIM, Reranker
 from app.core.retrieval.retriever import EvidenceRetriever, merge_evidence
 
@@ -48,6 +58,7 @@ def make_retrieval_nodes(
     budgets: Budgets = DEFAULT_BUDGETS,
     reranker: Optional[Reranker] = None,
     library: Optional[LibraryFallback] = None,
+    references: Optional[ReferenceSearcher] = None,
 ) -> dict[str, NodeFn]:
     planner = planner or QueryPlanner()
 
@@ -73,10 +84,29 @@ def make_retrieval_nodes(
         evidence = {cid: list(recs) for cid, recs in state.get("retrieved_evidence", {}).items()}
         attempts = dict(state.get("retrieval_attempts", {}))
         errors: list[NodeError] = []
+        claims = {c.claim_id: c for c in state.get("claims", [])}
         for cid in r.claims_to_retrieve(state, budgets):
             planned = state.get("retrieval_queries", {}).get(cid, [])
+            first_round = attempts.get(cid, 0) == 0
             attempts[cid] = attempts.get(cid, 0) + 1
             evidence.setdefault(cid, [])
+            claim = claims.get(cid)
+            if (references is not None and first_round and claim is not None
+                    and claim.claim_kind == "fact_of_record"):
+                try:
+                    found = references.search(claim.claim_text)
+                except Exception as exc:  # noqa: BLE001 - recorded in state, not raised
+                    errors.append(NodeError(
+                        node=r.RETRIEVE_EVIDENCE, claim_id=cid, retryable=True,
+                        message=f"reference search failed: {type(exc).__name__}: {exc}"[:500],
+                    ))
+                else:
+                    evidence[cid] = merge_evidence(evidence[cid], found.records)
+                    errors += [
+                        NodeError(node=r.RETRIEVE_EVIDENCE, claim_id=cid,
+                                  message=f"reference source degraded: {e}"[:500])
+                        for e in found.errors
+                    ]
             if not planned:
                 errors.append(NodeError(node=r.RETRIEVE_EVIDENCE, claim_id=cid, message="no query planned"))
                 continue
@@ -130,7 +160,7 @@ def make_rerank_node(
             if claim is None:
                 continue
             try:
-                reranked[cid] = reranker.rerank(claim.claim_text, records).kept
+                reranked[cid] = reranker.rerank(claim.claim_text, records, claim.claim_kind).kept
             except Exception as exc:  # noqa: BLE001 - recorded in state, not raised
                 errors.append(
                     NodeError(

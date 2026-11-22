@@ -182,7 +182,7 @@ def test_each_verdict_is_recorded(verdict, sup, con):
     assert res == VerificationResult(
         claim_id="c1", verdict=Verdict(verdict), supporting_evidence_ids=sup, contradicting_evidence_ids=con,
         explanation="because", limitations=["indirect"], raw_confidence=0.6,
-        model="fake-model-1", prompt_version="verify_v1",
+        model="fake-model-1", prompt_version="verify_v2",
     )
     assert len(caller.calls) == 1 and "errors" not in out
 

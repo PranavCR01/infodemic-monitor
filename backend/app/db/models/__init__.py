@@ -9,6 +9,7 @@ from app.db.models.claim import (  # noqa: F401
     CriticReviewRow,
     EvidenceRecordRow,
     ModelRunRow,
+    ReferenceSnapshotRow,
     OcrSegmentRow,
     TranscriptSegmentRow,
     VerificationResultRow,

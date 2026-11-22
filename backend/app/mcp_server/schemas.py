@@ -14,9 +14,10 @@ from __future__ import annotations
 
 from typing import Literal, Optional
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
-from app.core.retrieval.schemas import Concept, EvidenceRecord, SearchFilters
+from app.core.retrieval.schemas import Concept, SearchFilters
+from app.core.retrieval.schemas import EvidenceRecord as CoreEvidenceRecord
 
 # Hard caps (contract).
 MAX_TEXT_CHARS = 2000  # map_to_mesh input
@@ -44,6 +45,61 @@ class _In(BaseModel):
 
 class _Out(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
+
+
+# ------------------------------------------------------------- evidence record
+
+
+# The record as the tools publish it (contract v1). Kept apart from
+# ``app.core.retrieval.schemas.EvidenceRecord`` on purpose: T17 added authoritative
+# references (``source: "reference"`` and three optional fields) to the pipeline's
+# record, and the contract only changes additively, under new tool names (§6
+# "Versioning"). No tool here returns references; exposing them would be a new tool.
+# The docstring is the published schema description: keep it as it was.
+_T17_FIELDS = frozenset({"publisher", "retrieved_at", "snapshot_sha256"})
+
+
+class EvidenceRecord(BaseModel):
+    """One retrieved paper or library passage (§6). IDs, titles and URLs always come
+from the retrieval tool's response, never from a model."""
+
+    model_config = ConfigDict(frozen=True, extra="forbid", title="EvidenceRecord")
+
+    evidence_id: str
+    source: Literal["pubmed", "library"]
+    title: str
+    abstract: str = ""
+    pmid: Optional[str] = None
+    doi: Optional[str] = None
+    document_id: Optional[str] = None
+    page: Optional[int] = None
+    publication_year: Optional[int] = None
+    publication_type: list[str] = Field(default_factory=list)
+    source_url: Optional[str] = None
+    query: Optional[str] = None
+    relevance_score: Optional[float] = None
+    study_type: Optional[str] = None
+    quality_score: Optional[float] = None
+
+    @model_validator(mode="before")
+    @classmethod
+    def _drop_empty_reference_fields(cls, data):
+        # A caller that copies the pipeline's records sends T17's fields as nulls;
+        # accept those (they carry nothing). Non-null values are still refused.
+        if isinstance(data, dict):
+            data = {k: v for k, v in data.items() if not (k in _T17_FIELDS and v is None)}
+        return data
+
+    @classmethod
+    def from_core(cls, rec: CoreEvidenceRecord) -> "EvidenceRecord":
+        return cls.model_validate(rec.model_dump(include=set(cls.model_fields)))
+
+    def to_core(self) -> CoreEvidenceRecord:
+        return CoreEvidenceRecord.model_validate(self.model_dump())
+
+
+def to_contract(records) -> list[EvidenceRecord]:
+    return [EvidenceRecord.from_core(r) for r in records]
 
 
 # --------------------------------------------------------------------- inputs

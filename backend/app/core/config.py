@@ -53,6 +53,11 @@ class Settings(BaseSettings):
     NCBI_API_KEY: str = ""
     NCBI_EMAIL: str = ""
     RETRIEVAL_MAX_RESULTS_PER_QUERY: int = 20
+    # Authoritative references for facts of record (T17, design §6): allow-listed pages
+    # in config/reference_sources.yaml, searched alongside PubMed for claims tagged
+    # fact_of_record. Off by default; only read when USE_GRAPH_PIPELINE is on. Needs
+    # migration 0009 (reference_snapshots) before it is turned on.
+    USE_REFERENCE_SOURCES: bool = False
 
     # Migrations
     RUN_MIGRATIONS: bool = True  # set False on Railway worker service

@@ -31,6 +31,10 @@ How it fits:
   as ``similarity``. When unsure, claims stay separate: a wrong merge hides a claim.
 - **Claim cap.** T10's ``cap_claims`` (50 by default); dropped claims are recorded as a
   ``guardrail:`` error so the run goes to review.
+- **claim_kind** (§4, T17): ``research_question`` or ``fact_of_record``, asked of the
+  model (prompt ``extract_v2``); a missing or unknown value is decided by the fixed
+  rules in ``app.core.retrieval.claim_kind``. Retrieval uses it to add authoritative
+  references for facts of record (§6).
 - Writes only ``claims`` (plus the shared, append-only ``errors``).
 """
 from __future__ import annotations
@@ -51,9 +55,11 @@ from app.core.guardrails.untrusted import (
     extraction_prompt,
     guarded_system_prompt,
 )
+from app.core.retrieval.claim_kind import resolve_claim_kind
+from app.core.retrieval.schemas import CLAIM_KINDS
 
 STEP = "extract_claims"  # routing.yaml step name (§13)
-DEFAULT_PROMPT_VERSION = "extract_v1"
+DEFAULT_PROMPT_VERSION = "extract_v2"  # v2 adds claim_kind (T17)
 TOOL_NAME = "record_claims"
 EXTRACTION_UNAVAILABLE = "EXTRACTION_UNAVAILABLE"
 
@@ -86,6 +92,11 @@ EXTRACT_TOOL: dict = {
                             "description": "Block IDs from the SEGMENT INDEX the claim comes from.",
                         },
                         "requires_verification": {"type": "boolean"},
+                        "claim_kind": {
+                            "type": "string", "enum": list(CLAIM_KINDS),
+                            "description": "research_question (does X work / cause Y) or fact_of_record "
+                                           "(a schedule, a legal limit, a statistic, a basic physiological fact).",
+                        },
                     },
                     "required": ["claim_text", "claim_category", "source_segment_ids"],
                     "additionalProperties": False,
@@ -313,6 +324,7 @@ def extract_window(
             start_seconds=min(blocks[b]["span"][0] for b in cited),
             end_seconds=max(blocks[b]["span"][1] for b in cited),
             requires_verification=item.requires_verification,
+            claim_kind=resolve_claim_kind(item.claim_kind, item.claim_text, category),
         ))
     return claims, errors, False
 

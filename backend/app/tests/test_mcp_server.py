@@ -271,7 +271,9 @@ def test_fetch_records_match_the_retriever(local_server):
     assert not r.is_error, r.content
     ref = RecordedPubMed()
     arts = EvidenceRetriever(ref.client(), InMemoryQueryCache()).articles(pmids)
-    expected = [to_evidence(a, "").model_copy(update={"query": None}).model_dump(mode="json") for a in arts]
+    # The contract's v1 record: the pipeline's T17 reference fields are not published.
+    expected = [to_evidence(a, "").model_copy(update={"query": None}).model_dump(
+        mode="json", exclude={"publisher", "retrieved_at", "snapshot_sha256"}) for a in arts]
     out = r.structured_content
     assert out["records"] == expected
     assert out["missing"] == ["1"]

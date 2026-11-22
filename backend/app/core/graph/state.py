@@ -24,7 +24,7 @@ from typing import Annotated, Any, Literal, Optional, TypedDict
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from app.core.retrieval.schemas import EvidenceRecord
+from app.core.retrieval.schemas import ClaimKind, EvidenceRecord
 from app.core.schemas.pipeline import MisinfoLabel
 
 STATE_SCHEMA_VERSION = "1.0.0"
@@ -128,6 +128,12 @@ class GraphClaim(_Record):
     start_seconds: float
     end_seconds: float
     requires_verification: bool = True
+    # §4: a research question (does X work / cause Y) or a fact of record (a schedule,
+    # a legal limit, a statistic, a basic physiological fact). Retrieval uses it to
+    # choose between studies and authoritative references (§6, T17). Defaults to a
+    # research question, so checkpoints written before T17 load and keep PubMed-only
+    # retrieval.
+    claim_kind: ClaimKind = "research_question"
 
 
 class StanceResult(_Record):

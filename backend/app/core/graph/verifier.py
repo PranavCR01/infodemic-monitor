@@ -65,7 +65,7 @@ from app.core.guardrails.untrusted import (
 )
 
 STEP = "verify_claims"  # routing.yaml step name (§13)
-DEFAULT_PROMPT_VERSION = "verify_v1"
+DEFAULT_PROMPT_VERSION = "verify_v2"  # v2 adds authoritative references (T17)
 TOOL_NAME = "record_verdict"
 MAX_EVIDENCE_PER_CLAIM = 10  # §6 "Cap"; enforced here too in case the reranker isn't
 DEFAULT_MAX_REPAIRS = 1
@@ -178,6 +178,10 @@ def evidence_index(evidence: Sequence[EvidenceRecord]) -> str:
             parts.append("publication type: " + _meta(", ".join(e.publication_type)))
         if e.publication_year:
             parts.append(f"year: {int(e.publication_year)}")
+        if e.publisher:
+            parts.append(f"publisher: {_meta(e.publisher)}")
+        if e.retrieved_at:
+            parts.append(f"retrieved: {_meta(e.retrieved_at[:10])}")
         lines.append("- " + " | ".join(parts))
     return "\n".join(lines)
 
@@ -185,7 +189,7 @@ def evidence_index(evidence: Sequence[EvidenceRecord]) -> str:
 def _instructions(claim: GraphClaim, evidence: Sequence[EvidenceRecord], repair_note: Optional[str]) -> str:
     text = (
         f"Judge claim {claim.claim_id} (in the fenced claim block) against the papers below.\n\n"
-        f"EVIDENCE INDEX (metadata from PubMed; cite only these IDs):\n{evidence_index(evidence)}\n\n"
+        f"EVIDENCE INDEX (metadata from the retrieval tools; cite only these IDs):\n{evidence_index(evidence)}\n\n"
         "Each paper's title and abstract are in fenced blocks with the same id.\n"
     )
     if repair_note:
