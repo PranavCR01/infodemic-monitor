@@ -1,8 +1,8 @@
 """Evidence retrieval (target design §6): planning, PubMed client, cache, dedup, rerank.
 
 Plain Python with no LangGraph or MCP code, so the graph nodes
-(``app.core.graph.retrieval_nodes``) and the future MCP server (T13) share one
-implementation. Replaces ``app.core.grounding.pubmed`` for the graph; the live
+(``app.core.graph.retrieval_nodes``) and the MCP server (``app.mcp_server``, T13) share
+one implementation. Replaces ``app.core.grounding.pubmed`` for the graph; the live
 single-call pipeline still uses the old module until the integration task (T11).
 """
 from app.core.retrieval.cache import InMemoryQueryCache, QueryCache, RedisQueryCache
