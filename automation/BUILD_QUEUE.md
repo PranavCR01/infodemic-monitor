@@ -34,6 +34,7 @@ starts the next ready task, and records progress here.
 
 Newest first. One line per event: date, task, what happened.
 
+- 2026-11-22 20:50 UTC — waiting: T18 merged (#66, spent $6.66). Only T14 (relabelled golden set + human review) and T15 (T14 results) remain, both blocked on people.
 - 2026-11-22 UTC — T18 done: PR #66 squash-merged into langgraph-build (868 passed, 8 skipped). Real spend $6.66 of the $15 cap. Graph median $0.41 and 76 s per video, against $0.0026 and 1.5 s for the baseline. 7 integration bugs fixed, two of which (Anthropic `temperature`, and forced `tool_choice` on Sonnet/Opus 5.5) would have made every graph run fall back. Real PubMed fixtures recorded (trimmed) and references verified live. No accuracy numbers reported. Left for a person: MULTI_AGENT §7o.
 - 2026-11-22 19:41 UTC — T18 started (session_013cWxpzaizQVxnwy1gSEZUA) in the infodemic-monitor environment after the project lead approved the real spend directly: start with 1 video, stop at $12, hard cap $15, tests stay mocked, no accuracy numbers.
 - 2026-11-22 UTC — API keys added to the infodemic-monitor environment. T18 (real-model smoke run, $15 cap) added; T14 now waits only on the relabelled, reviewed golden set.
