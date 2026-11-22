@@ -16,7 +16,7 @@ starts the next ready task, and records progress here.
 | T03 | Retrieval planning and PubMed evidence retriever | #31 | 6 | T02 | done | session_013cWxpzsTJuP1VYHqJT9oWT | 2026-11-22 00:02 | https://github.com/PranavCR01/infodemic-monitor/pull/52 | NCBI unreachable from the build env: fixtures are synthetic in NCBI's format; the live 10-claim evidence sample is left for a person (`scripts/record_pubmed_fixtures.py`, MULTI_AGENT §7d) |
 | T04 | Stance analyzer node | #30 | 5 | T02 | done | session_013cWxpyUeq4YuAXTpZfndft | 2026-11-22 00:02 | https://github.com/PranavCR01/infodemic-monitor/pull/51 | 27-example stance set; keyword floor debunk recall 0.78; LLM run waits for API keys |
 | T05 | Rerank and filter evidence | #32 | 6 | T03 | done | session_013cWxq2fKcmqBDmwsYQQwEz | 2026-11-22 00:16 | https://github.com/PranavCR01/infodemic-monitor/pull/54 | Deterministic lexical reranker + study-type lookup; precision@5 0.53 vs 0.38 PubMed order on a 12-claim synthetic, self-labelled set. Real PubMed labels by two people left for a person (MULTI_AGENT §7f) |
-| T06 | Evidence verifier node | #33 | 7 | T03, T05 | in_progress | session_013cWxpycmynMxF5EZ63Zwu8 | 2026-11-22 00:28 | | |
+| T06 | Evidence verifier node | #33 | 7 | T03, T05 | done | session_013cWxpycmynMxF5EZ63Zwu8 | 2026-11-22 00:28 | https://github.com/PranavCR01/infodemic-monitor/pull/55 | Invalid citations reject the answer (1 repair, then INSUFFICIENT + review). 20-claim synthetic self-labelled set; heuristic floor macro F1 0.87 (inflated by construction). LLM run waits for keys (T14) |
 | T07 | Critic node and bounded retrieval loop | #34 | 8 | T06 | todo | | | | |
 | T08 | Judge node and mixed-video policy | #35 | 9 | T04, T06 | todo | | | | |
 | T09 | Deterministic validation and human-review routing | #36 | 10, 11, 12 | T08 | todo | | | | |
@@ -31,6 +31,7 @@ starts the next ready task, and records progress here.
 
 Newest first. One line per event: date, task, what happened.
 
+- 2026-11-22 UTC — T06 done: PR #55 squash-merged into langgraph-build (460 passed, 1 skipped). T07 and T08 now unblocked. Verifier metrics are on a synthetic self-labelled set; a real labelled check is left for a person.
 - 2026-11-22 00:28 UTC — T12 started in session session_013cWxpyUoGG8c62ETqy3AJX.
 - 2026-11-22 00:28 UTC — T06 started in session session_013cWxpycmynMxF5EZ63Zwu8.
 - 2026-11-22 UTC — T05 done: PR #54 squash-merged into langgraph-build (418 passed, 1 skipped). T06 and T12 now unblocked. Relevance numbers are on synthetic self-labelled data; a real labelled check is left for a person.
