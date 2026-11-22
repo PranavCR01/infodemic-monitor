@@ -11,7 +11,7 @@ starts the next ready task, and records progress here.
 
 | ID | Task | Issue | Doc § | Depends on | Status | Session | Started (UTC) | PR | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| T01 | Evaluation framework and routing harness (mocked models; no paid runs) | new | 13, 14 | — | in_progress | session_013cWxpykbHfbgKcp3qazzmb | 2026-11-21 23:51 | | Paid runs and the routing decision wait for API keys; build and test everything with mocks |
+| T01 | Evaluation framework and routing harness (mocked models; no paid runs) | new | 13, 14 | — | done | session_013cWxpykbHfbgKcp3qazzmb | 2026-11-21 23:51 | https://github.com/PranavCR01/infodemic-monitor/pull/50 | Built and tested with mocks only. Routing table is provisional; paid runs, the routing decision, real provider clients for ModelRouter and checking model ids/prices are left for T14 / a person |
 | T02 | LangGraph skeleton: typed state, stub nodes, Postgres checkpointing | #29 | 4, 5 | — | done | session_013cWxq2fmACtMefWPTdEkMT | 2026-11-21 23:53 | https://github.com/PranavCR01/infodemic-monitor/pull/49 | Taken over from Jared by decision of the project lead. Resume test passed on InMemorySaver and local Postgres 16; Supabase `langgraph` schema run left for a person (#47) |
 | T03 | Retrieval planning and PubMed evidence retriever | #31 | 6 | T02 | in_progress | session_013cWxpzsTJuP1VYHqJT9oWT | 2026-11-22 00:02 | | Record PubMed responses as fixtures; tests make no network calls |
 | T04 | Stance analyzer node | #30 | 5 | T02 | in_progress | session_013cWxpyUeq4YuAXTpZfndft | 2026-11-22 00:02 | | |
@@ -31,6 +31,7 @@ starts the next ready task, and records progress here.
 
 Newest first. One line per event: date, task, what happened.
 
+- 2026-11-22 UTC — T01 done: PR #50 squash-merged into langgraph-build (144 passed, 1 skipped). T14 still blocked on API keys and the golden label set.
 - 2026-11-22 00:02 UTC — T04 started in session session_013cWxpyUeq4YuAXTpZfndft.
 - 2026-11-22 00:02 UTC — T03 started in session session_013cWxpzsTJuP1VYHqJT9oWT.
 - 2026-11-22 00:01 UTC — T02 done: PR #49 squash-merged into langgraph-build (67 passed, 1 skipped). T03, T04, T10 now unblocked.
