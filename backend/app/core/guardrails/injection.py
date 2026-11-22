@@ -181,7 +181,8 @@ def _merge(spans: Iterable[tuple[int, int]]) -> list[tuple[int, int]]:
 
 def scan_state(state: PipelineState) -> list[InjectionFinding]:
     """Every finding in the untrusted text a run holds: speech, captions, claims
-    (which quote the video) and retrieved titles and abstracts."""
+    (which quote the video) and retrieved titles and abstracts, offline-library
+    passages included."""
     findings: list[InjectionFinding] = []
     for t in state.get("transcript_segments", []):
         findings += detect(t.text, source="transcript", item_id=t.segment_id)
@@ -190,7 +191,8 @@ def scan_state(state: PipelineState) -> list[InjectionFinding]:
     for c in state.get("claims", []):
         findings += detect(c.claim_text, source="claim", item_id=c.claim_id)
     seen: set[str] = set()
-    for records in state.get("retrieved_evidence", {}).values():
+    evidence_maps = (state.get("retrieved_evidence", {}), state.get("library_evidence", {}))
+    for records in (recs for m in evidence_maps for recs in m.values()):
         for e in records:
             if e.evidence_id in seen:
                 continue

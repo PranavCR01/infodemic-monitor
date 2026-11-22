@@ -16,7 +16,9 @@ rules find no concept in a claim.
   retrieved set from scratch each round (deterministic, so re-running is idempotent):
   relevance and study type, papers below the relevance threshold dropped, at most 10
   kept (``app.core.retrieval.rerank``). If scoring a claim fails, the error is recorded
-  and that claim falls back to its first 10 papers in PubMed's order, unscored.
+  and that claim falls back to its first 10 papers in PubMed's order, unscored. With an
+  offline library injected (T12), a claim left with no paper that clears the threshold
+  falls back to the library (owns ``library_evidence`` too).
 
 Use them by overriding the stubs:
 
@@ -33,6 +35,7 @@ from app.core.graph import routing as r
 from app.core.graph.nodes import NodeFn
 from app.core.graph.routing import Budgets, DEFAULT_BUDGETS
 from app.core.graph.state import NodeError, PipelineState
+from app.core.retrieval.library.fallback import LibraryFallback, merge_library_evidence, should_fire
 from app.core.retrieval.planning import QueryPlanner
 from app.core.retrieval.pubmed import PubMedClient
 from app.core.retrieval.rerank import MAX_EVIDENCE_PER_CLAIM, Reranker
@@ -44,6 +47,7 @@ def make_retrieval_nodes(
     planner: Optional[QueryPlanner] = None,
     budgets: Budgets = DEFAULT_BUDGETS,
     reranker: Optional[Reranker] = None,
+    library: Optional[LibraryFallback] = None,
 ) -> dict[str, NodeFn]:
     planner = planner or QueryPlanner()
 
@@ -96,17 +100,30 @@ def make_retrieval_nodes(
     return {
         r.PLAN_RETRIEVAL: plan_retrieval,
         r.RETRIEVE_EVIDENCE: retrieve_evidence,
-        **make_rerank_node(reranker),
+        **make_rerank_node(reranker, library),
     }
 
 
-def make_rerank_node(reranker: Optional[Reranker] = None) -> dict[str, NodeFn]:
-    """The real ``rerank_evidence`` node on its own, for graphs that keep other stubs."""
+def make_rerank_node(
+    reranker: Optional[Reranker] = None,
+    library: Optional[LibraryFallback] = None,
+) -> dict[str, NodeFn]:
+    """The real ``rerank_evidence`` node on its own, for graphs that keep other stubs.
+
+    With ``library`` (T12), a claim whose PubMed papers all fall below the relevance
+    threshold, or that has none, falls back to the offline library (§6 "When it runs"):
+    library passages go through the same reranker and cap, and everything the library
+    returned is kept in ``library_evidence`` so citations to it can be checked. Without
+    ``library`` the node behaves exactly as before.
+    """
     reranker = reranker or Reranker()
+    if library is not None and library.reranker is not reranker:
+        library = LibraryFallback(library.searcher, reranker, library.candidates)
 
     def rerank_evidence(state: PipelineState) -> dict:
         claims = {c.claim_id: c for c in state.get("claims", [])}
         reranked = {}
+        library_evidence = {cid: list(recs) for cid, recs in state.get("library_evidence", {}).items()}
         errors: list[NodeError] = []
         for cid, records in state.get("retrieved_evidence", {}).items():
             claim = claims.get(cid)
@@ -122,7 +139,28 @@ def make_rerank_node(reranker: Optional[Reranker] = None) -> dict[str, NodeFn]:
                     )
                 )
                 reranked[cid] = list(records)[:MAX_EVIDENCE_PER_CLAIM]
+            if library is None or not should_fire(reranked[cid]):
+                continue
+            try:
+                outcome = library.run(claim.claim_text, reranked[cid])
+            except Exception as exc:  # noqa: BLE001 - the claim goes on with what PubMed gave
+                errors.append(
+                    NodeError(
+                        node=r.RERANK_EVIDENCE, claim_id=cid,
+                        message=f"library fallback failed: {type(exc).__name__}: {exc}"[:500],
+                    )
+                )
+                library_evidence.setdefault(cid, [])
+                continue
+            library_evidence[cid] = merge_library_evidence(library_evidence.get(cid, []), outcome.candidates)
+            reranked[cid] = outcome.kept
+            errors += [
+                NodeError(node=r.RERANK_EVIDENCE, claim_id=cid, message=f"library search degraded: {e}"[:500])
+                for e in outcome.errors
+            ]
         update: dict = {"reranked_evidence": reranked}
+        if library is not None:
+            update["library_evidence"] = library_evidence
         if errors:
             update["errors"] = errors
         return update

@@ -273,6 +273,11 @@ class PipelineState(TypedDict, total=False):
     retrieved_evidence: dict[str, list[EvidenceRecord]]
     retrieval_attempts: dict[str, int]
     reranked_evidence: dict[str, list[EvidenceRecord]]
+    # Offline-library passages (§6 "Fallback"), per claim, for claims where the
+    # fallback fired (an empty list: it fired and found nothing). Written by
+    # rerank_evidence, which decides when it fires. Kept across rounds, like
+    # retrieved_evidence, so every cited library ID stays checkable.
+    library_evidence: dict[str, list[EvidenceRecord]]
     verification_results: dict[str, VerificationResult]
     verification_revisions: dict[str, int]
     critic_results: dict[str, CriticResult]

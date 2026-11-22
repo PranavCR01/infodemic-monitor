@@ -589,6 +589,90 @@ uses the stub critic until T11.
   it has to add detection on the four reading defects without pushing the
   unnecessary-retry rate up.
 
+## 7j. Offline Library Decisions (T12, no issue; design §6)
+
+The library is `backend/app/core/retrieval/library/` (`config`, `manifest`, `ocr`,
+`chunking`, `embeddings`, `store`, `ingest`, `search`, `fallback`): plain Python with no
+LangGraph, MCP, torch, transformers, OCRmyPDF or PyMuPDF imported at load time (a test
+checks this), so T13's `search_library(query, k)` tool wraps `search.search_library`.
+Settings, including the MedCPT model ids, are in `backend/config/library.yaml`; no model is
+named in code. Batch job: `backend/scripts/ingest_library.py ingest|approve|search`.
+
+- **Where it fires: inside `rerank_evidence`, not a new node.** `make_rerank_node(reranker,
+  library=LibraryFallback(...))` (also `make_retrieval_nodes(..., library=)`). Both §6
+  triggers reduce to "the reranker kept nothing": an empty set only reaches reranking after
+  the PubMed budget is spent (the broadening edge sends it back before that), and a set
+  that all falls below the 0.4 threshold is the "forty off-topic papers" case. A PubMed
+  outage that ends with nothing also fires it. Library passages go through the same
+  reranker and cap. No new node keeps the graph topology T06–T11 build on unchanged.
+  **Off unless a library is injected;** the default graph and stubs behave as before (T11
+  wires it).
+- **New state field `library_evidence`** (claim → every passage the library returned;
+  `[]` = fired, found nothing), owned by `rerank_evidence`, kept across rounds like
+  `retrieved_evidence`. Additive and optional, so the schema version is unchanged (T04/T05
+  rule). It is the fire-rate signal, and it is included in the stub `validate_result`
+  citation check and in `guardrails.injection.scan_state` (library text is untrusted, §15).
+  **T09: the real validation must accept IDs from `retrieved_evidence` ∪ `library_evidence`.**
+- **Evidence records** as in §6: `lib_<document_id>_p<page>`, `abstract` = the matched chunk,
+  `publication_type` = the manifest's study type or `["Unknown"]` (ranks below every tagged
+  type), `source_url` = internal viewer link from config. One record per page (best chunk);
+  chunks never span pages so the page in the ID is exact. Library dedup is by evidence ID
+  only (PubMed's DOI dedup would merge two pages of one document).
+- **Tables via migration 0006 (raw SQL), no ORM model.** `Base` is also `create_all`-ed on
+  SQLite (tests, startup fallback), which has no `vector`/`tsvector`. `library_chunks` has
+  `vector(768)` + HNSW (`vector_cosine_ops`) and a generated `tsvector` + GIN. The vector
+  query is a bare `ORDER BY embedding <=> q LIMIT 4n` subquery, then filtered (embedding
+  model/version, document status); filters on the join made Postgres skip the HNSW index
+  (checked with EXPLAIN, now a test). `hnsw.ef_search` is raised to the over-fetch. The
+  migration needs pgvector: on Supabase enable the `vector` extension before running it.
+- **Full-text is OR, not AND:** `plainto_tsquery` with `&` turned into `|`, ranked by
+  `ts_rank_cd`, so a chunk naming the drug but not the outcome still ranks. Vector search
+  only matches chunks embedded with the current model+version; full-text matches all, so a
+  model change degrades to full-text until the library is re-embedded. If the query encoder
+  fails, search degrades to full-text and records it in `errors`.
+- **IDs:** `document_id` = first 16 hex of the file's SHA-256 (the same scan always gets the
+  same ID); chunk ID `<document_id>_<position>`.
+- **PubMed dedup:** a manifest PMID → linked (`status = linked_pubmed`, no chunks) with no
+  lookup; a DOI → optional PubMed ESearch on `[doi]` (`PubMedDoiLookup`, exactly one hit
+  counts). If that check fails (NCBI down) the document is indexed anyway, with a note.
+  A second scan with a DOI/PMID already in the library is reported as a duplicate.
+- **OCR confidence** (§6 "pages with low OCR confidence are flagged"): OCRmyPDF doesn't
+  report one, so a second Tesseract pass (`tsv`) over each OCRed page gives the mean word
+  confidence; a word-shape ratio is a second, engine-free check. Thresholds 70 and 0.6 are
+  starting values. Flagged pages' text is held in `library_documents.ocr_quality.held_text`
+  (JSON; the doc's "OCR quality" column, made per-page) and indexed only by
+  `approve_pages(doc, pages, reviewer, corrected_text=)`; the document is `needs_review`
+  meanwhile and its other pages are searchable.
+- **Paragraphs are rebuilt from line geometry**, because OCRmyPDF's text layer is one
+  block per line: a gap clearly wider than the in-paragraph line gap, a jump back up (next
+  column) or a short sentence-ending line starts a paragraph. Reading order is Tesseract's.
+- **Chunking:** ~400 tokens / ~50 overlap, counted as words + punctuation (approximate;
+  MedCPT's WordPiece count is higher, and the encoder truncates at 512). References are
+  skipped from a "References"/"Bibliography" heading until an appendix/table/figure heading,
+  plus stray reference-like paragraphs.
+- **MedCPT** (`MedCptEmbedder`): article encoder on `[title, chunk]` pairs, query encoder for
+  queries, CLS pooling, via `transformers` loaded lazily (`pip install -e ".[library]"`).
+  Not run in the build (no weights, no network); tests use a fake loader.
+  `HashingEmbedder` is a model-free stand-in for tests and trials only.
+- **Library query** = the planner's intervention, outcome and population terms (matched
+  text, label, two synonyms) as plain words, plus uncovered claim words.
+- **Measurement:** `app/evaluation/library_fallback.py` — `fallback_stats(states)` (fire
+  rate, fired-and-kept) and `verdict_changes(pubmed_only, with_library)`.
+- **Tested on generated sample scans only** (reportlab → image → skewed/blurred image-only
+  PDF, `app/tests/library_samples.py`; nothing binary committed). Real OCRmyPDF/Tesseract
+  ran in the build: WER 0.000 and reading order 1.00 on 5 generated pages including a
+  two-column page and 2° skew (`scripts/compare_library_ocr.py --samples`); a blurred 100 dpi
+  page scored confidence ~45 and was flagged. Clean generated pages are easy, so this says
+  the plumbing works, not that real scans will. Postgres tests ran on a local Postgres 16 +
+  pgvector 0.6 (`LIBRARY_TEST_PG_DSN`, a throwaway DB: the test drops its schema).
+
+**Left for a person:** run `scripts/compare_library_ocr.py --dir` on ~20 real scanned pages
+with hand transcripts (Tesseract vs EasyOCR; EasyOCR wasn't installed here) and set the OCR
+thresholds from it; download MedCPT and check retrieval on real library documents; enable
+pgvector on Supabase and run migration 0006; build the internal viewer the `source_url`
+points at (`/library/documents/{id}?page=&chunk=`, not built) and the analyst UI label for
+library sources; decide who may upload (copyright: T13 gives `search_library` its own scope).
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -610,6 +694,14 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-22**: T12 offline library fallback built by the automated build (no issue;
+  design §6): manifest CSV upload, OCRmyPDF/Tesseract + PyMuPDF with per-page confidence
+  and held-back low-confidence pages, SHA-256 and PubMed DOI/PMID dedup, paragraph chunking
+  (~400/50, references skipped), MedCPT embedder (config-named, lazy), pgvector tables
+  (migration 0006, HNSW cosine + GIN full-text), hybrid search with RRF, and the fallback in
+  `rerank_evidence` behind an injected `library` (off by default) with new state field
+  `library_evidence`. Tested on generated sample scans and a local Postgres + pgvector only.
+  Decisions in §7j.
 - **2026-11-22**: T07 (#34) critic built by the automated build: code checks plus a
   forced `record_critique` call on the routed `critique` step (prompt `critic_v1`).
   Budgets stay in routing; exhausted claims are now frozen (not re-verified or
