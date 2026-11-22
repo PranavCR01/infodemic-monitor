@@ -48,3 +48,8 @@ research/claim-level/dataset/videos/
 *.mov
 *.webm
 *.mkv
+*.m4a
+*.wav
+
+# Archives (video bundles) — never commit
+*.zip
