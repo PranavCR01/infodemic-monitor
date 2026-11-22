@@ -145,6 +145,26 @@ signature `(state) -> dict` and the field ownership below.
   upgrade is safe; it needs DDL rights the 5-connection `langgraph_dev` role has on its
   schema only.
 
+## 7b. Evaluation and Routing Decisions (T01)
+
+- **Routing file location:** `backend/config/routing.yaml`, not repo-root `config/`, because
+  the Docker image copies only `backend/`. The table is marked `status: provisional`: it
+  holds the design's starting choices by task type (§13), not measured winners. The
+  routing decision waits for API keys and per-step labelled test sets.
+- **Critic independence is enforced by config validation:** `critique` must differ from
+  `verify_claims` in model or prompt, or the file is rejected.
+- **Unknown cost is reported as unknown, never as zero.** Unpriced models (currently the
+  OpenAI critic/fallback) give `cost_usd: null`, and by default `compare_runs` refuses to
+  pass a change when it can't show that cost didn't get worse.
+- **Fallback answers don't count for a candidate.** In the routing harness, an item
+  answered by the fallback model counts as a failure for the model being measured.
+- **Claim truth vocabulary:** the claim-level dataset's `MISINFO / NO_MISINFO /
+  CANNOT_RECOGNIZE` claim labels are loaded as `CONTRADICTED / SUPPORTED /
+  INSUFFICIENT_EVIDENCE` (§14), so both tracks share one set.
+- **Citation support is a proxy for now:** a cited paper "supports" a claim if it is one of
+  the PMIDs the labellers recorded for that claim (`relevant_pmids`). Real per-citation
+  support labels are still needed.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -166,6 +186,13 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-22** (T01, automated): Built the evaluation framework (`backend/app/evaluation/`:
+  dataset loader with versions, hashes, by-video splits, hard-case coverage and Cohen's kappa;
+  per-step metrics; tracked failure modes; run records; baseline comparison) and the
+  config-driven model router with retry/fallback (`backend/app/core/routing/`,
+  `backend/config/routing.yaml`), plus a per-step model-selection harness. Everything is tested
+  with mocks; no paid runs. Next: paid baseline run and routing decision once API keys and
+  labelled data exist (T14).
 - **2026-11-22**: T02 (#29) LangGraph skeleton built by the automated build: typed,
   versioned `PipelineState`; 16 stub nodes; conditional edges for no-claims, critic
   decisions and the review policy; run-time field-ownership check; InMemorySaver and

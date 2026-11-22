@@ -1,0 +1,7 @@
+video_id,source_url,platform,topic,video_level_label,categories,split,notes
+v01,,tiktok,remedies,MISINFO,clearly_false,test,endorses hot water cures flu
+v02,,tiktok,remedies,DEBUNKING,debunking;speech_screen_disagree,test,refutes garlic myth
+v03,,reels,nutrition,NO_MISINFO,accurate;multi_claim,test,two accurate claims
+v04,,shorts,supplements,CANNOT_RECOGNIZE,missing_evidence;prompt_injection,test,untested herb claim with injection attempt
+v05,,tiktok,vaccines,MISINFO,mixed_claims,tune,"mixed: c1 accurate, c2 false"
+v06,,tiktok,cooking,CANNOT_RECOGNIZE,,tune,no checkable claims

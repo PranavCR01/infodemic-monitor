@@ -1,0 +1,18 @@
+# Benchmark run configuration (design doc section 14).
+# Paths are relative to the backend/ directory.
+benchmark: infodemic_v1
+dataset:
+  path: ../research/claim-level/dataset
+  version: "2026-11"
+  # hash: <sha256>   # optional; when set, the run refuses a dataset that doesn't match
+split: test
+pipeline:
+  system: baseline          # "baseline" = today's single-call classifier
+  routing: config/routing.yaml
+metrics: [macro_f1, per_class_precision, per_class_recall, confusion_matrix,
+          false_misinfo_on_debunking, stance_macro_f1, stance_debunk_recall,
+          claim_precision, claim_recall, verification_prf,
+          citation_validity, citation_support, calibration_error,
+          review_share, latency, cost]
+save: {predictions: true, traces: true}
+output_dir: eval_runs

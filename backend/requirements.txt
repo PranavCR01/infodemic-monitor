@@ -39,3 +39,4 @@ psycopg[binary]>=3.1
 # Utilities
 requests>=2.31
 tenacity>=8.2
+PyYAML>=6.0
