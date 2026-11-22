@@ -20,7 +20,8 @@ except Exception:
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from judge import judge, is_mixed, has_true_and_false  # noqa: E402
+from judge import (judge, is_mixed, has_true_and_false,  # noqa: E402
+                   review_reasons, CLAIM_KINDS)
 import enrich                              # noqa: E402
 from labels import LABELS, ANNOTATOR       # noqa: E402
 
@@ -33,11 +34,12 @@ SPLIT_SEED = 20261121          # same seed as the blind subset; recorded in REVI
 TEST_FRACTION = 0.70           # section 14: roughly 30/70 tune/test, per video
 
 VIDEO_COLS = ["video_id", "source_url", "platform", "topic",
-              "video_level_label", "text_type", "case_tags", "split",
+              "video_level_label", "review_reasons", "text_type", "case_tags", "split",
               "annotator", "confidence", "review_status", "reviewer",
               "reviewer_notes", "notes"]
 
 CLAIM_COLS = ["video_id", "claim_id", "claim_text", "claim_source",
+              "claim_kind",
               "start_seconds", "end_seconds", "speaker_stance",
               "claim_verdict", "evidence_supporting",
               "evidence_contradicting", "annotator", "confidence",
@@ -87,6 +89,9 @@ def main():
                 "--stage merge first" % (vid, vid))
 
         for i, c in enumerate(claims, start=1):
+            if c.get("kind") not in CLAIM_KINDS:
+                raise SystemExit("%s claim %d: kind must be one of %s"
+                                 % (vid, i, ", ".join(CLAIM_KINDS)))
             cid = c.get("claim_id") or ("c%d" % i)
             src = c.get("source") or enrich.derive_claim_source(
                 doc, float(c["start"]), float(c["end"]))
@@ -95,6 +100,7 @@ def main():
                 "claim_id": cid,
                 "claim_text": c["text"],
                 "claim_source": src,
+                "claim_kind": c["kind"],
                 "start_seconds": c["start"],
                 "end_seconds": c["end"],
                 "speaker_stance": c["stance"],
@@ -115,14 +121,22 @@ def main():
                    "evidence_supporting": r["evidence_supporting"],
                    "evidence_contradicting": r["evidence_contradicting"]}
                   for r in claim_rows if r["video_id"] == vid]
-        label, _deciding = judge(judged)
+        label, _deciding, _reasons = judge(judged)
+        reasons = review_reasons(judged)
 
         tags = list(v.get("case_tags", []))
+        # Section 14: an out_of_scope video carries no other tag, so it can't
+        # leak into any category count.
+        out_of_scope = "out_of_scope" in tags
         if is_mixed(judged) and "mixed" not in tags:
             tags.append("mixed")
         if has_true_and_false(judged) and "true_and_false" not in tags:
             tags.append("true_and_false")
-        if not judged and "no_claims" not in tags:
+        if out_of_scope:
+            if judged:
+                raise SystemExit("%s is out_of_scope but has claims" % vid)
+            tags = ["out_of_scope"]
+        elif not judged and "no_claims" not in tags:
             tags.append("no_claims")
         if len(judged) > 1 and "multi_claim" not in tags:
             tags.append("multi_claim")
@@ -146,6 +160,7 @@ def main():
             "platform": v.get("platform") or idx.get("platform", "unknown"),
             "topic": v["topic"],
             "video_level_label": label,
+            "review_reasons": join(reasons),
             "text_type": text_type,
             "case_tags": join(tags),
             "split": splits[vid],

@@ -47,7 +47,11 @@ _lock = threading.Lock()
 _last = [0.0]
 
 TOOL = "infodemic-monitor-golden-set"
-EMAIL = "prc4@illinois.edu"   # E-utilities asks callers to identify themselves
+# E-utilities asks callers to identify themselves with a contact address. It is
+# read from the environment so no personal address lives in this public repo;
+# unset, requests carry only the tool name (NCBI accepts that).
+import os  # noqa: E402
+EMAIL = os.environ.get("NCBI_EMAIL", "")
 
 TRUSTED_HOSTS = (
     "who.int", "cdc.gov", "nih.gov", "ncbi.nlm.nih.gov", "nhs.uk",
@@ -104,6 +108,8 @@ def _cached(kind, key, produce):
         rec["_from_cache"] = True
         return rec
     rec = produce()
+    if kind == "reference" and not rec.get("ok"):
+        return rec          # a failed fetch is not evidence; try again later
     rec["_key"] = key
     rec["_retrieved_at"] = time.strftime("%Y-%m-%dT%H:%M:%S")
     p.write_text(json.dumps(rec, indent=1, ensure_ascii=False),
@@ -246,6 +252,185 @@ def fetch_page(url):
     return _cached("page", key, produce)
 
 
+# ---------------------------------------------------------------------------
+# Section 6 "Trusted sources beyond PubMed": authoritative references for
+# claims of kind fact_of_record (a schedule, a legal limit, a statistic, food
+# composition, textbook physiology). A fixed allow-list; nothing else is
+# fetched. Each snapshot keeps the full text, its SHA-256 and the retrieval
+# time, so the quoted passage in reference_citations.csv can be checked against
+# exactly what was read.
+# ---------------------------------------------------------------------------
+REFERENCE_SOURCES = {
+    # textbook physiology, standard medical facts
+    "ncbi.nlm.nih.gov": "NCBI Bookshelf",
+    # vaccination schedules; public-health guidance and fact sheets
+    "cdc.gov": "CDC",
+    "who.int": "WHO",
+    "nhs.uk": "NHS",
+    "ecdc.europa.eu": "ECDC",
+    # drug, food and supplement rules, safety limits
+    "fda.gov": "FDA",
+    "ema.europa.eu": "EMA",
+    "efsa.europa.eu": "EFSA",
+    # food composition
+    "fdc.nal.usda.gov": "USDA FoodData Central",
+    "api.nal.usda.gov": "USDA FoodData Central",
+    # disease statistics: WHO GHO (who.int, above) and national statistics
+    # offices
+    "seer.cancer.gov": "NCI SEER (US national cancer statistics)",
+    "aihw.gov.au": "AIHW (Australian national health statistics)",
+    "abs.gov.au": "Australian Bureau of Statistics",
+    "ons.gov.uk": "UK Office for National Statistics",
+}
+
+# A generic client name: no personal contact details go to outside services.
+REF_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+          "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
+
+
+def _get_ref(url):
+    """One rate-limited GET for a reference page. A 4xx is an answer (the page
+    is gone or blocks us), so it is not retried; network errors and 5xx are."""
+    last = None
+    for attempt in range(3):
+        _throttle()
+        try:
+            r = requests.get(url, timeout=45, headers={
+                "User-Agent": REF_UA,
+                "Accept": "text/html,application/xhtml+xml,application/json"})
+            if r.status_code >= 500:
+                last = "HTTP %d" % r.status_code
+                time.sleep(2 ** attempt)
+                continue
+            return r
+        except Exception as e:
+            last = "%s: %s" % (type(e).__name__, str(e)[:120])
+            time.sleep(2 ** attempt)
+    raise RuntimeError("request failed (%s): %s" % (last, url))
+
+
+def reference_org(url):
+    """The section 6 source a URL belongs to, or None if it is not allowed."""
+    host = urllib.parse.urlparse(url).netloc.lower().split(":")[0]
+    for h, org in REFERENCE_SOURCES.items():
+        if host == h or host.endswith("." + h):
+            return org
+    return None
+
+
+def _html_to_text(body):
+    import html as _html
+    import re
+    text = re.sub(r"<(script|style|noscript)\b.*?</\1>", " ", body,
+                  flags=re.S | re.I)
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = _html.unescape(text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def fetch_reference(url):
+    """Fetch an allow-listed reference page and snapshot its full text."""
+    org = reference_org(url)
+    if not org:
+        return {"url": url, "ok": False,
+                "error": "not a section 6 reference source"}
+    key = "reference::%s" % url
+
+    def produce():
+        try:
+            r = _get_ref(url)
+            ctype = r.headers.get("Content-Type", "")
+            if "json" in ctype:
+                text = json.dumps(r.json(), ensure_ascii=False)
+                title = ""
+            else:
+                import re
+                body = r.text
+                text = _html_to_text(body)
+                m = re.search(r"<title[^>]*>(.*?)</title>", body, re.S | re.I)
+                title = _html_to_text(m.group(1)) if m else ""
+            # Bot walls (NCBI's reCAPTCHA, Akamai "Access Denied") can come
+            # back as a 200 with a stub page; that is not the reference.
+            blocked = (len(text) < 500 or any(
+                s in title.lower() for s in ("checking your browser",
+                                             "access denied", "captcha")))
+            return {"url": url, "source_org": org,
+                    "ok": r.status_code == 200 and not blocked,
+                    "status": r.status_code, "title": title,
+                    "text_sha256": hashlib.sha256(
+                        text.encode("utf-8")).hexdigest(),
+                    "text_length": len(text), "text": text}
+        except Exception as e:
+            return {"url": url, "source_org": org, "ok": False,
+                    "error": "%s: %s" % (type(e).__name__, e)}
+
+    return _cached("reference", key, produce)
+
+
+def load_reference(url):
+    """The cached snapshot for url, or None if it was never retrieved."""
+    p = _cache_path("reference", "reference::%s" % url)
+    if not p.exists():
+        return None
+    return json.loads(p.read_text(encoding="utf-8"))
+
+
+def snapshot_text(rec):
+    """The quotable text of a reference snapshot.
+
+    HTML pages are quoted as fetched. A USDA FoodData Central API record is
+    JSON, so it is rendered as one 'Nutrient: amount unit' entry per line,
+    after the food's description, which is what a passage quotes.
+    """
+    text = rec.get("text", "")
+    if "api.nal.usda.gov/fdc/" in rec.get("url", ""):
+        d = json.loads(text)
+        parts = [d.get("description", "")]
+        for n in d.get("foodNutrients", []):
+            nut = n.get("nutrient", {}) or {}
+            if "amount" in n and nut.get("name"):
+                parts.append("%s: %s %s" % (nut["name"], n["amount"],
+                                            nut.get("unitName", "")))
+        return " | ".join(parts)
+    return text
+
+
+def passage_found(passage, text):
+    """True if every fragment of a quoted passage occurs in the snapshot.
+    Fragments are separated by ' ... ' (words elided between them)."""
+    norm = lambda s: " ".join(s.split())
+    t = norm(text)
+    return all(norm(f) in t for f in passage.split(" ... ") if f.strip())
+
+
+def bookshelf_search(query, retmax=5):
+    """NCBI Bookshelf (StatPearls etc.) through the same E-utilities API."""
+    key = "books::%s::%d" % (query, retmax)
+
+    def produce():
+        r = _get("%s/esearch.fcgi" % EUTILS,
+                 params={"db": "books", "term": query, "retmode": "json",
+                         "retmax": retmax, "tool": TOOL}, timeout=30)
+        ids = r.json().get("esearchresult", {}).get("idlist", [])
+        out = {"query": query, "db": "books", "ids": ids, "records": []}
+        if ids:
+            s = _get("%s/esummary.fcgi" % EUTILS,
+                     params={"db": "books", "id": ",".join(ids),
+                             "retmode": "json", "tool": TOOL}, timeout=30)
+            res = s.json().get("result", {})
+            for i in ids:
+                d = res.get(i) or {}
+                out["records"].append({
+                    "id": i, "title": d.get("title", ""),
+                    "book": d.get("booktitle", "") or d.get("book", ""),
+                    "accession": d.get("accessionid", "")
+                                 or d.get("rid", ""),
+                })
+        return out
+
+    return _cached("books", key, produce)
+
+
 def _print_search(rec):
     print("query: %s  (cache=%s)  %d hits"
           % (rec["query"], rec.get("_from_cache"), len(rec["records"])))
@@ -292,6 +477,24 @@ def main():
         if rec.get("ok"):
             print("---- first 1200 chars ----")
             print(rec["text"][:1200])
+    elif cmd == "ref":
+        rec = fetch_reference(sys.argv[2])
+        print(json.dumps({k: v for k, v in rec.items() if k != "text"},
+                         indent=1))
+        text = rec.get("text", "")
+        grep = sys.argv[3] if len(sys.argv) > 3 else ""
+        if grep and text:
+            import re as _re
+            for m in list(_re.finditer(grep, text, _re.I))[:12]:
+                lo = max(0, m.start() - 350)
+                print("...", text[lo:m.end() + 350], "...\n")
+        elif text:
+            print(text[:2500])
+    elif cmd == "books":
+        rec = bookshelf_search(sys.argv[2])
+        for r in rec["records"]:
+            print(" ", r["id"], r["accession"], "|", r["book"][:40], "|",
+                  r["title"][:100])
     elif cmd == "batch":
         spec = json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))
         out = {}

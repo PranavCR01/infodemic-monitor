@@ -14,9 +14,17 @@ If you find a new disagreement, fix the README, not the labels.
 | File | One row per | Columns |
 |---|---|---|
 | `video_index.csv` | video | `video_id`, `filename`, `relative_path`, `collector`, `collector_label`, `creator_handle`, `platform`, `size_mb` |
-| `videos.csv` | video | `video_id`, `source_url`, `platform`, `topic`, `video_level_label`, `text_type`, `case_tags`, `split`, `annotator`, `confidence`, `review_status`, `reviewer`, `reviewer_notes`, `notes` |
-| `claims.csv` | claim | `video_id`, `claim_id`, `claim_text`, `claim_source`, `start_seconds`, `end_seconds`, `speaker_stance`, `claim_verdict`, `evidence_supporting`, `evidence_contradicting`, `annotator`, `confidence`, `review_status`, `reviewer`, `reviewer_notes`, `notes` |
+| `videos.csv` | video | `video_id`, `source_url`, `platform`, `topic`, `video_level_label`, `review_reasons`, `text_type`, `case_tags`, `split`, `annotator`, `confidence`, `review_status`, `reviewer`, `reviewer_notes`, `notes` |
+| `claims.csv` | claim | `video_id`, `claim_id`, `claim_text`, `claim_source`, `claim_kind`, `start_seconds`, `end_seconds`, `speaker_stance`, `claim_verdict`, `evidence_supporting`, `evidence_contradicting`, `annotator`, `confidence`, `review_status`, `reviewer`, `reviewer_notes`, `notes` |
+| `reference_citations.csv` | cited reference | `evidence_id`, `video_id`, `claim_id`, `side`, `url`, `source_org`, `retrieved_at`, `snapshot_sha256`, `quoted_passage` (§6) |
+| `collector_agreement.md` | — | collectors' folder labels vs. the derived label, with a reason per disagreement (generated) |
 | `transcripts/<video_id>.json` | video | speech segments with timestamps, OCR captions. **Text only — no media.** |
+
+`videos.csv`, `claims.csv`, `reference_citations.csv` and `collector_agreement.md`
+are **generated** — edit `scripts/labels.py` (labels), `scripts/cite_references.py`
+(quoted passages) or `scripts/compare_collectors.py` (disagreement reasons), then
+run `build_csvs.py`, `cite_references.py`, `compare_collectors.py` and
+`validate.py` in that order.
 
 `video_id` links all three. `claim_id` is `c1`, `c2`, … within a video, matching
 `Claim.claim_id` in `backend/app/core/schemas/pipeline.py`.
@@ -86,11 +94,47 @@ to a speaker debunking it confirms `REFUTES`. A screen-only claim stated as fact
 
 A debunked myth is `claim_verdict = CONTRADICTED` with `speaker_stance = REFUTES`.
 
+### `claim_kind` (§4)
+
+| Kind | Use when the claim is… |
+|---|---|
+| `research_question` | whether X works, causes or prevents Y — settled by studies |
+| `fact_of_record` | a schedule, a legal or regulatory limit or action, a statistic, food composition, a diagnostic criterion, or textbook physiology — settled by an authoritative reference |
+
+Retrieval picks its sources from this (§6): studies for research questions, the
+reference allow-list (below) as well as PubMed for facts of record. A §6
+reference URL may only be cited on a `fact_of_record` claim; `validate.py`
+enforces it.
+
 ### `evidence_supporting` / `evidence_contradicting`
 
 Semicolon-separated PMIDs (`PMID:12345678`) or URLs, listing papers and guidance
 pages **you actually retrieved**. Never cite from memory, and never cite a paper
 you have not looked at — §7: "It may only cite what was retrieved."
+
+**URLs must be §6 references**, from the fixed allow-list in
+`scripts/evidence.py` (`REFERENCE_SOURCES`): NCBI Bookshelf; CDC, WHO, NHS, ECDC;
+FDA, EMA, EFSA; USDA FoodData Central; WHO GHO and national statistics offices.
+Fetch them with `python scripts/evidence.py ref <url> [regex]`, which stores a
+full-text snapshot with its SHA-256 and retrieval time under
+`evidence_cache/reference/`. Then add the quoted passage to
+`scripts/cite_references.py`; it writes `reference_citations.csv` and refuses
+any passage that is not in the snapshot. FoodData Central records are JSON and
+are quoted as `Nutrient: amount unit` (`evidence.snapshot_text`); the API URL
+carries `api_key=DEMO_KEY`, api.data.gov's public demo key, not a secret.
+
+The §6 verdict rules are the §7 ones: a reference supports `CONTRADICTED` only if
+it says the claim is false or gives a conflicting figure. "No evidence that X"
+or "not classified as" is still `INSUFFICIENT_EVIDENCE`.
+
+Two retrieval limits met in practice: www.cdc.gov answers scripted requests with
+HTTP 403 (its `wwwn.cdc.gov` / ATSDR pages work), and NCBI Bookshelf pages answer
+with a reCAPTCHA. `fetch_reference` treats both as failures and never caches
+them. PubMed indexes StatPearls chapters and MMWR reports, so their abstracts are
+still reachable through `evidence.py search` / `abstract`.
+
+`evidence.py` reads an optional `NCBI_EMAIL` environment variable for the
+E-utilities contact address; no address is stored in the repo.
 
 Retrieve through `scripts/evidence.py`, which calls PubMed E-utilities at no more
 than 3 requests/second and caches every response under `evidence_cache/`, so the
@@ -115,16 +159,33 @@ decide whether OCR earns its cost.
 **Derived, not hand-assigned.** `scripts/judge.py` applies the §9 rules in order
 and `scripts/validate.py` re-checks every row against them:
 
-| If any claim… | Video label |
-|---|---|
-| is **endorsed** by the speaker and **contradicted** by the evidence | `MISINFO` |
-| otherwise, is **refuted** by the speaker and contradicted by the evidence | `DEBUNKING` |
-| otherwise, at least one claim was judged (`SUPPORTED` or `CONTRADICTED`) and nothing false is endorsed | `NO_MISINFO` |
-| no claim could be judged (all insufficient or not verifiable, or no claims) | `CANNOT_RECOGNIZE` |
+| If any claim… | Video label | Review reason added |
+|---|---|---|
+| is **endorsed** by the speaker and **contradicted** by the evidence | `MISINFO` | |
+| otherwise, is **refuted** by the speaker but **supported** by the evidence | `MISINFO` | speaker denies a supported claim |
+| otherwise, is **refuted** by the speaker and contradicted by the evidence | `DEBUNKING` | |
+| otherwise, at least one claim was judged (`SUPPORTED` or `CONTRADICTED`) and nothing false is endorsed | `NO_MISINFO` | |
+| otherwise, is **refuted** while the evidence is `MIXED` or `INSUFFICIENT_EVIDENCE` | `CANNOT_RECOGNIZE` | possible debunk of an unsettled claim |
+| no claim could be judged (all insufficient or not verifiable, or no claims) | `CANNOT_RECOGNIZE` | |
 
 Order matters: a video that both endorses one falsehood and refutes another is
 `MISINFO`, not `DEBUNKING`. Flag that pattern in `notes` as a mixed video — §9
-lists it as a case the rules alone shouldn't settle.
+lists it as a case the rules alone shouldn't settle. And because `NO_MISINFO`
+comes before the possible-debunk rule, a debunk that refutes an unsettled claim
+but also makes one supported claim is `NO_MISINFO` with no review flag (v68, v70).
+
+`review_reasons` (semicolon-separated) holds the rules' own reason, then the §11
+triggers this dataset can carry: a deciding claim that is `INSUFFICIENT_EVIDENCE`
+or `MIXED`, evidence on both sides, or an `UNCLEAR` stance. `validate.py`
+re-derives it.
+
+### Out of scope (§14)
+
+A video with no health content is tagged `out_of_scope` — as its **only** tag —
+and has no claims. It keeps the `CANNOT_RECOGNIZE` the rules give an empty video,
+but it is left out of every count and metric so it cannot inflate
+`CANNOT_RECOGNIZE`. Consumers must filter on the tag. `stats.py`, `validate.py`
+and `compare_collectors.py` already do.
 
 ### `text_type`, `case_tags`, `split`
 
@@ -135,7 +196,8 @@ lists it as a case the rules alone shouldn't settle.
 - `case_tags`: semicolon-separated, from the §14 hard-case table — `debunking`,
   `satire`, `mixed`, `screen_only`, `uncertain_science`, `noisy_audio`,
   `other_language`, `multi_claim`, `missing_evidence`, `prompt_injection`,
-  `clearly_false`, `accurate`, `neutral_discussion`, `speech_screen_disagree`.
+  `clearly_false`, `accurate`, `neutral_discussion`, `speech_screen_disagree`,
+  plus `out_of_scope` (above).
 - `split`: `tune` or `test`, roughly 30/70, **assigned per video** so no video
   appears in both (§14: "split by video, not by sentence"). Seed recorded in
   `REVIEW.md`.
@@ -172,7 +234,7 @@ assertion.
 
 If a video makes no checkable claims, leave it out of `claims.csv` and write
 `no checkable claims` in its `notes` in `videos.csv`. It will come out as
-`CANNOT_RECOGNIZE`.
+`CANNOT_RECOGNIZE`. If it has no health content at all, tag it `out_of_scope`.
 
 ## Labeling process
 
@@ -219,7 +281,8 @@ v02,,tiktok,nutrition,DEBUNKING,low_text,debunking,tune,pranav,high,pending,,,re
 
 `claims.csv`
 ```
-video_id,claim_id,claim_text,claim_source,start_seconds,end_seconds,speaker_stance,claim_verdict,evidence_supporting,evidence_contradicting,annotator,confidence,review_status,reviewer,reviewer_notes,notes
-v01,c1,<verbatim claim>,speech,3.5,8.0,ENDORSES,SUPPORTED,PMID:12345678,,pranav,high,pending,,,
-v02,c1,Lemon water cures cancer,both,1.2,4.8,REFUTES,CONTRADICTED,,PMID:23456789;https://www.cancer.gov/...,pranav,high,pending,,,
+video_id,claim_id,claim_text,claim_source,claim_kind,start_seconds,end_seconds,speaker_stance,claim_verdict,evidence_supporting,evidence_contradicting,annotator,confidence,review_status,reviewer,reviewer_notes,notes
+v01,c1,<verbatim claim>,speech,research_question,3.5,8.0,ENDORSES,SUPPORTED,PMID:12345678,,pranav,high,pending,,,
+v02,c1,Lemon water cures cancer,both,research_question,1.2,4.8,REFUTES,CONTRADICTED,,PMID:23456789,pranav,high,pending,,,
+v03,c1,Atrazine has a regulatory limit of three parts per billion,speech,fact_of_record,37.1,44.8,ENDORSES,SUPPORTED,https://wwwn.cdc.gov/tsp/PHS/PHS.aspx?phsid=336&toxid=59,,pranav,high,pending,,,
 ```

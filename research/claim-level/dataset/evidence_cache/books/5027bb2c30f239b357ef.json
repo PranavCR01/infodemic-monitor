@@ -1,0 +1,17 @@
+{
+ "query": "neuroanatomy cerebral cortex[title] AND statpearls[book]",
+ "db": "books",
+ "ids": [
+  "4719728"
+ ],
+ "records": [
+  {
+   "id": "4719728",
+   "title": "Neuroanatomy, Cerebral Cortex",
+   "book": "statpearls",
+   "accession": "NBK537247"
+  }
+ ],
+ "_key": "books::neuroanatomy cerebral cortex[title] AND statpearls[book]::5",
+ "_retrieved_at": "2026-11-22T12:00:41"
+}

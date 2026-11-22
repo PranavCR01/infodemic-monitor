@@ -46,12 +46,19 @@ def load(name):
 
 
 def main():
-    videos = load("videos.csv")
-    claims = load("claims.csv")
+    all_videos = load("videos.csv")
+    # Section 14: out_of_scope videos are left out of every count and metric.
+    out_of_scope = [v for v in all_videos
+                    if "out_of_scope" in split_multi(v["case_tags"])]
+    videos = [v for v in all_videos if v not in out_of_scope]
+    scoped_ids = {v["video_id"] for v in videos}
+    claims = [c for c in load("claims.csv") if c["video_id"] in scoped_ids]
     index = {r["video_id"]: r for r in load("video_index.csv")}
 
-    print("## Counts\n")
-    print("- videos: %d" % len(videos))
+    print("## Counts (out_of_scope excluded)\n")
+    print("- videos in scope: %d (plus %d out_of_scope, excluded: %s)"
+          % (len(videos), len(out_of_scope),
+             " ".join(v["video_id"] for v in out_of_scope)))
     print("- claims: %d" % len(claims))
     vids_with = len({c["video_id"] for c in claims})
     print("- videos with at least one claim: %d (%d with none)"
@@ -66,7 +73,8 @@ def main():
         print("- %s: %s" % (title, ", ".join(
             "%s %d" % (k, n) for k, n in c.most_common())))
     print()
-    for col, title in (("speaker_stance", "speaker_stance"),
+    for col, title in (("claim_kind", "claim_kind"),
+                       ("speaker_stance", "speaker_stance"),
                        ("claim_verdict", "claim_verdict"),
                        ("claim_source", "claim_source"),
                        ("confidence", "claim confidence")):
@@ -128,7 +136,8 @@ def main():
     print("- distinct PMIDs cited: %d" % len(pmids))
     print("- distinct URLs cited: %d" % len(urls))
     cache = DATASET / "evidence_cache"
-    for kind in ("search", "abstract", "fulltext", "page"):
+    for kind in ("search", "abstract", "fulltext", "page", "reference",
+                 "books"):
         d = cache / kind
         if d.exists():
             print("- cached %s responses: %d" % (kind,
@@ -139,6 +148,17 @@ def main():
     per = Counter(x["video_id"] for x in claims)
     for vid, n in per.most_common(10):
         print("- %s: %d" % (vid, n))
+    print()
+
+    print("## Review reasons added by the section 9 rules\n")
+    from judge import REASON_DENIES_TRUE, REASON_OPEN_DEBUNK
+    for reason in (REASON_DENIES_TRUE, REASON_OPEN_DEBUNK):
+        hit = [v["video_id"] for v in videos
+               if reason in split_multi(v["review_reasons"])]
+        print("- %s: %d (%s)" % (reason, len(hit), " ".join(hit) or "none"))
+    sent = [v["video_id"] for v in videos if v["review_reasons"]]
+    print("- videos with any review reason: %d of %d" % (len(sent),
+                                                          len(videos)))
     print()
 
     print("## Review load (section 11 triggers present in the data)\n")

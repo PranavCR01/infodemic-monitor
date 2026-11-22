@@ -70,25 +70,38 @@ and any `video_level_label` that no longer follows from its claims:
    and `MIXED` needs both.
 8. **`claim_source`** — `speech` / `screen` / `both` — and **timestamps** point at
    the right moment. Spot-check against `transcripts/<video_id>.json`.
+9. **`claim_kind`** (§4): `fact_of_record` for a schedule, limit, regulatory
+   action, statistic, food composition, diagnostic criterion or textbook fact;
+   `research_question` otherwise. For a cited reference URL, open
+   `reference_citations.csv` and check that the quoted passage really settles
+   the claim *as stated*, not a nearby claim. A passage about fluid guidance does
+   not settle "you need eight cups of water".
 
 ## Per video row — what to check
 
 1. **`video_level_label` is derived, not chosen.** Apply the §9 rules in order to
    that video's claims:
    1. any claim `ENDORSES` + `CONTRADICTED` → `MISINFO`
-   2. else any claim `REFUTES` + `CONTRADICTED` → `DEBUNKING`
-   3. else at least one claim `SUPPORTED` or `CONTRADICTED` → `NO_MISINFO`
-   4. else → `CANNOT_RECOGNIZE`
+   2. else any claim `REFUTES` + `SUPPORTED` → `MISINFO`, review reason
+      "speaker denies a supported claim"
+   3. else any claim `REFUTES` + `CONTRADICTED` → `DEBUNKING`
+   4. else at least one claim `SUPPORTED` or `CONTRADICTED` → `NO_MISINFO`
+   5. else any claim `REFUTES` + `MIXED` / `INSUFFICIENT_EVIDENCE` →
+      `CANNOT_RECOGNIZE`, review reason "possible debunk of an unsettled claim"
+   6. else → `CANNOT_RECOGNIZE`
 
    Order matters: a video that endorses one falsehood *and* refutes another is
    `MISINFO`, not `DEBUNKING`, and must carry the `mixed` tag. `validate.py`
-   enforces both.
-2. **`text_type`** (`high_text` / `low_text`) matches what OCR found. The modality
+   enforces both, and checks `review_reasons`.
+2. **`out_of_scope`** is only for videos with **no health content**. It must be
+   the video's only tag, and the video has no claims. Check it isn't hiding a
+   health video with weak claims, which should be `CANNOT_RECOGNIZE` and counted.
+3. **`text_type`** (`high_text` / `low_text`) matches what OCR found. The modality
    track depends on this column being honest.
-3. **`case_tags`** describe the video and come from the §14 table. Add a tag you
+4. **`case_tags`** describe the video and come from the §14 table. Add a tag you
    think is missing — coverage gaps are reported in the PR and are meant to be
    filled.
-4. **`notes`** flags mixed videos and anything a reader would otherwise have to
+5. **`notes`** flags mixed videos and anything a reader would otherwise have to
    re-watch the video to discover.
 
 ## The blind subset (inter-annotator agreement)

@@ -112,3 +112,24 @@ Video-level labels are unchanged: the §9 four, applied by the §9 rules in orde
   are real.
 - **Split is 30/70 tune/test, assigned per video** (§14: "split by video, not by
   sentence"), with a recorded random seed.
+
+## Revision: 2026-11-22 (revised target design §4, §6, §9, §14)
+
+The target design was revised after the first batch, using what this set
+exposed. Applied here:
+
+- **§9 judge**: two new rules, in the doc's order. `REFUTES` + `SUPPORTED` →
+  `MISINFO`, always reviewed; `REFUTES` + `MIXED`/`INSUFFICIENT_EVIDENCE` →
+  `CANNOT_RECOGNIZE`, reviewed as a possible debunk. `judge()` now returns the
+  review reasons too, recorded in `videos.csv` `review_reasons`.
+- **§4 `claim_kind`** on every claim (`research_question` / `fact_of_record`).
+- **§6 references** for facts of record: a fixed allow-list in `evidence.py`,
+  full-text snapshots with SHA-256, and `reference_citations.csv` holding the
+  URL, retrieval date and quoted passage. Nine claims were re-checked to a
+  verdict or given new reference evidence. The rest were searched and stay put,
+  with the reason in their notes.
+- **§14 `out_of_scope`**: the 16 videos with no health content are tagged and
+  excluded from every count and metric.
+- **Collector comparison**: `collector_agreement.md`, generated. The
+  collectors' labels are the Box folder each file sat in; no separate
+  collector spreadsheet was supplied with the bundle.

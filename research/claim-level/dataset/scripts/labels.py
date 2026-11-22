@@ -43,7 +43,7 @@ LABELS = [
         "video_id": "v01",
         "topic": "none (non-health)",
         "text_type": "high_text",
-        "case_tags": [],
+        "case_tags": ["out_of_scope"],
         "confidence": "high",
         "notes": "Off-topic for this dataset: a police/retail identity dispute "
                  "with no health content. Burned-in subtitles carry the whole "
@@ -55,7 +55,7 @@ LABELS = [
         "video_id": "v02",
         "topic": "none (non-health)",
         "text_type": "high_text",
-        "case_tags": ["debunking"],
+        "case_tags": ["out_of_scope"],
         "confidence": "high",
         "notes": "A genuine debunking video (@dustindeanmentalist explains that "
                  "paranormal 'spirit flashlight' responses are thermal "
@@ -96,6 +96,7 @@ LABELS = [
                 "text": "It's fine when you eat it [fructose] with fruit "
                         "because of the fiber that's associated with it",
                 "source": "both", "start": 10.4, "end": 13.9,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:37019448"],
                 "contradicting": [],
@@ -108,6 +109,7 @@ LABELS = [
                 "text": "It drives dopamine receptors down and is highly "
                         "addictive",
                 "source": "both", "start": 21.8, "end": 24.7,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:41794143", "PMID:17668074"],
                 "contradicting": [],
@@ -122,6 +124,7 @@ LABELS = [
                         "table sugar does, keeps you hungry compared to "
                         "regular sugar",
                 "source": "both", "start": 24.7, "end": 31.3,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:33300990"],
                 "contradicting": [],
@@ -133,6 +136,7 @@ LABELS = [
             {
                 "text": "[Fructose] produces more body fat",
                 "source": "both", "start": 31.3, "end": 34.7,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:37019448"],
                 "contradicting": [],
@@ -146,6 +150,7 @@ LABELS = [
                 "text": "[Fructose] produces ... physical inactivity. In other "
                         "words, it makes you more sedentary",
                 "source": "both", "start": 31.3, "end": 36.6,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:25892667"],
                 "contradicting": [],
@@ -161,6 +166,7 @@ LABELS = [
                 "text": "[Fructose] inhibits three enzymes critical for "
                         "mitochondrial function, AMP kinase, ACADL, and CPT1",
                 "source": "both", "start": 36.6, "end": 40.4,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [],
                 "contradicting": [],
@@ -174,6 +180,7 @@ LABELS = [
                 "text": "It's also been shown to contribute to non-alcoholic "
                         "fatty liver disease",
                 "source": "both", "start": 43.8, "end": 47.2,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:29408694", "PMID:35995049",
                                "PMID:32214246"],
@@ -187,6 +194,7 @@ LABELS = [
                         "the tight junctions in the epithelial cells ... to "
                         "start to separate and there is some permeability",
                 "source": "both", "start": 47.2, "end": 61.1,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:33171587"],
                 "contradicting": [],
@@ -199,6 +207,7 @@ LABELS = [
             {
                 "text": "It [high fructose corn syrup] contributes to cancer",
                 "source": "both", "start": 76.4, "end": 78.1,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:25965509", "PMID:37019448"],
                 "contradicting": [],
@@ -218,6 +227,7 @@ LABELS = [
                 "text": "It can contribute to metabolic disorders ... even "
                         "without obesity being present",
                 "source": "both", "start": 78.1, "end": 84.5,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:31935149", "PMID:37019448"],
                 "contradicting": [],
@@ -228,6 +238,7 @@ LABELS = [
             {
                 "text": "It's been shown to contribute to diabetes",
                 "source": "both", "start": 84.5, "end": 86.5,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:40122386", "PMID:37019448"],
                 "contradicting": [],
@@ -243,6 +254,7 @@ LABELS = [
             {
                 "text": "it puts you at greater risk for heart disease",
                 "source": "both", "start": 86.5, "end": 88.6,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:37019448"],
                 "contradicting": [],
@@ -253,6 +265,7 @@ LABELS = [
             {
                 "text": "A 2023 study showed that red 40 causes DNA damage",
                 "source": "both", "start": 98.0, "end": 101.6,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "MIXED",
                 "supporting": ["PMID:37719200", "PMID:26364875"],
                 "contradicting": ["PMID:28458012"],
@@ -272,6 +285,7 @@ LABELS = [
                 "text": "[red 40 causes] colonic inflammation and affects the "
                         "gut microbiome",
                 "source": "both", "start": 101.6, "end": 104.8,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:37719200", "PMID:36539404"],
                 "contradicting": [],
@@ -287,6 +301,7 @@ LABELS = [
                 "text": "A 2022 study showed that synthetic food dyes are "
                         "linked to ADHD in children",
                 "source": "both", "start": 104.8, "end": 108.8,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:35484553", "PMID:17825405",
                                "PMID:15155391", "PMID:24217026"],
@@ -305,6 +320,7 @@ LABELS = [
                 "text": "a 2015 study showed that it [synthetic food dyes] is "
                         "linked directly to cancer",
                 "source": "both", "start": 108.8, "end": 112.7,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:25750299", "PMID:38928929"],
                 "contradicting": [],
@@ -323,6 +339,7 @@ LABELS = [
                 "text": "A 2022 study showed that nitrates show an increased "
                         "risk of cancer when ingested",
                 "source": "both", "start": 132.8, "end": 138.0,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:35303088"],
                 "contradicting": [],
@@ -338,16 +355,22 @@ LABELS = [
                 "text": "[Agave syrup] is very high in fructose, usually about "
                         "57 to 90% fructose",
                 "source": "both", "start": 163.0, "end": 166.3,
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
-                "supporting": [],
+                "kind": "fact_of_record",
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": [
+                    "https://api.nal.usda.gov/fdc/v1/food/170277"
+                    "?api_key=DEMO_KEY"],
                 "contradicting": [],
                 "confidence": "medium",
-                "notes": "Searches for agave syrup / agave nectar sugar "
-                         "composition returned nothing that reports a fructose "
-                         "percentage. Plausible and probably checkable from a "
-                         "food-composition database, but PubMed is the wrong "
-                         "source and nothing was retrieved, so the honest "
-                         "verdict is insufficient evidence.",
+                "notes": "Settled from a section 6 reference (food "
+                         "composition), where PubMed searches had returned "
+                         "nothing. USDA FoodData Central's agave syrup record "
+                         "gives 55.6 g fructose and 12.43 g glucose per 100 g: "
+                         "fructose is about 56% of the syrup by weight and "
+                         "about 82% of its sugars, inside or at the edge of "
+                         "the claimed 57-90% on either reading. Medium "
+                         "confidence because one database entry stands for a "
+                         "product that varies by brand.",
             },
         ],
     },
@@ -355,7 +378,7 @@ LABELS = [
         "video_id": "v04",
         "topic": "none (non-health)",
         "text_type": "low_text",
-        "case_tags": ["debunking"],
+        "case_tags": ["out_of_scope"],
         "confidence": "high",
         "notes": "Same creator as v02. Debunks a telekinesis claim by "
                  "explaining that loosely folded tinfoil catches moving air, "
@@ -369,7 +392,7 @@ LABELS = [
         "video_id": "v05",
         "topic": "none (non-health)",
         "text_type": "high_text",
-        "case_tags": [],
+        "case_tags": ["out_of_scope"],
         "confidence": "high",
         "notes": "A mentalism performance (@jakehofman, 'Fooling my Stanford "
                  "Professor'). No health content. Collectors filed it under "
@@ -380,7 +403,7 @@ LABELS = [
         "video_id": "v06",
         "topic": "none (non-health)",
         "text_type": "high_text",
-        "case_tags": [],
+        "case_tags": ["out_of_scope"],
         "confidence": "high",
         "notes": "A 5.5-minute technical explainer on neural scaling laws in "
                  "machine learning (OpenAI's 2020 papers, GPT-3, petaflop "
@@ -412,6 +435,7 @@ LABELS = [
             {
                 "text": "you need to drink eight cups of water a day",
                 "start": 3.1, "end": 10.0,
+                "kind": "fact_of_record",
                 "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -420,11 +444,17 @@ LABELS = [
                          "The rule having no evidence base is exactly why it "
                          "is a myth, but section 7 is explicit that absence of "
                          "evidence is not contradiction, so the verdict is "
-                         "insufficient rather than CONTRADICTED.",
+                         "insufficient rather than CONTRADICTED."
+                         " Section 6 reference search (2026-11-22): not "
+                         "settled. Public-health fluid guidance is about total"
+                         " fluid as an aim, not a need for eight cups of "
+                         "water, so even where it exists it fails directness "
+                         "and the verdict stands.",
             },
             {
                 "text": "we only use 10% of our brain",
                 "start": 40.6, "end": 46.8,
+                "kind": "fact_of_record",
                 "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -433,12 +463,18 @@ LABELS = [
                          "ten-percent claim, so citing them for it would be "
                          "citing a paper for something not shown to be in it "
                          "-- the evidence-laundering failure in section 7's "
-                         "probe. Left uncited rather than loosely cited.",
+                         "probe. Left uncited rather than loosely cited."
+                         " Section 6 reference search (2026-11-22): NCBI "
+                         "Bookshelf (StatPearls) is the right section 6 "
+                         "source, but Bookshelf pages answer scripted "
+                         "retrieval with a reCAPTCHA, so nothing could be read"
+                         " and the verdict stands.",
             },
             {
                 "text": "if you crack your knuckles you're going to get "
                         "arthritis",
                 "start": 82.0, "end": 92.8,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:21383216", "PMID:30080300"],
@@ -455,6 +491,7 @@ LABELS = [
                 "text": "to pee on a jellyfish sting and that that'll make it "
                         "heal",
                 "start": 122.1, "end": 133.6,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [],
                 "contradicting": ["PMID:40525026"],
@@ -470,6 +507,7 @@ LABELS = [
             {
                 "text": "if you shave your hair it'll grow back thicker",
                 "start": 159.8, "end": 181.8,
+                "kind": "fact_of_record",
                 "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [],
                 "contradicting": ["PMID:5459955"],
@@ -480,14 +518,19 @@ LABELS = [
                          "PMC, so its conclusion could not be read. Cited as "
                          "the on-point paper; a reviewer with journal access "
                          "should read it and will most likely upgrade this row "
-                         "to CONTRADICTED.",
+                         "to CONTRADICTED."
+                         " Section 6 reference search (2026-11-22): NCBI "
+                         "Bookshelf (StatPearls) is the right section 6 "
+                         "source, but Bookshelf pages answer scripted "
+                         "retrieval with a reCAPTCHA, so nothing could be read"
+                         " and the verdict stands.",
             },
         ],
     },
     {
         "video_id": "v08",
         "topic": "none (non-health)",
-        "case_tags": [],
+        "case_tags": ["out_of_scope"],
         "confidence": "high",
         "notes": "A narrated hide-and-seek competition show ($100,000 prize, "
                  "six people hiding in an abandoned courthouse). No health "
@@ -497,7 +540,7 @@ LABELS = [
     {
         "video_id": "v09",
         "topic": "none (non-health)",
-        "case_tags": [],
+        "case_tags": ["out_of_scope"],
         "confidence": "high",
         "notes": "A Bill Nye thermal-conductivity demonstration: ice melting "
                  "faster on the surface that feels cooler. Physics, not "
@@ -508,7 +551,7 @@ LABELS = [
     {
         "video_id": "v10",
         "topic": "none (non-health)",
-        "case_tags": ["debunking"],
+        "case_tags": ["out_of_scope"],
         "confidence": "high",
         "notes": "A debunk of a 'giants were real' video, arguing from "
                  "prehistoric oxygen levels and arthropod size. Genuine "
@@ -537,6 +580,7 @@ LABELS = [
                 "text": "people who eat a lot of saturated fats, which are "
                         "totally fine, by the way",
                 "start": 15.3, "end": 19.0,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "MIXED",
                 "supporting": ["PMID:40416032"],
                 "contradicting": ["PMID:32428300"],
@@ -556,6 +600,7 @@ LABELS = [
                         "with seed oils. And in almost every study, the people "
                         "are months later healthier",
                 "start": 19.0, "end": 26.5,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "MIXED",
                 "supporting": ["PMID:32428300", "PMID:25161045"],
                 "contradicting": ["PMID:40416032"],
@@ -571,6 +616,7 @@ LABELS = [
                 "text": "seed oils are super great for your health. They're "
                         "totally fine",
                 "start": 49.6, "end": 54.8,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:25161045", "PMID:37513547",
                                "PMID:39820582"],
@@ -610,6 +656,7 @@ LABELS = [
                         "So if you stop feeding yourself sugar, your body will "
                         "burn the sugar that is stored",
                 "start": 22.2, "end": 31.0,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "low",
@@ -624,6 +671,7 @@ LABELS = [
                         "day. Really, you should be drinking your body weight "
                         "in ounces",
                 "start": 31.0, "end": 38.7,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -639,6 +687,7 @@ LABELS = [
                         "your bloodstream, and you pee it out. You don't poop "
                         "it out ... you pee out the fat",
                 "start": 38.7, "end": 48.7,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [],
                 "contradicting": ["PMID:25516540"],
@@ -652,7 +701,13 @@ LABELS = [
                          "retrieved. Three further searches for the mass "
                          "balance of fat loss returned nothing usable. A "
                          "reviewer who reads the full text should upgrade this "
-                         "to CONTRADICTED, which flips the video to MISINFO.",
+                         "to CONTRADICTED, which flips the video to MISINFO."
+                         " Section 6 reference search (2026-11-22): NCBI "
+                         "Bookshelf (StatPearls) is the right section 6 "
+                         "source, but Bookshelf pages answer scripted "
+                         "retrieval with a reCAPTCHA, so nothing could be read"
+                         " and the verdict stands. The BMJ paper itself is not"
+                         " on the allow-list.",
             },
         ],
     },
@@ -675,6 +730,7 @@ LABELS = [
                         "feeling goes away. You will stop being hungry after a "
                         "while. Probably like a week probably like two weeks",
                 "start": 54.7, "end": 65.9,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -688,6 +744,7 @@ LABELS = [
                 "text": "nine times out of ten you can't ... weigh 130 pounds "
                         "and be eating pizzas and burgers",
                 "start": 98.7, "end": 112.9,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -702,6 +759,7 @@ LABELS = [
                         "I'm going to drink a lot of water, I'm gonna flush it "
                         "out",
                 "start": 132.2, "end": 143.2,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -713,7 +771,7 @@ LABELS = [
     {
         "video_id": "v14",
         "topic": "none (non-health)",
-        "case_tags": [],
+        "case_tags": ["out_of_scope"],
         "confidence": "high",
         "notes": "A student arguing with a lecturer about an un-curved exam "
                  "averaging 47%. No health content. Collectors filed it under "
@@ -723,7 +781,7 @@ LABELS = [
     {
         "video_id": "v15",
         "topic": "none (non-health)",
-        "case_tags": [],
+        "case_tags": ["out_of_scope"],
         "confidence": "high",
         "notes": "A mirror/line-of-sight trick, filmed as banter. No health "
                  "content, and the speech is fragmentary. Collectors filed it "
@@ -733,7 +791,7 @@ LABELS = [
     {
         "video_id": "v16",
         "topic": "none (non-health)",
-        "case_tags": [],
+        "case_tags": ["out_of_scope"],
         "confidence": "high",
         "notes": "A natural-history explainer about the oldest animal ever "
                  "found (the quahog clam 'Ming'). Biology, not health. "
@@ -765,6 +823,7 @@ LABELS = [
                 "text": "all of these foods behind me literally contain "
                         "hundreds of dangerous chemicals",
                 "start": 23.8, "end": 28.0,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -798,6 +857,7 @@ LABELS = [
             {
                 "text": "a remedy capable of relieving dry cough",
                 "start": 10.6, "end": 17.3,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -809,6 +869,7 @@ LABELS = [
             {
                 "text": "a remedy capable of ... [relieving] bronchitis",
                 "start": 10.6, "end": 17.3,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -821,6 +882,7 @@ LABELS = [
                 "text": "a remedy capable of ... expelling mucus stuck in the "
                         "lungs",
                 "start": 10.6, "end": 17.3,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -831,6 +893,7 @@ LABELS = [
             {
                 "text": "a remedy capable of ... improving sinusitis",
                 "start": 17.3, "end": 22.8,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -840,6 +903,7 @@ LABELS = [
             {
                 "text": "a remedy capable of ... easing cold symptoms",
                 "start": 17.3, "end": 22.8,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [],
                 "contradicting": ["PMID:25386977"],
@@ -875,6 +939,7 @@ LABELS = [
                         "almonds can help you lose weight, especially in the "
                         "stomach area",
                 "start": 3.8, "end": 10.9,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:38351580"],
                 "contradicting": [],
@@ -892,6 +957,7 @@ LABELS = [
                 "text": "Almonds are rich in unsaturated fats that promote "
                         "good cholesterol and protect your heart",
                 "start": 12.8, "end": 18.1,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [],
                 "contradicting": ["PMID:38967674"],
@@ -907,6 +973,7 @@ LABELS = [
                         "make you feel full. This makes them an ideal snack "
                         "for controlling your appetite",
                 "start": 19.8, "end": 28.8,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:36305961", "PMID:34682735"],
                 "contradicting": [],
@@ -923,6 +990,7 @@ LABELS = [
                         "plays an essential role in mood regulation and stress "
                         "management",
                 "start": 31.5, "end": 37.9,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -936,6 +1004,7 @@ LABELS = [
                         "acid that plays a key role in the production of "
                         "serotonin, the sleep hormone",
                 "start": 40.1, "end": 47.8,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -953,6 +1022,7 @@ LABELS = [
                         "which help fight oxidative stress and reduce daily "
                         "stress",
                 "start": 49.6, "end": 56.5,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -982,6 +1052,7 @@ LABELS = [
                         "protein. Your muscles, your connective tissue will "
                         "get the highest quality amino acids",
                 "start": 3.2, "end": 10.2,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "low",
@@ -998,6 +1069,7 @@ LABELS = [
                         "to prevent something called macular degeneration as "
                         "well as cataracts",
                 "start": 10.2, "end": 16.8,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:35215476"],
                 "contradicting": [],
@@ -1012,6 +1084,7 @@ LABELS = [
                 "text": "Eggs are also high in something called choline, "
                         "which is really good to prevent a fatty liver",
                 "start": 16.8, "end": 20.8,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:39424072", "PMID:37634048"],
                 "contradicting": [],
@@ -1030,6 +1103,7 @@ LABELS = [
                 "text": "[choline is] really good to ... support your brain, "
                         "better focus, concentration, and memory",
                 "start": 20.8, "end": 24.8,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -1042,6 +1116,7 @@ LABELS = [
                         "going to find that your HDL, the good cholesterol "
                         "will go up if you consume eggs",
                 "start": 24.8, "end": 33.2,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:29111915", "PMID:32635569"],
                 "contradicting": [],
@@ -1059,6 +1134,7 @@ LABELS = [
                 "text": "if you eat eggs for breakfast, you're going to find "
                         "your blood sugars are going to be very stabilized",
                 "start": 28.8, "end": 36.2,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:29313753"],
                 "contradicting": [],
@@ -1088,6 +1164,7 @@ LABELS = [
                 "text": "Since your glycogen stores are depleted overnight, "
                         "your body switches to burning fat more quickly",
                 "start": 5.1, "end": 9.9,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:23723099"],
                 "contradicting": [],
@@ -1103,6 +1180,7 @@ LABELS = [
                         "more efficiently, which makes weight loss easier and "
                         "faster",
                 "start": 10.7, "end": 20.9,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [],
                 "contradicting": ["PMID:23723099"],
@@ -1121,6 +1199,7 @@ LABELS = [
                         "regulated. This helps you feel more relaxed and calm "
                         "throughout the day",
                 "start": 20.9, "end": 25.0,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -1133,6 +1212,7 @@ LABELS = [
                         "helps regulate blood pressure and strengthens your "
                         "cardiovascular system",
                 "start": 35.6, "end": 40.2,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:39444461", "PMID:25601182"],
                 "contradicting": [],
@@ -1147,6 +1227,7 @@ LABELS = [
             {
                 "text": "After 20 days, your immune system becomes stronger",
                 "start": 46.4, "end": 51.8,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -1160,6 +1241,7 @@ LABELS = [
                 "text": "Your sleep also improves. You fall asleep faster and "
                         "wake up feeling more refreshed",
                 "start": 51.8, "end": 54.9,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:34163383", "PMID:25596964"],
                 "contradicting": [],
@@ -1191,6 +1273,7 @@ LABELS = [
             {
                 "text": "seed oils are horrible for you",
                 "start": 0.0, "end": 3.2,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:25161045", "PMID:37513547"],
@@ -1208,6 +1291,7 @@ LABELS = [
                         "more seed oils either saw the same or actually better "
                         "health outcomes than the groups eating less",
                 "start": 47.2, "end": 55.4,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:32428300", "PMID:40416032",
                                "PMID:25161045"],
@@ -1228,6 +1312,7 @@ LABELS = [
                         "fat, fiber, and sodium ... On the processed diet, "
                         "people ate 500 calories more a day and gained weight",
                 "start": 107.2, "end": 120.2,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:31105044"],
                 "contradicting": [],
@@ -1245,6 +1330,7 @@ LABELS = [
                         "Their obesity rate is under 5%, and they live longer "
                         "than almost anyone on the earth",
                 "start": 65.4, "end": 78.5,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -1260,6 +1346,7 @@ LABELS = [
                 "text": "We eat about 500 or more calories a day than we did "
                         "in 1970",
                 "start": 92.3, "end": 96.5,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -1292,6 +1379,7 @@ LABELS = [
                         "know what to do with it, it doesn't have the proper "
                         "enzymes or stuff to break it down",
                 "start": 2.9, "end": 9.0,
+                "kind": "fact_of_record",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:28241431"],
@@ -1308,6 +1396,7 @@ LABELS = [
                         "syrup, it wouldn't be as overwhelming to the liver "
                         "and wouldn't have as high of blood sugar spikes",
                 "start": 9.0, "end": 15.0,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:3891268"],
@@ -1325,6 +1414,7 @@ LABELS = [
                         "type of sugar is probably not gonna do a whole lot in "
                         "the realm of making people healthier",
                 "start": 39.0, "end": 49.0,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:3891268"],
                 "contradicting": [],
@@ -1359,6 +1449,7 @@ LABELS = [
             {
                 "text": "All diabetics must avoid eating these four fruits",
                 "start": 0.0, "end": 3.8,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:37214237", "PMID:23990623"],
@@ -1378,6 +1469,7 @@ LABELS = [
                         "means it raises blood sugar quickly, even in small "
                         "portions",
                 "start": 6.0, "end": 15.9,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -1394,6 +1486,7 @@ LABELS = [
                 "text": "Ripe bananas have a high glycemic index and sugar "
                         "content, which can rapidly elevate blood sugar levels",
                 "start": 29.0, "end": 40.1,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:34258626"],
@@ -1411,6 +1504,7 @@ LABELS = [
                 "text": "Mangos, especially when ripe, contain a lot of sugar "
                         "that can cause quick blood sugar spikes",
                 "start": 45.3, "end": 55.9,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -1422,6 +1516,7 @@ LABELS = [
                 "text": "Apple has a high glycemic index and can sharply raise "
                         "blood glucose",
                 "start": 56.9, "end": 62.8,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:34258626"],
@@ -1461,6 +1556,7 @@ LABELS = [
                         "them and eat[] them every day ... And that kills your "
                         "cancer",
                 "start": 16.9, "end": 31.1,
+                "kind": "research_question",
                 "stance": "UNCLEAR", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -1496,6 +1592,7 @@ LABELS = [
                 "text": "[vaccines] can cause everything from osteoporosis to "
                         "autism",
                 "start": 0.4, "end": 3.8,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:24814559", "PMID:32309885"],
@@ -1512,6 +1609,7 @@ LABELS = [
                 "text": "The COVID vaccine introduction has had a catastrophic "
                         "negative effect",
                 "start": 3.8, "end": 9.2,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:40711778"],
@@ -1526,6 +1624,7 @@ LABELS = [
             {
                 "text": "you can reverse autism through diet",
                 "start": 50.3, "end": 55.8,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:28612113", "PMID:24789114"],
@@ -1566,6 +1665,7 @@ LABELS = [
                 "text": "[Cheerios carry harmful] glyphosate residues ... your "
                         "cereal is a spawn of Satan",
                 "start": 25.2, "end": 31.2,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "MIXED",
                 "supporting": ["PMID:31342895", "PMID:26941213"],
                 "contradicting": ["PMID:29136183", "PMID:27552246"],
@@ -1583,6 +1683,7 @@ LABELS = [
                         "significantly associated with cancer at any site in a "
                         "study of 54,000 people",
                 "start": 152.6, "end": 162.8,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:29136183"],
                 "contradicting": [],
@@ -1600,6 +1701,7 @@ LABELS = [
                         "on glyphosate. Not genotoxic, doesn't represent a "
                         "risk of cancer, not carcinogenic, not neurotoxic",
                 "start": 157.1, "end": 173.6,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "MIXED",
                 "supporting": ["PMID:27552246"],
                 "contradicting": ["PMID:26941213", "PMID:31342895"],
@@ -1616,6 +1718,7 @@ LABELS = [
                         "a day for a prolonged period of time for glyphosate "
                         "to become an issue",
                 "start": 125.6, "end": 137.8,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -1652,6 +1755,7 @@ LABELS = [
                 "text": "cancer loves sugar ... a cancer cell consumes 15 "
                         "times the glucose of any other cell",
                 "start": 19.3, "end": 37.9,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:19460998", "PMID:39284669"],
                 "contradicting": [],
@@ -1667,6 +1771,7 @@ LABELS = [
             {
                 "text": "Cancer also loves an acid environment",
                 "start": 108.2, "end": 118.8,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:31730395"],
                 "contradicting": [],
@@ -1685,6 +1790,7 @@ LABELS = [
                         "sugar out of the sugarcane plant it becomes a pure "
                         "acid",
                 "start": 118.8, "end": 141.6,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:38282081"],
@@ -1703,6 +1809,7 @@ LABELS = [
                 "text": "Cancer is not happy when you create an alkaline "
                         "environment in the ... body",
                 "start": 167.4, "end": 190.8,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:38282081", "PMID:27297008"],
@@ -1724,6 +1831,7 @@ LABELS = [
                 "text": "Cancer hates it when you stop the sugar or stop all "
                         "glucose",
                 "start": 167.4, "end": 176.7,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:39639257"],
                 "contradicting": [],
@@ -1741,6 +1849,7 @@ LABELS = [
                 "text": "remember genetics loads the gun, lifestyle pulls the "
                         "trigger",
                 "start": 101.1, "end": 108.2,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -1754,6 +1863,7 @@ LABELS = [
                         "[among doctors, specialists and naturopaths who are "
                         "conquering cancer]",
                 "start": 203.4, "end": 212.4,
+                "kind": "research_question",
                 "stance": "QUOTES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:35929990", "PMID:39369582"],
                 "contradicting": [],
@@ -1792,6 +1902,7 @@ LABELS = [
                         "40-year-olds, prostate cancer is up a whopping 500 "
                         "percent",
                 "start": 19.5, "end": 25.5,
+                "kind": "fact_of_record",
                 "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [],
                 "contradicting": ["PMID:25251195"],
@@ -1804,7 +1915,14 @@ LABELS = [
                          "retrievable item is a report on rising early-onset "
                          "cancer in Australia described explicitly 'over two "
                          "decades', which is consistent with her correction "
-                         "but does not verify the 500% figure.",
+                         "but does not verify the 500% figure."
+                         " Section 6 reference search (2026-11-22): not yet "
+                         "checked. AIHW, Australia's national health "
+                         "statistics agency, is on the allow-list, but its "
+                         "cancer incidence data are interactive workbooks with"
+                         " no stable age-specific passage to quote; a reviewer"
+                         " with the AIHW 'Cancer data in Australia' workbook "
+                         "can settle the five-versus-25-year question.",
             },
             {
                 "text": "Scientists from around the world who are actually "
@@ -1812,6 +1930,7 @@ LABELS = [
                         "screening, obesity trends, infections, and "
                         "environmental exposures",
                 "start": 52.9, "end": 60.9,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:33219329", "PMID:40781551",
                                "PMID:40674064"],
@@ -1828,6 +1947,7 @@ LABELS = [
                 "text": "when evidence showed that trans fat increased heart "
                         "disease risk, independent scientists globally said it",
                 "start": 102.8, "end": 110.9,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:21427742", "PMID:26268692"],
                 "contradicting": [],
@@ -1841,6 +1961,7 @@ LABELS = [
                 "text": "If vaccines were causing increased cancer rates, "
                         "independent researchers worldwide would say so",
                 "start": 83.8, "end": 89.7,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -1871,6 +1992,7 @@ LABELS = [
             {
                 "text": "Tea tree reduces all acne by 512 percent",
                 "start": 16.2, "end": 22.3,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:2145499", "PMID:27416314"],
@@ -1886,6 +2008,7 @@ LABELS = [
                 "text": "Macker [maca] root. Three times your pencil size in "
                         "30 days",
                 "start": 46.7, "end": 50.7,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -1897,6 +2020,7 @@ LABELS = [
             {
                 "text": "Beat root [beetroot] spikes muscle growth in 30 days",
                 "start": 54.8, "end": 57.8,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -1908,6 +2032,7 @@ LABELS = [
                 "text": "Batana oil adds three inches of hair to your scalp ... "
                         "Reverses you're balding completely",
                 "start": 69.6, "end": 76.5,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -1919,6 +2044,7 @@ LABELS = [
                         "skin if you apply it directly and don't dilute it "
                         "down",
                 "start": 41.7, "end": 45.7,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:31780027"],
                 "contradicting": [],
@@ -1948,6 +2074,7 @@ LABELS = [
                 "text": "Your body has a natural circadian rhythm that makes "
                         "hunger hit its lowest point around 8AM",
                 "start": 8.4, "end": 13.3,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:32463976", "PMID:30232416"],
                 "contradicting": [],
@@ -1962,6 +2089,7 @@ LABELS = [
                 "text": "Growl in [ghrelin], your hunger hormone is naturally "
                         "suppressed in the morning hours",
                 "start": 13.3, "end": 17.0,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:30232416"],
                 "contradicting": [],
@@ -1976,6 +2104,7 @@ LABELS = [
             {
                 "text": "hunger and appetite peak later in the evening",
                 "start": 17.0, "end": 21.5,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:32463976", "PMID:41622791"],
                 "contradicting": [],
@@ -1987,6 +2116,7 @@ LABELS = [
                 "text": "poor sleep messes with your hunger hormones "
                         "completely",
                 "start": 23.9, "end": 27.5,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:30232416"],
                 "contradicting": [],
@@ -2022,6 +2152,7 @@ LABELS = [
                         "by removing one food in particular, refined sugars, "
                         "could end up saving your life",
                 "start": 5.2, "end": 15.1,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:39639257", "PMID:40428567"],
                 "contradicting": [],
@@ -2059,6 +2190,7 @@ LABELS = [
                         "way to stop radiation exposure and radiation "
                         "poisoning",
                 "start": 0.0, "end": 11.8,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -2072,6 +2204,7 @@ LABELS = [
                         "would actually remove any form of radiation from the "
                         "human body or the bloodstream",
                 "start": 36.4, "end": 44.1,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:11833659"],
                 "contradicting": [],
@@ -2089,6 +2222,7 @@ LABELS = [
                         "radiation poisoning ... So why not have a bowl of "
                         "miso soup before getting any kind of X-rays?",
                 "start": 49.2, "end": 57.8,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:11833659"],
                 "contradicting": [],
@@ -2124,6 +2258,7 @@ LABELS = [
                 "text": "our entire physical makeup is comprised of 102 of "
                         "these minerals in trace amounts",
                 "start": 6.5, "end": 14.3,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -2137,6 +2272,7 @@ LABELS = [
                         "disease and every ailment to a mineral deficiency. I "
                         "happen to agree with them",
                 "start": 14.8, "end": 25.9,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "low",
@@ -2152,6 +2288,7 @@ LABELS = [
             {
                 "text": "Burdock root contains all 102 of those minerals",
                 "start": 25.9, "end": 32.1,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -2163,6 +2300,7 @@ LABELS = [
                         "that contains 92 of those 102 minerals, and it's "
                         "actually in concentrated amounts",
                 "start": 32.1, "end": 41.1,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -2173,6 +2311,7 @@ LABELS = [
                         "highest concentration of vitamins of any plant on the "
                         "earth",
                 "start": 49.1, "end": 58.9,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:39759372", "PMID:25190880"],
                 "contradicting": [],
@@ -2205,6 +2344,7 @@ LABELS = [
                 "text": "there's an ingredients in the drug ozembic "
                         "[Ozempic] called berberine",
                 "start": 0.0, "end": 5.0,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:26308095", "PMID:40281304"],
@@ -2219,6 +2359,7 @@ LABELS = [
             {
                 "text": "berberine is actually nature's metformin",
                 "start": 19.0, "end": 28.0,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "MIXED",
                 "supporting": ["PMID:34956436", "PMID:23118793"],
                 "contradicting": ["PMID:34407851"],
@@ -2236,6 +2377,7 @@ LABELS = [
                         "astounding that even doctors are getting off the "
                         "drug [metformin]",
                 "start": 33.1, "end": 38.5,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -2247,6 +2389,7 @@ LABELS = [
                         "health benefits, one of which is it helps to "
                         "eliminate arterial plaque",
                 "start": 38.5, "end": 44.9,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -2276,6 +2419,7 @@ LABELS = [
                 "text": "seed oils are unhealthy, leads to inflammation, "
                         "heart disease, obesity",
                 "start": 3.6, "end": 7.4,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:25161045", "PMID:37513547"],
@@ -2288,6 +2432,7 @@ LABELS = [
             {
                 "text": "that carbs make you fat",
                 "start": 21.4, "end": 23.0,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -2300,6 +2445,7 @@ LABELS = [
                 "text": "butter should be eaten as a snack and it is healthy "
                         "for you to do so",
                 "start": 36.1, "end": 38.4,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "MIXED",
                 "supporting": ["PMID:40416032"],
                 "contradicting": ["PMID:32428300"],
@@ -2314,6 +2460,7 @@ LABELS = [
                 "text": "You can gain fat in a calorie deficit due to "
                         "hormonal problems or endocrine dysfunction",
                 "start": 46.9, "end": 50.0,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -2326,6 +2473,7 @@ LABELS = [
             {
                 "text": "that vegetables are bad for you",
                 "start": 58.7, "end": 62.6,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:28338764", "PMID:33641343"],
@@ -2354,6 +2502,7 @@ LABELS = [
                 "text": "Electrolytes help you properly retain fluid, keeping "
                         "you way more hydrated",
                 "start": 12.5, "end": 16.0,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:34578811", "PMID:9760324"],
                 "contradicting": [],
@@ -2369,6 +2518,7 @@ LABELS = [
                 "text": "So think better, energy levels, immune health, and "
                         "no more headaches",
                 "start": 16.0, "end": 19.5,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -2401,6 +2551,7 @@ LABELS = [
                 "text": "Scrub your entire hands up to just above your wrists "
                         "for 20 seconds",
                 "start": 12.5, "end": 17.2,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:25836392"],
                 "contradicting": [],
@@ -2416,12 +2567,20 @@ LABELS = [
             {
                 "text": "Use a piece of paper towel to turn off the faucet",
                 "start": 26.1, "end": 28.9,
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
-                "supporting": [], "contradicting": [],
-                "confidence": "medium",
-                "notes": "Standard food-safety practice, but nothing "
-                         "retrieved tests recontamination from taps or the "
-                         "paper-towel step specifically.",
+                "kind": "fact_of_record",
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": [
+                    "https://www.nhs.uk/live-well/best-way-to-wash-your-hands/"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "An instruction from public-health handwashing "
+                         "guidance, so a fact of record: the NHS method's "
+                         "step 11 is 'Use the disposable towel to turn off "
+                         "the tap.' Previously INSUFFICIENT_EVIDENCE because "
+                         "no study tests the step; the claim is that this is "
+                         "the guidance, and the guidance says so. Whether the "
+                         "step reduces recontamination remains untested, and "
+                         "that is a different (research) claim.",
             },
         ],
     },
@@ -2447,6 +2606,7 @@ LABELS = [
                 "text": "If you go to get off of it, you gain all the weight "
                         "back",
                 "start": 1.7, "end": 5.4,
+                "kind": "research_question",
                 "stance": "UNCLEAR", "verdict": "SUPPORTED",
                 "supporting": ["PMID:35441470", "PMID:41399474"],
                 "contradicting": [],
@@ -2466,6 +2626,7 @@ LABELS = [
                 "text": "Ozympic [Ozempic] kills hunger. And that's one of the "
                         "reasons it's causing people to lose weight",
                 "start": 28.5, "end": 32.4,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:28266779", "PMID:40466247"],
                 "contradicting": [],
@@ -2480,6 +2641,7 @@ LABELS = [
                         "we destroy our microbiome, you destroy your body and "
                         "you destroy your mind",
                 "start": 39.6, "end": 55.6,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:40284168"],
@@ -2496,6 +2658,7 @@ LABELS = [
                 "text": "a fasting lifestyle will give you the same weight "
                         "loss result and save you money as ozempic",
                 "start": 78.2, "end": 89.6,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:38740993", "PMID:40961952"],
@@ -2513,6 +2676,7 @@ LABELS = [
                         "cardiovascular health. We reduce risk of heart "
                         "attacks",
                 "start": 121.8, "end": 130.3,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:39181597", "PMID:38796653"],
                 "contradicting": [],
@@ -2526,6 +2690,7 @@ LABELS = [
                         "looking at 15 to 20 or higher percent total body "
                         "weight loss",
                 "start": 147.6, "end": 159.7,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:38740993", "PMID:40961952"],
                 "contradicting": [],
@@ -2561,6 +2726,7 @@ LABELS = [
                 "text": "What are the most harmful foods that people "
                         "constantly eat? Seed oils",
                 "start": 0.0, "end": 3.1,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:25161045", "PMID:37513547"],
@@ -2575,6 +2741,7 @@ LABELS = [
                 "text": "you de-gum it with hexane, which is a known "
                         "neurotoxin",
                 "start": 13.0, "end": 17.4,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:39536137", "PMID:11724159"],
                 "contradicting": [],
@@ -2594,6 +2761,7 @@ LABELS = [
                 "text": "You need to deodorize it with sodium hydroxide, "
                         "which is a very powerful carcinogen",
                 "start": 22.0, "end": 26.1,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -2604,12 +2772,19 @@ LABELS = [
                          "no retrieved source says so, so this stays "
                          "insufficient rather than contradicted. Another row a "
                          "reviewer with a toxicology reference should expect "
-                         "to upgrade.",
+                         "to upgrade."
+                         " Section 6 reference search (2026-11-22): no allow-"
+                         "listed reference was retrieved. Note that an "
+                         "agency's 'not classified as a carcinogen' would "
+                         "itself be absence of a finding, which section 6 says"
+                         " keeps the claim INSUFFICIENT_EVIDENCE rather than "
+                         "CONTRADICTED.",
             },
             {
                 "text": "These are pro-inflammatory that cause massive amount "
                         "of inflammation in the body",
                 "start": 45.4, "end": 49.6,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:28752873", "PMID:22889633"],
@@ -2628,6 +2803,7 @@ LABELS = [
                         "grass-fed butter, butter, grass-fed tallow, coconut "
                         "oil, and an olive oil",
                 "start": 51.9, "end": 59.3,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [],
                 "contradicting": ["PMID:32428300"],
@@ -2645,7 +2821,7 @@ LABELS = [
     {
         "video_id": "v43",
         "topic": "none (non-health)",
-        "case_tags": [],
+        "case_tags": ["out_of_scope"],
         "confidence": "high",
         "notes": "A long-form practical demonstration of the Earth's "
                  "curvature, renting a high floor to watch a boat hull "
@@ -2674,6 +2850,7 @@ LABELS = [
                         "three days later, she was urgently taken to the "
                         "hospital, where she died",
                 "start": 0.0, "end": 9.6,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -2688,6 +2865,7 @@ LABELS = [
                         "people just don't have immunity from these ancient "
                         "organisms",
                 "start": 43.1, "end": 51.8,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -2703,7 +2881,7 @@ LABELS = [
     {
         "video_id": "v45",
         "topic": "none (non-health)",
-        "case_tags": [],
+        "case_tags": ["out_of_scope"],
         "confidence": "high",
         "notes": "A game-theory thought experiment about a million people "
                  "competing to win. No health content. Collectors filed it "
@@ -2713,7 +2891,7 @@ LABELS = [
     {
         "video_id": "v46",
         "topic": "none (non-health)",
-        "case_tags": [],
+        "case_tags": ["out_of_scope"],
         "confidence": "high",
         "notes": "An economics explainer on the seven stages by which global "
                  "reserve currencies collapse. No health content. Collectors "
@@ -2723,7 +2901,7 @@ LABELS = [
     {
         "video_id": "v47",
         "topic": "none (non-health)",
-        "case_tags": [],
+        "case_tags": ["out_of_scope"],
         "confidence": "high",
         "notes": "A natural-history explainer on lobsters being "
                  "'biologically immortal' and why they die anyway. Biology, "
@@ -2737,7 +2915,7 @@ LABELS = [
     {
         "video_id": "v48",
         "topic": "none (non-health)",
-        "case_tags": [],
+        "case_tags": ["out_of_scope"],
         "confidence": "high",
         "notes": "A two-person conversation disputing the Great Wall of "
                  "China's stated length. History, no health content. "
@@ -2768,6 +2946,7 @@ LABELS = [
                 "text": "You get the injection in your arm ... Most often "
                         "little pieces of the pathogen",
                 "start": 18.6, "end": 28.6,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:22481438"],
                 "contradicting": [],
@@ -2782,6 +2961,7 @@ LABELS = [
                         "cells and B cells that recognized COVID ... all of "
                         "those cells were randomly generated in advance",
                 "start": 76.0, "end": 93.4,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:22481438", "PMID:34126625"],
                 "contradicting": [],
@@ -2797,6 +2977,7 @@ LABELS = [
                         "virus and goes to the lymph node and activates the B "
                         "and T cells",
                 "start": 124.3, "end": 130.6,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:22481438"],
                 "contradicting": [],
@@ -2809,6 +2990,7 @@ LABELS = [
                 "text": "If the severity of your vaccine response is "
                         "predictive [of how severe COVID would have been]",
                 "start": 141.5, "end": 146.7,
+                "kind": "research_question",
                 "stance": "NEUTRAL", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -2841,6 +3023,7 @@ LABELS = [
                         "lungs decreased in terms of its function. Yeah, even "
                         "with marijuana",
                 "start": 11.2, "end": 26.5,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:37728136"],
                 "contradicting": [],
@@ -2871,6 +3054,7 @@ LABELS = [
                         "coronary disease and acute heart attack by 1.3 to two "
                         "times those that don't smoke marijuana regularly",
                 "start": 19.4, "end": 33.0,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:40686207"],
                 "contradicting": [],
@@ -2885,6 +3069,7 @@ LABELS = [
                 "text": "That's the same increased risk as high blood pressure "
                         "or increased cholesterol",
                 "start": 33.0, "end": 38.8,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -2899,6 +3084,7 @@ LABELS = [
                         "folks that have never smoked a cigarette in their "
                         "lives",
                 "start": 38.8, "end": 55.0,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -2928,6 +3114,7 @@ LABELS = [
                         "sits there forcing your body to pump out excess "
                         "insulin",
                 "start": 16.7, "end": 27.6,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:22374636", "PMID:36728338"],
                 "contradicting": [],
@@ -2943,6 +3130,7 @@ LABELS = [
                         "your muscles will act like a sponge and soak up that "
                         "sugar",
                 "start": 27.6, "end": 39.3,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:27208318", "PMID:35147898"],
                 "contradicting": [],
@@ -2977,6 +3165,7 @@ LABELS = [
                         "present any advantage over using regular soap for "
                         "regular hand washing",
                 "start": 11.8, "end": 21.0,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:17683018"],
                 "contradicting": [],
@@ -2991,6 +3180,7 @@ LABELS = [
                         "skin, total BS. Drinking excessive amounts of water "
                         "will not make your skin look different",
                 "start": 50.0, "end": 64.0,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -3006,6 +3196,7 @@ LABELS = [
                         "is ... three liters or eight eight ounce glasses or "
                         "what like that's not evidence-based",
                 "start": 85.5, "end": 105.0,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -3023,6 +3214,7 @@ LABELS = [
                         "just wash away, it's a chronic inflammatory condition "
                         "of the skin",
                 "start": 142.1, "end": 152.6,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:27416314"],
                 "contradicting": [],
@@ -3055,6 +3247,7 @@ LABELS = [
                         "significantly better than all the others [nuts and "
                         "seeds]",
                 "start": 6.3, "end": 30.1,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -3071,6 +3264,7 @@ LABELS = [
                         "but because they're high calorie, people think "
                         "they're unhealthy",
                 "start": 39.9, "end": 44.2,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:36904160"],
                 "contradicting": [],
@@ -3082,6 +3276,7 @@ LABELS = [
             {
                 "text": "low calorie and healthy aren't the same thing",
                 "start": 44.2, "end": 49.2,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -3108,6 +3303,7 @@ LABELS = [
                         "much damage to every organ in the body as smoking "
                         "cigarettes",
                 "start": 6.6, "end": 17.6,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:30800285", "PMID:36727839"],
                 "contradicting": [],
@@ -3123,6 +3319,7 @@ LABELS = [
             {
                 "text": "the causal relationship with lung cancer",
                 "start": 35.8, "end": 38.8,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:11165392", "PMID:30800285"],
                 "contradicting": [],
@@ -3149,6 +3346,7 @@ LABELS = [
             {
                 "text": "it is the most contagious virus that we know",
                 "start": 10.1, "end": 23.7,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:39156354"],
                 "contradicting": [],
@@ -3157,7 +3355,12 @@ LABELS = [
                          "established and the retrieved airborne-transmission "
                          "modelling study is consistent with it, but a "
                          "superlative across all known viruses is a ranking "
-                         "claim that nothing retrieved tests.",
+                         "claim that nothing retrieved tests."
+                         " Section 6 reference search (2026-11-22): not "
+                         "settled. WHO's measles fact sheet calls measles 'one"
+                         " of the world's most contagious diseases', which "
+                         "supports high transmissibility but not the "
+                         "superlative.",
             },
             {
                 "text": "a person who is shedding breathes out the measles "
@@ -3166,11 +3369,17 @@ LABELS = [
                         "they can still inhale the few viral particles ... and "
                         "become infected",
                 "start": 23.7, "end": 37.5,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
-                "supporting": ["PMID:39156354"],
+                "supporting": [
+                    "PMID:39156354",
+                    "https://www.who.int/news-room/fact-sheets/detail/measles"],
                 "contradicting": [],
-                "confidence": "medium",
-                "notes": "The retrieved study models airborne measles "
+                "confidence": "high",
+                "notes": "The WHO measles fact sheet now gives the two-hour "
+                         "figure directly: the virus 'remains active and "
+                         "contagious in the air or on infected surfaces for "
+                         "up to two hours'. The retrieved study models airborne measles "
                          "transmission in indoor spaces, supporting persistent "
                          "infectious aerosol. The specific two-hour figure is "
                          "standard public-health guidance rather than "
@@ -3182,6 +3391,7 @@ LABELS = [
                         "can't be vaccinated yet ... we create a cocoon of "
                         "protection around them",
                 "start": 60.4, "end": 88.0,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:32309885"],
                 "contradicting": [],
@@ -3212,6 +3422,7 @@ LABELS = [
                         "navel ... Generously coat with cayenne pepper and "
                         "cinnamon ... eat the entire wedge, skin and all",
                 "start": 0.0, "end": 21.1,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:35816465", "PMID:41081513"],
                 "contradicting": [],
@@ -3244,6 +3455,7 @@ LABELS = [
                 "text": "What's your best fighting chance against cancer? "
                         "It's actually muscle mass",
                 "start": 0.0, "end": 6.2,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:18539529"],
                 "contradicting": [],
@@ -3259,6 +3471,7 @@ LABELS = [
                         "you don't start off with a good muscle mass, then "
                         "you're already starting your tank on zero",
                 "start": 36.2, "end": 47.5,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:18539529", "PMID:31842559",
                                "PMID:41206817"],
@@ -3292,6 +3505,7 @@ LABELS = [
             {
                 "text": "These thermal paper receipts contain BPA and BPS",
                 "start": 11.8, "end": 15.2,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:26407846", "PMID:32608004"],
                 "contradicting": [],
@@ -3304,6 +3518,7 @@ LABELS = [
                 "text": "These are endocrine disrupting chemicals that can "
                         "actually be absorbed through your skin",
                 "start": 15.5, "end": 20.2,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:33313651", "PMID:28570582"],
                 "contradicting": [],
@@ -3320,6 +3535,7 @@ LABELS = [
                         "touch the thermal paper receipts and you will "
                         "decrease your exposure",
                 "start": 37.8, "end": 44.5,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:28570582"],
                 "contradicting": [],
@@ -3355,6 +3571,7 @@ LABELS = [
                         "a lot of people flush their unused medications down "
                         "the toilet",
                 "start": 14.3, "end": 23.6,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:35112470", "PMID:21139869"],
                 "contradicting": [],
@@ -3372,6 +3589,7 @@ LABELS = [
                         "water because it likely has glyphosate in it. That is "
                         "a neurotoxin",
                 "start": 28.1, "end": 41.1,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "MIXED",
                 "supporting": ["PMID:40684482"],
                 "contradicting": ["PMID:29136183", "PMID:27552246"],
@@ -3390,6 +3608,7 @@ LABELS = [
                         "fluoridated tap water actually have lower IQ. So it "
                         "actually lowers IQ in children",
                 "start": 44.9, "end": 52.3,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": ["PMID:36639015"],
                 "contradicting": ["PMID:37120936", "PMID:41941356"],
@@ -3411,6 +3630,7 @@ LABELS = [
                 "text": "It can harm the pineal gland. It can even harm the "
                         "teeth and the bones",
                 "start": 52.3, "end": 55.2,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "MIXED",
                 "supporting": ["PMID:31254856"],
                 "contradicting": ["PMID:41941356"],
@@ -3448,6 +3668,7 @@ LABELS = [
                 "text": "in European countries they get 11 injections[,] in "
                         "the United States we give 72",
                 "start": 9.9, "end": 18.7,
+                "kind": "fact_of_record",
                 "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -3456,18 +3677,29 @@ LABELS = [
                          "AAP, CDC and European national schedules, none of "
                          "which is a paper. Under section 9 that leaves a "
                          "thorough, numerate debunk labelled "
-                         "CANNOT_RECOGNIZE.",
+                         "CANNOT_RECOGNIZE."
+                         " Section 6 reference search (2026-11-22): not "
+                         "settled. CDC's schedule pages refuse scripted "
+                         "retrieval (HTTP 403), and no other allow-listed "
+                         "source carries the US and European schedules as "
+                         "countable documents. Under the revised section 9 the"
+                         " video is still CANNOT_RECOGNIZE, but it now goes to"
+                         " review as a possible debunk of an unsettled claim.",
             },
             {
                 "text": "there's about 24 vaccines that children will receive "
                         "by the age of two[, and] in said 24 injections, "
                         "you'll get protection from 16 different diseases",
                 "start": 36.3, "end": 53.1,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
                 "notes": "His own count from the AAP schedule. Same problem: "
-                         "a schedule document, not a study.",
+                         "a schedule document, not a study."
+                         " Section 6 reference search (2026-11-22): not "
+                         "settled; CDC's schedule pages refuse scripted "
+                         "retrieval (HTTP 403).",
             },
             {
                 "text": "the only way they get there is by separating out the "
@@ -3476,6 +3708,7 @@ LABELS = [
                         "a yearly flu shot and a yearly COVID shot for all 18 "
                         "years of life",
                 "start": 120.3, "end": 134.5,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -3483,7 +3716,10 @@ LABELS = [
                          "constructed. Arithmetic over schedule documents, so "
                          "again outside the allowed evidence sources. Note "
                          "this is the most useful claim in the video for a "
-                         "reader and the least verifiable for the pipeline.",
+                         "reader and the least verifiable for the pipeline."
+                         " Section 6 reference search (2026-11-22): not "
+                         "settled; CDC's schedule pages refuse scripted "
+                         "retrieval (HTTP 403).",
             },
         ],
     },
@@ -3506,6 +3742,7 @@ LABELS = [
                         "arrival into this world vaccines with copious amounts "
                         "of mercury",
                 "start": 4.8, "end": 8.3,
+                "kind": "fact_of_record",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:15121295", "PMID:18049924",
@@ -3525,6 +3762,7 @@ LABELS = [
                         "epimercary [ethylmercury] is a different compound "
                         "that's rapidly excreted and is not toxic at low doses",
                 "start": 23.8, "end": 41.4,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:18049924", "PMID:15121295"],
                 "contradicting": [],
@@ -3544,18 +3782,31 @@ LABELS = [
                         "6% of the population and even now has been replaced "
                         "with another preservative",
                 "start": 54.8, "end": 70.7,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "MIXED",
-                "supporting": ["PMID:15121295"],
-                "contradicting": ["PMID:29895363"],
+                "supporting": [
+                    "PMID:15121295",
+                    "https://www.fda.gov/vaccines-blood-biologics/"
+                    "safety-availability-biologics/thimerosal-and-vaccines"],
+                "contradicting": [
+                    "PMID:29895363",
+                    "https://www.fda.gov/vaccines-blood-biologics/"
+                    "safety-availability-biologics/thimerosal-and-vaccines"],
                 "confidence": "low",
-                "notes": "The US removal timeline is a regulatory fact rather "
-                         "than a study finding, and a 2018 paper is titled "
-                         "'Low-dose Thimerosal (ethyl-mercury) is still used "
-                         "in infants' vaccines', which at least complicates "
-                         "the 'even now has been replaced' half globally. "
-                         "Recorded MIXED with low confidence; a reviewer "
-                         "should narrow the claim to the US and may well "
-                         "move it.",
+                "notes": "A regulatory fact, now checked against the FDA's "
+                         "thimerosal page, which keeps it MIXED rather than "
+                         "settling it. Supporting: 'All vaccines routinely "
+                         "recommended for children 6 years of age and younger "
+                         "in the U.S. are available in formulations that do "
+                         "not contain thimerosal.' Against 'even now has been "
+                         "replaced': the same page's table still lists a "
+                         "multi-dose Afluria presentation at 0.01% "
+                         "thimerosal, and a 2018 paper is titled 'Low-dose "
+                         "Thimerosal (ethyl-mercury) is still used in "
+                         "infants' vaccines'. The FDA page gives neither the "
+                         "2001 date nor the <6% figure. Same URL on both "
+                         "sides, with different quoted passages in "
+                         "reference_citations.csv.",
             },
         ],
     },
@@ -3572,16 +3823,23 @@ LABELS = [
                  "1.2 million litres of tap water a day. The mirror image of "
                  "v42 and v27 -- same 'true fragments, false conclusion' "
                  "shape, but with a speaker pointing at the fallacy instead of "
-                 "committing it. Lands on CANNOT_RECOGNIZE: the refuted claim "
-                 "has no human test, and his dose arithmetic is not itself a "
-                 "retrievable finding. In the blind subset. Collectors filed "
-                 "it under DEBUNKING.",
+                 "committing it. The refuted claim has no human test and his "
+                 "dose arithmetic is not itself a retrievable finding, so it "
+                 "was CANNOT_RECOGNIZE until section 6 allowed the regulatory "
+                 "limit (c2) to be checked against ATSDR; c2 is now SUPPORTED "
+                 "and the video is NO_MISINFO. Note the rule-order effect: "
+                 "section 9's NO_MISINFO rule fires before the 'possible "
+                 "debunk of an unsettled claim' rule, so settling a true side "
+                 "fact removed the review flag the refuted claim would "
+                 "otherwise raise. In the blind subset. Collectors filed it "
+                 "under DEBUNKING.",
         "claims": [
             {
                 "text": "does tap water lower testosterone ... [because it "
                         "contains atrazine, an endocrine disruptor, and] do "
                         "endocrine disruptors lower testosterone",
                 "start": 4.2, "end": 28.6,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:11053540", "PMID:24758756"],
                 "contradicting": [],
@@ -3601,12 +3859,19 @@ LABELS = [
                         "water, has a regulatory limit of three parts per "
                         "billion",
                 "start": 37.1, "end": 44.8,
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
-                "supporting": [], "contradicting": [],
+                "kind": "fact_of_record",
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": [
+                    "https://wwwn.cdc.gov/tsp/PHS/PHS.aspx?phsid=336&toxid=59"],
+                "contradicting": [],
                 "confidence": "high",
-                "notes": "A regulatory limit, checkable against the EPA and "
-                         "not against the literature. The same gap as v24's "
-                         "tolerance figure and v64's schedules.",
+                "notes": "A regulatory limit, settled from a section 6 "
+                         "reference. The EPA itself is not on the allow-list, "
+                         "but CDC's ATSDR public health statement for atrazine "
+                         "reports the limit: 'The EPA has set a maximum amount "
+                         "of atrazine allowable in drinking water of 3 ug/L', "
+                         "and 3 ug/L is 3 parts per billion. The 'found in tap "
+                         "water' premise is in the same statement.",
             },
             {
                 "text": "they filled up those rats at 50 milligrams per "
@@ -3614,6 +3879,7 @@ LABELS = [
                         "million liters of tap water a day to have it affect "
                         "your testosterone",
                 "start": 44.8, "end": 67.6,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:11053540"],
                 "contradicting": [],
@@ -3650,6 +3916,7 @@ LABELS = [
                         "least seven different cancers including breast cancer "
                         "and colon cancer",
                 "start": 11.9, "end": 33.0,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:25422909", "PMID:37905315"],
                 "contradicting": [],
@@ -3663,6 +3930,7 @@ LABELS = [
                         "be protective. Less is better, and none is better "
                         "than less",
                 "start": 33.7, "end": 50.4,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:37905315", "PMID:25422909"],
                 "contradicting": [],
@@ -3678,6 +3946,7 @@ LABELS = [
                         "modifiable cause of cancer. And it's linked to 13 of "
                         "them",
                 "start": 41.6, "end": 59.0,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:26205840", "PMID:25719336",
                                "PMID:41634393"],
@@ -3695,6 +3964,7 @@ LABELS = [
                 "text": "Most adults get about half the fiber they actually "
                         "need",
                 "start": 84.3, "end": 88.7,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -3706,6 +3976,7 @@ LABELS = [
                         "called butyrate, which is what the cells lining your "
                         "colon run on",
                 "start": 96.8, "end": 105.7,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:41305603", "PMID:40331741"],
                 "contradicting": [],
@@ -3721,6 +3992,7 @@ LABELS = [
                         "dogs, the deli meat, the summer sausages, that's one "
                         "group as well",
                 "start": 112.4, "end": 120.7,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:40210826", "PMID:33838606",
                                "PMID:34455534"],
@@ -3738,6 +4010,7 @@ LABELS = [
                         "they'll take out a polyp before it even moves into "
                         "the next state",
                 "start": 126.1, "end": 142.4,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:37737817", "PMID:26257272"],
                 "contradicting": [],
@@ -3770,6 +4043,7 @@ LABELS = [
                 "text": "Over 80% of heart attacks and strokes are not plaque "
                         "cholesterol or calcium that's blocking your arteries",
                 "start": 0.0, "end": 7.7,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "MIXED",
                 "supporting": ["PMID:40935270", "PMID:42416600"],
                 "contradicting": ["PMID:42735223", "PMID:23629150"],
@@ -3791,6 +4065,7 @@ LABELS = [
                         "exposed to all these chemicals and it's going to "
                         "create inflammation",
                 "start": 17.5, "end": 27.0,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:30800285"],
                 "contradicting": [],
@@ -3805,6 +4080,7 @@ LABELS = [
                         "arteries because of the hormonal interaction, "
                         "increasing the risk of a stroke and heart attacks",
                 "start": 40.9, "end": 55.7,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:26310586", "PMID:39938934"],
                 "contradicting": [],
@@ -3820,6 +4096,7 @@ LABELS = [
                         "where someone has a loss of a loved one. And their "
                         "risk of having a heart attack goes up by 2,000%",
                 "start": 55.7, "end": 67.1,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:22230481"],
                 "contradicting": [],
@@ -3838,6 +4115,7 @@ LABELS = [
                 "text": "one of the best sources of L-arginine is meat and "
                         "liver, the exact things that they tell you not to eat",
                 "start": 82.8, "end": 91.1,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -3850,6 +4128,7 @@ LABELS = [
                         "help increase nitric oxide in the inside of the "
                         "arteries",
                 "start": 91.1, "end": 101.5,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "MIXED",
                 "supporting": ["PMID:28894213", "PMID:40465176",
                                "PMID:35792235"],
@@ -3884,6 +4163,7 @@ LABELS = [
                         "alcohol ... The most dangerous food for the liver is "
                         "seed oil",
                 "start": 0.0, "end": 32.1,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:34071962", "PMID:15560048",
@@ -3900,6 +4180,7 @@ LABELS = [
                 "text": "It's very high in omega-6 fatty acids. It causes "
                         "inflammation",
                 "start": 26.3, "end": 29.5,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:28752873", "PMID:22889633"],
@@ -3914,6 +4195,7 @@ LABELS = [
                         "including your liver, and can get lodged in there for "
                         "a year and a half",
                 "start": 6.3, "end": 12.4,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -3925,6 +4207,7 @@ LABELS = [
                 "text": "seed oil, which is an industrial oil exposed to "
                         "hexane, which is a solvent that's a gasoline",
                 "start": 32.1, "end": 36.5,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:39536137"],
                 "contradicting": [],
@@ -3942,6 +4225,7 @@ LABELS = [
                         "special bile salt that can help reduce the "
                         "inflammation in your liver",
                 "start": 43.4, "end": 50.1,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -3976,6 +4260,7 @@ LABELS = [
                         "visceral fat ... they're loaded with fat inside. All "
                         "their organs are suffocating in fat",
                 "start": 4.4, "end": 26.6,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:28338764", "PMID:23990623",
@@ -3993,6 +4278,7 @@ LABELS = [
                         "higher fruit intakes are linked to lower risk of "
                         "obesity, heart disease, and fatty liver disease",
                 "start": 43.5, "end": 51.0,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:28338764", "PMID:33641343",
                                "PMID:23990623"],
@@ -4009,14 +4295,22 @@ LABELS = [
                         "intake is West Virginia, which is the state with the "
                         "highest obesity rates in the country",
                 "start": 34.8, "end": 43.5,
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
-                "supporting": [], "contradicting": [],
-                "confidence": "high",
-                "notes": "Two population statistics from national survey "
-                         "data, not the biomedical literature. Worth noting "
-                         "that the state-level pairing is itself an ecological "
-                         "correlation of the kind the video criticises "
-                         "elsewhere.",
+                "kind": "fact_of_record",
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:29145355"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Population statistics from national survey data, "
+                         "now found as the CDC's own MMWR report (indexed in "
+                         "PubMed, full text in PMC): 'Overall, 12.2% of adults "
+                         "met fruit recommendations ranging from 7.3% in West "
+                         "Virginia to 15.5% in DC' -- so about 88% did not, "
+                         "and West Virginia was lowest. Medium confidence: the "
+                         "obesity limb ('highest obesity rates') is not in "
+                         "this report, and CDC's obesity maps block scripted "
+                         "retrieval (HTTP 403). The state-level pairing is "
+                         "also an ecological correlation of the kind the "
+                         "video criticises elsewhere.",
             },
             {
                 "text": "They'll start with a true or somewhat true "
@@ -4025,6 +4319,7 @@ LABELS = [
                         "response ... And then they'll leap to an unsupported "
                         "or unjustified conclusion",
                 "start": 57.8, "end": 87.4,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -4057,6 +4352,7 @@ LABELS = [
                         "nine of those tumor markers across the board. They "
                         "did, like, a 10-year study on this",
                 "start": 11.9, "end": 30.2,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -4071,6 +4367,7 @@ LABELS = [
                         "green tea and just, like, berries and really good "
                         "whole foods",
                 "start": 32.7, "end": 43.6,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -4103,6 +4400,7 @@ LABELS = [
                 "text": "There's a new study out that says after just one "
                         "day, chemicals and sunscreens enter your bloodstream",
                 "start": 0.0, "end": 10.3,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:31961417", "PMID:31058986"],
                 "contradicting": [],
@@ -4119,6 +4417,7 @@ LABELS = [
                         "with the following ingredients. They're titanium "
                         "dioxide and zinc oxide",
                 "start": 10.3, "end": 21.0,
+                "kind": "fact_of_record",
                 "stance": "QUOTES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:18271305"],
                 "contradicting": [],
@@ -4134,6 +4433,7 @@ LABELS = [
                         "use and be in your bloodstream is not going to help "
                         "your body",
                 "start": 46.1, "end": 55.0,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:31961417"],
                 "contradicting": [],
@@ -4149,6 +4449,7 @@ LABELS = [
                 "text": "literally you could eat this sunscreen and you'd be "
                         "perfectly fine",
                 "start": 55.0, "end": 63.8,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -4175,6 +4476,7 @@ LABELS = [
                         "muscle gets stronger when you stress it. Your immune "
                         "system is more like a memory bank",
                 "start": 3.7, "end": 13.1,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:22481438"],
                 "contradicting": [],
@@ -4191,6 +4493,7 @@ LABELS = [
                         "rises to slow down the replication of whatever is "
                         "invading your body",
                 "start": 13.1, "end": 24.1,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:22481438"],
                 "contradicting": [],
@@ -4203,6 +4506,7 @@ LABELS = [
                         "polio were asymptomatic, meaning they have no "
                         "symptoms at all",
                 "start": 64.1, "end": 70.3,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -4212,7 +4516,15 @@ LABELS = [
                          "figure is standard public-health teaching, which is "
                          "exactly the kind of textbook number this pipeline "
                          "cannot reach -- the same gap as v22's protein "
-                         "quality row.",
+                         "quality row."
+                         " Section 6 reference search (2026-11-22): not "
+                         "settled. WHO's polio fact sheet gives only 'One in "
+                         "200 infections leads to irreversible paralysis', and"
+                         " the StatPearls chapter abstract (PMID 32644370) "
+                         "says only that 'most infections are asymptomatic'; "
+                         "neither tests 90%. CDC's Pink Book chapter, which "
+                         "gives a percentage, refuses scripted retrieval (HTTP"
+                         " 403).",
             },
         ],
     },
@@ -4238,6 +4550,7 @@ LABELS = [
                         "cardiovascular and muscular fitness, your bone "
                         "health, and lowers your risk of fracture",
                 "start": 11.8, "end": 18.9,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:31095084", "PMID:35599175"],
                 "contradicting": [],
@@ -4252,6 +4565,7 @@ LABELS = [
                         "overall mood regulation. It improves your sleep "
                         "quality and energy levels",
                 "start": 18.9, "end": 25.9,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:34163383", "PMID:25596964"],
                 "contradicting": [],
@@ -4265,6 +4579,7 @@ LABELS = [
                 "text": "it helps your self-esteem and cognitive "
                         "functioning, including reducing the risk of dementia",
                 "start": 25.9, "end": 31.1,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:24885250", "PMID:31902364"],
                 "contradicting": [],
@@ -4281,6 +4596,7 @@ LABELS = [
                         "colon, bladder, endometrial, prostate, lung, stomach, "
                         "and esophageal cancers",
                 "start": 34.9, "end": 49.7,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:32741068", "PMID:39444461"],
                 "contradicting": [],
@@ -4300,6 +4616,7 @@ LABELS = [
                         "cardiovascular disease, improves insulin "
                         "sensitivity, lowers your triglycerides",
                 "start": 52.8, "end": 67.6,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:31095084", "PMID:37676198"],
                 "contradicting": [],
@@ -4313,13 +4630,19 @@ LABELS = [
                         "of moderate intensity exercise or 75 minutes of "
                         "vigorous intensity exercise",
                 "start": 67.6, "end": 76.3,
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
-                "supporting": [], "contradicting": [],
+                "kind": "fact_of_record",
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": [
+                    "https://www.who.int/initiatives/behealthy/"
+                    "physical-activity"],
+                "contradicting": [],
                 "confidence": "high",
-                "notes": "A claim about what guidelines say, which is a "
-                         "guideline document rather than a study. The same "
-                         "category of gap as v64's schedules and v24's EPA "
-                         "tolerance.",
+                "notes": "A claim about what guidelines say, settled by the "
+                         "guideline itself now that section 6 allows it: WHO "
+                         "says adults aged 18-64 'should do at least 150 "
+                         "minutes of moderate-intensity physical activity "
+                         "throughout the week, or do at least 75 minutes of "
+                         "vigorous-intensity physical activity'.",
             },
         ],
     },
@@ -4332,19 +4655,22 @@ LABELS = [
                  "patients to use coconut milk because it is 'the least "
                  "processed'. Names the appeal-to-nature fallacy explicitly, "
                  "and points out that the recommended option is the one "
-                 "highest in saturated fat and calories. Comes out "
-                 "NO_MISINFO rather than DEBUNKING: the refuted claim is a "
-                 "processing-is-bad value judgement rather than a falsifiable "
-                 "assertion, so it lands on NOT_VERIFIABLE and section 9's "
-                 "second rule cannot fire. The fourth video in the set to hit "
-                 "that gap, after v24, v30, v64 and v68. Collectors filed it "
-                 "under DEBUNKING.",
+                 "highest in saturated fat and calories. Not DEBUNKING: the "
+                 "refuted claim is a processing-is-bad value judgement rather "
+                 "than a falsifiable assertion, so it lands on NOT_VERIFIABLE "
+                 "and the debunking rule cannot fire. Was CANNOT_RECOGNIZE; "
+                 "now NO_MISINFO because her fortification claim (c2) is "
+                 "settled SUPPORTED from USDA FoodData Central under section "
+                 "6. As with v68, the NO_MISINFO rule then pre-empts the "
+                 "'possible debunk' review flag her refutation of c3 would "
+                 "raise. Collectors filed it under DEBUNKING.",
         "claims": [
             {
                 "text": "I usually tell patients to use the coconut milk or "
                         "cream because it's the least processed of all the "
                         "[milks]",
                 "start": 0.0, "end": 12.2,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "NOT_VERIFIABLE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -4362,17 +4688,37 @@ LABELS = [
                         "like calcium and vitamin D so that it can be more "
                         "nutritionally comparable to dairy milk",
                 "start": 55.5, "end": 74.5,
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
-                "supporting": [], "contradicting": [],
+                "kind": "fact_of_record",
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": [
+                    "https://api.nal.usda.gov/fdc/v1/food/174832"
+                    "?api_key=DEMO_KEY",
+                    "https://api.nal.usda.gov/fdc/v1/food/2257045"
+                    "?api_key=DEMO_KEY",
+                    "https://api.nal.usda.gov/fdc/v1/food/2257046"
+                    "?api_key=DEMO_KEY",
+                    "https://api.nal.usda.gov/fdc/v1/food/171265"
+                    "?api_key=DEMO_KEY"],
+                "contradicting": [],
                 "confidence": "medium",
-                "notes": "A claim about product formulation, checkable "
-                         "against labels rather than literature.",
+                "notes": "Food composition, settled from USDA FoodData "
+                         "Central. Unsweetened almond milk (shelf-stable and "
+                         "refrigerated) and unsweetened oat milk carry "
+                         "148-184 mg calcium and 1.0-1.7 ug vitamin D per "
+                         "100 g, against 113 mg and 1.3 ug for whole dairy "
+                         "milk with added vitamin D. Neither nutrient occurs "
+                         "at those levels in a 2-3% nut or oat beverage "
+                         "unfortified, so the figures show fortification to "
+                         "dairy-comparable levels. Medium confidence: the "
+                         "records give amounts, not the word 'fortified', and "
+                         "'a lot of the options' is not a count.",
             },
             {
                 "text": "this post wrongfully insinuate[s] that almond and "
                         "oat milk cause cancer, which spoiler alert friends, "
                         "they do not",
                 "start": 127.8, "end": 138.4,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -4388,6 +4734,7 @@ LABELS = [
                         "increased risk of chronic disease, obesity, heart "
                         "disease, and yes, even some cancers",
                 "start": 138.4, "end": 153.1,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "MIXED",
                 "supporting": ["PMID:32428300", "PMID:37019448"],
                 "contradicting": ["PMID:40416032", "PMID:30217460"],
@@ -4423,6 +4770,7 @@ LABELS = [
                         "perfectly mirror estrogen in the human body, just a "
                         "shittier version",
                 "start": 8.3, "end": 17.5,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "MIXED",
                 "supporting": ["PMID:25775505", "PMID:29925041"],
                 "contradicting": ["PMID:11800169"],
@@ -4439,6 +4787,7 @@ LABELS = [
                 "text": "a receipt carries 250 times more BPAs than any of "
                         "the food I just mentioned",
                 "start": 27.1, "end": 33.3,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:26407846"],
                 "contradicting": [],
@@ -4453,6 +4802,7 @@ LABELS = [
                         "and real estrogen. That's why men look the way they "
                         "look now",
                 "start": 35.0, "end": 39.2,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -4465,6 +4815,7 @@ LABELS = [
                         "also disrupt our hormones and make it harder to lose "
                         "weight",
                 "start": 42.8, "end": 54.0,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:29438414"],
                 "contradicting": [],
@@ -4482,6 +4833,7 @@ LABELS = [
                         "are sprayed with such harmful pesticides to keep bugs "
                         "off them that they're rotting us from the inside",
                 "start": 56.6, "end": 72.2,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:28338764", "PMID:33641343",
@@ -4522,6 +4874,7 @@ LABELS = [
                         "miscarriages in pregnant women in the first trimester "
                         "and Dr. Fauci knew it",
                 "start": 17.5, "end": 25.3,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:34401872", "PMID:34496196",
@@ -4541,6 +4894,7 @@ LABELS = [
                 "text": "81 to 82% of women who got the vaccine in the first "
                         "trimester experience a miscarriage. 82%",
                 "start": 62.5, "end": 71.1,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:34401872"],
@@ -4575,6 +4929,7 @@ LABELS = [
                         "for vaccines rather than giving them all in the same "
                         "day",
                 "start": 0.0, "end": 5.2,
+                "kind": "fact_of_record",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:32309885", "PMID:22336803"],
@@ -4589,6 +4944,7 @@ LABELS = [
                         "safe. There is no evidence that it needs to be "
                         "separated",
                 "start": 8.7, "end": 14.5,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:32309885", "PMID:12922131"],
                 "contradicting": [],
@@ -4601,6 +4957,7 @@ LABELS = [
                 "text": "there has been no evidence that any of the childhood "
                         "vaccinations cause autism",
                 "start": 24.6, "end": 28.5,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:24814559", "PMID:18482737"],
                 "contradicting": [],
@@ -4627,6 +4984,7 @@ LABELS = [
                 "text": "why overload the body[?] and makes more sense to "
                         "space them out[?]",
                 "start": 0.0, "end": 4.3,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:32309885", "PMID:24814559"],
@@ -4640,6 +4998,7 @@ LABELS = [
                         "vaccination series, all 18 years, there are less than "
                         "200 antigens",
                 "start": 4.3, "end": 30.7,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -4649,12 +5008,19 @@ LABELS = [
                          "These figures come from a well-known published "
                          "calculation, so this is a retrieval failure of the "
                          "same kind as v54's Michigan study, not an "
-                         "unevidenced claim.",
+                         "unevidenced claim."
+                         " Section 6 reference search (2026-11-22): not "
+                         "settled. CDC's 'Multiple Vaccines at Once' page, "
+                         "which gives antigen counts, refuses scripted "
+                         "retrieval (HTTP 403). Offit et al. 2002 (PMID "
+                         "11773551) was retrieved, but its abstract gives no "
+                         "figures and it is not in PMC.",
             },
             {
                 "text": "There is zero evidence for any benefit for spacing "
                         "out or separating vaccinations",
                 "start": 30.7, "end": 35.9,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": ["PMID:32309885"],
                 "contradicting": [],
@@ -4688,6 +5054,7 @@ LABELS = [
                         "nervous system, improve circulation, [and support] "
                         "digestion",
                 "start": 29.9, "end": 38.1,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -4720,6 +5087,7 @@ LABELS = [
                 "text": "[the CDC] updated their site to say that vaccines "
                         "may cause autism",
                 "start": 19.8, "end": 24.2,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:24814559", "PMID:32309885",
@@ -4738,6 +5106,7 @@ LABELS = [
                         "millions of children have found no link between "
                         "vaccines and autism",
                 "start": 33.7, "end": 48.0,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:24814559", "PMID:32309885"],
                 "contradicting": [],
@@ -4767,14 +5136,17 @@ LABELS = [
                  "sodium samples cannot carry the conclusion drawn from them. "
                  "That is a methodological critique, not a contradiction, so "
                  "the refuted claim lands on MIXED and the video comes out "
-                 "NO_MISINFO rather than DEBUNKING -- the sixth instance of "
-                 "that section 9 gap. Collectors filed it under DEBUNKING.",
+                 "CANNOT_RECOGNIZE rather than DEBUNKING. Under the revised "
+                 "section 9 it now goes to review as a possible debunk of an "
+                 "unsettled claim, which is the outcome that rule was written "
+                 "for. Collectors filed it under DEBUNKING.",
         "claims": [
             {
                 "text": "salt we were told is this devil white powder that if "
                         "you eat it you're going to give yourself a heart "
                         "attack and you're going to shut down your kidneys",
                 "start": 42.2, "end": 49.9,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -4787,6 +5159,7 @@ LABELS = [
                         "thousand people that proved that eating too little "
                         "salt is actually more dangerous than eating too much",
                 "start": 49.9, "end": 58.2,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "MIXED",
                 "supporting": ["PMID:41243115"],
                 "contradicting": ["PMID:23558162"],
@@ -4809,6 +5182,7 @@ LABELS = [
                         "accurate way to do it. This is more observational in "
                         "nature",
                 "start": 72.4, "end": 100.1,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -4847,6 +5221,7 @@ LABELS = [
                         "difference. What insurance you have makes no "
                         "difference",
                 "start": 1.7, "end": 10.2,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:27079342", "PMID:40109246",
@@ -4869,6 +5244,7 @@ LABELS = [
                         "demographics, socioeconomic statuses, and "
                         "disabilities",
                 "start": 31.6, "end": 43.3,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:27079342", "PMID:32981641",
                                "PMID:40109246"],
@@ -4895,9 +5271,11 @@ LABELS = [
                  "AI output. Connects back to v03, which cites real studies on "
                  "the same dyes: between them the set contains a video "
                  "overstating the dye evidence, a video inventing a conspiracy "
-                 "about dye names, and the actual literature. CANNOT_RECOGNIZE: "
-                 "the refuted claim is about naming rather than health. "
-                 "Collectors filed it under DEBUNKING.",
+                 "about dye names, and the actual literature. NO_MISINFO, not "
+                 "DEBUNKING: the refuted claim is about naming intent and is "
+                 "NOT_VERIFIABLE, so the debunking rule cannot fire, while her "
+                 "own claim that Allura Red is Red 40 is SUPPORTED. Collectors "
+                 "filed it under DEBUNKING.",
         "claims": [
             {
                 "text": "They've changed the names to other names, like "
@@ -4905,6 +5283,7 @@ LABELS = [
                         "they're not even getting rid of the ingredients. "
                         "They're changing the names",
                 "start": 9.5, "end": 19.6,
+                "kind": "fact_of_record",
                 "stance": "REFUTES", "verdict": "NOT_VERIFIABLE",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
@@ -4920,6 +5299,7 @@ LABELS = [
                         "they're assessing the safety of allura red? That's "
                         "just what we call red 40 here. It's the same dye",
                 "start": 32.8, "end": 40.3,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:28458012", "PMID:26364875"],
                 "contradicting": [],
@@ -4956,6 +5336,7 @@ LABELS = [
                 "text": "How it's being used now, I think it's extremely "
                         "dehydrating",
                 "start": 12.4, "end": 14.7,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:33557850", "PMID:29059531"],
@@ -4970,6 +5351,7 @@ LABELS = [
                 "text": "we test cortisol curves after people have been doing "
                         "creatine on a regular basis",
                 "start": 14.7, "end": 19.5,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:11252073", "PMID:14685870"],
@@ -4988,6 +5370,7 @@ LABELS = [
                         "A, and you have a tendency to get elevated calcium "
                         "score, I do not touch it",
                 "start": 19.5, "end": 31.6,
+                "kind": "research_question",
                 "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
@@ -5025,6 +5408,7 @@ LABELS = [
             {
                 "text": "How to know if you have ADHD: ... Very indecisive",
                 "start": 10.0, "end": 14.0,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:39422639", "PMID:41889432", "PMID:30453134"],
@@ -5034,6 +5418,7 @@ LABELS = [
             {
                 "text": "How to know if you have ADHD: ... Forgetting why you walked in a r[oo]m",
                 "start": 16.0, "end": 20.0,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:39422639", "PMID:41889432", "PMID:30453134"],
@@ -5043,6 +5428,7 @@ LABELS = [
             {
                 "text": "How to know if you have ADHD: ... Reading a whole page and nothing goes in[,] so [you] have to read again",
                 "start": 24.0, "end": 28.0,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:39422639", "PMID:41889432", "PMID:30453134"],
@@ -5052,6 +5438,7 @@ LABELS = [
             {
                 "text": "How to know if you have ADHD: ... Random bursts of energy",
                 "start": 32.0, "end": 38.0,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:39422639", "PMID:41889432", "PMID:30453134"],
@@ -5061,6 +5448,7 @@ LABELS = [
             {
                 "text": "How to know if you have ADHD: ... Not sitting still until someone calls it [o]ut",
                 "start": 40.0, "end": 46.0,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:39422639", "PMID:41889432", "PMID:30453134"],
@@ -5070,6 +5458,7 @@ LABELS = [
             {
                 "text": "How to know if you have ADHD: ... Mood swings",
                 "start": 48.0, "end": 52.0,
+                "kind": "fact_of_record",
                 "stance": "ENDORSES", "verdict": "CONTRADICTED",
                 "supporting": [],
                 "contradicting": ["PMID:39422639", "PMID:41889432", "PMID:30453134"],
@@ -5106,19 +5495,29 @@ LABELS = [
                         "mRNA vaccines to include new information regarding "
                         "the risks of myocarditis and pericarditis",
                 "start": 4.0, "end": 50.0,
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
-                "supporting": [], "contradicting": [],
+                "kind": "fact_of_record",
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": [
+                    "https://www.fda.gov/vaccines-blood-biologics/"
+                    "safety-availability-biologics/fda-approves-required-"
+                    "updated-warning-labeling-mrna-covid-19-vaccines-"
+                    "regarding-myocarditis-and"],
+                "contradicting": [],
                 "confidence": "high",
-                "notes": "A regulatory action, checkable against the FDA's own "
-                         "label documents rather than against the literature. "
-                         "The same evidence-source gap as v64's immunisation "
-                         "schedules and v24's EPA tolerance -- and here it "
-                         "applies to a claim that is almost certainly true.",
+                "notes": "A regulatory action, settled from the FDA's own "
+                         "announcement now that section 6 allows it: 'The "
+                         "warning on myocarditis and pericarditis in the "
+                         "Prescribing Information for Comirnaty and Spikevax "
+                         "has been updated' (Comirnaty is Pfizer's and "
+                         "Spikevax Moderna's mRNA vaccine). Was "
+                         "INSUFFICIENT_EVIDENCE only because the old rules "
+                         "allowed literature alone.",
             },
             {
                 "text": "the risks of myocarditis and pericarditis, "
                         "particularly in young males",
                 "start": 4.0, "end": 58.0,
+                "kind": "research_question",
                 "stance": "ENDORSES", "verdict": "SUPPORTED",
                 "supporting": ["PMID:34907393", "PMID:34281357",
                                "PMID:34477808"],
