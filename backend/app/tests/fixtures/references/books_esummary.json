@@ -1,0 +1,6 @@
+{"header": {"type": "esummary", "version": "0.3"},
+ "result": {"uids": ["9000001", "9000002"],
+            "9000001": {"uid": "9000001", "title": "Physiology, Body Temperature (synthetic fixture)",
+                        "booktitle": "StatPearls", "chapteraccessionid": "NBK000001", "accessionid": "NBK000000"},
+            "9000002": {"uid": "9000002", "title": "A record with a malformed accession",
+                        "booktitle": "StatPearls", "chapteraccessionid": "https://evil.example/x"}}}

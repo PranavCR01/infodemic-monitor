@@ -207,7 +207,7 @@ class RetrievalToolService:
             if not excluded & {t.lower() for t in a.publication_types}
         ]
         found = {a.pmid for a in articles}
-        return S.PubMedRecords(records=records, missing=[p for p in args.pmids if p not in found])
+        return S.PubMedRecords(records=S.to_contract(records), missing=[p for p in args.pmids if p not in found])
 
     def _search_library(self, client: ClientConfig, args: S.SearchLibraryInput) -> S.LibrarySearchResult:
         if self.library is None:
@@ -217,14 +217,14 @@ class RetrievalToolService:
         except Exception as exc:  # noqa: BLE001 - store outage; details stay in our logs
             log.warning("library search failed: %s", type(exc).__name__)
             raise ToolCallError("unavailable", "library search failed") from None
-        return S.LibrarySearchResult(query=found.query, records=found.records, methods=list(found.methods))
+        return S.LibrarySearchResult(query=found.query, records=S.to_contract(found.records), methods=list(found.methods))
 
     def _rerank_evidence(self, client: ClientConfig, args: S.RerankEvidenceInput) -> S.RerankResult:
         base = self.reranker.config
         cfg = RerankConfig(max_results=min(args.k, S.MAX_RERANK_K), min_relevance=base.min_relevance,
                            relevance_weight=base.relevance_weight, quality_weight=base.quality_weight)
-        res = Reranker(cfg, self.reranker.relevance_model).rerank(args.claim, args.records)
+        res = Reranker(cfg, self.reranker.relevance_model).rerank(args.claim, [r.to_core() for r in args.records])
         return S.RerankResult(
-            claim=args.claim, kept=res.kept, cleared_threshold=res.cleared_threshold,
+            claim=args.claim, kept=S.to_contract(res.kept), cleared_threshold=res.cleared_threshold,
             dropped_below_threshold=res.dropped_below_threshold, dropped_over_cap=res.dropped_over_cap,
         )

@@ -81,6 +81,9 @@ class ClaimRow(Base):
     end_seconds: Mapped[float] = mapped_column(Float, nullable=False)
     source_segment_ids: Mapped[list] = mapped_column(JSON, nullable=False)
     requires_verification: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
+    # §4 (T17, migration 0009): research_question / fact_of_record. Null on rows
+    # written before 0009.
+    claim_kind: Mapped[Optional[str]] = mapped_column(String(32), nullable=True)
     # The §9 rules applied to this one claim (judge.claim_label); None = no verdict.
     label: Mapped[Optional[str]] = mapped_column(String(32), nullable=True)
     deciding: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
@@ -128,6 +131,26 @@ class EvidenceRecordRow(Base):
     source_url: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     study_type: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
     quality_score: Mapped[Optional[float]] = mapped_column(Float, nullable=True)
+    # Authoritative references (T17, migration 0009). The full fetched text is in
+    # ``reference_snapshots`` under ``snapshot_sha256``.
+    publisher: Mapped[Optional[str]] = mapped_column(String(255), nullable=True)
+    retrieved_at: Mapped[Optional[str]] = mapped_column(String(40), nullable=True)
+    snapshot_sha256: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
+
+
+class ReferenceSnapshotRow(Base):
+    """The text of an authoritative reference page as fetched (§6: "Pages change, so a
+    snapshot of the fetched text is stored with its hash"). One row per distinct text,
+    shared across jobs: the SHA-256 of the text is the key, so identical text is
+    stored once and a changed page gets a new row. T17, migration 0009."""
+
+    __tablename__ = "reference_snapshots"
+
+    sha256: Mapped[str] = mapped_column(String(64), primary_key=True)
+    url: Mapped[str] = mapped_column(Text, nullable=False)
+    retrieved_at: Mapped[str] = mapped_column(String(40), nullable=False)
+    text: Mapped[str] = mapped_column(Text, nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
 
 
 class ClaimEvidenceRow(Base):

@@ -74,6 +74,7 @@ class StudyType(str, enum.Enum):
     OPINION = "opinion"  # editorial, comment, letter, news
     OTHER = "other"  # tagged, but none of the above (e.g. food composition)
     UNKNOWN = "unknown"  # no study type at all
+    REFERENCE = "reference"  # authoritative reference passage (T17, §6 "Trusted sources")
 
 
 class EvidenceClass(str, enum.Enum):
@@ -85,6 +86,7 @@ class EvidenceClass(str, enum.Enum):
     ANIMAL = "animal"
     MECHANISTIC = "mechanistic"
     GENERAL = "general"  # narrative reviews, opinion, nutrition/food science, unknown
+    AUTHORITATIVE_REFERENCE = "authoritative_reference"  # T17
 
 
 # Methodological quality, independent of relevance. Unknown is below every tagged type.
@@ -101,6 +103,10 @@ QUALITY: dict[StudyType, float] = {
     StudyType.OPINION: 0.1,
     StudyType.OTHER: 0.1,
     StudyType.UNKNOWN: 0.0,
+    # Not a study, so not on the study-design scale. Where it ranks depends on the
+    # claim's kind (``Reranker.rerank``): first for facts of record, after studies for
+    # research questions. This number only feeds the blended score within its group.
+    StudyType.REFERENCE: 0.9,
 }
 
 _CLASS: dict[StudyType, EvidenceClass] = {
@@ -116,6 +122,7 @@ _CLASS: dict[StudyType, EvidenceClass] = {
     StudyType.OPINION: EvidenceClass.GENERAL,
     StudyType.OTHER: EvidenceClass.GENERAL,
     StudyType.UNKNOWN: EvidenceClass.GENERAL,
+    StudyType.REFERENCE: EvidenceClass.AUTHORITATIVE_REFERENCE,
 }
 
 
@@ -182,6 +189,8 @@ _COMPOSITION_CUE = _cue(r"composition", r"hplc", r"antioxidant capacity", r"phen
 def classify_study(record: EvidenceRecord) -> StudyType:
     """Study type of one record (§6 "Study type, scored separately from relevance")."""
     types = {t.strip().lower() for t in record.publication_type if t and t.strip()}
+    if record.source == "reference":
+        return StudyType.REFERENCE
     if record.source == "library":
         # Scans carry no PubMed tags; the type comes from the person who uploaded it
         # (§6 "Building the library" step 1). No guessing from text.
@@ -364,7 +373,22 @@ def _word_coverage(words: Sequence[str], title: str, abstract: str) -> Optional[
     return sum(TITLE_HIT if w in t else ABSTRACT_HIT if w in a else 0.0 for w in words) / len(words)
 
 
+def reference_relevance(frame: ClaimFrame, record: EvidenceRecord) -> RelevanceBreakdown:
+    """Relevance of a reference passage: the share of the claim's content words in the
+    title and quoted passage (title hits count more). A reference is not a study, so
+    the intervention/outcome test and the population checks don't apply; the passage
+    was already chosen for this claim (``references.passages``)."""
+    title = normalize_claim(record.title)
+    passage = normalize_claim(record.abstract)
+    words = frame.keywords or tuple(content_words(frame.normalized_text))
+    cov = _word_coverage([_stem(w) for w in words], title, passage)
+    score = 0.0 if cov is None else min(1.0, cov / ABSTRACT_HIT)  # every word in the passage = 1.0
+    return RelevanceBreakdown(round(score, 4), keyword=cov)
+
+
 def lexical_relevance(frame: ClaimFrame, record: EvidenceRecord, study: StudyType) -> RelevanceBreakdown:
+    if study == StudyType.REFERENCE:
+        return reference_relevance(frame, record)
     title = normalize_claim(record.title)
     abstract = normalize_claim(record.abstract)
     i_cov = _coverage(frame.intervention, title, abstract)
@@ -454,7 +478,13 @@ class Reranker:
         self.config = config
         self.relevance_model = relevance_model
 
-    def score(self, claim_text: str, records: Sequence[EvidenceRecord]) -> list[ScoredEvidence]:
+    def score(self, claim_text: str, records: Sequence[EvidenceRecord],
+              claim_kind: Optional[str] = None) -> list[ScoredEvidence]:
+        """Every record scored, best first. ``claim_kind`` (§4) decides where
+        authoritative references go: ahead of every study for a ``fact_of_record`` (the
+        official source outranks any single study), after the studies otherwise (for
+        questions of efficacy, studies come first). Within each group the blended
+        score orders, ties in the input order."""
         frame = frame_claim(claim_text)
         studies = [classify_study(r) for r in records]
         breakdowns: list[Optional[RelevanceBreakdown]]
@@ -481,11 +511,18 @@ class Reranker:
             )
             rank = cfg.relevance_weight * rv + cfg.quality_weight * quality
             out.append(ScoredEvidence(scored, round(rank, 6), i, bd))
-        out.sort(key=lambda s: (-s.rank_score, s.original_rank))
+        refs_first = claim_kind == "fact_of_record"
+
+        def group(s: ScoredEvidence) -> int:
+            is_ref = s.record.study_type == StudyType.REFERENCE.value
+            return 0 if is_ref == refs_first else 1
+
+        out.sort(key=lambda s: (group(s), -s.rank_score, s.original_rank))
         return out
 
-    def rerank(self, claim_text: str, records: Sequence[EvidenceRecord]) -> RerankResult:
-        scored = self.score(claim_text, records)
+    def rerank(self, claim_text: str, records: Sequence[EvidenceRecord],
+               claim_kind: Optional[str] = None) -> RerankResult:
+        scored = self.score(claim_text, records, claim_kind)
         cfg = self.config
         above = [s for s in scored if s.relevance >= cfg.min_relevance]
         below = [s.record.evidence_id for s in scored if s.relevance < cfg.min_relevance]
@@ -506,6 +543,7 @@ def rerank_evidence(
     k: int = MAX_EVIDENCE_PER_CLAIM,
     *,
     reranker: Optional[Reranker] = None,
+    claim_kind: Optional[str] = None,
 ) -> list[EvidenceRecord]:
     """Functional form for the MCP tool (§6 "Retrieval as a shared service"):
     ``rerank_evidence(claim, records, k)``. ``k`` can only lower the cap of 10."""
@@ -517,7 +555,7 @@ def rerank_evidence(
         relevance_weight=base.config.relevance_weight,
         quality_weight=base.config.quality_weight,
     )
-    return Reranker(cfg, base.relevance_model).rerank(claim_text, records).kept
+    return Reranker(cfg, base.relevance_model).rerank(claim_text, records, claim_kind).kept
 
 
 __all__ = [
@@ -536,5 +574,6 @@ __all__ = [
     "concept_terms",
     "evidence_class",
     "lexical_relevance",
+    "reference_relevance",
     "rerank_evidence",
 ]

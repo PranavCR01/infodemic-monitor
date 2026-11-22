@@ -517,7 +517,7 @@ _LABEL_ALIASES = {
     "no misinfo": MisinfoLabel.NO_MISINFO, "misinfo": MisinfoLabel.MISINFO,
     "debunking": MisinfoLabel.DEBUNKING, "debunked": MisinfoLabel.DEBUNKING,
 }
-_EVIDENCE_ID = re.compile(r"\bev_[A-Za-z0-9_]+")
+_EVIDENCE_ID = re.compile(r"\b(?:ev|lib|ref)_[A-Za-z0-9_]+")  # PubMed, library (T12), reference (T17)
 _PMID = re.compile(r"\bPMID:?\s*(\d+)", re.IGNORECASE)
 
 

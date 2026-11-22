@@ -27,7 +27,7 @@ from mcp.server.mcpserver.exceptions import ToolError
 from mcp.server.transport_security import TransportSecuritySettings
 from mcp.types import ToolAnnotations
 
-from app.core.retrieval.schemas import EvidenceRecord
+from app.mcp_server.schemas import EvidenceRecord  # the contract's v1 shape, not the pipeline's
 from app.mcp_server import schemas as S
 from app.mcp_server.config import ClientConfig, ClientRegistry, McpServerConfig
 from app.mcp_server.service import RetrievalToolService, ToolCallError

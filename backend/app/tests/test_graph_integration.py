@@ -259,7 +259,9 @@ def test_long_videos_are_windowed_with_overlap_and_edge_duplicates_merged():
 
 
 def test_extract_prompt_file_exists_and_routing_names_it():
-    assert load_routing().route("extract_claims").prompt == "extract_v1"
+    # extract_v2 (T17) adds claim_kind; v1 stays on disk for recorded runs.
+    assert load_routing().route("extract_claims").prompt == "extract_v2"
+    assert (BACKEND / "app/core/graph/prompts/extract_v2.md").is_file()
     assert (BACKEND / "app/core/graph/prompts/extract_v1.md").is_file()
 
 

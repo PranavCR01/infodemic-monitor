@@ -18,11 +18,12 @@ class _Record(BaseModel):
 
 
 class EvidenceRecord(_Record):
-    """One retrieved paper or library passage (§6). IDs, titles and URLs always come
-    from the retrieval tool's response, never from a model."""
+    """One retrieved paper, library passage or authoritative reference passage (§6).
+    IDs, titles and URLs always come from the retrieval tool's response or the
+    reference allow-list in config, never from a model."""
 
     evidence_id: str
-    source: Literal["pubmed", "library"]
+    source: Literal["pubmed", "library", "reference"]
     title: str
     abstract: str = ""
     pmid: Optional[str] = None
@@ -39,6 +40,17 @@ class EvidenceRecord(_Record):
     # written before T05 still load.
     study_type: Optional[str] = None
     quality_score: Optional[float] = None
+    # Authoritative references (T17, §6 "Trusted sources beyond PubMed"). ``abstract``
+    # holds the quoted passage; the fetched page's text is stored as a snapshot
+    # (``snapshot_sha256``) because pages change. ``retrieved_at`` is ISO-8601 UTC.
+    # Optional and additive, so older checkpoints still load.
+    publisher: Optional[str] = None
+    retrieved_at: Optional[str] = None
+    snapshot_sha256: Optional[str] = None
+
+
+ClaimKind = Literal["research_question", "fact_of_record"]
+CLAIM_KINDS: tuple[str, ...] = ("research_question", "fact_of_record")
 
 
 class Concept(_Record):

@@ -49,6 +49,9 @@ class ExtractedClaim(_Out):
     claim_category: str = Field(default="other", max_length=64)
     source_segment_ids: list[str] = Field(min_length=1, max_length=MAX_LIST)
     requires_verification: bool = True
+    # §4 (T17). Free string here; the extractor keeps it only when it is a known kind
+    # and otherwise decides with fixed rules, so a bad value costs no repair round.
+    claim_kind: Optional[str] = Field(default=None, max_length=32)
 
 
 class ExtractionOutput(_Out):

@@ -123,6 +123,7 @@ def _write_claim_level(db: Session, job_id: str, state: dict) -> None:
             start_seconds=claim.start_seconds, end_seconds=claim.end_seconds,
             source_segment_ids=list(claim.source_segment_ids),
             requires_verification=claim.requires_verification,
+            claim_kind=claim.claim_kind,
             label=claim_label(stance.stance if stance else None, verdict.verdict).value if verdict else None,
             deciding=cid in deciding,
         )
@@ -152,7 +153,9 @@ def _write_claim_level(db: Session, job_id: str, state: dict) -> None:
                     doi=rec.doi, title=rec.title, abstract=rec.abstract or "",
                     publication_type=list(rec.publication_type or []),
                     publication_year=rec.publication_year, source_url=rec.source_url,
-                    study_type=rec.study_type, quality_score=rec.quality_score)
+                    study_type=rec.study_type, quality_score=rec.quality_score,
+                    publisher=rec.publisher, retrieved_at=rec.retrieved_at,
+                    snapshot_sha256=rec.snapshot_sha256)
                 db.add(ev)
                 evidence_rows[rec.evidence_id] = ev
             relation = ("SUPPORTS" if rec.evidence_id in supporting else

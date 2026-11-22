@@ -143,7 +143,7 @@ def fusion_nodes(transcript: list[TranscriptSegment], ocr: list[OcrSegment]) -> 
 
 
 def build_nodes(caller: Any, retriever: Any, *, budgets: Budgets = DEFAULT_BUDGETS,
-                library: Any = None) -> dict[str, NodeFn]:
+                library: Any = None, references: Any = None) -> dict[str, NodeFn]:
     """The real nodes for the model-calling and retrieval steps. Fusion, validation,
     the review policy and the judge's rules are deterministic and already the default
     graph's; load_artifacts / human_review / persist_result stay reference-only (the
@@ -151,7 +151,7 @@ def build_nodes(caller: Any, retriever: Any, *, budgets: Budgets = DEFAULT_BUDGE
     return {
         r.EXTRACT_CLAIMS: make_extract_claims(caller),
         r.ANALYZE_STANCE: make_analyze_stance(caller),
-        **make_retrieval_nodes(retriever, budgets=budgets, library=library),
+        **make_retrieval_nodes(retriever, budgets=budgets, library=library, references=references),
         r.VERIFY_CLAIMS: make_verify_claims(caller, budgets=budgets),
         r.CRITIQUE_VERIFICATION: make_critique_verification(caller, budgets=budgets),
         r.JUDGE_CLASSIFICATION: make_judge_classification(caller, budgets=budgets),
@@ -173,6 +173,7 @@ class GraphProvider:
         checkpointer: Any = None,
         budgets: Budgets = DEFAULT_BUDGETS,
         library: Any = None,
+        references: Any = None,
         timeout_seconds: float = 900.0,
         pipeline_version: str = "graph_v1",
         clock: Callable[[], float] = time.monotonic,
@@ -184,12 +185,13 @@ class GraphProvider:
         self.checkpointer = checkpointer if checkpointer is not None else memory_checkpointer()
         self.budgets = budgets
         self.library = library
+        self.references = references
         self.timeout_seconds = timeout_seconds
         self.pipeline_version = pipeline_version
         self._clock = clock
         self._overrides = dict(node_overrides or {})
         # Built once, so a bad routing config or a missing prompt file fails at start-up.
-        self._nodes = build_nodes(caller, retriever, budgets=budgets, library=library)
+        self._nodes = build_nodes(caller, retriever, budgets=budgets, library=library, references=references)
 
     # InferenceProvider -------------------------------------------------------
 
@@ -303,6 +305,23 @@ def shared_query_cache(settings: Any) -> Any:
     return RedisQueryCache(redis.Redis.from_url(settings.REDIS_URL))
 
 
+def reference_searcher(settings: Any, cache: Any = None) -> Any:
+    """Authoritative references for facts of record (§6, T17), or ``None`` while
+    ``USE_REFERENCE_SOURCES`` is off (the default): claims are then still tagged with a
+    ``claim_kind`` but every claim is retrieved from PubMed only, as before T17.
+    Snapshots go to the ``reference_snapshots`` table (migration 0009)."""
+    if not getattr(settings, "USE_REFERENCE_SOURCES", False):
+        return None
+    from app.core.retrieval.pubmed import shared_rate_limiter
+    from app.core.retrieval.references import ReferenceSearcher, SqlSnapshotStore, load_reference_config
+    from app.db.session import SessionLocal
+
+    return ReferenceSearcher(
+        load_reference_config(), snapshots=SqlSnapshotStore(SessionLocal), cache=cache,
+        rate_limiter=shared_rate_limiter(bool(getattr(settings, "NCBI_API_KEY", ""))),
+    )
+
+
 def build_graph_provider(settings: Any = None, *, checkpointer: Any = None) -> GraphProvider:
     """The production wiring, from settings: routed models (``config/routing.yaml``)
     through real provider clients, PubMed through the guarded client, the single-call
@@ -320,12 +339,14 @@ def build_graph_provider(settings: Any = None, *, checkpointer: Any = None) -> G
         anthropic_api_key=settings.ANTHROPIC_API_KEY, openai_api_key=settings.OPENAI_API_KEY,
         timeout=settings.GRAPH_MODEL_TIMEOUT_SECONDS,
     ))
+    cache = shared_query_cache(settings)
     retriever = EvidenceRetriever(
         PubMedClient(api_key=settings.NCBI_API_KEY, email=settings.NCBI_EMAIL),
-        shared_query_cache(settings),
+        cache,
         max_results=settings.RETRIEVAL_MAX_RESULTS_PER_QUERY,
     )
     return GraphProvider(
         caller=router, retriever=retriever, fallback=get_provider(), checkpointer=checkpointer,
+        references=reference_searcher(settings, cache),
         timeout_seconds=settings.GRAPH_TIMEOUT_SECONDS, pipeline_version=settings.GRAPH_PIPELINE_VERSION,
     )

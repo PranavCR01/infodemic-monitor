@@ -957,6 +957,78 @@ off, `run_pipeline()`, `get_provider()` and the Celery task behave exactly as be
   real call (and whether the Anthropic/OpenAI request shapes are accepted as written)
   happens in T14 with keys.
 
+## 7n. Reference Sources and claim_kind (T17, no issue; design §4, §6)
+
+Design §6 "Trusted sources beyond PubMed" and §4 `claim_kind`, added after the first
+golden-set batch (commit f238dab). Code: `app/core/retrieval/references/`,
+`app/core/retrieval/claim_kind.py`, `config/reference_sources.yaml`.
+
+- **`claim_kind` on every claim.** `GraphClaim.claim_kind` is `research_question` (default,
+  so pre-T17 checkpoints load) or `fact_of_record`. The extractor asks the model for it
+  (new prompt `extract_v2`, tool enum; `routing.yaml` now names `extract_v2`); a missing or
+  unknown value costs no repair round: fixed rules decide (`infer_claim_kind`). Rules:
+  `statistic` category or a population-count cue ("100,000 people every year", "leading
+  cause of death") → fact; an efficacy/causation verb → research; a schedule, limit,
+  composition or physiology cue → fact; otherwise research. When unsure the claim stays a
+  research question, which keeps PubMed-only retrieval.
+- **The allow-list is the config.** `config/reference_sources.yaml` lists each source's
+  exact hosts and path prefixes; loading fails if a catalogue URL is outside its source's
+  list, a host has a wildcard, or a URL isn't HTTPS. The fetcher re-checks every URL,
+  follows no redirects (a redirect off the list would be a way out), has a timeout and a
+  3 MB cap, and reads only text types. Models never see or name a URL.
+- **Two backends, no web search.** *catalogue*: a fixed list of pages per source (CDC/WHO
+  schedules, FDA/EFSA caffeine, WHO fact sheets, NHS), matched by keyword phrase in the
+  claim; *bookshelf*: NCBI Bookshelf via E-utilities `db=books` (ESearch + ESummary, then
+  the `NBK…` chapter page), sharing PubMed's NCBI rate limiter. A malformed accession is
+  never turned into a URL. **Deviation:** the doc lists WHO GHO, national statistics
+  offices and USDA FoodData Central; their sources are in the allow-list but have no
+  catalogue pages yet (GHO and FoodData have APIs — FoodData's needs a key — which would
+  be a third backend). Left for a person to add pages from the golden-set claims.
+- **Cited like papers.** `EvidenceRecord.source` gains `"reference"` plus optional
+  `publisher`, `retrieved_at`, `snapshot_sha256`. `abstract` holds the quoted passage —
+  the page's own paragraph (≤ 1,200 chars) with the most claim content words, numbers as
+  a tie-break bonus; no passage sharing ≥ 30 % of the claim's words → no record (an
+  off-topic official page is not evidence). `evidence_id` = `ref_` + first 16 hex of
+  SHA-256(URL, snapshot hash, passage): stable for the same page version, new when the
+  page changes.
+- **Snapshots.** The full fetched text is stored once per distinct text, keyed by its
+  SHA-256: `InMemorySnapshotStore` for tests, `SqlSnapshotStore` → new table
+  `reference_snapshots` (migration **0009**, which also adds the three evidence columns
+  and `claims.claim_kind`). State holds only the hash. Per-user job isolation, planned as
+  0009, is now **0010**.
+- **Alongside PubMed, not a fallback.** `retrieve_evidence` searches references once per
+  `fact_of_record` claim, in its first round, and merges them into `retrieved_evidence`,
+  so citation membership, the judge, validation, injection scanning and persistence treat
+  them like papers with no special case. Research questions never touch references. A
+  reference failure is a `NodeError`; PubMed still runs. The library fallback is unchanged
+  and still fires when no PubMed paper clears the threshold, for both kinds.
+- **Ranking.** New study type `reference` (evidence class `authoritative_reference`,
+  not on the weak list). `Reranker.rerank(..., claim_kind)` puts references ahead of every
+  study for facts of record and after the studies otherwise (also when no kind is given,
+  e.g. via MCP). Reference relevance = share of the claim's content words in title and
+  passage (the PICO intervention/outcome test doesn't fit a schedule); same 0.4 threshold
+  and the same cap of 10 in total.
+- **Same verdict rules.** Rules stay in the prompt and the existing checks: new verifier
+  prompt `verify_v2` (routing now names it) tells the model a reference supports
+  CONTRADICTED only when it states the claim is false or gives a conflicting figure, and
+  that "no evidence that X works" stays INSUFFICIENT_EVIDENCE. The evidence index shows
+  publisher and retrieval date. The judge's explanation check now recognises `ref_` (and
+  `lib_`, previously missed) IDs. Judge rules untouched (T16 owns them).
+- **MCP contract unchanged.** The MCP tools publish their own v1 `EvidenceRecord`
+  (identical schema to before), converted at the boundary, so `contract/tools.json` did
+  not change. Records with `source: reference` are refused by the MCP tools; exposing
+  references would be a new tool name. Nulls for the new fields are accepted on input.
+- **Off by default.** `USE_REFERENCE_SOURCES` (default false, read only when
+  `USE_GRAPH_PIPELINE` is on). With it off, claims still carry `claim_kind` (and the new
+  prompts run when the graph is on) but retrieval is PubMed-only, as before.
+- **Not verified live.** No outbound network in the build environment: the catalogue URLs
+  were written from the publishers' site structure and were never fetched; the test
+  fixtures are synthetic pages (`app/tests/fixtures/references/README.md`), not the
+  publishers' text, and the Bookshelf ESummary field names (`chapteraccessionid`,
+  `accessionid`) are from memory of the API. Left for a person: open each catalogue URL,
+  record real pages, check a real `db=books` ESummary, run migration 0009 on Supabase,
+  then turn `USE_REFERENCE_SOURCES` on.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -978,6 +1050,13 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-22**: T17 (no issue; design §4, §6) built by the automated build:
+  `claim_kind` on every claim (model via `extract_v2`, fixed rules as fallback);
+  allow-listed authoritative references (config catalogue + NCBI Bookshelf) searched
+  alongside PubMed for facts of record, cited as `ref_<hash>` with stored text snapshots
+  (migration 0009); references rank first for facts of record; `verify_v2` states the same
+  verdict rules for references. Behind `USE_REFERENCE_SOURCES` (default off). Synthetic
+  fixtures only; catalogue URLs not fetched. Decisions in §7n.
 - **2026-11-22**: T16 (#35) judge updated to the revised §9 rules by the automated build:
   REFUTES + SUPPORTED → MISINFO (`refuted_supported`, always reviewed via
   `denies_supported:<cid>`); REFUTES + MIXED/INSUFFICIENT → CANNOT_RECOGNIZE
