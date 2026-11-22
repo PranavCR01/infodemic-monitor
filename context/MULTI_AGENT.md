@@ -536,6 +536,59 @@ Decisions and deviations:
   SUPPORTED or CONTRADICTED, so "a deciding claim is INSUFFICIENT_EVIDENCE or MIXED" can't
   fire; `mixed_evidence:<cid>` now covers MIXED instead.
 
+## 7i. Critic and Bounded Loop Decisions (T07, #34)
+
+The node is `backend/app/core/graph/critic.py` (`make_critique_verification(caller)`); the
+prompt is `app/core/graph/prompts/critic_v1.md`; the small labelled set and runner are
+`app/tests/fixtures/critic/` and `app/core/graph/critic_eval.py`. The default graph still
+uses the stub critic until T11.
+
+- **Two layers.** Deterministic code checks always run: citation integrity (cited ID not
+  retrieved for this claim, a paper in both lists), verdict/citation agreement
+  (CONTRADICTED with no contradicting paper and so on), strength (a SUPPORTED/CONTRADICTED
+  verdict resting *only* on animal, in-vitro, case-report or opinion papers), and "every
+  retrieved paper was filtered out" (asks for RETRIEVE_MORE). Then one forced-tool LLM
+  call (`record_critique`, step `critique`, prompt `critic_v1`) covers claim fidelity,
+  relevance, what the papers say, logic, completeness and stance consistency. The
+  stricter decision wins (ESCALATE > RETRIEVE_MORE > REVISE_VERIFICATION > APPROVE), so
+  the model cannot overrule a code finding.
+- **Independence.** Its own prompt, and its own routing step; `routing.yaml` already
+  routes `critique` to a different provider from `verify_claims` (a test checks that they
+  differ). No model id in code.
+- **Failure modes.** An answer that breaks the output contract → ESCALATE + review with a
+  `guardrail:output_rejected` error (the T10 safe default). A model *outage* → the review
+  falls back to the code checks only, with a retryable error and no forced review, since
+  §8 says the pipeline must work without the critic. No evidence shown to the verifier →
+  no model call. `caller=None` gives the code-only critic (the §8 probe configuration).
+- **Budgets are enforced in routing, not in the node.** Two routing changes:
+  1. `CriticResult` records `reviewed_attempt` and `reviewed_revision` (optional and
+     additive, like T04/T06; schema version unchanged). `routing.unchanged_since_review`
+     uses them so that **an exhausted claim is frozen**: before T07, a claim whose search
+     budget had run out was re-verified and re-critiqued on the same evidence on every
+     later pass another claim caused. A scripted critic that doesn't set the fields keeps
+     the T02 behaviour.
+  2. **Exhausted budget = abstention + review.** `routing.verdicts_for_judge` gives the
+     judge INSUFFICIENT_EVIDENCE (no citations) for any claim whose critic still objected
+     when the budget ran out, so a verdict the critic rejected can never decide the video
+     label; `routing.critic_review_reasons` adds `budget_exhausted:<id>` and
+     `critic_escalated:<id>`. The stored `verification_results` are not changed. ESCALATE
+     keeps its verdict, so the reviewer sees a proposed label (§12). The stub judge and
+     stub review rule now call both helpers. **For T08/T09: keep calling them** when
+     replacing those stubs. Rebased onto T08: T08's `judge.claim_views` now reads
+     verdicts through `verdicts_for_judge`, and `make_judge_classification` /
+     `judge()` take `budgets` (T11: pass the graph's budgets to both the judge and the
+     critic, or a custom budget won't be recognised as exhausted).
+- **Ownership.** Writes only `critic_results` (plus `errors`), as the issue says.
+- **Small set: 16 synthetic claims, self-labelled** (8 planted verifier errors, 8 right
+  verdicts). Code-only critic: defect detection 0.50 (4/8: animal-only, lab-only,
+  absence-as-contradiction, fabricated citation), unnecessary-retry rate 0.00. It misses
+  everything that needs reading: "relieves" judged as "cures", wrong population, an
+  ignored meta-analysis, an off-topic citation. The oracle scores 1.0/0.0 (harness
+  check) and an always-challenge critic 1.0/0.43. The LLM row waits for API keys (T14).
+  Whether the model critic is worth its extra call is the §8 probe and is still open:
+  it has to add detection on the four reading defects without pushing the
+  unnecessary-retry rate up.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -557,6 +610,12 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-22**: T07 (#34) critic built by the automated build: code checks plus a
+  forced `record_critique` call on the routed `critique` step (prompt `critic_v1`).
+  Budgets stay in routing; exhausted claims are now frozen (not re-verified or
+  re-reviewed) and abstain (INSUFFICIENT_EVIDENCE for the judge) as well as going to
+  review. 16-claim synthetic set: code-only defect detection 0.50, unnecessary retries
+  0.00; LLM run waits for API keys. Decisions in §7i.
 - **2026-11-22**: T08 (#35) judge built by the automated build: the §9 rules as code
   (`decision_rule` recorded), citations limited to IDs in state, code-detected review
   flags for mixed videos, unclear stance on a false claim, false claims quoted but not

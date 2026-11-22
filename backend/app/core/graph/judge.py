@@ -51,6 +51,7 @@ from dataclasses import dataclass, field
 from typing import Any, Callable, Iterable, Optional, Protocol, Sequence
 
 from app.core.graph import routing as r
+from app.core.graph.routing import DEFAULT_BUDGETS, Budgets
 from app.core.graph.state import (
     EvidenceRecord,
     FinalClassification,
@@ -149,13 +150,19 @@ def _evidence_by_claim(state: PipelineState) -> dict[str, dict[str, EvidenceReco
     return out
 
 
-def claim_views(state: PipelineState) -> tuple[list[ClaimView], list[NodeError]]:
+def claim_views(
+    state: PipelineState, budgets: Budgets = DEFAULT_BUDGETS
+) -> tuple[list[ClaimView], list[NodeError]]:
     """The claims the policy decides over, in extraction order, plus errors for any
-    verdict that refers to a claim not in state (it is ignored)."""
+    verdict that refers to a claim not in state (it is ignored).
+
+    Verdicts come from ``routing.verdicts_for_judge`` (T07): a claim whose critic still
+    objected when its loop budget ran out abstains as INSUFFICIENT_EVIDENCE, so a
+    rejected verdict can't decide the label (§8)."""
     claims = list(state.get("claims") or [])
     known = {c.claim_id for c in claims}
     stances: dict[str, StanceResult] = state.get("stance_results") or {}
-    verdicts: dict[str, VerificationResult] = state.get("verification_results") or {}
+    verdicts: dict[str, VerificationResult] = r.verdicts_for_judge(state, budgets)
     evidence = _evidence_by_claim(state)
     failed = {
         e.claim_id for e in state.get("errors") or []
@@ -534,8 +541,9 @@ def judge(
     system_prompt: Optional[str] = None,
     prompt_version: str = DEFAULT_PROMPT_VERSION,
     max_chars: int = DEFAULT_MAX_BLOCK_CHARS,
+    budgets: Budgets = DEFAULT_BUDGETS,
 ) -> tuple[FinalClassification, list[NodeError]]:
-    views, errors = claim_views(state)
+    views, errors = claim_views(state, budgets)
     checkable = [c for c in state.get("claims") or [] if c.requires_verification]
     d = decide(views, has_claims=bool(checkable))
     errors += list(d.errors)
@@ -580,8 +588,10 @@ def make_judge_classification(
     *,
     prompt_version: Optional[str] = None,
     max_chars: int = DEFAULT_MAX_BLOCK_CHARS,
+    budgets: Budgets = DEFAULT_BUDGETS,
 ) -> Callable[[PipelineState], dict]:
-    """Build the ``judge_classification`` node.
+    """Build the ``judge_classification`` node. Pass the graph's ``budgets`` so exhausted
+    claims are recognised (T07).
 
     With no ``caller`` the explanation is the deterministic template (no model call).
     With a caller (T01's ``ModelRouter``), the routed ``judge_explanation`` step writes
@@ -596,6 +606,7 @@ def make_judge_classification(
         final, errors = judge(
             state, caller, system_prompt=system_prompt,
             prompt_version=version or DEFAULT_PROMPT_VERSION, max_chars=max_chars,
+            budgets=budgets,
         )
         update: dict = {"final_result": final}
         if errors:

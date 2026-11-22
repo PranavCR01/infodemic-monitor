@@ -121,14 +121,16 @@ def fuse_by_overlap(
     return sorted(fused, key=lambda f: f.start)
 
 
-def judge_by_rules(state: PipelineState) -> FinalClassification:
+def judge_by_rules(state: PipelineState, budgets: Budgets = DEFAULT_BUDGETS) -> FinalClassification:
     """The §9 judge policy (T08's deterministic rules, template explanation, no model).
+    Claims whose critic objection outlived the loop budget abstain (T07,
+    ``routing.verdicts_for_judge``).
 
     Kept for callers written against the T02 stub; the real node is
     ``judge.make_judge_classification``."""
     from app.core.graph.judge import judge  # local import: judge imports this package's state
 
-    return judge(state)[0]
+    return judge(state, budgets=budgets)[0]
 
 
 # -------------------------------------------------------------------- stubs
@@ -240,7 +242,7 @@ def make_stub_nodes(
         # explanation, no model). Pass make_judge_classification(router) for the LLM text.
         from app.core.graph.judge import make_judge_classification
 
-        return make_judge_classification()(state)
+        return make_judge_classification(budgets=budgets)(state)
 
     def validate_result(state: PipelineState) -> dict:
         errors = []
@@ -263,13 +265,11 @@ def make_stub_nodes(
         stances = state.get("stance_results", {})
         if state.get("validation_errors"):
             reasons.append("validation_failed")
-        for cid, c in state.get("critic_results", {}).items():
-            if c.decision == CriticDecision.ESCALATE or c.requires_review:
-                reasons.append(f"critic_escalated:{cid}")
-        for cid in r.exhausted_claim_ids(state, budgets):
-            reasons.append(f"budget_exhausted:{cid}")
+        # §8: critic escalations and exhausted budgets. T09: keep this call too.
+        reasons += r.critic_review_reasons(state, budgets)
+        judged = r.verdicts_for_judge(state, budgets)
         for cid in deciding:
-            v = verdicts.get(cid)
+            v = judged.get(cid, verdicts.get(cid))
             if v and v.verdict in (Verdict.INSUFFICIENT_EVIDENCE, Verdict.MIXED):
                 reasons.append(f"weak_evidence:{cid}")
             s = stances.get(cid)
