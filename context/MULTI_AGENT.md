@@ -536,6 +536,7 @@ Decisions and deviations:
   SUPPORTED or CONTRADICTED, so "a deciding claim is INSUFFICIENT_EVIDENCE or MIXED" can't
   fire; `mixed_evidence:<cid>` now covers MIXED instead.
 
+<<<<<<< HEAD
 ## 7i. Critic and Bounded Loop Decisions (T07, #34)
 
 The node is `backend/app/core/graph/critic.py` (`make_critique_verification(caller)`); the
@@ -672,6 +673,118 @@ thresholds from it; download MedCPT and check retrieval on real library document
 pgvector on Supabase and run migration 0006; build the internal viewer the `source_url`
 points at (`/library/documents/{id}?page=&chunk=`, not built) and the analyst UI label for
 library sources; decide who may upload (copyright: T13 gives `search_library` its own scope).
+=======
+## 7i. Validation and Human-Review Routing (T09, #36)
+
+Validation is `backend/app/core/graph/validation.py`; the review rule is
+`backend/app/core/graph/review_policy.py` with thresholds in
+`backend/config/review_policy.yaml`; persistence is `app/db/models/review.py`,
+migration `0007` and `app/services/review_service.py`. Both nodes are deterministic, so
+the default graph now uses them instead of the T02 stubs (no model calls change; the
+graph is still not wired into `run_pipeline`).
+
+**Validation (§10): eight checks, one issue string each,**
+`"<check>:<step>[:<claim_id>]: <message>"` in `validation_errors`: `schema` (every record
+re-validated against its Pydantic model, labels from the allowed set, `video_id`,
+non-empty explanation, `decision_rule` present), `citation_membership` (every evidence ID a
+verdict or the result cites was retrieved for *that* claim; a paper retrieved for another
+claim is misattributed), `quote_membership`, `source_ids`, `merge_plausibility`,
+`timestamps`, `consistency` (re-runs the §9 rules and compares label, rule, deciding claims
+and judge flags) and `length_limits`. A check that crashes is itself a failure.
+
+- **Repair: only the judge is re-run.** Every issue names the step that produced the bad
+  output. If any issue is in `final_result`, `validate_result → judge_classification` runs
+  once more (`validation_attempts` bounds it: one repair, new conditional edge
+  `routing.route_after_validation`). On the repair run the judge recomputes the label from
+  state and uses the deterministic template instead of the LLM explanation (the only model
+  output in the result), so a repair never costs a model call and always produces valid
+  text. §10 says "the failing step is re-run with the error message"; for the judge the
+  error message adds nothing, because its rules are deterministic and the template is
+  always valid. Upstream faults (claims, stance, verdicts) are **not** re-run here: those
+  nodes already did their own repair (verifier: one re-ask, T06; stance: UNCLEAR, T04),
+  and re-entering the retrieval loop from validation would be a second, unbudgeted loop. They go
+  straight to review.
+- **Validation can't be bypassed:** if `validation_errors` was never written, the review
+  rule adds `validation_failed:not_run`.
+- **Quote membership** accepts the transcript, OCR text *and claim texts*, case-, accent-
+  and punctuation-insensitive, with the judge's "…" truncation matched as a prefix.
+  Claim texts count because the template explanation quotes claims and T10 already checks
+  claims are grounded in their segments. Quotes under 12 characters are not checked.
+- **Merge plausibility:** a claim's source segments must chain in time with gaps of at
+  most 2 s, and the claim's own span must overlap them.
+- **Timestamps:** new optional input `video_duration_seconds` (`initial_state(...,
+  video_duration_seconds=)`); without it only sign and order are checked. Zero-length
+  segments are allowed (Whisper emits them); zero-length claims are not.
+- **New state fields** (additive, optional; schema version stays 1.0.0):
+  `video_duration_seconds` (input) and `validation_attempts` (owned by `validate_result`).
+  `recursion_limit` gained the 2 repair steps.
+
+**Review rule (§11): named rules in `review_policy.REVIEW_RULES`**, each unit-tested;
+`evaluate()` also returns which rule gave which reasons (`fired`), and `rule_of(reason)`
+maps a stored reason back to its rule, for §12's per-rule review counts and overturn rates.
+
+| Rule | Reason | Notes |
+|---|---|---|
+| `validation_failed` | `validation_failed:<check>[:<cid>]` | after the repair; `:not_run` if validation was skipped |
+| `weak_evidence` | `weak_evidence:<cid>` | deciding claim INSUFFICIENT/MIXED, **and** every INSUFFICIENT/MIXED claim when the label is CANNOT_RECOGNIZE because nothing could be judged |
+| `conflicting_evidence` | `conflicting_evidence:<cid>` | deciding verdict cites both supporting and contradicting papers |
+| `weak_study_types` | `weak_study_types:<cid>` | every paper a deciding verdict cites is in vitro, animal or case report (reranker's `study_type`, else looked up from the publication type); `unknown` is not weak |
+| `unclear_stance` | `unclear_stance:<cid>` | deciding claim UNCLEAR or with no stance |
+| `critic_escalated` | `critic_escalated:<cid>` | ESCALATE or `requires_review` (from T07's `routing.critic_review_reasons`) |
+| `budget_exhausted` | `budget_exhausted:<cid>` | same source (§11 "Effort"); the rules read T07's `verdicts_for_judge`, so an exhausted claim counts as INSUFFICIENT_EVIDENCE |
+| `low_confidence` | `low_confidence` | calibrated confidence < 0.70. **Dormant**: confidence is `None` until T15 and an uncalibrated number is never compared |
+| `high_risk_uncertain` | `high_risk_uncertain:<cid>` | issue #36: an *endorsed* claim in a high-risk category whose verdict is INSUFFICIENT/MIXED/NOT_VERIFIABLE, deciding or not |
+| `judge_flags` | `judge:<flag>` | T08's flags, kept |
+| `guardrails` | `guardrail:...`, `prompt_injection_suspected:...` | T10's reasons, kept |
+
+Decisions and deviations:
+
+- **Abstentions now go to review.** The T02 note said "a deciding claim is
+  INSUFFICIENT_EVIDENCE or MIXED" can never fire under the §9 rules. §1 says that when the
+  evidence is too weak to decide the system "hands the case to a person instead of
+  guessing", so a CANNOT_RECOGNIZE caused by insufficient or mixed evidence is reviewed. A
+  video with no checkable claims (`no_claims`) or only NOT_VERIFIABLE claims is not. One
+  T02 skeleton test was changed to match. This will raise the review share; the
+  evaluation should report it (§12).
+- **High-risk categories are a provisional list** in `review_policy.yaml` (there is no
+  agreed `claim_category` taxonomy yet; it includes `treatment_efficacy`, which most
+  claims will carry). Align it with the claim-level track's categories.
+- **Not implemented:** "content outside validated capabilities" (issue #36; needs a
+  language or domain signal the state doesn't have yet), materiality and satire (T08
+  note). The quantity and relevance signals of §11 (one paper after reranking, low
+  relevance) are not review rules on their own, because §11's rule list doesn't include
+  them and the reranker already drops papers below relevance 0.4; they feed
+  `weak_evidence` through the verifier's INSUFFICIENT verdict.
+- **The review step doesn't pause the graph.** `human_review` marks the run
+  `REVIEW_REQUIRED` and the run continues to `persist_result`, which (T11) calls
+  `review_service.open_review_case`. The reviewer acts on the stored case days later;
+  keeping a LangGraph interrupt open that long would tie review to checkpoint retention.
+  "Request re-analysis" starts a new job.
+- **Persistence (`0007`; `0006` is T12's library tables).** `JobStatus.REVIEW_REQUIRED` (Postgres `ALTER TYPE ... ADD
+  VALUE`, run in an autocommit block) and a `human_reviews` table (§17): reasons,
+  rules fired, validation errors, proposed label and result, policy and pipeline version,
+  and the reviewer's action, reason, corrected label/claim corrections and time.
+  `record_review_decision` requires a reviewer and a written reason for every action:
+  APPROVE/CORRECT/MARK_INSUFFICIENT → job SUCCESS (a stored `Result` takes the corrected
+  label), REJECT → FAILED with `error_code=REVIEW_REJECTED`, REQUEST_REANALYSIS → stays
+  REVIEW_REQUIRED. `GET /jobs/{id}/result` already requires SUCCESS, so a case in review
+  is never served as a final result. No reviewer UI or API endpoint (out of scope).
+  Migration number coordinated in `context/PRODUCTION.md` §6a (per-user isolation moves
+  to `0008`). Upgrade/downgrade tested on SQLite (in the suite) and once by hand on a local
+  Postgres 16 (0001–0005, `0006` stamped because pgvector was missing, then `0007` up,
+  down with a REVIEW_REQUIRED job moved to FAILED, and up again). Not run on Supabase.
+- **For T11:** call `open_review_case` from `persist_result` when
+  `requires_human_review`; pass `video_duration_seconds` into `initial_state`; the jobs
+  router's duplicate check (`PENDING/STARTED/SUCCESS`) doesn't include REVIEW_REQUIRED, so
+  a re-upload of a video in review starts a new job; decide whether that's wanted.
+- **Rebased onto T07 and T12:** citation membership accepts `library_evidence`; the
+  consistency check and the review rule use T07's `verdicts_for_judge` with the graph's
+  budgets. One T12 test fixture placed a claim at 0–1 s while citing a segment at 3.5–8 s;
+  the new merge check flagged it, so the fixture now uses the segment's span.
+- **Effect on existing numbers:** T10's adversarial report is unchanged (5 unsafe out of
+  34, 4 held for review); the sample video still goes to review only for
+  `judge:mixed_video`.
+>>>>>>> 858d1d0 (T09: deterministic validation and human-review routing (#36))
 
 ## 8. Team
 
@@ -694,6 +807,7 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+<<<<<<< HEAD
 - **2026-11-22**: T12 offline library fallback built by the automated build (no issue;
   design §6): manifest CSV upload, OCRmyPDF/Tesseract + PyMuPDF with per-page confidence
   and held-back low-confidence pages, SHA-256 and PubMed DOI/PMID dedup, paragraph chunking
@@ -708,6 +822,16 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   re-reviewed) and abstain (INSUFFICIENT_EVIDENCE for the judge) as well as going to
   review. 16-claim synthetic set: code-only defect detection 0.50, unnecessary retries
   0.00; LLM run waits for API keys. Decisions in §7i.
+=======
+- **2026-11-22**: T09 (#36) validation and review routing built by the automated build:
+  eight §10 checks in code (schema, citation and quote membership, source IDs, merge
+  plausibility, timestamps, label consistency, length limits), one repair by re-running
+  the judge with the template explanation, then review; the §11 review rule as named,
+  separately tested rules (plus high-risk-uncertain from the issue; abstentions caused
+  by weak evidence now go to review); `REVIEW_REQUIRED` job state and a `human_reviews`
+  table (migration 0007) with reasons and reviewer decisions. Decisions in §7i.
+
+>>>>>>> 858d1d0 (T09: deterministic validation and human-review routing (#36))
 - **2026-11-22**: T08 (#35) judge built by the automated build: the §9 rules as code
   (`decision_rule` recorded), citations limited to IDs in state, code-detected review
   flags for mixed videos, unclear stance on a false claim, false claims quoted but not

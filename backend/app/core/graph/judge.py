@@ -603,8 +603,15 @@ def make_judge_classification(
         system_prompt = load_prompt(version)
 
     def judge_classification(state: PipelineState) -> dict:
+        # §10 repair (T09): validation found a fault in the judge's output and re-ran
+        # it. The label is recomputed from state by the rules; the only model output,
+        # the explanation, is replaced by the deterministic template, which always
+        # passes validation. So the repair costs no model call.
+        from app.core.graph.validation import in_repair  # validation imports judge
+
+        repairing = in_repair(state)
         final, errors = judge(
-            state, caller, system_prompt=system_prompt,
+            state, None if repairing else caller, system_prompt=system_prompt,
             prompt_version=version or DEFAULT_PROMPT_VERSION, max_chars=max_chars,
             budgets=budgets,
         )

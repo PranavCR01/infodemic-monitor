@@ -31,7 +31,6 @@ from app.core.graph.state import (
     Verdict,
     VerificationResult,
 )
-from app.core.guardrails.injection import guardrail_review_reasons
 from app.core.schemas.pipeline import MisinfoLabel
 
 NodeFn = Callable[[PipelineState], dict]
@@ -51,7 +50,7 @@ NODE_OUTPUTS: dict[str, frozenset[str]] = {
     r.VERIFY_CLAIMS: frozenset({"verification_results", "verification_revisions"}),
     r.CRITIQUE_VERIFICATION: frozenset({"critic_results"}),
     r.JUDGE_CLASSIFICATION: frozenset({"final_result"}),
-    r.VALIDATE_RESULT: frozenset({"validation_errors"}),
+    r.VALIDATE_RESULT: frozenset({"validation_errors", "validation_attempts"}),
     r.ROUTE_FOR_REVIEW: frozenset({"requires_human_review", "review_reasons"}),
     r.HUMAN_REVIEW: frozenset({"review_status"}),
     r.PERSIST_RESULT: frozenset({"persisted_result_ref"}),
@@ -245,50 +244,21 @@ def make_stub_nodes(
         return make_judge_classification(budgets=budgets)(state)
 
     def validate_result(state: PipelineState) -> dict:
-        errors = []
-        final = state.get("final_result")
-        if final is None:
-            return {"validation_errors": ["final_result missing"]}
-        claim_ids = {c.claim_id for c in state.get("claims", [])}
-        retrieved = {
-            e.evidence_id
-            for key in ("retrieved_evidence", "library_evidence")
-            for recs in state.get(key, {}).values()
-            for e in recs
-        }
-        errors += [f"unknown claim_id {c}" for c in final.claim_ids if c not in claim_ids]
-        errors += [f"evidence {e} was not retrieved" for e in final.evidence_ids if e not in retrieved]
-        return {"validation_errors": errors}
+        # T09: the real §10 validator is deterministic, so the default graph uses it.
+        from app.core.graph.validation import make_validate_result
+
+        return make_validate_result(budgets=budgets)(state)
 
     def route_for_review(state: PipelineState) -> dict:
-        reasons: list[str] = []
-        final = state.get("final_result")
-        deciding = set(final.claim_ids) if final else set()
-        verdicts = state.get("verification_results", {})
-        stances = state.get("stance_results", {})
-        if state.get("validation_errors"):
-            reasons.append("validation_failed")
-        # §8: critic escalations and exhausted budgets. T09: keep this call too.
-        reasons += r.critic_review_reasons(state, budgets)
-        judged = r.verdicts_for_judge(state, budgets)
-        for cid in deciding:
-            v = judged.get(cid, verdicts.get(cid))
-            if v and v.verdict in (Verdict.INSUFFICIENT_EVIDENCE, Verdict.MIXED):
-                reasons.append(f"weak_evidence:{cid}")
-            s = stances.get(cid)
-            if s and s.stance == Stance.UNCLEAR:
-                reasons.append(f"unclear_stance:{cid}")
-        # §9: patterns the judge's rules can't settle (mixed video, unclear stance on a
-        # false claim, ...) go to a person. T09: keep this when replacing the stub.
-        if final:
-            reasons += [f"judge:{f}" for f in final.review_flags if f"judge:{f}" not in reasons]
-        # §15: suspected injections and guardrail rejections always go to review.
-        # T09: keep this call when replacing the stub.
-        reasons += [x for x in guardrail_review_reasons(state) if x not in reasons]
-        return {"requires_human_review": bool(reasons), "review_reasons": reasons}
+        # T09: the real §11 review rule (judge flags and guardrail reasons included).
+        from app.core.graph.review_policy import make_route_for_review
+
+        return make_route_for_review(budgets=budgets)(state)
 
     def human_review(state: PipelineState) -> dict:
-        # The real step pauses the run for a reviewer (T09); the stub only marks it.
+        # T09: the run does not pause here. The case is marked REVIEW_REQUIRED and
+        # persisted with its reasons (persist_result, T11, via
+        # app.services.review_service); the reviewer acts on the stored case later.
         return {"review_status": ReviewStatus.REVIEW_REQUIRED}
 
     def persist_result(state: PipelineState) -> dict:

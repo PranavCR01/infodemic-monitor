@@ -107,7 +107,11 @@ Only start these once 5a–5d are done and merged.
   job/result should get a 404, not a 403 (don't leak existence).
 - Migration number follows whatever the dedup migration landed as — **0005 if dedup
   hasn't shipped yet, 0006 if it has.** Check `backend/app/db/migrations/versions/` before
-  naming your revision.
+  naming your revision. **Update (2026-11-22):** on `langgraph-build`, `0006` is the offline library tables
+  (T12) and `0007` is the `REVIEW_REQUIRED` job state and `human_reviews` table (T09,
+  #36), so per-user isolation should be `0008` with `down_revision = "0007"` once
+  `langgraph-build` is merged into `main`; if it lands on `main` first, the
+  `langgraph-build` migrations are renumbered after it at merge time.
 
 ### 6b. URL ingestion
 

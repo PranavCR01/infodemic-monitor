@@ -734,7 +734,7 @@ def claims_node(*texts):
     def extract_claims(state):
         return {"claims": [
             GraphClaim(claim_id=f"c{i}", claim_text=t, claim_category="treatment_efficacy",
-                       source_segment_ids=["t1"], start_seconds=0.0, end_seconds=1.0)
+                       source_segment_ids=["t1"], start_seconds=3.5, end_seconds=8.0)  # t1's span (T09 checks it)
             for i, t in enumerate(texts, start=1)
         ]}
     return extract_claims

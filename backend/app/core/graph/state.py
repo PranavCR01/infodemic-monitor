@@ -257,6 +257,9 @@ class PipelineState(TypedDict, total=False):
     video_id: str
     pipeline_version: str
     media_uri: str
+    # Optional input (T09): the video's length, for the §10 timestamp check. When
+    # absent, timestamps are still checked for order and sign but not against a length.
+    video_duration_seconds: float
 
     # Ingestion and extraction (§1–§3).
     artifacts: list[ArtifactRef]
@@ -285,6 +288,9 @@ class PipelineState(TypedDict, total=False):
     # Decision, validation and review (§9–§12).
     final_result: FinalClassification
     validation_errors: list[str]
+    # How many times validation has run (T09): 1 after the first check, 2 after the
+    # one repair attempt (§10). Routing uses it to bound the repair loop.
+    validation_attempts: int
     requires_human_review: bool
     review_reasons: list[str]
     review_status: ReviewStatus
@@ -295,16 +301,22 @@ class PipelineState(TypedDict, total=False):
 
 
 INPUT_FIELDS: frozenset[str] = frozenset(
-    {"state_schema_version", "job_id", "video_id", "pipeline_version", "media_uri"}
+    {"state_schema_version", "job_id", "video_id", "pipeline_version", "media_uri",
+     "video_duration_seconds"}
 )
 SHARED_FIELDS: frozenset[str] = frozenset({"errors"})
 
 
 def initial_state(
-    *, job_id: str, video_id: str, media_uri: str, pipeline_version: str
+    *,
+    job_id: str,
+    video_id: str,
+    media_uri: str,
+    pipeline_version: str,
+    video_duration_seconds: Optional[float] = None,
 ) -> PipelineState:
     """The input a run starts from. Every other field is filled in by nodes."""
-    return PipelineState(
+    state = PipelineState(
         state_schema_version=STATE_SCHEMA_VERSION,
         job_id=job_id,
         video_id=video_id,
@@ -312,6 +324,9 @@ def initial_state(
         media_uri=media_uri,
         errors=[],
     )
+    if video_duration_seconds is not None:
+        state["video_duration_seconds"] = float(video_duration_seconds)
+    return state
 
 
 # ---------------------------------------------------------- checkpoint size guard

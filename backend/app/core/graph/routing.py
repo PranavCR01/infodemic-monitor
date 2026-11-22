@@ -246,6 +246,15 @@ def make_route_after_critic(budgets: Budgets = DEFAULT_BUDGETS):
     return route_after_critic
 
 
+def route_after_validation(state: PipelineState) -> str:
+    """Validation failed in the judge's own output, first time → re-run the judge once
+    (§10 "one repair attempt"); otherwise on to the review rule, which sends any
+    remaining failure to a person."""
+    from app.core.graph.validation import needs_repair  # validation imports routing
+
+    return JUDGE_CLASSIFICATION if needs_repair(state) else ROUTE_FOR_REVIEW
+
+
 def route_after_policy(state: PipelineState) -> str:
     """Review rule outcome → human review or persist (§10–§12)."""
     return HUMAN_REVIEW if state.get("requires_human_review") else PERSIST_RESULT
