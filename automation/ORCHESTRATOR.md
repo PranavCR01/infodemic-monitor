@@ -27,7 +27,9 @@ Both get the same check below. Speed matters: start ready work as soon as it is 
    - Fill in `automation/TASK_PROMPT.md` for each one (including this orchestrator's session
      id, `session_013cWxq1xr2wMZ2m7f1Z5MU8`) and start a new session on the repo
      (create_session, source_url https://github.com/PranavCR01/infodemic-monitor,
-     source_revision `langgraph-build`, tags ["infodemic-build"]).
+     source_revision `langgraph-build`, tags ["infodemic-build"],
+     environment_id `env_01JA2Saj4x8sggokuxovPM68` — the `infodemic-monitor`
+     environment, which allows PubMed and the model APIs and holds the eval keys).
    - Set each row to `in_progress`, with the session id and the start time (UTC). Add Log
      lines. Commit and push to `langgraph-build` (pull --rebase first).
 4. **Nothing ready and nothing running:** if every remaining task is `blocked` or waiting on
