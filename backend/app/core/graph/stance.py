@@ -33,6 +33,7 @@ from typing import Any, Iterable, Optional, Protocol
 
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator
 
+from app.core.guardrails.injection import neutralise
 from app.core.graph import routing as r
 from app.core.graph.state import (
     FusedSegment,
@@ -200,7 +201,10 @@ def context_for_claim(
 
 
 def _clean(text: str) -> str:
-    text = _FENCE_RE.sub("", text or "")
+    # §15 (T10): strip invisible characters and replace sentences that read as
+    # instructions to the system before the model sees them; state keeps the original.
+    text, _ = neutralise(text or "")
+    text = _FENCE_RE.sub("", text)
     if len(text) > MAX_SEGMENT_CHARS:
         text = text[:MAX_SEGMENT_CHARS] + "…"
     return text

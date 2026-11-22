@@ -1,0 +1,31 @@
+# Guardrail limits (design doc section 15).
+#
+# Every number here is enforced in code by app.core.guardrails; prompts never
+# carry these rules. Changing a limit is a config change. These are starting
+# values, not measured ones: revisit them once real traffic exists.
+version: guardrails_v1
+
+input:
+  max_file_bytes: 104857600         # 100 MiB per upload
+  min_duration_seconds: 1
+  max_duration_seconds: 600         # short-form video; longer clips are rejected, not truncated
+  allowed_containers: [mp4, mov, webm, mkv]
+  max_transcript_chars: 128000      # matches settings.MAX_INPUT_CHARS
+  max_segments: 2000                # transcript + OCR segments per video
+  max_segment_chars: 4000           # one untrusted block sent to a model
+  max_claims_per_video: 50          # T02's recursion limit assumes at most 50
+  uploads_per_user_per_day: 50
+  rate_limit: {requests: 10, window_seconds: 60}
+
+tools:
+  # Only these functions exist for the pipeline. Retrieval is code: models
+  # never name a tool, a URL or a host.
+  approved: [pubmed_search, pubmed_fetch]
+  allowed_hosts: [eutils.ncbi.nlm.nih.gov]
+  allowed_path_prefix: /entrez/eutils/
+  timeout_seconds: 10
+  max_query_chars: 300
+  max_query_terms: 40
+  max_results: 20
+  max_response_bytes: 5000000       # matches the retrieval client's cap (T03)
+  max_calls_per_run: 200            # 50 claims x (3 searches + 1 fetch) fits

@@ -261,6 +261,16 @@ def filter_term(filters: SearchFilters) -> str:
     return "(" + " OR ".join(f'"{t}"[pt]' for t in filters.publication_types) + ")"
 
 
+def _guarded_http(timeout: float):
+    from app.core.guardrails.config import load_guardrails
+    from app.core.guardrails.tools import GuardedHttpClient
+
+    limits = load_guardrails().tools.model_copy(
+        update={"timeout_seconds": timeout, "max_response_bytes": MAX_RESPONSE_BYTES}
+    )
+    return GuardedHttpClient(limits, headers={"User-Agent": USER_AGENT})
+
+
 class PubMedClient:
     """Synchronous E-utilities client. Inject ``http`` (an ``httpx.Client``) in tests,
     e.g. with ``httpx.MockTransport`` serving recorded responses."""
@@ -278,7 +288,9 @@ class PubMedClient:
         sleep: Callable[[float], None] = time.sleep,
         timeout: float = 15.0,
     ) -> None:
-        self._http = http or httpx.Client(timeout=timeout, headers={"User-Agent": USER_AGENT})
+        # Default: the §15 guarded client (HTTPS to the E-utilities host only, no
+        # redirects, body read with a byte cap). Tests inject their own client.
+        self._http = http or _guarded_http(timeout)
         self._api_key = api_key
         self._email = email
         self._limiter = rate_limiter or shared_rate_limiter(bool(api_key))

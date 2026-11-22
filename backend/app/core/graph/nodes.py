@@ -31,6 +31,7 @@ from app.core.graph.state import (
     Verdict,
     VerificationResult,
 )
+from app.core.guardrails.injection import guardrail_review_reasons
 from app.core.schemas.pipeline import MisinfoLabel
 
 NodeFn = Callable[[PipelineState], dict]
@@ -292,6 +293,9 @@ def make_stub_nodes(
             s = stances.get(cid)
             if s and s.stance == Stance.UNCLEAR:
                 reasons.append(f"unclear_stance:{cid}")
+        # §15: suspected injections and guardrail rejections always go to review.
+        # T09: keep this call when replacing the stub.
+        reasons += [x for x in guardrail_review_reasons(state) if x not in reasons]
         return {"requires_human_review": bool(reasons), "review_reasons": reasons}
 
     def human_review(state: PipelineState) -> dict:
