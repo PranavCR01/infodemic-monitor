@@ -7,8 +7,9 @@
     critic ─┬─ RETRIEVE_MORE (budget left)        → plan
             ├─ REVISE_VERIFICATION (budget left)  → verify
             └─ otherwise (approve / escalate / exhausted) → judge
-    judge → validate → review policy ─┬─ review required → human_review → persist
-                                      └─ pass → persist → END
+    judge → validate ─┬─ judge's output invalid, first time → judge (one repair, §10)
+                      └─ otherwise → review policy ─┬─ review required → human_review → persist
+                                                    └─ pass → persist → END
 """
 from __future__ import annotations
 
@@ -81,7 +82,9 @@ def build_graph(
         [r.PLAN_RETRIEVAL, r.VERIFY_CLAIMS, r.JUDGE_CLASSIFICATION],
     )
     g.add_edge(r.JUDGE_CLASSIFICATION, r.VALIDATE_RESULT)
-    g.add_edge(r.VALIDATE_RESULT, r.ROUTE_FOR_REVIEW)
+    g.add_conditional_edges(
+        r.VALIDATE_RESULT, r.route_after_validation, [r.JUDGE_CLASSIFICATION, r.ROUTE_FOR_REVIEW]
+    )
     g.add_conditional_edges(
         r.ROUTE_FOR_REVIEW, r.route_after_policy, [r.HUMAN_REVIEW, r.PERSIST_RESULT]
     )
@@ -110,7 +113,7 @@ def recursion_limit(budgets: Budgets = DEFAULT_BUDGETS, max_claims: int = 50) ->
     stop loops; this only keeps LangGraph's safety limit above the real bound.
     """
     per_claim = 5 * (budgets.max_retrieval_attempts - 1) + 2 * budgets.max_verification_revisions
-    return 14 + max_claims * per_claim + 10
+    return 14 + 2 + max_claims * per_claim + 10  # + 2: the one validation repair (judge, validate)
 
 
 def run_config(job_id: str, budgets: Budgets = DEFAULT_BUDGETS) -> dict:

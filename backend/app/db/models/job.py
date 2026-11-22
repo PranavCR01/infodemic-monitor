@@ -14,6 +14,10 @@ class JobStatus(str, enum.Enum):
     STARTED = "STARTED"
     SUCCESS = "SUCCESS"
     FAILED = "FAILED"
+    # The analysis finished but a person must review it before the result is shown
+    # (target design §11–§12, T09). Set only by the graph pipeline (behind T11's flag);
+    # the single-call path never uses it. The reasons live in ``human_reviews``.
+    REVIEW_REQUIRED = "REVIEW_REQUIRED"
 
 
 class Job(Base):
