@@ -109,7 +109,8 @@ Only start these once 5a–5d are done and merged.
   hasn't shipped yet, 0006 if it has.** Check `backend/app/db/migrations/versions/` before
   naming your revision. **Update (2026-11-22):** on `langgraph-build`, `0006` is the offline library tables
   (T12) and `0007` is the `REVIEW_REQUIRED` job state and `human_reviews` table (T09,
-  #36), so per-user isolation should be `0008` with `down_revision = "0007"` once
+  #36); `0008` is the graph pipeline's claim-level tables (T11, #38), so per-user
+  isolation should be `0009` with `down_revision = "0008"` once
   `langgraph-build` is merged into `main`; if it lands on `main` first, the
   `langgraph-build` migrations are renumbered after it at merge time.
 

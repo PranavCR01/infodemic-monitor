@@ -31,7 +31,8 @@ export default async function JobDetailPage({
   const job = await fetchJob(params.job_id);
   if (!job) notFound();
 
-  const result = job.status === "SUCCESS" ? await fetchResult(params.job_id) : null;
+  const result =
+    job.status === "SUCCESS" || job.status === "REVIEW_REQUIRED" ? await fetchResult(params.job_id) : null;
 
   return <JobDetailClient jobId={params.job_id} initialJob={job} initialResult={result} />;
 }

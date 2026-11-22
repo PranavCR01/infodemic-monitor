@@ -20,6 +20,19 @@ class Settings(BaseSettings):
     OPENAI_API_KEY: str = ""
     ANTHROPIC_API_KEY: str = ""
 
+    # LangGraph pipeline (T11, #38). Off by default: the single-call provider above
+    # stays the live path. When on, the graph runs on every video and falls back to
+    # the single call on an exception, a timeout or a run without a result.
+    USE_GRAPH_PIPELINE: bool = False
+    GRAPH_PIPELINE_VERSION: str = "graph_v1"
+    GRAPH_TIMEOUT_SECONDS: float = 900.0       # wall clock for one graph run
+    GRAPH_MODEL_TIMEOUT_SECONDS: float = 60.0  # one provider call
+    # Postgres DSN for LangGraph checkpoints (a `langgraph` schema). Empty = in-memory
+    # checkpoints: a retried task then starts the graph from the beginning.
+    LANGGRAPH_CHECKPOINT_DSN: str = ""
+    # Share the retrieval MCP server's Redis query cache (T13) with the graph's workers.
+    GRAPH_SHARED_RETRIEVAL: bool = True
+
     # Whisper
     WHISPER_PROVIDER: str = "faster_whisper"  # "faster_whisper" | "openai"
     WHISPER_MODEL_SIZE: str = "base"  # tiny | base | small | medium | large-v3
