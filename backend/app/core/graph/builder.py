@@ -2,6 +2,8 @@
 
     load → (transcribe ∥ ocr) → fuse → claims → stance ─┬─ no verifiable claims → judge
                                                         └─ plan → retrieve → rerank → verify → critic
+    retrieve ─┬─ nothing found, budget left → plan (broader terms, §6)
+              └─ otherwise                  → rerank
     critic ─┬─ RETRIEVE_MORE (budget left)        → plan
             ├─ REVISE_VERIFICATION (budget left)  → verify
             └─ otherwise (approve / escalate / exhausted) → judge
@@ -66,7 +68,11 @@ def build_graph(
         r.ANALYZE_STANCE, r.route_after_stance, [r.PLAN_RETRIEVAL, r.JUDGE_CLASSIFICATION]
     )
     g.add_edge(r.PLAN_RETRIEVAL, r.RETRIEVE_EVIDENCE)
-    g.add_edge(r.RETRIEVE_EVIDENCE, r.RERANK_EVIDENCE)
+    g.add_conditional_edges(
+        r.RETRIEVE_EVIDENCE,
+        r.make_route_after_retrieval(budgets),
+        [r.PLAN_RETRIEVAL, r.RERANK_EVIDENCE],
+    )
     g.add_edge(r.RERANK_EVIDENCE, r.VERIFY_CLAIMS)
     g.add_edge(r.VERIFY_CLAIMS, r.CRITIQUE_VERIFICATION)
     g.add_conditional_edges(
@@ -98,7 +104,8 @@ def recursion_limit(budgets: Budgets = DEFAULT_BUDGETS, max_claims: int = 50) ->
 
     The straight path is 14 super-steps. Every pass back from the critic uses up budget
     of at least one claim: a retrieval round (5 steps: plan, retrieve, rerank, verify,
-    critic) or a revision (2 steps: verify, critic). So the loops are bounded by
+    critic), a broadening round after an empty search (2 steps: plan, retrieve) or a
+    revision (2 steps: verify, critic). So the loops are bounded by
     ``max_claims`` times each claim's budget. The budgets, not this number, are what
     stop loops; this only keeps LangGraph's safety limit above the real bound.
     """

@@ -24,6 +24,7 @@ from typing import Annotated, Any, Literal, Optional, TypedDict
 
 from pydantic import BaseModel, ConfigDict, Field
 
+from app.core.retrieval.schemas import EvidenceRecord
 from app.core.schemas.pipeline import MisinfoLabel
 
 STATE_SCHEMA_VERSION = "1.0.0"
@@ -144,23 +145,8 @@ class StanceResult(_Record):
     prompt_version: Optional[str] = None
 
 
-class EvidenceRecord(_Record):
-    """One retrieved paper or library passage (§6). IDs, titles and URLs always come
-    from the retrieval tool's response, never from a model."""
-
-    evidence_id: str
-    source: Literal["pubmed", "library"]
-    title: str
-    abstract: str = ""
-    pmid: Optional[str] = None
-    doi: Optional[str] = None
-    document_id: Optional[str] = None
-    page: Optional[int] = None
-    publication_year: Optional[int] = None
-    publication_type: list[str] = Field(default_factory=list)
-    source_url: Optional[str] = None
-    query: Optional[str] = None
-    relevance_score: Optional[float] = None
+# ``EvidenceRecord`` (§6) is defined in the retrieval package, which has no LangGraph
+# dependency, so the graph and the MCP server share it. Re-exported here.
 
 
 class VerificationResult(_Record):

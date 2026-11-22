@@ -201,12 +201,90 @@ The node is `app/core/graph/stance.py` (`make_analyze_stance(caller)`); the prom
   the shared §14 set. Metrics are local to `stance_eval.py` (written before T01's
   `app.evaluation.metrics` merged); fold them into it later.
 
+## 7d. Retrieval Decisions (T03, #31)
+
+The retrieval logic is a plain package, `backend/app/core/retrieval/` (`planning.py`,
+`mesh.py`, `pubmed.py`, `cache.py`, `retriever.py`, `schemas.py`), with no LangGraph or
+MCP imports (a test checks this), so T13's MCP server can wrap the same functions. The
+real `plan_retrieval` and `retrieve_evidence` nodes are in
+`backend/app/core/graph/retrieval_nodes.py` (`make_retrieval_nodes(retriever)`). The
+default graph still uses the stubs; T11 wires the real nodes in.
+
+- **Planning is rules only by default.** A curated MeSH lexicon (`mesh.py`, about 70
+  terms common in health-misinformation videos) and a verb split ("X cures Y": X is
+  the intervention, Y the outcome; "in children" is population; "better than X" is
+  comparator). Each claim gets a narrow-to-broad query ladder: I AND O AND P (MeSH
+  OR free-text synonyms) → drop the population → parent MeSH headings → the claim's
+  own words as free text, left to PubMed's term mapping. The optional LLM helper (§6
+  step 3) is an injected callable used only when the lexicon finds no concept; no
+  model is named in code. Grow the lexicon from the evaluation set, not by guesswork.
+- **Empty searches broaden automatically, inside the same budget.** New conditional
+  edge `retrieve_evidence → plan_retrieval` when a claim's searches have all come back
+  empty and it has budget left (`routing.claims_to_broaden`); otherwise
+  `→ rerank_evidence`. The critic's RETRIEVE_MORE and the automatic broadening use the
+  same per-claim budget (3 rounds). One query per claim per round; the critic's
+  suggested queries come first and are sanitised (no URLs, control characters or odd
+  symbols, max 400 characters) because they are model output.
+- **A PubMed failure counts as a round.** It is recorded in `errors`
+  (`retryable=True`) after the client's own retries (4 attempts, exponential backoff
+  1–10 s on 429, 5xx, transport errors and NCBI's "API rate limit exceeded" body), so
+  a PubMed outage ends in INSUFFICIENT_EVIDENCE rather than a hung run.
+- **Rate limit.** One process-wide limiter at 2.5 requests/s without a key and 9/s with
+  `NCBI_API_KEY` (NCBI's limits are 3 and 10). Across processes this is per worker;
+  T13's Redis token bucket makes it global. Set `NCBI_EMAIL` so NCBI can contact us.
+- **EFetch, not ESummary,** because ESummary has no abstracts. Abstracts are capped at
+  8,000 characters (structured labels kept, e.g. "CONCLUSIONS: …") to stay under the
+  checkpoint string cap. Book records (`PubmedBookArticle`) are skipped.
+- **Dedup and filters.** By PMID, then DOI (case-insensitive), within a query and across
+  a claim's rounds; the first copy (and its query) wins. Records typed Retracted
+  Publication, Retraction of Publication or Published Erratum are dropped by default
+  (`SearchFilters.exclude_types`); publication-type (`[pt]`) and year filters are
+  available but off by default, leaving study-type ranking to the reranker (T05).
+- **Cache.** Searches keyed by query + result cap + filters (7 days; empty results 1
+  day) and parsed records keyed by PMID, so a paper found by several queries is fetched
+  once. `InMemoryQueryCache` by default; `RedisQueryCache` for workers and the shared
+  MCP cache. Cache errors never fail retrieval.
+- **`EvidenceRecord` moved** from `graph/state.py` to `retrieval/schemas.py` (same
+  fields, re-exported from `state`), so the package doesn't import LangGraph. Schema
+  version unchanged. The issue's `retrieved_at` field is not added: the design's §6
+  record doesn't have it (doc wins).
+  `relevance_score` stays empty; the reranker sets it.
+- **Fixtures are synthetic.** The build environment can't reach NCBI, so
+  `backend/app/tests/fixtures/pubmed/` holds hand-built responses in NCBI's exact
+  formats (PMIDs 99000xxx, titles marked "(synthetic fixture)"). They exercise every
+  parser edge case; they don't show that the queries find good papers. Recording real
+  ones is left for a person: `python scripts/record_pubmed_fixtures.py` (see below).
+
+**Sample of 10 claims (issue #31 acceptance criterion): planned queries.** The planner
+output below is real; the evidence column still needs a live run, because this
+environment has no access to NCBI. Run `cd backend && python
+scripts/record_pubmed_fixtures.py --out /tmp/pubmed_recorded` from a machine that can
+reach NCBI; it prints the same 10 claims with the papers each one finds, to paste here.
+
+| # | Claim | PICO (MeSH) | First query | Rungs |
+|---|---|---|---|---|
+| 1 | Drinking hot water every morning cures the flu. | I: hot drinks (free text) · O: Influenza, Human | `("hot drinks"[tiab] OR "hot beverages"[tiab] OR "hot water"[tiab]) AND ("Influenza, Human"[MeSH Terms] OR influenza[tiab] OR flu[tiab])` | 3 |
+| 2 | Garlic stops colds. | I: Garlic · O: Common Cold | `(Garlic[MeSH Terms] OR garlic[tiab] OR allicin[tiab]) AND ("Common Cold"[MeSH Terms] OR "common cold"[tiab])` | 3 |
+| 3 | Vaccines cause autism in children. | I: Vaccines · O: Autism Spectrum Disorder · P: Child | `(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND ("Autism Spectrum Disorder"[MeSH Terms] OR autism[tiab]) AND (Child[MeSH Terms] OR children[tiab])` | 4 |
+| 4 | Vitamin C prevents the common cold. | I: Ascorbic Acid · O: Common Cold | `("Ascorbic Acid"[MeSH Terms] OR "vitamin c"[tiab] OR "ascorbic acid"[tiab]) AND ("Common Cold"[MeSH Terms] OR "common cold"[tiab])` | 3 |
+| 5 | Lemon water cures cancer. | I: lemon (free text) · O: Neoplasms | `(lemon[tiab] OR citrus[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])` | 3 |
+| 6 | Ivermectin cures COVID-19. | I: Ivermectin · O: COVID-19 | `(Ivermectin[MeSH Terms] OR ivermectin[tiab]) AND ("COVID-19"[MeSH Terms] OR "covid-19"[tiab] OR "sars-cov-2"[tiab])` | 3 |
+| 7 | Intermittent fasting reverses type 2 diabetes. | I: Fasting · O: Diabetes Mellitus | `(Fasting[MeSH Terms] OR fasting[tiab]) AND ("Diabetes Mellitus"[MeSH Terms] OR diabetes[tiab])` | 3 |
+| 8 | Fluoride in drinking water lowers children's IQ. | I: Fluorides, Drinking Water · O: Intelligence · P: Child | `(Fluorides[MeSH Terms] OR fluoride[tiab]) AND ("Drinking Water"[MeSH Terms] OR "water intake"[tiab]) AND (Intelligence[MeSH Terms] OR intelligence[tiab] OR iq[tiab]) AND (Child[MeSH Terms] OR children[tiab])` | 4 |
+| 9 | 5G spreads coronavirus. | I: Electromagnetic Fields · O: COVID-19 | `("Electromagnetic Fields"[MeSH Terms] OR 5g[tiab] OR radiofrequency[tiab]) AND ("COVID-19"[MeSH Terms] OR "covid-19"[tiab] OR "sars-cov-2"[tiab])` | 3 |
+| 10 | Apple cider vinegar burns fat and causes weight loss. | I: Acetic Acid · O: Weight Loss | `("Acetic Acid"[MeSH Terms] OR "apple cider vinegar"[tiab] OR vinegar[tiab]) AND ("Weight Loss"[MeSH Terms] OR "weight loss"[tiab])` | 3 |
+
+Known weak points to check against the live run: the parent-heading rung is very broad
+(e.g. `Beverages AND Respiratory Tract Infections`) and will mostly feed the reranker
+noise; the fixed lexicon misses terms it doesn't list (those fall back to free text);
+and a claim with two interventions ("fluoride in drinking water") ANDs both.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
 |---|---|---|
 | Automated build (T02) | #29 LangGraph skeleton | Taken over from Jared by decision of the project lead (2026-11-21); merged into `langgraph-build` |
-| Pranav | #31 Retrieval planning and PubMed evidence retriever | Designed against the agreed state schema with recorded PubMed responses; plugs in once #29 merges |
+| Pranav | #31 Retrieval planning and PubMed evidence retriever | Issue assignee. The automated build (T03) built and merged the code into `langgraph-build` on 2026-11-22; the live 10-claim evidence sample is still open (§7d) |
 
 **Update this table as issues are picked up**; this file is the source of truth for who
 owns which issue.
@@ -235,6 +313,14 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   `backend/config/routing.yaml`), plus a per-step model-selection harness. Everything is tested
   with mocks; no paid runs. Next: paid baseline run and routing decision once API keys and
   labelled data exist (T14).
+- **2026-11-22**: T03 (#31) retrieval built by the automated build: rule-based PICO
+  planning with a MeSH lexicon and a narrow-to-broad query ladder; PubMed ESearch
+  (`sort=relevance`) + EFetch abstracts; PMID/DOI dedup; query and per-PMID cache
+  (in-memory or Redis); shared rate limiter and tenacity backoff; real
+  `plan_retrieval` / `retrieve_evidence` nodes and an automatic broadening edge after
+  an empty search. 57 new tests on synthetic fixtures in NCBI's format (no network).
+  NCBI is unreachable from the build environment, so the live 10-claim sample still
+  needs a person to run `scripts/record_pubmed_fixtures.py`. Decisions in §7d.
 - **2026-11-22**: T02 (#29) LangGraph skeleton built by the automated build: typed,
   versioned `PipelineState`; 16 stub nodes; conditional edges for no-claims, critic
   decisions and the review policy; run-time field-ownership check; InMemorySaver and
