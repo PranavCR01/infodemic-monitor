@@ -432,6 +432,12 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-22**: T05 (#32) reranker built by the automated build: deterministic lexical
+  relevance over the claim's PICO frame, plus a study-type lookup kept as a separate
+  quality score; threshold 0.4, cap 10; real `rerank_evidence` node. On a 12-claim
+  synthetic, self-labelled set, precision@5 is 0.53 vs 0.38 for PubMed order (ceiling
+  0.58). Real-data labels are left for a person. Decisions in §7f.
+
 - **2026-11-22** (T10, automated): Built the guardrails (`backend/app/core/guardrails/`,
   `backend/config/guardrails.yaml`): fencing and neutralising of untrusted text, a narrow
   injection detector feeding the review policy, `GuardedRouter` with strict output schemas and
@@ -441,12 +447,6 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   and today's single-call classifier: 5 vs 23 unsafe out of 34 with a simulated, always-fooled
   model. Next: real nodes adopt the builders and router (T03–T09), T08 judge policy on
   QUOTES/UNCLEAR, a held-out red-team set, and a paid run (T14). Decisions in §7e.
-
-- **2026-11-22**: T05 (#32) reranker built by the automated build: deterministic lexical
-  relevance over the claim's PICO frame, plus a study-type lookup kept as a separate
-  quality score; threshold 0.4, cap 10; real `rerank_evidence` node. On a 12-claim
-  synthetic, self-labelled set, precision@5 is 0.53 vs 0.38 for PubMed order (ceiling
-  0.58). Real-data labels are left for a person. Decisions in §7f.
 
 - **2026-11-22**: T04 (#30) stance analyzer built by the automated build: forced
   `record_stance` tool call through an injected router, versioned prompt `stance_v1`,
