@@ -60,3 +60,32 @@ def test_guarded_client_refuses_a_redirect_from_pubmed():
     client = _guarded_client(lambda req: httpx.Response(301, headers={"location": "https://evil.example/"}))
     with pytest.raises(ToolLimitError):
         client.search("flu")
+
+
+def test_efetch_batch_over_the_size_cap_is_split_and_an_oversized_record_skipped():
+    # T18 smoke run: real records with consortium author lists run to ~2 MB, so a
+    # 20-record batch passed the 5 MB cap and the claim lost all its papers.
+    def article(pmid: str, pad: int = 0) -> str:
+        return (f"<PubmedArticle><MedlineCitation><PMID>{pmid}</PMID><Article><ArticleTitle>T{pmid}"
+                f"</ArticleTitle><Abstract><AbstractText>{'x' * pad}abstract</AbstractText></Abstract>"
+                f"</Article></MedlineCitation></PubmedArticle>")
+
+    sizes = {"1": 10, "2": 10, "3": 900, "4": 10}  # "3" alone is over the cap
+    batches = []
+
+    def handler(req: httpx.Request) -> httpx.Response:
+        ids = req.url.params["id"].split(",")
+        batches.append(ids)
+        body = "<PubmedArticleSet>" + "".join(article(p, sizes[p]) for p in ids) + "</PubmedArticleSet>"
+        return httpx.Response(200, text=body)
+
+    client = _guarded_client(handler, max_response_bytes=700)
+    got = client.fetch(["1", "2", "3", "4"])
+    assert [a.pmid for a in got] == ["1", "2", "4"]
+    assert ["3"] in batches and batches[0] == ["1", "2", "3", "4"]
+
+
+def test_efetch_other_errors_still_raise():
+    client = _guarded_client(lambda req: httpx.Response(400, text="bad"))
+    with pytest.raises(httpx.HTTPStatusError):
+        client.fetch(["1", "2"])

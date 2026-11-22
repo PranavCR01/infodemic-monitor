@@ -63,6 +63,8 @@ def main() -> None:
 
     def save(resp: httpx.Response) -> None:
         resp.read()
+        if resp.status_code != 200:
+            return  # a 429/5xx the client retries: nothing to record (T18: it crashed here)
         if str(resp.url).startswith(ESEARCH_URL):
             term = resp.request.url.params.get("term", "")
             name = f"search_{len(index) + 1:02d}.json"

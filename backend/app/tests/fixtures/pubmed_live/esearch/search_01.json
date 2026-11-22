@@ -1,0 +1,18 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "34",
+  "retmax": "3",
+  "retstart": "0",
+  "idlist": [
+   "21971837",
+   "28891615",
+   "31728799"
+  ],
+  "translationset": [],
+  "querytranslation": "(\"hot drinks\"[Title/Abstract] OR \"hot beverages\"[Title/Abstract] OR \"hot water\"[Title/Abstract]) AND (\"influenza, human\"[MeSH Terms] OR \"influenza\"[Title/Abstract] OR \"flu\"[Title/Abstract])"
+ }
+}

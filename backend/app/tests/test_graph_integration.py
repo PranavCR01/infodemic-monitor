@@ -807,3 +807,103 @@ def test_production_wiring_from_settings(monkeypatch):
     assert p.timeout_seconds == s.GRAPH_TIMEOUT_SECONDS
 
     assert gp.shared_query_cache(s.model_copy(update={"GRAPH_SHARED_RETRIEVAL": False})) is None
+
+
+# --- T18 smoke run: the Anthropic client against current models --------------------
+
+class _BadRequest(Exception):
+    status_code = 400
+
+
+def _forced_req(max_tokens=512):
+    return ModelRequest(step="analyze_stance", prompt_version="v", system="SYS", input={
+        "messages": [{"role": "user", "content": "hi"}], "tools": [cl.EXTRACT_TOOL],
+        "tool_choice": cl.TOOL_CHOICE, "max_tokens": max_tokens, "temperature": 0})
+
+
+def _tool_reply():
+    return SimpleNamespace(content=[SimpleNamespace(type="tool_use", name="record_claims", input={"claims": []})],
+                           usage=SimpleNamespace(input_tokens=5, output_tokens=2))
+
+
+def test_anthropic_client_never_sends_temperature():
+    sent = {}
+
+    class Messages:
+        def create(self, **kw):
+            sent.update(kw)
+            return _tool_reply()
+
+    AnthropicModelClient(SimpleNamespace(messages=Messages())).complete("m", _forced_req())
+    assert "temperature" not in sent and "top_p" not in sent and "top_k" not in sent
+
+
+def test_anthropic_client_falls_back_to_auto_when_a_model_refuses_forced_tool_choice():
+    calls = []
+
+    class Messages:
+        def create(self, **kw):
+            calls.append(kw)
+            if kw["tool_choice"]["type"] == "tool":
+                raise _BadRequest('Error code: 400 - tool_choice: type "tool" and "any" are not supported for this model.')
+            return _tool_reply()
+
+    client = AnthropicModelClient(SimpleNamespace(messages=Messages()))
+    resp = client.complete("strict-model", _forced_req())
+    assert resp.output == {"claims": []}
+    retry = calls[1]
+    assert retry["tool_choice"] == {"type": "auto", "disable_parallel_tool_use": True}
+    assert "record_claims" in retry["system"] and retry["system"].startswith("SYS")
+    assert retry["max_tokens"] >= 8192  # room for always-on thinking
+    # Remembered per model: the next call goes straight to auto, no second 400.
+    client.complete("strict-model", _forced_req())
+    assert [c["tool_choice"]["type"] for c in calls] == ["tool", "auto", "auto"]
+    # Another model still gets the forced call first.
+    client.complete("other-model", _forced_req())
+    assert [c["tool_choice"]["type"] for c in calls[3:]] == ["tool", "auto"]
+
+
+def test_anthropic_client_auto_reply_without_the_tool_parses_as_none():
+    class Messages:
+        def create(self, **kw):
+            if kw["tool_choice"]["type"] == "tool":
+                raise _BadRequest('tool_choice: type "tool" and "any" are not supported for this model.')
+            return SimpleNamespace(content=[SimpleNamespace(type="text", text="I think it is ENDORSES")], usage=None)
+
+    resp = AnthropicModelClient(SimpleNamespace(messages=Messages())).complete("m", _forced_req())
+    assert resp.output is None  # the node's parser applies its safe default
+
+
+def test_anthropic_client_other_bad_requests_are_not_retried():
+    calls = []
+
+    class Messages:
+        def create(self, **kw):
+            calls.append(kw)
+            raise _BadRequest("messages: field required")
+
+    with pytest.raises(ModelCallError):
+        AnthropicModelClient(SimpleNamespace(messages=Messages())).complete("m", _forced_req())
+    assert len(calls) == 1
+
+
+def test_single_call_providers_report_token_usage():
+    from app.core.inference.providers.anthropic_provider import AnthropicProvider
+    from app.core.inference.providers.openai_provider import OpenAIProvider
+
+    oa = OpenAIProvider.__new__(OpenAIProvider)
+    oa._model, oa.last_usage = "alias", None
+    msg = SimpleNamespace(content='{"label": "NO_MISINFO", "confidence": 0.9, "explanation": "x", "evidence_snippets": []}')
+    oa._client = SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=lambda **kw: SimpleNamespace(
+        model="pinned-id", choices=[SimpleNamespace(message=msg)],
+        usage=SimpleNamespace(prompt_tokens=11, completion_tokens=3)))))
+    oa.classify(FusionResult(transcript="t", visual_text="", combined_content="t", metadata={}))
+    assert oa.last_usage == {"model": "pinned-id", "input_tokens": 11, "output_tokens": 3}
+
+    an = AnthropicProvider.__new__(AnthropicProvider)
+    an._model, an.last_usage = "m", None
+    an._client = SimpleNamespace(messages=SimpleNamespace(create=lambda **kw: SimpleNamespace(
+        model="m", content=[SimpleNamespace(type="tool_use", input={"label": "MISINFO", "confidence": 1})],
+        usage=SimpleNamespace(input_tokens=7, output_tokens=2))))
+    an.classify(FusionResult(transcript="t", visual_text="", combined_content="t", metadata={}))
+    assert an.last_usage == {"model": "m", "input_tokens": 7, "output_tokens": 2}

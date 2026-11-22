@@ -455,7 +455,25 @@ def test_template_explanation_names_deciding_claims_and_evidence():
 def test_limitations_come_from_deciding_verdicts_plus_unjudged_claims():
     final, _ = run_judge(make_state((E, CON), (E, INS)))
     assert final.limitations[0] == "c1: limitation 1"
-    assert "c2 INSUFFICIENT_EVIDENCE" in final.limitations[-1]
+    assert final.limitations[-1] == "Not judged (no usable evidence): INSUFFICIENT_EVIDENCE c2"
+
+
+def test_not_judged_note_stays_within_the_validation_limit_on_long_videos():
+    # T18 smoke run: a real 23-claim video produced a 400-char note, which failed the
+    # §10 length check and sent the video to review for that alone.
+    from app.core.graph import validation as val
+
+    final, _ = run_judge(make_state((E, CON), *[(E, INS)] * 22))  # the smoke run's size
+    assert len(final.limitations[-1]) <= val.DEFAULT_LIMITS.max_limitation_chars
+    assert final.limitations[-1].endswith("c22, c23")
+
+    final, _ = run_judge(make_state((E, CON), *[(E, INS)] * 60, (E, V.NOT_VERIFIABLE)))
+    note = final.limitations[-1]
+    assert note.startswith("Not judged (no usable evidence): ")
+    assert "INSUFFICIENT_EVIDENCE (60 claims)" in note and "NOT_VERIFIABLE (1 claims)" in note
+    assert len(note) <= val.DEFAULT_LIMITS.max_limitation_chars
+    final, _ = run_judge(make_state((E, CON), (E, INS), (E, V.NOT_VERIFIABLE), (E, INS)))
+    assert final.limitations[-1] == "Not judged (no usable evidence): INSUFFICIENT_EVIDENCE c2, c4; NOT_VERIFIABLE c3"
 
 
 def test_confidence_stays_empty_until_calibrated():

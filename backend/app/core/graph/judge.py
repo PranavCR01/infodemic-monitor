@@ -409,11 +409,23 @@ def limitations_for(d: Decision) -> list[str]:
     deciding = {v.claim_id for v in d.deciding}
     undecided = [v for v in d.all_claims if v.claim_id not in deciding and v.verdict not in JUDGED_VERDICTS]
     if undecided and d.label != MisinfoLabel.CANNOT_RECOGNIZE:
-        out.append(
-            "Not judged (no usable evidence): "
-            + ", ".join(f"{v.claim_id} {v.verdict.value}" for v in undecided)
-        )
+        out.append(_not_judged_note(undecided))
     return out[:MAX_LIMITATIONS]
+
+
+def _not_judged_note(undecided: list) -> str:
+    """"Not judged (no usable evidence): INSUFFICIENT_EVIDENCE c1, c2; NOT_VERIFIABLE c5",
+    kept within ``MAX_LIMITATION_CHARS``: real videos have 20+ claims, and the old
+    one-entry-per-claim form broke the §10 length check on its own (T18 smoke run)."""
+    head = "Not judged (no usable evidence): "
+    groups: dict[str, list[str]] = {}
+    for v in undecided:
+        groups.setdefault(v.verdict.value, []).append(v.claim_id)
+    text = head + "; ".join(f"{verdict} {', '.join(ids)}" for verdict, ids in groups.items())
+    if len(text) <= MAX_LIMITATION_CHARS:
+        return text
+    text = head + "; ".join(f"{verdict} ({len(ids)} claims)" for verdict, ids in groups.items())
+    return text[:MAX_LIMITATION_CHARS]
 
 
 # ------------------------------------------------------------------ explanation model

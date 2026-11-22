@@ -1,0 +1,31 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "24",
+  "retmax": "3",
+  "retstart": "0",
+  "idlist": [
+   "36639015",
+   "38318766",
+   "41393310"
+  ],
+  "translationset": [
+   {
+    "from": "Fluorides[MeSH Terms]",
+    "to": "\"fluorides\"[MeSH Terms]"
+   },
+   {
+    "from": "Intelligence[MeSH Terms]",
+    "to": "\"intelligence\"[MeSH Terms]"
+   },
+   {
+    "from": "Child[MeSH Terms]",
+    "to": "\"child\"[MeSH Terms]"
+   }
+  ],
+  "querytranslation": "(\"fluorides\"[MeSH Terms] OR \"fluoride\"[Title/Abstract]) AND (\"Drinking Water\"[MeSH Terms] OR \"water intake\"[Title/Abstract]) AND (\"intelligence\"[MeSH Terms] OR \"intelligence\"[Title/Abstract] OR \"iq\"[Title/Abstract]) AND (\"child\"[MeSH Terms] OR \"children\"[Title/Abstract])"
+ }
+}

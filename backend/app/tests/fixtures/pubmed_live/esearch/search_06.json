@@ -1,0 +1,23 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "813",
+  "retmax": "3",
+  "retstart": "0",
+  "idlist": [
+   "33965139",
+   "35396957",
+   "35225114"
+  ],
+  "translationset": [
+   {
+    "from": "Ivermectin[MeSH Terms]",
+    "to": "\"ivermectin\"[MeSH Terms]"
+   }
+  ],
+  "querytranslation": "(\"ivermectin\"[MeSH Terms] OR \"ivermectin\"[Title/Abstract]) AND (\"covid 19\"[MeSH Terms] OR \"covid 19\"[Title/Abstract] OR \"sars-cov-2\"[Title/Abstract])"
+ }
+}

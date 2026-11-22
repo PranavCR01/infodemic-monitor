@@ -1,0 +1,18 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "101",
+  "retmax": "3",
+  "retstart": "0",
+  "idlist": [
+   "35215472",
+   "41010525",
+   "19997012"
+  ],
+  "translationset": [],
+  "querytranslation": "(\"Acetic Acid\"[MeSH Terms] OR \"apple cider vinegar\"[Title/Abstract] OR \"vinegar\"[Title/Abstract]) AND (\"Weight Loss\"[MeSH Terms] OR \"Weight Loss\"[Title/Abstract])"
+ }
+}
