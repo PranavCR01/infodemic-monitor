@@ -94,11 +94,62 @@ Read `context/PRODUCTION.md` and `context/PROJECT_CONTEXT.md` first.
 - **Shared evaluation data:** #39 should use the same labelled videos as Model Evaluation
   (#6) and the claim-level dataset (#13), not a separate set.
 
+## 7a. Graph Skeleton Decisions (T02, #29)
+
+The skeleton lives in `backend/app/core/graph/` (`state.py`, `nodes.py`, `routing.py`,
+`builder.py`, `checkpoint.py`). Later tasks replace one stub each and must keep the node
+signature `(state) -> dict` and the field ownership below.
+
+- **State.** `PipelineState` is a `TypedDict` with Pydantic records as values (frozen,
+  `extra="forbid"`), versioned by `STATE_SCHEMA_VERSION` (1.0.0), which is stored in every
+  run's state. `check_resumable()` refuses to resume a checkpoint written under another
+  version. Bump it on any breaking change to a field or record.
+- **Extra fields beyond the #29 list**, so every node owns its own output:
+  `state_schema_version`, `media_uri` (inputs), `artifacts` (load_artifacts),
+  `reranked_evidence` (rerank_evidence; the retriever keeps `retrieved_evidence`),
+  `verification_revisions` (verify_claims; counts REVISE_VERIFICATION re-runs),
+  `review_status` (human_review) and `persisted_result_ref` (persist_result).
+- **Ownership is enforced at run time.** `NODE_OUTPUTS` maps each node to its fields;
+  the builder raises `OwnershipError` if a node writes anything else. `errors` is the one
+  shared field: append-only, any node may add to it.
+- **Budgets live in routing code** (`routing.Budgets`): 3 retrieval rounds per claim
+  (initial + 2 reformulations) and 1 verification revision, per target design §6 and §8.
+- **Critic routing follows the target design over the issue.** RETRIEVE_MORE (budget
+  left) → plan_retrieval; REVISE_VERIFICATION (budget left) → verify_claims; APPROVE,
+  ESCALATE and exhausted budgets → judge. Issue #29 and `docs/architecture.md` §4.2 send
+  "unresolved" straight to human review, skipping the judge; the target design (§11
+  review rule lists "the critic escalated", §12 the reviewer sees "the proposed label")
+  needs the judge to run first. So escalation reaches review through
+  validate → route_for_review → human_review. One-line change in
+  `routing.make_route_after_critic` if the team prefers the issue's version.
+- **Review policy is a node** (`route_for_review`, writes `requires_human_review` and
+  `review_reasons`), followed by a conditional edge to `human_review` or `persist_result`.
+  Its stub applies a subset of the §11 rule; T09 owns the real one. Note for T09: under the
+  §9 rules, deciding claims are always SUPPORTED or CONTRADICTED, so "a deciding claim is
+  INSUFFICIENT_EVIDENCE or MIXED" can't fire unless the judge's policy changes (T08).
+- **Checkpoints hold references, not payloads.** Media is an `ArtifactRef` URI; evidence
+  records hold title and abstract, never raw PubMed responses. `assert_checkpoint_safe`
+  (no bytes, no string over 20,000 chars) runs on every checkpoint in the resume tests.
+- **Checkpointer.** `memory_checkpointer()` for tests; `postgres_checkpointer(dsn)` for
+  workers, DSN from `LANGGRAPH_CHECKPOINT_DSN` (never in code), psycopg 3 with
+  `autocommit=True`, `prepare_threshold=None`, `row_factory=dict_row`. Both use a
+  serializer whose msgpack allowlist is exactly `state.CHECKPOINT_TYPES`; a test runs the
+  resume test under `LANGGRAPH_STRICT_MSGPACK=true` with warnings as errors.
+  `run_config(job_id)` sets `thread_id = job_id` and a recursion limit derived from the
+  budgets (assumes at most 50 claims per video; T10's input limits should cap that).
+- **How production creates the checkpoint tables (decide before #38):** they are not
+  Alembic-managed. Proposed: a one-off deploy step (or a release-phase command on
+  Railway) that runs `postgres_checkpointer(dsn, setup=True)` once against the
+  `langgraph` schema, with workers calling `postgres_checkpointer(dsn, setup=False)`.
+  `setup()` is idempotent and applies LangGraph's own migrations, so re-running it on
+  upgrade is safe; it needs DDL rights the 5-connection `langgraph_dev` role has on its
+  schema only.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
 |---|---|---|
-| Jared | #29 LangGraph skeleton | Start after agreeing the `PipelineState` schema with Pranav |
+| Automated build (T02) | #29 LangGraph skeleton | Taken over from Jared by decision of the project lead (2026-11-21); merged into `langgraph-build` |
 | Pranav | #31 Retrieval planning and PubMed evidence retriever | Designed against the agreed state schema with recorded PubMed responses; plugs in once #29 merges |
 
 **Update this table as issues are picked up**; this file is the source of truth for who
@@ -115,6 +166,12 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-22**: T02 (#29) LangGraph skeleton built by the automated build: typed,
+  versioned `PipelineState`; 16 stub nodes; conditional edges for no-claims, critic
+  decisions and the review policy; run-time field-ownership check; InMemorySaver and
+  Postgres checkpointers. 39 graph tests; the resume test passed on InMemorySaver (also
+  under strict msgpack) and once on a local Postgres 16. Not yet run against the Supabase
+  `langgraph` schema (needs the #47 login). Decisions in §7a.
 - **2026-10-28**: Moved the track to the LangGraph architecture. Added
   `docs/architecture.md`, opened #29–#39, closed the superseded issues, and rewrote this
   file (#43, #44).
