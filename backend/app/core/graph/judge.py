@@ -8,14 +8,26 @@ give the same label. An LLM only writes the explanation; it never chooses the la
 verdict take part.
 
 1. ``endorsed_contradicted``: any claim is ENDORSES + CONTRADICTED → MISINFO.
-2. ``refuted_contradicted``: otherwise any claim is REFUTES + CONTRADICTED → DEBUNKING.
-3. ``judged_nothing_false_endorsed``: otherwise at least one claim is SUPPORTED or
+2. ``refuted_supported``: otherwise any claim is REFUTES + SUPPORTED (the speaker
+   denies something true) → MISINFO, always sent to review (reason
+   ``denies_supported:<cid>``).
+3. ``refuted_contradicted``: otherwise any claim is REFUTES + CONTRADICTED → DEBUNKING.
+4. ``judged_nothing_false_endorsed``: otherwise at least one claim is SUPPORTED or
    CONTRADICTED → NO_MISINFO.
-4. ``nothing_judged``: otherwise (all INSUFFICIENT_EVIDENCE / MIXED / NOT_VERIFIABLE)
+5. ``refuted_unsettled``: otherwise any claim is REFUTES + MIXED / INSUFFICIENT_EVIDENCE
+   → CANNOT_RECOGNIZE, sent to review as a possible debunk (reason
+   ``possible_debunk:<cid>``).
+6. ``nothing_judged``: otherwise (all INSUFFICIENT_EVIDENCE / MIXED / NOT_VERIFIABLE)
    → CANNOT_RECOGNIZE; ``no_claims`` when there were no checkable claims at all.
 
 The label comes with the claims that decided it and only the evidence those claims'
 verdicts cited, so the explanation can point at them.
+
+**The rule's own review reasons (§9, third return value).** Rules 2 and 5 add review
+reasons themselves; ``Decision.rule_review_reasons`` returns them, and they are also in
+``Decision.review_flags`` (and so ``final_result.review_flags``), which the review
+policy (T09) turns into ``judge:<reason>`` review reasons. Using the existing flag
+channel keeps the state schema (§4–5) unchanged.
 
 **Patterns the rules can't settle (§9 "Where an LLM still helps").** Code detects them
 and records them in ``final_result.review_flags``; the review policy turns them into
@@ -86,8 +98,10 @@ MAX_QUOTE_CHARS = 200
 
 # Rule names (stored in ``final_result.decision_rule``).
 RULE_ENDORSED_CONTRADICTED = "endorsed_contradicted"
+RULE_REFUTED_SUPPORTED = "refuted_supported"
 RULE_REFUTED_CONTRADICTED = "refuted_contradicted"
 RULE_JUDGED = "judged_nothing_false_endorsed"
+RULE_REFUTED_UNSETTLED = "refuted_unsettled"
 RULE_NOTHING_JUDGED = "nothing_judged"
 RULE_NO_CLAIMS = "no_claims"
 
@@ -97,8 +111,13 @@ FLAG_UNCLEAR_STANCE = "unclear_stance_contradicted"
 FLAG_NOT_REFUTED = "false_claim_not_refuted"
 FLAG_MIXED_EVIDENCE = "mixed_evidence"
 FLAG_VERIFICATION_FAILED = "verification_failed"
+# Review reasons the §9 rules add themselves (one per deciding claim).
+FLAG_DENIES_SUPPORTED = "denies_supported"
+FLAG_POSSIBLE_DEBUNK = "possible_debunk"
+RULE_REVIEW_FLAGS = frozenset({FLAG_DENIES_SUPPORTED, FLAG_POSSIBLE_DEBUNK})
 
 JUDGED_VERDICTS = frozenset({Verdict.SUPPORTED, Verdict.CONTRADICTED})
+UNSETTLED_VERDICTS = frozenset({Verdict.MIXED, Verdict.INSUFFICIENT_EVIDENCE})
 
 __all__ = [
     "STEP", "DEFAULT_PROMPT_VERSION", "TOOL_NAME", "EXPLAIN_TOOL", "TOOL_CHOICE",
@@ -206,11 +225,20 @@ class Decision:
     def claim_ids(self) -> list[str]:
         return [v.claim_id for v in self.deciding]
 
+    @property
+    def rule_review_reasons(self) -> list[str]:
+        """The review reasons the rule that fired adds itself (§9's third value)."""
+        return [f for f in self.review_flags if f.partition(":")[0] in RULE_REVIEW_FLAGS]
 
-def _cited(view: ClaimView, label: MisinfoLabel) -> list[str]:
+
+def _cited(view: ClaimView, rule: str) -> list[str]:
+    """The evidence a deciding claim contributes: what shows it false for MISINFO /
+    DEBUNKING by contradiction, what shows it true when the speaker denies it."""
     v = view.verification
-    if label in (MisinfoLabel.MISINFO, MisinfoLabel.DEBUNKING):
+    if rule in (RULE_ENDORSED_CONTRADICTED, RULE_REFUTED_CONTRADICTED):
         return list(v.contradicting_evidence_ids)
+    if rule == RULE_REFUTED_SUPPORTED:
+        return list(v.supporting_evidence_ids)
     return [*v.supporting_evidence_ids, *v.contradicting_evidence_ids]
 
 
@@ -220,15 +248,24 @@ def decide(views: Sequence[ClaimView], *, has_claims: Optional[bool] = None) -> 
     has_claims = bool(views) if has_claims is None else has_claims
 
     endorsed_false = [v for v in views if v.stance == Stance.ENDORSES and v.verdict == Verdict.CONTRADICTED]
+    denied_true = [v for v in views if v.stance == Stance.REFUTES and v.verdict == Verdict.SUPPORTED]
     refuted_false = [v for v in views if v.stance == Stance.REFUTES and v.verdict == Verdict.CONTRADICTED]
     judged = [v for v in views if v.verdict in JUDGED_VERDICTS]
+    refuted_open = [v for v in views if v.stance == Stance.REFUTES and v.verdict in UNSETTLED_VERDICTS]
 
+    rule_flags: list[str] = []
     if endorsed_false:
         label, rule, deciding = MisinfoLabel.MISINFO, RULE_ENDORSED_CONTRADICTED, endorsed_false
+    elif denied_true:
+        label, rule, deciding = MisinfoLabel.MISINFO, RULE_REFUTED_SUPPORTED, denied_true
+        rule_flags = [f"{FLAG_DENIES_SUPPORTED}:{v.claim_id}" for v in denied_true]
     elif refuted_false:
         label, rule, deciding = MisinfoLabel.DEBUNKING, RULE_REFUTED_CONTRADICTED, refuted_false
     elif judged:
         label, rule, deciding = MisinfoLabel.NO_MISINFO, RULE_JUDGED, judged
+    elif refuted_open:
+        label, rule, deciding = MisinfoLabel.CANNOT_RECOGNIZE, RULE_REFUTED_UNSETTLED, refuted_open
+        rule_flags = [f"{FLAG_POSSIBLE_DEBUNK}:{v.claim_id}" for v in refuted_open]
     else:
         label = MisinfoLabel.CANNOT_RECOGNIZE
         rule = RULE_NOTHING_JUDGED if has_claims else RULE_NO_CLAIMS
@@ -239,7 +276,7 @@ def decide(views: Sequence[ClaimView], *, has_claims: Optional[bool] = None) -> 
     evidence_ids: list[str] = []
     errors: list[NodeError] = []
     for v in deciding:
-        for eid in _cited(v, label):
+        for eid in _cited(v, rule):
             if eid in v.allowed_evidence_ids:
                 if eid not in evidence_ids:
                     evidence_ids.append(eid)
@@ -250,7 +287,7 @@ def decide(views: Sequence[ClaimView], *, has_claims: Optional[bool] = None) -> 
                             "which was not retrieved for this claim; left out of the result",
                 ))
 
-    flags: list[str] = []
+    flags: list[str] = list(rule_flags)
     if endorsed_false and refuted_false:
         flags.append(FLAG_MIXED_VIDEO)
     for v in views:
@@ -289,6 +326,8 @@ _FLAG_TEXT = {
     FLAG_NOT_REFUTED: "contradicted claim {cid} is repeated without being refuted",
     FLAG_MIXED_EVIDENCE: "the evidence on claim {cid} is mixed",
     FLAG_VERIFICATION_FAILED: "claim {cid} could not be verified (verifier unavailable)",
+    FLAG_DENIES_SUPPORTED: "the speaker denies supported claim {cid}",
+    FLAG_POSSIBLE_DEBUNK: "possible debunk of unsettled claim {cid}",
 }
 
 
@@ -322,6 +361,23 @@ def template_explanation(d: Decision) -> str:
             for v in d.deciding
         ]
         text = "DEBUNKING because " + "; ".join(parts) + ", and no false claim is endorsed."
+    elif d.rule == RULE_REFUTED_SUPPORTED:
+        parts = [
+            f'claim {v.claim_id} ("{_quote(v.claim.claim_text)}") is denied by the speaker but '
+            f"supported by the evidence ({_ids(v.verification.supporting_evidence_ids)})"
+            for v in d.deciding
+        ]
+        text = "MISINFO because " + "; ".join(parts) + "."
+    elif d.rule == RULE_REFUTED_UNSETTLED:
+        parts = [
+            f'claim {v.claim_id} ("{_quote(v.claim.claim_text)}") is refuted by the speaker, but the '
+            f"evidence is {v.verdict.value.lower().replace('_', ' ')}"
+            for v in d.deciding
+        ]
+        text = (
+            "CANNOT_RECOGNIZE: no claim could be judged against the evidence; "
+            + "; ".join(parts) + ", so this may be a debunk the sources can't settle."
+        )
     else:
         supported = [v.claim_id for v in d.deciding if v.verdict == Verdict.SUPPORTED]
         contradicted = [
@@ -631,6 +687,8 @@ def claim_label(stance: Optional[Stance], verdict: Optional[Verdict]) -> Misinfo
     claim."""
     if verdict == Verdict.CONTRADICTED and stance == Stance.ENDORSES:
         return MisinfoLabel.MISINFO
+    if verdict == Verdict.SUPPORTED and stance == Stance.REFUTES:
+        return MisinfoLabel.MISINFO  # the speaker denies something true
     if verdict == Verdict.CONTRADICTED and stance == Stance.REFUTES:
         return MisinfoLabel.DEBUNKING
     if verdict in JUDGED_VERDICTS:

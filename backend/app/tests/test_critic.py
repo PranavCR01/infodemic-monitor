@@ -418,7 +418,10 @@ def test_exhausted_search_budget_abstains_and_goes_to_review():
     # Abstention: the objected-to CONTRADICTED verdicts don't decide the label.
     assert out["verification_results"]["c1"].verdict == Verdict.CONTRADICTED
     assert out["final_result"].classification == MisinfoLabel.CANNOT_RECOGNIZE
-    assert out["final_result"].claim_ids == []
+    # T16 (§9 revised): c2 is refuted by the speaker and, abstaining, now counts as
+    # INSUFFICIENT_EVIDENCE, so it decides a CANNOT_RECOGNIZE "possible debunk".
+    assert out["final_result"].claim_ids == ["c2"]
+    assert "judge:possible_debunk:c2" in out["review_reasons"]
 
 
 def test_exhausted_revision_budget_abstains_and_goes_to_review():
