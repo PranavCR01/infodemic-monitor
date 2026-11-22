@@ -2747,4 +2747,682 @@ LABELS = [
                  "collector disagreement.",
         "claims": [],
     },
+    {
+        "video_id": "v49",
+        "topic": "vaccines / immunology",
+        "case_tags": ["accurate", "neutral_discussion"],
+        "confidence": "medium",
+        "notes": "An interview with a pharmacology and immunology PhD "
+                 "explaining how vaccines generate antibodies. The most "
+                 "valuable row in this video is the last one: asked whether a "
+                 "strong vaccine reaction predicts how badly you would have "
+                 "had COVID, the scientist says he does not know of data "
+                 "either way, and the interviewer praises him for it. That is "
+                 "a speaker explicitly declining to take a position, which is "
+                 "what section 5's NEUTRAL is for, sitting on top of a "
+                 "section 7 INSUFFICIENT_EVIDENCE verdict -- the two "
+                 "abstentions agreeing. Collectors filed it under NO_MISINFO, "
+                 "which agrees.",
+        "claims": [
+            {
+                "text": "You get the injection in your arm ... Most often "
+                        "little pieces of the pathogen",
+                "start": 18.6, "end": 28.6,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:22481438"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "An accurate description of subunit vaccine "
+                         "principles. The retrieved immunological-memory "
+                         "review supports the mechanism in general terms "
+                         "rather than this sentence specifically.",
+            },
+            {
+                "text": "before COVID ever existed, you had in your body T "
+                        "cells and B cells that recognized COVID ... all of "
+                        "those cells were randomly generated in advance",
+                "start": 76.0, "end": 93.4,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:22481438", "PMID:34126625"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The pre-existing randomly generated repertoire is "
+                         "standard immunology and the retrieved papers are "
+                         "consistent with it, but neither tests this claim "
+                         "head-on, so medium confidence.",
+            },
+            {
+                "text": "that same process happens whether you've been "
+                        "[infected] with a virus. It still takes the piece of "
+                        "virus and goes to the lymph node and activates the B "
+                        "and T cells",
+                "start": 124.3, "end": 130.6,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:22481438"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The equivalence between infection-induced and "
+                         "vaccine-induced priming, which is the video's "
+                         "central point.",
+            },
+            {
+                "text": "If the severity of your vaccine response is "
+                        "predictive [of how severe COVID would have been]",
+                "start": 141.5, "end": 146.7,
+                "stance": "NEUTRAL", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "The best NEUTRAL example in the set. The scientist "
+                         "says in terms 'I don't know of data to say one way "
+                         "or the other', so he discusses the claim without "
+                         "taking a position -- section 5's NEUTRAL, not "
+                         "UNCLEAR, because there is nothing ambiguous about "
+                         "his meaning. Nothing retrieved tests it either, so "
+                         "the verdict abstains for the same reason the speaker "
+                         "does.",
+            },
+        ],
+    },
+    {
+        "video_id": "v50",
+        "topic": "smoking / respiratory health",
+        "case_tags": ["accurate"],
+        "confidence": "medium",
+        "notes": "A 32-second clip on smoke inhalation from tobacco, "
+                 "marijuana and hookah damaging the lungs. Short and "
+                 "accurate, with the transcript garbling 'pneumothoraces' as "
+                 "'pneumothoracies' -- another transcription artefact worth "
+                 "keeping for the extraction track. Collectors filed it under "
+                 "NO_MISINFO, which agrees.",
+        "claims": [
+            {
+                "text": "it makes your lungs more susceptible to "
+                        "pneumothoracies [pneumothoraces] ... This makes your "
+                        "lungs decreased in terms of its function. Yeah, even "
+                        "with marijuana",
+                "start": 11.2, "end": 26.5,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:37728136"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The systematic review of marijuana smoking and the "
+                         "respiratory system supports both halves, including "
+                         "the specific point that cannabis smoke is not benign "
+                         "for the lungs. Medium confidence because the claim "
+                         "bundles three exposures (tobacco, marijuana, hookah) "
+                         "and the retrieved review covers one.",
+            },
+        ],
+    },
+    {
+        "video_id": "v51",
+        "topic": "cannabis / cardiovascular health",
+        "case_tags": ["accurate"],
+        "confidence": "medium",
+        "notes": "A heart surgeon on regular marijuana smoking and coronary "
+                 "risk, explicitly answering the 'it's natural so it must be "
+                 "safe' argument. He gives a quantified risk estimate, which "
+                 "is unusual in this bundle and makes the claim properly "
+                 "checkable. Collectors filed it under NO_MISINFO, which "
+                 "agrees.",
+        "claims": [
+            {
+                "text": "smoking marijuana regularly increases your risk of "
+                        "coronary disease and acute heart attack by 1.3 to two "
+                        "times those that don't smoke marijuana regularly",
+                "start": 19.4, "end": 33.0,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:40686207"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The cohort of veterans with coronary artery disease "
+                         "supports an association between cannabis smoking and "
+                         "cardiovascular events. Medium confidence because "
+                         "nothing retrieved pins the effect size to the 1.3-2x "
+                         "range he quotes.",
+            },
+            {
+                "text": "That's the same increased risk as high blood pressure "
+                        "or increased cholesterol",
+                "start": 33.0, "end": 38.8,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "A comparative magnitude claim across three risk "
+                         "factors. Nothing retrieved puts them on the same "
+                         "scale, so the comparison is untested.",
+            },
+            {
+                "text": "I have operated on multiple patients over the years "
+                        "that smoke marijuana regularly and I can tell you "
+                        "that their lungs are totally black ... these are "
+                        "folks that have never smoked a cigarette in their "
+                        "lives",
+                "start": 38.8, "end": 55.0,
+                "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "Clinical anecdote from his own operating theatre. "
+                         "Not the kind of claim a study tests, and recorded as "
+                         "NOT_VERIFIABLE rather than dismissed, since "
+                         "unverifiable testimony from a credible speaker is "
+                         "exactly what makes health content persuasive.",
+            },
+        ],
+    },
+    {
+        "video_id": "v52",
+        "topic": "glycaemic control / activity",
+        "case_tags": [],
+        "confidence": "medium",
+        "notes": "A 64-year-old creator recommending ten minutes of light "
+                 "movement after dinner, with a weight-loss credential and an "
+                 "'I'm not AI' disclaimer. The mechanism she describes is "
+                 "real and well studied, which makes this a NO_MISINFO video "
+                 "built on a sales-style hook. Collectors filed it under "
+                 "NO_MISINFO, which agrees.",
+        "claims": [
+            {
+                "text": "10 minutes after your meal, glucose starts flooding "
+                        "your bloodstream. If you sit down, that sugar just "
+                        "sits there forcing your body to pump out excess "
+                        "insulin",
+                "start": 16.7, "end": 27.6,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:22374636", "PMID:36728338"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Breaking up prolonged sitting does reduce "
+                         "postprandial glucose and insulin responses, which is "
+                         "the claim's substance. The 'ten minutes' timing is "
+                         "more precise than the trials specify.",
+            },
+            {
+                "text": "if you keep your legs moving, just 15 chair squats "
+                        "or calf raises while washing dishes or march in place "
+                        "your muscles will act like a sponge and soak up that "
+                        "sugar",
+                "start": 27.6, "end": 39.3,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:27208318", "PMID:35147898"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Brief bouts of light walking or simple resistance "
+                         "activity improve glucose handling in type 2 "
+                         "diabetes, which supports the mechanism. The specific "
+                         "prescription of 15 chair squats is not itself "
+                         "tested.",
+            },
+        ],
+    },
+    {
+        "video_id": "v53",
+        "topic": "dermatology / hydration myths",
+        "case_tags": ["accurate", "debunking"],
+        "confidence": "medium",
+        "notes": "A dermatologist correcting four common beliefs. Contains "
+                 "the set's neatest logical wrinkle: he claims there is no "
+                 "evidence-based daily water target, and a claim that "
+                 "asserts an absence of evidence cannot be SUPPORTED by "
+                 "retrieving nothing -- absence of evidence is the verdict "
+                 "INSUFFICIENT_EVIDENCE, which is not the same as agreeing "
+                 "with him. That row is flagged in the PR description as a "
+                 "case the section 7 vocabulary does not cover. It also "
+                 "corroborates this annotator's own INSUFFICIENT_EVIDENCE "
+                 "verdicts on the hydration claims in v07 and v12. Collectors "
+                 "filed it under NO_MISINFO, which agrees.",
+        "claims": [
+            {
+                "text": "Washing your hands with antibacterial soap doesn't "
+                        "present any advantage over using regular soap for "
+                        "regular hand washing",
+                "start": 11.8, "end": 21.0,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:17683018"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The retrieved review of consumer antibacterial "
+                         "soaps supports the claim and also the speaker's "
+                         "follow-up about antibiotic resistance concerns "
+                         "driving US regulatory changes.",
+            },
+            {
+                "text": "This idea of just drink more water to have nice "
+                        "skin, total BS. Drinking excessive amounts of water "
+                        "will not make your skin look different",
+                "start": 50.0, "end": 64.0,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "Nothing retrieved tests water intake against skin "
+                         "appearance in people with normal fluid balance. Note "
+                         "that he qualifies the claim carefully himself "
+                         "('assuming normal fluid balance'), which per section "
+                         "4 has to be preserved in the claim text.",
+            },
+            {
+                "text": "we don't know like what the optimal amount of water "
+                        "a standard adult human should be drinking every day "
+                        "is ... three liters or eight eight ounce glasses or "
+                        "what like that's not evidence-based",
+                "start": 85.5, "end": 105.0,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "A claim ABOUT the absence of evidence. Retrieving "
+                         "nothing is consistent with him being right, but "
+                         "section 7's INSUFFICIENT_EVIDENCE means 'we cannot "
+                         "say', so the verdict cannot express agreement with a "
+                         "negative claim. Independently, this is the third "
+                         "video in the set (with v07 and v12) to turn on the "
+                         "same hydration-rule evidence gap, from a third "
+                         "direction.",
+            },
+            {
+                "text": "Acne is not infectious, it's not something that you "
+                        "just wash away, it's a chronic inflammatory condition "
+                        "of the skin",
+                "start": 142.1, "end": 152.6,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:27416314"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Consistent with the retrieved review of "
+                         "over-the-counter acne treatment, which treats acne "
+                         "as an inflammatory condition rather than an "
+                         "infection.",
+            },
+        ],
+    },
+    {
+        "video_id": "v54",
+        "topic": "nutrition / nuts",
+        "case_tags": [],
+        "confidence": "medium",
+        "notes": "A dermatologist-adjacent creator arguing nuts and seeds "
+                 "are unfairly demonised, citing a University of Michigan "
+                 "analysis of 5,800 foods. Comes out CANNOT_RECOGNIZE: the "
+                 "study he describes could not be retrieved, and his other "
+                 "two statements are an unquantified benefit claim and an "
+                 "aphorism. A useful example of a video that is probably "
+                 "right and still unjudgeable. Collectors filed it under "
+                 "NO_MISINFO.",
+        "claims": [
+            {
+                "text": "when the University of Michigan looked at 5,800 "
+                        "foods to see how many minutes they add or take away "
+                        "from your life ... there was one category that did "
+                        "significantly better than all the others [nuts and "
+                        "seeds]",
+                "start": 6.3, "end": 30.1,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "A search for nut consumption against all-cause "
+                         "mortality and life expectancy returned nothing, and "
+                         "the specific Michigan analysis was not retrieved. "
+                         "Checkable in principle -- it is a named study -- "
+                         "which makes this a retrieval failure rather than an "
+                         "evidence gap, and a good test case for the "
+                         "retrieval track.",
+            },
+            {
+                "text": "they have so many amazing things for your health, "
+                        "but because they're high calorie, people think "
+                        "they're unhealthy",
+                "start": 39.9, "end": 44.2,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:36904160"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The retrieved review of nuts, energy balance and "
+                         "body weight is adjacent but does not test an "
+                         "unquantified 'so many amazing things'.",
+            },
+            {
+                "text": "low calorie and healthy aren't the same thing",
+                "start": 44.2, "end": 49.2,
+                "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "A definitional point rather than an empirical "
+                         "claim.",
+            },
+        ],
+    },
+    {
+        "video_id": "v56",
+        "topic": "smoking / cardiovascular health",
+        "case_tags": ["accurate"],
+        "confidence": "high",
+        "notes": "A heart surgeon asked what he avoids, answering smoking, "
+                 "with an explicit causal claim about lung cancer and a "
+                 "deliberate note that he passes no judgement on smokers. The "
+                 "most clearly SUPPORTED video in the whole set, and worth "
+                 "having for exactly that reason -- a classifier that flags "
+                 "this has a false-positive problem. Collectors filed it "
+                 "under NO_MISINFO, which agrees.",
+        "claims": [
+            {
+                "text": "I cannot come up with one single thing that does as "
+                        "much damage to every organ in the body as smoking "
+                        "cigarettes",
+                "start": 6.6, "end": 17.6,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:30800285", "PMID:36727839"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Supported in substance by the systematic review of "
+                         "smoking against lung cancer, COPD, ischaemic heart "
+                         "disease and stroke, and by the Mendelian "
+                         "randomisation analysis across 24 gastrointestinal "
+                         "diseases. The superlative ('one single thing ... as "
+                         "much damage') is a ranking nothing retrieved tests, "
+                         "hence medium.",
+            },
+            {
+                "text": "the causal relationship with lung cancer",
+                "start": 35.8, "end": 38.8,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:11165392", "PMID:30800285"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "The meta-analysis of cigarette smoking across major "
+                         "histological types of lung cancer. As directly "
+                         "supported as a claim in this set gets.",
+            },
+        ],
+    },
+    {
+        "video_id": "v57",
+        "topic": "measles / vaccination",
+        "case_tags": ["accurate"],
+        "confidence": "medium",
+        "notes": "A PBS News segment with a physician on measles "
+                 "transmissibility and herd protection. Broadcast journalism "
+                 "rather than creator content, which makes it a useful "
+                 "out-of-distribution item: the register, pacing and the "
+                 "closing PressPass sponsorship read nothing like the rest of "
+                 "the bundle. Collectors filed it under NO_MISINFO, which "
+                 "agrees.",
+        "claims": [
+            {
+                "text": "it is the most contagious virus that we know",
+                "start": 10.1, "end": 23.7,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:39156354"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Measles' extreme transmissibility is well "
+                         "established and the retrieved airborne-transmission "
+                         "modelling study is consistent with it, but a "
+                         "superlative across all known viruses is a ranking "
+                         "claim that nothing retrieved tests.",
+            },
+            {
+                "text": "a person who is shedding breathes out the measles "
+                        "virus[,] can leave the room[,] and if a susceptible "
+                        "person comes into that room up to two hours later "
+                        "they can still inhale the few viral particles ... and "
+                        "become infected",
+                "start": 23.7, "end": 37.5,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:39156354"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The retrieved study models airborne measles "
+                         "transmission in indoor spaces, supporting persistent "
+                         "infectious aerosol. The specific two-hour figure is "
+                         "standard public-health guidance rather than "
+                         "something the retrieved paper states.",
+            },
+            {
+                "text": "there are little babies who could get measles and "
+                        "they have high mortality associated with that who "
+                        "can't be vaccinated yet ... we create a cocoon of "
+                        "protection around them",
+                "start": 60.4, "end": 88.0,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:32309885"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The Cochrane review of measles, mumps, rubella and "
+                         "varicella vaccines in children was retrieved and "
+                         "supports vaccine effectiveness, but nothing "
+                         "retrieved tests infant measles mortality or the "
+                         "cocooning mechanism specifically.",
+            },
+        ],
+    },
+    {
+        "video_id": "v58",
+        "topic": "home remedies / constipation",
+        "case_tags": ["missing_evidence"],
+        "confidence": "high",
+        "notes": "A 27-second remedy clip: a navel orange coated in cayenne "
+                 "and cinnamon, eaten skin and all, said to relieve "
+                 "constipation in about five minutes, with the science "
+                 "promised in a description that the video does not contain. "
+                 "Same shape as v20 and lands the same way. This collector's "
+                 "folder carried no label.",
+        "claims": [
+            {
+                "text": "[if you're] constipated, this works every time in "
+                        "about five minutes. Grab a navel orange, it must be "
+                        "navel ... Generously coat with cayenne pepper and "
+                        "cinnamon ... eat the entire wedge, skin and all",
+                "start": 0.0, "end": 21.1,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:35816465", "PMID:41081513"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "Nothing tests this preparation, and the "
+                         "five-minute onset is implausible on any mechanism. "
+                         "Cited as the nearest evidence are the fibre "
+                         "supplementation meta-analysis and the British "
+                         "Dietetic Association constipation guidelines, which "
+                         "support dietary fibre generally -- orange peel is "
+                         "fibre -- while testing nothing about this recipe or "
+                         "its timing.",
+            },
+        ],
+    },
+    {
+        "video_id": "v59",
+        "topic": "cancer / muscle mass",
+        "case_tags": [],
+        "confidence": "medium",
+        "notes": "A creator arguing that muscle mass built before a cancer "
+                 "diagnosis is the best protection during treatment. The "
+                 "underlying science is real -- sarcopenia predicts "
+                 "chemotherapy toxicity and worse survival -- and the video "
+                 "pushes it one step past the evidence by calling muscle your "
+                 "'best fighting chance against cancer'. Collectors filed it "
+                 "under NO_MISINFO, which the rules reproduce.",
+        "claims": [
+            {
+                "text": "What's your best fighting chance against cancer? "
+                        "It's actually muscle mass",
+                "start": 0.0, "end": 6.2,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:18539529"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "A superlative ranking muscle mass above all other "
+                         "protective factors, including screening and not "
+                         "smoking. Nothing retrieved supports that ranking, "
+                         "though the sarcopenia literature supports the "
+                         "weaker claim underneath it.",
+            },
+            {
+                "text": "chemotherapy drugs deplete skeletal muscle. And if "
+                        "you don't start off with a good muscle mass, then "
+                        "you're already starting your tank on zero",
+                "start": 36.2, "end": 47.5,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:18539529", "PMID:31842559",
+                               "PMID:41206817"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Supported in substance: sarcopenia and sarcopenic "
+                         "obesity in cancer patients carry clinical "
+                         "implications including treatment toxicity and "
+                         "survival. The retrieved work is observational and "
+                         "concentrated in gastrointestinal and colorectal "
+                         "cancers.",
+            },
+        ],
+    },
+    {
+        "video_id": "v60",
+        "topic": "endocrine disruptors / everyday exposure",
+        "case_tags": [],
+        "confidence": "high",
+        "notes": "A creator advising people not to handle thermal-paper "
+                 "receipts because of BPA and BPS skin absorption. One of the "
+                 "most useful collector disagreements in the set: filed under "
+                 "MISINFO, but the claims are well supported -- thermal "
+                 "receipts do carry BPA and BPS and these are absorbed "
+                 "through skin, with a measured 25% absorbed dose for BPA "
+                 "over 24 hours. The video is also notably measured for this "
+                 "genre, saying outright that touching one occasionally 'isn't "
+                 "the end of the world'. Recorded as NO_MISINFO against the "
+                 "collectors' MISINFO and listed in the PR description.",
+        "claims": [
+            {
+                "text": "These thermal paper receipts contain BPA and BPS",
+                "start": 11.8, "end": 15.2,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:26407846", "PMID:32608004"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "Directly supported by measurement studies of "
+                         "bisphenol A and bisphenol S levels in thermal paper "
+                         "receipts.",
+            },
+            {
+                "text": "These are endocrine disrupting chemicals that can "
+                        "actually be absorbed through your skin",
+                "start": 15.5, "end": 20.2,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:33313651", "PMID:28570582"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "The skin-absorption study reports an absorbed dose "
+                         "after 24 hours of exposure of 25% for BPA and 17% "
+                         "for one alternative, with the handling study "
+                         "addressing dermal exposure from thermal paper "
+                         "directly. This is the row that makes the collectors' "
+                         "MISINFO label look wrong.",
+            },
+            {
+                "text": "if you are touching a lot of receipts ... Don't "
+                        "touch the thermal paper receipts and you will "
+                        "decrease your exposure",
+                "start": 37.8, "end": 44.5,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:28570582"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Follows from the handling study's exposure "
+                         "implications. Note what the video does not claim: "
+                         "no disease outcome is asserted, which is why nothing "
+                         "here is overreach.",
+            },
+        ],
+    },
+    {
+        "video_id": "v61",
+        "topic": "water safety / fluoride",
+        "case_tags": ["clearly_false", "uncertain_science"],
+        "confidence": "medium",
+        "notes": "'Stop drinking water, it is actually quite dangerous' -- "
+                 "three claims about tap water (prescription drugs, "
+                 "glyphosate, fluoride) ending in a recommendation to drink "
+                 "reverse osmosis or distilled water. MISINFO on the fluoride "
+                 "claim, and a good example of the directness test doing real "
+                 "work: the Chinese studies the speaker invokes are from "
+                 "endemic-fluorosis areas with fluoride well above community "
+                 "water fluoridation levels, and the meta-analyses restricted "
+                 "to fluoridation-relevant concentrations find no association "
+                 "with IQ. Generalising from one exposure range to the other "
+                 "is the error. The glyphosate claim is genuinely partly true, "
+                 "which is what makes the package persuasive. This "
+                 "collector's folder filed it under MISINFO, which agrees.",
+        "claims": [
+            {
+                "text": "A lot of city water has prescription drugs in it ... "
+                        "a lot of people flush their unused medications down "
+                        "the toilet",
+                "start": 14.3, "end": 23.6,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:35112470", "PMID:21139869"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Pharmaceutical residues in water bodies are real "
+                         "and measured. What the video omits, and the "
+                         "retrieved risk assessments address, is that "
+                         "detection at trace concentrations is not the same as "
+                         "a health risk. Supported as literally stated.",
+            },
+            {
+                "text": "roundup [glyphosate] is actually in our rainwater ... "
+                        "it's in our groundwater, it's in our well water, and "
+                        "it's in our tap water. So you don't wanna drink tap "
+                        "water because it likely has glyphosate in it. That is "
+                        "a neurotoxin",
+                "start": 28.1, "end": 41.1,
+                "stance": "ENDORSES", "verdict": "MIXED",
+                "supporting": ["PMID:40684482"],
+                "contradicting": ["PMID:29136183", "PMID:27552246"],
+                "confidence": "medium",
+                "notes": "Occurrence in drinking water is documented by the "
+                         "monitoring study, so the first half holds. Calling "
+                         "it a neurotoxin at those concentrations is not "
+                         "supported, and the Agricultural Health Study found "
+                         "no overall cancer association even in occupationally "
+                         "exposed applicators. Split claim, hence MIXED. Note "
+                         "this is the second glyphosate video in the set, "
+                         "arguing the opposite side from v24.",
+            },
+            {
+                "text": "Big studies in China show that children who drink "
+                        "fluoridated tap water actually have lower IQ. So it "
+                        "actually lowers IQ in children",
+                "start": 44.9, "end": 52.3,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": ["PMID:36639015"],
+                "contradicting": ["PMID:37120936", "PMID:41941356"],
+                "confidence": "medium",
+                "notes": "The claim that makes this video MISINFO, and a "
+                         "textbook directness failure. The meta-analysis "
+                         "restricted to low fluoride exposure relevant to "
+                         "community water fluoridation found no statistically "
+                         "significant IQ difference (SMD 0.07, 95% CI -0.02 to "
+                         "0.17), and the 2026 update concludes there is no "
+                         "association at fluoridation-relevant concentrations "
+                         "while criticising the endemic-area studies the "
+                         "speaker relies on. The dose-response meta-analysis "
+                         "is cited on the supporting side because associations "
+                         "do appear at high exposures -- which is precisely "
+                         "the distinction the claim erases.",
+            },
+            {
+                "text": "It can harm the pineal gland. It can even harm the "
+                        "teeth and the bones",
+                "start": 52.3, "end": 55.2,
+                "stance": "ENDORSES", "verdict": "MIXED",
+                "supporting": ["PMID:31254856"],
+                "contradicting": ["PMID:41941356"],
+                "confidence": "low",
+                "notes": "Dental and skeletal fluorosis are real at high "
+                         "exposures, as the groundwater-contamination review "
+                         "documents, so the teeth and bones half has support "
+                         "in that exposure range; the pineal gland claim has "
+                         "nothing retrieved behind it. Three outcomes bundled "
+                         "in one sentence, which is why confidence is low and "
+                         "a reviewer may want to split the row.",
+            },
+        ],
+    },
 ]

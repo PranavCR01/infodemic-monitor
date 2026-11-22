@@ -1,0 +1,284 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 137.09,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 1.76,
+    "text": "If physical activity were a pill,"
+   },
+   {
+    "id": "t2",
+    "start": 1.76,
+    "end": 4.68,
+    "text": "it would be the most prescribed medication in medicine."
+   },
+   {
+    "id": "t3",
+    "start": 4.68,
+    "end": 7.8,
+    "text": "Let's talk about why physical activity is so powerful,"
+   },
+   {
+    "id": "t4",
+    "start": 7.8,
+    "end": 10.08,
+    "text": "because this isn't just about weight loss, aesthetics,"
+   },
+   {
+    "id": "t5",
+    "start": 10.08,
+    "end": 11.84,
+    "text": "or chasing a certain body type."
+   },
+   {
+    "id": "t6",
+    "start": 11.84,
+    "end": 15.0,
+    "text": "Regular physical activity improves your cardiovascular"
+   },
+   {
+    "id": "t7",
+    "start": 15.0,
+    "end": 17.08,
+    "text": "and muscular fitness, your bone health,"
+   },
+   {
+    "id": "t8",
+    "start": 17.08,
+    "end": 18.92,
+    "text": "and lowers your risk of fracture."
+   },
+   {
+    "id": "t9",
+    "start": 18.92,
+    "end": 20.96,
+    "text": "It improves anxiety, depression,"
+   },
+   {
+    "id": "t10",
+    "start": 20.96,
+    "end": 23.12,
+    "text": "and helps with overall mood regulation."
+   },
+   {
+    "id": "t11",
+    "start": 23.12,
+    "end": 25.9,
+    "text": "It improves your sleep quality and energy levels,"
+   },
+   {
+    "id": "t12",
+    "start": 25.9,
+    "end": 28.72,
+    "text": "and it helps your self-esteem and cognitive functioning,"
+   },
+   {
+    "id": "t13",
+    "start": 28.72,
+    "end": 31.12,
+    "text": "including reducing the risk of dementia."
+   },
+   {
+    "id": "t14",
+    "start": 31.12,
+    "end": 33.28,
+    "text": "It also plays a major role in preventing"
+   },
+   {
+    "id": "t15",
+    "start": 33.28,
+    "end": 34.92,
+    "text": "and managing chronic disease."
+   },
+   {
+    "id": "t16",
+    "start": 34.92,
+    "end": 37.48,
+    "text": "Consistent movement lowers the risk of hypertension"
+   },
+   {
+    "id": "t17",
+    "start": 37.48,
+    "end": 39.92,
+    "text": "and type 2 diabetes and is associated"
+   },
+   {
+    "id": "t18",
+    "start": 39.92,
+    "end": 42.44,
+    "text": "with the lower incidence of multiple cancers,"
+   },
+   {
+    "id": "t19",
+    "start": 42.44,
+    "end": 46.24,
+    "text": "including breast, colon, bladder, endometrial,"
+   },
+   {
+    "id": "t20",
+    "start": 46.24,
+    "end": 49.68,
+    "text": "prostate, lung, stomach, and esophageal cancers."
+   },
+   {
+    "id": "t21",
+    "start": 49.68,
+    "end": 52.8,
+    "text": "Now let's zoom in on aerobic exercise specifically."
+   },
+   {
+    "id": "t22",
+    "start": 52.8,
+    "end": 55.8,
+    "text": "Aerobic activity lowers all cause mortality,"
+   },
+   {
+    "id": "t23",
+    "start": 55.8,
+    "end": 57.4,
+    "text": "meaning all causes of death,"
+   },
+   {
+    "id": "t24",
+    "start": 57.4,
+    "end": 63.8,
+    "text": "reduces the incidence of and death from cardiovascular disease, improves insulin sensitivity, lowers"
+   },
+   {
+    "id": "t25",
+    "start": 63.8,
+    "end": 67.56,
+    "text": "your triglycerides, improves your sleep and overall quality of life."
+   },
+   {
+    "id": "t26",
+    "start": 67.56,
+    "end": 72.2,
+    "text": "This is why many major guidelines recommend 150 minutes per week of moderate intensity"
+   },
+   {
+    "id": "t27",
+    "start": 72.2,
+    "end": 76.32,
+    "text": "exercise or 75 minutes of vigorous intensity exercise."
+   },
+   {
+    "id": "t28",
+    "start": 76.32,
+    "end": 77.76,
+    "text": "But here's where people get stuck."
+   },
+   {
+    "id": "t29",
+    "start": 77.76,
+    "end": 81.16,
+    "text": "They think it has to be intense, perfect, or all or nothing."
+   },
+   {
+    "id": "t30",
+    "start": 81.16,
+    "end": 82.16,
+    "text": "It doesn't."
+   },
+   {
+    "id": "t31",
+    "start": 82.16,
+    "end": 83.76,
+    "text": "Walking absolutely counts."
+   },
+   {
+    "id": "t32",
+    "start": 83.76,
+    "end": 89.28,
+    "text": "In fact, large population studies show that 7,000 steps to 12,000 steps per day is a sweet"
+   },
+   {
+    "id": "t33",
+    "start": 89.28,
+    "end": 93.84,
+    "text": "spot where we see significant reductions in all-cause mortality, lower cardiovascular"
+   },
+   {
+    "id": "t34",
+    "start": 93.84,
+    "end": 96.08,
+    "text": "risk, and improved metabolic health."
+   },
+   {
+    "id": "t35",
+    "start": 96.08,
+    "end": 100.72,
+    "text": "Beyond that range, the benefits tend to plateau, meaning more isn't always better, but if"
+   },
+   {
+    "id": "t36",
+    "start": 100.72,
+    "end": 103.04,
+    "text": "you want to get more steps, have at it."
+   },
+   {
+    "id": "t37",
+    "start": 103.04,
+    "end": 105.88,
+    "text": "The goal is consistency, not extremes."
+   },
+   {
+    "id": "t38",
+    "start": 105.88,
+    "end": 110.56,
+    "text": "And steps matter in particular because they reflect total daily movement, not just a single"
+   },
+   {
+    "id": "t39",
+    "start": 110.56,
+    "end": 111.56,
+    "text": "workout."
+   },
+   {
+    "id": "t40",
+    "start": 111.56,
+    "end": 115.24,
+    "text": "walking, errands going up and down your stairs pacing while you're on the phone"
+   },
+   {
+    "id": "t41",
+    "start": 115.24,
+    "end": 119.28,
+    "text": "and everyday activity which is critical since as we mentioned prolonged"
+   },
+   {
+    "id": "t42",
+    "start": 119.28,
+    "end": 123.24,
+    "text": "sedentary time independently increases your health risk. Movement isn't"
+   },
+   {
+    "id": "t43",
+    "start": 123.24,
+    "end": 127.48,
+    "text": "punishment, it's protection. And in the next video we'll break down how to write"
+   },
+   {
+    "id": "t44",
+    "start": 127.48,
+    "end": 131.96,
+    "text": "yourself a simple realistic cardio exercise prescription you can actually"
+   },
+   {
+    "id": "t45",
+    "start": 131.96,
+    "end": 134.36,
+    "text": "stick to."
+   }
+  ]
+ }
+}
