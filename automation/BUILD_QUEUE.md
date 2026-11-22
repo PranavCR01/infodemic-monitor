@@ -27,12 +27,13 @@ starts the next ready task, and records progress here.
 | T14 | Evaluate the graph against the single-call baseline | #39 | 14 | T01, T11 | blocked | | | | Needs API keys and the golden label set (data/golden-label-set) |
 | T15 | Confidence calibration (Platt scaling) and the review rule | new | 11 | T14 | blocked | | | | Needs T14 results and human-verified labels |
 | T16 | Update the judge to the revised §9 rules: REFUTES+SUPPORTED → MISINFO (always reviewed); REFUTES+MIXED/INSUFFICIENT → CANNOT_RECOGNIZE with a 'possible debunk' review reason; judge returns its review reasons | #35 | 9, 11 | T08, T09 | done | session_013cWxq2PDFUqwLHC5p3x74p | 2026-11-22 18:32 | [#63](https://github.com/PranavCR01/infodemic-monitor/pull/63) | Doc changed after T08 merged (commit f238dab). Reconcile with T08's existing review flags; update the adversarial and judge tests |
-| T17 | Authoritative reference sources for facts of record, plus claim_kind | new | 4, 6 | T03, T05, T11 | in progress | session_013cWxq1yRmBst2DcbhPz26w | 2026-11-22 18:32 | | Allow-listed domains in config, ref_<hash> evidence ids with stored snapshots, claim_kind in claim extraction routes retrieval; same verdict rules. Fixtures only, no live fetching in tests |
+| T17 | Authoritative reference sources for facts of record, plus claim_kind | new | 4, 6 | T03, T05, T11 | done | session_013cWxq1yRmBst2DcbhPz26w | 2026-11-22 18:32 | https://github.com/PranavCR01/infodemic-monitor/pull/64 | claim_kind (model via extract_v2 + rules fallback); allow-listed references (catalogue + NCBI Bookshelf) for facts of record, ref_<hash> ids, text snapshots (migration 0009; per-user isolation now 0010); behind USE_REFERENCE_SOURCES (default off). Synthetic fixtures only: catalogue URLs never fetched, Bookshelf ESummary fields unverified, more catalogue pages (GHO, USDA, national stats) left for a person (MULTI_AGENT §7n) |
 
 ## Log
 
 Newest first. One line per event: date, task, what happened.
 
+- 2026-11-22 UTC — T17 done: PR #64 squash-merged into langgraph-build (842 passed, 8 skipped). References off by default (USE_REFERENCE_SOURCES); MCP contract unchanged; migration 0009 not run on Supabase.
 - 2026-11-22 18:36 UTC — T16 done: PR #63 squash-merged into langgraph-build (788 passed, 8 skipped). Rule 5 (possible debunk) checked after NO_MISINFO per the doc's order; reasons are per-claim `denies_supported:<cid>` / `possible_debunk:<cid>`.
 - 2026-11-22 18:32 UTC — T16 and T17 started in parallel (sessions session_013cWxq2PDFUqwLHC5p3x74p, session_013cWxq1yRmBst2DcbhPz26w), after the doc revision f238dab and queue update adb4daf.
 - 2026-11-22 UTC — T16 and T17 added: the design doc's §4, §6, §9 and §14 were revised after the first golden-set batch (commit f238dab).
