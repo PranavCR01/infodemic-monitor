@@ -3425,4 +3425,329 @@ LABELS = [
             },
         ],
     },
+    {
+        "video_id": "v64",
+        "topic": "vaccines / immunisation schedules",
+        "case_tags": ["debunking"],
+        "confidence": "high",
+        "notes": "A paediatrician going country by country through "
+                 "immunisation schedules to show that an official White House "
+                 "/ HHS graphic claiming '11 injections in European countries, "
+                 "72 in the United States' is wrong, and explaining how the 72 "
+                 "is constructed (splitting combination shots and counting "
+                 "annual flu and COVID doses for eighteen years). The third "
+                 "competent debunk in the set to come out CANNOT_RECOGNIZE, "
+                 "and the most clear-cut: every claim on both sides is a count "
+                 "from a published national schedule, which is checkable in "
+                 "minutes and not checkable against PubMed or WHO/CDC pages. "
+                 "Collectors filed it under DEBUNKING. This is the single best "
+                 "argument in the set for widening the evidence sources in "
+                 "section 6, and it is written up in the PR description.",
+        "claims": [
+            {
+                "text": "in European countries they get 11 injections[,] in "
+                        "the United States we give 72",
+                "start": 9.9, "end": 18.7,
+                "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "The claim the whole video exists to refute, and it "
+                         "cannot be adjudicated here. Settling it needs the "
+                         "AAP, CDC and European national schedules, none of "
+                         "which is a paper. Under section 9 that leaves a "
+                         "thorough, numerate debunk labelled "
+                         "CANNOT_RECOGNIZE.",
+            },
+            {
+                "text": "there's about 24 vaccines that children will receive "
+                        "by the age of two[, and] in said 24 injections, "
+                        "you'll get protection from 16 different diseases",
+                "start": 36.3, "end": 53.1,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "His own count from the AAP schedule. Same problem: "
+                         "a schedule document, not a study.",
+            },
+            {
+                "text": "the only way they get there is by separating out the "
+                        "DTAP shots and MMR shots as if those were separate "
+                        "injections, which they're not. And combines that with "
+                        "a yearly flu shot and a yearly COVID shot for all 18 "
+                        "years of life",
+                "start": 120.3, "end": 134.5,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "An explanation of how the disputed figure was "
+                         "constructed. Arithmetic over schedule documents, so "
+                         "again outside the allowed evidence sources. Note "
+                         "this is the most useful claim in the video for a "
+                         "reader and the least verifiable for the pipeline.",
+            },
+        ],
+    },
+    {
+        "video_id": "v66",
+        "topic": "vaccines / mercury",
+        "case_tags": ["debunking"],
+        "confidence": "medium",
+        "notes": "A clinician answering a 'mercury in vaccines' post by "
+                 "distinguishing methylmercury from ethylmercury, with the "
+                 "methanol-versus-ethanol analogy. DEBUNKING on solid "
+                 "ground. Good material for the stance step because the video "
+                 "opens on the opposing claim with no framing at all -- the "
+                 "first eight seconds are the other person's words -- exactly "
+                 "the trap v23 sets. Collectors filed it under DEBUNKING, "
+                 "which agrees.",
+        "claims": [
+            {
+                "text": "you want to give my daughter moments after her "
+                        "arrival into this world vaccines with copious amounts "
+                        "of mercury",
+                "start": 4.8, "end": 8.3,
+                "stance": "REFUTES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:15121295", "PMID:18049924",
+                                  "PMID:18482737"],
+                "confidence": "medium",
+                "notes": "Contradicted on both the amount and the compound. "
+                         "The review of thiomersal safety in newborn and "
+                         "infant vaccines and the review of thimerosal and its "
+                         "ethylmercury breakdown product address exactly this "
+                         "claim, and the medical-records study found no link "
+                         "with neurodevelopmental disorders.",
+            },
+            {
+                "text": "metal [methyl] mercury[,] which is the compound found "
+                        "in certain seafood, can accumulate within the body "
+                        "and be toxic at relatively low doses ... whereas "
+                        "epimercary [ethylmercury] is a different compound "
+                        "that's rapidly excreted and is not toxic at low doses",
+                "start": 23.8, "end": 41.4,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:18049924", "PMID:15121295"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The distinction is the substance of the "
+                         "thimerosal safety literature. Note the transcript "
+                         "mangles both compound names ('metal mercury', "
+                         "'epimercary'), so a claim extractor working from "
+                         "raw transcript text would lose the two chemicals "
+                         "the entire argument turns on -- a concrete "
+                         "extraction-track finding.",
+            },
+            {
+                "text": "[thimerosal] hasn't been used in routine childhood "
+                        "vaccinations since 2001 and only remained in a "
+                        "multi-dose version of flu vaccine given to less than "
+                        "6% of the population and even now has been replaced "
+                        "with another preservative",
+                "start": 54.8, "end": 70.7,
+                "stance": "ENDORSES", "verdict": "MIXED",
+                "supporting": ["PMID:15121295"],
+                "contradicting": ["PMID:29895363"],
+                "confidence": "low",
+                "notes": "The US removal timeline is a regulatory fact rather "
+                         "than a study finding, and a 2018 paper is titled "
+                         "'Low-dose Thimerosal (ethyl-mercury) is still used "
+                         "in infants' vaccines', which at least complicates "
+                         "the 'even now has been replaced' half globally. "
+                         "Recorded MIXED with low confidence; a reviewer "
+                         "should narrow the claim to the US and may well "
+                         "move it.",
+            },
+        ],
+    },
+    {
+        "video_id": "v68",
+        "topic": "water safety / endocrine disruptors",
+        "case_tags": ["debunking"],
+        "confidence": "medium",
+        "notes": "A creator showing how a chain of individually-true Google "
+                 "answers (tap water contains atrazine; atrazine is an "
+                 "endocrine disruptor; endocrine disruptors lower "
+                 "testosterone) builds a false conclusion, then supplying the "
+                 "dose: the rat studies used 50 mg/kg, which he converts to "
+                 "1.2 million litres of tap water a day. The mirror image of "
+                 "v42 and v27 -- same 'true fragments, false conclusion' "
+                 "shape, but with a speaker pointing at the fallacy instead of "
+                 "committing it. Lands on CANNOT_RECOGNIZE: the refuted claim "
+                 "has no human test, and his dose arithmetic is not itself a "
+                 "retrievable finding. In the blind subset. Collectors filed "
+                 "it under DEBUNKING.",
+        "claims": [
+            {
+                "text": "does tap water lower testosterone ... [because it "
+                        "contains atrazine, an endocrine disruptor, and] do "
+                        "endocrine disruptors lower testosterone",
+                "start": 4.2, "end": 28.6,
+                "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:11053540", "PMID:24758756"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "No human study tests tap-water atrazine against "
+                         "testosterone. The retrieved rat work does show "
+                         "reproductive and pubertal effects, which is why the "
+                         "fearmongering chain is persuasive -- but it is in "
+                         "rats and at doses orders of magnitude above drinking "
+                         "water, so it fails directness. Cited on the "
+                         "supporting side because the papers do support the "
+                         "claim's premise at high dose, which is the "
+                         "distinction the video is about.",
+            },
+            {
+                "text": "Atrazine, a common pesticide that's found in tap "
+                        "water, has a regulatory limit of three parts per "
+                        "billion",
+                "start": 37.1, "end": 44.8,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "A regulatory limit, checkable against the EPA and "
+                         "not against the literature. The same gap as v24's "
+                         "tolerance figure and v64's schedules.",
+            },
+            {
+                "text": "they filled up those rats at 50 milligrams per "
+                        "kilogram, which in humans you would need to drink 1.2 "
+                        "million liters of tap water a day to have it affect "
+                        "your testosterone",
+                "start": 44.8, "end": 67.6,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:11053540"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The dose in the rat protocol is the kind of detail "
+                         "the retrieved puberty study would carry, but the "
+                         "conversion to litres of tap water is the speaker's "
+                         "own arithmetic and is not a retrievable finding. The "
+                         "reasoning is sound; the claim is still unverified "
+                         "here.",
+            },
+        ],
+    },
+    {
+        "video_id": "v69",
+        "topic": "cancer prevention",
+        "case_tags": ["accurate"],
+        "confidence": "high",
+        "notes": "A functional-medicine doctor giving three cancer-prevention "
+                 "recommendations -- cut alcohol, lose visceral fat, raise "
+                 "fibre and drop processed meat -- and then recommending "
+                 "colonoscopy, with the aside 'I'm a functional medicine "
+                 "doctor and I will still tell you to get one done'. Kept "
+                 "deliberately as a counterexample to a tempting shortcut: "
+                 "speaker credentials and genre are not evidence of anything. "
+                 "This is the best-evidenced NO_MISINFO video in the bundle, "
+                 "from the professional category most associated elsewhere in "
+                 "the set with v34, v36 and v37. In the blind subset. This "
+                 "collector's folder carried no label.",
+        "claims": [
+            {
+                "text": "Alcohol is a group one carcinogen, same category as "
+                        "tobacco and asbestos. It's actually linked to at "
+                        "least seven different cancers including breast cancer "
+                        "and colon cancer",
+                "start": 11.9, "end": 33.0,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:25422909", "PMID:37905315"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "The comprehensive dose-response meta-analysis of "
+                         "alcohol and site-specific cancer risk supports both "
+                         "the multi-site claim and the named sites.",
+            },
+            {
+                "text": "There's no amount [of alcohol] that's been shown to "
+                        "be protective. Less is better, and none is better "
+                        "than less",
+                "start": 33.7, "end": 50.4,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:37905315", "PMID:25422909"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Supported for cancer risk specifically, which is "
+                         "what he is talking about. Medium confidence because "
+                         "the broader cardiovascular literature has argued "
+                         "about low-dose effects, and the claim as phrased "
+                         "('no amount ... protective') is about cancer.",
+            },
+            {
+                "text": "Excess body fat is second only to smoking as a "
+                        "modifiable cause of cancer. And it's linked to 13 of "
+                        "them",
+                "start": 41.6, "end": 59.0,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:26205840", "PMID:25719336",
+                               "PMID:41634393"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The European Code against Cancer chapter on "
+                         "obesity and body fatness and the obesity-and-cancer "
+                         "review support the multi-site link; the global "
+                         "modifiable-risk-factor analysis supports the "
+                         "ranking. The exact count of 13 sites is a "
+                         "specific figure the retrieved abstracts do not "
+                         "state.",
+            },
+            {
+                "text": "Most adults get about half the fiber they actually "
+                        "need",
+                "start": 84.3, "end": 88.7,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "A population intake statistic, checkable against "
+                         "dietary survey data rather than the literature.",
+            },
+            {
+                "text": "fiber feeds the bacteria that produce something "
+                        "called butyrate, which is what the cells lining your "
+                        "colon run on",
+                "start": 96.8, "end": 105.7,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:41305603", "PMID:40331741"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The short-chain-fatty-acid and colorectal cancer "
+                         "review supports the mechanism. The retrieved "
+                         "tumorigenesis work is in animals, so the mechanism "
+                         "rather than a clinical outcome is what is "
+                         "supported.",
+            },
+            {
+                "text": "gotta cut out the processed meat, the bacon, the hot "
+                        "dogs, the deli meat, the summer sausages, that's one "
+                        "group as well",
+                "start": 112.4, "end": 120.7,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:40210826", "PMID:33838606",
+                               "PMID:34455534"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "The comprehensive meta-analysis and umbrella review "
+                         "of red and processed meat and cancer outcomes "
+                         "support the colorectal association and the group 1 "
+                         "classification he alludes to.",
+            },
+            {
+                "text": "a colonoscopy ... is one of the only tests in "
+                        "medicine that doesn't just find cancer, it actually "
+                        "can prevent it. Many times they'll go in there, "
+                        "they'll take out a polyp before it even moves into "
+                        "the next state",
+                "start": 126.1, "end": 142.4,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:37737817", "PMID:26257272"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Polypectomy during screening colonoscopy removing "
+                         "precursor lesions is exactly what the clinical "
+                         "practice update on screening and post-polypectomy "
+                         "surveillance covers. The superlative ('one of the "
+                         "only tests') is not itself tested.",
+            },
+        ],
+    },
 ]
