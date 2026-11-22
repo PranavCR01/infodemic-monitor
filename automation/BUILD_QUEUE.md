@@ -13,8 +13,8 @@ starts the next ready task, and records progress here.
 |---|---|---|---|---|---|---|---|---|---|
 | T01 | Evaluation framework and routing harness (mocked models; no paid runs) | new | 13, 14 | — | in_progress | session_013cWxpykbHfbgKcp3qazzmb | 2026-11-21 23:51 | | Paid runs and the routing decision wait for API keys; build and test everything with mocks |
 | T02 | LangGraph skeleton: typed state, stub nodes, Postgres checkpointing | #29 | 4, 5 | — | done | session_013cWxq2fmACtMefWPTdEkMT | 2026-11-21 23:53 | https://github.com/PranavCR01/infodemic-monitor/pull/49 | Taken over from Jared by decision of the project lead. Resume test passed on InMemorySaver and local Postgres 16; Supabase `langgraph` schema run left for a person (#47) |
-| T03 | Retrieval planning and PubMed evidence retriever | #31 | 6 | T02 | todo | | | | Record PubMed responses as fixtures; tests make no network calls |
-| T04 | Stance analyzer node | #30 | 5 | T02 | todo | | | | |
+| T03 | Retrieval planning and PubMed evidence retriever | #31 | 6 | T02 | in_progress | session_013cWxpzsTJuP1VYHqJT9oWT | 2026-11-22 00:02 | | Record PubMed responses as fixtures; tests make no network calls |
+| T04 | Stance analyzer node | #30 | 5 | T02 | in_progress | session_013cWxpyUeq4YuAXTpZfndft | 2026-11-22 00:02 | | |
 | T05 | Rerank and filter evidence | #32 | 6 | T03 | todo | | | | |
 | T06 | Evidence verifier node | #33 | 7 | T03, T05 | todo | | | | |
 | T07 | Critic node and bounded retrieval loop | #34 | 8 | T06 | todo | | | | |
@@ -31,6 +31,8 @@ starts the next ready task, and records progress here.
 
 Newest first. One line per event: date, task, what happened.
 
+- 2026-11-22 00:02 UTC — T04 started in session session_013cWxpyUeq4YuAXTpZfndft.
+- 2026-11-22 00:02 UTC — T03 started in session session_013cWxpzsTJuP1VYHqJT9oWT.
 - 2026-11-22 00:01 UTC — T02 done: PR #49 squash-merged into langgraph-build (67 passed, 1 skipped). T03, T04, T10 now unblocked.
 - 2026-11-21 23:53 UTC — T02 started in session session_013cWxq2fmACtMefWPTdEkMT (parallel with T01, per 23d9d35).
 - 2026-11-21 23:51 UTC — T01 started in session session_013cWxpykbHfbgKcp3qazzmb.
