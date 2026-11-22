@@ -138,10 +138,13 @@ One LLM pass reads the whole fused timeline and returns each distinct, checkable
 ```json
 {"claim_id": "c1", "claim_text": "Drinking hot water cures the flu",
  "claim_category": "treatment_efficacy",
+ "claim_kind": "research_question",
  "source_segment_ids": ["t1", "o1"],
  "start_seconds": 3.5, "end_seconds": 8.0,
  "requires_verification": true}
 ```
+
+`claim_kind` is `research_question` (does X work, does X cause Y) or `fact_of_record` (a schedule, a legal limit, a statistic, a basic physiological fact). Retrieval uses it to choose between studies and the authoritative references in section 6.
 
 The output format is enforced with a forced tool call and a Pydantic schema, so the model can't return free text.
 
@@ -207,6 +210,27 @@ Retrieval is deterministic code that searches PubMed for each claim, falling bac
 - **Rate limits:** NCBI allows about 3 requests a second without an API key and 10 with one. Requests are spaced out and retried with backoff on errors.
 - **Cache** results by query, so retries, repeated claims and re-runs don't hit PubMed again.
 - **Treat abstracts as untrusted text,** like the transcript (section 15).
+
+### Trusted sources beyond PubMed
+
+PubMed answers "what does the research say?", but many health claims are facts of record rather than research questions: a vaccination schedule, a legal limit, a national statistic, the nutrient content of a food, basic physiology. For those, retrieval also searches a short, fixed list of authoritative references.
+
+| Kind of claim | Source |
+| --- | --- |
+| Textbook physiology, standard medical facts | NCBI Bookshelf (e.g. StatPearls), searched through the same E-utilities API |
+| Vaccination schedules | CDC and WHO immunisation schedules |
+| Drug, food and supplement rules, safety limits | FDA, EMA, EFSA |
+| Public-health guidance and fact sheets | WHO, CDC, NHS, ECDC |
+| Disease statistics | WHO Global Health Observatory, national statistics offices |
+| Food composition | USDA FoodData Central |
+
+**Rules for these sources:**
+
+- **A fixed allow-list in config.** Code fetches only these domains; the model can't add a source. A general web search is still excluded.
+- **Cited like papers.** Each record gets an `evidence_id` built by code (`ref_<hash>`), `"source": "reference"`, the URL, the date retrieved and the quoted passage. Pages change, so a snapshot of the fetched text is stored with its hash.
+- **Same verdict rules.** A reference supports CONTRADICTED only when it states the claim is false or gives a figure that conflicts with it. "There is no evidence that X works" is still absence of evidence, so the claim stays INSUFFICIENT\_EVIDENCE.
+- **Ranked with the strongest evidence for facts of record.** For a schedule, a legal limit or a statistic, the official source outranks any single study. For questions of efficacy, studies still come first.
+- **Searched alongside PubMed, not as a fallback.** Claim extraction marks each claim as a research question or a fact of record, and retrieval picks the sources from that. The offline library below remains the fallback for both.
 
 ### When nothing comes back
 
@@ -378,20 +402,30 @@ By the time the judge runs, the judgment has already been made, claim by claim: 
 | If any claim… | Video label |
 | --- | --- |
 | is **endorsed** by the speaker and **contradicted** by the evidence | MISINFO |
+| otherwise, is **refuted** by the speaker but **supported** by the evidence (the speaker denies something true) | MISINFO, always sent to review |
 | otherwise, is **refuted** by the speaker and contradicted by the evidence | DEBUNKED (`DEBUNKING`) |
 | otherwise, at least one claim was judged and nothing false is endorsed | NO-MISINFO |
+| otherwise, is **refuted** by the speaker while the evidence is mixed or insufficient | CANNOT RECOGNIZE, sent to review as a possible debunk |
 | no claim could be judged (all insufficient or not verifiable, or no claims) | CANNOT RECOGNIZE |
 
 ```python
 def judge(claims):
     endorsed_false = [c for c in claims if c.stance == "ENDORSES" and c.verdict == "CONTRADICTED"]
+    denied_true    = [c for c in claims if c.stance == "REFUTES"  and c.verdict == "SUPPORTED"]
     refuted_false  = [c for c in claims if c.stance == "REFUTES"  and c.verdict == "CONTRADICTED"]
     judged         = [c for c in claims if c.verdict in ("SUPPORTED", "CONTRADICTED")]
-    if endorsed_false: return "MISINFO", endorsed_false
-    if refuted_false:  return "DEBUNKING", refuted_false
-    if judged:         return "NO_MISINFO", judged
-    return "CANNOT_RECOGNIZE", []
+    refuted_open   = [c for c in claims if c.stance == "REFUTES"  and c.verdict in ("MIXED", "INSUFFICIENT_EVIDENCE")]
+    if endorsed_false: return "MISINFO", endorsed_false, []
+    if denied_true:    return "MISINFO", denied_true, ["speaker denies a supported claim"]
+    if refuted_false:  return "DEBUNKING", refuted_false, []
+    if judged:         return "NO_MISINFO", judged, []
+    if refuted_open:   return "CANNOT_RECOGNIZE", refuted_open, ["possible debunk of an unsettled claim"]
+    return "CANNOT_RECOGNIZE", [], []
 ```
+
+The third value is the list of review reasons the rule itself adds (section 11).
+
+**Probe: why two new branches?** Labelling the first golden-set batch exposed two gaps. A speaker who *refutes a true claim* ("vaccines don't prevent measles, that's a lie") was falling through to NO-MISINFO, because only endorsed false claims counted as misinformation. Denying established evidence is misinformation too, so it now is, and it always goes to a person, because it rests entirely on the stance being right. The second gap: clear debunks of claims the sources couldn't settle were landing in CANNOT RECOGNIZE with nothing to flag them. They still don't get DEBUNKED automatically, since refuting an unsettled claim isn't the same as correcting a false one, but a person now sees them. Most of the other missed debunks (statistics, schedules, regulatory limits) are fixed at the source: section 6 now allows authoritative reference sources, so those claims can be checked and reach CONTRADICTED.
 
 The label always comes with the claims that decided it, so the explanation can point at them: "MISINFO because claim 1 is endorsed and contradicted by these two papers."
 
@@ -538,7 +572,7 @@ Evaluation is what turns every design claim in this document into something meas
 
 - **One shared, versioned set** used by every track, not separate spreadsheets.
 - **Labelled at both levels:** a label per video, and per claim the claim text, its truth (supported, contradicted, insufficient), the speaker's stance, and the source the label is based on.
-- **Two independent labellers** per item, with agreement measured (Cohen's kappa). Disagreements are settled and recorded. Human agreement is the ceiling the system is compared against.
+- **Two independent labellers** per item, with agreement measured (Cohen's kappa). Disagreements are settled and recorded. Videos with no health content are tagged out\_of\_scope and left out of every metric, so they can't inflate CANNOT RECOGNIZE. Human agreement is the ceiling the system is compared against.
 - **Split by video, not by sentence,** so no video appears in both tuning and test data.
 - **Covers the hard cases on purpose:**
 
