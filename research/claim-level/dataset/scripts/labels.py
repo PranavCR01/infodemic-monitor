@@ -1851,4 +1851,900 @@ LABELS = [
             },
         ],
     },
+    {
+        "video_id": "v31",
+        "topic": "supplements / dermatology",
+        "case_tags": ["debunking"],
+        "confidence": "medium",
+        "notes": "@drmichaelsays, an OBGYN, stitching a supplement-claims "
+                 "video and rebutting four claims in turn. Notable for the "
+                 "stance step because the refutation is often tonal rather "
+                 "than propositional -- 'Really?', 'the hair transplant "
+                 "surgeons in Turkey are really shaking in the boots with this "
+                 "one' -- so a system that keys on explicit negation would "
+                 "read sarcasm as agreement. He also says outright that for "
+                 "these claims he does not need to produce studies, which is "
+                 "the honest position and the reason three of the four rows "
+                 "are INSUFFICIENT_EVIDENCE. This collector's folder carried "
+                 "no label.",
+        "claims": [
+            {
+                "text": "Tea tree reduces all acne by 512 percent",
+                "start": 16.2, "end": 22.3,
+                "stance": "REFUTES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:2145499", "PMID:27416314"],
+                "confidence": "medium",
+                "notes": "Tea tree oil does have a measured effect on acne, "
+                         "and that is what contradicts the claim: the "
+                         "comparative trial against benzoyl peroxide reports a "
+                         "modest effect with slower onset, nothing like a "
+                         "512% reduction -- a figure that cannot describe a "
+                         "reduction at all, as the speaker points out himself.",
+            },
+            {
+                "text": "Macker [maca] root. Three times your pencil size in "
+                        "30 days",
+                "start": 46.7, "end": 50.7,
+                "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "Nothing retrieved tests maca root against genital "
+                         "size. Refuted by incredulity rather than by "
+                         "evidence, which is a stance-detection case as much "
+                         "as a verdict one.",
+            },
+            {
+                "text": "Beat root [beetroot] spikes muscle growth in 30 days",
+                "start": 54.8, "end": 57.8,
+                "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "Refuted with a joke about Ronnie Coleman. Nothing "
+                         "retrieved tests beetroot against muscle growth over "
+                         "30 days.",
+            },
+            {
+                "text": "Batana oil adds three inches of hair to your scalp ... "
+                        "Reverses you're balding completely",
+                "start": 69.6, "end": 76.5,
+                "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "Nothing retrieved tests batana oil for hair growth "
+                         "or androgenetic alopecia.",
+            },
+            {
+                "text": "It [tea tree] can actually be quite damaging to your "
+                        "skin if you apply it directly and don't dilute it "
+                        "down",
+                "start": 41.7, "end": 45.7,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:31780027"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The speaker's own positive claim. The systematic "
+                         "review of essential oils as topical anti-infectives "
+                         "was retrieved but nothing readable in it addresses "
+                         "undiluted tea tree oil causing skin damage.",
+            },
+        ],
+    },
+    {
+        "video_id": "v33",
+        "topic": "appetite / circadian rhythm",
+        "case_tags": ["accurate"],
+        "confidence": "high",
+        "notes": "@footdocdana explaining why morning hunger is low, in four "
+                 "sentences. The most straightforwardly accurate video in the "
+                 "bundle: every claim maps onto the circadian-appetite "
+                 "literature, there is no product, and the mechanism is "
+                 "described without overreach. Worth keeping as a "
+                 "NO_MISINFO anchor -- a set made only of hard cases cannot "
+                 "measure false positives. This collector's folder carried no "
+                 "label.",
+        "claims": [
+            {
+                "text": "Your body has a natural circadian rhythm that makes "
+                        "hunger hit its lowest point around 8AM",
+                "start": 8.4, "end": 13.3,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:32463976", "PMID:30232416"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Supported in direction by the circadian "
+                         "substrate-oxidation and ghrelin literature. The "
+                         "specific clock time of 8 a.m. is more precise than "
+                         "the retrieved studies state, which is why this is "
+                         "medium rather than high confidence.",
+            },
+            {
+                "text": "Growl in [ghrelin], your hunger hormone is naturally "
+                        "suppressed in the morning hours",
+                "start": 13.3, "end": 17.0,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:30232416"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "Directly supported: ghrelin is shown to be governed "
+                         "by the endogenous circadian system in humans. Note "
+                         "the transcript renders 'ghrelin' as 'growl in' -- a "
+                         "transcription artefact worth keeping for the "
+                         "extraction track, since a claim extractor reading "
+                         "the raw transcript loses the hormone's name.",
+            },
+            {
+                "text": "hunger and appetite peak later in the evening",
+                "start": 17.0, "end": 21.5,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:32463976", "PMID:41622791"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Consistent with the chrononutrition literature on "
+                         "diurnal appetite variation.",
+            },
+            {
+                "text": "poor sleep messes with your hunger hormones "
+                        "completely",
+                "start": 23.9, "end": 27.5,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:30232416"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The retrieved paper covers circadian misalignment "
+                         "rather than sleep deprivation as such, and "
+                         "'completely' is not a testable magnitude.",
+            },
+        ],
+    },
+    {
+        "video_id": "v34",
+        "topic": "cancer / diet",
+        "case_tags": ["missing_evidence"],
+        "confidence": "medium",
+        "notes": "Sixteen seconds, one piece of advice, aimed squarely at "
+                 "people who have just been diagnosed with cancer: cut out "
+                 "processed sugar to starve the cancer. The shortest video in "
+                 "the bundle and among the most consequential, and it ends "
+                 "CANNOT_RECOGNIZE because glucose restriction as cancer "
+                 "therapy is still at the stage of proposed research "
+                 "frameworks rather than tested in patients. Section 7 says "
+                 "untested is insufficient, not false. This is the clearest "
+                 "argument in the whole set for a materiality signal separate "
+                 "from the verdict: advice this dangerous should reach a human "
+                 "reviewer whatever the evidence column says, and section 9's "
+                 "materiality note is the right place for it. This "
+                 "collector's folder carried no label.",
+        "claims": [
+            {
+                "text": "the first word of advice I would give is to cut out "
+                        "any form of processed sugar. Starving cancer to death "
+                        "by removing one food in particular, refined sugars, "
+                        "could end up saving your life",
+                "start": 5.2, "end": 15.1,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:39639257", "PMID:40428567"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The retrieved work is a proposed clinical research "
+                         "framework for ketogenic metabolic therapy in "
+                         "glioblastoma and a review of diet in cancer "
+                         "development and management -- that is, the question "
+                         "is open and being formalised, not answered. Nothing "
+                         "tests whether removing refined sugar starves a "
+                         "tumour or extends survival. Flagged for review on "
+                         "materiality rather than on verdict.",
+            },
+        ],
+    },
+    {
+        "video_id": "v35",
+        "topic": "radiation / food folklore",
+        "case_tags": ["missing_evidence"],
+        "confidence": "high",
+        "notes": "@healingartsapothecary retelling the Hiroshima miso story "
+                 "and concluding that you should have miso soup before an "
+                 "X-ray. An instructive INSUFFICIENT_EVIDENCE case rather "
+                 "than an empty one: there really is a radioprotection study, "
+                 "and it is in mice, so the directness test in section 7 "
+                 "decides the row. The speaker is also careful in one respect "
+                 "worth noting -- he says explicitly that it did not work as "
+                 "treatment after exposure -- which makes this a claim with "
+                 "a real qualifier that must be preserved per section 4. This "
+                 "collector's folder carried no label.",
+        "claims": [
+            {
+                "text": "Japanese doctors during World War 2 accidentally "
+                        "discovered that miso soup was a preventative and a "
+                        "way to stop radiation exposure and radiation "
+                        "poisoning",
+                "start": 0.0, "end": 11.8,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "A historical claim about a wartime discovery. "
+                         "Nothing retrieved documents it; the firsthand "
+                         "accounts the speaker appeals to are not in the "
+                         "biomedical literature.",
+            },
+            {
+                "text": "they discovered that miso soup carried binders that "
+                        "would actually remove any form of radiation from the "
+                        "human body or the bloodstream",
+                "start": 36.4, "end": 44.1,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:11833659"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "There is a real radioprotection study -- "
+                         "'Radioprotective effects of miso (fermented soy bean "
+                         "paste) against radiation in B6C3F1 mice' -- but it "
+                         "is in mice, and it reports radioprotection rather "
+                         "than binders removing radiation from the "
+                         "bloodstream. Fails directness twice over: wrong "
+                         "species and wrong mechanism.",
+            },
+            {
+                "text": "it demonstrated the potential for miso to prevent "
+                        "radiation poisoning ... So why not have a bowl of "
+                        "miso soup before getting any kind of X-rays?",
+                "start": 49.2, "end": 57.8,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:11833659"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "The claim is hedged to 'potential', which the mouse "
+                         "study arguably supports, but the recommendation it "
+                         "carries -- miso before diagnostic X-rays -- is not "
+                         "tested by anything retrieved.",
+            },
+        ],
+    },
+    {
+        "video_id": "v36",
+        "topic": "supplements / minerals",
+        "case_tags": ["missing_evidence"],
+        "confidence": "medium",
+        "notes": "@healingartsapothecary on getting '102 minerals' from "
+                 "burdock root, Irish moss, bladderwrack and moringa, ending "
+                 "in 'we can buy it'. Every claim here is sweeping and "
+                 "unevidenced, and the video still comes out "
+                 "CANNOT_RECOGNIZE, which is the sharpest illustration in the "
+                 "set of the gap described in the PR: a claim can be plainly "
+                 "false and still not be CONTRADICTED, because no researcher "
+                 "has bothered to test it. The Linus Pauling attribution row "
+                 "is the starkest -- 'every sickness, every disease and every "
+                 "ailment' traced to mineral deficiency is contradicted by the "
+                 "existence of infectious and genetic disease, but no "
+                 "retrieved paper states that, and section 7 does not permit "
+                 "filling the gap from background knowledge. This "
+                 "collector's folder carried no label.",
+        "claims": [
+            {
+                "text": "our entire physical makeup is comprised of 102 of "
+                        "these minerals in trace amounts",
+                "start": 6.5, "end": 14.3,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "Nothing retrieved states an element count for the "
+                         "human body. A reviewer with a biochemistry "
+                         "reference should expect to correct the figure.",
+            },
+            {
+                "text": "according to two-time Nobel Prize winning chemist Dr. "
+                        "Linus Pauling, you can trace every sickness, every "
+                        "disease and every ailment to a mineral deficiency. I "
+                        "happen to agree with them",
+                "start": 14.8, "end": 25.9,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "low",
+                "notes": "Recorded as ENDORSES, not QUOTES: he attributes it "
+                         "to Pauling and then says he agrees, which is "
+                         "adopting the claim. Nothing retrieved tests it or "
+                         "documents the attribution. THE ROW WHERE THE RUBRIC "
+                         "IS MOST VISIBLY TOO CAUTIOUS -- a sweeping claim "
+                         "refuted by the whole of infectious and genetic "
+                         "medicine still lands on insufficient because no "
+                         "paper bothers to say so.",
+            },
+            {
+                "text": "Burdock root contains all 102 of those minerals",
+                "start": 25.9, "end": 32.1,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "No composition analysis of burdock root was "
+                         "retrieved.",
+            },
+            {
+                "text": "Iris Seamos [Irish moss] is a gelatinous sea algae "
+                        "that contains 92 of those 102 minerals, and it's "
+                        "actually in concentrated amounts",
+                "start": 32.1, "end": 41.1,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "No composition analysis retrieved.",
+            },
+            {
+                "text": "moranga [moringa] powder ... has just about the "
+                        "highest concentration of vitamins of any plant on the "
+                        "earth",
+                "start": 49.1, "end": 58.9,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:39759372", "PMID:25190880"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Moringa leaf composition studies were retrieved and "
+                         "they do profile vitamins and minerals, but none "
+                         "ranks moringa against all other plants, which is "
+                         "what the superlative claims.",
+            },
+        ],
+    },
+    {
+        "video_id": "v37",
+        "topic": "diabetes / supplements",
+        "case_tags": ["clearly_false"],
+        "confidence": "high",
+        "notes": "@healingartsapothecary claiming Ozempic contains berberine, "
+                 "that berberine is 'nature's metformin', and inviting people "
+                 "with diabetes to talk to their doctor about getting off "
+                 "prescription medication -- while selling barberry capsules "
+                 "and extract. MISINFO on a cleanly contradicted "
+                 "pharmacology claim, and the most dangerous advice in the "
+                 "bundle after v34. A good case for the set because the video "
+                 "mixes a flatly false premise with a partially supported "
+                 "claim: berberine really does lower glucose in trials, which "
+                 "is what makes the false premise persuasive. This "
+                 "collector's folder carried no label.",
+        "claims": [
+            {
+                "text": "there's an ingredients in the drug ozembic "
+                        "[Ozempic] called berberine",
+                "start": 0.0, "end": 5.0,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:26308095", "PMID:40281304"],
+                "confidence": "high",
+                "notes": "Flatly false and the claim that makes this video "
+                         "MISINFO. Semaglutide is an acylated GLP-1 analogue, "
+                         "a peptide, as the discovery paper sets out; "
+                         "berberine is a plant alkaloid and is not a "
+                         "component of it. The video's entire argument rests "
+                         "on this.",
+            },
+            {
+                "text": "berberine is actually nature's metformin",
+                "start": 19.0, "end": 28.0,
+                "stance": "ENDORSES", "verdict": "MIXED",
+                "supporting": ["PMID:34956436", "PMID:23118793"],
+                "contradicting": ["PMID:34407851"],
+                "confidence": "medium",
+                "notes": "Berberine does improve glycaemic measures in "
+                         "randomised trials, which is the supporting side. The "
+                         "comparative analysis of oral insulin sensitizers "
+                         "places metformin and berberine differently, so "
+                         "equating them is not supported. MIXED rather than "
+                         "CONTRADICTED because the glucose-lowering half is "
+                         "real.",
+            },
+            {
+                "text": "the benefits of berberine, barberry are so "
+                        "astounding that even doctors are getting off the "
+                        "drug [metformin]",
+                "start": 33.1, "end": 38.5,
+                "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "An unquantified claim about what unnamed doctors "
+                         "do. No study could test it as stated.",
+            },
+            {
+                "text": "berberine is amazing because it has a multitude of "
+                        "health benefits, one of which is it helps to "
+                        "eliminate arterial plaque",
+                "start": 38.5, "end": 44.9,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "A search for berberine against atherosclerosis or "
+                         "arterial plaque regression returned nothing at all; "
+                         "the empty search is in evidence_cache/.",
+            },
+        ],
+    },
+    {
+        "video_id": "v39",
+        "topic": "nutrition / multiple myths",
+        "case_tags": ["debunking", "uncertain_science"],
+        "confidence": "medium",
+        "notes": "@jacbfoods refuting five nutrition myths in 86 seconds, "
+                 "naming the composition fallacy explicitly. Pairs with v19 "
+                 "and v11 as the third seed-oil video in the set, and with "
+                 "v42 which argues the opposite. Comes out DEBUNKING on the "
+                 "seed-oil row. Note that his own position on saturated fat "
+                 "('fine to eat in moderation ... probably not optimal to "
+                 "increase to extreme amounts') is more carefully hedged than "
+                 "v11's 'totally fine', and the hedging is what moves it from "
+                 "MIXED to a claim the evidence can live with. This "
+                 "collector's folder carried no label.",
+        "claims": [
+            {
+                "text": "seed oils are unhealthy, leads to inflammation, "
+                        "heart disease, obesity",
+                "start": 3.6, "end": 7.4,
+                "stance": "REFUTES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:25161045", "PMID:37513547"],
+                "confidence": "medium",
+                "notes": "Same myth and same contradicting evidence as v19: "
+                         "dietary linoleic acid is inversely associated with "
+                         "coronary heart disease risk in a dose-response "
+                         "meta-analysis of prospective cohorts.",
+            },
+            {
+                "text": "that carbs make you fat",
+                "start": 21.4, "end": 23.0,
+                "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "Searches for isocaloric low-carbohydrate against "
+                         "low-fat comparisons returned trials in specific "
+                         "clinical populations rather than a test of the "
+                         "general claim, so nothing retrieved settles it.",
+            },
+            {
+                "text": "butter should be eaten as a snack and it is healthy "
+                        "for you to do so",
+                "start": 36.1, "end": 38.4,
+                "stance": "REFUTES", "verdict": "MIXED",
+                "supporting": ["PMID:40416032"],
+                "contradicting": ["PMID:32428300"],
+                "confidence": "medium",
+                "notes": "The same saturated-fat split as v11: Cochrane finds "
+                         "benefit from reducing saturated fat, a 2025 "
+                         "meta-analysis finds none. The evidence does not "
+                         "settle whether eating butter as a snack is healthy, "
+                         "so the refutation lands on MIXED.",
+            },
+            {
+                "text": "You can gain fat in a calorie deficit due to "
+                        "hormonal problems or endocrine dysfunction",
+                "start": 46.9, "end": 50.0,
+                "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "Nothing retrieved tests this. The speaker's "
+                         "counter-argument is from first principles ('you are "
+                         "still bound to the laws of physics') rather than "
+                         "from a study, which is a reasonable argument and "
+                         "still not retrievable evidence.",
+            },
+            {
+                "text": "that vegetables are bad for you",
+                "start": 58.7, "end": 62.6,
+                "stance": "REFUTES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:28338764", "PMID:33641343"],
+                "confidence": "high",
+                "notes": "Contradicted by the systematic review and "
+                         "dose-response meta-analysis of fruit and vegetable "
+                         "intake against cardiovascular disease, total cancer "
+                         "and all-cause mortality, and by the two-cohort "
+                         "mortality analysis.",
+            },
+        ],
+    },
+    {
+        "video_id": "v40",
+        "topic": "hydration / supplements",
+        "case_tags": [],
+        "confidence": "medium",
+        "notes": "A 24-second sales-funnel opener (@nutritiouslyeasy): day one "
+                 "of a 30-day tips series, recommending electrolytes in water "
+                 "every morning. Short, and a good test of how the rubric "
+                 "handles a claim whose first half is supported and whose "
+                 "second half is a 'long laundry list of health benefits' with "
+                 "no content. This collector's folder carried no label.",
+        "claims": [
+            {
+                "text": "Electrolytes help you properly retain fluid, keeping "
+                        "you way more hydrated",
+                "start": 12.5, "end": 16.0,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:34578811", "PMID:9760324"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The Beverage Hydration Index work shows electrolyte "
+                         "content influences fluid retention, and the sodium "
+                         "rehydration trial supports the mechanism. Both are "
+                         "in exercise-rehydration settings rather than healthy "
+                         "people adding electrolytes to morning water, which "
+                         "is a directness limitation.",
+            },
+            {
+                "text": "So think better, energy levels, immune health, and "
+                        "no more headaches",
+                "start": 16.0, "end": 19.5,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "Three separate outcomes asserted in one breath with "
+                         "no mechanism and no magnitude. Nothing retrieved "
+                         "tests electrolyte supplementation against energy, "
+                         "immune function or headaches in this population. "
+                         "Kept as one row because it is one list in one "
+                         "clause, not three developed claims.",
+            },
+        ],
+    },
+    {
+        "video_id": "v41",
+        "topic": "hand hygiene / food safety",
+        "case_tags": ["accurate"],
+        "confidence": "high",
+        "notes": "A food-service handwashing instructional (@partstown, a "
+                 "catering-equipment supplier). Procedural rather than "
+                 "persuasive, and accurate. Included deliberately as a second "
+                 "NO_MISINFO anchor alongside v33: the set needs content a "
+                 "classifier should leave alone, or false-positive rate cannot "
+                 "be measured. Also the clearest case in the bundle of a video "
+                 "whose claims are instructions -- 'scrub for 20 seconds' is "
+                 "an imperative that carries an implicit efficacy assertion, "
+                 "and it is recorded as the assertion. This collector's "
+                 "folder carried no label.",
+        "claims": [
+            {
+                "text": "Scrub your entire hands up to just above your wrists "
+                        "for 20 seconds",
+                "start": 12.5, "end": 17.2,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:25836392"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The quantification study reports a 1.7 log CFU "
+                         "reduction for a 20-second wash with soap against 1.0 "
+                         "log for a 5-second wash without, so the 20-second "
+                         "duration with soap is the better-supported "
+                         "procedure. Medium confidence because the same paper "
+                         "finds some comparisons not statistically "
+                         "significant.",
+            },
+            {
+                "text": "Use a piece of paper towel to turn off the faucet",
+                "start": 26.1, "end": 28.9,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "Standard food-safety practice, but nothing "
+                         "retrieved tests recontamination from taps or the "
+                         "paper-towel step specifically.",
+            },
+        ],
+    },
+    {
+        "video_id": "v32",
+        "topic": "obesity pharmacotherapy / GLP-1",
+        "case_tags": ["debunking", "uncertain_science"],
+        "confidence": "medium",
+        "notes": "A stitch with two speakers who disagree: roughly the first "
+                 "95 seconds is an influencer arguing against GLP-1 drugs, "
+                 "then @drspencer rebuts her point by point. The most "
+                 "important video in the set for the stance step, because "
+                 "stance cannot be read off the words alone -- the same video "
+                 "contains assertions from both sides, and which speaker is "
+                 "talking decides the label. One row is deliberately UNCLEAR: "
+                 "the weight-regain claim is the influencer's, and the doctor "
+                 "never contests it, so neither REFUTES nor ENDORSES fits the "
+                 "video as a whole. Section 5 names 'two speakers with "
+                 "different views' as an UNCLEAR trigger. Comes out DEBUNKING. "
+                 "This collector's folder carried no label.",
+        "claims": [
+            {
+                "text": "If you go to get off of it, you gain all the weight "
+                        "back",
+                "start": 1.7, "end": 5.4,
+                "stance": "UNCLEAR", "verdict": "SUPPORTED",
+                "supporting": ["PMID:35441470", "PMID:41399474"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Stance UNCLEAR because this is the influencer's "
+                         "claim and the doctor never addresses it, so the "
+                         "video takes no position. The verdict is the "
+                         "interesting part: her claim is the best-supported "
+                         "one in the exchange. The STEP 1 trial extension "
+                         "found weight regain after semaglutide withdrawal, "
+                         "and a 2025 meta-analysis documents metabolic rebound "
+                         "after discontinuation. 'All the weight' overstates "
+                         "it -- STEP 1 participants regained about two thirds "
+                         "-- hence medium confidence.",
+            },
+            {
+                "text": "Ozympic [Ozempic] kills hunger. And that's one of the "
+                        "reasons it's causing people to lose weight",
+                "start": 28.5, "end": 32.4,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:28266779", "PMID:40466247"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "The one claim both speakers accept, so ENDORSES is "
+                         "safe. Directly supported: the trial of once-weekly "
+                         "semaglutide measured effects on appetite, energy "
+                         "intake and control of eating.",
+            },
+            {
+                "text": "We don't know what it does to the microbiome ... If "
+                        "we destroy our microbiome, you destroy your body and "
+                        "you destroy your mind",
+                "start": 39.6, "end": 55.6,
+                "stance": "REFUTES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:40284168"],
+                "confidence": "medium",
+                "notes": "Refuted by the doctor and contradicted by the "
+                         "evidence: a systematic review of thirty-eight "
+                         "studies describes GLP-1 analogues' effects on gut "
+                         "microbiota composition, richness and diversity, with "
+                         "liraglutide promoting beneficial genera. 'We don't "
+                         "know' is no longer true. Medium confidence because "
+                         "much of that review is animal work.",
+            },
+            {
+                "text": "a fasting lifestyle will give you the same weight "
+                        "loss result and save you money as ozempic",
+                "start": 78.2, "end": 89.6,
+                "stance": "REFUTES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:38740993", "PMID:40961952"],
+                "confidence": "medium",
+                "notes": "The SELECT long-term analysis and the STEP UP phase "
+                         "3b trial put semaglutide weight loss well above what "
+                         "fasting achieves, which contradicts equivalence. A "
+                         "search for intermittent-fasting weight-loss "
+                         "magnitude returned nothing, so the fasting side of "
+                         "the comparison rests on the absence of comparable "
+                         "results rather than on a retrieved number.",
+            },
+            {
+                "text": "we should look at hard outcomes meaning improved "
+                        "cardiovascular health. We reduce risk of heart "
+                        "attacks",
+                "start": 121.8, "end": 130.3,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:39181597", "PMID:38796653"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The doctor's own claim, supported by the SELECT "
+                         "cardiovascular and kidney outcome analyses.",
+            },
+            {
+                "text": "You get less than a 10% total body weight loss with "
+                        "any type of fasting ... Whereas these medicines we're "
+                        "looking at 15 to 20 or higher percent total body "
+                        "weight loss",
+                "start": 147.6, "end": 159.7,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:38740993", "PMID:40961952"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The drug half of the comparison is well supported. "
+                         "The 'less than 10% with any type of fasting' half is "
+                         "not backed by anything retrieved, so a reviewer "
+                         "could reasonably split this row in two and mark the "
+                         "fasting half insufficient.",
+            },
+        ],
+    },
+    {
+        "video_id": "v42",
+        "topic": "nutrition / dietary fat",
+        "case_tags": ["clearly_false"],
+        "confidence": "high",
+        "notes": "The fourth and final seed-oil video, and the one that "
+                 "argues the opposite of v11, v19 and v39. MISINFO: the "
+                 "inflammation claim is contradicted head-on by a "
+                 "meta-analysis of randomised trials. Structurally "
+                 "interesting because the argument is built out of "
+                 "processing steps (hexane, heat, sodium hydroxide, bleaching) "
+                 "where individual factual fragments are true or near-true and "
+                 "the health conclusion drawn from them is not -- the same "
+                 "shape as v27. These four videos together are the most "
+                 "valuable cluster in the set: one topic, four creators, "
+                 "labels spanning MISINFO, DEBUNKING and NO_MISINFO, which is "
+                 "exactly what section 14 means by covering the hard cases on "
+                 "purpose.",
+        "claims": [
+            {
+                "text": "What are the most harmful foods that people "
+                        "constantly eat? Seed oils",
+                "start": 0.0, "end": 3.1,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:25161045", "PMID:37513547"],
+                "confidence": "medium",
+                "notes": "The dose-response meta-analysis of prospective "
+                         "cohorts finds dietary linoleic acid inversely "
+                         "associated with coronary heart disease risk, which "
+                         "contradicts seed oils being the most harmful food "
+                         "people eat.",
+            },
+            {
+                "text": "you de-gum it with hexane, which is a known "
+                        "neurotoxin",
+                "start": 13.0, "end": 17.4,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:39536137", "PMID:11724159"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "Deliberately labelled SUPPORTED. n-hexane really is "
+                         "a neurotoxin -- occupational exposure causes "
+                         "peripheral neuropathy, as the toxicity review and "
+                         "the automotive-technician cluster report show. The "
+                         "claim as stated is true; the inference the video "
+                         "draws from it, that refined seed oil is therefore "
+                         "harmful to eat, is a separate claim and is the one "
+                         "the evidence contradicts. A reviewer should read "
+                         "this row next to the inflammation row -- this is how "
+                         "true fragments carry a false conclusion.",
+            },
+            {
+                "text": "You need to deodorize it with sodium hydroxide, "
+                        "which is a very powerful carcinogen",
+                "start": 22.0, "end": 26.1,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "A search for sodium hydroxide toxicity and "
+                         "carcinogenicity returned nothing at all; the empty "
+                         "search is in evidence_cache/. Sodium hydroxide is "
+                         "handled as a corrosive rather than a carcinogen, but "
+                         "no retrieved source says so, so this stays "
+                         "insufficient rather than contradicted. Another row a "
+                         "reviewer with a toxicology reference should expect "
+                         "to upgrade.",
+            },
+            {
+                "text": "These are pro-inflammatory that cause massive amount "
+                        "of inflammation in the body",
+                "start": 45.4, "end": 49.6,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:28752873", "PMID:22889633"],
+                "confidence": "high",
+                "notes": "The claim that makes this video MISINFO, and the "
+                         "best-evidenced contradiction in the bundle. The "
+                         "systematic review and meta-analysis of randomised "
+                         "trials found no significant effect of higher "
+                         "linoleic acid intake on tumour necrosis factor, "
+                         "interleukin-6, adiponectin or monocyte "
+                         "chemoattractant protein 1, and a second systematic "
+                         "review of randomised trials in healthy people agrees.",
+            },
+            {
+                "text": "in your kitchen, you need five oils. You need a "
+                        "grass-fed butter, butter, grass-fed tallow, coconut "
+                        "oil, and an olive oil",
+                "start": 51.9, "end": 59.3,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [],
+                "contradicting": ["PMID:32428300"],
+                "confidence": "medium",
+                "notes": "A recommendation rather than a mechanism claim, and "
+                         "nothing retrieved tests this specific set of five "
+                         "fats. Cited against is the Cochrane review on "
+                         "reducing saturated fat, since four of the five "
+                         "recommended fats are saturated-fat-dominant, but "
+                         "that bears on the recommendation rather than "
+                         "testing it.",
+            },
+        ],
+    },
+    {
+        "video_id": "v43",
+        "topic": "none (non-health)",
+        "case_tags": [],
+        "confidence": "high",
+        "notes": "A long-form practical demonstration of the Earth's "
+                 "curvature, renting a high floor to watch a boat hull "
+                 "reappear. Science communication, no health content. "
+                 "Collectors filed it under NO_MISINFO.",
+        "claims": [],
+    },
+    {
+        "video_id": "v44",
+        "topic": "water safety / infection",
+        "case_tags": ["missing_evidence"],
+        "confidence": "medium",
+        "notes": "A narrated scare story: a tourist drinks Antarctic glacial "
+                 "water and dies three days later from ancient bacteria and "
+                 "parasites humans have no immunity to, ending with a prompt "
+                 "to search TikTok for the clip. Collectors filed it under "
+                 "NO_MISINFO, which the section 9 rules do not reproduce -- it "
+                 "comes out CANNOT_RECOGNIZE, because the death is an "
+                 "unverifiable anecdote and nothing retrievable tests the "
+                 "ancient-pathogen claim. Recorded as a collector "
+                 "disagreement.",
+        "claims": [
+            {
+                "text": "This girl makes the last mistake of her life, "
+                        "drinking this clear glacial water in Antarctica. And "
+                        "three days later, she was urgently taken to the "
+                        "hospital, where she died",
+                "start": 0.0, "end": 9.6,
+                "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "An unidentified individual, no date, no location, no "
+                         "cause of death, and the video itself switches the "
+                         "subject's gender mid-story ('what happened to him'). "
+                         "There is no version of this a study could test.",
+            },
+            {
+                "text": "you can see ancient bacteria and parasites there, "
+                        "which are also older than those very dinosaurs, and "
+                        "people just don't have immunity from these ancient "
+                        "organisms",
+                "start": 43.1, "end": 51.8,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "A search for ancient microorganisms in glacial ice "
+                         "and permafrost and their viability returned nothing "
+                         "at all; the empty search is in evidence_cache/. The "
+                         "claim also contains a false premise about glacier "
+                         "ages that is geological rather than medical and so "
+                         "is not a row here.",
+            },
+        ],
+    },
+    {
+        "video_id": "v45",
+        "topic": "none (non-health)",
+        "case_tags": [],
+        "confidence": "high",
+        "notes": "A game-theory thought experiment about a million people "
+                 "competing to win. No health content. Collectors filed it "
+                 "under NO_MISINFO.",
+        "claims": [],
+    },
+    {
+        "video_id": "v46",
+        "topic": "none (non-health)",
+        "case_tags": [],
+        "confidence": "high",
+        "notes": "An economics explainer on the seven stages by which global "
+                 "reserve currencies collapse. No health content. Collectors "
+                 "filed it under NO_MISINFO.",
+        "claims": [],
+    },
+    {
+        "video_id": "v47",
+        "topic": "none (non-health)",
+        "case_tags": [],
+        "confidence": "high",
+        "notes": "A natural-history explainer on lobsters being "
+                 "'biologically immortal' and why they die anyway. Biology, "
+                 "not human health, so no checkable health assertion. "
+                 "Collectors filed it under NO_MISINFO. Borderline: a "
+                 "reviewer could argue senescence claims are health-adjacent, "
+                 "and this is in the blind subset, so the disagreement will be "
+                 "measured.",
+        "claims": [],
+    },
+    {
+        "video_id": "v48",
+        "topic": "none (non-health)",
+        "case_tags": [],
+        "confidence": "high",
+        "notes": "A two-person conversation disputing the Great Wall of "
+                 "China's stated length. History, no health content. "
+                 "Collectors filed it under MISINFO, which is plausible for "
+                 "the historical claims but outside this dataset's scope; the "
+                 "section 9 rules give CANNOT_RECOGNIZE. Recorded as a "
+                 "collector disagreement.",
+        "claims": [],
+    },
 ]

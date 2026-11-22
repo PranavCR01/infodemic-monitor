@@ -1,0 +1,110 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 132.21,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 8.2,
+    "text": "For people who don't appreciate just how powerful this virus is can you just remind us how does it compare say to how easy it is to catch COVID or a cold."
+   },
+   {
+    "id": "t2",
+    "start": 10.11,
+    "end": 23.67,
+    "text": "William it is the most contagious virus that we know. One of the things she alluded to was a person who is shedding breathes out the measles virus can leave the room."
+   },
+   {
+    "id": "t3",
+    "start": 24.27,
+    "end": 29.67,
+    "text": "And if a susceptible person comes into that room up to two hours later."
+   },
+   {
+    "id": "t4",
+    "start": 30.61,
+    "end": 37.49,
+    "text": "they can still inhale the few viral particles that are hovering in the air and become infected"
+   },
+   {
+    "id": "t5",
+    "start": 37.49,
+    "end": 46.21,
+    "text": "and become ill. This is a virus that is extremely contagious and obviously that's why we want to"
+   },
+   {
+    "id": "t6",
+    "start": 47.81,
+    "end": 54.53,
+    "text": "vaccinate everyone. As Ms. Rivera said, we're protecting not only ourselves, our own children,"
+   },
+   {
+    "id": "t7",
+    "start": 54.53,
+    "end": 60.37,
+    "text": "our own families, but we're contributing to protection of everyone in the neighborhood"
+   },
+   {
+    "id": "t8",
+    "start": 60.37,
+    "end": 67.17,
+    "text": "and in our communities because there are little babies who could get measles and they have high"
+   },
+   {
+    "id": "t9",
+    "start": 67.17,
+    "end": 72.85,
+    "text": "mortality associated with that who can't be vaccinated yet. And there are people who are"
+   },
+   {
+    "id": "t10",
+    "start": 72.85,
+    "end": 80.05,
+    "text": "immune compromised. They can't take the vaccine. How do we protect them? All the rest of us are"
+   },
+   {
+    "id": "t11",
+    "start": 80.05,
+    "end": 87.97,
+    "text": "protected. We create a cocoon of protection around them so that the virus can't get to those most"
+   },
+   {
+    "id": "t12",
+    "start": 87.97,
+    "end": 98.16,
+    "text": "susceptible who live amongst us are more frail brothers and sisters. A quick note before you"
+   },
+   {
+    "id": "t13",
+    "start": 98.16,
+    "end": 103.52,
+    "text": "go. We want to tell you about a new way you can help support the work that we do here at PBS News."
+   },
+   {
+    "id": "t14",
+    "start": 103.52,
+    "end": 108.16,
+    "text": "PressPass is our new supporter program complete with special benefits for viewers and readers"
+   },
+   {
+    "id": "t15",
+    "start": 108.16,
+    "end": 113.44,
+    "text": "who value independent trustworthy journalism. Learn more about PressPass on our website"
+   },
+   {
+    "id": "t16",
+    "start": 113.44,
+    "end": 115.44,
+    "text": "and sign up today."
+   }
+  ]
+ }
+}
