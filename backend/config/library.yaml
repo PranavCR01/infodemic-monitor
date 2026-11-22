@@ -1,0 +1,58 @@
+# Offline library fallback (design doc section 6, "Fallback: the lab's offline library").
+#
+# Read by app.core.retrieval.library.config. Code never names the embedding model:
+# it comes from here. Changing `embedding.document_model`, `query_model` or `version`
+# means re-embedding the whole library (every chunk records the model and version it
+# was embedded with; vector search only matches chunks embedded with the current
+# one, so until the library is re-embedded only full-text search finds the rest).
+#
+# STATUS: starting values, not measured ones. The OCR thresholds in particular should
+# be set from the Tesseract-vs-EasyOCR check on ~20 real scanned pages (section 6,
+# "OCR"), which needs the lab's real scans; see scripts/compare_library_ocr.py.
+version: library_v1
+
+embedding:
+  # MedCPT (NCBI's biomedical retrieval model): separate document and query
+  # encoders, 768 dimensions, CLS pooling. Runs on our own infrastructure, so
+  # document text is never sent to an outside API.
+  provider: medcpt
+  document_model: ncbi/MedCPT-Article-Encoder
+  query_model: ncbi/MedCPT-Query-Encoder
+  version: medcpt-v1
+  dimensions: 768
+  max_document_tokens: 512
+  max_query_tokens: 64
+  batch_size: 16
+
+ocr:
+  # OCRmyPDF (Tesseract) deskews each page and writes a text layer into the PDF;
+  # PyMuPDF then extracts the text page by page.
+  engine: ocrmypdf
+  language: eng
+  deskew: true
+  rotate_pages: true
+  # Mean Tesseract word confidence (0-100) below which a page is flagged and not
+  # indexed until someone checks it.
+  min_page_confidence: 70
+  # Share of tokens that look like words (heuristic, used with or without Tesseract
+  # confidences). Below this the page is flagged too.
+  min_word_ratio: 0.6
+  # Pages with fewer non-space characters than this are treated as blank, not flagged.
+  min_page_chars: 20
+  # Render resolution for the confidence pass.
+  confidence_dpi: 300
+
+chunking:
+  target_tokens: 400
+  overlap_tokens: 50
+
+search:
+  # Candidates taken from each method before reciprocal rank fusion.
+  candidates_per_method: 50
+  rrf_k: 60
+  default_k: 10
+  # The verifier never sees more than 10 items per claim (section 6 "Cap").
+  max_k: 10
+
+# Internal viewer that highlights the passage (section 6 "How library evidence is cited").
+viewer_url: "/library/documents/{document_id}?page={page}&chunk={chunk_id}"

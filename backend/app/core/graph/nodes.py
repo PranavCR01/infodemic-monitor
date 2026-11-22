@@ -47,7 +47,7 @@ NODE_OUTPUTS: dict[str, frozenset[str]] = {
     r.ANALYZE_STANCE: frozenset({"stance_results"}),
     r.PLAN_RETRIEVAL: frozenset({"retrieval_queries"}),
     r.RETRIEVE_EVIDENCE: frozenset({"retrieved_evidence", "retrieval_attempts"}),
-    r.RERANK_EVIDENCE: frozenset({"reranked_evidence"}),
+    r.RERANK_EVIDENCE: frozenset({"reranked_evidence", "library_evidence"}),
     r.VERIFY_CLAIMS: frozenset({"verification_results", "verification_revisions"}),
     r.CRITIQUE_VERIFICATION: frozenset({"critic_results"}),
     r.JUDGE_CLASSIFICATION: frozenset({"final_result"}),
@@ -251,7 +251,10 @@ def make_stub_nodes(
             return {"validation_errors": ["final_result missing"]}
         claim_ids = {c.claim_id for c in state.get("claims", [])}
         retrieved = {
-            e.evidence_id for recs in state.get("retrieved_evidence", {}).values() for e in recs
+            e.evidence_id
+            for key in ("retrieved_evidence", "library_evidence")
+            for recs in state.get(key, {}).values()
+            for e in recs
         }
         errors += [f"unknown claim_id {c}" for c in final.claim_ids if c not in claim_ids]
         errors += [f"evidence {e} was not retrieved" for e in final.evidence_ids if e not in retrieved]
