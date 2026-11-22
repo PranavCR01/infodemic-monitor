@@ -34,6 +34,11 @@ class EvidenceRecord(_Record):
     source_url: Optional[str] = None
     query: Optional[str] = None
     relevance_score: Optional[float] = None
+    # Set by the reranker (T05, §6 "Reranking"). Study type and its quality score are
+    # kept apart from relevance on purpose. Optional and additive, so checkpoints
+    # written before T05 still load.
+    study_type: Optional[str] = None
+    quality_score: Optional[float] = None
 
 
 class Concept(_Record):

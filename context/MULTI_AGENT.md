@@ -338,6 +338,79 @@ and a claim with two interventions ("fluoride in drinking water") ANDs both.
   is UNCLEAR, or when a contradicted claim is QUOTES/NEUTRAL in a video with no REFUTES, don't
   auto-publish NO_MISINFO.
 
+## 7f. Reranking Decisions (T05, #32)
+
+The reranker is `backend/app/core/retrieval/rerank.py` (plain Python, no LangGraph or
+MCP imports, so T13's `rerank_evidence(claim, records, k)` tool wraps it). The real
+node is `make_rerank_node()` in `backend/app/core/graph/retrieval_nodes.py`, also
+returned by `make_retrieval_nodes()`. The default graph still uses the stub until T11.
+
+- **Two separate scores on every record.** `relevance_score` (0–1, does the paper test
+  this claim?) and `study_type` + `quality_score` (0–1, how strong is the design?).
+  `EvidenceRecord` gained two optional fields, `study_type` and `quality_score`; old
+  checkpoints still load, so the state schema version is unchanged (same rule T04 used).
+- **Relevance is lexical and deterministic** (§6: "a lightweight reranker; an LLM only
+  if measured relevance is poor"). It reuses the planner's PICO frame and MeSH lexicon:
+  intervention and outcome coverage (title hit 1.0, abstract 0.7, broader MeSH heading
+  only 0.4), combined by geometric mean, so a paper about only lemons or only cancer
+  scores 0. Population is a multiplier: animal or lab study ×0.5, claim population
+  ("in children") absent ×0.8, misinformation/social-media research about the claim
+  ×0.5 (it studies beliefs, not the claim). When the lexicon finds no concept on one
+  side ("honey cures *cough*"), the claim's leftover words on that side stand in.
+  A learned scorer (e.g. a cross-encoder) can be injected as `relevance_model`; no model
+  is named in code.
+- **Study type is a lookup** on PubMed's publication types: systematic review/meta-
+  analysis 1.0 > RCT 0.9 > guideline 0.85 > other trial 0.75 > observational 0.55 >
+  narrative review 0.35 > case report, animal 0.2 > in vitro 0.15 > opinion, other 0.1
+  > unknown 0.0. PubMed has no type for animal or cell work, so untyped PubMed records
+  (only "Journal Article") are read with fixed title/abstract cues ("mice", "cell line",
+  "cohort", "randomised"). A tagged human trial is never demoted by those cues. Library
+  records take the type their uploader gave; none = `unknown`, below every tagged type.
+  `evidence_class()` maps types to the issue's classes: evidence synthesis, human
+  clinical, human observational, animal, mechanistic, general.
+- **Threshold, then cap.** Papers with relevance < 0.4 are dropped, not passed to the
+  verifier (§6: forty off-topic papers are the same failure as none); the rest are
+  ordered by 0.7·relevance + 0.3·quality, ties in PubMed's order, and capped at 10.
+  `RerankResult.cleared_threshold` is the library fallback's trigger for T12. An animal
+  or cell study that addresses both sides scores 0.5 and is kept, labelled as such,
+  below the human evidence: the verifier should see that only mechanistic evidence
+  exists rather than see nothing.
+- **A reranker failure** (only possible with an injected model) is recorded in
+  `errors` and the claim keeps its first 10 papers in PubMed order, unscored.
+
+**Relevance check (issue #32 acceptance criteria).** `python -m app.evaluation.rerank_eval`
+on `backend/app/tests/fixtures/rerank/relevance_set.jsonl`: 12 claims × 10 candidate
+papers in PubMed order, each labelled 2 (tests the claim), 1 (related, indirect) or 0
+(not evidence). Strict = label 2.
+
+| Metric (mean over 12 claims) | PubMed order | Reranked |
+|---|---|---|
+| precision@5 (strict) | 0.383 | 0.533 |
+| precision@5 (label ≥ 1) | 0.483 | 0.750 |
+| nDCG@10 | 0.686 | 0.896 |
+| recall@10 | 1.000 | 0.917 |
+| off-topic papers passed on (total) | 63 | 12 |
+| papers passed on (total) | 120 | 59 |
+
+Random order gives precision@5 0.292; the best possible on this set is 0.583. Better on
+9 claims, equal on 2 (hot water, 5G), worse on 1 (probiotics, 0.40 → 0.20).
+
+**How much to trust these numbers: not much yet.** The set is synthetic (NCBI is
+unreachable from the build environment; PMIDs 98000xxx, abstracts start "Synthetic."),
+and the agent that wrote the reranker also wrote the papers, their PubMed order and the
+labels. So it shows the mechanics work and where the scorer breaks, not real precision. The
+PubMed order is invented too, and it puts 2 relevant papers in the top 5 for almost every
+claim. Before trusting the number, a person should record real PubMed results for these 12
+claims (`scripts/record_pubmed_fixtures.py`) and have two people label them blind to the
+reranker.
+
+**Known misses** (all lexicon gaps, deliberately not patched to fit this set):
+recall drops because the scorer can't link "probiotics" to *Lactobacillus* /
+*S. boulardii*, or "hot drinks" to "fluid intake"; "antibiotic-associated" doesn't match
+the lexicon's "antibiotic". Narrative reviews of cell and animal work ("citrus flavonoids
+in cancer biology") still pass. Fixes belong in the MeSH lexicon (which also changes T03's
+queries and fixtures) or in a learned relevance model, judged on the real labelled set.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -368,6 +441,13 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   and today's single-call classifier: 5 vs 23 unsafe out of 34 with a simulated, always-fooled
   model. Next: real nodes adopt the builders and router (T03–T09), T08 judge policy on
   QUOTES/UNCLEAR, a held-out red-team set, and a paid run (T14). Decisions in §7e.
+
+- **2026-11-22**: T05 (#32) reranker built by the automated build: deterministic lexical
+  relevance over the claim's PICO frame, plus a study-type lookup kept as a separate
+  quality score; threshold 0.4, cap 10; real `rerank_evidence` node. On a 12-claim
+  synthetic, self-labelled set, precision@5 is 0.53 vs 0.38 for PubMed order (ceiling
+  0.58). Real-data labels are left for a person. Decisions in §7f.
+
 - **2026-11-22**: T04 (#30) stance analyzer built by the automated build: forced
   `record_stance` tool call through an injected router, versioned prompt `stance_v1`,
   invalid output → UNCLEAR, every stance cites an input segment, confidence left empty.

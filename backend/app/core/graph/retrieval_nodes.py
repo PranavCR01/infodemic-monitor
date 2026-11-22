@@ -1,4 +1,5 @@
-"""Real ``plan_retrieval`` and ``retrieve_evidence`` nodes (T03, issue #31, §6).
+"""Real ``plan_retrieval``, ``retrieve_evidence`` (T03, #31) and ``rerank_evidence``
+(T05, #32) nodes (§6).
 
 Both are deterministic code over ``app.core.retrieval``; no model is called unless the
 caller injects a search assistant into the planner (§6 step 3), and then only when the
@@ -11,6 +12,11 @@ rules find no concept in a claim.
   each claim's newest query, merges the records into what the claim already has
   (PMID/DOI dedup) and counts the round. A PubMed failure is recorded in ``errors`` and
   still counts as a round, so a dead PubMed can't loop a claim forever.
+- ``rerank_evidence`` (owns ``reranked_evidence``) re-scores every claim's full
+  retrieved set from scratch each round (deterministic, so re-running is idempotent):
+  relevance and study type, papers below the relevance threshold dropped, at most 10
+  kept (``app.core.retrieval.rerank``). If scoring a claim fails, the error is recorded
+  and that claim falls back to its first 10 papers in PubMed's order, unscored.
 
 Use them by overriding the stubs:
 
@@ -29,6 +35,7 @@ from app.core.graph.routing import Budgets, DEFAULT_BUDGETS
 from app.core.graph.state import NodeError, PipelineState
 from app.core.retrieval.planning import QueryPlanner
 from app.core.retrieval.pubmed import PubMedClient
+from app.core.retrieval.rerank import MAX_EVIDENCE_PER_CLAIM, Reranker
 from app.core.retrieval.retriever import EvidenceRetriever, merge_evidence
 
 
@@ -36,6 +43,7 @@ def make_retrieval_nodes(
     retriever: EvidenceRetriever,
     planner: Optional[QueryPlanner] = None,
     budgets: Budgets = DEFAULT_BUDGETS,
+    reranker: Optional[Reranker] = None,
 ) -> dict[str, NodeFn]:
     planner = planner or QueryPlanner()
 
@@ -85,7 +93,41 @@ def make_retrieval_nodes(
             update["errors"] = errors
         return update
 
-    return {r.PLAN_RETRIEVAL: plan_retrieval, r.RETRIEVE_EVIDENCE: retrieve_evidence}
+    return {
+        r.PLAN_RETRIEVAL: plan_retrieval,
+        r.RETRIEVE_EVIDENCE: retrieve_evidence,
+        **make_rerank_node(reranker),
+    }
+
+
+def make_rerank_node(reranker: Optional[Reranker] = None) -> dict[str, NodeFn]:
+    """The real ``rerank_evidence`` node on its own, for graphs that keep other stubs."""
+    reranker = reranker or Reranker()
+
+    def rerank_evidence(state: PipelineState) -> dict:
+        claims = {c.claim_id: c for c in state.get("claims", [])}
+        reranked = {}
+        errors: list[NodeError] = []
+        for cid, records in state.get("retrieved_evidence", {}).items():
+            claim = claims.get(cid)
+            if claim is None:
+                continue
+            try:
+                reranked[cid] = reranker.rerank(claim.claim_text, records).kept
+            except Exception as exc:  # noqa: BLE001 - recorded in state, not raised
+                errors.append(
+                    NodeError(
+                        node=r.RERANK_EVIDENCE, claim_id=cid,
+                        message=f"reranking failed, kept PubMed order: {type(exc).__name__}: {exc}"[:500],
+                    )
+                )
+                reranked[cid] = list(records)[:MAX_EVIDENCE_PER_CLAIM]
+        update: dict = {"reranked_evidence": reranked}
+        if errors:
+            update["errors"] = errors
+        return update
+
+    return {r.RERANK_EVIDENCE: rerank_evidence}
 
 
 def retriever_from_settings(cache=None) -> EvidenceRetriever:
