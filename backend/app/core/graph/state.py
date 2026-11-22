@@ -173,6 +173,19 @@ class CriticResult(_Record):
     issues: list[str] = Field(default_factory=list)
     suggested_queries: list[str] = Field(default_factory=list)
     requires_review: bool = False
+    # Added by T07, optional and additive so earlier checkpoints still load.
+    # ``reviewed_attempt`` / ``reviewed_revision``: the claim's retrieval-attempt and
+    # verification-revision counts when this review was made. Routing uses them to
+    # tell "new evidence or a new verdict since the review" from "nothing changed"
+    # (an exhausted claim is not re-verified or re-reviewed while other claims loop).
+    # ``None`` (scripted critics, pre-T07 checkpoints) keeps the T02 behaviour.
+    reviewed_attempt: Optional[int] = None
+    reviewed_revision: Optional[int] = None
+    # Which checks raised the issues (e.g. ``code:strength``, ``model``), and which
+    # model and prompt produced the review (§13). ``None`` for stub / code-only reviews.
+    checks: list[str] = Field(default_factory=list)
+    model: Optional[str] = None
+    prompt_version: Optional[str] = None
 
 
 class FinalClassification(_Record):

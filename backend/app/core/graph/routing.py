@@ -7,7 +7,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from app.core.graph.state import CriticDecision, PipelineState
+from app.core.graph.state import CriticDecision, PipelineState, Verdict, VerificationResult
 
 
 @dataclass(frozen=True)
@@ -54,6 +54,20 @@ def verifiable_claim_ids(state: PipelineState) -> list[str]:
 def _decision(state: PipelineState, claim_id: str) -> CriticDecision | None:
     result = state.get("critic_results", {}).get(claim_id)
     return result.decision if result else None
+
+
+def unchanged_since_review(state: PipelineState, claim_id: str) -> bool:
+    """True if nothing new happened to the claim since the critic last reviewed it:
+    no further search round and no further revision. Only critics that record
+    ``reviewed_attempt``/``reviewed_revision`` (the T07 node) can be judged this way;
+    for any other critic result this is False, which keeps the T02 behaviour."""
+    c = state.get("critic_results", {}).get(claim_id)
+    if c is None or c.reviewed_attempt is None or c.reviewed_revision is None:
+        return False
+    return (
+        state.get("retrieval_attempts", {}).get(claim_id, 0) == c.reviewed_attempt
+        and state.get("verification_revisions", {}).get(claim_id, 0) == c.reviewed_revision
+    )
 
 
 def claims_to_broaden(state: PipelineState, budgets: Budgets = DEFAULT_BUDGETS) -> list[str]:
@@ -103,7 +117,11 @@ def claims_to_verify(state: PipelineState, budgets: Budgets = DEFAULT_BUDGETS) -
         if cid not in results:
             out.append(cid)
         elif decision == CriticDecision.RETRIEVE_MORE:
-            out.append(cid)
+            # Re-judge once the new search has run. A claim whose search budget ran
+            # out gets no new evidence, so it is not re-verified while other claims
+            # loop (T07; needs the critic's ``reviewed_attempt``).
+            if not unchanged_since_review(state, cid):
+                out.append(cid)
         elif (
             decision == CriticDecision.REVISE_VERIFICATION
             and revisions.get(cid, 0) < budgets.max_verification_revisions
@@ -113,12 +131,16 @@ def claims_to_verify(state: PipelineState, budgets: Budgets = DEFAULT_BUDGETS) -
 
 
 def claims_to_critique(state: PipelineState) -> list[str]:
-    """Verified claims without a terminal critic decision (APPROVE / ESCALATE)."""
+    """Verified claims without a terminal critic decision (APPROVE / ESCALATE) whose
+    verdict changed since the last review. An exhausted claim keeps its last review
+    rather than being reviewed again on the same verdict."""
     terminal = {CriticDecision.APPROVE, CriticDecision.ESCALATE}
     return [
         cid
         for cid in verifiable_claim_ids(state)
-        if cid in state.get("verification_results", {}) and _decision(state, cid) not in terminal
+        if cid in state.get("verification_results", {})
+        and _decision(state, cid) not in terminal
+        and not unchanged_since_review(state, cid)
     ]
 
 
@@ -137,6 +159,52 @@ def exhausted_claim_ids(state: PipelineState, budgets: Budgets = DEFAULT_BUDGETS
         ):
             out.append(cid)
     return out
+
+
+ABSTENTION_LIMITATION = (
+    "the critic's objection was not resolved within the loop budget; "
+    "verdict withheld (insufficient evidence)"
+)
+
+
+def verdicts_for_judge(
+    state: PipelineState, budgets: Budgets = DEFAULT_BUDGETS
+) -> dict[str, VerificationResult]:
+    """The verdicts the judge may use (§8 "When the budget runs out, the claim ends as
+    insufficient evidence or goes to review").
+
+    A claim whose critic still asked for more work when the budget ran out abstains:
+    the judge sees INSUFFICIENT_EVIDENCE with no citations, so an objected-to verdict
+    can never decide the video label. (It also goes to review:
+    ``critic_review_reasons``.) An ESCALATE keeps its verdict, so the reviewer sees a
+    proposed label (§12). The stored ``verification_results`` are not changed.
+    """
+    out = dict(state.get("verification_results", {}))
+    for cid in exhausted_claim_ids(state, budgets):
+        v = out.get(cid)
+        if v is None or v.verdict == Verdict.INSUFFICIENT_EVIDENCE and not (
+            v.supporting_evidence_ids or v.contradicting_evidence_ids
+        ):
+            continue
+        out[cid] = v.model_copy(update={
+            "verdict": Verdict.INSUFFICIENT_EVIDENCE,
+            "supporting_evidence_ids": [],
+            "contradicting_evidence_ids": [],
+            "limitations": [*v.limitations, ABSTENTION_LIMITATION],
+        })
+    return out
+
+
+def critic_review_reasons(state: PipelineState, budgets: Budgets = DEFAULT_BUDGETS) -> list[str]:
+    """Review reasons that come from the critic loop (§8, §12): an ESCALATE or a review
+    flag from the critic, and every claim whose budget ran out. T09: keep this call
+    when replacing the ``route_for_review`` stub."""
+    reasons: list[str] = []
+    for cid, c in state.get("critic_results", {}).items():
+        if c.decision == CriticDecision.ESCALATE or c.requires_review:
+            reasons.append(f"critic_escalated:{cid}")
+    reasons += [f"budget_exhausted:{cid}" for cid in exhausted_claim_ids(state, budgets)]
+    return list(dict.fromkeys(reasons))
 
 
 # ------------------------------------------------------------------- routers
