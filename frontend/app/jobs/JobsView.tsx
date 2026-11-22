@@ -6,7 +6,7 @@ import { apiFetch } from "../../lib/api";
 
 type Job = {
   job_id: string;
-  status: "PENDING" | "STARTED" | "SUCCESS" | "FAILED";
+  status: "PENDING" | "STARTED" | "SUCCESS" | "FAILED" | "REVIEW_REQUIRED";
   error_code: string | null;
   created_at: string;
   filename: string;
@@ -42,6 +42,13 @@ function StatusBadge({ status, error_code }: { status: Job["status"]; error_code
     return (
       <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-700">
         Complete
+      </span>
+    );
+  }
+  if (status === "REVIEW_REQUIRED") {
+    return (
+      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-700">
+        In review
       </span>
     );
   }

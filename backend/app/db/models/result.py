@@ -26,6 +26,14 @@ class Result(Base):
     provider: Mapped[str] = mapped_column(String(64), nullable=False)
     model_used: Mapped[str] = mapped_column(String(128), nullable=False)
     latency_ms: Mapped[int] = mapped_column(Integer, nullable=False)
+    # Added by 0008 (T11). NULL on rows written before it, and on the single-call path:
+    # "graph" (the graph produced the result) or "graph_fallback" (the graph failed and
+    # the single-call classifier answered; ``fallback_reason`` says why).
+    pipeline: Mapped[Optional[str]] = mapped_column(String(32), nullable=True)
+    pipeline_version: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
+    fallback_reason: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    decision_rule: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
+    deciding_claim_ids: Mapped[Optional[list]] = mapped_column(JSON, nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )

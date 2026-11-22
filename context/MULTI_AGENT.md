@@ -88,9 +88,9 @@ Read `context/PRODUCTION.md` and `context/PROJECT_CONTEXT.md` first.
 
 ## 7. Open Decisions
 
-- **When does the graph run?** On every video (as `docs/architecture.md` describes), or only
-  when the single-LLM confidence is below a threshold (the original plan used 0.60)? Note
-  that today's confidence is the model's own, uncalibrated estimate. Decide before #38.
+- **When does the graph run?** Decided in T11 (§7m): on every video while
+  `USE_GRAPH_PIPELINE` is on, not below a confidence threshold (today's confidence is
+  uncalibrated).
 - **Shared evaluation data:** #39 should use the same labelled videos as Model Evaluation
   (#6) and the claim-level dataset (#13), not a separate set.
 
@@ -837,6 +837,95 @@ team's token and agree their scopes and NCBI share (and whether they get `search
 given library copyright); add the contract check against `main`'s snapshot to CI if CI
 gains a job for it.
 
+## 7m. Integration Decisions (T11, #38)
+
+The graph runs in production code behind `USE_GRAPH_PIPELINE` (default **off**). With it
+off, `run_pipeline()`, `get_provider()` and the Celery task behave exactly as before
+(a test checks that the single-call path asks for no segments and never builds the graph).
+
+- **Where things are.** `GraphProvider` (`app/core/inference/providers/graph_provider.py`)
+  implements `InferenceProvider.classify(fusion)`; `run(...)` also returns the final
+  state and the fallback record. Real claim extractor `app/core/graph/claims.py`
+  (prompt `extract_v1`). Provider clients for `ModelRouter`
+  (`app/core/routing/clients.py`, Anthropic + OpenAI, forced tool calls, error kinds
+  mapped to the router's fallback policy). Worker path `run_graph_pipeline()` +
+  `tasks._run_graph_job`; persistence `app/services/pipeline_result_service.py`.
+- **Trigger decision: the graph runs on every video while the flag is on**, not only
+  below a single-call confidence threshold (the old #21 plan, 0.60). Today's confidence is
+  the single call's own, uncalibrated number (§11), so a threshold on it is not a
+  measured gate; and gating would let the single call, the step the graph replaces,
+  decide which videos get evidence, while paying for both calls on every gated video. If
+  T14 shows the graph is too slow or costly for every video, revisit with a calibrated
+  signal (T15), not the raw one.
+- **Fallback to the single call, recorded on the result** (`results.pipeline =
+  graph_fallback`, `results.fallback_reason`): graph exception (`graph_error:<Type>: …`),
+  wall-clock timeout (`GRAPH_TIMEOUT_SECONDS`, default 900; checked between graph steps,
+  each provider call has its own `GRAPH_MODEL_TIMEOUT_SECONDS`), a run that ends without
+  `final_result` (`no_result`), the extractor's model unreachable
+  (`extraction_unavailable`; otherwise "no claims" would be published as "no checkable
+  health claims"), and claims extracted but every later model call failed
+  (`models_unavailable`). **An abstention is not a failure:** a graph that ran and said
+  CANNOT_RECOGNIZE or sent the case to review keeps its answer; replacing it with the
+  single call would undo §1 "scientific uncertainty: abstain". If the fallback itself
+  fails, the job fails as today (`INFERENCE_ERROR`). The fallback answer gets the single
+  call's own post-hoc PubMed grounding, so it looks like a single-call result.
+- **Claim extraction (§4) was built here.** No task owned it and the stub made one claim
+  per segment. Forced `record_claims` call on the routed `extract_claims` step, fenced with
+  T10's `extraction_prompt`; cited block IDs (`f1`, `f1.screen1`) map back to `t*`/`o*`
+  pieces, timestamps are computed from them, ungrounded claims (content-word overlap
+  < 0.5) are dropped with a `guardrail:` error (review), one repair on malformed output,
+  T10's 50-claim cap, windows of 240 s with 20 s overlap for long videos. **Deviation from
+  §4:** dedup uses a lexical, negation-aware similarity (Jaccard ≥ 0.85) because no
+  embedding model is wired into the worker; an embedding similarity can be injected.
+  It wraps none of the claim-level track's #12 prototype; swap in their extractor when it
+  lands, keeping the node contract.
+- **Timestamps.** The single-call fusion keeps only text, so the graph path calls
+  `MultimodalFusion.fuse(keep_segments=True)` (Whisper segments; `verbose_json` for the
+  hosted API). If segments are missing, sentences get estimated timing
+  (`GraphOutcome.timing_estimated`). `video_duration_seconds` is not passed yet (the
+  worker doesn't know the duration), so the §10 check compares order only.
+- **Persistence is in the worker, not the `persist_result` node** (deviation from the
+  "Persist" box in §4): one transaction writes `results` (new columns `pipeline`,
+  `pipeline_version`, `fallback_reason`, `decision_rule`, `deciding_claim_ids`), the
+  claim-level rows, `model_runs`, and the job state, for both the graph and its fallback,
+  and the checkpointed state never holds a DB session. `persist_result` stays
+  reference-only. `open_review_case` (T09) is called there when `requires_human_review`.
+- **Migration `0008`** adds §17's `transcript_segments`, `ocr_segments`, `claims`,
+  `claim_stances`, `evidence_records`, `claim_evidence` (SUPPORTS / CONTRADICTS /
+  CONSIDERED), `verification_results`, `critic_reviews`, `model_runs`. **Deviations from
+  §17:** evidence records are per job, not shared across jobs; the video label stays in
+  `results` (no separate `classifications` table). Per-user isolation moves to `0009`
+  (PRODUCTION.md §6a updated). Tested up/down on SQLite (suite) and by hand on a local
+  Postgres 16 (0001–0005, 0006 stamped, 0007–0008 up, down, up). Not run on Supabase.
+- **Idempotency.** Thread ID = job ID: an unfinished checkpoint is resumed, a finished
+  one reused without model calls. Claim-level rows are replaced per job and the result
+  row is updated in place, so a second delivery leaves one copy. With the flag on, the
+  task skips a job that is already `SUCCESS`/`REVIEW_REQUIRED` with a result. Postgres
+  checkpoints need `LANGGRAPH_CHECKPOINT_DSN` and the one-off setup step from §7a; without
+  it, checkpoints are in memory and a retried task starts over.
+- **API and frontend.** `GET /jobs/{id}/result` also serves `REVIEW_REQUIRED` jobs and adds
+  `pipeline`, `fallback_reason`, `review` (status and reasons) and `claims` (empty for
+  single-call results). The job page shows a "Provisional: awaiting human review" banner,
+  per-claim stance/verdict/papers when present, and an "In review" badge in the list.
+  `tsc --noEmit` passes; not checked in a browser. The duplicate-job check now includes
+  `REVIEW_REQUIRED` (a video in review is not analysed again; T09's question).
+- **Not wired (left for a person or a later task):** T10's upload-path input limits
+  (size, duration, container sniffing, rate limit, quota) — they are upload rules, not
+  graph rules, so they need their own flag and a shared store for multi-worker rate
+  limits; the offline library fallback (T12; needs a deployed library + embedder); an
+  LLM assistant for query planning; **T13's shared NCBI token bucket** — it lives in
+  `app.mcp_server.quota`, and T13's test forbids `app.core`/`app.worker` importing the
+  MCP server, so wiring it means moving the bucket into `app.core.retrieval` first. Until
+  then workers keep the per-process limiter.
+- **Wired from T13:** with `GRAPH_SHARED_RETRIEVAL` (default on) and `REDIS_URL`, the
+  workers use the MCP server's Redis query cache (`retrieval:` prefix); cache errors are
+  swallowed, so a Redis outage only costs extra NCBI calls.
+- **Nothing here was run against real models or PubMed.** Tests use a scripted
+  `ModelClient` behind the real `ModelRouter` + `routing.yaml`, and T03's synthetic
+  PubMed fixtures. The provider clients are tested against fake SDK objects; their first
+  real call (and whether the Anthropic/OpenAI request shapes are accepted as written)
+  happens in T14 with keys.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -858,6 +947,14 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-22**: T11 (#38) integration built by the automated build: `GraphProvider`
+  behind `USE_GRAPH_PIPELINE` (default off; single-call path unchanged), graph on every
+  video when on, fallback to the single call on exception / timeout / no result /
+  unreachable extractor / all later model calls failing, recorded on the result. Real
+  claim extractor (`extract_v1`), Anthropic/OpenAI clients for the router, migration
+  0008 with §17's claim-level tables, idempotent persistence and resume per job, API and
+  job page serve both paths and `REVIEW_REQUIRED`. Mocked models and synthetic PubMed
+  fixtures only. Decisions in §7m.
 - **2026-11-22**: T13 retrieval MCP server built by the automated build (no issue; design
   §6, §15): `app/mcp_server` wraps `app.core.retrieval` with the five §6 tools over
   Streamable HTTP (MCP SDK 2.x `MCPServer`), hashed per-client bearer tokens with one scope

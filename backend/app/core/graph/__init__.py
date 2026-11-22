@@ -1,6 +1,7 @@
 """LangGraph pipeline skeleton (target design §4–§12; issue #29).
 
-Not wired into ``run_pipeline()`` yet; that is the integration task (T11, #38).
+Wired into the worker behind ``USE_GRAPH_PIPELINE`` (T11, #38) through
+``app.core.inference.providers.graph_provider.GraphProvider``.
 """
 from app.core.graph.builder import OwnershipError, build_graph, compile_graph, run_config
 from app.core.graph.checkpoint import (

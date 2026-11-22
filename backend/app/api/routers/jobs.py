@@ -11,6 +11,7 @@ from app.db.models.result import Result
 from app.db.models.video import Video
 from app.db.session import get_db
 from app.services import job_service
+from app.services.pipeline_result_service import claim_level_view
 from app.worker.tasks import process_video_task
 
 router = APIRouter(prefix="/jobs", tags=["jobs"])
@@ -49,6 +50,9 @@ def create_job(
                 JobStatus.PENDING,
                 JobStatus.STARTED,
                 JobStatus.SUCCESS,
+                # A video already in human review is not analysed again (T11). Only
+                # the graph pipeline (USE_GRAPH_PIPELINE) ever sets this state.
+                JobStatus.REVIEW_REQUIRED,
             ]),
         )
         .order_by(Job.created_at.desc())
@@ -109,7 +113,7 @@ def get_result(
     job = db.query(Job).filter(Job.id == job_id).first()
     if not job:
         raise HTTPException(status_code=404, detail="Job not found")
-    if job.status != JobStatus.SUCCESS:
+    if job.status not in (JobStatus.SUCCESS, JobStatus.REVIEW_REQUIRED):
         raise HTTPException(status_code=202, detail=f"Job not complete — status: {job.status}")
 
     result = db.query(Result).filter(Result.job_id == job_id).first()
@@ -131,4 +135,23 @@ def get_result(
         "latency_ms": result.latency_ms,
         "submitted_at": job.created_at,
         "created_at": result.created_at,
+        # Added by T11; null / empty for single-call results, so existing clients
+        # render both paths unchanged.
+        "pipeline": result.pipeline,
+        "fallback_reason": result.fallback_reason,
+        "review": _review_view(db, job),
+        "claims": claim_level_view(db, job_id),
+    }
+
+
+def _review_view(db: Session, job: Job) -> Optional[dict]:
+    """A result in human review is provisional (§12): say so, and why."""
+    if job.status != JobStatus.REVIEW_REQUIRED:
+        return None
+    from app.db.models.review import HumanReview
+
+    case = db.query(HumanReview).filter(HumanReview.job_id == job.id).one_or_none()
+    return {
+        "status": "REVIEW_REQUIRED",
+        "reasons": list(case.reasons) if case else [],
     }

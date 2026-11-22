@@ -66,6 +66,58 @@ def transcribe(video_path: str) -> str:
     return _transcribe_faster_whisper(video_path)
 
 
+def transcribe_segments(video_path: str) -> tuple[str, list[dict]]:
+    """Transcript plus Whisper's timed segments (§2): ``(text, [{start, end, text}])``.
+
+    Used only by the graph pipeline (``USE_GRAPH_PIPELINE``, T11), which needs the
+    timestamps; the single-call path keeps calling ``transcribe``. The hosted API is
+    asked for ``verbose_json`` because plain ``text`` discards the timing.
+    """
+    if settings.WHISPER_PROVIDER == "openai":
+        return _transcribe_openai_segments(video_path)
+    try:
+        model = get_whisper_model()
+        raw, _ = model.transcribe(video_path, beam_size=5)
+        segments = [
+            {"start": float(s.start), "end": float(s.end), "text": s.text.strip()}
+            for s in raw if s.text and s.text.strip()
+        ]
+    except Exception as exc:
+        raise TranscriptionError(provider="faster_whisper", cause=exc) from exc
+    return " ".join(s["text"] for s in segments).strip(), segments
+
+
+def _transcribe_openai_segments(video_path: str) -> tuple[str, list[dict]]:
+    file_size = os.path.getsize(video_path)
+    if file_size > _OPENAI_MAX_BYTES:
+        raise TranscriptionError(
+            provider="openai",
+            cause=ValueError(
+                f"File is {file_size / 1024 / 1024:.1f} MB — "
+                f"OpenAI Whisper-1 limit is 25 MB."
+            ),
+        )
+    try:
+        from openai import OpenAI
+        client = OpenAI(api_key=settings.OPENAI_API_KEY)
+        with open(video_path, "rb") as f:
+            resp = client.audio.transcriptions.create(
+                model="whisper-1", file=f, response_format="verbose_json",
+            )
+        segments = []
+        for s in getattr(resp, "segments", None) or []:
+            get = s.get if isinstance(s, dict) else (lambda k, _s=s: getattr(_s, k, None))
+            text = (get("text") or "").strip()
+            if text:
+                segments.append({"start": float(get("start") or 0.0), "end": float(get("end") or 0.0), "text": text})
+        text = getattr(resp, "text", None) or " ".join(s["text"] for s in segments)
+        return text.strip(), segments
+    except TranscriptionError:
+        raise
+    except Exception as exc:
+        raise TranscriptionError(provider="openai", cause=exc) from exc
+
+
 def _transcribe_faster_whisper(video_path: str) -> str:
     try:
         model = get_whisper_model()
