@@ -1,0 +1,271 @@
+{
+  "n": 20,
+  "accuracy": 0.85,
+  "macro_f1": 0.8654545454545455,
+  "per_class": {
+    "SUPPORTED": {
+      "precision": 0.5714285714285714,
+      "recall": 1.0,
+      "f1": 0.7272727272727273,
+      "support": 4
+    },
+    "CONTRADICTED": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 4
+    },
+    "MIXED": {
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "support": 3
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "support": 6
+    },
+    "NOT_VERIFIABLE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3
+    }
+  },
+  "confusion": {
+    "SUPPORTED": {
+      "SUPPORTED": 4,
+      "CONTRADICTED": 0,
+      "MIXED": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "NOT_VERIFIABLE": 0
+    },
+    "CONTRADICTED": {
+      "SUPPORTED": 0,
+      "CONTRADICTED": 4,
+      "MIXED": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "NOT_VERIFIABLE": 0
+    },
+    "MIXED": {
+      "SUPPORTED": 1,
+      "CONTRADICTED": 0,
+      "MIXED": 2,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "NOT_VERIFIABLE": 0
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "SUPPORTED": 2,
+      "CONTRADICTED": 0,
+      "MIXED": 0,
+      "INSUFFICIENT_EVIDENCE": 4,
+      "NOT_VERIFIABLE": 0
+    },
+    "NOT_VERIFIABLE": {
+      "SUPPORTED": 0,
+      "CONTRADICTED": 0,
+      "MIXED": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "NOT_VERIFIABLE": 3
+    }
+  },
+  "insufficient_called_contradicted": 0,
+  "citation_validity": 1.0,
+  "citations_match_gold": 0.85,
+  "predictions": [
+    {
+      "id": "v01",
+      "category": "supported",
+      "gold": "SUPPORTED",
+      "pred": "SUPPORTED",
+      "supporting": [
+        "ev_97000001"
+      ],
+      "contradicting": []
+    },
+    {
+      "id": "v02",
+      "category": "supported",
+      "gold": "SUPPORTED",
+      "pred": "SUPPORTED",
+      "supporting": [
+        "ev_97000003",
+        "ev_97000004"
+      ],
+      "contradicting": []
+    },
+    {
+      "id": "v03",
+      "category": "supported",
+      "gold": "SUPPORTED",
+      "pred": "SUPPORTED",
+      "supporting": [
+        "ev_97000005"
+      ],
+      "contradicting": []
+    },
+    {
+      "id": "v04",
+      "category": "supported",
+      "gold": "SUPPORTED",
+      "pred": "SUPPORTED",
+      "supporting": [
+        "ev_97000006"
+      ],
+      "contradicting": []
+    },
+    {
+      "id": "v05",
+      "category": "contradicted",
+      "gold": "CONTRADICTED",
+      "pred": "CONTRADICTED",
+      "supporting": [],
+      "contradicting": [
+        "ev_97000008",
+        "ev_97000009"
+      ]
+    },
+    {
+      "id": "v06",
+      "category": "contradicted",
+      "gold": "CONTRADICTED",
+      "pred": "CONTRADICTED",
+      "supporting": [],
+      "contradicting": [
+        "ev_97000010"
+      ]
+    },
+    {
+      "id": "v07",
+      "category": "contradicted",
+      "gold": "CONTRADICTED",
+      "pred": "CONTRADICTED",
+      "supporting": [],
+      "contradicting": [
+        "ev_97000011"
+      ]
+    },
+    {
+      "id": "v08",
+      "category": "contradicted",
+      "gold": "CONTRADICTED",
+      "pred": "CONTRADICTED",
+      "supporting": [],
+      "contradicting": [
+        "ev_97000013"
+      ]
+    },
+    {
+      "id": "v09",
+      "category": "mixed",
+      "gold": "MIXED",
+      "pred": "SUPPORTED",
+      "supporting": [
+        "ev_97000015"
+      ],
+      "contradicting": []
+    },
+    {
+      "id": "v10",
+      "category": "mixed",
+      "gold": "MIXED",
+      "pred": "MIXED",
+      "supporting": [
+        "ev_97000016"
+      ],
+      "contradicting": [
+        "ev_97000017"
+      ]
+    },
+    {
+      "id": "v11",
+      "category": "mixed",
+      "gold": "MIXED",
+      "pred": "MIXED",
+      "supporting": [
+        "ev_97000018"
+      ],
+      "contradicting": [
+        "ev_97000019"
+      ]
+    },
+    {
+      "id": "v12",
+      "category": "insufficient_animal_only",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "pred": "INSUFFICIENT_EVIDENCE",
+      "supporting": [],
+      "contradicting": []
+    },
+    {
+      "id": "v13",
+      "category": "insufficient_offtopic",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "pred": "INSUFFICIENT_EVIDENCE",
+      "supporting": [],
+      "contradicting": []
+    },
+    {
+      "id": "v14",
+      "category": "insufficient_no_test",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "pred": "INSUFFICIENT_EVIDENCE",
+      "supporting": [],
+      "contradicting": []
+    },
+    {
+      "id": "v15",
+      "category": "insufficient_wrong_population",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "pred": "SUPPORTED",
+      "supporting": [
+        "ev_97000025"
+      ],
+      "contradicting": []
+    },
+    {
+      "id": "v16",
+      "category": "insufficient_case_report",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "pred": "INSUFFICIENT_EVIDENCE",
+      "supporting": [],
+      "contradicting": []
+    },
+    {
+      "id": "v17",
+      "category": "insufficient_symptoms_not_cure",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "pred": "SUPPORTED",
+      "supporting": [
+        "ev_97000027"
+      ],
+      "contradicting": []
+    },
+    {
+      "id": "v18",
+      "category": "not_verifiable",
+      "gold": "NOT_VERIFIABLE",
+      "pred": "NOT_VERIFIABLE",
+      "supporting": [],
+      "contradicting": []
+    },
+    {
+      "id": "v19",
+      "category": "not_verifiable",
+      "gold": "NOT_VERIFIABLE",
+      "pred": "NOT_VERIFIABLE",
+      "supporting": [],
+      "contradicting": []
+    },
+    {
+      "id": "v20",
+      "category": "not_verifiable",
+      "gold": "NOT_VERIFIABLE",
+      "pred": "NOT_VERIFIABLE",
+      "supporting": [],
+      "contradicting": []
+    }
+  ]
+}
