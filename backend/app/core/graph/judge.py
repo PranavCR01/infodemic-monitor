@@ -143,7 +143,7 @@ class ClaimView:
 
 def _evidence_by_claim(state: PipelineState) -> dict[str, dict[str, EvidenceRecord]]:
     out: dict[str, dict[str, EvidenceRecord]] = {}
-    for key in ("retrieved_evidence", "reranked_evidence"):
+    for key in ("retrieved_evidence", "reranked_evidence", "library_evidence"):
         for cid, records in (state.get(key) or {}).items():
             for e in records or []:
                 out.setdefault(cid, {}).setdefault(e.evidence_id, e)
