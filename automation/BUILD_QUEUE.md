@@ -33,6 +33,7 @@ starts the next ready task, and records progress here.
 
 Newest first. One line per event: date, task, what happened.
 
+- 2026-11-22 18:48 UTC — waiting: T16 (#63) and T17 (#64) merged. Only T14 (needs API keys + data/golden-label-set) and T15 (needs T14 results + human-verified labels) remain, both blocked on people.
 - 2026-11-22 UTC — T17 done: PR #64 squash-merged into langgraph-build (842 passed, 8 skipped). References off by default (USE_REFERENCE_SOURCES); MCP contract unchanged; migration 0009 not run on Supabase.
 - 2026-11-22 18:36 UTC — T16 done: PR #63 squash-merged into langgraph-build (788 passed, 8 skipped). Rule 5 (possible debunk) checked after NO_MISINFO per the doc's order; reasons are per-claim `denies_supported:<cid>` / `possible_debunk:<cid>`.
 - 2026-11-22 18:32 UTC — T16 and T17 started in parallel (sessions session_013cWxq2PDFUqwLHC5p3x74p, session_013cWxq1yRmBst2DcbhPz26w), after the doc revision f238dab and queue update adb4daf.
