@@ -21,7 +21,7 @@ starts the next ready task, and records progress here.
 | T08 | Judge node and mixed-video policy | #35 | 9 | T04, T06 | done | session_013cWxq2Zswh882KuYh6rskc | 2026-11-22 00:36 | https://github.com/PranavCR01/infodemic-monitor/pull/56 | §9 rules as code + review flags (mixed video, unclear stance, false claim not refuted, mixed evidence, verifier failure); LLM writes only the explanation. Policy needs Pranav's agreement (MULTI_AGENT §7h). Adversarial: still 5/34 unsafe, 4 held for review (was 2) |
 | T09 | Deterministic validation and human-review routing | #36 | 10, 11, 12 | T08 | done | session_013cWxq229Tx4MC9VDko4wL3 | 2026-11-22 00:46 | https://github.com/PranavCR01/infodemic-monitor/pull/59 | 8 §10 checks + one judge repair; §11 review rule as named rules (+ high-risk-uncertain); abstentions on weak evidence now go to review. REVIEW_REQUIRED + `human_reviews` (migration 0007). High-risk category list provisional; 0007 not run on Supabase |
 | T10 | Guardrails: prompt injection, tool limits, adversarial tests | #37 | 15 | T02 | done | session_013cWxq2Ly4NrwzhcpZMfmkx | 2026-11-22 00:04 | https://github.com/PranavCR01/infodemic-monitor/pull/53 | Simulated always-fooled model: graph 5/34 unsafe, baseline 23/34. Input limits built but not wired (T11). Judge-policy finding for T08 (QUOTES/UNCLEAR + CONTRADICTED gives NO_MISINFO). Held-out red-team set and real-model run (T14) left for people |
-| T11 | Integrate the graph into run_pipeline behind a flag, with fallback | #38 | 4 | T02–T10 | todo | | | | Must keep the single-call path working when the flag is off |
+| T11 | Integrate the graph into run_pipeline behind a flag, with fallback | #38 | 4 | T02–T10 | in_progress | session_013cWxpyExKRkmyakBC2CXtt | 2026-11-22 01:01 | | Must keep the single-call path working when the flag is off |
 | T12 | Offline library fallback (OCR, embeddings, pgvector, hybrid search) | new | 6 | T03, T05 | done | session_013cWxpyUoGG8c62ETqy3AJX | 2026-11-22 00:28 | https://github.com/PranavCR01/infodemic-monitor/pull/58 | Library ingestion tested on generated sample PDFs only (real OCRmyPDF/Tesseract; local Postgres + pgvector). Fallback off unless a library is injected (T11). Real-scan OCR comparison, MedCPT weights, Supabase pgvector + migration 0006 and the viewer left for a person (MULTI_AGENT §7j) |
 | T13 | Retrieval MCP server | new | 6, 15 | T03, T05, T12 | in_progress | session_013cWxq1buhzDtq2Ys6KF232 | 2026-11-22 00:54 | | |
 | T14 | Evaluate the graph against the single-call baseline | #39 | 14 | T01, T11 | blocked | | | | Needs API keys and the golden label set (data/golden-label-set) |
@@ -31,6 +31,7 @@ starts the next ready task, and records progress here.
 
 Newest first. One line per event: date, task, what happened.
 
+- 2026-11-22 01:01 UTC — T11 started in session session_013cWxpyExKRkmyakBC2CXtt.
 - 2026-11-22 UTC — T09 done: PR #59 squash-merged into langgraph-build (673 passed, 8 skipped). T11 now waits only on T07–T10 (all done). Migration renumbered to 0007 (T12 took 0006); per-user isolation should be 0008.
 - 2026-11-22 00:54 UTC — T13 started in session session_013cWxq1buhzDtq2Ys6KF232.
 - 2026-11-22 UTC — T12 done: PR #58 squash-merged into langgraph-build (626 passed, 3 skipped; 55/55 library tests incl. Postgres + pgvector). T13 now unblocked. Tested on generated sample scans only.
