@@ -142,6 +142,16 @@ def extraction_prf(n_matched: int, n_gold: int, n_pred: int) -> dict[str, Option
 
 # --- Retrieval --------------------------------------------------------------
 
+def precision_at_k(relevant: Iterable[str], ranked: Sequence[str], k: int) -> Optional[float]:
+    """Share of the top k that is relevant. The denominator is always k: an empty slot
+    (a list shorter than k) counts as not relevant, so a ranker can't raise its score by
+    returning fewer papers."""
+    if k <= 0:
+        return None
+    relevant = set(relevant)
+    return sum(1 for doc in list(ranked[:k]) if doc in relevant) / k
+
+
 def recall_at_k(relevant: Iterable[str], ranked: Sequence[str], k: int) -> Optional[float]:
     relevant = set(relevant)
     if not relevant:
