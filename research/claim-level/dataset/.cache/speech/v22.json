@@ -1,0 +1,80 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 42.17,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.22,
+    "text": "If you eat eggs every single day for two weeks, this is what would happen."
+   },
+   {
+    "id": "t2",
+    "start": 3.22,
+    "end": 5.76,
+    "text": "You're going to be consuming the best quality protein."
+   },
+   {
+    "id": "t3",
+    "start": 5.76,
+    "end": 10.22,
+    "text": "Your muscles, your connective tissue will get the highest quality amino acids."
+   },
+   {
+    "id": "t4",
+    "start": 10.22,
+    "end": 14.96,
+    "text": "Eggs are high in antioxidants, which is really good to prevent something called macular degeneration"
+   },
+   {
+    "id": "t5",
+    "start": 14.96,
+    "end": 16.84,
+    "text": "as well as cataracts."
+   },
+   {
+    "id": "t6",
+    "start": 16.84,
+    "end": 20.84,
+    "text": "Eggs are also high in something called choline, which is really good to prevent a fatty liver,"
+   },
+   {
+    "id": "t7",
+    "start": 20.84,
+    "end": 24.84,
+    "text": "as well as support your brain, better focus, concentration, and memory."
+   },
+   {
+    "id": "t8",
+    "start": 24.84,
+    "end": 28.76,
+    "text": "Even though eggs are high in cholesterol, you're going to find that your HDL, the good"
+   },
+   {
+    "id": "t9",
+    "start": 28.76,
+    "end": 33.24,
+    "text": "cholesterol will go up if you consume eggs. Lastly, if you eat eggs for breakfast, you're"
+   },
+   {
+    "id": "t10",
+    "start": 33.24,
+    "end": 36.16,
+    "text": "going to find your blood sugars are going to be very stabilized, so you're going to"
+   },
+   {
+    "id": "t11",
+    "start": 36.16,
+    "end": 38.04,
+    "text": "feel better throughout the entire day."
+   }
+  ]
+ }
+}

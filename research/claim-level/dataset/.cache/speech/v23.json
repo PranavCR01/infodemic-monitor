@@ -1,0 +1,302 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 151.93,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.4,
+    "end": 3.76,
+    "text": "can cause everything from osteoporosis to autism."
+   },
+   {
+    "id": "t2",
+    "start": 3.76,
+    "end": 6.56,
+    "text": "The COVID vaccine introduction has had"
+   },
+   {
+    "id": "t3",
+    "start": 6.56,
+    "end": 9.24,
+    "text": "a catastrophic negative effect."
+   },
+   {
+    "id": "t4",
+    "start": 9.24,
+    "end": 12.82,
+    "text": "And this, my friends, is why we have to be incredibly careful"
+   },
+   {
+    "id": "t5",
+    "start": 12.82,
+    "end": 14.8,
+    "text": "what wellness podcasts or channels"
+   },
+   {
+    "id": "t6",
+    "start": 14.8,
+    "end": 17.7,
+    "text": "we are getting our health information from."
+   },
+   {
+    "id": "t7",
+    "start": 17.7,
+    "end": 18.54,
+    "text": "If you missed it,"
+   },
+   {
+    "id": "t8",
+    "start": 18.54,
+    "end": 21.36,
+    "text": "Steven Bartlett of the number one ranked podcast,"
+   },
+   {
+    "id": "t9",
+    "start": 21.36,
+    "end": 25.24,
+    "text": "Diary of a CEO has come into some hot water"
+   },
+   {
+    "id": "t10",
+    "start": 25.24,
+    "end": 28.96,
+    "text": "after a damning report from BBC World Service."
+   },
+   {
+    "id": "t11",
+    "start": 28.96,
+    "end": 33.04,
+    "text": "In an analysis of 15 health-related podcast episodes"
+   },
+   {
+    "id": "t12",
+    "start": 33.04,
+    "end": 36.76,
+    "text": "on his podcast, the BBC found that each contained"
+   },
+   {
+    "id": "t13",
+    "start": 36.76,
+    "end": 40.64,
+    "text": "an average of 14 harmful health claims"
+   },
+   {
+    "id": "t14",
+    "start": 40.64,
+    "end": 44.12,
+    "text": "that went against extensive scientific evidence,"
+   },
+   {
+    "id": "t15",
+    "start": 44.12,
+    "end": 47.24,
+    "text": "including anti-vaccine conspiracies,"
+   },
+   {
+    "id": "t16",
+    "start": 47.24,
+    "end": 50.28,
+    "text": "calling proven cancer treatments toxic,"
+   },
+   {
+    "id": "t17",
+    "start": 50.28,
+    "end": 54.08,
+    "text": "and the unfounded assertion that you can reverse"
+   },
+   {
+    "id": "t18",
+    "start": 54.08,
+    "end": 55.8,
+    "text": "autism through diet."
+   },
+   {
+    "id": "t19",
+    "start": 55.8,
+    "end": 58.0,
+    "text": "And as a rapidly growing podcast,"
+   },
+   {
+    "id": "t20",
+    "start": 58.0,
+    "end": 61.6,
+    "text": "This has massive implications for public health."
+   },
+   {
+    "id": "t21",
+    "start": 61.6,
+    "end": 64.98,
+    "text": "Unfortunately, this is just what seems to happen"
+   },
+   {
+    "id": "t22",
+    "start": 64.98,
+    "end": 69.44,
+    "text": "when folks that have no actual training or education"
+   },
+   {
+    "id": "t23",
+    "start": 69.44,
+    "end": 72.4,
+    "text": "in evidence-based health or wellness"
+   },
+   {
+    "id": "t24",
+    "start": 72.4,
+    "end": 76.88,
+    "text": "take on health-related content as their niche."
+   },
+   {
+    "id": "t25",
+    "start": 76.88,
+    "end": 79.76,
+    "text": "We see this with Steven, who is an investor,"
+   },
+   {
+    "id": "t26",
+    "start": 79.76,
+    "end": 83.84,
+    "text": "and also like Joe Rogan, who before podcasting was an actor."
+   },
+   {
+    "id": "t27",
+    "start": 83.84,
+    "end": 87.76,
+    "text": "Rather than seeking out respected experts in the field,"
+   },
+   {
+    "id": "t28",
+    "start": 87.76,
+    "end": 92.76,
+    "text": "They bring on those who are sure to make the biggest splash"
+   },
+   {
+    "id": "t29",
+    "start": 92.96,
+    "end": 96.8,
+    "text": "and deliver the most extreme messages and sound bites."
+   },
+   {
+    "id": "t30",
+    "start": 96.8,
+    "end": 100.68,
+    "text": "And in their defense, comedians or business CEOs"
+   },
+   {
+    "id": "t31",
+    "start": 100.68,
+    "end": 104.6,
+    "text": "are just not equipped to critically evaluate the claims"
+   },
+   {
+    "id": "t32",
+    "start": 104.6,
+    "end": 106.2,
+    "text": "or suggestions they're making."
+   },
+   {
+    "id": "t33",
+    "start": 106.2,
+    "end": 108.28,
+    "text": "But for podcasts that are said to be earning"
+   },
+   {
+    "id": "t34",
+    "start": 108.28,
+    "end": 110.96,
+    "text": "tens of millions each year,"
+   },
+   {
+    "id": "t35",
+    "start": 110.96,
+    "end": 115.32,
+    "text": "it seems so wildly irresponsible that these podcasters"
+   },
+   {
+    "id": "t36",
+    "start": 115.32,
+    "end": 118.68,
+    "text": "don't have teens in place to fat check."
+   },
+   {
+    "id": "t37",
+    "start": 118.68,
+    "end": 120.88,
+    "text": "And then of course edit out any recommendations"
+   },
+   {
+    "id": "t38",
+    "start": 120.88,
+    "end": 123.58,
+    "text": "or statements that may cause harm."
+   },
+   {
+    "id": "t39",
+    "start": 123.58,
+    "end": 126.56,
+    "text": "So just a friendly little reminder here folks,"
+   },
+   {
+    "id": "t40",
+    "start": 126.56,
+    "end": 130.26,
+    "text": "to do your due diligence on a host of a podcast"
+   },
+   {
+    "id": "t41",
+    "start": 130.26,
+    "end": 132.32,
+    "text": "or YouTube channel or just a content creator"
+   },
+   {
+    "id": "t42",
+    "start": 132.32,
+    "end": 136.56,
+    "text": "to evaluate their ability to critically evaluate"
+   },
+   {
+    "id": "t43",
+    "start": 136.56,
+    "end": 140.76,
+    "text": "evidence-based nutrition and wellness information"
+   },
+   {
+    "id": "t44",
+    "start": 140.76,
+    "end": 144.0,
+    "text": "before taking the content they share at face value."
+   },
+   {
+    "id": "t45",
+    "start": 144.0,
+    "end": 146.2,
+    "text": "And if you are looking for an evidence-based"
+   },
+   {
+    "id": "t46",
+    "start": 146.2,
+    "end": 149.96,
+    "text": "nutrition podcast, definitely hit up my new podcast,"
+   },
+   {
+    "id": "t47",
+    "start": 149.96,
+    "end": 151.6,
+    "text": "Bite Back with Abby Sharpe."
+   },
+   {
+    "id": "t48",
+    "start": 151.6,
+    "end": 152.44,
+    "text": "Next."
+   }
+  ]
+ }
+}

@@ -1,15 +1,29 @@
 """Transcribe (faster-whisper) and OCR (EasyOCR) every video in video_index.csv.
 
 Writes text only to research/claim-level/dataset/transcripts/<video_id>.json.
-No media is copied or committed. Per-video caching makes the run resumable:
-a video whose transcript JSON already exists is skipped.
+No media is copied or committed.
+
+Run in two stages, not one:
+
+    python extract.py --stage speech     # faster-whisper over every video
+    python extract.py --stage ocr        # EasyOCR over every video
+    python extract.py --stage merge      # combine into transcripts/
+
+Both models resident at once needs more memory than an 8 GB machine has to
+spare -- the single-pass version of this script was killed by the OS part way
+through the bundle. Running them as separate processes makes peak memory the
+larger of the two rather than their sum. Each stage caches per video under
+.cache/, so any stage resumes where it stopped, and --stage all does the three
+in order (still as one process per stage is preferable on a small machine).
 
 Device: CUDA when the CUDA runtime actually loads, else CPU.
   faster-whisper: model "small", int8 on CPU / float16 on GPU.
-  EasyOCR: English only, 0.5 frames per second, longest side <= 960 px.
+  EasyOCR: English only, 0.5 frames per second, longest side <= 960 px,
+  detections below 0.5 confidence dropped (design doc section 2).
 """
 import argparse
 import csv
+import gc
 import json
 import os
 import time
@@ -18,11 +32,13 @@ from pathlib import Path
 DATASET = Path(__file__).resolve().parents[1]
 VIDEOS = DATASET / "videos"
 TRANSCRIPTS = DATASET / "transcripts"
+CACHE = DATASET / ".cache"
 INDEX = DATASET / "video_index.csv"
 
 OCR_FPS = 0.5          # one frame every 2 seconds
 OCR_MAX_SIDE = 960     # resize so the longest side is at most this
 OCR_MIN_CONF = 0.5     # design doc section 2: drop detections below 0.5
+OCR_BATCH = 8          # recognition batch over a frame's text regions
 
 
 def _add_cuda_dll_dirs():
@@ -80,11 +96,10 @@ def transcribe(model, path):
         vad_parameters={"min_silence_duration_ms": 500},
         # Whisper's repetition loop: with the previous text fed back in, a
         # music-heavy or repetitive clip can emit the same phrase until the
-        # window ends. One video in this bundle ran ~15x longer than a clip of
-        # the same length before this was turned off. Costs a little
+        # window ends. One video in this bundle did not finish at all before
+        # this was turned off, and takes 89 seconds with it off. Costs a little
         # cross-segment coherence, which claim extraction does not rely on.
         condition_on_previous_text=False,
-        # drop segments the decoder itself thinks are silence/garbage
         no_speech_threshold=0.6,
         compression_ratio_threshold=2.4,
     )
@@ -124,10 +139,8 @@ def ocr_video(reader, path):
                 frame = cv2.resize(frame, (int(w * scale), int(h * scale)),
                                    interpolation=cv2.INTER_AREA)
             try:
-                # batch_size batches the recognition pass over the detected
-                # text regions. Caption-heavy frames carry dozens of regions and
-                # recognising them one at a time is the run's real bottleneck.
-                for _box, text, conf in reader.readtext(frame, batch_size=16):
+                for _box, text, conf in reader.readtext(
+                        frame, batch_size=OCR_BATCH):
                     if conf >= OCR_MIN_CONF and text.strip():
                         dets.append({"time": t, "text": text.strip(),
                                      "confidence": round(float(conf), 3)})
@@ -158,54 +171,112 @@ def collapse(dets):
     return out
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--device", choices=["auto", "cpu"], default="auto")
-    ap.add_argument("--only", default="", help="comma-separated video_ids")
-    ap.add_argument("--skip", default="",
-                    help="comma-separated video_ids to leave out, so one "
-                         "pathological video cannot block the batch")
-    ap.add_argument("--limit", type=int, default=0)
-    ap.add_argument("--no-ocr", action="store_true")
-    args = ap.parse_args()
+def write_atomic(path, obj):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(obj, indent=1, ensure_ascii=False),
+                   encoding="utf-8")
+    tmp.replace(path)
 
-    TRANSCRIPTS.mkdir(parents=True, exist_ok=True)
-    with open(INDEX, encoding="utf-8") as f:
+
+def load_rows(args):
+    with open(INDEX, encoding="utf-8-sig", newline="") as f:
         rows = list(csv.DictReader(f))
     if args.only:
-        want = set(s.strip() for s in args.only.split(","))
+        want = set(s.strip() for s in args.only.split(",") if s.strip())
         rows = [r for r in rows if r["video_id"] in want]
     if args.skip:
         drop = set(s.strip() for s in args.skip.split(",") if s.strip())
         rows = [r for r in rows if r["video_id"] not in drop]
     if args.limit:
         rows = rows[: args.limit]
+    return rows
 
+
+def stage_speech(rows, args):
+    out_dir = CACHE / "speech"
     todo = [r for r in rows
-            if not (TRANSCRIPTS / ("%s.json" % r["video_id"])).exists()]
-    print("[plan] %d selected, %d cached, %d to process"
-          % (len(rows), len(rows) - len(todo), len(todo)), flush=True)
+            if not (out_dir / ("%s.json" % r["video_id"])).exists()
+            and not (TRANSCRIPTS / ("%s.json" % r["video_id"])).exists()]
+    print("[speech] %d selected, %d to do" % (len(rows), len(todo)),
+          flush=True)
     if not todo:
         return
-
     dev, ct = pick_whisper_device(None if args.device == "auto" else args.device)
-    print("[device] whisper: %s/%s" % (dev, ct), flush=True)
+    print("[speech] device %s/%s" % (dev, ct), flush=True)
     from faster_whisper import WhisperModel
     model = WhisperModel("small", device=dev, compute_type=ct)
-
-    reader = None
-    if not args.no_ocr:
-        import easyocr
-        gpu = ocr_gpu_available() and args.device != "cpu"
-        print("[device] easyocr gpu=%s" % gpu, flush=True)
-        reader = easyocr.Reader(["en"], gpu=gpu, verbose=False)
-
     for n, r in enumerate(todo, start=1):
         vid = r["video_id"]
-        path = VIDEOS / r["relative_path"]
         t0 = time.time()
-        print("[%d/%d] %s %s" % (n, len(todo), vid, r["filename"][:58]),
+        print("[speech %d/%d] %s %s" % (n, len(todo), vid,
+                                        r["filename"][:52]), flush=True)
+        rec = {"whisper": {"model": "small", "device": dev,
+                           "compute_type": ct}}
+        try:
+            rec["transcript"] = transcribe(model, VIDEOS / r["relative_path"])
+            print("    %d segs, %.0fs, lang=%s (%.0fs)"
+                  % (len(rec["transcript"]["segments"]),
+                     rec["transcript"]["duration_seconds"],
+                     rec["transcript"]["language"], time.time() - t0),
+                  flush=True)
+        except Exception as e:
+            rec["transcript"] = {"error": "%s: %s" % (type(e).__name__, e),
+                                 "segments": []}
+            print("    FAILED: %s: %s" % (type(e).__name__, e), flush=True)
+        write_atomic(out_dir / ("%s.json" % vid), rec)
+        gc.collect()
+
+
+def stage_ocr(rows, args):
+    out_dir = CACHE / "ocr"
+    todo = [r for r in rows
+            if not (out_dir / ("%s.json" % r["video_id"])).exists()
+            and not (TRANSCRIPTS / ("%s.json" % r["video_id"])).exists()]
+    print("[ocr] %d selected, %d to do" % (len(rows), len(todo)), flush=True)
+    if not todo:
+        return
+    import easyocr
+    gpu = ocr_gpu_available() and args.device != "cpu"
+    print("[ocr] gpu=%s" % gpu, flush=True)
+    reader = easyocr.Reader(["en"], gpu=gpu, verbose=False)
+    for n, r in enumerate(todo, start=1):
+        vid = r["video_id"]
+        t0 = time.time()
+        print("[ocr %d/%d] %s %s" % (n, len(todo), vid, r["filename"][:52]),
               flush=True)
+        rec = {"ocr": {"engine": "easyocr", "lang": "en", "fps": OCR_FPS,
+                       "max_side": OCR_MAX_SIDE,
+                       "min_confidence": OCR_MIN_CONF,
+                       "gpu": gpu}}
+        try:
+            raw = ocr_video(reader, VIDEOS / r["relative_path"])
+            raw["captions"] = collapse(raw.get("detections", []))
+            rec["on_screen"] = raw
+            print("    %d captions from %d frames (%.0fs)"
+                  % (len(raw["captions"]), raw.get("frames_sampled", 0),
+                     time.time() - t0), flush=True)
+        except Exception as e:
+            rec["on_screen"] = {"error": "%s: %s" % (type(e).__name__, e),
+                                "detections": [], "captions": []}
+            print("    FAILED: %s: %s" % (type(e).__name__, e), flush=True)
+        write_atomic(out_dir / ("%s.json" % vid), rec)
+        gc.collect()
+
+
+def stage_merge(rows, _args):
+    made = 0
+    for r in rows:
+        vid = r["video_id"]
+        final = TRANSCRIPTS / ("%s.json" % vid)
+        if final.exists():
+            continue
+        sp = CACHE / "speech" / ("%s.json" % vid)
+        oc = CACHE / "ocr" / ("%s.json" % vid)
+        if not (sp.exists() and oc.exists()):
+            continue
+        s = json.loads(sp.read_text(encoding="utf-8"))
+        o = json.loads(oc.read_text(encoding="utf-8"))
         rec = {
             "video_id": vid,
             "filename": r["filename"],
@@ -214,49 +285,37 @@ def main():
             "collector_label": r["collector_label"],
             "creator_handle": r["creator_handle"],
             "extracted_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
-            "whisper": {"model": "small", "device": dev, "compute_type": ct},
-            "ocr": {"engine": "easyocr", "lang": "en", "fps": OCR_FPS,
-                    "max_side": OCR_MAX_SIDE, "min_confidence": OCR_MIN_CONF},
+            "whisper": s.get("whisper", {}),
+            "ocr": o.get("ocr", {}),
+            "transcript": s.get("transcript", {}),
+            "on_screen": o.get("on_screen", {}),
         }
-        try:
-            rec["transcript"] = transcribe(model, path)
-            print("      speech: %d segs, %.0fs, lang=%s (%.0fs)"
-                  % (len(rec["transcript"]["segments"]),
-                     rec["transcript"]["duration_seconds"],
-                     rec["transcript"]["language"], time.time() - t0),
-                  flush=True)
-        except Exception as e:
-            rec["transcript"] = {"error": "%s: %s" % (type(e).__name__, e),
-                                 "segments": []}
-            print("      speech FAILED: %s: %s" % (type(e).__name__, e),
-                  flush=True)
+        write_atomic(final, rec)
+        made += 1
+    print("[merge] wrote %d transcripts (%d total)"
+          % (made, len(list(TRANSCRIPTS.glob("*.json")))), flush=True)
 
-        if reader is not None:
-            t1 = time.time()
-            try:
-                raw = ocr_video(reader, path)
-                raw["captions"] = collapse(raw.get("detections", []))
-                rec["on_screen"] = raw
-                print("      ocr: %d captions from %d frames (%.0fs)"
-                      % (len(raw["captions"]), raw.get("frames_sampled", 0),
-                         time.time() - t1), flush=True)
-            except Exception as e:
-                rec["on_screen"] = {"error": "%s: %s" % (type(e).__name__, e),
-                                    "detections": [], "captions": []}
-                print("      ocr FAILED: %s: %s" % (type(e).__name__, e),
-                      flush=True)
-        else:
-            rec["on_screen"] = {"skipped": True, "detections": [],
-                                "captions": []}
 
-        # write atomically so an interrupted run never leaves a half file
-        out = TRANSCRIPTS / ("%s.json" % vid)
-        tmp = out.with_suffix(".json.tmp")
-        tmp.write_text(json.dumps(rec, indent=1, ensure_ascii=False),
-                       encoding="utf-8")
-        tmp.replace(out)
-        print("      -> %s (%.0fs total)" % (out.name, time.time() - t0),
-              flush=True)
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--stage", choices=["speech", "ocr", "merge", "all"],
+                    default="all")
+    ap.add_argument("--device", choices=["auto", "cpu"], default="auto")
+    ap.add_argument("--only", default="", help="comma-separated video_ids")
+    ap.add_argument("--skip", default="",
+                    help="comma-separated video_ids to leave out, so one "
+                         "pathological video cannot block the batch")
+    ap.add_argument("--limit", type=int, default=0)
+    args = ap.parse_args()
+
+    TRANSCRIPTS.mkdir(parents=True, exist_ok=True)
+    rows = load_rows(args)
+    if args.stage in ("speech", "all"):
+        stage_speech(rows, args)
+    if args.stage in ("ocr", "all"):
+        stage_ocr(rows, args)
+    if args.stage in ("merge", "all"):
+        stage_merge(rows, args)
 
 
 if __name__ == "__main__":

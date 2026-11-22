@@ -172,6 +172,46 @@ def pubmed_abstract(pmid):
     return _cached("abstract", key, produce)
 
 
+def pubmed_fulltext(pmid):
+    """Open-access full text from PMC, when the paper has a PMCID.
+
+    Many abstracts are too thin to settle a verdict -- BMJ feature articles in
+    particular carry a one-line teaser -- and section 7 forbids citing a paper
+    for something you have not read. Where PMC has the full text, read it;
+    where it does not, the honest answer stays INSUFFICIENT_EVIDENCE.
+    """
+    key = "fulltext::%s" % pmid
+
+    def produce():
+        s = _get("%s/esummary.fcgi" % EUTILS,
+                 params={"db": "pubmed", "id": pmid, "retmode": "json",
+                         "tool": TOOL, "email": EMAIL}, timeout=30)
+        rec = (s.json().get("result", {}) or {}).get(str(pmid), {}) or {}
+        pmcid = ""
+        for a in rec.get("articleids", []) or []:
+            if a.get("idtype") == "pmc":
+                pmcid = str(a.get("value", ""))
+                break
+        if not pmcid:
+            return {"pmid": pmid, "pmcid": "", "open_access": False,
+                    "text": "", "note": "no PMCID; not open access in PMC"}
+        num = pmcid.replace("PMC", "")
+        r = _get("%s/efetch.fcgi" % EUTILS,
+                 params={"db": "pmc", "id": num, "retmode": "xml",
+                         "tool": TOOL, "email": EMAIL}, timeout=60)
+        import re as _re
+        xml = r.text
+        body = _re.sub(r"<(ref-list|back|front)\b.*?</\1>", " ", xml,
+                       flags=_re.S | _re.I)
+        body = _re.sub(r"<[^>]+>", " ", body)
+        body = _re.sub(r"\s+", " ", body).strip()
+        return {"pmid": pmid, "pmcid": pmcid,
+                "open_access": len(body) > 500,
+                "length": len(body), "text": body[:60000]}
+
+    return _cached("fulltext", key, produce)
+
+
 def fetch_page(url):
     """Fetch a WHO/CDC-style guidance page. Only trusted hosts are allowed, and
     only a 200 with real body text counts as retrieved."""
@@ -229,6 +269,22 @@ def main():
     elif cmd == "abstract":
         rec = pubmed_abstract(sys.argv[2])
         print(rec["text"][:4000])
+    elif cmd == "fulltext":
+        rec = pubmed_fulltext(sys.argv[2])
+        print("pmid=%s pmcid=%s open_access=%s length=%s"
+              % (rec["pmid"], rec.get("pmcid"), rec.get("open_access"),
+                 rec.get("length")))
+        if rec.get("note"):
+            print("note:", rec["note"])
+        grep = sys.argv[3] if len(sys.argv) > 3 else ""
+        text = rec.get("text", "")
+        if grep and text:
+            import re as _re
+            for m in _re.finditer(grep, text, _re.I):
+                lo = max(0, m.start() - 300)
+                print("...", text[lo:m.end() + 300], "...\n")
+        elif text:
+            print(text[:5000])
     elif cmd == "fetch":
         rec = fetch_page(sys.argv[2])
         print(json.dumps({k: v for k, v in rec.items() if k != "text"},

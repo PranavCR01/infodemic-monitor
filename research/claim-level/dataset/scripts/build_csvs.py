@@ -21,6 +21,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from judge import judge, is_mixed          # noqa: E402
+import enrich                              # noqa: E402
 from labels import LABELS, ANNOTATOR       # noqa: E402
 
 DATASET = Path(__file__).resolve().parents[1]
@@ -79,13 +80,21 @@ def main():
             raise SystemExit("%s is not in video_index.csv" % vid)
         claims = v.get("claims", [])
 
+        doc = enrich.load(vid)
+        if doc is None and claims:
+            raise SystemExit(
+                "%s has claims but no transcripts/%s.json; run extract.py "
+                "--stage merge first" % (vid, vid))
+
         for i, c in enumerate(claims, start=1):
             cid = c.get("claim_id") or ("c%d" % i)
+            src = c.get("source") or enrich.derive_claim_source(
+                doc, float(c["start"]), float(c["end"]))
             claim_rows.append({
                 "video_id": vid,
                 "claim_id": cid,
                 "claim_text": c["text"],
-                "claim_source": c["source"],
+                "claim_source": src,
                 "start_seconds": c["start"],
                 "end_seconds": c["end"],
                 "speaker_stance": c["stance"],
@@ -118,6 +127,16 @@ def main():
         if len(judged) == 1 and "single_claim" not in tags:
             tags.append("single_claim")
 
+        # text_type is derived from the OCR output by the documented rule in
+        # enrich.py; an explicit value in labels.py overrides it.
+        text_type = v.get("text_type")
+        if not text_type:
+            if doc is None:
+                raise SystemExit(
+                    "%s has no text_type and no transcript to derive one from"
+                    % vid)
+            text_type = enrich.derive_text_type(doc)[0]
+
         idx = index[vid]
         video_rows.append({
             "video_id": vid,
@@ -125,7 +144,7 @@ def main():
             "platform": v.get("platform") or idx.get("platform", "unknown"),
             "topic": v["topic"],
             "video_level_label": label,
-            "text_type": v["text_type"],
+            "text_type": text_type,
             "case_tags": join(tags),
             "split": splits[vid],
             "annotator": ANNOTATOR,
