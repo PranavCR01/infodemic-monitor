@@ -1,0 +1,212 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.995,
+  "duration_seconds": 110.69,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 1.0,
+    "text": "How about creatine?"
+   },
+   {
+    "id": "t2",
+    "start": 1.0,
+    "end": 2.0,
+    "text": "No, never."
+   },
+   {
+    "id": "t3",
+    "start": 2.0,
+    "end": 3.0,
+    "text": "You're not into creatine."
+   },
+   {
+    "id": "t4",
+    "start": 3.0,
+    "end": 4.5,
+    "text": "You couldn't pay me to take creatine."
+   },
+   {
+    "id": "t5",
+    "start": 4.5,
+    "end": 7.56,
+    "text": "So we are actually looking under the microscope, we're looking at the blood cells, we're looking"
+   },
+   {
+    "id": "t6",
+    "start": 7.56,
+    "end": 8.56,
+    "text": "at labs."
+   },
+   {
+    "id": "t7",
+    "start": 8.56,
+    "end": 12.44,
+    "text": "We're actually doing, you know, working from a clinical perspective."
+   },
+   {
+    "id": "t8",
+    "start": 12.44,
+    "end": 14.68,
+    "text": "How it's being used now, I think it's extremely dehydrating."
+   },
+   {
+    "id": "t9",
+    "start": 14.68,
+    "end": 18.48,
+    "text": "I think it can, I mean, we test cortisol curves after people have been doing creatine on a"
+   },
+   {
+    "id": "t10",
+    "start": 18.48,
+    "end": 19.48,
+    "text": "regular basis."
+   },
+   {
+    "id": "t11",
+    "start": 19.48,
+    "end": 25.48,
+    "text": "I will say, I think it plays, if you have elevated genetic lip, lipoprotein, little A, and you"
+   },
+   {
+    "id": "t12",
+    "start": 25.48,
+    "end": 31.56,
+    "text": "have a tendency to get elevated calcium score, I do not touch it."
+   },
+   {
+    "id": "t13",
+    "start": 31.56,
+    "end": 34.96,
+    "text": "So that's Hayley Pomeroy, a wellness consultant chatting absolute nonsense about one of the"
+   },
+   {
+    "id": "t14",
+    "start": 34.96,
+    "end": 37.88,
+    "text": "most extensively researched supplements on the planet."
+   },
+   {
+    "id": "t15",
+    "start": 37.88,
+    "end": 38.88,
+    "text": "Time for school."
+   },
+   {
+    "id": "t16",
+    "start": 38.88,
+    "end": 41.4,
+    "text": "Firstly, she claims that creatine is extremely dehydrating."
+   },
+   {
+    "id": "t17",
+    "start": 41.4,
+    "end": 42.4,
+    "text": "Really?"
+   },
+   {
+    "id": "t18",
+    "start": 42.4,
+    "end": 46.56,
+    "text": "Because this meta-analysis of controlled human trials found no evidence of dehydration or"
+   },
+   {
+    "id": "t19",
+    "start": 46.56,
+    "end": 48.2,
+    "text": "impaired thermoregulation."
+   },
+   {
+    "id": "t20",
+    "start": 48.2,
+    "end": 49.2,
+    "text": "Good job Hayley."
+   },
+   {
+    "id": "t21",
+    "start": 49.2,
+    "end": 53.36,
+    "text": "Then she starts talking about cortisol curves as though she's discovered something revolutionary."
+   },
+   {
+    "id": "t22",
+    "start": 53.36,
+    "end": 58.32,
+    "text": "placebo-controlled trials have already investigated creatine and cortisol, finding no significant"
+   },
+   {
+    "id": "t23",
+    "start": 58.32,
+    "end": 62.84,
+    "text": "adverse effects on cortisol responses. Then she says people with high coronary artery"
+   },
+   {
+    "id": "t24",
+    "start": 62.84,
+    "end": 67.72,
+    "text": "calcium scores or high LP-little-A should never take creatine. Based on what, there"
+   },
+   {
+    "id": "t25",
+    "start": 67.72,
+    "end": 73.72,
+    "text": "is zero human evidence that creatine accelerates coronary calcification or increases LP-little-A."
+   },
+   {
+    "id": "t26",
+    "start": 73.72,
+    "end": 75.92,
+    "text": "She's literally inventing contraindications."
+   },
+   {
+    "id": "t27",
+    "start": 75.92,
+    "end": 81.08,
+    "text": "Okay, Luke, Luke, who's testing it, the supplement company, right? We cannot be in natural health"
+   },
+   {
+    "id": "t28",
+    "start": 81.08,
+    "end": 83.72,
+    "text": "and act like big pharma. We need to stop it right now.\""
+   },
+   {
+    "id": "t29",
+    "start": 83.72,
+    "end": 87.96,
+    "text": "And finally, she dismisses the research because apparently it's all funded by supplement companies."
+   },
+   {
+    "id": "t30",
+    "start": 87.96,
+    "end": 92.68,
+    "text": "Even though independent academic researchers have studied creatine for literally decades,"
+   },
+   {
+    "id": "t31",
+    "start": 92.68,
+    "end": 97.32,
+    "text": "look, taking blood tests and measuring cortisol curves doesn't automatically make you scientifically"
+   },
+   {
+    "id": "t32",
+    "start": 97.32,
+    "end": 102.68,
+    "text": "competent. If your clinical opinions directly contradict decades of controlled human research,"
+   },
+   {
+    "id": "t33",
+    "start": 102.68,
+    "end": 106.12,
+    "text": "then maybe the problem isn't the science, it's you. Glossomist."
+   }
+  ]
+ }
+}

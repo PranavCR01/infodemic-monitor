@@ -4159,4 +4159,543 @@ LABELS = [
             },
         ],
     },
+    {
+        "video_id": "v55",
+        "topic": "immunology / vaccines",
+        "case_tags": ["accurate"],
+        "confidence": "medium",
+        "notes": "A four-minute teaching video on why the immune system is a "
+                 "memory bank rather than a muscle, walking through the innate "
+                 "response and then polio as a worked example. Accurate, "
+                 "well-structured and unusually long for the bundle. "
+                 "Collectors filed it under NO_MISINFO, which agrees.",
+        "claims": [
+            {
+                "text": "Your immune system does not act like a muscle. Your "
+                        "muscle gets stronger when you stress it. Your immune "
+                        "system is more like a memory bank",
+                "start": 3.7, "end": 13.1,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:22481438"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "An analogy standing in for immunological memory, "
+                         "which the retrieved review covers. Supported in "
+                         "substance; the analogy itself is not what a study "
+                         "tests.",
+            },
+            {
+                "text": "your body's first-line response is typically your "
+                        "innate immune response. It is fast, and most "
+                        "importantly, it's nonspecific ... Your temperature "
+                        "rises to slow down the replication of whatever is "
+                        "invading your body",
+                "start": 13.1, "end": 24.1,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:22481438"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "A correct description of innate immunity and fever "
+                         "as a host response.",
+            },
+            {
+                "text": "90% of the people who get polio or who have gotten "
+                        "polio were asymptomatic, meaning they have no "
+                        "symptoms at all",
+                "start": 64.1, "end": 70.3,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "A search for the asymptomatic and paralytic "
+                         "proportions of poliomyelitis infection returned "
+                         "nothing; the empty search is in evidence_cache/. The "
+                         "figure is standard public-health teaching, which is "
+                         "exactly the kind of textbook number this pipeline "
+                         "cannot reach -- the same gap as v22's protein "
+                         "quality row.",
+            },
+        ],
+    },
+    {
+        "video_id": "v63",
+        "topic": "physical activity",
+        "case_tags": ["accurate", "multi_claim"],
+        "confidence": "medium",
+        "notes": "'If physical activity were a pill, it would be the most "
+                 "prescribed medication in medicine' -- then a long list of "
+                 "benefits and the 150-minute guideline. The densest "
+                 "accurate video in the set, and a useful stress test for "
+                 "claim extraction: a single breath lists eight cancer sites, "
+                 "and another lists five unrelated outcomes, so how a system "
+                 "splits compound claims changes the row count enormously. "
+                 "Split here by outcome domain rather than by named site, on "
+                 "the grounds that the speaker is making one claim about "
+                 "cancer incidence, not eight. Collectors filed it under "
+                 "NO_MISINFO, which agrees.",
+        "claims": [
+            {
+                "text": "Regular physical activity improves your "
+                        "cardiovascular and muscular fitness, your bone "
+                        "health, and lowers your risk of fracture",
+                "start": 11.8, "end": 18.9,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:31095084", "PMID:35599175"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Supported by the physical-activity and "
+                         "cardiovascular mortality review and the "
+                         "resistance-training meta-analysis. The fracture limb "
+                         "is the least directly evidenced of the three.",
+            },
+            {
+                "text": "It improves anxiety, depression, and helps with "
+                        "overall mood regulation. It improves your sleep "
+                        "quality and energy levels",
+                "start": 18.9, "end": 25.9,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:34163383", "PMID:25596964"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The sleep half is directly supported by the same "
+                         "meta-analyses used for v26. The anxiety and "
+                         "depression half is supported in direction but "
+                         "nothing retrieved here tests it specifically.",
+            },
+            {
+                "text": "it helps your self-esteem and cognitive "
+                        "functioning, including reducing the risk of dementia",
+                "start": 25.9, "end": 31.1,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:24885250", "PMID:31902364"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The systematic review of physical activity and "
+                         "cognitive decline and the midlife modifiable "
+                         "risk-factor meta-analysis support the dementia limb. "
+                         "Self-esteem is untested here.",
+            },
+            {
+                "text": "Consistent movement lowers the risk of hypertension "
+                        "and type 2 diabetes and is associated with the lower "
+                        "incidence of multiple cancers, including breast, "
+                        "colon, bladder, endometrial, prostate, lung, stomach, "
+                        "and esophageal cancers",
+                "start": 34.9, "end": 49.7,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:32741068", "PMID:39444461"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The review of physical activity, obesity and "
+                         "sedentary behaviour in cancer aetiology supports the "
+                         "multi-site association, and the brisk-walking review "
+                         "supports the blood-pressure limb. Kept as one row "
+                         "rather than eight: the speaker asserts one "
+                         "association across sites, and splitting per site "
+                         "would invent eight claims he did not separately "
+                         "make.",
+            },
+            {
+                "text": "Aerobic activity lowers all cause mortality ... "
+                        "reduces the incidence of and death from "
+                        "cardiovascular disease, improves insulin "
+                        "sensitivity, lowers your triglycerides",
+                "start": 52.8, "end": 67.6,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:31095084", "PMID:37676198"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "Directly supported by the physical activity and "
+                         "all-cause and cardiovascular mortality review and "
+                         "the daily step-count analysis.",
+            },
+            {
+                "text": "many major guidelines recommend 150 minutes per week "
+                        "of moderate intensity exercise or 75 minutes of "
+                        "vigorous intensity exercise",
+                "start": 67.6, "end": 76.3,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "A claim about what guidelines say, which is a "
+                         "guideline document rather than a study. The same "
+                         "category of gap as v64's schedules and v24's EPA "
+                         "tolerance.",
+            },
+        ],
+    },
+    {
+        "video_id": "v70",
+        "topic": "nutrition / non-dairy milk",
+        "case_tags": ["debunking"],
+        "confidence": "medium",
+        "notes": "@abbeyskitchen (also v23) rebutting a doctor who told "
+                 "patients to use coconut milk because it is 'the least "
+                 "processed'. Names the appeal-to-nature fallacy explicitly, "
+                 "and points out that the recommended option is the one "
+                 "highest in saturated fat and calories. Comes out "
+                 "NO_MISINFO rather than DEBUNKING: the refuted claim is a "
+                 "processing-is-bad value judgement rather than a falsifiable "
+                 "assertion, so it lands on NOT_VERIFIABLE and section 9's "
+                 "second rule cannot fire. The fourth video in the set to hit "
+                 "that gap, after v24, v30, v64 and v68. Collectors filed it "
+                 "under DEBUNKING.",
+        "claims": [
+            {
+                "text": "I usually tell patients to use the coconut milk or "
+                        "cream because it's the least processed of all the "
+                        "[milks]",
+                "start": 0.0, "end": 12.2,
+                "stance": "REFUTES", "verdict": "NOT_VERIFIABLE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "The claim being refuted, and it is not falsifiable "
+                         "as stated: 'least processed' has no measurement "
+                         "behind it, and the implied health conclusion is "
+                         "never made explicit. The dietitian's own answer -- "
+                         "that carton coconut beverage is processed just like "
+                         "almond or oat -- is the right rebuttal and still not "
+                         "a verdict the rubric can award.",
+            },
+            {
+                "text": "in the context of non-dairy milk, a lot of the "
+                        "options are fortified with bone-supporting nutrients "
+                        "like calcium and vitamin D so that it can be more "
+                        "nutritionally comparable to dairy milk",
+                "start": 55.5, "end": 74.5,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "A claim about product formulation, checkable "
+                         "against labels rather than literature.",
+            },
+            {
+                "text": "this post wrongfully insinuate[s] that almond and "
+                        "oat milk cause cancer, which spoiler alert friends, "
+                        "they do not",
+                "start": 127.8, "end": 138.4,
+                "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "Nothing retrieved tests almond or oat beverage "
+                         "against cancer risk -- which is unsurprising, since "
+                         "the claim she is refuting was never seriously "
+                         "proposed. An absence of evidence on both sides.",
+            },
+            {
+                "text": "it instead makes a recommendation for the milk that "
+                        "provides the most calories and the highest saturated "
+                        "fat content, both of which are associated with an "
+                        "increased risk of chronic disease, obesity, heart "
+                        "disease, and yes, even some cancers",
+                "start": 138.4, "end": 153.1,
+                "stance": "ENDORSES", "verdict": "MIXED",
+                "supporting": ["PMID:32428300", "PMID:37019448"],
+                "contradicting": ["PMID:40416032", "PMID:30217460"],
+                "confidence": "medium",
+                "notes": "The saturated-fat split again, now from the "
+                         "opposite direction to v11 and v39: Cochrane supports "
+                         "the harm, the 2025 meta-analysis does not, and the "
+                         "PURE dairy analysis complicates it further. A "
+                         "debunker's own claim landing on MIXED is worth a "
+                         "reviewer's attention.",
+            },
+        ],
+    },
+    {
+        "video_id": "v77",
+        "topic": "endocrine disruptors / hormones",
+        "case_tags": ["clearly_false"],
+        "confidence": "medium",
+        "notes": "A men's-health creator on BPA and 'PFAs' wrecking his "
+                 "hormones. The interesting failure is conceptual rather than "
+                 "factual: he conflates PFAS with pesticide residues, so the "
+                 "'forever chemicals' argument lands on the Dirty Dozen list "
+                 "of fruit and vegetables, and concludes that spinach, kale, "
+                 "strawberries and grapes are 'rotting us from the inside'. "
+                 "That is the claim that makes this MISINFO, contradicted by "
+                 "the fruit and vegetable mortality literature. Pairs "
+                 "instructively with v60, which makes a narrower version of "
+                 "the BPA claim and comes out NO_MISINFO. Collectors filed it "
+                 "under MISINFO, which agrees.",
+        "claims": [
+            {
+                "text": "BPA ... A chemical ... that just so happens to "
+                        "perfectly mirror estrogen in the human body, just a "
+                        "shittier version",
+                "start": 8.3, "end": 17.5,
+                "stance": "ENDORSES", "verdict": "MIXED",
+                "supporting": ["PMID:25775505", "PMID:29925041"],
+                "contradicting": ["PMID:11800169"],
+                "confidence": "medium",
+                "notes": "BPA does have oestrogenic activity, which the "
+                         "retrieved hormonal-activity comparison and "
+                         "reproductive-health review support. 'Perfectly "
+                         "mirror' overstates it: its receptor affinity is "
+                         "orders of magnitude below oestradiol, which is the "
+                         "substance of the environmental-oestrogen "
+                         "toxicology literature.",
+            },
+            {
+                "text": "a receipt carries 250 times more BPAs than any of "
+                        "the food I just mentioned",
+                "start": 27.1, "end": 33.3,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:26407846"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Thermal receipts do carry high BPA levels, as the "
+                         "measurement study shows, but nothing retrieved "
+                         "supports the specific 250-fold ratio against canned "
+                         "food.",
+            },
+            {
+                "text": "Her body doesn't know the difference between this "
+                        "and real estrogen. That's why men look the way they "
+                        "look now",
+                "start": 35.0, "end": 39.2,
+                "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "'The way men look now' is not an outcome any study "
+                         "measures.",
+            },
+            {
+                "text": "PFA's, otherwise known as forever chemicals ... "
+                        "they don't leave the body. These ones surprisingly "
+                        "also disrupt our hormones and make it harder to lose "
+                        "weight",
+                "start": 42.8, "end": 54.0,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:29438414"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Supported more than one might expect: the "
+                         "retrieved study examines perfluoroalkyl substances "
+                         "against body-weight change and resting metabolic "
+                         "rate after a weight-loss diet, which is the claim's "
+                         "substance. Persistence is in the name.",
+            },
+            {
+                "text": "No, it's in fruit and vegetables. This group of "
+                        "fruits and vegetables goes by the dirty dozen ... "
+                        "Nearly all of these that come from the United States "
+                        "are sprayed with such harmful pesticides to keep bugs "
+                        "off them that they're rotting us from the inside",
+                "start": 56.6, "end": 72.2,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:28338764", "PMID:33641343",
+                                  "PMID:38626048"],
+                "confidence": "medium",
+                "notes": "The claim that makes this MISINFO, and it contains "
+                         "a category error: the Dirty Dozen is a pesticide "
+                         "residue list, not a PFAS list, so the "
+                         "forever-chemicals argument does not reach it. On the "
+                         "health claim itself, higher fruit and vegetable "
+                         "intake is associated with lower cardiovascular, "
+                         "cancer and all-cause mortality, and the "
+                         "screening-level dietary risk assessment of residues "
+                         "in produce addresses the exposure directly. "
+                         "Telling people to avoid spinach and strawberries "
+                         "inverts the evidence.",
+            },
+        ],
+    },
+    {
+        "video_id": "v78",
+        "topic": "vaccines / pregnancy",
+        "case_tags": ["clearly_false"],
+        "confidence": "high",
+        "notes": "A podcast clip claiming Fauci's text messages prove the "
+                 "COVID vaccine was linked to first-trimester miscarriages, "
+                 "and that 81-82% of women vaccinated in the first trimester "
+                 "miscarried. The most clearly false quantitative claim in the "
+                 "whole bundle, and the most consequential given the audience "
+                 "it targets. The 82% figure is a known misreading of the "
+                 "v-safe pregnancy registry, whose actual finding is a "
+                 "cumulative spontaneous-abortion risk of 12.8-14.1%, inside "
+                 "the expected range for recognised pregnancies. MISINFO. "
+                 "Collectors filed it under MISINFO, which agrees.",
+        "claims": [
+            {
+                "text": "the vaccine and the booster was linked to "
+                        "miscarriages in pregnant women in the first trimester "
+                        "and Dr. Fauci knew it",
+                "start": 17.5, "end": 25.3,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:34401872", "PMID:34496196",
+                                  "PMID:39202263"],
+                "confidence": "high",
+                "notes": "Contradicted on the health claim. The v-safe "
+                         "pregnancy registry analysis concludes that receipt "
+                         "of an mRNA COVID-19 vaccine preconception or during "
+                         "pregnancy is not associated with an increased risk "
+                         "of spontaneous abortion, and the systematic review "
+                         "of safety in pregnancy agrees. The separate "
+                         "assertion about what Fauci privately knew is a claim "
+                         "about a person's knowledge, not a health claim, and "
+                         "is not a row.",
+            },
+            {
+                "text": "81 to 82% of women who got the vaccine in the first "
+                        "trimester experience a miscarriage. 82%",
+                "start": 62.5, "end": 71.1,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:34401872"],
+                "confidence": "high",
+                "notes": "Numerically contradicted. Among 2,456 pregnant "
+                         "people vaccinated preconception or before 20 weeks, "
+                         "the cumulative risk of spontaneous abortion from "
+                         "6-19 weeks was 14.1% (95% CI 12.1-16.1), and 12.8% "
+                         "age-standardised -- within the expected background "
+                         "range. The 82% figure appears to come from taking a "
+                         "denominator of completed pregnancies at the time of "
+                         "a preliminary report rather than all enrolled "
+                         "pregnancies. The single most checkable false number "
+                         "in the set.",
+            },
+        ],
+    },
+    {
+        "video_id": "v79",
+        "topic": "vaccines / immunisation schedules",
+        "case_tags": ["debunking"],
+        "confidence": "high",
+        "notes": "A 35-second rebuttal of the executive order splitting MMR "
+                 "into separate visits, ending 'leave healthcare to the "
+                 "healthcare professionals'. Short, and DEBUNKING on solid "
+                 "evidence rather than on schedule documents, which is what "
+                 "separates it from v64. Collectors filed it under DEBUNKING, "
+                 "which agrees.",
+        "claims": [
+            {
+                "text": "at year one, you should have five separate visits "
+                        "for vaccines rather than giving them all in the same "
+                        "day",
+                "start": 0.0, "end": 5.2,
+                "stance": "REFUTES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:32309885", "PMID:22336803"],
+                "confidence": "medium",
+                "notes": "The Cochrane reviews of measles, mumps, rubella and "
+                         "varicella vaccines in children support the "
+                         "combination vaccine's safety, which contradicts a "
+                         "need to separate the doses.",
+            },
+            {
+                "text": "The combination MMR vaccine has been shown to be "
+                        "safe. There is no evidence that it needs to be "
+                        "separated",
+                "start": 8.7, "end": 14.5,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:32309885", "PMID:12922131"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Supported by the Cochrane review and the systematic "
+                         "review of unintended events following MMR "
+                         "immunisation.",
+            },
+            {
+                "text": "there has been no evidence that any of the childhood "
+                        "vaccinations cause autism",
+                "start": 24.6, "end": 28.5,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:24814559", "PMID:18482737"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "The evidence-based meta-analysis titled 'Vaccines "
+                         "are not associated with autism' and the thimerosal "
+                         "medical-records study.",
+            },
+        ],
+    },
+    {
+        "video_id": "v80",
+        "topic": "vaccines / immunisation schedules",
+        "case_tags": ["debunking"],
+        "confidence": "medium",
+        "notes": "The companion to v79 from the same creator, answering the "
+                 "'why overload the body' argument with the antigen-exposure "
+                 "comparison. DEBUNKING. The antigen-count claim is the "
+                 "classic version of this rebuttal and could not be sourced "
+                 "here, which is a retrieval gap rather than a weakness in the "
+                 "claim. Collectors filed it under DEBUNKING, which agrees.",
+        "claims": [
+            {
+                "text": "why overload the body[?] and makes more sense to "
+                        "space them out[?]",
+                "start": 0.0, "end": 4.3,
+                "stance": "REFUTES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:32309885", "PMID:24814559"],
+                "confidence": "medium",
+                "notes": "The claim being refuted. Contradicted by the same "
+                         "combination-vaccine safety evidence as v79.",
+            },
+            {
+                "text": "A newborn baby is exposed to 2,000 to 6,000 new "
+                        "antigens every day ... in the entire childhood "
+                        "vaccination series, all 18 years, there are less than "
+                        "200 antigens",
+                "start": 4.3, "end": 30.7,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "A search for the antigen content of the childhood "
+                         "schedule against infant immune capacity returned "
+                         "nothing; the empty search is in evidence_cache/. "
+                         "These figures come from a well-known published "
+                         "calculation, so this is a retrieval failure of the "
+                         "same kind as v54's Michigan study, not an "
+                         "unevidenced claim.",
+            },
+            {
+                "text": "There is zero evidence for any benefit for spacing "
+                        "out or separating vaccinations",
+                "start": 30.7, "end": 35.9,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:32309885"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Another claim asserting the absence of evidence, "
+                         "which section 7 cannot express agreement with -- the "
+                         "same structural problem as v53's hydration row.",
+            },
+        ],
+    },
+    {
+        "video_id": "v81",
+        "topic": "wellness practices / women's health",
+        "case_tags": ["missing_evidence"],
+        "confidence": "medium",
+        "notes": "A beginner wellness-rituals listicle for women's health, "
+                 "starting with the Legs Up The Wall restorative yoga pose. "
+                 "Benign in tone, with no product and no scare framing, and "
+                 "still CANNOT_RECOGNIZE: the claimed mechanisms (nervous "
+                 "system regulation, circulation, digestion) are the kind of "
+                 "diffuse wellness outcomes nothing in the literature tests. "
+                 "Useful as the low-harm end of the INSUFFICIENT_EVIDENCE "
+                 "range, against v34 at the high-harm end -- same verdict, "
+                 "very different materiality, which is the argument for "
+                 "section 9's materiality signal. Transcription is poor in "
+                 "places ('managing enemy trio systemistically'). This "
+                 "collector's folder carried no label.",
+        "claims": [
+            {
+                "text": "Legs up the wall is a great way to regulate your "
+                        "nervous system, improve circulation, [and support] "
+                        "digestion",
+                "start": 29.9, "end": 38.1,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "Three diffuse outcomes with no magnitude and no "
+                         "comparator. Nothing retrieved tests this pose "
+                         "against any of them. Kept as one row because it is "
+                         "one list in one clause.",
+            },
+        ],
+    },
 ]
