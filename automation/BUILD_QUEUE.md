@@ -31,6 +31,7 @@ starts the next ready task, and records progress here.
 
 Newest first. One line per event: date, task, what happened.
 
+- 2026-11-22 01:20 UTC — waiting: T01–T13 done (PRs #49–#61). Only T14 (needs API keys + data/golden-label-set) and T15 (needs T14 results + human-verified labels) remain, both blocked on people. Automation idle until they are unblocked.
 - 2026-11-22 UTC — T11 done: PR #61 squash-merged into langgraph-build (768 passed, 8 skipped; migration 0008 also checked on a local Postgres 16). T14 now waits only on API keys and the golden label set. Flag defaults to off.
 - 2026-11-22 UTC — T13 done: PR #60 squash-merged into langgraph-build (727 passed, 7 skipped; Redis bucket tested on a local redis-server). Not deployed. Also resolved conflict markers T09 left in context/MULTI_AGENT.md (T09's section renamed 7k; T13 is 7l).
 - 2026-11-22 01:01 UTC — T11 started in session session_013cWxpyExKRkmyakBC2CXtt.
