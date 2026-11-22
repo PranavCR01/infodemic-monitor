@@ -1,0 +1,5332 @@
+{
+ "video_id": "v55",
+ "filename": "v07_ @doctor.darien_immune_system.mp4",
+ "relative_path": "Dataset-Sept-2026/Joshua Ryan Fajardo/NO-MISINFO/v07_ @doctor.darien_immune_system.mp4",
+ "collector": "Joshua Ryan Fajardo",
+ "collector_label": "NO_MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:42:33",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.996,
+  "duration_seconds": 238.82,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.68,
+    "text": "Welcome back to medical school. Let's talk about something really important. Your immune system"
+   },
+   {
+    "id": "t2",
+    "start": 3.68,
+    "end": 8.72,
+    "text": "does not act like a muscle. Your muscle gets stronger when you stress it. Your immune system is"
+   },
+   {
+    "id": "t3",
+    "start": 8.72,
+    "end": 13.12,
+    "text": "more like a memory bank. It's something that you teach. When you get an infection, your body's"
+   },
+   {
+    "id": "t4",
+    "start": 13.12,
+    "end": 18.72,
+    "text": "first-line response is typically your innate immune response. It is fast, and most importantly,"
+   },
+   {
+    "id": "t5",
+    "start": 18.72,
+    "end": 24.08,
+    "text": "it's nonspecific. All cylinders on go. Your temperature rises to slow down the replication"
+   },
+   {
+    "id": "t6",
+    "start": 24.08,
+    "end": 29.44,
+    "text": "of whatever is invading your body. Mucus increases to trap pathogens. Even cytokine"
+   },
+   {
+    "id": "t7",
+    "start": 29.44,
+    "end": 31.64,
+    "text": "and messaged your proteins or sent around your body,"
+   },
+   {
+    "id": "t8",
+    "start": 31.64,
+    "end": 33.8,
+    "text": "this is what makes you feel like crap when you're sick."
+   },
+   {
+    "id": "t9",
+    "start": 33.8,
+    "end": 35.36,
+    "text": "Your body does not know what it's fighting,"
+   },
+   {
+    "id": "t10",
+    "start": 35.36,
+    "end": 37.12,
+    "text": "but it's going to fight for your life."
+   },
+   {
+    "id": "t11",
+    "start": 37.12,
+    "end": 38.84,
+    "text": "Imagine me in this room right now,"
+   },
+   {
+    "id": "t12",
+    "start": 38.84,
+    "end": 41.04,
+    "text": "put a blindfold on me, and I'm just swinging."
+   },
+   {
+    "id": "t13",
+    "start": 41.04,
+    "end": 42.6,
+    "text": "I'm gonna take out someone,"
+   },
+   {
+    "id": "t14",
+    "start": 42.6,
+    "end": 44.96,
+    "text": "and I'm gonna make sure I get out of this room alive."
+   },
+   {
+    "id": "t15",
+    "start": 44.96,
+    "end": 46.84,
+    "text": "That is what your immune system is doing"
+   },
+   {
+    "id": "t16",
+    "start": 46.84,
+    "end": 48.84,
+    "text": "when you get that first response to an infection."
+   },
+   {
+    "id": "t17",
+    "start": 48.84,
+    "end": 52.02,
+    "text": "Now, for most infections, your body will be successful,"
+   },
+   {
+    "id": "t18",
+    "start": 52.02,
+    "end": 53.52,
+    "text": "but there are some infections,"
+   },
+   {
+    "id": "t19",
+    "start": 53.52,
+    "end": 56.28,
+    "text": "and we have evidence where your risk is substantial."
+   },
+   {
+    "id": "t20",
+    "start": 56.28,
+    "end": 57.56,
+    "text": "I'm getting out of this room,"
+   },
+   {
+    "id": "t21",
+    "start": 57.56,
+    "end": 59.28,
+    "text": "but the chances of me getting harmed"
+   },
+   {
+    "id": "t22",
+    "start": 59.28,
+    "end": 61.52,
+    "text": "before getting out of this room are very high."
+   },
+   {
+    "id": "t23",
+    "start": 61.52,
+    "end": 63.0,
+    "text": "We'll use polio as an example."
+   },
+   {
+    "id": "t24",
+    "start": 63.0,
+    "end": 64.12,
+    "text": "From the data that we have,"
+   },
+   {
+    "id": "t25",
+    "start": 64.12,
+    "end": 67.36,
+    "text": "90% of the people who get polio or who have gotten polio"
+   },
+   {
+    "id": "t26",
+    "start": 67.36,
+    "end": 70.32,
+    "text": "were asymptomatic, meaning they have no symptoms at all."
+   },
+   {
+    "id": "t27",
+    "start": 70.32,
+    "end": 72.94,
+    "text": "Their bodies were successful at eliminating the threat."
+   },
+   {
+    "id": "t28",
+    "start": 72.94,
+    "end": 74.2,
+    "text": "But for a small percent of people"
+   },
+   {
+    "id": "t29",
+    "start": 74.2,
+    "end": 75.56,
+    "text": "who get infected with polio,"
+   },
+   {
+    "id": "t30",
+    "start": 75.56,
+    "end": 77.2,
+    "text": "that virus moves out of the gut"
+   },
+   {
+    "id": "t31",
+    "start": 77.2,
+    "end": 79.32,
+    "text": "where it likes to replicate and multiply"
+   },
+   {
+    "id": "t32",
+    "start": 79.32,
+    "end": 81.84,
+    "text": "and into the spine where it causes paralysis."
+   },
+   {
+    "id": "t33",
+    "start": 81.84,
+    "end": 85.04,
+    "text": "Before 1955, before the polio vaccine was licensed,"
+   },
+   {
+    "id": "t34",
+    "start": 85.04,
+    "end": 86.88,
+    "text": "there were nearly 20,000 cases"
+   },
+   {
+    "id": "t35",
+    "start": 86.88,
+    "end": 88.6,
+    "text": "of polio paralysis every year."
+   },
+   {
+    "id": "t36",
+    "start": 88.6,
+    "end": 93.84,
+    "text": "playgrounds emptied, public pools closed, and the modern ICU that you see in the hospital,"
+   },
+   {
+    "id": "t37",
+    "start": 93.84,
+    "end": 97.4,
+    "text": "the ICU, was created as a result of polio cases."
+   },
+   {
+    "id": "t38",
+    "start": 97.4,
+    "end": 101.68,
+    "text": "If you survive that infection, your body collects that information about what that infection"
+   },
+   {
+    "id": "t39",
+    "start": 101.68,
+    "end": 104.94,
+    "text": "looks like and creates an adaptive immunity."
+   },
+   {
+    "id": "t40",
+    "start": 104.94,
+    "end": 107.32,
+    "text": "This is your immune response that is specific."
+   },
+   {
+    "id": "t41",
+    "start": 107.32,
+    "end": 111.04,
+    "text": "In the event that you come across that type of infection again, your body knows what to"
+   },
+   {
+    "id": "t42",
+    "start": 111.04,
+    "end": 112.04,
+    "text": "do."
+   },
+   {
+    "id": "t43",
+    "start": 112.04,
+    "end": 115.36,
+    "text": "Your immune system gets smarter by storing that information in a memory bank."
+   },
+   {
+    "id": "t44",
+    "start": 115.36,
+    "end": 120.04,
+    "text": "Some viruses, if they're left uncontrolled, can get into that memory bank and delete it."
+   },
+   {
+    "id": "t45",
+    "start": 120.04,
+    "end": 122.08,
+    "text": "This is one of the complications of measles."
+   },
+   {
+    "id": "t46",
+    "start": 122.08,
+    "end": 124.64,
+    "text": "It can cause something called immune amnesia."
+   },
+   {
+    "id": "t47",
+    "start": 124.64,
+    "end": 128.28,
+    "text": "Measles can actually make your body forget how you fought prior infections, making you"
+   },
+   {
+    "id": "t48",
+    "start": 128.28,
+    "end": 129.8,
+    "text": "susceptible to disease."
+   },
+   {
+    "id": "t49",
+    "start": 129.8,
+    "end": 133.64,
+    "text": "And some infections can lead you permanently harmed before you get out of this room."
+   },
+   {
+    "id": "t50",
+    "start": 133.64,
+    "end": 137.96,
+    "text": "For example, hemophilus influenza is another preventable infection, and before the vaccine"
+   },
+   {
+    "id": "t51",
+    "start": 137.96,
+    "end": 143.08,
+    "text": "for it was licensed in 1985, there were at least 20,000 invasive cases of hemophilus"
+   },
+   {
+    "id": "t52",
+    "start": 143.08,
+    "end": 144.08,
+    "text": "influenza."
+   },
+   {
+    "id": "t53",
+    "start": 144.08,
+    "end": 148.5,
+    "text": "Obligation of this is encephalitis, and one in four children who get that are left with"
+   },
+   {
+    "id": "t54",
+    "start": 148.5,
+    "end": 149.88,
+    "text": "permanent brain damage."
+   },
+   {
+    "id": "t55",
+    "start": 149.88,
+    "end": 154.62,
+    "text": "And some infections, like the blue, can change what they look like to evade your adaptive"
+   },
+   {
+    "id": "t56",
+    "start": 154.62,
+    "end": 157.44,
+    "text": "response and leave you fighting for your life every season."
+   },
+   {
+    "id": "t57",
+    "start": 157.44,
+    "end": 160.3,
+    "text": "Each infection isn't a workout, it's a risk."
+   },
+   {
+    "id": "t58",
+    "start": 160.3,
+    "end": 164.8,
+    "text": "And vaccines give your immune system a lesson without the life-threatening consequences."
+   },
+   {
+    "id": "t59",
+    "start": 164.8,
+    "end": 168.78,
+    "text": "This allows your immune system to learn through safe practices without the danger of trial"
+   },
+   {
+    "id": "t60",
+    "start": 168.78,
+    "end": 169.78,
+    "text": "and error."
+   },
+   {
+    "id": "t61",
+    "start": 169.78,
+    "end": 173.54,
+    "text": "Important to acknowledge, there are rare risks associated with vaccinations."
+   },
+   {
+    "id": "t62",
+    "start": 173.54,
+    "end": 176.54,
+    "text": "Every intervention of medicine has some level of risk."
+   },
+   {
+    "id": "t63",
+    "start": 176.54,
+    "end": 180.74,
+    "text": "But vaccines are actually one of the most studied interventions within medicine because"
+   },
+   {
+    "id": "t64",
+    "start": 180.74,
+    "end": 184.54,
+    "text": "they are interventions that are given to healthy people to keep them healthy."
+   },
+   {
+    "id": "t65",
+    "start": 184.54,
+    "end": 189.3,
+    "text": "The data behind vaccines goes miles beyond the majority of the medications that you might"
+   },
+   {
+    "id": "t66",
+    "start": 189.3,
+    "end": 194.34,
+    "text": "be prescribed for a disease or disorder and way beyond any supplement that you might grab"
+   },
+   {
+    "id": "t67",
+    "start": 194.34,
+    "end": 195.34,
+    "text": "over the counter."
+   },
+   {
+    "id": "t68",
+    "start": 195.34,
+    "end": 197.7,
+    "text": "Let's talk about supplements in another video."
+   },
+   {
+    "id": "t69",
+    "start": 197.7,
+    "end": 201.58,
+    "text": "And your risk of exposure to one of these diseases at some point in your lifetime or"
+   },
+   {
+    "id": "t70",
+    "start": 201.58,
+    "end": 206.38,
+    "text": "your child's lifetime is almost certain as we live in a globally connected community."
+   },
+   {
+    "id": "t71",
+    "start": 206.38,
+    "end": 208.34,
+    "text": "But this is what misinformation does."
+   },
+   {
+    "id": "t72",
+    "start": 208.34,
+    "end": 213.98,
+    "text": "It downplays the real risk of disease, it exaggerates the rare risk associated with vaccinations,"
+   },
+   {
+    "id": "t73",
+    "start": 213.98,
+    "end": 218.26,
+    "text": "and it leaves you confused and fearful and more likely to choose a decision that is a"
+   },
+   {
+    "id": "t74",
+    "start": 218.26,
+    "end": 220.18,
+    "text": "higher risk option for you."
+   },
+   {
+    "id": "t75",
+    "start": 220.18,
+    "end": 223.54,
+    "text": "So when you're making important decisions about your health, make sure you choose a"
+   },
+   {
+    "id": "t76",
+    "start": 223.54,
+    "end": 228.66,
+    "text": "qualified professional who has verified clinical experience that can back up their statements"
+   },
+   {
+    "id": "t77",
+    "start": 228.66,
+    "end": 229.66,
+    "text": "with data."
+   },
+   {
+    "id": "t78",
+    "start": 229.66,
+    "end": 233.66,
+    "text": "Without data, they're just giving you random opinions that you don't need."
+   },
+   {
+    "id": "t79",
+    "start": 233.66,
+    "end": 234.66,
+    "text": "Alright, talk soon."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 120,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Tiktok",
+    "confidence": 0.79
+   },
+   {
+    "time": 0.0,
+    "text": "docton darien",
+    "confidence": 0.578
+   },
+   {
+    "time": 2.0,
+    "text": "C",
+    "confidence": 0.904
+   },
+   {
+    "time": 2.0,
+    "text": "Let\"s talkaboutsomething",
+    "confidence": 0.973
+   },
+   {
+    "time": 2.0,
+    "text": "reallyimportant;",
+    "confidence": 0.925
+   },
+   {
+    "time": 2.0,
+    "text": "Tikok",
+    "confidence": 0.996
+   },
+   {
+    "time": 2.0,
+    "text": "doctor darien",
+    "confidence": 0.637
+   },
+   {
+    "time": 4.0,
+    "text": "C",
+    "confidence": 0.553
+   },
+   {
+    "time": 4.0,
+    "text": "Yourimmunesystem does",
+    "confidence": 0.988
+   },
+   {
+    "time": 4.0,
+    "text": "notactlikeamuscle.",
+    "confidence": 0.805
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.896
+   },
+   {
+    "time": 4.0,
+    "text": "doctor darien",
+    "confidence": 0.681
+   },
+   {
+    "time": 6.0,
+    "text": "Stronger",
+    "confidence": 0.862
+   },
+   {
+    "time": 6.0,
+    "text": "Your muscle",
+    "confidence": 0.99
+   },
+   {
+    "time": 6.0,
+    "text": "getse",
+    "confidence": 0.562
+   },
+   {
+    "time": 8.0,
+    "text": "C",
+    "confidence": 0.917
+   },
+   {
+    "time": 8.0,
+    "text": "Your immunesystemis more",
+    "confidence": 0.78
+   },
+   {
+    "time": 10.0,
+    "text": "Your immunesystemis more",
+    "confidence": 0.818
+   },
+   {
+    "time": 12.0,
+    "text": "It\"ssomething thatyoU teach",
+    "confidence": 0.617
+   },
+   {
+    "time": 12.0,
+    "text": "whenyou",
+    "confidence": 0.872
+   },
+   {
+    "time": 12.0,
+    "text": "aninfection:",
+    "confidence": 0.741
+   },
+   {
+    "time": 12.0,
+    "text": "Iget",
+    "confidence": 0.582
+   },
+   {
+    "time": 12.0,
+    "text": "docton darie",
+    "confidence": 0.685
+   },
+   {
+    "time": 14.0,
+    "text": "Your bodys first line",
+    "confidence": 0.72
+   },
+   {
+    "time": 14.0,
+    "text": "responsefstypicallyyour",
+    "confidence": 0.903
+   },
+   {
+    "time": 16.0,
+    "text": "responsefstypicallyyour",
+    "confidence": 0.911
+   },
+   {
+    "time": 18.0,
+    "text": "It is fastandmost",
+    "confidence": 0.669
+   },
+   {
+    "time": 18.0,
+    "text": "importantlya",
+    "confidence": 0.932
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 0.871
+   },
+   {
+    "time": 18.0,
+    "text": "@ docton Jarie",
+    "confidence": 0.793
+   },
+   {
+    "time": 20.0,
+    "text": "@ngos",
+    "confidence": 0.816
+   },
+   {
+    "time": 20.0,
+    "text": "TikTok",
+    "confidence": 0.9
+   },
+   {
+    "time": 22.0,
+    "text": "C",
+    "confidence": 0.728
+   },
+   {
+    "time": 22.0,
+    "text": "Your temperaturerises",
+    "confidence": 0.983
+   },
+   {
+    "time": 24.0,
+    "text": "toslowdowthereplication",
+    "confidence": 0.952
+   },
+   {
+    "time": 24.0,
+    "text": "@fwhateverisinvading your",
+    "confidence": 0.919
+   },
+   {
+    "time": 24.0,
+    "text": "body",
+    "confidence": 0.941
+   },
+   {
+    "time": 26.0,
+    "text": "toslowdowthereplication",
+    "confidence": 0.945
+   },
+   {
+    "time": 26.0,
+    "text": "@fwhateverisinvading your",
+    "confidence": 0.918
+   },
+   {
+    "time": 26.0,
+    "text": "body",
+    "confidence": 0.94
+   },
+   {
+    "time": 26.0,
+    "text": "Tiktok",
+    "confidence": 0.735
+   },
+   {
+    "time": 28.0,
+    "text": "C",
+    "confidence": 0.763
+   },
+   {
+    "time": 28.0,
+    "text": "trap",
+    "confidence": 0.884
+   },
+   {
+    "time": 28.0,
+    "text": "Mucusincreasesto",
+    "confidence": 0.791
+   },
+   {
+    "time": 28.0,
+    "text": "pathogens;",
+    "confidence": 0.97
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok<",
+    "confidence": 0.75
+   },
+   {
+    "time": 30.0,
+    "text": "Gytokinesmessenger",
+    "confidence": 0.714
+   },
+   {
+    "time": 30.0,
+    "text": "even",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.0,
+    "text": "proteinsaresentaround your",
+    "confidence": 0.815
+   },
+   {
+    "time": 30.0,
+    "text": "body",
+    "confidence": 0.937
+   },
+   {
+    "time": 32.0,
+    "text": "Thisiswhat makesyou feel",
+    "confidence": 0.753
+   },
+   {
+    "time": 32.0,
+    "text": "like crapwhemyoure sick",
+    "confidence": 0.612
+   },
+   {
+    "time": 34.0,
+    "text": "Your bodydoesnotknow",
+    "confidence": 0.895
+   },
+   {
+    "time": 34.0,
+    "text": "what it\"s fighting;",
+    "confidence": 0.566
+   },
+   {
+    "time": 34.0,
+    "text": "docto",
+    "confidence": 0.949
+   },
+   {
+    "time": 36.0,
+    "text": "C",
+    "confidence": 0.56
+   },
+   {
+    "time": 36.0,
+    "text": "butit\"sgoing to fightforyour",
+    "confidence": 0.604
+   },
+   {
+    "time": 36.0,
+    "text": "lifes",
+    "confidence": 0.691
+   },
+   {
+    "time": 36.0,
+    "text": "ctol",
+    "confidence": 0.515
+   },
+   {
+    "time": 38.0,
+    "text": "Imaginemein thisroom right",
+    "confidence": 0.944
+   },
+   {
+    "time": 40.0,
+    "text": "blindfold@meand ['m",
+    "confidence": 0.698
+   },
+   {
+    "time": 40.0,
+    "text": "putal",
+    "confidence": 0.983
+   },
+   {
+    "time": 40.0,
+    "text": "justswinging:",
+    "confidence": 0.895
+   },
+   {
+    "time": 42.0,
+    "text": "Fmgonna takeoutsomeone",
+    "confidence": 0.763
+   },
+   {
+    "time": 42.0,
+    "text": "and Imgonnamakesure [",
+    "confidence": 0.606
+   },
+   {
+    "time": 42.0,
+    "text": "@Ut @f thisroom alive.",
+    "confidence": 0.647
+   },
+   {
+    "time": 42.0,
+    "text": "getc",
+    "confidence": 0.739
+   },
+   {
+    "time": 42.0,
+    "text": "TikTo",
+    "confidence": 0.617
+   },
+   {
+    "time": 44.0,
+    "text": "Fmgonna takeoutsomeone",
+    "confidence": 0.758
+   },
+   {
+    "time": 44.0,
+    "text": "and Imgonnamakesure [",
+    "confidence": 0.722
+   },
+   {
+    "time": 44.0,
+    "text": "@Ut @f thisroom alive.",
+    "confidence": 0.646
+   },
+   {
+    "time": 44.0,
+    "text": "getc",
+    "confidence": 0.743
+   },
+   {
+    "time": 46.0,
+    "text": "Thatiswhatyourimmune",
+    "confidence": 0.929
+   },
+   {
+    "time": 46.0,
+    "text": "systemisdoing",
+    "confidence": 0.983
+   },
+   {
+    "time": 46.0,
+    "text": "Tiktok",
+    "confidence": 0.84
+   },
+   {
+    "time": 46.0,
+    "text": "@ doctor dariel",
+    "confidence": 0.654
+   },
+   {
+    "time": 48.0,
+    "text": "C",
+    "confidence": 0.863
+   },
+   {
+    "time": 48.0,
+    "text": "that first",
+    "confidence": 0.863
+   },
+   {
+    "time": 48.0,
+    "text": "Igets",
+    "confidence": 0.525
+   },
+   {
+    "time": 48.0,
+    "text": "response toaninfection:",
+    "confidence": 0.838
+   },
+   {
+    "time": 48.0,
+    "text": "@ doctor darien",
+    "confidence": 0.664
+   },
+   {
+    "time": 54.0,
+    "text": "andwehaveevdence where",
+    "confidence": 0.996
+   },
+   {
+    "time": 54.0,
+    "text": "vourriskissubstantial:",
+    "confidence": 0.601
+   },
+   {
+    "time": 56.0,
+    "text": "andwehaveevdence where",
+    "confidence": 0.996
+   },
+   {
+    "time": 56.0,
+    "text": "vourriskissubstantial:",
+    "confidence": 0.62
+   },
+   {
+    "time": 58.0,
+    "text": "gettingharmedbefore",
+    "confidence": 0.858
+   },
+   {
+    "time": 58.0,
+    "text": "gettingout@fthisroom",
+    "confidence": 0.635
+   },
+   {
+    "time": 58.0,
+    "text": "doctor dariel",
+    "confidence": 0.551
+   },
+   {
+    "time": 60.0,
+    "text": "gettingharmedbefore",
+    "confidence": 0.861
+   },
+   {
+    "time": 60.0,
+    "text": "gettingout@fthisroom",
+    "confidence": 0.625
+   },
+   {
+    "time": 60.0,
+    "text": "doctor darie",
+    "confidence": 0.685
+   },
+   {
+    "time": 62.0,
+    "text": "areveryhigh Welluse",
+    "confidence": 0.724
+   },
+   {
+    "time": 62.0,
+    "text": "polio",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.0,
+    "text": "example.",
+    "confidence": 0.531
+   },
+   {
+    "time": 62.0,
+    "text": "asan",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.0,
+    "text": "TTiktok",
+    "confidence": 0.611
+   },
+   {
+    "time": 62.0,
+    "text": "doctor darien",
+    "confidence": 0.521
+   },
+   {
+    "time": 64.0,
+    "text": "Thedata that wehave, 90%",
+    "confidence": 0.705
+   },
+   {
+    "time": 64.0,
+    "text": "of thepeoplewhoget polio,",
+    "confidence": 0.678
+   },
+   {
+    "time": 64.0,
+    "text": "TikTok",
+    "confidence": 0.714
+   },
+   {
+    "time": 64.0,
+    "text": "doctor darien",
+    "confidence": 0.673
+   },
+   {
+    "time": 66.0,
+    "text": "Thedata that wehave, 90%",
+    "confidence": 0.658
+   },
+   {
+    "time": 66.0,
+    "text": "ofthepeoplewhoget polio;",
+    "confidence": 0.64
+   },
+   {
+    "time": 66.0,
+    "text": "TkTok",
+    "confidence": 0.782
+   },
+   {
+    "time": 66.0,
+    "text": "doctordarien",
+    "confidence": 0.651
+   },
+   {
+    "time": 68.0,
+    "text": "polio",
+    "confidence": 0.997
+   },
+   {
+    "time": 68.0,
+    "text": "were",
+    "confidence": 0.994
+   },
+   {
+    "time": 68.0,
+    "text": "asymptomatic,",
+    "confidence": 0.693
+   },
+   {
+    "time": 68.0,
+    "text": "Tiktok",
+    "confidence": 0.609
+   },
+   {
+    "time": 70.0,
+    "text": "Atall their bodieswere",
+    "confidence": 0.736
+   },
+   {
+    "time": 70.0,
+    "text": "successfulateliminating the",
+    "confidence": 0.998
+   },
+   {
+    "time": 70.0,
+    "text": "threat",
+    "confidence": 1.0
+   },
+   {
+    "time": 70.0,
+    "text": "TikTok",
+    "confidence": 0.856
+   },
+   {
+    "time": 70.0,
+    "text": "doctor dalien",
+    "confidence": 0.614
+   },
+   {
+    "time": 72.0,
+    "text": "Atall; their bodieswere",
+    "confidence": 0.632
+   },
+   {
+    "time": 72.0,
+    "text": "successfulateliminating the",
+    "confidence": 0.998
+   },
+   {
+    "time": 72.0,
+    "text": "threat",
+    "confidence": 1.0
+   },
+   {
+    "time": 72.0,
+    "text": "TikTok",
+    "confidence": 0.514
+   },
+   {
+    "time": 74.0,
+    "text": "But forasmallpercent of",
+    "confidence": 0.793
+   },
+   {
+    "time": 74.0,
+    "text": "infected with",
+    "confidence": 0.978
+   },
+   {
+    "time": 74.0,
+    "text": "people who",
+    "confidence": 0.958
+   },
+   {
+    "time": 74.0,
+    "text": "polio,",
+    "confidence": 0.756
+   },
+   {
+    "time": 76.0,
+    "text": "C",
+    "confidence": 0.787
+   },
+   {
+    "time": 76.0,
+    "text": "that virusmovesoutof the",
+    "confidence": 0.506
+   },
+   {
+    "time": 76.0,
+    "text": "gutz",
+    "confidence": 0.684
+   },
+   {
+    "time": 76.0,
+    "text": "TikTok",
+    "confidence": 0.571
+   },
+   {
+    "time": 78.0,
+    "text": "C",
+    "confidence": 0.846
+   },
+   {
+    "time": 78.0,
+    "text": "whereit likestoreplicate and",
+    "confidence": 0.827
+   },
+   {
+    "time": 78.0,
+    "text": "multiplya",
+    "confidence": 0.711
+   },
+   {
+    "time": 78.0,
+    "text": "Tiktok",
+    "confidence": 0.66
+   },
+   {
+    "time": 80.0,
+    "text": "paralysis:",
+    "confidence": 0.75
+   },
+   {
+    "time": 82.0,
+    "text": "Before 1955,before the",
+    "confidence": 0.685
+   },
+   {
+    "time": 82.0,
+    "text": "polio",
+    "confidence": 1.0
+   },
+   {
+    "time": 82.0,
+    "text": "Vaccine waslicensed;",
+    "confidence": 0.595
+   },
+   {
+    "time": 82.0,
+    "text": "@ doctor darien",
+    "confidence": 0.833
+   },
+   {
+    "time": 84.0,
+    "text": "Before 1955,before the",
+    "confidence": 0.668
+   },
+   {
+    "time": 84.0,
+    "text": "polio",
+    "confidence": 1.0
+   },
+   {
+    "time": 84.0,
+    "text": "Vaccine waslicensed;",
+    "confidence": 0.609
+   },
+   {
+    "time": 84.0,
+    "text": "doctordarien",
+    "confidence": 0.564
+   },
+   {
+    "time": 86.0,
+    "text": "there werenearly20,000",
+    "confidence": 0.807
+   },
+   {
+    "time": 86.0,
+    "text": "casesofpolioparalysis every",
+    "confidence": 0.993
+   },
+   {
+    "time": 86.0,
+    "text": "darien",
+    "confidence": 0.993
+   },
+   {
+    "time": 88.0,
+    "text": "there werenearly20,000",
+    "confidence": 0.8
+   },
+   {
+    "time": 88.0,
+    "text": "casesofpolioparalysis every",
+    "confidence": 0.994
+   },
+   {
+    "time": 88.0,
+    "text": "doctordarien",
+    "confidence": 0.732
+   },
+   {
+    "time": 90.0,
+    "text": "Plavgroundsemptied, public",
+    "confidence": 0.83
+   },
+   {
+    "time": 90.0,
+    "text": "poolsclosed;",
+    "confidence": 0.93
+   },
+   {
+    "time": 90.0,
+    "text": "kTok",
+    "confidence": 0.628
+   },
+   {
+    "time": 92.0,
+    "text": "andthemodernI CU That",
+    "confidence": 0.802
+   },
+   {
+    "time": 92.0,
+    "text": "thatyoUseein thehospital.",
+    "confidence": 0.606
+   },
+   {
+    "time": 92.0,
+    "text": "Tikok",
+    "confidence": 0.702
+   },
+   {
+    "time": 92.0,
+    "text": "darien",
+    "confidence": 0.972
+   },
+   {
+    "time": 94.0,
+    "text": "resultofpoliocases",
+    "confidence": 0.971
+   },
+   {
+    "time": 94.0,
+    "text": "dariem",
+    "confidence": 0.768
+   },
+   {
+    "time": 96.0,
+    "text": "Thel CU Wascreatedasa",
+    "confidence": 0.54
+   },
+   {
+    "time": 96.0,
+    "text": "resultofpoliocases",
+    "confidence": 0.972
+   },
+   {
+    "time": 96.0,
+    "text": "dariem",
+    "confidence": 0.816
+   },
+   {
+    "time": 98.0,
+    "text": "C",
+    "confidence": 0.552
+   },
+   {
+    "time": 98.0,
+    "text": "Ifyousurvive that infection;",
+    "confidence": 0.585
+   },
+   {
+    "time": 98.0,
+    "text": "docttor darien",
+    "confidence": 0.861
+   },
+   {
+    "time": 100.0,
+    "text": "informationaboutwhat that",
+    "confidence": 0.924
+   },
+   {
+    "time": 100.0,
+    "text": "infectionlookslike",
+    "confidence": 0.792
+   },
+   {
+    "time": 100.0,
+    "text": "Tiktok",
+    "confidence": 0.918
+   },
+   {
+    "time": 100.0,
+    "text": "doctor deriel",
+    "confidence": 0.607
+   },
+   {
+    "time": 102.0,
+    "text": "informationaboutwhat that",
+    "confidence": 0.91
+   },
+   {
+    "time": 102.0,
+    "text": "infectionlookslike",
+    "confidence": 0.761
+   },
+   {
+    "time": 104.0,
+    "text": "and createsanadaptive",
+    "confidence": 0.628
+   },
+   {
+    "time": 106.0,
+    "text": "Thisisyour inmune response",
+    "confidence": 0.645
+   },
+   {
+    "time": 106.0,
+    "text": "thatisspecific:",
+    "confidence": 0.596
+   },
+   {
+    "time": 106.0,
+    "text": "TikTo <",
+    "confidence": 0.658
+   },
+   {
+    "time": 108.0,
+    "text": "Intheevent thatyoU come",
+    "confidence": 0.669
+   },
+   {
+    "time": 108.0,
+    "text": "across that typeofinfection",
+    "confidence": 0.776
+   },
+   {
+    "time": 108.0,
+    "text": "TikTok",
+    "confidence": 0.719
+   },
+   {
+    "time": 110.0,
+    "text": "Intheevent thatyoUcome",
+    "confidence": 0.876
+   },
+   {
+    "time": 110.0,
+    "text": "across that typeofinfection",
+    "confidence": 0.755
+   },
+   {
+    "time": 110.0,
+    "text": "TikTok",
+    "confidence": 0.81
+   },
+   {
+    "time": 112.0,
+    "text": "Your immunesystem",
+    "confidence": 0.668
+   },
+   {
+    "time": 112.0,
+    "text": "gets",
+    "confidence": 1.0
+   },
+   {
+    "time": 112.0,
+    "text": "smarter",
+    "confidence": 0.982
+   },
+   {
+    "time": 112.0,
+    "text": "infoumation inamemory",
+    "confidence": 0.619
+   },
+   {
+    "time": 112.0,
+    "text": "bank",
+    "confidence": 0.868
+   },
+   {
+    "time": 112.0,
+    "text": "TikTok",
+    "confidence": 0.955
+   },
+   {
+    "time": 112.0,
+    "text": "doctondarien",
+    "confidence": 0.505
+   },
+   {
+    "time": 114.0,
+    "text": "Your immunesystem",
+    "confidence": 0.661
+   },
+   {
+    "time": 114.0,
+    "text": "gets",
+    "confidence": 1.0
+   },
+   {
+    "time": 114.0,
+    "text": "smarterby storng that",
+    "confidence": 0.539
+   },
+   {
+    "time": 114.0,
+    "text": "infoumation inamemory",
+    "confidence": 0.628
+   },
+   {
+    "time": 114.0,
+    "text": "bank",
+    "confidence": 0.868
+   },
+   {
+    "time": 114.0,
+    "text": "TikTok",
+    "confidence": 0.737
+   },
+   {
+    "time": 116.0,
+    "text": "Someviruses, if thevre left",
+    "confidence": 0.515
+   },
+   {
+    "time": 116.0,
+    "text": "uncontrolled;",
+    "confidence": 0.962
+   },
+   {
+    "time": 116.0,
+    "text": "octor",
+    "confidence": 0.524
+   },
+   {
+    "time": 118.0,
+    "text": "into thatmemory",
+    "confidence": 0.999
+   },
+   {
+    "time": 118.0,
+    "text": "gete",
+    "confidence": 0.548
+   },
+   {
+    "time": 118.0,
+    "text": "can",
+    "confidence": 0.979
+   },
+   {
+    "time": 118.0,
+    "text": "bankanddeleteit:",
+    "confidence": 0.747
+   },
+   {
+    "time": 118.0,
+    "text": "Tiki@k",
+    "confidence": 0.571
+   },
+   {
+    "time": 120.0,
+    "text": "Thisisoneof the",
+    "confidence": 0.597
+   },
+   {
+    "time": 120.0,
+    "text": "complications of measles.",
+    "confidence": 0.671
+   },
+   {
+    "time": 120.0,
+    "text": "@ doctor da ren",
+    "confidence": 0.708
+   },
+   {
+    "time": 122.0,
+    "text": "Thisisoneof the",
+    "confidence": 0.588
+   },
+   {
+    "time": 122.0,
+    "text": "complications of measles.",
+    "confidence": 0.674
+   },
+   {
+    "time": 124.0,
+    "text": "It can causesomethingcalled",
+    "confidence": 0.889
+   },
+   {
+    "time": 124.0,
+    "text": "immuneamnesia:",
+    "confidence": 0.95
+   },
+   {
+    "time": 126.0,
+    "text": "Measles canactuallymake",
+    "confidence": 0.984
+   },
+   {
+    "time": 126.0,
+    "text": "your body forgethow you",
+    "confidence": 0.617
+   },
+   {
+    "time": 126.0,
+    "text": "infections;",
+    "confidence": 0.718
+   },
+   {
+    "time": 126.0,
+    "text": "fought",
+    "confidence": 1.0
+   },
+   {
+    "time": 126.0,
+    "text": "TikTok",
+    "confidence": 0.971
+   },
+   {
+    "time": 126.0,
+    "text": "@ doctor datriel",
+    "confidence": 0.504
+   },
+   {
+    "time": 128.0,
+    "text": "C",
+    "confidence": 0.854
+   },
+   {
+    "time": 128.0,
+    "text": "making VoUsusceptible to",
+    "confidence": 0.606
+   },
+   {
+    "time": 128.0,
+    "text": "diseases",
+    "confidence": 0.503
+   },
+   {
+    "time": 128.0,
+    "text": "Tikto",
+    "confidence": 0.506
+   },
+   {
+    "time": 128.0,
+    "text": "doctor darlel",
+    "confidence": 0.513
+   },
+   {
+    "time": 130.0,
+    "text": "Andsomeinfections can",
+    "confidence": 0.85
+   },
+   {
+    "time": 130.0,
+    "text": "leave voupermanently",
+    "confidence": 0.646
+   },
+   {
+    "time": 130.0,
+    "text": "harmed:",
+    "confidence": 0.928
+   },
+   {
+    "time": 130.0,
+    "text": "TikTok",
+    "confidence": 0.963
+   },
+   {
+    "time": 130.0,
+    "text": "doctor dakiel",
+    "confidence": 0.564
+   },
+   {
+    "time": 132.0,
+    "text": "Andsomeinfections can",
+    "confidence": 0.861
+   },
+   {
+    "time": 132.0,
+    "text": "leave voupermanently",
+    "confidence": 0.678
+   },
+   {
+    "time": 132.0,
+    "text": "harmed:",
+    "confidence": 0.902
+   },
+   {
+    "time": 132.0,
+    "text": "TikTok",
+    "confidence": 0.622
+   },
+   {
+    "time": 134.0,
+    "text": "for examples Haemophilus",
+    "confidence": 0.883
+   },
+   {
+    "time": 134.0,
+    "text": "influenzaeisanother",
+    "confidence": 0.922
+   },
+   {
+    "time": 134.0,
+    "text": "preventableinfection:",
+    "confidence": 0.798
+   },
+   {
+    "time": 134.0,
+    "text": "TikTok",
+    "confidence": 0.532
+   },
+   {
+    "time": 136.0,
+    "text": "for examples Haemophilus",
+    "confidence": 0.857
+   },
+   {
+    "time": 136.0,
+    "text": "influenzaeisanother",
+    "confidence": 0.914
+   },
+   {
+    "time": 136.0,
+    "text": "preventableinfection:",
+    "confidence": 0.973
+   },
+   {
+    "time": 136.0,
+    "text": "@ doctor darien",
+    "confidence": 0.673
+   },
+   {
+    "time": 138.0,
+    "text": "Andbefore the vaccine forit",
+    "confidence": 0.518
+   },
+   {
+    "time": 138.0,
+    "text": "waslicensedin 1985,",
+    "confidence": 0.92
+   },
+   {
+    "time": 138.0,
+    "text": "Tikiok",
+    "confidence": 0.514
+   },
+   {
+    "time": 140.0,
+    "text": "therewereatleast?0,000",
+    "confidence": 0.821
+   },
+   {
+    "time": 140.0,
+    "text": "invasive casesof",
+    "confidence": 0.621
+   },
+   {
+    "time": 140.0,
+    "text": "Haemophilus influenzae.",
+    "confidence": 0.801
+   },
+   {
+    "time": 140.0,
+    "text": "Tikiok",
+    "confidence": 0.554
+   },
+   {
+    "time": 140.0,
+    "text": "arien",
+    "confidence": 0.867
+   },
+   {
+    "time": 142.0,
+    "text": "therewereatlleast20,000",
+    "confidence": 0.81
+   },
+   {
+    "time": 142.0,
+    "text": "invasive casesof",
+    "confidence": 0.567
+   },
+   {
+    "time": 142.0,
+    "text": "Haemophilus influenzae.",
+    "confidence": 0.778
+   },
+   {
+    "time": 144.0,
+    "text": "C",
+    "confidence": 0.842
+   },
+   {
+    "time": 144.0,
+    "text": "Acomplication @fthisis",
+    "confidence": 0.811
+   },
+   {
+    "time": 144.0,
+    "text": "encephalitiss",
+    "confidence": 0.745
+   },
+   {
+    "time": 146.0,
+    "text": "'thatareleftwith",
+    "confidence": 0.798
+   },
+   {
+    "time": 146.0,
+    "text": "get:",
+    "confidence": 0.712
+   },
+   {
+    "time": 146.0,
+    "text": "permanentbrain damage:",
+    "confidence": 0.899
+   },
+   {
+    "time": 148.0,
+    "text": "'thatareleftwith",
+    "confidence": 0.819
+   },
+   {
+    "time": 148.0,
+    "text": "get:",
+    "confidence": 0.703
+   },
+   {
+    "time": 148.0,
+    "text": "permanentbrain damage:",
+    "confidence": 0.878
+   },
+   {
+    "time": 148.0,
+    "text": "doctol",
+    "confidence": 0.525
+   },
+   {
+    "time": 148.0,
+    "text": "arien",
+    "confidence": 0.793
+   },
+   {
+    "time": 150.0,
+    "text": "Andsomeinfections,like the",
+    "confidence": 0.675
+   },
+   {
+    "time": 150.0,
+    "text": "flus",
+    "confidence": 0.528
+   },
+   {
+    "time": 150.0,
+    "text": "TkTok",
+    "confidence": 0.521
+   },
+   {
+    "time": 150.0,
+    "text": "darten",
+    "confidence": 0.527
+   },
+   {
+    "time": 152.0,
+    "text": "thev'",
+    "confidence": 0.752
+   },
+   {
+    "time": 152.0,
+    "text": "changewhat",
+    "confidence": 0.93
+   },
+   {
+    "time": 152.0,
+    "text": "look",
+    "confidence": 0.899
+   },
+   {
+    "time": 152.0,
+    "text": "can",
+    "confidence": 0.986
+   },
+   {
+    "time": 152.0,
+    "text": "like",
+    "confidence": 0.884
+   },
+   {
+    "time": 152.0,
+    "text": "TikTok",
+    "confidence": 0.928
+   },
+   {
+    "time": 154.0,
+    "text": "0",
+    "confidence": 0.902
+   },
+   {
+    "time": 154.0,
+    "text": "toevadevour adaptive",
+    "confidence": 0.651
+   },
+   {
+    "time": 154.0,
+    "text": "response",
+    "confidence": 0.908
+   },
+   {
+    "time": 154.0,
+    "text": "doctor dariel",
+    "confidence": 0.865
+   },
+   {
+    "time": 156.0,
+    "text": "andleaveyoU fighting for",
+    "confidence": 0.731
+   },
+   {
+    "time": 156.0,
+    "text": "your lifeeveryseason:",
+    "confidence": 0.582
+   },
+   {
+    "time": 156.0,
+    "text": "TikTok",
+    "confidence": 0.939
+   },
+   {
+    "time": 158.0,
+    "text": "Eachinfectionisn\"ta",
+    "confidence": 0.983
+   },
+   {
+    "time": 158.0,
+    "text": "workoutz",
+    "confidence": 0.902
+   },
+   {
+    "time": 160.0,
+    "text": "itsariskAndvaccinesgive",
+    "confidence": 0.724
+   },
+   {
+    "time": 160.0,
+    "text": "your fmmunesystemalesson",
+    "confidence": 0.744
+   },
+   {
+    "time": 160.0,
+    "text": "doctor daren",
+    "confidence": 0.684
+   },
+   {
+    "time": 162.0,
+    "text": "it\"sariskAndvaccinesgive",
+    "confidence": 0.52
+   },
+   {
+    "time": 162.0,
+    "text": "your fmmunesystemalesson",
+    "confidence": 0.726
+   },
+   {
+    "time": 164.0,
+    "text": "wthout thelife threatening",
+    "confidence": 0.633
+   },
+   {
+    "time": 164.0,
+    "text": "consecuences:",
+    "confidence": 0.54
+   },
+   {
+    "time": 166.0,
+    "text": "Thisallowsyour immune",
+    "confidence": 0.779
+   },
+   {
+    "time": 166.0,
+    "text": "system tolearn through safe",
+    "confidence": 0.974
+   },
+   {
+    "time": 166.0,
+    "text": "practices",
+    "confidence": 1.0
+   },
+   {
+    "time": 168.0,
+    "text": "without thedanger of trial",
+    "confidence": 0.745
+   },
+   {
+    "time": 168.0,
+    "text": "and erroro",
+    "confidence": 0.637
+   },
+   {
+    "time": 170.0,
+    "text": "Important to acknowledge",
+    "confidence": 0.782
+   },
+   {
+    "time": 170.0,
+    "text": "therearerarerisks",
+    "confidence": 0.993
+   },
+   {
+    "time": 170.0,
+    "text": "associatedwith vaccinations:",
+    "confidence": 0.961
+   },
+   {
+    "time": 172.0,
+    "text": "Important to acknowledge",
+    "confidence": 0.745
+   },
+   {
+    "time": 172.0,
+    "text": "therearerarerisks",
+    "confidence": 0.985
+   },
+   {
+    "time": 172.0,
+    "text": "associatedwith vaccinations:",
+    "confidence": 0.957
+   },
+   {
+    "time": 172.0,
+    "text": "Tiktok",
+    "confidence": 0.674
+   },
+   {
+    "time": 172.0,
+    "text": "doctor dalien",
+    "confidence": 0.507
+   },
+   {
+    "time": 174.0,
+    "text": "Everyintervention @f",
+    "confidence": 0.779
+   },
+   {
+    "time": 174.0,
+    "text": "medicinehassomelevel of",
+    "confidence": 0.882
+   },
+   {
+    "time": 174.0,
+    "text": "risk",
+    "confidence": 1.0
+   },
+   {
+    "time": 176.0,
+    "text": "Everyintervention @f",
+    "confidence": 0.806
+   },
+   {
+    "time": 176.0,
+    "text": "medicinehassomelevel of",
+    "confidence": 0.879
+   },
+   {
+    "time": 176.0,
+    "text": "risk",
+    "confidence": 1.0
+   },
+   {
+    "time": 176.0,
+    "text": "Tikarok",
+    "confidence": 0.534
+   },
+   {
+    "time": 176.0,
+    "text": "aien",
+    "confidence": 0.985
+   },
+   {
+    "time": 178.0,
+    "text": "C",
+    "confidence": 0.61
+   },
+   {
+    "time": 178.0,
+    "text": "But vaccinesareactually one",
+    "confidence": 0.803
+   },
+   {
+    "time": 178.0,
+    "text": "@f themoststudied",
+    "confidence": 0.82
+   },
+   {
+    "time": 178.0,
+    "text": "interventions within medicine",
+    "confidence": 0.902
+   },
+   {
+    "time": 180.0,
+    "text": "But vaccinesareactually one",
+    "confidence": 0.795
+   },
+   {
+    "time": 180.0,
+    "text": "@f themoststudied",
+    "confidence": 0.731
+   },
+   {
+    "time": 180.0,
+    "text": "interventions within medicine",
+    "confidence": 0.898
+   },
+   {
+    "time": 182.0,
+    "text": "because thevare",
+    "confidence": 0.846
+   },
+   {
+    "time": 182.0,
+    "text": "interventions thatare given",
+    "confidence": 0.977
+   },
+   {
+    "time": 182.0,
+    "text": "tohealthypeople",
+    "confidence": 0.964
+   },
+   {
+    "time": 184.0,
+    "text": "C",
+    "confidence": 0.573
+   },
+   {
+    "time": 184.0,
+    "text": "tokeep themhealthy:",
+    "confidence": 0.838
+   },
+   {
+    "time": 186.0,
+    "text": "Thedatabehindvaccines",
+    "confidence": 0.595
+   },
+   {
+    "time": 186.0,
+    "text": "goesmilesbevond the",
+    "confidence": 0.723
+   },
+   {
+    "time": 186.0,
+    "text": "majority of themedications",
+    "confidence": 0.688
+   },
+   {
+    "time": 186.0,
+    "text": "Tikok",
+    "confidence": 0.906
+   },
+   {
+    "time": 188.0,
+    "text": "Thedatabehindvaccines",
+    "confidence": 0.625
+   },
+   {
+    "time": 188.0,
+    "text": "goesmilesbevond the",
+    "confidence": 0.725
+   },
+   {
+    "time": 188.0,
+    "text": "majority of themedications",
+    "confidence": 0.692
+   },
+   {
+    "time": 190.0,
+    "text": "thatyoumightbeprescribed",
+    "confidence": 0.8
+   },
+   {
+    "time": 190.0,
+    "text": "foradisease@r disorder",
+    "confidence": 0.724
+   },
+   {
+    "time": 190.0,
+    "text": "Tiktok",
+    "confidence": 0.517
+   },
+   {
+    "time": 192.0,
+    "text": "andwaybevondany",
+    "confidence": 0.886
+   },
+   {
+    "time": 192.0,
+    "text": "supplement thatyou might",
+    "confidence": 0.709
+   },
+   {
+    "time": 192.0,
+    "text": "over the countera",
+    "confidence": 0.561
+   },
+   {
+    "time": 192.0,
+    "text": "grab",
+    "confidence": 0.747
+   },
+   {
+    "time": 194.0,
+    "text": "andwaybevond any",
+    "confidence": 0.773
+   },
+   {
+    "time": 194.0,
+    "text": "supplement thatyou might",
+    "confidence": 0.719
+   },
+   {
+    "time": 194.0,
+    "text": "over the countera",
+    "confidence": 0.557
+   },
+   {
+    "time": 194.0,
+    "text": "grab",
+    "confidence": 1.0
+   },
+   {
+    "time": 194.0,
+    "text": "doctor dakien",
+    "confidence": 0.57
+   },
+   {
+    "time": 196.0,
+    "text": "Let\"s talkaboutsupplements",
+    "confidence": 0.93
+   },
+   {
+    "time": 196.0,
+    "text": "inanothervideo.",
+    "confidence": 0.815
+   },
+   {
+    "time": 196.0,
+    "text": "Tikiok",
+    "confidence": 0.643
+   },
+   {
+    "time": 198.0,
+    "text": "C",
+    "confidence": 0.676
+   },
+   {
+    "time": 198.0,
+    "text": "Andyourrsk @f exposure to",
+    "confidence": 0.767
+   },
+   {
+    "time": 198.0,
+    "text": "oneof thesediseases",
+    "confidence": 0.51
+   },
+   {
+    "time": 200.0,
+    "text": "Andyourrsk@f exposure to",
+    "confidence": 0.767
+   },
+   {
+    "time": 202.0,
+    "text": "oryour childslifetimeis",
+    "confidence": 0.837
+   },
+   {
+    "time": 202.0,
+    "text": "almost certain;",
+    "confidence": 0.819
+   },
+   {
+    "time": 204.0,
+    "text": "asweliveinaglobally",
+    "confidence": 0.959
+   },
+   {
+    "time": 204.0,
+    "text": "connectedcommunity:",
+    "confidence": 0.809
+   },
+   {
+    "time": 206.0,
+    "text": "C",
+    "confidence": 0.71
+   },
+   {
+    "time": 206.0,
+    "text": "asweliveinaglobally",
+    "confidence": 0.959
+   },
+   {
+    "time": 206.0,
+    "text": "connected community.",
+    "confidence": 0.669
+   },
+   {
+    "time": 206.0,
+    "text": "doctor daric",
+    "confidence": 0.535
+   },
+   {
+    "time": 208.0,
+    "text": "C",
+    "confidence": 0.581
+   },
+   {
+    "time": 208.0,
+    "text": "But thisis what",
+    "confidence": 0.563
+   },
+   {
+    "time": 208.0,
+    "text": "misinformation does:",
+    "confidence": 0.97
+   },
+   {
+    "time": 210.0,
+    "text": "C",
+    "confidence": 0.657
+   },
+   {
+    "time": 210.0,
+    "text": "It downplays therealrisk of",
+    "confidence": 0.788
+   },
+   {
+    "time": 210.0,
+    "text": "doctor darien",
+    "confidence": 0.7
+   },
+   {
+    "time": 212.0,
+    "text": "C",
+    "confidence": 0.61
+   },
+   {
+    "time": 212.0,
+    "text": "itexaggerates therarerisk",
+    "confidence": 0.797
+   },
+   {
+    "time": 212.0,
+    "text": "associatedwith vaccinations;",
+    "confidence": 0.616
+   },
+   {
+    "time": 212.0,
+    "text": "doctor darien",
+    "confidence": 0.828
+   },
+   {
+    "time": 214.0,
+    "text": "anditleavesyoUconfused",
+    "confidence": 0.78
+   },
+   {
+    "time": 214.0,
+    "text": "and fearful",
+    "confidence": 0.826
+   },
+   {
+    "time": 214.0,
+    "text": "doctor Jarien",
+    "confidence": 0.663
+   },
+   {
+    "time": 216.0,
+    "text": "anditleavesyoU confused",
+    "confidence": 0.615
+   },
+   {
+    "time": 216.0,
+    "text": "and fearful",
+    "confidence": 0.848
+   },
+   {
+    "time": 216.0,
+    "text": "TikTok",
+    "confidence": 0.956
+   },
+   {
+    "time": 216.0,
+    "text": "doctor darien",
+    "confidence": 0.7
+   },
+   {
+    "time": 218.0,
+    "text": "andmorelikelytochoosea",
+    "confidence": 0.998
+   },
+   {
+    "time": 218.0,
+    "text": "decision that isahigherrisk",
+    "confidence": 0.772
+   },
+   {
+    "time": 218.0,
+    "text": "@ption foryou:",
+    "confidence": 0.551
+   },
+   {
+    "time": 218.0,
+    "text": "doctor Jarien",
+    "confidence": 0.811
+   },
+   {
+    "time": 220.0,
+    "text": "andmorelikelytochoosea",
+    "confidence": 0.839
+   },
+   {
+    "time": 220.0,
+    "text": "decision that isahigherrisk",
+    "confidence": 0.784
+   },
+   {
+    "time": 220.0,
+    "text": "@ption foryou:",
+    "confidence": 0.543
+   },
+   {
+    "time": 220.0,
+    "text": "doctor dariem",
+    "confidence": 0.537
+   },
+   {
+    "time": 222.0,
+    "text": "Sowhenyouremaking",
+    "confidence": 0.821
+   },
+   {
+    "time": 222.0,
+    "text": "fmportant decisionsabout",
+    "confidence": 0.509
+   },
+   {
+    "time": 222.0,
+    "text": "yourhealth;",
+    "confidence": 0.968
+   },
+   {
+    "time": 222.0,
+    "text": "doctondarien",
+    "confidence": 0.65
+   },
+   {
+    "time": 224.0,
+    "text": "Qualified professional",
+    "confidence": 0.941
+   },
+   {
+    "time": 224.0,
+    "text": "TikTok",
+    "confidence": 0.918
+   },
+   {
+    "time": 226.0,
+    "text": "who has verified clinical",
+    "confidence": 0.83
+   },
+   {
+    "time": 226.0,
+    "text": "experience",
+    "confidence": 0.961
+   },
+   {
+    "time": 226.0,
+    "text": "TikTok",
+    "confidence": 0.955
+   },
+   {
+    "time": 228.0,
+    "text": "that can backup their",
+    "confidence": 0.727
+   },
+   {
+    "time": 228.0,
+    "text": "statements with data:",
+    "confidence": 0.934
+   },
+   {
+    "time": 228.0,
+    "text": "TikTok",
+    "confidence": 0.856
+   },
+   {
+    "time": 230.0,
+    "text": "Becausewthout data,",
+    "confidence": 0.636
+   },
+   {
+    "time": 230.0,
+    "text": "thevrejustgivingyou",
+    "confidence": 0.744
+   },
+   {
+    "time": 230.0,
+    "text": "random @pinionsthat yoU",
+    "confidence": 0.675
+   },
+   {
+    "time": 230.0,
+    "text": "don\"tneed:",
+    "confidence": 0.909
+   },
+   {
+    "time": 230.0,
+    "text": "TikTok",
+    "confidence": 0.886
+   },
+   {
+    "time": 230.0,
+    "text": "doctor dariem",
+    "confidence": 0.62
+   },
+   {
+    "time": 232.0,
+    "text": "Becausewthout data,",
+    "confidence": 0.605
+   },
+   {
+    "time": 232.0,
+    "text": "thevrejustgivingyou",
+    "confidence": 0.826
+   },
+   {
+    "time": 232.0,
+    "text": "random @pinions that yoU",
+    "confidence": 0.757
+   },
+   {
+    "time": 232.0,
+    "text": "don\"tneed:",
+    "confidence": 0.878
+   },
+   {
+    "time": 232.0,
+    "text": "TikTok",
+    "confidence": 0.971
+   },
+   {
+    "time": 234.0,
+    "text": "C",
+    "confidence": 0.629
+   },
+   {
+    "time": 234.0,
+    "text": "Alight; talksoon:",
+    "confidence": 0.518
+   },
+   {
+    "time": 234.0,
+    "text": "TikTok",
+    "confidence": 0.989
+   },
+   {
+    "time": 234.0,
+    "text": "doctor darien",
+    "confidence": 0.564
+   },
+   {
+    "time": 236.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 236.0,
+    "text": "doctor darien",
+    "confidence": 0.885
+   },
+   {
+    "time": 238.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 238.0,
+    "text": "doctor darien",
+    "confidence": 0.885
+   }
+  ],
+  "captions": [
+   {
+    "text": "Tiktok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.79,
+    "id": "o1"
+   },
+   {
+    "text": "docton darien",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.578,
+    "id": "o2"
+   },
+   {
+    "text": "C",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.904,
+    "id": "o3"
+   },
+   {
+    "text": "Let\"s talkaboutsomething",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.973,
+    "id": "o4"
+   },
+   {
+    "text": "reallyimportant;",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.925,
+    "id": "o5"
+   },
+   {
+    "text": "Tikok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.996,
+    "id": "o6"
+   },
+   {
+    "text": "doctor darien",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.637,
+    "id": "o7"
+   },
+   {
+    "text": "C",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.553,
+    "id": "o8"
+   },
+   {
+    "text": "Yourimmunesystem does",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.988,
+    "id": "o9"
+   },
+   {
+    "text": "notactlikeamuscle.",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.805,
+    "id": "o10"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.896,
+    "id": "o11"
+   },
+   {
+    "text": "doctor darien",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.681,
+    "id": "o12"
+   },
+   {
+    "text": "Stronger",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.862,
+    "id": "o13"
+   },
+   {
+    "text": "Your muscle",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.99,
+    "id": "o14"
+   },
+   {
+    "text": "getse",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.562,
+    "id": "o15"
+   },
+   {
+    "text": "C",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.917,
+    "id": "o16"
+   },
+   {
+    "text": "Your immunesystemis more",
+    "start": 8.0,
+    "end": 10.0,
+    "confidence": 0.818,
+    "id": "o17"
+   },
+   {
+    "text": "It\"ssomething thatyoU teach",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.617,
+    "id": "o18"
+   },
+   {
+    "text": "whenyou",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.872,
+    "id": "o19"
+   },
+   {
+    "text": "aninfection:",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.741,
+    "id": "o20"
+   },
+   {
+    "text": "Iget",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.582,
+    "id": "o21"
+   },
+   {
+    "text": "docton darie",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.685,
+    "id": "o22"
+   },
+   {
+    "text": "Your bodys first line",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.72,
+    "id": "o23"
+   },
+   {
+    "text": "responsefstypicallyyour",
+    "start": 14.0,
+    "end": 16.0,
+    "confidence": 0.911,
+    "id": "o24"
+   },
+   {
+    "text": "It is fastandmost",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.669,
+    "id": "o25"
+   },
+   {
+    "text": "importantlya",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.932,
+    "id": "o26"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.871,
+    "id": "o27"
+   },
+   {
+    "text": "@ docton Jarie",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.793,
+    "id": "o28"
+   },
+   {
+    "text": "@ngos",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.816,
+    "id": "o29"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.9,
+    "id": "o30"
+   },
+   {
+    "text": "C",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.728,
+    "id": "o31"
+   },
+   {
+    "text": "Your temperaturerises",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.983,
+    "id": "o32"
+   },
+   {
+    "text": "toslowdowthereplication",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.952,
+    "id": "o33"
+   },
+   {
+    "text": "@fwhateverisinvading your",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.919,
+    "id": "o34"
+   },
+   {
+    "text": "body",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.941,
+    "id": "o35"
+   },
+   {
+    "text": "toslowdowthereplication",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.945,
+    "id": "o36"
+   },
+   {
+    "text": "@fwhateverisinvading your",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.918,
+    "id": "o37"
+   },
+   {
+    "text": "body",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.94,
+    "id": "o38"
+   },
+   {
+    "text": "Tiktok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.735,
+    "id": "o39"
+   },
+   {
+    "text": "C",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.763,
+    "id": "o40"
+   },
+   {
+    "text": "trap",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.884,
+    "id": "o41"
+   },
+   {
+    "text": "Mucusincreasesto",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.791,
+    "id": "o42"
+   },
+   {
+    "text": "pathogens;",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.97,
+    "id": "o43"
+   },
+   {
+    "text": "TikTok<",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.75,
+    "id": "o44"
+   },
+   {
+    "text": "Gytokinesmessenger",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.714,
+    "id": "o45"
+   },
+   {
+    "text": "even",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.999,
+    "id": "o46"
+   },
+   {
+    "text": "proteinsaresentaround your",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.815,
+    "id": "o47"
+   },
+   {
+    "text": "body",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.937,
+    "id": "o48"
+   },
+   {
+    "text": "Thisiswhat makesyou feel",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.753,
+    "id": "o49"
+   },
+   {
+    "text": "like crapwhemyoure sick",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.612,
+    "id": "o50"
+   },
+   {
+    "text": "Your bodydoesnotknow",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.895,
+    "id": "o51"
+   },
+   {
+    "text": "what it\"s fighting;",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.566,
+    "id": "o52"
+   },
+   {
+    "text": "docto",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.949,
+    "id": "o53"
+   },
+   {
+    "text": "C",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.56,
+    "id": "o54"
+   },
+   {
+    "text": "butit\"sgoing to fightforyour",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.604,
+    "id": "o55"
+   },
+   {
+    "text": "lifes",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.691,
+    "id": "o56"
+   },
+   {
+    "text": "ctol",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.515,
+    "id": "o57"
+   },
+   {
+    "text": "Imaginemein thisroom right",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.944,
+    "id": "o58"
+   },
+   {
+    "text": "blindfold@meand ['m",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.698,
+    "id": "o59"
+   },
+   {
+    "text": "putal",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.983,
+    "id": "o60"
+   },
+   {
+    "text": "justswinging:",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.895,
+    "id": "o61"
+   },
+   {
+    "text": "Fmgonna takeoutsomeone",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.763,
+    "id": "o62"
+   },
+   {
+    "text": "and Imgonnamakesure [",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.606,
+    "id": "o63"
+   },
+   {
+    "text": "@Ut @f thisroom alive.",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.647,
+    "id": "o64"
+   },
+   {
+    "text": "getc",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.739,
+    "id": "o65"
+   },
+   {
+    "text": "TikTo",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.617,
+    "id": "o66"
+   },
+   {
+    "text": "Fmgonna takeoutsomeone",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.758,
+    "id": "o67"
+   },
+   {
+    "text": "and Imgonnamakesure [",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.722,
+    "id": "o68"
+   },
+   {
+    "text": "@Ut @f thisroom alive.",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.646,
+    "id": "o69"
+   },
+   {
+    "text": "getc",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.743,
+    "id": "o70"
+   },
+   {
+    "text": "Thatiswhatyourimmune",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.929,
+    "id": "o71"
+   },
+   {
+    "text": "systemisdoing",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.983,
+    "id": "o72"
+   },
+   {
+    "text": "Tiktok",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.84,
+    "id": "o73"
+   },
+   {
+    "text": "@ doctor dariel",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.654,
+    "id": "o74"
+   },
+   {
+    "text": "C",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.863,
+    "id": "o75"
+   },
+   {
+    "text": "that first",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.863,
+    "id": "o76"
+   },
+   {
+    "text": "Igets",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.525,
+    "id": "o77"
+   },
+   {
+    "text": "response toaninfection:",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.838,
+    "id": "o78"
+   },
+   {
+    "text": "@ doctor darien",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.664,
+    "id": "o79"
+   },
+   {
+    "text": "andwehaveevdence where",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.996,
+    "id": "o80"
+   },
+   {
+    "text": "vourriskissubstantial:",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.601,
+    "id": "o81"
+   },
+   {
+    "text": "andwehaveevdence where",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.996,
+    "id": "o82"
+   },
+   {
+    "text": "vourriskissubstantial:",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.62,
+    "id": "o83"
+   },
+   {
+    "text": "gettingharmedbefore",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.858,
+    "id": "o84"
+   },
+   {
+    "text": "gettingout@fthisroom",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.635,
+    "id": "o85"
+   },
+   {
+    "text": "doctor dariel",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.551,
+    "id": "o86"
+   },
+   {
+    "text": "gettingharmedbefore",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.861,
+    "id": "o87"
+   },
+   {
+    "text": "gettingout@fthisroom",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.625,
+    "id": "o88"
+   },
+   {
+    "text": "doctor darie",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.685,
+    "id": "o89"
+   },
+   {
+    "text": "areveryhigh Welluse",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.724,
+    "id": "o90"
+   },
+   {
+    "text": "polio",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 1.0,
+    "id": "o91"
+   },
+   {
+    "text": "example.",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.531,
+    "id": "o92"
+   },
+   {
+    "text": "asan",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 1.0,
+    "id": "o93"
+   },
+   {
+    "text": "TTiktok",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.611,
+    "id": "o94"
+   },
+   {
+    "text": "doctor darien",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.521,
+    "id": "o95"
+   },
+   {
+    "text": "Thedata that wehave, 90%",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.705,
+    "id": "o96"
+   },
+   {
+    "text": "of thepeoplewhoget polio,",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.678,
+    "id": "o97"
+   },
+   {
+    "text": "TikTok",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.714,
+    "id": "o98"
+   },
+   {
+    "text": "doctor darien",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.673,
+    "id": "o99"
+   },
+   {
+    "text": "Thedata that wehave, 90%",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.658,
+    "id": "o100"
+   },
+   {
+    "text": "ofthepeoplewhoget polio;",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.64,
+    "id": "o101"
+   },
+   {
+    "text": "TkTok",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.782,
+    "id": "o102"
+   },
+   {
+    "text": "doctordarien",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.651,
+    "id": "o103"
+   },
+   {
+    "text": "polio",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.997,
+    "id": "o104"
+   },
+   {
+    "text": "were",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.994,
+    "id": "o105"
+   },
+   {
+    "text": "asymptomatic,",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.693,
+    "id": "o106"
+   },
+   {
+    "text": "Tiktok",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.609,
+    "id": "o107"
+   },
+   {
+    "text": "Atall their bodieswere",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.736,
+    "id": "o108"
+   },
+   {
+    "text": "successfulateliminating the",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.998,
+    "id": "o109"
+   },
+   {
+    "text": "threat",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 1.0,
+    "id": "o110"
+   },
+   {
+    "text": "TikTok",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.856,
+    "id": "o111"
+   },
+   {
+    "text": "doctor dalien",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.614,
+    "id": "o112"
+   },
+   {
+    "text": "Atall; their bodieswere",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.632,
+    "id": "o113"
+   },
+   {
+    "text": "successfulateliminating the",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.998,
+    "id": "o114"
+   },
+   {
+    "text": "threat",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 1.0,
+    "id": "o115"
+   },
+   {
+    "text": "TikTok",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.514,
+    "id": "o116"
+   },
+   {
+    "text": "But forasmallpercent of",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.793,
+    "id": "o117"
+   },
+   {
+    "text": "infected with",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.978,
+    "id": "o118"
+   },
+   {
+    "text": "people who",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.958,
+    "id": "o119"
+   },
+   {
+    "text": "polio,",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.756,
+    "id": "o120"
+   },
+   {
+    "text": "C",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.787,
+    "id": "o121"
+   },
+   {
+    "text": "that virusmovesoutof the",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.506,
+    "id": "o122"
+   },
+   {
+    "text": "gutz",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.684,
+    "id": "o123"
+   },
+   {
+    "text": "TikTok",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.571,
+    "id": "o124"
+   },
+   {
+    "text": "C",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.846,
+    "id": "o125"
+   },
+   {
+    "text": "whereit likestoreplicate and",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.827,
+    "id": "o126"
+   },
+   {
+    "text": "multiplya",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.711,
+    "id": "o127"
+   },
+   {
+    "text": "Tiktok",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.66,
+    "id": "o128"
+   },
+   {
+    "text": "paralysis:",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.75,
+    "id": "o129"
+   },
+   {
+    "text": "Before 1955,before the",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.685,
+    "id": "o130"
+   },
+   {
+    "text": "polio",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 1.0,
+    "id": "o131"
+   },
+   {
+    "text": "Vaccine waslicensed;",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.595,
+    "id": "o132"
+   },
+   {
+    "text": "@ doctor darien",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.833,
+    "id": "o133"
+   },
+   {
+    "text": "Before 1955,before the",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.668,
+    "id": "o134"
+   },
+   {
+    "text": "polio",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 1.0,
+    "id": "o135"
+   },
+   {
+    "text": "Vaccine waslicensed;",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.609,
+    "id": "o136"
+   },
+   {
+    "text": "doctordarien",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.564,
+    "id": "o137"
+   },
+   {
+    "text": "there werenearly20,000",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.807,
+    "id": "o138"
+   },
+   {
+    "text": "casesofpolioparalysis every",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.993,
+    "id": "o139"
+   },
+   {
+    "text": "darien",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.993,
+    "id": "o140"
+   },
+   {
+    "text": "there werenearly20,000",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.8,
+    "id": "o141"
+   },
+   {
+    "text": "casesofpolioparalysis every",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.994,
+    "id": "o142"
+   },
+   {
+    "text": "doctordarien",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.732,
+    "id": "o143"
+   },
+   {
+    "text": "Plavgroundsemptied, public",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.83,
+    "id": "o144"
+   },
+   {
+    "text": "poolsclosed;",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.93,
+    "id": "o145"
+   },
+   {
+    "text": "kTok",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.628,
+    "id": "o146"
+   },
+   {
+    "text": "andthemodernI CU That",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.802,
+    "id": "o147"
+   },
+   {
+    "text": "thatyoUseein thehospital.",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.606,
+    "id": "o148"
+   },
+   {
+    "text": "Tikok",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.702,
+    "id": "o149"
+   },
+   {
+    "text": "darien",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.972,
+    "id": "o150"
+   },
+   {
+    "text": "resultofpoliocases",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.971,
+    "id": "o151"
+   },
+   {
+    "text": "dariem",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.768,
+    "id": "o152"
+   },
+   {
+    "text": "Thel CU Wascreatedasa",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.54,
+    "id": "o153"
+   },
+   {
+    "text": "resultofpoliocases",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.972,
+    "id": "o154"
+   },
+   {
+    "text": "dariem",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.816,
+    "id": "o155"
+   },
+   {
+    "text": "C",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.552,
+    "id": "o156"
+   },
+   {
+    "text": "Ifyousurvive that infection;",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.585,
+    "id": "o157"
+   },
+   {
+    "text": "docttor darien",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.861,
+    "id": "o158"
+   },
+   {
+    "text": "informationaboutwhat that",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.924,
+    "id": "o159"
+   },
+   {
+    "text": "infectionlookslike",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.792,
+    "id": "o160"
+   },
+   {
+    "text": "Tiktok",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.918,
+    "id": "o161"
+   },
+   {
+    "text": "doctor deriel",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.607,
+    "id": "o162"
+   },
+   {
+    "text": "informationaboutwhat that",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.91,
+    "id": "o163"
+   },
+   {
+    "text": "infectionlookslike",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.761,
+    "id": "o164"
+   },
+   {
+    "text": "and createsanadaptive",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.628,
+    "id": "o165"
+   },
+   {
+    "text": "Thisisyour inmune response",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.645,
+    "id": "o166"
+   },
+   {
+    "text": "thatisspecific:",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.596,
+    "id": "o167"
+   },
+   {
+    "text": "TikTo <",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.658,
+    "id": "o168"
+   },
+   {
+    "text": "Intheevent thatyoU come",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.669,
+    "id": "o169"
+   },
+   {
+    "text": "across that typeofinfection",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.776,
+    "id": "o170"
+   },
+   {
+    "text": "TikTok",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.719,
+    "id": "o171"
+   },
+   {
+    "text": "Intheevent thatyoUcome",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.876,
+    "id": "o172"
+   },
+   {
+    "text": "across that typeofinfection",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.755,
+    "id": "o173"
+   },
+   {
+    "text": "TikTok",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.81,
+    "id": "o174"
+   },
+   {
+    "text": "Your immunesystem",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.668,
+    "id": "o175"
+   },
+   {
+    "text": "gets",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 1.0,
+    "id": "o176"
+   },
+   {
+    "text": "smarter",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.982,
+    "id": "o177"
+   },
+   {
+    "text": "infoumation inamemory",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.619,
+    "id": "o178"
+   },
+   {
+    "text": "bank",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.868,
+    "id": "o179"
+   },
+   {
+    "text": "TikTok",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.955,
+    "id": "o180"
+   },
+   {
+    "text": "doctondarien",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.505,
+    "id": "o181"
+   },
+   {
+    "text": "Your immunesystem",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 0.661,
+    "id": "o182"
+   },
+   {
+    "text": "gets",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 1.0,
+    "id": "o183"
+   },
+   {
+    "text": "smarterby storng that",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 0.539,
+    "id": "o184"
+   },
+   {
+    "text": "infoumation inamemory",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 0.628,
+    "id": "o185"
+   },
+   {
+    "text": "bank",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 0.868,
+    "id": "o186"
+   },
+   {
+    "text": "TikTok",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 0.737,
+    "id": "o187"
+   },
+   {
+    "text": "Someviruses, if thevre left",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 0.515,
+    "id": "o188"
+   },
+   {
+    "text": "uncontrolled;",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 0.962,
+    "id": "o189"
+   },
+   {
+    "text": "octor",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 0.524,
+    "id": "o190"
+   },
+   {
+    "text": "into thatmemory",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.999,
+    "id": "o191"
+   },
+   {
+    "text": "gete",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.548,
+    "id": "o192"
+   },
+   {
+    "text": "can",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.979,
+    "id": "o193"
+   },
+   {
+    "text": "bankanddeleteit:",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.747,
+    "id": "o194"
+   },
+   {
+    "text": "Tiki@k",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.571,
+    "id": "o195"
+   },
+   {
+    "text": "Thisisoneof the",
+    "start": 120.0,
+    "end": 120.0,
+    "confidence": 0.597,
+    "id": "o196"
+   },
+   {
+    "text": "complications of measles.",
+    "start": 120.0,
+    "end": 120.0,
+    "confidence": 0.671,
+    "id": "o197"
+   },
+   {
+    "text": "@ doctor da ren",
+    "start": 120.0,
+    "end": 120.0,
+    "confidence": 0.708,
+    "id": "o198"
+   },
+   {
+    "text": "Thisisoneof the",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.588,
+    "id": "o199"
+   },
+   {
+    "text": "complications of measles.",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.674,
+    "id": "o200"
+   },
+   {
+    "text": "It can causesomethingcalled",
+    "start": 124.0,
+    "end": 124.0,
+    "confidence": 0.889,
+    "id": "o201"
+   },
+   {
+    "text": "immuneamnesia:",
+    "start": 124.0,
+    "end": 124.0,
+    "confidence": 0.95,
+    "id": "o202"
+   },
+   {
+    "text": "Measles canactuallymake",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.984,
+    "id": "o203"
+   },
+   {
+    "text": "your body forgethow you",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.617,
+    "id": "o204"
+   },
+   {
+    "text": "infections;",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.718,
+    "id": "o205"
+   },
+   {
+    "text": "fought",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 1.0,
+    "id": "o206"
+   },
+   {
+    "text": "TikTok",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.971,
+    "id": "o207"
+   },
+   {
+    "text": "@ doctor datriel",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.504,
+    "id": "o208"
+   },
+   {
+    "text": "C",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.854,
+    "id": "o209"
+   },
+   {
+    "text": "making VoUsusceptible to",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.606,
+    "id": "o210"
+   },
+   {
+    "text": "diseases",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.503,
+    "id": "o211"
+   },
+   {
+    "text": "Tikto",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.506,
+    "id": "o212"
+   },
+   {
+    "text": "doctor darlel",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.513,
+    "id": "o213"
+   },
+   {
+    "text": "Andsomeinfections can",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.85,
+    "id": "o214"
+   },
+   {
+    "text": "leave voupermanently",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.646,
+    "id": "o215"
+   },
+   {
+    "text": "harmed:",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.928,
+    "id": "o216"
+   },
+   {
+    "text": "TikTok",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.963,
+    "id": "o217"
+   },
+   {
+    "text": "doctor dakiel",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.564,
+    "id": "o218"
+   },
+   {
+    "text": "Andsomeinfections can",
+    "start": 132.0,
+    "end": 132.0,
+    "confidence": 0.861,
+    "id": "o219"
+   },
+   {
+    "text": "leave voupermanently",
+    "start": 132.0,
+    "end": 132.0,
+    "confidence": 0.678,
+    "id": "o220"
+   },
+   {
+    "text": "harmed:",
+    "start": 132.0,
+    "end": 132.0,
+    "confidence": 0.902,
+    "id": "o221"
+   },
+   {
+    "text": "TikTok",
+    "start": 132.0,
+    "end": 132.0,
+    "confidence": 0.622,
+    "id": "o222"
+   },
+   {
+    "text": "for examples Haemophilus",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.883,
+    "id": "o223"
+   },
+   {
+    "text": "influenzaeisanother",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.922,
+    "id": "o224"
+   },
+   {
+    "text": "preventableinfection:",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.798,
+    "id": "o225"
+   },
+   {
+    "text": "TikTok",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.532,
+    "id": "o226"
+   },
+   {
+    "text": "for examples Haemophilus",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.857,
+    "id": "o227"
+   },
+   {
+    "text": "influenzaeisanother",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.914,
+    "id": "o228"
+   },
+   {
+    "text": "preventableinfection:",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.973,
+    "id": "o229"
+   },
+   {
+    "text": "@ doctor darien",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.673,
+    "id": "o230"
+   },
+   {
+    "text": "Andbefore the vaccine forit",
+    "start": 138.0,
+    "end": 138.0,
+    "confidence": 0.518,
+    "id": "o231"
+   },
+   {
+    "text": "waslicensedin 1985,",
+    "start": 138.0,
+    "end": 138.0,
+    "confidence": 0.92,
+    "id": "o232"
+   },
+   {
+    "text": "Tikiok",
+    "start": 138.0,
+    "end": 138.0,
+    "confidence": 0.514,
+    "id": "o233"
+   },
+   {
+    "text": "therewereatleast?0,000",
+    "start": 140.0,
+    "end": 140.0,
+    "confidence": 0.821,
+    "id": "o234"
+   },
+   {
+    "text": "invasive casesof",
+    "start": 140.0,
+    "end": 140.0,
+    "confidence": 0.621,
+    "id": "o235"
+   },
+   {
+    "text": "Haemophilus influenzae.",
+    "start": 140.0,
+    "end": 140.0,
+    "confidence": 0.801,
+    "id": "o236"
+   },
+   {
+    "text": "Tikiok",
+    "start": 140.0,
+    "end": 140.0,
+    "confidence": 0.554,
+    "id": "o237"
+   },
+   {
+    "text": "arien",
+    "start": 140.0,
+    "end": 140.0,
+    "confidence": 0.867,
+    "id": "o238"
+   },
+   {
+    "text": "therewereatlleast20,000",
+    "start": 142.0,
+    "end": 142.0,
+    "confidence": 0.81,
+    "id": "o239"
+   },
+   {
+    "text": "invasive casesof",
+    "start": 142.0,
+    "end": 142.0,
+    "confidence": 0.567,
+    "id": "o240"
+   },
+   {
+    "text": "Haemophilus influenzae.",
+    "start": 142.0,
+    "end": 142.0,
+    "confidence": 0.778,
+    "id": "o241"
+   },
+   {
+    "text": "C",
+    "start": 144.0,
+    "end": 144.0,
+    "confidence": 0.842,
+    "id": "o242"
+   },
+   {
+    "text": "Acomplication @fthisis",
+    "start": 144.0,
+    "end": 144.0,
+    "confidence": 0.811,
+    "id": "o243"
+   },
+   {
+    "text": "encephalitiss",
+    "start": 144.0,
+    "end": 144.0,
+    "confidence": 0.745,
+    "id": "o244"
+   },
+   {
+    "text": "'thatareleftwith",
+    "start": 146.0,
+    "end": 146.0,
+    "confidence": 0.798,
+    "id": "o245"
+   },
+   {
+    "text": "get:",
+    "start": 146.0,
+    "end": 146.0,
+    "confidence": 0.712,
+    "id": "o246"
+   },
+   {
+    "text": "permanentbrain damage:",
+    "start": 146.0,
+    "end": 146.0,
+    "confidence": 0.899,
+    "id": "o247"
+   },
+   {
+    "text": "'thatareleftwith",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 0.819,
+    "id": "o248"
+   },
+   {
+    "text": "get:",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 0.703,
+    "id": "o249"
+   },
+   {
+    "text": "permanentbrain damage:",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 0.878,
+    "id": "o250"
+   },
+   {
+    "text": "doctol",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 0.525,
+    "id": "o251"
+   },
+   {
+    "text": "arien",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 0.793,
+    "id": "o252"
+   },
+   {
+    "text": "Andsomeinfections,like the",
+    "start": 150.0,
+    "end": 150.0,
+    "confidence": 0.675,
+    "id": "o253"
+   },
+   {
+    "text": "flus",
+    "start": 150.0,
+    "end": 150.0,
+    "confidence": 0.528,
+    "id": "o254"
+   },
+   {
+    "text": "TkTok",
+    "start": 150.0,
+    "end": 150.0,
+    "confidence": 0.521,
+    "id": "o255"
+   },
+   {
+    "text": "darten",
+    "start": 150.0,
+    "end": 150.0,
+    "confidence": 0.527,
+    "id": "o256"
+   },
+   {
+    "text": "thev'",
+    "start": 152.0,
+    "end": 152.0,
+    "confidence": 0.752,
+    "id": "o257"
+   },
+   {
+    "text": "changewhat",
+    "start": 152.0,
+    "end": 152.0,
+    "confidence": 0.93,
+    "id": "o258"
+   },
+   {
+    "text": "look",
+    "start": 152.0,
+    "end": 152.0,
+    "confidence": 0.899,
+    "id": "o259"
+   },
+   {
+    "text": "can",
+    "start": 152.0,
+    "end": 152.0,
+    "confidence": 0.986,
+    "id": "o260"
+   },
+   {
+    "text": "like",
+    "start": 152.0,
+    "end": 152.0,
+    "confidence": 0.884,
+    "id": "o261"
+   },
+   {
+    "text": "TikTok",
+    "start": 152.0,
+    "end": 152.0,
+    "confidence": 0.928,
+    "id": "o262"
+   },
+   {
+    "text": "0",
+    "start": 154.0,
+    "end": 154.0,
+    "confidence": 0.902,
+    "id": "o263"
+   },
+   {
+    "text": "toevadevour adaptive",
+    "start": 154.0,
+    "end": 154.0,
+    "confidence": 0.651,
+    "id": "o264"
+   },
+   {
+    "text": "response",
+    "start": 154.0,
+    "end": 154.0,
+    "confidence": 0.908,
+    "id": "o265"
+   },
+   {
+    "text": "doctor dariel",
+    "start": 154.0,
+    "end": 154.0,
+    "confidence": 0.865,
+    "id": "o266"
+   },
+   {
+    "text": "andleaveyoU fighting for",
+    "start": 156.0,
+    "end": 156.0,
+    "confidence": 0.731,
+    "id": "o267"
+   },
+   {
+    "text": "your lifeeveryseason:",
+    "start": 156.0,
+    "end": 156.0,
+    "confidence": 0.582,
+    "id": "o268"
+   },
+   {
+    "text": "TikTok",
+    "start": 156.0,
+    "end": 156.0,
+    "confidence": 0.939,
+    "id": "o269"
+   },
+   {
+    "text": "Eachinfectionisn\"ta",
+    "start": 158.0,
+    "end": 158.0,
+    "confidence": 0.983,
+    "id": "o270"
+   },
+   {
+    "text": "workoutz",
+    "start": 158.0,
+    "end": 158.0,
+    "confidence": 0.902,
+    "id": "o271"
+   },
+   {
+    "text": "itsariskAndvaccinesgive",
+    "start": 160.0,
+    "end": 160.0,
+    "confidence": 0.724,
+    "id": "o272"
+   },
+   {
+    "text": "your fmmunesystemalesson",
+    "start": 160.0,
+    "end": 160.0,
+    "confidence": 0.744,
+    "id": "o273"
+   },
+   {
+    "text": "doctor daren",
+    "start": 160.0,
+    "end": 160.0,
+    "confidence": 0.684,
+    "id": "o274"
+   },
+   {
+    "text": "it\"sariskAndvaccinesgive",
+    "start": 162.0,
+    "end": 162.0,
+    "confidence": 0.52,
+    "id": "o275"
+   },
+   {
+    "text": "your fmmunesystemalesson",
+    "start": 162.0,
+    "end": 162.0,
+    "confidence": 0.726,
+    "id": "o276"
+   },
+   {
+    "text": "wthout thelife threatening",
+    "start": 164.0,
+    "end": 164.0,
+    "confidence": 0.633,
+    "id": "o277"
+   },
+   {
+    "text": "consecuences:",
+    "start": 164.0,
+    "end": 164.0,
+    "confidence": 0.54,
+    "id": "o278"
+   },
+   {
+    "text": "Thisallowsyour immune",
+    "start": 166.0,
+    "end": 166.0,
+    "confidence": 0.779,
+    "id": "o279"
+   },
+   {
+    "text": "system tolearn through safe",
+    "start": 166.0,
+    "end": 166.0,
+    "confidence": 0.974,
+    "id": "o280"
+   },
+   {
+    "text": "practices",
+    "start": 166.0,
+    "end": 166.0,
+    "confidence": 1.0,
+    "id": "o281"
+   },
+   {
+    "text": "without thedanger of trial",
+    "start": 168.0,
+    "end": 168.0,
+    "confidence": 0.745,
+    "id": "o282"
+   },
+   {
+    "text": "and erroro",
+    "start": 168.0,
+    "end": 168.0,
+    "confidence": 0.637,
+    "id": "o283"
+   },
+   {
+    "text": "Important to acknowledge",
+    "start": 170.0,
+    "end": 170.0,
+    "confidence": 0.782,
+    "id": "o284"
+   },
+   {
+    "text": "therearerarerisks",
+    "start": 170.0,
+    "end": 170.0,
+    "confidence": 0.993,
+    "id": "o285"
+   },
+   {
+    "text": "associatedwith vaccinations:",
+    "start": 170.0,
+    "end": 170.0,
+    "confidence": 0.961,
+    "id": "o286"
+   },
+   {
+    "text": "Important to acknowledge",
+    "start": 172.0,
+    "end": 172.0,
+    "confidence": 0.745,
+    "id": "o287"
+   },
+   {
+    "text": "therearerarerisks",
+    "start": 172.0,
+    "end": 172.0,
+    "confidence": 0.985,
+    "id": "o288"
+   },
+   {
+    "text": "associatedwith vaccinations:",
+    "start": 172.0,
+    "end": 172.0,
+    "confidence": 0.957,
+    "id": "o289"
+   },
+   {
+    "text": "Tiktok",
+    "start": 172.0,
+    "end": 172.0,
+    "confidence": 0.674,
+    "id": "o290"
+   },
+   {
+    "text": "doctor dalien",
+    "start": 172.0,
+    "end": 172.0,
+    "confidence": 0.507,
+    "id": "o291"
+   },
+   {
+    "text": "Everyintervention @f",
+    "start": 174.0,
+    "end": 174.0,
+    "confidence": 0.779,
+    "id": "o292"
+   },
+   {
+    "text": "medicinehassomelevel of",
+    "start": 174.0,
+    "end": 174.0,
+    "confidence": 0.882,
+    "id": "o293"
+   },
+   {
+    "text": "risk",
+    "start": 174.0,
+    "end": 174.0,
+    "confidence": 1.0,
+    "id": "o294"
+   },
+   {
+    "text": "Everyintervention @f",
+    "start": 176.0,
+    "end": 176.0,
+    "confidence": 0.806,
+    "id": "o295"
+   },
+   {
+    "text": "medicinehassomelevel of",
+    "start": 176.0,
+    "end": 176.0,
+    "confidence": 0.879,
+    "id": "o296"
+   },
+   {
+    "text": "risk",
+    "start": 176.0,
+    "end": 176.0,
+    "confidence": 1.0,
+    "id": "o297"
+   },
+   {
+    "text": "Tikarok",
+    "start": 176.0,
+    "end": 176.0,
+    "confidence": 0.534,
+    "id": "o298"
+   },
+   {
+    "text": "aien",
+    "start": 176.0,
+    "end": 176.0,
+    "confidence": 0.985,
+    "id": "o299"
+   },
+   {
+    "text": "C",
+    "start": 178.0,
+    "end": 178.0,
+    "confidence": 0.61,
+    "id": "o300"
+   },
+   {
+    "text": "But vaccinesareactually one",
+    "start": 178.0,
+    "end": 178.0,
+    "confidence": 0.803,
+    "id": "o301"
+   },
+   {
+    "text": "@f themoststudied",
+    "start": 178.0,
+    "end": 178.0,
+    "confidence": 0.82,
+    "id": "o302"
+   },
+   {
+    "text": "interventions within medicine",
+    "start": 178.0,
+    "end": 178.0,
+    "confidence": 0.902,
+    "id": "o303"
+   },
+   {
+    "text": "But vaccinesareactually one",
+    "start": 180.0,
+    "end": 180.0,
+    "confidence": 0.795,
+    "id": "o304"
+   },
+   {
+    "text": "@f themoststudied",
+    "start": 180.0,
+    "end": 180.0,
+    "confidence": 0.731,
+    "id": "o305"
+   },
+   {
+    "text": "interventions within medicine",
+    "start": 180.0,
+    "end": 180.0,
+    "confidence": 0.898,
+    "id": "o306"
+   },
+   {
+    "text": "because thevare",
+    "start": 182.0,
+    "end": 182.0,
+    "confidence": 0.846,
+    "id": "o307"
+   },
+   {
+    "text": "interventions thatare given",
+    "start": 182.0,
+    "end": 182.0,
+    "confidence": 0.977,
+    "id": "o308"
+   },
+   {
+    "text": "tohealthypeople",
+    "start": 182.0,
+    "end": 182.0,
+    "confidence": 0.964,
+    "id": "o309"
+   },
+   {
+    "text": "C",
+    "start": 184.0,
+    "end": 184.0,
+    "confidence": 0.573,
+    "id": "o310"
+   },
+   {
+    "text": "tokeep themhealthy:",
+    "start": 184.0,
+    "end": 184.0,
+    "confidence": 0.838,
+    "id": "o311"
+   },
+   {
+    "text": "Thedatabehindvaccines",
+    "start": 186.0,
+    "end": 186.0,
+    "confidence": 0.595,
+    "id": "o312"
+   },
+   {
+    "text": "goesmilesbevond the",
+    "start": 186.0,
+    "end": 186.0,
+    "confidence": 0.723,
+    "id": "o313"
+   },
+   {
+    "text": "majority of themedications",
+    "start": 186.0,
+    "end": 186.0,
+    "confidence": 0.688,
+    "id": "o314"
+   },
+   {
+    "text": "Tikok",
+    "start": 186.0,
+    "end": 186.0,
+    "confidence": 0.906,
+    "id": "o315"
+   },
+   {
+    "text": "Thedatabehindvaccines",
+    "start": 188.0,
+    "end": 188.0,
+    "confidence": 0.625,
+    "id": "o316"
+   },
+   {
+    "text": "goesmilesbevond the",
+    "start": 188.0,
+    "end": 188.0,
+    "confidence": 0.725,
+    "id": "o317"
+   },
+   {
+    "text": "majority of themedications",
+    "start": 188.0,
+    "end": 188.0,
+    "confidence": 0.692,
+    "id": "o318"
+   },
+   {
+    "text": "thatyoumightbeprescribed",
+    "start": 190.0,
+    "end": 190.0,
+    "confidence": 0.8,
+    "id": "o319"
+   },
+   {
+    "text": "foradisease@r disorder",
+    "start": 190.0,
+    "end": 190.0,
+    "confidence": 0.724,
+    "id": "o320"
+   },
+   {
+    "text": "Tiktok",
+    "start": 190.0,
+    "end": 190.0,
+    "confidence": 0.517,
+    "id": "o321"
+   },
+   {
+    "text": "andwaybevondany",
+    "start": 192.0,
+    "end": 192.0,
+    "confidence": 0.886,
+    "id": "o322"
+   },
+   {
+    "text": "supplement thatyou might",
+    "start": 192.0,
+    "end": 192.0,
+    "confidence": 0.709,
+    "id": "o323"
+   },
+   {
+    "text": "over the countera",
+    "start": 192.0,
+    "end": 192.0,
+    "confidence": 0.561,
+    "id": "o324"
+   },
+   {
+    "text": "grab",
+    "start": 192.0,
+    "end": 192.0,
+    "confidence": 0.747,
+    "id": "o325"
+   },
+   {
+    "text": "andwaybevond any",
+    "start": 194.0,
+    "end": 194.0,
+    "confidence": 0.773,
+    "id": "o326"
+   },
+   {
+    "text": "supplement thatyou might",
+    "start": 194.0,
+    "end": 194.0,
+    "confidence": 0.719,
+    "id": "o327"
+   },
+   {
+    "text": "over the countera",
+    "start": 194.0,
+    "end": 194.0,
+    "confidence": 0.557,
+    "id": "o328"
+   },
+   {
+    "text": "grab",
+    "start": 194.0,
+    "end": 194.0,
+    "confidence": 1.0,
+    "id": "o329"
+   },
+   {
+    "text": "doctor dakien",
+    "start": 194.0,
+    "end": 194.0,
+    "confidence": 0.57,
+    "id": "o330"
+   },
+   {
+    "text": "Let\"s talkaboutsupplements",
+    "start": 196.0,
+    "end": 196.0,
+    "confidence": 0.93,
+    "id": "o331"
+   },
+   {
+    "text": "inanothervideo.",
+    "start": 196.0,
+    "end": 196.0,
+    "confidence": 0.815,
+    "id": "o332"
+   },
+   {
+    "text": "Tikiok",
+    "start": 196.0,
+    "end": 196.0,
+    "confidence": 0.643,
+    "id": "o333"
+   },
+   {
+    "text": "C",
+    "start": 198.0,
+    "end": 198.0,
+    "confidence": 0.676,
+    "id": "o334"
+   },
+   {
+    "text": "Andyourrsk @f exposure to",
+    "start": 198.0,
+    "end": 198.0,
+    "confidence": 0.767,
+    "id": "o335"
+   },
+   {
+    "text": "oneof thesediseases",
+    "start": 198.0,
+    "end": 198.0,
+    "confidence": 0.51,
+    "id": "o336"
+   },
+   {
+    "text": "Andyourrsk@f exposure to",
+    "start": 200.0,
+    "end": 200.0,
+    "confidence": 0.767,
+    "id": "o337"
+   },
+   {
+    "text": "oryour childslifetimeis",
+    "start": 202.0,
+    "end": 202.0,
+    "confidence": 0.837,
+    "id": "o338"
+   },
+   {
+    "text": "almost certain;",
+    "start": 202.0,
+    "end": 202.0,
+    "confidence": 0.819,
+    "id": "o339"
+   },
+   {
+    "text": "asweliveinaglobally",
+    "start": 204.0,
+    "end": 204.0,
+    "confidence": 0.959,
+    "id": "o340"
+   },
+   {
+    "text": "connectedcommunity:",
+    "start": 204.0,
+    "end": 204.0,
+    "confidence": 0.809,
+    "id": "o341"
+   },
+   {
+    "text": "C",
+    "start": 206.0,
+    "end": 206.0,
+    "confidence": 0.71,
+    "id": "o342"
+   },
+   {
+    "text": "asweliveinaglobally",
+    "start": 206.0,
+    "end": 206.0,
+    "confidence": 0.959,
+    "id": "o343"
+   },
+   {
+    "text": "connected community.",
+    "start": 206.0,
+    "end": 206.0,
+    "confidence": 0.669,
+    "id": "o344"
+   },
+   {
+    "text": "doctor daric",
+    "start": 206.0,
+    "end": 206.0,
+    "confidence": 0.535,
+    "id": "o345"
+   },
+   {
+    "text": "C",
+    "start": 208.0,
+    "end": 208.0,
+    "confidence": 0.581,
+    "id": "o346"
+   },
+   {
+    "text": "But thisis what",
+    "start": 208.0,
+    "end": 208.0,
+    "confidence": 0.563,
+    "id": "o347"
+   },
+   {
+    "text": "misinformation does:",
+    "start": 208.0,
+    "end": 208.0,
+    "confidence": 0.97,
+    "id": "o348"
+   },
+   {
+    "text": "C",
+    "start": 210.0,
+    "end": 210.0,
+    "confidence": 0.657,
+    "id": "o349"
+   },
+   {
+    "text": "It downplays therealrisk of",
+    "start": 210.0,
+    "end": 210.0,
+    "confidence": 0.788,
+    "id": "o350"
+   },
+   {
+    "text": "doctor darien",
+    "start": 210.0,
+    "end": 210.0,
+    "confidence": 0.7,
+    "id": "o351"
+   },
+   {
+    "text": "C",
+    "start": 212.0,
+    "end": 212.0,
+    "confidence": 0.61,
+    "id": "o352"
+   },
+   {
+    "text": "itexaggerates therarerisk",
+    "start": 212.0,
+    "end": 212.0,
+    "confidence": 0.797,
+    "id": "o353"
+   },
+   {
+    "text": "associatedwith vaccinations;",
+    "start": 212.0,
+    "end": 212.0,
+    "confidence": 0.616,
+    "id": "o354"
+   },
+   {
+    "text": "doctor darien",
+    "start": 212.0,
+    "end": 212.0,
+    "confidence": 0.828,
+    "id": "o355"
+   },
+   {
+    "text": "anditleavesyoUconfused",
+    "start": 214.0,
+    "end": 214.0,
+    "confidence": 0.78,
+    "id": "o356"
+   },
+   {
+    "text": "and fearful",
+    "start": 214.0,
+    "end": 214.0,
+    "confidence": 0.826,
+    "id": "o357"
+   },
+   {
+    "text": "doctor Jarien",
+    "start": 214.0,
+    "end": 214.0,
+    "confidence": 0.663,
+    "id": "o358"
+   },
+   {
+    "text": "anditleavesyoU confused",
+    "start": 216.0,
+    "end": 216.0,
+    "confidence": 0.615,
+    "id": "o359"
+   },
+   {
+    "text": "and fearful",
+    "start": 216.0,
+    "end": 216.0,
+    "confidence": 0.848,
+    "id": "o360"
+   },
+   {
+    "text": "TikTok",
+    "start": 216.0,
+    "end": 216.0,
+    "confidence": 0.956,
+    "id": "o361"
+   },
+   {
+    "text": "doctor darien",
+    "start": 216.0,
+    "end": 216.0,
+    "confidence": 0.7,
+    "id": "o362"
+   },
+   {
+    "text": "andmorelikelytochoosea",
+    "start": 218.0,
+    "end": 218.0,
+    "confidence": 0.998,
+    "id": "o363"
+   },
+   {
+    "text": "decision that isahigherrisk",
+    "start": 218.0,
+    "end": 218.0,
+    "confidence": 0.772,
+    "id": "o364"
+   },
+   {
+    "text": "@ption foryou:",
+    "start": 218.0,
+    "end": 218.0,
+    "confidence": 0.551,
+    "id": "o365"
+   },
+   {
+    "text": "doctor Jarien",
+    "start": 218.0,
+    "end": 218.0,
+    "confidence": 0.811,
+    "id": "o366"
+   },
+   {
+    "text": "andmorelikelytochoosea",
+    "start": 220.0,
+    "end": 220.0,
+    "confidence": 0.839,
+    "id": "o367"
+   },
+   {
+    "text": "decision that isahigherrisk",
+    "start": 220.0,
+    "end": 220.0,
+    "confidence": 0.784,
+    "id": "o368"
+   },
+   {
+    "text": "@ption foryou:",
+    "start": 220.0,
+    "end": 220.0,
+    "confidence": 0.543,
+    "id": "o369"
+   },
+   {
+    "text": "doctor dariem",
+    "start": 220.0,
+    "end": 220.0,
+    "confidence": 0.537,
+    "id": "o370"
+   },
+   {
+    "text": "Sowhenyouremaking",
+    "start": 222.0,
+    "end": 222.0,
+    "confidence": 0.821,
+    "id": "o371"
+   },
+   {
+    "text": "fmportant decisionsabout",
+    "start": 222.0,
+    "end": 222.0,
+    "confidence": 0.509,
+    "id": "o372"
+   },
+   {
+    "text": "yourhealth;",
+    "start": 222.0,
+    "end": 222.0,
+    "confidence": 0.968,
+    "id": "o373"
+   },
+   {
+    "text": "doctondarien",
+    "start": 222.0,
+    "end": 222.0,
+    "confidence": 0.65,
+    "id": "o374"
+   },
+   {
+    "text": "Qualified professional",
+    "start": 224.0,
+    "end": 224.0,
+    "confidence": 0.941,
+    "id": "o375"
+   },
+   {
+    "text": "TikTok",
+    "start": 224.0,
+    "end": 224.0,
+    "confidence": 0.918,
+    "id": "o376"
+   },
+   {
+    "text": "who has verified clinical",
+    "start": 226.0,
+    "end": 226.0,
+    "confidence": 0.83,
+    "id": "o377"
+   },
+   {
+    "text": "experience",
+    "start": 226.0,
+    "end": 226.0,
+    "confidence": 0.961,
+    "id": "o378"
+   },
+   {
+    "text": "TikTok",
+    "start": 226.0,
+    "end": 226.0,
+    "confidence": 0.955,
+    "id": "o379"
+   },
+   {
+    "text": "that can backup their",
+    "start": 228.0,
+    "end": 228.0,
+    "confidence": 0.727,
+    "id": "o380"
+   },
+   {
+    "text": "statements with data:",
+    "start": 228.0,
+    "end": 228.0,
+    "confidence": 0.934,
+    "id": "o381"
+   },
+   {
+    "text": "TikTok",
+    "start": 228.0,
+    "end": 228.0,
+    "confidence": 0.856,
+    "id": "o382"
+   },
+   {
+    "text": "Becausewthout data,",
+    "start": 230.0,
+    "end": 230.0,
+    "confidence": 0.636,
+    "id": "o383"
+   },
+   {
+    "text": "thevrejustgivingyou",
+    "start": 230.0,
+    "end": 230.0,
+    "confidence": 0.744,
+    "id": "o384"
+   },
+   {
+    "text": "random @pinionsthat yoU",
+    "start": 230.0,
+    "end": 230.0,
+    "confidence": 0.675,
+    "id": "o385"
+   },
+   {
+    "text": "don\"tneed:",
+    "start": 230.0,
+    "end": 230.0,
+    "confidence": 0.909,
+    "id": "o386"
+   },
+   {
+    "text": "TikTok",
+    "start": 230.0,
+    "end": 230.0,
+    "confidence": 0.886,
+    "id": "o387"
+   },
+   {
+    "text": "doctor dariem",
+    "start": 230.0,
+    "end": 230.0,
+    "confidence": 0.62,
+    "id": "o388"
+   },
+   {
+    "text": "Becausewthout data,",
+    "start": 232.0,
+    "end": 232.0,
+    "confidence": 0.605,
+    "id": "o389"
+   },
+   {
+    "text": "thevrejustgivingyou",
+    "start": 232.0,
+    "end": 232.0,
+    "confidence": 0.826,
+    "id": "o390"
+   },
+   {
+    "text": "random @pinions that yoU",
+    "start": 232.0,
+    "end": 232.0,
+    "confidence": 0.757,
+    "id": "o391"
+   },
+   {
+    "text": "don\"tneed:",
+    "start": 232.0,
+    "end": 232.0,
+    "confidence": 0.878,
+    "id": "o392"
+   },
+   {
+    "text": "TikTok",
+    "start": 232.0,
+    "end": 232.0,
+    "confidence": 0.971,
+    "id": "o393"
+   },
+   {
+    "text": "C",
+    "start": 234.0,
+    "end": 234.0,
+    "confidence": 0.629,
+    "id": "o394"
+   },
+   {
+    "text": "Alight; talksoon:",
+    "start": 234.0,
+    "end": 234.0,
+    "confidence": 0.518,
+    "id": "o395"
+   },
+   {
+    "text": "TikTok",
+    "start": 234.0,
+    "end": 234.0,
+    "confidence": 0.989,
+    "id": "o396"
+   },
+   {
+    "text": "doctor darien",
+    "start": 234.0,
+    "end": 234.0,
+    "confidence": 0.564,
+    "id": "o397"
+   },
+   {
+    "text": "TikTok",
+    "start": 236.0,
+    "end": 236.0,
+    "confidence": 0.999,
+    "id": "o398"
+   },
+   {
+    "text": "doctor darien",
+    "start": 236.0,
+    "end": 236.0,
+    "confidence": 0.885,
+    "id": "o399"
+   },
+   {
+    "text": "TikTok",
+    "start": 238.0,
+    "end": 238.0,
+    "confidence": 0.999,
+    "id": "o400"
+   },
+   {
+    "text": "doctor darien",
+    "start": 238.0,
+    "end": 238.0,
+    "confidence": 0.885,
+    "id": "o401"
+   }
+  ]
+ }
+}

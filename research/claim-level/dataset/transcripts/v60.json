@@ -1,0 +1,1140 @@
+{
+ "video_id": "v60",
+ "filename": "v12044gd0000csfrsd7og65lifbq7fog.mp4",
+ "relative_path": "Dataset-Sept-2026/Joshua Ryan Fajardo/MISINFO/v12044gd0000csfrsd7og65lifbq7fog.mp4",
+ "collector": "Joshua Ryan Fajardo",
+ "collector_label": "MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:42:33",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.998,
+  "duration_seconds": 54.89,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.05,
+    "end": 6.13,
+    "text": "This is why you don't ever want to touch the receipts on thermal paper"
+   },
+   {
+    "id": "t2",
+    "start": 11.77,
+    "end": 15.17,
+    "text": "These thermal paper receipts contain BPA and BPS"
+   },
+   {
+    "id": "t3",
+    "start": 15.53,
+    "end": 20.25,
+    "text": "These are endocrine disrupting chemicals that can actually be absorbed through your skin"
+   },
+   {
+    "id": "t4",
+    "start": 20.29,
+    "end": 23.73,
+    "text": "So just touching one of the grocery store every once in a while isn't the end of the world"
+   },
+   {
+    "id": "t5",
+    "start": 23.73,
+    "end": 28.37,
+    "text": "But I would like to avoid as many endocrine disruptors in my life. Thank you as I can"
+   },
+   {
+    "id": "t6",
+    "start": 28.37,
+    "end": 35.73,
+    "text": "So I either don't get the receipt or I'm just going to use my handy-dandy wool shirt here to put the receipt in the trash"
+   },
+   {
+    "id": "t7",
+    "start": 36.33,
+    "end": 37.77,
+    "text": "And not touch it"
+   },
+   {
+    "id": "t8",
+    "start": 37.77,
+    "end": 40.45,
+    "text": "So if you are touching a lot of receipts or in your daily life"
+   },
+   {
+    "id": "t9",
+    "start": 40.57,
+    "end": 44.49,
+    "text": "Don't touch the thermal paper receipts and you will decrease your exposure"
+   },
+   {
+    "id": "t10",
+    "start": 45.05,
+    "end": 50.85,
+    "text": "VPA and VPS endocrine deceptive chemicals that can be messing up your hormones. Don't touch them"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 28,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "FALL FRUNTS & NUTS",
+    "confidence": 0.541
+   },
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.977
+   },
+   {
+    "time": 0.0,
+    "text": "paulsaladinomdz",
+    "confidence": 0.864
+   },
+   {
+    "time": 2.0,
+    "text": "TO",
+    "confidence": 0.516
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.745
+   },
+   {
+    "time": 4.0,
+    "text": "RECEIPTS",
+    "confidence": 0.96
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.857
+   },
+   {
+    "time": 4.0,
+    "text": "paulsaladinomd?",
+    "confidence": 0.688
+   },
+   {
+    "time": 6.0,
+    "text": "PAPER",
+    "confidence": 0.996
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 0.944
+   },
+   {
+    "time": 6.0,
+    "text": "paulsaladinomd?",
+    "confidence": 0.739
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "'NOTES",
+    "confidence": 0.543
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "paulsaladinomd?",
+    "confidence": 0.887
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 0.928
+   },
+   {
+    "time": 14.0,
+    "text": "BPA",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "Harmful BPA Replacements",
+    "confidence": 0.746
+   },
+   {
+    "time": 14.0,
+    "text": "Contaminate Store Receipts",
+    "confidence": 0.809
+   },
+   {
+    "time": 14.0,
+    "text": "DECEMBER",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "2020",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "KTok",
+    "confidence": 0.659
+   },
+   {
+    "time": 16.0,
+    "text": "THESE",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.0,
+    "text": "Harmful BPA Replacements",
+    "confidence": 0.881
+   },
+   {
+    "time": 16.0,
+    "text": "Contaminate Store Receipts",
+    "confidence": 0.798
+   },
+   {
+    "time": 16.0,
+    "text": "rapidly growing body of scientific evidence",
+    "confidence": 0.541
+   },
+   {
+    "time": 16.0,
+    "text": "strongly indicates that BPS disrupts hormones and",
+    "confidence": 0.919
+   },
+   {
+    "time": 16.0,
+    "text": "harms reproductive, developmental, metabolic and",
+    "confidence": 0.867
+   },
+   {
+    "time": 16.0,
+    "text": "cardiovascular health; just like its predecessor; BPA",
+    "confidence": 0.708
+   },
+   {
+    "time": 16.0,
+    "text": "kTok",
+    "confidence": 0.587
+   },
+   {
+    "time": 16.0,
+    "text": "paulsal?",
+    "confidence": 0.537
+   },
+   {
+    "time": 18.0,
+    "text": "SPRLU",
+    "confidence": 0.542
+   },
+   {
+    "time": 18.0,
+    "text": "THAT CAN",
+    "confidence": 0.981
+   },
+   {
+    "time": 18.0,
+    "text": "Harmful BPA Replacements",
+    "confidence": 0.904
+   },
+   {
+    "time": 18.0,
+    "text": "Contaminate Store Receipts",
+    "confidence": 0.82
+   },
+   {
+    "time": 18.0,
+    "text": "rapidly growing body of scientific evidence",
+    "confidence": 0.662
+   },
+   {
+    "time": 18.0,
+    "text": "strongly indicates that BPS disrupts hormones and",
+    "confidence": 0.777
+   },
+   {
+    "time": 18.0,
+    "text": "harms reproductive, developmental, metabolic and",
+    "confidence": 0.827
+   },
+   {
+    "time": 18.0,
+    "text": "cardiovascular health; just like its predecessor; BPA",
+    "confidence": 0.624
+   },
+   {
+    "time": 18.0,
+    "text": "kTok",
+    "confidence": 0.573
+   },
+   {
+    "time": 18.0,
+    "text": "paulsall",
+    "confidence": 0.54
+   },
+   {
+    "time": 20.0,
+    "text": "SKIN",
+    "confidence": 0.706
+   },
+   {
+    "time": 20.0,
+    "text": "Tok",
+    "confidence": 0.715
+   },
+   {
+    "time": 20.0,
+    "text": "mdz",
+    "confidence": 0.559
+   },
+   {
+    "time": 22.0,
+    "text": "AT A",
+    "confidence": 0.731
+   },
+   {
+    "time": 22.0,
+    "text": "TTok",
+    "confidence": 0.926
+   },
+   {
+    "time": 24.0,
+    "text": "BUT",
+    "confidence": 0.994
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 26.0,
+    "text": "t",
+    "confidence": 0.778
+   },
+   {
+    "time": 26.0,
+    "text": "MANY",
+    "confidence": 0.996
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "AS",
+    "confidence": 0.998
+   },
+   {
+    "time": 28.0,
+    "text": "ikTok",
+    "confidence": 0.995
+   },
+   {
+    "time": 28.0,
+    "text": "paulsaladinomd?",
+    "confidence": 0.585
+   },
+   {
+    "time": 30.0,
+    "text": "GET THE",
+    "confidence": 0.955
+   },
+   {
+    "time": 30.0,
+    "text": "Tik Tok",
+    "confidence": 0.682
+   },
+   {
+    "time": 32.0,
+    "text": "MY",
+    "confidence": 0.998
+   },
+   {
+    "time": 34.0,
+    "text": "PUT",
+    "confidence": 0.943
+   },
+   {
+    "time": 34.0,
+    "text": "kkTok",
+    "confidence": 0.916
+   },
+   {
+    "time": 36.0,
+    "text": "AND",
+    "confidence": 0.982
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 0.693
+   },
+   {
+    "time": 36.0,
+    "text": "paulsaladinomdz",
+    "confidence": 0.678
+   },
+   {
+    "time": 38.0,
+    "text": "SO",
+    "confidence": 0.891
+   },
+   {
+    "time": 38.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "palulsaladinomdz",
+    "confidence": 0.529
+   },
+   {
+    "time": 40.0,
+    "text": "OR IN YOUR",
+    "confidence": 0.993
+   },
+   {
+    "time": 40.0,
+    "text": "TikTok",
+    "confidence": 0.623
+   },
+   {
+    "time": 40.0,
+    "text": "paulsaladimomdz",
+    "confidence": 0.639
+   },
+   {
+    "time": 42.0,
+    "text": "THE",
+    "confidence": 0.998
+   },
+   {
+    "time": 42.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.0,
+    "text": "paulsaladinomdz",
+    "confidence": 0.807
+   },
+   {
+    "time": 44.0,
+    "text": "DECREASE",
+    "confidence": 0.999
+   },
+   {
+    "time": 44.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "paulsaladinomd?",
+    "confidence": 0.72
+   },
+   {
+    "time": 46.0,
+    "text": "AND",
+    "confidence": 0.953
+   },
+   {
+    "time": 46.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "paulsaladinomd?",
+    "confidence": 0.65
+   },
+   {
+    "time": 48.0,
+    "text": "SPROUT$",
+    "confidence": 0.502
+   },
+   {
+    "time": 48.0,
+    "text": "CHEMICALS",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "HORMONES",
+    "confidence": 0.999
+   },
+   {
+    "time": 50.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 50.0,
+    "text": "paulsaladinomdz",
+    "confidence": 0.847
+   },
+   {
+    "time": 52.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "paulsaladinomd2",
+    "confidence": 0.858
+   },
+   {
+    "time": 54.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "paulsaladinomd2",
+    "confidence": 0.857
+   }
+  ],
+  "captions": [
+   {
+    "text": "FALL FRUNTS & NUTS",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.541,
+    "id": "o1"
+   },
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.977,
+    "id": "o2"
+   },
+   {
+    "text": "paulsaladinomdz",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.864,
+    "id": "o3"
+   },
+   {
+    "text": "TO",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.516,
+    "id": "o4"
+   },
+   {
+    "text": "TikTok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.745,
+    "id": "o5"
+   },
+   {
+    "text": "RECEIPTS",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.96,
+    "id": "o6"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.857,
+    "id": "o7"
+   },
+   {
+    "text": "paulsaladinomd?",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.688,
+    "id": "o8"
+   },
+   {
+    "text": "PAPER",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.996,
+    "id": "o9"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.944,
+    "id": "o10"
+   },
+   {
+    "text": "paulsaladinomd?",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.739,
+    "id": "o11"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.999,
+    "id": "o12"
+   },
+   {
+    "text": "'NOTES",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.543,
+    "id": "o13"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o14"
+   },
+   {
+    "text": "paulsaladinomd?",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.887,
+    "id": "o15"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.928,
+    "id": "o16"
+   },
+   {
+    "text": "BPA",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o17"
+   },
+   {
+    "text": "Harmful BPA Replacements",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.746,
+    "id": "o18"
+   },
+   {
+    "text": "Contaminate Store Receipts",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.809,
+    "id": "o19"
+   },
+   {
+    "text": "DECEMBER",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o20"
+   },
+   {
+    "text": "2020",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o21"
+   },
+   {
+    "text": "KTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.659,
+    "id": "o22"
+   },
+   {
+    "text": "THESE",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.999,
+    "id": "o23"
+   },
+   {
+    "text": "Harmful BPA Replacements",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.881,
+    "id": "o24"
+   },
+   {
+    "text": "Contaminate Store Receipts",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.798,
+    "id": "o25"
+   },
+   {
+    "text": "rapidly growing body of scientific evidence",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.541,
+    "id": "o26"
+   },
+   {
+    "text": "strongly indicates that BPS disrupts hormones and",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.919,
+    "id": "o27"
+   },
+   {
+    "text": "harms reproductive, developmental, metabolic and",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.867,
+    "id": "o28"
+   },
+   {
+    "text": "cardiovascular health; just like its predecessor; BPA",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.708,
+    "id": "o29"
+   },
+   {
+    "text": "kTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.587,
+    "id": "o30"
+   },
+   {
+    "text": "paulsal?",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.537,
+    "id": "o31"
+   },
+   {
+    "text": "SPRLU",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.542,
+    "id": "o32"
+   },
+   {
+    "text": "THAT CAN",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.981,
+    "id": "o33"
+   },
+   {
+    "text": "Harmful BPA Replacements",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.904,
+    "id": "o34"
+   },
+   {
+    "text": "Contaminate Store Receipts",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.82,
+    "id": "o35"
+   },
+   {
+    "text": "rapidly growing body of scientific evidence",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.662,
+    "id": "o36"
+   },
+   {
+    "text": "strongly indicates that BPS disrupts hormones and",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.777,
+    "id": "o37"
+   },
+   {
+    "text": "harms reproductive, developmental, metabolic and",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.827,
+    "id": "o38"
+   },
+   {
+    "text": "cardiovascular health; just like its predecessor; BPA",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.624,
+    "id": "o39"
+   },
+   {
+    "text": "kTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.573,
+    "id": "o40"
+   },
+   {
+    "text": "paulsall",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.54,
+    "id": "o41"
+   },
+   {
+    "text": "SKIN",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.706,
+    "id": "o42"
+   },
+   {
+    "text": "Tok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.715,
+    "id": "o43"
+   },
+   {
+    "text": "mdz",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.559,
+    "id": "o44"
+   },
+   {
+    "text": "AT A",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.731,
+    "id": "o45"
+   },
+   {
+    "text": "TTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.926,
+    "id": "o46"
+   },
+   {
+    "text": "BUT",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.994,
+    "id": "o47"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.999,
+    "id": "o48"
+   },
+   {
+    "text": "t",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.778,
+    "id": "o49"
+   },
+   {
+    "text": "MANY",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.996,
+    "id": "o50"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o51"
+   },
+   {
+    "text": "AS",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.998,
+    "id": "o52"
+   },
+   {
+    "text": "ikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.995,
+    "id": "o53"
+   },
+   {
+    "text": "paulsaladinomd?",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.585,
+    "id": "o54"
+   },
+   {
+    "text": "GET THE",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.955,
+    "id": "o55"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.682,
+    "id": "o56"
+   },
+   {
+    "text": "MY",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.998,
+    "id": "o57"
+   },
+   {
+    "text": "PUT",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.943,
+    "id": "o58"
+   },
+   {
+    "text": "kkTok",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.916,
+    "id": "o59"
+   },
+   {
+    "text": "AND",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.982,
+    "id": "o60"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.693,
+    "id": "o61"
+   },
+   {
+    "text": "paulsaladinomdz",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.678,
+    "id": "o62"
+   },
+   {
+    "text": "SO",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.891,
+    "id": "o63"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o64"
+   },
+   {
+    "text": "palulsaladinomdz",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.529,
+    "id": "o65"
+   },
+   {
+    "text": "OR IN YOUR",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.993,
+    "id": "o66"
+   },
+   {
+    "text": "TikTok",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.623,
+    "id": "o67"
+   },
+   {
+    "text": "paulsaladimomdz",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.639,
+    "id": "o68"
+   },
+   {
+    "text": "THE",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.998,
+    "id": "o69"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.999,
+    "id": "o70"
+   },
+   {
+    "text": "paulsaladinomdz",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.807,
+    "id": "o71"
+   },
+   {
+    "text": "DECREASE",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.999,
+    "id": "o72"
+   },
+   {
+    "text": "TikTok",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o73"
+   },
+   {
+    "text": "paulsaladinomd?",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.72,
+    "id": "o74"
+   },
+   {
+    "text": "AND",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.953,
+    "id": "o75"
+   },
+   {
+    "text": "TikTok",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o76"
+   },
+   {
+    "text": "paulsaladinomd?",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.65,
+    "id": "o77"
+   },
+   {
+    "text": "SPROUT$",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.502,
+    "id": "o78"
+   },
+   {
+    "text": "CHEMICALS",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o79"
+   },
+   {
+    "text": "TikTok",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o80"
+   },
+   {
+    "text": "HORMONES",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.999,
+    "id": "o81"
+   },
+   {
+    "text": "TikTok",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.999,
+    "id": "o82"
+   },
+   {
+    "text": "paulsaladinomdz",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.847,
+    "id": "o83"
+   },
+   {
+    "text": "TikTok",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o84"
+   },
+   {
+    "text": "paulsaladinomd2",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.858,
+    "id": "o85"
+   },
+   {
+    "text": "TikTok",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o86"
+   },
+   {
+    "text": "paulsaladinomd2",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.857,
+    "id": "o87"
+   }
+  ]
+ }
+}

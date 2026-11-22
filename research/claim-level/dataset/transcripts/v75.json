@@ -1,0 +1,3574 @@
+{
+ "video_id": "v75",
+ "filename": "v15044gf0000d89mfavog65les2vuh7g.mp4",
+ "relative_path": "Dataset-Sept-2026/Joshua Ryan Fajardo/MISINFO/v15044gf0000d89mfavog65les2vuh7g.mp4",
+ "collector": "Joshua Ryan Fajardo",
+ "collector_label": "MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:42:34",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 71.4,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 4.48,
+    "text": "before you put sunscreen on you or your kids, watch this. There's a new study out that says"
+   },
+   {
+    "id": "t2",
+    "start": 4.48,
+    "end": 10.32,
+    "text": "after just one day, chemicals and sunscreens enter your bloodstream. By Dr. Margaret Husami"
+   },
+   {
+    "id": "t3",
+    "start": 10.32,
+    "end": 15.44,
+    "text": "of Derma Health Skid and Laser recommends using a sunscreen with the following ingredients."
+   },
+   {
+    "id": "t4",
+    "start": 15.44,
+    "end": 21.04,
+    "text": "They're titanium dioxide and zinc oxide. And this is exactly why I stopped using toxic"
+   },
+   {
+    "id": "t5",
+    "start": 21.04,
+    "end": 25.52,
+    "text": "sunscreens from the grocery store and I started ordering this one off of Amazon because it's"
+   },
+   {
+    "id": "t6",
+    "start": 25.52,
+    "end": 31.36,
+    "text": "only five ingredients. This is a beef tallow based sunscreen so it is extremely moisturizing for your"
+   },
+   {
+    "id": "t7",
+    "start": 31.36,
+    "end": 37.52,
+    "text": "skin but also the non-nanosink oxide makes the sun reflect off of your skin opposed to absorbing."
+   },
+   {
+    "id": "t8",
+    "start": 37.52,
+    "end": 40.96,
+    "text": "I know a lot of people nowadays do not want to use sunscreen at all but personally"
+   },
+   {
+    "id": "t9",
+    "start": 40.96,
+    "end": 46.08,
+    "text": "with people in my family who have had skin cancer I do think it's important to protect yourself"
+   },
+   {
+    "id": "t10",
+    "start": 46.08,
+    "end": 50.48,
+    "text": "but at the end of the day putting a toxic sunscreen from the grocery store that's going to absorb in"
+   },
+   {
+    "id": "t11",
+    "start": 50.48,
+    "end": 55.04,
+    "text": "your skin after just one use and be in your bloodstream is not going to help your body"
+   },
+   {
+    "id": "t12",
+    "start": 55.04,
+    "end": 59.44,
+    "text": "which is exactly why I switched to a cleaner alternative that literally you could eat this"
+   },
+   {
+    "id": "t13",
+    "start": 59.44,
+    "end": 63.76,
+    "text": "sunscreen and you'd be perfectly fine. And everyone obviously is entitled to their opinion,"
+   },
+   {
+    "id": "t14",
+    "start": 63.76,
+    "end": 66.96,
+    "text": "but I choose to just use cleaner products for myself and my kid."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 36,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Hot take: Sunscreen is toxic",
+    "confidence": 0.939
+   },
+   {
+    "time": 0.0,
+    "text": "@maldicnontoxic",
+    "confidence": 0.746
+   },
+   {
+    "time": 2.0,
+    "text": "Hot take: Sunscreen is toxic",
+    "confidence": 0.933
+   },
+   {
+    "time": 2.0,
+    "text": "Tik Tok",
+    "confidence": 0.66
+   },
+   {
+    "time": 2.0,
+    "text": "Beforevou",
+    "confidence": 0.673
+   },
+   {
+    "time": 2.0,
+    "text": "pute",
+    "confidence": 0.967
+   },
+   {
+    "time": 2.0,
+    "text": "sunscreen",
+    "confidence": 0.991
+   },
+   {
+    "time": 2.0,
+    "text": "youoryourkids;",
+    "confidence": 0.793
+   },
+   {
+    "time": 4.0,
+    "text": "ABC1S Arizona",
+    "confidence": 0.563
+   },
+   {
+    "time": 4.0,
+    "text": "Yoube",
+    "confidence": 0.786
+   },
+   {
+    "time": 4.0,
+    "text": "2019",
+    "confidence": 0.865
+   },
+   {
+    "time": 4.0,
+    "text": "Hot take: Sunscreen is toxic",
+    "confidence": 0.932
+   },
+   {
+    "time": 4.0,
+    "text": "Visit",
+    "confidence": 0.724
+   },
+   {
+    "time": 4.0,
+    "text": "115",
+    "confidence": 0.77
+   },
+   {
+    "time": 4.0,
+    "text": "abc",
+    "confidence": 0.779
+   },
+   {
+    "time": 4.0,
+    "text": "SUNSCREEN: MORE HARN",
+    "confidence": 0.527
+   },
+   {
+    "time": 4.0,
+    "text": "THAN HELPFUL?",
+    "confidence": 0.971
+   },
+   {
+    "time": 4.0,
+    "text": "EWS",
+    "confidence": 0.913
+   },
+   {
+    "time": 4.0,
+    "text": "ARIzOna",
+    "confidence": 0.515
+   },
+   {
+    "time": 4.0,
+    "text": "6.39",
+    "confidence": 0.771
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.775
+   },
+   {
+    "time": 4.0,
+    "text": "@ madi nontoxic",
+    "confidence": 0.748
+   },
+   {
+    "time": 4.0,
+    "text": "Related proc",
+    "confidence": 0.92
+   },
+   {
+    "time": 4.0,
+    "text": "eral",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Sunblock",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "watch this. There\"sanew",
+    "confidence": 0.562
+   },
+   {
+    "time": 4.0,
+    "text": "BARE",
+    "confidence": 0.962
+   },
+   {
+    "time": 4.0,
+    "text": "studout that saysafter",
+    "confidence": 0.762
+   },
+   {
+    "time": 4.0,
+    "text": "just one day;",
+    "confidence": 0.6
+   },
+   {
+    "time": 4.0,
+    "text": "Sunscreen Spray",
+    "confidence": 0.969
+   },
+   {
+    "time": 4.0,
+    "text": "(Sk+)",
+    "confidence": 0.958
+   },
+   {
+    "time": 4.0,
+    "text": "4.4",
+    "confidence": 0.987
+   },
+   {
+    "time": 6.0,
+    "text": "ABC15 Arizona",
+    "confidence": 0.596
+   },
+   {
+    "time": 6.0,
+    "text": "2019",
+    "confidence": 0.84
+   },
+   {
+    "time": 6.0,
+    "text": "Hot take: Sunscreen is toxic",
+    "confidence": 0.932
+   },
+   {
+    "time": 6.0,
+    "text": "Visit",
+    "confidence": 0.683
+   },
+   {
+    "time": 6.0,
+    "text": "115",
+    "confidence": 0.879
+   },
+   {
+    "time": 6.0,
+    "text": "abc",
+    "confidence": 0.905
+   },
+   {
+    "time": 6.0,
+    "text": "SUNSCREEN: MORE",
+    "confidence": 0.735
+   },
+   {
+    "time": 6.0,
+    "text": "THAN HELPFUL?",
+    "confidence": 0.915
+   },
+   {
+    "time": 6.0,
+    "text": "NEWS",
+    "confidence": 0.981
+   },
+   {
+    "time": 6.0,
+    "text": "ARIzOna",
+    "confidence": 0.534
+   },
+   {
+    "time": 6.0,
+    "text": "6.39",
+    "confidence": 0.739
+   },
+   {
+    "time": 6.0,
+    "text": "788",
+    "confidence": 0.572
+   },
+   {
+    "time": 6.0,
+    "text": "Related prod",
+    "confidence": 0.86
+   },
+   {
+    "time": 6.0,
+    "text": "eral",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.0,
+    "text": "Sunblock",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "watch this_ There\"sanew",
+    "confidence": 0.701
+   },
+   {
+    "time": 6.0,
+    "text": "BARE",
+    "confidence": 0.957
+   },
+   {
+    "time": 6.0,
+    "text": "Studiout that saysafter",
+    "confidence": 0.657
+   },
+   {
+    "time": 6.0,
+    "text": "justone day;",
+    "confidence": 0.863
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 0.993
+   },
+   {
+    "time": 6.0,
+    "text": "madiamontoxic",
+    "confidence": 0.523
+   },
+   {
+    "time": 6.0,
+    "text": "Sunscreen Spray",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "(Sk+)",
+    "confidence": 0.936
+   },
+   {
+    "time": 6.0,
+    "text": "4.4",
+    "confidence": 0.981
+   },
+   {
+    "time": 8.0,
+    "text": "ABC15 Arizona",
+    "confidence": 0.599
+   },
+   {
+    "time": 8.0,
+    "text": "2019",
+    "confidence": 0.834
+   },
+   {
+    "time": 8.0,
+    "text": "Hot take: Sunscreen is toxic",
+    "confidence": 0.931
+   },
+   {
+    "time": 8.0,
+    "text": "Visit",
+    "confidence": 0.669
+   },
+   {
+    "time": 8.0,
+    "text": "115",
+    "confidence": 0.711
+   },
+   {
+    "time": 8.0,
+    "text": "HeALIH",
+    "confidence": 0.518
+   },
+   {
+    "time": 8.0,
+    "text": "SUNSCRF",
+    "confidence": 0.744
+   },
+   {
+    "time": 8.0,
+    "text": "LPFUL?",
+    "confidence": 0.998
+   },
+   {
+    "time": 8.0,
+    "text": "NEWS",
+    "confidence": 0.982
+   },
+   {
+    "time": 8.0,
+    "text": "6.39",
+    "confidence": 0.752
+   },
+   {
+    "time": 8.0,
+    "text": "788",
+    "confidence": 0.591
+   },
+   {
+    "time": 8.0,
+    "text": "Related pr",
+    "confidence": 0.778
+   },
+   {
+    "time": 8.0,
+    "text": "eral",
+    "confidence": 0.688
+   },
+   {
+    "time": 8.0,
+    "text": "50 Sunblock",
+    "confidence": 0.984
+   },
+   {
+    "time": 8.0,
+    "text": "BARE",
+    "confidence": 0.988
+   },
+   {
+    "time": 8.0,
+    "text": "chemicals and sunscreens",
+    "confidence": 0.876
+   },
+   {
+    "time": 8.0,
+    "text": "enteryour bloodstream:",
+    "confidence": 0.824
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "madi nontoxic",
+    "confidence": 0.731
+   },
+   {
+    "time": 8.0,
+    "text": "Sunscreen Spray",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "(Sk+)",
+    "confidence": 0.936
+   },
+   {
+    "time": 8.0,
+    "text": "4.4",
+    "confidence": 0.981
+   },
+   {
+    "time": 10.0,
+    "text": "ABCIS Arizona",
+    "confidence": 0.669
+   },
+   {
+    "time": 10.0,
+    "text": "You Tube",
+    "confidence": 0.651
+   },
+   {
+    "time": 10.0,
+    "text": "8,2019",
+    "confidence": 0.972
+   },
+   {
+    "time": 10.0,
+    "text": "Hot take: Sunscreen is toxic",
+    "confidence": 0.947
+   },
+   {
+    "time": 10.0,
+    "text": "Is",
+    "confidence": 0.997
+   },
+   {
+    "time": 10.0,
+    "text": "115",
+    "confidence": 0.977
+   },
+   {
+    "time": 10.0,
+    "text": "HEALTH",
+    "confidence": 0.707
+   },
+   {
+    "time": 10.0,
+    "text": "IANHELPFUL?",
+    "confidence": 0.802
+   },
+   {
+    "time": 10.0,
+    "text": "SUNSCREEN",
+    "confidence": 0.826
+   },
+   {
+    "time": 10.0,
+    "text": "NEWS",
+    "confidence": 0.993
+   },
+   {
+    "time": 10.0,
+    "text": "Related",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "neral",
+    "confidence": 0.965
+   },
+   {
+    "time": 10.0,
+    "text": "Sunblock",
+    "confidence": 0.603
+   },
+   {
+    "time": 10.0,
+    "text": "BARE",
+    "confidence": 0.912
+   },
+   {
+    "time": 10.0,
+    "text": "'doctor, Margaret",
+    "confidence": 0.658
+   },
+   {
+    "time": 10.0,
+    "text": "Husami of Derma Health",
+    "confidence": 0.998
+   },
+   {
+    "time": 10.0,
+    "text": "Skin and laser",
+    "confidence": 0.792
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 0.944
+   },
+   {
+    "time": 10.0,
+    "text": "madi montoxic",
+    "confidence": 0.695
+   },
+   {
+    "time": 10.0,
+    "text": "$9+",
+    "confidence": 0.785
+   },
+   {
+    "time": 10.0,
+    "text": "50",
+    "confidence": 0.711
+   },
+   {
+    "time": 12.0,
+    "text": "ABCIS Arizona",
+    "confidence": 0.665
+   },
+   {
+    "time": 12.0,
+    "text": "You Tube",
+    "confidence": 0.641
+   },
+   {
+    "time": 12.0,
+    "text": "8,2019",
+    "confidence": 0.97
+   },
+   {
+    "time": 12.0,
+    "text": "Hot take: Sunscreen is toxic",
+    "confidence": 0.946
+   },
+   {
+    "time": 12.0,
+    "text": "Is",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.0,
+    "text": "15",
+    "confidence": 0.998
+   },
+   {
+    "time": 12.0,
+    "text": "HEALTH",
+    "confidence": 0.723
+   },
+   {
+    "time": 12.0,
+    "text": "SUNSCREEN: MORF",
+    "confidence": 0.925
+   },
+   {
+    "time": 12.0,
+    "text": "FUL THAN HELPFUL?",
+    "confidence": 0.828
+   },
+   {
+    "time": 12.0,
+    "text": "NEWS",
+    "confidence": 0.993
+   },
+   {
+    "time": 12.0,
+    "text": "6.40",
+    "confidence": 0.702
+   },
+   {
+    "time": 12.0,
+    "text": "78\"",
+    "confidence": 0.98
+   },
+   {
+    "time": 12.0,
+    "text": "Related",
+    "confidence": 0.99
+   },
+   {
+    "time": 12.0,
+    "text": "neral",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "Sunblock",
+    "confidence": 0.602
+   },
+   {
+    "time": 12.0,
+    "text": "BARE",
+    "confidence": 0.93
+   },
+   {
+    "time": 12.0,
+    "text": "using",
+    "confidence": 0.579
+   },
+   {
+    "time": 12.0,
+    "text": "recommends",
+    "confidence": 0.988
+   },
+   {
+    "time": 12.0,
+    "text": "sunscreen with the",
+    "confidence": 0.994
+   },
+   {
+    "time": 12.0,
+    "text": "following ingredients.",
+    "confidence": 0.825
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "madi montoxic",
+    "confidence": 0.878
+   },
+   {
+    "time": 12.0,
+    "text": "$9+",
+    "confidence": 0.785
+   },
+   {
+    "time": 12.0,
+    "text": "50",
+    "confidence": 0.613
+   },
+   {
+    "time": 14.0,
+    "text": "ABCIS Arizona",
+    "confidence": 0.663
+   },
+   {
+    "time": 14.0,
+    "text": "May",
+    "confidence": 0.855
+   },
+   {
+    "time": 14.0,
+    "text": "You Tube",
+    "confidence": 0.641
+   },
+   {
+    "time": 14.0,
+    "text": "8,2019",
+    "confidence": 0.97
+   },
+   {
+    "time": 14.0,
+    "text": "Hot take: Sunscreen is toxic",
+    "confidence": 0.946
+   },
+   {
+    "time": 14.0,
+    "text": "Is",
+    "confidence": 0.997
+   },
+   {
+    "time": 14.0,
+    "text": "RECOMMENDED",
+    "confidence": 0.996
+   },
+   {
+    "time": 14.0,
+    "text": "SKIN",
+    "confidence": 0.864
+   },
+   {
+    "time": 14.0,
+    "text": "FOUNDATION",
+    "confidence": 0.927
+   },
+   {
+    "time": 14.0,
+    "text": "3ACTIVE",
+    "confidence": 0.896
+   },
+   {
+    "time": 14.0,
+    "text": "15",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.0,
+    "text": "obc",
+    "confidence": 0.541
+   },
+   {
+    "time": 14.0,
+    "text": "HEALTH",
+    "confidence": 0.697
+   },
+   {
+    "time": 14.0,
+    "text": "HAN HELPFUL?",
+    "confidence": 0.988
+   },
+   {
+    "time": 14.0,
+    "text": "SUNSCREE",
+    "confidence": 0.99
+   },
+   {
+    "time": 14.0,
+    "text": "NEWS",
+    "confidence": 0.993
+   },
+   {
+    "time": 14.0,
+    "text": "6.40",
+    "confidence": 0.991
+   },
+   {
+    "time": 14.0,
+    "text": "Related",
+    "confidence": 0.997
+   },
+   {
+    "time": 14.0,
+    "text": "neral",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "0 Sunblock:",
+    "confidence": 0.563
+   },
+   {
+    "time": 14.0,
+    "text": "BARE",
+    "confidence": 0.872
+   },
+   {
+    "time": 14.0,
+    "text": "200)",
+    "confidence": 0.996
+   },
+   {
+    "time": 14.0,
+    "text": "Using",
+    "confidence": 0.662
+   },
+   {
+    "time": 14.0,
+    "text": "recommends",
+    "confidence": 0.998
+   },
+   {
+    "time": 14.0,
+    "text": "sunscreenwith the",
+    "confidence": 0.889
+   },
+   {
+    "time": 14.0,
+    "text": "following ingredients:",
+    "confidence": 0.788
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 0.891
+   },
+   {
+    "time": 14.0,
+    "text": "madi montoxic",
+    "confidence": 0.704
+   },
+   {
+    "time": 14.0,
+    "text": "$9+",
+    "confidence": 0.779
+   },
+   {
+    "time": 14.0,
+    "text": "50",
+    "confidence": 0.553
+   },
+   {
+    "time": 16.0,
+    "text": "ABCIS Arizona",
+    "confidence": 0.664
+   },
+   {
+    "time": 16.0,
+    "text": "You Tube",
+    "confidence": 0.846
+   },
+   {
+    "time": 16.0,
+    "text": "8,2019",
+    "confidence": 0.969
+   },
+   {
+    "time": 16.0,
+    "text": "Hot take: Sunscreen is toxic",
+    "confidence": 0.946
+   },
+   {
+    "time": 16.0,
+    "text": "Is",
+    "confidence": 0.997
+   },
+   {
+    "time": 16.0,
+    "text": "TITANIUM",
+    "confidence": 0.874
+   },
+   {
+    "time": 16.0,
+    "text": "DIOXIDE",
+    "confidence": 0.708
+   },
+   {
+    "time": 16.0,
+    "text": "MIST",
+    "confidence": 0.671
+   },
+   {
+    "time": 16.0,
+    "text": "115",
+    "confidence": 0.97
+   },
+   {
+    "time": 16.0,
+    "text": "HEALTH",
+    "confidence": 0.667
+   },
+   {
+    "time": 16.0,
+    "text": "SUNSCR",
+    "confidence": 0.964
+   },
+   {
+    "time": 16.0,
+    "text": "ANHELPFUL?",
+    "confidence": 0.954
+   },
+   {
+    "time": 16.0,
+    "text": "NEWS",
+    "confidence": 0.994
+   },
+   {
+    "time": 16.0,
+    "text": "[6.40",
+    "confidence": 0.549
+   },
+   {
+    "time": 16.0,
+    "text": "78\"",
+    "confidence": 0.979
+   },
+   {
+    "time": 16.0,
+    "text": "Related",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "neral",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "50 Sunblock",
+    "confidence": 0.919
+   },
+   {
+    "time": 16.0,
+    "text": "BARE",
+    "confidence": 0.578
+   },
+   {
+    "time": 16.0,
+    "text": "(200)",
+    "confidence": 0.803
+   },
+   {
+    "time": 16.0,
+    "text": "Thev're titanium dioxide",
+    "confidence": 0.635
+   },
+   {
+    "time": 16.0,
+    "text": "and zinc oxide:",
+    "confidence": 0.95
+   },
+   {
+    "time": 16.0,
+    "text": "TikTTok",
+    "confidence": 0.599
+   },
+   {
+    "time": 16.0,
+    "text": "madi montoxic",
+    "confidence": 0.771
+   },
+   {
+    "time": 16.0,
+    "text": "$9+",
+    "confidence": 0.784
+   },
+   {
+    "time": 16.0,
+    "text": "50",
+    "confidence": 0.647
+   },
+   {
+    "time": 18.0,
+    "text": "ABCIS Arizona",
+    "confidence": 0.579
+   },
+   {
+    "time": 18.0,
+    "text": "May `",
+    "confidence": 0.514
+   },
+   {
+    "time": 18.0,
+    "text": "You Tube",
+    "confidence": 0.85
+   },
+   {
+    "time": 18.0,
+    "text": "8,2019",
+    "confidence": 0.89
+   },
+   {
+    "time": 18.0,
+    "text": "Hot take: Sunscreen is toxic",
+    "confidence": 0.935
+   },
+   {
+    "time": 18.0,
+    "text": "Is",
+    "confidence": 0.997
+   },
+   {
+    "time": 18.0,
+    "text": "TITANIUM",
+    "confidence": 0.998
+   },
+   {
+    "time": 18.0,
+    "text": "DOXIDE",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "zinc oxide",
+    "confidence": 0.997
+   },
+   {
+    "time": 18.0,
+    "text": "115",
+    "confidence": 0.993
+   },
+   {
+    "time": 18.0,
+    "text": "abc",
+    "confidence": 0.699
+   },
+   {
+    "time": 18.0,
+    "text": "HEALTH",
+    "confidence": 0.799
+   },
+   {
+    "time": 18.0,
+    "text": "SUNSCR",
+    "confidence": 0.988
+   },
+   {
+    "time": 18.0,
+    "text": "AN HELPFUL?",
+    "confidence": 0.904
+   },
+   {
+    "time": 18.0,
+    "text": "NEWS",
+    "confidence": 0.995
+   },
+   {
+    "time": 18.0,
+    "text": "6.40]",
+    "confidence": 0.505
+   },
+   {
+    "time": 18.0,
+    "text": "78\"",
+    "confidence": 0.987
+   },
+   {
+    "time": 18.0,
+    "text": "Related",
+    "confidence": 0.895
+   },
+   {
+    "time": 18.0,
+    "text": "ineral",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "50 Sunblock",
+    "confidence": 0.932
+   },
+   {
+    "time": 18.0,
+    "text": "BARE",
+    "confidence": 0.892
+   },
+   {
+    "time": 18.0,
+    "text": "(200)",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.0,
+    "text": "They're titanium dioxide",
+    "confidence": 0.663
+   },
+   {
+    "time": 18.0,
+    "text": "and zinc oxide:",
+    "confidence": 0.874
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 0.976
+   },
+   {
+    "time": 18.0,
+    "text": "madi montoxic",
+    "confidence": 0.851
+   },
+   {
+    "time": 18.0,
+    "text": "$9+",
+    "confidence": 0.504
+   },
+   {
+    "time": 18.0,
+    "text": "50",
+    "confidence": 0.873
+   },
+   {
+    "time": 20.0,
+    "text": "And thisfsexactlywhyl",
+    "confidence": 0.659
+   },
+   {
+    "time": 20.0,
+    "text": "stopped",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.0,
+    "text": "Tiktok",
+    "confidence": 0.543
+   },
+   {
+    "time": 20.0,
+    "text": "laldiamontoxic",
+    "confidence": 0.599
+   },
+   {
+    "time": 22.0,
+    "text": "using toxicsunscreens",
+    "confidence": 0.998
+   },
+   {
+    "time": 22.0,
+    "text": "from the grocery stores",
+    "confidence": 0.924
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 0.664
+   },
+   {
+    "time": 24.0,
+    "text": "Andlstarted ordering this",
+    "confidence": 0.823
+   },
+   {
+    "time": 24.0,
+    "text": "one",
+    "confidence": 0.985
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 24.0,
+    "text": "mladi nontoxic",
+    "confidence": 0.601
+   },
+   {
+    "time": 26.0,
+    "text": "Purchased",
+    "confidence": 0.999
+   },
+   {
+    "time": 26.0,
+    "text": "Beef Tallow Sunscreen SPF 50 -",
+    "confidence": 0.762
+   },
+   {
+    "time": 26.0,
+    "text": "Mineral Sunscreen for Face",
+    "confidence": 0.843
+   },
+   {
+    "time": 26.0,
+    "text": "boughtin past month",
+    "confidence": 0.97
+   },
+   {
+    "time": 26.0,
+    "text": "50",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "prime",
+    "confidence": 0.675
+   },
+   {
+    "time": 26.0,
+    "text": "Moy 21",
+    "confidence": 0.601
+   },
+   {
+    "time": 26.0,
+    "text": "FREE delivery Thu;",
+    "confidence": 0.94
+   },
+   {
+    "time": 26.0,
+    "text": "SmallBusiness",
+    "confidence": 0.882
+   },
+   {
+    "time": 26.0,
+    "text": "off @f Amazon because",
+    "confidence": 0.555
+   },
+   {
+    "time": 26.0,
+    "text": "it\"sonlyfive",
+    "confidence": 0.712
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 0.812
+   },
+   {
+    "time": 26.0,
+    "text": "madi nontoxic",
+    "confidence": 0.847
+   },
+   {
+    "time": 28.0,
+    "text": "Thisisabeef tallowbased",
+    "confidence": 0.612
+   },
+   {
+    "time": 28.0,
+    "text": "sunscreenb",
+    "confidence": 0.647
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 0.695
+   },
+   {
+    "time": 30.0,
+    "text": "soitisextremely",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.0,
+    "text": "moisturizing forvoUr skins",
+    "confidence": 0.623
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 0.973
+   },
+   {
+    "time": 32.0,
+    "text": "soitisextremely",
+    "confidence": 0.998
+   },
+   {
+    "time": 32.0,
+    "text": "moisturizing foryoUr skins",
+    "confidence": 0.585
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 0.969
+   },
+   {
+    "time": 34.0,
+    "text": "makes thesunreflectoff",
+    "confidence": 0.887
+   },
+   {
+    "time": 34.0,
+    "text": "ofyour skin",
+    "confidence": 0.884
+   },
+   {
+    "time": 34.0,
+    "text": "TikTok",
+    "confidence": 0.966
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 0.981
+   },
+   {
+    "time": 38.0,
+    "text": "Iknowalotofpeople",
+    "confidence": 0.92
+   },
+   {
+    "time": 38.0,
+    "text": "nowadays",
+    "confidence": 0.971
+   },
+   {
+    "time": 38.0,
+    "text": "TiktTok",
+    "confidence": 0.596
+   },
+   {
+    "time": 40.0,
+    "text": "donot wannaUse",
+    "confidence": 0.892
+   },
+   {
+    "time": 40.0,
+    "text": "sunscreenatall:",
+    "confidence": 0.652
+   },
+   {
+    "time": 40.0,
+    "text": "TiktTok",
+    "confidence": 0.524
+   },
+   {
+    "time": 42.0,
+    "text": "familywhohavehad skin",
+    "confidence": 0.769
+   },
+   {
+    "time": 42.0,
+    "text": "cancer",
+    "confidence": 0.816
+   },
+   {
+    "time": 42.0,
+    "text": "TikTok",
+    "confidence": 0.928
+   },
+   {
+    "time": 44.0,
+    "text": "dothinkit\"simportant to",
+    "confidence": 0.854
+   },
+   {
+    "time": 44.0,
+    "text": "protect yourself:",
+    "confidence": 0.665
+   },
+   {
+    "time": 44.0,
+    "text": "TikTok",
+    "confidence": 0.595
+   },
+   {
+    "time": 44.0,
+    "text": "mlaldiamontoxic",
+    "confidence": 0.593
+   },
+   {
+    "time": 46.0,
+    "text": "TikTok",
+    "confidence": 0.993
+   },
+   {
+    "time": 48.0,
+    "text": "puttinga toxicsunscreen",
+    "confidence": 0.977
+   },
+   {
+    "time": 48.0,
+    "text": "from thegrocerystore",
+    "confidence": 0.996
+   },
+   {
+    "time": 48.0,
+    "text": "TikTok",
+    "confidence": 0.995
+   },
+   {
+    "time": 50.0,
+    "text": "that\"sgoing toabsorbin",
+    "confidence": 0.828
+   },
+   {
+    "time": 50.0,
+    "text": "yoUr",
+    "confidence": 0.631
+   },
+   {
+    "time": 50.0,
+    "text": "TikTok",
+    "confidence": 0.97
+   },
+   {
+    "time": 52.0,
+    "text": "skin after justoneuse",
+    "confidence": 0.799
+   },
+   {
+    "time": 52.0,
+    "text": "TikTok",
+    "confidence": 0.991
+   },
+   {
+    "time": 54.0,
+    "text": "isnotgoing tohelp your",
+    "confidence": 0.828
+   },
+   {
+    "time": 54.0,
+    "text": "bodj",
+    "confidence": 0.783
+   },
+   {
+    "time": 54.0,
+    "text": "TikTok",
+    "confidence": 0.976
+   },
+   {
+    "time": 56.0,
+    "text": "Which isexactly whyl",
+    "confidence": 0.721
+   },
+   {
+    "time": 56.0,
+    "text": "switched",
+    "confidence": 0.862
+   },
+   {
+    "time": 56.0,
+    "text": "TikTok",
+    "confidence": 0.99
+   },
+   {
+    "time": 58.0,
+    "text": "toa cleaneralternatives",
+    "confidence": 0.945
+   },
+   {
+    "time": 58.0,
+    "text": "TikTok",
+    "confidence": 0.994
+   },
+   {
+    "time": 60.0,
+    "text": "sunscreen andyou\"dbe",
+    "confidence": 0.78
+   },
+   {
+    "time": 60.0,
+    "text": "perfectly fines",
+    "confidence": 0.835
+   },
+   {
+    "time": 60.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 62.0,
+    "text": "Andeveryone obviouslyis",
+    "confidence": 0.727
+   },
+   {
+    "time": 62.0,
+    "text": "entitled to their opinion;",
+    "confidence": 0.501
+   },
+   {
+    "time": 62.0,
+    "text": "TikTok",
+    "confidence": 0.985
+   },
+   {
+    "time": 64.0,
+    "text": "entitleetedeicopinion,",
+    "confidence": 0.519
+   },
+   {
+    "time": 64.0,
+    "text": "TikTok",
+    "confidence": 0.972
+   },
+   {
+    "time": 66.0,
+    "text": "products for myself and",
+    "confidence": 0.971
+   },
+   {
+    "time": 66.0,
+    "text": "mykid",
+    "confidence": 0.994
+   },
+   {
+    "time": 66.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 68.0,
+    "text": "J",
+    "confidence": 0.662
+   },
+   {
+    "time": 68.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 70.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 70.0,
+    "text": "@ madi nontoxic",
+    "confidence": 0.616
+   }
+  ],
+  "captions": [
+   {
+    "text": "Hot take: Sunscreen is toxic",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.939,
+    "id": "o1"
+   },
+   {
+    "text": "@maldicnontoxic",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.746,
+    "id": "o2"
+   },
+   {
+    "text": "Hot take: Sunscreen is toxic",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.933,
+    "id": "o3"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.66,
+    "id": "o4"
+   },
+   {
+    "text": "Beforevou",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.673,
+    "id": "o5"
+   },
+   {
+    "text": "pute",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.967,
+    "id": "o6"
+   },
+   {
+    "text": "sunscreen",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.991,
+    "id": "o7"
+   },
+   {
+    "text": "youoryourkids;",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.793,
+    "id": "o8"
+   },
+   {
+    "text": "ABC1S Arizona",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.563,
+    "id": "o9"
+   },
+   {
+    "text": "Yoube",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.786,
+    "id": "o10"
+   },
+   {
+    "text": "2019",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.865,
+    "id": "o11"
+   },
+   {
+    "text": "Hot take: Sunscreen is toxic",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.932,
+    "id": "o12"
+   },
+   {
+    "text": "Visit",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.724,
+    "id": "o13"
+   },
+   {
+    "text": "115",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.77,
+    "id": "o14"
+   },
+   {
+    "text": "abc",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.779,
+    "id": "o15"
+   },
+   {
+    "text": "SUNSCREEN: MORE HARN",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.527,
+    "id": "o16"
+   },
+   {
+    "text": "THAN HELPFUL?",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.971,
+    "id": "o17"
+   },
+   {
+    "text": "EWS",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.913,
+    "id": "o18"
+   },
+   {
+    "text": "ARIzOna",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.515,
+    "id": "o19"
+   },
+   {
+    "text": "6.39",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.771,
+    "id": "o20"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.775,
+    "id": "o21"
+   },
+   {
+    "text": "@ madi nontoxic",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.748,
+    "id": "o22"
+   },
+   {
+    "text": "Related proc",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.92,
+    "id": "o23"
+   },
+   {
+    "text": "eral",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o24"
+   },
+   {
+    "text": "Sunblock",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o25"
+   },
+   {
+    "text": "watch this. There\"sanew",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.562,
+    "id": "o26"
+   },
+   {
+    "text": "BARE",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.962,
+    "id": "o27"
+   },
+   {
+    "text": "studout that saysafter",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.762,
+    "id": "o28"
+   },
+   {
+    "text": "just one day;",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.6,
+    "id": "o29"
+   },
+   {
+    "text": "Sunscreen Spray",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.969,
+    "id": "o30"
+   },
+   {
+    "text": "(Sk+)",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.958,
+    "id": "o31"
+   },
+   {
+    "text": "4.4",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.987,
+    "id": "o32"
+   },
+   {
+    "text": "ABC15 Arizona",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.596,
+    "id": "o33"
+   },
+   {
+    "text": "2019",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.84,
+    "id": "o34"
+   },
+   {
+    "text": "Hot take: Sunscreen is toxic",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.932,
+    "id": "o35"
+   },
+   {
+    "text": "Visit",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.683,
+    "id": "o36"
+   },
+   {
+    "text": "115",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.879,
+    "id": "o37"
+   },
+   {
+    "text": "abc",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.905,
+    "id": "o38"
+   },
+   {
+    "text": "SUNSCREEN: MORE",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.735,
+    "id": "o39"
+   },
+   {
+    "text": "THAN HELPFUL?",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.915,
+    "id": "o40"
+   },
+   {
+    "text": "NEWS",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.981,
+    "id": "o41"
+   },
+   {
+    "text": "ARIzOna",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.534,
+    "id": "o42"
+   },
+   {
+    "text": "6.39",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.739,
+    "id": "o43"
+   },
+   {
+    "text": "788",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.572,
+    "id": "o44"
+   },
+   {
+    "text": "Related prod",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.86,
+    "id": "o45"
+   },
+   {
+    "text": "eral",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.999,
+    "id": "o46"
+   },
+   {
+    "text": "Sunblock",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o47"
+   },
+   {
+    "text": "watch this_ There\"sanew",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.701,
+    "id": "o48"
+   },
+   {
+    "text": "BARE",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.957,
+    "id": "o49"
+   },
+   {
+    "text": "Studiout that saysafter",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.657,
+    "id": "o50"
+   },
+   {
+    "text": "justone day;",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.863,
+    "id": "o51"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.993,
+    "id": "o52"
+   },
+   {
+    "text": "madiamontoxic",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.523,
+    "id": "o53"
+   },
+   {
+    "text": "Sunscreen Spray",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o54"
+   },
+   {
+    "text": "(Sk+)",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.936,
+    "id": "o55"
+   },
+   {
+    "text": "4.4",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.981,
+    "id": "o56"
+   },
+   {
+    "text": "ABC15 Arizona",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.599,
+    "id": "o57"
+   },
+   {
+    "text": "2019",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.834,
+    "id": "o58"
+   },
+   {
+    "text": "Hot take: Sunscreen is toxic",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.931,
+    "id": "o59"
+   },
+   {
+    "text": "Visit",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.669,
+    "id": "o60"
+   },
+   {
+    "text": "115",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.711,
+    "id": "o61"
+   },
+   {
+    "text": "HeALIH",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.518,
+    "id": "o62"
+   },
+   {
+    "text": "SUNSCRF",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.744,
+    "id": "o63"
+   },
+   {
+    "text": "LPFUL?",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.998,
+    "id": "o64"
+   },
+   {
+    "text": "NEWS",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.982,
+    "id": "o65"
+   },
+   {
+    "text": "6.39",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.752,
+    "id": "o66"
+   },
+   {
+    "text": "788",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.591,
+    "id": "o67"
+   },
+   {
+    "text": "Related pr",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.778,
+    "id": "o68"
+   },
+   {
+    "text": "eral",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.688,
+    "id": "o69"
+   },
+   {
+    "text": "50 Sunblock",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.984,
+    "id": "o70"
+   },
+   {
+    "text": "BARE",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.988,
+    "id": "o71"
+   },
+   {
+    "text": "chemicals and sunscreens",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.876,
+    "id": "o72"
+   },
+   {
+    "text": "enteryour bloodstream:",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.824,
+    "id": "o73"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o74"
+   },
+   {
+    "text": "madi nontoxic",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.731,
+    "id": "o75"
+   },
+   {
+    "text": "Sunscreen Spray",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o76"
+   },
+   {
+    "text": "(Sk+)",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.936,
+    "id": "o77"
+   },
+   {
+    "text": "4.4",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.981,
+    "id": "o78"
+   },
+   {
+    "text": "ABCIS Arizona",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.669,
+    "id": "o79"
+   },
+   {
+    "text": "You Tube",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.651,
+    "id": "o80"
+   },
+   {
+    "text": "8,2019",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.972,
+    "id": "o81"
+   },
+   {
+    "text": "Hot take: Sunscreen is toxic",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.947,
+    "id": "o82"
+   },
+   {
+    "text": "Is",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.997,
+    "id": "o83"
+   },
+   {
+    "text": "115",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.977,
+    "id": "o84"
+   },
+   {
+    "text": "HEALTH",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.707,
+    "id": "o85"
+   },
+   {
+    "text": "IANHELPFUL?",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.802,
+    "id": "o86"
+   },
+   {
+    "text": "SUNSCREEN",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.826,
+    "id": "o87"
+   },
+   {
+    "text": "NEWS",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.993,
+    "id": "o88"
+   },
+   {
+    "text": "Related",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o89"
+   },
+   {
+    "text": "neral",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.965,
+    "id": "o90"
+   },
+   {
+    "text": "Sunblock",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.603,
+    "id": "o91"
+   },
+   {
+    "text": "BARE",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.912,
+    "id": "o92"
+   },
+   {
+    "text": "'doctor, Margaret",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.658,
+    "id": "o93"
+   },
+   {
+    "text": "Husami of Derma Health",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.998,
+    "id": "o94"
+   },
+   {
+    "text": "Skin and laser",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.792,
+    "id": "o95"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.944,
+    "id": "o96"
+   },
+   {
+    "text": "madi montoxic",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.695,
+    "id": "o97"
+   },
+   {
+    "text": "$9+",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.785,
+    "id": "o98"
+   },
+   {
+    "text": "50",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.711,
+    "id": "o99"
+   },
+   {
+    "text": "ABCIS Arizona",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.665,
+    "id": "o100"
+   },
+   {
+    "text": "You Tube",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.641,
+    "id": "o101"
+   },
+   {
+    "text": "8,2019",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.97,
+    "id": "o102"
+   },
+   {
+    "text": "Hot take: Sunscreen is toxic",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.946,
+    "id": "o103"
+   },
+   {
+    "text": "Is",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o104"
+   },
+   {
+    "text": "15",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.998,
+    "id": "o105"
+   },
+   {
+    "text": "HEALTH",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.723,
+    "id": "o106"
+   },
+   {
+    "text": "SUNSCREEN: MORF",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.925,
+    "id": "o107"
+   },
+   {
+    "text": "FUL THAN HELPFUL?",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.828,
+    "id": "o108"
+   },
+   {
+    "text": "NEWS",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.993,
+    "id": "o109"
+   },
+   {
+    "text": "6.40",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.702,
+    "id": "o110"
+   },
+   {
+    "text": "78\"",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.98,
+    "id": "o111"
+   },
+   {
+    "text": "Related",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.99,
+    "id": "o112"
+   },
+   {
+    "text": "neral",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o113"
+   },
+   {
+    "text": "Sunblock",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.602,
+    "id": "o114"
+   },
+   {
+    "text": "BARE",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.93,
+    "id": "o115"
+   },
+   {
+    "text": "using",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.579,
+    "id": "o116"
+   },
+   {
+    "text": "recommends",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.988,
+    "id": "o117"
+   },
+   {
+    "text": "sunscreen with the",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.994,
+    "id": "o118"
+   },
+   {
+    "text": "following ingredients.",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.825,
+    "id": "o119"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o120"
+   },
+   {
+    "text": "madi montoxic",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.878,
+    "id": "o121"
+   },
+   {
+    "text": "$9+",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.785,
+    "id": "o122"
+   },
+   {
+    "text": "50",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.613,
+    "id": "o123"
+   },
+   {
+    "text": "ABCIS Arizona",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.663,
+    "id": "o124"
+   },
+   {
+    "text": "May",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.855,
+    "id": "o125"
+   },
+   {
+    "text": "You Tube",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.641,
+    "id": "o126"
+   },
+   {
+    "text": "8,2019",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.97,
+    "id": "o127"
+   },
+   {
+    "text": "Hot take: Sunscreen is toxic",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.946,
+    "id": "o128"
+   },
+   {
+    "text": "Is",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.997,
+    "id": "o129"
+   },
+   {
+    "text": "RECOMMENDED",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.996,
+    "id": "o130"
+   },
+   {
+    "text": "SKIN",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.864,
+    "id": "o131"
+   },
+   {
+    "text": "FOUNDATION",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.927,
+    "id": "o132"
+   },
+   {
+    "text": "3ACTIVE",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.896,
+    "id": "o133"
+   },
+   {
+    "text": "15",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.999,
+    "id": "o134"
+   },
+   {
+    "text": "obc",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.541,
+    "id": "o135"
+   },
+   {
+    "text": "HEALTH",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.697,
+    "id": "o136"
+   },
+   {
+    "text": "HAN HELPFUL?",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.988,
+    "id": "o137"
+   },
+   {
+    "text": "SUNSCREE",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.99,
+    "id": "o138"
+   },
+   {
+    "text": "NEWS",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.993,
+    "id": "o139"
+   },
+   {
+    "text": "6.40",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.991,
+    "id": "o140"
+   },
+   {
+    "text": "Related",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.997,
+    "id": "o141"
+   },
+   {
+    "text": "neral",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o142"
+   },
+   {
+    "text": "0 Sunblock:",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.563,
+    "id": "o143"
+   },
+   {
+    "text": "BARE",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.872,
+    "id": "o144"
+   },
+   {
+    "text": "200)",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.996,
+    "id": "o145"
+   },
+   {
+    "text": "Using",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.662,
+    "id": "o146"
+   },
+   {
+    "text": "recommends",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.998,
+    "id": "o147"
+   },
+   {
+    "text": "sunscreenwith the",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.889,
+    "id": "o148"
+   },
+   {
+    "text": "following ingredients:",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.788,
+    "id": "o149"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.891,
+    "id": "o150"
+   },
+   {
+    "text": "madi montoxic",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.704,
+    "id": "o151"
+   },
+   {
+    "text": "$9+",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.779,
+    "id": "o152"
+   },
+   {
+    "text": "50",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.553,
+    "id": "o153"
+   },
+   {
+    "text": "ABCIS Arizona",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.664,
+    "id": "o154"
+   },
+   {
+    "text": "You Tube",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.846,
+    "id": "o155"
+   },
+   {
+    "text": "8,2019",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.969,
+    "id": "o156"
+   },
+   {
+    "text": "Hot take: Sunscreen is toxic",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.946,
+    "id": "o157"
+   },
+   {
+    "text": "Is",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.997,
+    "id": "o158"
+   },
+   {
+    "text": "TITANIUM",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.874,
+    "id": "o159"
+   },
+   {
+    "text": "DIOXIDE",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.708,
+    "id": "o160"
+   },
+   {
+    "text": "MIST",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.671,
+    "id": "o161"
+   },
+   {
+    "text": "115",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.97,
+    "id": "o162"
+   },
+   {
+    "text": "HEALTH",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.667,
+    "id": "o163"
+   },
+   {
+    "text": "SUNSCR",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.964,
+    "id": "o164"
+   },
+   {
+    "text": "ANHELPFUL?",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.954,
+    "id": "o165"
+   },
+   {
+    "text": "NEWS",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.994,
+    "id": "o166"
+   },
+   {
+    "text": "[6.40",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.549,
+    "id": "o167"
+   },
+   {
+    "text": "78\"",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.979,
+    "id": "o168"
+   },
+   {
+    "text": "Related",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o169"
+   },
+   {
+    "text": "neral",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o170"
+   },
+   {
+    "text": "50 Sunblock",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.919,
+    "id": "o171"
+   },
+   {
+    "text": "BARE",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.578,
+    "id": "o172"
+   },
+   {
+    "text": "(200)",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.803,
+    "id": "o173"
+   },
+   {
+    "text": "Thev're titanium dioxide",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.635,
+    "id": "o174"
+   },
+   {
+    "text": "and zinc oxide:",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.95,
+    "id": "o175"
+   },
+   {
+    "text": "TikTTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.599,
+    "id": "o176"
+   },
+   {
+    "text": "madi montoxic",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.771,
+    "id": "o177"
+   },
+   {
+    "text": "$9+",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.784,
+    "id": "o178"
+   },
+   {
+    "text": "50",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.647,
+    "id": "o179"
+   },
+   {
+    "text": "ABCIS Arizona",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.579,
+    "id": "o180"
+   },
+   {
+    "text": "May `",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.514,
+    "id": "o181"
+   },
+   {
+    "text": "You Tube",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.85,
+    "id": "o182"
+   },
+   {
+    "text": "8,2019",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.89,
+    "id": "o183"
+   },
+   {
+    "text": "Hot take: Sunscreen is toxic",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.935,
+    "id": "o184"
+   },
+   {
+    "text": "Is",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.997,
+    "id": "o185"
+   },
+   {
+    "text": "TITANIUM",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.998,
+    "id": "o186"
+   },
+   {
+    "text": "DOXIDE",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 1.0,
+    "id": "o187"
+   },
+   {
+    "text": "zinc oxide",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.997,
+    "id": "o188"
+   },
+   {
+    "text": "115",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.993,
+    "id": "o189"
+   },
+   {
+    "text": "abc",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.699,
+    "id": "o190"
+   },
+   {
+    "text": "HEALTH",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.799,
+    "id": "o191"
+   },
+   {
+    "text": "SUNSCR",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.988,
+    "id": "o192"
+   },
+   {
+    "text": "AN HELPFUL?",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.904,
+    "id": "o193"
+   },
+   {
+    "text": "NEWS",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.995,
+    "id": "o194"
+   },
+   {
+    "text": "6.40]",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.505,
+    "id": "o195"
+   },
+   {
+    "text": "78\"",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.987,
+    "id": "o196"
+   },
+   {
+    "text": "Related",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.895,
+    "id": "o197"
+   },
+   {
+    "text": "ineral",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 1.0,
+    "id": "o198"
+   },
+   {
+    "text": "50 Sunblock",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.932,
+    "id": "o199"
+   },
+   {
+    "text": "BARE",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.892,
+    "id": "o200"
+   },
+   {
+    "text": "(200)",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.999,
+    "id": "o201"
+   },
+   {
+    "text": "They're titanium dioxide",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.663,
+    "id": "o202"
+   },
+   {
+    "text": "and zinc oxide:",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.874,
+    "id": "o203"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.976,
+    "id": "o204"
+   },
+   {
+    "text": "madi montoxic",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.851,
+    "id": "o205"
+   },
+   {
+    "text": "$9+",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.504,
+    "id": "o206"
+   },
+   {
+    "text": "50",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.873,
+    "id": "o207"
+   },
+   {
+    "text": "And thisfsexactlywhyl",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.659,
+    "id": "o208"
+   },
+   {
+    "text": "stopped",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.999,
+    "id": "o209"
+   },
+   {
+    "text": "Tiktok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.543,
+    "id": "o210"
+   },
+   {
+    "text": "laldiamontoxic",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.599,
+    "id": "o211"
+   },
+   {
+    "text": "using toxicsunscreens",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.998,
+    "id": "o212"
+   },
+   {
+    "text": "from the grocery stores",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.924,
+    "id": "o213"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.664,
+    "id": "o214"
+   },
+   {
+    "text": "Andlstarted ordering this",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.823,
+    "id": "o215"
+   },
+   {
+    "text": "one",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.985,
+    "id": "o216"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.999,
+    "id": "o217"
+   },
+   {
+    "text": "mladi nontoxic",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.601,
+    "id": "o218"
+   },
+   {
+    "text": "Purchased",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.999,
+    "id": "o219"
+   },
+   {
+    "text": "Beef Tallow Sunscreen SPF 50 -",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.762,
+    "id": "o220"
+   },
+   {
+    "text": "Mineral Sunscreen for Face",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.843,
+    "id": "o221"
+   },
+   {
+    "text": "boughtin past month",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.97,
+    "id": "o222"
+   },
+   {
+    "text": "50",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o223"
+   },
+   {
+    "text": "prime",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.675,
+    "id": "o224"
+   },
+   {
+    "text": "Moy 21",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.601,
+    "id": "o225"
+   },
+   {
+    "text": "FREE delivery Thu;",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.94,
+    "id": "o226"
+   },
+   {
+    "text": "SmallBusiness",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.882,
+    "id": "o227"
+   },
+   {
+    "text": "off @f Amazon because",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.555,
+    "id": "o228"
+   },
+   {
+    "text": "it\"sonlyfive",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.712,
+    "id": "o229"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.812,
+    "id": "o230"
+   },
+   {
+    "text": "madi nontoxic",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.847,
+    "id": "o231"
+   },
+   {
+    "text": "Thisisabeef tallowbased",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.612,
+    "id": "o232"
+   },
+   {
+    "text": "sunscreenb",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.647,
+    "id": "o233"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.695,
+    "id": "o234"
+   },
+   {
+    "text": "soitisextremely",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.999,
+    "id": "o235"
+   },
+   {
+    "text": "moisturizing forvoUr skins",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.623,
+    "id": "o236"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.973,
+    "id": "o237"
+   },
+   {
+    "text": "soitisextremely",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.998,
+    "id": "o238"
+   },
+   {
+    "text": "moisturizing foryoUr skins",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.585,
+    "id": "o239"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.969,
+    "id": "o240"
+   },
+   {
+    "text": "makes thesunreflectoff",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.887,
+    "id": "o241"
+   },
+   {
+    "text": "ofyour skin",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.884,
+    "id": "o242"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.0,
+    "end": 36.0,
+    "confidence": 0.981,
+    "id": "o243"
+   },
+   {
+    "text": "Iknowalotofpeople",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.92,
+    "id": "o244"
+   },
+   {
+    "text": "nowadays",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.971,
+    "id": "o245"
+   },
+   {
+    "text": "TiktTok",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.596,
+    "id": "o246"
+   },
+   {
+    "text": "donot wannaUse",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.892,
+    "id": "o247"
+   },
+   {
+    "text": "sunscreenatall:",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.652,
+    "id": "o248"
+   },
+   {
+    "text": "TiktTok",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.524,
+    "id": "o249"
+   },
+   {
+    "text": "familywhohavehad skin",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.769,
+    "id": "o250"
+   },
+   {
+    "text": "cancer",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.816,
+    "id": "o251"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.928,
+    "id": "o252"
+   },
+   {
+    "text": "dothinkit\"simportant to",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.854,
+    "id": "o253"
+   },
+   {
+    "text": "protect yourself:",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.665,
+    "id": "o254"
+   },
+   {
+    "text": "TikTok",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.595,
+    "id": "o255"
+   },
+   {
+    "text": "mlaldiamontoxic",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.593,
+    "id": "o256"
+   },
+   {
+    "text": "TikTok",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.993,
+    "id": "o257"
+   },
+   {
+    "text": "puttinga toxicsunscreen",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.977,
+    "id": "o258"
+   },
+   {
+    "text": "from thegrocerystore",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.996,
+    "id": "o259"
+   },
+   {
+    "text": "TikTok",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.995,
+    "id": "o260"
+   },
+   {
+    "text": "that\"sgoing toabsorbin",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.828,
+    "id": "o261"
+   },
+   {
+    "text": "yoUr",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.631,
+    "id": "o262"
+   },
+   {
+    "text": "TikTok",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.97,
+    "id": "o263"
+   },
+   {
+    "text": "skin after justoneuse",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.799,
+    "id": "o264"
+   },
+   {
+    "text": "TikTok",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.991,
+    "id": "o265"
+   },
+   {
+    "text": "isnotgoing tohelp your",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.828,
+    "id": "o266"
+   },
+   {
+    "text": "bodj",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.783,
+    "id": "o267"
+   },
+   {
+    "text": "TikTok",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.976,
+    "id": "o268"
+   },
+   {
+    "text": "Which isexactly whyl",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.721,
+    "id": "o269"
+   },
+   {
+    "text": "switched",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.862,
+    "id": "o270"
+   },
+   {
+    "text": "TikTok",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.99,
+    "id": "o271"
+   },
+   {
+    "text": "toa cleaneralternatives",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.945,
+    "id": "o272"
+   },
+   {
+    "text": "TikTok",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.994,
+    "id": "o273"
+   },
+   {
+    "text": "sunscreen andyou\"dbe",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.78,
+    "id": "o274"
+   },
+   {
+    "text": "perfectly fines",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.835,
+    "id": "o275"
+   },
+   {
+    "text": "TikTok",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.997,
+    "id": "o276"
+   },
+   {
+    "text": "Andeveryone obviouslyis",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.727,
+    "id": "o277"
+   },
+   {
+    "text": "entitled to their opinion;",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.501,
+    "id": "o278"
+   },
+   {
+    "text": "TikTok",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.985,
+    "id": "o279"
+   },
+   {
+    "text": "entitleetedeicopinion,",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.519,
+    "id": "o280"
+   },
+   {
+    "text": "TikTok",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.972,
+    "id": "o281"
+   },
+   {
+    "text": "products for myself and",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.971,
+    "id": "o282"
+   },
+   {
+    "text": "mykid",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.994,
+    "id": "o283"
+   },
+   {
+    "text": "TikTok",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.999,
+    "id": "o284"
+   },
+   {
+    "text": "J",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.662,
+    "id": "o285"
+   },
+   {
+    "text": "TikTok",
+    "start": 68.0,
+    "end": 70.0,
+    "confidence": 0.999,
+    "id": "o286"
+   },
+   {
+    "text": "@ madi nontoxic",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.616,
+    "id": "o287"
+   }
+  ]
+ }
+}

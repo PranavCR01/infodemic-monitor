@@ -48,6 +48,18 @@ def is_mixed(claims):
     return endorsed_false and refuted_false
 
 
+def has_true_and_false(claims):
+    """Section 14's "mixed videos (true and false claims)" category.
+
+    Distinct from is_mixed() above, which is section 9's narrower judge-policy
+    edge case (one falsehood endorsed AND another refuted in the same video).
+    A video can carry both supported and contradicted claims without hitting
+    that pattern at all, and section 14 wants those covered on purpose.
+    """
+    return (any(c["claim_verdict"] == "SUPPORTED" for c in claims)
+            and any(c["claim_verdict"] == "CONTRADICTED" for c in claims))
+
+
 def review_triggers(claims, deciding):
     """The section 11 review rule, limited to the signals this dataset carries.
 

@@ -1,0 +1,1998 @@
+{
+ "video_id": "v51",
+ "filename": "v03_ @drjeremylondon_smoking_marijuana_regularly.mp4",
+ "relative_path": "Dataset-Sept-2026/Joshua Ryan Fajardo/NO-MISINFO/v03_ @drjeremylondon_smoking_marijuana_regularly.mp4",
+ "collector": "Joshua Ryan Fajardo",
+ "collector_label": "NO_MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:42:33",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.994,
+  "duration_seconds": 66.8,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 6.8,
+    "text": "dad is smoking marijuana regularly bad for your heart well let's all agree on one thing"
+   },
+   {
+    "id": "t2",
+    "start": 6.8,
+    "end": 12.48,
+    "text": "that the lungs have one simple function and that's to bring air into and out of your lungs"
+   },
+   {
+    "id": "t3",
+    "start": 12.48,
+    "end": 19.36,
+    "text": "anything else is potentially harmful and i hear all the time marijuana must be safe because it's"
+   },
+   {
+    "id": "t4",
+    "start": 19.36,
+    "end": 26.0,
+    "text": "natural but here's the truth smoking marijuana regularly increases your risk of coronary disease"
+   },
+   {
+    "id": "t5",
+    "start": 26.0,
+    "end": 32.96,
+    "text": "and acute heart attack by 1.3 to two times those that don't smoke marijuana regularly."
+   },
+   {
+    "id": "t6",
+    "start": 32.96,
+    "end": 38.8,
+    "text": "That's the same increased risk as high blood pressure or increased cholesterol. Now I have"
+   },
+   {
+    "id": "t7",
+    "start": 38.8,
+    "end": 44.72,
+    "text": "operated on multiple patients over the years that smoke marijuana regularly and I can tell you that"
+   },
+   {
+    "id": "t8",
+    "start": 44.72,
+    "end": 49.6,
+    "text": "their lungs are totally black and it looks like they've worked in a coal mine and they've got such"
+   },
+   {
+    "id": "t9",
+    "start": 49.6,
+    "end": 54.96,
+    "text": "severe blockages that I have to do bypass surgery and these are folks that have never smoked a cigarette"
+   },
+   {
+    "id": "t10",
+    "start": 54.96,
+    "end": 60.16,
+    "text": "in their lives. And they all say the same thing. I thought it was safe. What's important"
+   },
+   {
+    "id": "t11",
+    "start": 60.16,
+    "end": 62.72,
+    "text": "to me is that you know the inherent risks."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 34,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "MAssking a Heart Surgeon,",
+    "confidence": 0.551
+   },
+   {
+    "time": 0.0,
+    "text": "the effects of smoking",
+    "confidence": 0.986
+   },
+   {
+    "time": 0.0,
+    "text": "weed regularly",
+    "confidence": 0.99
+   },
+   {
+    "time": 2.0,
+    "text": "Tikok",
+    "confidence": 0.924
+   },
+   {
+    "time": 2.0,
+    "text": "the effects of smoking",
+    "confidence": 0.987
+   },
+   {
+    "time": 2.0,
+    "text": "weed regularly",
+    "confidence": 0.837
+   },
+   {
+    "time": 2.0,
+    "text": "Is smoking marijuana",
+    "confidence": 0.966
+   },
+   {
+    "time": 2.0,
+    "text": "regularly bad foryour",
+    "confidence": 0.906
+   },
+   {
+    "time": 2.0,
+    "text": "heart?",
+    "confidence": 0.886
+   },
+   {
+    "time": 4.0,
+    "text": "drje",
+    "confidence": 0.526
+   },
+   {
+    "time": 4.0,
+    "text": "the effects of smoking",
+    "confidence": 0.863
+   },
+   {
+    "time": 4.0,
+    "text": "weed regularly",
+    "confidence": 0.836
+   },
+   {
+    "time": 4.0,
+    "text": "Is smoking marijuana",
+    "confidence": 0.921
+   },
+   {
+    "time": 4.0,
+    "text": "regularly bad for yoUr",
+    "confidence": 0.762
+   },
+   {
+    "time": 4.0,
+    "text": "heart?",
+    "confidence": 0.961
+   },
+   {
+    "time": 6.0,
+    "text": "Well;let's all agree on one",
+    "confidence": 0.675
+   },
+   {
+    "time": 6.0,
+    "text": "thing;",
+    "confidence": 0.763
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 0.704
+   },
+   {
+    "time": 6.0,
+    "text": "@ drjeremylondon",
+    "confidence": 0.822
+   },
+   {
+    "time": 8.0,
+    "text": "that the lungs have one",
+    "confidence": 0.851
+   },
+   {
+    "time": 8.0,
+    "text": "simple function;",
+    "confidence": 0.73
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "drjeremylondon",
+    "confidence": 0.858
+   },
+   {
+    "time": 10.0,
+    "text": "and that's to bring air into",
+    "confidence": 0.595
+   },
+   {
+    "time": 10.0,
+    "text": "and out of your lungs:",
+    "confidence": 0.557
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "drjeremylondon",
+    "confidence": 0.875
+   },
+   {
+    "time": 12.0,
+    "text": "and that's to bring air into",
+    "confidence": 0.729
+   },
+   {
+    "time": 12.0,
+    "text": "and out of your lungss",
+    "confidence": 0.646
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "drjeremylondon",
+    "confidence": 0.904
+   },
+   {
+    "time": 14.0,
+    "text": "Anything elsefs",
+    "confidence": 0.716
+   },
+   {
+    "time": 14.0,
+    "text": "potentially harmful.",
+    "confidence": 0.757
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.0,
+    "text": "drjeremylondon",
+    "confidence": 0.854
+   },
+   {
+    "time": 16.0,
+    "text": "And",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "hear all the time",
+    "confidence": 0.906
+   },
+   {
+    "time": 16.0,
+    "text": "marijuana must besafe",
+    "confidence": 0.688
+   },
+   {
+    "time": 16.0,
+    "text": "because it'$ natural:",
+    "confidence": 0.678
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 16.0,
+    "text": "drjeremylondon",
+    "confidence": 0.798
+   },
+   {
+    "time": 18.0,
+    "text": "marijuana must be safe",
+    "confidence": 0.958
+   },
+   {
+    "time": 18.0,
+    "text": "because it'$ natural",
+    "confidence": 0.524
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "@ drjeremylondon",
+    "confidence": 0.747
+   },
+   {
+    "time": 20.0,
+    "text": "And | hear all the time,",
+    "confidence": 0.704
+   },
+   {
+    "time": 20.0,
+    "text": "marijuana must be safe",
+    "confidence": 0.696
+   },
+   {
+    "time": 20.0,
+    "text": "because it's natural:",
+    "confidence": 0.624
+   },
+   {
+    "time": 20.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "@ drjeremylondon",
+    "confidence": 0.802
+   },
+   {
+    "time": 22.0,
+    "text": "Smoking marijuana",
+    "confidence": 0.756
+   },
+   {
+    "time": 22.0,
+    "text": "regularllyincreases your",
+    "confidence": 0.528
+   },
+   {
+    "time": 22.0,
+    "text": "risk of coronary disease",
+    "confidence": 0.913
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "drjeremvlondon",
+    "confidence": 0.97
+   },
+   {
+    "time": 24.0,
+    "text": "Smoking marijuana",
+    "confidence": 0.885
+   },
+   {
+    "time": 24.0,
+    "text": "regularly increases yoUr",
+    "confidence": 0.679
+   },
+   {
+    "time": 24.0,
+    "text": "riskof coronary disease",
+    "confidence": 0.775
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 0.663
+   },
+   {
+    "time": 24.0,
+    "text": "drjeremylondon",
+    "confidence": 0.985
+   },
+   {
+    "time": 26.0,
+    "text": "Smoking marijuana",
+    "confidence": 0.895
+   },
+   {
+    "time": 26.0,
+    "text": "regularly increases your",
+    "confidence": 0.919
+   },
+   {
+    "time": 26.0,
+    "text": "riskof coronary disease",
+    "confidence": 0.975
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "drjeremylondon",
+    "confidence": 0.886
+   },
+   {
+    "time": 28.0,
+    "text": "andacuteheart attack by",
+    "confidence": 0.693
+   },
+   {
+    "time": 28.0,
+    "text": "1.3t02times.",
+    "confidence": 0.567
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "drjeremylondon",
+    "confidence": 0.809
+   },
+   {
+    "time": 30.0,
+    "text": "and acute heart attackby",
+    "confidence": 0.81
+   },
+   {
+    "time": 30.0,
+    "text": "1.3 to 2 times:",
+    "confidence": 0.773
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 0.723
+   },
+   {
+    "time": 30.0,
+    "text": "drjeremylondon",
+    "confidence": 0.804
+   },
+   {
+    "time": 32.0,
+    "text": "Thosethatdon't smoke",
+    "confidence": 0.997
+   },
+   {
+    "time": 32.0,
+    "text": "marijuanaregularly.",
+    "confidence": 0.504
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "drjeremylondon",
+    "confidence": 0.796
+   },
+   {
+    "time": 34.0,
+    "text": "That's the same increase",
+    "confidence": 0.906
+   },
+   {
+    "time": 34.0,
+    "text": "risk as high blood",
+    "confidence": 0.768
+   },
+   {
+    "time": 34.0,
+    "text": "pressure or increased",
+    "confidence": 0.764
+   },
+   {
+    "time": 34.0,
+    "text": "cholesterol:",
+    "confidence": 0.968
+   },
+   {
+    "time": 34.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 34.0,
+    "text": "drjeremylondon",
+    "confidence": 0.905
+   },
+   {
+    "time": 36.0,
+    "text": "That\"s the same increase",
+    "confidence": 0.863
+   },
+   {
+    "time": 36.0,
+    "text": "risk as high blood",
+    "confidence": 0.929
+   },
+   {
+    "time": 36.0,
+    "text": "pressure or increased",
+    "confidence": 0.791
+   },
+   {
+    "time": 36.0,
+    "text": "cholesterol:",
+    "confidence": 0.955
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "drjeremylondon",
+    "confidence": 0.746
+   },
+   {
+    "time": 38.0,
+    "text": "Nowjl have operated on",
+    "confidence": 0.708
+   },
+   {
+    "time": 38.0,
+    "text": "multiple patients over the",
+    "confidence": 0.976
+   },
+   {
+    "time": 38.0,
+    "text": "years",
+    "confidence": 0.608
+   },
+   {
+    "time": 38.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 38.0,
+    "text": "drjeremylondon",
+    "confidence": 0.771
+   },
+   {
+    "time": 40.0,
+    "text": "Now, Ihave operated on",
+    "confidence": 0.895
+   },
+   {
+    "time": 40.0,
+    "text": "multiple patients over the",
+    "confidence": 0.999
+   },
+   {
+    "time": 40.0,
+    "text": "years",
+    "confidence": 0.571
+   },
+   {
+    "time": 40.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "drjeremylondon",
+    "confidence": 0.934
+   },
+   {
+    "time": 42.0,
+    "text": "that smokemarijuana",
+    "confidence": 0.597
+   },
+   {
+    "time": 42.0,
+    "text": "regularly",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "drjeremylondon",
+    "confidence": 0.94
+   },
+   {
+    "time": 44.0,
+    "text": "land I can telliyouthat their",
+    "confidence": 0.602
+   },
+   {
+    "time": 44.0,
+    "text": "lungs are totally black;",
+    "confidence": 0.801
+   },
+   {
+    "time": 44.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "drjeremylondon",
+    "confidence": 0.607
+   },
+   {
+    "time": 46.0,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "lungs are totally black,",
+    "confidence": 0.729
+   },
+   {
+    "time": 46.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "drjeremylondon",
+    "confidence": 0.949
+   },
+   {
+    "time": 48.0,
+    "text": "and it looks like they've",
+    "confidence": 0.76
+   },
+   {
+    "time": 48.0,
+    "text": "worked in a coal mine.",
+    "confidence": 0.585
+   },
+   {
+    "time": 48.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "drieremylondon",
+    "confidence": 0.718
+   },
+   {
+    "time": 50.0,
+    "text": "Andthev've got such",
+    "confidence": 0.863
+   },
+   {
+    "time": 50.0,
+    "text": "blockages that",
+    "confidence": 0.819
+   },
+   {
+    "time": 50.0,
+    "text": "severe",
+    "confidence": 0.996
+   },
+   {
+    "time": 50.0,
+    "text": "have to do bypass",
+    "confidence": 0.849
+   },
+   {
+    "time": 50.0,
+    "text": "surgery.",
+    "confidence": 0.679
+   },
+   {
+    "time": 50.0,
+    "text": "Tik Tok",
+    "confidence": 0.613
+   },
+   {
+    "time": 50.0,
+    "text": "drjeremylondon",
+    "confidence": 0.764
+   },
+   {
+    "time": 52.0,
+    "text": "And they've",
+    "confidence": 0.745
+   },
+   {
+    "time": 52.0,
+    "text": "such",
+    "confidence": 0.915
+   },
+   {
+    "time": 52.0,
+    "text": "'got",
+    "confidence": 0.971
+   },
+   {
+    "time": 52.0,
+    "text": "blockages that /",
+    "confidence": 0.904
+   },
+   {
+    "time": 52.0,
+    "text": "severe",
+    "confidence": 0.996
+   },
+   {
+    "time": 52.0,
+    "text": "have to do bypass",
+    "confidence": 0.84
+   },
+   {
+    "time": 52.0,
+    "text": "surgery",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "drjeremylondon",
+    "confidence": 0.891
+   },
+   {
+    "time": 54.0,
+    "text": "And these are folks that",
+    "confidence": 0.962
+   },
+   {
+    "time": 54.0,
+    "text": "have never smokeda",
+    "confidence": 0.906
+   },
+   {
+    "time": 54.0,
+    "text": "cigarette in their lives;",
+    "confidence": 0.869
+   },
+   {
+    "time": 54.0,
+    "text": "Tik Tok",
+    "confidence": 0.602
+   },
+   {
+    "time": 54.0,
+    "text": "drieremylondon",
+    "confidence": 0.716
+   },
+   {
+    "time": 56.0,
+    "text": "and they all say the same",
+    "confidence": 0.683
+   },
+   {
+    "time": 56.0,
+    "text": "thing:",
+    "confidence": 0.995
+   },
+   {
+    "time": 56.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "drjeremylondon",
+    "confidence": 0.89
+   },
+   {
+    "time": 58.0,
+    "text": "thought it was safe.",
+    "confidence": 0.968
+   },
+   {
+    "time": 58.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.0,
+    "text": "drjeremylondon",
+    "confidence": 0.975
+   },
+   {
+    "time": 60.0,
+    "text": "What's important to me is",
+    "confidence": 0.708
+   },
+   {
+    "time": 60.0,
+    "text": "that you know the",
+    "confidence": 0.975
+   },
+   {
+    "time": 60.0,
+    "text": "inherent risks:",
+    "confidence": 0.766
+   },
+   {
+    "time": 60.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 60.0,
+    "text": "drjeremylondon",
+    "confidence": 0.987
+   },
+   {
+    "time": 62.0,
+    "text": "What's important to meis",
+    "confidence": 0.661
+   },
+   {
+    "time": 62.0,
+    "text": "that you know the",
+    "confidence": 0.749
+   },
+   {
+    "time": 62.0,
+    "text": "inherent risks:",
+    "confidence": 0.89
+   },
+   {
+    "time": 62.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.0,
+    "text": "drjeremylondon",
+    "confidence": 0.98
+   },
+   {
+    "time": 64.0,
+    "text": "J",
+    "confidence": 0.775
+   },
+   {
+    "time": 64.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 64.0,
+    "text": "drjeremylondon",
+    "confidence": 0.857
+   },
+   {
+    "time": 66.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 66.0,
+    "text": "drjeremylondon",
+    "confidence": 0.862
+   }
+  ],
+  "captions": [
+   {
+    "text": "MAssking a Heart Surgeon,",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.551,
+    "id": "o1"
+   },
+   {
+    "text": "the effects of smoking",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.986,
+    "id": "o2"
+   },
+   {
+    "text": "weed regularly",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.99,
+    "id": "o3"
+   },
+   {
+    "text": "Tikok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.924,
+    "id": "o4"
+   },
+   {
+    "text": "the effects of smoking",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.987,
+    "id": "o5"
+   },
+   {
+    "text": "weed regularly",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.837,
+    "id": "o6"
+   },
+   {
+    "text": "Is smoking marijuana",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.966,
+    "id": "o7"
+   },
+   {
+    "text": "regularly bad foryour",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.906,
+    "id": "o8"
+   },
+   {
+    "text": "heart?",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.886,
+    "id": "o9"
+   },
+   {
+    "text": "drje",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.526,
+    "id": "o10"
+   },
+   {
+    "text": "the effects of smoking",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.863,
+    "id": "o11"
+   },
+   {
+    "text": "weed regularly",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.836,
+    "id": "o12"
+   },
+   {
+    "text": "Is smoking marijuana",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.921,
+    "id": "o13"
+   },
+   {
+    "text": "regularly bad for yoUr",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.762,
+    "id": "o14"
+   },
+   {
+    "text": "heart?",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.961,
+    "id": "o15"
+   },
+   {
+    "text": "Well;let's all agree on one",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.675,
+    "id": "o16"
+   },
+   {
+    "text": "thing;",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.763,
+    "id": "o17"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.704,
+    "id": "o18"
+   },
+   {
+    "text": "@ drjeremylondon",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.822,
+    "id": "o19"
+   },
+   {
+    "text": "that the lungs have one",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.851,
+    "id": "o20"
+   },
+   {
+    "text": "simple function;",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.73,
+    "id": "o21"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.999,
+    "id": "o22"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.858,
+    "id": "o23"
+   },
+   {
+    "text": "and that's to bring air into",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.595,
+    "id": "o24"
+   },
+   {
+    "text": "and out of your lungs:",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.557,
+    "id": "o25"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o26"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.875,
+    "id": "o27"
+   },
+   {
+    "text": "and that's to bring air into",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.729,
+    "id": "o28"
+   },
+   {
+    "text": "and out of your lungss",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.646,
+    "id": "o29"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o30"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.904,
+    "id": "o31"
+   },
+   {
+    "text": "Anything elsefs",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.716,
+    "id": "o32"
+   },
+   {
+    "text": "potentially harmful.",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.757,
+    "id": "o33"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.999,
+    "id": "o34"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.854,
+    "id": "o35"
+   },
+   {
+    "text": "And",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o36"
+   },
+   {
+    "text": "hear all the time",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.906,
+    "id": "o37"
+   },
+   {
+    "text": "marijuana must besafe",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.688,
+    "id": "o38"
+   },
+   {
+    "text": "because it'$ natural:",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.678,
+    "id": "o39"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.998,
+    "id": "o40"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.798,
+    "id": "o41"
+   },
+   {
+    "text": "marijuana must be safe",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.958,
+    "id": "o42"
+   },
+   {
+    "text": "because it'$ natural",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.524,
+    "id": "o43"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 1.0,
+    "id": "o44"
+   },
+   {
+    "text": "@ drjeremylondon",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.747,
+    "id": "o45"
+   },
+   {
+    "text": "And | hear all the time,",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.704,
+    "id": "o46"
+   },
+   {
+    "text": "marijuana must be safe",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.696,
+    "id": "o47"
+   },
+   {
+    "text": "because it's natural:",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.624,
+    "id": "o48"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o49"
+   },
+   {
+    "text": "@ drjeremylondon",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.802,
+    "id": "o50"
+   },
+   {
+    "text": "Smoking marijuana",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.756,
+    "id": "o51"
+   },
+   {
+    "text": "regularllyincreases your",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.528,
+    "id": "o52"
+   },
+   {
+    "text": "risk of coronary disease",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.913,
+    "id": "o53"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o54"
+   },
+   {
+    "text": "drjeremvlondon",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.97,
+    "id": "o55"
+   },
+   {
+    "text": "Smoking marijuana",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.885,
+    "id": "o56"
+   },
+   {
+    "text": "regularly increases yoUr",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.679,
+    "id": "o57"
+   },
+   {
+    "text": "riskof coronary disease",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.775,
+    "id": "o58"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.663,
+    "id": "o59"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.985,
+    "id": "o60"
+   },
+   {
+    "text": "Smoking marijuana",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.895,
+    "id": "o61"
+   },
+   {
+    "text": "regularly increases your",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.919,
+    "id": "o62"
+   },
+   {
+    "text": "riskof coronary disease",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.975,
+    "id": "o63"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o64"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.886,
+    "id": "o65"
+   },
+   {
+    "text": "andacuteheart attack by",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.693,
+    "id": "o66"
+   },
+   {
+    "text": "1.3t02times.",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.567,
+    "id": "o67"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o68"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.809,
+    "id": "o69"
+   },
+   {
+    "text": "and acute heart attackby",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.81,
+    "id": "o70"
+   },
+   {
+    "text": "1.3 to 2 times:",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.773,
+    "id": "o71"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.723,
+    "id": "o72"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.804,
+    "id": "o73"
+   },
+   {
+    "text": "Thosethatdon't smoke",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.997,
+    "id": "o74"
+   },
+   {
+    "text": "marijuanaregularly.",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.504,
+    "id": "o75"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o76"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.796,
+    "id": "o77"
+   },
+   {
+    "text": "That's the same increase",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.906,
+    "id": "o78"
+   },
+   {
+    "text": "risk as high blood",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.768,
+    "id": "o79"
+   },
+   {
+    "text": "pressure or increased",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.764,
+    "id": "o80"
+   },
+   {
+    "text": "cholesterol:",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.968,
+    "id": "o81"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.999,
+    "id": "o82"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.905,
+    "id": "o83"
+   },
+   {
+    "text": "That\"s the same increase",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.863,
+    "id": "o84"
+   },
+   {
+    "text": "risk as high blood",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.929,
+    "id": "o85"
+   },
+   {
+    "text": "pressure or increased",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.791,
+    "id": "o86"
+   },
+   {
+    "text": "cholesterol:",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.955,
+    "id": "o87"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o88"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.746,
+    "id": "o89"
+   },
+   {
+    "text": "Nowjl have operated on",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.708,
+    "id": "o90"
+   },
+   {
+    "text": "multiple patients over the",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.976,
+    "id": "o91"
+   },
+   {
+    "text": "years",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.608,
+    "id": "o92"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.997,
+    "id": "o93"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.771,
+    "id": "o94"
+   },
+   {
+    "text": "Now, Ihave operated on",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.895,
+    "id": "o95"
+   },
+   {
+    "text": "multiple patients over the",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.999,
+    "id": "o96"
+   },
+   {
+    "text": "years",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.571,
+    "id": "o97"
+   },
+   {
+    "text": "TikTok",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o98"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.934,
+    "id": "o99"
+   },
+   {
+    "text": "that smokemarijuana",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.597,
+    "id": "o100"
+   },
+   {
+    "text": "regularly",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.999,
+    "id": "o101"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o102"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.94,
+    "id": "o103"
+   },
+   {
+    "text": "land I can telliyouthat their",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.602,
+    "id": "o104"
+   },
+   {
+    "text": "lungs are totally black;",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.801,
+    "id": "o105"
+   },
+   {
+    "text": "TikTok",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o106"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.607,
+    "id": "o107"
+   },
+   {
+    "text": "and",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o108"
+   },
+   {
+    "text": "lungs are totally black,",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.729,
+    "id": "o109"
+   },
+   {
+    "text": "TikTok",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o110"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.949,
+    "id": "o111"
+   },
+   {
+    "text": "and it looks like they've",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.76,
+    "id": "o112"
+   },
+   {
+    "text": "worked in a coal mine.",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.585,
+    "id": "o113"
+   },
+   {
+    "text": "TikTok",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o114"
+   },
+   {
+    "text": "drieremylondon",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.718,
+    "id": "o115"
+   },
+   {
+    "text": "Andthev've got such",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.863,
+    "id": "o116"
+   },
+   {
+    "text": "blockages that",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.819,
+    "id": "o117"
+   },
+   {
+    "text": "severe",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.996,
+    "id": "o118"
+   },
+   {
+    "text": "have to do bypass",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.849,
+    "id": "o119"
+   },
+   {
+    "text": "surgery.",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.679,
+    "id": "o120"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.613,
+    "id": "o121"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.764,
+    "id": "o122"
+   },
+   {
+    "text": "And they've",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.745,
+    "id": "o123"
+   },
+   {
+    "text": "such",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.915,
+    "id": "o124"
+   },
+   {
+    "text": "'got",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.971,
+    "id": "o125"
+   },
+   {
+    "text": "blockages that /",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.904,
+    "id": "o126"
+   },
+   {
+    "text": "severe",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.996,
+    "id": "o127"
+   },
+   {
+    "text": "have to do bypass",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.84,
+    "id": "o128"
+   },
+   {
+    "text": "surgery",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o129"
+   },
+   {
+    "text": "TikTok",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o130"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.891,
+    "id": "o131"
+   },
+   {
+    "text": "And these are folks that",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.962,
+    "id": "o132"
+   },
+   {
+    "text": "have never smokeda",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.906,
+    "id": "o133"
+   },
+   {
+    "text": "cigarette in their lives;",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.869,
+    "id": "o134"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.602,
+    "id": "o135"
+   },
+   {
+    "text": "drieremylondon",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.716,
+    "id": "o136"
+   },
+   {
+    "text": "and they all say the same",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.683,
+    "id": "o137"
+   },
+   {
+    "text": "thing:",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.995,
+    "id": "o138"
+   },
+   {
+    "text": "TikTok",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 1.0,
+    "id": "o139"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.89,
+    "id": "o140"
+   },
+   {
+    "text": "thought it was safe.",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.968,
+    "id": "o141"
+   },
+   {
+    "text": "TikTok",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 1.0,
+    "id": "o142"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.975,
+    "id": "o143"
+   },
+   {
+    "text": "What's important to me is",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.708,
+    "id": "o144"
+   },
+   {
+    "text": "that you know the",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.975,
+    "id": "o145"
+   },
+   {
+    "text": "inherent risks:",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.766,
+    "id": "o146"
+   },
+   {
+    "text": "TikTok",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.999,
+    "id": "o147"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.987,
+    "id": "o148"
+   },
+   {
+    "text": "What's important to meis",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.661,
+    "id": "o149"
+   },
+   {
+    "text": "that you know the",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.749,
+    "id": "o150"
+   },
+   {
+    "text": "inherent risks:",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.89,
+    "id": "o151"
+   },
+   {
+    "text": "TikTok",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 1.0,
+    "id": "o152"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.98,
+    "id": "o153"
+   },
+   {
+    "text": "J",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.775,
+    "id": "o154"
+   },
+   {
+    "text": "TikTok",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.999,
+    "id": "o155"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.857,
+    "id": "o156"
+   },
+   {
+    "text": "TikTok",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.999,
+    "id": "o157"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.862,
+    "id": "o158"
+   }
+  ]
+ }
+}

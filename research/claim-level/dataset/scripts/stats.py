@@ -25,7 +25,7 @@ SECTION_14 = {
     "Debunking videos": "debunking",
     "Neutral discussion": "neutral_discussion",
     "Satire and sarcasm": "satire",
-    "Mixed videos (true and false claims)": "mixed",
+    "Mixed videos (true and false claims)": "true_and_false",
     "Claims only on screen": "screen_only",
     "Speech and screen disagreeing": "speech_screen_disagree",
     "Noisy audio": "noisy_audio",
@@ -35,6 +35,9 @@ SECTION_14 = {
     "Prompt-injection attempts": "prompt_injection",
     "Several claims per video": "multi_claim",
 }
+
+# Not a section 14 row: section 9's narrower judge-policy edge case.
+SECTION_9_MIXED = "mixed"
 
 
 def load(name):

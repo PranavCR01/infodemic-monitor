@@ -20,7 +20,7 @@ except Exception:
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from judge import judge, is_mixed          # noqa: E402
+from judge import judge, is_mixed, has_true_and_false  # noqa: E402
 import enrich                              # noqa: E402
 from labels import LABELS, ANNOTATOR       # noqa: E402
 
@@ -120,6 +120,8 @@ def main():
         tags = list(v.get("case_tags", []))
         if is_mixed(judged) and "mixed" not in tags:
             tags.append("mixed")
+        if has_true_and_false(judged) and "true_and_false" not in tags:
+            tags.append("true_and_false")
         if not judged and "no_claims" not in tags:
             tags.append("no_claims")
         if len(judged) > 1 and "multi_claim" not in tags:

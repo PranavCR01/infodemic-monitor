@@ -28,8 +28,8 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from judge import (judge, is_mixed, VERDICTS, STANCES,  # noqa: E402
-                   VIDEO_LABELS)
+from judge import (judge, is_mixed, has_true_and_false,  # noqa: E402
+                   VERDICTS, STANCES, VIDEO_LABELS)
 
 DATASET = Path(__file__).resolve().parents[1]
 VIDEOS_CSV = DATASET / "videos.csv"
@@ -49,6 +49,7 @@ CASE_TAGS = {
     "noisy_audio", "other_language", "multi_claim", "missing_evidence",
     "prompt_injection", "clearly_false", "accurate", "neutral_discussion",
     "speech_screen_disagree", "no_claims", "single_claim",
+    "true_and_false",
 }
 
 PMID_RE = re.compile(r"^PMID:(\d{4,9})$")
@@ -236,6 +237,9 @@ def main():
         if is_mixed(cs) and "mixed" not in split_multi(v["case_tags"]):
             err("%s: endorses one falsehood and refutes another but is not "
                 "tagged 'mixed'" % vid)
+        if has_true_and_false(cs) and                 "true_and_false" not in split_multi(v["case_tags"]):
+            err("%s: carries both supported and contradicted claims but is "
+                "not tagged 'true_and_false'" % vid)
         if not cs and "no_claims" not in split_multi(v["case_tags"]):
             warn("%s: has no claims; consider the 'no_claims' tag" % vid)
 

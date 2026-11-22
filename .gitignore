@@ -53,3 +53,6 @@ research/claim-level/dataset/videos/
 
 # Archives (video bundles) — never commit
 *.zip
+
+# Per-stage extraction cache: intermediate, merged into transcripts/
+research/claim-level/dataset/.cache/
