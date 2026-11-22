@@ -5,15 +5,23 @@ constructed, guessed, or pattern-filled. Where an article gives no playable
 platform URL, video_url is left EMPTY and the notes say so -- the row is still
 useful as a lead, but it is not a downloadable video.
 
-Appends and de-duplicates on video_url, so it is safe to re-run and safe to use
-incrementally across sessions. Rows with an empty video_url are always appended
-(they cannot be de-duplicated), so add them once.
+Rows come from two places: ROWS below (the first-pass batch, kept for
+provenance) and every candidate_batches/*.jsonl file (one JSON object per line,
+same keys as COLS). Add a new batch by dropping a new .jsonl file there.
+
+De-duplicates on video_url (query string and trailing slash ignored). Rows with
+an empty video_url are de-duplicated on (fact_check_url, dataset_video_id in
+notes, or claim_summary). Rows whose video_url or creator handle is already in
+the 82-video set (videos.csv / video_index.csv) are rejected. Safe to re-run.
 
 Run:  .\\.venv\\Scripts\\python.exe research\\claim-level\\dataset\\scripts\\add_candidates.py
 """
 import csv
+import glob
 import io
+import json
 import os
+import re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(os.path.dirname(HERE), "candidates.csv")
@@ -144,26 +152,81 @@ ROWS = [
 ]
 
 
+DATASET = os.path.dirname(HERE)
+BATCHES = os.path.join(DATASET, "candidate_batches")
+
+
+def norm_url(u):
+    return u.strip().split("?")[0].split("#")[0].rstrip("/").lower()
+
+
+def key(r):
+    u = r["video_url"].strip()
+    if u:
+        return ("url", norm_url(u))
+    m = re.search(r"dataset_video_id=([\w-]+)", r.get("notes", ""))
+    return ("lead", r["fact_check_url"].strip().rstrip("/"),
+            m.group(1) if m else r["claim_summary"].strip().lower())
+
+
+def golden_set():
+    """URLs and creator handles already in the 82-video golden set."""
+    urls, handles = set(), set()
+    for name, col in (("videos.csv", "source_url"),
+                      ("video_index.csv", "creator_handle")):
+        path = os.path.join(DATASET, name)
+        if not os.path.exists(path):
+            continue
+        with io.open(path, encoding="utf-8-sig", newline="") as f:
+            for r in csv.DictReader(f):
+                v = (r.get(col) or "").strip()
+                if v and col == "source_url":
+                    urls.add(norm_url(v))
+                elif v:
+                    handles.add(v.lstrip("@").lower())
+    return urls, handles
+
+
+def batch_rows():
+    rows = list(ROWS)
+    for path in sorted(glob.glob(os.path.join(BATCHES, "*.jsonl"))):
+        with io.open(path, encoding="utf-8") as f:
+            for n, line in enumerate(f, 1):
+                if line.strip():
+                    try:
+                        rows.append(json.loads(line))
+                    except ValueError as e:
+                        raise SystemExit("%s:%d: %s" % (path, n, e))
+    return rows
+
+
 def main():
     existing, seen = [], set()
     if os.path.exists(OUT):
         with io.open(OUT, encoding="utf-8-sig", newline="") as f:
             for r in csv.DictReader(f):
-                existing.append(r)
-                u = r["video_url"].strip()
-                if u:
-                    seen.add(u)
-    added = 0
-    for r in ROWS:
-        u = r["video_url"].strip()
-        if u and u in seen:
-            continue
+                existing.append({c: r.get(c, "") for c in COLS})
+                seen.add(key(r))
+    gold_urls, gold_handles = golden_set()
+    added = rejected = 0
+    for r in batch_rows():
         missing = [c for c in COLS if c not in r]
         if missing:
-            raise SystemExit("row %r missing columns %s" % (u, missing))
-        existing.append({c: r.get(c, "") for c in COLS})
-        if u:
-            seen.add(u)
+            raise SystemExit("row %r missing columns %s"
+                             % (r.get("video_url"), missing))
+        r = {c: (r[c] if r[c] is not None else "") for c in COLS}
+        u = r["video_url"].strip()
+        h = re.search(r"/@?([\w.\-]+)/(?:video|reel|p)/", u)
+        if u and (norm_url(u) in gold_urls or
+                  (h and h.group(1).lower() in gold_handles)):
+            print("rejected (already in the golden set):", u)
+            rejected += 1
+            continue
+        k = key(r)
+        if k in seen:
+            continue
+        existing.append(r)
+        seen.add(k)
         added += 1
     existing.sort(key=lambda r: (r["language"], r["fact_checker"],
                                  r["fact_check_url"]))
@@ -174,7 +237,7 @@ def main():
 
     from collections import Counter
     with_url = sum(1 for r in existing if r["video_url"].strip())
-    print("added %d, total %d -> %s" % (added, len(existing),
+    print("added %d, rejected %d, total %d -> %s" % (added, rejected, len(existing),
                                         os.path.basename(OUT)))
     print("rows with a usable video_url: %d; leads without one: %d"
           % (with_url, len(existing) - with_url))
