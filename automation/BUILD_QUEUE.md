@@ -20,7 +20,7 @@ starts the next ready task, and records progress here.
 | T07 | Critic node and bounded retrieval loop | #34 | 8 | T06 | todo | | | | |
 | T08 | Judge node and mixed-video policy | #35 | 9 | T04, T06 | todo | | | | |
 | T09 | Deterministic validation and human-review routing | #36 | 10, 11, 12 | T08 | todo | | | | |
-| T10 | Guardrails: prompt injection, tool limits, adversarial tests | #37 | 15 | T02 | todo | | | | |
+| T10 | Guardrails: prompt injection, tool limits, adversarial tests | #37 | 15 | T02 | in_progress | session_013cWxq2Ly4NrwzhcpZMfmkx | 2026-11-22 00:04 | | |
 | T11 | Integrate the graph into run_pipeline behind a flag, with fallback | #38 | 4 | T02–T10 | todo | | | | Must keep the single-call path working when the flag is off |
 | T12 | Offline library fallback (OCR, embeddings, pgvector, hybrid search) | new | 6 | T03, T05 | todo | | | | Library ingestion tested on generated sample PDFs only |
 | T13 | Retrieval MCP server | new | 6, 15 | T03, T05, T12 | todo | | | | |
@@ -31,6 +31,7 @@ starts the next ready task, and records progress here.
 
 Newest first. One line per event: date, task, what happened.
 
+- 2026-11-22 00:04 UTC — T10 started in session session_013cWxq2Ly4NrwzhcpZMfmkx.
 - 2026-11-22 UTC — T01 done: PR #50 squash-merged into langgraph-build (144 passed, 1 skipped). T14 still blocked on API keys and the golden label set.
 - 2026-11-22 00:02 UTC — T04 started in session session_013cWxpyUeq4YuAXTpZfndft.
 - 2026-11-22 00:02 UTC — T03 started in session session_013cWxpzsTJuP1VYHqJT9oWT.
