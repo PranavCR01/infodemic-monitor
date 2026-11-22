@@ -186,6 +186,13 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-22** (T01, automated): Built the evaluation framework (`backend/app/evaluation/`:
+  dataset loader with versions, hashes, by-video splits, hard-case coverage and Cohen's kappa;
+  per-step metrics; tracked failure modes; run records; baseline comparison) and the
+  config-driven model router with retry/fallback (`backend/app/core/routing/`,
+  `backend/config/routing.yaml`), plus a per-step model-selection harness. Everything is tested
+  with mocks; no paid runs. Next: paid baseline run and routing decision once API keys and
+  labelled data exist (T14).
 - **2026-11-22**: T02 (#29) LangGraph skeleton built by the automated build: typed,
   versioned `PipelineState`; 16 stub nodes; conditional edges for no-claims, critic
   decisions and the review policy; run-time field-ownership check; InMemorySaver and
@@ -195,13 +202,6 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
 - **2026-10-28**: Moved the track to the LangGraph architecture. Added
   `docs/architecture.md`, opened #29–#39, closed the superseded issues, and rewrote this
   file (#43, #44).
-- **2026-11-22** (T01, automated): Built the evaluation framework (`backend/app/evaluation/`:
-  dataset loader with versions, hashes, by-video splits, hard-case coverage and Cohen's kappa;
-  per-step metrics; tracked failure modes; run records; baseline comparison) and the
-  config-driven model router with retry/fallback (`backend/app/core/routing/`,
-  `backend/config/routing.yaml`), plus a per-step model-selection harness. Everything is tested
-  with mocks; no paid runs. Next: paid baseline run and routing decision once API keys and
-  labelled data exist (T14).
 
 ## 11. PR Requirements
 

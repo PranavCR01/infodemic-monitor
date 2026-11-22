@@ -53,3 +53,7 @@ test = [
 testpaths = ["app/tests"]
 python_files = ["test_*.py"]
 python_functions = ["test_*"]
+
+# Only `app` is a Python package; `config/` holds YAML (routing table, benchmarks).
+[tool.setuptools.packages.find]
+include = ["app*"]
