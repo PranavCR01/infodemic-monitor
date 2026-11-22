@@ -1,0 +1,6 @@
+video_id,claim_id,claim_text,ground_truth_label,speaker_stance,evidence_source,notes
+v01,c1,Drinking hot water cures the flu,MISINFO,ENDORSES,CDC,
+v02,c1,Garlic stops colds,MISINFO,REFUTES,Cochrane,
+v03,c1,Vitamin D supports bone health in older adults,NO_MISINFO,ENDORSES,NIH,
+v03,c2,Regular exercise lowers blood pressure,NO_MISINFO,ENDORSES,AHA,
+v04,c1,Herb X boosts immunity by 300 percent,MISINFO,ENDORSES,,

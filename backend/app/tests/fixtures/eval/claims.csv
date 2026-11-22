@@ -1,0 +1,8 @@
+video_id,claim_id,claim_text,ground_truth_label,speaker_stance,evidence_source,source,relevant_pmids,notes
+v01,c1,Drinking hot water cures the flu,MISINFO,ENDORSES,CDC flu treatment page,speech,1001;1002,
+v02,c1,Garlic stops colds,MISINFO,REFUTES,Cochrane review of garlic for colds,both,2001,
+v03,c1,Vitamin D supports bone health in older adults,NO_MISINFO,ENDORSES,NIH ODS fact sheet,speech,3001,
+v03,c2,Regular exercise lowers blood pressure,NO_MISINFO,ENDORSES,AHA guideline,screen,3002,
+v04,c1,Herb X boosts immunity by 300 percent,CANNOT_RECOGNIZE,ENDORSES,no study found,screen,,
+v05,c1,Vaccines are tested in clinical trials,NO_MISINFO,ENDORSES,FDA,speech,5001,
+v05,c2,Vaccines cause autism,MISINFO,ENDORSES,Taylor 2014 meta-analysis,speech,5002,

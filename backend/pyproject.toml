@@ -31,6 +31,8 @@ dependencies = [
   # Utilities
   "requests>=2.31",
   "tenacity>=8.2",
+  # Config (routing table, benchmark runs)
+  "PyYAML>=6.0",
 ]
 
 [project.optional-dependencies]

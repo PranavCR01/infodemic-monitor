@@ -1,0 +1,33 @@
+# Model routing table (design doc section 13).
+#
+# Every LLM step reads its provider, model and prompt version from this file;
+# node code never names a model. Changing a model is a config change, and any
+# change here must be evaluated against the baseline before it ships (section 14).
+#
+# STATUS: provisional. These are the design's *starting choices by task type*,
+# not measured winners. The routing decision (app.evaluation.selection) waits
+# for API keys and the per-step labelled test sets. Pinned ids only: never
+# "latest" or a floating alias.
+version: routing_v1
+status: provisional
+
+routing:
+  extract_claims:    {provider: anthropic, model: claude-haiku-5-5,  prompt: extract_v1}   # small, fast, structured output
+  analyze_stance:    {provider: anthropic, model: claude-sonnet-5-5, prompt: stance_v1}    # small or medium
+  # plan_search is rules first (section 6); a model is only added if the rules
+  # prove insufficient, so it is deliberately absent from this table.
+  verify_claims:     {provider: anthropic, model: claude-opus-5-5,   prompt: verify_v1}    # strong reasoning
+  critique:          {provider: openai,    model: gpt-4o-2024-08-06, prompt: critic_v1}    # different provider from the verifier
+  judge_explanation: {provider: anthropic, model: claude-sonnet-5-5, prompt: explain_v1}   # writing quality; label already decided
+  fallback:
+    on: [timeout, 5xx]
+    retries: 1          # retries on the primary before falling back
+    use: {provider: openai, model: gpt-4o-2024-08-06}
+
+# USD per million tokens, used to report cost per video. Unpriced models report
+# cost as unknown rather than zero. Check against the providers' price lists
+# before a paid run.
+pricing:
+  claude-haiku-5-5:  {input: 0.10, output: 0.50}
+  claude-sonnet-5-5: {input: 2.00, output: 10.00}
+  claude-opus-5-5:   {input: 4.00, output: 20.00}

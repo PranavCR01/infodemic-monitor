@@ -48,3 +48,6 @@ research/claim-level/dataset/videos/
 *.mov
 *.webm
 *.mkv
+
+# Evaluation run outputs (predictions, traces)
+backend/eval_runs/
