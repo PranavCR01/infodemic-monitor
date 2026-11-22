@@ -138,6 +138,10 @@ class StanceResult(_Record):
     stance_segment_ids: list[str]
     rationale: str = ""
     confidence: Optional[float] = None
+    # Which model and prompt produced this stance (§13). Optional and additive, so
+    # checkpoints written before T04 still load; ``None`` for stub or fallback results.
+    model: Optional[str] = None
+    prompt_version: Optional[str] = None
 
 
 class EvidenceRecord(_Record):
