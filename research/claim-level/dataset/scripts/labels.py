@@ -5002,4 +5002,80 @@ LABELS = [
             },
         ],
     },
+    {
+        "video_id": "v18",
+        "topic": "mental health / ADHD",
+        "case_tags": ["screen_only", "clearly_false"],
+        "confidence": "high",
+        "notes": "THE SCREEN-ONLY CASE. Fifty-six seconds with no speech at "
+                 "all -- whisper returned zero segments -- and the entire "
+                 "content is on-screen text: 'How to know if you have ADHD:' "
+                 "followed by six everyday experiences. Without OCR this video "
+                 "is unlabellable and would come out CANNOT_RECOGNIZE with the "
+                 "reason 'no readable content'; with OCR it is a well-evidenced "
+                 "MISINFO. It is the single strongest argument in the bundle "
+                 "for OCR being on by default rather than triggered by low "
+                 "transcript confidence, since there is no transcript "
+                 "confidence to trigger on. Note also that whisper reported "
+                 "language English at probability 0.44 on a silent video, "
+                 "which is a useful reminder not to trust that field as a "
+                 "gate. In the blind subset. Collectors filed it under "
+                 "MISINFO, which agrees.",
+        "claims": [
+            {
+                "text": "How to know if you have ADHD: ... Very indecisive",
+                "start": 10.0, "end": 14.0,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:39422639", "PMID:41889432", "PMID:30453134"],
+                "confidence": "high",
+                "notes": "The list's framing sentence is carried on this row. Each item is a separate diagnostic assertion, so the list is split per section 4 rather than kept as one compound claim; they share a verdict and evidence. Contradicted by the content analysis of TikTok #adhdtest videos, which found 46 of 50 (92%) misleading, by the study of diagnostic risk in ADHD social-media content, and by the European Consensus Statement, under which adult ADHD requires clinical assessment of persistent, cross-situational, impairing symptoms with childhood onset -- not a checklist of common experiences.",
+            },
+            {
+                "text": "How to know if you have ADHD: ... Forgetting why you walked in a r[oo]m",
+                "start": 16.0, "end": 20.0,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:39422639", "PMID:41889432", "PMID:30453134"],
+                "confidence": "medium",
+                "notes": "Nonspecific everyday experience presented as an ADHD indicator. Same evidence and reasoning as c1.",
+            },
+            {
+                "text": "How to know if you have ADHD: ... Reading a whole page and nothing goes in[,] so [you] have to read again",
+                "start": 24.0, "end": 28.0,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:39422639", "PMID:41889432", "PMID:30453134"],
+                "confidence": "medium",
+                "notes": "Nonspecific everyday experience presented as an ADHD indicator. Same evidence and reasoning as c1.",
+            },
+            {
+                "text": "How to know if you have ADHD: ... Random bursts of energy",
+                "start": 32.0, "end": 38.0,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:39422639", "PMID:41889432", "PMID:30453134"],
+                "confidence": "medium",
+                "notes": "Nonspecific everyday experience presented as an ADHD indicator. Same evidence and reasoning as c1.",
+            },
+            {
+                "text": "How to know if you have ADHD: ... Not sitting still until someone calls it [o]ut",
+                "start": 40.0, "end": 46.0,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:39422639", "PMID:41889432", "PMID:30453134"],
+                "confidence": "medium",
+                "notes": "Nonspecific everyday experience presented as an ADHD indicator. Same evidence and reasoning as c1.",
+            },
+            {
+                "text": "How to know if you have ADHD: ... Mood swings",
+                "start": 48.0, "end": 52.0,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:39422639", "PMID:41889432", "PMID:30453134"],
+                "confidence": "medium",
+                "notes": "Nonspecific everyday experience presented as an ADHD indicator. Same evidence and reasoning as c1.",
+            },
+        ],
+    },
 ]
