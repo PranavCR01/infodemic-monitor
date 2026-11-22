@@ -23,7 +23,7 @@ starts the next ready task, and records progress here.
 | T10 | Guardrails: prompt injection, tool limits, adversarial tests | #37 | 15 | T02 | done | session_013cWxq2Ly4NrwzhcpZMfmkx | 2026-11-22 00:04 | https://github.com/PranavCR01/infodemic-monitor/pull/53 | Simulated always-fooled model: graph 5/34 unsafe, baseline 23/34. Input limits built but not wired (T11). Judge-policy finding for T08 (QUOTES/UNCLEAR + CONTRADICTED gives NO_MISINFO). Held-out red-team set and real-model run (T14) left for people |
 | T11 | Integrate the graph into run_pipeline behind a flag, with fallback | #38 | 4 | T02–T10 | in_progress | session_013cWxpyExKRkmyakBC2CXtt | 2026-11-22 01:01 | | Must keep the single-call path working when the flag is off |
 | T12 | Offline library fallback (OCR, embeddings, pgvector, hybrid search) | new | 6 | T03, T05 | done | session_013cWxpyUoGG8c62ETqy3AJX | 2026-11-22 00:28 | https://github.com/PranavCR01/infodemic-monitor/pull/58 | Library ingestion tested on generated sample PDFs only (real OCRmyPDF/Tesseract; local Postgres + pgvector). Fallback off unless a library is injected (T11). Real-scan OCR comparison, MedCPT weights, Supabase pgvector + migration 0006 and the viewer left for a person (MULTI_AGENT §7j) |
-| T13 | Retrieval MCP server | new | 6, 15 | T03, T05, T12 | in_progress | session_013cWxq1buhzDtq2Ys6KF232 | 2026-11-22 00:54 | | |
+| T13 | Retrieval MCP server | new | 6, 15 | T03, T05, T12 | done | session_013cWxq1buhzDtq2Ys6KF232 | 2026-11-22 00:54 | https://github.com/PranavCR01/infodemic-monitor/pull/60 | `app/mcp_server` (MCP SDK 2.x MCPServer, Streamable HTTP): 5 tools, hashed per-client tokens, one scope per tool, Redis NCBI bucket + per-client shares, shared cache, schema contract test. Not deployed (Railway service, tokens, env left for a person). T11: pipeline should use `quota.pipeline_ncbi_limiter` for the shared NCBI bucket |
 | T14 | Evaluate the graph against the single-call baseline | #39 | 14 | T01, T11 | blocked | | | | Needs API keys and the golden label set (data/golden-label-set) |
 | T15 | Confidence calibration (Platt scaling) and the review rule | new | 11 | T14 | blocked | | | | Needs T14 results and human-verified labels |
 
@@ -31,6 +31,7 @@ starts the next ready task, and records progress here.
 
 Newest first. One line per event: date, task, what happened.
 
+- 2026-11-22 UTC — T13 done: PR #60 squash-merged into langgraph-build (727 passed, 7 skipped; Redis bucket tested on a local redis-server). Not deployed. Also resolved conflict markers T09 left in context/MULTI_AGENT.md (T09's section renamed 7k; T13 is 7l).
 - 2026-11-22 01:01 UTC — T11 started in session session_013cWxpyExKRkmyakBC2CXtt.
 - 2026-11-22 UTC — T09 done: PR #59 squash-merged into langgraph-build (673 passed, 8 skipped). T11 now waits only on T07–T10 (all done). Migration renumbered to 0007 (T12 took 0006); per-user isolation should be 0008.
 - 2026-11-22 00:54 UTC — T13 started in session session_013cWxq1buhzDtq2Ys6KF232.
