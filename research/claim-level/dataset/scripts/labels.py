@@ -5078,4 +5078,65 @@ LABELS = [
             },
         ],
     },
+    {
+        "video_id": "v38",
+        "topic": "vaccines / myocarditis",
+        "case_tags": ["screen_only", "accurate"],
+        "confidence": "medium",
+        "notes": "The second screen-only case, and the opposite of v18 in "
+                 "every way except modality. A 'PULSE POINTS' news card "
+                 "(@houseofshepherds) with no spoken content -- whisper "
+                 "returned a single segment containing the word 'you' -- and "
+                 "697 OCR detections carrying the whole story: the FDA "
+                 "requiring updated myocarditis and pericarditis warnings on "
+                 "the Pfizer and Moderna mRNA vaccines, particularly for young "
+                 "males. The reporting is accurate, so this is a NO_MISINFO "
+                 "screen-only video, where v18 is a MISINFO one. Having both "
+                 "matters: it means the modality track can ask whether OCR "
+                 "changes the label, not just whether it finds text. Also note "
+                 "that whisper again reported English at probability 0.42 on a "
+                 "video with no speech, as it did on v18. The card's later "
+                 "panels mention conspiracy theories, but OCR could not "
+                 "recover enough of that text to label anything from it. This "
+                 "collector's folder carried no label.",
+        "claims": [
+            {
+                "text": "The U.S. Food and Drug Administration (FDA) updated "
+                        "the warning labels on Pfizer and Moderna's COVID-19 "
+                        "mRNA vaccines to include new information regarding "
+                        "the risks of myocarditis and pericarditis",
+                "start": 4.0, "end": 50.0,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "A regulatory action, checkable against the FDA's own "
+                         "label documents rather than against the literature. "
+                         "The same evidence-source gap as v64's immunisation "
+                         "schedules and v24's EPA tolerance -- and here it "
+                         "applies to a claim that is almost certainly true.",
+            },
+            {
+                "text": "the risks of myocarditis and pericarditis, "
+                        "particularly in young males",
+                "start": 4.0, "end": 58.0,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:34907393", "PMID:34281357",
+                               "PMID:34477808"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "The health claim inside the news card, and it is "
+                         "well supported: the self-controlled case-series "
+                         "study of myocarditis, pericarditis and arrhythmia "
+                         "risks after COVID-19 vaccination or SARS-CoV-2 "
+                         "infection, the case series on myocarditis with mRNA "
+                         "vaccines, and the US adverse-event surveillance "
+                         "report. The young-male predominance is a consistent "
+                         "finding. Worth recording that an accurate vaccine "
+                         "safety-signal claim sits in the same dataset as the "
+                         "false vaccine claims in v78 and v18 -- a classifier "
+                         "that treats 'vaccine' plus 'heart risk' as a "
+                         "misinformation signal will fail here.",
+            },
+        ],
+    },
 ]

@@ -1,0 +1,2177 @@
+{
+ "video_id": "v39",
+ "filename": "ssstik.io_@jacbfoods_1761416154509.mp4",
+ "relative_path": "Misinfo Dataset/Max Zhang/ssstik.io_@jacbfoods_1761416154509.mp4",
+ "collector": "Max Zhang",
+ "collector_label": "",
+ "creator_handle": "@jacbfoods",
+ "extracted_at": "2026-11-21T18:03:12",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.998,
+  "duration_seconds": 85.85,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.64,
+    "text": "You have fallen for health, influence, or propaganda if you believe any of these five things."
+   },
+   {
+    "id": "t2",
+    "start": 3.64,
+    "end": 7.4,
+    "text": "One, seed oils are unhealthy, leads to inflammation, heart disease, obesity, whatever."
+   },
+   {
+    "id": "t3",
+    "start": 7.4,
+    "end": 10.36,
+    "text": "This is just not backed by the research and the entire narrative around seed oils, it's"
+   },
+   {
+    "id": "t4",
+    "start": 10.36,
+    "end": 12.36,
+    "text": "just backed by a big composition fallacy."
+   },
+   {
+    "id": "t5",
+    "start": 12.36,
+    "end": 16.04,
+    "text": "People believe that since specific components in seed oils can be part of inflammatory processes"
+   },
+   {
+    "id": "t6",
+    "start": 16.04,
+    "end": 19.28,
+    "text": "in the body, that therefore if you eat seed oils it leads to inflammation, but that is"
+   },
+   {
+    "id": "t7",
+    "start": 19.28,
+    "end": 21.44,
+    "text": "just not true when you look at the actual data."
+   },
+   {
+    "id": "t8",
+    "start": 21.44,
+    "end": 23.0,
+    "text": "Two, that carbs make you fat."
+   },
+   {
+    "id": "t9",
+    "start": 23.0,
+    "end": 25.96,
+    "text": "It is not carbs or fat that make you fat, it is how many calories you're eating."
+   },
+   {
+    "id": "t10",
+    "start": 25.96,
+    "end": 29.32,
+    "text": "It might be easier to overeat processed carbs, but if you're eating whole foods that contain"
+   },
+   {
+    "id": "t11",
+    "start": 29.32,
+    "end": 32.6,
+    "text": "lots of fiber and complex carbs, it's going to be harder to overeat those because they"
+   },
+   {
+    "id": "t12",
+    "start": 32.6,
+    "end": 33.6,
+    "text": "are more filling."
+   },
+   {
+    "id": "t13",
+    "start": 33.6,
+    "end": 35.08,
+    "text": "Carbs are an essential part of your diet."
+   },
+   {
+    "id": "t14",
+    "start": 35.08,
+    "end": 36.08,
+    "text": "3."
+   },
+   {
+    "id": "t15",
+    "start": 36.08,
+    "end": 38.4,
+    "text": "The butter should be eaten as a snack and it is healthy for you to do so."
+   },
+   {
+    "id": "t16",
+    "start": 38.4,
+    "end": 41.2,
+    "text": "Saturated fats are fine to eat in moderation, especially if you're an active person with"
+   },
+   {
+    "id": "t17",
+    "start": 41.2,
+    "end": 42.52,
+    "text": "a generally healthy lifestyle."
+   },
+   {
+    "id": "t18",
+    "start": 42.52,
+    "end": 45.88,
+    "text": "But it probably is not optimal to increase your intake to extreme amounts."
+   },
+   {
+    "id": "t19",
+    "start": 45.88,
+    "end": 46.88,
+    "text": "4."
+   },
+   {
+    "id": "t20",
+    "start": 46.88,
+    "end": 49.96,
+    "text": "You can gain fat in a calorie deficit due to hormonal problems or endocrine dysfunction."
+   },
+   {
+    "id": "t21",
+    "start": 49.96,
+    "end": 53.12,
+    "text": "While these problems may increase how much you want to eat or decrease how much you burn,"
+   },
+   {
+    "id": "t22",
+    "start": 53.12,
+    "end": 55.24,
+    "text": "you are still bound to the laws of physics."
+   },
+   {
+    "id": "t23",
+    "start": 55.24,
+    "end": 58.72,
+    "text": "Fat gain or loss is still a function of how many calories you are eating and burning."
+   },
+   {
+    "id": "t24",
+    "start": 58.72,
+    "end": 62.64,
+    "text": "that vegetables are bad for you. Some vegetables do contain anti-nutrients that"
+   },
+   {
+    "id": "t25",
+    "start": 62.64,
+    "end": 65.64,
+    "text": "may bind up specific minerals and stop them from being absorbed, but you are"
+   },
+   {
+    "id": "t26",
+    "start": 65.64,
+    "end": 68.8,
+    "text": "still getting a net positive amount of nutrients from eating them. Along with"
+   },
+   {
+    "id": "t27",
+    "start": 68.8,
+    "end": 71.56,
+    "text": "those nutrients, you're also getting a lot of fiber and tons of antioxidant"
+   },
+   {
+    "id": "t28",
+    "start": 71.56,
+    "end": 74.72,
+    "text": "anti-inflammatory phytochemicals that you just can't get from other foods. When"
+   },
+   {
+    "id": "t29",
+    "start": 74.72,
+    "end": 77.6,
+    "text": "navigating misinformation, you will often find that it deals with extremes,"
+   },
+   {
+    "id": "t30",
+    "start": 77.6,
+    "end": 80.68,
+    "text": "that you should entirely cut out certain foods or start eating a ton of other"
+   },
+   {
+    "id": "t31",
+    "start": 80.68,
+    "end": 84.24,
+    "text": "foods, when in reality you are probably best off to have a diverse diet with"
+   },
+   {
+    "id": "t32",
+    "start": 84.24,
+    "end": 85.72,
+    "text": "lots of different types of foods."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 43,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.896
+   },
+   {
+    "time": 2.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.868
+   },
+   {
+    "time": 2.0,
+    "text": "you have fallen for health",
+    "confidence": 0.826
+   },
+   {
+    "time": 2.0,
+    "text": "influencer propaganda",
+    "confidence": 0.908
+   },
+   {
+    "time": 4.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.853
+   },
+   {
+    "time": 4.0,
+    "text": "seed oils are unhealthy",
+    "confidence": 0.788
+   },
+   {
+    "time": 4.0,
+    "text": "leads inflammation",
+    "confidence": 0.975
+   },
+   {
+    "time": 6.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.863
+   },
+   {
+    "time": 6.0,
+    "text": "heart disease obesity",
+    "confidence": 0.879
+   },
+   {
+    "time": 6.0,
+    "text": "whatever",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.891
+   },
+   {
+    "time": 8.0,
+    "text": "this is just not backed by",
+    "confidence": 0.847
+   },
+   {
+    "time": 8.0,
+    "text": "the research",
+    "confidence": 0.984
+   },
+   {
+    "time": 10.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.842
+   },
+   {
+    "time": 10.0,
+    "text": "the entire narrative",
+    "confidence": 0.586
+   },
+   {
+    "time": 10.0,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "around seed oils",
+    "confidence": 0.955
+   },
+   {
+    "time": 12.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.841
+   },
+   {
+    "time": 12.0,
+    "text": "is just backed by a big",
+    "confidence": 0.922
+   },
+   {
+    "time": 12.0,
+    "text": "composition fallacv",
+    "confidence": 0.807
+   },
+   {
+    "time": 14.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.912
+   },
+   {
+    "time": 14.0,
+    "text": "people believe that since",
+    "confidence": 0.884
+   },
+   {
+    "time": 14.0,
+    "text": "specific components in",
+    "confidence": 0.962
+   },
+   {
+    "time": 14.0,
+    "text": "seed oils",
+    "confidence": 0.916
+   },
+   {
+    "time": 16.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.838
+   },
+   {
+    "time": 16.0,
+    "text": "can be part of",
+    "confidence": 0.732
+   },
+   {
+    "time": 16.0,
+    "text": "inflammatory processes in",
+    "confidence": 0.832
+   },
+   {
+    "time": 16.0,
+    "text": "the body",
+    "confidence": 0.935
+   },
+   {
+    "time": 18.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.908
+   },
+   {
+    "time": 18.0,
+    "text": "therefore if yoU eat seed",
+    "confidence": 0.667
+   },
+   {
+    "time": 18.0,
+    "text": "oils it leads to",
+    "confidence": 0.853
+   },
+   {
+    "time": 18.0,
+    "text": "inflammation",
+    "confidence": 0.995
+   },
+   {
+    "time": 20.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.9
+   },
+   {
+    "time": 20.0,
+    "text": "but that is just not true",
+    "confidence": 0.653
+   },
+   {
+    "time": 20.0,
+    "text": "when you look at the",
+    "confidence": 0.738
+   },
+   {
+    "time": 20.0,
+    "text": "actual data",
+    "confidence": 0.939
+   },
+   {
+    "time": 22.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.848
+   },
+   {
+    "time": 22.0,
+    "text": "2 the carbs make VOU fat",
+    "confidence": 0.703
+   },
+   {
+    "time": 24.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.851
+   },
+   {
+    "time": 24.0,
+    "text": "itis not carbs or fat that",
+    "confidence": 0.758
+   },
+   {
+    "time": 24.0,
+    "text": "make yoU fat",
+    "confidence": 0.574
+   },
+   {
+    "time": 26.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.892
+   },
+   {
+    "time": 26.0,
+    "text": "it might be easier to",
+    "confidence": 0.945
+   },
+   {
+    "time": 26.0,
+    "text": "overeat process carbs",
+    "confidence": 0.917
+   },
+   {
+    "time": 28.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.895
+   },
+   {
+    "time": 28.0,
+    "text": "but if you're eating whole",
+    "confidence": 0.901
+   },
+   {
+    "time": 28.0,
+    "text": "foods that contain lots of",
+    "confidence": 0.863
+   },
+   {
+    "time": 28.0,
+    "text": "fibre and complex carbs",
+    "confidence": 0.998
+   },
+   {
+    "time": 30.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.889
+   },
+   {
+    "time": 30.0,
+    "text": "but if you're eating whole",
+    "confidence": 0.92
+   },
+   {
+    "time": 30.0,
+    "text": "foods that contain lots of",
+    "confidence": 0.858
+   },
+   {
+    "time": 30.0,
+    "text": "fibre and complex carbs",
+    "confidence": 0.766
+   },
+   {
+    "time": 32.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.711
+   },
+   {
+    "time": 32.0,
+    "text": "it's going to be harder to",
+    "confidence": 0.754
+   },
+   {
+    "time": 32.0,
+    "text": "over eat those because",
+    "confidence": 0.81
+   },
+   {
+    "time": 32.0,
+    "text": "they are more filling",
+    "confidence": 0.933
+   },
+   {
+    "time": 34.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.736
+   },
+   {
+    "time": 34.0,
+    "text": "carbs are an essential part",
+    "confidence": 0.599
+   },
+   {
+    "time": 34.0,
+    "text": "of vour diet",
+    "confidence": 0.677
+   },
+   {
+    "time": 36.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.907
+   },
+   {
+    "time": 36.0,
+    "text": "3 that butter should be",
+    "confidence": 0.826
+   },
+   {
+    "time": 36.0,
+    "text": "eaten as a snack andit is",
+    "confidence": 0.507
+   },
+   {
+    "time": 36.0,
+    "text": "healthy for you to do so",
+    "confidence": 0.651
+   },
+   {
+    "time": 38.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.906
+   },
+   {
+    "time": 38.0,
+    "text": "3 that butter should be",
+    "confidence": 0.833
+   },
+   {
+    "time": 38.0,
+    "text": "eaten as a snack andit is",
+    "confidence": 0.516
+   },
+   {
+    "time": 38.0,
+    "text": "healthy for you to do so",
+    "confidence": 0.673
+   },
+   {
+    "time": 40.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.854
+   },
+   {
+    "time": 40.0,
+    "text": "saturate it faster fine to",
+    "confidence": 0.998
+   },
+   {
+    "time": 40.0,
+    "text": "eat moderation",
+    "confidence": 0.975
+   },
+   {
+    "time": 42.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.774
+   },
+   {
+    "time": 42.0,
+    "text": "especially if you're an",
+    "confidence": 0.893
+   },
+   {
+    "time": 42.0,
+    "text": "active person with a",
+    "confidence": 0.938
+   },
+   {
+    "time": 42.0,
+    "text": "generally healthy lifestyle",
+    "confidence": 0.994
+   },
+   {
+    "time": 44.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.892
+   },
+   {
+    "time": 44.0,
+    "text": "but it probably is not",
+    "confidence": 0.644
+   },
+   {
+    "time": 44.0,
+    "text": "optimal to increase your",
+    "confidence": 0.91
+   },
+   {
+    "time": 44.0,
+    "text": "intake to extreme",
+    "confidence": 0.939
+   },
+   {
+    "time": 44.0,
+    "text": "amounts",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.895
+   },
+   {
+    "time": 46.0,
+    "text": "4thatyoucangain fat in a",
+    "confidence": 0.68
+   },
+   {
+    "time": 46.0,
+    "text": "calorie deficit",
+    "confidence": 0.986
+   },
+   {
+    "time": 48.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.893
+   },
+   {
+    "time": 48.0,
+    "text": "due to hormonal problems",
+    "confidence": 0.983
+   },
+   {
+    "time": 48.0,
+    "text": "or endocrine dysfunction",
+    "confidence": 0.988
+   },
+   {
+    "time": 50.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.734
+   },
+   {
+    "time": 50.0,
+    "text": "due to hormonal problems",
+    "confidence": 0.954
+   },
+   {
+    "time": 50.0,
+    "text": "or endocrine dysfunction",
+    "confidence": 0.987
+   },
+   {
+    "time": 52.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.91
+   },
+   {
+    "time": 52.0,
+    "text": "decrease how much",
+    "confidence": 0.935
+   },
+   {
+    "time": 52.0,
+    "text": "Or",
+    "confidence": 0.923
+   },
+   {
+    "time": 52.0,
+    "text": "you burn",
+    "confidence": 0.565
+   },
+   {
+    "time": 54.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.874
+   },
+   {
+    "time": 54.0,
+    "text": "you are still bound to the",
+    "confidence": 0.895
+   },
+   {
+    "time": 54.0,
+    "text": "laws of physics",
+    "confidence": 0.995
+   },
+   {
+    "time": 56.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.725
+   },
+   {
+    "time": 56.0,
+    "text": "or loss is still a function of",
+    "confidence": 0.753
+   },
+   {
+    "time": 56.0,
+    "text": "how many calories VOU",
+    "confidence": 0.664
+   },
+   {
+    "time": 56.0,
+    "text": "and burning",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "eating",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "are",
+    "confidence": 0.993
+   },
+   {
+    "time": 58.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.905
+   },
+   {
+    "time": 58.0,
+    "text": "or loss is still a function of",
+    "confidence": 0.836
+   },
+   {
+    "time": 58.0,
+    "text": "how many calories VOU",
+    "confidence": 0.667
+   },
+   {
+    "time": 58.0,
+    "text": "and burning",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.0,
+    "text": "eating",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.0,
+    "text": "are",
+    "confidence": 0.996
+   },
+   {
+    "time": 60.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.7
+   },
+   {
+    "time": 60.0,
+    "text": "5 that vegetables are bad",
+    "confidence": 0.794
+   },
+   {
+    "time": 60.0,
+    "text": "for VoU",
+    "confidence": 0.728
+   },
+   {
+    "time": 62.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.711
+   },
+   {
+    "time": 62.0,
+    "text": "vegetables do",
+    "confidence": 0.999
+   },
+   {
+    "time": 62.0,
+    "text": "some",
+    "confidence": 0.999
+   },
+   {
+    "time": 62.0,
+    "text": "contain",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.0,
+    "text": "nutrients",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.0,
+    "text": "anti",
+    "confidence": 1.0
+   },
+   {
+    "time": 64.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.893
+   },
+   {
+    "time": 64.0,
+    "text": "that may bind up specific",
+    "confidence": 0.95
+   },
+   {
+    "time": 64.0,
+    "text": "minerals and stop them",
+    "confidence": 0.821
+   },
+   {
+    "time": 64.0,
+    "text": "from being absorbed",
+    "confidence": 0.946
+   },
+   {
+    "time": 66.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.869
+   },
+   {
+    "time": 66.0,
+    "text": "but you're still getting a",
+    "confidence": 0.775
+   },
+   {
+    "time": 66.0,
+    "text": "net positive amount of",
+    "confidence": 0.614
+   },
+   {
+    "time": 66.0,
+    "text": "nutrients from eating",
+    "confidence": 0.99
+   },
+   {
+    "time": 66.0,
+    "text": "them",
+    "confidence": 0.935
+   },
+   {
+    "time": 68.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.785
+   },
+   {
+    "time": 68.0,
+    "text": "but you're still getting a",
+    "confidence": 0.856
+   },
+   {
+    "time": 68.0,
+    "text": "net positive amount of",
+    "confidence": 0.503
+   },
+   {
+    "time": 68.0,
+    "text": "nutrients from eating",
+    "confidence": 0.99
+   },
+   {
+    "time": 68.0,
+    "text": "them",
+    "confidence": 0.944
+   },
+   {
+    "time": 70.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.74
+   },
+   {
+    "time": 70.0,
+    "text": "you're also getting a lot of",
+    "confidence": 0.818
+   },
+   {
+    "time": 70.0,
+    "text": "fiber and tons of",
+    "confidence": 0.818
+   },
+   {
+    "time": 70.0,
+    "text": "antioxidant",
+    "confidence": 1.0
+   },
+   {
+    "time": 72.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.766
+   },
+   {
+    "time": 72.0,
+    "text": "anti inflammatory fiber",
+    "confidence": 0.79
+   },
+   {
+    "time": 72.0,
+    "text": "chemicals that",
+    "confidence": 0.999
+   },
+   {
+    "time": 72.0,
+    "text": "'just",
+    "confidence": 0.875
+   },
+   {
+    "time": 72.0,
+    "text": "can't get from other",
+    "confidence": 0.793
+   },
+   {
+    "time": 72.0,
+    "text": "foods",
+    "confidence": 0.786
+   },
+   {
+    "time": 74.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.802
+   },
+   {
+    "time": 74.0,
+    "text": "anti inflammatory fiber",
+    "confidence": 1.0
+   },
+   {
+    "time": 74.0,
+    "text": "chemicals that",
+    "confidence": 0.999
+   },
+   {
+    "time": 74.0,
+    "text": "'just",
+    "confidence": 0.866
+   },
+   {
+    "time": 74.0,
+    "text": "can't get from other",
+    "confidence": 0.838
+   },
+   {
+    "time": 74.0,
+    "text": "foods",
+    "confidence": 0.643
+   },
+   {
+    "time": 76.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.729
+   },
+   {
+    "time": 76.0,
+    "text": "when navigating",
+    "confidence": 1.0
+   },
+   {
+    "time": 76.0,
+    "text": "misinformation",
+    "confidence": 1.0
+   },
+   {
+    "time": 78.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.917
+   },
+   {
+    "time": 78.0,
+    "text": "thatyoU should entirely",
+    "confidence": 0.729
+   },
+   {
+    "time": 78.0,
+    "text": "cut out certain foods",
+    "confidence": 0.941
+   },
+   {
+    "time": 80.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.862
+   },
+   {
+    "time": 80.0,
+    "text": "or start eating a ton of",
+    "confidence": 0.627
+   },
+   {
+    "time": 80.0,
+    "text": "other foods",
+    "confidence": 0.908
+   },
+   {
+    "time": 82.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.871
+   },
+   {
+    "time": 82.0,
+    "text": "when in reality VOU are",
+    "confidence": 0.775
+   },
+   {
+    "time": 82.0,
+    "text": "probably best off to have",
+    "confidence": 0.807
+   },
+   {
+    "time": 82.0,
+    "text": "diverse diet",
+    "confidence": 0.737
+   },
+   {
+    "time": 84.0,
+    "text": "5 pieces of health misinformation",
+    "confidence": 0.733
+   },
+   {
+    "time": 84.0,
+    "text": "when in reality VOU are",
+    "confidence": 0.752
+   },
+   {
+    "time": 84.0,
+    "text": "probably best off to have",
+    "confidence": 0.801
+   },
+   {
+    "time": 84.0,
+    "text": "diverse diet",
+    "confidence": 0.737
+   }
+  ],
+  "captions": [
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 0.0,
+    "end": 2.0,
+    "confidence": 0.896,
+    "id": "o1"
+   },
+   {
+    "text": "you have fallen for health",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.826,
+    "id": "o2"
+   },
+   {
+    "text": "influencer propaganda",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.908,
+    "id": "o3"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.853,
+    "id": "o4"
+   },
+   {
+    "text": "seed oils are unhealthy",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.788,
+    "id": "o5"
+   },
+   {
+    "text": "leads inflammation",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.975,
+    "id": "o6"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.863,
+    "id": "o7"
+   },
+   {
+    "text": "heart disease obesity",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.879,
+    "id": "o8"
+   },
+   {
+    "text": "whatever",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.891,
+    "id": "o10"
+   },
+   {
+    "text": "this is just not backed by",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.847,
+    "id": "o11"
+   },
+   {
+    "text": "the research",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.984,
+    "id": "o12"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.842,
+    "id": "o13"
+   },
+   {
+    "text": "the entire narrative",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.586,
+    "id": "o14"
+   },
+   {
+    "text": "and",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o15"
+   },
+   {
+    "text": "around seed oils",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.955,
+    "id": "o16"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.841,
+    "id": "o17"
+   },
+   {
+    "text": "is just backed by a big",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.922,
+    "id": "o18"
+   },
+   {
+    "text": "composition fallacv",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.807,
+    "id": "o19"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.912,
+    "id": "o20"
+   },
+   {
+    "text": "people believe that since",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.884,
+    "id": "o21"
+   },
+   {
+    "text": "specific components in",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.962,
+    "id": "o22"
+   },
+   {
+    "text": "seed oils",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.916,
+    "id": "o23"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.838,
+    "id": "o24"
+   },
+   {
+    "text": "can be part of",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.732,
+    "id": "o25"
+   },
+   {
+    "text": "inflammatory processes in",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.832,
+    "id": "o26"
+   },
+   {
+    "text": "the body",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.935,
+    "id": "o27"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.908,
+    "id": "o28"
+   },
+   {
+    "text": "therefore if yoU eat seed",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.667,
+    "id": "o29"
+   },
+   {
+    "text": "oils it leads to",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.853,
+    "id": "o30"
+   },
+   {
+    "text": "inflammation",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.995,
+    "id": "o31"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.9,
+    "id": "o32"
+   },
+   {
+    "text": "but that is just not true",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.653,
+    "id": "o33"
+   },
+   {
+    "text": "when you look at the",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.738,
+    "id": "o34"
+   },
+   {
+    "text": "actual data",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.939,
+    "id": "o35"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.848,
+    "id": "o36"
+   },
+   {
+    "text": "2 the carbs make VOU fat",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.703,
+    "id": "o37"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.851,
+    "id": "o38"
+   },
+   {
+    "text": "itis not carbs or fat that",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.758,
+    "id": "o39"
+   },
+   {
+    "text": "make yoU fat",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.574,
+    "id": "o40"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.892,
+    "id": "o41"
+   },
+   {
+    "text": "it might be easier to",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.945,
+    "id": "o42"
+   },
+   {
+    "text": "overeat process carbs",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.917,
+    "id": "o43"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.895,
+    "id": "o44"
+   },
+   {
+    "text": "but if you're eating whole",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.901,
+    "id": "o45"
+   },
+   {
+    "text": "foods that contain lots of",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.863,
+    "id": "o46"
+   },
+   {
+    "text": "fibre and complex carbs",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.998,
+    "id": "o47"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.889,
+    "id": "o48"
+   },
+   {
+    "text": "but if you're eating whole",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.92,
+    "id": "o49"
+   },
+   {
+    "text": "foods that contain lots of",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.858,
+    "id": "o50"
+   },
+   {
+    "text": "fibre and complex carbs",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.766,
+    "id": "o51"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.711,
+    "id": "o52"
+   },
+   {
+    "text": "it's going to be harder to",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.754,
+    "id": "o53"
+   },
+   {
+    "text": "over eat those because",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.81,
+    "id": "o54"
+   },
+   {
+    "text": "they are more filling",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.933,
+    "id": "o55"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.736,
+    "id": "o56"
+   },
+   {
+    "text": "carbs are an essential part",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.599,
+    "id": "o57"
+   },
+   {
+    "text": "of vour diet",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.677,
+    "id": "o58"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.907,
+    "id": "o59"
+   },
+   {
+    "text": "3 that butter should be",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.826,
+    "id": "o60"
+   },
+   {
+    "text": "eaten as a snack andit is",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.507,
+    "id": "o61"
+   },
+   {
+    "text": "healthy for you to do so",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.651,
+    "id": "o62"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.906,
+    "id": "o63"
+   },
+   {
+    "text": "3 that butter should be",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.833,
+    "id": "o64"
+   },
+   {
+    "text": "eaten as a snack andit is",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.516,
+    "id": "o65"
+   },
+   {
+    "text": "healthy for you to do so",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.673,
+    "id": "o66"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.854,
+    "id": "o67"
+   },
+   {
+    "text": "saturate it faster fine to",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.998,
+    "id": "o68"
+   },
+   {
+    "text": "eat moderation",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.975,
+    "id": "o69"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.774,
+    "id": "o70"
+   },
+   {
+    "text": "especially if you're an",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.893,
+    "id": "o71"
+   },
+   {
+    "text": "active person with a",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.938,
+    "id": "o72"
+   },
+   {
+    "text": "generally healthy lifestyle",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.994,
+    "id": "o73"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.892,
+    "id": "o74"
+   },
+   {
+    "text": "but it probably is not",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.644,
+    "id": "o75"
+   },
+   {
+    "text": "optimal to increase your",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.91,
+    "id": "o76"
+   },
+   {
+    "text": "intake to extreme",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.939,
+    "id": "o77"
+   },
+   {
+    "text": "amounts",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o78"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.895,
+    "id": "o79"
+   },
+   {
+    "text": "4thatyoucangain fat in a",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.68,
+    "id": "o80"
+   },
+   {
+    "text": "calorie deficit",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.986,
+    "id": "o81"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.893,
+    "id": "o82"
+   },
+   {
+    "text": "due to hormonal problems",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.983,
+    "id": "o83"
+   },
+   {
+    "text": "or endocrine dysfunction",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.988,
+    "id": "o84"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.734,
+    "id": "o85"
+   },
+   {
+    "text": "due to hormonal problems",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.954,
+    "id": "o86"
+   },
+   {
+    "text": "or endocrine dysfunction",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.987,
+    "id": "o87"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.91,
+    "id": "o88"
+   },
+   {
+    "text": "decrease how much",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.935,
+    "id": "o89"
+   },
+   {
+    "text": "Or",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.923,
+    "id": "o90"
+   },
+   {
+    "text": "you burn",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.565,
+    "id": "o91"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.874,
+    "id": "o92"
+   },
+   {
+    "text": "you are still bound to the",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.895,
+    "id": "o93"
+   },
+   {
+    "text": "laws of physics",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.995,
+    "id": "o94"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.725,
+    "id": "o95"
+   },
+   {
+    "text": "or loss is still a function of",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.753,
+    "id": "o96"
+   },
+   {
+    "text": "how many calories VOU",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.664,
+    "id": "o97"
+   },
+   {
+    "text": "and burning",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 1.0,
+    "id": "o98"
+   },
+   {
+    "text": "eating",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 1.0,
+    "id": "o99"
+   },
+   {
+    "text": "are",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.993,
+    "id": "o100"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.905,
+    "id": "o101"
+   },
+   {
+    "text": "or loss is still a function of",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.836,
+    "id": "o102"
+   },
+   {
+    "text": "how many calories VOU",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.667,
+    "id": "o103"
+   },
+   {
+    "text": "and burning",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 1.0,
+    "id": "o104"
+   },
+   {
+    "text": "eating",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 1.0,
+    "id": "o105"
+   },
+   {
+    "text": "are",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.996,
+    "id": "o106"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.7,
+    "id": "o107"
+   },
+   {
+    "text": "5 that vegetables are bad",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.794,
+    "id": "o108"
+   },
+   {
+    "text": "for VoU",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.728,
+    "id": "o109"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.711,
+    "id": "o110"
+   },
+   {
+    "text": "vegetables do",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.999,
+    "id": "o111"
+   },
+   {
+    "text": "some",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.999,
+    "id": "o112"
+   },
+   {
+    "text": "contain",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 1.0,
+    "id": "o113"
+   },
+   {
+    "text": "nutrients",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 1.0,
+    "id": "o114"
+   },
+   {
+    "text": "anti",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 1.0,
+    "id": "o115"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.893,
+    "id": "o116"
+   },
+   {
+    "text": "that may bind up specific",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.95,
+    "id": "o117"
+   },
+   {
+    "text": "minerals and stop them",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.821,
+    "id": "o118"
+   },
+   {
+    "text": "from being absorbed",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.946,
+    "id": "o119"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.869,
+    "id": "o120"
+   },
+   {
+    "text": "but you're still getting a",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.775,
+    "id": "o121"
+   },
+   {
+    "text": "net positive amount of",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.614,
+    "id": "o122"
+   },
+   {
+    "text": "nutrients from eating",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.99,
+    "id": "o123"
+   },
+   {
+    "text": "them",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.935,
+    "id": "o124"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.785,
+    "id": "o125"
+   },
+   {
+    "text": "but you're still getting a",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.856,
+    "id": "o126"
+   },
+   {
+    "text": "net positive amount of",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.503,
+    "id": "o127"
+   },
+   {
+    "text": "nutrients from eating",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.99,
+    "id": "o128"
+   },
+   {
+    "text": "them",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.944,
+    "id": "o129"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.74,
+    "id": "o130"
+   },
+   {
+    "text": "you're also getting a lot of",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.818,
+    "id": "o131"
+   },
+   {
+    "text": "fiber and tons of",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.818,
+    "id": "o132"
+   },
+   {
+    "text": "antioxidant",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 1.0,
+    "id": "o133"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.766,
+    "id": "o134"
+   },
+   {
+    "text": "anti inflammatory fiber",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.79,
+    "id": "o135"
+   },
+   {
+    "text": "chemicals that",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.999,
+    "id": "o136"
+   },
+   {
+    "text": "'just",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.875,
+    "id": "o137"
+   },
+   {
+    "text": "can't get from other",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.793,
+    "id": "o138"
+   },
+   {
+    "text": "foods",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.786,
+    "id": "o139"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.802,
+    "id": "o140"
+   },
+   {
+    "text": "anti inflammatory fiber",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 1.0,
+    "id": "o141"
+   },
+   {
+    "text": "chemicals that",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.999,
+    "id": "o142"
+   },
+   {
+    "text": "'just",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.866,
+    "id": "o143"
+   },
+   {
+    "text": "can't get from other",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.838,
+    "id": "o144"
+   },
+   {
+    "text": "foods",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.643,
+    "id": "o145"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.729,
+    "id": "o146"
+   },
+   {
+    "text": "when navigating",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 1.0,
+    "id": "o147"
+   },
+   {
+    "text": "misinformation",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 1.0,
+    "id": "o148"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.917,
+    "id": "o149"
+   },
+   {
+    "text": "thatyoU should entirely",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.729,
+    "id": "o150"
+   },
+   {
+    "text": "cut out certain foods",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.941,
+    "id": "o151"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.862,
+    "id": "o152"
+   },
+   {
+    "text": "or start eating a ton of",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.627,
+    "id": "o153"
+   },
+   {
+    "text": "other foods",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.908,
+    "id": "o154"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.871,
+    "id": "o155"
+   },
+   {
+    "text": "when in reality VOU are",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.775,
+    "id": "o156"
+   },
+   {
+    "text": "probably best off to have",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.807,
+    "id": "o157"
+   },
+   {
+    "text": "diverse diet",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.737,
+    "id": "o158"
+   },
+   {
+    "text": "5 pieces of health misinformation",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.733,
+    "id": "o159"
+   },
+   {
+    "text": "when in reality VOU are",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.752,
+    "id": "o160"
+   },
+   {
+    "text": "probably best off to have",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.801,
+    "id": "o161"
+   },
+   {
+    "text": "diverse diet",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.737,
+    "id": "o162"
+   }
+  ]
+ }
+}

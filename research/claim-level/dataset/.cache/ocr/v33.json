@@ -1,0 +1,521 @@
+{
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "on_screen": {
+  "frames_sampled": 17,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Nocausewhyiseatingin",
+    "confidence": 0.981
+   },
+   {
+    "time": 0.0,
+    "text": "themorning thehardest",
+    "confidence": 0.682
+   },
+   {
+    "time": 0.0,
+    "text": "thingtodo??",
+    "confidence": 0.901
+   },
+   {
+    "time": 0.0,
+    "text": "Dr Dan",
+    "confidence": 0.898
+   },
+   {
+    "time": 2.0,
+    "text": "Nocause whyiseatingin",
+    "confidence": 0.953
+   },
+   {
+    "time": 2.0,
+    "text": "themorning thehardest",
+    "confidence": 0.881
+   },
+   {
+    "time": 2.0,
+    "text": "thingtodo??",
+    "confidence": 0.728
+   },
+   {
+    "time": 2.0,
+    "text": "Dr Da",
+    "confidence": 0.886
+   },
+   {
+    "time": 4.0,
+    "text": "Nocause whyiseatingin",
+    "confidence": 0.747
+   },
+   {
+    "time": 4.0,
+    "text": "themomning thehardest",
+    "confidence": 0.729
+   },
+   {
+    "time": 4.0,
+    "text": "Dr Da",
+    "confidence": 0.521
+   },
+   {
+    "time": 6.0,
+    "text": "Nocausewhyiseatingin",
+    "confidence": 0.996
+   },
+   {
+    "time": 6.0,
+    "text": "themomning thehardest",
+    "confidence": 0.764
+   },
+   {
+    "time": 6.0,
+    "text": "thingtodov?",
+    "confidence": 0.705
+   },
+   {
+    "time": 8.0,
+    "text": "Voulube",
+    "confidence": 0.918
+   },
+   {
+    "time": 8.0,
+    "text": "COMMON",
+    "confidence": 0.869
+   },
+   {
+    "time": 8.0,
+    "text": "Dr;",
+    "confidence": 0.526
+   },
+   {
+    "time": 10.0,
+    "text": "MIDNIGHT",
+    "confidence": 0.966
+   },
+   {
+    "time": 10.0,
+    "text": "24.00",
+    "confidence": 0.996
+   },
+   {
+    "time": 10.0,
+    "text": "0200",
+    "confidence": 0.876
+   },
+   {
+    "time": 10.0,
+    "text": "Melatonn",
+    "confidence": 0.558
+   },
+   {
+    "time": 10.0,
+    "text": "CIRCADIAN",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "18.00",
+    "confidence": 0.963
+   },
+   {
+    "time": 10.0,
+    "text": "06.00",
+    "confidence": 0.944
+   },
+   {
+    "time": 10.0,
+    "text": "pressure",
+    "confidence": 0.941
+   },
+   {
+    "time": 10.0,
+    "text": "RHYTHM",
+    "confidence": 0.952
+   },
+   {
+    "time": 10.0,
+    "text": "strongin",
+    "confidence": 0.512
+   },
+   {
+    "time": 10.0,
+    "text": "NOON",
+    "confidence": 0.998
+   },
+   {
+    "time": 10.0,
+    "text": "12.00",
+    "confidence": 0.997
+   },
+   {
+    "time": 10.0,
+    "text": "Melatonn",
+    "confidence": 0.944
+   },
+   {
+    "time": 10.0,
+    "text": "Fastest reaction",
+    "confidence": 0.784
+   },
+   {
+    "time": 10.0,
+    "text": "Bost coord naton",
+    "confidence": 0.682
+   },
+   {
+    "time": 10.0,
+    "text": "RHYTHMTHAT",
+    "confidence": 0.669
+   },
+   {
+    "time": 12.0,
+    "text": "POINT AROUND",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.0,
+    "text": "YOUR HUNGER",
+    "confidence": 0.959
+   },
+   {
+    "time": 16.0,
+    "text": "SUPPRESSED IN",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.0,
+    "text": "HUNGER",
+    "confidence": 0.712
+   },
+   {
+    "time": 20.0,
+    "text": "THBEVENING",
+    "confidence": 0.997
+   },
+   {
+    "time": 22.0,
+    "text": "OF PREPARING",
+    "confidence": 0.984
+   },
+   {
+    "time": 26.0,
+    "text": "HUNGER",
+    "confidence": 0.999
+   },
+   {
+    "time": 28.0,
+    "text": "STOMACH",
+    "confidence": 0.979
+   },
+   {
+    "time": 30.0,
+    "text": "AT8OOPM",
+    "confidence": 0.529
+   }
+  ],
+  "captions": [
+   {
+    "text": "Nocausewhyiseatingin",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.981,
+    "id": "o1"
+   },
+   {
+    "text": "themorning thehardest",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.682,
+    "id": "o2"
+   },
+   {
+    "text": "thingtodo??",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.901,
+    "id": "o3"
+   },
+   {
+    "text": "Dr Dan",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.898,
+    "id": "o4"
+   },
+   {
+    "text": "Nocause whyiseatingin",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.953,
+    "id": "o5"
+   },
+   {
+    "text": "themorning thehardest",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.881,
+    "id": "o6"
+   },
+   {
+    "text": "thingtodo??",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.728,
+    "id": "o7"
+   },
+   {
+    "text": "Dr Da",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.886,
+    "id": "o8"
+   },
+   {
+    "text": "Nocause whyiseatingin",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.747,
+    "id": "o9"
+   },
+   {
+    "text": "themomning thehardest",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.729,
+    "id": "o10"
+   },
+   {
+    "text": "Dr Da",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.521,
+    "id": "o11"
+   },
+   {
+    "text": "Nocausewhyiseatingin",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.996,
+    "id": "o12"
+   },
+   {
+    "text": "themomning thehardest",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.764,
+    "id": "o13"
+   },
+   {
+    "text": "thingtodov?",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.705,
+    "id": "o14"
+   },
+   {
+    "text": "Voulube",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.918,
+    "id": "o15"
+   },
+   {
+    "text": "COMMON",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.869,
+    "id": "o16"
+   },
+   {
+    "text": "Dr;",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.526,
+    "id": "o17"
+   },
+   {
+    "text": "MIDNIGHT",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.966,
+    "id": "o18"
+   },
+   {
+    "text": "24.00",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.996,
+    "id": "o19"
+   },
+   {
+    "text": "0200",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.876,
+    "id": "o20"
+   },
+   {
+    "text": "Melatonn",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.558,
+    "id": "o21"
+   },
+   {
+    "text": "CIRCADIAN",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o22"
+   },
+   {
+    "text": "18.00",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.963,
+    "id": "o23"
+   },
+   {
+    "text": "06.00",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.944,
+    "id": "o24"
+   },
+   {
+    "text": "pressure",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.941,
+    "id": "o25"
+   },
+   {
+    "text": "RHYTHM",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.952,
+    "id": "o26"
+   },
+   {
+    "text": "strongin",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.512,
+    "id": "o27"
+   },
+   {
+    "text": "NOON",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.998,
+    "id": "o28"
+   },
+   {
+    "text": "12.00",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.997,
+    "id": "o29"
+   },
+   {
+    "text": "Melatonn",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.944,
+    "id": "o30"
+   },
+   {
+    "text": "Fastest reaction",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.784,
+    "id": "o31"
+   },
+   {
+    "text": "Bost coord naton",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.682,
+    "id": "o32"
+   },
+   {
+    "text": "RHYTHMTHAT",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.669,
+    "id": "o33"
+   },
+   {
+    "text": "POINT AROUND",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o34"
+   },
+   {
+    "text": "YOUR HUNGER",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.959,
+    "id": "o35"
+   },
+   {
+    "text": "SUPPRESSED IN",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.999,
+    "id": "o36"
+   },
+   {
+    "text": "HUNGER",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.712,
+    "id": "o37"
+   },
+   {
+    "text": "THBEVENING",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.997,
+    "id": "o38"
+   },
+   {
+    "text": "OF PREPARING",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.984,
+    "id": "o39"
+   },
+   {
+    "text": "HUNGER",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.999,
+    "id": "o40"
+   },
+   {
+    "text": "STOMACH",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.979,
+    "id": "o41"
+   },
+   {
+    "text": "AT8OOPM",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.529,
+    "id": "o42"
+   }
+  ]
+ }
+}

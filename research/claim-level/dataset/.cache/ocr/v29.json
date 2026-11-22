@@ -1,0 +1,437 @@
+{
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "on_screen": {
+  "frames_sampled": 21,
+  "detections": [
+   {
+    "time": 2.0,
+    "text": "inevitably when people find",
+    "confidence": 0.66
+   },
+   {
+    "time": 2.0,
+    "text": "out",
+    "confidence": 0.997
+   },
+   {
+    "time": 2.0,
+    "text": "New Cancer Miracle Cure?i",
+    "confidence": 0.552
+   },
+   {
+    "time": 4.0,
+    "text": "inevitably when people find",
+    "confidence": 0.831
+   },
+   {
+    "time": 4.0,
+    "text": "out",
+    "confidence": 0.912
+   },
+   {
+    "time": 6.0,
+    "text": "they",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "will tell you about some",
+    "confidence": 0.897
+   },
+   {
+    "time": 6.0,
+    "text": "mifacle cure",
+    "confidence": 0.627
+   },
+   {
+    "time": 8.0,
+    "text": "that worked for their cousin",
+    "confidence": 0.694
+   },
+   {
+    "time": 8.0,
+    "text": "or theif uncle",
+    "confidence": 0.74
+   },
+   {
+    "time": 12.0,
+    "text": "Im not easily surprised",
+    "confidence": 0.914
+   },
+   {
+    "time": 14.0,
+    "text": "but today",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "heard a new one",
+    "confidence": 0.668
+   },
+   {
+    "time": 16.0,
+    "text": "so Imwondering ff other",
+    "confidence": 0.746
+   },
+   {
+    "time": 16.0,
+    "text": "people have heard of this",
+    "confidence": 0.655
+   },
+   {
+    "time": 20.0,
+    "text": "trap",
+    "confidence": 0.91
+   },
+   {
+    "time": 20.0,
+    "text": "Venus fly",
+    "confidence": 0.999
+   },
+   {
+    "time": 22.0,
+    "text": "yesithe carnivorous plants",
+    "confidence": 0.97
+   },
+   {
+    "time": 24.0,
+    "text": "apparently you blend",
+    "confidence": 0.739
+   },
+   {
+    "time": 24.0,
+    "text": "to",
+    "confidence": 0.995
+   },
+   {
+    "time": 24.0,
+    "text": "up37",
+    "confidence": 0.652
+   },
+   {
+    "time": 24.0,
+    "text": "4 of them",
+    "confidence": 0.704
+   },
+   {
+    "time": 26.0,
+    "text": "apparently you blend up 3t0",
+    "confidence": 0.826
+   },
+   {
+    "time": 28.0,
+    "text": "day",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "and eat them every",
+    "confidence": 0.991
+   },
+   {
+    "time": 30.0,
+    "text": "and that killsyour cancer",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "so has anyone heard @f that",
+    "confidence": 0.992
+   },
+   {
+    "time": 32.0,
+    "text": "one",
+    "confidence": 0.999
+   },
+   {
+    "time": 32.0,
+    "text": "yet",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "cause that was a new one",
+    "confidence": 0.544
+   },
+   {
+    "time": 34.0,
+    "text": "for me kind of fun",
+    "confidence": 0.599
+   },
+   {
+    "time": 36.0,
+    "text": "let meknow if you've tried it",
+    "confidence": 0.538
+   },
+   {
+    "time": 36.0,
+    "text": "and it works",
+    "confidence": 0.963
+   },
+   {
+    "time": 38.0,
+    "text": "sending you so much love",
+    "confidence": 0.606
+   },
+   {
+    "time": 38.0,
+    "text": "Aloha",
+    "confidence": 1.0
+   }
+  ],
+  "captions": [
+   {
+    "text": "inevitably when people find",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.66,
+    "id": "o1"
+   },
+   {
+    "text": "out",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.997,
+    "id": "o2"
+   },
+   {
+    "text": "New Cancer Miracle Cure?i",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.552,
+    "id": "o3"
+   },
+   {
+    "text": "inevitably when people find",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.831,
+    "id": "o4"
+   },
+   {
+    "text": "out",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.912,
+    "id": "o5"
+   },
+   {
+    "text": "they",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o6"
+   },
+   {
+    "text": "will tell you about some",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.897,
+    "id": "o7"
+   },
+   {
+    "text": "mifacle cure",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.627,
+    "id": "o8"
+   },
+   {
+    "text": "that worked for their cousin",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.694,
+    "id": "o9"
+   },
+   {
+    "text": "or theif uncle",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.74,
+    "id": "o10"
+   },
+   {
+    "text": "Im not easily surprised",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.914,
+    "id": "o11"
+   },
+   {
+    "text": "but today",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o12"
+   },
+   {
+    "text": "heard a new one",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.668,
+    "id": "o13"
+   },
+   {
+    "text": "so Imwondering ff other",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.746,
+    "id": "o14"
+   },
+   {
+    "text": "people have heard of this",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.655,
+    "id": "o15"
+   },
+   {
+    "text": "trap",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.91,
+    "id": "o16"
+   },
+   {
+    "text": "Venus fly",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.999,
+    "id": "o17"
+   },
+   {
+    "text": "yesithe carnivorous plants",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.97,
+    "id": "o18"
+   },
+   {
+    "text": "apparently you blend",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.739,
+    "id": "o19"
+   },
+   {
+    "text": "to",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.995,
+    "id": "o20"
+   },
+   {
+    "text": "up37",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.652,
+    "id": "o21"
+   },
+   {
+    "text": "4 of them",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.704,
+    "id": "o22"
+   },
+   {
+    "text": "apparently you blend up 3t0",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.826,
+    "id": "o23"
+   },
+   {
+    "text": "day",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o24"
+   },
+   {
+    "text": "and eat them every",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.991,
+    "id": "o25"
+   },
+   {
+    "text": "and that killsyour cancer",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o26"
+   },
+   {
+    "text": "so has anyone heard @f that",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.992,
+    "id": "o27"
+   },
+   {
+    "text": "one",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.999,
+    "id": "o28"
+   },
+   {
+    "text": "yet",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o29"
+   },
+   {
+    "text": "cause that was a new one",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.544,
+    "id": "o30"
+   },
+   {
+    "text": "for me kind of fun",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.599,
+    "id": "o31"
+   },
+   {
+    "text": "let meknow if you've tried it",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.538,
+    "id": "o32"
+   },
+   {
+    "text": "and it works",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.963,
+    "id": "o33"
+   },
+   {
+    "text": "sending you so much love",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.606,
+    "id": "o34"
+   },
+   {
+    "text": "Aloha",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o35"
+   }
+  ]
+ }
+}
