@@ -93,25 +93,41 @@ class AnthropicModelClient:
             # The router owns retries; the SDK must not retry on its own.
             sdk_client = anthropic.Anthropic(api_key=api_key, max_retries=0, timeout=timeout)
         self._sdk = sdk_client
+        self._no_forced_tool: set[str] = set()  # models that refused a forced tool_choice
 
     def complete(self, model: str, request: ModelRequest) -> ModelResponse:
         messages, tools, tool_choice, max_tokens, temperature = _split_input(request)
-        kwargs: dict[str, Any] = dict(model=model, max_tokens=max_tokens, messages=messages,
-                                      temperature=temperature)
+        # No sampling parameters: current Claude models reject ``temperature`` (400) and
+        # the current SDK no longer accepts the argument at all (T18 smoke run). The
+        # nodes' ``temperature: 0`` still applies to the OpenAI client.
+        del temperature
+        kwargs: dict[str, Any] = dict(model=model, max_tokens=max_tokens, messages=messages)
         if request.system:
             kwargs["system"] = request.system
         if tools:
             kwargs["tools"] = tools
         if tool_choice:
             kwargs["tool_choice"] = tool_choice
+        forced = _forced_tool_name(tool_choice)
+        if forced and model in self._no_forced_tool:
+            kwargs = _unforced(kwargs, forced)
         try:
-            resp = self._sdk.messages.create(**kwargs)
+            try:
+                resp = self._sdk.messages.create(**kwargs)
+            except Exception as exc:  # noqa: BLE001
+                if not (forced and _rejects_forced_tool(exc)) or kwargs.get("tool_choice", {}).get("type") == "auto":
+                    raise
+                # Some current Claude models refuse a forced tool
+                # call with a 400. Ask for the tool in the prompt instead (tool_choice
+                # auto); a reply without the call still parses as None, the node's safe
+                # default. Remembered per model so the 400 is paid once per process.
+                self._no_forced_tool.add(model)
+                resp = self._sdk.messages.create(**_unforced(kwargs, forced))
         except ModelCallError:
             raise
         except Exception as exc:  # noqa: BLE001 - mapped to the router's kinds
             raise map_provider_error(exc) from exc
 
-        forced = _forced_tool_name(tool_choice)
         output: Any = None
         texts: list[str] = []
         for block in getattr(resp, "content", None) or []:
@@ -129,6 +145,30 @@ class AnthropicModelClient:
             input_tokens=int(getattr(usage, "input_tokens", 0) or 0),
             output_tokens=int(getattr(usage, "output_tokens", 0) or 0),
         )
+
+
+# Thinking is always on for the models that refuse a forced tool call, and thinking
+# tokens count against max_tokens: without headroom a step's small cap (stance: 512) can
+# run out before the tool call is written. Only tokens actually generated are billed.
+UNFORCED_MIN_MAX_TOKENS = 8192
+
+
+def _rejects_forced_tool(exc: BaseException) -> bool:
+    status = getattr(exc, "status_code", None)
+    return status == 400 and "tool_choice" in str(exc) and "not supported" in str(exc)
+
+
+def _unforced(kwargs: dict[str, Any], tool_name: str) -> dict[str, Any]:
+    out = dict(kwargs)
+    out["tool_choice"] = {"type": "auto", "disable_parallel_tool_use": True}
+    out["max_tokens"] = max(int(out.get("max_tokens") or 0), UNFORCED_MIN_MAX_TOKENS)
+    instruction = f"Answer only by calling the `{tool_name}` tool exactly once. Do not reply with text."
+    system = out.get("system")
+    if isinstance(system, list):
+        out["system"] = [*system, {"type": "text", "text": instruction}]
+    else:
+        out["system"] = f"{system}\n\n{instruction}" if system else instruction
+    return out
 
 
 def _openai_tools(tools: Optional[list[dict]]) -> Optional[list[dict]]:

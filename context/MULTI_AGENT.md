@@ -1029,6 +1029,87 @@ golden-set batch (commit f238dab). Code: `app/core/retrieval/references/`,
   record real pages, check a real `db=books` ESummary, run migration 0009 on Supabase,
   then turn `USE_REFERENCE_SOURCES` on.
 
+## 7o. First Real-Model Smoke Run (T18, no issue; design §13, §14)
+
+Graph (all real nodes, references on) and the single-call baseline on 10 golden-set
+transcripts (v07, v12, v20, v30, v41, v52, v60, v70, v75, v80; speech only, as the live
+worker sends it; OCR off). Harness: `backend/scripts/smoke_run.py` (never reads labels).
+**No accuracy numbers**: the labels are still being relabelled and reviewed.
+
+- **Spend: $6.66 in total** ($5.45 for the 10-video run, $1.19 re-running v07 and
+  v12 after the fixes, about $0.01 of probes, rounded up), under the $15 cap.
+- **Cost and latency per video (graph):** median $0.41 / 76 s, mean $0.54 / 90 s, max
+  $1.24 / 184 s (18 claims). Baseline (gpt-4o single call): median $0.0026 / 1.5 s, so the
+  graph costs about 190× as much. Cost grows with the number of claims (4 → 23 per video).
+  Split by step over the run: verify (Opus 5.5) 67%, critic (gpt-4o) 19%, stance
+  (Sonnet 5.5) 11%, judge explanation 1.4%, extraction (Haiku 5.5) 0.2%. The verifier is
+  the place to cut cost (per-step routing evaluation, §13), and the critic re-reads the
+  whole evidence set on every claim (404k input tokens for 5k out).
+- **Integration bugs found and fixed (each with tests):**
+  1. The Anthropic client sent `temperature`; the installed SDK (2.x; `anthropic` is
+     unpinned in requirements) no longer accepts it and current Claude models reject it.
+     **Every** Anthropic step failed, so the graph would have fallen back on every video.
+     The client no longer sends sampling parameters (OpenAI still gets `temperature: 0`).
+  2. Sonnet 5.5 and Opus 5.5 refuse a forced `tool_choice` (400), which broke stance,
+     verify and the judge explanation. The client now retries once with `tool_choice: auto`,
+     one tool call allowed, an instruction naming the tool, and `max_tokens` raised to at
+     least 8192 (thinking is always on for these models and counts against the cap). It
+     remembers which models need this. A reply without the tool still parses as None (the
+     node's safe default). Haiku 5.5 accepts the forced call and keeps it.
+  3. §10 quote check: speech segments were joined with newlines, so a quote crossing a
+     Whisper segment boundary (Whisper cuts mid-sentence) failed and forced review. Speech
+     is now matched as one running text. Also accepts an elided quote ("a ... b") when
+     every piece appears in order in one source.
+  4. The judge's "Not judged (no usable evidence): c1 INSUFFICIENT_EVIDENCE, ..." line
+     went over its own 300-character validation limit on any video with roughly 13 or more
+     unjudged claims, so long videos always failed validation. Now grouped by verdict
+     (`INSUFFICIENT_EVIDENCE c2, c4; NOT_VERIFIABLE c3`), with counts when even that is too long.
+  5. PubMed EFetch: single records with consortium author lists are about 2 MB, so a
+     20-PMID batch passed the 5 MB response cap and the claim lost all its papers (seen on the
+     query `cops lie`). An oversized batch is now split in half and retried; a single
+     record over the cap is skipped.
+  6. Reference catalogue: WHO moved the salt fact sheet (`.../salt-reduction` → 301 →
+     `.../sodium-reduction`); the fetcher rightly refuses redirects, so the entry had been
+     dead since T17. URL updated.
+  7. `scripts/record_pubmed_fixtures.py` crashed on NCBI's first 429 (its recording hook
+     parsed the error body as XML). It now skips non-200 replies, so the client's retry runs.
+  Also: the single-call providers record `last_usage` (tokens) so the baseline can be
+  costed, and `gpt-4o-2024-08-06` is priced in `routing.yaml` (the critic and fallback
+  were unpriced, so the graph's cost would have been reported as unknown).
+- **Verified live, previously unverified:** references work end to end. WHO, FDA, EFSA,
+  NHS and NCBI Bookshelf (ESearch/ESummary field names included) returned passages. The
+  PubMed planner and retriever ran against real NCBI. No graph fell back to the single
+  call and no model call failed after the fixes.
+- **Real PubMed fixtures:** recorded for the script's 10 default claims (10 searches, 199
+  records, 21 requests, at most 2.5/s). Committed trimmed to `app/tests/fixtures/pubmed_live`
+  (top 3 records per query, `<ReferenceList>` removed: 30 records, about 300 KB), with a
+  parser and retriever test. The full table is in the T18 PR.
+- **Left for a person:**
+  - CDC pages answer "Access Denied" (Akamai bot block) from this environment. Check from
+    production before relying on the CDC catalogue entries.
+  - Copyright: the committed fixtures are real abstracts. Decide whether they may stay in the repo.
+  - NCBI returned 429 at 2.5 requests/s from the shared egress IP. Get an NCBI key
+    (10/s) before running at volume.
+  - Pin `anthropic` (and `openai`) in requirements. The temperature break came from an
+    unpinned major upgrade.
+  - The stance model "corrects" Whisper errors and adds editorial brackets in its
+    quotes ("nanosink" → "nano zinc", "insinuate[s]"), which the §10 check rightly flags.
+    That needs a prompt change ("quote verbatim, transcription errors included"); prompts
+    are versioned, so it should go through evaluation.
+  - `merge_plausibility` flags claims whose segments are 3–6 s apart. Real speech has
+    pauses that long, so the gap threshold needs tuning on real data. One 23 s merge was a
+    real extractor error.
+  - Retrieval yield: most claims ended INSUFFICIENT_EVIDENCE, and every video was sent to
+    review (mostly `weak_evidence` and `budget_exhausted`). That is not an accuracy result, but
+    it is the first thing T14 should look at. One query for "5G spreads coronavirus" found
+    unrelated papers (hyperthyroidism).
+  - The `extract_v2` reply once included an extra field (`requirement_placeholder`),
+    which was caught by schema validation and repaired. `strict: true` on the tool could
+    prevent it.
+  - The legacy single-call `OpenAIProvider` defaults to the floating alias `gpt-4o`
+    (resolved today to `gpt-4o-2024-08-06`), against §13's pinned-ID rule. Live default
+    unchanged.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -1049,6 +1130,14 @@ replacement.
 ## 10. Check-In Log
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
+
+- **2026-11-22**: T18 (no issue; design §13, §14) first real-model smoke run by the
+  automated build: graph (references on) and baseline on 10 golden-set transcripts,
+  **$6.66 spent** in total. Graph median $0.41 and 76 s per video, against $0.0026 and
+  1.5 s for the baseline. Found and fixed 7 integration bugs, each with tests; the
+  first two would have made every graph run fall back. Recorded real PubMed fixtures and
+  verified references live. No accuracy numbers (labels still under review).
+  Details in §7o.
 
 - **2026-11-22**: T17 (no issue; design §4, §6) built by the automated build:
   `claim_kind` on every claim (model via `extract_v2`, fixed rules as fallback);

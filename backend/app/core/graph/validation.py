@@ -293,13 +293,33 @@ def check_quotes(state: PipelineState, limits: ValidationLimits = DEFAULT_LIMITS
     keeps claims close to the original words (T10 checks that grounding). A snippet
     ending in "…" (the judge's truncation) must match as a prefix.
     """
-    sources = [_norm(t) for _, _, t in _segments(state).values()]
+    # Speech is one running text: Whisper cuts segments mid-sentence, so a quote may
+    # cross a segment boundary (T18 smoke run). Each OCR line and claim stays separate.
+    speech = sorted(state.get("transcript_segments") or [], key=lambda t: (t.start, t.end))
+    sources = [_norm(" ".join(t.text for t in speech))]
+    sources += [_norm(t) for sid, (_, _, t) in _segments(state).items()
+                if sid not in {t.segment_id for t in speech}]
     sources += [_norm(c.claim_text) for c in state.get("claims") or [] if isinstance(c, GraphClaim)]
     corpus = "\n".join(sources)
 
     def found(snippet: str) -> bool:
         s = _norm(snippet.rstrip("…").rstrip("."))
-        return len(s) < limits.min_quote_chars or s in corpus
+        if len(s) < limits.min_quote_chars or s in corpus:
+            return True
+        # An elided quote ("a ... b"): every piece in the video, in order, in one source.
+        parts = [_norm(p) for p in re.split(r"\.\.\.|…", snippet.rstrip("…").rstrip(".")) if _norm(p)]
+        if len(parts) < 2:
+            return False
+        for src in sources:
+            at = 0
+            for part in parts:
+                at = src.find(part, at)
+                if at < 0:
+                    break
+                at += len(part)
+            else:
+                return True
+        return False
 
     issues: list[ValidationIssue] = []
     final = state.get("final_result")

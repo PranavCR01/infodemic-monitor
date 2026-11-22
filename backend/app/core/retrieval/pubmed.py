@@ -370,12 +370,25 @@ class PubMedClient:
         wanted = [p for p in dict.fromkeys(str(p) for p in pmids) if _PMID_RE.match(p)]
         found: dict[str, PubMedArticle] = {}
         for i in range(0, len(wanted), MAX_PMIDS_PER_FETCH):
-            batch = wanted[i : i + MAX_PMIDS_PER_FETCH]
-            params = {"id": ",".join(batch), "rettype": "abstract", "retmode": "xml"}
-            articles = self._with_retry(lambda: parse_efetch(self._get(EFETCH_URL, params).text))
-            for art in articles:
+            for art in self._fetch_batch(wanted[i : i + MAX_PMIDS_PER_FETCH]):
                 found[art.pmid] = art
         return [found[p] for p in wanted if p in found]
+
+    def _fetch_batch(self, batch: list[str]) -> list[PubMedArticle]:
+        """One EFetch. A batch over the response-size cap is split in half and retried:
+        single PubMed records with consortium author lists run to ~2 MB, so a few of
+        them push a 20-record batch past the cap and the claim lost all its papers (T18
+        smoke run). A record over the cap on its own is skipped."""
+        params = {"id": ",".join(batch), "rettype": "abstract", "retmode": "xml"}
+        try:
+            return self._with_retry(lambda: parse_efetch(self._get(EFETCH_URL, params).text))
+        except Exception as exc:  # noqa: BLE001 - only the size limit is handled here
+            if getattr(exc, "kind", None) != "response_too_large":
+                raise
+            if len(batch) == 1:
+                return []
+            mid = len(batch) // 2
+            return self._fetch_batch(batch[:mid]) + self._fetch_batch(batch[mid:])
 
     def close(self) -> None:
         self._http.close()

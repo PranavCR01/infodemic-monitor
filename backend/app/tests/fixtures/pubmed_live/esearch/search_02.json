@@ -1,0 +1,23 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "26",
+  "retmax": "3",
+  "retstart": "0",
+  "idlist": [
+   "22962927",
+   "25386977",
+   "19588383"
+  ],
+  "translationset": [
+   {
+    "from": "Garlic[MeSH Terms]",
+    "to": "\"garlic\"[MeSH Terms]"
+   }
+  ],
+  "querytranslation": "(\"garlic\"[MeSH Terms] OR \"garlic\"[Title/Abstract] OR \"allicin\"[Title/Abstract]) AND (\"Common Cold\"[MeSH Terms] OR \"Common Cold\"[Title/Abstract])"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "1941",
+  "retmax": "3",
+  "retstart": "0",
+  "idlist": [
+   "35779626",
+   "14171767",
+   "26098775"
+  ],
+  "translationset": [
+   {
+    "from": "Neoplasms[MeSH Terms]",
+    "to": "\"neoplasms\"[MeSH Terms]"
+   }
+  ],
+  "querytranslation": "(\"lemon\"[Title/Abstract] OR \"citrus\"[Title/Abstract]) AND (\"neoplasms\"[MeSH Terms] OR \"cancer\"[Title/Abstract] OR \"neoplasm\"[Title/Abstract] OR \"tumor\"[Title/Abstract])"
+ }
+}

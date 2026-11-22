@@ -664,3 +664,40 @@ def test_job_status_has_review_required():
     from app.db.models.job import JobStatus
 
     assert JobStatus("REVIEW_REQUIRED") is JobStatus.REVIEW_REQUIRED
+
+
+# --- T18 smoke run: real Whisper segments cut sentences mid-way -------------------
+
+def _whisper_state(rationale: str) -> dict:
+    s = base_state((S.ENDORSES, V.CONTRADICTED))
+    s["transcript_segments"] = [
+        TranscriptSegment(segment_id="t1", start=6.96, end=11.52,
+                          text="it's really not that hard. First things first, it's all mental. If you think you can do it,"),
+        TranscriptSegment(segment_id="t2", start=11.52, end=14.56,
+                          text="you can do it. If you don't think you can do it, you're not going to be able to do it."),
+        TranscriptSegment(segment_id="t3", start=41.68, end=44.8,
+                          text="and you pee it out. You don't poop it out. I literally thought you poop out the fat,"),
+        TranscriptSegment(segment_id="t4", start=44.8, end=48.72, text="but you pee out the fat, okay?"),
+    ]
+    s["stance_results"] = {"c1": s["stance_results"]["c1"].model_copy(update={"rationale": rationale})}
+    return s
+
+
+def test_quote_across_a_whisper_segment_boundary_is_in_the_video():
+    s = _whisper_state('The speaker says "If you think you can do it, you can do it."')
+    assert val.check_quotes(s) == []
+
+
+def test_elided_quote_matches_when_its_pieces_appear_in_order():
+    s = _whisper_state('The speaker says "You don\'t poop it out... but you pee out the fat, okay?"')
+    assert val.check_quotes(s) == []
+    s = _whisper_state('The speaker says "but you pee out the fat… You don\'t poop it out"')  # wrong order
+    assert [i.check for i in val.check_quotes(s)] == [val.CHECK_QUOTES]
+    s = _whisper_state('The speaker says "You don\'t poop it out... and fat melts overnight"')  # invented piece
+    assert [i.check for i in val.check_quotes(s)] == [val.CHECK_QUOTES]
+
+
+def test_quote_spanning_speech_and_an_unrelated_ocr_line_is_still_caught():
+    s = _whisper_state('The speaker says "you can do it. HOT WATER"')
+    s["ocr_segments"] = [OcrSegment(segment_id="o1", start=0.0, end=1.0, text="HOT WATER", confidence=0.9)]
+    assert [i.check for i in val.check_quotes(s)] == [val.CHECK_QUOTES]

@@ -60,6 +60,8 @@ class AnthropicProvider:
         import anthropic
         self._client = anthropic.Anthropic(api_key=api_key, max_retries=0)  # tenacity owns retries
         self._model = model
+        # Token usage of the last successful call (cost reporting in eval/smoke runs).
+        self.last_usage: dict | None = None
 
     @retry(
         stop=stop_after_attempt(4),
@@ -85,6 +87,12 @@ class AnthropicProvider:
             )
             latency_ms = int((time.time() - start) * 1000)
 
+            usage = getattr(resp, "usage", None)
+            self.last_usage = {
+                "model": getattr(resp, "model", None) or self._model,
+                "input_tokens": int(getattr(usage, "input_tokens", 0) or 0),
+                "output_tokens": int(getattr(usage, "output_tokens", 0) or 0),
+            }
             tool_input: dict = {}
             for block in resp.content:
                 if block.type == "tool_use":

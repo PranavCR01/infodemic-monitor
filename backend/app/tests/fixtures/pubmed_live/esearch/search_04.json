@@ -1,0 +1,18 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "341",
+  "retmax": "3",
+  "retstart": "0",
+  "idlist": [
+   "23440782",
+   "37426629",
+   "31478634"
+  ],
+  "translationset": [],
+  "querytranslation": "(\"Ascorbic Acid\"[MeSH Terms] OR \"vitamin c\"[Title/Abstract] OR \"Ascorbic Acid\"[Title/Abstract]) AND (\"Common Cold\"[MeSH Terms] OR \"Common Cold\"[Title/Abstract])"
+ }
+}

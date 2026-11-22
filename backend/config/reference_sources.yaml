@@ -120,8 +120,9 @@ catalogue:
     keywords: [measles, measles deaths, measles cases]
   - id: who_salt
     source: who
-    title: Salt reduction fact sheet
-    url: https://www.who.int/news-room/fact-sheets/detail/salt-reduction
+    title: Sodium reduction fact sheet
+    # Moved: the old .../detail/salt-reduction URL now answers 301 (T18 smoke run).
+    url: https://www.who.int/news-room/fact-sheets/detail/sodium-reduction
     keywords: [salt, sodium, grams of salt, salt intake]
   - id: who_malaria
     source: who

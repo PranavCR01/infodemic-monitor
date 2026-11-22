@@ -37,6 +37,8 @@ class OpenAIProvider:
         from openai import OpenAI
         self._client = OpenAI(api_key=api_key, max_retries=0)  # tenacity owns retries
         self._model = model
+        # Token usage of the last successful call (cost reporting in eval/smoke runs).
+        self.last_usage: dict | None = None
 
     @retry(
         stop=stop_after_attempt(4),
@@ -57,6 +59,12 @@ class OpenAIProvider:
                 response_format={"type": "json_object"},
             )
             latency_ms = int((time.time() - start) * 1000)
+            usage = getattr(resp, "usage", None)
+            self.last_usage = {
+                "model": getattr(resp, "model", None) or self._model,
+                "input_tokens": int(getattr(usage, "prompt_tokens", 0) or 0),
+                "output_tokens": int(getattr(usage, "completion_tokens", 0) or 0),
+            }
             content = resp.choices[0].message.content or ""
             parsed = _parse_json(content)
             return ClassificationResult(
