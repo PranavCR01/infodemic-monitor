@@ -465,6 +465,77 @@ uses the stub until T11.
 - **Not done:** the T10 adversarial harness (`evaluation/adversarial/graph_system.py`)
   still uses its own reference verifier; switching it to this node is for T11/T14.
 
+## 7h. Judge and Mixed-Video Policy (T08, #35)
+
+The node is `backend/app/core/graph/judge.py` (`make_judge_classification(caller=None)`);
+the explanation prompt is `app/core/graph/prompts/explain_v1.md`. The default graph's
+`judge_classification` now runs this judge with the template explanation (it is
+deterministic, so this changes no model calls). **Needs agreement from Pranav** (issue
+acceptance criterion): the policy below is the target design's §9 table plus the flags.
+
+**Labels: the §9 rules, in order, as code.** Only claims in `claims` that have a verdict
+take part; a missing stance counts as UNCLEAR.
+
+| # | Rule (`decision_rule`) | Label | Deciding claims | Evidence cited |
+|---|---|---|---|---|
+| 1 | `endorsed_contradicted`: any claim ENDORSES + CONTRADICTED | MISINFO | those claims | their contradicting IDs |
+| 2 | `refuted_contradicted`: otherwise any REFUTES + CONTRADICTED | DEBUNKING | those claims | their contradicting IDs |
+| 3 | `judged_nothing_false_endorsed`: otherwise any SUPPORTED or CONTRADICTED | NO_MISINFO | the judged claims | their supporting + contradicting IDs |
+| 4 | `nothing_judged` / `no_claims`: otherwise | CANNOT_RECOGNIZE | none | none |
+
+**Patterns the rules can't settle become review flags, never a different label.**
+`final_result.review_flags`; the review policy adds each as `judge:<flag>`.
+
+| Flag | When | Why |
+|---|---|---|
+| `mixed_video` | an endorsed false claim and a refuted false claim | §9 "mixed videos". Label stays MISINFO (rule 1) |
+| `unclear_stance_contradicted:<cid>` | a contradicted claim's stance is UNCLEAR/missing and the label isn't MISINFO | §9 "unclear stance on a deciding claim": had it been ENDORSES, the label would be MISINFO |
+| `false_claim_not_refuted:<cid>` | label NO_MISINFO and a contradicted claim is QUOTES or NEUTRAL | T10 finding: nudging the stance step alone cleared 3 attacks. Not raised under DEBUNKING (quoting the myth is normal there) |
+| `mixed_evidence:<cid>` | any claim's verdict is MIXED | §9 probe: "the science is split" is for a person |
+| `verification_failed:<cid>` | the verifier recorded a retryable failure for the claim | T06 note: its INSUFFICIENT_EVIDENCE is not a finding |
+
+Decisions and deviations:
+
+- **Ambiguous cases go to a person, not an LLM.** §9 allows either. There is no labelled
+  set to show an LLM adjudicator is right, it would reintroduce run-to-run label changes,
+  and T10 showed the stance step is the attack surface. An LLM tie-breaker can be added
+  behind the flags later and measured (T14).
+- **Not detected by code yet:** materiality (a harmless inaccuracy vs "stop taking
+  insulin") and satire/parody. No reliable deterministic signal; left for later work with
+  the labelled set (e.g. a harm-category lookup on `claim_category`).
+- **The issue's `requires_human_review` / `review_reasons` stay on `route_for_review`**
+  (T02 ownership; the issue says the judge "writes only `final_result`"). The judge
+  hands its part over as `review_flags`. T09: keep the `judge:` flags when replacing the
+  stub review policy.
+- **Citations only from state.** Claim IDs must be in `claims`; evidence IDs must have
+  been retrieved or reranked for *that* claim. Anything else is dropped from the result
+  and recorded as `guardrail:uncited_evidence` (or `guardrail:unknown_claim`), which
+  sends the run to review.
+- **The LLM writes only the explanation** (routed step `judge_explanation`, prompt
+  `explain_v1`, forced `record_explanation` tool, T10's `explanation_prompt` builder with
+  verifier notes fenced as `model_output`). Its text is rejected, and the deterministic
+  template used instead, if it names a different label (upper-case label names only, so
+  "misinformation" in prose is fine), mentions an evidence ID or PMID the result doesn't
+  cite, contains a URL or breaks the schema. A model failure also falls back to the
+  template (`retryable`, not a review reason). Review flags are appended to the text in
+  code, so the model can't omit them.
+- **`FinalClassification` gained optional `decision_rule`, `review_flags`, `model`,
+  `prompt_version`** (additive, same rule as T04/T06; schema version stays 1.0.0).
+- **`confidence` stays `None`** until calibration (T15; §11 "lowest calibrated deciding
+  claim"). `to_classification_result()` (for T11's `InferenceProvider`) needs a float, so
+  it uses the lowest *raw* verifier confidence of the deciding claims, or 0.0 when none —
+  uncalibrated, like today's single-call number. It also fills `evidence_snippets` with
+  the speech/caption text behind the deciding stances, `citations` from cited records with
+  a PMID, and per-claim `claims` labelled by the same rules applied to one claim.
+- **Effect on existing numbers.** The stub sample video is itself a mixed video, so it
+  now goes to review (`judge:mixed_video`); the skeleton flow tests were updated to say
+  so, plus one new pass-path test. T10's adversarial report: still 5 unsafe out of 34,
+  but 4 instead of 2 are now held for review (adv-speech-04, adv-jailbreak-04, both
+  stance-nudging attacks caught by `false_claim_not_refuted`). Report regenerated.
+- **Review-rule note for T09 (from T02) still stands:** deciding claims are only ever
+  SUPPORTED or CONTRADICTED, so "a deciding claim is INSUFFICIENT_EVIDENCE or MIXED" can't
+  fire; `mixed_evidence:<cid>` now covers MIXED instead.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -485,6 +556,13 @@ replacement.
 ## 10. Check-In Log
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
+
+- **2026-11-22**: T08 (#35) judge built by the automated build: the §9 rules as code
+  (`decision_rule` recorded), citations limited to IDs in state, code-detected review
+  flags for mixed videos, unclear stance on a false claim, false claims quoted but not
+  refuted (T10's finding), mixed evidence and verifier failures; the LLM only writes the
+  explanation and is checked against the label. `to_classification_result()` maps onto
+  `ClassificationResult` for T11. Policy needs Pranav's agreement. Decisions in §7h.
 
 - **2026-11-22**: T06 (#33) evidence verifier built by the automated build: forced
   `record_verdict` tool call through the routed `verify_claims` step, prompt `verify_v1`

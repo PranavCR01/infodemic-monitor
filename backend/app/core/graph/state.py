@@ -185,6 +185,15 @@ class FinalClassification(_Record):
     explanation: str = ""
     limitations: list[str] = Field(default_factory=list)
     confidence: Optional[float] = None
+    # Added by T08 (judge). Optional and additive, so earlier checkpoints still load.
+    # ``decision_rule`` names the §9 rule that fired; ``review_flags`` are the patterns
+    # the rules can't settle (mixed video, unclear stance on a false claim, ...), which
+    # the review policy turns into review reasons. ``model``/``prompt_version`` describe
+    # the explanation writer (``None`` when the deterministic template was used).
+    decision_rule: Optional[str] = None
+    review_flags: list[str] = Field(default_factory=list)
+    model: Optional[str] = None
+    prompt_version: Optional[str] = None
 
 
 class NodeError(_Record):
