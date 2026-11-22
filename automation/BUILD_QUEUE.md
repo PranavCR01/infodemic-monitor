@@ -13,7 +13,7 @@ starts the next ready task, and records progress here.
 |---|---|---|---|---|---|---|---|---|---|
 | T01 | Evaluation framework and routing harness (mocked models; no paid runs) | new | 13, 14 | — | done | session_013cWxpykbHfbgKcp3qazzmb | 2026-11-21 23:51 | https://github.com/PranavCR01/infodemic-monitor/pull/50 | Built and tested with mocks only. Routing table is provisional; paid runs, the routing decision, real provider clients for ModelRouter and checking model ids/prices are left for T14 / a person |
 | T02 | LangGraph skeleton: typed state, stub nodes, Postgres checkpointing | #29 | 4, 5 | — | done | session_013cWxq2fmACtMefWPTdEkMT | 2026-11-21 23:53 | https://github.com/PranavCR01/infodemic-monitor/pull/49 | Taken over from Jared by decision of the project lead. Resume test passed on InMemorySaver and local Postgres 16; Supabase `langgraph` schema run left for a person (#47) |
-| T03 | Retrieval planning and PubMed evidence retriever | #31 | 6 | T02 | in_progress | session_013cWxpzsTJuP1VYHqJT9oWT | 2026-11-22 00:02 | | Record PubMed responses as fixtures; tests make no network calls |
+| T03 | Retrieval planning and PubMed evidence retriever | #31 | 6 | T02 | done | session_013cWxpzsTJuP1VYHqJT9oWT | 2026-11-22 00:02 | https://github.com/PranavCR01/infodemic-monitor/pull/52 | NCBI unreachable from the build env: fixtures are synthetic in NCBI's format; the live 10-claim evidence sample is left for a person (`scripts/record_pubmed_fixtures.py`, MULTI_AGENT §7d) |
 | T04 | Stance analyzer node | #30 | 5 | T02 | done | session_013cWxpyUeq4YuAXTpZfndft | 2026-11-22 00:02 | https://github.com/PranavCR01/infodemic-monitor/pull/51 | 27-example stance set; keyword floor debunk recall 0.78; LLM run waits for API keys |
 | T05 | Rerank and filter evidence | #32 | 6 | T03 | todo | | | | |
 | T06 | Evidence verifier node | #33 | 7 | T03, T05 | todo | | | | |
@@ -31,6 +31,7 @@ starts the next ready task, and records progress here.
 
 Newest first. One line per event: date, task, what happened.
 
+- 2026-11-22 UTC — T03 done: PR #52 squash-merged into langgraph-build (250 passed, 1 skipped). T05 now unblocked. Live PubMed sample still needs a person (no NCBI access in the build env).
 - 2026-11-22 00:10 UTC — T04 done: PR #51 squash-merged into langgraph-build (193 passed, 1 skipped).
 - 2026-11-22 00:04 UTC — T10 started in session session_013cWxq2Ly4NrwzhcpZMfmkx.
 - 2026-11-22 UTC — T01 done: PR #50 squash-merged into langgraph-build (144 passed, 1 skipped). T14 still blocked on API keys and the golden label set.
