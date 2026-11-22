@@ -1,0 +1,56 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 24.22,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.12,
+    "text": "You're going to be my new client this month because I'm starting a new series where I"
+   },
+   {
+    "id": "t2",
+    "start": 3.12,
+    "end": 8.52,
+    "text": "give you 30 days of easy tips that I would do if I was just starting my health journey."
+   },
+   {
+    "id": "t3",
+    "start": 8.52,
+    "end": 12.54,
+    "text": "Tip one, start adding electrolytes to your water every single morning."
+   },
+   {
+    "id": "t4",
+    "start": 12.54,
+    "end": 16.04,
+    "text": "Electrolytes help you properly retain fluid, keeping you way more hydrated."
+   },
+   {
+    "id": "t5",
+    "start": 16.04,
+    "end": 19.5,
+    "text": "So think better, energy levels, immune health, and no more headaches."
+   },
+   {
+    "id": "t6",
+    "start": 19.5,
+    "end": 22.8,
+    "text": "They also have a long laundry list of health benefits, so make it a non-negotiable this"
+   },
+   {
+    "id": "t7",
+    "start": 22.8,
+    "end": 23.16,
+    "text": "month."
+   }
+  ]
+ }
+}

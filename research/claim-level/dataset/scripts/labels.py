@@ -777,4 +777,1078 @@ LABELS = [
             },
         ],
     },
+    {
+        "video_id": "v20",
+        "topic": "home remedies / respiratory infection",
+        "case_tags": ["missing_evidence"],
+        "confidence": "high",
+        "notes": "A 27-second recipe video: onion, garlic, lemon, ginger and "
+                 "cinnamon boiled in two litres of water, claimed to relieve "
+                 "five separate respiratory conditions. One sentence carrying "
+                 "five therapeutic claims, split into five rows per the "
+                 "section 4 rule. Nothing in the literature tests this "
+                 "preparation, and the closest thing to a direct test -- the "
+                 "Cochrane review of garlic for the common cold -- concludes "
+                 "there is insufficient trial evidence. So every row is "
+                 "INSUFFICIENT_EVIDENCE and the video is CANNOT_RECOGNIZE, "
+                 "against the collectors' MISINFO. The same pattern as v12, "
+                 "v13 and v17: unevidenced folk remedies are not CONTRADICTED "
+                 "under section 7, they are unproven.",
+        "claims": [
+            {
+                "text": "a remedy capable of relieving dry cough",
+                "start": 10.6, "end": 17.3,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "No trial of this preparation. The honey the video "
+                         "offers as an optional sweetener does have Cochrane "
+                         "evidence for acute cough in children, but that tests "
+                         "honey, not this decoction, so it is not cited here.",
+            },
+            {
+                "text": "a remedy capable of ... [relieving] bronchitis",
+                "start": 10.6, "end": 17.3,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "Searches for herbal treatment of acute bronchitis "
+                         "return trials of Pelargonium sidoides extract, a "
+                         "different preparation entirely, so nothing tests "
+                         "this claim.",
+            },
+            {
+                "text": "a remedy capable of ... expelling mucus stuck in the "
+                        "lungs",
+                "start": 10.6, "end": 17.3,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "A search for ginger as a respiratory expectorant "
+                         "returned nothing at all; the empty search is in "
+                         "evidence_cache/.",
+            },
+            {
+                "text": "a remedy capable of ... improving sinusitis",
+                "start": 17.3, "end": 22.8,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "Nothing retrieved tests any of these ingredients "
+                         "against sinusitis.",
+            },
+            {
+                "text": "a remedy capable of ... easing cold symptoms",
+                "start": 17.3, "end": 22.8,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [],
+                "contradicting": ["PMID:25386977"],
+                "confidence": "high",
+                "notes": "The closest direct test available: the Cochrane "
+                         "review of garlic for the common cold concludes there "
+                         "is insufficient clinical trial evidence for garlic "
+                         "in preventing or treating colds, resting on a single "
+                         "trial. Cited as the nearest evidence while the "
+                         "verdict stays insufficient, because the review "
+                         "itself reports an absence of evidence rather than a "
+                         "demonstrated lack of effect.",
+            },
+        ],
+    },
+    {
+        "video_id": "v21",
+        "topic": "nutrition / nuts",
+        "case_tags": [],
+        "confidence": "medium",
+        "notes": "A six-benefit listicle about eating almonds daily, ending in "
+                 "a 'natural medicine' subscribe prompt. A useful contrast "
+                 "with v20: same listicle format, but one of the six claims is "
+                 "backed by a 37-trial meta-analysis, so the video comes out "
+                 "NO_MISINFO rather than CANNOT_RECOGNIZE. The weaker half of "
+                 "the video leans on nutrient-to-outcome reasoning (magnesium "
+                 "therefore mood, tryptophan therefore sleep, vitamin E "
+                 "therefore less stress) that no retrieved trial tests. "
+                 "Collectors filed it under NO_MISINFO, which agrees.",
+        "claims": [
+            {
+                "text": "You'll reduce abdominal fat. Studies show that "
+                        "almonds can help you lose weight, especially in the "
+                        "stomach area",
+                "start": 3.8, "end": 10.9,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:38351580"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "A meta-analysis of 37 randomised trials finds "
+                         "significant reductions in body weight (-0.45 kg) and "
+                         "waist circumference (-0.66 cm) with moderate GRADE "
+                         "certainty. Two caveats a reviewer should weigh: the "
+                         "effects are small, and the 'especially in the "
+                         "stomach area' part is not established -- certainty "
+                         "for visceral adipose tissue specifically was rated "
+                         "very low.",
+            },
+            {
+                "text": "Almonds are rich in unsaturated fats that promote "
+                        "good cholesterol and protect your heart",
+                "start": 12.8, "end": 18.1,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [],
+                "contradicting": ["PMID:38967674"],
+                "confidence": "medium",
+                "notes": "No cardiovascular-outcome trial of almonds was "
+                         "retrieved, and the systematic review of nuts in "
+                         "secondary cardiovascular prevention found no change "
+                         "in lipid or inflammatory profiles. Not enough to "
+                         "call the claim false, well short of supporting it.",
+            },
+            {
+                "text": "Thanks to their fiber and protein content, almonds "
+                        "make you feel full. This makes them an ideal snack "
+                        "for controlling your appetite",
+                "start": 19.8, "end": 28.8,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:36305961", "PMID:34682735"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Individual trials point this way (almonds improve "
+                         "appetite-regulating hormones; snacking on almonds "
+                         "lowers energy intake against a high-carbohydrate "
+                         "snack), but the 37-trial meta-analysis rates the "
+                         "certainty of the appetite evidence very low on "
+                         "GRADE. Section 7's 'what exists is too weak' applies.",
+            },
+            {
+                "text": "Almonds are an excellent source of magnesium, which "
+                        "plays an essential role in mood regulation and stress "
+                        "management",
+                "start": 31.5, "end": 37.9,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "Every trial the search returned tests magnesium "
+                         "inside a multi-ingredient supplement (with B "
+                         "vitamins, green tea, rhodiola), so none isolates "
+                         "magnesium's effect on mood or stress.",
+            },
+            {
+                "text": "Almonds are naturally rich in tryptophan, an amino "
+                        "acid that plays a key role in the production of "
+                        "serotonin, the sleep hormone",
+                "start": 40.1, "end": 47.8,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "Nothing retrieved tests almond tryptophan against "
+                         "sleep in people -- the only hit was a study in ring "
+                         "doves. Worth a reviewer's attention separately: "
+                         "calling serotonin 'the sleep hormone' is wrong "
+                         "(melatonin is the one usually meant), but that is a "
+                         "mislabel inside the reasoning rather than a separate "
+                         "testable claim, and no retrieved source states it, "
+                         "so it is noted rather than cited.",
+            },
+            {
+                "text": "Almonds are rich in antioxidants like vitamin E, "
+                        "which help fight oxidative stress and reduce daily "
+                        "stress",
+                "start": 49.6, "end": 56.5,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "Conflates oxidative stress with psychological "
+                         "stress. Nothing retrieved tests vitamin E or almonds "
+                         "against perceived daily stress.",
+            },
+        ],
+    },
+    {
+        "video_id": "v22",
+        "topic": "nutrition / eggs",
+        "case_tags": [],
+        "confidence": "medium",
+        "notes": "A two-week-of-eggs listicle, delivered in clinical language. "
+                 "The best-evidenced of the three listicles (v20, v21, v22): "
+                 "the HDL claim is directly supported by a meta-analysis of "
+                 "randomised trials, though the same meta-analysis shows eggs "
+                 "raise LDL as well, which the video does not mention. That "
+                 "omission is the most interesting thing in the video and is "
+                 "recorded on the claim rather than treated as a separate "
+                 "claim, since the speaker never asserts anything about LDL. "
+                 "Collectors filed it under NO_MISINFO, which agrees.",
+        "claims": [
+            {
+                "text": "You're going to be consuming the best quality "
+                        "protein. Your muscles, your connective tissue will "
+                        "get the highest quality amino acids",
+                "start": 3.2, "end": 10.2,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "low",
+                "notes": "A search for egg protein quality scores (DIAAS, "
+                         "biological value) returned nothing. Egg protein "
+                         "scoring well is uncontroversial nutrition-textbook "
+                         "material, but PubMed returned no source for it and "
+                         "section 7 does not allow filling the gap from "
+                         "background knowledge. A reviewer with a food "
+                         "composition reference should expect to upgrade this.",
+            },
+            {
+                "text": "Eggs are high in antioxidants, which is really good "
+                        "to prevent something called macular degeneration as "
+                        "well as cataracts",
+                "start": 10.2, "end": 16.8,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:35215476"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The retrieved review covers lutein and zeaxanthin in "
+                         "age-related macular degeneration, not egg intake as "
+                         "a prevention strategy, and says nothing retrievable "
+                         "about cataracts. Indirect on both halves of the "
+                         "claim.",
+            },
+            {
+                "text": "Eggs are also high in something called choline, "
+                        "which is really good to prevent a fatty liver",
+                "start": 16.8, "end": 20.8,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:39424072", "PMID:37634048"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The Framingham analysis finds dietary choline intake "
+                         "strongly inversely associated with incident NAFLD "
+                         "risk, which is the claim as stated. But the same "
+                         "cohort found no association between egg intake "
+                         "itself and NAFLD risk, so the nutrient link holds "
+                         "while the food-level effect does not. A reviewer "
+                         "could reasonably call this MIXED; recorded as "
+                         "SUPPORTED because the sentence is a claim about "
+                         "choline.",
+            },
+            {
+                "text": "[choline is] really good to ... support your brain, "
+                        "better focus, concentration, and memory",
+                "start": 20.8, "end": 24.8,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "Split from the fatty-liver claim in the same "
+                         "sentence. Nothing retrieved tests choline or eggs "
+                         "against focus, concentration or memory.",
+            },
+            {
+                "text": "Even though eggs are high in cholesterol, you're "
+                        "going to find that your HDL, the good cholesterol "
+                        "will go up if you consume eggs",
+                "start": 24.8, "end": 33.2,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:29111915", "PMID:32635569"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "Directly supported: the meta-analysis of randomised "
+                         "trials concludes that egg consumption increases "
+                         "total cholesterol, LDL-C and HDL-C against low-egg "
+                         "control diets. Supported exactly as stated -- and "
+                         "worth a reviewer's note that the same result "
+                         "includes the LDL rise the video leaves out, so a "
+                         "true claim is being used to carry a one-sided "
+                         "impression.",
+            },
+            {
+                "text": "if you eat eggs for breakfast, you're going to find "
+                        "your blood sugars are going to be very stabilized",
+                "start": 28.8, "end": 36.2,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:29313753"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "A search for egg breakfasts and postprandial "
+                         "glycaemia returned nothing; the nearest trial "
+                         "compares two eggs a day with an oatmeal breakfast "
+                         "and reports carotenoids and choline, not glucose "
+                         "stability.",
+            },
+        ],
+    },
+    {
+        "video_id": "v26",
+        "topic": "exercise / fasted walking",
+        "case_tags": [],
+        "confidence": "medium",
+        "notes": "A timeline listicle (@asmrsounding) about a 20-minute fasted "
+                 "morning walk: effects claimed immediately, after one week "
+                 "and after 20 days. The specific timelines are invented -- "
+                 "nothing retrieved tests a 20-day immune effect -- but the "
+                 "two claims that map onto a real literature (blood pressure, "
+                 "sleep) are supported, so the video is NO_MISINFO. This "
+                 "collector's folder carried no label.",
+        "claims": [
+            {
+                "text": "Since your glycogen stores are depleted overnight, "
+                        "your body switches to burning fat more quickly",
+                "start": 5.1, "end": 9.9,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:23723099"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Higher fat oxidation during fasted exercise is the "
+                         "well-described part of this topic. Cited to the "
+                         "fed-versus-fasted interval training trial; note it "
+                         "is fat oxidation during exercise, which is not the "
+                         "same as losing more fat.",
+            },
+            {
+                "text": "your metabolism gets activated, helping you burn fat "
+                        "more efficiently, which makes weight loss easier and "
+                        "faster",
+                "start": 10.7, "end": 20.9,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [],
+                "contradicting": ["PMID:23723099"],
+                "confidence": "medium",
+                "notes": "This is the step the video takes without support: "
+                         "greater fat oxidation during a fasted walk does not "
+                         "make weight loss faster. The trial that compares fed "
+                         "with fasted training found body-composition "
+                         "improvements in both states. Not a clean "
+                         "contradiction of the claim as worded, so "
+                         "insufficient, but this is the row a reviewer should "
+                         "look at first in this video.",
+            },
+            {
+                "text": "Your cortisol level, the stress hormone, gets "
+                        "regulated. This helps you feel more relaxed and calm "
+                        "throughout the day",
+                "start": 20.9, "end": 25.0,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "'Regulated' is not a direction, and nothing "
+                         "retrieved tests morning fasted walking against "
+                         "cortisol or self-reported calmness.",
+            },
+            {
+                "text": "After just one week, your circulation improves. This "
+                        "helps regulate blood pressure and strengthens your "
+                        "cardiovascular system",
+                "start": 35.6, "end": 40.2,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:39444461", "PMID:25601182"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The systematic review concludes brisk walking "
+                         "significantly reduces blood pressure in people with "
+                         "hypertension. Two qualifications: the evidence is in "
+                         "hypertensive populations rather than everyone, and "
+                         "nothing establishes the 'after just one week' "
+                         "timeline the video asserts.",
+            },
+            {
+                "text": "After 20 days, your immune system becomes stronger",
+                "start": 46.4, "end": 51.8,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "The exercise-immunology literature that the search "
+                         "returned concerns infection susceptibility in "
+                         "athletes and training loads; none of it tests a "
+                         "20-day immune effect from a daily 20-minute walk. "
+                         "The precise-sounding timeline has no source.",
+            },
+            {
+                "text": "Your sleep also improves. You fall asleep faster and "
+                        "wake up feeling more refreshed",
+                "start": 51.8, "end": 54.9,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:34163383", "PMID:25596964"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The meta-analysis of randomised trials finds "
+                         "exercise improves subjective sleep quality, insomnia "
+                         "severity and daytime sleepiness. Noted limitation "
+                         "from the review itself: the improvements are in "
+                         "subjective rather than physiological sleep measures.",
+            },
+        ],
+    },
+    {
+        "video_id": "v19",
+        "topic": "nutrition / dietary fat",
+        "case_tags": ["debunking", "uncertain_science"],
+        "confidence": "medium",
+        "notes": "A careful seed-oil debunk that explicitly separates "
+                 "correlation from causation, cites controlled feeding trials "
+                 "and the Japan counter-example, and ends on obesity being "
+                 "multifactorial. Pairs with v11 (same topic, a doctor "
+                 "defending seed oils) and against the rest of the bundle's "
+                 "seed-oil content. Comes out DEBUNKING because the myth it "
+                 "refutes is contradicted by the linoleic-acid literature. "
+                 "Two of its claims are national-statistics assertions that "
+                 "PubMed cannot settle. This collector's folder carried no "
+                 "label.",
+        "claims": [
+            {
+                "text": "seed oils are horrible for you",
+                "start": 0.0, "end": 3.2,
+                "stance": "REFUTES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:25161045", "PMID:37513547"],
+                "confidence": "medium",
+                "notes": "The myth the video exists to refute, stated in its "
+                         "opening line. The systematic review and "
+                         "meta-analysis of prospective cohorts finds dietary "
+                         "linoleic acid inversely associated with coronary "
+                         "heart disease risk in a dose-response manner, which "
+                         "contradicts 'horrible for you'. Observational "
+                         "evidence, hence medium confidence.",
+            },
+            {
+                "text": "In every single human study done, the people eating "
+                        "more seed oils either saw the same or actually better "
+                        "health outcomes than the groups eating less",
+                "start": 47.2, "end": 55.4,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:32428300", "PMID:40416032",
+                               "PMID:25161045"],
+                "confidence": "medium",
+                "contradicting": [],
+                "notes": "Unusually, the hedge inside the claim ('the same or "
+                         "better') is what makes it hold: the Cochrane review "
+                         "finds benefit from replacing saturated fat and the "
+                         "2025 meta-analysis finds no difference, and both "
+                         "fall inside 'same or better'. 'Every single human "
+                         "study done' is an absolute that cannot be verified "
+                         "exhaustively, which is why this is medium confidence "
+                         "rather than high.",
+            },
+            {
+                "text": "researchers locked people in a metabolic ward and fed "
+                        "them two diets matched for the calories in sugar, "
+                        "fat, fiber, and sodium ... On the processed diet, "
+                        "people ate 500 calories more a day and gained weight",
+                "start": 107.2, "end": 120.2,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:31105044"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "An accurate description of a real trial, down to the "
+                         "effect size: Hall et al., 'Ultra-Processed Diets "
+                         "Cause Excess Calorie Intake and Weight Gain: An "
+                         "Inpatient Randomized Controlled Trial of Ad Libitum "
+                         "Food Intake'. The most precisely sourced claim in "
+                         "the bundle that the speaker did not show on screen.",
+            },
+            {
+                "text": "Since the 1960s, Japan has quadrupled its vegetable "
+                        "oil intake in the form of canola and soybean ... "
+                        "Their obesity rate is under 5%, and they live longer "
+                        "than almost anyone on the earth",
+                "start": 65.4, "end": 78.5,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "Three national statistics (oil intake, obesity "
+                         "prevalence, life expectancy). All are checkable, but "
+                         "against OECD or WHO country data rather than the "
+                         "biomedical literature, and nothing retrievable "
+                         "through PubMed or a WHO/CDC page tests them. A "
+                         "structural gap in the evidence sources rather than a "
+                         "weakness in the claim -- see the PR description.",
+            },
+            {
+                "text": "We eat about 500 or more calories a day than we did "
+                        "in 1970",
+                "start": 92.3, "end": 96.5,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "Same kind of claim as the Japan one: a national "
+                         "food-availability statistic, not a biomedical "
+                         "finding.",
+            },
+        ],
+    },
+    {
+        "video_id": "v25",
+        "topic": "nutrition / sugar",
+        "case_tags": ["debunking"],
+        "confidence": "high",
+        "notes": "@andydoeshealthy plays a news clip of someone claiming the "
+                 "body cannot break down high fructose corn syrup, then "
+                 "refutes it on composition and metabolism. The cleanest "
+                 "debunking case in the bundle: both refuted claims are "
+                 "contradicted by retrievable evidence, so the section 9 rules "
+                 "return DEBUNKING on solid ground rather than on a single "
+                 "thin verdict the way v07 does. Also a good test of the "
+                 "section 5 distinction between QUOTES and REFUTES -- the "
+                 "claims are someone else's words, played as a clip, but the "
+                 "speaker takes a clear position against them, so the stance "
+                 "is REFUTES, not QUOTES. This collector's folder carried no "
+                 "label.",
+        "claims": [
+            {
+                "text": "High fructose corn syrup, our body doesn't really "
+                        "know what to do with it, it doesn't have the proper "
+                        "enzymes or stuff to break it down",
+                "start": 2.9, "end": 9.0,
+                "stance": "REFUTES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:28241431"],
+                "confidence": "medium",
+                "notes": "Quoted from the news clip and then refuted. Human "
+                         "fructose metabolism via intestinal and hepatic "
+                         "fructolysis is characterised in the retrieved "
+                         "review, so the enzymes plainly exist. The review "
+                         "describes the pathway rather than setting out to "
+                         "rebut this claim, hence medium confidence.",
+            },
+            {
+                "text": "by adding cane sugar instead of high fructose corn "
+                        "syrup, it wouldn't be as overwhelming to the liver "
+                        "and wouldn't have as high of blood sugar spikes",
+                "start": 9.0, "end": 15.0,
+                "stance": "REFUTES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:3891268"],
+                "confidence": "high",
+                "notes": "Directly tested and directly refuted: in patients "
+                         "with non-insulin-dependent diabetes, plasma glucose "
+                         "responses after sucrose and HFCS test meals 'did not "
+                         "differ', and the integrated areas under the glucose "
+                         "curves were not statistically different. Swapping "
+                         "one for the other does not reduce the spike.",
+            },
+            {
+                "text": "a beverage that is basically liquid sugar "
+                        "substituting one type of sugar for a very similar "
+                        "type of sugar is probably not gonna do a whole lot in "
+                        "the realm of making people healthier",
+                "start": 39.0, "end": 49.0,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:3891268"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "The speaker's own positive claim, supported by the "
+                         "same trial that refutes the clip. Appropriately "
+                         "hedged ('probably not gonna do a whole lot'), and "
+                         "the evidence is a small 1985 study in a diabetic "
+                         "population, so medium confidence.",
+            },
+        ],
+    },
+    {
+        "video_id": "v28",
+        "topic": "diabetes / fruit",
+        "case_tags": ["clearly_false"],
+        "confidence": "high",
+        "notes": "@doctorbodyhealthtips telling diabetics to avoid four "
+                 "fruits, interleaved with follow prompts. The best-evidenced "
+                 "MISINFO case in the bundle so far, and the inverse of the "
+                 "pattern in v12, v13, v17 and v20: these claims are specific "
+                 "enough to test, and the evidence contradicts them. A "
+                 "meta-analysis of nineteen randomised trials recommends the "
+                 "opposite of the video's headline advice, and the "
+                 "international glycemic-index tables contradict the "
+                 "high-GI claims about apples and bananas. Note the "
+                 "watermelon claim survives as insufficient rather than "
+                 "contradicted, because watermelon is a genuine exception "
+                 "among fruits and no value for it could be read. This "
+                 "collector's folder carried no label.",
+        "claims": [
+            {
+                "text": "All diabetics must avoid eating these four fruits",
+                "start": 0.0, "end": 3.8,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:37214237", "PMID:23990623"],
+                "confidence": "high",
+                "notes": "Contradicted head-on. The meta-analysis of nineteen "
+                         "randomised controlled trials (888 participants) "
+                         "finds fruit consumption significantly lowers fasting "
+                         "blood glucose and concludes: 'we recommend that "
+                         "patients with diabetes eat more fruits while "
+                         "ensuring that their total energy intake remains "
+                         "unchanged'. The claim is the opposite of the "
+                         "evidence-based advice, and it is the claim that "
+                         "makes this video MISINFO under section 9.",
+            },
+            {
+                "text": "Watermelon has a very high glycemic index ... That "
+                        "means it raises blood sugar quickly, even in small "
+                        "portions",
+                "start": 6.0, "end": 15.9,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "Deliberately not lumped in with the apple and "
+                         "banana rows. Watermelon is the one fruit here with a "
+                         "genuinely high glycemic index, and the tables are "
+                         "not open access so no specific value could be read. "
+                         "The 'even in small portions' half is also "
+                         "questionable, since glycemic load accounts for "
+                         "portion and watermelon's is low -- but nothing "
+                         "retrieved states that, so it stays insufficient.",
+            },
+            {
+                "text": "Ripe bananas have a high glycemic index and sugar "
+                        "content, which can rapidly elevate blood sugar levels",
+                "start": 29.0, "end": 40.1,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:34258626"],
+                "confidence": "medium",
+                "notes": "The 2021 international tables of glycemic index and "
+                         "glycemic load report that fruits are usually low-GI "
+                         "foods, at or below 55 on the 100-point glucose "
+                         "scale, with consistent values worldwide. Medium "
+                         "rather than high confidence because the tables are "
+                         "not open access, so this rests on the review's "
+                         "summary statement about fruits as a class rather "
+                         "than on the banana row itself.",
+            },
+            {
+                "text": "Mangos, especially when ripe, contain a lot of sugar "
+                        "that can cause quick blood sugar spikes",
+                "start": 45.3, "end": 55.9,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "medium",
+                "notes": "No mango-specific value or trial was retrieved. The "
+                         "claim is also softer than the others ('can cause'), "
+                         "and it is paired with sensible portion advice.",
+            },
+            {
+                "text": "Apple has a high glycemic index and can sharply raise "
+                        "blood glucose",
+                "start": 56.9, "end": 62.8,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:34258626"],
+                "confidence": "medium",
+                "notes": "Apples are a standard example of a low-GI fruit, and "
+                         "the 2021 international tables report fruits as "
+                         "usually low-GI (at or below 55). Same limitation as "
+                         "the banana row: the summary statement about fruits "
+                         "as a class is readable, the per-food table is not.",
+            },
+        ],
+    },
+    {
+        "video_id": "v29",
+        "topic": "cancer / alternative remedies",
+        "case_tags": ["satire"],
+        "confidence": "medium",
+        "notes": "@dr_elisa108, speaking as someone living with cancer, "
+                 "relays a 'miracle cure' she has just heard -- blending three "
+                 "or four Venus flytraps and eating them daily -- and asks "
+                 "whether anyone else has come across it. The reason this "
+                 "video is in the set is the stance, not the verdict: the "
+                 "delivery is wry throughout ('I'm not easily surprised', "
+                 "'Kind of fun', 'Let me know if you've tried it and it "
+                 "works'), which reads as irony rather than either endorsement "
+                 "or correction. Section 5 says hard cases of sarcasm and "
+                 "irony go to UNCLEAR rather than a guess, and UNCLEAR is a "
+                 "section 11 review trigger, so that is how it is recorded. "
+                 "Tagged 'satire' as the nearest section 14 category for "
+                 "ironic delivery, though it is wryness rather than parody. A "
+                 "second labeller could defensibly call this QUOTES, and this "
+                 "is exactly the kind of row the blind subset exists to "
+                 "measure. This collector's folder carried no label.",
+        "claims": [
+            {
+                "text": "Venus fly trap[s] ... you blend up three to four of "
+                        "them and eat[] them every day ... And that kills your "
+                        "cancer",
+                "start": 16.9, "end": 31.1,
+                "stance": "UNCLEAR", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "A search for Dionaea muscipula or Venus flytrap "
+                         "extract against cancer returned nothing at all; the "
+                         "empty search is in evidence_cache/. Section 7 is "
+                         "explicit that this is insufficient evidence and not "
+                         "CONTRADICTED, however implausible the claim sounds. "
+                         "The verdict is the easy part here; the stance is the "
+                         "judgement call.",
+            },
+        ],
+    },
+    {
+        "video_id": "v23",
+        "topic": "vaccines / media literacy",
+        "case_tags": ["debunking"],
+        "confidence": "high",
+        "notes": "@abbeyskitchen on the BBC World Service report into Steven "
+                 "Bartlett's Diary of a CEO podcast. Structurally unusual and "
+                 "useful for the stance step: the video opens cold on a clip "
+                 "of someone else's claims, with no framing until several "
+                 "seconds later, so a system reading only the first lines "
+                 "would see vaccine-autism and anti-COVID-vaccine assertions "
+                 "presented flat. The framing that makes it REFUTES arrives "
+                 "afterwards. All three refuted claims are contradicted by "
+                 "retrievable evidence, so DEBUNKING rests on solid ground. "
+                 "The claims about what the BBC report found are claims about "
+                 "a document rather than health assertions, so they are not "
+                 "rows. This collector's folder carried no label.",
+        "claims": [
+            {
+                "text": "[vaccines] can cause everything from osteoporosis to "
+                        "autism",
+                "start": 0.4, "end": 3.8,
+                "stance": "REFUTES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:24814559", "PMID:32309885"],
+                "confidence": "high",
+                "notes": "Played as a clip and rejected by the framing that "
+                         "follows. The evidence-based meta-analysis of "
+                         "case-control and cohort studies is titled 'Vaccines "
+                         "are not associated with autism'. The osteoporosis "
+                         "half of the claim is not separately tested by "
+                         "anything retrieved, but the autism half is squarely "
+                         "contradicted.",
+            },
+            {
+                "text": "The COVID vaccine introduction has had a catastrophic "
+                        "negative effect",
+                "start": 3.8, "end": 9.2,
+                "stance": "REFUTES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:40711778"],
+                "confidence": "high",
+                "notes": "The global estimate finds more than 2.5 million "
+                         "deaths averted by COVID-19 vaccination over "
+                         "2020-2024 (one death averted per 5400 doses), with "
+                         "sensitivity analyses between 1.4 and 4.0 million "
+                         "lives saved. A net catastrophic negative effect is "
+                         "the opposite of that.",
+            },
+            {
+                "text": "you can reverse autism through diet",
+                "start": 50.3, "end": 55.8,
+                "stance": "REFUTES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:28612113", "PMID:24789114"],
+                "confidence": "medium",
+                "notes": "The systematic review of six randomised trials (214 "
+                         "participants) of gluten- and casein-free diets finds "
+                         "no statistically significant differences in autism "
+                         "core symptoms between groups, with one exception on "
+                         "a single communication subdomain. That refutes "
+                         "reversal through diet; medium confidence because the "
+                         "trials test one dietary approach rather than every "
+                         "possible one.",
+            },
+        ],
+    },
+    {
+        "video_id": "v24",
+        "topic": "pesticide residues / food safety",
+        "case_tags": ["debunking", "uncertain_science"],
+        "confidence": "medium",
+        "notes": "@andydoeshealthy rebutting a creator who told people to "
+                 "avoid Cheerios over glyphosate residues. The most "
+                 "instructive case in the bundle for the section 9 rules: it "
+                 "is unmistakably a debunking video, but it comes out "
+                 "NO_MISINFO rather than DEBUNKING, because the claim it "
+                 "refutes lands on MIXED and section 9's second rule fires "
+                 "only on CONTRADICTED. Glyphosate carcinogenicity is "
+                 "genuinely contested -- the Agricultural Health Study found "
+                 "no association overall, a 2019 meta-analysis found increased "
+                 "non-Hodgkin lymphoma risk, and IARC and the regulatory "
+                 "agencies reached different conclusions. The debunker is also "
+                 "one-sided himself: he quotes the cohort's null result "
+                 "accurately but omits the raised acute myeloid leukaemia risk "
+                 "in its highest exposure quartile. Written up in the PR "
+                 "description. This collector's folder carried no label.",
+        "claims": [
+            {
+                "text": "[Cheerios carry harmful] glyphosate residues ... your "
+                        "cereal is a spawn of Satan",
+                "start": 25.2, "end": 31.2,
+                "stance": "REFUTES", "verdict": "MIXED",
+                "supporting": ["PMID:31342895", "PMID:26941213"],
+                "contradicting": ["PMID:29136183", "PMID:27552246"],
+                "confidence": "medium",
+                "notes": "The myth being refuted. Evidence genuinely points "
+                         "both ways on glyphosate and cancer, so MIXED. Note "
+                         "that the columns read against the claim, not against "
+                         "the speaker: papers supporting glyphosate harm sit "
+                         "in evidence_supporting because the claim asserts "
+                         "harm.",
+            },
+            {
+                "text": "when research actually studied this further and "
+                        "looked at glyphosate independently, it wasn't "
+                        "significantly associated with cancer at any site in a "
+                        "study of 54,000 people",
+                "start": 152.6, "end": 162.8,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:29136183"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "An accurate description of a real study, down to the "
+                         "cohort size: among 54,251 applicators, glyphosate "
+                         "was not statistically significantly associated with "
+                         "cancer at any site in unlagged analyses. What he "
+                         "leaves out, and a reviewer should see, is the same "
+                         "paper's finding of increased acute myeloid leukaemia "
+                         "risk in the highest exposure quartile (RR 2.44).",
+            },
+            {
+                "text": "a look at 15 government agencies and their consensus "
+                        "on glyphosate. Not genotoxic, doesn't represent a "
+                        "risk of cancer, not carcinogenic, not neurotoxic",
+                "start": 157.1, "end": 173.6,
+                "stance": "ENDORSES", "verdict": "MIXED",
+                "supporting": ["PMID:27552246"],
+                "contradicting": ["PMID:26941213", "PMID:31342895"],
+                "confidence": "medium",
+                "notes": "'Consensus' overstates the position. The retrieved "
+                         "literature is explicitly about the disagreement "
+                         "between IARC, which classified glyphosate as a "
+                         "probable human carcinogen, and the regulatory "
+                         "agencies that did not. Papers exist arguing each "
+                         "way, which is MIXED, not consensus.",
+            },
+            {
+                "text": "an 150 pound adult would have to eat over 5,000 cups "
+                        "a day for a prolonged period of time for glyphosate "
+                        "to become an issue",
+                "start": 125.6, "end": 137.8,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "A dose calculation against EPA tolerance levels. "
+                         "Checkable in principle, but against a regulatory "
+                         "tolerance document rather than the biomedical "
+                         "literature, and nothing retrievable through PubMed "
+                         "or a WHO/CDC page tests it.",
+            },
+        ],
+    },
+    {
+        "video_id": "v27",
+        "topic": "cancer / alternative remedies",
+        "case_tags": ["clearly_false"],
+        "confidence": "medium",
+        "notes": "A ten-minute lecture recording (@botanicalburr) on what "
+                 "'cancer loves and hates': sugar, acidity and the absence of "
+                 "oxygen, with approving mentions of intravenous vitamin C and "
+                 "apricot kernel seeds. The longest video in the bundle and the "
+                 "most potentially harmful, since it points at stopping sugar "
+                 "and alkalising the body as ways to conquer cancer at 'no "
+                 "matter what stage'. It lands on MISINFO through the "
+                 "acid/alkaline claims, which are specific enough to be "
+                 "contradicted. Worth noting how close it came to escaping: "
+                 "its framing claim, that cancer favours an acidic "
+                 "environment, is actually SUPPORTED at the level of the "
+                 "tumour microenvironment, and the video then slides from that "
+                 "real biology into a dietary conclusion that does not follow. "
+                 "That slide, not any single false sentence, is where the harm "
+                 "lives. This collector's folder carried no label.",
+        "claims": [
+            {
+                "text": "cancer loves sugar ... a cancer cell consumes 15 "
+                        "times the glucose of any other cell",
+                "start": 19.3, "end": 37.9,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:19460998", "PMID:39284669"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Elevated glucose uptake by tumour cells (the Warburg "
+                         "effect) is real and well described in the retrieved "
+                         "reviews, but the specific figure of 15 times any "
+                         "other cell is not supported by anything retrieved, "
+                         "and the reviews describe aerobic glycolysis as a "
+                         "requirement of proliferation rather than a feeding "
+                         "relationship with dietary sugar.",
+            },
+            {
+                "text": "Cancer also loves an acid environment",
+                "start": 108.2, "end": 118.8,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:31730395"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Supported as stated, and deliberately labelled that "
+                         "way: 'The Acidic Tumor Microenvironment as a Driver "
+                         "of Cancer' is exactly this claim. The acidity is "
+                         "produced by the tumour's own metabolism inside the "
+                         "tumour, not set by what the person eats -- which is "
+                         "the step the next two claims take without support. "
+                         "A reviewer should read this row together with them.",
+            },
+            {
+                "text": "what is the most acid substance you can put into "
+                        "your body? Refined sugar ... when they extract the "
+                        "sugar out of the sugarcane plant it becomes a pure "
+                        "acid",
+                "start": 118.8, "end": 141.6,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:38282081"],
+                "confidence": "medium",
+                "notes": "Dietary acid load is determined by protein, "
+                         "potassium, phosphorus, calcium and magnesium, plus "
+                         "organic acids that are metabolised to bicarbonate "
+                         "and so alkalinise. Refined sucrose contributes none "
+                         "of those, so it cannot be the most acidifying thing "
+                         "a person can eat. Medium confidence because the "
+                         "review defines the measure rather than naming sugar; "
+                         "a reviewer should check the PRAL framing in section "
+                         "'What is acid-base status?' of PMC11006742.",
+            },
+            {
+                "text": "Cancer is not happy when you create an alkaline "
+                        "environment in the ... body",
+                "start": 167.4, "end": 190.8,
+                "stance": "ENDORSES", "verdict": "CONTRADICTED",
+                "supporting": [],
+                "contradicting": ["PMID:38282081", "PMID:27297008"],
+                "confidence": "medium",
+                "notes": "Contradicted on the premise and unsupported on the "
+                         "outcome. Human acid-base equilibrium is, in the "
+                         "retrieved review's words, 'a tightly regulated "
+                         "physiological system that aims to maintain blood pH "
+                         "between 7.35 and 7.45', managed by the kidneys and "
+                         "lungs, so a diet cannot make the body alkaline. The "
+                         "systematic review of dietary acid load, alkaline "
+                         "water and cancer located no studies at all examining "
+                         "alkaline diet or alkaline water for cancer "
+                         "treatment, and the single included cohort found no "
+                         "association. This is the claim that makes the video "
+                         "MISINFO.",
+            },
+            {
+                "text": "Cancer hates it when you stop the sugar or stop all "
+                        "glucose",
+                "start": 167.4, "end": 176.7,
+                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:39639257"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "Glucose restriction as cancer therapy is still at "
+                         "the stage of proposing a clinical research framework "
+                         "(the retrieved paper is a framework proposal for "
+                         "ketogenic metabolic therapy in glioblastoma), so "
+                         "nothing yet tests the claim in patients. Not false, "
+                         "not established -- and dangerous as advice at 'no "
+                         "matter what stage', which is a materiality point for "
+                         "the reviewer rather than a verdict.",
+            },
+            {
+                "text": "remember genetics loads the gun, lifestyle pulls the "
+                        "trigger",
+                "start": 101.1, "end": 108.2,
+                "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "An aphorism, not a testable proposition. Kept as a "
+                         "row because it is doing argumentative work in the "
+                         "video, and NOT_VERIFIABLE is the honest verdict for "
+                         "it.",
+            },
+            {
+                "text": "Some do IV vitamin C, some do apricot kernel seeds "
+                        "[among doctors, specialists and naturopaths who are "
+                        "conquering cancer]",
+                "start": 203.4, "end": 212.4,
+                "stance": "QUOTES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": ["PMID:35929990", "PMID:39369582"],
+                "contradicting": [],
+                "confidence": "medium",
+                "notes": "A QUOTES row: the speaker reports what the authors "
+                         "of books in his library do, without asserting it "
+                         "himself in this sentence. Intravenous vitamin C has "
+                         "reached randomised phase 3 trials in combination "
+                         "chemotherapy, so it is being studied rather than "
+                         "established; a search for amygdalin, laetrile or "
+                         "apricot kernels against cancer returned nothing at "
+                         "all.",
+            },
+        ],
+    },
+    {
+        "video_id": "v30",
+        "topic": "vaccines / cancer statistics",
+        "case_tags": ["debunking"],
+        "confidence": "medium",
+        "notes": "@drjessicaknurick taking apart a claim that Australian "
+                 "prostate cancer rates in 30-to-40-year-olds rose 500% in "
+                 "five years because of vaccine mandates, by showing the "
+                 "underlying data spans 2000-2024. The second clear instance "
+                 "of the section 9 gap that v24 shows: a competent debunk that "
+                 "comes out NO_MISINFO rather than DEBUNKING, because the "
+                 "claim being refuted is a data-provenance error that no paper "
+                 "tests, so it lands on INSUFFICIENT_EVIDENCE rather than "
+                 "CONTRADICTED. The video's own supporting claims about "
+                 "early-onset cancer drivers, trans fat and lead are "
+                 "supported, which is what carries the label. This collector's "
+                 "folder carried no label.",
+        "claims": [
+            {
+                "text": "Over the last five years and typically healthy 30 to "
+                        "40-year-olds, prostate cancer is up a whopping 500 "
+                        "percent",
+                "start": 19.5, "end": 25.5,
+                "stance": "REFUTES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "supporting": [],
+                "contradicting": ["PMID:25251195"],
+                "confidence": "medium",
+                "notes": "The speaker's correction is about the time window, "
+                         "not the biology: she says the figure comes from 25 "
+                         "years of data (2000-2024), not five. Settling that "
+                         "needs the Australian cancer registry rather than a "
+                         "paper, and nothing retrieved tests it. The closest "
+                         "retrievable item is a report on rising early-onset "
+                         "cancer in Australia described explicitly 'over two "
+                         "decades', which is consistent with her correction "
+                         "but does not verify the 500% figure.",
+            },
+            {
+                "text": "Scientists from around the world who are actually "
+                        "studying these trends point to things like improved "
+                        "screening, obesity trends, infections, and "
+                        "environmental exposures",
+                "start": 52.9, "end": 60.9,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:33219329", "PMID:40781551",
+                               "PMID:40674064"],
+                "confidence": "medium",
+                "contradicting": [],
+                "notes": "The early-onset cancer literature does attribute "
+                         "rising incidence to screening changes, metabolic and "
+                         "obesity trends and environmental exposures. Medium "
+                         "confidence because the retrieved reviews are "
+                         "concentrated on gastrointestinal and colorectal "
+                         "cancers rather than prostate cancer.",
+            },
+            {
+                "text": "when evidence showed that trans fat increased heart "
+                        "disease risk, independent scientists globally said it",
+                "start": 102.8, "end": 110.9,
+                "stance": "ENDORSES", "verdict": "SUPPORTED",
+                "supporting": ["PMID:21427742", "PMID:26268692"],
+                "contradicting": [],
+                "confidence": "high",
+                "notes": "The systematic review and meta-analysis of "
+                         "industrial and ruminant trans fatty acids and "
+                         "coronary heart disease supports the premise of the "
+                         "analogy.",
+            },
+            {
+                "text": "If vaccines were causing increased cancer rates, "
+                        "independent researchers worldwide would say so",
+                "start": 83.8, "end": 89.7,
+                "stance": "ENDORSES", "verdict": "NOT_VERIFIABLE",
+                "supporting": [], "contradicting": [],
+                "confidence": "high",
+                "notes": "A claim about how science behaves, not about health. "
+                         "No study could test it as stated, so NOT_VERIFIABLE. "
+                         "Kept as a row because it is the load-bearing "
+                         "argument of the video.",
+            },
+        ],
+    },
 ]
