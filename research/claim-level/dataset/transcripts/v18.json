@@ -1,0 +1,1175 @@
+{
+ "video_id": "v18",
+ "filename": "fb7bc0635b1521459a5ad5951cb45ff5.mp4",
+ "relative_path": "Misinfo Dataset/Haoran Zhang/Misinformation/fb7bc0635b1521459a5ad5951cb45ff5.mp4",
+ "collector": "Haoran Zhang",
+ "collector_label": "MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T17:48:47",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.437,
+  "duration_seconds": 56.42,
+  "segments": []
+ },
+ "on_screen": {
+  "frames_sampled": 29,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Howto know ifyou have",
+    "confidence": 0.857
+   },
+   {
+    "time": 0.0,
+    "text": "ADHD:",
+    "confidence": 0.993
+   },
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.992
+   },
+   {
+    "time": 0.0,
+    "text": "alex_david44",
+    "confidence": 0.88
+   },
+   {
+    "time": 2.0,
+    "text": "Howto know ifyou have",
+    "confidence": 0.867
+   },
+   {
+    "time": 2.0,
+    "text": "ADHD:",
+    "confidence": 0.993
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.615
+   },
+   {
+    "time": 2.0,
+    "text": "@ alex_david44",
+    "confidence": 0.83
+   },
+   {
+    "time": 4.0,
+    "text": "Howto know ifyou have",
+    "confidence": 0.54
+   },
+   {
+    "time": 4.0,
+    "text": "ADHD:",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.723
+   },
+   {
+    "time": 4.0,
+    "text": "@alex_david44",
+    "confidence": 0.536
+   },
+   {
+    "time": 6.0,
+    "text": "Tik Tok",
+    "confidence": 0.605
+   },
+   {
+    "time": 6.0,
+    "text": "alex_david44",
+    "confidence": 0.869
+   },
+   {
+    "time": 8.0,
+    "text": "Aluq",
+    "confidence": 0.617
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "alex_david44",
+    "confidence": 0.96
+   },
+   {
+    "time": 10.0,
+    "text": "Very indecisive",
+    "confidence": 0.869
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "alex_david44",
+    "confidence": 0.929
+   },
+   {
+    "time": 12.0,
+    "text": "Very indecisive",
+    "confidence": 0.794
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 12.0,
+    "text": "alex_david4a",
+    "confidence": 0.801
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "alex_david4a",
+    "confidence": 0.797
+   },
+   {
+    "time": 16.0,
+    "text": "Forgetting whyyou",
+    "confidence": 0.851
+   },
+   {
+    "time": 16.0,
+    "text": "walked in a r@M",
+    "confidence": 0.509
+   },
+   {
+    "time": 16.0,
+    "text": "Tikok",
+    "confidence": 0.966
+   },
+   {
+    "time": 18.0,
+    "text": "Forgetting whyyou",
+    "confidence": 0.975
+   },
+   {
+    "time": 18.0,
+    "text": "walked in a r@M",
+    "confidence": 0.563
+   },
+   {
+    "time": 18.0,
+    "text": "TiktOk",
+    "confidence": 0.653
+   },
+   {
+    "time": 20.0,
+    "text": "Forgetting whyyou",
+    "confidence": 0.975
+   },
+   {
+    "time": 20.0,
+    "text": "TiktOk",
+    "confidence": 0.718
+   },
+   {
+    "time": 20.0,
+    "text": "alex_david4",
+    "confidence": 0.529
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "alex_david44",
+    "confidence": 0.838
+   },
+   {
+    "time": 24.0,
+    "text": "Reading a whole page",
+    "confidence": 0.995
+   },
+   {
+    "time": 24.0,
+    "text": "and nothing goes in So",
+    "confidence": 0.656
+   },
+   {
+    "time": 24.0,
+    "text": "have to read",
+    "confidence": 0.999
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "alex_david44",
+    "confidence": 0.744
+   },
+   {
+    "time": 26.0,
+    "text": "Reading a whole page",
+    "confidence": 0.995
+   },
+   {
+    "time": 26.0,
+    "text": "and nothing goes in So",
+    "confidence": 0.648
+   },
+   {
+    "time": 26.0,
+    "text": "have to read again",
+    "confidence": 0.847
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "Reading a whole page",
+    "confidence": 0.866
+   },
+   {
+    "time": 28.0,
+    "text": "and nothing goes in So",
+    "confidence": 0.645
+   },
+   {
+    "time": 28.0,
+    "text": "have to read",
+    "confidence": 0.999
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "alex_david44",
+    "confidence": 0.68
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 0.992
+   },
+   {
+    "time": 32.0,
+    "text": "Random bursts",
+    "confidence": 0.936
+   },
+   {
+    "time": 32.0,
+    "text": "@f energy",
+    "confidence": 0.745
+   },
+   {
+    "time": 32.0,
+    "text": "Yaniuq",
+    "confidence": 0.536
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 32.0,
+    "text": "alex_davidaa",
+    "confidence": 0.824
+   },
+   {
+    "time": 34.0,
+    "text": "Random bursts",
+    "confidence": 0.976
+   },
+   {
+    "time": 34.0,
+    "text": "@f energy",
+    "confidence": 0.723
+   },
+   {
+    "time": 36.0,
+    "text": "Randbm bursts",
+    "confidence": 0.75
+   },
+   {
+    "time": 36.0,
+    "text": "@f energy",
+    "confidence": 0.943
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 0.678
+   },
+   {
+    "time": 38.0,
+    "text": "Randombursts",
+    "confidence": 0.709
+   },
+   {
+    "time": 38.0,
+    "text": "of energy",
+    "confidence": 0.793
+   },
+   {
+    "time": 38.0,
+    "text": "Kok",
+    "confidence": 0.89
+   },
+   {
+    "time": 38.0,
+    "text": "44",
+    "confidence": 0.941
+   },
+   {
+    "time": 40.0,
+    "text": "Not sitting still until",
+    "confidence": 0.862
+   },
+   {
+    "time": 40.0,
+    "text": "someone calls it @ut",
+    "confidence": 0.545
+   },
+   {
+    "time": 40.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "alex_david44",
+    "confidence": 0.661
+   },
+   {
+    "time": 42.0,
+    "text": "Not sitting still until",
+    "confidence": 0.819
+   },
+   {
+    "time": 42.0,
+    "text": "someone calls it @ut",
+    "confidence": 0.784
+   },
+   {
+    "time": 42.0,
+    "text": "Tik Tok",
+    "confidence": 0.646
+   },
+   {
+    "time": 42.0,
+    "text": "alex_david44",
+    "confidence": 0.781
+   },
+   {
+    "time": 44.0,
+    "text": "Not sitting still until",
+    "confidence": 0.857
+   },
+   {
+    "time": 44.0,
+    "text": "someone calls it @ut",
+    "confidence": 0.812
+   },
+   {
+    "time": 44.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 44.0,
+    "text": "alex_david44",
+    "confidence": 0.915
+   },
+   {
+    "time": 46.0,
+    "text": "Not sitting still until",
+    "confidence": 0.774
+   },
+   {
+    "time": 46.0,
+    "text": "someone calls it @ut",
+    "confidence": 0.94
+   },
+   {
+    "time": 46.0,
+    "text": "Amuo",
+    "confidence": 0.657
+   },
+   {
+    "time": 46.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "alex_david44",
+    "confidence": 0.889
+   },
+   {
+    "time": 48.0,
+    "text": "Mood swings",
+    "confidence": 0.982
+   },
+   {
+    "time": 48.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "@ alex_david44",
+    "confidence": 0.813
+   },
+   {
+    "time": 50.0,
+    "text": "Mood swings",
+    "confidence": 0.778
+   },
+   {
+    "time": 50.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "@alex_david44",
+    "confidence": 0.955
+   },
+   {
+    "time": 52.0,
+    "text": "Mood swings",
+    "confidence": 0.794
+   },
+   {
+    "time": 52.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "alex_david44",
+    "confidence": 0.999
+   },
+   {
+    "time": 54.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 54.0,
+    "text": "alex_david44",
+    "confidence": 0.761
+   },
+   {
+    "time": 56.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 56.0,
+    "text": "alex_david44",
+    "confidence": 0.994
+   }
+  ],
+  "captions": [
+   {
+    "text": "Howto know ifyou have",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.857,
+    "id": "o1"
+   },
+   {
+    "text": "ADHD:",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.993,
+    "id": "o2"
+   },
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.992,
+    "id": "o3"
+   },
+   {
+    "text": "alex_david44",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.88,
+    "id": "o4"
+   },
+   {
+    "text": "Howto know ifyou have",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.867,
+    "id": "o5"
+   },
+   {
+    "text": "ADHD:",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.993,
+    "id": "o6"
+   },
+   {
+    "text": "TikTok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.615,
+    "id": "o7"
+   },
+   {
+    "text": "@ alex_david44",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.83,
+    "id": "o8"
+   },
+   {
+    "text": "Howto know ifyou have",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.54,
+    "id": "o9"
+   },
+   {
+    "text": "ADHD:",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.999,
+    "id": "o10"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.723,
+    "id": "o11"
+   },
+   {
+    "text": "@alex_david44",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.536,
+    "id": "o12"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.605,
+    "id": "o13"
+   },
+   {
+    "text": "alex_david44",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.869,
+    "id": "o14"
+   },
+   {
+    "text": "Aluq",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.617,
+    "id": "o15"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o16"
+   },
+   {
+    "text": "alex_david44",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.96,
+    "id": "o17"
+   },
+   {
+    "text": "Very indecisive",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.869,
+    "id": "o18"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o19"
+   },
+   {
+    "text": "alex_david44",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.929,
+    "id": "o20"
+   },
+   {
+    "text": "Very indecisive",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.794,
+    "id": "o21"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.998,
+    "id": "o22"
+   },
+   {
+    "text": "alex_david4a",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.801,
+    "id": "o23"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o24"
+   },
+   {
+    "text": "alex_david4a",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.797,
+    "id": "o25"
+   },
+   {
+    "text": "Forgetting whyyou",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.851,
+    "id": "o26"
+   },
+   {
+    "text": "walked in a r@M",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.509,
+    "id": "o27"
+   },
+   {
+    "text": "Tikok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.966,
+    "id": "o28"
+   },
+   {
+    "text": "Forgetting whyyou",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.975,
+    "id": "o29"
+   },
+   {
+    "text": "walked in a r@M",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.563,
+    "id": "o30"
+   },
+   {
+    "text": "TiktOk",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.653,
+    "id": "o31"
+   },
+   {
+    "text": "Forgetting whyyou",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.975,
+    "id": "o32"
+   },
+   {
+    "text": "TiktOk",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.718,
+    "id": "o33"
+   },
+   {
+    "text": "alex_david4",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.529,
+    "id": "o34"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o35"
+   },
+   {
+    "text": "alex_david44",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.838,
+    "id": "o36"
+   },
+   {
+    "text": "Reading a whole page",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.995,
+    "id": "o37"
+   },
+   {
+    "text": "and nothing goes in So",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.656,
+    "id": "o38"
+   },
+   {
+    "text": "have to read",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.999,
+    "id": "o39"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o40"
+   },
+   {
+    "text": "alex_david44",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.744,
+    "id": "o41"
+   },
+   {
+    "text": "Reading a whole page",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.995,
+    "id": "o42"
+   },
+   {
+    "text": "and nothing goes in So",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.648,
+    "id": "o43"
+   },
+   {
+    "text": "have to read again",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.847,
+    "id": "o44"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o45"
+   },
+   {
+    "text": "Reading a whole page",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.866,
+    "id": "o46"
+   },
+   {
+    "text": "and nothing goes in So",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.645,
+    "id": "o47"
+   },
+   {
+    "text": "have to read",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.999,
+    "id": "o48"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o49"
+   },
+   {
+    "text": "alex_david44",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.68,
+    "id": "o50"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.992,
+    "id": "o51"
+   },
+   {
+    "text": "Random bursts",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.936,
+    "id": "o52"
+   },
+   {
+    "text": "@f energy",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.745,
+    "id": "o53"
+   },
+   {
+    "text": "Yaniuq",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.536,
+    "id": "o54"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.999,
+    "id": "o55"
+   },
+   {
+    "text": "alex_davidaa",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.824,
+    "id": "o56"
+   },
+   {
+    "text": "Random bursts",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.976,
+    "id": "o57"
+   },
+   {
+    "text": "@f energy",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.723,
+    "id": "o58"
+   },
+   {
+    "text": "Randbm bursts",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.75,
+    "id": "o59"
+   },
+   {
+    "text": "@f energy",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.943,
+    "id": "o60"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.678,
+    "id": "o61"
+   },
+   {
+    "text": "Randombursts",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.709,
+    "id": "o62"
+   },
+   {
+    "text": "of energy",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.793,
+    "id": "o63"
+   },
+   {
+    "text": "Kok",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.89,
+    "id": "o64"
+   },
+   {
+    "text": "44",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.941,
+    "id": "o65"
+   },
+   {
+    "text": "Not sitting still until",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.862,
+    "id": "o66"
+   },
+   {
+    "text": "someone calls it @ut",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.545,
+    "id": "o67"
+   },
+   {
+    "text": "TikTok",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o68"
+   },
+   {
+    "text": "alex_david44",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.661,
+    "id": "o69"
+   },
+   {
+    "text": "Not sitting still until",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.819,
+    "id": "o70"
+   },
+   {
+    "text": "someone calls it @ut",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.784,
+    "id": "o71"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.646,
+    "id": "o72"
+   },
+   {
+    "text": "alex_david44",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.781,
+    "id": "o73"
+   },
+   {
+    "text": "Not sitting still until",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.857,
+    "id": "o74"
+   },
+   {
+    "text": "someone calls it @ut",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.812,
+    "id": "o75"
+   },
+   {
+    "text": "TikTok",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.999,
+    "id": "o76"
+   },
+   {
+    "text": "alex_david44",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.915,
+    "id": "o77"
+   },
+   {
+    "text": "Not sitting still until",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.774,
+    "id": "o78"
+   },
+   {
+    "text": "someone calls it @ut",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.94,
+    "id": "o79"
+   },
+   {
+    "text": "Amuo",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.657,
+    "id": "o80"
+   },
+   {
+    "text": "TikTok",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o81"
+   },
+   {
+    "text": "alex_david44",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.889,
+    "id": "o82"
+   },
+   {
+    "text": "Mood swings",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.982,
+    "id": "o83"
+   },
+   {
+    "text": "TikTok",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o84"
+   },
+   {
+    "text": "@ alex_david44",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.813,
+    "id": "o85"
+   },
+   {
+    "text": "Mood swings",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.778,
+    "id": "o86"
+   },
+   {
+    "text": "TikTok",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o87"
+   },
+   {
+    "text": "@alex_david44",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.955,
+    "id": "o88"
+   },
+   {
+    "text": "Mood swings",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.794,
+    "id": "o89"
+   },
+   {
+    "text": "TikTok",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o90"
+   },
+   {
+    "text": "alex_david44",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.999,
+    "id": "o91"
+   },
+   {
+    "text": "TikTok",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.999,
+    "id": "o92"
+   },
+   {
+    "text": "alex_david44",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.761,
+    "id": "o93"
+   },
+   {
+    "text": "TikTok",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.999,
+    "id": "o94"
+   },
+   {
+    "text": "alex_david44",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.994,
+    "id": "o95"
+   }
+  ]
+ }
+}

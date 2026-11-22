@@ -1,0 +1,158 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.992,
+  "duration_seconds": 69.94,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.74,
+    "text": "best foods to eat for an anti-cancer diet."
+   },
+   {
+    "id": "t2",
+    "start": 2.84,
+    "end": 6.24,
+    "text": "Right. There's a bunch of foods that were analyzed"
+   },
+   {
+    "id": "t3",
+    "start": 6.34,
+    "end": 7.74,
+    "text": "in terms of these tumor markers,"
+   },
+   {
+    "id": "t4",
+    "start": 7.84,
+    "end": 9.58,
+    "text": "like nine tumor markers across the board."
+   },
+   {
+    "id": "t5",
+    "start": 9.68,
+    "end": 10.68,
+    "text": "Oh, wow."
+   },
+   {
+    "id": "t6",
+    "start": 10.78,
+    "end": 11.78,
+    "text": "And this is fascinating."
+   },
+   {
+    "id": "t7",
+    "start": 11.88,
+    "end": 14.88,
+    "text": "And the first one was, I think it was radicchio."
+   },
+   {
+    "id": "t8",
+    "start": 14.98,
+    "end": 16.38,
+    "text": "Second one was spinach."
+   },
+   {
+    "id": "t9",
+    "start": 16.48,
+    "end": 17.48,
+    "text": "Oh."
+   },
+   {
+    "id": "t10",
+    "start": 17.58,
+    "end": 19.18,
+    "text": "And then it was all the cruciferous vegetables."
+   },
+   {
+    "id": "t11",
+    "start": 19.28,
+    "end": 22.36,
+    "text": "And then it was all the onions, garlic, leek vegetables."
+   },
+   {
+    "id": "t12",
+    "start": 22.46,
+    "end": 25.8,
+    "text": "All of those foods actually lowered all nine"
+   },
+   {
+    "id": "t13",
+    "start": 25.9,
+    "end": 27.96,
+    "text": "of those tumor markers across the board."
+   },
+   {
+    "id": "t14",
+    "start": 27.96,
+    "end": 30.2,
+    "text": "They did, like, a 10-year study on this."
+   },
+   {
+    "id": "t15",
+    "start": 30.2,
+    "end": 31.2,
+    "text": "Okay."
+   },
+   {
+    "id": "t16",
+    "start": 31.2,
+    "end": 32.7,
+    "text": "So, that's a pretty easy one."
+   },
+   {
+    "id": "t17",
+    "start": 32.7,
+    "end": 38.16,
+    "text": "And then, of course, we know that, you know, antioxidant foods and spices and, you know,"
+   },
+   {
+    "id": "t18",
+    "start": 38.16,
+    "end": 43.6,
+    "text": "green tea and just, like, berries and really good whole foods, you know."
+   },
+   {
+    "id": "t19",
+    "start": 43.6,
+    "end": 47.92,
+    "text": "That is kind of why I designed the cleanse is I want people to go back to the basics"
+   },
+   {
+    "id": "t20",
+    "start": 47.92,
+    "end": 53.8,
+    "text": "of eating real food because I was eating sugar-free, fat-free cookies."
+   },
+   {
+    "id": "t21",
+    "start": 53.8,
+    "end": 55.76,
+    "text": "That was what was hot in those days."
+   },
+   {
+    "id": "t22",
+    "start": 55.76,
+    "end": 56.76,
+    "text": "Of course."
+   },
+   {
+    "id": "t23",
+    "start": 56.76,
+    "end": 63.4,
+    "text": "of chemicals, and we still do a lot of that. We still have bad seed oils. And so I just,"
+   },
+   {
+    "id": "t24",
+    "start": 63.4,
+    "end": 66.76,
+    "text": "you know, it's really not rocket science here."
+   }
+  ]
+ }
+}

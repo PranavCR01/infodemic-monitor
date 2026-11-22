@@ -1,0 +1,290 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 157.55,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.2,
+    "text": "I think everyone agrees that seed oils are horrible for you."
+   },
+   {
+    "id": "t2",
+    "start": 3.2,
+    "end": 5.56,
+    "text": "But what if everyone's been wrong?"
+   },
+   {
+    "id": "t3",
+    "start": 5.56,
+    "end": 9.04,
+    "text": "Seed oil consumption has skyrocketed over the last few decades."
+   },
+   {
+    "id": "t4",
+    "start": 9.04,
+    "end": 13.84,
+    "text": "And along with it, so have things like obesity, diabetes, and countless other chronic diseases."
+   },
+   {
+    "id": "t5",
+    "start": 13.84,
+    "end": 15.88,
+    "text": "But that is just correlation."
+   },
+   {
+    "id": "t6",
+    "start": 15.88,
+    "end": 20.04,
+    "text": "Because so have things like how many calories we eat every day, how much we sit, or how"
+   },
+   {
+    "id": "t7",
+    "start": 20.04,
+    "end": 21.04,
+    "text": "little we sleep."
+   },
+   {
+    "id": "t8",
+    "start": 21.04,
+    "end": 24.84,
+    "text": "So what would happen if we could take people and just replace all the fats they normally"
+   },
+   {
+    "id": "t9",
+    "start": 24.84,
+    "end": 27.88,
+    "text": "eat with seed oils and then tract what happens?"
+   },
+   {
+    "id": "t10",
+    "start": 27.88,
+    "end": 29.84,
+    "text": "Well, we actually have done that."
+   },
+   {
+    "id": "t11",
+    "start": 29.84,
+    "end": 34.66,
+    "text": "There have actually been dozens of human-controlled trials where researchers replace people saturated"
+   },
+   {
+    "id": "t12",
+    "start": 34.66,
+    "end": 39.04,
+    "text": "fats with seed oils and then measured how things like their inflammation, cardiovascular"
+   },
+   {
+    "id": "t13",
+    "start": 39.04,
+    "end": 41.52,
+    "text": "health and different metabolic markers change."
+   },
+   {
+    "id": "t14",
+    "start": 41.52,
+    "end": 46.16,
+    "text": "So if seed oils really were the problem, these people should be the sickest we've ever measured."
+   },
+   {
+    "id": "t15",
+    "start": 46.16,
+    "end": 47.2,
+    "text": "But they weren't."
+   },
+   {
+    "id": "t16",
+    "start": 47.2,
+    "end": 52.2,
+    "text": "In every single human study done, the people eating more seed oils either saw the same or"
+   },
+   {
+    "id": "t17",
+    "start": 52.2,
+    "end": 55.4,
+    "text": "actually better health outcomes than the groups eating less."
+   },
+   {
+    "id": "t18",
+    "start": 55.4,
+    "end": 60.48,
+    "text": "So that was train bloom, and he's a fantastic source for fitness advice on social media,"
+   },
+   {
+    "id": "t19",
+    "start": 60.48,
+    "end": 63.92,
+    "text": "and I don't know if you need to hear this, but seed oils are not the enemy that most"
+   },
+   {
+    "id": "t20",
+    "start": 63.92,
+    "end": 65.4,
+    "text": "people make it out to be."
+   },
+   {
+    "id": "t21",
+    "start": 65.4,
+    "end": 70.24,
+    "text": "Since the 1960s, Japan has quadrupled its vegetable oil intake in the form of canola"
+   },
+   {
+    "id": "t22",
+    "start": 70.24,
+    "end": 74.2,
+    "text": "and soybean, which are the exact oils you've been told that are poisoning you."
+   },
+   {
+    "id": "t23",
+    "start": 74.2,
+    "end": 78.48,
+    "text": "Their obesity rate is under 5%, and they live longer than almost anyone on the earth."
+   },
+   {
+    "id": "t24",
+    "start": 78.48,
+    "end": 81.6,
+    "text": "It's the same story with Singapore, and I know that Hong Kong is not a country, but"
+   },
+   {
+    "id": "t25",
+    "start": 81.6,
+    "end": 82.6,
+    "text": "same story."
+   },
+   {
+    "id": "t26",
+    "start": 82.6,
+    "end": 86.32,
+    "text": "If seed oils actually made you fast, Japan should actually be one of the fattest countries"
+   },
+   {
+    "id": "t27",
+    "start": 86.32,
+    "end": 88.32,
+    "text": "on the planet, but it's one of the leanest."
+   },
+   {
+    "id": "t28",
+    "start": 88.32,
+    "end": 92.28,
+    "text": "Here's what actually changed in America over the past three decades."
+   },
+   {
+    "id": "t29",
+    "start": 92.28,
+    "end": 96.48,
+    "text": "We eat about 500 or more calories a day than we did in 1970."
+   },
+   {
+    "id": "t30",
+    "start": 96.48,
+    "end": 98.68,
+    "text": "Portions grew in restaurants and also at home."
+   },
+   {
+    "id": "t31",
+    "start": 98.68,
+    "end": 99.68,
+    "text": "We stopped moving."
+   },
+   {
+    "id": "t32",
+    "start": 99.68,
+    "end": 103.64,
+    "text": "The physical work that used to come with just having a job dropped by more than 100 calories"
+   },
+   {
+    "id": "t33",
+    "start": 103.64,
+    "end": 104.64,
+    "text": "a day."
+   },
+   {
+    "id": "t34",
+    "start": 104.64,
+    "end": 107.2,
+    "text": "And most of what we eat right now is ultra-processed."
+   },
+   {
+    "id": "t35",
+    "start": 107.2,
+    "end": 110.72,
+    "text": "So researchers locked people in a metabolic ward and fed them two diets matched for the"
+   },
+   {
+    "id": "t36",
+    "start": 110.72,
+    "end": 116.0,
+    "text": "calories in sugar, fat, fiber, and sodium. One is processed, one is not. On the processed diet,"
+   },
+   {
+    "id": "t37",
+    "start": 116.0,
+    "end": 120.24,
+    "text": "people ate 500 calories more a day and gained weight. And the part that no one talks about is"
+   },
+   {
+    "id": "t38",
+    "start": 120.24,
+    "end": 124.48,
+    "text": "the fact that they ate their food faster. Ultra processed food is soft. It's engineered to go"
+   },
+   {
+    "id": "t39",
+    "start": 124.48,
+    "end": 128.72,
+    "text": "down quick. You finish the meal before your body has time to tell you that you're full. So Japan"
+   },
+   {
+    "id": "t40",
+    "start": 128.72,
+    "end": 133.68,
+    "text": "didn't avoid seed oils. They actually ate more of them. They just never learned to eat like the West"
+   },
+   {
+    "id": "t41",
+    "start": 133.68,
+    "end": 138.48,
+    "text": "does. And I've been part of the fitness industry for 20 years and I've seen people make fat the"
+   },
+   {
+    "id": "t42",
+    "start": 138.48,
+    "end": 141.8,
+    "text": "the enemy, I've seen people make carbs the enemy, I've seen people make protein"
+   },
+   {
+    "id": "t43",
+    "start": 141.8,
+    "end": 145.8,
+    "text": "the enemy, and now we're on to seed oils. And we can be so simple that we all want"
+   },
+   {
+    "id": "t44",
+    "start": 145.8,
+    "end": 150.16,
+    "text": "to blame one thing on a problem like obesity when obesity is actually a"
+   },
+   {
+    "id": "t45",
+    "start": 150.16,
+    "end": 154.56,
+    "text": "multifactorial problem that has more to do with the totality of your lifestyle"
+   },
+   {
+    "id": "t46",
+    "start": 154.56,
+    "end": 159.2,
+    "text": "than one specific ingredient in the food."
+   }
+  ]
+ }
+}

@@ -1,0 +1,5313 @@
+{
+ "video_id": "v37",
+ "filename": "ssstik.io_@healingartsapothecary_1761400302361.mp4",
+ "relative_path": "Misinfo Dataset/ssstik.io_@healingartsapothecary_1761400302361.mp4",
+ "collector": "Misinfo Dataset",
+ "collector_label": "",
+ "creator_handle": "@healingartsapothecary",
+ "extracted_at": "2026-11-21T18:03:12",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 84.17,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.0,
+    "text": "HealthBoss, did you know that there's an ingredients in the drug ozembic called berberine?"
+   },
+   {
+    "id": "t2",
+    "start": 5.0,
+    "end": 9.0,
+    "text": "Now, ordinarily, berberine is sourced from something called barberries."
+   },
+   {
+    "id": "t3",
+    "start": 9.0,
+    "end": 13.0,
+    "text": "Now, the media is fixating on the potential weight loss benefits of this drug."
+   },
+   {
+    "id": "t4",
+    "start": 13.0,
+    "end": 19.0,
+    "text": "And while the drug does contain berberine, it has other chemical ingredients that also contribute to the weight loss."
+   },
+   {
+    "id": "t5",
+    "start": 19.0,
+    "end": 24.03,
+    "text": "What the media should be saying is that berberine is actually nature's metformin."
+   },
+   {
+    "id": "t6",
+    "start": 24.03,
+    "end": 28.03,
+    "text": "What the media should be saying is that berberine is nature's metformin."
+   },
+   {
+    "id": "t7",
+    "start": 28.03,
+    "end": 33.15,
+    "text": "If you're not familiar, metformin is a drug for diabetics and the benefits of berberine,"
+   },
+   {
+    "id": "t8",
+    "start": 33.15,
+    "end": 38.51,
+    "text": "barberry are so astounding that even doctors are getting off the drug. See, berberine is amazing"
+   },
+   {
+    "id": "t9",
+    "start": 38.51,
+    "end": 44.91,
+    "text": "because it has a multitude of health benefits, one of which is it helps to eliminate arterial plaque."
+   },
+   {
+    "id": "t10",
+    "start": 44.91,
+    "end": 50.43,
+    "text": "Now, barberry root or barberry root extract is the most concentrated form of berberine"
+   },
+   {
+    "id": "t11",
+    "start": 50.43,
+    "end": 53.95,
+    "text": "and if you or a loved one is struggling with diabetes, you definitely want to explore it."
+   },
+   {
+    "id": "t12",
+    "start": 53.95,
+    "end": 58.67,
+    "text": "Now if you eat the actual berries all you need is half a teaspoon three times a"
+   },
+   {
+    "id": "t13",
+    "start": 58.67,
+    "end": 63.27,
+    "text": "day and you're good to go. Other people like to take the capsules or an extract"
+   },
+   {
+    "id": "t14",
+    "start": 63.27,
+    "end": 67.55,
+    "text": "you just need to follow the instructions on that package. Burberry is a time"
+   },
+   {
+    "id": "t15",
+    "start": 67.55,
+    "end": 71.35,
+    "text": "tested natural remedy that's been around for over 5,000 years so if you're"
+   },
+   {
+    "id": "t16",
+    "start": 71.35,
+    "end": 75.67,
+    "text": "looking to get off of metformin any prescription drug talk to your doctor"
+   },
+   {
+    "id": "t17",
+    "start": 75.67,
+    "end": 81.0,
+    "text": "about burberry. We have barberries we have burberry capsules and we have"
+   },
+   {
+    "id": "t18",
+    "start": 81.0,
+    "end": 85.8,
+    "text": "Barberry Root Extract. Come get some. Help us."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 43,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Berberine vs: Ozempic",
+    "confidence": 0.814
+   },
+   {
+    "time": 0.0,
+    "text": "Berberi",
+    "confidence": 0.534
+   },
+   {
+    "time": 0.0,
+    "text": "Ozempic",
+    "confidence": 0.999
+   },
+   {
+    "time": 0.0,
+    "text": "OZEMPIC (semaglutide)",
+    "confidence": 0.997
+   },
+   {
+    "time": 0.0,
+    "text": "BERBERINE",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "An injectable drug that is FDA",
+    "confidence": 0.903
+   },
+   {
+    "time": 0.0,
+    "text": "An alkaloid bioactive compound",
+    "confidence": 0.929
+   },
+   {
+    "time": 0.0,
+    "text": "approved for use in people with",
+    "confidence": 0.754
+   },
+   {
+    "time": 0.0,
+    "text": "used t0 lower LDL choleste",
+    "confidence": 0.898
+   },
+   {
+    "time": 0.0,
+    "text": "pe 2 diabeles; and olten used",
+    "confidence": 0.515
+   },
+   {
+    "time": 0.0,
+    "text": "blood pressure; and blo",
+    "confidence": 0.507
+   },
+   {
+    "time": 0.0,
+    "text": "bel for weight loss:",
+    "confidence": 0.548
+   },
+   {
+    "time": 0.0,
+    "text": "levels",
+    "confidence": 0.754
+   },
+   {
+    "time": 0.0,
+    "text": "#healthbosstv",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "Berberine vs. Ozempic",
+    "confidence": 0.849
+   },
+   {
+    "time": 2.0,
+    "text": "Berberinc",
+    "confidence": 0.593
+   },
+   {
+    "time": 2.0,
+    "text": "Ozempi",
+    "confidence": 0.517
+   },
+   {
+    "time": 2.0,
+    "text": "OZEMPIC (semaglutide)",
+    "confidence": 0.995
+   },
+   {
+    "time": 2.0,
+    "text": "BERBERINE",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "An injectable drug that is FDA",
+    "confidence": 0.968
+   },
+   {
+    "time": 2.0,
+    "text": "An alkaloid bioactive compound",
+    "confidence": 0.834
+   },
+   {
+    "time": 2.0,
+    "text": "approved tor use in people with",
+    "confidence": 0.755
+   },
+   {
+    "time": 2.0,
+    "text": "found in many plant species. often",
+    "confidence": 0.637
+   },
+   {
+    "time": 2.0,
+    "text": "used t0 lower LDL cholestero",
+    "confidence": 0.803
+   },
+   {
+    "time": 2.0,
+    "text": "2 diabetes; and often used",
+    "confidence": 0.566
+   },
+   {
+    "time": 2.0,
+    "text": "blood pressure; and bloc",
+    "confidence": 0.684
+   },
+   {
+    "time": 2.0,
+    "text": "for weight loss:",
+    "confidence": 0.676
+   },
+   {
+    "time": 2.0,
+    "text": "levels",
+    "confidence": 0.919
+   },
+   {
+    "time": 2.0,
+    "text": "#healthbosstv",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Berberine vs. Ozempic",
+    "confidence": 0.685
+   },
+   {
+    "time": 4.0,
+    "text": "Berberine",
+    "confidence": 0.534
+   },
+   {
+    "time": 4.0,
+    "text": "OZEMPIC (semaglutide)",
+    "confidence": 0.994
+   },
+   {
+    "time": 4.0,
+    "text": "BERBERINE",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "An injectable drug that is FDA",
+    "confidence": 0.976
+   },
+   {
+    "time": 4.0,
+    "text": "An alkaloid bioactive compound",
+    "confidence": 0.831
+   },
+   {
+    "time": 4.0,
+    "text": "found in many plant species. often",
+    "confidence": 0.673
+   },
+   {
+    "time": 4.0,
+    "text": "approved for use in people with",
+    "confidence": 0.866
+   },
+   {
+    "time": 4.0,
+    "text": "used t0 lower LDL cholesterc",
+    "confidence": 0.513
+   },
+   {
+    "time": 4.0,
+    "text": "diabetes; and often used",
+    "confidence": 0.579
+   },
+   {
+    "time": 4.0,
+    "text": "blood pressure; and bloor",
+    "confidence": 0.679
+   },
+   {
+    "time": 4.0,
+    "text": "tor weight loss.",
+    "confidence": 0.54
+   },
+   {
+    "time": 4.0,
+    "text": "levels",
+    "confidence": 0.853
+   },
+   {
+    "time": 4.0,
+    "text": "#healthbosstv",
+    "confidence": 0.794
+   },
+   {
+    "time": 6.0,
+    "text": "Berberine",
+    "confidence": 0.976
+   },
+   {
+    "time": 6.0,
+    "text": "Barberries",
+    "confidence": 0.943
+   },
+   {
+    "time": 6.0,
+    "text": "#healthbosstv",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "Berberine",
+    "confidence": 0.977
+   },
+   {
+    "time": 8.0,
+    "text": "Barberries",
+    "confidence": 0.953
+   },
+   {
+    "time": 8.0,
+    "text": "#healthbosstv",
+    "confidence": 0.995
+   },
+   {
+    "time": 10.0,
+    "text": "Ehealingartsapothecary",
+    "confidence": 0.601
+   },
+   {
+    "time": 10.0,
+    "text": "Fox",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "News",
+    "confidence": 0.837
+   },
+   {
+    "time": 10.0,
+    "text": "Weight loss m",
+    "confidence": 0.95
+   },
+   {
+    "time": 10.0,
+    "text": "ns Ozem",
+    "confidence": 0.712
+   },
+   {
+    "time": 10.0,
+    "text": "5.37",
+    "confidence": 0.917
+   },
+   {
+    "time": 10.0,
+    "text": "Good Morning America",
+    "confidence": 0.743
+   },
+   {
+    "time": 10.0,
+    "text": "taking semaglutide",
+    "confidence": 0.759
+   },
+   {
+    "time": 10.0,
+    "text": "Outlo",
+    "confidence": 0.902
+   },
+   {
+    "time": 10.0,
+    "text": "Ozempic Welg",
+    "confidence": 0.866
+   },
+   {
+    "time": 10.0,
+    "text": "The Toda",
+    "confidence": 0.923
+   },
+   {
+    "time": 10.0,
+    "text": "Ozempic",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "ine",
+    "confidence": 0.757
+   },
+   {
+    "time": 10.0,
+    "text": "Insurance Providers",
+    "confidence": 0.509
+   },
+   {
+    "time": 10.0,
+    "text": "Ozen",
+    "confidence": 0.892
+   },
+   {
+    "time": 10.0,
+    "text": "diab",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "ews",
+    "confidence": 0.989
+   },
+   {
+    "time": 10.0,
+    "text": "Can",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "#healthbosstv",
+    "confidence": 0.953
+   },
+   {
+    "time": 12.0,
+    "text": "#healingartsapothecary",
+    "confidence": 0.509
+   },
+   {
+    "time": 12.0,
+    "text": "Fox",
+    "confidence": 0.994
+   },
+   {
+    "time": 12.0,
+    "text": "News",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.0,
+    "text": "Weight loss",
+    "confidence": 0.968
+   },
+   {
+    "time": 12.0,
+    "text": "5.37",
+    "confidence": 0.807
+   },
+   {
+    "time": 12.0,
+    "text": "Good Morning America",
+    "confidence": 0.713
+   },
+   {
+    "time": 12.0,
+    "text": "taking semaglutide",
+    "confidence": 0.744
+   },
+   {
+    "time": 12.0,
+    "text": "Ozempic Welg",
+    "confidence": 0.837
+   },
+   {
+    "time": 12.0,
+    "text": "views",
+    "confidence": 0.554
+   },
+   {
+    "time": 12.0,
+    "text": "The Tod",
+    "confidence": 0.801
+   },
+   {
+    "time": 12.0,
+    "text": "Ozempi",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "BREAKINC]",
+    "confidence": 0.579
+   },
+   {
+    "time": 12.0,
+    "text": "0h",
+    "confidence": 0.638
+   },
+   {
+    "time": 12.0,
+    "text": "Ozen",
+    "confidence": 0.642
+   },
+   {
+    "time": 12.0,
+    "text": "NEWS",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "ews",
+    "confidence": 0.952
+   },
+   {
+    "time": 12.0,
+    "text": "Can",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "npic reduce crav",
+    "confidence": 0.765
+   },
+   {
+    "time": 12.0,
+    "text": "#healthbosstv",
+    "confidence": 0.894
+   },
+   {
+    "time": 14.0,
+    "text": "Yahoo",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.0,
+    "text": "Is Berberine for Weight Loss \"N.",
+    "confidence": 0.944
+   },
+   {
+    "time": 14.0,
+    "text": "AGEIST",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "Berberine: Nature's Ozempic?",
+    "confidence": 0.634
+   },
+   {
+    "time": 14.0,
+    "text": "WIRED",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok\"",
+    "confidence": 0.956
+   },
+   {
+    "time": 14.0,
+    "text": "About;..",
+    "confidence": 0.548
+   },
+   {
+    "time": 14.0,
+    "text": "erine",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "#healthbosstv",
+    "confidence": 0.977
+   },
+   {
+    "time": 16.0,
+    "text": "Yahoo",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.0,
+    "text": "Is Berberine for Weight Loss",
+    "confidence": 0.991
+   },
+   {
+    "time": 16.0,
+    "text": "AGEIST",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "Berberine: Nature's Ozempic?",
+    "confidence": 0.69
+   },
+   {
+    "time": 16.0,
+    "text": "WIRED",
+    "confidence": 0.998
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok's Bc",
+    "confidence": 0.558
+   },
+   {
+    "time": 16.0,
+    "text": "bout; .",
+    "confidence": 0.717
+   },
+   {
+    "time": 16.0,
+    "text": "rine",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "#healthbosstv",
+    "confidence": 0.99
+   },
+   {
+    "time": 18.0,
+    "text": "Yahoo",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.0,
+    "text": "Is Berberine for Weight Loss",
+    "confidence": 0.878
+   },
+   {
+    "time": 18.0,
+    "text": "AGEIST",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "Berberine: Nature's Ozempic?",
+    "confidence": 0.718
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok\"",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.0,
+    "text": "rine",
+    "confidence": 0.989
+   },
+   {
+    "time": 18.0,
+    "text": "#healthbosstv",
+    "confidence": 0.992
+   },
+   {
+    "time": 20.0,
+    "text": "7",
+    "confidence": 0.7
+   },
+   {
+    "time": 20.0,
+    "text": "B",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "D",
+    "confidence": 0.941
+   },
+   {
+    "time": 20.0,
+    "text": "UA",
+    "confidence": 0.767
+   },
+   {
+    "time": 20.0,
+    "text": "S",
+    "confidence": 0.826
+   },
+   {
+    "time": 20.0,
+    "text": "Metformin",
+    "confidence": 0.809
+   },
+   {
+    "time": 20.0,
+    "text": "#healthbosstv",
+    "confidence": 0.997
+   },
+   {
+    "time": 22.0,
+    "text": "B",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "D",
+    "confidence": 0.928
+   },
+   {
+    "time": 22.0,
+    "text": "S",
+    "confidence": 0.834
+   },
+   {
+    "time": 22.0,
+    "text": "UA",
+    "confidence": 0.569
+   },
+   {
+    "time": 22.0,
+    "text": "Metformin",
+    "confidence": 0.831
+   },
+   {
+    "time": 22.0,
+    "text": "#healthbosstv",
+    "confidence": 0.803
+   },
+   {
+    "time": 24.0,
+    "text": "OSMOTIC TB",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "51.03",
+    "confidence": 0.843
+   },
+   {
+    "time": 24.0,
+    "text": "MediPond com",
+    "confidence": 0.864
+   },
+   {
+    "time": 24.0,
+    "text": "News-Medical net",
+    "confidence": 0.988
+   },
+   {
+    "time": 24.0,
+    "text": "Metformin",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "Metformin Formulations",
+    "confidence": 0.873
+   },
+   {
+    "time": 24.0,
+    "text": "Tablets",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "Medical News Today",
+    "confidence": 0.741
+   },
+   {
+    "time": 24.0,
+    "text": "Stopping metformin: Side effect.",
+    "confidence": 0.8
+   },
+   {
+    "time": 24.0,
+    "text": "Diabetes Self-Management",
+    "confidence": 0.817
+   },
+   {
+    "time": 24.0,
+    "text": "Diabetes Medicine: Metformin",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "Alogliptin-Metfor",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "min HCL",
+    "confidence": 0.997
+   },
+   {
+    "time": 24.0,
+    "text": "12.5-1000mg",
+    "confidence": 0.901
+   },
+   {
+    "time": 24.0,
+    "text": "Tablets",
+    "confidence": 0.834
+   },
+   {
+    "time": 24.0,
+    "text": "Hettormin",
+    "confidence": 0.762
+   },
+   {
+    "time": 24.0,
+    "text": "eric",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "9News",
+    "confidence": 0.647
+   },
+   {
+    "time": 24.0,
+    "text": "plet",
+    "confidence": 0.568
+   },
+   {
+    "time": 24.0,
+    "text": "Metformin: Common diabetes",
+    "confidence": 0.844
+   },
+   {
+    "time": 24.0,
+    "text": "#healthbosstv",
+    "confidence": 0.991
+   },
+   {
+    "time": 26.0,
+    "text": "OSMOTIC TB",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "51.03",
+    "confidence": 0.847
+   },
+   {
+    "time": 26.0,
+    "text": "MediPond com",
+    "confidence": 0.892
+   },
+   {
+    "time": 26.0,
+    "text": "News-Medical net",
+    "confidence": 0.998
+   },
+   {
+    "time": 26.0,
+    "text": "Metformin Fo",
+    "confidence": 0.641
+   },
+   {
+    "time": 26.0,
+    "text": "blets",
+    "confidence": 0.947
+   },
+   {
+    "time": 26.0,
+    "text": "Natues",
+    "confidence": 0.999
+   },
+   {
+    "time": 26.0,
+    "text": "Metfouming",
+    "confidence": 0.74
+   },
+   {
+    "time": 26.0,
+    "text": "tformin: Side effect .",
+    "confidence": 0.956
+   },
+   {
+    "time": 26.0,
+    "text": "Diabetes Self-Management",
+    "confidence": 0.758
+   },
+   {
+    "time": 26.0,
+    "text": "Diabetes Medicine: Metformin",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "Alogliptin-Metfor",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "min HCL",
+    "confidence": 0.997
+   },
+   {
+    "time": 26.0,
+    "text": "12.5-1000mg",
+    "confidence": 0.53
+   },
+   {
+    "time": 26.0,
+    "text": "Tablets",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "Hettormin",
+    "confidence": 0.827
+   },
+   {
+    "time": 26.0,
+    "text": "Spons",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "Alogl",
+    "confidence": 0.977
+   },
+   {
+    "time": 26.0,
+    "text": "9News",
+    "confidence": 0.684
+   },
+   {
+    "time": 26.0,
+    "text": "Kaza",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "Metformin: Common diabetes",
+    "confidence": 0.805
+   },
+   {
+    "time": 26.0,
+    "text": "5162",
+    "confidence": 0.701
+   },
+   {
+    "time": 26.0,
+    "text": "Hea",
+    "confidence": 0.973
+   },
+   {
+    "time": 26.0,
+    "text": "Fre",
+    "confidence": 0.985
+   },
+   {
+    "time": 26.0,
+    "text": "Forr",
+    "confidence": 0.996
+   },
+   {
+    "time": 26.0,
+    "text": "#healthbosstv",
+    "confidence": 0.932
+   },
+   {
+    "time": 28.0,
+    "text": "B",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "E TE",
+    "confidence": 0.596
+   },
+   {
+    "time": 28.0,
+    "text": "S",
+    "confidence": 0.712
+   },
+   {
+    "time": 28.0,
+    "text": "#healthbosstv",
+    "confidence": 0.975
+   },
+   {
+    "time": 30.0,
+    "text": "B",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "D",
+    "confidence": 0.927
+   },
+   {
+    "time": 30.0,
+    "text": "UA",
+    "confidence": 0.898
+   },
+   {
+    "time": 30.0,
+    "text": "S",
+    "confidence": 0.828
+   },
+   {
+    "time": 30.0,
+    "text": "TE",
+    "confidence": 0.846
+   },
+   {
+    "time": 30.0,
+    "text": "E",
+    "confidence": 0.878
+   },
+   {
+    "time": 30.0,
+    "text": "#healthbosstv",
+    "confidence": 0.997
+   },
+   {
+    "time": 32.0,
+    "text": "LOUNEED",
+    "confidence": 0.506
+   },
+   {
+    "time": 32.0,
+    "text": "'#healingartsapothecary",
+    "confidence": 0.771
+   },
+   {
+    "time": 32.0,
+    "text": "Verywell Health",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "Health Benefits of Barberries",
+    "confidence": 0.91
+   },
+   {
+    "time": 32.0,
+    "text": "Healthline",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "Impressive Health Benefits of",
+    "confidence": 0.583
+   },
+   {
+    "time": 32.0,
+    "text": "3x",
+    "confidence": 0.957
+   },
+   {
+    "time": 32.0,
+    "text": "Dr;",
+    "confidence": 0.784
+   },
+   {
+    "time": 32.0,
+    "text": "Daily Express",
+    "confidence": 0.721
+   },
+   {
+    "time": 32.0,
+    "text": "Barb",
+    "confidence": 0.983
+   },
+   {
+    "time": 32.0,
+    "text": "osag",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "blood sugar includes barberry j  _",
+    "confidence": 0.815
+   },
+   {
+    "time": 32.0,
+    "text": "berry",
+    "confidence": 0.609
+   },
+   {
+    "time": 32.0,
+    "text": "#healthbosstv",
+    "confidence": 0.994
+   },
+   {
+    "time": 32.0,
+    "text": "0 Dr: Axe",
+    "confidence": 0.576
+   },
+   {
+    "time": 34.0,
+    "text": "'#healingartsapothecary",
+    "confidence": 0.776
+   },
+   {
+    "time": 34.0,
+    "text": "Verywell Health",
+    "confidence": 0.814
+   },
+   {
+    "time": 34.0,
+    "text": "Health Benefits of Barberries",
+    "confidence": 0.839
+   },
+   {
+    "time": 34.0,
+    "text": "ine",
+    "confidence": 0.812
+   },
+   {
+    "time": 34.0,
+    "text": "e Health Benefits of",
+    "confidence": 0.937
+   },
+   {
+    "time": 34.0,
+    "text": "3x",
+    "confidence": 0.896
+   },
+   {
+    "time": 34.0,
+    "text": "Dr;",
+    "confidence": 0.986
+   },
+   {
+    "time": 34.0,
+    "text": "Daily Express",
+    "confidence": 0.74
+   },
+   {
+    "time": 34.0,
+    "text": "Barbe",
+    "confidence": 0.986
+   },
+   {
+    "time": 34.0,
+    "text": "sag",
+    "confidence": 0.994
+   },
+   {
+    "time": 34.0,
+    "text": "blood sugar includes barberry",
+    "confidence": 0.997
+   },
+   {
+    "time": 34.0,
+    "text": "#healthbosstv",
+    "confidence": 0.919
+   },
+   {
+    "time": 36.0,
+    "text": "'#healingartsapothecary",
+    "confidence": 0.772
+   },
+   {
+    "time": 36.0,
+    "text": "Verywell Health",
+    "confidence": 0.849
+   },
+   {
+    "time": 36.0,
+    "text": "Health Benefits of Barberries",
+    "confidence": 0.825
+   },
+   {
+    "time": 36.0,
+    "text": "Healthline",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "Impressive Health Benefits of",
+    "confidence": 0.759
+   },
+   {
+    "time": 36.0,
+    "text": "Dr; A",
+    "confidence": 0.937
+   },
+   {
+    "time": 36.0,
+    "text": "Daily Express",
+    "confidence": 0.732
+   },
+   {
+    "time": 36.0,
+    "text": "Barber",
+    "confidence": 0.982
+   },
+   {
+    "time": 36.0,
+    "text": "blood sugar includes barberry",
+    "confidence": 0.997
+   },
+   {
+    "time": 36.0,
+    "text": "#healthbosstv",
+    "confidence": 0.996
+   },
+   {
+    "time": 38.0,
+    "text": "#healingartsapothecaryl",
+    "confidence": 0.565
+   },
+   {
+    "time": 38.0,
+    "text": "Nidor",
+    "confidence": 0.8
+   },
+   {
+    "time": 38.0,
+    "text": "Cleveland Clinic",
+    "confidence": 0.737
+   },
+   {
+    "time": 38.0,
+    "text": "Diabetes: What It Is, Causes, S",
+    "confidence": 0.73
+   },
+   {
+    "time": 38.0,
+    "text": "W Wikipedia",
+    "confidence": 0.715
+   },
+   {
+    "time": 38.0,
+    "text": "Diabetes",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "CDC",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "Stats, and Impacts of Diabetes",
+    "confidence": 0.714
+   },
+   {
+    "time": 38.0,
+    "text": "37",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "Nev",
+    "confidence": 0.984
+   },
+   {
+    "time": 38.0,
+    "text": "96",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "The Futi",
+    "confidence": 0.922
+   },
+   {
+    "time": 38.0,
+    "text": "#healthbosstv",
+    "confidence": 0.932
+   },
+   {
+    "time": 40.0,
+    "text": "#healingartsapothecary",
+    "confidence": 0.509
+   },
+   {
+    "time": 40.0,
+    "text": "What Is Diapere",
+    "confidence": 0.79
+   },
+   {
+    "time": 40.0,
+    "text": "Cleveland Clinic",
+    "confidence": 0.721
+   },
+   {
+    "time": 40.0,
+    "text": "Diabetes: What It Is, Causes;, S",
+    "confidence": 0.607
+   },
+   {
+    "time": 40.0,
+    "text": "Wikipedia",
+    "confidence": 0.707
+   },
+   {
+    "time": 40.0,
+    "text": "Diabetes",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "CDC",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "Stats, and Impacts of Diabetes",
+    "confidence": 0.825
+   },
+   {
+    "time": 40.0,
+    "text": "37",
+    "confidence": 0.999
+   },
+   {
+    "time": 40.0,
+    "text": "New",
+    "confidence": 0.941
+   },
+   {
+    "time": 40.0,
+    "text": "96",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "#healthbosstv",
+    "confidence": 0.998
+   },
+   {
+    "time": 42.0,
+    "text": "#healingartsapothecary",
+    "confidence": 0.506
+   },
+   {
+    "time": 42.0,
+    "text": "National Inst)",
+    "confidence": 0.593
+   },
+   {
+    "time": 42.0,
+    "text": "What Is Diabete",
+    "confidence": 0.8
+   },
+   {
+    "time": 42.0,
+    "text": "Cleveland Clinic",
+    "confidence": 0.694
+   },
+   {
+    "time": 42.0,
+    "text": "Diabetes: What It Is, Causes, S",
+    "confidence": 0.689
+   },
+   {
+    "time": 42.0,
+    "text": "W Wikipedia",
+    "confidence": 0.637
+   },
+   {
+    "time": 42.0,
+    "text": "Diabetes",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "CDC",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "Stats, and Impacts of Diabetes",
+    "confidence": 0.864
+   },
+   {
+    "time": 42.0,
+    "text": "37",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "New",
+    "confidence": 0.964
+   },
+   {
+    "time": 42.0,
+    "text": "96",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "The Futt",
+    "confidence": 0.614
+   },
+   {
+    "time": 42.0,
+    "text": "#healthbosstv",
+    "confidence": 0.984
+   },
+   {
+    "time": 44.0,
+    "text": "#healingartsapothecary",
+    "confidence": 0.512
+   },
+   {
+    "time": 44.0,
+    "text": "What Is Diarere",
+    "confidence": 0.896
+   },
+   {
+    "time": 44.0,
+    "text": "Cleveland Clinic",
+    "confidence": 0.722
+   },
+   {
+    "time": 44.0,
+    "text": "Diabetes: What It Is, Causes, S",
+    "confidence": 0.691
+   },
+   {
+    "time": 44.0,
+    "text": "W Wikipedia",
+    "confidence": 0.964
+   },
+   {
+    "time": 44.0,
+    "text": "Diabetes",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "CDC",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "Stats, and Impacts of Diabetes",
+    "confidence": 0.861
+   },
+   {
+    "time": 44.0,
+    "text": "37",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "New",
+    "confidence": 0.967
+   },
+   {
+    "time": 44.0,
+    "text": "The Futt",
+    "confidence": 0.585
+   },
+   {
+    "time": 44.0,
+    "text": "96",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "#healthbosstv",
+    "confidence": 0.789
+   },
+   {
+    "time": 46.0,
+    "text": "#healthbosstv",
+    "confidence": 0.746
+   },
+   {
+    "time": 48.0,
+    "text": "Barberry",
+    "confidence": 0.924
+   },
+   {
+    "time": 48.0,
+    "text": "Root",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "Strongest",
+    "confidence": 0.98
+   },
+   {
+    "time": 48.0,
+    "text": "#healthbosstv",
+    "confidence": 0.713
+   },
+   {
+    "time": 50.0,
+    "text": "#healthbosstv",
+    "confidence": 0.819
+   },
+   {
+    "time": 52.0,
+    "text": "DiABETES",
+    "confidence": 0.695
+   },
+   {
+    "time": 52.0,
+    "text": "40",
+    "confidence": 0.567
+   },
+   {
+    "time": 52.0,
+    "text": "DIABETES",
+    "confidence": 0.569
+   },
+   {
+    "time": 52.0,
+    "text": "#healthbosstv",
+    "confidence": 0.996
+   },
+   {
+    "time": 54.0,
+    "text": "DiABETES",
+    "confidence": 0.67
+   },
+   {
+    "time": 54.0,
+    "text": "40",
+    "confidence": 0.699
+   },
+   {
+    "time": 54.0,
+    "text": "DIABETES",
+    "confidence": 0.821
+   },
+   {
+    "time": 54.0,
+    "text": "#healthbosstv",
+    "confidence": 0.997
+   },
+   {
+    "time": 56.0,
+    "text": "#healthbosstv",
+    "confidence": 0.991
+   },
+   {
+    "time": 58.0,
+    "text": "#healthbosstv",
+    "confidence": 0.992
+   },
+   {
+    "time": 60.0,
+    "text": "#healthbosstv",
+    "confidence": 0.958
+   },
+   {
+    "time": 62.0,
+    "text": "#healthbosstv",
+    "confidence": 0.996
+   },
+   {
+    "time": 64.0,
+    "text": "#healthbosstv",
+    "confidence": 0.996
+   },
+   {
+    "time": 66.0,
+    "text": "#healthbosstv",
+    "confidence": 0.993
+   },
+   {
+    "time": 68.0,
+    "text": "Dr Axe",
+    "confidence": 0.642
+   },
+   {
+    "time": 68.0,
+    "text": "WHAT IS",
+    "confidence": 0.994
+   },
+   {
+    "time": 68.0,
+    "text": "BERBERINE?",
+    "confidence": 0.984
+   },
+   {
+    "time": 68.0,
+    "text": "Berberine comes from China and India;",
+    "confidence": 0.645
+   },
+   {
+    "time": 68.0,
+    "text": "where It was first used In traditional",
+    "confidence": 0.8
+   },
+   {
+    "time": 68.0,
+    "text": "Chinese and Ayurvedic medicines",
+    "confidence": 0.994
+   },
+   {
+    "time": 68.0,
+    "text": "Anralkaloid Is",
+    "confidence": 0.632
+   },
+   {
+    "time": 68.0,
+    "text": "compounds of plant origin",
+    "confidence": 0.888
+   },
+   {
+    "time": 68.0,
+    "text": "traditional herbs  including",
+    "confidence": 0.541
+   },
+   {
+    "time": 68.0,
+    "text": "goldthrcad and tree turmeric",
+    "confidence": 0.791
+   },
+   {
+    "time": 68.0,
+    "text": "This berberine alkaloid contains",
+    "confidence": 0.589
+   },
+   {
+    "time": 68.0,
+    "text": "mostly basic nitrogon atoms",
+    "confidence": 0.777
+   },
+   {
+    "time": 68.0,
+    "text": "pronounced",
+    "confidence": 0.995
+   },
+   {
+    "time": 68.0,
+    "text": "physiologica",
+    "confidence": 0.955
+   },
+   {
+    "time": 68.0,
+    "text": "mans",
+    "confidence": 0.577
+   },
+   {
+    "time": 68.0,
+    "text": "A 5,000-year-old",
+    "confidence": 0.996
+   },
+   {
+    "time": 68.0,
+    "text": "healing",
+    "confidence": 1.0
+   },
+   {
+    "time": 68.0,
+    "text": "system of natural",
+    "confidence": 0.883
+   },
+   {
+    "time": 68.0,
+    "text": "developed in India",
+    "confidence": 0.99
+   },
+   {
+    "time": 68.0,
+    "text": "It aims",
+    "confidence": 0.936
+   },
+   {
+    "time": 68.0,
+    "text": "Inate the",
+    "confidence": 0.546
+   },
+   {
+    "time": 68.0,
+    "text": "need for",
+    "confidence": 0.996
+   },
+   {
+    "time": 68.0,
+    "text": "ted surgeries Or",
+    "confidence": 0.659
+   },
+   {
+    "time": 68.0,
+    "text": "compli",
+    "confidence": 1.0
+   },
+   {
+    "time": 68.0,
+    "text": "through painful",
+    "confidence": 0.991
+   },
+   {
+    "time": 68.0,
+    "text": "suffe",
+    "confidence": 0.836
+   },
+   {
+    "time": 68.0,
+    "text": "co",
+    "confidence": 0.609
+   },
+   {
+    "time": 68.0,
+    "text": "#healthbosstv",
+    "confidence": 0.972
+   },
+   {
+    "time": 70.0,
+    "text": "Dr Axe",
+    "confidence": 0.62
+   },
+   {
+    "time": 70.0,
+    "text": "WHAT IS",
+    "confidence": 0.994
+   },
+   {
+    "time": 70.0,
+    "text": "BERBERINE?",
+    "confidence": 0.98
+   },
+   {
+    "time": 70.0,
+    "text": "where It was first used In traditional",
+    "confidence": 0.884
+   },
+   {
+    "time": 70.0,
+    "text": "Chinese and Ayurvedic medicines",
+    "confidence": 0.994
+   },
+   {
+    "time": 70.0,
+    "text": "Analkaloid Is",
+    "confidence": 0.742
+   },
+   {
+    "time": 70.0,
+    "text": "compounds of plant origin",
+    "confidence": 0.844
+   },
+   {
+    "time": 70.0,
+    "text": "traditional herbs  including",
+    "confidence": 0.723
+   },
+   {
+    "time": 70.0,
+    "text": "goldthrcad and tree turmeric",
+    "confidence": 0.789
+   },
+   {
+    "time": 70.0,
+    "text": "This berberine alkaloid contains",
+    "confidence": 0.643
+   },
+   {
+    "time": 70.0,
+    "text": "mostly basic nitrogon atoms",
+    "confidence": 0.859
+   },
+   {
+    "time": 70.0,
+    "text": "pronounced",
+    "confidence": 0.999
+   },
+   {
+    "time": 70.0,
+    "text": "physiological",
+    "confidence": 0.995
+   },
+   {
+    "time": 70.0,
+    "text": "on humans",
+    "confidence": 0.825
+   },
+   {
+    "time": 70.0,
+    "text": "What",
+    "confidence": 1.0
+   },
+   {
+    "time": 70.0,
+    "text": "A 5,000-year-old",
+    "confidence": 0.872
+   },
+   {
+    "time": 70.0,
+    "text": "healing",
+    "confidence": 1.0
+   },
+   {
+    "time": 70.0,
+    "text": "system of natural",
+    "confidence": 0.916
+   },
+   {
+    "time": 70.0,
+    "text": "developed in India",
+    "confidence": 0.99
+   },
+   {
+    "time": 70.0,
+    "text": "It aims",
+    "confidence": 0.975
+   },
+   {
+    "time": 70.0,
+    "text": "inate the",
+    "confidence": 0.945
+   },
+   {
+    "time": 70.0,
+    "text": "drugs,",
+    "confidence": 0.821
+   },
+   {
+    "time": 70.0,
+    "text": "need for",
+    "confidence": 0.996
+   },
+   {
+    "time": 70.0,
+    "text": "complic",
+    "confidence": 0.839
+   },
+   {
+    "time": 70.0,
+    "text": "ed surgeries or",
+    "confidence": 0.955
+   },
+   {
+    "time": 70.0,
+    "text": "hrough painful",
+    "confidence": 0.997
+   },
+   {
+    "time": 70.0,
+    "text": "sufferi",
+    "confidence": 0.842
+   },
+   {
+    "time": 70.0,
+    "text": "con",
+    "confidence": 1.0
+   },
+   {
+    "time": 70.0,
+    "text": "#healthbosstv",
+    "confidence": 0.819
+   },
+   {
+    "time": 72.0,
+    "text": "#healingartsapothecary",
+    "confidence": 0.983
+   },
+   {
+    "time": 72.0,
+    "text": "Metformin",
+    "confidence": 1.0
+   },
+   {
+    "time": 72.0,
+    "text": "Metformin",
+    "confidence": 1.0
+   },
+   {
+    "time": 72.0,
+    "text": "Tablets",
+    "confidence": 0.999
+   },
+   {
+    "time": 72.0,
+    "text": "Medical News Today",
+    "confidence": 0.861
+   },
+   {
+    "time": 72.0,
+    "text": "Stopping metformin: Side effect __.",
+    "confidence": 0.59
+   },
+   {
+    "time": 72.0,
+    "text": "Medical Xpress",
+    "confidence": 0.969
+   },
+   {
+    "time": 72.0,
+    "text": "Nonder drug? Exploring the mc",
+    "confidence": 0.754
+   },
+   {
+    "time": 72.0,
+    "text": "s-Medical net",
+    "confidence": 0.983
+   },
+   {
+    "time": 72.0,
+    "text": "Everyday Health",
+    "confidence": 1.0
+   },
+   {
+    "time": 72.0,
+    "text": "etformin reduce mortality",
+    "confidence": 0.995
+   },
+   {
+    "time": 72.0,
+    "text": "Aetformin Halves Risk for Age",
+    "confidence": 0.772
+   },
+   {
+    "time": 72.0,
+    "text": "Metfo",
+    "confidence": 0.916
+   },
+   {
+    "time": 72.0,
+    "text": "AAFP",
+    "confidence": 1.0
+   },
+   {
+    "time": 72.0,
+    "text": "DA Issues Recall Alert for Metf.",
+    "confidence": 0.936
+   },
+   {
+    "time": 72.0,
+    "text": "#healthbosstv",
+    "confidence": 0.918
+   },
+   {
+    "time": 74.0,
+    "text": "#healingartsapothecary",
+    "confidence": 0.983
+   },
+   {
+    "time": 74.0,
+    "text": "Metformin",
+    "confidence": 1.0
+   },
+   {
+    "time": 74.0,
+    "text": "soOmg Tablets",
+    "confidence": 0.565
+   },
+   {
+    "time": 74.0,
+    "text": "Metformin",
+    "confidence": 1.0
+   },
+   {
+    "time": 74.0,
+    "text": "Tablets",
+    "confidence": 0.93
+   },
+   {
+    "time": 74.0,
+    "text": "Medical News Today",
+    "confidence": 0.89
+   },
+   {
+    "time": 74.0,
+    "text": "Stopping metformin: Side effect__.",
+    "confidence": 0.82
+   },
+   {
+    "time": 74.0,
+    "text": "Medical Xpress",
+    "confidence": 0.952
+   },
+   {
+    "time": 74.0,
+    "text": "Nonder drug? Exploring the m",
+    "confidence": 0.817
+   },
+   {
+    "time": 74.0,
+    "text": "Medical net",
+    "confidence": 0.842
+   },
+   {
+    "time": 74.0,
+    "text": "Everyday",
+    "confidence": 1.0
+   },
+   {
+    "time": 74.0,
+    "text": "iformin reduce mortality",
+    "confidence": 0.749
+   },
+   {
+    "time": 74.0,
+    "text": "Pisk for Age-_",
+    "confidence": 0.549
+   },
+   {
+    "time": 74.0,
+    "text": "Aetformin",
+    "confidence": 0.725
+   },
+   {
+    "time": 74.0,
+    "text": "Metfo",
+    "confidence": 0.938
+   },
+   {
+    "time": 74.0,
+    "text": "AAFP",
+    "confidence": 1.0
+   },
+   {
+    "time": 74.0,
+    "text": "Ghealthbosstv",
+    "confidence": 0.685
+   },
+   {
+    "time": 76.0,
+    "text": "#healingartsapothecary",
+    "confidence": 0.983
+   },
+   {
+    "time": 76.0,
+    "text": "Metformin",
+    "confidence": 1.0
+   },
+   {
+    "time": 76.0,
+    "text": "soOmg Tablets",
+    "confidence": 0.564
+   },
+   {
+    "time": 76.0,
+    "text": "Metformin",
+    "confidence": 1.0
+   },
+   {
+    "time": 76.0,
+    "text": "Tablets",
+    "confidence": 0.815
+   },
+   {
+    "time": 76.0,
+    "text": "Medical News Today",
+    "confidence": 0.905
+   },
+   {
+    "time": 76.0,
+    "text": "Stopping metformin: Side effect__.",
+    "confidence": 0.793
+   },
+   {
+    "time": 76.0,
+    "text": "Medical Xpress",
+    "confidence": 0.964
+   },
+   {
+    "time": 76.0,
+    "text": "Nonder drug? Exploring the mo",
+    "confidence": 0.825
+   },
+   {
+    "time": 76.0,
+    "text": "1",
+    "confidence": 0.918
+   },
+   {
+    "time": 76.0,
+    "text": "News-Medical net",
+    "confidence": 0.843
+   },
+   {
+    "time": 76.0,
+    "text": "Everyday",
+    "confidence": 0.978
+   },
+   {
+    "time": 76.0,
+    "text": "Can metformin reduce mortality",
+    "confidence": 0.896
+   },
+   {
+    "time": 76.0,
+    "text": "Jisk for Age- _",
+    "confidence": 0.547
+   },
+   {
+    "time": 76.0,
+    "text": "Aetformin",
+    "confidence": 0.741
+   },
+   {
+    "time": 76.0,
+    "text": "Nev",
+    "confidence": 0.889
+   },
+   {
+    "time": 76.0,
+    "text": "Metfori",
+    "confidence": 0.735
+   },
+   {
+    "time": 76.0,
+    "text": "AAFP",
+    "confidence": 1.0
+   },
+   {
+    "time": 76.0,
+    "text": "DA Issues Recall Alert for Metf.",
+    "confidence": 0.932
+   },
+   {
+    "time": 76.0,
+    "text": "Ghealthbosstv",
+    "confidence": 0.703
+   },
+   {
+    "time": 78.0,
+    "text": "Barberries",
+    "confidence": 0.835
+   },
+   {
+    "time": 78.0,
+    "text": "Barberry",
+    "confidence": 0.717
+   },
+   {
+    "time": 78.0,
+    "text": "Capsules",
+    "confidence": 0.992
+   },
+   {
+    "time": 78.0,
+    "text": "Extract",
+    "confidence": 1.0
+   },
+   {
+    "time": 78.0,
+    "text": "&",
+    "confidence": 0.904
+   },
+   {
+    "time": 78.0,
+    "text": "Available",
+    "confidence": 1.0
+   },
+   {
+    "time": 78.0,
+    "text": "#healthbosstv",
+    "confidence": 1.0
+   },
+   {
+    "time": 80.0,
+    "text": "OrDer",
+    "confidence": 0.55
+   },
+   {
+    "time": 80.0,
+    "text": "Now",
+    "confidence": 0.619
+   },
+   {
+    "time": 80.0,
+    "text": "Barberries",
+    "confidence": 1.0
+   },
+   {
+    "time": 80.0,
+    "text": "Barberry",
+    "confidence": 0.942
+   },
+   {
+    "time": 80.0,
+    "text": "Capsules",
+    "confidence": 0.992
+   },
+   {
+    "time": 80.0,
+    "text": "Extract",
+    "confidence": 0.99
+   },
+   {
+    "time": 80.0,
+    "text": "&",
+    "confidence": 0.905
+   },
+   {
+    "time": 80.0,
+    "text": "Available",
+    "confidence": 1.0
+   },
+   {
+    "time": 80.0,
+    "text": "#healthbosstv",
+    "confidence": 1.0
+   },
+   {
+    "time": 82.0,
+    "text": "OrDer",
+    "confidence": 0.541
+   },
+   {
+    "time": 82.0,
+    "text": "Barberries",
+    "confidence": 0.9
+   },
+   {
+    "time": 82.0,
+    "text": "Barberry",
+    "confidence": 0.942
+   },
+   {
+    "time": 82.0,
+    "text": "Capsules",
+    "confidence": 0.992
+   },
+   {
+    "time": 82.0,
+    "text": "Extract",
+    "confidence": 0.975
+   },
+   {
+    "time": 82.0,
+    "text": "&",
+    "confidence": 0.905
+   },
+   {
+    "time": 82.0,
+    "text": "Available",
+    "confidence": 1.0
+   },
+   {
+    "time": 82.0,
+    "text": "ARE My",
+    "confidence": 0.928
+   },
+   {
+    "time": 82.0,
+    "text": "3",
+    "confidence": 0.703
+   },
+   {
+    "time": 82.0,
+    "text": "#healthbosstv",
+    "confidence": 1.0
+   },
+   {
+    "time": 84.0,
+    "text": "Barberries",
+    "confidence": 1.0
+   },
+   {
+    "time": 84.0,
+    "text": "Barberry",
+    "confidence": 0.941
+   },
+   {
+    "time": 84.0,
+    "text": "Capsules",
+    "confidence": 0.992
+   },
+   {
+    "time": 84.0,
+    "text": "Extract",
+    "confidence": 0.975
+   },
+   {
+    "time": 84.0,
+    "text": "&",
+    "confidence": 0.906
+   },
+   {
+    "time": 84.0,
+    "text": "Available",
+    "confidence": 1.0
+   },
+   {
+    "time": 84.0,
+    "text": "3",
+    "confidence": 0.941
+   },
+   {
+    "time": 84.0,
+    "text": "#healthbosstv",
+    "confidence": 1.0
+   }
+  ],
+  "captions": [
+   {
+    "text": "Berberine vs: Ozempic",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.814,
+    "id": "o1"
+   },
+   {
+    "text": "Berberi",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.534,
+    "id": "o2"
+   },
+   {
+    "text": "Ozempic",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o3"
+   },
+   {
+    "text": "OZEMPIC (semaglutide)",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.997,
+    "id": "o4"
+   },
+   {
+    "text": "BERBERINE",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o5"
+   },
+   {
+    "text": "An injectable drug that is FDA",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.903,
+    "id": "o6"
+   },
+   {
+    "text": "An alkaloid bioactive compound",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.929,
+    "id": "o7"
+   },
+   {
+    "text": "approved for use in people with",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.754,
+    "id": "o8"
+   },
+   {
+    "text": "used t0 lower LDL choleste",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.898,
+    "id": "o9"
+   },
+   {
+    "text": "pe 2 diabeles; and olten used",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.515,
+    "id": "o10"
+   },
+   {
+    "text": "blood pressure; and blo",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.507,
+    "id": "o11"
+   },
+   {
+    "text": "bel for weight loss:",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.548,
+    "id": "o12"
+   },
+   {
+    "text": "levels",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.754,
+    "id": "o13"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o14"
+   },
+   {
+    "text": "Berberine vs. Ozempic",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.849,
+    "id": "o15"
+   },
+   {
+    "text": "Berberinc",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.593,
+    "id": "o16"
+   },
+   {
+    "text": "Ozempi",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.517,
+    "id": "o17"
+   },
+   {
+    "text": "OZEMPIC (semaglutide)",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.995,
+    "id": "o18"
+   },
+   {
+    "text": "BERBERINE",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o19"
+   },
+   {
+    "text": "An injectable drug that is FDA",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.968,
+    "id": "o20"
+   },
+   {
+    "text": "An alkaloid bioactive compound",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.834,
+    "id": "o21"
+   },
+   {
+    "text": "approved tor use in people with",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.755,
+    "id": "o22"
+   },
+   {
+    "text": "found in many plant species. often",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.637,
+    "id": "o23"
+   },
+   {
+    "text": "used t0 lower LDL cholestero",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.803,
+    "id": "o24"
+   },
+   {
+    "text": "2 diabetes; and often used",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.566,
+    "id": "o25"
+   },
+   {
+    "text": "blood pressure; and bloc",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.684,
+    "id": "o26"
+   },
+   {
+    "text": "for weight loss:",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.676,
+    "id": "o27"
+   },
+   {
+    "text": "levels",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.919,
+    "id": "o28"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o29"
+   },
+   {
+    "text": "Berberine vs. Ozempic",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.685,
+    "id": "o30"
+   },
+   {
+    "text": "Berberine",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.534,
+    "id": "o31"
+   },
+   {
+    "text": "OZEMPIC (semaglutide)",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.994,
+    "id": "o32"
+   },
+   {
+    "text": "BERBERINE",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o33"
+   },
+   {
+    "text": "An injectable drug that is FDA",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.976,
+    "id": "o34"
+   },
+   {
+    "text": "An alkaloid bioactive compound",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.831,
+    "id": "o35"
+   },
+   {
+    "text": "found in many plant species. often",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.673,
+    "id": "o36"
+   },
+   {
+    "text": "approved for use in people with",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.866,
+    "id": "o37"
+   },
+   {
+    "text": "used t0 lower LDL cholesterc",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.513,
+    "id": "o38"
+   },
+   {
+    "text": "diabetes; and often used",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.579,
+    "id": "o39"
+   },
+   {
+    "text": "blood pressure; and bloor",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.679,
+    "id": "o40"
+   },
+   {
+    "text": "tor weight loss.",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.54,
+    "id": "o41"
+   },
+   {
+    "text": "levels",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.853,
+    "id": "o42"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.794,
+    "id": "o43"
+   },
+   {
+    "text": "Berberine",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.976,
+    "id": "o44"
+   },
+   {
+    "text": "Barberries",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.943,
+    "id": "o45"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o46"
+   },
+   {
+    "text": "Berberine",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.977,
+    "id": "o47"
+   },
+   {
+    "text": "Barberries",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.953,
+    "id": "o48"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.995,
+    "id": "o49"
+   },
+   {
+    "text": "Ehealingartsapothecary",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.601,
+    "id": "o50"
+   },
+   {
+    "text": "Fox",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o51"
+   },
+   {
+    "text": "News",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.837,
+    "id": "o52"
+   },
+   {
+    "text": "Weight loss m",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.95,
+    "id": "o53"
+   },
+   {
+    "text": "ns Ozem",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.712,
+    "id": "o54"
+   },
+   {
+    "text": "5.37",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.917,
+    "id": "o55"
+   },
+   {
+    "text": "Good Morning America",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.743,
+    "id": "o56"
+   },
+   {
+    "text": "taking semaglutide",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.759,
+    "id": "o57"
+   },
+   {
+    "text": "Outlo",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.902,
+    "id": "o58"
+   },
+   {
+    "text": "Ozempic Welg",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.866,
+    "id": "o59"
+   },
+   {
+    "text": "The Toda",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.923,
+    "id": "o60"
+   },
+   {
+    "text": "Ozempic",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o61"
+   },
+   {
+    "text": "ine",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.757,
+    "id": "o62"
+   },
+   {
+    "text": "Insurance Providers",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.509,
+    "id": "o63"
+   },
+   {
+    "text": "Ozen",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.892,
+    "id": "o64"
+   },
+   {
+    "text": "diab",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o65"
+   },
+   {
+    "text": "ews",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.989,
+    "id": "o66"
+   },
+   {
+    "text": "Can",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o67"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.953,
+    "id": "o68"
+   },
+   {
+    "text": "#healingartsapothecary",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.509,
+    "id": "o69"
+   },
+   {
+    "text": "Fox",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.994,
+    "id": "o70"
+   },
+   {
+    "text": "News",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o71"
+   },
+   {
+    "text": "Weight loss",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.968,
+    "id": "o72"
+   },
+   {
+    "text": "5.37",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.807,
+    "id": "o73"
+   },
+   {
+    "text": "Good Morning America",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.713,
+    "id": "o74"
+   },
+   {
+    "text": "taking semaglutide",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.744,
+    "id": "o75"
+   },
+   {
+    "text": "Ozempic Welg",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.837,
+    "id": "o76"
+   },
+   {
+    "text": "views",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.554,
+    "id": "o77"
+   },
+   {
+    "text": "The Tod",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.801,
+    "id": "o78"
+   },
+   {
+    "text": "Ozempi",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o79"
+   },
+   {
+    "text": "BREAKINC]",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.579,
+    "id": "o80"
+   },
+   {
+    "text": "0h",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.638,
+    "id": "o81"
+   },
+   {
+    "text": "Ozen",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.642,
+    "id": "o82"
+   },
+   {
+    "text": "NEWS",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o83"
+   },
+   {
+    "text": "ews",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.952,
+    "id": "o84"
+   },
+   {
+    "text": "Can",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o85"
+   },
+   {
+    "text": "npic reduce crav",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.765,
+    "id": "o86"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.894,
+    "id": "o87"
+   },
+   {
+    "text": "Yahoo",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.999,
+    "id": "o88"
+   },
+   {
+    "text": "Is Berberine for Weight Loss \"N.",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.944,
+    "id": "o89"
+   },
+   {
+    "text": "AGEIST",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o90"
+   },
+   {
+    "text": "Berberine: Nature's Ozempic?",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.634,
+    "id": "o91"
+   },
+   {
+    "text": "WIRED",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.999,
+    "id": "o92"
+   },
+   {
+    "text": "TikTok\"",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.956,
+    "id": "o93"
+   },
+   {
+    "text": "About;..",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.548,
+    "id": "o94"
+   },
+   {
+    "text": "erine",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o95"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.977,
+    "id": "o96"
+   },
+   {
+    "text": "Yahoo",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.999,
+    "id": "o97"
+   },
+   {
+    "text": "Is Berberine for Weight Loss",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.991,
+    "id": "o98"
+   },
+   {
+    "text": "AGEIST",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o99"
+   },
+   {
+    "text": "Berberine: Nature's Ozempic?",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.69,
+    "id": "o100"
+   },
+   {
+    "text": "WIRED",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.998,
+    "id": "o101"
+   },
+   {
+    "text": "TikTok's Bc",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.558,
+    "id": "o102"
+   },
+   {
+    "text": "bout; .",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.717,
+    "id": "o103"
+   },
+   {
+    "text": "rine",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o104"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.99,
+    "id": "o105"
+   },
+   {
+    "text": "Yahoo",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.999,
+    "id": "o106"
+   },
+   {
+    "text": "Is Berberine for Weight Loss",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.878,
+    "id": "o107"
+   },
+   {
+    "text": "AGEIST",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 1.0,
+    "id": "o108"
+   },
+   {
+    "text": "Berberine: Nature's Ozempic?",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.718,
+    "id": "o109"
+   },
+   {
+    "text": "TikTok\"",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.999,
+    "id": "o110"
+   },
+   {
+    "text": "rine",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.989,
+    "id": "o111"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.992,
+    "id": "o112"
+   },
+   {
+    "text": "7",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.7,
+    "id": "o113"
+   },
+   {
+    "text": "B",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o114"
+   },
+   {
+    "text": "D",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.941,
+    "id": "o115"
+   },
+   {
+    "text": "UA",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.767,
+    "id": "o116"
+   },
+   {
+    "text": "S",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.826,
+    "id": "o117"
+   },
+   {
+    "text": "Metformin",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.809,
+    "id": "o118"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.997,
+    "id": "o119"
+   },
+   {
+    "text": "B",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o120"
+   },
+   {
+    "text": "D",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.928,
+    "id": "o121"
+   },
+   {
+    "text": "S",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.834,
+    "id": "o122"
+   },
+   {
+    "text": "UA",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.569,
+    "id": "o123"
+   },
+   {
+    "text": "Metformin",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.831,
+    "id": "o124"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.803,
+    "id": "o125"
+   },
+   {
+    "text": "OSMOTIC TB",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o126"
+   },
+   {
+    "text": "51.03",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.843,
+    "id": "o127"
+   },
+   {
+    "text": "MediPond com",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.864,
+    "id": "o128"
+   },
+   {
+    "text": "News-Medical net",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.988,
+    "id": "o129"
+   },
+   {
+    "text": "Metformin",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o130"
+   },
+   {
+    "text": "Metformin Formulations",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.873,
+    "id": "o131"
+   },
+   {
+    "text": "Tablets",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o132"
+   },
+   {
+    "text": "Medical News Today",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.741,
+    "id": "o133"
+   },
+   {
+    "text": "Stopping metformin: Side effect.",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.8,
+    "id": "o134"
+   },
+   {
+    "text": "Diabetes Self-Management",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.817,
+    "id": "o135"
+   },
+   {
+    "text": "Diabetes Medicine: Metformin",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o136"
+   },
+   {
+    "text": "Alogliptin-Metfor",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o137"
+   },
+   {
+    "text": "min HCL",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.997,
+    "id": "o138"
+   },
+   {
+    "text": "12.5-1000mg",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.901,
+    "id": "o139"
+   },
+   {
+    "text": "Tablets",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.834,
+    "id": "o140"
+   },
+   {
+    "text": "Hettormin",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.762,
+    "id": "o141"
+   },
+   {
+    "text": "eric",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o142"
+   },
+   {
+    "text": "9News",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.647,
+    "id": "o143"
+   },
+   {
+    "text": "plet",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.568,
+    "id": "o144"
+   },
+   {
+    "text": "Metformin: Common diabetes",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.844,
+    "id": "o145"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.991,
+    "id": "o146"
+   },
+   {
+    "text": "OSMOTIC TB",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o147"
+   },
+   {
+    "text": "51.03",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.847,
+    "id": "o148"
+   },
+   {
+    "text": "MediPond com",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.892,
+    "id": "o149"
+   },
+   {
+    "text": "News-Medical net",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.998,
+    "id": "o150"
+   },
+   {
+    "text": "Metformin Fo",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.641,
+    "id": "o151"
+   },
+   {
+    "text": "blets",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.947,
+    "id": "o152"
+   },
+   {
+    "text": "Natues",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.999,
+    "id": "o153"
+   },
+   {
+    "text": "Metfouming",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.74,
+    "id": "o154"
+   },
+   {
+    "text": "tformin: Side effect .",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.956,
+    "id": "o155"
+   },
+   {
+    "text": "Diabetes Self-Management",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.758,
+    "id": "o156"
+   },
+   {
+    "text": "Diabetes Medicine: Metformin",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o157"
+   },
+   {
+    "text": "Alogliptin-Metfor",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o158"
+   },
+   {
+    "text": "min HCL",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.997,
+    "id": "o159"
+   },
+   {
+    "text": "12.5-1000mg",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.53,
+    "id": "o160"
+   },
+   {
+    "text": "Tablets",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o161"
+   },
+   {
+    "text": "Hettormin",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.827,
+    "id": "o162"
+   },
+   {
+    "text": "Spons",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o163"
+   },
+   {
+    "text": "Alogl",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.977,
+    "id": "o164"
+   },
+   {
+    "text": "9News",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.684,
+    "id": "o165"
+   },
+   {
+    "text": "Kaza",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o166"
+   },
+   {
+    "text": "Metformin: Common diabetes",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.805,
+    "id": "o167"
+   },
+   {
+    "text": "5162",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.701,
+    "id": "o168"
+   },
+   {
+    "text": "Hea",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.973,
+    "id": "o169"
+   },
+   {
+    "text": "Fre",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.985,
+    "id": "o170"
+   },
+   {
+    "text": "Forr",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.996,
+    "id": "o171"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.932,
+    "id": "o172"
+   },
+   {
+    "text": "B",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o173"
+   },
+   {
+    "text": "E TE",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.596,
+    "id": "o174"
+   },
+   {
+    "text": "S",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.712,
+    "id": "o175"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.975,
+    "id": "o176"
+   },
+   {
+    "text": "B",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o177"
+   },
+   {
+    "text": "D",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.927,
+    "id": "o178"
+   },
+   {
+    "text": "UA",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.898,
+    "id": "o179"
+   },
+   {
+    "text": "S",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.828,
+    "id": "o180"
+   },
+   {
+    "text": "TE",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.846,
+    "id": "o181"
+   },
+   {
+    "text": "E",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.878,
+    "id": "o182"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.997,
+    "id": "o183"
+   },
+   {
+    "text": "LOUNEED",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.506,
+    "id": "o184"
+   },
+   {
+    "text": "'#healingartsapothecary",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.771,
+    "id": "o185"
+   },
+   {
+    "text": "Verywell Health",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o186"
+   },
+   {
+    "text": "Health Benefits of Barberries",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.91,
+    "id": "o187"
+   },
+   {
+    "text": "Healthline",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o188"
+   },
+   {
+    "text": "Impressive Health Benefits of",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.583,
+    "id": "o189"
+   },
+   {
+    "text": "3x",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.957,
+    "id": "o190"
+   },
+   {
+    "text": "Dr;",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.784,
+    "id": "o191"
+   },
+   {
+    "text": "Daily Express",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.721,
+    "id": "o192"
+   },
+   {
+    "text": "Barb",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.983,
+    "id": "o193"
+   },
+   {
+    "text": "osag",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o194"
+   },
+   {
+    "text": "blood sugar includes barberry j  _",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.815,
+    "id": "o195"
+   },
+   {
+    "text": "berry",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.609,
+    "id": "o196"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.994,
+    "id": "o197"
+   },
+   {
+    "text": "0 Dr: Axe",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.576,
+    "id": "o198"
+   },
+   {
+    "text": "'#healingartsapothecary",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.776,
+    "id": "o199"
+   },
+   {
+    "text": "Verywell Health",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.814,
+    "id": "o200"
+   },
+   {
+    "text": "Health Benefits of Barberries",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.839,
+    "id": "o201"
+   },
+   {
+    "text": "ine",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.812,
+    "id": "o202"
+   },
+   {
+    "text": "e Health Benefits of",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.937,
+    "id": "o203"
+   },
+   {
+    "text": "3x",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.896,
+    "id": "o204"
+   },
+   {
+    "text": "Dr;",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.986,
+    "id": "o205"
+   },
+   {
+    "text": "Daily Express",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.74,
+    "id": "o206"
+   },
+   {
+    "text": "Barbe",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.986,
+    "id": "o207"
+   },
+   {
+    "text": "sag",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.994,
+    "id": "o208"
+   },
+   {
+    "text": "blood sugar includes barberry",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.997,
+    "id": "o209"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.919,
+    "id": "o210"
+   },
+   {
+    "text": "'#healingartsapothecary",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.772,
+    "id": "o211"
+   },
+   {
+    "text": "Verywell Health",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.849,
+    "id": "o212"
+   },
+   {
+    "text": "Health Benefits of Barberries",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.825,
+    "id": "o213"
+   },
+   {
+    "text": "Healthline",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o214"
+   },
+   {
+    "text": "Impressive Health Benefits of",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.759,
+    "id": "o215"
+   },
+   {
+    "text": "Dr; A",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.937,
+    "id": "o216"
+   },
+   {
+    "text": "Daily Express",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.732,
+    "id": "o217"
+   },
+   {
+    "text": "Barber",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.982,
+    "id": "o218"
+   },
+   {
+    "text": "blood sugar includes barberry",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.997,
+    "id": "o219"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.996,
+    "id": "o220"
+   },
+   {
+    "text": "#healingartsapothecaryl",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.565,
+    "id": "o221"
+   },
+   {
+    "text": "Nidor",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.8,
+    "id": "o222"
+   },
+   {
+    "text": "Cleveland Clinic",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.737,
+    "id": "o223"
+   },
+   {
+    "text": "Diabetes: What It Is, Causes, S",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.73,
+    "id": "o224"
+   },
+   {
+    "text": "W Wikipedia",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.715,
+    "id": "o225"
+   },
+   {
+    "text": "Diabetes",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o226"
+   },
+   {
+    "text": "CDC",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o227"
+   },
+   {
+    "text": "Stats, and Impacts of Diabetes",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.714,
+    "id": "o228"
+   },
+   {
+    "text": "37",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o229"
+   },
+   {
+    "text": "Nev",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.984,
+    "id": "o230"
+   },
+   {
+    "text": "96",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o231"
+   },
+   {
+    "text": "The Futi",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.922,
+    "id": "o232"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.932,
+    "id": "o233"
+   },
+   {
+    "text": "#healingartsapothecary",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.509,
+    "id": "o234"
+   },
+   {
+    "text": "What Is Diapere",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.79,
+    "id": "o235"
+   },
+   {
+    "text": "Cleveland Clinic",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.721,
+    "id": "o236"
+   },
+   {
+    "text": "Diabetes: What It Is, Causes;, S",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.607,
+    "id": "o237"
+   },
+   {
+    "text": "Wikipedia",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.707,
+    "id": "o238"
+   },
+   {
+    "text": "Diabetes",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o239"
+   },
+   {
+    "text": "CDC",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o240"
+   },
+   {
+    "text": "Stats, and Impacts of Diabetes",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.825,
+    "id": "o241"
+   },
+   {
+    "text": "37",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.999,
+    "id": "o242"
+   },
+   {
+    "text": "New",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.941,
+    "id": "o243"
+   },
+   {
+    "text": "96",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o244"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.998,
+    "id": "o245"
+   },
+   {
+    "text": "#healingartsapothecary",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.506,
+    "id": "o246"
+   },
+   {
+    "text": "National Inst)",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.593,
+    "id": "o247"
+   },
+   {
+    "text": "What Is Diabete",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.8,
+    "id": "o248"
+   },
+   {
+    "text": "Cleveland Clinic",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.694,
+    "id": "o249"
+   },
+   {
+    "text": "Diabetes: What It Is, Causes, S",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.689,
+    "id": "o250"
+   },
+   {
+    "text": "W Wikipedia",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.637,
+    "id": "o251"
+   },
+   {
+    "text": "Diabetes",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o252"
+   },
+   {
+    "text": "CDC",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o253"
+   },
+   {
+    "text": "Stats, and Impacts of Diabetes",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.864,
+    "id": "o254"
+   },
+   {
+    "text": "37",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o255"
+   },
+   {
+    "text": "New",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.964,
+    "id": "o256"
+   },
+   {
+    "text": "96",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o257"
+   },
+   {
+    "text": "The Futt",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.614,
+    "id": "o258"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.984,
+    "id": "o259"
+   },
+   {
+    "text": "#healingartsapothecary",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.512,
+    "id": "o260"
+   },
+   {
+    "text": "What Is Diarere",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.896,
+    "id": "o261"
+   },
+   {
+    "text": "Cleveland Clinic",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.722,
+    "id": "o262"
+   },
+   {
+    "text": "Diabetes: What It Is, Causes, S",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.691,
+    "id": "o263"
+   },
+   {
+    "text": "W Wikipedia",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.964,
+    "id": "o264"
+   },
+   {
+    "text": "Diabetes",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o265"
+   },
+   {
+    "text": "CDC",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o266"
+   },
+   {
+    "text": "Stats, and Impacts of Diabetes",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.861,
+    "id": "o267"
+   },
+   {
+    "text": "37",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o268"
+   },
+   {
+    "text": "New",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.967,
+    "id": "o269"
+   },
+   {
+    "text": "The Futt",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.585,
+    "id": "o270"
+   },
+   {
+    "text": "96",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o271"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 44.0,
+    "end": 46.0,
+    "confidence": 0.789,
+    "id": "o272"
+   },
+   {
+    "text": "Barberry",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.924,
+    "id": "o273"
+   },
+   {
+    "text": "Root",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o274"
+   },
+   {
+    "text": "Strongest",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.98,
+    "id": "o275"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 48.0,
+    "end": 50.0,
+    "confidence": 0.819,
+    "id": "o276"
+   },
+   {
+    "text": "DiABETES",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.695,
+    "id": "o277"
+   },
+   {
+    "text": "40",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.567,
+    "id": "o278"
+   },
+   {
+    "text": "DIABETES",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.569,
+    "id": "o279"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.996,
+    "id": "o280"
+   },
+   {
+    "text": "DiABETES",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.67,
+    "id": "o281"
+   },
+   {
+    "text": "40",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.699,
+    "id": "o282"
+   },
+   {
+    "text": "DIABETES",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.821,
+    "id": "o283"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 54.0,
+    "end": 66.0,
+    "confidence": 0.997,
+    "id": "o284"
+   },
+   {
+    "text": "Dr Axe",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.642,
+    "id": "o285"
+   },
+   {
+    "text": "WHAT IS",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.994,
+    "id": "o286"
+   },
+   {
+    "text": "BERBERINE?",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.984,
+    "id": "o287"
+   },
+   {
+    "text": "Berberine comes from China and India;",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.645,
+    "id": "o288"
+   },
+   {
+    "text": "where It was first used In traditional",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.8,
+    "id": "o289"
+   },
+   {
+    "text": "Chinese and Ayurvedic medicines",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.994,
+    "id": "o290"
+   },
+   {
+    "text": "Anralkaloid Is",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.632,
+    "id": "o291"
+   },
+   {
+    "text": "compounds of plant origin",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.888,
+    "id": "o292"
+   },
+   {
+    "text": "traditional herbs  including",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.541,
+    "id": "o293"
+   },
+   {
+    "text": "goldthrcad and tree turmeric",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.791,
+    "id": "o294"
+   },
+   {
+    "text": "This berberine alkaloid contains",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.589,
+    "id": "o295"
+   },
+   {
+    "text": "mostly basic nitrogon atoms",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.777,
+    "id": "o296"
+   },
+   {
+    "text": "pronounced",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.995,
+    "id": "o297"
+   },
+   {
+    "text": "physiologica",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.955,
+    "id": "o298"
+   },
+   {
+    "text": "mans",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.577,
+    "id": "o299"
+   },
+   {
+    "text": "A 5,000-year-old",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.996,
+    "id": "o300"
+   },
+   {
+    "text": "healing",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 1.0,
+    "id": "o301"
+   },
+   {
+    "text": "system of natural",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.883,
+    "id": "o302"
+   },
+   {
+    "text": "developed in India",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.99,
+    "id": "o303"
+   },
+   {
+    "text": "It aims",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.936,
+    "id": "o304"
+   },
+   {
+    "text": "Inate the",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.546,
+    "id": "o305"
+   },
+   {
+    "text": "need for",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.996,
+    "id": "o306"
+   },
+   {
+    "text": "ted surgeries Or",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.659,
+    "id": "o307"
+   },
+   {
+    "text": "compli",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 1.0,
+    "id": "o308"
+   },
+   {
+    "text": "through painful",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.991,
+    "id": "o309"
+   },
+   {
+    "text": "suffe",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.836,
+    "id": "o310"
+   },
+   {
+    "text": "co",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.609,
+    "id": "o311"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.972,
+    "id": "o312"
+   },
+   {
+    "text": "Dr Axe",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.62,
+    "id": "o313"
+   },
+   {
+    "text": "WHAT IS",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.994,
+    "id": "o314"
+   },
+   {
+    "text": "BERBERINE?",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.98,
+    "id": "o315"
+   },
+   {
+    "text": "where It was first used In traditional",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.884,
+    "id": "o316"
+   },
+   {
+    "text": "Chinese and Ayurvedic medicines",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.994,
+    "id": "o317"
+   },
+   {
+    "text": "Analkaloid Is",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.742,
+    "id": "o318"
+   },
+   {
+    "text": "compounds of plant origin",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.844,
+    "id": "o319"
+   },
+   {
+    "text": "traditional herbs  including",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.723,
+    "id": "o320"
+   },
+   {
+    "text": "goldthrcad and tree turmeric",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.789,
+    "id": "o321"
+   },
+   {
+    "text": "This berberine alkaloid contains",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.643,
+    "id": "o322"
+   },
+   {
+    "text": "mostly basic nitrogon atoms",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.859,
+    "id": "o323"
+   },
+   {
+    "text": "pronounced",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.999,
+    "id": "o324"
+   },
+   {
+    "text": "physiological",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.995,
+    "id": "o325"
+   },
+   {
+    "text": "on humans",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.825,
+    "id": "o326"
+   },
+   {
+    "text": "What",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 1.0,
+    "id": "o327"
+   },
+   {
+    "text": "A 5,000-year-old",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.872,
+    "id": "o328"
+   },
+   {
+    "text": "healing",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 1.0,
+    "id": "o329"
+   },
+   {
+    "text": "system of natural",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.916,
+    "id": "o330"
+   },
+   {
+    "text": "developed in India",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.99,
+    "id": "o331"
+   },
+   {
+    "text": "It aims",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.975,
+    "id": "o332"
+   },
+   {
+    "text": "inate the",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.945,
+    "id": "o333"
+   },
+   {
+    "text": "drugs,",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.821,
+    "id": "o334"
+   },
+   {
+    "text": "need for",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.996,
+    "id": "o335"
+   },
+   {
+    "text": "complic",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.839,
+    "id": "o336"
+   },
+   {
+    "text": "ed surgeries or",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.955,
+    "id": "o337"
+   },
+   {
+    "text": "hrough painful",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.997,
+    "id": "o338"
+   },
+   {
+    "text": "sufferi",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.842,
+    "id": "o339"
+   },
+   {
+    "text": "con",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 1.0,
+    "id": "o340"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.819,
+    "id": "o341"
+   },
+   {
+    "text": "#healingartsapothecary",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.983,
+    "id": "o342"
+   },
+   {
+    "text": "Metformin",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 1.0,
+    "id": "o343"
+   },
+   {
+    "text": "Tablets",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.999,
+    "id": "o344"
+   },
+   {
+    "text": "Medical News Today",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.861,
+    "id": "o345"
+   },
+   {
+    "text": "Stopping metformin: Side effect __.",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.59,
+    "id": "o346"
+   },
+   {
+    "text": "Medical Xpress",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.969,
+    "id": "o347"
+   },
+   {
+    "text": "Nonder drug? Exploring the mc",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.754,
+    "id": "o348"
+   },
+   {
+    "text": "s-Medical net",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.983,
+    "id": "o349"
+   },
+   {
+    "text": "Everyday Health",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 1.0,
+    "id": "o350"
+   },
+   {
+    "text": "etformin reduce mortality",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.995,
+    "id": "o351"
+   },
+   {
+    "text": "Aetformin Halves Risk for Age",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.772,
+    "id": "o352"
+   },
+   {
+    "text": "Metfo",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.916,
+    "id": "o353"
+   },
+   {
+    "text": "AAFP",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 1.0,
+    "id": "o354"
+   },
+   {
+    "text": "DA Issues Recall Alert for Metf.",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.936,
+    "id": "o355"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.918,
+    "id": "o356"
+   },
+   {
+    "text": "#healingartsapothecary",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.983,
+    "id": "o357"
+   },
+   {
+    "text": "Metformin",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 1.0,
+    "id": "o358"
+   },
+   {
+    "text": "soOmg Tablets",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.565,
+    "id": "o359"
+   },
+   {
+    "text": "Metformin",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 1.0,
+    "id": "o360"
+   },
+   {
+    "text": "Tablets",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.93,
+    "id": "o361"
+   },
+   {
+    "text": "Medical News Today",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.89,
+    "id": "o362"
+   },
+   {
+    "text": "Stopping metformin: Side effect__.",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.82,
+    "id": "o363"
+   },
+   {
+    "text": "Medical Xpress",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.952,
+    "id": "o364"
+   },
+   {
+    "text": "Nonder drug? Exploring the m",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.817,
+    "id": "o365"
+   },
+   {
+    "text": "Medical net",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.842,
+    "id": "o366"
+   },
+   {
+    "text": "Everyday",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 1.0,
+    "id": "o367"
+   },
+   {
+    "text": "iformin reduce mortality",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.749,
+    "id": "o368"
+   },
+   {
+    "text": "Pisk for Age-_",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.549,
+    "id": "o369"
+   },
+   {
+    "text": "Aetformin",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.725,
+    "id": "o370"
+   },
+   {
+    "text": "Metfo",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.938,
+    "id": "o371"
+   },
+   {
+    "text": "AAFP",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 1.0,
+    "id": "o372"
+   },
+   {
+    "text": "Ghealthbosstv",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.685,
+    "id": "o373"
+   },
+   {
+    "text": "#healingartsapothecary",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.983,
+    "id": "o374"
+   },
+   {
+    "text": "Metformin",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 1.0,
+    "id": "o375"
+   },
+   {
+    "text": "soOmg Tablets",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.564,
+    "id": "o376"
+   },
+   {
+    "text": "Metformin",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 1.0,
+    "id": "o377"
+   },
+   {
+    "text": "Tablets",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.815,
+    "id": "o378"
+   },
+   {
+    "text": "Medical News Today",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.905,
+    "id": "o379"
+   },
+   {
+    "text": "Stopping metformin: Side effect__.",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.793,
+    "id": "o380"
+   },
+   {
+    "text": "Medical Xpress",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.964,
+    "id": "o381"
+   },
+   {
+    "text": "Nonder drug? Exploring the mo",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.825,
+    "id": "o382"
+   },
+   {
+    "text": "1",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.918,
+    "id": "o383"
+   },
+   {
+    "text": "News-Medical net",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.843,
+    "id": "o384"
+   },
+   {
+    "text": "Everyday",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.978,
+    "id": "o385"
+   },
+   {
+    "text": "Can metformin reduce mortality",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.896,
+    "id": "o386"
+   },
+   {
+    "text": "Jisk for Age- _",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.547,
+    "id": "o387"
+   },
+   {
+    "text": "Aetformin",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.741,
+    "id": "o388"
+   },
+   {
+    "text": "Nev",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.889,
+    "id": "o389"
+   },
+   {
+    "text": "Metfori",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.735,
+    "id": "o390"
+   },
+   {
+    "text": "AAFP",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 1.0,
+    "id": "o391"
+   },
+   {
+    "text": "DA Issues Recall Alert for Metf.",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.932,
+    "id": "o392"
+   },
+   {
+    "text": "Ghealthbosstv",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.703,
+    "id": "o393"
+   },
+   {
+    "text": "Barberries",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.835,
+    "id": "o394"
+   },
+   {
+    "text": "Barberry",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.717,
+    "id": "o395"
+   },
+   {
+    "text": "Capsules",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.992,
+    "id": "o396"
+   },
+   {
+    "text": "Extract",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 1.0,
+    "id": "o397"
+   },
+   {
+    "text": "&",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.904,
+    "id": "o398"
+   },
+   {
+    "text": "Available",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 1.0,
+    "id": "o399"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 1.0,
+    "id": "o400"
+   },
+   {
+    "text": "OrDer",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.55,
+    "id": "o401"
+   },
+   {
+    "text": "Now",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.619,
+    "id": "o402"
+   },
+   {
+    "text": "Barberries",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 1.0,
+    "id": "o403"
+   },
+   {
+    "text": "Barberry",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.942,
+    "id": "o404"
+   },
+   {
+    "text": "Capsules",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.992,
+    "id": "o405"
+   },
+   {
+    "text": "Extract",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.99,
+    "id": "o406"
+   },
+   {
+    "text": "&",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.905,
+    "id": "o407"
+   },
+   {
+    "text": "Available",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 1.0,
+    "id": "o408"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 1.0,
+    "id": "o409"
+   },
+   {
+    "text": "OrDer",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.541,
+    "id": "o410"
+   },
+   {
+    "text": "Barberries",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.9,
+    "id": "o411"
+   },
+   {
+    "text": "Barberry",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.942,
+    "id": "o412"
+   },
+   {
+    "text": "Capsules",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.992,
+    "id": "o413"
+   },
+   {
+    "text": "Extract",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.975,
+    "id": "o414"
+   },
+   {
+    "text": "&",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.905,
+    "id": "o415"
+   },
+   {
+    "text": "Available",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 1.0,
+    "id": "o416"
+   },
+   {
+    "text": "ARE My",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.928,
+    "id": "o417"
+   },
+   {
+    "text": "3",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.703,
+    "id": "o418"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 1.0,
+    "id": "o419"
+   },
+   {
+    "text": "Barberries",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 1.0,
+    "id": "o420"
+   },
+   {
+    "text": "Barberry",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.941,
+    "id": "o421"
+   },
+   {
+    "text": "Capsules",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.992,
+    "id": "o422"
+   },
+   {
+    "text": "Extract",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.975,
+    "id": "o423"
+   },
+   {
+    "text": "&",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.906,
+    "id": "o424"
+   },
+   {
+    "text": "Available",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 1.0,
+    "id": "o425"
+   },
+   {
+    "text": "3",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.941,
+    "id": "o426"
+   },
+   {
+    "text": "#healthbosstv",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 1.0,
+    "id": "o427"
+   }
+  ]
+ }
+}

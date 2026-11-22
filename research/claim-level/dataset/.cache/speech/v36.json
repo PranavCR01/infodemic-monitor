@@ -1,0 +1,74 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.998,
+  "duration_seconds": 59.0,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.02,
+    "end": 6.22,
+    "text": "So when I'm asked what's the best way to get all your minerals and all your vitamins naturally, here's what I think"
+   },
+   {
+    "id": "t2",
+    "start": 6.5,
+    "end": 9.88,
+    "text": "Believe it or not, our entire physical makeup is comprised of"
+   },
+   {
+    "id": "t3",
+    "start": 10.28,
+    "end": 14.32,
+    "text": "102 of these minerals in trace amounts. We're literally stardust"
+   },
+   {
+    "id": "t4",
+    "start": 14.76,
+    "end": 23.0,
+    "text": "So according to two-time Nobel Prize winning chemist Dr. Linus Pauling, you can trace every sickness, every disease and every ailment"
+   },
+   {
+    "id": "t5",
+    "start": 23.0,
+    "end": 25.92,
+    "text": "to a mineral deficiency. I happen to agree with them."
+   },
+   {
+    "id": "t6",
+    "start": 25.92,
+    "end": 32.14,
+    "text": "Burdock root contains all 102 of those minerals and trace amounts, which just means small quantities."
+   },
+   {
+    "id": "t7",
+    "start": 32.14,
+    "end": 41.14,
+    "text": "Iris Seamos is a gelatinous sea algae that contains 92 of those 102 minerals, and it's actually in concentrated amounts, which means a lot."
+   },
+   {
+    "id": "t8",
+    "start": 41.14,
+    "end": 49.14,
+    "text": "Latterac is a highly-o-different seaweed that, when you combine with burdock root and seaweed, will give you all 102 of the minerals that you need."
+   },
+   {
+    "id": "t9",
+    "start": 49.14,
+    "end": 53.34,
+    "text": "For all the vitamins you want to get moranga powder it has just about the"
+   },
+   {
+    "id": "t10",
+    "start": 53.34,
+    "end": 58.9,
+    "text": "highest concentration of vitamins of any plant on the earth. For more info, we can buy it."
+   }
+  ]
+ }
+}

@@ -48,3 +48,11 @@ research/claim-level/dataset/videos/
 *.mov
 *.webm
 *.mkv
+*.m4a
+*.wav
+
+# Archives (video bundles) — never commit
+*.zip
+
+# Per-stage extraction cache: intermediate, merged into transcripts/
+research/claim-level/dataset/.cache/

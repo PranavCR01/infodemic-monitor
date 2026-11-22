@@ -1,0 +1,122 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 68.29,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.9,
+    "text": "Did you know that lobsters are considered biologically immortal?"
+   },
+   {
+    "id": "t2",
+    "start": 2.9,
+    "end": 6.98,
+    "text": "If you were a lobster, as long as you had enough food and managed to avoid predators,"
+   },
+   {
+    "id": "t3",
+    "start": 6.98,
+    "end": 9.62,
+    "text": "you could keep growing endlessly and technically never die."
+   },
+   {
+    "id": "t4",
+    "start": 9.62,
+    "end": 13.36,
+    "text": "There's a lobster named Big George that lived for more than 140 years."
+   },
+   {
+    "id": "t5",
+    "start": 13.36,
+    "end": 14.72,
+    "text": "But there's a catch."
+   },
+   {
+    "id": "t6",
+    "start": 14.72,
+    "end": 16.36,
+    "text": "Lobsters don't actually live forever."
+   },
+   {
+    "id": "t7",
+    "start": 16.36,
+    "end": 20.6,
+    "text": "The reason they eventually die is that their soft bodies keep growing, while their hard"
+   },
+   {
+    "id": "t8",
+    "start": 20.6,
+    "end": 21.88,
+    "text": "shells do not."
+   },
+   {
+    "id": "t9",
+    "start": 21.88,
+    "end": 26.96,
+    "text": "To manage this, they must molt, shedding their old exoskeleton and growing a new one."
+   },
+   {
+    "id": "t10",
+    "start": 26.96,
+    "end": 32.28,
+    "text": "The problem is, as lobsters get bigger, this process demands more and more energy."
+   },
+   {
+    "id": "t11",
+    "start": 32.28,
+    "end": 35.44,
+    "text": "Eventually, it becomes too exhausting and they die."
+   },
+   {
+    "id": "t12",
+    "start": 35.44,
+    "end": 38.4,
+    "text": "So why don't lobsters age the way humans do?"
+   },
+   {
+    "id": "t13",
+    "start": 38.4,
+    "end": 43.84,
+    "text": "The reason is, human cells can only divide about 40 times before they stop replicating,"
+   },
+   {
+    "id": "t14",
+    "start": 43.84,
+    "end": 48.56,
+    "text": "partly due to structures called telomeres, protective caps at the ends of our chromosome."
+   },
+   {
+    "id": "t15",
+    "start": 48.56,
+    "end": 53.28,
+    "text": "Each time a cell divides, these telomeres shorten until they're too small to protect"
+   },
+   {
+    "id": "t16",
+    "start": 53.28,
+    "end": 56.4,
+    "text": "the DNA and the cell can no longer divide."
+   },
+   {
+    "id": "t17",
+    "start": 56.4,
+    "end": 61.36,
+    "text": "however, have a special enzyme called telomerase that repairs and rebuilds these telomeres,"
+   },
+   {
+    "id": "t18",
+    "start": 61.36,
+    "end": 64.16,
+    "text": "letting them effectively bypass the normal aging process."
+   }
+  ]
+ }
+}

@@ -1,0 +1,2189 @@
+{
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "on_screen": {
+  "frames_sampled": 33,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Nocurve wth an average",
+    "confidence": 0.698
+   },
+   {
+    "time": 0.0,
+    "text": "THAT low?",
+    "confidence": 0.805
+   },
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.949
+   },
+   {
+    "time": 0.0,
+    "text": "chalkboardchaoskota",
+    "confidence": 0.999
+   },
+   {
+    "time": 0.0,
+    "text": "the average grade on the",
+    "confidence": 0.938
+   },
+   {
+    "time": 0.0,
+    "text": "last exam wasa47",
+    "confidence": 0.766
+   },
+   {
+    "time": 2.0,
+    "text": "Nocurve wth an average",
+    "confidence": 0.87
+   },
+   {
+    "time": 2.0,
+    "text": "THAT low?",
+    "confidence": 0.761
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.734
+   },
+   {
+    "time": 2.0,
+    "text": "@ chalkboardchaos\"",
+    "confidence": 0.672
+   },
+   {
+    "time": 2.0,
+    "text": "on the",
+    "confidence": 0.978
+   },
+   {
+    "time": 2.0,
+    "text": "the average",
+    "confidence": 0.974
+   },
+   {
+    "time": 2.0,
+    "text": "grade",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "last exam was a 47",
+    "confidence": 0.596
+   },
+   {
+    "time": 4.0,
+    "text": "Nocurve with an average",
+    "confidence": 0.697
+   },
+   {
+    "time": 4.0,
+    "text": "THAT low?",
+    "confidence": 0.615
+   },
+   {
+    "time": 4.0,
+    "text": "Tiktok",
+    "confidence": 0.953
+   },
+   {
+    "time": 4.0,
+    "text": "the average grade on the",
+    "confidence": 0.99
+   },
+   {
+    "time": 4.0,
+    "text": "last exam wasa 47",
+    "confidence": 0.649
+   },
+   {
+    "time": 6.0,
+    "text": "Nocurve wth an average",
+    "confidence": 0.923
+   },
+   {
+    "time": 6.0,
+    "text": "THAT low?",
+    "confidence": 0.716
+   },
+   {
+    "time": 6.0,
+    "text": "and there is no curve VOU",
+    "confidence": 0.638
+   },
+   {
+    "time": 6.0,
+    "text": "that 47",
+    "confidence": 0.894
+   },
+   {
+    "time": 6.0,
+    "text": "got",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "Tiktok",
+    "confidence": 0.716
+   },
+   {
+    "time": 6.0,
+    "text": "chalkboardclaoskota",
+    "confidence": 0.565
+   },
+   {
+    "time": 8.0,
+    "text": "Nocurve with an average",
+    "confidence": 0.879
+   },
+   {
+    "time": 8.0,
+    "text": "THAT low?",
+    "confidence": 0.663
+   },
+   {
+    "time": 8.0,
+    "text": "and thereisn@ curve VoU",
+    "confidence": 0.588
+   },
+   {
+    "time": 8.0,
+    "text": "that 47",
+    "confidence": 0.927
+   },
+   {
+    "time": 8.0,
+    "text": "got",
+    "confidence": 0.823
+   },
+   {
+    "time": 8.0,
+    "text": "@ chalkboai dchaoskota",
+    "confidence": 0.56
+   },
+   {
+    "time": 10.0,
+    "text": "Nocurve wth an average",
+    "confidence": 0.91
+   },
+   {
+    "time": 10.0,
+    "text": "THAT low?",
+    "confidence": 0.914
+   },
+   {
+    "time": 10.0,
+    "text": "31",
+    "confidence": 0.578
+   },
+   {
+    "time": 10.0,
+    "text": "there'sno curve",
+    "confidence": 0.977
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 0.844
+   },
+   {
+    "time": 12.0,
+    "text": "Nocurve with an average",
+    "confidence": 0.887
+   },
+   {
+    "time": 12.0,
+    "text": "THAT low?",
+    "confidence": 0.723
+   },
+   {
+    "time": 12.0,
+    "text": "however if VOU",
+    "confidence": 0.759
+   },
+   {
+    "time": 12.0,
+    "text": "\"got",
+    "confidence": 0.984
+   },
+   {
+    "time": 12.0,
+    "text": "anything above that",
+    "confidence": 0.998
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 0.992
+   },
+   {
+    "time": 12.0,
+    "text": "@ chalkboardchaoskota",
+    "confidence": 0.785
+   },
+   {
+    "time": 14.0,
+    "text": "Nocurve with an average",
+    "confidence": 0.709
+   },
+   {
+    "time": 14.0,
+    "text": "THAT low?",
+    "confidence": 0.805
+   },
+   {
+    "time": 14.0,
+    "text": "however if VOU",
+    "confidence": 0.608
+   },
+   {
+    "time": 14.0,
+    "text": "anything above that",
+    "confidence": 0.938
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 14.0,
+    "text": "chalkboardchaoskota",
+    "confidence": 0.731
+   },
+   {
+    "time": 16.0,
+    "text": "443",
+    "confidence": 0.95
+   },
+   {
+    "time": 16.0,
+    "text": "Nocurvewith an average",
+    "confidence": 0.742
+   },
+   {
+    "time": 16.0,
+    "text": "THAT low?",
+    "confidence": 0.73
+   },
+   {
+    "time": 16.0,
+    "text": "above 50% yoU should feel",
+    "confidence": 0.821
+   },
+   {
+    "time": 16.0,
+    "text": "good about yourself",
+    "confidence": 0.819
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 0.696
+   },
+   {
+    "time": 16.0,
+    "text": "@ chall boardchaoskota",
+    "confidence": 0.571
+   },
+   {
+    "time": 18.0,
+    "text": "Nocurvewith an average",
+    "confidence": 0.919
+   },
+   {
+    "time": 18.0,
+    "text": "THAT low?",
+    "confidence": 0.679
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 0.965
+   },
+   {
+    "time": 20.0,
+    "text": "Nocurve with an average",
+    "confidence": 0.916
+   },
+   {
+    "time": 20.0,
+    "text": "THAT low?",
+    "confidence": 0.726
+   },
+   {
+    "time": 20.0,
+    "text": "soljust wanna understand",
+    "confidence": 0.815
+   },
+   {
+    "time": 20.0,
+    "text": "TikTok",
+    "confidence": 0.804
+   },
+   {
+    "time": 20.0,
+    "text": "chalk boardchaoskota",
+    "confidence": 0.575
+   },
+   {
+    "time": 22.0,
+    "text": "Nocurve with an average",
+    "confidence": 0.903
+   },
+   {
+    "time": 22.0,
+    "text": "THAT low?",
+    "confidence": 0.73
+   },
+   {
+    "time": 22.0,
+    "text": "so ljust wanna understand",
+    "confidence": 0.719
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 0.993
+   },
+   {
+    "time": 24.0,
+    "text": "Nocurve with an average",
+    "confidence": 0.584
+   },
+   {
+    "time": 24.0,
+    "text": "THAT low?",
+    "confidence": 0.618
+   },
+   {
+    "time": 24.0,
+    "text": "wanna makesure we're",
+    "confidence": 0.953
+   },
+   {
+    "time": 24.0,
+    "text": "on the same page",
+    "confidence": 0.992
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 0.993
+   },
+   {
+    "time": 24.0,
+    "text": "chall boardchaoskota",
+    "confidence": 0.602
+   },
+   {
+    "time": 26.0,
+    "text": "No curve with an average",
+    "confidence": 0.828
+   },
+   {
+    "time": 26.0,
+    "text": "THAT low?",
+    "confidence": 0.59
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 0.843
+   },
+   {
+    "time": 28.0,
+    "text": "No curve with an average",
+    "confidence": 0.522
+   },
+   {
+    "time": 28.0,
+    "text": "THAT low?",
+    "confidence": 0.84
+   },
+   {
+    "time": 28.0,
+    "text": "yes majority of the classis",
+    "confidence": 0.602
+   },
+   {
+    "time": 28.0,
+    "text": "arounda 47%",
+    "confidence": 0.978
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 0.996
+   },
+   {
+    "time": 28.0,
+    "text": "challl boardchaoskota",
+    "confidence": 0.818
+   },
+   {
+    "time": 30.0,
+    "text": "No curve with an average",
+    "confidence": 0.819
+   },
+   {
+    "time": 30.0,
+    "text": "THAT low?",
+    "confidence": 0.805
+   },
+   {
+    "time": 30.0,
+    "text": "ves majority of the classis",
+    "confidence": 0.737
+   },
+   {
+    "time": 30.0,
+    "text": "around a 47%",
+    "confidence": 0.839
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 0.71
+   },
+   {
+    "time": 30.0,
+    "text": "@ chalkboardchaoskota",
+    "confidence": 0.814
+   },
+   {
+    "time": 32.0,
+    "text": "No curve with an average",
+    "confidence": 0.97
+   },
+   {
+    "time": 32.0,
+    "text": "THAT low?",
+    "confidence": 0.99
+   },
+   {
+    "time": 32.0,
+    "text": "and only people who",
+    "confidence": 0.687
+   },
+   {
+    "time": 32.0,
+    "text": "get",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "above a 50% should be",
+    "confidence": 0.969
+   },
+   {
+    "time": 32.0,
+    "text": "proud of themselves",
+    "confidence": 0.998
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 0.991
+   },
+   {
+    "time": 32.0,
+    "text": "chalkboardchaoskota",
+    "confidence": 0.971
+   },
+   {
+    "time": 34.0,
+    "text": "Nocurve with an average",
+    "confidence": 0.976
+   },
+   {
+    "time": 34.0,
+    "text": "THAT low?",
+    "confidence": 0.669
+   },
+   {
+    "time": 34.0,
+    "text": "and only people who",
+    "confidence": 0.899
+   },
+   {
+    "time": 34.0,
+    "text": "get",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "above a 50% should be",
+    "confidence": 0.664
+   },
+   {
+    "time": 34.0,
+    "text": "proud of themselves",
+    "confidence": 0.969
+   },
+   {
+    "time": 34.0,
+    "text": "Tiktok",
+    "confidence": 0.524
+   },
+   {
+    "time": 34.0,
+    "text": "chalkboardchaoskota",
+    "confidence": 0.503
+   },
+   {
+    "time": 36.0,
+    "text": "No curve with an average",
+    "confidence": 0.786
+   },
+   {
+    "time": 36.0,
+    "text": "THAT low?",
+    "confidence": 0.87
+   },
+   {
+    "time": 36.0,
+    "text": "and only people who",
+    "confidence": 0.929
+   },
+   {
+    "time": 36.0,
+    "text": "get",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "above a 50% should be",
+    "confidence": 0.902
+   },
+   {
+    "time": 36.0,
+    "text": "proud of themselves",
+    "confidence": 0.923
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 0.639
+   },
+   {
+    "time": 38.0,
+    "text": "Nocurve with an average",
+    "confidence": 0.87
+   },
+   {
+    "time": 38.0,
+    "text": "THAT low?",
+    "confidence": 0.789
+   },
+   {
+    "time": 38.0,
+    "text": "that\"show low thebaris",
+    "confidence": 0.726
+   },
+   {
+    "time": 38.0,
+    "text": "TikTok",
+    "confidence": 0.773
+   },
+   {
+    "time": 38.0,
+    "text": "@ chalkboardchaoskora",
+    "confidence": 0.964
+   },
+   {
+    "time": 40.0,
+    "text": "Nocurve with an average",
+    "confidence": 0.806
+   },
+   {
+    "time": 40.0,
+    "text": "THAT low?",
+    "confidence": 0.828
+   },
+   {
+    "time": 40.0,
+    "text": "yes that's accurate",
+    "confidence": 0.766
+   },
+   {
+    "time": 40.0,
+    "text": "TTikTok",
+    "confidence": 0.624
+   },
+   {
+    "time": 40.0,
+    "text": "chalkboardchaoskota",
+    "confidence": 0.99
+   },
+   {
+    "time": 42.0,
+    "text": "Nocurvewithan average",
+    "confidence": 0.725
+   },
+   {
+    "time": 42.0,
+    "text": "THAT low?",
+    "confidence": 0.598
+   },
+   {
+    "time": 42.0,
+    "text": "so yoU don't see a problem",
+    "confidence": 0.579
+   },
+   {
+    "time": 42.0,
+    "text": "with the whole class being",
+    "confidence": 0.986
+   },
+   {
+    "time": 42.0,
+    "text": "ata 47%",
+    "confidence": 0.788
+   },
+   {
+    "time": 42.0,
+    "text": "TikTok",
+    "confidence": 0.97
+   },
+   {
+    "time": 42.0,
+    "text": "chalkkboardchaoskota",
+    "confidence": 0.624
+   },
+   {
+    "time": 44.0,
+    "text": "No curve with an average",
+    "confidence": 0.513
+   },
+   {
+    "time": 44.0,
+    "text": "THAT low?",
+    "confidence": 0.596
+   },
+   {
+    "time": 44.0,
+    "text": "and you telling us that",
+    "confidence": 0.898
+   },
+   {
+    "time": 44.0,
+    "text": "there's no curve",
+    "confidence": 0.984
+   },
+   {
+    "time": 44.0,
+    "text": "chalkboardchaoskota",
+    "confidence": 0.655
+   },
+   {
+    "time": 46.0,
+    "text": "Nocurve with an average",
+    "confidence": 0.684
+   },
+   {
+    "time": 46.0,
+    "text": "THAT low?",
+    "confidence": 0.614
+   },
+   {
+    "time": 46.0,
+    "text": "chalkboardchaoskota",
+    "confidence": 0.955
+   },
+   {
+    "time": 48.0,
+    "text": "Nocurvewith an average",
+    "confidence": 0.559
+   },
+   {
+    "time": 48.0,
+    "text": "THAT low?",
+    "confidence": 0.816
+   },
+   {
+    "time": 48.0,
+    "text": "do not care what other",
+    "confidence": 0.914
+   },
+   {
+    "time": 48.0,
+    "text": "teachers and professors dQ\"",
+    "confidence": 0.762
+   },
+   {
+    "time": 48.0,
+    "text": "chalkboardchaoskota",
+    "confidence": 0.593
+   },
+   {
+    "time": 50.0,
+    "text": "Nocurve with an average",
+    "confidence": 0.804
+   },
+   {
+    "time": 50.0,
+    "text": "THAT low?",
+    "confidence": 0.776
+   },
+   {
+    "time": 50.0,
+    "text": "I dnot care what other",
+    "confidence": 0.886
+   },
+   {
+    "time": 50.0,
+    "text": "teachersand professors",
+    "confidence": 0.813
+   },
+   {
+    "time": 50.0,
+    "text": "TikTok",
+    "confidence": 0.604
+   },
+   {
+    "time": 50.0,
+    "text": "@ chalkboardchapskota",
+    "confidence": 0.508
+   },
+   {
+    "time": 52.0,
+    "text": "Nocurve with an average",
+    "confidence": 0.743
+   },
+   {
+    "time": 52.0,
+    "text": "THAT lw?",
+    "confidence": 0.796
+   },
+   {
+    "time": 52.0,
+    "text": "teachers and professorsd",
+    "confidence": 0.922
+   },
+   {
+    "time": 52.0,
+    "text": "TikTok",
+    "confidence": 0.986
+   },
+   {
+    "time": 52.0,
+    "text": "chalkboardchaoskota",
+    "confidence": 0.828
+   },
+   {
+    "time": 54.0,
+    "text": "Nocurve with anaverage",
+    "confidence": 0.852
+   },
+   {
+    "time": 54.0,
+    "text": "THAT low?",
+    "confidence": 0.625
+   },
+   {
+    "time": 54.0,
+    "text": "that\"swhyyour ratingisso",
+    "confidence": 0.936
+   },
+   {
+    "time": 54.0,
+    "text": "low",
+    "confidence": 0.849
+   },
+   {
+    "time": 54.0,
+    "text": "TikTok",
+    "confidence": 0.643
+   },
+   {
+    "time": 56.0,
+    "text": "No curve with an average",
+    "confidence": 0.925
+   },
+   {
+    "time": 56.0,
+    "text": "THAT low?",
+    "confidence": 0.684
+   },
+   {
+    "time": 56.0,
+    "text": "you have a 1.3 on",
+    "confidence": 0.836
+   },
+   {
+    "time": 56.0,
+    "text": "ratemyprofessor.com",
+    "confidence": 0.964
+   },
+   {
+    "time": 56.0,
+    "text": "TikTok",
+    "confidence": 0.973
+   },
+   {
+    "time": 56.0,
+    "text": "chalk boardchaoskota",
+    "confidence": 0.653
+   },
+   {
+    "time": 58.0,
+    "text": "Nocurve with an average",
+    "confidence": 0.618
+   },
+   {
+    "time": 58.0,
+    "text": "THAT low?",
+    "confidence": 0.786
+   },
+   {
+    "time": 58.0,
+    "text": "obviouslya",
+    "confidence": 0.923
+   },
+   {
+    "time": 58.0,
+    "text": "forareason",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.0,
+    "text": "good reason",
+    "confidence": 0.972
+   },
+   {
+    "time": 58.0,
+    "text": "TikTok",
+    "confidence": 0.973
+   },
+   {
+    "time": 58.0,
+    "text": "@ chalkboardchaoskota",
+    "confidence": 0.688
+   },
+   {
+    "time": 60.0,
+    "text": "Nocurve with an average",
+    "confidence": 0.56
+   },
+   {
+    "time": 60.0,
+    "text": "THAT low?",
+    "confidence": 0.896
+   },
+   {
+    "time": 60.0,
+    "text": "8i",
+    "confidence": 0.514
+   },
+   {
+    "time": 60.0,
+    "text": "'TikTok",
+    "confidence": 0.835
+   },
+   {
+    "time": 60.0,
+    "text": "chalkboardchaoskota",
+    "confidence": 0.861
+   },
+   {
+    "time": 62.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 62.0,
+    "text": "chalkboardchaos_",
+    "confidence": 0.855
+   },
+   {
+    "time": 64.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 64.0,
+    "text": "chalkboardchaos_",
+    "confidence": 0.999
+   }
+  ],
+  "captions": [
+   {
+    "text": "Nocurve wth an average",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.698,
+    "id": "o1"
+   },
+   {
+    "text": "THAT low?",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.805,
+    "id": "o2"
+   },
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.949,
+    "id": "o3"
+   },
+   {
+    "text": "chalkboardchaoskota",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o4"
+   },
+   {
+    "text": "the average grade on the",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.938,
+    "id": "o5"
+   },
+   {
+    "text": "last exam wasa47",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.766,
+    "id": "o6"
+   },
+   {
+    "text": "Nocurve wth an average",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.87,
+    "id": "o7"
+   },
+   {
+    "text": "THAT low?",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.761,
+    "id": "o8"
+   },
+   {
+    "text": "TikTok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.734,
+    "id": "o9"
+   },
+   {
+    "text": "@ chalkboardchaos\"",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.672,
+    "id": "o10"
+   },
+   {
+    "text": "on the",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.978,
+    "id": "o11"
+   },
+   {
+    "text": "the average",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.974,
+    "id": "o12"
+   },
+   {
+    "text": "grade",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o13"
+   },
+   {
+    "text": "last exam was a 47",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.596,
+    "id": "o14"
+   },
+   {
+    "text": "Nocurve with an average",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.697,
+    "id": "o15"
+   },
+   {
+    "text": "THAT low?",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.615,
+    "id": "o16"
+   },
+   {
+    "text": "Tiktok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.953,
+    "id": "o17"
+   },
+   {
+    "text": "the average grade on the",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.99,
+    "id": "o18"
+   },
+   {
+    "text": "last exam wasa 47",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.649,
+    "id": "o19"
+   },
+   {
+    "text": "Nocurve wth an average",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.923,
+    "id": "o20"
+   },
+   {
+    "text": "THAT low?",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.716,
+    "id": "o21"
+   },
+   {
+    "text": "and there is no curve VOU",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.638,
+    "id": "o22"
+   },
+   {
+    "text": "that 47",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.894,
+    "id": "o23"
+   },
+   {
+    "text": "got",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o24"
+   },
+   {
+    "text": "Tiktok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.716,
+    "id": "o25"
+   },
+   {
+    "text": "chalkboardclaoskota",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.565,
+    "id": "o26"
+   },
+   {
+    "text": "Nocurve with an average",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.879,
+    "id": "o27"
+   },
+   {
+    "text": "THAT low?",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.663,
+    "id": "o28"
+   },
+   {
+    "text": "and thereisn@ curve VoU",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.588,
+    "id": "o29"
+   },
+   {
+    "text": "that 47",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.927,
+    "id": "o30"
+   },
+   {
+    "text": "got",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.823,
+    "id": "o31"
+   },
+   {
+    "text": "@ chalkboai dchaoskota",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.56,
+    "id": "o32"
+   },
+   {
+    "text": "Nocurve wth an average",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.91,
+    "id": "o33"
+   },
+   {
+    "text": "THAT low?",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.914,
+    "id": "o34"
+   },
+   {
+    "text": "31",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.578,
+    "id": "o35"
+   },
+   {
+    "text": "there'sno curve",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.977,
+    "id": "o36"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.844,
+    "id": "o37"
+   },
+   {
+    "text": "Nocurve with an average",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.887,
+    "id": "o38"
+   },
+   {
+    "text": "THAT low?",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.723,
+    "id": "o39"
+   },
+   {
+    "text": "however if VOU",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.759,
+    "id": "o40"
+   },
+   {
+    "text": "\"got",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.984,
+    "id": "o41"
+   },
+   {
+    "text": "anything above that",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.998,
+    "id": "o42"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.992,
+    "id": "o43"
+   },
+   {
+    "text": "@ chalkboardchaoskota",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.785,
+    "id": "o44"
+   },
+   {
+    "text": "Nocurve with an average",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.709,
+    "id": "o45"
+   },
+   {
+    "text": "THAT low?",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.805,
+    "id": "o46"
+   },
+   {
+    "text": "however if VOU",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.608,
+    "id": "o47"
+   },
+   {
+    "text": "anything above that",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.938,
+    "id": "o48"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.997,
+    "id": "o49"
+   },
+   {
+    "text": "chalkboardchaoskota",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.731,
+    "id": "o50"
+   },
+   {
+    "text": "443",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.95,
+    "id": "o51"
+   },
+   {
+    "text": "Nocurvewith an average",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.742,
+    "id": "o52"
+   },
+   {
+    "text": "THAT low?",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.73,
+    "id": "o53"
+   },
+   {
+    "text": "above 50% yoU should feel",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.821,
+    "id": "o54"
+   },
+   {
+    "text": "good about yourself",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.819,
+    "id": "o55"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.696,
+    "id": "o56"
+   },
+   {
+    "text": "@ chall boardchaoskota",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.571,
+    "id": "o57"
+   },
+   {
+    "text": "Nocurvewith an average",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.919,
+    "id": "o58"
+   },
+   {
+    "text": "THAT low?",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.679,
+    "id": "o59"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.965,
+    "id": "o60"
+   },
+   {
+    "text": "Nocurve with an average",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.916,
+    "id": "o61"
+   },
+   {
+    "text": "THAT low?",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.726,
+    "id": "o62"
+   },
+   {
+    "text": "soljust wanna understand",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.815,
+    "id": "o63"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.804,
+    "id": "o64"
+   },
+   {
+    "text": "chalk boardchaoskota",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.575,
+    "id": "o65"
+   },
+   {
+    "text": "Nocurve with an average",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.903,
+    "id": "o66"
+   },
+   {
+    "text": "THAT low?",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.73,
+    "id": "o67"
+   },
+   {
+    "text": "so ljust wanna understand",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.719,
+    "id": "o68"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.993,
+    "id": "o69"
+   },
+   {
+    "text": "Nocurve with an average",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.584,
+    "id": "o70"
+   },
+   {
+    "text": "THAT low?",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.618,
+    "id": "o71"
+   },
+   {
+    "text": "wanna makesure we're",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.953,
+    "id": "o72"
+   },
+   {
+    "text": "on the same page",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.992,
+    "id": "o73"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.993,
+    "id": "o74"
+   },
+   {
+    "text": "chall boardchaoskota",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.602,
+    "id": "o75"
+   },
+   {
+    "text": "No curve with an average",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.828,
+    "id": "o76"
+   },
+   {
+    "text": "THAT low?",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.59,
+    "id": "o77"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.843,
+    "id": "o78"
+   },
+   {
+    "text": "No curve with an average",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.522,
+    "id": "o79"
+   },
+   {
+    "text": "THAT low?",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.84,
+    "id": "o80"
+   },
+   {
+    "text": "yes majority of the classis",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.602,
+    "id": "o81"
+   },
+   {
+    "text": "arounda 47%",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.978,
+    "id": "o82"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.996,
+    "id": "o83"
+   },
+   {
+    "text": "challl boardchaoskota",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.818,
+    "id": "o84"
+   },
+   {
+    "text": "No curve with an average",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.819,
+    "id": "o85"
+   },
+   {
+    "text": "THAT low?",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.805,
+    "id": "o86"
+   },
+   {
+    "text": "ves majority of the classis",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.737,
+    "id": "o87"
+   },
+   {
+    "text": "around a 47%",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.839,
+    "id": "o88"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.71,
+    "id": "o89"
+   },
+   {
+    "text": "@ chalkboardchaoskota",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.814,
+    "id": "o90"
+   },
+   {
+    "text": "No curve with an average",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.97,
+    "id": "o91"
+   },
+   {
+    "text": "THAT low?",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.99,
+    "id": "o92"
+   },
+   {
+    "text": "and only people who",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.687,
+    "id": "o93"
+   },
+   {
+    "text": "get",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o94"
+   },
+   {
+    "text": "above a 50% should be",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.969,
+    "id": "o95"
+   },
+   {
+    "text": "proud of themselves",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.998,
+    "id": "o96"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.991,
+    "id": "o97"
+   },
+   {
+    "text": "chalkboardchaoskota",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.971,
+    "id": "o98"
+   },
+   {
+    "text": "Nocurve with an average",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.976,
+    "id": "o99"
+   },
+   {
+    "text": "THAT low?",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.669,
+    "id": "o100"
+   },
+   {
+    "text": "and only people who",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.899,
+    "id": "o101"
+   },
+   {
+    "text": "get",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o102"
+   },
+   {
+    "text": "above a 50% should be",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.664,
+    "id": "o103"
+   },
+   {
+    "text": "proud of themselves",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.969,
+    "id": "o104"
+   },
+   {
+    "text": "Tiktok",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.524,
+    "id": "o105"
+   },
+   {
+    "text": "chalkboardchaoskota",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.503,
+    "id": "o106"
+   },
+   {
+    "text": "No curve with an average",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.786,
+    "id": "o107"
+   },
+   {
+    "text": "THAT low?",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.87,
+    "id": "o108"
+   },
+   {
+    "text": "and only people who",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.929,
+    "id": "o109"
+   },
+   {
+    "text": "get",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o110"
+   },
+   {
+    "text": "above a 50% should be",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.902,
+    "id": "o111"
+   },
+   {
+    "text": "proud of themselves",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.923,
+    "id": "o112"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.639,
+    "id": "o113"
+   },
+   {
+    "text": "Nocurve with an average",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.87,
+    "id": "o114"
+   },
+   {
+    "text": "THAT low?",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.789,
+    "id": "o115"
+   },
+   {
+    "text": "that\"show low thebaris",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.726,
+    "id": "o116"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.773,
+    "id": "o117"
+   },
+   {
+    "text": "@ chalkboardchaoskora",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.964,
+    "id": "o118"
+   },
+   {
+    "text": "Nocurve with an average",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.806,
+    "id": "o119"
+   },
+   {
+    "text": "THAT low?",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.828,
+    "id": "o120"
+   },
+   {
+    "text": "yes that's accurate",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.766,
+    "id": "o121"
+   },
+   {
+    "text": "TTikTok",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.624,
+    "id": "o122"
+   },
+   {
+    "text": "chalkboardchaoskota",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.99,
+    "id": "o123"
+   },
+   {
+    "text": "Nocurvewithan average",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.725,
+    "id": "o124"
+   },
+   {
+    "text": "THAT low?",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.598,
+    "id": "o125"
+   },
+   {
+    "text": "so yoU don't see a problem",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.579,
+    "id": "o126"
+   },
+   {
+    "text": "with the whole class being",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.986,
+    "id": "o127"
+   },
+   {
+    "text": "ata 47%",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.788,
+    "id": "o128"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.97,
+    "id": "o129"
+   },
+   {
+    "text": "chalkkboardchaoskota",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.624,
+    "id": "o130"
+   },
+   {
+    "text": "No curve with an average",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.513,
+    "id": "o131"
+   },
+   {
+    "text": "THAT low?",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.596,
+    "id": "o132"
+   },
+   {
+    "text": "and you telling us that",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.898,
+    "id": "o133"
+   },
+   {
+    "text": "there's no curve",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.984,
+    "id": "o134"
+   },
+   {
+    "text": "chalkboardchaoskota",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.655,
+    "id": "o135"
+   },
+   {
+    "text": "Nocurve with an average",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.684,
+    "id": "o136"
+   },
+   {
+    "text": "THAT low?",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.614,
+    "id": "o137"
+   },
+   {
+    "text": "chalkboardchaoskota",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.955,
+    "id": "o138"
+   },
+   {
+    "text": "Nocurvewith an average",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.559,
+    "id": "o139"
+   },
+   {
+    "text": "THAT low?",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.816,
+    "id": "o140"
+   },
+   {
+    "text": "do not care what other",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.914,
+    "id": "o141"
+   },
+   {
+    "text": "teachers and professors dQ\"",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.762,
+    "id": "o142"
+   },
+   {
+    "text": "chalkboardchaoskota",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.593,
+    "id": "o143"
+   },
+   {
+    "text": "Nocurve with an average",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.804,
+    "id": "o144"
+   },
+   {
+    "text": "THAT low?",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.776,
+    "id": "o145"
+   },
+   {
+    "text": "I dnot care what other",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.886,
+    "id": "o146"
+   },
+   {
+    "text": "teachersand professors",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.813,
+    "id": "o147"
+   },
+   {
+    "text": "TikTok",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.604,
+    "id": "o148"
+   },
+   {
+    "text": "@ chalkboardchapskota",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.508,
+    "id": "o149"
+   },
+   {
+    "text": "Nocurve with an average",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.743,
+    "id": "o150"
+   },
+   {
+    "text": "THAT lw?",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.796,
+    "id": "o151"
+   },
+   {
+    "text": "teachers and professorsd",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.922,
+    "id": "o152"
+   },
+   {
+    "text": "TikTok",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.986,
+    "id": "o153"
+   },
+   {
+    "text": "chalkboardchaoskota",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.828,
+    "id": "o154"
+   },
+   {
+    "text": "Nocurve with anaverage",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.852,
+    "id": "o155"
+   },
+   {
+    "text": "THAT low?",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.625,
+    "id": "o156"
+   },
+   {
+    "text": "that\"swhyyour ratingisso",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.936,
+    "id": "o157"
+   },
+   {
+    "text": "low",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.849,
+    "id": "o158"
+   },
+   {
+    "text": "TikTok",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.643,
+    "id": "o159"
+   },
+   {
+    "text": "No curve with an average",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.925,
+    "id": "o160"
+   },
+   {
+    "text": "THAT low?",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.684,
+    "id": "o161"
+   },
+   {
+    "text": "you have a 1.3 on",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.836,
+    "id": "o162"
+   },
+   {
+    "text": "ratemyprofessor.com",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.964,
+    "id": "o163"
+   },
+   {
+    "text": "TikTok",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.973,
+    "id": "o164"
+   },
+   {
+    "text": "chalk boardchaoskota",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.653,
+    "id": "o165"
+   },
+   {
+    "text": "Nocurve with an average",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.618,
+    "id": "o166"
+   },
+   {
+    "text": "THAT low?",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.786,
+    "id": "o167"
+   },
+   {
+    "text": "obviouslya",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.923,
+    "id": "o168"
+   },
+   {
+    "text": "forareason",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 1.0,
+    "id": "o169"
+   },
+   {
+    "text": "good reason",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.972,
+    "id": "o170"
+   },
+   {
+    "text": "TikTok",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.973,
+    "id": "o171"
+   },
+   {
+    "text": "@ chalkboardchaoskota",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.688,
+    "id": "o172"
+   },
+   {
+    "text": "Nocurve with an average",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.56,
+    "id": "o173"
+   },
+   {
+    "text": "THAT low?",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.896,
+    "id": "o174"
+   },
+   {
+    "text": "8i",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.514,
+    "id": "o175"
+   },
+   {
+    "text": "'TikTok",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.835,
+    "id": "o176"
+   },
+   {
+    "text": "chalkboardchaoskota",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.861,
+    "id": "o177"
+   },
+   {
+    "text": "TikTok",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.999,
+    "id": "o178"
+   },
+   {
+    "text": "chalkboardchaos_",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.855,
+    "id": "o179"
+   },
+   {
+    "text": "TikTok",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.999,
+    "id": "o180"
+   },
+   {
+    "text": "chalkboardchaos_",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.999,
+    "id": "o181"
+   }
+  ]
+ }
+}

@@ -1,0 +1,473 @@
+{
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "on_screen": {
+  "frames_sampled": 14,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "DID",
+    "confidence": 0.996
+   },
+   {
+    "time": 0.0,
+    "text": "YOU KNOW",
+    "confidence": 0.643
+   },
+   {
+    "time": 0.0,
+    "text": "@healthi",
+    "confidence": 0.673
+   },
+   {
+    "time": 2.0,
+    "text": "SLICED ONIONIIN",
+    "confidence": 0.614
+   },
+   {
+    "time": 2.0,
+    "text": "l@heal",
+    "confidence": 0.569
+   },
+   {
+    "time": 4.0,
+    "text": "WATER",
+    "confidence": 0.537
+   },
+   {
+    "time": 4.0,
+    "text": "@healthylorganic",
+    "confidence": 0.895
+   },
+   {
+    "time": 6.0,
+    "text": "A SLICED LEMON",
+    "confidence": 0.681
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "@healthy organic secret",
+    "confidence": 0.997
+   },
+   {
+    "time": 8.0,
+    "text": "CINNAMON AND",
+    "confidence": 0.779
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "@healthy organic secret",
+    "confidence": 0.988
+   },
+   {
+    "time": 10.0,
+    "text": "MINUTES",
+    "confidence": 0.988
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 0.948
+   },
+   {
+    "time": 10.0,
+    "text": "@healthy organic secret",
+    "confidence": 0.961
+   },
+   {
+    "time": 12.0,
+    "text": "CAPABLE @F",
+    "confidence": 0.842
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "@healthy organic secret",
+    "confidence": 0.88
+   },
+   {
+    "time": 14.0,
+    "text": "RELIEVING DRY",
+    "confidence": 0.783
+   },
+   {
+    "time": 14.0,
+    "text": "@healthy",
+    "confidence": 0.897
+   },
+   {
+    "time": 16.0,
+    "text": "EXPELLING",
+    "confidence": 0.852
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 0.811
+   },
+   {
+    "time": 16.0,
+    "text": "@healthy organic secret",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.0,
+    "text": "IMPROVING",
+    "confidence": 0.79
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.0,
+    "text": "@healthy organic secret",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.0,
+    "text": "SINUSITIS AND",
+    "confidence": 0.933
+   },
+   {
+    "time": 20.0,
+    "text": "d TikTok",
+    "confidence": 0.867
+   },
+   {
+    "time": 20.0,
+    "text": "@healthy organic secret",
+    "confidence": 0.999
+   },
+   {
+    "time": 22.0,
+    "text": "SWEETEN IT WITH",
+    "confidence": 0.741
+   },
+   {
+    "time": 22.0,
+    "text": "Tik Tok",
+    "confidence": 0.646
+   },
+   {
+    "time": 22.0,
+    "text": "@healthy organic secret",
+    "confidence": 0.771
+   },
+   {
+    "time": 24.0,
+    "text": "AND DON'T",
+    "confidence": 0.693
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 0.951
+   },
+   {
+    "time": 24.0,
+    "text": "@healthv organic secret",
+    "confidence": 0.659
+   },
+   {
+    "time": 26.0,
+    "text": "RECIPES",
+    "confidence": 0.999
+   }
+  ],
+  "captions": [
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o1"
+   },
+   {
+    "text": "DID",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.996,
+    "id": "o2"
+   },
+   {
+    "text": "YOU KNOW",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.643,
+    "id": "o3"
+   },
+   {
+    "text": "@healthi",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.673,
+    "id": "o4"
+   },
+   {
+    "text": "SLICED ONIONIIN",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.614,
+    "id": "o5"
+   },
+   {
+    "text": "l@heal",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.569,
+    "id": "o6"
+   },
+   {
+    "text": "WATER",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.537,
+    "id": "o7"
+   },
+   {
+    "text": "@healthylorganic",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.895,
+    "id": "o8"
+   },
+   {
+    "text": "A SLICED LEMON",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.681,
+    "id": "o9"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o10"
+   },
+   {
+    "text": "@healthy organic secret",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.997,
+    "id": "o11"
+   },
+   {
+    "text": "CINNAMON AND",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.779,
+    "id": "o12"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o13"
+   },
+   {
+    "text": "@healthy organic secret",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.988,
+    "id": "o14"
+   },
+   {
+    "text": "MINUTES",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.988,
+    "id": "o15"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.948,
+    "id": "o16"
+   },
+   {
+    "text": "@healthy organic secret",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.961,
+    "id": "o17"
+   },
+   {
+    "text": "CAPABLE @F",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.842,
+    "id": "o18"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o19"
+   },
+   {
+    "text": "@healthy organic secret",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.88,
+    "id": "o20"
+   },
+   {
+    "text": "RELIEVING DRY",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.783,
+    "id": "o21"
+   },
+   {
+    "text": "@healthy",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.897,
+    "id": "o22"
+   },
+   {
+    "text": "EXPELLING",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.852,
+    "id": "o23"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.811,
+    "id": "o24"
+   },
+   {
+    "text": "@healthy organic secret",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.999,
+    "id": "o25"
+   },
+   {
+    "text": "IMPROVING",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.79,
+    "id": "o26"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.999,
+    "id": "o27"
+   },
+   {
+    "text": "@healthy organic secret",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.999,
+    "id": "o28"
+   },
+   {
+    "text": "SINUSITIS AND",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.933,
+    "id": "o29"
+   },
+   {
+    "text": "d TikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.867,
+    "id": "o30"
+   },
+   {
+    "text": "@healthy organic secret",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.999,
+    "id": "o31"
+   },
+   {
+    "text": "SWEETEN IT WITH",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.741,
+    "id": "o32"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.646,
+    "id": "o33"
+   },
+   {
+    "text": "@healthy organic secret",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.771,
+    "id": "o34"
+   },
+   {
+    "text": "AND DON'T",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.693,
+    "id": "o35"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.951,
+    "id": "o36"
+   },
+   {
+    "text": "@healthv organic secret",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.659,
+    "id": "o37"
+   },
+   {
+    "text": "RECIPES",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.999,
+    "id": "o38"
+   }
+  ]
+ }
+}

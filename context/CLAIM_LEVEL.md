@@ -128,6 +128,44 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
 - **2026-10-28**: PR #40 trimmed to the schema types only, so the live pipeline is
   unchanged; the provider, `pubmed.py` and `run_pipeline` changes are carried forward as
   the §5 integration spec for the #12 prototype.
+- **2026-11-21 (Pranav)** — Golden label set built end to end from the 82-video
+  `mybox-selected` bundle. Branch `data/golden-label-set`.
+  - **Done:** transcripts (faster-whisper `small`, GPU float16) and OCR (EasyOCR,
+    0.5 fps, 960 px, 0.5 confidence floor) for all 82 videos; 82 videos and ~240
+    claims labelled against `docs/target-system-design.md`, which the README was
+    rewritten to follow. Every citation was retrieved live through
+    `scripts/evidence.py` (PubMed E-utilities ≤3 req/s, plus PMC full text) and
+    cached, so none of them came from memory. `scripts/judge.py` derives
+    `video_level_label` from the claims via the §9 rules, and
+    `scripts/validate.py` re-checks it, so a label cannot drift from its claims.
+  - **Schema changes** (target doc wins over the old README): claim rows now carry
+    `claim_verdict` (the §7 five) instead of the video-level `ground_truth_label`;
+    `speaker_stance` gains `UNCLEAR`; evidence splits into
+    `evidence_supporting` / `evidence_contradicting` so "both sides exist" stays a
+    checkable §11 review trigger.
+  - **Found — the §9 DEBUNKING rule is too narrow.** It fires only when the refuted
+    claim is `CONTRADICTED`. Six videos in this set are unmistakably debunks and do
+    not get the label, because what they refute is contested science (v24, v65),
+    a data-provenance error (v30), a schedule miscount (v64), an untested
+    fear (v68) or a value judgement (v70). Worth a design decision before the
+    final-label metric in §14 is taken seriously.
+  - **Found — PubMed and WHO/CDC alone cannot adjudicate much of this corpus.**
+    Folk remedies, national statistics, regulatory limits, immunisation schedules
+    and food-composition facts are all checkable, none against these sources. This
+    is the main reason `CANNOT_RECOGNIZE` is the largest class.
+  - **Found — OCR earns its cost on citation-heavy content.** v03 displays the
+    PubMed page for nearly every claim and EasyOCR recovered the PMIDs well enough
+    to retrieve the exact papers; four verdicts there were decided or corrected by
+    the screen rather than the speech. Feed this to the modality track with
+    `text_type` and `claim_source` in `videos.csv` / `claims.csv`.
+  - **Found — transcription errors block retrieval.** "growl in" for ghrelin
+    (v33), "epimercary" for ethylmercury (v66), "cut cut" for a bile-salt product
+    (v72). The last could not be searched for at all, so the claim stayed
+    unverified because of a transcription failure, not an evidence gap.
+  - **Next:** inter-annotator agreement on the 16-video blind subset (seed
+    `20261121`, listed in `dataset/REVIEW.md`); record Cohen's kappa for stance,
+    verdict and video label here. Reviewer priorities and the rows most likely to
+    move are listed in `REVIEW.md` and in the per-claim `notes`.
 
 ## 8. PR Requirements
 

@@ -1,0 +1,567 @@
+{
+ "video_id": "v50",
+ "filename": "v02_ @neenziemd_smoking_lungs.mp4",
+ "relative_path": "Dataset-Sept-2026/Joshua Ryan Fajardo/NO-MISINFO/v02_ @neenziemd_smoking_lungs.mp4",
+ "collector": "Joshua Ryan Fajardo",
+ "collector_label": "NO_MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:13:13",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.998,
+  "duration_seconds": 31.67,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 8.6,
+    "text": "Things they don't tell you part 76. If you are a smoker, whether it is tobacco use, whether it's marijuana, whether it's hookah use,"
+   },
+   {
+    "id": "t2",
+    "start": 8.88,
+    "end": 10.88,
+    "text": "all of these types of"
+   },
+   {
+    "id": "t3",
+    "start": 11.16,
+    "end": 18.64,
+    "text": "ingestions of foreign objects, foreign substances go indirectly into your lungs. What does that mean? That means that it makes your lungs more"
+   },
+   {
+    "id": "t4",
+    "start": 19.4,
+    "end": 26.48,
+    "text": "susceptible to pneumothoracies. This makes your lungs decreased in terms of its function. Yeah, even with marijuana."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 16,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Tiklok",
+    "confidence": 0.605
+   },
+   {
+    "time": 0.0,
+    "text": "neenziemd",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "76if youarea smoker",
+    "confidence": 0.91
+   },
+   {
+    "time": 4.0,
+    "text": "76if youarea smoker",
+    "confidence": 0.848
+   },
+   {
+    "time": 6.0,
+    "text": "whetheritis tobacco Use",
+    "confidence": 0.816
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 0.977
+   },
+   {
+    "time": 8.0,
+    "text": "whetherit\"s hookah use",
+    "confidence": 0.71
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 0.609
+   },
+   {
+    "time": 10.0,
+    "text": "allofthese typesof",
+    "confidence": 0.955
+   },
+   {
+    "time": 10.0,
+    "text": "ingestionsof foreign objects",
+    "confidence": 0.837
+   },
+   {
+    "time": 10.0,
+    "text": "Tiktok",
+    "confidence": 0.765
+   },
+   {
+    "time": 12.0,
+    "text": "all of these types of",
+    "confidence": 0.943
+   },
+   {
+    "time": 12.0,
+    "text": "ingestions of foreign objects",
+    "confidence": 0.786
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 0.968
+   },
+   {
+    "time": 14.0,
+    "text": "foreign substancesgo",
+    "confidence": 0.673
+   },
+   {
+    "time": 14.0,
+    "text": "indirectlyinto your lungs",
+    "confidence": 0.64
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 0.991
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 18.0,
+    "text": "thatmeans that it makesyour",
+    "confidence": 0.752
+   },
+   {
+    "time": 18.0,
+    "text": "lungsmoresusceptible to",
+    "confidence": 0.729
+   },
+   {
+    "time": 18.0,
+    "text": "pneumothorosis",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 18.0,
+    "text": "@meenziemd",
+    "confidence": 0.79
+   },
+   {
+    "time": 20.0,
+    "text": "that means thatit makesyour",
+    "confidence": 0.602
+   },
+   {
+    "time": 20.0,
+    "text": "lungsmore susceptibleto",
+    "confidence": 0.751
+   },
+   {
+    "time": 20.0,
+    "text": "pneumothorosis",
+    "confidence": 0.939
+   },
+   {
+    "time": 20.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "meenziemd",
+    "confidence": 0.955
+   },
+   {
+    "time": 22.0,
+    "text": "thismakes",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "decreasein terms @fits",
+    "confidence": 0.747
+   },
+   {
+    "time": 22.0,
+    "text": "function",
+    "confidence": 0.973
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "meenziemd",
+    "confidence": 0.786
+   },
+   {
+    "time": 24.0,
+    "text": "thismakesyour lungs",
+    "confidence": 0.73
+   },
+   {
+    "time": 24.0,
+    "text": "decreasein terms @f its",
+    "confidence": 0.725
+   },
+   {
+    "time": 24.0,
+    "text": "function",
+    "confidence": 0.688
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 0.959
+   },
+   {
+    "time": 26.0,
+    "text": "yeah even with marijuana",
+    "confidence": 0.958
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 0.903
+   },
+   {
+    "time": 26.0,
+    "text": "@ neenziemd",
+    "confidence": 0.543
+   },
+   {
+    "time": 28.03,
+    "text": "J",
+    "confidence": 0.882
+   },
+   {
+    "time": 28.03,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.03,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.03,
+    "text": "@ neenziemd",
+    "confidence": 0.999
+   }
+  ],
+  "captions": [
+   {
+    "text": "Tiklok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.605,
+    "id": "o1"
+   },
+   {
+    "text": "neenziemd",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o2"
+   },
+   {
+    "text": "76if youarea smoker",
+    "start": 2.0,
+    "end": 4.0,
+    "confidence": 0.91,
+    "id": "o3"
+   },
+   {
+    "text": "whetheritis tobacco Use",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.816,
+    "id": "o4"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.977,
+    "id": "o5"
+   },
+   {
+    "text": "whetherit\"s hookah use",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.71,
+    "id": "o6"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.609,
+    "id": "o7"
+   },
+   {
+    "text": "allofthese typesof",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.955,
+    "id": "o8"
+   },
+   {
+    "text": "ingestionsof foreign objects",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.837,
+    "id": "o9"
+   },
+   {
+    "text": "Tiktok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.765,
+    "id": "o10"
+   },
+   {
+    "text": "all of these types of",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.943,
+    "id": "o11"
+   },
+   {
+    "text": "ingestions of foreign objects",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.786,
+    "id": "o12"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.968,
+    "id": "o13"
+   },
+   {
+    "text": "foreign substancesgo",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.673,
+    "id": "o14"
+   },
+   {
+    "text": "indirectlyinto your lungs",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.64,
+    "id": "o15"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 16.0,
+    "confidence": 0.998,
+    "id": "o16"
+   },
+   {
+    "text": "thatmeans that it makesyour",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.752,
+    "id": "o17"
+   },
+   {
+    "text": "lungsmoresusceptible to",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.729,
+    "id": "o18"
+   },
+   {
+    "text": "pneumothorosis",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.999,
+    "id": "o19"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.997,
+    "id": "o20"
+   },
+   {
+    "text": "@meenziemd",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.79,
+    "id": "o21"
+   },
+   {
+    "text": "that means thatit makesyour",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.602,
+    "id": "o22"
+   },
+   {
+    "text": "lungsmore susceptibleto",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.751,
+    "id": "o23"
+   },
+   {
+    "text": "pneumothorosis",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.939,
+    "id": "o24"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o25"
+   },
+   {
+    "text": "meenziemd",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.955,
+    "id": "o26"
+   },
+   {
+    "text": "thismakes",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o27"
+   },
+   {
+    "text": "decreasein terms @fits",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.747,
+    "id": "o28"
+   },
+   {
+    "text": "function",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.973,
+    "id": "o29"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o30"
+   },
+   {
+    "text": "meenziemd",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.786,
+    "id": "o31"
+   },
+   {
+    "text": "thismakesyour lungs",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.73,
+    "id": "o32"
+   },
+   {
+    "text": "decreasein terms @f its",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.725,
+    "id": "o33"
+   },
+   {
+    "text": "function",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.688,
+    "id": "o34"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.959,
+    "id": "o35"
+   },
+   {
+    "text": "yeah even with marijuana",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.958,
+    "id": "o36"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.903,
+    "id": "o37"
+   },
+   {
+    "text": "@ neenziemd",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.543,
+    "id": "o38"
+   },
+   {
+    "text": "J",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.882,
+    "id": "o39"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.03,
+    "end": 30.03,
+    "confidence": 0.999,
+    "id": "o40"
+   },
+   {
+    "text": "@ neenziemd",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.999,
+    "id": "o41"
+   }
+  ]
+ }
+}

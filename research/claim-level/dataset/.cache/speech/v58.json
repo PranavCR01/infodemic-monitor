@@ -1,0 +1,80 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 26.68,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 4.0,
+    "text": "constipated, this works every time in about five minutes."
+   },
+   {
+    "id": "t2",
+    "start": 4.0,
+    "end": 6.54,
+    "text": "Grab a navel orange, it must be navel."
+   },
+   {
+    "id": "t3",
+    "start": 6.54,
+    "end": 8.22,
+    "text": "Wash the outside really well,"
+   },
+   {
+    "id": "t4",
+    "start": 8.22,
+    "end": 10.02,
+    "text": "then slice it into sections."
+   },
+   {
+    "id": "t5",
+    "start": 10.02,
+    "end": 12.74,
+    "text": "Generously coat with cayenne pepper and cinnamon."
+   },
+   {
+    "id": "t6",
+    "start": 12.74,
+    "end": 14.9,
+    "text": "There's actually signs behind why this works,"
+   },
+   {
+    "id": "t7",
+    "start": 14.9,
+    "end": 17.14,
+    "text": "which I'll include in the description below."
+   },
+   {
+    "id": "t8",
+    "start": 17.14,
+    "end": 21.12,
+    "text": "Next, eat the entire wedge, skin and all."
+   },
+   {
+    "id": "t9",
+    "start": 21.12,
+    "end": 21.96,
+    "text": "Take note."
+   },
+   {
+    "id": "t10",
+    "start": 21.96,
+    "end": 22.8,
+    "text": "If you're constipated-"
+   },
+   {
+    "id": "t11",
+    "start": 22.8,
+    "end": 24.8,
+    "text": "You"
+   }
+  ]
+ }
+}

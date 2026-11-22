@@ -1,0 +1,38 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.998,
+  "duration_seconds": 31.67,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 8.6,
+    "text": "Things they don't tell you part 76. If you are a smoker, whether it is tobacco use, whether it's marijuana, whether it's hookah use,"
+   },
+   {
+    "id": "t2",
+    "start": 8.88,
+    "end": 10.88,
+    "text": "all of these types of"
+   },
+   {
+    "id": "t3",
+    "start": 11.16,
+    "end": 18.64,
+    "text": "ingestions of foreign objects, foreign substances go indirectly into your lungs. What does that mean? That means that it makes your lungs more"
+   },
+   {
+    "id": "t4",
+    "start": 19.4,
+    "end": 26.48,
+    "text": "susceptible to pneumothoracies. This makes your lungs decreased in terms of its function. Yeah, even with marijuana."
+   }
+  ]
+ }
+}

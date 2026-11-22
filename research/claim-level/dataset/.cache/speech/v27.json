@@ -1,0 +1,656 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.924,
+  "duration_seconds": 597.8,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.56,
+    "end": 8.84,
+    "text": "Cancer loves, and we need to know what cancer loves so we can stop it."
+   },
+   {
+    "id": "t2",
+    "start": 10.48,
+    "end": 19.33,
+    "text": "We also need to know what cancer hates, because we want to give it, is that right?"
+   },
+   {
+    "id": "t3",
+    "start": 19.33,
+    "end": 23.33,
+    "text": "She discovered that cancer loves sugar."
+   },
+   {
+    "id": "t4",
+    "start": 23.33,
+    "end": 37.86,
+    "text": "The fact is that a cancer cell consumes 15 times the glucose of any other cell."
+   },
+   {
+    "id": "t5",
+    "start": 37.86,
+    "end": 40.72,
+    "text": "At the end of the lecture, she had an audio."
+   },
+   {
+    "id": "t6",
+    "start": 40.72,
+    "end": 42.56,
+    "text": "I said, what is it?"
+   },
+   {
+    "id": "t7",
+    "start": 42.56,
+    "end": 45.2,
+    "text": "She said, I used to make the..."
+   },
+   {
+    "id": "t8",
+    "start": 45.2,
+    "end": 48.28,
+    "text": "I don't know if you're familiar with pavlovas."
+   },
+   {
+    "id": "t9",
+    "start": 48.28,
+    "end": 51.08,
+    "text": "I think it's an Australian dessert,"
+   },
+   {
+    "id": "t10",
+    "start": 51.08,
+    "end": 54.68,
+    "text": "but it's egg whites, beaten with sugar,"
+   },
+   {
+    "id": "t11",
+    "start": 54.68,
+    "end": 55.96,
+    "text": "and then slowly baked."
+   },
+   {
+    "id": "t12",
+    "start": 55.96,
+    "end": 57.68,
+    "text": "So it's like..."
+   },
+   {
+    "id": "t13",
+    "start": 57.68,
+    "end": 60.91,
+    "text": "I think you'd call it a meringue, is that right?"
+   },
+   {
+    "id": "t14",
+    "start": 60.91,
+    "end": 64.55,
+    "text": "She used to make pavlovas, like meringues,"
+   },
+   {
+    "id": "t15",
+    "start": 64.55,
+    "end": 67.64,
+    "text": "and she used to make them this big."
+   },
+   {
+    "id": "t16",
+    "start": 67.64,
+    "end": 72.44,
+    "text": "and on top I think you put whipped cream and fruit or something like that."
+   },
+   {
+    "id": "t17",
+    "start": 72.44,
+    "end": 81.11,
+    "text": "So she'd make a pavlova, she said I would put 16 cups of white sugar into a pavlova this big."
+   },
+   {
+    "id": "t18",
+    "start": 82.98,
+    "end": 89.26,
+    "text": "She said I believe that I have just been feeding my cancer. That was one point."
+   },
+   {
+    "id": "t19",
+    "start": 90.33,
+    "end": 97.34,
+    "text": "And I found when people are conquering cancer and you look at the history there can be a little bit"
+   },
+   {
+    "id": "t20",
+    "start": 97.34,
+    "end": 101.14,
+    "text": "of that, and a little bit of that, and then a little bit over here, maybe a little bit"
+   },
+   {
+    "id": "t21",
+    "start": 101.14,
+    "end": 108.25,
+    "text": "of genetics. But remember genetics loads the gun, lifestyle pulls the trigger. Cancer also"
+   },
+   {
+    "id": "t22",
+    "start": 108.25,
+    "end": 118.76,
+    "text": "loves an acid environment. And guess what is the most acid substance you can put into"
+   },
+   {
+    "id": "t23",
+    "start": 118.76,
+    "end": 127.2,
+    "text": "your body? Refined sugar. Nothing wrong with the sugarcane. All those minerals alkalize"
+   },
+   {
+    "id": "t24",
+    "start": 127.2,
+    "end": 133.09,
+    "text": "it up but when they extract the sugar out of the sugarcane plant it becomes a"
+   },
+   {
+    "id": "t25",
+    "start": 133.09,
+    "end": 141.58,
+    "text": "pure acid. Dr. Yutkin, he wrote a book called Pure White and Deadly on sugar. In"
+   },
+   {
+    "id": "t26",
+    "start": 141.58,
+    "end": 145.5,
+    "text": "fact one of the chapters in his book he claims it should be banned it is so"
+   },
+   {
+    "id": "t27",
+    "start": 145.5,
+    "end": 156.71,
+    "text": "dangerous. How could something so sweet be so bad? Sugar also loves a no oxygen"
+   },
+   {
+    "id": "t28",
+    "start": 156.71,
+    "end": 167.45,
+    "text": "environment. So what does what does cancer hate? Cancer hates it when you"
+   },
+   {
+    "id": "t29",
+    "start": 167.45,
+    "end": 176.72,
+    "text": "stop the sugar or stop all glucose. Cancer is not happy when you create an"
+   },
+   {
+    "id": "t30",
+    "start": 176.72,
+    "end": 190.75,
+    "text": "alkaline environment in the in the body and cancer hates oxygen. I have many"
+   },
+   {
+    "id": "t31",
+    "start": 190.75,
+    "end": 203.36,
+    "text": "I have many books in my library at home, being an avid reader, and I have many books on doctors, specialists, naturopaths, worldwide who are conquering cancer."
+   },
+   {
+    "id": "t32",
+    "start": 203.36,
+    "end": 212.36,
+    "text": "And when I read them, there are differences, there are slight differences. Some do IV vitamin C, some do apricot kernel seeds."
+   },
+   {
+    "id": "t33",
+    "start": 212.36,
+    "end": 219.67,
+    "text": "differences, but there's three common denominators. And I have put these three"
+   },
+   {
+    "id": "t34",
+    "start": 219.67,
+    "end": 227.41,
+    "text": "common denominators here. Let me show you why cancer cells love glucose. This"
+   },
+   {
+    "id": "t35",
+    "start": 227.41,
+    "end": 232.61,
+    "text": "week we've looked at this a few times. Here's the cell, the central business"
+   },
+   {
+    "id": "t36",
+    "start": 232.61,
+    "end": 237.87,
+    "text": "district of the human body. The glucose goes in. It goes through a 20-step"
+   },
+   {
+    "id": "t37",
+    "start": 237.87,
+    "end": 245.1,
+    "text": "pathway. And this 20-step pathway gives us two units of energy. The end result of"
+   },
+   {
+    "id": "t38",
+    "start": 245.1,
+    "end": 250.14,
+    "text": "the 20-step pathway is a chemical form of glucose called pyruvate. We'll just"
+   },
+   {
+    "id": "t39",
+    "start": 250.14,
+    "end": 256.73,
+    "text": "call it the P. It's the chemical form of glucose that gets fed into the 8-step"
+   },
+   {
+    "id": "t40",
+    "start": 256.73,
+    "end": 261.17,
+    "text": "pathway. This 8-step pathway is called the powerhouse of the cell for good"
+   },
+   {
+    "id": "t41",
+    "start": 261.17,
+    "end": 267.49,
+    "text": "reason. It delivers 36 units of energy. What makes the difference? It's"
+   },
+   {
+    "id": "t42",
+    "start": 267.49,
+    "end": 270.21,
+    "text": "It's oxygen."
+   },
+   {
+    "id": "t43",
+    "start": 270.21,
+    "end": 272.77,
+    "text": "This is the pathway that uses oxygen."
+   },
+   {
+    "id": "t44",
+    "start": 272.77,
+    "end": 276.99,
+    "text": "This pathway uses no oxygen."
+   },
+   {
+    "id": "t45",
+    "start": 276.99,
+    "end": 279.23,
+    "text": "This pathway, this 20-step pathway,"
+   },
+   {
+    "id": "t46",
+    "start": 279.23,
+    "end": 282.47,
+    "text": "is also a very fast pathway."
+   },
+   {
+    "id": "t47",
+    "start": 282.47,
+    "end": 286.19,
+    "text": "So it's consuming a lot of glucose."
+   },
+   {
+    "id": "t48",
+    "start": 286.19,
+    "end": 291.71,
+    "text": "So basically, this is a cancer cell."
+   },
+   {
+    "id": "t49",
+    "start": 291.71,
+    "end": 294.25,
+    "text": "You will find many people who are,"
+   },
+   {
+    "id": "t50",
+    "start": 294.25,
+    "end": 296.65,
+    "text": "who are, I always say, conquering cancer,"
+   },
+   {
+    "id": "t51",
+    "start": 296.65,
+    "end": 297.93,
+    "text": "no matter what stage."
+   },
+   {
+    "id": "t52",
+    "start": 297.93,
+    "end": 305.89,
+    "text": "not suffering from, not being taken down by, conquering cancer."
+   },
+   {
+    "id": "t53",
+    "start": 305.89,
+    "end": 308.89,
+    "text": "You will find a lot of them have no energy."
+   },
+   {
+    "id": "t54",
+    "start": 308.89,
+    "end": 313.31,
+    "text": "Very little energy, because a lot of their cells are running up here."
+   },
+   {
+    "id": "t55",
+    "start": 313.31,
+    "end": 315.31,
+    "text": "That's where the cancer cells run."
+   },
+   {
+    "id": "t56",
+    "start": 315.31,
+    "end": 321.31,
+    "text": "And that's a very fast pathway, so they're going to be eating up 15 times the glucose."
+   },
+   {
+    "id": "t57",
+    "start": 321.31,
+    "end": 324.44,
+    "text": "And they don't need oxygen to run."
+   },
+   {
+    "id": "t58",
+    "start": 324.44,
+    "end": 332.68,
+    "text": "So let me show you what Elizabeth Cot did."
+   },
+   {
+    "id": "t59",
+    "start": 332.68,
+    "end": 341.0,
+    "text": "Elizabeth Codd came to me and said, anything you say, I will do. Oh, I love it when people say that."
+   },
+   {
+    "id": "t60",
+    "start": 341.0,
+    "end": 347.02,
+    "text": "Anything you say, I will do. So I said, this is what we're going to do."
+   },
+   {
+    "id": "t61",
+    "start": 347.02,
+    "end": 353.91,
+    "text": "We're going to starve that cancer. How do you starve it?"
+   },
+   {
+    "id": "t62",
+    "start": 353.91,
+    "end": 359.68,
+    "text": "To starve it, you've got to know what it loves. It loves glucose."
+   },
+   {
+    "id": "t63",
+    "start": 359.68,
+    "end": 369.24,
+    "text": "And so we suggested six weeks, no sugar, no honey, no sweet at all."
+   },
+   {
+    "id": "t64",
+    "start": 369.24,
+    "end": 375.36,
+    "text": "What's she gonna eat? There's a lot of vegetables, there's a lot of legumes,"
+   },
+   {
+    "id": "t65",
+    "start": 375.36,
+    "end": 378.41,
+    "text": "there's a lot of nuts, there's a lot of seeds."
+   },
+   {
+    "id": "t66",
+    "start": 378.41,
+    "end": 381.51,
+    "text": "So you can get a lovely variety."
+   },
+   {
+    "id": "t67",
+    "start": 381.51,
+    "end": 386.01,
+    "text": "Some people that come to us, they decide to make Monday lima bean day,"
+   },
+   {
+    "id": "t68",
+    "start": 386.01,
+    "end": 392.51,
+    "text": "Tuesday lentil day, Wednesday organic tofu day,"
+   },
+   {
+    "id": "t69",
+    "start": 392.51,
+    "end": 400.41,
+    "text": "Thursday, like I'd been day, there's so many that you can have a different one every day,"
+   },
+   {
+    "id": "t70",
+    "start": 400.41,
+    "end": 405.75,
+    "text": "and so many different vegetables."
+   },
+   {
+    "id": "t71",
+    "start": 405.75,
+    "end": 415.85,
+    "text": "She also had to check her house to make sure there was no contamination with mold."
+   },
+   {
+    "id": "t72",
+    "start": 415.85,
+    "end": 426.4,
+    "text": "You see, mold loves sugar, it loves a damp environment, and the oncologist Dr. Tullio"
+   },
+   {
+    "id": "t73",
+    "start": 426.4,
+    "end": 434.7,
+    "text": "Simon Cini has written that book. It's called Cancer is a Fungus. Oh, he found as an oncologist"
+   },
+   {
+    "id": "t74",
+    "start": 434.7,
+    "end": 444.04,
+    "text": "every single patient that he tested had some form of Candida in their body. And he was"
+   },
+   {
+    "id": "t75",
+    "start": 444.04,
+    "end": 452.63,
+    "text": "getting 90% success rate. He would get the most alkaline mix called sodium bicarbonate."
+   },
+   {
+    "id": "t76",
+    "start": 452.63,
+    "end": 457.45,
+    "text": "And he would get a portacath, put it into the body, and when he would inject sodium"
+   },
+   {
+    "id": "t77",
+    "start": 457.45,
+    "end": 467.11,
+    "text": "by carbonate straight into the cancer, because cancer cannot survive in the alkaline environment."
+   },
+   {
+    "id": "t78",
+    "start": 467.11,
+    "end": 468.11,
+    "text": "It loves acid."
+   },
+   {
+    "id": "t79",
+    "start": 468.11,
+    "end": 472.62,
+    "text": "90% success rate."
+   },
+   {
+    "id": "t80",
+    "start": 472.62,
+    "end": 476.62,
+    "text": "I have a friend that lives here, you may know her, Dr Emma Fields."
+   },
+   {
+    "id": "t81",
+    "start": 476.62,
+    "end": 484.78,
+    "text": "She took one of her patients to him in Italy, but he had to come to a hotel and he had to"
+   },
+   {
+    "id": "t82",
+    "start": 484.78,
+    "end": 488.42,
+    "text": "dress in dark clothes because he was under investigation."
+   },
+   {
+    "id": "t83",
+    "start": 488.42,
+    "end": 497.08,
+    "text": "In fact, the last I heard he was in jail under a charge of manslaughter."
+   },
+   {
+    "id": "t84",
+    "start": 497.08,
+    "end": 504.39,
+    "text": "My husband said if only he'd given the person chemotherapy, he wouldn't be in jail."
+   },
+   {
+    "id": "t85",
+    "start": 504.39,
+    "end": 507.52,
+    "text": "Am I right?"
+   },
+   {
+    "id": "t86",
+    "start": 507.52,
+    "end": 513.54,
+    "text": "Did someone come to him in their latter stages and they would have passed anyway?"
+   },
+   {
+    "id": "t87",
+    "start": 513.54,
+    "end": 518.94,
+    "text": "One does not know because I presume you have come to the conclusion, as I have, that you"
+   },
+   {
+    "id": "t88",
+    "start": 518.94,
+    "end": 524.6,
+    "text": "can't believe the news."
+   },
+   {
+    "id": "t89",
+    "start": 524.6,
+    "end": 528.32,
+    "text": "my husband sent me a little thing that was on the news."
+   },
+   {
+    "id": "t90",
+    "start": 528.32,
+    "end": 532.32,
+    "text": "Man died from COVID yesterday in Australia."
+   },
+   {
+    "id": "t91",
+    "start": 532.32,
+    "end": 534.5,
+    "text": "He was fully vaccinated."
+   },
+   {
+    "id": "t92",
+    "start": 534.5,
+    "end": 537.16,
+    "text": "And it said, because he was vaccinated,"
+   },
+   {
+    "id": "t93",
+    "start": 537.16,
+    "end": 538.94,
+    "text": "he didn't get it as bad."
+   },
+   {
+    "id": "t94",
+    "start": 544.7,
+    "end": 551.58,
+    "text": "It would have been worse."
+   },
+   {
+    "id": "t95",
+    "start": 551.58,
+    "end": 552.72,
+    "text": "I'll leave it with you."
+   },
+   {
+    "id": "t96",
+    "start": 557.35,
+    "end": 558.85,
+    "text": "I found out that Elizabeth Cott"
+   },
+   {
+    "id": "t97",
+    "start": 558.85,
+    "end": 562.06,
+    "text": "was very fussy in her house."
+   },
+   {
+    "id": "t98",
+    "start": 562.06,
+    "end": 565.28,
+    "text": "But I also found that Elizabeth Cott loved cheese."
+   },
+   {
+    "id": "t99",
+    "start": 567.57,
+    "end": 568.75,
+    "text": "A lady did our program."
+   },
+   {
+    "id": "t100",
+    "start": 568.75,
+    "end": 571.79,
+    "text": "She said, I took my little daughter to the cheese factory."
+   },
+   {
+    "id": "t101",
+    "start": 571.79,
+    "end": 575.55,
+    "text": "We saw huge big blocks of cheese and they were green."
+   },
+   {
+    "id": "t102",
+    "start": 579.08,
+    "end": 581.16,
+    "text": "What they do is they cut the green off"
+   },
+   {
+    "id": "t103",
+    "start": 581.16,
+    "end": 583.28,
+    "text": "and then cut it up and package it."
+   },
+   {
+    "id": "t104",
+    "start": 583.28,
+    "end": 589.24,
+    "text": "So it's very difficult to buy cheese without a fungus in it."
+   },
+   {
+    "id": "t105",
+    "start": 589.6,
+    "end": 594.64,
+    "text": "So to starve the fungus, you make sure"
+   },
+   {
+    "id": "t106",
+    "start": 594.64,
+    "end": 597.24,
+    "text": "that it's not getting sugar."
+   },
+   {
+    "id": "t107",
+    "start": 597.24,
+    "end": 598.08,
+    "text": "Now,"
+   }
+  ]
+ }
+}

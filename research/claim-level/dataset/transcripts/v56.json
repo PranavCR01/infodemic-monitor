@@ -1,0 +1,2546 @@
+{
+ "video_id": "v56",
+ "filename": "v08_ .mp4",
+ "relative_path": "Dataset-Sept-2026/Joshua Ryan Fajardo/NO-MISINFO/v08_ .mp4",
+ "collector": "Joshua Ryan Fajardo",
+ "collector_label": "NO_MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:42:33",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 49.5,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.2,
+    "text": "As a heart surgeon, what are the things"
+   },
+   {
+    "id": "t2",
+    "start": 2.2,
+    "end": 5.08,
+    "text": "you absolutely avoid?"
+   },
+   {
+    "id": "t3",
+    "start": 5.08,
+    "end": 6.64,
+    "text": "Smoking's top of the list."
+   },
+   {
+    "id": "t4",
+    "start": 6.64,
+    "end": 10.94,
+    "text": "I mean, I cannot come up with one single thing"
+   },
+   {
+    "id": "t5",
+    "start": 10.94,
+    "end": 15.74,
+    "text": "that does as much damage to every organ in the body"
+   },
+   {
+    "id": "t6",
+    "start": 15.74,
+    "end": 17.58,
+    "text": "as smoking cigarettes."
+   },
+   {
+    "id": "t7",
+    "start": 17.58,
+    "end": 20.12,
+    "text": "And look, it's incredibly addictive."
+   },
+   {
+    "id": "t8",
+    "start": 20.12,
+    "end": 23.42,
+    "text": "And I know that and I pass no judgment"
+   },
+   {
+    "id": "t9",
+    "start": 23.42,
+    "end": 25.24,
+    "text": "because I know how difficult it is."
+   },
+   {
+    "id": "t10",
+    "start": 25.24,
+    "end": 26.54,
+    "text": "I've been dealing with patients"
+   },
+   {
+    "id": "t11",
+    "start": 26.54,
+    "end": 28.58,
+    "text": "that are chronic smokers for years."
+   },
+   {
+    "id": "t12",
+    "start": 28.58,
+    "end": 30.02,
+    "text": "I understand that."
+   },
+   {
+    "id": "t13",
+    "start": 30.02,
+    "end": 32.66,
+    "text": "that doesn't change the fact"
+   },
+   {
+    "id": "t14",
+    "start": 32.66,
+    "end": 34.98,
+    "text": "that it is the single most dangerous thing"
+   },
+   {
+    "id": "t15",
+    "start": 34.98,
+    "end": 35.82,
+    "text": "you can do for yourself."
+   },
+   {
+    "id": "t16",
+    "start": 35.82,
+    "end": 38.82,
+    "text": "Not to mention the causal relationship with lung cancer"
+   },
+   {
+    "id": "t17",
+    "start": 38.82,
+    "end": 40.6,
+    "text": "and I could keep going."
+   },
+   {
+    "id": "t18",
+    "start": 40.6,
+    "end": 43.7,
+    "text": "So it's probably one, two and three"
+   },
+   {
+    "id": "t19",
+    "start": 43.7,
+    "end": 45.62,
+    "text": "on the list to begin with."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 25,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "@drjeremylondon",
+    "confidence": 0.842
+   },
+   {
+    "time": 0.0,
+    "text": "#1 thing a Heart Surgeon",
+    "confidence": 0.88
+   },
+   {
+    "time": 0.0,
+    "text": "would avoid",
+    "confidence": 0.997
+   },
+   {
+    "time": 0.0,
+    "text": "MEL",
+    "confidence": 0.641
+   },
+   {
+    "time": 0.0,
+    "text": "ROBBINS",
+    "confidence": 0.973
+   },
+   {
+    "time": 0.0,
+    "text": "Surgeon, what",
+    "confidence": 0.803
+   },
+   {
+    "time": 0.0,
+    "text": "Asa Heart",
+    "confidence": 0.8
+   },
+   {
+    "time": 0.0,
+    "text": "things",
+    "confidence": 0.955
+   },
+   {
+    "time": 0.0,
+    "text": "are the",
+    "confidence": 0.755
+   },
+   {
+    "time": 0.0,
+    "text": "absolutely avoid?",
+    "confidence": 0.995
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.55
+   },
+   {
+    "time": 2.0,
+    "text": "drjeremvlondon",
+    "confidence": 0.815
+   },
+   {
+    "time": 2.0,
+    "text": "#1 thing a Heart Surgeon",
+    "confidence": 0.879
+   },
+   {
+    "time": 2.0,
+    "text": "oeeins",
+    "confidence": 0.746
+   },
+   {
+    "time": 2.0,
+    "text": "would avoid",
+    "confidence": 0.997
+   },
+   {
+    "time": 2.0,
+    "text": "MEL",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "ROBBINS",
+    "confidence": 0.925
+   },
+   {
+    "time": 2.0,
+    "text": "Mel Robbins",
+    "confidence": 0.969
+   },
+   {
+    "time": 2.0,
+    "text": "Surgeon, what",
+    "confidence": 0.8
+   },
+   {
+    "time": 2.0,
+    "text": "As a Heart",
+    "confidence": 0.99
+   },
+   {
+    "time": 2.0,
+    "text": "things `",
+    "confidence": 0.703
+   },
+   {
+    "time": 2.0,
+    "text": "are the",
+    "confidence": 0.746
+   },
+   {
+    "time": 2.0,
+    "text": "absolutely avoid?",
+    "confidence": 0.977
+   },
+   {
+    "time": 4.0,
+    "text": "Tikok",
+    "confidence": 0.565
+   },
+   {
+    "time": 4.0,
+    "text": "#1 thing a Heart Surgeon",
+    "confidence": 0.878
+   },
+   {
+    "time": 4.0,
+    "text": "0",
+    "confidence": 0.536
+   },
+   {
+    "time": 4.0,
+    "text": "would avoid",
+    "confidence": 0.997
+   },
+   {
+    "time": 4.0,
+    "text": "MEL",
+    "confidence": 0.997
+   },
+   {
+    "time": 4.0,
+    "text": "Mel Robbins",
+    "confidence": 0.936
+   },
+   {
+    "time": 4.0,
+    "text": "Surgeon, what",
+    "confidence": 0.935
+   },
+   {
+    "time": 4.0,
+    "text": "As a Heart",
+    "confidence": 0.949
+   },
+   {
+    "time": 4.0,
+    "text": "things VoU",
+    "confidence": 0.801
+   },
+   {
+    "time": 4.0,
+    "text": "are the",
+    "confidence": 0.747
+   },
+   {
+    "time": 4.0,
+    "text": "absolutely avoid?",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.0,
+    "text": "MEL",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "MEL",
+    "confidence": 0.996
+   },
+   {
+    "time": 6.0,
+    "text": "Dr: Jeremy London MD",
+    "confidence": 0.683
+   },
+   {
+    "time": 6.0,
+    "text": "Cardiovascular Surgeon",
+    "confidence": 0.865
+   },
+   {
+    "time": 6.0,
+    "text": "Smokingis topof thelist,",
+    "confidence": 0.525
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 0.99
+   },
+   {
+    "time": 6.0,
+    "text": "drjeremylondon",
+    "confidence": 0.914
+   },
+   {
+    "time": 8.0,
+    "text": "MEL",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "ROBBINS",
+    "confidence": 0.584
+   },
+   {
+    "time": 8.0,
+    "text": "MEL",
+    "confidence": 0.632
+   },
+   {
+    "time": 8.0,
+    "text": "Robbins",
+    "confidence": 0.741
+   },
+   {
+    "time": 8.0,
+    "text": "Dr: Jeremy London MD",
+    "confidence": 0.681
+   },
+   {
+    "time": 8.0,
+    "text": "Cardiovascular Surgeon",
+    "confidence": 0.864
+   },
+   {
+    "time": 8.0,
+    "text": "Icannot comeup with one",
+    "confidence": 0.881
+   },
+   {
+    "time": 8.0,
+    "text": "single thing",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "drjeremylondon",
+    "confidence": 0.904
+   },
+   {
+    "time": 10.0,
+    "text": "MEL",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "ROBBINS",
+    "confidence": 0.953
+   },
+   {
+    "time": 10.0,
+    "text": "MEL",
+    "confidence": 0.998
+   },
+   {
+    "time": 10.0,
+    "text": "Robbins",
+    "confidence": 0.753
+   },
+   {
+    "time": 10.0,
+    "text": "Icannot comeup with one",
+    "confidence": 0.931
+   },
+   {
+    "time": 10.0,
+    "text": "single thing",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 10.0,
+    "text": "drjeremylondon",
+    "confidence": 0.877
+   },
+   {
+    "time": 12.0,
+    "text": "MEL",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.0,
+    "text": "ROBBINS",
+    "confidence": 0.786
+   },
+   {
+    "time": 12.0,
+    "text": "MEL",
+    "confidence": 0.998
+   },
+   {
+    "time": 12.0,
+    "text": "Robbins",
+    "confidence": 0.755
+   },
+   {
+    "time": 12.0,
+    "text": "that doesasmuch damage",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "toevery organin thebody",
+    "confidence": 0.81
+   },
+   {
+    "time": 12.0,
+    "text": "smoking cigarettes:",
+    "confidence": 0.729
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 0.988
+   },
+   {
+    "time": 12.0,
+    "text": "as",
+    "confidence": 0.996
+   },
+   {
+    "time": 12.0,
+    "text": "drjeremylondon",
+    "confidence": 0.821
+   },
+   {
+    "time": 14.0,
+    "text": "MEL",
+    "confidence": 0.684
+   },
+   {
+    "time": 14.0,
+    "text": "ROBBINS",
+    "confidence": 0.921
+   },
+   {
+    "time": 14.0,
+    "text": "MEL",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.0,
+    "text": "Robbins",
+    "confidence": 0.816
+   },
+   {
+    "time": 14.0,
+    "text": "that doesasmuch damage",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "toeveryorganin thebody",
+    "confidence": 0.908
+   },
+   {
+    "time": 14.0,
+    "text": "smoking cigarettes:",
+    "confidence": 0.77
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 0.875
+   },
+   {
+    "time": 14.0,
+    "text": "as",
+    "confidence": 0.997
+   },
+   {
+    "time": 14.0,
+    "text": "drjeremylondon",
+    "confidence": 0.852
+   },
+   {
+    "time": 16.0,
+    "text": "MEL",
+    "confidence": 0.967
+   },
+   {
+    "time": 16.0,
+    "text": "ROBBINS",
+    "confidence": 0.99
+   },
+   {
+    "time": 16.0,
+    "text": "MEL",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.0,
+    "text": "Robbins",
+    "confidence": 0.863
+   },
+   {
+    "time": 16.0,
+    "text": "that doesasmuch damage",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "toeveryorganin thebody",
+    "confidence": 0.968
+   },
+   {
+    "time": 16.0,
+    "text": "smoking cigarettes:",
+    "confidence": 0.739
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 0.991
+   },
+   {
+    "time": 16.0,
+    "text": "as",
+    "confidence": 0.997
+   },
+   {
+    "time": 16.0,
+    "text": "drjeremylondon",
+    "confidence": 0.858
+   },
+   {
+    "time": 18.0,
+    "text": "MEL",
+    "confidence": 0.964
+   },
+   {
+    "time": 18.0,
+    "text": "ROBBINS",
+    "confidence": 0.915
+   },
+   {
+    "time": 18.0,
+    "text": "MEL",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.0,
+    "text": "Robbins",
+    "confidence": 0.837
+   },
+   {
+    "time": 18.0,
+    "text": "AndnoW, look;",
+    "confidence": 0.536
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 0.992
+   },
+   {
+    "time": 18.0,
+    "text": "drjeremylondon",
+    "confidence": 0.895
+   },
+   {
+    "time": 20.0,
+    "text": "MEL",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "ROBBINS",
+    "confidence": 0.981
+   },
+   {
+    "time": 20.0,
+    "text": "MEL",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.0,
+    "text": "Robbins",
+    "confidence": 0.829
+   },
+   {
+    "time": 20.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 20.0,
+    "text": "drjeremylondon",
+    "confidence": 0.661
+   },
+   {
+    "time": 22.0,
+    "text": "MEL",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "MEL",
+    "confidence": 0.93
+   },
+   {
+    "time": 22.0,
+    "text": "no judgement because |",
+    "confidence": 0.573
+   },
+   {
+    "time": 22.0,
+    "text": "know how difficultitis:",
+    "confidence": 0.845
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 0.988
+   },
+   {
+    "time": 22.0,
+    "text": "drjeremylondon",
+    "confidence": 0.826
+   },
+   {
+    "time": 24.0,
+    "text": "MEL",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "Robbins",
+    "confidence": 0.613
+   },
+   {
+    "time": 24.0,
+    "text": "MEL",
+    "confidence": 0.998
+   },
+   {
+    "time": 24.0,
+    "text": "Robbins",
+    "confidence": 0.711
+   },
+   {
+    "time": 24.0,
+    "text": "nojudgement because |",
+    "confidence": 0.599
+   },
+   {
+    "time": 24.0,
+    "text": "know how difficultitis-",
+    "confidence": 0.588
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 0.995
+   },
+   {
+    "time": 24.0,
+    "text": "drjeremylondon",
+    "confidence": 0.812
+   },
+   {
+    "time": 26.0,
+    "text": "MEL",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "ROBBINS",
+    "confidence": 0.558
+   },
+   {
+    "time": 26.0,
+    "text": "MEL",
+    "confidence": 0.99
+   },
+   {
+    "time": 26.0,
+    "text": "Robbins",
+    "confidence": 0.836
+   },
+   {
+    "time": 26.0,
+    "text": "patientsthatare chronic",
+    "confidence": 0.941
+   },
+   {
+    "time": 26.0,
+    "text": "smokers for years:",
+    "confidence": 0.653
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 0.992
+   },
+   {
+    "time": 26.0,
+    "text": "drjeremylondon",
+    "confidence": 0.852
+   },
+   {
+    "time": 28.0,
+    "text": "Roeeins",
+    "confidence": 0.583
+   },
+   {
+    "time": 28.0,
+    "text": "MEL",
+    "confidence": 0.999
+   },
+   {
+    "time": 28.0,
+    "text": "ve been dealing with",
+    "confidence": 0.998
+   },
+   {
+    "time": 28.0,
+    "text": "patients that are chronic",
+    "confidence": 0.734
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 0.987
+   },
+   {
+    "time": 28.0,
+    "text": "smokers for years:",
+    "confidence": 0.876
+   },
+   {
+    "time": 28.0,
+    "text": "drjeremvlomdom",
+    "confidence": 0.745
+   },
+   {
+    "time": 30.0,
+    "text": "MEL",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "MEL",
+    "confidence": 0.998
+   },
+   {
+    "time": 30.0,
+    "text": "Robbins",
+    "confidence": 0.822
+   },
+   {
+    "time": 30.0,
+    "text": "lunderstand that That",
+    "confidence": 0.63
+   },
+   {
+    "time": 30.0,
+    "text": "doesn\"t change the fact",
+    "confidence": 0.807
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 0.971
+   },
+   {
+    "time": 30.0,
+    "text": "drjeremylondon",
+    "confidence": 0.611
+   },
+   {
+    "time": 32.0,
+    "text": "MEL",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "ROBBINS",
+    "confidence": 0.963
+   },
+   {
+    "time": 32.0,
+    "text": "MEL",
+    "confidence": 0.999
+   },
+   {
+    "time": 32.0,
+    "text": "Robbins",
+    "confidence": 0.754
+   },
+   {
+    "time": 32.0,
+    "text": "doesn\"t change the fact",
+    "confidence": 0.925
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 32.0,
+    "text": "drjeremylondon",
+    "confidence": 0.712
+   },
+   {
+    "time": 34.0,
+    "text": "MEL",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "ROBBINS",
+    "confidence": 0.634
+   },
+   {
+    "time": 34.0,
+    "text": "MEL",
+    "confidence": 0.999
+   },
+   {
+    "time": 34.0,
+    "text": "Robbins",
+    "confidence": 0.644
+   },
+   {
+    "time": 34.0,
+    "text": "thatitis thesinglemost",
+    "confidence": 0.775
+   },
+   {
+    "time": 34.0,
+    "text": "thing",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "dangerous",
+    "confidence": 0.998
+   },
+   {
+    "time": 34.0,
+    "text": "youcan",
+    "confidence": 0.993
+   },
+   {
+    "time": 34.0,
+    "text": "do for yourself;",
+    "confidence": 0.776
+   },
+   {
+    "time": 34.0,
+    "text": "TikTok",
+    "confidence": 0.992
+   },
+   {
+    "time": 34.0,
+    "text": "drjeremylondon",
+    "confidence": 0.836
+   },
+   {
+    "time": 36.0,
+    "text": "MEL",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "ROBBINS",
+    "confidence": 0.896
+   },
+   {
+    "time": 36.0,
+    "text": "6",
+    "confidence": 0.606
+   },
+   {
+    "time": 36.0,
+    "text": "MEL",
+    "confidence": 0.998
+   },
+   {
+    "time": 36.0,
+    "text": "Robbins",
+    "confidence": 0.812
+   },
+   {
+    "time": 36.0,
+    "text": "not to mention the causal",
+    "confidence": 0.718
+   },
+   {
+    "time": 36.0,
+    "text": "relationship with lung",
+    "confidence": 0.98
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 36.0,
+    "text": "cancera",
+    "confidence": 0.952
+   },
+   {
+    "time": 36.0,
+    "text": "drjeremylondon",
+    "confidence": 0.765
+   },
+   {
+    "time": 38.0,
+    "text": "MEL",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "ROBBINS",
+    "confidence": 0.767
+   },
+   {
+    "time": 38.0,
+    "text": "N",
+    "confidence": 0.667
+   },
+   {
+    "time": 38.0,
+    "text": "MEL",
+    "confidence": 0.998
+   },
+   {
+    "time": 38.0,
+    "text": "Robbins",
+    "confidence": 0.78
+   },
+   {
+    "time": 38.0,
+    "text": "not tomention the causal",
+    "confidence": 0.679
+   },
+   {
+    "time": 38.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 38.0,
+    "text": "cancera",
+    "confidence": 0.687
+   },
+   {
+    "time": 38.0,
+    "text": "drjeremylondon",
+    "confidence": 0.734
+   },
+   {
+    "time": 40.0,
+    "text": "MEL",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "MEL",
+    "confidence": 0.998
+   },
+   {
+    "time": 40.0,
+    "text": "keep;",
+    "confidence": 0.876
+   },
+   {
+    "time": 40.0,
+    "text": "Andl; Icouldl",
+    "confidence": 0.711
+   },
+   {
+    "time": 40.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "drjeremylondon",
+    "confidence": 0.899
+   },
+   {
+    "time": 42.0,
+    "text": "MEL",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "ROBBINS",
+    "confidence": 0.729
+   },
+   {
+    "time": 42.0,
+    "text": "6",
+    "confidence": 0.764
+   },
+   {
+    "time": 42.0,
+    "text": "MEL",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.0,
+    "text": "keepgoing: Soit\"s",
+    "confidence": 0.906
+   },
+   {
+    "time": 42.0,
+    "text": "probablyone,",
+    "confidence": 0.712
+   },
+   {
+    "time": 42.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.0,
+    "text": "drjeremylondon",
+    "confidence": 0.948
+   },
+   {
+    "time": 44.0,
+    "text": "MEL",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "ROBBINS",
+    "confidence": 0.948
+   },
+   {
+    "time": 44.0,
+    "text": "N",
+    "confidence": 0.607
+   },
+   {
+    "time": 44.0,
+    "text": "MEL",
+    "confidence": 0.999
+   },
+   {
+    "time": 44.0,
+    "text": "two andthreeon the; on",
+    "confidence": 0.594
+   },
+   {
+    "time": 44.0,
+    "text": "thelist to begin with:",
+    "confidence": 0.801
+   },
+   {
+    "time": 44.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 44.0,
+    "text": "drjeremylondon",
+    "confidence": 0.943
+   },
+   {
+    "time": 46.0,
+    "text": "J",
+    "confidence": 0.671
+   },
+   {
+    "time": 46.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 48.0,
+    "text": "J",
+    "confidence": 0.526
+   },
+   {
+    "time": 48.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 48.0,
+    "text": "drjeremylondon",
+    "confidence": 0.862
+   }
+  ],
+  "captions": [
+   {
+    "text": "@drjeremylondon",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.842,
+    "id": "o1"
+   },
+   {
+    "text": "#1 thing a Heart Surgeon",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.88,
+    "id": "o2"
+   },
+   {
+    "text": "would avoid",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.997,
+    "id": "o3"
+   },
+   {
+    "text": "MEL",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.641,
+    "id": "o4"
+   },
+   {
+    "text": "ROBBINS",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.973,
+    "id": "o5"
+   },
+   {
+    "text": "Surgeon, what",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.803,
+    "id": "o6"
+   },
+   {
+    "text": "Asa Heart",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.8,
+    "id": "o7"
+   },
+   {
+    "text": "things",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.955,
+    "id": "o8"
+   },
+   {
+    "text": "are the",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.755,
+    "id": "o9"
+   },
+   {
+    "text": "absolutely avoid?",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.995,
+    "id": "o10"
+   },
+   {
+    "text": "TikTok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.55,
+    "id": "o11"
+   },
+   {
+    "text": "drjeremvlondon",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.815,
+    "id": "o12"
+   },
+   {
+    "text": "#1 thing a Heart Surgeon",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.879,
+    "id": "o13"
+   },
+   {
+    "text": "oeeins",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.746,
+    "id": "o14"
+   },
+   {
+    "text": "would avoid",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.997,
+    "id": "o15"
+   },
+   {
+    "text": "MEL",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.999,
+    "id": "o16"
+   },
+   {
+    "text": "ROBBINS",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.925,
+    "id": "o17"
+   },
+   {
+    "text": "Mel Robbins",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.969,
+    "id": "o18"
+   },
+   {
+    "text": "Surgeon, what",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.8,
+    "id": "o19"
+   },
+   {
+    "text": "As a Heart",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.99,
+    "id": "o20"
+   },
+   {
+    "text": "things `",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.703,
+    "id": "o21"
+   },
+   {
+    "text": "are the",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.746,
+    "id": "o22"
+   },
+   {
+    "text": "absolutely avoid?",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.977,
+    "id": "o23"
+   },
+   {
+    "text": "Tikok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.565,
+    "id": "o24"
+   },
+   {
+    "text": "#1 thing a Heart Surgeon",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.878,
+    "id": "o25"
+   },
+   {
+    "text": "0",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.536,
+    "id": "o26"
+   },
+   {
+    "text": "would avoid",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.997,
+    "id": "o27"
+   },
+   {
+    "text": "MEL",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.997,
+    "id": "o28"
+   },
+   {
+    "text": "Mel Robbins",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.936,
+    "id": "o29"
+   },
+   {
+    "text": "Surgeon, what",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.935,
+    "id": "o30"
+   },
+   {
+    "text": "As a Heart",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.949,
+    "id": "o31"
+   },
+   {
+    "text": "things VoU",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.801,
+    "id": "o32"
+   },
+   {
+    "text": "are the",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.747,
+    "id": "o33"
+   },
+   {
+    "text": "absolutely avoid?",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.999,
+    "id": "o34"
+   },
+   {
+    "text": "MEL",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o35"
+   },
+   {
+    "text": "Dr: Jeremy London MD",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.683,
+    "id": "o36"
+   },
+   {
+    "text": "Cardiovascular Surgeon",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.865,
+    "id": "o37"
+   },
+   {
+    "text": "Smokingis topof thelist,",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.525,
+    "id": "o38"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.99,
+    "id": "o39"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.914,
+    "id": "o40"
+   },
+   {
+    "text": "MEL",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o41"
+   },
+   {
+    "text": "ROBBINS",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.584,
+    "id": "o42"
+   },
+   {
+    "text": "MEL",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.632,
+    "id": "o43"
+   },
+   {
+    "text": "Robbins",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.741,
+    "id": "o44"
+   },
+   {
+    "text": "Dr: Jeremy London MD",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.681,
+    "id": "o45"
+   },
+   {
+    "text": "Cardiovascular Surgeon",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.864,
+    "id": "o46"
+   },
+   {
+    "text": "Icannot comeup with one",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.881,
+    "id": "o47"
+   },
+   {
+    "text": "single thing",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o48"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.999,
+    "id": "o49"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.904,
+    "id": "o50"
+   },
+   {
+    "text": "MEL",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o51"
+   },
+   {
+    "text": "ROBBINS",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.953,
+    "id": "o52"
+   },
+   {
+    "text": "MEL",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.998,
+    "id": "o53"
+   },
+   {
+    "text": "Robbins",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.753,
+    "id": "o54"
+   },
+   {
+    "text": "Icannot comeup with one",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.931,
+    "id": "o55"
+   },
+   {
+    "text": "single thing",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o56"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.997,
+    "id": "o57"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.877,
+    "id": "o58"
+   },
+   {
+    "text": "MEL",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o59"
+   },
+   {
+    "text": "ROBBINS",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.786,
+    "id": "o60"
+   },
+   {
+    "text": "MEL",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.998,
+    "id": "o61"
+   },
+   {
+    "text": "Robbins",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.755,
+    "id": "o62"
+   },
+   {
+    "text": "that doesasmuch damage",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o63"
+   },
+   {
+    "text": "toevery organin thebody",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.81,
+    "id": "o64"
+   },
+   {
+    "text": "smoking cigarettes:",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.729,
+    "id": "o65"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.988,
+    "id": "o66"
+   },
+   {
+    "text": "as",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.996,
+    "id": "o67"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.821,
+    "id": "o68"
+   },
+   {
+    "text": "MEL",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.684,
+    "id": "o69"
+   },
+   {
+    "text": "ROBBINS",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.921,
+    "id": "o70"
+   },
+   {
+    "text": "MEL",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.999,
+    "id": "o71"
+   },
+   {
+    "text": "Robbins",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.816,
+    "id": "o72"
+   },
+   {
+    "text": "that doesasmuch damage",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o73"
+   },
+   {
+    "text": "toeveryorganin thebody",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.908,
+    "id": "o74"
+   },
+   {
+    "text": "smoking cigarettes:",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.77,
+    "id": "o75"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.875,
+    "id": "o76"
+   },
+   {
+    "text": "as",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.997,
+    "id": "o77"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.852,
+    "id": "o78"
+   },
+   {
+    "text": "MEL",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.967,
+    "id": "o79"
+   },
+   {
+    "text": "ROBBINS",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.99,
+    "id": "o80"
+   },
+   {
+    "text": "MEL",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.999,
+    "id": "o81"
+   },
+   {
+    "text": "Robbins",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.863,
+    "id": "o82"
+   },
+   {
+    "text": "that doesasmuch damage",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o83"
+   },
+   {
+    "text": "toeveryorganin thebody",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.968,
+    "id": "o84"
+   },
+   {
+    "text": "smoking cigarettes:",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.739,
+    "id": "o85"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.991,
+    "id": "o86"
+   },
+   {
+    "text": "as",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.997,
+    "id": "o87"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.858,
+    "id": "o88"
+   },
+   {
+    "text": "MEL",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.964,
+    "id": "o89"
+   },
+   {
+    "text": "ROBBINS",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.915,
+    "id": "o90"
+   },
+   {
+    "text": "MEL",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.999,
+    "id": "o91"
+   },
+   {
+    "text": "Robbins",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.837,
+    "id": "o92"
+   },
+   {
+    "text": "AndnoW, look;",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.536,
+    "id": "o93"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.992,
+    "id": "o94"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.895,
+    "id": "o95"
+   },
+   {
+    "text": "MEL",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o96"
+   },
+   {
+    "text": "ROBBINS",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.981,
+    "id": "o97"
+   },
+   {
+    "text": "MEL",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.999,
+    "id": "o98"
+   },
+   {
+    "text": "Robbins",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.829,
+    "id": "o99"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.997,
+    "id": "o100"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.661,
+    "id": "o101"
+   },
+   {
+    "text": "MEL",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o102"
+   },
+   {
+    "text": "no judgement because |",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.573,
+    "id": "o103"
+   },
+   {
+    "text": "know how difficultitis:",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.845,
+    "id": "o104"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.988,
+    "id": "o105"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.826,
+    "id": "o106"
+   },
+   {
+    "text": "MEL",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o107"
+   },
+   {
+    "text": "Robbins",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.613,
+    "id": "o108"
+   },
+   {
+    "text": "MEL",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.998,
+    "id": "o109"
+   },
+   {
+    "text": "Robbins",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.711,
+    "id": "o110"
+   },
+   {
+    "text": "nojudgement because |",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.599,
+    "id": "o111"
+   },
+   {
+    "text": "know how difficultitis-",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.588,
+    "id": "o112"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.995,
+    "id": "o113"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.812,
+    "id": "o114"
+   },
+   {
+    "text": "MEL",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o115"
+   },
+   {
+    "text": "ROBBINS",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.558,
+    "id": "o116"
+   },
+   {
+    "text": "MEL",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.99,
+    "id": "o117"
+   },
+   {
+    "text": "Robbins",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.836,
+    "id": "o118"
+   },
+   {
+    "text": "patientsthatare chronic",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.941,
+    "id": "o119"
+   },
+   {
+    "text": "smokers for years:",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.653,
+    "id": "o120"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.992,
+    "id": "o121"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.852,
+    "id": "o122"
+   },
+   {
+    "text": "Roeeins",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.583,
+    "id": "o123"
+   },
+   {
+    "text": "MEL",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.999,
+    "id": "o124"
+   },
+   {
+    "text": "ve been dealing with",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.998,
+    "id": "o125"
+   },
+   {
+    "text": "patients that are chronic",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.734,
+    "id": "o126"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.987,
+    "id": "o127"
+   },
+   {
+    "text": "smokers for years:",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.876,
+    "id": "o128"
+   },
+   {
+    "text": "drjeremvlomdom",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.745,
+    "id": "o129"
+   },
+   {
+    "text": "MEL",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o130"
+   },
+   {
+    "text": "Robbins",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.822,
+    "id": "o131"
+   },
+   {
+    "text": "lunderstand that That",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.63,
+    "id": "o132"
+   },
+   {
+    "text": "doesn\"t change the fact",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.807,
+    "id": "o133"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.971,
+    "id": "o134"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.611,
+    "id": "o135"
+   },
+   {
+    "text": "MEL",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o136"
+   },
+   {
+    "text": "ROBBINS",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.963,
+    "id": "o137"
+   },
+   {
+    "text": "MEL",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.999,
+    "id": "o138"
+   },
+   {
+    "text": "Robbins",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.754,
+    "id": "o139"
+   },
+   {
+    "text": "doesn\"t change the fact",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.925,
+    "id": "o140"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.997,
+    "id": "o141"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.712,
+    "id": "o142"
+   },
+   {
+    "text": "MEL",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o143"
+   },
+   {
+    "text": "ROBBINS",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.634,
+    "id": "o144"
+   },
+   {
+    "text": "MEL",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.999,
+    "id": "o145"
+   },
+   {
+    "text": "Robbins",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.644,
+    "id": "o146"
+   },
+   {
+    "text": "thatitis thesinglemost",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.775,
+    "id": "o147"
+   },
+   {
+    "text": "thing",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o148"
+   },
+   {
+    "text": "dangerous",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.998,
+    "id": "o149"
+   },
+   {
+    "text": "youcan",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.993,
+    "id": "o150"
+   },
+   {
+    "text": "do for yourself;",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.776,
+    "id": "o151"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.992,
+    "id": "o152"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.836,
+    "id": "o153"
+   },
+   {
+    "text": "MEL",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o154"
+   },
+   {
+    "text": "ROBBINS",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.896,
+    "id": "o155"
+   },
+   {
+    "text": "6",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.606,
+    "id": "o156"
+   },
+   {
+    "text": "MEL",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.998,
+    "id": "o157"
+   },
+   {
+    "text": "Robbins",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.812,
+    "id": "o158"
+   },
+   {
+    "text": "not to mention the causal",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.718,
+    "id": "o159"
+   },
+   {
+    "text": "relationship with lung",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.98,
+    "id": "o160"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.997,
+    "id": "o161"
+   },
+   {
+    "text": "cancera",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.952,
+    "id": "o162"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.765,
+    "id": "o163"
+   },
+   {
+    "text": "MEL",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o164"
+   },
+   {
+    "text": "ROBBINS",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.767,
+    "id": "o165"
+   },
+   {
+    "text": "N",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.667,
+    "id": "o166"
+   },
+   {
+    "text": "MEL",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.998,
+    "id": "o167"
+   },
+   {
+    "text": "Robbins",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.78,
+    "id": "o168"
+   },
+   {
+    "text": "not tomention the causal",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.679,
+    "id": "o169"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.999,
+    "id": "o170"
+   },
+   {
+    "text": "cancera",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.687,
+    "id": "o171"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.734,
+    "id": "o172"
+   },
+   {
+    "text": "MEL",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o173"
+   },
+   {
+    "text": "keep;",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.876,
+    "id": "o174"
+   },
+   {
+    "text": "Andl; Icouldl",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.711,
+    "id": "o175"
+   },
+   {
+    "text": "TikTok",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o176"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.899,
+    "id": "o177"
+   },
+   {
+    "text": "MEL",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o178"
+   },
+   {
+    "text": "ROBBINS",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.729,
+    "id": "o179"
+   },
+   {
+    "text": "6",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.764,
+    "id": "o180"
+   },
+   {
+    "text": "MEL",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.999,
+    "id": "o181"
+   },
+   {
+    "text": "keepgoing: Soit\"s",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.906,
+    "id": "o182"
+   },
+   {
+    "text": "probablyone,",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.712,
+    "id": "o183"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.999,
+    "id": "o184"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.948,
+    "id": "o185"
+   },
+   {
+    "text": "MEL",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o186"
+   },
+   {
+    "text": "ROBBINS",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.948,
+    "id": "o187"
+   },
+   {
+    "text": "N",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.607,
+    "id": "o188"
+   },
+   {
+    "text": "MEL",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.999,
+    "id": "o189"
+   },
+   {
+    "text": "two andthreeon the; on",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.594,
+    "id": "o190"
+   },
+   {
+    "text": "thelist to begin with:",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.801,
+    "id": "o191"
+   },
+   {
+    "text": "TikTok",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.999,
+    "id": "o192"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.943,
+    "id": "o193"
+   },
+   {
+    "text": "J",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.671,
+    "id": "o194"
+   },
+   {
+    "text": "TikTok",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.999,
+    "id": "o195"
+   },
+   {
+    "text": "J",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.526,
+    "id": "o196"
+   },
+   {
+    "text": "TikTok",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.998,
+    "id": "o197"
+   },
+   {
+    "text": "drjeremylondon",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.862,
+    "id": "o198"
+   }
+  ]
+ }
+}

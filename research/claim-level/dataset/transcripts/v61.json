@@ -1,0 +1,1325 @@
+{
+ "video_id": "v61",
+ "filename": "v12044gd0000ct5u67fog65h7sv3dh80.mp4",
+ "relative_path": "Dataset-Sept-2026/Joshua Ryan Fajardo/MISINFO/v12044gd0000ct5u67fog65h7sv3dh80.mp4",
+ "collector": "Joshua Ryan Fajardo",
+ "collector_label": "MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:42:33",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 66.73,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.4,
+    "end": 3.8,
+    "text": "Stop drinking water, it is actually quite dangerous."
+   },
+   {
+    "id": "t2",
+    "start": 3.8,
+    "end": 5.0,
+    "text": "Let me explain."
+   },
+   {
+    "id": "t3",
+    "start": 5.0,
+    "end": 7.64,
+    "text": "Most city tap water has three things in it"
+   },
+   {
+    "id": "t4",
+    "start": 7.64,
+    "end": 9.5,
+    "text": "that you want to avoid that are not only harmful"
+   },
+   {
+    "id": "t5",
+    "start": 9.5,
+    "end": 11.98,
+    "text": "to your brain, but harmful to your overall body health."
+   },
+   {
+    "id": "t6",
+    "start": 11.98,
+    "end": 14.3,
+    "text": "Number one, this has been reported in the news a lot,"
+   },
+   {
+    "id": "t7",
+    "start": 14.3,
+    "end": 16.18,
+    "text": "it is prescription drugs."
+   },
+   {
+    "id": "t8",
+    "start": 16.18,
+    "end": 19.26,
+    "text": "A lot of city water has prescription drugs in it."
+   },
+   {
+    "id": "t9",
+    "start": 19.26,
+    "end": 20.1,
+    "text": "Why?"
+   },
+   {
+    "id": "t10",
+    "start": 20.1,
+    "end": 22.56,
+    "text": "Well, a lot of people flush their unused medications"
+   },
+   {
+    "id": "t11",
+    "start": 22.56,
+    "end": 23.62,
+    "text": "down the toilet."
+   },
+   {
+    "id": "t12",
+    "start": 23.62,
+    "end": 26.04,
+    "text": "Number two, this ingredient is actually illegal in Europe."
+   },
+   {
+    "id": "t13",
+    "start": 26.04,
+    "end": 28.06,
+    "text": "It is glyphosate, also known as Roundup."
+   },
+   {
+    "id": "t14",
+    "start": 28.06,
+    "end": 30.86,
+    "text": "We now know that roundup is actually in our rainwater."
+   },
+   {
+    "id": "t15",
+    "start": 30.86,
+    "end": 33.14,
+    "text": "That means it's in our groundwater, it's in our well water,"
+   },
+   {
+    "id": "t16",
+    "start": 33.14,
+    "end": 35.74,
+    "text": "and it's in our tap water."
+   },
+   {
+    "id": "t17",
+    "start": 35.74,
+    "end": 37.3,
+    "text": "So you don't wanna drink tap water"
+   },
+   {
+    "id": "t18",
+    "start": 37.3,
+    "end": 39.26,
+    "text": "because it likely has glyphosate in it."
+   },
+   {
+    "id": "t19",
+    "start": 39.26,
+    "end": 41.1,
+    "text": "That is a neurotoxin."
+   },
+   {
+    "id": "t20",
+    "start": 41.1,
+    "end": 42.34,
+    "text": "Number three is fluoride."
+   },
+   {
+    "id": "t21",
+    "start": 42.34,
+    "end": 44.9,
+    "text": "Fluoride is damaging to both the brain and the body."
+   },
+   {
+    "id": "t22",
+    "start": 44.9,
+    "end": 47.22,
+    "text": "Big studies in China show that children"
+   },
+   {
+    "id": "t23",
+    "start": 47.22,
+    "end": 49.78,
+    "text": "who drink fluoridated tap water actually have lower IQ."
+   },
+   {
+    "id": "t24",
+    "start": 49.78,
+    "end": 52.26,
+    "text": "So it actually lowers IQ in children."
+   },
+   {
+    "id": "t25",
+    "start": 52.26,
+    "end": 53.58,
+    "text": "It can harm the pineal gland."
+   },
+   {
+    "id": "t26",
+    "start": 53.58,
+    "end": 55.22,
+    "text": "It can even harm the teeth and the bones."
+   },
+   {
+    "id": "t27",
+    "start": 55.22,
+    "end": 56.98,
+    "text": "So to avoid all three of these things"
+   },
+   {
+    "id": "t28",
+    "start": 56.98,
+    "end": 63.54,
+    "text": "are found in most tap water in the United States. I recommend drinking reverse osmosis or distilled water."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 34,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 0.0,
+    "text": "@ robertwblove",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "STOP Drinking a water, it is",
+    "confidence": 0.928
+   },
+   {
+    "time": 2.0,
+    "text": "actually quite dangerous",
+    "confidence": 0.942
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 2.0,
+    "text": "@ robertwblove",
+    "confidence": 0.762
+   },
+   {
+    "time": 4.0,
+    "text": "STOP Drinking a water, it is",
+    "confidence": 0.926
+   },
+   {
+    "time": 4.0,
+    "text": "actually quite dangerous",
+    "confidence": 0.87
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.995
+   },
+   {
+    "time": 4.0,
+    "text": "@ robertwblove",
+    "confidence": 0.761
+   },
+   {
+    "time": 6.0,
+    "text": "STOP Drinking a water, it is",
+    "confidence": 0.931
+   },
+   {
+    "time": 6.0,
+    "text": "actually quite dangerous",
+    "confidence": 0.822
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 0.765
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 0.861
+   },
+   {
+    "time": 12.0,
+    "text": "@robenwblove",
+    "confidence": 0.69
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 0.989
+   },
+   {
+    "time": 14.0,
+    "text": "rObertublove",
+    "confidence": 0.726
+   },
+   {
+    "time": 16.0,
+    "text": "Harvard Health",
+    "confidence": 0.956
+   },
+   {
+    "time": 16.0,
+    "text": "Publishing",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "HARVARD MEDICAL SCHOOL",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.0,
+    "text": "Drugs in the water",
+    "confidence": 0.857
+   },
+   {
+    "time": 16.0,
+    "text": "June 1,2011",
+    "confidence": 0.997
+   },
+   {
+    "time": 16.0,
+    "text": "Pharmaceutical pollution doesn't seem to be",
+    "confidence": 0.731
+   },
+   {
+    "time": 16.0,
+    "text": "harming humans",
+    "confidence": 0.618
+   },
+   {
+    "time": 16.0,
+    "text": "but disturbing clues from",
+    "confidence": 0.73
+   },
+   {
+    "time": 16.0,
+    "text": "yet;",
+    "confidence": 0.93
+   },
+   {
+    "time": 16.0,
+    "text": "aquatic life suggest now is the time for preventive",
+    "confidence": 0.707
+   },
+   {
+    "time": 16.0,
+    "text": "action:",
+    "confidence": 0.958
+   },
+   {
+    "time": 16.0,
+    "text": "@ robenwblove",
+    "confidence": 0.555
+   },
+   {
+    "time": 18.0,
+    "text": "Harvard Health",
+    "confidence": 0.958
+   },
+   {
+    "time": 18.0,
+    "text": "Publishing",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "HARVARD MEDICAL SCHOOL",
+    "confidence": 0.998
+   },
+   {
+    "time": 18.0,
+    "text": "Drugs in the water",
+    "confidence": 0.808
+   },
+   {
+    "time": 18.0,
+    "text": "June 1,2011",
+    "confidence": 0.992
+   },
+   {
+    "time": 18.0,
+    "text": "Pharmaceutical pollution doesn't seem to be",
+    "confidence": 0.705
+   },
+   {
+    "time": 18.0,
+    "text": "but disturbing clues from",
+    "confidence": 0.795
+   },
+   {
+    "time": 18.0,
+    "text": "harming humans",
+    "confidence": 0.743
+   },
+   {
+    "time": 18.0,
+    "text": "yet;",
+    "confidence": 0.943
+   },
+   {
+    "time": 18.0,
+    "text": "aquatic life suggest now is the time for preventive",
+    "confidence": 0.602
+   },
+   {
+    "time": 18.0,
+    "text": "action:",
+    "confidence": 0.953
+   },
+   {
+    "time": 20.0,
+    "text": "@ robentwblove",
+    "confidence": 0.501
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 0.613
+   },
+   {
+    "time": 28.0,
+    "text": "Glvphosate (ie RoundUp)",
+    "confidence": 0.887
+   },
+   {
+    "time": 28.0,
+    "text": "@robertwblove",
+    "confidence": 0.911
+   },
+   {
+    "time": 30.0,
+    "text": "Glvphosate (ie RoundUp)",
+    "confidence": 0.954
+   },
+   {
+    "time": 30.0,
+    "text": "d",
+    "confidence": 0.711
+   },
+   {
+    "time": 30.0,
+    "text": "@ robertwpiove",
+    "confidence": 0.669
+   },
+   {
+    "time": 32.0,
+    "text": "Glvphosate (ie RoundUp)",
+    "confidence": 0.907
+   },
+   {
+    "time": 32.0,
+    "text": "robertwblove",
+    "confidence": 0.601
+   },
+   {
+    "time": 38.0,
+    "text": "Obenwblove",
+    "confidence": 0.84
+   },
+   {
+    "time": 40.0,
+    "text": "TiikTok",
+    "confidence": 0.802
+   },
+   {
+    "time": 42.0,
+    "text": "Tiktok",
+    "confidence": 0.669
+   },
+   {
+    "time": 44.0,
+    "text": "3: Fluoride",
+    "confidence": 0.999
+   },
+   {
+    "time": 48.0,
+    "text": "academia edu",
+    "confidence": 0.692
+   },
+   {
+    "time": 48.0,
+    "text": "Effect of high-fluoride water on",
+    "confidence": 0.817
+   },
+   {
+    "time": 48.0,
+    "text": "intelligence in children",
+    "confidence": 0.862
+   },
+   {
+    "time": 48.0,
+    "text": "Wang;",
+    "confidence": 0.8
+   },
+   {
+    "time": 48.0,
+    "text": "W Lu; SS Liu",
+    "confidence": 0.704
+   },
+   {
+    "time": 48.0,
+    "text": "Fluoride 33 (2), 74-78, 2000",
+    "confidence": 0.713
+   },
+   {
+    "time": 48.0,
+    "text": "The Intelligence Quotient (IQ) was measured in 118",
+    "confidence": 0.754
+   },
+   {
+    "time": 48.0,
+    "text": "life-long residents",
+    "confidence": 0.765
+   },
+   {
+    "time": 48.0,
+    "text": "children, aged 10-12 years",
+    "confidence": 0.646
+   },
+   {
+    "time": 48.0,
+    "text": "who were",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "in two villages of similar population size and social,",
+    "confidence": 0.722
+   },
+   {
+    "time": 50.0,
+    "text": "academia edu",
+    "confidence": 0.582
+   },
+   {
+    "time": 50.0,
+    "text": "Effect of high-fluoride water on",
+    "confidence": 0.807
+   },
+   {
+    "time": 50.0,
+    "text": "intelligence in children",
+    "confidence": 0.89
+   },
+   {
+    "time": 50.0,
+    "text": "Wang;",
+    "confidence": 0.786
+   },
+   {
+    "time": 50.0,
+    "text": "W Lu; SS Liu",
+    "confidence": 0.707
+   },
+   {
+    "time": 50.0,
+    "text": "Fluoride 33 (2), 74-78, 2000",
+    "confidence": 0.706
+   },
+   {
+    "time": 50.0,
+    "text": "The Intelligence Quotient (IQ) was measured in 118",
+    "confidence": 0.965
+   },
+   {
+    "time": 50.0,
+    "text": "life-long residents",
+    "confidence": 0.709
+   },
+   {
+    "time": 50.0,
+    "text": "children, aged 10-12 years",
+    "confidence": 0.759
+   },
+   {
+    "time": 50.0,
+    "text": "who were",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "in two villages of similar population size and social,",
+    "confidence": 0.629
+   },
+   {
+    "time": 50.0,
+    "text": "and",
+    "confidence": 0.946
+   },
+   {
+    "time": 50.0,
+    "text": "omic",
+    "confidence": 0.597
+   },
+   {
+    "time": 50.0,
+    "text": "obertwblove",
+    "confidence": 0.744
+   },
+   {
+    "time": 52.0,
+    "text": "Tiktok",
+    "confidence": 0.582
+   },
+   {
+    "time": 54.0,
+    "text": "Tikok",
+    "confidence": 0.949
+   },
+   {
+    "time": 56.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 56.0,
+    "text": "robertwblove",
+    "confidence": 0.973
+   },
+   {
+    "time": 60.0,
+    "text": "Healthy Options",
+    "confidence": 0.99
+   },
+   {
+    "time": 60.0,
+    "text": "est",
+    "confidence": 0.607
+   },
+   {
+    "time": 60.0,
+    "text": "erse Osmosis Wate",
+    "confidence": 0.758
+   },
+   {
+    "time": 60.0,
+    "text": "Distilled Water",
+    "confidence": 0.802
+   },
+   {
+    "time": 62.0,
+    "text": "Healthy Options",
+    "confidence": 0.82
+   },
+   {
+    "time": 62.0,
+    "text": "est",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.0,
+    "text": "erse Osmosis Wate",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.0,
+    "text": "Distilled Water",
+    "confidence": 0.799
+   },
+   {
+    "time": 64.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 64.0,
+    "text": "robertwblove",
+    "confidence": 0.98
+   },
+   {
+    "time": 66.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 66.0,
+    "text": "robertwblove",
+    "confidence": 0.98
+   }
+  ],
+  "captions": [
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.998,
+    "id": "o1"
+   },
+   {
+    "text": "@ robertwblove",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o2"
+   },
+   {
+    "text": "STOP Drinking a water, it is",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.928,
+    "id": "o3"
+   },
+   {
+    "text": "actually quite dangerous",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.942,
+    "id": "o4"
+   },
+   {
+    "text": "TikTok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.998,
+    "id": "o5"
+   },
+   {
+    "text": "@ robertwblove",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.762,
+    "id": "o6"
+   },
+   {
+    "text": "STOP Drinking a water, it is",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.926,
+    "id": "o7"
+   },
+   {
+    "text": "actually quite dangerous",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.87,
+    "id": "o8"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.995,
+    "id": "o9"
+   },
+   {
+    "text": "@ robertwblove",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.761,
+    "id": "o10"
+   },
+   {
+    "text": "STOP Drinking a water, it is",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.931,
+    "id": "o11"
+   },
+   {
+    "text": "actually quite dangerous",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.822,
+    "id": "o12"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 10.0,
+    "confidence": 0.861,
+    "id": "o13"
+   },
+   {
+    "text": "@robenwblove",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.69,
+    "id": "o14"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.989,
+    "id": "o15"
+   },
+   {
+    "text": "rObertublove",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.726,
+    "id": "o16"
+   },
+   {
+    "text": "Harvard Health",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.956,
+    "id": "o17"
+   },
+   {
+    "text": "Publishing",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o18"
+   },
+   {
+    "text": "HARVARD MEDICAL SCHOOL",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.999,
+    "id": "o19"
+   },
+   {
+    "text": "Drugs in the water",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.857,
+    "id": "o20"
+   },
+   {
+    "text": "June 1,2011",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.997,
+    "id": "o21"
+   },
+   {
+    "text": "Pharmaceutical pollution doesn't seem to be",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.731,
+    "id": "o22"
+   },
+   {
+    "text": "harming humans",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.618,
+    "id": "o23"
+   },
+   {
+    "text": "but disturbing clues from",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.73,
+    "id": "o24"
+   },
+   {
+    "text": "yet;",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.93,
+    "id": "o25"
+   },
+   {
+    "text": "aquatic life suggest now is the time for preventive",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.707,
+    "id": "o26"
+   },
+   {
+    "text": "action:",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.958,
+    "id": "o27"
+   },
+   {
+    "text": "@ robenwblove",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.555,
+    "id": "o28"
+   },
+   {
+    "text": "Harvard Health",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.958,
+    "id": "o29"
+   },
+   {
+    "text": "Publishing",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 1.0,
+    "id": "o30"
+   },
+   {
+    "text": "HARVARD MEDICAL SCHOOL",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.998,
+    "id": "o31"
+   },
+   {
+    "text": "Drugs in the water",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.808,
+    "id": "o32"
+   },
+   {
+    "text": "June 1,2011",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.992,
+    "id": "o33"
+   },
+   {
+    "text": "Pharmaceutical pollution doesn't seem to be",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.705,
+    "id": "o34"
+   },
+   {
+    "text": "but disturbing clues from",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.795,
+    "id": "o35"
+   },
+   {
+    "text": "harming humans",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.743,
+    "id": "o36"
+   },
+   {
+    "text": "yet;",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.943,
+    "id": "o37"
+   },
+   {
+    "text": "aquatic life suggest now is the time for preventive",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.602,
+    "id": "o38"
+   },
+   {
+    "text": "action:",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.953,
+    "id": "o39"
+   },
+   {
+    "text": "@ robentwblove",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.501,
+    "id": "o40"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.613,
+    "id": "o41"
+   },
+   {
+    "text": "Glvphosate (ie RoundUp)",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.887,
+    "id": "o42"
+   },
+   {
+    "text": "@robertwblove",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.911,
+    "id": "o43"
+   },
+   {
+    "text": "Glvphosate (ie RoundUp)",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.954,
+    "id": "o44"
+   },
+   {
+    "text": "d",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.711,
+    "id": "o45"
+   },
+   {
+    "text": "@ robertwpiove",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.669,
+    "id": "o46"
+   },
+   {
+    "text": "Glvphosate (ie RoundUp)",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.907,
+    "id": "o47"
+   },
+   {
+    "text": "robertwblove",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.601,
+    "id": "o48"
+   },
+   {
+    "text": "Obenwblove",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.84,
+    "id": "o49"
+   },
+   {
+    "text": "TiikTok",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.802,
+    "id": "o50"
+   },
+   {
+    "text": "Tiktok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.669,
+    "id": "o51"
+   },
+   {
+    "text": "3: Fluoride",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.999,
+    "id": "o52"
+   },
+   {
+    "text": "academia edu",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.692,
+    "id": "o53"
+   },
+   {
+    "text": "Effect of high-fluoride water on",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.817,
+    "id": "o54"
+   },
+   {
+    "text": "intelligence in children",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.862,
+    "id": "o55"
+   },
+   {
+    "text": "Wang;",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.8,
+    "id": "o56"
+   },
+   {
+    "text": "W Lu; SS Liu",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.704,
+    "id": "o57"
+   },
+   {
+    "text": "Fluoride 33 (2), 74-78, 2000",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.713,
+    "id": "o58"
+   },
+   {
+    "text": "The Intelligence Quotient (IQ) was measured in 118",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.754,
+    "id": "o59"
+   },
+   {
+    "text": "life-long residents",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.765,
+    "id": "o60"
+   },
+   {
+    "text": "children, aged 10-12 years",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.646,
+    "id": "o61"
+   },
+   {
+    "text": "who were",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o62"
+   },
+   {
+    "text": "in two villages of similar population size and social,",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.722,
+    "id": "o63"
+   },
+   {
+    "text": "academia edu",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.582,
+    "id": "o64"
+   },
+   {
+    "text": "Effect of high-fluoride water on",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.807,
+    "id": "o65"
+   },
+   {
+    "text": "intelligence in children",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.89,
+    "id": "o66"
+   },
+   {
+    "text": "Wang;",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.786,
+    "id": "o67"
+   },
+   {
+    "text": "W Lu; SS Liu",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.707,
+    "id": "o68"
+   },
+   {
+    "text": "Fluoride 33 (2), 74-78, 2000",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.706,
+    "id": "o69"
+   },
+   {
+    "text": "The Intelligence Quotient (IQ) was measured in 118",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.965,
+    "id": "o70"
+   },
+   {
+    "text": "life-long residents",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.709,
+    "id": "o71"
+   },
+   {
+    "text": "children, aged 10-12 years",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.759,
+    "id": "o72"
+   },
+   {
+    "text": "who were",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o73"
+   },
+   {
+    "text": "in two villages of similar population size and social,",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.629,
+    "id": "o74"
+   },
+   {
+    "text": "and",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.946,
+    "id": "o75"
+   },
+   {
+    "text": "omic",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.597,
+    "id": "o76"
+   },
+   {
+    "text": "obertwblove",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.744,
+    "id": "o77"
+   },
+   {
+    "text": "Tiktok",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.582,
+    "id": "o78"
+   },
+   {
+    "text": "Tikok",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.949,
+    "id": "o79"
+   },
+   {
+    "text": "TikTok",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.999,
+    "id": "o80"
+   },
+   {
+    "text": "robertwblove",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.973,
+    "id": "o81"
+   },
+   {
+    "text": "Healthy Options",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.99,
+    "id": "o82"
+   },
+   {
+    "text": "est",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.607,
+    "id": "o83"
+   },
+   {
+    "text": "erse Osmosis Wate",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.758,
+    "id": "o84"
+   },
+   {
+    "text": "Distilled Water",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.802,
+    "id": "o85"
+   },
+   {
+    "text": "Healthy Options",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.82,
+    "id": "o86"
+   },
+   {
+    "text": "est",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 1.0,
+    "id": "o87"
+   },
+   {
+    "text": "erse Osmosis Wate",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 1.0,
+    "id": "o88"
+   },
+   {
+    "text": "Distilled Water",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.799,
+    "id": "o89"
+   },
+   {
+    "text": "TikTok",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.999,
+    "id": "o90"
+   },
+   {
+    "text": "robertwblove",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.98,
+    "id": "o91"
+   },
+   {
+    "text": "TikTok",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.999,
+    "id": "o92"
+   },
+   {
+    "text": "robertwblove",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.98,
+    "id": "o93"
+   }
+  ]
+ }
+}

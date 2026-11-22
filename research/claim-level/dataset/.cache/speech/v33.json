@@ -1,0 +1,62 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 32.11,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.37,
+    "end": 6.54,
+    "text": "No, because why is eating in the morning the hardest thing to do?"
+   },
+   {
+    "id": "t2",
+    "start": 6.54,
+    "end": 8.38,
+    "text": "This feeling is actually pretty common."
+   },
+   {
+    "id": "t3",
+    "start": 8.38,
+    "end": 13.3,
+    "text": "Your body has a natural circadian rhythm that makes hunger hit its lowest point around 8AM."
+   },
+   {
+    "id": "t4",
+    "start": 13.3,
+    "end": 17.02,
+    "text": "Growl in, your hunger hormone is naturally suppressed in the morning hours."
+   },
+   {
+    "id": "t5",
+    "start": 17.02,
+    "end": 21.5,
+    "text": "On the other hand, hunger and appetite peak later in the evening, which may be your body's"
+   },
+   {
+    "id": "t6",
+    "start": 21.5,
+    "end": 23.94,
+    "text": "way of preparing for fasting overnight."
+   },
+   {
+    "id": "t7",
+    "start": 23.94,
+    "end": 27.46,
+    "text": "Oh, and poor sleep messes with your hunger hormones completely."
+   },
+   {
+    "id": "t8",
+    "start": 27.46,
+    "end": 31.74,
+    "text": "So if your stomach is silent at 8 a.m. but loud at 8 p.m., now you know why."
+   }
+  ]
+ }
+}
