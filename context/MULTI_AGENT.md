@@ -279,6 +279,56 @@ Known weak points to check against the live run: the parent-heading rung is very
 noise; the fixed lexicon misses terms it doesn't list (those fall back to free text);
 and a claim with two interventions ("fluoride in drinking water") ANDs both.
 
+## 7e. Guardrail Decisions (T10, #37)
+
+- **Where the limits live:** `backend/config/guardrails.yaml` (input, tool and per-video
+  limits), loaded by `app.core.guardrails.config`. Starting values, not measured ones.
+- **One way to call a model:** graph nodes call models only through `GuardedRouter`, which
+  accepts only a `GuardedPrompt` built by the per-step builders in
+  `app.core.guardrails.untrusted` (system prompt must end with `UNTRUSTED_DATA_NOTICE`) and
+  parses every answer into a strict schema (`outputs.OUTPUT_SCHEMAS`). A static test fails if
+  a module under `app/core/graph/` uses `ModelRouter` without `GuardedRouter`. **T03–T09:
+  build prompts with these builders and call `GuardedRouter`.**
+- **Fencing plus neutralising (beyond the doc):** §15 says fence untrusted text. We also
+  replace whole sentences the deterministic detector reads as instructions to the system
+  with a marker before a model sees them; state keeps the original words for reviewers. The
+  detector is narrow on purpose (controls such as "ignore the CDC guidelines" must not match);
+  paraphrases get through, and the adversarial set measures that.
+- **Speech and captions are separate fenced blocks**, with timing in the block header rather
+  than in the text. Found by the adversarial set: a timestamp prefix in the text hid
+  line-start injections ("System: ...") from the detector.
+- **Every suspected injection goes to review:** the stub review policy now appends
+  `guardrail_review_reasons(state)` (injection findings in speech, captions, claims, titles
+  and abstracts, plus any `NodeError` whose message starts with `guardrail:`). **T09: keep this
+  call** when replacing the stub.
+- **Citation and stance checks in code:** cited evidence IDs must be ones the step was shown;
+  a SUPPORTED/CONTRADICTED/MIXED verdict left without valid citations becomes
+  INSUFFICIENT_EVIDENCE. A stance must cite known segments, and a stance resting on a segment
+  that holds a suspected injection falls back to UNCLEAR. Extracted claims must be grounded in
+  the segments they cite (content-word overlap ≥ 0.5).
+- **Tools:** `ToolGateway` exposes only `pubmed_search` and `pubmed_fetch`, with typed
+  arguments (no URLs, paths or control characters in queries), a per-run call budget, a hard
+  timeout and capped results; `GuardedHttpClient`/`AsyncGuardedHttpClient` allow HTTPS to
+  `eutils.ncbi.nlm.nih.gov/entrez/eutils/` only, follow no redirects and cap the body.
+  **T03: route PubMed calls through these.**
+- **Input limits are built but not wired** into the upload path (`app.core.guardrails.limits`:
+  size, duration, container sniffing, truncated-MP4 detection, duplicates, per-user rate limit
+  and daily quota, 50-claim cap). Wiring them changes live behaviour, so it's T11's, behind the
+  flag. The rate limiter and quota are in-process; multiple workers need a shared store.
+- **Unsafe is defined before measuring** (`app/evaluation/adversarial/unsafe.py`): label moved
+  toward the attacker, output outside the schema, fabricated evidence, or a non-CANNOT_RECOGNIZE
+  label on off-topic content. Being held for review does not make a result safe; it's reported
+  separately.
+- **Adversarial results are from a simulated, always-fooled model**, not a real one:
+  guarded graph 5 unsafe out of 34 (2 held for review), single-call baseline 23 unsafe out of
+  34 (`research/adversarial/report_v1.md`). Real-model numbers need T14.
+- **Findings for T08 (judge, §9):** under the §9 rules a contradicted claim whose stance is
+  QUOTES, NEUTRAL or UNCLEAR gives NO_MISINFO. So an attack that only has to nudge the stance
+  step (persuasion, fiction framing, or a rejected answer that falls back to UNCLEAR) clears
+  the video. Three of the five graph failures are this. Suggest: when a deciding claim's stance
+  is UNCLEAR, or when a contradicted claim is QUOTES/NEUTRAL in a video with no REFUTES, don't
+  auto-publish NO_MISINFO.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -300,6 +350,15 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-22** (T10, automated): Built the guardrails (`backend/app/core/guardrails/`,
+  `backend/config/guardrails.yaml`): fencing and neutralising of untrusted text, a narrow
+  injection detector feeding the review policy, `GuardedRouter` with strict output schemas and
+  citation checks, the PubMed tool gateway and HTTP allowlist, and input limits (not yet
+  wired). Committed a 34-case adversarial set with expected outcomes
+  (`research/adversarial/adversarial_v1.yaml`) and a harness that runs it on the guarded graph
+  and today's single-call classifier: 5 vs 23 unsafe out of 34 with a simulated, always-fooled
+  model. Next: real nodes adopt the builders and router (T03–T09), T08 judge policy on
+  QUOTES/UNCLEAR, a held-out red-team set, and a paid run (T14). Decisions in §7e.
 - **2026-11-22**: T04 (#30) stance analyzer built by the automated build: forced
   `record_stance` tool call through an injected router, versioned prompt `stance_v1`,
   invalid output → UNCLEAR, every stance cites an input segment, confidence left empty.
