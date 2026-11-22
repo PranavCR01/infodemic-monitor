@@ -17,7 +17,7 @@ starts the next ready task, and records progress here.
 | T04 | Stance analyzer node | #30 | 5 | T02 | done | session_013cWxpyUeq4YuAXTpZfndft | 2026-11-22 00:02 | https://github.com/PranavCR01/infodemic-monitor/pull/51 | 27-example stance set; keyword floor debunk recall 0.78; LLM run waits for API keys |
 | T05 | Rerank and filter evidence | #32 | 6 | T03 | done | session_013cWxq2fKcmqBDmwsYQQwEz | 2026-11-22 00:16 | https://github.com/PranavCR01/infodemic-monitor/pull/54 | Deterministic lexical reranker + study-type lookup; precision@5 0.53 vs 0.38 PubMed order on a 12-claim synthetic, self-labelled set. Real PubMed labels by two people left for a person (MULTI_AGENT §7f) |
 | T06 | Evidence verifier node | #33 | 7 | T03, T05 | done | session_013cWxpycmynMxF5EZ63Zwu8 | 2026-11-22 00:28 | https://github.com/PranavCR01/infodemic-monitor/pull/55 | Invalid citations reject the answer (1 repair, then INSUFFICIENT + review). 20-claim synthetic self-labelled set; heuristic floor macro F1 0.87 (inflated by construction). LLM run waits for keys (T14) |
-| T07 | Critic node and bounded retrieval loop | #34 | 8 | T06 | in_progress | session_013cWxq2XBiK43SY2483SMcs | 2026-11-22 00:36 | | |
+| T07 | Critic node and bounded retrieval loop | #34 | 8 | T06 | done | session_013cWxq2XBiK43SY2483SMcs | 2026-11-22 00:36 | https://github.com/PranavCR01/infodemic-monitor/pull/57 | Code checks + routed LLM critic; exhausted claims frozen, abstain and go to review. 16-claim synthetic set: code-only defect detection 0.50, unnecessary retries 0.00. LLM critic run (the §8 probe) waits for keys (T14) |
 | T08 | Judge node and mixed-video policy | #35 | 9 | T04, T06 | done | session_013cWxq2Zswh882KuYh6rskc | 2026-11-22 00:36 | https://github.com/PranavCR01/infodemic-monitor/pull/56 | §9 rules as code + review flags (mixed video, unclear stance, false claim not refuted, mixed evidence, verifier failure); LLM writes only the explanation. Policy needs Pranav's agreement (MULTI_AGENT §7h). Adversarial: still 5/34 unsafe, 4 held for review (was 2) |
 | T09 | Deterministic validation and human-review routing | #36 | 10, 11, 12 | T08 | in_progress | session_013cWxq229Tx4MC9VDko4wL3 | 2026-11-22 00:46 | | |
 | T10 | Guardrails: prompt injection, tool limits, adversarial tests | #37 | 15 | T02 | done | session_013cWxq2Ly4NrwzhcpZMfmkx | 2026-11-22 00:04 | https://github.com/PranavCR01/infodemic-monitor/pull/53 | Simulated always-fooled model: graph 5/34 unsafe, baseline 23/34. Input limits built but not wired (T11). Judge-policy finding for T08 (QUOTES/UNCLEAR + CONTRADICTED gives NO_MISINFO). Held-out red-team set and real-model run (T14) left for people |
@@ -31,6 +31,7 @@ starts the next ready task, and records progress here.
 
 Newest first. One line per event: date, task, what happened.
 
+- 2026-11-22 UTC — T07 done: PR #57 squash-merged into langgraph-build (573 passed, 1 skipped). T09/T11 note: keep `critic_review_reasons` and pass budgets to critic and judge. Critic metrics are on a synthetic self-labelled set.
 - 2026-11-22 00:46 UTC — T09 started in session session_013cWxq229Tx4MC9VDko4wL3.
 - 2026-11-22 UTC — T08 done: PR #56 squash-merged into langgraph-build (527 passed, 1 skipped). T09 now unblocked. Aggregation policy still needs Pranav's agreement.
 - 2026-11-22 00:36 UTC — T08 started in session session_013cWxq2Zswh882KuYh6rskc.
