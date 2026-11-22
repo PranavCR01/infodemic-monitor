@@ -283,11 +283,20 @@ and a claim with two interventions ("fluoride in drinking water") ANDs both.
 
 - **Where the limits live:** `backend/config/guardrails.yaml` (input, tool and per-video
   limits), loaded by `app.core.guardrails.config`. Starting values, not measured ones.
+- **Merged nodes (rebased onto T03/T04):** T04's stance node already fences its input in
+  its own way (`<video_segments>`, JSON-escaped, closing tag stripped, prompt states the
+  material is untrusted) and calls a `StepCaller` with a tool-call request, not
+  `GuardedRouter`. Rather than rewrite it, its `_clean` now runs `neutralise` too. T03's
+  `PubMedClient` now defaults to `GuardedHttpClient` (its own fixed-endpoint check, timeout
+  and size cap stay; the guarded client adds the host allowlist, no redirects and a
+  streaming byte cap). `max_response_bytes` is 5 MB to match T03's cap. Converging the two
+  model-call contracts (`GuardedRouter`'s rendered text vs T04's tool-call dict) is left to
+  T11, which writes the real provider clients.
 - **One way to call a model:** graph nodes call models only through `GuardedRouter`, which
   accepts only a `GuardedPrompt` built by the per-step builders in
   `app.core.guardrails.untrusted` (system prompt must end with `UNTRUSTED_DATA_NOTICE`) and
   parses every answer into a strict schema (`outputs.OUTPUT_SCHEMAS`). A static test fails if
-  a module under `app/core/graph/` uses `ModelRouter` without `GuardedRouter`. **T03–T09:
+  a module under `app/core/graph/` sends input to a model without importing the guardrails. **T03–T09:
   build prompts with these builders and call `GuardedRouter`.**
 - **Fencing plus neutralising (beyond the doc):** §15 says fence untrusted text. We also
   replace whole sentences the deterministic detector reads as instructions to the system

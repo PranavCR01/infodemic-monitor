@@ -309,16 +309,27 @@ def test_clean_sample_video_is_not_flagged():
 
 
 def test_graph_code_never_calls_a_model_without_the_guardrails():
-    """Any graph module that talks to a model router must go through GuardedRouter
-    and the guarded prompt builders. Catches a node added later that formats its own
-    prompt and calls ModelRouter directly."""
+    """Any graph module that sends input to a model (ModelRouter, a client's
+    ``complete``, or a step caller's ``call(step, ...)``) must use the guardrails:
+    GuardedRouter, the guarded prompt builders, or at least ``neutralise``. Catches
+    a node added later that formats its own prompt from raw video text."""
     offenders = []
     for path in (APP / "core" / "graph").rglob("*.py"):
         tree = ast.parse(path.read_text())
         names = {n.id for n in ast.walk(tree) if isinstance(n, ast.Name)}
-        attrs = {n.attr for n in ast.walk(tree) if isinstance(n, ast.Attribute)}
         imports = {a.name for n in ast.walk(tree) if isinstance(n, ast.ImportFrom) for a in n.names}
-        uses_router = "ModelRouter" in names | imports or "complete" in attrs or "messages" in attrs
-        if uses_router and "GuardedRouter" not in names | imports:
-            offenders.append(str(path))
+        modules = {n.module or "" for n in ast.walk(tree) if isinstance(n, ast.ImportFrom)}
+        calls_model = "ModelRouter" in names | imports or any(
+            isinstance(n, ast.Call) and isinstance(n.func, ast.Attribute)
+            and (n.func.attr == "complete" or (n.func.attr == "call" and isinstance(n.func.value, ast.Name)
+                                               and n.func.value.id in {"caller", "router", "client", "model"}))
+            for n in ast.walk(tree)
+        )
+        if calls_model and not any(m.startswith("app.core.guardrails") for m in modules):
+            offenders.append(path.name)
     assert offenders == []
+
+
+def test_the_static_check_sees_the_stance_node():
+    src = (APP / "core" / "graph" / "stance.py").read_text()
+    assert "caller.call(" in src and "app.core.guardrails" in src

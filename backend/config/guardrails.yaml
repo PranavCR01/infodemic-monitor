@@ -27,5 +27,5 @@ tools:
   max_query_chars: 300
   max_query_terms: 40
   max_results: 20
-  max_response_bytes: 2000000
+  max_response_bytes: 5000000       # matches the retrieval client's cap (T03)
   max_calls_per_run: 200            # 50 claims x (3 searches + 1 fetch) fits
