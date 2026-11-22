@@ -536,7 +536,6 @@ Decisions and deviations:
   SUPPORTED or CONTRADICTED, so "a deciding claim is INSUFFICIENT_EVIDENCE or MIXED" can't
   fire; `mixed_evidence:<cid>` now covers MIXED instead.
 
-<<<<<<< HEAD
 ## 7i. Critic and Bounded Loop Decisions (T07, #34)
 
 The node is `backend/app/core/graph/critic.py` (`make_critique_verification(caller)`); the
@@ -673,8 +672,7 @@ thresholds from it; download MedCPT and check retrieval on real library document
 pgvector on Supabase and run migration 0006; build the internal viewer the `source_url`
 points at (`/library/documents/{id}?page=&chunk=`, not built) and the analyst UI label for
 library sources; decide who may upload (copyright: T13 gives `search_library` its own scope).
-=======
-## 7i. Validation and Human-Review Routing (T09, #36)
+## 7k. Validation and Human-Review Routing (T09, #36)
 
 Validation is `backend/app/core/graph/validation.py`; the review rule is
 `backend/app/core/graph/review_policy.py` with thresholds in
@@ -784,7 +782,60 @@ Decisions and deviations:
 - **Effect on existing numbers:** T10's adversarial report is unchanged (5 unsafe out of
   34, 4 held for review); the sample video still goes to review only for
   `judge:mixed_video`.
->>>>>>> 858d1d0 (T09: deterministic validation and human-review routing (#36))
+
+## 7l. Retrieval MCP Server Decisions (T13, no issue; design §6, §15)
+
+- **Package:** `backend/app/mcp_server/`, a thin wrapper over `app.core.retrieval` (which
+  still has no MCP or LangGraph imports; a test checks it, and that nothing in `app/core`
+  or the worker imports the server). `service.py` holds access control, limits and dispatch
+  with no MCP code; `server.py` is the MCP layer. The live pipeline is unchanged.
+- **SDK: `mcp>=2.0,<3`, `MCPServer`.** The doc names FastMCP; in the SDK's 2.x line it was
+  renamed `MCPServer` (same decorator API). Optional extra `[mcp]` (and in `[test]`), not
+  in `requirements.txt`, so the API/worker images don't change. Streamable HTTP, stateless,
+  JSON responses (no sticky sessions across replicas), Host-header allowlist.
+- **Tools** are the five of the §6 table, names as in the doc. Tool parameters reuse the
+  input models' `FieldInfo`, so the published JSON Schema carries the same hard caps
+  (query 300 chars, `max_results` ≤ 100, ≤ 50 PMIDs, library `k` ≤ 10, ≤ 100 rerank
+  records, rerank `k` ≤ 10). Outputs are Pydantic models (structured content). Outputs with
+  third-party text carry `untrusted_fields` and a notice; the server instructions and tool
+  descriptions say the same.
+- **Auth:** static bearer tokens, one per client, stored only as SHA-256 hashes in
+  `MCP_CLIENTS` / `MCP_CLIENTS_FILE` (never in the repo); `scripts/mcp_client_token.py`
+  makes one. One scope per tool (`retrieval:<tool>`), so `search_library` is its own scope.
+  No clients configured = every call refused. Not OAuth: the SDK's `AuthSettings` needs an
+  issuer URL, so it is set to the server's own URL; a real authorization server can replace
+  the verifier later without changing tools.
+- **NCBI quota:** `quota.py` — token buckets, Redis (one Lua script, Redis's clock, both
+  buckets taken atomically or neither) and in-memory. Each PubMed request takes from
+  `ncbi:global` and from the client's own bucket at `ncbi_share` × the rate (9/s with a key,
+  2.5/s without). Shares + `pipeline_share` (0.5) must be ≤ 1 or the server won't start.
+  Share 0 = cache hits only. Waits up to 5 s, then `ncbi_quota` with `retry_after`. Redis is
+  required in deployment (fails closed rather than letting replicas each keep a quota).
+  Also a per-client calls-per-minute bucket (default 120).
+- **Our pipeline doesn't use the shared bucket yet.** The doc says one Redis bucket spaces
+  *all* PubMed calls; the graph still uses its per-process `RateLimiter`.
+  `quota.pipeline_ncbi_limiter(store, has_api_key=)` is the drop-in (`PubMedClient(rate_limiter=)`),
+  left for T11 to wire behind its flag. Until then the pipeline and the server's clients
+  together can exceed NCBI's limit only if both run at full rate at once.
+- **Shared query cache:** the server uses `RedisQueryCache` (same `retrieval:` prefix);
+  sharing it with the pipeline's workers is also a T11 wiring decision.
+- **Limits:** per-call timeout 20 s (tool code runs in a thread under `anyio.fail_after`;
+  PubMed retries cut to 3 attempts / 4 s max backoff to fit), request body 1 MB (413),
+  response 2 MB, unknown errors return a generic message (no DSNs or stack traces).
+- **Contract:** `contract/tools.json` snapshot; the CI test fails on any schema change and
+  says whether it is additive (refresh the snapshot) or breaking (ship a new tool name).
+  `breaking_changes` inlines `$ref`s, so a change inside `EvidenceRecord` is caught.
+- **Tested** with recorded PubMed fixtures, an in-memory library, the in-process MCP client,
+  HTTP through an ASGI transport (401 without/with a forged token, scopes per client, 413,
+  bad Host), and a real local `redis-server` for the Lua bucket and shared cache. A real
+  `python -m app.mcp_server` was started and called over localhost HTTP.
+
+**Left for a person:** create the Railway service (`backend/Dockerfile.mcp`, health
+`/health`; not added to `railway.toml` on purpose), set `MCP_PUBLIC_URL`,
+`MCP_ALLOWED_HOSTS`, `REDIS_URL`, `NCBI_API_KEY`, `DATABASE_URL_SYNC`; issue the other
+team's token and agree their scopes and NCBI share (and whether they get `search_library`,
+given library copyright); add the contract check against `main`'s snapshot to CI if CI
+gains a job for it.
 
 ## 8. Team
 
@@ -807,7 +858,12 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
-<<<<<<< HEAD
+- **2026-11-22**: T13 retrieval MCP server built by the automated build (no issue; design
+  §6, §15): `app/mcp_server` wraps `app.core.retrieval` with the five §6 tools over
+  Streamable HTTP (MCP SDK 2.x `MCPServer`), hashed per-client bearer tokens with one scope
+  per tool, a Redis token bucket for the shared NCBI quota plus per-client shares, the
+  shared Redis query cache, call/size/timeout limits, and a schema contract snapshot checked
+  in tests. Not deployed; the pipeline doesn't use the shared bucket yet (T11). Decisions in §7l.
 - **2026-11-22**: T12 offline library fallback built by the automated build (no issue;
   design §6): manifest CSV upload, OCRmyPDF/Tesseract + PyMuPDF with per-page confidence
   and held-back low-confidence pages, SHA-256 and PubMed DOI/PMID dedup, paragraph chunking
@@ -822,16 +878,14 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   re-reviewed) and abstain (INSUFFICIENT_EVIDENCE for the judge) as well as going to
   review. 16-claim synthetic set: code-only defect detection 0.50, unnecessary retries
   0.00; LLM run waits for API keys. Decisions in §7i.
-=======
 - **2026-11-22**: T09 (#36) validation and review routing built by the automated build:
   eight §10 checks in code (schema, citation and quote membership, source IDs, merge
   plausibility, timestamps, label consistency, length limits), one repair by re-running
   the judge with the template explanation, then review; the §11 review rule as named,
   separately tested rules (plus high-risk-uncertain from the issue; abstentions caused
   by weak evidence now go to review); `REVIEW_REQUIRED` job state and a `human_reviews`
-  table (migration 0007) with reasons and reviewer decisions. Decisions in §7i.
+  table (migration 0007) with reasons and reviewer decisions. Decisions in §7k.
 
->>>>>>> 858d1d0 (T09: deterministic validation and human-review routing (#36))
 - **2026-11-22**: T08 (#35) judge built by the automated build: the §9 rules as code
   (`decision_rule` recorded), citations limited to IDs in state, code-detected review
   flags for mixed videos, unclear stance on a false claim, false claims quoted but not

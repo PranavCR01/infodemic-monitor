@@ -1,0 +1,40 @@
+# Retrieval MCP server (design doc section 6 "Retrieval as a shared service", section 15).
+#
+# Read by app.mcp_server.config. Client tokens are NOT here: each client's token is
+# given to the server as a SHA-256 hash, through MCP_CLIENTS (JSON) or
+# MCP_CLIENTS_FILE (a YAML file kept outside the repo). See app/mcp_server/README.md.
+#
+# STATUS: starting values, not measured ones. Revisit once another team's real
+# traffic exists.
+version: mcp_v1
+
+server:
+  name: who-infodemic-retrieval
+  path: /mcp
+  # Host header values accepted (DNS-rebinding protection). The Railway hostname is
+  # added at deploy time through MCP_ALLOWED_HOSTS (comma separated).
+  allowed_hosts: ["localhost", "localhost:*", "127.0.0.1", "127.0.0.1:*"]
+
+limits:
+  timeout_seconds: 20            # hard limit per tool call
+  max_request_bytes: 1000000     # HTTP body cap (rerank input carries abstracts)
+  max_response_bytes: 2000000    # serialized tool result cap
+  calls_per_minute: 120          # per client, every tool; a client entry may lower or raise it
+  ncbi_max_wait_seconds: 5       # longest a call waits for its NCBI share before failing
+
+ncbi:
+  # NCBI allows about 3 requests/s without an API key and 10 with one, across
+  # every caller of that key. Slightly under, as in app.core.retrieval.pubmed.
+  rate_with_key: 9.0
+  rate_without_key: 2.5
+  # Burst size of the shared bucket, in requests.
+  burst: 3
+  # Share of the NCBI rate reserved for our own pipeline (when it uses the shared
+  # bucket, see app.mcp_server.quota.pipeline_ncbi_limiter). Client shares plus this
+  # must not exceed 1.0, so another team's batch job can't starve the pipeline.
+  pipeline_share: 0.5
+
+library:
+  # search_library needs a library store. "auto": Postgres (DATABASE_URL) when the
+  # library tables exist; "off": the tool reports the library as unavailable.
+  mode: auto

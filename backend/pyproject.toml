@@ -54,8 +54,16 @@ library = [
   "transformers>=4.40",
   "torch>=2.2",
 ]
+# Retrieval MCP server (app/mcp_server, design section 6): its own Railway service.
+# The MCP SDK's 2.x line (FastMCP renamed MCPServer). Not in requirements.txt, so the
+# API and worker images don't change.
+mcp = [
+  "mcp>=2.0,<3",
+]
 test = [
   "pytest>=8.0",
+  # MCP server tests (skipped when missing)
+  "mcp>=2.0,<3",
   # Generated sample scans for the library tests (skipped when missing)
   "pymupdf>=1.24",
   "reportlab>=4.0",

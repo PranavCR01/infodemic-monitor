@@ -58,9 +58,11 @@ class RateLimiter:
     """Spaces calls at least ``1 / rate`` seconds apart (thread-safe).
 
     One instance per process per rate, shared by every client, so parallel claims
-    don't add up past NCBI's limit. Across processes the MCP task (T13) adds a Redis
-    token bucket; until then each worker process stays under the limit on its own,
-    and Celery runs one worker by default (``CELERY_CONCURRENCY=1``).
+    don't add up past NCBI's limit. Across processes, ``app.mcp_server.quota`` has the
+    shared Redis token bucket (the MCP server uses it; ``pipeline_ncbi_limiter`` is the
+    pipeline's drop-in, not wired until T11). Until then each worker process stays
+    under the limit on its own, and Celery runs one worker by default
+    (``CELERY_CONCURRENCY=1``).
     """
 
     def __init__(
