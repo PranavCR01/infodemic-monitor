@@ -1110,6 +1110,41 @@ worker sends it; OCR off). Harness: `backend/scripts/smoke_run.py` (never reads 
     (resolved today to `gpt-4o-2024-08-06`), against §13's pinned-ID rule. Live default
     unchanged.
 
+## 7p. Upload Safeguards and Signed Uploads (T20, no issue; design §1, §15)
+
+- **Signed flow (new, always on):** `POST /v1/videos/uploads` `{filename, size_bytes?,
+  content_type?}` checks the declared type/size, the per-user rate limit and spends one unit
+  of the daily quota (each URL lets the caller write one object), then returns a Supabase
+  signed upload URL for `uploads/<sub>/<upload_id hex32>/<sanitised filename>`.
+  `POST /v1/videos` `{storage_key, filename?}` refuses keys outside the caller's prefix with
+  404 (same as missing, §15), downloads the object once, runs T10's `validate_media`
+  (size, sniffed container, extension/content agreement, truncated-MP4 check) and the
+  duration limit, hashes it and registers the video (`file_path = storage_key`; the worker
+  already downloads by `storage_key`). A known SHA-256 returns the earlier video with
+  `duplicate: true` and the new copy is deleted; a rejected file is deleted too.
+- **Legacy `POST /videos/upload`:** unchanged unless `UPLOAD_SAFEGUARDS=true` (default off).
+  With it on: rate limit, media + duration checks, then quota; response shape unchanged.
+- **Error codes:** `InputRejected.code` in `detail.code`: 413 `file_too_large`; 415
+  `unsupported_media`/`media_mismatch`; 422 `empty_file`/`corrupt_media`/`too_short`/
+  `too_long`; 429 `rate_limited`/`quota_exceeded`. 501 when the backend is local (no signed
+  URLs), 503 when storage can't sign.
+- **Duration:** read from the MP4/MOV `mvhd` box in pure Python; WebM/MKV via `ffprobe`
+  (in the image). Unreadable duration = `corrupt_media` (a file ffprobe can't read isn't
+  worth a worker).
+- **Deviation from §1:** the doc says large files never pass through the API; registration
+  still downloads the object into the API once to check and hash it (§1 step 3 needs the
+  hash). Up to 100 MiB in memory per request; a streaming hash or a storage-side check is
+  the fix if that matters.
+- **Routes live under `/v1`** (§17); the existing routes have no prefix and are unchanged.
+- **Left for a person:** (1) `videos` has no owner column, so a duplicate on register (and
+  on the legacy route, as before) returns another user's `video_id`: §15 per-object
+  authorization needs an owner column + migration. (2) Rate limiter and quota are
+  in-process (T10): with N API workers the effective limit is N x the configured one;
+  move to Redis. (3) Uploaded-but-never-registered objects aren't cleaned up; add a
+  bucket lifecycle rule or sweeper. (4) The bucket must be private with the service key
+  only on the server; check in Supabase. (5) `app.main` imports the async health check,
+  which needs `greenlet` (not in requirements; tests mount the video routers alone).
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -1130,6 +1165,11 @@ replacement.
 ## 10. Check-In Log
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
+
+- **2026-11-23**: T20 (no issue; design §1, §15) upload safeguards by the automated build:
+  T10's input limits wired to uploads (`app/services/upload_service.py`), signed-upload
+  endpoints `POST /v1/videos/uploads` and `POST /v1/videos`, legacy route unchanged unless
+  `UPLOAD_SAFEGUARDS` is on. Storage mocked in tests. Decisions and open items in §7p.
 
 - **2026-11-22**: T18 (no issue; design §13, §14) first real-model smoke run by the
   automated build: graph (references on) and baseline on 10 golden-set transcripts,

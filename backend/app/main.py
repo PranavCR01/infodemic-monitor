@@ -44,4 +44,5 @@ app.include_router(health.router)
 # Protected routes
 from app.api.routers import videos, jobs  # noqa: E402
 app.include_router(videos.router)
+app.include_router(videos.v1_router)  # §1 signed uploads (T20)
 app.include_router(jobs.router)

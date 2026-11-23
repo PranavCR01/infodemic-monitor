@@ -48,6 +48,29 @@ class SupabaseBackend:
         except Exception as exc:
             raise StorageError(storage_key, exc) from exc
 
+    def create_signed_upload_url(self, storage_key: str) -> dict:
+        """A one-object signed upload URL (Supabase fixes the expiry at two hours)."""
+        try:
+            client = self._get_client()
+            result = client.storage.from_(settings.SUPABASE_STORAGE_BUCKET).create_signed_upload_url(
+                storage_key
+            )
+            if not isinstance(result, dict):
+                result = {k: getattr(result, k, None) for k in ("signed_url", "token", "path")}
+            url = result.get("signed_url") or result.get("signedUrl") or result.get("signedURL")
+            if not url:
+                raise ValueError("storage returned no signed upload URL")
+            return {"signed_url": url, "token": result.get("token"), "path": result.get("path") or storage_key}
+        except Exception as exc:
+            raise StorageError(storage_key, exc) from exc
+
+    def download(self, storage_key: str) -> bytes:
+        try:
+            client = self._get_client()
+            return client.storage.from_(settings.SUPABASE_STORAGE_BUCKET).download(storage_key)
+        except Exception as exc:
+            raise StorageError(storage_key, exc) from exc
+
     def delete(self, storage_key: str) -> None:
         try:
             client = self._get_client()
