@@ -1,4 +1,4 @@
-"""Refresh the stored reference snapshots (T19; design §6, context/MULTI_AGENT.md §7p).
+"""Refresh the stored reference snapshots (T19; design §6, context/MULTI_AGENT.md §7q).
 
 Pages in ``config/reference_sources.yaml`` marked ``retrieval: stored`` (CDC first:
 www.cdc.gov blocks scripted requests from cloud hosts) are never fetched while a video

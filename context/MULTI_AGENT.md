@@ -1110,7 +1110,7 @@ worker sends it; OCR off). Harness: `backend/scripts/smoke_run.py` (never reads 
     (resolved today to `gpt-4o-2024-08-06`), against §13's pinned-ID rule. Live default
     unchanged.
 
-## 7p. Production Reference Retrieval (T19, no issue; design §6)
+## 7q. Production Reference Retrieval (T19, no issue; design §6)
 
 Found while labelling the golden set: www.cdc.gov answers 403 to scripted requests from
 cloud hosts and the NCBI Bookshelf website serves a reCAPTCHA. Code:
@@ -1207,7 +1207,7 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   (`data/reference_snapshots/`, 3 CDC pages captured 2026-11-23), cited by snapshot hash
   with the same `ref_<hash>` rule, refreshed by `scripts/refresh_reference_snapshots.py`.
   Fixed the passage stemmer and added short-paragraph windows for real CDC text. 903
-  passed, 8 skipped. Details in §7p.
+  passed, 8 skipped. Details in §7q.
 
 - **2026-11-22**: T18 (no issue; design §13, §14) first real-model smoke run by the
   automated build: graph (references on) and baseline on 10 golden-set transcripts,

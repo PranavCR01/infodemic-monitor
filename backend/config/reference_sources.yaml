@@ -9,7 +9,7 @@
 # STATUS: starting values (context/MULTI_AGENT.md §7n). T18 fetched WHO, FDA, EFSA,
 # NHS and Bookshelf live. Grow the catalogue from the golden-set claims.
 #
-# retrieval (T19, §7p): "live" pages are fetched at claim time. "stored" pages belong
+# retrieval (T19, §7q): "live" pages are fetched at claim time. "stored" pages belong
 # to publishers that block scripted requests (www.cdc.gov answers 403 to cloud hosts):
 # claims read the current version from data/reference_snapshots/ (committed, versioned,
 # cited by snapshot hash) and never request the page. Refresh them with
