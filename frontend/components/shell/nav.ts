@@ -7,6 +7,7 @@ export type NavItem = { href: string; label: string; icon: string; role: Role; m
 export const NAV: NavItem[] = [
   { href: "/jobs", label: "Videos", icon: "grid", role: "analyst", match: (p) => p === "/jobs" || p.startsWith("/jobs/") },
   { href: "/", label: "Submit", icon: "upload", role: "analyst", match: (p) => p === "/" },
+  { href: "/review", label: "Review queue", icon: "inbox", role: "reviewer", match: (p) => p === "/review" || p.startsWith("/review/") },
 ];
 
 export function navFor(role: Role | null): NavItem[] {
