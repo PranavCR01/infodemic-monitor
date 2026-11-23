@@ -1323,6 +1323,56 @@ job state (tested).
 - **Not built:** no API endpoint or UI for the queue or overrides (none exist for review
   yet), no alerts (§12 mentions severity ordering alerts; there is no alerting).
 
+## 7u. Review HTTP API and Roles (T27, no issue; design §12, §15, §17)
+
+- **Routes** (`backend/app/api/routers/reviews.py`, typed Pydantic responses, mounted in
+  `app.main`; nothing existing changed): `GET /v1/me` (caller id, server-decided role,
+  permission hints); `GET /v1/reviews` (queue: severity HIGH→MEDIUM→LOW→none, then oldest
+  first; `status=OPEN|RESOLVED|ALL`, `severity=` HIGH/MEDIUM/LOW/NONE repeated or
+  comma-separated, `reason=` rule name, reason prefix or exact reason, `limit` 1–100,
+  `offset`; returns `items`, `total`); `GET /v1/reviews/{review_id}` (full case +
+  `audit_trail`); `POST /v1/reviews/{review_id}/decision`;
+  `POST /v1/reviews/{review_id}/claims/{claim_id}/severity`.
+- **Roles** (`backend/app/auth/roles.py`): analyst < reviewer < admin, read only from the
+  verified Supabase JWT's `app_metadata.role` / `app_metadata.roles` (writable only with
+  the service key). `user_metadata` (user-editable) and the top-level `role` claim
+  (Postgres role, e.g. `authenticated`) are ignored; no claim = analyst. No roles table and
+  no migration: roles are set in Supabase (`auth.admin.updateUserById(id, {app_metadata:
+  {role: "reviewer"}})`). With `REQUIRE_AUTH` off the dev user takes `DEV_USER_ROLE`
+  (default analyst).
+- **Rules:** every review route needs reviewer or admin (admin ⊇ reviewer; no admin-only
+  review action yet). Analysts get 403 before any lookup, so existence isn't revealed.
+  The reviewer recorded is always the token's `sub`; request bodies forbid extra fields,
+  so a `reviewer_id` or `role` in the body is a 422. Reason required (blank = 422).
+  Errors: unknown case 404, decided case 409, unchanged severity 409, claim not in case
+  404 (override) / 422 (correction), bad body 422.
+- **Decisions:** APPROVE, CORRECT (`corrected_label` and/or `claim_corrections`
+  `[{claim_id, verdict?, stance?}]`, values from the §5/§7 enums, each must change
+  something), MARK_INSUFFICIENT, REJECT, REQUEST_REANALYSIS. Claim corrections are stored
+  on the case as `{"claims": {cid: {"verdict"|"stance": {"from", "to"}}}}`; the model's
+  stored stance/verdict rows are not overwritten (provenance; §12 feedback loop). Changing
+  claim verdicts does not recompute the label: the reviewer sets `corrected_label`.
+  REQUEST_REANALYSIS starts a new PENDING job for the same video through the worker
+  (dispatcher injectable); a failed dispatch leaves that job FAILED/`DISPATCH_FAILED` and
+  the decision stands. The old job keeps REVIEW_REQUIRED (T09 behaviour).
+- **Service changes** (`review_service`): `record_review_decision` now locks the row
+  (`SELECT … FOR UPDATE` on Postgres) so two reviewers can't both resolve a case, and
+  writes a `review_decision` audit event; new `review_queue_page`,
+  `build_claim_corrections`, `review_audit_trail`, `start_reanalysis`. The reason filter
+  runs in Python (reasons are a JSON list); fine at current queue sizes, move to SQL
+  (Postgres JSON operators) if the queue grows large.
+- **Tests:** `test_review_api.py`, 85 tests, real HS256 JWTs with a test secret through the
+  real `get_current_user`; each runs on SQLite and, when `LIBRARY_TEST_PG_DSN` is set (CI),
+  on a throwaway Postgres database.
+- **Left for a person:** (1) per-user ownership still doesn't exist: `videos` has no owner
+  column, and the existing `/jobs/*` and legacy routes don't check ownership (§15, §17
+  "every endpoint checks the object belongs to the caller"). That needs the migration
+  planned as 0011 and touches T26/T29; T27 avoided it because review access is by role,
+  not ownership. Until then a reviewer could decide a case on their own video. (2) Assign
+  reviewer/admin roles in Supabase `app_metadata`. (3) After REQUEST_REANALYSIS the old
+  job still reads as "in review" on the legacy result route; T26's resolved status should
+  cover it. (4) Admin-only actions (e.g. reopening a case) aren't defined in the doc.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -1343,6 +1393,14 @@ replacement.
 ## 10. Check-In Log
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
+
+- **2026-11-23**: T27 (no issue; design §12, §15, §17) review HTTP API and roles by the
+  automated build: `/v1/reviews` queue (severity then age, filters, pages), case with
+  audit trail, decisions (approve / correct label and claim verdicts or stances / mark
+  insufficient / reject / request re-analysis, reason required), severity override, and
+  `/v1/me`. Roles (analyst/reviewer/admin) only from the JWT's `app_metadata`, enforced
+  server-side. No migration. 1107 passed, 0 skipped locally with Postgres 16 + pgvector.
+  Per-user ownership (videos.owner) still missing. Decisions in §7u.
 
 - **2026-11-23**: T25 (no issue; design §6, §7, §14) extra-evidence-sources experiment
   by the automated build, report only. The 60 INSUFFICIENT_EVIDENCE claims in the 39 golden-set videos whose source says false but derive CANNOT_RECOGNIZE were searched in Cochrane (PubMed), Europe PMC, ClinicalTrials.gov v2 and the reference allow-list (`backend/scripts/t25_extra_sources.py`, no model calls, no fact-check databases). Judged under the unchanged §7: 0 claims and 0 videos become decidable; hits are Cochrane reviews that themselves find too little, related but different interventions, animal/cross-sectional work, or registry entries without results. Europe PMC and ClinicalTrials.gov were proxy-blocked at first but reachable for the full run. Near misses for a person: v159 (needs a jogging MET source), v85 (2026 PNAS null). Report: `evals/reports/T25_extra_sources.md`.

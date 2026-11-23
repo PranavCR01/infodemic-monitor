@@ -70,6 +70,9 @@ class Settings(BaseSettings):
 
     # Auth
     REQUIRE_AUTH: bool = True
+    # Role of the local dev user when REQUIRE_AUTH is off (T27): analyst, reviewer or
+    # admin. Ignored when auth is on; real roles come from the JWT's app_metadata.
+    DEV_USER_ROLE: str = "analyst"
     ALLOWED_ORIGINS: str = "http://localhost:3000"
 
     @property
