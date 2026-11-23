@@ -46,3 +46,6 @@ from app.api.routers import videos, jobs  # noqa: E402
 app.include_router(videos.router)
 app.include_router(videos.v1_router)  # §1 signed uploads (T20)
 app.include_router(jobs.router)
+
+from app.api.routers import results  # noqa: E402
+app.include_router(results.router)  # §17 result reads (T26)

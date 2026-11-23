@@ -1323,6 +1323,61 @@ job state (tested).
 - **Not built:** no API endpoint or UI for the queue or overrides (none exist for review
   yet), no alerts (§12 mentions severity ordering alerts; there is no alerting).
 
+## 7v. Result API Fields (T26, no issue; design §12, §17)
+
+Built by the automated build on 2026-11-24, from the frontend session's API map. Exposes
+data already stored but not returned. Additive: every existing field keeps its name and
+shape; no label, verdict or stored row changes.
+
+- **Where:** `GET /jobs/{job_id}/result` (existing, now `response_model=JobResultResponse`)
+  gains the fields; new §17 reads in `app/api/routers/results.py`:
+  `GET /v1/videos/{video_id}/results` (same body, caller's latest job on the video),
+  `GET /v1/videos/{video_id}/claims`, `GET /v1/claims/{id}/evidence` (`id` = the claim's
+  stable row id, returned as `claims[].id`; graph claim ids like `c1` are only unique per
+  job). Models in `app/api/result_models.py`; builders in
+  `app/services/result_view_service.py`. `claim_level_view` now uses the same builder.
+- **New fields:** claims: `id`, `claim_kind`, `requires_verification`,
+  `source_segment_ids`, `modality` (speech / screen / both, from which stored segment table
+  holds each id, falling back to the `t*`/`o*` naming), `stance_rationale`,
+  `stance_segment_ids`, `stance_quotes` (the stored segments those ids name, with
+  timestamps: "the words behind" the stance), `retrieval_attempts`, `critic`
+  (decision, issues, requires_review), `severity` (effective, table value, basis,
+  override). Evidence: `source_kind` (pubmed / reference / library / other), `doi`,
+  `year`, `publisher`, `publication_type`, `abstract_snippet` (300 chars at a word
+  boundary), `relevance_score`, `rank`, `retrieved_at`, `snapshot_sha256`. Result:
+  `video_id`, `status`, `pipeline_version`, `decision_rule`, `deciding_claim_ids`,
+  `transcript_segments`, `ocr_segments`. Review: `review_id`, `case_status`, `resolved`,
+  `action`, `reason_details`, `rules_fired`, `severity`, `claim_severities`,
+  `severity_table_version`, `proposed_label`, `corrected_label`, `decision_reason`,
+  `created_at`, `decided_at`.
+- **`review` no longer becomes null once resolved.** `status` is `REVIEW_REQUIRED` while
+  open (unchanged), then APPROVE → `VERIFIED`, CORRECT / MARK_INSUFFICIENT → `CORRECTED`,
+  REJECT → `REJECTED`, REQUEST_REANALYSIS → `REANALYSIS_REQUESTED`. The current frontend
+  showed its "awaiting human review" banner whenever `review` was set, so its check is now
+  `result.review?.status === "REVIEW_REQUIRED"` (one line in `JobDetailClient.tsx`).
+- **Reasons:** `reasons` stays the stored strings (the current frontend prints them);
+  `reason_details` is `{code, rule, claim_id, detail, text, raw}` with `text` from
+  `REASON_TEXT` in `app/services/review_reasons.py`, the one wording table for every
+  rule, judge flag and guardrail code; unknown codes get a generic sentence. The judge's
+  own `_FLAG_TEXT` (used inside explanations) is left alone so explanations don't change.
+- **Ownership (§15, §17): a seam, not a column.** The queue (2026-11-24) gave the owner
+  column to T27 and told T26 not to add one. A first version of T26 added `jobs.user_id`
+  (migration 0011) before that note was seen; it was removed before the PR. Every T26 read
+  (`GET /jobs/{id}`, `GET /jobs/{id}/result`, the three `/v1` reads) now goes through
+  `app/api/ownership.py` (`can_view_job`, `visible_jobs`, `owned_job_or_404`), which today
+  checks only auth + existence and answers 404 for anything the caller may not see. T27
+  fills in those two functions (owner, or reviewer/admin; legacy NULL rows admin only) and
+  every T26 endpoint follows. A test plugs in a rule and checks each endpoint gives 404.
+- **Rejected results:** the legacy route still answers 202 for a FAILED job, as before;
+  `/v1/videos/{id}/results` shows a reviewer-rejected result (`error_code =
+  REVIEW_REJECTED`) with its review, answers 202 while pending and 409 for other failures.
+- **Not exposed on purpose:** the reviewer's id (in severity overrides and on the case);
+  the audit trail and reviewer access are T27's.
+- **Left for a person / other tasks:** (1) T27: implement `can_view_job` / `visible_jobs`
+  with its owner column and roles (until then any signed-in user can read any job, as
+  before T26); (2) the reason wording is a draft for the project lead to edit (one table,
+  `REASON_TEXT`). No migration in T26.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -1344,6 +1399,13 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-24**: T26 (no issue; design §12, §17) result API fields by the automated
+  build: stance rationale and quoted segments, claim modality and source segments,
+  transcript/OCR segments, evidence source kind/year/publisher/abstract snippet, critic
+  notes, review case id/status (incl. resolved)/severity and structured reasons from one
+  wording table; §17 `/v1` reads, all behind one access check that T27 fills in with its
+  owner column. `review` stays set once resolved. No migration.
+  Decisions in §7v.
 - **2026-11-23**: T25 (no issue; design §6, §7, §14) extra-evidence-sources experiment
   by the automated build, report only. The 60 INSUFFICIENT_EVIDENCE claims in the 39 golden-set videos whose source says false but derive CANNOT_RECOGNIZE were searched in Cochrane (PubMed), Europe PMC, ClinicalTrials.gov v2 and the reference allow-list (`backend/scripts/t25_extra_sources.py`, no model calls, no fact-check databases). Judged under the unchanged §7: 0 claims and 0 videos become decidable; hits are Cochrane reviews that themselves find too little, related but different interventions, animal/cross-sectional work, or registry entries without results. Europe PMC and ClinicalTrials.gov were proxy-blocked at first but reachable for the full run. Near misses for a person: v159 (needs a jogging MET source), v85 (2026 PNAS null). Report: `evals/reports/T25_extra_sources.md`.
 - **2026-11-23**: T23 (no issue; design §14, §16) backend CI by the automated build:

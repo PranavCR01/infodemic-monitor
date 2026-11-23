@@ -204,8 +204,9 @@ function ResultView({ result }: { result: Result }) {
 
   return (
     <div className="space-y-6">
-      {/* A result in human review is provisional (design §12) */}
-      {result.review && (
+      {/* A result in human review is provisional (design §12). Since T26 `review`
+          stays set after the case is resolved, so check the status. */}
+      {result.review?.status === "REVIEW_REQUIRED" && (
         <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-sm text-amber-800">
           <p className="font-semibold">Provisional: awaiting human review</p>
           <p className="mt-1">A reviewer must confirm this result before it is final.</p>

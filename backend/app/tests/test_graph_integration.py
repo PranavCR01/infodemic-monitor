@@ -774,7 +774,9 @@ def test_result_endpoint_serves_both_paths(kind):
     else:
         assert len(out["claims"]) == 2 and out["pipeline"] == "graph"
     if kind == "review":
-        assert out["review"] == {"status": "REVIEW_REQUIRED", "reasons": ["critic:escalated"]}
+        # T26 added fields to ``review``; the two the current frontend reads are unchanged.
+        assert out["review"]["status"] == "REVIEW_REQUIRED"
+        assert out["review"]["reasons"] == ["critic:escalated"]
     json.dumps(out, default=str)  # serialisable
 
 
