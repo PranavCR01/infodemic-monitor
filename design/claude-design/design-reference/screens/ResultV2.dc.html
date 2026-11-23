@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Video result, exploration: claim map and annotated transcript</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../im.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5F99}a:hover{color:#174A78}
+mark.is-on,span.is-on{outline:2px solid #1F5F99;outline-offset:2px;border-radius:2px}
+</style>
+</helmet>
+<div class="im" data-theme="{{theme}}" style="min-height: 100vh">
+
+<header class="topbar">
+  <a class="brand" href="Jobs.dc.html"><span class="brand-mark" aria-hidden="true">IM</span><span>Infodemic Monitor <span class="faint" style="font-weight: 400">· WHO research</span></span></a>
+  <nav class="nav" aria-label="Main" style="flex: 1">
+    <a href="Jobs.dc.html" aria-current="page"><span class="i i-grid" aria-hidden="true"></span>Videos</a>
+    <a href="Submit.dc.html"><span class="i i-upload" aria-hidden="true"></span>Submit</a>
+    <a href="ReviewQueue.dc.html"><span class="i i-inbox" aria-hidden="true"></span>Review queue <span class="count">4</span></a>
+  </nav>
+  <span class="avatar" aria-label="Signed in as Dr. A. Mensah">AM</span>
+</header>
+
+<main class="page" style="display: flex; flex-direction: column; gap: 28px">
+
+  <!-- 1. FINDING + CLAIM MAP -->
+  <section style="display: flex; flex-wrap: wrap; gap: 40px; align-items: stretch" aria-label="Finding">
+    <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 18px; padding-top: 8px">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="Jobs.dc.html">Videos</a><span class="i i-chevr i-sm" aria-hidden="true"></span><span class="mono">hot-water-flu.mp4</span></nav>
+      <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap">
+        <span class="lb lb-mis"><span class="i i-alert i-sm" aria-hidden="true"></span>MISINFO</span>
+        <span class="t-small muted">Review not required · Confidence not yet calibrated · 23 Nov 2026</span>
+      </div>
+      <h1 class="serif" style="margin: 0; font-size: 40px; line-height: 48px; font-weight: 600; letter-spacing: -0.01em; max-width: 22ch">This video promotes a false cure for the flu.</h1>
+      <p class="serif" style="margin: 0; font-size: 19px; line-height: 30px; color: var(--text-2); max-width: 62ch">The speaker presents drinking hot water as a cure. Clinical evidence shows hot drinks can ease symptoms but <span style="color: var(--text); box-shadow: inset 0 -2px 0 var(--mis-fg)">do not cure or shorten influenza</span>.</p>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto">
+        <a class="btn btn-primary" href="Export.dc.html"><span class="i i-download" aria-hidden="true"></span>Export report</a>
+        <button class="btn btn-secondary" type="button"><span class="i i-flag" aria-hidden="true"></span>Request review</button>
+      </div>
+    </div>
+
+    <!-- Claim map: stance × evidence -->
+    <figure class="card" style="flex: 1 1 420px; max-width: 480px; margin: 0; padding: 16px 16px 12px; display: flex; flex-direction: column; gap: 10px">
+      <figcaption style="display: flex; justify-content: space-between; align-items: baseline"><span class="t-over">Claim map</span><span class="t-cap faint">What the speaker does × what the evidence shows</span></figcaption>
+      <div style="display: grid; grid-template-columns: 22px 1fr; gap: 6px">
+        <div style="writing-mode: vertical-rl; transform: rotate(180deg); display: flex; justify-content: space-between; font-size: 11px; color: var(--text-3); font-weight: 600"><span>REFUTES ↓</span><span>ENDORSES ↑</span></div>
+        <div style="position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: 116px 116px; gap: 4px" role="img" aria-label="Claim map. Claim 1: speaker endorses, evidence contradicts, promotes a falsehood. Claim 2: speaker endorses, evidence supports. Claim 3: not settled by evidence.">
+          <div style="background: var(--mis-bg); border: 1px solid var(--mis-bd); border-radius: 8px 2px 2px 2px; padding: 8px 10px; color: var(--mis-fg); display: flex; flex-direction: column; justify-content: space-between">
+            <span style="font-size: 12px; font-weight: 700; display: flex; gap: 5px; align-items: center"><span class="i i-alert i-sm" aria-hidden="true"></span>Promotes a falsehood</span>
+            <span class="t-cap" style="opacity: .85">→ MISINFO</span>
+          </div>
+          <div style="background: var(--nomis-bg); border: 1px solid var(--nomis-bd); border-radius: 2px 8px 2px 2px; padding: 8px 10px; color: var(--nomis-fg); display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end; text-align: right">
+            <span style="font-size: 12px; font-weight: 700; display: flex; gap: 5px; align-items: center">Shares accurate info<span class="i i-checkc i-sm" aria-hidden="true"></span></span>
+            <span class="t-cap" style="opacity: .85">→ NO-MISINFO</span>
+          </div>
+          <div style="background: var(--deb-bg); border: 1px solid var(--deb-bd); border-radius: 2px 2px 2px 8px; padding: 8px 10px; color: var(--deb-fg); display: flex; flex-direction: column; justify-content: space-between">
+            <span class="t-cap" style="opacity: .85">→ DEBUNKED</span>
+            <span style="font-size: 12px; font-weight: 700; display: flex; gap: 5px; align-items: center"><span class="i i-shield i-sm" aria-hidden="true"></span>Corrects a falsehood</span>
+          </div>
+          <div style="background: var(--surface-2); border: 1px solid var(--border); border-radius: 2px 2px 8px 2px; padding: 8px 10px; color: var(--text-2); display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end; text-align: right">
+            <span class="t-cap" style="opacity: .85">→ review</span>
+            <span style="font-size: 12px; font-weight: 700; display: flex; gap: 5px; align-items: center">Denies a supported finding<span class="i i-flag i-sm" aria-hidden="true"></span></span>
+          </div>
+          <sc-for list="{{mapDots}}" as="d" hint-placeholder-count="2">
+            <button type="button" onClick="{{d.pick}}" aria-label="{{d.aria}}" style="position: absolute; left: {{d.x}}; top: {{d.y}}; transform: translate(-50%, -50%); width: {{d.size}}; height: {{d.size}}; border-radius: 50%; border: 2px solid var(--surface); background: {{d.bg}}; color: var(--surface); font: 600 13px/1 'IBM Plex Mono', monospace; cursor: pointer; box-shadow: {{d.ring}}; display: grid; place-items: center; padding: 0">{{d.n}}</button>
+          </sc-for>
+        </div>
+        <span></span>
+        <div style="display: flex; justify-content: space-between; font-size: 11px; color: var(--text-3); font-weight: 600"><span>← EVIDENCE: FALSE</span><span>EVIDENCE: TRUE →</span></div>
+      </div>
+      <div style="display: flex; gap: 10px; align-items: center; padding: 8px 10px; border: 1px dashed var(--cr-bd); border-radius: 8px">
+        <span class="t-cap" style="color: var(--text-2); font-weight: 600; flex: none">Not settled by evidence</span>
+        <sc-for list="{{gutterDots}}" as="d" hint-placeholder-count="1">
+          <button type="button" onClick="{{d.pick}}" aria-label="{{d.aria}}" style="width: {{d.size}}; height: {{d.size}}; border-radius: 50%; border: 1.5px dashed var(--cr-fg); background: var(--surface); color: var(--cr-fg); font: 600 13px/1 'IBM Plex Mono', monospace; cursor: pointer; box-shadow: {{d.ring}}; display: grid; place-items: center; padding: 0">{{d.n}}</button>
+        </sc-for>
+        <span class="t-cap faint">Untested, mixed or unclear claims wait here, never on the map.</span>
+      </div>
+    </figure>
+  </section>
+
+  <!-- 2. CASE FILE: player · transcript spine · margin notes -->
+  <section style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start" aria-label="Annotated transcript">
+    <aside style="flex: 0 1 260px; display: flex; flex-direction: column; gap: 10px">
+      <div class="player" style="width: 100%">
+        <div style="position: absolute; left: 14px; right: 14px; bottom: 80px; text-align: center; font-weight: 700; font-size: 15px; color: #FFFFFF">HOT WATER EVERY MORNING = NO MORE FLU</div>
+        <button class="btn" type="button" aria-label="Play video" style="width: 56px; height: 56px; border-radius: 50%; background: rgba(255,255,255,.92); color: #14213D"><span class="i i-play i-lg" aria-hidden="true"></span></button>
+        <span class="mono" style="position: absolute; bottom: 10px; left: 12px; font-size: 12px">0:05 / 0:42</span>
+      </div>
+      <div class="track" style="height: 32px" role="group" aria-label="Claim timeline">
+        <sc-for list="{{segs}}" as="s" hint-placeholder-count="3">
+          <button type="button" class="seg-mark {{s.cls}}" onClick="{{s.pick}}" aria-label="{{s.aria}}" style="left: {{s.left}}; width: {{s.w}}; box-shadow: {{s.ring}}; padding: 0; font: 600 11px/1 'IBM Plex Mono', monospace">{{s.n}}</button>
+        </sc-for>
+      </div>
+      <p class="t-cap faint" style="margin: 0">Click any number, on the map, the timeline or the transcript. All three follow.</p>
+    </aside>
+
+    <div class="card" style="flex: 999 1 720px; min-width: 0; padding: 8px 0">
+      <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr) minmax(280px, 340px); gap: 0 20px; padding: 10px 20px; border-bottom: 1px solid var(--border)">
+        <span class="t-over">Time</span><span class="t-over">What was said and shown</span><span class="t-over">What the evidence shows</span>
+      </div>
+      <sc-for list="{{rows}}" as="r" hint-placeholder-count="7">
+        <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr) minmax(280px, 340px); gap: 0 20px; padding: 12px 20px; background: {{r.rowBg}}; align-items: start">
+          <a class="mono t-small" href="#" style="padding-top: 3px">{{r.t}}</a>
+          <p class="{{r.textCls}}" style="margin: 0; font-size: 17px; line-height: 28px">
+            <sc-if value="{{r.isScreen}}" hint-placeholder-val="{{ false }}"><span class="tag" style="margin-right: 8px; vertical-align: 2px"><span class="i i-screen i-sm" aria-hidden="true"></span>On screen</span></sc-if><sc-for list="{{r.parts}}" as="p" hint-placeholder-count="2"><span class="{{p.cls}}">{{p.text}}</span></sc-for>
+          </p>
+          <div>
+            <sc-if value="{{r.hasNote}}" hint-placeholder-val="{{ false }}">
+              <article style="border-left: 3px solid {{r.note.edge}}; padding: 2px 0 2px 14px; display: flex; flex-direction: column; gap: 8px">
+                <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap">
+                  <span style="width: 22px; height: 22px; border-radius: 50%; background: {{r.note.dot}}; color: var(--surface); display: grid; place-items: center; font: 600 12px/1 'IBM Plex Mono', monospace; border: {{r.note.dotBorder}}">{{r.note.n}}</span>
+                  <span class="st {{r.note.stCls}}"><span class="i {{r.note.stIcon}} i-sm" aria-hidden="true"></span>{{r.note.st}}</span>
+                  <span class="vd {{r.note.vdCls}}"><span class="i {{r.note.vdIcon}} i-sm" aria-hidden="true"></span>{{r.note.vd}}</span>
+                </div>
+                <p class="t-small" style="margin: 0; font-weight: 600">{{r.note.claim}}</p>
+                <div style="display: flex; gap: 12px; align-items: center">
+                  <div role="img" aria-label="{{r.note.pyrAria}}" style="display: flex; flex-direction: column; align-items: center; gap: 2px; width: 56px; flex: none">
+                    <sc-for list="{{r.note.pyr}}" as="l" hint-placeholder-count="4"><span style="display: block; height: 6px; width: {{l.w}}; border-radius: 2px; background: {{l.bg}}; border: 1px solid {{l.bd}}"></span></sc-for>
+                  </div>
+                  <div class="t-cap" style="display: flex; flex-direction: column; gap: 2px">
+                    <span style="font-weight: 600">{{r.note.strongest}}</span>
+                    <span class="muted">{{r.note.counts}}</span>
+                  </div>
+                </div>
+                <sc-if value="{{r.note.decided}}" hint-placeholder-val="{{ false }}"><span class="decided" style="align-self: flex-start"><span class="i i-star i-sm" aria-hidden="true"></span>Decided the label</span></sc-if>
+                <a class="t-small" href="ClaimDetail.dc.html" style="display: inline-flex; gap: 4px; align-items: center">Read the sources <span class="i i-chevr i-sm" aria-hidden="true"></span></a>
+              </article>
+            </sc-if>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light","section":"Display"},"$preview":{"width":1440,"height":1640}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const active = (this.state && this.state.active) || 1;
+    const pick = (n) => () => this.setState({ active: n });
+    const ring = (n) => (n === active ? '0 0 0 3px var(--primary)' : 'none');
+    const C = {
+      1: { claim: 'Drinking hot water every morning cures the flu.', st: 'ENDORSES', stIcon: 'i-endorse', vd: 'CONTRADICTED', vdCls: 'vd-con', vdIcon: 'i-xc',
+           fg: 'var(--mis-fg)', seg: 'seg-con', hl: 'hl hl-con', levels: [0, 1, 0, 0], official: true,
+           strongest: 'Strongest: randomised trial + WHO', counts: '2 contradict · 0 support', decided: true },
+      2: { claim: 'The flu is caused by a virus.', st: 'ENDORSES', stIcon: 'i-endorse', vd: 'SUPPORTED', vdCls: 'vd-sup', vdIcon: 'i-checkc',
+           fg: 'var(--nomis-fg)', seg: 'seg-sup', hl: 'hl', levels: [0, 0, 0, 0], official: true,
+           strongest: 'Official reference only (WHO)', counts: '0 contradict · 1 supports', decided: false },
+      3: { claim: 'Lemon makes the cure work twice as fast.', st: 'ENDORSES', stIcon: 'i-endorse', vd: 'INSUFFICIENT EVIDENCE', vdCls: 'vd-ins', vdIcon: 'i-dashed',
+           fg: 'var(--cr-fg)', seg: 'seg-ins', hl: 'hl hl-ins', levels: [0, 0, 0, 0], official: false,
+           strongest: 'No study tests this claim', counts: 'Untested is not the same as false', decided: false }
+    };
+    const LV = ['systematic review', 'randomised trial', 'observational study', 'animal or lab study'];
+    const note = (n) => {
+      const c = C[n];
+      const pyr = c.levels.map((has, i) => ({ w: (40 + i * 20) + '%', bg: has ? c.fg : 'transparent', bd: has ? c.fg : 'var(--border-strong)' }));
+      const present = LV.filter((_, i) => c.levels[i]);
+      return {
+        n, claim: c.claim, st: c.st, stIcon: c.stIcon, stCls: '', vd: c.vd, vdCls: c.vdCls, vdIcon: c.vdIcon,
+        edge: n === active ? 'var(--primary)' : c.fg, dot: n === 3 ? 'var(--surface)' : c.fg,
+        dotBorder: n === 3 ? '1.5px dashed var(--cr-fg)' : '0', pyr,
+        pyrAria: 'Evidence pyramid: ' + (present.length ? present.join(', ') + ' found' : 'no studies found') + (c.official ? '; official reference found' : ''),
+        strongest: c.strongest, counts: c.counts, decided: c.decided
+      };
+    };
+    const seg = (text, n) => ({ text, cls: n ? C[n].hl + (n === active ? ' is-on' : '') : '' });
+    const raw = [
+      ['0:00', [seg('Okay, listen up, flu season is here and nobody tells you this.')], 0, false],
+      ['0:03', [seg('Drinking hot water every morning', 1), seg(', '), seg('this is the cure, trust me', 1), seg('.')], 1, false],
+      ['0:09', [seg('I have not been sick in three years.')], 0, false],
+      ['0:12', [seg('The flu is caused by a virus, right', 2), seg(', so you flush it out.')], 2, false],
+      ['0:16', [seg('Do it before coffee, every single day.')], 0, false],
+      ['0:20', [seg('ADD LEMON = 2X FASTER', 3)], 3, true],
+      ['0:25', [seg('Follow for more tips your doctor will not tell you.')], 0, false]
+    ];
+    const rows = raw.map(([t, parts, n, isScreen]) => ({
+      t, parts, isScreen, hasNote: !!n, note: n ? note(n) : {},
+      rowBg: n && n === active ? 'var(--surface-2)' : 'transparent',
+      textCls: n ? '' : 'muted'
+    }));
+    const mapDots = [
+      { n: 1, x: '22%', y: '34%', aria: 'Claim 1: promotes a falsehood' },
+      { n: 2, x: '80%', y: '30%', aria: 'Claim 2: shares accurate info' }
+    ].map((d) => ({ ...d, pick: pick(d.n), size: d.n === active ? '34px' : '28px', bg: C[d.n].fg, ring: ring(d.n) }));
+    const gutterDots = [{ n: 3, aria: 'Claim 3: not settled by evidence' }].map((d) => ({ ...d, pick: pick(d.n), size: d.n === active ? '34px' : '28px', ring: ring(d.n) }));
+    const segs = [[1, '7.1%', '11.9%', '0:03 to 0:08'], [2, '28.6%', '7.1%', '0:12 to 0:15'], [3, '47.6%', '9.5%', '0:20 to 0:24']].map(([n, left, w, when]) => ({
+      n, left, w, cls: C[n].seg, pick: pick(n), ring: ring(n), aria: 'Claim ' + n + ', ' + when + ', ' + C[n].vd.toLowerCase()
+    }));
+    return { theme: this.props.theme ?? 'light', rows, mapDots, gutterDots, segs };
+  }
+}
+</script>
+</body>
+</html>
