@@ -26,7 +26,7 @@ export type Stance = (typeof STANCE_VALUES)[number];
 export type Verdict = (typeof VERDICT_VALUES)[number];
 export type MisinfoBasis = (typeof MISINFO_BASES)[number];
 export type Severity = (typeof SEVERITIES)[number];
-export type ReviewStatus = "NOT_REQUIRED" | "PENDING" | "VERIFIED" | "CORRECTED" | "REJECTED";
+export type ReviewStatus = "NOT_REQUIRED" | "PENDING" | "VERIFIED" | "CORRECTED" | "REJECTED" | "REANALYSIS";
 export type JobState = "QUEUED" | "RUNNING" | "RETRYING" | "NEEDS_REVIEW" | "COMPLETED" | "FAILED";
 
 /** Colour families. Each maps to one set of token classes in components/ui/tone.ts. */
@@ -95,12 +95,36 @@ export const STANCES: Record<Stance, Omit<Meta, "tone">> = {
 };
 
 export const REVIEW_STATUS: Record<ReviewStatus, { display: string; icon: string }> = {
-  NOT_REQUIRED: { display: "Not required", icon: "minus" }, // open decision Q3: confirm with the lead
+  NOT_REQUIRED: { display: "Not required", icon: "minus" }, // Q3: approved by the lead
   PENDING: { display: "Pending review", icon: "clock" },
   VERIFIED: { display: "Verified", icon: "checkc" },
   CORRECTED: { display: "Corrected", icon: "pencil" },
   REJECTED: { display: "Rejected", icon: "ban" },
+  REANALYSIS: { display: "Re-analysis requested", icon: "refresh" },
 };
+
+/**
+ * Backend review case → display status. No case on a finished job = "Not required".
+ * T26 statuses: REVIEW_REQUIRED (open), VERIFIED, CORRECTED, REJECTED, REANALYSIS_REQUESTED.
+ */
+export function toReviewStatus(review: { status?: string | null } | null | undefined): ReviewStatus {
+  switch (review?.status) {
+    case undefined:
+    case null:
+      return "NOT_REQUIRED";
+    case "VERIFIED":
+      return "VERIFIED";
+    case "CORRECTED":
+      return "CORRECTED";
+    case "REJECTED":
+      return "REJECTED";
+    case "REANALYSIS_REQUESTED":
+      return "REANALYSIS";
+    default:
+      // REVIEW_REQUIRED, and anything unknown: treat as still provisional.
+      return "PENDING";
+  }
+}
 
 export const JOB_STATES: Record<JobState, { display: string; icon: string }> = {
   QUEUED: { display: "Queued", icon: "clock" },
@@ -117,6 +141,79 @@ export const SEVERITY: Record<Severity, { display: string; icon: string; rank: n
   MEDIUM: { display: "Medium priority", icon: "flag", rank: 1 },
   LOW: { display: "Low priority", icon: "minus", rank: 2 },
 };
+
+/**
+ * One line under the label saying which rule reached it (Q6: CANNOT RECOGNIZE keeps
+ * its name, with the reason underneath). Keys are the judge's decision rules (§9).
+ */
+export const DECISION_RULE_TEXT: Record<string, string> = {
+  endorsed_contradicted: "The speaker promotes a claim the evidence contradicts.",
+  refuted_supported: "The speaker denies a claim the evidence supports.",
+  unproven: "The speaker presents an untested remedy as working, and no evidence supports it.",
+  refuted_contradicted: "The speaker corrects a claim the evidence contradicts.",
+  judged_nothing_false_endorsed: "Every claim the evidence could settle is supported or rejected correctly.",
+  refuted_unsettled: "The speaker rejects a claim the evidence can't settle, so it may be a correction.",
+  nothing_judged: "No claim in the video could be settled by the evidence found.",
+  no_claims: "No checkable health claims were found in the video.",
+};
+
+// ---------------------------------------------------------------- evidence levels
+
+/** Evidence strip levels (Direction 3). Official guidance is a separate badge, not a level. */
+export type EvidenceLevel = "SYSTEMATIC_REVIEW" | "RCT" | "OBSERVATIONAL" | "ANIMAL_LAB";
+
+export const EVIDENCE_LEVEL_DISPLAY: Record<EvidenceLevel, { short: string; one: string; many: string }> = {
+  SYSTEMATIC_REVIEW: { short: "SR", one: "systematic review", many: "systematic reviews" },
+  RCT: { short: "RCT", one: "randomised trial", many: "randomised trials" },
+  OBSERVATIONAL: { short: "OBS", one: "observational study", many: "observational studies" },
+  ANIMAL_LAB: { short: "LAB", one: "animal or lab study", many: "animal or lab studies" },
+};
+
+/**
+ * Backend study type (backend/app/core/retrieval/rerank.py StudyType) → strip level.
+ * Guidelines count as official guidance, not a level. Clinical trials without
+ * randomisation sit with observational studies. Narrative reviews, case reports,
+ * opinion and unknown types have no level: they are listed, but not in the strip.
+ */
+export function evidenceLevel(studyType: string | null | undefined): EvidenceLevel | "GUIDANCE" | null {
+  switch ((studyType ?? "").toLowerCase()) {
+    case "systematic_review":
+    case "meta_analysis":
+      return "SYSTEMATIC_REVIEW";
+    case "rct":
+      return "RCT";
+    case "clinical_trial":
+    case "observational":
+      return "OBSERVATIONAL";
+    case "animal":
+    case "in_vitro":
+      return "ANIMAL_LAB";
+    case "guideline":
+      return "GUIDANCE";
+    default:
+      return null;
+  }
+}
+
+export const STUDY_TYPE_DISPLAY: Record<string, string> = {
+  systematic_review: "Systematic review",
+  meta_analysis: "Meta-analysis",
+  rct: "Randomised trial",
+  guideline: "Guideline",
+  clinical_trial: "Clinical trial",
+  observational: "Observational study",
+  narrative_review: "Narrative review",
+  case_report: "Case report",
+  animal: "Animal study",
+  in_vitro: "Lab study",
+  opinion: "Opinion or editorial",
+  other: "Other",
+  unknown: "Study type not recorded",
+};
+
+export function studyTypeDisplay(t: string | null | undefined): string {
+  return STUDY_TYPE_DISPLAY[(t ?? "unknown").toLowerCase()] ?? STUDY_TYPE_DISPLAY.unknown;
+}
 
 // ---------------------------------------------------------------- parsing
 
