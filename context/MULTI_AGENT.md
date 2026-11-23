@@ -1366,9 +1366,12 @@ job state (tested).
   on a throwaway Postgres database.
 - **Left for a person:** (1) per-user ownership still doesn't exist: `videos` has no owner
   column, and the existing `/jobs/*` and legacy routes don't check ownership (§15, §17
-  "every endpoint checks the object belongs to the caller"). That needs the migration
-  planned as 0011 and touches T26/T29; T27 avoided it because review access is by role,
-  not ownership. Until then a reviewer could decide a case on their own video. (2) Assign
+  "every endpoint checks the object belongs to the caller"). T28's migration 0011 adds
+  `jobs.user_id`; the coordinating session also asked T27 for owner columns, which would
+  have duplicated it, so T27 adds none. Suggested follow-up: 0012 `videos.owner_id`, read
+  checks with reviewer/admin exceptions, and `submitted_by` on review responses
+  (`decided_by` is already `decision.reviewer_id`). Until then a reviewer could decide a
+  case on their own video. (2) Assign
   reviewer/admin roles in Supabase `app_metadata`. (3) After REQUEST_REANALYSIS the old
   job still reads as "in review" on the legacy result route; T26's resolved status should
   cover it. (4) Admin-only actions (e.g. reopening a case) aren't defined in the doc.
