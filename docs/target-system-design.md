@@ -540,7 +540,7 @@ Severity ranks how much harm a claim could do if someone acted on it. It sets th
 
 **Who decides:** code, not a model. Each claim's `claim_category` and topic map to a severity through a table in config. The table starts from the high-risk topic list the review rule already uses (section 11). **The project lead and Dr. Brooks own the table, and it is confirmed with WHO** before it is used for real triage. Reviewers can override a claim's severity with a reason, and every override is logged, so the table can be corrected from real cases.
 
-A video's severity is the highest severity among its MISINFO-relevant claims (endorsed and CONTRADICTED, or endorsed and unsettled). The review queue sorts by severity first, then age.
+A video's severity is the highest severity among its MISINFO-relevant claims (endorsed and CONTRADICTED, endorsed and unsettled, or refuted while the evidence SUPPORTS it). The review queue sorts by severity first, then age.
 
 ## 13. Model routing
 
