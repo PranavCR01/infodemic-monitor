@@ -423,7 +423,7 @@ def judge(claims):
     return "CANNOT_RECOGNIZE", [], []
 ```
 
-The third value is the list of review reasons the rule itself adds (section 11).
+The third value is the list of review reasons the rule itself adds (section 11). Review reasons are collected from every claim, whichever rule decides the label: a refuted claim the evidence can't settle raises "possible debunk" even when another claim makes the video NO-MISINFO. Mixed videos (one false claim endorsed, another refuted) are labelled MISINFO and always sent to review.
 
 **Probe: why two new branches?** Labelling the first golden-set batch exposed two gaps. A speaker who *refutes a true claim* ("vaccines don't prevent measles, that's a lie") was falling through to NO-MISINFO, because only endorsed false claims counted as misinformation. Denying established evidence is misinformation too, so it now is, and it always goes to a person, because it rests entirely on the stance being right. The second gap: clear debunks of claims the sources couldn't settle were landing in CANNOT RECOGNIZE with nothing to flag them. They still don't get DEBUNKED automatically, since refuting an unsettled claim isn't the same as correcting a false one, but a person now sees them. Most of the other missed debunks (statistics, schedules, regulatory limits) are fixed at the source: section 6 now allows authoritative reference sources, so those claims can be checked and reach CONTRADICTED.
 
