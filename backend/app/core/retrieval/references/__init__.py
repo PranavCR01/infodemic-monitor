@@ -18,6 +18,8 @@ from app.core.retrieval.references.fetcher import (
 from app.core.retrieval.references.passages import Passage, best_passage, split_passages
 from app.core.retrieval.references.search import (
     REFERENCE_PUBLICATION_TYPE,
+    BookChapter,
+    parse_book_chapters,
     ReferenceResult,
     ReferenceSearcher,
     bookshelf_query,
@@ -32,8 +34,15 @@ from app.core.retrieval.references.snapshots import (
     SnapshotStore,
     SqlSnapshotStore,
 )
+from app.core.retrieval.references.stored import (
+    AddResult,
+    StoredSnapshotError,
+    StoredSnapshots,
+    StoredVersion,
+)
 
 __all__ = [
+    "AddResult", "BookChapter", "StoredSnapshotError", "StoredSnapshots", "StoredVersion", "parse_book_chapters",
     "CataloguePage", "FetchedPage", "InMemorySnapshotStore", "Passage", "REFERENCE_PUBLICATION_TYPE",
     "ReferenceConfig", "ReferenceFetchError", "ReferenceFetcher", "ReferenceResult", "ReferenceSearcher",
     "ReferenceSource", "Snapshot", "SnapshotMismatch", "SnapshotStore", "SqlSnapshotStore",

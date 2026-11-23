@@ -27,9 +27,10 @@ class ReferenceFetchError(RuntimeError):
     """A page could not be fetched. ``kind`` is one of ``not_allowed``, ``http``,
     ``too_large``, ``content_type``, ``empty``."""
 
-    def __init__(self, kind: str, message: str):
+    def __init__(self, kind: str, message: str, status: Optional[int] = None):
         super().__init__(f"{kind}: {message}")
         self.kind = kind
+        self.status = status
 
 
 @dataclass(frozen=True)
@@ -143,6 +144,10 @@ class ReferenceFetcher:
         self._clock = clock
         self.request_count = 0
 
+    def now(self) -> str:
+        """The capture time this fetcher stamps on pages (injectable in tests)."""
+        return self._clock()
+
     def check(self, url: str, source: ReferenceSource) -> None:
         if not url_allowed(url, source):
             raise ReferenceFetchError("not_allowed", f"{url!r} is outside source {source.id}'s allow-list")
@@ -154,7 +159,7 @@ class ReferenceFetcher:
         self.request_count += 1
         with self._http.stream("GET", url, params=params) as resp:
             if resp.status_code != 200:
-                raise ReferenceFetchError("http", f"{url} returned HTTP {resp.status_code}")
+                raise ReferenceFetchError("http", f"{url} returned HTTP {resp.status_code}", resp.status_code)
             buf = bytearray()
             for chunk in resp.iter_bytes():
                 buf.extend(chunk)

@@ -1121,6 +1121,74 @@ worker sends it; OCR off). Harness: `backend/scripts/smoke_run.py` (never reads 
     (resolved today to `gpt-4o-2024-08-06`), against §13's pinned-ID rule. Live default
     unchanged.
 
+## 7q. Production Reference Retrieval (T19, no issue; design §6)
+
+Found while labelling the golden set: www.cdc.gov answers 403 to scripted requests from
+cloud hosts and the NCBI Bookshelf website serves a reCAPTCHA. Code:
+`app/core/retrieval/references/{search,stored,refresh,passages}.py`,
+`scripts/refresh_reference_snapshots.py`, `data/reference_snapshots/`.
+
+- **Bookshelf through E-utilities only.** Checked live (2026-11-23): `efetch` on
+  `db=books` returns no text (only an ID list; `rettype=full&retmode=xml` is refused with
+  HTTP 400), and `www.ncbi.nlm.nih.gov/books/NBK…` returns a captcha page. **Deviation
+  from the task wording ("db=books, esearch/efetch"):** chapters are found the way PubMed
+  indexes them: ESearch `db=pubmed` with `(<terms>) AND booksdocs[filter]`,
+  `sort=relevance`, then EFetch `db=pubmed` XML, whose `PubmedBookArticle` gives the
+  chapter's own `bookaccession` (`NBK…`), title, book and summary text. Two requests per
+  claim (was 2 + one page fetch per chapter), no website request. The Bookshelf URL is
+  the citation link only; it is built from a checked accession and never fetched. The
+  design doc's "searched through the same E-utilities API" still holds. `NCBI_API_KEY`
+  is now passed to these calls too (it wasn't), and 429/5xx are retried with backoff (3
+  attempts) under the shared NCBI limiter; T18 saw 429s from the shared egress IP.
+- **Limitation:** the quoted text is the chapter's PubMed summary (for StatPearls, the
+  chapter overview), not the full chapter. Full text is not available through
+  E-utilities. Good for "normal temperature is about 37 °C"; a fact deep in a chapter
+  body will not be found.
+- **Stored, versioned snapshots.** A source or catalogue page can be
+  `retrieval: stored` (CDC is). Claims never request those pages: the searcher reads the
+  current version from `data/reference_snapshots/` (committed: `index.json` with each
+  page's URL, current hash and history, plus one immutable `<page_id>/<sha256>.json` per
+  distinct text) and cites it like a live page: same passage choice, same `ref_<hash>` id
+  rule (URL, snapshot hash, passage), `retrieved_at` = the capture date, `query` =
+  `stored:<page_id>@<sha12>`, and a copy saved to the `reference_snapshots` table on use.
+  Every read re-checks that the text hashes to its name; a tampered, missing or
+  wrong-URL snapshot is an error (a `NodeError`, as T17), never a request. A snapshot
+  older than `stored_snapshot_max_age_days` (180) is still cited (dated) but reported as
+  stale on every use. Committed files rather than a DB table so every change to cited text
+  goes through a reviewed PR and production needs no migration or network; CDC text is
+  U.S. federal government work (public domain).
+- **Refresh script** `scripts/refresh_reference_snapshots.py`: fetches every stored page
+  through the same allow-listed fetcher (honest User-Agent, no redirects, size cap) and adds
+  a version only when the text changed; `--import PAGE=file.html` takes a copy a person
+  saved in a browser when the publisher refuses the script too; `--set-current
+  PAGE=<sha>` rolls back; `--check` verifies the archive and shows ages (no network; a
+  test runs it on the committed archive). Nothing tries to look like a browser.
+- **CDC snapshots captured 2026-11-23** (CDC answered 200 from this build host that day,
+  unlike T18's run): child/adolescent schedule, the new adult schedule page
+  (`cdc_adult_schedule`), and the measles vaccination page. 3 requests.
+- **Passages on real pages.** Real CDC text splits one statement over many short blocks
+  ("Doses are given at:" / "12–15 months old" / "1st dose"), and T17's stemmer turned
+  "doses"/"vaccines" into "dos"/"vaccin", which never matched "dose"/"vaccine". Fixed the
+  stemmer (plural endings only) and let a passage be a window of up to 6 consecutive whole
+  paragraphs (≤ 600 chars), quoted verbatim (still a substring of the snapshot); equal
+  scores go to the shorter candidate. For "The MMR vaccine is given at 12 months" the CDC
+  quote is now "All children are recommended to have 2 doses of MMR vaccines. Doses are
+  given at: 12–15 months old". Verdict rules untouched.
+- **Tests:** fixtures only. The Bookshelf replies are recorded (2 requests, trimmed); the
+  fake www.cdc.gov answers 403 and the fake Bookshelf website a captcha, and tests assert
+  neither is ever requested. CDC pages in tests come from an archive built from T17's
+  synthetic pages; one test checks the committed real archive.
+- **Left for a person:**
+  - The schedule grids (child/adult tables) come out as one cell per paragraph, so a
+    claim that turns on one grid cell ("shingles vaccine at 50") rarely gets a precise
+    quote. The measles page's prose is fine. A table-aware extractor or more prose pages
+    (e.g. CDC's per-vaccine "who should get" pages) would fix it; add them as stored pages.
+  - Re-run the refresh script on a schedule (e.g. monthly) from a host CDC accepts, or
+    import browser copies, and review the diff in a PR. `--check --strict` fails on stale.
+  - Copyright of the committed StatPearls summary in the Bookshelf fixture (same
+    question as T18's PubMed fixtures).
+  - `bookshelf_query` ANDs every content word, so long claims often find no chapter
+    (unchanged from T17); a narrower query (PICO terms) would help.
 ## 7p. Upload Safeguards and Signed Uploads (T20, no issue; design §1, §15)
 
 - **Signed flow (new, always on):** `POST /v1/videos/uploads` `{filename, size_bytes?,
@@ -1177,6 +1245,14 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-23**: T19 (no issue; design §6) production reference retrieval by the
+  automated build. Bookshelf now goes through E-utilities only (ESearch/EFetch on
+  `db=pubmed` with `booksdocs[filter]`, because `efetch db=books` returns no text: checked
+  live). CDC pages are `retrieval: stored`: committed, versioned snapshots
+  (`data/reference_snapshots/`, 3 CDC pages captured 2026-11-23), cited by snapshot hash
+  with the same `ref_<hash>` rule, refreshed by `scripts/refresh_reference_snapshots.py`.
+  Fixed the passage stemmer and added short-paragraph windows for real CDC text. 903
+  passed, 8 skipped. Details in §7q.
 - **2026-11-23**: T21 (#35; design §9, §11) by the automated build: the judge collects
   review reasons (`denies_supported`, `possible_debunk`) from every claim, not only when
   their rule decides the label, so v68/v70-style videos (NO_MISINFO plus a refuted claim the

@@ -1,0 +1,34 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "2",
+  "retmax": "2",
+  "retstart": "0",
+  "idlist": [
+   "32966005",
+   "29262037"
+  ],
+  "translationset": [
+   {
+    "from": "normal",
+    "to": "\"normal\"[All Fields] OR \"normalisation\"[All Fields] OR \"normalisations\"[All Fields] OR \"normalise\"[All Fields] OR \"normalised\"[All Fields] OR \"normalises\"[All Fields] OR \"normalising\"[All Fields] OR \"normalization\"[All Fields] OR \"normalizations\"[All Fields] OR \"normalize\"[All Fields] OR \"normalized\"[All Fields] OR \"normalizer\"[All Fields] OR \"normalizers\"[All Fields] OR \"normalizes\"[All Fields] OR \"normalizing\"[All Fields] OR \"normally\"[All Fields] OR \"normals\"[All Fields]"
+   },
+   {
+    "from": "body temperature",
+    "to": "\"body temperature\"[MeSH Terms] OR (\"body\"[All Fields] AND \"temperature\"[All Fields]) OR \"body temperature\"[All Fields]"
+   },
+   {
+    "from": "degrees",
+    "to": "\"degree\"[All Fields] OR \"degrees\"[All Fields]"
+   },
+   {
+    "from": "booksdocs[filter]",
+    "to": "pubmed books[subset]"
+   }
+  ],
+  "querytranslation": "(\"normal\"[All Fields] OR \"normalisation\"[All Fields] OR \"normalisations\"[All Fields] OR \"normalise\"[All Fields] OR \"normalised\"[All Fields] OR \"normalises\"[All Fields] OR \"normalising\"[All Fields] OR \"normalization\"[All Fields] OR \"normalizations\"[All Fields] OR \"normalize\"[All Fields] OR \"normalized\"[All Fields] OR \"normalizer\"[All Fields] OR \"normalizers\"[All Fields] OR \"normalizes\"[All Fields] OR \"normalizing\"[All Fields] OR \"normally\"[All Fields] OR \"normals\"[All Fields]) AND (\"body temperature\"[MeSH Terms] OR (\"body\"[All Fields] AND \"temperature\"[All Fields]) OR \"body temperature\"[All Fields]) AND (\"degree\"[All Fields] OR \"degrees\"[All Fields]) AND \"celsius\"[All Fields] AND \"pubmed books\"[Filter]"
+ }
+}
