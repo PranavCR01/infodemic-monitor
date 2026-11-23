@@ -458,16 +458,46 @@ def test_fallback_errors_propagate_like_the_single_call():
         provider.run(fusion(), job_id="job-both")
 
 
+def _with_category(category: str) -> Callable[[str, Any], Any]:
+    def script(step: str, inp: Any) -> Any:
+        out = default_script(step, inp)
+        if step == "extract_claims":
+            for c in out["claims"]:
+                c["claim_category"] = category
+        return out
+    return script
+
+
+NOTHING_FOUND = {
+    r.RETRIEVE_EVIDENCE: lambda s: {"retrieved_evidence": {c.claim_id: [] for c in s["claims"]},
+                                    "retrieval_attempts": {c.claim_id: 3 for c in s["claims"]}},
+}
+
+
 def test_abstention_is_not_replaced_by_the_single_call():
-    """No evidence → INSUFFICIENT → CANNOT_RECOGNIZE: a designed answer, not a failure."""
+    """No evidence for a harm claim → INSUFFICIENT → CANNOT_RECOGNIZE: a designed answer,
+    not a failure."""
     fallback = FakeSingleCall()
-    provider = make_provider(fallback=fallback, node_overrides={
-        r.RETRIEVE_EVIDENCE: lambda s: {"retrieved_evidence": {c.claim_id: [] for c in s["claims"]},
-                                        "retrieval_attempts": {c.claim_id: 3 for c in s["claims"]}},
-    })
+    provider = make_provider(ScriptedClient(_with_category("side_effects")), fallback=fallback,
+                             node_overrides=NOTHING_FOUND)
     outcome = provider.run(fusion(), job_id="job-abstain")
     assert outcome.pipeline == "graph" and fallback.calls == 0
     assert outcome.classification.label == MisinfoLabel.CANNOT_RECOGNIZE
+
+
+def test_unproven_efficacy_claim_end_to_end_is_misinfo_unproven_and_reviewed():
+    """T30 (D1 = B): endorsed treatment claims the full search found nothing for →
+    UNSUPPORTED → MISINFO with basis ``unproven``, always reviewed; not a failure."""
+    fallback = FakeSingleCall()
+    provider = make_provider(fallback=fallback, node_overrides=NOTHING_FOUND)
+    outcome = provider.run(fusion(), job_id="job-unproven")
+    assert outcome.pipeline == "graph" and fallback.calls == 0
+    assert outcome.classification.label == MisinfoLabel.MISINFO
+    final = outcome.state["final_result"]
+    assert final.misinfo_basis == "unproven" and final.decision_rule == "endorsed_unsupported"
+    assert outcome.state["requires_human_review"]
+    assert any(x.startswith("judge:unproven_claim:") for x in outcome.state["review_reasons"])
+    assert "false" not in outcome.classification.explanation.lower()
 
 
 def test_finished_run_is_reused_and_unfinished_run_resumes():

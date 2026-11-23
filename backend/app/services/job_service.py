@@ -2,6 +2,7 @@ from typing import Optional
 
 from sqlalchemy.orm import Session
 
+from app.core.schemas.pipeline import display_label
 from app.db.models.job import Job
 from app.db.models.result import Result
 from app.db.models.video import Video
@@ -38,6 +39,9 @@ def list_jobs(
             "filename": video.filename,
             "label": result.label if result else None,
             "confidence": result.confidence if result else None,
+            # T30: why a MISINFO label was given, and the label as shown.
+            "misinfo_basis": result.misinfo_basis if result else None,
+            "label_display": display_label(result.label, result.misinfo_basis) if result else None,
         }
         for job, video, result in rows
     ]

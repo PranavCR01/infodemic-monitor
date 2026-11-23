@@ -750,7 +750,7 @@ Calls to the MCP retrieval server are traced too, with the client ID, tool, late
 | `claim_evidence` | Which paper relates to which claim, and how (supports or contradicts) |
 | `verification_results` | Verdict, explanation, limitations, version |
 | `critic_reviews` | Decision and issues raised |
-| `classifications` | Video label, deciding claims, confidence, version |
+| `classifications` | Video label, MISINFO basis (`contradicted` / `denies_supported` / `unproven`), deciding claims, confidence, version |
 | `human_reviews` | Reviewer, decision, reason, time |
 | `model_runs` | Step, model, prompt version, tokens, cost, latency |
 | `audit_events` | Who did what to which record, and when |

@@ -182,7 +182,7 @@ def test_each_verdict_is_recorded(verdict, sup, con):
     assert res == VerificationResult(
         claim_id="c1", verdict=Verdict(verdict), supporting_evidence_ids=sup, contradicting_evidence_ids=con,
         explanation="because", limitations=["indirect"], raw_confidence=0.6,
-        model="fake-model-1", prompt_version="verify_v2",
+        model="fake-model-1", prompt_version=vf.DEFAULT_PROMPT_VERSION,
     )
     assert len(caller.calls) == 1 and "errors" not in out
 
@@ -195,8 +195,14 @@ def test_insufficient_may_mention_indirect_papers():
 # ------------------------------------------- absence of evidence ≠ contradiction
 
 
+def harm_claim(cid: str = "c1") -> GraphClaim:
+    return claim(cid, "Microwaved water causes cancer").model_copy(update={"claim_category": "side_effects"})
+
+
 def test_no_evidence_is_insufficient_without_calling_a_model():
-    out, caller = run([answer("CONTRADICTED", con=["ev_1"])], state(evidence={"c1": []}))
+    """A non-efficacy claim with no evidence: INSUFFICIENT_EVIDENCE (no evidence of
+    harm is not evidence of harm, §7)."""
+    out, caller = run([answer("CONTRADICTED", con=["ev_1"])], state([harm_claim()], evidence={"c1": []}))
     res = out["verification_results"]["c1"]
     assert res.verdict == Verdict.INSUFFICIENT_EVIDENCE
     assert res.limitations == ["no evidence was retrieved for this claim"]
@@ -204,9 +210,59 @@ def test_no_evidence_is_insufficient_without_calling_a_model():
 
 
 def test_missing_evidence_key_is_insufficient_too():
-    out, caller = run([answer("CONTRADICTED", con=["ev_1"])], state(evidence={}))
+    out, caller = run([answer("CONTRADICTED", con=["ev_1"])], state([harm_claim()], evidence={}))
     assert out["verification_results"]["c1"].verdict == Verdict.INSUFFICIENT_EVIDENCE
     assert caller.calls == []
+
+
+# ------------------------------------------------- unproven efficacy claims (T30)
+
+
+@pytest.mark.parametrize("category", ["treatment_efficacy", "prevention"])
+def test_no_evidence_for_an_efficacy_claim_is_unsupported_without_a_model(category):
+    c = claim().model_copy(update={"claim_category": category})
+    out, caller = run([answer("CONTRADICTED", con=["ev_1"])], state([c], evidence={"c1": []}))
+    res = out["verification_results"]["c1"]
+    assert res.verdict == Verdict.UNSUPPORTED
+    assert res.supporting_evidence_ids == res.contradicting_evidence_ids == []
+    assert "no evidence supports this claim" in res.explanation.lower()
+    assert "false" not in res.explanation.lower()
+    assert caller.calls == [] and "errors" not in out
+
+
+@pytest.mark.parametrize("category", ["side_effects", "mechanism", "health_claim", "nutrition"])
+def test_non_efficacy_claims_never_get_unsupported(category):
+    c = claim().model_copy(update={"claim_category": category})
+    out, caller = run([answer("UNSUPPORTED")], state([c], evidence={"c1": []}))
+    assert out["verification_results"]["c1"].verdict == Verdict.INSUFFICIENT_EVIDENCE
+    # A model answering UNSUPPORTED for such a claim is recorded as insufficient.
+    out, caller = run([answer("UNSUPPORTED", explanation="nothing tests it")], state([c]))
+    res = out["verification_results"]["c1"]
+    assert res.verdict == Verdict.INSUFFICIENT_EVIDENCE and res.limitations[-1] == vf.NOT_ELIGIBLE_LIMITATION
+    assert "UNSUPPORTED is NOT allowed" in content(caller.calls[0])
+
+
+def test_model_may_answer_unsupported_for_an_efficacy_claim_and_the_prompt_says_so():
+    out, caller = run([answer("UNSUPPORTED", explanation="No evidence supports this claim.")])
+    assert out["verification_results"]["c1"].verdict == Verdict.UNSUPPORTED
+    text = content(caller.calls[0])
+    assert "UNSUPPORTED is allowed for this claim" in text
+    assert "no evidence supports this claim" in caller.calls[0].system.lower()
+    assert "UNSUPPORTED" in vf.VERIFY_TOOL["input_schema"]["properties"]["verdict"]["enum"]
+
+
+def test_unsupported_with_citations_is_rejected_then_repaired():
+    out, caller = run([answer("UNSUPPORTED", sup=["ev_2"]), answer("UNSUPPORTED")])
+    assert out["verification_results"]["c1"].verdict == Verdict.UNSUPPORTED
+    assert len(caller.calls) == 2 and "cites no evidence IDs" in content(caller.calls[1])
+
+
+def test_search_errors_rule_out_unsupported():
+    """An outage must never read as "nothing was found"."""
+    from app.core.graph.state import NodeError
+    err = NodeError(node="retrieve_evidence", claim_id="c1", retryable=True, message="PubMed retrieval failed")
+    out, caller = run([answer("UNSUPPORTED")], state(evidence={"c1": []}, errors=[err]))
+    assert out["verification_results"]["c1"].verdict == Verdict.INSUFFICIENT_EVIDENCE
 
 
 def test_contradicted_without_a_contradicting_paper_is_rejected_then_repaired():

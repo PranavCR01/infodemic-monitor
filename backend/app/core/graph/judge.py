@@ -11,24 +11,33 @@ verdict take part.
 2. ``refuted_supported``: otherwise any claim is REFUTES + SUPPORTED (the speaker
    denies something true) → MISINFO, always sent to review (reason
    ``denies_supported:<cid>``).
-3. ``refuted_contradicted``: otherwise any claim is REFUTES + CONTRADICTED → DEBUNKING.
-4. ``judged_nothing_false_endorsed``: otherwise at least one claim is SUPPORTED or
+3. ``endorsed_unsupported`` (T30, D1 = B): otherwise any claim is ENDORSES + UNSUPPORTED
+   (an efficacy claim the full search found no evidence for or against) → MISINFO
+   with ``misinfo_basis`` ``unproven``, always sent to review (reason
+   ``unproven_claim:<cid>``).
+4. ``refuted_contradicted``: otherwise any claim is REFUTES + CONTRADICTED → DEBUNKING.
+5. ``judged_nothing_false_endorsed``: otherwise at least one claim is SUPPORTED or
    CONTRADICTED → NO_MISINFO.
-5. ``refuted_unsettled``: otherwise any claim is REFUTES + MIXED / INSUFFICIENT_EVIDENCE
-   → CANNOT_RECOGNIZE, sent to review as a possible debunk (reason
+6. ``refuted_unsettled``: otherwise any claim is REFUTES + MIXED / INSUFFICIENT_EVIDENCE
+   / UNSUPPORTED → CANNOT_RECOGNIZE, sent to review as a possible debunk (reason
    ``possible_debunk:<cid>``).
-6. ``nothing_judged``: otherwise (all INSUFFICIENT_EVIDENCE / MIXED / NOT_VERIFIABLE)
-   → CANNOT_RECOGNIZE; ``no_claims`` when there were no checkable claims at all.
+7. ``nothing_judged``: otherwise (all INSUFFICIENT_EVIDENCE / MIXED / UNSUPPORTED /
+   NOT_VERIFIABLE) → CANNOT_RECOGNIZE; ``no_claims`` when there were no checkable claims.
+
+MISINFO carries a ``misinfo_basis`` (§9): ``contradicted`` (rule 1),
+``denies_supported`` (rule 2) or ``unproven`` (rule 3). The label stays one of the four;
+``display_label`` gives the interface text ("MISINFO (unproven)").
 
 The label comes with the claims that decided it and only the evidence those claims'
 verdicts cited, so the explanation can point at them.
 
-**The rules' own review reasons (§9, third return value).** Rules 2 and 5 add review
+**The rules' own review reasons (§9, third return value).** Rules 2, 3 and 6 add review
 reasons, and since T21 they are collected from *every* claim, whichever rule decides the
 label: each REFUTES + SUPPORTED claim raises ``denies_supported:<cid>`` and each
 REFUTES + MIXED / INSUFFICIENT_EVIDENCE claim raises ``possible_debunk:<cid>`` even when
-an earlier rule (e.g. NO_MISINFO) sets the label. A mixed video (one false claim
-endorsed, another refuted) is MISINFO by rule 1 and always reviewed (``mixed_video``).
+an earlier rule (e.g. NO_MISINFO) sets the label; each ENDORSES + UNSUPPORTED claim
+raises ``unproven_claim:<cid>``. A mixed video (one false or unproven claim endorsed,
+another false claim refuted) is MISINFO and always reviewed (``mixed_video``).
 ``Decision.rule_review_reasons`` returns these, and they are also in
 ``Decision.review_flags`` (and so ``final_result.review_flags``), which the review
 policy (T09) turns into ``judge:<reason>`` review reasons. Using the existing flag
@@ -39,7 +48,8 @@ and records them in ``final_result.review_flags``; the review policy turns them 
 review reasons. They never change the label: a person settles them (see
 context/MULTI_AGENT.md §7h for why not an LLM).
 
-- ``mixed_video``: a false claim is endorsed and another false claim is refuted.
+- ``mixed_video``: a false or unproven claim is endorsed and another false claim is
+  refuted.
 - ``unclear_stance_contradicted:<cid>``: a contradicted claim's stance is UNCLEAR (or
   missing) and the label is not MISINFO, so the label rests on a stance nobody could
   read.
@@ -53,6 +63,12 @@ context/MULTI_AGENT.md §7h for why not an LLM).
 
 Materiality and satire are not detected by code yet (no reliable signal without a
 labelled set); they are left for the review rule and later work.
+
+**Wording (T30).** Explanations and review notes use display wording: no internal
+label or verdict names (``CANNOT_RECOGNIZE``) and no claim IDs; a claim is named by its
+position ("the first claim") and, where it decides the label, its text. An unproven
+claim is described as "no evidence supports this claim", never as false. A model-written
+explanation that breaks these rules is replaced by the template.
 
 **Citations.** The judge cites only claim IDs in ``claims`` and evidence IDs that were
 retrieved (or reranked) for that same claim. A verdict citing anything else is dropped
@@ -90,10 +106,10 @@ from app.core.guardrails.untrusted import (
     fence,
     guarded_system_prompt,
 )
-from app.core.schemas.pipeline import Claim, ClassificationResult, MisinfoLabel, PubMedCitation
+from app.core.schemas.pipeline import Claim, ClassificationResult, MisinfoLabel, PubMedCitation, display_label
 
 STEP = "judge_explanation"  # routing.yaml step name (§13)
-DEFAULT_PROMPT_VERSION = "explain_v1"
+DEFAULT_PROMPT_VERSION = "explain_v2"  # v2: display wording, unproven (T30)
 TOOL_NAME = "record_explanation"
 MAX_EXPLANATION_CHARS = 1_500  # §10 length limits
 MAX_LIMITATIONS = 10
@@ -104,6 +120,7 @@ MAX_QUOTE_CHARS = 200
 # Rule names (stored in ``final_result.decision_rule``).
 RULE_ENDORSED_CONTRADICTED = "endorsed_contradicted"
 RULE_REFUTED_SUPPORTED = "refuted_supported"
+RULE_ENDORSED_UNSUPPORTED = "endorsed_unsupported"  # T30
 RULE_REFUTED_CONTRADICTED = "refuted_contradicted"
 RULE_JUDGED = "judged_nothing_false_endorsed"
 RULE_REFUTED_UNSETTLED = "refuted_unsettled"
@@ -119,19 +136,29 @@ FLAG_VERIFICATION_FAILED = "verification_failed"
 # Review reasons the §9 rules add themselves (one per deciding claim).
 FLAG_DENIES_SUPPORTED = "denies_supported"
 FLAG_POSSIBLE_DEBUNK = "possible_debunk"
+FLAG_UNPROVEN = "unproven_claim"  # T30
 # Since T21 these are collected from every claim, not only when their rule fires, and a
 # mixed video is always reviewed (§9).
-RULE_REVIEW_FLAGS = frozenset({FLAG_DENIES_SUPPORTED, FLAG_POSSIBLE_DEBUNK, FLAG_MIXED_VIDEO})
+RULE_REVIEW_FLAGS = frozenset({FLAG_DENIES_SUPPORTED, FLAG_POSSIBLE_DEBUNK, FLAG_UNPROVEN, FLAG_MIXED_VIDEO})
+
+# ``misinfo_basis`` values (§9), set only when the label is MISINFO.
+BASIS_CONTRADICTED = "contradicted"
+BASIS_DENIES_SUPPORTED = "denies_supported"
+BASIS_UNPROVEN = "unproven"
+MISINFO_BASES = (BASIS_CONTRADICTED, BASIS_DENIES_SUPPORTED, BASIS_UNPROVEN)
 
 JUDGED_VERDICTS = frozenset({Verdict.SUPPORTED, Verdict.CONTRADICTED})
-UNSETTLED_VERDICTS = frozenset({Verdict.MIXED, Verdict.INSUFFICIENT_EVIDENCE})
+# A refuted claim whose evidence can't settle it is a possible debunk. UNSUPPORTED is in
+# this set (T30): a speaker refuting an untested cure is the clearest possible debunk,
+# and leaving it out would drop the review flag it raised as INSUFFICIENT_EVIDENCE.
+UNSETTLED_VERDICTS = frozenset({Verdict.MIXED, Verdict.INSUFFICIENT_EVIDENCE, Verdict.UNSUPPORTED})
 
 __all__ = [
     "STEP", "DEFAULT_PROMPT_VERSION", "TOOL_NAME", "EXPLAIN_TOOL", "TOOL_CHOICE",
     "ClaimView", "Decision", "PromptNotFoundError",
     "claim_views", "decide", "template_explanation", "check_explanation",
     "build_prompt", "build_request", "judge", "make_judge_classification",
-    "claim_label", "to_classification_result",
+    "claim_label", "to_classification_result", "display_label", "claim_reference",
 ]
 
 
@@ -153,6 +180,7 @@ class ClaimView:
     verification: VerificationResult
     allowed_evidence_ids: frozenset[str]
     verification_failed: bool = False
+    position: int = 0  # 1-based place in extraction order (0: unknown; see ``_names``)
 
     @property
     def claim_id(self) -> str:
@@ -206,8 +234,9 @@ def claim_views(
             verification=verdicts[c.claim_id],
             allowed_evidence_ids=frozenset(evidence.get(c.claim_id, {})),
             verification_failed=c.claim_id in failed,
+            position=i,
         )
-        for c in claims if c.claim_id in verdicts
+        for i, c in enumerate(claims, start=1) if c.claim_id in verdicts
     ]
     return views, errors
 
@@ -227,6 +256,7 @@ class Decision:
     review_flags: tuple[str, ...]
     errors: tuple[NodeError, ...] = ()
     all_claims: tuple[ClaimView, ...] = field(default=(), compare=False)
+    misinfo_basis: Optional[str] = None  # T30: set only for MISINFO
 
     @property
     def claim_ids(self) -> list[str]:
@@ -246,6 +276,8 @@ def _cited(view: ClaimView, rule: str) -> list[str]:
         return list(v.contradicting_evidence_ids)
     if rule == RULE_REFUTED_SUPPORTED:
         return list(v.supporting_evidence_ids)
+    if rule == RULE_ENDORSED_UNSUPPORTED:
+        return []  # nothing tests the claim, so there is nothing to cite
     return [*v.supporting_evidence_ids, *v.contradicting_evidence_ids]
 
 
@@ -256,6 +288,7 @@ def decide(views: Sequence[ClaimView], *, has_claims: Optional[bool] = None) -> 
 
     endorsed_false = [v for v in views if v.stance == Stance.ENDORSES and v.verdict == Verdict.CONTRADICTED]
     denied_true = [v for v in views if v.stance == Stance.REFUTES and v.verdict == Verdict.SUPPORTED]
+    unproven = [v for v in views if v.stance == Stance.ENDORSES and v.verdict == Verdict.UNSUPPORTED]
     refuted_false = [v for v in views if v.stance == Stance.REFUTES and v.verdict == Verdict.CONTRADICTED]
     judged = [v for v in views if v.verdict in JUDGED_VERDICTS]
     refuted_open = [v for v in views if v.stance == Stance.REFUTES and v.verdict in UNSETTLED_VERDICTS]
@@ -263,14 +296,21 @@ def decide(views: Sequence[ClaimView], *, has_claims: Optional[bool] = None) -> 
     # Review reasons come from every claim, whichever rule decides the label (§9, T21).
     rule_flags: list[str] = [
         *(f"{FLAG_DENIES_SUPPORTED}:{v.claim_id}" for v in denied_true),
+        *(f"{FLAG_UNPROVEN}:{v.claim_id}" for v in unproven),
         *(f"{FLAG_POSSIBLE_DEBUNK}:{v.claim_id}" for v in refuted_open),
     ]
-    if endorsed_false and refuted_false:
-        rule_flags.append(FLAG_MIXED_VIDEO)  # MISINFO by rule 1, always reviewed
+    if (endorsed_false or unproven) and refuted_false:
+        rule_flags.append(FLAG_MIXED_VIDEO)  # MISINFO, always reviewed
+    basis: Optional[str] = None
     if endorsed_false:
         label, rule, deciding = MisinfoLabel.MISINFO, RULE_ENDORSED_CONTRADICTED, endorsed_false
+        basis = BASIS_CONTRADICTED
     elif denied_true:
         label, rule, deciding = MisinfoLabel.MISINFO, RULE_REFUTED_SUPPORTED, denied_true
+        basis = BASIS_DENIES_SUPPORTED
+    elif unproven:
+        label, rule, deciding = MisinfoLabel.MISINFO, RULE_ENDORSED_UNSUPPORTED, unproven
+        basis = BASIS_UNPROVEN
     elif refuted_false:
         label, rule, deciding = MisinfoLabel.DEBUNKING, RULE_REFUTED_CONTRADICTED, refuted_false
     elif judged:
@@ -313,6 +353,7 @@ def decide(views: Sequence[ClaimView], *, has_claims: Optional[bool] = None) -> 
     return Decision(
         label=label, rule=rule, deciding=tuple(deciding), evidence_ids=tuple(evidence_ids),
         review_flags=tuple(dict.fromkeys(flags)), errors=tuple(errors), all_claims=tuple(views),
+        misinfo_basis=basis,
     )
 
 
@@ -329,80 +370,144 @@ def _ids(ids: Iterable[str]) -> str:
     return ", ".join(ids) if ids else "none"
 
 
+_ORDINALS = (
+    "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth",
+)
+
+
+def claim_reference(position: int) -> str:
+    """How explanations name a claim: by its place in the video, never by its ID."""
+    if 1 <= position <= len(_ORDINALS):
+        return f"the {_ORDINALS[position - 1]} claim"
+    return f"claim {position}" if position > 0 else "a claim"
+
+
+def _names(views: Iterable[ClaimView]) -> dict[str, str]:
+    """claim_id → "the first claim", from each claim's place in the video (its position
+    among all extracted claims, or its order here when that is unknown)."""
+    return {v.claim_id: claim_reference(v.position or i) for i, v in enumerate(views, start=1)}
+
+
+def _cap(text: str) -> str:
+    return text[:1].upper() + text[1:]
+
+
+# Plain-language verdicts and stances (no internal enum names in user-facing text).
+_VERDICT_TEXT = {
+    Verdict.SUPPORTED: "is supported by the evidence",
+    Verdict.CONTRADICTED: "is contradicted by the evidence",
+    Verdict.MIXED: "has mixed evidence",
+    Verdict.UNSUPPORTED: "has no evidence for or against it",
+    Verdict.INSUFFICIENT_EVIDENCE: "has insufficient evidence",
+    Verdict.NOT_VERIFIABLE: "cannot be checked",
+}
+_EVIDENCE_STATE = {
+    Verdict.MIXED: "the evidence is mixed",
+    Verdict.INSUFFICIENT_EVIDENCE: "the evidence is insufficient",
+    Verdict.UNSUPPORTED: "no study tests it either way",
+}
+_STANCE_TEXT = {
+    Stance.ENDORSES: "the speaker endorses it",
+    Stance.REFUTES: "the speaker refutes it",
+    Stance.QUOTES: "the speaker quotes it",
+    Stance.NEUTRAL: "the speaker is neutral",
+    Stance.UNCLEAR: "the speaker's stance is unclear",
+}
+
 _FLAG_TEXT = {
-    FLAG_MIXED_VIDEO: "the video endorses one false claim and refutes another",
-    FLAG_UNCLEAR_STANCE: "the speaker's stance on contradicted claim {cid} is unclear",
-    FLAG_NOT_REFUTED: "contradicted claim {cid} is repeated without being refuted",
-    FLAG_MIXED_EVIDENCE: "the evidence on claim {cid} is mixed",
-    FLAG_VERIFICATION_FAILED: "claim {cid} could not be verified (verifier unavailable)",
-    FLAG_DENIES_SUPPORTED: "the speaker denies supported claim {cid}",
-    FLAG_POSSIBLE_DEBUNK: "possible debunk of unsettled claim {cid}",
+    FLAG_MIXED_VIDEO: "the video endorses one claim the evidence contradicts or does not support, "
+                      "and refutes another that the evidence contradicts",
+    FLAG_UNCLEAR_STANCE: "the speaker's stance on {ref}, which the evidence contradicts, is unclear",
+    FLAG_NOT_REFUTED: "{ref} is contradicted by the evidence but repeated without being refuted",
+    FLAG_MIXED_EVIDENCE: "the evidence on {ref} is mixed",
+    FLAG_VERIFICATION_FAILED: "{ref} could not be checked (the verifier was unavailable)",
+    FLAG_DENIES_SUPPORTED: "the speaker denies {ref}, which the evidence supports",
+    FLAG_POSSIBLE_DEBUNK: "the speaker may be debunking {ref}, which the evidence can't settle",
+    FLAG_UNPROVEN: "no evidence supports {ref}, which the speaker presents as working",
 }
 
 
-def flag_text(flag: str) -> str:
+def flag_text(flag: str, names: Optional[dict[str, str]] = None) -> str:
+    """A review flag in plain words. ``names`` maps claim IDs to "the first claim"."""
     name, _, cid = flag.partition(":")
-    return _FLAG_TEXT.get(name, name).format(cid=cid)
+    ref = (names or {}).get(cid) or (f"claim {cid}" if cid else "")
+    return _FLAG_TEXT.get(name, name.replace("_", " ")).format(ref=ref, cid=cid)
+
+
+def _review_note(d: Decision, names: dict[str, str]) -> str:
+    if not d.review_flags:
+        return ""
+    return " Needs review: " + "; ".join(flag_text(f, names) for f in d.review_flags) + "."
 
 
 def template_explanation(d: Decision) -> str:
     """Deterministic explanation, used when no explanation model is configured or its
-    answer is rejected. Always names the rule's deciding claims and evidence."""
+    answer is rejected. Always names the rule's deciding claims and evidence, in display
+    wording: claims by position and text, no internal label or verdict names (T30)."""
+    names = _names(d.all_claims or d.deciding)
+
+    def said(v: ClaimView) -> str:
+        return f'{names[v.claim_id]} ("{_quote(v.claim.claim_text)}")'
+
     if d.rule == RULE_NO_CLAIMS:
-        text = "CANNOT_RECOGNIZE: no checkable health claims were found in the video."
+        text = "No checkable health claims were found in the video."
     elif d.rule == RULE_NOTHING_JUDGED:
-        parts = [f"{v.claim_id} {v.verdict.value.lower().replace('_', ' ')}" for v in d.all_claims]
-        text = (
-            "CANNOT_RECOGNIZE: no claim could be judged against the evidence ("
-            + "; ".join(parts) + ")."
-        )
+        parts = [f"{names[v.claim_id]} {_VERDICT_TEXT[v.verdict]}" for v in d.all_claims]
+        text = "No claim could be judged against the evidence: " + "; ".join(parts) + "."
     elif d.rule == RULE_ENDORSED_CONTRADICTED:
         parts = [
-            f'claim {v.claim_id} ("{_quote(v.claim.claim_text)}") is endorsed by the speaker and '
-            f"contradicted by the evidence ({_ids(v.verification.contradicting_evidence_ids)})"
+            f"the speaker endorses {said(v)}, and the evidence contradicts it "
+            f"({_ids(v.verification.contradicting_evidence_ids)})"
             for v in d.deciding
         ]
-        text = "MISINFO because " + "; ".join(parts) + "."
-    elif d.rule == RULE_REFUTED_CONTRADICTED:
-        parts = [
-            f'claim {v.claim_id} ("{_quote(v.claim.claim_text)}") is refuted by the speaker and '
-            f"contradicted by the evidence ({_ids(v.verification.contradicting_evidence_ids)})"
-            for v in d.deciding
-        ]
-        text = "DEBUNKING because " + "; ".join(parts) + ", and no false claim is endorsed."
+        text = _cap("; ".join(parts)) + "."
     elif d.rule == RULE_REFUTED_SUPPORTED:
         parts = [
-            f'claim {v.claim_id} ("{_quote(v.claim.claim_text)}") is denied by the speaker but '
-            f"supported by the evidence ({_ids(v.verification.supporting_evidence_ids)})"
+            f"the speaker denies {said(v)}, but the evidence supports it "
+            f"({_ids(v.verification.supporting_evidence_ids)})"
             for v in d.deciding
         ]
-        text = "MISINFO because " + "; ".join(parts) + "."
+        text = _cap("; ".join(parts)) + "."
+    elif d.rule == RULE_ENDORSED_UNSUPPORTED:
+        parts = [f"the speaker presents {said(v)} as working" for v in d.deciding]
+        text = (
+            _cap("; ".join(parts))
+            + ", but a full search of the research and reference sources found no evidence for "
+            "or against it: no evidence supports this claim. Promoting an untested treatment or "
+            "prevention claim is misleading, so the video is labelled MISINFO (unproven)."
+        )
+    elif d.rule == RULE_REFUTED_CONTRADICTED:
+        parts = [
+            f"the speaker refutes {said(v)}, and the evidence contradicts it "
+            f"({_ids(v.verification.contradicting_evidence_ids)})"
+            for v in d.deciding
+        ]
+        text = _cap("; ".join(parts)) + ", and the speaker endorses no claim the evidence contradicts."
     elif d.rule == RULE_REFUTED_UNSETTLED:
         parts = [
-            f'claim {v.claim_id} ("{_quote(v.claim.claim_text)}") is refuted by the speaker, but the '
-            f"evidence is {v.verdict.value.lower().replace('_', ' ')}"
+            f"the speaker refutes {said(v)}, but {_EVIDENCE_STATE.get(v.verdict, 'the evidence is unsettled')}"
             for v in d.deciding
         ]
         text = (
-            "CANNOT_RECOGNIZE: no claim could be judged against the evidence; "
+            "No claim could be judged against the evidence; "
             + "; ".join(parts) + ", so this may be a debunk the sources can't settle."
         )
     else:
-        supported = [v.claim_id for v in d.deciding if v.verdict == Verdict.SUPPORTED]
+        supported = [names[v.claim_id] for v in d.deciding if v.verdict == Verdict.SUPPORTED]
         contradicted = [
-            f"{v.claim_id} ({v.stance_or_unclear.value.lower()})"
+            f"{names[v.claim_id]} ({_STANCE_TEXT[v.stance_or_unclear]})"
             for v in d.deciding if v.verdict == Verdict.CONTRADICTED
         ]
+        n = len(d.deciding)
         text = (
-            f"NO_MISINFO: {len(d.deciding)} claim(s) could be judged against the evidence and "
-            "no claim the speaker endorses is contradicted."
+            f"{n} claim{'s' if n != 1 else ''} could be judged against the evidence, and no claim "
+            "the speaker endorses is contradicted."
         )
         if supported:
-            text += f" Supported: {_ids(supported)}."
+            text += f" Supported by the evidence: {', '.join(supported)}."
         if contradicted:
-            text += f" Contradicted but not endorsed: {_ids(contradicted)}."
-    if d.review_flags:
-        text += " Needs review: " + "; ".join(flag_text(f) for f in d.review_flags) + "."
+            text += f" Contradicted but not endorsed: {', '.join(contradicted)}."
+    text += _review_note(d, names)
     return text[:MAX_EXPLANATION_CHARS]
 
 
@@ -472,17 +577,20 @@ def _prompt_claims(d: Decision) -> list[ClaimView]:
 
 def _instructions(d: Decision, views: Sequence[ClaimView]) -> str:
     deciding = {v.claim_id for v in d.deciding}
+    names = _names(d.all_claims or views)
     rows = []
     for v in views:
         rows.append(
-            f"- {_meta(v.claim_id)} | stance: {v.stance_or_unclear.value} | verdict: {v.verdict.value}"
+            f"- {_meta(v.claim_id)} | call it: {names.get(v.claim_id, 'the claim')}"
+            f" | stance: {v.stance_or_unclear.value} | verdict: {v.verdict.value}"
             f" | supporting: {_meta(_ids(v.verification.supporting_evidence_ids))}"
             f" | contradicting: {_meta(_ids(v.verification.contradicting_evidence_ids))}"
             f" | deciding: {'yes' if v.claim_id in deciding else 'no'}"
         )
-    flags = "\n".join(f"- {flag_text(f)}" for f in d.review_flags) or "- none"
+    flags = "\n".join(f"- {flag_text(f, names)}" for f in d.review_flags) or "- none"
     return (
-        f"The video label has already been decided by written rules: {d.label.value} "
+        f"The video label has already been decided by written rules: "
+        f"{display_label(d.label, d.misinfo_basis)} "
         f"(rule: {d.rule}). Do not change, question or soften it.\n\n"
         f"CLAIM TABLE (decided by earlier steps; reliable):\n" + "\n".join(rows) + "\n\n"
         f"Evidence IDs you may mention: {_ids(d.evidence_ids)}.\n"
@@ -538,6 +646,10 @@ _LABEL_ALIASES = {
     "no misinfo": MisinfoLabel.NO_MISINFO, "misinfo": MisinfoLabel.MISINFO,
     "debunking": MisinfoLabel.DEBUNKING, "debunked": MisinfoLabel.DEBUNKING,
 }
+# Internal enum names (``CANNOT_RECOGNIZE``, ``INSUFFICIENT_EVIDENCE``) and the word
+# "false" for an unproven claim never reach a reader (T30).
+_ENUM_NAME = re.compile(r"\b[A-Z]{2,}(?:_[A-Z]+)+\b")
+_FALSE_WORD = re.compile(r"\bfalse\b", re.IGNORECASE)
 _EVIDENCE_ID = re.compile(r"\b(?:ev|lib|ref)_[A-Za-z0-9_]+")  # PubMed, library (T12), reference (T17)
 _PMID = re.compile(r"\bPMID:?\s*(\d+)", re.IGNORECASE)
 
@@ -546,13 +658,24 @@ def check_explanation(
     text: str, d: Decision, evidence: dict[str, dict[str, EvidenceRecord]] | None = None
 ) -> str:
     """Raise ``InvalidExplanation`` unless ``text`` is consistent with the decision:
-    it names no other label and mentions only evidence IDs / PMIDs the decision cites."""
+    it names no other label and mentions only evidence IDs / PMIDs the decision cites.
+    T30: no internal enum names, no claim IDs, and an unproven label is never called
+    false."""
     for m in _LABEL_WORDS.finditer(text):
         word = m.group(0).lower()
         named = (MisinfoLabel.CANNOT_RECOGNIZE if word.startswith("cannot")
                  else _LABEL_ALIASES.get(word))
         if named is not None and named != d.label:
             raise InvalidExplanation(f"explanation names label {named.value}, not {d.label.value}")
+    enum = _ENUM_NAME.search(text)
+    if enum:
+        raise InvalidExplanation(f"explanation uses the internal name {enum.group(0)!r}")
+    ids = {v.claim_id for v in (*d.all_claims, *d.deciding)}
+    named = [w for w in re.findall(r"[A-Za-z0-9_]+", text) if w in ids]
+    if named:
+        raise InvalidExplanation(f"explanation names claims by ID: {sorted(set(named))}")
+    if d.misinfo_basis == BASIS_UNPROVEN and _FALSE_WORD.search(text):
+        raise InvalidExplanation("an unproven claim is described as false")
     allowed = set(d.evidence_ids)
     unknown = [e for e in _EVIDENCE_ID.findall(text) if e not in allowed]
     if unknown:
@@ -603,8 +726,7 @@ def explain(
             node=r.JUDGE_CLASSIFICATION,
             message=f"explanation rejected ({exc}); template used",
         )]
-    if d.review_flags:
-        text += " Needs review: " + "; ".join(flag_text(f) for f in d.review_flags) + "."
+    text += _review_note(d, _names(d.all_claims or d.deciding))
     return text[:MAX_EXPLANATION_CHARS], model, version or prompt_version, []
 
 
@@ -642,6 +764,7 @@ def judge(
         confidence=None,  # §11: video confidence = lowest calibrated deciding claim; T15
         decision_rule=d.rule,
         review_flags=list(d.review_flags),
+        misinfo_basis=d.misinfo_basis,
         model=model,
         prompt_version=version,
     )
@@ -710,6 +833,8 @@ def claim_label(stance: Optional[Stance], verdict: Optional[Verdict]) -> Misinfo
         return MisinfoLabel.MISINFO
     if verdict == Verdict.SUPPORTED and stance == Stance.REFUTES:
         return MisinfoLabel.MISINFO  # the speaker denies something true
+    if verdict == Verdict.UNSUPPORTED and stance == Stance.ENDORSES:
+        return MisinfoLabel.MISINFO  # an unproven efficacy claim promoted (T30)
     if verdict == Verdict.CONTRADICTED and stance == Stance.REFUTES:
         return MisinfoLabel.DEBUNKING
     if verdict in JUDGED_VERDICTS:

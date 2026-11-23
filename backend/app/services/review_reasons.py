@@ -33,12 +33,14 @@ REASON_TEXT: dict[str, str] = {
     "low_confidence": "The system's confidence in the result is low.",
     "high_risk_uncertain": "{Claim} is about a high-risk health topic and the evidence could not settle it.",
     # judge flags (§9), stored as ``judge:<flag>[:<cid>]``
-    "mixed_video": "The video endorses one false claim and refutes another.",
+    "mixed_video": "The video endorses one claim the evidence contradicts or does not support, and refutes another.",
     "unclear_stance_contradicted": "The evidence contradicts {claim}, but the speaker's stance on it is unclear.",
     "false_claim_not_refuted": "{Claim} is contradicted by the evidence but is repeated without being refuted.",
     "mixed_evidence": "The evidence on {claim} is mixed.",
     "verification_failed": "{Claim} could not be checked because the verifier was unavailable.",
     "denies_supported": "The speaker denies {claim}, which the evidence supports.",
+    "unproven_claim": "The speaker presents {claim} as working, but the full search found no evidence "
+                      "for or against it: no evidence supports this claim.",
     "possible_debunk": "The speaker refutes {claim}, but the evidence could not settle it: possibly a debunk.",
     # guardrails (§15)
     "prompt_injection_suspected": "Text in the {detail} looks like an attempt to instruct the system.",

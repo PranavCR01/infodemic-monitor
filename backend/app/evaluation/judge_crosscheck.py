@@ -44,6 +44,7 @@ from typing import Any, Callable, Iterable, Mapping, Optional, Sequence
 
 from app.core.graph import judge as jg
 from app.core.graph import review_policy as rp
+from app.core.graph.routing import DEFAULT_BUDGETS
 from app.core.graph.state import (
     EvidenceRecord,
     GraphClaim,
@@ -88,6 +89,7 @@ class GoldenClaim:
     claim_verdict: str
     evidence_supporting: tuple[str, ...] = ()
     evidence_contradicting: tuple[str, ...] = ()
+    claim_category: str = ""  # T30: UNSUPPORTED is only for efficacy categories
 
     def as_row(self) -> dict[str, str]:
         """The claims.csv row shape the golden judge reads."""
@@ -124,6 +126,7 @@ def load_golden_csvs(videos_csv: str, claims_csv: str) -> list[GoldenVideo]:
             claim_verdict=row["claim_verdict"],
             evidence_supporting=_split_ids(row.get("evidence_supporting", "")),
             evidence_contradicting=_split_ids(row.get("evidence_contradicting", "")),
+            claim_category=(row.get("claim_category") or "").strip(),
         ))
     out = []
     for row in csv.DictReader(io.StringIO(videos_csv)):
@@ -149,7 +152,8 @@ def to_fixture(videos: Sequence[GoldenVideo]) -> list[dict[str, Any]]:
                 {"claim_id": c.claim_id, "speaker_stance": c.speaker_stance,
                  "claim_verdict": c.claim_verdict,
                  "evidence_supporting": list(c.evidence_supporting),
-                 "evidence_contradicting": list(c.evidence_contradicting)}
+                 "evidence_contradicting": list(c.evidence_contradicting),
+                 **({"claim_category": c.claim_category} if c.claim_category else {})}
                 for c in v.claims
             ],
         }
@@ -169,6 +173,7 @@ def from_fixture(rows: Iterable[Mapping[str, Any]]) -> list[GoldenVideo]:
                     claim_verdict=c["claim_verdict"],
                     evidence_supporting=tuple(c["evidence_supporting"]),
                     evidence_contradicting=tuple(c["evidence_contradicting"]),
+                    claim_category=c.get("claim_category", ""),
                 )
                 for c in r["claims"]
             ),
@@ -197,8 +202,13 @@ def build_state(video: GoldenVideo) -> PipelineState:
                       media_uri=f"golden://{video.video_id}", pipeline_version="t24-crosscheck")
     claims, stances, verdicts, evidence = [], {}, {}, {}
     for i, c in enumerate(video.claims):
+        # T30: a golden UNSUPPORTED verdict already says the full search found nothing
+        # for an efficacy claim. Without a category column, assume the labeller applied
+        # that rule; with one, the backend's gate checks it.
+        category = c.claim_category or (
+            "treatment_efficacy" if c.claim_verdict == Verdict.UNSUPPORTED.value else "unknown")
         claims.append(GraphClaim(
-            claim_id=c.claim_id, claim_text=c.claim_id, claim_category="unknown",
+            claim_id=c.claim_id, claim_text=c.claim_id, claim_category=category,
             source_segment_ids=[], start_seconds=float(i), end_seconds=float(i) + 1,
         ))
         stances[c.claim_id] = StanceResult(claim_id=c.claim_id, stance=Stance(c.speaker_stance),
@@ -211,8 +221,10 @@ def build_state(video: GoldenVideo) -> PipelineState:
         ids = dict.fromkeys([*c.evidence_supporting, *c.evidence_contradicting])
         if ids:
             evidence[c.claim_id] = [_evidence_record(e) for e in ids]
+    # Golden verdicts are final: every claim's search counts as complete (T30's gate).
+    attempts = {c.claim_id: DEFAULT_BUDGETS.max_retrieval_attempts for c in video.claims}
     s.update(claims=claims, stance_results=stances, verification_results=verdicts,
-             retrieved_evidence=evidence)
+             retrieved_evidence=evidence, retrieval_attempts=attempts)
     return s
 
 

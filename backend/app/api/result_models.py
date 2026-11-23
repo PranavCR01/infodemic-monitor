@@ -145,6 +145,11 @@ class JobResultResponse(BaseModel):
     pipeline_version: Optional[str] = None
     decision_rule: Optional[str] = None
     deciding_claim_ids: list[str] = Field(default_factory=list)
+    # T30 (§9): why a MISINFO label was given ("contradicted", "denies_supported",
+    # "unproven"; null otherwise) and the label as the interface shows it
+    # ("MISINFO (unproven)", "CANNOT RECOGNIZE"). ``label`` itself is unchanged.
+    misinfo_basis: Optional[str] = None
+    label_display: Optional[str] = None
     transcript_segments: list[SegmentView] = Field(default_factory=list)
     ocr_segments: list[SegmentView] = Field(default_factory=list)
 

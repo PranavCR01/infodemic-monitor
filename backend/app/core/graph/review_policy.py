@@ -9,7 +9,7 @@ overturn them (§12 "what if review becomes a bottleneck?").
 
 | Rule (``REVIEW_RULES`` key) | Reason(s) | Design source |
 |---|---|---|
-| ``weak_evidence``        | ``weak_evidence:<cid>``        | §11: a deciding claim is INSUFFICIENT_EVIDENCE or MIXED; also every such claim when nothing could be judged (§1: "when the evidence is too weak to decide ... hands the case to a person") |
+| ``weak_evidence``        | ``weak_evidence:<cid>``        | §11: a deciding claim is INSUFFICIENT_EVIDENCE, MIXED or UNSUPPORTED (T30: so every "MISINFO (unproven)" video is reviewed); also every such claim when nothing could be judged (§1: "when the evidence is too weak to decide ... hands the case to a person") |
 | ``conflicting_evidence`` | ``conflicting_evidence:<cid>`` | §11: supporting and contradicting papers both exist for a deciding claim |
 | ``weak_study_types``     | ``weak_study_types:<cid>``     | §11: a deciding claim rests only on weak study types |
 | ``unclear_stance``       | ``unclear_stance:<cid>``       | §11: a deciding claim's stance is UNCLEAR (or missing) |
@@ -18,7 +18,7 @@ overturn them (§12 "what if review becomes a bottleneck?").
 | ``validation_failed``    | ``validation_failed:<check>[:<cid>]`` | §10/§11: a validation check failed after repair |
 | ``low_confidence``       | ``low_confidence``             | §11: calibrated confidence below the threshold (dormant until T15) |
 | ``high_risk_uncertain``  | ``high_risk_uncertain:<cid>``  | issue #36: an endorsed high-risk claim the evidence couldn't settle |
-| ``judge_flags``          | ``judge:<flag>``               | §9: patterns the judge's rules can't settle (T08), and the reasons the rules add themselves, from every claim whichever rule sets the label (``denies_supported:<cid>``, ``possible_debunk:<cid>``, ``mixed_video``; T16, T21) |
+| ``judge_flags``          | ``judge:<flag>``               | §9: patterns the judge's rules can't settle (T08), and the reasons the rules add themselves, from every claim whichever rule sets the label (``denies_supported:<cid>``, ``unproven_claim:<cid>``, ``possible_debunk:<cid>``, ``mixed_video``; T16, T21, T30) |
 | ``guardrails``           | ``prompt_injection_suspected:...``, ``guardrail:...`` | §15: suspected injection or a guardrail rejection (T10) |
 
 The node writes ``requires_human_review`` and ``review_reasons``. The reasons are
@@ -77,7 +77,8 @@ def default_review_policy() -> ReviewPolicyConfig:
 # ------------------------------------------------------------------ context
 
 
-UNCERTAIN_VERDICTS = frozenset({Verdict.INSUFFICIENT_EVIDENCE, Verdict.MIXED})
+# §11: INSUFFICIENT_EVIDENCE, MIXED or UNSUPPORTED (T30) is a review trigger.
+UNCERTAIN_VERDICTS = frozenset({Verdict.INSUFFICIENT_EVIDENCE, Verdict.MIXED, Verdict.UNSUPPORTED})
 
 
 @dataclass(frozen=True)
@@ -123,8 +124,9 @@ RuleFn = Callable[[ReviewContext], list[str]]
 
 
 def rule_weak_evidence(ctx: ReviewContext) -> list[str]:
-    """A deciding claim is INSUFFICIENT_EVIDENCE or MIXED (under the §9 rules, only
-    the ``refuted_unsettled`` possible-debunk case has such deciding claims). It also
+    """A deciding claim is INSUFFICIENT_EVIDENCE, MIXED or UNSUPPORTED (under the §9
+    rules: the ``refuted_unsettled`` possible-debunk case, and the deciding claims of
+    ``endorsed_unsupported``, so every "MISINFO (unproven)" video is reviewed). It also
     fires on the abstention case: label CANNOT_RECOGNIZE because nothing could be judged, for every checkable
     claim whose evidence was insufficient or mixed (NOT_VERIFIABLE alone doesn't)."""
     from app.core.graph.judge import RULE_NOTHING_JUDGED, RULE_REFUTED_UNSETTLED

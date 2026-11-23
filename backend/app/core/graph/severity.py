@@ -15,7 +15,7 @@ refuses ``status: approved`` without all three sign-offs.
 A video's severity is the highest severity among its **MISINFO-relevant** claims:
 
 - endorsed and CONTRADICTED (§9 rule 1);
-- endorsed and unsettled: MIXED, INSUFFICIENT_EVIDENCE or NOT_VERIFIABLE (§12; the same
+- endorsed and unsettled: MIXED, INSUFFICIENT_EVIDENCE, UNSUPPORTED (T30) or NOT_VERIFIABLE (§12; the same
   "uncertain" set as the ``high_risk_uncertain`` review rule);
 - refuted and SUPPORTED, i.e. the speaker denies a supported claim (§9 rule 2, which
   makes the video MISINFO). This extends §12's parenthetical; see
@@ -162,7 +162,9 @@ def claim_severity(claim: GraphClaim, config: Optional[SeverityConfig] = None) -
     return ClaimSeverity(claim.claim_id, top, tuple(b for s, b in found if s == top))
 
 
-UNSETTLED_VERDICTS = frozenset({Verdict.MIXED, Verdict.INSUFFICIENT_EVIDENCE, Verdict.NOT_VERIFIABLE})
+UNSETTLED_VERDICTS = frozenset({
+    Verdict.MIXED, Verdict.INSUFFICIENT_EVIDENCE, Verdict.UNSUPPORTED, Verdict.NOT_VERIFIABLE,
+})
 
 
 def misinfo_relevant(stance: Optional[Stance | str], verdict: Optional[Verdict | str]) -> bool:
