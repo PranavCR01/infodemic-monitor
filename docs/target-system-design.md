@@ -146,6 +146,8 @@ One LLM pass reads the whole fused timeline and returns each distinct, checkable
 
 `claim_kind` is `research_question` (does X work, does X cause Y) or `fact_of_record` (a schedule, a legal limit, a statistic, a basic physiological fact). Retrieval uses it to choose between studies and the authoritative references in section 6.
 
+**Out of scope for now:** claims about laws and regulators rather than health effects ("banned in Europe", "Texas requires warning labels", "this dye was renamed to hide it"). They are noted on the video but not extracted as claims. Revisit after the first evaluation.
+
 The output format is enforced with a forced tool call and a Pydantic schema, so the model can't return free text.
 
 **Rules given to the model:**
@@ -525,6 +527,20 @@ Every action records who, when and why.
 **Feedback loop, done carefully.** Reviewer corrections are valuable test data, but they are **not** fed straight back into prompts or models. A correction becomes a candidate evaluation example; it's checked for quality, normalised and deduplicated, checked so it can't leak between training and test sets, and added to a new dataset version. Changes are then evaluated offline before anything is promoted.
 
 **Probe: what if review becomes a bottleneck?** The evaluation reports how many cases each rule sends to review. If one rule floods the queue, it's tuned with data: raising the confidence threshold, or splitting a broad rule. It's never switched off silently. Reviewer overturn rates per rule show which rules catch real problems and which only create work.
+
+### Severity: which reviews come first
+
+Severity ranks how much harm a claim could do if someone acted on it. It sets the order of the review queue and the alerts. **It never changes a label or a verdict.**
+
+| Severity | When | Examples |
+| --- | --- | --- |
+| HIGH | Acting on it could cause serious harm: stopping or replacing medical treatment, vaccines, cancer "cures", medication doses, pregnancy and children, self-harm and eating disorders | "Cut sugar to starve your cancer", "skip the MMR, it causes autism" |
+| MEDIUM | Could lead to wasted money or delayed care, but rarely to direct harm | Supplements "replacing" a diet, detox products |
+| LOW | Little realistic harm | "Legs up the wall improves circulation" |
+
+**Who decides:** code, not a model. Each claim's `claim_category` and topic map to a severity through a table in config. The table starts from the high-risk topic list the review rule already uses (section 11). **The project lead and Dr. Brooks own the table, and it is confirmed with WHO** before it is used for real triage. Reviewers can override a claim's severity with a reason, and every override is logged, so the table can be corrected from real cases.
+
+A video's severity is the highest severity among its MISINFO-relevant claims (endorsed and CONTRADICTED, or endorsed and unsettled). The review queue sorts by severity first, then age.
 
 ## 13. Model routing
 
