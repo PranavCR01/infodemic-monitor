@@ -30,6 +30,10 @@ from app.db.models.result import Result
 from app.db.models.review import AuditEvent, HumanReview, ReviewAction, ReviewCaseStatus
 
 
+REVIEW_DECISION_ACTION = "review_decision"
+REANALYSIS_ACTION = "reanalysis_started"
+
+
 class ReviewError(ValueError):
     """A review action that isn't allowed (missing reason, case already resolved, ...)."""
 
@@ -119,7 +123,10 @@ def record_review_decision(
         raise ReviewError("reviewer_id is required")
     if not (reason or "").strip():
         raise ReviewError("a written reason is required for every review action")
-    case = db.get(HumanReview, review_id)
+    # Lock the row (Postgres) so two reviewers deciding at once can't both resolve it.
+    case = (
+        db.query(HumanReview).filter(HumanReview.id == review_id).with_for_update().one_or_none()
+    )
     if case is None:
         raise ReviewError(f"review {review_id!r} not found")
     if case.status != ReviewCaseStatus.OPEN:
@@ -153,6 +160,23 @@ def record_review_decision(
         elif action == ReviewAction.REJECT:
             job.status = JobStatus.FAILED
             job.error_code = "REVIEW_REJECTED"
+    # Every action records who, when and why (§12), in the shared audit log too (T27).
+    db.add(AuditEvent(
+        actor_id=reviewer_id,
+        action=REVIEW_DECISION_ACTION,
+        entity_type="human_review",
+        entity_id=case.id,
+        job_id=case.job_id,
+        reason=case.decision_reason,
+        details={
+            "review_id": case.id,
+            "decision": action.value,
+            "proposed_label": case.proposed_label,
+            "corrected_label": corrected_label,
+            "corrections": corrections,
+        },
+        created_at=case.decided_at,
+    ))
     db.commit()
     db.refresh(case)
     return case
@@ -278,3 +302,178 @@ def severity_overrides(db: Session, *, job_id: Optional[str] = None) -> list[Aud
     if job_id is not None:
         q = q.filter(AuditEvent.job_id == job_id)
     return q.order_by(AuditEvent.created_at.asc(), AuditEvent.id.asc()).all()
+
+
+# ------------------------------------------------------------------ review API (T27)
+
+SEVERITY_FILTERS = ("HIGH", "MEDIUM", "LOW", "NONE")
+
+
+def _matches_reason(case: HumanReview, wanted: str) -> bool:
+    """A case matches a reason filter if any stored reason is that exact reason, starts
+    with ``<wanted>:`` (e.g. ``weak_evidence`` matches ``weak_evidence:c1``), or came from
+    the rule called ``wanted`` (e.g. ``judge_flags`` matches ``judge:mixed_video``)."""
+    from app.core.graph.review_policy import rule_of
+
+    for reason in case.reasons or []:
+        if reason == wanted or reason.startswith(wanted + ":") or rule_of(reason) == wanted:
+            return True
+    return False
+
+
+def review_queue_page(
+    db: Session,
+    *,
+    status: Optional[ReviewCaseStatus | str] = ReviewCaseStatus.OPEN,
+    severities: Optional[list[str]] = None,
+    reason: Optional[str] = None,
+    limit: int = 20,
+    offset: int = 0,
+) -> tuple[list[HumanReview], int]:
+    """One page of the queue, in queue order (severity, then age), and the total that
+    match. ``severities`` takes HIGH / MEDIUM / LOW and NONE (no MISINFO-relevant claim).
+    The reason filter runs in Python because reasons are a JSON list (portable across
+    SQLite and Postgres); the severity and status filters run in SQL."""
+    q = db.query(HumanReview)
+    if status is not None:
+        q = q.filter(HumanReview.status == ReviewCaseStatus(status))
+    if severities:
+        wanted = {s.upper() for s in severities}
+        unknown = wanted - set(SEVERITY_FILTERS)
+        if unknown:
+            raise ReviewError(f"unknown severity filter {sorted(unknown)}; use HIGH, MEDIUM, LOW or NONE")
+        levels = [s for s in wanted if s != "NONE"]
+        conds = []
+        if levels:
+            conds.append(HumanReview.severity.in_(levels))
+        if "NONE" in wanted:
+            conds.append(HumanReview.severity.is_(None))
+        from sqlalchemy import or_
+
+        q = q.filter(or_(*conds))
+    q = q.order_by(_severity_order(), HumanReview.created_at.asc(), HumanReview.id.asc())
+    if reason:
+        matching = [c for c in q.all() if _matches_reason(c, reason)]
+        return matching[offset: offset + limit], len(matching)
+    total = q.order_by(None).count()
+    return q.offset(offset).limit(limit).all(), total
+
+
+def claim_ids_of(db: Session, case: HumanReview) -> dict[str, dict[str, Optional[str]]]:
+    """The claims a reviewer can correct, with the stance and verdict the run gave them.
+    Taken from the case's severity entries (T22); for cases opened before migration
+    0010, from the stored claim rows (T11)."""
+    if case.claim_severities:
+        return {
+            cid: {"stance": e.get("stance"), "verdict": e.get("verdict")}
+            for cid, e in case.claim_severities.items()
+        }
+    from app.db.models.claim import ClaimRow
+
+    rows = db.query(ClaimRow).filter(ClaimRow.job_id == case.job_id).all()
+    out: dict[str, dict[str, Optional[str]]] = {}
+    for row in rows:
+        out[row.claim_id] = {
+            "stance": row.stance.stance if row.stance is not None else None,
+            "verdict": row.verification.verdict if row.verification is not None else None,
+        }
+    return out
+
+
+def build_claim_corrections(
+    db: Session, case: HumanReview, items: list[Mapping[str, Any]]
+) -> Optional[dict[str, Any]]:
+    """Check and normalise a reviewer's per-claim corrections (§12: "correct a claim's
+    verdict, its stance"). Each item names a claim of this case and a new verdict and/or
+    stance from the fixed sets. Stored as ``{"claims": {cid: {"verdict": {"from", "to"},
+    "stance": {"from", "to"}}}}`` so the change can become a candidate evaluation example.
+    The model's original outputs are not overwritten."""
+    from app.core.graph.state import Stance, Verdict
+
+    if not items:
+        return None
+    known = claim_ids_of(db, case)
+    out: dict[str, dict[str, Any]] = {}
+    for item in items:
+        cid = str(item.get("claim_id") or "")
+        if cid not in known:
+            raise ReviewError(f"claim {cid!r} is not part of review {case.id!r}")
+        if cid in out:
+            raise ReviewError(f"claim {cid!r} is corrected twice")
+        entry: dict[str, Any] = {}
+        for field_name, enum_cls in (("verdict", Verdict), ("stance", Stance)):
+            value = item.get(field_name)
+            if value is None:
+                continue
+            try:
+                new = enum_cls(str(value).upper()).value
+            except ValueError:
+                allowed = ", ".join(e.value for e in enum_cls)
+                raise ReviewError(f"unknown {field_name} {value!r}; use one of {allowed}") from None
+            old = known[cid].get(field_name)
+            if new == old:
+                raise ReviewError(f"claim {cid!r} already has {field_name} {new}")
+            entry[field_name] = {"from": old, "to": new}
+        if not entry:
+            raise ReviewError(f"correction for claim {cid!r} changes neither verdict nor stance")
+        out[cid] = entry
+    return {"claims": out}
+
+
+def review_audit_trail(db: Session, job_id: str) -> list[AuditEvent]:
+    """Every audit event for a job's review, oldest first: decisions, severity
+    overrides and re-analysis requests."""
+    return (
+        db.query(AuditEvent)
+        .filter(AuditEvent.job_id == job_id)
+        .order_by(AuditEvent.created_at.asc(), AuditEvent.id.asc())
+        .all()
+    )
+
+
+def start_reanalysis(
+    db: Session,
+    case: HumanReview,
+    *,
+    reviewer_id: str,
+    dispatch: Any,
+    now: Optional[datetime] = None,
+) -> Job:
+    """After REQUEST_REANALYSIS: start a new job for the same video (the old job keeps
+    its REVIEW_REQUIRED state and resolved case, T09) and log it. ``dispatch(job_id,
+    storage_key)`` queues the work and returns a task id; if it fails, the new job is
+    marked FAILED with ``DISPATCH_FAILED`` (the decision still stands) and returned."""
+    import uuid
+
+    from app.db.models.video import Video
+
+    if case.action != ReviewAction.REQUEST_REANALYSIS:
+        raise ReviewError("re-analysis follows a REQUEST_REANALYSIS decision")
+    old = db.get(Job, case.job_id)
+    if old is None:
+        raise ReviewError(f"job {case.job_id!r} not found")
+    video = db.get(Video, old.video_id)
+    new_job = Job(id=str(uuid.uuid4()), video_id=old.video_id, status=JobStatus.PENDING)
+    db.add(new_job)
+    db.add(AuditEvent(
+        actor_id=reviewer_id,
+        action=REANALYSIS_ACTION,
+        entity_type="job",
+        entity_id=new_job.id,
+        job_id=case.job_id,
+        reason=case.decision_reason,
+        details={"review_id": case.id, "previous_job_id": case.job_id, "new_job_id": new_job.id},
+        created_at=now or datetime.now(timezone.utc),
+    ))
+    db.commit()
+    try:
+        new_job.celery_task_id = dispatch(new_job.id, video.storage_key if video else None)
+    except Exception as exc:  # broker down, etc.
+        import logging
+
+        logging.getLogger(__name__).warning("re-analysis dispatch failed for job %s: %s", new_job.id, exc)
+        new_job.status = JobStatus.FAILED
+        new_job.error_code = "DISPATCH_FAILED"
+    db.commit()
+    db.refresh(new_job)
+    return new_job
