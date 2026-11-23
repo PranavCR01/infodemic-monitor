@@ -1446,7 +1446,9 @@ shape; no label, verdict or stored row changes.
   +1); RETRY_PENDING first when the worker finds the job still STARTED (an earlier worker
   died, Celery redelivered) or Celery reports a retry; COMPLETED / REVIEW_REQUIRED /
   FAILED (with `error_code`) after the existing writes; COMPLETED / REJECTED after a
-  review decision (`review_service.record_review_decision`). **No retry policy was
+  review decision (`review_service.record_review_decision`). A re-analysis job
+  (`review_service.start_reanalysis`, T27) takes the original job's owner (not the
+  reviewer's) and gets its own PENDING/QUEUED (or FAILED on dispatch failure) history. **No retry policy was
   added:** the task still doesn't call `self.retry`; RETRY_PENDING is logged when a retry
   happens. The §1 retry table (backoff on LLM 5xx etc.) is still to build.
 - **Steps** (`app/core/progress.py`): uploaded, transcribing, reading_on_screen_text,

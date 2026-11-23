@@ -588,3 +588,32 @@ def test_review_decision_is_logged_as_a_state_change(action, state):
     last = job_events.list_events(db, "j1")[-1]
     assert (last.state, last.detail) == (state, {"review_id": case.id, "action": action})
     assert [e.state for e in job_events.list_events(db, "j1")] == ["REVIEW_REQUIRED", state]
+
+
+@pytest.mark.parametrize("dispatch_ok", [True, False])
+def test_reanalysis_job_keeps_the_original_owner_and_has_a_history(dispatch_ok):
+    from app.services.review_service import open_review_case, record_review_decision, start_reanalysis
+    from app.tests.test_validation_review import Harness
+
+    db = _session_factory()()
+    _video(db)
+    _job(db, "j1", user="user-a", status=JobStatus.STARTED)
+    case = open_review_case(db, "j1", Harness().run())
+    case = record_review_decision(db, case.id, reviewer_id="rev-1", action="REQUEST_REANALYSIS",
+                                  reason="transcript looks truncated")
+
+    def dispatch(job_id, key):
+        if not dispatch_ok:
+            raise ConnectionError("redis down")
+        return "task-2"
+
+    new = start_reanalysis(db, case, reviewer_id="rev-1", dispatch=dispatch)
+    assert new.user_id == "user-a"                       # the owner, not the reviewer
+    states = [e.state for e in job_events.list_events(db, new.id)]
+    first = job_events.list_events(db, new.id)[0]
+    assert first.detail["previous_job_id"] == "j1" and first.step == "uploaded"
+    if dispatch_ok:
+        assert states == ["PENDING", "QUEUED"] and job_events.effective_state(new) == "QUEUED"
+    else:
+        assert states == ["PENDING", "QUEUED", "FAILED"]
+        assert job_events.list_events(db, new.id)[-1].detail == {"error_code": "DISPATCH_FAILED"}
