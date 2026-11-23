@@ -49,5 +49,8 @@ research/claim-level/dataset/videos/
 *.webm
 *.mkv
 
+# CI test report (backend-tests workflow)
+backend/pytest-report.xml
+
 # Evaluation run outputs (predictions, traces)
 backend/eval_runs/

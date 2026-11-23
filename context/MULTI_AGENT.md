@@ -1224,6 +1224,26 @@ cloud hosts and the NCBI Bookshelf website serves a reCAPTCHA. Code:
   only on the server; check in Supabase. (5) `app.main` imports the async health check,
   which needs `greenlet` (not in requirements; tests mount the video routers alone).
 
+## 7t. Backend CI (T23, no issue; design §14, §16)
+
+- **Workflow:** `.github/workflows/backend-tests.yml` runs `python -m pytest` in `backend/` on
+  every PR to `langgraph-build` and `main` (plus manual `workflow_dispatch`). Python 3.11 to
+  match `backend/Dockerfile`. No repository secrets, no model API keys; `permissions:
+  contents: read`. Actions are pinned to commit SHAs (checkout v4.2.2, setup-python v5.6.0).
+- **Postgres:** a `pgvector/pgvector:0.8.0-pg16` service. Two throwaway databases:
+  `library_test` (`LIBRARY_TEST_PG_DSN`, psycopg 3 SQLAlchemy URL) and `checkpoint_test`
+  (`LANGGRAPH_TEST_PG_DSN`, plain libpq URL). Separate because the library test drops its
+  database's `public` schema, which would take the checkpointer's tables with it.
+- **Every optional test runs:** apt installs `redis-server`, `tesseract-ocr` and `ghostscript`;
+  pip installs `requirements.txt`, `-e ".[test]"` and `ocrmypdf` on its own (the `[library]`
+  extra would also pull torch and transformers, which no test needs). That un-skips the MCP
+  Redis test and the four library OCR tests as well as the three Postgres tests.
+- **Zero skips enforced:** a final step reads the JUnit report and fails the run if any test
+  skipped, so a missing service or package can't quietly switch these tests off again. A
+  new test that legitimately needs something CI lacks must add it to the workflow.
+- **`backend/*.egg-info`** is no longer tracked (it was committed before the `*.egg-info/`
+  ignore rule existed). Eleven `__pycache__/*.pyc` files are still tracked the same way and
+  get dirtied by any local test run; left for a follow-up since T23 only covered egg-info.
 ## 7s. Judge Cross-Check Against the Golden Set (T24, no issue; design §9, §14)
 
 - **What is compared.** The backend judge (`judge.decide`, then the review rule
@@ -1323,6 +1343,12 @@ replacement.
 ## 10. Check-In Log
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
+
+- **2026-11-23**: T23 (no issue; design §14, §16) backend CI by the automated build:
+  GitHub Actions on PRs to `langgraph-build`/`main` with a pgvector Postgres service, Redis
+  and OCR tools, failing on any skipped test; `backend/*.egg-info` untracked. Locally on a
+  fresh Python 3.11 env with Postgres 16 + pgvector: 952 passed, 0 skipped (was 945 passed,
+  7 skipped without the services). Decisions in §7t.
 
 - **2026-11-23**: T24 (no issue; design §9, §14) judge cross-check by the automated
   build. Backend judge vs the golden set's independently written judge on all 82 golden
