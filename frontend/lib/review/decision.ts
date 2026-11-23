@@ -14,7 +14,7 @@ export const DECISIONS: { kind: DecisionKind; title: string; description: string
 ];
 
 /**
-  * Reason codes (Q2: a code and a note on every decision). The six codes T34 will add
+ * Reason codes (Q2: a code and a note on every decision). The six codes T34 will add
  * as the reason_code enum; until then the code is folded into the free-text reason.
  */
 export const REASON_CODES = [

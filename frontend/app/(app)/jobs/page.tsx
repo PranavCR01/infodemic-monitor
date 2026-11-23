@@ -1,25 +1,13 @@
-import { serverApiFetch } from "@/lib/api-server";
-import { JobsView } from "./JobsView";
+import { Suspense } from "react";
+import { JobsClient } from "./JobsClient";
 
-async function fetchJobs() {
-  try {
-    const res = await serverApiFetch("/jobs?limit=50");
-    if (!res.ok) return [];
-    return res.json();
-  } catch {
-    return [];
-  }
-}
+export const metadata = { title: "Your videos · WHO Infodemic Monitor" };
 
-export default async function JobsPage() {
-  const jobs = await fetchJobs();
-
+export default function JobsPage() {
+  // useSearchParams (filters in the URL) needs a Suspense boundary.
   return (
-    <div className="flex flex-col">
-      <div className="flex-1 max-w-5xl mx-auto w-full px-6 py-8">
-        <h1 className="text-xl font-semibold text-gray-900 mb-6">Job History</h1>
-        <JobsView initialJobs={jobs} />
-      </div>
-    </div>
+    <Suspense fallback={<p className="text-small text-ink-2">Loading your videos…</p>}>
+      <JobsClient />
+    </Suspense>
   );
 }
