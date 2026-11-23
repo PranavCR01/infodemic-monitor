@@ -19,7 +19,7 @@ How to use it:
 | D3 | Exclude **M4Health** from the external-agreement number. Its "FALSE" credibility label covers memes and adverts, and agreement is 0/15 | Exclude, but report it separately | Not done |
 | D4 | Backend flags weak evidence on *non-deciding* claims for review (v64, v65; beyond §11's wording) | **Keep**: it only adds review, never removes it | Recommended; lead hasn't objected |
 | D5 | Queue a **staging-prep task** for the demo to Dr. Brooks: Railway staging configuration, deploy checklist, script to pre-run demo videos | Yes, if the demo is in the next few days | Offered, not answered |
-| D6 | Frontend designs: the lead will share Claude Design output | On receipt, review against the brief, map to the API, split into build tasks | Waiting on the designs |
+| D6 | Frontend: Claude Design export goes into `design/claude-design/` on branch `design/frontend-v1` (brief: `design/BRIEF.md`). Frontend session `session_013cWxpynpigJCrZtXuYokiD` (env infodemic-video-sourcing, no keys) reviews, maps to the API, proposes a plan, then builds via PRs into `design/frontend-v1` (no self-merge) | Approve its plan; backend gaps it finds become queue tasks | Waiting on the lead's upload |
 
 Already decided (recorded here so they aren't asked again):
 - Review reasons are collected from every claim, whatever rule sets the label. Mixed videos are MISINFO and always reviewed (§9; T21).
@@ -34,6 +34,8 @@ Already decided (recorded here so they aren't asked again):
 Nothing waiting. #70 (T22 severity), #71 (T24 judge cross-check) and #72 (T23 CI) were merged on 2026-11-24. CI (`pytest` with Postgres + pgvector) now runs on every PR to `langgraph-build` and `main`. GitGuardian flagged a dummy test-database password from #72's first commit; the final version has none.
 
 ## 3. Running now
+
+- **Frontend session** `session_013cWxpynpigJCrZtXuYokiD`: phase 0, mapping the current frontend and API while waiting for the designs.
 
 - **T25** (orchestrator child): do Europe PMC, Cochrane, ClinicalTrials.gov and WHO/NHS/CDC guidance resolve the 39 "source false, evidence silent" videos? Report only. Its answer feeds D1.
 
