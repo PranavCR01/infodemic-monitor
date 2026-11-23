@@ -341,8 +341,11 @@ The verifier reads one claim and its reranked papers and decides what the eviden
 | SUPPORTED | The evidence backs the claim as stated |
 | CONTRADICTED | The evidence shows the claim is false |
 | MIXED | Good studies point in different directions |
-| INSUFFICIENT\_EVIDENCE | Nothing tests this claim directly, or what exists is too weak |
+| UNSUPPORTED | An **efficacy claim** (X cures, treats, prevents or reverses Y) for which the full search, PubMed plus the section 6 references, found no evidence for or against. Presenting an untested remedy as working is itself misleading: the burden of proof is on the claim |
+| INSUFFICIENT\_EVIDENCE | Any other claim that nothing tests directly, or where what exists is too weak (including claims about harm or side effects: no evidence of harm is not evidence of harm) |
 | NOT\_VERIFIABLE | The claim can't be tested ("this tea feels amazing") |
+
+**UNSUPPORTED is not CONTRADICTED.** The explanation always says "no evidence supports this", never "this is false". It applies only after the retrieval budget is exhausted, and only when `claim_category` is treatment or prevention efficacy.
 
 **Output:**
 
@@ -405,35 +408,43 @@ By the time the judge runs, the judgment has already been made, claim by claim: 
 | --- | --- |
 | is **endorsed** by the speaker and **contradicted** by the evidence | MISINFO |
 | otherwise, is **refuted** by the speaker but **supported** by the evidence (the speaker denies something true) | MISINFO, always sent to review |
+| otherwise, is an **endorsed efficacy claim** the evidence leaves **unsupported** | MISINFO (unproven), always sent to review |
 | otherwise, is **refuted** by the speaker and contradicted by the evidence | DEBUNKED (`DEBUNKING`) |
 | otherwise, at least one claim was judged and nothing false is endorsed | NO-MISINFO |
 | otherwise, is **refuted** by the speaker while the evidence is mixed or insufficient | CANNOT RECOGNIZE, sent to review as a possible debunk |
 | no claim could be judged (all insufficient or not verifiable, or no claims) | CANNOT RECOGNIZE |
 
+MISINFO carries a `misinfo_basis`: `contradicted`, `denies_supported` or `unproven`. The internal label stays one of the four; the interface shows "MISINFO (unproven)" when the basis is `unproven`.
+
 ```python
 def judge(claims):
     endorsed_false = [c for c in claims if c.stance == "ENDORSES" and c.verdict == "CONTRADICTED"]
     denied_true    = [c for c in claims if c.stance == "REFUTES"  and c.verdict == "SUPPORTED"]
+    unproven       = [c for c in claims if c.stance == "ENDORSES" and c.verdict == "UNSUPPORTED"]
     refuted_false  = [c for c in claims if c.stance == "REFUTES"  and c.verdict == "CONTRADICTED"]
     judged         = [c for c in claims if c.verdict in ("SUPPORTED", "CONTRADICTED")]
     refuted_open   = [c for c in claims if c.stance == "REFUTES"  and c.verdict in ("MIXED", "INSUFFICIENT_EVIDENCE")]
 
     # Review reasons come from every claim, whichever rule decides the label.
     reasons  = [f"denies_supported:{c.id}" for c in denied_true]
+    reasons += [f"unproven_claim:{c.id}" for c in unproven]
     reasons += [f"possible_debunk:{c.id}" for c in refuted_open]
     reasons += [f"mixed_evidence:{c.id}" for c in claims if c.verdict == "MIXED"]
-    if endorsed_false and refuted_false:
+    if (endorsed_false or unproven) and refuted_false:
         reasons.append("mixed_video")
 
-    if endorsed_false: return "MISINFO", endorsed_false, reasons
-    if denied_true:    return "MISINFO", denied_true, reasons
-    if refuted_false:  return "DEBUNKING", refuted_false, reasons
-    if judged:         return "NO_MISINFO", judged, reasons
-    if refuted_open:   return "CANNOT_RECOGNIZE", refuted_open, reasons
-    return "CANNOT_RECOGNIZE", [], reasons
+    if endorsed_false: return "MISINFO", "contradicted", endorsed_false, reasons
+    if denied_true:    return "MISINFO", "denies_supported", denied_true, reasons
+    if unproven:       return "MISINFO", "unproven", unproven, reasons
+    if refuted_false:  return "DEBUNKING", None, refuted_false, reasons
+    if judged:         return "NO_MISINFO", None, judged, reasons
+    if refuted_open:   return "CANNOT_RECOGNIZE", None, refuted_open, reasons
+    return "CANNOT_RECOGNIZE", None, [], reasons
 ```
 
-The third value is the list of review reasons the rule itself adds (section 11). Review reasons are collected from every claim, whichever rule decides the label: a refuted claim the evidence can't settle raises "possible debunk" even when another claim makes the video NO-MISINFO. Mixed videos (one false claim endorsed, another refuted) are labelled MISINFO and always sent to review.
+The second value is the `misinfo_basis`, the third the deciding claims, and the fourth the list of review reasons the rule itself adds (section 11). Review reasons are collected from every claim, whichever rule decides the label: a refuted claim the evidence can't settle raises "possible debunk" even when another claim makes the video NO-MISINFO. Mixed videos (one false or unproven claim endorsed, another refuted) are labelled MISINFO and always sent to review.
+
+**Probe: why MISINFO for an unproven claim?** In the golden set, 39 videos were rated false by fact-checkers while no study tested the specific claim ("sea moss cures thyroid disease"). Fact-checkers and WHO treat promoting an untested cure as misinformation, because the burden of proof is on the claim. Calling those videos CANNOT RECOGNIZE would hide the most common kind of health misinformation. The label is kept honest by three limits: it applies only to endorsed efficacy claims (never to harm or mechanism claims), only after the full retrieval budget finds nothing, and it is shown as "MISINFO (unproven)", never as "false", and always reviewed.
 
 **Probe: why two new branches?** Labelling the first golden-set batch exposed two gaps. A speaker who *refutes a true claim* ("vaccines don't prevent measles, that's a lie") was falling through to NO-MISINFO, because only endorsed false claims counted as misinformation. Denying established evidence is misinformation too, so it now is, and it always goes to a person, because it rests entirely on the stance being right. The second gap: clear debunks of claims the sources couldn't settle were landing in CANNOT RECOGNIZE with nothing to flag them. They still don't get DEBUNKED automatically, since refuting an unsettled claim isn't the same as correcting a false one, but a person now sees them. Most of the other missed debunks (statistics, schedules, regulatory limits) are fixed at the source: section 6 now allows authoritative reference sources, so those claims can be checked and reach CONTRADICTED.
 
@@ -485,7 +496,7 @@ Whether a case is "weak" is decided by a written code rule. The rule combines si
 
 ### Judgments from the LLM steps
 
-- A verdict of INSUFFICIENT\_EVIDENCE or MIXED.
+- A verdict of INSUFFICIENT\_EVIDENCE, MIXED or UNSUPPORTED.
 - Limitations noted by the verifier (wrong population, indirect outcome).
 - A stance of UNCLEAR.
 - The critic choosing ESCALATE or marking the case for review.
@@ -506,7 +517,7 @@ Whether a case is "weak" is decided by a written code rule. The rule combines si
 
 A case goes to a person if **any** of these hold:
 
-- a deciding claim is INSUFFICIENT\_EVIDENCE or MIXED;
+- a deciding claim is INSUFFICIENT\_EVIDENCE, MIXED or UNSUPPORTED (so every "MISINFO (unproven)" video is reviewed);
 - supporting and contradicting papers both exist for a deciding claim;
 - a deciding claim rests only on weak study types;
 - a deciding claim's stance is UNCLEAR;
