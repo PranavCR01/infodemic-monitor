@@ -1,5 +1,5 @@
 from app.db.models.video import Video  # noqa: F401
-from app.db.models.job import Job, JobStatus  # noqa: F401
+from app.db.models.job import Job, JobEvent, JobState, JobStatus  # noqa: F401
 from app.db.models.result import Result  # noqa: F401
 from app.db.models.review import AuditEvent, HumanReview, ReviewAction, ReviewCaseStatus  # noqa: F401
 from app.db.models.claim import (  # noqa: F401

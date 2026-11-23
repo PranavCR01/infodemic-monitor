@@ -178,6 +178,11 @@ def record_review_decision(
         created_at=case.decided_at,
     ))
     db.commit()
+    if job is not None:
+        # T28: log the job's new §1 state (COMPLETED or REJECTED) in its history.
+        from app.services.job_events import sync_state_from_status
+
+        sync_state_from_status(db, job, detail={"review_id": case.id, "action": action.value})
     db.refresh(case)
     return case
 

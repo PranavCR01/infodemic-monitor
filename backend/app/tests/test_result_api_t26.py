@@ -77,7 +77,7 @@ def _session():
 def _seed_graph_job(db, *, job_id="job-a", status=JobStatus.REVIEW_REQUIRED, review=True):
     if db.get(Video, "vid-1") is None:
         db.add(Video(id="vid-1", filename="v.mp4", file_path="/tmp/v.mp4", file_size=1))
-    db.add(Job(id=job_id, video_id="vid-1", status=status,
+    db.add(Job(user_id="alice", id=job_id, video_id="vid-1", status=status,
                created_at=datetime(2026, 11, 20, tzinfo=timezone.utc)))
     db.add(Result(job_id=job_id, label="MISINFO", confidence=0.8, explanation="because", evidence_snippets=["q"],
                   combined_content="", provider="langgraph", model_used="graph", latency_ms=5,
@@ -252,7 +252,7 @@ def test_v1_video_results_and_claims(env):
 
 def test_v1_video_results_uses_the_latest_owned_job(env):
     db = env["db"]
-    db.add(Job(id="job-new", video_id="vid-1", status=JobStatus.PENDING,
+    db.add(Job(user_id="alice", id="job-new", video_id="vid-1", status=JobStatus.PENDING,
                created_at=datetime(2026, 11, 22, tzinfo=timezone.utc)))
     db.commit()
     r = env["client"].get("/v1/videos/vid-1/results")
@@ -267,7 +267,7 @@ def test_v1_video_results_uses_the_latest_owned_job(env):
 def test_single_call_result_has_empty_t26_fields():
     db = _session()
     db.add(Video(id="vid-s", filename="s.mp4", file_path="/tmp/s.mp4", file_size=1))
-    db.add(Job(id="job-s", video_id="vid-s", status=JobStatus.SUCCESS))
+    db.add(Job(user_id="alice", id="job-s", video_id="vid-s", status=JobStatus.SUCCESS))
     db.add(Result(job_id="job-s", label="NO_MISINFO", confidence=0.9, explanation="x", evidence_snippets=[],
                   combined_content="", provider="openai", model_used="m", latency_ms=1))
     db.commit()
@@ -385,10 +385,12 @@ def test_every_endpoint_goes_through_the_access_check(env, monkeypatch):
     assert env["as_user"](ALICE).get("/jobs/no-such-job/result").status_code == 404
 
 
-def test_access_check_today_allows_authenticated_callers(env):
-    """Until T27 adds owners, an authenticated caller sees existing objects (as before)."""
+def test_owner_check_is_live(env):
+    """T28 filled in the access check with the job owner (``jobs.user_id``, migration
+    0011): with no rule plugged in, alice (the owner) sees every object and bob gets 404."""
     for path in _endpoints(env["db"]):
-        assert env["as_user"](BOB).get(path).status_code == 200, path
+        assert env["as_user"](ALICE).get(path).status_code == 200, path
+        assert env["as_user"](BOB).get(path).status_code == 404, path
 
 
 def test_every_endpoint_needs_auth(env, monkeypatch):
@@ -417,7 +419,7 @@ def test_persisted_graph_outcome_serves_quotes_and_modality():
 
     db = _session()
     db.add(Video(id="vid-1", filename="v.mp4", file_path="/tmp/v.mp4", file_size=1))
-    db.add(Job(id="job-1", video_id="vid-1", status=JobStatus.STARTED))
+    db.add(Job(user_id="alice", id="job-1", video_id="vid-1", status=JobStatus.STARTED))
     db.commit()
     outcome = make_provider().run(fusion(), job_id="job-1", video_id="vid-1")
     outcome.state = {**outcome.state, "requires_human_review": True, "review_reasons": ["judge:mixed_video"]}
