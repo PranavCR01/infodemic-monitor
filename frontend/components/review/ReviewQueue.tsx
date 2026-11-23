@@ -61,7 +61,7 @@ export function ReviewQueue({ items, view, onViewChange, hrefFor, updatedAt }: P
           {view === "open" ? "New cases appear here when the system sends a video for review." : "Cases you and other reviewers decide appear here."}
         </EmptyState>
       ) : (
-        <div className="overflow-x-auto rounded-lg border border-line bg-surface shadow-1">
+        <div className="relative overflow-x-auto rounded-lg border border-line bg-surface shadow-1">
           <table className="w-full min-w-[880px] border-collapse text-small">
             <caption className="sr-only">Review cases, sorted by priority then waiting time</caption>
             <thead>
