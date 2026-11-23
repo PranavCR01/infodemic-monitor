@@ -1224,6 +1224,53 @@ cloud hosts and the NCBI Bookshelf website serves a reCAPTCHA. Code:
   only on the server; check in Supabase. (5) `app.main` imports the async health check,
   which needs `greenlet` (not in requirements; tests mount the video routers alone).
 
+## 7r. Severity for Review Priority (T22, no issue; design §11, §12)
+
+Built by the automated build on 2026-11-23 (project lead's decision). Severity orders the
+review queue; it never changes a label, verdict, proposed result, reviewer decision or
+job state (tested).
+
+- **Table:** `backend/config/severity.yaml`, `status: draft`, `version: severity_v0_draft`,
+  with `sign_off` flags for the project lead, Dr. Brooks and WHO all `false`. The loader
+  (`app/core/graph/severity.py`) refuses `status: approved` unless all three are true.
+  Not for real triage until signed off.
+- **Seeding:** every category in `review_policy.yaml` `high_risk_categories` (T09) is
+  HIGH (a test keeps them in sync). The extractor's other categories: safety, prevention,
+  causation, diagnosis, nutrition MEDIUM; statistic, other LOW.
+- **"Topic" is keyword matching on the claim text** (whole words, `*` = rest of word),
+  because there is no topic field and the extractor's categories are too broad
+  ("causation" covers "the MMR causes autism"). Topics: cancer, vaccines,
+  medication/doses, pregnancy and children, self-harm and eating disorders (HIGH);
+  supplements and detox (MEDIUM). A claim's severity is the highest of its category and
+  every matching topic. Weakest part of the design: keyword lists miss paraphrases and
+  over-fire (e.g. "children" in a harmless claim). Owners should review them.
+- **Unmapped category → MEDIUM** (`default_severity`), not LOW: an unknown category
+  shouldn't be buried at the bottom of the queue.
+- **Known over-ranking:** `treatment_efficacy` is HIGH because T09 put it in the
+  high-risk list, so "hot water soothes a sore throat" ranks HIGH. Left as seeded; the
+  owners decide.
+- **MISINFO-relevant claims** (video severity = highest among them): endorsed +
+  CONTRADICTED; endorsed + MIXED / INSUFFICIENT_EVIDENCE / NOT_VERIFIABLE (same
+  "uncertain" set as `high_risk_uncertain`); **and refuted + SUPPORTED** (speaker denies
+  a supported claim). The last is a deviation from §12's parenthetical, which lists only
+  endorsed claims; §9 makes that case MISINFO, and leaving it out would give "vaccines
+  don't prevent measles, that's a lie" no severity. Verdicts are the judge's view
+  (`routing.verdicts_for_judge`), as in the review rule.
+- **No relevant claim → severity null**; the queue puts null after LOW.
+- **Storage (migration 0010):** `human_reviews.severity` (indexed), `claim_severities`
+  (per claim: table severity, basis, stance, verdict, relevant, override),
+  `severity_table_version`; new `audit_events` table (§17). Per-user isolation, planned
+  as 0010, moves to 0011. Not run on Supabase.
+- **Service (`app/services/review_service.py`):** `open_review_case` stores severity;
+  `review_queue` sorts severity (HIGH, MEDIUM, LOW, null) then `created_at` oldest first;
+  `override_claim_severity` needs a reviewer and a reason, keeps the table value next to
+  the override, recomputes the video severity and writes an `audit_events` row
+  (`action=severity_override`, from/to, video before/after, table version);
+  `severity_overrides` reads the log. Overrides are allowed on resolved cases (the log is
+  for correcting the table) and survive a refresh of an open case.
+- **Not built:** no API endpoint or UI for the queue or overrides (none exist for review
+  yet), no alerts (§12 mentions severity ordering alerts; there is no alerting).
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -1245,6 +1292,12 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-23**: T22 (no issue; design §11, §12) by the automated build: severity for
+  review priority. Draft table in `config/severity.yaml` (categories seeded from T09's
+  high-risk list + text topics), video severity = highest among MISINFO-relevant claims,
+  queue by severity then age, reviewer overrides with reason logged to a new
+  `audit_events` table (migration 0010). Labels and verdicts untouched. Table needs the
+  project lead's, Dr. Brooks's and WHO's sign-off. Decisions in §7r.
 - **2026-11-23**: T19 (no issue; design §6) production reference retrieval by the
   automated build. Bookshelf now goes through E-utilities only (ESearch/EFetch on
   `db=pubmed` with `booksdocs[filter]`, because `efetch db=books` returns no text: checked
