@@ -13,7 +13,15 @@ describe("roleOf", () => {
     expect(roleOf({ app_metadata: {}, user_metadata: { role: "admin" } } as never)).toBe("analyst");
   });
 
-  it("treats an unknown or missing role as the interim default", () => {
+  it("reads app_metadata.roles and takes the highest rank", () => {
+    expect(roleOf({ app_metadata: { roles: ["analyst", "reviewer"] } })).toBe("reviewer");
+    expect(roleOf({ app_metadata: { role: "reviewer", roles: ["admin"] } })).toBe("admin");
+    expect(roleOf({ app_metadata: { role: "admin", roles: ["analyst"] } })).toBe("admin");
+    expect(roleOf({ app_metadata: { roles: ["bogus", "reviewer"] } })).toBe("reviewer");
+    expect(roleOf({ app_metadata: { roles: "admin" } })).toBe("analyst");
+  });
+
+  it("treats an unknown or missing role as analyst, like the backend", () => {
     expect(roleOf(user("superuser"))).toBe("analyst");
     expect(roleOf(user())).toBe("analyst");
   });

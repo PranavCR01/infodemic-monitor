@@ -1,9 +1,10 @@
 // Roles and route access (design HANDOFF §5).
 //
-// ADAPTER: until T27 lands, where the role lives is not final ("Supabase JWT claims
-// or a roles table"). We read `app_metadata.role`, which only the service role can
-// set; never `user_metadata`, which users can edit themselves. The server enforces
-// roles on every endpoint (T27); this module only decides what the UI shows.
+// Same rule as the backend (T27, PR #78): the role comes from `app_metadata.role`
+// (a string) or `app_metadata.roles` (a list); the highest rank wins; a missing
+// role means analyst. `app_metadata` can only be set with the service role;
+// `user_metadata`, which users can edit themselves, is never read. The server
+// enforces roles on every endpoint; this module only decides what the UI shows.
 
 export const ROLES = ["analyst", "reviewer", "admin"] as const;
 export type Role = (typeof ROLES)[number];
@@ -11,9 +12,9 @@ export type Role = (typeof ROLES)[number];
 const RANK: Record<Role, number> = { analyst: 0, reviewer: 1, admin: 2 };
 
 /**
- * Role assumed for a signed-in user with no role claim. The design says a missing
- * role should see Permission denied; today no user has a role claim, so that would
- * lock everyone out. Set to null once T27 assigns roles.
+ * Role of a signed-in user with no role claim. Matches the backend (T27): analyst.
+ * (The design suggested Permission denied; the lead chose to keep analyst so the
+ * frontend and backend agree.)
  */
 export const ROLE_WHEN_MISSING: Role | null = "analyst";
 
@@ -24,9 +25,12 @@ export function isRole(v: unknown): v is Role {
 }
 
 export function roleOf(user: UserLike): Role | null {
-  const claim = user?.app_metadata?.role;
-  if (isRole(claim)) return claim;
-  return user ? ROLE_WHEN_MISSING : null;
+  if (!user) return null;
+  const meta = user.app_metadata ?? {};
+  const claims: unknown[] = [meta.role, ...(Array.isArray(meta.roles) ? meta.roles : [])];
+  const valid = claims.filter(isRole);
+  if (valid.length === 0) return ROLE_WHEN_MISSING;
+  return valid.reduce((best, r) => (RANK[r] > RANK[best] ? r : best));
 }
 
 export function hasRole(role: Role | null, required: Role): boolean {
