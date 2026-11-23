@@ -1430,6 +1430,51 @@ shape; no label, verdict or stored row changes.
   before T26); (2) the reason wording is a draft for the project lead to edit (one table,
   `REASON_TEXT`). No migration in T26.
 
+## 7w. "How we searched" per Claim (T31, no issue; design §6, §8, §12)
+
+Built by the automated build on 2026-11-23 (requested by the frontend session; lead
+decision D7). Additive: no existing field, label, verdict or retrieval result changes.
+
+- **Recorded during the run, by code.** `retrieve_evidence` now also owns a new state
+  channel `search_trail: dict[claim_id, list[SearchRound]]` (in `NODE_OUTPUTS`), one
+  `SearchRound` per claim per round: the PubMed query actually run, PMIDs ESearch
+  returned, records left after the type/year filters, what the round added after
+  PMID/DOI dedup, whether it was served from the query cache, and, in a fact of record's
+  first round, every allow-listed reference page / stored snapshot / Bookshelf search
+  tried (`ReferenceConsulted`: source id, name, publisher and host from
+  `config/reference_sources.yaml`, page id or NBK accession, mode, outcome).
+  `ReferenceSearcher.search` reports these as `ReferenceResult.consulted` (new, additive).
+  The node only observes: a test runs the whole mocked graph with and without the
+  channel and compares queries, evidence, reranking, verdicts, critic, judge and review.
+  No `STATE_SCHEMA_VERSION` bump: the field is optional, older checkpoints load.
+- **Summarised at persist time** by `app/services/search_trail.py::build_search_trail`
+  onto a new nullable JSON column `claims.search_trail` (migration **0011**), in the
+  shape `app/core/schemas/search_trail.py::SearchTrailView` (version 1). It is returned on
+  every claim (`ClaimView.search_trail`) by `GET /jobs/{id}/result`,
+  `GET /v1/videos/{id}/results` and `GET /v1/videos/{id}/claims`; null for claims never
+  searched, single-call/fallback results and rows written before 0011. A stored trail
+  that no longer parses is returned as null rather than failing the result.
+- **Count definitions** (the frontend's "retrieved / screened / kept"):
+  `retrieved` = results the searches returned: PMIDs from each distinct PubMed query
+  (a repeated query, when the planner's ladder ran out, is flagged `repeat` and not
+  counted twice) + reference passages + library passages; `screened` = distinct records
+  the reranker scored (after filters and dedup, library included); `kept` = what went to
+  the verifier (≤ 10). `budget` = rounds used of `Budgets.max_retrieval_attempts` (3:
+  the initial search + 2 reformulations, shared with critic RETRIEVE_MORE rounds, §8),
+  `exhausted`, and the 10-paper cap. `library` is null when no library was configured,
+  else `{fired, passages}`.
+- **Never in the trail:** API keys, E-utilities request URLs (Bookshelf is recorded by
+  its chapter pages, not its API calls), prompts, exception messages (a failed PubMed or
+  reference search stores the exception type only, since an httpx error message can
+  carry the request URL and key). Tests feed a fake key through PubMed and the
+  references and check it never appears.
+- **Fallback for older checkpoints:** with no per-round record, the trail is rebuilt from
+  `retrieval_queries` with unknown per-query counts (`recorded: "queries_only"`,
+  `counts.retrieved: null`).
+- **Deviations / limits:** the persisted budget uses `DEFAULT_BUDGETS` (the worker never
+  passes custom budgets today); query origin (planner rule vs critic suggestion) is not
+  recorded; the MCP server's tool outputs are unchanged.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -1450,6 +1495,14 @@ replacement.
 ## 10. Check-In Log
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
+
+- **2026-11-23**: T31 (no issue; design §6, §8, §12) "How we searched" per claim by the
+  automated build: `retrieve_evidence` records a `search_trail` per round (queries run,
+  hits, filters, dedup, cache, references consulted); persisted to `claims.search_trail`
+  (migration 0011) with retrieved / screened / kept counts and budget used; returned as
+  `claims[].search_trail` by every result endpoint. No keys, request URLs or prompts in it;
+  retrieval and verdicts unchanged (tested). 1155 passed, 4 skipped (OCRmyPDF/Tesseract)
+  locally with Postgres 16 + pgvector; no spend. Decisions in §7w.
 
 - **2026-11-23**: T27 (no issue; design §12, §15, §17) review HTTP API and roles by the
   automated build: `/v1/reviews` queue (severity then age, filters, pages), case with

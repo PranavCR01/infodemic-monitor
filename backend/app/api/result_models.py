@@ -12,6 +12,7 @@ from typing import Any, Literal, Optional
 
 from pydantic import BaseModel, Field
 
+from app.core.schemas.search_trail import SearchTrailView
 from app.services.review_reasons import ReasonView
 
 Modality = Literal["speech", "screen", "both"]
@@ -95,6 +96,9 @@ class ClaimView(BaseModel):
     retrieval_attempts: Optional[int] = None
     critic: Optional[CriticView] = None
     severity: Optional[ClaimSeverityView] = None
+    # T31: "How we searched". Null when the claim was never searched, for
+    # single-call results, and for rows stored before T31.
+    search_trail: Optional[SearchTrailView] = None
 
 
 class ReviewView(BaseModel):

@@ -30,6 +30,7 @@ from app.api.result_models import (
     ReviewView,
     SegmentView,
 )
+from app.core.schemas.search_trail import SearchTrailView
 from app.db.models.claim import ClaimEvidenceRow, ClaimRow, OcrSegmentRow, TranscriptSegmentRow
 from app.db.models.job import Job
 from app.db.models.result import Result
@@ -140,6 +141,17 @@ def claim_views(db: Session, job_id: str, case: Optional[HumanReview] = None,
     return [claim_view(c, index, severities.get(c.claim_id)) for c in rows]
 
 
+def _search_trail(raw: Optional[dict]) -> Optional[SearchTrailView]:
+    """The stored trail, or None. A row that no longer parses (written by a later
+    version) is left out rather than failing the whole result."""
+    if not raw:
+        return None
+    try:
+        return SearchTrailView.model_validate(raw)
+    except ValueError:
+        return None
+
+
 def claim_view(c: ClaimRow, index: dict[str, SegmentView], severity: Optional[dict] = None) -> ClaimView:
     stance_ids = list(c.stance.segment_ids) if c.stance else []
     return ClaimView(
@@ -160,6 +172,7 @@ def claim_view(c: ClaimRow, index: dict[str, SegmentView], severity: Optional[di
         critic=(CriticView(decision=c.critic.decision, issues=list(c.critic.issues or []),
                            requires_review=c.critic.requires_review) if c.critic else None),
         severity=claim_severity_view(c.claim_id, severity),
+        search_trail=_search_trail(c.search_trail),
     )
 
 
