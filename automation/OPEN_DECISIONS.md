@@ -1,7 +1,7 @@
 # Project state and open decisions
 
 The working memory for the coordinating session. It is rewritten whenever something important changes, so any session (or person) can pick the project up from here.
-**Last updated:** 2026-11-23 (UTC), by the coordinating session.
+**Last updated:** 2026-11-24 (UTC), by the coordinating session.
 
 How to use it:
 - **Pick up work:** read this file first, then `automation/BUILD_QUEUE.md` (tasks) and `context/MULTI_AGENT.md` (decisions log).
@@ -60,7 +60,7 @@ Golden-set `judge.py` update to send to the local session (after D2): collect `d
 3. Send the design prompt to Claude Design (D6).
 4. Organise the blind review of the golden set (#62).
 5. Staging run before any demo: separate Railway environment and Supabase dev project (or the #47 isolated schema), migrations 0006–0011, pgvector, `USE_GRAPH_PIPELINE` on there only.
-6. Merge `langgraph-build` into `main` in reviewed chunks.
+6. Merge `langgraph-build` into `main` (not yet). Order: merge #70–#72 first; open a **draft** PR `langgraph-build` → `main` for Jared to review (one approving review is required); run staging first, because the API runs migrations on startup (`RUN_MIGRATIONS=true`), so merging to `main` would apply 0006–0011 to the production Supabase database; back up production; then merge with **Create a merge commit** (keeps per-task history).
 7. Refresh the CDC stored snapshots about monthly (T19).
 
 ## 6. Blocked tasks
