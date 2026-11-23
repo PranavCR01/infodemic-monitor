@@ -65,6 +65,12 @@ class Settings(BaseSettings):
     # The signed-upload endpoints (/v1/videos/uploads, /v1/videos) always apply them.
     UPLOAD_SAFEGUARDS: bool = False
 
+    # Playback (T29, design §15 "short-lived signed URLs"): lifetime of the signed
+    # read URL the result page's video player gets from GET /v1/jobs/{id}/playback.
+    # Long enough to start and seek a 3-minute video; the response carries
+    # expires_at so the player asks again when it runs out.
+    PLAYBACK_URL_TTL_SECONDS: int = 600
+
     # Migrations
     RUN_MIGRATIONS: bool = True  # set False on Railway worker service
 

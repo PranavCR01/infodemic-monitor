@@ -49,3 +49,5 @@ app.include_router(jobs.router)
 
 from app.api.routers import results  # noqa: E402
 app.include_router(results.router)  # §17 result reads (T26)
+from app.api.routers import playback  # noqa: E402
+app.include_router(playback.router)  # signed playback URL (T29)

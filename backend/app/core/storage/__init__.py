@@ -17,10 +17,17 @@ class StorageBackend(Protocol):
     # returned URL; the API then downloads it once to validate and hash it.
     def create_signed_upload_url(self, storage_key: str) -> dict: ...
     def download(self, storage_key: str) -> bytes: ...
+    # Short-lived read URL for the result page's video player (T29, design §15
+    # "short-lived signed URLs"). Only issued after the job ownership check.
+    def create_signed_download_url(self, storage_key: str, expires_in: int) -> str: ...
 
 
 class SignedUploadUnsupported(StorageError):
     """The configured backend can't issue signed upload URLs (local storage)."""
+
+
+class SignedUrlUnsupported(StorageError):
+    """The configured backend can't issue signed read URLs (local storage)."""
 
 
 class LocalBackend:
@@ -41,6 +48,10 @@ class LocalBackend:
         # Local storage has no URL a browser could upload to; dev clients keep
         # using POST /videos/upload.
         raise SignedUploadUnsupported(storage_key)
+
+    def create_signed_download_url(self, storage_key: str, expires_in: int) -> str:
+        # A filesystem path is not a URL a browser may fetch; no playback in local dev.
+        raise SignedUrlUnsupported(storage_key)
 
     def download(self, storage_key: str) -> bytes:
         try:

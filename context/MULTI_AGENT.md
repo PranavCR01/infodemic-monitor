@@ -1378,6 +1378,35 @@ shape; no label, verdict or stored row changes.
   before T26); (2) the reason wording is a draft for the project lead to edit (one table,
   `REASON_TEXT`). No migration in T26.
 
+## 7x. Signed Playback URL (T29, no issue; design §12, §15, §17)
+
+- **Endpoint:** `GET /v1/jobs/{job_id}/playback` returns `PlaybackUrlResponse`
+  (`job_id`, `video_id`, `url`, `expires_in_seconds`, `expires_at`, `filename`) with a
+  signed read URL for the job's video. Keyed by job because the result page is a job page
+  and duplicate uploads share one video row, so the job's access rule is the one to apply.
+  New router `app/api/routers/playback.py`; nothing existing changes.
+- **Short-lived:** `PLAYBACK_URL_TTL_SECONDS` (default 600). Long enough to start and seek a
+  3-minute video; `expires_at` (computed from a time taken *before* signing, so never later
+  than the real expiry) tells the player when to ask again. A fresh URL per request,
+  `Cache-Control: no-store`, and the URL is never logged (only the job id). The legacy
+  `get_download_url` keeps its 1 h expiry for the worker.
+- **Ownership:** every lookup goes through `app/api/ownership.py::owned_job_or_404`, a
+  shared with T26 (merged in #76; this branch added the identical file before that merge). A job the caller may
+  not see answers 404 with the same body as a missing job and no URL is signed. **Until the
+  owner column lands (T28 / T33 per the queue; T27 shipped without it) `can_view_job`
+  allows any authenticated user**, so per-user restriction is not enforced in production
+  yet; the tests install an owner rule through that hook and prove the route obeys it.
+  No owner column added here: the queue gives it to T28 (jobs.user_id) and T33
+  (videos.user_id, roles); once they fill in `can_view_job` this route follows unchanged.
+- **Errors:** no storage object (legacy local uploads) 404 "No playable video for this
+  job"; local storage backend 501; storage failure or empty URL 503.
+- **Storage:** `StorageBackend.create_signed_download_url(key, expires_in)`; Supabase via
+  `create_signed_url` (accepts `signedURL`/`signedUrl`/`signed_url` or an object);
+  `LocalBackend` raises `SignedUrlUnsupported`.
+- **Export dropped:** the task brief asked for an export endpoint; the queue row was trimmed
+  by the lead (D7, 2026-11-24: the frontend builds the export client-side from the result
+  payload), so none was built.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -1406,6 +1435,12 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   wording table; §17 `/v1` reads, all behind one access check that T27 fills in with its
   owner column. `review` stays set once resolved. No migration.
   Decisions in §7v.
+
+- **2026-11-23**: T29 (no issue; design §12, §15, §17) signed playback URL by the automated
+  build: `GET /v1/jobs/{job_id}/playback`, 10-minute signed Supabase read URL, owner check
+  through the shared `ownership.py` hook (404 for others), no-store, URL never logged.
+  Export not built (lead D7). 23 new tests; 1081 passed, 0 skipped locally (after rebase onto T26) with Postgres 16
+  + pgvector. Real per-user enforcement waits for T28/T33's owner columns. Decisions in §7x.
 - **2026-11-23**: T25 (no issue; design §6, §7, §14) extra-evidence-sources experiment
   by the automated build, report only. The 60 INSUFFICIENT_EVIDENCE claims in the 39 golden-set videos whose source says false but derive CANNOT_RECOGNIZE were searched in Cochrane (PubMed), Europe PMC, ClinicalTrials.gov v2 and the reference allow-list (`backend/scripts/t25_extra_sources.py`, no model calls, no fact-check databases). Judged under the unchanged §7: 0 claims and 0 videos become decidable; hits are Cochrane reviews that themselves find too little, related but different interventions, animal/cross-sectional work, or registry entries without results. Europe PMC and ClinicalTrials.gov were proxy-blocked at first but reachable for the full run. Near misses for a person: v159 (needs a jogging MET source), v85 (2026 PNAS null). Report: `evals/reports/T25_extra_sources.md`.
 - **2026-11-23**: T23 (no issue; design §14, §16) backend CI by the automated build:
