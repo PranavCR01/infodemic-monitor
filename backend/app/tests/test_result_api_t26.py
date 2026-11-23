@@ -38,7 +38,7 @@ from app.db.models.result import Result
 from app.db.models.review import HumanReview, ReviewCaseStatus
 from app.db.models.video import Video
 from app.db.session import get_db
-from app.services.review_reasons import REASON_TEXT, parse_reason
+from app.services.review_reasons import GENERIC_TEXT, REASON_TEXT, parse_reason
 
 BACKEND = Path(__file__).resolve().parents[2]
 ALICE = {"sub": "alice"}
@@ -236,7 +236,7 @@ def test_review_details_and_structured_reasons(env):
     assert [d["raw"] for d in details] == REASONS
     assert all(d["text"] for d in details)
     assert details[0] == {"code": "weak_evidence", "rule": "weak_evidence", "claim_id": "c2", "detail": None,
-                          "text": REASON_TEXT["weak_evidence"].format(claim="claim c2"), "raw": "weak_evidence:c2"}
+                          "text": REASON_TEXT["weak_evidence"].format(claim="this claim"), "raw": "weak_evidence:c2"}
 
 
 def test_v1_video_results_and_claims(env):
@@ -337,14 +337,18 @@ def test_current_frontend_banner_only_for_open_cases():
 def test_parse_reason(raw, code, rule, claim_id, detail):
     r = parse_reason(raw)
     assert (r.code, r.rule, r.claim_id, r.detail, r.raw) == (code, rule, claim_id, detail, raw)
-    assert r.text and "{" not in r.text and not r.text.startswith("Flagged")
+    assert r.text and "{" not in r.text and r.text != GENERIC_TEXT
+    # T30: analyst text names no claim ID and no node / check / rule name.
     if claim_id:
-        assert f"claim {claim_id}" in r.text.lower()
+        assert "this claim" in r.text.lower() and claim_id not in r.text
+    internal = [x for x in (code, rule) if "_" in x] + ["verify claims", "fabricated", "quotes", "source ids"]
+    assert not [x for x in internal if x in r.text], r.text
 
 
 def test_unknown_reason_gets_generic_text():
     r = parse_reason("brand_new_rule:c9")
-    assert r.code == "brand_new_rule" and r.rule == "other" and r.text == "Flagged for review by rule 'brand_new_rule'."
+    assert r.code == "brand_new_rule" and r.rule == "other" and r.text == GENERIC_TEXT
+    assert "brand_new_rule" not in r.text and r.detail == "c9"  # kept for the audit trail
 
 
 def test_every_rule_and_judge_flag_has_plain_text():

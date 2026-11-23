@@ -1430,7 +1430,7 @@ shape; no label, verdict or stored row changes.
   before T26); (2) the reason wording is a draft for the project lead to edit (one table,
   `REASON_TEXT`). No migration in T26.
 
-## 7w. Unproven-Claim Verdict (T30, decision D1 = B; design §7, §9, §11, §12)
+## 7z. Unproven-Claim Verdict (T30, decision D1 = B; design §7, §9, §11, §12)
 
 Built by the automated build on 2026-11-23 (queue date 2026-11-24). Additive: the four
 labels are unchanged; existing responses keep every field.
@@ -1466,7 +1466,7 @@ labels are unchanged; existing responses keep every field.
 - **Review (§11):** UNSUPPORTED joins `UNCERTAIN_VERDICTS`, so `weak_evidence` fires on
   the deciding claim and every "MISINFO (unproven)" video is reviewed (also via
   `judge:unproven_claim`). Severity counts ENDORSES + UNSUPPORTED as MISINFO-relevant.
-- **Stored and returned:** `results.misinfo_basis` (migration **0011**, nullable). `GET
+- **Stored and returned:** `results.misinfo_basis` (migration **0013**, nullable; chained to 0010 until T28's 0011 and T31's 0012 merge, then `down_revision` becomes "0012"). `GET
   /jobs/{id}/result` and `GET /jobs` add `misinfo_basis` and `label_display` ("MISINFO
   (unproven)", "CANNOT RECOGNIZE"...) from `schemas.pipeline.display_label` (kept out of
   the graph package so the jobs list doesn't import LangGraph). `label` is unchanged.
@@ -1477,6 +1477,12 @@ labels are unchanged; existing responses keep every field.
   "false". `explain_v2` tells the model the same rules, and `check_explanation` rejects a
   model text with enum names, claim IDs, or "false" for an unproven label (template used).
   Limitations (`c1: ...`, "Not judged: INSUFFICIENT_EVIDENCE c2") were left as they were.
+- **Review-reason text (queue row, added during the build):** `reason_details[].text`
+  (`app/services/review_reasons.py`) says "this claim" instead of a claim ID (the UI adds
+  the number from `claim_id`); `GENERIC_TEXT` is a plain sentence with no rule code;
+  validation and guardrail texts no longer show check or node names, and the
+  prompt-injection text names the place in plain words ("the speech transcript"). The
+  internal names stay in `detail` and `raw`. New text for `unproven_claim`.
 - **Prompts:** `verify_v3`, `explain_v2` (routing.yaml updated); v2/v1 files kept.
 - **Eval data:** two synthetic UNSUPPORTED examples (v21, v22) added to the verifier set
   so it covers every verdict; heuristic baseline regenerated (the floor never answers
@@ -1488,7 +1494,7 @@ labels are unchanged; existing responses keep every field.
   golden "unproven" reason string will raise `UnknownReason` until it is mapped.
 - **Left for a person:** (1) the golden set re-derivation (local session) and then the
   cross-check fixture + a mapping for the golden judge's unproven reason; (2) migration
-  number: T28 also adds 0011, whichever merges second renumbers; (3) the frontend should
+  0013 follows 0010 until #81 (0011) and #84 (0012) merge; then set its down_revision to "0012"; (3) the frontend should
   show `label_display`; (4) whether limitations should also drop claim IDs.
 
 ## 8. Team
@@ -1523,9 +1529,9 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
 - **2026-11-23**: T30 (no issue; D1 = B; design §7, §9, §11, §12) unproven-claim verdict
   by the automated build: UNSUPPORTED for efficacy claims after the full search budget
   finds nothing (code-gated; search errors rule it out); judge rule → MISINFO with
-  `misinfo_basis` unproven, always reviewed; `results.misinfo_basis` (migration 0011) and
+  `misinfo_basis` unproven, always reviewed; `results.misinfo_basis` (migration 0013) and
   `label_display` in the result API and jobs list; judge explanations in display wording.
-  1216 passed, 0 skipped locally with Postgres 16 + pgvector. Decisions in §7w.
+  Review-reason text in analyst wording. Decisions in §7z.
 
 - **2026-11-24**: T26 (no issue; design §12, §17) result API fields by the automated
   build: stance rationale and quoted segments, claim modality and source segments,
