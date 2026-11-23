@@ -417,12 +417,20 @@ def judge(claims):
     refuted_false  = [c for c in claims if c.stance == "REFUTES"  and c.verdict == "CONTRADICTED"]
     judged         = [c for c in claims if c.verdict in ("SUPPORTED", "CONTRADICTED")]
     refuted_open   = [c for c in claims if c.stance == "REFUTES"  and c.verdict in ("MIXED", "INSUFFICIENT_EVIDENCE")]
-    if endorsed_false: return "MISINFO", endorsed_false, []
-    if denied_true:    return "MISINFO", denied_true, ["speaker denies a supported claim"]
-    if refuted_false:  return "DEBUNKING", refuted_false, []
-    if judged:         return "NO_MISINFO", judged, []
-    if refuted_open:   return "CANNOT_RECOGNIZE", refuted_open, ["possible debunk of an unsettled claim"]
-    return "CANNOT_RECOGNIZE", [], []
+
+    # Review reasons come from every claim, whichever rule decides the label.
+    reasons  = [f"denies_supported:{c.id}" for c in denied_true]
+    reasons += [f"possible_debunk:{c.id}" for c in refuted_open]
+    reasons += [f"mixed_evidence:{c.id}" for c in claims if c.verdict == "MIXED"]
+    if endorsed_false and refuted_false:
+        reasons.append("mixed_video")
+
+    if endorsed_false: return "MISINFO", endorsed_false, reasons
+    if denied_true:    return "MISINFO", denied_true, reasons
+    if refuted_false:  return "DEBUNKING", refuted_false, reasons
+    if judged:         return "NO_MISINFO", judged, reasons
+    if refuted_open:   return "CANNOT_RECOGNIZE", refuted_open, reasons
+    return "CANNOT_RECOGNIZE", [], reasons
 ```
 
 The third value is the list of review reasons the rule itself adds (section 11). Review reasons are collected from every claim, whichever rule decides the label: a refuted claim the evidence can't settle raises "possible debunk" even when another claim makes the video NO-MISINFO. Mixed videos (one false claim endorsed, another refuted) are labelled MISINFO and always sent to review.
