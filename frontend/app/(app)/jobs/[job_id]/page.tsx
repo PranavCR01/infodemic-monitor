@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { serverApiFetch } from "../../../lib/api-server";
+import { serverApiFetch } from "@/lib/api-server";
 import { JobDetailClient } from "./JobDetailClient";
 
 async function fetchJob(jobId: string) {

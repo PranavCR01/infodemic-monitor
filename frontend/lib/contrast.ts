@@ -19,7 +19,7 @@ export function contrast(a: string, b: string): number {
 /** `--name: #hex` pairs from one CSS block. */
 export function parseTokens(css: string): Record<string, string> {
   const out: Record<string, string> = {};
-  for (const m of css.matchAll(/--([\w-]+):\s*(#[0-9A-Fa-f]{6})\b/g)) out[m[1]] = m[2];
+  for (const m of Array.from(css.matchAll(/--([\w-]+):\s*(#[0-9A-Fa-f]{6})\b/g))) out[m[1]] = m[2];
   return out;
 }
 

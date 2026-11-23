@@ -1,9 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { apiFetch } from "../../../lib/api";
-import { SignOutButton } from "../../components/SignOutButton";
+import { apiFetch } from "@/lib/api";
 
 type JobStatus = "PENDING" | "STARTED" | "SUCCESS" | "FAILED" | "REVIEW_REQUIRED";
 
@@ -133,31 +131,15 @@ export function JobDetailClient({
   }, [isActive, jobId]);
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
-      <header className="bg-white border-b border-gray-200 px-6 py-4">
-        <div className="max-w-3xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-[#009edb] flex items-center justify-center">
-              <span className="text-white font-bold text-xs">WHO</span>
-            </div>
-            <span className="font-semibold text-gray-900 text-sm">Infodemic Monitor</span>
-          </div>
-          <nav className="flex items-center gap-4 text-sm">
-            <Link href="/jobs" className="text-gray-500 hover:text-gray-900 transition-colors">
-              ← Job History
-            </Link>
-            <SignOutButton />
-          </nav>
-        </div>
-      </header>
+    <div className="flex flex-col">
 
-      <main className="flex-1 max-w-3xl mx-auto w-full px-6 py-8">
+      <div className="flex-1 max-w-3xl mx-auto w-full px-6 py-8">
         {isActive && <InProgressView />}
         {job.status === "FAILED" && <FailedView job={job} />}
         {(job.status === "SUCCESS" || job.status === "REVIEW_REQUIRED") && result && (
           <ResultView result={result} />
         )}
-      </main>
+      </div>
     </div>
   );
 }
