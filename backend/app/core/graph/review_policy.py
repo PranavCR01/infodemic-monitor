@@ -272,6 +272,10 @@ def evaluate(
     return ReviewDecision(requires_review=bool(reasons), reasons=tuple(reasons), fired=fired)
 
 
+# The reason stored on a case a user asked for (T32, ``POST /v1/jobs/{id}/review-request``).
+USER_REQUESTED_REASON = "user_requested"
+
+
 def rule_of(reason: str) -> str:
     """The rule a stored reason came from (for per-rule review counts, §12)."""
     head = reason.split(":", 1)[0]
@@ -279,6 +283,9 @@ def rule_of(reason: str) -> str:
         return "judge_flags"
     if head in ("guardrail", "prompt_injection_suspected"):
         return "guardrails"
+    if head == USER_REQUESTED_REASON:
+        # Not an automatic rule: someone asked for a person to check the result (T32).
+        return USER_REQUESTED_REASON
     return head if head in REVIEW_RULES else "other"
 
 

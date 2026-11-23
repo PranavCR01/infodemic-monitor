@@ -43,6 +43,8 @@ REASON_TEXT: dict[str, str] = {
     # guardrails (§15)
     "prompt_injection_suspected": "Text in the {detail} looks like an attempt to instruct the system.",
     "guardrail": "A safety check stopped part of the analysis ({detail}){on_claim}.",
+    # asked for by a person (T32), not raised by a rule
+    "user_requested": "Someone asked for a person to check this result.",
 }
 GENERIC_TEXT = "Flagged for review by rule '{code}'."
 

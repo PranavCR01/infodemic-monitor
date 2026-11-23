@@ -544,7 +544,8 @@ def test_app_mounts_review_routes():
 
     paths = {r.path for r in reviews.router.routes}
     assert paths == {"/v1/me", "/v1/reviews", "/v1/reviews/{review_id}",
-                     "/v1/reviews/{review_id}/decision", "/v1/reviews/{review_id}/claims/{claim_id}/severity"}
+                     "/v1/reviews/{review_id}/decision", "/v1/reviews/{review_id}/claims/{claim_id}/severity",
+                     "/v1/jobs/{job_id}/review-request"}  # T32
     main_src = (Path(__file__).resolve().parents[1] / "main.py").read_text()
     assert "app.include_router(reviews.router)" in main_src
 

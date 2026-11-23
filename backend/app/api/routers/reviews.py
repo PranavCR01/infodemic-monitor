@@ -7,6 +7,7 @@
 | GET  | ``/v1/reviews/{review_id}`` | reviewer, admin: one case with its audit trail |
 | POST | ``/v1/reviews/{review_id}/decision`` | reviewer, admin: approve / correct / mark insufficient / reject / request re-analysis |
 | POST | ``/v1/reviews/{review_id}/claims/{claim_id}/severity`` | reviewer, admin: severity override |
+| POST | ``/v1/jobs/{job_id}/review-request`` | the job's owner, reviewer, admin: ask for a person to check a result (T32) |
 
 Roles come from the verified JWT (``app.auth.roles``); the reviewer recorded on every
 action is the token's subject, never a field in the body (bodies forbid extra fields).
@@ -19,10 +20,11 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from typing import Any, Callable, Literal, Optional
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, Response
 from pydantic import BaseModel, ConfigDict, Field
 from sqlalchemy.orm import Session
 
+from app.api.ownership import owned_job_or_404
 from app.auth.dependencies import get_current_user
 from app.auth.roles import PERMISSIONS, Role, require_role, role_of, user_id_of
 from app.core.graph.state import Stance, Verdict
@@ -32,6 +34,7 @@ from app.db.models.review import AuditEvent, HumanReview, ReviewAction, ReviewCa
 from app.db.models.video import Video
 from app.db.session import get_db
 from app.services import review_service as rs
+from app.services.review_reasons import ReasonView, parse_reasons
 
 router = APIRouter(prefix="/v1", tags=["reviews"])
 
@@ -92,13 +95,37 @@ class ReviewQueuePage(BaseModel):
     offset: int
 
 
+class ReviewRequestInfo(BaseModel):
+    """Who asked for a review that no rule raised, when, and their note (T32)."""
+
+    requested_by: str
+    note: Optional[str] = None
+    requested_at: datetime
+
+
 class ReviewCaseView(ReviewQueueItem):
+    request: Optional[ReviewRequestInfo] = None
     validation_errors: list[Any] = Field(default_factory=list)
     proposed_result: Optional[dict[str, Any]] = None
     claim_severities: Optional[dict[str, Any]] = None
     policy_version: Optional[str] = None
     pipeline_version: Optional[str] = None
     audit_trail: list[AuditEntry] = Field(default_factory=list)
+
+
+class ReviewRequestResponse(BaseModel):
+    """What the requester sees: the case for this job (new or the one already there).
+    No proposed result or audit trail; those are for reviewers."""
+
+    created: bool
+    review_id: str
+    job_id: str
+    job_status: Optional[str] = None
+    case_status: ReviewCaseStatus
+    reasons: list[str]
+    reason_details: list[ReasonView]
+    request: Optional[ReviewRequestInfo] = None
+    created_at: datetime
 
 
 class ReanalysisJobView(BaseModel):
@@ -132,6 +159,14 @@ class DecisionRequest(BaseModel):
     reason: str = Field(min_length=1, max_length=4000)
     corrected_label: Optional[MisinfoLabel] = None
     claim_corrections: list[ClaimCorrection] = Field(default_factory=list, max_length=200)
+
+
+class ReviewRequestBody(BaseModel):
+    # extra="forbid": the requester comes from the token, not the body.
+    model_config = ConfigDict(extra="forbid")
+
+    note: str = Field(min_length=1, max_length=rs.REQUEST_NOTE_MAX,
+                      description="why a person should check this result (required)")
 
 
 class SeverityOverrideRequest(BaseModel):
@@ -193,10 +228,18 @@ def _audit(e: AuditEvent) -> AuditEntry:
     )
 
 
+def _request_info(db: Session, job_id: str) -> Optional[ReviewRequestInfo]:
+    e = rs.review_request_event(db, job_id)
+    if e is None:
+        return None
+    return ReviewRequestInfo(requested_by=e.actor_id, note=e.reason, requested_at=_utc(e.created_at))
+
+
 def _case_view(db: Session, case: HumanReview) -> ReviewCaseView:
     now = datetime.now(timezone.utc)
     return ReviewCaseView(
         **_item_fields(db, case, now),
+        request=_request_info(db, case.job_id),
         validation_errors=list(case.validation_errors or []),
         proposed_result=case.proposed_result,
         claim_severities=case.claim_severities,
@@ -355,3 +398,50 @@ def override_severity(
             raise HTTPException(status_code=409, detail=msg) from exc
         raise _http(exc) from exc
     return _case_view(db, case)
+
+
+@router.post("/jobs/{job_id}/review-request", response_model=ReviewRequestResponse,
+             responses={200: {"description": "the job already had a review case; that case is returned"},
+                        201: {"description": "a review case was opened"}},
+             status_code=201)
+def request_review(
+    job_id: str,
+    payload: ReviewRequestBody,
+    response: Response,
+    db: Session = Depends(get_db),
+    current_user: dict = Depends(get_current_user),
+) -> ReviewRequestResponse:
+    """Ask for a person to check a result the review rule didn't send to review (§12;
+    T32). Allowed for the job's owner and for reviewers and admins: access goes through
+    ``app.api.ownership`` like every result read, so anyone else gets 404. A note is
+    required. Opens a case with the reason ``user_requested`` and logs the request (who,
+    when, the note) to the audit trail. If the job already has a case, opened by the
+    review rule or by an earlier request, that case is returned with 200 and nothing
+    changes. A job with no finished result answers 409."""
+    requester_id = user_id_of(current_user)
+    job = owned_job_or_404(db, job_id, current_user)
+    try:
+        case, created = rs.request_review(
+            db, job, requester_id=requester_id, note=payload.note,
+            requester_role=role_of(current_user).value,
+        )
+    except rs.ReviewError as exc:
+        db.rollback()
+        msg = str(exc)
+        if "no finished result" in msg:
+            raise HTTPException(status_code=409, detail=msg) from exc
+        raise HTTPException(status_code=422, detail=msg) from exc
+    if not created:
+        response.status_code = 200
+    db.refresh(job)
+    return ReviewRequestResponse(
+        created=created,
+        review_id=case.id,
+        job_id=case.job_id,
+        job_status=job.status.value if job.status is not None else None,
+        case_status=case.status,
+        reasons=list(case.reasons or []),
+        reason_details=parse_reasons(case.reasons),
+        request=_request_info(db, case.job_id),
+        created_at=_utc(case.created_at),
+    )
