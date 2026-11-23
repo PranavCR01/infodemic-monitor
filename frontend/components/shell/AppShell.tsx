@@ -16,12 +16,12 @@ export function AppShell({ email, role, children }: Props) {
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-2 focus:z-50 focus:rounded-md focus:bg-surface focus:px-3 focus:py-2">
         Skip to content
       </a>
-      <header className="flex min-h-14 flex-wrap items-center gap-6 border-b border-line bg-surface px-4 md:px-8">
+      <header className="flex min-h-14 flex-wrap items-center gap-6 border-b border-line bg-surface px-4 print:hidden md:px-8">
         <Brand href="/jobs" />
         <NavLinks items={items} />
         {email && <UserMenu email={email} initials={initials(email)} roleLabel={role ? ROLE_DISPLAY[role] : ""} />}
       </header>
-      <main id="main" className="mx-auto w-full max-w-[1440px] flex-1 px-4 py-6 md:px-8">
+      <main id="main" className="mx-auto w-full max-w-[1440px] flex-1 px-4 py-6 print:p-0 md:px-8">
         {children}
       </main>
       <SessionWatcher />

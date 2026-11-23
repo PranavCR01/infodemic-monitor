@@ -1,4 +1,4 @@
-import { LabelBadge, ReviewStatusTag, StanceChip, VerdictChip, Icon } from "@/components/ui";
+import { LabelBadge, ReviewStatusTag, StanceChip, VerdictChip, Icon, buttonClass } from "@/components/ui";
 import { evidenceText, clock, type Claim, type ResultModel } from "@/lib/api/result-adapter";
 import { DECISION_RULE_TEXT, EVIDENCE_LEVEL_DISPLAY, labelDisplay } from "@/lib/vocabulary";
 
@@ -51,6 +51,11 @@ export function Assessment({ r }: { r: ResultModel }) {
           <p className="text-cap font-semibold uppercase tracking-wider text-ink-3">Video</p>
           <h1 className="break-all font-mono text-h2 text-ink">{r.filename}</h1>
         </div>
+        {r.label && (
+          <a href={`/jobs/${encodeURIComponent(r.jobId)}/export`} className={buttonClass("secondary", "sm")}>
+            <Icon name="download" className="!h-3.5 !w-3.5" /> Export report
+          </a>
+        )}
       </div>
 
       <div className="flex flex-col gap-3">
