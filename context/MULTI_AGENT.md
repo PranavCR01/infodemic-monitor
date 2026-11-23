@@ -1224,7 +1224,7 @@ cloud hosts and the NCBI Bookshelf website serves a reCAPTCHA. Code:
   only on the server; check in Supabase. (5) `app.main` imports the async health check,
   which needs `greenlet` (not in requirements; tests mount the video routers alone).
 
-## 7r. Judge Cross-Check Against the Golden Set (T24, no issue; design §9, §14)
+## 7s. Judge Cross-Check Against the Golden Set (T24, no issue; design §9, §14)
 
 - **What is compared.** The backend judge (`judge.decide`, then the review rule
   `review_policy.evaluate`) and the golden set's own `scripts/judge.py` (`judge`,
@@ -1284,7 +1284,7 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   exactly on 48/66, the rest are four classified review-reason differences (three where
   the backend matches §9, one backend extension for a person to decide). No backend
   change, no model calls. Golden-set judge differences listed in the PR for the branch
-  owner. Decisions in §7r.
+  owner. Decisions in §7s.
 - **2026-11-23**: T19 (no issue; design §6) production reference retrieval by the
   automated build. Bookshelf now goes through E-utilities only (ESearch/EFetch on
   `db=pubmed` with `booksdocs[filter]`, because `efetch db=books` returns no text: checked
