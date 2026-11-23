@@ -4,8 +4,9 @@ File size and duration limits, media validation by content (not by file name),
 corrupt-file handling, duplicate detection, per-user quotas and rate limits, and
 caps on what a video can make the graph do (segments, block size, claims).
 
-Nothing here is wired into the live upload path yet: that would change today's
-behaviour, so it belongs to the integration task (T11), behind its flag.
+T20 wires the upload checks (size, format, corrupt file, duration, rate limit,
+quota) through ``app.services.upload_service``: always on the signed-upload
+endpoints, and on the legacy upload route only when ``UPLOAD_SAFEGUARDS`` is on.
 """
 from __future__ import annotations
 

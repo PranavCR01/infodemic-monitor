@@ -59,6 +59,12 @@ class Settings(BaseSettings):
     # migration 0009 (reference_snapshots) before it is turned on.
     USE_REFERENCE_SOURCES: bool = False
 
+    # Upload safeguards (T20, design §1/§15): T10's input limits (size, duration,
+    # format, corrupt-file check, rate limit, daily quota) on the legacy
+    # POST /videos/upload route. Off by default so existing clients see no change.
+    # The signed-upload endpoints (/v1/videos/uploads, /v1/videos) always apply them.
+    UPLOAD_SAFEGUARDS: bool = False
+
     # Migrations
     RUN_MIGRATIONS: bool = True  # set False on Railway worker service
 
