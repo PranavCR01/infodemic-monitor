@@ -26,6 +26,18 @@ describe("ExportReport", () => {
     expect(screen.getByText("System assessment")).toBeInTheDocument();
   });
 
+  it("prints the analysis version and time so a report can be traced", () => {
+    show();
+    expect(screen.getByText("Analysis version")).toBeInTheDocument();
+    expect(screen.getByText("graph-v1 (2026-11-24)")).toBeInTheDocument();
+    expect(screen.getByText("23 Nov 2026, 09:13 UTC")).toBeInTheDocument();
+  });
+
+  it("leaves the version row out when the result has none", () => {
+    show(MOCK_LEGACY);
+    expect(screen.queryByText("Analysis version")).not.toBeInTheDocument();
+  });
+
   it("marks an analyst-confirmed result", () => {
     show(MOCK_DEBUNKED_VERIFIED);
     expect(screen.getByText("Analyst-confirmed (verified)")).toBeInTheDocument();

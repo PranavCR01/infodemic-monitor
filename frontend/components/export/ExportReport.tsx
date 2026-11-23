@@ -65,6 +65,8 @@ export function ExportReport({ r, recordUrl }: { r: ResultModel; recordUrl: stri
             ["Review status", r.reviewStatus === "PENDING" ? "Pending review. Treat the label as provisional." : REVIEW_STATUS[r.reviewStatus].display + (r.reviewDecidedAt ? `, ${fmt(r.reviewDecidedAt)}` : "")],
             ["Confidence", "Not yet calibrated"],
             ["Submitted", fmt(r.submittedAt)],
+            ...(r.analysedAt ? [["Analysed", fmt(r.analysedAt)]] : []),
+            ...(r.analysisVersion ? [["Analysis version", r.analysisVersion]] : []),
             ["Online record", recordUrl],
           ].map(([k, v]) => (
             <tr key={k} className="border-b border-line">

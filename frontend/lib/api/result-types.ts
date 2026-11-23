@@ -115,6 +115,7 @@ export type RawResult = {
   // T26
   video_id?: string | null;
   status?: string | null;
+  pipeline_version?: string | null;
   decision_rule?: string | null;
   deciding_claim_ids?: string[];
   transcript_segments?: RawSegment[];
