@@ -1344,6 +1344,8 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-23**: T25 (no issue; design §6, §7, §14) extra-evidence-sources experiment
+  by the automated build, report only. The 60 INSUFFICIENT_EVIDENCE claims in the 39 golden-set videos whose source says false but derive CANNOT_RECOGNIZE were searched in Cochrane (PubMed), Europe PMC, ClinicalTrials.gov v2 and the reference allow-list (`backend/scripts/t25_extra_sources.py`, no model calls, no fact-check databases). Judged under the unchanged §7: 0 claims and 0 videos become decidable; hits are Cochrane reviews that themselves find too little, related but different interventions, animal/cross-sectional work, or registry entries without results. Europe PMC and ClinicalTrials.gov were proxy-blocked at first but reachable for the full run. Near misses for a person: v159 (needs a jogging MET source), v85 (2026 PNAS null). Report: `evals/reports/T25_extra_sources.md`.
 - **2026-11-23**: T23 (no issue; design §14, §16) backend CI by the automated build:
   GitHub Actions on PRs to `langgraph-build`/`main` with a pgvector Postgres service, Redis
   and OCR tools, failing on any skipped test; `backend/*.egg-info` untracked. Locally on a

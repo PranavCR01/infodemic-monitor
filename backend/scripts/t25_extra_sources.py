@@ -382,7 +382,7 @@ def search_cochrane(http: Http, q: str, abstracts_dir: Optional[Path]) -> dict[s
                                                       "tool": TOOL}, http.ncbi).json()["result"]
             for pmid in ids:
                 d = s.get(pmid, {})
-                out["hits"].append({"id": f"PMID:{pmid}", "title": d.get("title", ""),
+                out["hits"].append({"id": f"PMID:{pmid}", "title": d.get("title", "")[:200],
                                     "year": (d.get("pubdate") or "")[:4],
                                     "url": f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/"})
             if abstracts_dir is not None:
@@ -404,7 +404,7 @@ def search_epmc(http: Http, q: str) -> dict[str, Any]:
         out["count"] = int(r.get("hitCount", 0))
         for d in (r.get("resultList") or {}).get("result", []):
             ident = f"PMID:{d['pmid']}" if d.get("pmid") else f"{d.get('source')}:{d.get('id')}"
-            out["hits"].append({"id": ident, "title": d.get("title", ""), "year": d.get("pubYear", ""),
+            out["hits"].append({"id": ident, "title": d.get("title", "")[:200], "year": d.get("pubYear", ""),
                                 "source": d.get("source", ""),
                                 "url": f"https://europepmc.org/article/{d.get('source')}/{d.get('id')}"})
     except Exception as exc:  # noqa: BLE001
@@ -421,7 +421,7 @@ def search_ctgov(http: Http, q: str) -> dict[str, Any]:
         for st in r.get("studies", []):
             ps = st.get("protocolSection", {})
             nct = ps.get("identificationModule", {}).get("nctId", "")
-            out["hits"].append({"id": nct, "title": ps.get("identificationModule", {}).get("briefTitle", ""),
+            out["hits"].append({"id": nct, "title": ps.get("identificationModule", {}).get("briefTitle", "")[:200],
                                 "status": ps.get("statusModule", {}).get("overallStatus", ""),
                                 "has_results": st.get("hasResults", False),
                                 "url": f"https://clinicaltrials.gov/study/{nct}"})
@@ -438,7 +438,7 @@ def search_references(searcher: Any, gloss: str) -> dict[str, Any]:
         out["errors"] = list(res.errors)
         for rec in res.records:
             out["hits"].append({"id": rec.evidence_id, "title": rec.title, "publisher": rec.publisher,
-                                "url": rec.source_url, "passage": (rec.abstract or "")[:300]})
+                                "url": rec.source_url, "passage": (rec.abstract or "")[:200]})
     except Exception as exc:  # noqa: BLE001
         out["error"] = _err(exc)
     return out
@@ -492,7 +492,8 @@ def cmd_search(args: argparse.Namespace) -> int:
         print(key, "cochrane", row["cochrane"].get("count", row["cochrane"].get("error")),
               "| refs", len(row["references"]["hits"]), flush=True)
     REPORTS.mkdir(parents=True, exist_ok=True)
-    RESULTS.write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    # Compact: ids, titles (capped) and queries only, so the committed file stays small.
+    RESULTS.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     print("wrote", RESULTS)
     return 0
 
@@ -571,7 +572,10 @@ def cmd_report(args: argparse.Namespace) -> int:
              "references": "Reference allow-list (WHO/NHS/FDA/EFSA live, CDC stored snapshots, NCBI Bookshelf)"}
     reach = results["reachability"]
     status_of = {"cochrane": reach.get("pubmed_eutils", ""), "europe_pmc": reach.get("europe_pmc", ""),
-                 "clinicaltrials_gov": reach.get("clinicaltrials_gov", ""), "references": "reachable (see per-claim errors)"}
+                 "clinicaltrials_gov": reach.get("clinicaltrials_gov", ""),
+                 "references": ("reachable, no fetch errors" if not any(
+                     results["claims"][k]["references"].get("errors") or results["claims"][k]["references"].get("error")
+                     for k in results["claims"]) else "reachable, with fetch errors (see results file)")}
     for s, n in names.items():
         resolved = sum(1 for j in changed.values() if s in j.get("resolved_by", []))
         a(f"| {n} | {_md(status_of[s])} | {with_hits[s]} | {resolved} |")
@@ -599,8 +603,14 @@ def cmd_report(args: argparse.Namespace) -> int:
         a(f"| {k} | {r['stance']} | {_short(text.get(k, ''), 80)} | {ch} | {_md(rh)} | "
           f"{_md(j.get('relevant', '—'))} | **{j.get('verdict', 'INSUFFICIENT_EVIDENCE')}** | {_md(j.get('why', ''))} |")
     a("")
-    a("Europe PMC and ClinicalTrials.gov: every claim was planned with a query (in the script and the results "
-      "file) but not searched, because both hosts were unreachable from this environment (see Sources).")
+    down = [names[s] for s in ("europe_pmc", "clinicaltrials_gov") if not status_of[s].startswith("reachable")]
+    if down:
+        a("Not searched because unreachable during the run (queries are still in the script and results file): "
+          + "; ".join(down) + ".")
+        a("")
+    a("Europe PMC and ClinicalTrials.gov hits for every claim, with their queries, are in "
+      "`T25_extra_sources_results.json`; the table shows Cochrane and the allow-list, and names any hit from "
+      "any source that bears on the claim under \"relevant evidence found\".")
     a("")
     a("## Per video")
     a("")
