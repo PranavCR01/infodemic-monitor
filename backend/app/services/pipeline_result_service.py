@@ -204,28 +204,9 @@ def persist_outcome(db: Session, job_id: str, fusion: FusionResult, outcome: Any
 
 def claim_level_view(db: Session, job_id: str) -> list[dict]:
     """Claims with stance, verdict and papers, for the results API (§17
-    ``/videos/{id}/claims``). Empty for single-call and fallback results."""
-    rows = (db.query(ClaimRow).filter(ClaimRow.job_id == job_id)
-            .order_by(ClaimRow.start_seconds, ClaimRow.claim_id).all())
-    out = []
-    for c in rows:
-        out.append({
-            "claim_id": c.claim_id,
-            "text": c.text,
-            "category": c.category,
-            "start_seconds": c.start_seconds,
-            "end_seconds": c.end_seconds,
-            "label": c.label,
-            "deciding": c.deciding,
-            "stance": c.stance.stance if c.stance else None,
-            "verdict": c.verification.verdict if c.verification else None,
-            "verdict_explanation": c.verification.explanation if c.verification else "",
-            "limitations": list(c.verification.limitations) if c.verification else [],
-            "evidence": [
-                {"evidence_id": l.evidence.evidence_id, "title": l.evidence.title, "pmid": l.evidence.pmid,
-                 "url": l.evidence.source_url, "study_type": l.evidence.study_type, "relation": l.relation}
-                for l in sorted(c.evidence_links, key=lambda l: l.rank or 0)
-                if l.relation != "CONSIDERED"
-            ],
-        })
-    return out
+    ``/videos/{id}/claims``). Empty for single-call and fallback results. Since T26 the
+    dicts carry more fields (see ``app.api.result_models.ClaimView``); the T11 keys are
+    unchanged."""
+    from app.services.result_view_service import claim_views
+
+    return [c.model_dump() for c in claim_views(db, job_id)]

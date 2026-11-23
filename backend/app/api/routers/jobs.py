@@ -5,13 +5,15 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
+from app.api.ownership import owned_job_or_404
+from app.api.result_models import JobResultResponse
 from app.auth.dependencies import get_current_user
 from app.db.models.job import Job, JobStatus
 from app.db.models.result import Result
 from app.db.models.video import Video
 from app.db.session import get_db
 from app.services import job_service
-from app.services.pipeline_result_service import claim_level_view
+from app.services.result_view_service import job_result
 from app.worker.tasks import process_video_task
 
 router = APIRouter(prefix="/jobs", tags=["jobs"])
@@ -90,9 +92,7 @@ def get_job(
     db: Session = Depends(get_db),
     current_user: dict = Depends(get_current_user),
 ):
-    job = db.query(Job).filter(Job.id == job_id).first()
-    if not job:
-        raise HTTPException(status_code=404, detail="Job not found")
+    job = owned_job_or_404(db, job_id, current_user)
     return {
         "job_id": job.id,
         "video_id": job.video_id,
@@ -104,15 +104,18 @@ def get_job(
     }
 
 
-@router.get("/{job_id}/result")
+@router.get("/{job_id}/result", response_model=JobResultResponse)
 def get_result(
     job_id: str,
     db: Session = Depends(get_db),
     current_user: dict = Depends(get_current_user),
 ):
-    job = db.query(Job).filter(Job.id == job_id).first()
-    if not job:
-        raise HTTPException(status_code=404, detail="Job not found")
+    """The video-level result, plus (T26) everything stored for the reviewer and the
+    result page: claims with stance rationale and quoted segments, modality, critic
+    notes, papers with source kind / year / publisher / abstract snippet, transcript and
+    OCR segments, and the review case with its status, severity and structured reasons.
+    Existing fields are unchanged; ``review`` stays set once its case is resolved."""
+    job = owned_job_or_404(db, job_id, current_user)
     if job.status not in (JobStatus.SUCCESS, JobStatus.REVIEW_REQUIRED):
         raise HTTPException(status_code=202, detail=f"Job not complete — status: {job.status}")
 
@@ -120,38 +123,4 @@ def get_result(
     if not result:
         raise HTTPException(status_code=404, detail="Result not found")
 
-    video = db.query(Video).filter(Video.id == job.video_id).first()
-
-    return {
-        "job_id": job_id,
-        "filename": video.filename if video else None,
-        "label": result.label,
-        "confidence": result.confidence,
-        "explanation": result.explanation,
-        "evidence_snippets": result.evidence_snippets,
-        "citations": result.citations,
-        "provider": result.provider,
-        "model_used": result.model_used,
-        "latency_ms": result.latency_ms,
-        "submitted_at": job.created_at,
-        "created_at": result.created_at,
-        # Added by T11; null / empty for single-call results, so existing clients
-        # render both paths unchanged.
-        "pipeline": result.pipeline,
-        "fallback_reason": result.fallback_reason,
-        "review": _review_view(db, job),
-        "claims": claim_level_view(db, job_id),
-    }
-
-
-def _review_view(db: Session, job: Job) -> Optional[dict]:
-    """A result in human review is provisional (§12): say so, and why."""
-    if job.status != JobStatus.REVIEW_REQUIRED:
-        return None
-    from app.db.models.review import HumanReview
-
-    case = db.query(HumanReview).filter(HumanReview.job_id == job.id).one_or_none()
-    return {
-        "status": "REVIEW_REQUIRED",
-        "reasons": list(case.reasons) if case else [],
-    }
+    return job_result(db, job, result).model_dump()

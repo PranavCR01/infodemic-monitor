@@ -50,3 +50,5 @@ app.include_router(jobs.router)
 # Review API and roles (T27, §12/§15/§17)
 from app.api.routers import reviews  # noqa: E402
 app.include_router(reviews.router)
+from app.api.routers import results  # noqa: E402
+app.include_router(results.router)  # §17 result reads (T26)
