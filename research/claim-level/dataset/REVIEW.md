@@ -116,15 +116,26 @@ the selection with:
 
 - **Random seed: `20261121`** (fixed in `scripts/blind_subset.py`). Same seed,
   same subset, forever.
-- Selection is over all 82 videos in `video_index.csv`, including ones with no
-  claims — "this video makes no checkable health claim" is itself a judgement
-  worth a second opinion.
+- Selection is per batch, over every video in the batch, including ones with
+  no claims — "this video makes no checkable health claim" is itself a
+  judgement worth a second opinion. Drawing it per batch means a new batch
+  never changes a subset already handed out.
 
-**The 16 blind videos:**
+**Batch 1: the 16 blind videos** (`blind_subset.py --batch 1`, 16 of 82):
 
 ```
 v01 v10 v11 v21 v22 v23 v24 v36 v44 v45 v47 v68 v69 v71 v78 v79
 ```
+
+**Batch 2: the 20 blind videos** (`blind_subset.py --batch 2`, 20 of 99, same
+seed):
+
+```
+v100 v109 v110 v114 v120 v121 v122 v123 v131 v135 v141 v143 v144 v146 v150 v152 v160 v167 v176 v177
+```
+
+For batch 2, the blind labeller should also not look at `external_label`,
+`external_source` or `sources/` before labelling, for the same reason.
 
 ### How to label them blind
 
@@ -165,3 +176,7 @@ Reviewer time is scarce, so start where the design says the risk is (§11):
    `video_index.csv` (the folder the collectors filed it under). Those
    disagreements are listed in the PR description and are the most informative
    rows in the set.
+7. Every batch-2 video where `video_level_label` disagrees with the label its
+   source implies (`external_agreement.md`). A fact-checker calling a video
+   false while every claim in it is `INSUFFICIENT_EVIDENCE` is exactly the §7
+   boundary a reviewer should check.

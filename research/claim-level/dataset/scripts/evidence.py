@@ -42,7 +42,10 @@ EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 
 # PubMed asks for <= 3 requests/second without an API key. One shared lock and a
 # minimum spacing enforces it even if callers loop tightly.
-_MIN_INTERVAL = 1.0 / 3.0
+# Several labelling processes running at once each get a share of the ceiling:
+# set EVIDENCE_MIN_INTERVAL (seconds) so their rates sum to <= 3/s.
+_MIN_INTERVAL = float(__import__("os").environ.get("EVIDENCE_MIN_INTERVAL",
+                                                   1.0 / 3.0))
 _lock = threading.Lock()
 _last = [0.0]
 

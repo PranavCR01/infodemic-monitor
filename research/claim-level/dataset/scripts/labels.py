@@ -5539,3 +5539,9 @@ LABELS = [
         ],
     },
 ]
+
+# Batch 2 (v83 onward, scripts/add_batch2.py) is labelled in labels_b2_*.py
+# and collected by labels_batch2.py, under exactly the rules above.
+from labels_batch2 import LABELS as _BATCH2  # noqa: E402
+
+LABELS = LABELS + _BATCH2

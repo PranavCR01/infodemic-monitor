@@ -1,0 +1,1968 @@
+{
+ "video_id": "v113",
+ "filename": "new_TikTok_7200761945031511302.mp4",
+ "relative_path": "new_TikTok_7200761945031511302.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@sabiduriancestral",
+ "extracted_at": "2026-11-23T08:45:56",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.998,
+  "duration_seconds": 61.28,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.02,
+    "end": 5.12,
+    "text": "Beber agua de mar es milagroso. El agua de mar tiene un potencial terapéutico"
+   },
+   {
+    "id": "t2",
+    "start": 5.12,
+    "end": 8.52,
+    "text": "y nutricional desconocido por la mayoría de médicos y que puede ser la"
+   },
+   {
+    "id": "t3",
+    "start": 8.52,
+    "end": 12.61,
+    "text": "solución a múltiples problemas de salud. Con su capacidad de reequilibrar el"
+   },
+   {
+    "id": "t4",
+    "start": 12.61,
+    "end": 16.21,
+    "text": "organismo y su riqueza en minerales, el agua de mar ha demostrado resultados"
+   },
+   {
+    "id": "t5",
+    "start": 16.21,
+    "end": 20.21,
+    "text": "asombrosos en pacientes con enfermedades como cáncer, hipertensión, diabetes,"
+   },
+   {
+    "id": "t6",
+    "start": 20.21,
+    "end": 25.32,
+    "text": "enfermedades de la piel y más. Además, su capacidad para limpiar el colon y"
+   },
+   {
+    "id": "t7",
+    "start": 25.32,
+    "end": 28.84,
+    "text": "regenerar las células la convierten en una solución natural y efectiva para"
+   },
+   {
+    "id": "t8",
+    "start": 28.84,
+    "end": 33.91,
+    "text": "muchas enfermedades. Con la amplia evidencia y testimonios de su efectividad, el agua de"
+   },
+   {
+    "id": "t9",
+    "start": 33.91,
+    "end": 38.4,
+    "text": "mar puede ser el milagro que muchos están buscando para recuperar su salud."
+   },
+   {
+    "id": "t10",
+    "start": 38.4,
+    "end": 42.76,
+    "text": "Recomendación, comprar una garrafa de agua de mar por internet, es bastante barata y te"
+   },
+   {
+    "id": "t11",
+    "start": 42.76,
+    "end": 48.19,
+    "text": "viene filtrada y limpia con el 100% de minerales de el agua de mar. Simplemente prueba la"
+   },
+   {
+    "id": "t12",
+    "start": 48.19,
+    "end": 52.07,
+    "text": "base a sentir los resultados de la mejoría de cualquier enfermedad o dolencia desde el"
+   },
+   {
+    "id": "t13",
+    "start": 52.07,
+    "end": 59.14,
+    "text": "primer día. Te recomiendo tomarla por la mañana mezclando 75% de agua normal con 25% de agua"
+   },
+   {
+    "id": "t14",
+    "start": 59.14,
+    "end": 60.38,
+    "text": "de mar y un poco de limón."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 31,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Beber Agua",
+    "confidence": 0.726
+   },
+   {
+    "time": 0.0,
+    "text": "De MAR",
+    "confidence": 0.912
+   },
+   {
+    "time": 2.0,
+    "text": "Beber Agua",
+    "confidence": 0.733
+   },
+   {
+    "time": 2.0,
+    "text": "De MAR",
+    "confidence": 0.926
+   },
+   {
+    "time": 4.0,
+    "text": "El agua de mar tiene un potencial",
+    "confidence": 0.846
+   },
+   {
+    "time": 4.0,
+    "text": "terapeutico y nutricional",
+    "confidence": 0.933
+   },
+   {
+    "time": 4.0,
+    "text": "desconocido por Ia mayoria de",
+    "confidence": 0.73
+   },
+   {
+    "time": 4.0,
+    "text": "solucion a multiples problemas de",
+    "confidence": 0.839
+   },
+   {
+    "time": 4.0,
+    "text": "salud",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.01,
+    "text": "El agua de mar tiene un potencial",
+    "confidence": 0.826
+   },
+   {
+    "time": 6.01,
+    "text": "terapeutico y nutricional",
+    "confidence": 0.813
+   },
+   {
+    "time": 6.01,
+    "text": "desconocido por Ia mayoria de",
+    "confidence": 0.918
+   },
+   {
+    "time": 6.01,
+    "text": "medicos, y que puede ser Ia",
+    "confidence": 0.716
+   },
+   {
+    "time": 6.01,
+    "text": "solucion a multiples problemas de",
+    "confidence": 0.986
+   },
+   {
+    "time": 6.01,
+    "text": "salud",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.01,
+    "text": "El agua de mar tiene un potencial",
+    "confidence": 0.839
+   },
+   {
+    "time": 8.01,
+    "text": "terapeutico y nutricional",
+    "confidence": 0.862
+   },
+   {
+    "time": 8.01,
+    "text": "desconocido por Ia mayoria de",
+    "confidence": 0.943
+   },
+   {
+    "time": 8.01,
+    "text": "medicos, y que puede ser Ia",
+    "confidence": 0.705
+   },
+   {
+    "time": 8.01,
+    "text": "solucion a multiples problemas de",
+    "confidence": 0.985
+   },
+   {
+    "time": 8.01,
+    "text": "salud",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.01,
+    "text": "El agua de mar tiene un potencial",
+    "confidence": 0.827
+   },
+   {
+    "time": 10.01,
+    "text": "terapeutico y nutricional",
+    "confidence": 0.81
+   },
+   {
+    "time": 10.01,
+    "text": "desconocido por Ia mayoria de",
+    "confidence": 0.761
+   },
+   {
+    "time": 10.01,
+    "text": "medicos; y que puede ser Ia",
+    "confidence": 0.683
+   },
+   {
+    "time": 10.01,
+    "text": "solucion a multiples problemas de",
+    "confidence": 0.974
+   },
+   {
+    "time": 10.01,
+    "text": "salud",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.01,
+    "text": "capacidad de reequilibrar",
+    "confidence": 0.806
+   },
+   {
+    "time": 12.01,
+    "text": "Con su",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.01,
+    "text": "el organismo y su riqueza en",
+    "confidence": 0.78
+   },
+   {
+    "time": 12.01,
+    "text": "minerales,",
+    "confidence": 0.955
+   },
+   {
+    "time": 14.01,
+    "text": "capacidad de reequilibrar",
+    "confidence": 0.797
+   },
+   {
+    "time": 14.01,
+    "text": "Con su",
+    "confidence": 0.987
+   },
+   {
+    "time": 14.01,
+    "text": "el organismo y su riqueza en",
+    "confidence": 0.85
+   },
+   {
+    "time": 14.01,
+    "text": "minerales,",
+    "confidence": 0.968
+   },
+   {
+    "time": 16.02,
+    "text": "el agua de mar ha demostrado",
+    "confidence": 0.775
+   },
+   {
+    "time": 16.02,
+    "text": "resultados asombrosos en",
+    "confidence": 0.99
+   },
+   {
+    "time": 16.02,
+    "text": "pacientes con enfermedades",
+    "confidence": 0.762
+   },
+   {
+    "time": 16.02,
+    "text": "como cancer; hipertension;",
+    "confidence": 0.764
+   },
+   {
+    "time": 16.02,
+    "text": "diabetes, enfermedades de Ia piel",
+    "confidence": 0.715
+   },
+   {
+    "time": 16.02,
+    "text": "y mas",
+    "confidence": 0.598
+   },
+   {
+    "time": 18.02,
+    "text": "el agua de mar ha demostrado",
+    "confidence": 0.97
+   },
+   {
+    "time": 18.02,
+    "text": "resultados asombrosos en",
+    "confidence": 0.8
+   },
+   {
+    "time": 18.02,
+    "text": "pacientes con enfermedades",
+    "confidence": 0.84
+   },
+   {
+    "time": 18.02,
+    "text": "como cancer; hipertension,",
+    "confidence": 0.627
+   },
+   {
+    "time": 18.02,
+    "text": "diabetes, enfermedades de Ia piel",
+    "confidence": 0.744
+   },
+   {
+    "time": 18.02,
+    "text": "y mas",
+    "confidence": 0.741
+   },
+   {
+    "time": 20.02,
+    "text": "el agua de mar ha demostrado",
+    "confidence": 0.819
+   },
+   {
+    "time": 20.02,
+    "text": "resultados asombrosos en",
+    "confidence": 0.996
+   },
+   {
+    "time": 20.02,
+    "text": "pacientes con enfermedades",
+    "confidence": 0.803
+   },
+   {
+    "time": 20.02,
+    "text": "como cancer; hipertension;",
+    "confidence": 0.701
+   },
+   {
+    "time": 20.02,
+    "text": "diabetes, enfermedades de Ia piel",
+    "confidence": 0.83
+   },
+   {
+    "time": 22.02,
+    "text": "el agua de mar ha demostrado",
+    "confidence": 0.824
+   },
+   {
+    "time": 22.02,
+    "text": "resultados asombrosos en",
+    "confidence": 0.823
+   },
+   {
+    "time": 22.02,
+    "text": "pacientes con enfermedades",
+    "confidence": 0.85
+   },
+   {
+    "time": 22.02,
+    "text": "como cancer; hipertension;",
+    "confidence": 0.51
+   },
+   {
+    "time": 22.02,
+    "text": "diabetes, enfermedades de Ia piel",
+    "confidence": 0.65
+   },
+   {
+    "time": 22.02,
+    "text": "y mas",
+    "confidence": 0.743
+   },
+   {
+    "time": 24.02,
+    "text": "Ademas, Su capacidad para",
+    "confidence": 0.806
+   },
+   {
+    "time": 24.02,
+    "text": "limpiar el colon y regenerar las",
+    "confidence": 0.534
+   },
+   {
+    "time": 24.02,
+    "text": "celulas Ia convierten en una",
+    "confidence": 0.789
+   },
+   {
+    "time": 24.02,
+    "text": "solucion natural y efectiva para",
+    "confidence": 0.924
+   },
+   {
+    "time": 24.02,
+    "text": "muchas enfermedades:",
+    "confidence": 0.589
+   },
+   {
+    "time": 26.03,
+    "text": "Ademas, su capacidad para",
+    "confidence": 0.93
+   },
+   {
+    "time": 26.03,
+    "text": "limpiar el colon y regenerar Ias",
+    "confidence": 0.716
+   },
+   {
+    "time": 26.03,
+    "text": "celulas Ia convierten en una",
+    "confidence": 0.758
+   },
+   {
+    "time": 26.03,
+    "text": "solucion natural y efectiva para",
+    "confidence": 0.943
+   },
+   {
+    "time": 26.03,
+    "text": "muchas enfermedades:",
+    "confidence": 0.588
+   },
+   {
+    "time": 28.03,
+    "text": "Ademas, su capacidad para",
+    "confidence": 0.682
+   },
+   {
+    "time": 28.03,
+    "text": "celulas Ia convierten en una",
+    "confidence": 0.61
+   },
+   {
+    "time": 28.03,
+    "text": "solucion natural y efectiva para",
+    "confidence": 0.96
+   },
+   {
+    "time": 28.03,
+    "text": "muchas enfermedades:",
+    "confidence": 0.546
+   },
+   {
+    "time": 30.03,
+    "text": "Ademas, su capacidad para",
+    "confidence": 0.772
+   },
+   {
+    "time": 30.03,
+    "text": "limpiar el colon y regenerar las",
+    "confidence": 0.536
+   },
+   {
+    "time": 30.03,
+    "text": "celulas Ia convierten en una",
+    "confidence": 0.882
+   },
+   {
+    "time": 30.03,
+    "text": "solucion natural y efectiva para",
+    "confidence": 0.937
+   },
+   {
+    "time": 30.03,
+    "text": "muchas enfermedades.",
+    "confidence": 0.813
+   },
+   {
+    "time": 32.03,
+    "text": "Con Ia amplia evidencia y",
+    "confidence": 0.603
+   },
+   {
+    "time": 32.03,
+    "text": "testimonios de su efectividad, el",
+    "confidence": 0.824
+   },
+   {
+    "time": 32.03,
+    "text": "milagro",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.03,
+    "text": "agua de mar puede ser el",
+    "confidence": 0.992
+   },
+   {
+    "time": 32.03,
+    "text": "que muchos estan buscando para",
+    "confidence": 0.766
+   },
+   {
+    "time": 32.03,
+    "text": "recuperar su salud",
+    "confidence": 0.839
+   },
+   {
+    "time": 34.03,
+    "text": "Con Ia amplia evidencia y",
+    "confidence": 0.701
+   },
+   {
+    "time": 34.03,
+    "text": "testimonios de su efectividad, el",
+    "confidence": 0.961
+   },
+   {
+    "time": 34.03,
+    "text": "milagro",
+    "confidence": 0.74
+   },
+   {
+    "time": 34.03,
+    "text": "agua de mar puede ser el",
+    "confidence": 0.98
+   },
+   {
+    "time": 34.03,
+    "text": "que muchos estan buscando para",
+    "confidence": 0.791
+   },
+   {
+    "time": 34.03,
+    "text": "recuperar Su salud",
+    "confidence": 0.873
+   },
+   {
+    "time": 36.04,
+    "text": "Con Ia amplia evidencia y",
+    "confidence": 0.724
+   },
+   {
+    "time": 36.04,
+    "text": "testimonios de su efectividad, el",
+    "confidence": 0.822
+   },
+   {
+    "time": 36.04,
+    "text": "milagro",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.04,
+    "text": "agua de mar puede ser el",
+    "confidence": 0.996
+   },
+   {
+    "time": 36.04,
+    "text": "que muchos estan buscando para",
+    "confidence": 0.63
+   },
+   {
+    "time": 36.04,
+    "text": "recuperar Su salud",
+    "confidence": 0.846
+   },
+   {
+    "time": 38.04,
+    "text": "Recomendacion: comprar una",
+    "confidence": 0.998
+   },
+   {
+    "time": 38.04,
+    "text": "garrafa de agua de mar por",
+    "confidence": 0.822
+   },
+   {
+    "time": 38.04,
+    "text": "internet; es bastante barata y te",
+    "confidence": 0.635
+   },
+   {
+    "time": 38.04,
+    "text": "viene filtrada y limpia con el 100%",
+    "confidence": 0.713
+   },
+   {
+    "time": 38.04,
+    "text": "de minerales de el agua de mar:",
+    "confidence": 0.759
+   },
+   {
+    "time": 40.04,
+    "text": "Recomendacion: comprar una",
+    "confidence": 0.922
+   },
+   {
+    "time": 40.04,
+    "text": "garrafa de agua de mar por",
+    "confidence": 0.944
+   },
+   {
+    "time": 40.04,
+    "text": "internet; es bastante barata y te",
+    "confidence": 0.703
+   },
+   {
+    "time": 40.04,
+    "text": "viene filtrada y limpia con el 100%",
+    "confidence": 0.888
+   },
+   {
+    "time": 40.04,
+    "text": "de minerales de el agua de mar:",
+    "confidence": 0.7
+   },
+   {
+    "time": 42.04,
+    "text": "Recomendacion: comprar una",
+    "confidence": 0.695
+   },
+   {
+    "time": 42.04,
+    "text": "garrafa de agua de mar por",
+    "confidence": 0.766
+   },
+   {
+    "time": 42.04,
+    "text": "internet; es bastante barata",
+    "confidence": 0.761
+   },
+   {
+    "time": 42.04,
+    "text": "y te",
+    "confidence": 0.79
+   },
+   {
+    "time": 42.04,
+    "text": "viene filtrada y limpia con el 100%",
+    "confidence": 0.853
+   },
+   {
+    "time": 42.04,
+    "text": "de minerales de el agua de mar:",
+    "confidence": 0.808
+   },
+   {
+    "time": 44.04,
+    "text": "Recomendacion: comprar una",
+    "confidence": 0.999
+   },
+   {
+    "time": 44.04,
+    "text": "garrafa de agua de mar por",
+    "confidence": 0.851
+   },
+   {
+    "time": 44.04,
+    "text": "internet; es bastante barata y te",
+    "confidence": 0.612
+   },
+   {
+    "time": 44.04,
+    "text": "viene filtrada y limpia con el 100%",
+    "confidence": 0.805
+   },
+   {
+    "time": 44.04,
+    "text": "de minerales de el agua de mar:",
+    "confidence": 0.874
+   },
+   {
+    "time": 46.05,
+    "text": "Recomendacion: comprar una",
+    "confidence": 0.926
+   },
+   {
+    "time": 46.05,
+    "text": "garrafa de agua de mar por",
+    "confidence": 0.95
+   },
+   {
+    "time": 46.05,
+    "text": "internet; es bastante barata y te",
+    "confidence": 0.748
+   },
+   {
+    "time": 46.05,
+    "text": "viene filtrada y limpia con el 100%",
+    "confidence": 0.836
+   },
+   {
+    "time": 46.05,
+    "text": "de minerales de el agua de mar:",
+    "confidence": 0.635
+   },
+   {
+    "time": 48.05,
+    "text": "Simplemente pruebala vas a sentir",
+    "confidence": 0.902
+   },
+   {
+    "time": 48.05,
+    "text": "mejoria de",
+    "confidence": 0.999
+   },
+   {
+    "time": 48.05,
+    "text": "los resultados de Ia",
+    "confidence": 0.667
+   },
+   {
+    "time": 48.05,
+    "text": "cualquier enfermedad 0 dolencia",
+    "confidence": 0.954
+   },
+   {
+    "time": 48.05,
+    "text": "desde el primer dia:",
+    "confidence": 0.879
+   },
+   {
+    "time": 50.05,
+    "text": "Simplemente pruebala vas a sentir",
+    "confidence": 0.879
+   },
+   {
+    "time": 50.05,
+    "text": "mejoria de",
+    "confidence": 0.79
+   },
+   {
+    "time": 50.05,
+    "text": "los resultados de Ia",
+    "confidence": 0.696
+   },
+   {
+    "time": 50.05,
+    "text": "cualquier enfermedad 0 dolencia",
+    "confidence": 0.945
+   },
+   {
+    "time": 50.05,
+    "text": "desde el primer dia.",
+    "confidence": 0.589
+   },
+   {
+    "time": 52.05,
+    "text": "Simplemente pruebala vas a sentir",
+    "confidence": 0.817
+   },
+   {
+    "time": 52.05,
+    "text": "mejoria de",
+    "confidence": 0.781
+   },
+   {
+    "time": 52.05,
+    "text": "los resultados de Ia",
+    "confidence": 0.658
+   },
+   {
+    "time": 52.05,
+    "text": "cualquier enfermedad 0 dolencia",
+    "confidence": 0.683
+   },
+   {
+    "time": 52.05,
+    "text": "desde el primer dia.",
+    "confidence": 0.873
+   },
+   {
+    "time": 54.05,
+    "text": "TE RECOMIENDO TOMARLA POR",
+    "confidence": 0.644
+   },
+   {
+    "time": 54.05,
+    "text": "LA MANANA MEZCLANDO 75 %",
+    "confidence": 0.575
+   },
+   {
+    "time": 54.05,
+    "text": "DE AGUA NORMAL CON 25% DE",
+    "confidence": 0.688
+   },
+   {
+    "time": 54.05,
+    "text": "AGUA DE MAR Y UN POCO DE",
+    "confidence": 0.792
+   },
+   {
+    "time": 54.05,
+    "text": "LIMON",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.06,
+    "text": "TE RECOMIENDO TOMARLA POR",
+    "confidence": 0.836
+   },
+   {
+    "time": 56.06,
+    "text": "DE AGUA NORMAL CON 25% DE",
+    "confidence": 0.936
+   },
+   {
+    "time": 56.06,
+    "text": "AGUA DE MAR Y UN POCO DE",
+    "confidence": 0.872
+   },
+   {
+    "time": 56.06,
+    "text": "LIMON",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.06,
+    "text": "TE RECOMIENDO TOMARLA POR",
+    "confidence": 0.778
+   },
+   {
+    "time": 58.06,
+    "text": "DE AGUA NORMAL CON 25% DE",
+    "confidence": 0.994
+   },
+   {
+    "time": 58.06,
+    "text": "AGUA DE MAR Y UN POCO DE",
+    "confidence": 0.915
+   },
+   {
+    "time": 58.06,
+    "text": "LIMON",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.06,
+    "text": "TE RECOMIENDO TOMARLA POR",
+    "confidence": 0.944
+   },
+   {
+    "time": 60.06,
+    "text": "LA MANANA MEZCLANDO 75 %",
+    "confidence": 0.58
+   },
+   {
+    "time": 60.06,
+    "text": "DE AGUA NORMAL CON 25% DE",
+    "confidence": 0.993
+   },
+   {
+    "time": 60.06,
+    "text": "AGUA DE MAR Y UN POCO DE",
+    "confidence": 0.882
+   },
+   {
+    "time": 60.06,
+    "text": "LIMON",
+    "confidence": 1.0
+   }
+  ],
+  "captions": [
+   {
+    "text": "Beber Agua",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.726,
+    "id": "o1"
+   },
+   {
+    "text": "De MAR",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.912,
+    "id": "o2"
+   },
+   {
+    "text": "Beber Agua",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.733,
+    "id": "o3"
+   },
+   {
+    "text": "De MAR",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.926,
+    "id": "o4"
+   },
+   {
+    "text": "El agua de mar tiene un potencial",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.846,
+    "id": "o5"
+   },
+   {
+    "text": "terapeutico y nutricional",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.933,
+    "id": "o6"
+   },
+   {
+    "text": "desconocido por Ia mayoria de",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.73,
+    "id": "o7"
+   },
+   {
+    "text": "solucion a multiples problemas de",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.839,
+    "id": "o8"
+   },
+   {
+    "text": "salud",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "El agua de mar tiene un potencial",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.826,
+    "id": "o10"
+   },
+   {
+    "text": "terapeutico y nutricional",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.813,
+    "id": "o11"
+   },
+   {
+    "text": "desconocido por Ia mayoria de",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.918,
+    "id": "o12"
+   },
+   {
+    "text": "medicos, y que puede ser Ia",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.716,
+    "id": "o13"
+   },
+   {
+    "text": "solucion a multiples problemas de",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.986,
+    "id": "o14"
+   },
+   {
+    "text": "salud",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.999,
+    "id": "o15"
+   },
+   {
+    "text": "El agua de mar tiene un potencial",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.839,
+    "id": "o16"
+   },
+   {
+    "text": "terapeutico y nutricional",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.862,
+    "id": "o17"
+   },
+   {
+    "text": "desconocido por Ia mayoria de",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.943,
+    "id": "o18"
+   },
+   {
+    "text": "medicos, y que puede ser Ia",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.705,
+    "id": "o19"
+   },
+   {
+    "text": "solucion a multiples problemas de",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.985,
+    "id": "o20"
+   },
+   {
+    "text": "salud",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.999,
+    "id": "o21"
+   },
+   {
+    "text": "El agua de mar tiene un potencial",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.827,
+    "id": "o22"
+   },
+   {
+    "text": "terapeutico y nutricional",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.81,
+    "id": "o23"
+   },
+   {
+    "text": "desconocido por Ia mayoria de",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.761,
+    "id": "o24"
+   },
+   {
+    "text": "medicos; y que puede ser Ia",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.683,
+    "id": "o25"
+   },
+   {
+    "text": "solucion a multiples problemas de",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.974,
+    "id": "o26"
+   },
+   {
+    "text": "salud",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.999,
+    "id": "o27"
+   },
+   {
+    "text": "capacidad de reequilibrar",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.806,
+    "id": "o28"
+   },
+   {
+    "text": "Con su",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.999,
+    "id": "o29"
+   },
+   {
+    "text": "el organismo y su riqueza en",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.78,
+    "id": "o30"
+   },
+   {
+    "text": "minerales,",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.955,
+    "id": "o31"
+   },
+   {
+    "text": "capacidad de reequilibrar",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.797,
+    "id": "o32"
+   },
+   {
+    "text": "Con su",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.987,
+    "id": "o33"
+   },
+   {
+    "text": "el organismo y su riqueza en",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.85,
+    "id": "o34"
+   },
+   {
+    "text": "minerales,",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.968,
+    "id": "o35"
+   },
+   {
+    "text": "el agua de mar ha demostrado",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.775,
+    "id": "o36"
+   },
+   {
+    "text": "resultados asombrosos en",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.99,
+    "id": "o37"
+   },
+   {
+    "text": "pacientes con enfermedades",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.762,
+    "id": "o38"
+   },
+   {
+    "text": "como cancer; hipertension;",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.764,
+    "id": "o39"
+   },
+   {
+    "text": "diabetes, enfermedades de Ia piel",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.715,
+    "id": "o40"
+   },
+   {
+    "text": "y mas",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.598,
+    "id": "o41"
+   },
+   {
+    "text": "el agua de mar ha demostrado",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.97,
+    "id": "o42"
+   },
+   {
+    "text": "resultados asombrosos en",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.8,
+    "id": "o43"
+   },
+   {
+    "text": "pacientes con enfermedades",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.84,
+    "id": "o44"
+   },
+   {
+    "text": "como cancer; hipertension,",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.627,
+    "id": "o45"
+   },
+   {
+    "text": "diabetes, enfermedades de Ia piel",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.744,
+    "id": "o46"
+   },
+   {
+    "text": "y mas",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.741,
+    "id": "o47"
+   },
+   {
+    "text": "el agua de mar ha demostrado",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.819,
+    "id": "o48"
+   },
+   {
+    "text": "resultados asombrosos en",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.996,
+    "id": "o49"
+   },
+   {
+    "text": "pacientes con enfermedades",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.803,
+    "id": "o50"
+   },
+   {
+    "text": "como cancer; hipertension;",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.701,
+    "id": "o51"
+   },
+   {
+    "text": "diabetes, enfermedades de Ia piel",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.83,
+    "id": "o52"
+   },
+   {
+    "text": "el agua de mar ha demostrado",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.824,
+    "id": "o53"
+   },
+   {
+    "text": "resultados asombrosos en",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.823,
+    "id": "o54"
+   },
+   {
+    "text": "pacientes con enfermedades",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.85,
+    "id": "o55"
+   },
+   {
+    "text": "como cancer; hipertension;",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.51,
+    "id": "o56"
+   },
+   {
+    "text": "diabetes, enfermedades de Ia piel",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.65,
+    "id": "o57"
+   },
+   {
+    "text": "y mas",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.743,
+    "id": "o58"
+   },
+   {
+    "text": "Ademas, Su capacidad para",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.806,
+    "id": "o59"
+   },
+   {
+    "text": "limpiar el colon y regenerar las",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.534,
+    "id": "o60"
+   },
+   {
+    "text": "celulas Ia convierten en una",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.789,
+    "id": "o61"
+   },
+   {
+    "text": "solucion natural y efectiva para",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.924,
+    "id": "o62"
+   },
+   {
+    "text": "muchas enfermedades:",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.589,
+    "id": "o63"
+   },
+   {
+    "text": "Ademas, su capacidad para",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.93,
+    "id": "o64"
+   },
+   {
+    "text": "limpiar el colon y regenerar Ias",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.716,
+    "id": "o65"
+   },
+   {
+    "text": "celulas Ia convierten en una",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.758,
+    "id": "o66"
+   },
+   {
+    "text": "solucion natural y efectiva para",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.943,
+    "id": "o67"
+   },
+   {
+    "text": "muchas enfermedades:",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.588,
+    "id": "o68"
+   },
+   {
+    "text": "Ademas, su capacidad para",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.682,
+    "id": "o69"
+   },
+   {
+    "text": "celulas Ia convierten en una",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.61,
+    "id": "o70"
+   },
+   {
+    "text": "solucion natural y efectiva para",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.96,
+    "id": "o71"
+   },
+   {
+    "text": "muchas enfermedades:",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.546,
+    "id": "o72"
+   },
+   {
+    "text": "Ademas, su capacidad para",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.772,
+    "id": "o73"
+   },
+   {
+    "text": "limpiar el colon y regenerar las",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.536,
+    "id": "o74"
+   },
+   {
+    "text": "celulas Ia convierten en una",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.882,
+    "id": "o75"
+   },
+   {
+    "text": "solucion natural y efectiva para",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.937,
+    "id": "o76"
+   },
+   {
+    "text": "muchas enfermedades.",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.813,
+    "id": "o77"
+   },
+   {
+    "text": "Con Ia amplia evidencia y",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.603,
+    "id": "o78"
+   },
+   {
+    "text": "testimonios de su efectividad, el",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.824,
+    "id": "o79"
+   },
+   {
+    "text": "milagro",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 1.0,
+    "id": "o80"
+   },
+   {
+    "text": "agua de mar puede ser el",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.992,
+    "id": "o81"
+   },
+   {
+    "text": "que muchos estan buscando para",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.766,
+    "id": "o82"
+   },
+   {
+    "text": "recuperar su salud",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.839,
+    "id": "o83"
+   },
+   {
+    "text": "Con Ia amplia evidencia y",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.701,
+    "id": "o84"
+   },
+   {
+    "text": "testimonios de su efectividad, el",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.961,
+    "id": "o85"
+   },
+   {
+    "text": "milagro",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.74,
+    "id": "o86"
+   },
+   {
+    "text": "agua de mar puede ser el",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.98,
+    "id": "o87"
+   },
+   {
+    "text": "que muchos estan buscando para",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.791,
+    "id": "o88"
+   },
+   {
+    "text": "recuperar Su salud",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.873,
+    "id": "o89"
+   },
+   {
+    "text": "Con Ia amplia evidencia y",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.724,
+    "id": "o90"
+   },
+   {
+    "text": "testimonios de su efectividad, el",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.822,
+    "id": "o91"
+   },
+   {
+    "text": "milagro",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 1.0,
+    "id": "o92"
+   },
+   {
+    "text": "agua de mar puede ser el",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.996,
+    "id": "o93"
+   },
+   {
+    "text": "que muchos estan buscando para",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.63,
+    "id": "o94"
+   },
+   {
+    "text": "recuperar Su salud",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.846,
+    "id": "o95"
+   },
+   {
+    "text": "Recomendacion: comprar una",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.998,
+    "id": "o96"
+   },
+   {
+    "text": "garrafa de agua de mar por",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.822,
+    "id": "o97"
+   },
+   {
+    "text": "internet; es bastante barata y te",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.635,
+    "id": "o98"
+   },
+   {
+    "text": "viene filtrada y limpia con el 100%",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.713,
+    "id": "o99"
+   },
+   {
+    "text": "de minerales de el agua de mar:",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.759,
+    "id": "o100"
+   },
+   {
+    "text": "Recomendacion: comprar una",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.922,
+    "id": "o101"
+   },
+   {
+    "text": "garrafa de agua de mar por",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.944,
+    "id": "o102"
+   },
+   {
+    "text": "internet; es bastante barata y te",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.703,
+    "id": "o103"
+   },
+   {
+    "text": "viene filtrada y limpia con el 100%",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.888,
+    "id": "o104"
+   },
+   {
+    "text": "de minerales de el agua de mar:",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.7,
+    "id": "o105"
+   },
+   {
+    "text": "Recomendacion: comprar una",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.695,
+    "id": "o106"
+   },
+   {
+    "text": "garrafa de agua de mar por",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.766,
+    "id": "o107"
+   },
+   {
+    "text": "internet; es bastante barata",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.761,
+    "id": "o108"
+   },
+   {
+    "text": "y te",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.79,
+    "id": "o109"
+   },
+   {
+    "text": "viene filtrada y limpia con el 100%",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.853,
+    "id": "o110"
+   },
+   {
+    "text": "de minerales de el agua de mar:",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.808,
+    "id": "o111"
+   },
+   {
+    "text": "Recomendacion: comprar una",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.999,
+    "id": "o112"
+   },
+   {
+    "text": "garrafa de agua de mar por",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.851,
+    "id": "o113"
+   },
+   {
+    "text": "internet; es bastante barata y te",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.612,
+    "id": "o114"
+   },
+   {
+    "text": "viene filtrada y limpia con el 100%",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.805,
+    "id": "o115"
+   },
+   {
+    "text": "de minerales de el agua de mar:",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.874,
+    "id": "o116"
+   },
+   {
+    "text": "Recomendacion: comprar una",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.926,
+    "id": "o117"
+   },
+   {
+    "text": "garrafa de agua de mar por",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.95,
+    "id": "o118"
+   },
+   {
+    "text": "internet; es bastante barata y te",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.748,
+    "id": "o119"
+   },
+   {
+    "text": "viene filtrada y limpia con el 100%",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.836,
+    "id": "o120"
+   },
+   {
+    "text": "de minerales de el agua de mar:",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.635,
+    "id": "o121"
+   },
+   {
+    "text": "Simplemente pruebala vas a sentir",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.902,
+    "id": "o122"
+   },
+   {
+    "text": "mejoria de",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.999,
+    "id": "o123"
+   },
+   {
+    "text": "los resultados de Ia",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.667,
+    "id": "o124"
+   },
+   {
+    "text": "cualquier enfermedad 0 dolencia",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.954,
+    "id": "o125"
+   },
+   {
+    "text": "desde el primer dia:",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.879,
+    "id": "o126"
+   },
+   {
+    "text": "Simplemente pruebala vas a sentir",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.879,
+    "id": "o127"
+   },
+   {
+    "text": "mejoria de",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.79,
+    "id": "o128"
+   },
+   {
+    "text": "los resultados de Ia",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.696,
+    "id": "o129"
+   },
+   {
+    "text": "cualquier enfermedad 0 dolencia",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.945,
+    "id": "o130"
+   },
+   {
+    "text": "desde el primer dia.",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.589,
+    "id": "o131"
+   },
+   {
+    "text": "Simplemente pruebala vas a sentir",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.817,
+    "id": "o132"
+   },
+   {
+    "text": "mejoria de",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.781,
+    "id": "o133"
+   },
+   {
+    "text": "los resultados de Ia",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.658,
+    "id": "o134"
+   },
+   {
+    "text": "cualquier enfermedad 0 dolencia",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.683,
+    "id": "o135"
+   },
+   {
+    "text": "desde el primer dia.",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.873,
+    "id": "o136"
+   },
+   {
+    "text": "TE RECOMIENDO TOMARLA POR",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.644,
+    "id": "o137"
+   },
+   {
+    "text": "LA MANANA MEZCLANDO 75 %",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.575,
+    "id": "o138"
+   },
+   {
+    "text": "DE AGUA NORMAL CON 25% DE",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.688,
+    "id": "o139"
+   },
+   {
+    "text": "AGUA DE MAR Y UN POCO DE",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.792,
+    "id": "o140"
+   },
+   {
+    "text": "LIMON",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 1.0,
+    "id": "o141"
+   },
+   {
+    "text": "TE RECOMIENDO TOMARLA POR",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.836,
+    "id": "o142"
+   },
+   {
+    "text": "DE AGUA NORMAL CON 25% DE",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.936,
+    "id": "o143"
+   },
+   {
+    "text": "AGUA DE MAR Y UN POCO DE",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.872,
+    "id": "o144"
+   },
+   {
+    "text": "LIMON",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 1.0,
+    "id": "o145"
+   },
+   {
+    "text": "TE RECOMIENDO TOMARLA POR",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 0.778,
+    "id": "o146"
+   },
+   {
+    "text": "DE AGUA NORMAL CON 25% DE",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 0.994,
+    "id": "o147"
+   },
+   {
+    "text": "AGUA DE MAR Y UN POCO DE",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 0.915,
+    "id": "o148"
+   },
+   {
+    "text": "LIMON",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 1.0,
+    "id": "o149"
+   },
+   {
+    "text": "TE RECOMIENDO TOMARLA POR",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 0.944,
+    "id": "o150"
+   },
+   {
+    "text": "LA MANANA MEZCLANDO 75 %",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 0.58,
+    "id": "o151"
+   },
+   {
+    "text": "DE AGUA NORMAL CON 25% DE",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 0.993,
+    "id": "o152"
+   },
+   {
+    "text": "AGUA DE MAR Y UN POCO DE",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 0.882,
+    "id": "o153"
+   },
+   {
+    "text": "LIMON",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 1.0,
+    "id": "o154"
+   }
+  ]
+ }
+}

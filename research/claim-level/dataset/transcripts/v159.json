@@ -1,0 +1,384 @@
+{
+ "video_id": "v159",
+ "filename": "new_TikTok_7475213910732197166.mp4",
+ "relative_path": "new_TikTok_7475213910732197166.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:59",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 36.02,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.32,
+    "text": "Oh my god, you won't believe what I'm going to say next."
+   },
+   {
+    "id": "t2",
+    "start": 3.32,
+    "end": 6.1,
+    "text": "I believe everyone is familiar with this vibrating plate."
+   },
+   {
+    "id": "t3",
+    "start": 6.1,
+    "end": 12.52,
+    "text": "The vibrating plate, which originally cost $103, is now only $69.99."
+   },
+   {
+    "id": "t4",
+    "start": 12.52,
+    "end": 14.16,
+    "text": "This is simply crazy."
+   },
+   {
+    "id": "t5",
+    "start": 14.16,
+    "end": 17.72,
+    "text": "And just practicing for 10 minutes a day is equivalent to jogging for an hour."
+   },
+   {
+    "id": "t6",
+    "start": 17.72,
+    "end": 21.12,
+    "text": "There are also a great many action tutorials on it for you to learn."
+   },
+   {
+    "id": "t7",
+    "start": 21.12,
+    "end": 23.16,
+    "text": "And it is equipped with this pull rope for you."
+   },
+   {
+    "id": "t8",
+    "start": 23.16,
+    "end": 24.96,
+    "text": "You can also work out your arm strength."
+   },
+   {
+    "id": "t9",
+    "start": 24.96,
+    "end": 27.26,
+    "text": "It's also lightweight and easy to carry."
+   },
+   {
+    "id": "t10",
+    "start": 27.26,
+    "end": 28.44,
+    "text": "You can easily pick it up."
+   },
+   {
+    "id": "t11",
+    "start": 28.44,
+    "end": 32.12,
+    "text": "worry about its suction power either. So, having said all this, take advantage of the"
+   },
+   {
+    "id": "t12",
+    "start": 32.12,
+    "end": 35.84,
+    "text": "discount and buy it to make yourself healthier. Come on, don't miss out."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 19,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "1969",
+    "confidence": 0.59
+   },
+   {
+    "time": 0.0,
+    "text": "JJ)",
+    "confidence": 0.886
+   },
+   {
+    "time": 2.0,
+    "text": "Paris",
+    "confidence": 0.728
+   },
+   {
+    "time": 2.0,
+    "text": "1969",
+    "confidence": 0.667
+   },
+   {
+    "time": 2.0,
+    "text": "@W",
+    "confidence": 0.604
+   },
+   {
+    "time": 2.0,
+    "text": "JJ)",
+    "confidence": 0.804
+   },
+   {
+    "time": 6.0,
+    "text": "1969",
+    "confidence": 0.568
+   },
+   {
+    "time": 6.0,
+    "text": "ROTAI",
+    "confidence": 0.998
+   },
+   {
+    "time": 8.0,
+    "text": "ROTAI\"",
+    "confidence": 0.804
+   },
+   {
+    "time": 8.0,
+    "text": "008 doldog",
+    "confidence": 0.583
+   },
+   {
+    "time": 16.0,
+    "text": "@oqo",
+    "confidence": 0.78
+   },
+   {
+    "time": 18.0,
+    "text": "1969",
+    "confidence": 0.531
+   },
+   {
+    "time": 18.0,
+    "text": "j;",
+    "confidence": 0.575
+   },
+   {
+    "time": 20.0,
+    "text": "ROTAI\"",
+    "confidence": 0.837
+   },
+   {
+    "time": 20.0,
+    "text": "leqgu",
+    "confidence": 0.777
+   },
+   {
+    "time": 22.0,
+    "text": "1969",
+    "confidence": 0.882
+   },
+   {
+    "time": 22.0,
+    "text": "ROTAI\"",
+    "confidence": 0.968
+   },
+   {
+    "time": 22.0,
+    "text": "Joope",
+    "confidence": 0.516
+   },
+   {
+    "time": 24.0,
+    "text": "BAP 96p",
+    "confidence": 0.59
+   },
+   {
+    "time": 30.0,
+    "text": "1969",
+    "confidence": 0.723
+   },
+   {
+    "time": 32.0,
+    "text": "Bap1969",
+    "confidence": 0.751
+   },
+   {
+    "time": 34.0,
+    "text": "BapI969",
+    "confidence": 0.502
+   },
+   {
+    "time": 36.0,
+    "text": "come on",
+    "confidence": 0.818
+   }
+  ],
+  "captions": [
+   {
+    "text": "1969",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.59,
+    "id": "o1"
+   },
+   {
+    "text": "JJ)",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.886,
+    "id": "o2"
+   },
+   {
+    "text": "Paris",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.728,
+    "id": "o3"
+   },
+   {
+    "text": "1969",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.667,
+    "id": "o4"
+   },
+   {
+    "text": "@W",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.604,
+    "id": "o5"
+   },
+   {
+    "text": "JJ)",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.804,
+    "id": "o6"
+   },
+   {
+    "text": "1969",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.568,
+    "id": "o7"
+   },
+   {
+    "text": "ROTAI",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.998,
+    "id": "o8"
+   },
+   {
+    "text": "ROTAI\"",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.804,
+    "id": "o9"
+   },
+   {
+    "text": "008 doldog",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.583,
+    "id": "o10"
+   },
+   {
+    "text": "@oqo",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.78,
+    "id": "o11"
+   },
+   {
+    "text": "1969",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.531,
+    "id": "o12"
+   },
+   {
+    "text": "j;",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.575,
+    "id": "o13"
+   },
+   {
+    "text": "ROTAI\"",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.837,
+    "id": "o14"
+   },
+   {
+    "text": "leqgu",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.777,
+    "id": "o15"
+   },
+   {
+    "text": "1969",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.882,
+    "id": "o16"
+   },
+   {
+    "text": "ROTAI\"",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.968,
+    "id": "o17"
+   },
+   {
+    "text": "Joope",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.516,
+    "id": "o18"
+   },
+   {
+    "text": "BAP 96p",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.59,
+    "id": "o19"
+   },
+   {
+    "text": "1969",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.723,
+    "id": "o20"
+   },
+   {
+    "text": "Bap1969",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.751,
+    "id": "o21"
+   },
+   {
+    "text": "BapI969",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.502,
+    "id": "o22"
+   },
+   {
+    "text": "come on",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.818,
+    "id": "o23"
+   }
+  ]
+ }
+}

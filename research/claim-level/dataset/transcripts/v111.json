@@ -1,0 +1,396 @@
+{
+ "video_id": "v111",
+ "filename": "new_TikTok_7195172875555310853.mp4",
+ "relative_path": "new_TikTok_7195172875555310853.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@lahorademiguelangelruiz",
+ "extracted_at": "2026-11-23T08:45:56",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.685,
+  "duration_seconds": 24.54,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 7.8,
+    "text": "La legumbre no es buena porque está hecha de almidón y proteína y es una mezcla incompatible."
+   },
+   {
+    "id": "t2",
+    "start": 7.8,
+    "end": 14.2,
+    "text": "Que no se digiere, te llenas, te vas a estar con gases o con inflamación, con una digestión lenta,"
+   },
+   {
+    "id": "t3",
+    "start": 14.2,
+    "end": 16.2,
+    "text": "pero eso al final se pudre y se fermenta."
+   },
+   {
+    "id": "t4",
+    "start": 16.2,
+    "end": 17.6,
+    "text": "Mucha gente piensa que es sana."
+   },
+   {
+    "id": "t5",
+    "start": 17.6,
+    "end": 21.0,
+    "text": "Sí, hay gente que piensa que la legumbre es sana, pero no lo es."
+   },
+   {
+    "id": "t6",
+    "start": 21.0,
+    "end": 24.4,
+    "text": "Eso podemos dedicarle un vídeo solamente a la legumbre."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 13,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "(natura",
+    "confidence": 0.608
+   },
+   {
+    "time": 2.0,
+    "text": "LA LEOUMIBRE LA",
+    "confidence": 0.684
+   },
+   {
+    "time": 2.0,
+    "text": "LEOUMIBRE",
+    "confidence": 0.728
+   },
+   {
+    "time": 4.0,
+    "text": "DE ALMIDOn Y",
+    "confidence": 0.684
+   },
+   {
+    "time": 4.0,
+    "text": "PROTEMMA",
+    "confidence": 0.619
+   },
+   {
+    "time": 6.01,
+    "text": "Y ES UNA MEZCLA",
+    "confidence": 0.569
+   },
+   {
+    "time": 6.01,
+    "text": "[NCOMPATIBLE",
+    "confidence": 0.763
+   },
+   {
+    "time": 8.01,
+    "text": "DIOIERE.",
+    "confidence": 0.833
+   },
+   {
+    "time": 10.01,
+    "text": "TE VAS A ESTAR",
+    "confidence": 0.665
+   },
+   {
+    "time": 10.01,
+    "text": "CON GASES 0 CON",
+    "confidence": 0.606
+   },
+   {
+    "time": 10.01,
+    "text": "INFLAMACION",
+    "confidence": 0.889
+   },
+   {
+    "time": 12.01,
+    "text": "TE VAS A ESTAR",
+    "confidence": 0.936
+   },
+   {
+    "time": 12.01,
+    "text": "CON GASES 0 CON",
+    "confidence": 0.703
+   },
+   {
+    "time": 12.01,
+    "text": "MFLAMACION",
+    "confidence": 0.507
+   },
+   {
+    "time": 14.01,
+    "text": "CON UNA",
+    "confidence": 0.994
+   },
+   {
+    "time": 14.01,
+    "text": "DICESTION",
+    "confidence": 0.72
+   },
+   {
+    "time": 14.01,
+    "text": "LENTA",
+    "confidence": 0.986
+   },
+   {
+    "time": 16.02,
+    "text": "PERO ESO AL",
+    "confidence": 0.913
+   },
+   {
+    "time": 16.02,
+    "text": "FINAL SE PUDRE,",
+    "confidence": 0.784
+   },
+   {
+    "time": 16.02,
+    "text": "SE FERMENTA",
+    "confidence": 0.992
+   },
+   {
+    "time": 18.02,
+    "text": "HAY OENTE QUE",
+    "confidence": 0.654
+   },
+   {
+    "time": 18.02,
+    "text": "PIENSA QUE WA",
+    "confidence": 0.64
+   },
+   {
+    "time": 20.02,
+    "text": "(nature",
+    "confidence": 0.616
+   },
+   {
+    "time": 22.02,
+    "text": "ESO PODEMIOS",
+    "confidence": 0.79
+   },
+   {
+    "time": 22.02,
+    "text": "DEDICARLE UN Vfdeo",
+    "confidence": 0.621
+   },
+   {
+    "time": 22.02,
+    "text": "SOLAMENTE",
+    "confidence": 0.948
+   },
+   {
+    "time": 24.02,
+    "text": "A LA LEOUMIBRES",
+    "confidence": 0.668
+   }
+  ],
+  "captions": [
+   {
+    "text": "(natura",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.608,
+    "id": "o1"
+   },
+   {
+    "text": "LA LEOUMIBRE LA",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.684,
+    "id": "o2"
+   },
+   {
+    "text": "LEOUMIBRE",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.728,
+    "id": "o3"
+   },
+   {
+    "text": "DE ALMIDOn Y",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.684,
+    "id": "o4"
+   },
+   {
+    "text": "PROTEMMA",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.619,
+    "id": "o5"
+   },
+   {
+    "text": "Y ES UNA MEZCLA",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.569,
+    "id": "o6"
+   },
+   {
+    "text": "[NCOMPATIBLE",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.763,
+    "id": "o7"
+   },
+   {
+    "text": "DIOIERE.",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.833,
+    "id": "o8"
+   },
+   {
+    "text": "TE VAS A ESTAR",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.665,
+    "id": "o9"
+   },
+   {
+    "text": "CON GASES 0 CON",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.606,
+    "id": "o10"
+   },
+   {
+    "text": "INFLAMACION",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.889,
+    "id": "o11"
+   },
+   {
+    "text": "TE VAS A ESTAR",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.936,
+    "id": "o12"
+   },
+   {
+    "text": "CON GASES 0 CON",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.703,
+    "id": "o13"
+   },
+   {
+    "text": "MFLAMACION",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.507,
+    "id": "o14"
+   },
+   {
+    "text": "CON UNA",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.994,
+    "id": "o15"
+   },
+   {
+    "text": "DICESTION",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.72,
+    "id": "o16"
+   },
+   {
+    "text": "LENTA",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.986,
+    "id": "o17"
+   },
+   {
+    "text": "PERO ESO AL",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.913,
+    "id": "o18"
+   },
+   {
+    "text": "FINAL SE PUDRE,",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.784,
+    "id": "o19"
+   },
+   {
+    "text": "SE FERMENTA",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.992,
+    "id": "o20"
+   },
+   {
+    "text": "HAY OENTE QUE",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.654,
+    "id": "o21"
+   },
+   {
+    "text": "PIENSA QUE WA",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.64,
+    "id": "o22"
+   },
+   {
+    "text": "(nature",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.616,
+    "id": "o23"
+   },
+   {
+    "text": "ESO PODEMIOS",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.79,
+    "id": "o24"
+   },
+   {
+    "text": "DEDICARLE UN Vfdeo",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.621,
+    "id": "o25"
+   },
+   {
+    "text": "SOLAMENTE",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.948,
+    "id": "o26"
+   },
+   {
+    "text": "A LA LEOUMIBRES",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.668,
+    "id": "o27"
+   }
+  ]
+ }
+}

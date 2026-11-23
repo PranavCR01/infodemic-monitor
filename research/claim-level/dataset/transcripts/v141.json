@@ -1,0 +1,396 @@
+{
+ "video_id": "v141",
+ "filename": "new_TikTok_7406623936949144865.mp4",
+ "relative_path": "new_TikTok_7406623936949144865.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@booska_p",
+ "extracted_at": "2026-11-23T08:45:58",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "fr",
+  "language_probability": 0.996,
+  "duration_seconds": 30.16,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.8,
+    "text": "Ce gamin de 15 ans a inventé un remède contre le cancer."
+   },
+   {
+    "id": "t2",
+    "start": 2.8,
+    "end": 6.8,
+    "text": "Émane Bekele a été élu par le Time Magazine Enfant de l'année et a raison."
+   },
+   {
+    "id": "t3",
+    "start": 6.8,
+    "end": 11.9,
+    "text": "Parce que ce jeune scientifique d'origine éthiopienne a fabriqué un savon qui prévient et traite le cancer de la peau."
+   },
+   {
+    "id": "t4",
+    "start": 11.9,
+    "end": 16.9,
+    "text": "Ce fils d'immigré arrivait aux États-Unis à 4 ans à trouver son inspiration dans la crème médicament imiquimode."
+   },
+   {
+    "id": "t5",
+    "start": 16.9,
+    "end": 19.1,
+    "text": "Efficace mais trop cher pour monsieur madame tout le monde."
+   },
+   {
+    "id": "t6",
+    "start": 19.1,
+    "end": 24.6,
+    "text": "Son savon il vient renforcer les cellules d'entritique qui s'affaiblissent à cause du cancer avec une technologie accessible pour tout le monde."
+   },
+   {
+    "id": "t7",
+    "start": 24.6,
+    "end": 28.9,
+    "text": "Un petit génie qui est encore de baisse année devant lui, lui qui rêvait d'avoir une idée qui aiderait le monde entier."
+   },
+   {
+    "id": "t8",
+    "start": 28.9,
+    "end": 30.9,
+    "text": "Et toi, tu faisais quoi avec 15 ans ?"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 16,
+  "detections": [
+   {
+    "time": 2.0,
+    "text": "UN REMEDE CONTRE LE CANCER",
+    "confidence": 0.892
+   },
+   {
+    "time": 4.0,
+    "text": "A 3TE ELu",
+    "confidence": 0.54
+   },
+   {
+    "time": 6.0,
+    "text": "Kid",
+    "confidence": 0.991
+   },
+   {
+    "time": 6.0,
+    "text": "of the",
+    "confidence": 0.638
+   },
+   {
+    "time": 6.0,
+    "text": "Year",
+    "confidence": 0.606
+   },
+   {
+    "time": 6.0,
+    "text": "HEMAN",
+    "confidence": 0.921
+   },
+   {
+    "time": 6.0,
+    "text": "BEKELE",
+    "confidence": 0.995
+   },
+   {
+    "time": 6.0,
+    "text": "PARLE TIME",
+    "confidence": 0.918
+   },
+   {
+    "time": 6.0,
+    "text": "ENFANT DE LANNEE",
+    "confidence": 0.947
+   },
+   {
+    "time": 6.0,
+    "text": "SKIN CANCER",
+    "confidence": 0.993
+   },
+   {
+    "time": 8.0,
+    "text": "DORIGINE",
+    "confidence": 0.997
+   },
+   {
+    "time": 10.0,
+    "text": "LE CANCER DE LA PEAU",
+    "confidence": 0.748
+   },
+   {
+    "time": 12.0,
+    "text": "CE FILS",
+    "confidence": 0.845
+   },
+   {
+    "time": 14.0,
+    "text": "QUATRE",
+    "confidence": 0.997
+   },
+   {
+    "time": 16.0,
+    "text": "SON INSPIRATION DANS LA",
+    "confidence": 0.71
+   },
+   {
+    "time": 16.0,
+    "text": "CREME-MEDICAMENT",
+    "confidence": 0.795
+   },
+   {
+    "time": 16.0,
+    "text": "IMIQUIMOD",
+    "confidence": 0.912
+   },
+   {
+    "time": 18.0,
+    "text": "era",
+    "confidence": 0.994
+   },
+   {
+    "time": 20.0,
+    "text": "SON SAVON VIENT RENFORCER",
+    "confidence": 0.605
+   },
+   {
+    "time": 20.0,
+    "text": "LES CELLULES DENDRITIQUES",
+    "confidence": 0.716
+   },
+   {
+    "time": 22.0,
+    "text": "A CAUSE",
+    "confidence": 0.651
+   },
+   {
+    "time": 24.0,
+    "text": "UNE TECHNOLOLCIE ACCESSIBLE",
+    "confidence": 0.713
+   },
+   {
+    "time": 24.0,
+    "text": "POUR TOUT LE MONDE",
+    "confidence": 0.778
+   },
+   {
+    "time": 26.0,
+    "text": "ANNEES",
+    "confidence": 0.993
+   },
+   {
+    "time": 30.0,
+    "text": "15",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "ANS ?",
+    "confidence": 0.996
+   }
+  ],
+  "captions": [
+   {
+    "text": "UN REMEDE CONTRE LE CANCER",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.892,
+    "id": "o1"
+   },
+   {
+    "text": "A 3TE ELu",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.54,
+    "id": "o2"
+   },
+   {
+    "text": "Kid",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.991,
+    "id": "o3"
+   },
+   {
+    "text": "of the",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.638,
+    "id": "o4"
+   },
+   {
+    "text": "Year",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.606,
+    "id": "o5"
+   },
+   {
+    "text": "HEMAN",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.921,
+    "id": "o6"
+   },
+   {
+    "text": "BEKELE",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.995,
+    "id": "o7"
+   },
+   {
+    "text": "PARLE TIME",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.918,
+    "id": "o8"
+   },
+   {
+    "text": "ENFANT DE LANNEE",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.947,
+    "id": "o9"
+   },
+   {
+    "text": "SKIN CANCER",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.993,
+    "id": "o10"
+   },
+   {
+    "text": "DORIGINE",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.997,
+    "id": "o11"
+   },
+   {
+    "text": "LE CANCER DE LA PEAU",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.748,
+    "id": "o12"
+   },
+   {
+    "text": "CE FILS",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.845,
+    "id": "o13"
+   },
+   {
+    "text": "QUATRE",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.997,
+    "id": "o14"
+   },
+   {
+    "text": "SON INSPIRATION DANS LA",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.71,
+    "id": "o15"
+   },
+   {
+    "text": "CREME-MEDICAMENT",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.795,
+    "id": "o16"
+   },
+   {
+    "text": "IMIQUIMOD",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.912,
+    "id": "o17"
+   },
+   {
+    "text": "era",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.994,
+    "id": "o18"
+   },
+   {
+    "text": "SON SAVON VIENT RENFORCER",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.605,
+    "id": "o19"
+   },
+   {
+    "text": "LES CELLULES DENDRITIQUES",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.716,
+    "id": "o20"
+   },
+   {
+    "text": "A CAUSE",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.651,
+    "id": "o21"
+   },
+   {
+    "text": "UNE TECHNOLOLCIE ACCESSIBLE",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.713,
+    "id": "o22"
+   },
+   {
+    "text": "POUR TOUT LE MONDE",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.778,
+    "id": "o23"
+   },
+   {
+    "text": "ANNEES",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.993,
+    "id": "o24"
+   },
+   {
+    "text": "15",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o25"
+   },
+   {
+    "text": "ANS ?",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.996,
+    "id": "o26"
+   }
+  ]
+ }
+}

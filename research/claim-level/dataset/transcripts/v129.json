@@ -1,0 +1,462 @@
+{
+ "video_id": "v129",
+ "filename": "new_TikTok_7266433592476060974.mp4",
+ "relative_path": "new_TikTok_7266433592476060974.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@meghanelinor",
+ "extracted_at": "2026-11-23T08:45:57",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.997,
+  "duration_seconds": 38.76,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.2,
+    "text": "The FDA is now saying that it is okay to prescribe ivermectin."
+   },
+   {
+    "id": "t2",
+    "start": 5.2,
+    "end": 10.48,
+    "text": "How fucking ironic! And yet for three fucking years, all you guys are sitting there calling us"
+   },
+   {
+    "id": "t3",
+    "start": 10.48,
+    "end": 15.36,
+    "text": "conspiracy theorists. It's so crazy how all the conspiracies from two, three years ago,"
+   },
+   {
+    "id": "t4",
+    "start": 15.36,
+    "end": 20.4,
+    "text": "are now just magically becoming reality. Shocking! It's kind of like we already knew."
+   },
+   {
+    "id": "t5",
+    "start": 20.96,
+    "end": 27.04,
+    "text": "We got our accounts banned, we got our Facebook messages, shadow bans. We were out here being"
+   },
+   {
+    "id": "t6",
+    "start": 27.04,
+    "end": 32.5,
+    "text": "called extreme writers we're out here being called anti-humans like fuck you"
+   },
+   {
+    "id": "t7",
+    "start": 32.5,
+    "end": 40.3,
+    "text": "guys man I if we could just go back two years in time god damn it"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 20,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "THE EPOCH TIMES",
+    "confidence": 0.819
+   },
+   {
+    "time": 0.0,
+    "text": "PUBLIC HEALTH INFORMATION",
+    "confidence": 0.885
+   },
+   {
+    "time": 0.0,
+    "text": "Can",
+    "confidence": 0.97
+   },
+   {
+    "time": 0.0,
+    "text": "Prescribe",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "Doctors",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "Ivermectin for COVID-19: FDA",
+    "confidence": 0.907
+   },
+   {
+    "time": 0.0,
+    "text": "Lawyer",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "FDA",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "IVERMECTIN",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "for C-19 Treatment",
+    "confidence": 0.974
+   },
+   {
+    "time": 0.0,
+    "text": "for human use. (Natasha",
+    "confidence": 0.766
+   },
+   {
+    "time": 0.0,
+    "text": "By Zachs",
+    "confidence": 0.554
+   },
+   {
+    "time": 2.0,
+    "text": "THE EPOCH TIMES",
+    "confidence": 0.847
+   },
+   {
+    "time": 2.0,
+    "text": "PUBLIC HEALTH INFORMATION",
+    "confidence": 0.887
+   },
+   {
+    "time": 2.0,
+    "text": "Doctors Can Prescribe",
+    "confidence": 0.932
+   },
+   {
+    "time": 2.0,
+    "text": "Ivermectin for COVID-19: FDA",
+    "confidence": 0.837
+   },
+   {
+    "time": 2.0,
+    "text": "Lawyer",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "FDA",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "IVERMECTIN",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "for C-19 Treatment",
+    "confidence": 0.831
+   },
+   {
+    "time": 2.0,
+    "text": "ed for human use. (Natasha",
+    "confidence": 0.952
+   },
+   {
+    "time": 2.0,
+    "text": "By Zacha",
+    "confidence": 0.777
+   },
+   {
+    "time": 2.0,
+    "text": "8/10",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.0,
+    "text": "THE EPOCH TIMES",
+    "confidence": 0.859
+   },
+   {
+    "time": 4.0,
+    "text": "PUBLIC HEALTH INFORMATION",
+    "confidence": 0.881
+   },
+   {
+    "time": 4.0,
+    "text": "Doctors Can Prescribe",
+    "confidence": 0.926
+   },
+   {
+    "time": 4.0,
+    "text": "Ivermectin for COVID-19: FDA",
+    "confidence": 0.8
+   },
+   {
+    "time": 4.0,
+    "text": "Lawyer",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Ivermectin",
+    "confidence": 0.998
+   },
+   {
+    "time": 4.0,
+    "text": "Ed",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "human use. (Natasha",
+    "confidence": 0.756
+   },
+   {
+    "time": 4.0,
+    "text": "8/10 /",
+    "confidence": 0.638
+   }
+  ],
+  "captions": [
+   {
+    "text": "THE EPOCH TIMES",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.819,
+    "id": "o1"
+   },
+   {
+    "text": "PUBLIC HEALTH INFORMATION",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.885,
+    "id": "o2"
+   },
+   {
+    "text": "Can",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.97,
+    "id": "o3"
+   },
+   {
+    "text": "Prescribe",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o4"
+   },
+   {
+    "text": "Doctors",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o5"
+   },
+   {
+    "text": "Ivermectin for COVID-19: FDA",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.907,
+    "id": "o6"
+   },
+   {
+    "text": "Lawyer",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o7"
+   },
+   {
+    "text": "FDA",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o8"
+   },
+   {
+    "text": "IVERMECTIN",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "for C-19 Treatment",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.974,
+    "id": "o10"
+   },
+   {
+    "text": "for human use. (Natasha",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.766,
+    "id": "o11"
+   },
+   {
+    "text": "By Zachs",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.554,
+    "id": "o12"
+   },
+   {
+    "text": "THE EPOCH TIMES",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.847,
+    "id": "o13"
+   },
+   {
+    "text": "PUBLIC HEALTH INFORMATION",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.887,
+    "id": "o14"
+   },
+   {
+    "text": "Doctors Can Prescribe",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.932,
+    "id": "o15"
+   },
+   {
+    "text": "Ivermectin for COVID-19: FDA",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.837,
+    "id": "o16"
+   },
+   {
+    "text": "Lawyer",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o17"
+   },
+   {
+    "text": "FDA",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o18"
+   },
+   {
+    "text": "IVERMECTIN",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o19"
+   },
+   {
+    "text": "for C-19 Treatment",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.831,
+    "id": "o20"
+   },
+   {
+    "text": "ed for human use. (Natasha",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.952,
+    "id": "o21"
+   },
+   {
+    "text": "By Zacha",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.777,
+    "id": "o22"
+   },
+   {
+    "text": "8/10",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.999,
+    "id": "o23"
+   },
+   {
+    "text": "THE EPOCH TIMES",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.859,
+    "id": "o24"
+   },
+   {
+    "text": "PUBLIC HEALTH INFORMATION",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.881,
+    "id": "o25"
+   },
+   {
+    "text": "Doctors Can Prescribe",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.926,
+    "id": "o26"
+   },
+   {
+    "text": "Ivermectin for COVID-19: FDA",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.8,
+    "id": "o27"
+   },
+   {
+    "text": "Lawyer",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o28"
+   },
+   {
+    "text": "Ivermectin",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.998,
+    "id": "o29"
+   },
+   {
+    "text": "Ed",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o30"
+   },
+   {
+    "text": "human use. (Natasha",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.756,
+    "id": "o31"
+   },
+   {
+    "text": "8/10 /",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.638,
+    "id": "o32"
+   }
+  ]
+ }
+}

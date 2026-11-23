@@ -1,0 +1,738 @@
+{
+ "video_id": "v168",
+ "filename": "new_youtube_1a4CJZi1ub4.mp4",
+ "relative_path": "new_youtube_1a4CJZi1ub4.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:59",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 41.69,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.56,
+    "end": 4.08,
+    "text": "There are some anxiety lowering herbs they don't want you to know about."
+   },
+   {
+    "id": "t2",
+    "start": 4.08,
+    "end": 9.08,
+    "text": "So if you are suffering with anxiety, nervousness, panic attacks, there really is no need to"
+   },
+   {
+    "id": "t3",
+    "start": 9.08,
+    "end": 10.08,
+    "text": "suffer."
+   },
+   {
+    "id": "t4",
+    "start": 10.08,
+    "end": 11.24,
+    "text": "I don't want you to suffer."
+   },
+   {
+    "id": "t5",
+    "start": 11.24,
+    "end": 14.56,
+    "text": "And I love these herbal medicines, especially in the proper combination."
+   },
+   {
+    "id": "t6",
+    "start": 14.56,
+    "end": 19.92,
+    "text": "They're fantastic at removing and decreasing what I call that hot wiring of your nervous"
+   },
+   {
+    "id": "t7",
+    "start": 19.92,
+    "end": 20.92,
+    "text": "system."
+   },
+   {
+    "id": "t8",
+    "start": 20.92,
+    "end": 26.52,
+    "text": "So they are valerian, skull cap, as well as lemon balm and passion flower."
+   },
+   {
+    "id": "t9",
+    "start": 26.52,
+    "end": 31.28,
+    "text": "herbal medicines are known in the literature to really help to decrease that nervousness"
+   },
+   {
+    "id": "t10",
+    "start": 31.28,
+    "end": 36.36,
+    "text": "and anxiety without negative side effects, which often goes hand in hand with a lot of"
+   },
+   {
+    "id": "t11",
+    "start": 36.36,
+    "end": 38.92,
+    "text": "the pharmaceutical ways to help with anxiety."
+   },
+   {
+    "id": "t12",
+    "start": 38.92,
+    "end": 40.28,
+    "text": "So you're going to love these."
+   },
+   {
+    "id": "t13",
+    "start": 40.28,
+    "end": 41.6,
+    "text": "Follow for more natural health tips."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 21,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Janine",
+    "confidence": 0.61
+   },
+   {
+    "time": 0.0,
+    "text": "Here are",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "some",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "Janine",
+    "confidence": 0.986
+   },
+   {
+    "time": 2.0,
+    "text": "anxiety",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "lowering herbs",
+    "confidence": 0.997
+   },
+   {
+    "time": 4.0,
+    "text": "D",
+    "confidence": 0.992
+   },
+   {
+    "time": 4.0,
+    "text": "So if you are",
+    "confidence": 0.97
+   },
+   {
+    "time": 4.0,
+    "text": "suffering with",
+    "confidence": 0.998
+   },
+   {
+    "time": 6.01,
+    "text": "anxiety",
+    "confidence": 0.703
+   },
+   {
+    "time": 6.01,
+    "text": "nervousness",
+    "confidence": 0.517
+   },
+   {
+    "time": 8.01,
+    "text": "panic attacks",
+    "confidence": 0.989
+   },
+   {
+    "time": 10.01,
+    "text": "Jani",
+    "confidence": 0.85
+   },
+   {
+    "time": 10.01,
+    "text": "don't want",
+    "confidence": 0.906
+   },
+   {
+    "time": 10.01,
+    "text": "to suffer",
+    "confidence": 0.997
+   },
+   {
+    "time": 10.01,
+    "text": "you",
+    "confidence": 0.908
+   },
+   {
+    "time": 12.01,
+    "text": "Jar",
+    "confidence": 0.761
+   },
+   {
+    "time": 12.01,
+    "text": "herbal",
+    "confidence": 0.849
+   },
+   {
+    "time": 12.01,
+    "text": "medicines",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "the",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "in",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "proper",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "combination",
+    "confidence": 0.997
+   },
+   {
+    "time": 16.02,
+    "text": "Jani",
+    "confidence": 0.77
+   },
+   {
+    "time": 16.02,
+    "text": "at removing",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.02,
+    "text": "decreasing",
+    "confidence": 0.998
+   },
+   {
+    "time": 16.02,
+    "text": "&",
+    "confidence": 0.683
+   },
+   {
+    "time": 18.02,
+    "text": "what  call",
+    "confidence": 0.603
+   },
+   {
+    "time": 18.02,
+    "text": "that hot wiring",
+    "confidence": 0.916
+   },
+   {
+    "time": 20.02,
+    "text": "of your",
+    "confidence": 0.811
+   },
+   {
+    "time": 20.02,
+    "text": "nervous system",
+    "confidence": 0.936
+   },
+   {
+    "time": 22.02,
+    "text": "valerian",
+    "confidence": 0.974
+   },
+   {
+    "time": 24.02,
+    "text": "lemon balm",
+    "confidence": 0.9
+   },
+   {
+    "time": 24.02,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.03,
+    "text": "passionflower",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.03,
+    "text": "Dr",
+    "confidence": 0.87
+   },
+   {
+    "time": 28.03,
+    "text": "are known",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.03,
+    "text": "to decrease",
+    "confidence": 0.992
+   },
+   {
+    "time": 30.03,
+    "text": "that",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.03,
+    "text": "& anxiety",
+    "confidence": 0.864
+   },
+   {
+    "time": 34.03,
+    "text": "Dr",
+    "confidence": 0.972
+   },
+   {
+    "time": 34.03,
+    "text": "whichloften",
+    "confidence": 0.984
+   },
+   {
+    "time": 34.03,
+    "text": "goes",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.04,
+    "text": "Dr",
+    "confidence": 0.858
+   },
+   {
+    "time": 36.04,
+    "text": "with a lot",
+    "confidence": 0.958
+   },
+   {
+    "time": 36.04,
+    "text": "of the",
+    "confidence": 0.758
+   },
+   {
+    "time": 38.04,
+    "text": "Dr",
+    "confidence": 0.51
+   },
+   {
+    "time": 38.04,
+    "text": "with anxiety",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.04,
+    "text": "Dr",
+    "confidence": 0.96
+   },
+   {
+    "time": 40.04,
+    "text": "Janne",
+    "confidence": 0.547
+   },
+   {
+    "time": 40.04,
+    "text": "Follow",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.04,
+    "text": "for more",
+    "confidence": 0.999
+   }
+  ],
+  "captions": [
+   {
+    "text": "Janine",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.61,
+    "id": "o1"
+   },
+   {
+    "text": "Here are",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o2"
+   },
+   {
+    "text": "some",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o3"
+   },
+   {
+    "text": "Janine",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.986,
+    "id": "o4"
+   },
+   {
+    "text": "anxiety",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o5"
+   },
+   {
+    "text": "lowering herbs",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.997,
+    "id": "o6"
+   },
+   {
+    "text": "D",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.992,
+    "id": "o7"
+   },
+   {
+    "text": "So if you are",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.97,
+    "id": "o8"
+   },
+   {
+    "text": "suffering with",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.998,
+    "id": "o9"
+   },
+   {
+    "text": "anxiety",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.703,
+    "id": "o10"
+   },
+   {
+    "text": "nervousness",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.517,
+    "id": "o11"
+   },
+   {
+    "text": "panic attacks",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.989,
+    "id": "o12"
+   },
+   {
+    "text": "Jani",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.85,
+    "id": "o13"
+   },
+   {
+    "text": "don't want",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.906,
+    "id": "o14"
+   },
+   {
+    "text": "to suffer",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.997,
+    "id": "o15"
+   },
+   {
+    "text": "you",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.908,
+    "id": "o16"
+   },
+   {
+    "text": "Jar",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.761,
+    "id": "o17"
+   },
+   {
+    "text": "herbal",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.849,
+    "id": "o18"
+   },
+   {
+    "text": "medicines",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 1.0,
+    "id": "o19"
+   },
+   {
+    "text": "the",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 1.0,
+    "id": "o20"
+   },
+   {
+    "text": "in",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 1.0,
+    "id": "o21"
+   },
+   {
+    "text": "proper",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 1.0,
+    "id": "o22"
+   },
+   {
+    "text": "combination",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.997,
+    "id": "o23"
+   },
+   {
+    "text": "Jani",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.77,
+    "id": "o24"
+   },
+   {
+    "text": "at removing",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 1.0,
+    "id": "o25"
+   },
+   {
+    "text": "decreasing",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.998,
+    "id": "o26"
+   },
+   {
+    "text": "&",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.683,
+    "id": "o27"
+   },
+   {
+    "text": "what  call",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.603,
+    "id": "o28"
+   },
+   {
+    "text": "that hot wiring",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.916,
+    "id": "o29"
+   },
+   {
+    "text": "of your",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.811,
+    "id": "o30"
+   },
+   {
+    "text": "nervous system",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.936,
+    "id": "o31"
+   },
+   {
+    "text": "valerian",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.974,
+    "id": "o32"
+   },
+   {
+    "text": "lemon balm",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.9,
+    "id": "o33"
+   },
+   {
+    "text": "and",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 1.0,
+    "id": "o34"
+   },
+   {
+    "text": "passionflower",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 1.0,
+    "id": "o35"
+   },
+   {
+    "text": "Dr",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.87,
+    "id": "o36"
+   },
+   {
+    "text": "are known",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.999,
+    "id": "o37"
+   },
+   {
+    "text": "to decrease",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.992,
+    "id": "o38"
+   },
+   {
+    "text": "that",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 1.0,
+    "id": "o39"
+   },
+   {
+    "text": "& anxiety",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.864,
+    "id": "o40"
+   },
+   {
+    "text": "Dr",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.972,
+    "id": "o41"
+   },
+   {
+    "text": "whichloften",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.984,
+    "id": "o42"
+   },
+   {
+    "text": "goes",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.999,
+    "id": "o43"
+   },
+   {
+    "text": "Dr",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.858,
+    "id": "o44"
+   },
+   {
+    "text": "with a lot",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.958,
+    "id": "o45"
+   },
+   {
+    "text": "of the",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.758,
+    "id": "o46"
+   },
+   {
+    "text": "Dr",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.51,
+    "id": "o47"
+   },
+   {
+    "text": "with anxiety",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 1.0,
+    "id": "o48"
+   },
+   {
+    "text": "Dr",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.96,
+    "id": "o49"
+   },
+   {
+    "text": "Janne",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.547,
+    "id": "o50"
+   },
+   {
+    "text": "Follow",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 1.0,
+    "id": "o51"
+   },
+   {
+    "text": "for more",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.999,
+    "id": "o52"
+   }
+  ]
+ }
+}

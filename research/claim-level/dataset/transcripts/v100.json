@@ -1,0 +1,371 @@
+{
+ "video_id": "v100",
+ "filename": "new_Instagram_DXePQvSji_R.mp4",
+ "relative_path": "new_Instagram_DXePQvSji_R.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:55",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.728,
+  "duration_seconds": 5.04,
+  "segments": []
+ },
+ "on_screen": {
+  "frames_sampled": 3,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "ENCUESTAS",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "REGIONAU",
+    "confidence": 0.515
+   },
+   {
+    "time": 0.0,
+    "text": "NOTICIAS",
+    "confidence": 0.81
+   },
+   {
+    "time": 0.0,
+    "text": "iADIOS A LA INSULINA?",
+    "confidence": 0.764
+   },
+   {
+    "time": 0.0,
+    "text": "Logran revertir Ia diabetes tipo 1y",
+    "confidence": 0.828
+   },
+   {
+    "time": 0.0,
+    "text": "tipo 2 mediante reprogramacion",
+    "confidence": 0.965
+   },
+   {
+    "time": 0.0,
+    "text": "celular. Cientificos chinos logran que",
+    "confidence": 0.897
+   },
+   {
+    "time": 0.0,
+    "text": "pancreas vuelva a funcionar de",
+    "confidence": 0.869
+   },
+   {
+    "time": 0.0,
+    "text": "el",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "forma natural:",
+    "confidence": 0.91
+   },
+   {
+    "time": 2.0,
+    "text": "ENCUESTAS",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "REGIONALE",
+    "confidence": 0.786
+   },
+   {
+    "time": 2.0,
+    "text": "NOTICIAS",
+    "confidence": 0.949
+   },
+   {
+    "time": 2.0,
+    "text": "iADIOS A LA INSULINA?",
+    "confidence": 0.723
+   },
+   {
+    "time": 2.0,
+    "text": "Logran revertir Ia diabetes tipo 1y",
+    "confidence": 0.921
+   },
+   {
+    "time": 2.0,
+    "text": "tipo 2 mediante reprogramacion",
+    "confidence": 0.665
+   },
+   {
+    "time": 2.0,
+    "text": "celular. Cientificos chinos logran que",
+    "confidence": 0.903
+   },
+   {
+    "time": 2.0,
+    "text": "el pancreas vuelva a funcionar de",
+    "confidence": 0.815
+   },
+   {
+    "time": 2.0,
+    "text": "forma natural:",
+    "confidence": 0.923
+   },
+   {
+    "time": 4.0,
+    "text": "ENCUESTAS",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "REGIONALE",
+    "confidence": 0.765
+   },
+   {
+    "time": 4.0,
+    "text": "NOTICIAS",
+    "confidence": 0.746
+   },
+   {
+    "time": 4.0,
+    "text": "ZADIOS A LA INSULINA?",
+    "confidence": 0.788
+   },
+   {
+    "time": 4.0,
+    "text": "Logran revertir Ia diabetes tipo 1y",
+    "confidence": 0.719
+   },
+   {
+    "time": 4.0,
+    "text": "tipo 2 mediante reprogramacion",
+    "confidence": 0.865
+   },
+   {
+    "time": 4.0,
+    "text": "celular. Cientificos chinos logran que",
+    "confidence": 0.609
+   },
+   {
+    "time": 4.0,
+    "text": "el pancreas vuelva a funcionar de",
+    "confidence": 0.793
+   },
+   {
+    "time": 4.0,
+    "text": "forma natural:",
+    "confidence": 0.924
+   }
+  ],
+  "captions": [
+   {
+    "text": "ENCUESTAS",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o1"
+   },
+   {
+    "text": "REGIONAU",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.515,
+    "id": "o2"
+   },
+   {
+    "text": "NOTICIAS",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.81,
+    "id": "o3"
+   },
+   {
+    "text": "iADIOS A LA INSULINA?",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.764,
+    "id": "o4"
+   },
+   {
+    "text": "Logran revertir Ia diabetes tipo 1y",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.828,
+    "id": "o5"
+   },
+   {
+    "text": "tipo 2 mediante reprogramacion",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.965,
+    "id": "o6"
+   },
+   {
+    "text": "celular. Cientificos chinos logran que",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.897,
+    "id": "o7"
+   },
+   {
+    "text": "pancreas vuelva a funcionar de",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.869,
+    "id": "o8"
+   },
+   {
+    "text": "el",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "forma natural:",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.91,
+    "id": "o10"
+   },
+   {
+    "text": "ENCUESTAS",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o11"
+   },
+   {
+    "text": "REGIONALE",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.786,
+    "id": "o12"
+   },
+   {
+    "text": "NOTICIAS",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.949,
+    "id": "o13"
+   },
+   {
+    "text": "iADIOS A LA INSULINA?",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.723,
+    "id": "o14"
+   },
+   {
+    "text": "Logran revertir Ia diabetes tipo 1y",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.921,
+    "id": "o15"
+   },
+   {
+    "text": "tipo 2 mediante reprogramacion",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.665,
+    "id": "o16"
+   },
+   {
+    "text": "celular. Cientificos chinos logran que",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.903,
+    "id": "o17"
+   },
+   {
+    "text": "el pancreas vuelva a funcionar de",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.815,
+    "id": "o18"
+   },
+   {
+    "text": "forma natural:",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.923,
+    "id": "o19"
+   },
+   {
+    "text": "ENCUESTAS",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o20"
+   },
+   {
+    "text": "REGIONALE",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.765,
+    "id": "o21"
+   },
+   {
+    "text": "NOTICIAS",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.746,
+    "id": "o22"
+   },
+   {
+    "text": "ZADIOS A LA INSULINA?",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.788,
+    "id": "o23"
+   },
+   {
+    "text": "Logran revertir Ia diabetes tipo 1y",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.719,
+    "id": "o24"
+   },
+   {
+    "text": "tipo 2 mediante reprogramacion",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.865,
+    "id": "o25"
+   },
+   {
+    "text": "celular. Cientificos chinos logran que",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.609,
+    "id": "o26"
+   },
+   {
+    "text": "el pancreas vuelva a funcionar de",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.793,
+    "id": "o27"
+   },
+   {
+    "text": "forma natural:",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.924,
+    "id": "o28"
+   }
+  ]
+ }
+}

@@ -1,0 +1,171 @@
+{
+ "video_id": "v173",
+ "filename": "new_youtube_GiUwHNwtlCY.mp4",
+ "relative_path": "new_youtube_GiUwHNwtlCY.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:59",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.997,
+  "duration_seconds": 39.17,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.73,
+    "text": "thinking you're self-happy means I don't have to be in church to be happy thinking"
+   },
+   {
+    "id": "t2",
+    "start": 5.73,
+    "end": 9.37,
+    "text": "myself happy means that when I get up in the morning and I feel the weight of"
+   },
+   {
+    "id": "t3",
+    "start": 9.37,
+    "end": 13.85,
+    "text": "discouragement and depression on me I still can make up my mind I'm gonna be"
+   },
+   {
+    "id": "t4",
+    "start": 13.85,
+    "end": 18.41,
+    "text": "happy today I'm gonna speak to myself I'm not going to I'm not gonna listen to"
+   },
+   {
+    "id": "t5",
+    "start": 18.41,
+    "end": 23.33,
+    "text": "myself anymore because this is talking to me but I refuse to listen to what"
+   },
+   {
+    "id": "t6",
+    "start": 23.33,
+    "end": 29.09,
+    "text": "this is saying and I'm gonna thank myself"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 20,
+  "detections": [
+   {
+    "time": 4.01,
+    "text": "RE",
+    "confidence": 0.748
+   },
+   {
+    "time": 4.01,
+    "text": "Kelly James",
+    "confidence": 0.572
+   },
+   {
+    "time": 8.01,
+    "text": "Kelly James",
+    "confidence": 0.558
+   },
+   {
+    "time": 30.05,
+    "text": "LIFEC H U RC H",
+    "confidence": 0.675
+   },
+   {
+    "time": 30.05,
+    "text": "0F",
+    "confidence": 0.71
+   },
+   {
+    "time": 30.05,
+    "text": "POLC CC",
+    "confidence": 0.561
+   },
+   {
+    "time": 32.05,
+    "text": "POLC CC",
+    "confidence": 0.739
+   },
+   {
+    "time": 34.06,
+    "text": "LIFEC H U R C H",
+    "confidence": 0.829
+   },
+   {
+    "time": 36.06,
+    "text": "POLC CC",
+    "confidence": 0.562
+   },
+   {
+    "time": 38.06,
+    "text": "POLC CC",
+    "confidence": 0.766
+   }
+  ],
+  "captions": [
+   {
+    "text": "RE",
+    "start": 4.01,
+    "end": 4.01,
+    "confidence": 0.748,
+    "id": "o1"
+   },
+   {
+    "text": "Kelly James",
+    "start": 4.01,
+    "end": 8.01,
+    "confidence": 0.572,
+    "id": "o2"
+   },
+   {
+    "text": "LIFEC H U RC H",
+    "start": 30.05,
+    "end": 30.05,
+    "confidence": 0.675,
+    "id": "o3"
+   },
+   {
+    "text": "0F",
+    "start": 30.05,
+    "end": 30.05,
+    "confidence": 0.71,
+    "id": "o4"
+   },
+   {
+    "text": "POLC CC",
+    "start": 30.05,
+    "end": 32.05,
+    "confidence": 0.739,
+    "id": "o5"
+   },
+   {
+    "text": "LIFEC H U R C H",
+    "start": 34.06,
+    "end": 34.06,
+    "confidence": 0.829,
+    "id": "o6"
+   },
+   {
+    "text": "POLC CC",
+    "start": 36.06,
+    "end": 38.06,
+    "confidence": 0.766,
+    "id": "o7"
+   }
+  ]
+ }
+}

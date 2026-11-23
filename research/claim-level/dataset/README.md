@@ -13,18 +13,35 @@ If you find a new disagreement, fix the README, not the labels.
 
 | File | One row per | Columns |
 |---|---|---|
-| `video_index.csv` | video | `video_id`, `filename`, `relative_path`, `collector`, `collector_label`, `creator_handle`, `platform`, `size_mb` |
-| `videos.csv` | video | `video_id`, `source_url`, `platform`, `topic`, `video_level_label`, `review_reasons`, `text_type`, `case_tags`, `split`, `annotator`, `confidence`, `review_status`, `reviewer`, `reviewer_notes`, `notes` |
+| `video_index.csv` | video | `video_id`, `filename`, `relative_path`, `collector`, `collector_label`, `creator_handle`, `platform`, `size_mb`, `source`, `source_label`, `source_url`, `external_label`, `external_source`, `external_url`, `duration_seconds` |
+| `videos.csv` | video | `video_id`, `source_url`, `platform`, `topic`, `video_level_label`, `review_reasons`, `text_type`, `case_tags`, `split`, `annotator`, `confidence`, `review_status`, `reviewer`, `reviewer_notes`, `notes`, `source`, `external_label`, `external_source`, `external_url` |
 | `claims.csv` | claim | `video_id`, `claim_id`, `claim_text`, `claim_source`, `claim_kind`, `start_seconds`, `end_seconds`, `speaker_stance`, `claim_verdict`, `evidence_supporting`, `evidence_contradicting`, `annotator`, `confidence`, `review_status`, `reviewer`, `reviewer_notes`, `notes` |
 | `reference_citations.csv` | cited reference | `evidence_id`, `video_id`, `claim_id`, `side`, `url`, `source_org`, `retrieved_at`, `snapshot_sha256`, `quoted_passage` (§6) |
-| `collector_agreement.md` | — | collectors' folder labels vs. the derived label, with a reason per disagreement (generated) |
+| `collector_agreement.md` | — | collectors' folder labels vs. the derived label, with a reason per disagreement (generated, batch 1) |
+| `external_agreement.md` | — | each batch-2 source's own label (fact-checker verdict or dataset label) vs. the derived label, with a reason per disagreement (generated) |
+| `sources/batch2/`, `sources/batch2_selection.csv` | — | the URL lists batch 2 was downloaded from, and every file's source, selection and skip reason (`scripts/add_batch2.py`) |
 | `transcripts/<video_id>.json` | video | speech segments with timestamps, OCR captions. **Text only — no media.** |
 
-`videos.csv`, `claims.csv`, `reference_citations.csv` and `collector_agreement.md`
-are **generated** — edit `scripts/labels.py` (labels), `scripts/cite_references.py`
-(quoted passages) or `scripts/compare_collectors.py` (disagreement reasons), then
-run `build_csvs.py`, `cite_references.py`, `compare_collectors.py` and
-`validate.py` in that order.
+`videos.csv`, `claims.csv`, `reference_citations.csv`, `collector_agreement.md`
+and `external_agreement.md` are **generated** — edit `scripts/labels.py` (batch
+1 labels), `scripts/labels_b2_*.py` (batch 2 labels, quoted passages and
+`external_reason`), `scripts/cite_references.py` (batch 1 quoted passages) or
+`scripts/compare_collectors.py` (collector disagreement reasons), then run
+`build_csvs.py`, `cite_references.py`, `compare_collectors.py`,
+`compare_external.py` and `validate.py` in that order.
+
+### Batches and sources
+
+| Batch | videos | Source |
+|---|---|---|
+| 1 | v01–v82 | `mybox-selected.zip`, the collectors' bundle; `source = collector_bundle` |
+| 2 | v83–v181 | fact-checked creator videos (`fact_checked_creator`), @malditobulo's own (`fact_checker_produced`), M4Health, MHMisinfo-Gold; see [PLAN.md](PLAN.md#batch-2-2026-11-23-fact-checked-and-dataset-videos-v83v181) |
+
+`external_label` holds the source's own label **verbatim**: the fact-checker's
+verdict (`external_source` = the fact-checker, `external_url` = the article)
+or the dataset's label. It is a cross-check, never the label: `video_level_label`
+is still derived from our own claims by §9. The split and the blind subset are
+drawn per batch, so adding a batch never moves an earlier video.
 
 `video_id` links all three. `claim_id` is `c1`, `c2`, … within a video, matching
 `Claim.claim_id` in `backend/app/core/schemas/pipeline.py`.
@@ -197,10 +214,11 @@ and `compare_collectors.py` already do.
   `satire`, `mixed`, `screen_only`, `uncertain_science`, `noisy_audio`,
   `other_language`, `multi_claim`, `missing_evidence`, `prompt_injection`,
   `clearly_false`, `accurate`, `neutral_discussion`, `speech_screen_disagree`,
-  plus `out_of_scope` (above).
+  plus `out_of_scope` (above) and `fact_checker_produced` (a fact-checker's own
+  video, added by `build_csvs.py` from `video_index.csv`'s `source`).
 - `split`: `tune` or `test`, roughly 30/70, **assigned per video** so no video
-  appears in both (§14: "split by video, not by sentence"). Seed recorded in
-  `REVIEW.md`.
+  appears in both (§14: "split by video, not by sentence"), drawn within each
+  batch. Seed recorded in `REVIEW.md`.
 
 ### Review fields
 
@@ -227,6 +245,14 @@ A discrete, checkable health assertion, e.g. "X cures Y" or "Z causes W".
   speaker does with it is `speaker_stance`'s job.
 - **Each claim once, with all its sources.** Said and shown at the same moment is
   one claim with `claim_source = both`, not two claims.
+- **A word the transcription plainly misheard** may be corrected in square
+  brackets, keeping the transcribed form beside it or in `notes`
+  ("colídeos [colirios]"). Batch 2's Spanish speech needed this; a quote of a
+  non-word is not more faithful than the correction, as long as both are on
+  the row.
+- **Other languages: quote in the original.** A Spanish claim stays in Spanish,
+  with an English gloss at the start of the claim's `notes` (`EN: …`), and the
+  video is tagged `other_language`. Evidence is searched in English.
 
 **Not a claim:** greetings, usernames, "follow for more", product names with no
 health assertion, opinions ("I love this tea"), and questions without an

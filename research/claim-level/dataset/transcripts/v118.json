@@ -1,0 +1,105 @@
+{
+ "video_id": "v118",
+ "filename": "new_TikTok_7215630675687361838.mp4",
+ "relative_path": "new_TikTok_7215630675687361838.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@mikemuellnermd",
+ "extracted_at": "2026-11-23T08:45:56",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 10.24,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.36,
+    "text": "I don't know what this is. We need an urgent dermatology referral. We wait a minute"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 6,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Doctor Reacts",
+    "confidence": 0.765
+   },
+   {
+    "time": 0.0,
+    "text": "MD",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "MD",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "MD",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "MD",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "Those are just",
+    "confidence": 0.928
+   },
+   {
+    "time": 8.0,
+    "text": "glued on beans!",
+    "confidence": 0.613
+   }
+  ],
+  "captions": [
+   {
+    "text": "Doctor Reacts",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.765,
+    "id": "o1"
+   },
+   {
+    "text": "MD",
+    "start": 0.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o2"
+   },
+   {
+    "text": "Those are just",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.928,
+    "id": "o3"
+   },
+   {
+    "text": "glued on beans!",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.613,
+    "id": "o4"
+   }
+  ]
+ }
+}

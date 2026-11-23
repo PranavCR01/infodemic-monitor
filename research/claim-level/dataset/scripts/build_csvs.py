@@ -23,6 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from judge import (judge, is_mixed, has_true_and_false,  # noqa: E402
                    review_reasons, CLAIM_KINDS)
 import enrich                              # noqa: E402
+from blind_subset import batch_of          # noqa: E402
 from labels import LABELS, ANNOTATOR       # noqa: E402
 
 DATASET = Path(__file__).resolve().parents[1]
@@ -36,7 +37,12 @@ TEST_FRACTION = 0.70           # section 14: roughly 30/70 tune/test, per video
 VIDEO_COLS = ["video_id", "source_url", "platform", "topic",
               "video_level_label", "review_reasons", "text_type", "case_tags", "split",
               "annotator", "confidence", "review_status", "reviewer",
-              "reviewer_notes", "notes"]
+              "reviewer_notes", "notes", "source", "external_label",
+              "external_source", "external_url"]
+
+# Carried over from video_index.csv. external_label is the source's own label,
+# verbatim: the fact-checker's verdict, or the dataset's label (batch 2).
+EXTERNAL_COLS = ("source", "external_label", "external_source", "external_url")
 
 CLAIM_COLS = ["video_id", "claim_id", "claim_text", "claim_source",
               "claim_kind",
@@ -53,14 +59,20 @@ def load_index():
 
 def assign_splits(video_ids):
     """Deterministic per-video tune/test assignment (section 14: split by video,
-    never by sentence, so no video appears in both)."""
-    ids = sorted(video_ids)
-    rng = random.Random(SPLIT_SEED)
-    shuffled = ids[:]
-    rng.shuffle(shuffled)
-    n_test = round(len(shuffled) * TEST_FRACTION)
-    test = set(shuffled[:n_test])
-    return {v: ("test" if v in test else "tune") for v in ids}
+    never by sentence, so no video appears in both).
+
+    Each batch is split on its own with the same seed, so adding a batch
+    never moves a video that is already in tune or test."""
+    out = {}
+    for batch in sorted({batch_of(v) for v in video_ids}):
+        ids = sorted(v for v in video_ids if batch_of(v) == batch)
+        rng = random.Random(SPLIT_SEED)
+        shuffled = ids[:]
+        rng.shuffle(shuffled)
+        n_test = round(len(shuffled) * TEST_FRACTION)
+        test = set(shuffled[:n_test])
+        out.update({v: ("test" if v in test else "tune") for v in ids})
+    return out
 
 
 def join(values):
@@ -138,6 +150,10 @@ def main():
             tags = ["out_of_scope"]
         elif not judged and "no_claims" not in tags:
             tags.append("no_claims")
+        if (index[vid].get("source") == "fact_checker_produced"
+                and not out_of_scope
+                and "fact_checker_produced" not in tags):
+            tags.append("fact_checker_produced")
         if len(judged) > 1 and "multi_claim" not in tags:
             tags.append("multi_claim")
         if len(judged) == 1 and "single_claim" not in tags:
@@ -170,10 +186,11 @@ def main():
             "reviewer": "",
             "reviewer_notes": "",
             "notes": v.get("notes", ""),
+            **{c: idx.get(c, "") for c in EXTERNAL_COLS},
         })
 
-    video_rows.sort(key=lambda r: r["video_id"])
-    claim_rows.sort(key=lambda r: (r["video_id"],
+    video_rows.sort(key=lambda r: int(r["video_id"][1:]))
+    claim_rows.sort(key=lambda r: (int(r["video_id"][1:]),
                                    int(r["claim_id"].lstrip("c"))))
 
     if args.check:

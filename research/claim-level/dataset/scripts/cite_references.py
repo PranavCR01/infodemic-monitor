@@ -94,7 +94,8 @@ def evidence_id(url):
 
 def main():
     rows, problems = [], []
-    for vid, cid, side, url, passage in CITATIONS:
+    from labels_batch2 import CITATIONS as batch2
+    for vid, cid, side, url, passage in CITATIONS + batch2:
         rec = load_reference(url)
         if not rec or not rec.get("ok"):
             problems.append("%s/%s: %s was never retrieved" % (vid, cid, url))

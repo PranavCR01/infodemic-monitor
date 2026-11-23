@@ -21,6 +21,9 @@ Checks, per docs/target-system-design.md section 10 and the dataset README:
  10. out_of_scope videos (section 14) have no claims and no other tag, and are
      left out of every count this script reports
  11. every collector-label disagreement has a written reason
+ 12. every video in video_index.csv is labelled; batch 2's source columns
+     match video_index.csv; every disagreement with a source's own label
+     (compare_external.py) has a written reason
 
 Exit code is non-zero if anything fails, so this can gate a commit.
 """
@@ -44,6 +47,7 @@ from judge import (judge, is_mixed, has_true_and_false,  # noqa: E402
 from evidence import (load_reference, snapshot_text,  # noqa: E402
                       passage_found, reference_org)
 import compare_collectors  # noqa: E402
+import compare_external  # noqa: E402
 
 DATASET = Path(__file__).resolve().parents[1]
 VIDEOS_CSV = DATASET / "videos.csv"
@@ -64,7 +68,7 @@ CASE_TAGS = {
     "noisy_audio", "other_language", "multi_claim", "missing_evidence",
     "prompt_injection", "clearly_false", "accurate", "neutral_discussion",
     "speech_screen_disagree", "no_claims", "single_claim",
-    "true_and_false", "out_of_scope",
+    "true_and_false", "out_of_scope", "fact_checker_produced",
 }
 OUT_OF_SCOPE = "out_of_scope"
 
@@ -160,10 +164,20 @@ def main():
         videos = list(csv.DictReader(f))
     with open(CLAIMS_CSV, encoding="utf-8-sig", newline="") as f:
         claims = list(csv.DictReader(f))
-    index_ids = set()
+    index_ids, index = set(), {}
     if INDEX_CSV.exists():
         with open(INDEX_CSV, encoding="utf-8-sig", newline="") as f:
-            index_ids = {r["video_id"] for r in csv.DictReader(f)}
+            index = {r["video_id"]: r for r in csv.DictReader(f)}
+        index_ids = set(index)
+    for vid in sorted(index_ids - {v["video_id"] for v in videos},
+                      key=lambda v: int(v[1:])):
+        err("%s: in video_index.csv but not labelled in videos.csv" % vid)
+    for v in videos:
+        for col in compare_external_cols():
+            if index and v.get(col, "") != index.get(v["video_id"], {}).get(
+                    col, ""):
+                err("%s: %s differs from video_index.csv" % (v["video_id"],
+                                                            col))
 
     retrieved_pmids, retrieved_urls = load_retrieved_ids()
     judge_self_test()
@@ -328,6 +342,8 @@ def main():
     # ---- collector comparison -------------------------------------------
     for p in compare_collectors.check(compare_collectors.load()):
         err(p)
+    for p in compare_external.check(compare_external.load()):
+        err(p)
 
     # ---- coverage ------------------------------------------------------
     # Section 14: out_of_scope videos are left out of every count and metric.
@@ -337,6 +353,10 @@ def main():
     scoped_ids = {v["video_id"] for v in scoped}
     report(scoped, [c for c in claims if c["video_id"] in scoped_ids],
            by_video, excluded)
+
+
+def compare_external_cols():
+    return ("source", "external_label", "external_source", "external_url")
 
 
 def check_reference_citations(claims):
