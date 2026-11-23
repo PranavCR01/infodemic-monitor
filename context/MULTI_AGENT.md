@@ -1244,6 +1244,38 @@ cloud hosts and the NCBI Bookshelf website serves a reCAPTCHA. Code:
 - **`backend/*.egg-info`** is no longer tracked (it was committed before the `*.egg-info/`
   ignore rule existed). Eleven `__pycache__/*.pyc` files are still tracked the same way and
   get dirtied by any local test run; left for a follow-up since T23 only covered egg-info.
+## 7s. Judge Cross-Check Against the Golden Set (T24, no issue; design §9, §14)
+
+- **What is compared.** The backend judge (`judge.decide`, then the review rule
+  `review_policy.evaluate`) and the golden set's own `scripts/judge.py` (`judge`,
+  `review_reasons`, branch `data/golden-label-set` @ 45244b0) on the same claim-level
+  inputs: recorded stance, verdict and cited evidence IDs. No model calls.
+  Code: `backend/app/evaluation/judge_crosscheck.py`; script
+  `backend/scripts/judge_crosscheck.py` (reads the branch with `git show`, never checks it
+  out); test `app/tests/test_judge_crosscheck.py`.
+- **Offline fixture.** The golden `judge.py` is vendored verbatim
+  (`app/tests/fixtures/golden_judge/judge.py`, git blob sha checked by the test) with a
+  claim-level JSON fixture (no claim text, transcripts or media). A freshness test
+  compares it with the branch commit when that commit is available locally and skips
+  otherwise. Regenerate with `--write-fixture`.
+- **One reason vocabulary.** Both sides' review reasons are mapped to
+  `<kind>[:<claim_id>]` (table in the module docstring). Backend reasons whose signals a
+  hand-labelled set can't carry (critic, validation, budget, calibrated confidence, study
+  type, high-risk category, guardrails) are left out of the comparison.
+- **Result.** Same video label on 82/82 videos (66 in scope, 16 out_of_scope) and the
+  same deciding claims on 66/66. Review reasons agree exactly on 48/66; the 18 others
+  differ in four classified kinds, all on review reasons only. Three match §9/§11 on the
+  backend side (reasons collected from every claim, MIXED as a trigger on any claim, no
+  `deciding or claims` fallback for UNCLEAR/conflict); one (`weak_evidence` on
+  non-deciding uncertain claims in the possible-debunk case) is a documented backend
+  extension that §11 doesn't state, left for the project lead. The backend never drops a
+  review the golden judge asks for. **No backend change**: nothing in it contradicts §9.
+- **Why the golden judge differs.** It transcribes §9's pseudocode, whose third return
+  value holds only the deciding rule's reason; §9's prose says reasons are
+  collected from every claim and mixed videos are always reviewed. The pseudocode and prose
+  in §9 should be reconciled by a person (not edited here).
+- The test pins the difference counts per kind, so a change to either judge that adds or
+  removes a difference fails until it's reclassified.
 ## 7r. Severity for Review Priority (T22, no issue; design §11, §12)
 
 Built by the automated build on 2026-11-23 (project lead's decision). Severity orders the
@@ -1318,6 +1350,13 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   fresh Python 3.11 env with Postgres 16 + pgvector: 952 passed, 0 skipped (was 945 passed,
   7 skipped without the services). Decisions in §7t.
 
+- **2026-11-23**: T24 (no issue; design §9, §14) judge cross-check by the automated
+  build. Backend judge vs the golden set's independently written judge on all 82 golden
+  videos (248 claims): labels 82/82 and deciding claims 66/66 agree; review reasons agree
+  exactly on 48/66, the rest are four classified review-reason differences (three where
+  the backend matches §9, one backend extension for a person to decide). No backend
+  change, no model calls. Golden-set judge differences listed in the PR for the branch
+  owner. Decisions in §7s.
 - **2026-11-23**: T22 (no issue; design §11, §12) by the automated build: severity for
   review priority. Draft table in `config/severity.yaml` (categories seeded from T09's
   high-risk list + text topics), video severity = highest among MISINFO-relevant claims,
