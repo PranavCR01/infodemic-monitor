@@ -1224,7 +1224,7 @@ cloud hosts and the NCBI Bookshelf website serves a reCAPTCHA. Code:
   only on the server; check in Supabase. (5) `app.main` imports the async health check,
   which needs `greenlet` (not in requirements; tests mount the video routers alone).
 
-## 7r. Backend CI (T23, no issue; design §14, §16)
+## 7t. Backend CI (T23, no issue; design §14, §16)
 
 - **Workflow:** `.github/workflows/backend-tests.yml` runs `python -m pytest` in `backend/` on
   every PR to `langgraph-build` and `main` (plus manual `workflow_dispatch`). Python 3.11 to
@@ -1270,7 +1270,7 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   GitHub Actions on PRs to `langgraph-build`/`main` with a pgvector Postgres service, Redis
   and OCR tools, failing on any skipped test; `backend/*.egg-info` untracked. Locally on a
   fresh Python 3.11 env with Postgres 16 + pgvector: 952 passed, 0 skipped (was 945 passed,
-  7 skipped without the services). Decisions in §7r.
+  7 skipped without the services). Decisions in §7t.
 
 - **2026-11-23**: T19 (no issue; design §6) production reference retrieval by the
   automated build. Bookshelf now goes through E-utilities only (ESearch/EFetch on
