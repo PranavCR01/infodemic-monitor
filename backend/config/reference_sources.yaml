@@ -6,10 +6,17 @@
 # source, and there is no general web search. Every catalogue URL must sit on its
 # source's allowed hosts and path prefixes, or the config fails to load.
 #
-# STATUS: starting values. The catalogue URLs were written from the publishers'
-# public site structure and have NOT been fetched from the build environment (no
-# outbound access there). A person should open each one, fix any that moved, and
-# grow the catalogue from the golden-set claims (context/MULTI_AGENT.md §7n).
+# STATUS: starting values (context/MULTI_AGENT.md §7n). T18 fetched WHO, FDA, EFSA,
+# NHS and Bookshelf live. Grow the catalogue from the golden-set claims.
+#
+# retrieval (T19, §7p): "live" pages are fetched at claim time. "stored" pages belong
+# to publishers that block scripted requests (www.cdc.gov answers 403 to cloud hosts):
+# claims read the current version from data/reference_snapshots/ (committed, versioned,
+# cited by snapshot hash) and never request the page. Refresh them with
+#   python scripts/refresh_reference_snapshots.py            # fetch every stored page
+#   python scripts/refresh_reference_snapshots.py --check    # verify, show ages
+# or, where the publisher refuses the script too, save the page from a browser and
+#   python scripts/refresh_reference_snapshots.py --import cdc_child_schedule=page.html
 version: references_v1
 
 # Records per claim taken from references before the reranker (which still caps a
@@ -28,13 +35,20 @@ timeout_seconds: 10
 max_response_bytes: 3000000
 # Fetched pages are cached this long; the snapshot keeps the exact text cited.
 cache_ttl_seconds: 86400
+# A stored snapshot older than this is still cited (with its capture date) but
+# reported as stale on every use, so someone re-runs the refresh script.
+stored_snapshot_max_age_days: 180
 
 sources:
   - id: ncbi_bookshelf
     name: NCBI Bookshelf
     publisher: NCBI (U.S. National Library of Medicine)
     covers: [physiology, medical_fact]
-    backend: bookshelf          # E-utilities ESearch/ESummary on db=books, then the book page
+    # E-utilities only: ESearch db=pubmed with booksdocs[filter], then EFetch db=pubmed
+    # (PubmedBookArticle: accession, title, chapter summary). The www.ncbi.nlm.nih.gov
+    # /books/ page is the citation link only and is never fetched (it serves a
+    # reCAPTCHA to scripts); efetch on db=books returns no text (T19).
+    backend: bookshelf
     allowed_hosts: [eutils.ncbi.nlm.nih.gov, www.ncbi.nlm.nih.gov]
     allowed_path_prefixes: [/entrez/eutils/, /books/]
     max_results: 3
@@ -43,6 +57,7 @@ sources:
     publisher: CDC
     covers: [vaccination_schedule, guidance, statistic]
     backend: catalogue
+    retrieval: stored           # www.cdc.gov blocks scripted requests (Akamai 403)
     allowed_hosts: [www.cdc.gov]
     allowed_path_prefixes: [/]
   - id: who
@@ -103,6 +118,11 @@ catalogue:
     title: Child and Adolescent Immunization Schedule by Age
     url: https://www.cdc.gov/vaccines/hcp/imz-schedules/child-adolescent-age.html
     keywords: [vaccine schedule, vaccination schedule, immunization schedule, mmr, measles vaccine, dtap, hepatitis b vaccine, polio vaccine, months old, doses]
+  - id: cdc_adult_schedule
+    source: cdc
+    title: Adult Immunization Schedule by Age
+    url: https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-age.html
+    keywords: [adult vaccine schedule, adult vaccination schedule, adult immunization schedule, shingles vaccine, zoster vaccine, pneumococcal vaccine, tdap booster, td booster]
   - id: cdc_measles_vaccine
     source: cdc
     title: Measles Vaccination

@@ -9,6 +9,7 @@ from __future__ import annotations
 import hashlib
 import re
 import socket
+from datetime import datetime, timezone
 from types import SimpleNamespace
 
 import httpx
@@ -26,11 +27,13 @@ from app.core.retrieval.references import (
     InMemorySnapshotStore,
     ReferenceFetchError,
     SnapshotMismatch,
+    StoredSnapshots,
     best_passage,
     html_to_text,
     is_reference_evidence_id,
     load_reference_config,
     match_catalogue,
+    parse_book_chapters,
     reference_evidence_id,
     text_sha256,
     url_allowed,
@@ -42,7 +45,7 @@ from app.core.retrieval.retriever import EvidenceRetriever
 from app.core.retrieval.schemas import EvidenceRecord
 from app.core.schemas.pipeline import MisinfoLabel
 from app.tests.pubmed_fixtures import RecordedPubMed
-from app.tests.reference_fixtures import RecordedReferences
+from app.tests.reference_fixtures import EUTILS, STORED_AT, RecordedReferences, build_stored_archive
 from app.tests.test_graph_integration import BACKEND, FakeSingleCall, ScriptedClient, _db, _job, default_script, make_router
 
 MMR = "Children only need one dose of the MMR vaccine, at 10 years old."
@@ -126,9 +129,17 @@ def test_fetcher_does_not_follow_redirects(cfg):
     assert e.value.kind == "http" and len(rec.requests) == 1
 
 
+def _serve_fixture(rec: RecordedReferences, url: str, name: str) -> None:
+    """Serve a fixture page at ``url`` (the fake www.cdc.gov otherwise answers 403)."""
+    html = (BACKEND / "app/tests/fixtures/references" / name).read_text()
+    rec.overrides[url] = lambda req: httpx.Response(200, text=html, request=req,
+                                                    headers={"content-type": "text/html"})
+
+
 def test_fetcher_caps_body_and_checks_content_type(cfg):
     small = cfg.model_copy(update={"max_response_bytes": 100})
     rec = RecordedReferences()
+    _serve_fixture(rec, SCHEDULE_URL, "cdc_child_schedule.html")
     with pytest.raises(ReferenceFetchError) as e:
         rec.fetcher(small).fetch(SCHEDULE_URL, small.source("cdc"))
     assert e.value.kind == "too_large"
@@ -148,7 +159,9 @@ def test_html_to_text_drops_scripts_navigation_and_footer():
 
 
 def test_fetched_page_hash_is_of_the_text(cfg):
-    page = RecordedReferences().fetcher(cfg).fetch(SCHEDULE_URL, cfg.source("cdc"))
+    rec = RecordedReferences()
+    _serve_fixture(rec, SCHEDULE_URL, "cdc_child_schedule.html")
+    page = rec.fetcher(cfg).fetch(SCHEDULE_URL, cfg.source("cdc"))
     assert page.sha256 == hashlib.sha256(page.text.encode()).hexdigest()
     assert "ignore me" not in page.text and "menu" not in page.text  # script and nav dropped
     assert page.retrieved_at == "2026-11-22T12:00:00+00:00"
@@ -189,10 +202,11 @@ def test_reference_records_are_cited_like_papers(cfg):
     by_url = {x.source_url: x for x in found.records}
     ref = by_url[SCHEDULE_URL]
     assert ref.source == "reference" and is_reference_evidence_id(ref.evidence_id)
-    assert ref.publisher == "CDC" and ref.retrieved_at == "2026-11-22T12:00:00+00:00"
+    # CDC is a stored page: the capture date of the stored version, not "now"
+    assert ref.publisher == "CDC" and ref.retrieved_at == STORED_AT
     assert "first dose at 12 through 15 months" in ref.abstract
     assert ref.publication_type == ["Authoritative Reference"] and ref.pmid is None
-    # the snapshot holds the full fetched text, under the hash the record carries
+    # the snapshot holds the full text, under the hash the record carries
     snap = snaps.get(ref.snapshot_sha256)
     assert snap is not None and snap.url == SCHEDULE_URL and ref.abstract in snap.text
     assert text_sha256(snap.text) == ref.snapshot_sha256
@@ -200,62 +214,209 @@ def test_reference_records_are_cited_like_papers(cfg):
     assert ref.evidence_id == reference_evidence_id(SCHEDULE_URL, ref.snapshot_sha256, ref.abstract)
     again = RecordedReferences(books=False).searcher(cfg).search(MMR)
     assert {x.evidence_id for x in again.records} == {x.evidence_id for x in found.records}
-    # only catalogue pages were fetched, nothing outside the allow-list
-    assert all(url_allowed(str(q.url).split("?")[0], cfg.source("cdc")) for q in rec.requests
-               if "cdc.gov" in str(q.url))
+    # www.cdc.gov was never requested (it answers 403 to scripts in production)
+    assert rec.blocked_requests == [] and found.stored_pages == 2
 
 
-def test_a_changed_page_gets_a_new_id_and_a_new_snapshot(cfg):
+def test_a_changed_page_gets_a_new_id_and_a_new_snapshot(cfg, tmp_path):
     snaps = InMemorySnapshotStore()
-    first = RecordedReferences(books=False).searcher(cfg, snapshots=snaps).search(MMR)
-    rec = RecordedReferences(books=False)
-    html = (BACKEND / "app/tests/fixtures/references/cdc_child_schedule.html").read_text()
-    rec.overrides[SCHEDULE_URL] = lambda req: httpx.Response(
-        200, text=html.replace("4 through 6 years", "4 through 7 years"), request=req,
-        headers={"content-type": "text/html"})
-    second = rec.searcher(cfg, snapshots=snaps).search(MMR)
+    archive = build_stored_archive(cfg, tmp_path)
+    first = RecordedReferences(books=False).searcher(cfg, snapshots=snaps, stored=archive).search(MMR)
     a = next(x for x in first.records if x.source_url == SCHEDULE_URL)
+    # the refresh script stores a new version of the publisher's page
+    old = archive.current("cdc_child_schedule")
+    text = old.text.replace("4 through 6 years", "4 through 7 years")
+    archive.add("cdc_child_schedule", FetchedPage(SCHEDULE_URL, old.title, text, text_sha256(text),
+                                                  "2026-11-23T09:00:00+00:00"))
+    second = RecordedReferences(books=False).searcher(cfg, snapshots=snaps, stored=archive).search(MMR)
     b = next(x for x in second.records if x.source_url == SCHEDULE_URL)
     assert a.snapshot_sha256 != b.snapshot_sha256 and a.evidence_id != b.evidence_id
+    assert b.snapshot_sha256 == text_sha256(text) and b.retrieved_at == "2026-11-23T09:00:00+00:00"
     assert snaps.get(a.snapshot_sha256) and snaps.get(b.snapshot_sha256)  # both versions kept
+    assert [v["sha256"] for v in archive.history("cdc_child_schedule")] == [a.snapshot_sha256, b.snapshot_sha256]
+    # rolling back restores the old version, and with it the old ID
+    archive.set_current("cdc_child_schedule", a.snapshot_sha256)
+    third = RecordedReferences(books=False).searcher(cfg, stored=archive).search(MMR)
+    assert a.evidence_id in {x.evidence_id for x in third.records}
+
+
+CAFFEINE = "Adults can safely have up to 400 mg of caffeine a day."
+FDA_URL = "https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much"
 
 
 def test_fetched_pages_are_cached(cfg):
     rec = RecordedReferences(books=False)
     searcher = rec.searcher(cfg)
-    searcher.search(MMR)
-    n = rec.calls[SCHEDULE_URL]
-    searcher.search(MMR)
-    assert n == 1 and rec.calls[SCHEDULE_URL] == 1  # served from the cache (failures are not cached)
+    first = searcher.search(CAFFEINE)
+    assert any(x.source_url == FDA_URL for x in first.records)
+    searcher.search(CAFFEINE)
+    assert rec.calls[FDA_URL] == 1  # served from the cache (failures are not cached)
 
 
 def test_one_dead_page_does_not_stop_the_others(cfg):
     rec = RecordedReferences(books=False)
-    rec.overrides[SCHEDULE_URL] = httpx.ConnectError("down")
-    found = rec.searcher(cfg).search(MMR)
-    assert found.errors and "cdc_child_schedule" in found.errors[0]
-    assert found.records and all(x.source_url != SCHEDULE_URL for x in found.records)
+    rec.overrides[FDA_URL] = httpx.ConnectError("down")
+    found = rec.searcher(cfg).search(CAFFEINE + " That is about four cups of coffee, says the FDA.")
+    assert any("fda_caffeine" in e for e in found.errors)
+    assert all(x.source_url != FDA_URL for x in found.records)
 
 
-def test_bookshelf_search_through_eutils(cfg):
+def test_a_missing_stored_snapshot_is_an_error_and_never_a_request(cfg, tmp_path):
+    rec = RecordedReferences(books=False)
+    empty = StoredSnapshots(tmp_path / "empty")
+    found = rec.searcher(cfg, stored=empty).search(MMR)
+    errs = " ".join(found.errors)
+    assert "cdc_child_schedule: no stored snapshot" in errs and "refresh_reference_snapshots" in errs
+    assert all("cdc.gov" not in (x.source_url or "") for x in found.records)
+    assert rec.blocked_requests == []
+
+
+def test_a_stale_stored_snapshot_is_cited_and_reported(cfg, tmp_path):
+    archive = build_stored_archive(cfg, tmp_path, retrieved_at="2026-01-01T00:00:00+00:00")
+    now = lambda: datetime(2026, 11, 23, tzinfo=timezone.utc)  # noqa: E731
+    found = RecordedReferences(books=False).searcher(cfg, stored=archive, now=now).search(MMR)
+    assert any(x.source_url == SCHEDULE_URL for x in found.records)  # still evidence, dated
+    assert any("cdc_child_schedule" in e and "stale" in e for e in found.errors)
+    fresh = RecordedReferences(books=False).searcher(
+        cfg, stored=build_stored_archive(cfg, tmp_path / "fresh", retrieved_at="2026-11-01T00:00:00+00:00"),
+        now=now).search(MMR)
+    assert not any("stale" in e for e in fresh.errors)
+
+
+def test_a_stored_snapshot_for_another_url_is_not_cited(cfg, tmp_path):
+    archive = build_stored_archive(cfg, tmp_path)
+    moved = cfg.model_copy(update={"catalogue": tuple(
+        p.model_copy(update={"url": "https://www.cdc.gov/vaccines/moved.html"}) if p.id == "cdc_child_schedule" else p
+        for p in cfg.catalogue)})
+    found = RecordedReferences(books=False).searcher(moved, stored=archive).search(MMR)
+    assert any("cdc_child_schedule" in e and "not the catalogue URL" in e for e in found.errors)
+    assert all("child-adolescent" not in (x.source_url or "") for x in found.records)
+
+
+def test_a_tampered_stored_snapshot_is_refused(cfg, tmp_path):
+    archive = build_stored_archive(cfg, tmp_path)
+    sha = archive.current_sha("cdc_child_schedule")
+    path = tmp_path / "cdc_child_schedule" / f"{sha}.json"
+    path.write_text(path.read_text().replace("12 through 15 months", "10 years"))
+    found = RecordedReferences(books=False).searcher(cfg, stored=archive).search(MMR)
+    assert any("cdc_child_schedule" in e and "does not match its hash" in e for e in found.errors)
+    assert all(x.source_url != SCHEDULE_URL for x in found.records)
+    assert archive.verify()  # and the archive check reports it
+
+
+BODY_TEMP = "Normal body temperature is 37 degrees Celsius"
+
+
+def test_bookshelf_search_through_eutils_never_the_website(cfg):
     rec = RecordedReferences()
-    found = rec.searcher(cfg).search("Normal body temperature is 37 degrees Celsius")
+    found = rec.searcher(cfg).search(BODY_TEMP)
     books = [x for x in found.records if "ncbi.nlm.nih.gov/books" in (x.source_url or "")]
-    assert len(books) == 1
-    b = books[0]
-    assert b.source_url == "https://www.ncbi.nlm.nih.gov/books/NBK000001/"
-    assert b.title == "Physiology, Body Temperature (synthetic fixture) (StatPearls)"
-    assert "37 degrees Celsius" in b.abstract and b.publisher.startswith("NCBI")
-    # the malformed accession was never turned into a URL
-    assert not any("evil" in str(q.url) for q in rec.requests)
-    assert found.candidates.count("NBK000001") == 1
+    fever = next(b for b in books if b.source_url == "https://www.ncbi.nlm.nih.gov/books/NBK562334/")
+    assert fever.title == "Physiology, Fever (StatPearls)"
+    assert "approximately 37 degrees Celsius" in fever.abstract and fever.publisher.startswith("NCBI")
+    assert is_reference_evidence_id(fever.evidence_id) and fever.query == "bookshelf:normal body temperature degrees celsius"
+    assert found.candidates.count("NBK562334") == 1
+    # only E-utilities: ESearch + EFetch on db=pubmed, never the reCAPTCHA'd book page
+    urls = [str(q.url).split("?")[0] for q in rec.requests]
+    assert urls == [f"{EUTILS}/esearch.fcgi", f"{EUTILS}/efetch.fcgi"] and rec.blocked_requests == []
+    assert rec.requests[0].url.params["sort"] == "relevance"
+    assert rec.requests[0].url.params["tool"] == "who_infodemic_monitor"
+    # the accession is the document's own, not one from its reference list
+    assert all(re.fullmatch(r"https://www\.ncbi\.nlm\.nih\.gov/books/NBK\d+/", b.source_url) for b in books)
+
+
+def test_bookshelf_chapters_are_cached_and_snapshotted(cfg):
+    rec = RecordedReferences()
+    snaps = InMemorySnapshotStore()
+    searcher = rec.searcher(cfg, snapshots=snaps)
+    a = searcher.search(BODY_TEMP)
+    b = searcher.search(BODY_TEMP)
+    assert len(rec.requests) == 2  # second search served from the cache
+    assert [x.evidence_id for x in a.records] == [x.evidence_id for x in b.records]
+    for rec_ in a.records:
+        snap = snaps.get(rec_.snapshot_sha256)
+        assert snap is not None and rec_.abstract in snap.text and snap.url == rec_.source_url
+
+
+def test_bookshelf_api_key_is_sent_when_configured(cfg):
+    rec = RecordedReferences()
+    rec.searcher(cfg, api_key="test-key").search(BODY_TEMP)
+    assert all(q.url.params.get("api_key") == "test-key" for q in rec.requests)
+    rec2 = RecordedReferences()
+    rec2.searcher(cfg).search(BODY_TEMP)
+    assert all("api_key" not in q.url.params for q in rec2.requests)
+
+
+def test_bookshelf_retries_ncbi_rate_limit_then_succeeds(cfg):
+    rec = RecordedReferences()
+    replies = iter([httpx.Response(429, json={"error": "API rate limit exceeded"})])
+    original = rec.handler
+
+    def flaky(request):
+        if "esearch" in str(request.url):
+            nxt = next(replies, None)
+            if nxt is not None:
+                rec.requests.append(request)
+                return httpx.Response(nxt.status_code, content=nxt.content, request=request)
+        return original(request)
+
+    rec.handler = flaky  # type: ignore[method-assign]
+    slept: list[float] = []
+    found = rec.searcher(cfg, sleep=slept.append).search(BODY_TEMP)
+    assert slept == [0.5] and any("NBK562334" in (x.source_url or "") for x in found.records)
+
+
+def test_bookshelf_gives_up_after_the_retry_budget(cfg):
+    rec = RecordedReferences()
+    rec.overrides[f"{EUTILS}/esearch.fcgi"] = lambda req: httpx.Response(503, request=req)
+    found = rec.searcher(cfg, eutils_attempts=2).search(BODY_TEMP)
+    assert rec.calls[f"{EUTILS}/esearch.fcgi"] == 2
+    assert any("ncbi_bookshelf search" in e and "503" in e for e in found.errors) and not found.records
+
+
+def test_bookshelf_error_reply_is_an_error(cfg):
+    rec = RecordedReferences()
+    rec.overrides[f"{EUTILS}/esearch.fcgi"] = lambda req: httpx.Response(
+        200, json={"esearchresult": {"ERROR": "Invalid query"}}, request=req)
+    found = rec.searcher(cfg).search(BODY_TEMP)
+    assert any("Invalid query" in e for e in found.errors)
+
+
+def test_parse_book_chapters_checks_accessions_and_needs_text():
+    xml = """<PubmedArticleSet>
+      <PubmedBookArticle><BookDocument><PMID>1</PMID>
+        <ArticleIdList><ArticleId IdType="bookaccession">https://evil.example/x</ArticleId></ArticleIdList>
+        <ArticleTitle>Bad accession</ArticleTitle>
+        <Abstract><AbstractText>Normal body temperature text.</AbstractText></Abstract></BookDocument>
+      </PubmedBookArticle>
+      <PubmedBookArticle><BookDocument><PMID>2</PMID>
+        <ArticleIdList><ArticleId IdType="bookaccession">NBK2</ArticleId></ArticleIdList>
+        <ArticleTitle>No summary</ArticleTitle></BookDocument>
+      </PubmedBookArticle>
+      <PubmedBookArticle><BookDocument><PMID>3</PMID>
+        <ArticleIdList><ArticleId IdType="bookaccession">NBK3</ArticleId></ArticleIdList>
+        <Book><BookTitle>GeneReviews</BookTitle></Book><ArticleTitle>Good <i>one</i></ArticleTitle>
+        <Abstract><AbstractText Label="SUMMARY">First <b>part</b>.</AbstractText>
+          <AbstractText Label="DIAGNOSIS">Second part.</AbstractText></Abstract>
+        <ReferenceList><Reference><ArticleIdList><ArticleId IdType="bookaccession">NBK999</ArticleId>
+        </ArticleIdList></Reference></ReferenceList></BookDocument>
+      </PubmedBookArticle>
+      <PubmedArticle><MedlineCitation><PMID>4</PMID></MedlineCitation></PubmedArticle>
+    </PubmedArticleSet>"""
+    chapters = parse_book_chapters(xml)
+    assert [c.pmid for c in chapters] == ["3"]
+    c = chapters[0]
+    assert c.accession == "NBK3" and c.citation_title == "Good one (GeneReviews)"
+    assert c.text == "SUMMARY: First part.\n\nDIAGNOSIS: Second part."
+    with pytest.raises(ReferenceFetchError):
+        parse_book_chapters("<not xml")
 
 
 def test_off_topic_pages_give_no_record(cfg):
-    # The Bookshelf fixture answers every search with the body-temperature chapter: it is
-    # fetched (and snapshotted) but shares no words with this claim, so nothing is quoted.
+    # The recorded Bookshelf reply answers every search with the same two chapters; they
+    # are fetched (and snapshotted) but share too few words with this claim to be quoted.
     found = RecordedReferences().searcher(cfg).search("Garlic cures warts")
-    assert found.pages_fetched == 1 and found.records == [] and not found.errors
+    assert found.pages_fetched == 2 and found.records == [] and not found.errors
 
 
 def test_snapshot_store_rejects_text_that_does_not_match_its_hash():

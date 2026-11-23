@@ -31,9 +31,14 @@ class ReferenceSource(_Cfg):
     allowed_hosts: tuple[str, ...] = Field(min_length=1)
     allowed_path_prefixes: tuple[str, ...] = ("/",)
     max_results: int = Field(default=3, ge=1, le=10)  # bookshelf only
+    # "live": fetched at claim time. "stored": the publisher blocks scripted requests, so
+    # claims read the current stored snapshot (``stored.py``), refreshed by a script (T19).
+    retrieval: Literal["live", "stored"] = "live"
 
     @model_validator(mode="after")
     def _plain_hosts(self) -> "ReferenceSource":
+        if self.backend == "bookshelf" and self.retrieval != "live":
+            raise ValueError(f"source {self.id}: a bookshelf source is searched live through E-utilities")
         for h in self.allowed_hosts:
             if h != h.lower() or "*" in h or "/" in h or ":" in h or not h:
                 raise ValueError(f"source {self.id}: host {h!r} must be an exact lower-case hostname")
@@ -49,6 +54,8 @@ class CataloguePage(_Cfg):
     title: str
     url: str
     keywords: tuple[str, ...] = Field(min_length=1)
+    # Overrides the source's ``retrieval`` for this page; None inherits it.
+    retrieval: Optional[Literal["live", "stored"]] = None
 
 
 class ReferenceConfig(_Cfg):
@@ -61,6 +68,9 @@ class ReferenceConfig(_Cfg):
     timeout_seconds: float = Field(default=10.0, gt=0, le=60)
     max_response_bytes: int = Field(default=3_000_000, gt=0, le=10_000_000)
     cache_ttl_seconds: int = Field(default=86_400, ge=0)
+    # A stored snapshot older than this is still cited (its capture date is on the
+    # record) but reported as stale, so someone re-runs the refresh script.
+    stored_snapshot_max_age_days: int = Field(default=180, ge=1)
     sources: tuple[ReferenceSource, ...] = ()
     catalogue: tuple[CataloguePage, ...] = ()
 
@@ -82,6 +92,19 @@ class ReferenceConfig(_Cfg):
             if not url_allowed(page.url, src):
                 raise ValueError(f"catalogue page {page.id}: {page.url} is outside source {src.id}'s allow-list")
         return self
+
+    def page(self, page_id: str) -> Optional[CataloguePage]:
+        return next((p for p in self.catalogue if p.id == page_id), None)
+
+    def retrieval(self, page: CataloguePage) -> str:
+        """``live`` or ``stored`` for one catalogue page."""
+        if page.retrieval is not None:
+            return page.retrieval
+        src = self.source(page.source)
+        return src.retrieval if src is not None else "live"
+
+    def stored_pages(self) -> list[CataloguePage]:
+        return [p for p in self.catalogue if self.retrieval(p) == "stored"]
 
     def source(self, source_id: str) -> Optional[ReferenceSource]:
         return next((s for s in self.sources if s.id == source_id), None)

@@ -309,7 +309,9 @@ def reference_searcher(settings: Any, cache: Any = None) -> Any:
     """Authoritative references for facts of record (§6, T17), or ``None`` while
     ``USE_REFERENCE_SOURCES`` is off (the default): claims are then still tagged with a
     ``claim_kind`` but every claim is retrieved from PubMed only, as before T17.
-    Snapshots go to the ``reference_snapshots`` table (migration 0009)."""
+    Snapshots go to the ``reference_snapshots`` table (migration 0009). Pages whose
+    publisher blocks scripted requests are read from the committed stored-snapshot
+    archive (``data/reference_snapshots``, T19), never requested."""
     if not getattr(settings, "USE_REFERENCE_SOURCES", False):
         return None
     from app.core.retrieval.pubmed import shared_rate_limiter
@@ -319,6 +321,7 @@ def reference_searcher(settings: Any, cache: Any = None) -> Any:
     return ReferenceSearcher(
         load_reference_config(), snapshots=SqlSnapshotStore(SessionLocal), cache=cache,
         rate_limiter=shared_rate_limiter(bool(getattr(settings, "NCBI_API_KEY", ""))),
+        api_key=getattr(settings, "NCBI_API_KEY", "") or "",
     )
 
 
