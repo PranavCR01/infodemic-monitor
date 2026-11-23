@@ -330,7 +330,7 @@ def test_result_api_returns_misinfo_basis_and_display_label(env):
     out = env["client"].get("/jobs/job-a/result").json()
     assert out["label"] == "MISINFO"  # the label itself is unchanged
     assert out["misinfo_basis"] == "unproven" and out["label_display"] == "MISINFO (unproven)"
-    assert out["decision_rule"] == "endorsed_unsupported"
+    assert out["decision_rule"] == "unproven"
 
 
 def test_jobs_list_returns_misinfo_basis_and_display_label(env):
@@ -364,7 +364,7 @@ def test_persisted_unproven_outcome_end_to_end():
     outcome = make_provider(node_overrides=NOTHING_FOUND).run(fusion(), job_id="job-1", video_id="vid-1")
     persist_outcome(db, "job-1", fusion(), outcome)
     res = db.query(Result).filter_by(job_id="job-1").one()
-    assert (res.label, res.misinfo_basis, res.decision_rule) == ("MISINFO", "unproven", "endorsed_unsupported")
+    assert (res.label, res.misinfo_basis, res.decision_rule) == ("MISINFO", "unproven", "unproven")
     assert db.get(Job, "job-1").status == JobStatus.REVIEW_REQUIRED
     case = db.query(HumanReview).filter_by(job_id="job-1").one()
     assert any(x.startswith("judge:unproven_claim:") for x in case.reasons)

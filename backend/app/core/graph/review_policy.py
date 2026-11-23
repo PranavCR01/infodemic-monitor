@@ -126,7 +126,7 @@ RuleFn = Callable[[ReviewContext], list[str]]
 def rule_weak_evidence(ctx: ReviewContext) -> list[str]:
     """A deciding claim is INSUFFICIENT_EVIDENCE, MIXED or UNSUPPORTED (under the §9
     rules: the ``refuted_unsettled`` possible-debunk case, and the deciding claims of
-    ``endorsed_unsupported``, so every "MISINFO (unproven)" video is reviewed). It also
+    ``unproven``, so every "MISINFO (unproven)" video is reviewed). It also
     fires on the abstention case: label CANNOT_RECOGNIZE because nothing could be judged, for every checkable
     claim whose evidence was insufficient or mixed (NOT_VERIFIABLE alone doesn't)."""
     from app.core.graph.judge import RULE_NOTHING_JUDGED, RULE_REFUTED_UNSETTLED

@@ -494,7 +494,7 @@ def test_unproven_efficacy_claim_end_to_end_is_misinfo_unproven_and_reviewed():
     assert outcome.pipeline == "graph" and fallback.calls == 0
     assert outcome.classification.label == MisinfoLabel.MISINFO
     final = outcome.state["final_result"]
-    assert final.misinfo_basis == "unproven" and final.decision_rule == "endorsed_unsupported"
+    assert final.misinfo_basis == "unproven" and final.decision_rule == "unproven"
     assert outcome.state["requires_human_review"]
     assert any(x.startswith("judge:unproven_claim:") for x in outcome.state["review_reasons"])
     assert "false" not in outcome.classification.explanation.lower()

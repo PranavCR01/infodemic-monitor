@@ -43,14 +43,15 @@ def results() -> list[xc.VideoComparison]:
     return xc.compare_all(VIDEOS, GOLDEN.judge, GOLDEN.review_reasons)
 
 
-# Every difference the cross-check found on the golden set @ 45244b0 (kind → reasons).
-# All are review reasons; no label or deciding-claim difference. A change to either
-# judge that adds, removes or reclassifies a difference fails here on purpose.
+# Every difference the cross-check found on the golden set @ 022ac44 (after the D1
+# re-derivation, T30; kind → reasons). All are backend-only review reasons; no label,
+# misinfo_basis or deciding-claim difference. The golden judge now collects its rule
+# reasons from every claim and adds mixed_evidence, so the 45244b0 kinds
+# mixed_evidence / rule_reason_from_non_deciding_claim are gone. A change to either judge
+# that adds, removes or reclassifies a difference fails here on purpose.
 EXPECTED_DIFFERENCES = {
-    "mixed_evidence": 15,
-    "rule_reason_from_non_deciding_claim": 15,
-    "trigger_on_non_deciding_claim_when_nothing_decides": 1,
-    "weak_evidence_on_non_deciding_claim": 3,
+    "weak_evidence_covered_by_judge_reason": 17,
+    "weak_evidence_on_non_deciding_claim": 77,
 }
 
 
@@ -64,10 +65,15 @@ def test_vendored_golden_judge_is_the_branch_file_verbatim():
 
 
 def test_fixture_covers_every_labelled_video():
-    assert len(VIDEOS) == 82
-    assert sum(len(v.claims) for v in VIDEOS) == 248
+    assert len(VIDEOS) == 181
+    assert sum(len(v.claims) for v in VIDEOS) == 534
     for v in VIDEOS:
-        assert v.out_of_scope == (not v.claims), v.video_id  # out_of_scope ⇔ no claims
+        if v.out_of_scope:
+            assert not v.claims, v.video_id  # out_of_scope ⇒ no claims
+    # 022ac44 has 13 in-scope videos with no checkable claim (all CANNOT_RECOGNIZE).
+    no_claims = [v for v in VIDEOS if not v.out_of_scope and not v.claims]
+    assert len(no_claims) == 13
+    assert {v.recorded_label for v in no_claims} == {"CANNOT_RECOGNIZE"}
 
 
 def test_golden_judge_reproduces_the_recorded_columns(results):
@@ -82,6 +88,17 @@ def test_golden_judge_reproduces_the_recorded_columns(results):
 def test_same_video_label_on_every_video(results):
     bad = [(r.video_id, r.backend.label, r.golden.label) for r in results if not r.label_agrees]
     assert bad == []
+
+
+def test_same_misinfo_basis_on_every_video(results):
+    """T30: the basis (contradicted / denies_supported / unproven) agrees too."""
+    bad = [(r.video_id, r.backend.basis, r.golden.basis) for r in results if not r.basis_agrees]
+    assert bad == []  # the recorded basis is checked by the golden-reproduces test
+
+
+def test_misinfo_counts_by_basis(results):
+    counts = Counter(r.backend.basis for r in results if r.backend.label == "MISINFO")
+    assert dict(counts) == {"contradicted": 25, "unproven": 7, "denies_supported": 1}
 
 
 def test_same_deciding_claims_on_every_video(results):
@@ -110,6 +127,7 @@ def test_backend_never_drops_a_review_the_golden_judge_asks_for(results):
 def test_every_golden_only_reason_is_one_the_backend_reads_differently_from_section_11(results):
     golden_only = {r.differences[x] for r in results for x in r.golden_only}
     assert golden_only <= {"trigger_on_non_deciding_claim_when_nothing_decides"}
+    assert golden_only == set()  # none at 022ac44
 
 
 def test_every_difference_kind_says_which_side_matches_section_9():
@@ -120,17 +138,18 @@ def test_every_difference_kind_says_which_side_matches_section_9():
 
 def test_agreement_table_counts(results):
     table = {name: (agree, total) for name, agree, total in xc.agreement_table(results)}
-    assert table["video label (in scope)"] == (66, 66)
-    assert table["video label (out_of_scope, no claims)"] == (16, 16)
-    assert table["deciding claims"] == (66, 66)
-    assert table["golden judge reproduces videos.csv label + review_reasons"] == (82, 82)
-    assert table["review reasons, exact (shared vocabulary)"] == (48, 66)
-    assert table["sent to review (shared signals)"] == (52, 66)
+    assert table["video label (in scope)"] == (162, 162)
+    assert table["video label (out_of_scope, no claims)"] == (19, 19)
+    assert table["misinfo_basis (in scope)"] == (162, 162)
+    assert table["deciding claims"] == (162, 162)
+    assert table["golden judge reproduces videos.csv label + basis + review_reasons"] == (181, 181)
+    assert table["review reasons, exact (shared vocabulary)"] == (120, 162)
+    assert table["sent to review (shared signals)"] == (135, 162)
 
 
 def test_report_renders(results):
     md = xc.render_markdown(results, "fixture")
-    assert "| video label (in scope) | 66 | 66 |" in md
+    assert "| video label (in scope) | 162 | 162 |" in md
     assert "UNCLASSIFIED" not in md
 
 
@@ -158,10 +177,16 @@ def _video(*rows, vid="vx") -> xc.GoldenVideo:
     ([("ENDORSES", "CONTRADICTED"), ("REFUTES", "CONTRADICTED")], "MISINFO"),
     ([("REFUTES", "SUPPORTED"), ("REFUTES", "CONTRADICTED")], "MISINFO"),
     ([("QUOTES", "CONTRADICTED")], "NO_MISINFO"),
+    ([("ENDORSES", "UNSUPPORTED")], "MISINFO"),
+    ([("ENDORSES", "UNSUPPORTED"), ("ENDORSES", "CONTRADICTED")], "MISINFO"),
+    ([("REFUTES", "SUPPORTED"), ("ENDORSES", "UNSUPPORTED")], "MISINFO"),
+    ([("QUOTES", "UNSUPPORTED"), ("REFUTES", "CONTRADICTED")], "DEBUNKING"),
+    ([("ENDORSES", "UNSUPPORTED"), ("REFUTES", "CONTRADICTED")], "MISINFO"),
 ])
 def test_each_section_9_rule_gives_the_same_label(rows, label):
     r = xc.compare(_video(*rows), GOLDEN.judge, GOLDEN.review_reasons)
     assert r.backend.label == r.golden.label == label
+    assert r.basis_agrees and r.deciding_agrees
 
 
 def test_denies_supported_reason_agrees_when_its_rule_decides():
@@ -169,11 +194,21 @@ def test_denies_supported_reason_agrees_when_its_rule_decides():
     assert r.backend.reasons == r.golden.reasons == {"denies_supported:c1"}
 
 
-def test_mixed_video_is_a_backend_only_review_reason():
-    """Not on the golden set (no mixed video there yet), so pinned synthetically."""
-    r = xc.compare(_video(("ENDORSES", "CONTRADICTED"), ("REFUTES", "CONTRADICTED")),
-                   GOLDEN.judge, GOLDEN.review_reasons)
-    assert r.label_agrees and r.differences == {"mixed_video": "mixed_video"}
+def test_mixed_video_reason_agrees():
+    """Both judges raise mixed_video since 022ac44, also for unproven + refuted-false."""
+    for first in ("CONTRADICTED", "UNSUPPORTED"):
+        r = xc.compare(_video(("ENDORSES", first), ("REFUTES", "CONTRADICTED")),
+                       GOLDEN.judge, GOLDEN.review_reasons)
+        assert r.label_agrees and "mixed_video" in r.backend.reasons & r.golden.reasons
+
+
+def test_refuted_unsupported_is_a_known_backend_deviation():
+    """T30 deviation (documented): the backend also treats REFUTES + UNSUPPORTED as a
+    possible debunk; the golden judge (§9 pseudocode) does not. Not on the golden set."""
+    r = xc.compare(_video(("REFUTES", "UNSUPPORTED")), GOLDEN.judge, GOLDEN.review_reasons)
+    assert r.label_agrees and r.backend.label == "CANNOT_RECOGNIZE"
+    assert r.backend.deciding == ("c1",) and r.golden.deciding == ()
+    assert "possible_debunk:c1" in r.backend_only
 
 
 def test_unknown_golden_reason_is_an_error():

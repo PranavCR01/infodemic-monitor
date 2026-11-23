@@ -11,7 +11,7 @@ verdict take part.
 2. ``refuted_supported``: otherwise any claim is REFUTES + SUPPORTED (the speaker
    denies something true) → MISINFO, always sent to review (reason
    ``denies_supported:<cid>``).
-3. ``endorsed_unsupported`` (T30, D1 = B): otherwise any claim is ENDORSES + UNSUPPORTED
+3. ``unproven`` (T30, D1 = B): otherwise any claim is ENDORSES + UNSUPPORTED
    (an efficacy claim the full search found no evidence for or against) → MISINFO
    with ``misinfo_basis`` ``unproven``, always sent to review (reason
    ``unproven_claim:<cid>``).
@@ -120,7 +120,7 @@ MAX_QUOTE_CHARS = 200
 # Rule names (stored in ``final_result.decision_rule``).
 RULE_ENDORSED_CONTRADICTED = "endorsed_contradicted"
 RULE_REFUTED_SUPPORTED = "refuted_supported"
-RULE_ENDORSED_UNSUPPORTED = "endorsed_unsupported"  # T30
+RULE_ENDORSED_UNSUPPORTED = "unproven"  # T30; the frontend adapter expects this exact string
 RULE_REFUTED_CONTRADICTED = "refuted_contradicted"
 RULE_JUDGED = "judged_nothing_false_endorsed"
 RULE_REFUTED_UNSETTLED = "refuted_unsettled"

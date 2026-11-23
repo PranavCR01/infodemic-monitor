@@ -1454,7 +1454,7 @@ labels are unchanged; existing responses keep every field.
   still wanted more search when the budget ran out keeps its verdict (it is exactly "the
   full search found nothing") instead of abstaining. Cost: up to two more PubMed rounds
   and verifier/critic calls per such claim.
-- **Judge.** New rule `endorsed_unsupported` after `refuted_supported`, before DEBUNKING:
+- **Judge.** New rule `unproven` (the `decision_rule` value the frontend adapter expects) after `refuted_supported`, before DEBUNKING:
   MISINFO with `misinfo_basis = unproven`, review reason `unproven_claim:<cid>` from
   every such claim whichever rule wins, `mixed_video` also for unproven + refuted-false.
   `FinalClassification.misinfo_basis` (contradicted / denies_supported / unproven) is set
@@ -1487,15 +1487,25 @@ labels are unchanged; existing responses keep every field.
 - **Eval data:** two synthetic UNSUPPORTED examples (v21, v22) added to the verifier set
   so it covers every verdict; heuristic baseline regenerated (the floor never answers
   UNSUPPORTED). `metrics.VERDICTS` and `dataset.CLAIM_TRUTHS` accept UNSUPPORTED.
-- **Judge cross-check (T24):** no fixture change. The golden fixture has no UNSUPPORTED
-  verdicts and the backend gives the same labels on all 82 videos (0 label, 0 deciding
-  changes, difference counts unchanged). The harness now carries `claim_category` and
-  treats golden verdicts as final (full search done), ready for the D1 re-derivation; a
-  golden "unproven" reason string will raise `UnknownReason` until it is mapped.
-- **Left for a person:** (1) the golden set re-derivation (local session) and then the
-  cross-check fixture + a mapping for the golden judge's unproven reason; (2) migration
-  0013 follows 0010 until #81 (0011) and #84 (0012) merge; then set its down_revision to "0012"; (3) the frontend should
-  show `label_display`; (4) whether limitations should also drop claim IDs.
+- **Judge cross-check (T24), re-pinned to the golden set @ 022ac44** (D1 re-derivation,
+  at the coordinating session's request): fixture and vendored `judge.py` regenerated with
+  `scripts/judge_crosscheck.py --write-fixture`. The harness reads the new golden judge
+  (4 return values, `<kind>:<cid>` reasons) and old one, carries `claim_category`, treats
+  golden verdicts as final (full search done), and now compares `misinfo_basis` too.
+  Result: 181 videos (162 in scope); label, basis and deciding claims agree on all 162;
+  33 MISINFO on both sides (25 contradicted, 7 unproven, 1 denies_supported). Remaining
+  differences are backend-only review reasons: `weak_evidence_on_non_deciding_claim` (77
+  reasons, 35 videos; the documented D4 extension) and the new
+  `weak_evidence_covered_by_judge_reason` (17 / 8: §11's weak-evidence trigger on a
+  deciding UNSUPPORTED or MIXED claim, which the golden judge covers with its
+  `unproven_claim` / `mixed_evidence` reason). The refuted-UNSUPPORTED possible-debunk
+  deviation does not occur in the golden set; it is pinned by a synthetic test.
+- **`decision_rule`:** the new rule's value is `"unproven"`, the string the frontend
+  adapter expects (the constant is still `RULE_ENDORSED_UNSUPPORTED`).
+- **Left for a person:** (1) migration 0013 follows 0010 until #81 (0011) and #84
+  (0012) merge; then set its down_revision to "0012" (pointing at "0012" now would break
+  `alembic upgrade head` and CI on this branch); (2) the frontend should show
+  `label_display`; (3) whether limitations should also drop claim IDs.
 
 ## 8. Team
 
