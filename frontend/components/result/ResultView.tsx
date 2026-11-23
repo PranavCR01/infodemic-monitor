@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Icon, ReviewBanner, ReviewReasonChip, buttonClass } from "@/components/ui";
 import { claimAt, type Claim, type ResultModel } from "@/lib/api/result-adapter";
 import { Assessment } from "./Assessment";
+import { ClaimDrawer } from "./ClaimDrawer";
 import { ClaimCard } from "./ClaimCard";
 import { ClaimTimeline } from "./ClaimTimeline";
 import { HowWeSearched } from "./HowWeSearched";
@@ -23,6 +25,21 @@ type Props = {
 export function ResultView({ result: r, videoUrl = null }: Props) {
   const [activeId, setActiveId] = useState<string | null>(r.decidingClaims[0]?.id ?? r.claims[0]?.id ?? null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  // The open claim lives in the URL (?claim=c2), so a claim can be linked to.
+  // history.replaceState keeps Next's useSearchParams in sync without a server round trip.
+  const params = useSearchParams();
+  const fromUrl = params?.get("claim") ?? null;
+  const valid = useCallback((id: string | null) => (id && r.claims.some((c) => c.id === id) ? id : null), [r.claims]);
+  const [openId, setOpenId] = useState<string | null>(() => valid(fromUrl));
+  useEffect(() => setOpenId(valid(fromUrl)), [fromUrl, valid]);
+  const setOpen = useCallback((id: string | null) => {
+    const url = new URL(window.location.href);
+    if (id) url.searchParams.set("claim", id);
+    else url.searchParams.delete("claim");
+    window.history.replaceState(window.history.state, "", url);
+    setOpenId(id);
+    if (id) setActiveId(id);
+  }, []);
   const cardRefs = useRef(new Map<string, HTMLElement>());
 
   const select = useCallback((c: Claim, scroll = true) => {
@@ -122,6 +139,7 @@ export function ResultView({ result: r, videoUrl = null }: Props) {
                 active={c.id === activeId}
                 onSelect={() => select(c, false)}
                 onSeek={seek}
+                onOpen={() => setOpen(c.id)}
               />
             ))}
           </section>
@@ -129,6 +147,15 @@ export function ResultView({ result: r, videoUrl = null }: Props) {
       )}
 
       {r.search && <HowWeSearched search={r.search} />}
+
+      <ClaimDrawer
+        claims={r.claims}
+        openId={openId}
+        transcript={r.transcript}
+        onNavigate={(id) => setOpen(id)}
+        onClose={() => setOpen(null)}
+        onPlay={seek}
+      />
 
       <p className="text-cap text-ink-3">
         <Link href="/jobs" className={buttonClass("ghost", "sm")}>

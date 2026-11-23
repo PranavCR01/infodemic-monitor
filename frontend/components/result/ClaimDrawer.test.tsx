@@ -1,0 +1,137 @@
+import { fireEvent, render, screen, waitFor, within } from "@testing-library/react";
+import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
+import { adaptResult } from "@/lib/api/result-adapter";
+import { MOCK_MISINFO_PENDING } from "@/lib/api/mocks/results";
+import type { RawResult } from "@/lib/api/result-types";
+import { ResultView } from "./ResultView";
+import { sortSources } from "./SourceCard";
+
+vi.mock("next/navigation", () => ({
+  useSearchParams: () => new URLSearchParams(window.location.search),
+}));
+
+beforeAll(() => {
+  Element.prototype.scrollIntoView = vi.fn();
+  window.matchMedia = vi.fn().mockReturnValue({ matches: false }) as never;
+});
+beforeEach(() => window.history.replaceState(null, "", "/jobs/mock-job-1"));
+
+const open = (n: number) => {
+  const card = screen.getByRole("article", { name: `Claim ${n}` });
+  fireEvent.click(within(card).getByRole("button", { name: /details/i }));
+  return screen.getByRole("dialog");
+};
+
+describe("ClaimDrawer", () => {
+  it("opens from a claim card as a dialog titled with the claim, and puts the claim in the URL", () => {
+    render(<ResultView result={adaptResult(MOCK_MISINFO_PENDING)} />);
+    const dialog = open(1);
+    expect(within(dialog).getByRole("heading", { level: 2, name: /Drinking hot water/ })).toBeInTheDocument();
+    expect(within(dialog).getByText("Claim 1 of 3")).toBeInTheDocument();
+    expect(window.location.search).toBe("?claim=c1");
+  });
+
+  it("opens straight from a shared link", () => {
+    window.history.replaceState(null, "", "/jobs/mock-job-1?claim=c2");
+    render(<ResultView result={adaptResult(MOCK_MISINFO_PENDING)} />);
+    expect(within(screen.getByRole("dialog")).getByText("Claim 2 of 3")).toBeInTheDocument();
+  });
+
+  it("ignores a link to a claim that doesn't exist", () => {
+    window.history.replaceState(null, "", "/jobs/mock-job-1?claim=zz");
+    render(<ResultView result={adaptResult(MOCK_MISINFO_PENDING)} />);
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+  });
+
+  it("closes on Escape and clears the URL", () => {
+    render(<ResultView result={adaptResult(MOCK_MISINFO_PENDING)} />);
+    const dialog = open(1);
+    fireEvent.keyDown(dialog, { key: "Escape" });
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    expect(window.location.search).toBe("");
+  });
+
+  it("returns focus to the claim's details button when it closes", async () => {
+    render(<ResultView result={adaptResult(MOCK_MISINFO_PENDING)} />);
+    const dialog = open(1);
+    fireEvent.click(within(dialog).getByRole("button", { name: "Next claim" }));
+    fireEvent.keyDown(screen.getByRole("dialog"), { key: "Escape" });
+    const target = within(screen.getByRole("article", { name: "Claim 2" })).getByRole("button", { name: /details/i });
+    await waitFor(() => expect(document.activeElement).toBe(target));
+  });
+
+  it("moves between claims with previous and next", () => {
+    render(<ResultView result={adaptResult(MOCK_MISINFO_PENDING)} />);
+    const dialog = open(1);
+    expect(within(dialog).getByRole("button", { name: "Previous claim" })).toBeDisabled();
+    fireEvent.click(within(dialog).getByRole("button", { name: "Next claim" }));
+    expect(within(screen.getByRole("dialog")).getByText("Claim 2 of 3")).toBeInTheDocument();
+    expect(window.location.search).toBe("?claim=c2");
+  });
+
+  it("opens on the sources that match the verdict and can switch", () => {
+    render(<ResultView result={adaptResult(MOCK_MISINFO_PENDING)} />);
+    const dialog = open(1);
+    const contradicts = within(dialog).getByRole("button", { name: /Contradicts 2/ });
+    expect(contradicts).toHaveAttribute("aria-pressed", "true");
+    expect(within(dialog).getAllByRole("article")).toHaveLength(2);
+    fireEvent.click(within(dialog).getByRole("button", { name: /Supports 0/ }));
+    expect(within(dialog).getByText("No source supports this claim.")).toBeInTheDocument();
+  });
+
+  it("says plainly when no source tests a claim", () => {
+    render(<ResultView result={adaptResult(MOCK_MISINFO_PENDING)} />);
+    const dialog = open(3);
+    expect(within(dialog).getByText("No source was found that tests this claim.")).toBeInTheDocument();
+    expect(within(dialog).getByText(/Claim is broader than any study/)).toBeInTheDocument();
+  });
+
+  it("shows quotes, the fixed meaning line and collapsed critic notes", () => {
+    render(<ResultView result={adaptResult(MOCK_MISINFO_PENDING)} />);
+    const dialog = open(1);
+    expect(within(dialog).getByText("HOT WATER = NO MORE FLU")).toBeInTheDocument();
+    expect(within(dialog).getByText("The speaker promotes a claim that the evidence contradicts.")).toBeInTheDocument();
+    const details = within(dialog).getByText(/Critic's notes/).closest("details")!;
+    expect(details).not.toHaveAttribute("open");
+  });
+
+  it("links PubMed and official sources, and never links internal library documents", () => {
+    const raw: RawResult = {
+      ...MOCK_MISINFO_PENDING,
+      claims: [
+        {
+          ...MOCK_MISINFO_PENDING.claims![0],
+          evidence: [
+            ...MOCK_MISINFO_PENDING.claims![0].evidence!,
+            { evidence_id: "lib", title: "Lab handbook", relation: "CONTRADICTS", source_kind: "library", study_type: "guideline", url: "https://internal.example/doc" },
+          ],
+        },
+      ],
+    };
+    render(<ResultView result={adaptResult(raw)} />);
+    const dialog = open(1);
+    expect(within(dialog).getByRole("link", { name: /View on PubMed/ })).toHaveAttribute("href", "https://pubmed.ncbi.nlm.nih.gov/00000001/");
+    expect(within(dialog).getByRole("link", { name: /Open on who\.int/ })).toBeInTheDocument();
+    const lib = within(dialog).getByText("Lab handbook").closest("article")!;
+    expect(within(lib).queryByRole("link")).not.toBeInTheDocument();
+    expect(within(lib).getByText(/Internal only/)).toBeInTheDocument();
+  });
+
+  it("copies the link to the claim", async () => {
+    const writeText = vi.fn().mockResolvedValue(undefined);
+    Object.assign(navigator, { clipboard: { writeText } });
+    render(<ResultView result={adaptResult(MOCK_MISINFO_PENDING)} />);
+    const dialog = open(2);
+    fireEvent.click(within(dialog).getByRole("button", { name: /Copy link to claim/ }));
+    expect(writeText).toHaveBeenCalledWith(expect.stringContaining("?claim=c2"));
+    expect(await within(dialog).findByText("Link copied.")).toBeInTheDocument();
+  });
+});
+
+describe("sortSources", () => {
+  it("orders by strength of study type, not by count", () => {
+    const s = adaptResult(MOCK_MISINFO_PENDING).claims[0].sources;
+    const mixed = [{ ...s[1], id: "g" }, { ...s[0], id: "rct" }, { ...s[0], id: "sr", level: "SYSTEMATIC_REVIEW" as const }, { ...s[0], id: "none", level: null }];
+    expect(sortSources(mixed).map((x) => x.id)).toEqual(["sr", "rct", "g", "none"]);
+  });
+});
