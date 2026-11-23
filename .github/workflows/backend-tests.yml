@@ -33,7 +33,9 @@ jobs:
         image: pgvector/pgvector:0.8.0-pg16
         env:
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres  # throwaway CI database, not a secret
+          # Throwaway CI database on localhost: no password at all, so nothing
+          # password-shaped sits in the repo for secret scanners to flag.
+          POSTGRES_HOST_AUTH_METHOD: trust
           POSTGRES_DB: library_test
         ports:
           - 5432:5432
@@ -44,9 +46,8 @@ jobs:
           --health-retries 20
 
     env:
-      PGPASSWORD: postgres
-      LIBRARY_TEST_PG_DSN: postgresql+psycopg://postgres:postgres@localhost:5432/library_test
-      LANGGRAPH_TEST_PG_DSN: postgresql://postgres:postgres@localhost:5432/checkpoint_test
+      LIBRARY_TEST_PG_DSN: postgresql+psycopg://postgres@localhost:5432/library_test
+      LANGGRAPH_TEST_PG_DSN: postgresql://postgres@localhost:5432/checkpoint_test
       PIP_DISABLE_PIP_VERSION_CHECK: "1"
 
     defaults:
