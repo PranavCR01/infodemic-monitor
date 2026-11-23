@@ -1,0 +1,71 @@
+# Severity table for review priority (target design §12 "Severity: which reviews come
+# first"; T22). Loaded by app.core.graph.severity.
+#
+# DRAFT. Not for real triage until the project lead and Dr. Brooks sign it off and WHO
+# confirms it (project lead's decision 2026-11-23). The loader refuses status "approved"
+# unless all three sign-offs below are true.
+#
+# Severity ranks how much harm a claim could do if someone acted on it. It orders the
+# review queue. It NEVER changes a label or a verdict.
+#
+# A claim's severity is the highest of: its claim_category's level, and the level of
+# every topic whose terms appear in the claim text. A category not listed here gets
+# default_severity (MEDIUM: an unmapped category is not assumed harmless).
+version: severity_v0_draft
+status: draft
+sign_off:
+  project_lead: false
+  dr_brooks: false
+  who_confirmed: false
+
+default_severity: MEDIUM
+
+# claim_category → severity. HIGH is seeded from the review rule's high-risk list
+# (config/review_policy.yaml high_risk_categories, T09). The rest are categories the
+# claim extractor produces today (app/core/graph/claims.py CATEGORIES).
+categories:
+  # seeded from review_policy.yaml high_risk_categories
+  treatment_efficacy: HIGH
+  treatment_discontinuation: HIGH
+  medication: HIGH
+  dosage: HIGH
+  vaccine_safety: HIGH
+  vaccination: HIGH
+  cancer_treatment: HIGH
+  pregnancy: HIGH
+  child_health: HIGH
+  # other extractor categories
+  safety: MEDIUM
+  prevention: MEDIUM
+  causation: MEDIUM
+  diagnosis: MEDIUM
+  nutrition: MEDIUM
+  statistic: LOW
+  other: LOW
+
+# Topics matched in the claim text (case-insensitive, whole words; a trailing * matches
+# any word ending, e.g. "vaccin*" matches vaccine, vaccines, vaccination). Topics exist
+# because the extractor's categories are broad: "causation" covers both "the MMR causes
+# autism" and "sugar causes hyperactivity".
+topics:
+  - name: cancer
+    severity: HIGH
+    terms: [cancer*, tumor*, tumour*, chemo*, oncolog*, leukemia, leukaemia]
+  - name: vaccines
+    severity: HIGH
+    terms: [vaccin*, MMR, immunisation*, immunization*, jab, jabs]
+  - name: medication_and_treatment
+    severity: HIGH
+    terms: [insulin, medication*, prescription*, antibiotic*, antidepressant*, statin*,
+            dose, doses, dosage*, overdos*, "stop taking", "instead of chemo",
+            "instead of medication"]
+  - name: pregnancy_and_children
+    severity: HIGH
+    terms: [pregnan*, breastfeed*, infant*, baby, babies, newborn*, toddler*, child, children,
+            kids, fetus, foetus]
+  - name: self_harm_and_eating_disorders
+    severity: HIGH
+    terms: [suicid*, self-harm, "self harm", anorexi*, bulimi*, "eating disorder*", purging]
+  - name: supplements_and_detox
+    severity: MEDIUM
+    terms: [supplement*, detox*, cleanse*, "replace* meals", "meal replacement*", herbal]
