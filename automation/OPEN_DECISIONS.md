@@ -29,6 +29,10 @@ Already decided (recorded here so they aren't asked again):
 - Calibration: Platt scaling (T15, after T14).
 - Separate API keys per place (prod on Railway, dev in local `.env`, eval in the `infodemic-monitor` environment). A $20 prepaid balance acts as the cap, with auto-recharge off.
 
+| D7 | Frontend questions (review in `design/claude-design-review.md` on `design/frontend-v1`). Q1: blind "your judgement first" step for HIGH only. Q2: reason code + note on every decision; no separate MARK_INSUFFICIENT. Q3: keep "Not required" status. Q4: upload limit 3 min (backend 600 s → 180 s). Q5: two-column result first. Q6: keep "CANNOT RECOGNIZE" with the reason underneath. Extra backend tasks: persist "How we searched"; "Request review" on unreviewed results; trim T29 to the playback URL (export built client-side) | As listed | Asked 2026-11-24. Frontend chunk 1 (foundation) started, as the lead told it directly |
+
+Owner column gap (found by the frontend session, confirmed): videos/jobs had no owner_id, so ownership checks couldn't work. Assigned to T27; T26 and T28 told not to add one.
+
 ## 2. Waiting on the project lead to merge (into `langgraph-build`)
 
 - **#73 (T25 extra-sources experiment):** report only (`evals/reports/T25_extra_sources.md` + script). Result: 0 of 60 claims, 0 of 39 videos resolvable. Safe to merge.
