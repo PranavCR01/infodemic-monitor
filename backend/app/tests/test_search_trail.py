@@ -268,7 +268,9 @@ def test_recording_the_trail_does_not_change_retrieval_or_verdicts():
 def persisted():
     db = _session()
     db.add(Video(id="vid-1", filename="v.mp4", file_path="/tmp/v.mp4", file_size=1))
-    db.add(Job(id="job-1", video_id="vid-1", status=JobStatus.STARTED))
+    # Owned by the caller once T28's jobs.user_id exists (#81); before that, no owner.
+    owner = {"user_id": ALICE["sub"]} if hasattr(Job, "user_id") else {}
+    db.add(Job(id="job-1", video_id="vid-1", status=JobStatus.STARTED, **owner))
     db.commit()
     outcome = _provider().run(fusion(), job_id="job-1", video_id="vid-1")
     persist_outcome(db, "job-1", fusion(), outcome)
