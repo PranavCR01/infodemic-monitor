@@ -13,6 +13,14 @@ class StorageBackend(Protocol):
     def upload(self, local_path: str, destination_key: str) -> str: ...
     def get_download_url(self, storage_key: str) -> str: ...
     def delete(self, storage_key: str) -> None: ...
+    # Signed direct uploads (T20, design §1). The browser PUTs the file to the
+    # returned URL; the API then downloads it once to validate and hash it.
+    def create_signed_upload_url(self, storage_key: str) -> dict: ...
+    def download(self, storage_key: str) -> bytes: ...
+
+
+class SignedUploadUnsupported(StorageError):
+    """The configured backend can't issue signed upload URLs (local storage)."""
 
 
 class LocalBackend:
@@ -28,6 +36,18 @@ class LocalBackend:
 
     def get_download_url(self, storage_key: str) -> str:
         return os.path.join(settings.LOCAL_STORAGE_ROOT, storage_key)
+
+    def create_signed_upload_url(self, storage_key: str) -> dict:
+        # Local storage has no URL a browser could upload to; dev clients keep
+        # using POST /videos/upload.
+        raise SignedUploadUnsupported(storage_key)
+
+    def download(self, storage_key: str) -> bytes:
+        try:
+            with open(os.path.join(settings.LOCAL_STORAGE_ROOT, storage_key), "rb") as f:
+                return f.read()
+        except Exception as exc:
+            raise StorageError(storage_key, exc) from exc
 
     def delete(self, storage_key: str) -> None:
         try:

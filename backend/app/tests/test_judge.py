@@ -218,10 +218,13 @@ def test_refuted_supported_rule_order(rows, label, rule):
     assert (final.classification, final.decision_rule) == (label, rule)
 
 
-def test_refuted_supported_reason_only_when_its_rule_fires():
-    # Rule 1 decided: the denied-true claim isn't the deciding one, so no rule reason.
+def test_refuted_supported_reason_raised_even_when_another_rule_decides():
+    # T21: rule 1 decides the label, but the denied-true claim still raises its reason.
     final, _ = run_judge(make_state((E, CON), (RF, SUP)))
-    assert not any(f.startswith(jg.FLAG_DENIES_SUPPORTED) for f in final.review_flags)
+    assert final.classification == MisinfoLabel.MISINFO
+    assert final.decision_rule == jg.RULE_ENDORSED_CONTRADICTED
+    assert final.claim_ids == ["c1"]
+    assert f"{jg.FLAG_DENIES_SUPPORTED}:c2" in final.review_flags
 
 
 def test_refuted_supported_goes_to_review_in_the_graph():
@@ -260,9 +263,83 @@ def test_refuted_unsettled_returns_its_review_reasons():
     ([(RF, MIX), (E, CON)], MisinfoLabel.MISINFO),
 ])
 def test_refuted_unsettled_comes_after_the_judged_rules(rows, label):
+    # The label is unchanged by T21; the possible-debunk reason is still raised (§9).
     final, _ = run_judge(make_state(*rows))
     assert final.classification == label
-    assert not any(f.startswith(jg.FLAG_POSSIBLE_DEBUNK) for f in final.review_flags)
+    assert final.decision_rule != jg.RULE_REFUTED_UNSETTLED
+    assert "c1" not in final.claim_ids
+    assert f"{jg.FLAG_POSSIBLE_DEBUNK}:c1" in final.review_flags
+
+
+# ------------- T21: review reasons from every claim, whichever rule sets the label
+
+
+def test_possible_debunk_raised_when_no_misinfo_wins():
+    """The v68/v70 golden-set shape: a supported claim makes the video NO_MISINFO and a
+    refuted claim the evidence can't settle used to lose its review flag."""
+    d = jg.decide(jg.claim_views(make_state((E, SUP), (RF, INS)))[0])
+    assert d.label == MisinfoLabel.NO_MISINFO and d.rule == jg.RULE_JUDGED
+    assert d.claim_ids == ["c1"]
+    assert d.rule_review_reasons == [f"{jg.FLAG_POSSIBLE_DEBUNK}:c2"]
+
+
+def test_possible_debunk_when_no_misinfo_wins_goes_to_review_in_the_graph():
+    s = make_state((E, SUP), (RF, MIX))
+    s["final_result"] = run_judge(s)[0]
+    assert s["final_result"].classification == MisinfoLabel.NO_MISINFO
+    s["validation_errors"] = []
+    out = make_stub_nodes()[r.ROUTE_FOR_REVIEW](s)
+    assert out["requires_human_review"] is True
+    assert f"judge:{jg.FLAG_POSSIBLE_DEBUNK}:c2" in out["review_reasons"]
+    assert "possible debunk of unsettled claim c2" in s["final_result"].explanation
+
+
+def test_reasons_from_every_claim_in_claim_order():
+    d = jg.decide(jg.claim_views(make_state((RF, INS), (RF, SUP), (RF, CON), (RF, MIX)))[0])
+    assert d.label == MisinfoLabel.MISINFO and d.rule == jg.RULE_REFUTED_SUPPORTED
+    assert d.rule_review_reasons == [
+        f"{jg.FLAG_DENIES_SUPPORTED}:c2",
+        f"{jg.FLAG_POSSIBLE_DEBUNK}:c1",
+        f"{jg.FLAG_POSSIBLE_DEBUNK}:c4",
+    ]
+
+
+@pytest.mark.parametrize("rows", [
+    [(E, CON), (RF, CON)],
+    [(RF, CON), (E, CON)],
+    [(E, CON), (RF, CON), (E, SUP)],
+    [(E, CON), (RF, CON), (RF, SUP)],
+])
+def test_mixed_video_is_misinfo_and_always_reviewed(rows):
+    s = make_state(*rows)
+    final, _ = run_judge(s)
+    assert final.classification == MisinfoLabel.MISINFO
+    assert final.decision_rule == jg.RULE_ENDORSED_CONTRADICTED
+    d = jg.decide(jg.claim_views(s)[0])
+    assert jg.FLAG_MIXED_VIDEO in d.rule_review_reasons
+    s["final_result"] = final
+    s["validation_errors"] = []
+    out = make_stub_nodes()[r.ROUTE_FOR_REVIEW](s)
+    assert out["requires_human_review"] is True
+    assert f"judge:{jg.FLAG_MIXED_VIDEO}" in out["review_reasons"]
+
+
+def test_review_reasons_never_change_the_label():
+    """T21 changes only the review reasons: labels match the eval's §9 policy for every
+    two-claim combination."""
+    import itertools
+
+    from app.evaluation.metrics import judge_label
+
+    stances, verdicts = [E, RF, Q, N, U], [SUP, CON, MIX, INS, NV]
+    for combo in itertools.product(itertools.product(stances, verdicts), repeat=2):
+        d = jg.decide(jg.claim_views(make_state(*combo))[0])
+        assert d.label.value == judge_label([(s.value, v.value) for s, v in combo]), combo
+        for i, (st, vd) in enumerate(combo, start=1):
+            if st == RF and vd == SUP:
+                assert f"{jg.FLAG_DENIES_SUPPORTED}:c{i}" in d.review_flags, combo
+            if st == RF and vd in (MIX, INS):
+                assert f"{jg.FLAG_POSSIBLE_DEBUNK}:c{i}" in d.review_flags, combo
 
 
 def test_refuted_not_verifiable_is_not_a_possible_debunk():

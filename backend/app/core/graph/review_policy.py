@@ -18,7 +18,7 @@ overturn them (§12 "what if review becomes a bottleneck?").
 | ``validation_failed``    | ``validation_failed:<check>[:<cid>]`` | §10/§11: a validation check failed after repair |
 | ``low_confidence``       | ``low_confidence``             | §11: calibrated confidence below the threshold (dormant until T15) |
 | ``high_risk_uncertain``  | ``high_risk_uncertain:<cid>``  | issue #36: an endorsed high-risk claim the evidence couldn't settle |
-| ``judge_flags``          | ``judge:<flag>``               | §9: patterns the judge's rules can't settle (T08), and the reasons the rules add themselves (``denies_supported:<cid>``, ``possible_debunk:<cid>``; T16) |
+| ``judge_flags``          | ``judge:<flag>``               | §9: patterns the judge's rules can't settle (T08), and the reasons the rules add themselves, from every claim whichever rule sets the label (``denies_supported:<cid>``, ``possible_debunk:<cid>``, ``mixed_video``; T16, T21) |
 | ``guardrails``           | ``prompt_injection_suspected:...``, ``guardrail:...`` | §15: suspected injection or a guardrail rejection (T10) |
 
 The node writes ``requires_human_review`` and ``review_reasons``. The reasons are

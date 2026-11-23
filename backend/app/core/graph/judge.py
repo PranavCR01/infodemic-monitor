@@ -23,8 +23,13 @@ verdict take part.
 The label comes with the claims that decided it and only the evidence those claims'
 verdicts cited, so the explanation can point at them.
 
-**The rule's own review reasons (§9, third return value).** Rules 2 and 5 add review
-reasons themselves; ``Decision.rule_review_reasons`` returns them, and they are also in
+**The rules' own review reasons (§9, third return value).** Rules 2 and 5 add review
+reasons, and since T21 they are collected from *every* claim, whichever rule decides the
+label: each REFUTES + SUPPORTED claim raises ``denies_supported:<cid>`` and each
+REFUTES + MIXED / INSUFFICIENT_EVIDENCE claim raises ``possible_debunk:<cid>`` even when
+an earlier rule (e.g. NO_MISINFO) sets the label. A mixed video (one false claim
+endorsed, another refuted) is MISINFO by rule 1 and always reviewed (``mixed_video``).
+``Decision.rule_review_reasons`` returns these, and they are also in
 ``Decision.review_flags`` (and so ``final_result.review_flags``), which the review
 policy (T09) turns into ``judge:<reason>`` review reasons. Using the existing flag
 channel keeps the state schema (§4–5) unchanged.
@@ -114,7 +119,9 @@ FLAG_VERIFICATION_FAILED = "verification_failed"
 # Review reasons the §9 rules add themselves (one per deciding claim).
 FLAG_DENIES_SUPPORTED = "denies_supported"
 FLAG_POSSIBLE_DEBUNK = "possible_debunk"
-RULE_REVIEW_FLAGS = frozenset({FLAG_DENIES_SUPPORTED, FLAG_POSSIBLE_DEBUNK})
+# Since T21 these are collected from every claim, not only when their rule fires, and a
+# mixed video is always reviewed (§9).
+RULE_REVIEW_FLAGS = frozenset({FLAG_DENIES_SUPPORTED, FLAG_POSSIBLE_DEBUNK, FLAG_MIXED_VIDEO})
 
 JUDGED_VERDICTS = frozenset({Verdict.SUPPORTED, Verdict.CONTRADICTED})
 UNSETTLED_VERDICTS = frozenset({Verdict.MIXED, Verdict.INSUFFICIENT_EVIDENCE})
@@ -253,19 +260,23 @@ def decide(views: Sequence[ClaimView], *, has_claims: Optional[bool] = None) -> 
     judged = [v for v in views if v.verdict in JUDGED_VERDICTS]
     refuted_open = [v for v in views if v.stance == Stance.REFUTES and v.verdict in UNSETTLED_VERDICTS]
 
-    rule_flags: list[str] = []
+    # Review reasons come from every claim, whichever rule decides the label (§9, T21).
+    rule_flags: list[str] = [
+        *(f"{FLAG_DENIES_SUPPORTED}:{v.claim_id}" for v in denied_true),
+        *(f"{FLAG_POSSIBLE_DEBUNK}:{v.claim_id}" for v in refuted_open),
+    ]
+    if endorsed_false and refuted_false:
+        rule_flags.append(FLAG_MIXED_VIDEO)  # MISINFO by rule 1, always reviewed
     if endorsed_false:
         label, rule, deciding = MisinfoLabel.MISINFO, RULE_ENDORSED_CONTRADICTED, endorsed_false
     elif denied_true:
         label, rule, deciding = MisinfoLabel.MISINFO, RULE_REFUTED_SUPPORTED, denied_true
-        rule_flags = [f"{FLAG_DENIES_SUPPORTED}:{v.claim_id}" for v in denied_true]
     elif refuted_false:
         label, rule, deciding = MisinfoLabel.DEBUNKING, RULE_REFUTED_CONTRADICTED, refuted_false
     elif judged:
         label, rule, deciding = MisinfoLabel.NO_MISINFO, RULE_JUDGED, judged
     elif refuted_open:
         label, rule, deciding = MisinfoLabel.CANNOT_RECOGNIZE, RULE_REFUTED_UNSETTLED, refuted_open
-        rule_flags = [f"{FLAG_POSSIBLE_DEBUNK}:{v.claim_id}" for v in refuted_open]
     else:
         label = MisinfoLabel.CANNOT_RECOGNIZE
         rule = RULE_NOTHING_JUDGED if has_claims else RULE_NO_CLAIMS
@@ -288,8 +299,6 @@ def decide(views: Sequence[ClaimView], *, has_claims: Optional[bool] = None) -> 
                 ))
 
     flags: list[str] = list(rule_flags)
-    if endorsed_false and refuted_false:
-        flags.append(FLAG_MIXED_VIDEO)
     for v in views:
         contradicted = v.verdict == Verdict.CONTRADICTED
         if contradicted and v.stance_or_unclear == Stance.UNCLEAR and label != MisinfoLabel.MISINFO:
