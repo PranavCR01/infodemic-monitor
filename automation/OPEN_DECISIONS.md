@@ -38,6 +38,7 @@ Owner column gap (found by the frontend session, confirmed): videos/jobs had no 
 - **#75** frontend chunk 1, then **#79** chunk 2 (into `design/frontend-v1`). #75's Vercel build failed fetching Google Fonts; the frontend session is self-hosting the fonts. Merge when Vercel is green.
 - Merged 2026-11-24: #73 (T25), #74 (CI fetch fix), #76 (T26), #78 (T27), #77 (3-min upload limit).
 - Lead to-do (Supabase): add `<frontend>/auth/callback` and `http://localhost:3000/auth/callback` to Auth redirect URLs; give yourself `app_metadata.role = admin`.
+- Before merging to main: existing production jobs have no owner (user_id NULL); after 0011 they're hidden from non-admins until T33's assign-owner script runs. Plan that step in the staging run.
 - Ownership: T28 adds jobs.user_id; T33 completes it (videos, reviewer/admin, NULL rows). Single-user only until T33 merges.
 
 - **#73 (T25 extra-sources experiment):** report only (`evals/reports/T25_extra_sources.md` + script). Result: 0 of 60 claims, 0 of 39 videos resolvable. Safe to merge.
