@@ -293,7 +293,7 @@ def test_register_applies_the_duration_limit(env, seconds, status, code):
 
 def test_register_uses_the_real_mvhd_duration(env):
     env["guard"]._probe = probe_duration
-    _, r = _upload_and_register(env, mp4(seconds=900))  # over the 600 s limit
+    _, r = _upload_and_register(env, mp4(seconds=900))  # over the 180 s limit
     assert r.json()["detail"]["code"] == "too_long"
     _, r = _upload_and_register(env, mp4(seconds=42, payload=b"\x01" * 64))
     assert r.status_code == 201 and r.json()["duration_seconds"] == 42.0
