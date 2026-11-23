@@ -1,7 +1,7 @@
 # Project state and open decisions
 
 The working memory for the coordinating session. It is rewritten whenever something important changes, so any session (or person) can pick the project up from here.
-**Last updated:** 2026-11-24 (UTC), by the coordinating session.
+**Last updated:** 2026-11-24 (UTC), after D1, by the coordinating session.
 
 How to use it:
 - **Pick up work:** read this file first, then `automation/BUILD_QUEUE.md` (tasks) and `context/MULTI_AGENT.md` (decisions log).
@@ -14,14 +14,14 @@ How to use it:
 
 | # | Decision | Recommendation | Status |
 |---|---|---|---|
-| D1 | **Untested health claims** (source says false, no study tests it; 39 golden-set videos). **A:** keep CANNOT_RECOGNIZE and send to review with high severity. **B:** new verdict UNSUPPORTED for *endorsed efficacy/treatment claims* with no evidence, so the video becomes "MISINFO (unproven claim)" | **B**: matches how fact-checkers and WHO judge such videos, and is labelled "unproven", not "disproven" | **Waiting on T25.** If extra sources resolve about half or more, skip B |
-| D2 | Golden set `annotator` column says `pranav` on rows drafted by the labelling session. It should be neutral (e.g. `labelling_pipeline_v1`), with people's names only in `reviewer` | Fix before the blind review | Not yet sent to the local labelling session |
-| D3 | Exclude **M4Health** from the external-agreement number. Its "FALSE" credibility label covers memes and adverts, and agreement is 0/15 | Exclude, but report it separately | Not done |
+| D2 | Golden set `annotator` column says `pranav` on rows drafted by the labelling session. It should be neutral (e.g. `labelling_pipeline_v1`), with people's names only in `reviewer` | Fix before the blind review | Prompt given to the lead for the local labelling session (combined with the D1 re-derivation) |
+| D3 | Exclude **M4Health** from the external-agreement number. Its "FALSE" credibility label covers memes and adverts, and agreement is 0/15 | Exclude, but report it separately | In the same local-session prompt |
 | D4 | Backend flags weak evidence on *non-deciding* claims for review (v64, v65; beyond §11's wording) | **Keep**: it only adds review, never removes it | Recommended; lead hasn't objected |
 | D5 | Queue a **staging-prep task** for the demo to Dr. Brooks: Railway staging configuration, deploy checklist, script to pre-run demo videos | Yes, if the demo is in the next few days | Offered, not answered |
 | D6 | Frontend: Claude Design export goes into `design/claude-design/` on branch `design/frontend-v1` (brief: `design/BRIEF.md`). Frontend session `session_013cWxpynpigJCrZtXuYokiD` (env infodemic-video-sourcing, no keys) reviews, maps to the API, proposes a plan, then builds via PRs into `design/frontend-v1` (no self-merge) | Approve its plan; backend gaps it finds become queue tasks | Waiting on the lead's upload |
 
 Already decided (recorded here so they aren't asked again):
+- **D1 = B (2026-11-24): unproven-claim verdict.** New verdict UNSUPPORTED, only for *endorsed* `treatment_efficacy`/`prevention` claims after the full retrieval budget finds nothing. Judge: after denies-supported, before DEBUNKING → MISINFO with `misinfo_basis: unproven`, shown as "MISINFO (unproven)", always reviewed. Harm/mechanism claims with no evidence stay INSUFFICIENT_EVIDENCE. T25 confirmed extra sources don't help (0 of 39 videos resolved). Design doc §7/§9/§11 updated (repo + artifact). Backend: T30. Golden set: re-derive labels in the local session.
 - Review reasons are collected from every claim, whatever rule sets the label. Mixed videos are MISINFO and always reviewed (§9; T21).
 - Severity HIGH/MEDIUM/LOW sets review priority only (§12; T22). The table is a **draft** until the lead and Dr. Brooks sign it off and WHO confirms it.
 - Regulatory claims ("banned in Europe") are **out of scope for now** (§4).
@@ -29,15 +29,22 @@ Already decided (recorded here so they aren't asked again):
 - Calibration: Platt scaling (T15, after T14).
 - Separate API keys per place (prod on Railway, dev in local `.env`, eval in the `infodemic-monitor` environment). A $20 prepaid balance acts as the cap, with auto-recharge off.
 
+| D7 | Frontend questions (review in `design/claude-design-review.md` on `design/frontend-v1`). Q1: blind "your judgement first" step for HIGH only. Q2: reason code + note on every decision; no separate MARK_INSUFFICIENT. Q3: keep "Not required" status. Q4: upload limit 3 min (backend 600 s → 180 s). Q5: two-column result first. Q6: keep "CANNOT RECOGNIZE" with the reason underneath. Extra backend tasks: persist "How we searched"; "Request review" on unreviewed results; trim T29 to the playback URL (export built client-side) | As listed | Asked 2026-11-24. Frontend chunk 1 (foundation) started, as the lead told it directly |
+
+Owner column gap (found by the frontend session, confirmed): videos/jobs had no owner_id, so ownership checks couldn't work. Assigned to T27; T26 and T28 told not to add one.
+
 ## 2. Waiting on the project lead to merge (into `langgraph-build`)
 
-Nothing waiting. #70 (T22 severity), #71 (T24 judge cross-check) and #72 (T23 CI) were merged on 2026-11-24. CI (`pytest` with Postgres + pgvector) now runs on every PR to `langgraph-build` and `main`. GitGuardian flagged a dummy test-database password from #72's first commit; the final version has none.
+- **#73 (T25 extra-sources experiment):** report only (`evals/reports/T25_extra_sources.md` + script). Result: 0 of 60 claims, 0 of 39 videos resolvable. Safe to merge.
+
+Earlier: #70 (T22 severity), #71 (T24 judge cross-check) and #72 (T23 CI) were merged on 2026-11-24. CI (`pytest` with Postgres + pgvector) now runs on every PR to `langgraph-build` and `main`. GitGuardian flagged a dummy test-database password from #72's first commit; the final version has none.
 
 ## 3. Running now
 
 - **Frontend session** `session_013cWxpynpigJCrZtXuYokiD`: phase 0, mapping the current frontend and API while waiting for the designs.
 
-- **T25** (orchestrator child): do Europe PMC, Cochrane, ClinicalTrials.gov and WHO/NHS/CDC guidance resolve the 39 "source false, evidence silent" videos? Report only. Its answer feeds D1.
+- **T26** (result API fields) and **T27** (review HTTP API + roles), orchestrator children. Queued: T28 (job progress), T29 (playback URL + export), T30 (unproven verdict, after T26).
+- **Local labelling session** (lead's machine): golden-set re-derivation for D1 + D2 + D3 + judge.py §9 update, once the lead pastes the prompt.
 
 ## 4. Other open PRs
 
@@ -47,7 +54,7 @@ Nothing waiting. #70 (T22 severity), #71 (T24 judge cross-check) and #72 (T23 CI
   - Merge with **Squash and merge**, because an early commit holds the lead's email.
 - **#65 candidates:** don't merge. Its content is copied into #62 (`sources/batch2/`). **Close it** once #62 is merged.
 
-Golden-set `judge.py` update to send to the local session (after D2): collect `denies_supported` and `possible_debunk` from every claim; add a `mixed_video` reason; treat any MIXED claim as a review trigger; drop the `deciding or claims` fallback for UNCLEAR and conflict triggers. Then regenerate `review_reasons` and rerun `validate.py`. Labels must not change.
+Golden-set `judge.py` update (now part of the combined local-session prompt, which also adds UNSUPPORTED): collect `denies_supported` and `possible_debunk` from every claim; add a `mixed_video` reason; treat any MIXED claim as a review trigger; drop the `deciding or claims` fallback for UNCLEAR and conflict triggers. Then regenerate `review_reasons` and rerun `validate.py`. Labels must not change.
 
 ## 5. Project lead's own to-do list
 
@@ -60,7 +67,7 @@ Golden-set `judge.py` update to send to the local session (after D2): collect `d
 
 ## 6. Blocked tasks
 
-- **T14** evaluation vs baseline: needs the reviewed golden set (and D1 settled, since D1 changes labels).
+- **T14** evaluation vs baseline: needs the reviewed golden set, re-derived with UNSUPPORTED, and T30.
 - **T15** calibration: needs T14.
 
 ## 7. Key facts and numbers
