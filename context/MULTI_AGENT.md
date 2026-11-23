@@ -1448,7 +1448,7 @@ decision D7). Additive: no existing field, label, verdict or retrieval result ch
   channel and compares queries, evidence, reranking, verdicts, critic, judge and review.
   No `STATE_SCHEMA_VERSION` bump: the field is optional, older checkpoints load.
 - **Summarised at persist time** by `app/services/search_trail.py::build_search_trail`
-  onto a new nullable JSON column `claims.search_trail` (migration **0011**), in the
+  onto a new nullable JSON column `claims.search_trail` (migration **0012**; T28 #81 owns 0011), in the
   shape `app/core/schemas/search_trail.py::SearchTrailView` (version 1). It is returned on
   every claim (`ClaimView.search_trail`) by `GET /jobs/{id}/result`,
   `GET /v1/videos/{id}/results` and `GET /v1/videos/{id}/claims`; null for claims never
@@ -1499,7 +1499,7 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
 - **2026-11-23**: T31 (no issue; design §6, §8, §12) "How we searched" per claim by the
   automated build: `retrieve_evidence` records a `search_trail` per round (queries run,
   hits, filters, dedup, cache, references consulted); persisted to `claims.search_trail`
-  (migration 0011) with retrieved / screened / kept counts and budget used; returned as
+  (migration 0012) with retrieved / screened / kept counts and budget used; returned as
   `claims[].search_trail` by every result endpoint. No keys, request URLs or prompts in it;
   retrieval and verdicts unchanged (tested). 1155 passed, 4 skipped (OCRmyPDF/Tesseract)
   locally with Postgres 16 + pgvector; no spend. Decisions in §7w.

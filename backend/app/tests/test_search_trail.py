@@ -337,7 +337,7 @@ def test_openapi_documents_the_trail(persisted):
 # ------------------------------------------------------------ migration
 
 
-def test_migration_0011_upgrades_and_downgrades_on_sqlite(tmp_path, monkeypatch):
+def test_migration_0012_upgrades_and_downgrades_on_sqlite(tmp_path, monkeypatch):
     from alembic import command
     from alembic.config import Config
     from sqlalchemy import inspect
@@ -348,10 +348,10 @@ def test_migration_0011_upgrades_and_downgrades_on_sqlite(tmp_path, monkeypatch)
     cfg = Config(str(BACKEND / "alembic.ini"))
     cfg.set_main_option("script_location", str(BACKEND / "app" / "db" / "migrations"))
     cfg.set_main_option("sqlalchemy.url", url)
-    command.upgrade(cfg, "0011")
+    command.upgrade(cfg, "0012")
     cols = {c["name"] for c in inspect(create_engine(url)).get_columns("claims")}
     assert "search_trail" in cols
-    command.downgrade(cfg, "0010")
+    command.downgrade(cfg, "0011")
     cols = {c["name"] for c in inspect(create_engine(url)).get_columns("claims")}
     assert "search_trail" not in cols
 
