@@ -49,3 +49,31 @@ def save_video(db: Session, content: bytes, filename: str) -> Video:
     db.commit()
     db.refresh(video)
     return video
+
+
+def register_uploaded_video(
+    db: Session,
+    storage_key: str,
+    filename: str,
+    file_size: int,
+    file_hash: str,
+) -> tuple[Video, bool]:
+    """Register an object already in storage (signed upload, T20). Returns
+    ``(video, duplicate)``; a known SHA-256 reuses the earlier video (design §1)."""
+    existing_video = db.query(Video).filter(Video.file_hash == file_hash).first()
+    if existing_video:
+        return existing_video, True
+    video = Video(
+        id=str(uuid.uuid4()),
+        filename=filename,
+        # The worker downloads by storage_key (STORAGE_BACKEND=supabase); there is
+        # no local copy on the API server.
+        file_path=storage_key,
+        file_size=file_size,
+        file_hash=file_hash,
+        storage_key=storage_key,
+    )
+    db.add(video)
+    db.commit()
+    db.refresh(video)
+    return video, False
