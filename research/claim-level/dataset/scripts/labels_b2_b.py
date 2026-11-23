@@ -451,16 +451,14 @@ LABELS = [
                  "is INSUFFICIENT_EVIDENCE, so the video is CANNOT_RECOGNIZE "
                  "-- the section 7 rule working as designed on a video a "
                  "reader would call misinformation instantly.",
-        "external_reason": "Every cure claim is untested rather than "
-                           "disproven (the only human trials are of "
-                           "desalinated deep-sea water), so nothing is "
-                           "CONTRADICTED and the video is unjudgeable.",
         "claims": [
             {
                 "text": 'el agua de mar ha demostrado resultados asombrosos en pacientes con enfermedades como cáncer',
                 "start": 12.6, "end": 25.3,
                 "kind": "research_question",
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "stance": "ENDORSES", "verdict": "UNSUPPORTED",
+                "claim_category": "treatment_efficacy",
+                "unsupported_reason": "Claims drinking seawater gives results in cancer; no study of seawater for cancer exists.",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
                 "notes": "EN: seawater has shown amazing results in patients with diseases such as cancer. One of four diseases listed together, split one per row (section 4). Searched ('drinking seawater health effects'); the hits test desalinated deep-sea water (PMID 35276942, 32878045) or rats, not seawater for any of these diseases.",
@@ -469,7 +467,9 @@ LABELS = [
                 "text": 'el agua de mar ha demostrado resultados asombrosos en pacientes con enfermedades como … hipertensión',
                 "start": 12.6, "end": 25.3,
                 "kind": "research_question",
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "stance": "ENDORSES", "verdict": "UNSUPPORTED",
+                "claim_category": "treatment_efficacy",
+                "unsupported_reason": "Claims drinking seawater gives results in hypertension; no study of seawater for it exists.",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
                 "notes": 'EN: ... such as hypertension. Same list and the same search as the cancer row: nothing tests drinking seawater for it.',
@@ -478,7 +478,9 @@ LABELS = [
                 "text": 'el agua de mar ha demostrado resultados asombrosos en pacientes con enfermedades como … diabetes',
                 "start": 12.6, "end": 25.3,
                 "kind": "research_question",
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "stance": "ENDORSES", "verdict": "UNSUPPORTED",
+                "claim_category": "treatment_efficacy",
+                "unsupported_reason": "Claims drinking seawater gives results in diabetes; no study of seawater for it exists.",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
                 "notes": 'EN: ... such as diabetes. Same list and the same search as the cancer row: nothing tests drinking seawater for it.',
@@ -487,7 +489,9 @@ LABELS = [
                 "text": 'el agua de mar ha demostrado resultados asombrosos en pacientes con enfermedades como … enfermedades de la piel',
                 "start": 12.6, "end": 25.3,
                 "kind": "research_question",
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "stance": "ENDORSES", "verdict": "UNSUPPORTED",
+                "claim_category": "treatment_efficacy",
+                "unsupported_reason": "Claims drinking seawater gives results in skin disease; no study of seawater for it exists.",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
                 "notes": 'EN: ... such as skin disease. Same list and the same search as the cancer row: nothing tests drinking seawater for it.',
@@ -508,7 +512,9 @@ LABELS = [
                         "cualquier enfermedad o dolencia desde el primer día",
                 "start": 48.2, "end": 52.1,
                 "kind": "research_question",
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "stance": "ENDORSES", "verdict": "UNSUPPORTED",
+                "claim_category": "treatment_efficacy",
+                "unsupported_reason": "Claims seawater improves any disease from day one; no study tests it.",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
                 "notes": "EN: you will feel improvement in any disease or "

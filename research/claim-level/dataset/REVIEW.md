@@ -52,6 +52,13 @@ and any `video_level_label` that no longer follows from its claims:
      review trigger (§11), and this is the distinction the whole design exists to
      protect.
 5. **`claim_verdict`** (§7): does it describe the *evidence*, not the speaker?
+   - **`UNSUPPORTED`** is for an endorsed efficacy claim only (X cures,
+     treats, prevents or reverses Y) where the search found nothing for or
+     against. It means "no evidence supports this", never "this is false". Its
+     `notes` open with `UNSUPPORTED (treatment_efficacy|prevention): <reason>`.
+     Change it back to `INSUFFICIENT_EVIDENCE` if the claim is really about
+     harm, side effects, mechanism, a statistic or vague wellness, or if any
+     study (animal and in-vitro included) bears on it.
    - **`INSUFFICIENT_EVIDENCE`, never `CONTRADICTED`, when nothing tests the
      claim.** This is §7's most important rule and §14 tracks violations of it as
      their own failure mode. If you find a `CONTRADICTED` row whose evidence does
@@ -65,8 +72,8 @@ and any `video_level_label` that no longer follows from its claims:
    URL. A real paper cited for something it does not say is the "evidence
    laundering" failure in §7's probe — retrieval proves a paper exists, not that
    it was read correctly. This check is the point of the review.
-7. **Evidence fields** may be empty **only** for `INSUFFICIENT_EVIDENCE` or
-   `NOT_VERIFIABLE`. Anything else needs at least one ID on the matching side,
+7. **Evidence fields** may be empty **only** for `INSUFFICIENT_EVIDENCE`,
+   `UNSUPPORTED` or `NOT_VERIFIABLE` (and `UNSUPPORTED` must cite nothing). Anything else needs at least one ID on the matching side,
    and `MIXED` needs both.
 8. **`claim_source`** — `speech` / `screen` / `both` — and **timestamps** point at
    the right moment. Spot-check against `transcripts/<video_id>.json`.
@@ -81,18 +88,29 @@ and any `video_level_label` that no longer follows from its claims:
 
 1. **`video_level_label` is derived, not chosen.** Apply the §9 rules in order to
    that video's claims:
-   1. any claim `ENDORSES` + `CONTRADICTED` → `MISINFO`
-   2. else any claim `REFUTES` + `SUPPORTED` → `MISINFO`, review reason
-      "speaker denies a supported claim"
-   3. else any claim `REFUTES` + `CONTRADICTED` → `DEBUNKING`
-   4. else at least one claim `SUPPORTED` or `CONTRADICTED` → `NO_MISINFO`
-   5. else any claim `REFUTES` + `MIXED` / `INSUFFICIENT_EVIDENCE` →
-      `CANNOT_RECOGNIZE`, review reason "possible debunk of an unsettled claim"
-   6. else → `CANNOT_RECOGNIZE`
+   1. any claim `ENDORSES` + `CONTRADICTED` → `MISINFO`, `misinfo_basis`
+      `contradicted`
+   2. else any claim `REFUTES` + `SUPPORTED` → `MISINFO`, basis
+      `denies_supported`
+   3. else any claim `ENDORSES` + `UNSUPPORTED` → `MISINFO`, basis `unproven`
+      (shown as "MISINFO (unproven)")
+   4. else any claim `REFUTES` + `CONTRADICTED` → `DEBUNKING`
+   5. else at least one claim `SUPPORTED` or `CONTRADICTED` → `NO_MISINFO`
+   6. else any claim `REFUTES` + `MIXED` / `INSUFFICIENT_EVIDENCE` →
+      `CANNOT_RECOGNIZE`
+   7. else → `CANNOT_RECOGNIZE`
+
+   `review_reasons` are collected from every claim, whichever rule decides:
+   `denies_supported:<claim>`, `unproven_claim:<claim>`,
+   `possible_debunk:<claim>` (refuted and MIXED or INSUFFICIENT),
+   `mixed_evidence:<claim>` (any MIXED claim), and `mixed_video` when an
+   endorsed false or unproven claim sits beside a refuted false one. Then the
+   §11 triggers on the deciding claims: `deciding_insufficient`,
+   `evidence_both_sides`, `unclear_stance`.
 
    Order matters: a video that endorses one falsehood *and* refutes another is
    `MISINFO`, not `DEBUNKING`, and must carry the `mixed` tag. `validate.py`
-   enforces both, and checks `review_reasons`.
+   enforces both, and checks `misinfo_basis` and `review_reasons`.
 2. **`out_of_scope`** is only for videos with **no health content**. It must be
    the video's only tag, and the video has no claims. Check it isn't hiding a
    health video with weak claims, which should be `CANNOT_RECOGNIZE` and counted.
@@ -137,6 +155,21 @@ v100 v109 v110 v114 v120 v121 v122 v123 v131 v135 v141 v143 v144 v146 v150 v152 
 For batch 2, the blind labeller should also not look at `external_label`,
 `external_source` or `sources/` before labelling, for the same reason.
 
+**MISINFO (unproven): every such video is blind-reviewed.** The `unproven`
+basis is new (§7 `UNSUPPORTED`, §9 rule 3) and rests on one judgement each:
+that the claim is an efficacy claim and that nothing bears on it. So the blind
+sample also includes every video with `misinfo_basis = unproven`, on top of
+the two seeded subsets above (which stay as drawn). The target was at least
+10; the set has only **7**, so all 7 are in. v141 and v143 are already in the
+batch-2 subset; the other five are added:
+
+```
+v20 v84 v113 v149 v164
+```
+
+Blind sample in total: 16 + 20 + 5 = **41 videos**. When a new
+`UNSUPPORTED` claim makes another video `unproven`, add it here.
+
 ### How to label them blind
 
 1. **Do not open `claims.csv` or `videos.csv` for these video_ids first.** That is
@@ -176,7 +209,9 @@ Reviewer time is scarce, so start where the design says the risk is (§11):
    `video_index.csv` (the folder the collectors filed it under). Those
    disagreements are listed in the PR description and are the most informative
    rows in the set.
-7. Every batch-2 video where `video_level_label` disagrees with the label its
+7. Every `UNSUPPORTED` claim, and every video whose `misinfo_basis` is
+   `unproven` or `denies_supported` (both are always sent to review).
+8. Every batch-2 video where `video_level_label` disagrees with the label its
    source implies (`external_agreement.md`). A fact-checker calling a video
    false while every claim in it is `INSUFFICIENT_EVIDENCE` is exactly the §7
    boundary a reviewer should check.

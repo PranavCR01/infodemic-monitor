@@ -14,7 +14,7 @@ If you find a new disagreement, fix the README, not the labels.
 | File | One row per | Columns |
 |---|---|---|
 | `video_index.csv` | video | `video_id`, `filename`, `relative_path`, `collector`, `collector_label`, `creator_handle`, `platform`, `size_mb`, `source`, `source_label`, `source_url`, `external_label`, `external_source`, `external_url`, `duration_seconds` |
-| `videos.csv` | video | `video_id`, `source_url`, `platform`, `topic`, `video_level_label`, `review_reasons`, `text_type`, `case_tags`, `split`, `annotator`, `confidence`, `review_status`, `reviewer`, `reviewer_notes`, `notes`, `source`, `external_label`, `external_source`, `external_url` |
+| `videos.csv` | video | `video_id`, `source_url`, `platform`, `topic`, `video_level_label`, `misinfo_basis`, `review_reasons`, `text_type`, `case_tags`, `split`, `annotator`, `confidence`, `review_status`, `reviewer`, `reviewer_notes`, `notes`, `source`, `external_label`, `external_source`, `external_url` |
 | `claims.csv` | claim | `video_id`, `claim_id`, `claim_text`, `claim_source`, `claim_kind`, `start_seconds`, `end_seconds`, `speaker_stance`, `claim_verdict`, `evidence_supporting`, `evidence_contradicting`, `annotator`, `confidence`, `review_status`, `reviewer`, `reviewer_notes`, `notes` |
 | `reference_citations.csv` | cited reference | `evidence_id`, `video_id`, `claim_id`, `side`, `url`, `source_org`, `retrieved_at`, `snapshot_sha256`, `quoted_passage` (§6) |
 | `collector_agreement.md` | — | collectors' folder labels vs. the derived label, with a reason per disagreement (generated, batch 1) |
@@ -73,13 +73,25 @@ Judged against evidence actually retrieved, regardless of what the speaker think
 | `SUPPORTED` | the evidence backs the claim as stated |
 | `CONTRADICTED` | the evidence shows the claim is false |
 | `MIXED` | good studies point in different directions |
-| `INSUFFICIENT_EVIDENCE` | nothing tests this claim directly, or what exists is too weak |
+| `UNSUPPORTED` | an **endorsed efficacy claim** (X cures, treats, prevents or reverses Y) where the search found nothing for or against |
+| `INSUFFICIENT_EVIDENCE` | any other claim nothing tests directly, or what exists is too weak |
 | `NOT_VERIFIABLE` | the claim can't be tested ("this tea feels amazing") |
 
 **The most important rule: absence of evidence is not contradiction.** If no study
 tests the claim, the verdict is `INSUFFICIENT_EVIDENCE`, never `CONTRADICTED`
 (§7). Calling an untested claim false is overconfident, and §14 tracks it as its
 own failure mode.
+
+**`UNSUPPORTED` is not `CONTRADICTED`** (§7): it says "no evidence supports
+this", never "this is false". In this set it is used only when all of these
+hold: the speaker `ENDORSES` the claim; the claim is `treatment_efficacy` or
+`prevention`; and the evidence shows nothing for or against (no citation on
+either side, and no animal or in-vitro study either, which would make it "too
+weak", so `INSUFFICIENT_EVIDENCE`). Claims about harm, side effects, mechanism,
+statistics or vague wellness ("supports digestion", "boosts immunity") stay
+`INSUFFICIENT_EVIDENCE`. `notes` opens with
+`UNSUPPORTED (<category>): <reason>`; in `labels*.py` that is the claim's
+`claim_category` and `unsupported_reason`.
 
 Also weigh, per §7: **directness** (does the paper test this intervention, for
 this outcome, in a similar population?), **study design** (a systematic review
@@ -161,8 +173,9 @@ Two columns, not one, because §11 treats "both supporting and contradicting
 papers exist for a deciding claim" as a review trigger — a single merged column
 cannot express that.
 
-Both may be empty **only** when the verdict is `INSUFFICIENT_EVIDENCE` or
-`NOT_VERIFIABLE`. `validate.py` enforces this.
+Both may be empty **only** when the verdict is `INSUFFICIENT_EVIDENCE`,
+`UNSUPPORTED` or `NOT_VERIFIABLE`, and must be empty for `UNSUPPORTED`.
+`validate.py` enforces this.
 
 ### `claim_source`, `start_seconds`, `end_seconds`
 
@@ -176,25 +189,32 @@ decide whether OCR earns its cost.
 **Derived, not hand-assigned.** `scripts/judge.py` applies the §9 rules in order
 and `scripts/validate.py` re-checks every row against them:
 
-| If any claim… | Video label | Review reason added |
+| If any claim… | Video label | `misinfo_basis` |
 |---|---|---|
-| is **endorsed** by the speaker and **contradicted** by the evidence | `MISINFO` | |
-| otherwise, is **refuted** by the speaker but **supported** by the evidence | `MISINFO` | speaker denies a supported claim |
+| is **endorsed** by the speaker and **contradicted** by the evidence | `MISINFO` | `contradicted` |
+| otherwise, is **refuted** by the speaker but **supported** by the evidence | `MISINFO`, always reviewed | `denies_supported` |
+| otherwise, is an **endorsed** efficacy claim the evidence leaves **unsupported** | `MISINFO` (shown as "MISINFO (unproven)"), always reviewed | `unproven` |
 | otherwise, is **refuted** by the speaker and contradicted by the evidence | `DEBUNKING` | |
 | otherwise, at least one claim was judged (`SUPPORTED` or `CONTRADICTED`) and nothing false is endorsed | `NO_MISINFO` | |
-| otherwise, is **refuted** while the evidence is `MIXED` or `INSUFFICIENT_EVIDENCE` | `CANNOT_RECOGNIZE` | possible debunk of an unsettled claim |
+| otherwise, is **refuted** while the evidence is `MIXED` or `INSUFFICIENT_EVIDENCE` | `CANNOT_RECOGNIZE`, reviewed as a possible debunk | |
 | no claim could be judged (all insufficient or not verifiable, or no claims) | `CANNOT_RECOGNIZE` | |
 
-Order matters: a video that both endorses one falsehood and refutes another is
-`MISINFO`, not `DEBUNKING`. Flag that pattern in `notes` as a mixed video — §9
-lists it as a case the rules alone shouldn't settle. And because `NO_MISINFO`
-comes before the possible-debunk rule, a debunk that refutes an unsettled claim
-but also makes one supported claim is `NO_MISINFO` with no review flag (v68, v70).
+`misinfo_basis` (in `videos.csv`) is empty unless the label is `MISINFO`.
 
-`review_reasons` (semicolon-separated) holds the rules' own reason, then the §11
-triggers this dataset can carry: a deciding claim that is `INSUFFICIENT_EVIDENCE`
-or `MIXED`, evidence on both sides, or an `UNCLEAR` stance. `validate.py`
-re-derives it.
+Order matters: a video that both endorses one falsehood and refutes another is
+`MISINFO`, not `DEBUNKING`, and carries the `mixed` tag and the `mixed_video`
+review reason — §9 lists it as a case the rules alone shouldn't settle.
+
+`review_reasons` (semicolon-separated) first holds the reasons the §9 rules
+collect from **every** claim, whichever rule decides the label:
+`denies_supported:<claim>`, `unproven_claim:<claim>`,
+`possible_debunk:<claim>` (refuted while `MIXED` or `INSUFFICIENT_EVIDENCE`,
+so a debunk of an unsettled claim is flagged even when another claim makes the
+video `NO_MISINFO`), `mixed_evidence:<claim>` (any `MIXED` claim), and
+`mixed_video`. Then the §11 triggers on the **deciding** claims only:
+`deciding_insufficient:<claim>`, `evidence_both_sides:<claim>`,
+`unclear_stance:<claim>`. A video whose claims are all insufficient has no
+deciding claim and so no §11 trigger. `validate.py` re-derives the column.
 
 ### Out of scope (§14)
 
@@ -224,7 +244,9 @@ and `compare_collectors.py` already do.
 
 On every row in both files: `annotator`, `confidence` (`low` / `medium` /
 `high`), `review_status` (`pending` until a reviewer touches it), `reviewer`,
-`reviewer_notes`. See [REVIEW.md](REVIEW.md).
+`reviewer_notes`. `annotator` names the process that produced the row
+(`labelling_pipeline_v1`), never a person; people's names go only in
+`reviewer`, once they have reviewed the row. See [REVIEW.md](REVIEW.md).
 
 ## What counts as a claim
 
@@ -300,15 +322,15 @@ Any field containing a comma must be wrapped in double quotes.
 
 `videos.csv`
 ```
-video_id,source_url,platform,topic,video_level_label,text_type,case_tags,split,annotator,confidence,review_status,reviewer,reviewer_notes,notes
-v01,,tiktok,nutrition,MISINFO,high_text,clearly_false;multi_claim,test,pranav,high,pending,,,"mixed: c1 accurate, c2 false"
-v02,,tiktok,nutrition,DEBUNKING,low_text,debunking,tune,pranav,high,pending,,,refutes the lemon water myth
+video_id,source_url,platform,topic,video_level_label,misinfo_basis,text_type,case_tags,split,annotator,confidence,review_status,reviewer,reviewer_notes,notes
+v01,,tiktok,nutrition,MISINFO,contradicted,high_text,clearly_false;multi_claim,test,labelling_pipeline_v1,high,pending,,,"mixed: c1 accurate, c2 false"
+v02,,tiktok,nutrition,DEBUNKING,,low_text,debunking,tune,labelling_pipeline_v1,high,pending,,,refutes the lemon water myth
 ```
 
 `claims.csv`
 ```
 video_id,claim_id,claim_text,claim_source,claim_kind,start_seconds,end_seconds,speaker_stance,claim_verdict,evidence_supporting,evidence_contradicting,annotator,confidence,review_status,reviewer,reviewer_notes,notes
-v01,c1,<verbatim claim>,speech,research_question,3.5,8.0,ENDORSES,SUPPORTED,PMID:12345678,,pranav,high,pending,,,
-v02,c1,Lemon water cures cancer,both,research_question,1.2,4.8,REFUTES,CONTRADICTED,,PMID:23456789,pranav,high,pending,,,
-v03,c1,Atrazine has a regulatory limit of three parts per billion,speech,fact_of_record,37.1,44.8,ENDORSES,SUPPORTED,https://wwwn.cdc.gov/tsp/PHS/PHS.aspx?phsid=336&toxid=59,,pranav,high,pending,,,
+v01,c1,<verbatim claim>,speech,research_question,3.5,8.0,ENDORSES,SUPPORTED,PMID:12345678,,labelling_pipeline_v1,high,pending,,,
+v02,c1,Lemon water cures cancer,both,research_question,1.2,4.8,REFUTES,CONTRADICTED,,PMID:23456789,labelling_pipeline_v1,high,pending,,,
+v03,c1,Atrazine has a regulatory limit of three parts per billion,speech,fact_of_record,37.1,44.8,ENDORSES,SUPPORTED,https://wwwn.cdc.gov/tsp/PHS/PHS.aspx?phsid=336&toxid=59,,labelling_pipeline_v1,high,pending,,,
 ```

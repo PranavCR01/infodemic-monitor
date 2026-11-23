@@ -21,7 +21,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from judge import (judge, is_mixed, has_true_and_false,  # noqa: E402
-                   review_reasons, CLAIM_KINDS)
+                   review_reasons, CLAIM_KINDS, EFFICACY_CATEGORIES)
 import enrich                              # noqa: E402
 from blind_subset import batch_of          # noqa: E402
 from labels import LABELS, ANNOTATOR       # noqa: E402
@@ -35,7 +35,7 @@ SPLIT_SEED = 20261121          # same seed as the blind subset; recorded in REVI
 TEST_FRACTION = 0.70           # section 14: roughly 30/70 tune/test, per video
 
 VIDEO_COLS = ["video_id", "source_url", "platform", "topic",
-              "video_level_label", "review_reasons", "text_type", "case_tags", "split",
+              "video_level_label", "misinfo_basis", "review_reasons", "text_type", "case_tags", "split",
               "annotator", "confidence", "review_status", "reviewer",
               "reviewer_notes", "notes", "source", "external_label",
               "external_source", "external_url"]
@@ -105,6 +105,18 @@ def main():
                 raise SystemExit("%s claim %d: kind must be one of %s"
                                  % (vid, i, ", ".join(CLAIM_KINDS)))
             cid = c.get("claim_id") or ("c%d" % i)
+            notes = c.get("notes", "")
+            if c["verdict"] == "UNSUPPORTED":
+                # Section 7: only an efficacy claim can be UNSUPPORTED, and the
+                # reason for the change leads the notes.
+                if (c.get("claim_category") not in EFFICACY_CATEGORIES
+                        or not c.get("unsupported_reason")):
+                    raise SystemExit(
+                        "%s claim %d: UNSUPPORTED needs claim_category (%s) "
+                        "and unsupported_reason" % (
+                            vid, i, " or ".join(EFFICACY_CATEGORIES)))
+                notes = "UNSUPPORTED (%s): %s %s" % (
+                    c["claim_category"], c["unsupported_reason"], notes)
             src = c.get("source") or enrich.derive_claim_source(
                 doc, float(c["start"]), float(c["end"]))
             claim_rows.append({
@@ -124,7 +136,7 @@ def main():
                 "review_status": "pending",
                 "reviewer": "",
                 "reviewer_notes": "",
-                "notes": c.get("notes", ""),
+                "notes": notes.strip(),
             })
 
         judged = [{"claim_id": r["claim_id"],
@@ -133,7 +145,7 @@ def main():
                    "evidence_supporting": r["evidence_supporting"],
                    "evidence_contradicting": r["evidence_contradicting"]}
                   for r in claim_rows if r["video_id"] == vid]
-        label, _deciding, _reasons = judge(judged)
+        label, basis, _deciding, _reasons = judge(judged)
         reasons = review_reasons(judged)
 
         tags = list(v.get("case_tags", []))
@@ -176,6 +188,7 @@ def main():
             "platform": v.get("platform") or idx.get("platform", "unknown"),
             "topic": v["topic"],
             "video_level_label": label,
+            "misinfo_basis": basis or "",
             "review_reasons": join(reasons),
             "text_type": text_type,
             "case_tags": join(tags),

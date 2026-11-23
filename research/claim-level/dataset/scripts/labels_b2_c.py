@@ -662,9 +662,6 @@ LABELS = [
     },
     {
         "video_id": "v141",
-        "external_reason": "The 'cure for cancer' soap is untested (INSUFFICIENT, not "
-                           "CONTRADICTED) and the incidental imiquimod claim is SUPPORTED, "
-                           "so the rules give NO_MISINFO to a misleading frame.",
         "topic": "cancer / skin cancer 'soap'",
         "case_tags": ["other_language"],
         "confidence": "medium",
@@ -688,7 +685,9 @@ LABELS = [
                 "source": "both",
                 "start": 0.0, "end": 2.8,
                 "kind": "research_question",
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "stance": "ENDORSES", "verdict": "UNSUPPORTED",
+                "claim_category": "treatment_efficacy",
+                "unsupported_reason": "Claims the soap is a cure for cancer; no clinical study exists for or against.",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
                 "notes": "EN: This 15-year-old invented a cure for cancer. A "
@@ -701,7 +700,9 @@ LABELS = [
                 "source": "both",
                 "start": 6.8, "end": 11.9,
                 "kind": "research_question",
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "stance": "ENDORSES", "verdict": "UNSUPPORTED",
+                "claim_category": "prevention",
+                "unsupported_reason": "Claims the soap prevents and treats skin cancer; untested in humans.",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
                 "notes": "EN: He made a soap that prevents and treats skin "
@@ -772,8 +773,6 @@ LABELS = [
     },
     {
         "video_id": "v143",
-        "external_reason": "Both soap claims are untested in people: INSUFFICIENT, not "
-                           "CONTRADICTED.",
         "topic": "cancer / skin cancer 'soap'",
         "case_tags": ["other_language"],
         "confidence": "medium",
@@ -792,7 +791,9 @@ LABELS = [
                 "source": "both",
                 "start": 0.0, "end": 3.5,
                 "kind": "research_question",
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "stance": "ENDORSES", "verdict": "UNSUPPORTED",
+                "claim_category": "treatment_efficacy",
+                "unsupported_reason": "Claims the soap treats skin cancer; no clinical study exists for or against.",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
                 "notes": "EN: He just invented a soap that treats skin cancer. "
@@ -805,7 +806,9 @@ LABELS = [
                 "source": "both",
                 "start": 9.3, "end": 14.8,
                 "kind": "research_question",
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "stance": "ENDORSES", "verdict": "UNSUPPORTED",
+                "claim_category": "prevention",
+                "unsupported_reason": "Claims the soap protects against skin cancer; untested.",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
                 "notes": "EN: He designed a soap that protects against skin "
@@ -882,8 +885,6 @@ LABELS = [
     },
     {
         "video_id": "v149",
-        "external_reason": "The advert's gut and detox claims are untested for the "
-                           "product; absence of evidence leaves them INSUFFICIENT.",
         "topic": "detox / gut health supplement",
         "case_tags": ["uncertain_science"],
         "confidence": "medium",
@@ -911,7 +912,9 @@ LABELS = [
                 "text": "This advanced formula ... reduces bloating",
                 "start": 15.4, "end": 21.8,
                 "kind": "research_question",
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "stance": "ENDORSES", "verdict": "UNSUPPORTED",
+                "claim_category": "treatment_efficacy",
+                "unsupported_reason": "Claims the product reduces bloating; no study of the product was found.",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
                 "notes": "No study of the product.",

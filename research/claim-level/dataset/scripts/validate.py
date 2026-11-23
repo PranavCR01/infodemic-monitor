@@ -7,8 +7,9 @@ Checks, per docs/target-system-design.md section 10 and the dataset README:
      and well formed within a video
   3. every video_level_label equals what the section 9 judge rules give for
      that video's claims
-  4. no evidence field is empty unless the verdict is INSUFFICIENT_EVIDENCE
-     or NOT_VERIFIABLE
+  4. no evidence field is empty unless the verdict is INSUFFICIENT_EVIDENCE,
+     UNSUPPORTED or NOT_VERIFIABLE; an UNSUPPORTED claim cites nothing, is
+     endorsed, and its notes open with its efficacy category and reason
   5. timestamps are sane, and inside the transcript's duration where known
   6. cited PMIDs and URLs were actually retrieved (present in evidence_cache/)
   7. the judge itself applies the revised section 9 rules in the doc's order
@@ -42,8 +43,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from judge import (judge, is_mixed, has_true_and_false,  # noqa: E402
-                   review_reasons, VERDICTS, STANCES, VIDEO_LABELS,
-                   CLAIM_KINDS, REASON_DENIES_TRUE, REASON_OPEN_DEBUNK)
+                   review_reasons, reason_kind, VERDICTS, STANCES,
+                   VIDEO_LABELS, MISINFO_BASES, CLAIM_KINDS,
+                   EFFICACY_CATEGORIES, JUDGE_REASONS)
 from evidence import (load_reference, snapshot_text,  # noqa: E402
                       passage_found, reference_org)
 import compare_collectors  # noqa: E402
@@ -81,38 +83,55 @@ def judge_self_test():
         return {"claim_id": "c%d" % i, "speaker_stance": stance,
                 "claim_verdict": verdict}
     E, R = "ENDORSES", "REFUTES"
+    M = "MISINFO"
     cases = [
-        ("endorsed false", [c(E, "CONTRADICTED")], "MISINFO", []),
-        ("denies a true claim", [c(R, "SUPPORTED")], "MISINFO",
-         [REASON_DENIES_TRUE]),
+        ("endorsed false", [c(E, "CONTRADICTED")], M, "contradicted", []),
+        ("denies a true claim", [c(R, "SUPPORTED")], M, "denies_supported",
+         ["denies_supported:c1"]),
         ("rule 1 before rule 2",
-         [c(E, "CONTRADICTED"), c(R, "SUPPORTED", 2)], "MISINFO", []),
+         [c(E, "CONTRADICTED"), c(R, "SUPPORTED", 2)], M, "contradicted",
+         ["denies_supported:c2"]),
+        ("unproven efficacy", [c(E, "UNSUPPORTED")], M, "unproven",
+         ["unproven_claim:c1"]),
+        ("rule 2 before unproven",
+         [c(E, "UNSUPPORTED"), c(R, "SUPPORTED", 2)], M, "denies_supported",
+         ["denies_supported:c2", "unproven_claim:c1"]),
+        ("unproven before debunking",
+         [c(R, "CONTRADICTED"), c(E, "UNSUPPORTED", 2)], M, "unproven",
+         ["unproven_claim:c2", "mixed_video"]),
         ("rule 2 before debunking",
-         [c(R, "SUPPORTED"), c(R, "CONTRADICTED", 2)], "MISINFO",
-         [REASON_DENIES_TRUE]),
-        ("debunk", [c(R, "CONTRADICTED")], "DEBUNKING", []),
+         [c(R, "SUPPORTED"), c(R, "CONTRADICTED", 2)], M,
+         "denies_supported", ["denies_supported:c1"]),
+        ("debunk", [c(R, "CONTRADICTED")], "DEBUNKING", None, []),
         ("mixed video is MISINFO",
-         [c(R, "CONTRADICTED"), c(E, "CONTRADICTED", 2)], "MISINFO", []),
+         [c(R, "CONTRADICTED"), c(E, "CONTRADICTED", 2)], M, "contradicted",
+         ["mixed_video"]),
+        ("refuted unsupported is not unproven",
+         [c(R, "UNSUPPORTED")], "CANNOT_RECOGNIZE", None, []),
         ("judged, nothing false endorsed", [c(E, "SUPPORTED")],
-         "NO_MISINFO", []),
-        ("NO_MISINFO before possible debunk",
+         "NO_MISINFO", None, []),
+        ("possible debunk raised under NO_MISINFO",
          [c(E, "SUPPORTED"), c(R, "INSUFFICIENT_EVIDENCE", 2)],
-         "NO_MISINFO", []),
+         "NO_MISINFO", None, ["possible_debunk:c2"]),
+        ("any MIXED claim is a reason",
+         [c(E, "SUPPORTED"), c(E, "MIXED", 2)], "NO_MISINFO", None,
+         ["mixed_evidence:c2"]),
         ("refutes insufficient", [c(R, "INSUFFICIENT_EVIDENCE")],
-         "CANNOT_RECOGNIZE", [REASON_OPEN_DEBUNK]),
-        ("refutes mixed", [c(R, "MIXED")], "CANNOT_RECOGNIZE",
-         [REASON_OPEN_DEBUNK]),
+         "CANNOT_RECOGNIZE", None, ["possible_debunk:c1"]),
+        ("refutes mixed", [c(R, "MIXED")], "CANNOT_RECOGNIZE", None,
+         ["possible_debunk:c1", "mixed_evidence:c1"]),
         ("refutes not verifiable", [c(R, "NOT_VERIFIABLE")],
-         "CANNOT_RECOGNIZE", []),
+         "CANNOT_RECOGNIZE", None, []),
         ("endorses insufficient", [c(E, "INSUFFICIENT_EVIDENCE")],
-         "CANNOT_RECOGNIZE", []),
-        ("no claims", [], "CANNOT_RECOGNIZE", []),
+         "CANNOT_RECOGNIZE", None, []),
+        ("no claims", [], "CANNOT_RECOGNIZE", None, []),
     ]
-    for name, claims, label, reasons in cases:
-        got_label, _, got_reasons = judge(claims)
-        if (got_label, got_reasons) != (label, reasons):
-            err("judge self-test %r: expected %s %s, got %s %s"
-                % (name, label, reasons, got_label, got_reasons))
+    for name, claims, label, basis, reasons in cases:
+        got_label, got_basis, _, got_reasons = judge(claims)
+        if (got_label, got_basis, got_reasons) != (label, basis, reasons):
+            err("judge self-test %r: expected %s %s %s, got %s %s %s"
+                % (name, label, basis, reasons, got_label, got_basis,
+                   got_reasons))
 
 PMID_RE = re.compile(r"^PMID:(\d{4,9})$")
 
@@ -277,10 +296,23 @@ def main():
         con = split_multi(c["evidence_contradicting"])
         verdict = c["claim_verdict"]
         if not sup and not con:
-            if verdict not in ("INSUFFICIENT_EVIDENCE", "NOT_VERIFIABLE"):
+            if verdict not in ("INSUFFICIENT_EVIDENCE", "UNSUPPORTED",
+                               "NOT_VERIFIABLE"):
                 err("%s/%s: no evidence but verdict is %s (only "
-                    "INSUFFICIENT_EVIDENCE or NOT_VERIFIABLE may be bare)"
-                    % (vid, cid, verdict))
+                    "INSUFFICIENT_EVIDENCE, UNSUPPORTED or NOT_VERIFIABLE "
+                    "may be bare)" % (vid, cid, verdict))
+        if verdict == "UNSUPPORTED":
+            if sup or con:
+                err("%s/%s: UNSUPPORTED means nothing for or against, but "
+                    "evidence is cited" % (vid, cid))
+            if c["speaker_stance"] != "ENDORSES":
+                err("%s/%s: UNSUPPORTED is only used on endorsed claims"
+                    % (vid, cid))
+            m = re.match(r"^UNSUPPORTED \((\w+)\): \S", c["notes"])
+            if not m or m.group(1) not in EFFICACY_CATEGORIES:
+                err("%s/%s: UNSUPPORTED notes must open with 'UNSUPPORTED "
+                    "(<%s>): <reason>'"
+                    % (vid, cid, "|".join(EFFICACY_CATEGORIES)))
         if verdict == "SUPPORTED" and not sup:
             err("%s/%s: SUPPORTED with no supporting evidence" % (vid, cid))
         if verdict == "CONTRADICTED" and not con:
@@ -315,11 +347,16 @@ def main():
     for v in videos:
         vid = v["video_id"]
         cs = by_video.get(vid, [])
-        expected, deciding, _ = judge(cs)
+        expected, basis, deciding, _ = judge(cs)
         if v["video_level_label"] != expected:
             err("%s: video_level_label is %s but the section 9 rules give %s "
                 "for its %d claim(s)"
                 % (vid, v["video_level_label"], expected, len(cs)))
+        if v.get("misinfo_basis", "") != (basis or ""):
+            err("%s: misinfo_basis is %r but the rules give %r"
+                % (vid, v.get("misinfo_basis"), basis or ""))
+        if basis and basis not in MISINFO_BASES:
+            err("%s: misinfo_basis %r not allowed" % (vid, basis))
         want = review_reasons(cs)
         if split_multi(v.get("review_reasons")) != want:
             err("%s: review_reasons are %r but the rules give %r"
@@ -422,9 +459,13 @@ def report(videos=None, claims=None, by_video=None, excluded=0):
         print("videos: %d   claims: %d   (out_of_scope, excluded from every "
               "count: %d)" % (len(videos), len(claims), excluded))
         print("claim_kind:", dict(Counter(c["claim_kind"] for c in claims)))
-        print("review reasons added by section 9:", {
-            r: sum(r in split_multi(v["review_reasons"]) for v in videos)
-            for r in (REASON_DENIES_TRUE, REASON_OPEN_DEBUNK)})
+        print("review reasons added by section 9 (videos):", {
+            r: sum(any(reason_kind(x) == r
+                       for x in split_multi(v["review_reasons"]))
+                   for v in videos)
+            for r in JUDGE_REASONS})
+        print("misinfo_basis:", dict(Counter(
+            v["misinfo_basis"] for v in videos if v["misinfo_basis"])))
         print("video_level_label:",
               dict(Counter(v["video_level_label"] for v in videos)))
         print("split:", dict(Counter(v["split"] for v in videos)))

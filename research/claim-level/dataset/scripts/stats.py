@@ -151,10 +151,11 @@ def main():
     print()
 
     print("## Review reasons added by the section 9 rules\n")
-    from judge import REASON_DENIES_TRUE, REASON_OPEN_DEBUNK
-    for reason in (REASON_DENIES_TRUE, REASON_OPEN_DEBUNK):
+    from judge import JUDGE_REASONS, reason_kind
+    for reason in JUDGE_REASONS:
         hit = [v["video_id"] for v in videos
-               if reason in split_multi(v["review_reasons"])]
+               if any(reason_kind(x) == reason
+                      for x in split_multi(v["review_reasons"]))]
         print("- %s: %d (%s)" % (reason, len(hit), " ".join(hit) or "none"))
     sent = [v["video_id"] for v in videos if v["review_reasons"]]
     print("- videos with any review reason: %d of %d" % (len(sent),

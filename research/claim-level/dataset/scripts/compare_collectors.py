@@ -38,8 +38,6 @@ REASONS = {
     "v17": "The misinformation sits in regulatory assertions (FDA chemical "
            "counts, Texas labels) that are not health claims; the one health "
            "claim left is NOT_VERIFIABLE.",
-    "v20": "Five remedy claims, none tested; Cochrane's 'insufficient trial "
-           "evidence' for garlic is absence of evidence, not contradiction.",
     "v44": "The death anecdote is NOT_VERIFIABLE and nothing tests the "
            "'ancient pathogens, no immunity' claim: unjudgeable rather than "
            "accurate.",

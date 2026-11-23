@@ -280,3 +280,55 @@ a video label. The disagreements fall into four groups:
 - **v145, v146** have no speech and almost no readable text. They are
   `no_claims` rather than `out_of_scope` because health content could not be
   ruled out from text; someone should look at the video.
+
+## Revision: 2026-11-23 (§7 UNSUPPORTED, §9 unproven rule)
+
+Applied from `docs/target-system-design.md` on `origin/langgraph-build`.
+
+- **§7 `UNSUPPORTED`.** All 223 endorsed `INSUFFICIENT_EVIDENCE` claims were
+  re-read (the 32 with any other stance were left alone, since the rule needs
+  `ENDORSES`). A claim became `UNSUPPORTED` only if it is a `treatment_efficacy`
+  or `prevention` claim and the evidence shows nothing for or against: no
+  citation on either side, and no animal or in-vitro study in its notes (that
+  makes it "too weak", so it stays `INSUFFICIENT_EVIDENCE`). **18 claims in 9
+  videos** changed: v20 c1–c4, v37 c4, v84 c1, v86 c1, v113 c1–c4 and c6,
+  v141 c1–c2, v143 c1–c2, v149 c2, v164 c4. Each has
+  `UNSUPPORTED (<category>): <reason>` at the start of its notes. The dataset
+  had no `claim_category` column, so the category was judged by hand from the
+  claim text and recorded only on the changed claims.
+- **Left as `INSUFFICIENT_EVIDENCE`, on purpose:** harm and side-effect claims,
+  mechanisms, statistics, diagnostic claims (v136's salt pregnancy test),
+  vague wellness ("supports digestion", "boosts immunity": v138, v155, v149
+  c1/c3/c4), and efficacy claims with weak evidence on record (v92 grounding
+  and v35 miso have animal studies, v106 garlic has in-vitro work, v167 and
+  v168 cite reviews that find too little). v72's TUDCA claim was never searched
+  under its real name (Whisper heard "cut cut"), so the search is not
+  exhausted and §7 does not allow `UNSUPPORTED` yet.
+- **§9 judge.** `judge()` now returns `(label, misinfo_basis, deciding,
+  reasons)`, with the unproven rule after `denies_supported` and before
+  `DEBUNKING`. Review reasons are collected from every claim
+  (`denies_supported`, `unproven_claim`, `possible_debunk`, `mixed_evidence`,
+  `mixed_video`); the §11 triggers apply to deciding claims only, with the
+  old "deciding or all claims" fallback dropped. `videos.csv` gains
+  `misinfo_basis`.
+- **`annotator`** is `labelling_pipeline_v1` on every row; `reviewer` stays
+  empty until a person reviews.
+- **`compare_external.py`** reports M4Health on its own line, outside the main
+  agreement number.
+
+**Effect.** In-scope labels went from MISINFO 26 / NO_MISINFO 51 / DEBUNKING 17
+/ CANNOT_RECOGNIZE 68 to 33 / 50 / 17 / 62. Seven videos changed, all to MISINFO
+with basis `unproven`: v20, v84, v113, v143, v149, v164 (from
+CANNOT_RECOGNIZE) and v141 (from NO_MISINFO). v37 and v86 gained `UNSUPPORTED`
+claims but were already MISINFO on a contradicted claim. Agreement with the
+source label, M4Health excluded, went from 19/74 (kappa 0.10) to 23/74 (kappa
+0.13); M4Health alone from 0/15 to 1/15. Collector agreement (batch 1) went
+from 25/39 to 26/39 (v20).
+
+**Review load moved.** Videos with any review reason: 43 → 41 of 162. 27 left
+review: CANNOT_RECOGNIZE videos whose claims are all insufficient have no
+deciding claim, so without the fallback no §11 trigger fires (v29 also loses
+its UNCLEAR-stance flag this way). 25 joined, mostly through
+`possible_debunk` and `mixed_evidence` now being collected from every claim.
+The design may want "no claim could be judged" as an explicit review reason;
+that is a question for §11, not changed here.

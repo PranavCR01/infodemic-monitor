@@ -19,8 +19,15 @@ Per claim:
   source      speech | screen | both
   start, end  seconds, from the transcript segments
   stance      ENDORSES | REFUTES | QUOTES | NEUTRAL | UNCLEAR (section 5)
-  verdict     SUPPORTED | CONTRADICTED | MIXED | INSUFFICIENT_EVIDENCE |
-              NOT_VERIFIABLE (section 7)
+  verdict     SUPPORTED | CONTRADICTED | MIXED | UNSUPPORTED |
+              INSUFFICIENT_EVIDENCE | NOT_VERIFIABLE (section 7)
+  claim_category, unsupported_reason
+              required when verdict is UNSUPPORTED: an endorsed
+              treatment_efficacy or prevention claim (X cures, treats,
+              prevents or reverses Y) where the evidence shows nothing for or
+              against. build_csvs.py puts the reason at the start of notes.
+              Claims about harm, side effects, mechanism, statistics or vague
+              wellness stay INSUFFICIENT_EVIDENCE.
   supporting, contradicting
               lists of "PMID:nnnnnnnn" or URLs that were actually retrieved
               through evidence.py. Absence of evidence is INSUFFICIENT_EVIDENCE,
@@ -36,7 +43,9 @@ Two labelling rules applied consistently, both from section 7:
      search stays in evidence_cache/ as the record that it was actually run.
 """
 
-ANNOTATOR = "pranav"
+# Who produced the labels. People's names go only in the reviewer column, once
+# a person has reviewed a row.
+ANNOTATOR = "labelling_pipeline_v1"
 
 LABELS = [
     {
@@ -858,7 +867,9 @@ LABELS = [
                 "text": "a remedy capable of relieving dry cough",
                 "start": 10.6, "end": 17.3,
                 "kind": "research_question",
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "stance": "ENDORSES", "verdict": "UNSUPPORTED",
+                "claim_category": "treatment_efficacy",
+                "unsupported_reason": "Claims the decoction relieves dry cough; no trial of it was found for or against.",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
                 "notes": "No trial of this preparation. The honey the video "
@@ -870,7 +881,9 @@ LABELS = [
                 "text": "a remedy capable of ... [relieving] bronchitis",
                 "start": 10.6, "end": 17.3,
                 "kind": "research_question",
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "stance": "ENDORSES", "verdict": "UNSUPPORTED",
+                "claim_category": "treatment_efficacy",
+                "unsupported_reason": "Claims the decoction relieves bronchitis; the only herbal bronchitis trials test a different preparation.",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
                 "notes": "Searches for herbal treatment of acute bronchitis "
@@ -883,7 +896,9 @@ LABELS = [
                         "lungs",
                 "start": 10.6, "end": 17.3,
                 "kind": "research_question",
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "stance": "ENDORSES", "verdict": "UNSUPPORTED",
+                "claim_category": "treatment_efficacy",
+                "unsupported_reason": "Claims the decoction expels mucus from the lungs; the expectorant search returned nothing.",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
                 "notes": "A search for ginger as a respiratory expectorant "
@@ -894,7 +909,9 @@ LABELS = [
                 "text": "a remedy capable of ... improving sinusitis",
                 "start": 17.3, "end": 22.8,
                 "kind": "research_question",
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "stance": "ENDORSES", "verdict": "UNSUPPORTED",
+                "claim_category": "treatment_efficacy",
+                "unsupported_reason": "Claims the decoction improves sinusitis; nothing tests these ingredients against sinusitis.",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
                 "notes": "Nothing retrieved tests any of these ingredients "
@@ -2390,7 +2407,9 @@ LABELS = [
                         "eliminate arterial plaque",
                 "start": 38.5, "end": 44.9,
                 "kind": "research_question",
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "stance": "ENDORSES", "verdict": "UNSUPPORTED",
+                "claim_category": "treatment_efficacy",
+                "unsupported_reason": "Claims berberine eliminates arterial plaque; the plaque-regression search returned nothing.",
                 "supporting": [], "contradicting": [],
                 "confidence": "high",
                 "notes": "A search for berberine against atherosclerosis or "

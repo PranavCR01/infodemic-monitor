@@ -343,7 +343,9 @@ LABELS = [
                         "à disparaître",
                 "start": 29.1, "end": 35.1,
                 "kind": "research_question",
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "stance": "ENDORSES", "verdict": "UNSUPPORTED",
+                "claim_category": "treatment_efficacy",
+                "unsupported_reason": "Claims a meat-only diet makes joint pain disappear; nothing retrieved tests it.",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
                 "notes": "EN: even joint pains begin to disappear. Nothing "

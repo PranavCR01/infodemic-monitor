@@ -43,7 +43,9 @@ LABELS = [
                         "of it, we'll be perfectly fine",
                 "start": 32.9, "end": 99.3,
                 "kind": "research_question",
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "stance": "ENDORSES", "verdict": "UNSUPPORTED",
+                "claim_category": "prevention",
+                "unsupported_reason": "Claims nasal dry-ginger powder prevents COVID-19; no study in people tests it (only in-silico docking, not evidence).",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
                 "notes": "The deciding claim: nasal dry-ginger powder "
@@ -151,7 +153,9 @@ LABELS = [
                 "text": "Of course we can reverse HIV",
                 "start": 0.0, "end": 1.6,
                 "kind": "research_question",
-                "stance": "ENDORSES", "verdict": "INSUFFICIENT_EVIDENCE",
+                "stance": "ENDORSES", "verdict": "UNSUPPORTED",
+                "claim_category": "treatment_efficacy",
+                "unsupported_reason": "Claims HIV can be reversed without treatment; nothing tests it for or against.",
                 "supporting": [], "contradicting": [],
                 "confidence": "medium",
                 "notes": "Shown on screen as 'Yes you can reverse HIV/AIDS'. "
@@ -1580,8 +1584,6 @@ LABELS = [
 # Why the derived label differs from the label the source implies
 # (compare_external.py). Written after the claims above were labelled.
 _EXTERNAL_REASONS = {
-    "v84": "Nasal dry-ginger powder against COVID-19 has never been tested, "
-           "so every claim is INSUFFICIENT_EVIDENCE, not false.",
     "v85": "No study establishes or refutes a 'wind turbine syndrome', and "
            "the sleep claim is MIXED (self-reported disturbance vs. no "
            "objective effect).",

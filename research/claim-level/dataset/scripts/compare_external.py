@@ -22,6 +22,11 @@ implies. The mapping is the only interpretation added here:
   M4Health  FALSE       low credibility                -> MISINFO
   MHMisinfo-Gold  -1    mental-health misinformation   -> MISINFO
 
+M4Health is left out of the main agreement number and kappa and reported on
+its own line: it labels every video in its list FALSE, including memes and
+adverts that assert nothing checkable, so its FALSE is not a verdict on
+claims the way a fact-checker's is.
+
   python compare_external.py          # write external_agreement.md
   python compare_external.py --check  # fail if a disagreement has no reason
 """
@@ -44,6 +49,8 @@ OUT = DATASET / "external_agreement.md"
 SELECTION = DATASET / "sources" / "batch2_selection.csv"
 SOURCES = ("fact_checked_creator", "fact_checker_produced", "M4Health",
            "MHMisinfo-Gold")
+# Reported separately, not in the main agreement number (see docstring).
+SEPARATE = ("M4Health",)
 
 
 def implied(source, label, tags):
@@ -94,6 +101,7 @@ def load():
             "implied": implied(v["source"], v["external_label"],
                                tags.get(v["video_id"], "")),
             "label": v["video_level_label"],
+            "basis": v.get("misinfo_basis", ""),
             "out_of_scope": "out_of_scope" in v["case_tags"].split(";"),
             "topic": v["topic"],
             "review": v["review_reasons"],
@@ -132,9 +140,13 @@ def main():
     why = reasons()
     scoped = [r for r in rows if not r["out_of_scope"]]
     oos = [r for r in rows if r["out_of_scope"]]
-    mapped = [r for r in scoped if r["implied"]]
+    mapped_all = [r for r in scoped if r["implied"]]
+    mapped = [r for r in mapped_all if r["source"] not in SEPARATE]
     pairs = [(r["implied"], r["label"]) for r in mapped]
     agree = sum(a == b for a, b in pairs)
+    pairs_all = [(r["implied"], r["label"]) for r in mapped_all]
+    agree_all = sum(a == b for a, b in pairs_all)
+    sep = [r for r in mapped_all if r["source"] in SEPARATE]
     labels = list(VIDEO_LABELS)
 
     L = ["# Source labels vs. the derived video label (batch 2)", "",
@@ -146,13 +158,30 @@ def main():
          "is in the script's docstring.", "",
          "**%d** batch-2 videos. **%d** are `out_of_scope` and excluded from "
          "every number (section 14), leaving **%d**; **%d** of those have a "
-         "source label that implies a video label."
-         % (len(rows), len(oos), len(scoped), len(mapped)), ""]
+         "source label that implies a video label, **%d** of them outside "
+         "M4Health."
+         % (len(rows), len(oos), len(scoped), len(mapped_all), len(mapped)),
+         ""]
     if pairs:
-        L += ["- Agreement with the implied label: **%d / %d (%.0f%%)**"
-              % (agree, len(pairs), 100.0 * agree / len(pairs)),
-              "- Cohen's kappa (implied vs. derived): **%.2f**"
-              % cohen_kappa(pairs), ""]
+        L += ["- Agreement with the implied label, M4Health excluded: "
+              "**%d / %d (%.0f%%)**, Cohen's kappa **%.2f**"
+              % (agree, len(pairs), 100.0 * agree / len(pairs),
+                 cohen_kappa(pairs))]
+    if sep:
+        n = sum(r["implied"] == r["label"] for r in sep)
+        L += ["- M4Health on its own: **%d / %d (%.0f%%)**. Not pooled: "
+              "M4Health labels every video in its list FALSE, memes and "
+              "adverts included, so its label is not a verdict on claims."
+              % (n, len(sep), 100.0 * n / len(sep))]
+    if pairs_all:
+        L += ["- For reference, all sources pooled: %d / %d (%.0f%%), "
+              "kappa %.2f"
+              % (agree_all, len(pairs_all),
+                 100.0 * agree_all / len(pairs_all),
+                 cohen_kappa(pairs_all))]
+    L += ["", "MISINFO counts both bases; a video whose only false claim is "
+          "an untested efficacy claim is MISINFO with `misinfo_basis` "
+          "`unproven` (section 9) and is always reviewed.", ""]
     L += ["The sources judged whole videos, by a fact-checker's reading or a "
           "dataset's annotation scheme; the derived label comes from "
           "per-claim evidence under section 7, where an untested claim is "
@@ -179,7 +208,8 @@ def main():
                        for lab in labels)))
     L.append("")
 
-    L += ["## Confusion matrix (rows: implied by source, columns: derived)",
+    L += ["## Confusion matrix, M4Health excluded "
+          "(rows: implied by source, columns: derived)",
           "", "| implied \\ derived | " + " | ".join(labels) + " | total |",
           "|---|" + "---:|" * (len(labels) + 1)]
     for a in labels:
@@ -203,14 +233,15 @@ def main():
     L.append("")
 
     L += ["## Every video", "",
-          "| video | source | external_label | implied | derived | sent to "
-          "review | why they differ |",
-          "|---|---|---|---|---|---|---|"]
+          "| video | source | external_label | implied | derived | basis | "
+          "sent to review | why they differ |",
+          "|---|---|---|---|---|---|---|---|"]
     for r in scoped:
         dis = r["implied"] and r["implied"] != r["label"]
-        L.append("| %s | %s | %s | %s | %s | %s | %s |" % (
+        L.append("| %s | %s | %s | %s | %s | %s | %s | %s |" % (
             r["video_id"], r["source"], md(r["external_label"]),
-            r["implied"] or "—", r["label"], "yes" if r["review"] else "no",
+            r["implied"] or "—", r["label"], r["basis"] or "",
+            "yes" if r["review"] else "no",
             md(why.get(r["video_id"], "")) if dis else ""))
     L.append("")
 
@@ -222,8 +253,11 @@ def main():
             r["video_id"], r["source"], md(r["external_label"]), md(r["topic"])))
     L.append("")
     OUT.write_text("\n".join(L), encoding="utf-8")
-    print("implied-label agreement %d/%d -> %s"
-          % (agree, len(pairs), OUT.name))
+    print("implied-label agreement, M4Health excluded %d/%d kappa %.2f; "
+          "M4Health %d/%d; pooled %d/%d kappa %.2f -> %s"
+          % (agree, len(pairs), cohen_kappa(pairs),
+             sum(r["implied"] == r["label"] for r in sep), len(sep),
+             agree_all, len(pairs_all), cohen_kappa(pairs_all), OUT.name))
 
 
 if __name__ == "__main__":
