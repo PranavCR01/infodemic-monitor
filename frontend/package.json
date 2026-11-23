@@ -11,6 +11,9 @@
     "test:watch": "vitest"
   },
   "dependencies": {
+    "@fontsource/ibm-plex-mono": "^5.1.1",
+    "@fontsource/ibm-plex-sans": "^5.1.1",
+    "@fontsource/source-serif-4": "^5.1.1",
     "@supabase/ssr": "^0.5.0",
     "@supabase/supabase-js": "^2.0.0",
     "next": "14.2.29",
