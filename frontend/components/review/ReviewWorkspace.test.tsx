@@ -93,7 +93,7 @@ describe("ReviewWorkspace: decision form", () => {
   it("shows the server's refusal and keeps the form", async () => {
     setup(normal, vi.fn().mockResolvedValue({ ok: false, message: "Someone else decided this case while you were working on it." }));
     fireEvent.click(screen.getByRole("radio", { name: /Reject the result/ }));
-    choose(/^Reason/, "UNUSABLE_INPUT");
+    choose(/^Reason/, "OTHER");
     fireEvent.change(note(), { target: { value: "Audio is music only." } });
     fireEvent.click(screen.getByRole("button", { name: "Reject result" }));
     expect(await screen.findByRole("alert")).toHaveTextContent(/Someone else decided/);

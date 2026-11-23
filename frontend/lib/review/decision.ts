@@ -14,8 +14,8 @@ export const DECISIONS: { kind: DecisionKind; title: string; description: string
 ];
 
 /**
- * Reason codes (Q2: a code and a note on every decision). PROPOSED to T27; the API
- * today takes only a free-text reason, so the adapter folds the code into it.
+  * Reason codes (Q2: a code and a note on every decision). The six codes T34 will add
+ * as the reason_code enum; until then the code is folded into the free-text reason.
  */
 export const REASON_CODES = [
   { code: "SYSTEM_CORRECT", text: "The system's assessment is right" },
@@ -23,7 +23,6 @@ export const REASON_CODES = [
   { code: "EVIDENCE_MISREAD", text: "Evidence misread by the system" },
   { code: "STANCE_MISREAD", text: "Stance misread by the system" },
   { code: "MISSING_SOURCE", text: "A relevant source is missing" },
-  { code: "UNUSABLE_INPUT", text: "The video or audio can't be analysed" },
   { code: "OTHER", text: "Other (explain in the note)" },
 ] as const;
 export type ReasonCode = (typeof REASON_CODES)[number]["code"];
