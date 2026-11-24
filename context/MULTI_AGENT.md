@@ -1972,6 +1972,43 @@ Fixes the T38 caveat above before the paid routing run. **No paid calls; mocked 
   TODO. Check the lead's prices and that both models accept `reasoning_effort` and
   `max_completion_tokens` on Chat Completions (one cheap manual call is the only way to be sure).
 
+## 7ad. Blind-Step Material for HIGH Review Cases (T40, decision D7 Q1; design §12, §15, §17)
+
+T34 makes a blind reviewer's result, claims and evidence routes answer 403, so the blind
+step had nothing to judge from. Additive only; no migration.
+
+- **Route:** `GET /v1/reviews/{review_id}/blind-material` (reviewer/admin; built in
+  `app/services/blind_material.py`). Allowed **only while the caller is blind** on the
+  case (`blind_review.is_blind`): an open HIGH case, no pre-reveal by the caller, not their
+  own video. Anyone else who may see the case gets 403 `BLIND_STEP_NOT_ACTIVE` (detail has
+  `code`, `review_id`, `message`); analysts 403 before lookup; not-visible 404 (T33).
+- **Response:** `review_id, job_id, video_id, material: "blind"`; `claims[]` with
+  `claim_id, text, category, start_seconds, end_seconds, source_segment_ids` (the
+  extractor's quoted segments, not the stance's) and `references[]`; `transcript_segments`
+  and `ocr_segments` (T26 `SegmentView`). A reference has `evidence_id, source_kind, rank,
+  title, year, publisher, study_type, abstract_snippet, url, pmid, doi`; library documents
+  carry only id, kind, rank and title. No relation, cited/deciding marker, verdict,
+  stance, label, reasons, rules, critic notes, confidence, relevance score, severity or
+  search-trail field.
+- **Which papers (leak fix):** `claim_evidence` stores the reranked set (ranks 1..K) and
+  then any record the verifier *cited* that the reranker did not keep. Those trailing rows
+  would reveal a citation, so only ranks <= K are shown, K = the claim's
+  `search_trail.counts.kept` (= `len(reranked_evidence)`). Ranks are renumbered 1..n.
+- **Ordering:** claims by start time then id; references by stored rerank rank then id;
+  segments by start then id. Never by relation or citation.
+- **Tests** (`test_blind_material_t40.py`): two databases identical except for verdicts,
+  stances, relations (in an order that would differ if sorted by relation), labels,
+  deciding, critic, confidence, scores and reasons, plus a cited non-reranked paper in one:
+  byte-identical responses (with and without a library document). Forbidden keys/values
+  scan; schema has no system fields; access matrix (blind reviewer/admin 200, pre-revealed,
+  own-video, non-HIGH, resolved 403; analysts 403; legacy for reviewer 404). T33's route
+  table classifies the route.
+- **Residuals for a person:** (1) rows stored before T31 have no search trail, so K is
+  unknown and every stored link is shown, which can include a cited non-reranked record;
+  (2) the amount of material can reflect a retrieval retry, which correlates weakly with an
+  INSUFFICIENT verdict; (3) the claim list comes from the case and the stored rows, and
+  severity is not shown here (the case view already shows table severity).
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -1993,6 +2030,11 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-24**: T40 (decision D7 Q1; design §12, §15, §17) blind-step material by the
+  automated build: `GET /v1/reviews/{id}/blind-material`, only for a caller blind on an open
+  HIGH case (else 403 `BLIND_STEP_NOT_ACTIVE`); claims, segments and retrieved papers in
+  rerank order with no relation/verdict/stance/label/critic/confidence; cited papers outside
+  the reranked set left out. Byte-identical no-leak test. No migration, no spend. Decisions in §7ad.
 - **2026-11-24**: T39 (no issue; design §13, §14) OpenAI reasoning-model fix by the
   automated build, **no paid calls**: `models:` + `reasoning_allowance:` in routing.yaml;
   reasoning models get `max_completion_tokens` at visible cap + allowance (stance

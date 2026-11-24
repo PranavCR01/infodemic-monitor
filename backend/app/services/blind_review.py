@@ -21,6 +21,8 @@ verdicts or MISINFO relevance, or audit details. The same caller also gets 403
 ``PRE_REVEAL_REQUIRED`` from the result, claims and evidence routes of that job, and
 the job list hides that job's label and leaves it out of label-filtered pages. The
 video's severity (HIGH) stays visible: it is what puts the case at the top of the queue.
+What the blind caller judges from instead is ``GET /v1/reviews/{id}/blind-material``
+(``app.services.blind_material``, T40), open only while they are blind.
 
 A decision on a case that needs the step is rejected (409 ``PRE_REVEAL_REQUIRED``)
 unless the deciding reviewer has a pre-reveal on it.
