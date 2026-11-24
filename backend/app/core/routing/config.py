@@ -116,7 +116,9 @@ class ModelSettings(BaseModel):
     A **reasoning** model (OpenAI GPT-5 class) spends hidden reasoning tokens that count
     against its output cap and are billed as output. For such a model the router:
 
-    - names the cap ``max_completion_tokens`` (these models reject ``max_tokens``),
+    - sends the call to the OpenAI Responses API (T41: ``params["reasoning"]``; Chat
+      Completions refuses function tools with ``reasoning_effort``), whose cap is
+      ``max_output_tokens`` (``output_param`` below only names the Chat Completions cap),
     - raises the step's cap by the step's ``reasoning_allowance`` so reasoning cannot
       use up the room for the visible answer (the node's own cap is the visible part),
     - sends no ``temperature`` (reasoning models accept only the default),

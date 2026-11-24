@@ -2009,6 +2009,49 @@ step had nothing to judge from. Additive only; no migration.
   INSUFFICIENT verdict; (3) the claim list comes from the case and the stored rows, and
   severity is not shown here (the case view already shows table severity).
 
+## 7ae. OpenAI Responses-API Client for Reasoning Models (T41, no issue; design §13, §14)
+
+The T38 smoke test (PR #104) got a 400 on every GPT-5.6 call: Chat Completions refuses
+function tools together with `reasoning_effort`. The lead chose a Responses-API client so
+the candidates run with reasoning on. **No paid calls; mocked SDK only.**
+
+- **Which API.** `ModelRouter.prepare` now also passes `params["reasoning"]` from
+  routing.yaml's `models:` entry. `OpenAIModelClient` sends `reasoning: true` models to
+  `client.responses.create`; every other OpenAI model (gpt-4o critic and fallback,
+  unlisted models) stays on Chat Completions with the exact T39 request. No model-name
+  checks anywhere.
+- **Request mapping (Responses).** `model`; `input` = the node's messages (string content
+  passes through; text blocks become `input_text`/`output_text` parts); `instructions` =
+  the system prompt; `max_output_tokens` = node cap + step reasoning allowance (3548 /
+  1312 / 3524), no `max_tokens`/`max_completion_tokens`; `reasoning: {effort}` (step
+  override, else model setting, else medium, as T39); no `temperature`; tools flattened to
+  `{type: function, name, description, parameters, strict: false}` (strict off: the nodes'
+  schemas aren't strict-mode schemas and their parsers validate anyway); forced choice
+  `{type: function, name}`; `store: false` (nothing kept server-side; we never chain).
+- **Response mapping.** The first `function_call` item with the forced name → its parsed
+  `arguments` (bad JSON / wrong tool / text only → `None`, the node's safe default). Text
+  requests: the `output_text` parts of `message` items, joined. Usage: `input_tokens`,
+  `output_tokens` (taken as including reasoning, as Chat Completions' `completion_tokens`
+  does; the SDK's docstring doesn't say, so check `output_tokens >= reasoning_tokens` in the
+  first paid reply), `output_tokens_details.reasoning_tokens`, and `response.model`.
+- **Truncation.** No truncation error existed, so T41 adds `ModelTruncatedError`
+  (kind `truncated`): raised for status `incomplete` with reason `max_output_tokens`. It is
+  not a fallback kind, so no retry and no fallback; the item counts as failed in the
+  experiment. The error carries the billed usage, which the router writes onto the failed
+  `CallRecord` (tokens, reasoning, reported model, cost) and `SpendGuard` books instead of
+  the worst-case reservation. Other `incomplete` reasons parse normally; status `failed` is
+  a plain `ModelCallError`.
+- **Errors.** Same `map_provider_error` as before (timeout / 429 / 5xx / connection; other
+  4xx a plain `ModelCallError` with its status), tested with the real SDK exception types
+  and with the real SDK over an `httpx.MockTransport`.
+- **Dependency.** `openai>=1.66` (the Responses API); written against the installed 3.58.
+- **Dry run after T41** (frozen evidence): unchanged at **$15.36 expected / $42.67 upper
+  bound**; OpenAI candidates $6.81 / $16.49 (luna extract $0.17 / $0.54, luna stance
+  $0.28 / $0.37, terra verify $6.36 / $15.58). The upper bound is still above the $40 cap.
+- **For a person before the paid run:** re-run the smoke test (~$0.35). Watch for
+  `truncated` errors (the allowances are T38's guesses) and that the Responses API accepts
+  `reasoning.effort: medium` with forced function tools for both models.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -2030,6 +2073,12 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-24**: T41 (design §13, §14) OpenAI Responses-API client by the automated
+  build: `reasoning: true` models now call `responses.create` with `reasoning.effort`,
+  `max_output_tokens` (node cap + allowance), flat function tools and a forced tool choice;
+  other OpenAI models keep Chat Completions unchanged. Incomplete-at-cap replies raise the
+  new `ModelTruncatedError` with billed usage recorded. Dry run unchanged ($15.36 / $42.67;
+  OpenAI $6.81 / $16.49). Mocked tests only, no spend. Decisions in §7ae.
 - **2026-11-24**: T40 (decision D7 Q1; design §12, §15, §17) blind-step material by the
   automated build: `GET /v1/reviews/{id}/blind-material`, only for a caller blind on an open
   HIGH case (else 403 `BLIND_STEP_NOT_ACTIVE`); claims, segments and retrieved papers in

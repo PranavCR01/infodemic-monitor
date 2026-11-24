@@ -23,7 +23,7 @@ dependencies = [
   "httpx>=0.26",
   # Inference
   "anthropic>=0.28",
-  "openai>=1.13",
+  "openai>=1.66",
   "tiktoken>=0.6",
   # LangGraph pipeline (app/core/graph); Postgres checkpointer uses psycopg 3
   "langgraph>=1.0",

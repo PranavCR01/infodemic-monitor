@@ -146,10 +146,15 @@ class GuardedClient:
         reserved = self.guard.reserve(model, request)
         try:
             response = self.inner.complete(model, request)
-        except Exception:
+        except Exception as exc:
             # A failed call may still have been billed (e.g. a timeout after generation):
-            # book the reservation to stay on the safe side.
-            self.guard.book(model, None, reserved)
+            # book the reservation to stay on the safe side, unless the error carries the
+            # usage the provider reported (T41: a reply truncated at the output cap).
+            billed = getattr(exc, "response", None)
+            if isinstance(billed, ModelResponse):
+                self.guard.book(model, billed, reserved, estimate_input_tokens(request.system, request.input))
+            else:
+                self.guard.book(model, None, reserved)
             raise
         self.guard.book(model, response, reserved, estimate_input_tokens(request.system, request.input))
         return response

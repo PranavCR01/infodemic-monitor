@@ -74,7 +74,29 @@ class FakeOpenAI:
                     usage=SimpleNamespace(prompt_tokens=10, completion_tokens=900,
                                           completion_tokens_details=SimpleNamespace(reasoning_tokens=reasoning)))
 
+        class Responses:
+            """T41: reasoning models go to the Responses API; same reply, its shape."""
+
+            def create(self, **kw):
+                outer.sent.append(kw)
+                if outer.fail_first:
+                    outer.fail_first -= 1
+                    raise type("InternalServerError", (Exception,), {"status_code": 500})("boom")
+                call = SimpleNamespace(type="function_call", name=tool, arguments=arguments, call_id="c1")
+                return SimpleNamespace(
+                    model=served(kw), status="completed", incomplete_details=None,
+                    output=[SimpleNamespace(type="reasoning"), call],
+                    usage=SimpleNamespace(input_tokens=10, output_tokens=900,
+                                          output_tokens_details=SimpleNamespace(reasoning_tokens=reasoning)))
+
         self.chat = SimpleNamespace(completions=Completions())
+        self.responses = Responses()
+
+
+def effort(kw):
+    """The effort a request carried: Responses API ``reasoning.effort`` (reasoning models,
+    T41) or Chat Completions ``reasoning_effort``."""
+    return (kw.get("reasoning") or {}).get("effort") or kw.get("reasoning_effort")
 
 
 class FakeAnthropic:
@@ -101,15 +123,15 @@ def stance_body(max_tokens=512):
 # ------------------------------------------------------------------ the client
 
 
-def test_reasoning_model_gets_max_completion_tokens_and_no_temperature():
+def test_reasoning_model_gets_raised_output_cap_and_no_temperature():
     sdk = FakeOpenAI()
     router = ModelRouter(routing(steps={"analyze_stance": {"provider": "openai", "model": MINI, "prompt": "stance_v1"}}),
                          {"openai": OpenAIModelClient(sdk), "anthropic": MockModelClient("unused")})
     out = router.call("analyze_stance", stance_body())
     assert out.output == {"stance": "ENDORSES"}
     sent = sdk.sent[0]
-    assert "max_tokens" not in sent and "temperature" not in sent
-    assert sent["max_completion_tokens"] == 512 + 800  # visible answer + the stance reasoning allowance
+    assert {"max_tokens", "max_completion_tokens", "temperature"}.isdisjoint(sent)
+    assert sent["max_output_tokens"] == 512 + 800  # visible answer + the stance reasoning allowance
     assert sent["model"] == MINI
 
 
@@ -166,8 +188,8 @@ def test_every_experiment_step_gets_its_allowance_on_the_real_node_cap(tmp_path,
     sdk = FakeOpenAI(tool=body["tool_choice"]["name"], arguments="{}")
     ModelRouter(cfg, {"openai": OpenAIModelClient(sdk), "anthropic": MockModelClient("x")}).call(
         step, body, system=system)
-    assert sdk.sent[0]["max_completion_tokens"] == NODE_CAPS[step] + ALLOWANCE[step]
-    assert {"max_tokens", "temperature"}.isdisjoint(sdk.sent[0])
+    assert sdk.sent[0]["max_output_tokens"] == NODE_CAPS[step] + ALLOWANCE[step]
+    assert {"max_tokens", "max_completion_tokens", "temperature"}.isdisjoint(sdk.sent[0])
 
 
 def test_fallback_gets_its_own_settings():
@@ -177,7 +199,7 @@ def test_fallback_gets_its_own_settings():
     cfg = routing(steps={"analyze_stance": {"provider": "openai", "model": MINI, "prompt": "stance_v1"}})
     res = ModelRouter(cfg, {"openai": OpenAIModelClient(sdk)}).call("analyze_stance", stance_body())
     assert res.record.fallback_used and res.record.model == PLAIN
-    assert sdk.sent[0]["max_completion_tokens"] == 1312 and "max_tokens" not in sdk.sent[0]
+    assert sdk.sent[0]["max_output_tokens"] == 1312 and "max_tokens" not in sdk.sent[0]
     assert sdk.sent[1]["max_tokens"] == 512 and sdk.sent[1]["temperature"] == 0.0
 
     sdk2 = FakeOpenAI(fail_first=1)
@@ -186,7 +208,7 @@ def test_fallback_gets_its_own_settings():
                    allowance={**ALLOWANCE, "critique": 1000, "judge_explanation": 1000})
     ModelRouter(cfg2, {"openai": OpenAIModelClient(sdk2)}).call("analyze_stance", stance_body())
     assert sdk2.sent[0]["max_tokens"] == 512
-    assert sdk2.sent[1]["max_completion_tokens"] == 1312 and "temperature" not in sdk2.sent[1]
+    assert sdk2.sent[1]["max_output_tokens"] == 1312 and "temperature" not in sdk2.sent[1]
 
 
 def test_original_request_is_not_mutated():
@@ -326,9 +348,10 @@ def test_shipped_reasoning_candidates_are_marked_or_placeholders(tmp_path):
         assert shipped.is_reasoning(model) and shipped.reasoning_effort("verify_claims", model) == "medium"
 
 
-def test_live_run_sends_max_completion_tokens_end_to_end(tmp_path):
+def test_live_run_sends_the_raised_cap_end_to_end(tmp_path):
     """A guarded live run (mocked SDK) of a priced, marked reasoning candidate: every
-    OpenAI request carries max_completion_tokens at the raised cap and no temperature."""
+    OpenAI request goes to the Responses API with max_output_tokens at the raised cap and
+    no temperature (T41; T39 sent max_completion_tokens to Chat Completions)."""
     priced = {"claude-haiku-5-5": {"input": 0.1, "output": 0.5}, "claude-sonnet-5-5": {"input": 2, "output": 10},
               MINI: {"input": 1.0, "output": 1.0}}
     p = reasoning_plan(tmp_path, routing(pricing=priced))
@@ -338,8 +361,8 @@ def test_live_run_sends_max_completion_tokens_end_to_end(tmp_path):
     report = ex.live_run(p, live=True, max_usd=1000, client_factory=factory)
     assert sdk.sent and report["spend"]["calls"] > 0
     for kw in sdk.sent:
-        assert kw["model"] == MINI and kw["max_completion_tokens"] == 512 + 800
-        assert "max_tokens" not in kw and "temperature" not in kw
+        assert kw["model"] == MINI and kw["max_output_tokens"] == 512 + 800
+        assert {"max_tokens", "max_completion_tokens", "temperature", "messages"}.isdisjoint(kw)
 
 
 def test_server_error_from_reasoning_model_still_maps_to_fallback_kind():
@@ -363,7 +386,7 @@ def stance_router(sdk, **kw):
 def test_reasoning_effort_defaults_to_medium_and_is_always_sent():
     sdk = FakeOpenAI()
     res = stance_router(sdk).call("analyze_stance", stance_body())
-    assert sdk.sent[0]["reasoning_effort"] == "medium"
+    assert effort(sdk.sent[0]) == "medium"
     assert res.record.reasoning_effort == "medium"
 
 
@@ -371,9 +394,9 @@ def test_reasoning_effort_from_model_settings_and_step_override():
     sdk = FakeOpenAI()
     models = {MINI: {"reasoning": True, "reasoning_effort": "low"}}
     stance_router(sdk, models=models).call("analyze_stance", stance_body())
-    assert sdk.sent[-1]["reasoning_effort"] == "low"
+    assert effort(sdk.sent[-1]) == "low"
     stance_router(sdk, models=models, route={"reasoning_effort": "xhigh"}).call("analyze_stance", stance_body())
-    assert sdk.sent[-1]["reasoning_effort"] == "xhigh"
+    assert effort(sdk.sent[-1]) == "xhigh"
 
 
 def test_step_effort_override_does_not_reach_the_fallback():
@@ -384,8 +407,8 @@ def test_step_effort_override_does_not_reach_the_fallback():
                   fallback={"on": ["5xx"], "retries": 0, "use": {"provider": "openai", "model": MINI}},
                   allowance={**ALLOWANCE, "critique": 1000, "judge_explanation": 1000})
     res = ModelRouter(cfg, {"openai": OpenAIModelClient(sdk)}).call("analyze_stance", stance_body())
-    assert "reasoning_effort" not in sdk.sent[0]  # the plain primary gets no effort
-    assert sdk.sent[1]["reasoning_effort"] == "high"  # the fallback's own setting, not "max"
+    assert effort(sdk.sent[0]) is None  # the plain primary gets no effort
+    assert effort(sdk.sent[1]) == "high"  # the fallback's own setting, not "max"
     assert res.record.fallback_used and res.record.reasoning_effort == "high"
 
 
@@ -466,7 +489,7 @@ def stance_args():
 def test_report_surfaces_reported_models_reasoning_tokens_and_effort(tmp_path):
     sdk = FakeOpenAI(tool="record_stance", arguments=stance_args(), reasoning=300)
     report = live_stance_report(tmp_path, sdk, effort="high")
-    assert {kw["reasoning_effort"] for kw in sdk.sent} == {"high"}  # the candidate's own effort
+    assert {effort(kw) for kw in sdk.sent} == {"high"}  # the candidate's own effort
     mini = next(r for r in report["steps"]["analyze_stance"]["results"] if r["candidate"]["model"] == MINI)
     n = len(sdk.sent)
     assert mini["candidate"]["reasoning_effort"] == "high"
