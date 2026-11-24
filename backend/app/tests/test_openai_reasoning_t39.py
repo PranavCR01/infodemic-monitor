@@ -55,7 +55,8 @@ def routing(*, models=None, allowance=None, steps=None, fallback=None, pricing=N
 class FakeOpenAI:
     """Stands in for ``openai.OpenAI``: records every create() call's kwargs."""
 
-    def __init__(self, tool="record_stance", arguments='{"stance": "ENDORSES"}', fail_first=0):
+    def __init__(self, tool="record_stance", arguments='{"stance": "ENDORSES"}', fail_first=0,
+                 served=lambda kw: kw["model"] + "-2026-03-01", reasoning=700):
         self.sent: list[dict] = []
         self.fail_first = fail_first
         outer = self
@@ -68,8 +69,10 @@ class FakeOpenAI:
                     raise type("InternalServerError", (Exception,), {"status_code": 500})("boom")
                 call = SimpleNamespace(function=SimpleNamespace(name=tool, arguments=arguments))
                 return SimpleNamespace(
+                    model=served(kw),
                     choices=[SimpleNamespace(message=SimpleNamespace(tool_calls=[call], content=None))],
-                    usage=SimpleNamespace(prompt_tokens=10, completion_tokens=900))
+                    usage=SimpleNamespace(prompt_tokens=10, completion_tokens=900,
+                                          completion_tokens_details=SimpleNamespace(reasoning_tokens=reasoning)))
 
         self.chat = SimpleNamespace(completions=Completions())
 
@@ -310,13 +313,17 @@ def test_live_run_refuses_a_reasoning_candidate_not_marked_in_routing(tmp_path):
     assert "Reasoning-model settings missing" in ex.render_markdown(est)
 
 
-def test_shipped_candidates_are_flagged_until_the_lead_marks_them(tmp_path):
-    """The TODO GPT-5 candidates expect reasoning tokens; until routing.yaml marks their
-    real ids ``reasoning: true`` the dry run lists them and a live run refuses."""
+def test_shipped_reasoning_candidates_are_marked_or_placeholders(tmp_path):
+    """Every shipped candidate that expects reasoning tokens is either marked
+    ``reasoning: true`` in routing.yaml or still a TODO placeholder (flagged, and refused
+    by a live run). Holds before and after the lead's candidate PR (#102) merges."""
     p = rx.plan(tmp_path)
     p.candidates = ex.load_candidates(ex.DEFAULT_CANDIDATES_PATH)
-    problems = ex.reasoning_config_problems(p)
-    assert len(problems) == 3 and all("TODO" in x for x in problems)
+    for problem in ex.reasoning_config_problems(p):
+        assert "TODO" in problem
+    shipped = load_routing()
+    for model in ("gpt-5.6-luna", "gpt-5.6-terra"):
+        assert shipped.is_reasoning(model) and shipped.reasoning_effort("verify_claims", model) == "medium"
 
 
 def test_live_run_sends_max_completion_tokens_end_to_end(tmp_path):
@@ -342,3 +349,167 @@ def test_server_error_from_reasoning_model_still_maps_to_fallback_kind():
                                                                 input=stance_body()))
     with pytest.raises(ModelServerError):
         client.complete(MINI, req)
+
+
+# ------------------------------------------------------------------ reasoning effort (T39 follow-up)
+
+
+def stance_router(sdk, **kw):
+    cfg = routing(steps={"analyze_stance": {"provider": "openai", "model": MINI, "prompt": "stance_v1",
+                                            **kw.pop("route", {})}}, **kw)
+    return ModelRouter(cfg, {"openai": OpenAIModelClient(sdk), "anthropic": MockModelClient("x")})
+
+
+def test_reasoning_effort_defaults_to_medium_and_is_always_sent():
+    sdk = FakeOpenAI()
+    res = stance_router(sdk).call("analyze_stance", stance_body())
+    assert sdk.sent[0]["reasoning_effort"] == "medium"
+    assert res.record.reasoning_effort == "medium"
+
+
+def test_reasoning_effort_from_model_settings_and_step_override():
+    sdk = FakeOpenAI()
+    models = {MINI: {"reasoning": True, "reasoning_effort": "low"}}
+    stance_router(sdk, models=models).call("analyze_stance", stance_body())
+    assert sdk.sent[-1]["reasoning_effort"] == "low"
+    stance_router(sdk, models=models, route={"reasoning_effort": "xhigh"}).call("analyze_stance", stance_body())
+    assert sdk.sent[-1]["reasoning_effort"] == "xhigh"
+
+
+def test_step_effort_override_does_not_reach_the_fallback():
+    sdk = FakeOpenAI(fail_first=1)
+    cfg = routing(steps={"analyze_stance": {"provider": "openai", "model": PLAIN, "prompt": "stance_v1",
+                                            "reasoning_effort": "max"}},
+                  models={PLAIN: {"reasoning": False}, MINI: {"reasoning": True, "reasoning_effort": "high"}},
+                  fallback={"on": ["5xx"], "retries": 0, "use": {"provider": "openai", "model": MINI}},
+                  allowance={**ALLOWANCE, "critique": 1000, "judge_explanation": 1000})
+    res = ModelRouter(cfg, {"openai": OpenAIModelClient(sdk)}).call("analyze_stance", stance_body())
+    assert "reasoning_effort" not in sdk.sent[0]  # the plain primary gets no effort
+    assert sdk.sent[1]["reasoning_effort"] == "high"  # the fallback's own setting, not "max"
+    assert res.record.fallback_used and res.record.reasoning_effort == "high"
+
+
+def test_non_reasoning_models_get_no_effort():
+    sdk = FakeOpenAI()
+    ModelRouter(routing(models={PLAIN: {"reasoning": False}}), {"openai": OpenAIModelClient(sdk)}).call(
+        "critique", stance_body(1024))
+    assert "reasoning_effort" not in sdk.sent[0]
+
+
+@pytest.mark.parametrize("bad", ["extreme", "MEDIUM", ""])
+def test_unknown_effort_is_refused(bad):
+    with pytest.raises(RoutingConfigError):
+        routing(models={MINI: {"reasoning": True, "reasoning_effort": bad}})
+    with pytest.raises(ValueError):
+        ex.ExperimentCandidate(provider="openai", model=MINI, prompt="stance_v1", reasoning_effort=bad)
+
+
+def test_step_effort_survives_the_yaml_round_trip(tmp_path):
+    from app.core.routing.config import dump_routing
+
+    cfg = routing(steps={"analyze_stance": {"provider": "openai", "model": MINI, "prompt": "stance_v1",
+                                            "reasoning_effort": "high"}})
+    dump_routing(cfg, tmp_path / "r.yaml")
+    again = load_routing(tmp_path / "r.yaml")
+    assert again.reasoning_effort("analyze_stance", MINI) == "high"
+    assert again.config_hash() == cfg.config_hash()
+
+
+# ------------------------------------------------------------------ reported model id and reasoning usage
+
+
+def test_every_call_records_the_reported_model_and_reasoning_tokens():
+    sdk = FakeOpenAI(reasoning=640)
+    res = stance_router(sdk).call("analyze_stance", stance_body())
+    assert res.record.model == MINI and res.record.response_model == MINI + "-2026-03-01"
+    assert (res.record.output_tokens, res.record.reasoning_tokens) == (900, 640)
+
+
+def test_missing_usage_details_and_model_are_tolerated():
+    class Bare:
+        def __init__(self):
+            self.chat = SimpleNamespace(completions=SimpleNamespace(create=lambda **kw: SimpleNamespace(
+                choices=[SimpleNamespace(message=SimpleNamespace(tool_calls=[], content="x"))],
+                usage=SimpleNamespace(prompt_tokens=1, completion_tokens=2))))
+
+    out = OpenAIModelClient(Bare()).complete("m", ModelRequest(step="s", prompt_version="v", input="hi"))
+    assert out.response_model is None and out.reasoning_tokens == 0 and out.output_tokens == 2
+
+
+def test_anthropic_records_its_reported_model_too():
+    sdk = FakeAnthropic()
+    orig = sdk.messages.create
+    sdk.messages.create = lambda **kw: SimpleNamespace(**{**vars(orig(**kw)), "model": "claude-x-20260101"})
+    out = AnthropicModelClient(sdk).complete("claude-x", ModelRequest(step="s", prompt_version="v",
+                                                                      input=stance_body()))
+    assert out.response_model == "claude-x-20260101" and out.reasoning_tokens == 0
+
+
+def priced_routing(**kw):
+    return routing(pricing={"claude-haiku-5-5": {"input": 0.1, "output": 0.5},
+                            "claude-sonnet-5-5": {"input": 2, "output": 10},
+                            MINI: {"input": 1.0, "output": 1.0}}, **kw)
+
+
+def live_stance_report(tmp_path, sdk, effort=None):
+    p = reasoning_plan(tmp_path, priced_routing())
+    if effort:
+        p.candidates.candidates["analyze_stance"][-1].reasoning_effort = effort
+    factory = lambda: {"anthropic": MockModelClient(rx.responder), "openai": OpenAIModelClient(sdk)}  # noqa: E731
+    return ex.live_run(p, live=True, max_usd=1000, client_factory=factory)
+
+
+def stance_args():
+    return '{"stance": "ENDORSES", "stance_segment_ids": [], "rationale": "r"}'
+
+
+def test_report_surfaces_reported_models_reasoning_tokens_and_effort(tmp_path):
+    sdk = FakeOpenAI(tool="record_stance", arguments=stance_args(), reasoning=300)
+    report = live_stance_report(tmp_path, sdk, effort="high")
+    assert {kw["reasoning_effort"] for kw in sdk.sent} == {"high"}  # the candidate's own effort
+    mini = next(r for r in report["steps"]["analyze_stance"]["results"] if r["candidate"]["model"] == MINI)
+    n = len(sdk.sent)
+    assert mini["candidate"]["reasoning_effort"] == "high"
+    assert mini["response_models"] == {MINI + "-2026-03-01": n}
+    assert mini["reasoning_tokens"] == 300 * n and mini["output_tokens"] == 900 * n
+    assert len(mini["calls"]) == n and all(
+        c["response_model"] == MINI + "-2026-03-01" and c["reasoning_effort"] == "high" and c["reasoning_tokens"] == 300
+        for c in mini["calls"])
+    # Anthropic mocks report no id: recorded as such, not invented.
+    haiku = next(r for r in report["steps"]["analyze_stance"]["results"] if r["candidate"]["model"] == "claude-haiku-5-5")
+    assert set(haiku["response_models"]) == {"unreported"}
+    assert any(f"served by {MINI}-2026-03-01" in x for x in report["response_model_notes"])
+    md = ex.render_markdown(report)
+    assert f"{MINI}-2026-03-01 ({n})" in md and f"{300 * n:,}" in md and f"{MINI}@stance_v1~high" in md
+
+
+def test_alias_moving_mid_run_is_flagged(tmp_path):
+    counter = {"n": 0}
+
+    def served(kw):
+        counter["n"] += 1
+        return "snap-a" if counter["n"] == 1 else "snap-b"
+
+    sdk = FakeOpenAI(tool="record_stance", arguments=stance_args(), served=served)
+    report = live_stance_report(tmp_path, sdk)
+    assert any("alias changed during the run" in x for x in report["response_model_notes"])
+
+
+def test_winner_effort_is_written_into_the_proposed_routing(tmp_path):
+    from app.evaluation.selection import CandidateResult, Selection, apply_selection
+
+    cand = ex.ExperimentCandidate(provider="openai", model=MINI, prompt="stance_v1", reasoning_effort="low")
+    win = CandidateResult(candidate=cand, step="analyze_stance", metric="m", score=1.0, n_items=1, n_failed=0,
+                          fallbacks_used=0, cost_per_item=0.0, latency_p95_ms=1.0)
+    proposed = apply_selection(priced_routing(), [Selection(step="analyze_stance", winner=win, reason="r")],
+                               version="v2")
+    assert proposed.route("analyze_stance").reasoning_effort == "low"
+    assert proposed.to_yaml_dict()["routing"]["analyze_stance"]["reasoning_effort"] == "low"
+
+
+def test_effort_on_a_non_reasoning_candidate_is_a_config_problem(tmp_path):
+    p = rx.plan(tmp_path, steps=("analyze_stance",))
+    p.candidates.candidates["analyze_stance"].append(ex.ExperimentCandidate(
+        provider="openai", model=PLAIN, prompt="stance_v1", reasoning_effort="high"))
+    p.routing = routing(models={PLAIN: {"reasoning": False}})
+    assert any("would not be sent" in x for x in ex.reasoning_config_problems(p))

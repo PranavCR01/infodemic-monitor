@@ -73,6 +73,12 @@ def _split_input(request: ModelRequest) -> tuple[list[dict], Optional[list[dict]
     )
 
 
+def _reported_model(resp: Any) -> Optional[str]:
+    """The model id the provider reports having served (``response.model``), if any."""
+    model = getattr(resp, "model", None)
+    return model if isinstance(model, str) and model else None
+
+
 def _forced_tool_name(tool_choice: Optional[dict]) -> Optional[str]:
     if not tool_choice:
         return None
@@ -144,6 +150,7 @@ class AnthropicModelClient:
             output=output,
             input_tokens=int(getattr(usage, "input_tokens", 0) or 0),
             output_tokens=int(getattr(usage, "output_tokens", 0) or 0),
+            response_model=_reported_model(resp),
         )
 
 
@@ -191,7 +198,8 @@ class OpenAIModelClient:
     in ``request.params``: ``token_param`` names the output cap (OpenAI reasoning
     models reject ``max_tokens`` and need ``max_completion_tokens``, which also covers
     their hidden reasoning tokens), ``max_output_tokens`` is the cap including the step's
-    reasoning allowance, and ``send_temperature: false`` drops ``temperature``. With no
+    reasoning allowance, ``send_temperature: false`` drops ``temperature`` and
+    ``reasoning_effort`` is sent as given. With no
     settings the request is exactly the pre-T39 one (``max_tokens`` + ``temperature``).
     """
 
@@ -212,6 +220,8 @@ class OpenAIModelClient:
         kwargs: dict[str, Any] = {"model": model, "messages": messages, token_param: max_tokens}
         if request.params.get("send_temperature", True):
             kwargs["temperature"] = temperature
+        if request.params.get("reasoning_effort"):
+            kwargs["reasoning_effort"] = request.params["reasoning_effort"]
         forced = _forced_tool_name(tool_choice)
         if tools:
             kwargs["tools"] = _openai_tools(tools)
@@ -238,10 +248,14 @@ class OpenAIModelClient:
         if output is None and not tools:
             output = getattr(message, "content", "") or ""
         usage = getattr(resp, "usage", None)
+        details = getattr(usage, "completion_tokens_details", None)
         return ModelResponse(
             output=output,
             input_tokens=int(getattr(usage, "prompt_tokens", 0) or 0),
+            # completion_tokens already includes the hidden reasoning tokens (billed as output).
             output_tokens=int(getattr(usage, "completion_tokens", 0) or 0),
+            reasoning_tokens=int(getattr(details, "reasoning_tokens", 0) or 0),
+            response_model=_reported_model(resp),
         )
 
 

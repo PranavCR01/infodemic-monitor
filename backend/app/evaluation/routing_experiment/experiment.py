@@ -26,7 +26,7 @@ import yaml
 from pydantic import BaseModel, Field, field_validator
 
 from app.core.graph.stance import PromptNotFoundError, load_prompt
-from app.core.routing.config import DEFAULT_ROUTING_PATH, RoutingConfig, dump_routing
+from app.core.routing.config import DEFAULT_ROUTING_PATH, ReasoningEffort, RoutingConfig, dump_routing
 from app.evaluation.routing_experiment import cost as c
 from app.evaluation.routing_experiment.frozen import FrozenEvidence
 from app.evaluation.routing_experiment.golden import TuneSet
@@ -76,6 +76,9 @@ class ExperimentCandidate(Candidate):
     models bill them as output), used only for the cost estimate."""
 
     reasoning_tokens: int = Field(default=0, ge=0)
+    # Reasoning effort sent for this candidate (T39). None: the model's reasoning_effort
+    # in routing.yaml, else "medium". Always sent explicitly for a reasoning model.
+    reasoning_effort: Optional[ReasoningEffort] = None
 
     @property
     def placeholder(self) -> bool:
@@ -121,7 +124,8 @@ def load_candidates(path: Path | str = DEFAULT_CANDIDATES_PATH) -> CandidatesFil
 
 
 def candidate_key(cand: Candidate) -> str:
-    return f"{cand.provider}/{cand.model}@{cand.prompt}"
+    effort = getattr(cand, "reasoning_effort", None)
+    return f"{cand.provider}/{cand.model}@{cand.prompt}" + (f"~{effort}" if effort else "")
 
 
 def experiment_base(routing: RoutingConfig) -> RoutingConfig:
@@ -284,6 +288,9 @@ def reasoning_config_problems(plan: Plan) -> list[str]:
                 problems.append(
                     f"{step}: {candidate_key(cand)} expects reasoning tokens but routing.yaml has no "
                     f"`models: {{{cand.model}: {{reasoning: true}}}}` entry")
+            if getattr(cand, "reasoning_effort", None) and not marked:
+                problems.append(f"{step}: {candidate_key(cand)} sets reasoning_effort but routing.yaml "
+                                f"doesn't mark {cand.model} as a reasoning model (the effort would not be sent)")
             if (declared or marked) and step not in plan.routing.reasoning_allowance:
                 problems.append(f"{step}: {candidate_key(cand)} is a reasoning model but routing.yaml "
                                 f"has no reasoning_allowance for {step}")
@@ -399,6 +406,7 @@ def live_run(
                              "from different providers: change the critic before adopting routing_v2")
     return {
         "critic_same_provider": same_provider,
+        "response_model_notes": response_model_notes(results),
         "mode": "live", "golden": plan.golden, "split": "tune", "evidence_mode": plan.evidence_mode,
         "estimate": est, "spend": guard.summary(), "stopped": stopped,
         "steps": {
@@ -413,6 +421,26 @@ def live_run(
         "proposed_routing": proposed.to_yaml_dict() if proposed else None,
         "_proposed": proposed,
     }
+
+
+def response_model_notes(results: dict[str, list[CandidateResult]]) -> list[str]:
+    """Flag candidates whose responses named a different model than requested (an alias
+    resolved to a snapshot), named several models (the alias moved during the run), or
+    named none. Informational: the per-call ids are in report.json either way."""
+    notes = []
+    for step, rs in results.items():
+        for r in rs:
+            ids = sorted(r.response_models)
+            key = candidate_key(r.candidate)
+            if "unreported" in ids:
+                notes.append(f"{step}: {key}: {r.response_models['unreported']} calls reported no model id")
+            named = [i for i in ids if i != "unreported"]
+            if len(named) > 1:
+                notes.append(f"{step}: {key}: responses named {len(named)} models {named}; "
+                             "the alias changed during the run")
+            elif named and named[0] != r.candidate.model:
+                notes.append(f"{step}: {key}: served by {named[0]}")
+    return notes
 
 
 # ------------------------------------------------------------------ outputs
@@ -460,21 +488,25 @@ def render_markdown(report: dict) -> str:
         s = report["spend"]
         lines += [f"Spend: **${s['spent_usd']:.4f}** of cap ${s['cap_usd']:.2f} in {s['calls']} calls"
                   + (f"; STOPPED: {report['stopped']}" if report.get("stopped") else ""), ""]
+        for note in report.get("response_model_notes") or []:
+            lines += [f"Model id: {note}", ""]
         if report.get("critic_same_provider"):
             lines += [f"**WARNING:** {report['critic_same_provider']}", ""]
         for step, d in report["steps"].items():
             sel = d.get("selection") or {}
             winner = (sel.get("winner") or {}).get("candidate")
             lines += [f"## {step} ({d['items']} items)", "",
-                      f"Chosen: **{candidate_key(Candidate(**winner)) if winner else 'none'}**"
+                      f"Chosen: **{candidate_key(ExperimentCandidate(**winner)) if winner else 'none'}**"
                       f" ({sel.get('reason', 'not selected')})", "",
-                      "| candidate | metric | score | failed | cost/item | p95 latency ms |",
-                      "|---|---|---|---|---|---|"]
+                      "| candidate | metric | score | failed | cost/item | p95 latency ms | reported model ids (calls) | reasoning tokens |",
+                      "|---|---|---|---|---|---|---|---|"]
             for r in d["results"]:
                 score = "n/a" if r["score"] is None else f"{r['score']:.4f}"
                 cpi = "n/a" if r["cost_per_item"] is None else f"${r['cost_per_item']:.5f}"
-                lines.append(f"| {candidate_key(Candidate(**r['candidate']))} | {r['metric']} | {score} | "
-                             f"{r['n_failed']}/{r['n_items']} | {cpi} | {r['latency_p95_ms']} |")
+                reported = ", ".join(f"{k} ({v})" for k, v in sorted((r.get("response_models") or {}).items())) or "n/a"
+                lines.append(f"| {candidate_key(ExperimentCandidate(**r['candidate']))} | {r['metric']} | {score} | "
+                             f"{r['n_failed']}/{r['n_items']} | {cpi} | {r['latency_p95_ms']} | {reported} | "
+                             f"{r.get('reasoning_tokens', 0):,} |")
             for k, v in (d.get("extras") or {}).items():
                 lines.append(f"\n{k}: {json.dumps(v)}")
             if sel.get("excluded"):

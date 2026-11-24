@@ -79,6 +79,9 @@ class StepRoute(ModelRef):
     prompt: str
     fallback: Optional[ModelRef] = None  # overrides the global fallback for this step
     params: dict = Field(default_factory=dict)
+    # Overrides the model's reasoning_effort for this step's primary model (T39). Ignored
+    # for a model that isn't a reasoning model; never applied to the fallback.
+    reasoning_effort: Optional[ReasoningEffort] = None
 
     @field_validator("prompt")
     @classmethod
@@ -101,6 +104,10 @@ class ModelPrice(BaseModel):
 
 
 TokenParam = Literal["max_tokens", "max_completion_tokens"]
+# OpenAI reasoning effort levels accepted in routing.yaml. Sent explicitly on every call
+# to a reasoning model so a run doesn't depend on the provider's default.
+ReasoningEffort = Literal["none", "low", "medium", "high", "xhigh", "max"]
+DEFAULT_REASONING_EFFORT = "medium"
 
 
 class ModelSettings(BaseModel):
@@ -112,7 +119,9 @@ class ModelSettings(BaseModel):
     - names the cap ``max_completion_tokens`` (these models reject ``max_tokens``),
     - raises the step's cap by the step's ``reasoning_allowance`` so reasoning cannot
       use up the room for the visible answer (the node's own cap is the visible part),
-    - sends no ``temperature`` (reasoning models accept only the default).
+    - sends no ``temperature`` (reasoning models accept only the default),
+    - sends ``reasoning_effort`` explicitly: the step's override, else this model's
+      ``reasoning_effort``, else ``medium``, so runs don't depend on a provider default.
 
     ``token_param`` overrides the parameter name alone, for a non-reasoning model that
     also wants ``max_completion_tokens``. Models not listed keep today's request exactly.
@@ -123,6 +132,7 @@ class ModelSettings(BaseModel):
 
     reasoning: bool = False
     token_param: Optional[TokenParam] = None
+    reasoning_effort: Optional[ReasoningEffort] = None
 
     @property
     def output_param(self) -> str:
@@ -180,6 +190,16 @@ class RoutingConfig(BaseModel):
     def is_reasoning(self, model: str) -> bool:
         s = self.models.get(model)
         return bool(s and s.reasoning)
+
+    def reasoning_effort(self, step: str, model: str) -> Optional[str]:
+        """The effort sent to ``model`` on ``step`` as its primary model; None for a
+        model that isn't a reasoning model (nothing is sent)."""
+        if not self.is_reasoning(model):
+            return None
+        route = self.steps.get(step)
+        if route is not None and route.model == model and route.reasoning_effort:
+            return route.reasoning_effort
+        return self.models[model].reasoning_effort or DEFAULT_REASONING_EFFORT
 
     def output_cap(self, step: str, model: str, visible: int) -> int:
         """The output cap sent for ``model`` on ``step``: the node's visible cap, plus the

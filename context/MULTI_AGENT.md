@@ -1890,10 +1890,32 @@ Fixes the T38 caveat above before the paid routing run. **No paid calls; mocked 
   GPT-5 mini (extract+stance) expected 635,713 in / 270,300 out, upper 1,089,432 in /
   583,088 out; GPT-5 (verify) expected 833,182 in / 391,500 out, upper 2,082,955 in /
   951,480 out.
-- **For a person before the paid run:** in `config/routing_experiment.yaml`, replace
-  `TODO-gpt-5-mini-dated-snapshot-id` (extract, stance) and `TODO-gpt-5-dated-snapshot-id`
-  (verify) with pinned dated ids; in `config/routing.yaml` add each id under `models:` with
-  `{reasoning: true}` and under `pricing:` with its input/output USD per 1M tokens.
+- **Reasoning effort** (follow-up from the coordinating session after PR #102 named the
+  OpenAI candidates `gpt-5.6-luna` and `gpt-5.6-terra`): `reasoning_effort`
+  (none/low/medium/high/xhigh/max) is sent explicitly on every reasoning-model call. Order:
+  experiment candidate / routing step override (primary model only, never the fallback),
+  then the model's `reasoning_effort` under `models:`, then `medium`. Effort on a
+  non-reasoning candidate is a config problem a live run refuses. A winner's effort is
+  written into the proposed `routing_v2.yaml`; the candidate key shows it (`...@prompt~high`).
+- **Reported model id and reasoning usage on every call.** `ModelResponse`/`CallRecord`
+  carry `response_model` (the provider's `response.model`; None if absent, never guessed)
+  and `reasoning_tokens` (OpenAI `completion_tokens_details.reasoning_tokens`; already
+  included in `output_tokens`), plus the effort sent. `CandidateResult` adds
+  `response_models` (count per reported id, "unreported" when none), `reasoning_tokens`,
+  `output_tokens` and a per-call `calls` list; report.md shows reported ids and reasoning
+  tokens per candidate and notes an alias that resolved to another id or changed mid-run.
+- **Aliases, not pinned ids.** §13 asks for pinned ids; OpenAI publishes only aliases for
+  the 5.6 models, so reproducibility rests on the recorded response ids. If the alias moves
+  mid-run, the report says so; results across that change are not comparable.
+- **Models marked.** `gpt-5.6-luna` and `gpt-5.6-terra` are under `models:` as
+  `{reasoning: true, reasoning_effort: medium}` (on the coordinating session's word that
+  both are reasoning models; not checked against OpenAI docs). Their prices and candidate
+  entries come from PR #102, which merges cleanly with this branch. With both applied, the
+  dry run (frozen evidence) is **$15.36 expected / $42.67 upper bound** (all nine candidates
+  priced; no reasoning-config problems). PR #102's $23.00 / $60.05 used assumed evidence sizes.
+- **For a person before the paid run:** merge PR #102 (ids + prices). Nothing else is a
+  TODO. Check the lead's prices and that both models accept `reasoning_effort` and
+  `max_completion_tokens` on Chat Completions (one cheap manual call is the only way to be sure).
 
 ## 8. Team
 
@@ -1921,8 +1943,10 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   reasoning models get `max_completion_tokens` at visible cap + allowance (stance
   512 -> 1312, extract 2048 -> 3548, verify 1024 -> 3524) and no temperature; spend guard
   and dry-run bound use the raised caps; live run refuses unmarked reasoning candidates.
-  Dry run unchanged for priced candidates ($8.54 / $26.17). 1530 passed, 0 skipped
-  (local Postgres 16 + pgvector). GPT-5 ids/prices still TODO for a person. Decisions in §7ac.
+  Follow-up: explicit `reasoning_effort` (default medium, per candidate/step/model) and the
+  response's model id + reasoning tokens recorded on every call and shown in the report.
+  Dry run with PR #102's candidates: $15.36 expected / $42.67 upper bound (frozen evidence).
+  1545 passed, 0 skipped (local Postgres 16 + pgvector), also with #102 merged. Decisions in §7ac.
 - **2026-11-24**: T38 (no issue; design §13, §14) routing experiment runner by the
   automated build, **no paid calls**: tune-split items for extract_claims (48),
   analyze_stance (174) and verify_claims (174) through the real nodes; retrieval frozen

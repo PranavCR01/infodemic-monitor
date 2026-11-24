@@ -29,9 +29,6 @@ budget:
 # dated snapshot ids could not be looked up. Replace each TODO id with the dated id
 # (never a floating alias) and add its price to config/routing.yaml's pricing table. A
 # live run refuses any TODO id and any unpriced model, so nothing is called until then.
-# Also list each real id under config/routing.yaml `models:` as `{reasoning: true}` (T39):
-# the OpenAI client then sends max_completion_tokens at the step cap + reasoning_allowance.
-# A live run refuses a candidate with reasoning_tokens that routing.yaml doesn't mark.
 #
 # reasoning_tokens: expected hidden reasoning tokens per call for reasoning (GPT-5-class)
 # models. They are billed as output, so the dry-run estimate adds them to each call's
