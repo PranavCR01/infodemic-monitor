@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Icon, ReviewBanner, ReviewReasonChip, buttonClass } from "@/components/ui";
 import { claimAt, type Claim, type ResultModel } from "@/lib/api/result-adapter";
+import type { RequestOutcome } from "@/lib/api/review-request";
 import { Assessment } from "./Assessment";
 import { ClaimDrawer } from "./ClaimDrawer";
 import { ClaimCard } from "./ClaimCard";
@@ -14,15 +15,19 @@ import { Transcript } from "./Transcript";
 
 type Props = {
   result: ResultModel;
-  /** Signed playback URL (T29). Until it exists, the page works without the player. */
+  /** Signed playback URL (T29). Without it the page works, minus the player. */
   videoUrl?: string | null;
+  /** Called when the player fails to load, e.g. an expired URL (fetches a fresh one). */
+  onVideoError?: () => void;
+  /** T32: ask for a person to check a result the review rule didn't send to review. */
+  onRequestReview?: (note: string) => Promise<RequestOutcome>;
 };
 
 /**
  * Video result, two-column version (Q5: Direction 3's margin notes come last).
  * One `activeId` is shared by the timeline, the transcript and the claim cards.
  */
-export function ResultView({ result: r, videoUrl = null }: Props) {
+export function ResultView({ result: r, videoUrl = null, onVideoError, onRequestReview }: Props) {
   const [activeId, setActiveId] = useState<string | null>(r.decidingClaims[0]?.id ?? r.claims[0]?.id ?? null);
   const videoRef = useRef<HTMLVideoElement>(null);
   // The open claim lives in the URL (?claim=c2), so a claim can be linked to.
@@ -98,7 +103,7 @@ export function ResultView({ result: r, videoUrl = null }: Props) {
         </ReviewBanner>
       )}
 
-      <Assessment r={r} />
+      <Assessment r={r} onRequestReview={onRequestReview} />
 
       {!r.hasClaimLevel ? (
         <section className="rounded-lg border border-line bg-surface p-6 text-small text-ink-2 shadow-1">
@@ -109,10 +114,10 @@ export function ResultView({ result: r, videoUrl = null }: Props) {
           <section aria-labelledby="transcript-h" className="flex flex-col gap-4 rounded-lg border border-line bg-surface p-4 shadow-1 lg:sticky lg:top-4">
             {videoUrl ? (
               // eslint-disable-next-line jsx-a11y/media-has-caption -- the transcript below is the text alternative
-              <video ref={videoRef} src={videoUrl} controls preload="metadata" className="max-h-[360px] w-full rounded-md bg-black" />
+              <video ref={videoRef} src={videoUrl} controls preload="metadata" onError={onVideoError} className="max-h-[360px] w-full rounded-md bg-black" />
             ) : (
               <p className="flex items-center gap-2 rounded-md bg-surface-sunken px-3 py-2 text-small text-ink-2">
-                <Icon name="play" /> Video playback isn&apos;t available here yet. The transcript and claims are complete.
+                <Icon name="play" /> Video playback isn&apos;t available for this video. The transcript and claims are complete.
               </p>
             )}
             <ClaimTimeline claims={r.claims} duration={duration} activeId={activeId} onSelect={(c) => { select(c); seek(c.start); }} />
