@@ -1,0 +1,17 @@
+# T38 OpenAI run (project lead, 2026-11-24, after #108 / T41 merged): OpenAI candidates only.
+# Derived from backend/config/routing_experiment.yaml (unchanged) by keeping only the
+# provider: openai entries. The Claude candidates ran separately (candidates_claude.yaml,
+# branch auto/T38-live) on the same frozen evidence.
+version: routing_experiment_v1
+tie_margin: 0.01
+budget:
+  extract_claims: {max_failure_rate: 0.05}
+  analyze_stance: {max_failure_rate: 0.05}
+  verify_claims: {max_failure_rate: 0.05}
+candidates:
+  extract_claims:
+  - {provider: openai, model: gpt-5.6-luna, prompt: extract_v2, reasoning_tokens: 1500}
+  analyze_stance:
+  - {provider: openai, model: gpt-5.6-luna, prompt: stance_v1, reasoning_tokens: 800}
+  verify_claims:
+  - {provider: openai, model: gpt-5.6-terra, prompt: verify_v3, reasoning_tokens: 2500}

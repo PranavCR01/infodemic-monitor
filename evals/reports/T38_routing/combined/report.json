@@ -1,0 +1,256 @@
+{
+  "experiment": "T38 routing",
+  "split": "tune (55 videos; NOT the held-out test split)",
+  "golden": "git:origin/data/golden-label-set@0fbc68a05a7d:research/claim-level/dataset",
+  "evidence_mode": "retrieved+cited",
+  "frozen_evidence_sha256": "c4ff82bf69dc85c3b80503a2b7d559b820255b1a90ac3a3fc069593e8d4d4ca5",
+  "tie_margin": 0.01,
+  "budget": {
+    "max_failure_rate": 0.05
+  },
+  "spend": {
+    "smoke_1_pr104_usd": 0.27,
+    "openai_smoke_v11_usd": 0.0498,
+    "claude_full_usd": 11.8135,
+    "openai_full_usd": 1.8693,
+    "anthropic_total_usd": 11.8135,
+    "openai_total_usd": 1.9192,
+    "pr104_smoke_note": "$0.27 actual (all Anthropic; the 7 OpenAI calls returned HTTP 400 with no tokens)",
+    "grand_total_usd": 14.0027,
+    "budget_usd": 40.0,
+    "openai_full_cap_usd": 27.86,
+    "openai_stopped_at_cap": false,
+    "claude_stopped_at_cap": false,
+    "by_model": {
+      "claude-haiku-5-5": 0.128802,
+      "claude-sonnet-5-5": 5.697838,
+      "claude-opus-5-5": 5.986864,
+      "gpt-5.6-luna": 0.176577,
+      "gpt-5.6-terra": 1.692772
+    }
+  },
+  "steps": {
+    "extract_claims": {
+      "winner": "anthropic/claude-sonnet-5-5@extract_v2",
+      "reason": "best claim_f1 (0.4193) within budget",
+      "excluded": {},
+      "ranked": [
+        "anthropic/claude-sonnet-5-5@extract_v2",
+        "anthropic/claude-haiku-5-5@extract_v2",
+        "openai/gpt-5.6-luna@extract_v2"
+      ]
+    },
+    "analyze_stance": {
+      "winner": "anthropic/claude-sonnet-5-5@stance_v1",
+      "reason": "best stance_macro_f1 (0.6436) within budget",
+      "excluded": {},
+      "ranked": [
+        "anthropic/claude-sonnet-5-5@stance_v1",
+        "anthropic/claude-haiku-5-5@stance_v1",
+        "openai/gpt-5.6-luna@stance_v1"
+      ]
+    },
+    "verify_claims": {
+      "winner": "anthropic/claude-opus-5-5@verify_v3",
+      "reason": "best verification_macro_f1 (0.6759) within budget",
+      "excluded": {},
+      "ranked": [
+        "anthropic/claude-opus-5-5@verify_v3",
+        "anthropic/claude-sonnet-5-5@verify_v3",
+        "openai/gpt-5.6-terra@verify_v3"
+      ]
+    }
+  },
+  "candidates": [
+    {
+      "step": "extract_claims",
+      "provider": "anthropic",
+      "candidate": "anthropic/claude-haiku-5-5@extract_v2",
+      "metric": "claim_f1",
+      "score": 0.3600605143721634,
+      "items_completed": 48,
+      "n_items": 48,
+      "n_failed": 0,
+      "n_calls": 50,
+      "cost_per_item": 0.0012377708333333333,
+      "total_cost_usd": 0.0594,
+      "latency_p50_ms": 2678.0,
+      "latency_p95_ms": 5503.349999999999,
+      "response_models": {
+        "claude-haiku-5-5": 50
+      },
+      "reasoning_tokens": 0,
+      "output_tokens": 41148,
+      "errors": []
+    },
+    {
+      "step": "extract_claims",
+      "provider": "anthropic",
+      "candidate": "anthropic/claude-sonnet-5-5@extract_v2",
+      "metric": "claim_f1",
+      "score": 0.41929499072356213,
+      "items_completed": 48,
+      "n_items": 48,
+      "n_failed": 0,
+      "n_calls": 50,
+      "cost_per_item": 0.025096875,
+      "total_cost_usd": 1.2046,
+      "latency_p50_ms": 4638.5,
+      "latency_p95_ms": 10414.8,
+      "response_models": {
+        "claude-sonnet-5-5": 50
+      },
+      "reasoning_tokens": 0,
+      "output_tokens": 43747,
+      "errors": []
+    },
+    {
+      "step": "extract_claims",
+      "provider": "openai",
+      "candidate": "openai/gpt-5.6-luna@extract_v2",
+      "metric": "claim_f1",
+      "score": 0.3236514522821577,
+      "items_completed": 48,
+      "n_items": 48,
+      "n_failed": 0,
+      "n_calls": 50,
+      "cost_per_item": 0.0020031416666666667,
+      "total_cost_usd": 0.0962,
+      "latency_p50_ms": 7067,
+      "latency_p95_ms": 17577.099999999995,
+      "response_models": {
+        "gpt-5.6-luna": 50
+      },
+      "reasoning_tokens": 7175,
+      "output_tokens": 37629,
+      "errors": []
+    },
+    {
+      "step": "analyze_stance",
+      "provider": "anthropic",
+      "candidate": "anthropic/claude-haiku-5-5@stance_v1",
+      "metric": "stance_macro_f1",
+      "score": 0.5229569892473118,
+      "items_completed": 174,
+      "n_items": 174,
+      "n_failed": 0,
+      "n_calls": 174,
+      "cost_per_item": 0.00039878850574712643,
+      "total_cost_usd": 0.0694,
+      "latency_p50_ms": 946.5,
+      "latency_p95_ms": 1198.85,
+      "response_models": {
+        "claude-haiku-5-5": 174
+      },
+      "reasoning_tokens": 0,
+      "output_tokens": 31322,
+      "errors": []
+    },
+    {
+      "step": "analyze_stance",
+      "provider": "anthropic",
+      "candidate": "anthropic/claude-sonnet-5-5@stance_v1",
+      "metric": "stance_macro_f1",
+      "score": 0.6435737401756819,
+      "items_completed": 174,
+      "n_items": 174,
+      "n_failed": 0,
+      "n_calls": 174,
+      "cost_per_item": 0.008053655172413793,
+      "total_cost_usd": 1.4013,
+      "latency_p50_ms": 2042.0,
+      "latency_p95_ms": 3950.7,
+      "response_models": {
+        "claude-sonnet-5-5": 174
+      },
+      "reasoning_tokens": 0,
+      "output_tokens": 36018,
+      "errors": []
+    },
+    {
+      "step": "analyze_stance",
+      "provider": "openai",
+      "candidate": "openai/gpt-5.6-luna@stance_v1",
+      "metric": "stance_macro_f1",
+      "score": 0.49770733652312593,
+      "items_completed": 174,
+      "n_items": 174,
+      "n_failed": 0,
+      "n_calls": 174,
+      "cost_per_item": 0.0004622206896551725,
+      "total_cost_usd": 0.0804,
+      "latency_p50_ms": 1521,
+      "latency_p95_ms": 1884.5,
+      "response_models": {
+        "gpt-5.6-luna": 174
+      },
+      "reasoning_tokens": 436,
+      "output_tokens": 13557,
+      "errors": []
+    },
+    {
+      "step": "verify_claims",
+      "provider": "anthropic",
+      "candidate": "anthropic/claude-sonnet-5-5@verify_v3",
+      "metric": "verification_macro_f1",
+      "score": 0.6073489491836291,
+      "items_completed": 174,
+      "n_items": 174,
+      "n_failed": 0,
+      "n_calls": 146,
+      "cost_per_item": 0.01776926436781609,
+      "total_cost_usd": 3.0919,
+      "latency_p50_ms": 3706.5,
+      "latency_p95_ms": 6539.25,
+      "response_models": {
+        "claude-sonnet-5-5": 146
+      },
+      "reasoning_tokens": 0,
+      "output_tokens": 77134,
+      "errors": []
+    },
+    {
+      "step": "verify_claims",
+      "provider": "anthropic",
+      "candidate": "anthropic/claude-opus-5-5@verify_v3",
+      "metric": "verification_macro_f1",
+      "score": 0.6758522122299212,
+      "items_completed": 174,
+      "n_items": 174,
+      "n_failed": 0,
+      "n_calls": 135,
+      "cost_per_item": 0.03440726436781609,
+      "total_cost_usd": 5.9869,
+      "latency_p50_ms": 6113,
+      "latency_p95_ms": 9556.2,
+      "response_models": {
+        "claude-opus-5-5": 135
+      },
+      "reasoning_tokens": 0,
+      "output_tokens": 82393,
+      "errors": []
+    },
+    {
+      "step": "verify_claims",
+      "provider": "openai",
+      "candidate": "openai/gpt-5.6-terra@verify_v3",
+      "metric": "verification_macro_f1",
+      "score": 0.4918996838501482,
+      "items_completed": 174,
+      "n_items": 174,
+      "n_failed": 0,
+      "n_calls": 135,
+      "cost_per_item": 0.009728574712643679,
+      "total_cost_usd": 1.6928,
+      "latency_p50_ms": 3337,
+      "latency_p95_ms": 6412.199999999999,
+      "response_models": {
+        "gpt-5.6-terra": 135
+      },
+      "reasoning_tokens": 13694,
+      "output_tokens": 35269,
+      "errors": []
+    }
+  ],
+  "critic_same_provider_warning": null
+}
