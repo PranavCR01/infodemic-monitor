@@ -45,7 +45,7 @@ NODE_OUTPUTS: dict[str, frozenset[str]] = {
     r.EXTRACT_CLAIMS: frozenset({"claims"}),
     r.ANALYZE_STANCE: frozenset({"stance_results"}),
     r.PLAN_RETRIEVAL: frozenset({"retrieval_queries"}),
-    r.RETRIEVE_EVIDENCE: frozenset({"retrieved_evidence", "retrieval_attempts"}),
+    r.RETRIEVE_EVIDENCE: frozenset({"retrieved_evidence", "retrieval_attempts", "search_trail"}),
     r.RERANK_EVIDENCE: frozenset({"reranked_evidence", "library_evidence"}),
     r.VERIFY_CLAIMS: frozenset({"verification_results", "verification_revisions"}),
     r.CRITIQUE_VERIFICATION: frozenset({"critic_results"}),
