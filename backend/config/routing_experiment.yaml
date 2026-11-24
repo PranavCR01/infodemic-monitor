@@ -1,0 +1,48 @@
+# Routing experiment candidates (design §13 "How the choice is made"; task T38).
+#
+# Every candidate below runs on its step's labelled items from the golden set's TUNE
+# split; app.evaluation.selection picks the best score within budget, and when two are
+# within `tie_margin` the cheaper/faster wins. The result is a PROPOSED routing table
+# (routing_v2.yaml in the output directory); config/routing.yaml is never edited by the
+# runner. Prices come from config/routing.yaml's pricing table: a model without a price
+# there is refused by a live run.
+#
+#   python -m app.evaluation.routing_experiment dry-run            # free, no calls
+#   python -m app.evaluation.routing_experiment run --live --max-usd <cap>   # paid
+version: routing_experiment_v1
+
+tie_margin: 0.01
+
+# Selection budget per step (selection.Budget). max_failure_rate is the share of items
+# a candidate may fail (provider error after retries) and still be eligible.
+budget:
+  extract_claims: {max_failure_rate: 0.05}
+  analyze_stance: {max_failure_rate: 0.05}
+  verify_claims:  {max_failure_rate: 0.05}
+
+# Candidate set from the project lead (relayed by the coordinating session, 2026-11-24):
+# two Claude models per step plus one OpenAI model; critique and judge_explanation are
+# not part of this run.
+#
+# TODO(lead, before any paid run): the OpenAI ids below are PLACEHOLDERS. OpenAI's model
+# and pricing docs were not reachable from the build environment, so the exact pinned,
+# dated snapshot ids could not be looked up. Replace each TODO id with the dated id
+# (never a floating alias) and add its price to config/routing.yaml's pricing table. A
+# live run refuses any TODO id and any unpriced model, so nothing is called until then.
+#
+# reasoning_tokens: expected hidden reasoning tokens per call for reasoning (GPT-5-class)
+# models. They are billed as output, so the dry-run estimate adds them to each call's
+# output. Rough allowances, to be tuned from the first paid run's reported usage.
+candidates:
+  extract_claims:
+    - {provider: anthropic, model: claude-haiku-5-5,  prompt: extract_v2}
+    - {provider: anthropic, model: claude-sonnet-5-5, prompt: extract_v2}
+    - {provider: openai,    model: TODO-gpt-5-mini-dated-snapshot-id, prompt: extract_v2, reasoning_tokens: 1500}
+  analyze_stance:
+    - {provider: anthropic, model: claude-haiku-5-5,  prompt: stance_v1}
+    - {provider: anthropic, model: claude-sonnet-5-5, prompt: stance_v1}
+    - {provider: openai,    model: TODO-gpt-5-mini-dated-snapshot-id, prompt: stance_v1, reasoning_tokens: 800}
+  verify_claims:
+    - {provider: anthropic, model: claude-sonnet-5-5, prompt: verify_v3}
+    - {provider: anthropic, model: claude-opus-5-5,   prompt: verify_v3}
+    - {provider: openai,    model: TODO-gpt-5-dated-snapshot-id, prompt: verify_v3, reasoning_tokens: 2500}
