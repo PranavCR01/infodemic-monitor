@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { adaptCase, adaptQueueItem, reasonCounts, sortQueue, waitingText } from "./review-adapter";
-import { MOCK_CASE_DECIDED, MOCK_QUEUE } from "./mocks/reviews";
+import { MOCK_CASE_DECIDED, MOCK_QUEUE, MOCK_VIEWER_ID } from "./mocks/reviews";
 
 describe("review adapter", () => {
   it("reads a queue item into display values", () => {
@@ -18,7 +18,7 @@ describe("review adapter", () => {
   });
 
   it("sorts by severity, then oldest first", () => {
-    const items = sortQueue([...MOCK_QUEUE].reverse().map(adaptQueueItem));
+    const items = sortQueue([...MOCK_QUEUE].reverse().map((i) => adaptQueueItem(i)));
     expect(items.map((i) => i.reviewId)).toEqual(["rev-1", "rev-3", "rev-4", "rev-5"]);
   });
 
@@ -28,8 +28,23 @@ describe("review adapter", () => {
   });
 
   it("counts reasons for the filter buttons", () => {
-    const counts = reasonCounts(MOCK_QUEUE.map(adaptQueueItem));
+    const counts = reasonCounts(MOCK_QUEUE.map((i) => adaptQueueItem(i)));
     expect(counts.find((c) => c.rule === "weak_evidence")?.count).toBe(2);
+  });
+
+  it("marks the viewer's own submission from T33's submitted_by, and never shows a raw user id", () => {
+    const own = adaptQueueItem(MOCK_QUEUE[2], MOCK_VIEWER_ID);
+    expect(own).toMatchObject({ isOwn: true, submittedBy: "You" });
+    const other = adaptQueueItem(MOCK_QUEUE[0], MOCK_VIEWER_ID);
+    expect(other.isOwn).toBe(false);
+    expect(other.submittedBy).toBe("User a83f02");
+    expect(adaptQueueItem({ ...MOCK_QUEUE[0], submitted_by: null }, MOCK_VIEWER_ID).submittedBy).toBeNull();
+  });
+
+  it("is never 'own' when the viewer is unknown, and prefers T34's is_own when sent", () => {
+    expect(adaptQueueItem(MOCK_QUEUE[2], null).isOwn).toBe(false);
+    expect(adaptQueueItem({ ...MOCK_QUEUE[0], is_own: true }, MOCK_VIEWER_ID).isOwn).toBe(true);
+    expect(adaptQueueItem({ ...MOCK_QUEUE[2], is_own: false }, MOCK_VIEWER_ID).isOwn).toBe(false);
   });
 
   it("names people, never by raw id, and describes decisions in words", () => {

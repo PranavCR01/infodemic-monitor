@@ -1,4 +1,5 @@
 // ADAPTER: jobs list and job progress (T28) → what the jobs page and the stepper render.
+import { isOwnSubmission, submitterText } from "./owner";
 import { isMisinfoBasis, isVideoLabel, toJobState, type JobState, type MisinfoBasis, type VideoLabel } from "@/lib/vocabulary";
 import type { RawJobEvents, RawJobListItem, RawJobListPage } from "./job-types";
 
@@ -26,12 +27,17 @@ export type JobRow = {
   label: VideoLabel | null;
   basis: MisinfoBasis | null;
   submittedAt: string | null;
+  /** "You", "User 3f9a1c", or null (legacy rows). */
+  submittedBy: string | null;
+  isOwn: boolean;
   active: boolean;
 };
 
 const ACTIVE: (JobState | null)[] = ["QUEUED", "RUNNING", "RETRYING"];
 
-export function adaptJobRow(r: RawJobListItem): JobRow {
+/** `viewerId` marks the signed-in user's own rows: reviewers and admins also see other people's (T33). */
+export function adaptJobRow(r: RawJobListItem, viewerId: string | null = null): JobRow {
+  const isOwn = isOwnSubmission(r.submitted_by, viewerId);
   // T28's §1 state is finer (RETRY_PENDING); fall back to the legacy status.
   const state = toJobState(r.state ?? r.status);
   return {
@@ -43,14 +49,16 @@ export function adaptJobRow(r: RawJobListItem): JobRow {
     label: isVideoLabel(r.label) ? r.label : null,
     basis: r.label === "MISINFO" && isMisinfoBasis(r.misinfo_basis) ? r.misinfo_basis : null,
     submittedAt: r.created_at ?? null,
+    submittedBy: submitterText(r.submitted_by, isOwn),
+    isOwn,
     active: ACTIVE.includes(state),
   };
 }
 
 /** Accepts the legacy array and T28's page. */
-export function adaptJobList(raw: RawJobListItem[] | RawJobListPage): { rows: JobRow[]; total: number | null } {
-  if (Array.isArray(raw)) return { rows: raw.map(adaptJobRow), total: null };
-  return { rows: raw.items.map(adaptJobRow), total: raw.total };
+export function adaptJobList(raw: RawJobListItem[] | RawJobListPage, viewerId: string | null = null): { rows: JobRow[]; total: number | null } {
+  const items = Array.isArray(raw) ? raw : raw.items;
+  return { rows: items.map((r) => adaptJobRow(r, viewerId)), total: Array.isArray(raw) ? null : raw.total };
 }
 
 // ---------------------------------------------------------------- stepper

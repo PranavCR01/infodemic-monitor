@@ -17,22 +17,22 @@ function failure(status: number): Loaded<never> {
   return { ok: false, status, message };
 }
 
-export async function fetchQueue(view: "open" | "decided"): Promise<Loaded<{ items: QueueItem[]; total: number }>> {
+export async function fetchQueue(view: "open" | "decided", viewerId: string | null = null): Promise<Loaded<{ items: QueueItem[]; total: number }>> {
   try {
     const res = await apiFetch(`/v1/reviews?status=${view === "open" ? "OPEN" : "RESOLVED"}&limit=100`);
     if (!res.ok) return failure(res.status);
     const page: RawQueuePage = await res.json();
-    return { ok: true, data: { items: page.items.map(adaptQueueItem), total: page.total } };
+    return { ok: true, data: { items: page.items.map((i) => adaptQueueItem(i, viewerId)), total: page.total } };
   } catch {
     return failure(0);
   }
 }
 
-export async function fetchCase(id: string): Promise<Loaded<CaseModel>> {
+export async function fetchCase(id: string, viewerId: string | null = null): Promise<Loaded<CaseModel>> {
   try {
     const res = await apiFetch(`/v1/reviews/${encodeURIComponent(id)}`);
     if (!res.ok) return failure(res.status);
-    return { ok: true, data: adaptCase((await res.json()) as RawCase) };
+    return { ok: true, data: adaptCase((await res.json()) as RawCase, viewerId) };
   } catch {
     return failure(0);
   }
@@ -40,7 +40,8 @@ export async function fetchCase(id: string): Promise<Loaded<CaseModel>> {
 
 const DECISION_ERRORS: Record<number, string> = {
   409: "Someone else decided this case while you were working on it. Reload to see their decision.",
-  403: "You can't decide this case.",
+  // T33: nobody decides a case on a video they submitted or own, admins included.
+  403: "You can't decide this case. Cases on videos you submitted go to another reviewer.",
   422: "The decision wasn't accepted. Check the form and try again.",
 };
 
