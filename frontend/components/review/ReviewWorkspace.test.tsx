@@ -50,8 +50,15 @@ describe("ReviewWorkspace: HIGH priority (judgement first, run by the server sin
     expect(screen.queryByText(/A false claim is mentioned/)).not.toBeInTheDocument();
     expect(screen.queryByRole("link", { name: "Open the full result" })).not.toBeInTheDocument();
     expect(screen.queryByText("Decided the label")).not.toBeInTheDocument();
-    // the evidence itself is shown first
+    // each claim is shown as stated
     expect(screen.getAllByText(/Drinking hot water every hour/).length).toBeGreaterThan(0);
+  });
+
+  it("shows no sources and no source relations before the reveal, even if a result were passed", () => {
+    setup();
+    expect(screen.queryByText(/Hot drinks and symptom relief/)).not.toBeInTheDocument();
+    expect(screen.queryByText("Contradicts")).not.toBeInTheDocument();
+    expect(screen.getByText(/sources and the system's reading open after you commit/)).toBeInTheDocument();
   });
 
   it("asks for a judgement on every claim the case lists, not only the deciding one", () => {
@@ -77,6 +84,7 @@ describe("ReviewWorkspace: HIGH priority (judgement first, run by the server sin
     expect(screen.getByText(/You and the system disagree on claim 1, claim 2/)).toBeInTheDocument();
     expect(screen.getByText("System label:")).toBeInTheDocument();
     expect(screen.getByText("Decided the label")).toBeInTheDocument();
+    expect(screen.getAllByText(/Hot drinks and symptom relief/).length).toBeGreaterThan(0);
     // the recorded judgement can't be changed afterwards, and still shows what was chosen
     expect(document.getElementById("mine-st-c1")).toBeDisabled();
     expect(document.getElementById("mine-st-c1")).toHaveValue("ENDORSES");

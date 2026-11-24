@@ -5,7 +5,8 @@ vi.mock("@/lib/api", () => ({ apiFetch: (...a: unknown[]) => apiFetch(...a) }));
 
 import { decisionRequest, preRevealRequest } from "@/lib/review/decision";
 import { MOCK_VIEWER_ID, mockRevealed } from "./mocks/reviews";
-import { postDecision, postPreReveal } from "./reviews";
+import { fetchCaseEvidence, postDecision, postPreReveal } from "./reviews";
+import { MOCK_MISINFO_PENDING } from "./mocks/results";
 
 const json = (status: number, body: unknown) => new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json" } });
 const req = decisionRequest({ kind: "APPROVE", correctedLabel: null, reasonCode: "SYSTEM_CORRECT", note: "Both sources contradict it.", claimCorrections: [] });
@@ -56,5 +57,29 @@ describe("postPreReveal (T34)", () => {
     const r = await postPreReveal("rev-1", body);
     expect(r.ok).toBe(false);
     if (!r.ok) expect(r.message).toMatch(msg);
+  });
+});
+
+describe("fetchCaseEvidence (T34 blind step)", () => {
+  it("reads the result once revealed", async () => {
+    apiFetch.mockResolvedValue(json(200, MOCK_MISINFO_PENDING));
+    const ev = await fetchCaseEvidence("job 1");
+    expect(apiFetch.mock.calls[0][0]).toBe("/jobs/job%201/result");
+    expect(ev.kind).toBe("ok");
+  });
+
+  it("treats 403 PRE_REVEAL_REQUIRED as 'still blind', not an error", async () => {
+    apiFetch.mockResolvedValue(json(403, { detail: { code: "PRE_REVEAL_REQUIRED", message: "…" } }));
+    expect(await fetchCaseEvidence("j")).toEqual({ kind: "blind" });
+  });
+
+  it("reports another 403 as an error", async () => {
+    apiFetch.mockResolvedValue(json(403, { detail: "Not allowed" }));
+    expect(await fetchCaseEvidence("j")).toEqual({ kind: "error" });
+  });
+
+  it("reports a lost connection as an error", async () => {
+    apiFetch.mockRejectedValueOnce(new TypeError("offline"));
+    expect(await fetchCaseEvidence("j")).toEqual({ kind: "error" });
   });
 });

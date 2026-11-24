@@ -50,7 +50,10 @@ export type SubmitResult = { ok: true } | { ok: false; message: string };
 
 type Props = {
   review: CaseModel;
+  /** The job's result. Never loaded while the system's view is withheld (the server refuses it). */
   result: ResultModel | null;
+  /** The result was revealed but couldn't be loaded. */
+  evidenceFailed?: boolean;
   onDecide: (req: ReturnType<typeof decisionRequest>) => Promise<SubmitResult>;
   /** T34: record the reviewer's own judgement. On success the page swaps in the revealed case. */
   onPreReveal: (body: ReturnType<typeof preRevealRequest>) => Promise<SubmitResult>;
@@ -64,9 +67,10 @@ type Props = {
  * runs this step: it withholds the system's view until it has recorded the reviewer's
  * judgement, and keeps both.
  */
-export function ReviewWorkspace({ review, result, onDecide, onPreReveal, onOverrideSeverity }: Props) {
+export function ReviewWorkspace({ review, result, evidenceFailed = false, onDecide, onPreReveal, onOverrideSeverity }: Props) {
   const blind = review.blindRequired;
-  const claims = useMemo(() => result?.claims ?? [], [result]);
+  // Belt and braces: even if a result is passed, nothing from it shows while withheld.
+  const claims = useMemo(() => (review.withheld ? [] : result?.claims ?? []), [result, review.withheld]);
   const preReveal: PreReveal[] | null = review.myPreReveal;
   const revealed = !review.withheld;
 
@@ -203,10 +207,25 @@ export function ReviewWorkspace({ review, result, onDecide, onPreReveal, onOverr
         {/* Evidence first */}
         <section aria-labelledby="ev-h" className="flex flex-col gap-4">
           <h2 id="ev-h" className="text-h2 text-ink">The evidence</h2>
-          {!result && <p className="text-small text-ink-2">The claims and sources for this video couldn&apos;t be loaded.</p>}
-          {claims.map((c) => (
-            <EvidenceClaim key={c.id} claim={c} showSystem={revealed} />
-          ))}
+          {review.withheld ? (
+            <>
+              <p className="rounded-lg border border-line bg-surface-2 p-4 text-small text-ink-2">
+                Before your judgement this page shows each claim as the video states it. The sources and the system&apos;s reading open
+                after you commit, so they can&apos;t steer your first reading.
+              </p>
+              {review.claims.map((c) => (
+                <BlindClaim key={c.id} claim={c} />
+              ))}
+            </>
+          ) : (
+            <>
+              {evidenceFailed && <p className="text-small text-ink-2">The claims and sources for this video couldn&apos;t be loaded.</p>}
+              {!result && !evidenceFailed && <p className="text-small text-ink-2" aria-busy="true">Loading the evidence…</p>}
+              {claims.map((c) => (
+                <EvidenceClaim key={c.id} claim={c} showSystem={revealed} />
+              ))}
+            </>
+          )}
         </section>
 
         <aside aria-labelledby="dec-h" className="flex flex-col gap-4 xl:sticky xl:top-4">
@@ -397,6 +416,24 @@ export function ReviewWorkspace({ review, result, onDecide, onPreReveal, onOverr
         </aside>
       </div>
     </div>
+  );
+}
+
+/** A claim before the reveal: its words and time only (T34 withholds everything else). */
+function BlindClaim({ claim: c }: { claim: CaseClaim }) {
+  return (
+    <article aria-labelledby={`rv-${c.id}`} className="flex flex-col gap-2 rounded-lg border border-line bg-surface p-4 shadow-1">
+      <header className="flex flex-wrap items-center gap-2">
+        <h3 id={`rv-${c.id}`} className="text-h3 text-ink">Claim {c.number}</h3>
+        {c.start !== null && (
+          <span className="font-mono text-small text-ink-2">
+            {clock(c.start)}
+            {c.end !== null ? `–${clock(c.end)}` : ""}
+          </span>
+        )}
+      </header>
+      <p className="font-serif text-[17px] leading-[26px] text-ink">{c.text}</p>
+    </article>
   );
 }
 

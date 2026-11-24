@@ -1,6 +1,7 @@
 // Review API calls (T27, T33, T34). Every call goes through the adapter.
 import { apiFetch } from "@/lib/api";
 import type { SubmitResult } from "@/components/review/ReviewWorkspace";
+import { adaptResult, type ResultModel } from "./result-adapter";
 import { adaptCase, adaptQueueItem, type CaseModel, type QueueItem } from "./review-adapter";
 import type { RawCase, RawQueuePage } from "./review-types";
 import type { decisionRequest, preRevealRequest } from "@/lib/review/decision";
@@ -109,5 +110,23 @@ export async function postSeverity(id: string, claimId: string, severity: string
     return { ok: false, message: res.status === 409 ? "That claim already has this priority." : "The priority couldn't be changed. Try again." };
   } catch {
     return { ok: false, message: "The priority couldn't be changed: no connection." };
+  }
+}
+
+export type CaseEvidence = { kind: "ok"; result: ResultModel } | { kind: "blind" } | { kind: "error" };
+
+/**
+ * The job's result, for the workspace's evidence. Since T34 the backend answers 403
+ * PRE_REVEAL_REQUIRED while this reviewer hasn't given their blind judgement, so the
+ * system's view never reaches the browser. That is expected, not an error.
+ */
+export async function fetchCaseEvidence(jobId: string): Promise<CaseEvidence> {
+  try {
+    const res = await apiFetch(`/jobs/${encodeURIComponent(jobId)}/result`);
+    if (res.status === 200) return { kind: "ok", result: adaptResult(await res.json()) };
+    if (res.status === 403 && (await errorCode(res)) === "PRE_REVEAL_REQUIRED") return { kind: "blind" };
+    return { kind: "error" };
+  } catch {
+    return { kind: "error" };
   }
 }
