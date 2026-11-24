@@ -80,11 +80,23 @@ export function ReviewQueue({ items, view, onViewChange, hrefFor, updatedAt }: P
                 <tr key={i.reviewId} className="border-b border-line align-top last:border-0 hover:bg-surface-2">
                   <td className="px-4 py-3">{i.severity ? <SeverityTag severity={i.severity} /> : <span className="text-ink-3">Not set</span>}</td>
                   <td className="px-4 py-3 font-mono text-ink">{i.filename}</td>
-                  <td className="px-4 py-3">{i.proposedLabel ? <LabelBadge label={i.proposedLabel} /> : <span className="text-ink-3">None</span>}</td>
-                  <td className="px-4 py-3">
-                    <span className="text-ink">{i.reasons[0]?.text ?? "Flagged for a person to check."}</span>
-                    {i.reasons.length > 1 && <span className="text-ink-3"> +{i.reasons.length - 1} more</span>}
-                  </td>
+                  {i.withheld ? (
+                    // T34: an open HIGH case shows the system's view only after the reviewer's own judgement.
+                    <td colSpan={2} className="px-4 py-3 text-ink-2">
+                      <span className="inline-flex items-center gap-1.5">
+                        <Icon name="lock" className="!h-3.5 !w-3.5" />
+                        Hidden until you record your own judgement
+                      </span>
+                    </td>
+                  ) : (
+                    <>
+                      <td className="px-4 py-3">{i.proposedLabel ? <LabelBadge label={i.proposedLabel} /> : <span className="text-ink-3">None</span>}</td>
+                      <td className="px-4 py-3">
+                        <span className="text-ink">{i.reasons[0]?.text ?? "Flagged for a person to check."}</span>
+                        {i.reasons.length > 1 && <span className="text-ink-3"> +{i.reasons.length - 1} more</span>}
+                      </td>
+                    </>
+                  )}
                   <td className="px-4 py-3 text-right tabular-nums text-ink-2">{i.waiting}</td>
                   <td className="px-4 py-3 text-ink-2">{i.submittedBy ?? "Not recorded"}</td>
                   <td className="px-4 py-3 text-right">

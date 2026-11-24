@@ -118,7 +118,11 @@ export type RawResult = {
   // T26
   video_id?: string | null;
   status?: string | null;
+  // T36: graph_v1+<short git sha>+p<routing hash> on new results; plain "graph_v1" on older ones.
   pipeline_version?: string | null;
+  // T36: the prompt version and model per step that the hash covers. Kept for tracing
+  // only and NEVER displayed or exported: the interface never names models (brief).
+  routing_snapshot?: Record<string, unknown> | null;
   decision_rule?: string | null;
   deciding_claim_ids?: string[];
   transcript_segments?: RawSegment[];

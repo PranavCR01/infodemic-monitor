@@ -1907,9 +1907,107 @@ The paid run is a separate step the project lead approves with a USD cap.
   models expect `max_completion_tokens`, and the step caps (stance 512) leave little room
   for reasoning: check this before a paid run with the GPT-5 candidates, or they will fail
   or be truncated (and be excluded by the failure-rate budget).
+  **Fixed by T39 (§7ac).**
 - **For a person.** Approve a cap and run the paid step (command in the T38 PR). The token
   estimate is not a provider tokenizer. The judge-explanation and critic steps are not in
   this experiment. Check `routing.yaml`'s prices against the providers' lists first.
+
+## 7ac. OpenAI Reasoning Models: max_completion_tokens and Output Caps (T39, no issue; design §13, §14)
+
+Fixes the T38 caveat above before the paid routing run. **No paid calls; mocked clients only.**
+
+- **Per-model settings live in `config/routing.yaml`**, under `models:` (by exact model
+  id; no name-sniffing in node or client code). `reasoning: true` makes the router send,
+  for that model only: `token_param: max_completion_tokens` (GPT-5-class models reject
+  `max_tokens`), the step cap raised by the step's `reasoning_allowance`, and no
+  `temperature` (reasoning models accept only the default; this was not checked against
+  current OpenAI docs, which were unreachable). `token_param` alone renames the cap
+  without the other changes. A model not listed gets exactly the pre-T39 request.
+- **Applied per attempt in `ModelRouter.prepare`**, so a reasoning primary and a plain
+  fallback (or the reverse) each get their own settings. The request goes to the client
+  through `request.params` (`token_param`, `max_output_tokens`, `send_temperature`);
+  `OpenAIModelClient` reads them, `AnthropicModelClient` only reads the cap.
+- **Caps.** Nodes keep their visible caps (extract 2048, stance 512, verify 1024, critic
+  1024, judge 600). `reasoning_allowance` (T38's numbers: extract 1500, stance 800,
+  verify 2500) is added for reasoning models: 3548 / 1312 / 3524. A config routing a
+  reasoning model (primary, step or global fallback) to a step with no allowance fails to
+  load, so critique/judge get no invented number until someone measures one. The
+  Anthropic path and the live pipeline are unchanged: nothing routed today is a reasoning
+  model (`gpt-4o-2024-08-06` is listed as `reasoning: false`, which sends the same request).
+- **Cost.** `SpendGuard` reserves the cap the client will actually send
+  (`request_output_cap`). The dry run's upper bound uses visible cap + allowance for
+  reasoning candidates, and reports `output_cap_tokens`, `upper_bound_input_tokens` and
+  `upper_bound_output_tokens` per row so unpriced candidates can be priced by hand. A
+  candidate with `reasoning_tokens > 0` that routing.yaml doesn't mark `reasoning: true`
+  is listed under `reasoning_config_problems` and refused by a live run.
+- **Dry run after T39:** priced candidates unchanged at $8.54 expected / $26.17 upper bound
+  (Anthropic caps unchanged). OpenAI candidates (token totals; multiply by per-1M prices):
+  GPT-5 mini (extract+stance) expected 635,713 in / 270,300 out, upper 1,089,432 in /
+  583,088 out; GPT-5 (verify) expected 833,182 in / 391,500 out, upper 2,082,955 in /
+  951,480 out.
+- **Reasoning effort** (follow-up from the coordinating session after PR #102 named the
+  OpenAI candidates `gpt-5.6-luna` and `gpt-5.6-terra`): `reasoning_effort`
+  (none/low/medium/high/xhigh/max) is sent explicitly on every reasoning-model call. Order:
+  experiment candidate / routing step override (primary model only, never the fallback),
+  then the model's `reasoning_effort` under `models:`, then `medium`. Effort on a
+  non-reasoning candidate is a config problem a live run refuses. A winner's effort is
+  written into the proposed `routing_v2.yaml`; the candidate key shows it (`...@prompt~high`).
+- **Reported model id and reasoning usage on every call.** `ModelResponse`/`CallRecord`
+  carry `response_model` (the provider's `response.model`; None if absent, never guessed)
+  and `reasoning_tokens` (OpenAI `completion_tokens_details.reasoning_tokens`; already
+  included in `output_tokens`), plus the effort sent. `CandidateResult` adds
+  `response_models` (count per reported id, "unreported" when none), `reasoning_tokens`,
+  `output_tokens` and a per-call `calls` list; report.md shows reported ids and reasoning
+  tokens per candidate and notes an alias that resolved to another id or changed mid-run.
+- **Aliases, not pinned ids.** §13 asks for pinned ids; OpenAI publishes only aliases for
+  the 5.6 models, so reproducibility rests on the recorded response ids. If the alias moves
+  mid-run, the report says so; results across that change are not comparable.
+- **Models marked.** `gpt-5.6-luna` and `gpt-5.6-terra` are under `models:` as
+  `{reasoning: true, reasoning_effort: medium}` (on the coordinating session's word that
+  both are reasoning models; not checked against OpenAI docs). Their prices and candidate
+  entries come from PR #102, which merges cleanly with this branch. With both applied, the
+  dry run (frozen evidence) is **$15.36 expected / $42.67 upper bound** (all nine candidates
+  priced; no reasoning-config problems). PR #102's $23.00 / $60.05 used assumed evidence sizes.
+- **For a person before the paid run:** merge PR #102 (ids + prices). Nothing else is a
+  TODO. Check the lead's prices and that both models accept `reasoning_effort` and
+  `max_completion_tokens` on Chat Completions (one cheap manual call is the only way to be sure).
+
+## 7ad. Blind-Step Material for HIGH Review Cases (T40, decision D7 Q1; design §12, §15, §17)
+
+T34 makes a blind reviewer's result, claims and evidence routes answer 403, so the blind
+step had nothing to judge from. Additive only; no migration.
+
+- **Route:** `GET /v1/reviews/{review_id}/blind-material` (reviewer/admin; built in
+  `app/services/blind_material.py`). Allowed **only while the caller is blind** on the
+  case (`blind_review.is_blind`): an open HIGH case, no pre-reveal by the caller, not their
+  own video. Anyone else who may see the case gets 403 `BLIND_STEP_NOT_ACTIVE` (detail has
+  `code`, `review_id`, `message`); analysts 403 before lookup; not-visible 404 (T33).
+- **Response:** `review_id, job_id, video_id, material: "blind"`; `claims[]` with
+  `claim_id, text, category, start_seconds, end_seconds, source_segment_ids` (the
+  extractor's quoted segments, not the stance's) and `references[]`; `transcript_segments`
+  and `ocr_segments` (T26 `SegmentView`). A reference has `evidence_id, source_kind, rank,
+  title, year, publisher, study_type, abstract_snippet, url, pmid, doi`; library documents
+  carry only id, kind, rank and title. No relation, cited/deciding marker, verdict,
+  stance, label, reasons, rules, critic notes, confidence, relevance score, severity or
+  search-trail field.
+- **Which papers (leak fix):** `claim_evidence` stores the reranked set (ranks 1..K) and
+  then any record the verifier *cited* that the reranker did not keep. Those trailing rows
+  would reveal a citation, so only ranks <= K are shown, K = the claim's
+  `search_trail.counts.kept` (= `len(reranked_evidence)`). Ranks are renumbered 1..n.
+- **Ordering:** claims by start time then id; references by stored rerank rank then id;
+  segments by start then id. Never by relation or citation.
+- **Tests** (`test_blind_material_t40.py`): two databases identical except for verdicts,
+  stances, relations (in an order that would differ if sorted by relation), labels,
+  deciding, critic, confidence, scores and reasons, plus a cited non-reranked paper in one:
+  byte-identical responses (with and without a library document). Forbidden keys/values
+  scan; schema has no system fields; access matrix (blind reviewer/admin 200, pre-revealed,
+  own-video, non-HIGH, resolved 403; analysts 403; legacy for reviewer 404). T33's route
+  table classifies the route.
+- **Residuals for a person:** (1) rows stored before T31 have no search trail, so K is
+  unknown and every stored link is shown, which can include a cited non-reranked record;
+  (2) the amount of material can reflect a retrieval retry, which correlates weakly with an
+  INSUFFICIENT verdict; (3) the claim list comes from the case and the stored rows, and
+  severity is not shown here (the case view already shows table severity).
 
 ## 8. Team
 
@@ -1932,6 +2030,20 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-24**: T40 (decision D7 Q1; design §12, §15, §17) blind-step material by the
+  automated build: `GET /v1/reviews/{id}/blind-material`, only for a caller blind on an open
+  HIGH case (else 403 `BLIND_STEP_NOT_ACTIVE`); claims, segments and retrieved papers in
+  rerank order with no relation/verdict/stance/label/critic/confidence; cited papers outside
+  the reranked set left out. Byte-identical no-leak test. No migration, no spend. Decisions in §7ad.
+- **2026-11-24**: T39 (no issue; design §13, §14) OpenAI reasoning-model fix by the
+  automated build, **no paid calls**: `models:` + `reasoning_allowance:` in routing.yaml;
+  reasoning models get `max_completion_tokens` at visible cap + allowance (stance
+  512 -> 1312, extract 2048 -> 3548, verify 1024 -> 3524) and no temperature; spend guard
+  and dry-run bound use the raised caps; live run refuses unmarked reasoning candidates.
+  Follow-up: explicit `reasoning_effort` (default medium, per candidate/step/model) and the
+  response's model id + reasoning tokens recorded on every call and shown in the report.
+  Dry run with PR #102's candidates: $15.36 expected / $42.67 upper bound (frozen evidence).
+  1545 passed, 0 skipped (local Postgres 16 + pgvector), also with #102 merged. Decisions in §7ac.
 - **2026-11-24**: T34 (decision D7; design §12, §15, §17) review decision completeness by the
   automated build: `reason_code` + 10-char note on decisions (missing code → OTHER, flagged);
   the blind HIGH step `POST /v1/reviews/{id}/pre-reveal`, enforced on the case view, queue,

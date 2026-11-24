@@ -28,6 +28,7 @@ import json
 from typing import Any, Optional
 
 from app.core.routing.router import (
+    DEFAULT_MAX_TOKENS,
     ModelCallError,
     ModelConnectionError,
     ModelRateLimitError,
@@ -35,9 +36,8 @@ from app.core.routing.router import (
     ModelResponse,
     ModelServerError,
     ModelTimeoutError,
+    request_output_cap,
 )
-
-DEFAULT_MAX_TOKENS = 1024
 DEFAULT_TIMEOUT_SECONDS = 60.0
 
 
@@ -61,16 +61,22 @@ def map_provider_error(exc: BaseException) -> ModelCallError:
 def _split_input(request: ModelRequest) -> tuple[list[dict], Optional[list[dict]], Optional[dict], int, float]:
     body = request.input
     if isinstance(body, str):
-        return [{"role": "user", "content": body}], None, None, DEFAULT_MAX_TOKENS, 0.0
+        return [{"role": "user", "content": body}], None, None, request_output_cap(request), 0.0
     if not isinstance(body, dict) or "messages" not in body:
         raise ModelCallError(f"step {request.step!r}: request input must be a string or a messages dict")
     return (
         list(body["messages"]),
         body.get("tools"),
         body.get("tool_choice"),
-        int(body.get("max_tokens") or request.params.get("max_tokens") or DEFAULT_MAX_TOKENS),
+        request_output_cap(request),
         float(body.get("temperature", request.params.get("temperature", 0.0))),
     )
+
+
+def _reported_model(resp: Any) -> Optional[str]:
+    """The model id the provider reports having served (``response.model``), if any."""
+    model = getattr(resp, "model", None)
+    return model if isinstance(model, str) and model else None
 
 
 def _forced_tool_name(tool_choice: Optional[dict]) -> Optional[str]:
@@ -144,6 +150,7 @@ class AnthropicModelClient:
             output=output,
             input_tokens=int(getattr(usage, "input_tokens", 0) or 0),
             output_tokens=int(getattr(usage, "output_tokens", 0) or 0),
+            response_model=_reported_model(resp),
         )
 
 
@@ -185,7 +192,16 @@ def _openai_tools(tools: Optional[list[dict]]) -> Optional[list[dict]]:
 
 class OpenAIModelClient:
     """``ModelClient`` over the OpenAI Chat Completions API (the routed critic and the
-    fallback model)."""
+    fallback model).
+
+    Per-model request settings come from the router (``routing.yaml`` ``models:``, T39),
+    in ``request.params``: ``token_param`` names the output cap (OpenAI reasoning
+    models reject ``max_tokens`` and need ``max_completion_tokens``, which also covers
+    their hidden reasoning tokens), ``max_output_tokens`` is the cap including the step's
+    reasoning allowance, ``send_temperature: false`` drops ``temperature`` and
+    ``reasoning_effort`` is sent as given. With no
+    settings the request is exactly the pre-T39 one (``max_tokens`` + ``temperature``).
+    """
 
     def __init__(self, sdk_client: Any = None, *, api_key: str = "", timeout: float = DEFAULT_TIMEOUT_SECONDS):
         if sdk_client is None:
@@ -198,8 +214,14 @@ class OpenAIModelClient:
         messages, tools, tool_choice, max_tokens, temperature = _split_input(request)
         if request.system:
             messages = [{"role": "system", "content": request.system}, *messages]
-        kwargs: dict[str, Any] = dict(model=model, messages=messages, max_tokens=max_tokens,
-                                      temperature=temperature)
+        token_param = request.params.get("token_param") or "max_tokens"
+        if token_param not in ("max_tokens", "max_completion_tokens"):
+            raise ModelCallError(f"step {request.step!r}: unknown token_param {token_param!r}")
+        kwargs: dict[str, Any] = {"model": model, "messages": messages, token_param: max_tokens}
+        if request.params.get("send_temperature", True):
+            kwargs["temperature"] = temperature
+        if request.params.get("reasoning_effort"):
+            kwargs["reasoning_effort"] = request.params["reasoning_effort"]
         forced = _forced_tool_name(tool_choice)
         if tools:
             kwargs["tools"] = _openai_tools(tools)
@@ -226,10 +248,14 @@ class OpenAIModelClient:
         if output is None and not tools:
             output = getattr(message, "content", "") or ""
         usage = getattr(resp, "usage", None)
+        details = getattr(usage, "completion_tokens_details", None)
         return ModelResponse(
             output=output,
             input_tokens=int(getattr(usage, "prompt_tokens", 0) or 0),
+            # completion_tokens already includes the hidden reasoning tokens (billed as output).
             output_tokens=int(getattr(usage, "completion_tokens", 0) or 0),
+            reasoning_tokens=int(getattr(details, "reasoning_tokens", 0) or 0),
+            response_model=_reported_model(resp),
         )
 
 

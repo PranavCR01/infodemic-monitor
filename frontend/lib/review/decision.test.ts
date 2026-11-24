@@ -5,13 +5,14 @@ import {
   EMPTY_FORM,
   isValid,
   mismatchWarning,
-  needsBlindStep,
+  preRevealRequest,
+  reasonCodeText,
   validateDecision,
   type DecisionContext,
   type DecisionForm,
 } from "./decision";
 
-const ctx: DecisionContext = { proposedLabel: "MISINFO", severity: "MEDIUM", preReveal: null, isOwnSubmission: false, alreadyDecided: false };
+const ctx: DecisionContext = { proposedLabel: "MISINFO", blindRequired: false, preReveal: null, isOwnSubmission: false, alreadyDecided: false };
 const ok: DecisionForm = { kind: "APPROVE", correctedLabel: null, reasonCode: "SYSTEM_CORRECT", note: "Checked both sources; label holds.", claimCorrections: [] };
 
 describe("validateDecision", () => {
@@ -49,11 +50,16 @@ describe("validateDecision", () => {
     expect(validateDecision(withClaimFix, ctx).correctedLabel).toBeUndefined();
   });
 
-  it("requires the reviewer's own judgement first on HIGH cases only", () => {
-    expect(needsBlindStep({ severity: "HIGH" })).toBe(true);
-    expect(needsBlindStep({ severity: "MEDIUM" })).toBe(false);
-    expect(validateDecision(ok, { ...ctx, severity: "HIGH" }).preReveal).toBeDefined();
-    expect(validateDecision(ok, { ...ctx, severity: "HIGH", preReveal: [{ claimId: "c1", stance: "ENDORSES", verdict: "CONTRADICTED" }] })).toEqual({});
+  it("requires the reviewer's own judgement first when the server says the case needs it (T34)", () => {
+    expect(validateDecision(ok, ctx).preReveal).toBeUndefined();
+    expect(validateDecision(ok, { ...ctx, blindRequired: true }).preReveal).toBeDefined();
+    expect(validateDecision(ok, { ...ctx, blindRequired: true, preReveal: [{ claimId: "c1", stance: "ENDORSES", verdict: "CONTRADICTED" }] })).toEqual({});
+  });
+
+  it("allows 'The system's assessment is right' only with Approve, as the server does (T34)", () => {
+    expect(validateDecision({ ...ok, kind: "REJECT" }, ctx).reasonCode).toMatch(/goes only with Approve/);
+    expect(validateDecision({ ...ok, kind: "REQUEST_REANALYSIS" }, ctx).reasonCode).toMatch(/goes only with Approve/);
+    expect(validateDecision(ok, ctx).reasonCode).toBeUndefined();
   });
 
   it("blocks deciding your own submission and an already decided case", () => {
@@ -65,7 +71,7 @@ describe("validateDecision", () => {
 
 describe("mismatchWarning", () => {
   it("warns, without blocking, when the chosen label doesn't follow from the claims", () => {
-    const f = { ...ok, kind: "CORRECT" as const, correctedLabel: "NO_MISINFO" as const };
+    const f = { ...ok, kind: "CORRECT" as const, correctedLabel: "NO_MISINFO" as const, reasonCode: "EVIDENCE_MISREAD" as const };
     expect(mismatchWarning(f, "DEBUNKING")).toMatch(/doesn't follow/);
     expect(mismatchWarning(f, "NO_MISINFO")).toBeNull();
     expect(mismatchWarning(ok, "DEBUNKING")).toBeNull();
@@ -88,30 +94,40 @@ describe("disagreements", () => {
 });
 
 describe("decisionRequest", () => {
-  it("builds T27's DecisionRequest with nothing T27 would reject", () => {
-    const { body } = decisionRequest(
-      { kind: "CORRECT", correctedLabel: "DEBUNKING", reasonCode: "EVIDENCE_MISREAD", note: "  The trial contradicts it.  ", claimCorrections: [{ claimId: "c1", verdict: "CONTRADICTED" }, { claimId: "c2" }] },
-      null,
-    );
+  it("builds T34's DecisionRequest: the note and the reason code as separate fields", () => {
+    const { body } = decisionRequest({
+      kind: "CORRECT", correctedLabel: "DEBUNKING", reasonCode: "EVIDENCE_MISREAD", note: "  The trial contradicts it.  ",
+      claimCorrections: [{ claimId: "c1", verdict: "CONTRADICTED" }, { claimId: "c2" }],
+    });
     expect(body).toEqual({
       action: "CORRECT",
-      reason: "[EVIDENCE_MISREAD] The trial contradicts it.",
+      reason: "The trial contradicts it.",
+      reason_code: "EVIDENCE_MISREAD",
       corrected_label: "DEBUNKING",
       claim_corrections: [{ claim_id: "c1", verdict: "CONTRADICTED" }],
     });
-    expect(Object.keys(body).sort()).toEqual(["action", "claim_corrections", "corrected_label", "reason"]);
+    // The server forbids extra fields: nothing else may be sent.
+    expect(Object.keys(body).sort()).toEqual(["action", "claim_corrections", "corrected_label", "reason", "reason_code"]);
   });
 
   it("drops the label and claim edits for other decisions", () => {
-    const { body } = decisionRequest({ ...ok, correctedLabel: "DEBUNKING", claimCorrections: [{ claimId: "c1", verdict: "SUPPORTED" }] }, null);
+    const { body } = decisionRequest({ ...ok, correctedLabel: "DEBUNKING", claimCorrections: [{ claimId: "c1", verdict: "SUPPORTED" }] });
     expect(body.corrected_label).toBeNull();
     expect(body.claim_corrections).toEqual([]);
   });
+});
 
-  it("keeps the proposed fields apart from the body", () => {
-    const pre = [{ claimId: "c1", stance: "REFUTES" as const, verdict: "CONTRADICTED" as const }];
-    const { proposed } = decisionRequest(ok, pre);
-    expect(proposed).toEqual({ reason_code: "SYSTEM_CORRECT", reason_text: "The system's assessment is right", pre_reveal: pre });
+describe("preRevealRequest", () => {
+  it("builds T34's PreRevealRequest, with only the allowed fields", () => {
+    const mine = [{ claimId: "c1", stance: "REFUTES" as const, verdict: "CONTRADICTED" as const }];
+    expect(preRevealRequest(mine)).toEqual({ claims: [{ claim_id: "c1", stance: "REFUTES", verdict: "CONTRADICTED" }] });
+    expect(preRevealRequest(mine, "  ")).not.toHaveProperty("note");
+    expect(preRevealRequest(mine, " gut call ").note).toBe("gut call");
+  });
+
+  it("names each reason code in words", () => {
+    expect(reasonCodeText("STANCE_MISREAD")).toBe("Stance misread by the system");
+    expect(reasonCodeText("NOPE")).toBeNull();
   });
 });
 

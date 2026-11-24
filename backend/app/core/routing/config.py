@@ -79,6 +79,9 @@ class StepRoute(ModelRef):
     prompt: str
     fallback: Optional[ModelRef] = None  # overrides the global fallback for this step
     params: dict = Field(default_factory=dict)
+    # Overrides the model's reasoning_effort for this step's primary model (T39). Ignored
+    # for a model that isn't a reasoning model; never applied to the fallback.
+    reasoning_effort: Optional[ReasoningEffort] = None
 
     @field_validator("prompt")
     @classmethod
@@ -100,12 +103,55 @@ class ModelPrice(BaseModel):
     output: float = Field(ge=0)  # USD per 1M output tokens
 
 
+TokenParam = Literal["max_tokens", "max_completion_tokens"]
+# OpenAI reasoning effort levels accepted in routing.yaml. Sent explicitly on every call
+# to a reasoning model so a run doesn't depend on the provider's default.
+ReasoningEffort = Literal["none", "low", "medium", "high", "xhigh", "max"]
+DEFAULT_REASONING_EFFORT = "medium"
+
+
+class ModelSettings(BaseModel):
+    """Per-model request settings (``models:`` in routing.yaml; task T39).
+
+    A **reasoning** model (OpenAI GPT-5 class) spends hidden reasoning tokens that count
+    against its output cap and are billed as output. For such a model the router:
+
+    - names the cap ``max_completion_tokens`` (these models reject ``max_tokens``),
+    - raises the step's cap by the step's ``reasoning_allowance`` so reasoning cannot
+      use up the room for the visible answer (the node's own cap is the visible part),
+    - sends no ``temperature`` (reasoning models accept only the default),
+    - sends ``reasoning_effort`` explicitly: the step's override, else this model's
+      ``reasoning_effort``, else ``medium``, so runs don't depend on a provider default.
+
+    ``token_param`` overrides the parameter name alone, for a non-reasoning model that
+    also wants ``max_completion_tokens``. Models not listed keep today's request exactly.
+    Settings are chosen here, by model id, never by name-sniffing in node or client code.
+    """
+
+    model_config = {"extra": "forbid"}
+
+    reasoning: bool = False
+    token_param: Optional[TokenParam] = None
+    reasoning_effort: Optional[ReasoningEffort] = None
+
+    @property
+    def output_param(self) -> str:
+        return self.token_param or ("max_completion_tokens" if self.reasoning else "max_tokens")
+
+    @property
+    def sends_temperature(self) -> bool:
+        return not self.reasoning
+
+
 class RoutingConfig(BaseModel):
     version: str
     status: Literal["provisional", "evaluated"] = "provisional"
     steps: dict[str, StepRoute]
     fallback: FallbackPolicy = Field(default_factory=FallbackPolicy)
     pricing: dict[str, ModelPrice] = Field(default_factory=dict)
+    models: dict[str, ModelSettings] = Field(default_factory=dict)
+    # Extra output tokens per call, by step, added to a reasoning model's cap.
+    reasoning_allowance: dict[str, int] = Field(default_factory=dict)
 
     @model_validator(mode="after")
     def _check_steps(self) -> "RoutingConfig":
@@ -121,7 +167,46 @@ class RoutingConfig(BaseModel):
                 "critique must use a different model or prompt from verify_claims "
                 "(independence, section 8)"
             )
+        bad = sorted(set(self.reasoning_allowance) - set(LLM_STEPS))
+        if bad:
+            raise ValueError(f"reasoning_allowance names unknown steps: {bad}")
+        negative = sorted(k for k, v in self.reasoning_allowance.items() if v < 0)
+        if negative:
+            raise ValueError(f"reasoning_allowance must be >= 0: {negative}")
+        for name, route in self.steps.items():
+            for ref in (route, route.fallback or self.fallback.use):
+                if ref is not None and self.is_reasoning(ref.model) and name not in self.reasoning_allowance:
+                    raise ValueError(
+                        f"step {name!r} can call reasoning model {ref.model!r} but has no "
+                        f"reasoning_allowance; add one so reasoning cannot crowd out the answer"
+                    )
         return self
+
+    # -- per-model request settings (T39) --
+
+    def model_settings(self, model: str) -> Optional[ModelSettings]:
+        return self.models.get(model)
+
+    def is_reasoning(self, model: str) -> bool:
+        s = self.models.get(model)
+        return bool(s and s.reasoning)
+
+    def reasoning_effort(self, step: str, model: str) -> Optional[str]:
+        """The effort sent to ``model`` on ``step`` as its primary model; None for a
+        model that isn't a reasoning model (nothing is sent)."""
+        if not self.is_reasoning(model):
+            return None
+        route = self.steps.get(step)
+        if route is not None and route.model == model and route.reasoning_effort:
+            return route.reasoning_effort
+        return self.models[model].reasoning_effort or DEFAULT_REASONING_EFFORT
+
+    def output_cap(self, step: str, model: str, visible: int) -> int:
+        """The output cap sent for ``model`` on ``step``: the node's visible cap, plus the
+        step's reasoning allowance when the model is a reasoning model."""
+        if self.is_reasoning(model):
+            return int(visible) + int(self.reasoning_allowance.get(step, 0))
+        return int(visible)
 
     def route(self, step: str) -> StepRoute:
         try:
@@ -146,6 +231,11 @@ class RoutingConfig(BaseModel):
         out: dict = {"version": self.version, "status": self.status, "routing": routing}
         if self.pricing:
             out["pricing"] = {k: v.model_dump() for k, v in self.pricing.items()}
+        # Only when set, so the hash of a table without them is unchanged.
+        if self.models:
+            out["models"] = {k: v.model_dump(exclude_none=True) for k, v in self.models.items()}
+        if self.reasoning_allowance:
+            out["reasoning_allowance"] = dict(self.reasoning_allowance)
         return out
 
     def config_hash(self) -> str:
@@ -175,6 +265,8 @@ def parse_routing(data: dict) -> RoutingConfig:
         "status": data.get("status", "provisional"),
         "steps": routing,
         "pricing": data.get("pricing") or {},
+        "models": data.get("models") or {},
+        "reasoning_allowance": data.get("reasoning_allowance") or {},
     }
     if fallback is not None:
         payload["fallback"] = fallback

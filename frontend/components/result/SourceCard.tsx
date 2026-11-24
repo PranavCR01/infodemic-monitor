@@ -1,5 +1,6 @@
 import { Icon } from "@/components/ui";
 import { TONE } from "@/components/ui/tone";
+import type { BlindSource } from "@/lib/api/blind-material";
 import type { Source } from "@/lib/api/result-adapter";
 import { studyTypeDisplay } from "@/lib/vocabulary";
 
@@ -18,12 +19,16 @@ function hostOf(url: string): string {
   }
 }
 
-/** One source (HANDOFF §4 SourceCard). Internal library documents are dashed, "Internal only", never linked. */
-export function SourceCard({ s }: { s: Source }) {
+/**
+ * One source (HANDOFF §4 SourceCard). Internal library documents are dashed, "Internal only", never linked.
+ * A BlindSource (T40) has no relation, so no Supports / Contradicts badge can show.
+ */
+export function SourceCard({ s }: { s: Source | BlindSource }) {
   const internal = s.kind === "library";
   const kind = KIND[s.kind];
   const typeTag = s.level === "GUIDANCE" ? "Official guidance" : studyTypeDisplay(s.studyType);
-  const supports = s.relation === "SUPPORTS";
+  const relation = "relation" in s ? s.relation : null;
+  const supports = relation === "SUPPORTS";
   return (
     <article className={`flex flex-col gap-2 rounded-lg border bg-surface px-4 py-3.5 ${internal ? "border-dashed border-line-input" : "border-line"}`}>
       <div className="flex flex-wrap items-center gap-2">
@@ -33,7 +38,7 @@ export function SourceCard({ s }: { s: Source }) {
           {s.kind === "reference" && s.publisher ? ` · ${s.publisher}` : ""}
         </span>
         <span className="rounded-sm border border-line-input px-1.5 text-cap font-semibold text-ink">{typeTag}</span>
-        {s.relation !== "CONSIDERED" && (
+        {(relation === "SUPPORTS" || relation === "CONTRADICTS") && (
           <span className={`ml-auto inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-cap font-semibold ${TONE[supports ? "nomisinfo" : "misinfo"]}`}>
             <Icon name={supports ? "checkc" : "xc"} className="!h-3.5 !w-3.5" />
             {supports ? "Supports" : "Contradicts"}

@@ -7,6 +7,7 @@
 | GET  | ``/v1/reviews/{review_id}`` | reviewer, admin: one case with its audit trail |
 | POST | ``/v1/reviews/{review_id}/decision`` | reviewer, admin: approve / correct / mark insufficient / reject / request re-analysis |
 | POST | ``/v1/reviews/{review_id}/pre-reveal`` | reviewer, admin: the blind step on a HIGH case (T34) |
+| GET  | ``/v1/reviews/{review_id}/blind-material`` | reviewer, admin, only while blind on that case: what to judge from (T40) |
 | POST | ``/v1/reviews/{review_id}/claims/{claim_id}/severity`` | reviewer, admin: severity override |
 | POST | ``/v1/jobs/{job_id}/review-request`` | the job's owner, reviewer, admin: ask for a person to check a result (T32) |
 
@@ -69,6 +70,7 @@ from app.db.models.review import (
 )
 from app.db.models.video import Video
 from app.db.session import get_db
+from app.services import blind_material as blind_mat
 from app.services import blind_review as blind
 from app.services import review_service as rs
 from app.services import users_service
@@ -551,6 +553,31 @@ def get_review(
     until the caller has posted their own judgement to ``/pre-reveal`` (T34)."""
     users_service.remember(db, current_user)
     return _case_view(db, _get_case(db, review_id, current_user), current_user)
+
+
+@router.get("/reviews/{review_id}/blind-material", response_model=blind_mat.BlindMaterialResponse)
+def blind_material(
+    review_id: str,
+    db: Session = Depends(get_db),
+    current_user: dict = Depends(require_reviewer),
+) -> blind_mat.BlindMaterialResponse:
+    """What a blind reviewer judges from on a HIGH case (D7 Q1, T40): the claims (text,
+    category, times, quoted segment ids), the transcript and on-screen text with
+    timestamps, and every paper or reference retrieval put in front of the verifier, in
+    retrieval order, with no relation, citation, verdict, stance, label, reasons, critic
+    notes or confidence (``app.services.blind_material``). Only while the caller is blind
+    on the case: anyone else gets 403 ``BLIND_STEP_NOT_ACTIVE`` and uses the case and
+    result routes. Analysts 403 before lookup; a case the caller may not see is 404."""
+    users_service.remember(db, current_user)
+    case = _get_case(db, review_id, current_user)
+    if not blind.is_blind(db, case, current_user):
+        raise HTTPException(status_code=403, detail={
+            "code": blind_mat.NOT_BLIND,
+            "review_id": case.id,
+            "message": "blind material is only for a reviewer who has not yet recorded their "
+                       "own judgement on an open HIGH-severity case",
+        })
+    return blind_mat.blind_material(db, case)
 
 
 @router.post("/reviews/{review_id}/pre-reveal", response_model=ReviewCaseView, status_code=201)
