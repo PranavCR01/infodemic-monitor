@@ -25,6 +25,7 @@ from judge import (judge, is_mixed, has_true_and_false,  # noqa: E402
 import enrich                              # noqa: E402
 from blind_subset import batch_of          # noqa: E402
 from labels import LABELS, ANNOTATOR       # noqa: E402
+import adjudication                        # noqa: E402
 
 DATASET = Path(__file__).resolve().parents[1]
 VIDEOS_CSV = DATASET / "videos.csv"
@@ -88,6 +89,7 @@ def main():
     splits = assign_splits([v["video_id"] for v in LABELS])
 
     video_rows, claim_rows = [], []
+    # Pass 1: first-pass claim rows for every video.
     for v in LABELS:
         vid = v["video_id"]
         if vid not in index:
@@ -139,6 +141,16 @@ def main():
                 "notes": notes.strip(),
             })
 
+    first_rows = [dict(r) for r in claim_rows]
+    claim_rows, _agreed = adjudication.apply(claim_rows)
+
+    # Pass 2: derive each video's label from its (adjudicated) claims.
+    for v in LABELS:
+        vid = v["video_id"]
+        doc = enrich.load(vid)
+        first_judged = [r for r in first_rows if r["video_id"] == vid]
+        _fl, _fb, _d, _r = judge(first_judged)
+        first_label_basis = (_fl, _fb or "")
         judged = [{"claim_id": r["claim_id"],
                    "speaker_stance": r["speaker_stance"],
                    "claim_verdict": r["claim_verdict"],
@@ -201,6 +213,7 @@ def main():
             "notes": v.get("notes", ""),
             **{c: idx.get(c, "") for c in EXTERNAL_COLS},
         })
+        adjudication.apply_video(video_rows[-1], first_label_basis)
 
     video_rows.sort(key=lambda r: int(r["video_id"][1:]))
     claim_rows.sort(key=lambda r: (int(r["video_id"][1:]),

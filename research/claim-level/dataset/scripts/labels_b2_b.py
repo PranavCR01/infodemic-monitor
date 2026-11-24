@@ -915,10 +915,6 @@ LABELS = [
                  "is very likely false (118 is the count of all known "
                  "elements, including synthetic ones), but no retrieved "
                  "reference gives seawater's composition to contradict it.",
-        "external_reason": "Each claim (heavy-metal removal, vaccine metals, "
-                           "118 minerals, gut cleansing) is untested in "
-                           "anything retrieved rather than contradicted, so "
-                           "the video is unjudgeable.",
         "claims": [
             {
                 "text": "los beneficios son muchísimo primero elimina los "

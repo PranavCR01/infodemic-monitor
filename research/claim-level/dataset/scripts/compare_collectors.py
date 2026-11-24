@@ -26,6 +26,10 @@ OUT = DATASET / "collector_agreement.md"
 
 # One line per disagreement: why the section 9 label differs from the folder.
 REASONS = {
+    "v21": "Model-assisted adjudication (rule A1, literal reading): 'promote "
+           "good cholesterol' means HDL, and an RCT meta-analysis finds "
+           "almonds do not change HDL-C, so that endorsed claim is "
+           "CONTRADICTED. The other benefits are true or untested.",
     "v03": "No claim is contradicted by evidence: 8 of 18 are SUPPORTED and "
            "the weak ones (dyes and DNA damage, fructose and cancer) are "
            "INSUFFICIENT or MIXED, not false.",

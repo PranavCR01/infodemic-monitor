@@ -57,6 +57,40 @@ The repo is public. `research/claim-level/dataset/videos/` is gitignored, as are
 live outside the repo (`D:\Python files\labelling-data\`). Run `git status` before
 every commit and confirm no media appears.
 
+## Guideline clarifications (model-assisted adjudication, 2026-11-24)
+
+The project lead settled these four rules when adjudicating the blind re-label.
+`scripts/adjudication.py` applies the decisions.
+
+1. **Literal reading (A1).** Judge a claim as stated. "Good cholesterol" means HDL.
+   A sentence that bundles two outcomes ("promotes good cholesterol and protects
+   your heart") is two rows, each with its own verdict.
+2. **On-screen claims count (A2, §5).** Text shown on screen as fact, including
+   infographic lists, is a claim with stance `ENDORSES`, extracted like speech.
+3. **"Removes / detoxes X from the body" is efficacy (A3).** A specific
+   therapeutic effect such as removing heavy metals counts as `treatment_efficacy`.
+   If nothing is found it is `UNSUPPORTED`, not vague wellness.
+4. **Directness for product claims (A4).** Evidence on one ingredient, on a
+   different intervention or route (desalinated deep-sea water for drinking
+   seawater, bathing for drinking), or on a different condition does not bear
+   on an untested product or remedy claim. Such a claim is `UNSUPPORTED`, not
+   `INSUFFICIENT_EVIDENCE`. Animal or in-vitro studies of the *same*
+   intervention still make it `INSUFFICIENT_EVIDENCE`.
+
+## Review method
+
+Review method: model-assisted (blind Claude re-label of 41 videos, model-model
+kappa: stance 0.83, verdict 0.71, video 0.75; disagreements adjudicated by the
+project lead). Not human inter-annotator agreement.
+
+Details are in `blind/model_relabel_comparison.md`, `blind/READ_LOG.md` and
+`scripts/adjudication.py`. Rows the lead decided carry `reviewer = PranavCR01`,
+with `review_status` `verified` (confirmed) or `corrected` (changed), and a
+`reviewer_notes` entry citing the rule. Rows where both passes agreed stay
+`pending` with the note "agreed by blind model pass": a row is never verified on
+model agreement alone. Candidates that the rules might change elsewhere in the
+set are listed in `blind/rule_sweep.md` and have not been applied.
+
 ## Labels
 
 Each claim gets two **separate** labels — what the evidence says about the claim,

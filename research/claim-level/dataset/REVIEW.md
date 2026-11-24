@@ -198,6 +198,18 @@ Blind sample in total: 16 + 20 + 5 = **41 videos**. When a new
   was careless.** Update `README.md` and this file when you settle one, so the
   next labeller does not hit it again.
 
+## Guideline clarifications from the blind adjudication
+
+These were settled by the project lead on 2026-11-24; full wording is in README.md.
+
+- **A1, literal reading:** "good cholesterol" is HDL; split bundled outcomes.
+- **A2, on-screen claims count:** extract infographic and caption claims stated as fact (`ENDORSES`).
+- **A3, "removes/detoxes X":** this is efficacy, so `UNSUPPORTED` when nothing is found.
+- **A4, directness:** ingredient, other-intervention, other-route or other-condition evidence does not bear on an untested product claim (`UNSUPPORTED`). Animal or in-vitro studies of the same intervention still give `INSUFFICIENT_EVIDENCE`.
+
+Blind-sample outcome: see README.md "Review method". Model agreement is not human
+inter-annotator agreement, so rows both passes agreed on stay `pending`.
+
 ## Rows to look at first
 
 Reviewer time is scarce, so start where the design says the risk is (§11):
