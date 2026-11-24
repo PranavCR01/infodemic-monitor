@@ -1852,9 +1852,48 @@ The paid run is a separate step the project lead approves with a USD cap.
   models expect `max_completion_tokens`, and the step caps (stance 512) leave little room
   for reasoning: check this before a paid run with the GPT-5 candidates, or they will fail
   or be truncated (and be excluded by the failure-rate budget).
+  **Fixed by T39 (§7ac).**
 - **For a person.** Approve a cap and run the paid step (command in the T38 PR). The token
   estimate is not a provider tokenizer. The judge-explanation and critic steps are not in
   this experiment. Check `routing.yaml`'s prices against the providers' lists first.
+
+## 7ac. OpenAI Reasoning Models: max_completion_tokens and Output Caps (T39, no issue; design §13, §14)
+
+Fixes the T38 caveat above before the paid routing run. **No paid calls; mocked clients only.**
+
+- **Per-model settings live in `config/routing.yaml`**, under `models:` (by exact model
+  id; no name-sniffing in node or client code). `reasoning: true` makes the router send,
+  for that model only: `token_param: max_completion_tokens` (GPT-5-class models reject
+  `max_tokens`), the step cap raised by the step's `reasoning_allowance`, and no
+  `temperature` (reasoning models accept only the default; this was not checked against
+  current OpenAI docs, which were unreachable). `token_param` alone renames the cap
+  without the other changes. A model not listed gets exactly the pre-T39 request.
+- **Applied per attempt in `ModelRouter.prepare`**, so a reasoning primary and a plain
+  fallback (or the reverse) each get their own settings. The request goes to the client
+  through `request.params` (`token_param`, `max_output_tokens`, `send_temperature`);
+  `OpenAIModelClient` reads them, `AnthropicModelClient` only reads the cap.
+- **Caps.** Nodes keep their visible caps (extract 2048, stance 512, verify 1024, critic
+  1024, judge 600). `reasoning_allowance` (T38's numbers: extract 1500, stance 800,
+  verify 2500) is added for reasoning models: 3548 / 1312 / 3524. A config routing a
+  reasoning model (primary, step or global fallback) to a step with no allowance fails to
+  load, so critique/judge get no invented number until someone measures one. The
+  Anthropic path and the live pipeline are unchanged: nothing routed today is a reasoning
+  model (`gpt-4o-2024-08-06` is listed as `reasoning: false`, which sends the same request).
+- **Cost.** `SpendGuard` reserves the cap the client will actually send
+  (`request_output_cap`). The dry run's upper bound uses visible cap + allowance for
+  reasoning candidates, and reports `output_cap_tokens`, `upper_bound_input_tokens` and
+  `upper_bound_output_tokens` per row so unpriced candidates can be priced by hand. A
+  candidate with `reasoning_tokens > 0` that routing.yaml doesn't mark `reasoning: true`
+  is listed under `reasoning_config_problems` and refused by a live run.
+- **Dry run after T39:** priced candidates unchanged at $8.54 expected / $26.17 upper bound
+  (Anthropic caps unchanged). OpenAI candidates (token totals; multiply by per-1M prices):
+  GPT-5 mini (extract+stance) expected 635,713 in / 270,300 out, upper 1,089,432 in /
+  583,088 out; GPT-5 (verify) expected 833,182 in / 391,500 out, upper 2,082,955 in /
+  951,480 out.
+- **For a person before the paid run:** in `config/routing_experiment.yaml`, replace
+  `TODO-gpt-5-mini-dated-snapshot-id` (extract, stance) and `TODO-gpt-5-dated-snapshot-id`
+  (verify) with pinned dated ids; in `config/routing.yaml` add each id under `models:` with
+  `{reasoning: true}` and under `pricing:` with its input/output USD per 1M tokens.
 
 ## 8. Team
 
@@ -1877,6 +1916,13 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-24**: T39 (no issue; design §13, §14) OpenAI reasoning-model fix by the
+  automated build, **no paid calls**: `models:` + `reasoning_allowance:` in routing.yaml;
+  reasoning models get `max_completion_tokens` at visible cap + allowance (stance
+  512 -> 1312, extract 2048 -> 3548, verify 1024 -> 3524) and no temperature; spend guard
+  and dry-run bound use the raised caps; live run refuses unmarked reasoning candidates.
+  Dry run unchanged for priced candidates ($8.54 / $26.17). 1530 passed, 0 skipped
+  (local Postgres 16 + pgvector). GPT-5 ids/prices still TODO for a person. Decisions in §7ac.
 - **2026-11-24**: T38 (no issue; design §13, §14) routing experiment runner by the
   automated build, **no paid calls**: tune-split items for extract_claims (48),
   analyze_stance (174) and verify_claims (174) through the real nodes; retrieval frozen

@@ -61,6 +61,25 @@ class ModelRequest(BaseModel):
     params: dict = Field(default_factory=dict)
 
 
+DEFAULT_MAX_TOKENS = 1024
+
+
+def visible_output_cap(request: "ModelRequest") -> int:
+    """The output cap the node asked for (its visible answer): ``max_tokens`` in a
+    messages dict, else in the route's params, else the default."""
+    body = request.input
+    if isinstance(body, dict) and body.get("max_tokens"):
+        return int(body["max_tokens"])
+    return int(request.params.get("max_tokens") or DEFAULT_MAX_TOKENS)
+
+
+def request_output_cap(request: "ModelRequest") -> int:
+    """The cap the client will actually send: the router's per-model cap when it set
+    one (``params.max_output_tokens``), else the node's visible cap."""
+    cap = request.params.get("max_output_tokens")
+    return int(cap) if cap else visible_output_cap(request)
+
+
 class ModelResponse(BaseModel):
     output: Any
     input_tokens: int = 0
@@ -127,7 +146,8 @@ class ModelRouter:
             for _ in range(1 + policy.retries):
                 record.attempts += 1
                 try:
-                    resp = self._client(route.provider).complete(route.model, request)
+                    resp = self._client(route.provider).complete(
+                        route.model, self.prepare(route.model, request))
                     return self._finish(record, resp, start)
                 except ModelCallError as exc:
                     if exc.kind not in policy.on:
@@ -141,7 +161,8 @@ class ModelRouter:
             record.fallback_reason = last_error.kind if last_error else None
             record.provider, record.model = fallback.provider, fallback.model
             record.attempts += 1
-            resp = self._client(fallback.provider).complete(fallback.model, request)
+            resp = self._client(fallback.provider).complete(
+                fallback.model, self.prepare(fallback.model, request))
             return self._finish(record, resp, start)
         except ModelCallError as exc:
             record.error = f"{exc.kind}: {exc}"
@@ -150,6 +171,19 @@ class ModelRouter:
             raise RoutingError(f"step {step!r} failed: {record.error}", record) from exc
 
     # -- helpers --
+
+    def prepare(self, model: str, request: ModelRequest) -> ModelRequest:
+        """Apply ``model``'s request settings from the routing table (T39). Done per
+        attempt, because the fallback can be a different kind of model. A model with no
+        entry under ``models:`` gets the request unchanged."""
+        settings = self.config.model_settings(model)
+        if settings is None:
+            return request
+        params = dict(request.params)
+        params["token_param"] = settings.output_param
+        params["max_output_tokens"] = self.config.output_cap(request.step, model, visible_output_cap(request))
+        params["send_temperature"] = settings.sends_temperature
+        return request.model_copy(update={"params": params})
 
     def _client(self, provider: str) -> ModelClient:
         try:

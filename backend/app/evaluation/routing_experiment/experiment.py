@@ -15,6 +15,7 @@ applied. ``config/routing.yaml`` is never written.
 from __future__ import annotations
 
 import json
+import math
 import os
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
@@ -226,12 +227,21 @@ def estimate(plan: Plan) -> dict:
             t = dict(per_prompt[cand.prompt])
             reasoning = getattr(cand, "reasoning_tokens", 0) * t["calls"]
             t["reasoning_tokens"] = reasoning
+            # Output cap per call as the router will send it (T39): a reasoning model gets
+            # the step's reasoning_allowance on top of the node's visible cap. A candidate
+            # that declares reasoning tokens but isn't marked in routing.yaml yet (the TODO
+            # ids) is estimated as one; a live run refuses that mismatch (check_live).
+            reasoning_model = plan.routing.is_reasoning(cand.model) or getattr(cand, "reasoning_tokens", 0) > 0
+            allowance = plan.routing.reasoning_allowance.get(step, 0) if reasoning_model else 0
+            t["output_cap_tokens"] = t["max_output_tokens"] + allowance * t["calls"]
             price = plan.routing.price(cand.model)
             expected = c.price_usd(price, t["input_tokens"], t["expected_output_tokens"] + reasoning)
             rep = 1 + max_repairs(step)
-            # Upper bound: max_tokens per call, or the reasoning allowance plus the expected
-            # answer if that is larger (a reasoning model's hidden tokens are billed as output).
-            worst_out = max(t["max_output_tokens"], t["expected_output_tokens"] + reasoning)
+            # Upper bound: every call writes its whole cap (hidden reasoning included, billed
+            # as output), or the expected reasoning + answer if a candidate declares more.
+            worst_out = max(t["output_cap_tokens"], t["expected_output_tokens"] + reasoning)
+            t["upper_bound_input_tokens"] = int(math.ceil(t["input_tokens"] * rep * 1.25))
+            t["upper_bound_output_tokens"] = worst_out * rep
             upper = c.price_usd(price, t["input_tokens"] * rep * 1.25, worst_out * rep)
             if expected is None:
                 unpriced.append(candidate_key(cand))
@@ -255,8 +265,29 @@ def estimate(plan: Plan) -> dict:
         "placeholder_candidates": sorted({candidate_key(x) for s in plan.steps
                                           for x in plan.candidates.candidates[s] if getattr(x, "placeholder", False)}),
         "critic_provider_warnings": critic_provider_warnings(plan),
+        "reasoning_config_problems": reasoning_config_problems(plan),
         "notes": plan.notes,
     }
+
+
+def reasoning_config_problems(plan: Plan) -> list[str]:
+    """Candidates whose reasoning setup disagrees with routing.yaml (T39). A candidate
+    that expects reasoning tokens must be marked ``reasoning: true`` under ``models:``,
+    or the client would send ``max_tokens`` (a 400 from GPT-5-class models) with no
+    room for reasoning; a step with a reasoning candidate needs a reasoning_allowance."""
+    problems: list[str] = []
+    for step in plan.steps:
+        for cand in plan.candidates.candidates[step]:
+            declared = getattr(cand, "reasoning_tokens", 0) > 0
+            marked = plan.routing.is_reasoning(cand.model)
+            if declared and not marked:
+                problems.append(
+                    f"{step}: {candidate_key(cand)} expects reasoning tokens but routing.yaml has no "
+                    f"`models: {{{cand.model}: {{reasoning: true}}}}` entry")
+            if (declared or marked) and step not in plan.routing.reasoning_allowance:
+                problems.append(f"{step}: {candidate_key(cand)} is a reasoning model but routing.yaml "
+                                f"has no reasoning_allowance for {step}")
+    return problems
 
 
 def critic_provider_warnings(plan: Plan) -> list[str]:
@@ -302,6 +333,8 @@ def check_live(plan: Plan, *, live: bool, max_usd: Optional[float], est: dict) -
     if est.get("placeholder_candidates"):
         raise LiveRunRefused(f"placeholder (TODO) model ids must be replaced with pinned ids first: "
                              f"{est['placeholder_candidates']}")
+    if est.get("reasoning_config_problems"):
+        raise LiveRunRefused(f"reasoning model settings missing in routing.yaml: {est['reasoning_config_problems']}")
     if est["unpriced_candidates"]:
         raise LiveRunRefused(f"candidates without a price in the routing table: {est['unpriced_candidates']}")
     if est["total_expected_usd"] > max_usd:
@@ -448,20 +481,24 @@ def render_markdown(report: dict) -> str:
                 lines.append(f"\nExcluded: {json.dumps(sel['excluded'])}")
             lines.append("")
         lines += ["## Estimate before the run", ""]
-    lines += ["| step | items | candidate | calls | input tokens | expected output | reasoning (as output) | expected cost | upper bound |",
-              "|---|---|---|---|---|---|---|---|---|"]
+    lines += ["| step | items | candidate | calls | input tokens | expected output | reasoning (as output) | output cap | expected cost | upper bound |",
+              "|---|---|---|---|---|---|---|---|---|---|"]
     for step, d in est["steps"].items():
         for r in d["candidates"]:
             lines.append(f"| {step} | {d['items']} | {r['candidate']} | {r['calls']} | {r['input_tokens']:,} | "
                          f"{r['expected_output_tokens']:,} | {r.get('reasoning_tokens', 0):,} | "
+                         f"{r.get('output_cap_tokens', r.get('max_output_tokens', 0)):,} | "
                          f"{_usd(r['expected_usd'])} | {_usd(r['upper_bound_usd'])} |")
     for step, d in est["steps"].items():
         priced = [r["expected_usd"] for r in d["candidates"] if r["expected_usd"] is not None]
         lines.append(f"\n{step}: {d['items']} items; priced candidates total {_usd(sum(priced))}")
     lines += ["", f"Total expected (priced candidates): **{_usd(est['total_expected_usd'])}**; "
-              f"upper bound (every call at max_tokens, every repair fired): {_usd(est['total_upper_bound_usd'])}."]
+              f"upper bound (every call at its output cap, every repair fired): {_usd(est['total_upper_bound_usd'])}."]
     if est.get("unpriced_candidates"):
         lines.append(f"\nUnpriced (not in the total; a live run refuses them): {', '.join(est['unpriced_candidates'])}")
+    if est.get("reasoning_config_problems"):
+        lines.append("\nReasoning-model settings missing in routing.yaml (a live run refuses these):\n"
+                     + "\n".join(f"- {x}" for x in est["reasoning_config_problems"]))
     if est.get("placeholder_candidates"):
         lines.append(f"\nTODO placeholder model ids (replace with pinned dated ids and add prices before a paid run): "
                      f"{', '.join(est['placeholder_candidates'])}")
