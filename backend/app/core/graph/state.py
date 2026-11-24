@@ -225,6 +225,45 @@ class FinalClassification(_Record):
     misinfo_basis: Optional[str] = None
 
 
+class ReferenceConsulted(_Record):
+    """One allow-listed reference page or Bookshelf search tried for a claim (T31, §6
+    "Trusted sources beyond PubMed"). Names and hosts come from the allow-list in
+    config, never from a model; ``url`` is the allow-listed page, never an API request
+    URL. ``outcome``: passage / no_passage / no_results / skipped / error."""
+
+    source_id: str
+    source_name: str
+    publisher: str = ""
+    site: Optional[str] = None
+    item: str
+    mode: str
+    outcome: str
+    url: Optional[str] = None
+
+
+class SearchRound(_Record):
+    """What one ``retrieve_evidence`` round did for one claim (T31, "How we searched").
+
+    ``pubmed_hits``: PMIDs ESearch returned for the query; ``pubmed_records``: those
+    left after the publication-type and year filters; ``new_records``: what the round
+    added to the claim's set after PMID/DOI dedup (references included). Counts are
+    ``None`` when the search failed. ``pubmed_error`` holds the exception type only,
+    never its message (an HTTP error message can carry the request URL and API key).
+    Recording this never changes what is retrieved.
+    """
+
+    round: int
+    pubmed_query: Optional[str] = None
+    pubmed_hits: Optional[int] = None
+    pubmed_records: Optional[int] = None
+    from_cache: Optional[bool] = None
+    pubmed_error: Optional[str] = None
+    references: list[ReferenceConsulted] = Field(default_factory=list)
+    reference_passages: Optional[int] = None
+    reference_error: Optional[str] = None
+    new_records: int = 0
+
+
 class NodeError(_Record):
     """A recoverable error a node recorded instead of raising."""
 
@@ -252,6 +291,8 @@ CHECKPOINT_TYPES: tuple[type, ...] = (
     VerificationResult,
     CriticResult,
     FinalClassification,
+    ReferenceConsulted,
+    SearchRound,
     NodeError,
 )
 
@@ -292,6 +333,10 @@ class PipelineState(TypedDict, total=False):
     retrieved_evidence: dict[str, list[EvidenceRecord]]
     retrieval_attempts: dict[str, int]
     reranked_evidence: dict[str, list[EvidenceRecord]]
+    # "How we searched" (T31): one entry per retrieve_evidence round per claim, written
+    # by retrieve_evidence alongside retrieved_evidence. Optional and additive: a
+    # checkpoint without it still loads, and persistence falls back to the queries.
+    search_trail: dict[str, list[SearchRound]]
     # Offline-library passages (§6 "Fallback"), per claim, for claims where the
     # fallback fired (an empty list: it fired and found nothing). Written by
     # rerank_evidence, which decides when it fires. Kept across rounds, like

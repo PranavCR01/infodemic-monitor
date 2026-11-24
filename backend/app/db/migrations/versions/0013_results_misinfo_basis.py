@@ -1,7 +1,7 @@
 """results.misinfo_basis
 
 Revision ID: 0013
-Revises: 0010 (becomes 0012 once T28 and T31 are merged; see below)
+Revises: 0012 (T31; 0011 is T28)
 Create Date: 2026-11-23
 
 Target design §9 (T30, decision D1 = B): a MISINFO result carries a ``misinfo_basis``,
@@ -23,7 +23,7 @@ import sqlalchemy as sa
 from alembic import op
 
 revision: str = "0013"
-down_revision: Union[str, None] = "0010"
+down_revision: Union[str, None] = "0012"
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 

@@ -99,6 +99,7 @@ def _evidence_for_claim(state: dict, cid: str) -> list:
 
 def _write_claim_level(db: Session, job_id: str, state: dict) -> None:
     from app.core.graph.judge import claim_label
+    from app.services.search_trail import build_search_trail
 
     for s in state.get("transcript_segments") or []:
         db.add(TranscriptSegmentRow(job_id=job_id, segment_id=s.segment_id, start_seconds=s.start,
@@ -127,6 +128,7 @@ def _write_claim_level(db: Session, job_id: str, state: dict) -> None:
             claim_kind=claim.claim_kind,
             label=claim_label(stance.stance if stance else None, verdict.verdict).value if verdict else None,
             deciding=cid in deciding,
+            search_trail=build_search_trail(state, cid),
         )
         db.add(row)
         if stance is not None:

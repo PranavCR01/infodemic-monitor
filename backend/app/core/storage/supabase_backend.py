@@ -33,17 +33,22 @@ class SupabaseBackend:
             raise StorageError(destination_key, exc) from exc
 
     def get_download_url(self, storage_key: str) -> str:
+        return self.create_signed_download_url(storage_key, 3600)
+
+    def create_signed_download_url(self, storage_key: str, expires_in: int) -> str:
         try:
             client = self._get_client()
             result = client.storage.from_(settings.SUPABASE_STORAGE_BUCKET).create_signed_url(
                 path=storage_key,
-                expires_in=3600,
+                expires_in=expires_in,
             )
-            # supabase-py v2 returns an object; older versions return a dict
+            # supabase-py v2 returns a dict ({"signedURL"/"signedUrl"}); some versions an object
             if hasattr(result, "signed_url"):
                 return result.signed_url
             if isinstance(result, dict):
-                return result.get("signedURL") or result.get("signed_url", "")
+                return (
+                    result.get("signedURL") or result.get("signedUrl") or result.get("signed_url", "")
+                )
             return str(result)
         except Exception as exc:
             raise StorageError(storage_key, exc) from exc

@@ -178,6 +178,11 @@ def record_review_decision(
         created_at=case.decided_at,
     ))
     db.commit()
+    if job is not None:
+        # T28: log the job's new §1 state (COMPLETED or REJECTED) in its history.
+        from app.services.job_events import sync_state_from_status
+
+        sync_state_from_status(db, job, detail={"review_id": case.id, "action": action.value})
     db.refresh(case)
     return case
 
@@ -453,7 +458,10 @@ def start_reanalysis(
     if old is None:
         raise ReviewError(f"job {case.job_id!r} not found")
     video = db.get(Video, old.video_id)
-    new_job = Job(id=str(uuid.uuid4()), video_id=old.video_id, status=JobStatus.PENDING)
+    # T28: the re-run belongs to whoever owned the original job, not the reviewer, so it
+    # shows up in that user's job list.
+    new_job = Job(id=str(uuid.uuid4()), video_id=old.video_id, status=JobStatus.PENDING,
+                  user_id=old.user_id)
     db.add(new_job)
     db.add(AuditEvent(
         actor_id=reviewer_id,
@@ -466,6 +474,13 @@ def start_reanalysis(
         created_at=now or datetime.now(timezone.utc),
     ))
     db.commit()
+    from app.core.progress import UPLOADED
+    from app.db.models.job import JobState
+    from app.services.job_events import record_state, sync_state_from_status
+
+    record_state(db, new_job, JobState.PENDING, step=UPLOADED,
+                 detail={"reason": "reanalysis", "previous_job_id": case.job_id, "review_id": case.id})
+    record_state(db, new_job, JobState.QUEUED)
     try:
         new_job.celery_task_id = dispatch(new_job.id, video.storage_key if video else None)
     except Exception as exc:  # broker down, etc.
@@ -475,5 +490,6 @@ def start_reanalysis(
         new_job.status = JobStatus.FAILED
         new_job.error_code = "DISPATCH_FAILED"
     db.commit()
+    sync_state_from_status(db, new_job, detail={"error_code": new_job.error_code} if new_job.error_code else None)
     db.refresh(new_job)
     return new_job

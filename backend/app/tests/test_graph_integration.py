@@ -794,7 +794,10 @@ def test_result_endpoint_serves_both_paths(kind):
     from app.api.routers.jobs import get_result
 
     db = _api_db_with(kind)
-    out = get_result("job-1", db=db, current_user={})
+    from app.db.models.job import Job
+    db.get(Job, "job-1").user_id = "user-1"  # T28: results are served to the job's owner only
+    db.commit()
+    out = get_result("job-1", db=db, current_user={"sub": "user-1"})
     # The fields the existing frontend reads are always there.
     for key in ("label", "confidence", "explanation", "evidence_snippets", "citations", "provider",
                 "model_used", "latency_ms"):

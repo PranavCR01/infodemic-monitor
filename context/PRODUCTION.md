@@ -100,6 +100,10 @@ Only start these once 5a–5d are done and merged.
 
 ### 6a. Per-user job isolation
 
+**Update (2026-11-23): built on `langgraph-build` by T28 as migration `0011`** (`jobs.user_id`,
+ownership checks in `app/api/ownership.py`; see context/MULTI_AGENT.md §7w). Old jobs
+have no owner and need one assigned by a person.
+
 - Add `user_id` (populated from the JWT `sub` claim) to the `Job` model.
 - In `create_job`, read `current_user["sub"]` and store it on the new job.
 - In `list_jobs`, filter by the current user's `sub` — no more global job list.

@@ -150,6 +150,22 @@ def bookshelf_query(claim_text: str) -> str:
     return " ".join(w for w in words if re.fullmatch(r"[\w'+.%-]+", w))[:200]
 
 
+@dataclass(frozen=True)
+class ConsultedItem:
+    """One allow-listed page, stored snapshot or Bookshelf search the searcher tried
+    for a claim (T31, "How we searched"). ``item`` is the catalogue page ID, the NBK
+    accession, or ``"search"`` for a Bookshelf search itself. ``url`` is the
+    allow-listed page URL (never an E-utilities request URL, which can carry the API
+    key). ``outcome``: ``passage`` (a quotable passage was found), ``no_passage``,
+    ``no_results`` (a search that returned nothing) or ``error``."""
+
+    source_id: str
+    item: str
+    mode: str  # live | stored | search
+    outcome: str
+    url: Optional[str] = None
+
+
 @dataclass
 class ReferenceResult:
     records: list[EvidenceRecord]
@@ -157,6 +173,7 @@ class ReferenceResult:
     pages_fetched: int = 0  # live pages and Bookshelf chapters
     stored_pages: int = 0  # stored snapshots cited instead of a request
     candidates: list[str] = field(default_factory=list)  # page IDs / NBK accessions tried
+    consulted: list[ConsultedItem] = field(default_factory=list)  # T31, in the order tried
 
 
 class ReferenceSearcher:
@@ -302,10 +319,16 @@ class ReferenceSearcher:
         result = ReferenceResult(records=[])
         seen: set[str] = set()
 
-        def add(rec: Optional[EvidenceRecord]) -> None:
-            if rec is not None and rec.evidence_id not in seen:
+        def add(rec: Optional[EvidenceRecord]) -> str:
+            if rec is None:
+                return "no_passage"
+            if rec.evidence_id not in seen:
                 seen.add(rec.evidence_id)
                 result.records.append(rec)
+            return "passage"
+
+        def consulted(source_id: str, item: str, mode: str, outcome: str, url: Optional[str] = None) -> None:
+            result.consulted.append(ConsultedItem(source_id, item, mode, outcome, url))
 
         for page, _hits in match_catalogue(claim_text, self.config)[: self.config.max_pages_per_claim]:
             source = self.config.source(page.source)
@@ -316,20 +339,25 @@ class ReferenceSearcher:
                     stored = self._stored_page(page, result)
                 except Exception as exc:  # noqa: BLE001 - a broken archive entry must not stop the others
                     result.errors.append(f"{page.id}: {type(exc).__name__}: {exc}"[:300])
+                    consulted(source.id, page.id, "stored", "error", page.url)
                     continue
                 if stored is None:
+                    consulted(source.id, page.id, "stored", "error", page.url)
                     continue
                 self.snapshots.save(stored)
                 result.stored_pages += 1
-                add(self._record(claim_text, stored, source, f"stored:{page.id}@{stored.sha256[:12]}"))
+                outcome = add(self._record(claim_text, stored, source, f"stored:{page.id}@{stored.sha256[:12]}"))
+                consulted(source.id, page.id, "stored", outcome, page.url)
                 continue
             try:
                 fetched = self._page(page.url, source, title=page.title)
             except Exception as exc:  # noqa: BLE001 - one dead page must not stop the others
                 result.errors.append(f"{page.id}: {type(exc).__name__}: {exc}"[:300])
+                consulted(source.id, page.id, "live", "error", page.url)
                 continue
             result.pages_fetched += 1
-            add(self._record(claim_text, fetched, source, f"catalogue:{page.id}"))
+            outcome = add(self._record(claim_text, fetched, source, f"catalogue:{page.id}"))
+            consulted(source.id, page.id, "live", outcome, page.url)
 
         query = bookshelf_query(claim_text)
         for source in (s for s in self.config.sources if s.backend == "bookshelf"):
@@ -337,12 +365,17 @@ class ReferenceSearcher:
                 chapters = self.bookshelf_chapters(query, source)
             except Exception as exc:  # noqa: BLE001
                 result.errors.append(f"{source.id} search: {type(exc).__name__}: {exc}"[:300])
+                consulted(source.id, "search", "search", "error")
                 continue
+            if not chapters:
+                consulted(source.id, "search", "search", "no_results" if query else "skipped")
             for chapter in chapters:
-                result.candidates.append(chapter.url.rstrip("/").rsplit("/", 1)[-1])
+                accession = chapter.url.rstrip("/").rsplit("/", 1)[-1]
+                result.candidates.append(accession)
                 self.snapshots.save(chapter)
                 result.pages_fetched += 1
-                add(self._record(claim_text, chapter, source, f"bookshelf:{query}"))
+                outcome = add(self._record(claim_text, chapter, source, f"bookshelf:{query}"))
+                consulted(source.id, accession, "live", outcome, chapter.url)
 
         result.records = result.records[: self.config.max_records_per_claim]
         return result

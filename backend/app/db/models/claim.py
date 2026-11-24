@@ -87,6 +87,11 @@ class ClaimRow(Base):
     # The §9 rules applied to this one claim (judge.claim_label); None = no verdict.
     label: Mapped[Optional[str]] = mapped_column(String(32), nullable=True)
     deciding: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
+    # "How we searched" (T31, migration 0012): the PubMed queries run, references and
+    # library consulted, retrieved / screened / kept counts and the budget used, as
+    # ``app.core.schemas.search_trail.SearchTrailView`` JSON. Null when the claim was
+    # never searched or the row was written before 0012.
+    search_trail: Mapped[Optional[dict]] = mapped_column(JSON, nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
 
     stance: Mapped[Optional["ClaimStanceRow"]] = relationship(

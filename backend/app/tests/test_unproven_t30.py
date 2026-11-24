@@ -344,7 +344,7 @@ def test_jobs_list_returns_misinfo_basis_and_display_label(env):
 
 def test_jobs_list_without_a_result_has_null_basis(env):
     db = env["db"]
-    db.add(Job(id="job-p", video_id="vid-1", status=JobStatus.PENDING))
+    db.add(Job(id="job-p", video_id="vid-1", status=JobStatus.PENDING, user_id=ALICE["sub"]))
     db.commit()
     rows = {r["job_id"]: r for r in env["client"].get("/jobs").json()}
     assert rows["job-p"]["misinfo_basis"] is None and rows["job-p"]["label_display"] is None
@@ -359,7 +359,7 @@ def test_persisted_unproven_outcome_end_to_end():
 
     db = _session()
     db.add(Video(id="vid-1", filename="v.mp4", file_path="/tmp/v.mp4", file_size=1))
-    db.add(Job(id="job-1", video_id="vid-1", status=JobStatus.STARTED))
+    db.add(Job(id="job-1", video_id="vid-1", status=JobStatus.STARTED, user_id=ALICE["sub"]))
     db.commit()
     outcome = make_provider(node_overrides=NOTHING_FOUND).run(fusion(), job_id="job-1", video_id="vid-1")
     persist_outcome(db, "job-1", fusion(), outcome)
