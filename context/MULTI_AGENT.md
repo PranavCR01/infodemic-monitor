@@ -2002,6 +2002,13 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   response's model id + reasoning tokens recorded on every call and shown in the report.
   Dry run with PR #102's candidates: $15.36 expected / $42.67 upper bound (frozen evidence).
   1545 passed, 0 skipped (local Postgres 16 + pgvector), also with #102 merged. Decisions in §7ac.
+- **2026-11-24**: T38 paid run (lead-approved; caps $1 smoke / $40 full) **stopped at the smoke
+  test**: on tune video v11 all six Anthropic candidates returned valid output, but every OpenAI
+  call (gpt-5.6-luna extract/stance, gpt-5.6-terra verify) got HTTP 400 "Function tools with
+  reasoning_effort are not supported ... in /v1/chat/completions; use /v1/responses or set
+  reasoning_effort to 'none'". Full run not started. Spend: Anthropic $0.27, OpenAI ~$0 actual
+  ($0.21 booked by SpendGuard as failed-call reservations); $0.48 booked / ~$0.27 actual total.
+  Report in `evals/reports/T38_routing/`. Needs a person: choose effort `none` or a Responses-API client.
 - **2026-11-24**: T34 (decision D7; design §12, §15, §17) review decision completeness by the
   automated build: `reason_code` + 10-char note on decisions (missing code → OTHER, flagged);
   the blind HIGH step `POST /v1/reviews/{id}/pre-reveal`, enforced on the case view, queue,
