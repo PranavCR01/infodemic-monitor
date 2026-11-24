@@ -412,7 +412,7 @@ By the time the judge runs, the judgment has already been made, claim by claim: 
 | otherwise, is **refuted** by the speaker and contradicted by the evidence | DEBUNKED (`DEBUNKING`) |
 | otherwise, at least one claim was judged and nothing false is endorsed | NO-MISINFO |
 | otherwise, is **refuted** by the speaker while the evidence is mixed or insufficient | CANNOT RECOGNIZE, sent to review as a possible debunk |
-| no claim could be judged (all insufficient or not verifiable, or no claims) | CANNOT RECOGNIZE; sent to review at LOW priority if any claim needed checking but had too little evidence |
+| no claim could be judged (all insufficient or not verifiable, or no claims) | CANNOT RECOGNIZE; sent to review if any claim needed checking but had too little evidence |
 
 MISINFO carries a `misinfo_basis`: `contradicted`, `denies_supported` or `unproven`. The internal label stays one of the four; the interface shows "MISINFO (unproven)" when the basis is `unproven`.
 
@@ -440,7 +440,7 @@ def judge(claims):
     if judged:         return "NO_MISINFO", None, judged, reasons
     if refuted_open:   return "CANNOT_RECOGNIZE", None, refuted_open, reasons
     # Nothing could be judged. If a claim needed checking but the evidence was too thin,
-    # a person should still see it (LOW priority); videos with no checkable claims are not sent.
+    # a person should still see it; videos with no checkable claims are not sent.
     if any(c.verdict == "INSUFFICIENT_EVIDENCE" for c in claims):
         reasons.append("nothing_judged")
     return "CANNOT_RECOGNIZE", None, [], reasons
@@ -522,7 +522,7 @@ Whether a case is "weak" is decided by a written code rule. The rule combines si
 A case goes to a person if **any** of these hold:
 
 - a deciding claim is INSUFFICIENT\_EVIDENCE, MIXED or UNSUPPORTED (so every "MISINFO (unproven)" video is reviewed);
-- no claim could be judged, but at least one claim needed checking and had too little evidence (`nothing_judged`). These go to the queue at **LOW** priority: a person should see what the system could not check, but they come after everything else;
+- no claim could be judged, but at least one claim needed checking and had too little evidence (`nothing_judged`). A person should see what the system could not check. The reason never lowers a case's priority: severity still comes from the claims (section 12);
 - supporting and contradicting papers both exist for a deciding claim;
 - a deciding claim rests only on weak study types;
 - a deciding claim's stance is UNCLEAR;
@@ -546,7 +546,9 @@ Review is a real step in the workflow, not a flag. A case in review has its own 
 - **Request re-analysis**, for example after the retrieval terms are fixed.
 - **Reject** the result.
 
-Every action records who, when and why.
+Every action records who, when and why: a reason code (claim overgeneralised, evidence misread, stance misread, missing source, system correct, other) and a written note.
+
+**HIGH severity: your judgement first.** On a HIGH-severity case each reviewer first records their own stance and verdict for every claim; only then does the server show them the system's. A decision without that step is refused, and both are kept in the audit trail.
 
 **Feedback loop, done carefully.** Reviewer corrections are valuable test data, but they are **not** fed straight back into prompts or models. A correction becomes a candidate evaluation example; it's checked for quality, normalised and deduplicated, checked so it can't leak between training and test sets, and added to a new dataset version. Changes are then evaluated offline before anything is promoted.
 
@@ -742,7 +744,7 @@ Calls to the MCP retrieval server are traced too, with the client ID, tool, late
 
 | Table | Holds |
 | --- | --- |
-| `users` | User ID, auth identity, role |
+| `users` | User ID, auth identity (email, display name); roles come from the verified token |
 | `videos` | Owner, storage location, SHA-256 hash, duration |
 | `jobs` | Video, state, pipeline version, attempts, error code |
 | `job_events` | Every state change, with time |
@@ -776,6 +778,7 @@ Everything has stable IDs and foreign keys, and schema changes go through number
 | GET | `/v1/videos/{video_id}/results` | Final label and explanation |
 | GET | `/v1/videos/{video_id}/claims` | Claims with stance and verdict |
 | GET | `/v1/claims/{claim_id}/evidence` | Papers for one claim |
+| POST | `/v1/reviews/{review_id}/pre-reveal` | A reviewer's own judgement on a HIGH case, before the system's is shown |
 | POST | `/v1/reviews/{review_id}/decision` | A reviewer's decision |
 | GET | `/v1/admin/evaluations` | Evaluation summaries |
 

@@ -181,6 +181,11 @@ def create_job(
     db: Session = Depends(get_db),
     current_user: dict = Depends(get_current_user),
 ):
+    # T34: remember the submitter's name and email (from the verified token) so review
+    # screens can say whose video this is.
+    from app.services import users_service
+
+    users_service.remember(db, current_user)
     # T33: only a video the caller may see (their own; any for reviewers/admins);
     # someone else's looks missing.
     video = video_or_404(db, payload.video_id, current_user)
@@ -259,6 +264,10 @@ def get_result(
     OCR segments, and the review case with its status, severity and structured reasons.
     Existing fields are unchanged; ``review`` stays set once its case is resolved."""
     job = owned_job_or_404(db, job_id, current_user)
+    # T34: no result for a reviewer still blind to this job's HIGH review case.
+    from app.services.blind_review import require_revealed
+
+    require_revealed(db, job, current_user)
     if job.status not in (JobStatus.SUCCESS, JobStatus.REVIEW_REQUIRED):
         raise HTTPException(status_code=202, detail=f"Job not complete — status: {job.status}")
 

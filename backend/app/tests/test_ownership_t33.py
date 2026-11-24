@@ -36,7 +36,7 @@ from app.db.base import Base
 from app.db.models.claim import ClaimRow, ClaimStanceRow, VerificationResultRow
 from app.db.models.job import Job, JobStatus
 from app.db.models.result import Result
-from app.db.models.review import AuditEvent, HumanReview, ReviewCaseStatus
+from app.db.models.review import AuditEvent, HumanReview, ReviewCaseStatus, ReviewPreReveal
 from app.db.models.video import Video
 from app.db.session import get_db
 
@@ -63,6 +63,7 @@ CALLERS = {
     "reviewer": auth("rita", "reviewer"),
     "admin": auth("adam", "admin"),
 }
+PRE_REVEALED = ("rita", "adam", "alice", "bob")  # T34: see seed()
 
 
 # ------------------------------------------------------------------ database
@@ -198,6 +199,13 @@ def seed(Session, tags=("alice", "bob", "legacy")):
             claim_severities={"c1": {"severity": "HIGH", "basis": [], "stance": "ENDORSES",
                                      "verdict": "CONTRADICTED", "misinfo_relevant": True}},
         ))
+        s.flush()
+        # T34: these cases are HIGH, so deciding needs each reviewer's blind judgement
+        # first (tested in test_review_blind_t34). Recorded here so this file keeps
+        # testing ownership only.
+        for sub in PRE_REVEALED:
+            s.add(ReviewPreReveal(review_id=f"rev-{tag}", reviewer_id=sub,
+                                  claims={"c1": {"stance": "ENDORSES", "verdict": "CONTRADICTED"}}))
     s.commit()
     s.close()
 
@@ -226,7 +234,7 @@ LIST = "list"               # filtered by visible_jobs (tested in test_lists_*)
 REVIEWER_LIST = "reviewer_list"
 STORAGE_KEY = "storage_key"  # register: the key must be under the caller's prefix (tested below)
 
-DECISION = {"action": "APPROVE", "reason": "checked"}
+DECISION = {"action": "APPROVE", "reason": "checked the papers", "reason_code": "SYSTEM_CORRECT"}
 
 ROUTES: dict[tuple[str, str], object] = {
     ("GET", "/health"): PUBLIC,
@@ -248,6 +256,12 @@ ROUTES: dict[tuple[str, str], object] = {
     ("GET", "/v1/reviews/{review_id}"): ObjectRoute("GET", lambda t: f"/v1/reviews/rev-{t}", role="reviewer"),
     ("POST", "/v1/reviews/{review_id}/decision"): ObjectRoute(
         "POST", lambda t: f"/v1/reviews/rev-{t}/decision", body=lambda t: DECISION, role="reviewer"),
+    # T34: the seeded pre-reveals make an allowed caller's second one a 409; what this
+    # matrix checks is 404 / 403 versus allowed.
+    ("POST", "/v1/reviews/{review_id}/pre-reveal"): ObjectRoute(
+        "POST", lambda t: f"/v1/reviews/rev-{t}/pre-reveal", ok=(201, 409),
+        body=lambda t: {"claims": [{"claim_id": "c1", "stance": "REFUTES", "verdict": "SUPPORTED"}]},
+        role="reviewer"),
     ("POST", "/v1/reviews/{review_id}/claims/{claim_id}/severity"): ObjectRoute(
         "POST", lambda t: f"/v1/reviews/rev-{t}/claims/c1/severity",
         body=lambda t: {"severity": "LOW", "reason": "adult audience"}, role="reviewer"),
@@ -332,7 +346,7 @@ def test_object_routes_cross_user_matrix(env, caller, tag):
 def _reset(env):
     s = env["Session"]()
     for t in ("job_events", "audit_events", "claim_stances", "verification_results", "claims",
-              "human_reviews", "results", "jobs", "videos"):
+              "review_pre_reveals", "users", "human_reviews", "results", "jobs", "videos"):
         s.execute(text(f"DELETE FROM {t}"))
     s.commit()
     s.close()

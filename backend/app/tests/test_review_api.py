@@ -63,7 +63,7 @@ PG_DSN = os.environ.get("LIBRARY_TEST_PG_DSN")
 
 
 _TABLES = ("videos", "jobs", "results", "human_reviews", "audit_events",
-           "claims", "claim_stances", "verification_results")
+           "claims", "claim_stances", "verification_results", "review_pre_reveals", "users")
 
 
 @pytest.fixture(scope="module")
@@ -130,7 +130,11 @@ def env(request, monkeypatch):
 
 
 def add_case(env, job_id, *, severity="HIGH", reasons=("judge:mixed_video",), created=T0,
-             claims=None, status="OPEN", label="MISINFO", owner="submitter-1"):
+             claims=None, status="OPEN", label="MISINFO", owner="submitter-1",
+             revealed=("reviewer-1", "reviewer-2", "admin-1")):
+    """A review case. ``revealed``: reviewers whose blind judgement (T34) is already
+    recorded, so tests of other rules can decide HIGH cases; the blind step itself is
+    tested in test_review_blind_t34."""
     from app.core.graph.review_policy import rule_of
     from app.db.models.job import Job, JobStatus
     from app.db.models.result import Result
@@ -154,6 +158,11 @@ def add_case(env, job_id, *, severity="HIGH", reasons=("judge:mixed_video",), cr
         claim_severities=_claims() if claims is None else claims, severity_table_version="sev-1",
     )
     s.add(case)
+    s.flush()
+    from app.db.models.review import ReviewPreReveal
+
+    for sub in revealed if status == "OPEN" else ():
+        s.add(ReviewPreReveal(review_id=case.id, reviewer_id=sub, claims={}))
     s.commit()
     s.close()
     return f"rev-{job_id}"
@@ -219,7 +228,7 @@ def test_analyst_cannot_see_or_act_on_reviews(env):
     assert c.get(f"/v1/reviews/{rid}", headers=ANALYST).status_code == 403
     # Same answer for a case that doesn't exist: nothing is revealed.
     assert c.get("/v1/reviews/missing", headers=ANALYST).status_code == 403
-    r = c.post(f"/v1/reviews/{rid}/decision", headers=ANALYST, json={"action": "APPROVE", "reason": "ok"})
+    r = c.post(f"/v1/reviews/{rid}/decision", headers=ANALYST, json={"action": "APPROVE", "reason": "checked the papers"})
     assert r.status_code == 403
     r = c.post(f"/v1/reviews/{rid}/claims/c1/severity", headers=ANALYST,
                json={"severity": "LOW", "reason": "x"})
@@ -227,7 +236,7 @@ def test_analyst_cannot_see_or_act_on_reviews(env):
     # User-editable metadata claiming reviewer changes nothing.
     forged = auth(token("analyst-2", user_role="reviewer"))
     assert c.post(f"/v1/reviews/{rid}/decision", headers=forged,
-                  json={"action": "APPROVE", "reason": "ok"}).status_code == 403
+                  json={"action": "APPROVE", "reason": "checked the papers"}).status_code == 403
     case = c.get(f"/v1/reviews/{rid}", headers=REVIEWER).json()
     assert case["status"] == "OPEN" and case["audit_trail"] == []
 
@@ -359,7 +368,7 @@ def test_approve_records_who_when_why_and_audits(env):
     # Resolved cases leave the default (OPEN) queue.
     assert c.get("/v1/reviews", headers=REVIEWER).json()["total"] == 0
     # A second decision is a conflict.
-    r = c.post(f"/v1/reviews/{rid}/decision", headers=REVIEWER2, json={"action": "REJECT", "reason": "no"})
+    r = c.post(f"/v1/reviews/{rid}/decision", headers=REVIEWER2, json={"action": "REJECT", "reason": "not a health video"})
     assert r.status_code == 409
 
 
@@ -377,9 +386,9 @@ def test_client_cannot_name_the_reviewer_or_role(env):
     rid = add_case(env, "j1")
     for extra in ({"reviewer_id": "someone-else"}, {"role": "admin"}):
         r = c.post(f"/v1/reviews/{rid}/decision", headers=REVIEWER,
-                   json={"action": "APPROVE", "reason": "ok", **extra})
+                   json={"action": "APPROVE", "reason": "checked the papers", **extra})
         assert r.status_code == 422
-    r = c.post(f"/v1/reviews/{rid}/decision", headers=ADMIN, json={"action": "APPROVE", "reason": "ok"})
+    r = c.post(f"/v1/reviews/{rid}/decision", headers=ADMIN, json={"action": "APPROVE", "reason": "checked the papers"})
     assert r.json()["case"]["decision"]["reviewer_id"] == "admin-1"
 
 
@@ -419,17 +428,17 @@ def test_correct_with_only_claim_corrections_keeps_label(env):
 
 
 @pytest.mark.parametrize("body,status", [
-    ({"action": "CORRECT", "reason": "x"}, 422),                                   # nothing to correct
-    ({"action": "CORRECT", "reason": "x", "corrected_label": "FAKE"}, 422),        # unknown label
-    ({"action": "CORRECT", "reason": "x", "claim_corrections": [{"claim_id": "c9", "verdict": "SUPPORTED"}]}, 422),
-    ({"action": "CORRECT", "reason": "x", "claim_corrections": [{"claim_id": "c1", "verdict": "MAYBE"}]}, 422),
-    ({"action": "CORRECT", "reason": "x", "claim_corrections": [{"claim_id": "c1"}]}, 422),
-    ({"action": "CORRECT", "reason": "x", "claim_corrections": [{"claim_id": "c1", "verdict": "CONTRADICTED"}]}, 422),
-    ({"action": "CORRECT", "reason": "x", "claim_corrections": [
+    ({"action": "CORRECT", "reason": "reviewer note x"}, 422),                                   # nothing to correct
+    ({"action": "CORRECT", "reason": "reviewer note x", "corrected_label": "FAKE"}, 422),        # unknown label
+    ({"action": "CORRECT", "reason": "reviewer note x", "claim_corrections": [{"claim_id": "c9", "verdict": "SUPPORTED"}]}, 422),
+    ({"action": "CORRECT", "reason": "reviewer note x", "claim_corrections": [{"claim_id": "c1", "verdict": "MAYBE"}]}, 422),
+    ({"action": "CORRECT", "reason": "reviewer note x", "claim_corrections": [{"claim_id": "c1"}]}, 422),
+    ({"action": "CORRECT", "reason": "reviewer note x", "claim_corrections": [{"claim_id": "c1", "verdict": "CONTRADICTED"}]}, 422),
+    ({"action": "CORRECT", "reason": "reviewer note x", "claim_corrections": [
         {"claim_id": "c1", "verdict": "SUPPORTED"}, {"claim_id": "c1", "stance": "REFUTES"}]}, 422),
-    ({"action": "APPROVE", "reason": "x", "corrected_label": "MISINFO"}, 422),     # approve takes no corrections
-    ({"action": "REJECT", "reason": "x", "claim_corrections": [{"claim_id": "c1", "verdict": "SUPPORTED"}]}, 422),
-    ({"action": "DELETE", "reason": "x"}, 422),
+    ({"action": "APPROVE", "reason": "reviewer note x", "corrected_label": "MISINFO"}, 422),     # approve takes no corrections
+    ({"action": "REJECT", "reason": "reviewer note x", "claim_corrections": [{"claim_id": "c1", "verdict": "SUPPORTED"}]}, 422),
+    ({"action": "DELETE", "reason": "reviewer note x"}, 422),
 ])
 def test_invalid_decisions_change_nothing(env, body, status):
     c = env["client"]
@@ -453,7 +462,7 @@ def test_reject_and_mark_insufficient(env):
 
 
 def test_decision_on_missing_case_is_404(env):
-    r = env["client"].post("/v1/reviews/nope/decision", headers=REVIEWER, json={"action": "APPROVE", "reason": "x"})
+    r = env["client"].post("/v1/reviews/nope/decision", headers=REVIEWER, json={"action": "APPROVE", "reason": "reviewer note x"})
     assert r.status_code == 404
 
 
@@ -479,7 +488,7 @@ def test_reanalysis_dispatch_failure_keeps_the_decision(env):
     env["state"]["fail_dispatch"] = True
     rid = add_case(env, "j1")
     r = c.post(f"/v1/reviews/{rid}/decision", headers=REVIEWER,
-               json={"action": "REQUEST_REANALYSIS", "reason": "try again"})
+               json={"action": "REQUEST_REANALYSIS", "reason": "try again with new terms"})
     assert r.status_code == 200
     assert r.json()["reanalysis_job"]["status"] == "FAILED"
     assert r.json()["reanalysis_job"]["error_code"] == "DISPATCH_FAILED"
@@ -532,10 +541,10 @@ def test_full_audit_trail_in_order(env):
     c = env["client"]
     rid = add_case(env, "j1")
     c.post(f"/v1/reviews/{rid}/claims/c1/severity", headers=REVIEWER2, json={"severity": "MEDIUM", "reason": "a"})
-    c.post(f"/v1/reviews/{rid}/decision", headers=REVIEWER, json={"action": "APPROVE", "reason": "b"})
+    c.post(f"/v1/reviews/{rid}/decision", headers=REVIEWER, json={"action": "APPROVE", "reason": "approved after checking"})
     trail = c.get(f"/v1/reviews/{rid}", headers=ADMIN).json()["audit_trail"]
     assert [(e["actor_id"], e["action"], e["reason"]) for e in trail] == [
-        ("reviewer-2", "severity_override", "a"), ("reviewer-1", "review_decision", "b")]
+        ("reviewer-2", "severity_override", "a"), ("reviewer-1", "review_decision", "approved after checking")]
 
 
 def test_app_mounts_review_routes():
@@ -546,7 +555,8 @@ def test_app_mounts_review_routes():
     paths = {r.path for r in reviews.router.routes}
     assert paths == {"/v1/me", "/v1/reviews", "/v1/reviews/{review_id}",
                      "/v1/reviews/{review_id}/decision", "/v1/reviews/{review_id}/claims/{claim_id}/severity",
-                     "/v1/jobs/{job_id}/review-request"}  # T32
+                     "/v1/jobs/{job_id}/review-request",  # T32
+                     "/v1/reviews/{review_id}/pre-reveal"}  # T34
     main_src = (Path(__file__).resolve().parents[1] / "main.py").read_text()
     assert "app.include_router(reviews.router)" in main_src
 
@@ -567,7 +577,7 @@ def test_claim_corrections_on_a_case_opened_before_severity(env):
     s.commit()
     s.close()
     r = env["client"].post(f"/v1/reviews/{rid}/decision", headers=REVIEWER, json={
-        "action": "CORRECT", "reason": "x", "claim_corrections": [{"claim_id": "c1", "verdict": "SUPPORTED"}]})
+        "action": "CORRECT", "reason": "reviewer note x", "claim_corrections": [{"claim_id": "c1", "verdict": "SUPPORTED"}]})
     assert r.status_code == 200, r.text
     assert r.json()["case"]["decision"]["corrections"] == {
         "claims": {"c1": {"verdict": {"from": "CONTRADICTED", "to": "SUPPORTED"}}}}
