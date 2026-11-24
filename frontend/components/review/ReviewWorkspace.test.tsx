@@ -3,12 +3,12 @@ import { describe, expect, it, vi } from "vitest";
 import { adaptResult } from "@/lib/api/result-adapter";
 import { adaptCase } from "@/lib/api/review-adapter";
 import { MOCK_MISINFO_PENDING, MOCK_UNPROVEN } from "@/lib/api/mocks/results";
-import { MOCK_CASE_DECIDED, MOCK_CASE_HIGH, MOCK_CASE_OWN } from "@/lib/api/mocks/reviews";
+import { MOCK_CASE_DECIDED, MOCK_CASE_HIGH, MOCK_CASE_OWN, MOCK_VIEWER_ID } from "@/lib/api/mocks/reviews";
 import { ReviewWorkspace } from "./ReviewWorkspace";
 
 const result = adaptResult(MOCK_MISINFO_PENDING);
 const setup = (raw = MOCK_CASE_HIGH, onDecide = vi.fn().mockResolvedValue({ ok: true })) => {
-  render(<ReviewWorkspace review={adaptCase(raw)} result={result} onDecide={onDecide} onOverrideSeverity={vi.fn().mockResolvedValue({ ok: true })} />);
+  render(<ReviewWorkspace review={adaptCase(raw, MOCK_VIEWER_ID)} result={result} onDecide={onDecide} onOverrideSeverity={vi.fn().mockResolvedValue({ ok: true })} />);
   return onDecide;
 };
 const choose = (label: string | RegExp, value: string) => fireEvent.change(screen.getByRole("combobox", { name: label }), { target: { value } });
@@ -110,7 +110,7 @@ describe("ReviewWorkspace: read-only cases", () => {
 
   it("shows who decided a resolved case, by name, and locks the form", () => {
     render(
-      <ReviewWorkspace review={adaptCase({ ...MOCK_CASE_DECIDED, severity: "MEDIUM" })} result={adaptResult(MOCK_UNPROVEN)} onDecide={vi.fn()} onOverrideSeverity={vi.fn()} />,
+      <ReviewWorkspace review={adaptCase({ ...MOCK_CASE_DECIDED, severity: "MEDIUM" }, MOCK_VIEWER_ID)} result={adaptResult(MOCK_UNPROVEN)} onDecide={vi.fn()} onOverrideSeverity={vi.fn()} />,
     );
     const decision = screen.getByRole("region", { name: "Decision" });
     expect(within(decision).getByText(/Approved by Dr. B. Osei/)).toBeInTheDocument();

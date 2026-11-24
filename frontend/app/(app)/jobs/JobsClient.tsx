@@ -7,6 +7,7 @@ import { fetchJobs, filtersFromSearch, searchFromFilters } from "@/lib/api/jobs"
 import type { JobRow } from "@/lib/api/job-adapter";
 import { usePolling } from "@/lib/hooks/usePolling";
 import type { JobFilters } from "@/lib/job-filters";
+import { useViewerId } from "@/lib/hooks/useViewerId";
 
 export function JobsClient() {
   const params = useSearchParams();
@@ -16,9 +17,11 @@ export function JobsClient() {
   const [rows, setRows] = useState<JobRow[] | null>(null);
   const [total, setTotal] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const viewerId = useViewerId();
 
   const load = useCallback(async () => {
-    const r = await fetchJobs(filters);
+    if (viewerId === undefined) return false;
+    const r = await fetchJobs(filters, viewerId);
     if (!r) {
       setError("We couldn't load your videos. We'll keep trying.");
       return false;
@@ -27,7 +30,7 @@ export function JobsClient() {
     setTotal(r.total);
     setError(null);
     return true;
-  }, [filters]);
+  }, [filters, viewerId]);
 
   useEffect(() => {
     setRows(null);
