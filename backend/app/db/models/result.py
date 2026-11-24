@@ -37,6 +37,11 @@ class Result(Base):
     # Added by 0013 (T30): for MISINFO, why: "contradicted", "denies_supported" or
     # "unproven" (§9). NULL otherwise, on older rows and on the single-call path.
     misinfo_basis: Mapped[Optional[str]] = mapped_column(String(32), nullable=True)
+    # Added by 0015 (T36): the routing the result was produced with (prompt version and
+    # model per LLM step, fallback policy, routing hash; app.core.routing.version).
+    # ``pipeline_version`` reads graph_v1+<sha>+p<hash> from T36 on; NULL here on older
+    # rows, on the single-call path and when the hash does not match the version.
+    routing_snapshot: Mapped[Optional[dict]] = mapped_column(JSON, nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )

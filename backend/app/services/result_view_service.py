@@ -254,6 +254,7 @@ def job_result(db: Session, job: Job, result: Result) -> JobResultResponse:
         deciding_claim_ids=list(result.deciding_claim_ids or []),
         misinfo_basis=result.misinfo_basis,
         label_display=display_label(result.label, result.misinfo_basis),
+        routing_snapshot=result.routing_snapshot,
         transcript_segments=transcript,
         ocr_segments=ocr,
         submitted_by=job.user_id,
