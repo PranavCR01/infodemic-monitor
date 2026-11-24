@@ -1468,6 +1468,78 @@ Additive: no migration, no existing field or response changes shape.
 - **Race:** two concurrent first requests: the unique `human_reviews.job_id` makes the
   second insert fail; it rolls back and returns the winner's case.
 - **The requester's response** omits the proposed result and audit trail (reviewer data).
+## 7x. Signed Playback URL (T29, no issue; design §12, §15, §17)
+
+- **Endpoint:** `GET /v1/jobs/{job_id}/playback` returns `PlaybackUrlResponse`
+  (`job_id`, `video_id`, `url`, `expires_in_seconds`, `expires_at`, `filename`) with a
+  signed read URL for the job's video. Keyed by job because the result page is a job page
+  and duplicate uploads share one video row, so the job's access rule is the one to apply.
+  New router `app/api/routers/playback.py`; nothing existing changes.
+- **Short-lived:** `PLAYBACK_URL_TTL_SECONDS` (default 600). Long enough to start and seek a
+  3-minute video; `expires_at` (computed from a time taken *before* signing, so never later
+  than the real expiry) tells the player when to ask again. A fresh URL per request,
+  `Cache-Control: no-store`, and the URL is never logged (only the job id). The legacy
+  `get_download_url` keeps its 1 h expiry for the worker.
+- **Ownership:** every lookup goes through `app/api/ownership.py::owned_job_or_404`, a
+  shared with T26 (merged in #76; this branch added the identical file before that merge). A job the caller may
+  not see answers 404 with the same body as a missing job and no URL is signed. **Until the
+  owner column lands (T28 / T33 per the queue; T27 shipped without it) `can_view_job`
+  allows any authenticated user**, so per-user restriction is not enforced in production
+  yet; the tests install an owner rule through that hook and prove the route obeys it.
+  No owner column added here: the queue gives it to T28 (jobs.user_id) and T33
+  (videos.user_id, roles); once they fill in `can_view_job` this route follows unchanged.
+- **Errors:** no storage object (legacy local uploads) 404 "No playable video for this
+  job"; local storage backend 501; storage failure or empty URL 503.
+- **Storage:** `StorageBackend.create_signed_download_url(key, expires_in)`; Supabase via
+  `create_signed_url` (accepts `signedURL`/`signedUrl`/`signed_url` or an object);
+  `LocalBackend` raises `SignedUrlUnsupported`.
+- **Export dropped:** the task brief asked for an export endpoint; the queue row was trimmed
+  by the lead (D7, 2026-11-24: the frontend builds the export client-side from the result
+  payload), so none was built.
+## 7w. "How we searched" per Claim (T31, no issue; design §6, §8, §12)
+
+Built by the automated build on 2026-11-23 (requested by the frontend session; lead
+decision D7). Additive: no existing field, label, verdict or retrieval result changes.
+
+- **Recorded during the run, by code.** `retrieve_evidence` now also owns a new state
+  channel `search_trail: dict[claim_id, list[SearchRound]]` (in `NODE_OUTPUTS`), one
+  `SearchRound` per claim per round: the PubMed query actually run, PMIDs ESearch
+  returned, records left after the type/year filters, what the round added after
+  PMID/DOI dedup, whether it was served from the query cache, and, in a fact of record's
+  first round, every allow-listed reference page / stored snapshot / Bookshelf search
+  tried (`ReferenceConsulted`: source id, name, publisher and host from
+  `config/reference_sources.yaml`, page id or NBK accession, mode, outcome).
+  `ReferenceSearcher.search` reports these as `ReferenceResult.consulted` (new, additive).
+  The node only observes: a test runs the whole mocked graph with and without the
+  channel and compares queries, evidence, reranking, verdicts, critic, judge and review.
+  No `STATE_SCHEMA_VERSION` bump: the field is optional, older checkpoints load.
+- **Summarised at persist time** by `app/services/search_trail.py::build_search_trail`
+  onto a new nullable JSON column `claims.search_trail` (migration **0012**; T28 #81 owns 0011), in the
+  shape `app/core/schemas/search_trail.py::SearchTrailView` (version 1). It is returned on
+  every claim (`ClaimView.search_trail`) by `GET /jobs/{id}/result`,
+  `GET /v1/videos/{id}/results` and `GET /v1/videos/{id}/claims`; null for claims never
+  searched, single-call/fallback results and rows written before 0011. A stored trail
+  that no longer parses is returned as null rather than failing the result.
+- **Count definitions** (the frontend's "retrieved / screened / kept"):
+  `retrieved` = results the searches returned: PMIDs from each distinct PubMed query
+  (a repeated query, when the planner's ladder ran out, is flagged `repeat` and not
+  counted twice) + reference passages + library passages; `screened` = distinct records
+  the reranker scored (after filters and dedup, library included); `kept` = what went to
+  the verifier (≤ 10). `budget` = rounds used of `Budgets.max_retrieval_attempts` (3:
+  the initial search + 2 reformulations, shared with critic RETRIEVE_MORE rounds, §8),
+  `exhausted`, and the 10-paper cap. `library` is null when no library was configured,
+  else `{fired, passages}`.
+- **Never in the trail:** API keys, E-utilities request URLs (Bookshelf is recorded by
+  its chapter pages, not its API calls), prompts, exception messages (a failed PubMed or
+  reference search stores the exception type only, since an httpx error message can
+  carry the request URL and key). Tests feed a fake key through PubMed and the
+  references and check it never appears.
+- **Fallback for older checkpoints:** with no per-round record, the trail is rebuilt from
+  `retrieval_queries` with unknown per-query counts (`recorded: "queries_only"`,
+  `counts.retrieved: null`).
+- **Deviations / limits:** the persisted budget uses `DEFAULT_BUDGETS` (the worker never
+  passes custom budgets today); query origin (planner rule vs critic suggestion) is not
+  recorded; the MCP server's tool outputs are unchanged.
 ## 7w. Job Progress Events, §1 States and Job Ownership (T28, no issue; design §1, §16, §17)
 
 - **Two state fields, side by side.** `jobs.status` keeps the five values the current
@@ -1563,6 +1635,14 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   required note (audit-logged), idempotent per job, access via `ownership.py` (404 for
   others). No migration. 1204 passed, 0 skipped locally with Postgres 16 + pgvector.
   Real per-user restriction waits for T28/T33. Decisions in §7y.
+- **2026-11-23**: T31 (no issue; design §6, §8, §12) "How we searched" per claim by the
+  automated build: `retrieve_evidence` records a `search_trail` per round (queries run,
+  hits, filters, dedup, cache, references consulted); persisted to `claims.search_trail`
+  (migration 0012) with retrieved / screened / kept counts and budget used; returned as
+  `claims[].search_trail` by every result endpoint. No keys, request URLs or prompts in it;
+  retrieval and verdicts unchanged (tested). 1155 passed, 4 skipped (OCRmyPDF/Tesseract)
+  locally with Postgres 16 + pgvector; no spend. Decisions in §7w.
+
 - **2026-11-23**: T28 (no issue; design §1, §16, §17) job progress for the stepper by the
   automated build: `job_events` + §1 states next to the legacy status, 8 pipeline steps
   logged from the worker (graph via LangGraph "tasks" streaming), per-user job ownership
@@ -1584,6 +1664,12 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   wording table; §17 `/v1` reads, all behind one access check that T27 fills in with its
   owner column. `review` stays set once resolved. No migration.
   Decisions in §7v.
+
+- **2026-11-23**: T29 (no issue; design §12, §15, §17) signed playback URL by the automated
+  build: `GET /v1/jobs/{job_id}/playback`, 10-minute signed Supabase read URL, owner check
+  through the shared `ownership.py` hook (404 for others), no-store, URL never logged.
+  Export not built (lead D7). 23 new tests; 1081 passed, 0 skipped locally (after rebase onto T26) with Postgres 16
+  + pgvector. Real per-user enforcement waits for T28/T33's owner columns. Decisions in §7x.
 - **2026-11-23**: T25 (no issue; design §6, §7, §14) extra-evidence-sources experiment
   by the automated build, report only. The 60 INSUFFICIENT_EVIDENCE claims in the 39 golden-set videos whose source says false but derive CANNOT_RECOGNIZE were searched in Cochrane (PubMed), Europe PMC, ClinicalTrials.gov v2 and the reference allow-list (`backend/scripts/t25_extra_sources.py`, no model calls, no fact-check databases). Judged under the unchanged §7: 0 claims and 0 videos become decidable; hits are Cochrane reviews that themselves find too little, related but different interventions, animal/cross-sectional work, or registry entries without results. Europe PMC and ClinicalTrials.gov were proxy-blocked at first but reachable for the full run. Near misses for a person: v159 (needs a jogging MET source), v85 (2026 PNAS null). Report: `evals/reports/T25_extra_sources.md`.
 - **2026-11-23**: T23 (no issue; design §14, §16) backend CI by the automated build:

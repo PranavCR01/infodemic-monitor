@@ -20,7 +20,8 @@ OTHER = auth(token("analyst-2"))
 NOTE = "The speaker's claim about vitamin C looks wrong to me."
 
 
-def add_job(env, job_id, *, status="SUCCESS", with_result=True, label="BENIGN", claims=()):
+def add_job(env, job_id, *, status="SUCCESS", with_result=True, label="BENIGN", claims=(),
+            owner="analyst-1"):
     """A finished job, optionally with stored claim rows: (claim_id, text, category,
     stance, verdict)."""
     from app.db.models.claim import ClaimRow, ClaimStanceRow, VerificationResultRow
@@ -32,7 +33,8 @@ def add_job(env, job_id, *, status="SUCCESS", with_result=True, label="BENIGN", 
     s.add(Video(id=f"vid-{job_id}", filename=f"{job_id}.mp4", file_path="/x", file_size=1,
                 storage_key=f"uploads/u/{job_id}.mp4"))
     s.flush()
-    s.add(Job(id=job_id, video_id=f"vid-{job_id}", status=JobStatus(status)))
+    # Owned by OWNER: T28 (#81) hides jobs with no owner once auth is on.
+    s.add(Job(id=job_id, video_id=f"vid-{job_id}", status=JobStatus(status), user_id=owner))
     s.flush()
     if with_result:
         s.add(Result(job_id=job_id, label=label, confidence=0.82, explanation="No false claims found.",
@@ -183,7 +185,9 @@ def test_unknown_stored_verdict_does_not_break_the_request(env):
 # ------------------------------------------------------------------ idempotency
 
 
-def test_second_request_returns_the_same_case(env):
+def test_second_request_returns_the_same_case(env, owners):
+    # Reviewer access to another user's job arrives with T33; stand in for it here.
+    owners["j1"] = "analyst-1"
     add_job(env, "j1")
     first = post(env, "j1", OWNER).json()
     again = post(env, "j1", OWNER, {"note": "another note"})
@@ -197,7 +201,9 @@ def test_second_request_returns_the_same_case(env):
     assert len(cases) == 1 and len(events) == 1
 
 
-def test_case_opened_by_the_review_rule_is_returned_unchanged(env):
+def test_case_opened_by_the_review_rule_is_returned_unchanged(env, owners):
+    # Reviewer access to another user's job arrives with T33; stand in for it here.
+    owners["j1"] = "analyst-1"
     rid = add_case(env, "j1", reasons=("weak_evidence:c1",))
     r = post(env, "j1", OWNER)
     assert r.status_code == 200
@@ -208,7 +214,9 @@ def test_case_opened_by_the_review_rule_is_returned_unchanged(env):
     assert status == "REVIEW_REQUIRED" and cases[0].reasons == ["weak_evidence:c1"] and events == []
 
 
-def test_resolved_case_is_returned_not_reopened(env):
+def test_resolved_case_is_returned_not_reopened(env, owners):
+    # Reviewer access to another user's job arrives with T33; stand in for it here.
+    owners["j1"] = "analyst-1"
     rid = add_case(env, "j1", status="RESOLVED")
     r = post(env, "j1", OWNER)
     assert r.status_code == 200
