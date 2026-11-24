@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { apiFetch } from "../../lib/api";
+import { apiFetch } from "@/lib/api";
 
 type Job = {
   job_id: string;
