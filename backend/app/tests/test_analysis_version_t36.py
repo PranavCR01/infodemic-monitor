@@ -281,7 +281,10 @@ def test_migration_adds_nullable_json_column_and_single_head():
     cfg = Config(str(BACKEND / "alembic.ini"))
     cfg.set_main_option("script_location", str(BACKEND / "app" / "db" / "migrations"))
     script = ScriptDirectory.from_config(cfg)
-    assert script.get_heads() == ["0015"]
+    # One head; later migrations (T34's 0016) chain on 0015.
+    heads = script.get_heads()
+    assert len(heads) == 1
+    assert "0015" in {r.revision for r in script.walk_revisions("base", heads[0])}
     rev = script.get_revision("0015")
     assert rev.down_revision == "0014"
     src = Path(rev.path).read_text()

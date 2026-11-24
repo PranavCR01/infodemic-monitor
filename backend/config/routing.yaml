@@ -63,7 +63,9 @@ pricing:
   claude-sonnet-5-5: {input: 2.00, output: 10.00}
   claude-opus-5-5:   {input: 4.00, output: 20.00}
   gpt-4o-2024-08-06: {input: 2.50, output: 10.00}   # critic, fallback, and the single-call baseline
-  # TODO(lead, before the T38 paid run): add the GPT-5 mini and GPT-5 dated snapshot ids
-  # used in config/routing_experiment.yaml, with their current per-1M-token prices from
-  # OpenAI's pricing page (reasoning tokens are billed as output). Until then they are
-  # unpriced and a live routing experiment refuses to start.
+  # OpenAI candidates for the T38 routing experiment (prices from OpenAI's model pages,
+  # read by the lead 2026-11-24; reasoning tokens are billed as output). OpenAI lists no
+  # dated snapshot for these, only the alias, so the run records the model id each
+  # response reports.
+  gpt-5.6-luna:      {input: 0.20, output: 1.20}    # "nano" tier
+  gpt-5.6-terra:     {input: 2.00, output: 12.00}   # "mini" tier

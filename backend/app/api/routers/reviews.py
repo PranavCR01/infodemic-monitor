@@ -6,6 +6,7 @@
 | GET  | ``/v1/reviews`` | reviewer, admin: the queue (severity, then age), filters, pages |
 | GET  | ``/v1/reviews/{review_id}`` | reviewer, admin: one case with its audit trail |
 | POST | ``/v1/reviews/{review_id}/decision`` | reviewer, admin: approve / correct / mark insufficient / reject / request re-analysis |
+| POST | ``/v1/reviews/{review_id}/pre-reveal`` | reviewer, admin: the blind step on a HIGH case (T34) |
 | POST | ``/v1/reviews/{review_id}/claims/{claim_id}/severity`` | reviewer, admin: severity override |
 | POST | ``/v1/jobs/{job_id}/review-request`` | the job's owner, reviewer, admin: ask for a person to check a result (T32) |
 
@@ -20,6 +21,27 @@ items and cases is the job's owner (``jobs.user_id``); the decider is
 Analysts get 403 on every review route, before any lookup, so a refusal reveals
 nothing about which cases exist. The service functions (``review_service``, T09/T22)
 do the work; this module only checks, maps errors and shapes responses.
+
+T34 (lead's decision D7):
+
+- **Reason codes.** A decision takes ``reason_code`` (``ReviewReasonCode``) next to the
+  written ``reason``, which must be at least 10 characters once trimmed. Both go on the
+  case and in the audit event. A client that sends no code (written before T34) gets
+  ``OTHER``, and the audit event records ``reason_code_defaulted: true`` so those
+  decisions can be told apart. ``SYSTEM_CORRECT`` goes only with APPROVE.
+- **Blind step for HIGH cases** (``app.services.blind_review``): until the caller has
+  posted ``/pre-reveal`` (their own stance and verdict for every claim, server-timed),
+  ``GET`` of the case and the queue withhold the system's view (``system_view_withheld:
+  true``): no proposed label or result, reasons, rules fired, validation errors,
+  claim stances/verdicts, request note or audit details. ``claims`` lists each claim's
+  text, category and times so the reviewer can judge. A decision on such a case
+  without the deciding reviewer's pre-reveal is a 409 ``PRE_REVEAL_REQUIRED``; with
+  one, the audit event links it and records per-claim agreement.
+- **Names** (``app.services.users_service``): audit entries, decisions, queue items and
+  the request carry ``*_name`` (display name, else email) and ``*_email``; queue items
+  carry ``is_own`` (the caller submitted the job or owns the video). Names come from the
+  ``users`` table, filled from verified tokens; another user's email is shown only to
+  reviewers and admins.
 """
 from __future__ import annotations
 
@@ -27,7 +49,7 @@ from datetime import datetime, timezone
 from typing import Any, Callable, Literal, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Response
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 from sqlalchemy.orm import Session
 
 from app.api import ownership
@@ -37,15 +59,26 @@ from app.auth.roles import PERMISSIONS, Role, require_role, role_of, user_id_of
 from app.core.graph.state import Stance, Verdict
 from app.core.schemas.pipeline import MisinfoLabel
 from app.db.models.job import Job
-from app.db.models.review import AuditEvent, HumanReview, ReviewAction, ReviewCaseStatus
+from app.db.models.review import (
+    AuditEvent,
+    HumanReview,
+    ReviewAction,
+    ReviewCaseStatus,
+    ReviewPreReveal,
+    ReviewReasonCode,
+)
 from app.db.models.video import Video
 from app.db.session import get_db
+from app.services import blind_review as blind
 from app.services import review_service as rs
+from app.services import users_service
 from app.services.review_reasons import ReasonView, parse_reasons
 
 router = APIRouter(prefix="/v1", tags=["reviews"])
 
 require_reviewer = require_role(Role.REVIEWER)
+
+REASON_MIN = 10  # T34 (D7): a decision's note
 
 
 # ------------------------------------------------------------------ response models
@@ -54,6 +87,7 @@ require_reviewer = require_role(Role.REVIEWER)
 class MeView(BaseModel):
     user_id: str
     email: Optional[str] = None
+    display_name: Optional[str] = None  # T34: from the token's user_metadata
     role: Role
     permissions: list[str]
 
@@ -61,6 +95,8 @@ class MeView(BaseModel):
 class AuditEntry(BaseModel):
     id: str
     actor_id: str
+    actor_name: Optional[str] = None  # T34: display name, else email
+    actor_email: Optional[str] = None
     action: str
     entity_type: str
     entity_id: str
@@ -71,8 +107,11 @@ class AuditEntry(BaseModel):
 
 class ReviewDecisionView(BaseModel):
     reviewer_id: str
+    reviewer_name: Optional[str] = None  # T34
+    reviewer_email: Optional[str] = None
     action: ReviewAction
     reason: Optional[str] = None
+    reason_code: Optional[ReviewReasonCode] = None  # T34; None on decisions made before
     corrected_label: Optional[str] = None
     corrections: Optional[dict[str, Any]] = None
     decided_at: Optional[datetime] = None
@@ -86,6 +125,15 @@ class ReviewQueueItem(BaseModel):
     job_status: Optional[str] = None
     # T33: who started the job under review (``jobs.user_id``); NULL on legacy jobs.
     submitted_by: Optional[str] = None
+    submitted_by_name: Optional[str] = None  # T34
+    submitted_by_email: Optional[str] = None
+    # T34: the caller submitted this job or owns the video (so can't decide it).
+    is_own: bool = False
+    # T34: an open HIGH case needs each reviewer's blind judgement before a decision;
+    # ``system_view_withheld`` is true while the caller hasn't given theirs (then the
+    # proposed label, reasons and rules fired are withheld: empty / null).
+    blind_step_required: bool = False
+    system_view_withheld: bool = False
     status: ReviewCaseStatus
     severity: Optional[str] = None
     severity_table_version: Optional[str] = None
@@ -108,11 +156,39 @@ class ReviewRequestInfo(BaseModel):
     """Who asked for a review that no rule raised, when, and their note (T32)."""
 
     requested_by: str
+    requested_by_name: Optional[str] = None  # T34
+    requested_by_email: Optional[str] = None
     note: Optional[str] = None
     requested_at: datetime
 
 
+class CaseClaimView(BaseModel):
+    """One claim of the case (T34). ``stance`` and ``verdict`` are the system's and are
+    null while the system's view is withheld."""
+
+    claim_id: str
+    text: Optional[str] = None
+    category: Optional[str] = None
+    start: Optional[float] = None
+    end: Optional[float] = None
+    severity: Optional[str] = None
+    stance: Optional[str] = None
+    verdict: Optional[str] = None
+
+
+class PreRevealView(BaseModel):
+    id: str
+    reviewer_id: str
+    claims: dict[str, dict[str, str]]
+    note: Optional[str] = None
+    case_severity: Optional[str] = None
+    created_at: datetime
+
+
 class ReviewCaseView(ReviewQueueItem):
+    claims: list[CaseClaimView] = Field(default_factory=list)
+    # The caller's own blind judgement, once given (T34).
+    pre_reveal: Optional[PreRevealView] = None
     request: Optional[ReviewRequestInfo] = None
     validation_errors: list[Any] = Field(default_factory=list)
     proposed_result: Optional[dict[str, Any]] = None
@@ -165,9 +241,35 @@ class DecisionRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     action: ReviewAction
+    # T34: the note; at least REASON_MIN characters once trimmed.
     reason: str = Field(min_length=1, max_length=4000)
+    # T34: why, as a code. Missing (pre-T34 clients) → OTHER, flagged in the audit event.
+    reason_code: Optional[ReviewReasonCode] = None
     corrected_label: Optional[MisinfoLabel] = None
     claim_corrections: list[ClaimCorrection] = Field(default_factory=list, max_length=200)
+
+    @field_validator("reason")
+    @classmethod
+    def _reason_long_enough(cls, v: str) -> str:
+        if len(v.strip()) < REASON_MIN:
+            raise ValueError(f"the reason must be at least {REASON_MIN} characters")
+        return v
+
+
+class PreRevealClaim(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    claim_id: str = Field(min_length=1, max_length=64)
+    stance: Stance
+    verdict: Verdict
+
+
+class PreRevealRequest(BaseModel):
+    # extra="forbid": the reviewer and the time come from the server.
+    model_config = ConfigDict(extra="forbid")
+
+    claims: list[PreRevealClaim] = Field(min_length=1, max_length=200)
+    note: Optional[str] = Field(None, max_length=blind.NOTE_MAX)
 
 
 class ReviewRequestBody(BaseModel):
@@ -194,23 +296,50 @@ def _utc(dt: Optional[datetime]) -> Optional[datetime]:
     return dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
 
 
-def _decision(case: HumanReview) -> Optional[ReviewDecisionView]:
+class _Ctx:
+    """Per-request view context: the caller and the users table rows needed."""
+
+    def __init__(self, db: Session, user: dict, ids: set[Optional[str]] = frozenset()):
+        self.db = db
+        self.user = user
+        self.users = users_service.load(db, ids)
+
+    def person(self, user_id: Optional[str]) -> users_service.Person:
+        return users_service.person(self.users, user_id, viewer=self.user)
+
+
+def _ids_for(db: Session, cases: list[HumanReview]) -> set[Optional[str]]:
+    ids: set[Optional[str]] = set()
+    for case in cases:
+        job = db.get(Job, case.job_id)
+        ids.add(job.user_id if job is not None else None)
+        ids.add(case.reviewer_id)
+    return ids
+
+
+def _decision(case: HumanReview, ctx: _Ctx) -> Optional[ReviewDecisionView]:
     if case.action is None or case.reviewer_id is None:
         return None
+    who = ctx.person(case.reviewer_id)
     return ReviewDecisionView(
         reviewer_id=case.reviewer_id,
+        reviewer_name=who.name,
+        reviewer_email=who.email,
         action=case.action,
         reason=case.decision_reason,
+        reason_code=case.reason_code,
         corrected_label=case.corrected_label,
         corrections=case.corrections,
         decided_at=_utc(case.decided_at),
     )
 
 
-def _item_fields(db: Session, case: HumanReview, now: datetime) -> dict[str, Any]:
+def _item_fields(db: Session, case: HumanReview, now: datetime, ctx: _Ctx) -> dict[str, Any]:
     job = db.get(Job, case.job_id)
     video = db.get(Video, job.video_id) if job is not None else None
     created = _utc(case.created_at)
+    withheld = blind.is_blind(db, case, ctx.user)
+    submitter = ctx.person(job.user_id if job is not None else None)
     return dict(
         review_id=case.id,
         job_id=case.job_id,
@@ -218,44 +347,107 @@ def _item_fields(db: Session, case: HumanReview, now: datetime) -> dict[str, Any
         filename=video.filename if video is not None else None,
         job_status=job.status.value if job is not None and job.status is not None else None,
         submitted_by=job.user_id if job is not None else None,
+        submitted_by_name=submitter.name,
+        submitted_by_email=submitter.email,
+        is_own=ownership.is_own(ctx.user, job, video),
+        blind_step_required=blind.requires_blind_step(case),
+        system_view_withheld=withheld,
         status=case.status,
         severity=case.severity,
         severity_table_version=case.severity_table_version,
-        reasons=list(case.reasons or []),
-        rules_fired=list(case.rules_fired or []),
-        proposed_label=case.proposed_label,
+        reasons=[] if withheld else list(case.reasons or []),
+        rules_fired=[] if withheld else list(case.rules_fired or []),
+        proposed_label=None if withheld else case.proposed_label,
         created_at=created,
         age_seconds=max(0, int((now - created).total_seconds())),
-        decision=_decision(case),
+        decision=_decision(case, ctx),
     )
 
 
-def _audit(e: AuditEvent) -> AuditEntry:
+def _audit(e: AuditEvent, ctx: _Ctx, *, withheld: bool = False) -> AuditEntry:
+    who = ctx.person(e.actor_id)
     return AuditEntry(
-        id=e.id, actor_id=e.actor_id, action=e.action, entity_type=e.entity_type,
-        entity_id=e.entity_id, reason=e.reason, details=dict(e.details or {}),
+        id=e.id, actor_id=e.actor_id, actor_name=who.name, actor_email=who.email,
+        action=e.action, entity_type=e.entity_type, entity_id=e.entity_id,
+        # Blind (T34): who did what and when, but not what they wrote or saw.
+        reason=None if withheld else e.reason,
+        details={} if withheld else dict(e.details or {}),
         created_at=_utc(e.created_at),
     )
 
 
-def _request_info(db: Session, job_id: str) -> Optional[ReviewRequestInfo]:
+def _request_info(db: Session, job_id: str, ctx: _Ctx, *, withheld: bool = False) -> Optional[ReviewRequestInfo]:
     e = rs.review_request_event(db, job_id)
     if e is None:
         return None
-    return ReviewRequestInfo(requested_by=e.actor_id, note=e.reason, requested_at=_utc(e.created_at))
+    if e.actor_id not in ctx.users:
+        ctx.users.update(users_service.load(db, [e.actor_id]))
+    who = ctx.person(e.actor_id)
+    return ReviewRequestInfo(requested_by=e.actor_id, requested_by_name=who.name,
+                             requested_by_email=who.email, note=None if withheld else e.reason,
+                             requested_at=_utc(e.created_at))
 
 
-def _case_view(db: Session, case: HumanReview) -> ReviewCaseView:
+def _case_claims(db: Session, case: HumanReview, *, withheld: bool) -> list[CaseClaimView]:
+    from app.core.graph.severity import effective_claim_severity
+    from app.db.models.claim import ClaimRow
+
+    system = rs.claim_ids_of(db, case)
+    rows = {r.claim_id: r for r in db.query(ClaimRow).filter(ClaimRow.job_id == case.job_id).all()}
+    sev = case.claim_severities or {}
+    out = []
+    def order(cid: str) -> tuple[float, str]:
+        row = rows.get(cid)
+        return (row.start_seconds if row is not None else float("inf"), cid)
+
+    for cid in sorted(set(system) | set(rows), key=order):
+        row = rows.get(cid)
+        mine = system.get(cid) or {}
+        out.append(CaseClaimView(
+            claim_id=cid,
+            text=row.text if row is not None else None,
+            category=row.category if row is not None else None,
+            start=row.start_seconds if row is not None else None,
+            end=row.end_seconds if row is not None else None,
+            severity=effective_claim_severity(sev[cid]) if cid in sev else None,
+            stance=None if withheld else mine.get("stance"),
+            verdict=None if withheld else mine.get("verdict"),
+        ))
+    return out
+
+
+def _pre_reveal_view(pre: Optional[ReviewPreReveal]) -> Optional[PreRevealView]:
+    if pre is None:
+        return None
+    return PreRevealView(id=pre.id, reviewer_id=pre.reviewer_id, claims=dict(pre.claims or {}),
+                         note=pre.note, case_severity=pre.case_severity, created_at=_utc(pre.created_at))
+
+
+def _blind_claim_severities(claims: Optional[dict[str, Any]]) -> Optional[dict[str, Any]]:
+    """Claim severities without what the system decided about each claim."""
+    if claims is None:
+        return None
+    hidden = {"stance", "verdict", "misinfo_relevant"}
+    return {cid: {k: v for k, v in (e or {}).items() if k not in hidden} for cid, e in claims.items()}
+
+
+def _case_view(db: Session, case: HumanReview, user: dict) -> ReviewCaseView:
     now = datetime.now(timezone.utc)
+    trail = rs.review_audit_trail(db, case.job_id)
+    ctx = _Ctx(db, user, _ids_for(db, [case]) | {e.actor_id for e in trail})
+    fields = _item_fields(db, case, now, ctx)
+    withheld = fields["system_view_withheld"]
     return ReviewCaseView(
-        **_item_fields(db, case, now),
-        request=_request_info(db, case.job_id),
-        validation_errors=list(case.validation_errors or []),
-        proposed_result=case.proposed_result,
-        claim_severities=case.claim_severities,
+        **fields,
+        claims=_case_claims(db, case, withheld=withheld),
+        pre_reveal=_pre_reveal_view(blind.pre_reveal_of(db, case.id, ownership.owner_id(user))),
+        request=_request_info(db, case.job_id, ctx, withheld=withheld),
+        validation_errors=[] if withheld else list(case.validation_errors or []),
+        proposed_result=None if withheld else case.proposed_result,
+        claim_severities=_blind_claim_severities(case.claim_severities) if withheld else case.claim_severities,
         policy_version=case.policy_version,
         pipeline_version=case.pipeline_version,
-        audit_trail=[_audit(e) for e in rs.review_audit_trail(db, case.job_id)],
+        audit_trail=[_audit(e, ctx, withheld=withheld) for e in trail],
     )
 
 
@@ -301,13 +493,16 @@ def get_reanalysis_dispatcher() -> Callable[[str, Optional[str]], Optional[str]]
 
 
 @router.get("/me", response_model=MeView)
-def me(current_user: dict = Depends(get_current_user)) -> MeView:
+def me(current_user: dict = Depends(get_current_user), db: Session = Depends(get_db)) -> MeView:
     """Who the server thinks the caller is, and what their role allows (a hint for the
     UI; every action is checked again on the server)."""
     role = role_of(current_user)
+    users_service.remember(db, current_user)
+    email, name = users_service.profile_from_token(current_user)
     return MeView(
         user_id=user_id_of(current_user),
-        email=current_user.get("email"),
+        email=email,
+        display_name=name,
         role=role,
         permissions=PERMISSIONS[role],
     )
@@ -326,18 +521,22 @@ def review_queue(
     current_user: dict = Depends(require_reviewer),
 ) -> ReviewQueuePage:
     """The review queue, by severity (HIGH first), then age (oldest first) (§12)."""
+    users_service.remember(db, current_user)
     severities = [s.strip() for raw in (severity or []) for s in raw.split(",") if s.strip()]
     try:
         cases, total = rs.review_queue_page(
             db, status=None if status == "ALL" else status, severities=severities or None,
             reason=reason, limit=limit, offset=offset,
             visible_jobs=lambda q: ownership.visible_jobs(q, current_user),
+            # T34: the reason filter must not reveal reasons of cases the caller is blind to.
+            hide_reasons=lambda c: blind.is_blind(db, c, current_user),
         )
     except rs.ReviewError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
     now = datetime.now(timezone.utc)
+    ctx = _Ctx(db, current_user, _ids_for(db, cases))
     return ReviewQueuePage(
-        items=[ReviewQueueItem(**_item_fields(db, c, now)) for c in cases],
+        items=[ReviewQueueItem(**_item_fields(db, c, now, ctx)) for c in cases],
         total=total, limit=limit, offset=offset,
     )
 
@@ -348,7 +547,40 @@ def get_review(
     db: Session = Depends(get_db),
     current_user: dict = Depends(require_reviewer),
 ) -> ReviewCaseView:
-    return _case_view(db, _get_case(db, review_id, current_user))
+    """One case with its audit trail. On an open HIGH case the system's view is withheld
+    until the caller has posted their own judgement to ``/pre-reveal`` (T34)."""
+    users_service.remember(db, current_user)
+    return _case_view(db, _get_case(db, review_id, current_user), current_user)
+
+
+@router.post("/reviews/{review_id}/pre-reveal", response_model=ReviewCaseView, status_code=201)
+def pre_reveal(
+    review_id: str,
+    payload: PreRevealRequest,
+    db: Session = Depends(get_db),
+    current_user: dict = Depends(require_reviewer),
+) -> ReviewCaseView:
+    """The blind step (D7, T34): record the caller's own stance and verdict for every
+    claim of an open HIGH case, timed by the server, before they see the system's. Answers
+    with the full case view. One per reviewer per case (409 on a second); 409 on a case
+    that doesn't need the step or is resolved; 403 on your own video; logged to the
+    audit trail."""
+    users_service.remember(db, current_user)
+    case = _get_case(db, review_id, current_user)
+    _forbid_own(db, case, current_user)
+    try:
+        blind.record_pre_reveal(
+            db, case, reviewer_id=user_id_of(current_user),
+            claims=[c.model_dump(mode="json") for c in payload.claims], note=payload.note,
+        )
+    except blind.PreRevealError as exc:
+        db.rollback()
+        msg = str(exc)
+        if msg.startswith("conflict: "):
+            raise HTTPException(status_code=409, detail=msg[len("conflict: "):]) from exc
+        raise HTTPException(status_code=422, detail=msg) from exc
+    db.refresh(case)
+    return _case_view(db, case, current_user)
 
 
 @router.post("/reviews/{review_id}/decision", response_model=DecisionResponse)
@@ -363,10 +595,30 @@ def decide(
     required. CORRECT takes a corrected label and/or per-claim verdict or stance
     corrections; REQUEST_REANALYSIS also starts a new job for the same video."""
     reviewer_id = user_id_of(current_user)
+    users_service.remember(db, current_user)
     case = _get_case(db, review_id, current_user)
     _forbid_own(db, case, current_user)
     if case.status != ReviewCaseStatus.OPEN:
         raise HTTPException(status_code=409, detail="review is already resolved")
+    # T34: reason code; pre-T34 clients send none → OTHER, flagged in the audit event.
+    details: dict[str, Any] = {}
+    code = payload.reason_code
+    if code is None:
+        code = ReviewReasonCode.OTHER
+        details["reason_code_defaulted"] = True
+    if code == ReviewReasonCode.SYSTEM_CORRECT and payload.action != ReviewAction.APPROVE:
+        raise HTTPException(status_code=422, detail="SYSTEM_CORRECT goes only with APPROVE")
+    # T34: the blind step. A HIGH case needs this reviewer's own judgement first.
+    if blind.requires_blind_step(case):
+        pre = blind.pre_reveal_of(db, case.id, reviewer_id)
+        if pre is None:
+            raise HTTPException(status_code=409, detail={
+                "code": blind.PRE_REVEAL_REQUIRED,
+                "message": "this is a HIGH-severity case: record your own judgement with "
+                           f"POST /v1/reviews/{case.id}/pre-reveal before deciding",
+            })
+        details.update(pre_reveal_id=pre.id, pre_reveal_at=_utc(pre.created_at).isoformat(),
+                       pre_reveal_agreement=blind.agreement(db, case, pre))
     try:
         corrections = rs.build_claim_corrections(
             db, case, [c.model_dump(mode="json", exclude_none=True) for c in payload.claim_corrections]
@@ -378,6 +630,8 @@ def decide(
             reason=payload.reason,
             corrected_label=payload.corrected_label.value if payload.corrected_label else None,
             corrections=corrections,
+            reason_code=code.value,
+            audit_details=details,
         )
     except rs.ReviewError as exc:
         db.rollback()
@@ -393,7 +647,7 @@ def decide(
         reanalysis = ReanalysisJobView(
             job_id=job.id, video_id=job.video_id, status=job.status.value, error_code=job.error_code,
         )
-    return DecisionResponse(case=_case_view(db, case), reanalysis_job=reanalysis)
+    return DecisionResponse(case=_case_view(db, case, current_user), reanalysis_job=reanalysis)
 
 
 @router.post("/reviews/{review_id}/claims/{claim_id}/severity", response_model=ReviewCaseView)
@@ -406,6 +660,7 @@ def override_severity(
 ) -> ReviewCaseView:
     """Change one claim's severity with a reason (§12). Reorders the queue; never
     changes a label or verdict. Logged to the audit trail."""
+    users_service.remember(db, current_user)
     _forbid_own(db, _get_case(db, review_id, current_user), current_user)
     try:
         case = rs.override_claim_severity(
@@ -420,7 +675,7 @@ def override_severity(
         if "already has severity" in msg:
             raise HTTPException(status_code=409, detail=msg) from exc
         raise _http(exc) from exc
-    return _case_view(db, case)
+    return _case_view(db, case, current_user)
 
 
 @router.post("/jobs/{job_id}/review-request", response_model=ReviewRequestResponse,
@@ -442,6 +697,7 @@ def request_review(
     review rule or by an earlier request, that case is returned with 200 and nothing
     changes. A job with no finished result answers 409."""
     requester_id = user_id_of(current_user)
+    users_service.remember(db, current_user)
     job = owned_job_or_404(db, job_id, current_user)
     try:
         case, created = rs.request_review(
@@ -465,6 +721,7 @@ def request_review(
         case_status=case.status,
         reasons=list(case.reasons or []),
         reason_details=parse_reasons(case.reasons),
-        request=_request_info(db, case.job_id),
+        # Names only for an analyst requester (users_service.person): never another's email.
+        request=_request_info(db, case.job_id, _Ctx(db, current_user)),
         created_at=_utc(case.created_at),
     )
