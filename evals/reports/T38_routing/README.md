@@ -1,3 +1,6 @@
+> **Update (2026-11-24, Option C):** the Claude candidates ran over the full tune split ($11.81). See
+> [`report.md`](report.md). The smoke-test notes below are kept for history.
+
 # T38 routing experiment: live run (2026-11-24) — STOPPED AT SMOKE TEST
 
 Approved by the project lead (smoke cap $1, full-run cap $40). **The full tune-split run
