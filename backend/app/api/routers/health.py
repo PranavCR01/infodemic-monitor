@@ -3,7 +3,6 @@ from __future__ import annotations
 from fastapi import APIRouter
 from fastapi.responses import JSONResponse
 from sqlalchemy import text
-from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 
 from app.core.config import settings
 from app.core.storage import get_storage_backend
@@ -17,6 +16,10 @@ async def health_check():
 
     # 1. Database — async ping via asyncpg
     try:
+        # Imported here so the app (and the route-table tests) load without greenlet,
+        # which SQLAlchemy's asyncio extension needs and newer SQLAlchemy doesn't install.
+        from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
+
         engine = create_async_engine(settings.DATABASE_URL, pool_pre_ping=True)
         async with AsyncSession(engine) as session:
             await session.execute(text("SELECT 1"))

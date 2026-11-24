@@ -7,8 +7,9 @@
 - ``GET /v1/claims/{claim_id}/evidence``: every paper the verifier saw for one claim
   (``claim_id`` is the claim's stable ``id`` from the claims response).
 
-Every endpoint checks access through the job (app/api/ownership.py, filled in by T27):
-an object the caller may not see is a 404, the same as a missing one.
+Every endpoint checks access through app/api/ownership.py (T28, T33): the video and the
+job for the video routes, the job for the claim route. An object the caller may not see
+is a 404, the same as a missing one.
 """
 from __future__ import annotations
 
@@ -30,6 +31,7 @@ REVIEW_REJECTED = "REVIEW_REJECTED"
 
 
 def _latest_job(db: Session, video_id: str, user: dict) -> Job:
+    ownership.video_or_404(db, video_id, user)
     job = (
         ownership.visible_jobs(db.query(Job), user)
         .filter(Job.video_id == video_id)

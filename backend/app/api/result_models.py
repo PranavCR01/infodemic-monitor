@@ -151,6 +151,8 @@ class JobResultResponse(BaseModel):
     deciding_claim_ids: list[str] = Field(default_factory=list)
     transcript_segments: list[SegmentView] = Field(default_factory=list)
     ocr_segments: list[SegmentView] = Field(default_factory=list)
+    # T33: who started the job (``jobs.user_id``, the JWT ``sub``); NULL on legacy jobs.
+    submitted_by: Optional[str] = None
 
 
 class ClaimsResponse(BaseModel):

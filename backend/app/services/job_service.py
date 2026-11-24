@@ -23,6 +23,7 @@ def _row(job: Job, video: Video, result: Optional[Result]) -> dict:
         "state": job_events.effective_state(job),
         "step": job_events.current_step(job),
         "updated_at": job.updated_at.isoformat() if job.updated_at else None,
+        "submitted_by": job.user_id,  # T33
     }
 
 
@@ -36,14 +37,17 @@ def query_jobs(
     statuses: Iterable[str] = (),
     user: Optional[dict] = None,
     restrict_to_owner: bool = True,
+    mine: bool = False,
 ) -> tuple[list[dict], int]:
     """One page of jobs (newest first) and the total matching the filters (T28).
 
     ``search`` matches the filename (case-insensitive substring) or an exact job or
     video id. ``statuses`` takes legacy statuses and/or §1 states (see
     ``job_events.split_status_filter``; raises ValueError on an unknown value).
+    ``restrict_to_owner`` limits the page to the jobs ``user`` may see (T33: their own,
+    others' for reviewers/admins); ``mine`` to the caller's own.
     """
-    from app.api.ownership import owned_jobs
+    from app.api.ownership import own_jobs, owned_jobs
 
     query = (
         db.query(Job, Video, Result)
@@ -52,6 +56,8 @@ def query_jobs(
     )
     if restrict_to_owner:
         query = owned_jobs(query, user)
+    if mine:
+        query = own_jobs(query, user)
     if label:
         query = query.filter(Result.label == label)
     if search and search.strip():

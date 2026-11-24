@@ -130,7 +130,7 @@ def env(request, monkeypatch):
 
 
 def add_case(env, job_id, *, severity="HIGH", reasons=("judge:mixed_video",), created=T0,
-             claims=None, status="OPEN", label="MISINFO"):
+             claims=None, status="OPEN", label="MISINFO", owner="submitter-1"):
     from app.core.graph.review_policy import rule_of
     from app.db.models.job import Job, JobStatus
     from app.db.models.result import Result
@@ -139,9 +139,10 @@ def add_case(env, job_id, *, severity="HIGH", reasons=("judge:mixed_video",), cr
 
     s = env["Session"]()
     s.add(Video(id=f"vid-{job_id}", filename=f"{job_id}.mp4", file_path="/x", file_size=1,
-                storage_key=f"uploads/u/{job_id}.mp4"))
+                storage_key=f"uploads/u/{job_id}.mp4", user_id=owner))
     s.flush()
-    s.add(Job(id=job_id, video_id=f"vid-{job_id}", status=JobStatus.REVIEW_REQUIRED))
+    # T33: jobs have an owner (NULL-owner cases are admin only; see test_ownership_t33).
+    s.add(Job(id=job_id, video_id=f"vid-{job_id}", status=JobStatus.REVIEW_REQUIRED, user_id=owner))
     s.flush()
     s.add(Result(job_id=job_id, label=label, confidence=0.0, explanation="x", evidence_snippets=[],
                  combined_content="", provider="graph", model_used="none", latency_ms=1))
@@ -293,9 +294,9 @@ def test_queue_from_a_real_review_case(env):
     from app.tests.test_severity import HIGH_ROW, LOW_ROW, state
 
     s = env["Session"]()
-    s.add(Video(id="vid-g", filename="g.mp4", file_path="/x", file_size=1))
+    s.add(Video(id="vid-g", filename="g.mp4", file_path="/x", file_size=1, user_id="submitter-1"))
     s.flush()
-    s.add(Job(id="job-g", video_id="vid-g", status=JobStatus.STARTED))
+    s.add(Job(id="job-g", video_id="vid-g", status=JobStatus.STARTED, user_id="submitter-1"))
     s.commit()
     st = state(HIGH_ROW, LOW_ROW, job_id="job-g")
     st.update(requires_human_review=True, review_reasons=["judge:mixed_video"])

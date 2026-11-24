@@ -253,4 +253,5 @@ def job_result(db: Session, job: Job, result: Result) -> JobResultResponse:
         deciding_claim_ids=list(result.deciding_claim_ids or []),
         transcript_segments=transcript,
         ocr_segments=ocr,
+        submitted_by=job.user_id,
     )
