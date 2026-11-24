@@ -38,6 +38,7 @@ Owner column gap (found by the frontend session, confirmed): videos/jobs had no 
 
 - **#94** T33 ownership (into `langgraph-build`): updated by the coordinating session (migration 0014 → 0013, one head).
 - **Frontend stack** into `design/frontend-v1`, **Create a merge commit** (stacked PRs): #79 → #82 → #85 → #87 → #88 → #89 → #90 → #91 → #92 → #93. #75 merged.
+- Merged 2026-11-24 (latest): #104, #110 (T38 routing results: Sonnet/Sonnet/Opus proposed, $14.00 of $40 spent; OpenAI won no step), #109 (T42 cross-check pinned to adjudicated golden dcf77b0). Pending: T43 error analysis; lead decisions on extraction Haiku→Sonnet (after T43) and the 8-item rule sweep.
 - Merged 2026-11-24 (later): #98, #100–#103, #105–#108 incl. #99 (T37, D4 dropped). Open follow-up: re-pin the judge cross-check fixture to the golden set after the blind-review corrections.
 - Merged 2026-11-24: #73, #74, #76, #77, #78, #80 (T29), #81 (T28), #83 (T32), #84 (T31), #86 (T30).
 - Migration chain on `langgraph-build`: 0011 T28 → 0012 T31 → 0013 T30 → 0014 T33 (#94) → 0015 T36 (running).
