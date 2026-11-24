@@ -412,7 +412,7 @@ By the time the judge runs, the judgment has already been made, claim by claim: 
 | otherwise, is **refuted** by the speaker and contradicted by the evidence | DEBUNKED (`DEBUNKING`) |
 | otherwise, at least one claim was judged and nothing false is endorsed | NO-MISINFO |
 | otherwise, is **refuted** by the speaker while the evidence is mixed or insufficient | CANNOT RECOGNIZE, sent to review as a possible debunk |
-| no claim could be judged (all insufficient or not verifiable, or no claims) | CANNOT RECOGNIZE; sent to review at LOW priority if any claim needed checking but had too little evidence |
+| no claim could be judged (all insufficient or not verifiable, or no claims) | CANNOT RECOGNIZE; sent to review if any claim needed checking but had too little evidence |
 
 MISINFO carries a `misinfo_basis`: `contradicted`, `denies_supported` or `unproven`. The internal label stays one of the four; the interface shows "MISINFO (unproven)" when the basis is `unproven`.
 
@@ -440,7 +440,7 @@ def judge(claims):
     if judged:         return "NO_MISINFO", None, judged, reasons
     if refuted_open:   return "CANNOT_RECOGNIZE", None, refuted_open, reasons
     # Nothing could be judged. If a claim needed checking but the evidence was too thin,
-    # a person should still see it (LOW priority); videos with no checkable claims are not sent.
+    # a person should still see it; videos with no checkable claims are not sent.
     if any(c.verdict == "INSUFFICIENT_EVIDENCE" for c in claims):
         reasons.append("nothing_judged")
     return "CANNOT_RECOGNIZE", None, [], reasons
@@ -522,7 +522,7 @@ Whether a case is "weak" is decided by a written code rule. The rule combines si
 A case goes to a person if **any** of these hold:
 
 - a deciding claim is INSUFFICIENT\_EVIDENCE, MIXED or UNSUPPORTED (so every "MISINFO (unproven)" video is reviewed);
-- no claim could be judged, but at least one claim needed checking and had too little evidence (`nothing_judged`). These go to the queue at **LOW** priority: a person should see what the system could not check, but they come after everything else;
+- no claim could be judged, but at least one claim needed checking and had too little evidence (`nothing_judged`). A person should see what the system could not check. The reason never lowers a case's priority: severity still comes from the claims (section 12);
 - supporting and contradicting papers both exist for a deciding claim;
 - a deciding claim rests only on weak study types;
 - a deciding claim's stance is UNCLEAR;
