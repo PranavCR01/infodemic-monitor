@@ -81,9 +81,21 @@ def query_jobs(
             conds.append(job_events.effective_state_sql().in_(sorted(states)))
         query = query.filter(or_(*conds))
 
+    # T34: a reviewer who hasn't given their blind judgement on a job's open HIGH case
+    # doesn't see its label here, and label filters leave it out (no probing).
+    from app.services.blind_review import blind_job_ids
+
+    blind = blind_job_ids(db, user) if user is not None else set()
+    if label and blind:
+        query = query.filter(Job.id.notin_(sorted(blind)))
+
     total = query.with_entities(func.count(Job.id)).order_by(None).scalar() or 0
     rows = query.order_by(Job.created_at.desc()).offset(offset).limit(limit).all()
-    return [_row(job, video, result) for job, video, result in rows], int(total)
+    out = [_row(job, video, result) for job, video, result in rows]
+    for row in out:
+        if row["job_id"] in blind:
+            row.update(label=None, confidence=None, misinfo_basis=None, label_display=None)
+    return out, int(total)
 
 
 def list_jobs(

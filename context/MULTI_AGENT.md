@@ -1782,6 +1782,61 @@ printed reports). Additive only.
   anywhere else (local docker, a CLI deploy without git metadata) set `GIT_SHA` or
   versions read `+unknown+`.
 
+## 7ab. Review Reason Codes, Blind HIGH Step, Reviewer Names (T34, decision D7; design §12, §15, §17)
+
+- **Reason codes.** `DecisionRequest.reason_code` (`ReviewReasonCode`: CLAIM_OVERGENERALISED,
+  EVIDENCE_MISREAD, STANCE_MISREAD, MISSING_SOURCE, SYSTEM_CORRECT, OTHER) next to `reason`,
+  which must now be at least 10 characters once trimmed (API only; the service still just
+  needs a non-blank reason). Stored on `human_reviews.reason_code` and in the decision's audit
+  details. **Missing code → OTHER** with `reason_code_defaulted: true` in the audit event, so
+  pre-T34 clients keep working and those decisions can be told apart. SYSTEM_CORRECT only with
+  APPROVE (422 otherwise). MARK_INSUFFICIENT is kept (D7 said "no separate MARK_INSUFFICIENT"
+  for the UI; removing an action isn't additive).
+- **Blind step** (`app/services/blind_review.py`). Applies to an OPEN case whose severity is
+  HIGH **or whose table severity (overrides ignored) is HIGH**, so overriding a claim down
+  can't skip it; overriding up to HIGH starts it. `POST /v1/reviews/{id}/pre-reveal` takes a
+  stance and verdict for **every** claim of the case (enums; extra fields forbidden), the
+  server sets the time; one per reviewer per case (unique constraint, 409 on a second); 409 on
+  a resolved or non-HIGH case; 403 on your own video; same 404 rules as T33. Stored in
+  `review_pre_reveals` and as a `review_pre_reveal` audit event.
+- **How the view is split.** A caller is blind when the case needs the step, they have no
+  pre-reveal on it, and it isn't their own job/video. Blind callers get, from `GET
+  /v1/reviews/{id}`, the queue and the severity-override response: metadata, severity, and the
+  new `claims` list (text, category, times, severity) with `stance`/`verdict` null; and no
+  proposed label/result, reasons, rules fired, validation errors, claim stance/verdict/MISINFO
+  relevance in `claim_severities`, request note, or audit `reason`/`details` (others'
+  pre-reveals and notes included). `system_view_withheld` and `blind_step_required` say which.
+  The queue's reason filter never matches blind cases (no probing). Outside the review router:
+  `/v1/videos/{id}/results`, `/v1/videos/{id}/claims`, `/v1/claims/{id}/evidence` and
+  `/jobs/{id}/result` answer 403 `PRE_REVEAL_REQUIRED` (after the ownership 404), and the job
+  lists blank the label fields of blind jobs and leave them out of label-filtered pages. The
+  video's severity stays visible (it orders the queue).
+- **Decision.** On a case that needs the step, a decision without the deciding reviewer's own
+  pre-reveal is 409 `PRE_REVEAL_REQUIRED` (another reviewer's doesn't count). With one, the
+  audit event carries `pre_reveal_id`, `pre_reveal_at` and per-claim `pre_reveal_agreement`
+  (stance/verdict matched the system's). Enforced in the router; `record_review_decision`
+  itself doesn't check (its service-level callers are tests).
+- **Names.** New `users` table (§17): id = JWT `sub`, email, display name (from
+  `user_metadata.display_name|full_name|name`, whitespace-collapsed, 200 chars). Filled by
+  `users_service.remember` from the verified token on `/v1/me`, every review route and
+  `POST /jobs/create`; writes only on change, never fails the request. **No role column**:
+  roles only come from the token. No Supabase call anywhere: users the API hasn't seen since
+  T34 have no name. Views: `actor_name/actor_email` on audit entries,
+  `reviewer_name/reviewer_email` (+ `reason_code`) on decisions, `submitted_by_name/
+  submitted_by_email` and `is_own` on queue items and cases, `requested_by_name/
+  requested_by_email` on the request, `display_name` on `/v1/me`. `*_name` is the display
+  name, else the email when the viewer may see it. **Another user's email only for
+  reviewers/admins**: an analyst (the T32 review-request response) sees display names only.
+  Display names are user-editable, so reviewer views also carry the verified email.
+- **Migration 0016** (`human_reviews.reason_code`, `review_pre_reveals`, `users`) on T36's
+  0015; one head.
+- **Tests:** `test_review_blind_t34.py` (review router), `test_review_blind_routes_t34.py`
+  (results/jobs routes, whole app); T27/T33 tests updated (10-char notes, pre-reveals seeded
+  for their reviewers, the new route classified).
+- **Left for a person:** run 0016 on Supabase; the frontend can
+  drop its client-side gating and use `system_view_withheld`, `claims` and `/pre-reveal`;
+  optional backfill of names for users who never call the API (an admin script with the
+  Supabase service key; not done, no network in the build).
 ## 7ab. Routing Experiment Runner (T38, no issue; design §13, §14)
 
 Built by the automated build on 2026-11-24. **Build only: no model API was called.**
@@ -1877,6 +1932,12 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-24**: T34 (decision D7; design §12, §15, §17) review decision completeness by the
+  automated build: `reason_code` + 10-char note on decisions (missing code → OTHER, flagged);
+  the blind HIGH step `POST /v1/reviews/{id}/pre-reveal`, enforced on the case view, queue,
+  result/claims/evidence routes, job lists and decisions; `users` table and names/emails
+  (emails only to reviewers/admins) plus `is_own` on review views. Migration 0016 on 0015. 1519 passed, 5 skipped (OCR/PDF tools) locally with
+  Postgres 16 + pgvector; no spend. Decisions in §7ab.
 - **2026-11-24**: T38 (no issue; design §13, §14) routing experiment runner by the
   automated build, **no paid calls**: tune-split items for extract_claims (48),
   analyze_stance (174) and verify_claims (174) through the real nodes; retrieval frozen

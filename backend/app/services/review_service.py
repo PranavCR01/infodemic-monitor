@@ -104,9 +104,13 @@ def record_review_decision(
     corrected_label: Optional[str] = None,
     corrections: Optional[dict[str, Any]] = None,
     now: Optional[datetime] = None,
+    reason_code: Optional[str] = None,
+    audit_details: Optional[Mapping[str, Any]] = None,
 ) -> HumanReview:
     """Record a reviewer's action (§12). Every action needs a reviewer and a written
-    reason. Job state afterwards:
+    reason. ``reason_code`` (T34, a ``ReviewReasonCode``) is stored on the case and in
+    the audit event; ``audit_details`` are added to the audit event (e.g. the blind
+    pre-reveal it followed). Job state afterwards:
 
     - APPROVE → SUCCESS (the proposed result stands);
     - CORRECT → SUCCESS with ``corrected_label`` and/or per-claim ``corrections``
@@ -119,6 +123,13 @@ def record_review_decision(
     candidate evaluation examples only.
     """
     action = ReviewAction(action)
+    if reason_code is not None:
+        from app.db.models.review import ReviewReasonCode
+
+        try:
+            reason_code = ReviewReasonCode(reason_code).value
+        except ValueError:
+            raise ReviewError(f"unknown reason_code {reason_code!r}") from None
     if not reviewer_id:
         raise ReviewError("reviewer_id is required")
     if not (reason or "").strip():
@@ -144,6 +155,7 @@ def record_review_decision(
     case.reviewer_id = reviewer_id
     case.action = action
     case.decision_reason = reason.strip()
+    case.reason_code = reason_code
     case.corrected_label = corrected_label
     case.corrections = corrections
     case.decided_at = now or datetime.now(timezone.utc)
@@ -171,9 +183,11 @@ def record_review_decision(
         details={
             "review_id": case.id,
             "decision": action.value,
+            "reason_code": reason_code,
             "proposed_label": case.proposed_label,
             "corrected_label": corrected_label,
             "corrections": corrections,
+            **dict(audit_details or {}),
         },
         created_at=case.decided_at,
     ))
@@ -335,6 +349,7 @@ def review_queue_page(
     limit: int = 20,
     offset: int = 0,
     visible_jobs: Optional[Callable] = None,
+    hide_reasons: Optional[Callable[[HumanReview], bool]] = None,
 ) -> tuple[list[HumanReview], int]:
     """One page of the queue, in queue order (severity, then age), and the total that
     match. ``severities`` takes HIGH / MEDIUM / LOW and NONE (no MISINFO-relevant claim).
@@ -342,7 +357,9 @@ def review_queue_page(
     SQLite and Postgres); the severity and status filters run in SQL.
     ``visible_jobs`` (T33) restricts a query over ``Job`` to the jobs the caller may see
     (``app.api.ownership.visible_jobs`` bound to the caller); cases on other jobs are
-    left out of the page and the total."""
+    left out of the page and the total.
+    ``hide_reasons`` (T34) marks cases whose reasons the caller may not see yet (the blind
+    step); a reason filter never matches them, so it can't be used to probe them."""
     q = db.query(HumanReview)
     if visible_jobs is not None:
         q = visible_jobs(q.join(Job, Job.id == HumanReview.job_id))
@@ -364,7 +381,8 @@ def review_queue_page(
         q = q.filter(or_(*conds))
     q = q.order_by(_severity_order(), HumanReview.created_at.asc(), HumanReview.id.asc())
     if reason:
-        matching = [c for c in q.all() if _matches_reason(c, reason)]
+        matching = [c for c in q.all()
+                    if not (hide_reasons is not None and hide_reasons(c)) and _matches_reason(c, reason)]
         return matching[offset: offset + limit], len(matching)
     total = q.order_by(None).count()
     return q.offset(offset).limit(limit).all(), total

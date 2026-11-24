@@ -10,7 +10,7 @@ import uuid
 from datetime import datetime, timezone
 from typing import Optional
 
-from sqlalchemy import JSON, DateTime, Enum as SAEnum, ForeignKey, String, Text
+from sqlalchemy import JSON, DateTime, Enum as SAEnum, ForeignKey, String, Text, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.db.base import Base
@@ -29,6 +29,18 @@ class ReviewAction(str, enum.Enum):
     MARK_INSUFFICIENT = "MARK_INSUFFICIENT"
     REQUEST_REANALYSIS = "REQUEST_REANALYSIS"
     REJECT = "REJECT"
+
+
+class ReviewReasonCode(str, enum.Enum):
+    """Why the reviewer decided as they did (D7, T34): stored next to the written note
+    so overturn rates can be counted per kind of system error."""
+
+    CLAIM_OVERGENERALISED = "CLAIM_OVERGENERALISED"
+    EVIDENCE_MISREAD = "EVIDENCE_MISREAD"
+    STANCE_MISREAD = "STANCE_MISREAD"
+    MISSING_SOURCE = "MISSING_SOURCE"
+    SYSTEM_CORRECT = "SYSTEM_CORRECT"
+    OTHER = "OTHER"
 
 
 class HumanReview(Base):
@@ -57,6 +69,8 @@ class HumanReview(Base):
         SAEnum(ReviewAction, name="reviewaction"), nullable=True
     )
     decision_reason: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    # T34 (migration 0016): a ``ReviewReasonCode`` value; NULL on decisions made before.
+    reason_code: Mapped[Optional[str]] = mapped_column(String(32), nullable=True)
     corrected_label: Mapped[Optional[str]] = mapped_column(String(32), nullable=True)
     corrections: Mapped[Optional[dict]] = mapped_column(JSON, nullable=True)
     decided_at: Mapped[Optional[datetime]] = mapped_column(DateTime(timezone=True), nullable=True)
@@ -84,6 +98,26 @@ class AuditEvent(Base):
     job_id: Mapped[Optional[str]] = mapped_column(String, ForeignKey("jobs.id"), nullable=True, index=True)
     reason: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     details: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), nullable=False
+    )
+
+
+class ReviewPreReveal(Base):
+    """A reviewer's own judgement of a HIGH-severity case, recorded before the server
+    shows them the system's stances and verdicts (D7 blind step, T34). One per reviewer
+    per case; never edited. ``claims`` is ``{claim_id: {"stance", "verdict"}}``;
+    ``created_at`` is the server's clock."""
+
+    __tablename__ = "review_pre_reveals"
+    __table_args__ = (UniqueConstraint("review_id", "reviewer_id", name="uq_pre_reveal_review_reviewer"),)
+
+    id: Mapped[str] = mapped_column(String, primary_key=True, default=lambda: str(uuid.uuid4()))
+    review_id: Mapped[str] = mapped_column(String, ForeignKey("human_reviews.id"), nullable=False, index=True)
+    reviewer_id: Mapped[str] = mapped_column(String, nullable=False)
+    claims: Mapped[dict] = mapped_column(JSON, nullable=False)
+    note: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    case_severity: Mapped[Optional[str]] = mapped_column(String(8), nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), nullable=False
     )
