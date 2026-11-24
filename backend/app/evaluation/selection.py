@@ -115,17 +115,45 @@ def evaluate_candidate(
     scorer: Scorer,
     metric: Optional[str] = None,
     clock: Optional[Callable[[], float]] = None,
+    run_item: Optional[Callable[[ModelRouter, StepItem], Any]] = None,
+    after_item: Optional[Callable[[StepItem, Any], None]] = None,
 ) -> CandidateResult:
+    """Run one candidate over ``items``.
+
+    By default each item's ``input`` is sent to the router as one request. With
+    ``run_item`` the caller drives the item instead (e.g. through the real graph node,
+    so prompts, repairs and output checks match production) and returns the output to
+    score; the item still counts as failed when any of its calls errored or was served
+    by the fallback model. ``after_item(item, output)`` runs after each item and may
+    raise to stop the run (the routing experiment's spend cap).
+    """
     config = single_step_config(base_config, step, candidate.ref, candidate.prompt)
     router = ModelRouter(config, clients, **({"clock": clock} if clock else {}))
     outputs: list[Any] = []
     failed = fallbacks = 0
     for item in items:
+        if run_item is not None:
+            start = len(router.records)
+            output = run_item(router, item)
+            records = router.records[start:]
+            if any(r.fallback_used for r in records):
+                fallbacks += 1
+                failed += 1
+                output = None
+            elif any(r.error for r in records):
+                failed += 1
+                output = None
+            outputs.append(output)
+            if after_item is not None:
+                after_item(item, output)
+            continue
         try:
             result = router.call(step, item.input)
         except RoutingError:
             failed += 1
             outputs.append(None)  # a failed item scores as wrong, not as skipped
+            if after_item is not None:
+                after_item(item, None)
             continue
         if result.record.fallback_used:
             # The fallback model answered: that output doesn't measure this candidate.
@@ -134,6 +162,8 @@ def evaluate_candidate(
             outputs.append(None)
         else:
             outputs.append(result.output)
+        if after_item is not None:
+            after_item(item, outputs[-1])
     costs = [r.cost_usd for r in router.records]
     cost = sum(costs) / len(items) if items and all(c is not None for c in costs) else None
     return CandidateResult(

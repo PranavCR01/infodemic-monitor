@@ -1782,6 +1782,67 @@ printed reports). Additive only.
   anywhere else (local docker, a CLI deploy without git metadata) set `GIT_SHA` or
   versions read `+unknown+`.
 
+## 7ab. Routing Experiment Runner (T38, no issue; design §13, §14)
+
+Built by the automated build on 2026-11-24. **Build only: no model API was called.**
+The paid run is a separate step the project lead approves with a USD cap.
+
+- **Code.** `app/evaluation/routing_experiment/` (`golden`, `items`, `frozen`, `runners`,
+  `cost`, `experiment`, `cli`); candidates in `config/routing_experiment.yaml` (haiku /
+  sonnet / opus / gpt-4o for each step, current prompt versions). `selection.evaluate_candidate`
+  gained two optional hooks: `run_item` (drive an item through the real node; an item is
+  failed if any of its calls errored or used the fallback) and `after_item` (may raise to stop).
+- **Tune split only.** The golden set is read with `git show origin/data/golden-label-set:...`.
+  `TuneSet` drops non-tune rows of `videos.csv` / `claims.csv` / `reference_citations.csv` as
+  they are parsed, and `transcript()` raises `TestSplitError` for any non-tune id before
+  reading; tests prove no test-split transcript is ever opened. Out-of-scope videos give no
+  items (§14). Items: extract_claims 48 (in-scope tune videos), analyze_stance 174 and
+  verify_claims 174 (tune claims).
+- **Real nodes, not bare requests.** Each candidate runs `make_extract_claims` /
+  `make_analyze_stance` / `verifier.verify_claim` with a router pointed at it, so prompts,
+  fencing, forced tool calls, output checks, the repair attempt and the safe defaults are
+  production's. Fallbacks are switched off for the experiment (a fallback answer doesn't
+  measure the candidate and selection discards it anyway).
+- **Inputs.** Whisper segments plus on-screen captions collapsed from the raw EasyOCR
+  detections (watermarks = text in >= 40% of frames dropped; consecutive similar frames
+  merged), fused by overlap. Gold claims get the transcript/caption segments their time
+  range covers.
+- **Frozen retrieval.** `freeze-evidence` runs the §6 retrieval once per claim with the full
+  budget (3 planner rungs, references for facts of record, reranker) and also stores the
+  papers/reference passages the gold label cites (abstracts fetched from PubMed; the side
+  they were cited for is never shown to the model). Default evidence mode
+  `retrieved+cited` keeps every cited item in the capped set of 10 so the step metric
+  measures verification; `--evidence-mode retrieved` measures retrieval + verification.
+  Recorded on 2026-11-24 from golden @ 022ac44: 174 claims, 775 retrieved + 192 cited
+  records, 0 search errors (one 502 re-recorded with `--resume`), 2.1 MB; pushed to branch
+  `data/t38-frozen-evidence` (not langgraph-build). Findings: the reranker keeps nothing for
+  87 of 174 claims (`retrieved` mode); 39 claims have no evidence even with the cited items,
+  so the verifier answers them in code (no call), identically for every candidate.
+- **claim_category** (needed for UNSUPPORTED eligibility) is labelled only on UNSUPPORTED
+  rows, so using it would leak the answer. A fixed cue-word rule (`items.efficacy_category`,
+  English/French/Spanish) is applied to every claim instead and frozen with the evidence:
+  15 tune claims are eligible, including all 5 gold UNSUPPORTED.
+- **Money safeguards.** Paid calls need `--live` AND `--max-usd`; refused before any call
+  when the expected cost exceeds the cap, a candidate model has no price in
+  `routing.yaml`, or no frozen evidence is given. Every client is wrapped in `SpendGuard`:
+  each call reserves its worst case (estimated input x the largest reported/estimated
+  ratio seen, >= 1.25, plus `max_tokens` output) and is refused if that could cross the
+  cap; actual usage is booked after the call (a failed call books its reservation); the
+  run stops at the first refusal and writes a partial report. The total can pass the cap
+  only if a provider reports far more input than estimated on one call, by at most that
+  call. Keys are read from the environment only inside the live path
+  (`EVAL_ANTHROPIC_API_KEY` / `ANTHROPIC_API_KEY`, `EVAL_OPENAI_API_KEY` / `OPENAI_API_KEY`).
+- **Outputs.** `report.json`, `report.md` (per step: metric, score, failures, cost/item, p95
+  latency, chosen model and why; stance debunk recall; verification
+  insufficient-called-contradicted and UNSUPPORTED recall) and `routing_v2.yaml`, the current
+  table with winners applied, status `provisional` (critic and judge are not measured). The
+  runner refuses to write `config/routing.yaml`.
+- **Dry-run estimate** (retrieved+cited, chars/3.5 tokens): $17.09 expected for all 12
+  candidate-steps, $50.38 upper bound (every call at `max_tokens`, every repair fired).
+- **For a person.** Approve a cap and run the paid step (command in the T38 PR). The token
+  estimate is not a provider tokenizer. The judge-explanation and critic steps are not in
+  this experiment. Check `routing.yaml`'s prices against the providers' lists first.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -1803,6 +1864,12 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-24**: T38 (no issue; design §13, §14) routing experiment runner by the
+  automated build, **no paid calls**: tune-split items for extract_claims (48),
+  analyze_stance (174) and verify_claims (174) through the real nodes; retrieval frozen
+  once (174 claims, free PubMed/reference calls, on branch `data/t38-frozen-evidence`);
+  dry run $17.09 expected / $50.38 upper bound for 4 candidates x 3 steps; `--live` needs
+  `--max-usd`, refuses over-cap estimates and stops at the cap. Decisions in §7ab.
 - **2026-11-24**: T36 (no issue; design §12, §14) traceable analysis version by the
   automated build: graph results store `graph_v1+<short sha>+p<routing hash>` and a
   `routing_snapshot` JSON column (migration 0015, chained on T33's 0014). Old `graph_v1` rows still read. 1467 passed locally with Postgres 16 +

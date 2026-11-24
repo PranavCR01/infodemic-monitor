@@ -1,0 +1,5 @@
+video_id,source_url,platform,topic,video_level_label,misinfo_basis,review_reasons,text_type,case_tags,split,annotator,confidence,review_status,reviewer,reviewer_notes,notes,source,external_label,external_source,external_url
+v01,,tiktok,colds,MISINFO,contradicted,,high_text,single_claim,tune,fixture,high,pending,,,Synthetic fixture.,fixture,,,
+v02,,tiktok,garlic,DEBUNKING,,,low_text,debunking;multi_claim,tune,fixture,high,pending,,,Synthetic fixture.,fixture,,,
+v03,,tiktok,none (non-health),CANNOT_RECOGNIZE,,,low_text,out_of_scope,tune,fixture,high,pending,,,Synthetic fixture.,fixture,,,
+v04,,tiktok,tea,MISINFO,unproven,,low_text,single_claim,test,fixture,high,pending,,,Synthetic fixture (TEST SPLIT: must never be read).,fixture,,,

@@ -1,0 +1,3 @@
+evidence_id,video_id,claim_id,side,url,source_org,retrieved_at,snapshot_sha256,quoted_passage
+ref_vitc01,v02,c2,supporting,https://example.org/vitc,Example Health Agency,2026-11-20T00:00:00,abc123,Adults need 90 mg of vitamin C a day.
+ref_tea01,v04,c1,supporting,https://example.org/tea,Example,2026-11-20T00:00:00,def,TEST SPLIT passage.

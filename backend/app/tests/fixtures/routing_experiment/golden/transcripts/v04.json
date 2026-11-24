@@ -1,0 +1,24 @@
+{
+ "video_id": "v04",
+ "ocr": {
+  "engine": "easyocr",
+  "fps": 0.5,
+  "min_confidence": 0.5
+ },
+ "transcript": {
+  "language": "en",
+  "duration_seconds": 10.0,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.0,
+    "text": "Green tea cures cancer."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 2,
+  "detections": []
+ }
+}
