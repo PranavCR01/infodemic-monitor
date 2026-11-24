@@ -36,6 +36,7 @@ export const MOCK_MISINFO_PENDING: RawResult = {
   submitted_at: "2026-11-23T09:12:00Z",
   created_at: "2026-11-23T09:13:16Z",
   pipeline: "graph",
+  pipeline_version: "graph-v1 (2026-11-24)",
   decision_rule: "endorsed_contradicted",
   deciding_claim_ids: ["c1"],
   transcript_segments: transcript,

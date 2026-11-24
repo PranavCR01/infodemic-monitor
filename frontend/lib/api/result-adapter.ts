@@ -99,6 +99,9 @@ export type ResultModel = {
   transcript: Segment[]; // speech and on-screen text, in time order
   hasClaimLevel: boolean; // false for single-call / fallback results
   submittedAt: string | null;
+  analysedAt: string | null;
+  /** Pipeline / prompt version, for tracing a printed report. Never a model ID. */
+  analysisVersion: string | null;
   search: {
     queries: string[];
     sites: string[];
@@ -243,6 +246,8 @@ export function adaptResult(raw: RawResult): ResultModel {
     transcript,
     hasClaimLevel: claims.length > 0,
     submittedAt: raw.submitted_at ?? null,
+    analysedAt: raw.created_at ?? null,
+    analysisVersion: raw.pipeline_version ?? null,
     search: s
       ? {
           queries: s.pubmed_queries ?? [],
