@@ -1323,6 +1323,58 @@ job state (tested).
 - **Not built:** no API endpoint or UI for the queue or overrides (none exist for review
   yet), no alerts (§12 mentions severity ordering alerts; there is no alerting).
 
+## 7u. Review HTTP API and Roles (T27, no issue; design §12, §15, §17)
+
+- **Routes** (`backend/app/api/routers/reviews.py`, typed Pydantic responses, mounted in
+  `app.main`; nothing existing changed): `GET /v1/me` (caller id, server-decided role,
+  permission hints); `GET /v1/reviews` (queue: severity HIGH→MEDIUM→LOW→none, then oldest
+  first; `status=OPEN|RESOLVED|ALL`, `severity=` HIGH/MEDIUM/LOW/NONE repeated or
+  comma-separated, `reason=` rule name, reason prefix or exact reason, `limit` 1–100,
+  `offset`; returns `items`, `total`); `GET /v1/reviews/{review_id}` (full case +
+  `audit_trail`); `POST /v1/reviews/{review_id}/decision`;
+  `POST /v1/reviews/{review_id}/claims/{claim_id}/severity`.
+- **Roles** (`backend/app/auth/roles.py`): analyst < reviewer < admin, read only from the
+  verified Supabase JWT's `app_metadata.role` / `app_metadata.roles` (writable only with
+  the service key). `user_metadata` (user-editable) and the top-level `role` claim
+  (Postgres role, e.g. `authenticated`) are ignored; no claim = analyst. No roles table and
+  no migration: roles are set in Supabase (`auth.admin.updateUserById(id, {app_metadata:
+  {role: "reviewer"}})`). With `REQUIRE_AUTH` off the dev user takes `DEV_USER_ROLE`
+  (default analyst).
+- **Rules:** every review route needs reviewer or admin (admin ⊇ reviewer; no admin-only
+  review action yet). Analysts get 403 before any lookup, so existence isn't revealed.
+  The reviewer recorded is always the token's `sub`; request bodies forbid extra fields,
+  so a `reviewer_id` or `role` in the body is a 422. Reason required (blank = 422).
+  Errors: unknown case 404, decided case 409, unchanged severity 409, claim not in case
+  404 (override) / 422 (correction), bad body 422.
+- **Decisions:** APPROVE, CORRECT (`corrected_label` and/or `claim_corrections`
+  `[{claim_id, verdict?, stance?}]`, values from the §5/§7 enums, each must change
+  something), MARK_INSUFFICIENT, REJECT, REQUEST_REANALYSIS. Claim corrections are stored
+  on the case as `{"claims": {cid: {"verdict"|"stance": {"from", "to"}}}}`; the model's
+  stored stance/verdict rows are not overwritten (provenance; §12 feedback loop). Changing
+  claim verdicts does not recompute the label: the reviewer sets `corrected_label`.
+  REQUEST_REANALYSIS starts a new PENDING job for the same video through the worker
+  (dispatcher injectable); a failed dispatch leaves that job FAILED/`DISPATCH_FAILED` and
+  the decision stands. The old job keeps REVIEW_REQUIRED (T09 behaviour).
+- **Service changes** (`review_service`): `record_review_decision` now locks the row
+  (`SELECT … FOR UPDATE` on Postgres) so two reviewers can't both resolve a case, and
+  writes a `review_decision` audit event; new `review_queue_page`,
+  `build_claim_corrections`, `review_audit_trail`, `start_reanalysis`. The reason filter
+  runs in Python (reasons are a JSON list); fine at current queue sizes, move to SQL
+  (Postgres JSON operators) if the queue grows large.
+- **Tests:** `test_review_api.py`, 85 tests, real HS256 JWTs with a test secret through the
+  real `get_current_user`; each runs on SQLite and, when `LIBRARY_TEST_PG_DSN` is set (CI),
+  on a throwaway Postgres database.
+- **Left for a person:** (1) per-user ownership still doesn't exist: `videos` has no owner
+  column, and the existing `/jobs/*` and legacy routes don't check ownership (§15, §17
+  "every endpoint checks the object belongs to the caller"). T28's migration 0011 adds
+  `jobs.user_id`; the coordinating session also asked T27 for owner columns, which would
+  have duplicated it, so T27 adds none. Suggested follow-up: 0012 `videos.owner_id`, read
+  checks with reviewer/admin exceptions, and `submitted_by` on review responses
+  (`decided_by` is already `decision.reviewer_id`). Until then a reviewer could decide a
+  case on their own video. (2) Assign
+  reviewer/admin roles in Supabase `app_metadata`. (3) After REQUEST_REANALYSIS the old
+  job still reads as "in review" on the legacy result route; T26's resolved status should
+  cover it. (4) Admin-only actions (e.g. reopening a case) aren't defined in the doc.
 ## 7v. Result API Fields (T26, no issue; design §12, §17)
 
 Built by the automated build on 2026-11-24, from the frontend session's API map. Exposes
@@ -1406,6 +1458,74 @@ shape; no label, verdict or stored row changes.
 - **Export dropped:** the task brief asked for an export endpoint; the queue row was trimmed
   by the lead (D7, 2026-11-24: the frontend builds the export client-side from the result
   payload), so none was built.
+## 7w. Job Progress Events, §1 States and Job Ownership (T28, no issue; design §1, §16, §17)
+
+- **Two state fields, side by side.** `jobs.status` keeps the five values the current
+  frontend reads (PENDING, STARTED, SUCCESS, FAILED, REVIEW_REQUIRED); nothing that set
+  it changed. New `jobs.state` holds the §1 state (PENDING, QUEUED, RUNNING,
+  RETRY_PENDING, REVIEW_REQUIRED, COMPLETED, FAILED, REJECTED). Responses show the stored
+  state only while it agrees with `status`, otherwise it is derived from `status`
+  (`job_events.effective_state`, same rule in SQL for the filter), so a writer that only
+  sets `status` can't leave a stale state. A reviewer's rejection (legacy FAILED +
+  `error_code=REVIEW_REJECTED`) reads as REJECTED.
+- **When states are written:** PENDING (step `uploaded`) when the job is created; QUEUED
+  just before `.delay()` (so a fast worker's RUNNING comes after it; a failed hand-off
+  logs PENDING with `dispatch_failed`); RUNNING when a worker starts (`jobs.attempts`
+  +1); RETRY_PENDING first when the worker finds the job still STARTED (an earlier worker
+  died, Celery redelivered) or Celery reports a retry; COMPLETED / REVIEW_REQUIRED /
+  FAILED (with `error_code`) after the existing writes; COMPLETED / REJECTED after a
+  review decision (`review_service.record_review_decision`). A re-analysis job
+  (`review_service.start_reanalysis`, T27) takes the original job's owner (not the
+  reviewer's) and gets its own PENDING/QUEUED (or FAILED on dispatch failure) history. **No retry policy was
+  added:** the task still doesn't call `self.retry`; RETRY_PENDING is logged when a retry
+  happens. The §1 retry table (backoff on LLM 5xx etc.) is still to build.
+- **Steps** (`app/core/progress.py`): uploaded, transcribing, reading_on_screen_text,
+  finding_claims, checking_stance, searching_evidence, verifying, final_checks, with
+  plain-language labels. The pipeline calls `report_step()`; it is a no-op unless the
+  worker installs a reporter (a context variable), and a reporter that raises is logged
+  and ignored. Graph path: `GraphProvider.run` now streams with `stream_mode="tasks"`
+  (was `"values"`), which yields each node *as it starts* in the calling thread; nodes
+  map to steps (`NODE_STEPS`), and the critic's loop moves the stepper back to
+  "searching evidence". The final state is still read with `get_state`, so results are
+  unchanged (tested: same classification with and without a reporter). Single-call path:
+  uploaded, transcribing, verifying (the one model call), searching_evidence (only for
+  MISINFO/DEBUNKING grounding); the events response lists the steps that apply
+  (`pipeline_steps`). Consecutive repeats of a step are not logged.
+- **Recording is best effort:** each event is its own small commit on the worker's
+  session; a failed write rolls back and logs. Steps are recorded from the worker's
+  thread only (LangGraph's parallel nodes run in a pool, but "tasks" chunks arrive in the
+  calling thread).
+- **Ownership (§15, §17; PRODUCTION.md §6a):** `jobs.user_id` = JWT `sub` on create.
+  On rebase T28's owner check went into T26's `app/api/ownership.py`: `can_view_job` /
+  `visible_jobs` / `owned_job_or_404` (T26's names, which T33 extends) now compare
+  `jobs.user_id` with the caller's `sub` instead of allowing every signed-in user, so
+  T26's result endpoints (`/v1/videos/{id}/results`, `/claims`, `/v1/claims/{id}/evidence`)
+  enforce it too; T26's tests now give their jobs an owner, and its "allows authenticated
+  callers" test became "owner check is live". 404 for another user's
+  job. Applied to GET /jobs, /jobs/{id}, /jobs/{id}/result, /jobs/create's reuse of an
+  existing job (only the caller's own job is reused, so two users analysing the same
+  video each get a job: deliberate double work over leaking a job id) and the new /v1
+  routes. **Jobs created before 0011 have no owner:** hidden from every signed-in user;
+  visible only with `REQUIRE_AUTH` off (local dev, one dev user).
+- **API (additive):** `GET /v1/jobs/{id}/events` (state, step, attempts,
+  `processing_finished` for polling, the 8 steps with labels, `pipeline_steps`, events
+  oldest first); `GET /v1/jobs/{id}` (= `GET /jobs/{id}`); `GET /v1/jobs` →
+  `{items, total, limit, offset}` with `q` (filename substring, case-insensitive, or
+  exact job/video id), `status` (repeat or comma-separated; legacy and §1 values; a value
+  in both vocabularies such as PENDING matches the §1 state; unknown → 422) and `label`.
+  `GET /jobs` stays a bare list (current frontend) and gains the same `q`/`status`
+  params plus an `X-Total-Count` header. Rows and `GET /jobs/{id}` gain `state`, `step`
+  (+ `step_label`, `attempts`); all old fields are unchanged. Typed Pydantic models.
+- **Migration 0011** (`down_revision 0010`): `jobs.user_id`, `state`, `current_step`,
+  `attempts` and the `job_events` table. Checked up/down on SQLite and Postgres 16. Must
+  run before this code is deployed (the ORM selects the new columns).
+- **Left for a person:** (1) run 0011 on Supabase and assign `jobs.user_id` on old jobs
+  (e.g. from upload logs) or they disappear from users' lists; (2) `videos` still has no
+  owner (T20's note), so `POST /jobs/create` doesn't check the caller owns the video;
+  (3) the §1 outbox (job row + dispatch event in one transaction) and POST /v1/jobs with
+  an idempotency key are not built; (4) a real retry policy (§1 table) would make
+  RETRY_PENDING more common; (5) the new frontend's stepper should read
+  `/v1/jobs/{id}/events`.
 
 ## 8. Team
 
@@ -1427,6 +1547,20 @@ replacement.
 ## 10. Check-In Log
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
+
+- **2026-11-23**: T28 (no issue; design §1, §16, §17) job progress for the stepper by the
+  automated build: `job_events` + §1 states next to the legacy status, 8 pipeline steps
+  logged from the worker (graph via LangGraph "tasks" streaming), per-user job ownership
+  (`jobs.user_id`, 404 for others' jobs), `GET /v1/jobs/{id}/events`, jobs list with
+  total, search and status filter. Migration 0011. Results unchanged; no model calls.
+  Decisions in §7w.
+- **2026-11-23**: T27 (no issue; design §12, §15, §17) review HTTP API and roles by the
+  automated build: `/v1/reviews` queue (severity then age, filters, pages), case with
+  audit trail, decisions (approve / correct label and claim verdicts or stances / mark
+  insufficient / reject / request re-analysis, reason required), severity override, and
+  `/v1/me`. Roles (analyst/reviewer/admin) only from the JWT's `app_metadata`, enforced
+  server-side. No migration. 1107 passed, 0 skipped locally with Postgres 16 + pgvector.
+  Per-user ownership (videos.owner) still missing. Decisions in §7u.
 
 - **2026-11-24**: T26 (no issue; design §12, §17) result API fields by the automated
   build: stance rationale and quoted segments, claim modality and source segments,

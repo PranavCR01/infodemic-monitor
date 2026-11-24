@@ -8,7 +8,7 @@ version: guardrails_v1
 input:
   max_file_bytes: 104857600         # 100 MiB per upload
   min_duration_seconds: 1
-  max_duration_seconds: 600         # short-form video; longer clips are rejected, not truncated
+  max_duration_seconds: 180         # 3 min (lead, 2026-11-24, D7 Q4); longer clips are rejected, not truncated
   allowed_containers: [mp4, mov, webm, mkv]
   max_transcript_chars: 128000      # matches settings.MAX_INPUT_CHARS
   max_segments: 2000                # transcript + OCR segments per video

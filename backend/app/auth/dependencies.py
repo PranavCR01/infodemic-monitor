@@ -13,7 +13,13 @@ async def get_current_user(
     credentials: HTTPAuthorizationCredentials | None = Depends(bearer_scheme),
 ) -> dict:
     if not settings.REQUIRE_AUTH:
-        return {"sub": "local-dev-user", "email": "dev@local"}
+        # Local development only. The role comes from server config, never the client
+        # (T27); app.auth.roles reads it from app_metadata like a real token.
+        return {
+            "sub": "local-dev-user",
+            "email": "dev@local",
+            "app_metadata": {"role": settings.DEV_USER_ROLE},
+        }
 
     if credentials is None:
         raise HTTPException(status_code=401, detail="Missing authorization header")
