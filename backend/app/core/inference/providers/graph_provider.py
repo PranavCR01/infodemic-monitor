@@ -50,6 +50,7 @@ from app.core.graph.stance import make_analyze_stance
 from app.core.graph.state import OcrSegment, PipelineState, TranscriptSegment, initial_state
 from app.core.graph.verifier import make_verify_claims
 from app.core.inference.classifier import InferenceProvider
+from app.core.progress import report_node
 from app.core.schemas.pipeline import ClassificationResult, FusionResult
 
 PROVIDER_NAME = "langgraph"
@@ -239,7 +240,11 @@ class GraphProvider:
                         video_duration_seconds=video_duration_seconds,
                     )
                 deadline = start + self.timeout_seconds
-                for _chunk in graph.stream(inp, config, stream_mode="values"):
+                # "tasks" mode yields each node as it starts (in this thread), so the
+                # stepper can show it (T28); the final state is read below either way.
+                for chunk in graph.stream(inp, config, stream_mode="tasks"):
+                    if isinstance(chunk, dict) and "result" not in chunk and chunk.get("name"):
+                        report_node(chunk["name"])
                     if self._clock() > deadline:
                         raise GraphTimeout(f"graph run exceeded {self.timeout_seconds:.0f}s")
                 state = dict(graph.get_state(config).values)

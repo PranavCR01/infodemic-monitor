@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 
 from app.api.routers.jobs import CreateJobRequest, create_job
 from app.core.config import settings
-from app.db.models.job import Job, JobStatus
+from app.db.models.job import Job, JobEvent, JobStatus
 from app.db.models.video import Video
 from app.services.video_service import save_video
 
@@ -14,6 +14,7 @@ def make_db():
     engine = create_engine("sqlite:///:memory:")
     Video.__table__.create(bind=engine)
     Job.__table__.create(bind=engine)
+    JobEvent.__table__.create(bind=engine)
 
     Session = sessionmaker(bind=engine)
     return Session()
@@ -79,7 +80,8 @@ def test_existing_job_is_reused():
     db.commit()
     db.refresh(video)
 
-    existing_job = Job(video_id=video.id, status=JobStatus.SUCCESS)
+    # T28: jobs have owners; only the caller's own finished job is reused.
+    existing_job = Job(video_id=video.id, status=JobStatus.SUCCESS, user_id="user-a")
     db.add(existing_job)
     db.commit()
     db.refresh(existing_job)
@@ -87,11 +89,35 @@ def test_existing_job_is_reused():
     result = create_job(
         payload=CreateJobRequest(video_id=video.id),
         db=db,
-        current_user={},
+        current_user={"sub": "user-a"},
     )
 
     assert result["job_id"] == existing_job.id
     assert db.query(Job).count() == 1
+
+    db.close()
+
+
+def test_another_users_job_is_not_reused(monkeypatch):
+    """T28 (§17 ownership): the same video started by someone else gets its own job,
+    so one user never receives another user's job id."""
+    db = make_db()
+    video = Video(filename="video.mp4", file_path="/tmp/video.mp4", file_size=100, file_hash="c" * 64)
+    db.add(video)
+    db.commit()
+    theirs = Job(video_id=video.id, status=JobStatus.SUCCESS, user_id="user-a")
+    db.add(theirs)
+    db.commit()
+
+    class FakeTask:
+        id = "fake-celery-task-id"
+
+    monkeypatch.setattr("app.api.routers.jobs.process_video_task.delay", lambda *a, **k: FakeTask())
+    result = create_job(payload=CreateJobRequest(video_id=video.id), db=db, current_user={"sub": "user-b"})
+
+    assert result["job_id"] != theirs.id
+    mine = db.get(Job, result["job_id"])
+    assert mine.user_id == "user-b"
 
     db.close()
 
