@@ -1932,18 +1932,6 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
-- **2026-11-24**: T37 (no issue; design §9, §11, §12) `nothing_judged` review reason by
-  the automated build. In the judge's last branch (nothing could be judged), any
-  INSUFFICIENT_EVIDENCE claim adds `nothing_judged` (stored `judge:nothing_judged`); no
-  claims or only NOT_VERIFIABLE claims add nothing. Labels unchanged. A case carrying it
-  is LOW whatever the table or a claim override says (`severity.case_severity`), and the
-  queue sorts it after the no-severity cases (`review_service._severity_order`, a text
-  match on the stored JSON; checked on Postgres JSON and JSONB). Text: "No claim in this
-  video could be checked against the evidence." Cross-check: 28 golden-set videos gain it;
-  recorded as the expected difference `nothing_judged_not_in_pinned_golden_judge`, fixture
-  not changed. Those 28 were already sent to review by `weak_evidence`, so no review
-  outcome changes. Open for the lead: the LOW pin also wins over a guardrail or
-  validation reason on the same case (literal reading of "regardless").
 - **2026-11-24**: T34 (decision D7; design §12, §15, §17) review decision completeness by the
   automated build: `reason_code` + 10-char note on decisions (missing code → OTHER, flagged);
   the blind HIGH step `POST /v1/reviews/{id}/pre-reveal`, enforced on the case view, queue,
@@ -1957,6 +1945,18 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   dry run $8.54 expected / $26.17 upper bound for the priced candidates (lead's set; the
   GPT-5 / GPT-5 mini ids are TODO placeholders); `--live` needs
   `--max-usd`, refuses over-cap estimates and stops at the cap. Decisions in §7ab.
+- **2026-11-24**: T37 (no issue; design §9, §11, §12) `nothing_judged` review reason by
+  the automated build. In the judge's last branch (nothing could be judged), any
+  INSUFFICIENT_EVIDENCE claim adds `nothing_judged` (stored `judge:nothing_judged`); no
+  claims or only NOT_VERIFIABLE claims add nothing. Labels unchanged. Text: "No claim in
+  this video could be checked against the evidence." Per the design as revised in dcbc97e,
+  the reason never lowers a case's severity (the first version's LOW pin and last-place
+  sort were removed). D4 dropped (0606f51): `weak_evidence` fires only for deciding claims
+  (§11 as written); reasons the judge collects from every claim are unchanged. Cross-check:
+  the backend now sends 68/162 in-scope golden videos to review (was 135), equal to the
+  golden judge at data/golden-label-set 0fbc68a, where `nothing_judged` matches on all 28
+  videos and exact reasons agree on 154/162. The pinned fixture (022ac44) is not re-pinned
+  in this change; against it `nothing_judged` is the expected difference (28 videos).
 - **2026-11-24**: T36 (no issue; design §12, §14) traceable analysis version by the
   automated build: graph results store `graph_v1+<short sha>+p<routing hash>` and a
   `routing_snapshot` JSON column (migration 0015, chained on T33's 0014). Old `graph_v1` rows still read. 1467 passed locally with Postgres 16 +

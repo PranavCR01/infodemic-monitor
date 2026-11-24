@@ -387,19 +387,11 @@ DIFFERENCE_KINDS: dict[str, dict[str, str]] = {
         "matches": "backend (expected; golden judge not yet re-pinned)",
         "why": "§9 pseudocode and §11 (commit 93068e6, T37): when no claim could be judged "
                "and any claim is INSUFFICIENT_EVIDENCE, the judge adds the review reason "
-               "nothing_judged (LOW priority). The golden set's judge.py gets the same rule "
+               "nothing_judged. The golden set's judge.py gets the same rule "
                "separately; the vendored copy pinned in the fixture predates it, so the "
-               "backend raises the reason alone. Expected until the fixture is re-pinned; "
-               "the backend already sends these videos to review via weak_evidence, so the "
-               "review outcome does not change.",
-    },
-    "weak_evidence_on_non_deciding_claim": {
-        "matches": "neither (backend extension, documented)",
-        "why": "§11 says 'a deciding claim is INSUFFICIENT_EVIDENCE or MIXED'. In the "
-               "possible-debunk case the backend also flags every other uncertain claim "
-               "(review_policy.rule_weak_evidence, citing §1). The golden judge follows "
-               "§11 literally here. Neither label changes; whether to keep the backend "
-               "extension is a policy call for the project lead.",
+               "backend raises the reason alone. Expected until the fixture is re-pinned "
+               "(data/golden-label-set 0fbc68a has the rule; there the reason matches on "
+               "all 28 videos).",
     },
 }
 
@@ -453,8 +445,6 @@ def classify_difference(reason: str, side: str, video: GoldenVideo, golden: Judg
             return "nothing_judged_not_in_pinned_golden_judge"
         if kind in ("unclear_stance_contradicted", "false_claim_not_refuted"):
             return kind
-        if kind == "weak_evidence" and cid not in deciding:
-            return "weak_evidence_on_non_deciding_claim"
         if kind == "weak_evidence" and (
             f"unproven_claim:{cid}" in golden.reasons or f"mixed_evidence:{cid}" in golden.reasons
         ):

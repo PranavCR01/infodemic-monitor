@@ -2,8 +2,8 @@
 
 When no claim could be judged and any claim is INSUFFICIENT_EVIDENCE, the judge adds the
 review reason ``nothing_judged``. Videos with no checkable claims (no claims, or all
-NOT_VERIFIABLE) are not sent for it. A case carrying it is LOW whatever the severity
-table says, and the queue puts it after everything else.
+NOT_VERIFIABLE) are not sent for it. The reason never lowers a case's severity:
+severity comes from the claim severity table and reviewer overrides as before (§12).
 
 No network, no model: states are built by hand, the judge is the real rule code, the
 database is in-memory SQLite.
@@ -122,8 +122,8 @@ def test_no_claims_is_not_sent():
 
 
 def test_mixed_without_insufficient_does_not_add_it():
-    """The reason is about too little evidence; MIXED alone is sent already (weak
-    evidence, mixed evidence), without ``nothing_judged``. (An UNSUPPORTED verdict that
+    """The reason is about too little evidence; MIXED alone is sent already (the judge's
+    mixed_evidence), without ``nothing_judged``. (An UNSUPPORTED verdict that
     fails T30's gate becomes INSUFFICIENT_EVIDENCE and so does add it.)"""
     s = make_state(row(V.MIXED, stance=S.QUOTES), row(V.NOT_VERIFIABLE, stance=S.NEUTRAL))
     assert s["final_result"].decision_rule == jg.RULE_NOTHING_JUDGED
@@ -166,25 +166,27 @@ def test_plain_language_text():
 
 # ------------------------------------------------------------------ severity (§12)
 
-# A table-HIGH topic, endorsed and unsettled: misinfo-relevant, so without T37 it is HIGH.
+# A table-HIGH topic, endorsed and unsettled: misinfo-relevant, so the case is HIGH.
 HIGH_INSUFFICIENT = ("Cut sugar to starve your cancer", "nutrition", S.ENDORSES, V.INSUFFICIENT_EVIDENCE)
 
 
-def test_case_severity_is_low_regardless_of_the_table():
+def test_reason_never_lowers_severity():
     s = make_state(HIGH_INSUFFICIENT)
+    assert "judge:nothing_judged" in s["review_reasons"]
     a = sv.assess(s)
     assert a.claims["c1"]["severity"] == "HIGH" and a.claims["c1"]["misinfo_relevant"]
-    assert a.severity == sv.Severity.LOW
-    assert sv.video_severity(a.claims) == sv.Severity.HIGH  # the table's view is unchanged
+    assert a.severity == sv.Severity.HIGH == sv.video_severity(a.claims)
 
 
-def test_case_severity_helper():
-    claims = {"c1": {"severity": "HIGH", "misinfo_relevant": True}}
-    assert sv.case_severity(claims, [REASON]) == sv.Severity.LOW
-    assert sv.case_severity(claims, ["nothing_judged"]) == sv.Severity.LOW
-    assert sv.case_severity(claims, ["weak_evidence:c1"]) == sv.Severity.HIGH
-    assert sv.case_severity({}, [REASON]) == sv.Severity.LOW
-    assert sv.case_severity({}, None) is None
+def test_no_low_pin_helper_left():
+    assert not hasattr(sv, "case_severity")
+
+
+def test_nothing_judged_is_the_only_reason_when_nothing_decides():
+    """D4 dropped: weak_evidence fires only for deciding claims, so a nothing-judged
+    video is sent by nothing_judged (plus any reason the judge collects from every claim)."""
+    s = make_state(row(V.INSUFFICIENT_EVIDENCE, stance=S.QUOTES), row(V.NOT_VERIFIABLE))
+    assert s["review_reasons"] == [REASON]
 
 
 @pytest.fixture()
@@ -219,43 +221,31 @@ def _open(db, job_id, *rows, created_at=None, extra_reasons=()):
 
 
 LOW_ROW = ("Legs up the wall improves circulation", "other", S.ENDORSES, V.CONTRADICTED)
-HIGH_ROW = ("Cut sugar to starve your cancer", "nutrition", S.ENDORSES, V.CONTRADICTED)
-NONE_ROW = ("Garlic stops colds", "prevention", S.REFUTES, V.MIXED)  # possible debunk, no severity
+NONE_INSUFFICIENT = ("Ginger tea helps with nausea", "other", S.QUOTES, V.INSUFFICIENT_EVIDENCE)
 
 
-def test_open_case_stores_low_and_the_reason(db):
+def test_open_case_keeps_table_severity(db):
     case = _open(db, "nj", HIGH_INSUFFICIENT)
-    assert case.severity == "LOW"
     assert REASON in case.reasons
-    assert case.claim_severities["c1"]["severity"] == "HIGH"
+    assert case.severity == "HIGH"
 
 
-def test_queue_puts_nothing_judged_after_everything_else(db):
-    from app.services.review_service import review_queue_page, review_queue
+def test_queue_sorts_nothing_judged_cases_naturally(db):
+    """No special sort: a HIGH nothing_judged case comes first; one with no
+    MISINFO-relevant claim has no severity and comes after LOW, like any such case."""
+    from app.services.review_service import review_queue
 
     t0 = datetime(2026, 11, 1, tzinfo=timezone.utc)
     names = {}
-    for name, r, age in [
-        ("nj_oldest", HIGH_INSUFFICIENT, -10), ("high", HIGH_ROW, 3), ("low", LOW_ROW, 2),
-        ("none", NONE_ROW, 1), ("nj_new", row(V.INSUFFICIENT_EVIDENCE), 5),
-    ]:
-        extra = () if name.startswith("nj") else ("judge:mixed_video",)  # send the others too
+    for name, r, age in [("low", LOW_ROW, 0), ("nj_high", HIGH_INSUFFICIENT, 5), ("nj_none", NONE_INSUFFICIENT, -5)]:
+        extra = () if name.startswith("nj") else ("judge:mixed_video",)  # send the MISINFO one too
         names[_open(db, name, r, created_at=t0 + timedelta(hours=age), extra_reasons=extra).id] = name
-    expected = ["high", "low", "none", "nj_oldest", "nj_new"]
-    assert [names[c.id] for c in review_queue(db)] == expected
-    page, total = review_queue_page(db)
-    assert [names[c.id] for c in page] == expected and total == 5
-    low, _ = review_queue_page(db, severities=["LOW"])
-    assert [names[c.id] for c in low] == ["low", "nj_oldest", "nj_new"]
+    assert [names[c.id] for c in review_queue(db)] == ["nj_high", "low", "nj_none"]
 
 
-def test_override_and_refresh_keep_it_low(db):
-    from app.services.review_service import open_review_case, override_claim_severity
+def test_reviewer_override_still_applies(db):
+    from app.services.review_service import override_claim_severity
 
-    case = _open(db, "nj", row(V.INSUFFICIENT_EVIDENCE))
-    case = override_claim_severity(db, case.id, "c1", reviewer_id="r1", severity="HIGH", reason="dangerous")
-    assert case.claim_severities["c1"]["override"]["severity"] == "HIGH"
+    case = _open(db, "nj", HIGH_INSUFFICIENT)
+    case = override_claim_severity(db, case.id, "c1", reviewer_id="r1", severity="LOW", reason="not dangerous")
     assert case.severity == "LOW"
-    again = open_review_case(db, "nj", make_state(row(V.INSUFFICIENT_EVIDENCE), job_id="nj"))
-    assert again.claim_severities["c1"]["override"]["severity"] == "HIGH"
-    assert again.severity == "LOW"

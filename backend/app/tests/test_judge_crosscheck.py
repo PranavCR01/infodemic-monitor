@@ -51,7 +51,8 @@ def results() -> list[xc.VideoComparison]:
 # that adds, removes or reclassifies a difference fails here on purpose.
 EXPECTED_DIFFERENCES = {
     "weak_evidence_covered_by_judge_reason": 17,
-    "weak_evidence_on_non_deciding_claim": 77,
+    # D4 dropped (2026-11-24): weak_evidence fires only for deciding claims, so the former
+    # weak_evidence_on_non_deciding_claim kind (77 reasons) is gone.
     # T37: the backend raises nothing_judged; the pinned golden judge predates the rule.
     # Expected, documented difference until the fixture is re-pinned (one per video).
     "nothing_judged_not_in_pinned_golden_judge": 28,
@@ -146,7 +147,9 @@ def test_agreement_table_counts(results):
     assert table["misinfo_basis (in scope)"] == (162, 162)
     assert table["deciding claims"] == (162, 162)
     assert table["golden judge reproduces videos.csv label + basis + review_reasons"] == (181, 181)
-    assert table["review reasons, exact (shared vocabulary)"] == (120, 162)
+    assert table["review reasons, exact (shared vocabulary)"] == (126, 162)
+    # 27 of the 28 nothing_judged videos are not sent by the pinned golden judge (v85 is,
+    # for mixed_evidence); the backend sends 68 in-scope videos, as golden 0fbc68a does.
     assert table["sent to review (shared signals)"] == (135, 162)
 
 
@@ -226,9 +229,8 @@ def test_nothing_judged_is_an_expected_backend_only_difference(results):
         assert r.backend.label == r.golden.label == "CANNOT_RECOGNIZE" and r.backend.deciding == ()
         assert any(c.claim_verdict == "INSUFFICIENT_EVIDENCE" for c in by_id[r.video_id].claims)
         assert not r.out_of_scope
-        # The backend already sent these to review before T37 (weak_evidence on every
-        # insufficient claim when nothing is judged), so no review outcome changes.
-        assert any(x.startswith("weak_evidence:") for x in r.backend.reasons)
+        # D4 dropped: with no deciding claim, nothing_judged is what sends the video.
+        assert not any(x.startswith("weak_evidence:") for x in r.backend.reasons)
     # No video with no claims, or only NOT_VERIFIABLE claims, gains it.
     for r in results:
         verdicts = {c.claim_verdict for c in by_id[r.video_id].claims}
@@ -255,6 +257,21 @@ def test_nothing_judged_agrees_once_the_golden_judge_raises_it():
 def test_not_verifiable_only_video_gains_no_reason():
     r = xc.compare(_video(("ENDORSES", "NOT_VERIFIABLE")), GOLDEN.judge, GOLDEN.review_reasons)
     assert "nothing_judged" not in r.backend.reasons
+
+
+def test_backend_sends_68_in_scope_videos_to_review(results):
+    """D4 dropped: weak-evidence triggers fire only for deciding claims. The backend now
+    sends 68 of 162 in-scope golden videos to review (was 135), the same count as the
+    golden judge with the nothing_judged rule (data/golden-label-set 0fbc68a)."""
+    in_scope = [r for r in results if not r.out_of_scope]
+    assert sum(bool(r.backend.reasons) for r in in_scope) == 68
+
+
+def test_weak_evidence_never_names_a_non_deciding_claim(results):
+    for r in results:
+        for x in r.backend.reasons:
+            if x.startswith("weak_evidence:"):
+                assert x.split(":", 1)[1] in r.backend.deciding, (r.video_id, x)
 
 
 def test_unknown_golden_reason_is_an_error():
