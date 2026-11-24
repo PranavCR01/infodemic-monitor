@@ -29,8 +29,13 @@ describe("ExportReport", () => {
   it("prints the analysis version and time so a report can be traced", () => {
     show();
     expect(screen.getByText("Analysis version")).toBeInTheDocument();
-    expect(screen.getByText("graph-v1 (2026-11-24)")).toBeInTheDocument();
+    expect(screen.getByText("graph_v1+3f9c2ab+p1a2b3c4d")).toBeInTheDocument();
     expect(screen.getByText("23 Nov 2026, 09:13 UTC")).toBeInTheDocument();
+  });
+
+  it("never prints T36's routing snapshot (model and prompt names)", () => {
+    const { container } = show();
+    expect(container).not.toHaveTextContent(/mock-model|claims_v3|verify_v2/);
   });
 
   it("leaves the version row out when the result has none", () => {

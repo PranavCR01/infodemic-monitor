@@ -36,7 +36,11 @@ export const MOCK_MISINFO_PENDING: RawResult = {
   submitted_at: "2026-11-23T09:12:00Z",
   created_at: "2026-11-23T09:13:16Z",
   pipeline: "graph",
-  pipeline_version: "graph-v1 (2026-11-24)",
+  pipeline_version: "graph_v1+3f9c2ab+p1a2b3c4d",
+  routing_snapshot: {
+    schema: 1, hash: "1a2b3c4d", version: "2026-11-24",
+    steps: { claims: { prompt: "claims_v3", model: "mock-model-alpha" }, verify: { prompt: "verify_v2", model: "mock-model-beta" } },
+  },
   decision_rule: "endorsed_contradicted",
   deciding_claim_ids: ["c1"],
   transcript_segments: transcript,

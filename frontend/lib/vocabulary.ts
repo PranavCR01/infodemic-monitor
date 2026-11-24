@@ -276,6 +276,8 @@ export const REVIEW_REASONS: Record<string, string> = {
   user_requested: "Someone asked for a person to check this result.",
   prompt_injection_suspected: "The video may contain text trying to steer the analysis.",
   guardrail: "A safety check stopped part of the analysis.",
+  // T37: video-level, no claim id. LOW priority.
+  nothing_judged: "No claim in this video could be checked against the evidence.",
   // judge:<flag>
   mixed_video: "The video both spreads and corrects false claims.",
   unclear_stance_contradicted: "A false claim is made, but the speaker's position on it is unclear.",

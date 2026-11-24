@@ -1,7 +1,20 @@
-// ADAPTER: the review API (T27) → what the queue and workspace render.
-import { isSeverity, isVideoLabel, reasonRule, reasonText, SEVERITY, type Severity, type VideoLabel } from "@/lib/vocabulary";
+// ADAPTER: the review API (T27, T33, T34) → what the queue and workspace render.
+import { reasonCodeText, type PreReveal } from "@/lib/review/decision";
+import {
+  isSeverity,
+  isStance,
+  isVerdict,
+  isVideoLabel,
+  reasonRule,
+  reasonText,
+  SEVERITY,
+  type Severity,
+  type Stance,
+  type Verdict,
+  type VideoLabel,
+} from "@/lib/vocabulary";
 import { isOwnSubmission, submitterText } from "./owner";
-import type { RawAudit, RawCase, RawDecision, RawQueueItem } from "./review-types";
+import type { RawAudit, RawCase, RawCaseClaim, RawDecision, RawPreReveal, RawQueueItem } from "./review-types";
 
 export type QueueItem = {
   reviewId: string;
@@ -15,6 +28,10 @@ export type QueueItem = {
   ageSeconds: number;
   submittedBy: string | null;
   isOwn: boolean;
+  /** T34: an open HIGH case that needs each reviewer's own judgement first. */
+  blindRequired: boolean;
+  /** T34: the server is withholding the system's view until this reviewer gives theirs. */
+  withheld: boolean;
   decision: Decision | null;
 };
 
@@ -22,6 +39,10 @@ export type Decision = {
   action: string;
   actionText: string;
   by: string;
+  /** T34 reason code and its text; read from a pre-T34 "[CODE] note" when absent. */
+  reasonCode: string | null;
+  reasonCodeText: string | null;
+  /** The written note. */
   reason: string;
   correctedLabel: VideoLabel | null;
   at: string | null;
@@ -29,7 +50,16 @@ export type Decision = {
 
 export type AuditItem = { id: string; when: string; who: string; what: string; reason: string | null };
 
-export type CaseModel = QueueItem & { audit: AuditItem[] };
+/** T34: a claim as the case lists it. `stance` / `verdict` are the system's, null while withheld. */
+export type CaseClaim = { id: string; number: number; text: string; start: number | null; end: number | null; stance: Stance | null; verdict: Verdict | null };
+
+export type CaseModel = QueueItem & {
+  /** Every claim of the case: the blind step asks for a judgement on each. */
+  claims: CaseClaim[];
+  /** The caller's own blind judgement, as the server recorded it. */
+  myPreReveal: PreReveal[] | null;
+  audit: AuditItem[];
+};
 
 const ACTION_TEXT: Record<string, string> = {
   APPROVE: "Approved",
@@ -57,13 +87,24 @@ function personName(name: string | null | undefined, id: string | null | undefin
   return id ? `Reviewer ${id.slice(0, 6)}` : "A reviewer";
 }
 
+/** Decisions saved before T34 folded the code into the note: "[EVIDENCE_MISREAD] The trial…". */
+export function splitReason(code: string | null | undefined, reason: string | null | undefined): { code: string | null; note: string } {
+  const text = reason ?? "";
+  if (code) return { code, note: text };
+  const m = /^\[([A-Z_]+)\]\s*([\s\S]*)$/.exec(text);
+  return m && reasonCodeText(m[1]) ? { code: m[1], note: m[2] } : { code: null, note: text };
+}
+
 function decision(d: RawDecision | null | undefined): Decision | null {
   if (!d) return null;
+  const { code, note } = splitReason(d.reason_code, d.reason);
   return {
     action: d.action,
     actionText: ACTION_TEXT[d.action] ?? "Decided",
     by: personName(d.reviewer_name, d.reviewer_id),
-    reason: d.reason ?? "",
+    reasonCode: code,
+    reasonCodeText: reasonCodeText(code),
+    reason: note,
     correctedLabel: isVideoLabel(d.corrected_label) ? d.corrected_label : null,
     at: d.decided_at ?? null,
   };
@@ -92,8 +133,10 @@ export function adaptQueueItem(r: RawQueueItem, viewerId: string | null = null):
     reasons: reasonChips(r.reasons),
     waiting: waitingText(r.age_seconds),
     ageSeconds: r.age_seconds,
-    submittedBy: submitterText(r.submitted_by, isOwn),
+    submittedBy: submitterText(r.submitted_by, isOwn, r.submitted_by_name),
     isOwn,
+    blindRequired: r.blind_step_required ?? false,
+    withheld: r.system_view_withheld ?? false,
     decision: decision(r.decision),
   };
 }
@@ -108,9 +151,32 @@ function auditItem(a: RawAudit): AuditItem {
   };
 }
 
+function caseClaim(c: RawCaseClaim, i: number): CaseClaim {
+  return {
+    id: c.claim_id,
+    number: i + 1,
+    text: c.text ?? "",
+    start: c.start ?? null,
+    end: c.end ?? null,
+    stance: isStance(c.stance) ? c.stance : null,
+    verdict: isVerdict(c.verdict) ? c.verdict : null,
+  };
+}
+
+function preReveal(p: RawPreReveal | null | undefined): PreReveal[] | null {
+  if (!p) return null;
+  const out: PreReveal[] = [];
+  for (const [claimId, v] of Object.entries(p.claims ?? {})) {
+    if (isStance(v.stance) && isVerdict(v.verdict)) out.push({ claimId, stance: v.stance, verdict: v.verdict });
+  }
+  return out.length ? out : null;
+}
+
 export function adaptCase(r: RawCase, viewerId: string | null = null): CaseModel {
   return {
     ...adaptQueueItem(r, viewerId),
+    claims: (r.claims ?? []).map(caseClaim),
+    myPreReveal: preReveal(r.pre_reveal),
     audit: [...(r.audit_trail ?? [])].sort((a, b) => a.created_at.localeCompare(b.created_at)).map(auditItem),
   };
 }
