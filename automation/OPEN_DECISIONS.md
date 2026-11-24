@@ -33,24 +33,21 @@ Already decided (recorded here so they aren't asked again):
 
 Owner column gap (found by the frontend session, confirmed): videos/jobs had no owner_id, so ownership checks couldn't work. Assigned to T27; T26 and T28 told not to add one.
 
-## 2. Waiting on the project lead to merge (into `langgraph-build`)
+## 2. Waiting on the project lead to merge
 
-- **#75** frontend chunk 1, then **#79** chunk 2 (into `design/frontend-v1`). #75's Vercel build failed fetching Google Fonts; the frontend session is self-hosting the fonts. Merge when Vercel is green.
-- Merged 2026-11-24: #73 (T25), #74 (CI fetch fix), #76 (T26), #78 (T27), #77 (3-min upload limit).
-- Lead to-do (Supabase): add `<frontend>/auth/callback` and `http://localhost:3000/auth/callback` to Auth redirect URLs; give yourself `app_metadata.role = admin`.
-- Before merging to main: existing production jobs have no owner (user_id NULL); after 0011 they're hidden from non-admins until T33's assign-owner script runs. Plan that step in the staging run.
-- Ownership: T28 adds jobs.user_id; T33 completes it (videos, reviewer/admin, NULL rows). Single-user only until T33 merges.
-
-- **#73 (T25 extra-sources experiment):** report only (`evals/reports/T25_extra_sources.md` + script). Result: 0 of 60 claims, 0 of 39 videos resolvable. Safe to merge.
-
-Earlier: #70 (T22 severity), #71 (T24 judge cross-check) and #72 (T23 CI) were merged on 2026-11-24. CI (`pytest` with Postgres + pgvector) now runs on every PR to `langgraph-build` and `main`. GitGuardian flagged a dummy test-database password from #72's first commit; the final version has none.
+- **#94** T33 ownership (into `langgraph-build`): updated by the coordinating session (migration 0014 → 0013, one head).
+- **Frontend stack** into `design/frontend-v1`, **Create a merge commit** (stacked PRs): #79 → #82 → #85 → #87 → #88 → #89 → #90 → #91 → #92 → #93. #75 merged.
+- Merged 2026-11-24: #73, #74, #76, #77, #78, #80 (T29), #81 (T28), #83 (T32), #84 (T31), #86 (T30).
+- Migration chain on `langgraph-build`: 0011 T28 → 0012 T31 → 0013 T30 → 0014 T33 (#94) → 0015 T36 (running).
+- Vercel free plan hit 100 deployments/day; recommended Ignored Build Step `git diff HEAD^ HEAD --quiet -- .` (lead to set).
+- Lead to-do (Supabase): auth redirect URLs; own `app_metadata.role = admin`; storage bucket CORS for browser PUTs from the frontend origin.
+- Before merging to `main`: production jobs have no owner; run T33's `scripts/assign_owners.py` in the staging run plan.
+- Open question to the lead: add a review reason for "nothing could be judged" (27 golden-set videos left review after the judge change). Recommended yes, LOW priority.
 
 ## 3. Running now
 
-- **Frontend session** `session_013cWxpynpigJCrZtXuYokiD`: phase 0, mapping the current frontend and API while waiting for the designs.
-
-- **T26** (result API fields) and **T27** (review HTTP API + roles), orchestrator children. Queued: T28 (job progress), T29 (playback URL + export), T30 (unproven verdict, after T26).
-- **Local labelling session** (lead's machine): golden-set re-derivation for D1 + D2 + D3 + judge.py §9 update, once the lead pastes the prompt.
+- **T36** (traceable analysis version). Queued: T34 (after #94).
+- **Frontend session**: holding; swaps adapters as backend tasks merge. Remaining plan items deferred (margin notes) or held (evaluation page until T14).
 
 ## 4. Other open PRs
 
