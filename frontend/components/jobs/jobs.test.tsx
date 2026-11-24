@@ -75,6 +75,34 @@ describe("JobsList", () => {
     expect(screen.getByText("No videos yet")).toBeInTheDocument();
   });
 
+  it("shows who submitted each video, and 'only mine', once other people's videos are visible (T33)", () => {
+    const me = "5d1e9b40-0000";
+    const shared = adaptJobList(
+      { ...MOCK_JOB_PAGE, items: MOCK_JOB_PAGE.items.map((r, k) => ({ ...r, submitted_by: k === 0 ? me : "a83f02c6-71d4" })) },
+      me,
+    );
+    const onFilters = vi.fn();
+    list({ rows: shared.rows, onFilters });
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Videos");
+    expect(screen.getByRole("columnheader", { name: "Submitted by" })).toBeInTheDocument();
+    const mine = screen.getByRole("link", { name: "hot-water-flu.mp4" }).closest("tr")!;
+    expect(within(mine).getByText("You")).toBeInTheDocument();
+    const theirs = screen.getByRole("link", { name: "garlic-bp.mov" }).closest("tr")!;
+    expect(within(theirs).getByText("User a83f02")).toBeInTheDocument();
+    expect(screen.getByRole("table")).not.toHaveTextContent("a83f02c6-71d4");
+    fireEvent.click(screen.getByLabelText("Only videos I submitted"));
+    expect(onFilters).toHaveBeenLastCalledWith({ ...EMPTY_FILTERS, mine: true, page: 1 });
+  });
+
+  it("keeps the analyst's view unchanged: no owner column or 'only mine'", () => {
+    const me = "5d1e9b40-0000";
+    const own = adaptJobList({ ...MOCK_JOB_PAGE, items: MOCK_JOB_PAGE.items.map((r) => ({ ...r, submitted_by: me })) }, me);
+    list({ rows: own.rows });
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Your videos");
+    expect(screen.queryByRole("columnheader", { name: "Submitted by" })).not.toBeInTheDocument();
+    expect(screen.queryByLabelText("Only videos I submitted")).not.toBeInTheDocument();
+  });
+
   it("sends filter changes back to the page, from page 1", () => {
     const onFilters = vi.fn();
     list({ onFilters, filters: { ...EMPTY_FILTERS, page: 3 } });

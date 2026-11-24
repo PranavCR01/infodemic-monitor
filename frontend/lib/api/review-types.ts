@@ -1,5 +1,6 @@
 // Raw shapes of the review API: backend/app/api/routers/reviews.py on auto/T27 (#78).
-// Fields marked PROPOSED were asked of T27 and don't exist yet.
+// Fields marked PROPOSED were asked of T27 and don't exist yet (T34 adds them).
+// `submitted_by` is real since T33 (#94): the submitter's Supabase user id.
 
 export type RawDecision = {
   reviewer_id: string;
@@ -25,8 +26,8 @@ export type RawQueueItem = {
   created_at: string;
   age_seconds: number;
   decision?: RawDecision | null;
-  submitted_by?: string | null; // PROPOSED
-  is_own?: boolean; // PROPOSED
+  submitted_by?: string | null; // T33
+  is_own?: boolean; // PROPOSED (T34); until then the frontend compares submitted_by with the viewer
 };
 
 export type RawQueuePage = { items: RawQueueItem[]; total: number; limit: number; offset: number };

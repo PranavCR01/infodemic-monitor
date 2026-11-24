@@ -1,5 +1,6 @@
 // ADAPTER: the review API (T27) → what the queue and workspace render.
 import { isSeverity, isVideoLabel, reasonRule, reasonText, SEVERITY, type Severity, type VideoLabel } from "@/lib/vocabulary";
+import { isOwnSubmission, submitterText } from "./owner";
 import type { RawAudit, RawCase, RawDecision, RawQueueItem } from "./review-types";
 
 export type QueueItem = {
@@ -78,7 +79,9 @@ function reasonChips(reasons: string[]): { rule: string; text: string }[] {
   return Array.from(seen, ([rule, text]) => ({ rule, text }));
 }
 
-export function adaptQueueItem(r: RawQueueItem): QueueItem {
+/** `viewerId`: the signed-in user, to mark their own submissions until T34 sends `is_own`. */
+export function adaptQueueItem(r: RawQueueItem, viewerId: string | null = null): QueueItem {
+  const isOwn = isOwnSubmission(r.submitted_by, viewerId, r.is_own);
   return {
     reviewId: r.review_id,
     jobId: r.job_id,
@@ -89,8 +92,8 @@ export function adaptQueueItem(r: RawQueueItem): QueueItem {
     reasons: reasonChips(r.reasons),
     waiting: waitingText(r.age_seconds),
     ageSeconds: r.age_seconds,
-    submittedBy: r.submitted_by ?? null,
-    isOwn: r.is_own ?? false,
+    submittedBy: submitterText(r.submitted_by, isOwn),
+    isOwn,
     decision: decision(r.decision),
   };
 }
@@ -105,9 +108,9 @@ function auditItem(a: RawAudit): AuditItem {
   };
 }
 
-export function adaptCase(r: RawCase): CaseModel {
+export function adaptCase(r: RawCase, viewerId: string | null = null): CaseModel {
   return {
-    ...adaptQueueItem(r),
+    ...adaptQueueItem(r, viewerId),
     audit: [...(r.audit_trail ?? [])].sort((a, b) => a.created_at.localeCompare(b.created_at)).map(auditItem),
   };
 }
