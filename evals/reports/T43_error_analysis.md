@@ -88,6 +88,14 @@ Items touched: extract 3 of 48 videos (gold claims 174 → 178); stance 6 claims
 2 reworded, **0 relabelled**); verify 11 claims. Gold UNSUPPORTED on tune goes from 5 to
 8, and UNSUPPORTED is the class the verify macro-F1 is most sensitive to.
 
+**Note: the golden set has moved past dcf77b0.** `948b1c2` ("apply the A2-A4 rule
+sweep", lead-approved) landed after this task was written. On tune it adds 9 more v36
+caption claims (c9–c17, all ENDORSES; 3 UNSUPPORTED, 6 INSUFFICIENT_EVIDENCE) and moves
+v22:c2 from INSUFFICIENT_EVIDENCE to UNSUPPORTED. That takes tune UNSUPPORTED to 12 and v36
+to 17 gold claims, and v36 is now the most caption-heavy video in tune. This report uses
+dcf77b0 as the task pins it. The next paid run should pick its golden commit on purpose.
+(`python -m app.evaluation.error_analysis gold-diff --old dcf77b0 --new 948b1c2`.)
+
 **Re-score of every T38 step metric against dcf77b0: not possible.** It needs the saved
 outputs, and there are none. The side-by-side table below shows what is known. The
 dcf77b0 column cannot be filled honestly.
