@@ -20,6 +20,7 @@ from app.core.routing.router import (
     ModelRouter,
     ModelServerError,
     ModelTimeoutError,
+    ModelTruncatedError,
     RoutedResult,
     RoutingError,
 )
@@ -28,5 +29,5 @@ __all__ = [
     "DEFAULT_ROUTING_PATH", "LLM_STEPS", "ModelRef", "RoutingConfig", "RoutingConfigError",
     "StepRoute", "load_routing", "parse_routing", "CallRecord", "ModelCallError", "ModelClient",
     "ModelConnectionError", "ModelRateLimitError", "ModelRequest", "ModelResponse", "ModelRouter",
-    "ModelServerError", "ModelTimeoutError", "RoutedResult", "RoutingError",
+    "ModelServerError", "ModelTimeoutError", "ModelTruncatedError", "RoutedResult", "RoutingError",
 ]

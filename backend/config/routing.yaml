@@ -26,11 +26,13 @@ routing:
 
 # Per-model request settings (T39). Only models listed here change their request;
 # every other model is called exactly as before. `reasoning: true` (GPT-5-class models):
-# the OpenAI client sends `max_completion_tokens` instead of `max_tokens` (these models
-# reject max_tokens), sends no `temperature`, and the step's cap is raised by its
-# reasoning_allowance below, because hidden reasoning tokens count against the cap and
-# are billed as output. `token_param: max_completion_tokens` alone renames the cap
-# without the other changes. Choose by model id here, never by name in code.
+# the OpenAI client calls the Responses API (T41; Chat Completions refuses function tools
+# together with reasoning_effort) with `max_output_tokens`, `reasoning: {effort}` and no
+# `temperature`, and the step's cap is raised by its reasoning_allowance below, because
+# hidden reasoning tokens count against the cap and are billed as output. A reply cut off
+# at that cap fails the call as `truncated` (usage still recorded). Models not marked
+# reasoning stay on Chat Completions; `token_param: max_completion_tokens` alone renames
+# their cap. Choose by model id here, never by name in code.
 #
 # `reasoning_effort` (none/low/medium/high/xhigh/max) is sent explicitly on every call
 # to a reasoning model, so a run doesn't depend on the provider's default: a routing

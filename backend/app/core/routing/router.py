@@ -43,6 +43,24 @@ class ModelConnectionError(ModelCallError):
     kind = "connection"
 
 
+class ModelTruncatedError(ModelCallError):
+    """The provider stopped at the output cap before the answer was complete (T41: an
+    OpenAI Responses-API reply with status ``incomplete``, reason ``max_output_tokens``;
+    hidden reasoning can use up the whole cap). Not a fallback kind, so the router neither
+    retries nor falls back: the step fails and the item counts as failed.
+
+    The tokens were still billed, so the client attaches the usage it read as
+    ``response`` (a ``ModelResponse`` with ``output=None``); the router records it on the
+    failed call so cost reports stay right."""
+
+    kind = "truncated"
+
+    def __init__(self, message: str = "", *, status: Optional[int] = None,
+                 response: Optional["ModelResponse"] = None):
+        super().__init__(message, status=status)
+        self.response = response
+
+
 class RoutingError(Exception):
     """The step could not be served by its primary model or its fallback."""
 
@@ -175,6 +193,13 @@ class ModelRouter:
             return self._finish(record, resp, start)
         except ModelCallError as exc:
             record.error = f"{exc.kind}: {exc}"
+            billed = getattr(exc, "response", None)
+            if isinstance(billed, ModelResponse):  # e.g. a truncated call: tokens were billed
+                record.input_tokens = billed.input_tokens
+                record.output_tokens = billed.output_tokens
+                record.reasoning_tokens = billed.reasoning_tokens
+                record.response_model = billed.response_model
+                record.cost_usd = self.cost(record.model, billed.input_tokens, billed.output_tokens)
             record.latency_ms = self._elapsed_ms(start)
             self.records.append(record)
             raise RoutingError(f"step {step!r} failed: {record.error}", record) from exc
@@ -192,6 +217,9 @@ class ModelRouter:
         params["token_param"] = settings.output_param
         params["max_output_tokens"] = self.config.output_cap(request.step, model, visible_output_cap(request))
         params["send_temperature"] = settings.sends_temperature
+        # T41: OpenAI reasoning models go to the Responses API (Chat Completions refuses
+        # function tools together with reasoning_effort). The client reads this flag.
+        params["reasoning"] = settings.reasoning
         # The step's effort override applies to its primary model only (the config method
         # checks that); a fallback gets its own model's effort.
         effort = self.config.reasoning_effort(request.step, model)

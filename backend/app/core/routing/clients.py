@@ -15,6 +15,11 @@ Two request shapes reach a client:
   sent as one user message and the reply text is returned; ``parse_output`` reads it as
   JSON.
 
+OpenAI **reasoning** models (``reasoning: true`` under ``models:`` in routing.yaml; the
+router passes it as ``request.params["reasoning"]``) are called through the Responses API
+(T41): Chat Completions refuses function tools together with ``reasoning_effort``. Every
+other OpenAI model keeps Chat Completions, unchanged.
+
 Provider errors are mapped onto the router's error kinds (``timeout``, ``5xx``,
 ``rate_limit``, ``connection``) so the fallback policy in ``routing.yaml`` applies.
 Any other provider error (400, auth, ...) is re-raised as a plain ``ModelCallError``,
@@ -36,6 +41,7 @@ from app.core.routing.router import (
     ModelResponse,
     ModelServerError,
     ModelTimeoutError,
+    ModelTruncatedError,
     request_output_cap,
 )
 DEFAULT_TIMEOUT_SECONDS = 60.0
@@ -190,17 +196,75 @@ def _openai_tools(tools: Optional[list[dict]]) -> Optional[list[dict]]:
     ]
 
 
+def _responses_tools(tools: Optional[list[dict]]) -> Optional[list[dict]]:
+    """Anthropic-style tools as Responses-API function tools (flat: ``name``,
+    ``description`` and ``parameters`` sit beside ``type``, not under ``function``).
+    ``strict`` is off: the nodes' schemas aren't written for strict mode (which needs
+    every property required and ``additionalProperties: false``), and their parsers
+    validate the arguments anyway, as on the other paths."""
+    if not tools:
+        return None
+    return [
+        {"type": "function", "name": t["name"], "description": t.get("description", ""),
+         "parameters": t.get("input_schema") or {"type": "object", "properties": {}},
+         "strict": False}
+        for t in tools
+    ]
+
+
+def _responses_input(messages: list[dict]) -> list[dict]:
+    """Chat-style messages as Responses-API input items. String content passes through
+    (an "easy" input message); a list of text blocks becomes ``input_text`` parts, or
+    ``output_text`` for an assistant turn. The nodes send one user message with string
+    content today."""
+    items: list[dict] = []
+    for m in messages:
+        content = m.get("content")
+        if isinstance(content, list):
+            part = "output_text" if m.get("role") == "assistant" else "input_text"
+            content = [{"type": part, "text": b.get("text", "")} if isinstance(b, dict) else
+                       {"type": part, "text": str(b)} for b in content]
+        items.append({"role": m.get("role", "user"), "content": content})
+    return items
+
+
+def _responses_usage(resp: Any) -> ModelResponse:
+    """Usage of a Responses-API reply, as T39 records it for Chat Completions:
+    ``output_tokens`` already includes the hidden reasoning tokens (billed as output), and
+    ``output_tokens_details.reasoning_tokens`` is recorded alongside."""
+    usage = getattr(resp, "usage", None)
+    details = getattr(usage, "output_tokens_details", None)
+    return ModelResponse(
+        output=None,
+        input_tokens=int(getattr(usage, "input_tokens", 0) or 0),
+        output_tokens=int(getattr(usage, "output_tokens", 0) or 0),
+        reasoning_tokens=int(getattr(details, "reasoning_tokens", 0) or 0),
+        response_model=_reported_model(resp),
+    )
+
+
 class OpenAIModelClient:
-    """``ModelClient`` over the OpenAI Chat Completions API (the routed critic and the
-    fallback model).
+    """``ModelClient`` over the OpenAI API (the routed critic, the fallback model and the
+    routing experiment's OpenAI candidates).
 
     Per-model request settings come from the router (``routing.yaml`` ``models:``, T39),
-    in ``request.params``: ``token_param`` names the output cap (OpenAI reasoning
-    models reject ``max_tokens`` and need ``max_completion_tokens``, which also covers
-    their hidden reasoning tokens), ``max_output_tokens`` is the cap including the step's
-    reasoning allowance, ``send_temperature: false`` drops ``temperature`` and
-    ``reasoning_effort`` is sent as given. With no
-    settings the request is exactly the pre-T39 one (``max_tokens`` + ``temperature``).
+    in ``request.params``:
+
+    - ``reasoning: true`` (T41): the call goes to the **Responses API**
+      (``responses.create``) with ``reasoning={"effort": reasoning_effort}``,
+      ``max_output_tokens`` (the node's cap plus the step's reasoning allowance; it covers
+      the hidden reasoning tokens too), the system prompt as ``instructions``, flat
+      function tools and a forced ``{"type": "function", "name": ...}`` tool choice. No
+      ``temperature`` unless ``send_temperature`` says so, and ``store: false`` (nothing
+      is kept on OpenAI's side for later turns; the pipeline never chains responses).
+      A reply cut off at the cap (status ``incomplete``, reason ``max_output_tokens``)
+      raises ``ModelTruncatedError`` carrying the billed usage.
+    - Otherwise **Chat Completions**, exactly as before: ``token_param`` names the output
+      cap (``max_tokens`` or ``max_completion_tokens``), ``max_output_tokens`` is the cap,
+      ``send_temperature: false`` drops ``temperature`` and ``reasoning_effort`` is sent
+      as given. With no settings the request is exactly the pre-T39 one.
+
+    The client never looks at the model id to decide any of this.
     """
 
     def __init__(self, sdk_client: Any = None, *, api_key: str = "", timeout: float = DEFAULT_TIMEOUT_SECONDS):
@@ -211,6 +275,73 @@ class OpenAIModelClient:
         self._sdk = sdk_client
 
     def complete(self, model: str, request: ModelRequest) -> ModelResponse:
+        if request.params.get("reasoning"):
+            return self._complete_responses(model, request)
+        return self._complete_chat(model, request)
+
+    # -- Responses API (reasoning models, T41) --
+
+    def _complete_responses(self, model: str, request: ModelRequest) -> ModelResponse:
+        messages, tools, tool_choice, max_tokens, temperature = _split_input(request)
+        kwargs: dict[str, Any] = {
+            "model": model,
+            "input": _responses_input(messages),
+            "max_output_tokens": max_tokens,
+            "store": False,
+        }
+        if request.system:
+            kwargs["instructions"] = request.system
+        if request.params.get("reasoning_effort"):
+            kwargs["reasoning"] = {"effort": request.params["reasoning_effort"]}
+        if request.params.get("send_temperature", False):
+            kwargs["temperature"] = temperature
+        forced = _forced_tool_name(tool_choice)
+        if tools:
+            kwargs["tools"] = _responses_tools(tools)
+            if forced:
+                kwargs["tool_choice"] = {"type": "function", "name": forced}
+        try:
+            resp = self._sdk.responses.create(**kwargs)
+        except ModelCallError:
+            raise
+        except Exception as exc:  # noqa: BLE001 - mapped to the router's kinds
+            raise map_provider_error(exc) from exc
+
+        result = _responses_usage(resp)
+        status = getattr(resp, "status", None)
+        if status == "incomplete":
+            reason = getattr(getattr(resp, "incomplete_details", None), "reason", None)
+            if reason == "max_output_tokens":
+                raise ModelTruncatedError(
+                    f"step {request.step!r}: {model} stopped at max_output_tokens={max_tokens} "
+                    f"({result.reasoning_tokens} reasoning of {result.output_tokens} output tokens)",
+                    response=result)
+        if status == "failed":
+            err = getattr(resp, "error", None)
+            raise ModelCallError(
+                f"step {request.step!r}: response failed: {getattr(err, 'code', None)}: "
+                f"{getattr(err, 'message', None)}"[:500])
+
+        output: Any = None
+        texts: list[str] = []
+        for item in getattr(resp, "output", None) or []:
+            kind = getattr(item, "type", None)
+            if kind == "function_call" and output is None and (forced is None or getattr(item, "name", None) == forced):
+                try:
+                    output = json.loads(getattr(item, "arguments", "") or "{}")
+                except json.JSONDecodeError:
+                    output = None  # the node's parser treats this as malformed output
+            elif kind == "message":
+                for part in getattr(item, "content", None) or []:
+                    if getattr(part, "type", None) == "output_text":
+                        texts.append(getattr(part, "text", "") or "")
+        if output is None and not tools:
+            output = "".join(texts)
+        return result.model_copy(update={"output": output})
+
+    # -- Chat Completions (every other OpenAI model; unchanged from T39) --
+
+    def _complete_chat(self, model: str, request: ModelRequest) -> ModelResponse:
         messages, tools, tool_choice, max_tokens, temperature = _split_input(request)
         if request.system:
             messages = [{"role": "system", "content": request.system}, *messages]
