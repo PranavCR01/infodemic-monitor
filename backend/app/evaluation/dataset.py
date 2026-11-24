@@ -27,7 +27,7 @@ from app.evaluation import metrics
 # Claim truth (section 14: "supported, contradicted, insufficient"). The
 # claim-level dataset README uses the video label names at claim level; they are
 # mapped here so both vocabularies load.
-CLAIM_TRUTHS = ("SUPPORTED", "CONTRADICTED", "INSUFFICIENT_EVIDENCE", "MIXED", "NOT_VERIFIABLE")
+CLAIM_TRUTHS = ("SUPPORTED", "CONTRADICTED", "UNSUPPORTED", "INSUFFICIENT_EVIDENCE", "MIXED", "NOT_VERIFIABLE")  # UNSUPPORTED: T30
 _TRUTH_ALIASES = {
     "MISINFO": "CONTRADICTED",
     "NO_MISINFO": "SUPPORTED",

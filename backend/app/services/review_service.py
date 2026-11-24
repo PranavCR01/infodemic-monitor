@@ -499,3 +499,154 @@ def start_reanalysis(
     sync_state_from_status(db, new_job, detail={"error_code": new_job.error_code} if new_job.error_code else None)
     db.refresh(new_job)
     return new_job
+
+
+# ------------------------------------------------------------------ request review (T32)
+
+REVIEW_REQUESTED_ACTION = "review_requested"
+REQUEST_NOTE_MAX = 2000
+
+
+def _stored_claim_severities(db: Session, job_id: str) -> tuple[Optional[dict[str, Any]], Optional[str], str]:
+    """Severity of a finished job's claims from its stored rows (the same table and
+    shape ``assess`` gives a graph case), so a requested case sorts in the queue like
+    any other and its claims can be overridden. ``(None, None, version)`` when the job
+    has no claim rows (the single-call path)."""
+    from types import SimpleNamespace
+
+    from app.core.graph.severity import claim_severity, default_severity_config, misinfo_relevant, video_severity
+    from app.db.models.claim import ClaimRow
+
+    cfg = default_severity_config()
+    rows = db.query(ClaimRow).filter(ClaimRow.job_id == job_id).all()
+    if not rows:
+        return None, None, cfg.version
+    out: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        cs = claim_severity(SimpleNamespace(claim_id=row.claim_id, claim_text=row.text,
+                                            claim_category=row.category), cfg)
+        stance = row.stance.stance if row.stance is not None else None
+        verdict = row.verification.verdict if row.verification is not None else None
+        try:
+            relevant = misinfo_relevant(stance, verdict)
+        except ValueError:  # a stance or verdict this code doesn't know: don't guess
+            relevant = False
+        out[row.claim_id] = {
+            "severity": cs.severity.value, "basis": list(cs.basis),
+            "stance": stance, "verdict": verdict, "misinfo_relevant": relevant,
+        }
+    sev = video_severity(out)
+    return out, (sev.value if sev else None), cfg.version
+
+
+def _proposed_from_result(result: Result) -> dict[str, Any]:
+    return {
+        "classification": result.label,
+        "confidence": result.confidence,
+        "explanation": result.explanation,
+        "decision_rule": result.decision_rule,
+        "deciding_claim_ids": list(result.deciding_claim_ids or []),
+        "pipeline": result.pipeline,
+        "source": "stored_result",
+    }
+
+
+def review_request_event(db: Session, job_id: str) -> Optional[AuditEvent]:
+    """The audit event of the request that opened a job's case, if a person asked."""
+    return (
+        db.query(AuditEvent)
+        .filter(AuditEvent.job_id == job_id, AuditEvent.action == REVIEW_REQUESTED_ACTION)
+        .order_by(AuditEvent.created_at.asc(), AuditEvent.id.asc())
+        .first()
+    )
+
+
+def request_review(
+    db: Session,
+    job: Job,
+    *,
+    requester_id: str,
+    note: str,
+    requester_role: Optional[str] = None,
+    now: Optional[datetime] = None,
+) -> tuple[HumanReview, bool]:
+    """Open a review case for a finished result the review rule didn't send to a
+    person (§12; T32). Returns ``(case, created)``.
+
+    - Idempotent per job: if the job already has a case (opened by the review rule or
+      by an earlier request, open or resolved) that case is returned unchanged and
+      nothing is logged.
+    - Otherwise the job needs a stored result and status SUCCESS; the case records the
+      reason ``user_requested``, the stored result as the proposed result, and each
+      claim's severity from the stored rows; the job moves to ``REVIEW_REQUIRED`` (§12:
+      review is a state); and the request (who, when, the note) goes to the audit
+      trail. The label and verdicts are not touched.
+    - The caller checks access (owner, or reviewer/admin) before calling this.
+    """
+    from sqlalchemy.exc import IntegrityError
+
+    from app.core.graph.review_policy import USER_REQUESTED_REASON, default_review_policy
+
+    if not requester_id:
+        raise ReviewError("requester_id is required")
+    note = (note or "").strip()
+    if not note:
+        raise ReviewError("a note is required to request a review")
+    if len(note) > REQUEST_NOTE_MAX:
+        raise ReviewError(f"the note is longer than {REQUEST_NOTE_MAX} characters")
+
+    existing = db.query(HumanReview).filter(HumanReview.job_id == job.id).one_or_none()
+    if existing is not None:
+        return existing, False
+    result = db.query(Result).filter(Result.job_id == job.id).one_or_none()
+    if job.status != JobStatus.SUCCESS or result is None:
+        raise ReviewError("this job has no finished result to review")
+
+    claims, severity, table_version = _stored_claim_severities(db, job.id)
+    reasons = [USER_REQUESTED_REASON]
+    at = now or datetime.now(timezone.utc)
+    status_before = job.status.value
+    case = HumanReview(
+        job_id=job.id,
+        status=ReviewCaseStatus.OPEN,
+        reasons=reasons,
+        rules_fired=_rules_fired(reasons),
+        validation_errors=[],
+        proposed_label=result.label,
+        proposed_result=_proposed_from_result(result),
+        policy_version=default_review_policy().version,
+        pipeline_version=result.pipeline_version,
+        severity=severity,
+        claim_severities=claims,
+        severity_table_version=table_version,
+        created_at=at,
+    )
+    db.add(case)
+    try:
+        db.flush()
+    except IntegrityError:
+        # Another request (or the pipeline) opened the case first: return that one.
+        db.rollback()
+        existing = db.query(HumanReview).filter(HumanReview.job_id == job.id).one_or_none()
+        if existing is None:
+            raise
+        return existing, False
+    job.status = JobStatus.REVIEW_REQUIRED
+    db.add(AuditEvent(
+        actor_id=requester_id,
+        action=REVIEW_REQUESTED_ACTION,
+        entity_type="human_review",
+        entity_id=case.id,
+        job_id=job.id,
+        reason=note,
+        details={
+            "review_id": case.id,
+            "requester_role": requester_role,
+            "job_status_before": status_before,
+            "proposed_label": result.label,
+        },
+        created_at=at,
+    ))
+    db.commit()
+    db.refresh(case)
+    return case, True

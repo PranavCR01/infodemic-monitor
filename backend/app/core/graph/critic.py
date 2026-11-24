@@ -16,7 +16,8 @@ How it works:
   every cited ID was retrieved for this claim and is in only one list; verdict and
   citations agree, so "absence of evidence is not contradiction" is a code rule;
   strength: a SUPPORTED/CONTRADICTED verdict resting only on animal, lab, case-report
-  or opinion papers; nothing usable survived reranking). Then one LLM call covers what
+  or opinion papers; nothing usable survived reranking; an UNSUPPORTED verdict while
+  search budget is left, T30). Then one LLM call covers what
   code can't: claim fidelity, relevance, what the papers actually say, logic,
   completeness and stance consistency. A code finding can't be overruled by the model:
   the stricter decision wins (ESCALATE > RETRIEVE_MORE > REVISE_VERIFICATION > APPROVE).
@@ -142,9 +143,12 @@ def code_checks(
     evidence: Sequence[EvidenceRecord],
     *,
     retrieved: Sequence[EvidenceRecord] = (),
+    search_budget_left: bool = False,
 ) -> list[Finding]:
     """Defects that need no judgement. ``evidence`` is what the verifier was shown (the
-    claim's reranked evidence); ``retrieved`` is everything retrieved for the claim."""
+    claim's reranked evidence); ``retrieved`` is everything retrieved for the claim.
+    ``search_budget_left``: the claim has search rounds left (T30: UNSUPPORTED needs
+    the full budget, so it asks for another, broader search)."""
     by_id = {e.evidence_id: e for e in evidence}
     sup = list(verification.supporting_evidence_ids)
     con = list(verification.contradicting_evidence_ids)
@@ -170,6 +174,9 @@ def code_checks(
     elif v == Verdict.MIXED and not (sup and con):
         out.append(Finding("strength", CriticDecision.REVISE_VERIFICATION,
                            "MIXED needs at least one supporting and one contradicting paper"))
+    elif v == Verdict.UNSUPPORTED and (sup or con):
+        out.append(Finding("strength", CriticDecision.REVISE_VERIFICATION,
+                           "UNSUPPORTED means no paper tests the claim either way, so it cites none"))
 
     if v in (Verdict.SUPPORTED, Verdict.CONTRADICTED):
         deciding = [by_id[i] for i in (sup if v == Verdict.SUPPORTED else con) if i in by_id]
@@ -182,9 +189,13 @@ def code_checks(
                 "about people; the honest verdict may be INSUFFICIENT_EVIDENCE",
             ))
 
-    if not evidence and retrieved and v == Verdict.INSUFFICIENT_EVIDENCE:
+    if not evidence and retrieved and v in (Verdict.INSUFFICIENT_EVIDENCE, Verdict.UNSUPPORTED):
         out.append(Finding("relevance", CriticDecision.RETRIEVE_MORE,
                            "every retrieved paper was filtered out as off-topic; search again"))
+    if v == Verdict.UNSUPPORTED and search_budget_left:
+        out.append(Finding("search_budget", CriticDecision.RETRIEVE_MORE,
+                           "no evidence either way yet; an unsupported verdict needs the full search "
+                           "budget, so search again with broader terms"))
     return out
 
 
@@ -271,7 +282,10 @@ def review_claim(
     """Review one verdict. Never raises for model trouble."""
     cid = claim.claim_id
     errors: list[NodeError] = []
-    findings = code_checks(verification, evidence, retrieved=retrieved)
+    findings = code_checks(
+        verification, evidence, retrieved=retrieved,
+        search_budget_left=attempts < budgets.max_retrieval_attempts,
+    )
     decision = max((f.decision for f in findings), key=_SEVERITY.__getitem__, default=CriticDecision.APPROVE)
     issues = [f.issue for f in findings]
     checks = [f"code:{f.check}" for f in findings]
@@ -312,8 +326,10 @@ def review_claim(
                 requires_review = out.requires_review or out.decision == CriticDecision.ESCALATE
 
     if decision == CriticDecision.RETRIEVE_MORE and attempts >= budgets.max_retrieval_attempts:
+        outcome = ("the full search found nothing, so the claim stays unsupported"
+                   if verification.verdict == Verdict.UNSUPPORTED else "the claim abstains")
         issues.append(f"search budget exhausted ({attempts} of {budgets.max_retrieval_attempts} rounds): "
-                      "the claim abstains and goes to review")
+                      f"{outcome} and goes to review")
     elif decision == CriticDecision.REVISE_VERIFICATION and revisions >= budgets.max_verification_revisions:
         issues.append(f"revision budget exhausted ({revisions} of {budgets.max_verification_revisions}): "
                       "the claim abstains and goes to review")

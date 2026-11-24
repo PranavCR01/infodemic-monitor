@@ -161,6 +161,62 @@ def exhausted_claim_ids(state: PipelineState, budgets: Budgets = DEFAULT_BUDGETS
     return out
 
 
+# ------------------------------------------------------------------ unproven (T30)
+
+# §7 UNSUPPORTED applies only to efficacy claims: "X cures, treats, prevents or
+# reverses Y". Harm, mechanism and every other category stay INSUFFICIENT_EVIDENCE
+# ("no evidence of harm is not evidence of harm").
+UNPROVEN_CATEGORIES: frozenset[str] = frozenset({"treatment_efficacy", "prevention"})
+
+# Any error from these nodes for a claim means its search did not run as planned, so
+# "nothing was found" is not established (an outage must never read as "unproven").
+_RETRIEVAL_NODES = frozenset({PLAN_RETRIEVAL, RETRIEVE_EVIDENCE, RERANK_EVIDENCE})
+
+UNPROVEN_DOWNGRADE_LIMITATION = (
+    "no evidence was found, but the conditions for an unsupported verdict were not met "
+    "(efficacy claim, nothing cited, full search budget used, no search errors); "
+    "recorded as insufficient evidence"
+)
+
+
+def retrieval_incomplete(state: PipelineState, claim_id: str) -> bool:
+    """True if any search step recorded an error for this claim."""
+    return any(
+        e.claim_id == claim_id and e.node in _RETRIEVAL_NODES for e in state.get("errors") or []
+    )
+
+
+def unproven_category(state: PipelineState, claim_id: str) -> bool:
+    for c in state.get("claims") or []:
+        if c.claim_id == claim_id:
+            return c.requires_verification and (c.claim_category or "").strip() in UNPROVEN_CATEGORIES
+    return False
+
+
+def unproven_eligible(state: PipelineState, claim_id: str) -> bool:
+    """The claim may be judged UNSUPPORTED at all: an efficacy claim whose searches ran
+    without error. The verifier checks this before it accepts or produces the verdict."""
+    return unproven_category(state, claim_id) and not retrieval_incomplete(state, claim_id)
+
+
+def retrieval_budget_spent(state: PipelineState, claim_id: str, budgets: Budgets = DEFAULT_BUDGETS) -> bool:
+    """The claim's full search budget (initial search + reformulations) has been used."""
+    return state.get("retrieval_attempts", {}).get(claim_id, 0) >= budgets.max_retrieval_attempts
+
+
+def unproven_allowed(
+    state: PipelineState, v: VerificationResult, budgets: Budgets = DEFAULT_BUDGETS
+) -> bool:
+    """Whether an UNSUPPORTED verdict may reach the judge (§7, D1 = B): an efficacy
+    claim, nothing cited either way, the full search budget used, no search errors."""
+    return (
+        not v.supporting_evidence_ids
+        and not v.contradicting_evidence_ids
+        and unproven_eligible(state, v.claim_id)
+        and retrieval_budget_spent(state, v.claim_id, budgets)
+    )
+
+
 ABSTENTION_LIMITATION = (
     "the critic's objection was not resolved within the loop budget; "
     "verdict withheld (insufficient evidence)"
@@ -178,13 +234,20 @@ def verdicts_for_judge(
     can never decide the video label. (It also goes to review:
     ``critic_review_reasons``.) An ESCALATE keeps its verdict, so the reviewer sees a
     proposed label (§12). The stored ``verification_results`` are not changed.
+
+    T30: an UNSUPPORTED verdict that fails ``unproven_allowed`` (not an efficacy claim,
+    something cited, search budget not used up, or a search error) is passed on as
+    INSUFFICIENT_EVIDENCE.
     """
     out = dict(state.get("verification_results", {}))
     for cid in exhausted_claim_ids(state, budgets):
         v = out.get(cid)
-        if v is None or v.verdict == Verdict.INSUFFICIENT_EVIDENCE and not (
+        if v is None or v.verdict in (Verdict.INSUFFICIENT_EVIDENCE, Verdict.UNSUPPORTED) and not (
             v.supporting_evidence_ids or v.contradicting_evidence_ids
         ):
+            # Nothing cited: there is no objected-to evidence to withhold. An
+            # UNSUPPORTED claim whose budget ran out is exactly "the full search found
+            # nothing" (T30), so it keeps its verdict (gated below).
             continue
         out[cid] = v.model_copy(update={
             "verdict": Verdict.INSUFFICIENT_EVIDENCE,
@@ -192,6 +255,14 @@ def verdicts_for_judge(
             "contradicting_evidence_ids": [],
             "limitations": [*v.limitations, ABSTENTION_LIMITATION],
         })
+    # T30: an UNSUPPORTED verdict reaches the judge only if §7's conditions hold;
+    # otherwise the claim is judged INSUFFICIENT_EVIDENCE.
+    for cid, v in list(out.items()):
+        if v.verdict == Verdict.UNSUPPORTED and not unproven_allowed(state, v, budgets):
+            out[cid] = v.model_copy(update={
+                "verdict": Verdict.INSUFFICIENT_EVIDENCE,
+                "limitations": [*v.limitations, UNPROVEN_DOWNGRADE_LIMITATION],
+            })
     return out
 
 

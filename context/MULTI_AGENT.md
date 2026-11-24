@@ -1430,6 +1430,120 @@ shape; no label, verdict or stored row changes.
   before T26); (2) the reason wording is a draft for the project lead to edit (one table,
   `REASON_TEXT`). No migration in T26.
 
+## 7z. Unproven-Claim Verdict (T30, decision D1 = B; design §7, §9, §11, §12)
+
+Built by the automated build on 2026-11-23 (queue date 2026-11-24). Additive: the four
+labels are unchanged; existing responses keep every field.
+
+- **Where UNSUPPORTED comes from.** `Verdict.UNSUPPORTED` is new. Code decides when it is
+  possible, the model only proposes it: `routing.unproven_eligible` = the claim's
+  `claim_category` is `treatment_efficacy` or `prevention` (`routing.UNPROVEN_CATEGORIES`)
+  **and** no plan/retrieve/rerank error was recorded for it (an outage must never read as
+  "nothing was found"). For an eligible claim with no evidence at all the verifier sets
+  UNSUPPORTED without a model call; with papers, `verify_v3` lets the model answer
+  UNSUPPORTED (cite nothing). For any other claim the instructions say it is not allowed
+  and a model UNSUPPORTED is stored as INSUFFICIENT_EVIDENCE.
+- **"Full retrieval budget", read literally.** §6 only broadens a search on *empty*
+  results, so a claim whose first search returned off-topic papers would otherwise be
+  called unproven after one round. The critic's code checks now ask RETRIEVE_MORE for an
+  UNSUPPORTED verdict while search rounds are left (`code:search_budget`), so the
+  existing loop runs the remaining broader searches. `routing.verdicts_for_judge` then
+  passes UNSUPPORTED to the judge only if `unproven_allowed` holds (eligible, nothing
+  cited, `retrieval_attempts >= max_retrieval_attempts`); otherwise the judge sees
+  INSUFFICIENT_EVIDENCE with a limitation saying why. An UNSUPPORTED claim whose critic
+  still wanted more search when the budget ran out keeps its verdict (it is exactly "the
+  full search found nothing") instead of abstaining. Cost: up to two more PubMed rounds
+  and verifier/critic calls per such claim.
+- **Judge.** New rule `unproven` (the `decision_rule` value the frontend adapter expects) after `refuted_supported`, before DEBUNKING:
+  MISINFO with `misinfo_basis = unproven`, review reason `unproven_claim:<cid>` from
+  every such claim whichever rule wins, `mixed_video` also for unproven + refuted-false.
+  `FinalClassification.misinfo_basis` (contradicted / denies_supported / unproven) is set
+  for every MISINFO. Per-claim label (`claim_label`) ENDORSES + UNSUPPORTED → MISINFO.
+- **Deviation from §9's pseudocode:** `refuted_open` also includes UNSUPPORTED. A speaker
+  refuting an untested cure is the clearest possible debunk; leaving it out would drop
+  the `possible_debunk` flag such a claim raised as INSUFFICIENT_EVIDENCE before T30. It
+  only adds review; labels are as the pseudocode gives them.
+- **Review (§11):** UNSUPPORTED joins `UNCERTAIN_VERDICTS`, so `weak_evidence` fires on
+  the deciding claim and every "MISINFO (unproven)" video is reviewed (also via
+  `judge:unproven_claim`). Severity counts ENDORSES + UNSUPPORTED as MISINFO-relevant.
+- **Stored and returned:** `results.misinfo_basis` (migration **0013**, nullable; chained to 0010 until T28's 0011 and T31's 0012 merge, then `down_revision` becomes "0012"). `GET
+  /jobs/{id}/result` and `GET /jobs` add `misinfo_basis` and `label_display` ("MISINFO
+  (unproven)", "CANNOT RECOGNIZE"...) from `schemas.pipeline.display_label` (kept out of
+  the graph package so the jobs list doesn't import LangGraph). `label` is unchanged.
+- **Wording (frontend finding):** the judge's template no longer starts with label/enum
+  names ("CANNOT_RECOGNIZE:") or names claims by ID; claims are "the first claim" (by
+  extraction order) plus their text where they decide the label. Review notes in the
+  explanation use the same names. Unproven text: "no evidence supports this claim", never
+  "false". `explain_v2` tells the model the same rules, and `check_explanation` rejects a
+  model text with enum names, claim IDs, or "false" for an unproven label (template used).
+  Limitations (`c1: ...`, "Not judged: INSUFFICIENT_EVIDENCE c2") were left as they were.
+- **Review-reason text (queue row, added during the build):** `reason_details[].text`
+  (`app/services/review_reasons.py`) says "this claim" instead of a claim ID (the UI adds
+  the number from `claim_id`); `GENERIC_TEXT` is a plain sentence with no rule code;
+  validation and guardrail texts no longer show check or node names, and the
+  prompt-injection text names the place in plain words ("the speech transcript"). The
+  internal names stay in `detail` and `raw`. New text for `unproven_claim`.
+- **Prompts:** `verify_v3`, `explain_v2` (routing.yaml updated); v2/v1 files kept.
+- **Eval data:** two synthetic UNSUPPORTED examples (v21, v22) added to the verifier set
+  so it covers every verdict; heuristic baseline regenerated (the floor never answers
+  UNSUPPORTED). `metrics.VERDICTS` and `dataset.CLAIM_TRUTHS` accept UNSUPPORTED.
+- **Judge cross-check (T24), re-pinned to the golden set @ 022ac44** (D1 re-derivation,
+  at the coordinating session's request): fixture and vendored `judge.py` regenerated with
+  `scripts/judge_crosscheck.py --write-fixture`. The harness reads the new golden judge
+  (4 return values, `<kind>:<cid>` reasons) and old one, carries `claim_category`, treats
+  golden verdicts as final (full search done), and now compares `misinfo_basis` too.
+  Result: 181 videos (162 in scope); label, basis and deciding claims agree on all 162;
+  33 MISINFO on both sides (25 contradicted, 7 unproven, 1 denies_supported). Remaining
+  differences are backend-only review reasons: `weak_evidence_on_non_deciding_claim` (77
+  reasons, 35 videos; the documented D4 extension) and the new
+  `weak_evidence_covered_by_judge_reason` (17 / 8: §11's weak-evidence trigger on a
+  deciding UNSUPPORTED or MIXED claim, which the golden judge covers with its
+  `unproven_claim` / `mixed_evidence` reason). The refuted-UNSUPPORTED possible-debunk
+  deviation does not occur in the golden set; it is pinned by a synthetic test.
+- **`decision_rule`:** the new rule's value is `"unproven"`, the string the frontend
+  adapter expects (the constant is still `RULE_ENDORSED_UNSUPPORTED`).
+- **Left for a person:** (1) migration 0013 follows 0010 until #81 (0011) and #84
+  (0012) merge; then set its down_revision to "0012" (pointing at "0012" now would break
+  `alembic upgrade head` and CI on this branch); (2) the frontend should show
+  `label_display`; (3) whether limitations should also drop claim IDs.
+## 7y. Request Review (T32, no issue; design §11, §12, §17)
+
+Built by the automated build on 2026-11-24 at the frontend session's request (lead, D7).
+Additive: no migration, no existing field or response changes shape.
+
+- **Route:** `POST /v1/jobs/{job_id}/review-request` with body `{"note": "..."}` (in
+  `app/api/routers/reviews.py`; service `review_service.request_review`). 201 with
+  `created: true` when a case is opened; 200 with `created: false` and the existing case
+  when the job already has one (opened by the review rule or by an earlier request, open
+  or resolved); nothing is logged or changed on that path, and the first request's note
+  stands. Keyed by job, not video: the result payload already carries `job_id`.
+- **Who:** anyone who may read the job through `app/api/ownership.owned_job_or_404`
+  (owner, or reviewer/admin, per T27/T33), else 404, same as a missing job. No separate
+  role check in the route, so T28/T33's owner rule (including "NULL-owner rows admin only")
+  applies here unchanged. **Until T28/T33 fill in `can_view_job`, any signed-in user can
+  request review on any job**: same gap as every other read.
+- **Note:** required, stripped, 1–2000 characters (`REQUEST_NOTE_MAX`); the body forbids
+  extra fields, so the requester can't be named in it. Stored as the `reason` of a
+  `review_requested` audit event (actor = token subject, requester role, job status
+  before, proposed label). No column was added for it: reviewers get it as
+  `request {requested_by, note, requested_at}` on `GET /v1/reviews/{id}` (null for
+  rule-opened cases) and in the audit trail.
+- **Which jobs:** status SUCCESS with a stored result; anything else (pending, running,
+  failed, no result) is 409. The job moves to REVIEW_REQUIRED (§12: review is a state),
+  so the reviewer decision flow from T27 works unchanged (approve/correct → SUCCESS, etc.).
+  The label and verdicts are not touched.
+- **The case:** reason `user_requested` (rule `user_requested`; `rule_of` maps it, but it
+  is not in `REVIEW_RULES`: no automatic rule raises it). Proposed result = the stored
+  result row (`source: "stored_result"`), since there's no graph state to dump. Severity
+  is computed from the stored claim/stance/verification rows with the same table as
+  `assess`, so the case sorts in the queue like any other and claims can be overridden;
+  no claim rows (single-call path) → no severity. An unknown stored verdict counts as not
+  MISINFO-relevant rather than erroring.
+- **Wording:** `REASON_TEXT["user_requested"]` = "Someone asked for a person to check this
+  result." (plain, no rule code; T30 is reworking the rest of that table).
+- **Race:** two concurrent first requests: the unique `human_reviews.job_id` makes the
+  second insert fail; it rolls back and returns the winner's case.
+- **The requester's response** omits the proposed result and audit trail (reviewer data).
 ## 7x. Signed Playback URL (T29, no issue; design §12, §15, §17)
 
 - **Endpoint:** `GET /v1/jobs/{job_id}/playback` returns `PlaybackUrlResponse`
@@ -1658,6 +1772,11 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   (404 for others), legacy NULL-owner rows admin only, per-user duplicate detection,
   `submitted_by` on jobs, results and review cases, own-video decisions refused,
   `scripts/assign_owners.py` for legacy rows. 1270 passed, 0 skipped. Decisions in §7z.
+- **2026-11-24**: T32 (no issue; design §11, §12, §17) request review by the automated
+  build: `POST /v1/jobs/{job_id}/review-request` opens a `user_requested` case with a
+  required note (audit-logged), idempotent per job, access via `ownership.py` (404 for
+  others). No migration. 1204 passed, 0 skipped locally with Postgres 16 + pgvector.
+  Real per-user restriction waits for T28/T33. Decisions in §7y.
 - **2026-11-23**: T31 (no issue; design §6, §8, §12) "How we searched" per claim by the
   automated build: `retrieve_evidence` records a `search_trail` per round (queries run,
   hits, filters, dedup, cache, references consulted); persisted to `claims.search_trail`
@@ -1678,6 +1797,13 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   `/v1/me`. Roles (analyst/reviewer/admin) only from the JWT's `app_metadata`, enforced
   server-side. No migration. 1107 passed, 0 skipped locally with Postgres 16 + pgvector.
   Per-user ownership (videos.owner) still missing. Decisions in §7u.
+
+- **2026-11-23**: T30 (no issue; D1 = B; design §7, §9, §11, §12) unproven-claim verdict
+  by the automated build: UNSUPPORTED for efficacy claims after the full search budget
+  finds nothing (code-gated; search errors rule it out); judge rule → MISINFO with
+  `misinfo_basis` unproven, always reviewed; `results.misinfo_basis` (migration 0013) and
+  `label_display` in the result API and jobs list; judge explanations in display wording.
+  Review-reason text in analyst wording. Decisions in §7z.
 
 - **2026-11-24**: T26 (no issue; design §12, §17) result API fields by the automated
   build: stance rationale and quoted segments, claim modality and source segments,

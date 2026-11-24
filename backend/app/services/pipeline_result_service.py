@@ -71,6 +71,7 @@ def _upsert_result(db: Session, job_id: str, fusion: FusionResult, outcome: Any,
         fallback_reason=outcome.fallback_reason,
         decision_rule=getattr(final, "decision_rule", None),
         deciding_claim_ids=list(final.claim_ids) if final is not None else None,
+        misinfo_basis=getattr(final, "misinfo_basis", None),
     )
     result = db.query(Result).filter(Result.job_id == job_id).one_or_none()
     if result is None:

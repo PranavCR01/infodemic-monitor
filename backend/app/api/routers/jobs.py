@@ -47,6 +47,9 @@ class JobListItem(BaseModel):
     # T33: who started the job (JWT ``sub``; NULL on legacy jobs). Reviewers and admins
     # see other users' jobs in the list; this tells them whose.
     submitted_by: Optional[str] = None
+    # T30
+    misinfo_basis: Optional[str] = None
+    label_display: Optional[str] = None
 
 
 class JobListPage(BaseModel):

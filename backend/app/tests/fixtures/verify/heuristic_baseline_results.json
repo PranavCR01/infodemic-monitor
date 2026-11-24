@@ -1,7 +1,7 @@
 {
-  "n": 20,
-  "accuracy": 0.85,
-  "macro_f1": 0.8654545454545455,
+  "n": 22,
+  "accuracy": 0.7727272727272727,
+  "macro_f1": 0.698989898989899,
   "per_class": {
     "SUPPORTED": {
       "precision": 0.5714285714285714,
@@ -21,10 +21,16 @@
       "f1": 0.8,
       "support": 3
     },
+    "UNSUPPORTED": {
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "support": 2
+    },
     "INSUFFICIENT_EVIDENCE": {
-      "precision": 1.0,
+      "precision": 0.6666666666666666,
       "recall": 0.6666666666666666,
-      "f1": 0.8,
+      "f1": 0.6666666666666666,
       "support": 6
     },
     "NOT_VERIFIABLE": {
@@ -39,6 +45,7 @@
       "SUPPORTED": 4,
       "CONTRADICTED": 0,
       "MIXED": 0,
+      "UNSUPPORTED": 0,
       "INSUFFICIENT_EVIDENCE": 0,
       "NOT_VERIFIABLE": 0
     },
@@ -46,6 +53,7 @@
       "SUPPORTED": 0,
       "CONTRADICTED": 4,
       "MIXED": 0,
+      "UNSUPPORTED": 0,
       "INSUFFICIENT_EVIDENCE": 0,
       "NOT_VERIFIABLE": 0
     },
@@ -53,13 +61,23 @@
       "SUPPORTED": 1,
       "CONTRADICTED": 0,
       "MIXED": 2,
+      "UNSUPPORTED": 0,
       "INSUFFICIENT_EVIDENCE": 0,
+      "NOT_VERIFIABLE": 0
+    },
+    "UNSUPPORTED": {
+      "SUPPORTED": 0,
+      "CONTRADICTED": 0,
+      "MIXED": 0,
+      "UNSUPPORTED": 0,
+      "INSUFFICIENT_EVIDENCE": 2,
       "NOT_VERIFIABLE": 0
     },
     "INSUFFICIENT_EVIDENCE": {
       "SUPPORTED": 2,
       "CONTRADICTED": 0,
       "MIXED": 0,
+      "UNSUPPORTED": 0,
       "INSUFFICIENT_EVIDENCE": 4,
       "NOT_VERIFIABLE": 0
     },
@@ -67,13 +85,14 @@
       "SUPPORTED": 0,
       "CONTRADICTED": 0,
       "MIXED": 0,
+      "UNSUPPORTED": 0,
       "INSUFFICIENT_EVIDENCE": 0,
       "NOT_VERIFIABLE": 3
     }
   },
   "insufficient_called_contradicted": 0,
   "citation_validity": 1.0,
-  "citations_match_gold": 0.85,
+  "citations_match_gold": 0.8636363636363636,
   "predictions": [
     {
       "id": "v01",
@@ -264,6 +283,22 @@
       "category": "not_verifiable",
       "gold": "NOT_VERIFIABLE",
       "pred": "NOT_VERIFIABLE",
+      "supporting": [],
+      "contradicting": []
+    },
+    {
+      "id": "v21",
+      "category": "unsupported_efficacy_untested",
+      "gold": "UNSUPPORTED",
+      "pred": "INSUFFICIENT_EVIDENCE",
+      "supporting": [],
+      "contradicting": []
+    },
+    {
+      "id": "v22",
+      "category": "unsupported_prevention_untested",
+      "gold": "UNSUPPORTED",
+      "pred": "INSUFFICIENT_EVIDENCE",
       "supporting": [],
       "contradicting": []
     }

@@ -1,7 +1,7 @@
 """per-user video ownership (videos.user_id) and per-user duplicate detection
 
 Revision ID: 0014
-Revises: 0012
+Revises: 0013
 Create Date: 2026-11-24
 
 Target design §15 ("a user sees only their own videos, jobs and results") and §17
@@ -18,9 +18,8 @@ second owner column is added to ``jobs``.
   a plain index plus a unique (``user_id``, ``file_hash``) constraint, so a second user
   uploading the same file gets their own video instead of learning of the first upload.
 
-Numbering: 0012 is T31's (claims.search_trail). 0013 is reserved by T30 (PR #86, open);
-if it lands a 0013 migration first, set ``down_revision`` here to "0013" so
-``alembic heads`` shows one head.
+Numbering: 0011 is T28, 0012 is T31 (claims.search_trail), 0013 is T30
+(results.misinfo_basis); this one follows 0013.
 
 Downgrade restores the global unique index, which fails if two users now have the same
 file; remove the later duplicates first.
@@ -33,7 +32,7 @@ import sqlalchemy as sa
 from alembic import op
 
 revision: str = "0014"
-down_revision: Union[str, None] = "0012"
+down_revision: Union[str, None] = "0013"
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 

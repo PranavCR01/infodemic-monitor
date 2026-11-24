@@ -3,6 +3,7 @@ from typing import Iterable, Optional
 from sqlalchemy import func, or_
 from sqlalchemy.orm import Session
 
+from app.core.schemas.pipeline import display_label
 from app.db.models.job import Job
 from app.db.models.result import Result
 from app.db.models.video import Video
@@ -24,6 +25,9 @@ def _row(job: Job, video: Video, result: Optional[Result]) -> dict:
         "step": job_events.current_step(job),
         "updated_at": job.updated_at.isoformat() if job.updated_at else None,
         "submitted_by": job.user_id,  # T33
+        # T30: why a MISINFO label was given, and the label as shown.
+        "misinfo_basis": result.misinfo_basis if result else None,
+        "label_display": display_label(result.label, result.misinfo_basis) if result else None,
     }
 
 

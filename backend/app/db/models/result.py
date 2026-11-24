@@ -34,6 +34,9 @@ class Result(Base):
     fallback_reason: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     decision_rule: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
     deciding_claim_ids: Mapped[Optional[list]] = mapped_column(JSON, nullable=True)
+    # Added by 0013 (T30): for MISINFO, why: "contradicted", "denies_supported" or
+    # "unproven" (§9). NULL otherwise, on older rows and on the single-call path.
+    misinfo_basis: Mapped[Optional[str]] = mapped_column(String(32), nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )

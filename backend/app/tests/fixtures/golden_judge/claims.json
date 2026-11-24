@@ -1,11 +1,11 @@
 {
  "source": {
   "ref": "data/golden-label-set",
-  "commit": "45244b04737fecb19cf05c04678ea761544bbed5",
+  "commit": "022ac44f243c705c8ac438588b10a74b9151cc95",
   "judge_path": "research/claim-level/dataset/scripts/judge.py",
-  "judge_blob_sha": "a341b148f2f13e178738cefd23a6b9a2d678764a",
-  "videos_blob_sha": "259f49874ed5aded29e36406dc629cc4c2010027",
-  "claims_blob_sha": "adf7030260998f775fd40bb4f2fd1086db22c381",
+  "judge_blob_sha": "644ad7201bc82019bbee704458665527f49829f1",
+  "videos_blob_sha": "188f118e48a5aca6d992201aea5625eb5a3be96e",
+  "claims_blob_sha": "88fa0d8dbc7829fd5cf63a29e420cff33f968c82",
   "note": "Claim-level fields only (stance, verdict, cited evidence IDs) and the recorded video label / review_reasons. Labels are data under human review (PR #62), not ground truth. Regenerate with scripts/judge_crosscheck.py --write-fixture."
  },
  "videos": [
@@ -14,6 +14,7 @@
    "out_of_scope": true,
    "recorded_label": "CANNOT_RECOGNIZE",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": []
   },
   {
@@ -21,13 +22,17 @@
    "out_of_scope": true,
    "recorded_label": "CANNOT_RECOGNIZE",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": []
   },
   {
    "video_id": "v03",
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
-   "recorded_review_reasons": [],
+   "recorded_review_reasons": [
+    "mixed_evidence:c13"
+   ],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -210,6 +215,7 @@
    "out_of_scope": true,
    "recorded_label": "CANNOT_RECOGNIZE",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": []
   },
   {
@@ -217,6 +223,7 @@
    "out_of_scope": true,
    "recorded_label": "CANNOT_RECOGNIZE",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": []
   },
   {
@@ -224,13 +231,20 @@
    "out_of_scope": true,
    "recorded_label": "CANNOT_RECOGNIZE",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": []
   },
   {
    "video_id": "v07",
    "out_of_scope": false,
    "recorded_label": "DEBUNKING",
-   "recorded_review_reasons": [],
+   "recorded_review_reasons": [
+    "possible_debunk:c1",
+    "possible_debunk:c2",
+    "possible_debunk:c4",
+    "possible_debunk:c5"
+   ],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -281,6 +295,7 @@
    "out_of_scope": true,
    "recorded_label": "CANNOT_RECOGNIZE",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": []
   },
   {
@@ -288,6 +303,7 @@
    "out_of_scope": true,
    "recorded_label": "CANNOT_RECOGNIZE",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": []
   },
   {
@@ -295,13 +311,18 @@
    "out_of_scope": true,
    "recorded_label": "CANNOT_RECOGNIZE",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": []
   },
   {
    "video_id": "v11",
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
-   "recorded_review_reasons": [],
+   "recorded_review_reasons": [
+    "mixed_evidence:c1",
+    "mixed_evidence:c2"
+   ],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -343,11 +364,8 @@
    "video_id": "v12",
    "out_of_scope": false,
    "recorded_label": "CANNOT_RECOGNIZE",
-   "recorded_review_reasons": [
-    "deciding claim c1 is INSUFFICIENT_EVIDENCE",
-    "deciding claim c2 is INSUFFICIENT_EVIDENCE",
-    "deciding claim c3 is INSUFFICIENT_EVIDENCE"
-   ],
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -378,10 +396,8 @@
    "video_id": "v13",
    "out_of_scope": false,
    "recorded_label": "CANNOT_RECOGNIZE",
-   "recorded_review_reasons": [
-    "deciding claim c1 is INSUFFICIENT_EVIDENCE",
-    "deciding claim c3 is INSUFFICIENT_EVIDENCE"
-   ],
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -411,6 +427,7 @@
    "out_of_scope": true,
    "recorded_label": "CANNOT_RECOGNIZE",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": []
   },
   {
@@ -418,6 +435,7 @@
    "out_of_scope": true,
    "recorded_label": "CANNOT_RECOGNIZE",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": []
   },
   {
@@ -425,6 +443,7 @@
    "out_of_scope": true,
    "recorded_label": "CANNOT_RECOGNIZE",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": []
   },
   {
@@ -432,6 +451,7 @@
    "out_of_scope": false,
    "recorded_label": "CANNOT_RECOGNIZE",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -447,6 +467,7 @@
    "out_of_scope": false,
    "recorded_label": "MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "contradicted",
    "claims": [
     {
      "claim_id": "c1",
@@ -521,6 +542,7 @@
    "out_of_scope": false,
    "recorded_label": "DEBUNKING",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -571,40 +593,40 @@
   {
    "video_id": "v20",
    "out_of_scope": false,
-   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_label": "MISINFO",
    "recorded_review_reasons": [
-    "deciding claim c1 is INSUFFICIENT_EVIDENCE",
-    "deciding claim c2 is INSUFFICIENT_EVIDENCE",
-    "deciding claim c3 is INSUFFICIENT_EVIDENCE",
-    "deciding claim c4 is INSUFFICIENT_EVIDENCE",
-    "deciding claim c5 is INSUFFICIENT_EVIDENCE"
+    "unproven_claim:c1",
+    "unproven_claim:c2",
+    "unproven_claim:c3",
+    "unproven_claim:c4"
    ],
+   "recorded_basis": "unproven",
    "claims": [
     {
      "claim_id": "c1",
      "speaker_stance": "ENDORSES",
-     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "claim_verdict": "UNSUPPORTED",
      "evidence_supporting": [],
      "evidence_contradicting": []
     },
     {
      "claim_id": "c2",
      "speaker_stance": "ENDORSES",
-     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "claim_verdict": "UNSUPPORTED",
      "evidence_supporting": [],
      "evidence_contradicting": []
     },
     {
      "claim_id": "c3",
      "speaker_stance": "ENDORSES",
-     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "claim_verdict": "UNSUPPORTED",
      "evidence_supporting": [],
      "evidence_contradicting": []
     },
     {
      "claim_id": "c4",
      "speaker_stance": "ENDORSES",
-     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "claim_verdict": "UNSUPPORTED",
      "evidence_supporting": [],
      "evidence_contradicting": []
     },
@@ -624,6 +646,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -681,6 +704,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -741,6 +765,7 @@
    "out_of_scope": false,
    "recorded_label": "DEBUNKING",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -777,7 +802,12 @@
    "video_id": "v24",
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
-   "recorded_review_reasons": [],
+   "recorded_review_reasons": [
+    "possible_debunk:c1",
+    "mixed_evidence:c1",
+    "mixed_evidence:c3"
+   ],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -827,6 +857,7 @@
    "out_of_scope": false,
    "recorded_label": "DEBUNKING",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -862,6 +893,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -922,6 +954,7 @@
    "out_of_scope": false,
    "recorded_label": "MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "contradicted",
    "claims": [
     {
      "claim_id": "c1",
@@ -994,6 +1027,7 @@
    "out_of_scope": false,
    "recorded_label": "MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "contradicted",
    "claims": [
     {
      "claim_id": "c1",
@@ -1043,10 +1077,8 @@
    "video_id": "v29",
    "out_of_scope": false,
    "recorded_label": "CANNOT_RECOGNIZE",
-   "recorded_review_reasons": [
-    "deciding claim c1 is INSUFFICIENT_EVIDENCE",
-    "claim c1 stance is UNCLEAR"
-   ],
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1061,7 +1093,10 @@
    "video_id": "v30",
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
-   "recorded_review_reasons": [],
+   "recorded_review_reasons": [
+    "possible_debunk:c1"
+   ],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1106,7 +1141,12 @@
    "video_id": "v31",
    "out_of_scope": false,
    "recorded_label": "DEBUNKING",
-   "recorded_review_reasons": [],
+   "recorded_review_reasons": [
+    "possible_debunk:c2",
+    "possible_debunk:c3",
+    "possible_debunk:c4"
+   ],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1155,6 +1195,7 @@
    "out_of_scope": false,
    "recorded_label": "DEBUNKING",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1222,6 +1263,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1267,9 +1309,8 @@
    "video_id": "v34",
    "out_of_scope": false,
    "recorded_label": "CANNOT_RECOGNIZE",
-   "recorded_review_reasons": [
-    "deciding claim c1 is INSUFFICIENT_EVIDENCE"
-   ],
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1287,11 +1328,8 @@
    "video_id": "v35",
    "out_of_scope": false,
    "recorded_label": "CANNOT_RECOGNIZE",
-   "recorded_review_reasons": [
-    "deciding claim c1 is INSUFFICIENT_EVIDENCE",
-    "deciding claim c2 is INSUFFICIENT_EVIDENCE",
-    "deciding claim c3 is INSUFFICIENT_EVIDENCE"
-   ],
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1324,13 +1362,8 @@
    "video_id": "v36",
    "out_of_scope": false,
    "recorded_label": "CANNOT_RECOGNIZE",
-   "recorded_review_reasons": [
-    "deciding claim c1 is INSUFFICIENT_EVIDENCE",
-    "deciding claim c2 is INSUFFICIENT_EVIDENCE",
-    "deciding claim c3 is INSUFFICIENT_EVIDENCE",
-    "deciding claim c4 is INSUFFICIENT_EVIDENCE",
-    "deciding claim c5 is INSUFFICIENT_EVIDENCE"
-   ],
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1376,7 +1409,11 @@
    "video_id": "v37",
    "out_of_scope": false,
    "recorded_label": "MISINFO",
-   "recorded_review_reasons": [],
+   "recorded_review_reasons": [
+    "unproven_claim:c4",
+    "mixed_evidence:c2"
+   ],
+   "recorded_basis": "contradicted",
    "claims": [
     {
      "claim_id": "c1",
@@ -1410,7 +1447,7 @@
     {
      "claim_id": "c4",
      "speaker_stance": "ENDORSES",
-     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "claim_verdict": "UNSUPPORTED",
      "evidence_supporting": [],
      "evidence_contradicting": []
     }
@@ -1421,6 +1458,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1448,7 +1486,13 @@
    "video_id": "v39",
    "out_of_scope": false,
    "recorded_label": "DEBUNKING",
-   "recorded_review_reasons": [],
+   "recorded_review_reasons": [
+    "possible_debunk:c2",
+    "possible_debunk:c3",
+    "possible_debunk:c4",
+    "mixed_evidence:c3"
+   ],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1502,6 +1546,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1527,6 +1572,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1553,6 +1599,7 @@
    "out_of_scope": false,
    "recorded_label": "MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "contradicted",
    "claims": [
     {
      "claim_id": "c1",
@@ -1607,15 +1654,15 @@
    "out_of_scope": true,
    "recorded_label": "CANNOT_RECOGNIZE",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": []
   },
   {
    "video_id": "v44",
    "out_of_scope": false,
    "recorded_label": "CANNOT_RECOGNIZE",
-   "recorded_review_reasons": [
-    "deciding claim c2 is INSUFFICIENT_EVIDENCE"
-   ],
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1638,6 +1685,7 @@
    "out_of_scope": true,
    "recorded_label": "CANNOT_RECOGNIZE",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": []
   },
   {
@@ -1645,6 +1693,7 @@
    "out_of_scope": true,
    "recorded_label": "CANNOT_RECOGNIZE",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": []
   },
   {
@@ -1652,6 +1701,7 @@
    "out_of_scope": true,
    "recorded_label": "CANNOT_RECOGNIZE",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": []
   },
   {
@@ -1659,6 +1709,7 @@
    "out_of_scope": true,
    "recorded_label": "CANNOT_RECOGNIZE",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": []
   },
   {
@@ -1666,6 +1717,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1709,6 +1761,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1726,6 +1779,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1757,6 +1811,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1785,6 +1840,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1824,10 +1880,8 @@
    "video_id": "v54",
    "out_of_scope": false,
    "recorded_label": "CANNOT_RECOGNIZE",
-   "recorded_review_reasons": [
-    "deciding claim c1 is INSUFFICIENT_EVIDENCE",
-    "deciding claim c2 is INSUFFICIENT_EVIDENCE"
-   ],
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1859,6 +1913,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1892,6 +1947,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1920,6 +1976,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1955,9 +2012,8 @@
    "video_id": "v58",
    "out_of_scope": false,
    "recorded_label": "CANNOT_RECOGNIZE",
-   "recorded_review_reasons": [
-    "deciding claim c1 is INSUFFICIENT_EVIDENCE"
-   ],
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -1976,6 +2032,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2004,6 +2061,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2041,8 +2099,11 @@
    "out_of_scope": false,
    "recorded_label": "MISINFO",
    "recorded_review_reasons": [
-    "claim c3 has both supporting and contradicting evidence"
+    "mixed_evidence:c2",
+    "mixed_evidence:c4",
+    "evidence_both_sides:c3"
    ],
+   "recorded_basis": "contradicted",
    "claims": [
     {
      "claim_id": "c1",
@@ -2096,6 +2157,7 @@
    "out_of_scope": false,
    "recorded_label": "DEBUNKING",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2125,6 +2187,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2192,9 +2255,10 @@
    "out_of_scope": false,
    "recorded_label": "CANNOT_RECOGNIZE",
    "recorded_review_reasons": [
-    "possible debunk of an unsettled claim",
-    "deciding claim c1 is INSUFFICIENT_EVIDENCE"
+    "possible_debunk:c1",
+    "deciding_insufficient:c1"
    ],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2224,11 +2288,13 @@
    "out_of_scope": false,
    "recorded_label": "CANNOT_RECOGNIZE",
    "recorded_review_reasons": [
-    "possible debunk of an unsettled claim",
-    "deciding claim c1 is INSUFFICIENT_EVIDENCE",
-    "deciding claim c2 is MIXED",
-    "claim c2 has both supporting and contradicting evidence"
+    "possible_debunk:c1",
+    "possible_debunk:c2",
+    "mixed_evidence:c2",
+    "deciding_insufficient:c1",
+    "evidence_both_sides:c2"
    ],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2261,7 +2327,10 @@
    "video_id": "v66",
    "out_of_scope": false,
    "recorded_label": "DEBUNKING",
-   "recorded_review_reasons": [],
+   "recorded_review_reasons": [
+    "mixed_evidence:c3"
+   ],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2304,6 +2373,7 @@
    "out_of_scope": false,
    "recorded_label": "DEBUNKING",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2334,7 +2404,10 @@
    "video_id": "v68",
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
-   "recorded_review_reasons": [],
+   "recorded_review_reasons": [
+    "possible_debunk:c1"
+   ],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2371,6 +2444,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2447,7 +2521,11 @@
    "video_id": "v70",
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
-   "recorded_review_reasons": [],
+   "recorded_review_reasons": [
+    "possible_debunk:c3",
+    "mixed_evidence:c4"
+   ],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2494,7 +2572,11 @@
    "video_id": "v71",
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
-   "recorded_review_reasons": [],
+   "recorded_review_reasons": [
+    "mixed_evidence:c1",
+    "mixed_evidence:c6"
+   ],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2564,6 +2646,7 @@
    "out_of_scope": false,
    "recorded_label": "MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "contradicted",
    "claims": [
     {
      "claim_id": "c1",
@@ -2616,6 +2699,7 @@
    "out_of_scope": false,
    "recorded_label": "DEBUNKING",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2661,9 +2745,8 @@
    "video_id": "v74",
    "out_of_scope": false,
    "recorded_label": "CANNOT_RECOGNIZE",
-   "recorded_review_reasons": [
-    "deciding claim c1 is INSUFFICIENT_EVIDENCE"
-   ],
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2686,6 +2769,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2729,6 +2813,7 @@
    "out_of_scope": false,
    "recorded_label": "NO_MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2753,7 +2838,10 @@
    "video_id": "v77",
    "out_of_scope": false,
    "recorded_label": "MISINFO",
-   "recorded_review_reasons": [],
+   "recorded_review_reasons": [
+    "mixed_evidence:c1"
+   ],
+   "recorded_basis": "contradicted",
    "claims": [
     {
      "claim_id": "c1",
@@ -2810,6 +2898,7 @@
    "out_of_scope": false,
    "recorded_label": "MISINFO",
    "recorded_review_reasons": [],
+   "recorded_basis": "contradicted",
    "claims": [
     {
      "claim_id": "c1",
@@ -2838,6 +2927,7 @@
    "out_of_scope": false,
    "recorded_label": "DEBUNKING",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2876,6 +2966,7 @@
    "out_of_scope": false,
    "recorded_label": "DEBUNKING",
    "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2909,9 +3000,8 @@
    "video_id": "v81",
    "out_of_scope": false,
    "recorded_label": "CANNOT_RECOGNIZE",
-   "recorded_review_reasons": [
-    "deciding claim c1 is INSUFFICIENT_EVIDENCE"
-   ],
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2926,7 +3016,10 @@
    "video_id": "v82",
    "out_of_scope": false,
    "recorded_label": "DEBUNKING",
-   "recorded_review_reasons": [],
+   "recorded_review_reasons": [
+    "possible_debunk:c3"
+   ],
+   "recorded_basis": "",
    "claims": [
     {
      "claim_id": "c1",
@@ -2954,6 +3047,3301 @@
      "claim_verdict": "INSUFFICIENT_EVIDENCE",
      "evidence_supporting": [],
      "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v83",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": []
+  },
+  {
+   "video_id": "v84",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [
+    "unproven_claim:c1"
+   ],
+   "recorded_basis": "unproven",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "UNSUPPORTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v85",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [
+    "mixed_evidence:c2"
+   ],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "MIXED",
+     "evidence_supporting": [
+      "PMID:25474326",
+      "PMID:37844409"
+     ],
+     "evidence_contradicting": [
+      "PMID:33179850"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v86",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [
+    "unproven_claim:c1"
+   ],
+   "recorded_basis": "contradicted",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "UNSUPPORTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:38169370",
+      "PMID:22229120"
+     ]
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "UNCLEAR",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:22229120"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:9660367"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v87",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "contradicted",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:29528501"
+     ]
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:19571048",
+      "PMID:39761023"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:26092033",
+      "PMID:39362658"
+     ]
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v88",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "contradicted",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:7477165",
+      "PMID:1836712"
+     ]
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:7477165"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v89",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [
+    "possible_debunk:c1",
+    "deciding_insufficient:c1"
+   ],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "REFUTES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v90",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:33515005"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:33515005"
+     ],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v91",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "contradicted",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:33127255"
+     ]
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:39536137"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v92",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v93",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "contradicted",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:37884492"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v94",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v95",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "QUOTES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:39371035"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:22952197",
+      "PMID:25249493"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v96",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v97",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:39081652"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:39081652"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:39081652"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:29897866"
+     ],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v98",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:18334784",
+      "PMID:35538270"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:35538270",
+      "PMID:18334784"
+     ],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v99",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [
+    "mixed_evidence:c2"
+   ],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "MIXED",
+     "evidence_supporting": [
+      "PMID:41013858"
+     ],
+     "evidence_contradicting": [
+      "PMID:40881928"
+     ]
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:40881928"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:41013858"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c6",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c7",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v100",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:39326417"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v101",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [
+    "possible_debunk:c1",
+    "deciding_insufficient:c1"
+   ],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "REFUTES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v102",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [
+    "possible_debunk:c3",
+    "possible_debunk:c4",
+    "possible_debunk:c5"
+   ],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:26280593"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "REFUTES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "REFUTES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "REFUTES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c6",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v103",
+   "out_of_scope": false,
+   "recorded_label": "DEBUNKING",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "REFUTES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:16681473"
+     ]
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v104",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [
+    "possible_debunk:c1",
+    "deciding_insufficient:c1"
+   ],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "REFUTES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v105",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [
+    "possible_debunk:c1"
+   ],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "REFUTES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:38363072"
+     ],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v106",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v107",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [
+    "mixed_evidence:c2"
+   ],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:35061240"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "MIXED",
+     "evidence_supporting": [
+      "PMID:41982480"
+     ],
+     "evidence_contradicting": [
+      "PMID:33484383"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v108",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "REFUTES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v109",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "contradicted",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:27633186",
+      "PMID:30615985"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:27633186",
+      "PMID:31422062"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:31422062",
+      "PMID:37952131"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:31422062"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:38018310",
+      "PMID:40437949"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c6",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:38555109",
+      "PMID:40499738"
+     ]
+    },
+    {
+     "claim_id": "c7",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:42308439",
+      "PMID:39764175"
+     ]
+    },
+    {
+     "claim_id": "c8",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:35724304"
+     ]
+    },
+    {
+     "claim_id": "c9",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:27633186",
+      "PMID:31422062"
+     ]
+    },
+    {
+     "claim_id": "c10",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c11",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:35441470"
+     ],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v110",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:33484383",
+      "PMID:35061240"
+     ],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v111",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "contradicted",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:10805507"
+     ]
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:29771297"
+     ]
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:22104320"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:36811595",
+      "PMID:28077199"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v112",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "contradicted",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:33813635",
+      "PMID:28353094"
+     ]
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:32548570",
+      "PMID:36367492"
+     ]
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:32548570",
+      "PMID:36367492"
+     ]
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:33813635"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v113",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [
+    "unproven_claim:c1",
+    "unproven_claim:c2",
+    "unproven_claim:c3",
+    "unproven_claim:c4",
+    "unproven_claim:c6"
+   ],
+   "recorded_basis": "unproven",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "UNSUPPORTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "UNSUPPORTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "UNSUPPORTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "UNSUPPORTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c6",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "UNSUPPORTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v114",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [
+    "mixed_evidence:c2"
+   ],
+   "recorded_basis": "contradicted",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:23558162"
+     ]
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "MIXED",
+     "evidence_supporting": [
+      "PMID:24651634",
+      "PMID:34579105"
+     ],
+     "evidence_contradicting": [
+      "PMID:35944931"
+     ]
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:24808490"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:28731034"
+     ],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v115",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v116",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [
+    "mixed_evidence:c4",
+    "mixed_evidence:c5"
+   ],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:36175318",
+      "PMID:39545587"
+     ],
+     "evidence_contradicting": [
+      "PMID:33484383"
+     ]
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:9154287",
+      "PMID:18353148"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:33484383",
+      "PMID:41982480"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "MIXED",
+     "evidence_supporting": [
+      "PMID:41982480",
+      "PMID:36175318"
+     ],
+     "evidence_contradicting": [
+      "PMID:33484383"
+     ]
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "MIXED",
+     "evidence_supporting": [
+      "PMID:36175318",
+      "PMID:39545587"
+     ],
+     "evidence_contradicting": [
+      "PMID:33484383"
+     ]
+    },
+    {
+     "claim_id": "c6",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c7",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v117",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "REFUTES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:38386590"
+     ],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v118",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v119",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "contradicted",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:33813635"
+     ]
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:34459009",
+      "PMID:21376230"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v120",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "QUOTES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v121",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "UNCLEAR",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:35174620",
+      "PMID:33691515",
+      "PMID:24308540"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:32181734",
+      "PMID:7741332"
+     ],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v122",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [
+    "mixed_evidence:c9"
+   ],
+   "recorded_basis": "contradicted",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:16214597"
+     ]
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:35480616"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:16214597",
+      "PMID:33317019"
+     ]
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:34871380"
+     ]
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:36049498"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c6",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:25754552"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c7",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c8",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:35608922"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c9",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "MIXED",
+     "evidence_supporting": [
+      "PMID:36130103"
+     ],
+     "evidence_contradicting": [
+      "PMID:26935713"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v123",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v124",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "contradicted",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:11964470",
+      "PMID:30043455"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:17230481"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:22474485"
+     ]
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:25472634",
+      "PMID:17230481"
+     ]
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:25472634",
+      "PMID:17230481"
+     ]
+    },
+    {
+     "claim_id": "c6",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c7",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c8",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c9",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v125",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:21376230"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v126",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "contradicted",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:25472634",
+      "PMID:17230481"
+     ]
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:38288810",
+      "PMID:31507346"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c6",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c7",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c8",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c9",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c10",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c11",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c12",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c13",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c14",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:19040814"
+     ]
+    },
+    {
+     "claim_id": "c15",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c16",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v127",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:42293842",
+      "PMID:2136041"
+     ],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v128",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v129",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v130",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v131",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "contradicted",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:7474248"
+     ]
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:42814269"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:37013760"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:24323509"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:20620757"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c6",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:42814269"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c7",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:9803200"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c8",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:42814269"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c9",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:17668074"
+     ],
+     "evidence_contradicting": [
+      "PMID:27372453"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v132",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v133",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [
+    "possible_debunk:c1",
+    "possible_debunk:c2",
+    "deciding_insufficient:c1",
+    "deciding_insufficient:c2"
+   ],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "REFUTES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "REFUTES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v134",
+   "out_of_scope": false,
+   "recorded_label": "DEBUNKING",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "REFUTES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:21135266",
+      "PMID:20883261"
+     ]
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:20979596"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:20883261",
+      "PMID:21135266"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:23732711",
+      "PMID:24417448"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:23732711",
+      "PMID:24417448"
+     ],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v135",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:39384016"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:20070208"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:10828141"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:39002561"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c6",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:34509542"
+     ],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v136",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v137",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "NEUTRAL",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v138",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c6",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c7",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v139",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "contradicted",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:19095412",
+      "PMID:24308540"
+     ]
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:24308540"
+     ]
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:30199594"
+     ]
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:2247104"
+     ]
+    },
+    {
+     "claim_id": "c6",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:2247104"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v140",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [
+    "possible_debunk:c1",
+    "possible_debunk:c2"
+   ],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "REFUTES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "REFUTES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:31001305"
+     ],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v141",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [
+    "unproven_claim:c1",
+    "unproven_claim:c2"
+   ],
+   "recorded_basis": "unproven",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "UNSUPPORTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "UNSUPPORTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:22612571"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v142",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v143",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [
+    "unproven_claim:c1",
+    "unproven_claim:c2"
+   ],
+   "recorded_basis": "unproven",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "UNSUPPORTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "UNSUPPORTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v144",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": []
+  },
+  {
+   "video_id": "v145",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": []
+  },
+  {
+   "video_id": "v146",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": []
+  },
+  {
+   "video_id": "v147",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": []
+  },
+  {
+   "video_id": "v148",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": []
+  },
+  {
+   "video_id": "v149",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [
+    "unproven_claim:c2"
+   ],
+   "recorded_basis": "unproven",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "UNSUPPORTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v150",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": []
+  },
+  {
+   "video_id": "v151",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": []
+  },
+  {
+   "video_id": "v152",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": []
+  },
+  {
+   "video_id": "v153",
+   "out_of_scope": true,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": []
+  },
+  {
+   "video_id": "v154",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:11566046",
+      "PMID:15250815",
+      "PMID:1713648"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:18493231"
+     ],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v155",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:36804260"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v156",
+   "out_of_scope": true,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": []
+  },
+  {
+   "video_id": "v157",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": []
+  },
+  {
+   "video_id": "v158",
+   "out_of_scope": true,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": []
+  },
+  {
+   "video_id": "v159",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v160",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": []
+  },
+  {
+   "video_id": "v161",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:23440782"
+     ]
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:30999017"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:37461211"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c6",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v162",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:40807638"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:40807638"
+     ],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v163",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v164",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [
+    "unproven_claim:c4"
+   ],
+   "recorded_basis": "unproven",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:23651522",
+      "PMID:34934897"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:38219223"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "UNSUPPORTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v165",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:35373155",
+      "PMID:29778512"
+     ],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v166",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "REFUTES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v167",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:38923748"
+     ]
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:38923748"
+     ]
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v168",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:17054208"
+     ]
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:23878109"
+     ]
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:34449930"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:34449930"
+     ],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v169",
+   "out_of_scope": false,
+   "recorded_label": "DEBUNKING",
+   "recorded_review_reasons": [
+    "mixed_evidence:c3"
+   ],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:33026578"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "REFUTES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:33026578"
+     ]
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "MIXED",
+     "evidence_supporting": [
+      "PMID:17300239"
+     ],
+     "evidence_contradicting": [
+      "PMID:33026578"
+     ]
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v170",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v171",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "QUOTES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v172",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v173",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v174",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [
+    "denies_supported:c2"
+   ],
+   "recorded_basis": "denies_supported",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "REFUTES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:30384148",
+      "PMID:9017111"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:1070024"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:34975614"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c5",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v175",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": []
+  },
+  {
+   "video_id": "v176",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v177",
+   "out_of_scope": false,
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "contradicted",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:30384148",
+      "PMID:9017111"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "CONTRADICTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": [
+      "PMID:17987546",
+      "PMID:23459877",
+      "PMID:18652789"
+     ]
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:9017111"
+     ],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v178",
+   "out_of_scope": false,
+   "recorded_label": "NO_MISINFO",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "SUPPORTED",
+     "evidence_supporting": [
+      "PMID:32770077"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    }
+   ]
+  },
+  {
+   "video_id": "v179",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": []
+  },
+  {
+   "video_id": "v180",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [
+    "mixed_evidence:c2"
+   ],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "NOT_VERIFIABLE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "MIXED",
+     "evidence_supporting": [
+      "PMID:41452424"
+     ],
+     "evidence_contradicting": [
+      "PMID:37413933",
+      "PMID:41331674"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v181",
+   "out_of_scope": false,
+   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_review_reasons": [],
+   "recorded_basis": "",
+   "claims": [
+    {
+     "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:21471383"
+     ],
+     "evidence_contradicting": [
+      "PMID:34634356"
+     ]
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:28445426"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:34449930"
+     ],
+     "evidence_contradicting": [
+      "PMID:17054208",
+      "PMID:17253512"
+     ]
     }
    ]
   }
