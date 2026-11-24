@@ -48,6 +48,8 @@ REASON_TEXT: dict[str, str] = {
     "unproven_claim": "The speaker presents {claim} as working, but the full search found no evidence "
                       "for or against it: no evidence supports this claim.",
     "possible_debunk": "The speaker refutes {claim}, but the evidence could not settle it: possibly a debunk.",
+    # T37: video-level (§11)
+    "nothing_judged": "No claim in this video could be checked against the evidence.",
     # guardrails (§15)
     "prompt_injection_suspected": "Text in {source} looks like an attempt to instruct the system.",
     "guardrail": "A safety check stopped part of the analysis{on_claim}.",

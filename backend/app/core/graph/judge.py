@@ -23,6 +23,10 @@ verdict take part.
    ``possible_debunk:<cid>``).
 7. ``nothing_judged``: otherwise (all INSUFFICIENT_EVIDENCE / MIXED / UNSUPPORTED /
    NOT_VERIFIABLE) → CANNOT_RECOGNIZE; ``no_claims`` when there were no checkable claims.
+   If any claim is INSUFFICIENT_EVIDENCE, the rule adds the review reason
+   ``nothing_judged`` (T37): a person should see what the system could not check (§11).
+   It never lowers a case's priority; severity still comes from the claims (§12). A video with no claims, or
+   only NOT_VERIFIABLE ones, is not sent for this reason.
 
 MISINFO carries a ``misinfo_basis`` (§9): ``contradicted`` (rule 1),
 ``denies_supported`` (rule 2) or ``unproven`` (rule 3). The label stays one of the four;
@@ -137,9 +141,12 @@ FLAG_VERIFICATION_FAILED = "verification_failed"
 FLAG_DENIES_SUPPORTED = "denies_supported"
 FLAG_POSSIBLE_DEBUNK = "possible_debunk"
 FLAG_UNPROVEN = "unproven_claim"  # T30
+FLAG_NOTHING_JUDGED = "nothing_judged"  # T37: video-level (§11)
 # Since T21 these are collected from every claim, not only when their rule fires, and a
 # mixed video is always reviewed (§9).
-RULE_REVIEW_FLAGS = frozenset({FLAG_DENIES_SUPPORTED, FLAG_POSSIBLE_DEBUNK, FLAG_UNPROVEN, FLAG_MIXED_VIDEO})
+RULE_REVIEW_FLAGS = frozenset({
+    FLAG_DENIES_SUPPORTED, FLAG_POSSIBLE_DEBUNK, FLAG_UNPROVEN, FLAG_MIXED_VIDEO, FLAG_NOTHING_JUDGED,
+})
 
 # ``misinfo_basis`` values (§9), set only when the label is MISINFO.
 BASIS_CONTRADICTED = "contradicted"
@@ -321,6 +328,11 @@ def decide(views: Sequence[ClaimView], *, has_claims: Optional[bool] = None) -> 
         label = MisinfoLabel.CANNOT_RECOGNIZE
         rule = RULE_NOTHING_JUDGED if has_claims else RULE_NO_CLAIMS
         deciding = []
+        # §9 last branch (T37): a claim needed checking but the evidence was too thin, so
+        # a person should still see it. No claims, or only NOT_VERIFIABLE
+        # ones, are not sent.
+        if any(v.verdict == Verdict.INSUFFICIENT_EVIDENCE for v in views):
+            rule_flags.append(FLAG_NOTHING_JUDGED)
 
     # Citations: only IDs the deciding verdicts cited AND that were retrieved for that
     # same claim. Anything else is dropped and recorded (sends the run to review).
@@ -424,6 +436,7 @@ _FLAG_TEXT = {
     FLAG_DENIES_SUPPORTED: "the speaker denies {ref}, which the evidence supports",
     FLAG_POSSIBLE_DEBUNK: "the speaker may be debunking {ref}, which the evidence can't settle",
     FLAG_UNPROVEN: "no evidence supports {ref}, which the speaker presents as working",
+    FLAG_NOTHING_JUDGED: "no claim in this video could be checked against the evidence",
 }
 
 

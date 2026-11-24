@@ -403,11 +403,23 @@ def test_clean_case_needs_no_review():
     assert d.requires_review is False and d.reasons == () and d.fired == {}
 
 
-def test_rule_weak_evidence_on_abstention():
+def test_rule_weak_evidence_skips_non_deciding_claims_on_abstention():
+    """D4 dropped: weak_evidence fires only for deciding claims (§11 as written). When
+    nothing is judged no claim decides; the judge's nothing_judged sends the case."""
     s = base_state((S.ENDORSES, V.INSUFFICIENT_EVIDENCE), (S.NEUTRAL, V.MIXED), (S.ENDORSES, V.NOT_VERIFIABLE))
     assert s["final_result"].decision_rule == jg.RULE_NOTHING_JUDGED
     got = rp.rule_weak_evidence(rp.ReviewContext.build(s, CFG, r.DEFAULT_BUDGETS))
-    assert got == ["weak_evidence:c1", "weak_evidence:c2"]  # NOT_VERIFIABLE alone doesn't fire
+    assert got == []
+    assert "judge:nothing_judged" in reasons(s)
+
+
+def test_rule_weak_evidence_skips_non_deciding_claims_in_possible_debunk():
+    s = base_state((S.REFUTES, V.INSUFFICIENT_EVIDENCE), (S.ENDORSES, V.MIXED))
+    assert s["final_result"].decision_rule == jg.RULE_REFUTED_UNSETTLED
+    got = rp.rule_weak_evidence(rp.ReviewContext.build(s, CFG, r.DEFAULT_BUDGETS))
+    assert got == ["weak_evidence:c1"]  # c2 is not deciding
+    # The judge still collects mixed_evidence from every claim.
+    assert "judge:mixed_evidence:c2" in reasons(s)
 
 
 def test_rule_weak_evidence_on_a_deciding_claim():

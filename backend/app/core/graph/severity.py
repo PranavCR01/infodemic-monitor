@@ -23,6 +23,9 @@ A video's severity is the highest severity among its **MISINFO-relevant** claims
 
 A video with no MISINFO-relevant claim has no severity (``None``); the queue puts those
 cases after LOW.
+
+The judge's ``nothing_judged`` review reason (T37, §11) never changes a case's severity:
+it adds review, and severity still comes from the claims as above.
 """
 from __future__ import annotations
 

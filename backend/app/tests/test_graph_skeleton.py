@@ -333,11 +333,15 @@ def test_all_insufficient_evidence_abstains_as_cannot_recognize():
 
     out = Harness({r.VERIFY_CLAIMS: insufficient}).run()
     assert out["final_result"].classification == MisinfoLabel.CANNOT_RECOGNIZE
-    # T09: nothing could be judged because the evidence was too weak, so the case goes
-    # to a person (§1, §11), with each insufficient claim named. c1 is also an endorsed
-    # high-risk claim (treatment_efficacy) the evidence couldn't settle.
+    # Nothing could be judged because the evidence was too weak, so the case goes to a
+    # person (§1, §11). c2 is refuted, so it decides as a possible debunk and is named as
+    # weak evidence; c1 does not decide, so it no longer gets weak_evidence (D4 dropped:
+    # deciding claims only). c1 is also an endorsed high-risk claim (treatment_efficacy)
+    # the evidence couldn't settle.
+    assert out["final_result"].decision_rule == "refuted_unsettled"
     assert out["requires_human_review"] is True
-    assert {"weak_evidence:c1", "weak_evidence:c2", "high_risk_uncertain:c1"} <= set(out["review_reasons"])
+    assert {"weak_evidence:c2", "judge:possible_debunk:c2", "high_risk_uncertain:c1"} <= set(out["review_reasons"])
+    assert "weak_evidence:c1" not in out["review_reasons"]
 
 
 def test_unclear_stance_on_deciding_claim_triggers_review():
