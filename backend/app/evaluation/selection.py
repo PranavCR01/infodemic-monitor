@@ -14,7 +14,7 @@ from __future__ import annotations
 
 from typing import Any, Callable, Optional, Sequence
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, SerializeAsAny
 
 from app.core.routing.config import REQUIRED_STEPS, ModelRef, RoutingConfig
 from app.core.routing.router import ModelClient, ModelRouter, RoutingError, single_step_config
@@ -50,7 +50,9 @@ class Candidate(BaseModel):
 
 
 class CandidateResult(BaseModel):
-    candidate: Candidate
+    # SerializeAsAny: a subclass's extra fields (the experiment's reasoning_effort) survive
+    # model_dump, so the report records which effort each result ran with.
+    candidate: SerializeAsAny[Candidate]
     step: str
     metric: str
     score: Optional[float]
@@ -59,6 +61,14 @@ class CandidateResult(BaseModel):
     fallbacks_used: int
     cost_per_item: Optional[float]
     latency_p95_ms: Optional[float]
+    # T39: what the provider reported, per candidate. ``response_models`` counts calls by
+    # the model id the response named (key "unreported" when it named none), so a run
+    # against an alias records which model actually answered. ``calls`` has one entry per
+    # call (requested and reported model, effort, tokens incl. reasoning, fallback, error).
+    response_models: dict[str, int] = Field(default_factory=dict)
+    reasoning_tokens: int = 0
+    output_tokens: int = 0
+    calls: list[dict] = Field(default_factory=list)
 
 
 class Budget(BaseModel):
@@ -127,7 +137,8 @@ def evaluate_candidate(
     by the fallback model. ``after_item(item, output)`` runs after each item and may
     raise to stop the run (the routing experiment's spend cap).
     """
-    config = single_step_config(base_config, step, candidate.ref, candidate.prompt)
+    config = single_step_config(base_config, step, candidate.ref, candidate.prompt,
+                                reasoning_effort=getattr(candidate, "reasoning_effort", None))
     router = ModelRouter(config, clients, **({"clock": clock} if clock else {}))
     outputs: list[Any] = []
     failed = fallbacks = 0
@@ -166,12 +177,22 @@ def evaluate_candidate(
             after_item(item, outputs[-1])
     costs = [r.cost_usd for r in router.records]
     cost = sum(costs) / len(items) if items and all(c is not None for c in costs) else None
+    reported: dict[str, int] = {}
+    for r in router.records:
+        key = r.response_model or "unreported"
+        reported[key] = reported.get(key, 0) + 1
     return CandidateResult(
         candidate=candidate, step=step, metric=metric or STEP_METRICS.get(step, "score"),
         score=scorer([i.gold for i in items], outputs) if items else None,
         n_items=len(items), n_failed=failed, fallbacks_used=fallbacks,
         cost_per_item=cost,
         latency_p95_ms=m.percentile([r.latency_ms for r in router.records], 95),
+        response_models=reported,
+        reasoning_tokens=sum(r.reasoning_tokens for r in router.records),
+        output_tokens=sum(r.output_tokens for r in router.records),
+        calls=[r.model_dump(include={"model", "response_model", "reasoning_effort", "input_tokens",
+                                     "output_tokens", "reasoning_tokens", "fallback_used", "error",
+                                     "latency_ms"}) for r in router.records],
     )
 
 
@@ -236,7 +257,8 @@ def apply_selection(config: RoutingConfig, selections: Sequence[Selection], *, v
         if s.winner is None:
             continue
         c = s.winner.candidate
-        data["steps"][s.step].update(provider=c.provider, model=c.model, prompt=c.prompt)
+        data["steps"][s.step].update(provider=c.provider, model=c.model, prompt=c.prompt,
+                                     reasoning_effort=getattr(c, "reasoning_effort", None))
     data["version"] = version
     data["status"] = "evaluated" if set(REQUIRED_STEPS) <= chosen else "provisional"
     return RoutingConfig.model_validate(data)

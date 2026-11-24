@@ -7,7 +7,9 @@ refused by a live run: an unknown cost cannot be held under a cap.
 Token counts in a dry run are estimates from the rendered requests (characters / 3.5,
 plus a fixed allowance for the tool-use scaffolding the provider adds), not a provider
 tokenizer; they err high on English text. The expected output is a per-step allowance;
-the upper bound assumes every call writes ``max_tokens`` and every repair fires.
+the upper bound assumes every call writes its full output cap and every repair fires. For
+a reasoning model the cap is the node's visible ``max_tokens`` plus the step's
+``reasoning_allowance`` from routing.yaml (T39), the same cap the router sends.
 
 ``SpendGuard`` wraps every provider client in a live run. Before each call it reserves
 the call's worst case (estimated input + ``max_tokens`` output, priced) and refuses the
@@ -26,7 +28,7 @@ from dataclasses import dataclass, field
 from typing import Any, Optional
 
 from app.core.routing.config import ModelPrice, RoutingConfig
-from app.core.routing.router import ModelCallError, ModelRequest, ModelResponse
+from app.core.routing.router import ModelCallError, ModelRequest, ModelResponse, request_output_cap
 
 CHARS_PER_TOKEN = 3.5
 TOOL_OVERHEAD_TOKENS = 350  # tool-use system scaffolding added by the provider
@@ -93,8 +95,10 @@ class SpendGuard:
             self.refused += 1
             self.exhausted = True
             raise SpendCapError(f"model {model!r} has no price in the routing table; refusing a paid call")
+        # The cap the client will send: for a reasoning model that is the router's raised
+        # cap (visible answer + the step's reasoning allowance), not the node's (T39).
         worst = price_usd(price, estimate_input_tokens(request.system, request.input) * self.input_ratio,
-                          max_output_tokens(request.input))
+                          request_output_cap(request))
         assert worst is not None
         if self.spent_usd + worst > self.cap_usd:
             self.refused += 1

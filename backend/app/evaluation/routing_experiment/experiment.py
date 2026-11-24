@@ -15,6 +15,7 @@ applied. ``config/routing.yaml`` is never written.
 from __future__ import annotations
 
 import json
+import math
 import os
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
@@ -25,7 +26,7 @@ import yaml
 from pydantic import BaseModel, Field, field_validator
 
 from app.core.graph.stance import PromptNotFoundError, load_prompt
-from app.core.routing.config import DEFAULT_ROUTING_PATH, RoutingConfig, dump_routing
+from app.core.routing.config import DEFAULT_ROUTING_PATH, ReasoningEffort, RoutingConfig, dump_routing
 from app.evaluation.routing_experiment import cost as c
 from app.evaluation.routing_experiment.frozen import FrozenEvidence
 from app.evaluation.routing_experiment.golden import TuneSet
@@ -75,6 +76,9 @@ class ExperimentCandidate(Candidate):
     models bill them as output), used only for the cost estimate."""
 
     reasoning_tokens: int = Field(default=0, ge=0)
+    # Reasoning effort sent for this candidate (T39). None: the model's reasoning_effort
+    # in routing.yaml, else "medium". Always sent explicitly for a reasoning model.
+    reasoning_effort: Optional[ReasoningEffort] = None
 
     @property
     def placeholder(self) -> bool:
@@ -120,7 +124,8 @@ def load_candidates(path: Path | str = DEFAULT_CANDIDATES_PATH) -> CandidatesFil
 
 
 def candidate_key(cand: Candidate) -> str:
-    return f"{cand.provider}/{cand.model}@{cand.prompt}"
+    effort = getattr(cand, "reasoning_effort", None)
+    return f"{cand.provider}/{cand.model}@{cand.prompt}" + (f"~{effort}" if effort else "")
 
 
 def experiment_base(routing: RoutingConfig) -> RoutingConfig:
@@ -226,12 +231,21 @@ def estimate(plan: Plan) -> dict:
             t = dict(per_prompt[cand.prompt])
             reasoning = getattr(cand, "reasoning_tokens", 0) * t["calls"]
             t["reasoning_tokens"] = reasoning
+            # Output cap per call as the router will send it (T39): a reasoning model gets
+            # the step's reasoning_allowance on top of the node's visible cap. A candidate
+            # that declares reasoning tokens but isn't marked in routing.yaml yet (the TODO
+            # ids) is estimated as one; a live run refuses that mismatch (check_live).
+            reasoning_model = plan.routing.is_reasoning(cand.model) or getattr(cand, "reasoning_tokens", 0) > 0
+            allowance = plan.routing.reasoning_allowance.get(step, 0) if reasoning_model else 0
+            t["output_cap_tokens"] = t["max_output_tokens"] + allowance * t["calls"]
             price = plan.routing.price(cand.model)
             expected = c.price_usd(price, t["input_tokens"], t["expected_output_tokens"] + reasoning)
             rep = 1 + max_repairs(step)
-            # Upper bound: max_tokens per call, or the reasoning allowance plus the expected
-            # answer if that is larger (a reasoning model's hidden tokens are billed as output).
-            worst_out = max(t["max_output_tokens"], t["expected_output_tokens"] + reasoning)
+            # Upper bound: every call writes its whole cap (hidden reasoning included, billed
+            # as output), or the expected reasoning + answer if a candidate declares more.
+            worst_out = max(t["output_cap_tokens"], t["expected_output_tokens"] + reasoning)
+            t["upper_bound_input_tokens"] = int(math.ceil(t["input_tokens"] * rep * 1.25))
+            t["upper_bound_output_tokens"] = worst_out * rep
             upper = c.price_usd(price, t["input_tokens"] * rep * 1.25, worst_out * rep)
             if expected is None:
                 unpriced.append(candidate_key(cand))
@@ -255,8 +269,32 @@ def estimate(plan: Plan) -> dict:
         "placeholder_candidates": sorted({candidate_key(x) for s in plan.steps
                                           for x in plan.candidates.candidates[s] if getattr(x, "placeholder", False)}),
         "critic_provider_warnings": critic_provider_warnings(plan),
+        "reasoning_config_problems": reasoning_config_problems(plan),
         "notes": plan.notes,
     }
+
+
+def reasoning_config_problems(plan: Plan) -> list[str]:
+    """Candidates whose reasoning setup disagrees with routing.yaml (T39). A candidate
+    that expects reasoning tokens must be marked ``reasoning: true`` under ``models:``,
+    or the client would send ``max_tokens`` (a 400 from GPT-5-class models) with no
+    room for reasoning; a step with a reasoning candidate needs a reasoning_allowance."""
+    problems: list[str] = []
+    for step in plan.steps:
+        for cand in plan.candidates.candidates[step]:
+            declared = getattr(cand, "reasoning_tokens", 0) > 0
+            marked = plan.routing.is_reasoning(cand.model)
+            if declared and not marked:
+                problems.append(
+                    f"{step}: {candidate_key(cand)} expects reasoning tokens but routing.yaml has no "
+                    f"`models: {{{cand.model}: {{reasoning: true}}}}` entry")
+            if getattr(cand, "reasoning_effort", None) and not marked:
+                problems.append(f"{step}: {candidate_key(cand)} sets reasoning_effort but routing.yaml "
+                                f"doesn't mark {cand.model} as a reasoning model (the effort would not be sent)")
+            if (declared or marked) and step not in plan.routing.reasoning_allowance:
+                problems.append(f"{step}: {candidate_key(cand)} is a reasoning model but routing.yaml "
+                                f"has no reasoning_allowance for {step}")
+    return problems
 
 
 def critic_provider_warnings(plan: Plan) -> list[str]:
@@ -302,6 +340,8 @@ def check_live(plan: Plan, *, live: bool, max_usd: Optional[float], est: dict) -
     if est.get("placeholder_candidates"):
         raise LiveRunRefused(f"placeholder (TODO) model ids must be replaced with pinned ids first: "
                              f"{est['placeholder_candidates']}")
+    if est.get("reasoning_config_problems"):
+        raise LiveRunRefused(f"reasoning model settings missing in routing.yaml: {est['reasoning_config_problems']}")
     if est["unpriced_candidates"]:
         raise LiveRunRefused(f"candidates without a price in the routing table: {est['unpriced_candidates']}")
     if est["total_expected_usd"] > max_usd:
@@ -366,6 +406,7 @@ def live_run(
                              "from different providers: change the critic before adopting routing_v2")
     return {
         "critic_same_provider": same_provider,
+        "response_model_notes": response_model_notes(results),
         "mode": "live", "golden": plan.golden, "split": "tune", "evidence_mode": plan.evidence_mode,
         "estimate": est, "spend": guard.summary(), "stopped": stopped,
         "steps": {
@@ -380,6 +421,26 @@ def live_run(
         "proposed_routing": proposed.to_yaml_dict() if proposed else None,
         "_proposed": proposed,
     }
+
+
+def response_model_notes(results: dict[str, list[CandidateResult]]) -> list[str]:
+    """Flag candidates whose responses named a different model than requested (an alias
+    resolved to a snapshot), named several models (the alias moved during the run), or
+    named none. Informational: the per-call ids are in report.json either way."""
+    notes = []
+    for step, rs in results.items():
+        for r in rs:
+            ids = sorted(r.response_models)
+            key = candidate_key(r.candidate)
+            if "unreported" in ids:
+                notes.append(f"{step}: {key}: {r.response_models['unreported']} calls reported no model id")
+            named = [i for i in ids if i != "unreported"]
+            if len(named) > 1:
+                notes.append(f"{step}: {key}: responses named {len(named)} models {named}; "
+                             "the alias changed during the run")
+            elif named and named[0] != r.candidate.model:
+                notes.append(f"{step}: {key}: served by {named[0]}")
+    return notes
 
 
 # ------------------------------------------------------------------ outputs
@@ -427,41 +488,49 @@ def render_markdown(report: dict) -> str:
         s = report["spend"]
         lines += [f"Spend: **${s['spent_usd']:.4f}** of cap ${s['cap_usd']:.2f} in {s['calls']} calls"
                   + (f"; STOPPED: {report['stopped']}" if report.get("stopped") else ""), ""]
+        for note in report.get("response_model_notes") or []:
+            lines += [f"Model id: {note}", ""]
         if report.get("critic_same_provider"):
             lines += [f"**WARNING:** {report['critic_same_provider']}", ""]
         for step, d in report["steps"].items():
             sel = d.get("selection") or {}
             winner = (sel.get("winner") or {}).get("candidate")
             lines += [f"## {step} ({d['items']} items)", "",
-                      f"Chosen: **{candidate_key(Candidate(**winner)) if winner else 'none'}**"
+                      f"Chosen: **{candidate_key(ExperimentCandidate(**winner)) if winner else 'none'}**"
                       f" ({sel.get('reason', 'not selected')})", "",
-                      "| candidate | metric | score | failed | cost/item | p95 latency ms |",
-                      "|---|---|---|---|---|---|"]
+                      "| candidate | metric | score | failed | cost/item | p95 latency ms | reported model ids (calls) | reasoning tokens |",
+                      "|---|---|---|---|---|---|---|---|"]
             for r in d["results"]:
                 score = "n/a" if r["score"] is None else f"{r['score']:.4f}"
                 cpi = "n/a" if r["cost_per_item"] is None else f"${r['cost_per_item']:.5f}"
-                lines.append(f"| {candidate_key(Candidate(**r['candidate']))} | {r['metric']} | {score} | "
-                             f"{r['n_failed']}/{r['n_items']} | {cpi} | {r['latency_p95_ms']} |")
+                reported = ", ".join(f"{k} ({v})" for k, v in sorted((r.get("response_models") or {}).items())) or "n/a"
+                lines.append(f"| {candidate_key(ExperimentCandidate(**r['candidate']))} | {r['metric']} | {score} | "
+                             f"{r['n_failed']}/{r['n_items']} | {cpi} | {r['latency_p95_ms']} | {reported} | "
+                             f"{r.get('reasoning_tokens', 0):,} |")
             for k, v in (d.get("extras") or {}).items():
                 lines.append(f"\n{k}: {json.dumps(v)}")
             if sel.get("excluded"):
                 lines.append(f"\nExcluded: {json.dumps(sel['excluded'])}")
             lines.append("")
         lines += ["## Estimate before the run", ""]
-    lines += ["| step | items | candidate | calls | input tokens | expected output | reasoning (as output) | expected cost | upper bound |",
-              "|---|---|---|---|---|---|---|---|---|"]
+    lines += ["| step | items | candidate | calls | input tokens | expected output | reasoning (as output) | output cap | expected cost | upper bound |",
+              "|---|---|---|---|---|---|---|---|---|---|"]
     for step, d in est["steps"].items():
         for r in d["candidates"]:
             lines.append(f"| {step} | {d['items']} | {r['candidate']} | {r['calls']} | {r['input_tokens']:,} | "
                          f"{r['expected_output_tokens']:,} | {r.get('reasoning_tokens', 0):,} | "
+                         f"{r.get('output_cap_tokens', r.get('max_output_tokens', 0)):,} | "
                          f"{_usd(r['expected_usd'])} | {_usd(r['upper_bound_usd'])} |")
     for step, d in est["steps"].items():
         priced = [r["expected_usd"] for r in d["candidates"] if r["expected_usd"] is not None]
         lines.append(f"\n{step}: {d['items']} items; priced candidates total {_usd(sum(priced))}")
     lines += ["", f"Total expected (priced candidates): **{_usd(est['total_expected_usd'])}**; "
-              f"upper bound (every call at max_tokens, every repair fired): {_usd(est['total_upper_bound_usd'])}."]
+              f"upper bound (every call at its output cap, every repair fired): {_usd(est['total_upper_bound_usd'])}."]
     if est.get("unpriced_candidates"):
         lines.append(f"\nUnpriced (not in the total; a live run refuses them): {', '.join(est['unpriced_candidates'])}")
+    if est.get("reasoning_config_problems"):
+        lines.append("\nReasoning-model settings missing in routing.yaml (a live run refuses these):\n"
+                     + "\n".join(f"- {x}" for x in est["reasoning_config_problems"]))
     if est.get("placeholder_candidates"):
         lines.append(f"\nTODO placeholder model ids (replace with pinned dated ids and add prices before a paid run): "
                      f"{', '.join(est['placeholder_candidates'])}")

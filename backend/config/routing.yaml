@@ -24,6 +24,37 @@ routing:
     retries: 1          # retries on the primary before falling back
     use: {provider: openai, model: gpt-4o-2024-08-06}
 
+# Per-model request settings (T39). Only models listed here change their request;
+# every other model is called exactly as before. `reasoning: true` (GPT-5-class models):
+# the OpenAI client sends `max_completion_tokens` instead of `max_tokens` (these models
+# reject max_tokens), sends no `temperature`, and the step's cap is raised by its
+# reasoning_allowance below, because hidden reasoning tokens count against the cap and
+# are billed as output. `token_param: max_completion_tokens` alone renames the cap
+# without the other changes. Choose by model id here, never by name in code.
+#
+# `reasoning_effort` (none/low/medium/high/xhigh/max) is sent explicitly on every call
+# to a reasoning model, so a run doesn't depend on the provider's default: a routing
+# step or an experiment candidate may override it, else this value, else "medium".
+# Every call also records the model id the response reports and its reasoning tokens.
+models:
+  gpt-4o-2024-08-06: {reasoning: false}
+  # The lead's OpenAI routing-experiment candidates (PR #102). Aliases only: OpenAI
+  # publishes no dated snapshot for them, so the experiment report records the model id
+  # each response names. A live routing experiment refuses a candidate with
+  # reasoning_tokens that is not marked reasoning here.
+  gpt-5.6-luna:  {reasoning: true, reasoning_effort: medium}
+  gpt-5.6-terra: {reasoning: true, reasoning_effort: medium}
+
+# Extra output tokens per call, by step, added to a reasoning model's cap on top of the
+# node's own (visible-answer) cap: extract_claims 2048 -> 3548, analyze_stance
+# 512 -> 1312, verify_claims 1024 -> 3524. Values are T38's reasoning allowances; tune
+# them from the first paid run's reported usage. A step without an entry may not route
+# to a reasoning model (the config refuses to load).
+reasoning_allowance:
+  extract_claims: 1500
+  analyze_stance: 800
+  verify_claims: 2500
+
 # USD per million tokens, used to report cost per video. Unpriced models report
 # cost as unknown rather than zero. Check against the providers' price lists
 # before a paid run.
