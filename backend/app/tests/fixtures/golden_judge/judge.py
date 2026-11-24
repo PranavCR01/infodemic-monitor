@@ -14,7 +14,10 @@ is a transcription of the pseudocode in docs/target-system-design.md section 9
   5. any claim SUPPORTED or CONTRADICTED          -> NO_MISINFO
   6. REFUTES  + MIXED / INSUFFICIENT_EVIDENCE     -> CANNOT_RECOGNIZE, reviewed
                                                      as a possible debunk
-  7. otherwise                                    -> CANNOT_RECOGNIZE
+  7. otherwise                                    -> CANNOT_RECOGNIZE; reviewed
+                                                     (nothing_judged, LOW
+                                                     priority) if any claim
+                                                     is INSUFFICIENT_EVIDENCE
 
 Review reasons are collected from every claim, whichever rule decides the label
 (section 9). They are written as "<kind>:<claim_id>", or "mixed_video".
@@ -37,8 +40,10 @@ REASON_UNPROVEN = "unproven_claim"
 REASON_OPEN_DEBUNK = "possible_debunk"
 REASON_MIXED_EVIDENCE = "mixed_evidence"
 REASON_MIXED_VIDEO = "mixed_video"
+REASON_NOTHING_JUDGED = "nothing_judged"
 JUDGE_REASONS = (REASON_DENIES_TRUE, REASON_UNPROVEN, REASON_OPEN_DEBUNK,
-                 REASON_MIXED_EVIDENCE, REASON_MIXED_VIDEO)
+                 REASON_MIXED_EVIDENCE, REASON_MIXED_VIDEO,
+                 REASON_NOTHING_JUDGED)
 
 
 def reason_kind(reason):
@@ -89,6 +94,11 @@ def judge(claims):
         return "NO_MISINFO", None, judged, reasons
     if refuted_open:
         return "CANNOT_RECOGNIZE", None, refuted_open, reasons
+    # Nothing could be judged. If a claim needed checking but the evidence was
+    # too thin, a person should still see it (LOW priority); videos with no
+    # claims, or only NOT_VERIFIABLE ones, are not sent.
+    if any(c["claim_verdict"] == "INSUFFICIENT_EVIDENCE" for c in claims):
+        reasons.append(REASON_NOTHING_JUDGED)
     return "CANNOT_RECOGNIZE", None, [], reasons
 
 
