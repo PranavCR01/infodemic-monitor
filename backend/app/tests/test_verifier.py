@@ -521,11 +521,23 @@ def test_oracle_scores_one(examples):
         assert cls["precision"] == 1.0 and cls["recall"] == 1.0
 
 
+def _rounded(x):
+    if isinstance(x, float):
+        return round(x, 9)
+    if isinstance(x, dict):
+        return {k: _rounded(v) for k, v in x.items()}
+    if isinstance(x, list):
+        return [_rounded(v) for v in x]
+    return x
+
+
 def test_recorded_heuristic_results_are_current(examples):
     path = ve.EXAMPLES_PATH.parent / "heuristic_baseline_results.json"
     recorded = json.loads(path.read_text())
     fresh = ve.run_examples(ve.HeuristicCaller(), examples)
-    assert recorded == json.loads(json.dumps(fresh))
+    # Compare at 9 decimal places: float sums differ in the last digit between Python
+    # versions (CI runs 3.11), which is not a change in the results.
+    assert _rounded(recorded) == _rounded(json.loads(json.dumps(fresh)))
     assert set(fresh["per_class"]) == {v.value for v in Verdict}
     assert fresh["citation_validity"] == 1.0
     assert fresh["accuracy"] < 1.0  # the set can tell a model from the floor
