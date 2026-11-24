@@ -2073,6 +2073,16 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-24**: T42 (design §9, §11, §14) re-pinned the judge cross-check to the
+  adjudicated golden set (data/golden-label-set dcf77b0: 538 claims; in scope NO_MISINFO
+  48 / CANNOT_RECOGNIZE 61 / MISINFO 36 (26 contradicted, 9 unproven, 1 denies_supported)
+  / DEBUNKING 17; 69 videos in review). Labels, bases, deciding claims and review routing
+  agree on 162/162 in-scope videos; exact review reasons on 152/162. The golden judge now
+  raises `nothing_judged` (26 videos, shared), so that difference kind is 0. The only kind
+  left is `weak_evidence_covered_by_judge_reason` (20 reasons, 10 videos: the backend's
+  extra `weak_evidence` on deciding UNSUPPORTED/MIXED claims the golden judge already sends
+  with `unproven_claim`/`mixed_evidence`). Neither judge changed. CI's golden fetch reads
+  the pin from the fixture, so it follows automatically.
 - **2026-11-24**: T38 OpenAI candidates (paid, lead-approved): smoke test on v11 clean
   ($0.0498; model ids reported, output ≥ reasoning on every call, no truncation); full tune
   split $1.8693 of a $27.86 cap, 359 calls, 0 errors. OpenAI won no step (luna 0.32 / 0.50,
