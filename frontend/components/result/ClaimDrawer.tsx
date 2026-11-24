@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { Icon, StanceChip, VerdictChip, buttonClass } from "@/components/ui";
 import { clock, type Claim, type Segment, type Source } from "@/lib/api/result-adapter";
 import { claimMeaning, STANCES } from "@/lib/vocabulary";
+import { ClaimSearch } from "./ClaimSearch";
 import { SourceCard, sortSources } from "./SourceCard";
 
 type Props = {
@@ -191,6 +192,8 @@ export function ClaimDrawer({ claims, openId, transcript, onNavigate, onClose, o
                     </p>
                   )}
                 </section>
+
+                {c.search && <ClaimSearch s={c.search} />}
 
                 {c.criticNotes.length > 0 && (
                   <details className="border-t border-line pt-3">

@@ -75,3 +75,18 @@ describe("helpers", () => {
     expect(failureText("NEW_CODE")).not.toContain("NEW_CODE");
   });
 });
+
+describe("T30 basis and long timers", () => {
+  it("shows MISINFO (unproven) in the list from misinfo_basis, only on MISINFO", () => {
+    expect(adaptJobRow({ job_id: "a", status: "REVIEW_REQUIRED", label: "MISINFO", misinfo_basis: "unproven" }).basis).toBe("unproven");
+    expect(adaptJobRow({ job_id: "b", status: "SUCCESS", label: "DEBUNKING", misinfo_basis: "unproven" }).basis).toBeNull();
+    expect(adaptJobRow({ job_id: "c", status: "SUCCESS", label: "MISINFO", misinfo_basis: "weird" }).basis).toBeNull();
+  });
+
+  it("switches to hours past an hour and days past a day", () => {
+    const t0 = "2026-11-23T00:00:00Z";
+    expect(elapsed(t0, Date.parse("2026-11-23T00:59:59Z"))).toBe("59:59");
+    expect(elapsed(t0, Date.parse("2026-11-23T02:05:09Z"))).toBe("2:05:09");
+    expect(elapsed(t0, Date.parse("2026-11-26T04:30:00Z"))).toBe("3 d 4 h");
+  });
+});

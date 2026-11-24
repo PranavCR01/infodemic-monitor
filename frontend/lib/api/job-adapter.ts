@@ -1,5 +1,5 @@
 // ADAPTER: jobs list and job progress (T28) → what the jobs page and the stepper render.
-import { isVideoLabel, toJobState, type JobState, type VideoLabel } from "@/lib/vocabulary";
+import { isMisinfoBasis, isVideoLabel, toJobState, type JobState, type MisinfoBasis, type VideoLabel } from "@/lib/vocabulary";
 import type { RawJobEvents, RawJobListItem, RawJobListPage } from "./job-types";
 
 /** Step names (HANDOFF §6.4). The design's wording, not the API's labels. */
@@ -24,6 +24,7 @@ export type JobRow = {
   rawStatus: string;
   step: string | null;
   label: VideoLabel | null;
+  basis: MisinfoBasis | null;
   submittedAt: string | null;
   active: boolean;
 };
@@ -40,6 +41,7 @@ export function adaptJobRow(r: RawJobListItem): JobRow {
     rawStatus: r.state ?? r.status,
     step: state === "RUNNING" || state === "RETRYING" ? stepText(r.step, null) : null,
     label: isVideoLabel(r.label) ? r.label : null,
+    basis: r.label === "MISINFO" && isMisinfoBasis(r.misinfo_basis) ? r.misinfo_basis : null,
     submittedAt: r.created_at ?? null,
     active: ACTIVE.includes(state),
   };
@@ -114,12 +116,15 @@ export function adaptProgress(raw: RawJobEvents): Progress {
   };
 }
 
-/** "1:12" elapsed, for the stepper's timer and list sub-lines. */
+/** "1:12" elapsed, for the stepper's timer; "2:05:09" past an hour, "3 d 4 h" past a day. */
 export function elapsed(fromIso: string | null, now = Date.now()): string {
   const from = ts(fromIso);
   if (!Number.isFinite(from)) return "";
   const s = Math.max(0, Math.floor((now - from) / 1000));
-  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+  const pad = (x: number) => String(x).padStart(2, "0");
+  if (s >= 86_400) return `${Math.floor(s / 86_400)} d ${Math.floor((s % 86_400) / 3600)} h`;
+  if (s >= 3600) return `${Math.floor(s / 3600)}:${pad(Math.floor((s % 3600) / 60))}:${pad(s % 60)}`;
+  return `${Math.floor(s / 60)}:${pad(s % 60)}`;
 }
 
 /** Plain-language failure reasons by error code (the job page; T28 events add the step). */

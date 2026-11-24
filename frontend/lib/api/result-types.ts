@@ -1,8 +1,8 @@
 // Raw shapes of GET /jobs/{job_id}/result, as the backend sends them.
 // - Fields without a comment exist today (T11).
 // - T26 fields: backend/app/api/result_models.py on auto/T26 (not merged yet).
-// - T30 (misinfo_basis) and T31 (search) are queued; their shapes are our
-//   proposal and are marked as such.
+// - T30 (misinfo_basis, label_display) and T31 (claims[].search_trail): merged
+//   into langgraph-build (#86, #84).
 // Everything after T11 is optional here, so the page works against today's API.
 
 export type RawSegment = {
@@ -62,6 +62,8 @@ export type RawClaim = {
   stance_quotes?: RawSegment[];
   critic?: { decision: string; issues?: string[]; requires_review?: boolean } | null;
   severity?: RawClaimSeverity | null;
+  // T31
+  search_trail?: RawSearchTrail | null;
 };
 
 export type RawReason = {
@@ -90,14 +92,15 @@ export type RawReview = {
   decided_at?: string | null;
 };
 
-/** T31 "How we searched": proposed shape, not built yet. */
-export type RawSearch = {
-  pubmed_queries?: string[];
-  reference_sites?: string[];
-  results_screened?: number | null;
-  results_kept?: number | null;
-  ran_at?: string | null;
-  duration_seconds?: number | null;
+/** T31 (#84): backend/app/core/schemas/search_trail.py SearchTrailView (subset we read). */
+export type RawSearchTrail = {
+  version?: number;
+  recorded?: "graph" | "queries_only";
+  pubmed_queries?: { round: number; query: string; results?: number | null; failed?: boolean; repeat?: boolean }[];
+  references?: { source_id: string; name: string; publisher?: string; sites?: string[]; passages?: number }[];
+  library?: { fired: boolean; passages?: number } | null;
+  counts: { retrieved?: number | null; screened: number; kept: number };
+  budget: { rounds_used: number; rounds_max: number; exhausted: boolean; evidence_cap?: number };
 };
 
 export type RawResult = {
@@ -120,8 +123,8 @@ export type RawResult = {
   deciding_claim_ids?: string[];
   transcript_segments?: RawSegment[];
   ocr_segments?: RawSegment[];
-  // T30 (proposed)
+  // T30
   misinfo_basis?: string | null;
-  // T31 (proposed)
-  search?: RawSearch | null;
+  /** The backend's display text; the UI uses lib/vocabulary.ts instead, for one source of wording. */
+  label_display?: string | null;
 };

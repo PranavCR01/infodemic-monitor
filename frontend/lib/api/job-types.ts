@@ -15,6 +15,9 @@ export type RawJobListItem = {
   state?: string;
   step?: string | null;
   updated_at?: string | null;
+  // T30
+  misinfo_basis?: string | null;
+  label_display?: string | null;
 };
 
 export type RawJobListPage = { items: RawJobListItem[]; total: number; limit: number; offset: number };

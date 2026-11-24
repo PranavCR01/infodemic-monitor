@@ -23,7 +23,7 @@ import {
   type VideoLabel,
   isSeverity,
 } from "@/lib/vocabulary";
-import type { RawClaim, RawEvidence, RawReason, RawResult, RawSegment } from "./result-types";
+import type { RawClaim, RawEvidence, RawReason, RawResult, RawSearchTrail, RawSegment } from "./result-types";
 
 export type SourceKind = "pubmed" | "reference" | "library" | "other";
 
@@ -57,6 +57,21 @@ export type EvidenceSummary = {
   guidance: { direction: "supports" | "contradicts"; count: number }[];
 };
 
+/** "How we searched" for one claim (T31). */
+export type ClaimSearch = {
+  queries: { query: string; results: number | null; failed: boolean }[];
+  sources: { name: string; publisher: string; sites: string[] }[];
+  libraryUsed: boolean;
+  retrieved: number | null;
+  screened: number;
+  kept: number;
+  roundsUsed: number;
+  roundsMax: number;
+  budgetExhausted: boolean;
+  /** Older runs kept only the planned queries, not what each returned. */
+  partial: boolean;
+};
+
 export type Claim = {
   id: string; // claim_id, unique within the result
   number: number; // 1-based, in time order: what the UI calls it
@@ -76,6 +91,7 @@ export type Claim = {
   evidence: EvidenceSummary;
   criticNotes: string[];
   severity: Severity | null;
+  search: ClaimSearch | null;
 };
 
 export type Reason = { code: string; claimNumber: number | null; text: string };
@@ -102,6 +118,7 @@ export type ResultModel = {
   analysedAt: string | null;
   /** Pipeline / prompt version, for tracing a printed report. Never a model ID. */
   analysisVersion: string | null;
+  /** All claims' searches together (T31), for the result page and the report. */
   search: {
     queries: string[];
     sites: string[];
@@ -160,6 +177,37 @@ function toSegment(s: RawSegment): Segment {
   return { id: s.segment_id, source: s.source, start: s.start_seconds, end: s.end_seconds, text: s.text };
 }
 
+function toSearch(t: RawSearchTrail | null | undefined): ClaimSearch | null {
+  if (!t) return null;
+  return {
+    queries: (t.pubmed_queries ?? [])
+      .filter((q) => !q.repeat)
+      .map((q) => ({ query: q.query, results: q.results ?? null, failed: Boolean(q.failed) })),
+    sources: (t.references ?? []).map((r) => ({ name: r.name, publisher: r.publisher ?? "", sites: r.sites ?? [] })),
+    libraryUsed: Boolean(t.library?.fired),
+    retrieved: t.counts.retrieved ?? null,
+    screened: t.counts.screened,
+    kept: t.counts.kept,
+    roundsUsed: t.budget.rounds_used,
+    roundsMax: t.budget.rounds_max,
+    budgetExhausted: t.budget.exhausted,
+    partial: t.recorded === "queries_only",
+  };
+}
+
+function combineSearches(claims: Claim[]): ResultModel["search"] {
+  const all = claims.map((c) => c.search).filter((s): s is ClaimSearch => s !== null);
+  if (all.length === 0) return null;
+  const uniq = (xs: string[]) => Array.from(new Set(xs));
+  return {
+    queries: uniq(all.flatMap((s) => s.queries.map((q) => q.query))),
+    sites: uniq(all.flatMap((s) => s.sources.flatMap((r) => (r.sites.length ? r.sites : [r.name])))),
+    screened: all.reduce((n, s) => n + s.screened, 0),
+    kept: all.reduce((n, s) => n + s.kept, 0),
+    ranAt: null,
+  };
+}
+
 function toClaim(c: RawClaim, number: number): Claim {
   const sources = (c.evidence ?? []).map(toSource);
   const severity = c.severity?.severity;
@@ -182,6 +230,7 @@ function toClaim(c: RawClaim, number: number): Claim {
     evidence: summariseEvidence(sources),
     criticNotes: (c.critic?.issues ?? []).map(displayText),
     severity: isSeverity(severity) ? severity : null,
+    search: toSearch(c.search_trail),
   };
 }
 
@@ -227,7 +276,6 @@ export function adaptResult(raw: RawResult): ResultModel {
     .map(toSegment)
     .sort((a, b) => a.start - b.start || (a.source === "speech" ? -1 : 1));
 
-  const s = raw.search;
   return {
     jobId: raw.job_id,
     videoId: raw.video_id ?? null,
@@ -248,15 +296,7 @@ export function adaptResult(raw: RawResult): ResultModel {
     submittedAt: raw.submitted_at ?? null,
     analysedAt: raw.created_at ?? null,
     analysisVersion: raw.pipeline_version ?? null,
-    search: s
-      ? {
-          queries: s.pubmed_queries ?? [],
-          sites: s.reference_sites ?? [],
-          screened: s.results_screened ?? null,
-          kept: s.results_kept ?? null,
-          ranAt: s.ran_at ?? null,
-        }
-      : null,
+    search: combineSearches(claims),
   };
 }
 

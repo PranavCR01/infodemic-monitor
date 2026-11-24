@@ -129,7 +129,7 @@ export function ExportReport({ r, recordUrl }: { r: ResultModel; recordUrl: stri
         <p>
           Speech and on-screen text were transcribed and split into health claims. Each claim was checked against PubMed
           research and official health sources{r.search?.sites.length ? ` (${r.search.sites.join(", ")})` : ""}.
-          {r.search?.screened != null ? ` ${r.search.screened} results were screened and ${r.search.kept ?? 0} kept.` : ""}
+          {r.search?.screened != null ? ` ${r.search.screened} results were screened and ${r.search.kept ?? 0} used for the verdicts.` : ""}
           {" "}Uncertain or high-risk results go to a human reviewer.
         </p>
       </section>

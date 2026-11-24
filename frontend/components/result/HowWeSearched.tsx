@@ -1,6 +1,6 @@
 import type { ResultModel } from "@/lib/api/result-adapter";
 
-/** T31 (not built yet): shown only when the API returns `search`. */
+/** All claims' searches together (T31); each claim's own trail is in its drawer. */
 export function HowWeSearched({ search }: { search: NonNullable<ResultModel["search"]> }) {
   return (
     <details className="rounded-lg border border-line bg-surface p-4 shadow-1">
@@ -20,7 +20,7 @@ export function HowWeSearched({ search }: { search: NonNullable<ResultModel["sea
         )}
         {search.sites.length > 0 && (
           <>
-            <dt className="font-semibold text-ink">Official sites searched</dt>
+            <dt className="font-semibold text-ink">Official sources checked</dt>
             <dd className="text-ink-2">{search.sites.join(", ")}</dd>
           </>
         )}
@@ -28,7 +28,7 @@ export function HowWeSearched({ search }: { search: NonNullable<ResultModel["sea
           <>
             <dt className="font-semibold text-ink">Results</dt>
             <dd className="text-ink-2">
-              {search.screened} screened{search.kept !== null ? `, ${search.kept} kept` : ""}
+              {search.screened} screened{search.kept !== null ? `, ${search.kept} used for the verdicts` : ""}
             </dd>
           </>
         )}
