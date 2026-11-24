@@ -28,6 +28,10 @@ rules find no concept in a claim.
   the reranker: references first for facts of record, studies first otherwise.
   Research questions never touch the references. A reference failure is recorded in
   ``errors`` and the claim goes on with PubMed.
+- "How we searched" (T31): ``retrieve_evidence`` also owns ``search_trail``, one
+  ``SearchRound`` per claim per round (the PubMed query run, hits, records after
+  filters, whether it came from the cache, the references consulted, what the round
+  added). It only observes: what is retrieved, merged and reranked is unchanged.
 
 Use them by overriding the stubs:
 
@@ -39,11 +43,12 @@ The default graph keeps the stubs until the integration task (T11) wires these i
 from __future__ import annotations
 
 from typing import Optional
+from urllib.parse import urlsplit
 
 from app.core.graph import routing as r
 from app.core.graph.nodes import NodeFn
 from app.core.graph.routing import Budgets, DEFAULT_BUDGETS
-from app.core.graph.state import NodeError, PipelineState
+from app.core.graph.state import NodeError, PipelineState, ReferenceConsulted, SearchRound
 from app.core.retrieval.library.fallback import LibraryFallback, merge_library_evidence, should_fire
 from app.core.retrieval.planning import QueryPlanner
 from app.core.retrieval.pubmed import PubMedClient
@@ -80,9 +85,21 @@ def make_retrieval_nodes(
             queries[cid] = [*already, q]
         return {"retrieval_queries": queries}
 
+    def consulted_view(item) -> ReferenceConsulted:
+        config = getattr(references, "config", None)
+        source = config.source(item.source_id) if config is not None else None
+        site = urlsplit(item.url).hostname if item.url else None
+        if site is None and source is not None and source.allowed_hosts:
+            site = source.allowed_hosts[0]
+        return ReferenceConsulted(
+            source_id=item.source_id, source_name=source.name if source else item.source_id,
+            publisher=source.publisher if source else "", site=site, item=item.item,
+            mode=item.mode, outcome=item.outcome, url=item.url)
+
     def retrieve_evidence(state: PipelineState) -> dict:
         evidence = {cid: list(recs) for cid, recs in state.get("retrieved_evidence", {}).items()}
         attempts = dict(state.get("retrieval_attempts", {}))
+        trail = {cid: list(rounds) for cid, rounds in state.get("search_trail", {}).items()}
         errors: list[NodeError] = []
         claims = {c.claim_id: c for c in state.get("claims", [])}
         for cid in r.claims_to_retrieve(state, budgets):
@@ -90,6 +107,8 @@ def make_retrieval_nodes(
             first_round = attempts.get(cid, 0) == 0
             attempts[cid] = attempts.get(cid, 0) + 1
             evidence.setdefault(cid, [])
+            before = len(evidence[cid])
+            step: dict = {"round": attempts[cid]}
             claim = claims.get(cid)
             if (references is not None and first_round and claim is not None
                     and claim.claim_kind == "fact_of_record"):
@@ -100,6 +119,7 @@ def make_retrieval_nodes(
                         node=r.RETRIEVE_EVIDENCE, claim_id=cid, retryable=True,
                         message=f"reference search failed: {type(exc).__name__}: {exc}"[:500],
                     ))
+                    step["reference_error"] = type(exc).__name__
                 else:
                     evidence[cid] = merge_evidence(evidence[cid], found.records)
                     errors += [
@@ -107,10 +127,17 @@ def make_retrieval_nodes(
                                   message=f"reference source degraded: {e}"[:500])
                         for e in found.errors
                     ]
+                    try:  # the trail only observes: never let it fail the round
+                        step["references"] = [consulted_view(i) for i in getattr(found, "consulted", [])]
+                    except Exception:  # noqa: BLE001
+                        step["references"] = []
+                    step["reference_passages"] = len(found.records)
             if not planned:
                 errors.append(NodeError(node=r.RETRIEVE_EVIDENCE, claim_id=cid, message="no query planned"))
+                trail.setdefault(cid, []).append(SearchRound(**step, new_records=len(evidence[cid]) - before))
                 continue
             query = planned[-1]
+            step["pubmed_query"] = query
             try:
                 result = retriever.retrieve(query)
             except Exception as exc:  # noqa: BLE001 - recorded in state, not raised
@@ -120,9 +147,19 @@ def make_retrieval_nodes(
                         message=f"PubMed retrieval failed for query {query!r}: {type(exc).__name__}: {exc}"[:500],
                     )
                 )
+                step["pubmed_error"] = type(exc).__name__
+                trail.setdefault(cid, []).append(SearchRound(**step, new_records=len(evidence[cid]) - before))
                 continue
             evidence[cid] = merge_evidence(evidence[cid], result.records)
-        update: dict = {"retrieved_evidence": evidence, "retrieval_attempts": attempts}
+            requests = getattr(result, "network_requests", None)
+            trail.setdefault(cid, []).append(SearchRound(
+                **step, pubmed_hits=int(getattr(result, "pmids_found", len(result.records))),
+                pubmed_records=len(result.records),
+                from_cache=(requests == 0) if isinstance(requests, int) else None,
+                new_records=len(evidence[cid]) - before,
+            ))
+        update: dict = {"retrieved_evidence": evidence, "retrieval_attempts": attempts,
+                        "search_trail": trail}
         if errors:
             update["errors"] = errors
         return update
