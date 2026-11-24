@@ -16,9 +16,9 @@ routing:
   analyze_stance:    {provider: anthropic, model: claude-sonnet-5-5, prompt: stance_v1}    # small or medium
   # plan_search is rules first (section 6); a model is only added if the rules
   # prove insufficient, so it is deliberately absent from this table.
-  verify_claims:     {provider: anthropic, model: claude-opus-5-5,   prompt: verify_v2}    # strong reasoning
+  verify_claims:     {provider: anthropic, model: claude-opus-5-5,   prompt: verify_v3}    # strong reasoning
   critique:          {provider: openai,    model: gpt-4o-2024-08-06, prompt: critic_v1}    # different provider from the verifier
-  judge_explanation: {provider: anthropic, model: claude-sonnet-5-5, prompt: explain_v1}   # writing quality; label already decided
+  judge_explanation: {provider: anthropic, model: claude-sonnet-5-5, prompt: explain_v2}   # writing quality; label already decided
   fallback:
     on: [timeout, 5xx]
     retries: 1          # retries on the primary before falling back

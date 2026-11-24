@@ -30,6 +30,7 @@ from app.api.result_models import (
     ReviewView,
     SegmentView,
 )
+from app.core.schemas.pipeline import display_label
 from app.core.schemas.search_trail import SearchTrailView
 from app.db.models.claim import ClaimEvidenceRow, ClaimRow, OcrSegmentRow, TranscriptSegmentRow
 from app.db.models.job import Job
@@ -251,6 +252,8 @@ def job_result(db: Session, job: Job, result: Result) -> JobResultResponse:
         pipeline_version=result.pipeline_version,
         decision_rule=result.decision_rule,
         deciding_claim_ids=list(result.deciding_claim_ids or []),
+        misinfo_basis=result.misinfo_basis,
+        label_display=display_label(result.label, result.misinfo_basis),
         transcript_segments=transcript,
         ocr_segments=ocr,
     )

@@ -42,6 +42,8 @@ SUP, CON, MIX, INS, NV = V.SUPPORTED, V.CONTRADICTED, V.MIXED, V.INSUFFICIENT_EV
 
 # ------------------------------------------------------------------ fixtures
 
+TEMPLATE_START = 'The speaker endorses the first claim ("Claim number 1 cures the flu"), and the evidence contradicts it (ev_c1)'
+
 
 def paper(eid: str, pmid: str = "123") -> EvidenceRecord:
     return EvidenceRecord(
@@ -198,8 +200,9 @@ def test_refuted_supported_is_misinfo_and_always_reviewed():
     assert final.claim_ids == ["c1"]
     assert final.evidence_ids == ["ev_c1"]  # the evidence that shows it true
     assert final.review_flags == [f"{jg.FLAG_DENIES_SUPPORTED}:c1"]
-    assert final.explanation.startswith("MISINFO because claim c1")
-    assert "denied by the speaker but supported by the evidence (ev_c1)" in final.explanation
+    assert final.misinfo_basis == jg.BASIS_DENIES_SUPPORTED
+    assert final.explanation.startswith('The speaker denies the first claim ("Claim number 1 cures the flu")')
+    assert "but the evidence supports it (ev_c1)" in final.explanation
 
 
 def test_refuted_supported_returns_its_review_reason():
@@ -247,7 +250,7 @@ def test_refuted_unsettled_is_cannot_recognize_possible_debunk(verdict):
     assert final.claim_ids == ["c1"]
     assert f"{jg.FLAG_POSSIBLE_DEBUNK}:c1" in final.review_flags
     assert "may be a debunk" in final.explanation
-    assert "possible debunk of unsettled claim c1" in final.explanation
+    assert "the speaker may be debunking the first claim" in final.explanation
 
 
 def test_refuted_unsettled_returns_its_review_reasons():
@@ -291,7 +294,7 @@ def test_possible_debunk_when_no_misinfo_wins_goes_to_review_in_the_graph():
     out = make_stub_nodes()[r.ROUTE_FOR_REVIEW](s)
     assert out["requires_human_review"] is True
     assert f"judge:{jg.FLAG_POSSIBLE_DEBUNK}:c2" in out["review_reasons"]
-    assert "possible debunk of unsettled claim c2" in s["final_result"].explanation
+    assert "the speaker may be debunking the second claim" in s["final_result"].explanation
 
 
 def test_reasons_from_every_claim_in_claim_order():
@@ -385,14 +388,14 @@ def test_rule4_nothing_judged_is_cannot_recognize(rows):
     assert final.classification == MisinfoLabel.CANNOT_RECOGNIZE
     assert final.decision_rule == jg.RULE_NOTHING_JUDGED
     assert final.claim_ids == [] and final.evidence_ids == []
-    assert "no claim could be judged" in final.explanation
+    assert final.explanation.startswith("No claim could be judged against the evidence: the first claim")
 
 
 def test_rule4_no_claims_says_so():
     final, _ = run_judge(make_state())
     assert final.classification == MisinfoLabel.CANNOT_RECOGNIZE
     assert final.decision_rule == jg.RULE_NO_CLAIMS
-    assert "no checkable health claims" in final.explanation
+    assert final.explanation == "No checkable health claims were found in the video."
 
 
 def test_rule4_claims_not_requiring_verification_count_as_no_claims():
@@ -422,7 +425,7 @@ def test_flag_mixed_video_endorsed_and_refuted_false_claims():
     final, _ = run_judge(make_state((E, CON), (RF, CON)))
     assert final.classification == MisinfoLabel.MISINFO  # the rules still decide the label
     assert final.review_flags == [jg.FLAG_MIXED_VIDEO]
-    assert "endorses one false claim and refutes another" in final.explanation
+    assert "endorses one claim the evidence contradicts or does not support, and refutes another" in final.explanation
 
 
 @pytest.mark.parametrize("stance", [U, None])
@@ -524,8 +527,8 @@ def test_every_cited_id_is_in_state_across_many_mixes():
 
 def test_template_explanation_names_deciding_claims_and_evidence():
     final, _ = run_judge(make_state((E, CON)))
-    assert final.explanation.startswith("MISINFO because claim c1")
-    assert "ev_c1" in final.explanation
+    assert final.explanation.startswith(TEMPLATE_START)
+    assert final.misinfo_basis == jg.BASIS_CONTRADICTED
     assert final.model is None and final.prompt_version is None
 
 
@@ -558,13 +561,13 @@ def test_confidence_stays_empty_until_calibrated():
 
 
 def test_explanation_model_writes_text_but_cannot_change_label():
-    caller = FakeCaller({"explanation": "MISINFO because claim c1 is endorsed and contradicted by ev_c1."},
-                        prompt="explain_v1")
+    caller = FakeCaller({"explanation": "MISINFO because the first claim is endorsed and contradicted by ev_c1."},
+                        prompt="explain_v2")
     final, errors = run_judge(make_state((E, CON)), caller)
     assert errors == []
     assert final.classification == MisinfoLabel.MISINFO
-    assert final.explanation.startswith("MISINFO because claim c1")
-    assert final.model == "fake-writer-1" and final.prompt_version == "explain_v1"
+    assert final.explanation.startswith("MISINFO because the first claim")
+    assert final.model == "fake-writer-1" and final.prompt_version == "explain_v2"
     (call,) = caller.calls
     assert call.step == jg.STEP
     assert call.input["tool_choice"] == {"type": "tool", "name": jg.TOOL_NAME}
@@ -575,9 +578,11 @@ def test_explanation_model_writes_text_but_cannot_change_label():
 
 
 def test_flags_are_appended_to_model_text():
-    caller = FakeCaller({"explanation": "MISINFO because claim c1 is endorsed and contradicted."})
+    caller = FakeCaller({"explanation": "MISINFO because the first claim is endorsed and contradicted."})
     final, _ = run_judge(make_state((E, CON), (RF, CON)), caller)
-    assert final.explanation.endswith("Needs review: the video endorses one false claim and refutes another.")
+    assert final.explanation.endswith(
+        "Needs review: the video endorses one claim the evidence contradicts or does not support, "
+        "and refutes another that the evidence contradicts.")
 
 
 @pytest.mark.parametrize("text,why", [
@@ -603,14 +608,14 @@ def test_ordinary_prose_is_not_mistaken_for_a_label():
                                     {"explanation": "see https://evil.example"}, {"explanation": "   "}])
 def test_malformed_explanation_falls_back_to_template(output):
     final, errors = run_judge(make_state((E, CON)), FakeCaller(output))
-    assert final.explanation.startswith("MISINFO because claim c1")
+    assert final.explanation.startswith(TEMPLATE_START)
     assert final.model is None and len(errors) == 1
 
 
 def test_model_failure_falls_back_to_template_and_is_retryable():
     final, errors = run_judge(make_state((E, CON)), BrokenCaller())
     assert final.classification == MisinfoLabel.MISINFO
-    assert final.explanation.startswith("MISINFO because")
+    assert final.explanation.startswith(TEMPLATE_START)
     assert errors[0].retryable is True
     assert not guardrail_review_reasons({"errors": errors})  # not a review reason on its own
 
@@ -637,7 +642,7 @@ def test_runs_through_the_real_model_router_and_routing_yaml():
 
     config = load_routing()
     route = config.route(jg.STEP)
-    client = MockModelClient(lambda model, req: {"explanation": "MISINFO because claim c1 is contradicted."})
+    client = MockModelClient(lambda model, req: {"explanation": "MISINFO because the first claim is contradicted."})
     final, errors = run_judge(make_state((E, CON)), ModelRouter(config, {route.provider: client}))
     assert errors == []
     assert final.model == route.model and final.prompt_version == route.prompt
@@ -682,7 +687,7 @@ def test_mapping_without_confidence_or_citations():
 
 def test_mapping_records_the_explanation_model():
     s = make_state((E, CON))
-    s["final_result"] = run_judge(s, FakeCaller({"explanation": "MISINFO because c1."}))[0]
+    s["final_result"] = run_judge(s, FakeCaller({"explanation": "MISINFO because of the first claim."}))[0]
     assert jg.to_classification_result(s, latency_ms=1).model_used == "fake-writer-1"
 
 

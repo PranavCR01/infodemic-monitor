@@ -45,6 +45,9 @@ class JobListItem(BaseModel):
     state: str
     step: Optional[str] = None
     updated_at: Optional[str] = None
+    # T30
+    misinfo_basis: Optional[str] = None
+    label_display: Optional[str] = None
 
 
 class JobListPage(BaseModel):

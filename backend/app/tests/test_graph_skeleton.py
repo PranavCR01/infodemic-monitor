@@ -200,7 +200,7 @@ def test_no_verifiable_claims_skips_to_judge():
                     r.VERIFY_CLAIMS, r.CRITIQUE_VERIFICATION):
         assert h.calls[skipped] == 0
     assert out["final_result"].classification == MisinfoLabel.CANNOT_RECOGNIZE
-    assert "no checkable health claims" in out["final_result"].explanation
+    assert "no checkable health claims" in out["final_result"].explanation.lower()
     assert h.calls[r.PERSIST_RESULT] == 1
 
 

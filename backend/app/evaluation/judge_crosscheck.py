@@ -44,6 +44,7 @@ from typing import Any, Callable, Iterable, Mapping, Optional, Sequence
 
 from app.core.graph import judge as jg
 from app.core.graph import review_policy as rp
+from app.core.graph.routing import DEFAULT_BUDGETS
 from app.core.graph.state import (
     EvidenceRecord,
     GraphClaim,
@@ -62,7 +63,9 @@ PIPELINE_ONLY_RULES = frozenset({
     "low_confidence", "high_risk_uncertain", "guardrails",
 })
 
-# Golden judge reason strings (scripts/judge.py) → vocabulary kind.
+# Golden judge reason strings (scripts/judge.py) → vocabulary kind. Before the D1
+# re-derivation (golden set @ 45244b0) the golden judge wrote sentences; from 022ac44 it
+# writes ``<kind>:<claim_id>`` (or ``mixed_video``). Both are understood.
 GOLDEN_RULE_REASONS = {
     "speaker denies a supported claim": "denies_supported",
     "possible debunk of an unsettled claim": "possible_debunk",
@@ -72,6 +75,16 @@ _GOLDEN_TRIGGERS: tuple[tuple[re.Pattern[str], str], ...] = (
     (re.compile(r"^claim (\S+) has both supporting and contradicting evidence$"), "conflicting_evidence"),
     (re.compile(r"^claim (\S+) stance is UNCLEAR$"), "unclear_stance"),
 )
+# ``<kind>:<cid>`` reasons of the 022ac44 golden judge → vocabulary kind.
+GOLDEN_KIND_REASONS = {
+    "denies_supported": "denies_supported",
+    "unproven_claim": "unproven_claim",
+    "possible_debunk": "possible_debunk",
+    "mixed_evidence": "mixed_evidence",
+    "deciding_insufficient": "weak_evidence",
+    "evidence_both_sides": "conflicting_evidence",
+    "unclear_stance": "unclear_stance",
+}
 
 
 class UnknownReason(ValueError):
@@ -88,6 +101,7 @@ class GoldenClaim:
     claim_verdict: str
     evidence_supporting: tuple[str, ...] = ()
     evidence_contradicting: tuple[str, ...] = ()
+    claim_category: str = ""  # T30: UNSUPPORTED is only for efficacy categories
 
     def as_row(self) -> dict[str, str]:
         """The claims.csv row shape the golden judge reads."""
@@ -107,6 +121,7 @@ class GoldenVideo:
     recorded_label: str
     recorded_review_reasons: tuple[str, ...]
     claims: tuple[GoldenClaim, ...]
+    recorded_basis: str = ""  # videos.csv misinfo_basis (T30; empty unless MISINFO)
 
 
 def _split_ids(s: str) -> tuple[str, ...]:
@@ -124,6 +139,7 @@ def load_golden_csvs(videos_csv: str, claims_csv: str) -> list[GoldenVideo]:
             claim_verdict=row["claim_verdict"],
             evidence_supporting=_split_ids(row.get("evidence_supporting", "")),
             evidence_contradicting=_split_ids(row.get("evidence_contradicting", "")),
+            claim_category=(row.get("claim_category") or "").strip(),
         ))
     out = []
     for row in csv.DictReader(io.StringIO(videos_csv)):
@@ -134,6 +150,7 @@ def load_golden_csvs(videos_csv: str, claims_csv: str) -> list[GoldenVideo]:
             recorded_label=row["video_level_label"],
             recorded_review_reasons=_split_ids(row.get("review_reasons", "")),
             claims=tuple(by_video.get(vid, [])),
+            recorded_basis=(row.get("misinfo_basis") or "").strip(),
         ))
     return out
 
@@ -145,11 +162,13 @@ def to_fixture(videos: Sequence[GoldenVideo]) -> list[dict[str, Any]]:
             "out_of_scope": v.out_of_scope,
             "recorded_label": v.recorded_label,
             "recorded_review_reasons": list(v.recorded_review_reasons),
+            "recorded_basis": v.recorded_basis,
             "claims": [
                 {"claim_id": c.claim_id, "speaker_stance": c.speaker_stance,
                  "claim_verdict": c.claim_verdict,
                  "evidence_supporting": list(c.evidence_supporting),
-                 "evidence_contradicting": list(c.evidence_contradicting)}
+                 "evidence_contradicting": list(c.evidence_contradicting),
+                 **({"claim_category": c.claim_category} if c.claim_category else {})}
                 for c in v.claims
             ],
         }
@@ -163,12 +182,14 @@ def from_fixture(rows: Iterable[Mapping[str, Any]]) -> list[GoldenVideo]:
             video_id=r["video_id"], out_of_scope=bool(r["out_of_scope"]),
             recorded_label=r["recorded_label"],
             recorded_review_reasons=tuple(r["recorded_review_reasons"]),
+            recorded_basis=r.get("recorded_basis", ""),
             claims=tuple(
                 GoldenClaim(
                     claim_id=c["claim_id"], speaker_stance=c["speaker_stance"],
                     claim_verdict=c["claim_verdict"],
                     evidence_supporting=tuple(c["evidence_supporting"]),
                     evidence_contradicting=tuple(c["evidence_contradicting"]),
+                    claim_category=c.get("claim_category", ""),
                 )
                 for c in r["claims"]
             ),
@@ -197,8 +218,13 @@ def build_state(video: GoldenVideo) -> PipelineState:
                       media_uri=f"golden://{video.video_id}", pipeline_version="t24-crosscheck")
     claims, stances, verdicts, evidence = [], {}, {}, {}
     for i, c in enumerate(video.claims):
+        # T30: a golden UNSUPPORTED verdict already says the full search found nothing
+        # for an efficacy claim. Without a category column, assume the labeller applied
+        # that rule; with one, the backend's gate checks it.
+        category = c.claim_category or (
+            "treatment_efficacy" if c.claim_verdict == Verdict.UNSUPPORTED.value else "unknown")
         claims.append(GraphClaim(
-            claim_id=c.claim_id, claim_text=c.claim_id, claim_category="unknown",
+            claim_id=c.claim_id, claim_text=c.claim_id, claim_category=category,
             source_segment_ids=[], start_seconds=float(i), end_seconds=float(i) + 1,
         ))
         stances[c.claim_id] = StanceResult(claim_id=c.claim_id, stance=Stance(c.speaker_stance),
@@ -211,8 +237,10 @@ def build_state(video: GoldenVideo) -> PipelineState:
         ids = dict.fromkeys([*c.evidence_supporting, *c.evidence_contradicting])
         if ids:
             evidence[c.claim_id] = [_evidence_record(e) for e in ids]
+    # Golden verdicts are final: every claim's search counts as complete (T30's gate).
+    attempts = {c.claim_id: DEFAULT_BUDGETS.max_retrieval_attempts for c in video.claims}
     s.update(claims=claims, stance_results=stances, verification_results=verdicts,
-             retrieved_evidence=evidence)
+             retrieved_evidence=evidence, retrieval_attempts=attempts)
     return s
 
 
@@ -223,6 +251,7 @@ class JudgeOutput:
     reasons: frozenset[str]  # normalised vocabulary
     raw: tuple[str, ...] = ()  # the side's own wording, for the report
     extra: tuple[str, ...] = ()  # backend reasons outside the shared signals
+    basis: str = ""  # misinfo_basis (T30); empty unless MISINFO
 
 
 def run_backend(video: GoldenVideo) -> JudgeOutput:
@@ -245,13 +274,15 @@ def run_backend(video: GoldenVideo) -> JudgeOutput:
     return JudgeOutput(
         label=final.classification.value, deciding=tuple(final.claim_ids),
         reasons=frozenset(reasons), raw=decision.reasons, extra=tuple(extra),
+        basis=final.misinfo_basis or "",
     )
 
 
 # ------------------------------------------------------------------ golden side
 
 
-GoldenJudge = Callable[[list[dict]], tuple[str, list[dict], list[str]]]
+# ``(label, deciding, reasons)`` before 022ac44; ``(label, basis, deciding, reasons)`` after.
+GoldenJudge = Callable[[list[dict]], tuple]
 GoldenReasons = Callable[[list[dict]], list[str]]
 
 
@@ -260,6 +291,13 @@ def normalise_golden_reasons(reasons: Sequence[str], deciding: Sequence[str]) ->
     for r in reasons:
         if r in GOLDEN_RULE_REASONS:
             out.update(f"{GOLDEN_RULE_REASONS[r]}:{cid}" for cid in deciding)
+            continue
+        if r == "mixed_video":
+            out.add(r)
+            continue
+        kind, sep, cid = r.partition(":")
+        if sep and kind in GOLDEN_KIND_REASONS:
+            out.add(f"{GOLDEN_KIND_REASONS[kind]}:{cid}")
             continue
         for pattern, kind in _GOLDEN_TRIGGERS:
             m = pattern.match(r)
@@ -273,10 +311,15 @@ def normalise_golden_reasons(reasons: Sequence[str], deciding: Sequence[str]) ->
 
 def run_golden(video: GoldenVideo, judge: GoldenJudge, review_reasons: GoldenReasons) -> JudgeOutput:
     rows = [c.as_row() for c in video.claims]
-    label, deciding, _ = judge(rows)
+    out = judge(rows)
+    if len(out) == 4:
+        label, basis, deciding, _ = out
+    else:  # golden judge before the D1 re-derivation
+        (label, deciding, _), basis = out, None
     raw = review_reasons(rows)
     ids = tuple(c["claim_id"] for c in deciding)
-    return JudgeOutput(label=label, deciding=ids, reasons=normalise_golden_reasons(raw, ids), raw=tuple(raw))
+    return JudgeOutput(label=label, deciding=ids, reasons=normalise_golden_reasons(raw, ids), raw=tuple(raw),
+                       basis=basis or "")
 
 
 # ------------------------------------------------------------------ comparison
@@ -329,6 +372,14 @@ DIFFERENCE_KINDS: dict[str, dict[str, str]] = {
                "back to every claim (`pool = deciding or claims`); §11 has no such "
                "fallback.",
     },
+    "weak_evidence_covered_by_judge_reason": {
+        "matches": "both (same review outcome)",
+        "why": "§11 lists a deciding claim that is MIXED or UNSUPPORTED as a weak-evidence "
+               "trigger, and the backend raises weak_evidence:<cid> for it. The golden "
+               "judge (022ac44) leaves that trigger out because its own mixed_evidence / "
+               "unproven_claim reason for the same claim already sends the video to "
+               "review. Same claim, same outcome, one extra reason on the backend side.",
+    },
     "weak_evidence_on_non_deciding_claim": {
         "matches": "neither (backend extension, documented)",
         "why": "§11 says 'a deciding claim is INSUFFICIENT_EVIDENCE or MIXED'. In the "
@@ -355,6 +406,10 @@ class VideoComparison:
     @property
     def label_agrees(self) -> bool:
         return self.backend.label == self.golden.label
+
+    @property
+    def basis_agrees(self) -> bool:
+        return self.backend.basis == self.golden.basis
 
     @property
     def deciding_agrees(self) -> bool:
@@ -385,6 +440,10 @@ def classify_difference(reason: str, side: str, video: GoldenVideo, golden: Judg
             return kind
         if kind == "weak_evidence" and cid not in deciding:
             return "weak_evidence_on_non_deciding_claim"
+        if kind == "weak_evidence" and (
+            f"unproven_claim:{cid}" in golden.reasons or f"mixed_evidence:{cid}" in golden.reasons
+        ):
+            return "weak_evidence_covered_by_judge_reason"
     if side == "golden" and not golden.deciding and kind in ("conflicting_evidence", "unclear_stance"):
         return "trigger_on_non_deciding_claim_when_nothing_decides"
     return "unclassified"
@@ -395,6 +454,7 @@ def compare(video: GoldenVideo, judge: GoldenJudge, review_reasons: GoldenReason
     golden = run_golden(video, judge, review_reasons)
     recorded_ok = (
         video.recorded_label == golden.label
+        and video.recorded_basis == golden.basis
         and list(video.recorded_review_reasons) == list(golden.raw)
     )
     b_only = backend.reasons - golden.reasons
@@ -428,10 +488,11 @@ def agreement_table(results: Sequence[VideoComparison]) -> list[tuple[str, int, 
         row("video label (in scope)", lambda r: r.label_agrees),
         row("video label (out_of_scope, no claims)", lambda r: r.label_agrees,
             [r for r in results if r.out_of_scope]),
+        row("misinfo_basis (in scope)", lambda r: r.basis_agrees),
         row("deciding claims", lambda r: r.deciding_agrees),
         row("sent to review (shared signals)", lambda r: r.review_agrees),
         row("review reasons, exact (shared vocabulary)", lambda r: r.reasons_agree),
-        row("golden judge reproduces videos.csv label + review_reasons",
+        row("golden judge reproduces videos.csv label + basis + review_reasons",
             lambda r: r.recorded_reasons_match_golden, list(results)),
     ]
 
@@ -461,9 +522,10 @@ def render_markdown(results: Sequence[VideoComparison], source: Optional[str] = 
         lines.append(f"| {kind} | {n} | {nv} | {matches} | {', '.join(vids)} |")
     lines += ["", "## Per video (only videos with a difference)", ""]
     for r in results:
-        if r.label_agrees and r.reasons_agree and r.deciding_agrees:
+        if r.label_agrees and r.basis_agrees and r.reasons_agree and r.deciding_agrees:
             continue
         lines.append(f"- **{r.video_id}** label backend={r.backend.label} golden={r.golden.label}; "
+                     f"basis backend={r.backend.basis or '-'} golden={r.golden.basis or '-'}; "
                      f"deciding backend={list(r.backend.deciding)} golden={list(r.golden.deciding)}")
         for reason, kind in r.differences.items():
             side = "backend only" if reason in r.backend_only else "golden only"

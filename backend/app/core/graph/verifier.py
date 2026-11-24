@@ -1,7 +1,7 @@
 """Evidence verifier node (target design §7; issue #33).
 
 For each claim, one LLM call reads the claim and its reranked papers and decides what
-the evidence says about that exact claim: SUPPORTED, CONTRADICTED, MIXED,
+the evidence says about that exact claim: SUPPORTED, CONTRADICTED, MIXED, UNSUPPORTED,
 INSUFFICIENT_EVIDENCE or NOT_VERIFIABLE. It judges the claim, not the speaker (§5).
 
 How it fits:
@@ -28,6 +28,14 @@ How it fits:
 - **Absence of evidence is not contradiction.** A claim with no reranked evidence gets
   INSUFFICIENT_EVIDENCE without a model call, and CONTRADICTED is impossible without
   a cited contradicting paper.
+- **Unproven efficacy claims (T30, D1 = B).** UNSUPPORTED ("no evidence supports
+  this", never "false") is offered only for an efficacy claim (``treatment_efficacy`` /
+  ``prevention``) whose searches ran without error (``routing.unproven_eligible``). It
+  must cite nothing. With no evidence at all such a claim gets UNSUPPORTED without a
+  model call; any other claim, or a model's UNSUPPORTED for a claim that isn't
+  eligible, is INSUFFICIENT_EVIDENCE. Whether the *full* search budget was used is
+  checked later: the critic asks for another search while budget is left, and
+  ``routing.verdicts_for_judge`` passes UNSUPPORTED to the judge only once it is spent.
 - **Loop-aware.** Only ``routing.claims_to_verify`` claims are (re)judged; others keep
   their verdict. A REVISE_VERIFICATION re-run counts against the revision budget and
   shows the critic's notes; a RETRIEVE_MORE re-run judges the new evidence.
@@ -65,12 +73,20 @@ from app.core.guardrails.untrusted import (
 )
 
 STEP = "verify_claims"  # routing.yaml step name (§13)
-DEFAULT_PROMPT_VERSION = "verify_v2"  # v2 adds authoritative references (T17)
+DEFAULT_PROMPT_VERSION = "verify_v3"  # v2 adds authoritative references (T17); v3 UNSUPPORTED (T30)
 TOOL_NAME = "record_verdict"
 MAX_EVIDENCE_PER_CLAIM = 10  # §6 "Cap"; enforced here too in case the reranker isn't
 DEFAULT_MAX_REPAIRS = 1
 MAX_EXPLANATION_CHARS = 1_000
 MAX_LIMITATION_CHARS = 300
+UNPROVEN_EXPLANATION = (
+    "No evidence supports this claim: the search found no study or reference that tests it, "
+    "for or against."
+)
+NOT_ELIGIBLE_LIMITATION = (
+    "no evidence either way; recorded as insufficient evidence because the unsupported "
+    "verdict applies only to treatment or prevention claims whose search ran in full"
+)
 
 __all__ = [
     "DEFAULT_PROMPT_VERSION", "STEP", "TOOL_NAME", "VERIFY_TOOL", "TOOL_CHOICE",
@@ -186,9 +202,22 @@ def evidence_index(evidence: Sequence[EvidenceRecord]) -> str:
     return "\n".join(lines)
 
 
-def _instructions(claim: GraphClaim, evidence: Sequence[EvidenceRecord], repair_note: Optional[str]) -> str:
+def _instructions(
+    claim: GraphClaim,
+    evidence: Sequence[EvidenceRecord],
+    repair_note: Optional[str],
+    allow_unsupported: bool = False,
+) -> str:
+    unsupported = (
+        "UNSUPPORTED is allowed for this claim (a treatment or prevention claim): use it if no "
+        "paper tests the claim for or against, and cite nothing."
+        if allow_unsupported else
+        "UNSUPPORTED is NOT allowed for this claim; if nothing tests it, the verdict is "
+        "INSUFFICIENT_EVIDENCE."
+    )
     text = (
-        f"Judge claim {claim.claim_id} (in the fenced claim block) against the papers below.\n\n"
+        f"Judge claim {claim.claim_id} (in the fenced claim block) against the papers below.\n"
+        f"Claim category: {_meta(claim.claim_category)}. {unsupported}\n\n"
         f"EVIDENCE INDEX (metadata from the retrieval tools; cite only these IDs):\n{evidence_index(evidence)}\n\n"
         "Each paper's title and abstract are in fenced blocks with the same id.\n"
     )
@@ -208,11 +237,12 @@ def build_prompt(
     critic: Optional[CriticResult] = None,
     repair_note: Optional[str] = None,
     max_chars: int = DEFAULT_MAX_BLOCK_CHARS,
+    allow_unsupported: bool = False,
 ) -> GuardedPrompt:
     """The fenced prompt: T10's verification builder with our instructions, plus the
     critic's notes on a revision (fenced: they are a model's words about untrusted text)."""
     prompt = verification_prompt(
-        claim, evidence, task=_instructions(claim, evidence, repair_note), max_chars=max_chars
+        claim, evidence, task=_instructions(claim, evidence, repair_note, allow_unsupported), max_chars=max_chars
     )
     blocks = list(prompt.blocks)
     if critic and critic.decision == CriticDecision.REVISE_VERIFICATION and critic.issues:
@@ -252,6 +282,7 @@ def check_citations(out: VerifierToolOutput, allowed_ids: Iterable[str]) -> None
     - SUPPORTED needs ≥1 supporting ID, CONTRADICTED ≥1 contradicting ID, MIXED both
       (``inconsistent_citation``). This is what makes "absence of evidence is not
       contradiction" a code rule rather than a prompt request.
+    - UNSUPPORTED means no evidence either way, so it cites nothing (T30).
     """
     allowed = set(allowed_ids)
     cited = [*out.supporting_evidence_ids, *out.contradicting_evidence_ids]
@@ -274,6 +305,11 @@ def check_citations(out: VerifierToolOutput, allowed_ids: Iterable[str]) -> None
         )
     if out.verdict == Verdict.MIXED and not (sup and con):
         raise InvalidVerification("inconsistent_citation", "MIXED needs both supporting and contradicting IDs")
+    if out.verdict == Verdict.UNSUPPORTED and (sup or con):
+        raise InvalidVerification(
+            "inconsistent_citation",
+            "UNSUPPORTED means no paper tests the claim either way, so it cites no evidence IDs",
+        )
 
 
 def parse_verification(raw: Any, allowed_ids: Iterable[str]) -> VerifierToolOutput:
@@ -310,9 +346,13 @@ def verify_claim(
     critic: Optional[CriticResult] = None,
     max_repairs: int = DEFAULT_MAX_REPAIRS,
     max_chars: int = DEFAULT_MAX_BLOCK_CHARS,
+    allow_unsupported: bool = False,
 ) -> tuple[VerificationResult, list[NodeError]]:
     """Verify one claim. Never raises for model trouble: the safe default is
-    INSUFFICIENT_EVIDENCE with the reason recorded."""
+    INSUFFICIENT_EVIDENCE with the reason recorded.
+
+    ``allow_unsupported`` (``routing.unproven_eligible``): the claim may be judged
+    UNSUPPORTED (T30). Without it, a model's UNSUPPORTED becomes INSUFFICIENT_EVIDENCE."""
     evidence = list(evidence)[:MAX_EVIDENCE_PER_CLAIM]
     allowed = [e.evidence_id for e in evidence]
     errors: list[NodeError] = []
@@ -329,14 +369,23 @@ def verify_claim(
 
     if not evidence:
         # §6/§7: nothing retrieved (or nothing survived reranking) is insufficient,
-        # never contradicted; there is nothing for a model to read.
+        # never contradicted; there is nothing for a model to read. For an efficacy
+        # claim it is UNSUPPORTED (T30): no evidence supports it.
+        if allow_unsupported:
+            return VerificationResult(
+                claim_id=claim.claim_id, verdict=Verdict.UNSUPPORTED,
+                explanation=UNPROVEN_EXPLANATION,
+                limitations=["no evidence was retrieved for this claim"],
+                prompt_version=prompt_version,
+            ), errors
         return insufficient("no evidence was retrieved for this claim"), errors
 
     repair_note: Optional[str] = None
     model: Optional[str] = None
     for attempt in range(max_repairs + 1):
         prompt = build_prompt(
-            claim, evidence, system_prompt, critic=critic, repair_note=repair_note, max_chars=max_chars
+            claim, evidence, system_prompt, critic=critic, repair_note=repair_note, max_chars=max_chars,
+            allow_unsupported=allow_unsupported,
         )
         try:
             result = caller.call(STEP, build_request(prompt), system=prompt.system)
@@ -361,6 +410,15 @@ def verify_claim(
             return insufficient(
                 f"verdict not determined: the verifier's answer was rejected ({exc.kind})",
                 model=model, version=recorded_version,
+            ), errors
+        if out.verdict == Verdict.UNSUPPORTED and not allow_unsupported:
+            # Harm, mechanism and other claims with no evidence stay insufficient (§7).
+            return VerificationResult(
+                claim_id=claim.claim_id, verdict=Verdict.INSUFFICIENT_EVIDENCE,
+                explanation=out.explanation[:MAX_EXPLANATION_CHARS],
+                limitations=[*(s[:MAX_LIMITATION_CHARS] for s in out.limitations), NOT_ELIGIBLE_LIMITATION],
+                raw_confidence=out.raw_confidence, model=model,
+                prompt_version=recorded_version or prompt_version,
             ), errors
         return VerificationResult(
             claim_id=claim.claim_id,
@@ -417,6 +475,7 @@ def make_verify_claims(
             result, errs = verify_claim(
                 claims[cid], reranked.get(cid, []), caller, system_prompt, version,
                 critic=critic, max_repairs=max_repairs, max_chars=max_chars,
+                allow_unsupported=r.unproven_eligible(state, cid),
             )
             results[cid] = result
             errors += errs

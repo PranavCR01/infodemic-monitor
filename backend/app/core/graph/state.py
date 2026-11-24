@@ -55,6 +55,12 @@ class Verdict(str, enum.Enum):
     SUPPORTED = "SUPPORTED"
     CONTRADICTED = "CONTRADICTED"
     MIXED = "MIXED"
+    # T30 (decision D1 = B): an *efficacy* claim (treatment_efficacy /
+    # prevention) for which the full retrieval budget found no evidence for or against.
+    # Not CONTRADICTED: "no evidence supports this", never "this is false". Code
+    # gates it (``routing.unproven_allowed``); every other no-evidence claim stays
+    # INSUFFICIENT_EVIDENCE.
+    UNSUPPORTED = "UNSUPPORTED"
     INSUFFICIENT_EVIDENCE = "INSUFFICIENT_EVIDENCE"
     NOT_VERIFIABLE = "NOT_VERIFIABLE"
 
@@ -213,6 +219,10 @@ class FinalClassification(_Record):
     review_flags: list[str] = Field(default_factory=list)
     model: Optional[str] = None
     prompt_version: Optional[str] = None
+    # Added by T30, optional and additive. Set only when the label is MISINFO:
+    # ``contradicted``, ``denies_supported`` or ``unproven`` (§9). The interface shows
+    # "MISINFO (unproven)" for the last; the label itself stays one of the four.
+    misinfo_basis: Optional[str] = None
 
 
 class ReferenceConsulted(_Record):

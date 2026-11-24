@@ -11,6 +11,11 @@ unknown code still gets a generic sentence, never an error.
 The stored strings are not changed, and the API keeps returning them as ``reasons``
 (the current frontend shows them); the structured form is the additive
 ``reason_details``.
+
+**Wording (T30, frontend finding).** ``text`` is for analysts: it says "this claim"
+rather than a claim ID (the interface adds the claim's number from ``claim_id``), and
+never shows node, check or rule names; those stay in ``detail`` and ``raw`` for the
+audit trail.
 """
 from __future__ import annotations
 
@@ -18,9 +23,10 @@ from typing import Optional
 
 from pydantic import BaseModel
 
-# code → plain-language text. ``{claim}`` becomes "claim <id>" (or "a claim"),
-# ``{on_claim}`` " on claim <id>" (or nothing); ``{detail}`` is the extra part of the
-# reason (validation check, guardrail kind...).
+# code → plain-language text. ``{claim}`` becomes "this claim" (or "a claim" when the
+# reason names none), ``{on_claim}`` " on this claim" (or nothing); ``{source}`` is a
+# plain name for where suspicious text was found. Node, check and rule names never
+# appear here; they stay in ``detail``.
 REASON_TEXT: dict[str, str] = {
     # review rules (§11)
     "weak_evidence": "The evidence for {claim} is too weak or too mixed to decide.",
@@ -29,24 +35,35 @@ REASON_TEXT: dict[str, str] = {
     "unclear_stance": "It is unclear whether the speaker agrees with {claim}.",
     "critic_escalated": "The automatic critic asked for a person to check {claim}.",
     "budget_exhausted": "The search for evidence on {claim} ran out of attempts before it was settled.",
-    "validation_failed": "An automatic consistency check failed ({detail}){on_claim}.",
+    "validation_failed": "An automatic consistency check on the result failed{on_claim}.",
     "low_confidence": "The system's confidence in the result is low.",
     "high_risk_uncertain": "{Claim} is about a high-risk health topic and the evidence could not settle it.",
     # judge flags (§9), stored as ``judge:<flag>[:<cid>]``
-    "mixed_video": "The video endorses one false claim and refutes another.",
+    "mixed_video": "The video endorses one claim the evidence contradicts or does not support, and refutes another.",
     "unclear_stance_contradicted": "The evidence contradicts {claim}, but the speaker's stance on it is unclear.",
     "false_claim_not_refuted": "{Claim} is contradicted by the evidence but is repeated without being refuted.",
     "mixed_evidence": "The evidence on {claim} is mixed.",
     "verification_failed": "{Claim} could not be checked because the verifier was unavailable.",
     "denies_supported": "The speaker denies {claim}, which the evidence supports.",
+    "unproven_claim": "The speaker presents {claim} as working, but the full search found no evidence "
+                      "for or against it: no evidence supports this claim.",
     "possible_debunk": "The speaker refutes {claim}, but the evidence could not settle it: possibly a debunk.",
     # guardrails (§15)
-    "prompt_injection_suspected": "Text in the {detail} looks like an attempt to instruct the system.",
-    "guardrail": "A safety check stopped part of the analysis ({detail}){on_claim}.",
+    "prompt_injection_suspected": "Text in {source} looks like an attempt to instruct the system.",
+    "guardrail": "A safety check stopped part of the analysis{on_claim}.",
     # asked for by a person (T32), not raised by a rule
     "user_requested": "Someone asked for a person to check this result.",
 }
-GENERIC_TEXT = "Flagged for review by rule '{code}'."
+GENERIC_TEXT = "An automatic check flagged this result for a person to look at."
+
+# Where suspicious text was found (``prompt_injection_suspected:<source>:<id>``).
+_SOURCE_TEXT = {
+    "transcript": "the speech transcript",
+    "on_screen": "the on-screen text",
+    "claim": "a claim",
+    "evidence_title": "a paper's title",
+    "evidence_abstract": "a paper's abstract",
+}
 
 # reason heads whose next part is the claim id
 _CLAIM_RULES = {
@@ -105,10 +122,11 @@ def parse_reason(raw: str) -> ReasonView:
 def reason_text(code: str, claim_id: Optional[str] = None, detail: Optional[str] = None) -> str:
     template = REASON_TEXT.get(code)
     if template is None:
-        return GENERIC_TEXT.format(code=code)
-    claim = f"claim {claim_id}" if claim_id else "a claim"
-    return template.format(claim=claim, Claim=claim[0].upper() + claim[1:], detail=detail or "unspecified",
-                           on_claim=f" on claim {claim_id}" if claim_id else "")
+        return GENERIC_TEXT
+    claim = "this claim" if claim_id else "a claim"
+    source = _SOURCE_TEXT.get((detail or "").replace(" ", "_"), "the video's text or the sources")
+    return template.format(claim=claim, Claim=claim[0].upper() + claim[1:], source=source,
+                           on_claim=" on this claim" if claim_id else "")
 
 
 def parse_reasons(raws: Optional[list]) -> list[ReasonView]:
