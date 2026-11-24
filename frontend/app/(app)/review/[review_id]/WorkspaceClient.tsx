@@ -7,16 +7,19 @@ import { apiFetch } from "@/lib/api";
 import { adaptResult, type ResultModel } from "@/lib/api/result-adapter";
 import type { CaseModel } from "@/lib/api/review-adapter";
 import { fetchCase, postDecision, postSeverity } from "@/lib/api/reviews";
+import { useViewerId } from "@/lib/hooks/useViewerId";
 
 export function WorkspaceClient({ reviewId }: { reviewId: string }) {
   const [review, setReview] = useState<CaseModel | null>(null);
   const [result, setResult] = useState<ResultModel | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const viewerId = useViewerId();
 
   useEffect(() => {
+    if (viewerId === undefined) return;
     let live = true;
     (async () => {
-      const r = await fetchCase(reviewId);
+      const r = await fetchCase(reviewId, viewerId);
       if (!live) return;
       if (!r.ok) return setError(r.message);
       setReview(r.data);
@@ -30,7 +33,7 @@ export function WorkspaceClient({ reviewId }: { reviewId: string }) {
     return () => {
       live = false;
     };
-  }, [reviewId]);
+  }, [reviewId, viewerId]);
 
   if (error) return <ErrorBanner title="This review couldn't be opened.">{error}</ErrorBanner>;
   if (!review) return <p className="text-small text-ink-2" aria-busy="true">Loading the case…</p>;
