@@ -1685,6 +1685,66 @@ decision D7). Additive: no existing field, label, verdict or retrieval result ch
   RETRY_PENDING more common; (5) the new frontend's stepper should read
   `/v1/jobs/{id}/events`.
 
+## 7z. Per-User Ownership on Every Read (T33, no issue; design §15, §17)
+
+- **Rule** (`backend/app/api/ownership.py`, the only place it lives): a row's owner sees
+  it; reviewers see every row that has an owner; admins see everything, including
+  legacy rows with no owner; analysts never see other users' rows. Roles come from
+  `app.auth.roles` (JWT `app_metadata` only); a token with a role but no `sub` sees
+  nothing. Hidden = 404 with the same body as missing. With `REQUIRE_AUTH` off the one
+  dev user still sees NULL-owner rows (unchanged from T28).
+- **Videos:** migration **0014** adds `videos.user_id` (nullable, indexed, JWT `sub`), set
+  by `POST /videos/upload` and `POST /v1/videos`. `can_view_video` = the rule above on the
+  video's owner, **or** the caller may see some job on it (so users who shared one video
+  row under the old global duplicate check keep their own results; they never see each
+  other's jobs). `POST /jobs/create` and `/v1/videos/{id}/results|claims` check the video.
+- **Duplicate detection is per user now** (decision): the unique index on
+  `videos.file_hash` became a plain index plus unique (`user_id`, `file_hash`). Otherwise
+  user B uploading A's file would get A's video id and filename back (a leak) and then a
+  404 on starting a job. Cost: the same file uploaded by two users is analysed twice.
+- **Lists:** `GET /jobs` and `GET /v1/jobs` return every job the caller may see
+  (reviewers/admins see other users' jobs, admins also legacy ones, so production jobs
+  don't vanish for the lead) and take `mine=true` for only the caller's own. Rows,
+  `GET /jobs/{id}` and `/v1/jobs/{id}` gain `submitted_by` (= `jobs.user_id`). Job reuse
+  in `POST /jobs/create` stays strictly the caller's own job (`own_jobs`), so a reviewer
+  starting a job on someone's video gets their own job.
+- **Results:** `JobResultResponse.submitted_by` on `/jobs/{id}/result` and
+  `/v1/videos/{id}/results`.
+- **Reviews:** queue (`visible_jobs` joined in `review_queue_page`, totals included),
+  case, decision and severity override all check the case's job (404 otherwise).
+  Reviewers see cases on owned jobs; admins also legacy ones. Queue items and cases carry
+  `submitted_by`; the decider stays `decision.reviewer_id`. **Nobody decides or re-rates
+  a case on their own video** (job submitter or video owner), admins included: 403
+  (not 404, since they can already read the case); nothing is written.
+- **Other routes:** T29's `/v1/jobs/{id}/playback` (merged) and T32's open
+  `/v1/jobs/{id}/review-request` call `owned_job_or_404`, so they follow the new rule
+  unchanged; both are in the route table and the cross-user matrix. (Checked by merging
+  #83 onto this branch: the matrix passes; T32's own tests seed jobs with no owner and
+  need `user_id="analyst-1"` in their fixture on rebase.)
+- **Migration numbering:** 0012 is T31's (merged, #84); 0013 is reserved by T30 (#86,
+  open), so 0014 chains onto 0012 (`alembic heads` = one head). If #86 lands a 0013
+  first, set 0014's `down_revision` to "0013". 0014 backfills a video's owner when all
+  its owned jobs agree on one user.
+- **Legacy owners:** `backend/scripts/assign_owners.py` (admin only: direct DB access,
+  no API route): `list`, `infer` (video from its jobs' single owner, job from its
+  video), `set --user <sub> --job/--video [--with-jobs]`, `csv kind,id,user_id`. Dry run
+  unless `--apply`; never replaces an owner without `--force`; every change is an
+  `audit_events` row (`owner_assigned`, actor `admin-script:<--actor>`).
+- **Tests** (`test_ownership_t33.py`, SQLite + Postgres): the route table must name every
+  route in the app's OpenAPI schema (a new route fails until classified); every object
+  route × owner / other analyst / reviewer / admin × owner's / legacy / missing object;
+  hidden == missing byte for byte; lists and totals; queue visibility; submitted_by; own
+  video 403 for reviewer and admin; forged roles; per-user dedup on both upload paths;
+  migration up/down/backfill on SQLite and Postgres; the script.
+- Also: the 11 tracked `__pycache__/*.pyc` files are removed from git (`.gitignore`
+  already covered them); `health.py` imports SQLAlchemy's asyncio lazily so the app
+  loads without greenlet (the route-table test imports `app.main`).
+- **Left for a person:** (1) run 0014 (after 0011) on Supabase, then
+  `assign_owners.py infer` and `list`, and assign the rest; (2) give reviewer/admin roles
+  in Supabase `app_metadata`; (3) the current frontend's history page now shows other
+  users' jobs to reviewers/admins: use `mine=true` for a "my jobs" view; (4) T34's
+  `is_own` can use `ownership.is_own`.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -1706,6 +1766,12 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-24**: T33 (no issue; design §15, §17) per-user ownership on every read by
+  the automated build: `videos.user_id` (migration 0014, chained on T31's 0012), owner or
+  reviewer/admin rule in `ownership.py` for every job, video, result and review route
+  (404 for others), legacy NULL-owner rows admin only, per-user duplicate detection,
+  `submitted_by` on jobs, results and review cases, own-video decisions refused,
+  `scripts/assign_owners.py` for legacy rows. 1270 passed, 0 skipped. Decisions in §7z.
 - **2026-11-24**: T32 (no issue; design §11, §12, §17) request review by the automated
   build: `POST /v1/jobs/{job_id}/review-request` opens a `user_requested` case with a
   required note (audit-logged), idempotent per job, access via `ownership.py` (404 for
@@ -1718,7 +1784,6 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   `claims[].search_trail` by every result endpoint. No keys, request URLs or prompts in it;
   retrieval and verdicts unchanged (tested). 1155 passed, 4 skipped (OCRmyPDF/Tesseract)
   locally with Postgres 16 + pgvector; no spend. Decisions in §7w.
-
 - **2026-11-23**: T28 (no issue; design §1, §16, §17) job progress for the stepper by the
   automated build: `job_events` + §1 states next to the legacy status, 8 pipeline steps
   logged from the worker (graph via LangGraph "tasks" streaming), per-user job ownership

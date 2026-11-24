@@ -5,6 +5,7 @@ from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 
+from app.api.ownership import owner_id
 from app.auth.dependencies import get_current_user
 from app.core.config import settings
 from app.core.exceptions import StorageError
@@ -43,7 +44,7 @@ def upload_video(
             guard.consume_quota(current_user)
         except InputRejected as exc:
             raise rejection_to_http(exc) from exc
-    video = save_video(db, content, filename)
+    video = save_video(db, content, filename, user_id=owner_id(current_user))
     return {
         "video_id": video.id,
         "filename": video.filename,
@@ -136,7 +137,8 @@ def register_video(
         raise rejection_to_http(exc) from exc
 
     video, duplicate = register_uploaded_video(
-        db, payload.storage_key, filename, checked.media.size_bytes, checked.media.sha256
+        db, payload.storage_key, filename, checked.media.size_bytes, checked.media.sha256,
+        user_id=owner_id(current_user),
     )
     if duplicate and video.storage_key != payload.storage_key:
         storage.delete(payload.storage_key)

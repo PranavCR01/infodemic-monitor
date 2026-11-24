@@ -6,13 +6,12 @@ from fastapi import APIRouter, Depends, HTTPException, Query, Response
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
-from app.api.ownership import owned_job_or_404, owned_jobs, owner_id
+from app.api.ownership import own_jobs, owned_job_or_404, owner_id, video_or_404
 from app.api.result_models import JobResultResponse
 from app.auth.dependencies import get_current_user
 from app.core import progress
 from app.db.models.job import Job, JobState, JobStatus
 from app.db.models.result import Result
-from app.db.models.video import Video
 from app.db.session import get_db
 from app.services import job_events, job_service
 from app.services.result_view_service import job_result
@@ -45,6 +44,9 @@ class JobListItem(BaseModel):
     state: str
     step: Optional[str] = None
     updated_at: Optional[str] = None
+    # T33: who started the job (JWT ``sub``; NULL on legacy jobs). Reviewers and admins
+    # see other users' jobs in the list; this tells them whose.
+    submitted_by: Optional[str] = None
     # T30
     misinfo_basis: Optional[str] = None
     label_display: Optional[str] = None
@@ -70,6 +72,7 @@ class JobOut(BaseModel):
     step: Optional[str] = None
     step_label: Optional[str] = None
     attempts: int = 0
+    submitted_by: Optional[str] = None  # T33
 
 
 class StepOut(BaseModel):
@@ -116,6 +119,7 @@ def _job_out(job: Job) -> JobOut:
         celery_task_id=job.celery_task_id, created_at=job.created_at, updated_at=job.updated_at,
         state=job_events.effective_state(job), step=step,
         step_label=progress.STEP_LABELS.get(step) if step else None, attempts=job.attempts or 0,
+        submitted_by=job.user_id,
     )
 
 
@@ -131,10 +135,11 @@ def _pipeline_steps(db: Session, job: Job) -> List[str]:
     return list(progress.PIPELINE_STEPS["graph" if graph else "single_call"])
 
 
-def _query_page(db, user, *, limit, offset, label, q, status):
+def _query_page(db, user, *, limit, offset, label, q, status, mine=False):
     try:
         return job_service.query_jobs(
             db, limit=limit, offset=offset, label=label, search=q, statuses=status or (), user=user,
+            mine=mine,
         )
     except ValueError as exc:
         raise HTTPException(status_code=422, detail=f"Unknown status: {exc}")
@@ -143,6 +148,8 @@ def _query_page(db, user, *, limit, offset, label, q, status):
 _STATUS_HELP = ("Filter by state: legacy statuses (PENDING, STARTED, SUCCESS, FAILED, REVIEW_REQUIRED) "
                 "and/or §1 states (QUEUED, RUNNING, RETRY_PENDING, COMPLETED, REJECTED, ...). "
                 "Repeat the parameter or separate values with commas.")
+_MINE_HELP = ("Only the caller's own jobs. Without it the list holds every job the caller may "
+              "see: their own, plus other users' for reviewers and admins (T33).")
 
 
 # ------------------------------------------------------------------ legacy routes
@@ -156,12 +163,14 @@ def list_jobs(
     label: Optional[str] = Query(None),
     q: Optional[str] = Query(None, max_length=200, description="Search filename, job id or video id"),
     status: Optional[List[str]] = Query(None, description=_STATUS_HELP),
+    mine: bool = Query(False, description=_MINE_HELP),
     db: Session = Depends(get_db),
     current_user: dict = Depends(get_current_user),
 ):
-    """The caller's jobs, newest first. Still a bare list for the current frontend; the
-    total matching the filters is in the ``X-Total-Count`` header (T28)."""
-    rows, total = _query_page(db, current_user, limit=limit, offset=offset, label=label, q=q, status=status)
+    """The jobs the caller may see, newest first. Still a bare list for the current
+    frontend; the total matching the filters is in the ``X-Total-Count`` header (T28)."""
+    rows, total = _query_page(db, current_user, limit=limit, offset=offset, label=label, q=q,
+                              status=status, mine=mine)
     response.headers["X-Total-Count"] = str(total)
     return rows
 
@@ -172,12 +181,14 @@ def create_job(
     db: Session = Depends(get_db),
     current_user: dict = Depends(get_current_user),
 ):
-    video = db.query(Video).filter(Video.id == payload.video_id).first()
-    if not video:
-        raise HTTPException(status_code=404, detail="Video not found")
+    # T33: only a video the caller may see (their own; any for reviewers/admins);
+    # someone else's looks missing.
+    video = video_or_404(db, payload.video_id, current_user)
 
+    # Only the caller's own job is reused (T28): a reviewer starting a job on another
+    # user's video gets their own job, not a handle on the owner's.
     existing_job = (
-        owned_jobs(db.query(Job), current_user)
+        own_jobs(db.query(Job), current_user)
         .filter(
             Job.video_id == payload.video_id,
             Job.status.in_([
@@ -268,11 +279,13 @@ def list_jobs_v1(
     label: Optional[str] = Query(None),
     q: Optional[str] = Query(None, max_length=200, description="Search filename, job id or video id"),
     status: Optional[List[str]] = Query(None, description=_STATUS_HELP),
+    mine: bool = Query(False, description=_MINE_HELP),
     db: Session = Depends(get_db),
     current_user: dict = Depends(get_current_user),
 ):
-    """The caller's jobs, newest first, with the total matching the filters."""
-    rows, total = _query_page(db, current_user, limit=limit, offset=offset, label=label, q=q, status=status)
+    """The jobs the caller may see, newest first, with the total matching the filters."""
+    rows, total = _query_page(db, current_user, limit=limit, offset=offset, label=label, q=q,
+                              status=status, mine=mine)
     return JobListPage(items=rows, total=total, limit=limit, offset=offset)
 
 

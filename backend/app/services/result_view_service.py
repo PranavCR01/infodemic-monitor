@@ -256,4 +256,5 @@ def job_result(db: Session, job: Job, result: Result) -> JobResultResponse:
         label_display=display_label(result.label, result.misinfo_basis),
         transcript_segments=transcript,
         ocr_segments=ocr,
+        submitted_by=job.user_id,
     )

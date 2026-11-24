@@ -40,8 +40,8 @@ def _session_factory():
     return sessionmaker(bind=engine)
 
 
-def _video(db, vid="vid-1", filename="clip.mp4"):
-    db.add(Video(id=vid, filename=filename, file_path=f"/tmp/{vid}.mp4", file_size=1))
+def _video(db, vid="vid-1", filename="clip.mp4", owner="user-a"):
+    db.add(Video(id=vid, filename=filename, file_path=f"/tmp/{vid}.mp4", file_size=1, user_id=owner))
     db.commit()
 
 

@@ -11,6 +11,12 @@
 
 Roles come from the verified JWT (``app.auth.roles``); the reviewer recorded on every
 action is the token's subject, never a field in the body (bodies forbid extra fields).
+Per-object access (T33) goes through ``app.api.ownership``: reviewers see cases on every
+owned job, admins also those on legacy jobs with no owner; a case the caller may not see
+is a 404 like a missing one. Nobody may decide (or re-rate) a case on their own video:
+that is a 403, since the caller can already see the case. ``submitted_by`` on queue
+items and cases is the job's owner (``jobs.user_id``); the decider is
+``decision.reviewer_id``.
 Analysts get 403 on every review route, before any lookup, so a refusal reveals
 nothing about which cases exist. The service functions (``review_service``, T09/T22)
 do the work; this module only checks, maps errors and shapes responses.
@@ -24,6 +30,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query, Response
 from pydantic import BaseModel, ConfigDict, Field
 from sqlalchemy.orm import Session
 
+from app.api import ownership
 from app.api.ownership import owned_job_or_404
 from app.auth.dependencies import get_current_user
 from app.auth.roles import PERMISSIONS, Role, require_role, role_of, user_id_of
@@ -77,6 +84,8 @@ class ReviewQueueItem(BaseModel):
     video_id: Optional[str] = None
     filename: Optional[str] = None
     job_status: Optional[str] = None
+    # T33: who started the job under review (``jobs.user_id``); NULL on legacy jobs.
+    submitted_by: Optional[str] = None
     status: ReviewCaseStatus
     severity: Optional[str] = None
     severity_table_version: Optional[str] = None
@@ -208,6 +217,7 @@ def _item_fields(db: Session, case: HumanReview, now: datetime) -> dict[str, Any
         video_id=job.video_id if job is not None else None,
         filename=video.filename if video is not None else None,
         job_status=job.status.value if job is not None and job.status is not None else None,
+        submitted_by=job.user_id if job is not None else None,
         status=case.status,
         severity=case.severity,
         severity_table_version=case.severity_table_version,
@@ -249,11 +259,22 @@ def _case_view(db: Session, case: HumanReview) -> ReviewCaseView:
     )
 
 
-def _get_case(db: Session, review_id: str) -> HumanReview:
+def _get_case(db: Session, review_id: str, user: dict) -> HumanReview:
+    """The case if the caller may see its job (T33), else 404 like a missing one."""
     case = db.get(HumanReview, review_id)
-    if case is None:
+    job = db.get(Job, case.job_id) if case is not None else None
+    if case is None or job is None or not ownership.can_view_job(job, user):
         raise HTTPException(status_code=404, detail="review not found")
     return case
+
+
+def _forbid_own(db: Session, case: HumanReview, user: dict) -> None:
+    """Nobody decides a case on their own video (T33, §12): the submitter of the job or
+    the owner of the video gets 403, whatever their role."""
+    job = db.get(Job, case.job_id)
+    video = db.get(Video, job.video_id) if job is not None else None
+    if ownership.is_own(user, job, video):
+        raise HTTPException(status_code=403, detail="you can't review your own video")
 
 
 def _http(exc: rs.ReviewError) -> HTTPException:
@@ -310,6 +331,7 @@ def review_queue(
         cases, total = rs.review_queue_page(
             db, status=None if status == "ALL" else status, severities=severities or None,
             reason=reason, limit=limit, offset=offset,
+            visible_jobs=lambda q: ownership.visible_jobs(q, current_user),
         )
     except rs.ReviewError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
@@ -326,7 +348,7 @@ def get_review(
     db: Session = Depends(get_db),
     current_user: dict = Depends(require_reviewer),
 ) -> ReviewCaseView:
-    return _case_view(db, _get_case(db, review_id))
+    return _case_view(db, _get_case(db, review_id, current_user))
 
 
 @router.post("/reviews/{review_id}/decision", response_model=DecisionResponse)
@@ -341,7 +363,8 @@ def decide(
     required. CORRECT takes a corrected label and/or per-claim verdict or stance
     corrections; REQUEST_REANALYSIS also starts a new job for the same video."""
     reviewer_id = user_id_of(current_user)
-    case = _get_case(db, review_id)
+    case = _get_case(db, review_id, current_user)
+    _forbid_own(db, case, current_user)
     if case.status != ReviewCaseStatus.OPEN:
         raise HTTPException(status_code=409, detail="review is already resolved")
     try:
@@ -383,7 +406,7 @@ def override_severity(
 ) -> ReviewCaseView:
     """Change one claim's severity with a reason (§12). Reorders the queue; never
     changes a label or verdict. Logged to the audit trail."""
-    _get_case(db, review_id)
+    _forbid_own(db, _get_case(db, review_id, current_user), current_user)
     try:
         case = rs.override_claim_severity(
             db, review_id, claim_id,

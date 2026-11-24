@@ -75,6 +75,7 @@ def test_existing_job_is_reused():
         file_path="/tmp/video.mp4",
         file_size=100,
         file_hash="a" * 64,
+        user_id="user-a",
     )
     db.add(video)
     db.commit()
@@ -100,9 +101,12 @@ def test_existing_job_is_reused():
 
 def test_another_users_job_is_not_reused(monkeypatch):
     """T28 (§17 ownership): the same video started by someone else gets its own job,
-    so one user never receives another user's job id."""
+    so one user never receives another user's job id. Since T33 only a reviewer/admin
+    (or the owner) can start a job on a video; an analyst gets 404 (tests in
+    test_ownership_t33.py)."""
     db = make_db()
-    video = Video(filename="video.mp4", file_path="/tmp/video.mp4", file_size=100, file_hash="c" * 64)
+    video = Video(filename="video.mp4", file_path="/tmp/video.mp4", file_size=100, file_hash="c" * 64,
+                  user_id="user-a")
     db.add(video)
     db.commit()
     theirs = Job(video_id=video.id, status=JobStatus.SUCCESS, user_id="user-a")
@@ -113,7 +117,8 @@ def test_another_users_job_is_not_reused(monkeypatch):
         id = "fake-celery-task-id"
 
     monkeypatch.setattr("app.api.routers.jobs.process_video_task.delay", lambda *a, **k: FakeTask())
-    result = create_job(payload=CreateJobRequest(video_id=video.id), db=db, current_user={"sub": "user-b"})
+    result = create_job(payload=CreateJobRequest(video_id=video.id), db=db,
+                        current_user={"sub": "user-b", "app_metadata": {"role": "reviewer"}})
 
     assert result["job_id"] != theirs.id
     mine = db.get(Job, result["job_id"])
@@ -130,12 +135,13 @@ def test_failed_job_can_be_retried(monkeypatch):
         file_path="/tmp/video.mp4",
         file_size=100,
         file_hash="b" * 64,
+        user_id="user-c",
     )
     db.add(video)
     db.commit()
     db.refresh(video)
 
-    failed_job = Job(video_id=video.id, status=JobStatus.FAILED)
+    failed_job = Job(video_id=video.id, status=JobStatus.FAILED, user_id="user-c")
     db.add(failed_job)
     db.commit()
 
@@ -150,7 +156,7 @@ def test_failed_job_can_be_retried(monkeypatch):
     result = create_job(
         payload=CreateJobRequest(video_id=video.id),
         db=db,
-        current_user={},
+        current_user={"sub": "user-c"},
     )
 
     assert result["job_id"] != failed_job.id

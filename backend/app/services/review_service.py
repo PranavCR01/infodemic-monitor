@@ -19,7 +19,7 @@ from __future__ import annotations
 import copy
 from collections import defaultdict
 from datetime import datetime, timezone
-from typing import Any, Mapping, Optional
+from typing import Any, Callable, Mapping, Optional
 
 from sqlalchemy import case as sql_case
 from sqlalchemy.orm import Session
@@ -334,12 +334,18 @@ def review_queue_page(
     reason: Optional[str] = None,
     limit: int = 20,
     offset: int = 0,
+    visible_jobs: Optional[Callable] = None,
 ) -> tuple[list[HumanReview], int]:
     """One page of the queue, in queue order (severity, then age), and the total that
     match. ``severities`` takes HIGH / MEDIUM / LOW and NONE (no MISINFO-relevant claim).
     The reason filter runs in Python because reasons are a JSON list (portable across
-    SQLite and Postgres); the severity and status filters run in SQL."""
+    SQLite and Postgres); the severity and status filters run in SQL.
+    ``visible_jobs`` (T33) restricts a query over ``Job`` to the jobs the caller may see
+    (``app.api.ownership.visible_jobs`` bound to the caller); cases on other jobs are
+    left out of the page and the total."""
     q = db.query(HumanReview)
+    if visible_jobs is not None:
+        q = visible_jobs(q.join(Job, Job.id == HumanReview.job_id))
     if status is not None:
         q = q.filter(HumanReview.status == ReviewCaseStatus(status))
     if severities:
