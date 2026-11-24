@@ -53,7 +53,8 @@ def _clear_claim_level(db: Session, job_id: str) -> None:
     db.flush()
 
 
-def _upsert_result(db: Session, job_id: str, fusion: FusionResult, outcome: Any, pipeline_version: Optional[str]) -> Result:
+def _upsert_result(db: Session, job_id: str, fusion: FusionResult, outcome: Any, pipeline_version: Optional[str],
+                   routing_snapshot: Optional[dict] = None) -> Result:
     c = outcome.classification
     final = (outcome.state or {}).get("final_result") if not outcome.fallback_used else None
     values = dict(
@@ -72,6 +73,7 @@ def _upsert_result(db: Session, job_id: str, fusion: FusionResult, outcome: Any,
         decision_rule=getattr(final, "decision_rule", None),
         deciding_claim_ids=list(final.claim_ids) if final is not None else None,
         misinfo_basis=getattr(final, "misinfo_basis", None),
+        routing_snapshot=routing_snapshot,
     )
     result = db.query(Result).filter(Result.job_id == job_id).one_or_none()
     if result is None:
@@ -177,16 +179,31 @@ def _write_model_runs(db: Session, job_id: str, calls: list) -> None:
             error=rec.error))
 
 
+def _version_and_snapshot(state: dict, outcome: Any) -> tuple[Optional[str], Optional[dict]]:
+    """The version to store and the routing snapshot it names (T36).
+
+    The run's state wins (a resumed run keeps the version it started with); the
+    provider's version covers a fallback that failed before any state existed. The
+    snapshot is stored only when its hash is the one in the version, so a row never
+    pairs a version with a routing table it was not produced by (e.g. a checkpoint
+    resumed after a routing change, or an old plain ``graph_v1`` state)."""
+    from app.core.routing.version import snapshot_matches
+
+    version = state.get("pipeline_version") or getattr(outcome, "pipeline_version", None)
+    snapshot = getattr(outcome, "routing_snapshot", None)
+    return version, (dict(snapshot) if snapshot_matches(version, snapshot) else None)
+
+
 def persist_outcome(db: Session, job_id: str, fusion: FusionResult, outcome: Any) -> Result:
     """Write one graph-pipeline outcome for ``job_id`` (see module docstring)."""
     job = db.get(Job, job_id)
     if job is None:
         raise ValueError(f"job {job_id!r} not found")
     state = outcome.state or {}
-    pipeline_version = state.get("pipeline_version")
+    pipeline_version, snapshot = _version_and_snapshot(state, outcome)
     try:
         _clear_claim_level(db, job_id)
-        result = _upsert_result(db, job_id, fusion, outcome, pipeline_version)
+        result = _upsert_result(db, job_id, fusion, outcome, pipeline_version, snapshot)
         if not outcome.fallback_used and state:
             _write_claim_level(db, job_id, state)
         _write_model_runs(db, job_id, list(outcome.model_calls or []))

@@ -76,6 +76,11 @@ class GraphOutcome:
     model_calls: list = field(default_factory=list)  # CallRecords from this run
     resumed: bool = False
     timing_estimated: bool = False
+    # T36: the provider's traceable version and the routing it names (see
+    # app.core.routing.version). The stored version comes from the run's state when
+    # there is one, so a run resumed from a checkpoint keeps the version it began with.
+    pipeline_version: Optional[str] = None
+    routing_snapshot: Optional[dict] = None
 
     @property
     def fallback_used(self) -> bool:
@@ -177,6 +182,7 @@ class GraphProvider:
         references: Any = None,
         timeout_seconds: float = 900.0,
         pipeline_version: str = "graph_v1",
+        routing_snapshot: Optional[dict] = None,
         clock: Callable[[], float] = time.monotonic,
         node_overrides: Optional[Mapping[str, NodeFn]] = None,
     ):
@@ -189,6 +195,7 @@ class GraphProvider:
         self.references = references
         self.timeout_seconds = timeout_seconds
         self.pipeline_version = pipeline_version
+        self.routing_snapshot = routing_snapshot
         self._clock = clock
         self._overrides = dict(node_overrides or {})
         # Built once, so a bad routing config or a missing prompt file fails at start-up.
@@ -207,7 +214,8 @@ class GraphProvider:
     def _model_label(self) -> str:
         cfg = getattr(self.caller, "config", None)
         version = getattr(cfg, "version", None)
-        return f"{self.pipeline_version}/{version}" if version else self.pipeline_version
+        base = self.pipeline_version.split("+", 1)[0]  # model_used keeps its pre-T36 form
+        return f"{base}/{version}" if version else base
 
     def run(self, fusion: FusionResult, *, job_id: Optional[str] = None,
             video_id: Optional[str] = None, media_uri: Optional[str] = None,
@@ -263,6 +271,7 @@ class GraphProvider:
         return GraphOutcome(
             classification=classification, pipeline="graph", state=state,
             model_calls=self._records()[calls_before:], resumed=resumed, timing_estimated=estimated,
+            pipeline_version=self.pipeline_version, routing_snapshot=self.routing_snapshot,
         )
 
     def _failure_reason(self, state: Optional[dict], calls_before: int) -> Optional[str]:
@@ -287,6 +296,7 @@ class GraphProvider:
             classification=classification, pipeline="graph_fallback", state=state,
             fallback_reason=reason, model_calls=self._records()[calls_before:], resumed=resumed,
             timing_estimated=estimated,
+            pipeline_version=self.pipeline_version, routing_snapshot=self.routing_snapshot,
         )
 
 
@@ -342,8 +352,10 @@ def build_graph_provider(settings: Any = None, *, checkpointer: Any = None) -> G
     from app.core.routing.clients import default_clients
     from app.core.routing.config import load_routing
     from app.core.routing.router import ModelRouter
+    from app.core.routing.version import analysis_version, routing_snapshot
 
-    router = ModelRouter(load_routing(), default_clients(
+    routing = load_routing()
+    router = ModelRouter(routing, default_clients(
         anthropic_api_key=settings.ANTHROPIC_API_KEY, openai_api_key=settings.OPENAI_API_KEY,
         timeout=settings.GRAPH_MODEL_TIMEOUT_SECONDS,
     ))
@@ -356,5 +368,9 @@ def build_graph_provider(settings: Any = None, *, checkpointer: Any = None) -> G
     return GraphProvider(
         caller=router, retriever=retriever, fallback=get_provider(), checkpointer=checkpointer,
         references=reference_searcher(settings, cache),
-        timeout_seconds=settings.GRAPH_TIMEOUT_SECONDS, pipeline_version=settings.GRAPH_PIPELINE_VERSION,
+        timeout_seconds=settings.GRAPH_TIMEOUT_SECONDS,
+        # T36: graph_v1+<short git sha>+p<routing hash>; the sha from RAILWAY_GIT_COMMIT_SHA
+        # or GIT_SHA, else "unknown".
+        pipeline_version=analysis_version(settings.GRAPH_PIPELINE_VERSION, routing),
+        routing_snapshot=routing_snapshot(routing),
     )

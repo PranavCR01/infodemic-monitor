@@ -1745,6 +1745,43 @@ decision D7). Additive: no existing field, label, verdict or retrieval result ch
   users' jobs to reviewers/admins: use `mine=true` for a "my jobs" view; (4) T34's
   `is_own` can use `ownership.is_own`.
 
+## 7aa. Traceable Analysis Version (T36, no issue; design §12, §14)
+
+Built by the automated build on 2026-11-24 (requested by the frontend session for
+printed reports). Additive only.
+
+- **Format.** Graph results now store `pipeline_version` =
+  `graph_v1+<short git sha>+p<8-char routing hash>`, e.g. `graph_v1+3f9c2ab+p1a2b3c4d`
+  (~26 chars, fits the existing String(64)). Built once in `build_graph_provider` by
+  `app.core.routing.version.analysis_version`; `GRAPH_PIPELINE_VERSION` (`graph_v1`)
+  stays the base.
+- **Git sha.** `RAILWAY_GIT_COMMIT_SHA`, else `GIT_SHA`, else `unknown`; first 7 chars,
+  lower-cased. Only a hex value is accepted, so a misconfigured variable can never put
+  arbitrary environment text into a report. These two are the only env values read.
+- **Hash.** sha256 of canonical JSON (sorted keys, no whitespace) over each LLM step's
+  provider / model / prompt version (plus a per-step fallback and non-secret `params`)
+  and the global fallback policy (`on`, `retries`, `use`). Prices and the routing file's
+  `version` label are left out: they don't change what the analysis does. Key-like
+  `params` entries (key/token/secret/password/credential/auth) are dropped; routing.yaml
+  holds no keys anyway.
+- **Snapshot.** New nullable JSON column `results.routing_snapshot` (migration 0015):
+  `{schema, routing_version, routing_status, steps{step:{provider,model,prompt}},
+  fallback, hash}`; returned as `routing_snapshot` on `GET /jobs/{id}/result`. The
+  `model_runs` rows already record the per-call model and prompt version.
+- **Which version is stored.** The run's state wins (a run resumed from a checkpoint
+  keeps the version it started with); the provider's version covers a fallback that
+  failed before any state existed (previously NULL). The snapshot is stored only when
+  its hash equals the hash in the stored version, so a row never pairs a version with a
+  routing table it wasn't produced by (old `graph_v1` checkpoints, routing changed
+  between start and resume): then the snapshot is NULL.
+- **Old rows.** Keep `graph_v1`; `parse_analysis_version` reads both forms (old = base
+  only, `traceable` false). `model_used` keeps its pre-T36 `graph_v1/<routing version>`.
+- **Migration numbering.** 0015 chains on T33's 0014 (#94, merged before this PR);
+  `alembic heads` shows one head.
+- **For a person.** Railway sets `RAILWAY_GIT_COMMIT_SHA` on deploys built from git;
+  anywhere else (local docker, a CLI deploy without git metadata) set `GIT_SHA` or
+  versions read `+unknown+`.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -1766,6 +1803,10 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-24**: T36 (no issue; design §12, §14) traceable analysis version by the
+  automated build: graph results store `graph_v1+<short sha>+p<routing hash>` and a
+  `routing_snapshot` JSON column (migration 0015, chained on T33's 0014). Old `graph_v1` rows still read. 1388 passed locally with Postgres 16 +
+  pgvector (4 OCR-tool skips only). Decisions in §7aa.
 - **2026-11-24**: T33 (no issue; design §15, §17) per-user ownership on every read by
   the automated build: `videos.user_id` (migration 0014, chained on T31's 0012), owner or
   reviewer/admin rule in `ownership.py` for every job, video, result and review route

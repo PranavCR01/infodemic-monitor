@@ -154,6 +154,10 @@ class JobResultResponse(BaseModel):
     # ("MISINFO (unproven)", "CANNOT RECOGNIZE"). ``label`` itself is unchanged.
     misinfo_basis: Optional[str] = None
     label_display: Optional[str] = None
+    # T36: pipeline_version is graph_v1+<short git sha>+p<routing hash> on new graph
+    # results (plain "graph_v1" on older ones); the snapshot holds the prompt version and
+    # model per step that the hash covers, for reproducing a printed report.
+    routing_snapshot: Optional[dict[str, Any]] = None
     transcript_segments: list[SegmentView] = Field(default_factory=list)
     ocr_segments: list[SegmentView] = Field(default_factory=list)
     # T33: who started the job (``jobs.user_id``, the JWT ``sub``); NULL on legacy jobs.
