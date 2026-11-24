@@ -2079,7 +2079,8 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   that. Found: blind two-pass extraction ceiling on tune is strict F1 0.68 / meaning F1 0.79 (Sonnet
   0.42 strict); grounding guardrail and strict matcher drop/mis-score non-Latin claims (v167); extract_v2
   lacks the gold's original-language/bracket conventions (35% of tune claims non-English). dcf77b0 vs
-  0fbc68a: 11 tune claims changed, no stance labels; stance winner can't flip, extract/verify could.
+  0fbc68a: 11 tune claims changed (948b1c2, now current: 21), no stance labels; stance winner can't
+  flip, extract/verify could.
   New `config/pipeline.yaml` `extraction.use_ocr` (default true) for the no-OCR ablation. Report
   `evals/reports/T43_error_analysis.md`. Branch `auto/T43`.
 - **2026-11-24**: T42 (design §9, §11, §14) re-pinned the judge cross-check to the

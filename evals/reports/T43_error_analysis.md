@@ -19,7 +19,7 @@ and that includes the blind re-label CSV.
    - the stance confusion matrix and per-error review of the 15 refuted claims,
    - the per-error verify review, including *which* 4 insufficient→contradicted claims,
    - the bootstrap CIs,
-   - the re-score of every step against dcf77b0.
+   - the re-score of every step against dcf77b0 / 948b1c2.
 
    This PR fixes the cause: the runner now writes `per_item.json`, and
    `python -m app.evaluation.error_analysis analyze` produces all of the above from it.
@@ -30,11 +30,12 @@ and that includes the blind re-label CSV.
    (0.71–0.86). Sonnet's 0.42 (strict) is therefore about 62% of what a second labeller
    reaches under the same matcher, not 42% of perfect. The strict matcher alone costs
    that second labeller 0.11 F1 (paired CI 0.06–0.16).
-3. **Gold changes since T38 are small but uneven.** Between 0fbc68a and dcf77b0, 11 tune
-   claims changed: 4 were added, 2 were reworded, and 7 verdicts changed. **No stance
-   label changed.** The stance winner (Sonnet, +0.12) cannot plausibly flip. The
-   extraction winner (+0.059) and the verify winner (+0.069) could in principle flip;
-   only a re-run on dcf77b0 settles them (§2).
+3. **Gold changes since T38 are uneven.** The current golden commit is 948b1c2; the task
+   pinned dcf77b0, which is also shown. Between 0fbc68a and 948b1c2, 21 tune claims
+   changed: 13 were added (12 of them v36 caption claims), 2 were reworded, and 8
+   verdicts changed. **No stance label changed.** The stance winner (Sonnet, +0.12)
+   cannot plausibly flip. The extraction winner (+0.059) and the verify winner (+0.069)
+   could flip; only a re-run on 948b1c2 settles them (§2).
 4. **Found a deterministic bug that caps extraction recall regardless of model.** The
    grounding guardrail (`guardrails/outputs.py:grounding_overlap`) tokenises with
    `[a-z0-9]+`. A claim in a non-Latin script therefore has no words, scores grounding
@@ -63,73 +64,80 @@ Claude labelling pass that followed the labelling guide, not a T38 candidate. §
 as a **proxy** to calibrate the matcher and the error categories, and it is labelled as
 such wherever it appears.
 
-## 2. Golden set: dcf77b0 vs the T38 run's 0fbc68a (tune split)
+## 2. Golden set: the T38 run's 0fbc68a vs dcf77b0 vs 948b1c2 (tune split)
 
-Data: `evals/reports/T43/gold_diff_0fbc68a_dcf77b0.json`
-(`python -m app.evaluation.error_analysis gold-diff --old 0fbc68a --new dcf77b0`).
+The task pinned dcf77b0. During the task the orchestrator reported that the golden set
+had moved to **948b1c2** ("apply the A2-A4 rule sweep", lead-approved) and asked for the
+comparison against it. Both are shown; 948b1c2 is the current one.
+
+Data: `evals/reports/T43/gold_diff_0fbc68a_948b1c2.json` and
+`gold_diff_0fbc68a_dcf77b0.json`
+(`python -m app.evaluation.error_analysis gold-diff --old 0fbc68a --new 948b1c2`).
 No video joined or left the tune split, no scope tag changed, and no tune transcript
 changed.
 
-| claim | change | stance | verdict (0fbc68a → dcf77b0) | T38 items touched |
-|---|---|---|---|---|
-| v11:c3 | verdict | ENDORSES | SUPPORTED → **MIXED** | verify |
-| v21:c2 | text + verdict | ENDORSES | INSUFFICIENT_EVIDENCE → **CONTRADICTED** | extract, stance, verify |
-| v21:c7 | added | ENDORSES | (new) INSUFFICIENT_EVIDENCE | extract, stance, verify |
-| v22:c1 | verdict | ENDORSES | INSUFFICIENT_EVIDENCE → **SUPPORTED** | verify |
-| v23:c1 | text + verdict | REFUTES | CONTRADICTED → **INSUFFICIENT_EVIDENCE** | extract, stance, verify |
-| v36:c6 | added (screen infographic) | ENDORSES | (new) UNSUPPORTED | extract, stance, verify |
-| v36:c7 | added (screen infographic) | ENDORSES | (new) UNSUPPORTED | extract, stance, verify |
-| v36:c8 | added | ENDORSES | (new) INSUFFICIENT_EVIDENCE | extract, stance, verify |
-| v71:c6 | verdict | ENDORSES | MIXED → **INSUFFICIENT_EVIDENCE** | verify |
-| v109:c6 | verdict | ENDORSES | INSUFFICIENT_EVIDENCE → **CONTRADICTED** | verify |
-| v120:c1 | verdict | ENDORSES | INSUFFICIENT_EVIDENCE → **UNSUPPORTED** | verify |
+**Every tune claim whose gold changed since the T38 run (0fbc68a):**
 
-Items touched: extract 3 of 48 videos (gold claims 174 → 178); stance 6 claims (4 new,
-2 reworded, **0 relabelled**); verify 11 claims. Gold UNSUPPORTED on tune goes from 5 to
-8, and UNSUPPORTED is the class the verify macro-F1 is most sensitive to.
+| claim | change | stance | verdict at 0fbc68a | dcf77b0 | **948b1c2** | T38 items touched |
+|---|---|---|---|---|---|---|
+| v11:c3 | verdict | ENDORSES | SUPPORTED | MIXED | **MIXED** | verify |
+| v21:c2 | text + verdict | ENDORSES | INSUFFICIENT_EVIDENCE | CONTRADICTED | **CONTRADICTED** | extract, stance, verify |
+| v21:c7 | added | ENDORSES | — | INSUFFICIENT_EVIDENCE | **INSUFFICIENT_EVIDENCE** | extract, stance, verify |
+| v22:c1 | verdict | ENDORSES | INSUFFICIENT_EVIDENCE | SUPPORTED | **SUPPORTED** | verify |
+| v22:c2 | verdict | ENDORSES | INSUFFICIENT_EVIDENCE | INSUFFICIENT_EVIDENCE | **UNSUPPORTED** | verify |
+| v23:c1 | text + verdict | REFUTES | CONTRADICTED | INSUFFICIENT_EVIDENCE | **INSUFFICIENT_EVIDENCE** | extract, stance, verify |
+| v36:c6, c7 | added (screen infographic) | ENDORSES | — | UNSUPPORTED | **UNSUPPORTED** | extract, stance, verify |
+| v36:c8 | added | ENDORSES | — | INSUFFICIENT_EVIDENCE | **INSUFFICIENT_EVIDENCE** | extract, stance, verify |
+| v36:c10, c14 | added (screen) | ENDORSES | — | — | **UNSUPPORTED** | extract, stance, verify |
+| v36:c9, c11–c13, c15–c17 | added (screen) | ENDORSES | — | — | **INSUFFICIENT_EVIDENCE** | extract, stance, verify |
+| v71:c6 | verdict | ENDORSES | MIXED | INSUFFICIENT_EVIDENCE | **INSUFFICIENT_EVIDENCE** | verify |
+| v109:c6 | verdict | ENDORSES | INSUFFICIENT_EVIDENCE | CONTRADICTED | **CONTRADICTED** | verify |
+| v120:c1 | verdict | ENDORSES | INSUFFICIENT_EVIDENCE | UNSUPPORTED | **UNSUPPORTED** | verify |
 
-**Note: the golden set has moved past dcf77b0.** `948b1c2` ("apply the A2-A4 rule
-sweep", lead-approved) landed after this task was written. On tune it adds 9 more v36
-caption claims (c9–c17, all ENDORSES; 3 UNSUPPORTED, 6 INSUFFICIENT_EVIDENCE) and moves
-v22:c2 from INSUFFICIENT_EVIDENCE to UNSUPPORTED. That takes tune UNSUPPORTED to 12 and v36
-to 17 gold claims, and v36 is now the most caption-heavy video in tune. This report uses
-dcf77b0 as the task pins it. The next paid run should pick its golden commit on purpose.
-(`python -m app.evaluation.error_analysis gold-diff --old dcf77b0 --new 948b1c2`.)
-
-**Re-score of every T38 step metric against dcf77b0: not possible.** It needs the saved
-outputs, and there are none. The side-by-side table below shows what is known. The
-dcf77b0 column cannot be filled honestly.
-
-| step | candidate | 0fbc68a (T38) | dcf77b0 |
+| tune totals (48 in-scope videos) | 0fbc68a | dcf77b0 | 948b1c2 |
 |---|---|---|---|
-| extract_claims (claim_f1, strict) | claude-sonnet-5-5 | **0.4193** | not computable (no outputs) |
-| | claude-haiku-5-5 | 0.3601 | not computable |
-| | gpt-5.6-luna | 0.3237 | not computable |
-| analyze_stance (macro-F1) | claude-sonnet-5-5 | **0.6436** | not computable |
-| | claude-haiku-5-5 | 0.5230 | not computable |
-| | gpt-5.6-luna | 0.4977 | not computable |
-| verify_claims (macro-F1) | claude-opus-5-5 | **0.6759** | not computable |
-| | claude-sonnet-5-5 | 0.6073 | not computable |
-| | gpt-5.6-terra | 0.4919 | not computable |
+| gold claims (extraction) | 174 | 178 | **187** |
+| claims changed since 0fbc68a | — | 11 | **21** (13 added, 2 reworded, 8 verdicts; **0 stance labels**) |
+| screen-only gold claims | 7 | 7 | **16** |
+| UNSUPPORTED | 5 | 8 | **11** |
+| v36 gold claims | 5 | 8 | **17** |
+| T38 items touched: extract / stance / verify | — | 3 / 6 / 11 | **3 / 15 / 21** |
 
-**Does the winner per step change?** These are bounds from the counts alone, not
-measurements:
+**Re-score of every T38 step metric against dcf77b0 and 948b1c2: not possible.** It
+needs the saved outputs, and there are none. These columns cannot be filled honestly:
 
-- **Stance: no, in any realistic case.** No stance label changed. The 4 added claims have
-  no T38 output and would be scored only after a re-run. Only 2 items with outputs
-  changed (their claim text was reworded: v21:c2 and v23:c1). Even if both went
-  maximally against Sonnet, the shift (≲0.07 macro-F1) is below Sonnet's 0.12 margin.
-- **Extraction: probably not, but a flip can't be excluded.** 6 gold claims changed (3
-  videos). Under strict F1 each change moves a candidate's matched count by at most 1. In
-  the worst case (every change against Sonnet and for Haiku) the margin moves by about
-  0.06–0.07, the size of the margin itself.
-- **Verify: unknown, and it could flip.** 5 relabelled items have outputs. 3 of them
-  move into or out of the rare classes (MIXED, UNSUPPORTED, CONTRADICTED), where one
-  item moves that class's F1 by 0.1–0.3 (about 0.02–0.05 macro over 6 classes). That is
-  comparable to Opus's 0.069 margin. Re-running verify also needs **re-frozen evidence**:
-  `FrozenEvidence.entry` refuses v21:c2 and v23:c1 ("text changed since the evidence was
-  recorded"), and the 4 new claims have no evidence yet. `freeze-evidence --resume` is
-  free (PubMed only).
+| step | candidate | 0fbc68a (T38) | dcf77b0 | 948b1c2 |
+|---|---|---|---|---|
+| extract_claims (claim_f1, strict) | claude-sonnet-5-5 | **0.4193** | not computable | not computable |
+| | claude-haiku-5-5 | 0.3601 | not computable | not computable |
+| | gpt-5.6-luna | 0.3237 | not computable | not computable |
+| analyze_stance (macro-F1) | claude-sonnet-5-5 | **0.6436** | not computable | not computable |
+| | claude-haiku-5-5 | 0.5230 | not computable | not computable |
+| | gpt-5.6-luna | 0.4977 | not computable | not computable |
+| verify_claims (macro-F1) | claude-opus-5-5 | **0.6759** | not computable | not computable |
+| | claude-sonnet-5-5 | 0.6073 | not computable | not computable |
+| | gpt-5.6-terra | 0.4919 | not computable | not computable |
+
+**Does the winner per step change on 948b1c2?** These are bounds from the counts alone,
+not measurements:
+
+- **Stance: no, in any realistic case.** No stance label changed. The 13 added claims
+  have no T38 output and would be scored only after a re-run. They are all ENDORSES,
+  the majority class. Only 2 items with outputs changed (their claim text was reworded:
+  v21:c2 and v23:c1). Even if both went maximally against Sonnet, the shift
+  (≲0.07 macro-F1) is below Sonnet's 0.12 margin.
+- **Extraction: could flip.** 16 gold claims changed in 3 videos, 12 of them new v36
+  caption claims (v36 is now 9% of tune gold). Each change moves a candidate's matched
+  count by at most 1. In the worst case the margin moves by about 0.09, more than
+  Sonnet's 0.059, so whichever candidate reads v36's captions better gains. On dcf77b0
+  alone (6 changes) the worst case was about 0.06–0.07.
+- **Verify: unknown, and it could flip.** 6 relabelled items have outputs (v22:c2 added
+  in 948b1c2). 4 of them move into or out of the rare classes (MIXED, UNSUPPORTED,
+  CONTRADICTED), where one item moves that class's F1 by 0.1–0.3 (about 0.02–0.05 macro
+  over 6 classes). That is comparable to Opus's 0.069 margin. Re-running verify also
+  needs **re-frozen evidence**: `FrozenEvidence.entry` refuses v21:c2 and v23:c1 ("text
+  changed since the evidence was recorded"), and the 13 new claims have no evidence yet.
+  `freeze-evidence --resume` is free (PubMed only).
 
 ## 3. Extraction
 
@@ -165,6 +173,7 @@ re-computed on the **tune** videos alone:
 |---|---|---|---|---|
 | second pass vs **0fbc68a** (true two-pass agreement) | 117 | 127 | **0.680** (0.586–0.761) | **0.787** (0.708–0.856) |
 | second pass vs **dcf77b0** (adjudicated; biased upward, since adjudication used the second pass) | 121 | 127 | 0.702 | 0.806 |
+| second pass vs **948b1c2** (+9 v36 caption claims the second pass also lacked) | 130 | 127 | 0.677 | 0.778 |
 
 CIs are bootstraps over videos (1000 resamples). Meaning minus strict on the same
 resamples is +0.107 (paired CI 0.056–0.164). Both passes are Claude labelling passes,
@@ -259,10 +268,11 @@ Known weaknesses, visible in the examples below:
   guardrail and the strict matcher. This is harmless for verbatim quotes, but it
   penalises a claim whose accents differ from its source text.
 - **Language exposure.** 15 of 48 in-scope tune videos are `other_language`, with 62 of
-  178 gold claims (35%).
-- **Screen-only exposure** (for the no-OCR ablation). 7 tune gold claims are
-  `source = screen`, 156 `both`, and 15 `speech`. Without OCR, at most the 7 screen-only
-  claims become impossible to find. Precision may rise, because caption noise
+  178 gold claims at dcf77b0 (35%; 62 of 187 = 33% at 948b1c2).
+- **Screen-only exposure** (for the no-OCR ablation). At dcf77b0, 7 tune gold claims are
+  `source = screen`, 156 `both`, and 15 `speech`. At **948b1c2** there are **16**
+  screen-only claims, 9 of them new in v36. Without OCR, those screen-only claims become
+  impossible to find, which makes the ablation more consequential on 948b1c2. Precision may rise, because caption noise
   (watermarks, usernames) disappears.
 
 ## 4. Stance (analyze_stance)
@@ -295,10 +305,11 @@ models missed is unknown):
 Per-error review: **not possible** (no outputs). From aggregates: Opus and Sonnet each
 called **4** claims CONTRADICTED where gold says INSUFFICIENT_EVIDENCE. UNSUPPORTED
 recall was 1.0 for both (n = 5), so none of the 4 is an UNSUPPORTED claim. Which 4 they
-are, and whether they overlap between the models, cannot be recovered. Under dcf77b0, 2
+are, and whether they overlap between the models, cannot be recovered. Under dcf77b0 (unchanged in 948b1c2), 2
 INSUFFICIENT claims became CONTRADICTED (v21:c2, v109:c6) and one CONTRADICTED became
 INSUFFICIENT (v23:c1). So some of the 4 "errors" may now be correct, and this count
-should be recomputed on dcf77b0 before acting on it.
+should be recomputed on 948b1c2 before acting on it. 948b1c2 also moves v22:c2 from
+INSUFFICIENT to UNSUPPORTED.
 
 ## 6. Bootstrap 95% CIs
 
@@ -334,9 +345,9 @@ estimate:
 | all Claude candidates | ≈ $11.8 |
 | no-OCR extraction ablation (sonnet), separate approval | ≈ $1.20 |
 
-Do it on **dcf77b0** after `freeze-evidence --resume` (free), then run
+Do it on **948b1c2** (the current golden commit) after `freeze-evidence --resume` (free), then run
 `python -m app.evaluation.error_analysis analyze --per-item <dir>/per_item.json
---golden-ref dcf77b0 --out …`. A cheaper first step is extraction plus stance only
+--golden-ref 948b1c2 --out …`. A cheaper first step is extraction plus stance only
 (≈ $2.7), where the prompt recommendations below apply.
 
 ## 8. Recommendations, ranked
@@ -348,7 +359,7 @@ second pass. None of them is from observed T38 per-item errors, which don't exis
 
 ### Before changing any prompt (prerequisites; no prompt or routing change)
 
-0a. **Save per-item outputs and re-run on dcf77b0** (§7). Without them, a prompt change
+0a. **Save per-item outputs and re-run on 948b1c2** (§7). Without them, a prompt change
     can't be attributed or bootstrapped. **[code]**
 0b. **Fix Unicode tokenisation** in `grounding_overlap` and `metrics._tokens` (§3e).
     This recovers v167 (2.2% of tune recall) and stops the Devanagari 1.0-similarity
@@ -422,11 +433,13 @@ second pass. None of them is from observed T38 per-item errors, which don't exis
 ```
 cd backend
 python -m app.evaluation.error_analysis gold-diff --old 0fbc68a --new dcf77b0
+python -m app.evaluation.error_analysis gold-diff --old 0fbc68a --new 948b1c2
 python -m app.evaluation.error_analysis ceiling --first 0fbc68a --blind-ref dcf77b0
 python -m app.evaluation.error_analysis ceiling --first dcf77b0 --blind-ref dcf77b0
+python -m app.evaluation.error_analysis ceiling --first 948b1c2 --blind-ref 948b1c2
 # once a run has per_item.json:
 python -m app.evaluation.error_analysis analyze --per-item <dir>/per_item.json \
-    --golden-ref dcf77b0 --rescore-ref <other ref> --out <dir>/error_analysis.json
+    --golden-ref 948b1c2 --rescore-ref <other ref> --out <dir>/error_analysis.json
 ```
 
 The §3c and §6 proxy numbers come from running `extraction.categorise` and `bootstrap`
