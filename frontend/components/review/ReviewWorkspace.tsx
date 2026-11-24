@@ -100,7 +100,10 @@ export function ReviewWorkspace({ review, result, onDecide, onOverrideSeverity }
   async function submit() {
     setTouched(true);
     setServerError(null);
-    if (!isValid(errors)) return;
+    if (!isValid(errors)) {
+      document.getElementById("decision")?.scrollIntoView({ block: "start" });
+      return;
+    }
     setSending(true);
     const res = await onDecide(decisionRequest(form, preReveal));
     setSending(false);
@@ -117,8 +120,30 @@ export function ReviewWorkspace({ review, result, onDecide, onOverrideSeverity }
 
   const submitText = DECISIONS.find((d) => d.kind === form.kind)?.submit ?? "Save decision";
 
+  const showBar = revealed && !readOnly;
   return (
-    <div className="flex flex-col gap-5">
+    <div className={`flex flex-col gap-5 ${showBar ? "pb-20 sm:pb-24 xl:pb-0" : ""}`}>
+      {showBar && (
+        // ReviewTablet.dc.html: below 1280 px the form is under the evidence, so a bar
+        // keeps the decision and Save in reach. Content is padded so it never covers
+        // the focused element (WCAG 2.4.11).
+        <div className="fixed inset-x-0 bottom-0 z-30 hidden items-center gap-3 border-t border-line bg-surface px-4 py-3 shadow-3 sm:flex xl:hidden">
+          <p className="flex-1 text-small text-ink">
+            {form.kind ? (
+              <>
+                <span className="font-semibold">{DECISIONS.find((d) => d.kind === form.kind)?.title}</span>
+                {form.kind === "CORRECT" && form.correctedLabel ? <> → {LABELS[form.correctedLabel].display}</> : null}
+              </>
+            ) : (
+              <span className="text-ink-2">No decision yet</span>
+            )}
+          </p>
+          <a href="#decision" className={buttonClass("secondary", "sm")}>Go to the form</a>
+          <button type="button" onClick={submit} disabled={sending} className={buttonClass("primary", "sm")}>
+            {sending ? "Saving…" : "Save"}
+          </button>
+        </div>
+      )}
       <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-small text-ink-2">
         <Link href="/review" className="text-primary hover:underline">Review queue</Link>
         <Icon name="chevr" className="!h-3.5 !w-3.5" />
@@ -174,8 +199,13 @@ export function ReviewWorkspace({ review, result, onDecide, onOverrideSeverity }
         </section>
 
         <aside aria-labelledby="dec-h" className="flex flex-col gap-4 xl:sticky xl:top-4">
+          {!readOnly && (
+            <p className="rounded-lg border border-line bg-surface-2 p-4 text-small text-ink-2 sm:hidden">
+              Reviewing needs a tablet or a larger screen. You can read the case here.
+            </p>
+          )}
           {blind && (
-            <section aria-labelledby="s1-h" className="flex flex-col gap-3 rounded-lg border border-line bg-surface p-4 shadow-1">
+            <section aria-labelledby="s1-h" className="hidden flex-col gap-3 rounded-lg border border-line bg-surface p-4 shadow-1 sm:flex">
               <div>
                 <p className="text-cap font-semibold uppercase tracking-wider text-ink-3">Step 1 of 2</p>
                 <h2 id="s1-h" className="text-h2 text-ink">Your judgement first</h2>
@@ -212,7 +242,7 @@ export function ReviewWorkspace({ review, result, onDecide, onOverrideSeverity }
             </section>
           )}
 
-          <section aria-labelledby="dec-h" className="flex flex-col gap-4 rounded-lg border border-line bg-surface p-4 shadow-1">
+          <section id="decision" aria-labelledby="dec-h" className="hidden scroll-mt-4 flex-col gap-4 rounded-lg border border-line bg-surface p-4 shadow-1 sm:flex">
             <div>
               {blind && <p className="text-cap font-semibold uppercase tracking-wider text-ink-3">Step 2 of 2</p>}
               <h2 id="dec-h" className="text-h2 text-ink">Your decision</h2>
@@ -321,7 +351,11 @@ export function ReviewWorkspace({ review, result, onDecide, onOverrideSeverity }
             )}
           </section>
 
-          {revealed && !readOnly && claims.length > 0 && <SeverityOverride claims={claims} onSave={onOverrideSeverity} />}
+          {revealed && !readOnly && claims.length > 0 && (
+            <div className="hidden sm:block">
+              <SeverityOverride claims={claims} onSave={onOverrideSeverity} />
+            </div>
+          )}
 
           <section aria-labelledby="audit-h" className="flex flex-col gap-2 rounded-lg border border-line bg-surface p-4">
             <h2 id="audit-h" className="text-h3 text-ink">Audit trail</h2>

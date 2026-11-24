@@ -75,7 +75,7 @@ export function ClaimDrawer({ claims, openId, transcript, onNavigate, onClose, o
             e.preventDefault();
             if (lastShown.current) document.getElementById(openButtonId(lastShown.current))?.focus();
           }}
-          className="fixed inset-y-0 right-0 z-50 flex w-full flex-col bg-surface shadow-3 sm:max-w-[640px] sm:border-l sm:border-line"
+          className="fixed inset-y-0 right-0 z-50 flex w-full flex-col bg-surface shadow-3 sm:max-w-[640px] sm:border-l sm:border-line md:max-w-[90vw] lg:max-w-[640px]"
         >
           {c && (
             <>
