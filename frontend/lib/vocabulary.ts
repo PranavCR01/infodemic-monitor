@@ -286,7 +286,6 @@ export const REVIEW_REASONS: Record<string, string> = {
   verification_failed: "A claim couldn't be checked against the evidence.",
   denies_supported: "The speaker denies something the evidence supports.",
   possible_debunk: "The speaker may be correcting a claim the evidence can't settle.",
-  nothing_judged: "No claim in this video could be checked against the evidence.",
 };
 
 const GENERIC_REASON = "Flagged for a person to check.";
