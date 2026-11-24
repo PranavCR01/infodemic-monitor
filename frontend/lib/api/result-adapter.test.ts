@@ -146,3 +146,43 @@ describe("clock", () => {
     [-1, "0:00"],
   ])("%s → %s", (s, out) => expect(clock(s)).toBe(out));
 });
+
+describe("T31 search trail", () => {
+  const r = adaptResult(MOCK_MISINFO_PENDING);
+
+  it("reads each claim's search, leaving out repeated queries", () => {
+    const s3 = r.claims[2].search!;
+    expect(s3.queries.map((q) => q.query)).toEqual(["vitamin C megadose viral infection prevention", "vitamin C prevention infection"]);
+    expect(s3).toMatchObject({ libraryUsed: true, budgetExhausted: true, roundsMax: 3, screened: 3, kept: 0, partial: false });
+    expect(r.claims[0].search!.sources.map((x) => x.name)).toEqual(["WHO fact sheets", "CDC"]);
+  });
+
+  it("combines all claims for the result page and the report", () => {
+    expect(r.search).toEqual({
+      queries: [
+        "(hot water OR hot drinks) AND (influenza OR flu) AND (duration OR recovery)",
+        "hot drinks upper respiratory infection symptoms",
+        "influenza vaccine efficacy healthy adults",
+        "vitamin C megadose viral infection prevention",
+        "vitamin C prevention infection",
+      ],
+      sites: ["who.int", "cdc.gov"],
+      screened: 33,
+      kept: 3,
+      ranAt: null,
+    });
+  });
+
+  it("has no search section for claims or results without a trail", () => {
+    expect(adaptResult(MOCK_DEBUNKED_VERIFIED).search).toBeNull();
+    expect(adaptResult(MOCK_DEBUNKED_VERIFIED).claims[0].search).toBeNull();
+  });
+
+  it("marks an older run that kept only the planned queries", () => {
+    const old = adaptResult({
+      ...MOCK_MISINFO_PENDING,
+      claims: [{ ...MOCK_MISINFO_PENDING.claims![0], search_trail: { ...MOCK_MISINFO_PENDING.claims![0].search_trail!, recorded: "queries_only" } }],
+    });
+    expect(old.claims[0].search!.partial).toBe(true);
+  });
+});

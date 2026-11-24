@@ -128,6 +128,20 @@ describe("ClaimDrawer", () => {
   });
 });
 
+describe("ClaimDrawer: how we searched (T31)", () => {
+  it("shows the claim's searches, collapsed, and says when the search ran out of rounds", () => {
+    render(<ResultView result={adaptResult(MOCK_MISINFO_PENDING)} />);
+    const dialog = open(3);
+    const details = within(dialog).getByText("How we searched for this claim").closest("details")!;
+    expect(details).not.toHaveAttribute("open");
+    expect(within(details).getByText("vitamin C megadose viral infection prevention")).toBeInTheDocument();
+    expect(within(details).getByText("0 results")).toBeInTheDocument();
+    expect(within(details).getByText(/used all 3 rounds allowed/)).toBeInTheDocument();
+    expect(within(details).getByText(/document library was searched too/)).toBeInTheDocument();
+    expect(within(details).getByText(/3 results found, 3 screened, 0 sources used/)).toBeInTheDocument();
+  });
+});
+
 describe("sortSources", () => {
   it("orders by strength of study type, not by count", () => {
     const s = adaptResult(MOCK_MISINFO_PENDING).claims[0].sources;

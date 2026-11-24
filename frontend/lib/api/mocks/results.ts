@@ -117,13 +117,44 @@ export const MOCK_MISINFO_PENDING: RawResult = {
       evidence: [],
     },
   ],
-  search: {
-    pubmed_queries: ["(hot water OR hot drinks) AND (influenza OR flu) AND (duration OR recovery)", "influenza vaccine efficacy adults"],
-    reference_sites: ["who.int", "cdc.gov", "nhs.uk"],
-    results_screened: 14,
-    results_kept: 3,
-    ran_at: "2026-11-23T09:13:00Z",
-  },
+};
+
+// T31 search trails (shape of backend/app/core/schemas/search_trail.py).
+const WHO_REF = { source_id: "who_factsheets", name: "WHO fact sheets", publisher: "World Health Organization", sites: ["who.int"], passages: 1 };
+const CDC_REF = { source_id: "cdc", name: "CDC", publisher: "Centers for Disease Control and Prevention", sites: ["cdc.gov"], passages: 0 };
+MOCK_MISINFO_PENDING.claims![0].search_trail = {
+  version: 1,
+  recorded: "graph",
+  pubmed_queries: [
+    { round: 1, query: "(hot water OR hot drinks) AND (influenza OR flu) AND (duration OR recovery)", results: 9 },
+    { round: 2, query: "hot drinks upper respiratory infection symptoms", results: 5 },
+  ],
+  references: [WHO_REF, CDC_REF],
+  library: { fired: false },
+  counts: { retrieved: 14, screened: 12, kept: 2 },
+  budget: { rounds_used: 2, rounds_max: 3, exhausted: false, evidence_cap: 10 },
+};
+MOCK_MISINFO_PENDING.claims![1].search_trail = {
+  version: 1,
+  recorded: "graph",
+  pubmed_queries: [{ round: 1, query: "influenza vaccine efficacy healthy adults", results: 20 }],
+  references: [CDC_REF],
+  library: { fired: false },
+  counts: { retrieved: 20, screened: 18, kept: 1 },
+  budget: { rounds_used: 1, rounds_max: 3, exhausted: false, evidence_cap: 10 },
+};
+MOCK_MISINFO_PENDING.claims![2].search_trail = {
+  version: 1,
+  recorded: "graph",
+  pubmed_queries: [
+    { round: 1, query: "vitamin C megadose viral infection prevention", results: 0 },
+    { round: 2, query: "vitamin C prevention infection", results: 3 },
+    { round: 3, query: "vitamin C prevention infection", results: 3, repeat: true },
+  ],
+  references: [WHO_REF],
+  library: { fired: true, passages: 0 },
+  counts: { retrieved: 3, screened: 3, kept: 0 },
+  budget: { rounds_used: 3, rounds_max: 3, exhausted: true, evidence_cap: 10 },
 };
 
 /** DEBUNKED, verified by a reviewer. */

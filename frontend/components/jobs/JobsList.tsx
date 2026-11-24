@@ -118,7 +118,7 @@ export function JobsList({ rows, total, filters: f, onFilters, error }: Props) {
                     <JobStateTag status={r.rawStatus} />
                     {r.step && <div className="text-cap text-ink-3">{r.step}</div>}
                   </td>
-                  <td className="px-4 py-3">{r.label ? <LabelBadge label={r.label} /> : <span className="text-ink-3">Not yet</span>}</td>
+                  <td className="px-4 py-3">{r.label ? <LabelBadge label={r.label} basis={r.basis} /> : <span className="text-ink-3">Not yet</span>}</td>
                 </tr>
               ))}
             </tbody>

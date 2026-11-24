@@ -8,6 +8,8 @@ import { apiFetch } from "@/lib/api";
 import type { Progress } from "@/lib/api/job-adapter";
 import type { RawJob } from "@/lib/api/job-types";
 import { fetchProgress, retryJob } from "@/lib/api/jobs";
+import { usePlaybackUrl } from "@/lib/api/playback";
+import { requestReview } from "@/lib/api/review-request";
 import { adaptResult } from "@/lib/api/result-adapter";
 import type { RawResult } from "@/lib/api/result-types";
 import { usePolling } from "@/lib/hooks/usePolling";
@@ -41,7 +43,28 @@ export function JobDetailClient({ jobId, initialJob, initialResult, filename }: 
   const { lost, checkNow } = usePolling(poll, stop);
 
   const result = useMemo(() => (raw ? adaptResult(raw) : null), [raw]);
-  if (hasResult && result) return <ResultView result={result} />;
+  const playback = usePlaybackUrl(hasResult ? jobId : null);
+
+  const reloadResult = useCallback(async () => {
+    const res = await apiFetch(`/jobs/${encodeURIComponent(jobId)}/result`);
+    if (res.status === 200) setRaw(await res.json());
+  }, [jobId]);
+
+  if (hasResult && result) {
+    return (
+      <ResultView
+        result={result}
+        videoUrl={playback.url}
+        onVideoError={playback.onError}
+        onRequestReview={async (note) => {
+          const r = await requestReview(jobId, note);
+          // The job is now in review: reload so the page shows "Pending review".
+          if (r.ok) await reloadResult();
+          return r;
+        }}
+      />
+    );
+  }
 
   const shown: Progress =
     progress ?? {

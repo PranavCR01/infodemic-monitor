@@ -273,6 +273,7 @@ export const REVIEW_REASONS: Record<string, string> = {
   low_confidence: "The system's confidence is low.",
   high_risk_uncertain: "A high-risk claim the evidence couldn't settle.",
   unproven_claim: "A remedy is presented as working, and no evidence supports it.",
+  user_requested: "Someone asked for a person to check this result.",
   prompt_injection_suspected: "The video may contain text trying to steer the analysis.",
   guardrail: "A safety check stopped part of the analysis.",
   // judge:<flag>
