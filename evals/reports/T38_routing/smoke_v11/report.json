@@ -1,0 +1,1285 @@
+{
+  "critic_same_provider": null,
+  "response_model_notes": [
+    "extract_claims: openai/gpt-5.6-luna@extract_v2: 1 calls reported no model id",
+    "analyze_stance: openai/gpt-5.6-luna@stance_v1: 3 calls reported no model id",
+    "verify_claims: openai/gpt-5.6-terra@verify_v3: 3 calls reported no model id"
+  ],
+  "mode": "live",
+  "golden": "git:origin/data/golden-label-set@0fbc68a05a7d:research/claim-level/dataset",
+  "split": "tune",
+  "evidence_mode": "retrieved+cited",
+  "estimate": {
+    "mode": "dry_run",
+    "golden": "git:origin/data/golden-label-set@0fbc68a05a7d:research/claim-level/dataset",
+    "split": "tune",
+    "evidence_mode": "retrieved+cited",
+    "evidence_assumed": false,
+    "steps": {
+      "extract_claims": {
+        "items": 1,
+        "metric": "claim_f1",
+        "candidates": [
+          {
+            "candidate": "anthropic/claude-haiku-5-5@extract_v2",
+            "provider": "anthropic",
+            "model": "claude-haiku-5-5",
+            "prompt": "extract_v2",
+            "calls": 1,
+            "input_tokens": 4378,
+            "expected_output_tokens": 600,
+            "max_output_tokens": 2048,
+            "reasoning_tokens": 0,
+            "output_cap_tokens": 2048,
+            "upper_bound_input_tokens": 10945,
+            "upper_bound_output_tokens": 4096,
+            "expected_usd": 0.0007,
+            "upper_bound_usd": 0.0031,
+            "priced": true,
+            "placeholder_id": false
+          },
+          {
+            "candidate": "anthropic/claude-sonnet-5-5@extract_v2",
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "prompt": "extract_v2",
+            "calls": 1,
+            "input_tokens": 4378,
+            "expected_output_tokens": 600,
+            "max_output_tokens": 2048,
+            "reasoning_tokens": 0,
+            "output_cap_tokens": 2048,
+            "upper_bound_input_tokens": 10945,
+            "upper_bound_output_tokens": 4096,
+            "expected_usd": 0.0148,
+            "upper_bound_usd": 0.0629,
+            "priced": true,
+            "placeholder_id": false
+          },
+          {
+            "candidate": "openai/gpt-5.6-luna@extract_v2",
+            "provider": "openai",
+            "model": "gpt-5.6-luna",
+            "prompt": "extract_v2",
+            "calls": 1,
+            "input_tokens": 4378,
+            "expected_output_tokens": 600,
+            "max_output_tokens": 2048,
+            "reasoning_tokens": 1500,
+            "output_cap_tokens": 3548,
+            "upper_bound_input_tokens": 10945,
+            "upper_bound_output_tokens": 7096,
+            "expected_usd": 0.0034,
+            "upper_bound_usd": 0.0107,
+            "priced": true,
+            "placeholder_id": false
+          }
+        ]
+      },
+      "analyze_stance": {
+        "items": 3,
+        "metric": "stance_macro_f1",
+        "candidates": [
+          {
+            "candidate": "anthropic/claude-haiku-5-5@stance_v1",
+            "provider": "anthropic",
+            "model": "claude-haiku-5-5",
+            "prompt": "stance_v1",
+            "calls": 3,
+            "input_tokens": 7095,
+            "expected_output_tokens": 450,
+            "max_output_tokens": 1536,
+            "reasoning_tokens": 0,
+            "output_cap_tokens": 1536,
+            "upper_bound_input_tokens": 8869,
+            "upper_bound_output_tokens": 1536,
+            "expected_usd": 0.0009,
+            "upper_bound_usd": 0.0017,
+            "priced": true,
+            "placeholder_id": false
+          },
+          {
+            "candidate": "anthropic/claude-sonnet-5-5@stance_v1",
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "prompt": "stance_v1",
+            "calls": 3,
+            "input_tokens": 7095,
+            "expected_output_tokens": 450,
+            "max_output_tokens": 1536,
+            "reasoning_tokens": 0,
+            "output_cap_tokens": 1536,
+            "upper_bound_input_tokens": 8869,
+            "upper_bound_output_tokens": 1536,
+            "expected_usd": 0.0187,
+            "upper_bound_usd": 0.0331,
+            "priced": true,
+            "placeholder_id": false
+          },
+          {
+            "candidate": "openai/gpt-5.6-luna@stance_v1",
+            "provider": "openai",
+            "model": "gpt-5.6-luna",
+            "prompt": "stance_v1",
+            "calls": 3,
+            "input_tokens": 7095,
+            "expected_output_tokens": 450,
+            "max_output_tokens": 1536,
+            "reasoning_tokens": 2400,
+            "output_cap_tokens": 3936,
+            "upper_bound_input_tokens": 8869,
+            "upper_bound_output_tokens": 3936,
+            "expected_usd": 0.0048,
+            "upper_bound_usd": 0.0065,
+            "priced": true,
+            "placeholder_id": false
+          }
+        ]
+      },
+      "verify_claims": {
+        "items": 3,
+        "metric": "verification_macro_f1",
+        "candidates": [
+          {
+            "candidate": "anthropic/claude-sonnet-5-5@verify_v3",
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "prompt": "verify_v3",
+            "calls": 3,
+            "input_tokens": 20724,
+            "expected_output_tokens": 1200,
+            "max_output_tokens": 3072,
+            "reasoning_tokens": 0,
+            "output_cap_tokens": 3072,
+            "upper_bound_input_tokens": 51810,
+            "upper_bound_output_tokens": 6144,
+            "expected_usd": 0.0534,
+            "upper_bound_usd": 0.1651,
+            "priced": true,
+            "placeholder_id": false
+          },
+          {
+            "candidate": "anthropic/claude-opus-5-5@verify_v3",
+            "provider": "anthropic",
+            "model": "claude-opus-5-5",
+            "prompt": "verify_v3",
+            "calls": 3,
+            "input_tokens": 20724,
+            "expected_output_tokens": 1200,
+            "max_output_tokens": 3072,
+            "reasoning_tokens": 0,
+            "output_cap_tokens": 3072,
+            "upper_bound_input_tokens": 51810,
+            "upper_bound_output_tokens": 6144,
+            "expected_usd": 0.1069,
+            "upper_bound_usd": 0.3301,
+            "priced": true,
+            "placeholder_id": false
+          },
+          {
+            "candidate": "openai/gpt-5.6-terra@verify_v3",
+            "provider": "openai",
+            "model": "gpt-5.6-terra",
+            "prompt": "verify_v3",
+            "calls": 3,
+            "input_tokens": 20724,
+            "expected_output_tokens": 1200,
+            "max_output_tokens": 3072,
+            "reasoning_tokens": 7500,
+            "output_cap_tokens": 10572,
+            "upper_bound_input_tokens": 51810,
+            "upper_bound_output_tokens": 21144,
+            "expected_usd": 0.1458,
+            "upper_bound_usd": 0.3573,
+            "priced": true,
+            "placeholder_id": false
+          }
+        ]
+      }
+    },
+    "total_expected_usd": 0.3495,
+    "total_upper_bound_usd": 0.9705,
+    "unpriced_candidates": [],
+    "placeholder_candidates": [],
+    "critic_provider_warnings": [
+      "verify_claims candidate openai/gpt-5.6-terra@verify_v3 shares the critic's provider (openai, gpt-4o-2024-08-06); if it wins, change the critic to another provider (\u00a713)"
+    ],
+    "reasoning_config_problems": [],
+    "notes": []
+  },
+  "spend": {
+    "cap_usd": 1.0,
+    "spent_usd": 0.476914,
+    "calls": 21,
+    "refused_calls": 0,
+    "stopped_at_cap": false,
+    "by_model": {
+      "claude-haiku-5-5": 0.002143,
+      "claude-sonnet-5-5": 0.116616,
+      "gpt-5.6-luna": 0.012771,
+      "claude-opus-5-5": 0.150052,
+      "gpt-5.6-terra": 0.195332
+    }
+  },
+  "stopped": null,
+  "steps": {
+    "extract_claims": {
+      "items": 1,
+      "results": [
+        {
+          "candidate": {
+            "provider": "anthropic",
+            "model": "claude-haiku-5-5",
+            "prompt": "extract_v2",
+            "reasoning_tokens": 0,
+            "reasoning_effort": null
+          },
+          "step": "extract_claims",
+          "metric": "claim_f1",
+          "score": 0.4444444444444444,
+          "n_items": 1,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.0009332,
+          "latency_p95_ms": 1887.0,
+          "response_models": {
+            "claude-haiku-5-5": 1
+          },
+          "reasoning_tokens": 0,
+          "output_tokens": 420,
+          "calls": [
+            {
+              "model": "claude-haiku-5-5",
+              "fallback_used": false,
+              "latency_ms": 1887,
+              "input_tokens": 7232,
+              "output_tokens": 420,
+              "reasoning_tokens": 0,
+              "response_model": "claude-haiku-5-5",
+              "reasoning_effort": null,
+              "error": null
+            }
+          ]
+        },
+        {
+          "candidate": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "prompt": "extract_v2",
+            "reasoning_tokens": 0,
+            "reasoning_effort": null
+          },
+          "step": "extract_claims",
+          "metric": "claim_f1",
+          "score": 0.5,
+          "n_items": 1,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.019482,
+          "latency_p95_ms": 10765.0,
+          "response_models": {
+            "claude-sonnet-5-5": 1
+          },
+          "reasoning_tokens": 0,
+          "output_tokens": 521,
+          "calls": [
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 10765,
+              "input_tokens": 7136,
+              "output_tokens": 521,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            }
+          ]
+        },
+        {
+          "candidate": {
+            "provider": "openai",
+            "model": "gpt-5.6-luna",
+            "prompt": "extract_v2",
+            "reasoning_tokens": 1500,
+            "reasoning_effort": null
+          },
+          "step": "extract_claims",
+          "metric": "claim_f1",
+          "score": 0.0,
+          "n_items": 1,
+          "n_failed": 1,
+          "fallbacks_used": 0,
+          "cost_per_item": null,
+          "latency_p95_ms": 1383.0,
+          "response_models": {
+            "unreported": 1
+          },
+          "reasoning_tokens": 0,
+          "output_tokens": 0,
+          "calls": [
+            {
+              "model": "gpt-5.6-luna",
+              "fallback_used": false,
+              "latency_ms": 1383,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": "medium",
+              "error": "error: BadRequestError: Error code: 400 - Function tools with reasoning_effort are not supported for gpt-5.6-luna in /v1/chat/completions. To use function tools, use /v1/responses or set reasoning_effort to 'none'."
+            }
+          ]
+        }
+      ],
+      "extras": {},
+      "selection": {
+        "step": "extract_claims",
+        "winner": {
+          "candidate": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "prompt": "extract_v2",
+            "reasoning_tokens": 0,
+            "reasoning_effort": null
+          },
+          "step": "extract_claims",
+          "metric": "claim_f1",
+          "score": 0.5,
+          "n_items": 1,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.019482,
+          "latency_p95_ms": 10765.0,
+          "response_models": {
+            "claude-sonnet-5-5": 1
+          },
+          "reasoning_tokens": 0,
+          "output_tokens": 521,
+          "calls": [
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 10765,
+              "input_tokens": 7136,
+              "output_tokens": 521,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            }
+          ]
+        },
+        "reason": "best claim_f1 (0.5000) within budget",
+        "ranked": [
+          {
+            "candidate": {
+              "provider": "anthropic",
+              "model": "claude-sonnet-5-5",
+              "prompt": "extract_v2",
+              "reasoning_tokens": 0,
+              "reasoning_effort": null
+            },
+            "step": "extract_claims",
+            "metric": "claim_f1",
+            "score": 0.5,
+            "n_items": 1,
+            "n_failed": 0,
+            "fallbacks_used": 0,
+            "cost_per_item": 0.019482,
+            "latency_p95_ms": 10765.0,
+            "response_models": {
+              "claude-sonnet-5-5": 1
+            },
+            "reasoning_tokens": 0,
+            "output_tokens": 521,
+            "calls": [
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 10765,
+                "input_tokens": 7136,
+                "output_tokens": 521,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              }
+            ]
+          },
+          {
+            "candidate": {
+              "provider": "anthropic",
+              "model": "claude-haiku-5-5",
+              "prompt": "extract_v2",
+              "reasoning_tokens": 0,
+              "reasoning_effort": null
+            },
+            "step": "extract_claims",
+            "metric": "claim_f1",
+            "score": 0.4444444444444444,
+            "n_items": 1,
+            "n_failed": 0,
+            "fallbacks_used": 0,
+            "cost_per_item": 0.0009332,
+            "latency_p95_ms": 1887.0,
+            "response_models": {
+              "claude-haiku-5-5": 1
+            },
+            "reasoning_tokens": 0,
+            "output_tokens": 420,
+            "calls": [
+              {
+                "model": "claude-haiku-5-5",
+                "fallback_used": false,
+                "latency_ms": 1887,
+                "input_tokens": 7232,
+                "output_tokens": 420,
+                "reasoning_tokens": 0,
+                "response_model": "claude-haiku-5-5",
+                "reasoning_effort": null,
+                "error": null
+              }
+            ]
+          }
+        ],
+        "excluded": {
+          "openai/gpt-5.6-luna@extract_v2": "failure rate 1/1 over budget (0 served by the fallback model)"
+        }
+      }
+    },
+    "analyze_stance": {
+      "items": 3,
+      "results": [
+        {
+          "candidate": {
+            "provider": "anthropic",
+            "model": "claude-haiku-5-5",
+            "prompt": "stance_v1",
+            "reasoning_tokens": 0,
+            "reasoning_effort": null
+          },
+          "step": "analyze_stance",
+          "metric": "stance_macro_f1",
+          "score": 1.0,
+          "n_items": 3,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.0004034,
+          "latency_p95_ms": 975.3,
+          "response_models": {
+            "claude-haiku-5-5": 3
+          },
+          "reasoning_tokens": 0,
+          "output_tokens": 515,
+          "calls": [
+            {
+              "model": "claude-haiku-5-5",
+              "fallback_used": false,
+              "latency_ms": 924,
+              "input_tokens": 3278,
+              "output_tokens": 163,
+              "reasoning_tokens": 0,
+              "response_model": "claude-haiku-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-haiku-5-5",
+              "fallback_used": false,
+              "latency_ms": 981,
+              "input_tokens": 3518,
+              "output_tokens": 195,
+              "reasoning_tokens": 0,
+              "response_model": "claude-haiku-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-haiku-5-5",
+              "fallback_used": false,
+              "latency_ms": 808,
+              "input_tokens": 2731,
+              "output_tokens": 157,
+              "reasoning_tokens": 0,
+              "response_model": "claude-haiku-5-5",
+              "reasoning_effort": null,
+              "error": null
+            }
+          ]
+        },
+        {
+          "candidate": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "prompt": "stance_v1",
+            "reasoning_tokens": 0,
+            "reasoning_effort": null
+          },
+          "step": "analyze_stance",
+          "metric": "stance_macro_f1",
+          "score": 1.0,
+          "n_items": 3,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.007866,
+          "latency_p95_ms": 8984.0,
+          "response_models": {
+            "claude-sonnet-5-5": 3
+          },
+          "reasoning_tokens": 0,
+          "output_tokens": 512,
+          "calls": [
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 9740,
+              "input_tokens": 3182,
+              "output_tokens": 158,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1301,
+              "input_tokens": 3422,
+              "output_tokens": 182,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2180,
+              "input_tokens": 2635,
+              "output_tokens": 172,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            }
+          ]
+        },
+        {
+          "candidate": {
+            "provider": "openai",
+            "model": "gpt-5.6-luna",
+            "prompt": "stance_v1",
+            "reasoning_tokens": 800,
+            "reasoning_effort": null
+          },
+          "step": "analyze_stance",
+          "metric": "stance_macro_f1",
+          "score": 0.0,
+          "n_items": 3,
+          "n_failed": 3,
+          "fallbacks_used": 0,
+          "cost_per_item": null,
+          "latency_p95_ms": 399.7,
+          "response_models": {
+            "unreported": 3
+          },
+          "reasoning_tokens": 0,
+          "output_tokens": 0,
+          "calls": [
+            {
+              "model": "gpt-5.6-luna",
+              "fallback_used": false,
+              "latency_ms": 402,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": "medium",
+              "error": "error: BadRequestError: Error code: 400 - Function tools with reasoning_effort are not supported for gpt-5.6-luna in /v1/chat/completions. To use function tools, use /v1/responses or set reasoning_effort to 'none'."
+            },
+            {
+              "model": "gpt-5.6-luna",
+              "fallback_used": false,
+              "latency_ms": 379,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": "medium",
+              "error": "error: BadRequestError: Error code: 400 - Function tools with reasoning_effort are not supported for gpt-5.6-luna in /v1/chat/completions. To use function tools, use /v1/responses or set reasoning_effort to 'none'."
+            },
+            {
+              "model": "gpt-5.6-luna",
+              "fallback_used": false,
+              "latency_ms": 364,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": "medium",
+              "error": "error: BadRequestError: Error code: 400 - Function tools with reasoning_effort are not supported for gpt-5.6-luna in /v1/chat/completions. To use function tools, use /v1/responses or set reasoning_effort to 'none'."
+            }
+          ]
+        }
+      ],
+      "extras": {
+        "anthropic/claude-haiku-5-5@stance_v1": {
+          "debunk_recall": null,
+          "debunk_read_as_endorses": 0,
+          "n_refutes": 0
+        },
+        "anthropic/claude-sonnet-5-5@stance_v1": {
+          "debunk_recall": null,
+          "debunk_read_as_endorses": 0,
+          "n_refutes": 0
+        },
+        "openai/gpt-5.6-luna@stance_v1": {
+          "debunk_recall": null,
+          "debunk_read_as_endorses": 0,
+          "n_refutes": 0
+        }
+      },
+      "selection": {
+        "step": "analyze_stance",
+        "winner": {
+          "candidate": {
+            "provider": "anthropic",
+            "model": "claude-haiku-5-5",
+            "prompt": "stance_v1",
+            "reasoning_tokens": 0,
+            "reasoning_effort": null
+          },
+          "step": "analyze_stance",
+          "metric": "stance_macro_f1",
+          "score": 1.0,
+          "n_items": 3,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.0004034,
+          "latency_p95_ms": 975.3,
+          "response_models": {
+            "claude-haiku-5-5": 3
+          },
+          "reasoning_tokens": 0,
+          "output_tokens": 515,
+          "calls": [
+            {
+              "model": "claude-haiku-5-5",
+              "fallback_used": false,
+              "latency_ms": 924,
+              "input_tokens": 3278,
+              "output_tokens": 163,
+              "reasoning_tokens": 0,
+              "response_model": "claude-haiku-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-haiku-5-5",
+              "fallback_used": false,
+              "latency_ms": 981,
+              "input_tokens": 3518,
+              "output_tokens": 195,
+              "reasoning_tokens": 0,
+              "response_model": "claude-haiku-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-haiku-5-5",
+              "fallback_used": false,
+              "latency_ms": 808,
+              "input_tokens": 2731,
+              "output_tokens": 157,
+              "reasoning_tokens": 0,
+              "response_model": "claude-haiku-5-5",
+              "reasoning_effort": null,
+              "error": null
+            }
+          ]
+        },
+        "reason": "within 0.01 of the best stance_macro_f1; cheapest/fastest of 2 wins",
+        "ranked": [
+          {
+            "candidate": {
+              "provider": "anthropic",
+              "model": "claude-haiku-5-5",
+              "prompt": "stance_v1",
+              "reasoning_tokens": 0,
+              "reasoning_effort": null
+            },
+            "step": "analyze_stance",
+            "metric": "stance_macro_f1",
+            "score": 1.0,
+            "n_items": 3,
+            "n_failed": 0,
+            "fallbacks_used": 0,
+            "cost_per_item": 0.0004034,
+            "latency_p95_ms": 975.3,
+            "response_models": {
+              "claude-haiku-5-5": 3
+            },
+            "reasoning_tokens": 0,
+            "output_tokens": 515,
+            "calls": [
+              {
+                "model": "claude-haiku-5-5",
+                "fallback_used": false,
+                "latency_ms": 924,
+                "input_tokens": 3278,
+                "output_tokens": 163,
+                "reasoning_tokens": 0,
+                "response_model": "claude-haiku-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-haiku-5-5",
+                "fallback_used": false,
+                "latency_ms": 981,
+                "input_tokens": 3518,
+                "output_tokens": 195,
+                "reasoning_tokens": 0,
+                "response_model": "claude-haiku-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-haiku-5-5",
+                "fallback_used": false,
+                "latency_ms": 808,
+                "input_tokens": 2731,
+                "output_tokens": 157,
+                "reasoning_tokens": 0,
+                "response_model": "claude-haiku-5-5",
+                "reasoning_effort": null,
+                "error": null
+              }
+            ]
+          },
+          {
+            "candidate": {
+              "provider": "anthropic",
+              "model": "claude-sonnet-5-5",
+              "prompt": "stance_v1",
+              "reasoning_tokens": 0,
+              "reasoning_effort": null
+            },
+            "step": "analyze_stance",
+            "metric": "stance_macro_f1",
+            "score": 1.0,
+            "n_items": 3,
+            "n_failed": 0,
+            "fallbacks_used": 0,
+            "cost_per_item": 0.007866,
+            "latency_p95_ms": 8984.0,
+            "response_models": {
+              "claude-sonnet-5-5": 3
+            },
+            "reasoning_tokens": 0,
+            "output_tokens": 512,
+            "calls": [
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 9740,
+                "input_tokens": 3182,
+                "output_tokens": 158,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 1301,
+                "input_tokens": 3422,
+                "output_tokens": 182,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 2180,
+                "input_tokens": 2635,
+                "output_tokens": 172,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              }
+            ]
+          }
+        ],
+        "excluded": {
+          "openai/gpt-5.6-luna@stance_v1": "failure rate 3/3 over budget (0 served by the fallback model)"
+        }
+      }
+    },
+    "verify_claims": {
+      "items": 3,
+      "results": [
+        {
+          "candidate": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "prompt": "verify_v3",
+            "reasoning_tokens": 0,
+            "reasoning_effort": null
+          },
+          "step": "verify_claims",
+          "metric": "verification_macro_f1",
+          "score": 0.6666666666666666,
+          "n_items": 3,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.024512000000000003,
+          "latency_p95_ms": 6309.4,
+          "response_models": {
+            "claude-sonnet-5-5": 3
+          },
+          "reasoning_tokens": 0,
+          "output_tokens": 2002,
+          "calls": [
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4023,
+              "input_tokens": 5773,
+              "output_tokens": 492,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 5287,
+              "input_tokens": 11181,
+              "output_tokens": 603,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6423,
+              "input_tokens": 9804,
+              "output_tokens": 907,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            }
+          ]
+        },
+        {
+          "candidate": {
+            "provider": "anthropic",
+            "model": "claude-opus-5-5",
+            "prompt": "verify_v3",
+            "reasoning_tokens": 0,
+            "reasoning_effort": null
+          },
+          "step": "verify_claims",
+          "metric": "verification_macro_f1",
+          "score": 1.0,
+          "n_items": 3,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.05001733333333334,
+          "latency_p95_ms": 11810.2,
+          "response_models": {
+            "claude-opus-5-5": 3
+          },
+          "reasoning_tokens": 0,
+          "output_tokens": 2151,
+          "calls": [
+            {
+              "model": "claude-opus-5-5",
+              "fallback_used": false,
+              "latency_ms": 12178,
+              "input_tokens": 5773,
+              "output_tokens": 764,
+              "reasoning_tokens": 0,
+              "response_model": "claude-opus-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-opus-5-5",
+              "fallback_used": false,
+              "latency_ms": 8500,
+              "input_tokens": 11181,
+              "output_tokens": 877,
+              "reasoning_tokens": 0,
+              "response_model": "claude-opus-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-opus-5-5",
+              "fallback_used": false,
+              "latency_ms": 4170,
+              "input_tokens": 9804,
+              "output_tokens": 510,
+              "reasoning_tokens": 0,
+              "response_model": "claude-opus-5-5",
+              "reasoning_effort": null,
+              "error": null
+            }
+          ]
+        },
+        {
+          "candidate": {
+            "provider": "openai",
+            "model": "gpt-5.6-terra",
+            "prompt": "verify_v3",
+            "reasoning_tokens": 2500,
+            "reasoning_effort": null
+          },
+          "step": "verify_claims",
+          "metric": "verification_macro_f1",
+          "score": 0.0,
+          "n_items": 3,
+          "n_failed": 3,
+          "fallbacks_used": 0,
+          "cost_per_item": null,
+          "latency_p95_ms": 428.4,
+          "response_models": {
+            "unreported": 3
+          },
+          "reasoning_tokens": 0,
+          "output_tokens": 0,
+          "calls": [
+            {
+              "model": "gpt-5.6-terra",
+              "fallback_used": false,
+              "latency_ms": 430,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": "medium",
+              "error": "error: BadRequestError: Error code: 400 - Function tools with reasoning_effort are not supported for gpt-5.6-terra in /v1/chat/completions. To use function tools, use /v1/responses or set reasoning_effort to 'none'."
+            },
+            {
+              "model": "gpt-5.6-terra",
+              "fallback_used": false,
+              "latency_ms": 413,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": "medium",
+              "error": "error: BadRequestError: Error code: 400 - Function tools with reasoning_effort are not supported for gpt-5.6-terra in /v1/chat/completions. To use function tools, use /v1/responses or set reasoning_effort to 'none'."
+            },
+            {
+              "model": "gpt-5.6-terra",
+              "fallback_used": false,
+              "latency_ms": 414,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": "medium",
+              "error": "error: BadRequestError: Error code: 400 - Function tools with reasoning_effort are not supported for gpt-5.6-terra in /v1/chat/completions. To use function tools, use /v1/responses or set reasoning_effort to 'none'."
+            }
+          ]
+        }
+      ],
+      "extras": {
+        "anthropic/claude-sonnet-5-5@verify_v3": {
+          "insufficient_called_contradicted": 0,
+          "unsupported_recall": null,
+          "n_unsupported": 0
+        },
+        "anthropic/claude-opus-5-5@verify_v3": {
+          "insufficient_called_contradicted": 0,
+          "unsupported_recall": null,
+          "n_unsupported": 0
+        },
+        "openai/gpt-5.6-terra@verify_v3": {
+          "insufficient_called_contradicted": 0,
+          "unsupported_recall": null,
+          "n_unsupported": 0
+        }
+      },
+      "selection": {
+        "step": "verify_claims",
+        "winner": {
+          "candidate": {
+            "provider": "anthropic",
+            "model": "claude-opus-5-5",
+            "prompt": "verify_v3",
+            "reasoning_tokens": 0,
+            "reasoning_effort": null
+          },
+          "step": "verify_claims",
+          "metric": "verification_macro_f1",
+          "score": 1.0,
+          "n_items": 3,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.05001733333333334,
+          "latency_p95_ms": 11810.2,
+          "response_models": {
+            "claude-opus-5-5": 3
+          },
+          "reasoning_tokens": 0,
+          "output_tokens": 2151,
+          "calls": [
+            {
+              "model": "claude-opus-5-5",
+              "fallback_used": false,
+              "latency_ms": 12178,
+              "input_tokens": 5773,
+              "output_tokens": 764,
+              "reasoning_tokens": 0,
+              "response_model": "claude-opus-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-opus-5-5",
+              "fallback_used": false,
+              "latency_ms": 8500,
+              "input_tokens": 11181,
+              "output_tokens": 877,
+              "reasoning_tokens": 0,
+              "response_model": "claude-opus-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-opus-5-5",
+              "fallback_used": false,
+              "latency_ms": 4170,
+              "input_tokens": 9804,
+              "output_tokens": 510,
+              "reasoning_tokens": 0,
+              "response_model": "claude-opus-5-5",
+              "reasoning_effort": null,
+              "error": null
+            }
+          ]
+        },
+        "reason": "best verification_macro_f1 (1.0000) within budget",
+        "ranked": [
+          {
+            "candidate": {
+              "provider": "anthropic",
+              "model": "claude-opus-5-5",
+              "prompt": "verify_v3",
+              "reasoning_tokens": 0,
+              "reasoning_effort": null
+            },
+            "step": "verify_claims",
+            "metric": "verification_macro_f1",
+            "score": 1.0,
+            "n_items": 3,
+            "n_failed": 0,
+            "fallbacks_used": 0,
+            "cost_per_item": 0.05001733333333334,
+            "latency_p95_ms": 11810.2,
+            "response_models": {
+              "claude-opus-5-5": 3
+            },
+            "reasoning_tokens": 0,
+            "output_tokens": 2151,
+            "calls": [
+              {
+                "model": "claude-opus-5-5",
+                "fallback_used": false,
+                "latency_ms": 12178,
+                "input_tokens": 5773,
+                "output_tokens": 764,
+                "reasoning_tokens": 0,
+                "response_model": "claude-opus-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-opus-5-5",
+                "fallback_used": false,
+                "latency_ms": 8500,
+                "input_tokens": 11181,
+                "output_tokens": 877,
+                "reasoning_tokens": 0,
+                "response_model": "claude-opus-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-opus-5-5",
+                "fallback_used": false,
+                "latency_ms": 4170,
+                "input_tokens": 9804,
+                "output_tokens": 510,
+                "reasoning_tokens": 0,
+                "response_model": "claude-opus-5-5",
+                "reasoning_effort": null,
+                "error": null
+              }
+            ]
+          },
+          {
+            "candidate": {
+              "provider": "anthropic",
+              "model": "claude-sonnet-5-5",
+              "prompt": "verify_v3",
+              "reasoning_tokens": 0,
+              "reasoning_effort": null
+            },
+            "step": "verify_claims",
+            "metric": "verification_macro_f1",
+            "score": 0.6666666666666666,
+            "n_items": 3,
+            "n_failed": 0,
+            "fallbacks_used": 0,
+            "cost_per_item": 0.024512000000000003,
+            "latency_p95_ms": 6309.4,
+            "response_models": {
+              "claude-sonnet-5-5": 3
+            },
+            "reasoning_tokens": 0,
+            "output_tokens": 2002,
+            "calls": [
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4023,
+                "input_tokens": 5773,
+                "output_tokens": 492,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 5287,
+                "input_tokens": 11181,
+                "output_tokens": 603,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 6423,
+                "input_tokens": 9804,
+                "output_tokens": 907,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              }
+            ]
+          }
+        ],
+        "excluded": {
+          "openai/gpt-5.6-terra@verify_v3": "failure rate 3/3 over budget (0 served by the fallback model)"
+        }
+      }
+    }
+  },
+  "proposed_routing": {
+    "version": "routing_v2",
+    "status": "provisional",
+    "routing": {
+      "extract_claims": {
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "extract_v2"
+      },
+      "analyze_stance": {
+        "provider": "anthropic",
+        "model": "claude-haiku-5-5",
+        "prompt": "stance_v1"
+      },
+      "verify_claims": {
+        "provider": "anthropic",
+        "model": "claude-opus-5-5",
+        "prompt": "verify_v3"
+      },
+      "critique": {
+        "provider": "openai",
+        "model": "gpt-4o-2024-08-06",
+        "prompt": "critic_v1"
+      },
+      "judge_explanation": {
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "explain_v2"
+      },
+      "fallback": {
+        "on": [
+          "timeout",
+          "5xx"
+        ],
+        "retries": 1,
+        "use": {
+          "provider": "openai",
+          "model": "gpt-4o-2024-08-06"
+        }
+      }
+    },
+    "pricing": {
+      "claude-haiku-5-5": {
+        "input": 0.1,
+        "output": 0.5
+      },
+      "claude-sonnet-5-5": {
+        "input": 2.0,
+        "output": 10.0
+      },
+      "claude-opus-5-5": {
+        "input": 4.0,
+        "output": 20.0
+      },
+      "gpt-4o-2024-08-06": {
+        "input": 2.5,
+        "output": 10.0
+      },
+      "gpt-5.6-luna": {
+        "input": 0.2,
+        "output": 1.2
+      },
+      "gpt-5.6-terra": {
+        "input": 2.0,
+        "output": 12.0
+      }
+    },
+    "models": {
+      "gpt-4o-2024-08-06": {
+        "reasoning": false
+      },
+      "gpt-5.6-luna": {
+        "reasoning": true,
+        "reasoning_effort": "medium"
+      },
+      "gpt-5.6-terra": {
+        "reasoning": true,
+        "reasoning_effort": "medium"
+      }
+    },
+    "reasoning_allowance": {
+      "extract_claims": 1500,
+      "analyze_stance": 800,
+      "verify_claims": 2500
+    }
+  },
+  "written_at": "2026-11-24T06:03:40+00:00"
+}

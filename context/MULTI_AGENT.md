@@ -2083,6 +2083,14 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   extra `weak_evidence` on deciding UNSUPPORTED/MIXED claims the golden judge already sends
   with `unproven_claim`/`mixed_evidence`). Neither judge changed. CI's golden fetch reads
   the pin from the fixture, so it follows automatically.
+- **2026-11-24**: T38 OpenAI candidates (paid, lead-approved): smoke test on v11 clean
+  ($0.0498; model ids reported, output ≥ reasoning on every call, no truncation); full tune
+  split $1.8693 of a $27.86 cap, 359 calls, 0 errors. OpenAI won no step (luna 0.32 / 0.50,
+  terra 0.49 vs Claude winners sonnet 0.42 / sonnet 0.64 / opus 0.68). Combined report and
+  proposed `routing_v2.yaml` (sonnet / sonnet / opus; `config/routing.yaml` unchanged) in
+  `evals/reports/T38_routing/combined/`. Total T38 spend $14.00 of $40 (Anthropic $12.08,
+  OpenAI $1.92). Tune-split numbers only. Caveat: luna/terra rarely reasoned at `medium`
+  effort with the forced tool choice. Branch `auto/T38-openai`.
 - **2026-11-24**: T41 (design §13, §14) OpenAI Responses-API client by the automated
   build: `reasoning: true` models now call `responses.create` with `reasoning.effort`,
   `max_output_tokens` (node cap + allowance), flat function tools and a forced tool choice;
@@ -2103,6 +2111,20 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   response's model id + reasoning tokens recorded on every call and shown in the report.
   Dry run with PR #102's candidates: $15.36 expected / $42.67 upper bound (frozen evidence).
   1545 passed, 0 skipped (local Postgres 16 + pgvector), also with #102 merged. Decisions in §7ac.
+- **2026-11-24**: T38 Option C paid run (lead-approved, cap $25): **done**, Claude candidates
+  only over the full tune split (48 extract / 174 stance / 174 verify items). Spend $11.81 Anthropic,
+  $0 OpenAI (729 calls, 0 failed, 0 fallbacks); T38 total so far $12.08 actual. Best Claude per step:
+  extract sonnet-5-5 (F1 0.42), stance sonnet-5-5 (macro-F1 0.64), verify opus-5-5 (macro-F1 0.68).
+  Tune-split numbers, not held-out test. Provisional `routing_v2.yaml` (OpenAI not yet run);
+  config/routing.yaml unchanged. Frozen evidence sha256 c4ff82bf…4ca5 (full hash in the report);
+  gpt-5.6-luna/terra must reuse it after T41. Report in `evals/reports/T38_routing/report.md`.
+- **2026-11-24**: T38 paid run (lead-approved; caps $1 smoke / $40 full) **stopped at the smoke
+  test**: on tune video v11 all six Anthropic candidates returned valid output, but every OpenAI
+  call (gpt-5.6-luna extract/stance, gpt-5.6-terra verify) got HTTP 400 "Function tools with
+  reasoning_effort are not supported ... in /v1/chat/completions; use /v1/responses or set
+  reasoning_effort to 'none'". Full run not started. Spend: Anthropic $0.27, OpenAI ~$0 actual
+  ($0.21 booked by SpendGuard as failed-call reservations); $0.48 booked / ~$0.27 actual total.
+  Report in `evals/reports/T38_routing/`. Needs a person: choose effort `none` or a Responses-API client.
 - **2026-11-24**: T34 (decision D7; design §12, §15, §17) review decision completeness by the
   automated build: `reason_code` + 10-char note on decisions (missing code → OTHER, flagged);
   the blind HIGH step `POST /v1/reviews/{id}/pre-reveal`, enforced on the case view, queue,
