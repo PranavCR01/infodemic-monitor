@@ -1,0 +1,481 @@
+{
+  "critic_same_provider": "chosen verifier openai/gpt-5.6-terra@verify_v3 and the configured critic openai/gpt-4o-2024-08-06 come from the same provider; \u00a713 wants them from different providers: change the critic before adopting routing_v2",
+  "response_model_notes": [],
+  "mode": "live",
+  "golden": "git:origin/data/golden-label-set@0fbc68a05a7d:research/claim-level/dataset",
+  "split": "tune",
+  "evidence_mode": "retrieved+cited",
+  "estimate": {
+    "mode": "dry_run",
+    "golden": "git:origin/data/golden-label-set@0fbc68a05a7d:research/claim-level/dataset",
+    "split": "tune",
+    "evidence_mode": "retrieved+cited",
+    "evidence_assumed": false,
+    "steps": {
+      "extract_claims": {
+        "items": 48,
+        "metric": "claim_f1",
+        "candidates": [
+          {
+            "candidate": "openai/gpt-5.6-luna@extract_v2",
+            "provider": "openai",
+            "model": "gpt-5.6-luna",
+            "prompt": "extract_v2",
+            "calls": 50,
+            "input_tokens": 235832,
+            "expected_output_tokens": 30000,
+            "max_output_tokens": 102400,
+            "reasoning_tokens": 75000,
+            "output_cap_tokens": 177400,
+            "upper_bound_input_tokens": 589580,
+            "upper_bound_output_tokens": 354800,
+            "expected_usd": 0.1732,
+            "upper_bound_usd": 0.5437,
+            "priced": true,
+            "placeholder_id": false
+          }
+        ]
+      },
+      "analyze_stance": {
+        "items": 174,
+        "metric": "stance_macro_f1",
+        "candidates": [
+          {
+            "candidate": "openai/gpt-5.6-luna@stance_v1",
+            "provider": "openai",
+            "model": "gpt-5.6-luna",
+            "prompt": "stance_v1",
+            "calls": 174,
+            "input_tokens": 399881,
+            "expected_output_tokens": 26100,
+            "max_output_tokens": 89088,
+            "reasoning_tokens": 139200,
+            "output_cap_tokens": 228288,
+            "upper_bound_input_tokens": 499852,
+            "upper_bound_output_tokens": 228288,
+            "expected_usd": 0.2783,
+            "upper_bound_usd": 0.3739,
+            "priced": true,
+            "placeholder_id": false
+          }
+        ]
+      },
+      "verify_claims": {
+        "items": 174,
+        "metric": "verification_macro_f1",
+        "candidates": [
+          {
+            "candidate": "openai/gpt-5.6-terra@verify_v3",
+            "provider": "openai",
+            "model": "gpt-5.6-terra",
+            "prompt": "verify_v3",
+            "calls": 135,
+            "input_tokens": 833182,
+            "expected_output_tokens": 54000,
+            "max_output_tokens": 138240,
+            "reasoning_tokens": 337500,
+            "output_cap_tokens": 475740,
+            "upper_bound_input_tokens": 2082955,
+            "upper_bound_output_tokens": 951480,
+            "expected_usd": 6.3644,
+            "upper_bound_usd": 15.5837,
+            "priced": true,
+            "placeholder_id": false
+          }
+        ]
+      }
+    },
+    "total_expected_usd": 6.8159,
+    "total_upper_bound_usd": 16.5013,
+    "unpriced_candidates": [],
+    "placeholder_candidates": [],
+    "critic_provider_warnings": [
+      "verify_claims candidate openai/gpt-5.6-terra@verify_v3 shares the critic's provider (openai, gpt-4o-2024-08-06); if it wins, change the critic to another provider (\u00a713)"
+    ],
+    "reasoning_config_problems": [],
+    "notes": []
+  },
+  "spend": {
+    "cap_usd": 27.86,
+    "spent_usd": 1.869349,
+    "calls": 359,
+    "refused_calls": 0,
+    "stopped_at_cap": false,
+    "by_model": {
+      "gpt-5.6-luna": 0.176577,
+      "gpt-5.6-terra": 1.692772
+    }
+  },
+  "stopped": null,
+  "steps": {
+    "extract_claims": {
+      "items": 48,
+      "results": [
+        {
+          "candidate": {
+            "provider": "openai",
+            "model": "gpt-5.6-luna",
+            "prompt": "extract_v2",
+            "reasoning_tokens": 1500,
+            "reasoning_effort": null
+          },
+          "step": "extract_claims",
+          "metric": "claim_f1",
+          "score": 0.3236514522821577,
+          "n_items": 48,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.0020031416666666667,
+          "latency_p95_ms": 17577.099999999995,
+          "response_models": {
+            "gpt-5.6-luna": 50
+          },
+          "reasoning_tokens": 7175,
+          "output_tokens": 37629,
+          "calls_summary": {
+            "n": 50,
+            "errors": 0,
+            "output_lt_reasoning": 0,
+            "max_output_tokens": 2444,
+            "max_reasoning_tokens": 844,
+            "calls_with_reasoning": 20,
+            "reasoning_effort": [
+              "medium"
+            ]
+          }
+        }
+      ],
+      "extras": {},
+      "selection": {
+        "step": "extract_claims",
+        "winner": {
+          "candidate": {
+            "provider": "openai",
+            "model": "gpt-5.6-luna",
+            "prompt": "extract_v2",
+            "reasoning_tokens": 1500,
+            "reasoning_effort": null
+          },
+          "step": "extract_claims",
+          "metric": "claim_f1",
+          "score": 0.3236514522821577,
+          "n_items": 48,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.0020031416666666667,
+          "latency_p95_ms": 17577.099999999995,
+          "response_models": {
+            "gpt-5.6-luna": 50
+          },
+          "reasoning_tokens": 7175,
+          "output_tokens": 37629
+        },
+        "reason": "best claim_f1 (0.3237) within budget",
+        "ranked": [
+          {
+            "candidate": {
+              "provider": "openai",
+              "model": "gpt-5.6-luna",
+              "prompt": "extract_v2",
+              "reasoning_tokens": 1500,
+              "reasoning_effort": null
+            },
+            "step": "extract_claims",
+            "metric": "claim_f1",
+            "score": 0.3236514522821577,
+            "n_items": 48,
+            "n_failed": 0,
+            "fallbacks_used": 0,
+            "cost_per_item": 0.0020031416666666667,
+            "latency_p95_ms": 17577.099999999995,
+            "response_models": {
+              "gpt-5.6-luna": 50
+            },
+            "reasoning_tokens": 7175,
+            "output_tokens": 37629
+          }
+        ],
+        "excluded": {}
+      }
+    },
+    "analyze_stance": {
+      "items": 174,
+      "results": [
+        {
+          "candidate": {
+            "provider": "openai",
+            "model": "gpt-5.6-luna",
+            "prompt": "stance_v1",
+            "reasoning_tokens": 800,
+            "reasoning_effort": null
+          },
+          "step": "analyze_stance",
+          "metric": "stance_macro_f1",
+          "score": 0.49770733652312593,
+          "n_items": 174,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.0004622206896551725,
+          "latency_p95_ms": 1884.5,
+          "response_models": {
+            "gpt-5.6-luna": 174
+          },
+          "reasoning_tokens": 436,
+          "output_tokens": 13557,
+          "calls_summary": {
+            "n": 174,
+            "errors": 0,
+            "output_lt_reasoning": 0,
+            "max_output_tokens": 518,
+            "max_reasoning_tokens": 436,
+            "calls_with_reasoning": 1,
+            "reasoning_effort": [
+              "medium"
+            ]
+          }
+        }
+      ],
+      "extras": {
+        "openai/gpt-5.6-luna@stance_v1": {
+          "debunk_recall": 0.6,
+          "debunk_read_as_endorses": 1,
+          "n_refutes": 15
+        }
+      },
+      "selection": {
+        "step": "analyze_stance",
+        "winner": {
+          "candidate": {
+            "provider": "openai",
+            "model": "gpt-5.6-luna",
+            "prompt": "stance_v1",
+            "reasoning_tokens": 800,
+            "reasoning_effort": null
+          },
+          "step": "analyze_stance",
+          "metric": "stance_macro_f1",
+          "score": 0.49770733652312593,
+          "n_items": 174,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.0004622206896551725,
+          "latency_p95_ms": 1884.5,
+          "response_models": {
+            "gpt-5.6-luna": 174
+          },
+          "reasoning_tokens": 436,
+          "output_tokens": 13557
+        },
+        "reason": "best stance_macro_f1 (0.4977) within budget",
+        "ranked": [
+          {
+            "candidate": {
+              "provider": "openai",
+              "model": "gpt-5.6-luna",
+              "prompt": "stance_v1",
+              "reasoning_tokens": 800,
+              "reasoning_effort": null
+            },
+            "step": "analyze_stance",
+            "metric": "stance_macro_f1",
+            "score": 0.49770733652312593,
+            "n_items": 174,
+            "n_failed": 0,
+            "fallbacks_used": 0,
+            "cost_per_item": 0.0004622206896551725,
+            "latency_p95_ms": 1884.5,
+            "response_models": {
+              "gpt-5.6-luna": 174
+            },
+            "reasoning_tokens": 436,
+            "output_tokens": 13557
+          }
+        ],
+        "excluded": {}
+      }
+    },
+    "verify_claims": {
+      "items": 174,
+      "results": [
+        {
+          "candidate": {
+            "provider": "openai",
+            "model": "gpt-5.6-terra",
+            "prompt": "verify_v3",
+            "reasoning_tokens": 2500,
+            "reasoning_effort": null
+          },
+          "step": "verify_claims",
+          "metric": "verification_macro_f1",
+          "score": 0.4918996838501482,
+          "n_items": 174,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.009728574712643679,
+          "latency_p95_ms": 6412.199999999999,
+          "response_models": {
+            "gpt-5.6-terra": 135
+          },
+          "reasoning_tokens": 13694,
+          "output_tokens": 35269,
+          "calls_summary": {
+            "n": 135,
+            "errors": 0,
+            "output_lt_reasoning": 0,
+            "max_output_tokens": 644,
+            "max_reasoning_tokens": 422,
+            "calls_with_reasoning": 114,
+            "reasoning_effort": [
+              "medium"
+            ]
+          }
+        }
+      ],
+      "extras": {
+        "openai/gpt-5.6-terra@verify_v3": {
+          "insufficient_called_contradicted": 2,
+          "unsupported_recall": 1.0,
+          "n_unsupported": 5
+        }
+      },
+      "selection": {
+        "step": "verify_claims",
+        "winner": {
+          "candidate": {
+            "provider": "openai",
+            "model": "gpt-5.6-terra",
+            "prompt": "verify_v3",
+            "reasoning_tokens": 2500,
+            "reasoning_effort": null
+          },
+          "step": "verify_claims",
+          "metric": "verification_macro_f1",
+          "score": 0.4918996838501482,
+          "n_items": 174,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.009728574712643679,
+          "latency_p95_ms": 6412.199999999999,
+          "response_models": {
+            "gpt-5.6-terra": 135
+          },
+          "reasoning_tokens": 13694,
+          "output_tokens": 35269
+        },
+        "reason": "best verification_macro_f1 (0.4919) within budget",
+        "ranked": [
+          {
+            "candidate": {
+              "provider": "openai",
+              "model": "gpt-5.6-terra",
+              "prompt": "verify_v3",
+              "reasoning_tokens": 2500,
+              "reasoning_effort": null
+            },
+            "step": "verify_claims",
+            "metric": "verification_macro_f1",
+            "score": 0.4918996838501482,
+            "n_items": 174,
+            "n_failed": 0,
+            "fallbacks_used": 0,
+            "cost_per_item": 0.009728574712643679,
+            "latency_p95_ms": 6412.199999999999,
+            "response_models": {
+              "gpt-5.6-terra": 135
+            },
+            "reasoning_tokens": 13694,
+            "output_tokens": 35269
+          }
+        ],
+        "excluded": {}
+      }
+    }
+  },
+  "proposed_routing": {
+    "version": "routing_v2",
+    "status": "provisional",
+    "routing": {
+      "extract_claims": {
+        "provider": "openai",
+        "model": "gpt-5.6-luna",
+        "prompt": "extract_v2"
+      },
+      "analyze_stance": {
+        "provider": "openai",
+        "model": "gpt-5.6-luna",
+        "prompt": "stance_v1"
+      },
+      "verify_claims": {
+        "provider": "openai",
+        "model": "gpt-5.6-terra",
+        "prompt": "verify_v3"
+      },
+      "critique": {
+        "provider": "openai",
+        "model": "gpt-4o-2024-08-06",
+        "prompt": "critic_v1"
+      },
+      "judge_explanation": {
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "explain_v2"
+      },
+      "fallback": {
+        "on": [
+          "timeout",
+          "5xx"
+        ],
+        "retries": 1,
+        "use": {
+          "provider": "openai",
+          "model": "gpt-4o-2024-08-06"
+        }
+      }
+    },
+    "pricing": {
+      "claude-haiku-5-5": {
+        "input": 0.1,
+        "output": 0.5
+      },
+      "claude-sonnet-5-5": {
+        "input": 2.0,
+        "output": 10.0
+      },
+      "claude-opus-5-5": {
+        "input": 4.0,
+        "output": 20.0
+      },
+      "gpt-4o-2024-08-06": {
+        "input": 2.5,
+        "output": 10.0
+      },
+      "gpt-5.6-luna": {
+        "input": 0.2,
+        "output": 1.2
+      },
+      "gpt-5.6-terra": {
+        "input": 2.0,
+        "output": 12.0
+      }
+    },
+    "models": {
+      "gpt-4o-2024-08-06": {
+        "reasoning": false
+      },
+      "gpt-5.6-luna": {
+        "reasoning": true,
+        "reasoning_effort": "medium"
+      },
+      "gpt-5.6-terra": {
+        "reasoning": true,
+        "reasoning_effort": "medium"
+      }
+    },
+    "reasoning_allowance": {
+      "extract_claims": 1500,
+      "analyze_stance": 800,
+      "verify_claims": 2500
+    }
+  },
+  "written_at": "2026-11-24T07:40:45+00:00"
+}

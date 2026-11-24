@@ -2073,6 +2073,14 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-24**: T38 OpenAI candidates (paid, lead-approved): smoke test on v11 clean
+  ($0.0498; model ids reported, output ≥ reasoning on every call, no truncation); full tune
+  split $1.8693 of a $27.86 cap, 359 calls, 0 errors. OpenAI won no step (luna 0.32 / 0.50,
+  terra 0.49 vs Claude winners sonnet 0.42 / sonnet 0.64 / opus 0.68). Combined report and
+  proposed `routing_v2.yaml` (sonnet / sonnet / opus; `config/routing.yaml` unchanged) in
+  `evals/reports/T38_routing/combined/`. Total T38 spend $14.00 of $40 (Anthropic $12.08,
+  OpenAI $1.92). Tune-split numbers only. Caveat: luna/terra rarely reasoned at `medium`
+  effort with the forced tool choice. Branch `auto/T38-openai`.
 - **2026-11-24**: T41 (design §13, §14) OpenAI Responses-API client by the automated
   build: `reasoning: true` models now call `responses.create` with `reasoning.effort`,
   `max_output_tokens` (node cap + allowance), flat function tools and a forced tool choice;
