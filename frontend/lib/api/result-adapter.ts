@@ -173,7 +173,7 @@ export function summariseEvidence(sources: Source[]): EvidenceSummary {
   };
 }
 
-function toSegment(s: RawSegment): Segment {
+export function toSegment(s: RawSegment): Segment {
   return { id: s.segment_id, source: s.source, start: s.start_seconds, end: s.end_seconds, text: s.text };
 }
 

@@ -5,18 +5,30 @@ import { adaptResult } from "@/lib/api/result-adapter";
 import { adaptCase } from "@/lib/api/review-adapter";
 import type { RawCase } from "@/lib/api/review-types";
 import { MOCK_MISINFO_PENDING, MOCK_UNPROVEN } from "@/lib/api/mocks/results";
+import { adaptBlindMaterial, type BlindMaterial } from "@/lib/api/blind-material";
+import { MOCK_BLIND_MATERIAL } from "@/lib/api/mocks/blind-material";
 import { MOCK_CASE_DECIDED, MOCK_CASE_HIGH, MOCK_CASE_NORMAL, MOCK_CASE_OWN, MOCK_VIEWER_ID, mockRevealed } from "@/lib/api/mocks/reviews";
 import { ReviewWorkspace } from "./ReviewWorkspace";
 
 const result = adaptResult(MOCK_MISINFO_PENDING);
 
 /** Stands in for WorkspaceClient: on a saved pre-reveal, the server's revealed case replaces the old one. */
-function Harness({ raw, onDecide, onPreReveal }: { raw: RawCase; onDecide: ReturnType<typeof vi.fn>; onPreReveal: ReturnType<typeof vi.fn> }) {
+const BLIND = adaptBlindMaterial(MOCK_BLIND_MATERIAL);
+
+function Harness({ raw, onDecide, onPreReveal, blind = BLIND, blindFailed = false }: {
+  raw: RawCase;
+  onDecide: ReturnType<typeof vi.fn>;
+  onPreReveal: ReturnType<typeof vi.fn>;
+  blind?: BlindMaterial | null;
+  blindFailed?: boolean;
+}) {
   const [c, setC] = useState(raw);
   return (
     <ReviewWorkspace
       review={adaptCase(c, MOCK_VIEWER_ID)}
       result={result}
+      blindMaterial={blind}
+      blindMaterialFailed={blindFailed}
       onDecide={onDecide}
       onPreReveal={async (body) => {
         const r = await onPreReveal(body);
@@ -54,11 +66,22 @@ describe("ReviewWorkspace: HIGH priority (judgement first, run by the server sin
     expect(screen.getAllByText(/Drinking hot water every hour/).length).toBeGreaterThan(0);
   });
 
-  it("shows no sources and no source relations before the reveal, even if a result were passed", () => {
+  it("shows T40's quotes and sources before the reveal, but never whether a source supports or contradicts", () => {
     setup();
-    expect(screen.queryByText(/Hot drinks and symptom relief/)).not.toBeInTheDocument();
+    expect(screen.getAllByText(/Hot drinks and symptom relief/).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/That's it, that's the secret/).length).toBeGreaterThan(0);
     expect(screen.queryByText("Contradicts")).not.toBeInTheDocument();
-    expect(screen.getByText(/sources and the system's reading open after you commit/)).toBeInTheDocument();
+    expect(screen.queryByText("Supports")).not.toBeInTheDocument();
+    expect(screen.getByText(/Whether each source supports or contradicts the claim/)).toBeInTheDocument();
+  });
+
+  it("says when the blind material is loading or couldn't be loaded, and still lists the claims", () => {
+    const { unmount } = render(<Harness raw={MOCK_CASE_HIGH} onDecide={vi.fn()} onPreReveal={vi.fn()} blind={null} />);
+    expect(screen.getByText("Loading the quotes and sources…")).toBeInTheDocument();
+    unmount();
+    render(<Harness raw={MOCK_CASE_HIGH} onDecide={vi.fn()} onPreReveal={vi.fn()} blind={null} blindFailed />);
+    expect(screen.getByText(/quotes and sources couldn't be loaded/)).toBeInTheDocument();
+    expect(screen.getByRole("group", { name: "Claim 3" })).toBeInTheDocument();
   });
 
   it("asks for a judgement on every claim the case lists, not only the deciding one", () => {
