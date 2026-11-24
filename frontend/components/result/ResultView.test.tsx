@@ -4,6 +4,10 @@ import { adaptResult } from "@/lib/api/result-adapter";
 import { MOCK_DEBUNKED_VERIFIED, MOCK_LEGACY, MOCK_MISINFO_PENDING, MOCK_NO_CLAIMS, MOCK_UNPROVEN } from "@/lib/api/mocks/results";
 import { ResultView } from "./ResultView";
 
+vi.mock("next/navigation", () => ({
+  useSearchParams: () => new URLSearchParams(window.location.search),
+}));
+
 beforeAll(() => {
   Element.prototype.scrollIntoView = vi.fn();
   window.matchMedia = vi.fn().mockReturnValue({ matches: false }) as never;

@@ -3,7 +3,8 @@
 import { forwardRef } from "react";
 import { Icon, StanceChip, VerdictChip } from "@/components/ui";
 import { clock, evidenceText, type Claim } from "@/lib/api/result-adapter";
-import { claimMeaning, EVIDENCE_LEVEL_DISPLAY, studyTypeDisplay } from "@/lib/vocabulary";
+import { claimMeaning, EVIDENCE_LEVEL_DISPLAY } from "@/lib/vocabulary";
+import { openButtonId } from "./ClaimDrawer";
 
 const MODALITY: Record<"speech" | "screen", { icon: string; text: string }> = {
   speech: { icon: "mic", text: "Speech" },
@@ -19,9 +20,9 @@ function Tag({ icon, children }: { icon: string; children: React.ReactNode }) {
   );
 }
 
-type Props = { claim: Claim; active: boolean; onSelect: () => void; onSeek: (s: number) => void };
+type Props = { claim: Claim; active: boolean; onSelect: () => void; onSeek: (s: number) => void; onOpen: () => void };
 
-export const ClaimCard = forwardRef<HTMLElement, Props>(function ClaimCard({ claim: c, active, onSelect, onSeek }, ref) {
+export const ClaimCard = forwardRef<HTMLElement, Props>(function ClaimCard({ claim: c, active, onSelect, onSeek, onOpen }, ref) {
   const modalities = c.modality === "both" ? (["speech", "screen"] as const) : c.modality ? [c.modality] : [];
   const quote = c.quotes[0];
   return (
@@ -80,30 +81,18 @@ export const ClaimCard = forwardRef<HTMLElement, Props>(function ClaimCard({ cla
         <p className="border-l-2 border-line-input pl-3 text-small font-medium text-ink">{claimMeaning(c.stance, c.verdict)}</p>
       )}
 
-      {c.sources.length > 0 && (
-        // Interim list; chunk 4 replaces it with the claim detail drawer.
-        <details onClick={(e) => e.stopPropagation()} className="rounded-md border border-line">
-          <summary className="cursor-pointer px-3 py-2 text-small font-semibold text-primary">Sources ({c.sources.length})</summary>
-          <ul className="flex flex-col gap-2 px-3 pb-3">
-            {c.sources.map((s) => (
-              <li key={s.id} className="text-small">
-                <span className="font-semibold text-ink-2">{studyTypeDisplay(s.studyType)}</span>
-                {" · "}
-                {s.relation === "SUPPORTS" ? "Supports" : s.relation === "CONTRADICTS" ? "Contradicts" : "Considered"}
-                {" · "}
-                {s.url ? (
-                  <a href={s.url} target="_blank" rel="noreferrer" className="text-primary underline">
-                    {s.title}
-                  </a>
-                ) : (
-                  <span>{s.title} (internal library)</span>
-                )}
-                {s.year ? ` (${s.year})` : ""}
-              </li>
-            ))}
-          </ul>
-        </details>
-      )}
+      <button
+        id={openButtonId(c.id)}
+        type="button"
+        onClick={(e) => {
+          e.stopPropagation();
+          onOpen();
+        }}
+        className="inline-flex w-fit items-center gap-1 text-small font-semibold text-primary hover:underline"
+      >
+        {c.sources.length > 0 ? `Sources (${c.sources.length}) and details` : "Details"}
+        <Icon name="chevr" className="!h-3.5 !w-3.5" />
+      </button>
     </article>
   );
 });
