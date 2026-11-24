@@ -15,7 +15,7 @@ import {
 import { TONE } from "@/components/ui/tone";
 import { SourceCard, sortSources } from "@/components/result/SourceCard";
 import { clock, type Claim, type ResultModel } from "@/lib/api/result-adapter";
-import type { CaseModel } from "@/lib/api/review-adapter";
+import type { CaseClaim, CaseModel } from "@/lib/api/review-adapter";
 import {
   DECISIONS,
   EMPTY_FORM,
@@ -26,7 +26,7 @@ import {
   isValid,
   labelFromClaims,
   mismatchWarning,
-  needsBlindStep,
+  preRevealRequest,
   validateDecision,
   type DecisionForm,
   type PreReveal,
@@ -52,22 +52,27 @@ type Props = {
   review: CaseModel;
   result: ResultModel | null;
   onDecide: (req: ReturnType<typeof decisionRequest>) => Promise<SubmitResult>;
+  /** T34: record the reviewer's own judgement. On success the page swaps in the revealed case. */
+  onPreReveal: (body: ReturnType<typeof preRevealRequest>) => Promise<SubmitResult>;
   onOverrideSeverity: (claimId: string, severity: Severity, reason: string) => Promise<SubmitResult>;
 };
 
 /**
  * Review workspace (ReviewWorkspace.dc.html; ReviewV3.dc.html for HIGH priority).
  * Evidence first. On HIGH cases the reviewer records their own stance and verdict
- * before the system's assessment is shown (Q1); both are kept.
+ * for every claim before the system's assessment is shown (Q1). Since T34 the server
+ * runs this step: it withholds the system's view until it has recorded the reviewer's
+ * judgement, and keeps both.
  */
-export function ReviewWorkspace({ review, result, onDecide, onOverrideSeverity }: Props) {
-  const blind = needsBlindStep({ severity: review.severity });
+export function ReviewWorkspace({ review, result, onDecide, onPreReveal, onOverrideSeverity }: Props) {
+  const blind = review.blindRequired;
   const claims = useMemo(() => result?.claims ?? [], [result]);
-  const judged = useMemo(() => (result?.decidingClaims.length ? result.decidingClaims : claims), [result, claims]);
+  const preReveal: PreReveal[] | null = review.myPreReveal;
+  const revealed = !review.withheld;
 
   const [mine, setMine] = useState<Record<string, { stance?: Stance; verdict?: Verdict }>>({});
-  const [preReveal, setPreReveal] = useState<PreReveal[] | null>(null);
-  const revealed = !blind || preReveal !== null;
+  const [committing, setCommitting] = useState(false);
+  const [commitError, setCommitError] = useState<string | null>(null);
 
   const [form, setForm] = useState<DecisionForm>(EMPTY_FORM);
   const [touched, setTouched] = useState(false);
@@ -78,7 +83,7 @@ export function ReviewWorkspace({ review, result, onDecide, onOverrideSeverity }
   const readOnly = !review.open || review.isOwn || done;
   const ctx = {
     proposedLabel: review.proposedLabel,
-    severity: review.severity,
+    blindRequired: blind,
     preReveal,
     isOwnSubmission: review.isOwn,
     alreadyDecided: !review.open || done,
@@ -92,10 +97,15 @@ export function ReviewWorkspace({ review, result, onDecide, onOverrideSeverity }
   });
   const warning = mismatchWarning(form, labelFromClaims(correctedClaims));
 
-  const commitReady = judged.length > 0 && judged.every((c) => mine[c.id]?.stance && mine[c.id]?.verdict);
-  function commit() {
-    setPreReveal(judged.map((c) => ({ claimId: c.id, stance: mine[c.id].stance!, verdict: mine[c.id].verdict! })));
+  const commitReady = review.claims.length > 0 && review.claims.every((c) => mine[c.id]?.stance && mine[c.id]?.verdict);
+  async function commit() {
+    setCommitError(null);
+    setCommitting(true);
+    const res = await onPreReveal(preRevealRequest(review.claims.map((c) => ({ claimId: c.id, stance: mine[c.id].stance!, verdict: mine[c.id].verdict! }))));
+    setCommitting(false);
+    if (!res.ok) setCommitError(res.message);
   }
+  const mineFor = (id: string) => preReveal?.find((p) => p.claimId === id) ?? mine[id];
 
   async function submit() {
     setTouched(true);
@@ -105,7 +115,7 @@ export function ReviewWorkspace({ review, result, onDecide, onOverrideSeverity }
       return;
     }
     setSending(true);
-    const res = await onDecide(decisionRequest(form, preReveal));
+    const res = await onDecide(decisionRequest(form));
     setSending(false);
     if (res.ok) setDone(true);
     else setServerError(res.message);
@@ -184,6 +194,7 @@ export function ReviewWorkspace({ review, result, onDecide, onOverrideSeverity }
           {review.decision.correctedLabel && (
             <p className="mt-1 flex items-center gap-2">New label: <LabelBadge label={review.decision.correctedLabel} /></p>
           )}
+          {review.decision.reasonCodeText && <p className="mt-1">Reason: {review.decision.reasonCodeText}</p>}
           {review.decision.reason && <p className="mt-1 text-ink-2">{review.decision.reason}</p>}
         </section>
       )}
@@ -211,32 +222,39 @@ export function ReviewWorkspace({ review, result, onDecide, onOverrideSeverity }
                 <h2 id="s1-h" className="text-h2 text-ink">Your judgement first</h2>
                 <p className="text-small text-ink-2">High-priority cases ask for your reading before you see the system&apos;s. Both are kept.</p>
               </div>
-              {judged.map((c) => (
-                <fieldset key={c.id} disabled={preReveal !== null || readOnly} className="flex min-w-0 flex-col gap-2 rounded-md border border-line p-3">
+              {review.claims.length === 0 && <p className="text-small text-ink-2">This case lists no claims to judge. Reload the case, or ask an admin to check it.</p>}
+              {review.claims.map((c) => (
+                <fieldset key={c.id} disabled={preReveal !== null || readOnly || committing} className="flex min-w-0 flex-col gap-2 rounded-md border border-line p-3">
                   <legend className="px-1 text-small font-semibold text-ink">Claim {c.number}</legend>
                   <p className="font-serif text-small text-ink">{c.text}</p>
                   <Select
                     id={`mine-st-${c.id}`}
                     label="The speaker"
-                    value={mine[c.id]?.stance ?? ""}
+                    value={mineFor(c.id)?.stance ?? ""}
                     options={STANCE_VALUES.map((s) => [s, `${STANCES[s].display}: ${STANCES[s].description}`])}
                     onChange={(v) => setMine((m) => ({ ...m, [c.id]: { ...m[c.id], stance: v as Stance } }))}
                   />
                   <Select
                     id={`mine-v-${c.id}`}
                     label="The evidence"
-                    value={mine[c.id]?.verdict ?? ""}
+                    value={mineFor(c.id)?.verdict ?? ""}
                     options={VERDICT_VALUES.map((v) => [v, VERDICTS[v].display])}
                     onChange={(v) => setMine((m) => ({ ...m, [c.id]: { ...m[c.id], verdict: v as Verdict } }))}
                   />
                 </fieldset>
               ))}
               {preReveal === null ? (
-                <button type="button" disabled={!commitReady || readOnly} onClick={commit} className={buttonClass("primary")}>
-                  Commit and show system assessment
-                </button>
-              ) : (
-                <Comparison mine={preReveal} claims={judged} />
+                <>
+                  <button type="button" disabled={!commitReady || readOnly || committing} onClick={commit} className={buttonClass("primary")}>
+                    {committing ? "Saving your judgement…" : "Commit and show system assessment"}
+                  </button>
+                  <p className="text-cap text-ink-3">Your judgement is saved with the time and can&apos;t be changed afterwards.</p>
+                </>
+              ) : revealed ? (
+                <Comparison mine={preReveal} claims={review.claims} />
+              ) : null}
+              {commitError && (
+                <p role="alert" className="rounded-md border border-err-bd bg-err-bg px-3 py-2 text-small text-err-fg">{commitError}</p>
               )}
               {touched && errors.preReveal && <p className="text-small text-err-fg">{errors.preReveal}</p>}
             </section>
@@ -389,7 +407,8 @@ function EvidenceClaim({ claim: c, showSystem }: { claim: Claim; showSystem: boo
       <header className="flex flex-wrap items-center gap-2">
         <h3 id={`rv-${c.id}`} className="text-h3 text-ink">Claim {c.number}</h3>
         <span className="font-mono text-small text-ink-2">{clock(c.start)}–{clock(c.end)}</span>
-        {c.deciding && <span className="rounded-sm bg-ink px-1.5 text-cap font-semibold text-bg">Decided the label</span>}
+        {/* Which claim decided the label is the system's reading too: hidden until the reveal. */}
+        {showSystem && c.deciding && <span className="rounded-sm bg-ink px-1.5 text-cap font-semibold text-bg">Decided the label</span>}
       </header>
       <p className="font-serif text-[17px] leading-[26px] text-ink">{c.text}</p>
       <div className="grid gap-4 lg:grid-cols-2">
@@ -420,7 +439,7 @@ function EvidenceClaim({ claim: c, showSystem }: { claim: Claim; showSystem: boo
   );
 }
 
-function Comparison({ mine, claims }: { mine: PreReveal[]; claims: Claim[] }) {
+function Comparison({ mine, claims }: { mine: PreReveal[]; claims: CaseClaim[] }) {
   const diff = disagreements(mine, claims.map((c) => ({ claimId: c.id, stance: c.stance, verdict: c.verdict })));
   return (
     <div className="flex flex-col gap-2">

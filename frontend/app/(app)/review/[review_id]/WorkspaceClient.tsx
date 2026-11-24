@@ -6,7 +6,7 @@ import { ErrorBanner } from "@/components/ui";
 import { apiFetch } from "@/lib/api";
 import { adaptResult, type ResultModel } from "@/lib/api/result-adapter";
 import type { CaseModel } from "@/lib/api/review-adapter";
-import { fetchCase, postDecision, postSeverity } from "@/lib/api/reviews";
+import { fetchCase, postDecision, postPreReveal, postSeverity } from "@/lib/api/reviews";
 import { useViewerId } from "@/lib/hooks/useViewerId";
 
 export function WorkspaceClient({ reviewId }: { reviewId: string }) {
@@ -42,6 +42,13 @@ export function WorkspaceClient({ reviewId }: { reviewId: string }) {
       review={review}
       result={result}
       onDecide={(req) => postDecision(reviewId, req)}
+      onPreReveal={async (body) => {
+        // T34: the server records the judgement and answers with the revealed case.
+        const r = await postPreReveal(reviewId, body, viewerId ?? null);
+        if (!r.ok) return { ok: false, message: r.message };
+        setReview(r.data);
+        return { ok: true };
+      }}
       onOverrideSeverity={(claimId, severity, reason) => postSeverity(reviewId, claimId, severity, reason)}
     />
   );
