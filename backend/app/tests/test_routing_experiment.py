@@ -350,13 +350,62 @@ def test_dry_run_without_frozen_evidence_uses_assumed_sizes(tmp_path, monkeypatc
         ex.build_plan(tune(), ex.load_candidates(), load_routing())
 
 
-def test_repo_candidates_file_is_valid_and_priced():
+def test_repo_candidates_file_matches_the_leads_set():
     cf = ex.load_candidates()
     routing = load_routing()
-    assert set(cf.candidates) == {"extract_claims", "analyze_stance", "verify_claims"}
+    models = {s: [c.model for c in cands] for s, cands in cf.candidates.items()}
+    assert models["extract_claims"][:2] == models["analyze_stance"][:2] == ["claude-haiku-5-5", "claude-sonnet-5-5"]
+    assert models["verify_claims"][:2] == ["claude-sonnet-5-5", "claude-opus-5-5"]
     for cands in cf.candidates.values():
-        assert len(cands) >= 2
-        assert all(routing.price(c.model) is not None for c in cands)
+        assert len(cands) == 3 and cands[2].provider == "openai" and cands[2].reasoning_tokens > 0
+        # Every candidate is either priced or a TODO placeholder a live run refuses.
+        assert all(routing.price(c.model) is not None or c.placeholder for c in cands)
+
+
+def openai_plan(tmp_path, model="gpt-4o-2024-08-06", reasoning=0):
+    p = plan(tmp_path, steps=("verify_claims",))
+    extra = ex.ExperimentCandidate(provider="openai", model=model, prompt="verify_v3", reasoning_tokens=reasoning)
+    p.candidates.candidates["verify_claims"].append(extra)
+    return p
+
+
+def test_reasoning_tokens_are_counted_as_output(tmp_path):
+    plain = ex.estimate(openai_plan(tmp_path))["steps"]["verify_claims"]["candidates"][-1]
+    reasoning = ex.estimate(openai_plan(tmp_path, reasoning=2000))["steps"]["verify_claims"]["candidates"][-1]
+    assert reasoning["reasoning_tokens"] == 2000 * reasoning["calls"]
+    extra = 2000 * reasoning["calls"] * load_routing().price("gpt-4o-2024-08-06").output / 1e6
+    assert reasoning["expected_usd"] == pytest.approx(plain["expected_usd"] + extra, abs=1e-3)
+    assert reasoning["upper_bound_usd"] > plain["upper_bound_usd"]
+
+
+def test_placeholder_model_ids_are_refused_by_a_live_run(tmp_path):
+    p = openai_plan(tmp_path, model="TODO-gpt-5-dated-snapshot-id")
+    est = ex.estimate(p)
+    assert est["placeholder_candidates"] == ["openai/TODO-gpt-5-dated-snapshot-id@verify_v3"]
+    assert "TODO placeholder" in ex.render_markdown(est)
+    with pytest.raises(ex.LiveRunRefused, match="placeholder"):
+        ex.live_run(p, live=True, max_usd=1000, client_factory=never_called)
+
+
+def test_verifier_sharing_the_critics_provider_is_flagged(tmp_path):
+    p = openai_plan(tmp_path)  # the configured critic is OpenAI
+    est = ex.estimate(p)
+    assert len(est["critic_provider_warnings"]) == 1 and "openai/gpt-4o" in est["critic_provider_warnings"][0]
+    # Make the OpenAI verifier win: only it answers correctly on the CONTRADICTED claim.
+    def factory():
+        def right(model, request):
+            out = responder(model, request)
+            if "flu" in request.input["messages"][0]["content"].lower():
+                ids = re.findall(r"id: (ev_\d+)", request.input["messages"][0]["content"])
+                out = {**out, "verdict": "CONTRADICTED", "contradicting_evidence_ids": ids[:1]}
+            return out
+        return {"anthropic": MockModelClient(responder), "openai": MockModelClient(right)}
+    report = ex.live_run(p, live=True, max_usd=50, client_factory=factory)
+    assert report["steps"]["verify_claims"]["selection"]["winner"]["candidate"]["provider"] == "openai"
+    assert "same provider" in report["critic_same_provider"]
+    assert "WARNING" in ex.render_markdown(report)
+    clean = ex.live_run(plan(tmp_path, steps=("verify_claims",)), live=True, max_usd=50, client_factory=mock_clients())
+    assert clean["critic_same_provider"] is None
 
 
 # ------------------------------------------------------------------ live-run safeguards

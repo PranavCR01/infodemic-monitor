@@ -1788,8 +1788,15 @@ Built by the automated build on 2026-11-24. **Build only: no model API was calle
 The paid run is a separate step the project lead approves with a USD cap.
 
 - **Code.** `app/evaluation/routing_experiment/` (`golden`, `items`, `frozen`, `runners`,
-  `cost`, `experiment`, `cli`); candidates in `config/routing_experiment.yaml` (haiku /
-  sonnet / opus / gpt-4o for each step, current prompt versions). `selection.evaluate_candidate`
+  `cost`, `experiment`, `cli`); candidates in `config/routing_experiment.yaml`, the lead's
+  set (relayed by the coordinating session): extract_claims and analyze_stance = haiku,
+  sonnet, GPT-5 mini; verify_claims = sonnet, opus, GPT-5; critic and judge not in this run.
+  **The OpenAI ids are TODO placeholders** (OpenAI's docs hosts are not reachable from the
+  build environment): the lead replaces them with pinned dated ids and adds their prices to
+  `routing.yaml` (marked TODO there); a live run refuses TODO ids and unpriced models.
+  Each candidate may carry `reasoning_tokens` (expected hidden reasoning per call), which
+  the estimate bills as output. If a verify_claims candidate (dry run) or the chosen
+  verifier (live run) shares the configured critic's provider, the report flags it (§13). `selection.evaluate_candidate`
   gained two optional hooks: `run_item` (drive an item through the real node; an item is
   failed if any of its calls errored or used the fallback) and `after_item` (may raise to stop).
 - **Tune split only.** The golden set is read with `git show origin/data/golden-label-set:...`.
@@ -1837,8 +1844,14 @@ The paid run is a separate step the project lead approves with a USD cap.
   insufficient-called-contradicted and UNSUPPORTED recall) and `routing_v2.yaml`, the current
   table with winners applied, status `provisional` (critic and judge are not measured). The
   runner refuses to write `config/routing.yaml`.
-- **Dry-run estimate** (retrieved+cited, chars/3.5 tokens): $17.09 expected for all 12
-  candidate-steps, $50.38 upper bound (every call at `max_tokens`, every repair fired).
+- **Dry-run estimate** (retrieved+cited, chars/3.5 tokens) for the six priced candidates:
+  $8.54 expected, $26.17 upper bound (every call at `max_tokens`, every repair fired); the
+  three OpenAI candidates are unpriced until their ids and prices are filled in.
+- **OpenAI client caveat for the paid run.** `OpenAIModelClient` sends `max_tokens` and
+  reads `completion_tokens` (which includes reasoning, so booked spend is right). GPT-5-class
+  models expect `max_completion_tokens`, and the step caps (stance 512) leave little room
+  for reasoning: check this before a paid run with the GPT-5 candidates, or they will fail
+  or be truncated (and be excluded by the failure-rate budget).
 - **For a person.** Approve a cap and run the paid step (command in the T38 PR). The token
   estimate is not a provider tokenizer. The judge-explanation and critic steps are not in
   this experiment. Check `routing.yaml`'s prices against the providers' lists first.
@@ -1868,7 +1881,8 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   automated build, **no paid calls**: tune-split items for extract_claims (48),
   analyze_stance (174) and verify_claims (174) through the real nodes; retrieval frozen
   once (174 claims, free PubMed/reference calls, on branch `data/t38-frozen-evidence`);
-  dry run $17.09 expected / $50.38 upper bound for 4 candidates x 3 steps; `--live` needs
+  dry run $8.54 expected / $26.17 upper bound for the priced candidates (lead's set; the
+  GPT-5 / GPT-5 mini ids are TODO placeholders); `--live` needs
   `--max-usd`, refuses over-cap estimates and stops at the cap. Decisions in §7ab.
 - **2026-11-24**: T36 (no issue; design §12, §14) traceable analysis version by the
   automated build: graph results store `graph_v1+<short sha>+p<routing hash>` and a

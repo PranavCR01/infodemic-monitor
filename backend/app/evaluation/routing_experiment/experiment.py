@@ -70,15 +70,26 @@ class LiveRunRefused(ExperimentError):
 # ------------------------------------------------------------------ candidates file
 
 
+class ExperimentCandidate(Candidate):
+    """A candidate plus its expected hidden reasoning tokens per call (GPT-5-class
+    models bill them as output), used only for the cost estimate."""
+
+    reasoning_tokens: int = Field(default=0, ge=0)
+
+    @property
+    def placeholder(self) -> bool:
+        return "todo" in self.model.lower()
+
+
 class CandidatesFile(BaseModel):
     version: str = "routing_experiment"
     tie_margin: float = 0.01
     budget: dict[str, Budget] = Field(default_factory=dict)
-    candidates: dict[str, list[Candidate]]
+    candidates: dict[str, list[ExperimentCandidate]]
 
     @field_validator("candidates")
     @classmethod
-    def _steps_known(cls, v: dict[str, list[Candidate]]) -> dict[str, list[Candidate]]:
+    def _steps_known(cls, v: dict[str, list[ExperimentCandidate]]) -> dict[str, list[ExperimentCandidate]]:
         unknown = sorted(set(v) - set(STEPS))
         if unknown:
             raise ValueError(f"unknown steps {unknown}; this experiment covers {list(STEPS)}")
@@ -212,11 +223,16 @@ def estimate(plan: Plan) -> dict:
                 exp_out = calls * c.EXPECTED_OUTPUT_TOKENS.get(step, 400)
                 per_prompt[cand.prompt] = {"calls": calls, "input_tokens": in_tok,
                                            "expected_output_tokens": exp_out, "max_output_tokens": max_out}
-            t = per_prompt[cand.prompt]
+            t = dict(per_prompt[cand.prompt])
+            reasoning = getattr(cand, "reasoning_tokens", 0) * t["calls"]
+            t["reasoning_tokens"] = reasoning
             price = plan.routing.price(cand.model)
-            expected = c.price_usd(price, t["input_tokens"], t["expected_output_tokens"])
+            expected = c.price_usd(price, t["input_tokens"], t["expected_output_tokens"] + reasoning)
             rep = 1 + max_repairs(step)
-            upper = c.price_usd(price, t["input_tokens"] * rep * 1.25, t["max_output_tokens"] * rep)
+            # Upper bound: max_tokens per call, or the reasoning allowance plus the expected
+            # answer if that is larger (a reasoning model's hidden tokens are billed as output).
+            worst_out = max(t["max_output_tokens"], t["expected_output_tokens"] + reasoning)
+            upper = c.price_usd(price, t["input_tokens"] * rep * 1.25, worst_out * rep)
             if expected is None:
                 unpriced.append(candidate_key(cand))
             else:
@@ -228,6 +244,7 @@ def estimate(plan: Plan) -> dict:
                 "expected_usd": None if expected is None else round(expected, 4),
                 "upper_bound_usd": None if upper is None else round(upper, 4),
                 "priced": price is not None,
+                "placeholder_id": getattr(cand, "placeholder", False),
             })
         steps[step] = {"items": len(items), "metric": STEP_METRICS.get(step), "candidates": rows}
     return {
@@ -235,8 +252,24 @@ def estimate(plan: Plan) -> dict:
         "evidence_mode": plan.evidence_mode, "evidence_assumed": plan.evidence_assumed,
         "steps": steps, "total_expected_usd": round(total_expected, 4),
         "total_upper_bound_usd": round(total_upper, 4), "unpriced_candidates": unpriced,
+        "placeholder_candidates": sorted({candidate_key(x) for s in plan.steps
+                                          for x in plan.candidates.candidates[s] if getattr(x, "placeholder", False)}),
+        "critic_provider_warnings": critic_provider_warnings(plan),
         "notes": plan.notes,
     }
+
+
+def critic_provider_warnings(plan: Plan) -> list[str]:
+    """§13: the critic should come from a different provider than the verifier. Flags
+    every verify_claims candidate that shares the configured critic's provider."""
+    if "verify_claims" not in plan.steps:
+        return []
+    critic = plan.routing.route("critique")
+    return [
+        f"verify_claims candidate {candidate_key(x)} shares the critic's provider ({critic.provider}, "
+        f"{critic.model}); if it wins, change the critic to another provider (§13)"
+        for x in plan.candidates.candidates["verify_claims"] if x.provider == critic.provider
+    ]
 
 
 # ------------------------------------------------------------------ live run
@@ -266,6 +299,9 @@ def check_live(plan: Plan, *, live: bool, max_usd: Optional[float], est: dict) -
         raise LiveRunRefused("--max-usd must be a positive number")
     if plan.evidence_assumed:
         raise LiveRunRefused("verify_claims needs recorded (frozen) evidence for a paid run")
+    if est.get("placeholder_candidates"):
+        raise LiveRunRefused(f"placeholder (TODO) model ids must be replaced with pinned ids first: "
+                             f"{est['placeholder_candidates']}")
     if est["unpriced_candidates"]:
         raise LiveRunRefused(f"candidates without a price in the routing table: {est['unpriced_candidates']}")
     if est["total_expected_usd"] > max_usd:
@@ -321,7 +357,15 @@ def live_run(
         selections.append(select_model(results[step], budget, tie_margin=plan.candidates.tie_margin))
 
     proposed = apply_selection(plan.routing, selections, version=PROPOSED_VERSION) if selections else None
+    critic = plan.routing.route("critique")
+    same_provider = None
+    for sel in selections:
+        if sel.step == "verify_claims" and sel.winner and sel.winner.candidate.provider == critic.provider:
+            same_provider = (f"chosen verifier {candidate_key(sel.winner.candidate)} and the configured critic "
+                             f"{critic.provider}/{critic.model} come from the same provider; §13 wants them "
+                             "from different providers: change the critic before adopting routing_v2")
     return {
+        "critic_same_provider": same_provider,
         "mode": "live", "golden": plan.golden, "split": "tune", "evidence_mode": plan.evidence_mode,
         "estimate": est, "spend": guard.summary(), "stopped": stopped,
         "steps": {
@@ -383,6 +427,8 @@ def render_markdown(report: dict) -> str:
         s = report["spend"]
         lines += [f"Spend: **${s['spent_usd']:.4f}** of cap ${s['cap_usd']:.2f} in {s['calls']} calls"
                   + (f"; STOPPED: {report['stopped']}" if report.get("stopped") else ""), ""]
+        if report.get("critic_same_provider"):
+            lines += [f"**WARNING:** {report['critic_same_provider']}", ""]
         for step, d in report["steps"].items():
             sel = d.get("selection") or {}
             winner = (sel.get("winner") or {}).get("candidate")
@@ -402,16 +448,25 @@ def render_markdown(report: dict) -> str:
                 lines.append(f"\nExcluded: {json.dumps(sel['excluded'])}")
             lines.append("")
         lines += ["## Estimate before the run", ""]
-    lines += ["| step | items | candidate | calls | input tokens | expected output | expected cost | upper bound |",
-              "|---|---|---|---|---|---|---|---|"]
+    lines += ["| step | items | candidate | calls | input tokens | expected output | reasoning (as output) | expected cost | upper bound |",
+              "|---|---|---|---|---|---|---|---|---|"]
     for step, d in est["steps"].items():
         for r in d["candidates"]:
             lines.append(f"| {step} | {d['items']} | {r['candidate']} | {r['calls']} | {r['input_tokens']:,} | "
-                         f"{r['expected_output_tokens']:,} | {_usd(r['expected_usd'])} | {_usd(r['upper_bound_usd'])} |")
-    lines += ["", f"Total expected: **{_usd(est['total_expected_usd'])}**; "
+                         f"{r['expected_output_tokens']:,} | {r.get('reasoning_tokens', 0):,} | "
+                         f"{_usd(r['expected_usd'])} | {_usd(r['upper_bound_usd'])} |")
+    for step, d in est["steps"].items():
+        priced = [r["expected_usd"] for r in d["candidates"] if r["expected_usd"] is not None]
+        lines.append(f"\n{step}: {d['items']} items; priced candidates total {_usd(sum(priced))}")
+    lines += ["", f"Total expected (priced candidates): **{_usd(est['total_expected_usd'])}**; "
               f"upper bound (every call at max_tokens, every repair fired): {_usd(est['total_upper_bound_usd'])}."]
     if est.get("unpriced_candidates"):
-        lines.append(f"Unpriced (refused by a live run): {', '.join(est['unpriced_candidates'])}")
+        lines.append(f"\nUnpriced (not in the total; a live run refuses them): {', '.join(est['unpriced_candidates'])}")
+    if est.get("placeholder_candidates"):
+        lines.append(f"\nTODO placeholder model ids (replace with pinned dated ids and add prices before a paid run): "
+                     f"{', '.join(est['placeholder_candidates'])}")
+    for w in est.get("critic_provider_warnings") or []:
+        lines.append(f"\nWarning: {w}")
     for n in est.get("notes") or []:
         lines.append(f"\nNote: {n}")
     return "\n".join(lines) + "\n"
