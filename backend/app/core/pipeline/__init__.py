@@ -4,6 +4,7 @@ from typing import Any, Optional
 
 from app.core.extraction.multimodal import MultimodalFusion
 from app.core.inference import get_provider
+from app.core.progress import SEARCHING_EVIDENCE, TRANSCRIBING, VERIFYING, report_step
 from app.core.schemas.pipeline import ClassificationResult, FusionResult, MisinfoLabel
 
 
@@ -11,6 +12,7 @@ async def _ground(fusion: FusionResult, classification: ClassificationResult) ->
     """Today's post-hoc PubMed grounding, for MISINFO and DEBUNKING only."""
     if classification.label in (MisinfoLabel.MISINFO, MisinfoLabel.DEBUNKING):
         from app.core.grounding.pubmed import ground_transcript
+        report_step(SEARCHING_EVIDENCE)
         citations = await ground_transcript(fusion.transcript)
         classification = classification.model_copy(update={"citations": citations})
     return classification
@@ -23,8 +25,10 @@ async def run_pipeline(video_path: str) -> tuple[FusionResult, ClassificationRes
     Sync steps (transcription, inference) run in the calling thread.
     Grounding is async and runs only for MISINFO and DEBUNKING.
     """
+    report_step(TRANSCRIBING)
     fusion = MultimodalFusion().fuse(video_path)
     provider = get_provider()
+    report_step(VERIFYING)
     classification = provider.classify(fusion)
     classification = await _ground(fusion, classification)
     return fusion, classification
@@ -47,6 +51,7 @@ async def run_graph_pipeline(
     """
     from app.core.inference.providers.graph_provider import build_graph_provider
 
+    report_step(TRANSCRIBING)
     fusion = MultimodalFusion().fuse(video_path, keep_segments=True)
     provider = provider or build_graph_provider()
     outcome = provider.run(fusion, job_id=job_id, video_id=video_id, media_uri=video_path)
