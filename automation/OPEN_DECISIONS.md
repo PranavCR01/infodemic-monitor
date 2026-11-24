@@ -55,7 +55,7 @@ Owner column gap (found by the frontend session, confirmed): videos/jobs had no 
   - Agreement with source labels: 21% (kappa 0.07).
   - Before merging: D2 fix, the judge.py update to match revised §9 (prompt in the coordinating session's history; summary below), and the human blind review (16 batch-1 + 20 batch-2 videos in `REVIEW.md`).
   - Merge with **Squash and merge**, because an early commit holds the lead's email.
-- **#65 candidates:** don't merge. Its content is copied into #62 (`sources/batch2/`). **Close it** once #62 is merged.
+- **#65 candidates:** don't merge (its content is in #62's `sources/batch2/`). The lead keeps it open for now (2026-11-24); revisit after #62.
 
 Golden-set `judge.py` update (now part of the combined local-session prompt, which also adds UNSUPPORTED): collect `denies_supported` and `possible_debunk` from every claim; add a `mixed_video` reason; treat any MIXED claim as a review trigger; drop the `deciding or claims` fallback for UNCLEAR and conflict triggers. Then regenerate `review_reasons` and rerun `validate.py`. Labels must not change.
 
