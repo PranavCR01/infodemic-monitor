@@ -546,7 +546,9 @@ Review is a real step in the workflow, not a flag. A case in review has its own 
 - **Request re-analysis**, for example after the retrieval terms are fixed.
 - **Reject** the result.
 
-Every action records who, when and why.
+Every action records who, when and why: a reason code (claim overgeneralised, evidence misread, stance misread, missing source, system correct, other) and a written note.
+
+**HIGH severity: your judgement first.** On a HIGH-severity case each reviewer first records their own stance and verdict for every claim; only then does the server show them the system's. A decision without that step is refused, and both are kept in the audit trail.
 
 **Feedback loop, done carefully.** Reviewer corrections are valuable test data, but they are **not** fed straight back into prompts or models. A correction becomes a candidate evaluation example; it's checked for quality, normalised and deduplicated, checked so it can't leak between training and test sets, and added to a new dataset version. Changes are then evaluated offline before anything is promoted.
 
@@ -742,7 +744,7 @@ Calls to the MCP retrieval server are traced too, with the client ID, tool, late
 
 | Table | Holds |
 | --- | --- |
-| `users` | User ID, auth identity, role |
+| `users` | User ID, auth identity (email, display name); roles come from the verified token |
 | `videos` | Owner, storage location, SHA-256 hash, duration |
 | `jobs` | Video, state, pipeline version, attempts, error code |
 | `job_events` | Every state change, with time |
@@ -776,6 +778,7 @@ Everything has stable IDs and foreign keys, and schema changes go through number
 | GET | `/v1/videos/{video_id}/results` | Final label and explanation |
 | GET | `/v1/videos/{video_id}/claims` | Claims with stance and verdict |
 | GET | `/v1/claims/{claim_id}/evidence` | Papers for one claim |
+| POST | `/v1/reviews/{review_id}/pre-reveal` | A reviewer's own judgement on a HIGH case, before the system's is shown |
 | POST | `/v1/reviews/{review_id}/decision` | A reviewer's decision |
 | GET | `/v1/admin/evaluations` | Evaluation summaries |
 
