@@ -15,6 +15,7 @@ import {
 import { TONE } from "@/components/ui/tone";
 import { SourceCard, sortSources } from "@/components/result/SourceCard";
 import { clock, type Claim, type ResultModel } from "@/lib/api/result-adapter";
+import type { BlindClaimMaterial, BlindMaterial } from "@/lib/api/blind-material";
 import type { CaseClaim, CaseModel } from "@/lib/api/review-adapter";
 import {
   DECISIONS,
@@ -54,6 +55,9 @@ type Props = {
   result: ResultModel | null;
   /** The result was revealed but couldn't be loaded. */
   evidenceFailed?: boolean;
+  /** T40: what a blind reviewer judges from (quotes and sources, no relations). */
+  blindMaterial?: BlindMaterial | null;
+  blindMaterialFailed?: boolean;
   onDecide: (req: ReturnType<typeof decisionRequest>) => Promise<SubmitResult>;
   /** T34: record the reviewer's own judgement. On success the page swaps in the revealed case. */
   onPreReveal: (body: ReturnType<typeof preRevealRequest>) => Promise<SubmitResult>;
@@ -67,7 +71,16 @@ type Props = {
  * runs this step: it withholds the system's view until it has recorded the reviewer's
  * judgement, and keeps both.
  */
-export function ReviewWorkspace({ review, result, evidenceFailed = false, onDecide, onPreReveal, onOverrideSeverity }: Props) {
+export function ReviewWorkspace({
+  review,
+  result,
+  evidenceFailed = false,
+  blindMaterial = null,
+  blindMaterialFailed = false,
+  onDecide,
+  onPreReveal,
+  onOverrideSeverity,
+}: Props) {
   const blind = review.blindRequired;
   // Belt and braces: even if a result is passed, nothing from it shows while withheld.
   const claims = useMemo(() => (review.withheld ? [] : result?.claims ?? []), [result, review.withheld]);
@@ -210,11 +223,19 @@ export function ReviewWorkspace({ review, result, evidenceFailed = false, onDeci
           {review.withheld ? (
             <>
               <p className="rounded-lg border border-line bg-surface-2 p-4 text-small text-ink-2">
-                Before your judgement this page shows each claim as the video states it. The sources and the system&apos;s reading open
-                after you commit, so they can&apos;t steer your first reading.
+                Before your judgement you see what the speaker said and the sources the search found, in the order it found them.
+                Whether each source supports or contradicts the claim, and the system&apos;s reading, open after you commit.
               </p>
+              {blindMaterialFailed && (
+                <p role="status" className="text-small text-ink-2">
+                  The quotes and sources couldn&apos;t be loaded. You can still judge from the claims below, or reload the page.
+                </p>
+              )}
+              {!blindMaterial && !blindMaterialFailed && (
+                <p className="text-small text-ink-2" aria-busy="true">Loading the quotes and sources…</p>
+              )}
               {review.claims.map((c) => (
-                <BlindClaim key={c.id} claim={c} />
+                <BlindClaim key={c.id} claim={c} material={blindMaterial?.claims[c.id] ?? null} loaded={Boolean(blindMaterial)} />
               ))}
             </>
           ) : (
@@ -419,10 +440,13 @@ export function ReviewWorkspace({ review, result, evidenceFailed = false, onDeci
   );
 }
 
-/** A claim before the reveal: its words and time only (T34 withholds everything else). */
-function BlindClaim({ claim: c }: { claim: CaseClaim }) {
+/**
+ * A claim before the reveal: its words, what was said, and the sources in retrieval order (T40).
+ * Nothing the system concluded: no relation, verdict, stance or deciding marker.
+ */
+function BlindClaim({ claim: c, material, loaded }: { claim: CaseClaim; material: BlindClaimMaterial | null; loaded: boolean }) {
   return (
-    <article aria-labelledby={`rv-${c.id}`} className="flex flex-col gap-2 rounded-lg border border-line bg-surface p-4 shadow-1">
+    <article aria-labelledby={`rv-${c.id}`} className="flex flex-col gap-3 rounded-lg border border-line bg-surface p-4 shadow-1">
       <header className="flex flex-wrap items-center gap-2">
         <h3 id={`rv-${c.id}`} className="text-h3 text-ink">Claim {c.number}</h3>
         {c.start !== null && (
@@ -433,6 +457,26 @@ function BlindClaim({ claim: c }: { claim: CaseClaim }) {
         )}
       </header>
       <p className="font-serif text-[17px] leading-[26px] text-ink">{c.text}</p>
+      {loaded && (
+        <div className="grid gap-4 lg:grid-cols-2">
+          <div className="flex flex-col gap-2">
+            <h4 className="text-cap font-semibold uppercase tracking-wider text-ink-3">What the speaker said</h4>
+            {!material?.quotes.length && <p className="text-small text-ink-2">No quoted words were stored.</p>}
+            {material?.quotes.map((q) => (
+              <p key={`${q.source}-${q.id}`} className="rounded-md border-l-2 border-line-input bg-surface-2 px-3 py-2 text-small text-ink">
+                <q>{q.text}</q> <span className="font-mono text-cap text-ink-3">{q.source === "screen" ? "on screen, " : ""}{clock(q.start)}</span>
+              </p>
+            ))}
+          </div>
+          <div className="flex flex-col gap-2">
+            <h4 className="text-cap font-semibold uppercase tracking-wider text-ink-3">Sources the search found</h4>
+            {!material?.sources.length && <p className="text-small text-ink-2">The search found no source for this claim.</p>}
+            {material?.sources.map((s) => (
+              <SourceCard key={s.id} s={s} />
+            ))}
+          </div>
+        </div>
+      )}
     </article>
   );
 }

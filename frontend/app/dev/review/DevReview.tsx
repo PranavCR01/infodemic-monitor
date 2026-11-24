@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import type { RawCase } from "@/lib/api/review-types";
+import { adaptBlindMaterial } from "@/lib/api/blind-material";
+import { MOCK_BLIND_MATERIAL } from "@/lib/api/mocks/blind-material";
 import { ReviewQueue } from "@/components/review/ReviewQueue";
 import { ReviewWorkspace } from "@/components/review/ReviewWorkspace";
 import { adaptResult } from "@/lib/api/result-adapter";
@@ -28,6 +30,7 @@ export function DevReview({ which }: { which: string | undefined }) {
   }
   return (
     <ReviewWorkspace
+      blindMaterial={adaptBlindMaterial(MOCK_BLIND_MATERIAL)}
       review={adaptCase(revealed ?? c.review, MOCK_VIEWER_ID)}
       result={adaptResult(c.result)}
       onDecide={async () => ({ ok: true })}
