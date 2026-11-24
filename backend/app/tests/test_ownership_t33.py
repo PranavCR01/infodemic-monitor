@@ -262,6 +262,10 @@ ROUTES: dict[tuple[str, str], object] = {
         "POST", lambda t: f"/v1/reviews/rev-{t}/pre-reveal", ok=(201, 409),
         body=lambda t: {"claims": [{"claim_id": "c1", "stance": "REFUTES", "verdict": "SUPPORTED"}]},
         role="reviewer"),
+    # T40: only for a caller still blind on the case. The seeded pre-reveals make every
+    # allowed caller here non-blind (403); the blind 200 is in test_blind_material_t40.
+    ("GET", "/v1/reviews/{review_id}/blind-material"): ObjectRoute(
+        "GET", lambda t: f"/v1/reviews/rev-{t}/blind-material", ok=(200, 403), role="reviewer"),
     ("POST", "/v1/reviews/{review_id}/claims/{claim_id}/severity"): ObjectRoute(
         "POST", lambda t: f"/v1/reviews/rev-{t}/claims/c1/severity",
         body=lambda t: {"severity": "LOW", "reason": "adult audience"}, role="reviewer"),
