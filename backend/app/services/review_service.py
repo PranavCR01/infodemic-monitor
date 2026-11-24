@@ -21,6 +21,7 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from typing import Any, Callable, Mapping, Optional
 
+from sqlalchemy import String, cast
 from sqlalchemy import case as sql_case
 from sqlalchemy.orm import Session
 
@@ -194,19 +195,25 @@ SEVERITY_OVERRIDE_ACTION = "severity_override"
 
 def _keep_overrides(old: Optional[dict], payload: dict[str, Any]) -> None:
     """A refreshed case keeps reviewers' overrides for claims that are still there."""
-    from app.core.graph.severity import video_severity
+    from app.core.graph.severity import case_severity
 
     new = payload.get("claim_severities") or {}
     for cid, entry in (old or {}).items():
         if entry.get("override") and cid in new:
             new[cid]["override"] = entry["override"]
-    sev = video_severity(new)
+    sev = case_severity(new, payload.get("reasons"))
     payload["severity"] = sev.value if sev else None
 
 
 def _severity_order():
-    """HIGH, MEDIUM, LOW, then cases with no severity."""
+    """HIGH, MEDIUM, LOW, then cases with no severity, then ``nothing_judged`` cases
+    (T37, §11: LOW priority, after everything else). Reasons are a JSON list, so the
+    check is a text match on the stored JSON (portable across SQLite and Postgres)."""
+    from app.core.graph.severity import NOTHING_JUDGED_REASON
+
+    nothing_judged = cast(HumanReview.reasons, String).like(f'%"judge:{NOTHING_JUDGED_REASON}"%')
     return sql_case(
+        (nothing_judged, 4),
         (HumanReview.severity == "HIGH", 0),
         (HumanReview.severity == "MEDIUM", 1),
         (HumanReview.severity == "LOW", 2),
@@ -247,7 +254,7 @@ def override_claim_severity(
     corrected from real cases. Labels, verdicts, the proposed result, the reviewer
     decision and the job's state are not touched. Allowed on resolved cases too: the
     log is for correcting the table, not only for ordering the queue."""
-    from app.core.graph.severity import Severity, effective_claim_severity, video_severity
+    from app.core.graph.severity import Severity, case_severity, effective_claim_severity
 
     if not reviewer_id:
         raise ReviewError("reviewer_id is required")
@@ -273,7 +280,7 @@ def override_claim_severity(
         "severity": new_level, "reason": reason.strip(), "reviewer_id": reviewer_id, "at": at.isoformat(),
     }
     video_before = case.severity
-    video_after = video_severity(claims)
+    video_after = case_severity(claims, case.reasons)
     case.claim_severities = claims  # reassign so the JSON change is saved
     case.severity = video_after.value if video_after else None
     db.add(AuditEvent(

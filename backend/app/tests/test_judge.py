@@ -362,8 +362,10 @@ def test_possible_debunk_goes_to_review_in_the_graph():
 
 
 def test_rules_without_their_own_reasons_return_none():
-    for rows in ([(E, CON)], [(RF, CON)], [(E, SUP)], [(E, INS)], []):
+    for rows in ([(E, CON)], [(RF, CON)], [(E, SUP)], [(E, NV)], []):
         assert jg.decide(jg.claim_views(make_state(*rows))[0]).rule_review_reasons == [], rows
+    # T37: nothing judged with an INSUFFICIENT_EVIDENCE claim adds nothing_judged.
+    assert jg.decide(jg.claim_views(make_state((E, INS)))[0]).rule_review_reasons == [jg.FLAG_NOTHING_JUDGED]
 
 
 def test_evaluation_judge_label_matches_the_node():
@@ -468,8 +470,10 @@ def test_flag_verification_failed():
 
 
 def test_a_clean_video_has_no_flags():
-    for rows in ([(E, CON)], [(RF, CON)], [(E, SUP)], [(E, INS)]):
+    for rows in ([(E, CON)], [(RF, CON)], [(E, SUP)], [(E, NV)]):
         assert run_judge(make_state(*rows))[0].review_flags == [], rows
+    # T37: an insufficient-evidence video is no longer flag-free (nothing_judged).
+    assert run_judge(make_state((E, INS)))[0].review_flags == [jg.FLAG_NOTHING_JUDGED]
 
 
 def test_flags_become_review_reasons_in_the_graph():

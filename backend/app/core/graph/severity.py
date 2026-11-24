@@ -23,6 +23,14 @@ A video's severity is the highest severity among its **MISINFO-relevant** claims
 
 A video with no MISINFO-relevant claim has no severity (``None``); the queue puts those
 cases after LOW.
+
+**``nothing_judged`` (T37, §11).** When no claim could be judged but one needed checking
+and had too little evidence, the judge adds the review reason ``nothing_judged``. Such a
+case is LOW whatever the table says (and whatever a reviewer's claim override says): a
+person should see what the system could not check, but after everything else. The case
+severity is therefore :func:`case_severity` (claims *and* reasons), not
+:func:`video_severity` alone; the queue also sorts these cases after the ones with no
+severity (``review_service._severity_order``).
 """
 from __future__ import annotations
 
@@ -196,6 +204,25 @@ def video_severity(claims: Mapping[str, Mapping[str, Any]]) -> Optional[Severity
     return highest(effective_claim_severity(c) for c in claims.values() if c.get("misinfo_relevant"))
 
 
+NOTHING_JUDGED_REASON = "nothing_judged"  # judge.FLAG_NOTHING_JUDGED (not imported: no cycle)
+
+
+def has_nothing_judged(reasons: Optional[Iterable[str]]) -> bool:
+    """Whether a case's reasons (stored ``judge:nothing_judged`` or the bare judge flag)
+    include ``nothing_judged``."""
+    return any(str(x) in (NOTHING_JUDGED_REASON, f"judge:{NOTHING_JUDGED_REASON}") for x in reasons or ())
+
+
+def case_severity(
+    claims: Mapping[str, Mapping[str, Any]], reasons: Optional[Iterable[str]] = None
+) -> Optional[Severity]:
+    """A review case's severity: LOW when the case carries ``nothing_judged`` (T37),
+    otherwise :func:`video_severity`."""
+    if has_nothing_judged(reasons):
+        return Severity.LOW
+    return video_severity(claims)
+
+
 def effective_claim_severity(entry: Mapping[str, Any]) -> Optional[str]:
     override = entry.get("override")
     if override:
@@ -228,6 +255,8 @@ def assess(
             "verdict": v.verdict.value if v else None,
             "misinfo_relevant": misinfo_relevant(s.stance if s else None, v.verdict if v else None),
         }
+    final = state.get("final_result")
+    flags = list(getattr(final, "review_flags", None) or []) + list(state.get("review_reasons") or [])
     return SeverityAssessment(
-        severity=video_severity(out), claims=out, table_version=cfg.version, table_status=cfg.status
+        severity=case_severity(out, flags), claims=out, table_version=cfg.version, table_status=cfg.status
     )

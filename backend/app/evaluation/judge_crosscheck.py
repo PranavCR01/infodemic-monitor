@@ -26,6 +26,7 @@ mapped to one vocabulary (``<kind>[:<claim_id>]``):
 | ``conflicting_evidence`` | ``conflicting_evidence:<cid>`` | "claim <cid> has both supporting and contradicting evidence" |
 | ``unclear_stance`` | ``unclear_stance:<cid>`` | "claim <cid> stance is UNCLEAR" |
 | ``mixed_evidence`` etc. | the judge's other §9 pattern flags | — |
+| ``nothing_judged`` | ``judge:nothing_judged`` | ``nothing_judged`` (once the golden judge has the T37 rule) |
 
 Backend reasons from signals the golden set cannot carry (critic, validation, budget,
 calibrated confidence, study type, high-risk category, guardrails) are left out: the
@@ -85,6 +86,8 @@ GOLDEN_KIND_REASONS = {
     "evidence_both_sides": "conflicting_evidence",
     "unclear_stance": "unclear_stance",
 }
+# Video-level golden reasons (no claim id) → vocabulary kind.
+GOLDEN_VIDEO_REASONS = {"mixed_video": "mixed_video", "nothing_judged": "nothing_judged"}
 
 
 class UnknownReason(ValueError):
@@ -292,8 +295,8 @@ def normalise_golden_reasons(reasons: Sequence[str], deciding: Sequence[str]) ->
         if r in GOLDEN_RULE_REASONS:
             out.update(f"{GOLDEN_RULE_REASONS[r]}:{cid}" for cid in deciding)
             continue
-        if r == "mixed_video":
-            out.add(r)
+        if r in GOLDEN_VIDEO_REASONS:
+            out.add(GOLDEN_VIDEO_REASONS[r])
             continue
         kind, sep, cid = r.partition(":")
         if sep and kind in GOLDEN_KIND_REASONS:
@@ -380,6 +383,16 @@ DIFFERENCE_KINDS: dict[str, dict[str, str]] = {
                "unproven_claim reason for the same claim already sends the video to "
                "review. Same claim, same outcome, one extra reason on the backend side.",
     },
+    "nothing_judged_not_in_pinned_golden_judge": {
+        "matches": "backend (expected; golden judge not yet re-pinned)",
+        "why": "§9 pseudocode and §11 (commit 93068e6, T37): when no claim could be judged "
+               "and any claim is INSUFFICIENT_EVIDENCE, the judge adds the review reason "
+               "nothing_judged (LOW priority). The golden set's judge.py gets the same rule "
+               "separately; the vendored copy pinned in the fixture predates it, so the "
+               "backend raises the reason alone. Expected until the fixture is re-pinned; "
+               "the backend already sends these videos to review via weak_evidence, so the "
+               "review outcome does not change.",
+    },
     "weak_evidence_on_non_deciding_claim": {
         "matches": "neither (backend extension, documented)",
         "why": "§11 says 'a deciding claim is INSUFFICIENT_EVIDENCE or MIXED'. In the "
@@ -436,6 +449,8 @@ def classify_difference(reason: str, side: str, video: GoldenVideo, golden: Judg
             return "mixed_video"
         if kind == "mixed_evidence":
             return "mixed_evidence"
+        if kind == "nothing_judged" and not golden.deciding:
+            return "nothing_judged_not_in_pinned_golden_judge"
         if kind in ("unclear_stance_contradicted", "false_claim_not_refuted"):
             return kind
         if kind == "weak_evidence" and cid not in deciding:

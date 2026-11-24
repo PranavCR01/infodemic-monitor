@@ -1803,6 +1803,18 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-24**: T37 (no issue; design §9, §11, §12) `nothing_judged` review reason by
+  the automated build. In the judge's last branch (nothing could be judged), any
+  INSUFFICIENT_EVIDENCE claim adds `nothing_judged` (stored `judge:nothing_judged`); no
+  claims or only NOT_VERIFIABLE claims add nothing. Labels unchanged. A case carrying it
+  is LOW whatever the table or a claim override says (`severity.case_severity`), and the
+  queue sorts it after the no-severity cases (`review_service._severity_order`, a text
+  match on the stored JSON; checked on Postgres JSON and JSONB). Text: "No claim in this
+  video could be checked against the evidence." Cross-check: 28 golden-set videos gain it;
+  recorded as the expected difference `nothing_judged_not_in_pinned_golden_judge`, fixture
+  not changed. Those 28 were already sent to review by `weak_evidence`, so no review
+  outcome changes. Open for the lead: the LOW pin also wins over a guardrail or
+  validation reason on the same case (literal reading of "regardless").
 - **2026-11-24**: T36 (no issue; design §12, §14) traceable analysis version by the
   automated build: graph results store `graph_v1+<short sha>+p<routing hash>` and a
   `routing_snapshot` JSON column (migration 0015, chained on T33's 0014). Old `graph_v1` rows still read. 1467 passed locally with Postgres 16 +
