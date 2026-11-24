@@ -25,9 +25,39 @@ def _fail_job(db, job_id: str, error_code: str, detail: dict) -> None:
             job.error_code = error_code
             job.updated_at = datetime.now(timezone.utc)
             db.commit()
+            _sync_state(db, job, detail={"error_code": error_code})
     except Exception as inner:
         logger.error("Failed to persist job failure for %s: %s", job_id, inner)
         db.rollback()
+
+
+def _sync_state(db, job, detail: dict | None = None) -> None:
+    """Log the §1 state matching the job's legacy status (T28). Never raises."""
+    try:
+        from app.services.job_events import sync_state_from_status
+
+        sync_state_from_status(db, job, detail=detail)
+    except Exception:  # noqa: BLE001 - history never fails a job
+        logger.warning("could not record state for job %s", getattr(job, "id", "?"), exc_info=True)
+
+
+def _start_attempt(db, job, retries: int) -> None:
+    """Mark the job RUNNING and count the attempt (T28). A job found still STARTED was
+    picked up before and its worker died, or Celery is retrying it: log RETRY_PENDING
+    first so the history shows the retry (§1)."""
+    from app.db.models.job import JobState, JobStatus
+    from app.services.job_events import record_state
+
+    previous = job.status
+    if previous == JobStatus.STARTED or retries > 0:
+        record_state(db, job, JobState.RETRY_PENDING,
+                     detail={"reason": "celery_retry" if retries > 0 else "redelivered",
+                             "previous_status": getattr(previous, "value", previous)})
+    job.status = JobStatus.STARTED
+    job.attempts = (job.attempts or 0) + 1
+    job.updated_at = datetime.now(timezone.utc)
+    db.commit()
+    record_state(db, job, JobState.RUNNING)
 
 
 def _already_finished(db, job) -> bool:
@@ -105,9 +135,7 @@ def process_video_task(self, job_id: str, storage_key: str | None = None):
             # Celery delivers at least once (§1): a finished graph job is not re-run.
             return {"job_id": job_id, "status": job.status.value, "skipped": True}
 
-        job.status = JobStatus.STARTED
-        job.updated_at = datetime.now(timezone.utc)
-        db.commit()
+        _start_attempt(db, job, int(getattr(self.request, "retries", 0) or 0))
 
         video = db.query(Video).filter(Video.id == job.video_id).first()
         if not video:
@@ -136,12 +164,19 @@ def process_video_task(self, job_id: str, storage_key: str | None = None):
         else:
             file_path = video.file_path
 
-        if settings.USE_GRAPH_PIPELINE:
-            # T11: the LangGraph pipeline, with a single-call fallback. Off by default.
-            return _run_graph_job(db, job, video, file_path)
+        from app.core.progress import reporting
+        from app.services.job_events import step_reporter
 
-        # Run async pipeline in a new event loop (Celery tasks are sync)
-        fusion, classification = asyncio.run(run_pipeline(file_path))
+        # T28: steps the pipeline announces are logged to job_events for the stepper.
+        with reporting(step_reporter(db, job)):
+            if settings.USE_GRAPH_PIPELINE:
+                # T11: the LangGraph pipeline, with a single-call fallback. Off by default.
+                out = _run_graph_job(db, job, video, file_path)
+                _sync_state(db, job)
+                return out
+
+            # Run async pipeline in a new event loop (Celery tasks are sync)
+            fusion, classification = asyncio.run(run_pipeline(file_path))
 
         result = Result(
             job_id=job_id,
@@ -160,6 +195,7 @@ def process_video_task(self, job_id: str, storage_key: str | None = None):
         job.status = JobStatus.SUCCESS
         job.updated_at = datetime.now(timezone.utc)
         db.commit()
+        _sync_state(db, job)
 
         return {"job_id": job_id, "status": "SUCCESS", "label": classification.label.value}
 

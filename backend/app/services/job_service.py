@@ -1,10 +1,79 @@
-from typing import Optional
+from typing import Iterable, Optional
 
+from sqlalchemy import func, or_
 from sqlalchemy.orm import Session
 
 from app.db.models.job import Job
 from app.db.models.result import Result
 from app.db.models.video import Video
+from app.services import job_events
+
+
+def _row(job: Job, video: Video, result: Optional[Result]) -> dict:
+    return {
+        "job_id": job.id,
+        "status": job.status,
+        "error_code": job.error_code,
+        "created_at": job.created_at.isoformat() if job.created_at else None,
+        "filename": video.filename,
+        "label": result.label if result else None,
+        "confidence": result.confidence if result else None,
+        # T28, additive: the §1 state, the stepper step and a few fields for search results.
+        "video_id": job.video_id,
+        "state": job_events.effective_state(job),
+        "step": job_events.current_step(job),
+        "updated_at": job.updated_at.isoformat() if job.updated_at else None,
+    }
+
+
+def query_jobs(
+    db: Session,
+    *,
+    limit: int = 20,
+    offset: int = 0,
+    label: Optional[str] = None,
+    search: Optional[str] = None,
+    statuses: Iterable[str] = (),
+    user: Optional[dict] = None,
+    restrict_to_owner: bool = True,
+) -> tuple[list[dict], int]:
+    """One page of jobs (newest first) and the total matching the filters (T28).
+
+    ``search`` matches the filename (case-insensitive substring) or an exact job or
+    video id. ``statuses`` takes legacy statuses and/or §1 states (see
+    ``job_events.split_status_filter``; raises ValueError on an unknown value).
+    """
+    from app.api.ownership import owned_jobs
+
+    query = (
+        db.query(Job, Video, Result)
+        .join(Video, Job.video_id == Video.id)
+        .outerjoin(Result, Result.job_id == Job.id)
+    )
+    if restrict_to_owner:
+        query = owned_jobs(query, user)
+    if label:
+        query = query.filter(Result.label == label)
+    if search and search.strip():
+        term = search.strip()
+        escaped = term.replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_")
+        query = query.filter(or_(
+            Video.filename.ilike(f"%{escaped}%", escape="\\"),
+            Job.id == term,
+            Job.video_id == term,
+        ))
+    legacy, states = job_events.split_status_filter(statuses)
+    if legacy or states:
+        conds = []
+        if legacy:
+            conds.append(Job.status.in_(sorted(legacy)))
+        if states:
+            conds.append(job_events.effective_state_sql().in_(sorted(states)))
+        query = query.filter(or_(*conds))
+
+    total = query.with_entities(func.count(Job.id)).order_by(None).scalar() or 0
+    rows = query.order_by(Job.created_at.desc()).offset(offset).limit(limit).all()
+    return [_row(job, video, result) for job, video, result in rows], int(total)
 
 
 def list_jobs(
@@ -12,32 +81,12 @@ def list_jobs(
     limit: int = 20,
     offset: int = 0,
     label: Optional[str] = None,
+    *,
+    search: Optional[str] = None,
+    statuses: Iterable[str] = (),
+    user: Optional[dict] = None,
+    restrict_to_owner: bool = True,
 ) -> list[dict]:
-    query = (
-        db.query(Job, Video, Result)
-        .join(Video, Job.video_id == Video.id)
-        .outerjoin(Result, Result.job_id == Job.id)
-    )
-    if label:
-        query = query.filter(Result.label == label)
-
-    rows = (
-        query
-        .order_by(Job.created_at.desc())
-        .offset(offset)
-        .limit(limit)
-        .all()
-    )
-
-    return [
-        {
-            "job_id": job.id,
-            "status": job.status,
-            "error_code": job.error_code,
-            "created_at": job.created_at.isoformat() if job.created_at else None,
-            "filename": video.filename,
-            "label": result.label if result else None,
-            "confidence": result.confidence if result else None,
-        }
-        for job, video, result in rows
-    ]
+    rows, _ = query_jobs(db, limit=limit, offset=offset, label=label, search=search,
+                         statuses=statuses, user=user, restrict_to_owner=restrict_to_owner)
+    return rows
