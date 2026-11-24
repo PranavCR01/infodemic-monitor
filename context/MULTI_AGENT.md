@@ -1805,7 +1805,7 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
 
 - **2026-11-24**: T36 (no issue; design §12, §14) traceable analysis version by the
   automated build: graph results store `graph_v1+<short sha>+p<routing hash>` and a
-  `routing_snapshot` JSON column (migration 0015, chained on T33's 0014). Old `graph_v1` rows still read. 1388 passed locally with Postgres 16 +
+  `routing_snapshot` JSON column (migration 0015, chained on T33's 0014). Old `graph_v1` rows still read. 1467 passed locally with Postgres 16 +
   pgvector (4 OCR-tool skips only). Decisions in §7aa.
 - **2026-11-24**: T33 (no issue; design §15, §17) per-user ownership on every read by
   the automated build: `videos.user_id` (migration 0014, chained on T31's 0012), owner or
