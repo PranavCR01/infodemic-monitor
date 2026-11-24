@@ -26,6 +26,7 @@ import yaml
 from pydantic import BaseModel, Field, field_validator
 
 from app.core.graph.stance import PromptNotFoundError, load_prompt
+from app.core.pipeline_options import DEFAULT_OPTIONS, PipelineOptions
 from app.core.routing.config import DEFAULT_ROUTING_PATH, ReasoningEffort, RoutingConfig, dump_routing
 from app.evaluation.routing_experiment import cost as c
 from app.evaluation.routing_experiment.frozen import FrozenEvidence
@@ -34,6 +35,7 @@ from app.evaluation.routing_experiment.items import (
     STEPS,
     VideoInput,
     extraction_items,
+    extraction_view,
     in_scope_video_ids,
     stance_items,
     verify_items,
@@ -152,6 +154,7 @@ class Plan:
     evidence_mode: Optional[str] = None
     evidence_assumed: bool = False
     notes: list[str] = field(default_factory=list)
+    pipeline_options: PipelineOptions = DEFAULT_OPTIONS
 
 
 def build_plan(
@@ -163,15 +166,19 @@ def build_plan(
     frozen: Optional[FrozenEvidence] = None,
     videos: Optional[Sequence[str]] = None,
     allow_assumed_evidence: bool = False,
+    pipeline_options: PipelineOptions = DEFAULT_OPTIONS,
 ) -> Plan:
     chosen = [s for s in (steps or STEPS) if s in candidates.candidates]
     ids = in_scope_video_ids(tune, videos)  # refuses non-tune ids
-    plan = Plan(steps=chosen, items={}, candidates=candidates, routing=routing, golden=tune.source.describe())
+    plan = Plan(steps=chosen, items={}, candidates=candidates, routing=routing, golden=tune.source.describe(),
+                pipeline_options=pipeline_options)
     inputs: dict[str, VideoInput] = {}
     if {"extract_claims", "analyze_stance"} & set(chosen):
         inputs = {vid: video_input(tune, vid) for vid in ids}
     if "extract_claims" in chosen:
-        plan.items["extract_claims"] = extraction_items(tune, inputs, ids)
+        # use_ocr (config/pipeline.yaml) changes extraction's input only; stance keeps OCR.
+        plan.items["extract_claims"] = extraction_items(
+            tune, {vid: extraction_view(v, pipeline_options) for vid, v in inputs.items()}, ids)
     if "analyze_stance" in chosen:
         plan.items["analyze_stance"] = stance_items(tune, inputs, ids)
     if "verify_claims" in chosen:
@@ -264,6 +271,7 @@ def estimate(plan: Plan) -> dict:
     return {
         "mode": "dry_run", "golden": plan.golden, "split": "tune",
         "evidence_mode": plan.evidence_mode, "evidence_assumed": plan.evidence_assumed,
+        "use_ocr": plan.pipeline_options.extraction.use_ocr,
         "steps": steps, "total_expected_usd": round(total_expected, 4),
         "total_upper_bound_usd": round(total_upper, 4), "unpriced_candidates": unpriced,
         "placeholder_candidates": sorted({candidate_key(x) for s in plan.steps
@@ -368,11 +376,13 @@ def live_run(
     results: dict[str, list[CandidateResult]] = {}
     extras: dict[str, dict[str, dict]] = {}
     selections: list[Selection] = []
+    per_item: dict[str, dict[str, list[dict]]] = {}
     stopped: Optional[str] = None
     for step in plan.steps:
         items = plan.items[step]
         results[step] = []
         extras[step] = {}
+        per_item[step] = {}
         for cand in plan.candidates.candidates[step]:
             outputs: list[Any] = []
 
@@ -389,6 +399,10 @@ def live_run(
                 stopped = f"{step} / {candidate_key(cand)} after {len(outputs)} of {len(items)} items: {exc}"
                 break
             results[step].append(res)
+            per_item[step][candidate_key(cand)] = [
+                {"item_id": i.item_id, "gold": i.gold, "output": item_output(o),
+                 **({"node_errors": o.errors} if getattr(o, "errors", None) else {})}
+                for i, o in zip(items, outputs)]
             if step in EXTRAS:
                 extras[step][candidate_key(cand)] = EXTRAS[step]([i.gold for i in items], outputs)
         if stopped:
@@ -419,7 +433,11 @@ def live_run(
             for step in plan.steps
         },
         "proposed_routing": proposed.to_yaml_dict() if proposed else None,
+        "pipeline_options": plan.pipeline_options.model_dump(),
         "_proposed": proposed,
+        # T43: what each candidate answered per item, written to per_item.json (not
+        # report.json) so the error analysis and bootstrap CIs need no new paid calls.
+        "_per_item": per_item,
     }
 
 
@@ -443,6 +461,15 @@ def response_model_notes(results: dict[str, list[CandidateResult]]) -> list[str]
     return notes
 
 
+def item_output(output: Any) -> Any:
+    """An item's output as JSON: extraction keeps each claim's text, time span, source
+    pieces and category (``runners.ExtractedClaims.details``); labels stay strings."""
+    details = getattr(output, "details", None)
+    if details is not None:
+        return list(details)
+    return output
+
+
 # ------------------------------------------------------------------ outputs
 
 
@@ -457,8 +484,11 @@ def write_outputs(report: dict, out_dir: Path | str) -> dict[str, str]:
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
     proposed: Optional[RoutingConfig] = report.pop("_proposed", None)
+    per_item: Optional[dict] = report.pop("_per_item", None)
     report = {**report, "written_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
     paths = {"report_json": out / "report.json", "report_md": out / "report.md"}
+    if per_item is not None:
+        paths["per_item_json"] = out / "per_item.json"
     if proposed is not None:
         paths["routing_v2"] = out / f"{PROPOSED_VERSION}.yaml"
     for p in paths.values():
@@ -466,6 +496,11 @@ def write_outputs(report: dict, out_dir: Path | str) -> dict[str, str]:
             raise ExperimentError(f"refusing to write {p}: the runner never edits config/routing.yaml")
     paths["report_json"].write_text(json.dumps(report, indent=2, default=str))
     paths["report_md"].write_text(render_markdown(report))
+    if per_item is not None:
+        paths["per_item_json"].write_text(json.dumps(
+            {"golden": report.get("golden"), "split": report.get("split"),
+             "pipeline_options": report.get("pipeline_options"), "steps": per_item},
+            indent=1, ensure_ascii=False, default=str))
     if proposed is not None:
         dump_routing(proposed, paths["routing_v2"])
         header = ("# PROPOSED by the routing experiment (T38). Not in use: review it, then copy the\n"
@@ -484,6 +519,9 @@ def render_markdown(report: dict) -> str:
              f"Golden set: `{report.get('golden')}`, split **tune** only.",
              f"Evidence mode (verify_claims): `{est.get('evidence_mode') or 'n/a'}`"
              + (" (assumed sizes, no frozen file)" if est.get("evidence_assumed") else ""), ""]
+    if est.get("use_ocr") is False:
+        lines += ["**extract_claims ran WITHOUT on-screen text** (`extraction.use_ocr: false`, "
+                  "config/pipeline.yaml ablation). Stance still sees OCR.", ""]
     if report.get("mode") == "live":
         s = report["spend"]
         lines += [f"Spend: **${s['spent_usd']:.4f}** of cap ${s['cap_usd']:.2f} in {s['calls']} calls"

@@ -50,6 +50,7 @@ from app.core.graph.stance import make_analyze_stance
 from app.core.graph.state import OcrSegment, PipelineState, TranscriptSegment, initial_state
 from app.core.graph.verifier import make_verify_claims
 from app.core.inference.classifier import InferenceProvider
+from app.core.pipeline_options import PipelineOptions, load_pipeline_options, wrap_extract_node
 from app.core.progress import report_node
 from app.core.schemas.pipeline import ClassificationResult, FusionResult
 
@@ -149,13 +150,18 @@ def fusion_nodes(transcript: list[TranscriptSegment], ocr: list[OcrSegment]) -> 
 
 
 def build_nodes(caller: Any, retriever: Any, *, budgets: Budgets = DEFAULT_BUDGETS,
-                library: Any = None, references: Any = None) -> dict[str, NodeFn]:
+                library: Any = None, references: Any = None,
+                pipeline_options: Optional[PipelineOptions] = None) -> dict[str, NodeFn]:
     """The real nodes for the model-calling and retrieval steps. Fusion, validation,
     the review policy and the judge's rules are deterministic and already the default
     graph's; load_artifacts / human_review / persist_result stay reference-only (the
-    worker persists, see ``app.services.pipeline_result_service``)."""
+    worker persists, see ``app.services.pipeline_result_service``).
+
+    ``pipeline_options`` (default: ``config/pipeline.yaml``) decides what extraction is
+    given; with ``extraction.use_ocr: false`` its node sees the transcript alone (T43)."""
+    options = pipeline_options if pipeline_options is not None else load_pipeline_options()
     return {
-        r.EXTRACT_CLAIMS: make_extract_claims(caller),
+        r.EXTRACT_CLAIMS: wrap_extract_node(make_extract_claims(caller), options),
         r.ANALYZE_STANCE: make_analyze_stance(caller),
         **make_retrieval_nodes(retriever, budgets=budgets, library=library, references=references),
         r.VERIFY_CLAIMS: make_verify_claims(caller, budgets=budgets),
@@ -185,6 +191,7 @@ class GraphProvider:
         routing_snapshot: Optional[dict] = None,
         clock: Callable[[], float] = time.monotonic,
         node_overrides: Optional[Mapping[str, NodeFn]] = None,
+        pipeline_options: Optional[PipelineOptions] = None,
     ):
         self.caller = caller
         self.retriever = retriever
@@ -199,7 +206,8 @@ class GraphProvider:
         self._clock = clock
         self._overrides = dict(node_overrides or {})
         # Built once, so a bad routing config or a missing prompt file fails at start-up.
-        self._nodes = build_nodes(caller, retriever, budgets=budgets, library=library, references=references)
+        self._nodes = build_nodes(caller, retriever, budgets=budgets, library=library, references=references,
+                                  pipeline_options=pipeline_options)
 
     # InferenceProvider -------------------------------------------------------
 

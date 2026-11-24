@@ -1,0 +1,218 @@
+{
+ "old": "git:0fbc68a@0fbc68a05a7d:research/claim-level/dataset",
+ "new": "git:dcf77b0@dcf77b084267:research/claim-level/dataset",
+ "left_tune": [],
+ "joined_tune": [],
+ "scope_changed": [],
+ "transcript_changed": [],
+ "claims": [
+  {
+   "key": "v11:c3",
+   "changed": [
+    "verdict"
+   ],
+   "old": {
+    "text": "seed oils are super great for your health. They're totally fine",
+    "source": "both",
+    "stance": "ENDORSES",
+    "verdict": "SUPPORTED"
+   },
+   "new": {
+    "text": "seed oils are super great for your health. They're totally fine",
+    "source": "both",
+    "stance": "ENDORSES",
+    "verdict": "MIXED"
+   }
+  },
+  {
+   "key": "v21:c2",
+   "changed": [
+    "text",
+    "verdict"
+   ],
+   "old": {
+    "text": "Almonds are rich in unsaturated fats that promote good cholesterol and protect your heart",
+    "source": "both",
+    "stance": "ENDORSES",
+    "verdict": "INSUFFICIENT_EVIDENCE"
+   },
+   "new": {
+    "text": "Almonds are rich in unsaturated fats that promote good cholesterol",
+    "source": "both",
+    "stance": "ENDORSES",
+    "verdict": "CONTRADICTED"
+   }
+  },
+  {
+   "key": "v21:c7",
+   "changed": [
+    "added"
+   ],
+   "old": null,
+   "new": {
+    "text": "[Almonds] protect your heart",
+    "source": "both",
+    "stance": "ENDORSES",
+    "verdict": "INSUFFICIENT_EVIDENCE"
+   }
+  },
+  {
+   "key": "v22:c1",
+   "changed": [
+    "verdict"
+   ],
+   "old": {
+    "text": "You're going to be consuming the best quality protein. Your muscles, your connective tissue will get the highest quality amino acids",
+    "source": "both",
+    "stance": "ENDORSES",
+    "verdict": "INSUFFICIENT_EVIDENCE"
+   },
+   "new": {
+    "text": "You're going to be consuming the best quality protein. Your muscles, your connective tissue will get the highest quality amino acids",
+    "source": "both",
+    "stance": "ENDORSES",
+    "verdict": "SUPPORTED"
+   }
+  },
+  {
+   "key": "v23:c1",
+   "changed": [
+    "text",
+    "verdict"
+   ],
+   "old": {
+    "text": "[vaccines] can cause everything from osteoporosis to autism",
+    "source": "both",
+    "stance": "REFUTES",
+    "verdict": "CONTRADICTED"
+   },
+   "new": {
+    "text": "[gluten] can cause everything from osteoporosis to autism",
+    "source": "both",
+    "stance": "REFUTES",
+    "verdict": "INSUFFICIENT_EVIDENCE"
+   }
+  },
+  {
+   "key": "v36:c6",
+   "changed": [
+    "added"
+   ],
+   "old": null,
+   "new": {
+    "text": "Irish Sea Moss: Cures Thyroid Issues",
+    "source": "screen",
+    "stance": "ENDORSES",
+    "verdict": "UNSUPPORTED"
+   }
+  },
+  {
+   "key": "v36:c7",
+   "changed": [
+    "added"
+   ],
+   "old": null,
+   "new": {
+    "text": "Burdock Root: Rids Kidney & Gallbladder Stones",
+    "source": "screen",
+    "stance": "ENDORSES",
+    "verdict": "UNSUPPORTED"
+   }
+  },
+  {
+   "key": "v36:c8",
+   "changed": [
+    "added"
+   ],
+   "old": null,
+   "new": {
+    "text": "Burdock Root: Lowers Blood-Sugar levels",
+    "source": "screen",
+    "stance": "ENDORSES",
+    "verdict": "INSUFFICIENT_EVIDENCE"
+   }
+  },
+  {
+   "key": "v71:c6",
+   "changed": [
+    "verdict"
+   ],
+   "old": {
+    "text": "sunlight, that can penetrate deep into the body and help increase nitric oxide in the inside of the arteries",
+    "source": "both",
+    "stance": "ENDORSES",
+    "verdict": "MIXED"
+   },
+   "new": {
+    "text": "sunlight, that can penetrate deep into the body and help increase nitric oxide in the inside of the arteries",
+    "source": "both",
+    "stance": "ENDORSES",
+    "verdict": "INSUFFICIENT_EVIDENCE"
+   }
+  },
+  {
+   "key": "v109:c6",
+   "changed": [
+    "verdict"
+   ],
+   "old": {
+    "text": "[puede llegar a darte] pancreatitis",
+    "source": "both",
+    "stance": "ENDORSES",
+    "verdict": "INSUFFICIENT_EVIDENCE"
+   },
+   "new": {
+    "text": "[puede llegar a darte] pancreatitis",
+    "source": "both",
+    "stance": "ENDORSES",
+    "verdict": "CONTRADICTED"
+   }
+  },
+  {
+   "key": "v120:c1",
+   "changed": [
+    "verdict"
+   ],
+   "old": {
+    "text": "los beneficios son muchísimo primero elimina los metales pesados del cuerpo",
+    "source": "both",
+    "stance": "ENDORSES",
+    "verdict": "INSUFFICIENT_EVIDENCE"
+   },
+   "new": {
+    "text": "los beneficios son muchísimo primero elimina los metales pesados del cuerpo",
+    "source": "both",
+    "stance": "ENDORSES",
+    "verdict": "UNSUPPORTED"
+   }
+  }
+ ],
+ "items_touched": {
+  "extract_claims": [
+   "v21",
+   "v23",
+   "v36"
+  ],
+  "analyze_stance": [
+   "v21:c2",
+   "v21:c7",
+   "v23:c1",
+   "v36:c6",
+   "v36:c7",
+   "v36:c8"
+  ],
+  "verify_claims": [
+   "v109:c6",
+   "v11:c3",
+   "v120:c1",
+   "v21:c2",
+   "v21:c7",
+   "v22:c1",
+   "v23:c1",
+   "v36:c6",
+   "v36:c7",
+   "v36:c8",
+   "v71:c6"
+  ]
+ }
+}
