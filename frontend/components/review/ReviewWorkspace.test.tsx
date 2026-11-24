@@ -1,45 +1,103 @@
 import { fireEvent, render, screen, waitFor, within } from "@testing-library/react";
+import { useState } from "react";
 import { describe, expect, it, vi } from "vitest";
 import { adaptResult } from "@/lib/api/result-adapter";
 import { adaptCase } from "@/lib/api/review-adapter";
+import type { RawCase } from "@/lib/api/review-types";
 import { MOCK_MISINFO_PENDING, MOCK_UNPROVEN } from "@/lib/api/mocks/results";
-import { MOCK_CASE_DECIDED, MOCK_CASE_HIGH, MOCK_CASE_OWN, MOCK_VIEWER_ID } from "@/lib/api/mocks/reviews";
+import { MOCK_CASE_DECIDED, MOCK_CASE_HIGH, MOCK_CASE_NORMAL, MOCK_CASE_OWN, MOCK_VIEWER_ID, mockRevealed } from "@/lib/api/mocks/reviews";
 import { ReviewWorkspace } from "./ReviewWorkspace";
 
 const result = adaptResult(MOCK_MISINFO_PENDING);
-const setup = (raw = MOCK_CASE_HIGH, onDecide = vi.fn().mockResolvedValue({ ok: true })) => {
-  render(<ReviewWorkspace review={adaptCase(raw, MOCK_VIEWER_ID)} result={result} onDecide={onDecide} onOverrideSeverity={vi.fn().mockResolvedValue({ ok: true })} />);
-  return onDecide;
+
+/** Stands in for WorkspaceClient: on a saved pre-reveal, the server's revealed case replaces the old one. */
+function Harness({ raw, onDecide, onPreReveal }: { raw: RawCase; onDecide: ReturnType<typeof vi.fn>; onPreReveal: ReturnType<typeof vi.fn> }) {
+  const [c, setC] = useState(raw);
+  return (
+    <ReviewWorkspace
+      review={adaptCase(c, MOCK_VIEWER_ID)}
+      result={result}
+      onDecide={onDecide}
+      onPreReveal={async (body) => {
+        const r = await onPreReveal(body);
+        if (r.ok) setC(mockRevealed(body.claims));
+        return r;
+      }}
+      onOverrideSeverity={vi.fn().mockResolvedValue({ ok: true })}
+    />
+  );
+}
+
+const setup = (raw: RawCase = MOCK_CASE_HIGH, onDecide = vi.fn().mockResolvedValue({ ok: true }), onPreReveal = vi.fn().mockResolvedValue({ ok: true })) => {
+  render(<Harness raw={raw} onDecide={onDecide} onPreReveal={onPreReveal} />);
+  return { onDecide, onPreReveal };
 };
 const choose = (label: string | RegExp, value: string) => fireEvent.change(screen.getByRole("combobox", { name: label }), { target: { value } });
 const note = () => screen.getByRole("textbox", { name: /^Note/ });
+const judgeAll = () => {
+  for (const id of ["c1", "c2", "c3"]) {
+    fireEvent.change(document.getElementById(`mine-st-${id}`)!, { target: { value: "ENDORSES" } });
+    fireEvent.change(document.getElementById(`mine-v-${id}`)!, { target: { value: "INSUFFICIENT_EVIDENCE" } });
+  }
+};
 
-describe("ReviewWorkspace: HIGH priority (judgement first)", () => {
-  it("hides the system's label, verdicts and reasons until the reviewer commits", () => {
+describe("ReviewWorkspace: HIGH priority (judgement first, run by the server since T34)", () => {
+  it("hides the system's label, verdicts and reasons while the server withholds them", () => {
     setup();
     expect(screen.getByRole("heading", { name: "Your judgement first" })).toBeInTheDocument();
     expect(screen.queryByText("System label:")).not.toBeInTheDocument();
     expect(screen.queryByText("Contradicted by evidence", { ignore: "option, script, style" })).not.toBeInTheDocument();
     expect(screen.queryByText(/A false claim is mentioned/)).not.toBeInTheDocument();
     expect(screen.queryByRole("link", { name: "Open the full result" })).not.toBeInTheDocument();
-    // the evidence itself is shown first
+    expect(screen.queryByText("Decided the label")).not.toBeInTheDocument();
+    // each claim is shown as stated
     expect(screen.getAllByText(/Drinking hot water every hour/).length).toBeGreaterThan(0);
   });
 
-  it("keeps Commit disabled until every deciding claim has a stance and a verdict, then reveals and compares", () => {
+  it("shows no sources and no source relations before the reveal, even if a result were passed", () => {
     setup();
+    expect(screen.queryByText(/Hot drinks and symptom relief/)).not.toBeInTheDocument();
+    expect(screen.queryByText("Contradicts")).not.toBeInTheDocument();
+    expect(screen.getByText(/sources and the system's reading open after you commit/)).toBeInTheDocument();
+  });
+
+  it("asks for a judgement on every claim the case lists, not only the deciding one", () => {
+    setup();
+    for (const n of [1, 2, 3]) expect(screen.getByRole("group", { name: `Claim ${n}` })).toBeInTheDocument();
     const commit = screen.getByRole("button", { name: "Commit and show system assessment" });
+    fireEvent.change(document.getElementById("mine-st-c1")!, { target: { value: "ENDORSES" } });
+    fireEvent.change(document.getElementById("mine-v-c1")!, { target: { value: "CONTRADICTED" } });
     expect(commit).toBeDisabled();
-    choose("The speaker", "ENDORSES");
-    expect(commit).toBeDisabled();
-    choose("The evidence", "INSUFFICIENT_EVIDENCE");
+    judgeAll();
     expect(commit).toBeEnabled();
-    fireEvent.click(commit);
-    expect(screen.getByRole("heading", { name: "You and the system" })).toBeInTheDocument();
-    expect(screen.getByText(/You and the system disagree on claim 1/)).toBeInTheDocument();
+  });
+
+  it("sends T34's pre-reveal body, then shows the server's revealed case and the comparison", async () => {
+    const { onPreReveal } = setup();
+    judgeAll();
+    fireEvent.click(screen.getByRole("button", { name: "Commit and show system assessment" }));
+    await waitFor(() => expect(onPreReveal).toHaveBeenCalledTimes(1));
+    expect(onPreReveal.mock.calls[0][0]).toEqual({
+      claims: ["c1", "c2", "c3"].map((id) => ({ claim_id: id, stance: "ENDORSES", verdict: "INSUFFICIENT_EVIDENCE" })),
+    });
+    expect(await screen.findByRole("heading", { name: "You and the system" })).toBeInTheDocument();
+    expect(screen.getByText(/You and the system disagree on claim 1, claim 2/)).toBeInTheDocument();
     expect(screen.getByText("System label:")).toBeInTheDocument();
-    // the committed judgement can't be changed afterwards
-    expect(screen.getByRole("combobox", { name: "The speaker" })).toBeDisabled();
+    expect(screen.getByText("Decided the label")).toBeInTheDocument();
+    expect(screen.getAllByText(/Hot drinks and symptom relief/).length).toBeGreaterThan(0);
+    // the recorded judgement can't be changed afterwards, and still shows what was chosen
+    expect(document.getElementById("mine-st-c1")).toBeDisabled();
+    expect(document.getElementById("mine-st-c1")).toHaveValue("ENDORSES");
+    expect(screen.getByRole("radio", { name: /Approve the label/ })).toBeEnabled();
+  });
+
+  it("keeps the choices and says why when the server refuses the judgement", async () => {
+    setup(MOCK_CASE_HIGH, undefined, vi.fn().mockResolvedValue({ ok: false, message: "Give a stance and a verdict for every claim, then try again." }));
+    judgeAll();
+    fireEvent.click(screen.getByRole("button", { name: "Commit and show system assessment" }));
+    expect(await screen.findByRole("alert")).toHaveTextContent(/every claim/);
+    expect(screen.queryByText("System label:")).not.toBeInTheDocument();
+    expect(document.getElementById("mine-v-c3")).toHaveValue("INSUFFICIENT_EVIDENCE");
   });
 
   it("doesn't allow a decision before the reveal", () => {
@@ -49,7 +107,7 @@ describe("ReviewWorkspace: HIGH priority (judgement first)", () => {
 });
 
 describe("ReviewWorkspace: decision form", () => {
-  const normal = { ...MOCK_CASE_HIGH, severity: "MEDIUM" };
+  const normal = MOCK_CASE_NORMAL;
 
   it("shows the system assessment straight away on non-HIGH cases", () => {
     setup(normal);
@@ -58,7 +116,7 @@ describe("ReviewWorkspace: decision form", () => {
   });
 
   it("refuses to submit without a decision, a reason and a note", async () => {
-    const onDecide = setup(normal);
+    const { onDecide } = setup(normal);
     fireEvent.click(screen.getByRole("button", { name: "Save decision" }));
     expect(await screen.findByText("Choose a decision.")).toBeInTheDocument();
     expect(screen.getByText("Choose a reason.")).toBeInTheDocument();
@@ -66,8 +124,8 @@ describe("ReviewWorkspace: decision form", () => {
     expect(onDecide).not.toHaveBeenCalled();
   });
 
-  it("sends a complete approval as T27's request body", async () => {
-    const onDecide = setup(normal);
+  it("sends a complete approval as T34's request body", async () => {
+    const { onDecide } = setup(normal);
     fireEvent.click(screen.getByRole("radio", { name: /Approve the label/ }));
     choose(/^Reason/, "SYSTEM_CORRECT");
     fireEvent.change(note(), { target: { value: "Both sources contradict the claim." } });
@@ -75,7 +133,8 @@ describe("ReviewWorkspace: decision form", () => {
     await waitFor(() => expect(onDecide).toHaveBeenCalledTimes(1));
     expect(onDecide.mock.calls[0][0].body).toEqual({
       action: "APPROVE",
-      reason: "[SYSTEM_CORRECT] Both sources contradict the claim.",
+      reason: "Both sources contradict the claim.",
+      reason_code: "SYSTEM_CORRECT",
       corrected_label: null,
       claim_corrections: [],
     });
@@ -103,17 +162,19 @@ describe("ReviewWorkspace: decision form", () => {
 
 describe("ReviewWorkspace: read-only cases", () => {
   it("doesn't let reviewers decide their own submission", () => {
-    setup({ ...MOCK_CASE_OWN, severity: "MEDIUM" });
+    setup({ ...MOCK_CASE_OWN, severity: "MEDIUM", blind_step_required: false, system_view_withheld: false });
     expect(screen.getByText("Your submission. Another reviewer decides.")).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Save decision" })).toBeDisabled();
   });
 
   it("shows who decided a resolved case, by name, and locks the form", () => {
     render(
-      <ReviewWorkspace review={adaptCase({ ...MOCK_CASE_DECIDED, severity: "MEDIUM" }, MOCK_VIEWER_ID)} result={adaptResult(MOCK_UNPROVEN)} onDecide={vi.fn()} onOverrideSeverity={vi.fn()} />,
+      <ReviewWorkspace review={adaptCase(MOCK_CASE_DECIDED, MOCK_VIEWER_ID)} result={adaptResult(MOCK_UNPROVEN)} onDecide={vi.fn()} onPreReveal={vi.fn()} onOverrideSeverity={vi.fn()} />,
     );
     const decision = screen.getByRole("region", { name: "Decision" });
     expect(within(decision).getByText(/Approved by Dr. B. Osei/)).toBeInTheDocument();
+    expect(within(decision).getByText("Reason: The system's assessment is right")).toBeInTheDocument();
+    expect(within(decision).getByText("No study supports sea moss for thyroid disease.")).toBeInTheDocument();
     expect(screen.getByRole("radio", { name: /Approve the label/ })).toBeDisabled();
     expect(screen.getByText("Entries can't be edited or removed.")).toBeInTheDocument();
   });

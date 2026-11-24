@@ -1,8 +1,8 @@
 // Review decision form: rules and request body (HANDOFF §6.8; lead decisions Q1, Q2).
-// Pure functions, so every rule is unit-tested. The server (T27) checks again;
+// Pure functions, so every rule is unit-tested. The server (T27, T34) checks again;
 // these rules decide what the form allows, they are not the control.
 
-import type { Severity, Stance, Verdict, VideoLabel } from "@/lib/vocabulary";
+import type { Stance, Verdict, VideoLabel } from "@/lib/vocabulary";
 
 export type DecisionKind = "APPROVE" | "CORRECT" | "REJECT" | "REQUEST_REANALYSIS";
 
@@ -13,10 +13,7 @@ export const DECISIONS: { kind: DecisionKind; title: string; description: string
   { kind: "REQUEST_REANALYSIS", title: "Request re-analysis", description: "Run the analysis again. The item leaves the queue until it returns.", submit: "Request re-analysis" },
 ];
 
-/**
- * Reason codes (Q2: a code and a note on every decision). The six codes T34 will add
- * as the reason_code enum; until then the code is folded into the free-text reason.
- */
+/** Reason codes (Q2, D7): T34's `reason_code` enum, sent next to the written note. */
 export const REASON_CODES = [
   { code: "SYSTEM_CORRECT", text: "The system's assessment is right" },
   { code: "CLAIM_OVERGENERALISED", text: "Claim is an overgeneralisation the evidence rules out" },
@@ -45,8 +42,9 @@ export const EMPTY_FORM: DecisionForm = { kind: null, correctedLabel: null, reas
 
 export type DecisionContext = {
   proposedLabel: VideoLabel | null;
-  severity: Severity | null;
-  /** HIGH cases: the reviewer's own judgement, committed before the reveal (Q1). */
+  /** T34: the server says this case needs the reviewer's own judgement first (open HIGH). */
+  blindRequired: boolean;
+  /** The reviewer's own judgement, as the server recorded it (Q1). */
   preReveal: PreReveal[] | null;
   isOwnSubmission: boolean;
   alreadyDecided: boolean;
@@ -54,14 +52,12 @@ export type DecisionContext = {
 
 export type FieldErrors = Partial<Record<"kind" | "correctedLabel" | "reasonCode" | "note" | "preReveal" | "form", string>>;
 
-/** Whether the blind first step applies (Q1: HIGH only). */
-export const needsBlindStep = (ctx: Pick<DecisionContext, "severity">) => ctx.severity === "HIGH";
 
 export function validateDecision(f: DecisionForm, ctx: DecisionContext): FieldErrors {
   const e: FieldErrors = {};
   if (ctx.alreadyDecided) e.form = "This case has already been decided.";
   else if (ctx.isOwnSubmission) e.form = "You submitted this video. Another reviewer decides.";
-  if (needsBlindStep(ctx) && !ctx.preReveal?.length) e.preReveal = "Record your own judgement first.";
+  if (ctx.blindRequired && !ctx.preReveal?.length) e.preReveal = "Record your own judgement first.";
   if (!f.kind) e.kind = "Choose a decision.";
   if (f.kind === "CORRECT") {
     if (!f.correctedLabel) e.correctedLabel = "Choose the corrected label.";
@@ -70,6 +66,10 @@ export function validateDecision(f: DecisionForm, ctx: DecisionContext): FieldEr
     }
   }
   if (!f.reasonCode) e.reasonCode = "Choose a reason.";
+  else if (f.reasonCode === "SYSTEM_CORRECT" && f.kind && f.kind !== "APPROVE") {
+    // T34: the server accepts SYSTEM_CORRECT only with APPROVE.
+    e.reasonCode = "\"The system's assessment is right\" goes only with Approve. Choose another reason.";
+  }
   const note = f.note.trim();
   if (note.length < NOTE_MIN) e.note = `Write at least ${NOTE_MIN} characters explaining your decision.`;
   else if (note.length > NOTE_MAX) e.note = `Keep the note under ${NOTE_MAX} characters.`;
@@ -114,17 +114,12 @@ export function disagreements(
     .filter((d) => d.stance || d.verdict);
 }
 
-/**
- * Body for POST /v1/reviews/{id}/decision, exactly T27's DecisionRequest. T27 forbids
- * unknown fields, so the proposed reason_code / pre_reveal are returned separately
- * (`proposed`) and are only sent once the API accepts them.
- */
-export function decisionRequest(f: DecisionForm, preReveal: PreReveal[] | null) {
-  const code = REASON_CODES.find((r) => r.code === f.reasonCode);
+/** Body for POST /v1/reviews/{id}/decision: T34's DecisionRequest (extra fields are forbidden). */
+export function decisionRequest(f: DecisionForm) {
   const body = {
     action: f.kind as DecisionKind,
-    // One string today: the code first, so it can be found in the audit trail.
-    reason: `[${f.reasonCode}] ${f.note.trim()}`,
+    reason: f.note.trim(),
+    reason_code: f.reasonCode as ReasonCode,
     corrected_label: f.kind === "CORRECT" ? f.correctedLabel : null,
     claim_corrections:
       f.kind === "CORRECT"
@@ -133,5 +128,18 @@ export function decisionRequest(f: DecisionForm, preReveal: PreReveal[] | null) 
             .map((c) => ({ claim_id: c.claimId, ...(c.stance ? { stance: c.stance } : {}), ...(c.verdict ? { verdict: c.verdict } : {}) }))
         : [],
   };
-  return { body, proposed: { reason_code: f.reasonCode, reason_text: code?.text ?? null, pre_reveal: preReveal } };
+  return { body };
 }
+
+/** Body for POST /v1/reviews/{id}/pre-reveal (T34): a stance and verdict for every claim. */
+export function preRevealRequest(mine: PreReveal[], note?: string) {
+  const n = note?.trim();
+  return {
+    claims: mine.map((m) => ({ claim_id: m.claimId, stance: m.stance, verdict: m.verdict })),
+    ...(n ? { note: n } : {}),
+  };
+}
+
+/** Text for a reason code, or null for an unknown one. */
+export const reasonCodeText = (code: string | null | undefined): string | null =>
+  REASON_CODES.find((r) => r.code === code)?.text ?? null;
