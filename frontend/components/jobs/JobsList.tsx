@@ -16,7 +16,7 @@ type Props = {
   error: string | null;
 };
 
-const hasFilters = (f: JobFilters) => Boolean(f.q || f.state || f.label || f.needsReview);
+const hasFilters = (f: JobFilters) => Boolean(f.q || f.state || f.label || f.needsReview || f.mine);
 
 /** Jobs.dc.html. Whole rows link to the video; filters live in the URL (the page). */
 export function JobsList({ rows, total, filters: f, onFilters, error }: Props) {
@@ -24,12 +24,19 @@ export function JobsList({ rows, total, filters: f, onFilters, error }: Props) {
   useEffect(() => setQ(f.q), [f.q]);
   const running = rows?.filter((r) => r.active).length ?? 0;
   const pages = total !== null ? Math.max(1, Math.ceil(total / PAGE_SIZE)) : null;
+  // T33: reviewers and admins also see other people's videos. Show who submitted each
+  // one, and offer "only mine", once a row from someone else appears (or the filter is on).
+  const [seesOthers, setSeesOthers] = useState(false);
+  useEffect(() => {
+    if (rows?.some((r) => !r.isOwn && r.submittedBy !== null)) setSeesOthers(true);
+  }, [rows]);
+  const shared = seesOthers || f.mine;
 
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="font-serif text-h1 text-ink">Your videos</h1>
+          <h1 className="font-serif text-h1 text-ink">{shared && !f.mine ? "Videos" : "Your videos"}</h1>
           {running > 0 && <p className="text-small text-ink-2" aria-live="polite">Updating {running} running {running === 1 ? "job" : "jobs"}…</p>}
         </div>
         <Link href="/" className={buttonClass("primary")}>
@@ -71,6 +78,12 @@ export function JobsList({ rows, total, filters: f, onFilters, error }: Props) {
           <input type="checkbox" checked={f.needsReview} onChange={(e) => onFilters({ ...f, needsReview: e.target.checked, page: 1 })} />
           Needs review only
         </label>
+        {shared && (
+          <label className="flex min-h-10 items-center gap-2 text-small text-ink">
+            <input type="checkbox" checked={f.mine} onChange={(e) => onFilters({ ...f, mine: e.target.checked, page: 1 })} />
+            Only videos I submitted
+          </label>
+        )}
         <Button type="submit" variant="secondary">Search</Button>
       </form>
 
@@ -95,13 +108,14 @@ export function JobsList({ rows, total, filters: f, onFilters, error }: Props) {
       ) : (
         <div className="overflow-x-auto rounded-lg border border-line bg-surface shadow-1">
           <table className="w-full min-w-[720px] border-collapse text-small">
-            <caption className="sr-only">Your videos, newest first</caption>
+            <caption className="sr-only">{shared && !f.mine ? "Videos" : "Your videos"}, newest first</caption>
             <thead>
               <tr className="border-b border-line text-left text-ink-2">
                 <th scope="col" className="px-4 py-2.5 font-semibold">Video</th>
                 <th scope="col" className="px-4 py-2.5 font-semibold" aria-sort="descending">Submitted</th>
                 <th scope="col" className="px-4 py-2.5 font-semibold">State</th>
                 <th scope="col" className="px-4 py-2.5 font-semibold">Label</th>
+                {shared && <th scope="col" className="px-4 py-2.5 font-semibold">Submitted by</th>}
               </tr>
             </thead>
             <tbody>
@@ -119,6 +133,7 @@ export function JobsList({ rows, total, filters: f, onFilters, error }: Props) {
                     {r.step && <div className="text-cap text-ink-3">{r.step}</div>}
                   </td>
                   <td className="px-4 py-3">{r.label ? <LabelBadge label={r.label} basis={r.basis} /> : <span className="text-ink-3">Not yet</span>}</td>
+                  {shared && <td className="px-4 py-3 text-ink-2">{r.submittedBy ?? <span className="text-ink-3">Not recorded</span>}</td>}
                 </tr>
               ))}
             </tbody>

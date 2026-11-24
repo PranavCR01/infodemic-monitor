@@ -155,7 +155,7 @@ export function ReviewWorkspace({ review, result, onDecide, onOverrideSeverity }
           <h1 className="font-mono text-h2 text-ink">{review.filename}</h1>
           {review.severity && <SeverityTag severity={review.severity} />}
           <span className="text-small text-ink-2">Waiting {review.waiting}</span>
-          {review.submittedBy && <span className="text-small text-ink-2">· Submitted by {review.submittedBy}</span>}
+          {review.submittedBy && <span className="text-small text-ink-2">· {review.isOwn ? "You submitted this video" : `Submitted by ${review.submittedBy}`}</span>}
           {revealed && (
             <Link href={`/jobs/${review.jobId}`} className="ml-auto text-small text-primary underline">Open the full result</Link>
           )}

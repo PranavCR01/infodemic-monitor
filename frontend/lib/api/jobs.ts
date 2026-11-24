@@ -26,6 +26,7 @@ export function filtersFromSearch(p: URLSearchParams): JobFilters {
     state: state && STATES.includes(state) ? state : "",
     label: p.get("label") ?? "",
     needsReview: p.get("review") === "1",
+    mine: p.get("mine") === "1",
     page: Number.isInteger(page) && page > 0 ? page : 1,
   };
 }
@@ -36,6 +37,7 @@ export function searchFromFilters(f: JobFilters): string {
   if (f.state) p.set("state", f.state);
   if (f.label) p.set("label", f.label);
   if (f.needsReview) p.set("review", "1");
+  if (f.mine) p.set("mine", "1");
   if (f.page > 1) p.set("page", String(f.page));
   const s = p.toString();
   return s ? `?${s}` : "";
@@ -48,15 +50,16 @@ export function jobsQuery(f: JobFilters = EMPTY_FILTERS): string {
   if (f.label) p.set("label", f.label);
   const statuses = f.needsReview ? STATE_FILTER.NEEDS_REVIEW : f.state ? STATE_FILTER[f.state] : [];
   if (statuses.length) p.set("status", statuses.join(","));
+  if (f.mine) p.set("mine", "true"); // T33: only the caller's own jobs
   return p.toString();
 }
 
-export async function fetchJobs(f: JobFilters): Promise<{ rows: JobRow[]; total: number | null } | null> {
+export async function fetchJobs(f: JobFilters, viewerId: string | null = null): Promise<{ rows: JobRow[]; total: number | null } | null> {
   try {
     let res = await apiFetch(`/v1/jobs?${jobsQuery(f)}`);
     if (res.status === 404) res = await apiFetch(`/jobs?limit=50`); // before T28 is deployed
     if (!res.ok) return null;
-    return adaptJobList(await res.json());
+    return adaptJobList(await res.json(), viewerId);
   } catch {
     return null;
   }

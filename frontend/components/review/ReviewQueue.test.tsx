@@ -1,10 +1,10 @@
 import { fireEvent, render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { adaptQueueItem } from "@/lib/api/review-adapter";
-import { MOCK_QUEUE } from "@/lib/api/mocks/reviews";
+import { MOCK_QUEUE, MOCK_VIEWER_ID } from "@/lib/api/mocks/reviews";
 import { ReviewQueue } from "./ReviewQueue";
 
-const items = MOCK_QUEUE.map(adaptQueueItem);
+const items = MOCK_QUEUE.map((i) => adaptQueueItem(i, MOCK_VIEWER_ID));
 const view = (list = items) =>
   render(<ReviewQueue items={list} view="open" onViewChange={vi.fn()} hrefFor={(i) => `/review/${i.reviewId}`} />);
 
@@ -26,6 +26,7 @@ describe("ReviewQueue", () => {
     const own = screen.getByText("lemon-detox.mp4").closest("tr")!;
     expect(within(own).queryByRole("link")).not.toBeInTheDocument();
     expect(within(own).getByText("Your submission. Another reviewer decides.")).toBeInTheDocument();
+    expect(within(own).getByText("You")).toBeInTheDocument();
   });
 
   it("links each case to its workspace, with the file name for screen readers", () => {
