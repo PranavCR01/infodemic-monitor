@@ -1430,6 +1430,44 @@ shape; no label, verdict or stored row changes.
   before T26); (2) the reason wording is a draft for the project lead to edit (one table,
   `REASON_TEXT`). No migration in T26.
 
+## 7y. Request Review (T32, no issue; design §11, §12, §17)
+
+Built by the automated build on 2026-11-24 at the frontend session's request (lead, D7).
+Additive: no migration, no existing field or response changes shape.
+
+- **Route:** `POST /v1/jobs/{job_id}/review-request` with body `{"note": "..."}` (in
+  `app/api/routers/reviews.py`; service `review_service.request_review`). 201 with
+  `created: true` when a case is opened; 200 with `created: false` and the existing case
+  when the job already has one (opened by the review rule or by an earlier request, open
+  or resolved); nothing is logged or changed on that path, and the first request's note
+  stands. Keyed by job, not video: the result payload already carries `job_id`.
+- **Who:** anyone who may read the job through `app/api/ownership.owned_job_or_404`
+  (owner, or reviewer/admin, per T27/T33), else 404, same as a missing job. No separate
+  role check in the route, so T28/T33's owner rule (including "NULL-owner rows admin only")
+  applies here unchanged. **Until T28/T33 fill in `can_view_job`, any signed-in user can
+  request review on any job**: same gap as every other read.
+- **Note:** required, stripped, 1–2000 characters (`REQUEST_NOTE_MAX`); the body forbids
+  extra fields, so the requester can't be named in it. Stored as the `reason` of a
+  `review_requested` audit event (actor = token subject, requester role, job status
+  before, proposed label). No column was added for it: reviewers get it as
+  `request {requested_by, note, requested_at}` on `GET /v1/reviews/{id}` (null for
+  rule-opened cases) and in the audit trail.
+- **Which jobs:** status SUCCESS with a stored result; anything else (pending, running,
+  failed, no result) is 409. The job moves to REVIEW_REQUIRED (§12: review is a state),
+  so the reviewer decision flow from T27 works unchanged (approve/correct → SUCCESS, etc.).
+  The label and verdicts are not touched.
+- **The case:** reason `user_requested` (rule `user_requested`; `rule_of` maps it, but it
+  is not in `REVIEW_RULES`: no automatic rule raises it). Proposed result = the stored
+  result row (`source: "stored_result"`), since there's no graph state to dump. Severity
+  is computed from the stored claim/stance/verification rows with the same table as
+  `assess`, so the case sorts in the queue like any other and claims can be overridden;
+  no claim rows (single-call path) → no severity. An unknown stored verdict counts as not
+  MISINFO-relevant rather than erroring.
+- **Wording:** `REASON_TEXT["user_requested"]` = "Someone asked for a person to check this
+  result." (plain, no rule code; T30 is reworking the rest of that table).
+- **Race:** two concurrent first requests: the unique `human_reviews.job_id` makes the
+  second insert fail; it rolls back and returns the winner's case.
+- **The requester's response** omits the proposed result and audit trail (reviewer data).
 ## 7x. Signed Playback URL (T29, no issue; design §12, §15, §17)
 
 - **Endpoint:** `GET /v1/jobs/{job_id}/playback` returns `PlaybackUrlResponse`
@@ -1592,6 +1630,11 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-24**: T32 (no issue; design §11, §12, §17) request review by the automated
+  build: `POST /v1/jobs/{job_id}/review-request` opens a `user_requested` case with a
+  required note (audit-logged), idempotent per job, access via `ownership.py` (404 for
+  others). No migration. 1204 passed, 0 skipped locally with Postgres 16 + pgvector.
+  Real per-user restriction waits for T28/T33. Decisions in §7y.
 - **2026-11-23**: T31 (no issue; design §6, §8, §12) "How we searched" per claim by the
   automated build: `retrieve_evidence` records a `search_trail` per round (queries run,
   hits, filters, dedup, cache, references consulted); persisted to `claims.search_trail`
