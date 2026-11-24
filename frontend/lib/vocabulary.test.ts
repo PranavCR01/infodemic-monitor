@@ -173,6 +173,9 @@ describe("review reasons", () => {
 
   it("gives plain language, never the code", () => {
     expect(reasonText("unproven_claim:c3")).toBe(REVIEW_REASONS.unproven_claim);
+    // T37: a video-level reason with no claim id
+    expect(reasonRule("nothing_judged")).toBe("nothing_judged");
+    expect(reasonText("nothing_judged")).toBe("No claim in this video could be checked against the evidence.");
     const unknown = reasonText("brand_new_rule:c9");
     expect(unknown).not.toContain("brand_new_rule");
     expect(unknown).not.toContain("c9");
