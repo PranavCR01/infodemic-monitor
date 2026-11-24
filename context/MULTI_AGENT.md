@@ -2073,6 +2073,17 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-24**: T44 (design §9, §11, §14) re-pinned the judge cross-check to the golden
+  set after the A2-A4 rule sweep (data/golden-label-set 948b1c2: 550 claims; in scope
+  NO_MISINFO 47 / CANNOT_RECOGNIZE 59 / MISINFO 39 (26 contradicted, 12 unproven, 1
+  denies_supported) / DEBUNKING 17; 71 videos in review; all match the queue's numbers).
+  Labels, bases, deciding claims and review routing agree on 162/162 in-scope videos;
+  exact review reasons on 149/162 (152 @ dcf77b0). The only difference kind is still
+  `weak_evidence_covered_by_judge_reason`: 25 reasons on 13 videos (20 on 10 @ dcf77b0;
+  +3 from v22/v35/v161 becoming MISINFO/unproven, +2 from v36's new deciding screen-only
+  claims c10/c14). `nothing_judged` is shared on 24 videos (26; v35 and v161 now decide).
+  The golden judge.py is byte-identical to dcf77b0's. Neither judge changed. CI's golden
+  fetch reads the pin from the fixture, so it follows automatically.
 - **2026-11-24**: T42 (design §9, §11, §14) re-pinned the judge cross-check to the
   adjudicated golden set (data/golden-label-set dcf77b0: 538 claims; in scope NO_MISINFO
   48 / CANNOT_RECOGNIZE 61 / MISINFO 36 (26 contradicted, 9 unproven, 1 denies_supported)

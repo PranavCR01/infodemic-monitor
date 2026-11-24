@@ -43,16 +43,17 @@ def results() -> list[xc.VideoComparison]:
     return xc.compare_all(VIDEOS, GOLDEN.judge, GOLDEN.review_reasons)
 
 
-# Every difference the cross-check finds on the golden set @ dcf77b0 (adjudicated
-# model-assisted re-label, T42; kind → reasons). All are backend-only review reasons; no
+# Every difference the cross-check finds on the golden set @ 948b1c2 (A2-A4 rule sweep,
+# T44; kind → reasons). All are backend-only review reasons; no
 # label, misinfo_basis, deciding-claim or review-routing difference. A change to either
 # judge that adds, removes or reclassifies a difference fails here on purpose.
 EXPECTED_DIFFERENCES = {
-    # 20 reasons on 10 videos: weak_evidence:<cid> on a deciding claim the golden judge
-    # already sends with its own reason for the same claim (unproven_claim on 9 MISINFO
-    # unproven videos, 19 reasons; mixed_evidence:c2 on v65, 1 reason). Was 17 @ 022ac44:
-    # the re-label moved MISINFO/unproven from 7 to 9 videos.
-    "weak_evidence_covered_by_judge_reason": 20,
+    # 25 reasons on 13 videos: weak_evidence:<cid> on a deciding claim the golden judge
+    # already sends with its own reason for the same claim (unproven_claim on 12 MISINFO
+    # unproven videos, 24 reasons; mixed_evidence:c2 on v65, 1 reason). Was 17 @ 022ac44
+    # and 20 on 10 videos @ dcf77b0; the rule sweep made v22, v35 and v161 MISINFO/unproven
+    # (+3) and added two deciding UNSUPPORTED screen-only claims to v36 (c10, c14: +2).
+    "weak_evidence_covered_by_judge_reason": 25,
     # D4 dropped (2026-11-24): the former weak_evidence_on_non_deciding_claim kind is gone.
     # T42: the golden judge @ dcf77b0 raises nothing_judged too, so the former
     # nothing_judged_not_in_pinned_golden_judge kind (28 @ 022ac44) is gone.
@@ -70,11 +71,11 @@ def test_vendored_golden_judge_is_the_branch_file_verbatim():
 
 def test_fixture_covers_every_labelled_video():
     assert len(VIDEOS) == 181
-    assert sum(len(v.claims) for v in VIDEOS) == 538
+    assert sum(len(v.claims) for v in VIDEOS) == 550
     for v in VIDEOS:
         if v.out_of_scope:
             assert not v.claims, v.video_id  # out_of_scope ⇒ no claims
-    # dcf77b0 has 13 in-scope videos with no checkable claim (all CANNOT_RECOGNIZE).
+    # 948b1c2 has 13 in-scope videos with no checkable claim (all CANNOT_RECOGNIZE).
     no_claims = [v for v in VIDEOS if not v.out_of_scope and not v.claims]
     assert len(no_claims) == 13
     assert {v.recorded_label for v in no_claims} == {"CANNOT_RECOGNIZE"}
@@ -102,13 +103,13 @@ def test_same_misinfo_basis_on_every_video(results):
 
 def test_misinfo_counts_by_basis(results):
     counts = Counter(r.backend.basis for r in results if r.backend.label == "MISINFO")
-    assert dict(counts) == {"contradicted": 26, "unproven": 9, "denies_supported": 1}
+    assert dict(counts) == {"contradicted": 26, "unproven": 12, "denies_supported": 1}
 
 
 def test_recorded_labels_in_scope():
-    """The adjudicated golden set @ dcf77b0 (T42)."""
+    """The golden set after the A2-A4 rule sweep @ 948b1c2 (T44)."""
     counts = Counter(v.recorded_label for v in VIDEOS if not v.out_of_scope)
-    assert dict(counts) == {"NO_MISINFO": 48, "CANNOT_RECOGNIZE": 61, "MISINFO": 36, "DEBUNKING": 17}
+    assert dict(counts) == {"NO_MISINFO": 47, "CANNOT_RECOGNIZE": 59, "MISINFO": 39, "DEBUNKING": 17}
 
 
 def test_same_deciding_claims_on_every_video(results):
@@ -137,7 +138,7 @@ def test_backend_never_drops_a_review_the_golden_judge_asks_for(results):
 def test_every_golden_only_reason_is_one_the_backend_reads_differently_from_section_11(results):
     golden_only = {r.differences[x] for r in results for x in r.golden_only}
     assert golden_only <= {"trigger_on_non_deciding_claim_when_nothing_decides"}
-    assert golden_only == set()  # none at dcf77b0
+    assert golden_only == set()  # none at 948b1c2
 
 
 def test_every_difference_kind_says_which_side_matches_section_9():
@@ -153,9 +154,9 @@ def test_agreement_table_counts(results):
     assert table["misinfo_basis (in scope)"] == (162, 162)
     assert table["deciding claims"] == (162, 162)
     assert table["golden judge reproduces videos.csv label + basis + review_reasons"] == (181, 181)
-    # The 10 inexact videos are the weak_evidence_covered_by_judge_reason ones.
-    assert table["review reasons, exact (shared vocabulary)"] == (152, 162)
-    # Both judges send the same 69 in-scope videos to review.
+    # The 13 inexact videos are the weak_evidence_covered_by_judge_reason ones.
+    assert table["review reasons, exact (shared vocabulary)"] == (149, 162)
+    # Both judges send the same 71 in-scope videos to review.
     assert table["sent to review (shared signals)"] == (162, 162)
 
 
@@ -224,12 +225,12 @@ def test_refuted_unsupported_is_a_known_backend_deviation():
 
 
 def test_nothing_judged_is_shared_with_the_pinned_golden_judge(results):
-    """T37/T42: the golden judge @ dcf77b0 has the nothing_judged rule, so both sides
-    raise it on the same 26 videos (28 @ 022ac44; the re-label changed the claim verdicts
-    of the other 2). Every such video is CANNOT_RECOGNIZE with nothing deciding and has
+    """T37/T42/T44: the golden judge has the nothing_judged rule, so both sides raise it
+    on the same 24 videos @ 948b1c2 (28 @ 022ac44, 26 @ dcf77b0; the rule sweep made v35
+    and v161 MISINFO/unproven, so nothing_judged no longer applies to them). Every such video is CANNOT_RECOGNIZE with nothing deciding and has
     an INSUFFICIENT_EVIDENCE claim."""
     gained = [r for r in results if "nothing_judged" in r.backend.reasons]
-    assert len(gained) == 26
+    assert len(gained) == 24
     assert gained == [r for r in results if "nothing_judged" in r.golden.reasons]
     by_id = {v.video_id: v for v in VIDEOS}
     for r in gained:
@@ -247,7 +248,7 @@ def test_nothing_judged_is_shared_with_the_pinned_golden_judge(results):
 
 
 def test_nothing_judged_agrees_with_the_pinned_golden_judge():
-    """The pinned golden judge raises nothing_judged itself (dcf77b0); a golden judge
+    """The pinned golden judge raises nothing_judged itself (since dcf77b0); a golden judge
     without the rule (as before T42) still yields the classified difference kind."""
     r = xc.compare(_video(("NEUTRAL", "INSUFFICIENT_EVIDENCE")), GOLDEN.judge, GOLDEN.review_reasons)
     assert "nothing_judged" in r.backend.reasons & r.golden.reasons
@@ -265,12 +266,13 @@ def test_not_verifiable_only_video_gains_no_reason():
     assert "nothing_judged" not in r.backend.reasons
 
 
-def test_backend_sends_69_in_scope_videos_to_review(results):
-    """T42: on the adjudicated golden set @ dcf77b0 the backend sends 69 of 162 in-scope
-    videos to review, the same videos the golden judge sends and videos.csv records."""
+def test_backend_sends_71_in_scope_videos_to_review(results):
+    """T44: on the golden set @ 948b1c2 the backend sends 71 of 162 in-scope videos to
+    review, the same videos the golden judge sends and videos.csv records (69 @ dcf77b0;
+    the rule sweep newly sends v22 and v139)."""
     in_scope = [r for r in results if not r.out_of_scope]
     sent = {r.video_id for r in in_scope if r.backend.reasons}
-    assert len(sent) == 69
+    assert len(sent) == 71
     assert sent == {r.video_id for r in in_scope if r.golden.reasons}
     assert sent == {v.video_id for v in VIDEOS if v.recorded_review_reasons}
 
