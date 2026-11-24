@@ -103,11 +103,11 @@ The sources judged whole videos, by a fact-checker's reading or a dataset's anno
 | v89 | fact_checked_creator | no es recomendable y, de hecho, puede ser perjudicial | DEBUNKING | CANNOT_RECOGNIZE |  | yes | The nail-polish trend it refutes has never been studied, so the refuted claim is INSUFFICIENT; sent to review as a possible debunk. |
 | v90 | fact_checked_creator | Mostly_Accurate (page verdict detail: "Correct" + "Lack of context") | — | NO_MISINFO |  | no |  |
 | v91 | fact_checked_creator | Not Toxic | MISINFO | MISINFO | contradicted | no |  |
-| v92 | fact_checked_creator | Not A Cure | MISINFO | CANNOT_RECOGNIZE |  | no | Grounding has no controlled human trials on either side; untested panacea claims are INSUFFICIENT, not CONTRADICTED. |
+| v92 | fact_checked_creator | Not A Cure | MISINFO | CANNOT_RECOGNIZE |  | yes | Grounding has no controlled human trials on either side; untested panacea claims are INSUFFICIENT, not CONTRADICTED. |
 | v93 | fact_checked_creator | crea malinterpretaciones | MISINFO | MISINFO | contradicted | no |  |
-| v94 | fact_checked_creator | crea malinterpretaciones | MISINFO | CANNOT_RECOGNIZE |  | no | Same clip as v93 without the on-screen immunosuppression banner; only ministry statistics remain, and they are not checkable against the allowed sources. |
+| v94 | fact_checked_creator | crea malinterpretaciones | MISINFO | CANNOT_RECOGNIZE |  | yes | Same clip as v93 without the on-screen immunosuppression banner; only ministry statistics remain, and they are not checkable against the allowed sources. |
 | v95 | fact_checked_creator | Hospital and union dismissed claims that brain tumor diagnoses were linked to vaccines | MISINFO | NO_MISINFO |  | no | The fact-check concerns claims linking the cluster to vaccines; this video never mentions vaccines, and its checkable claims (common tumour types, ionizing radiation) are SUPPORTED. |
-| v96 | fact_checked_creator | Alerta | MISINFO | CANNOT_RECOGNIZE |  | no | Nothing retrieved measures heavy metals in the packing oil itself, so the claims are INSUFFICIENT rather than false. |
+| v96 | fact_checked_creator | Alerta | MISINFO | CANNOT_RECOGNIZE |  | yes | Nothing retrieved measures heavy metals in the packing oil itself, so the claims are INSUFFICIENT rather than false. |
 | v97 | fact_checked_creator | Verdadero | NO_MISINFO | NO_MISINFO |  | no |  |
 | v98 | fact_checked_creator | Contexto | DEBUNKING | NO_MISINFO |  | no | The cardiologist explains rather than refutes: his claims about magnet mode and safe distance are SUPPORTED, and no false claim is refuted. |
 | v99 | fact_checked_creator | Alerta | MISINFO | NO_MISINFO |  | yes | The two study figures it quotes (Pescara HR 1.23, Korean 1-year HRs) are reported correctly, so NO_MISINFO fires; the misleading frame (omitted reversal at 12 months, lower mortality) is beyond the section 9 rules. |
@@ -117,7 +117,7 @@ The sources judged whole videos, by a fact-checker's reading or a dataset's anno
 | v103 | fact_checker_produced | "No, no hay evidencias de que el chocolate sea afrodisíaco." / "¡Error!" | DEBUNKING | DEBUNKING |  | no |  |
 | v104 | fact_checker_produced | "A todos nos han dicho desde pequeños que al zumo de naranja se le van las vitaminas, ¿verdad? ¡Pues no!" | DEBUNKING | CANNOT_RECOGNIZE |  | yes | No study of vitamin C in freshly squeezed juice over hours was retrieved, so the refuted claim is INSUFFICIENT; sent to review as a possible debunk. |
 | v105 | fact_checker_produced | "¿Están hechos de petróleo los gusanitos y otros aperitivos similares? No, pero eso no quiere decir que sean saludables." | DEBUNKING | NO_MISINFO |  | yes | The refuted 'made of petroleum' claim is a composition fact no allowed source covers; the supported ultra-processed-food claim gives NO_MISINFO. |
-| v106 | fact_checked_creator | Alerta | MISINFO | CANNOT_RECOGNIZE |  | no | Vaginal garlic has only in-vitro evidence and no human studies, so the remedy is INSUFFICIENT, not CONTRADICTED. |
+| v106 | fact_checked_creator | Alerta | MISINFO | CANNOT_RECOGNIZE |  | yes | Vaginal garlic has only in-vitro evidence and no human studies, so the remedy is INSUFFICIENT, not CONTRADICTED. |
 | v107 | fact_checked_creator | estas técnicas ponen en riesgo nuestra visión | DEBUNKING | NO_MISINFO |  | yes | A warning rather than a refutation: the approval claim is SUPPORTED and the risk claim MIXED, with no false claim refuted. |
 | v108 | fact_checked_creator | "También han desmentido lo que dicen mostrar este tipo de vídeos otros expertos, como los dermatólogos ... Ricardo Sánchez" | DEBUNKING | CANNOT_RECOGNIZE |  | no | The refuted 'ticks' claim is about what one staged clip shows, which no study can test, so it is NOT_VERIFIABLE and the debunk is unjudgeable. |
 | v109 | fact_checked_creator | alertan en sus vídeos sobre los riesgos que puede conllevar medicarse con este fármaco sin un seguimiento | DEBUNKING | MISINFO | contradicted | no | Her warning against self-medicating is sound, but among its listed risks are stroke, seizures and new type 2 diabetes, which trials and cohorts show semaglutide lowers. |
@@ -131,7 +131,7 @@ The sources judged whole videos, by a fact-checker's reading or a dataset's anno
 | v117 | fact_checked_creator | "Me encanta cómo fingen que son insectos que se desprenden cuando claramente son judías y puedes ver el pegamento", afirma la dermatóloga Joyce Park | DEBUNKING | NO_MISINFO |  | no | The refuted 'bugs' claim is NOT_VERIFIABLE (one staged clip), and her supported glue-allergy claim makes the rules give NO_MISINFO. |
 | v118 | fact_checked_creator | "También han desmentido ... el médico de medicina interna Mike Muellner" | DEBUNKING | CANNOT_RECOGNIZE |  | no | The debunk is about what one staged clip shows (beans, not a skin condition), which is NOT_VERIFIABLE, so the video is unjudgeable. |
 | v119 | fact_checked_creator | sin ninguna evidencia científica | MISINFO | MISINFO | contradicted | no |  |
-| v120 | fact_checked_creator | Falso | MISINFO | CANNOT_RECOGNIZE |  | no | Each claim (heavy-metal removal, vaccine metals, 118 minerals, gut cleansing) is untested in anything retrieved rather than contradicted, so the video is unjudgeable. |
+| v120 | fact_checked_creator | Falso | MISINFO | CANNOT_RECOGNIZE |  | yes | Each claim (heavy-metal removal, vaccine metals, 118 minerals, gut cleansing) is untested in anything retrieved rather than contradicted, so the video is unjudgeable. |
 | v121 | fact_checked_creator | Alerta | MISINFO | NO_MISINFO |  | no | This is the gynaecologist mocking the garlic trend, not promoting it; her on-screen warnings are supported, so the rules give NO_MISINFO. |
 | v122 | fact_checked_creator | los beneficios del tratamiento con estatinas superan sus efectos adversos y potenciales daños | MISINFO | MISINFO | contradicted | yes |  |
 | v123 | fact_checked_creator | "Este tipo realmente fue y se pegó frijoles en las piernas" (Maldita quoting him); article: "se trata de un bulo" | DEBUNKING | CANNOT_RECOGNIZE |  | no | The debunk is about what one staged clip shows, which is NOT_VERIFIABLE, so the video is unjudgeable. |
@@ -140,20 +140,20 @@ The sources judged whole videos, by a fact-checker's reading or a dataset's anno
 | v126 | fact_checked_creator | Not Associated | MISINFO | MISINFO | contradicted | no |  |
 | v127 | fact_checked_creator |  | — | NO_MISINFO |  | no |  |
 | v128 | fact_checked_creator | "También han desmentido lo que dicen mostrar este tipo de vídeos otros expertos, como los dermatólogos ... Danny Guo" | DEBUNKING | CANNOT_RECOGNIZE |  | no | The debunk is about what one staged clip shows, which is NOT_VERIFIABLE, so the video is unjudgeable. |
-| v129 | fact_checked_creator | Misleading | MISINFO | CANNOT_RECOGNIZE |  | no | The only stated claim is a regulatory one that no retrievable reference settles (FDA's ivermectin page now returns 404); the implied efficacy claim is never said. |
+| v129 | fact_checked_creator | Misleading | MISINFO | CANNOT_RECOGNIZE |  | yes | The only stated claim is a regulatory one that no retrievable reference settles (FDA's ivermectin page now returns 404); the implied efficacy claim is never said. |
 | v130 | fact_checked_creator | "También han desmentido lo que dicen mostrar este tipo de vídeos otros expertos, como los dermatólogos ... Charan Singh" | DEBUNKING | CANNOT_RECOGNIZE |  | no | The debunk is about what one staged clip shows, which is NOT_VERIFIABLE, so the video is unjudgeable. |
 | v131 | fact_checked_creator | Misleading | MISINFO | MISINFO | contradicted | no |  |
 | v132 | fact_checked_creator | "También han desmentido ... el especialista en medicina estética Christian Davila" | DEBUNKING | CANNOT_RECOGNIZE |  | no | The debunk is about what one staged clip shows, which is NOT_VERIFIABLE, so the video is unjudgeable. |
 | v133 | fact_checked_creator | La orina no cura problemas de vista ni ninguna otra dolencia | DEBUNKING | CANNOT_RECOGNIZE |  | yes | The refuted urine-eye-drop claims are untested in PubMed, so they are INSUFFICIENT and the debunk goes to review as a possible debunk of an unsettled claim. |
 | v134 | fact_checked_creator | No es cierto | DEBUNKING | DEBUNKING |  | no |  |
 | v135 | fact_checked_creator | Unsupported | DEBUNKING | NO_MISINFO |  | no | She corrects the tone of the coverage rather than a checkable claim, and every claim she makes that could be retrieved is SUPPORTED, so nothing refuted decides the label. |
-| v136 | fact_checked_creator | Inaccurate | MISINFO | CANNOT_RECOGNIZE |  | no | Nothing tests the salt pregnancy test, so the claim is INSUFFICIENT rather than CONTRADICTED (section 7). |
-| v137 | fact_checked_creator | Inaccurate | MISINFO | CANNOT_RECOGNIZE |  | no | She demonstrates the salt test and asks whether it is accurate (NEUTRAL), and nothing tests the method either way. |
-| v138 | fact_checked_creator | Alerta | MISINFO | CANNOT_RECOGNIZE |  | no | Every alkaline-diet claim is untested; the one systematic review found almost no research for or against, so all are INSUFFICIENT. |
+| v136 | fact_checked_creator | Inaccurate | MISINFO | CANNOT_RECOGNIZE |  | yes | Nothing tests the salt pregnancy test, so the claim is INSUFFICIENT rather than CONTRADICTED (section 7). |
+| v137 | fact_checked_creator | Inaccurate | MISINFO | CANNOT_RECOGNIZE |  | yes | She demonstrates the salt test and asks whether it is accurate (NEUTRAL), and nothing tests the method either way. |
+| v138 | fact_checked_creator | Alerta | MISINFO | CANNOT_RECOGNIZE |  | yes | Every alkaline-diet claim is untested; the one systematic review found almost no research for or against, so all are INSUFFICIENT. |
 | v139 | fact_checked_creator | Alerta | MISINFO | MISINFO | contradicted | no |  |
 | v140 | fact_checked_creator | Alerta | DEBUNKING | NO_MISINFO |  | yes | The refuted 'fake/lab avocado' claims cannot be checked against PubMed, while his banana-starch explanation is SUPPORTED, so NO_MISINFO fires before the possible-debunk rule. |
 | v141 | fact_checked_creator | Trompeur | MISINFO | MISINFO | unproven | yes |  |
-| v142 | fact_checked_creator | no quiere decir que "sean de plástico" | MISINFO | CANNOT_RECOGNIZE |  | no | No retrievable source tests 'plastic eggs', so the claim is INSUFFICIENT. |
+| v142 | fact_checked_creator | no quiere decir que "sean de plástico" | MISINFO | CANNOT_RECOGNIZE |  | yes | No retrievable source tests 'plastic eggs', so the claim is INSUFFICIENT. |
 | v143 | fact_checked_creator | Trompeur | MISINFO | MISINFO | unproven | yes |  |
 | v144 | M4Health | FALSE / Opinion | MISINFO | CANNOT_RECOGNIZE |  | no | A gym meme with no assertion: no checkable claims. |
 | v145 | M4Health | FALSE / Satire | MISINFO | CANNOT_RECOGNIZE |  | no | No speech and no readable on-screen text, so nothing could be labelled. |
@@ -165,17 +165,17 @@ The sources judged whole videos, by a fact-checker's reading or a dataset's anno
 | v151 | M4Health | FALSE / Satire | MISINFO | CANNOT_RECOGNIZE |  | no | A religious exhortation to care for the body, with no checkable assertion. |
 | v152 | M4Health | FALSE / Persuasion | MISINFO | CANNOT_RECOGNIZE |  | no | Composition statements about one product (zero sugar, no red dye) with no health assertion attached. |
 | v154 | M4Health | FALSE / Opinion | MISINFO | NO_MISINFO |  | no | The stress-immunity claim is SUPPORTED by meta-analyses and the cancer-surveillance claim is INSUFFICIENT; nothing false is endorsed. |
-| v155 | M4Health | FALSE / Factual | MISINFO | CANNOT_RECOGNIZE |  | no | The turmeric-spread claims are untested for the product; curcumin supplement trials are only indirect support. |
+| v155 | M4Health | FALSE / Factual | MISINFO | CANNOT_RECOGNIZE |  | yes | The turmeric-spread claims are untested for the product; curcumin supplement trials are only indirect support. |
 | v157 | M4Health | FALSE / Factual | MISINFO | CANNOT_RECOGNIZE |  | no | Workout motivation with no checkable health assertion. |
-| v159 | M4Health | FALSE / Persuasion | MISINFO | CANNOT_RECOGNIZE |  | no | The vibration-plate equivalence is almost certainly false, but nothing retrieved tests it or gives a running figure to set against the measured VO2, so it is INSUFFICIENT. |
+| v159 | M4Health | FALSE / Persuasion | MISINFO | CANNOT_RECOGNIZE |  | yes | The vibration-plate equivalence is almost certainly false, but nothing retrieved tests it or gives a running figure to set against the measured VO2, so it is INSUFFICIENT. |
 | v160 | M4Health | FALSE / Factual | MISINFO | CANNOT_RECOGNIZE |  | no | No assertion is made in speech or on screen (a tongue close-up over a song lyric), so there is no claim to judge. |
-| v161 | M4Health | FALSE / Opinion | MISINFO | CANNOT_RECOGNIZE |  | no | Six 'best fruit for X' superlatives; no study compares fruits, so each is INSUFFICIENT rather than false. |
+| v161 | M4Health | FALSE / Opinion | MISINFO | CANNOT_RECOGNIZE |  | yes | Six 'best fruit for X' superlatives; no study compares fruits, so each is INSUFFICIENT rather than false. |
 | v162 | fact_checked_creator | Alerta | DEBUNKING | NO_MISINFO |  | no | A chemist explains why cheese substitutes char; his nutritional-difference claim is SUPPORTED and he refutes nothing, so the rules see accurate content, not a debunk. |
-| v163 | fact_checked_creator | Hospital and union dismissed claims that brain tumor diagnoses were linked to vaccines | MISINFO | CANNOT_RECOGNIZE |  | no | The brain-tumour cluster link is promoted but untested in anything retrievable; a dismissal by the hospital and union is not a section 6 source. |
+| v163 | fact_checked_creator | Hospital and union dismissed claims that brain tumor diagnoses were linked to vaccines | MISINFO | CANNOT_RECOGNIZE |  | yes | The brain-tumour cluster link is promoted but untested in anything retrievable; a dismissal by the hospital and union is not a section 6 source. |
 | v164 | fact_checked_creator | Manque de contexte | — | MISINFO | unproven | yes |  |
 | v165 | fact_checked_creator | Incorrect | MISINFO | NO_MISINFO |  | no | 'Acne is autoimmune' is only 'not classified as', which section 7 keeps INSUFFICIENT; his diet-triggers-acne claim is SUPPORTED. |
 | v166 | fact_checked_creator | "publicó un vídeo en TikTok para advertir de que estaban modificando su imagen con inteligencia artificial para difundir \"consejos falsos de salud\"" | DEBUNKING | CANNOT_RECOGNIZE |  | no | He debunks AI deepfakes of himself, not a health claim; the one health line shown is NOT_VERIFIABLE, which no section 9 rule can score. |
-| v167 | fact_checked_creator | False | MISINFO | CANNOT_RECOGNIZE |  | no | The stage-four cure-in-40-days and sugar-starving claims are untested (ketogenic and fasting reviews find insufficient evidence), and the Hindi transcript is too garbled for confident claims. |
+| v167 | fact_checked_creator | False | MISINFO | CANNOT_RECOGNIZE |  | yes | The stage-four cure-in-40-days and sugar-starving claims are untested (ketogenic and fasting reviews find insufficient evidence), and the Hindi transcript is too garbled for confident claims. |
 | v168 | MHMisinfo-Gold | -1 | MISINFO | NO_MISINFO |  | no | Of the four herbs, lemon balm's anxiety effect is SUPPORTED by a meta-analysis and none is contradicted; the others are INSUFFICIENT. |
 | v169 | fact_checked_creator | Bulo | MISINFO | DEBUNKING |  | yes | The study on screen supports his account of stopping moisturiser and contradicts 'everyone must moisturise daily', which he refutes; his 'skin becomes dependent' claim is MIXED, not contradicted. |
 | v170 | MHMisinfo-Gold | -1 | MISINFO | CANNOT_RECOGNIZE |  | no | An exorcism 'curing' autism is a supernatural claim, NOT_VERIFIABLE. |
@@ -189,7 +189,7 @@ The sources judged whole videos, by a fact-checker's reading or a dataset's anno
 | v178 | MHMisinfo-Gold | -1 | MISINFO | NO_MISINFO |  | no | The autism-transgender co-occurrence he asserts is SUPPORTED; the 'ideology preys on the vulnerable' claim is INSUFFICIENT, not contradicted. |
 | v179 | MHMisinfo-Gold | -1 | MISINFO | CANNOT_RECOGNIZE |  | no | A personal testimony about weight and faith with no general health assertion. |
 | v180 | fact_checked_creator | Unsupported | MISINFO | CANNOT_RECOGNIZE |  | yes | Infection is linked to new autoimmune disease and vaccination is not, so 'booster then COVID caused it' is MIXED rather than false. |
-| v181 | MHMisinfo-Gold | -1 | MISINFO | CANNOT_RECOGNIZE |  | no | The salt, magnesium and four-herb claims rest on rat studies, poor-quality reviews or nothing, so all are INSUFFICIENT. |
+| v181 | MHMisinfo-Gold | -1 | MISINFO | CANNOT_RECOGNIZE |  | yes | The salt, magnesium and four-herb claims rest on rat studies, poor-quality reviews or nothing, so all are INSUFFICIENT. |
 
 ## Out of scope (excluded)
 

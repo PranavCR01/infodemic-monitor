@@ -103,8 +103,10 @@ and any `video_level_label` that no longer follows from its claims:
    `review_reasons` are collected from every claim, whichever rule decides:
    `denies_supported:<claim>`, `unproven_claim:<claim>`,
    `possible_debunk:<claim>` (refuted and MIXED or INSUFFICIENT),
-   `mixed_evidence:<claim>` (any MIXED claim), and `mixed_video` when an
-   endorsed false or unproven claim sits beside a refuted false one. Then the
+   `mixed_evidence:<claim>` (any MIXED claim), `mixed_video` when an
+   endorsed false or unproven claim sits beside a refuted false one, and
+   `nothing_judged` (LOW priority) when no claim could be judged but at least
+   one is `INSUFFICIENT_EVIDENCE`. Then the
    §11 triggers on the deciding claims: `deciding_insufficient`,
    `evidence_both_sides`, `unclear_stance`.
 

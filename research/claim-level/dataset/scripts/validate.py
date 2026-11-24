@@ -123,7 +123,15 @@ def judge_self_test():
         ("refutes not verifiable", [c(R, "NOT_VERIFIABLE")],
          "CANNOT_RECOGNIZE", None, []),
         ("endorses insufficient", [c(E, "INSUFFICIENT_EVIDENCE")],
+         "CANNOT_RECOGNIZE", None, ["nothing_judged"]),
+        ("insufficient beside not verifiable",
+         [c(E, "NOT_VERIFIABLE"), c("QUOTES", "INSUFFICIENT_EVIDENCE", 2)],
+         "CANNOT_RECOGNIZE", None, ["nothing_judged"]),
+        ("only not verifiable", [c(E, "NOT_VERIFIABLE")],
          "CANNOT_RECOGNIZE", None, []),
+        ("refuted open is not nothing_judged",
+         [c(R, "INSUFFICIENT_EVIDENCE"), c(E, "INSUFFICIENT_EVIDENCE", 2)],
+         "CANNOT_RECOGNIZE", None, ["possible_debunk:c1"]),
         ("no claims", [], "CANNOT_RECOGNIZE", None, []),
     ]
     for name, claims, label, basis, reasons in cases:

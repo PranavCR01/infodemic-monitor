@@ -31,11 +31,11 @@ The collectors judged whole videos by eye; the derived label comes from per-clai
 | video | collector label | derived label | sent to review | why |
 |---|---|---|---|---|
 | v03 | MISINFO | NO_MISINFO | yes | No claim is contradicted by evidence: 8 of 18 are SUPPORTED and the weak ones (dyes and DNA damage, fructose and cancer) are INSUFFICIENT or MIXED, not false. |
-| v12 | MISINFO | CANNOT_RECOGNIZE | no | 'You pee out the fat' is almost certainly false, but the paper that settles it has no readable abstract or PMC copy and Bookshelf blocks scripted retrieval, so all three claims are INSUFFICIENT. |
-| v13 | MISINFO | CANNOT_RECOGNIZE | no | Vague, anecdotal weight-loss advice; nothing retrieved tests or contradicts any of it, so no claim can be judged. |
+| v12 | MISINFO | CANNOT_RECOGNIZE | yes | 'You pee out the fat' is almost certainly false, but the paper that settles it has no readable abstract or PMC copy and Bookshelf blocks scripted retrieval, so all three claims are INSUFFICIENT. |
+| v13 | MISINFO | CANNOT_RECOGNIZE | yes | Vague, anecdotal weight-loss advice; nothing retrieved tests or contradicts any of it, so no claim can be judged. |
 | v17 | MISINFO | CANNOT_RECOGNIZE | no | The misinformation sits in regulatory assertions (FDA chemical counts, Texas labels) that are not health claims; the one health claim left is NOT_VERIFIABLE. |
-| v44 | NO_MISINFO | CANNOT_RECOGNIZE | no | The death anecdote is NOT_VERIFIABLE and nothing tests the 'ancient pathogens, no immunity' claim: unjudgeable rather than accurate. |
-| v54 | NO_MISINFO | CANNOT_RECOGNIZE | no | Probably right, but the cited Michigan 5,800-food study could not be retrieved and the rest is unquantified or an aphorism. |
+| v44 | NO_MISINFO | CANNOT_RECOGNIZE | yes | The death anecdote is NOT_VERIFIABLE and nothing tests the 'ancient pathogens, no immunity' claim: unjudgeable rather than accurate. |
+| v54 | NO_MISINFO | CANNOT_RECOGNIZE | yes | Probably right, but the cited Michigan 5,800-food study could not be retrieved and the rest is unquantified or an aphorism. |
 | v60 | MISINFO | NO_MISINFO | no | All three claims (BPA/BPS in receipts, skin absorption, less handling means less exposure) are SUPPORTED by measured absorption studies. |
 | v64 | DEBUNKING | CANNOT_RECOGNIZE | yes | Every claim is a count from immunisation schedules; CDC's schedule pages refuse scripted retrieval, so the refuted claim stays INSUFFICIENT. Now sent to review as a possible debunk. |
 | v65 | DEBUNKING | CANNOT_RECOGNIZE | yes | His critique of the PURE salt study is methodological; the refuted claim is MIXED in the literature, not contradicted. Now sent to review as a possible debunk. |

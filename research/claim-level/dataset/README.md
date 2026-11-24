@@ -213,8 +213,11 @@ so a debunk of an unsettled claim is flagged even when another claim makes the
 video `NO_MISINFO`), `mixed_evidence:<claim>` (any `MIXED` claim), and
 `mixed_video`. Then the §11 triggers on the **deciding** claims only:
 `deciding_insufficient:<claim>`, `evidence_both_sides:<claim>`,
-`unclear_stance:<claim>`. A video whose claims are all insufficient has no
-deciding claim and so no §11 trigger. `validate.py` re-derives the column.
+`unclear_stance:<claim>`. When no claim could be judged and none is refuted,
+there is no deciding claim, so the rules add `nothing_judged` instead if any
+claim is `INSUFFICIENT_EVIDENCE` (a person should see what could not be
+checked, at LOW priority). A video with no claims, or only `NOT_VERIFIABLE`
+ones, gets no reason. `validate.py` re-derives the column.
 
 ### Out of scope (§14)
 
