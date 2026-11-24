@@ -17,6 +17,8 @@ build/
 # Node
 frontend/node_modules/
 frontend/.next/
+frontend/next-env.d.ts
+frontend/tsconfig.tsbuildinfo
 
 # IDE
 .idea/
@@ -54,3 +56,5 @@ backend/pytest-report.xml
 
 # Evaluation run outputs (predictions, traces)
 backend/eval_runs/
+frontend/e2e-report/
+frontend/e2e-results/

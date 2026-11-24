@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Developer notes</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../im.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5F99}a:hover{color:#174A78}
+</style>
+</helmet>
+<div class="im" style="width: 1200px; min-height: 2200px; padding: 48px; display: flex; flex-direction: column; gap: 28px">
+  <div><h1 class="t-display">Developer notes</h1><p class="muted" style="margin: 4px 0 0">Next.js 14 App Router · Tailwind · Supabase Auth. Behaviour the mockups can't show.</p></div>
+
+  <section class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 10px">
+    <h2 class="t-h2">Routes and roles</h2>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th scope="col">Route</th><th scope="col">Screen</th><th scope="col">Role</th><th scope="col">Data</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">/sign-in</td><td>Sign in</td><td>public</td><td class="muted">Supabase signInWithPassword / signInWithOtp</td></tr>
+        <tr><td class="mono">/</td><td>Submit</td><td>analyst+</td><td class="muted">Upload to Storage (resumable, tus) then POST /jobs</td></tr>
+        <tr><td class="mono">/videos</td><td>Jobs list</td><td>analyst+</td><td class="muted">Server component; search params hold filters, sort, page</td></tr>
+        <tr><td class="mono">/videos/[id]</td><td>Progress or result</td><td>owner or reviewer</td><td class="muted">Same route: renders stepper until state is terminal</td></tr>
+        <tr><td class="mono">/videos/[id]?claim=[cid]</td><td>Claim detail drawer</td><td>same</td><td class="muted">Intercepting route or search param; linkable</td></tr>
+        <tr><td class="mono">/videos/[id]/export</td><td>Print view</td><td>same</td><td class="muted">Print CSS, auto window.print() optional</td></tr>
+        <tr><td class="mono">/review, /review/[id]</td><td>Queue, workspace</td><td>reviewer</td><td class="muted">Middleware checks role claim; else Permission denied</td></tr>
+        <tr><td class="mono">/evaluation</td><td>Evaluation</td><td>admin</td><td class="muted">Only screen allowed to show model IDs</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+    <section class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 10px">
+      <h2 class="t-h2">Interactions</h2>
+      <ul class="t-small" style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px">
+        <li><strong>Timeline segment click</strong> → <span class="mono">video.currentTime = claim.start</span>, play, scroll the claim card into view, give it the active ring.</li>
+        <li><strong>During playback</strong> the card whose range contains currentTime is active; the transcript line too. Throttle to 4 Hz.</li>
+        <li><strong>Claim card click / Enter</strong> → open Claim detail drawer, push <span class="mono">?claim=</span>. Esc closes and returns focus to the card. Prev/next arrows move between claims.</li>
+        <li><strong>Transcript timestamp</strong> → seek. Highlight colour follows the claim's verdict hue; toggle hides highlights.</li>
+        <li><strong>Jobs row</strong> → whole row is one link to /videos/[id].</li>
+        <li><strong>Upload</strong>: client checks type (MP4/MOV), size ≤ 100 MB and duration ≤ 3:00 (read from a <span class="mono">&lt;video&gt;</span> element's metadata) before upload starts.</li>
+        <li><strong>Export</strong> opens /export in a new tab; same data, print stylesheet, Letter.</li>
+      </ul>
+    </section>
+
+    <section class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 10px">
+      <h2 class="t-h2">Polling (no websockets)</h2>
+      <ul class="t-small" style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px">
+        <li><strong>Job page:</strong> GET /jobs/[id] every 3 s for the first 3 min, then every 10 s. Stop on Completed, Needs review or Failed, then <span class="mono">router.refresh()</span> to render the result.</li>
+        <li>Pause when <span class="mono">document.hidden</span>; poll immediately on visibilitychange and focus.</li>
+        <li>3 failed polls in a row → “Lost connection” banner, back off 3 → 10 → 20 s.</li>
+        <li><strong>Jobs list:</strong> every 10 s only while a visible row is Queued, Running or Retrying.</li>
+        <li><strong>Review queue:</strong> every 30 s. If the open item is decided by someone else, show “Already decided by L. Haddad” and disable the form.</li>
+        <li>Suggested: SWR or TanStack Query <span class="mono">refetchInterval</span> as a function of state.</li>
+      </ul>
+    </section>
+
+    <section class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 10px">
+      <h2 class="t-h2">Collapsed by default</h2>
+      <ul class="t-small" style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px">
+        <li>Critic's notes (claim detail)</li>
+        <li>“How the video label is reached” (result)</li>
+        <li>Audit trail on tablet (expanded on desktop)</li>
+        <li>Supports list when it is empty (one line instead)</li>
+        <li>Everything else is open: analysts must see the evidence without clicking.</li>
+      </ul>
+    </section>
+
+    <section class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 10px">
+      <h2 class="t-h2">Review decision: required fields</h2>
+      <div class="tbl-wrap"><table class="tbl">
+        <thead><tr><th scope="col">Decision</th><th scope="col">Required</th><th scope="col">Result</th></tr></thead>
+        <tbody>
+          <tr><td>Approve</td><td>reason</td><td class="muted">status Verified</td></tr>
+          <tr><td>Correct</td><td>new label, reason; claim edits optional</td><td class="muted">status Corrected; old values kept in audit</td></tr>
+          <tr><td>Reject</td><td>reason</td><td class="muted">status Rejected; label hidden from export</td></tr>
+          <tr><td>Re-analyse</td><td>reason</td><td class="muted">new job; item leaves queue until it returns</td></tr>
+        </tbody>
+      </table></div>
+      <p class="t-small muted" style="margin: 0">Save button disabled until required fields are filled. Reason min 10 characters. Server re-validates and rejects self-review. Audit entries are append-only (DB trigger, no UPDATE/DELETE grants).</p>
+    </section>
+  </div>
+
+  <section class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 10px">
+    <h2 class="t-h2">“What this means” line: stance × verdict</h2>
+    <p class="t-small muted" style="margin: 0">Shown on the deciding claim (and on hover/focus for others). Fixed copy from this table, never model output. This is the main guard against reading DEBUNKED as MISINFO.</p>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th scope="col">Stance</th><th scope="col">CONTRADICTED</th><th scope="col">SUPPORTED</th><th scope="col">INSUFFICIENT / MIXED / NOT VERIFIABLE</th></tr></thead>
+      <tbody>
+        <tr><td><span class="st"><span class="i i-endorse i-sm" aria-hidden="true"></span>ENDORSES</span></td><td>The speaker promotes a claim that the evidence contradicts.</td><td>The speaker states a claim the evidence supports.</td><td>The speaker promotes a claim no study settles.</td></tr>
+        <tr><td><span class="st"><span class="i i-refute i-sm" aria-hidden="true"></span>REFUTES</span></td><td style="color: var(--deb-fg); font-weight: 600">The speaker refutes a claim the evidence contradicts. This corrects misinformation.</td><td>The speaker denies a claim the evidence supports.</td><td>The speaker refutes a claim no study settles. A reviewer decides.</td></tr>
+        <tr><td><span class="st"><span class="i i-quote i-sm" aria-hidden="true"></span>QUOTES</span></td><td>The speaker reports someone else making a false claim.</td><td>The speaker reports someone else's supported claim.</td><td>The speaker reports a claim no study settles.</td></tr>
+        <tr><td><span class="st"><span class="i i-minus i-sm" aria-hidden="true"></span>NEUTRAL</span> / <span class="st st-unclear"><span class="i i-question i-sm" aria-hidden="true"></span>UNCLEAR</span></td><td colspan="3" class="muted">The speaker's position on this claim is not clear.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 10px; border-color: var(--warn-bd)">
+    <h2 class="t-h2">Weak spots in this design (decide before building)</h2>
+    <ol class="t-small" style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px">
+      <li><strong>Timeline colour on DEBUNKED videos.</strong> Markers are coloured by verdict, so a debunk video shows rust CONTRADICTED markers next to a teal DEBUNKED label. The header and the “corrects misinformation” line carry the meaning; test this with 3–5 analysts before launch.</li>
+      <li><strong>Source counts invite vote-counting.</strong> “2 contradict · 1 supports” reads as 2–1 even if the 1 is a systematic review. Cards show the strongest study type beside the count, and evidence is ordered by study type. Consider dropping counts if analysts misread them.</li>
+      <li><strong>Correcting a claim doesn't recompute the label.</strong> Simpler and auditable, but the reviewer can save an inconsistent pair. The panel warns; it doesn't block.</li>
+      <li><strong>“Not required” review status</strong> is a fifth value not in the brief's vocabulary. Needs backend agreement.</li>
+      <li><strong>Placeholder content.</strong> Claim 2/3 quotes, source passages, Evaluation figures and model IDs are invented or bracketed; swap for real API data.</li>
+    </ol>
+  </section>
+
+  <section class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 10px">
+    <h2 class="t-h2">Accessibility checklist</h2>
+    <ul class="t-small" style="margin: 0; padding-left: 18px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 32px">
+      <li>Every label, verdict, stance and status = icon + text; icons aria-hidden.</li>
+      <li>Timeline segments are links with aria-label “Claim 1, 0:03 to 0:08, contradicted”.</li>
+      <li>Drawer: role=dialog, focus trap, Esc closes, focus returns.</li>
+      <li>Progress: aria-live=polite on the current step name only, not the timer.</li>
+      <li>Tables: th scope, aria-sort on sorted column.</li>
+      <li>Reduced motion: no spinner rotation, no smooth scroll.</li>
+      <li>Dark mode: system preference by default, user override stored in a cookie for SSR.</li>
+      <li>Export: prints in greyscale; label name is always printed.</li>
+    </ul>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1200,"height":2200}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

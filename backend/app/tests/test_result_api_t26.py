@@ -309,8 +309,12 @@ def test_review_is_not_null_once_resolved(env, action, kwargs, status, path):
 def test_current_frontend_banner_only_for_open_cases():
     """The current result page showed "awaiting human review" whenever ``review`` was
     set; with ``review`` kept after resolution it must check the status."""
-    src = (BACKEND.parent / "frontend" / "app" / "jobs" / "[job_id]" / "JobDetailClient.tsx").read_text()
-    assert 'result.review?.status === "REVIEW_REQUIRED"' in src
+    # Redesigned frontend: one mapping from review status to what is shown. Resolved
+    # statuses each have their own display; only an open case (or unknown) is provisional.
+    src = (BACKEND.parent / "frontend" / "lib" / "vocabulary.ts").read_text()
+    for status in ("VERIFIED", "CORRECTED", "REJECTED", "REANALYSIS_REQUESTED"):
+        assert f'case "{status}":' in src
+    assert 'return "PENDING";' in src and 'return "NOT_REQUIRED";' in src
 
 
 # ------------------------------------------------------------------ reasons table
