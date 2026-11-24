@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Review workspace, tablet</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../im.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5F99}a:hover{color:#174A78}
+</style>
+</helmet>
+<div class="im" data-theme="{{theme}}" style="width: 834px; min-height: 1900px; position: relative">
+<header class="topbar" style="padding: 0 20px; gap: 12px">
+  <a class="brand" href="#"><span class="brand-mark" aria-hidden="true">IM</span><span>Infodemic Monitor</span></a>
+  <nav class="nav" aria-label="Main" style="flex: 1; justify-content: flex-end">
+    <a href="#">Videos</a><a href="#" aria-current="page">Review <span class="count">4</span></a>
+  </nav>
+  <span class="avatar" aria-label="Signed in as Dr. A. Mensah, reviewer">AM</span>
+</header>
+
+<main style="padding: 20px 20px 120px; display: flex; flex-direction: column; gap: 16px">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="#">Review queue</a><span class="i i-chevr i-sm" aria-hidden="true"></span><span>Dr. K on fasting and immunity</span></nav>
+
+  <section class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 12px">
+    <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap"><span class="lb lb-cr lb-lg"><span class="i i-helpc" aria-hidden="true"></span>CANNOT RECOGNIZE</span><span class="rs rs-pending"><span class="i i-clock i-sm" aria-hidden="true"></span>Pending review</span></div>
+    <p class="serif" style="margin: 0; font-size: 17px; line-height: 26px">A physician says fasting does not boost immunity against all infections. The evidence alone can't show whether this corrects a false claim or rejects an untested one.</p>
+    <span class="rr" style="align-self: flex-start"><span class="i i-shield i-sm" aria-hidden="true"></span>The speaker refutes a claim the evidence can't settle (possible debunk)</span>
+  </section>
+
+  <section style="display: flex; flex-direction: column; gap: 10px" aria-label="Claims">
+    <h2 class="t-h3">Claims <span class="count">3</span></h2>
+    <article class="claim" style="cursor: default">
+      <div style="display: flex; gap: 8px; align-items: center"><span class="mono t-small">0:06–0:14</span><span class="tag"><span class="i i-mic i-sm" aria-hidden="true"></span>Speech</span><span class="decided" style="margin-left: auto"><span class="i i-star i-sm" aria-hidden="true"></span>Decided the label</span></div>
+      <p class="claim-text">Fasting boosts your immunity against all infections.</p>
+      <div class="say"><span class="i i-quote i-sm" aria-hidden="true"></span><q>people keep saying fasting boosts immunity against everything, and that's just not what we see</q></div>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: 12px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px">
+        <div class="field"><label for="ts">Speaker stance</label><select class="select" id="ts"><option selected>REFUTES</option></select><span class="hint">Unchanged</span></div>
+        <div class="field"><label for="tv">Evidence verdict <span class="tag tag-strong">Changed</span></label><select class="select" id="tv"><option selected>CONTRADICTED</option></select><span class="hint">Was: INSUFFICIENT EVIDENCE</span></div>
+      </div>
+    </article>
+    <article class="claim" style="cursor: default">
+      <div style="display: flex; gap: 8px; align-items: center"><span class="mono t-small">0:22–0:30</span><button class="btn btn-ghost btn-sm" type="button" style="margin-left: auto"><span class="i i-pencil i-sm" aria-hidden="true"></span>Correct</button></div>
+      <p class="claim-text">Short fasts can change some immune cell counts.</p>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap"><span class="st"><span class="i i-minus i-sm" aria-hidden="true"></span>NEUTRAL</span><span class="vd vd-mix"><span class="i i-mixed i-sm" aria-hidden="true"></span>MIXED</span></div>
+    </article>
+    <article class="claim" style="cursor: default">
+      <div style="display: flex; gap: 8px; align-items: center"><span class="mono t-small">0:41–0:46</span><button class="btn btn-ghost btn-sm" type="button" style="margin-left: auto"><span class="i i-pencil i-sm" aria-hidden="true"></span>Correct</button></div>
+      <p class="claim-text">Talk to a doctor before a long fast.</p>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap"><span class="st"><span class="i i-endorse i-sm" aria-hidden="true"></span>ENDORSES</span><span class="vd vd-nv"><span class="i i-ban i-sm" aria-hidden="true"></span>NOT VERIFIABLE</span></div>
+    </article>
+  </section>
+
+  <form class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 14px" aria-labelledby="dh">
+    <h2 class="t-h2" id="dh">Your decision</h2>
+    <div class="seg" role="radiogroup" aria-label="Decision" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr))">
+      <button type="button" role="radio" aria-pressed="false" aria-checked="false" style="justify-content: center; min-height: 44px">Approve</button>
+      <button type="button" role="radio" aria-pressed="true" aria-checked="true" style="justify-content: center; min-height: 44px">Correct</button>
+      <button type="button" role="radio" aria-pressed="false" aria-checked="false" style="justify-content: center; min-height: 44px">Reject</button>
+      <button type="button" role="radio" aria-pressed="false" aria-checked="false" style="justify-content: center; min-height: 44px">Re-analyse</button>
+    </div>
+    <fieldset style="border: 0; margin: 0; padding: 0">
+      <legend class="lbl" style="margin-bottom: 8px">New label <span class="req">*</span></legend>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+        <label class="radio" style="align-items: center"><input type="radio" name="t" style="margin-top: 0"><span class="lb lb-mis"><span class="i i-alert i-sm" aria-hidden="true"></span>MISINFO</span></label>
+        <label class="radio" style="align-items: center"><input type="radio" name="t" style="margin-top: 0"><span class="lb lb-nomis"><span class="i i-checkc i-sm" aria-hidden="true"></span>NO-MISINFO</span></label>
+        <label class="radio on" style="align-items: center"><input type="radio" name="t" checked style="margin-top: 0"><span class="lb lb-deb"><span class="i i-shield i-sm" aria-hidden="true"></span>DEBUNKED</span></label>
+        <label class="radio" style="align-items: center"><input type="radio" name="t" style="margin-top: 0"><span class="lb lb-cr"><span class="i i-helpc i-sm" aria-hidden="true"></span>CANNOT RECOGNIZE</span></label>
+      </div>
+    </fieldset>
+    <div class="field"><label for="tr">Reason <span class="req">*</span></label><textarea class="textarea" id="tr" aria-required="true">Speaker is a physician refuting a broad overclaim. Checked: no trial supports immunity against all infections; the claim is false as stated. Corrected verdict to CONTRADICTED, which makes this a debunk.</textarea><span class="hint">Saved with your name in the audit trail.</span></div>
+    <details class="card" style="padding: 12px 16px; box-shadow: none"><summary class="t-small" style="font-weight: 600; display: flex; gap: 6px; align-items: center"><span class="i i-chevr i-sm" aria-hidden="true"></span>Audit trail <span class="count">3</span></summary></details>
+  </form>
+</main>
+
+<div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 20px; background: var(--surface); border-top: 1px solid var(--border); box-shadow: var(--sh-2); display: flex; gap: 12px; align-items: center">
+  <span class="t-small" style="flex: 1">Correct to <span class="lb lb-deb" style="margin-left: 4px"><span class="i i-shield i-sm" aria-hidden="true"></span>DEBUNKED</span> · 1 claim changed</span>
+  <a class="btn btn-ghost" href="#">Cancel</a>
+  <button class="btn btn-primary" type="button">Save correction</button>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light","section":"Display"},"$preview":{"width":834,"height":1900}}'>
+class Component extends DCLogic {
+  renderVals() { return { theme: this.props.theme ?? 'light' }; }
+}
+</script>
+</body>
+</html>

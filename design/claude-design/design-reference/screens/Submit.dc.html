@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Submit a video</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../im.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5F99}a:hover{color:#174A78}
+</style>
+</helmet>
+<div class="im" data-theme="{{theme}}" style="min-height: 100vh">
+<header class="topbar">
+  <a class="brand" href="Jobs.dc.html"><span class="brand-mark" aria-hidden="true">IM</span><span>Infodemic Monitor <span class="faint" style="font-weight: 400">· WHO research</span></span></a>
+  <nav class="nav" aria-label="Main" style="flex: 1">
+    <a href="Jobs.dc.html"><span class="i i-grid" aria-hidden="true"></span>Videos</a>
+    <a href="Submit.dc.html" aria-current="page"><span class="i i-upload" aria-hidden="true"></span>Submit</a>
+    <a href="#"><span class="i i-inbox" aria-hidden="true"></span>Review queue <span class="count">4</span></a>
+  </nav>
+  <span class="avatar" aria-label="Signed in as Dr. A. Mensah">AM</span>
+</header>
+
+<main class="page" style="display: flex; gap: 32px; flex-wrap: wrap; align-items: flex-start; padding-top: 40px">
+  <section style="flex: 999 1 640px; min-width: 0; display: flex; flex-direction: column; gap: 20px" aria-labelledby="h">
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <h1 class="t-h1" id="h">Submit a video</h1>
+      <p class="muted" style="margin: 0">We transcribe it, find each health claim and check it against published research and official guidance. Most videos take 1 to 3 minutes.</p>
+    </div>
+
+    <div class="seg" role="tablist" aria-label="Source" style="align-self: flex-start">
+      <button type="button" role="tab" aria-pressed="true" aria-selected="true"><span class="i i-upload i-sm" aria-hidden="true"></span>Upload a file</button>
+      <button type="button" role="tab" aria-pressed="false" aria-selected="false" disabled style="cursor: not-allowed"><span class="i i-link i-sm" aria-hidden="true"></span>Paste a link <span class="tag" style="margin-left: 4px">Coming soon</span></button>
+    </div>
+
+    <sc-if value="{{isIdle}}" hint-placeholder-val="{{ false }}">
+      <label for="file" style="display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 56px 24px; border: 2px dashed var(--border-strong); border-radius: 12px; background: var(--surface); text-align: center; cursor: pointer">
+        <span style="width: 56px; height: 56px; border-radius: 50%; background: var(--primary-subtle); color: var(--primary); display: grid; place-items: center"><span class="i i-upload i-xl" aria-hidden="true"></span></span>
+        <span class="t-h2">Drag a video here, or <span style="color: var(--primary); text-decoration: underline">choose a file</span></span>
+        <span class="t-small muted">MP4 or MOV · up to 100 MB · up to 3 minutes</span>
+        <input id="file" type="file" accept="video/mp4,video/quicktime" style="position: absolute; width: 1px; height: 1px; opacity: 0">
+      </label>
+    </sc-if>
+
+    <sc-if value="{{isUploading}}" hint-placeholder-val="{{ true }}">
+      <div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 14px">
+        <div style="display: flex; gap: 14px; align-items: center">
+          <span class="thumb" aria-hidden="true"></span>
+          <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+            <span class="mono" style="font-weight: 500">hot-water-flu.mp4</span>
+            <span class="t-small muted tnum">18.4 MB · 0:42 · MP4</span>
+          </div>
+          <button class="btn btn-ghost btn-sm" type="button">Cancel</button>
+        </div>
+        <div class="bar" role="progressbar" aria-label="Upload progress" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100"><span style="width: 64%"></span></div>
+        <div class="t-small muted tnum" style="display: flex; justify-content: space-between"><span>Uploading… 11.8 of 18.4 MB</span><span>About 8 seconds left</span></div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{isError}}" hint-placeholder-val="{{ false }}">
+      <div class="banner banner-err" role="alert"><span class="i i-alert i-lg" aria-hidden="true"></span><div style="display: flex; flex-direction: column; gap: 6px"><strong>This video is too long to analyse</strong><span class="t-small">clinic-tour.mov is 4 min 12 s. The limit is 3 minutes. Trim it and upload again.</span><button class="btn btn-secondary btn-sm" type="button" style="align-self: flex-start">Choose another file</button></div></div>
+    </sc-if>
+
+    <div style="display: flex; gap: 16px; flex-wrap: wrap">
+      <div class="field" style="flex: 2 1 320px"><label for="t">Title <span class="faint" style="font-weight: 400">(optional)</span></label><input class="input" id="t" type="text" placeholder="Shown in your videos list instead of the file name"></div>
+      <div class="field" style="flex: 1 1 200px"><label for="p">Platform <span class="faint" style="font-weight: 400">(optional)</span></label><select class="select" id="p"><option>TikTok</option><option>Instagram Reels</option><option>YouTube Shorts</option><option>Other</option></select></div>
+    </div>
+
+    <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap">
+      <a class="btn btn-primary" href="JobProgress.dc.html">Start analysis</a>
+      <span class="t-small muted">You'll go to the progress page. You can leave it; the result is saved to your videos.</span>
+    </div>
+  </section>
+
+  <aside style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px" aria-labelledby="rh">
+    <div class="card" style="padding: 16px; display: flex; flex-direction: column; gap: 12px">
+      <h2 class="t-h3" id="rh">What gets checked</h2>
+      <ul class="t-small muted" style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px">
+        <li>Spoken words and on-screen text</li>
+        <li>Each health claim, with timestamps</li>
+        <li>Whether the speaker endorses, refutes or quotes it</li>
+        <li>PubMed research and official sources (WHO, CDC, FDA…)</li>
+      </ul>
+      <p class="t-small" style="margin: 0">Uncertain or high-risk results go to a human reviewer before they are final.</p>
+    </div>
+    <div class="card" style="padding: 16px; display: flex; flex-direction: column; gap: 10px">
+      <div style="display: flex; justify-content: space-between"><h2 class="t-h3">Recent</h2><a class="t-small" href="Jobs.dc.html">All videos</a></div>
+      <a href="Main.dc.html" style="display: flex; justify-content: space-between; gap: 8px; text-decoration: none; color: inherit"><span class="mono t-small">hot-water-flu.mp4</span><span class="lb lb-mis"><span class="i i-alert i-sm" aria-hidden="true"></span>MISINFO</span></a>
+      <a href="#" style="display: flex; justify-content: space-between; gap: 8px; text-decoration: none; color: inherit"><span class="mono t-small">nurse-autism-myth.mp4</span><span class="lb lb-deb"><span class="i i-shield i-sm" aria-hidden="true"></span>DEBUNKED</span></a>
+      <a href="#" style="display: flex; justify-content: space-between; gap: 8px; text-decoration: none; color: inherit"><span class="mono t-small">dr-k-fasting.mov</span><span class="js js-review"><span class="i i-flag i-sm" aria-hidden="true"></span>Needs review</span></a>
+    </div>
+  </aside>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light","section":"Display"},"state":{"editor":"enum","options":["idle","uploading","error"],"default":"uploading","section":"State"},"$preview":{"width":1440,"height":860}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.props.state ?? 'uploading';
+    return { theme: this.props.theme ?? 'light', isIdle: s === 'idle' || s === 'error', isUploading: s === 'uploading', isError: s === 'error' };
+  }
+}
+</script>
+</body>
+</html>

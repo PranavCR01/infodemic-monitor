@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Review queue</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../im.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5F99}a:hover{color:#174A78}
+</style>
+</helmet>
+<div class="im" data-theme="{{theme}}" style="min-height: 100vh">
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark" aria-hidden="true">IM</span><span>Infodemic Monitor <span class="faint" style="font-weight: 400">· WHO research</span></span></a>
+  <nav class="nav" aria-label="Main" style="flex: 1">
+    <a href="Jobs.dc.html"><span class="i i-grid" aria-hidden="true"></span>Videos</a>
+    <a href="Submit.dc.html"><span class="i i-upload" aria-hidden="true"></span>Submit</a>
+    <a href="ReviewQueue.dc.html" aria-current="page"><span class="i i-inbox" aria-hidden="true"></span>Review queue <span class="count">4</span></a>
+    <a href="#"><span class="i i-chart" aria-hidden="true"></span>Evaluation</a>
+  </nav>
+  <span class="avatar" aria-label="Signed in as Dr. A. Mensah, reviewer">AM</span>
+</header>
+
+<main class="page" style="display: flex; flex-direction: column; gap: 20px">
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap">
+    <div><h1 class="t-h1">Review queue</h1><p class="t-small muted" style="margin: 4px 0 0">Results the system would not finalise on its own. Each needs a decision and a reason.</p></div>
+    <div class="seg" role="tablist" aria-label="Queue view"><button type="button" role="tab" aria-pressed="true" aria-selected="true">Needs decision <span class="count">4</span></button><button type="button" role="tab" aria-pressed="false" aria-selected="false">Decided by me</button></div>
+  </div>
+
+  <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center" role="group" aria-label="Filter by review reason">
+    <span class="t-small muted" style="display: inline-flex; gap: 6px; align-items: center; margin-right: 4px"><span class="i i-filter i-sm" aria-hidden="true"></span>Reason</span>
+    <button class="btn btn-secondary btn-sm" type="button" aria-pressed="true" style="background: var(--primary-subtle); border-color: var(--primary)">All <span class="count">4</span></button>
+    <button class="btn btn-secondary btn-sm" type="button" aria-pressed="false">Possible debunk <span class="count">1</span></button>
+    <button class="btn btn-secondary btn-sm" type="button" aria-pressed="false">Denies established finding <span class="count">1</span></button>
+    <button class="btn btn-secondary btn-sm" type="button" aria-pressed="false">Evidence mixed <span class="count">1</span></button>
+    <button class="btn btn-secondary btn-sm" type="button" aria-pressed="false">Stance unclear <span class="count">1</span></button>
+    <select class="select" aria-label="Sort" style="width: auto; margin-left: auto"><option>Priority, then oldest</option><option>Oldest first</option><option>Newest first</option></select>
+  </div>
+
+  <section class="card" aria-label="Items awaiting review">
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr>
+          <th scope="col">Priority</th><th scope="col">Video</th><th scope="col">Proposed label</th><th scope="col">Why it needs review</th><th scope="col">Waiting</th><th scope="col">Submitted by</th><th scope="col"><span style="position: absolute; left: -9999px">Action</span></th>
+        </tr></thead>
+        <tbody>
+          <sc-for list="{{rows}}" as="r" hint-placeholder-count="4">
+            <tr>
+              <td><span class="{{r.prCls}}" style="display: inline-flex; gap: 6px; align-items: center; font-weight: 600; font-size: 13px"><span class="i {{r.prIcon}} i-sm" aria-hidden="true"></span>{{r.pr}}</span></td>
+              <td><div style="display: flex; gap: 12px; align-items: center"><span class="thumb" aria-hidden="true"></span><div style="display: flex; flex-direction: column"><span style="font-weight: 600">{{r.title}}</span><span class="mono t-cap faint">{{r.file}} · {{r.claims}} claims</span></div></div></td>
+              <td><span class="lb {{r.lbCls}}"><span class="i {{r.lbIcon}} i-sm" aria-hidden="true"></span>{{r.lb}}</span></td>
+              <td style="max-width: 360px"><span class="rr"><span class="i {{r.rrIcon}} i-sm" aria-hidden="true"></span>{{r.reason}}</span></td>
+              <td class="tnum muted" style="white-space: nowrap">{{r.age}}</td>
+              <td class="t-small">{{r.by}}</td>
+              <td style="text-align: right">
+                <sc-if value="{{r.canReview}}" hint-placeholder-val="{{ true }}"><a class="btn btn-primary btn-sm" href="ReviewWorkspace.dc.html">Review</a></sc-if>
+                <sc-if value="{{r.own}}" hint-placeholder-val="{{ false }}"><span class="t-cap faint" style="display: inline-block; max-width: 150px; text-align: right">Your submission. Another reviewer decides.</span></sc-if>
+              </td>
+            </tr>
+          </sc-for>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <p class="note"><span class="i i-info i-sm" aria-hidden="true"></span>High priority: a MISINFO label, or a possible debunk that could be mislabelled. The queue refreshes every 30 seconds.</p>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light","section":"Display"},"$preview":{"width":1440,"height":860}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const L = { MISINFO: ['lb-mis', 'i-alert'], 'NO-MISINFO': ['lb-nomis', 'i-checkc'], DEBUNKED: ['lb-deb', 'i-shield'], 'CANNOT RECOGNIZE': ['lb-cr', 'i-helpc'] };
+    const raw = [
+      ['High', 'Dr. K on fasting and immunity', 'dr-k-fasting.mov', 4, 'CANNOT RECOGNIZE', 'The speaker refutes a claim the evidence can’t settle (possible debunk)', 'i-shield', '22 min', 'J. Okafor', false],
+      ['High', 'Raw milk and allergies', 'raw-milk.mp4', 3, 'MISINFO', 'The speaker appears to deny an established finding', 'i-alert', '1 h 05 min', 'L. Haddad', false],
+      ['Normal', 'Turmeric for joint pain', 'turmeric-joints.mov', 2, 'NO-MISINFO', 'Evidence is mixed', 'i-mixed', '3 h 40 min', 'J. Okafor', false],
+      ['Normal', 'Comedian on cold remedies', 'cold-remedies-skit.mp4', 5, 'MISINFO', 'Stance unclear (possible sarcasm)', 'i-question', '1 day', 'A. Mensah (you)', true]
+    ];
+    const rows = raw.map(([pr, title, file, claims, lb, reason, rrIcon, age, by, own]) => ({
+      pr, prCls: pr === 'High' ? 'js-review' : 'muted', prIcon: pr === 'High' ? 'i-flag' : 'i-minus',
+      title, file, claims, lb, lbCls: L[lb][0], lbIcon: L[lb][1], reason, rrIcon, age, by, own, canReview: !own
+    }));
+    return { theme: this.props.theme ?? 'light', rows };
+  }
+}
+</script>
+</body>
+</html>

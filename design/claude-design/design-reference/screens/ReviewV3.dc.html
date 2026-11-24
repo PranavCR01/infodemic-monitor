@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Review, direction 3: evidence first, judge before reveal</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../im.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5F99}a:hover{color:#174A78}
+</style>
+</helmet>
+<div class="im" data-theme="{{theme}}" style="min-height: 100vh">
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark" aria-hidden="true">IM</span><span>Infodemic Monitor <span class="faint" style="font-weight: 400">· Detect</span></span></a>
+  <nav class="nav" aria-label="Main" style="flex: 1">
+    <a href="Jobs.dc.html"><span class="i i-grid" aria-hidden="true"></span>Videos</a>
+    <a href="ReviewQueue.dc.html" aria-current="page"><span class="i i-inbox" aria-hidden="true"></span>Review queue <span class="count">4</span></a>
+  </nav>
+  <span class="avatar" aria-label="Signed in as Dr. A. Mensah, reviewer">AM</span>
+</header>
+
+<main class="page" style="display: flex; flex-direction: column; gap: 20px">
+  <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="ReviewQueue.dc.html">Review queue</a><span class="i i-chevr i-sm" aria-hidden="true"></span><span>Dr. K on fasting and immunity</span><span class="i i-chevr i-sm" aria-hidden="true"></span><span>Claim 1 of 3</span></nav>
+    <span class="js js-review" style="margin-left: auto"><span class="i i-flag i-sm" aria-hidden="true"></span>High priority: possible debunk</span>
+  </div>
+
+  <div style="display: flex; gap: 24px; flex-wrap: wrap; align-items: flex-start">
+    <!-- EVIDENCE (always visible) -->
+    <section style="flex: 999 1 680px; min-width: 0; display: flex; flex-direction: column; gap: 16px" aria-labelledby="ch">
+      <div class="card" style="padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
+        <span class="t-over">The claim</span>
+        <h1 class="serif" id="ch" style="margin: 0; font-size: 26px; line-height: 34px; font-weight: 600">Fasting boosts your immunity against all infections.</h1>
+        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap">
+          <a class="btn btn-secondary btn-sm" href="#"><span class="i i-play i-sm" aria-hidden="true"></span><span class="mono">Play 0:06–0:14</span></a>
+          <span class="tag"><span class="i i-mic i-sm" aria-hidden="true"></span>Speech</span>
+          <span class="t-small muted">Speaker introduces herself as a physician at 0:01.</span>
+        </div>
+      </div>
+
+      <div class="card" style="overflow: hidden">
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr))">
+          <div style="padding: 16px 20px; border-right: 1px solid var(--border); display: flex; flex-direction: column; gap: 10px">
+            <h2 class="t-over" style="margin: 0">What the speaker said</h2>
+            <p class="serif" style="margin: 0; font-size: 17px; line-height: 28px"><span class="mono t-small faint" style="margin-right: 8px">0:04</span>A lot of you asked about this.</p>
+            <p class="serif" style="margin: 0; font-size: 17px; line-height: 28px; background: var(--surface-2); border-radius: 6px; padding: 4px 8px"><span class="mono t-small faint" style="margin-right: 8px">0:06</span><mark class="hl hl-ins">people keep saying fasting boosts immunity against everything</mark>, and that's just not what we see.</p>
+            <p class="serif" style="margin: 0; font-size: 17px; line-height: 28px"><span class="mono t-small faint" style="margin-right: 8px">0:15</span>Short fasts can change some immune markers, but that's not protection.</p>
+            <p class="t-cap faint" style="margin: 0">Read the words yourself. The system's stance label is hidden until you commit.</p>
+          </div>
+          <div style="padding: 16px 20px; display: flex; flex-direction: column; gap: 12px">
+            <h2 class="t-over" style="margin: 0">What the sources say <span class="count">2</span></h2>
+            <article style="display: flex; flex-direction: column; gap: 6px; padding-bottom: 12px; border-bottom: 1px solid var(--border)">
+              <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap"><span class="sk"><span class="i i-book i-sm" aria-hidden="true"></span>PubMed paper</span><span class="tag tag-strong">Narrative review</span><span class="t-cap faint">[year]</span></div>
+              <span class="t-small" style="font-weight: 600">[Review of fasting and immune function in humans]</span>
+              <blockquote class="serif" style="margin: 0; font-size: 15px; line-height: 24px; font-style: italic; color: var(--text-2)">“[Passage: effects on immune cell counts are reported; no trials measured infection rates.]”</blockquote>
+              <label class="t-cap" style="display: flex; gap: 8px; align-items: center">Your read of this source <select class="select" style="width: auto; min-height: 32px; padding: 4px 8px; font-size: 12px"><option>Choose…</option><option>Supports the claim</option><option>Contradicts the claim</option><option>Mentions only</option></select></label>
+            </article>
+            <article style="display: flex; flex-direction: column; gap: 6px">
+              <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap"><span class="sk"><span class="i i-book i-sm" aria-hidden="true"></span>PubMed paper</span><span class="tag tag-strong">Animal or lab study</span><span class="t-cap faint">[year]</span></div>
+              <span class="t-small" style="font-weight: 600">[Fasting and immune response in mice]</span>
+              <blockquote class="serif" style="margin: 0; font-size: 15px; line-height: 24px; font-style: italic; color: var(--text-2)">“[Passage: fasting altered immune response to one infection in mice.]”</blockquote>
+              <label class="t-cap" style="display: flex; gap: 8px; align-items: center">Your read of this source <select class="select" style="width: auto; min-height: 32px; padding: 4px 8px; font-size: 12px"><option>Choose…</option><option>Supports the claim</option><option>Contradicts the claim</option><option>Mentions only</option></select></label>
+            </article>
+            <a class="t-small" href="#">How we searched · 9 results screened, 2 kept</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JUDGE, THEN REVEAL -->
+    <aside style="flex: 1 1 400px; max-width: 460px; display: flex; flex-direction: column; gap: 16px">
+      <sc-if value="{{before}}" hint-placeholder-val="{{ true }}">
+        <form class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 16px" aria-labelledby="s1">
+          <div><span class="t-over">Step 1 of 2</span><h2 class="t-h2" id="s1" style="margin-top: 2px">Your judgement first</h2><p class="t-small muted" style="margin: 4px 0 0">High-priority items ask for your read before you see the system's. Both are kept.</p></div>
+          <fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px">
+            <legend class="lbl" style="margin-bottom: 6px">What does the speaker do with the claim? <span class="req">*</span></legend>
+            <sc-for list="{{stances}}" as="o" hint-placeholder-count="5"><label class="radio {{o.on}}" style="padding: 8px 12px; align-items: center"><input type="radio" name="s" checked="{{o.checked}}" onChange="{{o.pick}}" style="margin-top: 0"><span class="st"><span class="i {{o.icon}} i-sm" aria-hidden="true"></span>{{o.name}}</span></label></sc-for>
+          </fieldset>
+          <fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px">
+            <legend class="lbl" style="margin-bottom: 6px">What does the evidence show? <span class="req">*</span></legend>
+            <sc-for list="{{verdicts}}" as="o" hint-placeholder-count="5"><label class="radio {{o.on}}" style="padding: 8px 12px; align-items: center"><input type="radio" name="v" checked="{{o.checked}}" onChange="{{o.pick}}" style="margin-top: 0"><span class="vd {{o.cls}}"><span class="i {{o.icon}} i-sm" aria-hidden="true"></span>{{o.name}}</span></label></sc-for>
+          </fieldset>
+          <div style="border: 1px dashed var(--border-strong); border-radius: 8px; padding: 12px; display: flex; gap: 10px; align-items: center; background: var(--surface-2)"><span class="i i-lock" aria-hidden="true" style="color: var(--text-3)"></span><span class="t-small muted">System assessment hidden until you commit.</span></div>
+          <button class="btn btn-primary" type="button" disabled="{{cantCommit}}" onClick="{{commit}}">Commit and show system assessment</button>
+        </form>
+      </sc-if>
+
+      <sc-if value="{{after}}" hint-placeholder-val="{{ false }}">
+        <section class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 12px" aria-labelledby="cmp">
+          <span class="t-over">Step 2 of 2</span>
+          <h2 class="t-h2" id="cmp">You and the system</h2>
+          <table class="tbl" style="font-size: 13px">
+            <thead><tr><th scope="col"></th><th scope="col">You</th><th scope="col">System</th></tr></thead>
+            <tbody>
+              <tr><th scope="row" style="background: none">Stance</th><td><span class="st"><span class="i i-refute i-sm" aria-hidden="true"></span>REFUTES</span></td><td><span class="st"><span class="i i-refute i-sm" aria-hidden="true"></span>REFUTES</span></td></tr>
+              <tr><th scope="row" style="background: none">Evidence</th><td><span class="vd vd-con"><span class="i i-xc i-sm" aria-hidden="true"></span>Contradicted</span></td><td><span class="vd vd-ins"><span class="i i-dashed i-sm" aria-hidden="true"></span>Insufficient</span></td></tr>
+              <tr><th scope="row" style="background: none">Video label</th><td><span class="lb lb-deb"><span class="i i-shield i-sm" aria-hidden="true"></span>DEBUNKED</span></td><td><span class="lb lb-cr"><span class="i i-helpc i-sm" aria-hidden="true"></span>CANNOT RECOGNIZE</span></td></tr>
+            </tbody>
+          </table>
+          <p class="t-small" style="margin: 0; display: flex; gap: 6px; color: var(--warn-fg)"><span class="i i-alert i-sm" aria-hidden="true" style="margin-top: 3px"></span>You disagree on the evidence. Say which reading you're keeping and why.</p>
+          <div class="field"><label for="rc">Decision <span class="req">*</span></label><select class="select" id="rc"><option>Use my judgement (correct to DEBUNKED)</option><option>Accept the system's assessment</option><option>Reject the result</option><option>Request re-analysis</option></select></div>
+          <div class="field"><label for="rr">Reason code <span class="req">*</span></label><select class="select" id="rr"><option>Claim is an overgeneralisation the evidence rules out</option><option>Evidence misread by system</option><option>Stance misread by system</option><option>Missing source</option><option>Other</option></select></div>
+          <div class="field"><label for="rt">Note <span class="req">*</span></label><textarea class="textarea" id="rt">No study supports protection against all infections; a claim this broad is contradicted, not untested.</textarea></div>
+          <button class="btn btn-primary" type="button">Save decision</button>
+          <p class="t-cap faint" style="margin: 0">Audit trail will record: judged before reveal · disagreed on evidence · kept own reading.</p>
+        </section>
+      </sc-if>
+    </aside>
+  </div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light","section":"Display"},"stage":{"editor":"enum","options":["before reveal","after reveal"],"default":"before reveal","section":"State"},"$preview":{"width":1440,"height":1160}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const st = this.state || {};
+    const revealed = st.revealed ?? ((this.props.stage ?? 'before reveal') === 'after reveal');
+    const S = [['ENDORSES', 'i-endorse'], ['REFUTES', 'i-refute'], ['QUOTES', 'i-quote'], ['NEUTRAL', 'i-minus'], ['UNCLEAR', 'i-question']];
+    const V = [['Supported', 'vd-sup', 'i-checkc'], ['Contradicted', 'vd-con', 'i-xc'], ['Mixed', 'vd-mix', 'i-mixed'], ['Insufficient evidence', 'vd-ins', 'i-dashed'], ['Not verifiable', 'vd-nv', 'i-ban']];
+    const stances = S.map(([name, icon]) => ({ name, icon, checked: st.s === name, on: st.s === name ? 'on' : '', pick: () => this.setState({ s: name }) }));
+    const verdicts = V.map(([name, cls, icon]) => ({ name, cls, icon, checked: st.v === name, on: st.v === name ? 'on' : '', pick: () => this.setState({ v: name }) }));
+    return {
+      theme: this.props.theme ?? 'light', stances, verdicts,
+      before: !revealed, after: revealed, cantCommit: !(st.s && st.v),
+      commit: () => this.setState({ revealed: true })
+    };
+  }
+}
+</script>
+</body>
+</html>

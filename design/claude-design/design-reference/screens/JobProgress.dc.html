@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Analysing video</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../im.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5F99}a:hover{color:#174A78}
+</style>
+</helmet>
+<div class="im" data-theme="{{theme}}" style="min-height: 100vh">
+<header class="topbar">
+  <a class="brand" href="Jobs.dc.html"><span class="brand-mark" aria-hidden="true">IM</span><span>Infodemic Monitor <span class="faint" style="font-weight: 400">· WHO research</span></span></a>
+  <nav class="nav" aria-label="Main" style="flex: 1">
+    <a href="Jobs.dc.html" aria-current="page"><span class="i i-grid" aria-hidden="true"></span>Videos</a>
+    <a href="Submit.dc.html"><span class="i i-upload" aria-hidden="true"></span>Submit</a>
+    <a href="#"><span class="i i-inbox" aria-hidden="true"></span>Review queue <span class="count">4</span></a>
+  </nav>
+  <span class="avatar" aria-label="Signed in as Dr. A. Mensah">AM</span>
+</header>
+
+<main class="page" style="display: flex; flex-direction: column; gap: 20px; max-width: 1120px">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="Jobs.dc.html">Videos</a><span class="i i-chevr i-sm" aria-hidden="true"></span><span class="mono">garlic-cold.mp4</span></nav>
+
+  <div style="display: flex; gap: 24px; flex-wrap: wrap; align-items: flex-start">
+    <section class="card" style="flex: 999 1 560px; min-width: 0; padding: 24px; display: flex; flex-direction: column; gap: 20px" aria-labelledby="h">
+      <div style="display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap">
+        <div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 6px">
+          <span class="js {{stCls}}" style="font-size: 14px; font-weight: 600"><span class="i {{stIcon}}" aria-hidden="true"></span>{{stText}}</span>
+          <h1 class="t-h1" id="h">{{headline}}</h1>
+          <p class="muted" style="margin: 0">{{sub}}</p>
+        </div>
+        <div style="text-align: right">
+          <div class="t-over">Elapsed</div>
+          <div class="mono" style="font-size: 24px; line-height: 32px; font-weight: 500" aria-live="off">{{elapsed}}</div>
+          <div class="t-cap faint">Usually 1–3 min</div>
+        </div>
+      </div>
+
+      <sc-if value="{{isRetrying}}" hint-placeholder-val="{{ false }}">
+        <div class="banner banner-review" role="status"><span class="i i-refresh i-lg" aria-hidden="true"></span><div class="t-small"><strong>Temporary problem, retrying automatically.</strong> The research database did not respond in time. Attempt 2 of 3. You don't need to do anything.</div></div>
+      </sc-if>
+      <sc-if value="{{isFailed}}" hint-placeholder-val="{{ false }}">
+        <div class="banner banner-err" role="alert"><span class="i i-alert i-lg" aria-hidden="true"></span><div style="display: flex; flex-direction: column; gap: 8px"><div class="t-small"><strong>We couldn't read the audio in this video.</strong> The sound track may be missing or damaged. Retrying sometimes helps; if not, export the video again and upload the new file.</div><div style="display: flex; gap: 8px; flex-wrap: wrap"><button class="btn btn-primary btn-sm" type="button"><span class="i i-refresh i-sm" aria-hidden="true"></span>Retry analysis</button><a class="btn btn-secondary btn-sm" href="Submit.dc.html">Upload a different file</a></div><span class="t-cap faint mono">Reference: job_8f2c41 · copy this if you contact support</span></div></div>
+      </sc-if>
+
+      <ol class="steps" aria-label="Analysis steps">
+        <sc-for list="{{steps}}" as="s" hint-placeholder-count="8">
+          <li class="step {{s.cls}}" aria-current="{{s.current}}">
+            <span class="dot"><sc-if value="{{s.isDone}}" hint-placeholder-val="{{ false }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg></sc-if><sc-if value="{{s.showNum}}" hint-placeholder-val="{{ true }}">{{s.n}}</sc-if></span>
+            <div style="display: flex; flex-direction: column; gap: 2px; padding-top: 3px">
+              <span style="font-weight: {{s.weight}}">{{s.name}}</span>
+              <sc-if value="{{s.hasNote}}" hint-placeholder-val="{{ false }}"><span class="t-small muted">{{s.note}}</span></sc-if>
+            </div>
+            <span class="mono t-small faint" style="padding-top: 3px">{{s.time}}</span>
+            <sc-if value="{{s.line}}" hint-placeholder-val="{{ true }}"><span class="step-line" aria-hidden="true"></span></sc-if>
+          </li>
+        </sc-for>
+      </ol>
+    </section>
+
+    <aside style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 12px">
+      <div class="card" style="padding: 16px; display: flex; gap: 14px">
+        <span class="thumb" aria-hidden="true"></span>
+        <dl class="kv" style="align-content: start">
+          <dt>File</dt><dd class="mono">garlic-cold.mp4</dd>
+          <dt>Length</dt><dd class="tnum">1:18</dd>
+          <dt>Submitted</dt><dd class="tnum">Today, 07:02</dd>
+        </dl>
+      </div>
+      <div class="card" style="padding: 16px; display: flex; flex-direction: column; gap: 8px">
+        <h2 class="t-h3">You can leave this page</h2>
+        <p class="t-small muted" style="margin: 0">The analysis keeps running. The result appears in your videos list, and this page opens it automatically when it's ready.</p>
+        <a class="t-small" href="Jobs.dc.html">Back to your videos</a>
+      </div>
+    </aside>
+  </div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light","section":"Display"},"state":{"editor":"enum","options":["queued","running","retrying","failed"],"default":"running","section":"State"},"$preview":{"width":1440,"height":980}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.props.state ?? 'running';
+    const names = ['Uploaded', 'Transcribing speech', 'Reading on-screen text', 'Finding claims', 'Checking stance', 'Searching evidence', 'Verifying', 'Final checks'];
+    const done = ['0:02', '0:14', '0:09', '0:11', '0:08'];
+    let cur = 5, curCls = 'now', note = 'Searching PubMed and official sources for 4 claims';
+    if (s === 'queued') { cur = 1; curCls = ''; note = ''; }
+    if (s === 'retrying') { curCls = 'warn'; note = 'Retrying: the research database did not respond'; }
+    if (s === 'failed') { cur = 1; curCls = 'fail'; note = 'Stopped here: no readable audio'; }
+    const steps = names.map((name, i) => {
+      const isDone = s === 'queued' ? i === 0 : i < cur;
+      const isCur = i === cur && s !== 'queued';
+      return {
+        n: String(i + 1), name, isDone, showNum: !isDone,
+        cls: isDone ? 'done' : (isCur ? curCls : ''),
+        current: isCur ? 'step' : 'false',
+        weight: isCur ? '600' : '400',
+        note: isCur ? note : '', hasNote: isCur && !!note,
+        time: isDone ? (done[i] || '') : (isCur && s !== 'failed' ? '0:24' : ''),
+        line: i < names.length - 1
+      };
+    });
+    const M = {
+      queued: ['js-queued', 'i-clock', 'Queued', 'Waiting to start', '2 videos are ahead of this one. It will start automatically.', '0:41'],
+      running: ['js-running', 'i-loader', 'Running', 'Searching evidence', 'Step 6 of 8. Results usually arrive within a minute from here.', '1:12'],
+      retrying: ['js-retrying', 'i-refresh', 'Retrying', 'Searching evidence', 'Step 6 of 8, paused for a temporary problem.', '1:48'],
+      failed: ['js-failed', 'i-alert', 'Failed', 'Analysis stopped', 'Nothing was labelled. No partial result is shown.', '0:31']
+    }[s];
+    return {
+      theme: this.props.theme ?? 'light', steps,
+      stCls: M[0], stIcon: M[1], stText: M[2], headline: M[3], sub: M[4], elapsed: M[5],
+      isRetrying: s === 'retrying', isFailed: s === 'failed'
+    };
+  }
+}
+</script>
+</body>
+</html>
