@@ -1,0 +1,66 @@
+{
+ "video_id": "v02",
+ "ocr": {
+  "engine": "easyocr",
+  "fps": 0.5,
+  "min_confidence": 0.5
+ },
+ "transcript": {
+  "language": "en",
+  "duration_seconds": 10.0,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.0,
+    "text": "People say garlic prevents colds. That's a myth."
+   },
+   {
+    "id": "t2",
+    "start": 3.0,
+    "end": 6.0,
+    "text": "Adults need 90 mg of vitamin C a day."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 6,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.99
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.99
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.99
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 0.99
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 0.99
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 0.99
+   },
+   {
+    "time": 0.0,
+    "text": "MYTH: GARLIC STOPS COLDS",
+    "confidence": 0.97
+   }
+  ]
+ }
+}

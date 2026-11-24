@@ -5,21 +5,24 @@ import { ReviewQueue } from "@/components/review/ReviewQueue";
 import { ErrorBanner } from "@/components/ui";
 import { fetchQueue } from "@/lib/api/reviews";
 import type { QueueItem } from "@/lib/api/review-adapter";
+import { useViewerId } from "@/lib/hooks/useViewerId";
 
 export function QueueClient() {
   const [view, setView] = useState<"open" | "decided">("open");
   const [items, setItems] = useState<QueueItem[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [updatedAt, setUpdatedAt] = useState<Date | null>(null);
+  const viewerId = useViewerId();
 
   const load = useCallback(async () => {
-    const r = await fetchQueue(view);
+    if (viewerId === undefined) return false;
+    const r = await fetchQueue(view, viewerId);
     if (r.ok) {
       setItems(r.data.items);
       setError(null);
       setUpdatedAt(new Date());
     } else setError(r.message);
-  }, [view]);
+  }, [view, viewerId]);
 
   // HANDOFF §6.7: refresh every 30 s while the tab is visible.
   useEffect(() => {

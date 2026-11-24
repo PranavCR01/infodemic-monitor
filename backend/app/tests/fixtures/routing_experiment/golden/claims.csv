@@ -1,0 +1,5 @@
+video_id,claim_id,claim_text,claim_source,claim_kind,start_seconds,end_seconds,speaker_stance,claim_verdict,evidence_supporting,evidence_contradicting,annotator,confidence,review_status,reviewer,reviewer_notes,notes
+v01,c1,Hot water every morning cures the flu,both,research_question,0.0,4.0,ENDORSES,CONTRADICTED,,PMID:11111111,fixture,high,pending,,,Synthetic.
+v02,c1,Garlic prevents colds,speech,research_question,0.0,3.0,REFUTES,INSUFFICIENT_EVIDENCE,,,fixture,high,pending,,,Synthetic.
+v02,c2,The recommended daily vitamin C intake for adults is 90 mg,speech,fact_of_record,3.0,6.0,ENDORSES,SUPPORTED,https://example.org/vitc,,fixture,high,pending,,,Synthetic.
+v04,c1,Green tea cures cancer,speech,research_question,0.0,3.0,ENDORSES,UNSUPPORTED,,,fixture,high,pending,,,Synthetic test-split row.

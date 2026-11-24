@@ -18,6 +18,8 @@ export type RawJobListItem = {
   // T30
   misinfo_basis?: string | null;
   label_display?: string | null;
+  // T33: the submitter's Supabase user id; null on legacy rows
+  submitted_by?: string | null;
 };
 
 export type RawJobListPage = { items: RawJobListItem[]; total: number; limit: number; offset: number };
