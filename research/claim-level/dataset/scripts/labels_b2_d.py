@@ -79,9 +79,6 @@ LABELS = [
     },
     {
         "video_id": "v161",
-        "external_reason": (
-            "Six 'best fruit for X' superlatives; no study compares "
-            "fruits, so each is INSUFFICIENT rather than false."),
         "topic": "nutrition / fruit health benefits",
         "case_tags": ["uncertain_science"],
         "confidence": "medium",

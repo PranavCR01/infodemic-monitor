@@ -26,6 +26,10 @@ OUT = DATASET / "collector_agreement.md"
 
 # One line per disagreement: why the section 9 label differs from the folder.
 REASONS = {
+    "v22": "Rule sweep (A4, directness): the claim that eggs prevent "
+           "macular degeneration and cataracts rests only on nutrient and "
+           "macular-pigment evidence, which does not test the outcome, so it "
+           "is UNSUPPORTED and the video is MISINFO (unproven).",
     "v21": "Model-assisted adjudication (rule A1, literal reading): 'promote "
            "good cholesterol' means HDL, and an RCT meta-analysis finds "
            "almonds do not change HDL-C, so that endorsed claim is "

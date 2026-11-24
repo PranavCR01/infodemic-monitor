@@ -28,3 +28,16 @@ How they were found: A2 by scanning OCR captions for efficacy words not covered 
 - v29 "New Cancer Miracle Cure?", v74 "best foods to fight cancer!", v37 metformin headlines: screen titles that are questions or already covered by speech claims.
 
 Count: **8 candidates** (3 A2, 4 A3, 1 A4); 4 of them would change a video label (#3 v81, #4 v35, #6/#7 v139 depending on the citation, #8 v22).
+
+## Applied (lead-approved 2026-11-24)
+
+All 8 candidates are applied through `scripts/adjudication.py` (`SWEEP_CLAIMS`, `SWEEP_NEW`, `SWEEP_VIDEOS`). The set-aside items are unchanged. Results and judgement calls:
+
+- **#1–#2 (v36):** 9 infographic claims added (c9–c17). Two are UNSUPPORTED (sea moss and muscle mass; burdock and PMS), because nothing was found. Six are INSUFFICIENT_EVIDENCE because animal, in-vitro or single-small-study evidence exists on the same herb. "Reduces Diseases Risk" names no disease, so it is read as vague wellness (INSUFFICIENT_EVIDENCE).
+- **#3 (v81):** 3 claims added, but **none is UNSUPPORTED, and v81's label does not change**, contrary to the prediction above. Retrieval found a small study of leg elevation reducing oedema (PMID:2794965), which is the same intervention, so "reduce swelling" is INSUFFICIENT_EVIDENCE. "Improved sleep" is read as vague wellness, and "support lymph flow" as a mechanism.
+- **#4 (v35 c2):** UNSUPPORTED. The mouse radioprotection study tests a different outcome, so under A4 it is removed.
+- **#5 (v161 c6):** UNSUPPORTED. "Best fruit" is read as a wrapper around the detox efficacy claim.
+- **#6–#7 (v139 c5, c6):** UNSUPPORTED. PMID:2247104 did not measure migraine or itching, so it is removed rather than used for CONTRADICTED. v139's label is unchanged because another claim already decides it.
+- **#8 (v22 c2):** UNSUPPORTED (prevention). PMID:35215476 is removed.
+
+Labels changed: v22 NO_MISINFO → MISINFO/unproven; v35 and v161 CANNOT_RECOGNIZE → MISINFO/unproven.

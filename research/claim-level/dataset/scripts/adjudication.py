@@ -132,8 +132,13 @@ def apply(claim_rows, video_rows_fn=None):
     out = []
     for r in claim_rows:
         key = (r["video_id"], r["claim_id"])
-        if key in CLAIMS:
-            changes, why = CLAIMS[key]
+        entry, tag = None, TAG
+        if key in SWEEP_CLAIMS:
+            entry, tag = SWEEP_CLAIMS[key], SWEEP_TAG
+        elif key in CLAIMS:
+            entry = CLAIMS[key]
+        if entry:
+            changes, why = entry
             changed = [k for k, v in changes.items() if r.get(k, "") != v]
             for k, v in changes.items():
                 if k == "notes":
@@ -142,15 +147,17 @@ def apply(claim_rows, video_rows_fn=None):
                     r[k] = v
             r["reviewer"] = REVIEWER
             r["review_status"] = "corrected" if changed else "verified"
-            r["reviewer_notes"] = "%s (%s)" % (why, TAG)
+            r["reviewer_notes"] = "%s (%s)" % (why, tag)
         elif key in agreed:
             r["reviewer_notes"] = AGREED_NOTE
         out.append(r)
-    for n in NEW_CLAIMS:
-        row = {k: v for k, v in n.items() if k != "why"}
-        row.update(annotator="blind_model_pass_v1", review_status="corrected",
-                   reviewer=REVIEWER, reviewer_notes="%s New row. (%s)" % (n["why"], TAG))
-        out.append(row)
+    for news, tag, ann in ((NEW_CLAIMS, TAG, "blind_model_pass_v1"),
+                           (SWEEP_NEW, SWEEP_TAG, "labelling_pipeline_v1")):
+        for n in news:
+            row = {k: v for k, v in n.items() if k != "why"}
+            row.update(annotator=ann, review_status="corrected", reviewer=REVIEWER,
+                       reviewer_notes="%s New row. (%s)" % (n["why"], tag))
+            out.append(row)
     return out, agreed
 
 
@@ -160,17 +167,88 @@ def apply_video(row, first_label_basis):
     vid = row["video_id"]
     with open(BLIND / "model_relabel_videos.csv", encoding="utf-8") as f:
         mv = {r["video_id"]: r for r in csv.DictReader(f)}
-    if vid in VIDEOS:
+    if vid in VIDEOS or vid in SWEEP_VIDEOS:
         now = (row["video_level_label"], row["misinfo_basis"])
         row["reviewer"] = REVIEWER
         row["review_status"] = "corrected" if now != first_label_basis else "verified"
         extra = "" if now == first_label_basis else " Label %s%s -> %s%s." % (
             first_label_basis[0], "/" + first_label_basis[1] if first_label_basis[1] else "",
             now[0], "/" + now[1] if now[1] else "")
-        row["reviewer_notes"] = "%s%s (%s)" % (VIDEOS[vid], extra, TAG)
+        parts = []
+        if vid in VIDEOS:
+            parts.append("%s (%s)" % (VIDEOS[vid], TAG))
+        if vid in SWEEP_VIDEOS:
+            parts.append("%s (%s)" % (SWEEP_VIDEOS[vid], SWEEP_TAG))
+        row["reviewer_notes"] = " ".join(parts) + extra
         if extra:
             row["notes"] = ("[Adjudicated 2026-11-24:%s The text below was "
                             "written for the first-pass label.] %s" % (extra, row["notes"]))
     elif vid in mv and (mv[vid]["video_level_label"], mv[vid]["misinfo_basis"]) == first_label_basis:
         row["reviewer_notes"] = AGREED_NOTE
     return row
+
+
+# ---------------------------------------------------------------------------
+# Rule sweep (blind/rule_sweep.md), approved by the lead on 2026-11-24.
+SWEEP_TAG = "rule sweep, lead-approved 2026-11-24"
+
+SWEEP_CLAIMS = {
+    ("v22", "c2"): ({"claim_verdict": "UNSUPPORTED", "evidence_supporting": "",
+                     "notes": "UNSUPPORTED (prevention): Nothing retrieved tests egg intake against macular degeneration or cataract incidence; the lutein/zeaxanthin review (PMID:35215476) and egg-MPOD trials concern a nutrient or a pigment marker, not the outcome. "},
+                    "A4: evidence on a nutrient (lutein) and a marker (macular pigment) does not bear on 'eggs prevent macular degeneration and cataracts'; INSUFFICIENT_EVIDENCE -> UNSUPPORTED (prevention); PMID:35215476 removed."),
+    ("v35", "c2"): ({"claim_verdict": "UNSUPPORTED", "evidence_supporting": "",
+                     "notes": "UNSUPPORTED (treatment_efficacy): No study tests miso removing radiation from the human body or bloodstream. "},
+                    "A3 + A4. Judgement call: the only citation (PMID:11833659) is a mouse study of radioprotection, a different outcome from 'removing radiation from the body', so under A4 it does not bear on the claim. Removed; INSUFFICIENT_EVIDENCE -> UNSUPPORTED (treatment_efficacy)."),
+    ("v139", "c5"): ({"claim_verdict": "UNSUPPORTED", "evidence_contradicting": "",
+                      "notes": "UNSUPPORTED (treatment_efficacy): No study tests a fungal 'cleanse' against migraine. "},
+                     "A3 + A4. Judgement call: PMID:2247104 (nystatin vs placebo for the 'candidiasis hypersensitivity syndrome') did not measure migraine, so it neither tests nor contradicts the claim. Removed; not CONTRADICTED. INSUFFICIENT_EVIDENCE -> UNSUPPORTED (treatment_efficacy)."),
+    ("v139", "c6"): ({"claim_verdict": "UNSUPPORTED", "evidence_contradicting": "",
+                      "notes": "UNSUPPORTED (treatment_efficacy): No study tests a fungal 'cleanse' against skin itching. "},
+                     "A3 + A4. Judgement call as v139 c5: PMID:2247104 did not measure skin itching. Removed; INSUFFICIENT_EVIDENCE -> UNSUPPORTED (treatment_efficacy)."),
+    ("v161", "c6"): ({"claim_verdict": "UNSUPPORTED",
+                      "notes": "UNSUPPORTED (treatment_efficacy): No study of lemon for liver detoxification was found (search 'lemon liver detoxification' returned a herbal detox-tea liver-injury case and citrus-pectin reviews). "},
+                     "A3: 'detoxing the liver' is a specific therapeutic effect. Judgement call: 'the best fruit' is read as a comparative wrapper around that efficacy claim, not as vague wellness. INSUFFICIENT_EVIDENCE -> UNSUPPORTED (treatment_efficacy)."),
+}
+
+def _new(vid, cid, text, start, end, verdict, sup="", con="", notes="", why=""):
+    return dict(video_id=vid, claim_id=cid, claim_text=text, claim_source="screen",
+                claim_kind="research_question", start_seconds=start, end_seconds=end,
+                speaker_stance="ENDORSES", claim_verdict=verdict, evidence_supporting=sup,
+                evidence_contradicting=con, confidence="medium", notes=notes, why=why)
+
+_A2 = "A2: screen-only infographic claim stated as fact, ENDORSES."
+SWEEP_NEW = [
+    _new("v36", "c9", "Irish Sea Moss: Boost Mens Sexual Wellness", "34.0", "40.0", "INSUFFICIENT_EVIDENCE",
+         sup="PMID:34220241", notes="One rat study of Chondrus crispus reports improved testicular function and sperm motility; animal data on the same seaweed, so too weak rather than absent.", why=_A2),
+    _new("v36", "c10", "Irish Sea Moss: Building Muscles Mass", "34.0", "40.0", "UNSUPPORTED",
+         notes="UNSUPPORTED (treatment_efficacy): No study of sea moss and muscle mass was found (search 'sea moss seaweed muscle mass': 0 hits).", why=_A2),
+    _new("v36", "c11", "Irish Sea Moss: Reduces Diseases Risk", "34.0", "40.0", "INSUFFICIENT_EVIDENCE",
+         notes="No disease named; vague wellness, so INSUFFICIENT_EVIDENCE rather than UNSUPPORTED.", why=_A2),
+    _new("v36", "c12", "Burdock Root: Fights Infections", "28.0", "32.0", "INSUFFICIENT_EVIDENCE",
+         sup="PMID:16521107", notes="In vitro antibacterial activity of an Arctium lappa extract (endodontic bacteria); no human infection trial.", why=_A2),
+    _new("v36", "c13", "Burdock Root: Soothes Eczema", "28.0", "32.0", "INSUFFICIENT_EVIDENCE",
+         sup="PMID:41111517", notes="Review of mostly experimental evidence on Arctium lappa in immune-mediated skin disease; no adequate eczema trial.", why=_A2),
+    _new("v36", "c14", "Burdock Root: Assists with PMS Symptoms", "28.0", "32.0", "UNSUPPORTED",
+         notes="UNSUPPORTED (treatment_efficacy): No study of burdock for premenstrual symptoms was found (search 'burdock premenstrual syndrome': 0 hits).", why=_A2),
+    _new("v36", "c15", "Moringa: Promotes Liver Protection", "50.0", "56.0", "INSUFFICIENT_EVIDENCE",
+         sup="PMID:37765399", notes="Cell-culture (HepG2) review of hepatoprotection; no human data.", why=_A2),
+    _new("v36", "c16", "Moringa: Treats Urinary Disorders", "50.0", "56.0", "INSUFFICIENT_EVIDENCE",
+         sup="PMID:27437504", notes="One small open Ayurvedic trial of moringa stem bark in UTI (66.7% cured vs 46.7% on standard drugs); too weak, and 'urinary disorders' is broader than UTI.", why=_A2),
+    _new("v36", "c17", "Moringa: Anti-Ulcer", "50.0", "56.0", "INSUFFICIENT_EVIDENCE",
+         sup="PMID:23972244", notes="Rat gastric-ulcer models only.", why=_A2),
+    _new("v81", "c2", "[Legs up the wall:] Improved sleep", "38.0", "40.0", "INSUFFICIENT_EVIDENCE",
+         notes="Nothing retrieved tests the pose against sleep (search 'legs up the wall sleep' returned case reports only). Judgement call: 'improved sleep' read as vague wellness, so INSUFFICIENT_EVIDENCE rather than UNSUPPORTED.", why=_A2),
+    _new("v81", "c3", "[Legs up the wall:] Reduce swelling", "38.0", "40.0", "INSUFFICIENT_EVIDENCE",
+         sup="PMID:2794965", notes="Legs up the wall is leg elevation. One small study (31 women) found leg elevation reduces lower-leg oedema after prolonged standing: the same intervention, so the claim is not UNSUPPORTED, but a single small study is too weak to call it SUPPORTED. The sweep had predicted UNSUPPORTED; retrieval found this study.", why=_A2),
+    _new("v81", "c4", "[Legs up the wall:] Support lymph flow", "38.0", "40.0", "INSUFFICIENT_EVIDENCE",
+         notes="Mechanism claim; nothing retrieved tests leg elevation against lymph flow.", why=_A2),
+]
+
+SWEEP_VIDEOS = {
+    "v22": "A4 (rule sweep): c2 eggs/AMD -> UNSUPPORTED.",
+    "v35": "A3/A4 (rule sweep): c2 miso/radiation -> UNSUPPORTED.",
+    "v36": "A2 (rule sweep): nine more infographic claims added (c9-c17).",
+    "v81": "A2 (rule sweep): three on-screen claims added (c2-c4); none is UNSUPPORTED, so the label does not change.",
+    "v139": "A3/A4 (rule sweep): c5 and c6 -> UNSUPPORTED.",
+    "v161": "A3 (rule sweep): c6 lemon/liver detox -> UNSUPPORTED.",
+}
