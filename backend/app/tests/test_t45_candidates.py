@@ -62,7 +62,7 @@ def test_routing_report_shows_both_matchers(tmp_path):
 
 def _video(vid, claims):
     return GoldVideo(video_id=vid, label="MISINFO", claims=[
-        GoldClaim(video_id=vid, claim_id=f"c{i}", claim_text=t, truth="CONTRADICTED", stance="ENDORSES")
+        GoldClaim(video_id=vid, claim_id=f"c{i}", claim_text=t, verdict="CONTRADICTED", stance="ENDORSES")
         for i, t in enumerate(claims, 1)])
 
 
