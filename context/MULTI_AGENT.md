@@ -2073,6 +2073,16 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-25**: T46 (design §14) evaluation loader for the golden label set, no spend. Branch
+  `auto/T46` from `integrate/golden-set` (dataset byte-identical to `data/golden-label-set` @ 948b1c2).
+  `app/evaluation/dataset.py` now reads the golden schema (`claim_verdict` incl. UNSUPPORTED,
+  `claim_kind`, evidence columns, `misinfo_basis`, `review_reasons`, `split`, review fields);
+  `out_of_scope` videos sit on `Dataset.excluded`, outside every split and count; inputs come from
+  `transcripts/` when there is no `inputs.jsonl`. `metrics.judge_label` gained the §9 unproven rule.
+  Verified: 162 in-scope videos (19 excluded), 550 claims, 48 tune / 114 test, labels
+  NO_MISINFO 47 / CANNOT_RECOGNIZE 59 / MISINFO 39 / DEBUNKING 17, bases 26/12/1, zero §9
+  inconsistencies. Nothing predicted or scored on the test split. Next: T14.
+
 - **2026-11-24**: T43 (design §13, §14) routing error analysis, no paid calls. T38 kept no per-item
   outputs, so per-claim error review, confusion matrices, bootstrap CIs and the dcf77b0 re-score were
   stopped; the runner now writes `per_item.json` and `app.evaluation.error_analysis` does all of it from
