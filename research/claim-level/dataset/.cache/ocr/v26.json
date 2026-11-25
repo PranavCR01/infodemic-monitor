@@ -1,0 +1,425 @@
+{
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "on_screen": {
+  "frames_sampled": 28,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Ifek",
+    "confidence": 0.713
+   },
+   {
+    "time": 0.0,
+    "text": "uges",
+    "confidence": 0.891
+   },
+   {
+    "time": 2.0,
+    "text": "morning",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "happens:",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "glycogen",
+    "confidence": 0.835
+   },
+   {
+    "time": 8.0,
+    "text": "your",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "quickly:",
+    "confidence": 0.879
+   },
+   {
+    "time": 12.0,
+    "text": "metabolism",
+    "confidence": 0.594
+   },
+   {
+    "time": 14.0,
+    "text": "burn",
+    "confidence": 0.998
+   },
+   {
+    "time": 16.0,
+    "text": "makes",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "faster",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "the",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "ryblocks",
+    "confidence": 0.996
+   },
+   {
+    "time": 22.0,
+    "text": "regulated:",
+    "confidence": 0.645
+   },
+   {
+    "time": 22.0,
+    "text": "Loryblocks",
+    "confidence": 0.638
+   },
+   {
+    "time": 24.0,
+    "text": "calm",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "days",
+    "confidence": 0.825
+   },
+   {
+    "time": 28.0,
+    "text": "as",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.0,
+    "text": "iS:",
+    "confidence": 0.647
+   },
+   {
+    "time": 30.0,
+    "text": "of K",
+    "confidence": 0.585
+   },
+   {
+    "time": 32.0,
+    "text": "serotonin:",
+    "confidence": 0.993
+   },
+   {
+    "time": 34.0,
+    "text": "week,",
+    "confidence": 0.991
+   },
+   {
+    "time": 36.0,
+    "text": "improves:",
+    "confidence": 0.777
+   },
+   {
+    "time": 38.0,
+    "text": "pressure",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "system:",
+    "confidence": 0.617
+   },
+   {
+    "time": 42.0,
+    "text": "also",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "concentration",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "clarity:",
+    "confidence": 0.75
+   },
+   {
+    "time": 48.0,
+    "text": "immune",
+    "confidence": 0.997
+   },
+   {
+    "time": 50.0,
+    "text": "stronger",
+    "confidence": 0.997
+   },
+   {
+    "time": 52.0,
+    "text": "Z",
+    "confidence": 0.804
+   },
+   {
+    "time": 52.0,
+    "text": "you",
+    "confidence": 0.994
+   },
+   {
+    "time": 54.0,
+    "text": "L",
+    "confidence": 0.999
+   },
+   {
+    "time": 54.0,
+    "text": "feeling",
+    "confidence": 1.0
+   }
+  ],
+  "captions": [
+   {
+    "text": "Ifek",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.713,
+    "id": "o1"
+   },
+   {
+    "text": "uges",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.891,
+    "id": "o2"
+   },
+   {
+    "text": "morning",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o3"
+   },
+   {
+    "text": "happens:",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o4"
+   },
+   {
+    "text": "glycogen",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.835,
+    "id": "o5"
+   },
+   {
+    "text": "your",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o6"
+   },
+   {
+    "text": "quickly:",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.879,
+    "id": "o7"
+   },
+   {
+    "text": "metabolism",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.594,
+    "id": "o8"
+   },
+   {
+    "text": "burn",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.998,
+    "id": "o9"
+   },
+   {
+    "text": "makes",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o10"
+   },
+   {
+    "text": "faster",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 1.0,
+    "id": "o11"
+   },
+   {
+    "text": "the",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o12"
+   },
+   {
+    "text": "ryblocks",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.996,
+    "id": "o13"
+   },
+   {
+    "text": "regulated:",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.645,
+    "id": "o14"
+   },
+   {
+    "text": "Loryblocks",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.638,
+    "id": "o15"
+   },
+   {
+    "text": "calm",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o16"
+   },
+   {
+    "text": "days",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.825,
+    "id": "o17"
+   },
+   {
+    "text": "as",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.999,
+    "id": "o18"
+   },
+   {
+    "text": "iS:",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.647,
+    "id": "o19"
+   },
+   {
+    "text": "of K",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.585,
+    "id": "o20"
+   },
+   {
+    "text": "serotonin:",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.993,
+    "id": "o21"
+   },
+   {
+    "text": "week,",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.991,
+    "id": "o22"
+   },
+   {
+    "text": "improves:",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.777,
+    "id": "o23"
+   },
+   {
+    "text": "pressure",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o24"
+   },
+   {
+    "text": "system:",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.617,
+    "id": "o25"
+   },
+   {
+    "text": "also",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o26"
+   },
+   {
+    "text": "concentration",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o27"
+   },
+   {
+    "text": "clarity:",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.75,
+    "id": "o28"
+   },
+   {
+    "text": "immune",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.997,
+    "id": "o29"
+   },
+   {
+    "text": "stronger",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.997,
+    "id": "o30"
+   },
+   {
+    "text": "Z",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.804,
+    "id": "o31"
+   },
+   {
+    "text": "you",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.994,
+    "id": "o32"
+   },
+   {
+    "text": "L",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.999,
+    "id": "o33"
+   },
+   {
+    "text": "feeling",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o34"
+   }
+  ]
+ }
+}

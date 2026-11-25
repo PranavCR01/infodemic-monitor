@@ -1,0 +1,498 @@
+{
+ "video_id": "v148",
+ "filename": "new_TikTok_7460664218577095969.mp4",
+ "relative_path": "new_TikTok_7460664218577095969.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:58",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.464,
+  "duration_seconds": 15.07,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 1.78,
+    "end": 3.78,
+    "text": "you"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 8,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Need that January",
+    "confidence": 0.901
+   },
+   {
+    "time": 0.0,
+    "text": "motivationalweight loss?",
+    "confidence": 0.943
+   },
+   {
+    "time": 0.0,
+    "text": "Go re watch the VS 2024",
+    "confidence": 0.702
+   },
+   {
+    "time": 0.0,
+    "text": "fashion show",
+    "confidence": 0.995
+   },
+   {
+    "time": 2.0,
+    "text": "Need that January",
+    "confidence": 0.811
+   },
+   {
+    "time": 2.0,
+    "text": "motivationalweight loss?",
+    "confidence": 0.967
+   },
+   {
+    "time": 2.0,
+    "text": "Go re watch the VS 2024",
+    "confidence": 0.934
+   },
+   {
+    "time": 2.0,
+    "text": "fashion show",
+    "confidence": 0.996
+   },
+   {
+    "time": 4.0,
+    "text": "Need that January",
+    "confidence": 0.751
+   },
+   {
+    "time": 4.0,
+    "text": "motivational weightloss?",
+    "confidence": 0.748
+   },
+   {
+    "time": 4.0,
+    "text": "Go re watch the VS 2024",
+    "confidence": 0.687
+   },
+   {
+    "time": 4.0,
+    "text": "fashion show",
+    "confidence": 0.997
+   },
+   {
+    "time": 4.0,
+    "text": "R",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.0,
+    "text": "Need that January",
+    "confidence": 0.805
+   },
+   {
+    "time": 6.0,
+    "text": "motivational weight loss?",
+    "confidence": 0.742
+   },
+   {
+    "time": 6.0,
+    "text": "Go re watch the VS 2024",
+    "confidence": 0.977
+   },
+   {
+    "time": 6.0,
+    "text": "fashion show",
+    "confidence": 0.928
+   },
+   {
+    "time": 8.0,
+    "text": "Need that Januar",
+    "confidence": 0.798
+   },
+   {
+    "time": 8.0,
+    "text": "motivational weight loss?",
+    "confidence": 0.577
+   },
+   {
+    "time": 8.0,
+    "text": "Go re watch the VS 2024",
+    "confidence": 0.783
+   },
+   {
+    "time": 8.0,
+    "text": "fashion show",
+    "confidence": 0.791
+   },
+   {
+    "time": 8.0,
+    "text": "R",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "Need that January",
+    "confidence": 0.694
+   },
+   {
+    "time": 10.0,
+    "text": "motivational weight loss?",
+    "confidence": 0.756
+   },
+   {
+    "time": 10.0,
+    "text": "Go re watch the VS 2024",
+    "confidence": 0.983
+   },
+   {
+    "time": 10.0,
+    "text": "fashion show",
+    "confidence": 0.995
+   },
+   {
+    "time": 12.0,
+    "text": "Need that January",
+    "confidence": 0.679
+   },
+   {
+    "time": 12.0,
+    "text": "motivational weight loss?",
+    "confidence": 0.639
+   },
+   {
+    "time": 12.0,
+    "text": "Go re watch the VS 2024",
+    "confidence": 0.619
+   },
+   {
+    "time": 12.0,
+    "text": "fashion show",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "07.12",
+    "confidence": 0.821
+   },
+   {
+    "time": 12.0,
+    "text": "8",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "Need thatJanuar",
+    "confidence": 0.688
+   },
+   {
+    "time": 14.0,
+    "text": "motivational weight Ioss?",
+    "confidence": 0.645
+   },
+   {
+    "time": 14.0,
+    "text": "Go re watch the VS 2024",
+    "confidence": 0.758
+   },
+   {
+    "time": 14.0,
+    "text": "Ifashion show",
+    "confidence": 0.791
+   },
+   {
+    "time": 14.0,
+    "text": "6",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "8",
+    "confidence": 1.0
+   }
+  ],
+  "captions": [
+   {
+    "text": "Need that January",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.901,
+    "id": "o1"
+   },
+   {
+    "text": "motivationalweight loss?",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.943,
+    "id": "o2"
+   },
+   {
+    "text": "Go re watch the VS 2024",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.702,
+    "id": "o3"
+   },
+   {
+    "text": "fashion show",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.995,
+    "id": "o4"
+   },
+   {
+    "text": "Need that January",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.811,
+    "id": "o5"
+   },
+   {
+    "text": "motivationalweight loss?",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.967,
+    "id": "o6"
+   },
+   {
+    "text": "Go re watch the VS 2024",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.934,
+    "id": "o7"
+   },
+   {
+    "text": "fashion show",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.996,
+    "id": "o8"
+   },
+   {
+    "text": "Need that January",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.751,
+    "id": "o9"
+   },
+   {
+    "text": "motivational weightloss?",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.748,
+    "id": "o10"
+   },
+   {
+    "text": "Go re watch the VS 2024",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.687,
+    "id": "o11"
+   },
+   {
+    "text": "fashion show",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.997,
+    "id": "o12"
+   },
+   {
+    "text": "R",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.999,
+    "id": "o13"
+   },
+   {
+    "text": "Need that January",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.805,
+    "id": "o14"
+   },
+   {
+    "text": "motivational weight loss?",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.742,
+    "id": "o15"
+   },
+   {
+    "text": "Go re watch the VS 2024",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.977,
+    "id": "o16"
+   },
+   {
+    "text": "fashion show",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.928,
+    "id": "o17"
+   },
+   {
+    "text": "Need that Januar",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.798,
+    "id": "o18"
+   },
+   {
+    "text": "motivational weight loss?",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.577,
+    "id": "o19"
+   },
+   {
+    "text": "Go re watch the VS 2024",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.783,
+    "id": "o20"
+   },
+   {
+    "text": "fashion show",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.791,
+    "id": "o21"
+   },
+   {
+    "text": "R",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.999,
+    "id": "o22"
+   },
+   {
+    "text": "Need that January",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.694,
+    "id": "o23"
+   },
+   {
+    "text": "motivational weight loss?",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.756,
+    "id": "o24"
+   },
+   {
+    "text": "Go re watch the VS 2024",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.983,
+    "id": "o25"
+   },
+   {
+    "text": "fashion show",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.995,
+    "id": "o26"
+   },
+   {
+    "text": "Need that January",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.679,
+    "id": "o27"
+   },
+   {
+    "text": "motivational weight loss?",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.639,
+    "id": "o28"
+   },
+   {
+    "text": "Go re watch the VS 2024",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.619,
+    "id": "o29"
+   },
+   {
+    "text": "fashion show",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o30"
+   },
+   {
+    "text": "07.12",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.821,
+    "id": "o31"
+   },
+   {
+    "text": "8",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o32"
+   },
+   {
+    "text": "Need thatJanuar",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.688,
+    "id": "o33"
+   },
+   {
+    "text": "motivational weight Ioss?",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.645,
+    "id": "o34"
+   },
+   {
+    "text": "Go re watch the VS 2024",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.758,
+    "id": "o35"
+   },
+   {
+    "text": "Ifashion show",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.791,
+    "id": "o36"
+   },
+   {
+    "text": "6",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o37"
+   },
+   {
+    "text": "8",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o38"
+   }
+  ]
+ }
+}

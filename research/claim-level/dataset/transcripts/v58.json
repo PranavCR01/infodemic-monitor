@@ -1,0 +1,393 @@
+{
+ "video_id": "v58",
+ "filename": "v12044gd0000ceo9bujc77u8a3ksc09g.MP4",
+ "relative_path": "Dataset-Sept-2026/Anjali Penamutcha/v12044gd0000ceo9bujc77u8a3ksc09g.MP4",
+ "collector": "Anjali Penamutcha",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:42:33",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 26.68,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 4.0,
+    "text": "constipated, this works every time in about five minutes."
+   },
+   {
+    "id": "t2",
+    "start": 4.0,
+    "end": 6.54,
+    "text": "Grab a navel orange, it must be navel."
+   },
+   {
+    "id": "t3",
+    "start": 6.54,
+    "end": 8.22,
+    "text": "Wash the outside really well,"
+   },
+   {
+    "id": "t4",
+    "start": 8.22,
+    "end": 10.02,
+    "text": "then slice it into sections."
+   },
+   {
+    "id": "t5",
+    "start": 10.02,
+    "end": 12.74,
+    "text": "Generously coat with cayenne pepper and cinnamon."
+   },
+   {
+    "id": "t6",
+    "start": 12.74,
+    "end": 14.9,
+    "text": "There's actually signs behind why this works,"
+   },
+   {
+    "id": "t7",
+    "start": 14.9,
+    "end": 17.14,
+    "text": "which I'll include in the description below."
+   },
+   {
+    "id": "t8",
+    "start": 17.14,
+    "end": 21.12,
+    "text": "Next, eat the entire wedge, skin and all."
+   },
+   {
+    "id": "t9",
+    "start": 21.12,
+    "end": 21.96,
+    "text": "Take note."
+   },
+   {
+    "id": "t10",
+    "start": 21.96,
+    "end": 22.8,
+    "text": "If you're constipated-"
+   },
+   {
+    "id": "t11",
+    "start": 22.8,
+    "end": 24.8,
+    "text": "You"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 14,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Constipated?",
+    "confidence": 0.714
+   },
+   {
+    "time": 0.0,
+    "text": "@ deathlessdao XVZ",
+    "confidence": 0.663
+   },
+   {
+    "time": 2.0,
+    "text": "Constipated?",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 2.0,
+    "text": "@ deathlessdao XVZ",
+    "confidence": 0.501
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 0.996
+   },
+   {
+    "time": 8.0,
+    "text": "JER",
+    "confidence": 0.521
+   },
+   {
+    "time": 8.0,
+    "text": "epper",
+    "confidence": 0.905
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 8.0,
+    "text": "deathlessdao XVz",
+    "confidence": 0.647
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 0.947
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 0.618
+   },
+   {
+    "time": 14.0,
+    "text": "deathlessdao XVZ",
+    "confidence": 0.675
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 0.995
+   },
+   {
+    "time": 18.0,
+    "text": "deathlessdao XV",
+    "confidence": 0.609
+   },
+   {
+    "time": 20.0,
+    "text": "TikTok",
+    "confidence": 0.995
+   },
+   {
+    "time": 20.0,
+    "text": "deathlessdao xyz",
+    "confidence": 0.697
+   },
+   {
+    "time": 22.0,
+    "text": "Constipated?",
+    "confidence": 0.717
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 24.0,
+    "text": "J",
+    "confidence": 0.82
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "@ deathlessdaoxy_",
+    "confidence": 0.779
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 26.0,
+    "text": "@ deathlessdaoxy_",
+    "confidence": 0.779
+   }
+  ],
+  "captions": [
+   {
+    "text": "Constipated?",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.714,
+    "id": "o1"
+   },
+   {
+    "text": "@ deathlessdao XVZ",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.663,
+    "id": "o2"
+   },
+   {
+    "text": "Constipated?",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o3"
+   },
+   {
+    "text": "TikTok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.997,
+    "id": "o4"
+   },
+   {
+    "text": "@ deathlessdao XVZ",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.501,
+    "id": "o5"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o6"
+   },
+   {
+    "text": "JER",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.521,
+    "id": "o7"
+   },
+   {
+    "text": "epper",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.905,
+    "id": "o8"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.998,
+    "id": "o9"
+   },
+   {
+    "text": "deathlessdao XVz",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.647,
+    "id": "o10"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 14.0,
+    "confidence": 0.997,
+    "id": "o11"
+   },
+   {
+    "text": "deathlessdao XVZ",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.675,
+    "id": "o12"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.995,
+    "id": "o13"
+   },
+   {
+    "text": "deathlessdao XV",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.609,
+    "id": "o14"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.995,
+    "id": "o15"
+   },
+   {
+    "text": "deathlessdao xyz",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.697,
+    "id": "o16"
+   },
+   {
+    "text": "Constipated?",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.717,
+    "id": "o17"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.998,
+    "id": "o18"
+   },
+   {
+    "text": "J",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.82,
+    "id": "o19"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o20"
+   },
+   {
+    "text": "@ deathlessdaoxy_",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.779,
+    "id": "o21"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.999,
+    "id": "o22"
+   },
+   {
+    "text": "@ deathlessdaoxy_",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.779,
+    "id": "o23"
+   }
+  ]
+ }
+}

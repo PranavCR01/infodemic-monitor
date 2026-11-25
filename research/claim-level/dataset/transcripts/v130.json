@@ -1,0 +1,126 @@
+{
+ "video_id": "v130",
+ "filename": "new_TikTok_7268729809826516226.mp4",
+ "relative_path": "new_TikTok_7268729809826516226.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@drsinghdermatolog",
+ "extracted_at": "2026-11-23T08:45:57",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.981,
+  "duration_seconds": 15.3,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.04,
+    "text": "There's a lovely video that keeps cropping up in TikTok."
+   },
+   {
+    "id": "t2",
+    "start": 3.04,
+    "end": 5.4,
+    "text": "It's not any endometological emergency."
+   },
+   {
+    "id": "t3",
+    "start": 5.4,
+    "end": 7.28,
+    "text": "It's not bugs and it's not insects."
+   },
+   {
+    "id": "t4",
+    "start": 7.28,
+    "end": 9.52,
+    "text": "Even though it might make you feel a bit cringed out,"
+   },
+   {
+    "id": "t5",
+    "start": 9.52,
+    "end": 12.08,
+    "text": "all these are some beans that have been glued on by someone."
+   },
+   {
+    "id": "t6",
+    "start": 12.08,
+    "end": 14.02,
+    "text": "So if you see these, gently pick them off"
+   },
+   {
+    "id": "t7",
+    "start": 14.02,
+    "end": 15.52,
+    "text": "and have some fun with them."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 8,
+  "detections": [
+   {
+    "time": 6.0,
+    "text": "insects",
+    "confidence": 0.647
+   },
+   {
+    "time": 10.0,
+    "text": "alltheseaesolebeans",
+    "confidence": 0.552
+   },
+   {
+    "time": 10.0,
+    "text": "thathavvebeengued @",
+    "confidence": 0.696
+   },
+   {
+    "time": 12.0,
+    "text": "soffyouseethese",
+    "confidence": 0.875
+   }
+  ],
+  "captions": [
+   {
+    "text": "insects",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.647,
+    "id": "o1"
+   },
+   {
+    "text": "alltheseaesolebeans",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.552,
+    "id": "o2"
+   },
+   {
+    "text": "thathavvebeengued @",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.696,
+    "id": "o3"
+   },
+   {
+    "text": "soffyouseethese",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.875,
+    "id": "o4"
+   }
+  ]
+ }
+}

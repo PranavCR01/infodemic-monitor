@@ -1,0 +1,3526 @@
+{
+ "video_id": "v149",
+ "filename": "new_TikTok_7461107807119609118.mp4",
+ "relative_path": "new_TikTok_7461107807119609118.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:58",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.997,
+  "duration_seconds": 37.55,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 8.0,
+    "text": "Reset and revitalize your digestive health with Mellish Island's super-gut 7-day detox plan"
+   },
+   {
+    "id": "t2",
+    "start": 8.0,
+    "end": 15.36,
+    "text": "packed with powerful natural ingredients like senile leaf, lotus leaf extract, and probiotics."
+   },
+   {
+    "id": "t3",
+    "start": 15.36,
+    "end": 21.76,
+    "text": "This advanced formula supports digestion, reduces bloating, and promotes overall gut health,"
+   },
+   {
+    "id": "t4",
+    "start": 22.48,
+    "end": 27.84,
+    "text": "designed to cleanse your system and leave you feeling lighter and more energized."
+   },
+   {
+    "id": "t5",
+    "start": 27.84,
+    "end": 34.11,
+    "text": "Start your wellness journey today and experience the difference in just seven"
+   },
+   {
+    "id": "t6",
+    "start": 34.11,
+    "end": 39.15,
+    "text": "days. Now available on our showcase."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 19,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "MeLLISH",
+    "confidence": 0.553
+   },
+   {
+    "time": 0.0,
+    "text": "ISLANDT",
+    "confidence": 0.995
+   },
+   {
+    "time": 0.0,
+    "text": "SUPER",
+    "confidence": 0.997
+   },
+   {
+    "time": 0.0,
+    "text": "GUT",
+    "confidence": 0.967
+   },
+   {
+    "time": 0.0,
+    "text": "Detox Plan",
+    "confidence": 0.942
+   },
+   {
+    "time": 0.0,
+    "text": "Based",
+    "confidence": 0.765
+   },
+   {
+    "time": 0.0,
+    "text": "Nutrients",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "Premium (",
+    "confidence": 0.825
+   },
+   {
+    "time": 0.0,
+    "text": "Quality",
+    "confidence": 0.996
+   },
+   {
+    "time": 0.0,
+    "text": "Extracts",
+    "confidence": 0.773
+   },
+   {
+    "time": 0.0,
+    "text": "Fruits",
+    "confidence": 0.999
+   },
+   {
+    "time": 0.0,
+    "text": "and Plants",
+    "confidence": 0.91
+   },
+   {
+    "time": 0.0,
+    "text": "Reset and revitalize Your",
+    "confidence": 0.662
+   },
+   {
+    "time": 0.0,
+    "text": "digestive health with Mellish",
+    "confidence": 0.879
+   },
+   {
+    "time": 0.0,
+    "text": "Super",
+    "confidence": 0.989
+   },
+   {
+    "time": 0.0,
+    "text": "Day",
+    "confidence": 0.978
+   },
+   {
+    "time": 0.0,
+    "text": "Gut",
+    "confidence": 0.991
+   },
+   {
+    "time": 0.0,
+    "text": "Detox",
+    "confidence": 0.979
+   },
+   {
+    "time": 0.0,
+    "text": "Planl",
+    "confidence": 0.639
+   },
+   {
+    "time": 1.9,
+    "text": "MELLISH",
+    "confidence": 0.77
+   },
+   {
+    "time": 1.9,
+    "text": "ISLANDT",
+    "confidence": 0.995
+   },
+   {
+    "time": 1.9,
+    "text": "SUPER",
+    "confidence": 0.999
+   },
+   {
+    "time": 1.9,
+    "text": "GUT",
+    "confidence": 0.98
+   },
+   {
+    "time": 1.9,
+    "text": "7-Day [",
+    "confidence": 0.705
+   },
+   {
+    "time": 1.9,
+    "text": "Detox Plan",
+    "confidence": 0.752
+   },
+   {
+    "time": 1.9,
+    "text": "Science",
+    "confidence": 0.919
+   },
+   {
+    "time": 1.9,
+    "text": "Based Nutrients",
+    "confidence": 1.0
+   },
+   {
+    "time": 1.9,
+    "text": "Premium'",
+    "confidence": 0.719
+   },
+   {
+    "time": 1.9,
+    "text": "Quality Extracts",
+    "confidence": 0.977
+   },
+   {
+    "time": 1.9,
+    "text": "Fruits",
+    "confidence": 0.93
+   },
+   {
+    "time": 1.9,
+    "text": "and Plants",
+    "confidence": 0.792
+   },
+   {
+    "time": 1.9,
+    "text": "Reset and revitalize YOur",
+    "confidence": 0.537
+   },
+   {
+    "time": 1.9,
+    "text": "digestive health with Mellish",
+    "confidence": 0.924
+   },
+   {
+    "time": 1.9,
+    "text": "Island' s Super Gut",
+    "confidence": 0.547
+   },
+   {
+    "time": 1.9,
+    "text": "Day",
+    "confidence": 0.979
+   },
+   {
+    "time": 1.9,
+    "text": "Detox",
+    "confidence": 0.934
+   },
+   {
+    "time": 1.9,
+    "text": "Planl",
+    "confidence": 0.715
+   },
+   {
+    "time": 3.8,
+    "text": "MELLISH",
+    "confidence": 0.639
+   },
+   {
+    "time": 3.8,
+    "text": "ISLANDT",
+    "confidence": 0.988
+   },
+   {
+    "time": 3.8,
+    "text": "SUPER",
+    "confidence": 0.999
+   },
+   {
+    "time": 3.8,
+    "text": "GUT",
+    "confidence": 0.924
+   },
+   {
+    "time": 3.8,
+    "text": "Detox Plan",
+    "confidence": 0.944
+   },
+   {
+    "time": 3.8,
+    "text": "Based Nutrients",
+    "confidence": 0.976
+   },
+   {
+    "time": 3.8,
+    "text": "Quality",
+    "confidence": 1.0
+   },
+   {
+    "time": 3.8,
+    "text": "Extracts",
+    "confidence": 0.839
+   },
+   {
+    "time": 3.8,
+    "text": "Fruits",
+    "confidence": 0.662
+   },
+   {
+    "time": 3.8,
+    "text": "and Plants",
+    "confidence": 0.843
+   },
+   {
+    "time": 3.8,
+    "text": "DIETART",
+    "confidence": 0.674
+   },
+   {
+    "time": 3.8,
+    "text": "Reset",
+    "confidence": 1.0
+   },
+   {
+    "time": 3.8,
+    "text": "revitalize YOur",
+    "confidence": 0.554
+   },
+   {
+    "time": 3.8,
+    "text": "and",
+    "confidence": 0.959
+   },
+   {
+    "time": 3.8,
+    "text": "digestive health with Mellish",
+    "confidence": 0.821
+   },
+   {
+    "time": 3.8,
+    "text": "Island' s Super Gut",
+    "confidence": 0.623
+   },
+   {
+    "time": 3.8,
+    "text": "Day",
+    "confidence": 0.98
+   },
+   {
+    "time": 3.8,
+    "text": "Detox",
+    "confidence": 0.888
+   },
+   {
+    "time": 3.8,
+    "text": "Planl",
+    "confidence": 0.655
+   },
+   {
+    "time": 5.96,
+    "text": "adults",
+    "confidence": 0.771
+   },
+   {
+    "time": 5.96,
+    "text": "Suggested",
+    "confidence": 0.999
+   },
+   {
+    "time": 5.96,
+    "text": "Use: As a dietary",
+    "confidence": 0.751
+   },
+   {
+    "time": 5.96,
+    "text": "capsules daily with food:",
+    "confidence": 0.745
+   },
+   {
+    "time": 5.96,
+    "text": "[upplement",
+    "confidence": 0.667
+   },
+   {
+    "time": 5.96,
+    "text": "Facts",
+    "confidence": 0.596
+   },
+   {
+    "time": 5.96,
+    "text": "Size:",
+    "confidence": 0.998
+   },
+   {
+    "time": 5.96,
+    "text": "2 Capsules",
+    "confidence": 0.734
+   },
+   {
+    "time": 5.96,
+    "text": "Container: 15",
+    "confidence": 0.822
+   },
+   {
+    "time": 5.96,
+    "text": "per",
+    "confidence": 1.0
+   },
+   {
+    "time": 5.96,
+    "text": "Amountper",
+    "confidence": 0.866
+   },
+   {
+    "time": 5.96,
+    "text": "senving_",
+    "confidence": 0.798
+   },
+   {
+    "time": 5.96,
+    "text": "LeafExtract",
+    "confidence": 0.656
+   },
+   {
+    "time": 5.96,
+    "text": "300mg",
+    "confidence": 0.655
+   },
+   {
+    "time": 5.96,
+    "text": "Sagrada",
+    "confidence": 0.725
+   },
+   {
+    "time": 5.96,
+    "text": "300mg",
+    "confidence": 0.663
+   },
+   {
+    "time": 5.96,
+    "text": "Bark Extract",
+    "confidence": 0.83
+   },
+   {
+    "time": 5.96,
+    "text": "HuskPowder",
+    "confidence": 1.0
+   },
+   {
+    "time": 5.96,
+    "text": "300mg",
+    "confidence": 0.645
+   },
+   {
+    "time": 5.96,
+    "text": "Aloet",
+    "confidence": 0.675
+   },
+   {
+    "time": 5.96,
+    "text": "Extrad",
+    "confidence": 0.542
+   },
+   {
+    "time": 5.96,
+    "text": "somg",
+    "confidence": 0.682
+   },
+   {
+    "time": 5.96,
+    "text": "Rhamnosus",
+    "confidence": 1.0
+   },
+   {
+    "time": 5.96,
+    "text": "Total",
+    "confidence": 0.989
+   },
+   {
+    "time": 5.96,
+    "text": "Cultures",
+    "confidence": 0.999
+   },
+   {
+    "time": 5.96,
+    "text": "Powder",
+    "confidence": 0.993
+   },
+   {
+    "time": 5.96,
+    "text": "30m8",
+    "confidence": 0.849
+   },
+   {
+    "time": 5.96,
+    "text": "Extract",
+    "confidence": 0.723
+   },
+   {
+    "time": 5.96,
+    "text": "20mg",
+    "confidence": 0.677
+   },
+   {
+    "time": 5.96,
+    "text": "Powder",
+    "confidence": 0.999
+   },
+   {
+    "time": 5.96,
+    "text": "20mg",
+    "confidence": 0.964
+   },
+   {
+    "time": 5.96,
+    "text": "Chain",
+    "confidence": 0.963
+   },
+   {
+    "time": 5.96,
+    "text": "Triglycerides",
+    "confidence": 0.998
+   },
+   {
+    "time": 5.96,
+    "text": "10mg",
+    "confidence": 0.861
+   },
+   {
+    "time": 5.96,
+    "text": "oligosaccharides",
+    "confidence": 0.535
+   },
+   {
+    "time": 5.96,
+    "text": "10mg",
+    "confidence": 0.663
+   },
+   {
+    "time": 5.96,
+    "text": "not established",
+    "confidence": 0.707
+   },
+   {
+    "time": 5.96,
+    "text": "Ingredients:",
+    "confidence": 0.996
+   },
+   {
+    "time": 5.96,
+    "text": "Steurte",
+    "confidence": 0.667
+   },
+   {
+    "time": 5.96,
+    "text": "Magnesium _",
+    "confidence": 0.584
+   },
+   {
+    "time": 5.96,
+    "text": "Gelatin;",
+    "confidence": 0.861
+   },
+   {
+    "time": 5.96,
+    "text": "Reset and revitalize your",
+    "confidence": 0.938
+   },
+   {
+    "time": 5.96,
+    "text": "digestive health with Mellish",
+    "confidence": 0.654
+   },
+   {
+    "time": 5.96,
+    "text": "Super",
+    "confidence": 0.989
+   },
+   {
+    "time": 5.96,
+    "text": "Island' $",
+    "confidence": 0.559
+   },
+   {
+    "time": 5.96,
+    "text": "Day",
+    "confidence": 0.993
+   },
+   {
+    "time": 5.96,
+    "text": "Gut 7",
+    "confidence": 0.871
+   },
+   {
+    "time": 5.96,
+    "text": "Detox",
+    "confidence": 0.686
+   },
+   {
+    "time": 5.96,
+    "text": "Planl",
+    "confidence": 0.599
+   },
+   {
+    "time": 7.86,
+    "text": "Suggested",
+    "confidence": 0.828
+   },
+   {
+    "time": 7.86,
+    "text": "adulbs",
+    "confidence": 0.592
+   },
+   {
+    "time": 7.86,
+    "text": "dietary",
+    "confidence": 1.0
+   },
+   {
+    "time": 7.86,
+    "text": "Use: As a",
+    "confidence": 0.766
+   },
+   {
+    "time": 7.86,
+    "text": "supplement =",
+    "confidence": 0.565
+   },
+   {
+    "time": 7.86,
+    "text": "take two",
+    "confidence": 0.621
+   },
+   {
+    "time": 7.86,
+    "text": "capsules daily with food:",
+    "confidence": 0.869
+   },
+   {
+    "time": 7.86,
+    "text": "Fupplement Facts",
+    "confidence": 0.817
+   },
+   {
+    "time": 7.86,
+    "text": "Size: 2 Capsules",
+    "confidence": 0.806
+   },
+   {
+    "time": 7.86,
+    "text": "per Container: 15",
+    "confidence": 0.999
+   },
+   {
+    "time": 7.86,
+    "text": "senving",
+    "confidence": 0.764
+   },
+   {
+    "time": 7.86,
+    "text": "LeafEExtract",
+    "confidence": 0.854
+   },
+   {
+    "time": 7.86,
+    "text": "300mg",
+    "confidence": 0.672
+   },
+   {
+    "time": 7.86,
+    "text": "Sagrada",
+    "confidence": 0.808
+   },
+   {
+    "time": 7.86,
+    "text": "300mg",
+    "confidence": 0.565
+   },
+   {
+    "time": 7.86,
+    "text": "Bark Extract",
+    "confidence": 0.835
+   },
+   {
+    "time": 7.86,
+    "text": "Powder",
+    "confidence": 0.646
+   },
+   {
+    "time": 7.86,
+    "text": "300mg",
+    "confidence": 0.673
+   },
+   {
+    "time": 7.86,
+    "text": "Extract",
+    "confidence": 0.847
+   },
+   {
+    "time": 7.86,
+    "text": "Rhamnosus",
+    "confidence": 0.691
+   },
+   {
+    "time": 7.86,
+    "text": "Totall",
+    "confidence": 0.982
+   },
+   {
+    "time": 7.86,
+    "text": "Cultures",
+    "confidence": 1.0
+   },
+   {
+    "time": 7.86,
+    "text": "Powder",
+    "confidence": 0.913
+   },
+   {
+    "time": 7.86,
+    "text": "Leaf",
+    "confidence": 0.999
+   },
+   {
+    "time": 7.86,
+    "text": "20mg",
+    "confidence": 0.782
+   },
+   {
+    "time": 7.86,
+    "text": "Powder",
+    "confidence": 1.0
+   },
+   {
+    "time": 7.86,
+    "text": "20mg",
+    "confidence": 0.984
+   },
+   {
+    "time": 7.86,
+    "text": "Chain",
+    "confidence": 0.999
+   },
+   {
+    "time": 7.86,
+    "text": "Triglycerides",
+    "confidence": 0.94
+   },
+   {
+    "time": 7.86,
+    "text": "16mg",
+    "confidence": 0.957
+   },
+   {
+    "time": 7.86,
+    "text": "Inulin",
+    "confidence": 0.966
+   },
+   {
+    "time": 7.86,
+    "text": "Rosaccharides",
+    "confidence": 0.825
+   },
+   {
+    "time": 7.86,
+    "text": "IOmg",
+    "confidence": 0.688
+   },
+   {
+    "time": 7.86,
+    "text": "Nalve",
+    "confidence": 0.561
+   },
+   {
+    "time": 7.86,
+    "text": "not established",
+    "confidence": 0.715
+   },
+   {
+    "time": 7.86,
+    "text": "Ingredients:",
+    "confidence": 0.988
+   },
+   {
+    "time": 7.86,
+    "text": "Magnesium",
+    "confidence": 1.0
+   },
+   {
+    "time": 7.86,
+    "text": "Gelatin;",
+    "confidence": 0.894
+   },
+   {
+    "time": 10.01,
+    "text": "MELLISH",
+    "confidence": 0.563
+   },
+   {
+    "time": 10.01,
+    "text": "SUPER",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.01,
+    "text": "1",
+    "confidence": 0.551
+   },
+   {
+    "time": 10.01,
+    "text": "Detox",
+    "confidence": 0.835
+   },
+   {
+    "time": 10.01,
+    "text": "from Fruits .",
+    "confidence": 0.726
+   },
+   {
+    "time": 10.01,
+    "text": "9",
+    "confidence": 0.917
+   },
+   {
+    "time": 10.01,
+    "text": "1",
+    "confidence": 0.83
+   },
+   {
+    "time": 10.01,
+    "text": "1",
+    "confidence": 0.753
+   },
+   {
+    "time": 10.01,
+    "text": "1",
+    "confidence": 0.56
+   },
+   {
+    "time": 10.01,
+    "text": "focling",
+    "confidence": 0.8
+   },
+   {
+    "time": 11.91,
+    "text": "MELLISH",
+    "confidence": 0.923
+   },
+   {
+    "time": 11.91,
+    "text": "SUPER",
+    "confidence": 0.966
+   },
+   {
+    "time": 11.91,
+    "text": "7-Day",
+    "confidence": 0.998
+   },
+   {
+    "time": 11.91,
+    "text": "Fruits =",
+    "confidence": 0.643
+   },
+   {
+    "time": 11.91,
+    "text": "9",
+    "confidence": 0.941
+   },
+   {
+    "time": 11.91,
+    "text": "1",
+    "confidence": 0.917
+   },
+   {
+    "time": 11.91,
+    "text": "JCAPSULES",
+    "confidence": 0.515
+   },
+   {
+    "time": 11.91,
+    "text": "probiotic?",
+    "confidence": 0.518
+   },
+   {
+    "time": 11.91,
+    "text": "focling",
+    "confidence": 0.615
+   },
+   {
+    "time": 14.05,
+    "text": "MELLISH ISLANDM",
+    "confidence": 0.749
+   },
+   {
+    "time": 14.05,
+    "text": "SUPER GUT",
+    "confidence": 0.987
+   },
+   {
+    "time": 14.05,
+    "text": "Detox Plan",
+    "confidence": 0.729
+   },
+   {
+    "time": 14.05,
+    "text": "Based Nutrients",
+    "confidence": 0.808
+   },
+   {
+    "time": 14.05,
+    "text": "Premium !",
+    "confidence": 0.663
+   },
+   {
+    "time": 14.05,
+    "text": "Quality Extracts",
+    "confidence": 0.972
+   },
+   {
+    "time": 14.05,
+    "text": "Fruits",
+    "confidence": 0.977
+   },
+   {
+    "time": 14.05,
+    "text": "and Plants",
+    "confidence": 0.759
+   },
+   {
+    "time": 14.05,
+    "text": "CAPSULES",
+    "confidence": 0.86
+   },
+   {
+    "time": 14.05,
+    "text": "edvanced torinula supports",
+    "confidence": 0.632
+   },
+   {
+    "time": 15.97,
+    "text": "MELLISH ISLANDT",
+    "confidence": 0.616
+   },
+   {
+    "time": 15.97,
+    "text": "SUPER",
+    "confidence": 0.999
+   },
+   {
+    "time": 15.97,
+    "text": "GUT",
+    "confidence": 0.683
+   },
+   {
+    "time": 15.97,
+    "text": "Detox Plan",
+    "confidence": 0.872
+   },
+   {
+    "time": 15.97,
+    "text": "Based Nutrients",
+    "confidence": 1.0
+   },
+   {
+    "time": 15.97,
+    "text": "Quality Extracts",
+    "confidence": 0.852
+   },
+   {
+    "time": 15.97,
+    "text": "from",
+    "confidence": 0.999
+   },
+   {
+    "time": 15.97,
+    "text": "and Plants",
+    "confidence": 0.999
+   },
+   {
+    "time": 15.97,
+    "text": "CAPSULES",
+    "confidence": 0.992
+   },
+   {
+    "time": 15.97,
+    "text": "probioticy; thio",
+    "confidence": 0.599
+   },
+   {
+    "time": 18.1,
+    "text": "MELLISH",
+    "confidence": 0.941
+   },
+   {
+    "time": 18.1,
+    "text": "ISLANDT",
+    "confidence": 0.935
+   },
+   {
+    "time": 18.1,
+    "text": "SUPER",
+    "confidence": 0.6
+   },
+   {
+    "time": 18.1,
+    "text": "GUT",
+    "confidence": 0.89
+   },
+   {
+    "time": 18.1,
+    "text": "Detox Plan",
+    "confidence": 0.852
+   },
+   {
+    "time": 18.1,
+    "text": "Based Nutrients",
+    "confidence": 0.935
+   },
+   {
+    "time": 18.1,
+    "text": "Quality Extracts",
+    "confidence": 0.825
+   },
+   {
+    "time": 18.1,
+    "text": "Fruits and",
+    "confidence": 0.859
+   },
+   {
+    "time": 18.1,
+    "text": "Plants",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.1,
+    "text": "probiotics; thib",
+    "confidence": 0.638
+   },
+   {
+    "time": 20.0,
+    "text": "ISLANDM",
+    "confidence": 0.572
+   },
+   {
+    "time": 20.0,
+    "text": "SUPER GUT",
+    "confidence": 0.992
+   },
+   {
+    "time": 20.0,
+    "text": "Detox",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "Plan",
+    "confidence": 0.624
+   },
+   {
+    "time": 20.0,
+    "text": "Bastd",
+    "confidence": 0.526
+   },
+   {
+    "time": 20.0,
+    "text": "Nutrients",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.0,
+    "text": "Premium",
+    "confidence": 0.857
+   },
+   {
+    "time": 20.0,
+    "text": "Quality Extracts",
+    "confidence": 0.958
+   },
+   {
+    "time": 20.0,
+    "text": "and Plants",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.0,
+    "text": "probioticy; thio",
+    "confidence": 0.617
+   },
+   {
+    "time": 21.91,
+    "text": "MELLISH",
+    "confidence": 0.838
+   },
+   {
+    "time": 21.91,
+    "text": "ISLANDT",
+    "confidence": 0.944
+   },
+   {
+    "time": 21.91,
+    "text": "SUPER",
+    "confidence": 0.999
+   },
+   {
+    "time": 21.91,
+    "text": "Detox Plan",
+    "confidence": 0.594
+   },
+   {
+    "time": 21.91,
+    "text": "Based Nutrients",
+    "confidence": 0.881
+   },
+   {
+    "time": 21.91,
+    "text": "Quality Extracts",
+    "confidence": 0.999
+   },
+   {
+    "time": 21.91,
+    "text": "and Plants:",
+    "confidence": 0.761
+   },
+   {
+    "time": 21.91,
+    "text": "probioticy; thio",
+    "confidence": 0.603
+   },
+   {
+    "time": 21.91,
+    "text": "focling",
+    "confidence": 0.576
+   },
+   {
+    "time": 24.06,
+    "text": "SUPER GUT",
+    "confidence": 0.989
+   },
+   {
+    "time": 24.06,
+    "text": "Detox Plan",
+    "confidence": 0.641
+   },
+   {
+    "time": 24.06,
+    "text": "Science Based Nutrients",
+    "confidence": 0.888
+   },
+   {
+    "time": 24.06,
+    "text": "Premium",
+    "confidence": 0.997
+   },
+   {
+    "time": 24.06,
+    "text": "Quality Extracts",
+    "confidence": 0.988
+   },
+   {
+    "time": 24.06,
+    "text": "from Fruits and Plants:",
+    "confidence": 0.623
+   },
+   {
+    "time": 24.06,
+    "text": "J CAPSULES",
+    "confidence": 0.859
+   },
+   {
+    "time": 24.06,
+    "text": "DIETART =",
+    "confidence": 0.518
+   },
+   {
+    "time": 24.06,
+    "text": "powerful notural",
+    "confidence": 0.522
+   },
+   {
+    "time": 24.06,
+    "text": "edvanced formula supports",
+    "confidence": 0.5
+   },
+   {
+    "time": 25.96,
+    "text": "MELLISH ISLANDT",
+    "confidence": 0.591
+   },
+   {
+    "time": 25.96,
+    "text": "SUPER GUT",
+    "confidence": 0.575
+   },
+   {
+    "time": 25.96,
+    "text": "Detox Plan",
+    "confidence": 0.67
+   },
+   {
+    "time": 25.96,
+    "text": "Science Based Nutrients",
+    "confidence": 0.796
+   },
+   {
+    "time": 25.96,
+    "text": "Premium Quality Extracts",
+    "confidence": 0.913
+   },
+   {
+    "time": 25.96,
+    "text": "from Fruits and Plants",
+    "confidence": 0.982
+   },
+   {
+    "time": 25.96,
+    "text": "CAPSULES",
+    "confidence": 0.996
+   },
+   {
+    "time": 28.11,
+    "text": "SUPER",
+    "confidence": 0.996
+   },
+   {
+    "time": 28.11,
+    "text": "GUT",
+    "confidence": 0.935
+   },
+   {
+    "time": 28.11,
+    "text": "7-Day [",
+    "confidence": 0.565
+   },
+   {
+    "time": 28.11,
+    "text": "Detox Plan",
+    "confidence": 0.652
+   },
+   {
+    "time": 28.11,
+    "text": "Based",
+    "confidence": 0.515
+   },
+   {
+    "time": 28.11,
+    "text": "Nutrients",
+    "confidence": 0.984
+   },
+   {
+    "time": 28.11,
+    "text": "Quality Extracts",
+    "confidence": 0.996
+   },
+   {
+    "time": 28.11,
+    "text": "edvanced tormula supports",
+    "confidence": 0.622
+   },
+   {
+    "time": 30.01,
+    "text": "MELLISH ISLANDM",
+    "confidence": 0.614
+   },
+   {
+    "time": 30.01,
+    "text": "SUPER GUT",
+    "confidence": 0.964
+   },
+   {
+    "time": 30.01,
+    "text": "'Detox Plan",
+    "confidence": 0.834
+   },
+   {
+    "time": 30.01,
+    "text": "Nutrients",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.01,
+    "text": "Quality Extracts",
+    "confidence": 0.752
+   },
+   {
+    "time": 30.01,
+    "text": "Plants",
+    "confidence": 0.66
+   },
+   {
+    "time": 30.01,
+    "text": "DETART",
+    "confidence": 0.611
+   },
+   {
+    "time": 30.01,
+    "text": "Start your wellness journey",
+    "confidence": 0.735
+   },
+   {
+    "time": 30.01,
+    "text": "today and experience the",
+    "confidence": 0.939
+   },
+   {
+    "time": 30.01,
+    "text": "days;",
+    "confidence": 0.879
+   },
+   {
+    "time": 30.01,
+    "text": "diff erence in just",
+    "confidence": 0.526
+   },
+   {
+    "time": 30.01,
+    "text": "Now",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.01,
+    "text": "available onour showcase",
+    "confidence": 0.705
+   },
+   {
+    "time": 31.92,
+    "text": "MELLISH",
+    "confidence": 0.943
+   },
+   {
+    "time": 31.92,
+    "text": "ISLANDT",
+    "confidence": 0.821
+   },
+   {
+    "time": 31.92,
+    "text": "SUPER GUT",
+    "confidence": 0.991
+   },
+   {
+    "time": 31.92,
+    "text": "Detox Plan",
+    "confidence": 0.998
+   },
+   {
+    "time": 31.92,
+    "text": "Based Nutrients",
+    "confidence": 0.991
+   },
+   {
+    "time": 31.92,
+    "text": "Quality Extracts",
+    "confidence": 0.781
+   },
+   {
+    "time": 31.92,
+    "text": "Plants",
+    "confidence": 0.999
+   },
+   {
+    "time": 31.92,
+    "text": "Start your wellness journey",
+    "confidence": 0.98
+   },
+   {
+    "time": 31.92,
+    "text": "today and experience the",
+    "confidence": 0.887
+   },
+   {
+    "time": 31.92,
+    "text": "days;",
+    "confidence": 0.863
+   },
+   {
+    "time": 31.92,
+    "text": "diff erence in just",
+    "confidence": 0.586
+   },
+   {
+    "time": 31.92,
+    "text": "Now",
+    "confidence": 0.998
+   },
+   {
+    "time": 31.92,
+    "text": "available onour showcase",
+    "confidence": 0.87
+   },
+   {
+    "time": 34.07,
+    "text": "ISLANDT",
+    "confidence": 0.823
+   },
+   {
+    "time": 34.07,
+    "text": "SUPER",
+    "confidence": 0.895
+   },
+   {
+    "time": 34.07,
+    "text": "7-Day \"",
+    "confidence": 0.566
+   },
+   {
+    "time": 34.07,
+    "text": "'Detox Plan",
+    "confidence": 0.715
+   },
+   {
+    "time": 34.07,
+    "text": "Based Nutrients",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.07,
+    "text": "Premum (",
+    "confidence": 0.697
+   },
+   {
+    "time": 34.07,
+    "text": "Quality Extracts",
+    "confidence": 0.687
+   },
+   {
+    "time": 34.07,
+    "text": "Fruits -",
+    "confidence": 0.524
+   },
+   {
+    "time": 34.07,
+    "text": "and Plants",
+    "confidence": 0.996
+   },
+   {
+    "time": 34.07,
+    "text": "CAPSULES",
+    "confidence": 0.709
+   },
+   {
+    "time": 34.07,
+    "text": "Start your wellness journey",
+    "confidence": 0.89
+   },
+   {
+    "time": 34.07,
+    "text": "today and experience the",
+    "confidence": 0.868
+   },
+   {
+    "time": 34.07,
+    "text": "days;",
+    "confidence": 0.62
+   },
+   {
+    "time": 34.07,
+    "text": "diff erence in just",
+    "confidence": 0.578
+   },
+   {
+    "time": 34.07,
+    "text": "Now",
+    "confidence": 0.855
+   },
+   {
+    "time": 34.07,
+    "text": "available on our showcase",
+    "confidence": 0.792
+   },
+   {
+    "time": 35.97,
+    "text": "ISLANDT",
+    "confidence": 0.658
+   },
+   {
+    "time": 35.97,
+    "text": "SUPER",
+    "confidence": 0.999
+   },
+   {
+    "time": 35.97,
+    "text": "Detox Plan",
+    "confidence": 0.721
+   },
+   {
+    "time": 35.97,
+    "text": "'Based Nutrients",
+    "confidence": 0.658
+   },
+   {
+    "time": 35.97,
+    "text": "Quality Extracts",
+    "confidence": 0.749
+   },
+   {
+    "time": 35.97,
+    "text": "Irom",
+    "confidence": 0.732
+   },
+   {
+    "time": 35.97,
+    "text": "and Plants",
+    "confidence": 0.999
+   },
+   {
+    "time": 35.97,
+    "text": "Start your wellness journey",
+    "confidence": 0.851
+   },
+   {
+    "time": 35.97,
+    "text": "today and experience the",
+    "confidence": 0.812
+   },
+   {
+    "time": 35.97,
+    "text": "diff erence in just",
+    "confidence": 0.893
+   },
+   {
+    "time": 35.97,
+    "text": "Now",
+    "confidence": 1.0
+   }
+  ],
+  "captions": [
+   {
+    "text": "MeLLISH",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.553,
+    "id": "o1"
+   },
+   {
+    "text": "ISLANDT",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.995,
+    "id": "o2"
+   },
+   {
+    "text": "SUPER",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.997,
+    "id": "o3"
+   },
+   {
+    "text": "GUT",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.967,
+    "id": "o4"
+   },
+   {
+    "text": "Detox Plan",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.942,
+    "id": "o5"
+   },
+   {
+    "text": "Based",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.765,
+    "id": "o6"
+   },
+   {
+    "text": "Nutrients",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o7"
+   },
+   {
+    "text": "Premium (",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.825,
+    "id": "o8"
+   },
+   {
+    "text": "Quality",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.996,
+    "id": "o9"
+   },
+   {
+    "text": "Extracts",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.773,
+    "id": "o10"
+   },
+   {
+    "text": "Fruits",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o11"
+   },
+   {
+    "text": "and Plants",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.91,
+    "id": "o12"
+   },
+   {
+    "text": "Reset and revitalize Your",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.662,
+    "id": "o13"
+   },
+   {
+    "text": "digestive health with Mellish",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.879,
+    "id": "o14"
+   },
+   {
+    "text": "Super",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.989,
+    "id": "o15"
+   },
+   {
+    "text": "Day",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.978,
+    "id": "o16"
+   },
+   {
+    "text": "Gut",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.991,
+    "id": "o17"
+   },
+   {
+    "text": "Detox",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.979,
+    "id": "o18"
+   },
+   {
+    "text": "Planl",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.639,
+    "id": "o19"
+   },
+   {
+    "text": "MELLISH",
+    "start": 1.9,
+    "end": 1.9,
+    "confidence": 0.77,
+    "id": "o20"
+   },
+   {
+    "text": "ISLANDT",
+    "start": 1.9,
+    "end": 1.9,
+    "confidence": 0.995,
+    "id": "o21"
+   },
+   {
+    "text": "SUPER",
+    "start": 1.9,
+    "end": 1.9,
+    "confidence": 0.999,
+    "id": "o22"
+   },
+   {
+    "text": "GUT",
+    "start": 1.9,
+    "end": 1.9,
+    "confidence": 0.98,
+    "id": "o23"
+   },
+   {
+    "text": "7-Day [",
+    "start": 1.9,
+    "end": 1.9,
+    "confidence": 0.705,
+    "id": "o24"
+   },
+   {
+    "text": "Detox Plan",
+    "start": 1.9,
+    "end": 1.9,
+    "confidence": 0.752,
+    "id": "o25"
+   },
+   {
+    "text": "Science",
+    "start": 1.9,
+    "end": 1.9,
+    "confidence": 0.919,
+    "id": "o26"
+   },
+   {
+    "text": "Based Nutrients",
+    "start": 1.9,
+    "end": 1.9,
+    "confidence": 1.0,
+    "id": "o27"
+   },
+   {
+    "text": "Premium'",
+    "start": 1.9,
+    "end": 1.9,
+    "confidence": 0.719,
+    "id": "o28"
+   },
+   {
+    "text": "Quality Extracts",
+    "start": 1.9,
+    "end": 1.9,
+    "confidence": 0.977,
+    "id": "o29"
+   },
+   {
+    "text": "Fruits",
+    "start": 1.9,
+    "end": 1.9,
+    "confidence": 0.93,
+    "id": "o30"
+   },
+   {
+    "text": "and Plants",
+    "start": 1.9,
+    "end": 1.9,
+    "confidence": 0.792,
+    "id": "o31"
+   },
+   {
+    "text": "Reset and revitalize YOur",
+    "start": 1.9,
+    "end": 1.9,
+    "confidence": 0.537,
+    "id": "o32"
+   },
+   {
+    "text": "digestive health with Mellish",
+    "start": 1.9,
+    "end": 1.9,
+    "confidence": 0.924,
+    "id": "o33"
+   },
+   {
+    "text": "Island' s Super Gut",
+    "start": 1.9,
+    "end": 1.9,
+    "confidence": 0.547,
+    "id": "o34"
+   },
+   {
+    "text": "Day",
+    "start": 1.9,
+    "end": 1.9,
+    "confidence": 0.979,
+    "id": "o35"
+   },
+   {
+    "text": "Detox",
+    "start": 1.9,
+    "end": 1.9,
+    "confidence": 0.934,
+    "id": "o36"
+   },
+   {
+    "text": "Planl",
+    "start": 1.9,
+    "end": 1.9,
+    "confidence": 0.715,
+    "id": "o37"
+   },
+   {
+    "text": "MELLISH",
+    "start": 3.8,
+    "end": 3.8,
+    "confidence": 0.639,
+    "id": "o38"
+   },
+   {
+    "text": "ISLANDT",
+    "start": 3.8,
+    "end": 3.8,
+    "confidence": 0.988,
+    "id": "o39"
+   },
+   {
+    "text": "SUPER",
+    "start": 3.8,
+    "end": 3.8,
+    "confidence": 0.999,
+    "id": "o40"
+   },
+   {
+    "text": "GUT",
+    "start": 3.8,
+    "end": 3.8,
+    "confidence": 0.924,
+    "id": "o41"
+   },
+   {
+    "text": "Detox Plan",
+    "start": 3.8,
+    "end": 3.8,
+    "confidence": 0.944,
+    "id": "o42"
+   },
+   {
+    "text": "Based Nutrients",
+    "start": 3.8,
+    "end": 3.8,
+    "confidence": 0.976,
+    "id": "o43"
+   },
+   {
+    "text": "Quality",
+    "start": 3.8,
+    "end": 3.8,
+    "confidence": 1.0,
+    "id": "o44"
+   },
+   {
+    "text": "Extracts",
+    "start": 3.8,
+    "end": 3.8,
+    "confidence": 0.839,
+    "id": "o45"
+   },
+   {
+    "text": "Fruits",
+    "start": 3.8,
+    "end": 3.8,
+    "confidence": 0.662,
+    "id": "o46"
+   },
+   {
+    "text": "and Plants",
+    "start": 3.8,
+    "end": 3.8,
+    "confidence": 0.843,
+    "id": "o47"
+   },
+   {
+    "text": "DIETART",
+    "start": 3.8,
+    "end": 3.8,
+    "confidence": 0.674,
+    "id": "o48"
+   },
+   {
+    "text": "Reset",
+    "start": 3.8,
+    "end": 3.8,
+    "confidence": 1.0,
+    "id": "o49"
+   },
+   {
+    "text": "revitalize YOur",
+    "start": 3.8,
+    "end": 3.8,
+    "confidence": 0.554,
+    "id": "o50"
+   },
+   {
+    "text": "and",
+    "start": 3.8,
+    "end": 3.8,
+    "confidence": 0.959,
+    "id": "o51"
+   },
+   {
+    "text": "digestive health with Mellish",
+    "start": 3.8,
+    "end": 3.8,
+    "confidence": 0.821,
+    "id": "o52"
+   },
+   {
+    "text": "Island' s Super Gut",
+    "start": 3.8,
+    "end": 3.8,
+    "confidence": 0.623,
+    "id": "o53"
+   },
+   {
+    "text": "Day",
+    "start": 3.8,
+    "end": 3.8,
+    "confidence": 0.98,
+    "id": "o54"
+   },
+   {
+    "text": "Detox",
+    "start": 3.8,
+    "end": 3.8,
+    "confidence": 0.888,
+    "id": "o55"
+   },
+   {
+    "text": "Planl",
+    "start": 3.8,
+    "end": 3.8,
+    "confidence": 0.655,
+    "id": "o56"
+   },
+   {
+    "text": "adults",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.771,
+    "id": "o57"
+   },
+   {
+    "text": "Suggested",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.999,
+    "id": "o58"
+   },
+   {
+    "text": "Use: As a dietary",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.751,
+    "id": "o59"
+   },
+   {
+    "text": "capsules daily with food:",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.745,
+    "id": "o60"
+   },
+   {
+    "text": "[upplement",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.667,
+    "id": "o61"
+   },
+   {
+    "text": "Facts",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.596,
+    "id": "o62"
+   },
+   {
+    "text": "Size:",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.998,
+    "id": "o63"
+   },
+   {
+    "text": "2 Capsules",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.734,
+    "id": "o64"
+   },
+   {
+    "text": "Container: 15",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.822,
+    "id": "o65"
+   },
+   {
+    "text": "per",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 1.0,
+    "id": "o66"
+   },
+   {
+    "text": "Amountper",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.866,
+    "id": "o67"
+   },
+   {
+    "text": "senving_",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.798,
+    "id": "o68"
+   },
+   {
+    "text": "LeafExtract",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.656,
+    "id": "o69"
+   },
+   {
+    "text": "300mg",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.655,
+    "id": "o70"
+   },
+   {
+    "text": "Sagrada",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.725,
+    "id": "o71"
+   },
+   {
+    "text": "300mg",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.663,
+    "id": "o72"
+   },
+   {
+    "text": "Bark Extract",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.83,
+    "id": "o73"
+   },
+   {
+    "text": "HuskPowder",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 1.0,
+    "id": "o74"
+   },
+   {
+    "text": "300mg",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.645,
+    "id": "o75"
+   },
+   {
+    "text": "Aloet",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.675,
+    "id": "o76"
+   },
+   {
+    "text": "Extrad",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.542,
+    "id": "o77"
+   },
+   {
+    "text": "somg",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.682,
+    "id": "o78"
+   },
+   {
+    "text": "Rhamnosus",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 1.0,
+    "id": "o79"
+   },
+   {
+    "text": "Total",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.989,
+    "id": "o80"
+   },
+   {
+    "text": "Cultures",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.999,
+    "id": "o81"
+   },
+   {
+    "text": "Powder",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.993,
+    "id": "o82"
+   },
+   {
+    "text": "30m8",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.849,
+    "id": "o83"
+   },
+   {
+    "text": "Extract",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.723,
+    "id": "o84"
+   },
+   {
+    "text": "20mg",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.677,
+    "id": "o85"
+   },
+   {
+    "text": "Powder",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.999,
+    "id": "o86"
+   },
+   {
+    "text": "20mg",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.964,
+    "id": "o87"
+   },
+   {
+    "text": "Chain",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.963,
+    "id": "o88"
+   },
+   {
+    "text": "Triglycerides",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.998,
+    "id": "o89"
+   },
+   {
+    "text": "10mg",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.861,
+    "id": "o90"
+   },
+   {
+    "text": "oligosaccharides",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.535,
+    "id": "o91"
+   },
+   {
+    "text": "10mg",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.663,
+    "id": "o92"
+   },
+   {
+    "text": "not established",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.707,
+    "id": "o93"
+   },
+   {
+    "text": "Ingredients:",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.996,
+    "id": "o94"
+   },
+   {
+    "text": "Steurte",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.667,
+    "id": "o95"
+   },
+   {
+    "text": "Magnesium _",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.584,
+    "id": "o96"
+   },
+   {
+    "text": "Gelatin;",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.861,
+    "id": "o97"
+   },
+   {
+    "text": "Reset and revitalize your",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.938,
+    "id": "o98"
+   },
+   {
+    "text": "digestive health with Mellish",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.654,
+    "id": "o99"
+   },
+   {
+    "text": "Super",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.989,
+    "id": "o100"
+   },
+   {
+    "text": "Island' $",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.559,
+    "id": "o101"
+   },
+   {
+    "text": "Day",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.993,
+    "id": "o102"
+   },
+   {
+    "text": "Gut 7",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.871,
+    "id": "o103"
+   },
+   {
+    "text": "Detox",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.686,
+    "id": "o104"
+   },
+   {
+    "text": "Planl",
+    "start": 5.96,
+    "end": 5.96,
+    "confidence": 0.599,
+    "id": "o105"
+   },
+   {
+    "text": "Suggested",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.828,
+    "id": "o106"
+   },
+   {
+    "text": "adulbs",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.592,
+    "id": "o107"
+   },
+   {
+    "text": "dietary",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 1.0,
+    "id": "o108"
+   },
+   {
+    "text": "Use: As a",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.766,
+    "id": "o109"
+   },
+   {
+    "text": "supplement =",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.565,
+    "id": "o110"
+   },
+   {
+    "text": "take two",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.621,
+    "id": "o111"
+   },
+   {
+    "text": "capsules daily with food:",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.869,
+    "id": "o112"
+   },
+   {
+    "text": "Fupplement Facts",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.817,
+    "id": "o113"
+   },
+   {
+    "text": "Size: 2 Capsules",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.806,
+    "id": "o114"
+   },
+   {
+    "text": "per Container: 15",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.999,
+    "id": "o115"
+   },
+   {
+    "text": "senving",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.764,
+    "id": "o116"
+   },
+   {
+    "text": "LeafEExtract",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.854,
+    "id": "o117"
+   },
+   {
+    "text": "300mg",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.672,
+    "id": "o118"
+   },
+   {
+    "text": "Sagrada",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.808,
+    "id": "o119"
+   },
+   {
+    "text": "300mg",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.565,
+    "id": "o120"
+   },
+   {
+    "text": "Bark Extract",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.835,
+    "id": "o121"
+   },
+   {
+    "text": "Powder",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.646,
+    "id": "o122"
+   },
+   {
+    "text": "300mg",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.673,
+    "id": "o123"
+   },
+   {
+    "text": "Extract",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.847,
+    "id": "o124"
+   },
+   {
+    "text": "Rhamnosus",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.691,
+    "id": "o125"
+   },
+   {
+    "text": "Totall",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.982,
+    "id": "o126"
+   },
+   {
+    "text": "Cultures",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 1.0,
+    "id": "o127"
+   },
+   {
+    "text": "Powder",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.913,
+    "id": "o128"
+   },
+   {
+    "text": "Leaf",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.999,
+    "id": "o129"
+   },
+   {
+    "text": "20mg",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.782,
+    "id": "o130"
+   },
+   {
+    "text": "Powder",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 1.0,
+    "id": "o131"
+   },
+   {
+    "text": "20mg",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.984,
+    "id": "o132"
+   },
+   {
+    "text": "Chain",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.999,
+    "id": "o133"
+   },
+   {
+    "text": "Triglycerides",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.94,
+    "id": "o134"
+   },
+   {
+    "text": "16mg",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.957,
+    "id": "o135"
+   },
+   {
+    "text": "Inulin",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.966,
+    "id": "o136"
+   },
+   {
+    "text": "Rosaccharides",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.825,
+    "id": "o137"
+   },
+   {
+    "text": "IOmg",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.688,
+    "id": "o138"
+   },
+   {
+    "text": "Nalve",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.561,
+    "id": "o139"
+   },
+   {
+    "text": "not established",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.715,
+    "id": "o140"
+   },
+   {
+    "text": "Ingredients:",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.988,
+    "id": "o141"
+   },
+   {
+    "text": "Magnesium",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 1.0,
+    "id": "o142"
+   },
+   {
+    "text": "Gelatin;",
+    "start": 7.86,
+    "end": 7.86,
+    "confidence": 0.894,
+    "id": "o143"
+   },
+   {
+    "text": "MELLISH",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.563,
+    "id": "o144"
+   },
+   {
+    "text": "SUPER",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.999,
+    "id": "o145"
+   },
+   {
+    "text": "1",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.551,
+    "id": "o146"
+   },
+   {
+    "text": "Detox",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.835,
+    "id": "o147"
+   },
+   {
+    "text": "from Fruits .",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.726,
+    "id": "o148"
+   },
+   {
+    "text": "9",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.917,
+    "id": "o149"
+   },
+   {
+    "text": "1",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.83,
+    "id": "o150"
+   },
+   {
+    "text": "focling",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.8,
+    "id": "o151"
+   },
+   {
+    "text": "MELLISH",
+    "start": 11.91,
+    "end": 11.91,
+    "confidence": 0.923,
+    "id": "o152"
+   },
+   {
+    "text": "SUPER",
+    "start": 11.91,
+    "end": 11.91,
+    "confidence": 0.966,
+    "id": "o153"
+   },
+   {
+    "text": "7-Day",
+    "start": 11.91,
+    "end": 11.91,
+    "confidence": 0.998,
+    "id": "o154"
+   },
+   {
+    "text": "Fruits =",
+    "start": 11.91,
+    "end": 11.91,
+    "confidence": 0.643,
+    "id": "o155"
+   },
+   {
+    "text": "9",
+    "start": 11.91,
+    "end": 11.91,
+    "confidence": 0.941,
+    "id": "o156"
+   },
+   {
+    "text": "1",
+    "start": 11.91,
+    "end": 11.91,
+    "confidence": 0.917,
+    "id": "o157"
+   },
+   {
+    "text": "JCAPSULES",
+    "start": 11.91,
+    "end": 11.91,
+    "confidence": 0.515,
+    "id": "o158"
+   },
+   {
+    "text": "probiotic?",
+    "start": 11.91,
+    "end": 11.91,
+    "confidence": 0.518,
+    "id": "o159"
+   },
+   {
+    "text": "focling",
+    "start": 11.91,
+    "end": 11.91,
+    "confidence": 0.615,
+    "id": "o160"
+   },
+   {
+    "text": "MELLISH ISLANDM",
+    "start": 14.05,
+    "end": 14.05,
+    "confidence": 0.749,
+    "id": "o161"
+   },
+   {
+    "text": "SUPER GUT",
+    "start": 14.05,
+    "end": 14.05,
+    "confidence": 0.987,
+    "id": "o162"
+   },
+   {
+    "text": "Detox Plan",
+    "start": 14.05,
+    "end": 14.05,
+    "confidence": 0.729,
+    "id": "o163"
+   },
+   {
+    "text": "Based Nutrients",
+    "start": 14.05,
+    "end": 14.05,
+    "confidence": 0.808,
+    "id": "o164"
+   },
+   {
+    "text": "Premium !",
+    "start": 14.05,
+    "end": 14.05,
+    "confidence": 0.663,
+    "id": "o165"
+   },
+   {
+    "text": "Quality Extracts",
+    "start": 14.05,
+    "end": 14.05,
+    "confidence": 0.972,
+    "id": "o166"
+   },
+   {
+    "text": "Fruits",
+    "start": 14.05,
+    "end": 14.05,
+    "confidence": 0.977,
+    "id": "o167"
+   },
+   {
+    "text": "and Plants",
+    "start": 14.05,
+    "end": 14.05,
+    "confidence": 0.759,
+    "id": "o168"
+   },
+   {
+    "text": "CAPSULES",
+    "start": 14.05,
+    "end": 14.05,
+    "confidence": 0.86,
+    "id": "o169"
+   },
+   {
+    "text": "edvanced torinula supports",
+    "start": 14.05,
+    "end": 14.05,
+    "confidence": 0.632,
+    "id": "o170"
+   },
+   {
+    "text": "MELLISH ISLANDT",
+    "start": 15.97,
+    "end": 15.97,
+    "confidence": 0.616,
+    "id": "o171"
+   },
+   {
+    "text": "SUPER",
+    "start": 15.97,
+    "end": 15.97,
+    "confidence": 0.999,
+    "id": "o172"
+   },
+   {
+    "text": "GUT",
+    "start": 15.97,
+    "end": 15.97,
+    "confidence": 0.683,
+    "id": "o173"
+   },
+   {
+    "text": "Detox Plan",
+    "start": 15.97,
+    "end": 15.97,
+    "confidence": 0.872,
+    "id": "o174"
+   },
+   {
+    "text": "Based Nutrients",
+    "start": 15.97,
+    "end": 15.97,
+    "confidence": 1.0,
+    "id": "o175"
+   },
+   {
+    "text": "Quality Extracts",
+    "start": 15.97,
+    "end": 15.97,
+    "confidence": 0.852,
+    "id": "o176"
+   },
+   {
+    "text": "from",
+    "start": 15.97,
+    "end": 15.97,
+    "confidence": 0.999,
+    "id": "o177"
+   },
+   {
+    "text": "and Plants",
+    "start": 15.97,
+    "end": 15.97,
+    "confidence": 0.999,
+    "id": "o178"
+   },
+   {
+    "text": "CAPSULES",
+    "start": 15.97,
+    "end": 15.97,
+    "confidence": 0.992,
+    "id": "o179"
+   },
+   {
+    "text": "probioticy; thio",
+    "start": 15.97,
+    "end": 15.97,
+    "confidence": 0.599,
+    "id": "o180"
+   },
+   {
+    "text": "MELLISH",
+    "start": 18.1,
+    "end": 18.1,
+    "confidence": 0.941,
+    "id": "o181"
+   },
+   {
+    "text": "ISLANDT",
+    "start": 18.1,
+    "end": 18.1,
+    "confidence": 0.935,
+    "id": "o182"
+   },
+   {
+    "text": "SUPER",
+    "start": 18.1,
+    "end": 18.1,
+    "confidence": 0.6,
+    "id": "o183"
+   },
+   {
+    "text": "GUT",
+    "start": 18.1,
+    "end": 18.1,
+    "confidence": 0.89,
+    "id": "o184"
+   },
+   {
+    "text": "Detox Plan",
+    "start": 18.1,
+    "end": 18.1,
+    "confidence": 0.852,
+    "id": "o185"
+   },
+   {
+    "text": "Based Nutrients",
+    "start": 18.1,
+    "end": 18.1,
+    "confidence": 0.935,
+    "id": "o186"
+   },
+   {
+    "text": "Quality Extracts",
+    "start": 18.1,
+    "end": 18.1,
+    "confidence": 0.825,
+    "id": "o187"
+   },
+   {
+    "text": "Fruits and",
+    "start": 18.1,
+    "end": 18.1,
+    "confidence": 0.859,
+    "id": "o188"
+   },
+   {
+    "text": "Plants",
+    "start": 18.1,
+    "end": 18.1,
+    "confidence": 1.0,
+    "id": "o189"
+   },
+   {
+    "text": "probiotics; thib",
+    "start": 18.1,
+    "end": 18.1,
+    "confidence": 0.638,
+    "id": "o190"
+   },
+   {
+    "text": "ISLANDM",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.572,
+    "id": "o191"
+   },
+   {
+    "text": "SUPER GUT",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.992,
+    "id": "o192"
+   },
+   {
+    "text": "Detox",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o193"
+   },
+   {
+    "text": "Plan",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.624,
+    "id": "o194"
+   },
+   {
+    "text": "Bastd",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.526,
+    "id": "o195"
+   },
+   {
+    "text": "Nutrients",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.999,
+    "id": "o196"
+   },
+   {
+    "text": "Premium",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.857,
+    "id": "o197"
+   },
+   {
+    "text": "Quality Extracts",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.958,
+    "id": "o198"
+   },
+   {
+    "text": "and Plants",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.999,
+    "id": "o199"
+   },
+   {
+    "text": "probioticy; thio",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.617,
+    "id": "o200"
+   },
+   {
+    "text": "MELLISH",
+    "start": 21.91,
+    "end": 21.91,
+    "confidence": 0.838,
+    "id": "o201"
+   },
+   {
+    "text": "ISLANDT",
+    "start": 21.91,
+    "end": 21.91,
+    "confidence": 0.944,
+    "id": "o202"
+   },
+   {
+    "text": "SUPER",
+    "start": 21.91,
+    "end": 21.91,
+    "confidence": 0.999,
+    "id": "o203"
+   },
+   {
+    "text": "Detox Plan",
+    "start": 21.91,
+    "end": 21.91,
+    "confidence": 0.594,
+    "id": "o204"
+   },
+   {
+    "text": "Based Nutrients",
+    "start": 21.91,
+    "end": 21.91,
+    "confidence": 0.881,
+    "id": "o205"
+   },
+   {
+    "text": "Quality Extracts",
+    "start": 21.91,
+    "end": 21.91,
+    "confidence": 0.999,
+    "id": "o206"
+   },
+   {
+    "text": "and Plants:",
+    "start": 21.91,
+    "end": 21.91,
+    "confidence": 0.761,
+    "id": "o207"
+   },
+   {
+    "text": "probioticy; thio",
+    "start": 21.91,
+    "end": 21.91,
+    "confidence": 0.603,
+    "id": "o208"
+   },
+   {
+    "text": "focling",
+    "start": 21.91,
+    "end": 21.91,
+    "confidence": 0.576,
+    "id": "o209"
+   },
+   {
+    "text": "SUPER GUT",
+    "start": 24.06,
+    "end": 24.06,
+    "confidence": 0.989,
+    "id": "o210"
+   },
+   {
+    "text": "Detox Plan",
+    "start": 24.06,
+    "end": 24.06,
+    "confidence": 0.641,
+    "id": "o211"
+   },
+   {
+    "text": "Science Based Nutrients",
+    "start": 24.06,
+    "end": 24.06,
+    "confidence": 0.888,
+    "id": "o212"
+   },
+   {
+    "text": "Premium",
+    "start": 24.06,
+    "end": 24.06,
+    "confidence": 0.997,
+    "id": "o213"
+   },
+   {
+    "text": "Quality Extracts",
+    "start": 24.06,
+    "end": 24.06,
+    "confidence": 0.988,
+    "id": "o214"
+   },
+   {
+    "text": "from Fruits and Plants:",
+    "start": 24.06,
+    "end": 24.06,
+    "confidence": 0.623,
+    "id": "o215"
+   },
+   {
+    "text": "J CAPSULES",
+    "start": 24.06,
+    "end": 24.06,
+    "confidence": 0.859,
+    "id": "o216"
+   },
+   {
+    "text": "DIETART =",
+    "start": 24.06,
+    "end": 24.06,
+    "confidence": 0.518,
+    "id": "o217"
+   },
+   {
+    "text": "powerful notural",
+    "start": 24.06,
+    "end": 24.06,
+    "confidence": 0.522,
+    "id": "o218"
+   },
+   {
+    "text": "edvanced formula supports",
+    "start": 24.06,
+    "end": 24.06,
+    "confidence": 0.5,
+    "id": "o219"
+   },
+   {
+    "text": "MELLISH ISLANDT",
+    "start": 25.96,
+    "end": 25.96,
+    "confidence": 0.591,
+    "id": "o220"
+   },
+   {
+    "text": "SUPER GUT",
+    "start": 25.96,
+    "end": 25.96,
+    "confidence": 0.575,
+    "id": "o221"
+   },
+   {
+    "text": "Detox Plan",
+    "start": 25.96,
+    "end": 25.96,
+    "confidence": 0.67,
+    "id": "o222"
+   },
+   {
+    "text": "Science Based Nutrients",
+    "start": 25.96,
+    "end": 25.96,
+    "confidence": 0.796,
+    "id": "o223"
+   },
+   {
+    "text": "Premium Quality Extracts",
+    "start": 25.96,
+    "end": 25.96,
+    "confidence": 0.913,
+    "id": "o224"
+   },
+   {
+    "text": "from Fruits and Plants",
+    "start": 25.96,
+    "end": 25.96,
+    "confidence": 0.982,
+    "id": "o225"
+   },
+   {
+    "text": "CAPSULES",
+    "start": 25.96,
+    "end": 25.96,
+    "confidence": 0.996,
+    "id": "o226"
+   },
+   {
+    "text": "SUPER",
+    "start": 28.11,
+    "end": 28.11,
+    "confidence": 0.996,
+    "id": "o227"
+   },
+   {
+    "text": "GUT",
+    "start": 28.11,
+    "end": 28.11,
+    "confidence": 0.935,
+    "id": "o228"
+   },
+   {
+    "text": "7-Day [",
+    "start": 28.11,
+    "end": 28.11,
+    "confidence": 0.565,
+    "id": "o229"
+   },
+   {
+    "text": "Detox Plan",
+    "start": 28.11,
+    "end": 28.11,
+    "confidence": 0.652,
+    "id": "o230"
+   },
+   {
+    "text": "Based",
+    "start": 28.11,
+    "end": 28.11,
+    "confidence": 0.515,
+    "id": "o231"
+   },
+   {
+    "text": "Nutrients",
+    "start": 28.11,
+    "end": 28.11,
+    "confidence": 0.984,
+    "id": "o232"
+   },
+   {
+    "text": "Quality Extracts",
+    "start": 28.11,
+    "end": 28.11,
+    "confidence": 0.996,
+    "id": "o233"
+   },
+   {
+    "text": "edvanced tormula supports",
+    "start": 28.11,
+    "end": 28.11,
+    "confidence": 0.622,
+    "id": "o234"
+   },
+   {
+    "text": "MELLISH ISLANDM",
+    "start": 30.01,
+    "end": 30.01,
+    "confidence": 0.614,
+    "id": "o235"
+   },
+   {
+    "text": "SUPER GUT",
+    "start": 30.01,
+    "end": 30.01,
+    "confidence": 0.964,
+    "id": "o236"
+   },
+   {
+    "text": "'Detox Plan",
+    "start": 30.01,
+    "end": 30.01,
+    "confidence": 0.834,
+    "id": "o237"
+   },
+   {
+    "text": "Nutrients",
+    "start": 30.01,
+    "end": 30.01,
+    "confidence": 1.0,
+    "id": "o238"
+   },
+   {
+    "text": "Quality Extracts",
+    "start": 30.01,
+    "end": 30.01,
+    "confidence": 0.752,
+    "id": "o239"
+   },
+   {
+    "text": "Plants",
+    "start": 30.01,
+    "end": 30.01,
+    "confidence": 0.66,
+    "id": "o240"
+   },
+   {
+    "text": "DETART",
+    "start": 30.01,
+    "end": 30.01,
+    "confidence": 0.611,
+    "id": "o241"
+   },
+   {
+    "text": "Start your wellness journey",
+    "start": 30.01,
+    "end": 30.01,
+    "confidence": 0.735,
+    "id": "o242"
+   },
+   {
+    "text": "today and experience the",
+    "start": 30.01,
+    "end": 30.01,
+    "confidence": 0.939,
+    "id": "o243"
+   },
+   {
+    "text": "days;",
+    "start": 30.01,
+    "end": 30.01,
+    "confidence": 0.879,
+    "id": "o244"
+   },
+   {
+    "text": "diff erence in just",
+    "start": 30.01,
+    "end": 30.01,
+    "confidence": 0.526,
+    "id": "o245"
+   },
+   {
+    "text": "Now",
+    "start": 30.01,
+    "end": 30.01,
+    "confidence": 1.0,
+    "id": "o246"
+   },
+   {
+    "text": "available onour showcase",
+    "start": 30.01,
+    "end": 30.01,
+    "confidence": 0.705,
+    "id": "o247"
+   },
+   {
+    "text": "MELLISH",
+    "start": 31.92,
+    "end": 31.92,
+    "confidence": 0.943,
+    "id": "o248"
+   },
+   {
+    "text": "ISLANDT",
+    "start": 31.92,
+    "end": 31.92,
+    "confidence": 0.821,
+    "id": "o249"
+   },
+   {
+    "text": "SUPER GUT",
+    "start": 31.92,
+    "end": 31.92,
+    "confidence": 0.991,
+    "id": "o250"
+   },
+   {
+    "text": "Detox Plan",
+    "start": 31.92,
+    "end": 31.92,
+    "confidence": 0.998,
+    "id": "o251"
+   },
+   {
+    "text": "Based Nutrients",
+    "start": 31.92,
+    "end": 31.92,
+    "confidence": 0.991,
+    "id": "o252"
+   },
+   {
+    "text": "Quality Extracts",
+    "start": 31.92,
+    "end": 31.92,
+    "confidence": 0.781,
+    "id": "o253"
+   },
+   {
+    "text": "Plants",
+    "start": 31.92,
+    "end": 31.92,
+    "confidence": 0.999,
+    "id": "o254"
+   },
+   {
+    "text": "Start your wellness journey",
+    "start": 31.92,
+    "end": 31.92,
+    "confidence": 0.98,
+    "id": "o255"
+   },
+   {
+    "text": "today and experience the",
+    "start": 31.92,
+    "end": 31.92,
+    "confidence": 0.887,
+    "id": "o256"
+   },
+   {
+    "text": "days;",
+    "start": 31.92,
+    "end": 31.92,
+    "confidence": 0.863,
+    "id": "o257"
+   },
+   {
+    "text": "diff erence in just",
+    "start": 31.92,
+    "end": 31.92,
+    "confidence": 0.586,
+    "id": "o258"
+   },
+   {
+    "text": "Now",
+    "start": 31.92,
+    "end": 31.92,
+    "confidence": 0.998,
+    "id": "o259"
+   },
+   {
+    "text": "available onour showcase",
+    "start": 31.92,
+    "end": 31.92,
+    "confidence": 0.87,
+    "id": "o260"
+   },
+   {
+    "text": "ISLANDT",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.823,
+    "id": "o261"
+   },
+   {
+    "text": "SUPER",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.895,
+    "id": "o262"
+   },
+   {
+    "text": "7-Day \"",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.566,
+    "id": "o263"
+   },
+   {
+    "text": "'Detox Plan",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.715,
+    "id": "o264"
+   },
+   {
+    "text": "Based Nutrients",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 1.0,
+    "id": "o265"
+   },
+   {
+    "text": "Premum (",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.697,
+    "id": "o266"
+   },
+   {
+    "text": "Quality Extracts",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.687,
+    "id": "o267"
+   },
+   {
+    "text": "Fruits -",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.524,
+    "id": "o268"
+   },
+   {
+    "text": "and Plants",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.996,
+    "id": "o269"
+   },
+   {
+    "text": "CAPSULES",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.709,
+    "id": "o270"
+   },
+   {
+    "text": "Start your wellness journey",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.89,
+    "id": "o271"
+   },
+   {
+    "text": "today and experience the",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.868,
+    "id": "o272"
+   },
+   {
+    "text": "days;",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.62,
+    "id": "o273"
+   },
+   {
+    "text": "diff erence in just",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.578,
+    "id": "o274"
+   },
+   {
+    "text": "Now",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.855,
+    "id": "o275"
+   },
+   {
+    "text": "available on our showcase",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.792,
+    "id": "o276"
+   },
+   {
+    "text": "ISLANDT",
+    "start": 35.97,
+    "end": 35.97,
+    "confidence": 0.658,
+    "id": "o277"
+   },
+   {
+    "text": "SUPER",
+    "start": 35.97,
+    "end": 35.97,
+    "confidence": 0.999,
+    "id": "o278"
+   },
+   {
+    "text": "Detox Plan",
+    "start": 35.97,
+    "end": 35.97,
+    "confidence": 0.721,
+    "id": "o279"
+   },
+   {
+    "text": "'Based Nutrients",
+    "start": 35.97,
+    "end": 35.97,
+    "confidence": 0.658,
+    "id": "o280"
+   },
+   {
+    "text": "Quality Extracts",
+    "start": 35.97,
+    "end": 35.97,
+    "confidence": 0.749,
+    "id": "o281"
+   },
+   {
+    "text": "Irom",
+    "start": 35.97,
+    "end": 35.97,
+    "confidence": 0.732,
+    "id": "o282"
+   },
+   {
+    "text": "and Plants",
+    "start": 35.97,
+    "end": 35.97,
+    "confidence": 0.999,
+    "id": "o283"
+   },
+   {
+    "text": "Start your wellness journey",
+    "start": 35.97,
+    "end": 35.97,
+    "confidence": 0.851,
+    "id": "o284"
+   },
+   {
+    "text": "today and experience the",
+    "start": 35.97,
+    "end": 35.97,
+    "confidence": 0.812,
+    "id": "o285"
+   },
+   {
+    "text": "diff erence in just",
+    "start": 35.97,
+    "end": 35.97,
+    "confidence": 0.893,
+    "id": "o286"
+   },
+   {
+    "text": "Now",
+    "start": 35.97,
+    "end": 35.97,
+    "confidence": 1.0,
+    "id": "o287"
+   }
+  ]
+ }
+}

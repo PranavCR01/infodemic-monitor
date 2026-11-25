@@ -134,7 +134,7 @@ def _claim_metrics(videos, preds, pairs) -> dict[str, Any]:
         out["stance_macro_f1"] = m.macro_f1(gs, ps, m.STANCE_LABELS)
         out["stance_debunk_recall"] = m.per_class_prf(gs, ps, m.STANCE_LABELS)["REFUTES"]["recall"]
 
-    ver = [(g.truth, c.verdict) for _, g, c in pairs if c.verdict]
+    ver = [(g.verdict, c.verdict) for _, g, c in pairs if c.verdict]
     if ver:
         gs, ps = [a for a, _ in ver], [b for _, b in ver]
         out["verification_prf"] = m.per_class_prf(gs, ps, m.VERDICTS)
@@ -160,7 +160,7 @@ def _claim_metrics(videos, preds, pairs) -> dict[str, Any]:
     out["citation_support"] = sum(sup) / len(sup) if sup else None
 
     crit = [
-        ((c.initial_verdict or c.verdict) != g.truth, any(d != "APPROVE" for d in c.critic_decisions))
+        ((c.initial_verdict or c.verdict) != g.verdict, any(d != "APPROVE" for d in c.critic_decisions))
         for _, g, c in pairs if c.critic_decisions and (c.initial_verdict or c.verdict)
     ]
     if crit:
@@ -204,9 +204,12 @@ def _tracked_failures(videos, preds, pairs) -> dict[str, Any]:
     laundering = [f"{k}:{eid}" for k, eid, ok in _citation_support_items(pairs) if not ok]
     n_citations = sum(1 for _ in _citation_support_items(pairs))
 
+    # §7: absence of evidence is not contradiction. UNSUPPORTED (T30) is absence of
+    # evidence too, so calling it CONTRADICTED is the same failure.
+    absent = ("INSUFFICIENT_EVIDENCE", "UNSUPPORTED")
     insufficient = [f"{v.video_id}/{g.claim_id}" for v, g, c in pairs
-                    if g.truth == "INSUFFICIENT_EVIDENCE" and c.verdict == "CONTRADICTED"]
-    n_insufficient = sum(1 for _, g, c in pairs if g.truth == "INSUFFICIENT_EVIDENCE" and c.verdict)
+                    if g.verdict in absent and c.verdict == "CONTRADICTED"]
+    n_insufficient = sum(1 for _, g, c in pairs if g.verdict in absent and c.verdict)
 
     def category_errors(cat: str) -> dict:
         tagged = [(v, p) for v, p in zip(videos, preds) if cat in v.categories]

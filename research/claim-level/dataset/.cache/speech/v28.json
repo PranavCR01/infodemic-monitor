@@ -1,0 +1,134 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 69.08,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.8,
+    "text": "All diabetics must avoid eating these four fruits."
+   },
+   {
+    "id": "t2",
+    "start": 3.8,
+    "end": 6.04,
+    "text": "One, watermelon."
+   },
+   {
+    "id": "t3",
+    "start": 6.04,
+    "end": 9.0,
+    "text": "Watermelon has a very high glycemic index,"
+   },
+   {
+    "id": "t4",
+    "start": 9.0,
+    "end": 11.6,
+    "text": "although it's relatively low in calories."
+   },
+   {
+    "id": "t5",
+    "start": 11.6,
+    "end": 14.0,
+    "text": "That means it raises blood sugar quickly,"
+   },
+   {
+    "id": "t6",
+    "start": 14.0,
+    "end": 15.92,
+    "text": "even in small portions."
+   },
+   {
+    "id": "t7",
+    "start": 15.92,
+    "end": 19.24,
+    "text": "It's also easy to eat a lot of it without feeling full,"
+   },
+   {
+    "id": "t8",
+    "start": 19.24,
+    "end": 22.8,
+    "text": "which can lead to overconsumption of sugar and carbs."
+   },
+   {
+    "id": "t9",
+    "start": 22.8,
+    "end": 25.36,
+    "text": "Let me know where you are watching this video from."
+   },
+   {
+    "id": "t10",
+    "start": 25.36,
+    "end": 28.96,
+    "text": "Two, bananas, especially ripe ones."
+   },
+   {
+    "id": "t11",
+    "start": 28.96,
+    "end": 34.82,
+    "text": "Ripe bananas have a high glycemic index and sugar content, which can rapidly elevate blood"
+   },
+   {
+    "id": "t12",
+    "start": 34.82,
+    "end": 40.08,
+    "text": "sugar levels, especially when eaten without any fiber or protein."
+   },
+   {
+    "id": "t13",
+    "start": 40.08,
+    "end": 43.32,
+    "text": "Hit that follow button to get daily health tips."
+   },
+   {
+    "id": "t14",
+    "start": 43.32,
+    "end": 44.32,
+    "text": "3."
+   },
+   {
+    "id": "t15",
+    "start": 44.32,
+    "end": 45.32,
+    "text": "Mangos."
+   },
+   {
+    "id": "t16",
+    "start": 45.32,
+    "end": 49.88,
+    "text": "Mangos, especially when ripe, contain a lot of sugar that can cause quick blood sugar"
+   },
+   {
+    "id": "t17",
+    "start": 49.88,
+    "end": 55.92,
+    "text": "spikes and should be limited in portion or avoided if blood sugar is uncontrolled."
+   },
+   {
+    "id": "t18",
+    "start": 55.92,
+    "end": 56.92,
+    "text": "4."
+   },
+   {
+    "id": "t19",
+    "start": 56.92,
+    "end": 62.8,
+    "text": "Apple has a high glycemic index and can sharply raise blood glucose, especially when eaten"
+   },
+   {
+    "id": "t20",
+    "start": 62.8,
+    "end": 68.16,
+    "text": "in large portions or as juice, which removes fiber and increases absorption speed."
+   }
+  ]
+ }
+}

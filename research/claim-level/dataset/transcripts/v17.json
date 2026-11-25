@@ -1,0 +1,1590 @@
+{
+ "video_id": "v17",
+ "filename": "f8ef46f2d695b83f906c917967851b8a.mp4",
+ "relative_path": "Misinfo Dataset/Haoran Zhang/Misinformation/f8ef46f2d695b83f906c917967851b8a.mp4",
+ "collector": "Haoran Zhang",
+ "collector_label": "MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T17:48:47",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 38.71,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 9.52,
+    "text": "The FDA has approved over 863 chemicals in these foods as well as thousands of others and it's"
+   },
+   {
+    "id": "t2",
+    "start": 9.52,
+    "end": 16.0,
+    "text": "gotten so bad that the state of Texas has demanded that all of these foods must have a warning label"
+   },
+   {
+    "id": "t3",
+    "start": 16.0,
+    "end": 23.81,
+    "text": "on them that says unfit for human consumption. Most people have absolutely no idea that all"
+   },
+   {
+    "id": "t4",
+    "start": 23.81,
+    "end": 27.97,
+    "text": "of these foods behind me literally contain hundreds of dangerous chemicals. Parents,"
+   },
+   {
+    "id": "t5",
+    "start": 27.97,
+    "end": 34.09,
+    "text": "especially please listen. Follow me for more tips. Check out my bio because there's some amazing information up there."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 20,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "THE FDA APPROVED 863",
+    "confidence": 0.738
+   },
+   {
+    "time": 0.0,
+    "text": "CHEMICALS?I",
+    "confidence": 0.658
+   },
+   {
+    "time": 0.0,
+    "text": "8",
+    "confidence": 0.986
+   },
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.931
+   },
+   {
+    "time": 0.0,
+    "text": "iamseanchristopher",
+    "confidence": 0.765
+   },
+   {
+    "time": 0.0,
+    "text": "In these foods.",
+    "confidence": 0.551
+   },
+   {
+    "time": 0.0,
+    "text": "0",
+    "confidence": 0.643
+   },
+   {
+    "time": 0.0,
+    "text": "9",
+    "confidence": 0.854
+   },
+   {
+    "time": 2.0,
+    "text": "THE FDA APPROVED 863",
+    "confidence": 0.666
+   },
+   {
+    "time": 2.0,
+    "text": "CHEMICALS?!",
+    "confidence": 0.932
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 2.0,
+    "text": "@ iamseanchristopher",
+    "confidence": 0.857
+   },
+   {
+    "time": 2.0,
+    "text": "In these foods:",
+    "confidence": 0.756
+   },
+   {
+    "time": 2.0,
+    "text": "0",
+    "confidence": 0.73
+   },
+   {
+    "time": 2.0,
+    "text": "AHAS APPROVED",
+    "confidence": 0.995
+   },
+   {
+    "time": 2.0,
+    "text": "9",
+    "confidence": 0.964
+   },
+   {
+    "time": 4.0,
+    "text": "CHEMICALS?!",
+    "confidence": 0.968
+   },
+   {
+    "time": 4.0,
+    "text": "8",
+    "confidence": 0.945
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.86
+   },
+   {
+    "time": 4.0,
+    "text": "oor",
+    "confidence": 0.79
+   },
+   {
+    "time": 4.0,
+    "text": "OVER 863CHEMICALS",
+    "confidence": 0.694
+   },
+   {
+    "time": 4.0,
+    "text": "8",
+    "confidence": 0.58
+   },
+   {
+    "time": 6.0,
+    "text": "Tikok",
+    "confidence": 0.99
+   },
+   {
+    "time": 6.0,
+    "text": "OVER 863 CHEMICALS eanchristopher",
+    "confidence": 0.669
+   },
+   {
+    "time": 8.0,
+    "text": "Tiklok",
+    "confidence": 0.545
+   },
+   {
+    "time": 8.0,
+    "text": "pher",
+    "confidence": 0.883
+   },
+   {
+    "time": 10.0,
+    "text": "Texas just passed a law",
+    "confidence": 0.746
+   },
+   {
+    "time": 10.0,
+    "text": "The Food Additive",
+    "confidence": 0.941
+   },
+   {
+    "time": 10.0,
+    "text": "'Ban",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "Bill\" (HB 2971)",
+    "confidence": 0.592
+   },
+   {
+    "time": 10.0,
+    "text": "Requires a warning label:",
+    "confidence": 0.935
+   },
+   {
+    "time": 10.0,
+    "text": "\"UNFIT FOR HUMAN",
+    "confidence": 0.918
+   },
+   {
+    "time": 10.0,
+    "text": "CONSUMPTION\"",
+    "confidence": 0.995
+   },
+   {
+    "time": 10.0,
+    "text": "containing banned",
+    "confidence": 0.732
+   },
+   {
+    "time": 10.0,
+    "text": "on foods",
+    "confidence": 0.969
+   },
+   {
+    "time": 10.0,
+    "text": "additives:",
+    "confidence": 0.92
+   },
+   {
+    "time": 10.0,
+    "text": "SO BAD",
+    "confidence": 0.96
+   },
+   {
+    "time": 12.0,
+    "text": "Texas just passed a law",
+    "confidence": 0.635
+   },
+   {
+    "time": 12.0,
+    "text": "The Food Additive",
+    "confidence": 0.968
+   },
+   {
+    "time": 12.0,
+    "text": "'Ban",
+    "confidence": 0.941
+   },
+   {
+    "time": 12.0,
+    "text": "Bill\" (HB 2971)",
+    "confidence": 0.998
+   },
+   {
+    "time": 12.0,
+    "text": "Requires a warning label:",
+    "confidence": 0.618
+   },
+   {
+    "time": 12.0,
+    "text": "\"UNFIT FOR HUMAN",
+    "confidence": 0.888
+   },
+   {
+    "time": 12.0,
+    "text": "CONSUMPTION\"",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "on foods containing banned",
+    "confidence": 0.817
+   },
+   {
+    "time": 12.0,
+    "text": "additives:",
+    "confidence": 0.973
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 0.584
+   },
+   {
+    "time": 12.0,
+    "text": "OF TEXASHAS",
+    "confidence": 0.997
+   },
+   {
+    "time": 14.0,
+    "text": "Texas just passed a law",
+    "confidence": 0.62
+   },
+   {
+    "time": 14.0,
+    "text": "The Food Additive",
+    "confidence": 0.995
+   },
+   {
+    "time": 14.0,
+    "text": "'Ban",
+    "confidence": 0.942
+   },
+   {
+    "time": 14.0,
+    "text": "Bill\" (HB 2971)",
+    "confidence": 0.998
+   },
+   {
+    "time": 14.0,
+    "text": "Requires a warning label:",
+    "confidence": 0.604
+   },
+   {
+    "time": 14.0,
+    "text": "\"UNFIT FOR HUMAN",
+    "confidence": 0.89
+   },
+   {
+    "time": 14.0,
+    "text": "CONSUMPTION\"",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "on foods containing banned",
+    "confidence": 0.808
+   },
+   {
+    "time": 14.0,
+    "text": "additives",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 0.984
+   },
+   {
+    "time": 14.0,
+    "text": "OF THESEFOODS",
+    "confidence": 0.979
+   },
+   {
+    "time": 16.0,
+    "text": "WARNING:",
+    "confidence": 0.996
+   },
+   {
+    "time": 16.0,
+    "text": "UNFIT FOR HUMAM",
+    "confidence": 0.776
+   },
+   {
+    "time": 16.0,
+    "text": "CONSUMPTION",
+    "confidence": 0.552
+   },
+   {
+    "time": 16.0,
+    "text": "Cheerios",
+    "confidence": 0.697
+   },
+   {
+    "time": 16.0,
+    "text": "In my bio.",
+    "confidence": 0.549
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 0.553
+   },
+   {
+    "time": 18.0,
+    "text": "16919)",
+    "confidence": 0.816
+   },
+   {
+    "time": 18.0,
+    "text": "WARNING:",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.0,
+    "text": "UNFIT FOR HUMAN",
+    "confidence": 0.921
+   },
+   {
+    "time": 18.0,
+    "text": "CONSUMPTION",
+    "confidence": 0.942
+   },
+   {
+    "time": 18.0,
+    "text": "Cheerios",
+    "confidence": 0.889
+   },
+   {
+    "time": 18.0,
+    "text": "Dorites",
+    "confidence": 0.567
+   },
+   {
+    "time": 18.0,
+    "text": "Learn more at the link",
+    "confidence": 0.604
+   },
+   {
+    "time": 18.0,
+    "text": "in my bio.",
+    "confidence": 0.695
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 0.868
+   },
+   {
+    "time": 18.0,
+    "text": "FOR HUMAN CONSUMPTIOMristopher",
+    "confidence": 0.812
+   },
+   {
+    "time": 20.0,
+    "text": "Join the 30-Day",
+    "confidence": 0.802
+   },
+   {
+    "time": 20.0,
+    "text": "Transformation Challenge",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "Detox these chemicals",
+    "confidence": 0.971
+   },
+   {
+    "time": 20.0,
+    "text": "from vour bodv",
+    "confidence": 0.661
+   },
+   {
+    "time": 20.0,
+    "text": "Feel better. Burn fat. Get",
+    "confidence": 0.765
+   },
+   {
+    "time": 20.0,
+    "text": "clean:",
+    "confidence": 0.956
+   },
+   {
+    "time": 20.0,
+    "text": "Link in bio",
+    "confidence": 0.954
+   },
+   {
+    "time": 20.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "iamseanchristopher",
+    "confidence": 0.754
+   },
+   {
+    "time": 22.0,
+    "text": "Join the 30-Day",
+    "confidence": 0.71
+   },
+   {
+    "time": 22.0,
+    "text": "Transformation Challenge",
+    "confidence": 0.806
+   },
+   {
+    "time": 22.0,
+    "text": "Detox these chemicals",
+    "confidence": 0.968
+   },
+   {
+    "time": 22.0,
+    "text": "from vour body",
+    "confidence": 0.635
+   },
+   {
+    "time": 22.0,
+    "text": "Feel better. Burn fat. Get",
+    "confidence": 0.912
+   },
+   {
+    "time": 22.0,
+    "text": "clean:",
+    "confidence": 0.942
+   },
+   {
+    "time": 22.0,
+    "text": "Link in bio",
+    "confidence": 0.893
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 22.0,
+    "text": "ABSOLUTELY NO IDEAseanchristopher",
+    "confidence": 0.961
+   },
+   {
+    "time": 24.0,
+    "text": "Join the 30-Day",
+    "confidence": 0.656
+   },
+   {
+    "time": 24.0,
+    "text": "Transformation Challenge",
+    "confidence": 0.834
+   },
+   {
+    "time": 24.0,
+    "text": "Detox these chemicals",
+    "confidence": 0.974
+   },
+   {
+    "time": 24.0,
+    "text": "from vour body",
+    "confidence": 0.982
+   },
+   {
+    "time": 24.0,
+    "text": "Feel better. Burn fat. Get",
+    "confidence": 0.681
+   },
+   {
+    "time": 24.0,
+    "text": "clean:",
+    "confidence": 0.954
+   },
+   {
+    "time": 24.0,
+    "text": "Link in bio",
+    "confidence": 0.843
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 24.0,
+    "text": "THAT ALL OF",
+    "confidence": 0.785
+   },
+   {
+    "time": 24.0,
+    "text": "amaganchrisiopher",
+    "confidence": 0.561
+   },
+   {
+    "time": 26.0,
+    "text": "2a3ia9",
+    "confidence": 0.566
+   },
+   {
+    "time": 26.0,
+    "text": "Join the 30-Day",
+    "confidence": 0.771
+   },
+   {
+    "time": 26.0,
+    "text": "Transformation Challenge",
+    "confidence": 0.843
+   },
+   {
+    "time": 26.0,
+    "text": "Detox these chemicals",
+    "confidence": 0.974
+   },
+   {
+    "time": 26.0,
+    "text": "from vour body",
+    "confidence": 0.982
+   },
+   {
+    "time": 26.0,
+    "text": "Feel better. Burn fat. Get",
+    "confidence": 0.685
+   },
+   {
+    "time": 26.0,
+    "text": "clean:",
+    "confidence": 0.953
+   },
+   {
+    "time": 26.0,
+    "text": "Link in bio",
+    "confidence": 0.834
+   },
+   {
+    "time": 26.0,
+    "text": "LITERALLY CONTAIN",
+    "confidence": 0.991
+   },
+   {
+    "time": 26.0,
+    "text": "Topher",
+    "confidence": 0.771
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "PARENTS ESPECIALLY PLEASEristopher",
+    "confidence": 0.7
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "FOLLOW ME FOR",
+    "confidence": 0.778
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "OUT MY BIO",
+    "confidence": 0.828
+   },
+   {
+    "time": 34.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "THERE",
+    "confidence": 0.991
+   },
+   {
+    "time": 34.0,
+    "text": "jammgeanchristopher",
+    "confidence": 0.583
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.0,
+    "text": "@ iamseanchristop_",
+    "confidence": 0.725
+   },
+   {
+    "time": 38.0,
+    "text": "J",
+    "confidence": 0.832
+   },
+   {
+    "time": 38.0,
+    "text": "TikTok",
+    "confidence": 0.987
+   },
+   {
+    "time": 38.0,
+    "text": "@ iamseanchristop_",
+    "confidence": 0.752
+   }
+  ],
+  "captions": [
+   {
+    "text": "THE FDA APPROVED 863",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.738,
+    "id": "o1"
+   },
+   {
+    "text": "CHEMICALS?I",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.658,
+    "id": "o2"
+   },
+   {
+    "text": "8",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.986,
+    "id": "o3"
+   },
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.931,
+    "id": "o4"
+   },
+   {
+    "text": "iamseanchristopher",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.765,
+    "id": "o5"
+   },
+   {
+    "text": "In these foods.",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.551,
+    "id": "o6"
+   },
+   {
+    "text": "0",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.643,
+    "id": "o7"
+   },
+   {
+    "text": "9",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.854,
+    "id": "o8"
+   },
+   {
+    "text": "THE FDA APPROVED 863",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.666,
+    "id": "o9"
+   },
+   {
+    "text": "CHEMICALS?!",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.932,
+    "id": "o10"
+   },
+   {
+    "text": "TikTok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.997,
+    "id": "o11"
+   },
+   {
+    "text": "@ iamseanchristopher",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.857,
+    "id": "o12"
+   },
+   {
+    "text": "In these foods:",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.756,
+    "id": "o13"
+   },
+   {
+    "text": "0",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.73,
+    "id": "o14"
+   },
+   {
+    "text": "AHAS APPROVED",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.995,
+    "id": "o15"
+   },
+   {
+    "text": "9",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.964,
+    "id": "o16"
+   },
+   {
+    "text": "CHEMICALS?!",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.968,
+    "id": "o17"
+   },
+   {
+    "text": "8",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.945,
+    "id": "o18"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.86,
+    "id": "o19"
+   },
+   {
+    "text": "oor",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.79,
+    "id": "o20"
+   },
+   {
+    "text": "OVER 863CHEMICALS",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.694,
+    "id": "o21"
+   },
+   {
+    "text": "8",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.58,
+    "id": "o22"
+   },
+   {
+    "text": "Tikok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.99,
+    "id": "o23"
+   },
+   {
+    "text": "OVER 863 CHEMICALS eanchristopher",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.669,
+    "id": "o24"
+   },
+   {
+    "text": "Tiklok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.545,
+    "id": "o25"
+   },
+   {
+    "text": "pher",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.883,
+    "id": "o26"
+   },
+   {
+    "text": "Texas just passed a law",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.746,
+    "id": "o27"
+   },
+   {
+    "text": "The Food Additive",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.941,
+    "id": "o28"
+   },
+   {
+    "text": "'Ban",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o29"
+   },
+   {
+    "text": "Bill\" (HB 2971)",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.592,
+    "id": "o30"
+   },
+   {
+    "text": "Requires a warning label:",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.935,
+    "id": "o31"
+   },
+   {
+    "text": "\"UNFIT FOR HUMAN",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.918,
+    "id": "o32"
+   },
+   {
+    "text": "CONSUMPTION\"",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.995,
+    "id": "o33"
+   },
+   {
+    "text": "containing banned",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.732,
+    "id": "o34"
+   },
+   {
+    "text": "on foods",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.969,
+    "id": "o35"
+   },
+   {
+    "text": "additives:",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.92,
+    "id": "o36"
+   },
+   {
+    "text": "SO BAD",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.96,
+    "id": "o37"
+   },
+   {
+    "text": "Texas just passed a law",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.635,
+    "id": "o38"
+   },
+   {
+    "text": "The Food Additive",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.968,
+    "id": "o39"
+   },
+   {
+    "text": "'Ban",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.941,
+    "id": "o40"
+   },
+   {
+    "text": "Bill\" (HB 2971)",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.998,
+    "id": "o41"
+   },
+   {
+    "text": "Requires a warning label:",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.618,
+    "id": "o42"
+   },
+   {
+    "text": "\"UNFIT FOR HUMAN",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.888,
+    "id": "o43"
+   },
+   {
+    "text": "CONSUMPTION\"",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o44"
+   },
+   {
+    "text": "on foods containing banned",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.817,
+    "id": "o45"
+   },
+   {
+    "text": "additives:",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.973,
+    "id": "o46"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.584,
+    "id": "o47"
+   },
+   {
+    "text": "OF TEXASHAS",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.997,
+    "id": "o48"
+   },
+   {
+    "text": "Texas just passed a law",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.62,
+    "id": "o49"
+   },
+   {
+    "text": "The Food Additive",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.995,
+    "id": "o50"
+   },
+   {
+    "text": "'Ban",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.942,
+    "id": "o51"
+   },
+   {
+    "text": "Bill\" (HB 2971)",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.998,
+    "id": "o52"
+   },
+   {
+    "text": "Requires a warning label:",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.604,
+    "id": "o53"
+   },
+   {
+    "text": "\"UNFIT FOR HUMAN",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.89,
+    "id": "o54"
+   },
+   {
+    "text": "CONSUMPTION\"",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o55"
+   },
+   {
+    "text": "on foods containing banned",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.808,
+    "id": "o56"
+   },
+   {
+    "text": "additives",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o57"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.984,
+    "id": "o58"
+   },
+   {
+    "text": "OF THESEFOODS",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.979,
+    "id": "o59"
+   },
+   {
+    "text": "WARNING:",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.996,
+    "id": "o60"
+   },
+   {
+    "text": "UNFIT FOR HUMAM",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.776,
+    "id": "o61"
+   },
+   {
+    "text": "CONSUMPTION",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.552,
+    "id": "o62"
+   },
+   {
+    "text": "Cheerios",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.697,
+    "id": "o63"
+   },
+   {
+    "text": "In my bio.",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.549,
+    "id": "o64"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.553,
+    "id": "o65"
+   },
+   {
+    "text": "16919)",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.816,
+    "id": "o66"
+   },
+   {
+    "text": "WARNING:",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.999,
+    "id": "o67"
+   },
+   {
+    "text": "UNFIT FOR HUMAN",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.921,
+    "id": "o68"
+   },
+   {
+    "text": "CONSUMPTION",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.942,
+    "id": "o69"
+   },
+   {
+    "text": "Cheerios",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.889,
+    "id": "o70"
+   },
+   {
+    "text": "Dorites",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.567,
+    "id": "o71"
+   },
+   {
+    "text": "Learn more at the link",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.604,
+    "id": "o72"
+   },
+   {
+    "text": "in my bio.",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.695,
+    "id": "o73"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.868,
+    "id": "o74"
+   },
+   {
+    "text": "FOR HUMAN CONSUMPTIOMristopher",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.812,
+    "id": "o75"
+   },
+   {
+    "text": "Join the 30-Day",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.802,
+    "id": "o76"
+   },
+   {
+    "text": "Transformation Challenge",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o77"
+   },
+   {
+    "text": "Detox these chemicals",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.971,
+    "id": "o78"
+   },
+   {
+    "text": "from vour bodv",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.661,
+    "id": "o79"
+   },
+   {
+    "text": "Feel better. Burn fat. Get",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.765,
+    "id": "o80"
+   },
+   {
+    "text": "clean:",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.956,
+    "id": "o81"
+   },
+   {
+    "text": "Link in bio",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.954,
+    "id": "o82"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o83"
+   },
+   {
+    "text": "iamseanchristopher",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.754,
+    "id": "o84"
+   },
+   {
+    "text": "Join the 30-Day",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.71,
+    "id": "o85"
+   },
+   {
+    "text": "Transformation Challenge",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.806,
+    "id": "o86"
+   },
+   {
+    "text": "Detox these chemicals",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.968,
+    "id": "o87"
+   },
+   {
+    "text": "from vour body",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.635,
+    "id": "o88"
+   },
+   {
+    "text": "Feel better. Burn fat. Get",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.912,
+    "id": "o89"
+   },
+   {
+    "text": "clean:",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.942,
+    "id": "o90"
+   },
+   {
+    "text": "Link in bio",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.893,
+    "id": "o91"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.998,
+    "id": "o92"
+   },
+   {
+    "text": "ABSOLUTELY NO IDEAseanchristopher",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.961,
+    "id": "o93"
+   },
+   {
+    "text": "Join the 30-Day",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.656,
+    "id": "o94"
+   },
+   {
+    "text": "Transformation Challenge",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.834,
+    "id": "o95"
+   },
+   {
+    "text": "Detox these chemicals",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.974,
+    "id": "o96"
+   },
+   {
+    "text": "from vour body",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.982,
+    "id": "o97"
+   },
+   {
+    "text": "Feel better. Burn fat. Get",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.681,
+    "id": "o98"
+   },
+   {
+    "text": "clean:",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.954,
+    "id": "o99"
+   },
+   {
+    "text": "Link in bio",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.843,
+    "id": "o100"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.999,
+    "id": "o101"
+   },
+   {
+    "text": "THAT ALL OF",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.785,
+    "id": "o102"
+   },
+   {
+    "text": "amaganchrisiopher",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.561,
+    "id": "o103"
+   },
+   {
+    "text": "2a3ia9",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.566,
+    "id": "o104"
+   },
+   {
+    "text": "Join the 30-Day",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.771,
+    "id": "o105"
+   },
+   {
+    "text": "Transformation Challenge",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.843,
+    "id": "o106"
+   },
+   {
+    "text": "Detox these chemicals",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.974,
+    "id": "o107"
+   },
+   {
+    "text": "from vour body",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.982,
+    "id": "o108"
+   },
+   {
+    "text": "Feel better. Burn fat. Get",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.685,
+    "id": "o109"
+   },
+   {
+    "text": "clean:",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.953,
+    "id": "o110"
+   },
+   {
+    "text": "Link in bio",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.834,
+    "id": "o111"
+   },
+   {
+    "text": "LITERALLY CONTAIN",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.991,
+    "id": "o112"
+   },
+   {
+    "text": "Topher",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.771,
+    "id": "o113"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o114"
+   },
+   {
+    "text": "PARENTS ESPECIALLY PLEASEristopher",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.7,
+    "id": "o115"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o116"
+   },
+   {
+    "text": "FOLLOW ME FOR",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.778,
+    "id": "o117"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o118"
+   },
+   {
+    "text": "OUT MY BIO",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.828,
+    "id": "o119"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o120"
+   },
+   {
+    "text": "THERE",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.991,
+    "id": "o121"
+   },
+   {
+    "text": "jammgeanchristopher",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.583,
+    "id": "o122"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.999,
+    "id": "o123"
+   },
+   {
+    "text": "@ iamseanchristop_",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.725,
+    "id": "o124"
+   },
+   {
+    "text": "J",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.832,
+    "id": "o125"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.987,
+    "id": "o126"
+   },
+   {
+    "text": "@ iamseanchristop_",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.752,
+    "id": "o127"
+   }
+  ]
+ }
+}

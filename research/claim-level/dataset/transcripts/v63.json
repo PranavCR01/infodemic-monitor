@@ -1,0 +1,7014 @@
+{
+ "video_id": "v63",
+ "filename": "v12044gd0000d53007nog65p3c18bhi0.mp4",
+ "relative_path": "Dataset-Sept-2026/Joshua Ryan Fajardo/NO-MISINFO/v12044gd0000d53007nog65p3c18bhi0.mp4",
+ "collector": "Joshua Ryan Fajardo",
+ "collector_label": "NO_MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:42:33",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 137.09,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 1.76,
+    "text": "If physical activity were a pill,"
+   },
+   {
+    "id": "t2",
+    "start": 1.76,
+    "end": 4.68,
+    "text": "it would be the most prescribed medication in medicine."
+   },
+   {
+    "id": "t3",
+    "start": 4.68,
+    "end": 7.8,
+    "text": "Let's talk about why physical activity is so powerful,"
+   },
+   {
+    "id": "t4",
+    "start": 7.8,
+    "end": 10.08,
+    "text": "because this isn't just about weight loss, aesthetics,"
+   },
+   {
+    "id": "t5",
+    "start": 10.08,
+    "end": 11.84,
+    "text": "or chasing a certain body type."
+   },
+   {
+    "id": "t6",
+    "start": 11.84,
+    "end": 15.0,
+    "text": "Regular physical activity improves your cardiovascular"
+   },
+   {
+    "id": "t7",
+    "start": 15.0,
+    "end": 17.08,
+    "text": "and muscular fitness, your bone health,"
+   },
+   {
+    "id": "t8",
+    "start": 17.08,
+    "end": 18.92,
+    "text": "and lowers your risk of fracture."
+   },
+   {
+    "id": "t9",
+    "start": 18.92,
+    "end": 20.96,
+    "text": "It improves anxiety, depression,"
+   },
+   {
+    "id": "t10",
+    "start": 20.96,
+    "end": 23.12,
+    "text": "and helps with overall mood regulation."
+   },
+   {
+    "id": "t11",
+    "start": 23.12,
+    "end": 25.9,
+    "text": "It improves your sleep quality and energy levels,"
+   },
+   {
+    "id": "t12",
+    "start": 25.9,
+    "end": 28.72,
+    "text": "and it helps your self-esteem and cognitive functioning,"
+   },
+   {
+    "id": "t13",
+    "start": 28.72,
+    "end": 31.12,
+    "text": "including reducing the risk of dementia."
+   },
+   {
+    "id": "t14",
+    "start": 31.12,
+    "end": 33.28,
+    "text": "It also plays a major role in preventing"
+   },
+   {
+    "id": "t15",
+    "start": 33.28,
+    "end": 34.92,
+    "text": "and managing chronic disease."
+   },
+   {
+    "id": "t16",
+    "start": 34.92,
+    "end": 37.48,
+    "text": "Consistent movement lowers the risk of hypertension"
+   },
+   {
+    "id": "t17",
+    "start": 37.48,
+    "end": 39.92,
+    "text": "and type 2 diabetes and is associated"
+   },
+   {
+    "id": "t18",
+    "start": 39.92,
+    "end": 42.44,
+    "text": "with the lower incidence of multiple cancers,"
+   },
+   {
+    "id": "t19",
+    "start": 42.44,
+    "end": 46.24,
+    "text": "including breast, colon, bladder, endometrial,"
+   },
+   {
+    "id": "t20",
+    "start": 46.24,
+    "end": 49.68,
+    "text": "prostate, lung, stomach, and esophageal cancers."
+   },
+   {
+    "id": "t21",
+    "start": 49.68,
+    "end": 52.8,
+    "text": "Now let's zoom in on aerobic exercise specifically."
+   },
+   {
+    "id": "t22",
+    "start": 52.8,
+    "end": 55.8,
+    "text": "Aerobic activity lowers all cause mortality,"
+   },
+   {
+    "id": "t23",
+    "start": 55.8,
+    "end": 57.4,
+    "text": "meaning all causes of death,"
+   },
+   {
+    "id": "t24",
+    "start": 57.4,
+    "end": 63.8,
+    "text": "reduces the incidence of and death from cardiovascular disease, improves insulin sensitivity, lowers"
+   },
+   {
+    "id": "t25",
+    "start": 63.8,
+    "end": 67.56,
+    "text": "your triglycerides, improves your sleep and overall quality of life."
+   },
+   {
+    "id": "t26",
+    "start": 67.56,
+    "end": 72.2,
+    "text": "This is why many major guidelines recommend 150 minutes per week of moderate intensity"
+   },
+   {
+    "id": "t27",
+    "start": 72.2,
+    "end": 76.32,
+    "text": "exercise or 75 minutes of vigorous intensity exercise."
+   },
+   {
+    "id": "t28",
+    "start": 76.32,
+    "end": 77.76,
+    "text": "But here's where people get stuck."
+   },
+   {
+    "id": "t29",
+    "start": 77.76,
+    "end": 81.16,
+    "text": "They think it has to be intense, perfect, or all or nothing."
+   },
+   {
+    "id": "t30",
+    "start": 81.16,
+    "end": 82.16,
+    "text": "It doesn't."
+   },
+   {
+    "id": "t31",
+    "start": 82.16,
+    "end": 83.76,
+    "text": "Walking absolutely counts."
+   },
+   {
+    "id": "t32",
+    "start": 83.76,
+    "end": 89.28,
+    "text": "In fact, large population studies show that 7,000 steps to 12,000 steps per day is a sweet"
+   },
+   {
+    "id": "t33",
+    "start": 89.28,
+    "end": 93.84,
+    "text": "spot where we see significant reductions in all-cause mortality, lower cardiovascular"
+   },
+   {
+    "id": "t34",
+    "start": 93.84,
+    "end": 96.08,
+    "text": "risk, and improved metabolic health."
+   },
+   {
+    "id": "t35",
+    "start": 96.08,
+    "end": 100.72,
+    "text": "Beyond that range, the benefits tend to plateau, meaning more isn't always better, but if"
+   },
+   {
+    "id": "t36",
+    "start": 100.72,
+    "end": 103.04,
+    "text": "you want to get more steps, have at it."
+   },
+   {
+    "id": "t37",
+    "start": 103.04,
+    "end": 105.88,
+    "text": "The goal is consistency, not extremes."
+   },
+   {
+    "id": "t38",
+    "start": 105.88,
+    "end": 110.56,
+    "text": "And steps matter in particular because they reflect total daily movement, not just a single"
+   },
+   {
+    "id": "t39",
+    "start": 110.56,
+    "end": 111.56,
+    "text": "workout."
+   },
+   {
+    "id": "t40",
+    "start": 111.56,
+    "end": 115.24,
+    "text": "walking, errands going up and down your stairs pacing while you're on the phone"
+   },
+   {
+    "id": "t41",
+    "start": 115.24,
+    "end": 119.28,
+    "text": "and everyday activity which is critical since as we mentioned prolonged"
+   },
+   {
+    "id": "t42",
+    "start": 119.28,
+    "end": 123.24,
+    "text": "sedentary time independently increases your health risk. Movement isn't"
+   },
+   {
+    "id": "t43",
+    "start": 123.24,
+    "end": 127.48,
+    "text": "punishment, it's protection. And in the next video we'll break down how to write"
+   },
+   {
+    "id": "t44",
+    "start": 127.48,
+    "end": 131.96,
+    "text": "yourself a simple realistic cardio exercise prescription you can actually"
+   },
+   {
+    "id": "t45",
+    "start": 131.96,
+    "end": 134.36,
+    "text": "stick to."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 69,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.598
+   },
+   {
+    "time": 0.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.879
+   },
+   {
+    "time": 0.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.802
+   },
+   {
+    "time": 0.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.837
+   },
+   {
+    "time": 0.0,
+    "text": "If physical activity were a",
+    "confidence": 0.522
+   },
+   {
+    "time": 0.0,
+    "text": "pill;",
+    "confidence": 0.811
+   },
+   {
+    "time": 2.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.705
+   },
+   {
+    "time": 2.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.882
+   },
+   {
+    "time": 2.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.69
+   },
+   {
+    "time": 2.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.836
+   },
+   {
+    "time": 2.0,
+    "text": "it would be themost",
+    "confidence": 0.824
+   },
+   {
+    "time": 2.0,
+    "text": "prescribed medicationin",
+    "confidence": 0.908
+   },
+   {
+    "time": 2.0,
+    "text": "medicine:",
+    "confidence": 0.695
+   },
+   {
+    "time": 4.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.87
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.93
+   },
+   {
+    "time": 4.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.97
+   },
+   {
+    "time": 4.0,
+    "text": "@ dri118\"",
+    "confidence": 0.744
+   },
+   {
+    "time": 4.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.694
+   },
+   {
+    "time": 4.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.835
+   },
+   {
+    "time": 4.0,
+    "text": "it would be themost",
+    "confidence": 0.795
+   },
+   {
+    "time": 4.0,
+    "text": "prescribed medication in",
+    "confidence": 0.765
+   },
+   {
+    "time": 4.0,
+    "text": "medicine:",
+    "confidence": 0.903
+   },
+   {
+    "time": 6.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.778
+   },
+   {
+    "time": 6.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.882
+   },
+   {
+    "time": 6.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.802
+   },
+   {
+    "time": 6.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.836
+   },
+   {
+    "time": 6.0,
+    "text": "Q",
+    "confidence": 0.894
+   },
+   {
+    "time": 6.0,
+    "text": "Let\"s talk aboutwhy",
+    "confidence": 0.697
+   },
+   {
+    "time": 6.0,
+    "text": "physical activityisso",
+    "confidence": 0.991
+   },
+   {
+    "time": 6.0,
+    "text": "powerful:",
+    "confidence": 0.835
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "dri1189",
+    "confidence": 0.726
+   },
+   {
+    "time": 8.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.78
+   },
+   {
+    "time": 8.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.882
+   },
+   {
+    "time": 8.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.802
+   },
+   {
+    "time": 8.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.93
+   },
+   {
+    "time": 8.0,
+    "text": "snbogiv",
+    "confidence": 0.625
+   },
+   {
+    "time": 8.0,
+    "text": "Because this isn't just",
+    "confidence": 0.699
+   },
+   {
+    "time": 8.0,
+    "text": "loss,",
+    "confidence": 0.916
+   },
+   {
+    "time": 8.0,
+    "text": "about weight",
+    "confidence": 0.817
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 0.895
+   },
+   {
+    "time": 10.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.866
+   },
+   {
+    "time": 10.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.885
+   },
+   {
+    "time": 10.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 10.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.85
+   },
+   {
+    "time": 10.0,
+    "text": "aesthetics, or chasing a",
+    "confidence": 0.828
+   },
+   {
+    "time": 10.0,
+    "text": "certain body type:",
+    "confidence": 0.962
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 0.978
+   },
+   {
+    "time": 10.0,
+    "text": "dri1189",
+    "confidence": 0.613
+   },
+   {
+    "time": 12.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.892
+   },
+   {
+    "time": 12.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.789
+   },
+   {
+    "time": 12.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 12.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.924
+   },
+   {
+    "time": 12.0,
+    "text": "Regularphysical activity",
+    "confidence": 0.838
+   },
+   {
+    "time": 12.0,
+    "text": "improves vour",
+    "confidence": 0.553
+   },
+   {
+    "time": 12.0,
+    "text": "cardiovascular and",
+    "confidence": 0.997
+   },
+   {
+    "time": 12.0,
+    "text": "muscular fitness;",
+    "confidence": 0.94
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 0.995
+   },
+   {
+    "time": 12.0,
+    "text": "drj1189",
+    "confidence": 0.97
+   },
+   {
+    "time": 14.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.811
+   },
+   {
+    "time": 14.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.885
+   },
+   {
+    "time": 14.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 14.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.849
+   },
+   {
+    "time": 14.0,
+    "text": "Regularphysical activity",
+    "confidence": 0.984
+   },
+   {
+    "time": 14.0,
+    "text": "improves vour",
+    "confidence": 0.667
+   },
+   {
+    "time": 14.0,
+    "text": "cardiovascular and",
+    "confidence": 0.998
+   },
+   {
+    "time": 14.0,
+    "text": "muscular fitness;",
+    "confidence": 0.818
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 0.995
+   },
+   {
+    "time": 14.0,
+    "text": "@ drj1189",
+    "confidence": 0.664
+   },
+   {
+    "time": 16.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.789
+   },
+   {
+    "time": 16.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.885
+   },
+   {
+    "time": 16.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 16.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.847
+   },
+   {
+    "time": 16.0,
+    "text": "Regular physicalactivity",
+    "confidence": 0.844
+   },
+   {
+    "time": 16.0,
+    "text": "fmproves vour",
+    "confidence": 0.693
+   },
+   {
+    "time": 16.0,
+    "text": "cardiovascular and",
+    "confidence": 0.814
+   },
+   {
+    "time": 16.0,
+    "text": "muscular fitness;",
+    "confidence": 0.902
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 16.0,
+    "text": "drj1189",
+    "confidence": 0.956
+   },
+   {
+    "time": 18.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.872
+   },
+   {
+    "time": 18.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.885
+   },
+   {
+    "time": 18.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 18.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.854
+   },
+   {
+    "time": 18.0,
+    "text": "your bone health; and",
+    "confidence": 0.804
+   },
+   {
+    "time": 18.0,
+    "text": "lowers your risk of",
+    "confidence": 0.955
+   },
+   {
+    "time": 18.0,
+    "text": "fracture",
+    "confidence": 0.952
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 18.0,
+    "text": "drj1189",
+    "confidence": 0.949
+   },
+   {
+    "time": 20.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.899
+   },
+   {
+    "time": 20.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.889
+   },
+   {
+    "time": 20.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 20.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.854
+   },
+   {
+    "time": 20.0,
+    "text": "enbboM",
+    "confidence": 0.638
+   },
+   {
+    "time": 20.0,
+    "text": "It improves anxietya",
+    "confidence": 0.564
+   },
+   {
+    "time": 20.0,
+    "text": "depression;",
+    "confidence": 0.997
+   },
+   {
+    "time": 20.0,
+    "text": "TikTok",
+    "confidence": 0.996
+   },
+   {
+    "time": 20.0,
+    "text": "drj1189",
+    "confidence": 0.982
+   },
+   {
+    "time": 22.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.888
+   },
+   {
+    "time": 22.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.885
+   },
+   {
+    "time": 22.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 22.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.855
+   },
+   {
+    "time": 22.0,
+    "text": "andhelps with @verall",
+    "confidence": 0.688
+   },
+   {
+    "time": 22.0,
+    "text": "mood regulation:",
+    "confidence": 0.846
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 22.0,
+    "text": "drj1189",
+    "confidence": 0.981
+   },
+   {
+    "time": 24.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.895
+   },
+   {
+    "time": 24.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.885
+   },
+   {
+    "time": 24.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 24.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.854
+   },
+   {
+    "time": 24.0,
+    "text": "enbogivi",
+    "confidence": 0.542
+   },
+   {
+    "time": 24.0,
+    "text": "0",
+    "confidence": 0.628
+   },
+   {
+    "time": 24.0,
+    "text": "It improves yoUr sleep",
+    "confidence": 0.576
+   },
+   {
+    "time": 24.0,
+    "text": "quality andenergy llevels,",
+    "confidence": 0.54
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "drj1189",
+    "confidence": 0.651
+   },
+   {
+    "time": 26.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.778
+   },
+   {
+    "time": 26.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.886
+   },
+   {
+    "time": 26.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 26.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.843
+   },
+   {
+    "time": 26.0,
+    "text": "andithelps your self",
+    "confidence": 0.843
+   },
+   {
+    "time": 26.0,
+    "text": "esteem and cognitive",
+    "confidence": 0.782
+   },
+   {
+    "time": 26.0,
+    "text": "functioning;",
+    "confidence": 0.708
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 26.0,
+    "text": "drj1189",
+    "confidence": 0.884
+   },
+   {
+    "time": 28.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.84
+   },
+   {
+    "time": 28.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.888
+   },
+   {
+    "time": 28.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.892
+   },
+   {
+    "time": 28.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.842
+   },
+   {
+    "time": 28.0,
+    "text": "andithelps vour self",
+    "confidence": 0.703
+   },
+   {
+    "time": 28.0,
+    "text": "esteem and cognitive",
+    "confidence": 0.741
+   },
+   {
+    "time": 28.0,
+    "text": "functioningh",
+    "confidence": 0.737
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 0.988
+   },
+   {
+    "time": 28.0,
+    "text": "drj1189",
+    "confidence": 0.941
+   },
+   {
+    "time": 30.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.834
+   },
+   {
+    "time": 30.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.888
+   },
+   {
+    "time": 30.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.894
+   },
+   {
+    "time": 30.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.841
+   },
+   {
+    "time": 30.0,
+    "text": "enbosM",
+    "confidence": 0.867
+   },
+   {
+    "time": 30.0,
+    "text": "including reducing the risk",
+    "confidence": 0.677
+   },
+   {
+    "time": 30.0,
+    "text": "of dementia:",
+    "confidence": 0.88
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "dri1189",
+    "confidence": 0.576
+   },
+   {
+    "time": 32.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.893
+   },
+   {
+    "time": 32.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.888
+   },
+   {
+    "time": 32.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 32.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.936
+   },
+   {
+    "time": 32.0,
+    "text": "Italso plays a major role in",
+    "confidence": 0.557
+   },
+   {
+    "time": 32.0,
+    "text": "preventing and managing",
+    "confidence": 0.768
+   },
+   {
+    "time": 32.0,
+    "text": "chronic disease:",
+    "confidence": 0.737
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 32.0,
+    "text": "drj1189",
+    "confidence": 0.964
+   },
+   {
+    "time": 34.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.832
+   },
+   {
+    "time": 34.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.887
+   },
+   {
+    "time": 34.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 34.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.849
+   },
+   {
+    "time": 34.0,
+    "text": "Italso plays a major rolein",
+    "confidence": 0.935
+   },
+   {
+    "time": 34.0,
+    "text": "preventing and managing",
+    "confidence": 0.988
+   },
+   {
+    "time": 34.0,
+    "text": "chronic disease.",
+    "confidence": 0.983
+   },
+   {
+    "time": 34.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 34.0,
+    "text": "drj1189",
+    "confidence": 0.986
+   },
+   {
+    "time": 36.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.765
+   },
+   {
+    "time": 36.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.887
+   },
+   {
+    "time": 36.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 36.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.849
+   },
+   {
+    "time": 36.0,
+    "text": "Consistent movement",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "lowers the risk of",
+    "confidence": 0.916
+   },
+   {
+    "time": 36.0,
+    "text": "hypertension and'type 2",
+    "confidence": 0.751
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 0.871
+   },
+   {
+    "time": 36.0,
+    "text": "diabetes",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "drj1189",
+    "confidence": 0.977
+   },
+   {
+    "time": 38.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.864
+   },
+   {
+    "time": 38.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.887
+   },
+   {
+    "time": 38.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.996
+   },
+   {
+    "time": 38.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.849
+   },
+   {
+    "time": 38.0,
+    "text": "Consistent movement",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "lowers the risk of",
+    "confidence": 0.826
+   },
+   {
+    "time": 38.0,
+    "text": "hypertension and type2",
+    "confidence": 0.909
+   },
+   {
+    "time": 38.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "diabetes",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "drj1189",
+    "confidence": 0.937
+   },
+   {
+    "time": 40.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.856
+   },
+   {
+    "time": 40.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.886
+   },
+   {
+    "time": 40.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 40.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.845
+   },
+   {
+    "time": 40.0,
+    "text": "andisassociatedwith a",
+    "confidence": 0.716
+   },
+   {
+    "time": 40.0,
+    "text": "lower incidence @f multiple",
+    "confidence": 0.931
+   },
+   {
+    "time": 40.0,
+    "text": "cancers;",
+    "confidence": 0.621
+   },
+   {
+    "time": 40.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "drj1189",
+    "confidence": 0.772
+   },
+   {
+    "time": 42.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.892
+   },
+   {
+    "time": 42.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.886
+   },
+   {
+    "time": 42.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 42.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.853
+   },
+   {
+    "time": 42.0,
+    "text": "enbosM",
+    "confidence": 0.507
+   },
+   {
+    "time": 42.0,
+    "text": "andisassociated witha",
+    "confidence": 0.988
+   },
+   {
+    "time": 42.0,
+    "text": "lower incidence of multiple",
+    "confidence": 0.868
+   },
+   {
+    "time": 42.0,
+    "text": "cancers;",
+    "confidence": 0.597
+   },
+   {
+    "time": 42.0,
+    "text": "TikTok",
+    "confidence": 0.986
+   },
+   {
+    "time": 42.0,
+    "text": "drj1189",
+    "confidence": 0.988
+   },
+   {
+    "time": 44.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.891
+   },
+   {
+    "time": 44.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.886
+   },
+   {
+    "time": 44.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.892
+   },
+   {
+    "time": 44.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.852
+   },
+   {
+    "time": 44.0,
+    "text": "TikTok",
+    "confidence": 0.995
+   },
+   {
+    "time": 46.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.895
+   },
+   {
+    "time": 46.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.886
+   },
+   {
+    "time": 46.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 46.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.854
+   },
+   {
+    "time": 46.0,
+    "text": "bladdergendometriosis;",
+    "confidence": 0.666
+   },
+   {
+    "time": 46.0,
+    "text": "prostate,lung;",
+    "confidence": 0.721
+   },
+   {
+    "time": 46.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 46.0,
+    "text": "drj1189",
+    "confidence": 0.655
+   },
+   {
+    "time": 48.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.899
+   },
+   {
+    "time": 48.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.886
+   },
+   {
+    "time": 48.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 48.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.854
+   },
+   {
+    "time": 48.0,
+    "text": "stomachjand esophageal",
+    "confidence": 0.656
+   },
+   {
+    "time": 48.0,
+    "text": "cancers:",
+    "confidence": 0.507
+   },
+   {
+    "time": 48.0,
+    "text": "TikTok",
+    "confidence": 0.988
+   },
+   {
+    "time": 48.0,
+    "text": "dri1189",
+    "confidence": 0.846
+   },
+   {
+    "time": 50.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.895
+   },
+   {
+    "time": 50.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.876
+   },
+   {
+    "time": 50.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 50.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.853
+   },
+   {
+    "time": 50.0,
+    "text": "enbosM",
+    "confidence": 0.844
+   },
+   {
+    "time": 50.0,
+    "text": "Now let'szoomin on",
+    "confidence": 0.989
+   },
+   {
+    "time": 50.0,
+    "text": "aerobic exercise:",
+    "confidence": 0.977
+   },
+   {
+    "time": 50.0,
+    "text": "drju",
+    "confidence": 0.684
+   },
+   {
+    "time": 52.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.898
+   },
+   {
+    "time": 52.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.883
+   },
+   {
+    "time": 52.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 52.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.853
+   },
+   {
+    "time": 52.0,
+    "text": "Specifically- aerobic",
+    "confidence": 0.818
+   },
+   {
+    "time": 52.0,
+    "text": "activitylowers all cause",
+    "confidence": 0.95
+   },
+   {
+    "time": 52.0,
+    "text": "mortality,",
+    "confidence": 0.989
+   },
+   {
+    "time": 52.0,
+    "text": "Tiktok",
+    "confidence": 0.718
+   },
+   {
+    "time": 52.0,
+    "text": "dri1189",
+    "confidence": 0.535
+   },
+   {
+    "time": 54.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.888
+   },
+   {
+    "time": 54.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.889
+   },
+   {
+    "time": 54.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.996
+   },
+   {
+    "time": 54.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.855
+   },
+   {
+    "time": 54.0,
+    "text": "Specifically, aerobic",
+    "confidence": 0.746
+   },
+   {
+    "time": 54.0,
+    "text": "activitylowers all cause",
+    "confidence": 0.543
+   },
+   {
+    "time": 54.0,
+    "text": "mortality,",
+    "confidence": 0.91
+   },
+   {
+    "time": 54.0,
+    "text": "TikTok",
+    "confidence": 0.994
+   },
+   {
+    "time": 54.0,
+    "text": "dri1189",
+    "confidence": 0.628
+   },
+   {
+    "time": 56.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.89
+   },
+   {
+    "time": 56.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.975
+   },
+   {
+    "time": 56.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.996
+   },
+   {
+    "time": 56.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.924
+   },
+   {
+    "time": 56.0,
+    "text": "meaning all causes of",
+    "confidence": 0.928
+   },
+   {
+    "time": 56.0,
+    "text": "death:",
+    "confidence": 0.998
+   },
+   {
+    "time": 56.0,
+    "text": "TikTok",
+    "confidence": 0.89
+   },
+   {
+    "time": 56.0,
+    "text": "drj1189",
+    "confidence": 0.77
+   },
+   {
+    "time": 58.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.842
+   },
+   {
+    "time": 58.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.889
+   },
+   {
+    "time": 58.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.903
+   },
+   {
+    "time": 58.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.852
+   },
+   {
+    "time": 58.0,
+    "text": "Reduces the incidence@f",
+    "confidence": 0.895
+   },
+   {
+    "time": 58.0,
+    "text": "anddeath from",
+    "confidence": 0.978
+   },
+   {
+    "time": 58.0,
+    "text": "cardiovascular diseasea",
+    "confidence": 0.764
+   },
+   {
+    "time": 58.0,
+    "text": "Tiktok",
+    "confidence": 0.979
+   },
+   {
+    "time": 58.0,
+    "text": "@ drj1189",
+    "confidence": 0.969
+   },
+   {
+    "time": 60.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.8
+   },
+   {
+    "time": 60.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.885
+   },
+   {
+    "time": 60.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.895
+   },
+   {
+    "time": 60.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.926
+   },
+   {
+    "time": 60.0,
+    "text": "Albl",
+    "confidence": 0.604
+   },
+   {
+    "time": 60.0,
+    "text": "Reduces thefncidenceof",
+    "confidence": 0.886
+   },
+   {
+    "time": 60.0,
+    "text": "and death from",
+    "confidence": 0.734
+   },
+   {
+    "time": 60.0,
+    "text": "cardiovascular diseaseo",
+    "confidence": 0.571
+   },
+   {
+    "time": 62.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.87
+   },
+   {
+    "time": 62.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.973
+   },
+   {
+    "time": 62.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.895
+   },
+   {
+    "time": 62.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.843
+   },
+   {
+    "time": 62.0,
+    "text": "Improvesinsulin sensitivityo",
+    "confidence": 0.735
+   },
+   {
+    "time": 64.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.886
+   },
+   {
+    "time": 64.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.885
+   },
+   {
+    "time": 64.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.895
+   },
+   {
+    "time": 64.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.933
+   },
+   {
+    "time": 64.0,
+    "text": "lowers your triglycerides]",
+    "confidence": 0.578
+   },
+   {
+    "time": 66.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.826
+   },
+   {
+    "time": 66.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.885
+   },
+   {
+    "time": 66.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 66.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.845
+   },
+   {
+    "time": 66.0,
+    "text": "improves your sleep and",
+    "confidence": 0.534
+   },
+   {
+    "time": 66.0,
+    "text": "overall qualityof life:",
+    "confidence": 0.699
+   },
+   {
+    "time": 68.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.748
+   },
+   {
+    "time": 68.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.889
+   },
+   {
+    "time": 68.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 68.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.935
+   },
+   {
+    "time": 68.0,
+    "text": "Thisis why manymajor",
+    "confidence": 0.948
+   },
+   {
+    "time": 68.0,
+    "text": "guidelines",
+    "confidence": 1.0
+   },
+   {
+    "time": 68.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 70.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.742
+   },
+   {
+    "time": 70.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.889
+   },
+   {
+    "time": 70.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 70.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.851
+   },
+   {
+    "time": 70.0,
+    "text": "recommend 150 minutes",
+    "confidence": 0.642
+   },
+   {
+    "time": 70.0,
+    "text": "per week of moderate",
+    "confidence": 0.647
+   },
+   {
+    "time": 70.0,
+    "text": "intensity exercise",
+    "confidence": 0.984
+   },
+   {
+    "time": 70.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 70.0,
+    "text": "dri1189",
+    "confidence": 0.934
+   },
+   {
+    "time": 72.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.9
+   },
+   {
+    "time": 72.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.889
+   },
+   {
+    "time": 72.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 72.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.851
+   },
+   {
+    "time": 72.0,
+    "text": "recommend 150 minutes",
+    "confidence": 0.957
+   },
+   {
+    "time": 72.0,
+    "text": "perweek of moderate",
+    "confidence": 0.653
+   },
+   {
+    "time": 72.0,
+    "text": "intensityexercise",
+    "confidence": 1.0
+   },
+   {
+    "time": 72.0,
+    "text": "TikTok",
+    "confidence": 0.976
+   },
+   {
+    "time": 72.0,
+    "text": "dri1189",
+    "confidence": 0.651
+   },
+   {
+    "time": 74.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.902
+   },
+   {
+    "time": 74.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.889
+   },
+   {
+    "time": 74.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 74.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.851
+   },
+   {
+    "time": 74.0,
+    "text": "@r 75 minutes of vigorous",
+    "confidence": 0.672
+   },
+   {
+    "time": 74.0,
+    "text": "intensity exercise.",
+    "confidence": 0.74
+   },
+   {
+    "time": 74.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 74.0,
+    "text": "dri1189",
+    "confidence": 0.633
+   },
+   {
+    "time": 76.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.89
+   },
+   {
+    "time": 76.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.889
+   },
+   {
+    "time": 76.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 76.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.852
+   },
+   {
+    "time": 76.0,
+    "text": "@r 75 minutes of vigorous",
+    "confidence": 0.549
+   },
+   {
+    "time": 76.0,
+    "text": "intensity exercise:",
+    "confidence": 0.845
+   },
+   {
+    "time": 76.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 78.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.892
+   },
+   {
+    "time": 78.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.889
+   },
+   {
+    "time": 78.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 78.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.939
+   },
+   {
+    "time": 78.0,
+    "text": "They thinkit has to be",
+    "confidence": 0.862
+   },
+   {
+    "time": 78.0,
+    "text": "intense,",
+    "confidence": 0.912
+   },
+   {
+    "time": 78.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 78.0,
+    "text": "@ dri1189",
+    "confidence": 0.605
+   },
+   {
+    "time": 80.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.89
+   },
+   {
+    "time": 80.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.889
+   },
+   {
+    "time": 80.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 80.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.852
+   },
+   {
+    "time": 80.0,
+    "text": "9",
+    "confidence": 0.845
+   },
+   {
+    "time": 80.0,
+    "text": "nothing:",
+    "confidence": 0.987
+   },
+   {
+    "time": 80.0,
+    "text": "perfect, or all or",
+    "confidence": 0.825
+   },
+   {
+    "time": 80.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 82.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.893
+   },
+   {
+    "time": 82.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.889
+   },
+   {
+    "time": 82.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 82.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.852
+   },
+   {
+    "time": 82.0,
+    "text": "It doesn't Walking",
+    "confidence": 0.862
+   },
+   {
+    "time": 82.0,
+    "text": "absolutely counts:",
+    "confidence": 0.993
+   },
+   {
+    "time": 82.0,
+    "text": "drj1189",
+    "confidence": 0.968
+   },
+   {
+    "time": 84.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.86
+   },
+   {
+    "time": 84.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.885
+   },
+   {
+    "time": 84.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 84.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.854
+   },
+   {
+    "time": 84.0,
+    "text": "Infact, large population",
+    "confidence": 0.888
+   },
+   {
+    "time": 84.0,
+    "text": "studies show that 7,000",
+    "confidence": 0.975
+   },
+   {
+    "time": 84.0,
+    "text": "steps to 12,000 stepsper",
+    "confidence": 0.962
+   },
+   {
+    "time": 84.0,
+    "text": "day",
+    "confidence": 1.0
+   },
+   {
+    "time": 84.0,
+    "text": "drj1189",
+    "confidence": 0.991
+   },
+   {
+    "time": 86.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.866
+   },
+   {
+    "time": 86.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.885
+   },
+   {
+    "time": 86.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 86.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.854
+   },
+   {
+    "time": 86.0,
+    "text": "In fact, largepopulation",
+    "confidence": 0.695
+   },
+   {
+    "time": 86.0,
+    "text": "studies show that 7,000",
+    "confidence": 0.731
+   },
+   {
+    "time": 86.0,
+    "text": "steps to 12,000 stepsper",
+    "confidence": 0.87
+   },
+   {
+    "time": 86.0,
+    "text": "TikTok",
+    "confidence": 0.767
+   },
+   {
+    "time": 86.0,
+    "text": "day",
+    "confidence": 0.993
+   },
+   {
+    "time": 86.0,
+    "text": "drj1189",
+    "confidence": 0.984
+   },
+   {
+    "time": 88.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.834
+   },
+   {
+    "time": 88.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.885
+   },
+   {
+    "time": 88.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 88.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.779
+   },
+   {
+    "time": 88.0,
+    "text": "In fact, large population",
+    "confidence": 0.675
+   },
+   {
+    "time": 88.0,
+    "text": "studies show that 7,000",
+    "confidence": 0.718
+   },
+   {
+    "time": 88.0,
+    "text": "steps to 12,000 stepsper",
+    "confidence": 0.811
+   },
+   {
+    "time": 88.0,
+    "text": "day",
+    "confidence": 0.994
+   },
+   {
+    "time": 88.0,
+    "text": "TikTok",
+    "confidence": 0.912
+   },
+   {
+    "time": 88.0,
+    "text": "drj1189",
+    "confidence": 0.912
+   },
+   {
+    "time": 90.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.879
+   },
+   {
+    "time": 90.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.885
+   },
+   {
+    "time": 90.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.893
+   },
+   {
+    "time": 90.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.853
+   },
+   {
+    "time": 90.0,
+    "text": "isasweet spot where we",
+    "confidence": 0.987
+   },
+   {
+    "time": 90.0,
+    "text": "significant reductions",
+    "confidence": 0.87
+   },
+   {
+    "time": 90.0,
+    "text": "see",
+    "confidence": 0.999
+   },
+   {
+    "time": 90.0,
+    "text": "in all cause mortality,",
+    "confidence": 0.693
+   },
+   {
+    "time": 90.0,
+    "text": "TikTok",
+    "confidence": 0.873
+   },
+   {
+    "time": 90.0,
+    "text": "@ dri1189",
+    "confidence": 0.704
+   },
+   {
+    "time": 92.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.702
+   },
+   {
+    "time": 92.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.869
+   },
+   {
+    "time": 92.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 92.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.849
+   },
+   {
+    "time": 92.0,
+    "text": "fsasweet spot where we",
+    "confidence": 0.605
+   },
+   {
+    "time": 92.0,
+    "text": "seesignificant reductions",
+    "confidence": 1.0
+   },
+   {
+    "time": 92.0,
+    "text": "inall cause mortality,",
+    "confidence": 0.802
+   },
+   {
+    "time": 92.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 92.0,
+    "text": "drj1189",
+    "confidence": 0.769
+   },
+   {
+    "time": 94.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.679
+   },
+   {
+    "time": 94.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.876
+   },
+   {
+    "time": 94.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 94.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.849
+   },
+   {
+    "time": 94.0,
+    "text": "lower cardiovascularrisk;",
+    "confidence": 0.533
+   },
+   {
+    "time": 94.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 94.0,
+    "text": "dri1189",
+    "confidence": 0.882
+   },
+   {
+    "time": 96.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.739
+   },
+   {
+    "time": 96.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.876
+   },
+   {
+    "time": 96.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 96.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.849
+   },
+   {
+    "time": 96.0,
+    "text": "Andimproved metabolic",
+    "confidence": 0.937
+   },
+   {
+    "time": 96.0,
+    "text": "health:",
+    "confidence": 0.994
+   },
+   {
+    "time": 96.0,
+    "text": "Tiktok",
+    "confidence": 0.563
+   },
+   {
+    "time": 98.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.732
+   },
+   {
+    "time": 98.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.876
+   },
+   {
+    "time": 98.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 98.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.849
+   },
+   {
+    "time": 98.0,
+    "text": "Beyond that range the",
+    "confidence": 0.522
+   },
+   {
+    "time": 98.0,
+    "text": "benefits tend to plateau,",
+    "confidence": 0.552
+   },
+   {
+    "time": 98.0,
+    "text": "TikTok",
+    "confidence": 0.991
+   },
+   {
+    "time": 98.0,
+    "text": "dri1189",
+    "confidence": 0.939
+   },
+   {
+    "time": 100.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.796
+   },
+   {
+    "time": 100.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.874
+   },
+   {
+    "time": 100.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 100.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.851
+   },
+   {
+    "time": 100.0,
+    "text": "meaningmore isn\"t always",
+    "confidence": 0.612
+   },
+   {
+    "time": 100.0,
+    "text": "better.",
+    "confidence": 0.89
+   },
+   {
+    "time": 100.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 100.0,
+    "text": "drj1189",
+    "confidence": 0.693
+   },
+   {
+    "time": 102.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.9
+   },
+   {
+    "time": 102.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.883
+   },
+   {
+    "time": 102.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 102.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.852
+   },
+   {
+    "time": 102.0,
+    "text": "enbbgivi",
+    "confidence": 0.68
+   },
+   {
+    "time": 102.0,
+    "text": "haveatit: Thegoal is",
+    "confidence": 0.933
+   },
+   {
+    "time": 102.0,
+    "text": "consistency;",
+    "confidence": 0.848
+   },
+   {
+    "time": 102.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 102.0,
+    "text": "drj1189",
+    "confidence": 0.985
+   },
+   {
+    "time": 104.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.89
+   },
+   {
+    "time": 104.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.883
+   },
+   {
+    "time": 104.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 104.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.852
+   },
+   {
+    "time": 104.0,
+    "text": "haveatit. The goal is",
+    "confidence": 0.882
+   },
+   {
+    "time": 104.0,
+    "text": "consistencVo",
+    "confidence": 0.678
+   },
+   {
+    "time": 104.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 104.0,
+    "text": "drj1189",
+    "confidence": 0.982
+   },
+   {
+    "time": 106.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.814
+   },
+   {
+    "time": 106.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.883
+   },
+   {
+    "time": 106.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 106.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.932
+   },
+   {
+    "time": 106.0,
+    "text": "And steps matter in",
+    "confidence": 0.746
+   },
+   {
+    "time": 106.0,
+    "text": "particularibecause they",
+    "confidence": 0.725
+   },
+   {
+    "time": 106.0,
+    "text": "reflect total daily",
+    "confidence": 0.899
+   },
+   {
+    "time": 106.0,
+    "text": "TikTok",
+    "confidence": 0.987
+   },
+   {
+    "time": 106.0,
+    "text": "movement;",
+    "confidence": 0.663
+   },
+   {
+    "time": 106.0,
+    "text": "dri1189",
+    "confidence": 0.641
+   },
+   {
+    "time": 108.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.81
+   },
+   {
+    "time": 108.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.883
+   },
+   {
+    "time": 108.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 108.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.852
+   },
+   {
+    "time": 108.0,
+    "text": "Andstepsmatter in",
+    "confidence": 0.901
+   },
+   {
+    "time": 108.0,
+    "text": "particular because",
+    "confidence": 0.788
+   },
+   {
+    "time": 108.0,
+    "text": "thev",
+    "confidence": 0.966
+   },
+   {
+    "time": 108.0,
+    "text": "reflect total daily",
+    "confidence": 0.668
+   },
+   {
+    "time": 108.0,
+    "text": "movement;",
+    "confidence": 0.79
+   },
+   {
+    "time": 108.0,
+    "text": "@ dri1189",
+    "confidence": 0.645
+   },
+   {
+    "time": 110.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.889
+   },
+   {
+    "time": 110.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.886
+   },
+   {
+    "time": 110.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.892
+   },
+   {
+    "time": 110.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.851
+   },
+   {
+    "time": 110.0,
+    "text": "notjusta single workouts",
+    "confidence": 0.761
+   },
+   {
+    "time": 110.0,
+    "text": "drj1189",
+    "confidence": 0.999
+   },
+   {
+    "time": 112.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.892
+   },
+   {
+    "time": 112.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.886
+   },
+   {
+    "time": 112.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 112.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.852
+   },
+   {
+    "time": 112.0,
+    "text": "They capture walking",
+    "confidence": 0.842
+   },
+   {
+    "time": 112.0,
+    "text": "errands,",
+    "confidence": 0.807
+   },
+   {
+    "time": 112.0,
+    "text": "Tiktok",
+    "confidence": 0.542
+   },
+   {
+    "time": 112.0,
+    "text": "drj1189",
+    "confidence": 0.633
+   },
+   {
+    "time": 114.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.903
+   },
+   {
+    "time": 114.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.886
+   },
+   {
+    "time": 114.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 114.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.852
+   },
+   {
+    "time": 114.0,
+    "text": "going up and downiour",
+    "confidence": 0.569
+   },
+   {
+    "time": 114.0,
+    "text": "stairs;",
+    "confidence": 0.951
+   },
+   {
+    "time": 116.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.893
+   },
+   {
+    "time": 116.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.886
+   },
+   {
+    "time": 116.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 116.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.852
+   },
+   {
+    "time": 116.0,
+    "text": "whichis critical since;",
+    "confidence": 0.627
+   },
+   {
+    "time": 116.0,
+    "text": "TikTok",
+    "confidence": 0.96
+   },
+   {
+    "time": 116.0,
+    "text": "dri1189",
+    "confidence": 0.85
+   },
+   {
+    "time": 118.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.883
+   },
+   {
+    "time": 118.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.888
+   },
+   {
+    "time": 118.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.789
+   },
+   {
+    "time": 118.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.926
+   },
+   {
+    "time": 118.0,
+    "text": "aswe mentioned,",
+    "confidence": 0.859
+   },
+   {
+    "time": 118.0,
+    "text": "TikTok",
+    "confidence": 0.716
+   },
+   {
+    "time": 118.0,
+    "text": "drj1189",
+    "confidence": 0.98
+   },
+   {
+    "time": 120.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.855
+   },
+   {
+    "time": 120.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.889
+   },
+   {
+    "time": 120.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 120.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.933
+   },
+   {
+    "time": 120.0,
+    "text": "independently increases",
+    "confidence": 0.761
+   },
+   {
+    "time": 120.0,
+    "text": "yourhealth risk",
+    "confidence": 0.987
+   },
+   {
+    "time": 120.0,
+    "text": "TikTok",
+    "confidence": 0.983
+   },
+   {
+    "time": 120.0,
+    "text": "drj1189",
+    "confidence": 0.674
+   },
+   {
+    "time": 122.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.853
+   },
+   {
+    "time": 122.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.889
+   },
+   {
+    "time": 122.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 122.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.844
+   },
+   {
+    "time": 122.0,
+    "text": "enbosm",
+    "confidence": 0.736
+   },
+   {
+    "time": 122.0,
+    "text": "prolongedlsedentary time",
+    "confidence": 0.839
+   },
+   {
+    "time": 122.0,
+    "text": "independently increases",
+    "confidence": 0.998
+   },
+   {
+    "time": 122.0,
+    "text": "yourhealth risk:",
+    "confidence": 0.676
+   },
+   {
+    "time": 124.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.851
+   },
+   {
+    "time": 124.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.889
+   },
+   {
+    "time": 124.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 124.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.844
+   },
+   {
+    "time": 124.0,
+    "text": "it\"s Protection. Andlin the",
+    "confidence": 0.655
+   },
+   {
+    "time": 124.0,
+    "text": "next video,",
+    "confidence": 0.612
+   },
+   {
+    "time": 124.0,
+    "text": "TikTok",
+    "confidence": 0.917
+   },
+   {
+    "time": 124.0,
+    "text": "@ drj1189",
+    "confidence": 0.804
+   },
+   {
+    "time": 126.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.88
+   },
+   {
+    "time": 126.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.888
+   },
+   {
+    "time": 126.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.894
+   },
+   {
+    "time": 126.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.918
+   },
+   {
+    "time": 126.0,
+    "text": "it's Protection. Andin the",
+    "confidence": 0.734
+   },
+   {
+    "time": 126.0,
+    "text": "next vide@g",
+    "confidence": 0.579
+   },
+   {
+    "time": 126.0,
+    "text": "TikTok",
+    "confidence": 0.908
+   },
+   {
+    "time": 126.0,
+    "text": "drj1189",
+    "confidence": 0.665
+   },
+   {
+    "time": 128.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.881
+   },
+   {
+    "time": 128.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.888
+   },
+   {
+    "time": 128.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.894
+   },
+   {
+    "time": 128.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.918
+   },
+   {
+    "time": 128.0,
+    "text": "we'Il break dowmhowto",
+    "confidence": 0.672
+   },
+   {
+    "time": 128.0,
+    "text": "TikTok",
+    "confidence": 0.995
+   },
+   {
+    "time": 128.0,
+    "text": "drj1189",
+    "confidence": 0.925
+   },
+   {
+    "time": 130.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.915
+   },
+   {
+    "time": 130.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.888
+   },
+   {
+    "time": 130.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 130.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.918
+   },
+   {
+    "time": 130.0,
+    "text": "realistic cardio exercise",
+    "confidence": 0.739
+   },
+   {
+    "time": 130.0,
+    "text": "prescription yoU can",
+    "confidence": 0.737
+   },
+   {
+    "time": 130.0,
+    "text": "actually sticktos",
+    "confidence": 0.769
+   },
+   {
+    "time": 130.0,
+    "text": "drj1189",
+    "confidence": 0.979
+   },
+   {
+    "time": 132.0,
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "confidence": 0.896
+   },
+   {
+    "time": 132.0,
+    "text": "Why Physical Activity Is",
+    "confidence": 0.888
+   },
+   {
+    "time": 132.0,
+    "text": "One of the Most Powerful",
+    "confidence": 0.997
+   },
+   {
+    "time": 132.0,
+    "text": "Prescriptions We Have",
+    "confidence": 0.918
+   },
+   {
+    "time": 132.0,
+    "text": "realistic cardio exercise",
+    "confidence": 0.672
+   },
+   {
+    "time": 132.0,
+    "text": "prescription yoU can",
+    "confidence": 0.806
+   },
+   {
+    "time": 132.0,
+    "text": "actually sticktos",
+    "confidence": 0.796
+   },
+   {
+    "time": 132.0,
+    "text": "drj1189",
+    "confidence": 0.915
+   },
+   {
+    "time": 134.0,
+    "text": "J",
+    "confidence": 0.858
+   },
+   {
+    "time": 134.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 136.0,
+    "text": "J",
+    "confidence": 0.643
+   },
+   {
+    "time": 136.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 136.0,
+    "text": "drj1189",
+    "confidence": 0.947
+   }
+  ],
+  "captions": [
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.598,
+    "id": "o1"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.879,
+    "id": "o2"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.802,
+    "id": "o3"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.837,
+    "id": "o4"
+   },
+   {
+    "text": "If physical activity were a",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.522,
+    "id": "o5"
+   },
+   {
+    "text": "pill;",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.811,
+    "id": "o6"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.705,
+    "id": "o7"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.882,
+    "id": "o8"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.69,
+    "id": "o9"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.836,
+    "id": "o10"
+   },
+   {
+    "text": "it would be themost",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.824,
+    "id": "o11"
+   },
+   {
+    "text": "prescribed medicationin",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.908,
+    "id": "o12"
+   },
+   {
+    "text": "medicine:",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.695,
+    "id": "o13"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.87,
+    "id": "o14"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.93,
+    "id": "o15"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.97,
+    "id": "o16"
+   },
+   {
+    "text": "@ dri118\"",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.744,
+    "id": "o17"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.694,
+    "id": "o18"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.835,
+    "id": "o19"
+   },
+   {
+    "text": "it would be themost",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.795,
+    "id": "o20"
+   },
+   {
+    "text": "prescribed medication in",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.765,
+    "id": "o21"
+   },
+   {
+    "text": "medicine:",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.903,
+    "id": "o22"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.778,
+    "id": "o23"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.882,
+    "id": "o24"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.802,
+    "id": "o25"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.836,
+    "id": "o26"
+   },
+   {
+    "text": "Q",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.894,
+    "id": "o27"
+   },
+   {
+    "text": "Let\"s talk aboutwhy",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.697,
+    "id": "o28"
+   },
+   {
+    "text": "physical activityisso",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.991,
+    "id": "o29"
+   },
+   {
+    "text": "powerful:",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.835,
+    "id": "o30"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o31"
+   },
+   {
+    "text": "dri1189",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.726,
+    "id": "o32"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.78,
+    "id": "o33"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.882,
+    "id": "o34"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.802,
+    "id": "o35"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.93,
+    "id": "o36"
+   },
+   {
+    "text": "snbogiv",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.625,
+    "id": "o37"
+   },
+   {
+    "text": "Because this isn't just",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.699,
+    "id": "o38"
+   },
+   {
+    "text": "loss,",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.916,
+    "id": "o39"
+   },
+   {
+    "text": "about weight",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.817,
+    "id": "o40"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.895,
+    "id": "o41"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.866,
+    "id": "o42"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.885,
+    "id": "o43"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.997,
+    "id": "o44"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.85,
+    "id": "o45"
+   },
+   {
+    "text": "aesthetics, or chasing a",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.828,
+    "id": "o46"
+   },
+   {
+    "text": "certain body type:",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.962,
+    "id": "o47"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.978,
+    "id": "o48"
+   },
+   {
+    "text": "dri1189",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.613,
+    "id": "o49"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.892,
+    "id": "o50"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.789,
+    "id": "o51"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.997,
+    "id": "o52"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.924,
+    "id": "o53"
+   },
+   {
+    "text": "Regularphysical activity",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.838,
+    "id": "o54"
+   },
+   {
+    "text": "improves vour",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.553,
+    "id": "o55"
+   },
+   {
+    "text": "cardiovascular and",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.997,
+    "id": "o56"
+   },
+   {
+    "text": "muscular fitness;",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.94,
+    "id": "o57"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.995,
+    "id": "o58"
+   },
+   {
+    "text": "drj1189",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.97,
+    "id": "o59"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.811,
+    "id": "o60"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.885,
+    "id": "o61"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.997,
+    "id": "o62"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.849,
+    "id": "o63"
+   },
+   {
+    "text": "Regularphysical activity",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.984,
+    "id": "o64"
+   },
+   {
+    "text": "improves vour",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.667,
+    "id": "o65"
+   },
+   {
+    "text": "cardiovascular and",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.998,
+    "id": "o66"
+   },
+   {
+    "text": "muscular fitness;",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.818,
+    "id": "o67"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.995,
+    "id": "o68"
+   },
+   {
+    "text": "@ drj1189",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.664,
+    "id": "o69"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.789,
+    "id": "o70"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.885,
+    "id": "o71"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.997,
+    "id": "o72"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.847,
+    "id": "o73"
+   },
+   {
+    "text": "Regular physicalactivity",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.844,
+    "id": "o74"
+   },
+   {
+    "text": "fmproves vour",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.693,
+    "id": "o75"
+   },
+   {
+    "text": "cardiovascular and",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.814,
+    "id": "o76"
+   },
+   {
+    "text": "muscular fitness;",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.902,
+    "id": "o77"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.997,
+    "id": "o78"
+   },
+   {
+    "text": "drj1189",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.956,
+    "id": "o79"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.872,
+    "id": "o80"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.885,
+    "id": "o81"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.997,
+    "id": "o82"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.854,
+    "id": "o83"
+   },
+   {
+    "text": "your bone health; and",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.804,
+    "id": "o84"
+   },
+   {
+    "text": "lowers your risk of",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.955,
+    "id": "o85"
+   },
+   {
+    "text": "fracture",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.952,
+    "id": "o86"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.998,
+    "id": "o87"
+   },
+   {
+    "text": "drj1189",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.949,
+    "id": "o88"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.899,
+    "id": "o89"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.889,
+    "id": "o90"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.997,
+    "id": "o91"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.854,
+    "id": "o92"
+   },
+   {
+    "text": "enbboM",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.638,
+    "id": "o93"
+   },
+   {
+    "text": "It improves anxietya",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.564,
+    "id": "o94"
+   },
+   {
+    "text": "depression;",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.997,
+    "id": "o95"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.996,
+    "id": "o96"
+   },
+   {
+    "text": "drj1189",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.982,
+    "id": "o97"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.888,
+    "id": "o98"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.885,
+    "id": "o99"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.997,
+    "id": "o100"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.855,
+    "id": "o101"
+   },
+   {
+    "text": "andhelps with @verall",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.688,
+    "id": "o102"
+   },
+   {
+    "text": "mood regulation:",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.846,
+    "id": "o103"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.999,
+    "id": "o104"
+   },
+   {
+    "text": "drj1189",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.981,
+    "id": "o105"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.895,
+    "id": "o106"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.885,
+    "id": "o107"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.997,
+    "id": "o108"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.854,
+    "id": "o109"
+   },
+   {
+    "text": "enbogivi",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.542,
+    "id": "o110"
+   },
+   {
+    "text": "0",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.628,
+    "id": "o111"
+   },
+   {
+    "text": "It improves yoUr sleep",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.576,
+    "id": "o112"
+   },
+   {
+    "text": "quality andenergy llevels,",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.54,
+    "id": "o113"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o114"
+   },
+   {
+    "text": "drj1189",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.651,
+    "id": "o115"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.778,
+    "id": "o116"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.886,
+    "id": "o117"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.997,
+    "id": "o118"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.843,
+    "id": "o119"
+   },
+   {
+    "text": "andithelps your self",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.843,
+    "id": "o120"
+   },
+   {
+    "text": "esteem and cognitive",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.782,
+    "id": "o121"
+   },
+   {
+    "text": "functioning;",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.708,
+    "id": "o122"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.998,
+    "id": "o123"
+   },
+   {
+    "text": "drj1189",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.884,
+    "id": "o124"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.84,
+    "id": "o125"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.888,
+    "id": "o126"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.892,
+    "id": "o127"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.842,
+    "id": "o128"
+   },
+   {
+    "text": "andithelps vour self",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.703,
+    "id": "o129"
+   },
+   {
+    "text": "esteem and cognitive",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.741,
+    "id": "o130"
+   },
+   {
+    "text": "functioningh",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.737,
+    "id": "o131"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.988,
+    "id": "o132"
+   },
+   {
+    "text": "drj1189",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.941,
+    "id": "o133"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.834,
+    "id": "o134"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.888,
+    "id": "o135"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.894,
+    "id": "o136"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.841,
+    "id": "o137"
+   },
+   {
+    "text": "enbosM",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.867,
+    "id": "o138"
+   },
+   {
+    "text": "including reducing the risk",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.677,
+    "id": "o139"
+   },
+   {
+    "text": "of dementia:",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.88,
+    "id": "o140"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o141"
+   },
+   {
+    "text": "dri1189",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.576,
+    "id": "o142"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.893,
+    "id": "o143"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.888,
+    "id": "o144"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.997,
+    "id": "o145"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.936,
+    "id": "o146"
+   },
+   {
+    "text": "Italso plays a major role in",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.557,
+    "id": "o147"
+   },
+   {
+    "text": "preventing and managing",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.768,
+    "id": "o148"
+   },
+   {
+    "text": "chronic disease:",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.737,
+    "id": "o149"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.998,
+    "id": "o150"
+   },
+   {
+    "text": "drj1189",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.964,
+    "id": "o151"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.832,
+    "id": "o152"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.887,
+    "id": "o153"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.997,
+    "id": "o154"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.849,
+    "id": "o155"
+   },
+   {
+    "text": "Italso plays a major rolein",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.935,
+    "id": "o156"
+   },
+   {
+    "text": "preventing and managing",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.988,
+    "id": "o157"
+   },
+   {
+    "text": "chronic disease.",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.983,
+    "id": "o158"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.999,
+    "id": "o159"
+   },
+   {
+    "text": "drj1189",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.986,
+    "id": "o160"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.765,
+    "id": "o161"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.887,
+    "id": "o162"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.997,
+    "id": "o163"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.849,
+    "id": "o164"
+   },
+   {
+    "text": "Consistent movement",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o165"
+   },
+   {
+    "text": "lowers the risk of",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.916,
+    "id": "o166"
+   },
+   {
+    "text": "hypertension and'type 2",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.751,
+    "id": "o167"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.871,
+    "id": "o168"
+   },
+   {
+    "text": "diabetes",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o169"
+   },
+   {
+    "text": "drj1189",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.977,
+    "id": "o170"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.864,
+    "id": "o171"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.887,
+    "id": "o172"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.996,
+    "id": "o173"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.849,
+    "id": "o174"
+   },
+   {
+    "text": "Consistent movement",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o175"
+   },
+   {
+    "text": "lowers the risk of",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.826,
+    "id": "o176"
+   },
+   {
+    "text": "hypertension and type2",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.909,
+    "id": "o177"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o178"
+   },
+   {
+    "text": "diabetes",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o179"
+   },
+   {
+    "text": "drj1189",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.937,
+    "id": "o180"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.856,
+    "id": "o181"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.886,
+    "id": "o182"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.997,
+    "id": "o183"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.845,
+    "id": "o184"
+   },
+   {
+    "text": "andisassociatedwith a",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.716,
+    "id": "o185"
+   },
+   {
+    "text": "lower incidence @f multiple",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.931,
+    "id": "o186"
+   },
+   {
+    "text": "cancers;",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.621,
+    "id": "o187"
+   },
+   {
+    "text": "TikTok",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o188"
+   },
+   {
+    "text": "drj1189",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.772,
+    "id": "o189"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.892,
+    "id": "o190"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.886,
+    "id": "o191"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.997,
+    "id": "o192"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.853,
+    "id": "o193"
+   },
+   {
+    "text": "enbosM",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.507,
+    "id": "o194"
+   },
+   {
+    "text": "andisassociated witha",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.988,
+    "id": "o195"
+   },
+   {
+    "text": "lower incidence of multiple",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.868,
+    "id": "o196"
+   },
+   {
+    "text": "cancers;",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.597,
+    "id": "o197"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.986,
+    "id": "o198"
+   },
+   {
+    "text": "drj1189",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.988,
+    "id": "o199"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.891,
+    "id": "o200"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.886,
+    "id": "o201"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.892,
+    "id": "o202"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.852,
+    "id": "o203"
+   },
+   {
+    "text": "TikTok",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.995,
+    "id": "o204"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.895,
+    "id": "o205"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.886,
+    "id": "o206"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.997,
+    "id": "o207"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.854,
+    "id": "o208"
+   },
+   {
+    "text": "bladdergendometriosis;",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.666,
+    "id": "o209"
+   },
+   {
+    "text": "prostate,lung;",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.721,
+    "id": "o210"
+   },
+   {
+    "text": "TikTok",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.998,
+    "id": "o211"
+   },
+   {
+    "text": "drj1189",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.655,
+    "id": "o212"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.899,
+    "id": "o213"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.886,
+    "id": "o214"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.997,
+    "id": "o215"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.854,
+    "id": "o216"
+   },
+   {
+    "text": "stomachjand esophageal",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.656,
+    "id": "o217"
+   },
+   {
+    "text": "cancers:",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.507,
+    "id": "o218"
+   },
+   {
+    "text": "TikTok",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.988,
+    "id": "o219"
+   },
+   {
+    "text": "dri1189",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.846,
+    "id": "o220"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.895,
+    "id": "o221"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.876,
+    "id": "o222"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.997,
+    "id": "o223"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.853,
+    "id": "o224"
+   },
+   {
+    "text": "enbosM",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.844,
+    "id": "o225"
+   },
+   {
+    "text": "Now let'szoomin on",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.989,
+    "id": "o226"
+   },
+   {
+    "text": "aerobic exercise:",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.977,
+    "id": "o227"
+   },
+   {
+    "text": "drju",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.684,
+    "id": "o228"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.898,
+    "id": "o229"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.883,
+    "id": "o230"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.997,
+    "id": "o231"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.853,
+    "id": "o232"
+   },
+   {
+    "text": "Specifically- aerobic",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.818,
+    "id": "o233"
+   },
+   {
+    "text": "activitylowers all cause",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.95,
+    "id": "o234"
+   },
+   {
+    "text": "mortality,",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.989,
+    "id": "o235"
+   },
+   {
+    "text": "Tiktok",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.718,
+    "id": "o236"
+   },
+   {
+    "text": "dri1189",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.535,
+    "id": "o237"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.888,
+    "id": "o238"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.889,
+    "id": "o239"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.996,
+    "id": "o240"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.855,
+    "id": "o241"
+   },
+   {
+    "text": "Specifically, aerobic",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.746,
+    "id": "o242"
+   },
+   {
+    "text": "activitylowers all cause",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.543,
+    "id": "o243"
+   },
+   {
+    "text": "mortality,",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.91,
+    "id": "o244"
+   },
+   {
+    "text": "TikTok",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.994,
+    "id": "o245"
+   },
+   {
+    "text": "dri1189",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.628,
+    "id": "o246"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.89,
+    "id": "o247"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.975,
+    "id": "o248"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.996,
+    "id": "o249"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.924,
+    "id": "o250"
+   },
+   {
+    "text": "meaning all causes of",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.928,
+    "id": "o251"
+   },
+   {
+    "text": "death:",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.998,
+    "id": "o252"
+   },
+   {
+    "text": "TikTok",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.89,
+    "id": "o253"
+   },
+   {
+    "text": "drj1189",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.77,
+    "id": "o254"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.842,
+    "id": "o255"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.889,
+    "id": "o256"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.903,
+    "id": "o257"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.852,
+    "id": "o258"
+   },
+   {
+    "text": "Reduces the incidence@f",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.895,
+    "id": "o259"
+   },
+   {
+    "text": "anddeath from",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.978,
+    "id": "o260"
+   },
+   {
+    "text": "cardiovascular diseasea",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.764,
+    "id": "o261"
+   },
+   {
+    "text": "Tiktok",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.979,
+    "id": "o262"
+   },
+   {
+    "text": "@ drj1189",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.969,
+    "id": "o263"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.8,
+    "id": "o264"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.885,
+    "id": "o265"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.895,
+    "id": "o266"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.926,
+    "id": "o267"
+   },
+   {
+    "text": "Albl",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.604,
+    "id": "o268"
+   },
+   {
+    "text": "Reduces thefncidenceof",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.886,
+    "id": "o269"
+   },
+   {
+    "text": "and death from",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.734,
+    "id": "o270"
+   },
+   {
+    "text": "cardiovascular diseaseo",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.571,
+    "id": "o271"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.87,
+    "id": "o272"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.973,
+    "id": "o273"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.895,
+    "id": "o274"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.843,
+    "id": "o275"
+   },
+   {
+    "text": "Improvesinsulin sensitivityo",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.735,
+    "id": "o276"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.886,
+    "id": "o277"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.885,
+    "id": "o278"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.895,
+    "id": "o279"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.933,
+    "id": "o280"
+   },
+   {
+    "text": "lowers your triglycerides]",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.578,
+    "id": "o281"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.826,
+    "id": "o282"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.885,
+    "id": "o283"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.997,
+    "id": "o284"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.845,
+    "id": "o285"
+   },
+   {
+    "text": "improves your sleep and",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.534,
+    "id": "o286"
+   },
+   {
+    "text": "overall qualityof life:",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.699,
+    "id": "o287"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.748,
+    "id": "o288"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.889,
+    "id": "o289"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.997,
+    "id": "o290"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.935,
+    "id": "o291"
+   },
+   {
+    "text": "Thisis why manymajor",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.948,
+    "id": "o292"
+   },
+   {
+    "text": "guidelines",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 1.0,
+    "id": "o293"
+   },
+   {
+    "text": "TikTok",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 1.0,
+    "id": "o294"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.742,
+    "id": "o295"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.889,
+    "id": "o296"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.997,
+    "id": "o297"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.851,
+    "id": "o298"
+   },
+   {
+    "text": "recommend 150 minutes",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.642,
+    "id": "o299"
+   },
+   {
+    "text": "per week of moderate",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.647,
+    "id": "o300"
+   },
+   {
+    "text": "intensity exercise",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.984,
+    "id": "o301"
+   },
+   {
+    "text": "TikTok",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 1.0,
+    "id": "o302"
+   },
+   {
+    "text": "dri1189",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.934,
+    "id": "o303"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.9,
+    "id": "o304"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.889,
+    "id": "o305"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.997,
+    "id": "o306"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.851,
+    "id": "o307"
+   },
+   {
+    "text": "recommend 150 minutes",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.957,
+    "id": "o308"
+   },
+   {
+    "text": "perweek of moderate",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.653,
+    "id": "o309"
+   },
+   {
+    "text": "intensityexercise",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 1.0,
+    "id": "o310"
+   },
+   {
+    "text": "TikTok",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.976,
+    "id": "o311"
+   },
+   {
+    "text": "dri1189",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.651,
+    "id": "o312"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.902,
+    "id": "o313"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.889,
+    "id": "o314"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.997,
+    "id": "o315"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.851,
+    "id": "o316"
+   },
+   {
+    "text": "@r 75 minutes of vigorous",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.672,
+    "id": "o317"
+   },
+   {
+    "text": "intensity exercise.",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.74,
+    "id": "o318"
+   },
+   {
+    "text": "TikTok",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.997,
+    "id": "o319"
+   },
+   {
+    "text": "dri1189",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.633,
+    "id": "o320"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.89,
+    "id": "o321"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.889,
+    "id": "o322"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.997,
+    "id": "o323"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.852,
+    "id": "o324"
+   },
+   {
+    "text": "@r 75 minutes of vigorous",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.549,
+    "id": "o325"
+   },
+   {
+    "text": "intensity exercise:",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.845,
+    "id": "o326"
+   },
+   {
+    "text": "TikTok",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 1.0,
+    "id": "o327"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.892,
+    "id": "o328"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.889,
+    "id": "o329"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.997,
+    "id": "o330"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.939,
+    "id": "o331"
+   },
+   {
+    "text": "They thinkit has to be",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.862,
+    "id": "o332"
+   },
+   {
+    "text": "intense,",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.912,
+    "id": "o333"
+   },
+   {
+    "text": "TikTok",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.998,
+    "id": "o334"
+   },
+   {
+    "text": "@ dri1189",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.605,
+    "id": "o335"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.89,
+    "id": "o336"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.889,
+    "id": "o337"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.997,
+    "id": "o338"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.852,
+    "id": "o339"
+   },
+   {
+    "text": "9",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.845,
+    "id": "o340"
+   },
+   {
+    "text": "nothing:",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.987,
+    "id": "o341"
+   },
+   {
+    "text": "perfect, or all or",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.825,
+    "id": "o342"
+   },
+   {
+    "text": "TikTok",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 1.0,
+    "id": "o343"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.893,
+    "id": "o344"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.889,
+    "id": "o345"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.997,
+    "id": "o346"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.852,
+    "id": "o347"
+   },
+   {
+    "text": "It doesn't Walking",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.862,
+    "id": "o348"
+   },
+   {
+    "text": "absolutely counts:",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.993,
+    "id": "o349"
+   },
+   {
+    "text": "drj1189",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.968,
+    "id": "o350"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.86,
+    "id": "o351"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.885,
+    "id": "o352"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.997,
+    "id": "o353"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.854,
+    "id": "o354"
+   },
+   {
+    "text": "Infact, large population",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.888,
+    "id": "o355"
+   },
+   {
+    "text": "studies show that 7,000",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.975,
+    "id": "o356"
+   },
+   {
+    "text": "steps to 12,000 stepsper",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.962,
+    "id": "o357"
+   },
+   {
+    "text": "day",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 1.0,
+    "id": "o358"
+   },
+   {
+    "text": "drj1189",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.991,
+    "id": "o359"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.866,
+    "id": "o360"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.885,
+    "id": "o361"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.997,
+    "id": "o362"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.854,
+    "id": "o363"
+   },
+   {
+    "text": "In fact, largepopulation",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.695,
+    "id": "o364"
+   },
+   {
+    "text": "studies show that 7,000",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.731,
+    "id": "o365"
+   },
+   {
+    "text": "steps to 12,000 stepsper",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.87,
+    "id": "o366"
+   },
+   {
+    "text": "TikTok",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.767,
+    "id": "o367"
+   },
+   {
+    "text": "day",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.993,
+    "id": "o368"
+   },
+   {
+    "text": "drj1189",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.984,
+    "id": "o369"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.834,
+    "id": "o370"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.885,
+    "id": "o371"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.997,
+    "id": "o372"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.779,
+    "id": "o373"
+   },
+   {
+    "text": "In fact, large population",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.675,
+    "id": "o374"
+   },
+   {
+    "text": "studies show that 7,000",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.718,
+    "id": "o375"
+   },
+   {
+    "text": "steps to 12,000 stepsper",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.811,
+    "id": "o376"
+   },
+   {
+    "text": "day",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.994,
+    "id": "o377"
+   },
+   {
+    "text": "TikTok",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.912,
+    "id": "o378"
+   },
+   {
+    "text": "drj1189",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.912,
+    "id": "o379"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.879,
+    "id": "o380"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.885,
+    "id": "o381"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.893,
+    "id": "o382"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.853,
+    "id": "o383"
+   },
+   {
+    "text": "isasweet spot where we",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.987,
+    "id": "o384"
+   },
+   {
+    "text": "significant reductions",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.87,
+    "id": "o385"
+   },
+   {
+    "text": "see",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.999,
+    "id": "o386"
+   },
+   {
+    "text": "in all cause mortality,",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.693,
+    "id": "o387"
+   },
+   {
+    "text": "TikTok",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.873,
+    "id": "o388"
+   },
+   {
+    "text": "@ dri1189",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.704,
+    "id": "o389"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.702,
+    "id": "o390"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.869,
+    "id": "o391"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.997,
+    "id": "o392"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.849,
+    "id": "o393"
+   },
+   {
+    "text": "fsasweet spot where we",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.605,
+    "id": "o394"
+   },
+   {
+    "text": "seesignificant reductions",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 1.0,
+    "id": "o395"
+   },
+   {
+    "text": "inall cause mortality,",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.802,
+    "id": "o396"
+   },
+   {
+    "text": "TikTok",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.998,
+    "id": "o397"
+   },
+   {
+    "text": "drj1189",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.769,
+    "id": "o398"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.679,
+    "id": "o399"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.876,
+    "id": "o400"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.997,
+    "id": "o401"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.849,
+    "id": "o402"
+   },
+   {
+    "text": "lower cardiovascularrisk;",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.533,
+    "id": "o403"
+   },
+   {
+    "text": "TikTok",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 1.0,
+    "id": "o404"
+   },
+   {
+    "text": "dri1189",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.882,
+    "id": "o405"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.739,
+    "id": "o406"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.876,
+    "id": "o407"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.997,
+    "id": "o408"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.849,
+    "id": "o409"
+   },
+   {
+    "text": "Andimproved metabolic",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.937,
+    "id": "o410"
+   },
+   {
+    "text": "health:",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.994,
+    "id": "o411"
+   },
+   {
+    "text": "Tiktok",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.563,
+    "id": "o412"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.732,
+    "id": "o413"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.876,
+    "id": "o414"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.997,
+    "id": "o415"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.849,
+    "id": "o416"
+   },
+   {
+    "text": "Beyond that range the",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.522,
+    "id": "o417"
+   },
+   {
+    "text": "benefits tend to plateau,",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.552,
+    "id": "o418"
+   },
+   {
+    "text": "TikTok",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.991,
+    "id": "o419"
+   },
+   {
+    "text": "dri1189",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.939,
+    "id": "o420"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.796,
+    "id": "o421"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.874,
+    "id": "o422"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.997,
+    "id": "o423"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.851,
+    "id": "o424"
+   },
+   {
+    "text": "meaningmore isn\"t always",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.612,
+    "id": "o425"
+   },
+   {
+    "text": "better.",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.89,
+    "id": "o426"
+   },
+   {
+    "text": "TikTok",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 1.0,
+    "id": "o427"
+   },
+   {
+    "text": "drj1189",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.693,
+    "id": "o428"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.9,
+    "id": "o429"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.883,
+    "id": "o430"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.997,
+    "id": "o431"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.852,
+    "id": "o432"
+   },
+   {
+    "text": "enbbgivi",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.68,
+    "id": "o433"
+   },
+   {
+    "text": "haveatit: Thegoal is",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.933,
+    "id": "o434"
+   },
+   {
+    "text": "consistency;",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.848,
+    "id": "o435"
+   },
+   {
+    "text": "TikTok",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.999,
+    "id": "o436"
+   },
+   {
+    "text": "drj1189",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.985,
+    "id": "o437"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.89,
+    "id": "o438"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.883,
+    "id": "o439"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.997,
+    "id": "o440"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.852,
+    "id": "o441"
+   },
+   {
+    "text": "haveatit. The goal is",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.882,
+    "id": "o442"
+   },
+   {
+    "text": "consistencVo",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.678,
+    "id": "o443"
+   },
+   {
+    "text": "TikTok",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.999,
+    "id": "o444"
+   },
+   {
+    "text": "drj1189",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.982,
+    "id": "o445"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.814,
+    "id": "o446"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.883,
+    "id": "o447"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.997,
+    "id": "o448"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.932,
+    "id": "o449"
+   },
+   {
+    "text": "And steps matter in",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.746,
+    "id": "o450"
+   },
+   {
+    "text": "particularibecause they",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.725,
+    "id": "o451"
+   },
+   {
+    "text": "reflect total daily",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.899,
+    "id": "o452"
+   },
+   {
+    "text": "TikTok",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.987,
+    "id": "o453"
+   },
+   {
+    "text": "movement;",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.663,
+    "id": "o454"
+   },
+   {
+    "text": "dri1189",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.641,
+    "id": "o455"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.81,
+    "id": "o456"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.883,
+    "id": "o457"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.997,
+    "id": "o458"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.852,
+    "id": "o459"
+   },
+   {
+    "text": "Andstepsmatter in",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.901,
+    "id": "o460"
+   },
+   {
+    "text": "particular because",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.788,
+    "id": "o461"
+   },
+   {
+    "text": "thev",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.966,
+    "id": "o462"
+   },
+   {
+    "text": "reflect total daily",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.668,
+    "id": "o463"
+   },
+   {
+    "text": "movement;",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.79,
+    "id": "o464"
+   },
+   {
+    "text": "@ dri1189",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.645,
+    "id": "o465"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.889,
+    "id": "o466"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.886,
+    "id": "o467"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.892,
+    "id": "o468"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.851,
+    "id": "o469"
+   },
+   {
+    "text": "notjusta single workouts",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.761,
+    "id": "o470"
+   },
+   {
+    "text": "drj1189",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.999,
+    "id": "o471"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.892,
+    "id": "o472"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.886,
+    "id": "o473"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.997,
+    "id": "o474"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.852,
+    "id": "o475"
+   },
+   {
+    "text": "They capture walking",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.842,
+    "id": "o476"
+   },
+   {
+    "text": "errands,",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.807,
+    "id": "o477"
+   },
+   {
+    "text": "Tiktok",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.542,
+    "id": "o478"
+   },
+   {
+    "text": "drj1189",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.633,
+    "id": "o479"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 0.903,
+    "id": "o480"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 0.886,
+    "id": "o481"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 0.997,
+    "id": "o482"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 0.852,
+    "id": "o483"
+   },
+   {
+    "text": "going up and downiour",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 0.569,
+    "id": "o484"
+   },
+   {
+    "text": "stairs;",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 0.951,
+    "id": "o485"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 0.893,
+    "id": "o486"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 0.886,
+    "id": "o487"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 0.997,
+    "id": "o488"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 0.852,
+    "id": "o489"
+   },
+   {
+    "text": "whichis critical since;",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 0.627,
+    "id": "o490"
+   },
+   {
+    "text": "TikTok",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 0.96,
+    "id": "o491"
+   },
+   {
+    "text": "dri1189",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 0.85,
+    "id": "o492"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.883,
+    "id": "o493"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.888,
+    "id": "o494"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.789,
+    "id": "o495"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.926,
+    "id": "o496"
+   },
+   {
+    "text": "aswe mentioned,",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.859,
+    "id": "o497"
+   },
+   {
+    "text": "TikTok",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.716,
+    "id": "o498"
+   },
+   {
+    "text": "drj1189",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.98,
+    "id": "o499"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 120.0,
+    "end": 120.0,
+    "confidence": 0.855,
+    "id": "o500"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 120.0,
+    "end": 120.0,
+    "confidence": 0.889,
+    "id": "o501"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 120.0,
+    "end": 120.0,
+    "confidence": 0.997,
+    "id": "o502"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 120.0,
+    "end": 120.0,
+    "confidence": 0.933,
+    "id": "o503"
+   },
+   {
+    "text": "independently increases",
+    "start": 120.0,
+    "end": 120.0,
+    "confidence": 0.761,
+    "id": "o504"
+   },
+   {
+    "text": "yourhealth risk",
+    "start": 120.0,
+    "end": 120.0,
+    "confidence": 0.987,
+    "id": "o505"
+   },
+   {
+    "text": "TikTok",
+    "start": 120.0,
+    "end": 120.0,
+    "confidence": 0.983,
+    "id": "o506"
+   },
+   {
+    "text": "drj1189",
+    "start": 120.0,
+    "end": 120.0,
+    "confidence": 0.674,
+    "id": "o507"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.853,
+    "id": "o508"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.889,
+    "id": "o509"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.997,
+    "id": "o510"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.844,
+    "id": "o511"
+   },
+   {
+    "text": "enbosm",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.736,
+    "id": "o512"
+   },
+   {
+    "text": "prolongedlsedentary time",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.839,
+    "id": "o513"
+   },
+   {
+    "text": "independently increases",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.998,
+    "id": "o514"
+   },
+   {
+    "text": "yourhealth risk:",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.676,
+    "id": "o515"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 124.0,
+    "end": 124.0,
+    "confidence": 0.851,
+    "id": "o516"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 124.0,
+    "end": 124.0,
+    "confidence": 0.889,
+    "id": "o517"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 124.0,
+    "end": 124.0,
+    "confidence": 0.997,
+    "id": "o518"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 124.0,
+    "end": 124.0,
+    "confidence": 0.844,
+    "id": "o519"
+   },
+   {
+    "text": "it\"s Protection. Andlin the",
+    "start": 124.0,
+    "end": 124.0,
+    "confidence": 0.655,
+    "id": "o520"
+   },
+   {
+    "text": "next video,",
+    "start": 124.0,
+    "end": 124.0,
+    "confidence": 0.612,
+    "id": "o521"
+   },
+   {
+    "text": "TikTok",
+    "start": 124.0,
+    "end": 124.0,
+    "confidence": 0.917,
+    "id": "o522"
+   },
+   {
+    "text": "@ drj1189",
+    "start": 124.0,
+    "end": 124.0,
+    "confidence": 0.804,
+    "id": "o523"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.88,
+    "id": "o524"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.888,
+    "id": "o525"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.894,
+    "id": "o526"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.918,
+    "id": "o527"
+   },
+   {
+    "text": "it's Protection. Andin the",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.734,
+    "id": "o528"
+   },
+   {
+    "text": "next vide@g",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.579,
+    "id": "o529"
+   },
+   {
+    "text": "TikTok",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.908,
+    "id": "o530"
+   },
+   {
+    "text": "drj1189",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.665,
+    "id": "o531"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.881,
+    "id": "o532"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.888,
+    "id": "o533"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.894,
+    "id": "o534"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.918,
+    "id": "o535"
+   },
+   {
+    "text": "we'Il break dowmhowto",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.672,
+    "id": "o536"
+   },
+   {
+    "text": "TikTok",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.995,
+    "id": "o537"
+   },
+   {
+    "text": "drj1189",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.925,
+    "id": "o538"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.915,
+    "id": "o539"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.888,
+    "id": "o540"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.997,
+    "id": "o541"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.918,
+    "id": "o542"
+   },
+   {
+    "text": "realistic cardio exercise",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.739,
+    "id": "o543"
+   },
+   {
+    "text": "prescription yoU can",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.737,
+    "id": "o544"
+   },
+   {
+    "text": "actually sticktos",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.769,
+    "id": "o545"
+   },
+   {
+    "text": "drj1189",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.979,
+    "id": "o546"
+   },
+   {
+    "text": "Lifestyle Medicine- Pillar 2:",
+    "start": 132.0,
+    "end": 132.0,
+    "confidence": 0.896,
+    "id": "o547"
+   },
+   {
+    "text": "Why Physical Activity Is",
+    "start": 132.0,
+    "end": 132.0,
+    "confidence": 0.888,
+    "id": "o548"
+   },
+   {
+    "text": "One of the Most Powerful",
+    "start": 132.0,
+    "end": 132.0,
+    "confidence": 0.997,
+    "id": "o549"
+   },
+   {
+    "text": "Prescriptions We Have",
+    "start": 132.0,
+    "end": 132.0,
+    "confidence": 0.918,
+    "id": "o550"
+   },
+   {
+    "text": "realistic cardio exercise",
+    "start": 132.0,
+    "end": 132.0,
+    "confidence": 0.672,
+    "id": "o551"
+   },
+   {
+    "text": "prescription yoU can",
+    "start": 132.0,
+    "end": 132.0,
+    "confidence": 0.806,
+    "id": "o552"
+   },
+   {
+    "text": "actually sticktos",
+    "start": 132.0,
+    "end": 132.0,
+    "confidence": 0.796,
+    "id": "o553"
+   },
+   {
+    "text": "drj1189",
+    "start": 132.0,
+    "end": 132.0,
+    "confidence": 0.915,
+    "id": "o554"
+   },
+   {
+    "text": "J",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.858,
+    "id": "o555"
+   },
+   {
+    "text": "TikTok",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.999,
+    "id": "o556"
+   },
+   {
+    "text": "J",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.643,
+    "id": "o557"
+   },
+   {
+    "text": "TikTok",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.999,
+    "id": "o558"
+   },
+   {
+    "text": "drj1189",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.947,
+    "id": "o559"
+   }
+  ]
+ }
+}

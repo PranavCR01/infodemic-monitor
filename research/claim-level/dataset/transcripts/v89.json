@@ -1,0 +1,563 @@
+{
+ "video_id": "v89",
+ "filename": "new_Instagram_C_IsZzXqFES.mp4",
+ "relative_path": "new_Instagram_C_IsZzXqFES.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:55",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.972,
+  "duration_seconds": 36.43,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 6.9,
+    "end": 12.86,
+    "text": "Y seguimos otra vez con estas modas absurdas de intentar blanquear los dientes con esmalte de uñas,"
+   },
+   {
+    "id": "t2",
+    "start": 12.86,
+    "end": 16.9,
+    "text": "como es este caso que estáis viendo aquí. De hecho, si os fijáis, tienes el mismo color de las uñas"
+   },
+   {
+    "id": "t3",
+    "start": 16.9,
+    "end": 20.74,
+    "text": "de la persona que se lo está poniendo en los dientes. Esto no solo es una estupidez, sino que"
+   },
+   {
+    "id": "t4",
+    "start": 20.74,
+    "end": 25.26,
+    "text": "podría llegar a dañar tus dientes y tu salud. Los químicos que contienen estos esmaltes no"
+   },
+   {
+    "id": "t5",
+    "start": 25.26,
+    "end": 30.26,
+    "text": "están destinados para su somboca y ingerirlos podría resultar tóxico. La única forma de"
+   },
+   {
+    "id": "t6",
+    "start": 30.26,
+    "end": 35.3,
+    "text": "blanquear tus dientes de forma segura es acudir a un dentista a que te realice un blanqueamiento"
+   },
+   {
+    "id": "t7",
+    "start": 35.3,
+    "end": 36.3,
+    "text": "dental profesional."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 19,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "\"BLANQUEAN\" los",
+    "confidence": 0.922
+   },
+   {
+    "time": 0.0,
+    "text": "DIENTES con",
+    "confidence": 0.998
+   },
+   {
+    "time": 0.0,
+    "text": "ESMALTE DE UNAS",
+    "confidence": 0.928
+   },
+   {
+    "time": 2.0,
+    "text": "\"BLANQUEAN\" los",
+    "confidence": 0.68
+   },
+   {
+    "time": 2.0,
+    "text": "DIENTES con",
+    "confidence": 0.998
+   },
+   {
+    "time": 2.0,
+    "text": "ESMALTE DE UNAS",
+    "confidence": 0.998
+   },
+   {
+    "time": 8.0,
+    "text": "otra VEZ",
+    "confidence": 0.939
+   },
+   {
+    "time": 8.0,
+    "text": "Dentalkl",
+    "confidence": 0.75
+   },
+   {
+    "time": 8.0,
+    "text": "6",
+    "confidence": 0.723
+   },
+   {
+    "time": 10.0,
+    "text": "Modas absurdas",
+    "confidence": 0.983
+   },
+   {
+    "time": 10.0,
+    "text": "Dentalkl",
+    "confidence": 0.976
+   },
+   {
+    "time": 12.0,
+    "text": "CON ESMALTE",
+    "confidence": 0.788
+   },
+   {
+    "time": 12.0,
+    "text": "Dentalkl",
+    "confidence": 0.964
+   },
+   {
+    "time": 14.0,
+    "text": "Dentalkl",
+    "confidence": 0.625
+   },
+   {
+    "time": 16.0,
+    "text": "TIENE EL",
+    "confidence": 0.991
+   },
+   {
+    "time": 16.0,
+    "text": "MISMO coLoR",
+    "confidence": 0.595
+   },
+   {
+    "time": 16.0,
+    "text": "Dentalkl",
+    "confidence": 0.995
+   },
+   {
+    "time": 18.0,
+    "text": "PONIENDO EN",
+    "confidence": 0.943
+   },
+   {
+    "time": 18.0,
+    "text": "Dentalkl",
+    "confidence": 0.98
+   },
+   {
+    "time": 20.0,
+    "text": "UNA ESTUPIDEZ",
+    "confidence": 0.95
+   },
+   {
+    "time": 20.0,
+    "text": "Dentalkl",
+    "confidence": 0.926
+   },
+   {
+    "time": 22.0,
+    "text": "a danar",
+    "confidence": 0.754
+   },
+   {
+    "time": 22.0,
+    "text": "tus DIENTES",
+    "confidence": 0.918
+   },
+   {
+    "time": 22.0,
+    "text": "Dentalkl",
+    "confidence": 0.952
+   },
+   {
+    "time": 24.0,
+    "text": "QUE CONTIENEN",
+    "confidence": 0.726
+   },
+   {
+    "time": 24.0,
+    "text": "Dentalkl",
+    "confidence": 0.626
+   },
+   {
+    "time": 26.0,
+    "text": "NO EstaN",
+    "confidence": 0.589
+   },
+   {
+    "time": 26.0,
+    "text": "Dentalkl",
+    "confidence": 0.995
+   },
+   {
+    "time": 28.0,
+    "text": "INGErILOS",
+    "confidence": 0.578
+   },
+   {
+    "time": 28.0,
+    "text": "PodrIa",
+    "confidence": 0.683
+   },
+   {
+    "time": 28.0,
+    "text": "Dentalkl",
+    "confidence": 0.967
+   },
+   {
+    "time": 30.0,
+    "text": "La UNIcA",
+    "confidence": 0.832
+   },
+   {
+    "time": 30.0,
+    "text": "ForMA DE",
+    "confidence": 0.91
+   },
+   {
+    "time": 30.0,
+    "text": "Dentalkl",
+    "confidence": 0.815
+   },
+   {
+    "time": 32.0,
+    "text": "DE ForMA",
+    "confidence": 0.647
+   },
+   {
+    "time": 32.0,
+    "text": "segura",
+    "confidence": 0.985
+   },
+   {
+    "time": 32.0,
+    "text": "Dentalkl",
+    "confidence": 0.852
+   },
+   {
+    "time": 34.0,
+    "text": "a QUE",
+    "confidence": 0.564
+   },
+   {
+    "time": 34.0,
+    "text": "Dentalkl",
+    "confidence": 0.903
+   },
+   {
+    "time": 36.0,
+    "text": "PROFESIONAL",
+    "confidence": 0.843
+   },
+   {
+    "time": 36.0,
+    "text": "Dentalkl",
+    "confidence": 0.97
+   }
+  ],
+  "captions": [
+   {
+    "text": "\"BLANQUEAN\" los",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.922,
+    "id": "o1"
+   },
+   {
+    "text": "DIENTES con",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.998,
+    "id": "o2"
+   },
+   {
+    "text": "ESMALTE DE UNAS",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.928,
+    "id": "o3"
+   },
+   {
+    "text": "\"BLANQUEAN\" los",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.68,
+    "id": "o4"
+   },
+   {
+    "text": "DIENTES con",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.998,
+    "id": "o5"
+   },
+   {
+    "text": "ESMALTE DE UNAS",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.998,
+    "id": "o6"
+   },
+   {
+    "text": "otra VEZ",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.939,
+    "id": "o7"
+   },
+   {
+    "text": "Dentalkl",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.75,
+    "id": "o8"
+   },
+   {
+    "text": "6",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.723,
+    "id": "o9"
+   },
+   {
+    "text": "Modas absurdas",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.983,
+    "id": "o10"
+   },
+   {
+    "text": "Dentalkl",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.976,
+    "id": "o11"
+   },
+   {
+    "text": "CON ESMALTE",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.788,
+    "id": "o12"
+   },
+   {
+    "text": "Dentalkl",
+    "start": 12.0,
+    "end": 14.0,
+    "confidence": 0.964,
+    "id": "o13"
+   },
+   {
+    "text": "TIENE EL",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.991,
+    "id": "o14"
+   },
+   {
+    "text": "MISMO coLoR",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.595,
+    "id": "o15"
+   },
+   {
+    "text": "Dentalkl",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.995,
+    "id": "o16"
+   },
+   {
+    "text": "PONIENDO EN",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.943,
+    "id": "o17"
+   },
+   {
+    "text": "Dentalkl",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.98,
+    "id": "o18"
+   },
+   {
+    "text": "UNA ESTUPIDEZ",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.95,
+    "id": "o19"
+   },
+   {
+    "text": "Dentalkl",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.926,
+    "id": "o20"
+   },
+   {
+    "text": "a danar",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.754,
+    "id": "o21"
+   },
+   {
+    "text": "tus DIENTES",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.918,
+    "id": "o22"
+   },
+   {
+    "text": "Dentalkl",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.952,
+    "id": "o23"
+   },
+   {
+    "text": "QUE CONTIENEN",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.726,
+    "id": "o24"
+   },
+   {
+    "text": "Dentalkl",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.626,
+    "id": "o25"
+   },
+   {
+    "text": "NO EstaN",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.589,
+    "id": "o26"
+   },
+   {
+    "text": "Dentalkl",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.995,
+    "id": "o27"
+   },
+   {
+    "text": "INGErILOS",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.578,
+    "id": "o28"
+   },
+   {
+    "text": "PodrIa",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.683,
+    "id": "o29"
+   },
+   {
+    "text": "Dentalkl",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.967,
+    "id": "o30"
+   },
+   {
+    "text": "La UNIcA",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.832,
+    "id": "o31"
+   },
+   {
+    "text": "ForMA DE",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.91,
+    "id": "o32"
+   },
+   {
+    "text": "Dentalkl",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.815,
+    "id": "o33"
+   },
+   {
+    "text": "DE ForMA",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.647,
+    "id": "o34"
+   },
+   {
+    "text": "segura",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.985,
+    "id": "o35"
+   },
+   {
+    "text": "Dentalkl",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.852,
+    "id": "o36"
+   },
+   {
+    "text": "a QUE",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.564,
+    "id": "o37"
+   },
+   {
+    "text": "Dentalkl",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.903,
+    "id": "o38"
+   },
+   {
+    "text": "PROFESIONAL",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.843,
+    "id": "o39"
+   },
+   {
+    "text": "Dentalkl",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.97,
+    "id": "o40"
+   }
+  ]
+ }
+}

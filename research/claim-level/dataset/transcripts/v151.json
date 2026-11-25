@@ -1,0 +1,546 @@
+{
+ "video_id": "v151",
+ "filename": "new_TikTok_7466938602405104929.mp4",
+ "relative_path": "new_TikTok_7466938602405104929.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:58",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.989,
+  "duration_seconds": 12.42,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.5,
+    "text": "Your body is the temple of the Holy Spirit."
+   },
+   {
+    "id": "t2",
+    "start": 2.5,
+    "end": 5.5,
+    "text": "The Holy Spirit deserves a mansion, not a rundown motel."
+   },
+   {
+    "id": "t3",
+    "start": 5.5,
+    "end": 6.5,
+    "text": "Start renovating."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 7,
+  "detections": [
+   {
+    "time": 2.0,
+    "text": "Your bodvis the temple",
+    "confidence": 0.765
+   },
+   {
+    "time": 2.0,
+    "text": "of the Holy Spirit; The",
+    "confidence": 0.821
+   },
+   {
+    "time": 2.0,
+    "text": "Holy Spirit deserves a",
+    "confidence": 0.531
+   },
+   {
+    "time": 2.0,
+    "text": "mansion not a rundown",
+    "confidence": 0.59
+   },
+   {
+    "time": 2.0,
+    "text": "Start renovating",
+    "confidence": 0.766
+   },
+   {
+    "time": 4.0,
+    "text": "Your bod is the temple",
+    "confidence": 0.671
+   },
+   {
+    "time": 4.0,
+    "text": "of thel",
+    "confidence": 0.508
+   },
+   {
+    "time": 4.0,
+    "text": "otel",
+    "confidence": 0.761
+   },
+   {
+    "time": 4.0,
+    "text": "Start renovating",
+    "confidence": 0.725
+   },
+   {
+    "time": 6.0,
+    "text": "Your",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.0,
+    "text": "body is",
+    "confidence": 0.766
+   },
+   {
+    "time": 6.0,
+    "text": "e temple",
+    "confidence": 0.956
+   },
+   {
+    "time": 6.0,
+    "text": "of the Holy Srit: The",
+    "confidence": 0.709
+   },
+   {
+    "time": 6.0,
+    "text": "mansion not &",
+    "confidence": 0.936
+   },
+   {
+    "time": 6.0,
+    "text": "Indown",
+    "confidence": 0.986
+   },
+   {
+    "time": 6.0,
+    "text": "motel",
+    "confidence": 0.998
+   },
+   {
+    "time": 6.0,
+    "text": "Start renovating",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "bodv",
+    "confidence": 0.522
+   },
+   {
+    "time": 8.0,
+    "text": "the temple",
+    "confidence": 0.969
+   },
+   {
+    "time": 8.0,
+    "text": "Your",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "pirit: The",
+    "confidence": 0.919
+   },
+   {
+    "time": 8.0,
+    "text": "of the Holy",
+    "confidence": 0.807
+   },
+   {
+    "time": 8.0,
+    "text": "mansion not e",
+    "confidence": 0.583
+   },
+   {
+    "time": 8.0,
+    "text": "undown",
+    "confidence": 0.997
+   },
+   {
+    "time": 8.0,
+    "text": "mot",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "inq",
+    "confidence": 0.771
+   },
+   {
+    "time": 8.0,
+    "text": "Start renovating",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "Your bodyis the temple",
+    "confidence": 0.945
+   },
+   {
+    "time": 10.0,
+    "text": "Spirit; The",
+    "confidence": 0.686
+   },
+   {
+    "time": 10.0,
+    "text": "Holy Spirit",
+    "confidence": 0.979
+   },
+   {
+    "time": 10.0,
+    "text": "eserves a",
+    "confidence": 0.899
+   },
+   {
+    "time": 10.0,
+    "text": "mansion not",
+    "confidence": 0.675
+   },
+   {
+    "time": 10.0,
+    "text": "rundown",
+    "confidence": 0.977
+   },
+   {
+    "time": 10.0,
+    "text": "mot",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "Start renovating",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "Mina",
+    "confidence": 0.658
+   },
+   {
+    "time": 12.0,
+    "text": "of the Holy Spirit: The",
+    "confidence": 0.81
+   },
+   {
+    "time": 12.0,
+    "text": "Holy Spirit deserves a",
+    "confidence": 0.544
+   },
+   {
+    "time": 12.0,
+    "text": "mansion not a rundown",
+    "confidence": 0.65
+   },
+   {
+    "time": 12.0,
+    "text": "motel",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "Start renovating",
+    "confidence": 0.743
+   }
+  ],
+  "captions": [
+   {
+    "text": "Your bodvis the temple",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.765,
+    "id": "o1"
+   },
+   {
+    "text": "of the Holy Spirit; The",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.821,
+    "id": "o2"
+   },
+   {
+    "text": "Holy Spirit deserves a",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.531,
+    "id": "o3"
+   },
+   {
+    "text": "mansion not a rundown",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.59,
+    "id": "o4"
+   },
+   {
+    "text": "Start renovating",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.766,
+    "id": "o5"
+   },
+   {
+    "text": "Your bod is the temple",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.671,
+    "id": "o6"
+   },
+   {
+    "text": "of thel",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.508,
+    "id": "o7"
+   },
+   {
+    "text": "otel",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.761,
+    "id": "o8"
+   },
+   {
+    "text": "Start renovating",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.725,
+    "id": "o9"
+   },
+   {
+    "text": "Your",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.999,
+    "id": "o10"
+   },
+   {
+    "text": "body is",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.766,
+    "id": "o11"
+   },
+   {
+    "text": "e temple",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.956,
+    "id": "o12"
+   },
+   {
+    "text": "of the Holy Srit: The",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.709,
+    "id": "o13"
+   },
+   {
+    "text": "mansion not &",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.936,
+    "id": "o14"
+   },
+   {
+    "text": "Indown",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.986,
+    "id": "o15"
+   },
+   {
+    "text": "motel",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.998,
+    "id": "o16"
+   },
+   {
+    "text": "Start renovating",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o17"
+   },
+   {
+    "text": "bodv",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.522,
+    "id": "o18"
+   },
+   {
+    "text": "the temple",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.969,
+    "id": "o19"
+   },
+   {
+    "text": "Your",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o20"
+   },
+   {
+    "text": "pirit: The",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.919,
+    "id": "o21"
+   },
+   {
+    "text": "of the Holy",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.807,
+    "id": "o22"
+   },
+   {
+    "text": "mansion not e",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.583,
+    "id": "o23"
+   },
+   {
+    "text": "undown",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.997,
+    "id": "o24"
+   },
+   {
+    "text": "mot",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o25"
+   },
+   {
+    "text": "inq",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.771,
+    "id": "o26"
+   },
+   {
+    "text": "Start renovating",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o27"
+   },
+   {
+    "text": "Your bodyis the temple",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.945,
+    "id": "o28"
+   },
+   {
+    "text": "Spirit; The",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.686,
+    "id": "o29"
+   },
+   {
+    "text": "Holy Spirit",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.979,
+    "id": "o30"
+   },
+   {
+    "text": "eserves a",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.899,
+    "id": "o31"
+   },
+   {
+    "text": "mansion not",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.675,
+    "id": "o32"
+   },
+   {
+    "text": "rundown",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.977,
+    "id": "o33"
+   },
+   {
+    "text": "mot",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o34"
+   },
+   {
+    "text": "Start renovating",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o35"
+   },
+   {
+    "text": "Mina",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.658,
+    "id": "o36"
+   },
+   {
+    "text": "of the Holy Spirit: The",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.81,
+    "id": "o37"
+   },
+   {
+    "text": "Holy Spirit deserves a",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.544,
+    "id": "o38"
+   },
+   {
+    "text": "mansion not a rundown",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.65,
+    "id": "o39"
+   },
+   {
+    "text": "motel",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o40"
+   },
+   {
+    "text": "Start renovating",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.743,
+    "id": "o41"
+   }
+  ]
+ }
+}

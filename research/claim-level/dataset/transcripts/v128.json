@@ -1,0 +1,276 @@
+{
+ "video_id": "v128",
+ "filename": "new_TikTok_7257356901271342341.mp4",
+ "relative_path": "new_TikTok_7257356901271342341.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@derm.tok",
+ "extracted_at": "2026-11-23T08:45:57",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.998,
+  "duration_seconds": 13.21,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.3,
+    "end": 6.7,
+    "text": "It's tick season, so you got to be careful if you're living a part of the world that's infested with ticks, but these, these are not ticks."
+   },
+   {
+    "id": "t2",
+    "start": 6.86,
+    "end": 12.46,
+    "text": "They're beans glued to the skin. You can even see the glue there, but it's still pretty fun to watch though."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 7,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "VOITAVIVUIA",
+    "confidence": 0.665
+   },
+   {
+    "time": 2.0,
+    "text": "Vougotta becareful",
+    "confidence": 0.536
+   },
+   {
+    "time": 2.0,
+    "text": "M",
+    "confidence": 0.776
+   },
+   {
+    "time": 2.0,
+    "text": "VOITAVIV",
+    "confidence": 0.862
+   },
+   {
+    "time": 4.0,
+    "text": "if voulelivnga part ofthe",
+    "confidence": 0.689
+   },
+   {
+    "time": 4.0,
+    "text": "world thatsinfestedwith",
+    "confidence": 0.735
+   },
+   {
+    "time": 4.0,
+    "text": "ticks",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "VOITAVIV",
+    "confidence": 0.903
+   },
+   {
+    "time": 6.0,
+    "text": "but these thesearenotticks",
+    "confidence": 0.852
+   },
+   {
+    "time": 6.0,
+    "text": "VOITAVIVU",
+    "confidence": 0.829
+   },
+   {
+    "time": 8.0,
+    "text": "thevrebeansglued to the",
+    "confidence": 0.852
+   },
+   {
+    "time": 8.0,
+    "text": "skin",
+    "confidence": 0.968
+   },
+   {
+    "time": 8.0,
+    "text": "VOITAVIV",
+    "confidence": 0.946
+   },
+   {
+    "time": 10.0,
+    "text": "youcanevensee theglue",
+    "confidence": 0.928
+   },
+   {
+    "time": 10.0,
+    "text": "there",
+    "confidence": 0.988
+   },
+   {
+    "time": 10.0,
+    "text": "VOITAVIV",
+    "confidence": 0.729
+   },
+   {
+    "time": 12.0,
+    "text": "but itsstillpretty fun to",
+    "confidence": 0.6
+   },
+   {
+    "time": 12.0,
+    "text": "watch though",
+    "confidence": 0.978
+   },
+   {
+    "time": 12.0,
+    "text": "VOITAVIVU",
+    "confidence": 0.797
+   }
+  ],
+  "captions": [
+   {
+    "text": "VOITAVIVUIA",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.665,
+    "id": "o1"
+   },
+   {
+    "text": "Vougotta becareful",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.536,
+    "id": "o2"
+   },
+   {
+    "text": "M",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.776,
+    "id": "o3"
+   },
+   {
+    "text": "VOITAVIV",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.862,
+    "id": "o4"
+   },
+   {
+    "text": "if voulelivnga part ofthe",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.689,
+    "id": "o5"
+   },
+   {
+    "text": "world thatsinfestedwith",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.735,
+    "id": "o6"
+   },
+   {
+    "text": "ticks",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o7"
+   },
+   {
+    "text": "VOITAVIV",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.903,
+    "id": "o8"
+   },
+   {
+    "text": "but these thesearenotticks",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.852,
+    "id": "o9"
+   },
+   {
+    "text": "VOITAVIVU",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.829,
+    "id": "o10"
+   },
+   {
+    "text": "thevrebeansglued to the",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.852,
+    "id": "o11"
+   },
+   {
+    "text": "skin",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.968,
+    "id": "o12"
+   },
+   {
+    "text": "VOITAVIV",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.946,
+    "id": "o13"
+   },
+   {
+    "text": "youcanevensee theglue",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.928,
+    "id": "o14"
+   },
+   {
+    "text": "there",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.988,
+    "id": "o15"
+   },
+   {
+    "text": "VOITAVIV",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.729,
+    "id": "o16"
+   },
+   {
+    "text": "but itsstillpretty fun to",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.6,
+    "id": "o17"
+   },
+   {
+    "text": "watch though",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.978,
+    "id": "o18"
+   },
+   {
+    "text": "VOITAVIVU",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.797,
+    "id": "o19"
+   }
+  ]
+ }
+}

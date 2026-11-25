@@ -1,0 +1,786 @@
+{
+ "video_id": "v41",
+ "filename": "ssstik.io_@partstown_1761444344626.mp4",
+ "relative_path": "Misinfo Dataset/Chaerin Kim/ssstik.io_@partstown_1761444344626.mp4",
+ "collector": "Chaerin Kim",
+ "collector_label": "",
+ "creator_handle": "@partstown",
+ "extracted_at": "2026-11-21T18:03:13",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 30.54,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.18,
+    "end": 4.38,
+    "text": "How to properly wash your hands in food service."
+   },
+   {
+    "id": "t2",
+    "start": 4.38,
+    "end": 7.86,
+    "text": "Turn on the faucet with warm water and wet your hands."
+   },
+   {
+    "id": "t3",
+    "start": 7.86,
+    "end": 12.46,
+    "text": "With either a soap dispenser or a bar of soap, apply some to your hands."
+   },
+   {
+    "id": "t4",
+    "start": 12.46,
+    "end": 17.2,
+    "text": "Scrub your entire hands up to just above your wrists for 20 seconds."
+   },
+   {
+    "id": "t5",
+    "start": 17.2,
+    "end": 21.32,
+    "text": "Rinse your hands in warm water to wash off all the soap."
+   },
+   {
+    "id": "t6",
+    "start": 21.32,
+    "end": 26.15,
+    "text": "Use a hand drying station or paper towel to dry your hands."
+   },
+   {
+    "id": "t7",
+    "start": 26.15,
+    "end": 28.95,
+    "text": "Use a piece of paper towel to turn off the faucet."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 16,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Howto Properly",
+    "confidence": 0.794
+   },
+   {
+    "time": 0.0,
+    "text": "Wash Your Hands",
+    "confidence": 0.746
+   },
+   {
+    "time": 0.0,
+    "text": "Jj) Foodservice",
+    "confidence": 0.75
+   },
+   {
+    "time": 2.0,
+    "text": "How to Properly",
+    "confidence": 0.808
+   },
+   {
+    "time": 2.0,
+    "text": "Wash Your Flands",
+    "confidence": 0.94
+   },
+   {
+    "time": 4.0,
+    "text": "How to Properly",
+    "confidence": 0.855
+   },
+   {
+    "time": 4.0,
+    "text": "in Foodservice",
+    "confidence": 0.564
+   },
+   {
+    "time": 4.0,
+    "text": "Wet",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "your",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.01,
+    "text": "How to Pfoperly",
+    "confidence": 0.803
+   },
+   {
+    "time": 6.01,
+    "text": "Wash Your' Flafkds",
+    "confidence": 0.682
+   },
+   {
+    "time": 6.01,
+    "text": "Wet",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.01,
+    "text": "your",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.01,
+    "text": "hands",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.01,
+    "text": "How to Pfoperly",
+    "confidence": 0.597
+   },
+   {
+    "time": 8.01,
+    "text": "Wash Your Hands",
+    "confidence": 0.997
+   },
+   {
+    "time": 8.01,
+    "text": "in Foodservice",
+    "confidence": 0.997
+   },
+   {
+    "time": 8.01,
+    "text": "cet",
+    "confidence": 0.64
+   },
+   {
+    "time": 8.01,
+    "text": "Foap",
+    "confidence": 0.513
+   },
+   {
+    "time": 10.01,
+    "text": "Howto Pfoperly",
+    "confidence": 0.73
+   },
+   {
+    "time": 10.01,
+    "text": "Wasf Your Hands",
+    "confidence": 0.537
+   },
+   {
+    "time": 10.01,
+    "text": "in Foodservice",
+    "confidence": 0.956
+   },
+   {
+    "time": 10.01,
+    "text": "Get",
+    "confidence": 0.546
+   },
+   {
+    "time": 10.01,
+    "text": "Soap",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.01,
+    "text": "Howto Properly",
+    "confidence": 0.917
+   },
+   {
+    "time": 12.01,
+    "text": "Wash Your Hands",
+    "confidence": 0.976
+   },
+   {
+    "time": 14.01,
+    "text": "How to Properly",
+    "confidence": 0.966
+   },
+   {
+    "time": 14.01,
+    "text": "Wash Your Hands",
+    "confidence": 0.732
+   },
+   {
+    "time": 14.01,
+    "text": "in Foodservice",
+    "confidence": 0.774
+   },
+   {
+    "time": 14.01,
+    "text": "Scrubb",
+    "confidence": 0.775
+   },
+   {
+    "time": 16.02,
+    "text": "flowto Properly",
+    "confidence": 0.512
+   },
+   {
+    "time": 16.02,
+    "text": "Scrub",
+    "confidence": 0.81
+   },
+   {
+    "time": 18.02,
+    "text": "Howto Properly",
+    "confidence": 0.863
+   },
+   {
+    "time": 18.02,
+    "text": "Wash Your Flajkds",
+    "confidence": 0.55
+   },
+   {
+    "time": 18.02,
+    "text": "in Foodservice",
+    "confidence": 0.747
+   },
+   {
+    "time": 20.02,
+    "text": "Howto Pfoperly",
+    "confidence": 0.727
+   },
+   {
+    "time": 20.02,
+    "text": "Rinse",
+    "confidence": 0.996
+   },
+   {
+    "time": 22.02,
+    "text": "Howto Properly",
+    "confidence": 0.937
+   },
+   {
+    "time": 22.02,
+    "text": "Wash Your Hands",
+    "confidence": 0.796
+   },
+   {
+    "time": 22.02,
+    "text": "Jj) Foodservice",
+    "confidence": 0.57
+   },
+   {
+    "time": 22.02,
+    "text": "Dry",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.02,
+    "text": "Your",
+    "confidence": 0.689
+   },
+   {
+    "time": 22.02,
+    "text": "Hands",
+    "confidence": 0.987
+   },
+   {
+    "time": 24.02,
+    "text": "Howto Pfoperly",
+    "confidence": 0.709
+   },
+   {
+    "time": 24.02,
+    "text": "in Foodservice",
+    "confidence": 0.86
+   },
+   {
+    "time": 24.02,
+    "text": "Dry",
+    "confidence": 0.974
+   },
+   {
+    "time": 24.02,
+    "text": "Your",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.02,
+    "text": "Hande",
+    "confidence": 0.911
+   },
+   {
+    "time": 26.03,
+    "text": "Howto Properly",
+    "confidence": 0.968
+   },
+   {
+    "time": 26.03,
+    "text": "Wash Your Hands",
+    "confidence": 0.997
+   },
+   {
+    "time": 26.03,
+    "text": "Jj) Foodservice",
+    "confidence": 0.564
+   },
+   {
+    "time": 26.03,
+    "text": "Turn",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.03,
+    "text": "Off",
+    "confidence": 0.81
+   },
+   {
+    "time": 26.03,
+    "text": "Faucet",
+    "confidence": 0.998
+   },
+   {
+    "time": 28.03,
+    "text": "How to Properly",
+    "confidence": 0.812
+   },
+   {
+    "time": 28.03,
+    "text": "Turn",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.03,
+    "text": "Off",
+    "confidence": 0.506
+   },
+   {
+    "time": 28.03,
+    "text": "Faucet",
+    "confidence": 0.97
+   },
+   {
+    "time": 30.03,
+    "text": "Howto Properly",
+    "confidence": 0.779
+   }
+  ],
+  "captions": [
+   {
+    "text": "Howto Properly",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.794,
+    "id": "o1"
+   },
+   {
+    "text": "Wash Your Hands",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.746,
+    "id": "o2"
+   },
+   {
+    "text": "Jj) Foodservice",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.75,
+    "id": "o3"
+   },
+   {
+    "text": "How to Properly",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.808,
+    "id": "o4"
+   },
+   {
+    "text": "Wash Your Flands",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.94,
+    "id": "o5"
+   },
+   {
+    "text": "How to Properly",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.855,
+    "id": "o6"
+   },
+   {
+    "text": "in Foodservice",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.564,
+    "id": "o7"
+   },
+   {
+    "text": "Wet",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o8"
+   },
+   {
+    "text": "your",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.999,
+    "id": "o9"
+   },
+   {
+    "text": "How to Pfoperly",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.803,
+    "id": "o10"
+   },
+   {
+    "text": "Wash Your' Flafkds",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.682,
+    "id": "o11"
+   },
+   {
+    "text": "Wet",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 1.0,
+    "id": "o12"
+   },
+   {
+    "text": "your",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 1.0,
+    "id": "o13"
+   },
+   {
+    "text": "hands",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 1.0,
+    "id": "o14"
+   },
+   {
+    "text": "How to Pfoperly",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.597,
+    "id": "o15"
+   },
+   {
+    "text": "Wash Your Hands",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.997,
+    "id": "o16"
+   },
+   {
+    "text": "in Foodservice",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.997,
+    "id": "o17"
+   },
+   {
+    "text": "cet",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.64,
+    "id": "o18"
+   },
+   {
+    "text": "Foap",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.513,
+    "id": "o19"
+   },
+   {
+    "text": "Howto Pfoperly",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.73,
+    "id": "o20"
+   },
+   {
+    "text": "Wasf Your Hands",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.537,
+    "id": "o21"
+   },
+   {
+    "text": "in Foodservice",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.956,
+    "id": "o22"
+   },
+   {
+    "text": "Get",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.546,
+    "id": "o23"
+   },
+   {
+    "text": "Soap",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 1.0,
+    "id": "o24"
+   },
+   {
+    "text": "Howto Properly",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.917,
+    "id": "o25"
+   },
+   {
+    "text": "Wash Your Hands",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.976,
+    "id": "o26"
+   },
+   {
+    "text": "How to Properly",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.966,
+    "id": "o27"
+   },
+   {
+    "text": "Wash Your Hands",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.732,
+    "id": "o28"
+   },
+   {
+    "text": "in Foodservice",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.774,
+    "id": "o29"
+   },
+   {
+    "text": "Scrubb",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.775,
+    "id": "o30"
+   },
+   {
+    "text": "flowto Properly",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.512,
+    "id": "o31"
+   },
+   {
+    "text": "Scrub",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.81,
+    "id": "o32"
+   },
+   {
+    "text": "Howto Properly",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.863,
+    "id": "o33"
+   },
+   {
+    "text": "Wash Your Flajkds",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.55,
+    "id": "o34"
+   },
+   {
+    "text": "in Foodservice",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.747,
+    "id": "o35"
+   },
+   {
+    "text": "Howto Pfoperly",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.727,
+    "id": "o36"
+   },
+   {
+    "text": "Rinse",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.996,
+    "id": "o37"
+   },
+   {
+    "text": "Howto Properly",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.937,
+    "id": "o38"
+   },
+   {
+    "text": "Wash Your Hands",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.796,
+    "id": "o39"
+   },
+   {
+    "text": "Jj) Foodservice",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.57,
+    "id": "o40"
+   },
+   {
+    "text": "Dry",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 1.0,
+    "id": "o41"
+   },
+   {
+    "text": "Your",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.689,
+    "id": "o42"
+   },
+   {
+    "text": "Hands",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.987,
+    "id": "o43"
+   },
+   {
+    "text": "Howto Pfoperly",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.709,
+    "id": "o44"
+   },
+   {
+    "text": "in Foodservice",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.86,
+    "id": "o45"
+   },
+   {
+    "text": "Dry",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.974,
+    "id": "o46"
+   },
+   {
+    "text": "Your",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 1.0,
+    "id": "o47"
+   },
+   {
+    "text": "Hande",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.911,
+    "id": "o48"
+   },
+   {
+    "text": "Howto Properly",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.968,
+    "id": "o49"
+   },
+   {
+    "text": "Wash Your Hands",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.997,
+    "id": "o50"
+   },
+   {
+    "text": "Jj) Foodservice",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.564,
+    "id": "o51"
+   },
+   {
+    "text": "Turn",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 1.0,
+    "id": "o52"
+   },
+   {
+    "text": "Off",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.81,
+    "id": "o53"
+   },
+   {
+    "text": "Faucet",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.998,
+    "id": "o54"
+   },
+   {
+    "text": "How to Properly",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.812,
+    "id": "o55"
+   },
+   {
+    "text": "Turn",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 1.0,
+    "id": "o56"
+   },
+   {
+    "text": "Off",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.506,
+    "id": "o57"
+   },
+   {
+    "text": "Faucet",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.97,
+    "id": "o58"
+   },
+   {
+    "text": "Howto Properly",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.779,
+    "id": "o59"
+   }
+  ]
+ }
+}

@@ -1,0 +1,792 @@
+{
+ "video_id": "v165",
+ "filename": "new_TikTok_7599000229785963831.mp4",
+ "relative_path": "new_TikTok_7599000229785963831.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@paulsaladinomd2",
+ "extracted_at": "2026-11-23T08:45:59",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 56.91,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 4.9,
+    "text": "I've heard you say that acne is just an autoimmune response acne is absolutely autoimmune"
+   },
+   {
+    "id": "t2",
+    "start": 4.9,
+    "end": 10.74,
+    "text": "I would say it's not that your face isn't clean enough right right right. I do skincare like three times a day"
+   },
+   {
+    "id": "t3",
+    "start": 10.74,
+    "end": 17.1,
+    "text": "I feel like I'm a very healthy individual, but I'm probably eating closer to like a paleo organic diet currently"
+   },
+   {
+    "id": "t4",
+    "start": 17.1,
+    "end": 20.24,
+    "text": "I've been trying to incorporate more meat and organs here in there"
+   },
+   {
+    "id": "t5",
+    "start": 20.24,
+    "end": 25.56,
+    "text": "But yeah, I'm really interested to pick your brain about and this is exactly what I'm thinking about someone like you is someone that I"
+   },
+   {
+    "id": "t6",
+    "start": 25.56,
+    "end": 28.16,
+    "text": "I hope the content will reach because the idea is,"
+   },
+   {
+    "id": "t7",
+    "start": 28.16,
+    "end": 30.0,
+    "text": "okay, maybe there's some vegetables in your diet"
+   },
+   {
+    "id": "t8",
+    "start": 30.0,
+    "end": 31.1,
+    "text": "or something that you're not aware of"
+   },
+   {
+    "id": "t9",
+    "start": 31.1,
+    "end": 32.6,
+    "text": "that's triggering your autoimmune response"
+   },
+   {
+    "id": "t10",
+    "start": 32.6,
+    "end": 35.0,
+    "text": "and this is a simple, free, easily accessible way"
+   },
+   {
+    "id": "t11",
+    "start": 35.0,
+    "end": 37.08,
+    "text": "to say, maybe I'll just cut this out for three or four weeks"
+   },
+   {
+    "id": "t12",
+    "start": 37.08,
+    "end": 38.12,
+    "text": "and see how it goes."
+   },
+   {
+    "id": "t13",
+    "start": 38.12,
+    "end": 40.08,
+    "text": "And then if it doesn't help, you can incorporate it back."
+   },
+   {
+    "id": "t14",
+    "start": 40.08,
+    "end": 42.24,
+    "text": "But this, I think, is where it makes me excited"
+   },
+   {
+    "id": "t15",
+    "start": 42.24,
+    "end": 44.28,
+    "text": "because it's so empowering for people when they hear this."
+   },
+   {
+    "id": "t16",
+    "start": 44.28,
+    "end": 46.52,
+    "text": "Oh, maybe kale is causing my thyroid issues."
+   },
+   {
+    "id": "t17",
+    "start": 46.52,
+    "end": 48.12,
+    "text": "Maybe spinach is causing my joint pain."
+   },
+   {
+    "id": "t18",
+    "start": 48.12,
+    "end": 49.72,
+    "text": "Maybe almonds are triggering my acne"
+   },
+   {
+    "id": "t19",
+    "start": 49.72,
+    "end": 51.56,
+    "text": "and I'm just using examples that are random,"
+   },
+   {
+    "id": "t20",
+    "start": 51.56,
+    "end": 53.6,
+    "text": "not necessarily that almonds trigger acne in everyone,"
+   },
+   {
+    "id": "t21",
+    "start": 53.6,
+    "end": 55.74,
+    "text": "but there are foods that can trigger acne in people"
+   },
+   {
+    "id": "t22",
+    "start": 55.74,
+    "end": 57.24,
+    "text": "and it is an autoimmune thing."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 29,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "I'VE HEARD",
+    "confidence": 0.675
+   },
+   {
+    "time": 0.0,
+    "text": "YOU SAY THAT",
+    "confidence": 0.989
+   },
+   {
+    "time": 0.0,
+    "text": "85",
+    "confidence": 0.502
+   },
+   {
+    "time": 2.0,
+    "text": "ACNE ISAN",
+    "confidence": 0.996
+   },
+   {
+    "time": 4.0,
+    "text": "ACNE IS",
+    "confidence": 0.779
+   },
+   {
+    "time": 4.0,
+    "text": "ABSOLUTELY",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "IT'S NOT THAT",
+    "confidence": 0.828
+   },
+   {
+    "time": 6.0,
+    "text": "YOUR FACE",
+    "confidence": 0.721
+   },
+   {
+    "time": 8.0,
+    "text": "RIGH",
+    "confidence": 0.951
+   },
+   {
+    "time": 10.0,
+    "text": "LIKE THREE",
+    "confidence": 0.993
+   },
+   {
+    "time": 12.0,
+    "text": "VERY HEALTHN",
+    "confidence": 0.763
+   },
+   {
+    "time": 14.0,
+    "text": "EATING",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "CLOSER",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "PALEO-ORGANC",
+    "confidence": 0.977
+   },
+   {
+    "time": 16.0,
+    "text": "DIET",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "TVE BEEN",
+    "confidence": 0.744
+   },
+   {
+    "time": 18.0,
+    "text": "TRYING TO",
+    "confidence": 0.998
+   },
+   {
+    "time": 20.0,
+    "text": "HERE JAND",
+    "confidence": 0.578
+   },
+   {
+    "time": 20.0,
+    "text": "THERE",
+    "confidence": 0.997
+   },
+   {
+    "time": 22.0,
+    "text": "ABOUT",
+    "confidence": 0.798
+   },
+   {
+    "time": 22.0,
+    "text": "ACNE",
+    "confidence": 0.685
+   },
+   {
+    "time": 24.0,
+    "text": "THINKING",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "ABOUT",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "THE CONTENT",
+    "confidence": 0.928
+   },
+   {
+    "time": 26.0,
+    "text": "WILL REACH",
+    "confidence": 0.721
+   },
+   {
+    "time": 28.0,
+    "text": "THE IDEA IS",
+    "confidence": 0.995
+   },
+   {
+    "time": 30.0,
+    "text": "OR SOMETHING",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "THAT",
+    "confidence": 0.995
+   },
+   {
+    "time": 32.0,
+    "text": "AUTOIMMUNE",
+    "confidence": 0.998
+   },
+   {
+    "time": 34.0,
+    "text": "FREE",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "EASILY",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "THIS OUT FORL",
+    "confidence": 0.603
+   },
+   {
+    "time": 36.0,
+    "text": "THREE OR",
+    "confidence": 0.986
+   },
+   {
+    "time": 38.0,
+    "text": "IT GOES",
+    "confidence": 0.548
+   },
+   {
+    "time": 38.0,
+    "text": "RIGHT",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "INCORPORATE",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "IT BACK",
+    "confidence": 0.83
+   },
+   {
+    "time": 42.0,
+    "text": "IT MAKES",
+    "confidence": 0.758
+   },
+   {
+    "time": 42.0,
+    "text": "ME EXCITED",
+    "confidence": 0.998
+   },
+   {
+    "time": 44.0,
+    "text": "WHEN THEY",
+    "confidence": 0.986
+   },
+   {
+    "time": 44.0,
+    "text": "HEAR THIS",
+    "confidence": 0.882
+   },
+   {
+    "time": 46.0,
+    "text": "THYROID",
+    "confidence": 0.957
+   },
+   {
+    "time": 46.0,
+    "text": "ISSUES",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "JOINT",
+    "confidence": 0.981
+   },
+   {
+    "time": 48.0,
+    "text": "PAIN",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "USING",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "NOT NECESSARTLY",
+    "confidence": 0.566
+   },
+   {
+    "time": 52.0,
+    "text": "THAT ALMONDS",
+    "confidence": 0.953
+   },
+   {
+    "time": 54.0,
+    "text": "BUT THERE",
+    "confidence": 0.998
+   },
+   {
+    "time": 54.0,
+    "text": "ARE FOODS",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "AND THAT",
+    "confidence": 0.706
+   },
+   {
+    "time": 56.0,
+    "text": "IS AN",
+    "confidence": 0.99
+   }
+  ],
+  "captions": [
+   {
+    "text": "I'VE HEARD",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.675,
+    "id": "o1"
+   },
+   {
+    "text": "YOU SAY THAT",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.989,
+    "id": "o2"
+   },
+   {
+    "text": "85",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.502,
+    "id": "o3"
+   },
+   {
+    "text": "ACNE ISAN",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.996,
+    "id": "o4"
+   },
+   {
+    "text": "ACNE IS",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.779,
+    "id": "o5"
+   },
+   {
+    "text": "ABSOLUTELY",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o6"
+   },
+   {
+    "text": "IT'S NOT THAT",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.828,
+    "id": "o7"
+   },
+   {
+    "text": "YOUR FACE",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.721,
+    "id": "o8"
+   },
+   {
+    "text": "RIGH",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.951,
+    "id": "o9"
+   },
+   {
+    "text": "LIKE THREE",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.993,
+    "id": "o10"
+   },
+   {
+    "text": "VERY HEALTHN",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.763,
+    "id": "o11"
+   },
+   {
+    "text": "EATING",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o12"
+   },
+   {
+    "text": "CLOSER",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o13"
+   },
+   {
+    "text": "PALEO-ORGANC",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.977,
+    "id": "o14"
+   },
+   {
+    "text": "DIET",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o15"
+   },
+   {
+    "text": "TVE BEEN",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.744,
+    "id": "o16"
+   },
+   {
+    "text": "TRYING TO",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.998,
+    "id": "o17"
+   },
+   {
+    "text": "HERE JAND",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.578,
+    "id": "o18"
+   },
+   {
+    "text": "THERE",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.997,
+    "id": "o19"
+   },
+   {
+    "text": "ABOUT",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.798,
+    "id": "o20"
+   },
+   {
+    "text": "ACNE",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.685,
+    "id": "o21"
+   },
+   {
+    "text": "THINKING",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o22"
+   },
+   {
+    "text": "ABOUT",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o23"
+   },
+   {
+    "text": "THE CONTENT",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.928,
+    "id": "o24"
+   },
+   {
+    "text": "WILL REACH",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.721,
+    "id": "o25"
+   },
+   {
+    "text": "THE IDEA IS",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.995,
+    "id": "o26"
+   },
+   {
+    "text": "OR SOMETHING",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o27"
+   },
+   {
+    "text": "THAT",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.995,
+    "id": "o28"
+   },
+   {
+    "text": "AUTOIMMUNE",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.998,
+    "id": "o29"
+   },
+   {
+    "text": "FREE",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o30"
+   },
+   {
+    "text": "EASILY",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o31"
+   },
+   {
+    "text": "THIS OUT FORL",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.603,
+    "id": "o32"
+   },
+   {
+    "text": "THREE OR",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.986,
+    "id": "o33"
+   },
+   {
+    "text": "IT GOES",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.548,
+    "id": "o34"
+   },
+   {
+    "text": "RIGHT",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o35"
+   },
+   {
+    "text": "INCORPORATE",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o36"
+   },
+   {
+    "text": "IT BACK",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.83,
+    "id": "o37"
+   },
+   {
+    "text": "IT MAKES",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.758,
+    "id": "o38"
+   },
+   {
+    "text": "ME EXCITED",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.998,
+    "id": "o39"
+   },
+   {
+    "text": "WHEN THEY",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.986,
+    "id": "o40"
+   },
+   {
+    "text": "HEAR THIS",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.882,
+    "id": "o41"
+   },
+   {
+    "text": "THYROID",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.957,
+    "id": "o42"
+   },
+   {
+    "text": "ISSUES",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o43"
+   },
+   {
+    "text": "JOINT",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.981,
+    "id": "o44"
+   },
+   {
+    "text": "PAIN",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o45"
+   },
+   {
+    "text": "USING",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o46"
+   },
+   {
+    "text": "NOT NECESSARTLY",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.566,
+    "id": "o47"
+   },
+   {
+    "text": "THAT ALMONDS",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.953,
+    "id": "o48"
+   },
+   {
+    "text": "BUT THERE",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.998,
+    "id": "o49"
+   },
+   {
+    "text": "ARE FOODS",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o50"
+   },
+   {
+    "text": "AND THAT",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.706,
+    "id": "o51"
+   },
+   {
+    "text": "IS AN",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.99,
+    "id": "o52"
+   }
+  ]
+ }
+}

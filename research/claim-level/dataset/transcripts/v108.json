@@ -1,0 +1,222 @@
+{
+ "video_id": "v108",
+ "filename": "new_TikTok_7143648449114787077.mp4",
+ "relative_path": "new_TikTok_7143648449114787077.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@idermatologo",
+ "extracted_at": "2026-11-23T08:45:56",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.998,
+  "duration_seconds": 10.71,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 4.88,
+    "text": "Me etiquetaron en este vídeo donde supuestamente el barbero remove estas garrapatas con navaja"
+   },
+   {
+    "id": "t2",
+    "start": 4.88,
+    "end": 8.24,
+    "text": "La verdad es que estos son frijoles o porotos, los famosos Black Eyed Peas"
+   },
+   {
+    "id": "t3",
+    "start": 8.24,
+    "end": 10.64,
+    "text": "Se ve el pegamento, así que esto es súper falso!"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 6,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Barbero vs Garrapatas",
+    "confidence": 0.676
+   },
+   {
+    "time": 0.0,
+    "text": "EATEN BY TICKS",
+    "confidence": 0.962
+   },
+   {
+    "time": 2.0,
+    "text": "Barbero vs Garrapatas",
+    "confidence": 0.86
+   },
+   {
+    "time": 2.0,
+    "text": "EATEN BY TICKS",
+    "confidence": 0.986
+   },
+   {
+    "time": 4.0,
+    "text": "Barbero vs Garrapatas",
+    "confidence": 0.857
+   },
+   {
+    "time": 4.0,
+    "text": "EATEN BY TICKS",
+    "confidence": 0.751
+   },
+   {
+    "time": 6.0,
+    "text": "Barbero vs Garrapatas",
+    "confidence": 0.832
+   },
+   {
+    "time": 6.0,
+    "text": "EATEN BY TICKS",
+    "confidence": 0.989
+   },
+   {
+    "time": 8.0,
+    "text": "Barbero vs Garrapatas",
+    "confidence": 0.832
+   },
+   {
+    "time": 8.0,
+    "text": "EATEN BY TICKS",
+    "confidence": 0.99
+   },
+   {
+    "time": 10.0,
+    "text": "Barbero vs Garrapatas",
+    "confidence": 0.843
+   },
+   {
+    "time": 10.0,
+    "text": "EATEN BY TICKS",
+    "confidence": 0.786
+   },
+   {
+    "time": 10.0,
+    "text": "#FAKE",
+    "confidence": 0.884
+   },
+   {
+    "time": 10.0,
+    "text": "Black eyed Peas",
+    "confidence": 0.795
+   }
+  ],
+  "captions": [
+   {
+    "text": "Barbero vs Garrapatas",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.676,
+    "id": "o1"
+   },
+   {
+    "text": "EATEN BY TICKS",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.962,
+    "id": "o2"
+   },
+   {
+    "text": "Barbero vs Garrapatas",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.86,
+    "id": "o3"
+   },
+   {
+    "text": "EATEN BY TICKS",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.986,
+    "id": "o4"
+   },
+   {
+    "text": "Barbero vs Garrapatas",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.857,
+    "id": "o5"
+   },
+   {
+    "text": "EATEN BY TICKS",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.751,
+    "id": "o6"
+   },
+   {
+    "text": "Barbero vs Garrapatas",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.832,
+    "id": "o7"
+   },
+   {
+    "text": "EATEN BY TICKS",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.989,
+    "id": "o8"
+   },
+   {
+    "text": "Barbero vs Garrapatas",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.832,
+    "id": "o9"
+   },
+   {
+    "text": "EATEN BY TICKS",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.99,
+    "id": "o10"
+   },
+   {
+    "text": "Barbero vs Garrapatas",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.843,
+    "id": "o11"
+   },
+   {
+    "text": "EATEN BY TICKS",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.786,
+    "id": "o12"
+   },
+   {
+    "text": "#FAKE",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.884,
+    "id": "o13"
+   },
+   {
+    "text": "Black eyed Peas",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.795,
+    "id": "o14"
+   }
+  ]
+ }
+}

@@ -1,0 +1,1230 @@
+{
+ "video_id": "v104",
+ "filename": "new_TikTok_6930570813955476741.mp4",
+ "relative_path": "new_TikTok_6930570813955476741.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@malditobulo",
+ "extracted_at": "2026-11-23T08:45:56",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 1.0,
+  "duration_seconds": 29.0,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 6.32,
+    "text": "que el zumo de naranja hay que tomarlo rápido, al instante, porque si no se elevan las vitaminas"
+   },
+   {
+    "id": "t2",
+    "start": 6.32,
+    "end": 9.56,
+    "text": "es algo que todos hemos escuchado desde pequeños."
+   },
+   {
+    "id": "t3",
+    "start": 9.56,
+    "end": 12.44,
+    "text": "Pero adivina qué, es un bulo."
+   },
+   {
+    "id": "t4",
+    "start": 12.44,
+    "end": 17.44,
+    "text": "La realidad es que hasta 12 horas después de exprimirlo, puedes tomártelo tranquilamente"
+   },
+   {
+    "id": "t5",
+    "start": 17.44,
+    "end": 22.19,
+    "text": "porque la vitamina va a seguir intacta, como mucho cambiará el sabor."
+   },
+   {
+    "id": "t6",
+    "start": 22.19,
+    "end": 26.67,
+    "text": "Eso sí, no lo somete a condiciones extremas, metiéndolo por ejemplo en el microondas porque"
+   },
+   {
+    "id": "t7",
+    "start": 26.67,
+    "end": 28.91,
+    "text": "entonces sí se pueden ver afectadas las vitaminas."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 15,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Responder",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "comentaria de pepeperezgz",
+    "confidence": 0.735
+   },
+   {
+    "time": 0.0,
+    "text": "jajaja el de las vitaminas",
+    "confidence": 0.923
+   },
+   {
+    "time": 0.0,
+    "text": "zumo, que si no te lo",
+    "confidence": 0.563
+   },
+   {
+    "time": 0.0,
+    "text": "Y el",
+    "confidence": 0.764
+   },
+   {
+    "time": 0.0,
+    "text": "bebes se van",
+    "confidence": 0.977
+   },
+   {
+    "time": 0.0,
+    "text": "itomatelo",
+    "confidence": 0.948
+   },
+   {
+    "time": 0.0,
+    "text": "napidal",
+    "confidence": 0.721
+   },
+   {
+    "time": 2.0,
+    "text": "Responder",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "comentaria de pepeperezgz",
+    "confidence": 0.742
+   },
+   {
+    "time": 2.0,
+    "text": "jajaja el de las vitaminas",
+    "confidence": 0.905
+   },
+   {
+    "time": 2.0,
+    "text": "bebes se van",
+    "confidence": 0.976
+   },
+   {
+    "time": 4.0,
+    "text": "Responder",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "comentario de pepeperezgz",
+    "confidence": 0.825
+   },
+   {
+    "time": 4.0,
+    "text": "jajaja el de las vitaminas",
+    "confidence": 0.902
+   },
+   {
+    "time": 4.0,
+    "text": "y el zumo, que si no te lo",
+    "confidence": 0.779
+   },
+   {
+    "time": 4.0,
+    "text": "bebes se van",
+    "confidence": 0.957
+   },
+   {
+    "time": 6.0,
+    "text": "comentario de pepeperezgz",
+    "confidence": 0.642
+   },
+   {
+    "time": 6.0,
+    "text": "Responder",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.0,
+    "text": "jajaja el de las vitaminas",
+    "confidence": 0.915
+   },
+   {
+    "time": 6.0,
+    "text": "Y el",
+    "confidence": 0.76
+   },
+   {
+    "time": 6.0,
+    "text": "bebes se van",
+    "confidence": 0.957
+   },
+   {
+    "time": 8.0,
+    "text": "Responder",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "comentario de pepeperezgz",
+    "confidence": 0.783
+   },
+   {
+    "time": 8.0,
+    "text": "jajaja el de las vitaminas",
+    "confidence": 0.911
+   },
+   {
+    "time": 8.0,
+    "text": "Y el",
+    "confidence": 0.759
+   },
+   {
+    "time": 8.0,
+    "text": "bebes se van",
+    "confidence": 0.954
+   },
+   {
+    "time": 10.0,
+    "text": "Responder",
+    "confidence": 0.942
+   },
+   {
+    "time": 10.0,
+    "text": "comentario de pepeperezgz",
+    "confidence": 0.807
+   },
+   {
+    "time": 10.0,
+    "text": "jajaja el de las vitaminas",
+    "confidence": 0.902
+   },
+   {
+    "time": 10.0,
+    "text": "zumo, que si no te lo",
+    "confidence": 0.948
+   },
+   {
+    "time": 10.0,
+    "text": "Y el",
+    "confidence": 0.739
+   },
+   {
+    "time": 10.0,
+    "text": "bebes se van",
+    "confidence": 0.97
+   },
+   {
+    "time": 10.0,
+    "text": "BLO",
+    "confidence": 0.643
+   },
+   {
+    "time": 12.0,
+    "text": "Responder",
+    "confidence": 0.814
+   },
+   {
+    "time": 12.0,
+    "text": "comentario de pepeperezgz",
+    "confidence": 0.642
+   },
+   {
+    "time": 12.0,
+    "text": "jajaja el de las vitaminas",
+    "confidence": 0.908
+   },
+   {
+    "time": 12.0,
+    "text": "y el zumo, que si no te lo",
+    "confidence": 0.768
+   },
+   {
+    "time": 12.0,
+    "text": "bebes se van",
+    "confidence": 0.965
+   },
+   {
+    "time": 14.0,
+    "text": "Responder",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "comentario de pepeperezgz",
+    "confidence": 0.672
+   },
+   {
+    "time": 14.0,
+    "text": "jajaja el de las vitaminas",
+    "confidence": 0.905
+   },
+   {
+    "time": 14.0,
+    "text": "Y el",
+    "confidence": 0.755
+   },
+   {
+    "time": 14.0,
+    "text": "bebes se van",
+    "confidence": 0.974
+   },
+   {
+    "time": 14.0,
+    "text": "permanece hasta 12",
+    "confidence": 0.99
+   },
+   {
+    "time": 14.0,
+    "text": "horas despues de",
+    "confidence": 0.924
+   },
+   {
+    "time": 14.0,
+    "text": "exprimib",
+    "confidence": 0.631
+   },
+   {
+    "time": 16.0,
+    "text": "Responder",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "comentario de pepeperezgz",
+    "confidence": 0.862
+   },
+   {
+    "time": 16.0,
+    "text": "jajaja el de las vitaminas",
+    "confidence": 0.905
+   },
+   {
+    "time": 16.0,
+    "text": "zumo, que si no te lo",
+    "confidence": 0.528
+   },
+   {
+    "time": 16.0,
+    "text": "Y el",
+    "confidence": 0.753
+   },
+   {
+    "time": 16.0,
+    "text": "bebes se van",
+    "confidence": 0.974
+   },
+   {
+    "time": 16.0,
+    "text": "La vitamina €",
+    "confidence": 0.742
+   },
+   {
+    "time": 16.0,
+    "text": "permanece hasta 12",
+    "confidence": 0.998
+   },
+   {
+    "time": 16.0,
+    "text": "horas despues de",
+    "confidence": 0.958
+   },
+   {
+    "time": 16.0,
+    "text": "exprimib",
+    "confidence": 0.812
+   },
+   {
+    "time": 18.0,
+    "text": "Responder",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "comentario de pepeperezgz",
+    "confidence": 0.701
+   },
+   {
+    "time": 18.0,
+    "text": "jajaja el de las vitaminas",
+    "confidence": 0.803
+   },
+   {
+    "time": 18.0,
+    "text": "Y el",
+    "confidence": 0.787
+   },
+   {
+    "time": 18.0,
+    "text": "bebes se van",
+    "confidence": 0.976
+   },
+   {
+    "time": 18.0,
+    "text": "La vitamina €",
+    "confidence": 0.721
+   },
+   {
+    "time": 18.0,
+    "text": "permanece hasta 12",
+    "confidence": 0.809
+   },
+   {
+    "time": 18.0,
+    "text": "horas despuesde",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.0,
+    "text": "exprimirb",
+    "confidence": 0.584
+   },
+   {
+    "time": 20.0,
+    "text": "Responder",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "comentario de pepeperezgz",
+    "confidence": 0.822
+   },
+   {
+    "time": 20.0,
+    "text": "jajaja el de las vitaminas",
+    "confidence": 0.908
+   },
+   {
+    "time": 20.0,
+    "text": "Y el",
+    "confidence": 0.792
+   },
+   {
+    "time": 20.0,
+    "text": "bebes se van",
+    "confidence": 0.976
+   },
+   {
+    "time": 20.0,
+    "text": "La vitamina @",
+    "confidence": 0.873
+   },
+   {
+    "time": 20.0,
+    "text": "permanece hasta 12",
+    "confidence": 0.725
+   },
+   {
+    "time": 20.0,
+    "text": "horas despues de",
+    "confidence": 0.997
+   },
+   {
+    "time": 20.0,
+    "text": "exprimizk",
+    "confidence": 0.891
+   },
+   {
+    "time": 22.0,
+    "text": "Responder",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "comentario de pepeperezgz",
+    "confidence": 0.588
+   },
+   {
+    "time": 22.0,
+    "text": "jajaja el de las vitaminas",
+    "confidence": 0.792
+   },
+   {
+    "time": 22.0,
+    "text": "Y el",
+    "confidence": 0.837
+   },
+   {
+    "time": 22.0,
+    "text": "bebes se van",
+    "confidence": 0.97
+   },
+   {
+    "time": 24.0,
+    "text": "Responder",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "comentario de pepeperezgz",
+    "confidence": 0.629
+   },
+   {
+    "time": 24.0,
+    "text": "jajaja el de las vitaminas",
+    "confidence": 0.911
+   },
+   {
+    "time": 24.0,
+    "text": "Y el",
+    "confidence": 0.762
+   },
+   {
+    "time": 24.0,
+    "text": "bebes se van",
+    "confidence": 0.972
+   },
+   {
+    "time": 24.0,
+    "text": "WARNING",
+    "confidence": 0.999
+   },
+   {
+    "time": 26.0,
+    "text": "Responder",
+    "confidence": 0.931
+   },
+   {
+    "time": 26.0,
+    "text": "comentario de pepeperezgz",
+    "confidence": 0.658
+   },
+   {
+    "time": 26.0,
+    "text": "jajaja el de las vitaminas",
+    "confidence": 0.919
+   },
+   {
+    "time": 26.0,
+    "text": "Y el",
+    "confidence": 0.789
+   },
+   {
+    "time": 26.0,
+    "text": "bebes se van",
+    "confidence": 0.971
+   },
+   {
+    "time": 28.0,
+    "text": "Responder",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "comentario de pepeperezgz",
+    "confidence": 0.786
+   },
+   {
+    "time": 28.0,
+    "text": "jajaja el de las vitaminas",
+    "confidence": 0.914
+   },
+   {
+    "time": 28.0,
+    "text": "Y el",
+    "confidence": 0.786
+   },
+   {
+    "time": 28.0,
+    "text": "bebes se van",
+    "confidence": 0.973
+   }
+  ],
+  "captions": [
+   {
+    "text": "Responder",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o1"
+   },
+   {
+    "text": "comentaria de pepeperezgz",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.735,
+    "id": "o2"
+   },
+   {
+    "text": "jajaja el de las vitaminas",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.923,
+    "id": "o3"
+   },
+   {
+    "text": "zumo, que si no te lo",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.563,
+    "id": "o4"
+   },
+   {
+    "text": "Y el",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.764,
+    "id": "o5"
+   },
+   {
+    "text": "bebes se van",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.977,
+    "id": "o6"
+   },
+   {
+    "text": "itomatelo",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.948,
+    "id": "o7"
+   },
+   {
+    "text": "napidal",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.721,
+    "id": "o8"
+   },
+   {
+    "text": "Responder",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "comentaria de pepeperezgz",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.742,
+    "id": "o10"
+   },
+   {
+    "text": "jajaja el de las vitaminas",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.905,
+    "id": "o11"
+   },
+   {
+    "text": "bebes se van",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.976,
+    "id": "o12"
+   },
+   {
+    "text": "Responder",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o13"
+   },
+   {
+    "text": "comentario de pepeperezgz",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.825,
+    "id": "o14"
+   },
+   {
+    "text": "jajaja el de las vitaminas",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.902,
+    "id": "o15"
+   },
+   {
+    "text": "y el zumo, que si no te lo",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.779,
+    "id": "o16"
+   },
+   {
+    "text": "bebes se van",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.957,
+    "id": "o17"
+   },
+   {
+    "text": "comentario de pepeperezgz",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.642,
+    "id": "o18"
+   },
+   {
+    "text": "Responder",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.999,
+    "id": "o19"
+   },
+   {
+    "text": "jajaja el de las vitaminas",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.915,
+    "id": "o20"
+   },
+   {
+    "text": "Y el",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.76,
+    "id": "o21"
+   },
+   {
+    "text": "bebes se van",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.957,
+    "id": "o22"
+   },
+   {
+    "text": "Responder",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o23"
+   },
+   {
+    "text": "comentario de pepeperezgz",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.783,
+    "id": "o24"
+   },
+   {
+    "text": "jajaja el de las vitaminas",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.911,
+    "id": "o25"
+   },
+   {
+    "text": "Y el",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.759,
+    "id": "o26"
+   },
+   {
+    "text": "bebes se van",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.954,
+    "id": "o27"
+   },
+   {
+    "text": "Responder",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.942,
+    "id": "o28"
+   },
+   {
+    "text": "comentario de pepeperezgz",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.807,
+    "id": "o29"
+   },
+   {
+    "text": "jajaja el de las vitaminas",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.902,
+    "id": "o30"
+   },
+   {
+    "text": "zumo, que si no te lo",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.948,
+    "id": "o31"
+   },
+   {
+    "text": "Y el",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.739,
+    "id": "o32"
+   },
+   {
+    "text": "bebes se van",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.97,
+    "id": "o33"
+   },
+   {
+    "text": "BLO",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.643,
+    "id": "o34"
+   },
+   {
+    "text": "Responder",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.814,
+    "id": "o35"
+   },
+   {
+    "text": "comentario de pepeperezgz",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.642,
+    "id": "o36"
+   },
+   {
+    "text": "jajaja el de las vitaminas",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.908,
+    "id": "o37"
+   },
+   {
+    "text": "y el zumo, que si no te lo",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.768,
+    "id": "o38"
+   },
+   {
+    "text": "bebes se van",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.965,
+    "id": "o39"
+   },
+   {
+    "text": "Responder",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o40"
+   },
+   {
+    "text": "comentario de pepeperezgz",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.672,
+    "id": "o41"
+   },
+   {
+    "text": "jajaja el de las vitaminas",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.905,
+    "id": "o42"
+   },
+   {
+    "text": "Y el",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.755,
+    "id": "o43"
+   },
+   {
+    "text": "bebes se van",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.974,
+    "id": "o44"
+   },
+   {
+    "text": "permanece hasta 12",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.99,
+    "id": "o45"
+   },
+   {
+    "text": "horas despues de",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.924,
+    "id": "o46"
+   },
+   {
+    "text": "exprimib",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.631,
+    "id": "o47"
+   },
+   {
+    "text": "Responder",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o48"
+   },
+   {
+    "text": "comentario de pepeperezgz",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.862,
+    "id": "o49"
+   },
+   {
+    "text": "jajaja el de las vitaminas",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.905,
+    "id": "o50"
+   },
+   {
+    "text": "zumo, que si no te lo",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.528,
+    "id": "o51"
+   },
+   {
+    "text": "Y el",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.753,
+    "id": "o52"
+   },
+   {
+    "text": "bebes se van",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.974,
+    "id": "o53"
+   },
+   {
+    "text": "La vitamina €",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.742,
+    "id": "o54"
+   },
+   {
+    "text": "permanece hasta 12",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.998,
+    "id": "o55"
+   },
+   {
+    "text": "horas despues de",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.958,
+    "id": "o56"
+   },
+   {
+    "text": "exprimib",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.812,
+    "id": "o57"
+   },
+   {
+    "text": "Responder",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 1.0,
+    "id": "o58"
+   },
+   {
+    "text": "comentario de pepeperezgz",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.701,
+    "id": "o59"
+   },
+   {
+    "text": "jajaja el de las vitaminas",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.803,
+    "id": "o60"
+   },
+   {
+    "text": "Y el",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.787,
+    "id": "o61"
+   },
+   {
+    "text": "bebes se van",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.976,
+    "id": "o62"
+   },
+   {
+    "text": "La vitamina €",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.721,
+    "id": "o63"
+   },
+   {
+    "text": "permanece hasta 12",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.809,
+    "id": "o64"
+   },
+   {
+    "text": "horas despuesde",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.999,
+    "id": "o65"
+   },
+   {
+    "text": "exprimirb",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.584,
+    "id": "o66"
+   },
+   {
+    "text": "Responder",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o67"
+   },
+   {
+    "text": "comentario de pepeperezgz",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.822,
+    "id": "o68"
+   },
+   {
+    "text": "jajaja el de las vitaminas",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.908,
+    "id": "o69"
+   },
+   {
+    "text": "Y el",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.792,
+    "id": "o70"
+   },
+   {
+    "text": "bebes se van",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.976,
+    "id": "o71"
+   },
+   {
+    "text": "La vitamina @",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.873,
+    "id": "o72"
+   },
+   {
+    "text": "permanece hasta 12",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.725,
+    "id": "o73"
+   },
+   {
+    "text": "horas despues de",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.997,
+    "id": "o74"
+   },
+   {
+    "text": "exprimizk",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.891,
+    "id": "o75"
+   },
+   {
+    "text": "Responder",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o76"
+   },
+   {
+    "text": "comentario de pepeperezgz",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.588,
+    "id": "o77"
+   },
+   {
+    "text": "jajaja el de las vitaminas",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.792,
+    "id": "o78"
+   },
+   {
+    "text": "Y el",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.837,
+    "id": "o79"
+   },
+   {
+    "text": "bebes se van",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.97,
+    "id": "o80"
+   },
+   {
+    "text": "Responder",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o81"
+   },
+   {
+    "text": "comentario de pepeperezgz",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.629,
+    "id": "o82"
+   },
+   {
+    "text": "jajaja el de las vitaminas",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.911,
+    "id": "o83"
+   },
+   {
+    "text": "Y el",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.762,
+    "id": "o84"
+   },
+   {
+    "text": "bebes se van",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.972,
+    "id": "o85"
+   },
+   {
+    "text": "WARNING",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.999,
+    "id": "o86"
+   },
+   {
+    "text": "Responder",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.931,
+    "id": "o87"
+   },
+   {
+    "text": "comentario de pepeperezgz",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.658,
+    "id": "o88"
+   },
+   {
+    "text": "jajaja el de las vitaminas",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.919,
+    "id": "o89"
+   },
+   {
+    "text": "Y el",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.789,
+    "id": "o90"
+   },
+   {
+    "text": "bebes se van",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.971,
+    "id": "o91"
+   },
+   {
+    "text": "Responder",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o92"
+   },
+   {
+    "text": "comentario de pepeperezgz",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.786,
+    "id": "o93"
+   },
+   {
+    "text": "jajaja el de las vitaminas",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.914,
+    "id": "o94"
+   },
+   {
+    "text": "Y el",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.786,
+    "id": "o95"
+   },
+   {
+    "text": "bebes se van",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.973,
+    "id": "o96"
+   }
+  ]
+ }
+}

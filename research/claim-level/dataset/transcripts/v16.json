@@ -1,0 +1,1613 @@
+{
+ "video_id": "v16",
+ "filename": "f03105602e20523d44d2d37a9a143f88.mp4",
+ "relative_path": "Misinfo Dataset/Haoran Zhang/No misinfo/f03105602e20523d44d2d37a9a143f88.mp4",
+ "collector": "Haoran Zhang",
+ "collector_label": "NO_MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T17:48:47",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 62.67,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.18,
+    "text": "You ever wondered what the oldest animal is that we've ever discovered?"
+   },
+   {
+    "id": "t2",
+    "start": 3.18,
+    "end": 5.86,
+    "text": "Well, if you haven't, you're definitely wondering it now, so let's talk about it."
+   },
+   {
+    "id": "t3",
+    "start": 5.86,
+    "end": 7.46,
+    "text": "Maybe it's an elephant."
+   },
+   {
+    "id": "t4",
+    "start": 7.46,
+    "end": 8.88,
+    "text": "They live for a long time, right?"
+   },
+   {
+    "id": "t5",
+    "start": 8.88,
+    "end": 11.34,
+    "text": "Or maybe it's a whale. Those also live for a long time."
+   },
+   {
+    "id": "t6",
+    "start": 11.34,
+    "end": 14.9,
+    "text": "Nope, not an elephant or a whale. It's something much, much more exciting."
+   },
+   {
+    "id": "t7",
+    "start": 14.9,
+    "end": 15.74,
+    "text": "Are you ready for this?"
+   },
+   {
+    "id": "t8",
+    "start": 15.74,
+    "end": 19.18,
+    "text": "Behold, the oldest animal ever discovered."
+   },
+   {
+    "id": "t9",
+    "start": 19.18,
+    "end": 21.6,
+    "text": "This clam, whose name is Ming."
+   },
+   {
+    "id": "t10",
+    "start": 21.6,
+    "end": 25.5,
+    "text": "Ming was dredged up by researchers off the coast of Iceland in 2006."
+   },
+   {
+    "id": "t11",
+    "start": 25.5,
+    "end": 27.58,
+    "text": "Now, when they first found him, they just thought Ming was a clam."
+   },
+   {
+    "id": "t12",
+    "start": 27.58,
+    "end": 29.54,
+    "text": "You know, they hadn't made an introduction yet."
+   },
+   {
+    "id": "t13",
+    "start": 29.54,
+    "end": 32.4,
+    "text": "They brought Ming and a bunch of his buddies back to their lab for study."
+   },
+   {
+    "id": "t14",
+    "start": 32.4,
+    "end": 36.2,
+    "text": "Another data point was looking at how old the clams were, which you can actually do fairly easily."
+   },
+   {
+    "id": "t15",
+    "start": 36.2,
+    "end": 39.2,
+    "text": "The clam shells are deposited in layers like tree rings."
+   },
+   {
+    "id": "t16",
+    "start": 39.2,
+    "end": 41.46,
+    "text": "So if you count the layers, you can figure out how old the clam is."
+   },
+   {
+    "id": "t17",
+    "start": 41.46,
+    "end": 44.66,
+    "text": "Fortunately, you can't do this while the clam's alive, so they had to freeze all of them."
+   },
+   {
+    "id": "t18",
+    "start": 44.66,
+    "end": 49.2,
+    "text": "And it was only after that that they sampled Ming and learned that it was 507 years old."
+   },
+   {
+    "id": "t19",
+    "start": 49.2,
+    "end": 51.26,
+    "text": "It'd be really cool to make a discovery like this,"
+   },
+   {
+    "id": "t20",
+    "start": 51.26,
+    "end": 55.3,
+    "text": "but it also come with the realization that you just killed the oldest single individual animal on the planet."
+   },
+   {
+    "id": "t21",
+    "start": 55.3,
+    "end": 58.6,
+    "text": "RIP Ming, 1499-2006, you traded your shells for wings."
+   },
+   {
+    "id": "t22",
+    "start": 58.6,
+    "end": 59.1,
+    "text": "Thanks for watching."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 32,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.961
+   },
+   {
+    "time": 0.0,
+    "text": "miniminuteman",
+    "confidence": 0.998
+   },
+   {
+    "time": 2.0,
+    "text": "VoU ever wondered what the",
+    "confidence": 0.71
+   },
+   {
+    "time": 2.0,
+    "text": "'ve",
+    "confidence": 0.995
+   },
+   {
+    "time": 2.0,
+    "text": "oldest animal is that we'",
+    "confidence": 0.83
+   },
+   {
+    "time": 2.0,
+    "text": "ever discovered?",
+    "confidence": 0.559
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "@ miniminuteman",
+    "confidence": 0.921
+   },
+   {
+    "time": 4.0,
+    "text": "vou're definitely wondering it",
+    "confidence": 0.881
+   },
+   {
+    "time": 4.0,
+    "text": "now",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.995
+   },
+   {
+    "time": 4.0,
+    "text": "@ miniminuteman",
+    "confidence": 0.881
+   },
+   {
+    "time": 6.0,
+    "text": "so let's talk about it maybe",
+    "confidence": 0.909
+   },
+   {
+    "time": 6.0,
+    "text": "it\"san elephant",
+    "confidence": 0.68
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "miniminuteman",
+    "confidence": 0.987
+   },
+   {
+    "time": 8.0,
+    "text": "thevliveforalong timeright",
+    "confidence": 0.739
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "maybe it's a whale those",
+    "confidence": 0.708
+   },
+   {
+    "time": 10.0,
+    "text": "or",
+    "confidence": 0.915
+   },
+   {
+    "time": 10.0,
+    "text": "also live for a long time",
+    "confidence": 0.951
+   },
+   {
+    "time": 12.0,
+    "text": "nope not an elephant or a",
+    "confidence": 0.886
+   },
+   {
+    "time": 12.0,
+    "text": "whale",
+    "confidence": 0.579
+   },
+   {
+    "time": 14.0,
+    "text": "exciting",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "much much more",
+    "confidence": 0.876
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 0.842
+   },
+   {
+    "time": 16.0,
+    "text": "you ready for this",
+    "confidence": 0.847
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "miniminuteman",
+    "confidence": 0.996
+   },
+   {
+    "time": 18.0,
+    "text": "behold, the oldest animal",
+    "confidence": 0.655
+   },
+   {
+    "time": 18.0,
+    "text": "ever discovered",
+    "confidence": 0.613
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 20.0,
+    "text": "this clam",
+    "confidence": 0.998
+   },
+   {
+    "time": 20.0,
+    "text": "TikTok",
+    "confidence": 0.985
+   },
+   {
+    "time": 20.0,
+    "text": "miniminuteman",
+    "confidence": 0.712
+   },
+   {
+    "time": 22.0,
+    "text": "Ming",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "dredged up by",
+    "confidence": 0.983
+   },
+   {
+    "time": 22.0,
+    "text": "was",
+    "confidence": 0.999
+   },
+   {
+    "time": 22.0,
+    "text": "researchers off the coast of",
+    "confidence": 0.618
+   },
+   {
+    "time": 22.0,
+    "text": "Iceland in 2006",
+    "confidence": 0.892
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 22.0,
+    "text": "miniminuteman",
+    "confidence": 0.851
+   },
+   {
+    "time": 24.0,
+    "text": "Ming was dredged up by",
+    "confidence": 0.989
+   },
+   {
+    "time": 24.0,
+    "text": "researchers off the coast of",
+    "confidence": 0.951
+   },
+   {
+    "time": 24.0,
+    "text": "Iceland in 2006",
+    "confidence": 0.859
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 0.993
+   },
+   {
+    "time": 26.0,
+    "text": "they",
+    "confidence": 0.879
+   },
+   {
+    "time": 26.0,
+    "text": "now when",
+    "confidence": 0.908
+   },
+   {
+    "time": 26.0,
+    "text": "first found",
+    "confidence": 0.991
+   },
+   {
+    "time": 26.0,
+    "text": "out",
+    "confidence": 0.975
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 28.0,
+    "text": "they",
+    "confidence": 0.878
+   },
+   {
+    "time": 28.0,
+    "text": "you know",
+    "confidence": 0.697
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "brought Ming and a",
+    "confidence": 0.835
+   },
+   {
+    "time": 30.0,
+    "text": "thev",
+    "confidence": 0.826
+   },
+   {
+    "time": 30.0,
+    "text": "bunch of his buddies back",
+    "confidence": 0.696
+   },
+   {
+    "time": 30.0,
+    "text": "theirlab for study",
+    "confidence": 0.921
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 0.969
+   },
+   {
+    "time": 32.0,
+    "text": "brought Ming and a",
+    "confidence": 0.832
+   },
+   {
+    "time": 32.0,
+    "text": "thev",
+    "confidence": 0.826
+   },
+   {
+    "time": 32.0,
+    "text": "bunch of his buddies back",
+    "confidence": 0.697
+   },
+   {
+    "time": 32.0,
+    "text": "theirlab for study",
+    "confidence": 0.852
+   },
+   {
+    "time": 34.0,
+    "text": "further data points was",
+    "confidence": 0.999
+   },
+   {
+    "time": 34.0,
+    "text": "lookingat how old the clams",
+    "confidence": 0.665
+   },
+   {
+    "time": 34.0,
+    "text": "were",
+    "confidence": 0.901
+   },
+   {
+    "time": 34.0,
+    "text": "TikTok",
+    "confidence": 0.988
+   },
+   {
+    "time": 34.0,
+    "text": "@ miniminuteman",
+    "confidence": 0.762
+   },
+   {
+    "time": 36.0,
+    "text": "actually do",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "which VOU can",
+    "confidence": 0.882
+   },
+   {
+    "time": 36.0,
+    "text": "fairly easily",
+    "confidence": 0.949
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 38.0,
+    "text": "the clamshellsare deposited",
+    "confidence": 0.852
+   },
+   {
+    "time": 38.0,
+    "text": "MUSCUM",
+    "confidence": 0.883
+   },
+   {
+    "time": 38.0,
+    "text": "TikTok",
+    "confidence": 0.667
+   },
+   {
+    "time": 40.0,
+    "text": "like treeringsif voucount the",
+    "confidence": 0.637
+   },
+   {
+    "time": 40.0,
+    "text": "layers",
+    "confidence": 0.627
+   },
+   {
+    "time": 40.0,
+    "text": "FLC",
+    "confidence": 0.717
+   },
+   {
+    "time": 40.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "VoU can'tdo this while the",
+    "confidence": 0.667
+   },
+   {
+    "time": 42.0,
+    "text": "MUSEUM",
+    "confidence": 0.905
+   },
+   {
+    "time": 42.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "miniminuteman",
+    "confidence": 0.974
+   },
+   {
+    "time": 44.0,
+    "text": "SO theyhad-to freezeall of",
+    "confidence": 0.667
+   },
+   {
+    "time": 44.0,
+    "text": "them",
+    "confidence": 0.993
+   },
+   {
+    "time": 44.0,
+    "text": "FLORIDA",
+    "confidence": 0.994
+   },
+   {
+    "time": 44.0,
+    "text": "MUSEUM;",
+    "confidence": 0.607
+   },
+   {
+    "time": 44.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "and it was only after that that",
+    "confidence": 0.94
+   },
+   {
+    "time": 46.0,
+    "text": "Ming",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "thev",
+    "confidence": 0.989
+   },
+   {
+    "time": 46.0,
+    "text": "Sampled",
+    "confidence": 0.549
+   },
+   {
+    "time": 46.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "iniminuteman",
+    "confidence": 0.837
+   },
+   {
+    "time": 48.0,
+    "text": "and Learned that it was 507",
+    "confidence": 0.794
+   },
+   {
+    "time": 48.0,
+    "text": "years old",
+    "confidence": 0.908
+   },
+   {
+    "time": 48.0,
+    "text": "TikTok",
+    "confidence": 0.58
+   },
+   {
+    "time": 50.0,
+    "text": "be really cool to make a",
+    "confidence": 0.8
+   },
+   {
+    "time": 50.0,
+    "text": "discovery like this",
+    "confidence": 0.658
+   },
+   {
+    "time": 50.0,
+    "text": "TikTok",
+    "confidence": 0.993
+   },
+   {
+    "time": 52.0,
+    "text": "but also come with the",
+    "confidence": 0.771
+   },
+   {
+    "time": 52.0,
+    "text": "realization you just killed the",
+    "confidence": 0.867
+   },
+   {
+    "time": 52.0,
+    "text": "oldest single",
+    "confidence": 0.989
+   },
+   {
+    "time": 52.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "miniminuteman",
+    "confidence": 0.931
+   },
+   {
+    "time": 54.0,
+    "text": "individual animal on the",
+    "confidence": 0.86
+   },
+   {
+    "time": 54.0,
+    "text": "planet",
+    "confidence": 0.911
+   },
+   {
+    "time": 54.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "Ming",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "rip",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "1499 to2006",
+    "confidence": 0.636
+   },
+   {
+    "time": 56.0,
+    "text": "8",
+    "confidence": 0.623
+   },
+   {
+    "time": 56.0,
+    "text": "TikTok",
+    "confidence": 0.974
+   },
+   {
+    "time": 58.0,
+    "text": "you traded your shells for",
+    "confidence": 0.915
+   },
+   {
+    "time": 58.0,
+    "text": "wings",
+    "confidence": 0.88
+   },
+   {
+    "time": 58.0,
+    "text": "TikTok",
+    "confidence": 0.98
+   },
+   {
+    "time": 60.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 60.0,
+    "text": "@ miniminuteman",
+    "confidence": 0.992
+   },
+   {
+    "time": 62.0,
+    "text": "J",
+    "confidence": 0.7
+   },
+   {
+    "time": 62.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 62.0,
+    "text": "@ miniminuteman",
+    "confidence": 0.996
+   }
+  ],
+  "captions": [
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.961,
+    "id": "o1"
+   },
+   {
+    "text": "miniminuteman",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.998,
+    "id": "o2"
+   },
+   {
+    "text": "VoU ever wondered what the",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.71,
+    "id": "o3"
+   },
+   {
+    "text": "'ve",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.995,
+    "id": "o4"
+   },
+   {
+    "text": "oldest animal is that we'",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.83,
+    "id": "o5"
+   },
+   {
+    "text": "ever discovered?",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.559,
+    "id": "o6"
+   },
+   {
+    "text": "TikTok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.999,
+    "id": "o7"
+   },
+   {
+    "text": "@ miniminuteman",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.921,
+    "id": "o8"
+   },
+   {
+    "text": "vou're definitely wondering it",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.881,
+    "id": "o9"
+   },
+   {
+    "text": "now",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o10"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.995,
+    "id": "o11"
+   },
+   {
+    "text": "@ miniminuteman",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.881,
+    "id": "o12"
+   },
+   {
+    "text": "so let's talk about it maybe",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.909,
+    "id": "o13"
+   },
+   {
+    "text": "it\"san elephant",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.68,
+    "id": "o14"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o15"
+   },
+   {
+    "text": "miniminuteman",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.987,
+    "id": "o16"
+   },
+   {
+    "text": "thevliveforalong timeright",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.739,
+    "id": "o17"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o18"
+   },
+   {
+    "text": "maybe it's a whale those",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.708,
+    "id": "o19"
+   },
+   {
+    "text": "or",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.915,
+    "id": "o20"
+   },
+   {
+    "text": "also live for a long time",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.951,
+    "id": "o21"
+   },
+   {
+    "text": "nope not an elephant or a",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.886,
+    "id": "o22"
+   },
+   {
+    "text": "whale",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.579,
+    "id": "o23"
+   },
+   {
+    "text": "exciting",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o24"
+   },
+   {
+    "text": "much much more",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.876,
+    "id": "o25"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.842,
+    "id": "o26"
+   },
+   {
+    "text": "you ready for this",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.847,
+    "id": "o27"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o28"
+   },
+   {
+    "text": "miniminuteman",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.996,
+    "id": "o29"
+   },
+   {
+    "text": "behold, the oldest animal",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.655,
+    "id": "o30"
+   },
+   {
+    "text": "ever discovered",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.613,
+    "id": "o31"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.998,
+    "id": "o32"
+   },
+   {
+    "text": "this clam",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.998,
+    "id": "o33"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.985,
+    "id": "o34"
+   },
+   {
+    "text": "miniminuteman",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.712,
+    "id": "o35"
+   },
+   {
+    "text": "Ming",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o36"
+   },
+   {
+    "text": "dredged up by",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.983,
+    "id": "o37"
+   },
+   {
+    "text": "was",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.999,
+    "id": "o38"
+   },
+   {
+    "text": "researchers off the coast of",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.618,
+    "id": "o39"
+   },
+   {
+    "text": "Iceland in 2006",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.892,
+    "id": "o40"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.998,
+    "id": "o41"
+   },
+   {
+    "text": "miniminuteman",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.851,
+    "id": "o42"
+   },
+   {
+    "text": "Ming was dredged up by",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.989,
+    "id": "o43"
+   },
+   {
+    "text": "researchers off the coast of",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.951,
+    "id": "o44"
+   },
+   {
+    "text": "Iceland in 2006",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.859,
+    "id": "o45"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.993,
+    "id": "o46"
+   },
+   {
+    "text": "they",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.879,
+    "id": "o47"
+   },
+   {
+    "text": "now when",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.908,
+    "id": "o48"
+   },
+   {
+    "text": "first found",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.991,
+    "id": "o49"
+   },
+   {
+    "text": "out",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.975,
+    "id": "o50"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.999,
+    "id": "o51"
+   },
+   {
+    "text": "they",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.878,
+    "id": "o52"
+   },
+   {
+    "text": "you know",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.697,
+    "id": "o53"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o54"
+   },
+   {
+    "text": "brought Ming and a",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.835,
+    "id": "o55"
+   },
+   {
+    "text": "thev",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.826,
+    "id": "o56"
+   },
+   {
+    "text": "bunch of his buddies back",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.696,
+    "id": "o57"
+   },
+   {
+    "text": "theirlab for study",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.921,
+    "id": "o58"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.969,
+    "id": "o59"
+   },
+   {
+    "text": "brought Ming and a",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.832,
+    "id": "o60"
+   },
+   {
+    "text": "thev",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.826,
+    "id": "o61"
+   },
+   {
+    "text": "bunch of his buddies back",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.697,
+    "id": "o62"
+   },
+   {
+    "text": "theirlab for study",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.852,
+    "id": "o63"
+   },
+   {
+    "text": "further data points was",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.999,
+    "id": "o64"
+   },
+   {
+    "text": "lookingat how old the clams",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.665,
+    "id": "o65"
+   },
+   {
+    "text": "were",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.901,
+    "id": "o66"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.988,
+    "id": "o67"
+   },
+   {
+    "text": "@ miniminuteman",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.762,
+    "id": "o68"
+   },
+   {
+    "text": "actually do",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o69"
+   },
+   {
+    "text": "which VOU can",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.882,
+    "id": "o70"
+   },
+   {
+    "text": "fairly easily",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.949,
+    "id": "o71"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.997,
+    "id": "o72"
+   },
+   {
+    "text": "the clamshellsare deposited",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.852,
+    "id": "o73"
+   },
+   {
+    "text": "MUSCUM",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.883,
+    "id": "o74"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.667,
+    "id": "o75"
+   },
+   {
+    "text": "like treeringsif voucount the",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.637,
+    "id": "o76"
+   },
+   {
+    "text": "layers",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.627,
+    "id": "o77"
+   },
+   {
+    "text": "FLC",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.717,
+    "id": "o78"
+   },
+   {
+    "text": "TikTok",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o79"
+   },
+   {
+    "text": "VoU can'tdo this while the",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.667,
+    "id": "o80"
+   },
+   {
+    "text": "MUSEUM",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.905,
+    "id": "o81"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o82"
+   },
+   {
+    "text": "miniminuteman",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.974,
+    "id": "o83"
+   },
+   {
+    "text": "SO theyhad-to freezeall of",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.667,
+    "id": "o84"
+   },
+   {
+    "text": "them",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.993,
+    "id": "o85"
+   },
+   {
+    "text": "FLORIDA",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.994,
+    "id": "o86"
+   },
+   {
+    "text": "MUSEUM;",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.607,
+    "id": "o87"
+   },
+   {
+    "text": "TikTok",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o88"
+   },
+   {
+    "text": "and it was only after that that",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.94,
+    "id": "o89"
+   },
+   {
+    "text": "Ming",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o90"
+   },
+   {
+    "text": "thev",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.989,
+    "id": "o91"
+   },
+   {
+    "text": "Sampled",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.549,
+    "id": "o92"
+   },
+   {
+    "text": "TikTok",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o93"
+   },
+   {
+    "text": "iniminuteman",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.837,
+    "id": "o94"
+   },
+   {
+    "text": "and Learned that it was 507",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.794,
+    "id": "o95"
+   },
+   {
+    "text": "years old",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.908,
+    "id": "o96"
+   },
+   {
+    "text": "TikTok",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.58,
+    "id": "o97"
+   },
+   {
+    "text": "be really cool to make a",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.8,
+    "id": "o98"
+   },
+   {
+    "text": "discovery like this",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.658,
+    "id": "o99"
+   },
+   {
+    "text": "TikTok",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.993,
+    "id": "o100"
+   },
+   {
+    "text": "but also come with the",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.771,
+    "id": "o101"
+   },
+   {
+    "text": "realization you just killed the",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.867,
+    "id": "o102"
+   },
+   {
+    "text": "oldest single",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.989,
+    "id": "o103"
+   },
+   {
+    "text": "TikTok",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o104"
+   },
+   {
+    "text": "miniminuteman",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.931,
+    "id": "o105"
+   },
+   {
+    "text": "individual animal on the",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.86,
+    "id": "o106"
+   },
+   {
+    "text": "planet",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.911,
+    "id": "o107"
+   },
+   {
+    "text": "TikTok",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o108"
+   },
+   {
+    "text": "Ming",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 1.0,
+    "id": "o109"
+   },
+   {
+    "text": "rip",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 1.0,
+    "id": "o110"
+   },
+   {
+    "text": "1499 to2006",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.636,
+    "id": "o111"
+   },
+   {
+    "text": "8",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.623,
+    "id": "o112"
+   },
+   {
+    "text": "TikTok",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.974,
+    "id": "o113"
+   },
+   {
+    "text": "you traded your shells for",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.915,
+    "id": "o114"
+   },
+   {
+    "text": "wings",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.88,
+    "id": "o115"
+   },
+   {
+    "text": "TikTok",
+    "start": 58.0,
+    "end": 60.0,
+    "confidence": 0.999,
+    "id": "o116"
+   },
+   {
+    "text": "@ miniminuteman",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.992,
+    "id": "o117"
+   },
+   {
+    "text": "J",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.7,
+    "id": "o118"
+   },
+   {
+    "text": "TikTok",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.998,
+    "id": "o119"
+   },
+   {
+    "text": "@ miniminuteman",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.996,
+    "id": "o120"
+   }
+  ]
+ }
+}

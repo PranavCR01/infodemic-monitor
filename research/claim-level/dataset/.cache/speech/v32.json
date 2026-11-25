@@ -1,0 +1,260 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 168.46,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 1.68,
+    "text": "You can't get off of it."
+   },
+   {
+    "id": "t2",
+    "start": 1.68,
+    "end": 5.4,
+    "text": "If you go to get off of it, you gain all the weight back."
+   },
+   {
+    "id": "t3",
+    "start": 5.4,
+    "end": 8.92,
+    "text": "It never solved the root cause problem."
+   },
+   {
+    "id": "t4",
+    "start": 8.92,
+    "end": 11.0,
+    "text": "It wasn't made to help you lose 10 pounds."
+   },
+   {
+    "id": "t5",
+    "start": 11.0,
+    "end": 13.8,
+    "text": "It was for the person that was about to lose a limb."
+   },
+   {
+    "id": "t6",
+    "start": 13.8,
+    "end": 17.24,
+    "text": "We've now using it for people to lose weight"
+   },
+   {
+    "id": "t7",
+    "start": 17.24,
+    "end": 19.4,
+    "text": "so they can feel better about themselves."
+   },
+   {
+    "id": "t8",
+    "start": 19.4,
+    "end": 22.04,
+    "text": "Okay, in that concept, we have a couple problems."
+   },
+   {
+    "id": "t9",
+    "start": 22.04,
+    "end": 24.56,
+    "text": "For starters, it's expensive."
+   },
+   {
+    "id": "t10",
+    "start": 24.56,
+    "end": 28.52,
+    "text": "So now you're on $1,000 a month to keep the same weight."
+   },
+   {
+    "id": "t11",
+    "start": 28.52,
+    "end": 32.36,
+    "text": "Ozympic kills hunger. And that's one of the reasons it's causing people to lose weight."
+   },
+   {
+    "id": "t12",
+    "start": 33.0,
+    "end": 39.64,
+    "text": "You need food to make hair and nails and muscles and hormones and neurotransmitters."
+   },
+   {
+    "id": "t13",
+    "start": 39.64,
+    "end": 45.08,
+    "text": "We don't know what it does to the microbiome. And the microbiome is what is making serotonin that"
+   },
+   {
+    "id": "t14",
+    "start": 45.08,
+    "end": 49.48,
+    "text": "keeps us happy. The microbiome, there's a set of bacteria in our gut called the astrobalome"
+   },
+   {
+    "id": "t15",
+    "start": 49.48,
+    "end": 54.6,
+    "text": "that break estrogen down. If we destroy our microbiome, you destroy your body and you destroy"
+   },
+   {
+    "id": "t16",
+    "start": 54.6,
+    "end": 55.6,
+    "text": "your mind."
+   },
+   {
+    "id": "t17",
+    "start": 55.6,
+    "end": 59.84,
+    "text": "The last one that I will tell you is that it's the empowerment piece."
+   },
+   {
+    "id": "t18",
+    "start": 59.84,
+    "end": 67.65,
+    "text": "When I inject something into me and I lose weight, who do I give credit to?"
+   },
+   {
+    "id": "t19",
+    "start": 67.65,
+    "end": 71.89,
+    "text": "What happens when the human forgets how powerful they are?"
+   },
+   {
+    "id": "t20",
+    "start": 71.89,
+    "end": 78.17,
+    "text": "Let's not rob a woman of the experience of figuring out how to drop weight."
+   },
+   {
+    "id": "t21",
+    "start": 78.17,
+    "end": 82.79,
+    "text": "And by the way, a fasting lifestyle will give you the same weight loss result and save you"
+   },
+   {
+    "id": "t22",
+    "start": 82.79,
+    "end": 89.63,
+    "text": "money as ozempic and you walk out of that and you are like I'm a badass I did"
+   },
+   {
+    "id": "t23",
+    "start": 89.63,
+    "end": 93.51,
+    "text": "this I did that for me you don't get that if you inject yourself with"
+   },
+   {
+    "id": "t24",
+    "start": 93.51,
+    "end": 97.19,
+    "text": "something she says that these medicines disempower people it's quite the"
+   },
+   {
+    "id": "t25",
+    "start": 97.19,
+    "end": 100.55,
+    "text": "opposite these medicines all of a sudden make it people feel like they can"
+   },
+   {
+    "id": "t26",
+    "start": 100.55,
+    "end": 104.27,
+    "text": "actually do the things they've been wanting to do but have been struggling"
+   },
+   {
+    "id": "t27",
+    "start": 104.27,
+    "end": 109.35,
+    "text": "due to their biology their appetite so actually these medicines empower you to"
+   },
+   {
+    "id": "t28",
+    "start": 109.35,
+    "end": 113.97,
+    "text": "do the lifestyle changes that we always wanted our patients to do. She tries a"
+   },
+   {
+    "id": "t29",
+    "start": 113.97,
+    "end": 117.19,
+    "text": "fear monger around these medicines disrupting your microbiome which could"
+   },
+   {
+    "id": "t30",
+    "start": 117.19,
+    "end": 121.83,
+    "text": "lead to all sorts of issues. The issue is number one is that we should look at"
+   },
+   {
+    "id": "t31",
+    "start": 121.83,
+    "end": 126.43,
+    "text": "hard outcomes meaning improved cardiovascular health. We reduce risk of"
+   },
+   {
+    "id": "t32",
+    "start": 126.43,
+    "end": 130.31,
+    "text": "heart attacks. We see that people just have a better quality of life and better"
+   },
+   {
+    "id": "t33",
+    "start": 130.31,
+    "end": 135.03,
+    "text": "life overall when taking these medicines. But in regard to specifically your"
+   },
+   {
+    "id": "t34",
+    "start": 135.03,
+    "end": 140.39,
+    "text": "microbiome. There are some data that it actually improves your microbiome so it"
+   },
+   {
+    "id": "t35",
+    "start": 140.39,
+    "end": 143.85,
+    "text": "doesn't really matter either way. And lastly to try to compare fasting or"
+   },
+   {
+    "id": "t36",
+    "start": 143.85,
+    "end": 147.63,
+    "text": "intermittent fasting to using these medicines is insane. You get less than a"
+   },
+   {
+    "id": "t37",
+    "start": 147.63,
+    "end": 152.63,
+    "text": "10% total body weight loss with any type of fasting and it likely goes away with"
+   },
+   {
+    "id": "t38",
+    "start": 152.63,
+    "end": 156.19,
+    "text": "time. Whereas these medicines we're looking at 15 to 20 or higher percent"
+   },
+   {
+    "id": "t39",
+    "start": 156.19,
+    "end": 159.67,
+    "text": "total body weight loss. It's not even close. The bottom line is that we should"
+   },
+   {
+    "id": "t40",
+    "start": 159.67,
+    "end": 163.39,
+    "text": "be using these medicines when indicated and we should still be pushing"
+   },
+   {
+    "id": "t41",
+    "start": 163.39,
+    "end": 168.19,
+    "text": "behavior change as much as possible, it's not an either or, it's not a false dichotomy."
+   }
+  ]
+ }
+}

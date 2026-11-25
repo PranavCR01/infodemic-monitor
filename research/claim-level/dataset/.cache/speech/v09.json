@@ -1,0 +1,50 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.996,
+  "duration_seconds": 34.87,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 6.39,
+    "text": "this feel that is that feel cool or warm cool how about this one hotter than"
+   },
+   {
+    "id": "t2",
+    "start": 6.39,
+    "end": 11.27,
+    "text": "this like this is warmer yeah warmer than this so which one would you expect"
+   },
+   {
+    "id": "t3",
+    "start": 11.27,
+    "end": 17.51,
+    "text": "ice to melt on more quickly the one of this the warm one yeah so here's a piece"
+   },
+   {
+    "id": "t4",
+    "start": 17.51,
+    "end": 22.23,
+    "text": "of ice on the warm one yeah here's a piece of ice on the cold cool"
+   },
+   {
+    "id": "t5",
+    "start": 22.23,
+    "end": 25.8,
+    "text": "Bill Nye, how's that possible?"
+   },
+   {
+    "id": "t6",
+    "start": 26.68,
+    "end": 30.22,
+    "text": "It's not magic. It's science. Yes"
+   }
+  ]
+ }
+}

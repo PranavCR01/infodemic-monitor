@@ -1,0 +1,972 @@
+{
+ "video_id": "v121",
+ "filename": "new_TikTok_7222611279444184325.mp4",
+ "relative_path": "new_TikTok_7222611279444184325.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@dra.moltoni.gineco",
+ "extracted_at": "2026-11-23T08:45:57",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.988,
+  "duration_seconds": 21.48,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.96,
+    "text": "Frente a los hubos los dejo que se volvieron mirales, te cuento 3 ventajas para su uso."
+   },
+   {
+    "id": "t2",
+    "start": 3.96,
+    "end": 9.0,
+    "text": "Número 1, le das trabajo a los banderos ambulantes, por mi casa la cabeza dejo estar 100 pesitos."
+   },
+   {
+    "id": "t3",
+    "start": 9.0,
+    "end": 15.0,
+    "text": "Número 2, ecológico reciclable, los sacás, lo lavás, te puedes hacer una providencial, un peto, lo que quieras."
+   },
+   {
+    "id": "t4",
+    "start": 15.0,
+    "end": 21.0,
+    "text": "Y número 3, si andas necesitando adiconcepción, puede ser una opción, con el olor que te va a quedar, puede tener efecto de ausentar persona."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 11,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Ovulos de ajo",
+    "confidence": 0.682
+   },
+   {
+    "time": 0.0,
+    "text": "Ahora fuera del humor les",
+    "confidence": 0.941
+   },
+   {
+    "time": 0.0,
+    "text": "dra moltoni.gineco",
+    "confidence": 0.537
+   },
+   {
+    "time": 0.0,
+    "text": "Un Finde | CROSSOVE:",
+    "confidence": 0.836
+   },
+   {
+    "time": 0.0,
+    "text": "Big One, FMK , Ke personajes",
+    "confidence": 0.765
+   },
+   {
+    "time": 2.0,
+    "text": "Ovulos de ajo",
+    "confidence": 0.824
+   },
+   {
+    "time": 2.0,
+    "text": "Ahora fuera del humor les",
+    "confidence": 0.692
+   },
+   {
+    "time": 2.0,
+    "text": "dra moltoni gineco",
+    "confidence": 0.765
+   },
+   {
+    "time": 2.0,
+    "text": "CROSSOVE",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Big One, FMK , Ke personajes",
+    "confidence": 0.766
+   },
+   {
+    "time": 2.0,
+    "text": "Un Finde",
+    "confidence": 0.998
+   },
+   {
+    "time": 4.0,
+    "text": "Ahora fuera del humor les",
+    "confidence": 0.684
+   },
+   {
+    "time": 4.0,
+    "text": "dra moltoni gineco",
+    "confidence": 0.69
+   },
+   {
+    "time": 4.0,
+    "text": "Un Finde",
+    "confidence": 0.93
+   },
+   {
+    "time": 4.0,
+    "text": "CROSSOVE",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Big One, FMK , Ke personajes",
+    "confidence": 0.88
+   },
+   {
+    "time": 6.01,
+    "text": "Ahora fuera del humor les",
+    "confidence": 0.822
+   },
+   {
+    "time": 6.01,
+    "text": "automediques",
+    "confidence": 0.69
+   },
+   {
+    "time": 6.01,
+    "text": "dra moltoni gineco",
+    "confidence": 0.977
+   },
+   {
+    "time": 6.01,
+    "text": "CROSSOVE",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.01,
+    "text": "Big One, FMK , Ke personajes",
+    "confidence": 0.888
+   },
+   {
+    "time": 6.01,
+    "text": "Un Finde",
+    "confidence": 0.889
+   },
+   {
+    "time": 8.01,
+    "text": "hay",
+    "confidence": 0.996
+   },
+   {
+    "time": 8.01,
+    "text": "flujo 0 picazon, no te",
+    "confidence": 0.962
+   },
+   {
+    "time": 8.01,
+    "text": "Si",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.01,
+    "text": "automediques",
+    "confidence": 0.657
+   },
+   {
+    "time": 8.01,
+    "text": "CROSSOVE",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.01,
+    "text": "Big One, FMK , Ke personajes",
+    "confidence": 0.681
+   },
+   {
+    "time": 8.01,
+    "text": "Un Finde",
+    "confidence": 0.998
+   },
+   {
+    "time": 10.01,
+    "text": "picazon,",
+    "confidence": 0.93
+   },
+   {
+    "time": 10.01,
+    "text": "hay",
+    "confidence": 0.996
+   },
+   {
+    "time": 10.01,
+    "text": "flujo 0",
+    "confidence": 0.709
+   },
+   {
+    "time": 10.01,
+    "text": "Si",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.01,
+    "text": "no te",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.01,
+    "text": "automediques",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.01,
+    "text": "dra moltoni gineco",
+    "confidence": 0.799
+   },
+   {
+    "time": 10.01,
+    "text": "CROSSOVE",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.01,
+    "text": "Big One, FMK, Ke personajes",
+    "confidence": 0.905
+   },
+   {
+    "time": 10.01,
+    "text": "Un Finde",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.01,
+    "text": "pueden irritar",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.01,
+    "text": "Aun cosas naturales",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.01,
+    "text": "vaginal (que de pOI Si",
+    "confidence": 0.71
+   },
+   {
+    "time": 12.01,
+    "text": "la mucosa",
+    "confidence": 0.988
+   },
+   {
+    "time": 12.01,
+    "text": "encima ya estar irritada",
+    "confidence": 0.843
+   },
+   {
+    "time": 12.01,
+    "text": "puede",
+    "confidence": 0.831
+   },
+   {
+    "time": 12.01,
+    "text": "dra moltoni gineco",
+    "confidence": 0.61
+   },
+   {
+    "time": 12.01,
+    "text": "CROSSOVE",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.01,
+    "text": "Big One, FMK, Ke personajes",
+    "confidence": 0.943
+   },
+   {
+    "time": 12.01,
+    "text": "Un Finde",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.01,
+    "text": "pueden irritar",
+    "confidence": 0.998
+   },
+   {
+    "time": 14.01,
+    "text": "Aun cosas naturales",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "vaginal (que de pOI Si",
+    "confidence": 0.725
+   },
+   {
+    "time": 14.01,
+    "text": "la mucosa",
+    "confidence": 0.989
+   },
+   {
+    "time": 14.01,
+    "text": "encima ya estar irritada )",
+    "confidence": 0.997
+   },
+   {
+    "time": 14.01,
+    "text": "puede",
+    "confidence": 0.915
+   },
+   {
+    "time": 14.01,
+    "text": "dra moltoni.gineco",
+    "confidence": 0.525
+   },
+   {
+    "time": 14.01,
+    "text": "Un Finde",
+    "confidence": 0.822
+   },
+   {
+    "time": 14.01,
+    "text": "CROSSOVE",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "Big One, FMK , Ke personajes",
+    "confidence": 0.741
+   },
+   {
+    "time": 16.02,
+    "text": "No todo lo que pica en los",
+    "confidence": 0.823
+   },
+   {
+    "time": 16.02,
+    "text": "genitales son",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.02,
+    "text": "dra moltoni gineco",
+    "confidence": 0.549
+   },
+   {
+    "time": 16.02,
+    "text": "CROSSOVE",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.02,
+    "text": "Big One, FMK , Ke personajes",
+    "confidence": 0.733
+   },
+   {
+    "time": 16.02,
+    "text": "Un Finde",
+    "confidence": 0.998
+   },
+   {
+    "time": 18.02,
+    "text": "No todo lo que pica en los",
+    "confidence": 0.954
+   },
+   {
+    "time": 18.02,
+    "text": "genitales son",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.02,
+    "text": "dra moltoni gineco",
+    "confidence": 0.636
+   },
+   {
+    "time": 18.02,
+    "text": "Big One, FMK , Ke personajes",
+    "confidence": 0.689
+   },
+   {
+    "time": 18.02,
+    "text": "CROSSOVE",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.02,
+    "text": "Un Finde",
+    "confidence": 0.996
+   },
+   {
+    "time": 20.02,
+    "text": "No todo lo que pica en los",
+    "confidence": 0.825
+   },
+   {
+    "time": 20.02,
+    "text": "genitales son",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.02,
+    "text": "CROSSOVE",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.02,
+    "text": "Big One, FMK , Ke personajes",
+    "confidence": 0.726
+   },
+   {
+    "time": 20.02,
+    "text": "Un Finde",
+    "confidence": 0.998
+   }
+  ],
+  "captions": [
+   {
+    "text": "Ovulos de ajo",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.682,
+    "id": "o1"
+   },
+   {
+    "text": "Ahora fuera del humor les",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.941,
+    "id": "o2"
+   },
+   {
+    "text": "dra moltoni.gineco",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.537,
+    "id": "o3"
+   },
+   {
+    "text": "Un Finde | CROSSOVE:",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.836,
+    "id": "o4"
+   },
+   {
+    "text": "Big One, FMK , Ke personajes",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.765,
+    "id": "o5"
+   },
+   {
+    "text": "Ovulos de ajo",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.824,
+    "id": "o6"
+   },
+   {
+    "text": "Ahora fuera del humor les",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.692,
+    "id": "o7"
+   },
+   {
+    "text": "dra moltoni gineco",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.765,
+    "id": "o8"
+   },
+   {
+    "text": "CROSSOVE",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "Big One, FMK , Ke personajes",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.766,
+    "id": "o10"
+   },
+   {
+    "text": "Un Finde",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.998,
+    "id": "o11"
+   },
+   {
+    "text": "Ahora fuera del humor les",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.684,
+    "id": "o12"
+   },
+   {
+    "text": "dra moltoni gineco",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.69,
+    "id": "o13"
+   },
+   {
+    "text": "Un Finde",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.93,
+    "id": "o14"
+   },
+   {
+    "text": "CROSSOVE",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o15"
+   },
+   {
+    "text": "Big One, FMK , Ke personajes",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.88,
+    "id": "o16"
+   },
+   {
+    "text": "Ahora fuera del humor les",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.822,
+    "id": "o17"
+   },
+   {
+    "text": "automediques",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.69,
+    "id": "o18"
+   },
+   {
+    "text": "dra moltoni gineco",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.977,
+    "id": "o19"
+   },
+   {
+    "text": "CROSSOVE",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 1.0,
+    "id": "o20"
+   },
+   {
+    "text": "Big One, FMK , Ke personajes",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.888,
+    "id": "o21"
+   },
+   {
+    "text": "Un Finde",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.889,
+    "id": "o22"
+   },
+   {
+    "text": "hay",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.996,
+    "id": "o23"
+   },
+   {
+    "text": "flujo 0 picazon, no te",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.962,
+    "id": "o24"
+   },
+   {
+    "text": "Si",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 1.0,
+    "id": "o25"
+   },
+   {
+    "text": "automediques",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.657,
+    "id": "o26"
+   },
+   {
+    "text": "CROSSOVE",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 1.0,
+    "id": "o27"
+   },
+   {
+    "text": "Big One, FMK , Ke personajes",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.681,
+    "id": "o28"
+   },
+   {
+    "text": "Un Finde",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.998,
+    "id": "o29"
+   },
+   {
+    "text": "picazon,",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.93,
+    "id": "o30"
+   },
+   {
+    "text": "hay",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.996,
+    "id": "o31"
+   },
+   {
+    "text": "flujo 0",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.709,
+    "id": "o32"
+   },
+   {
+    "text": "Si",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 1.0,
+    "id": "o33"
+   },
+   {
+    "text": "no te",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.999,
+    "id": "o34"
+   },
+   {
+    "text": "automediques",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 1.0,
+    "id": "o35"
+   },
+   {
+    "text": "dra moltoni gineco",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.799,
+    "id": "o36"
+   },
+   {
+    "text": "CROSSOVE",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 1.0,
+    "id": "o37"
+   },
+   {
+    "text": "Big One, FMK, Ke personajes",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.905,
+    "id": "o38"
+   },
+   {
+    "text": "Un Finde",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.999,
+    "id": "o39"
+   },
+   {
+    "text": "pueden irritar",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.999,
+    "id": "o40"
+   },
+   {
+    "text": "Aun cosas naturales",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 1.0,
+    "id": "o41"
+   },
+   {
+    "text": "vaginal (que de pOI Si",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.71,
+    "id": "o42"
+   },
+   {
+    "text": "la mucosa",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.988,
+    "id": "o43"
+   },
+   {
+    "text": "encima ya estar irritada",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.843,
+    "id": "o44"
+   },
+   {
+    "text": "puede",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.831,
+    "id": "o45"
+   },
+   {
+    "text": "dra moltoni gineco",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.61,
+    "id": "o46"
+   },
+   {
+    "text": "CROSSOVE",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 1.0,
+    "id": "o47"
+   },
+   {
+    "text": "Big One, FMK, Ke personajes",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.943,
+    "id": "o48"
+   },
+   {
+    "text": "Un Finde",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.999,
+    "id": "o49"
+   },
+   {
+    "text": "pueden irritar",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.998,
+    "id": "o50"
+   },
+   {
+    "text": "Aun cosas naturales",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 1.0,
+    "id": "o51"
+   },
+   {
+    "text": "vaginal (que de pOI Si",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.725,
+    "id": "o52"
+   },
+   {
+    "text": "la mucosa",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.989,
+    "id": "o53"
+   },
+   {
+    "text": "encima ya estar irritada )",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.997,
+    "id": "o54"
+   },
+   {
+    "text": "puede",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.915,
+    "id": "o55"
+   },
+   {
+    "text": "dra moltoni.gineco",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.525,
+    "id": "o56"
+   },
+   {
+    "text": "Un Finde",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.822,
+    "id": "o57"
+   },
+   {
+    "text": "CROSSOVE",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 1.0,
+    "id": "o58"
+   },
+   {
+    "text": "Big One, FMK , Ke personajes",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.741,
+    "id": "o59"
+   },
+   {
+    "text": "No todo lo que pica en los",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.823,
+    "id": "o60"
+   },
+   {
+    "text": "genitales son",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 1.0,
+    "id": "o61"
+   },
+   {
+    "text": "dra moltoni gineco",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.549,
+    "id": "o62"
+   },
+   {
+    "text": "CROSSOVE",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 1.0,
+    "id": "o63"
+   },
+   {
+    "text": "Big One, FMK , Ke personajes",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.733,
+    "id": "o64"
+   },
+   {
+    "text": "Un Finde",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.998,
+    "id": "o65"
+   },
+   {
+    "text": "No todo lo que pica en los",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.954,
+    "id": "o66"
+   },
+   {
+    "text": "genitales son",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 1.0,
+    "id": "o67"
+   },
+   {
+    "text": "dra moltoni gineco",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.636,
+    "id": "o68"
+   },
+   {
+    "text": "Big One, FMK , Ke personajes",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.689,
+    "id": "o69"
+   },
+   {
+    "text": "CROSSOVE",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 1.0,
+    "id": "o70"
+   },
+   {
+    "text": "Un Finde",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.996,
+    "id": "o71"
+   },
+   {
+    "text": "No todo lo que pica en los",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.825,
+    "id": "o72"
+   },
+   {
+    "text": "genitales son",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 1.0,
+    "id": "o73"
+   },
+   {
+    "text": "CROSSOVE",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 1.0,
+    "id": "o74"
+   },
+   {
+    "text": "Big One, FMK , Ke personajes",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.726,
+    "id": "o75"
+   },
+   {
+    "text": "Un Finde",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.998,
+    "id": "o76"
+   }
+  ]
+ }
+}

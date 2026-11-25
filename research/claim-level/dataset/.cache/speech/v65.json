@@ -1,0 +1,500 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 232.66,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.28,
+    "text": "Things they told us were unhealthy and bad that have turned out to be really healthy."
+   },
+   {
+    "id": "t2",
+    "start": 3.28,
+    "end": 5.04,
+    "text": "I'm getting annoyed at how many of these there are."
+   },
+   {
+    "id": "t3",
+    "start": 5.04,
+    "end": 9.52,
+    "text": "Hi, my name is Dr. Rubin and this video is a master class in how medical misinformation"
+   },
+   {
+    "id": "t4",
+    "start": 9.52,
+    "end": 15.68,
+    "text": "can spread on social media rapidly. It was viewed over 1 million times and over 100,000 people"
+   },
+   {
+    "id": "t5",
+    "start": 15.68,
+    "end": 20.8,
+    "text": "liked that video. The reason why it's been so successful is because it plays into some of your"
+   },
+   {
+    "id": "t6",
+    "start": 20.8,
+    "end": 26.32,
+    "text": "cognitive biases and really gets you emotionally charged. I'm going to go through point by point"
+   },
+   {
+    "id": "t7",
+    "start": 26.32,
+    "end": 32.0,
+    "text": "in this video to explain to you why it's successful in spreading so rapidly and why it's incorrect."
+   },
+   {
+    "id": "t8",
+    "start": 32.0,
+    "end": 37.2,
+    "text": "So first he's hooking you in by saying here are the things that they lied to you about being unhealthy"
+   },
+   {
+    "id": "t9",
+    "start": 37.2,
+    "end": 42.24,
+    "text": "as if physicians were withholding information on purpose for some type of secondary gain."
+   },
+   {
+    "id": "t10",
+    "start": 42.24,
+    "end": 46.96,
+    "text": "So let's see what he has to say. Like salt we were told is this devil white powder that if you"
+   },
+   {
+    "id": "t11",
+    "start": 46.96,
+    "end": 49.92,
+    "text": "eat it you're going to give yourself a heart attack and you're going to shut down your kidneys."
+   },
+   {
+    "id": "t12",
+    "start": 49.92,
+    "end": 54.16,
+    "text": "Now why would they tell us that when there are gigantic studies of over a hundred thousand people"
+   },
+   {
+    "id": "t13",
+    "start": 54.16,
+    "end": 58.24,
+    "text": "that proved that eating too little salt is actually more dangerous than eating too much."
+   },
+   {
+    "id": "t14",
+    "start": 58.24,
+    "end": 62.16,
+    "text": "So this is one of the most irritating things that I see on social media where people will flash a"
+   },
+   {
+    "id": "t15",
+    "start": 62.16,
+    "end": 67.52,
+    "text": "citation very briefly where you may not even have a second to look at it and then they use that to"
+   },
+   {
+    "id": "t16",
+    "start": 67.52,
+    "end": 72.4,
+    "text": "justify their claims by taking a kernel of truth and then shrouding it with a bunch of things that"
+   },
+   {
+    "id": "t17",
+    "start": 72.4,
+    "end": 78.0,
+    "text": "are out of context or just pure nonsense. This study ironically is called the Pure Study that"
+   },
+   {
+    "id": "t18",
+    "start": 78.0,
+    "end": 83.76,
+    "text": "was published in the Lancet in 2018 and what they did was they looked at tens of thousands of adults"
+   },
+   {
+    "id": "t19",
+    "start": 83.76,
+    "end": 86.14,
+    "text": "and got spot urine sodium samples."
+   },
+   {
+    "id": "t20",
+    "start": 86.14,
+    "end": 87.26,
+    "text": "They peed into a cup,"
+   },
+   {
+    "id": "t21",
+    "start": 87.26,
+    "end": 89.02,
+    "text": "measured how much sodium was in there,"
+   },
+   {
+    "id": "t22",
+    "start": 89.02,
+    "end": 91.82,
+    "text": "and then they used some fancy mathematical calculations"
+   },
+   {
+    "id": "t23",
+    "start": 91.82,
+    "end": 95.34,
+    "text": "to estimate how much sodium was in their diet."
+   },
+   {
+    "id": "t24",
+    "start": 95.34,
+    "end": 98.04,
+    "text": "And that is not the most accurate way to do it."
+   },
+   {
+    "id": "t25",
+    "start": 98.04,
+    "end": 100.06,
+    "text": "This is more observational in nature."
+   },
+   {
+    "id": "t26",
+    "start": 100.06,
+    "end": 102.5,
+    "text": "If you're getting spot urine sodium samples,"
+   },
+   {
+    "id": "t27",
+    "start": 102.5,
+    "end": 105.22,
+    "text": "it can vary widely throughout the day itself"
+   },
+   {
+    "id": "t28",
+    "start": 105.22,
+    "end": 106.62,
+    "text": "or across multiple days."
+   },
+   {
+    "id": "t29",
+    "start": 106.62,
+    "end": 109.34,
+    "text": "So what you're really supposed to do as a gold standard"
+   },
+   {
+    "id": "t30",
+    "start": 109.34,
+    "end": 113.5,
+    "text": "is to measure urine sodium over a 24-hour collection period,"
+   },
+   {
+    "id": "t31",
+    "start": 113.5,
+    "end": 117.1,
+    "text": "and then do that multiple times to get a bigger picture"
+   },
+   {
+    "id": "t32",
+    "start": 117.1,
+    "end": 119.7,
+    "text": "of what their general diet is like."
+   },
+   {
+    "id": "t33",
+    "start": 119.7,
+    "end": 120.82,
+    "text": "They didn't do that in the study,"
+   },
+   {
+    "id": "t34",
+    "start": 120.82,
+    "end": 124.1,
+    "text": "but even then they reported a J phenomenon,"
+   },
+   {
+    "id": "t35",
+    "start": 124.1,
+    "end": 127.78,
+    "text": "meaning that those who had lower salt intake"
+   },
+   {
+    "id": "t36",
+    "start": 127.78,
+    "end": 130.14,
+    "text": "and those that had very high salt intake"
+   },
+   {
+    "id": "t37",
+    "start": 130.14,
+    "end": 132.68,
+    "text": "were both groups having higher risk"
+   },
+   {
+    "id": "t38",
+    "start": 132.68,
+    "end": 135.02,
+    "text": "of developing cardiovascular disease."
+   },
+   {
+    "id": "t39",
+    "start": 135.02,
+    "end": 138.42,
+    "text": "So he had you ignore some of the data anyways,"
+   },
+   {
+    "id": "t40",
+    "start": 138.42,
+    "end": 141.46,
+    "text": "even though this was not the strongest study to begin with."
+   },
+   {
+    "id": "t41",
+    "start": 141.46,
+    "end": 143.7,
+    "text": "Like most of the things we're told are bad for us,"
+   },
+   {
+    "id": "t42",
+    "start": 143.7,
+    "end": 145.38,
+    "text": "it prevents a lot of disease,"
+   },
+   {
+    "id": "t43",
+    "start": 145.38,
+    "end": 147.06,
+    "text": "specifically the profitable ones."
+   },
+   {
+    "id": "t44",
+    "start": 147.06,
+    "end": 149.86,
+    "text": "Eating less than 3,000 milligrams per day of salt"
+   },
+   {
+    "id": "t45",
+    "start": 149.86,
+    "end": 151.9,
+    "text": "resulted in more cardiac events"
+   },
+   {
+    "id": "t46",
+    "start": 151.9,
+    "end": 154.58,
+    "text": "than eating above the threshold they told us was dangerous."
+   },
+   {
+    "id": "t47",
+    "start": 154.58,
+    "end": 156.9,
+    "text": "What disease right now takes up more medical expense"
+   },
+   {
+    "id": "t48",
+    "start": 156.9,
+    "end": 158.26,
+    "text": "than anything, heart disease."
+   },
+   {
+    "id": "t49",
+    "start": 158.26,
+    "end": 160.46,
+    "text": "What kills us at higher rates than anything else?"
+   },
+   {
+    "id": "t50",
+    "start": 160.46,
+    "end": 162.22,
+    "text": "Heart disease, but it doesn't stop there."
+   },
+   {
+    "id": "t51",
+    "start": 162.22,
+    "end": 164.86,
+    "text": "Without sodium, we develop insulin resistance,"
+   },
+   {
+    "id": "t52",
+    "start": 164.86,
+    "end": 167.06,
+    "text": "destroying our thyroid, slowing our metabolism"
+   },
+   {
+    "id": "t53",
+    "start": 167.06,
+    "end": 168.54,
+    "text": "and making it harder to gain muscle."
+   },
+   {
+    "id": "t54",
+    "start": 168.54,
+    "end": 170.54,
+    "text": "Gotta listen to our doctors, don't eat that salt,"
+   },
+   {
+    "id": "t55",
+    "start": 170.54,
+    "end": 172.26,
+    "text": "You could accidentally get in great shape"
+   },
+   {
+    "id": "t56",
+    "start": 172.26,
+    "end": 173.74,
+    "text": "and feel awesome all the time."
+   },
+   {
+    "id": "t57",
+    "start": 173.74,
+    "end": 175.66,
+    "text": "There's no truth to what he said whatsoever."
+   },
+   {
+    "id": "t58",
+    "start": 175.66,
+    "end": 177.38,
+    "text": "There's no evidence that doctors"
+   },
+   {
+    "id": "t59",
+    "start": 177.38,
+    "end": 179.48,
+    "text": "are making guideline recommendations"
+   },
+   {
+    "id": "t60",
+    "start": 179.48,
+    "end": 182.02,
+    "text": "that are purposely making people sick."
+   },
+   {
+    "id": "t61",
+    "start": 182.02,
+    "end": 183.46,
+    "text": "It's actually downright offensive."
+   },
+   {
+    "id": "t62",
+    "start": 183.46,
+    "end": 185.82,
+    "text": "And if you believe that that's actually happening,"
+   },
+   {
+    "id": "t63",
+    "start": 185.82,
+    "end": 187.86,
+    "text": "there's nothing that I can say or do"
+   },
+   {
+    "id": "t64",
+    "start": 187.86,
+    "end": 189.3,
+    "text": "that's going to change your mind,"
+   },
+   {
+    "id": "t65",
+    "start": 189.3,
+    "end": 191.9,
+    "text": "but it's just downright sad to be honest."
+   },
+   {
+    "id": "t66",
+    "start": 191.9,
+    "end": 193.5,
+    "text": "Ideal salt consumption ends up being"
+   },
+   {
+    "id": "t67",
+    "start": 193.5,
+    "end": 195.94,
+    "text": "about 5,000 milligrams per day."
+   },
+   {
+    "id": "t68",
+    "start": 195.94,
+    "end": 198.14,
+    "text": "Look, doctors don't tell all of their patients"
+   },
+   {
+    "id": "t69",
+    "start": 198.14,
+    "end": 200.14,
+    "text": "to completely eliminate salt from their diet."
+   },
+   {
+    "id": "t70",
+    "start": 200.14,
+    "end": 204.58,
+    "text": "Most guidelines suggest consuming salt in moderation,"
+   },
+   {
+    "id": "t71",
+    "start": 204.58,
+    "end": 206.1,
+    "text": "not completely eliminating it."
+   },
+   {
+    "id": "t72",
+    "start": 206.1,
+    "end": 208.74,
+    "text": "And that's really true of a lot of things in life."
+   },
+   {
+    "id": "t73",
+    "start": 208.74,
+    "end": 211.78,
+    "text": "But these types of posts are scaremongering people"
+   },
+   {
+    "id": "t74",
+    "start": 211.78,
+    "end": 213.62,
+    "text": "by giving them misleading information"
+   },
+   {
+    "id": "t75",
+    "start": 213.62,
+    "end": 215.54,
+    "text": "to say that doctors are misleading you"
+   },
+   {
+    "id": "t76",
+    "start": 215.54,
+    "end": 217.34,
+    "text": "when that is far from the truth."
+   },
+   {
+    "id": "t77",
+    "start": 217.34,
+    "end": 219.54,
+    "text": "And so if you want to be able to curate"
+   },
+   {
+    "id": "t78",
+    "start": 219.54,
+    "end": 221.26,
+    "text": "your social media feeds"
+   },
+   {
+    "id": "t79",
+    "start": 221.26,
+    "end": 223.86,
+    "text": "to have more nuanced evidence-based information,"
+   },
+   {
+    "id": "t80",
+    "start": 223.86,
+    "end": 226.9,
+    "text": "you should like, comment, save, and share this post"
+   },
+   {
+    "id": "t81",
+    "start": 226.9,
+    "end": 228.62,
+    "text": "to drown out all the noise."
+   }
+  ]
+ }
+}

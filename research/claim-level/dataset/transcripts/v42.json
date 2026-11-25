@@ -1,0 +1,678 @@
+{
+ "video_id": "v42",
+ "filename": "stop eating seed oils.mp4",
+ "relative_path": "Dataset-Sept-2026/Soobin Jang/stop eating seed oils.mp4",
+ "collector": "Soobin Jang",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:03:13",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 59.3,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.5,
+    "text": "What are the most harmful foods that people constantly eat?"
+   },
+   {
+    "id": "t2",
+    "start": 2.5,
+    "end": 3.1,
+    "text": "Seed oils."
+   },
+   {
+    "id": "t3",
+    "start": 3.1,
+    "end": 6.9,
+    "text": "So canola, sunflower, safflower, rapeseed, palm oil."
+   },
+   {
+    "id": "t4",
+    "start": 6.9,
+    "end": 8.9,
+    "text": "The reason for this is, it's not the plant."
+   },
+   {
+    "id": "t5",
+    "start": 8.9,
+    "end": 10.6,
+    "text": "It's the distance from the plant to the table."
+   },
+   {
+    "id": "t6",
+    "start": 10.6,
+    "end": 13.0,
+    "text": "When you put a canola plant into a commercial press,"
+   },
+   {
+    "id": "t7",
+    "start": 13.0,
+    "end": 15.7,
+    "text": "it comes out gummy and you de-gum it with hexane,"
+   },
+   {
+    "id": "t8",
+    "start": 15.7,
+    "end": 17.4,
+    "text": "which is a known neurotoxin."
+   },
+   {
+    "id": "t9",
+    "start": 17.4,
+    "end": 19.4,
+    "text": "Then you take that neurotoxin and de-gummed oil"
+   },
+   {
+    "id": "t10",
+    "start": 19.4,
+    "end": 22.0,
+    "text": "and you heat it to 405 degrees and you turn it rancid."
+   },
+   {
+    "id": "t11",
+    "start": 22.0,
+    "end": 24.2,
+    "text": "You need to deodorize it with sodium hydroxide,"
+   },
+   {
+    "id": "t12",
+    "start": 24.2,
+    "end": 26.1,
+    "text": "which is a very powerful carcinogen."
+   },
+   {
+    "id": "t13",
+    "start": 26.1,
+    "end": 27.9,
+    "text": "Sometimes bleach it before you bottle it."
+   },
+   {
+    "id": "t14",
+    "start": 27.9,
+    "end": 29.46,
+    "text": "If you ever notice when you go down the shelf"
+   },
+   {
+    "id": "t15",
+    "start": 29.46,
+    "end": 31.3,
+    "text": "in a grocery store in tall, the vegetable oils,"
+   },
+   {
+    "id": "t16",
+    "start": 31.3,
+    "end": 33.18,
+    "text": "they're all exactly the same color,"
+   },
+   {
+    "id": "t17",
+    "start": 33.18,
+    "end": 35.86,
+    "text": "that perfect yellow color, that would never happen."
+   },
+   {
+    "id": "t18",
+    "start": 35.86,
+    "end": 39.82,
+    "text": "If you pressed a thousand plants and turned it into oil,"
+   },
+   {
+    "id": "t19",
+    "start": 39.82,
+    "end": 41.82,
+    "text": "you would not get that level of consistency"
+   },
+   {
+    "id": "t20",
+    "start": 41.82,
+    "end": 43.5,
+    "text": "that's chemically induced,"
+   },
+   {
+    "id": "t21",
+    "start": 43.5,
+    "end": 45.44,
+    "text": "and then they put a heart-healthy label on it."
+   },
+   {
+    "id": "t22",
+    "start": 45.44,
+    "end": 47.06,
+    "text": "These are pro-inflammatory"
+   },
+   {
+    "id": "t23",
+    "start": 47.06,
+    "end": 49.58,
+    "text": "that cause massive amount of inflammation in the body."
+   },
+   {
+    "id": "t24",
+    "start": 49.58,
+    "end": 51.9,
+    "text": "So what are the oils you can use in your life?"
+   },
+   {
+    "id": "t25",
+    "start": 51.9,
+    "end": 53.62,
+    "text": "Well, in your kitchen, you need five oils."
+   },
+   {
+    "id": "t26",
+    "start": 53.62,
+    "end": 55.42,
+    "text": "You need a grass-fed butter,"
+   },
+   {
+    "id": "t27",
+    "start": 55.42,
+    "end": 59.3,
+    "text": "butter, grass-fed tallow, coconut oil, and an olive oil."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 30,
+  "detections": [
+   {
+    "time": 2.0,
+    "text": "THAT PEOPLE",
+    "confidence": 0.994
+   },
+   {
+    "time": 2.0,
+    "text": "CONSTANTLY EAT?",
+    "confidence": 0.955
+   },
+   {
+    "time": 4.0,
+    "text": "SUNFLOWER;,",
+    "confidence": 0.613
+   },
+   {
+    "time": 8.01,
+    "text": "IT'S NOT THE PLANT",
+    "confidence": 0.964
+   },
+   {
+    "time": 10.01,
+    "text": "FROM THE PLANT",
+    "confidence": 0.731
+   },
+   {
+    "time": 10.01,
+    "text": "TO THE TABLE,",
+    "confidence": 0.649
+   },
+   {
+    "time": 12.01,
+    "text": "INTO A",
+    "confidence": 0.689
+   },
+   {
+    "time": 12.01,
+    "text": "COMMERCIAL PRESS:",
+    "confidence": 0.923
+   },
+   {
+    "time": 14.01,
+    "text": "AND YOU DE-CUM",
+    "confidence": 0.733
+   },
+   {
+    "time": 14.01,
+    "text": "IT WITH HEXANE,",
+    "confidence": 0.755
+   },
+   {
+    "time": 16.02,
+    "text": "WHICH IS A KNOWN",
+    "confidence": 0.896
+   },
+   {
+    "time": 16.02,
+    "text": "NEUROTOXIN:",
+    "confidence": 0.801
+   },
+   {
+    "time": 18.02,
+    "text": "NEUROTOXIN",
+    "confidence": 0.995
+   },
+   {
+    "time": 18.02,
+    "text": "DE-CUMMED OIL",
+    "confidence": 0.846
+   },
+   {
+    "time": 24.02,
+    "text": "WITH SODIUM",
+    "confidence": 0.868
+   },
+   {
+    "time": 24.02,
+    "text": "HYDROXIDE,",
+    "confidence": 0.572
+   },
+   {
+    "time": 26.03,
+    "text": "SOMETIMES",
+    "confidence": 0.858
+   },
+   {
+    "time": 28.03,
+    "text": "YOU EVER NOTICE",
+    "confidence": 0.581
+   },
+   {
+    "time": 30.03,
+    "text": "AND ALL THE",
+    "confidence": 0.834
+   },
+   {
+    "time": 32.03,
+    "text": "tol",
+    "confidence": 0.623
+   },
+   {
+    "time": 32.03,
+    "text": "THEY\"RE ALL EXACTLY",
+    "confidence": 0.988
+   },
+   {
+    "time": 32.03,
+    "text": "THE SAME COLOR:",
+    "confidence": 0.816
+   },
+   {
+    "time": 34.03,
+    "text": "PURE",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.03,
+    "text": "CANO",
+    "confidence": 0.981
+   },
+   {
+    "time": 34.03,
+    "text": "THAT PERFECT",
+    "confidence": 0.51
+   },
+   {
+    "time": 34.03,
+    "text": "6.29",
+    "confidence": 0.995
+   },
+   {
+    "time": 36.04,
+    "text": "IF YOU PRESSED",
+    "confidence": 0.941
+   },
+   {
+    "time": 36.04,
+    "text": "THOUSAND PLANTS",
+    "confidence": 0.999
+   },
+   {
+    "time": 38.04,
+    "text": "IF YOU PRESSED",
+    "confidence": 0.944
+   },
+   {
+    "time": 38.04,
+    "text": "THOUSAND PLANTS",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.04,
+    "text": "THAT'S",
+    "confidence": 0.936
+   },
+   {
+    "time": 42.04,
+    "text": "CHEMICALLY INDUCED",
+    "confidence": 0.92
+   },
+   {
+    "time": 44.04,
+    "text": "A HEART HEALTHY",
+    "confidence": 0.985
+   },
+   {
+    "time": 44.04,
+    "text": "LABEL ON IT.",
+    "confidence": 0.533
+   },
+   {
+    "time": 46.05,
+    "text": "PRO-INFLAMMATORY",
+    "confidence": 0.998
+   },
+   {
+    "time": 46.05,
+    "text": "THAT CAUSE",
+    "confidence": 0.973
+   },
+   {
+    "time": 48.05,
+    "text": "MASSIVE AMOUNT",
+    "confidence": 0.918
+   },
+   {
+    "time": 52.05,
+    "text": "WELL, IN YOUR KITCHEN",
+    "confidence": 0.772
+   },
+   {
+    "time": 54.05,
+    "text": "CRASS FED",
+    "confidence": 0.821
+   },
+   {
+    "time": 56.06,
+    "text": "GHEE",
+    "confidence": 0.858
+   }
+  ],
+  "captions": [
+   {
+    "text": "THAT PEOPLE",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.994,
+    "id": "o1"
+   },
+   {
+    "text": "CONSTANTLY EAT?",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.955,
+    "id": "o2"
+   },
+   {
+    "text": "SUNFLOWER;,",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.613,
+    "id": "o3"
+   },
+   {
+    "text": "IT'S NOT THE PLANT",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.964,
+    "id": "o4"
+   },
+   {
+    "text": "FROM THE PLANT",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.731,
+    "id": "o5"
+   },
+   {
+    "text": "TO THE TABLE,",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.649,
+    "id": "o6"
+   },
+   {
+    "text": "INTO A",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.689,
+    "id": "o7"
+   },
+   {
+    "text": "COMMERCIAL PRESS:",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.923,
+    "id": "o8"
+   },
+   {
+    "text": "AND YOU DE-CUM",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.733,
+    "id": "o9"
+   },
+   {
+    "text": "IT WITH HEXANE,",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.755,
+    "id": "o10"
+   },
+   {
+    "text": "WHICH IS A KNOWN",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.896,
+    "id": "o11"
+   },
+   {
+    "text": "NEUROTOXIN:",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.801,
+    "id": "o12"
+   },
+   {
+    "text": "NEUROTOXIN",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.995,
+    "id": "o13"
+   },
+   {
+    "text": "DE-CUMMED OIL",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.846,
+    "id": "o14"
+   },
+   {
+    "text": "WITH SODIUM",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.868,
+    "id": "o15"
+   },
+   {
+    "text": "HYDROXIDE,",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.572,
+    "id": "o16"
+   },
+   {
+    "text": "SOMETIMES",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.858,
+    "id": "o17"
+   },
+   {
+    "text": "YOU EVER NOTICE",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.581,
+    "id": "o18"
+   },
+   {
+    "text": "AND ALL THE",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.834,
+    "id": "o19"
+   },
+   {
+    "text": "tol",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.623,
+    "id": "o20"
+   },
+   {
+    "text": "THEY\"RE ALL EXACTLY",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.988,
+    "id": "o21"
+   },
+   {
+    "text": "THE SAME COLOR:",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.816,
+    "id": "o22"
+   },
+   {
+    "text": "PURE",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 1.0,
+    "id": "o23"
+   },
+   {
+    "text": "CANO",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.981,
+    "id": "o24"
+   },
+   {
+    "text": "THAT PERFECT",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.51,
+    "id": "o25"
+   },
+   {
+    "text": "6.29",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.995,
+    "id": "o26"
+   },
+   {
+    "text": "IF YOU PRESSED",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.941,
+    "id": "o27"
+   },
+   {
+    "text": "THOUSAND PLANTS",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.999,
+    "id": "o28"
+   },
+   {
+    "text": "IF YOU PRESSED",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.944,
+    "id": "o29"
+   },
+   {
+    "text": "THOUSAND PLANTS",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.999,
+    "id": "o30"
+   },
+   {
+    "text": "THAT'S",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.936,
+    "id": "o31"
+   },
+   {
+    "text": "CHEMICALLY INDUCED",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.92,
+    "id": "o32"
+   },
+   {
+    "text": "A HEART HEALTHY",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.985,
+    "id": "o33"
+   },
+   {
+    "text": "LABEL ON IT.",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.533,
+    "id": "o34"
+   },
+   {
+    "text": "PRO-INFLAMMATORY",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.998,
+    "id": "o35"
+   },
+   {
+    "text": "THAT CAUSE",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.973,
+    "id": "o36"
+   },
+   {
+    "text": "MASSIVE AMOUNT",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.918,
+    "id": "o37"
+   },
+   {
+    "text": "WELL, IN YOUR KITCHEN",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.772,
+    "id": "o38"
+   },
+   {
+    "text": "CRASS FED",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.821,
+    "id": "o39"
+   },
+   {
+    "text": "GHEE",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.858,
+    "id": "o40"
+   }
+  ]
+ }
+}

@@ -1,0 +1,995 @@
+{
+ "video_id": "v162",
+ "filename": "new_TikTok_7478434578819026209.mp4",
+ "relative_path": "new_TikTok_7478434578819026209.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@breakingvlad",
+ "extracted_at": "2026-11-23T08:45:59",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.998,
+  "duration_seconds": 57.75,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.96,
+    "text": "En este vídeo nos comparan un queso real con un sucedanio aplicándoles fuego."
+   },
+   {
+    "id": "t2",
+    "start": 3.96,
+    "end": 7.8,
+    "text": "El queso real se derrite mientras que el sucedanio se quema, se vuelve negro."
+   },
+   {
+    "id": "t3",
+    "start": 7.8,
+    "end": 8.8,
+    "text": "¿Y por qué pasa esto?"
+   },
+   {
+    "id": "t4",
+    "start": 8.8,
+    "end": 11.56,
+    "text": "Vos ha aquí está vuestro químico de cabecera para explicaroslo."
+   },
+   {
+    "id": "t5",
+    "start": 11.56,
+    "end": 15.48,
+    "text": "El queso real, como ya sabrás, proviene de la leche y contiene caseína, una proteína"
+   },
+   {
+    "id": "t6",
+    "start": 15.48,
+    "end": 19.9,
+    "text": "que al calentar la pierde su estructura y se vuelve flexible permitiendo que el queso"
+   },
+   {
+    "id": "t7",
+    "start": 19.9,
+    "end": 20.9,
+    "text": "se derrita."
+   },
+   {
+    "id": "t8",
+    "start": 20.9,
+    "end": 25.0,
+    "text": "Sin embargo, los sucedanos de queso suelen llevar una parte proporcional de queso,"
+   },
+   {
+    "id": "t9",
+    "start": 25.0,
+    "end": 29.4,
+    "text": "pero se le añaden almidones y otros aditivos para baratar los costes y producir más cantidad."
+   },
+   {
+    "id": "t10",
+    "start": 29.4,
+    "end": 33.6,
+    "text": "Y en esos sucedaneos esos almidones y aceites que se le añaden no tienen por qué comportarse"
+   },
+   {
+    "id": "t11",
+    "start": 33.6,
+    "end": 38.68,
+    "text": "igual y al aplicar calor estos almidones tienden a quemarse y además algunos pueden contener"
+   },
+   {
+    "id": "t12",
+    "start": 38.68,
+    "end": 42.12,
+    "text": "estabilizantes que le ofrezcan cierta resistencia al calor."
+   },
+   {
+    "id": "t13",
+    "start": 42.12,
+    "end": 46.36,
+    "text": "Así que aunque los sucedaneos intenten imitar al queso, su composición es bastante diferente"
+   },
+   {
+    "id": "t14",
+    "start": 46.36,
+    "end": 50.96,
+    "text": "y su aporte nutricional también y normalmente si te fijas en las etiquetas de estos quesos"
+   },
+   {
+    "id": "t15",
+    "start": 50.96,
+    "end": 55.04,
+    "text": "y ves que contienen almidón, probablemente estemos hablando de un sucedaneo y no de un"
+   },
+   {
+    "id": "t16",
+    "start": 55.04,
+    "end": 56.04,
+    "text": "queso real."
+   },
+   {
+    "id": "t17",
+    "start": 56.04,
+    "end": 58.04,
+    "text": "¡Hay que te llevar! ¡Un dato nuevo!"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 29,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Borden",
+    "confidence": 0.833
+   },
+   {
+    "time": 0.0,
+    "text": "CHEDDAR",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "EDMON",
+    "confidence": 0.942
+   },
+   {
+    "time": 0.0,
+    "text": "SLICED [",
+    "confidence": 0.876
+   },
+   {
+    "time": 0.0,
+    "text": "CHEESE",
+    "confidence": 0.823
+   },
+   {
+    "time": 0.0,
+    "text": "SE",
+    "confidence": 0.652
+   },
+   {
+    "time": 2.0,
+    "text": "sucedaneo,",
+    "confidence": 0.826
+   },
+   {
+    "time": 2.0,
+    "text": "thatzOyearguy",
+    "confidence": 0.618
+   },
+   {
+    "time": 4.0,
+    "text": "El queso real",
+    "confidence": 0.838
+   },
+   {
+    "time": 4.0,
+    "text": "@that4Oyearguy",
+    "confidence": 0.792
+   },
+   {
+    "time": 6.01,
+    "text": "el sucedaneo",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.01,
+    "text": "@thatzOyearguy",
+    "confidence": 0.516
+   },
+   {
+    "time": 8.01,
+    "text": "2Y por que",
+    "confidence": 0.52
+   },
+   {
+    "time": 8.01,
+    "text": "AHi QUE TE",
+    "confidence": 0.79
+   },
+   {
+    "time": 8.01,
+    "text": "HLEVAS",
+    "confidence": 0.572
+   },
+   {
+    "time": 8.01,
+    "text": "UN DATO",
+    "confidence": 0.825
+   },
+   {
+    "time": 8.01,
+    "text": "NUEVo",
+    "confidence": 0.904
+   },
+   {
+    "time": 10.01,
+    "text": "de cabecera",
+    "confidence": 0.976
+   },
+   {
+    "time": 10.01,
+    "text": "35",
+    "confidence": 0.701
+   },
+   {
+    "time": 10.01,
+    "text": "23",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.01,
+    "text": "Clases",
+    "confidence": 0.992
+   },
+   {
+    "time": 10.01,
+    "text": "cursos",
+    "confidence": 0.745
+   },
+   {
+    "time": 10.01,
+    "text": "y",
+    "confidence": 0.871
+   },
+   {
+    "time": 10.01,
+    "text": "de Quimica",
+    "confidence": 0.572
+   },
+   {
+    "time": 10.01,
+    "text": "breakingvlad.com",
+    "confidence": 0.974
+   },
+   {
+    "time": 12.01,
+    "text": "LLEVAS",
+    "confidence": 0.992
+   },
+   {
+    "time": 12.01,
+    "text": "UN DATo",
+    "confidence": 0.596
+   },
+   {
+    "time": 14.01,
+    "text": "y contiene",
+    "confidence": 0.95
+   },
+   {
+    "time": 16.02,
+    "text": "calentarla",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.02,
+    "text": "@that4Oyearguy",
+    "confidence": 0.789
+   },
+   {
+    "time": 18.02,
+    "text": "se vuelve",
+    "confidence": 0.632
+   },
+   {
+    "time": 18.02,
+    "text": "VV",
+    "confidence": 0.514
+   },
+   {
+    "time": 20.02,
+    "text": "se derrita",
+    "confidence": 0.998
+   },
+   {
+    "time": 22.02,
+    "text": "de queso",
+    "confidence": 0.941
+   },
+   {
+    "time": 22.02,
+    "text": "AHI QUE TE",
+    "confidence": 0.611
+   },
+   {
+    "time": 22.02,
+    "text": "LLEVAS",
+    "confidence": 0.988
+   },
+   {
+    "time": 22.02,
+    "text": "UN DAT",
+    "confidence": 0.963
+   },
+   {
+    "time": 24.02,
+    "text": "proporcional",
+    "confidence": 0.995
+   },
+   {
+    "time": 24.02,
+    "text": "AHI QUE TE",
+    "confidence": 0.981
+   },
+   {
+    "time": 26.03,
+    "text": "almidones",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.03,
+    "text": "Ios costes",
+    "confidence": 0.662
+   },
+   {
+    "time": 30.03,
+    "text": "sucedaneos,",
+    "confidence": 0.916
+   },
+   {
+    "time": 30.03,
+    "text": "AHI QUE TE",
+    "confidence": 0.786
+   },
+   {
+    "time": 30.03,
+    "text": "LLEVAS",
+    "confidence": 0.987
+   },
+   {
+    "time": 30.03,
+    "text": "UN DATO",
+    "confidence": 0.994
+   },
+   {
+    "time": 32.03,
+    "text": "anaden,",
+    "confidence": 0.682
+   },
+   {
+    "time": 32.03,
+    "text": "AHI QUE TE",
+    "confidence": 0.765
+   },
+   {
+    "time": 32.03,
+    "text": "LLEVAS",
+    "confidence": 0.864
+   },
+   {
+    "time": 32.03,
+    "text": "UN",
+    "confidence": 0.894
+   },
+   {
+    "time": 34.03,
+    "text": "@that4Oyearguy",
+    "confidence": 0.832
+   },
+   {
+    "time": 36.04,
+    "text": "tienden",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.04,
+    "text": "@that4Oyearguy",
+    "confidence": 0.836
+   },
+   {
+    "time": 38.04,
+    "text": "@that4Oyearguy",
+    "confidence": 0.837
+   },
+   {
+    "time": 40.04,
+    "text": "que ofrezcan",
+    "confidence": 0.783
+   },
+   {
+    "time": 40.04,
+    "text": "Ab",
+    "confidence": 0.71
+   },
+   {
+    "time": 40.04,
+    "text": "Mo",
+    "confidence": 0.941
+   },
+   {
+    "time": 40.04,
+    "text": "@thatzOyearguy",
+    "confidence": 0.597
+   },
+   {
+    "time": 42.04,
+    "text": "As] que",
+    "confidence": 0.676
+   },
+   {
+    "time": 46.05,
+    "text": "dferente",
+    "confidence": 0.765
+   },
+   {
+    "time": 48.05,
+    "text": "AHI QUE TE",
+    "confidence": 0.808
+   },
+   {
+    "time": 50.05,
+    "text": "en las etiquetas de",
+    "confidence": 0.648
+   },
+   {
+    "time": 50.05,
+    "text": "AHi QUE TE",
+    "confidence": 0.703
+   },
+   {
+    "time": 52.05,
+    "text": "almidon;",
+    "confidence": 0.585
+   },
+   {
+    "time": 52.05,
+    "text": "AHI QUE TE",
+    "confidence": 0.763
+   },
+   {
+    "time": 52.05,
+    "text": "LLEVAS",
+    "confidence": 0.986
+   },
+   {
+    "time": 52.05,
+    "text": "UN",
+    "confidence": 0.993
+   },
+   {
+    "time": 54.05,
+    "text": "un sucedaneo",
+    "confidence": 0.84
+   },
+   {
+    "time": 56.06,
+    "text": "Ahi que",
+    "confidence": 0.924
+   },
+   {
+    "time": 56.06,
+    "text": "AHI QUE TE",
+    "confidence": 0.676
+   },
+   {
+    "time": 56.06,
+    "text": "LLEVAS",
+    "confidence": 0.991
+   },
+   {
+    "time": 56.06,
+    "text": "UN DATO",
+    "confidence": 0.848
+   },
+   {
+    "time": 56.06,
+    "text": "NUEVO",
+    "confidence": 0.941
+   }
+  ],
+  "captions": [
+   {
+    "text": "Borden",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.833,
+    "id": "o1"
+   },
+   {
+    "text": "CHEDDAR",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o2"
+   },
+   {
+    "text": "EDMON",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.942,
+    "id": "o3"
+   },
+   {
+    "text": "SLICED [",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.876,
+    "id": "o4"
+   },
+   {
+    "text": "CHEESE",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.823,
+    "id": "o5"
+   },
+   {
+    "text": "SE",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.652,
+    "id": "o6"
+   },
+   {
+    "text": "sucedaneo,",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.826,
+    "id": "o7"
+   },
+   {
+    "text": "thatzOyearguy",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.618,
+    "id": "o8"
+   },
+   {
+    "text": "El queso real",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.838,
+    "id": "o9"
+   },
+   {
+    "text": "@that4Oyearguy",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.792,
+    "id": "o10"
+   },
+   {
+    "text": "el sucedaneo",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.999,
+    "id": "o11"
+   },
+   {
+    "text": "@thatzOyearguy",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.516,
+    "id": "o12"
+   },
+   {
+    "text": "2Y por que",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.52,
+    "id": "o13"
+   },
+   {
+    "text": "AHi QUE TE",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.79,
+    "id": "o14"
+   },
+   {
+    "text": "HLEVAS",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.572,
+    "id": "o15"
+   },
+   {
+    "text": "UN DATO",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.825,
+    "id": "o16"
+   },
+   {
+    "text": "NUEVo",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.904,
+    "id": "o17"
+   },
+   {
+    "text": "de cabecera",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.976,
+    "id": "o18"
+   },
+   {
+    "text": "35",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.701,
+    "id": "o19"
+   },
+   {
+    "text": "23",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 1.0,
+    "id": "o20"
+   },
+   {
+    "text": "Clases",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.992,
+    "id": "o21"
+   },
+   {
+    "text": "cursos",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.745,
+    "id": "o22"
+   },
+   {
+    "text": "y",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.871,
+    "id": "o23"
+   },
+   {
+    "text": "de Quimica",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.572,
+    "id": "o24"
+   },
+   {
+    "text": "breakingvlad.com",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.974,
+    "id": "o25"
+   },
+   {
+    "text": "LLEVAS",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.992,
+    "id": "o26"
+   },
+   {
+    "text": "UN DATo",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.596,
+    "id": "o27"
+   },
+   {
+    "text": "y contiene",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.95,
+    "id": "o28"
+   },
+   {
+    "text": "calentarla",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.999,
+    "id": "o29"
+   },
+   {
+    "text": "@that4Oyearguy",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.789,
+    "id": "o30"
+   },
+   {
+    "text": "se vuelve",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.632,
+    "id": "o31"
+   },
+   {
+    "text": "VV",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.514,
+    "id": "o32"
+   },
+   {
+    "text": "se derrita",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.998,
+    "id": "o33"
+   },
+   {
+    "text": "de queso",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.941,
+    "id": "o34"
+   },
+   {
+    "text": "AHI QUE TE",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.611,
+    "id": "o35"
+   },
+   {
+    "text": "LLEVAS",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.988,
+    "id": "o36"
+   },
+   {
+    "text": "UN DAT",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.963,
+    "id": "o37"
+   },
+   {
+    "text": "proporcional",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.995,
+    "id": "o38"
+   },
+   {
+    "text": "AHI QUE TE",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.981,
+    "id": "o39"
+   },
+   {
+    "text": "almidones",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 1.0,
+    "id": "o40"
+   },
+   {
+    "text": "Ios costes",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.662,
+    "id": "o41"
+   },
+   {
+    "text": "sucedaneos,",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.916,
+    "id": "o42"
+   },
+   {
+    "text": "AHI QUE TE",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.786,
+    "id": "o43"
+   },
+   {
+    "text": "LLEVAS",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.987,
+    "id": "o44"
+   },
+   {
+    "text": "UN DATO",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.994,
+    "id": "o45"
+   },
+   {
+    "text": "anaden,",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.682,
+    "id": "o46"
+   },
+   {
+    "text": "AHI QUE TE",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.765,
+    "id": "o47"
+   },
+   {
+    "text": "LLEVAS",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.864,
+    "id": "o48"
+   },
+   {
+    "text": "UN",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.894,
+    "id": "o49"
+   },
+   {
+    "text": "@that4Oyearguy",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.832,
+    "id": "o50"
+   },
+   {
+    "text": "tienden",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.999,
+    "id": "o51"
+   },
+   {
+    "text": "@that4Oyearguy",
+    "start": 36.04,
+    "end": 38.04,
+    "confidence": 0.837,
+    "id": "o52"
+   },
+   {
+    "text": "que ofrezcan",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.783,
+    "id": "o53"
+   },
+   {
+    "text": "Ab",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.71,
+    "id": "o54"
+   },
+   {
+    "text": "Mo",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.941,
+    "id": "o55"
+   },
+   {
+    "text": "@thatzOyearguy",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.597,
+    "id": "o56"
+   },
+   {
+    "text": "As] que",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.676,
+    "id": "o57"
+   },
+   {
+    "text": "dferente",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.765,
+    "id": "o58"
+   },
+   {
+    "text": "AHI QUE TE",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.808,
+    "id": "o59"
+   },
+   {
+    "text": "en las etiquetas de",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.648,
+    "id": "o60"
+   },
+   {
+    "text": "AHi QUE TE",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.703,
+    "id": "o61"
+   },
+   {
+    "text": "almidon;",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.585,
+    "id": "o62"
+   },
+   {
+    "text": "AHI QUE TE",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.763,
+    "id": "o63"
+   },
+   {
+    "text": "LLEVAS",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.986,
+    "id": "o64"
+   },
+   {
+    "text": "UN",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.993,
+    "id": "o65"
+   },
+   {
+    "text": "un sucedaneo",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.84,
+    "id": "o66"
+   },
+   {
+    "text": "Ahi que",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.924,
+    "id": "o67"
+   },
+   {
+    "text": "AHI QUE TE",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.676,
+    "id": "o68"
+   },
+   {
+    "text": "LLEVAS",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.991,
+    "id": "o69"
+   },
+   {
+    "text": "UN DATO",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.848,
+    "id": "o70"
+   },
+   {
+    "text": "NUEVO",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.941,
+    "id": "o71"
+   }
+  ]
+ }
+}

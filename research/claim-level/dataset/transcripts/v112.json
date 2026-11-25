@@ -1,0 +1,1368 @@
+{
+ "video_id": "v112",
+ "filename": "new_TikTok_7200360821363395845.mp4",
+ "relative_path": "new_TikTok_7200360821363395845.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@farandafit",
+ "extracted_at": "2026-11-23T08:45:56",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 1.0,
+  "duration_seconds": 46.65,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 22.0,
+    "text": "Las personas que padecen cáncer sabemos que cuando tenemos un cáncer, la inmensa mayoría, el 99,98% de los cánceres, obtienen su nutrición a partir de la glucosa, de esa fermentación, porque no pueden utilizar la glucosa a nivel mitocondrial, sino que la queman en el citoplasma de tal manera que es lo que hacen, producen lactato, y la célula cancerígena se nutre de ese lactato."
+   },
+   {
+    "id": "t2",
+    "start": 22.0,
+    "end": 26.56,
+    "text": "luego de otros aminoácidos como alamina y glutamina y otra serie de cosas, pero uno de los principales"
+   },
+   {
+    "id": "t3",
+    "start": 26.56,
+    "end": 31.28,
+    "text": "mecanismos de nutrición que tiene el cáncer son esas glucosas, ¿vale?"
+   },
+   {
+    "id": "t4",
+    "start": 31.28,
+    "end": 36.32,
+    "text": "¿Qué pasa? Que cuando yo le cambio el switch metabólico y empieza a priorizar el uso de grasas"
+   },
+   {
+    "id": "t5",
+    "start": 36.32,
+    "end": 41.6,
+    "text": "esa célula cancerosa se queda sin alimento y al quedarse sin alimento que es lo que tiene que generar"
+   },
+   {
+    "id": "t6",
+    "start": 41.6,
+    "end": 46.72,
+    "text": "la apoptosis, tiene que autosuicidarse, porque ya no puede nutrirse y ha llegado el final de su ciclo, ¿vale?"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 24,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Dieta cetogenica",
+    "confidence": 0.944
+   },
+   {
+    "time": 0.0,
+    "text": "La KETO mata de",
+    "confidence": 0.871
+   },
+   {
+    "time": 0.0,
+    "text": "hambre al cancer",
+    "confidence": 0.832
+   },
+   {
+    "time": 2.0,
+    "text": "Dieta cetogenica",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "La KETO mata de",
+    "confidence": 0.843
+   },
+   {
+    "time": 2.0,
+    "text": "hambre al cancer",
+    "confidence": 0.839
+   },
+   {
+    "time": 2.0,
+    "text": "QUE CUANDO TENEMOS",
+    "confidence": 0.898
+   },
+   {
+    "time": 4.0,
+    "text": "Dieta cetogenica",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "La KETO mata de",
+    "confidence": 0.841
+   },
+   {
+    "time": 4.0,
+    "text": "hambre al cancer",
+    "confidence": 0.833
+   },
+   {
+    "time": 4.0,
+    "text": "CANCER ,",
+    "confidence": 0.623
+   },
+   {
+    "time": 4.0,
+    "text": "UN",
+    "confidence": 0.976
+   },
+   {
+    "time": 6.0,
+    "text": "Dieta cetogenica",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "La KETO mata de",
+    "confidence": 0.869
+   },
+   {
+    "time": 6.0,
+    "text": "hambre al cancer",
+    "confidence": 0.832
+   },
+   {
+    "time": 6.0,
+    "text": "99,98%",
+    "confidence": 0.953
+   },
+   {
+    "time": 6.0,
+    "text": "EL",
+    "confidence": 0.998
+   },
+   {
+    "time": 8.0,
+    "text": "Dieta cetogenica",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "La KETO mata de",
+    "confidence": 0.875
+   },
+   {
+    "time": 8.0,
+    "text": "hambre al cancer",
+    "confidence": 0.835
+   },
+   {
+    "time": 8.0,
+    "text": "OBTIENEN SU",
+    "confidence": 0.991
+   },
+   {
+    "time": 10.0,
+    "text": "Dieta cetogenica",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "La KETO mata de",
+    "confidence": 0.854
+   },
+   {
+    "time": 10.0,
+    "text": "hambre al cancer",
+    "confidence": 0.832
+   },
+   {
+    "time": 10.0,
+    "text": "PARTIR DE LA",
+    "confidence": 0.572
+   },
+   {
+    "time": 12.0,
+    "text": "Dieta cetogenica",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "La KETO mata de",
+    "confidence": 0.847
+   },
+   {
+    "time": 12.0,
+    "text": "hambre al cancer",
+    "confidence": 0.828
+   },
+   {
+    "time": 12.0,
+    "text": "FERMENTACION;",
+    "confidence": 0.987
+   },
+   {
+    "time": 12.0,
+    "text": "ESA",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.0,
+    "text": "DE",
+    "confidence": 0.77
+   },
+   {
+    "time": 14.0,
+    "text": "Dieta cetogenica",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "La KETO mata de",
+    "confidence": 0.852
+   },
+   {
+    "time": 14.0,
+    "text": "hambre al cancer",
+    "confidence": 0.839
+   },
+   {
+    "time": 14.0,
+    "text": "MITOCONDRIAL,",
+    "confidence": 0.611
+   },
+   {
+    "time": 16.0,
+    "text": "Dieta cetogenica",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "La KETO mata de",
+    "confidence": 0.882
+   },
+   {
+    "time": 16.0,
+    "text": "hambre al cancer",
+    "confidence": 0.845
+   },
+   {
+    "time": 16.0,
+    "text": "CITOPLASMA",
+    "confidence": 0.867
+   },
+   {
+    "time": 16.0,
+    "text": "DE",
+    "confidence": 0.992
+   },
+   {
+    "time": 18.0,
+    "text": "Dieta cetogenica",
+    "confidence": 0.954
+   },
+   {
+    "time": 18.0,
+    "text": "La KETO mata de",
+    "confidence": 0.854
+   },
+   {
+    "time": 18.0,
+    "text": "hambre al cancer",
+    "confidence": 0.82
+   },
+   {
+    "time": 18.0,
+    "text": "HACEN?",
+    "confidence": 0.968
+   },
+   {
+    "time": 20.0,
+    "text": "Dieta cetogenica",
+    "confidence": 0.943
+   },
+   {
+    "time": 20.0,
+    "text": "La KETO mata de",
+    "confidence": 0.846
+   },
+   {
+    "time": 20.0,
+    "text": "hambre al cancer",
+    "confidence": 0.826
+   },
+   {
+    "time": 20.0,
+    "text": "CANCERIGENA",
+    "confidence": 0.912
+   },
+   {
+    "time": 22.0,
+    "text": "Dieta cetogenica",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "La KETO mata de",
+    "confidence": 0.842
+   },
+   {
+    "time": 22.0,
+    "text": "hambre al cancer",
+    "confidence": 0.82
+   },
+   {
+    "time": 22.0,
+    "text": "ESE LACTATO,",
+    "confidence": 0.842
+   },
+   {
+    "time": 24.0,
+    "text": "Dieta cetogenica",
+    "confidence": 0.957
+   },
+   {
+    "time": 24.0,
+    "text": "La KETO mata de",
+    "confidence": 0.854
+   },
+   {
+    "time": 24.0,
+    "text": "hambre al cancer",
+    "confidence": 0.827
+   },
+   {
+    "time": 24.0,
+    "text": "GLUTAMINA",
+    "confidence": 0.751
+   },
+   {
+    "time": 26.0,
+    "text": "Dieta cetogenica",
+    "confidence": 0.827
+   },
+   {
+    "time": 26.0,
+    "text": "La KETO mata de",
+    "confidence": 0.831
+   },
+   {
+    "time": 26.0,
+    "text": "hambre al cancer",
+    "confidence": 0.825
+   },
+   {
+    "time": 26.0,
+    "text": "UNODE LOS PRINCIPALES",
+    "confidence": 0.925
+   },
+   {
+    "time": 28.0,
+    "text": "Dieta cetogenica",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "La KETO mata de",
+    "confidence": 0.846
+   },
+   {
+    "time": 28.0,
+    "text": "hambre al cancer",
+    "confidence": 0.826
+   },
+   {
+    "time": 28.0,
+    "text": "NUTRICION QUE",
+    "confidence": 0.932
+   },
+   {
+    "time": 30.0,
+    "text": "Dieta cetogenica",
+    "confidence": 0.953
+   },
+   {
+    "time": 30.0,
+    "text": "La KETO mata de",
+    "confidence": 0.855
+   },
+   {
+    "time": 30.0,
+    "text": "hambre al cancer",
+    "confidence": 0.822
+   },
+   {
+    "time": 30.0,
+    "text": "GLUCOSAS,",
+    "confidence": 0.741
+   },
+   {
+    "time": 30.0,
+    "text": "ESAS",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "Dieta cetogenica",
+    "confidence": 0.725
+   },
+   {
+    "time": 32.0,
+    "text": "La KETO mata de",
+    "confidence": 0.845
+   },
+   {
+    "time": 32.0,
+    "text": "hambre al cancer",
+    "confidence": 0.82
+   },
+   {
+    "time": 32.0,
+    "text": "PASA?",
+    "confidence": 0.996
+   },
+   {
+    "time": 34.0,
+    "text": "Dieta cetogenica",
+    "confidence": 0.955
+   },
+   {
+    "time": 34.0,
+    "text": "La KETO mata de",
+    "confidence": 0.847
+   },
+   {
+    "time": 34.0,
+    "text": "hambre al cancer",
+    "confidence": 0.821
+   },
+   {
+    "time": 34.0,
+    "text": "METABOLICO",
+    "confidence": 0.999
+   },
+   {
+    "time": 34.0,
+    "text": "SWITCH",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.0,
+    "text": "Dieta cetogenica",
+    "confidence": 0.943
+   },
+   {
+    "time": 36.0,
+    "text": "La KETO mata de",
+    "confidence": 0.849
+   },
+   {
+    "time": 36.0,
+    "text": "hambre al cancer",
+    "confidence": 0.832
+   },
+   {
+    "time": 36.0,
+    "text": "GRASAS;",
+    "confidence": 0.797
+   },
+   {
+    "time": 36.0,
+    "text": "USO DE",
+    "confidence": 0.894
+   },
+   {
+    "time": 38.0,
+    "text": "Dieta cetogenica",
+    "confidence": 0.948
+   },
+   {
+    "time": 38.0,
+    "text": "La KETO mata de",
+    "confidence": 0.858
+   },
+   {
+    "time": 38.0,
+    "text": "hambre al cancer",
+    "confidence": 0.838
+   },
+   {
+    "time": 38.0,
+    "text": "CELULA CANCEROSA",
+    "confidence": 0.751
+   },
+   {
+    "time": 40.0,
+    "text": "Dieta cetogenica",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "La KETO mata de",
+    "confidence": 0.868
+   },
+   {
+    "time": 40.0,
+    "text": "hambre al cancer",
+    "confidence": 0.831
+   },
+   {
+    "time": 40.0,
+    "text": "SIN",
+    "confidence": 0.999
+   },
+   {
+    "time": 40.0,
+    "text": "QUEDARSE",
+    "confidence": 0.99
+   },
+   {
+    "time": 42.0,
+    "text": "Dieta cetogenica",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "La KETO mata de",
+    "confidence": 0.848
+   },
+   {
+    "time": 42.0,
+    "text": "hambre al cancer",
+    "confidence": 0.833
+   },
+   {
+    "time": 42.0,
+    "text": "APOPTOSIS;",
+    "confidence": 0.959
+   },
+   {
+    "time": 42.0,
+    "text": "LA",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "Dieta cetogenica",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "La KETO mata de",
+    "confidence": 0.856
+   },
+   {
+    "time": 44.0,
+    "text": "hambre al cancer",
+    "confidence": 0.835
+   },
+   {
+    "time": 44.0,
+    "text": "PORQUE",
+    "confidence": 0.989
+   },
+   {
+    "time": 44.0,
+    "text": "YANo",
+    "confidence": 0.903
+   },
+   {
+    "time": 46.0,
+    "text": "Dieta cetogenica",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "La KETO mata de",
+    "confidence": 0.851
+   },
+   {
+    "time": 46.0,
+    "text": "hambre al cancer",
+    "confidence": 0.84
+   },
+   {
+    "time": 46.0,
+    "text": "DE",
+    "confidence": 0.964
+   },
+   {
+    "time": 46.0,
+    "text": "FINAL",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "EL",
+    "confidence": 0.98
+   }
+  ],
+  "captions": [
+   {
+    "text": "Dieta cetogenica",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.944,
+    "id": "o1"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.871,
+    "id": "o2"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.832,
+    "id": "o3"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o4"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.843,
+    "id": "o5"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.839,
+    "id": "o6"
+   },
+   {
+    "text": "QUE CUANDO TENEMOS",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.898,
+    "id": "o7"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o8"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.841,
+    "id": "o9"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.833,
+    "id": "o10"
+   },
+   {
+    "text": "CANCER ,",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.623,
+    "id": "o11"
+   },
+   {
+    "text": "UN",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.976,
+    "id": "o12"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o13"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.869,
+    "id": "o14"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.832,
+    "id": "o15"
+   },
+   {
+    "text": "99,98%",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.953,
+    "id": "o16"
+   },
+   {
+    "text": "EL",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.998,
+    "id": "o17"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o18"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.875,
+    "id": "o19"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.835,
+    "id": "o20"
+   },
+   {
+    "text": "OBTIENEN SU",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.991,
+    "id": "o21"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o22"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.854,
+    "id": "o23"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.832,
+    "id": "o24"
+   },
+   {
+    "text": "PARTIR DE LA",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.572,
+    "id": "o25"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o26"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.847,
+    "id": "o27"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.828,
+    "id": "o28"
+   },
+   {
+    "text": "FERMENTACION;",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.987,
+    "id": "o29"
+   },
+   {
+    "text": "ESA",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o30"
+   },
+   {
+    "text": "DE",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.77,
+    "id": "o31"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o32"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.852,
+    "id": "o33"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.839,
+    "id": "o34"
+   },
+   {
+    "text": "MITOCONDRIAL,",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.611,
+    "id": "o35"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o36"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.882,
+    "id": "o37"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.845,
+    "id": "o38"
+   },
+   {
+    "text": "CITOPLASMA",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.867,
+    "id": "o39"
+   },
+   {
+    "text": "DE",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.992,
+    "id": "o40"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.954,
+    "id": "o41"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.854,
+    "id": "o42"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.82,
+    "id": "o43"
+   },
+   {
+    "text": "HACEN?",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.968,
+    "id": "o44"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.943,
+    "id": "o45"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.846,
+    "id": "o46"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.826,
+    "id": "o47"
+   },
+   {
+    "text": "CANCERIGENA",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.912,
+    "id": "o48"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o49"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.842,
+    "id": "o50"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.82,
+    "id": "o51"
+   },
+   {
+    "text": "ESE LACTATO,",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.842,
+    "id": "o52"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.957,
+    "id": "o53"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.854,
+    "id": "o54"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.827,
+    "id": "o55"
+   },
+   {
+    "text": "GLUTAMINA",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.751,
+    "id": "o56"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.827,
+    "id": "o57"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.831,
+    "id": "o58"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.825,
+    "id": "o59"
+   },
+   {
+    "text": "UNODE LOS PRINCIPALES",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.925,
+    "id": "o60"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o61"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.846,
+    "id": "o62"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.826,
+    "id": "o63"
+   },
+   {
+    "text": "NUTRICION QUE",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.932,
+    "id": "o64"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.953,
+    "id": "o65"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.855,
+    "id": "o66"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.822,
+    "id": "o67"
+   },
+   {
+    "text": "GLUCOSAS,",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.741,
+    "id": "o68"
+   },
+   {
+    "text": "ESAS",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o69"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.725,
+    "id": "o70"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.845,
+    "id": "o71"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.82,
+    "id": "o72"
+   },
+   {
+    "text": "PASA?",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.996,
+    "id": "o73"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.955,
+    "id": "o74"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.847,
+    "id": "o75"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.821,
+    "id": "o76"
+   },
+   {
+    "text": "METABOLICO",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.999,
+    "id": "o77"
+   },
+   {
+    "text": "SWITCH",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.999,
+    "id": "o78"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.943,
+    "id": "o79"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.849,
+    "id": "o80"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.832,
+    "id": "o81"
+   },
+   {
+    "text": "GRASAS;",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.797,
+    "id": "o82"
+   },
+   {
+    "text": "USO DE",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.894,
+    "id": "o83"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.948,
+    "id": "o84"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.858,
+    "id": "o85"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.838,
+    "id": "o86"
+   },
+   {
+    "text": "CELULA CANCEROSA",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.751,
+    "id": "o87"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o88"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.868,
+    "id": "o89"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.831,
+    "id": "o90"
+   },
+   {
+    "text": "SIN",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.999,
+    "id": "o91"
+   },
+   {
+    "text": "QUEDARSE",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.99,
+    "id": "o92"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o93"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.848,
+    "id": "o94"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.833,
+    "id": "o95"
+   },
+   {
+    "text": "APOPTOSIS;",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.959,
+    "id": "o96"
+   },
+   {
+    "text": "LA",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o97"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o98"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.856,
+    "id": "o99"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.835,
+    "id": "o100"
+   },
+   {
+    "text": "PORQUE",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.989,
+    "id": "o101"
+   },
+   {
+    "text": "YANo",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.903,
+    "id": "o102"
+   },
+   {
+    "text": "Dieta cetogenica",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o103"
+   },
+   {
+    "text": "La KETO mata de",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.851,
+    "id": "o104"
+   },
+   {
+    "text": "hambre al cancer",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.84,
+    "id": "o105"
+   },
+   {
+    "text": "DE",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.964,
+    "id": "o106"
+   },
+   {
+    "text": "FINAL",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o107"
+   },
+   {
+    "text": "EL",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.98,
+    "id": "o108"
+   }
+  ]
+ }
+}

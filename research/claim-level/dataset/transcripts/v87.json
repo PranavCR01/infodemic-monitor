@@ -1,0 +1,870 @@
+{
+ "video_id": "v87",
+ "filename": "new_Instagram_C4JECrDOJGP.mp4",
+ "relative_path": "new_Instagram_C4JECrDOJGP.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:54",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 53.89,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.24,
+    "text": "do not buy this water for your babies. It is very dangerous. My name is Robert"
+   },
+   {
+    "id": "t2",
+    "start": 3.24,
+    "end": 8.36,
+    "text": "Love. I'm a neuroscientist. This water has fluoride. It says four babies. You do not"
+   },
+   {
+    "id": "t3",
+    "start": 8.36,
+    "end": 14.2,
+    "text": "want babies drinking water with fluoride. Why? Well, babies' brains, the blood"
+   },
+   {
+    "id": "t4",
+    "start": 14.2,
+    "end": 18.24,
+    "text": "brain barrier is not fully formed until six months. The blood brain barrier is not"
+   },
+   {
+    "id": "t5",
+    "start": 18.24,
+    "end": 22.44,
+    "text": "fully formed until six months of age. Fluoride therefore can cross the blood"
+   },
+   {
+    "id": "t6",
+    "start": 22.44,
+    "end": 27.64,
+    "text": "brain barrier. In infants, you do not want fluoride in the brain of a developing"
+   },
+   {
+    "id": "t7",
+    "start": 27.64,
+    "end": 32.08,
+    "text": "brain that's a really really bad idea. Some people believe that fluoride is good"
+   },
+   {
+    "id": "t8",
+    "start": 32.08,
+    "end": 34.96,
+    "text": "for your teeth if you put in the water that's basically been disproven and"
+   },
+   {
+    "id": "t9",
+    "start": 34.96,
+    "end": 39.24,
+    "text": "fluoride does a lot of damage to bones and teeth and potentially. The brain"
+   },
+   {
+    "id": "t10",
+    "start": 39.24,
+    "end": 43.2,
+    "text": "please do not get fluoridated water for babies. Babies need to be"
+   },
+   {
+    "id": "t11",
+    "start": 43.2,
+    "end": 46.08,
+    "text": "drinking breast milk otherwise they need to be drinking distilled water or"
+   },
+   {
+    "id": "t12",
+    "start": 46.08,
+    "end": 50.28,
+    "text": "reverse osmosis water with minerals added to it because babies brains are not"
+   },
+   {
+    "id": "t13",
+    "start": 50.28,
+    "end": 55.24,
+    "text": "able to protect themselves from the chemicals in the water."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 27,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.527
+   },
+   {
+    "time": 0.0,
+    "text": "for BABIES",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.508
+   },
+   {
+    "time": 2.0,
+    "text": "for BABIES",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.629
+   },
+   {
+    "time": 4.0,
+    "text": "for BABIES",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "Buy",
+    "confidence": 0.979
+   },
+   {
+    "time": 6.0,
+    "text": "Do NOT",
+    "confidence": 0.97
+   },
+   {
+    "time": 6.0,
+    "text": "This Water",
+    "confidence": 0.831
+   },
+   {
+    "time": 6.0,
+    "text": "for BABIES",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "Pure",
+    "confidence": 0.792
+   },
+   {
+    "time": 6.0,
+    "text": "Life",
+    "confidence": 0.693
+   },
+   {
+    "time": 6.0,
+    "text": "BAB",
+    "confidence": 0.777
+   },
+   {
+    "time": 8.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.699
+   },
+   {
+    "time": 8.0,
+    "text": "for BABIES",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.622
+   },
+   {
+    "time": 10.0,
+    "text": "for BABIES",
+    "confidence": 0.697
+   },
+   {
+    "time": 12.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.588
+   },
+   {
+    "time": 12.0,
+    "text": "for BABIES",
+    "confidence": 0.695
+   },
+   {
+    "time": 14.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.769
+   },
+   {
+    "time": 14.0,
+    "text": "for BABIES",
+    "confidence": 0.697
+   },
+   {
+    "time": 16.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.824
+   },
+   {
+    "time": 16.0,
+    "text": "for BABIES",
+    "confidence": 0.698
+   },
+   {
+    "time": 18.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.729
+   },
+   {
+    "time": 18.0,
+    "text": "for BABIES",
+    "confidence": 0.698
+   },
+   {
+    "time": 20.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.674
+   },
+   {
+    "time": 20.0,
+    "text": "for BABIES",
+    "confidence": 0.719
+   },
+   {
+    "time": 22.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.659
+   },
+   {
+    "time": 22.0,
+    "text": "for BABIES",
+    "confidence": 0.72
+   },
+   {
+    "time": 24.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.656
+   },
+   {
+    "time": 24.0,
+    "text": "for BABIES",
+    "confidence": 0.719
+   },
+   {
+    "time": 26.0,
+    "text": "Buy",
+    "confidence": 0.979
+   },
+   {
+    "time": 26.0,
+    "text": "This Water",
+    "confidence": 0.862
+   },
+   {
+    "time": 26.0,
+    "text": "Do NOT",
+    "confidence": 0.999
+   },
+   {
+    "time": 26.0,
+    "text": "for BABIES",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.731
+   },
+   {
+    "time": 28.0,
+    "text": "for BABIES",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.725
+   },
+   {
+    "time": 30.0,
+    "text": "for BABIES",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.879
+   },
+   {
+    "time": 32.0,
+    "text": "for BABIES",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.723
+   },
+   {
+    "time": 34.0,
+    "text": "for BABIES",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.732
+   },
+   {
+    "time": 36.0,
+    "text": "for BABIES",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.721
+   },
+   {
+    "time": 38.0,
+    "text": "for BABIES",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.676
+   },
+   {
+    "time": 40.0,
+    "text": "for BABIES",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.65
+   },
+   {
+    "time": 42.0,
+    "text": "for BABIES",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.874
+   },
+   {
+    "time": 44.0,
+    "text": "for BABIES",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "Buy",
+    "confidence": 0.977
+   },
+   {
+    "time": 46.0,
+    "text": "Do NOT",
+    "confidence": 0.848
+   },
+   {
+    "time": 46.0,
+    "text": "This Water",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "for BABIES",
+    "confidence": 0.667
+   },
+   {
+    "time": 48.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.875
+   },
+   {
+    "time": 48.0,
+    "text": "for BABIES",
+    "confidence": 0.666
+   },
+   {
+    "time": 50.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.597
+   },
+   {
+    "time": 50.0,
+    "text": "for BABIES",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "Do NOT Buy This Water",
+    "confidence": 0.961
+   },
+   {
+    "time": 52.0,
+    "text": "for BABIES",
+    "confidence": 1.0
+   }
+  ],
+  "captions": [
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.527,
+    "id": "o1"
+   },
+   {
+    "text": "for BABIES",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o2"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.508,
+    "id": "o3"
+   },
+   {
+    "text": "for BABIES",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o4"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.629,
+    "id": "o5"
+   },
+   {
+    "text": "for BABIES",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o6"
+   },
+   {
+    "text": "Buy",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.979,
+    "id": "o7"
+   },
+   {
+    "text": "Do NOT",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.97,
+    "id": "o8"
+   },
+   {
+    "text": "This Water",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.831,
+    "id": "o9"
+   },
+   {
+    "text": "for BABIES",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o10"
+   },
+   {
+    "text": "Pure",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.792,
+    "id": "o11"
+   },
+   {
+    "text": "Life",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.693,
+    "id": "o12"
+   },
+   {
+    "text": "BAB",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.777,
+    "id": "o13"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.699,
+    "id": "o14"
+   },
+   {
+    "text": "for BABIES",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o15"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.622,
+    "id": "o16"
+   },
+   {
+    "text": "for BABIES",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.697,
+    "id": "o17"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.588,
+    "id": "o18"
+   },
+   {
+    "text": "for BABIES",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.695,
+    "id": "o19"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.769,
+    "id": "o20"
+   },
+   {
+    "text": "for BABIES",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.697,
+    "id": "o21"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.824,
+    "id": "o22"
+   },
+   {
+    "text": "for BABIES",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.698,
+    "id": "o23"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.729,
+    "id": "o24"
+   },
+   {
+    "text": "for BABIES",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.698,
+    "id": "o25"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.674,
+    "id": "o26"
+   },
+   {
+    "text": "for BABIES",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.719,
+    "id": "o27"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.659,
+    "id": "o28"
+   },
+   {
+    "text": "for BABIES",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.72,
+    "id": "o29"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.656,
+    "id": "o30"
+   },
+   {
+    "text": "for BABIES",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.719,
+    "id": "o31"
+   },
+   {
+    "text": "Buy",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.979,
+    "id": "o32"
+   },
+   {
+    "text": "This Water",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.862,
+    "id": "o33"
+   },
+   {
+    "text": "Do NOT",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.999,
+    "id": "o34"
+   },
+   {
+    "text": "for BABIES",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o35"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.731,
+    "id": "o36"
+   },
+   {
+    "text": "for BABIES",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o37"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.725,
+    "id": "o38"
+   },
+   {
+    "text": "for BABIES",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o39"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.879,
+    "id": "o40"
+   },
+   {
+    "text": "for BABIES",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o41"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.723,
+    "id": "o42"
+   },
+   {
+    "text": "for BABIES",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o43"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.732,
+    "id": "o44"
+   },
+   {
+    "text": "for BABIES",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o45"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.721,
+    "id": "o46"
+   },
+   {
+    "text": "for BABIES",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o47"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.676,
+    "id": "o48"
+   },
+   {
+    "text": "for BABIES",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o49"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.65,
+    "id": "o50"
+   },
+   {
+    "text": "for BABIES",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o51"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.874,
+    "id": "o52"
+   },
+   {
+    "text": "for BABIES",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o53"
+   },
+   {
+    "text": "Buy",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.977,
+    "id": "o54"
+   },
+   {
+    "text": "Do NOT",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.848,
+    "id": "o55"
+   },
+   {
+    "text": "This Water",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o56"
+   },
+   {
+    "text": "for BABIES",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.667,
+    "id": "o57"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.875,
+    "id": "o58"
+   },
+   {
+    "text": "for BABIES",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.666,
+    "id": "o59"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.597,
+    "id": "o60"
+   },
+   {
+    "text": "for BABIES",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o61"
+   },
+   {
+    "text": "Do NOT Buy This Water",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.961,
+    "id": "o62"
+   },
+   {
+    "text": "for BABIES",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o63"
+   }
+  ]
+ }
+}

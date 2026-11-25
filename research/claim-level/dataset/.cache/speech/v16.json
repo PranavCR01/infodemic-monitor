@@ -1,0 +1,146 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 62.67,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.18,
+    "text": "You ever wondered what the oldest animal is that we've ever discovered?"
+   },
+   {
+    "id": "t2",
+    "start": 3.18,
+    "end": 5.86,
+    "text": "Well, if you haven't, you're definitely wondering it now, so let's talk about it."
+   },
+   {
+    "id": "t3",
+    "start": 5.86,
+    "end": 7.46,
+    "text": "Maybe it's an elephant."
+   },
+   {
+    "id": "t4",
+    "start": 7.46,
+    "end": 8.88,
+    "text": "They live for a long time, right?"
+   },
+   {
+    "id": "t5",
+    "start": 8.88,
+    "end": 11.34,
+    "text": "Or maybe it's a whale. Those also live for a long time."
+   },
+   {
+    "id": "t6",
+    "start": 11.34,
+    "end": 14.9,
+    "text": "Nope, not an elephant or a whale. It's something much, much more exciting."
+   },
+   {
+    "id": "t7",
+    "start": 14.9,
+    "end": 15.74,
+    "text": "Are you ready for this?"
+   },
+   {
+    "id": "t8",
+    "start": 15.74,
+    "end": 19.18,
+    "text": "Behold, the oldest animal ever discovered."
+   },
+   {
+    "id": "t9",
+    "start": 19.18,
+    "end": 21.6,
+    "text": "This clam, whose name is Ming."
+   },
+   {
+    "id": "t10",
+    "start": 21.6,
+    "end": 25.5,
+    "text": "Ming was dredged up by researchers off the coast of Iceland in 2006."
+   },
+   {
+    "id": "t11",
+    "start": 25.5,
+    "end": 27.58,
+    "text": "Now, when they first found him, they just thought Ming was a clam."
+   },
+   {
+    "id": "t12",
+    "start": 27.58,
+    "end": 29.54,
+    "text": "You know, they hadn't made an introduction yet."
+   },
+   {
+    "id": "t13",
+    "start": 29.54,
+    "end": 32.4,
+    "text": "They brought Ming and a bunch of his buddies back to their lab for study."
+   },
+   {
+    "id": "t14",
+    "start": 32.4,
+    "end": 36.2,
+    "text": "Another data point was looking at how old the clams were, which you can actually do fairly easily."
+   },
+   {
+    "id": "t15",
+    "start": 36.2,
+    "end": 39.2,
+    "text": "The clam shells are deposited in layers like tree rings."
+   },
+   {
+    "id": "t16",
+    "start": 39.2,
+    "end": 41.46,
+    "text": "So if you count the layers, you can figure out how old the clam is."
+   },
+   {
+    "id": "t17",
+    "start": 41.46,
+    "end": 44.66,
+    "text": "Fortunately, you can't do this while the clam's alive, so they had to freeze all of them."
+   },
+   {
+    "id": "t18",
+    "start": 44.66,
+    "end": 49.2,
+    "text": "And it was only after that that they sampled Ming and learned that it was 507 years old."
+   },
+   {
+    "id": "t19",
+    "start": 49.2,
+    "end": 51.26,
+    "text": "It'd be really cool to make a discovery like this,"
+   },
+   {
+    "id": "t20",
+    "start": 51.26,
+    "end": 55.3,
+    "text": "but it also come with the realization that you just killed the oldest single individual animal on the planet."
+   },
+   {
+    "id": "t21",
+    "start": 55.3,
+    "end": 58.6,
+    "text": "RIP Ming, 1499-2006, you traded your shells for wings."
+   },
+   {
+    "id": "t22",
+    "start": 58.6,
+    "end": 59.1,
+    "text": "Thanks for watching."
+   }
+  ]
+ }
+}

@@ -1,0 +1,102 @@
+{
+ "video_id": "v83",
+ "filename": "new_facebook_610465694339851.mp4",
+ "relative_path": "new_facebook_610465694339851.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:54",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.511,
+  "duration_seconds": 7.64,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.0,
+    "text": "¡Este para vosotros!"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 4,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "enFin Te CReeR De",
+    "confidence": 0.649
+   },
+   {
+    "time": 0.0,
+    "text": "La vITaMIne D",
+    "confidence": 0.902
+   },
+   {
+    "time": 2.0,
+    "text": "enFin Te CReeR De",
+    "confidence": 0.507
+   },
+   {
+    "time": 2.0,
+    "text": "La vITaMIne D",
+    "confidence": 0.832
+   },
+   {
+    "time": 6.0,
+    "text": "enFin Te CReeR De",
+    "confidence": 0.853
+   }
+  ],
+  "captions": [
+   {
+    "text": "enFin Te CReeR De",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.649,
+    "id": "o1"
+   },
+   {
+    "text": "La vITaMIne D",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.902,
+    "id": "o2"
+   },
+   {
+    "text": "enFin Te CReeR De",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.507,
+    "id": "o3"
+   },
+   {
+    "text": "La vITaMIne D",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.832,
+    "id": "o4"
+   },
+   {
+    "text": "enFin Te CReeR De",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.853,
+    "id": "o5"
+   }
+  ]
+ }
+}

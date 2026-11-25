@@ -1,0 +1,392 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 206.54,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.28,
+    "text": "Here's myths you probably believed were true,"
+   },
+   {
+    "id": "t2",
+    "start": 2.28,
+    "end": 3.12,
+    "text": "but they're not."
+   },
+   {
+    "id": "t3",
+    "start": 3.12,
+    "end": 5.36,
+    "text": "First, when people say you need to drink eight cups"
+   },
+   {
+    "id": "t4",
+    "start": 5.36,
+    "end": 8.48,
+    "text": "of water a day, there's actually no scientific basing"
+   },
+   {
+    "id": "t5",
+    "start": 8.48,
+    "end": 10.04,
+    "text": "to need to drink eight cups of water."
+   },
+   {
+    "id": "t6",
+    "start": 10.04,
+    "end": 11.92,
+    "text": "Doctors will tell you that the amount of water"
+   },
+   {
+    "id": "t7",
+    "start": 11.92,
+    "end": 14.96,
+    "text": "you need to drink is completely on an individual level."
+   },
+   {
+    "id": "t8",
+    "start": 14.96,
+    "end": 16.0,
+    "text": "A lot of people will tell you"
+   },
+   {
+    "id": "t9",
+    "start": 16.0,
+    "end": 18.32,
+    "text": "that Einstein failed high school math."
+   },
+   {
+    "id": "t10",
+    "start": 18.32,
+    "end": 20.52,
+    "text": "If we just think about this logically for a second,"
+   },
+   {
+    "id": "t11",
+    "start": 20.52,
+    "end": 23.88,
+    "text": "Einstein is the greatest scientist probably of all time."
+   },
+   {
+    "id": "t12",
+    "start": 23.88,
+    "end": 25.56,
+    "text": "We really think he failed high school math."
+   },
+   {
+    "id": "t13",
+    "start": 25.56,
+    "end": 27.56,
+    "text": "I remember telling my mom this in elementary school"
+   },
+   {
+    "id": "t14",
+    "start": 27.56,
+    "end": 29.48,
+    "text": "and she was like, what are you talking about?"
+   },
+   {
+    "id": "t15",
+    "start": 29.48,
+    "end": 34.12,
+    "text": "been a myth for a long time apparently. Einstein himself was actually questioned by a magazine"
+   },
+   {
+    "id": "t16",
+    "start": 34.12,
+    "end": 40.6,
+    "text": "if he failed high school math and he said by 15 I had mastered integral and differential calculus."
+   },
+   {
+    "id": "t17",
+    "start": 40.6,
+    "end": 46.84,
+    "text": "So there you go. A lot of times people say we only use 10% of our brain which is like no, no. We"
+   },
+   {
+    "id": "t18",
+    "start": 46.84,
+    "end": 52.52,
+    "text": "actually do use our whole brain. Each part of your brain has a distinct role and I have absolutely"
+   },
+   {
+    "id": "t19",
+    "start": 52.52,
+    "end": 57.16,
+    "text": "no idea where this even came from because I'm pretty sure we've always known that the whole"
+   },
+   {
+    "id": "t20",
+    "start": 57.16,
+    "end": 61.88,
+    "text": "brain is important. Another one I hate that I hear sometimes still is that Christopher Columbus"
+   },
+   {
+    "id": "t21",
+    "start": 61.88,
+    "end": 66.36,
+    "text": "discovered America. There's like so much wrong with this and it's been talked about a lot so I'm"
+   },
+   {
+    "id": "t22",
+    "start": 66.36,
+    "end": 71.08,
+    "text": "not gonna go into too much detail but you can't really discover something that already had people"
+   },
+   {
+    "id": "t23",
+    "start": 71.08,
+    "end": 76.68,
+    "text": "there but if we're gonna talk about like the first time somebody came over on a boat to North America"
+   },
+   {
+    "id": "t24",
+    "start": 76.68,
+    "end": 81.96,
+    "text": "it wasn't even Christopher Columbus either. Vikings actually came to North America at some point."
+   },
+   {
+    "id": "t25",
+    "start": 81.96,
+    "end": 85.96,
+    "text": "A lot of people will tell you that if you crack your knuckles you're going to get arthritis. This"
+   },
+   {
+    "id": "t26",
+    "start": 85.96,
+    "end": 88.4,
+    "text": "This is one myth that I particularly hate."
+   },
+   {
+    "id": "t27",
+    "start": 88.4,
+    "end": 91.4,
+    "text": "Cracking your knuckles is some sort of chemical reaction, I believe."
+   },
+   {
+    "id": "t28",
+    "start": 91.4,
+    "end": 92.8,
+    "text": "It does not cause arthritis."
+   },
+   {
+    "id": "t29",
+    "start": 92.8,
+    "end": 97.44,
+    "text": "In fact, a scientist did a long-term study where he only cracked one hand"
+   },
+   {
+    "id": "t30",
+    "start": 97.44,
+    "end": 101.2,
+    "text": "and there was no difference in the health of his hands at the end of his life."
+   },
+   {
+    "id": "t31",
+    "start": 101.2,
+    "end": 105.48,
+    "text": "A lot of people say that you swallow eight spiders in your lifetime."
+   },
+   {
+    "id": "t32",
+    "start": 105.48,
+    "end": 107.84,
+    "text": "Wait, eight spiders a year in your sleep."
+   },
+   {
+    "id": "t33",
+    "start": 107.84,
+    "end": 109.6,
+    "text": "Again, this kind of comes out of nowhere."
+   },
+   {
+    "id": "t34",
+    "start": 109.6,
+    "end": 114.72,
+    "text": "There's been no study that measures the amount of spiders you swallow in your sleep."
+   },
+   {
+    "id": "t35",
+    "start": 114.72,
+    "end": 122.08,
+    "text": "Pre-sures also an argument that spiders like are kind of scared of you when you sleep, so they're most likely not even going near your mouth"
+   },
+   {
+    "id": "t36",
+    "start": 122.08,
+    "end": 126.88,
+    "text": "A lot of people will say to pee on a jellyfish sting and that that'll make it heal"
+   },
+   {
+    "id": "t37",
+    "start": 126.88,
+    "end": 133.62,
+    "text": "Not only is this not true, apparently urine will make it hurt more because I guess it's kind of like acidic or something"
+   },
+   {
+    "id": "t38",
+    "start": 134.0,
+    "end": 139.96,
+    "text": "Don't pee on your friends. You heard it here first. A lot of people say that Marilyn Monroe was considered plus size"
+   },
+   {
+    "id": "t39",
+    "start": 139.96,
+    "end": 145.24,
+    "text": "Now this is actually interesting because in today's sizing she would be considered around a six or an eight"
+   },
+   {
+    "id": "t40",
+    "start": 145.24,
+    "end": 151.32,
+    "text": "But the reason people say that is because in the 90s like heroin chic became a thing or heroin chic"
+   },
+   {
+    "id": "t41",
+    "start": 151.32,
+    "end": 155.56,
+    "text": "So they looked at Marilyn Monroe's like perfectly normal sizing and we're like, oh, yeah"
+   },
+   {
+    "id": "t42",
+    "start": 155.56,
+    "end": 159.84,
+    "text": "She's actually plus sized which is not true Marilyn Monroe was never considered plus size"
+   },
+   {
+    "id": "t43",
+    "start": 159.84,
+    "end": 165.96,
+    "text": "Now their super common myth is that if you shave your hair it'll grow back thicker people will say like oh"
+   },
+   {
+    "id": "t44",
+    "start": 165.96,
+    "end": 169.08,
+    "text": "Don't shave your arm hair. It'll just grow back thicker. Yeah"
+   },
+   {
+    "id": "t45",
+    "start": 169.08,
+    "end": 170.94,
+    "text": "Yeah, that's not really how hair works."
+   },
+   {
+    "id": "t46",
+    "start": 170.94,
+    "end": 173.28,
+    "text": "It may have an illusion of appearing thicker"
+   },
+   {
+    "id": "t47",
+    "start": 173.28,
+    "end": 175.96,
+    "text": "because before the hair was kind of like pointy at the tip"
+   },
+   {
+    "id": "t48",
+    "start": 175.96,
+    "end": 177.8,
+    "text": "and now it's gonna be blunt when it grows back"
+   },
+   {
+    "id": "t49",
+    "start": 177.8,
+    "end": 178.64,
+    "text": "because you shaved it,"
+   },
+   {
+    "id": "t50",
+    "start": 178.64,
+    "end": 180.92,
+    "text": "but the hair itself does not change the thickness"
+   },
+   {
+    "id": "t51",
+    "start": 180.92,
+    "end": 181.76,
+    "text": "when you shave it."
+   },
+   {
+    "id": "t52",
+    "start": 181.76,
+    "end": 184.04,
+    "text": "Last big one, if you're in a situation"
+   },
+   {
+    "id": "t53",
+    "start": 184.04,
+    "end": 186.12,
+    "text": "where you're dealing with like an undercover cop,"
+   },
+   {
+    "id": "t54",
+    "start": 186.12,
+    "end": 188.12,
+    "text": "people will tell you if you ask them,"
+   },
+   {
+    "id": "t55",
+    "start": 188.12,
+    "end": 189.16,
+    "text": "are you a cop?"
+   },
+   {
+    "id": "t56",
+    "start": 189.16,
+    "end": 190.78,
+    "text": "They have to tell the truth,"
+   },
+   {
+    "id": "t57",
+    "start": 190.78,
+    "end": 192.36,
+    "text": "which is not true at all."
+   },
+   {
+    "id": "t58",
+    "start": 192.36,
+    "end": 194.88,
+    "text": "Cops can lie to you, obviously."
+   },
+   {
+    "id": "t59",
+    "start": 194.88,
+    "end": 197.0,
+    "text": "Okay, that's all the myths I could think of for now."
+   },
+   {
+    "id": "t60",
+    "start": 197.0,
+    "end": 198.96,
+    "text": "I should really just let people have nice things,"
+   },
+   {
+    "id": "t61",
+    "start": 198.96,
+    "end": 201.12,
+    "text": "but I hate misconceptions."
+   },
+   {
+    "id": "t62",
+    "start": 201.12,
+    "end": 201.96,
+    "text": "Okay, that's all."
+   },
+   {
+    "id": "t63",
+    "start": 201.96,
+    "end": 202.8,
+    "text": "See ya."
+   }
+  ]
+ }
+}

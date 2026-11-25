@@ -1,0 +1,8381 @@
+{
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "on_screen": {
+  "frames_sampled": 30,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.733
+   },
+   {
+    "time": 0.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.816
+   },
+   {
+    "time": 0.0,
+    "text": "to COVID Vaccine",
+    "confidence": 0.998
+   },
+   {
+    "time": 0.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.9
+   },
+   {
+    "time": 0.0,
+    "text": "WHAT H",
+    "confidence": 0.991
+   },
+   {
+    "time": 0.0,
+    "text": "US. Food an",
+    "confidence": 0.628
+   },
+   {
+    "time": 0.0,
+    "text": "Administra",
+    "confidence": 0.955
+   },
+   {
+    "time": 0.0,
+    "text": "the warnin",
+    "confidence": 0.879
+   },
+   {
+    "time": 0.0,
+    "text": "Moderna $",
+    "confidence": 0.513
+   },
+   {
+    "time": 0.0,
+    "text": "vaccines",
+    "confidence": 0.654
+   },
+   {
+    "time": 0.0,
+    "text": "information re",
+    "confidence": 0.911
+   },
+   {
+    "time": 0.0,
+    "text": "myocarditis",
+    "confidence": 0.997
+   },
+   {
+    "time": 0.0,
+    "text": "of",
+    "confidence": 0.998
+   },
+   {
+    "time": 0.0,
+    "text": "particularly in",
+    "confidence": 0.769
+   },
+   {
+    "time": 0.0,
+    "text": "WHO WA",
+    "confidence": 0.661
+   },
+   {
+    "time": 0.0,
+    "text": "FDA, Pfizer; Mc",
+    "confidence": 0.881
+   },
+   {
+    "time": 2.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.683
+   },
+   {
+    "time": 2.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.746
+   },
+   {
+    "time": 2.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.903
+   },
+   {
+    "time": 2.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.958
+   },
+   {
+    "time": 2.0,
+    "text": "WHAT HAPP",
+    "confidence": 0.984
+   },
+   {
+    "time": 2.0,
+    "text": "Foodl and Dru",
+    "confidence": 0.523
+   },
+   {
+    "time": 2.0,
+    "text": "US",
+    "confidence": 0.997
+   },
+   {
+    "time": 2.0,
+    "text": "Adminis",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "tion",
+    "confidence": 0.995
+   },
+   {
+    "time": 2.0,
+    "text": "the warr",
+    "confidence": 0.584
+   },
+   {
+    "time": 2.0,
+    "text": "Moderna",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "vaccines to",
+    "confidence": 0.703
+   },
+   {
+    "time": 2.0,
+    "text": "information IC",
+    "confidence": 0.576
+   },
+   {
+    "time": 2.0,
+    "text": "of myocarditis and",
+    "confidence": 0.962
+   },
+   {
+    "time": 2.0,
+    "text": "particularly in you",
+    "confidence": 0.728
+   },
+   {
+    "time": 2.0,
+    "text": "WHO WAS",
+    "confidence": 0.885
+   },
+   {
+    "time": 2.0,
+    "text": "FDA, Pfizer; Mode",
+    "confidence": 0.968
+   },
+   {
+    "time": 2.0,
+    "text": "particinante",
+    "confidence": 0.667
+   },
+   {
+    "time": 4.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.722
+   },
+   {
+    "time": 4.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.773
+   },
+   {
+    "time": 4.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.911
+   },
+   {
+    "time": 4.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.896
+   },
+   {
+    "time": 4.0,
+    "text": "WHAT HAPPENED: The",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.0,
+    "text": "Drug",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "US. Food and",
+    "confidence": 0.767
+   },
+   {
+    "time": 4.0,
+    "text": "Administration (FDA) updated",
+    "confidence": 0.613
+   },
+   {
+    "time": 4.0,
+    "text": "the warning labels on Pfizer",
+    "confidence": 0.8
+   },
+   {
+    "time": 4.0,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Moderna's COVID-19 mRNA",
+    "confidence": 0.777
+   },
+   {
+    "time": 4.0,
+    "text": "yaccines t0 include new",
+    "confidence": 0.56
+   },
+   {
+    "time": 4.0,
+    "text": "information regarding the risks",
+    "confidence": 0.965
+   },
+   {
+    "time": 4.0,
+    "text": "of myocarditis and pericarditis,",
+    "confidence": 0.78
+   },
+   {
+    "time": 4.0,
+    "text": "particularly in young males_",
+    "confidence": 0.848
+   },
+   {
+    "time": 4.0,
+    "text": "WHO WAS INVOLVED: The",
+    "confidence": 0.573
+   },
+   {
+    "time": 4.0,
+    "text": "FDA, Pfizer; Moderna, and study",
+    "confidence": 0.89
+   },
+   {
+    "time": 4.0,
+    "text": "participants, including young",
+    "confidence": 0.863
+   },
+   {
+    "time": 4.0,
+    "text": "males affected by myocarditis",
+    "confidence": 0.642
+   },
+   {
+    "time": 4.0,
+    "text": "WHEN & WHERE: The",
+    "confidence": 0.609
+   },
+   {
+    "time": 4.0,
+    "text": "updated safety communication",
+    "confidence": 0.84
+   },
+   {
+    "time": 4.0,
+    "text": "was issued on June 25,,2024,in",
+    "confidence": 0.779
+   },
+   {
+    "time": 4.0,
+    "text": "the United States.",
+    "confidence": 0.865
+   },
+   {
+    "time": 4.0,
+    "text": "KEY QUOTE: \"[The] FDA",
+    "confidence": 0.952
+   },
+   {
+    "time": 4.0,
+    "text": "has required and approved",
+    "confidence": 0.604
+   },
+   {
+    "time": 4.0,
+    "text": "updates to the Prescribing",
+    "confidence": 0.984
+   },
+   {
+    "time": 4.0,
+    "text": "Information for Comirnaty",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "(COVID-19 Vaccine, mRNA)",
+    "confidence": 0.556
+   },
+   {
+    "time": 6.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.717
+   },
+   {
+    "time": 6.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.79
+   },
+   {
+    "time": 6.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.911
+   },
+   {
+    "time": 6.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.873
+   },
+   {
+    "time": 6.0,
+    "text": "WHAT HAPPENED: The",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.0,
+    "text": "Drug",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "US. Food and",
+    "confidence": 0.761
+   },
+   {
+    "time": 6.0,
+    "text": "Administration (FDA) updated",
+    "confidence": 0.624
+   },
+   {
+    "time": 6.0,
+    "text": "the warning labels on Pfizer",
+    "confidence": 0.868
+   },
+   {
+    "time": 6.0,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "Moderna's COVID-19 mRNA",
+    "confidence": 0.793
+   },
+   {
+    "time": 6.0,
+    "text": "vaccines t0 include new",
+    "confidence": 0.839
+   },
+   {
+    "time": 6.0,
+    "text": "information regarding the risks",
+    "confidence": 0.802
+   },
+   {
+    "time": 6.0,
+    "text": "of myocarditis and pericarditis,",
+    "confidence": 0.74
+   },
+   {
+    "time": 6.0,
+    "text": "particularly in young males",
+    "confidence": 0.918
+   },
+   {
+    "time": 6.0,
+    "text": "WHO WAS INVOLVED: The",
+    "confidence": 0.702
+   },
+   {
+    "time": 6.0,
+    "text": "FDA, Pfizer; Moderna, and study",
+    "confidence": 0.894
+   },
+   {
+    "time": 6.0,
+    "text": "participants, including young",
+    "confidence": 0.867
+   },
+   {
+    "time": 6.0,
+    "text": "males affected by myocarditis",
+    "confidence": 0.738
+   },
+   {
+    "time": 6.0,
+    "text": "WHEN & WHERE: The",
+    "confidence": 0.631
+   },
+   {
+    "time": 6.0,
+    "text": "updated safety communication",
+    "confidence": 0.847
+   },
+   {
+    "time": 6.0,
+    "text": "was issued on June 25,,2024,in",
+    "confidence": 0.776
+   },
+   {
+    "time": 6.0,
+    "text": "the United States.",
+    "confidence": 0.868
+   },
+   {
+    "time": 6.0,
+    "text": "KEY QUOTE: \"[The] FDA",
+    "confidence": 0.947
+   },
+   {
+    "time": 6.0,
+    "text": "has required and approved",
+    "confidence": 0.722
+   },
+   {
+    "time": 6.0,
+    "text": "updates to the Prescribing",
+    "confidence": 0.985
+   },
+   {
+    "time": 6.0,
+    "text": "Information for Comirnaty",
+    "confidence": 0.869
+   },
+   {
+    "time": 6.0,
+    "text": "(COVID-19 Vaccine, mRNA)",
+    "confidence": 0.559
+   },
+   {
+    "time": 8.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.717
+   },
+   {
+    "time": 8.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.784
+   },
+   {
+    "time": 8.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.911
+   },
+   {
+    "time": 8.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.965
+   },
+   {
+    "time": 8.0,
+    "text": "WHAT HAPPENED: The",
+    "confidence": 0.998
+   },
+   {
+    "time": 8.0,
+    "text": "Drug",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "US. Food and",
+    "confidence": 0.768
+   },
+   {
+    "time": 8.0,
+    "text": "Administration (FDA) updated",
+    "confidence": 0.805
+   },
+   {
+    "time": 8.0,
+    "text": "the warning labels on Pfizer",
+    "confidence": 0.865
+   },
+   {
+    "time": 8.0,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "Moderna's COVID-19 mRNA",
+    "confidence": 0.809
+   },
+   {
+    "time": 8.0,
+    "text": "accines t0 include new",
+    "confidence": 0.925
+   },
+   {
+    "time": 8.0,
+    "text": "information regarding the risks",
+    "confidence": 0.946
+   },
+   {
+    "time": 8.0,
+    "text": "of myocarditis and pericarditis,",
+    "confidence": 0.661
+   },
+   {
+    "time": 8.0,
+    "text": "particularly in young males",
+    "confidence": 0.924
+   },
+   {
+    "time": 8.0,
+    "text": "WHO WAS INVOLVED: The",
+    "confidence": 0.703
+   },
+   {
+    "time": 8.0,
+    "text": "FDA, Pfizer; Moderna, and study",
+    "confidence": 0.894
+   },
+   {
+    "time": 8.0,
+    "text": "participants, including young",
+    "confidence": 0.863
+   },
+   {
+    "time": 8.0,
+    "text": "males affected by myocarditis",
+    "confidence": 0.75
+   },
+   {
+    "time": 8.0,
+    "text": "WHEN & WHERE: The",
+    "confidence": 0.661
+   },
+   {
+    "time": 8.0,
+    "text": "updated safety communication",
+    "confidence": 0.847
+   },
+   {
+    "time": 8.0,
+    "text": "was issued on June 25,,2024,in",
+    "confidence": 0.69
+   },
+   {
+    "time": 8.0,
+    "text": "the United States.",
+    "confidence": 0.867
+   },
+   {
+    "time": 8.0,
+    "text": "KEY QUOTE: \"[The] FDA",
+    "confidence": 0.948
+   },
+   {
+    "time": 8.0,
+    "text": "has required and approved",
+    "confidence": 0.701
+   },
+   {
+    "time": 8.0,
+    "text": "updates to the Prescribing",
+    "confidence": 0.985
+   },
+   {
+    "time": 8.0,
+    "text": "Information for Comirnaty",
+    "confidence": 0.791
+   },
+   {
+    "time": 8.0,
+    "text": "(COVID-19 Vaccine, mRNA)",
+    "confidence": 0.565
+   },
+   {
+    "time": 10.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.78
+   },
+   {
+    "time": 10.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.746
+   },
+   {
+    "time": 10.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.929
+   },
+   {
+    "time": 10.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.978
+   },
+   {
+    "time": 10.0,
+    "text": "WHAT HAPPENED: The",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "Drug",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "US. Food and",
+    "confidence": 0.778
+   },
+   {
+    "time": 10.0,
+    "text": "Administration (FDA) updated",
+    "confidence": 0.879
+   },
+   {
+    "time": 10.0,
+    "text": "the warning labels on Pfizer",
+    "confidence": 0.996
+   },
+   {
+    "time": 10.0,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "Moderna's COVID-19 mRNA",
+    "confidence": 0.818
+   },
+   {
+    "time": 10.0,
+    "text": "accines t0 include new",
+    "confidence": 0.881
+   },
+   {
+    "time": 10.0,
+    "text": "information regarding the risks",
+    "confidence": 0.931
+   },
+   {
+    "time": 10.0,
+    "text": "of myocarditis and pericarditis,",
+    "confidence": 0.848
+   },
+   {
+    "time": 10.0,
+    "text": "particularly in young males",
+    "confidence": 0.894
+   },
+   {
+    "time": 10.0,
+    "text": "WHO WAS INVOLVED: The",
+    "confidence": 0.702
+   },
+   {
+    "time": 10.0,
+    "text": "FDA, Pfizer; Moderna, and study",
+    "confidence": 0.877
+   },
+   {
+    "time": 10.0,
+    "text": "participants, including young",
+    "confidence": 0.907
+   },
+   {
+    "time": 10.0,
+    "text": "males affected by myocarditis",
+    "confidence": 0.752
+   },
+   {
+    "time": 10.0,
+    "text": "WHEN & WHERE: The",
+    "confidence": 0.736
+   },
+   {
+    "time": 10.0,
+    "text": "updated safety communication",
+    "confidence": 0.844
+   },
+   {
+    "time": 10.0,
+    "text": "was issued on June 25,,2024,in",
+    "confidence": 0.809
+   },
+   {
+    "time": 10.0,
+    "text": "the United States.",
+    "confidence": 0.856
+   },
+   {
+    "time": 10.0,
+    "text": "KEY QUOTE: \"[The] FDA",
+    "confidence": 0.961
+   },
+   {
+    "time": 10.0,
+    "text": "has required and approved",
+    "confidence": 0.691
+   },
+   {
+    "time": 10.0,
+    "text": "updates to the Prescribing",
+    "confidence": 0.988
+   },
+   {
+    "time": 10.0,
+    "text": "Information for Comirnaty",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "(COVID-19 Vaccine, mRNA)",
+    "confidence": 0.563
+   },
+   {
+    "time": 12.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.78
+   },
+   {
+    "time": 12.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.746
+   },
+   {
+    "time": 12.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.929
+   },
+   {
+    "time": 12.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.978
+   },
+   {
+    "time": 12.0,
+    "text": "WHAT HAPPENED: The",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.0,
+    "text": "Drug",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "US. Food and",
+    "confidence": 0.778
+   },
+   {
+    "time": 12.0,
+    "text": "Administration (FDA) updated",
+    "confidence": 0.879
+   },
+   {
+    "time": 12.0,
+    "text": "the warning labels on Pfizer",
+    "confidence": 0.996
+   },
+   {
+    "time": 12.0,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "Moderna's COVID-19 mRNA",
+    "confidence": 0.818
+   },
+   {
+    "time": 12.0,
+    "text": "accines t0 include new",
+    "confidence": 0.881
+   },
+   {
+    "time": 12.0,
+    "text": "information regarding the risks",
+    "confidence": 0.931
+   },
+   {
+    "time": 12.0,
+    "text": "of myocarditis and pericarditis,",
+    "confidence": 0.848
+   },
+   {
+    "time": 12.0,
+    "text": "particularly in young males",
+    "confidence": 0.894
+   },
+   {
+    "time": 12.0,
+    "text": "WHO WAS INVOLVED: The",
+    "confidence": 0.702
+   },
+   {
+    "time": 12.0,
+    "text": "FDA, Pfizer; Moderna, and study",
+    "confidence": 0.877
+   },
+   {
+    "time": 12.0,
+    "text": "participants, including young",
+    "confidence": 0.907
+   },
+   {
+    "time": 12.0,
+    "text": "males affected by myocarditis",
+    "confidence": 0.752
+   },
+   {
+    "time": 12.0,
+    "text": "WHEN & WHERE: The",
+    "confidence": 0.736
+   },
+   {
+    "time": 12.0,
+    "text": "updated safety communication",
+    "confidence": 0.844
+   },
+   {
+    "time": 12.0,
+    "text": "was issued on June 25,,2024,in",
+    "confidence": 0.809
+   },
+   {
+    "time": 12.0,
+    "text": "the United States.",
+    "confidence": 0.856
+   },
+   {
+    "time": 12.0,
+    "text": "KEY QUOTE: \"[The] FDA",
+    "confidence": 0.961
+   },
+   {
+    "time": 12.0,
+    "text": "has required and approved",
+    "confidence": 0.691
+   },
+   {
+    "time": 12.0,
+    "text": "updates to the Prescribing",
+    "confidence": 0.988
+   },
+   {
+    "time": 12.0,
+    "text": "Information for Comirnaty",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.0,
+    "text": "(COVID-19 Vaccine, mRNA)",
+    "confidence": 0.563
+   },
+   {
+    "time": 14.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.78
+   },
+   {
+    "time": 14.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.746
+   },
+   {
+    "time": 14.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.929
+   },
+   {
+    "time": 14.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.978
+   },
+   {
+    "time": 14.0,
+    "text": "WHAT HAPPENED: The",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.0,
+    "text": "Drug",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "US. Food and",
+    "confidence": 0.778
+   },
+   {
+    "time": 14.0,
+    "text": "Administration (FDA) updated",
+    "confidence": 0.879
+   },
+   {
+    "time": 14.0,
+    "text": "the warning labels on Pfizer",
+    "confidence": 0.996
+   },
+   {
+    "time": 14.0,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "Moderna's COVID-19 mRNA",
+    "confidence": 0.818
+   },
+   {
+    "time": 14.0,
+    "text": "accines t0 include new",
+    "confidence": 0.881
+   },
+   {
+    "time": 14.0,
+    "text": "information regarding the risks",
+    "confidence": 0.931
+   },
+   {
+    "time": 14.0,
+    "text": "of myocarditis and pericarditis,",
+    "confidence": 0.848
+   },
+   {
+    "time": 14.0,
+    "text": "particularly in young males",
+    "confidence": 0.894
+   },
+   {
+    "time": 14.0,
+    "text": "WHO WAS INVOLVED: The",
+    "confidence": 0.702
+   },
+   {
+    "time": 14.0,
+    "text": "FDA, Pfizer; Moderna, and study",
+    "confidence": 0.877
+   },
+   {
+    "time": 14.0,
+    "text": "participants, including young",
+    "confidence": 0.907
+   },
+   {
+    "time": 14.0,
+    "text": "males affected by myocarditis",
+    "confidence": 0.752
+   },
+   {
+    "time": 14.0,
+    "text": "WHEN & WHERE: The",
+    "confidence": 0.736
+   },
+   {
+    "time": 14.0,
+    "text": "updated safety communication",
+    "confidence": 0.844
+   },
+   {
+    "time": 14.0,
+    "text": "was issued on June 25,,2024,in",
+    "confidence": 0.809
+   },
+   {
+    "time": 14.0,
+    "text": "the United States.",
+    "confidence": 0.856
+   },
+   {
+    "time": 14.0,
+    "text": "KEY QUOTE: \"[The] FDA",
+    "confidence": 0.961
+   },
+   {
+    "time": 14.0,
+    "text": "has required and approved",
+    "confidence": 0.691
+   },
+   {
+    "time": 14.0,
+    "text": "updates to the Prescribing",
+    "confidence": 0.988
+   },
+   {
+    "time": 14.0,
+    "text": "Information for Comirnaty",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.0,
+    "text": "(COVID-19 Vaccine, mRNA)",
+    "confidence": 0.563
+   },
+   {
+    "time": 16.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.78
+   },
+   {
+    "time": 16.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.746
+   },
+   {
+    "time": 16.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.929
+   },
+   {
+    "time": 16.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.978
+   },
+   {
+    "time": 16.0,
+    "text": "WHAT HAPPENED: The",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.0,
+    "text": "Drug",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "US. Food and",
+    "confidence": 0.778
+   },
+   {
+    "time": 16.0,
+    "text": "Administration (FDA) updated",
+    "confidence": 0.879
+   },
+   {
+    "time": 16.0,
+    "text": "the warning labels on Pfizer",
+    "confidence": 0.996
+   },
+   {
+    "time": 16.0,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "Moderna's COVID-19 mRNA",
+    "confidence": 0.818
+   },
+   {
+    "time": 16.0,
+    "text": "accines t0 include new",
+    "confidence": 0.881
+   },
+   {
+    "time": 16.0,
+    "text": "information regarding the risks",
+    "confidence": 0.931
+   },
+   {
+    "time": 16.0,
+    "text": "of myocarditis and pericarditis,",
+    "confidence": 0.848
+   },
+   {
+    "time": 16.0,
+    "text": "particularly in young males",
+    "confidence": 0.894
+   },
+   {
+    "time": 16.0,
+    "text": "WHO WAS INVOLVED: The",
+    "confidence": 0.702
+   },
+   {
+    "time": 16.0,
+    "text": "FDA, Pfizer; Moderna, and study",
+    "confidence": 0.877
+   },
+   {
+    "time": 16.0,
+    "text": "participants, including young",
+    "confidence": 0.907
+   },
+   {
+    "time": 16.0,
+    "text": "males affected by myocarditis",
+    "confidence": 0.752
+   },
+   {
+    "time": 16.0,
+    "text": "WHEN & WHERE: The",
+    "confidence": 0.736
+   },
+   {
+    "time": 16.0,
+    "text": "updated safety communication",
+    "confidence": 0.844
+   },
+   {
+    "time": 16.0,
+    "text": "was issued on June 25,,2024,in",
+    "confidence": 0.809
+   },
+   {
+    "time": 16.0,
+    "text": "the United States.",
+    "confidence": 0.856
+   },
+   {
+    "time": 16.0,
+    "text": "KEY QUOTE: \"[The] FDA",
+    "confidence": 0.961
+   },
+   {
+    "time": 16.0,
+    "text": "has required and approved",
+    "confidence": 0.691
+   },
+   {
+    "time": 16.0,
+    "text": "updates to the Prescribing",
+    "confidence": 0.988
+   },
+   {
+    "time": 16.0,
+    "text": "Information for Comirnaty",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.0,
+    "text": "(COVID-19 Vaccine, mRNA)",
+    "confidence": 0.563
+   },
+   {
+    "time": 18.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.772
+   },
+   {
+    "time": 18.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.743
+   },
+   {
+    "time": 18.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.929
+   },
+   {
+    "time": 18.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.972
+   },
+   {
+    "time": 18.0,
+    "text": "WHAT HAPPENED: The",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.0,
+    "text": "US. Food and Drug",
+    "confidence": 0.579
+   },
+   {
+    "time": 18.0,
+    "text": "Administration (FDA) updated",
+    "confidence": 0.863
+   },
+   {
+    "time": 18.0,
+    "text": "the warning labels on Pfizer",
+    "confidence": 0.818
+   },
+   {
+    "time": 18.0,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "Moderna's COVID-19 mRNA",
+    "confidence": 0.824
+   },
+   {
+    "time": 18.0,
+    "text": "vaccines t0 include new",
+    "confidence": 0.685
+   },
+   {
+    "time": 18.0,
+    "text": "information regarding the risks",
+    "confidence": 0.943
+   },
+   {
+    "time": 18.0,
+    "text": "of myocarditis and pericarditis,",
+    "confidence": 0.824
+   },
+   {
+    "time": 18.0,
+    "text": "particularly in young males",
+    "confidence": 0.901
+   },
+   {
+    "time": 18.0,
+    "text": "WHO WAS INVOLVED: The",
+    "confidence": 0.625
+   },
+   {
+    "time": 18.0,
+    "text": "FDA, Pfizer; Moderna, and study",
+    "confidence": 0.872
+   },
+   {
+    "time": 18.0,
+    "text": "participants, including young",
+    "confidence": 0.892
+   },
+   {
+    "time": 18.0,
+    "text": "males affected by myocarditis",
+    "confidence": 0.778
+   },
+   {
+    "time": 18.0,
+    "text": "WHEN & WHERE: The",
+    "confidence": 0.721
+   },
+   {
+    "time": 18.0,
+    "text": "updated safety communication",
+    "confidence": 0.845
+   },
+   {
+    "time": 18.0,
+    "text": "was issued on June 25,,2024,in",
+    "confidence": 0.796
+   },
+   {
+    "time": 18.0,
+    "text": "the United States.",
+    "confidence": 0.865
+   },
+   {
+    "time": 18.0,
+    "text": "KEY QUOTE: \"[The] FDA",
+    "confidence": 0.96
+   },
+   {
+    "time": 18.0,
+    "text": "has required and approved",
+    "confidence": 0.689
+   },
+   {
+    "time": 18.0,
+    "text": "updates to the Prescribing",
+    "confidence": 0.988
+   },
+   {
+    "time": 18.0,
+    "text": "Information for Comirnaty",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.772
+   },
+   {
+    "time": 20.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.743
+   },
+   {
+    "time": 20.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.929
+   },
+   {
+    "time": 20.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.972
+   },
+   {
+    "time": 20.0,
+    "text": "WHAT HAPPENED: The",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.0,
+    "text": "US. Food and Drug",
+    "confidence": 0.536
+   },
+   {
+    "time": 20.0,
+    "text": "Administration (FDA) updated",
+    "confidence": 0.863
+   },
+   {
+    "time": 20.0,
+    "text": "the warning labels on Pfizer",
+    "confidence": 0.998
+   },
+   {
+    "time": 20.0,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "Moderna's COVID-19 mRNA",
+    "confidence": 0.824
+   },
+   {
+    "time": 20.0,
+    "text": "vaccines t0 include new",
+    "confidence": 0.686
+   },
+   {
+    "time": 20.0,
+    "text": "information regarding the risks",
+    "confidence": 0.943
+   },
+   {
+    "time": 20.0,
+    "text": "of myocarditis and pericarditis,",
+    "confidence": 0.824
+   },
+   {
+    "time": 20.0,
+    "text": "particularly in young males",
+    "confidence": 0.901
+   },
+   {
+    "time": 20.0,
+    "text": "WHO WAS INVOLVED: The",
+    "confidence": 0.627
+   },
+   {
+    "time": 20.0,
+    "text": "FDA, Pfizer; Moderna, and study",
+    "confidence": 0.872
+   },
+   {
+    "time": 20.0,
+    "text": "participants, including young",
+    "confidence": 0.892
+   },
+   {
+    "time": 20.0,
+    "text": "males affected by myocarditis",
+    "confidence": 0.778
+   },
+   {
+    "time": 20.0,
+    "text": "WHEN & WHERE: The",
+    "confidence": 0.721
+   },
+   {
+    "time": 20.0,
+    "text": "updated safety communication",
+    "confidence": 0.845
+   },
+   {
+    "time": 20.0,
+    "text": "was issued on June 25,,2024,in",
+    "confidence": 0.795
+   },
+   {
+    "time": 20.0,
+    "text": "the United States.",
+    "confidence": 0.865
+   },
+   {
+    "time": 20.0,
+    "text": "KEY QUOTE: \"[The] FDA",
+    "confidence": 0.96
+   },
+   {
+    "time": 20.0,
+    "text": "has required and approved",
+    "confidence": 0.689
+   },
+   {
+    "time": 20.0,
+    "text": "updates to the Prescribing",
+    "confidence": 0.988
+   },
+   {
+    "time": 20.0,
+    "text": "Information for Comirnaty",
+    "confidence": 0.999
+   },
+   {
+    "time": 22.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.772
+   },
+   {
+    "time": 22.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.743
+   },
+   {
+    "time": 22.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.929
+   },
+   {
+    "time": 22.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.972
+   },
+   {
+    "time": 22.0,
+    "text": "WHAT HAPPENED: The",
+    "confidence": 0.999
+   },
+   {
+    "time": 22.0,
+    "text": "US. Food and Drug",
+    "confidence": 0.536
+   },
+   {
+    "time": 22.0,
+    "text": "Administration (FDA) updated",
+    "confidence": 0.864
+   },
+   {
+    "time": 22.0,
+    "text": "the warning labels on Pfizer",
+    "confidence": 0.998
+   },
+   {
+    "time": 22.0,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "Moderna's COVID-19 mRNA",
+    "confidence": 0.824
+   },
+   {
+    "time": 22.0,
+    "text": "vaccines t0 include new",
+    "confidence": 0.686
+   },
+   {
+    "time": 22.0,
+    "text": "information regarding the risks",
+    "confidence": 0.943
+   },
+   {
+    "time": 22.0,
+    "text": "of myocarditis and pericarditis,",
+    "confidence": 0.823
+   },
+   {
+    "time": 22.0,
+    "text": "particularly in young males",
+    "confidence": 0.901
+   },
+   {
+    "time": 22.0,
+    "text": "WHO WAS INVOLVED: The",
+    "confidence": 0.601
+   },
+   {
+    "time": 22.0,
+    "text": "FDA, Pfizer; Moderna, and study",
+    "confidence": 0.872
+   },
+   {
+    "time": 22.0,
+    "text": "participants, including young",
+    "confidence": 0.892
+   },
+   {
+    "time": 22.0,
+    "text": "males affected by myocarditis",
+    "confidence": 0.78
+   },
+   {
+    "time": 22.0,
+    "text": "WHEN & WHERE: The",
+    "confidence": 0.721
+   },
+   {
+    "time": 22.0,
+    "text": "updated safety communication",
+    "confidence": 0.845
+   },
+   {
+    "time": 22.0,
+    "text": "was issued on June 25,,2024,in",
+    "confidence": 0.796
+   },
+   {
+    "time": 22.0,
+    "text": "the United States.",
+    "confidence": 0.863
+   },
+   {
+    "time": 22.0,
+    "text": "KEY QUOTE: \"[The] FDA",
+    "confidence": 0.96
+   },
+   {
+    "time": 22.0,
+    "text": "has required and approved",
+    "confidence": 0.689
+   },
+   {
+    "time": 22.0,
+    "text": "updates to the Prescribing",
+    "confidence": 0.988
+   },
+   {
+    "time": 22.0,
+    "text": "Information for Comirnaty",
+    "confidence": 0.999
+   },
+   {
+    "time": 24.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.772
+   },
+   {
+    "time": 24.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.743
+   },
+   {
+    "time": 24.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.929
+   },
+   {
+    "time": 24.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.972
+   },
+   {
+    "time": 24.0,
+    "text": "WHAT HAPPENED: The",
+    "confidence": 0.999
+   },
+   {
+    "time": 24.0,
+    "text": "US. Food and Drug",
+    "confidence": 0.536
+   },
+   {
+    "time": 24.0,
+    "text": "Administration (FDA) updated",
+    "confidence": 0.864
+   },
+   {
+    "time": 24.0,
+    "text": "the warning labels on Pfizer",
+    "confidence": 0.998
+   },
+   {
+    "time": 24.0,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "Moderna's COVID-19 mRNA",
+    "confidence": 0.824
+   },
+   {
+    "time": 24.0,
+    "text": "vaccines t0 include new",
+    "confidence": 0.686
+   },
+   {
+    "time": 24.0,
+    "text": "information regarding the risks",
+    "confidence": 0.943
+   },
+   {
+    "time": 24.0,
+    "text": "of myocarditis and pericarditis,",
+    "confidence": 0.823
+   },
+   {
+    "time": 24.0,
+    "text": "particularly in young males",
+    "confidence": 0.901
+   },
+   {
+    "time": 24.0,
+    "text": "WHO WAS INVOLVED: The",
+    "confidence": 0.601
+   },
+   {
+    "time": 24.0,
+    "text": "FDA, Pfizer; Moderna, and study",
+    "confidence": 0.872
+   },
+   {
+    "time": 24.0,
+    "text": "participants, including young",
+    "confidence": 0.892
+   },
+   {
+    "time": 24.0,
+    "text": "males affected by myocarditis",
+    "confidence": 0.78
+   },
+   {
+    "time": 24.0,
+    "text": "WHEN & WHERE: The",
+    "confidence": 0.721
+   },
+   {
+    "time": 24.0,
+    "text": "updated safety communication",
+    "confidence": 0.845
+   },
+   {
+    "time": 24.0,
+    "text": "was issued on June 25,,2024,in",
+    "confidence": 0.796
+   },
+   {
+    "time": 24.0,
+    "text": "the United States.",
+    "confidence": 0.863
+   },
+   {
+    "time": 24.0,
+    "text": "KEY QUOTE: \"[The] FDA",
+    "confidence": 0.96
+   },
+   {
+    "time": 24.0,
+    "text": "has required and approved",
+    "confidence": 0.689
+   },
+   {
+    "time": 24.0,
+    "text": "updates to the Prescribing",
+    "confidence": 0.988
+   },
+   {
+    "time": 24.0,
+    "text": "Information for Comirnaty",
+    "confidence": 0.999
+   },
+   {
+    "time": 26.0,
+    "text": "\"Conspiacytheoies",
+    "confidence": 0.692
+   },
+   {
+    "time": 26.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.81
+   },
+   {
+    "time": 26.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.761
+   },
+   {
+    "time": 26.0,
+    "text": "to COVID Vaccines",
+    "confidence": 0.998
+   },
+   {
+    "time": 26.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.708
+   },
+   {
+    "time": 26.0,
+    "text": "WHAT HA",
+    "confidence": 0.991
+   },
+   {
+    "time": 26.0,
+    "text": "US. Food and",
+    "confidence": 0.797
+   },
+   {
+    "time": 26.0,
+    "text": "Administratio",
+    "confidence": 0.841
+   },
+   {
+    "time": 26.0,
+    "text": "the wa",
+    "confidence": 0.787
+   },
+   {
+    "time": 26.0,
+    "text": "Moderr",
+    "confidence": 0.956
+   },
+   {
+    "time": 26.0,
+    "text": "vaccines",
+    "confidence": 0.971
+   },
+   {
+    "time": 26.0,
+    "text": "informatio",
+    "confidence": 0.958
+   },
+   {
+    "time": 26.0,
+    "text": "of",
+    "confidence": 0.998
+   },
+   {
+    "time": 26.0,
+    "text": "particularly in yo",
+    "confidence": 0.759
+   },
+   {
+    "time": 26.0,
+    "text": "WHO WAS IN",
+    "confidence": 0.91
+   },
+   {
+    "time": 26.0,
+    "text": "FDA, Pfizer; Mod",
+    "confidence": 0.965
+   },
+   {
+    "time": 26.0,
+    "text": "participants, incl",
+    "confidence": 0.621
+   },
+   {
+    "time": 26.0,
+    "text": "males affected by",
+    "confidence": 0.572
+   },
+   {
+    "time": 28.0,
+    "text": "The FDA Is Finally",
+    "confidence": 0.854
+   },
+   {
+    "time": 28.0,
+    "text": "Adding Heart Ric",
+    "confidence": 0.612
+   },
+   {
+    "time": 28.0,
+    "text": "to COVID Vaccir",
+    "confidence": 0.722
+   },
+   {
+    "time": 28.0,
+    "text": "PUl SE POINTS",
+    "confidence": 0.615
+   },
+   {
+    "time": 28.0,
+    "text": "WHAT H",
+    "confidence": 0.745
+   },
+   {
+    "time": 28.0,
+    "text": "US F",
+    "confidence": 0.968
+   },
+   {
+    "time": 28.0,
+    "text": "Admin",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "the warning",
+    "confidence": 0.993
+   },
+   {
+    "time": 28.0,
+    "text": "Modernas COV",
+    "confidence": 0.874
+   },
+   {
+    "time": 28.0,
+    "text": "vaccines t0 incluc",
+    "confidence": 0.566
+   },
+   {
+    "time": 28.0,
+    "text": "information regar",
+    "confidence": 0.593
+   },
+   {
+    "time": 28.0,
+    "text": "of myocarditis anc",
+    "confidence": 0.833
+   },
+   {
+    "time": 28.0,
+    "text": "particularly in you",
+    "confidence": 0.747
+   },
+   {
+    "time": 28.0,
+    "text": "FDA, Pfizer; Modert",
+    "confidence": 0.62
+   },
+   {
+    "time": 28.0,
+    "text": "parti",
+    "confidence": 0.826
+   },
+   {
+    "time": 30.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.81
+   },
+   {
+    "time": 30.0,
+    "text": "Adding Heart Risk",
+    "confidence": 0.697
+   },
+   {
+    "time": 30.0,
+    "text": "to COVID Vaccines",
+    "confidence": 0.74
+   },
+   {
+    "time": 30.0,
+    "text": "Adm",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "the w",
+    "confidence": 0.779
+   },
+   {
+    "time": 30.0,
+    "text": "Mode",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "vaccine",
+    "confidence": 0.78
+   },
+   {
+    "time": 30.0,
+    "text": "informatic",
+    "confidence": 0.904
+   },
+   {
+    "time": 30.0,
+    "text": "myocarditis",
+    "confidence": 0.998
+   },
+   {
+    "time": 30.0,
+    "text": "of",
+    "confidence": 0.998
+   },
+   {
+    "time": 30.0,
+    "text": "particularly in",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "WHO WAS",
+    "confidence": 0.901
+   },
+   {
+    "time": 30.0,
+    "text": "FDA, Pfizer; Mod",
+    "confidence": 0.667
+   },
+   {
+    "time": 30.0,
+    "text": "participants",
+    "confidence": 0.748
+   },
+   {
+    "time": 32.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.811
+   },
+   {
+    "time": 32.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.781
+   },
+   {
+    "time": 32.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.89
+   },
+   {
+    "time": 32.0,
+    "text": "PULSE POIN",
+    "confidence": 0.932
+   },
+   {
+    "time": 32.0,
+    "text": "WHA",
+    "confidence": 0.986
+   },
+   {
+    "time": 32.0,
+    "text": "US. Food",
+    "confidence": 0.748
+   },
+   {
+    "time": 32.0,
+    "text": "Administr",
+    "confidence": 0.839
+   },
+   {
+    "time": 32.0,
+    "text": "the warning",
+    "confidence": 0.996
+   },
+   {
+    "time": 32.0,
+    "text": "vaccines to",
+    "confidence": 0.595
+   },
+   {
+    "time": 32.0,
+    "text": "information",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "of myocardit",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "particularly in",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "WHO WA",
+    "confidence": 0.991
+   },
+   {
+    "time": 32.0,
+    "text": "FDA, Pfizer; M",
+    "confidence": 0.888
+   },
+   {
+    "time": 32.0,
+    "text": "participants",
+    "confidence": 0.763
+   },
+   {
+    "time": 32.0,
+    "text": "malec",
+    "confidence": 0.554
+   },
+   {
+    "time": 34.0,
+    "text": "0",
+    "confidence": 0.573
+   },
+   {
+    "time": 34.0,
+    "text": "The FDA Is Finall",
+    "confidence": 0.983
+   },
+   {
+    "time": 34.0,
+    "text": "Adding Heart R:",
+    "confidence": 0.719
+   },
+   {
+    "time": 34.0,
+    "text": "to COVID Vacc'",
+    "confidence": 0.959
+   },
+   {
+    "time": 34.0,
+    "text": "US Fo",
+    "confidence": 0.85
+   },
+   {
+    "time": 34.0,
+    "text": "Admini",
+    "confidence": 0.982
+   },
+   {
+    "time": 34.0,
+    "text": "the wari",
+    "confidence": 0.803
+   },
+   {
+    "time": 34.0,
+    "text": "Moderna' $",
+    "confidence": 0.525
+   },
+   {
+    "time": 34.0,
+    "text": "vaccines t0 inct",
+    "confidence": 0.578
+   },
+   {
+    "time": 34.0,
+    "text": "information rega",
+    "confidence": 0.997
+   },
+   {
+    "time": 34.0,
+    "text": "myocarditis an",
+    "confidence": 0.953
+   },
+   {
+    "time": 34.0,
+    "text": "of",
+    "confidence": 0.957
+   },
+   {
+    "time": 34.0,
+    "text": "particularly in you",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "WHO WAS IN",
+    "confidence": 0.895
+   },
+   {
+    "time": 34.0,
+    "text": "FDA, Pfizer",
+    "confidence": 0.869
+   },
+   {
+    "time": 36.0,
+    "text": "Finally",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.0,
+    "text": "The FDA",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.0,
+    "text": "Risk Info",
+    "confidence": 0.957
+   },
+   {
+    "time": 36.0,
+    "text": "PU",
+    "confidence": 0.748
+   },
+   {
+    "time": 36.0,
+    "text": "US",
+    "confidence": 0.993
+   },
+   {
+    "time": 36.0,
+    "text": "Mo",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "vaccile",
+    "confidence": 0.576
+   },
+   {
+    "time": 36.0,
+    "text": "informati",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "of myocard",
+    "confidence": 0.977
+   },
+   {
+    "time": 36.0,
+    "text": "particularly",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.0,
+    "text": "WHO WAS",
+    "confidence": 0.692
+   },
+   {
+    "time": 36.0,
+    "text": "FDA, Pfizer; Mo",
+    "confidence": 0.957
+   },
+   {
+    "time": 36.0,
+    "text": "parti",
+    "confidence": 0.628
+   },
+   {
+    "time": 38.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.745
+   },
+   {
+    "time": 38.0,
+    "text": "to COVID Vaccines",
+    "confidence": 0.999
+   },
+   {
+    "time": 38.0,
+    "text": "JINTS",
+    "confidence": 0.609
+   },
+   {
+    "time": 38.0,
+    "text": "US. Food",
+    "confidence": 0.647
+   },
+   {
+    "time": 38.0,
+    "text": "Administra",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "the warning",
+    "confidence": 0.996
+   },
+   {
+    "time": 38.0,
+    "text": "Modernas COV",
+    "confidence": 0.873
+   },
+   {
+    "time": 38.0,
+    "text": "vaccines to include",
+    "confidence": 0.582
+   },
+   {
+    "time": 38.0,
+    "text": "information regard",
+    "confidence": 0.999
+   },
+   {
+    "time": 38.0,
+    "text": "of myocarditis and",
+    "confidence": 0.966
+   },
+   {
+    "time": 38.0,
+    "text": "particularly in youn",
+    "confidence": 0.878
+   },
+   {
+    "time": 38.0,
+    "text": "WHO WAS INV",
+    "confidence": 0.808
+   },
+   {
+    "time": 38.0,
+    "text": "FDA, Pfizer; Mode",
+    "confidence": 0.971
+   },
+   {
+    "time": 38.0,
+    "text": "particinar",
+    "confidence": 0.739
+   },
+   {
+    "time": 40.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.773
+   },
+   {
+    "time": 40.0,
+    "text": "Adding Heart Risk",
+    "confidence": 0.74
+   },
+   {
+    "time": 40.0,
+    "text": "to COVID Vaccine",
+    "confidence": 0.997
+   },
+   {
+    "time": 40.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.941
+   },
+   {
+    "time": 40.0,
+    "text": "WHAT HAPP",
+    "confidence": 0.99
+   },
+   {
+    "time": 40.0,
+    "text": "Drug",
+    "confidence": 0.997
+   },
+   {
+    "time": 40.0,
+    "text": "US. Food and",
+    "confidence": 0.767
+   },
+   {
+    "time": 40.0,
+    "text": "Administration (FD",
+    "confidence": 0.992
+   },
+   {
+    "time": 40.0,
+    "text": "the warning labels",
+    "confidence": 0.745
+   },
+   {
+    "time": 40.0,
+    "text": "Moderna's COVID-19",
+    "confidence": 0.722
+   },
+   {
+    "time": 40.0,
+    "text": "accines t0 include ne",
+    "confidence": 0.786
+   },
+   {
+    "time": 40.0,
+    "text": "information regardin",
+    "confidence": 0.782
+   },
+   {
+    "time": 40.0,
+    "text": "of myocarditis and",
+    "confidence": 0.978
+   },
+   {
+    "time": 40.0,
+    "text": "particularlv in",
+    "confidence": 0.738
+   },
+   {
+    "time": 42.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.696
+   },
+   {
+    "time": 42.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.676
+   },
+   {
+    "time": 42.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.929
+   },
+   {
+    "time": 42.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.982
+   },
+   {
+    "time": 42.0,
+    "text": "WHAT HAPPEN",
+    "confidence": 0.872
+   },
+   {
+    "time": 42.0,
+    "text": "Drug",
+    "confidence": 0.997
+   },
+   {
+    "time": 42.0,
+    "text": "US. Food and",
+    "confidence": 0.822
+   },
+   {
+    "time": 42.0,
+    "text": "Administration (FDA)",
+    "confidence": 0.998
+   },
+   {
+    "time": 42.0,
+    "text": "the warning labels on P",
+    "confidence": 0.9
+   },
+   {
+    "time": 42.0,
+    "text": "Moderna's COVID-19 mRNA",
+    "confidence": 0.68
+   },
+   {
+    "time": 42.0,
+    "text": "accines t0 include new",
+    "confidence": 0.902
+   },
+   {
+    "time": 42.0,
+    "text": "information regarding the ris]",
+    "confidence": 0.7
+   },
+   {
+    "time": 42.0,
+    "text": "myocarditis and pericarditis",
+    "confidence": 0.994
+   },
+   {
+    "time": 42.0,
+    "text": "of",
+    "confidence": 0.743
+   },
+   {
+    "time": 42.0,
+    "text": "particularly in young males",
+    "confidence": 0.865
+   },
+   {
+    "time": 42.0,
+    "text": "WHO WA S INVOL",
+    "confidence": 0.711
+   },
+   {
+    "time": 42.0,
+    "text": "FDA, Pfiz",
+    "confidence": 0.806
+   },
+   {
+    "time": 42.0,
+    "text": "participa",
+    "confidence": 0.948
+   },
+   {
+    "time": 42.0,
+    "text": "males al",
+    "confidence": 0.995
+   },
+   {
+    "time": 42.0,
+    "text": "WHI",
+    "confidence": 0.925
+   },
+   {
+    "time": 42.0,
+    "text": "updated",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "the U",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.696
+   },
+   {
+    "time": 44.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.709
+   },
+   {
+    "time": 44.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.929
+   },
+   {
+    "time": 44.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.981
+   },
+   {
+    "time": 44.0,
+    "text": "WHAT HAPPENED: The",
+    "confidence": 0.998
+   },
+   {
+    "time": 44.0,
+    "text": "US. Food and Drug",
+    "confidence": 0.736
+   },
+   {
+    "time": 44.0,
+    "text": "Administration (FDA) updated",
+    "confidence": 0.861
+   },
+   {
+    "time": 44.0,
+    "text": "the warning labels on Pfizer",
+    "confidence": 0.901
+   },
+   {
+    "time": 44.0,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "Moderna's COVID-19 mRNA",
+    "confidence": 0.798
+   },
+   {
+    "time": 44.0,
+    "text": "accines t0 include new",
+    "confidence": 0.903
+   },
+   {
+    "time": 44.0,
+    "text": "information regarding the risks",
+    "confidence": 0.968
+   },
+   {
+    "time": 44.0,
+    "text": "of myocarditis and pericarditis,",
+    "confidence": 0.858
+   },
+   {
+    "time": 44.0,
+    "text": "particularly in young males",
+    "confidence": 0.705
+   },
+   {
+    "time": 44.0,
+    "text": "WHO WAS INVOLVED: The",
+    "confidence": 0.826
+   },
+   {
+    "time": 44.0,
+    "text": "FDA, Pfizer; Moderna, and study",
+    "confidence": 0.82
+   },
+   {
+    "time": 44.0,
+    "text": "participants, including yo",
+    "confidence": 0.886
+   },
+   {
+    "time": 44.0,
+    "text": "males affected by myoc",
+    "confidence": 0.964
+   },
+   {
+    "time": 44.0,
+    "text": "WHEN & WHERE",
+    "confidence": 0.969
+   },
+   {
+    "time": 44.0,
+    "text": "updated safety commu",
+    "confidence": 0.748
+   },
+   {
+    "time": 44.0,
+    "text": "was issued on June 25,",
+    "confidence": 0.764
+   },
+   {
+    "time": 44.0,
+    "text": "the United States.",
+    "confidence": 0.837
+   },
+   {
+    "time": 44.0,
+    "text": "KEY QUOTE:",
+    "confidence": 0.886
+   },
+   {
+    "time": 44.0,
+    "text": "has required and",
+    "confidence": 0.805
+   },
+   {
+    "time": 44.0,
+    "text": "updates to the Pr",
+    "confidence": 0.757
+   },
+   {
+    "time": 44.0,
+    "text": "Information for",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "(COVID-19 Vaccin",
+    "confidence": 0.922
+   },
+   {
+    "time": 46.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.696
+   },
+   {
+    "time": 46.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.691
+   },
+   {
+    "time": 46.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.929
+   },
+   {
+    "time": 46.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.98
+   },
+   {
+    "time": 46.0,
+    "text": "WHAT HAPPENEL",
+    "confidence": 0.968
+   },
+   {
+    "time": 46.0,
+    "text": "Drug",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "US. Food and",
+    "confidence": 0.823
+   },
+   {
+    "time": 46.0,
+    "text": "Administration (FDA) updated",
+    "confidence": 0.868
+   },
+   {
+    "time": 46.0,
+    "text": "the warning labels on Pfizer an",
+    "confidence": 0.926
+   },
+   {
+    "time": 46.0,
+    "text": "Moderna's COVID-19 mRNA",
+    "confidence": 0.798
+   },
+   {
+    "time": 46.0,
+    "text": "vaccines t0 include new",
+    "confidence": 0.692
+   },
+   {
+    "time": 46.0,
+    "text": "information regarding the risks",
+    "confidence": 0.98
+   },
+   {
+    "time": 46.0,
+    "text": "of myocarditis and pericarditis,",
+    "confidence": 0.855
+   },
+   {
+    "time": 46.0,
+    "text": "particularly in young males.",
+    "confidence": 0.79
+   },
+   {
+    "time": 46.0,
+    "text": "WHO WAS INVOLVED: The",
+    "confidence": 0.851
+   },
+   {
+    "time": 46.0,
+    "text": "FDA, Pfizer; Moderna, and studv",
+    "confidence": 0.858
+   },
+   {
+    "time": 46.0,
+    "text": "participants, including",
+    "confidence": 0.885
+   },
+   {
+    "time": 46.0,
+    "text": "males affected by my",
+    "confidence": 0.958
+   },
+   {
+    "time": 46.0,
+    "text": "WHEN & WHEL",
+    "confidence": 0.821
+   },
+   {
+    "time": 46.0,
+    "text": "updated safety comi",
+    "confidence": 0.69
+   },
+   {
+    "time": 46.0,
+    "text": "was issued on June",
+    "confidence": 0.764
+   },
+   {
+    "time": 46.0,
+    "text": "the United States.",
+    "confidence": 0.826
+   },
+   {
+    "time": 46.0,
+    "text": "KEY QUOTF",
+    "confidence": 0.675
+   },
+   {
+    "time": 46.0,
+    "text": "has required an",
+    "confidence": 0.88
+   },
+   {
+    "time": 46.0,
+    "text": "updates to the",
+    "confidence": 0.621
+   },
+   {
+    "time": 46.0,
+    "text": "Information fo",
+    "confidence": 0.963
+   },
+   {
+    "time": 46.0,
+    "text": "(COVID-19 Vac",
+    "confidence": 0.988
+   },
+   {
+    "time": 48.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.696
+   },
+   {
+    "time": 48.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.676
+   },
+   {
+    "time": 48.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.929
+   },
+   {
+    "time": 48.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.98
+   },
+   {
+    "time": 48.0,
+    "text": "WHAT HAPPENED: The",
+    "confidence": 0.979
+   },
+   {
+    "time": 48.0,
+    "text": "US. Food and Drug",
+    "confidence": 0.767
+   },
+   {
+    "time": 48.0,
+    "text": "Administration (FDA) updated",
+    "confidence": 0.707
+   },
+   {
+    "time": 48.0,
+    "text": "the warning labels on Pfizer a1",
+    "confidence": 0.884
+   },
+   {
+    "time": 48.0,
+    "text": "Moderna's COVID-19 mRNA",
+    "confidence": 0.797
+   },
+   {
+    "time": 48.0,
+    "text": "vaccines t0 include new",
+    "confidence": 0.692
+   },
+   {
+    "time": 48.0,
+    "text": "information regarding the risks",
+    "confidence": 0.98
+   },
+   {
+    "time": 48.0,
+    "text": "of myocarditis and pericarditis,",
+    "confidence": 0.855
+   },
+   {
+    "time": 48.0,
+    "text": "particularly in young males.",
+    "confidence": 0.79
+   },
+   {
+    "time": 48.0,
+    "text": "WHO WAS INVOLVED: The",
+    "confidence": 0.851
+   },
+   {
+    "time": 48.0,
+    "text": "FDA, Pfizer; Moderna, and studv",
+    "confidence": 0.76
+   },
+   {
+    "time": 48.0,
+    "text": "participants, including",
+    "confidence": 0.822
+   },
+   {
+    "time": 48.0,
+    "text": "males affected by my",
+    "confidence": 0.96
+   },
+   {
+    "time": 48.0,
+    "text": "WHEN & WHE",
+    "confidence": 0.973
+   },
+   {
+    "time": 48.0,
+    "text": "updated safety com",
+    "confidence": 0.889
+   },
+   {
+    "time": 48.0,
+    "text": "was issued on June",
+    "confidence": 0.76
+   },
+   {
+    "time": 48.0,
+    "text": "the United States.",
+    "confidence": 0.789
+   },
+   {
+    "time": 48.0,
+    "text": "KEY QUOTE",
+    "confidence": 0.957
+   },
+   {
+    "time": 48.0,
+    "text": "has required and",
+    "confidence": 0.902
+   },
+   {
+    "time": 48.0,
+    "text": "updates to the",
+    "confidence": 0.602
+   },
+   {
+    "time": 48.0,
+    "text": "Information",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "(COVID-19 Vac",
+    "confidence": 0.986
+   },
+   {
+    "time": 50.0,
+    "text": "\"Conspiacytheoies",
+    "confidence": 0.699
+   },
+   {
+    "time": 50.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.697
+   },
+   {
+    "time": 50.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.767
+   },
+   {
+    "time": 50.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.93
+   },
+   {
+    "time": 50.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.971
+   },
+   {
+    "time": 50.0,
+    "text": "WHAT HAPPENED: The",
+    "confidence": 0.996
+   },
+   {
+    "time": 50.0,
+    "text": "Drug",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "US. Food and",
+    "confidence": 0.809
+   },
+   {
+    "time": 50.0,
+    "text": "Administration (FDA) updal",
+    "confidence": 0.822
+   },
+   {
+    "time": 50.0,
+    "text": "the warning labels on Pfizer a",
+    "confidence": 0.966
+   },
+   {
+    "time": 50.0,
+    "text": "Moderna's COVID-19 mRNA",
+    "confidence": 0.801
+   },
+   {
+    "time": 50.0,
+    "text": "accines t0 include new",
+    "confidence": 0.884
+   },
+   {
+    "time": 50.0,
+    "text": "information regarding the risks",
+    "confidence": 0.766
+   },
+   {
+    "time": 50.0,
+    "text": "myocarditis and pericarditis,",
+    "confidence": 0.978
+   },
+   {
+    "time": 50.0,
+    "text": "of",
+    "confidence": 0.998
+   },
+   {
+    "time": 50.0,
+    "text": "particularly in young males.",
+    "confidence": 0.618
+   },
+   {
+    "time": 50.0,
+    "text": "WHO WAS INVOLVED: The",
+    "confidence": 0.926
+   },
+   {
+    "time": 50.0,
+    "text": "FDA, Pfizer; Moderna, and studv",
+    "confidence": 0.919
+   },
+   {
+    "time": 50.0,
+    "text": "participants, includ",
+    "confidence": 0.869
+   },
+   {
+    "time": 50.0,
+    "text": "males affected by",
+    "confidence": 0.948
+   },
+   {
+    "time": 50.0,
+    "text": "WHEN & W",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "updated safety €",
+    "confidence": 0.947
+   },
+   {
+    "time": 50.0,
+    "text": "was issued on Ju",
+    "confidence": 0.71
+   },
+   {
+    "time": 50.0,
+    "text": "the United State",
+    "confidence": 0.95
+   },
+   {
+    "time": 50.0,
+    "text": "KEY QUO",
+    "confidence": 0.988
+   },
+   {
+    "time": 50.0,
+    "text": "has required",
+    "confidence": 0.91
+   },
+   {
+    "time": 50.0,
+    "text": "updates to",
+    "confidence": 0.998
+   },
+   {
+    "time": 50.0,
+    "text": "Informatior",
+    "confidence": 0.638
+   },
+   {
+    "time": 50.0,
+    "text": "(COVID-19",
+    "confidence": 0.999
+   },
+   {
+    "time": 52.0,
+    "text": "\"Conspiacytheoies",
+    "confidence": 0.709
+   },
+   {
+    "time": 52.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.684
+   },
+   {
+    "time": 52.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.76
+   },
+   {
+    "time": 52.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.93
+   },
+   {
+    "time": 52.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.971
+   },
+   {
+    "time": 52.0,
+    "text": "WHAT HAPPENED: Th",
+    "confidence": 0.919
+   },
+   {
+    "time": 52.0,
+    "text": "Drug",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "US. Food and",
+    "confidence": 0.81
+   },
+   {
+    "time": 52.0,
+    "text": "Administration (FDA)",
+    "confidence": 0.998
+   },
+   {
+    "time": 52.0,
+    "text": "the warning labels on P",
+    "confidence": 0.557
+   },
+   {
+    "time": 52.0,
+    "text": "Moderna's COVID-19 mRA",
+    "confidence": 0.753
+   },
+   {
+    "time": 52.0,
+    "text": "vaccines to include new",
+    "confidence": 0.729
+   },
+   {
+    "time": 52.0,
+    "text": "information regarding the risl",
+    "confidence": 0.778
+   },
+   {
+    "time": 52.0,
+    "text": "myocarditis and pericarditis",
+    "confidence": 0.995
+   },
+   {
+    "time": 52.0,
+    "text": "of",
+    "confidence": 0.998
+   },
+   {
+    "time": 52.0,
+    "text": "particularly in young males.",
+    "confidence": 0.618
+   },
+   {
+    "time": 52.0,
+    "text": "WHO WAS INVOLVED: The",
+    "confidence": 0.875
+   },
+   {
+    "time": 52.0,
+    "text": "FDA, Pfizer; Moderna and",
+    "confidence": 0.972
+   },
+   {
+    "time": 52.0,
+    "text": "participants, ino",
+    "confidence": 0.535
+   },
+   {
+    "time": 52.0,
+    "text": "males affected",
+    "confidence": 0.764
+   },
+   {
+    "time": 52.0,
+    "text": "WHEN",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "updated safet",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "was issued 0",
+    "confidence": 0.812
+   },
+   {
+    "time": 52.0,
+    "text": "the United St",
+    "confidence": 0.571
+   },
+   {
+    "time": 52.0,
+    "text": "KEY",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "has requi",
+    "confidence": 0.955
+   },
+   {
+    "time": 52.0,
+    "text": "updates",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "Informa",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "(COVID",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "\"Conspiacytheoies",
+    "confidence": 0.712
+   },
+   {
+    "time": 54.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.683
+   },
+   {
+    "time": 54.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.76
+   },
+   {
+    "time": 54.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.93
+   },
+   {
+    "time": 54.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.971
+   },
+   {
+    "time": 54.0,
+    "text": "WHAT HAPPENED: Tl",
+    "confidence": 0.906
+   },
+   {
+    "time": 54.0,
+    "text": "Drug",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "US. Food and",
+    "confidence": 0.81
+   },
+   {
+    "time": 54.0,
+    "text": "Administration (FDA)",
+    "confidence": 0.998
+   },
+   {
+    "time": 54.0,
+    "text": "the warning labels on P",
+    "confidence": 0.79
+   },
+   {
+    "time": 54.0,
+    "text": "Moderna's COVID-19 mRNZ",
+    "confidence": 0.614
+   },
+   {
+    "time": 54.0,
+    "text": "vaccines to include new",
+    "confidence": 0.729
+   },
+   {
+    "time": 54.0,
+    "text": "information regarding the risl",
+    "confidence": 0.791
+   },
+   {
+    "time": 54.0,
+    "text": "myocarditis and pericarditis",
+    "confidence": 0.995
+   },
+   {
+    "time": 54.0,
+    "text": "of",
+    "confidence": 0.998
+   },
+   {
+    "time": 54.0,
+    "text": "particularly in young males",
+    "confidence": 0.917
+   },
+   {
+    "time": 54.0,
+    "text": "WHO WAS INVOLVED: The",
+    "confidence": 0.876
+   },
+   {
+    "time": 54.0,
+    "text": "FDA, Pfizer; Moderna and",
+    "confidence": 0.972
+   },
+   {
+    "time": 54.0,
+    "text": "males affected",
+    "confidence": 0.809
+   },
+   {
+    "time": 54.0,
+    "text": "WHEN",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "updated safet",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "was issued 0",
+    "confidence": 0.813
+   },
+   {
+    "time": 54.0,
+    "text": "the United St",
+    "confidence": 0.903
+   },
+   {
+    "time": 54.0,
+    "text": "KEY",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "has requi",
+    "confidence": 0.973
+   },
+   {
+    "time": 54.0,
+    "text": "updates",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "Informa",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "(COVID",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "\"Conspiacytheoies",
+    "confidence": 0.712
+   },
+   {
+    "time": 56.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.683
+   },
+   {
+    "time": 56.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.743
+   },
+   {
+    "time": 56.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.93
+   },
+   {
+    "time": 56.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.971
+   },
+   {
+    "time": 56.0,
+    "text": "WHAT HAPPENED:",
+    "confidence": 0.999
+   },
+   {
+    "time": 56.0,
+    "text": "US. Food and Drug",
+    "confidence": 0.763
+   },
+   {
+    "time": 56.0,
+    "text": "Administration (FDA)",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "the warning labels on",
+    "confidence": 0.777
+   },
+   {
+    "time": 56.0,
+    "text": "Moderna's COVID-19 mki",
+    "confidence": 0.672
+   },
+   {
+    "time": 56.0,
+    "text": "vaccines to include new",
+    "confidence": 0.729
+   },
+   {
+    "time": 56.0,
+    "text": "information regarding the",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "myocarditis and pericar",
+    "confidence": 0.996
+   },
+   {
+    "time": 56.0,
+    "text": "of",
+    "confidence": 0.998
+   },
+   {
+    "time": 56.0,
+    "text": "particularly in young male",
+    "confidence": 0.974
+   },
+   {
+    "time": 56.0,
+    "text": "WHO WAS INVOLVED: The",
+    "confidence": 0.877
+   },
+   {
+    "time": 56.0,
+    "text": "FDA, Pfizer; Moderna,and stua",
+    "confidence": 0.838
+   },
+   {
+    "time": 56.0,
+    "text": "participants, inch",
+    "confidence": 0.58
+   },
+   {
+    "time": 56.0,
+    "text": "males affected",
+    "confidence": 0.828
+   },
+   {
+    "time": 56.0,
+    "text": "WHEN &",
+    "confidence": 0.995
+   },
+   {
+    "time": 56.0,
+    "text": "updated safety",
+    "confidence": 0.925
+   },
+   {
+    "time": 56.0,
+    "text": "was issued on",
+    "confidence": 0.738
+   },
+   {
+    "time": 56.0,
+    "text": "the United Sta",
+    "confidence": 0.932
+   },
+   {
+    "time": 56.0,
+    "text": "KEY QU",
+    "confidence": 0.683
+   },
+   {
+    "time": 56.0,
+    "text": "has require",
+    "confidence": 0.842
+   },
+   {
+    "time": 56.0,
+    "text": "updates tc",
+    "confidence": 0.788
+   },
+   {
+    "time": 56.0,
+    "text": "Informat",
+    "confidence": 0.883
+   },
+   {
+    "time": 56.0,
+    "text": "(COVID-1",
+    "confidence": 0.753
+   },
+   {
+    "time": 58.0,
+    "text": "\"Conspiacytheoies",
+    "confidence": 0.712
+   },
+   {
+    "time": 58.0,
+    "text": "The EDA Is Finally",
+    "confidence": 0.683
+   },
+   {
+    "time": 58.0,
+    "text": "Adding Heart Risk Info",
+    "confidence": 0.746
+   },
+   {
+    "time": 58.0,
+    "text": "to COVID Vaccines:",
+    "confidence": 0.93
+   },
+   {
+    "time": 58.0,
+    "text": "PULSE POINTS",
+    "confidence": 0.972
+   },
+   {
+    "time": 58.0,
+    "text": "WHAT HAPPENED:",
+    "confidence": 0.999
+   },
+   {
+    "time": 58.0,
+    "text": "US. Food and Drug",
+    "confidence": 0.763
+   },
+   {
+    "time": 58.0,
+    "text": "Administration (FDA)",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.0,
+    "text": "the warning labels on P",
+    "confidence": 0.77
+   },
+   {
+    "time": 58.0,
+    "text": "Moderna's COVID-19 mRI",
+    "confidence": 0.683
+   },
+   {
+    "time": 58.0,
+    "text": "accines t0 include new",
+    "confidence": 0.884
+   },
+   {
+    "time": 58.0,
+    "text": "information regarding the",
+    "confidence": 0.539
+   },
+   {
+    "time": 58.0,
+    "text": "myocarditis and pericar",
+    "confidence": 0.996
+   },
+   {
+    "time": 58.0,
+    "text": "of",
+    "confidence": 0.998
+   },
+   {
+    "time": 58.0,
+    "text": "particularly in young male",
+    "confidence": 0.967
+   },
+   {
+    "time": 58.0,
+    "text": "WHO WAS INVOLVED: The",
+    "confidence": 0.684
+   },
+   {
+    "time": 58.0,
+    "text": "FDA, Pfizer; Moderna, and stu",
+    "confidence": 0.656
+   },
+   {
+    "time": 58.0,
+    "text": "participants, inch",
+    "confidence": 0.584
+   },
+   {
+    "time": 58.0,
+    "text": "males affected",
+    "confidence": 0.841
+   },
+   {
+    "time": 58.0,
+    "text": "WHEN &",
+    "confidence": 0.997
+   },
+   {
+    "time": 58.0,
+    "text": "updated safety",
+    "confidence": 0.665
+   },
+   {
+    "time": 58.0,
+    "text": "was issued on",
+    "confidence": 0.767
+   },
+   {
+    "time": 58.0,
+    "text": "the United Sta",
+    "confidence": 0.959
+   },
+   {
+    "time": 58.0,
+    "text": "KEY Q",
+    "confidence": 0.999
+   },
+   {
+    "time": 58.0,
+    "text": "has requir",
+    "confidence": 0.682
+   },
+   {
+    "time": 58.0,
+    "text": "updates",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.0,
+    "text": "Informat",
+    "confidence": 0.841
+   },
+   {
+    "time": 58.0,
+    "text": "(COVID-I",
+    "confidence": 0.652
+   }
+  ],
+  "captions": [
+   {
+    "text": "The EDA Is Finally",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.733,
+    "id": "o1"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.816,
+    "id": "o2"
+   },
+   {
+    "text": "to COVID Vaccine",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.998,
+    "id": "o3"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.9,
+    "id": "o4"
+   },
+   {
+    "text": "WHAT H",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.991,
+    "id": "o5"
+   },
+   {
+    "text": "US. Food an",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.628,
+    "id": "o6"
+   },
+   {
+    "text": "Administra",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.955,
+    "id": "o7"
+   },
+   {
+    "text": "the warnin",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.879,
+    "id": "o8"
+   },
+   {
+    "text": "Moderna $",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.513,
+    "id": "o9"
+   },
+   {
+    "text": "vaccines",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.654,
+    "id": "o10"
+   },
+   {
+    "text": "information re",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.911,
+    "id": "o11"
+   },
+   {
+    "text": "myocarditis",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.997,
+    "id": "o12"
+   },
+   {
+    "text": "of",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.998,
+    "id": "o13"
+   },
+   {
+    "text": "particularly in",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.769,
+    "id": "o14"
+   },
+   {
+    "text": "WHO WA",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.661,
+    "id": "o15"
+   },
+   {
+    "text": "FDA, Pfizer; Mc",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.881,
+    "id": "o16"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.683,
+    "id": "o17"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.746,
+    "id": "o18"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.903,
+    "id": "o19"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.958,
+    "id": "o20"
+   },
+   {
+    "text": "WHAT HAPP",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.984,
+    "id": "o21"
+   },
+   {
+    "text": "Foodl and Dru",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.523,
+    "id": "o22"
+   },
+   {
+    "text": "US",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.997,
+    "id": "o23"
+   },
+   {
+    "text": "Adminis",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o24"
+   },
+   {
+    "text": "tion",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.995,
+    "id": "o25"
+   },
+   {
+    "text": "the warr",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.584,
+    "id": "o26"
+   },
+   {
+    "text": "Moderna",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o27"
+   },
+   {
+    "text": "vaccines to",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.703,
+    "id": "o28"
+   },
+   {
+    "text": "information IC",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.576,
+    "id": "o29"
+   },
+   {
+    "text": "of myocarditis and",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.962,
+    "id": "o30"
+   },
+   {
+    "text": "particularly in you",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.728,
+    "id": "o31"
+   },
+   {
+    "text": "WHO WAS",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.885,
+    "id": "o32"
+   },
+   {
+    "text": "FDA, Pfizer; Mode",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.968,
+    "id": "o33"
+   },
+   {
+    "text": "particinante",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.667,
+    "id": "o34"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.722,
+    "id": "o35"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.773,
+    "id": "o36"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.911,
+    "id": "o37"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.896,
+    "id": "o38"
+   },
+   {
+    "text": "WHAT HAPPENED: The",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.999,
+    "id": "o39"
+   },
+   {
+    "text": "Drug",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o40"
+   },
+   {
+    "text": "US. Food and",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.767,
+    "id": "o41"
+   },
+   {
+    "text": "Administration (FDA) updated",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.613,
+    "id": "o42"
+   },
+   {
+    "text": "the warning labels on Pfizer",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.8,
+    "id": "o43"
+   },
+   {
+    "text": "and",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o44"
+   },
+   {
+    "text": "Moderna's COVID-19 mRNA",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.777,
+    "id": "o45"
+   },
+   {
+    "text": "yaccines t0 include new",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.56,
+    "id": "o46"
+   },
+   {
+    "text": "information regarding the risks",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.965,
+    "id": "o47"
+   },
+   {
+    "text": "of myocarditis and pericarditis,",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.78,
+    "id": "o48"
+   },
+   {
+    "text": "particularly in young males_",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.848,
+    "id": "o49"
+   },
+   {
+    "text": "WHO WAS INVOLVED: The",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.573,
+    "id": "o50"
+   },
+   {
+    "text": "FDA, Pfizer; Moderna, and study",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.89,
+    "id": "o51"
+   },
+   {
+    "text": "participants, including young",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.863,
+    "id": "o52"
+   },
+   {
+    "text": "males affected by myocarditis",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.642,
+    "id": "o53"
+   },
+   {
+    "text": "WHEN & WHERE: The",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.609,
+    "id": "o54"
+   },
+   {
+    "text": "updated safety communication",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.84,
+    "id": "o55"
+   },
+   {
+    "text": "was issued on June 25,,2024,in",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.779,
+    "id": "o56"
+   },
+   {
+    "text": "the United States.",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.865,
+    "id": "o57"
+   },
+   {
+    "text": "KEY QUOTE: \"[The] FDA",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.952,
+    "id": "o58"
+   },
+   {
+    "text": "has required and approved",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.604,
+    "id": "o59"
+   },
+   {
+    "text": "updates to the Prescribing",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.984,
+    "id": "o60"
+   },
+   {
+    "text": "Information for Comirnaty",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o61"
+   },
+   {
+    "text": "(COVID-19 Vaccine, mRNA)",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.556,
+    "id": "o62"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.717,
+    "id": "o63"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.79,
+    "id": "o64"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.911,
+    "id": "o65"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.873,
+    "id": "o66"
+   },
+   {
+    "text": "WHAT HAPPENED: The",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.999,
+    "id": "o67"
+   },
+   {
+    "text": "Drug",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o68"
+   },
+   {
+    "text": "US. Food and",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.761,
+    "id": "o69"
+   },
+   {
+    "text": "Administration (FDA) updated",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.624,
+    "id": "o70"
+   },
+   {
+    "text": "the warning labels on Pfizer",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.868,
+    "id": "o71"
+   },
+   {
+    "text": "and",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o72"
+   },
+   {
+    "text": "Moderna's COVID-19 mRNA",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.793,
+    "id": "o73"
+   },
+   {
+    "text": "vaccines t0 include new",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.839,
+    "id": "o74"
+   },
+   {
+    "text": "information regarding the risks",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.802,
+    "id": "o75"
+   },
+   {
+    "text": "of myocarditis and pericarditis,",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.74,
+    "id": "o76"
+   },
+   {
+    "text": "particularly in young males",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.918,
+    "id": "o77"
+   },
+   {
+    "text": "WHO WAS INVOLVED: The",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.702,
+    "id": "o78"
+   },
+   {
+    "text": "FDA, Pfizer; Moderna, and study",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.894,
+    "id": "o79"
+   },
+   {
+    "text": "participants, including young",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.867,
+    "id": "o80"
+   },
+   {
+    "text": "males affected by myocarditis",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.738,
+    "id": "o81"
+   },
+   {
+    "text": "WHEN & WHERE: The",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.631,
+    "id": "o82"
+   },
+   {
+    "text": "updated safety communication",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.847,
+    "id": "o83"
+   },
+   {
+    "text": "was issued on June 25,,2024,in",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.776,
+    "id": "o84"
+   },
+   {
+    "text": "the United States.",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.868,
+    "id": "o85"
+   },
+   {
+    "text": "KEY QUOTE: \"[The] FDA",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.947,
+    "id": "o86"
+   },
+   {
+    "text": "has required and approved",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.722,
+    "id": "o87"
+   },
+   {
+    "text": "updates to the Prescribing",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.985,
+    "id": "o88"
+   },
+   {
+    "text": "Information for Comirnaty",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.869,
+    "id": "o89"
+   },
+   {
+    "text": "(COVID-19 Vaccine, mRNA)",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.559,
+    "id": "o90"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.717,
+    "id": "o91"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.784,
+    "id": "o92"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.911,
+    "id": "o93"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.965,
+    "id": "o94"
+   },
+   {
+    "text": "WHAT HAPPENED: The",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.998,
+    "id": "o95"
+   },
+   {
+    "text": "Drug",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o96"
+   },
+   {
+    "text": "US. Food and",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.768,
+    "id": "o97"
+   },
+   {
+    "text": "Administration (FDA) updated",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.805,
+    "id": "o98"
+   },
+   {
+    "text": "the warning labels on Pfizer",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.865,
+    "id": "o99"
+   },
+   {
+    "text": "and",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o100"
+   },
+   {
+    "text": "Moderna's COVID-19 mRNA",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.809,
+    "id": "o101"
+   },
+   {
+    "text": "accines t0 include new",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.925,
+    "id": "o102"
+   },
+   {
+    "text": "information regarding the risks",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.946,
+    "id": "o103"
+   },
+   {
+    "text": "of myocarditis and pericarditis,",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.661,
+    "id": "o104"
+   },
+   {
+    "text": "particularly in young males",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.924,
+    "id": "o105"
+   },
+   {
+    "text": "WHO WAS INVOLVED: The",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.703,
+    "id": "o106"
+   },
+   {
+    "text": "FDA, Pfizer; Moderna, and study",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.894,
+    "id": "o107"
+   },
+   {
+    "text": "participants, including young",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.863,
+    "id": "o108"
+   },
+   {
+    "text": "males affected by myocarditis",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.75,
+    "id": "o109"
+   },
+   {
+    "text": "WHEN & WHERE: The",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.661,
+    "id": "o110"
+   },
+   {
+    "text": "updated safety communication",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.847,
+    "id": "o111"
+   },
+   {
+    "text": "was issued on June 25,,2024,in",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.69,
+    "id": "o112"
+   },
+   {
+    "text": "the United States.",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.867,
+    "id": "o113"
+   },
+   {
+    "text": "KEY QUOTE: \"[The] FDA",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.948,
+    "id": "o114"
+   },
+   {
+    "text": "has required and approved",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.701,
+    "id": "o115"
+   },
+   {
+    "text": "updates to the Prescribing",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.985,
+    "id": "o116"
+   },
+   {
+    "text": "Information for Comirnaty",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.791,
+    "id": "o117"
+   },
+   {
+    "text": "(COVID-19 Vaccine, mRNA)",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.565,
+    "id": "o118"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.78,
+    "id": "o119"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.746,
+    "id": "o120"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.929,
+    "id": "o121"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.978,
+    "id": "o122"
+   },
+   {
+    "text": "WHAT HAPPENED: The",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o123"
+   },
+   {
+    "text": "Drug",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o124"
+   },
+   {
+    "text": "US. Food and",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.778,
+    "id": "o125"
+   },
+   {
+    "text": "Administration (FDA) updated",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.879,
+    "id": "o126"
+   },
+   {
+    "text": "the warning labels on Pfizer",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.996,
+    "id": "o127"
+   },
+   {
+    "text": "and",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o128"
+   },
+   {
+    "text": "Moderna's COVID-19 mRNA",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.818,
+    "id": "o129"
+   },
+   {
+    "text": "accines t0 include new",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.881,
+    "id": "o130"
+   },
+   {
+    "text": "information regarding the risks",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.931,
+    "id": "o131"
+   },
+   {
+    "text": "of myocarditis and pericarditis,",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.848,
+    "id": "o132"
+   },
+   {
+    "text": "particularly in young males",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.894,
+    "id": "o133"
+   },
+   {
+    "text": "WHO WAS INVOLVED: The",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.702,
+    "id": "o134"
+   },
+   {
+    "text": "FDA, Pfizer; Moderna, and study",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.877,
+    "id": "o135"
+   },
+   {
+    "text": "participants, including young",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.907,
+    "id": "o136"
+   },
+   {
+    "text": "males affected by myocarditis",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.752,
+    "id": "o137"
+   },
+   {
+    "text": "WHEN & WHERE: The",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.736,
+    "id": "o138"
+   },
+   {
+    "text": "updated safety communication",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.844,
+    "id": "o139"
+   },
+   {
+    "text": "was issued on June 25,,2024,in",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.809,
+    "id": "o140"
+   },
+   {
+    "text": "the United States.",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.856,
+    "id": "o141"
+   },
+   {
+    "text": "KEY QUOTE: \"[The] FDA",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.961,
+    "id": "o142"
+   },
+   {
+    "text": "has required and approved",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.691,
+    "id": "o143"
+   },
+   {
+    "text": "updates to the Prescribing",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.988,
+    "id": "o144"
+   },
+   {
+    "text": "Information for Comirnaty",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o145"
+   },
+   {
+    "text": "(COVID-19 Vaccine, mRNA)",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.563,
+    "id": "o146"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.78,
+    "id": "o147"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.746,
+    "id": "o148"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.929,
+    "id": "o149"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.978,
+    "id": "o150"
+   },
+   {
+    "text": "WHAT HAPPENED: The",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o151"
+   },
+   {
+    "text": "Drug",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o152"
+   },
+   {
+    "text": "US. Food and",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.778,
+    "id": "o153"
+   },
+   {
+    "text": "Administration (FDA) updated",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.879,
+    "id": "o154"
+   },
+   {
+    "text": "the warning labels on Pfizer",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.996,
+    "id": "o155"
+   },
+   {
+    "text": "and",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o156"
+   },
+   {
+    "text": "Moderna's COVID-19 mRNA",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.818,
+    "id": "o157"
+   },
+   {
+    "text": "accines t0 include new",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.881,
+    "id": "o158"
+   },
+   {
+    "text": "information regarding the risks",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.931,
+    "id": "o159"
+   },
+   {
+    "text": "of myocarditis and pericarditis,",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.848,
+    "id": "o160"
+   },
+   {
+    "text": "particularly in young males",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.894,
+    "id": "o161"
+   },
+   {
+    "text": "WHO WAS INVOLVED: The",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.702,
+    "id": "o162"
+   },
+   {
+    "text": "FDA, Pfizer; Moderna, and study",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.877,
+    "id": "o163"
+   },
+   {
+    "text": "participants, including young",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.907,
+    "id": "o164"
+   },
+   {
+    "text": "males affected by myocarditis",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.752,
+    "id": "o165"
+   },
+   {
+    "text": "WHEN & WHERE: The",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.736,
+    "id": "o166"
+   },
+   {
+    "text": "updated safety communication",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.844,
+    "id": "o167"
+   },
+   {
+    "text": "was issued on June 25,,2024,in",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.809,
+    "id": "o168"
+   },
+   {
+    "text": "the United States.",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.856,
+    "id": "o169"
+   },
+   {
+    "text": "KEY QUOTE: \"[The] FDA",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.961,
+    "id": "o170"
+   },
+   {
+    "text": "has required and approved",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.691,
+    "id": "o171"
+   },
+   {
+    "text": "updates to the Prescribing",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.988,
+    "id": "o172"
+   },
+   {
+    "text": "Information for Comirnaty",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o173"
+   },
+   {
+    "text": "(COVID-19 Vaccine, mRNA)",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.563,
+    "id": "o174"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.78,
+    "id": "o175"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.746,
+    "id": "o176"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.929,
+    "id": "o177"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.978,
+    "id": "o178"
+   },
+   {
+    "text": "WHAT HAPPENED: The",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.999,
+    "id": "o179"
+   },
+   {
+    "text": "Drug",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o180"
+   },
+   {
+    "text": "US. Food and",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.778,
+    "id": "o181"
+   },
+   {
+    "text": "Administration (FDA) updated",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.879,
+    "id": "o182"
+   },
+   {
+    "text": "the warning labels on Pfizer",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.996,
+    "id": "o183"
+   },
+   {
+    "text": "and",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o184"
+   },
+   {
+    "text": "Moderna's COVID-19 mRNA",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.818,
+    "id": "o185"
+   },
+   {
+    "text": "accines t0 include new",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.881,
+    "id": "o186"
+   },
+   {
+    "text": "information regarding the risks",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.931,
+    "id": "o187"
+   },
+   {
+    "text": "of myocarditis and pericarditis,",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.848,
+    "id": "o188"
+   },
+   {
+    "text": "particularly in young males",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.894,
+    "id": "o189"
+   },
+   {
+    "text": "WHO WAS INVOLVED: The",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.702,
+    "id": "o190"
+   },
+   {
+    "text": "FDA, Pfizer; Moderna, and study",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.877,
+    "id": "o191"
+   },
+   {
+    "text": "participants, including young",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.907,
+    "id": "o192"
+   },
+   {
+    "text": "males affected by myocarditis",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.752,
+    "id": "o193"
+   },
+   {
+    "text": "WHEN & WHERE: The",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.736,
+    "id": "o194"
+   },
+   {
+    "text": "updated safety communication",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.844,
+    "id": "o195"
+   },
+   {
+    "text": "was issued on June 25,,2024,in",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.809,
+    "id": "o196"
+   },
+   {
+    "text": "the United States.",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.856,
+    "id": "o197"
+   },
+   {
+    "text": "KEY QUOTE: \"[The] FDA",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.961,
+    "id": "o198"
+   },
+   {
+    "text": "has required and approved",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.691,
+    "id": "o199"
+   },
+   {
+    "text": "updates to the Prescribing",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.988,
+    "id": "o200"
+   },
+   {
+    "text": "Information for Comirnaty",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.999,
+    "id": "o201"
+   },
+   {
+    "text": "(COVID-19 Vaccine, mRNA)",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.563,
+    "id": "o202"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.78,
+    "id": "o203"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.746,
+    "id": "o204"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.929,
+    "id": "o205"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.978,
+    "id": "o206"
+   },
+   {
+    "text": "WHAT HAPPENED: The",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.999,
+    "id": "o207"
+   },
+   {
+    "text": "Drug",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o208"
+   },
+   {
+    "text": "US. Food and",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.778,
+    "id": "o209"
+   },
+   {
+    "text": "Administration (FDA) updated",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.879,
+    "id": "o210"
+   },
+   {
+    "text": "the warning labels on Pfizer",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.996,
+    "id": "o211"
+   },
+   {
+    "text": "and",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o212"
+   },
+   {
+    "text": "Moderna's COVID-19 mRNA",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.818,
+    "id": "o213"
+   },
+   {
+    "text": "accines t0 include new",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.881,
+    "id": "o214"
+   },
+   {
+    "text": "information regarding the risks",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.931,
+    "id": "o215"
+   },
+   {
+    "text": "of myocarditis and pericarditis,",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.848,
+    "id": "o216"
+   },
+   {
+    "text": "particularly in young males",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.894,
+    "id": "o217"
+   },
+   {
+    "text": "WHO WAS INVOLVED: The",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.702,
+    "id": "o218"
+   },
+   {
+    "text": "FDA, Pfizer; Moderna, and study",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.877,
+    "id": "o219"
+   },
+   {
+    "text": "participants, including young",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.907,
+    "id": "o220"
+   },
+   {
+    "text": "males affected by myocarditis",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.752,
+    "id": "o221"
+   },
+   {
+    "text": "WHEN & WHERE: The",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.736,
+    "id": "o222"
+   },
+   {
+    "text": "updated safety communication",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.844,
+    "id": "o223"
+   },
+   {
+    "text": "was issued on June 25,,2024,in",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.809,
+    "id": "o224"
+   },
+   {
+    "text": "the United States.",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.856,
+    "id": "o225"
+   },
+   {
+    "text": "KEY QUOTE: \"[The] FDA",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.961,
+    "id": "o226"
+   },
+   {
+    "text": "has required and approved",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.691,
+    "id": "o227"
+   },
+   {
+    "text": "updates to the Prescribing",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.988,
+    "id": "o228"
+   },
+   {
+    "text": "Information for Comirnaty",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.999,
+    "id": "o229"
+   },
+   {
+    "text": "(COVID-19 Vaccine, mRNA)",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.563,
+    "id": "o230"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.772,
+    "id": "o231"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.743,
+    "id": "o232"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.929,
+    "id": "o233"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.972,
+    "id": "o234"
+   },
+   {
+    "text": "WHAT HAPPENED: The",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.999,
+    "id": "o235"
+   },
+   {
+    "text": "US. Food and Drug",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.579,
+    "id": "o236"
+   },
+   {
+    "text": "Administration (FDA) updated",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.863,
+    "id": "o237"
+   },
+   {
+    "text": "the warning labels on Pfizer",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.818,
+    "id": "o238"
+   },
+   {
+    "text": "and",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 1.0,
+    "id": "o239"
+   },
+   {
+    "text": "Moderna's COVID-19 mRNA",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.824,
+    "id": "o240"
+   },
+   {
+    "text": "vaccines t0 include new",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.685,
+    "id": "o241"
+   },
+   {
+    "text": "information regarding the risks",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.943,
+    "id": "o242"
+   },
+   {
+    "text": "of myocarditis and pericarditis,",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.824,
+    "id": "o243"
+   },
+   {
+    "text": "particularly in young males",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.901,
+    "id": "o244"
+   },
+   {
+    "text": "WHO WAS INVOLVED: The",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.625,
+    "id": "o245"
+   },
+   {
+    "text": "FDA, Pfizer; Moderna, and study",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.872,
+    "id": "o246"
+   },
+   {
+    "text": "participants, including young",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.892,
+    "id": "o247"
+   },
+   {
+    "text": "males affected by myocarditis",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.778,
+    "id": "o248"
+   },
+   {
+    "text": "WHEN & WHERE: The",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.721,
+    "id": "o249"
+   },
+   {
+    "text": "updated safety communication",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.845,
+    "id": "o250"
+   },
+   {
+    "text": "was issued on June 25,,2024,in",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.796,
+    "id": "o251"
+   },
+   {
+    "text": "the United States.",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.865,
+    "id": "o252"
+   },
+   {
+    "text": "KEY QUOTE: \"[The] FDA",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.96,
+    "id": "o253"
+   },
+   {
+    "text": "has required and approved",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.689,
+    "id": "o254"
+   },
+   {
+    "text": "updates to the Prescribing",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.988,
+    "id": "o255"
+   },
+   {
+    "text": "Information for Comirnaty",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.999,
+    "id": "o256"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.772,
+    "id": "o257"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.743,
+    "id": "o258"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.929,
+    "id": "o259"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.972,
+    "id": "o260"
+   },
+   {
+    "text": "WHAT HAPPENED: The",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.999,
+    "id": "o261"
+   },
+   {
+    "text": "US. Food and Drug",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.536,
+    "id": "o262"
+   },
+   {
+    "text": "Administration (FDA) updated",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.863,
+    "id": "o263"
+   },
+   {
+    "text": "the warning labels on Pfizer",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.998,
+    "id": "o264"
+   },
+   {
+    "text": "and",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o265"
+   },
+   {
+    "text": "Moderna's COVID-19 mRNA",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.824,
+    "id": "o266"
+   },
+   {
+    "text": "vaccines t0 include new",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.686,
+    "id": "o267"
+   },
+   {
+    "text": "information regarding the risks",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.943,
+    "id": "o268"
+   },
+   {
+    "text": "of myocarditis and pericarditis,",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.824,
+    "id": "o269"
+   },
+   {
+    "text": "particularly in young males",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.901,
+    "id": "o270"
+   },
+   {
+    "text": "WHO WAS INVOLVED: The",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.627,
+    "id": "o271"
+   },
+   {
+    "text": "FDA, Pfizer; Moderna, and study",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.872,
+    "id": "o272"
+   },
+   {
+    "text": "participants, including young",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.892,
+    "id": "o273"
+   },
+   {
+    "text": "males affected by myocarditis",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.778,
+    "id": "o274"
+   },
+   {
+    "text": "WHEN & WHERE: The",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.721,
+    "id": "o275"
+   },
+   {
+    "text": "updated safety communication",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.845,
+    "id": "o276"
+   },
+   {
+    "text": "was issued on June 25,,2024,in",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.795,
+    "id": "o277"
+   },
+   {
+    "text": "the United States.",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.865,
+    "id": "o278"
+   },
+   {
+    "text": "KEY QUOTE: \"[The] FDA",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.96,
+    "id": "o279"
+   },
+   {
+    "text": "has required and approved",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.689,
+    "id": "o280"
+   },
+   {
+    "text": "updates to the Prescribing",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.988,
+    "id": "o281"
+   },
+   {
+    "text": "Information for Comirnaty",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.999,
+    "id": "o282"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.772,
+    "id": "o283"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.743,
+    "id": "o284"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.929,
+    "id": "o285"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.972,
+    "id": "o286"
+   },
+   {
+    "text": "WHAT HAPPENED: The",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.999,
+    "id": "o287"
+   },
+   {
+    "text": "US. Food and Drug",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.536,
+    "id": "o288"
+   },
+   {
+    "text": "Administration (FDA) updated",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.864,
+    "id": "o289"
+   },
+   {
+    "text": "the warning labels on Pfizer",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.998,
+    "id": "o290"
+   },
+   {
+    "text": "and",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o291"
+   },
+   {
+    "text": "Moderna's COVID-19 mRNA",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.824,
+    "id": "o292"
+   },
+   {
+    "text": "vaccines t0 include new",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.686,
+    "id": "o293"
+   },
+   {
+    "text": "information regarding the risks",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.943,
+    "id": "o294"
+   },
+   {
+    "text": "of myocarditis and pericarditis,",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.823,
+    "id": "o295"
+   },
+   {
+    "text": "particularly in young males",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.901,
+    "id": "o296"
+   },
+   {
+    "text": "WHO WAS INVOLVED: The",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.601,
+    "id": "o297"
+   },
+   {
+    "text": "FDA, Pfizer; Moderna, and study",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.872,
+    "id": "o298"
+   },
+   {
+    "text": "participants, including young",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.892,
+    "id": "o299"
+   },
+   {
+    "text": "males affected by myocarditis",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.78,
+    "id": "o300"
+   },
+   {
+    "text": "WHEN & WHERE: The",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.721,
+    "id": "o301"
+   },
+   {
+    "text": "updated safety communication",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.845,
+    "id": "o302"
+   },
+   {
+    "text": "was issued on June 25,,2024,in",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.796,
+    "id": "o303"
+   },
+   {
+    "text": "the United States.",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.863,
+    "id": "o304"
+   },
+   {
+    "text": "KEY QUOTE: \"[The] FDA",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.96,
+    "id": "o305"
+   },
+   {
+    "text": "has required and approved",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.689,
+    "id": "o306"
+   },
+   {
+    "text": "updates to the Prescribing",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.988,
+    "id": "o307"
+   },
+   {
+    "text": "Information for Comirnaty",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.999,
+    "id": "o308"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.772,
+    "id": "o309"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.743,
+    "id": "o310"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.929,
+    "id": "o311"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.972,
+    "id": "o312"
+   },
+   {
+    "text": "WHAT HAPPENED: The",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.999,
+    "id": "o313"
+   },
+   {
+    "text": "US. Food and Drug",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.536,
+    "id": "o314"
+   },
+   {
+    "text": "Administration (FDA) updated",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.864,
+    "id": "o315"
+   },
+   {
+    "text": "the warning labels on Pfizer",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.998,
+    "id": "o316"
+   },
+   {
+    "text": "and",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o317"
+   },
+   {
+    "text": "Moderna's COVID-19 mRNA",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.824,
+    "id": "o318"
+   },
+   {
+    "text": "vaccines t0 include new",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.686,
+    "id": "o319"
+   },
+   {
+    "text": "information regarding the risks",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.943,
+    "id": "o320"
+   },
+   {
+    "text": "of myocarditis and pericarditis,",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.823,
+    "id": "o321"
+   },
+   {
+    "text": "particularly in young males",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.901,
+    "id": "o322"
+   },
+   {
+    "text": "WHO WAS INVOLVED: The",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.601,
+    "id": "o323"
+   },
+   {
+    "text": "FDA, Pfizer; Moderna, and study",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.872,
+    "id": "o324"
+   },
+   {
+    "text": "participants, including young",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.892,
+    "id": "o325"
+   },
+   {
+    "text": "males affected by myocarditis",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.78,
+    "id": "o326"
+   },
+   {
+    "text": "WHEN & WHERE: The",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.721,
+    "id": "o327"
+   },
+   {
+    "text": "updated safety communication",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.845,
+    "id": "o328"
+   },
+   {
+    "text": "was issued on June 25,,2024,in",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.796,
+    "id": "o329"
+   },
+   {
+    "text": "the United States.",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.863,
+    "id": "o330"
+   },
+   {
+    "text": "KEY QUOTE: \"[The] FDA",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.96,
+    "id": "o331"
+   },
+   {
+    "text": "has required and approved",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.689,
+    "id": "o332"
+   },
+   {
+    "text": "updates to the Prescribing",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.988,
+    "id": "o333"
+   },
+   {
+    "text": "Information for Comirnaty",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.999,
+    "id": "o334"
+   },
+   {
+    "text": "\"Conspiacytheoies",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.692,
+    "id": "o335"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.81,
+    "id": "o336"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.761,
+    "id": "o337"
+   },
+   {
+    "text": "to COVID Vaccines",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.998,
+    "id": "o338"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.708,
+    "id": "o339"
+   },
+   {
+    "text": "WHAT HA",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.991,
+    "id": "o340"
+   },
+   {
+    "text": "US. Food and",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.797,
+    "id": "o341"
+   },
+   {
+    "text": "Administratio",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.841,
+    "id": "o342"
+   },
+   {
+    "text": "the wa",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.787,
+    "id": "o343"
+   },
+   {
+    "text": "Moderr",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.956,
+    "id": "o344"
+   },
+   {
+    "text": "vaccines",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.971,
+    "id": "o345"
+   },
+   {
+    "text": "informatio",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.958,
+    "id": "o346"
+   },
+   {
+    "text": "of",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.998,
+    "id": "o347"
+   },
+   {
+    "text": "particularly in yo",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.759,
+    "id": "o348"
+   },
+   {
+    "text": "WHO WAS IN",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.91,
+    "id": "o349"
+   },
+   {
+    "text": "FDA, Pfizer; Mod",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.965,
+    "id": "o350"
+   },
+   {
+    "text": "participants, incl",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.621,
+    "id": "o351"
+   },
+   {
+    "text": "males affected by",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.572,
+    "id": "o352"
+   },
+   {
+    "text": "The FDA Is Finally",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.854,
+    "id": "o353"
+   },
+   {
+    "text": "Adding Heart Ric",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.612,
+    "id": "o354"
+   },
+   {
+    "text": "to COVID Vaccir",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.722,
+    "id": "o355"
+   },
+   {
+    "text": "PUl SE POINTS",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.615,
+    "id": "o356"
+   },
+   {
+    "text": "WHAT H",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.745,
+    "id": "o357"
+   },
+   {
+    "text": "US F",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.968,
+    "id": "o358"
+   },
+   {
+    "text": "Admin",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o359"
+   },
+   {
+    "text": "the warning",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.993,
+    "id": "o360"
+   },
+   {
+    "text": "Modernas COV",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.874,
+    "id": "o361"
+   },
+   {
+    "text": "vaccines t0 incluc",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.566,
+    "id": "o362"
+   },
+   {
+    "text": "information regar",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.593,
+    "id": "o363"
+   },
+   {
+    "text": "of myocarditis anc",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.833,
+    "id": "o364"
+   },
+   {
+    "text": "particularly in you",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.747,
+    "id": "o365"
+   },
+   {
+    "text": "FDA, Pfizer; Modert",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.62,
+    "id": "o366"
+   },
+   {
+    "text": "parti",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.826,
+    "id": "o367"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.81,
+    "id": "o368"
+   },
+   {
+    "text": "Adding Heart Risk",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.697,
+    "id": "o369"
+   },
+   {
+    "text": "to COVID Vaccines",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.74,
+    "id": "o370"
+   },
+   {
+    "text": "Adm",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o371"
+   },
+   {
+    "text": "the w",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.779,
+    "id": "o372"
+   },
+   {
+    "text": "Mode",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o373"
+   },
+   {
+    "text": "vaccine",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.78,
+    "id": "o374"
+   },
+   {
+    "text": "informatic",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.904,
+    "id": "o375"
+   },
+   {
+    "text": "myocarditis",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.998,
+    "id": "o376"
+   },
+   {
+    "text": "of",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.998,
+    "id": "o377"
+   },
+   {
+    "text": "particularly in",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o378"
+   },
+   {
+    "text": "WHO WAS",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.901,
+    "id": "o379"
+   },
+   {
+    "text": "FDA, Pfizer; Mod",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.667,
+    "id": "o380"
+   },
+   {
+    "text": "participants",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.748,
+    "id": "o381"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.811,
+    "id": "o382"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.781,
+    "id": "o383"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.89,
+    "id": "o384"
+   },
+   {
+    "text": "PULSE POIN",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.932,
+    "id": "o385"
+   },
+   {
+    "text": "WHA",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.986,
+    "id": "o386"
+   },
+   {
+    "text": "US. Food",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.748,
+    "id": "o387"
+   },
+   {
+    "text": "Administr",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.839,
+    "id": "o388"
+   },
+   {
+    "text": "the warning",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.996,
+    "id": "o389"
+   },
+   {
+    "text": "vaccines to",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.595,
+    "id": "o390"
+   },
+   {
+    "text": "information",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o391"
+   },
+   {
+    "text": "of myocardit",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o392"
+   },
+   {
+    "text": "particularly in",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o393"
+   },
+   {
+    "text": "WHO WA",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.991,
+    "id": "o394"
+   },
+   {
+    "text": "FDA, Pfizer; M",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.888,
+    "id": "o395"
+   },
+   {
+    "text": "participants",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.763,
+    "id": "o396"
+   },
+   {
+    "text": "malec",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.554,
+    "id": "o397"
+   },
+   {
+    "text": "0",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.573,
+    "id": "o398"
+   },
+   {
+    "text": "The FDA Is Finall",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.983,
+    "id": "o399"
+   },
+   {
+    "text": "Adding Heart R:",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.719,
+    "id": "o400"
+   },
+   {
+    "text": "to COVID Vacc'",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.959,
+    "id": "o401"
+   },
+   {
+    "text": "US Fo",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.85,
+    "id": "o402"
+   },
+   {
+    "text": "Admini",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.982,
+    "id": "o403"
+   },
+   {
+    "text": "the wari",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.803,
+    "id": "o404"
+   },
+   {
+    "text": "Moderna' $",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.525,
+    "id": "o405"
+   },
+   {
+    "text": "vaccines t0 inct",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.578,
+    "id": "o406"
+   },
+   {
+    "text": "information rega",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.997,
+    "id": "o407"
+   },
+   {
+    "text": "myocarditis an",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.953,
+    "id": "o408"
+   },
+   {
+    "text": "of",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.957,
+    "id": "o409"
+   },
+   {
+    "text": "particularly in you",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o410"
+   },
+   {
+    "text": "WHO WAS IN",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.895,
+    "id": "o411"
+   },
+   {
+    "text": "FDA, Pfizer",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.869,
+    "id": "o412"
+   },
+   {
+    "text": "Finally",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.999,
+    "id": "o413"
+   },
+   {
+    "text": "The FDA",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.999,
+    "id": "o414"
+   },
+   {
+    "text": "Risk Info",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.957,
+    "id": "o415"
+   },
+   {
+    "text": "PU",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.748,
+    "id": "o416"
+   },
+   {
+    "text": "US",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.993,
+    "id": "o417"
+   },
+   {
+    "text": "Mo",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o418"
+   },
+   {
+    "text": "vaccile",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.576,
+    "id": "o419"
+   },
+   {
+    "text": "informati",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o420"
+   },
+   {
+    "text": "of myocard",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.977,
+    "id": "o421"
+   },
+   {
+    "text": "particularly",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.999,
+    "id": "o422"
+   },
+   {
+    "text": "WHO WAS",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.692,
+    "id": "o423"
+   },
+   {
+    "text": "FDA, Pfizer; Mo",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.957,
+    "id": "o424"
+   },
+   {
+    "text": "parti",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.628,
+    "id": "o425"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.745,
+    "id": "o426"
+   },
+   {
+    "text": "to COVID Vaccines",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.999,
+    "id": "o427"
+   },
+   {
+    "text": "JINTS",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.609,
+    "id": "o428"
+   },
+   {
+    "text": "US. Food",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.647,
+    "id": "o429"
+   },
+   {
+    "text": "Administra",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o430"
+   },
+   {
+    "text": "the warning",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.996,
+    "id": "o431"
+   },
+   {
+    "text": "Modernas COV",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.873,
+    "id": "o432"
+   },
+   {
+    "text": "vaccines to include",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.582,
+    "id": "o433"
+   },
+   {
+    "text": "information regard",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.999,
+    "id": "o434"
+   },
+   {
+    "text": "of myocarditis and",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.966,
+    "id": "o435"
+   },
+   {
+    "text": "particularly in youn",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.878,
+    "id": "o436"
+   },
+   {
+    "text": "WHO WAS INV",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.808,
+    "id": "o437"
+   },
+   {
+    "text": "FDA, Pfizer; Mode",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.971,
+    "id": "o438"
+   },
+   {
+    "text": "particinar",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.739,
+    "id": "o439"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.773,
+    "id": "o440"
+   },
+   {
+    "text": "Adding Heart Risk",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.74,
+    "id": "o441"
+   },
+   {
+    "text": "to COVID Vaccine",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.997,
+    "id": "o442"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.941,
+    "id": "o443"
+   },
+   {
+    "text": "WHAT HAPP",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.99,
+    "id": "o444"
+   },
+   {
+    "text": "Drug",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.997,
+    "id": "o445"
+   },
+   {
+    "text": "US. Food and",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.767,
+    "id": "o446"
+   },
+   {
+    "text": "Administration (FD",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.992,
+    "id": "o447"
+   },
+   {
+    "text": "the warning labels",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.745,
+    "id": "o448"
+   },
+   {
+    "text": "Moderna's COVID-19",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.722,
+    "id": "o449"
+   },
+   {
+    "text": "accines t0 include ne",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.786,
+    "id": "o450"
+   },
+   {
+    "text": "information regardin",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.782,
+    "id": "o451"
+   },
+   {
+    "text": "of myocarditis and",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.978,
+    "id": "o452"
+   },
+   {
+    "text": "particularlv in",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.738,
+    "id": "o453"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.696,
+    "id": "o454"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.676,
+    "id": "o455"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.929,
+    "id": "o456"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.982,
+    "id": "o457"
+   },
+   {
+    "text": "WHAT HAPPEN",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.872,
+    "id": "o458"
+   },
+   {
+    "text": "Drug",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.997,
+    "id": "o459"
+   },
+   {
+    "text": "US. Food and",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.822,
+    "id": "o460"
+   },
+   {
+    "text": "Administration (FDA)",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.998,
+    "id": "o461"
+   },
+   {
+    "text": "the warning labels on P",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.9,
+    "id": "o462"
+   },
+   {
+    "text": "Moderna's COVID-19 mRNA",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.68,
+    "id": "o463"
+   },
+   {
+    "text": "accines t0 include new",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.902,
+    "id": "o464"
+   },
+   {
+    "text": "information regarding the ris]",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.7,
+    "id": "o465"
+   },
+   {
+    "text": "myocarditis and pericarditis",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.994,
+    "id": "o466"
+   },
+   {
+    "text": "of",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.743,
+    "id": "o467"
+   },
+   {
+    "text": "particularly in young males",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.865,
+    "id": "o468"
+   },
+   {
+    "text": "WHO WA S INVOL",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.711,
+    "id": "o469"
+   },
+   {
+    "text": "FDA, Pfiz",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.806,
+    "id": "o470"
+   },
+   {
+    "text": "participa",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.948,
+    "id": "o471"
+   },
+   {
+    "text": "males al",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.995,
+    "id": "o472"
+   },
+   {
+    "text": "WHI",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.925,
+    "id": "o473"
+   },
+   {
+    "text": "updated",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o474"
+   },
+   {
+    "text": "the U",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o475"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.696,
+    "id": "o476"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.709,
+    "id": "o477"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.929,
+    "id": "o478"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.981,
+    "id": "o479"
+   },
+   {
+    "text": "WHAT HAPPENED: The",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.998,
+    "id": "o480"
+   },
+   {
+    "text": "US. Food and Drug",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.736,
+    "id": "o481"
+   },
+   {
+    "text": "Administration (FDA) updated",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.861,
+    "id": "o482"
+   },
+   {
+    "text": "the warning labels on Pfizer",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.901,
+    "id": "o483"
+   },
+   {
+    "text": "and",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o484"
+   },
+   {
+    "text": "Moderna's COVID-19 mRNA",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.798,
+    "id": "o485"
+   },
+   {
+    "text": "accines t0 include new",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.903,
+    "id": "o486"
+   },
+   {
+    "text": "information regarding the risks",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.968,
+    "id": "o487"
+   },
+   {
+    "text": "of myocarditis and pericarditis,",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.858,
+    "id": "o488"
+   },
+   {
+    "text": "particularly in young males",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.705,
+    "id": "o489"
+   },
+   {
+    "text": "WHO WAS INVOLVED: The",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.826,
+    "id": "o490"
+   },
+   {
+    "text": "FDA, Pfizer; Moderna, and study",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.82,
+    "id": "o491"
+   },
+   {
+    "text": "participants, including yo",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.886,
+    "id": "o492"
+   },
+   {
+    "text": "males affected by myoc",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.964,
+    "id": "o493"
+   },
+   {
+    "text": "WHEN & WHERE",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.969,
+    "id": "o494"
+   },
+   {
+    "text": "updated safety commu",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.748,
+    "id": "o495"
+   },
+   {
+    "text": "was issued on June 25,",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.764,
+    "id": "o496"
+   },
+   {
+    "text": "the United States.",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.837,
+    "id": "o497"
+   },
+   {
+    "text": "KEY QUOTE:",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.886,
+    "id": "o498"
+   },
+   {
+    "text": "has required and",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.805,
+    "id": "o499"
+   },
+   {
+    "text": "updates to the Pr",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.757,
+    "id": "o500"
+   },
+   {
+    "text": "Information for",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o501"
+   },
+   {
+    "text": "(COVID-19 Vaccin",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.922,
+    "id": "o502"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.696,
+    "id": "o503"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.691,
+    "id": "o504"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.929,
+    "id": "o505"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.98,
+    "id": "o506"
+   },
+   {
+    "text": "WHAT HAPPENEL",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.968,
+    "id": "o507"
+   },
+   {
+    "text": "Drug",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o508"
+   },
+   {
+    "text": "US. Food and",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.823,
+    "id": "o509"
+   },
+   {
+    "text": "Administration (FDA) updated",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.868,
+    "id": "o510"
+   },
+   {
+    "text": "the warning labels on Pfizer an",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.926,
+    "id": "o511"
+   },
+   {
+    "text": "Moderna's COVID-19 mRNA",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.798,
+    "id": "o512"
+   },
+   {
+    "text": "vaccines t0 include new",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.692,
+    "id": "o513"
+   },
+   {
+    "text": "information regarding the risks",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.98,
+    "id": "o514"
+   },
+   {
+    "text": "of myocarditis and pericarditis,",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.855,
+    "id": "o515"
+   },
+   {
+    "text": "particularly in young males.",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.79,
+    "id": "o516"
+   },
+   {
+    "text": "WHO WAS INVOLVED: The",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.851,
+    "id": "o517"
+   },
+   {
+    "text": "FDA, Pfizer; Moderna, and studv",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.858,
+    "id": "o518"
+   },
+   {
+    "text": "participants, including",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.885,
+    "id": "o519"
+   },
+   {
+    "text": "males affected by my",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.958,
+    "id": "o520"
+   },
+   {
+    "text": "WHEN & WHEL",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.821,
+    "id": "o521"
+   },
+   {
+    "text": "updated safety comi",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.69,
+    "id": "o522"
+   },
+   {
+    "text": "was issued on June",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.764,
+    "id": "o523"
+   },
+   {
+    "text": "the United States.",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.826,
+    "id": "o524"
+   },
+   {
+    "text": "KEY QUOTF",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.675,
+    "id": "o525"
+   },
+   {
+    "text": "has required an",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.88,
+    "id": "o526"
+   },
+   {
+    "text": "updates to the",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.621,
+    "id": "o527"
+   },
+   {
+    "text": "Information fo",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.963,
+    "id": "o528"
+   },
+   {
+    "text": "(COVID-19 Vac",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.988,
+    "id": "o529"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.696,
+    "id": "o530"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.676,
+    "id": "o531"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.929,
+    "id": "o532"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.98,
+    "id": "o533"
+   },
+   {
+    "text": "WHAT HAPPENED: The",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.979,
+    "id": "o534"
+   },
+   {
+    "text": "US. Food and Drug",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.767,
+    "id": "o535"
+   },
+   {
+    "text": "Administration (FDA) updated",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.707,
+    "id": "o536"
+   },
+   {
+    "text": "the warning labels on Pfizer a1",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.884,
+    "id": "o537"
+   },
+   {
+    "text": "Moderna's COVID-19 mRNA",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.797,
+    "id": "o538"
+   },
+   {
+    "text": "vaccines t0 include new",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.692,
+    "id": "o539"
+   },
+   {
+    "text": "information regarding the risks",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.98,
+    "id": "o540"
+   },
+   {
+    "text": "of myocarditis and pericarditis,",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.855,
+    "id": "o541"
+   },
+   {
+    "text": "particularly in young males.",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.79,
+    "id": "o542"
+   },
+   {
+    "text": "WHO WAS INVOLVED: The",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.851,
+    "id": "o543"
+   },
+   {
+    "text": "FDA, Pfizer; Moderna, and studv",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.76,
+    "id": "o544"
+   },
+   {
+    "text": "participants, including",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.822,
+    "id": "o545"
+   },
+   {
+    "text": "males affected by my",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.96,
+    "id": "o546"
+   },
+   {
+    "text": "WHEN & WHE",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.973,
+    "id": "o547"
+   },
+   {
+    "text": "updated safety com",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.889,
+    "id": "o548"
+   },
+   {
+    "text": "was issued on June",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.76,
+    "id": "o549"
+   },
+   {
+    "text": "the United States.",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.789,
+    "id": "o550"
+   },
+   {
+    "text": "KEY QUOTE",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.957,
+    "id": "o551"
+   },
+   {
+    "text": "has required and",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.902,
+    "id": "o552"
+   },
+   {
+    "text": "updates to the",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.602,
+    "id": "o553"
+   },
+   {
+    "text": "Information",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o554"
+   },
+   {
+    "text": "(COVID-19 Vac",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.986,
+    "id": "o555"
+   },
+   {
+    "text": "\"Conspiacytheoies",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.699,
+    "id": "o556"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.697,
+    "id": "o557"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.767,
+    "id": "o558"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.93,
+    "id": "o559"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.971,
+    "id": "o560"
+   },
+   {
+    "text": "WHAT HAPPENED: The",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.996,
+    "id": "o561"
+   },
+   {
+    "text": "Drug",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o562"
+   },
+   {
+    "text": "US. Food and",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.809,
+    "id": "o563"
+   },
+   {
+    "text": "Administration (FDA) updal",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.822,
+    "id": "o564"
+   },
+   {
+    "text": "the warning labels on Pfizer a",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.966,
+    "id": "o565"
+   },
+   {
+    "text": "Moderna's COVID-19 mRNA",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.801,
+    "id": "o566"
+   },
+   {
+    "text": "accines t0 include new",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.884,
+    "id": "o567"
+   },
+   {
+    "text": "information regarding the risks",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.766,
+    "id": "o568"
+   },
+   {
+    "text": "myocarditis and pericarditis,",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.978,
+    "id": "o569"
+   },
+   {
+    "text": "of",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.998,
+    "id": "o570"
+   },
+   {
+    "text": "particularly in young males.",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.618,
+    "id": "o571"
+   },
+   {
+    "text": "WHO WAS INVOLVED: The",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.926,
+    "id": "o572"
+   },
+   {
+    "text": "FDA, Pfizer; Moderna, and studv",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.919,
+    "id": "o573"
+   },
+   {
+    "text": "participants, includ",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.869,
+    "id": "o574"
+   },
+   {
+    "text": "males affected by",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.948,
+    "id": "o575"
+   },
+   {
+    "text": "WHEN & W",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o576"
+   },
+   {
+    "text": "updated safety €",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.947,
+    "id": "o577"
+   },
+   {
+    "text": "was issued on Ju",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.71,
+    "id": "o578"
+   },
+   {
+    "text": "the United State",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.95,
+    "id": "o579"
+   },
+   {
+    "text": "KEY QUO",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.988,
+    "id": "o580"
+   },
+   {
+    "text": "has required",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.91,
+    "id": "o581"
+   },
+   {
+    "text": "updates to",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.998,
+    "id": "o582"
+   },
+   {
+    "text": "Informatior",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.638,
+    "id": "o583"
+   },
+   {
+    "text": "(COVID-19",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.999,
+    "id": "o584"
+   },
+   {
+    "text": "\"Conspiacytheoies",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.709,
+    "id": "o585"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.684,
+    "id": "o586"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.76,
+    "id": "o587"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.93,
+    "id": "o588"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.971,
+    "id": "o589"
+   },
+   {
+    "text": "WHAT HAPPENED: Th",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.919,
+    "id": "o590"
+   },
+   {
+    "text": "Drug",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o591"
+   },
+   {
+    "text": "US. Food and",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.81,
+    "id": "o592"
+   },
+   {
+    "text": "Administration (FDA)",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.998,
+    "id": "o593"
+   },
+   {
+    "text": "the warning labels on P",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.557,
+    "id": "o594"
+   },
+   {
+    "text": "Moderna's COVID-19 mRA",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.753,
+    "id": "o595"
+   },
+   {
+    "text": "vaccines to include new",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.729,
+    "id": "o596"
+   },
+   {
+    "text": "information regarding the risl",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.778,
+    "id": "o597"
+   },
+   {
+    "text": "myocarditis and pericarditis",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.995,
+    "id": "o598"
+   },
+   {
+    "text": "of",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.998,
+    "id": "o599"
+   },
+   {
+    "text": "particularly in young males.",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.618,
+    "id": "o600"
+   },
+   {
+    "text": "WHO WAS INVOLVED: The",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.875,
+    "id": "o601"
+   },
+   {
+    "text": "FDA, Pfizer; Moderna and",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.972,
+    "id": "o602"
+   },
+   {
+    "text": "participants, ino",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.535,
+    "id": "o603"
+   },
+   {
+    "text": "males affected",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.764,
+    "id": "o604"
+   },
+   {
+    "text": "WHEN",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o605"
+   },
+   {
+    "text": "updated safet",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o606"
+   },
+   {
+    "text": "was issued 0",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.812,
+    "id": "o607"
+   },
+   {
+    "text": "the United St",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.571,
+    "id": "o608"
+   },
+   {
+    "text": "KEY",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o609"
+   },
+   {
+    "text": "has requi",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.955,
+    "id": "o610"
+   },
+   {
+    "text": "updates",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o611"
+   },
+   {
+    "text": "Informa",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o612"
+   },
+   {
+    "text": "(COVID",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o613"
+   },
+   {
+    "text": "\"Conspiacytheoies",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.712,
+    "id": "o614"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.683,
+    "id": "o615"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.76,
+    "id": "o616"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.93,
+    "id": "o617"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.971,
+    "id": "o618"
+   },
+   {
+    "text": "WHAT HAPPENED: Tl",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.906,
+    "id": "o619"
+   },
+   {
+    "text": "Drug",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o620"
+   },
+   {
+    "text": "US. Food and",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.81,
+    "id": "o621"
+   },
+   {
+    "text": "Administration (FDA)",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.998,
+    "id": "o622"
+   },
+   {
+    "text": "the warning labels on P",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.79,
+    "id": "o623"
+   },
+   {
+    "text": "Moderna's COVID-19 mRNZ",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.614,
+    "id": "o624"
+   },
+   {
+    "text": "vaccines to include new",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.729,
+    "id": "o625"
+   },
+   {
+    "text": "information regarding the risl",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.791,
+    "id": "o626"
+   },
+   {
+    "text": "myocarditis and pericarditis",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.995,
+    "id": "o627"
+   },
+   {
+    "text": "of",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.998,
+    "id": "o628"
+   },
+   {
+    "text": "particularly in young males",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.917,
+    "id": "o629"
+   },
+   {
+    "text": "WHO WAS INVOLVED: The",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.876,
+    "id": "o630"
+   },
+   {
+    "text": "FDA, Pfizer; Moderna and",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.972,
+    "id": "o631"
+   },
+   {
+    "text": "males affected",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.809,
+    "id": "o632"
+   },
+   {
+    "text": "WHEN",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o633"
+   },
+   {
+    "text": "updated safet",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o634"
+   },
+   {
+    "text": "was issued 0",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.813,
+    "id": "o635"
+   },
+   {
+    "text": "the United St",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.903,
+    "id": "o636"
+   },
+   {
+    "text": "KEY",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o637"
+   },
+   {
+    "text": "has requi",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.973,
+    "id": "o638"
+   },
+   {
+    "text": "updates",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o639"
+   },
+   {
+    "text": "Informa",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o640"
+   },
+   {
+    "text": "(COVID",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o641"
+   },
+   {
+    "text": "\"Conspiacytheoies",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.712,
+    "id": "o642"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.683,
+    "id": "o643"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.743,
+    "id": "o644"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.93,
+    "id": "o645"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.971,
+    "id": "o646"
+   },
+   {
+    "text": "WHAT HAPPENED:",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.999,
+    "id": "o647"
+   },
+   {
+    "text": "US. Food and Drug",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.763,
+    "id": "o648"
+   },
+   {
+    "text": "Administration (FDA)",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 1.0,
+    "id": "o649"
+   },
+   {
+    "text": "the warning labels on",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.777,
+    "id": "o650"
+   },
+   {
+    "text": "Moderna's COVID-19 mki",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.672,
+    "id": "o651"
+   },
+   {
+    "text": "vaccines to include new",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.729,
+    "id": "o652"
+   },
+   {
+    "text": "information regarding the",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 1.0,
+    "id": "o653"
+   },
+   {
+    "text": "myocarditis and pericar",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.996,
+    "id": "o654"
+   },
+   {
+    "text": "of",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.998,
+    "id": "o655"
+   },
+   {
+    "text": "particularly in young male",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.974,
+    "id": "o656"
+   },
+   {
+    "text": "WHO WAS INVOLVED: The",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.877,
+    "id": "o657"
+   },
+   {
+    "text": "FDA, Pfizer; Moderna,and stua",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.838,
+    "id": "o658"
+   },
+   {
+    "text": "participants, inch",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.58,
+    "id": "o659"
+   },
+   {
+    "text": "males affected",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.828,
+    "id": "o660"
+   },
+   {
+    "text": "WHEN &",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.995,
+    "id": "o661"
+   },
+   {
+    "text": "updated safety",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.925,
+    "id": "o662"
+   },
+   {
+    "text": "was issued on",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.738,
+    "id": "o663"
+   },
+   {
+    "text": "the United Sta",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.932,
+    "id": "o664"
+   },
+   {
+    "text": "KEY QU",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.683,
+    "id": "o665"
+   },
+   {
+    "text": "has require",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.842,
+    "id": "o666"
+   },
+   {
+    "text": "updates tc",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.788,
+    "id": "o667"
+   },
+   {
+    "text": "Informat",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.883,
+    "id": "o668"
+   },
+   {
+    "text": "(COVID-1",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.753,
+    "id": "o669"
+   },
+   {
+    "text": "\"Conspiacytheoies",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.712,
+    "id": "o670"
+   },
+   {
+    "text": "The EDA Is Finally",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.683,
+    "id": "o671"
+   },
+   {
+    "text": "Adding Heart Risk Info",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.746,
+    "id": "o672"
+   },
+   {
+    "text": "to COVID Vaccines:",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.93,
+    "id": "o673"
+   },
+   {
+    "text": "PULSE POINTS",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.972,
+    "id": "o674"
+   },
+   {
+    "text": "WHAT HAPPENED:",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.999,
+    "id": "o675"
+   },
+   {
+    "text": "US. Food and Drug",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.763,
+    "id": "o676"
+   },
+   {
+    "text": "Administration (FDA)",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 1.0,
+    "id": "o677"
+   },
+   {
+    "text": "the warning labels on P",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.77,
+    "id": "o678"
+   },
+   {
+    "text": "Moderna's COVID-19 mRI",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.683,
+    "id": "o679"
+   },
+   {
+    "text": "accines t0 include new",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.884,
+    "id": "o680"
+   },
+   {
+    "text": "information regarding the",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.539,
+    "id": "o681"
+   },
+   {
+    "text": "myocarditis and pericar",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.996,
+    "id": "o682"
+   },
+   {
+    "text": "of",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.998,
+    "id": "o683"
+   },
+   {
+    "text": "particularly in young male",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.967,
+    "id": "o684"
+   },
+   {
+    "text": "WHO WAS INVOLVED: The",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.684,
+    "id": "o685"
+   },
+   {
+    "text": "FDA, Pfizer; Moderna, and stu",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.656,
+    "id": "o686"
+   },
+   {
+    "text": "participants, inch",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.584,
+    "id": "o687"
+   },
+   {
+    "text": "males affected",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.841,
+    "id": "o688"
+   },
+   {
+    "text": "WHEN &",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.997,
+    "id": "o689"
+   },
+   {
+    "text": "updated safety",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.665,
+    "id": "o690"
+   },
+   {
+    "text": "was issued on",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.767,
+    "id": "o691"
+   },
+   {
+    "text": "the United Sta",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.959,
+    "id": "o692"
+   },
+   {
+    "text": "KEY Q",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.999,
+    "id": "o693"
+   },
+   {
+    "text": "has requir",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.682,
+    "id": "o694"
+   },
+   {
+    "text": "updates",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 1.0,
+    "id": "o695"
+   },
+   {
+    "text": "Informat",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.841,
+    "id": "o696"
+   },
+   {
+    "text": "(COVID-I",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.652,
+    "id": "o697"
+   }
+  ]
+ }
+}

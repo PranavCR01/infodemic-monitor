@@ -1,0 +1,1835 @@
+{
+ "video_id": "v155",
+ "filename": "new_TikTok_7470573318559632670.mp4",
+ "relative_path": "new_TikTok_7470573318559632670.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:59",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.437,
+  "duration_seconds": 15.02,
+  "segments": []
+ },
+ "on_screen": {
+  "frames_sampled": 8,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "NATIONAL",
+    "confidence": 0.696
+   },
+   {
+    "time": 0.0,
+    "text": "HEART",
+    "confidence": 0.997
+   },
+   {
+    "time": 0.0,
+    "text": "MONTH",
+    "confidence": 0.997
+   },
+   {
+    "time": 0.0,
+    "text": "FEBRUARY",
+    "confidence": 0.995
+   },
+   {
+    "time": 0.0,
+    "text": "NITYAM",
+    "confidence": 0.999
+   },
+   {
+    "time": 0.0,
+    "text": "Turmeric",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "Yogic SuperFood",
+    "confidence": 0.999
+   },
+   {
+    "time": 0.0,
+    "text": "Spread",
+    "confidence": 0.872
+   },
+   {
+    "time": 0.0,
+    "text": "Helps",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "Encourage healthy inflammatory function",
+    "confidence": 0.731
+   },
+   {
+    "time": 0.0,
+    "text": "\"peortfheadivy",
+    "confidence": 0.568
+   },
+   {
+    "time": 0.0,
+    "text": "individuals",
+    "confidence": 0.987
+   },
+   {
+    "time": 0.0,
+    "text": "Support",
+    "confidence": 0.996
+   },
+   {
+    "time": 0.0,
+    "text": "digestion",
+    "confidence": 0.563
+   },
+   {
+    "time": 0.0,
+    "text": "Promote cardiovascular health",
+    "confidence": 0.999
+   },
+   {
+    "time": 0.0,
+    "text": "Support the immune",
+    "confidence": 0.988
+   },
+   {
+    "time": 0.0,
+    "text": "system",
+    "confidence": 0.995
+   },
+   {
+    "time": 0.0,
+    "text": "Promotes healthy skin",
+    "confidence": 0.973
+   },
+   {
+    "time": 0.0,
+    "text": "KomalHerbals.com",
+    "confidence": 0.913
+   },
+   {
+    "time": 2.0,
+    "text": "NATIONAL",
+    "confidence": 0.662
+   },
+   {
+    "time": 2.0,
+    "text": "HEART",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "MONTH",
+    "confidence": 0.988
+   },
+   {
+    "time": 2.0,
+    "text": "FEBRUARY",
+    "confidence": 0.995
+   },
+   {
+    "time": 2.0,
+    "text": "NITYAM",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Turmeric",
+    "confidence": 0.977
+   },
+   {
+    "time": 2.0,
+    "text": "Yogic SuperFood",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "Spread",
+    "confidence": 0.947
+   },
+   {
+    "time": 2.0,
+    "text": "Helps",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Encourage healthy inflammatory function",
+    "confidence": 0.716
+   },
+   {
+    "time": 2.0,
+    "text": "\"peortfheadivy",
+    "confidence": 0.547
+   },
+   {
+    "time": 2.0,
+    "text": "individuals",
+    "confidence": 0.993
+   },
+   {
+    "time": 2.0,
+    "text": "Support",
+    "confidence": 0.79
+   },
+   {
+    "time": 2.0,
+    "text": "digestion",
+    "confidence": 0.644
+   },
+   {
+    "time": 2.0,
+    "text": "Promote cardiovascular health",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "Support the immune",
+    "confidence": 0.777
+   },
+   {
+    "time": 2.0,
+    "text": "system",
+    "confidence": 0.995
+   },
+   {
+    "time": 2.0,
+    "text": "Promotes healthy skin",
+    "confidence": 0.973
+   },
+   {
+    "time": 2.0,
+    "text": "KomalHerbals.com",
+    "confidence": 0.916
+   },
+   {
+    "time": 4.0,
+    "text": "NATIONAL",
+    "confidence": 0.727
+   },
+   {
+    "time": 4.0,
+    "text": "HEART",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.0,
+    "text": "MONTH",
+    "confidence": 0.988
+   },
+   {
+    "time": 4.0,
+    "text": "FEBRUARY",
+    "confidence": 0.995
+   },
+   {
+    "time": 4.0,
+    "text": "NITYAM",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Turmeric",
+    "confidence": 0.985
+   },
+   {
+    "time": 4.0,
+    "text": "Yogic SuperFood",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.0,
+    "text": "Spread",
+    "confidence": 0.944
+   },
+   {
+    "time": 4.0,
+    "text": "Helps",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Encourage healthy inflammatory function",
+    "confidence": 0.68
+   },
+   {
+    "time": 4.0,
+    "text": "\"peortfheadivy",
+    "confidence": 0.538
+   },
+   {
+    "time": 4.0,
+    "text": "individuals",
+    "confidence": 0.712
+   },
+   {
+    "time": 4.0,
+    "text": "Support",
+    "confidence": 0.971
+   },
+   {
+    "time": 4.0,
+    "text": "digestion",
+    "confidence": 0.577
+   },
+   {
+    "time": 4.0,
+    "text": "Promote cardiovascular health",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.0,
+    "text": "Support the immune",
+    "confidence": 0.99
+   },
+   {
+    "time": 4.0,
+    "text": "system",
+    "confidence": 0.995
+   },
+   {
+    "time": 4.0,
+    "text": "Promotes healthy skin",
+    "confidence": 0.972
+   },
+   {
+    "time": 4.0,
+    "text": "KomalHerbals.com",
+    "confidence": 0.928
+   },
+   {
+    "time": 6.0,
+    "text": "NATIONAL",
+    "confidence": 0.753
+   },
+   {
+    "time": 6.0,
+    "text": "HEART",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.0,
+    "text": "MONTH",
+    "confidence": 0.988
+   },
+   {
+    "time": 6.0,
+    "text": "FEBRUARY",
+    "confidence": 0.995
+   },
+   {
+    "time": 6.0,
+    "text": "NITYAM",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "Turmeric",
+    "confidence": 0.987
+   },
+   {
+    "time": 6.0,
+    "text": "Yogic SuperFood",
+    "confidence": 0.997
+   },
+   {
+    "time": 6.0,
+    "text": "Spread",
+    "confidence": 0.955
+   },
+   {
+    "time": 6.0,
+    "text": "Helps",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "Encourage healthy inflammatory function",
+    "confidence": 0.868
+   },
+   {
+    "time": 6.0,
+    "text": "\"peortfheadivy",
+    "confidence": 0.552
+   },
+   {
+    "time": 6.0,
+    "text": "individuals",
+    "confidence": 0.954
+   },
+   {
+    "time": 6.0,
+    "text": "Support",
+    "confidence": 0.94
+   },
+   {
+    "time": 6.0,
+    "text": "Promote cardiovascular health",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.0,
+    "text": "Support the immune",
+    "confidence": 0.989
+   },
+   {
+    "time": 6.0,
+    "text": "system",
+    "confidence": 0.995
+   },
+   {
+    "time": 6.0,
+    "text": "Promotes healthy skin",
+    "confidence": 0.973
+   },
+   {
+    "time": 6.0,
+    "text": "KomalHerbals.com",
+    "confidence": 0.924
+   },
+   {
+    "time": 8.0,
+    "text": "NATIONAL",
+    "confidence": 0.754
+   },
+   {
+    "time": 8.0,
+    "text": "HEART",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "MONTH",
+    "confidence": 0.988
+   },
+   {
+    "time": 8.0,
+    "text": "FEBRUARY",
+    "confidence": 0.996
+   },
+   {
+    "time": 8.0,
+    "text": "NITYAM",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "Turmeric",
+    "confidence": 0.987
+   },
+   {
+    "time": 8.0,
+    "text": "Yogic SuperFood",
+    "confidence": 0.997
+   },
+   {
+    "time": 8.0,
+    "text": "Spread",
+    "confidence": 0.955
+   },
+   {
+    "time": 8.0,
+    "text": "Helps",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "Encourage healthy inflammatory function",
+    "confidence": 0.864
+   },
+   {
+    "time": 8.0,
+    "text": "\"peortfheadivy",
+    "confidence": 0.553
+   },
+   {
+    "time": 8.0,
+    "text": "individuals",
+    "confidence": 0.968
+   },
+   {
+    "time": 8.0,
+    "text": "Support",
+    "confidence": 0.861
+   },
+   {
+    "time": 8.0,
+    "text": "digestion",
+    "confidence": 0.647
+   },
+   {
+    "time": 8.0,
+    "text": "Promote cardiovascular health",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "Support the immune",
+    "confidence": 0.989
+   },
+   {
+    "time": 8.0,
+    "text": "system",
+    "confidence": 0.995
+   },
+   {
+    "time": 8.0,
+    "text": "Promotes healthy skin",
+    "confidence": 0.972
+   },
+   {
+    "time": 8.0,
+    "text": "KomalHerbals.com",
+    "confidence": 0.924
+   },
+   {
+    "time": 10.0,
+    "text": "NATIONAL",
+    "confidence": 0.744
+   },
+   {
+    "time": 10.0,
+    "text": "HEART",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "MONTH",
+    "confidence": 0.988
+   },
+   {
+    "time": 10.0,
+    "text": "FEBRUARY",
+    "confidence": 0.995
+   },
+   {
+    "time": 10.0,
+    "text": "NITYAM",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "Turmeric",
+    "confidence": 0.976
+   },
+   {
+    "time": 10.0,
+    "text": "Yogic SuperFood",
+    "confidence": 0.998
+   },
+   {
+    "time": 10.0,
+    "text": "Spread",
+    "confidence": 0.903
+   },
+   {
+    "time": 10.0,
+    "text": "Helps",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "Encourage healthy inflammatory function",
+    "confidence": 0.908
+   },
+   {
+    "time": 10.0,
+    "text": "\"peortfheadivy",
+    "confidence": 0.545
+   },
+   {
+    "time": 10.0,
+    "text": "individuals",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "Support",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "digestion",
+    "confidence": 0.607
+   },
+   {
+    "time": 10.0,
+    "text": "Promote cardiovascular health",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "Support the immune",
+    "confidence": 0.988
+   },
+   {
+    "time": 10.0,
+    "text": "system",
+    "confidence": 0.995
+   },
+   {
+    "time": 10.0,
+    "text": "Promotes healthy skin",
+    "confidence": 0.971
+   },
+   {
+    "time": 10.0,
+    "text": "KomalHerbals.com",
+    "confidence": 0.929
+   },
+   {
+    "time": 12.0,
+    "text": "NATIONAL",
+    "confidence": 0.741
+   },
+   {
+    "time": 12.0,
+    "text": "HEART",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.0,
+    "text": "MONTH",
+    "confidence": 0.988
+   },
+   {
+    "time": 12.0,
+    "text": "FEBRUARY",
+    "confidence": 0.995
+   },
+   {
+    "time": 12.0,
+    "text": "NITYAM",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "Turmeric",
+    "confidence": 0.977
+   },
+   {
+    "time": 12.0,
+    "text": "Yogic SuperFood",
+    "confidence": 0.998
+   },
+   {
+    "time": 12.0,
+    "text": "Spread",
+    "confidence": 0.903
+   },
+   {
+    "time": 12.0,
+    "text": "Helps",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "Encourage healthy inflammatory function",
+    "confidence": 0.903
+   },
+   {
+    "time": 12.0,
+    "text": "\"peortfheadivy",
+    "confidence": 0.544
+   },
+   {
+    "time": 12.0,
+    "text": "individuals",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "Support",
+    "confidence": 0.836
+   },
+   {
+    "time": 12.0,
+    "text": "Promote cardiovascular health",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.0,
+    "text": "Support the immune",
+    "confidence": 0.987
+   },
+   {
+    "time": 12.0,
+    "text": "system",
+    "confidence": 0.995
+   },
+   {
+    "time": 12.0,
+    "text": "Promotes healthy skin",
+    "confidence": 0.971
+   },
+   {
+    "time": 12.0,
+    "text": "KomalHerbals.com",
+    "confidence": 0.93
+   },
+   {
+    "time": 14.0,
+    "text": "NATIONAL",
+    "confidence": 0.746
+   },
+   {
+    "time": 14.0,
+    "text": "HEART",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.0,
+    "text": "MONTH",
+    "confidence": 0.988
+   },
+   {
+    "time": 14.0,
+    "text": "FEBRUARY",
+    "confidence": 0.996
+   },
+   {
+    "time": 14.0,
+    "text": "NITYAM",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "Turmeric",
+    "confidence": 0.974
+   },
+   {
+    "time": 14.0,
+    "text": "Yogic SuperFood",
+    "confidence": 0.998
+   },
+   {
+    "time": 14.0,
+    "text": "Spread",
+    "confidence": 0.9
+   },
+   {
+    "time": 14.0,
+    "text": "Helps",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "Encourage healthy inflammatory function",
+    "confidence": 0.908
+   },
+   {
+    "time": 14.0,
+    "text": "\"peortfheadivy",
+    "confidence": 0.54
+   },
+   {
+    "time": 14.0,
+    "text": "individuals",
+    "confidence": 0.734
+   },
+   {
+    "time": 14.0,
+    "text": "Support",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "digestion",
+    "confidence": 0.641
+   },
+   {
+    "time": 14.0,
+    "text": "Promote cardiovascular health",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.0,
+    "text": "Support the immune",
+    "confidence": 0.987
+   },
+   {
+    "time": 14.0,
+    "text": "system",
+    "confidence": 0.995
+   },
+   {
+    "time": 14.0,
+    "text": "Promotes healthy skin",
+    "confidence": 0.972
+   },
+   {
+    "time": 14.0,
+    "text": "KomalHerbals.com",
+    "confidence": 0.93
+   }
+  ],
+  "captions": [
+   {
+    "text": "NATIONAL",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.696,
+    "id": "o1"
+   },
+   {
+    "text": "HEART",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.997,
+    "id": "o2"
+   },
+   {
+    "text": "MONTH",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.997,
+    "id": "o3"
+   },
+   {
+    "text": "FEBRUARY",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.995,
+    "id": "o4"
+   },
+   {
+    "text": "NITYAM",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o5"
+   },
+   {
+    "text": "Turmeric",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o6"
+   },
+   {
+    "text": "Yogic SuperFood",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o7"
+   },
+   {
+    "text": "Spread",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.872,
+    "id": "o8"
+   },
+   {
+    "text": "Helps",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "Encourage healthy inflammatory function",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.731,
+    "id": "o10"
+   },
+   {
+    "text": "\"peortfheadivy",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.568,
+    "id": "o11"
+   },
+   {
+    "text": "individuals",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.987,
+    "id": "o12"
+   },
+   {
+    "text": "Support",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.996,
+    "id": "o13"
+   },
+   {
+    "text": "digestion",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.563,
+    "id": "o14"
+   },
+   {
+    "text": "Promote cardiovascular health",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o15"
+   },
+   {
+    "text": "Support the immune",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.988,
+    "id": "o16"
+   },
+   {
+    "text": "system",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.995,
+    "id": "o17"
+   },
+   {
+    "text": "Promotes healthy skin",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.973,
+    "id": "o18"
+   },
+   {
+    "text": "KomalHerbals.com",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.913,
+    "id": "o19"
+   },
+   {
+    "text": "NATIONAL",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.662,
+    "id": "o20"
+   },
+   {
+    "text": "HEART",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.999,
+    "id": "o21"
+   },
+   {
+    "text": "MONTH",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.988,
+    "id": "o22"
+   },
+   {
+    "text": "FEBRUARY",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.995,
+    "id": "o23"
+   },
+   {
+    "text": "NITYAM",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o24"
+   },
+   {
+    "text": "Turmeric",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.977,
+    "id": "o25"
+   },
+   {
+    "text": "Yogic SuperFood",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.999,
+    "id": "o26"
+   },
+   {
+    "text": "Spread",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.947,
+    "id": "o27"
+   },
+   {
+    "text": "Helps",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o28"
+   },
+   {
+    "text": "Encourage healthy inflammatory function",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.716,
+    "id": "o29"
+   },
+   {
+    "text": "\"peortfheadivy",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.547,
+    "id": "o30"
+   },
+   {
+    "text": "individuals",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.993,
+    "id": "o31"
+   },
+   {
+    "text": "Support",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.79,
+    "id": "o32"
+   },
+   {
+    "text": "digestion",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.644,
+    "id": "o33"
+   },
+   {
+    "text": "Promote cardiovascular health",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.999,
+    "id": "o34"
+   },
+   {
+    "text": "Support the immune",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.777,
+    "id": "o35"
+   },
+   {
+    "text": "system",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.995,
+    "id": "o36"
+   },
+   {
+    "text": "Promotes healthy skin",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.973,
+    "id": "o37"
+   },
+   {
+    "text": "KomalHerbals.com",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.916,
+    "id": "o38"
+   },
+   {
+    "text": "NATIONAL",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.727,
+    "id": "o39"
+   },
+   {
+    "text": "HEART",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.999,
+    "id": "o40"
+   },
+   {
+    "text": "MONTH",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.988,
+    "id": "o41"
+   },
+   {
+    "text": "FEBRUARY",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.995,
+    "id": "o42"
+   },
+   {
+    "text": "NITYAM",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o43"
+   },
+   {
+    "text": "Turmeric",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.985,
+    "id": "o44"
+   },
+   {
+    "text": "Yogic SuperFood",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.999,
+    "id": "o45"
+   },
+   {
+    "text": "Spread",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.944,
+    "id": "o46"
+   },
+   {
+    "text": "Helps",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o47"
+   },
+   {
+    "text": "Encourage healthy inflammatory function",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.68,
+    "id": "o48"
+   },
+   {
+    "text": "\"peortfheadivy",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.538,
+    "id": "o49"
+   },
+   {
+    "text": "individuals",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.712,
+    "id": "o50"
+   },
+   {
+    "text": "Support",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.971,
+    "id": "o51"
+   },
+   {
+    "text": "digestion",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.577,
+    "id": "o52"
+   },
+   {
+    "text": "Promote cardiovascular health",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.999,
+    "id": "o53"
+   },
+   {
+    "text": "Support the immune",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.99,
+    "id": "o54"
+   },
+   {
+    "text": "system",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.995,
+    "id": "o55"
+   },
+   {
+    "text": "Promotes healthy skin",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.972,
+    "id": "o56"
+   },
+   {
+    "text": "KomalHerbals.com",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.928,
+    "id": "o57"
+   },
+   {
+    "text": "NATIONAL",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.753,
+    "id": "o58"
+   },
+   {
+    "text": "HEART",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.999,
+    "id": "o59"
+   },
+   {
+    "text": "MONTH",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.988,
+    "id": "o60"
+   },
+   {
+    "text": "FEBRUARY",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.995,
+    "id": "o61"
+   },
+   {
+    "text": "NITYAM",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o62"
+   },
+   {
+    "text": "Turmeric",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.987,
+    "id": "o63"
+   },
+   {
+    "text": "Yogic SuperFood",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.997,
+    "id": "o64"
+   },
+   {
+    "text": "Spread",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.955,
+    "id": "o65"
+   },
+   {
+    "text": "Helps",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o66"
+   },
+   {
+    "text": "Encourage healthy inflammatory function",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.868,
+    "id": "o67"
+   },
+   {
+    "text": "\"peortfheadivy",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.552,
+    "id": "o68"
+   },
+   {
+    "text": "individuals",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.954,
+    "id": "o69"
+   },
+   {
+    "text": "Support",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.94,
+    "id": "o70"
+   },
+   {
+    "text": "Promote cardiovascular health",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.999,
+    "id": "o71"
+   },
+   {
+    "text": "Support the immune",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.989,
+    "id": "o72"
+   },
+   {
+    "text": "system",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.995,
+    "id": "o73"
+   },
+   {
+    "text": "Promotes healthy skin",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.973,
+    "id": "o74"
+   },
+   {
+    "text": "KomalHerbals.com",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.924,
+    "id": "o75"
+   },
+   {
+    "text": "NATIONAL",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.754,
+    "id": "o76"
+   },
+   {
+    "text": "HEART",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.999,
+    "id": "o77"
+   },
+   {
+    "text": "MONTH",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.988,
+    "id": "o78"
+   },
+   {
+    "text": "FEBRUARY",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.996,
+    "id": "o79"
+   },
+   {
+    "text": "NITYAM",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o80"
+   },
+   {
+    "text": "Turmeric",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.987,
+    "id": "o81"
+   },
+   {
+    "text": "Yogic SuperFood",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.997,
+    "id": "o82"
+   },
+   {
+    "text": "Spread",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.955,
+    "id": "o83"
+   },
+   {
+    "text": "Helps",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o84"
+   },
+   {
+    "text": "Encourage healthy inflammatory function",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.864,
+    "id": "o85"
+   },
+   {
+    "text": "\"peortfheadivy",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.553,
+    "id": "o86"
+   },
+   {
+    "text": "individuals",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.968,
+    "id": "o87"
+   },
+   {
+    "text": "Support",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.861,
+    "id": "o88"
+   },
+   {
+    "text": "digestion",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.647,
+    "id": "o89"
+   },
+   {
+    "text": "Promote cardiovascular health",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.999,
+    "id": "o90"
+   },
+   {
+    "text": "Support the immune",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.989,
+    "id": "o91"
+   },
+   {
+    "text": "system",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.995,
+    "id": "o92"
+   },
+   {
+    "text": "Promotes healthy skin",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.972,
+    "id": "o93"
+   },
+   {
+    "text": "KomalHerbals.com",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.924,
+    "id": "o94"
+   },
+   {
+    "text": "NATIONAL",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.744,
+    "id": "o95"
+   },
+   {
+    "text": "HEART",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o96"
+   },
+   {
+    "text": "MONTH",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.988,
+    "id": "o97"
+   },
+   {
+    "text": "FEBRUARY",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.995,
+    "id": "o98"
+   },
+   {
+    "text": "NITYAM",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o99"
+   },
+   {
+    "text": "Turmeric",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.976,
+    "id": "o100"
+   },
+   {
+    "text": "Yogic SuperFood",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.998,
+    "id": "o101"
+   },
+   {
+    "text": "Spread",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.903,
+    "id": "o102"
+   },
+   {
+    "text": "Helps",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o103"
+   },
+   {
+    "text": "Encourage healthy inflammatory function",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.908,
+    "id": "o104"
+   },
+   {
+    "text": "\"peortfheadivy",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.545,
+    "id": "o105"
+   },
+   {
+    "text": "individuals",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o106"
+   },
+   {
+    "text": "Support",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o107"
+   },
+   {
+    "text": "digestion",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.607,
+    "id": "o108"
+   },
+   {
+    "text": "Promote cardiovascular health",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o109"
+   },
+   {
+    "text": "Support the immune",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.988,
+    "id": "o110"
+   },
+   {
+    "text": "system",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.995,
+    "id": "o111"
+   },
+   {
+    "text": "Promotes healthy skin",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.971,
+    "id": "o112"
+   },
+   {
+    "text": "KomalHerbals.com",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.929,
+    "id": "o113"
+   },
+   {
+    "text": "NATIONAL",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.741,
+    "id": "o114"
+   },
+   {
+    "text": "HEART",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o115"
+   },
+   {
+    "text": "MONTH",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.988,
+    "id": "o116"
+   },
+   {
+    "text": "FEBRUARY",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.995,
+    "id": "o117"
+   },
+   {
+    "text": "NITYAM",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o118"
+   },
+   {
+    "text": "Turmeric",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.977,
+    "id": "o119"
+   },
+   {
+    "text": "Yogic SuperFood",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.998,
+    "id": "o120"
+   },
+   {
+    "text": "Spread",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.903,
+    "id": "o121"
+   },
+   {
+    "text": "Helps",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o122"
+   },
+   {
+    "text": "Encourage healthy inflammatory function",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.903,
+    "id": "o123"
+   },
+   {
+    "text": "\"peortfheadivy",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.544,
+    "id": "o124"
+   },
+   {
+    "text": "individuals",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o125"
+   },
+   {
+    "text": "Support",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.836,
+    "id": "o126"
+   },
+   {
+    "text": "Promote cardiovascular health",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o127"
+   },
+   {
+    "text": "Support the immune",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.987,
+    "id": "o128"
+   },
+   {
+    "text": "system",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.995,
+    "id": "o129"
+   },
+   {
+    "text": "Promotes healthy skin",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.971,
+    "id": "o130"
+   },
+   {
+    "text": "KomalHerbals.com",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.93,
+    "id": "o131"
+   },
+   {
+    "text": "NATIONAL",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.746,
+    "id": "o132"
+   },
+   {
+    "text": "HEART",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.999,
+    "id": "o133"
+   },
+   {
+    "text": "MONTH",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.988,
+    "id": "o134"
+   },
+   {
+    "text": "FEBRUARY",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.996,
+    "id": "o135"
+   },
+   {
+    "text": "NITYAM",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o136"
+   },
+   {
+    "text": "Turmeric",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.974,
+    "id": "o137"
+   },
+   {
+    "text": "Yogic SuperFood",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.998,
+    "id": "o138"
+   },
+   {
+    "text": "Spread",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.9,
+    "id": "o139"
+   },
+   {
+    "text": "Helps",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o140"
+   },
+   {
+    "text": "Encourage healthy inflammatory function",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.908,
+    "id": "o141"
+   },
+   {
+    "text": "\"peortfheadivy",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.54,
+    "id": "o142"
+   },
+   {
+    "text": "individuals",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.734,
+    "id": "o143"
+   },
+   {
+    "text": "Support",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o144"
+   },
+   {
+    "text": "digestion",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.641,
+    "id": "o145"
+   },
+   {
+    "text": "Promote cardiovascular health",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.999,
+    "id": "o146"
+   },
+   {
+    "text": "Support the immune",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.987,
+    "id": "o147"
+   },
+   {
+    "text": "system",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.995,
+    "id": "o148"
+   },
+   {
+    "text": "Promotes healthy skin",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.972,
+    "id": "o149"
+   },
+   {
+    "text": "KomalHerbals.com",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.93,
+    "id": "o150"
+   }
+  ]
+ }
+}

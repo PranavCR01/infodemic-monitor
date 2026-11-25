@@ -1,0 +1,122 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 84.17,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.0,
+    "text": "HealthBoss, did you know that there's an ingredients in the drug ozembic called berberine?"
+   },
+   {
+    "id": "t2",
+    "start": 5.0,
+    "end": 9.0,
+    "text": "Now, ordinarily, berberine is sourced from something called barberries."
+   },
+   {
+    "id": "t3",
+    "start": 9.0,
+    "end": 13.0,
+    "text": "Now, the media is fixating on the potential weight loss benefits of this drug."
+   },
+   {
+    "id": "t4",
+    "start": 13.0,
+    "end": 19.0,
+    "text": "And while the drug does contain berberine, it has other chemical ingredients that also contribute to the weight loss."
+   },
+   {
+    "id": "t5",
+    "start": 19.0,
+    "end": 24.03,
+    "text": "What the media should be saying is that berberine is actually nature's metformin."
+   },
+   {
+    "id": "t6",
+    "start": 24.03,
+    "end": 28.03,
+    "text": "What the media should be saying is that berberine is nature's metformin."
+   },
+   {
+    "id": "t7",
+    "start": 28.03,
+    "end": 33.15,
+    "text": "If you're not familiar, metformin is a drug for diabetics and the benefits of berberine,"
+   },
+   {
+    "id": "t8",
+    "start": 33.15,
+    "end": 38.51,
+    "text": "barberry are so astounding that even doctors are getting off the drug. See, berberine is amazing"
+   },
+   {
+    "id": "t9",
+    "start": 38.51,
+    "end": 44.91,
+    "text": "because it has a multitude of health benefits, one of which is it helps to eliminate arterial plaque."
+   },
+   {
+    "id": "t10",
+    "start": 44.91,
+    "end": 50.43,
+    "text": "Now, barberry root or barberry root extract is the most concentrated form of berberine"
+   },
+   {
+    "id": "t11",
+    "start": 50.43,
+    "end": 53.95,
+    "text": "and if you or a loved one is struggling with diabetes, you definitely want to explore it."
+   },
+   {
+    "id": "t12",
+    "start": 53.95,
+    "end": 58.67,
+    "text": "Now if you eat the actual berries all you need is half a teaspoon three times a"
+   },
+   {
+    "id": "t13",
+    "start": 58.67,
+    "end": 63.27,
+    "text": "day and you're good to go. Other people like to take the capsules or an extract"
+   },
+   {
+    "id": "t14",
+    "start": 63.27,
+    "end": 67.55,
+    "text": "you just need to follow the instructions on that package. Burberry is a time"
+   },
+   {
+    "id": "t15",
+    "start": 67.55,
+    "end": 71.35,
+    "text": "tested natural remedy that's been around for over 5,000 years so if you're"
+   },
+   {
+    "id": "t16",
+    "start": 71.35,
+    "end": 75.67,
+    "text": "looking to get off of metformin any prescription drug talk to your doctor"
+   },
+   {
+    "id": "t17",
+    "start": 75.67,
+    "end": 81.0,
+    "text": "about burberry. We have barberries we have burberry capsules and we have"
+   },
+   {
+    "id": "t18",
+    "start": 81.0,
+    "end": 85.8,
+    "text": "Barberry Root Extract. Come get some. Help us."
+   }
+  ]
+ }
+}

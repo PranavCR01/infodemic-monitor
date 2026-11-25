@@ -1,5 +1,5 @@
-video_id,source_url,platform,topic,video_level_label,notes
-v01,,tiktok,remedies,MISINFO,
-v02,,tiktok,remedies,DEBUNKING,
-v03,,reels,nutrition,NO_MISINFO,
-v04,,shorts,supplements,MISINFO,second labeller read the caption as false
+video_id,source_url,platform,topic,video_level_label,misinfo_basis,notes
+v01,,tiktok,remedies,MISINFO,contradicted,
+v02,,tiktok,remedies,DEBUNKING,,
+v03,,reels,nutrition,NO_MISINFO,,
+v04,,shorts,supplements,MISINFO,contradicted,second labeller read the caption as false

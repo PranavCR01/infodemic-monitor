@@ -52,9 +52,14 @@ def test_dataset_loads_both_levels(ds):
     v02 = ds.video("v02")
     assert v02.label == MisinfoLabel.DEBUNKING
     c = v02.claims[0]
-    assert (c.truth, c.stance, c.source) == ("CONTRADICTED", "REFUTES", "both")
+    assert (c.verdict, c.stance, c.source, c.kind) == ("CONTRADICTED", "REFUTES", "both", "research_question")
+    assert c.truth == c.verdict  # older name
     assert ds.video("v01").claims[0].relevant_pmids == ["1001", "1002"]
-    assert ds.video("v04").claims[0].truth == "INSUFFICIENT_EVIDENCE"  # CANNOT_RECOGNIZE mapped
+    assert ds.video("v01").claims[0].evidence_contradicting == ["PMID:1001", "PMID:1002"]
+    assert ds.video("v01").misinfo_basis == "contradicted"
+    assert ds.video("v04").claims[0].verdict == "INSUFFICIENT_EVIDENCE"
+    assert ds.video("v04").review_reason_kinds == ["deciding_insufficient", "nothing_judged"]
+    assert ds.video("v05").claims[0].kind == "fact_of_record"
     assert ds.video("v06").claims == []
     assert ds.inputs["v02"].fusion.visual_text == "MYTH: GARLIC STOPS COLDS"
 
@@ -90,27 +95,55 @@ def test_dataset_hash_is_recorded_and_pinned(ds, tmp_path):
 def test_hard_case_coverage_report(ds):
     cov = ds.coverage()
     assert cov["debunking"] == 1 and cov["prompt_injection"] == 1
-    assert cov["satire_sarcasm"] == 0  # missing categories are visible, not hidden
+    assert cov["satire"] == 0  # missing categories are visible, not hidden
+    assert cov["true_and_false"] == 1
 
 
 def test_label_consistency_check(ds, tmp_path):
     assert ds.label_inconsistencies() == []
     bad = tmp_path / "bad"
     bad.mkdir()
-    (bad / "videos.csv").write_text("video_id,video_level_label\nv1,NO_MISINFO\n")
+    (bad / "videos.csv").write_text("video_id,video_level_label\nv1,NO_MISINFO\nv2,MISINFO\n")
     (bad / "claims.csv").write_text(
-        "video_id,claim_id,claim_text,ground_truth_label,speaker_stance\n"
-        "v1,c1,X cures Y,MISINFO,ENDORSES\n")
+        "video_id,claim_id,claim_text,claim_verdict,speaker_stance\n"
+        "v1,c1,X cures Y,CONTRADICTED,ENDORSES\n"
+        "v2,c1,X cures Y,UNSUPPORTED,ENDORSES\n")
     assert load_dataset(bad).label_inconsistencies() == ["v1: labelled NO_MISINFO, claims imply MISINFO"]
+    (bad / "videos.csv").write_text("video_id,video_level_label,misinfo_basis\nv1,MISINFO,contradicted\n"
+                                    "v2,MISINFO,contradicted\n")
+    assert load_dataset(bad).label_inconsistencies() == ["v2: misinfo_basis contradicted, claims imply unproven"]
+
+
+_C = "video_id,claim_id,claim_text,claim_verdict,speaker_stance"
 
 
 @pytest.mark.parametrize("videos,claims,match", [
-    ("video_id,video_level_label\nv1,FAKE\n", "video_id,claim_id,claim_text,ground_truth_label,speaker_stance\n", "unknown video label"),
-    ("video_id,video_level_label\nv1,MISINFO\nv1,MISINFO\n", "video_id,claim_id,claim_text,ground_truth_label,speaker_stance\n", "duplicate video_id"),
-    ("video_id,video_level_label\nv1,MISINFO\n", "video_id,claim_id,claim_text,ground_truth_label,speaker_stance\nv2,c1,x,MISINFO,ENDORSES\n", "unknown video"),
-    ("video_id,video_level_label\nv1,MISINFO\n", "video_id,claim_id,claim_text,ground_truth_label,speaker_stance\nv1,c1,x,MISINFO,LOVES\n", "unknown stance"),
-    ("video_id,video_level_label\nv1,MISINFO\n", "video_id,claim_id,claim_text,ground_truth_label,speaker_stance\nv1,c1,x,WRONGISH,ENDORSES\n", "unknown claim truth"),
-    ("video_id,video_level_label,categories\nv1,MISINFO,fun\n", "video_id,claim_id,claim_text,ground_truth_label,speaker_stance\n", "unknown categories"),
+    ("video_id,video_level_label\nv1,FAKE\n", f"{_C}\n", "unknown video label"),
+    ("video_id,video_level_label\nv1,MISINFO\nv1,MISINFO\n", f"{_C}\n", "duplicate video_id"),
+    ("video_id,video_level_label\nv1,MISINFO\n", f"{_C}\nv2,c1,x,CONTRADICTED,ENDORSES\n", "unknown video"),
+    ("video_id,video_level_label\nv1,MISINFO\n", f"{_C}\nv1,c1,x,CONTRADICTED,LOVES\n", "unknown stance"),
+    ("video_id,video_level_label\nv1,MISINFO\n", f"{_C}\nv1,c1,x,WRONGISH,ENDORSES\n", "unknown claim_verdict"),
+    ("video_id,video_level_label\nv1,MISINFO\n", f"{_C}\nv1,c1,x,MISINFO,ENDORSES\n", "unknown claim_verdict"),
+    ("video_id,video_level_label,case_tags\nv1,MISINFO,fun\n", f"{_C}\n", "unknown categories"),
+    ("video_id,video_level_label,split\nv1,MISINFO,train\n", f"{_C}\n", "unknown split"),
+    ("video_id,video_level_label,misinfo_basis\nv1,MISINFO,\n", f"{_C}\n", "misinfo_basis is set only"),
+    ("video_id,video_level_label,misinfo_basis\nv1,NO_MISINFO,contradicted\n", f"{_C}\n", "misinfo_basis is set only"),
+    ("video_id,video_level_label,misinfo_basis\nv1,MISINFO,maybe\n", f"{_C}\n", "unknown misinfo_basis"),
+    ("video_id,video_level_label,case_tags\nv1,CANNOT_RECOGNIZE,out_of_scope;satire\n", f"{_C}\n",
+     "out_of_scope must be the only tag"),
+    ("video_id,video_level_label,case_tags\nv1,CANNOT_RECOGNIZE,out_of_scope\n",
+     f"{_C}\nv1,c1,x,SUPPORTED,ENDORSES\n", "out_of_scope video has no claims"),
+    ("video_id,video_level_label\nv1,MISINFO\n", f"{_C},claim_kind\nv1,c1,x,SUPPORTED,ENDORSES,opinion\n",
+     "unknown claim_kind"),
+    ("video_id,video_level_label\nv1,MISINFO\n", f"{_C},evidence_supporting\nv1,c1,x,UNSUPPORTED,ENDORSES,PMID:1\n",
+     "UNSUPPORTED claim cites no evidence"),
+    ("video_id,video_level_label\nv1,MISINFO\n", f"{_C},review_status\nv1,c1,x,SUPPORTED,ENDORSES,done\n",
+     "unknown review_status"),
+    ("video_id,video_level_label\nv1,MISINFO\n", f"{_C},start_seconds,end_seconds\nv1,c1,x,SUPPORTED,ENDORSES,5,2\n",
+     "before start_seconds"),
+    ("video_id,video_level_label\nv1,MISINFO\n",
+     "video_id,claim_id,claim_text,ground_truth_label,speaker_stance\nv1,c1,x,MISINFO,ENDORSES\n",
+     "old ground_truth_label column"),
 ])
 def test_dataset_validation_errors(tmp_path, videos, claims, match):
     (tmp_path / "videos.csv").write_text(videos)
@@ -119,10 +152,25 @@ def test_dataset_validation_errors(tmp_path, videos, claims, match):
         load_dataset(tmp_path)
 
 
-def test_shared_claim_level_dataset_loads():
-    """The real shared set (research/claim-level/dataset) uses the same loader; it is empty for now."""
-    ds = load_dataset(REPO / "research" / "claim-level" / "dataset")
-    assert ds.videos == []
+def test_out_of_scope_videos_are_excluded(tmp_path):
+    (tmp_path / "videos.csv").write_text(
+        "video_id,video_level_label,case_tags,split\n"
+        "v1,CANNOT_RECOGNIZE,out_of_scope,tune\nv2,NO_MISINFO,accurate,tune\nv3,CANNOT_RECOGNIZE,no_claims,test\n")
+    (tmp_path / "claims.csv").write_text(f"{_C}\nv2,c1,x,SUPPORTED,ENDORSES\n")
+    ds = load_dataset(tmp_path)
+    assert [v.video_id for v in ds.videos] == ["v2", "v3"]
+    assert [v.video_id for v in ds.excluded] == ["v1"]
+    assert [v.video_id for v in ds.split("tune")] == ["v2"]
+    assert ds.label_counts()["CANNOT_RECOGNIZE"] == 1
+    with pytest.raises(KeyError):
+        ds.video("v1")
+
+
+def test_legacy_category_names_are_mapped(tmp_path):
+    (tmp_path / "videos.csv").write_text(
+        "video_id,video_level_label,categories\nv1,CANNOT_RECOGNIZE,satire_sarcasm;mixed_claims\n")
+    (tmp_path / "claims.csv").write_text(f"{_C}\n")
+    assert load_dataset(tmp_path).videos[0].categories == ["satire", "true_and_false"]
 
 
 def test_labeller_agreement_kappa_and_disagreements(ds):

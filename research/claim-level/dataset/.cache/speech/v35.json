@@ -1,0 +1,134 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.968,
+  "duration_seconds": 59.05,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.52,
+    "text": "Did you know that Japanese doctors during World War 2 accidentally discovered that miso soup was a"
+   },
+   {
+    "id": "t2",
+    "start": 5.52,
+    "end": 11.84,
+    "text": "preventative and a way to stop radiation exposure and radiation poisoning? So the story is amazing"
+   },
+   {
+    "id": "t3",
+    "start": 11.84,
+    "end": 16.96,
+    "text": "because it's backed up by first-hand accounts and it's backed up by science. But Dr. Akazuki,"
+   },
+   {
+    "id": "t4",
+    "start": 16.96,
+    "end": 22.16,
+    "text": "if I can pronounce it correctly, was a doctor where basically they discovered after the bomb"
+   },
+   {
+    "id": "t5",
+    "start": 22.16,
+    "end": 27.84,
+    "text": "dropped that him, his staff, and pretty much all the patients in his care were the only ones who"
+   },
+   {
+    "id": "t6",
+    "start": 27.84,
+    "end": 30.96,
+    "text": "who did not suffer any form of radiation burns,"
+   },
+   {
+    "id": "t7",
+    "start": 30.96,
+    "end": 33.0,
+    "text": "radiation poisoning at all."
+   },
+   {
+    "id": "t8",
+    "start": 33.0,
+    "end": 33.88,
+    "text": "It was a mystery."
+   },
+   {
+    "id": "t9",
+    "start": 33.88,
+    "end": 36.4,
+    "text": "So fast forward into the future and studies be done,"
+   },
+   {
+    "id": "t10",
+    "start": 36.4,
+    "end": 39.12,
+    "text": "but they discovered that miso soup carried binders"
+   },
+   {
+    "id": "t11",
+    "start": 39.12,
+    "end": 42.12,
+    "text": "that would actually remove any form of radiation"
+   },
+   {
+    "id": "t12",
+    "start": 42.12,
+    "end": 44.12,
+    "text": "from the human body or the bloodstream."
+   },
+   {
+    "id": "t13",
+    "start": 44.12,
+    "end": 46.4,
+    "text": "Now, mind you, it did not work to treat it"
+   },
+   {
+    "id": "t14",
+    "start": 46.4,
+    "end": 49.16,
+    "text": "if you indeed had already been exposed to radiation."
+   },
+   {
+    "id": "t15",
+    "start": 49.16,
+    "end": 51.52,
+    "text": "However, it demonstrated the potential"
+   },
+   {
+    "id": "t16",
+    "start": 51.52,
+    "end": 54.16,
+    "text": "for miso to prevent radiation poisoning."
+   },
+   {
+    "id": "t17",
+    "start": 54.16,
+    "end": 55.92,
+    "text": "So why not have a bowl of miso soup"
+   },
+   {
+    "id": "t18",
+    "start": 55.92,
+    "end": 57.76,
+    "text": "before getting any kind of X-rays?"
+   },
+   {
+    "id": "t19",
+    "start": 57.76,
+    "end": 58.8,
+    "text": "Killing Arts, stop me."
+   },
+   {
+    "id": "t20",
+    "start": 58.8,
+    "end": 59.64,
+    "text": "Enjoy."
+   }
+  ]
+ }
+}

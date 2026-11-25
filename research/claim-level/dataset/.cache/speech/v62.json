@@ -1,0 +1,734 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 363.95,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 1.04,
+    "text": "They're lying to us."
+   },
+   {
+    "id": "t2",
+    "start": 1.04,
+    "end": 2.16,
+    "text": "They're lying about our health."
+   },
+   {
+    "id": "t3",
+    "start": 2.16,
+    "end": 3.6,
+    "text": "They're lying about our children."
+   },
+   {
+    "id": "t4",
+    "start": 3.6,
+    "end": 4.84,
+    "text": "I'm a scientist."
+   },
+   {
+    "id": "t5",
+    "start": 4.84,
+    "end": 5.76,
+    "text": "I speak for myself."
+   },
+   {
+    "id": "t6",
+    "start": 5.76,
+    "end": 7.52,
+    "text": "I don't represent any institution."
+   },
+   {
+    "id": "t7",
+    "start": 7.52,
+    "end": 9.6,
+    "text": "No funders, nothing."
+   },
+   {
+    "id": "t8",
+    "start": 9.6,
+    "end": 12.16,
+    "text": "That gives me the freedom to tell you what I believe."
+   },
+   {
+    "id": "t9",
+    "start": 12.16,
+    "end": 14.2,
+    "text": "And unfortunately today what I believe"
+   },
+   {
+    "id": "t10",
+    "start": 14.2,
+    "end": 16.4,
+    "text": "is that you can no longer trust the guidance"
+   },
+   {
+    "id": "t11",
+    "start": 16.4,
+    "end": 19.84,
+    "text": "of the American Centers for Disease Control at face value."
+   },
+   {
+    "id": "t12",
+    "start": 19.84,
+    "end": 21.32,
+    "text": "Today they updated their site to say"
+   },
+   {
+    "id": "t13",
+    "start": 21.32,
+    "end": 24.18,
+    "text": "that vaccines may cause autism."
+   },
+   {
+    "id": "t14",
+    "start": 24.18,
+    "end": 25.82,
+    "text": "They linked to some studies,"
+   },
+   {
+    "id": "t15",
+    "start": 25.82,
+    "end": 27.82,
+    "text": "which I'm gonna shred those studies in a moment"
+   },
+   {
+    "id": "t16",
+    "start": 27.82,
+    "end": 30.5,
+    "text": "to show you just how bad RFK Junior is at his job."
+   },
+   {
+    "id": "t17",
+    "start": 30.5,
+    "end": 33.74,
+    "text": "But first I should say what may feel obvious, hopefully,"
+   },
+   {
+    "id": "t18",
+    "start": 33.74,
+    "end": 36.38,
+    "text": "which is that this is one of the most studied questions"
+   },
+   {
+    "id": "t19",
+    "start": 36.38,
+    "end": 38.18,
+    "text": "in the entirety of medicine."
+   },
+   {
+    "id": "t20",
+    "start": 38.18,
+    "end": 40.94,
+    "text": "Dozens of studies conducted over decades"
+   },
+   {
+    "id": "t21",
+    "start": 40.94,
+    "end": 42.38,
+    "text": "in countries all over the world"
+   },
+   {
+    "id": "t22",
+    "start": 42.38,
+    "end": 45.06,
+    "text": "in millions of children have found no link"
+   },
+   {
+    "id": "t23",
+    "start": 45.06,
+    "end": 48.02,
+    "text": "between vaccines and autism."
+   },
+   {
+    "id": "t24",
+    "start": 48.02,
+    "end": 50.26,
+    "text": "So why then does the new CDC page say"
+   },
+   {
+    "id": "t25",
+    "start": 50.26,
+    "end": 52.18,
+    "text": "that studies supporting a link"
+   },
+   {
+    "id": "t26",
+    "start": 52.18,
+    "end": 54.94,
+    "text": "have been ignored by health authorities?"
+   },
+   {
+    "id": "t27",
+    "start": 54.94,
+    "end": 57.34,
+    "text": "Well, let's take a look at some of those studies"
+   },
+   {
+    "id": "t28",
+    "start": 57.34,
+    "end": 59.54,
+    "text": "that they cite, and we'll see."
+   },
+   {
+    "id": "t29",
+    "start": 59.54,
+    "end": 62.38,
+    "text": "The CDC says, one cross-sectional study,"
+   },
+   {
+    "id": "t30",
+    "start": 62.38,
+    "end": 64.18,
+    "text": "and this was about the hepatitis Bisha,"
+   },
+   {
+    "id": "t31",
+    "start": 64.18,
+    "end": 66.3,
+    "text": "met criteria for reliability."
+   },
+   {
+    "id": "t32",
+    "start": 66.3,
+    "end": 69.54,
+    "text": "It found a three-fold risk of parental report of autism"
+   },
+   {
+    "id": "t33",
+    "start": 69.54,
+    "end": 71.54,
+    "text": "among newborns receiving a happy vaccine"
+   },
+   {
+    "id": "t34",
+    "start": 71.54,
+    "end": 73.34,
+    "text": "in the first month of life compared to those"
+   },
+   {
+    "id": "t35",
+    "start": 73.34,
+    "end": 74.94,
+    "text": "who did not receive this vaccine"
+   },
+   {
+    "id": "t36",
+    "start": 74.94,
+    "end": 76.86,
+    "text": "or did so after the first month."
+   },
+   {
+    "id": "t37",
+    "start": 76.86,
+    "end": 79.62,
+    "text": "Okay, so very quickly, what do you think about that claim?"
+   },
+   {
+    "id": "t38",
+    "start": 79.62,
+    "end": 81.38,
+    "text": "That a study found the happy vaccine causes"
+   },
+   {
+    "id": "t39",
+    "start": 81.38,
+    "end": 85.94,
+    "text": "a three-fold risk of parental report of autism."
+   },
+   {
+    "id": "t40",
+    "start": 85.94,
+    "end": 87.62,
+    "text": "I'll tell you what's very clear to me,"
+   },
+   {
+    "id": "t41",
+    "start": 87.62,
+    "end": 90.62,
+    "text": "and in technical terms, this is called the sniff test,"
+   },
+   {
+    "id": "t42",
+    "start": 90.62,
+    "end": 92.78,
+    "text": "which is that if that claim was true,"
+   },
+   {
+    "id": "t43",
+    "start": 92.78,
+    "end": 94.94,
+    "text": "it would be incredibly easy to show a link"
+   },
+   {
+    "id": "t44",
+    "start": 94.94,
+    "end": 96.86,
+    "text": "between the vaccine and autism,"
+   },
+   {
+    "id": "t45",
+    "start": 96.86,
+    "end": 99.06,
+    "text": "and all these big studies you always hear about,"
+   },
+   {
+    "id": "t46",
+    "start": 99.06,
+    "end": 100.64,
+    "text": "which actually found no leak."
+   },
+   {
+    "id": "t47",
+    "start": 100.64,
+    "end": 103.74,
+    "text": "Like a three-fold increase in risk is massive."
+   },
+   {
+    "id": "t48",
+    "start": 103.74,
+    "end": 106.64,
+    "text": "That should be really easy to confirm."
+   },
+   {
+    "id": "t49",
+    "start": 106.64,
+    "end": 108.48,
+    "text": "It was behind a paywall, of course."
+   },
+   {
+    "id": "t50",
+    "start": 108.48,
+    "end": 110.26,
+    "text": "Maybe they hoped that no one would go through the effort"
+   },
+   {
+    "id": "t51",
+    "start": 110.26,
+    "end": 112.48,
+    "text": "to read the actual paper, but I did,"
+   },
+   {
+    "id": "t52",
+    "start": 112.48,
+    "end": 114.16,
+    "text": "and I'm gonna show you."
+   },
+   {
+    "id": "t53",
+    "start": 114.16,
+    "end": 116.68,
+    "text": "So I found where they got their three-fold higher number from."
+   },
+   {
+    "id": "t54",
+    "start": 116.68,
+    "end": 120.8,
+    "text": "Right here it says, the boys who received the first hepatitis B dose during the first"
+   },
+   {
+    "id": "t55",
+    "start": 120.8,
+    "end": 127.2,
+    "text": "month of life had a 2.82-fold greater odds for autism diagnosis, Table 2A."
+   },
+   {
+    "id": "t56",
+    "start": 127.2,
+    "end": 130.88,
+    "text": "Okay, let's go take a look at Table 2A and see those data."
+   },
+   {
+    "id": "t57",
+    "start": 130.88,
+    "end": 134.8,
+    "text": "The big reveal for making healthcare claims for the United States of America on whether"
+   },
+   {
+    "id": "t58",
+    "start": 134.8,
+    "end": 137.2,
+    "text": "or not vaccines cause autism."
+   },
+   {
+    "id": "t59",
+    "start": 137.2,
+    "end": 140.4,
+    "text": "Here we are, Table 2A results for odds for autism."
+   },
+   {
+    "id": "t60",
+    "start": 140.4,
+    "end": 144.12,
+    "text": "The first row there says, received first dose of hepatitis B vaccine during first month"
+   },
+   {
+    "id": "t61",
+    "start": 144.12,
+    "end": 149.72,
+    "text": "of life, and then the next column to the right we see children with autism number equals 33."
+   },
+   {
+    "id": "t62",
+    "start": 150.46,
+    "end": 157.18,
+    "text": "Excuse me. The study included 33 children with autism, and then 9 of those 33 children got the"
+   },
+   {
+    "id": "t63",
+    "start": 157.18,
+    "end": 163.64,
+    "text": "hepatitis B vaccine in their first month for a calculated 29%, compared to the next column at"
+   },
+   {
+    "id": "t64",
+    "start": 163.64,
+    "end": 170.12,
+    "text": "the right there which included 7,640 children without autism, and 1,258 of them got the hepatitis"
+   },
+   {
+    "id": "t65",
+    "start": 170.12,
+    "end": 174.44,
+    "text": "view vaccine within the first month of life for a calculated 17 percent."
+   },
+   {
+    "id": "t66",
+    "start": 174.44,
+    "end": 177.16,
+    "text": "Nine children with autism who got a vaccine."
+   },
+   {
+    "id": "t67",
+    "start": 177.16,
+    "end": 181.06,
+    "text": "That should be absurd enough for you to be convinced that RFK Jr. and his crew are grasping"
+   },
+   {
+    "id": "t68",
+    "start": 181.06,
+    "end": 186.26,
+    "text": "at straws, trying to scrape together any evidence they can find that vaccines cause autism,"
+   },
+   {
+    "id": "t69",
+    "start": 186.26,
+    "end": 187.98,
+    "text": "but it doesn't stop there."
+   },
+   {
+    "id": "t70",
+    "start": 187.98,
+    "end": 191.66,
+    "text": "You see, even in this paper, they didn't look at children's medical records."
+   },
+   {
+    "id": "t71",
+    "start": 191.66,
+    "end": 195.86,
+    "text": "Instead, they relied on whatever vaccination dates happened to be handwritten on whatever"
+   },
+   {
+    "id": "t72",
+    "start": 195.86,
+    "end": 197.74,
+    "text": "vaccine card the parents had at home."
+   },
+   {
+    "id": "t73",
+    "start": 197.74,
+    "end": 201.94,
+    "text": "If the month or the year was missing, the data was thrown out."
+   },
+   {
+    "id": "t74",
+    "start": 201.94,
+    "end": 207.94,
+    "text": "If both the month and year were missing, the child was counted as not vaccinated."
+   },
+   {
+    "id": "t75",
+    "start": 207.94,
+    "end": 211.54,
+    "text": "What that means is that some children who actually did get vaccinated could have been"
+   },
+   {
+    "id": "t76",
+    "start": 211.54,
+    "end": 215.26,
+    "text": "counted as not vaccinated if they had an error in their paperwork if they didn't have the"
+   },
+   {
+    "id": "t77",
+    "start": 215.26,
+    "end": 216.5,
+    "text": "month and date written down."
+   },
+   {
+    "id": "t78",
+    "start": 216.5,
+    "end": 218.74,
+    "text": "So now you start to see what's going on here."
+   },
+   {
+    "id": "t79",
+    "start": 218.74,
+    "end": 223.3,
+    "text": "That three-fold increase that the CDC page is talking about is substantiated by nine"
+   },
+   {
+    "id": "t80",
+    "start": 223.3,
+    "end": 226.98,
+    "text": "children with autism who got the hepatitis B vaccine."
+   },
+   {
+    "id": "t81",
+    "start": 226.98,
+    "end": 230.14,
+    "text": "of a study with terribly unreliable methodology."
+   },
+   {
+    "id": "t82",
+    "start": 230.14,
+    "end": 234.58,
+    "text": "And again, if there actually was a three-fold increase in risk, this would be super easily"
+   },
+   {
+    "id": "t83",
+    "start": 234.58,
+    "end": 237.16,
+    "text": "found in all of those other larger studies."
+   },
+   {
+    "id": "t84",
+    "start": 237.16,
+    "end": 239.36,
+    "text": "But it wasn't, because it wasn't a real finding."
+   },
+   {
+    "id": "t85",
+    "start": 239.36,
+    "end": 243.0,
+    "text": "This was a low-quality, very small study that was not replicated."
+   },
+   {
+    "id": "t86",
+    "start": 243.0,
+    "end": 246.52,
+    "text": "So yeah, the CDC page now says that some studies supporting a link have been ignored"
+   },
+   {
+    "id": "t87",
+    "start": 246.52,
+    "end": 250.88,
+    "text": "by health authorities, and maybe that's a little bit true, because the studies they're"
+   },
+   {
+    "id": "t88",
+    "start": 250.88,
+    "end": 254.48,
+    "text": "showing here are worth less than a fart in the summer breeze."
+   },
+   {
+    "id": "t89",
+    "start": 254.48,
+    "end": 258.2,
+    "text": "Now just for rapid contrast, researchers from Denmark use their health data registries"
+   },
+   {
+    "id": "t90",
+    "start": 258.2,
+    "end": 263.84,
+    "text": "to analyze data for more than one million Danish children born between 1997 and 2018."
+   },
+   {
+    "id": "t91",
+    "start": 263.84,
+    "end": 267.52,
+    "text": "That study examined 50 different conditions and found no link between vaccines in risk"
+   },
+   {
+    "id": "t92",
+    "start": 267.52,
+    "end": 271.48,
+    "text": "of developing autism, autoimmune diseases, asthma, or allergic conditions."
+   },
+   {
+    "id": "t93",
+    "start": 271.48,
+    "end": 274.6,
+    "text": "Hmm, let's see, which study are we going to lend more weight?"
+   },
+   {
+    "id": "t94",
+    "start": 274.6,
+    "end": 278.28,
+    "text": "The one with a couple thousand children or the one with a million children?"
+   },
+   {
+    "id": "t95",
+    "start": 278.28,
+    "end": 279.72,
+    "text": "Oh, that's right."
+   },
+   {
+    "id": "t96",
+    "start": 279.72,
+    "end": 283.44,
+    "text": "The one with nine children with autism who got vaccines, because that's the one that"
+   },
+   {
+    "id": "t97",
+    "start": 283.44,
+    "end": 286.04,
+    "text": "supports are previously held positions."
+   },
+   {
+    "id": "t98",
+    "start": 286.04,
+    "end": 287.6,
+    "text": "Let's use that for our public policy."
+   },
+   {
+    "id": "t99",
+    "start": 287.6,
+    "end": 291.4,
+    "text": "Now, if you go a little further down the CDC page, acknowledges that large studies from"
+   },
+   {
+    "id": "t100",
+    "start": 291.4,
+    "end": 295.48,
+    "text": "Denmark found no link between the MMR vaccine and autism."
+   },
+   {
+    "id": "t101",
+    "start": 295.48,
+    "end": 300.84,
+    "text": "But then it goes on to say, the Denmark population may be unreliable for the US population."
+   },
+   {
+    "id": "t102",
+    "start": 300.84,
+    "end": 304.72,
+    "text": "Children in these studies receive vaccines based on foreign vaccination schedules that"
+   },
+   {
+    "id": "t103",
+    "start": 304.72,
+    "end": 306.96,
+    "text": "differ from the schedule in the United States."
+   },
+   {
+    "id": "t104",
+    "start": 306.96,
+    "end": 309.52,
+    "text": "And here I guess they're hoping you don't really fact check that statement."
+   },
+   {
+    "id": "t105",
+    "start": 309.52,
+    "end": 313.28,
+    "text": "I looked up the Danaer schedule for the MMR vaccine, and I found that they recommend one"
+   },
+   {
+    "id": "t106",
+    "start": 313.28,
+    "end": 317.24,
+    "text": "dose at 15 months and a second dose at 4 years."
+   },
+   {
+    "id": "t107",
+    "start": 317.24,
+    "end": 320.64,
+    "text": "Then to make sure I wasn't going crazy, I looked up in the United States, the American"
+   },
+   {
+    "id": "t108",
+    "start": 320.64,
+    "end": 324.92,
+    "text": "Academy of Pediatrics recommends the first dose at 12 to 15 months and the second dose"
+   },
+   {
+    "id": "t109",
+    "start": 324.92,
+    "end": 326.4,
+    "text": "at 4 years."
+   },
+   {
+    "id": "t110",
+    "start": 326.4,
+    "end": 327.88,
+    "text": "That seems pretty similar to me."
+   },
+   {
+    "id": "t111",
+    "start": 327.88,
+    "end": 331.48,
+    "text": "It should be very clear that RFK Junior's appointees haven't the slightest clue what"
+   },
+   {
+    "id": "t112",
+    "start": 331.48,
+    "end": 332.48,
+    "text": "they're talking about."
+   },
+   {
+    "id": "t113",
+    "start": 332.48,
+    "end": 336.6,
+    "text": "They're grasping for any ridiculous shred of data they can find to support what he"
+   },
+   {
+    "id": "t114",
+    "start": 336.6,
+    "end": 339.08,
+    "text": "tells them to go find to support."
+   },
+   {
+    "id": "t115",
+    "start": 339.08,
+    "end": 340.08,
+    "text": "But this is the problem."
+   },
+   {
+    "id": "t116",
+    "start": 340.08,
+    "end": 343.44,
+    "text": "it kind of takes some time to see just why these claims are so wrong."
+   },
+   {
+    "id": "t117",
+    "start": 343.44,
+    "end": 348.24,
+    "text": "And in contrast, you can just say the hepatitis B vaccine has been shown to increase risk of autism"
+   },
+   {
+    "id": "t118",
+    "start": 348.24,
+    "end": 353.52,
+    "text": "threefold. And understandably, if that's all you hear that sound bite, parents will start to wonder,"
+   },
+   {
+    "id": "t119",
+    "start": 353.52,
+    "end": 357.44,
+    "text": "maybe that's true, maybe we should wait, we just want to do what's best for our child."
+   },
+   {
+    "id": "t120",
+    "start": 357.44,
+    "end": 359.76,
+    "text": "After all, it's on the CDC page."
+   }
+  ]
+ }
+}

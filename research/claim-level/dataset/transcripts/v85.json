@@ -1,0 +1,4734 @@
+{
+ "video_id": "v85",
+ "filename": "new_Instagram_C0rmfaiilJO.mp4",
+ "relative_path": "new_Instagram_C0rmfaiilJO.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@lecoinecolo",
+ "extracted_at": "2026-11-23T08:45:54",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "fr",
+  "language_probability": 0.99,
+  "duration_seconds": 90.03,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.1,
+    "text": "– C'est vrai qu'Emmanuel Macron vous dit en privé que vous avez raison dans votre combat contre les éoliennes ?"
+   },
+   {
+    "id": "t2",
+    "start": 5.1,
+    "end": 11.1,
+    "text": "– Écoutez, oui, je me souviens d'une chose, un jour on a survolé, on allait pour une..."
+   },
+   {
+    "id": "t3",
+    "start": 11.1,
+    "end": 17.1,
+    "text": "J'étais l'ambassadeur de la région Centre, on survole la France, et on va juste se poser près d'emboise."
+   },
+   {
+    "id": "t4",
+    "start": 17.1,
+    "end": 23.1,
+    "text": "Et je lui montre ces éoliennes, j'ai regardé, et il me dit « non, il y en a trop, c'est vrai, c'est... »"
+   },
+   {
+    "id": "t5",
+    "start": 23.1,
+    "end": 27.1,
+    "text": "Et je lui explique ma conception des éoliennes, pourquoi je suis contre les éoliennes ?"
+   },
+   {
+    "id": "t6",
+    "start": 27.1,
+    "end": 33.94,
+    "text": "c'est des tonnes de béton qu'on met dans le sol. Je crois que moi qui suis plutôt écolo, je suis contre"
+   },
+   {
+    "id": "t7",
+    "start": 33.94,
+    "end": 40.36,
+    "text": "l'artificialisation des sols et plutôt contre la bétonisation des sols. Ensuite, j'apprends que pour faire"
+   },
+   {
+    "id": "t8",
+    "start": 40.36,
+    "end": 44.68,
+    "text": "les pales, c'est des terres rares de Chine. Bon, c'est pas très l'indépendance énergétique de la"
+   },
+   {
+    "id": "t9",
+    "start": 44.68,
+    "end": 51.36,
+    "text": "France. Ensuite, on demande pas la vie aux gens qui sont en bas. Ça tue les bêtes. Maintenant,"
+   },
+   {
+    "id": "t10",
+    "start": 51.36,
+    "end": 55.64,
+    "text": "il y a le syndroméolien, on s'est reconnu, c'est une maladie. Les gens ne peuvent plus dormir,"
+   },
+   {
+    "id": "t11",
+    "start": 55.64,
+    "end": 59.96,
+    "text": "les gens, les gens sont malades, les maisons qui sont aux alentours perdent 30% de leur valeur,"
+   },
+   {
+    "id": "t12",
+    "start": 59.96,
+    "end": 67.28,
+    "text": "je lui explique tout ça et donc il me dit oui tu as raison, son épouse me dit oui tu as raison,"
+   },
+   {
+    "id": "t13",
+    "start": 67.28,
+    "end": 72.96,
+    "text": "bah toi tu es notre don quichote, alors autant j'aimais les moulins avant, autant les éoliennes"
+   },
+   {
+    "id": "t14",
+    "start": 72.96,
+    "end": 77.12,
+    "text": "j'aime moins, mais je me bats quand même, quand vous vivez à la campagne comme moi ici,"
+   },
+   {
+    "id": "t15",
+    "start": 77.12,
+    "end": 81.8,
+    "text": "les gens vous parlent et ils vous disent mais ils se croient où à Paris, les gens qui disent"
+   },
+   {
+    "id": "t16",
+    "start": 81.8,
+    "end": 86.8,
+    "text": "parce qu'on ne met pas d'éoliennes à Paris, on les met à la campagne chez nous, chez les bouseux."
+   },
+   {
+    "id": "t17",
+    "start": 86.8,
+    "end": 89.8,
+    "text": "On dit ça sera bien chez eux, ils n'ont rien, alors on nous met des éoliennes."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 46,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Les bobos parisiens",
+    "confidence": 0.837
+   },
+   {
+    "time": 0.0,
+    "text": "nous inondent",
+    "confidence": 0.985
+   },
+   {
+    "time": 0.0,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.803
+   },
+   {
+    "time": 0.0,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.81
+   },
+   {
+    "time": 0.0,
+    "text": "veux pas ! >",
+    "confidence": 0.706
+   },
+   {
+    "time": 0.0,
+    "text": "DESCAUASUROPH",
+    "confidence": 0.547
+   },
+   {
+    "time": 0.0,
+    "text": "CASERTARI",
+    "confidence": 0.689
+   },
+   {
+    "time": 0.0,
+    "text": "SONDES",
+    "confidence": 0.98
+   },
+   {
+    "time": 1.99,
+    "text": "Les bobos parisiens",
+    "confidence": 0.749
+   },
+   {
+    "time": 1.99,
+    "text": "nous inondent",
+    "confidence": 0.986
+   },
+   {
+    "time": 1.99,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.819
+   },
+   {
+    "time": 1.99,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.979
+   },
+   {
+    "time": 1.99,
+    "text": "veux pas ! >",
+    "confidence": 0.956
+   },
+   {
+    "time": 1.99,
+    "text": "DESCAUASUROPH",
+    "confidence": 0.537
+   },
+   {
+    "time": 1.99,
+    "text": "CASERTARIN",
+    "confidence": 0.603
+   },
+   {
+    "time": 1.99,
+    "text": "SONTDES",
+    "confidence": 0.596
+   },
+   {
+    "time": 3.98,
+    "text": "Les bobos parisiens",
+    "confidence": 0.767
+   },
+   {
+    "time": 3.98,
+    "text": "nous inondent",
+    "confidence": 0.987
+   },
+   {
+    "time": 3.98,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.813
+   },
+   {
+    "time": 3.98,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.855
+   },
+   {
+    "time": 3.98,
+    "text": "veux pas ! >",
+    "confidence": 0.622
+   },
+   {
+    "time": 3.98,
+    "text": "DESCAASUROPHE",
+    "confidence": 0.689
+   },
+   {
+    "time": 3.98,
+    "text": "SONTDES",
+    "confidence": 0.666
+   },
+   {
+    "time": 5.97,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 5.97,
+    "text": "nous inondent",
+    "confidence": 0.94
+   },
+   {
+    "time": 5.97,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.829
+   },
+   {
+    "time": 5.97,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.979
+   },
+   {
+    "time": 5.97,
+    "text": "veux pas ! >",
+    "confidence": 0.983
+   },
+   {
+    "time": 5.97,
+    "text": "Ecoloelcu",
+    "confidence": 0.582
+   },
+   {
+    "time": 5.97,
+    "text": "CASERTARI",
+    "confidence": 0.602
+   },
+   {
+    "time": 5.97,
+    "text": "CEGOUERNEMEENt",
+    "confidence": 0.531
+   },
+   {
+    "time": 5.97,
+    "text": "SONDES",
+    "confidence": 0.977
+   },
+   {
+    "time": 7.95,
+    "text": "Les bobos parisiens",
+    "confidence": 0.715
+   },
+   {
+    "time": 7.95,
+    "text": "nous inondent",
+    "confidence": 0.933
+   },
+   {
+    "time": 7.95,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.831
+   },
+   {
+    "time": 7.95,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.61
+   },
+   {
+    "time": 7.95,
+    "text": "veux pas ! >",
+    "confidence": 0.982
+   },
+   {
+    "time": 7.95,
+    "text": "Ecoloelcu",
+    "confidence": 0.567
+   },
+   {
+    "time": 7.95,
+    "text": "CASERTARI",
+    "confidence": 0.583
+   },
+   {
+    "time": 7.95,
+    "text": "CEGOUERNEMEENt",
+    "confidence": 0.54
+   },
+   {
+    "time": 7.95,
+    "text": "SONDES",
+    "confidence": 0.976
+   },
+   {
+    "time": 9.94,
+    "text": "Les bobos parisiens",
+    "confidence": 0.724
+   },
+   {
+    "time": 9.94,
+    "text": "nous inondent",
+    "confidence": 0.897
+   },
+   {
+    "time": 9.94,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.831
+   },
+   {
+    "time": 9.94,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.784
+   },
+   {
+    "time": 9.94,
+    "text": "veux pas ! >",
+    "confidence": 0.98
+   },
+   {
+    "time": 9.94,
+    "text": "Ecoloelcu",
+    "confidence": 0.57
+   },
+   {
+    "time": 9.94,
+    "text": "CASERTARE",
+    "confidence": 0.674
+   },
+   {
+    "time": 9.94,
+    "text": "CEGOUERNEMEENt",
+    "confidence": 0.541
+   },
+   {
+    "time": 9.94,
+    "text": "SONTDES",
+    "confidence": 0.684
+   },
+   {
+    "time": 11.93,
+    "text": "Les bobos parisiens",
+    "confidence": 0.986
+   },
+   {
+    "time": 11.93,
+    "text": "nous inondent",
+    "confidence": 0.967
+   },
+   {
+    "time": 11.93,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.617
+   },
+   {
+    "time": 11.93,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.828
+   },
+   {
+    "time": 11.93,
+    "text": "veux pas ! >",
+    "confidence": 0.981
+   },
+   {
+    "time": 11.93,
+    "text": "Ecoloelcu",
+    "confidence": 0.597
+   },
+   {
+    "time": 11.93,
+    "text": "CASERTARI",
+    "confidence": 0.576
+   },
+   {
+    "time": 11.93,
+    "text": "SONDES",
+    "confidence": 0.898
+   },
+   {
+    "time": 13.92,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 13.92,
+    "text": "nous inondent",
+    "confidence": 0.966
+   },
+   {
+    "time": 13.92,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.618
+   },
+   {
+    "time": 13.92,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.793
+   },
+   {
+    "time": 13.92,
+    "text": "veux pas ! >",
+    "confidence": 0.8
+   },
+   {
+    "time": 13.92,
+    "text": "DESCAASUROPHE",
+    "confidence": 0.736
+   },
+   {
+    "time": 13.92,
+    "text": "CASERTARI",
+    "confidence": 0.599
+   },
+   {
+    "time": 13.92,
+    "text": "CEGOUERNEMEENt",
+    "confidence": 0.593
+   },
+   {
+    "time": 13.92,
+    "text": "SONDES",
+    "confidence": 0.89
+   },
+   {
+    "time": 15.91,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 15.91,
+    "text": "nous inondent",
+    "confidence": 0.971
+   },
+   {
+    "time": 15.91,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.62
+   },
+   {
+    "time": 15.91,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.98
+   },
+   {
+    "time": 15.91,
+    "text": "veux pas ! >",
+    "confidence": 0.979
+   },
+   {
+    "time": 15.91,
+    "text": "Ecoloelcu",
+    "confidence": 0.586
+   },
+   {
+    "time": 15.91,
+    "text": "CASERTARI",
+    "confidence": 0.566
+   },
+   {
+    "time": 15.91,
+    "text": "SONTDES",
+    "confidence": 0.658
+   },
+   {
+    "time": 17.9,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 17.9,
+    "text": "nous inondent",
+    "confidence": 0.97
+   },
+   {
+    "time": 17.9,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.622
+   },
+   {
+    "time": 17.9,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.979
+   },
+   {
+    "time": 17.9,
+    "text": "veux pas ! >",
+    "confidence": 0.979
+   },
+   {
+    "time": 17.9,
+    "text": "Ecoloelcu",
+    "confidence": 0.588
+   },
+   {
+    "time": 17.9,
+    "text": "CASERTARI",
+    "confidence": 0.567
+   },
+   {
+    "time": 17.9,
+    "text": "SONTDES",
+    "confidence": 0.656
+   },
+   {
+    "time": 19.89,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 19.89,
+    "text": "nous inondent",
+    "confidence": 0.968
+   },
+   {
+    "time": 19.89,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.626
+   },
+   {
+    "time": 19.89,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.979
+   },
+   {
+    "time": 19.89,
+    "text": "veux pas ! >",
+    "confidence": 0.978
+   },
+   {
+    "time": 19.89,
+    "text": "Ecoloelcu",
+    "confidence": 0.588
+   },
+   {
+    "time": 19.89,
+    "text": "CASERTARI",
+    "confidence": 0.568
+   },
+   {
+    "time": 19.89,
+    "text": "CEGOUERNEMEENt",
+    "confidence": 0.548
+   },
+   {
+    "time": 19.89,
+    "text": "SONTDES",
+    "confidence": 0.656
+   },
+   {
+    "time": 21.88,
+    "text": "Les bobos parisiens",
+    "confidence": 0.806
+   },
+   {
+    "time": 21.88,
+    "text": "nous inondent",
+    "confidence": 0.717
+   },
+   {
+    "time": 21.88,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.801
+   },
+   {
+    "time": 21.88,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.692
+   },
+   {
+    "time": 21.88,
+    "text": "veux pas ! >",
+    "confidence": 0.979
+   },
+   {
+    "time": 21.88,
+    "text": "DESCAASUROPH",
+    "confidence": 0.744
+   },
+   {
+    "time": 21.88,
+    "text": "Ecoloclu",
+    "confidence": 0.609
+   },
+   {
+    "time": 21.88,
+    "text": "CASERTARI",
+    "confidence": 0.626
+   },
+   {
+    "time": 23.86,
+    "text": "Les bobos parisiens",
+    "confidence": 0.805
+   },
+   {
+    "time": 23.86,
+    "text": "nous inondent",
+    "confidence": 0.736
+   },
+   {
+    "time": 23.86,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.802
+   },
+   {
+    "time": 23.86,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.692
+   },
+   {
+    "time": 23.86,
+    "text": "veux pas ! >",
+    "confidence": 0.979
+   },
+   {
+    "time": 23.86,
+    "text": "DESCAASUROPH",
+    "confidence": 0.744
+   },
+   {
+    "time": 23.86,
+    "text": "Ecoloelcu",
+    "confidence": 0.582
+   },
+   {
+    "time": 23.86,
+    "text": "CASERTARI",
+    "confidence": 0.613
+   },
+   {
+    "time": 25.85,
+    "text": "Les bobos parisiens",
+    "confidence": 0.928
+   },
+   {
+    "time": 25.85,
+    "text": "nous inondent",
+    "confidence": 0.853
+   },
+   {
+    "time": 25.85,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.831
+   },
+   {
+    "time": 25.85,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.831
+   },
+   {
+    "time": 25.85,
+    "text": "veux pas ! >",
+    "confidence": 0.981
+   },
+   {
+    "time": 25.85,
+    "text": "Ecoloclu",
+    "confidence": 0.61
+   },
+   {
+    "time": 25.85,
+    "text": "CASERTARIN",
+    "confidence": 0.512
+   },
+   {
+    "time": 25.85,
+    "text": "SONDES",
+    "confidence": 0.987
+   },
+   {
+    "time": 27.84,
+    "text": "Les bobos parisiens",
+    "confidence": 0.902
+   },
+   {
+    "time": 27.84,
+    "text": "nous inondent",
+    "confidence": 0.848
+   },
+   {
+    "time": 27.84,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.831
+   },
+   {
+    "time": 27.84,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.83
+   },
+   {
+    "time": 27.84,
+    "text": "veux pas ! >",
+    "confidence": 0.981
+   },
+   {
+    "time": 27.84,
+    "text": "Ecoloelcu",
+    "confidence": 0.577
+   },
+   {
+    "time": 27.84,
+    "text": "SONDES",
+    "confidence": 0.987
+   },
+   {
+    "time": 29.83,
+    "text": "Les bobos parisiens",
+    "confidence": 0.905
+   },
+   {
+    "time": 29.83,
+    "text": "nous inondent",
+    "confidence": 0.878
+   },
+   {
+    "time": 29.83,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.832
+   },
+   {
+    "time": 29.83,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.827
+   },
+   {
+    "time": 29.83,
+    "text": "veux pas ! >",
+    "confidence": 0.981
+   },
+   {
+    "time": 29.83,
+    "text": "Ecoloelcu",
+    "confidence": 0.58
+   },
+   {
+    "time": 29.83,
+    "text": "CASERTARIN",
+    "confidence": 0.502
+   },
+   {
+    "time": 29.83,
+    "text": "CEGOUERNEMENt",
+    "confidence": 0.506
+   },
+   {
+    "time": 29.83,
+    "text": "SONDES",
+    "confidence": 0.987
+   },
+   {
+    "time": 31.82,
+    "text": "Les bobos parisiens",
+    "confidence": 0.72
+   },
+   {
+    "time": 31.82,
+    "text": "nous inondent",
+    "confidence": 0.954
+   },
+   {
+    "time": 31.82,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.801
+   },
+   {
+    "time": 31.82,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.799
+   },
+   {
+    "time": 31.82,
+    "text": "veux pas ! >",
+    "confidence": 0.701
+   },
+   {
+    "time": 31.82,
+    "text": "DESCAASUROPH",
+    "confidence": 0.678
+   },
+   {
+    "time": 31.82,
+    "text": "Ecoloelcu",
+    "confidence": 0.614
+   },
+   {
+    "time": 31.82,
+    "text": "CASERTARI",
+    "confidence": 0.638
+   },
+   {
+    "time": 31.82,
+    "text": "SONDES",
+    "confidence": 0.985
+   },
+   {
+    "time": 33.81,
+    "text": "Les bobos parisiens",
+    "confidence": 0.715
+   },
+   {
+    "time": 33.81,
+    "text": "nous inondent",
+    "confidence": 0.954
+   },
+   {
+    "time": 33.81,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.803
+   },
+   {
+    "time": 33.81,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.838
+   },
+   {
+    "time": 33.81,
+    "text": "veux pas ! >",
+    "confidence": 0.696
+   },
+   {
+    "time": 33.81,
+    "text": "DESCAASUROPH",
+    "confidence": 0.678
+   },
+   {
+    "time": 33.81,
+    "text": "Ecoloelcu",
+    "confidence": 0.614
+   },
+   {
+    "time": 33.81,
+    "text": "SONDES",
+    "confidence": 0.986
+   },
+   {
+    "time": 35.8,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 35.8,
+    "text": "nous inondent",
+    "confidence": 0.899
+   },
+   {
+    "time": 35.8,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.779
+   },
+   {
+    "time": 35.8,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.79
+   },
+   {
+    "time": 35.8,
+    "text": "veux pas ! >",
+    "confidence": 0.62
+   },
+   {
+    "time": 35.8,
+    "text": "Ecoloelcu",
+    "confidence": 0.616
+   },
+   {
+    "time": 35.8,
+    "text": "CASERTARI",
+    "confidence": 0.635
+   },
+   {
+    "time": 35.8,
+    "text": "CEGOUERNEMENt",
+    "confidence": 0.527
+   },
+   {
+    "time": 35.8,
+    "text": "SONDES",
+    "confidence": 0.987
+   },
+   {
+    "time": 37.78,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 37.78,
+    "text": "nous inondent",
+    "confidence": 0.916
+   },
+   {
+    "time": 37.78,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.773
+   },
+   {
+    "time": 37.78,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.788
+   },
+   {
+    "time": 37.78,
+    "text": "veux pas ! >",
+    "confidence": 0.624
+   },
+   {
+    "time": 37.78,
+    "text": "Ecoloelcu",
+    "confidence": 0.615
+   },
+   {
+    "time": 37.78,
+    "text": "CASERTARI",
+    "confidence": 0.635
+   },
+   {
+    "time": 37.78,
+    "text": "CEGOUERNEMENt",
+    "confidence": 0.536
+   },
+   {
+    "time": 37.78,
+    "text": "SONDES",
+    "confidence": 0.987
+   },
+   {
+    "time": 39.77,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 39.77,
+    "text": "nous inondent",
+    "confidence": 0.919
+   },
+   {
+    "time": 39.77,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.774
+   },
+   {
+    "time": 39.77,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.787
+   },
+   {
+    "time": 39.77,
+    "text": "veux pas ! >",
+    "confidence": 0.624
+   },
+   {
+    "time": 39.77,
+    "text": "Ecoloelcu",
+    "confidence": 0.612
+   },
+   {
+    "time": 39.77,
+    "text": "CASERTARI",
+    "confidence": 0.642
+   },
+   {
+    "time": 39.77,
+    "text": "CEGOUERNEMENt",
+    "confidence": 0.525
+   },
+   {
+    "time": 39.77,
+    "text": "SONTDES",
+    "confidence": 0.641
+   },
+   {
+    "time": 41.76,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 41.76,
+    "text": "nous inondent",
+    "confidence": 0.669
+   },
+   {
+    "time": 41.76,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.784
+   },
+   {
+    "time": 41.76,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.888
+   },
+   {
+    "time": 41.76,
+    "text": "veux pas ! >",
+    "confidence": 0.605
+   },
+   {
+    "time": 41.76,
+    "text": "LESEOLENNESSON",
+    "confidence": 0.548
+   },
+   {
+    "time": 41.76,
+    "text": "DESCAASUROPH",
+    "confidence": 0.648
+   },
+   {
+    "time": 41.76,
+    "text": "Ecoloelcu",
+    "confidence": 0.623
+   },
+   {
+    "time": 41.76,
+    "text": "CASERTARIN",
+    "confidence": 0.542
+   },
+   {
+    "time": 41.76,
+    "text": "SONDES",
+    "confidence": 0.982
+   },
+   {
+    "time": 43.75,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 43.75,
+    "text": "nous inondent",
+    "confidence": 0.836
+   },
+   {
+    "time": 43.75,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.78
+   },
+   {
+    "time": 43.75,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.693
+   },
+   {
+    "time": 43.75,
+    "text": "veux pas ! >",
+    "confidence": 0.614
+   },
+   {
+    "time": 43.75,
+    "text": "LESEOLENNESSON",
+    "confidence": 0.543
+   },
+   {
+    "time": 43.75,
+    "text": "DESCAASUROPH",
+    "confidence": 0.639
+   },
+   {
+    "time": 43.75,
+    "text": "Ecoloclu",
+    "confidence": 0.522
+   },
+   {
+    "time": 43.75,
+    "text": "CASERTARIN",
+    "confidence": 0.541
+   },
+   {
+    "time": 43.75,
+    "text": "SONDES",
+    "confidence": 0.982
+   },
+   {
+    "time": 45.74,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 45.74,
+    "text": "nous inondent",
+    "confidence": 0.92
+   },
+   {
+    "time": 45.74,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.811
+   },
+   {
+    "time": 45.74,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.629
+   },
+   {
+    "time": 45.74,
+    "text": "veux pas ! >",
+    "confidence": 0.964
+   },
+   {
+    "time": 45.74,
+    "text": "Ecoloelqu",
+    "confidence": 0.558
+   },
+   {
+    "time": 45.74,
+    "text": "CASERTARIN",
+    "confidence": 0.57
+   },
+   {
+    "time": 45.74,
+    "text": "SONDES",
+    "confidence": 0.986
+   },
+   {
+    "time": 47.73,
+    "text": "Les bobos parisiens",
+    "confidence": 0.735
+   },
+   {
+    "time": 47.73,
+    "text": "nous inondent",
+    "confidence": 0.916
+   },
+   {
+    "time": 47.73,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.812
+   },
+   {
+    "time": 47.73,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.624
+   },
+   {
+    "time": 47.73,
+    "text": "veux pas ! >",
+    "confidence": 0.948
+   },
+   {
+    "time": 47.73,
+    "text": "Ecoloelcu",
+    "confidence": 0.622
+   },
+   {
+    "time": 47.73,
+    "text": "CASERTARIN",
+    "confidence": 0.582
+   },
+   {
+    "time": 47.73,
+    "text": "SONDES",
+    "confidence": 0.986
+   },
+   {
+    "time": 49.72,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 49.72,
+    "text": "nous inondent",
+    "confidence": 0.916
+   },
+   {
+    "time": 49.72,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.813
+   },
+   {
+    "time": 49.72,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.623
+   },
+   {
+    "time": 49.72,
+    "text": "veux pas ! >",
+    "confidence": 0.908
+   },
+   {
+    "time": 49.72,
+    "text": "LESEOLENNESSON",
+    "confidence": 0.532
+   },
+   {
+    "time": 49.72,
+    "text": "Ecoloelcu",
+    "confidence": 0.622
+   },
+   {
+    "time": 49.72,
+    "text": "CASERTARIN",
+    "confidence": 0.58
+   },
+   {
+    "time": 49.72,
+    "text": "SONDES",
+    "confidence": 0.986
+   },
+   {
+    "time": 51.71,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 51.71,
+    "text": "nous inondent",
+    "confidence": 0.723
+   },
+   {
+    "time": 51.71,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.801
+   },
+   {
+    "time": 51.71,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.883
+   },
+   {
+    "time": 51.71,
+    "text": "veux pas ! >",
+    "confidence": 0.9
+   },
+   {
+    "time": 51.71,
+    "text": "Ecozoclu",
+    "confidence": 0.514
+   },
+   {
+    "time": 51.71,
+    "text": "CASERTARIN",
+    "confidence": 0.575
+   },
+   {
+    "time": 51.71,
+    "text": "SONDES",
+    "confidence": 0.984
+   },
+   {
+    "time": 53.69,
+    "text": "Les bobos parisiens",
+    "confidence": 0.968
+   },
+   {
+    "time": 53.69,
+    "text": "nous inondent",
+    "confidence": 0.734
+   },
+   {
+    "time": 53.69,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.803
+   },
+   {
+    "time": 53.69,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.894
+   },
+   {
+    "time": 53.69,
+    "text": "veux pas ! >",
+    "confidence": 0.896
+   },
+   {
+    "time": 53.69,
+    "text": "Ecozoclu",
+    "confidence": 0.514
+   },
+   {
+    "time": 53.69,
+    "text": "CASERTARIN",
+    "confidence": 0.574
+   },
+   {
+    "time": 53.69,
+    "text": "SONDES",
+    "confidence": 0.984
+   },
+   {
+    "time": 55.68,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 55.68,
+    "text": "nous inondent",
+    "confidence": 0.587
+   },
+   {
+    "time": 55.68,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.823
+   },
+   {
+    "time": 55.68,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.747
+   },
+   {
+    "time": 55.68,
+    "text": "veux pas ! >",
+    "confidence": 0.646
+   },
+   {
+    "time": 55.68,
+    "text": "DESCAUASUROPH",
+    "confidence": 0.525
+   },
+   {
+    "time": 55.68,
+    "text": "Ecoloelcu",
+    "confidence": 0.579
+   },
+   {
+    "time": 55.68,
+    "text": "CASERTARI",
+    "confidence": 0.648
+   },
+   {
+    "time": 55.68,
+    "text": "SONDES",
+    "confidence": 0.984
+   },
+   {
+    "time": 57.67,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 57.67,
+    "text": "nous inondent",
+    "confidence": 0.616
+   },
+   {
+    "time": 57.67,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.823
+   },
+   {
+    "time": 57.67,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.747
+   },
+   {
+    "time": 57.67,
+    "text": "veux pas ! >",
+    "confidence": 0.971
+   },
+   {
+    "time": 57.67,
+    "text": "DESCAUASUROPH",
+    "confidence": 0.525
+   },
+   {
+    "time": 57.67,
+    "text": "Ecoloelcu",
+    "confidence": 0.579
+   },
+   {
+    "time": 57.67,
+    "text": "SONDES",
+    "confidence": 0.984
+   },
+   {
+    "time": 59.66,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 59.66,
+    "text": "nous inondent",
+    "confidence": 0.582
+   },
+   {
+    "time": 59.66,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.824
+   },
+   {
+    "time": 59.66,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.752
+   },
+   {
+    "time": 59.66,
+    "text": "veux pas ! >",
+    "confidence": 0.971
+   },
+   {
+    "time": 59.66,
+    "text": "DESCAUASUROPH",
+    "confidence": 0.523
+   },
+   {
+    "time": 59.66,
+    "text": "SONDES",
+    "confidence": 0.984
+   },
+   {
+    "time": 61.65,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 61.65,
+    "text": "nous inondent",
+    "confidence": 0.972
+   },
+   {
+    "time": 61.65,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.796
+   },
+   {
+    "time": 61.65,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.88
+   },
+   {
+    "time": 61.65,
+    "text": "veux pas ! >",
+    "confidence": 0.631
+   },
+   {
+    "time": 61.65,
+    "text": "Ecoloelcu",
+    "confidence": 0.607
+   },
+   {
+    "time": 61.65,
+    "text": "SONDES",
+    "confidence": 0.802
+   },
+   {
+    "time": 63.64,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 63.64,
+    "text": "nous inondent",
+    "confidence": 0.972
+   },
+   {
+    "time": 63.64,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.794
+   },
+   {
+    "time": 63.64,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.88
+   },
+   {
+    "time": 63.64,
+    "text": "veux pas ! >",
+    "confidence": 0.981
+   },
+   {
+    "time": 63.64,
+    "text": "Ecoloelcu",
+    "confidence": 0.608
+   },
+   {
+    "time": 63.64,
+    "text": "SONDES",
+    "confidence": 0.633
+   },
+   {
+    "time": 65.63,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 65.63,
+    "text": "nous inondent",
+    "confidence": 0.976
+   },
+   {
+    "time": 65.63,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.801
+   },
+   {
+    "time": 65.63,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.83
+   },
+   {
+    "time": 65.63,
+    "text": "veux pas ! >",
+    "confidence": 0.887
+   },
+   {
+    "time": 65.63,
+    "text": "CASERTARI",
+    "confidence": 0.598
+   },
+   {
+    "time": 65.63,
+    "text": "CEGOUERNEMEENt",
+    "confidence": 0.511
+   },
+   {
+    "time": 65.63,
+    "text": "SONTDES",
+    "confidence": 0.503
+   },
+   {
+    "time": 67.61,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 67.61,
+    "text": "nous inondent",
+    "confidence": 0.977
+   },
+   {
+    "time": 67.61,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.802
+   },
+   {
+    "time": 67.61,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.757
+   },
+   {
+    "time": 67.61,
+    "text": "veux pas ! >",
+    "confidence": 0.887
+   },
+   {
+    "time": 67.61,
+    "text": "LESEOLENNESSON",
+    "confidence": 0.516
+   },
+   {
+    "time": 67.61,
+    "text": "CASERTARI",
+    "confidence": 0.598
+   },
+   {
+    "time": 67.61,
+    "text": "CEGOUERNEMEENt",
+    "confidence": 0.514
+   },
+   {
+    "time": 67.61,
+    "text": "SONTDES",
+    "confidence": 0.502
+   },
+   {
+    "time": 69.6,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 69.6,
+    "text": "nous inondent",
+    "confidence": 0.978
+   },
+   {
+    "time": 69.6,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.802
+   },
+   {
+    "time": 69.6,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.76
+   },
+   {
+    "time": 69.6,
+    "text": "veux pas ! >",
+    "confidence": 0.886
+   },
+   {
+    "time": 69.6,
+    "text": "LESEOLENNESSON",
+    "confidence": 0.519
+   },
+   {
+    "time": 69.6,
+    "text": "CASERTARI",
+    "confidence": 0.598
+   },
+   {
+    "time": 69.6,
+    "text": "CEGOUERNEMEENt",
+    "confidence": 0.513
+   },
+   {
+    "time": 71.59,
+    "text": "Les bobos parisiens",
+    "confidence": 0.855
+   },
+   {
+    "time": 71.59,
+    "text": "nous inondent",
+    "confidence": 0.738
+   },
+   {
+    "time": 71.59,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.819
+   },
+   {
+    "time": 71.59,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.613
+   },
+   {
+    "time": 71.59,
+    "text": "veux pas ! >",
+    "confidence": 0.882
+   },
+   {
+    "time": 71.59,
+    "text": "Ecoloelcu",
+    "confidence": 0.585
+   },
+   {
+    "time": 71.59,
+    "text": "CASERTARI",
+    "confidence": 0.639
+   },
+   {
+    "time": 71.59,
+    "text": "SONDES",
+    "confidence": 0.986
+   },
+   {
+    "time": 73.58,
+    "text": "Les bobos parisiens",
+    "confidence": 0.846
+   },
+   {
+    "time": 73.58,
+    "text": "nous inondent",
+    "confidence": 0.89
+   },
+   {
+    "time": 73.58,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.818
+   },
+   {
+    "time": 73.58,
+    "text": "nous les ploucs,",
+    "confidence": 0.933
+   },
+   {
+    "time": 73.58,
+    "text": "n'en",
+    "confidence": 1.0
+   },
+   {
+    "time": 73.58,
+    "text": "on",
+    "confidence": 1.0
+   },
+   {
+    "time": 73.58,
+    "text": "veux pas ! >",
+    "confidence": 0.879
+   },
+   {
+    "time": 73.58,
+    "text": "DESCAASUROPH",
+    "confidence": 0.727
+   },
+   {
+    "time": 73.58,
+    "text": "Ecoloelcu",
+    "confidence": 0.585
+   },
+   {
+    "time": 73.58,
+    "text": "CASERTARI",
+    "confidence": 0.624
+   },
+   {
+    "time": 73.58,
+    "text": "CZCOUERNEMENT",
+    "confidence": 0.516
+   },
+   {
+    "time": 73.58,
+    "text": "SONDES",
+    "confidence": 0.986
+   },
+   {
+    "time": 75.57,
+    "text": "Les bobos parisiens",
+    "confidence": 0.995
+   },
+   {
+    "time": 75.57,
+    "text": "nous inondent",
+    "confidence": 0.979
+   },
+   {
+    "time": 75.57,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.618
+   },
+   {
+    "time": 75.57,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.775
+   },
+   {
+    "time": 75.57,
+    "text": "veux pas ! >",
+    "confidence": 0.866
+   },
+   {
+    "time": 75.57,
+    "text": "Ecoloelcu",
+    "confidence": 0.585
+   },
+   {
+    "time": 75.57,
+    "text": "SONDES",
+    "confidence": 0.987
+   },
+   {
+    "time": 77.56,
+    "text": "Les bobos parisiens",
+    "confidence": 0.995
+   },
+   {
+    "time": 77.56,
+    "text": "nous inondent",
+    "confidence": 0.978
+   },
+   {
+    "time": 77.56,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.62
+   },
+   {
+    "time": 77.56,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.781
+   },
+   {
+    "time": 77.56,
+    "text": "veux pas ! >",
+    "confidence": 0.87
+   },
+   {
+    "time": 77.56,
+    "text": "Ecoloelcu",
+    "confidence": 0.587
+   },
+   {
+    "time": 77.56,
+    "text": "CASERTARI",
+    "confidence": 0.657
+   },
+   {
+    "time": 77.56,
+    "text": "SONDES",
+    "confidence": 0.988
+   },
+   {
+    "time": 79.55,
+    "text": "Les bobos parisiens",
+    "confidence": 0.995
+   },
+   {
+    "time": 79.55,
+    "text": "nous inondent",
+    "confidence": 0.978
+   },
+   {
+    "time": 79.55,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.622
+   },
+   {
+    "time": 79.55,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.775
+   },
+   {
+    "time": 79.55,
+    "text": "veux pas ! >",
+    "confidence": 0.872
+   },
+   {
+    "time": 79.55,
+    "text": "Ecoloelcu",
+    "confidence": 0.589
+   },
+   {
+    "time": 79.55,
+    "text": "CASERTARI",
+    "confidence": 0.652
+   },
+   {
+    "time": 79.55,
+    "text": "SONDES",
+    "confidence": 0.988
+   },
+   {
+    "time": 81.54,
+    "text": "Les bobos parisiens",
+    "confidence": 0.792
+   },
+   {
+    "time": 81.54,
+    "text": "nous inondent",
+    "confidence": 0.976
+   },
+   {
+    "time": 81.54,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.598
+   },
+   {
+    "time": 81.54,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.884
+   },
+   {
+    "time": 81.54,
+    "text": "veux pas ! >",
+    "confidence": 0.655
+   },
+   {
+    "time": 81.54,
+    "text": "Ecoloclu",
+    "confidence": 0.517
+   },
+   {
+    "time": 81.54,
+    "text": "SONDES",
+    "confidence": 0.99
+   },
+   {
+    "time": 83.52,
+    "text": "Les bobos parisiens",
+    "confidence": 0.792
+   },
+   {
+    "time": 83.52,
+    "text": "nous inondent",
+    "confidence": 0.976
+   },
+   {
+    "time": 83.52,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.598
+   },
+   {
+    "time": 83.52,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.615
+   },
+   {
+    "time": 83.52,
+    "text": "veux pas ! >",
+    "confidence": 0.656
+   },
+   {
+    "time": 83.52,
+    "text": "Ecoloclu",
+    "confidence": 0.52
+   },
+   {
+    "time": 83.52,
+    "text": "SONDES",
+    "confidence": 0.99
+   },
+   {
+    "time": 85.51,
+    "text": "Les bobos parisiens",
+    "confidence": 0.661
+   },
+   {
+    "time": 85.51,
+    "text": "nous inondent",
+    "confidence": 0.724
+   },
+   {
+    "time": 85.51,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.612
+   },
+   {
+    "time": 85.51,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.747
+   },
+   {
+    "time": 85.51,
+    "text": "veux pas ! >",
+    "confidence": 0.874
+   },
+   {
+    "time": 85.51,
+    "text": "DESCAASUROFH",
+    "confidence": 0.647
+   },
+   {
+    "time": 85.51,
+    "text": "Ecoloelcu",
+    "confidence": 0.638
+   },
+   {
+    "time": 85.51,
+    "text": "CASERTARIN",
+    "confidence": 0.559
+   },
+   {
+    "time": 85.51,
+    "text": "SONDES",
+    "confidence": 0.688
+   },
+   {
+    "time": 87.5,
+    "text": "Les bobos parisiens",
+    "confidence": 0.999
+   },
+   {
+    "time": 87.5,
+    "text": "nous inondent",
+    "confidence": 0.717
+   },
+   {
+    "time": 87.5,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.617
+   },
+   {
+    "time": 87.5,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.758
+   },
+   {
+    "time": 87.5,
+    "text": "veux pas ! >",
+    "confidence": 0.64
+   },
+   {
+    "time": 87.5,
+    "text": "DESCAASUROFH",
+    "confidence": 0.645
+   },
+   {
+    "time": 87.5,
+    "text": "Ecoloelcu",
+    "confidence": 0.639
+   },
+   {
+    "time": 87.5,
+    "text": "CASERTARIN",
+    "confidence": 0.564
+   },
+   {
+    "time": 87.5,
+    "text": "SONDES",
+    "confidence": 0.685
+   },
+   {
+    "time": 89.49,
+    "text": "Les bobos parisiens",
+    "confidence": 0.666
+   },
+   {
+    "time": 89.49,
+    "text": "nous inondent",
+    "confidence": 0.717
+   },
+   {
+    "time": 89.49,
+    "text": "d'eoliennes, et bien",
+    "confidence": 0.617
+   },
+   {
+    "time": 89.49,
+    "text": "nous les ploucs, on n'en",
+    "confidence": 0.745
+   },
+   {
+    "time": 89.49,
+    "text": "veux pas ! >",
+    "confidence": 0.641
+   },
+   {
+    "time": 89.49,
+    "text": "DESCAASUROFH",
+    "confidence": 0.645
+   },
+   {
+    "time": 89.49,
+    "text": "CASERTARIN",
+    "confidence": 0.508
+   },
+   {
+    "time": 89.49,
+    "text": "SONDES",
+    "confidence": 0.682
+   }
+  ],
+  "captions": [
+   {
+    "text": "Les bobos parisiens",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.837,
+    "id": "o1"
+   },
+   {
+    "text": "nous inondent",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.985,
+    "id": "o2"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.803,
+    "id": "o3"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.81,
+    "id": "o4"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.706,
+    "id": "o5"
+   },
+   {
+    "text": "DESCAUASUROPH",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.547,
+    "id": "o6"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.689,
+    "id": "o7"
+   },
+   {
+    "text": "SONDES",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.98,
+    "id": "o8"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 1.99,
+    "end": 1.99,
+    "confidence": 0.749,
+    "id": "o9"
+   },
+   {
+    "text": "nous inondent",
+    "start": 1.99,
+    "end": 1.99,
+    "confidence": 0.986,
+    "id": "o10"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 1.99,
+    "end": 1.99,
+    "confidence": 0.819,
+    "id": "o11"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 1.99,
+    "end": 1.99,
+    "confidence": 0.979,
+    "id": "o12"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 1.99,
+    "end": 1.99,
+    "confidence": 0.956,
+    "id": "o13"
+   },
+   {
+    "text": "DESCAUASUROPH",
+    "start": 1.99,
+    "end": 1.99,
+    "confidence": 0.537,
+    "id": "o14"
+   },
+   {
+    "text": "CASERTARIN",
+    "start": 1.99,
+    "end": 1.99,
+    "confidence": 0.603,
+    "id": "o15"
+   },
+   {
+    "text": "SONTDES",
+    "start": 1.99,
+    "end": 1.99,
+    "confidence": 0.596,
+    "id": "o16"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 3.98,
+    "end": 3.98,
+    "confidence": 0.767,
+    "id": "o17"
+   },
+   {
+    "text": "nous inondent",
+    "start": 3.98,
+    "end": 3.98,
+    "confidence": 0.987,
+    "id": "o18"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 3.98,
+    "end": 3.98,
+    "confidence": 0.813,
+    "id": "o19"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 3.98,
+    "end": 3.98,
+    "confidence": 0.855,
+    "id": "o20"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 3.98,
+    "end": 3.98,
+    "confidence": 0.622,
+    "id": "o21"
+   },
+   {
+    "text": "DESCAASUROPHE",
+    "start": 3.98,
+    "end": 3.98,
+    "confidence": 0.689,
+    "id": "o22"
+   },
+   {
+    "text": "SONTDES",
+    "start": 3.98,
+    "end": 3.98,
+    "confidence": 0.666,
+    "id": "o23"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 5.97,
+    "end": 5.97,
+    "confidence": 0.999,
+    "id": "o24"
+   },
+   {
+    "text": "nous inondent",
+    "start": 5.97,
+    "end": 5.97,
+    "confidence": 0.94,
+    "id": "o25"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 5.97,
+    "end": 5.97,
+    "confidence": 0.829,
+    "id": "o26"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 5.97,
+    "end": 5.97,
+    "confidence": 0.979,
+    "id": "o27"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 5.97,
+    "end": 5.97,
+    "confidence": 0.983,
+    "id": "o28"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 5.97,
+    "end": 5.97,
+    "confidence": 0.582,
+    "id": "o29"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 5.97,
+    "end": 5.97,
+    "confidence": 0.602,
+    "id": "o30"
+   },
+   {
+    "text": "CEGOUERNEMEENt",
+    "start": 5.97,
+    "end": 5.97,
+    "confidence": 0.531,
+    "id": "o31"
+   },
+   {
+    "text": "SONDES",
+    "start": 5.97,
+    "end": 5.97,
+    "confidence": 0.977,
+    "id": "o32"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 7.95,
+    "end": 7.95,
+    "confidence": 0.715,
+    "id": "o33"
+   },
+   {
+    "text": "nous inondent",
+    "start": 7.95,
+    "end": 7.95,
+    "confidence": 0.933,
+    "id": "o34"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 7.95,
+    "end": 7.95,
+    "confidence": 0.831,
+    "id": "o35"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 7.95,
+    "end": 7.95,
+    "confidence": 0.61,
+    "id": "o36"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 7.95,
+    "end": 7.95,
+    "confidence": 0.982,
+    "id": "o37"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 7.95,
+    "end": 7.95,
+    "confidence": 0.567,
+    "id": "o38"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 7.95,
+    "end": 7.95,
+    "confidence": 0.583,
+    "id": "o39"
+   },
+   {
+    "text": "CEGOUERNEMEENt",
+    "start": 7.95,
+    "end": 7.95,
+    "confidence": 0.54,
+    "id": "o40"
+   },
+   {
+    "text": "SONDES",
+    "start": 7.95,
+    "end": 7.95,
+    "confidence": 0.976,
+    "id": "o41"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 9.94,
+    "end": 9.94,
+    "confidence": 0.724,
+    "id": "o42"
+   },
+   {
+    "text": "nous inondent",
+    "start": 9.94,
+    "end": 9.94,
+    "confidence": 0.897,
+    "id": "o43"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 9.94,
+    "end": 9.94,
+    "confidence": 0.831,
+    "id": "o44"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 9.94,
+    "end": 9.94,
+    "confidence": 0.784,
+    "id": "o45"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 9.94,
+    "end": 9.94,
+    "confidence": 0.98,
+    "id": "o46"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 9.94,
+    "end": 9.94,
+    "confidence": 0.57,
+    "id": "o47"
+   },
+   {
+    "text": "CASERTARE",
+    "start": 9.94,
+    "end": 9.94,
+    "confidence": 0.674,
+    "id": "o48"
+   },
+   {
+    "text": "CEGOUERNEMEENt",
+    "start": 9.94,
+    "end": 9.94,
+    "confidence": 0.541,
+    "id": "o49"
+   },
+   {
+    "text": "SONTDES",
+    "start": 9.94,
+    "end": 9.94,
+    "confidence": 0.684,
+    "id": "o50"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 11.93,
+    "end": 11.93,
+    "confidence": 0.986,
+    "id": "o51"
+   },
+   {
+    "text": "nous inondent",
+    "start": 11.93,
+    "end": 11.93,
+    "confidence": 0.967,
+    "id": "o52"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 11.93,
+    "end": 11.93,
+    "confidence": 0.617,
+    "id": "o53"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 11.93,
+    "end": 11.93,
+    "confidence": 0.828,
+    "id": "o54"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 11.93,
+    "end": 11.93,
+    "confidence": 0.981,
+    "id": "o55"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 11.93,
+    "end": 11.93,
+    "confidence": 0.597,
+    "id": "o56"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 11.93,
+    "end": 11.93,
+    "confidence": 0.576,
+    "id": "o57"
+   },
+   {
+    "text": "SONDES",
+    "start": 11.93,
+    "end": 11.93,
+    "confidence": 0.898,
+    "id": "o58"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 13.92,
+    "end": 13.92,
+    "confidence": 0.999,
+    "id": "o59"
+   },
+   {
+    "text": "nous inondent",
+    "start": 13.92,
+    "end": 13.92,
+    "confidence": 0.966,
+    "id": "o60"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 13.92,
+    "end": 13.92,
+    "confidence": 0.618,
+    "id": "o61"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 13.92,
+    "end": 13.92,
+    "confidence": 0.793,
+    "id": "o62"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 13.92,
+    "end": 13.92,
+    "confidence": 0.8,
+    "id": "o63"
+   },
+   {
+    "text": "DESCAASUROPHE",
+    "start": 13.92,
+    "end": 13.92,
+    "confidence": 0.736,
+    "id": "o64"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 13.92,
+    "end": 13.92,
+    "confidence": 0.599,
+    "id": "o65"
+   },
+   {
+    "text": "CEGOUERNEMEENt",
+    "start": 13.92,
+    "end": 13.92,
+    "confidence": 0.593,
+    "id": "o66"
+   },
+   {
+    "text": "SONDES",
+    "start": 13.92,
+    "end": 13.92,
+    "confidence": 0.89,
+    "id": "o67"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 15.91,
+    "end": 15.91,
+    "confidence": 0.999,
+    "id": "o68"
+   },
+   {
+    "text": "nous inondent",
+    "start": 15.91,
+    "end": 15.91,
+    "confidence": 0.971,
+    "id": "o69"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 15.91,
+    "end": 15.91,
+    "confidence": 0.62,
+    "id": "o70"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 15.91,
+    "end": 15.91,
+    "confidence": 0.98,
+    "id": "o71"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 15.91,
+    "end": 15.91,
+    "confidence": 0.979,
+    "id": "o72"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 15.91,
+    "end": 15.91,
+    "confidence": 0.586,
+    "id": "o73"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 15.91,
+    "end": 15.91,
+    "confidence": 0.566,
+    "id": "o74"
+   },
+   {
+    "text": "SONTDES",
+    "start": 15.91,
+    "end": 15.91,
+    "confidence": 0.658,
+    "id": "o75"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 17.9,
+    "end": 17.9,
+    "confidence": 0.999,
+    "id": "o76"
+   },
+   {
+    "text": "nous inondent",
+    "start": 17.9,
+    "end": 17.9,
+    "confidence": 0.97,
+    "id": "o77"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 17.9,
+    "end": 17.9,
+    "confidence": 0.622,
+    "id": "o78"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 17.9,
+    "end": 17.9,
+    "confidence": 0.979,
+    "id": "o79"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 17.9,
+    "end": 17.9,
+    "confidence": 0.979,
+    "id": "o80"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 17.9,
+    "end": 17.9,
+    "confidence": 0.588,
+    "id": "o81"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 17.9,
+    "end": 17.9,
+    "confidence": 0.567,
+    "id": "o82"
+   },
+   {
+    "text": "SONTDES",
+    "start": 17.9,
+    "end": 17.9,
+    "confidence": 0.656,
+    "id": "o83"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 19.89,
+    "end": 19.89,
+    "confidence": 0.999,
+    "id": "o84"
+   },
+   {
+    "text": "nous inondent",
+    "start": 19.89,
+    "end": 19.89,
+    "confidence": 0.968,
+    "id": "o85"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 19.89,
+    "end": 19.89,
+    "confidence": 0.626,
+    "id": "o86"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 19.89,
+    "end": 19.89,
+    "confidence": 0.979,
+    "id": "o87"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 19.89,
+    "end": 19.89,
+    "confidence": 0.978,
+    "id": "o88"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 19.89,
+    "end": 19.89,
+    "confidence": 0.588,
+    "id": "o89"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 19.89,
+    "end": 19.89,
+    "confidence": 0.568,
+    "id": "o90"
+   },
+   {
+    "text": "CEGOUERNEMEENt",
+    "start": 19.89,
+    "end": 19.89,
+    "confidence": 0.548,
+    "id": "o91"
+   },
+   {
+    "text": "SONTDES",
+    "start": 19.89,
+    "end": 19.89,
+    "confidence": 0.656,
+    "id": "o92"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 21.88,
+    "end": 21.88,
+    "confidence": 0.806,
+    "id": "o93"
+   },
+   {
+    "text": "nous inondent",
+    "start": 21.88,
+    "end": 21.88,
+    "confidence": 0.717,
+    "id": "o94"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 21.88,
+    "end": 21.88,
+    "confidence": 0.801,
+    "id": "o95"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 21.88,
+    "end": 21.88,
+    "confidence": 0.692,
+    "id": "o96"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 21.88,
+    "end": 21.88,
+    "confidence": 0.979,
+    "id": "o97"
+   },
+   {
+    "text": "DESCAASUROPH",
+    "start": 21.88,
+    "end": 21.88,
+    "confidence": 0.744,
+    "id": "o98"
+   },
+   {
+    "text": "Ecoloclu",
+    "start": 21.88,
+    "end": 21.88,
+    "confidence": 0.609,
+    "id": "o99"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 21.88,
+    "end": 21.88,
+    "confidence": 0.626,
+    "id": "o100"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 23.86,
+    "end": 23.86,
+    "confidence": 0.805,
+    "id": "o101"
+   },
+   {
+    "text": "nous inondent",
+    "start": 23.86,
+    "end": 23.86,
+    "confidence": 0.736,
+    "id": "o102"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 23.86,
+    "end": 23.86,
+    "confidence": 0.802,
+    "id": "o103"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 23.86,
+    "end": 23.86,
+    "confidence": 0.692,
+    "id": "o104"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 23.86,
+    "end": 23.86,
+    "confidence": 0.979,
+    "id": "o105"
+   },
+   {
+    "text": "DESCAASUROPH",
+    "start": 23.86,
+    "end": 23.86,
+    "confidence": 0.744,
+    "id": "o106"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 23.86,
+    "end": 23.86,
+    "confidence": 0.582,
+    "id": "o107"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 23.86,
+    "end": 23.86,
+    "confidence": 0.613,
+    "id": "o108"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 25.85,
+    "end": 25.85,
+    "confidence": 0.928,
+    "id": "o109"
+   },
+   {
+    "text": "nous inondent",
+    "start": 25.85,
+    "end": 25.85,
+    "confidence": 0.853,
+    "id": "o110"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 25.85,
+    "end": 25.85,
+    "confidence": 0.831,
+    "id": "o111"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 25.85,
+    "end": 25.85,
+    "confidence": 0.831,
+    "id": "o112"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 25.85,
+    "end": 25.85,
+    "confidence": 0.981,
+    "id": "o113"
+   },
+   {
+    "text": "Ecoloclu",
+    "start": 25.85,
+    "end": 25.85,
+    "confidence": 0.61,
+    "id": "o114"
+   },
+   {
+    "text": "CASERTARIN",
+    "start": 25.85,
+    "end": 25.85,
+    "confidence": 0.512,
+    "id": "o115"
+   },
+   {
+    "text": "SONDES",
+    "start": 25.85,
+    "end": 25.85,
+    "confidence": 0.987,
+    "id": "o116"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 27.84,
+    "end": 27.84,
+    "confidence": 0.902,
+    "id": "o117"
+   },
+   {
+    "text": "nous inondent",
+    "start": 27.84,
+    "end": 27.84,
+    "confidence": 0.848,
+    "id": "o118"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 27.84,
+    "end": 27.84,
+    "confidence": 0.831,
+    "id": "o119"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 27.84,
+    "end": 27.84,
+    "confidence": 0.83,
+    "id": "o120"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 27.84,
+    "end": 27.84,
+    "confidence": 0.981,
+    "id": "o121"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 27.84,
+    "end": 27.84,
+    "confidence": 0.577,
+    "id": "o122"
+   },
+   {
+    "text": "SONDES",
+    "start": 27.84,
+    "end": 27.84,
+    "confidence": 0.987,
+    "id": "o123"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 29.83,
+    "end": 29.83,
+    "confidence": 0.905,
+    "id": "o124"
+   },
+   {
+    "text": "nous inondent",
+    "start": 29.83,
+    "end": 29.83,
+    "confidence": 0.878,
+    "id": "o125"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 29.83,
+    "end": 29.83,
+    "confidence": 0.832,
+    "id": "o126"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 29.83,
+    "end": 29.83,
+    "confidence": 0.827,
+    "id": "o127"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 29.83,
+    "end": 29.83,
+    "confidence": 0.981,
+    "id": "o128"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 29.83,
+    "end": 29.83,
+    "confidence": 0.58,
+    "id": "o129"
+   },
+   {
+    "text": "CASERTARIN",
+    "start": 29.83,
+    "end": 29.83,
+    "confidence": 0.502,
+    "id": "o130"
+   },
+   {
+    "text": "CEGOUERNEMENt",
+    "start": 29.83,
+    "end": 29.83,
+    "confidence": 0.506,
+    "id": "o131"
+   },
+   {
+    "text": "SONDES",
+    "start": 29.83,
+    "end": 29.83,
+    "confidence": 0.987,
+    "id": "o132"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 31.82,
+    "end": 31.82,
+    "confidence": 0.72,
+    "id": "o133"
+   },
+   {
+    "text": "nous inondent",
+    "start": 31.82,
+    "end": 31.82,
+    "confidence": 0.954,
+    "id": "o134"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 31.82,
+    "end": 31.82,
+    "confidence": 0.801,
+    "id": "o135"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 31.82,
+    "end": 31.82,
+    "confidence": 0.799,
+    "id": "o136"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 31.82,
+    "end": 31.82,
+    "confidence": 0.701,
+    "id": "o137"
+   },
+   {
+    "text": "DESCAASUROPH",
+    "start": 31.82,
+    "end": 31.82,
+    "confidence": 0.678,
+    "id": "o138"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 31.82,
+    "end": 31.82,
+    "confidence": 0.614,
+    "id": "o139"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 31.82,
+    "end": 31.82,
+    "confidence": 0.638,
+    "id": "o140"
+   },
+   {
+    "text": "SONDES",
+    "start": 31.82,
+    "end": 31.82,
+    "confidence": 0.985,
+    "id": "o141"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 33.81,
+    "end": 33.81,
+    "confidence": 0.715,
+    "id": "o142"
+   },
+   {
+    "text": "nous inondent",
+    "start": 33.81,
+    "end": 33.81,
+    "confidence": 0.954,
+    "id": "o143"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 33.81,
+    "end": 33.81,
+    "confidence": 0.803,
+    "id": "o144"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 33.81,
+    "end": 33.81,
+    "confidence": 0.838,
+    "id": "o145"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 33.81,
+    "end": 33.81,
+    "confidence": 0.696,
+    "id": "o146"
+   },
+   {
+    "text": "DESCAASUROPH",
+    "start": 33.81,
+    "end": 33.81,
+    "confidence": 0.678,
+    "id": "o147"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 33.81,
+    "end": 33.81,
+    "confidence": 0.614,
+    "id": "o148"
+   },
+   {
+    "text": "SONDES",
+    "start": 33.81,
+    "end": 33.81,
+    "confidence": 0.986,
+    "id": "o149"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 35.8,
+    "end": 35.8,
+    "confidence": 0.999,
+    "id": "o150"
+   },
+   {
+    "text": "nous inondent",
+    "start": 35.8,
+    "end": 35.8,
+    "confidence": 0.899,
+    "id": "o151"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 35.8,
+    "end": 35.8,
+    "confidence": 0.779,
+    "id": "o152"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 35.8,
+    "end": 35.8,
+    "confidence": 0.79,
+    "id": "o153"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 35.8,
+    "end": 35.8,
+    "confidence": 0.62,
+    "id": "o154"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 35.8,
+    "end": 35.8,
+    "confidence": 0.616,
+    "id": "o155"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 35.8,
+    "end": 35.8,
+    "confidence": 0.635,
+    "id": "o156"
+   },
+   {
+    "text": "CEGOUERNEMENt",
+    "start": 35.8,
+    "end": 35.8,
+    "confidence": 0.527,
+    "id": "o157"
+   },
+   {
+    "text": "SONDES",
+    "start": 35.8,
+    "end": 35.8,
+    "confidence": 0.987,
+    "id": "o158"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 37.78,
+    "end": 37.78,
+    "confidence": 0.999,
+    "id": "o159"
+   },
+   {
+    "text": "nous inondent",
+    "start": 37.78,
+    "end": 37.78,
+    "confidence": 0.916,
+    "id": "o160"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 37.78,
+    "end": 37.78,
+    "confidence": 0.773,
+    "id": "o161"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 37.78,
+    "end": 37.78,
+    "confidence": 0.788,
+    "id": "o162"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 37.78,
+    "end": 37.78,
+    "confidence": 0.624,
+    "id": "o163"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 37.78,
+    "end": 37.78,
+    "confidence": 0.615,
+    "id": "o164"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 37.78,
+    "end": 37.78,
+    "confidence": 0.635,
+    "id": "o165"
+   },
+   {
+    "text": "CEGOUERNEMENt",
+    "start": 37.78,
+    "end": 37.78,
+    "confidence": 0.536,
+    "id": "o166"
+   },
+   {
+    "text": "SONDES",
+    "start": 37.78,
+    "end": 37.78,
+    "confidence": 0.987,
+    "id": "o167"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 39.77,
+    "end": 39.77,
+    "confidence": 0.999,
+    "id": "o168"
+   },
+   {
+    "text": "nous inondent",
+    "start": 39.77,
+    "end": 39.77,
+    "confidence": 0.919,
+    "id": "o169"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 39.77,
+    "end": 39.77,
+    "confidence": 0.774,
+    "id": "o170"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 39.77,
+    "end": 39.77,
+    "confidence": 0.787,
+    "id": "o171"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 39.77,
+    "end": 39.77,
+    "confidence": 0.624,
+    "id": "o172"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 39.77,
+    "end": 39.77,
+    "confidence": 0.612,
+    "id": "o173"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 39.77,
+    "end": 39.77,
+    "confidence": 0.642,
+    "id": "o174"
+   },
+   {
+    "text": "CEGOUERNEMENt",
+    "start": 39.77,
+    "end": 39.77,
+    "confidence": 0.525,
+    "id": "o175"
+   },
+   {
+    "text": "SONTDES",
+    "start": 39.77,
+    "end": 39.77,
+    "confidence": 0.641,
+    "id": "o176"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 41.76,
+    "end": 41.76,
+    "confidence": 0.999,
+    "id": "o177"
+   },
+   {
+    "text": "nous inondent",
+    "start": 41.76,
+    "end": 41.76,
+    "confidence": 0.669,
+    "id": "o178"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 41.76,
+    "end": 41.76,
+    "confidence": 0.784,
+    "id": "o179"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 41.76,
+    "end": 41.76,
+    "confidence": 0.888,
+    "id": "o180"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 41.76,
+    "end": 41.76,
+    "confidence": 0.605,
+    "id": "o181"
+   },
+   {
+    "text": "LESEOLENNESSON",
+    "start": 41.76,
+    "end": 41.76,
+    "confidence": 0.548,
+    "id": "o182"
+   },
+   {
+    "text": "DESCAASUROPH",
+    "start": 41.76,
+    "end": 41.76,
+    "confidence": 0.648,
+    "id": "o183"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 41.76,
+    "end": 41.76,
+    "confidence": 0.623,
+    "id": "o184"
+   },
+   {
+    "text": "CASERTARIN",
+    "start": 41.76,
+    "end": 41.76,
+    "confidence": 0.542,
+    "id": "o185"
+   },
+   {
+    "text": "SONDES",
+    "start": 41.76,
+    "end": 41.76,
+    "confidence": 0.982,
+    "id": "o186"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 43.75,
+    "end": 43.75,
+    "confidence": 0.999,
+    "id": "o187"
+   },
+   {
+    "text": "nous inondent",
+    "start": 43.75,
+    "end": 43.75,
+    "confidence": 0.836,
+    "id": "o188"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 43.75,
+    "end": 43.75,
+    "confidence": 0.78,
+    "id": "o189"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 43.75,
+    "end": 43.75,
+    "confidence": 0.693,
+    "id": "o190"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 43.75,
+    "end": 43.75,
+    "confidence": 0.614,
+    "id": "o191"
+   },
+   {
+    "text": "LESEOLENNESSON",
+    "start": 43.75,
+    "end": 43.75,
+    "confidence": 0.543,
+    "id": "o192"
+   },
+   {
+    "text": "DESCAASUROPH",
+    "start": 43.75,
+    "end": 43.75,
+    "confidence": 0.639,
+    "id": "o193"
+   },
+   {
+    "text": "Ecoloclu",
+    "start": 43.75,
+    "end": 43.75,
+    "confidence": 0.522,
+    "id": "o194"
+   },
+   {
+    "text": "CASERTARIN",
+    "start": 43.75,
+    "end": 43.75,
+    "confidence": 0.541,
+    "id": "o195"
+   },
+   {
+    "text": "SONDES",
+    "start": 43.75,
+    "end": 43.75,
+    "confidence": 0.982,
+    "id": "o196"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 45.74,
+    "end": 45.74,
+    "confidence": 0.999,
+    "id": "o197"
+   },
+   {
+    "text": "nous inondent",
+    "start": 45.74,
+    "end": 45.74,
+    "confidence": 0.92,
+    "id": "o198"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 45.74,
+    "end": 45.74,
+    "confidence": 0.811,
+    "id": "o199"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 45.74,
+    "end": 45.74,
+    "confidence": 0.629,
+    "id": "o200"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 45.74,
+    "end": 45.74,
+    "confidence": 0.964,
+    "id": "o201"
+   },
+   {
+    "text": "Ecoloelqu",
+    "start": 45.74,
+    "end": 45.74,
+    "confidence": 0.558,
+    "id": "o202"
+   },
+   {
+    "text": "CASERTARIN",
+    "start": 45.74,
+    "end": 45.74,
+    "confidence": 0.57,
+    "id": "o203"
+   },
+   {
+    "text": "SONDES",
+    "start": 45.74,
+    "end": 45.74,
+    "confidence": 0.986,
+    "id": "o204"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 47.73,
+    "end": 47.73,
+    "confidence": 0.735,
+    "id": "o205"
+   },
+   {
+    "text": "nous inondent",
+    "start": 47.73,
+    "end": 47.73,
+    "confidence": 0.916,
+    "id": "o206"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 47.73,
+    "end": 47.73,
+    "confidence": 0.812,
+    "id": "o207"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 47.73,
+    "end": 47.73,
+    "confidence": 0.624,
+    "id": "o208"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 47.73,
+    "end": 47.73,
+    "confidence": 0.948,
+    "id": "o209"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 47.73,
+    "end": 47.73,
+    "confidence": 0.622,
+    "id": "o210"
+   },
+   {
+    "text": "CASERTARIN",
+    "start": 47.73,
+    "end": 47.73,
+    "confidence": 0.582,
+    "id": "o211"
+   },
+   {
+    "text": "SONDES",
+    "start": 47.73,
+    "end": 47.73,
+    "confidence": 0.986,
+    "id": "o212"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 49.72,
+    "end": 49.72,
+    "confidence": 0.999,
+    "id": "o213"
+   },
+   {
+    "text": "nous inondent",
+    "start": 49.72,
+    "end": 49.72,
+    "confidence": 0.916,
+    "id": "o214"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 49.72,
+    "end": 49.72,
+    "confidence": 0.813,
+    "id": "o215"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 49.72,
+    "end": 49.72,
+    "confidence": 0.623,
+    "id": "o216"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 49.72,
+    "end": 49.72,
+    "confidence": 0.908,
+    "id": "o217"
+   },
+   {
+    "text": "LESEOLENNESSON",
+    "start": 49.72,
+    "end": 49.72,
+    "confidence": 0.532,
+    "id": "o218"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 49.72,
+    "end": 49.72,
+    "confidence": 0.622,
+    "id": "o219"
+   },
+   {
+    "text": "CASERTARIN",
+    "start": 49.72,
+    "end": 49.72,
+    "confidence": 0.58,
+    "id": "o220"
+   },
+   {
+    "text": "SONDES",
+    "start": 49.72,
+    "end": 49.72,
+    "confidence": 0.986,
+    "id": "o221"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 51.71,
+    "end": 51.71,
+    "confidence": 0.999,
+    "id": "o222"
+   },
+   {
+    "text": "nous inondent",
+    "start": 51.71,
+    "end": 51.71,
+    "confidence": 0.723,
+    "id": "o223"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 51.71,
+    "end": 51.71,
+    "confidence": 0.801,
+    "id": "o224"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 51.71,
+    "end": 51.71,
+    "confidence": 0.883,
+    "id": "o225"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 51.71,
+    "end": 51.71,
+    "confidence": 0.9,
+    "id": "o226"
+   },
+   {
+    "text": "Ecozoclu",
+    "start": 51.71,
+    "end": 51.71,
+    "confidence": 0.514,
+    "id": "o227"
+   },
+   {
+    "text": "CASERTARIN",
+    "start": 51.71,
+    "end": 51.71,
+    "confidence": 0.575,
+    "id": "o228"
+   },
+   {
+    "text": "SONDES",
+    "start": 51.71,
+    "end": 51.71,
+    "confidence": 0.984,
+    "id": "o229"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 53.69,
+    "end": 53.69,
+    "confidence": 0.968,
+    "id": "o230"
+   },
+   {
+    "text": "nous inondent",
+    "start": 53.69,
+    "end": 53.69,
+    "confidence": 0.734,
+    "id": "o231"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 53.69,
+    "end": 53.69,
+    "confidence": 0.803,
+    "id": "o232"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 53.69,
+    "end": 53.69,
+    "confidence": 0.894,
+    "id": "o233"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 53.69,
+    "end": 53.69,
+    "confidence": 0.896,
+    "id": "o234"
+   },
+   {
+    "text": "Ecozoclu",
+    "start": 53.69,
+    "end": 53.69,
+    "confidence": 0.514,
+    "id": "o235"
+   },
+   {
+    "text": "CASERTARIN",
+    "start": 53.69,
+    "end": 53.69,
+    "confidence": 0.574,
+    "id": "o236"
+   },
+   {
+    "text": "SONDES",
+    "start": 53.69,
+    "end": 53.69,
+    "confidence": 0.984,
+    "id": "o237"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 55.68,
+    "end": 55.68,
+    "confidence": 0.999,
+    "id": "o238"
+   },
+   {
+    "text": "nous inondent",
+    "start": 55.68,
+    "end": 55.68,
+    "confidence": 0.587,
+    "id": "o239"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 55.68,
+    "end": 55.68,
+    "confidence": 0.823,
+    "id": "o240"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 55.68,
+    "end": 55.68,
+    "confidence": 0.747,
+    "id": "o241"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 55.68,
+    "end": 55.68,
+    "confidence": 0.646,
+    "id": "o242"
+   },
+   {
+    "text": "DESCAUASUROPH",
+    "start": 55.68,
+    "end": 55.68,
+    "confidence": 0.525,
+    "id": "o243"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 55.68,
+    "end": 55.68,
+    "confidence": 0.579,
+    "id": "o244"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 55.68,
+    "end": 55.68,
+    "confidence": 0.648,
+    "id": "o245"
+   },
+   {
+    "text": "SONDES",
+    "start": 55.68,
+    "end": 55.68,
+    "confidence": 0.984,
+    "id": "o246"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 57.67,
+    "end": 57.67,
+    "confidence": 0.999,
+    "id": "o247"
+   },
+   {
+    "text": "nous inondent",
+    "start": 57.67,
+    "end": 57.67,
+    "confidence": 0.616,
+    "id": "o248"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 57.67,
+    "end": 57.67,
+    "confidence": 0.823,
+    "id": "o249"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 57.67,
+    "end": 57.67,
+    "confidence": 0.747,
+    "id": "o250"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 57.67,
+    "end": 57.67,
+    "confidence": 0.971,
+    "id": "o251"
+   },
+   {
+    "text": "DESCAUASUROPH",
+    "start": 57.67,
+    "end": 57.67,
+    "confidence": 0.525,
+    "id": "o252"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 57.67,
+    "end": 57.67,
+    "confidence": 0.579,
+    "id": "o253"
+   },
+   {
+    "text": "SONDES",
+    "start": 57.67,
+    "end": 57.67,
+    "confidence": 0.984,
+    "id": "o254"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 59.66,
+    "end": 59.66,
+    "confidence": 0.999,
+    "id": "o255"
+   },
+   {
+    "text": "nous inondent",
+    "start": 59.66,
+    "end": 59.66,
+    "confidence": 0.582,
+    "id": "o256"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 59.66,
+    "end": 59.66,
+    "confidence": 0.824,
+    "id": "o257"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 59.66,
+    "end": 59.66,
+    "confidence": 0.752,
+    "id": "o258"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 59.66,
+    "end": 59.66,
+    "confidence": 0.971,
+    "id": "o259"
+   },
+   {
+    "text": "DESCAUASUROPH",
+    "start": 59.66,
+    "end": 59.66,
+    "confidence": 0.523,
+    "id": "o260"
+   },
+   {
+    "text": "SONDES",
+    "start": 59.66,
+    "end": 59.66,
+    "confidence": 0.984,
+    "id": "o261"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 61.65,
+    "end": 61.65,
+    "confidence": 0.999,
+    "id": "o262"
+   },
+   {
+    "text": "nous inondent",
+    "start": 61.65,
+    "end": 61.65,
+    "confidence": 0.972,
+    "id": "o263"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 61.65,
+    "end": 61.65,
+    "confidence": 0.796,
+    "id": "o264"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 61.65,
+    "end": 61.65,
+    "confidence": 0.88,
+    "id": "o265"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 61.65,
+    "end": 61.65,
+    "confidence": 0.631,
+    "id": "o266"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 61.65,
+    "end": 61.65,
+    "confidence": 0.607,
+    "id": "o267"
+   },
+   {
+    "text": "SONDES",
+    "start": 61.65,
+    "end": 61.65,
+    "confidence": 0.802,
+    "id": "o268"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 63.64,
+    "end": 63.64,
+    "confidence": 0.999,
+    "id": "o269"
+   },
+   {
+    "text": "nous inondent",
+    "start": 63.64,
+    "end": 63.64,
+    "confidence": 0.972,
+    "id": "o270"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 63.64,
+    "end": 63.64,
+    "confidence": 0.794,
+    "id": "o271"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 63.64,
+    "end": 63.64,
+    "confidence": 0.88,
+    "id": "o272"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 63.64,
+    "end": 63.64,
+    "confidence": 0.981,
+    "id": "o273"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 63.64,
+    "end": 63.64,
+    "confidence": 0.608,
+    "id": "o274"
+   },
+   {
+    "text": "SONDES",
+    "start": 63.64,
+    "end": 63.64,
+    "confidence": 0.633,
+    "id": "o275"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 65.63,
+    "end": 65.63,
+    "confidence": 0.999,
+    "id": "o276"
+   },
+   {
+    "text": "nous inondent",
+    "start": 65.63,
+    "end": 65.63,
+    "confidence": 0.976,
+    "id": "o277"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 65.63,
+    "end": 65.63,
+    "confidence": 0.801,
+    "id": "o278"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 65.63,
+    "end": 65.63,
+    "confidence": 0.83,
+    "id": "o279"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 65.63,
+    "end": 65.63,
+    "confidence": 0.887,
+    "id": "o280"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 65.63,
+    "end": 65.63,
+    "confidence": 0.598,
+    "id": "o281"
+   },
+   {
+    "text": "CEGOUERNEMEENt",
+    "start": 65.63,
+    "end": 65.63,
+    "confidence": 0.511,
+    "id": "o282"
+   },
+   {
+    "text": "SONTDES",
+    "start": 65.63,
+    "end": 65.63,
+    "confidence": 0.503,
+    "id": "o283"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 67.61,
+    "end": 67.61,
+    "confidence": 0.999,
+    "id": "o284"
+   },
+   {
+    "text": "nous inondent",
+    "start": 67.61,
+    "end": 67.61,
+    "confidence": 0.977,
+    "id": "o285"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 67.61,
+    "end": 67.61,
+    "confidence": 0.802,
+    "id": "o286"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 67.61,
+    "end": 67.61,
+    "confidence": 0.757,
+    "id": "o287"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 67.61,
+    "end": 67.61,
+    "confidence": 0.887,
+    "id": "o288"
+   },
+   {
+    "text": "LESEOLENNESSON",
+    "start": 67.61,
+    "end": 67.61,
+    "confidence": 0.516,
+    "id": "o289"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 67.61,
+    "end": 67.61,
+    "confidence": 0.598,
+    "id": "o290"
+   },
+   {
+    "text": "CEGOUERNEMEENt",
+    "start": 67.61,
+    "end": 67.61,
+    "confidence": 0.514,
+    "id": "o291"
+   },
+   {
+    "text": "SONTDES",
+    "start": 67.61,
+    "end": 67.61,
+    "confidence": 0.502,
+    "id": "o292"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 69.6,
+    "end": 69.6,
+    "confidence": 0.999,
+    "id": "o293"
+   },
+   {
+    "text": "nous inondent",
+    "start": 69.6,
+    "end": 69.6,
+    "confidence": 0.978,
+    "id": "o294"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 69.6,
+    "end": 69.6,
+    "confidence": 0.802,
+    "id": "o295"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 69.6,
+    "end": 69.6,
+    "confidence": 0.76,
+    "id": "o296"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 69.6,
+    "end": 69.6,
+    "confidence": 0.886,
+    "id": "o297"
+   },
+   {
+    "text": "LESEOLENNESSON",
+    "start": 69.6,
+    "end": 69.6,
+    "confidence": 0.519,
+    "id": "o298"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 69.6,
+    "end": 69.6,
+    "confidence": 0.598,
+    "id": "o299"
+   },
+   {
+    "text": "CEGOUERNEMEENt",
+    "start": 69.6,
+    "end": 69.6,
+    "confidence": 0.513,
+    "id": "o300"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 71.59,
+    "end": 71.59,
+    "confidence": 0.855,
+    "id": "o301"
+   },
+   {
+    "text": "nous inondent",
+    "start": 71.59,
+    "end": 71.59,
+    "confidence": 0.738,
+    "id": "o302"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 71.59,
+    "end": 71.59,
+    "confidence": 0.819,
+    "id": "o303"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 71.59,
+    "end": 71.59,
+    "confidence": 0.613,
+    "id": "o304"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 71.59,
+    "end": 71.59,
+    "confidence": 0.882,
+    "id": "o305"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 71.59,
+    "end": 71.59,
+    "confidence": 0.585,
+    "id": "o306"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 71.59,
+    "end": 71.59,
+    "confidence": 0.639,
+    "id": "o307"
+   },
+   {
+    "text": "SONDES",
+    "start": 71.59,
+    "end": 71.59,
+    "confidence": 0.986,
+    "id": "o308"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 73.58,
+    "end": 73.58,
+    "confidence": 0.846,
+    "id": "o309"
+   },
+   {
+    "text": "nous inondent",
+    "start": 73.58,
+    "end": 73.58,
+    "confidence": 0.89,
+    "id": "o310"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 73.58,
+    "end": 73.58,
+    "confidence": 0.818,
+    "id": "o311"
+   },
+   {
+    "text": "nous les ploucs,",
+    "start": 73.58,
+    "end": 73.58,
+    "confidence": 0.933,
+    "id": "o312"
+   },
+   {
+    "text": "n'en",
+    "start": 73.58,
+    "end": 73.58,
+    "confidence": 1.0,
+    "id": "o313"
+   },
+   {
+    "text": "on",
+    "start": 73.58,
+    "end": 73.58,
+    "confidence": 1.0,
+    "id": "o314"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 73.58,
+    "end": 73.58,
+    "confidence": 0.879,
+    "id": "o315"
+   },
+   {
+    "text": "DESCAASUROPH",
+    "start": 73.58,
+    "end": 73.58,
+    "confidence": 0.727,
+    "id": "o316"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 73.58,
+    "end": 73.58,
+    "confidence": 0.585,
+    "id": "o317"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 73.58,
+    "end": 73.58,
+    "confidence": 0.624,
+    "id": "o318"
+   },
+   {
+    "text": "CZCOUERNEMENT",
+    "start": 73.58,
+    "end": 73.58,
+    "confidence": 0.516,
+    "id": "o319"
+   },
+   {
+    "text": "SONDES",
+    "start": 73.58,
+    "end": 73.58,
+    "confidence": 0.986,
+    "id": "o320"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 75.57,
+    "end": 75.57,
+    "confidence": 0.995,
+    "id": "o321"
+   },
+   {
+    "text": "nous inondent",
+    "start": 75.57,
+    "end": 75.57,
+    "confidence": 0.979,
+    "id": "o322"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 75.57,
+    "end": 75.57,
+    "confidence": 0.618,
+    "id": "o323"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 75.57,
+    "end": 75.57,
+    "confidence": 0.775,
+    "id": "o324"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 75.57,
+    "end": 75.57,
+    "confidence": 0.866,
+    "id": "o325"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 75.57,
+    "end": 75.57,
+    "confidence": 0.585,
+    "id": "o326"
+   },
+   {
+    "text": "SONDES",
+    "start": 75.57,
+    "end": 75.57,
+    "confidence": 0.987,
+    "id": "o327"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 77.56,
+    "end": 77.56,
+    "confidence": 0.995,
+    "id": "o328"
+   },
+   {
+    "text": "nous inondent",
+    "start": 77.56,
+    "end": 77.56,
+    "confidence": 0.978,
+    "id": "o329"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 77.56,
+    "end": 77.56,
+    "confidence": 0.62,
+    "id": "o330"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 77.56,
+    "end": 77.56,
+    "confidence": 0.781,
+    "id": "o331"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 77.56,
+    "end": 77.56,
+    "confidence": 0.87,
+    "id": "o332"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 77.56,
+    "end": 77.56,
+    "confidence": 0.587,
+    "id": "o333"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 77.56,
+    "end": 77.56,
+    "confidence": 0.657,
+    "id": "o334"
+   },
+   {
+    "text": "SONDES",
+    "start": 77.56,
+    "end": 77.56,
+    "confidence": 0.988,
+    "id": "o335"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 79.55,
+    "end": 79.55,
+    "confidence": 0.995,
+    "id": "o336"
+   },
+   {
+    "text": "nous inondent",
+    "start": 79.55,
+    "end": 79.55,
+    "confidence": 0.978,
+    "id": "o337"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 79.55,
+    "end": 79.55,
+    "confidence": 0.622,
+    "id": "o338"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 79.55,
+    "end": 79.55,
+    "confidence": 0.775,
+    "id": "o339"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 79.55,
+    "end": 79.55,
+    "confidence": 0.872,
+    "id": "o340"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 79.55,
+    "end": 79.55,
+    "confidence": 0.589,
+    "id": "o341"
+   },
+   {
+    "text": "CASERTARI",
+    "start": 79.55,
+    "end": 79.55,
+    "confidence": 0.652,
+    "id": "o342"
+   },
+   {
+    "text": "SONDES",
+    "start": 79.55,
+    "end": 79.55,
+    "confidence": 0.988,
+    "id": "o343"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 81.54,
+    "end": 81.54,
+    "confidence": 0.792,
+    "id": "o344"
+   },
+   {
+    "text": "nous inondent",
+    "start": 81.54,
+    "end": 81.54,
+    "confidence": 0.976,
+    "id": "o345"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 81.54,
+    "end": 81.54,
+    "confidence": 0.598,
+    "id": "o346"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 81.54,
+    "end": 81.54,
+    "confidence": 0.884,
+    "id": "o347"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 81.54,
+    "end": 81.54,
+    "confidence": 0.655,
+    "id": "o348"
+   },
+   {
+    "text": "Ecoloclu",
+    "start": 81.54,
+    "end": 81.54,
+    "confidence": 0.517,
+    "id": "o349"
+   },
+   {
+    "text": "SONDES",
+    "start": 81.54,
+    "end": 81.54,
+    "confidence": 0.99,
+    "id": "o350"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 83.52,
+    "end": 83.52,
+    "confidence": 0.792,
+    "id": "o351"
+   },
+   {
+    "text": "nous inondent",
+    "start": 83.52,
+    "end": 83.52,
+    "confidence": 0.976,
+    "id": "o352"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 83.52,
+    "end": 83.52,
+    "confidence": 0.598,
+    "id": "o353"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 83.52,
+    "end": 83.52,
+    "confidence": 0.615,
+    "id": "o354"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 83.52,
+    "end": 83.52,
+    "confidence": 0.656,
+    "id": "o355"
+   },
+   {
+    "text": "Ecoloclu",
+    "start": 83.52,
+    "end": 83.52,
+    "confidence": 0.52,
+    "id": "o356"
+   },
+   {
+    "text": "SONDES",
+    "start": 83.52,
+    "end": 83.52,
+    "confidence": 0.99,
+    "id": "o357"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 85.51,
+    "end": 85.51,
+    "confidence": 0.661,
+    "id": "o358"
+   },
+   {
+    "text": "nous inondent",
+    "start": 85.51,
+    "end": 85.51,
+    "confidence": 0.724,
+    "id": "o359"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 85.51,
+    "end": 85.51,
+    "confidence": 0.612,
+    "id": "o360"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 85.51,
+    "end": 85.51,
+    "confidence": 0.747,
+    "id": "o361"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 85.51,
+    "end": 85.51,
+    "confidence": 0.874,
+    "id": "o362"
+   },
+   {
+    "text": "DESCAASUROFH",
+    "start": 85.51,
+    "end": 85.51,
+    "confidence": 0.647,
+    "id": "o363"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 85.51,
+    "end": 85.51,
+    "confidence": 0.638,
+    "id": "o364"
+   },
+   {
+    "text": "CASERTARIN",
+    "start": 85.51,
+    "end": 85.51,
+    "confidence": 0.559,
+    "id": "o365"
+   },
+   {
+    "text": "SONDES",
+    "start": 85.51,
+    "end": 85.51,
+    "confidence": 0.688,
+    "id": "o366"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 87.5,
+    "end": 87.5,
+    "confidence": 0.999,
+    "id": "o367"
+   },
+   {
+    "text": "nous inondent",
+    "start": 87.5,
+    "end": 87.5,
+    "confidence": 0.717,
+    "id": "o368"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 87.5,
+    "end": 87.5,
+    "confidence": 0.617,
+    "id": "o369"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 87.5,
+    "end": 87.5,
+    "confidence": 0.758,
+    "id": "o370"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 87.5,
+    "end": 87.5,
+    "confidence": 0.64,
+    "id": "o371"
+   },
+   {
+    "text": "DESCAASUROFH",
+    "start": 87.5,
+    "end": 87.5,
+    "confidence": 0.645,
+    "id": "o372"
+   },
+   {
+    "text": "Ecoloelcu",
+    "start": 87.5,
+    "end": 87.5,
+    "confidence": 0.639,
+    "id": "o373"
+   },
+   {
+    "text": "CASERTARIN",
+    "start": 87.5,
+    "end": 87.5,
+    "confidence": 0.564,
+    "id": "o374"
+   },
+   {
+    "text": "SONDES",
+    "start": 87.5,
+    "end": 87.5,
+    "confidence": 0.685,
+    "id": "o375"
+   },
+   {
+    "text": "Les bobos parisiens",
+    "start": 89.49,
+    "end": 89.49,
+    "confidence": 0.666,
+    "id": "o376"
+   },
+   {
+    "text": "nous inondent",
+    "start": 89.49,
+    "end": 89.49,
+    "confidence": 0.717,
+    "id": "o377"
+   },
+   {
+    "text": "d'eoliennes, et bien",
+    "start": 89.49,
+    "end": 89.49,
+    "confidence": 0.617,
+    "id": "o378"
+   },
+   {
+    "text": "nous les ploucs, on n'en",
+    "start": 89.49,
+    "end": 89.49,
+    "confidence": 0.745,
+    "id": "o379"
+   },
+   {
+    "text": "veux pas ! >",
+    "start": 89.49,
+    "end": 89.49,
+    "confidence": 0.641,
+    "id": "o380"
+   },
+   {
+    "text": "DESCAASUROFH",
+    "start": 89.49,
+    "end": 89.49,
+    "confidence": 0.645,
+    "id": "o381"
+   },
+   {
+    "text": "CASERTARIN",
+    "start": 89.49,
+    "end": 89.49,
+    "confidence": 0.508,
+    "id": "o382"
+   },
+   {
+    "text": "SONDES",
+    "start": 89.49,
+    "end": 89.49,
+    "confidence": 0.682,
+    "id": "o383"
+   }
+  ]
+ }
+}

@@ -1,0 +1,263 @@
+{
+ "video_id": "v146",
+ "filename": "new_TikTok_7460101278501260552.mp4",
+ "relative_path": "new_TikTok_7460101278501260552.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:58",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.437,
+  "duration_seconds": 14.33,
+  "segments": []
+ },
+ "on_screen": {
+  "frames_sampled": 8,
+  "detections": [
+   {
+    "time": 2.0,
+    "text": "DermnX",
+    "confidence": 0.552
+   },
+   {
+    "time": 2.0,
+    "text": "DL",
+    "confidence": 0.888
+   },
+   {
+    "time": 2.0,
+    "text": "Tueton",
+    "confidence": 0.584
+   },
+   {
+    "time": 2.0,
+    "text": "Ton",
+    "confidence": 0.774
+   },
+   {
+    "time": 2.0,
+    "text": "0L",
+    "confidence": 0.6
+   },
+   {
+    "time": 4.0,
+    "text": "' '",
+    "confidence": 0.606
+   },
+   {
+    "time": 6.0,
+    "text": "Dorm",
+    "confidence": 0.985
+   },
+   {
+    "time": 10.0,
+    "text": "Oarm",
+    "confidence": 0.813
+   },
+   {
+    "time": 10.0,
+    "text": "Darml",
+    "confidence": 0.869
+   },
+   {
+    "time": 12.0,
+    "text": "Director",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "Rameen Bhatti",
+    "confidence": 0.958
+   },
+   {
+    "time": 12.0,
+    "text": "Starring",
+    "confidence": 0.892
+   },
+   {
+    "time": 12.0,
+    "text": "Rameen Bhatti",
+    "confidence": 0.994
+   },
+   {
+    "time": 12.0,
+    "text": "C clipfly",
+    "confidence": 0.672
+   },
+   {
+    "time": 14.0,
+    "text": "Director",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "Rameen Bhatti",
+    "confidence": 0.977
+   },
+   {
+    "time": 14.0,
+    "text": "Starring",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "Rameen Bhatti",
+    "confidence": 0.766
+   },
+   {
+    "time": 14.0,
+    "text": "C clipfly",
+    "confidence": 0.734
+   }
+  ],
+  "captions": [
+   {
+    "text": "DermnX",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.552,
+    "id": "o1"
+   },
+   {
+    "text": "DL",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.888,
+    "id": "o2"
+   },
+   {
+    "text": "Tueton",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.584,
+    "id": "o3"
+   },
+   {
+    "text": "Ton",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.774,
+    "id": "o4"
+   },
+   {
+    "text": "0L",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.6,
+    "id": "o5"
+   },
+   {
+    "text": "' '",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.606,
+    "id": "o6"
+   },
+   {
+    "text": "Dorm",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.985,
+    "id": "o7"
+   },
+   {
+    "text": "Oarm",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.813,
+    "id": "o8"
+   },
+   {
+    "text": "Darml",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.869,
+    "id": "o9"
+   },
+   {
+    "text": "Director",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o10"
+   },
+   {
+    "text": "Rameen Bhatti",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.958,
+    "id": "o11"
+   },
+   {
+    "text": "Starring",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.892,
+    "id": "o12"
+   },
+   {
+    "text": "Rameen Bhatti",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.994,
+    "id": "o13"
+   },
+   {
+    "text": "C clipfly",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.672,
+    "id": "o14"
+   },
+   {
+    "text": "Director",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o15"
+   },
+   {
+    "text": "Rameen Bhatti",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.977,
+    "id": "o16"
+   },
+   {
+    "text": "Starring",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o17"
+   },
+   {
+    "text": "Rameen Bhatti",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.766,
+    "id": "o18"
+   },
+   {
+    "text": "C clipfly",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.734,
+    "id": "o19"
+   }
+  ]
+ }
+}

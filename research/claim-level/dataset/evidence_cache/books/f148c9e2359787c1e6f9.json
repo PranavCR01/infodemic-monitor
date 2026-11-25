@@ -1,0 +1,17 @@
+{
+ "query": "poliomyelitis[title] AND statpearls[book]",
+ "db": "books",
+ "ids": [
+  "5013696"
+ ],
+ "records": [
+  {
+   "id": "5013696",
+   "title": "Poliomyelitis",
+   "book": "statpearls",
+   "accession": "NBK558944"
+  }
+ ],
+ "_key": "books::poliomyelitis[title] AND statpearls[book]::5",
+ "_retrieved_at": "2026-11-22T12:00:38"
+}
