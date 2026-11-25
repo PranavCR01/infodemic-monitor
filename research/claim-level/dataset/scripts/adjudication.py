@@ -133,7 +133,9 @@ def apply(claim_rows, video_rows_fn=None):
     for r in claim_rows:
         key = (r["video_id"], r["claim_id"])
         entry, tag = None, TAG
-        if key in SWEEP_CLAIMS:
+        if key in SARCASM_CLAIMS:
+            entry, tag = SARCASM_CLAIMS[key], SARCASM_TAG
+        elif key in SWEEP_CLAIMS:
             entry, tag = SWEEP_CLAIMS[key], SWEEP_TAG
         elif key in CLAIMS:
             entry = CLAIMS[key]
@@ -185,6 +187,13 @@ def apply_video(row, first_label_basis):
                             "written for the first-pass label.] %s" % (extra, row["notes"]))
     elif vid in mv and (mv[vid]["video_level_label"], mv[vid]["misinfo_basis"]) == first_label_basis:
         row["reviewer_notes"] = AGREED_NOTE
+    if vid in SARCASM_VIDEOS:
+        # A rule application, not a per-video review by the lead: the review
+        # status is left as it was; the change is recorded in the notes.
+        note = "%s (%s)" % (SARCASM_VIDEOS[vid], SARCASM_TAG)
+        row["reviewer_notes"] = (row["reviewer_notes"] + " " + note).strip()
+        row["notes"] = ("[T47, 2026-11-25: %s The text below was written "
+                        "under the earlier sarcasm rule.] %s" % (SARCASM_VIDEOS[vid], row["notes"]))
     return row
 
 
@@ -251,4 +260,26 @@ SWEEP_VIDEOS = {
     "v81": "A2 (rule sweep): three on-screen claims added (c2-c4); none is UNSUPPORTED, so the label does not change.",
     "v139": "A3/A4 (rule sweep): c5 and c6 -> UNSUPPORTED.",
     "v161": "A3 (rule sweep): c6 lemon/liver detox -> UNSUPPORTED.",
+}
+
+
+# ---------------------------------------------------------------------------
+# Sarcasm rule (T47). The project lead decided on 2026-11-25 that a sarcastic
+# or mocking debunk with a clear target is REFUTES, with the sarcasm explained
+# in the notes; UNCLEAR stays for genuinely ambiguous tone, several speakers
+# who disagree, a speaker who contradicts themselves, and jokes with no clear
+# claim being rejected (README section 5). Every UNCLEAR stance on both splits
+# was re-checked against that rule, by rule only and without looking at any
+# model output. The rows kept UNCLEAR are listed in blind/sarcasm_sweep.md
+# (aggregate only for the test split).
+SARCASM_TAG = "sarcasm rule, lead decision 2026-11-25 (T47)"
+
+SARCASM_CLAIMS = {
+    ("v86", "c3"): ({"speaker_stance": "REFUTES",
+                     "notes": "[T47, 2026-11-25: now REFUTES. A sarcastic or mocking rejection with a clear target counts as REFUTES under the revised section 5; the speaker uses sarcasm to reject the chimpanzee origin of HIV. Because that origin is true, this is a denial of a supported claim (section 9 rule 2). The text below was written under the earlier rule.] "},
+                    "Sarcasm rule (section 5, revised): UNCLEAR -> REFUTES. The speaker mocks the zoonotic-origin account ('had to come from a monkey in Africa...') to reject it; the target is clear, so this is a sarcastic rejection, not ambiguous tone. Verdict stays SUPPORTED."),
+}
+
+SARCASM_VIDEOS = {
+    "v86": "Sarcasm rule (T47): c3 UNCLEAR -> REFUTES (sarcastic rejection of the true chimpanzee origin of HIV, so it also adds denies_supported:c3 for review). The label stays MISINFO/contradicted, decided by c2 and c4.",
 }

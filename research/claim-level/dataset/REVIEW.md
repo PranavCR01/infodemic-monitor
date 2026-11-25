@@ -47,10 +47,12 @@ and any `video_level_label` that no longer follows from its claims:
    - Read **speech and screen together**. A caption reading "MYTH: …" next to the
      claim confirms `REFUTES`.
    - A screen-only claim stated as fact is `ENDORSES` unless framed as a myth.
-   - `UNCLEAR` is the right answer for sarcasm, irony, two speakers who disagree,
-     and a speaker who contradicts themselves. **Prefer it to a guess** — it is a
-     review trigger (§11), and this is the distinction the whole design exists to
-     protect.
+   - A sarcastic or mocking debunk with a clear target is `REFUTES`; say in the
+     note that it was sarcastic (lead decision, 2026-11-25).
+   - `UNCLEAR` is the right answer for genuinely ambiguous tone, two speakers who
+     disagree, a speaker who contradicts themselves, and jokes with no clear claim
+     being rejected. **Prefer it to a guess** — it is a review trigger (§11), and
+     this is the distinction the whole design exists to protect.
 5. **`claim_verdict`** (§7): does it describe the *evidence*, not the speaker?
    - **`UNSUPPORTED`** is for an endorsed efficacy claim only (X cures,
      treats, prevents or reverses Y) where the search found nothing for or
