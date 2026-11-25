@@ -2073,6 +2073,17 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-25**: T48 (design §15, §17) Supabase asymmetric JWT verification, no spend.
+  `app/auth/dependencies.py` now verifies ES256/RS256 tokens against the project JWKS
+  (`SUPABASE_URL/auth/v1/.well-known/jwks.json`, new `app/auth/jwks.py`): key chosen by
+  `kid`, algorithm pinned per key type (EC P-256 → ES256, RSA → RS256; `oct`/private/other
+  keys dropped), cache 10 min, unknown kid → at most one refetch per 30 s, stale keys kept
+  1 h if the JWKS is unreachable, then 401. HS256 only with `SUPABASE_JWT_SECRET`, never with a
+  JWKS key; `none` and other algs refused. Every token needs `aud=authenticated` and `exp`;
+  `iss` must be `SUPABASE_URL/auth/v1` (checked for HS256 too when `SUPABASE_URL` is set).
+  Roles still from `app_metadata` only; `REQUIRE_AUTH=false` unchanged. 46 new tests (local
+  keys, faked JWKS, no network); two T33 test tokens gained `aud`. Full suite 1811 passed,
+  0 skipped (local Postgres 16 + pgvector, Redis, OCR). Branch `auto/T48`.
 - **2026-11-25**: T45 (design §4, §5, §13, §14) accuracy fixes from T43, no paid calls. Unicode-aware
   tokens (`app/core/text_tokens.py`) in the grounding guardrail, claim dedup and the strict matcher: v167's
   4 Devanagari tune claims are no longer dropped as ungrounded, and Devanagari pairs no longer score

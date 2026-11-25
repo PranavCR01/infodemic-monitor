@@ -389,10 +389,15 @@ ALLOWED_ORIGINS=https://your-app.vercel.app,https://your-app-git-main.vercel.app
 
 **Symptom:** All API requests return 401 even with a valid Supabase session.
 
-**Cause:** `SUPABASE_JWT_SECRET` on Railway does not match the JWT secret in the Supabase project.
+**Cause:** The api service can't verify the token. Since T48 ES256/RS256 tokens are
+checked against `SUPABASE_URL` + `/auth/v1/.well-known/jwks.json`, so the usual causes are
+a wrong or missing `SUPABASE_URL` (it also sets the expected issuer), the api service
+being unable to reach that URL, or, for legacy HS256 tokens, a `SUPABASE_JWT_SECRET` that
+doesn't match the project's legacy secret.
 
-**Fix:** Copy the JWT secret from Supabase → Settings → API → JWT Secret and re-set
-`SUPABASE_JWT_SECRET` in the Railway api service variables. Redeploy.
+**Fix:** Set `SUPABASE_URL` to the Project URL (Supabase → Settings → API), check the api
+logs for `Rejected bearer token: <reason>` / `JWKS fetch failed`, and redeploy. Only set
+`SUPABASE_JWT_SECRET` if the project still issues HS256 tokens.
 
 ---
 

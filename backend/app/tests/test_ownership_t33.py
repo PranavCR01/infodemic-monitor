@@ -502,7 +502,7 @@ def test_role_and_identity_only_from_the_verified_token(env):
     # user_metadata and the top-level role claim are ignored.
     forged = auth("bob", None, user_metadata={"role": "admin"})
     assert c.get("/jobs/job-alice", headers=forged).status_code == 404
-    forged = {"Authorization": f"Bearer {jwt.encode({'sub': 'bob', 'role': 'admin', 'exp': datetime.now(timezone.utc) + timedelta(hours=1)}, SECRET, algorithm='HS256')}"}  # noqa: E501
+    forged = {"Authorization": f"Bearer {jwt.encode({'sub': 'bob', 'aud': 'authenticated', 'role': 'admin', 'exp': datetime.now(timezone.utc) + timedelta(hours=1)}, SECRET, algorithm='HS256')}"}  # noqa: E501
     assert c.get("/jobs/job-alice", headers=forged).status_code == 404
     # A token signed with another key is refused.
     bad = {"Authorization": f"Bearer {jwt.encode({'sub': 'alice', 'app_metadata': {'role': 'admin'}}, 'other-key-0123456789abcdef0123456789', algorithm='HS256')}"}  # noqa: E501
@@ -511,8 +511,8 @@ def test_role_and_identity_only_from_the_verified_token(env):
     r = c.post("/v1/reviews/rev-bob/decision", headers=CALLERS["reviewer"],
                json={**DECISION, "reviewer_id": "alice"})
     assert r.status_code == 422
-    # A token with a role but no subject sees nothing.
-    nosub = {"Authorization": f"Bearer {jwt.encode({'app_metadata': {'role': 'admin'}, 'exp': datetime.now(timezone.utc) + timedelta(hours=1)}, SECRET, algorithm='HS256')}"}  # noqa: E501
+    # A token with a role but no subject sees nothing. (T48: tokens need aud=authenticated.)
+    nosub = {"Authorization": f"Bearer {jwt.encode({'app_metadata': {'role': 'admin'}, 'aud': 'authenticated', 'exp': datetime.now(timezone.utc) + timedelta(hours=1)}, SECRET, algorithm='HS256')}"}  # noqa: E501
     assert c.get("/jobs/job-legacy", headers=nosub).status_code == 404
     assert c.get("/v1/jobs", headers=nosub).json()["total"] == 0
 
