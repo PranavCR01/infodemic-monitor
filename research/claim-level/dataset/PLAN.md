@@ -62,6 +62,8 @@ The old README predates the target design. Three changes, all from the target do
 2. **`speaker_stance` gains `UNCLEAR`** (§5) for sarcasm, disagreeing speakers and
    self-contradiction. The old four-value list forced a guess on exactly the cases
    §5 says to abstain on.
+   (Revised 2026-11-25, T47: a sarcastic debunk with a clear target is now
+   `REFUTES`; `UNCLEAR` keeps genuinely ambiguous tone. See README §5.)
 3. **`evidence_source` → `evidence_supporting` + `evidence_contradicting`.** §7
    outputs two separate lists, and §11 treats "both lists non-empty" as a
    measurable review trigger. One merged column cannot express that.

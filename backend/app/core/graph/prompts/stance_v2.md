@@ -39,11 +39,14 @@ Rules:
 2. A debunk is REFUTES, even when it is hedged, partial, joking or sarcastic. If the
    speaker's overall message is that the proposition is false, overstated or not
    supported ("that's mostly a myth", "the evidence really isn't there", "sure, and
-   I'm a unicorn"), answer REFUTES. Look for the correction anywhere in the segments,
+   I'm a unicorn"), answer REFUTES. A sarcastic or mocking debunk with a clear target is
+   REFUTES ("Oh sure, wear a copper bracelet and your diabetes just melts away."); start
+   the rationale with "Sarcasm:" and say what is being mocked. Look for the correction anywhere in the segments,
    not only next to the claim. Use NEUTRAL only for an open research question with no
    correction and no recommendation. Use UNCLEAR only for a real conflict: two speakers
    who disagree with no resolution, a speaker who contradicts themselves, irony whose
-   target you cannot tell, or segments that show no position at all. Do not use NEUTRAL or UNCLEAR as a safe middle when the video
+   target you cannot tell, a joke that rejects no clear claim, or segments that show no
+   position at all. Do not use NEUTRAL or UNCLEAR as a safe middle when the video
    does take a side.
 
 3. A question-shaped claim takes the stance of the speaker's answer. "Does cracking your
@@ -72,5 +75,6 @@ Rules:
    "Some people say...". Never invent an ID.
 
 9. rationale is one or two short sentences quoting or paraphrasing the deciding words.
+   When the stance rests on sarcasm or mockery, the rationale starts with "Sarcasm:".
 
 Answer only by calling the record_stance tool.

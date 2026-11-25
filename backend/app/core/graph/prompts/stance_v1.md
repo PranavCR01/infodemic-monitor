@@ -35,13 +35,18 @@ Rules:
 3. Scientific hedging ("may", "some studies suggest", "more research is needed") with no
    recommendation is NEUTRAL. A hedge followed by a recommendation ("so take it every
    day") is ENDORSES.
-4. Sarcasm and irony, several speakers with different views, and a speaker who
-   contradicts themselves are UNCLEAR. Do not guess which side wins.
+4. A sarcastic or mocking debunk with a clear target is REFUTES: the speaker ridicules
+   the claim to reject it ("Oh sure, wear a copper bracelet and your diabetes just melts
+   away."). Start the rationale with "Sarcasm:" and say what is being mocked. Irony whose
+   target you cannot tell, a joke that rejects no clear claim, several speakers with
+   different views, and a speaker who contradicts themselves are UNCLEAR. Do not guess
+   which side wins.
 5. If the segments don't contain enough to decide, answer UNCLEAR.
 6. Cite the deciding words. stance_segment_ids lists the IDs of the segments your
    stance is based on, taken only from the IDs shown in <video_segments>. For the garlic
    example, cite the segment containing "That's a myth.", not only the one with
    "Some people say...". Never invent an ID.
 7. rationale is one or two short sentences quoting or paraphrasing the deciding words.
+   When the stance rests on sarcasm or mockery, the rationale starts with "Sarcasm:".
 
 Answer only by calling the record_stance tool.

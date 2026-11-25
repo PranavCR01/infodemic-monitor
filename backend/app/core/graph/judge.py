@@ -188,6 +188,7 @@ class ClaimView:
     allowed_evidence_ids: frozenset[str]
     verification_failed: bool = False
     position: int = 0  # 1-based place in extraction order (0: unknown; see ``_names``)
+    stance_rationale: str = ""  # the stance step's rationale (T47: carries the sarcasm note)
 
     @property
     def claim_id(self) -> str:
@@ -200,6 +201,24 @@ class ClaimView:
     @property
     def stance_or_unclear(self) -> Stance:
         return self.stance or Stance.UNCLEAR
+
+    @property
+    def sarcastic(self) -> bool:
+        """T47: a REFUTES stance the stance step says rests on sarcasm or mockery. The
+        stance prompts start such a rationale with "Sarcasm:"; the label is unchanged
+        (a sarcastic debunk is still REFUTES), only the explanation mentions it."""
+        return self.stance == Stance.REFUTES and bool(_SARCASM_RE.match(self.stance_rationale or ""))
+
+
+# T47: the stance prompts start the rationale of a sarcastic or mocking debunk with
+# "Sarcasm:". Matched loosely ("Sarcastic:", "sarcasm -") so a small wording slip
+# still reaches the explanation; nothing else in the rationale is shown to users.
+_SARCASM_RE = re.compile(r"\s*sarcas(?:m|tic)\b", re.IGNORECASE)
+SARCASM_NOTE = " (using sarcasm)"
+
+
+def _sarcasm(v: ClaimView) -> str:
+    return SARCASM_NOTE if v.sarcastic else ""
 
 
 def _evidence_by_claim(state: PipelineState) -> dict[str, dict[str, EvidenceRecord]]:
@@ -242,6 +261,7 @@ def claim_views(
             allowed_evidence_ids=frozenset(evidence.get(c.claim_id, {})),
             verification_failed=c.claim_id in failed,
             position=i,
+            stance_rationale=stances[c.claim_id].rationale if c.claim_id in stances else "",
         )
         for i, c in enumerate(claims, start=1) if c.claim_id in verdicts
     ]
@@ -476,7 +496,7 @@ def template_explanation(d: Decision) -> str:
         text = _cap("; ".join(parts)) + "."
     elif d.rule == RULE_REFUTED_SUPPORTED:
         parts = [
-            f"the speaker denies {said(v)}, but the evidence supports it "
+            f"the speaker denies {said(v)}{_sarcasm(v)}, but the evidence supports it "
             f"({_ids(v.verification.supporting_evidence_ids)})"
             for v in d.deciding
         ]
@@ -491,14 +511,17 @@ def template_explanation(d: Decision) -> str:
         )
     elif d.rule == RULE_REFUTED_CONTRADICTED:
         parts = [
-            f"the speaker refutes {said(v)}, and the evidence contradicts it "
+            f"the speaker refutes {said(v)}{_sarcasm(v)}, and the evidence contradicts it "
             f"({_ids(v.verification.contradicting_evidence_ids)})"
             for v in d.deciding
         ]
         text = _cap("; ".join(parts)) + ", and the speaker endorses no claim the evidence contradicts."
+        if any(v.sarcastic for v in d.deciding):
+            # T47 (lead, 2026-11-25): show DEBUNKED, with the subtlety in the explanation.
+            text = "Debunked (the speaker uses sarcasm): " + text
     elif d.rule == RULE_REFUTED_UNSETTLED:
         parts = [
-            f"the speaker refutes {said(v)}, but {_EVIDENCE_STATE.get(v.verdict, 'the evidence is unsettled')}"
+            f"the speaker refutes {said(v)}{_sarcasm(v)}, but {_EVIDENCE_STATE.get(v.verdict, 'the evidence is unsettled')}"
             for v in d.deciding
         ]
         text = (
@@ -508,7 +531,7 @@ def template_explanation(d: Decision) -> str:
     else:
         supported = [names[v.claim_id] for v in d.deciding if v.verdict == Verdict.SUPPORTED]
         contradicted = [
-            f"{names[v.claim_id]} ({_STANCE_TEXT[v.stance_or_unclear]})"
+            f"{names[v.claim_id]} ({_STANCE_TEXT[v.stance_or_unclear]}{' using sarcasm' if v.sarcastic else ''})"
             for v in d.deciding if v.verdict == Verdict.CONTRADICTED
         ]
         n = len(d.deciding)
@@ -599,6 +622,7 @@ def _instructions(d: Decision, views: Sequence[ClaimView]) -> str:
             f" | supporting: {_meta(_ids(v.verification.supporting_evidence_ids))}"
             f" | contradicting: {_meta(_ids(v.verification.contradicting_evidence_ids))}"
             f" | deciding: {'yes' if v.claim_id in deciding else 'no'}"
+            + (" | sarcasm: yes" if v.sarcastic else "")
         )
     flags = "\n".join(f"- {flag_text(f, names)}" for f in d.review_flags) or "- none"
     return (
@@ -627,6 +651,9 @@ def build_prompt(
         if v.verification.explanation:
             blocks.append(fence(v.verification.explanation, kind="model_output",
                                 item_id=f"{v.claim_id}:verifier", max_chars=max_chars))
+        if v.sarcastic:  # T47: the stance step's note on the sarcasm, for the nuance
+            blocks.append(fence(v.stance_rationale, kind="model_output",
+                                item_id=f"{v.claim_id}:stance", max_chars=max_chars))
     return prompt.model_copy(update={
         "system": guarded_system_prompt(system_prompt),
         "blocks": tuple(blocks),

@@ -2105,6 +2105,19 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   NO_MISINFO 47 / CANNOT_RECOGNIZE 59 / MISINFO 39 / DEBUNKING 17, bases 26/12/1, zero §9
   inconsistencies. Nothing predicted or scored on the test split. Next: T14.
 
+- **2026-11-25**: T47 (design §5, §9, §12) sarcastic debunks are REFUTES (lead decision 2026-11-25), no
+  spend. Golden-set guide (README §5, REVIEW.md step 4, PLAN.md, design doc §5): a sarcastic or mocking
+  debunk with a clear target is REFUTES with the sarcasm noted; UNCLEAR keeps genuinely ambiguous tone,
+  disagreeing speakers, self-contradiction and jokes with no claim being rejected. All 4 UNCLEAR stances
+  re-checked by rule, no model output consulted: tune 1 of 2 relabelled (v86 c3 -> REFUTES; v121 c1 stays,
+  a joke with no claim being rejected), test 0 of 2. No video label changed; v86 gains
+  `denies_supported:c3`. Golden set `data/golden-label-set` @ 92a731e (fast-forward from 948b1c2), copied
+  byte-identical into `research/claim-level/dataset`. `stance_v1` (live, edited in place, as T30 did) and
+  `stance_v2` say REFUTES for a sarcastic debunk and start the rationale with "Sarcasm:"; the judge carries
+  the stance rationale on `ClaimView`, and the explanation says "Debunked (the speaker uses sarcasm): ..."
+  (template) or is told via a `sarcasm: yes` claim-table column and `explain_v2` (model). T38/T43 reports
+  measured the earlier `stance_v1` text. Cross-check re-pinned to 92a731e: 162/162 labels, 149/162 exact
+  reasons, unchanged; no judge changed. Branch `auto/T47`.
 - **2026-11-24**: T43 (design §13, §14) routing error analysis, no paid calls. T38 kept no per-item
   outputs, so per-claim error review, confusion matrices, bootstrap CIs and the dcf77b0 re-score were
   stopped; the runner now writes `per_item.json` and `app.evaluation.error_analysis` does all of it from
