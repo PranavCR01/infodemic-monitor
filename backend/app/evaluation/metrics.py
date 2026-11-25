@@ -17,13 +17,33 @@ STANCE_LABELS = ("ENDORSES", "REFUTES", "QUOTES", "NEUTRAL", "UNCLEAR")
 
 # --- Judge rules (section 9), used to sanity-check gold labels ---------------
 
-def judge_label(claims: Iterable[tuple[str, str]]) -> str:
-    """Video label from (stance, verdict) pairs, exactly as the section 9 rules."""
-    claims = list(claims)
+MISINFO_BASES = ("contradicted", "denies_supported", "unproven")
+
+
+def _misinfo_basis(claims: list[tuple[str, str]]) -> Optional[str]:
     if any(s == "ENDORSES" and v == "CONTRADICTED" for s, v in claims):
-        return "MISINFO"
+        return "contradicted"
     if any(s == "REFUTES" and v == "SUPPORTED" for s, v in claims):
-        return "MISINFO"  # the speaker denies something true (always reviewed)
+        return "denies_supported"  # the speaker denies something true (always reviewed)
+    if any(s == "ENDORSES" and v == "UNSUPPORTED" for s, v in claims):
+        return "unproven"  # T30: an endorsed efficacy claim nothing supports (always reviewed)
+    return None
+
+
+def misinfo_basis(claims: Iterable[tuple[str, str]]) -> Optional[str]:
+    """The §9 ``misinfo_basis`` for (stance, verdict) pairs; ``None`` unless MISINFO."""
+    return _misinfo_basis(list(claims))
+
+
+def judge_label(claims: Iterable[tuple[str, str]]) -> str:
+    """Video label from (stance, verdict) pairs, exactly as the section 9 rules.
+
+    An ``UNSUPPORTED`` verdict is taken as already eligible (an endorsed efficacy
+    claim, as the golden set uses it); the graph checks that before its judge.
+    """
+    claims = list(claims)
+    if _misinfo_basis(claims):
+        return "MISINFO"
     if any(s == "REFUTES" and v == "CONTRADICTED" for s, v in claims):
         return "DEBUNKING"
     if any(v in ("SUPPORTED", "CONTRADICTED") for _, v in claims):
