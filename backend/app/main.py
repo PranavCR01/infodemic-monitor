@@ -3,26 +3,32 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+import logging
+
 from app.core.config import settings
+
+_log = logging.getLogger("app.startup")
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     if settings.RUN_MIGRATIONS:
+        from pathlib import Path
+
         from alembic import command as alembic_command
         from alembic.config import Config as AlembicConfig
 
+        # alembic.ini sits next to the `app` package (backend/alembic.ini); its
+        # script_location is %(here)s-relative, so the working directory doesn't matter.
+        ini = Path(__file__).resolve().parent.parent / "alembic.ini"
         try:
-            # alembic.ini lives at /app/backend/alembic.ini in the container
-            alembic_cfg = AlembicConfig("/app/backend/alembic.ini")
-            alembic_command.upgrade(alembic_cfg, "head")
+            alembic_command.upgrade(AlembicConfig(str(ini)), "head")
         except Exception:
-            from app.db.base import Base
-            from sqlalchemy import create_engine
-
-            engine = create_engine(settings.DATABASE_URL_SYNC)
-            Base.metadata.create_all(engine)
-            engine.dispose()
+            # Fail loudly: a silent create_all fallback leaves the database without
+            # alembic_version or migration-only objects (pgvector tables, indexes),
+            # and every later migration then breaks.
+            _log.exception("database migrations failed; refusing to start")
+            raise
 
     yield
 
