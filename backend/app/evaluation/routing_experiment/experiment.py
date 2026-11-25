@@ -513,6 +513,24 @@ def _usd(x: Optional[float]) -> str:
     return "unpriced" if x is None else f"${x:,.2f}"
 
 
+def _f(x: Optional[float]) -> str:
+    return "n/a" if x is None else f"{x:.4f}"
+
+
+def render_claim_matchers(extras: dict[str, dict]) -> list[str]:
+    """T45: strict (selection metric) and meaning-based claim P/R/F1 per candidate."""
+    lines = ["", "Claim matching, strict (token Jaccard >= 0.5; the selection metric) next to "
+             "meaning-based (T43 content-word overlap; text only):", "",
+             "| candidate | strict P | strict R | strict F1 | meaning P | meaning R | meaning F1 | gold | predicted |",
+             "|---|---|---|---|---|---|---|---|---|"]
+    for key, e in extras.items():
+        s, mm = e.get("strict") or {}, e.get("meaning") or {}
+        lines.append(f"| {key} | {_f(s.get('precision'))} | {_f(s.get('recall'))} | {_f(s.get('f1'))} | "
+                     f"{_f(mm.get('precision'))} | {_f(mm.get('recall'))} | {_f(mm.get('f1'))} | "
+                     f"{s.get('n_gold', 'n/a')} | {s.get('n_pred', 'n/a')} |")
+    return lines
+
+
 def render_markdown(report: dict) -> str:
     est = report["estimate"] if report.get("mode") == "live" else report
     lines = [f"# Routing experiment ({report.get('mode')})", "",
@@ -545,8 +563,11 @@ def render_markdown(report: dict) -> str:
                 lines.append(f"| {candidate_key(ExperimentCandidate(**r['candidate']))} | {r['metric']} | {score} | "
                              f"{r['n_failed']}/{r['n_items']} | {cpi} | {r['latency_p95_ms']} | {reported} | "
                              f"{r.get('reasoning_tokens', 0):,} |")
-            for k, v in (d.get("extras") or {}).items():
-                lines.append(f"\n{k}: {json.dumps(v)}")
+            if step == "extract_claims" and d.get("extras"):
+                lines += render_claim_matchers(d["extras"])
+            else:
+                for k, v in (d.get("extras") or {}).items():
+                    lines.append(f"\n{k}: {json.dumps(v)}")
             if sel.get("excluded"):
                 lines.append(f"\nExcluded: {json.dumps(sel['excluded'])}")
             lines.append("")

@@ -7,8 +7,9 @@ where a metric is undefined (e.g. no items) rather than a misleading zero.
 from __future__ import annotations
 
 import math
-import re
 from typing import Hashable, Iterable, Optional, Sequence
+
+from app.core.text_tokens import word_tokens
 
 LABELS = ("MISINFO", "NO_MISINFO", "DEBUNKING", "CANNOT_RECOGNIZE")
 VERDICTS = ("SUPPORTED", "CONTRADICTED", "MIXED", "UNSUPPORTED", "INSUFFICIENT_EVIDENCE", "NOT_VERIFIABLE")  # UNSUPPORTED: T30
@@ -98,18 +99,17 @@ def cohens_kappa(a: Sequence[Hashable], b: Sequence[Hashable]) -> Optional[float
 
 # --- Claim extraction -------------------------------------------------------
 
-_TOKEN = re.compile(r"[a-z0-9]+")
-
-
 def _tokens(text: str) -> set[str]:
-    return set(_TOKEN.findall((text or "").lower()))
+    # Unicode-aware since T45 (app.core.text_tokens); identical to the old
+    # [a-z0-9]+ on ASCII text. Before, Devanagari text had no tokens at all.
+    return set(word_tokens(text))
 
 
 def text_similarity(a: str, b: str) -> float:
     """Token Jaccard similarity. A deliberately simple default matcher; swap in embeddings later."""
     ta, tb = _tokens(a), _tokens(b)
     if not ta and not tb:
-        return 1.0
+        return 1.0  # two empty/punctuation-only strings; no longer true of non-Latin text (T45)
     return len(ta & tb) / len(ta | tb)
 
 

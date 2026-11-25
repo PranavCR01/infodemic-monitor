@@ -21,6 +21,8 @@ METRIC_NAMES = (
     "macro_f1", "accuracy", "per_class_precision", "per_class_recall", "per_class_f1",
     "confusion_matrix", "false_misinfo_on_debunking",
     "claim_precision", "claim_recall", "claim_f1", "claim_source_accuracy",
+    # T45: the same counts under T43's meaning-based matcher, reported next to strict.
+    "claim_precision_meaning", "claim_recall_meaning", "claim_f1_meaning",
     "stance_macro_f1", "stance_debunk_recall",
     "verification_prf", "verification_macro_f1",
     "retrieval_recall_at_k", "retrieval_ndcg_at_k",
@@ -114,6 +116,28 @@ def _claim_pairs(videos, preds, threshold) -> list[tuple[GoldVideo, GoldClaim, P
     return pairs
 
 
+def _meaning_matches(with_claims) -> int:
+    """Matched-claim count under ``error_analysis.matching.meaning_match`` (T43). Time
+    spans feed its timed relaxation when both claims carry them (today's eval records
+    don't, so it runs text-only). Reported only; ``claim_f1`` stays strict, and the
+    stance and verdict metrics keep using the strict pairs."""
+    from app.evaluation.error_analysis.matching import meaning_match
+
+    n = 0
+    for v, p in with_claims:
+        if not p.claims:
+            continue
+        n += len(meaning_match(
+            [c.claim_text for c in v.claims], [c.claim_text for c in p.claims],
+            [_span(c) for c in v.claims], [_span(c) for c in p.claims]))
+    return n
+
+
+def _span(c) -> Optional[tuple[float, float]]:
+    start, end = getattr(c, "start_seconds", None), getattr(c, "end_seconds", None)
+    return (float(start), float(end)) if start is not None and end is not None else None
+
+
 def _claim_metrics(videos, preds, pairs) -> dict[str, Any]:
     out: dict[str, Any] = {}
     with_claims = [(v, p) for v, p in zip(videos, preds) if p.claims is not None]
@@ -124,6 +148,9 @@ def _claim_metrics(videos, preds, pairs) -> dict[str, Any]:
     n_pred = sum(len(p.claims) for _, p in with_claims)
     ext = m.extraction_prf(len(pairs), n_gold, n_pred)
     out.update(claim_precision=ext["precision"], claim_recall=ext["recall"], claim_f1=ext["f1"])
+    mext = m.extraction_prf(_meaning_matches(with_claims), n_gold, n_pred)
+    out.update(claim_precision_meaning=mext["precision"], claim_recall_meaning=mext["recall"],
+               claim_f1_meaning=mext["f1"])
 
     src = [(g.source, c.source) for _, g, c in pairs if g.source and c.source]
     out["claim_source_accuracy"] = m.accuracy([a for a, _ in src], [b for _, b in src]) if src else None

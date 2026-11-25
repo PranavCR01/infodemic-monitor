@@ -1,0 +1,15 @@
+# T45 proposed re-run (NOT run; the paid run is a separate approval).
+# Derived from backend/config/routing_experiment.yaml by keeping only the sonnet
+# extract_claims and analyze_stance candidates: current prompt vs the T45 prompt.
+version: routing_experiment_v1
+tie_margin: 0.01
+budget:
+  extract_claims: {max_failure_rate: 0.05}
+  analyze_stance: {max_failure_rate: 0.05}
+candidates:
+  extract_claims:
+  - {provider: anthropic, model: claude-sonnet-5-5, prompt: extract_v2}
+  - {provider: anthropic, model: claude-sonnet-5-5, prompt: extract_v3}
+  analyze_stance:
+  - {provider: anthropic, model: claude-sonnet-5-5, prompt: stance_v1}
+  - {provider: anthropic, model: claude-sonnet-5-5, prompt: stance_v2}

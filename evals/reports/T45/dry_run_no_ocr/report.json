@@ -1,0 +1,60 @@
+{
+  "mode": "dry_run",
+  "golden": "git:948b1c2@948b1c2badfc:research/claim-level/dataset",
+  "split": "tune",
+  "evidence_mode": null,
+  "evidence_assumed": false,
+  "use_ocr": false,
+  "steps": {
+    "extract_claims": {
+      "items": 48,
+      "metric": "claim_f1",
+      "candidates": [
+        {
+          "candidate": "anthropic/claude-sonnet-5-5@extract_v2",
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "prompt": "extract_v2",
+          "calls": 47,
+          "input_tokens": 144713,
+          "expected_output_tokens": 28200,
+          "max_output_tokens": 96256,
+          "reasoning_tokens": 0,
+          "output_cap_tokens": 96256,
+          "upper_bound_input_tokens": 361783,
+          "upper_bound_output_tokens": 192512,
+          "expected_usd": 0.5714,
+          "upper_bound_usd": 2.6487,
+          "priced": true,
+          "placeholder_id": false
+        },
+        {
+          "candidate": "anthropic/claude-sonnet-5-5@extract_v3",
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "prompt": "extract_v3",
+          "calls": 47,
+          "input_tokens": 180932,
+          "expected_output_tokens": 28200,
+          "max_output_tokens": 96256,
+          "reasoning_tokens": 0,
+          "output_cap_tokens": 96256,
+          "upper_bound_input_tokens": 452330,
+          "upper_bound_output_tokens": 192512,
+          "expected_usd": 0.6439,
+          "upper_bound_usd": 2.8298,
+          "priced": true,
+          "placeholder_id": false
+        }
+      ]
+    }
+  },
+  "total_expected_usd": 1.2153,
+  "total_upper_bound_usd": 5.4785,
+  "unpriced_candidates": [],
+  "placeholder_candidates": [],
+  "critic_provider_warnings": [],
+  "reasoning_config_problems": [],
+  "notes": [],
+  "written_at": "2026-11-25T02:36:41+00:00"
+}

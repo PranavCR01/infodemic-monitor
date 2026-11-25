@@ -356,8 +356,11 @@ def test_repo_candidates_file_matches_the_leads_set():
     models = {s: [c.model for c in cands] for s, cands in cf.candidates.items()}
     assert models["extract_claims"][:2] == models["analyze_stance"][:2] == ["claude-haiku-5-5", "claude-sonnet-5-5"]
     assert models["verify_claims"][:2] == ["claude-sonnet-5-5", "claude-opus-5-5"]
-    for cands in cf.candidates.values():
-        assert len(cands) == 3 and cands[2].provider == "openai" and cands[2].reasoning_tokens > 0
+    for step, cands in cf.candidates.items():
+        assert cands[2].provider == "openai" and cands[2].reasoning_tokens > 0
+        # T45 adds one sonnet candidate with the new prompt to extract and stance only.
+        extra = {"extract_claims": "extract_v3", "analyze_stance": "stance_v2"}.get(step)
+        assert [(c.model, c.prompt) for c in cands[3:]] == ([("claude-sonnet-5-5", extra)] if extra else [])
         # Every candidate is either priced or a TODO placeholder a live run refuses.
         assert all(routing.price(c.model) is not None or c.placeholder for c in cands)
 
