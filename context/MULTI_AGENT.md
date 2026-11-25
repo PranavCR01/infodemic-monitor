@@ -2073,6 +2073,16 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-24**: T43 (design §13, §14) routing error analysis, no paid calls. T38 kept no per-item
+  outputs, so per-claim error review, confusion matrices, bootstrap CIs and the dcf77b0 re-score were
+  stopped; the runner now writes `per_item.json` and `app.evaluation.error_analysis` does all of it from
+  that. Found: blind two-pass extraction ceiling on tune is strict F1 0.68 / meaning F1 0.79 (Sonnet
+  0.42 strict); grounding guardrail and strict matcher drop/mis-score non-Latin claims (v167); extract_v2
+  lacks the gold's original-language/bracket conventions (35% of tune claims non-English). dcf77b0 vs
+  0fbc68a: 11 tune claims changed (948b1c2, now current: 21), no stance labels; stance winner can't
+  flip, extract/verify could.
+  New `config/pipeline.yaml` `extraction.use_ocr` (default true) for the no-OCR ablation. Report
+  `evals/reports/T43_error_analysis.md`. Branch `auto/T43`.
 - **2026-11-24**: T44 (design §9, §11, §14) re-pinned the judge cross-check to the golden
   set after the A2-A4 rule sweep (data/golden-label-set 948b1c2: 550 claims; in scope
   NO_MISINFO 47 / CANNOT_RECOGNIZE 59 / MISINFO 39 (26 contradicted, 12 unproven, 1

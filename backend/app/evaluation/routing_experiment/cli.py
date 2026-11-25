@@ -27,6 +27,7 @@ import sys
 from pathlib import Path
 from typing import Optional, Sequence
 
+from app.core.pipeline_options import DEFAULT_PIPELINE_OPTIONS_PATH, load_pipeline_options
 from app.core.routing.config import RoutingConfigError, load_routing
 from app.evaluation.routing_experiment import experiment as ex
 from app.evaluation.routing_experiment.frozen import (
@@ -103,8 +104,9 @@ def cmd_run(args, *, client_factory=None) -> int:
     tune = _tune(args)
     frozen = FrozenEvidence.load(Path(args.frozen_evidence), args.evidence_mode) if args.frozen_evidence else None
     steps = args.steps or list(STEPS)
+    options = load_pipeline_options(args.pipeline_options)
     plan = ex.build_plan(tune, candidates, routing, steps=steps, frozen=frozen, videos=args.videos,
-                         allow_assumed_evidence=not args.live)
+                         allow_assumed_evidence=not args.live, pipeline_options=options)
 
     if args.live and args.max_usd is None:
         print("refused: --live needs --max-usd <cap in USD>. Nothing was called.", file=sys.stderr)
@@ -152,6 +154,9 @@ def build_parser() -> argparse.ArgumentParser:
         r.add_argument("--frozen-evidence", default=None, help="file from freeze-evidence (verify_claims)")
         r.add_argument("--evidence-mode", choices=MODES, default=DEFAULT_MODE)
         r.add_argument("--steps", nargs="*", choices=STEPS, default=None)
+        r.add_argument("--pipeline-options", default=str(DEFAULT_PIPELINE_OPTIONS_PATH),
+                       help="pipeline options YAML (extraction.use_ocr); point at a copy with "
+                            "use_ocr: false for the no-OCR ablation")
         r.add_argument("--out", default=None, help="directory for report.json, report.md, routing_v2.yaml")
         if name == "run":
             r.add_argument("--live", action="store_true", help="make PAID model calls (needs --max-usd)")

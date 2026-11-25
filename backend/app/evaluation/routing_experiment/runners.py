@@ -42,11 +42,27 @@ def _state(video_id: str, **fields: Any) -> dict:
     return s
 
 
+class ExtractedClaims(list):
+    """Claim texts (what the scorer reads) plus each claim's details for the per-item
+    record (T43 error analysis): text, time span, source pieces, category."""
+
+    def __init__(self, claims: list = (), errors: list = ()):
+        super().__init__(c.claim_text for c in claims)
+        # Node errors (e.g. claim_ungrounded: a claim the grounding guardrail dropped).
+        self.errors = [getattr(e, "message", str(e))[:300] for e in errors]
+        self.details = [
+            {"text": c.claim_text, "start": c.start_seconds, "end": c.end_seconds,
+             "source_segment_ids": list(c.source_segment_ids), "category": c.claim_category,
+             "requires_verification": c.requires_verification}
+            for c in claims
+        ]
+
+
 def run_extract(router: ModelRouter, item: StepItem) -> list[str]:
     v: VideoInput = item.input
     node = claims_mod.make_extract_claims(router, prompt_version=_version(router, claims_mod.STEP))
     out = node(_state(v.video_id, transcript_segments=v.transcript, ocr_segments=v.ocr, fused_segments=v.fused))
-    return [c.claim_text for c in out.get("claims", [])]
+    return ExtractedClaims(out.get("claims", []), out.get("errors", []))
 
 
 def run_stance(router: ModelRouter, item: StepItem) -> str:

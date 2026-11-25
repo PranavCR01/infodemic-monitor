@@ -27,6 +27,7 @@ from typing import Any, Iterable, Optional, Sequence
 from pydantic import BaseModel, ConfigDict
 
 from app.core.graph.nodes import fuse_by_overlap
+from app.core.pipeline_options import PipelineOptions
 from app.core.graph.state import (
     EvidenceRecord,
     FusedSegment,
@@ -165,6 +166,15 @@ def ocr_segments(
         OcrSegment(segment_id=f"o{i}", start=start, end=last + interval, text=text, confidence=1.0)
         for i, (start, last, text) in enumerate(runs, start=1)
     ]
+
+
+def extraction_view(video: VideoInput, options: "PipelineOptions") -> VideoInput:
+    """What extraction is given for ``video`` under ``options`` (config/pipeline.yaml):
+    unchanged with ``use_ocr: true``; transcript only (no captions, re-fused) with false."""
+    if options.extraction.use_ocr:
+        return video
+    return VideoInput(video_id=video.video_id, transcript=video.transcript, ocr=[],
+                      fused=fuse_by_overlap(video.transcript, []))
 
 
 def video_input(tune: TuneSet, video_id: str) -> VideoInput:
