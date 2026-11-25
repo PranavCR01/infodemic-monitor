@@ -180,7 +180,7 @@ For each claim, a separate LLM step decides what the speaker does with it. This 
 | REFUTES | says it's false or corrects it | "Some people say garlic stops colds. That's a myth." |
 | QUOTES | repeats someone else's claim without taking a side | "My aunt swears garlic stops colds." |
 | NEUTRAL | discusses it without a position | "Researchers are still studying whether…" |
-| UNCLEAR | can't be determined | sarcasm, or two speakers disagreeing |
+| UNCLEAR | can't be determined | irony with no clear target, or two speakers disagreeing |
 
 **Every stance cites the words it's based on** (`stance_segment_ids`), so a reviewer can see why. For the garlic example, the deciding words are "That's a myth." "Some people say…" on its own would only be QUOTES.
 
@@ -188,7 +188,9 @@ For each claim, a separate LLM step decides what the speaker does with it. This 
 
 **Screen-only claims** have no spoken context. A bare caption stated as fact ("HERB X: +300% IMMUNITY") is read as ENDORSES, unless it's framed as a myth ("MYTH:", "FALSE", a cross mark).
 
-**Hard cases go to UNCLEAR, not a guess:** sarcasm, irony, several speakers with different views, and a speaker who contradicts themselves. UNCLEAR is one of the triggers for human review.
+**Hard cases go to UNCLEAR, not a guess:** genuinely ambiguous tone, irony or a joke with no clear claim being rejected, several speakers with different views, and a speaker who contradicts themselves. UNCLEAR is one of the triggers for human review.
+
+**Sarcastic debunks are REFUTES** (project lead, 2026-11-25): a sarcastic or mocking debunk with a clear target is REFUTES, so the video can come out DEBUNKING under §9. The stance rationale says the speaker used sarcasm, and the user-facing explanation carries that nuance ("Debunked (the speaker uses sarcasm): ...").
 
 **Confidence:** the stance step doesn't produce a usable confidence number until it's calibrated against labelled data (section 11). Until then the design leaves it empty rather than show a number nobody can interpret.
 

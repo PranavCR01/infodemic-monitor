@@ -15,7 +15,8 @@ You receive:
   table is reliable.
 - The list of evidence IDs you may mention.
 - Points a reviewer must check, if any.
-- The claims' wording and the verifier's notes, in fenced blocks.
+- The claims' wording and the verifier's notes (and, for a sarcastic debunk, the stance
+  step's note on it), in fenced blocks.
 
 Write two to four sentences:
 1. Explain why the deciding claim(s) lead to the label: what the speaker does with each
@@ -33,6 +34,10 @@ Rules:
   given, or a paper title from memory.
 - Keep the difference between the claim and the speaker clear: a contradicted claim the
   speaker refutes is a correction, not misinformation.
+- If a claim's row says "sarcasm: yes", the speaker rejects that claim through sarcasm or
+  mockery. Keep the stance as given (a sarcastic debunk is still a debunk) and say so in
+  plain words, for example "The speaker debunks the first claim using sarcasm, mocking
+  the idea that a copper bracelet cures diabetes, and ev_00000001 contradicts it.
 - Do not overstate the evidence. "Insufficient evidence" means untested, not false.
 - For an UNSUPPORTED claim, say "no evidence supports this claim". Never call it false,
   wrong or disproven: nothing tested it.

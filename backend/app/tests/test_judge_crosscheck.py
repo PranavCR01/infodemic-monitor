@@ -43,8 +43,8 @@ def results() -> list[xc.VideoComparison]:
     return xc.compare_all(VIDEOS, GOLDEN.judge, GOLDEN.review_reasons)
 
 
-# Every difference the cross-check finds on the golden set @ 948b1c2 (A2-A4 rule sweep,
-# T44; kind → reasons). All are backend-only review reasons; no
+# Every difference the cross-check finds on the golden set @ 92a731e (T47 sarcasm rule;
+# unchanged from 948b1c2, the A2-A4 rule sweep re-pinned by T44; kind → reasons). All are backend-only review reasons; no
 # label, misinfo_basis, deciding-claim or review-routing difference. A change to either
 # judge that adds, removes or reclassifies a difference fails here on purpose.
 EXPECTED_DIFFERENCES = {
@@ -75,7 +75,7 @@ def test_fixture_covers_every_labelled_video():
     for v in VIDEOS:
         if v.out_of_scope:
             assert not v.claims, v.video_id  # out_of_scope ⇒ no claims
-    # 948b1c2 has 13 in-scope videos with no checkable claim (all CANNOT_RECOGNIZE).
+    # 92a731e (as 948b1c2) has 13 in-scope videos with no checkable claim (all CANNOT_RECOGNIZE).
     no_claims = [v for v in VIDEOS if not v.out_of_scope and not v.claims]
     assert len(no_claims) == 13
     assert {v.recorded_label for v in no_claims} == {"CANNOT_RECOGNIZE"}
@@ -107,7 +107,8 @@ def test_misinfo_counts_by_basis(results):
 
 
 def test_recorded_labels_in_scope():
-    """The golden set after the A2-A4 rule sweep @ 948b1c2 (T44)."""
+    """The golden set @ 92a731e (T47). Same counts as 948b1c2 (T44): the sarcasm rule
+    relabelled one stance (v86 c3) and changed no video label."""
     counts = Counter(v.recorded_label for v in VIDEOS if not v.out_of_scope)
     assert dict(counts) == {"NO_MISINFO": 47, "CANNOT_RECOGNIZE": 59, "MISINFO": 39, "DEBUNKING": 17}
 
@@ -138,7 +139,7 @@ def test_backend_never_drops_a_review_the_golden_judge_asks_for(results):
 def test_every_golden_only_reason_is_one_the_backend_reads_differently_from_section_11(results):
     golden_only = {r.differences[x] for r in results for x in r.golden_only}
     assert golden_only <= {"trigger_on_non_deciding_claim_when_nothing_decides"}
-    assert golden_only == set()  # none at 948b1c2
+    assert golden_only == set()  # none at 92a731e (nor at 948b1c2)
 
 
 def test_every_difference_kind_says_which_side_matches_section_9():
@@ -226,7 +227,7 @@ def test_refuted_unsupported_is_a_known_backend_deviation():
 
 def test_nothing_judged_is_shared_with_the_pinned_golden_judge(results):
     """T37/T42/T44: the golden judge has the nothing_judged rule, so both sides raise it
-    on the same 24 videos @ 948b1c2 (28 @ 022ac44, 26 @ dcf77b0; the rule sweep made v35
+    on the same 24 videos @ 92a731e and 948b1c2 (28 @ 022ac44, 26 @ dcf77b0; the rule sweep made v35
     and v161 MISINFO/unproven, so nothing_judged no longer applies to them). Every such video is CANNOT_RECOGNIZE with nothing deciding and has
     an INSUFFICIENT_EVIDENCE claim."""
     gained = [r for r in results if "nothing_judged" in r.backend.reasons]
@@ -267,9 +268,9 @@ def test_not_verifiable_only_video_gains_no_reason():
 
 
 def test_backend_sends_71_in_scope_videos_to_review(results):
-    """T44: on the golden set @ 948b1c2 the backend sends 71 of 162 in-scope videos to
+    """T44/T47: on the golden set @ 92a731e the backend sends 71 of 162 in-scope videos to
     review, the same videos the golden judge sends and videos.csv records (69 @ dcf77b0;
-    the rule sweep newly sends v22 and v139)."""
+    the rule sweep newly sends v22 and v139; T47 adds a reason to v86, already sent)."""
     in_scope = [r for r in results if not r.out_of_scope]
     sent = {r.video_id for r in in_scope if r.backend.reasons}
     assert len(sent) == 71
@@ -308,3 +309,19 @@ def test_fixture_matches_the_golden_branch_when_available():
         pytest.skip("golden-label-set commit not available locally (git fetch origin data/golden-label-set)")
     assert xc.to_fixture(xc.load_golden_csvs(videos_csv, claims_csv)) == META["videos"]
     assert _git_show(META["source"]["judge_path"]) == (FIXTURE_DIR / "judge.py").read_text()
+
+
+def test_t47_sarcastic_debunk_is_refutes_and_both_judges_flag_the_denial(results):
+    """T47 (lead, 2026-11-25): a sarcastic debunk with a clear target is REFUTES. In the
+    golden set @ 92a731e that relabels v86 c3 (UNCLEAR -> REFUTES; the mocked claim is
+    SUPPORTED), so both judges add denies_supported:c3. v86 stays MISINFO/contradicted
+    (decided by its endorsed, contradicted claims) and was already in review."""
+    v86 = next(v for v in VIDEOS if v.video_id == "v86")
+    c3 = next(c for c in v86.claims if c.claim_id == "c3")
+    assert (c3.speaker_stance, c3.claim_verdict) == ("REFUTES", "SUPPORTED")
+    assert "denies_supported:c3" in v86.recorded_review_reasons
+    r = next(x for x in results if x.video_id == "v86")
+    assert "denies_supported:c3" in r.backend.reasons and "denies_supported:c3" in r.golden.reasons
+    assert (r.backend.label, r.backend.basis) == ("MISINFO", "contradicted")
+    stances = Counter(c.speaker_stance for v in VIDEOS for c in v.claims)
+    assert stances["UNCLEAR"] == 3 and stances["REFUTES"] == 59

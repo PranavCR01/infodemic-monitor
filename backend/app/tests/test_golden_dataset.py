@@ -1,4 +1,4 @@
-"""The real golden label set (research/claim-level/dataset @ 948b1c2) through the
+"""The real golden label set (research/claim-level/dataset @ 92a731e) through the
 evaluation loader (T46, design doc section 14).
 
 Counts and schema checks only. The test split is reserved for T14: these tests count
@@ -25,7 +25,7 @@ GOLDEN = Path(__file__).resolve().parents[3] / "research" / "claim-level" / "dat
 @pytest.fixture(scope="module")
 def golden():
     # Labels only; inputs are built per video below (tune split only).
-    return load_dataset(GOLDEN, version="948b1c2", with_inputs=False)
+    return load_dataset(GOLDEN, version="92a731e", with_inputs=False)
 
 
 def test_golden_set_is_in_the_repo():

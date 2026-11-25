@@ -1,11 +1,11 @@
 {
  "source": {
   "ref": "data/golden-label-set",
-  "commit": "948b1c2badfc3d00ab667cc40e863e40fd4ef63b",
+  "commit": "92a731e7f9548221635c8b9b99e098cbe0e6699a",
   "judge_path": "research/claim-level/dataset/scripts/judge.py",
   "judge_blob_sha": "0a49a3f037b77c261248aa9c0d72da0ae9c6b9fe",
-  "videos_blob_sha": "9f18146c72892ac97068b66351c7c9bceb37bbab",
-  "claims_blob_sha": "32ce2d2033f59064d1143af1c2275c42ef6b037f",
+  "videos_blob_sha": "efa6583be23a1f6ba6a50ae38dc56e9d271dbf87",
+  "claims_blob_sha": "a55390f685214c72a3587f69c535335f44fea21e",
   "note": "Claim-level fields only (stance, verdict, cited evidence IDs) and the recorded video label / review_reasons. Labels are data under human review (PR #62), not ground truth. Regenerate with scripts/judge_crosscheck.py --write-fixture."
  },
  "videos": [
@@ -3281,6 +3281,7 @@
    "out_of_scope": false,
    "recorded_label": "MISINFO",
    "recorded_review_reasons": [
+    "denies_supported:c3",
     "unproven_claim:c1"
    ],
    "recorded_basis": "contradicted",
@@ -3304,7 +3305,7 @@
     },
     {
      "claim_id": "c3",
-     "speaker_stance": "UNCLEAR",
+     "speaker_stance": "REFUTES",
      "claim_verdict": "SUPPORTED",
      "evidence_supporting": [
       "PMID:22229120"

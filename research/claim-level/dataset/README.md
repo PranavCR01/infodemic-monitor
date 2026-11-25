@@ -147,9 +147,17 @@ it", which is exactly the distinction §7 exists to protect.
 | `NEUTRAL` | discusses it without a position |
 | `UNCLEAR` | can't be determined |
 
-`UNCLEAR` is for sarcasm, irony, several speakers who disagree, and a speaker who
-contradicts themselves. **Use it rather than guessing** — it is a human-review
-trigger (§11), and a wrong guess on a hard case is worse than an honest abstention.
+**Sarcasm with a clear target is `REFUTES`** (lead decision, 2026-11-25). A
+sarcastic or mocking debunk with a clear target is `REFUTES`; say in the `notes`
+that it was sarcastic, so the nuance reaches the explanation. The video can then
+come out `DEBUNKING` (or, if the mocked claim is true, `MISINFO` /
+`denies_supported`) under §9 like any other refutation.
+
+`UNCLEAR` is for genuinely ambiguous tone (you cannot tell whether the speaker is
+mocking the claim or entertaining it), several speakers who disagree, a speaker
+who contradicts themselves, and jokes with no clear claim being rejected.
+**Use it rather than guessing** — it is a human-review trigger (§11), and a wrong
+guess on a hard case is worse than an honest abstention.
 
 Read speech and screen **together**: the caption "MYTH: GARLIC STOPS COLDS" next
 to a speaker debunking it confirms `REFUTES`. A screen-only claim stated as fact
