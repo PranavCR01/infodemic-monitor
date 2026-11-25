@@ -1,0 +1,80 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 55.1,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 4.24,
+    "text": "If you go for a 20-minute walk in the morning on an empty stomach, the following happens."
+   },
+   {
+    "id": "t2",
+    "start": 5.12,
+    "end": 9.92,
+    "text": "Since your glycogen stores are depleted overnight, your body switches to burning fat more quickly."
+   },
+   {
+    "id": "t3",
+    "start": 10.72,
+    "end": 15.44,
+    "text": "Additionally, your metabolism gets activated, helping you burn fat more efficiently,"
+   },
+   {
+    "id": "t4",
+    "start": 15.44,
+    "end": 20.9,
+    "text": "which makes weight loss easier and faster. Your cortisol level, the stress hormone,"
+   },
+   {
+    "id": "t5",
+    "start": 20.9,
+    "end": 24.98,
+    "text": "gets regulated. This helps you feel more relaxed and calm throughout the day."
+   },
+   {
+    "id": "t6",
+    "start": 25.94,
+    "end": 29.86,
+    "text": "You may even notice an improved mood, as morning movement boosts the production"
+   },
+   {
+    "id": "t7",
+    "start": 29.86,
+    "end": 35.62,
+    "text": "of your feel-good hormones like serotonin. After just one week, your circulation improves."
+   },
+   {
+    "id": "t8",
+    "start": 36.42,
+    "end": 40.18,
+    "text": "This helps regulate blood pressure and strengthens your cardiovascular system."
+   },
+   {
+    "id": "t9",
+    "start": 41.07,
+    "end": 45.55,
+    "text": "Your brain also gets more oxygen, enhancing concentration and mental clarity."
+   },
+   {
+    "id": "t10",
+    "start": 46.35,
+    "end": 51.76,
+    "text": "After 20 days, your immune system becomes stronger. Your sleep also improves."
+   },
+   {
+    "id": "t11",
+    "start": 51.76,
+    "end": 54.88,
+    "text": "You fall asleep faster and wake up feeling more refreshed."
+   }
+  ]
+ }
+}

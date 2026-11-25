@@ -1,0 +1,5165 @@
+{
+ "video_id": "v109",
+ "filename": "new_TikTok_7156031554437909766.mp4",
+ "relative_path": "new_TikTok_7156031554437909766.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@danydlg",
+ "extracted_at": "2026-11-23T08:45:56",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.998,
+  "duration_seconds": 58.63,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.46,
+    "text": "Lo que puede llegar a pasar si te llegas a automedicar, conoce en PIC."
+   },
+   {
+    "id": "t2",
+    "start": 3.46,
+    "end": 5.96,
+    "text": "Es un medicamento que trata diabetes tipo 2,"
+   },
+   {
+    "id": "t3",
+    "start": 5.96,
+    "end": 8.44,
+    "text": "reduce el riesgo de un derrame cerebral,"
+   },
+   {
+    "id": "t4",
+    "start": 8.44,
+    "end": 10.64,
+    "text": "reduce los riesgos de ataques cardíacos,"
+   },
+   {
+    "id": "t5",
+    "start": 10.64,
+    "end": 14.54,
+    "text": "reduce los riesgos de la muerte causada por diabetes tipo 2,"
+   },
+   {
+    "id": "t6",
+    "start": 14.54,
+    "end": 16.98,
+    "text": "por lo cual es un medicamento muy fuerte,"
+   },
+   {
+    "id": "t7",
+    "start": 16.98,
+    "end": 20.68,
+    "text": "el cual si no está llevado de la mano con un médico especialista,"
+   },
+   {
+    "id": "t8",
+    "start": 20.68,
+    "end": 23.76,
+    "text": "puede llegar a darte un tumor en la glándula tiroidea,"
+   },
+   {
+    "id": "t9",
+    "start": 23.76,
+    "end": 24.96,
+    "text": "pancreatitis,"
+   },
+   {
+    "id": "t10",
+    "start": 24.96,
+    "end": 26.24,
+    "text": "convulsiones,"
+   },
+   {
+    "id": "t11",
+    "start": 26.24,
+    "end": 28.6,
+    "text": "puedes desarrollar diabetes tipo 2,"
+   },
+   {
+    "id": "t12",
+    "start": 28.6,
+    "end": 32.76,
+    "text": "derrames cerebrales entre otras tragedias que te pueden llegar a pasar si lo"
+   },
+   {
+    "id": "t13",
+    "start": 32.76,
+    "end": 36.96,
+    "text": "consumes por ti sola. Además de todo lo que ya te platiqué es un medicamento el"
+   },
+   {
+    "id": "t14",
+    "start": 36.96,
+    "end": 40.72,
+    "text": "cual tiene que ser tan regulado de la mano con una especialista porque se tiene"
+   },
+   {
+    "id": "t15",
+    "start": 40.72,
+    "end": 46.04,
+    "text": "que ir aumentando la dosis poco a poco ya que si no se hace esto tu páncreas"
+   },
+   {
+    "id": "t16",
+    "start": 46.04,
+    "end": 50.08,
+    "text": "puede dejar de funcionar y obviamente vas a regresar a tu peso en el que estabas."
+   },
+   {
+    "id": "t17",
+    "start": 50.08,
+    "end": 55.28,
+    "text": "Son medicamentos educadores si no andan de la mano de dieta y ejercicio te"
+   },
+   {
+    "id": "t18",
+    "start": 55.28,
+    "end": 58.44,
+    "text": "regreso a su peso normal. Déjame todas tus dudas en comentarios."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 30,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Responder al comentario de gigi",
+    "confidence": 0.93
+   },
+   {
+    "time": 0.0,
+    "text": "lo voy a comprar;",
+    "confidence": 0.565
+   },
+   {
+    "time": 0.0,
+    "text": "necesita receta?",
+    "confidence": 0.996
+   },
+   {
+    "time": 0.0,
+    "text": "(semaglutide) injection",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "Inyectable",
+    "confidence": 0.671
+   },
+   {
+    "time": 0.0,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.969
+   },
+   {
+    "time": 0.0,
+    "text": "0.5",
+    "confidence": 0.69
+   },
+   {
+    "time": 0.0,
+    "text": "OZMPIC Y PORQUENO",
+    "confidence": 0.512
+   },
+   {
+    "time": 0.0,
+    "text": "AUUOMEDICARSE",
+    "confidence": 0.959
+   },
+   {
+    "time": 0.0,
+    "text": "MAGLUTIDA",
+    "confidence": 0.683
+   },
+   {
+    "time": 0.0,
+    "text": "ucion inyec",
+    "confidence": 0.822
+   },
+   {
+    "time": 0.0,
+    "text": "loque puede Ilegar a pasar",
+    "confidence": 0.683
+   },
+   {
+    "time": 0.0,
+    "text": "dosis de 0.2",
+    "confidence": 0.977
+   },
+   {
+    "time": 0.0,
+    "text": "si te Ilegas a automedicar",
+    "confidence": 0.807
+   },
+   {
+    "time": 0.0,
+    "text": "con no cempic",
+    "confidence": 0.722
+   },
+   {
+    "time": 2.0,
+    "text": "Responder al comentario de gigi",
+    "confidence": 0.956
+   },
+   {
+    "time": 2.0,
+    "text": "lo voy a comprar;",
+    "confidence": 0.628
+   },
+   {
+    "time": 2.0,
+    "text": "necesita receta?",
+    "confidence": 0.995
+   },
+   {
+    "time": 2.0,
+    "text": "OzEMPic",
+    "confidence": 0.81
+   },
+   {
+    "time": 2.0,
+    "text": "Inyectable",
+    "confidence": 0.9
+   },
+   {
+    "time": 2.0,
+    "text": "(semaglutide) injection",
+    "confidence": 0.818
+   },
+   {
+    "time": 2.0,
+    "text": "0 25 mg-0.5 mgldosis",
+    "confidence": 0.611
+   },
+   {
+    "time": 2.0,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.963
+   },
+   {
+    "time": 2.0,
+    "text": "OZMPIC Y PORQUENO",
+    "confidence": 0.801
+   },
+   {
+    "time": 2.0,
+    "text": "JZEM",
+    "confidence": 0.562
+   },
+   {
+    "time": 2.0,
+    "text": "AUTOMEDICARSE",
+    "confidence": 0.982
+   },
+   {
+    "time": 2.0,
+    "text": "MAGLUTIDA",
+    "confidence": 0.998
+   },
+   {
+    "time": 2.0,
+    "text": "ic?",
+    "confidence": 0.57
+   },
+   {
+    "time": 2.0,
+    "text": "Jucion inyed",
+    "confidence": 0.503
+   },
+   {
+    "time": 2.0,
+    "text": "loque puede Ilegar a pasar",
+    "confidence": 0.71
+   },
+   {
+    "time": 2.0,
+    "text": "dosis de 0.2",
+    "confidence": 0.964
+   },
+   {
+    "time": 2.0,
+    "text": "si te Ilegas a automedicar",
+    "confidence": 0.876
+   },
+   {
+    "time": 2.0,
+    "text": "con no cempic",
+    "confidence": 0.743
+   },
+   {
+    "time": 4.0,
+    "text": "OzEMPic",
+    "confidence": 0.525
+   },
+   {
+    "time": 4.0,
+    "text": "OzEMPic",
+    "confidence": 0.814
+   },
+   {
+    "time": 4.0,
+    "text": "Semaglutida",
+    "confidence": 0.853
+   },
+   {
+    "time": 4.0,
+    "text": "(semaglutide) injection",
+    "confidence": 0.997
+   },
+   {
+    "time": 4.0,
+    "text": "Inyectable",
+    "confidence": 0.896
+   },
+   {
+    "time": 4.0,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.972
+   },
+   {
+    "time": 4.0,
+    "text": "OZMPIC Y PORQUENO",
+    "confidence": 0.644
+   },
+   {
+    "time": 4.0,
+    "text": "AUTOMEDICARRSE",
+    "confidence": 0.906
+   },
+   {
+    "time": 4.0,
+    "text": "MAGLUTIDA",
+    "confidence": 0.997
+   },
+   {
+    "time": 4.0,
+    "text": "ic?",
+    "confidence": 0.543
+   },
+   {
+    "time": 4.0,
+    "text": "es un medicamento que",
+    "confidence": 0.66
+   },
+   {
+    "time": 4.0,
+    "text": "dosis de 0.2",
+    "confidence": 0.944
+   },
+   {
+    "time": 4.0,
+    "text": "trata diabetes tipo 2",
+    "confidence": 0.585
+   },
+   {
+    "time": 6.0,
+    "text": "OzEMPic",
+    "confidence": 0.784
+   },
+   {
+    "time": 6.0,
+    "text": "OzEMPic",
+    "confidence": 0.852
+   },
+   {
+    "time": 6.0,
+    "text": "Semaglutida",
+    "confidence": 0.91
+   },
+   {
+    "time": 6.0,
+    "text": "(semaglutide) injection",
+    "confidence": 0.998
+   },
+   {
+    "time": 6.0,
+    "text": "Invectable",
+    "confidence": 0.697
+   },
+   {
+    "time": 6.0,
+    "text": "mg-0.5 mg/dosis",
+    "confidence": 0.593
+   },
+   {
+    "time": 6.0,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.956
+   },
+   {
+    "time": 6.0,
+    "text": "MAGLUTIDA",
+    "confidence": 0.996
+   },
+   {
+    "time": 6.0,
+    "text": "mgu",
+    "confidence": 0.93
+   },
+   {
+    "time": 6.0,
+    "text": "reduce el riesgo de un",
+    "confidence": 0.831
+   },
+   {
+    "time": 6.0,
+    "text": "dosis de 0.2",
+    "confidence": 0.807
+   },
+   {
+    "time": 6.0,
+    "text": "derrame cerebral",
+    "confidence": 0.903
+   },
+   {
+    "time": 8.0,
+    "text": "OzEMPic",
+    "confidence": 0.787
+   },
+   {
+    "time": 8.0,
+    "text": "OzEMPic",
+    "confidence": 0.853
+   },
+   {
+    "time": 8.0,
+    "text": "Semaglutida",
+    "confidence": 0.863
+   },
+   {
+    "time": 8.0,
+    "text": "(semaglutide) injection",
+    "confidence": 0.998
+   },
+   {
+    "time": 8.0,
+    "text": "Invectable",
+    "confidence": 0.613
+   },
+   {
+    "time": 8.0,
+    "text": "mg-0.5 mg/dosis",
+    "confidence": 0.613
+   },
+   {
+    "time": 8.0,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.773
+   },
+   {
+    "time": 8.0,
+    "text": "MAGLUTIDA",
+    "confidence": 0.995
+   },
+   {
+    "time": 8.0,
+    "text": "mgu",
+    "confidence": 0.919
+   },
+   {
+    "time": 8.0,
+    "text": "Ia vez por ser",
+    "confidence": 0.597
+   },
+   {
+    "time": 8.0,
+    "text": "riesgo",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "reduce el",
+    "confidence": 0.672
+   },
+   {
+    "time": 8.0,
+    "text": "de un",
+    "confidence": 0.948
+   },
+   {
+    "time": 8.0,
+    "text": "dosis de 0.2",
+    "confidence": 0.766
+   },
+   {
+    "time": 8.0,
+    "text": "derrame cerebral",
+    "confidence": 0.802
+   },
+   {
+    "time": 10.03,
+    "text": "OzEMPic",
+    "confidence": 0.776
+   },
+   {
+    "time": 10.03,
+    "text": "OzEMPic",
+    "confidence": 0.864
+   },
+   {
+    "time": 10.03,
+    "text": "Scmaglutida",
+    "confidence": 0.728
+   },
+   {
+    "time": 10.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.998
+   },
+   {
+    "time": 10.03,
+    "text": "Inyectable",
+    "confidence": 0.894
+   },
+   {
+    "time": 10.03,
+    "text": "0 25 mg-0.5 mg/dosis",
+    "confidence": 0.572
+   },
+   {
+    "time": 10.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.937
+   },
+   {
+    "time": 10.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.973
+   },
+   {
+    "time": 10.03,
+    "text": "Jucion inyed",
+    "confidence": 0.673
+   },
+   {
+    "time": 10.03,
+    "text": "mgu",
+    "confidence": 0.838
+   },
+   {
+    "time": 10.03,
+    "text": "reduce los riesgos de",
+    "confidence": 0.905
+   },
+   {
+    "time": 10.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.656
+   },
+   {
+    "time": 10.03,
+    "text": "ataques cardiacos",
+    "confidence": 0.814
+   },
+   {
+    "time": 12.03,
+    "text": "OzEMPic",
+    "confidence": 0.778
+   },
+   {
+    "time": 12.03,
+    "text": "OzEMPic",
+    "confidence": 0.868
+   },
+   {
+    "time": 12.03,
+    "text": "Scmaglutida",
+    "confidence": 0.818
+   },
+   {
+    "time": 12.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.998
+   },
+   {
+    "time": 12.03,
+    "text": "Inyectable",
+    "confidence": 0.905
+   },
+   {
+    "time": 12.03,
+    "text": "0 25 mg-0.5 mg/dosis",
+    "confidence": 0.577
+   },
+   {
+    "time": 12.03,
+    "text": "La pluma libera dosis de 0.25 mg 0 0.5",
+    "confidence": 0.72
+   },
+   {
+    "time": 12.03,
+    "text": "JZEMI",
+    "confidence": 0.556
+   },
+   {
+    "time": 12.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.978
+   },
+   {
+    "time": 12.03,
+    "text": "Jucion inyed",
+    "confidence": 0.697
+   },
+   {
+    "time": 12.03,
+    "text": "mgu",
+    "confidence": 0.864
+   },
+   {
+    "time": 12.03,
+    "text": "reduce los riesgos de la",
+    "confidence": 0.734
+   },
+   {
+    "time": 12.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.784
+   },
+   {
+    "time": 12.03,
+    "text": "muerte causada por",
+    "confidence": 0.906
+   },
+   {
+    "time": 12.03,
+    "text": "diabetes tipo 2",
+    "confidence": 0.998
+   },
+   {
+    "time": 14.03,
+    "text": "OzEMPic",
+    "confidence": 0.779
+   },
+   {
+    "time": 14.03,
+    "text": "OzEMPic",
+    "confidence": 0.803
+   },
+   {
+    "time": 14.03,
+    "text": "Semaglutida",
+    "confidence": 0.938
+   },
+   {
+    "time": 14.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.998
+   },
+   {
+    "time": 14.03,
+    "text": "Inyectable",
+    "confidence": 0.842
+   },
+   {
+    "time": 14.03,
+    "text": "mg-0.5 mg/dosis",
+    "confidence": 0.541
+   },
+   {
+    "time": 14.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.928
+   },
+   {
+    "time": 14.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.998
+   },
+   {
+    "time": 14.03,
+    "text": "ic?",
+    "confidence": 0.762
+   },
+   {
+    "time": 14.03,
+    "text": "mgu",
+    "confidence": 0.942
+   },
+   {
+    "time": 14.03,
+    "text": "De",
+    "confidence": 0.684
+   },
+   {
+    "time": 14.03,
+    "text": "reduce los riesgos de la",
+    "confidence": 0.621
+   },
+   {
+    "time": 14.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.918
+   },
+   {
+    "time": 14.03,
+    "text": "muerte causada por",
+    "confidence": 0.878
+   },
+   {
+    "time": 14.03,
+    "text": "diabetes tipo 2",
+    "confidence": 0.998
+   },
+   {
+    "time": 16.03,
+    "text": "OzEMPic",
+    "confidence": 0.67
+   },
+   {
+    "time": 16.03,
+    "text": "OzEMPic",
+    "confidence": 0.812
+   },
+   {
+    "time": 16.03,
+    "text": "Semaglutida",
+    "confidence": 0.785
+   },
+   {
+    "time": 16.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.998
+   },
+   {
+    "time": 16.03,
+    "text": "Inyectable",
+    "confidence": 0.899
+   },
+   {
+    "time": 16.03,
+    "text": "mg-0.5 mg/dosis",
+    "confidence": 0.554
+   },
+   {
+    "time": 16.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.774
+   },
+   {
+    "time": 16.03,
+    "text": "0.5",
+    "confidence": 0.927
+   },
+   {
+    "time": 16.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.997
+   },
+   {
+    "time": 16.03,
+    "text": "ic?",
+    "confidence": 0.727
+   },
+   {
+    "time": 16.03,
+    "text": "mgu",
+    "confidence": 0.922
+   },
+   {
+    "time": 16.03,
+    "text": "por lo cual es un",
+    "confidence": 0.718
+   },
+   {
+    "time": 16.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.697
+   },
+   {
+    "time": 16.03,
+    "text": "medicamento muy fuerte",
+    "confidence": 0.991
+   },
+   {
+    "time": 18.03,
+    "text": "OzEMPic",
+    "confidence": 0.764
+   },
+   {
+    "time": 18.03,
+    "text": "OzEMPic",
+    "confidence": 0.791
+   },
+   {
+    "time": 18.03,
+    "text": "Semaglutida",
+    "confidence": 0.506
+   },
+   {
+    "time": 18.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.03,
+    "text": "Inyectable",
+    "confidence": 0.904
+   },
+   {
+    "time": 18.03,
+    "text": "La pluma libera dosis de 0.25 mg 0",
+    "confidence": 0.969
+   },
+   {
+    "time": 18.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.996
+   },
+   {
+    "time": 18.03,
+    "text": "ic?",
+    "confidence": 0.797
+   },
+   {
+    "time": 18.03,
+    "text": "Jucion inyec",
+    "confidence": 0.535
+   },
+   {
+    "time": 18.03,
+    "text": "mgu",
+    "confidence": 0.867
+   },
+   {
+    "time": 18.03,
+    "text": "el cual si no esta Ilevado de",
+    "confidence": 0.608
+   },
+   {
+    "time": 18.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.577
+   },
+   {
+    "time": 18.03,
+    "text": "Ia mano con un medico",
+    "confidence": 0.822
+   },
+   {
+    "time": 18.03,
+    "text": "especialista",
+    "confidence": 0.728
+   },
+   {
+    "time": 20.03,
+    "text": "OzEMPic",
+    "confidence": 0.735
+   },
+   {
+    "time": 20.03,
+    "text": "OzEMPic",
+    "confidence": 0.819
+   },
+   {
+    "time": 20.03,
+    "text": "Semaglutida",
+    "confidence": 0.902
+   },
+   {
+    "time": 20.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.998
+   },
+   {
+    "time": 20.03,
+    "text": "Invectable",
+    "confidence": 0.743
+   },
+   {
+    "time": 20.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.774
+   },
+   {
+    "time": 20.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.997
+   },
+   {
+    "time": 20.03,
+    "text": "ic?",
+    "confidence": 0.764
+   },
+   {
+    "time": 20.03,
+    "text": "mgu",
+    "confidence": 0.803
+   },
+   {
+    "time": 20.03,
+    "text": "el cual si no esta Ilevado de",
+    "confidence": 0.798
+   },
+   {
+    "time": 20.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.69
+   },
+   {
+    "time": 20.03,
+    "text": "Ia mano con un medico",
+    "confidence": 0.755
+   },
+   {
+    "time": 20.03,
+    "text": "especialista",
+    "confidence": 0.726
+   },
+   {
+    "time": 22.03,
+    "text": "OzEMPic",
+    "confidence": 0.746
+   },
+   {
+    "time": 22.03,
+    "text": "OzEMPic",
+    "confidence": 0.788
+   },
+   {
+    "time": 22.03,
+    "text": "Semaglutida",
+    "confidence": 0.786
+   },
+   {
+    "time": 22.03,
+    "text": "Invectable",
+    "confidence": 0.82
+   },
+   {
+    "time": 22.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.771
+   },
+   {
+    "time": 22.03,
+    "text": "mg-0.5 mg/dosis",
+    "confidence": 0.572
+   },
+   {
+    "time": 22.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.971
+   },
+   {
+    "time": 22.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.997
+   },
+   {
+    "time": 22.03,
+    "text": "ic?",
+    "confidence": 0.561
+   },
+   {
+    "time": 22.03,
+    "text": "Ia vez por ser",
+    "confidence": 0.549
+   },
+   {
+    "time": 22.03,
+    "text": "puede Ilegar a darte un",
+    "confidence": 0.846
+   },
+   {
+    "time": 22.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.738
+   },
+   {
+    "time": 22.03,
+    "text": "glandula",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.03,
+    "text": "tumor en Ia",
+    "confidence": 0.58
+   },
+   {
+    "time": 22.03,
+    "text": "tiroidea pancreatitis",
+    "confidence": 0.997
+   },
+   {
+    "time": 24.03,
+    "text": "OzEMPic",
+    "confidence": 0.739
+   },
+   {
+    "time": 24.03,
+    "text": "OzEMPic",
+    "confidence": 0.798
+   },
+   {
+    "time": 24.03,
+    "text": "Semaglutida",
+    "confidence": 0.671
+   },
+   {
+    "time": 24.03,
+    "text": "Invectable",
+    "confidence": 0.811
+   },
+   {
+    "time": 24.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.999
+   },
+   {
+    "time": 24.03,
+    "text": "mg-0.5 mg/dosis",
+    "confidence": 0.575
+   },
+   {
+    "time": 24.03,
+    "text": "La pluma libera dosis de 0.25 mg 0 0 =",
+    "confidence": 0.617
+   },
+   {
+    "time": 24.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.995
+   },
+   {
+    "time": 24.03,
+    "text": "ic?",
+    "confidence": 0.569
+   },
+   {
+    "time": 24.03,
+    "text": "ucion inyec",
+    "confidence": 0.506
+   },
+   {
+    "time": 24.03,
+    "text": "mgu",
+    "confidence": 0.869
+   },
+   {
+    "time": 24.03,
+    "text": "puede Ilegar a darte un",
+    "confidence": 0.936
+   },
+   {
+    "time": 24.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.689
+   },
+   {
+    "time": 24.03,
+    "text": "glandula",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.03,
+    "text": "tumor en la",
+    "confidence": 0.513
+   },
+   {
+    "time": 24.03,
+    "text": "tiroidea pancreatitis",
+    "confidence": 0.997
+   },
+   {
+    "time": 26.03,
+    "text": "OzEMPic",
+    "confidence": 0.757
+   },
+   {
+    "time": 26.03,
+    "text": "OzEMPic",
+    "confidence": 0.812
+   },
+   {
+    "time": 26.03,
+    "text": "Semaglutida",
+    "confidence": 0.84
+   },
+   {
+    "time": 26.03,
+    "text": "Invectable",
+    "confidence": 0.825
+   },
+   {
+    "time": 26.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.993
+   },
+   {
+    "time": 26.03,
+    "text": "mg-0.5 mg/dosis",
+    "confidence": 0.507
+   },
+   {
+    "time": 26.03,
+    "text": "La pluma libera dosis de 0.25 mg 0 0u",
+    "confidence": 0.567
+   },
+   {
+    "time": 26.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.997
+   },
+   {
+    "time": 26.03,
+    "text": "ic?",
+    "confidence": 0.727
+   },
+   {
+    "time": 26.03,
+    "text": "ucion inyed",
+    "confidence": 0.589
+   },
+   {
+    "time": 26.03,
+    "text": "mgu",
+    "confidence": 0.948
+   },
+   {
+    "time": 26.03,
+    "text": "convulsiones puedes",
+    "confidence": 0.98
+   },
+   {
+    "time": 26.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.773
+   },
+   {
+    "time": 26.03,
+    "text": "desarrollar diabetes tipo 2",
+    "confidence": 0.724
+   },
+   {
+    "time": 28.03,
+    "text": "OzEMPic",
+    "confidence": 0.61
+   },
+   {
+    "time": 28.03,
+    "text": "OzEMPic",
+    "confidence": 0.838
+   },
+   {
+    "time": 28.03,
+    "text": "Semaglutida",
+    "confidence": 0.716
+   },
+   {
+    "time": 28.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.997
+   },
+   {
+    "time": 28.03,
+    "text": "Inyectable",
+    "confidence": 0.922
+   },
+   {
+    "time": 28.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.769
+   },
+   {
+    "time": 28.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.993
+   },
+   {
+    "time": 28.03,
+    "text": "ic?",
+    "confidence": 0.65
+   },
+   {
+    "time": 28.03,
+    "text": "mgu",
+    "confidence": 0.948
+   },
+   {
+    "time": 28.03,
+    "text": "convulsiones puedes",
+    "confidence": 0.964
+   },
+   {
+    "time": 28.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.571
+   },
+   {
+    "time": 28.03,
+    "text": "desarrollar diabetes tipo 2",
+    "confidence": 0.569
+   },
+   {
+    "time": 30.03,
+    "text": "OzEMPic",
+    "confidence": 0.659
+   },
+   {
+    "time": 30.03,
+    "text": "OzEMPic",
+    "confidence": 0.728
+   },
+   {
+    "time": 30.03,
+    "text": "Semaglutida",
+    "confidence": 0.93
+   },
+   {
+    "time": 30.03,
+    "text": "injection",
+    "confidence": 0.65
+   },
+   {
+    "time": 30.03,
+    "text": "Invectable",
+    "confidence": 0.663
+   },
+   {
+    "time": 30.03,
+    "text": "(semaglutide)",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.03,
+    "text": "mg-0.5 mg/dosis",
+    "confidence": 0.518
+   },
+   {
+    "time": 30.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.784
+   },
+   {
+    "time": 30.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.998
+   },
+   {
+    "time": 30.03,
+    "text": "ic?",
+    "confidence": 0.751
+   },
+   {
+    "time": 30.03,
+    "text": "ucion inyec",
+    "confidence": 0.657
+   },
+   {
+    "time": 30.03,
+    "text": "mgu",
+    "confidence": 0.954
+   },
+   {
+    "time": 30.03,
+    "text": "entre @tras tragedias que te",
+    "confidence": 0.802
+   },
+   {
+    "time": 30.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.629
+   },
+   {
+    "time": 30.03,
+    "text": "pueden Ilegar",
+    "confidence": 0.746
+   },
+   {
+    "time": 30.03,
+    "text": "pasar si lo",
+    "confidence": 0.778
+   },
+   {
+    "time": 30.03,
+    "text": "consumes por ti sola",
+    "confidence": 0.799
+   },
+   {
+    "time": 32.03,
+    "text": "OzEMPic",
+    "confidence": 0.658
+   },
+   {
+    "time": 32.03,
+    "text": "OzEMPic",
+    "confidence": 0.759
+   },
+   {
+    "time": 32.03,
+    "text": "Semaglutida",
+    "confidence": 0.93
+   },
+   {
+    "time": 32.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.998
+   },
+   {
+    "time": 32.03,
+    "text": "Invectable",
+    "confidence": 0.677
+   },
+   {
+    "time": 32.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.787
+   },
+   {
+    "time": 32.03,
+    "text": "0.5 ,",
+    "confidence": 0.633
+   },
+   {
+    "time": 32.03,
+    "text": "JZEMI",
+    "confidence": 0.685
+   },
+   {
+    "time": 32.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.998
+   },
+   {
+    "time": 32.03,
+    "text": "ic",
+    "confidence": 0.942
+   },
+   {
+    "time": 32.03,
+    "text": "ucion inyed",
+    "confidence": 0.768
+   },
+   {
+    "time": 32.03,
+    "text": "Ia vez por ser",
+    "confidence": 0.626
+   },
+   {
+    "time": 32.03,
+    "text": "entre otras tragedias que te",
+    "confidence": 0.861
+   },
+   {
+    "time": 32.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.643
+   },
+   {
+    "time": 32.03,
+    "text": "pueden Ilegar a pasar si lo",
+    "confidence": 0.852
+   },
+   {
+    "time": 32.03,
+    "text": "consumes por ti sola",
+    "confidence": 0.817
+   },
+   {
+    "time": 34.03,
+    "text": "OzEMPic",
+    "confidence": 0.769
+   },
+   {
+    "time": 34.03,
+    "text": "Semaglutida",
+    "confidence": 0.93
+   },
+   {
+    "time": 34.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.997
+   },
+   {
+    "time": 34.03,
+    "text": "Invectable",
+    "confidence": 0.699
+   },
+   {
+    "time": 34.03,
+    "text": "La pluma libera dosis de 0.25 mg €",
+    "confidence": 0.576
+   },
+   {
+    "time": 34.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.997
+   },
+   {
+    "time": 34.03,
+    "text": "ic?",
+    "confidence": 0.636
+   },
+   {
+    "time": 34.03,
+    "text": "ucion inyed",
+    "confidence": 0.696
+   },
+   {
+    "time": 34.03,
+    "text": "mgu",
+    "confidence": 0.954
+   },
+   {
+    "time": 34.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.758
+   },
+   {
+    "time": 36.03,
+    "text": "OzEMPic",
+    "confidence": 0.772
+   },
+   {
+    "time": 36.03,
+    "text": "OzEMPic",
+    "confidence": 0.846
+   },
+   {
+    "time": 36.03,
+    "text": "Semaglutida",
+    "confidence": 0.78
+   },
+   {
+    "time": 36.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.998
+   },
+   {
+    "time": 36.03,
+    "text": "Inyectable",
+    "confidence": 0.938
+   },
+   {
+    "time": 36.03,
+    "text": "mg-0.5 mg/dosis",
+    "confidence": 0.732
+   },
+   {
+    "time": 36.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.949
+   },
+   {
+    "time": 36.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.997
+   },
+   {
+    "time": 36.03,
+    "text": "ic?",
+    "confidence": 0.524
+   },
+   {
+    "time": 36.03,
+    "text": "Jucion inyec",
+    "confidence": 0.584
+   },
+   {
+    "time": 36.03,
+    "text": "0.5 mgd",
+    "confidence": 0.627
+   },
+   {
+    "time": 36.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.857
+   },
+   {
+    "time": 36.03,
+    "text": "es un medicamento",
+    "confidence": 0.769
+   },
+   {
+    "time": 38.03,
+    "text": "OzEMPic",
+    "confidence": 0.536
+   },
+   {
+    "time": 38.03,
+    "text": "OzEMPic",
+    "confidence": 0.853
+   },
+   {
+    "time": 38.03,
+    "text": "Semaglutida",
+    "confidence": 0.785
+   },
+   {
+    "time": 38.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.997
+   },
+   {
+    "time": 38.03,
+    "text": "Inyectable",
+    "confidence": 0.95
+   },
+   {
+    "time": 38.03,
+    "text": "mg-0.5 mg/dosis",
+    "confidence": 0.604
+   },
+   {
+    "time": 38.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.921
+   },
+   {
+    "time": 38.03,
+    "text": "0.5",
+    "confidence": 0.682
+   },
+   {
+    "time": 38.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.995
+   },
+   {
+    "time": 38.03,
+    "text": "ic?",
+    "confidence": 0.586
+   },
+   {
+    "time": 38.03,
+    "text": "Jucion inyed",
+    "confidence": 0.575
+   },
+   {
+    "time": 38.03,
+    "text": "mgu",
+    "confidence": 0.751
+   },
+   {
+    "time": 38.03,
+    "text": "el cual tiene que ser tan",
+    "confidence": 0.971
+   },
+   {
+    "time": 38.03,
+    "text": "nml",
+    "confidence": 0.733
+   },
+   {
+    "time": 38.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.873
+   },
+   {
+    "time": 38.03,
+    "text": "regulado de la mano con un",
+    "confidence": 0.655
+   },
+   {
+    "time": 38.03,
+    "text": "especialista",
+    "confidence": 0.773
+   },
+   {
+    "time": 40.03,
+    "text": "OzEMPic",
+    "confidence": 0.74
+   },
+   {
+    "time": 40.03,
+    "text": "OzEMPic",
+    "confidence": 0.824
+   },
+   {
+    "time": 40.03,
+    "text": "Semaglutida",
+    "confidence": 0.924
+   },
+   {
+    "time": 40.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.998
+   },
+   {
+    "time": 40.03,
+    "text": "Inyectable",
+    "confidence": 0.887
+   },
+   {
+    "time": 40.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.797
+   },
+   {
+    "time": 40.03,
+    "text": "0.5",
+    "confidence": 0.593
+   },
+   {
+    "time": 40.03,
+    "text": "JZEM",
+    "confidence": 0.682
+   },
+   {
+    "time": 40.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.997
+   },
+   {
+    "time": 40.03,
+    "text": "Jucion inyed",
+    "confidence": 0.551
+   },
+   {
+    "time": 40.03,
+    "text": "mgu",
+    "confidence": 0.89
+   },
+   {
+    "time": 40.03,
+    "text": "porque se tiene que ir",
+    "confidence": 0.995
+   },
+   {
+    "time": 40.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.909
+   },
+   {
+    "time": 40.03,
+    "text": "a poco",
+    "confidence": 0.972
+   },
+   {
+    "time": 42.03,
+    "text": "OzEMPic",
+    "confidence": 0.531
+   },
+   {
+    "time": 42.03,
+    "text": "OzEMPic ,",
+    "confidence": 0.558
+   },
+   {
+    "time": 42.03,
+    "text": "Semaglutida",
+    "confidence": 0.949
+   },
+   {
+    "time": 42.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.998
+   },
+   {
+    "time": 42.03,
+    "text": "Inyectable",
+    "confidence": 0.86
+   },
+   {
+    "time": 42.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.767
+   },
+   {
+    "time": 42.03,
+    "text": "0.5 mo",
+    "confidence": 0.575
+   },
+   {
+    "time": 42.03,
+    "text": "JZEMI",
+    "confidence": 0.702
+   },
+   {
+    "time": 42.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.997
+   },
+   {
+    "time": 42.03,
+    "text": "ic?",
+    "confidence": 0.503
+   },
+   {
+    "time": 42.03,
+    "text": "ucion inyed",
+    "confidence": 0.596
+   },
+   {
+    "time": 42.03,
+    "text": "mgu",
+    "confidence": 0.899
+   },
+   {
+    "time": 42.03,
+    "text": "porque se tiene que ir",
+    "confidence": 0.816
+   },
+   {
+    "time": 42.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.897
+   },
+   {
+    "time": 42.03,
+    "text": "aumentando Ia dosis poCO",
+    "confidence": 0.547
+   },
+   {
+    "time": 42.03,
+    "text": "a poco",
+    "confidence": 0.976
+   },
+   {
+    "time": 44.03,
+    "text": "OzEMPic",
+    "confidence": 0.776
+   },
+   {
+    "time": 44.03,
+    "text": "OzEMPic",
+    "confidence": 0.819
+   },
+   {
+    "time": 44.03,
+    "text": "Semaglutida",
+    "confidence": 0.805
+   },
+   {
+    "time": 44.03,
+    "text": "Inyectable",
+    "confidence": 0.822
+   },
+   {
+    "time": 44.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.814
+   },
+   {
+    "time": 44.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.763
+   },
+   {
+    "time": 44.03,
+    "text": "0.5",
+    "confidence": 0.998
+   },
+   {
+    "time": 44.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.997
+   },
+   {
+    "time": 44.03,
+    "text": "ic?",
+    "confidence": 0.673
+   },
+   {
+    "time": 44.03,
+    "text": "ucion inyed",
+    "confidence": 0.576
+   },
+   {
+    "time": 44.03,
+    "text": "mgu",
+    "confidence": 0.965
+   },
+   {
+    "time": 44.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.838
+   },
+   {
+    "time": 44.03,
+    "text": "ya que si no se hace esto",
+    "confidence": 0.917
+   },
+   {
+    "time": 46.03,
+    "text": "OzEMPic",
+    "confidence": 0.779
+   },
+   {
+    "time": 46.03,
+    "text": "OzEMPic",
+    "confidence": 0.822
+   },
+   {
+    "time": 46.03,
+    "text": "Semaglutida",
+    "confidence": 0.901
+   },
+   {
+    "time": 46.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.998
+   },
+   {
+    "time": 46.03,
+    "text": "Inyectable",
+    "confidence": 0.843
+   },
+   {
+    "time": 46.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.763
+   },
+   {
+    "time": 46.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.997
+   },
+   {
+    "time": 46.03,
+    "text": "ic?",
+    "confidence": 0.601
+   },
+   {
+    "time": 46.03,
+    "text": "ucion inyed",
+    "confidence": 0.635
+   },
+   {
+    "time": 46.03,
+    "text": "tu pancreas puede dejar de",
+    "confidence": 0.704
+   },
+   {
+    "time": 46.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.667
+   },
+   {
+    "time": 46.03,
+    "text": "funcionar",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.03,
+    "text": "OzEMPic",
+    "confidence": 0.72
+   },
+   {
+    "time": 48.03,
+    "text": "OzEMPic",
+    "confidence": 0.816
+   },
+   {
+    "time": 48.03,
+    "text": "Semaglutida",
+    "confidence": 0.892
+   },
+   {
+    "time": 48.03,
+    "text": "injection",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.03,
+    "text": "Invectable",
+    "confidence": 0.717
+   },
+   {
+    "time": 48.03,
+    "text": "(semaglutide)",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.962
+   },
+   {
+    "time": 48.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.976
+   },
+   {
+    "time": 48.03,
+    "text": "ic?",
+    "confidence": 0.629
+   },
+   {
+    "time": 48.03,
+    "text": "ucion inyect",
+    "confidence": 0.642
+   },
+   {
+    "time": 48.03,
+    "text": "mguo",
+    "confidence": 0.567
+   },
+   {
+    "time": 48.03,
+    "text": "Ia vez por sem",
+    "confidence": 0.751
+   },
+   {
+    "time": 48.03,
+    "text": "y obviamente vas a",
+    "confidence": 0.805
+   },
+   {
+    "time": 48.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.756
+   },
+   {
+    "time": 48.03,
+    "text": "regresar a tu peso en el",
+    "confidence": 0.653
+   },
+   {
+    "time": 48.03,
+    "text": "que estabas",
+    "confidence": 0.999
+   },
+   {
+    "time": 50.03,
+    "text": "OzEMPic",
+    "confidence": 0.756
+   },
+   {
+    "time": 50.03,
+    "text": "OzEMPic ,",
+    "confidence": 0.54
+   },
+   {
+    "time": 50.03,
+    "text": "Semaglutida",
+    "confidence": 0.892
+   },
+   {
+    "time": 50.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.997
+   },
+   {
+    "time": 50.03,
+    "text": "Invectable",
+    "confidence": 0.711
+   },
+   {
+    "time": 50.03,
+    "text": "mg-0.5 mg/dosis",
+    "confidence": 0.519
+   },
+   {
+    "time": 50.03,
+    "text": "Lor Single Ratient",
+    "confidence": 0.58
+   },
+   {
+    "time": 50.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.792
+   },
+   {
+    "time": 50.03,
+    "text": "0.5 mo",
+    "confidence": 0.613
+   },
+   {
+    "time": 50.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.994
+   },
+   {
+    "time": 50.03,
+    "text": "ic?",
+    "confidence": 0.649
+   },
+   {
+    "time": 50.03,
+    "text": "mgu",
+    "confidence": 0.946
+   },
+   {
+    "time": 50.03,
+    "text": "yobviamente vas a",
+    "confidence": 0.827
+   },
+   {
+    "time": 50.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.772
+   },
+   {
+    "time": 50.03,
+    "text": "regresar a tu peso en el",
+    "confidence": 0.951
+   },
+   {
+    "time": 50.03,
+    "text": "que estabas",
+    "confidence": 0.999
+   },
+   {
+    "time": 52.03,
+    "text": "OzEMPic",
+    "confidence": 0.789
+   },
+   {
+    "time": 52.03,
+    "text": "OzEMPic",
+    "confidence": 0.785
+   },
+   {
+    "time": 52.03,
+    "text": "Semaglutida",
+    "confidence": 0.812
+   },
+   {
+    "time": 52.03,
+    "text": "Invectable",
+    "confidence": 0.676
+   },
+   {
+    "time": 52.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.999
+   },
+   {
+    "time": 52.03,
+    "text": "0 25 mg-0.5 mgldosis",
+    "confidence": 0.541
+   },
+   {
+    "time": 52.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.779
+   },
+   {
+    "time": 52.03,
+    "text": "JZEMI",
+    "confidence": 0.687
+   },
+   {
+    "time": 52.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.997
+   },
+   {
+    "time": 52.03,
+    "text": "ic?",
+    "confidence": 0.552
+   },
+   {
+    "time": 52.03,
+    "text": "Ia vez por ser",
+    "confidence": 0.522
+   },
+   {
+    "time": 52.03,
+    "text": "son medicamentos",
+    "confidence": 0.943
+   },
+   {
+    "time": 52.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.778
+   },
+   {
+    "time": 52.03,
+    "text": "educadores",
+    "confidence": 0.786
+   },
+   {
+    "time": 54.03,
+    "text": "OzEMPic",
+    "confidence": 0.793
+   },
+   {
+    "time": 54.03,
+    "text": "OzEMPic",
+    "confidence": 0.796
+   },
+   {
+    "time": 54.03,
+    "text": "Semaglutida",
+    "confidence": 0.825
+   },
+   {
+    "time": 54.03,
+    "text": "Invectable",
+    "confidence": 0.731
+   },
+   {
+    "time": 54.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.999
+   },
+   {
+    "time": 54.03,
+    "text": "0 25 mg-0.5 mgldosis",
+    "confidence": 0.558
+   },
+   {
+    "time": 54.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.968
+   },
+   {
+    "time": 54.03,
+    "text": "0.5",
+    "confidence": 0.779
+   },
+   {
+    "time": 54.03,
+    "text": "JZEMI",
+    "confidence": 0.584
+   },
+   {
+    "time": 54.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.998
+   },
+   {
+    "time": 54.03,
+    "text": "ic?",
+    "confidence": 0.538
+   },
+   {
+    "time": 54.03,
+    "text": "Jucion inyec",
+    "confidence": 0.541
+   },
+   {
+    "time": 54.03,
+    "text": "mgu",
+    "confidence": 0.86
+   },
+   {
+    "time": 54.03,
+    "text": "si no van de Ia mano de",
+    "confidence": 0.658
+   },
+   {
+    "time": 54.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.71
+   },
+   {
+    "time": 54.03,
+    "text": "dieta y ejercicio se regresa",
+    "confidence": 0.902
+   },
+   {
+    "time": 54.03,
+    "text": "a su peso normal",
+    "confidence": 0.998
+   },
+   {
+    "time": 56.03,
+    "text": "OzEMPic",
+    "confidence": 0.784
+   },
+   {
+    "time": 56.03,
+    "text": "OzEMPic",
+    "confidence": 0.834
+   },
+   {
+    "time": 56.03,
+    "text": "Semaglutida",
+    "confidence": 0.737
+   },
+   {
+    "time": 56.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.997
+   },
+   {
+    "time": 56.03,
+    "text": "Invectable",
+    "confidence": 0.863
+   },
+   {
+    "time": 56.03,
+    "text": "mg-0.5 mg/dosis",
+    "confidence": 0.527
+   },
+   {
+    "time": 56.03,
+    "text": "For sinale Paticnt",
+    "confidence": 0.501
+   },
+   {
+    "time": 56.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.798
+   },
+   {
+    "time": 56.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.995
+   },
+   {
+    "time": 56.03,
+    "text": "ic?",
+    "confidence": 0.511
+   },
+   {
+    "time": 56.03,
+    "text": "mgu",
+    "confidence": 0.794
+   },
+   {
+    "time": 56.03,
+    "text": "si no van de Ia mano de",
+    "confidence": 0.625
+   },
+   {
+    "time": 56.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.622
+   },
+   {
+    "time": 56.03,
+    "text": "dietayejercicio se regresa",
+    "confidence": 0.867
+   },
+   {
+    "time": 58.03,
+    "text": "OzEMPic",
+    "confidence": 0.735
+   },
+   {
+    "time": 58.03,
+    "text": "OzEMPic",
+    "confidence": 0.84
+   },
+   {
+    "time": 58.03,
+    "text": "Semaglutida",
+    "confidence": 0.837
+   },
+   {
+    "time": 58.03,
+    "text": "(semaglutide) injection",
+    "confidence": 0.998
+   },
+   {
+    "time": 58.03,
+    "text": "Inyectable",
+    "confidence": 0.848
+   },
+   {
+    "time": 58.03,
+    "text": "mg-0.5 mg/dosis",
+    "confidence": 0.554
+   },
+   {
+    "time": 58.03,
+    "text": "La pluma libera dosis de 0.25 mg",
+    "confidence": 0.815
+   },
+   {
+    "time": 58.03,
+    "text": "0.5",
+    "confidence": 0.998
+   },
+   {
+    "time": 58.03,
+    "text": "MAGLUTIDA",
+    "confidence": 0.987
+   },
+   {
+    "time": 58.03,
+    "text": "ic?",
+    "confidence": 0.587
+   },
+   {
+    "time": 58.03,
+    "text": "mgu",
+    "confidence": 0.931
+   },
+   {
+    "time": 58.03,
+    "text": "dejame todas tus dudas en",
+    "confidence": 0.697
+   },
+   {
+    "time": 58.03,
+    "text": "dosis de 0.2",
+    "confidence": 0.66
+   },
+   {
+    "time": 58.03,
+    "text": "comentarios",
+    "confidence": 0.888
+   }
+  ],
+  "captions": [
+   {
+    "text": "Responder al comentario de gigi",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.93,
+    "id": "o1"
+   },
+   {
+    "text": "lo voy a comprar;",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.565,
+    "id": "o2"
+   },
+   {
+    "text": "necesita receta?",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.996,
+    "id": "o3"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o4"
+   },
+   {
+    "text": "Inyectable",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.671,
+    "id": "o5"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.969,
+    "id": "o6"
+   },
+   {
+    "text": "0.5",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.69,
+    "id": "o7"
+   },
+   {
+    "text": "OZMPIC Y PORQUENO",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.512,
+    "id": "o8"
+   },
+   {
+    "text": "AUUOMEDICARSE",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.959,
+    "id": "o9"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.683,
+    "id": "o10"
+   },
+   {
+    "text": "ucion inyec",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.822,
+    "id": "o11"
+   },
+   {
+    "text": "loque puede Ilegar a pasar",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.683,
+    "id": "o12"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.977,
+    "id": "o13"
+   },
+   {
+    "text": "si te Ilegas a automedicar",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.807,
+    "id": "o14"
+   },
+   {
+    "text": "con no cempic",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.722,
+    "id": "o15"
+   },
+   {
+    "text": "Responder al comentario de gigi",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.956,
+    "id": "o16"
+   },
+   {
+    "text": "lo voy a comprar;",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.628,
+    "id": "o17"
+   },
+   {
+    "text": "necesita receta?",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.995,
+    "id": "o18"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.81,
+    "id": "o19"
+   },
+   {
+    "text": "Inyectable",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.9,
+    "id": "o20"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.818,
+    "id": "o21"
+   },
+   {
+    "text": "0 25 mg-0.5 mgldosis",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.611,
+    "id": "o22"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.963,
+    "id": "o23"
+   },
+   {
+    "text": "OZMPIC Y PORQUENO",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.801,
+    "id": "o24"
+   },
+   {
+    "text": "JZEM",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.562,
+    "id": "o25"
+   },
+   {
+    "text": "AUTOMEDICARSE",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.982,
+    "id": "o26"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.998,
+    "id": "o27"
+   },
+   {
+    "text": "ic?",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.57,
+    "id": "o28"
+   },
+   {
+    "text": "Jucion inyed",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.503,
+    "id": "o29"
+   },
+   {
+    "text": "loque puede Ilegar a pasar",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.71,
+    "id": "o30"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.964,
+    "id": "o31"
+   },
+   {
+    "text": "si te Ilegas a automedicar",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.876,
+    "id": "o32"
+   },
+   {
+    "text": "con no cempic",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.743,
+    "id": "o33"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.814,
+    "id": "o34"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.853,
+    "id": "o35"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.997,
+    "id": "o36"
+   },
+   {
+    "text": "Inyectable",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.896,
+    "id": "o37"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.972,
+    "id": "o38"
+   },
+   {
+    "text": "OZMPIC Y PORQUENO",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.644,
+    "id": "o39"
+   },
+   {
+    "text": "AUTOMEDICARRSE",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.906,
+    "id": "o40"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.997,
+    "id": "o41"
+   },
+   {
+    "text": "ic?",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.543,
+    "id": "o42"
+   },
+   {
+    "text": "es un medicamento que",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.66,
+    "id": "o43"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.944,
+    "id": "o44"
+   },
+   {
+    "text": "trata diabetes tipo 2",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.585,
+    "id": "o45"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.852,
+    "id": "o46"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.91,
+    "id": "o47"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.998,
+    "id": "o48"
+   },
+   {
+    "text": "Invectable",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.697,
+    "id": "o49"
+   },
+   {
+    "text": "mg-0.5 mg/dosis",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.593,
+    "id": "o50"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.956,
+    "id": "o51"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.996,
+    "id": "o52"
+   },
+   {
+    "text": "mgu",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.93,
+    "id": "o53"
+   },
+   {
+    "text": "reduce el riesgo de un",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.831,
+    "id": "o54"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.807,
+    "id": "o55"
+   },
+   {
+    "text": "derrame cerebral",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.903,
+    "id": "o56"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.853,
+    "id": "o57"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.863,
+    "id": "o58"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.998,
+    "id": "o59"
+   },
+   {
+    "text": "Invectable",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.613,
+    "id": "o60"
+   },
+   {
+    "text": "mg-0.5 mg/dosis",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.613,
+    "id": "o61"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.773,
+    "id": "o62"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.995,
+    "id": "o63"
+   },
+   {
+    "text": "mgu",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.919,
+    "id": "o64"
+   },
+   {
+    "text": "Ia vez por ser",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.597,
+    "id": "o65"
+   },
+   {
+    "text": "riesgo",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o66"
+   },
+   {
+    "text": "reduce el",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.672,
+    "id": "o67"
+   },
+   {
+    "text": "de un",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.948,
+    "id": "o68"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.766,
+    "id": "o69"
+   },
+   {
+    "text": "derrame cerebral",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.802,
+    "id": "o70"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 10.03,
+    "end": 10.03,
+    "confidence": 0.864,
+    "id": "o71"
+   },
+   {
+    "text": "Scmaglutida",
+    "start": 10.03,
+    "end": 10.03,
+    "confidence": 0.728,
+    "id": "o72"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 10.03,
+    "end": 10.03,
+    "confidence": 0.998,
+    "id": "o73"
+   },
+   {
+    "text": "Inyectable",
+    "start": 10.03,
+    "end": 10.03,
+    "confidence": 0.894,
+    "id": "o74"
+   },
+   {
+    "text": "0 25 mg-0.5 mg/dosis",
+    "start": 10.03,
+    "end": 10.03,
+    "confidence": 0.572,
+    "id": "o75"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 10.03,
+    "end": 10.03,
+    "confidence": 0.937,
+    "id": "o76"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 10.03,
+    "end": 10.03,
+    "confidence": 0.973,
+    "id": "o77"
+   },
+   {
+    "text": "Jucion inyed",
+    "start": 10.03,
+    "end": 10.03,
+    "confidence": 0.673,
+    "id": "o78"
+   },
+   {
+    "text": "mgu",
+    "start": 10.03,
+    "end": 10.03,
+    "confidence": 0.838,
+    "id": "o79"
+   },
+   {
+    "text": "reduce los riesgos de",
+    "start": 10.03,
+    "end": 10.03,
+    "confidence": 0.905,
+    "id": "o80"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 10.03,
+    "end": 10.03,
+    "confidence": 0.656,
+    "id": "o81"
+   },
+   {
+    "text": "ataques cardiacos",
+    "start": 10.03,
+    "end": 10.03,
+    "confidence": 0.814,
+    "id": "o82"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 12.03,
+    "end": 12.03,
+    "confidence": 0.868,
+    "id": "o83"
+   },
+   {
+    "text": "Scmaglutida",
+    "start": 12.03,
+    "end": 12.03,
+    "confidence": 0.818,
+    "id": "o84"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 12.03,
+    "end": 12.03,
+    "confidence": 0.998,
+    "id": "o85"
+   },
+   {
+    "text": "Inyectable",
+    "start": 12.03,
+    "end": 12.03,
+    "confidence": 0.905,
+    "id": "o86"
+   },
+   {
+    "text": "0 25 mg-0.5 mg/dosis",
+    "start": 12.03,
+    "end": 12.03,
+    "confidence": 0.577,
+    "id": "o87"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg 0 0.5",
+    "start": 12.03,
+    "end": 12.03,
+    "confidence": 0.72,
+    "id": "o88"
+   },
+   {
+    "text": "JZEMI",
+    "start": 12.03,
+    "end": 12.03,
+    "confidence": 0.556,
+    "id": "o89"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 12.03,
+    "end": 12.03,
+    "confidence": 0.978,
+    "id": "o90"
+   },
+   {
+    "text": "Jucion inyed",
+    "start": 12.03,
+    "end": 12.03,
+    "confidence": 0.697,
+    "id": "o91"
+   },
+   {
+    "text": "mgu",
+    "start": 12.03,
+    "end": 12.03,
+    "confidence": 0.864,
+    "id": "o92"
+   },
+   {
+    "text": "reduce los riesgos de la",
+    "start": 12.03,
+    "end": 12.03,
+    "confidence": 0.734,
+    "id": "o93"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 12.03,
+    "end": 12.03,
+    "confidence": 0.784,
+    "id": "o94"
+   },
+   {
+    "text": "muerte causada por",
+    "start": 12.03,
+    "end": 12.03,
+    "confidence": 0.906,
+    "id": "o95"
+   },
+   {
+    "text": "diabetes tipo 2",
+    "start": 12.03,
+    "end": 12.03,
+    "confidence": 0.998,
+    "id": "o96"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 14.03,
+    "end": 14.03,
+    "confidence": 0.803,
+    "id": "o97"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 14.03,
+    "end": 14.03,
+    "confidence": 0.938,
+    "id": "o98"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 14.03,
+    "end": 14.03,
+    "confidence": 0.998,
+    "id": "o99"
+   },
+   {
+    "text": "Inyectable",
+    "start": 14.03,
+    "end": 14.03,
+    "confidence": 0.842,
+    "id": "o100"
+   },
+   {
+    "text": "mg-0.5 mg/dosis",
+    "start": 14.03,
+    "end": 14.03,
+    "confidence": 0.541,
+    "id": "o101"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 14.03,
+    "end": 14.03,
+    "confidence": 0.928,
+    "id": "o102"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 14.03,
+    "end": 14.03,
+    "confidence": 0.998,
+    "id": "o103"
+   },
+   {
+    "text": "ic?",
+    "start": 14.03,
+    "end": 14.03,
+    "confidence": 0.762,
+    "id": "o104"
+   },
+   {
+    "text": "mgu",
+    "start": 14.03,
+    "end": 14.03,
+    "confidence": 0.942,
+    "id": "o105"
+   },
+   {
+    "text": "De",
+    "start": 14.03,
+    "end": 14.03,
+    "confidence": 0.684,
+    "id": "o106"
+   },
+   {
+    "text": "reduce los riesgos de la",
+    "start": 14.03,
+    "end": 14.03,
+    "confidence": 0.621,
+    "id": "o107"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 14.03,
+    "end": 14.03,
+    "confidence": 0.918,
+    "id": "o108"
+   },
+   {
+    "text": "muerte causada por",
+    "start": 14.03,
+    "end": 14.03,
+    "confidence": 0.878,
+    "id": "o109"
+   },
+   {
+    "text": "diabetes tipo 2",
+    "start": 14.03,
+    "end": 14.03,
+    "confidence": 0.998,
+    "id": "o110"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 16.03,
+    "end": 16.03,
+    "confidence": 0.812,
+    "id": "o111"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 16.03,
+    "end": 16.03,
+    "confidence": 0.785,
+    "id": "o112"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 16.03,
+    "end": 16.03,
+    "confidence": 0.998,
+    "id": "o113"
+   },
+   {
+    "text": "Inyectable",
+    "start": 16.03,
+    "end": 16.03,
+    "confidence": 0.899,
+    "id": "o114"
+   },
+   {
+    "text": "mg-0.5 mg/dosis",
+    "start": 16.03,
+    "end": 16.03,
+    "confidence": 0.554,
+    "id": "o115"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 16.03,
+    "end": 16.03,
+    "confidence": 0.774,
+    "id": "o116"
+   },
+   {
+    "text": "0.5",
+    "start": 16.03,
+    "end": 16.03,
+    "confidence": 0.927,
+    "id": "o117"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 16.03,
+    "end": 16.03,
+    "confidence": 0.997,
+    "id": "o118"
+   },
+   {
+    "text": "ic?",
+    "start": 16.03,
+    "end": 16.03,
+    "confidence": 0.727,
+    "id": "o119"
+   },
+   {
+    "text": "mgu",
+    "start": 16.03,
+    "end": 16.03,
+    "confidence": 0.922,
+    "id": "o120"
+   },
+   {
+    "text": "por lo cual es un",
+    "start": 16.03,
+    "end": 16.03,
+    "confidence": 0.718,
+    "id": "o121"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 16.03,
+    "end": 16.03,
+    "confidence": 0.697,
+    "id": "o122"
+   },
+   {
+    "text": "medicamento muy fuerte",
+    "start": 16.03,
+    "end": 16.03,
+    "confidence": 0.991,
+    "id": "o123"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 18.03,
+    "end": 18.03,
+    "confidence": 0.791,
+    "id": "o124"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 18.03,
+    "end": 18.03,
+    "confidence": 0.506,
+    "id": "o125"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 18.03,
+    "end": 18.03,
+    "confidence": 0.999,
+    "id": "o126"
+   },
+   {
+    "text": "Inyectable",
+    "start": 18.03,
+    "end": 18.03,
+    "confidence": 0.904,
+    "id": "o127"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg 0",
+    "start": 18.03,
+    "end": 18.03,
+    "confidence": 0.969,
+    "id": "o128"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 18.03,
+    "end": 18.03,
+    "confidence": 0.996,
+    "id": "o129"
+   },
+   {
+    "text": "ic?",
+    "start": 18.03,
+    "end": 18.03,
+    "confidence": 0.797,
+    "id": "o130"
+   },
+   {
+    "text": "Jucion inyec",
+    "start": 18.03,
+    "end": 18.03,
+    "confidence": 0.535,
+    "id": "o131"
+   },
+   {
+    "text": "mgu",
+    "start": 18.03,
+    "end": 18.03,
+    "confidence": 0.867,
+    "id": "o132"
+   },
+   {
+    "text": "el cual si no esta Ilevado de",
+    "start": 18.03,
+    "end": 18.03,
+    "confidence": 0.608,
+    "id": "o133"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 18.03,
+    "end": 18.03,
+    "confidence": 0.577,
+    "id": "o134"
+   },
+   {
+    "text": "Ia mano con un medico",
+    "start": 18.03,
+    "end": 18.03,
+    "confidence": 0.822,
+    "id": "o135"
+   },
+   {
+    "text": "especialista",
+    "start": 18.03,
+    "end": 18.03,
+    "confidence": 0.728,
+    "id": "o136"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 20.03,
+    "end": 20.03,
+    "confidence": 0.819,
+    "id": "o137"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 20.03,
+    "end": 20.03,
+    "confidence": 0.902,
+    "id": "o138"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 20.03,
+    "end": 20.03,
+    "confidence": 0.998,
+    "id": "o139"
+   },
+   {
+    "text": "Invectable",
+    "start": 20.03,
+    "end": 20.03,
+    "confidence": 0.743,
+    "id": "o140"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 20.03,
+    "end": 20.03,
+    "confidence": 0.774,
+    "id": "o141"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 20.03,
+    "end": 20.03,
+    "confidence": 0.997,
+    "id": "o142"
+   },
+   {
+    "text": "ic?",
+    "start": 20.03,
+    "end": 20.03,
+    "confidence": 0.764,
+    "id": "o143"
+   },
+   {
+    "text": "mgu",
+    "start": 20.03,
+    "end": 20.03,
+    "confidence": 0.803,
+    "id": "o144"
+   },
+   {
+    "text": "el cual si no esta Ilevado de",
+    "start": 20.03,
+    "end": 20.03,
+    "confidence": 0.798,
+    "id": "o145"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 20.03,
+    "end": 20.03,
+    "confidence": 0.69,
+    "id": "o146"
+   },
+   {
+    "text": "Ia mano con un medico",
+    "start": 20.03,
+    "end": 20.03,
+    "confidence": 0.755,
+    "id": "o147"
+   },
+   {
+    "text": "especialista",
+    "start": 20.03,
+    "end": 20.03,
+    "confidence": 0.726,
+    "id": "o148"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 22.03,
+    "end": 22.03,
+    "confidence": 0.788,
+    "id": "o149"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 22.03,
+    "end": 22.03,
+    "confidence": 0.786,
+    "id": "o150"
+   },
+   {
+    "text": "Invectable",
+    "start": 22.03,
+    "end": 22.03,
+    "confidence": 0.82,
+    "id": "o151"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 22.03,
+    "end": 22.03,
+    "confidence": 0.771,
+    "id": "o152"
+   },
+   {
+    "text": "mg-0.5 mg/dosis",
+    "start": 22.03,
+    "end": 22.03,
+    "confidence": 0.572,
+    "id": "o153"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 22.03,
+    "end": 22.03,
+    "confidence": 0.971,
+    "id": "o154"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 22.03,
+    "end": 22.03,
+    "confidence": 0.997,
+    "id": "o155"
+   },
+   {
+    "text": "ic?",
+    "start": 22.03,
+    "end": 22.03,
+    "confidence": 0.561,
+    "id": "o156"
+   },
+   {
+    "text": "Ia vez por ser",
+    "start": 22.03,
+    "end": 22.03,
+    "confidence": 0.549,
+    "id": "o157"
+   },
+   {
+    "text": "puede Ilegar a darte un",
+    "start": 22.03,
+    "end": 22.03,
+    "confidence": 0.846,
+    "id": "o158"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 22.03,
+    "end": 22.03,
+    "confidence": 0.738,
+    "id": "o159"
+   },
+   {
+    "text": "glandula",
+    "start": 22.03,
+    "end": 22.03,
+    "confidence": 1.0,
+    "id": "o160"
+   },
+   {
+    "text": "tumor en Ia",
+    "start": 22.03,
+    "end": 22.03,
+    "confidence": 0.58,
+    "id": "o161"
+   },
+   {
+    "text": "tiroidea pancreatitis",
+    "start": 22.03,
+    "end": 22.03,
+    "confidence": 0.997,
+    "id": "o162"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 24.03,
+    "end": 24.03,
+    "confidence": 0.798,
+    "id": "o163"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 24.03,
+    "end": 24.03,
+    "confidence": 0.671,
+    "id": "o164"
+   },
+   {
+    "text": "Invectable",
+    "start": 24.03,
+    "end": 24.03,
+    "confidence": 0.811,
+    "id": "o165"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 24.03,
+    "end": 24.03,
+    "confidence": 0.999,
+    "id": "o166"
+   },
+   {
+    "text": "mg-0.5 mg/dosis",
+    "start": 24.03,
+    "end": 24.03,
+    "confidence": 0.575,
+    "id": "o167"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg 0 0 =",
+    "start": 24.03,
+    "end": 24.03,
+    "confidence": 0.617,
+    "id": "o168"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 24.03,
+    "end": 24.03,
+    "confidence": 0.995,
+    "id": "o169"
+   },
+   {
+    "text": "ic?",
+    "start": 24.03,
+    "end": 24.03,
+    "confidence": 0.569,
+    "id": "o170"
+   },
+   {
+    "text": "ucion inyec",
+    "start": 24.03,
+    "end": 24.03,
+    "confidence": 0.506,
+    "id": "o171"
+   },
+   {
+    "text": "mgu",
+    "start": 24.03,
+    "end": 24.03,
+    "confidence": 0.869,
+    "id": "o172"
+   },
+   {
+    "text": "puede Ilegar a darte un",
+    "start": 24.03,
+    "end": 24.03,
+    "confidence": 0.936,
+    "id": "o173"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 24.03,
+    "end": 24.03,
+    "confidence": 0.689,
+    "id": "o174"
+   },
+   {
+    "text": "glandula",
+    "start": 24.03,
+    "end": 24.03,
+    "confidence": 1.0,
+    "id": "o175"
+   },
+   {
+    "text": "tumor en la",
+    "start": 24.03,
+    "end": 24.03,
+    "confidence": 0.513,
+    "id": "o176"
+   },
+   {
+    "text": "tiroidea pancreatitis",
+    "start": 24.03,
+    "end": 24.03,
+    "confidence": 0.997,
+    "id": "o177"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.812,
+    "id": "o178"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.84,
+    "id": "o179"
+   },
+   {
+    "text": "Invectable",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.825,
+    "id": "o180"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.993,
+    "id": "o181"
+   },
+   {
+    "text": "mg-0.5 mg/dosis",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.507,
+    "id": "o182"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg 0 0u",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.567,
+    "id": "o183"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.997,
+    "id": "o184"
+   },
+   {
+    "text": "ic?",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.727,
+    "id": "o185"
+   },
+   {
+    "text": "ucion inyed",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.589,
+    "id": "o186"
+   },
+   {
+    "text": "mgu",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.948,
+    "id": "o187"
+   },
+   {
+    "text": "convulsiones puedes",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.98,
+    "id": "o188"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.773,
+    "id": "o189"
+   },
+   {
+    "text": "desarrollar diabetes tipo 2",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.724,
+    "id": "o190"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.838,
+    "id": "o191"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.716,
+    "id": "o192"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.997,
+    "id": "o193"
+   },
+   {
+    "text": "Inyectable",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.922,
+    "id": "o194"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.769,
+    "id": "o195"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.993,
+    "id": "o196"
+   },
+   {
+    "text": "ic?",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.65,
+    "id": "o197"
+   },
+   {
+    "text": "mgu",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.948,
+    "id": "o198"
+   },
+   {
+    "text": "convulsiones puedes",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.964,
+    "id": "o199"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.571,
+    "id": "o200"
+   },
+   {
+    "text": "desarrollar diabetes tipo 2",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.569,
+    "id": "o201"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.728,
+    "id": "o202"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.93,
+    "id": "o203"
+   },
+   {
+    "text": "injection",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.65,
+    "id": "o204"
+   },
+   {
+    "text": "Invectable",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.663,
+    "id": "o205"
+   },
+   {
+    "text": "(semaglutide)",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 1.0,
+    "id": "o206"
+   },
+   {
+    "text": "mg-0.5 mg/dosis",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.518,
+    "id": "o207"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.784,
+    "id": "o208"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.998,
+    "id": "o209"
+   },
+   {
+    "text": "ic?",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.751,
+    "id": "o210"
+   },
+   {
+    "text": "ucion inyec",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.657,
+    "id": "o211"
+   },
+   {
+    "text": "mgu",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.954,
+    "id": "o212"
+   },
+   {
+    "text": "entre @tras tragedias que te",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.802,
+    "id": "o213"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.629,
+    "id": "o214"
+   },
+   {
+    "text": "pueden Ilegar",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.746,
+    "id": "o215"
+   },
+   {
+    "text": "pasar si lo",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.778,
+    "id": "o216"
+   },
+   {
+    "text": "consumes por ti sola",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.799,
+    "id": "o217"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.759,
+    "id": "o218"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.93,
+    "id": "o219"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.998,
+    "id": "o220"
+   },
+   {
+    "text": "Invectable",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.677,
+    "id": "o221"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.787,
+    "id": "o222"
+   },
+   {
+    "text": "0.5 ,",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.633,
+    "id": "o223"
+   },
+   {
+    "text": "JZEMI",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.685,
+    "id": "o224"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.998,
+    "id": "o225"
+   },
+   {
+    "text": "ic",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.942,
+    "id": "o226"
+   },
+   {
+    "text": "ucion inyed",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.768,
+    "id": "o227"
+   },
+   {
+    "text": "Ia vez por ser",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.626,
+    "id": "o228"
+   },
+   {
+    "text": "entre otras tragedias que te",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.861,
+    "id": "o229"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.643,
+    "id": "o230"
+   },
+   {
+    "text": "pueden Ilegar a pasar si lo",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.852,
+    "id": "o231"
+   },
+   {
+    "text": "consumes por ti sola",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.817,
+    "id": "o232"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.769,
+    "id": "o233"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.93,
+    "id": "o234"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.997,
+    "id": "o235"
+   },
+   {
+    "text": "Invectable",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.699,
+    "id": "o236"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg €",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.576,
+    "id": "o237"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.997,
+    "id": "o238"
+   },
+   {
+    "text": "ic?",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.636,
+    "id": "o239"
+   },
+   {
+    "text": "ucion inyed",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.696,
+    "id": "o240"
+   },
+   {
+    "text": "mgu",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.954,
+    "id": "o241"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.758,
+    "id": "o242"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 36.03,
+    "end": 36.03,
+    "confidence": 0.846,
+    "id": "o243"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 36.03,
+    "end": 36.03,
+    "confidence": 0.78,
+    "id": "o244"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 36.03,
+    "end": 36.03,
+    "confidence": 0.998,
+    "id": "o245"
+   },
+   {
+    "text": "Inyectable",
+    "start": 36.03,
+    "end": 36.03,
+    "confidence": 0.938,
+    "id": "o246"
+   },
+   {
+    "text": "mg-0.5 mg/dosis",
+    "start": 36.03,
+    "end": 36.03,
+    "confidence": 0.732,
+    "id": "o247"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 36.03,
+    "end": 36.03,
+    "confidence": 0.949,
+    "id": "o248"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 36.03,
+    "end": 36.03,
+    "confidence": 0.997,
+    "id": "o249"
+   },
+   {
+    "text": "ic?",
+    "start": 36.03,
+    "end": 36.03,
+    "confidence": 0.524,
+    "id": "o250"
+   },
+   {
+    "text": "Jucion inyec",
+    "start": 36.03,
+    "end": 36.03,
+    "confidence": 0.584,
+    "id": "o251"
+   },
+   {
+    "text": "0.5 mgd",
+    "start": 36.03,
+    "end": 36.03,
+    "confidence": 0.627,
+    "id": "o252"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 36.03,
+    "end": 36.03,
+    "confidence": 0.857,
+    "id": "o253"
+   },
+   {
+    "text": "es un medicamento",
+    "start": 36.03,
+    "end": 36.03,
+    "confidence": 0.769,
+    "id": "o254"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 38.03,
+    "end": 38.03,
+    "confidence": 0.853,
+    "id": "o255"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 38.03,
+    "end": 38.03,
+    "confidence": 0.785,
+    "id": "o256"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 38.03,
+    "end": 38.03,
+    "confidence": 0.997,
+    "id": "o257"
+   },
+   {
+    "text": "Inyectable",
+    "start": 38.03,
+    "end": 38.03,
+    "confidence": 0.95,
+    "id": "o258"
+   },
+   {
+    "text": "mg-0.5 mg/dosis",
+    "start": 38.03,
+    "end": 38.03,
+    "confidence": 0.604,
+    "id": "o259"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 38.03,
+    "end": 38.03,
+    "confidence": 0.921,
+    "id": "o260"
+   },
+   {
+    "text": "0.5",
+    "start": 38.03,
+    "end": 38.03,
+    "confidence": 0.682,
+    "id": "o261"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 38.03,
+    "end": 38.03,
+    "confidence": 0.995,
+    "id": "o262"
+   },
+   {
+    "text": "ic?",
+    "start": 38.03,
+    "end": 38.03,
+    "confidence": 0.586,
+    "id": "o263"
+   },
+   {
+    "text": "Jucion inyed",
+    "start": 38.03,
+    "end": 38.03,
+    "confidence": 0.575,
+    "id": "o264"
+   },
+   {
+    "text": "mgu",
+    "start": 38.03,
+    "end": 38.03,
+    "confidence": 0.751,
+    "id": "o265"
+   },
+   {
+    "text": "el cual tiene que ser tan",
+    "start": 38.03,
+    "end": 38.03,
+    "confidence": 0.971,
+    "id": "o266"
+   },
+   {
+    "text": "nml",
+    "start": 38.03,
+    "end": 38.03,
+    "confidence": 0.733,
+    "id": "o267"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 38.03,
+    "end": 38.03,
+    "confidence": 0.873,
+    "id": "o268"
+   },
+   {
+    "text": "regulado de la mano con un",
+    "start": 38.03,
+    "end": 38.03,
+    "confidence": 0.655,
+    "id": "o269"
+   },
+   {
+    "text": "especialista",
+    "start": 38.03,
+    "end": 38.03,
+    "confidence": 0.773,
+    "id": "o270"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 40.03,
+    "end": 40.03,
+    "confidence": 0.824,
+    "id": "o271"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 40.03,
+    "end": 40.03,
+    "confidence": 0.924,
+    "id": "o272"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 40.03,
+    "end": 40.03,
+    "confidence": 0.998,
+    "id": "o273"
+   },
+   {
+    "text": "Inyectable",
+    "start": 40.03,
+    "end": 40.03,
+    "confidence": 0.887,
+    "id": "o274"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 40.03,
+    "end": 40.03,
+    "confidence": 0.797,
+    "id": "o275"
+   },
+   {
+    "text": "0.5",
+    "start": 40.03,
+    "end": 40.03,
+    "confidence": 0.593,
+    "id": "o276"
+   },
+   {
+    "text": "JZEM",
+    "start": 40.03,
+    "end": 40.03,
+    "confidence": 0.682,
+    "id": "o277"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 40.03,
+    "end": 40.03,
+    "confidence": 0.997,
+    "id": "o278"
+   },
+   {
+    "text": "Jucion inyed",
+    "start": 40.03,
+    "end": 40.03,
+    "confidence": 0.551,
+    "id": "o279"
+   },
+   {
+    "text": "mgu",
+    "start": 40.03,
+    "end": 40.03,
+    "confidence": 0.89,
+    "id": "o280"
+   },
+   {
+    "text": "porque se tiene que ir",
+    "start": 40.03,
+    "end": 40.03,
+    "confidence": 0.995,
+    "id": "o281"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 40.03,
+    "end": 40.03,
+    "confidence": 0.909,
+    "id": "o282"
+   },
+   {
+    "text": "a poco",
+    "start": 40.03,
+    "end": 40.03,
+    "confidence": 0.972,
+    "id": "o283"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 42.03,
+    "end": 42.03,
+    "confidence": 0.531,
+    "id": "o284"
+   },
+   {
+    "text": "OzEMPic ,",
+    "start": 42.03,
+    "end": 42.03,
+    "confidence": 0.558,
+    "id": "o285"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 42.03,
+    "end": 42.03,
+    "confidence": 0.949,
+    "id": "o286"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 42.03,
+    "end": 42.03,
+    "confidence": 0.998,
+    "id": "o287"
+   },
+   {
+    "text": "Inyectable",
+    "start": 42.03,
+    "end": 42.03,
+    "confidence": 0.86,
+    "id": "o288"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 42.03,
+    "end": 42.03,
+    "confidence": 0.767,
+    "id": "o289"
+   },
+   {
+    "text": "0.5 mo",
+    "start": 42.03,
+    "end": 42.03,
+    "confidence": 0.575,
+    "id": "o290"
+   },
+   {
+    "text": "JZEMI",
+    "start": 42.03,
+    "end": 42.03,
+    "confidence": 0.702,
+    "id": "o291"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 42.03,
+    "end": 42.03,
+    "confidence": 0.997,
+    "id": "o292"
+   },
+   {
+    "text": "ic?",
+    "start": 42.03,
+    "end": 42.03,
+    "confidence": 0.503,
+    "id": "o293"
+   },
+   {
+    "text": "ucion inyed",
+    "start": 42.03,
+    "end": 42.03,
+    "confidence": 0.596,
+    "id": "o294"
+   },
+   {
+    "text": "mgu",
+    "start": 42.03,
+    "end": 42.03,
+    "confidence": 0.899,
+    "id": "o295"
+   },
+   {
+    "text": "porque se tiene que ir",
+    "start": 42.03,
+    "end": 42.03,
+    "confidence": 0.816,
+    "id": "o296"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 42.03,
+    "end": 42.03,
+    "confidence": 0.897,
+    "id": "o297"
+   },
+   {
+    "text": "aumentando Ia dosis poCO",
+    "start": 42.03,
+    "end": 42.03,
+    "confidence": 0.547,
+    "id": "o298"
+   },
+   {
+    "text": "a poco",
+    "start": 42.03,
+    "end": 42.03,
+    "confidence": 0.976,
+    "id": "o299"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 44.03,
+    "end": 44.03,
+    "confidence": 0.819,
+    "id": "o300"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 44.03,
+    "end": 44.03,
+    "confidence": 0.805,
+    "id": "o301"
+   },
+   {
+    "text": "Inyectable",
+    "start": 44.03,
+    "end": 44.03,
+    "confidence": 0.822,
+    "id": "o302"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 44.03,
+    "end": 44.03,
+    "confidence": 0.814,
+    "id": "o303"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 44.03,
+    "end": 44.03,
+    "confidence": 0.763,
+    "id": "o304"
+   },
+   {
+    "text": "0.5",
+    "start": 44.03,
+    "end": 44.03,
+    "confidence": 0.998,
+    "id": "o305"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 44.03,
+    "end": 44.03,
+    "confidence": 0.997,
+    "id": "o306"
+   },
+   {
+    "text": "ic?",
+    "start": 44.03,
+    "end": 44.03,
+    "confidence": 0.673,
+    "id": "o307"
+   },
+   {
+    "text": "ucion inyed",
+    "start": 44.03,
+    "end": 44.03,
+    "confidence": 0.576,
+    "id": "o308"
+   },
+   {
+    "text": "mgu",
+    "start": 44.03,
+    "end": 44.03,
+    "confidence": 0.965,
+    "id": "o309"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 44.03,
+    "end": 44.03,
+    "confidence": 0.838,
+    "id": "o310"
+   },
+   {
+    "text": "ya que si no se hace esto",
+    "start": 44.03,
+    "end": 44.03,
+    "confidence": 0.917,
+    "id": "o311"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 46.03,
+    "end": 46.03,
+    "confidence": 0.822,
+    "id": "o312"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 46.03,
+    "end": 46.03,
+    "confidence": 0.901,
+    "id": "o313"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 46.03,
+    "end": 46.03,
+    "confidence": 0.998,
+    "id": "o314"
+   },
+   {
+    "text": "Inyectable",
+    "start": 46.03,
+    "end": 46.03,
+    "confidence": 0.843,
+    "id": "o315"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 46.03,
+    "end": 46.03,
+    "confidence": 0.763,
+    "id": "o316"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 46.03,
+    "end": 46.03,
+    "confidence": 0.997,
+    "id": "o317"
+   },
+   {
+    "text": "ic?",
+    "start": 46.03,
+    "end": 46.03,
+    "confidence": 0.601,
+    "id": "o318"
+   },
+   {
+    "text": "ucion inyed",
+    "start": 46.03,
+    "end": 46.03,
+    "confidence": 0.635,
+    "id": "o319"
+   },
+   {
+    "text": "tu pancreas puede dejar de",
+    "start": 46.03,
+    "end": 46.03,
+    "confidence": 0.704,
+    "id": "o320"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 46.03,
+    "end": 46.03,
+    "confidence": 0.667,
+    "id": "o321"
+   },
+   {
+    "text": "funcionar",
+    "start": 46.03,
+    "end": 46.03,
+    "confidence": 1.0,
+    "id": "o322"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 48.03,
+    "end": 48.03,
+    "confidence": 0.816,
+    "id": "o323"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 48.03,
+    "end": 48.03,
+    "confidence": 0.892,
+    "id": "o324"
+   },
+   {
+    "text": "injection",
+    "start": 48.03,
+    "end": 48.03,
+    "confidence": 1.0,
+    "id": "o325"
+   },
+   {
+    "text": "Invectable",
+    "start": 48.03,
+    "end": 48.03,
+    "confidence": 0.717,
+    "id": "o326"
+   },
+   {
+    "text": "(semaglutide)",
+    "start": 48.03,
+    "end": 48.03,
+    "confidence": 1.0,
+    "id": "o327"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 48.03,
+    "end": 48.03,
+    "confidence": 0.962,
+    "id": "o328"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 48.03,
+    "end": 48.03,
+    "confidence": 0.976,
+    "id": "o329"
+   },
+   {
+    "text": "ic?",
+    "start": 48.03,
+    "end": 48.03,
+    "confidence": 0.629,
+    "id": "o330"
+   },
+   {
+    "text": "ucion inyect",
+    "start": 48.03,
+    "end": 48.03,
+    "confidence": 0.642,
+    "id": "o331"
+   },
+   {
+    "text": "mguo",
+    "start": 48.03,
+    "end": 48.03,
+    "confidence": 0.567,
+    "id": "o332"
+   },
+   {
+    "text": "Ia vez por sem",
+    "start": 48.03,
+    "end": 48.03,
+    "confidence": 0.751,
+    "id": "o333"
+   },
+   {
+    "text": "y obviamente vas a",
+    "start": 48.03,
+    "end": 48.03,
+    "confidence": 0.805,
+    "id": "o334"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 48.03,
+    "end": 48.03,
+    "confidence": 0.756,
+    "id": "o335"
+   },
+   {
+    "text": "regresar a tu peso en el",
+    "start": 48.03,
+    "end": 48.03,
+    "confidence": 0.653,
+    "id": "o336"
+   },
+   {
+    "text": "que estabas",
+    "start": 48.03,
+    "end": 48.03,
+    "confidence": 0.999,
+    "id": "o337"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 50.03,
+    "end": 50.03,
+    "confidence": 0.756,
+    "id": "o338"
+   },
+   {
+    "text": "OzEMPic ,",
+    "start": 50.03,
+    "end": 50.03,
+    "confidence": 0.54,
+    "id": "o339"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 50.03,
+    "end": 50.03,
+    "confidence": 0.892,
+    "id": "o340"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 50.03,
+    "end": 50.03,
+    "confidence": 0.997,
+    "id": "o341"
+   },
+   {
+    "text": "Invectable",
+    "start": 50.03,
+    "end": 50.03,
+    "confidence": 0.711,
+    "id": "o342"
+   },
+   {
+    "text": "mg-0.5 mg/dosis",
+    "start": 50.03,
+    "end": 50.03,
+    "confidence": 0.519,
+    "id": "o343"
+   },
+   {
+    "text": "Lor Single Ratient",
+    "start": 50.03,
+    "end": 50.03,
+    "confidence": 0.58,
+    "id": "o344"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 50.03,
+    "end": 50.03,
+    "confidence": 0.792,
+    "id": "o345"
+   },
+   {
+    "text": "0.5 mo",
+    "start": 50.03,
+    "end": 50.03,
+    "confidence": 0.613,
+    "id": "o346"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 50.03,
+    "end": 50.03,
+    "confidence": 0.994,
+    "id": "o347"
+   },
+   {
+    "text": "ic?",
+    "start": 50.03,
+    "end": 50.03,
+    "confidence": 0.649,
+    "id": "o348"
+   },
+   {
+    "text": "mgu",
+    "start": 50.03,
+    "end": 50.03,
+    "confidence": 0.946,
+    "id": "o349"
+   },
+   {
+    "text": "yobviamente vas a",
+    "start": 50.03,
+    "end": 50.03,
+    "confidence": 0.827,
+    "id": "o350"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 50.03,
+    "end": 50.03,
+    "confidence": 0.772,
+    "id": "o351"
+   },
+   {
+    "text": "regresar a tu peso en el",
+    "start": 50.03,
+    "end": 50.03,
+    "confidence": 0.951,
+    "id": "o352"
+   },
+   {
+    "text": "que estabas",
+    "start": 50.03,
+    "end": 50.03,
+    "confidence": 0.999,
+    "id": "o353"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 52.03,
+    "end": 52.03,
+    "confidence": 0.789,
+    "id": "o354"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 52.03,
+    "end": 52.03,
+    "confidence": 0.812,
+    "id": "o355"
+   },
+   {
+    "text": "Invectable",
+    "start": 52.03,
+    "end": 52.03,
+    "confidence": 0.676,
+    "id": "o356"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 52.03,
+    "end": 52.03,
+    "confidence": 0.999,
+    "id": "o357"
+   },
+   {
+    "text": "0 25 mg-0.5 mgldosis",
+    "start": 52.03,
+    "end": 52.03,
+    "confidence": 0.541,
+    "id": "o358"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 52.03,
+    "end": 52.03,
+    "confidence": 0.779,
+    "id": "o359"
+   },
+   {
+    "text": "JZEMI",
+    "start": 52.03,
+    "end": 52.03,
+    "confidence": 0.687,
+    "id": "o360"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 52.03,
+    "end": 52.03,
+    "confidence": 0.997,
+    "id": "o361"
+   },
+   {
+    "text": "ic?",
+    "start": 52.03,
+    "end": 52.03,
+    "confidence": 0.552,
+    "id": "o362"
+   },
+   {
+    "text": "Ia vez por ser",
+    "start": 52.03,
+    "end": 52.03,
+    "confidence": 0.522,
+    "id": "o363"
+   },
+   {
+    "text": "son medicamentos",
+    "start": 52.03,
+    "end": 52.03,
+    "confidence": 0.943,
+    "id": "o364"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 52.03,
+    "end": 52.03,
+    "confidence": 0.778,
+    "id": "o365"
+   },
+   {
+    "text": "educadores",
+    "start": 52.03,
+    "end": 52.03,
+    "confidence": 0.786,
+    "id": "o366"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 54.03,
+    "end": 54.03,
+    "confidence": 0.796,
+    "id": "o367"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 54.03,
+    "end": 54.03,
+    "confidence": 0.825,
+    "id": "o368"
+   },
+   {
+    "text": "Invectable",
+    "start": 54.03,
+    "end": 54.03,
+    "confidence": 0.731,
+    "id": "o369"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 54.03,
+    "end": 54.03,
+    "confidence": 0.999,
+    "id": "o370"
+   },
+   {
+    "text": "0 25 mg-0.5 mgldosis",
+    "start": 54.03,
+    "end": 54.03,
+    "confidence": 0.558,
+    "id": "o371"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 54.03,
+    "end": 54.03,
+    "confidence": 0.968,
+    "id": "o372"
+   },
+   {
+    "text": "0.5",
+    "start": 54.03,
+    "end": 54.03,
+    "confidence": 0.779,
+    "id": "o373"
+   },
+   {
+    "text": "JZEMI",
+    "start": 54.03,
+    "end": 54.03,
+    "confidence": 0.584,
+    "id": "o374"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 54.03,
+    "end": 54.03,
+    "confidence": 0.998,
+    "id": "o375"
+   },
+   {
+    "text": "ic?",
+    "start": 54.03,
+    "end": 54.03,
+    "confidence": 0.538,
+    "id": "o376"
+   },
+   {
+    "text": "Jucion inyec",
+    "start": 54.03,
+    "end": 54.03,
+    "confidence": 0.541,
+    "id": "o377"
+   },
+   {
+    "text": "mgu",
+    "start": 54.03,
+    "end": 54.03,
+    "confidence": 0.86,
+    "id": "o378"
+   },
+   {
+    "text": "si no van de Ia mano de",
+    "start": 54.03,
+    "end": 54.03,
+    "confidence": 0.658,
+    "id": "o379"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 54.03,
+    "end": 54.03,
+    "confidence": 0.71,
+    "id": "o380"
+   },
+   {
+    "text": "dieta y ejercicio se regresa",
+    "start": 54.03,
+    "end": 54.03,
+    "confidence": 0.902,
+    "id": "o381"
+   },
+   {
+    "text": "a su peso normal",
+    "start": 54.03,
+    "end": 54.03,
+    "confidence": 0.998,
+    "id": "o382"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 56.03,
+    "end": 56.03,
+    "confidence": 0.834,
+    "id": "o383"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 56.03,
+    "end": 56.03,
+    "confidence": 0.737,
+    "id": "o384"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 56.03,
+    "end": 56.03,
+    "confidence": 0.997,
+    "id": "o385"
+   },
+   {
+    "text": "Invectable",
+    "start": 56.03,
+    "end": 56.03,
+    "confidence": 0.863,
+    "id": "o386"
+   },
+   {
+    "text": "mg-0.5 mg/dosis",
+    "start": 56.03,
+    "end": 56.03,
+    "confidence": 0.527,
+    "id": "o387"
+   },
+   {
+    "text": "For sinale Paticnt",
+    "start": 56.03,
+    "end": 56.03,
+    "confidence": 0.501,
+    "id": "o388"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 56.03,
+    "end": 56.03,
+    "confidence": 0.798,
+    "id": "o389"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 56.03,
+    "end": 56.03,
+    "confidence": 0.995,
+    "id": "o390"
+   },
+   {
+    "text": "ic?",
+    "start": 56.03,
+    "end": 56.03,
+    "confidence": 0.511,
+    "id": "o391"
+   },
+   {
+    "text": "mgu",
+    "start": 56.03,
+    "end": 56.03,
+    "confidence": 0.794,
+    "id": "o392"
+   },
+   {
+    "text": "si no van de Ia mano de",
+    "start": 56.03,
+    "end": 56.03,
+    "confidence": 0.625,
+    "id": "o393"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 56.03,
+    "end": 56.03,
+    "confidence": 0.622,
+    "id": "o394"
+   },
+   {
+    "text": "dietayejercicio se regresa",
+    "start": 56.03,
+    "end": 56.03,
+    "confidence": 0.867,
+    "id": "o395"
+   },
+   {
+    "text": "OzEMPic",
+    "start": 58.03,
+    "end": 58.03,
+    "confidence": 0.84,
+    "id": "o396"
+   },
+   {
+    "text": "Semaglutida",
+    "start": 58.03,
+    "end": 58.03,
+    "confidence": 0.837,
+    "id": "o397"
+   },
+   {
+    "text": "(semaglutide) injection",
+    "start": 58.03,
+    "end": 58.03,
+    "confidence": 0.998,
+    "id": "o398"
+   },
+   {
+    "text": "Inyectable",
+    "start": 58.03,
+    "end": 58.03,
+    "confidence": 0.848,
+    "id": "o399"
+   },
+   {
+    "text": "mg-0.5 mg/dosis",
+    "start": 58.03,
+    "end": 58.03,
+    "confidence": 0.554,
+    "id": "o400"
+   },
+   {
+    "text": "La pluma libera dosis de 0.25 mg",
+    "start": 58.03,
+    "end": 58.03,
+    "confidence": 0.815,
+    "id": "o401"
+   },
+   {
+    "text": "0.5",
+    "start": 58.03,
+    "end": 58.03,
+    "confidence": 0.998,
+    "id": "o402"
+   },
+   {
+    "text": "MAGLUTIDA",
+    "start": 58.03,
+    "end": 58.03,
+    "confidence": 0.987,
+    "id": "o403"
+   },
+   {
+    "text": "ic?",
+    "start": 58.03,
+    "end": 58.03,
+    "confidence": 0.587,
+    "id": "o404"
+   },
+   {
+    "text": "mgu",
+    "start": 58.03,
+    "end": 58.03,
+    "confidence": 0.931,
+    "id": "o405"
+   },
+   {
+    "text": "dejame todas tus dudas en",
+    "start": 58.03,
+    "end": 58.03,
+    "confidence": 0.697,
+    "id": "o406"
+   },
+   {
+    "text": "dosis de 0.2",
+    "start": 58.03,
+    "end": 58.03,
+    "confidence": 0.66,
+    "id": "o407"
+   },
+   {
+    "text": "comentarios",
+    "start": 58.03,
+    "end": 58.03,
+    "confidence": 0.888,
+    "id": "o408"
+   }
+  ]
+ }
+}

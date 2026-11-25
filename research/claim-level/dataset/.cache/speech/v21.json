@@ -1,0 +1,122 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.997,
+  "duration_seconds": 61.79,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.84,
+    "text": "If you eat almonds every day, here's what will happen to your body."
+   },
+   {
+    "id": "t2",
+    "start": 3.84,
+    "end": 6.26,
+    "text": "You'll reduce abdominal fat."
+   },
+   {
+    "id": "t3",
+    "start": 6.26,
+    "end": 10.9,
+    "text": "Studies show that almonds can help you lose weight, especially in the stomach area, you'll"
+   },
+   {
+    "id": "t4",
+    "start": 10.9,
+    "end": 12.76,
+    "text": "have a healthy heart."
+   },
+   {
+    "id": "t5",
+    "start": 12.76,
+    "end": 18.1,
+    "text": "Almonds are rich in unsaturated fats that promote good cholesterol and protect your heart."
+   },
+   {
+    "id": "t6",
+    "start": 18.1,
+    "end": 19.83,
+    "text": "Reduce your hunger."
+   },
+   {
+    "id": "t7",
+    "start": 19.83,
+    "end": 24.35,
+    "text": "Thanks to their fiber and protein content, almonds make you feel full."
+   },
+   {
+    "id": "t8",
+    "start": 24.35,
+    "end": 28.83,
+    "text": "This makes them an ideal snack for controlling your appetite and helping you lose weight."
+   },
+   {
+    "id": "t9",
+    "start": 28.83,
+    "end": 31.46,
+    "text": "You'll be in a good mood."
+   },
+   {
+    "id": "t10",
+    "start": 31.46,
+    "end": 36.18,
+    "text": "Almonds are an excellent source of magnesium, which plays an essential role in mood regulation"
+   },
+   {
+    "id": "t11",
+    "start": 36.18,
+    "end": 37.86,
+    "text": "and stress management."
+   },
+   {
+    "id": "t12",
+    "start": 37.86,
+    "end": 40.07,
+    "text": "You'll sleep better."
+   },
+   {
+    "id": "t13",
+    "start": 40.07,
+    "end": 44.59,
+    "text": "Almonds are naturally rich in tryptophan, an amino acid that plays a key role in the"
+   },
+   {
+    "id": "t14",
+    "start": 44.59,
+    "end": 47.78,
+    "text": "production of serotonin, the sleep hormone."
+   },
+   {
+    "id": "t15",
+    "start": 47.78,
+    "end": 49.56,
+    "text": "You'll be less stressed."
+   },
+   {
+    "id": "t16",
+    "start": 49.56,
+    "end": 54.02,
+    "text": "Almonds are rich in antioxidants like vitamin E, which help fight oxidative stress and"
+   },
+   {
+    "id": "t17",
+    "start": 54.02,
+    "end": 56.53,
+    "text": "reduce daily stress."
+   },
+   {
+    "id": "t18",
+    "start": 56.53,
+    "end": 58.85,
+    "text": "Subscribe for more secrets about natural medicine."
+   }
+  ]
+ }
+}

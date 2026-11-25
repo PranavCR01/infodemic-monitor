@@ -1,0 +1,176 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 59.3,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.5,
+    "text": "What are the most harmful foods that people constantly eat?"
+   },
+   {
+    "id": "t2",
+    "start": 2.5,
+    "end": 3.1,
+    "text": "Seed oils."
+   },
+   {
+    "id": "t3",
+    "start": 3.1,
+    "end": 6.9,
+    "text": "So canola, sunflower, safflower, rapeseed, palm oil."
+   },
+   {
+    "id": "t4",
+    "start": 6.9,
+    "end": 8.9,
+    "text": "The reason for this is, it's not the plant."
+   },
+   {
+    "id": "t5",
+    "start": 8.9,
+    "end": 10.6,
+    "text": "It's the distance from the plant to the table."
+   },
+   {
+    "id": "t6",
+    "start": 10.6,
+    "end": 13.0,
+    "text": "When you put a canola plant into a commercial press,"
+   },
+   {
+    "id": "t7",
+    "start": 13.0,
+    "end": 15.7,
+    "text": "it comes out gummy and you de-gum it with hexane,"
+   },
+   {
+    "id": "t8",
+    "start": 15.7,
+    "end": 17.4,
+    "text": "which is a known neurotoxin."
+   },
+   {
+    "id": "t9",
+    "start": 17.4,
+    "end": 19.4,
+    "text": "Then you take that neurotoxin and de-gummed oil"
+   },
+   {
+    "id": "t10",
+    "start": 19.4,
+    "end": 22.0,
+    "text": "and you heat it to 405 degrees and you turn it rancid."
+   },
+   {
+    "id": "t11",
+    "start": 22.0,
+    "end": 24.2,
+    "text": "You need to deodorize it with sodium hydroxide,"
+   },
+   {
+    "id": "t12",
+    "start": 24.2,
+    "end": 26.1,
+    "text": "which is a very powerful carcinogen."
+   },
+   {
+    "id": "t13",
+    "start": 26.1,
+    "end": 27.9,
+    "text": "Sometimes bleach it before you bottle it."
+   },
+   {
+    "id": "t14",
+    "start": 27.9,
+    "end": 29.46,
+    "text": "If you ever notice when you go down the shelf"
+   },
+   {
+    "id": "t15",
+    "start": 29.46,
+    "end": 31.3,
+    "text": "in a grocery store in tall, the vegetable oils,"
+   },
+   {
+    "id": "t16",
+    "start": 31.3,
+    "end": 33.18,
+    "text": "they're all exactly the same color,"
+   },
+   {
+    "id": "t17",
+    "start": 33.18,
+    "end": 35.86,
+    "text": "that perfect yellow color, that would never happen."
+   },
+   {
+    "id": "t18",
+    "start": 35.86,
+    "end": 39.82,
+    "text": "If you pressed a thousand plants and turned it into oil,"
+   },
+   {
+    "id": "t19",
+    "start": 39.82,
+    "end": 41.82,
+    "text": "you would not get that level of consistency"
+   },
+   {
+    "id": "t20",
+    "start": 41.82,
+    "end": 43.5,
+    "text": "that's chemically induced,"
+   },
+   {
+    "id": "t21",
+    "start": 43.5,
+    "end": 45.44,
+    "text": "and then they put a heart-healthy label on it."
+   },
+   {
+    "id": "t22",
+    "start": 45.44,
+    "end": 47.06,
+    "text": "These are pro-inflammatory"
+   },
+   {
+    "id": "t23",
+    "start": 47.06,
+    "end": 49.58,
+    "text": "that cause massive amount of inflammation in the body."
+   },
+   {
+    "id": "t24",
+    "start": 49.58,
+    "end": 51.9,
+    "text": "So what are the oils you can use in your life?"
+   },
+   {
+    "id": "t25",
+    "start": 51.9,
+    "end": 53.62,
+    "text": "Well, in your kitchen, you need five oils."
+   },
+   {
+    "id": "t26",
+    "start": 53.62,
+    "end": 55.42,
+    "text": "You need a grass-fed butter,"
+   },
+   {
+    "id": "t27",
+    "start": 55.42,
+    "end": 59.3,
+    "text": "butter, grass-fed tallow, coconut oil, and an olive oil."
+   }
+  ]
+ }
+}

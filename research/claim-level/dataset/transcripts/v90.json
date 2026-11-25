@@ -1,0 +1,332 @@
+{
+ "video_id": "v90",
+ "filename": "new_Instagram_CK4zucOH4AU.mp4",
+ "relative_path": "new_Instagram_CK4zucOH4AU.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:55",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 27.33,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.6,
+    "text": "Habitual vitamin D use was associated with a 34% lower risk of contracting COVID-19."
+   },
+   {
+    "id": "t2",
+    "start": 5.6,
+    "end": 10.96,
+    "text": "This was independent of lifestyle, socioeconomic status, or the presence of other chronic diseases."
+   },
+   {
+    "id": "t3",
+    "start": 10.96,
+    "end": 14.96,
+    "text": "The data was also adjusted for other supplement use, like other vitamins and minerals and"
+   },
+   {
+    "id": "t4",
+    "start": 14.96,
+    "end": 17.6,
+    "text": "multivitamins, and there was no association found."
+   },
+   {
+    "id": "t5",
+    "start": 17.6,
+    "end": 22.8,
+    "text": "The best hope we may have in proving whether or not vitamin D has a clinical benefit in COVID-19"
+   },
+   {
+    "id": "t6",
+    "start": 22.8,
+    "end": 27.2,
+    "text": "may be in large population studies where vitamin D is taken prophylactically."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 14,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Vitamin Duse was linked to a",
+    "confidence": 0.512
+   },
+   {
+    "time": 0.0,
+    "text": "34% lower risk of COVID-19",
+    "confidence": 0.922
+   },
+   {
+    "time": 2.0,
+    "text": "34% lower risk of COVID-19",
+    "confidence": 0.79
+   },
+   {
+    "time": 4.0,
+    "text": "34% lower risk of COVID-19",
+    "confidence": 0.793
+   },
+   {
+    "time": 6.0,
+    "text": "Vitamin D use was linked to a",
+    "confidence": 0.6
+   },
+   {
+    "time": 6.0,
+    "text": "34% lower risk of COVID-19",
+    "confidence": 0.748
+   },
+   {
+    "time": 8.0,
+    "text": "34% lower risk of COVID-19",
+    "confidence": 0.842
+   },
+   {
+    "time": 10.0,
+    "text": "Vitamin D use was linked to a",
+    "confidence": 0.573
+   },
+   {
+    "time": 10.0,
+    "text": "34% lower risk of COVID-19",
+    "confidence": 0.759
+   },
+   {
+    "time": 12.0,
+    "text": "Vitamin D use was linked to a",
+    "confidence": 0.62
+   },
+   {
+    "time": 12.0,
+    "text": "34% lower risk of COVID-19",
+    "confidence": 0.61
+   },
+   {
+    "time": 14.0,
+    "text": "Vitamin D use was linked to a",
+    "confidence": 0.58
+   },
+   {
+    "time": 14.0,
+    "text": "34% lower risk of COVID-19",
+    "confidence": 0.648
+   },
+   {
+    "time": 16.0,
+    "text": "34% lower risk of COVID-19",
+    "confidence": 0.771
+   },
+   {
+    "time": 18.0,
+    "text": "Vitamin Duse was linked to a",
+    "confidence": 0.65
+   },
+   {
+    "time": 18.0,
+    "text": "34% lower risk of COVID-19",
+    "confidence": 0.61
+   },
+   {
+    "time": 20.0,
+    "text": "Vitamin Duse was linked to a",
+    "confidence": 0.669
+   },
+   {
+    "time": 20.0,
+    "text": "34% lower risk of COVID-19",
+    "confidence": 0.768
+   },
+   {
+    "time": 22.0,
+    "text": "Vitamin D use was linked to a",
+    "confidence": 0.595
+   },
+   {
+    "time": 22.0,
+    "text": "34% lower risk of COVID-19",
+    "confidence": 0.973
+   },
+   {
+    "time": 24.0,
+    "text": "Vitamin Duse was linked to a",
+    "confidence": 0.663
+   },
+   {
+    "time": 24.0,
+    "text": "34% lower risk of COVID-19",
+    "confidence": 0.973
+   },
+   {
+    "time": 26.0,
+    "text": "Vitamin D use was linked to a",
+    "confidence": 0.609
+   },
+   {
+    "time": 26.0,
+    "text": "34% lower risk of COVID-19",
+    "confidence": 0.969
+   }
+  ],
+  "captions": [
+   {
+    "text": "Vitamin Duse was linked to a",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.512,
+    "id": "o1"
+   },
+   {
+    "text": "34% lower risk of COVID-19",
+    "start": 0.0,
+    "end": 4.0,
+    "confidence": 0.922,
+    "id": "o2"
+   },
+   {
+    "text": "Vitamin D use was linked to a",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.6,
+    "id": "o3"
+   },
+   {
+    "text": "34% lower risk of COVID-19",
+    "start": 6.0,
+    "end": 8.0,
+    "confidence": 0.842,
+    "id": "o4"
+   },
+   {
+    "text": "Vitamin D use was linked to a",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.573,
+    "id": "o5"
+   },
+   {
+    "text": "34% lower risk of COVID-19",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.759,
+    "id": "o6"
+   },
+   {
+    "text": "Vitamin D use was linked to a",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.62,
+    "id": "o7"
+   },
+   {
+    "text": "34% lower risk of COVID-19",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.61,
+    "id": "o8"
+   },
+   {
+    "text": "Vitamin D use was linked to a",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.58,
+    "id": "o9"
+   },
+   {
+    "text": "34% lower risk of COVID-19",
+    "start": 14.0,
+    "end": 16.0,
+    "confidence": 0.771,
+    "id": "o10"
+   },
+   {
+    "text": "Vitamin Duse was linked to a",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.65,
+    "id": "o11"
+   },
+   {
+    "text": "34% lower risk of COVID-19",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.61,
+    "id": "o12"
+   },
+   {
+    "text": "Vitamin Duse was linked to a",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.669,
+    "id": "o13"
+   },
+   {
+    "text": "34% lower risk of COVID-19",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.768,
+    "id": "o14"
+   },
+   {
+    "text": "Vitamin D use was linked to a",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.595,
+    "id": "o15"
+   },
+   {
+    "text": "34% lower risk of COVID-19",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.973,
+    "id": "o16"
+   },
+   {
+    "text": "Vitamin Duse was linked to a",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.663,
+    "id": "o17"
+   },
+   {
+    "text": "34% lower risk of COVID-19",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.973,
+    "id": "o18"
+   },
+   {
+    "text": "Vitamin D use was linked to a",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.609,
+    "id": "o19"
+   },
+   {
+    "text": "34% lower risk of COVID-19",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.969,
+    "id": "o20"
+   }
+  ]
+ }
+}

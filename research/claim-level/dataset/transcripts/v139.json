@@ -1,0 +1,1547 @@
+{
+ "video_id": "v139",
+ "filename": "new_TikTok_7383566982131485958.mp4",
+ "relative_path": "new_TikTok_7383566982131485958.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@mr.danger2024",
+ "extracted_at": "2026-11-23T08:45:58",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.998,
+  "duration_seconds": 63.28,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.69,
+    "end": 6.85,
+    "text": "El ajo tiene cualidades antifungal, antifungal quiere decir que mata hongos, nosotros por"
+   },
+   {
+    "id": "t2",
+    "start": 6.85,
+    "end": 14.21,
+    "text": "ejemplo que trabajamos con suplementos para limpiar el hongo cándida que es un hongo,"
+   },
+   {
+    "id": "t3",
+    "start": 14.21,
+    "end": 21.13,
+    "text": "pues uno de los suplementos lleva un compuesto bien concentrado de una forma de ajo que es"
+   },
+   {
+    "id": "t4",
+    "start": 21.13,
+    "end": 27.85,
+    "text": "muy concentrado en su agente activo que se llama el alium, el alium es el agente activo"
+   },
+   {
+    "id": "t5",
+    "start": 27.85,
+    "end": 33.73,
+    "text": "del ajo que es bien fugicida y entonces se usa un ajo bien concentrado en combinación"
+   },
+   {
+    "id": "t6",
+    "start": 33.73,
+    "end": 39.25,
+    "text": "con otros suplementos como orégano y demás para de una forma natural matar el hongo cándida"
+   },
+   {
+    "id": "t7",
+    "start": 39.25,
+    "end": 43.05,
+    "text": "y que el cuerpo se limpia de hongo y cuando el cuerpo se limpia de hongo entonces la persona"
+   },
+   {
+    "id": "t8",
+    "start": 43.05,
+    "end": 48.05,
+    "text": "tiene un buen metabolismo, adelgaza con facilidad, se le desaparece la sinusitis, la migraña,"
+   },
+   {
+    "id": "t9",
+    "start": 48.05,
+    "end": 52.69,
+    "text": "los picores en la piel, todo eso desaparece cuando uno limpia el hongo cándida y uno"
+   },
+   {
+    "id": "t10",
+    "start": 52.69,
+    "end": 57.33,
+    "text": "de los agentes principales para eso es el ajo. El ajo de por sí es antifungal, en"
+   },
+   {
+    "id": "t11",
+    "start": 57.33,
+    "end": 63.05,
+    "text": "realidad es muy beneficioso y esto se los comento porque la verdad siempre triunfa."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 32,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "LA",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "CANDIDA",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "VA",
+    "confidence": 0.999
+   },
+   {
+    "time": 0.0,
+    "text": "SE",
+    "confidence": 0.997
+   },
+   {
+    "time": 0.0,
+    "text": "USANDO",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "AJO",
+    "confidence": 0.535
+   },
+   {
+    "time": 2.0,
+    "text": "LA",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "CANDIDA",
+    "confidence": 0.815
+   },
+   {
+    "time": 2.0,
+    "text": "VA",
+    "confidence": 0.997
+   },
+   {
+    "time": 2.0,
+    "text": "SE",
+    "confidence": 0.987
+   },
+   {
+    "time": 2.0,
+    "text": "USANDO",
+    "confidence": 0.669
+   },
+   {
+    "time": 2.0,
+    "text": "AjO",
+    "confidence": 0.635
+   },
+   {
+    "time": 4.0,
+    "text": "LA",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "CANDIDA",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.0,
+    "text": "VA",
+    "confidence": 0.998
+   },
+   {
+    "time": 4.0,
+    "text": "SE",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.0,
+    "text": "USANDO",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.0,
+    "text": "AjO",
+    "confidence": 0.622
+   },
+   {
+    "time": 6.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.762
+   },
+   {
+    "time": 6.0,
+    "text": "USANDO AJO",
+    "confidence": 0.873
+   },
+   {
+    "time": 6.0,
+    "text": "nosotros",
+    "confidence": 0.998
+   },
+   {
+    "time": 8.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.97
+   },
+   {
+    "time": 8.0,
+    "text": "USANDO AJO",
+    "confidence": 0.644
+   },
+   {
+    "time": 8.0,
+    "text": "nosotros por",
+    "confidence": 0.981
+   },
+   {
+    "time": 8.0,
+    "text": "ejemplo que",
+    "confidence": 0.784
+   },
+   {
+    "time": 8.0,
+    "text": "trabajamos con",
+    "confidence": 0.741
+   },
+   {
+    "time": 10.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.983
+   },
+   {
+    "time": 10.0,
+    "text": "USANDO AJO",
+    "confidence": 0.603
+   },
+   {
+    "time": 10.0,
+    "text": "suplementos",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.94
+   },
+   {
+    "time": 12.0,
+    "text": "USANDOAJO",
+    "confidence": 0.751
+   },
+   {
+    "time": 12.0,
+    "text": "suplementos para",
+    "confidence": 0.648
+   },
+   {
+    "time": 12.0,
+    "text": "limpiar el hongo ca",
+    "confidence": 0.936
+   },
+   {
+    "time": 12.0,
+    "text": "ndida",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.972
+   },
+   {
+    "time": 14.0,
+    "text": "USANDO AJO",
+    "confidence": 0.783
+   },
+   {
+    "time": 16.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.95
+   },
+   {
+    "time": 16.0,
+    "text": "USANDO AJO",
+    "confidence": 0.968
+   },
+   {
+    "time": 16.0,
+    "text": "suplementos",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.934
+   },
+   {
+    "time": 18.0,
+    "text": "USANDO AJO",
+    "confidence": 0.918
+   },
+   {
+    "time": 18.0,
+    "text": "uno dels",
+    "confidence": 0.93
+   },
+   {
+    "time": 18.0,
+    "text": "suplementos Ileva",
+    "confidence": 0.534
+   },
+   {
+    "time": 18.0,
+    "text": "compuesto bien",
+    "confidence": 0.757
+   },
+   {
+    "time": 18.0,
+    "text": "un",
+    "confidence": 0.896
+   },
+   {
+    "time": 20.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.725
+   },
+   {
+    "time": 20.0,
+    "text": "USANDO AJO",
+    "confidence": 0.935
+   },
+   {
+    "time": 20.0,
+    "text": "d una forma de",
+    "confidence": 0.749
+   },
+   {
+    "time": 20.0,
+    "text": "EL AO:",
+    "confidence": 0.928
+   },
+   {
+    "time": 20.0,
+    "text": "PLANTA ANTI FUNGAL",
+    "confidence": 0.719
+   },
+   {
+    "time": 22.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.742
+   },
+   {
+    "time": 22.0,
+    "text": "USANDO AJO",
+    "confidence": 0.966
+   },
+   {
+    "time": 22.0,
+    "text": "que es muy eh",
+    "confidence": 0.986
+   },
+   {
+    "time": 22.0,
+    "text": "EL AJO:",
+    "confidence": 0.747
+   },
+   {
+    "time": 22.0,
+    "text": "PLANTA ANTI FUNGAL",
+    "confidence": 0.651
+   },
+   {
+    "time": 24.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.956
+   },
+   {
+    "time": 24.0,
+    "text": "USANDO AJO",
+    "confidence": 0.973
+   },
+   {
+    "time": 26.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.795
+   },
+   {
+    "time": 26.0,
+    "text": "USANDO AJO",
+    "confidence": 0.715
+   },
+   {
+    "time": 28.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.949
+   },
+   {
+    "time": 28.0,
+    "text": "USANDO AJO",
+    "confidence": 0.967
+   },
+   {
+    "time": 28.0,
+    "text": "el allium es el agente",
+    "confidence": 0.914
+   },
+   {
+    "time": 28.0,
+    "text": "activo del",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.923
+   },
+   {
+    "time": 32.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.988
+   },
+   {
+    "time": 32.0,
+    "text": "USANDO AJO",
+    "confidence": 0.955
+   },
+   {
+    "time": 32.0,
+    "text": "y entonces se usa un",
+    "confidence": 0.791
+   },
+   {
+    "time": 32.0,
+    "text": "ajo bien",
+    "confidence": 0.888
+   },
+   {
+    "time": 34.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.771
+   },
+   {
+    "time": 34.0,
+    "text": "USANDO AJO",
+    "confidence": 0.757
+   },
+   {
+    "time": 34.0,
+    "text": "en combinacion con",
+    "confidence": 0.821
+   },
+   {
+    "time": 36.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.934
+   },
+   {
+    "time": 36.0,
+    "text": "USANDOAjO",
+    "confidence": 0.834
+   },
+   {
+    "time": 38.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.948
+   },
+   {
+    "time": 38.0,
+    "text": "USANDO AJO",
+    "confidence": 0.772
+   },
+   {
+    "time": 38.0,
+    "text": "para de una forma",
+    "confidence": 0.904
+   },
+   {
+    "time": 38.0,
+    "text": "natural matar",
+    "confidence": 0.999
+   },
+   {
+    "time": 40.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.935
+   },
+   {
+    "time": 40.0,
+    "text": "USANDO AJO",
+    "confidence": 0.641
+   },
+   {
+    "time": 40.0,
+    "text": "y que el cuerpo se",
+    "confidence": 0.666
+   },
+   {
+    "time": 42.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.983
+   },
+   {
+    "time": 42.0,
+    "text": "USANDO AJO",
+    "confidence": 0.571
+   },
+   {
+    "time": 42.0,
+    "text": "y cuando el cuerpo",
+    "confidence": 0.956
+   },
+   {
+    "time": 42.0,
+    "text": "limpia de",
+    "confidence": 0.815
+   },
+   {
+    "time": 42.0,
+    "text": "se",
+    "confidence": 0.893
+   },
+   {
+    "time": 44.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.984
+   },
+   {
+    "time": 44.0,
+    "text": "USANDO AJO",
+    "confidence": 0.96
+   },
+   {
+    "time": 44.0,
+    "text": "pues entonces Ia",
+    "confidence": 0.813
+   },
+   {
+    "time": 44.0,
+    "text": "persona tiene un",
+    "confidence": 0.982
+   },
+   {
+    "time": 44.0,
+    "text": "buen metabolismo",
+    "confidence": 0.915
+   },
+   {
+    "time": 46.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.984
+   },
+   {
+    "time": 46.0,
+    "text": "USANDO AJO",
+    "confidence": 0.778
+   },
+   {
+    "time": 46.0,
+    "text": "se le",
+    "confidence": 0.81
+   },
+   {
+    "time": 48.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.99
+   },
+   {
+    "time": 48.0,
+    "text": "USANDO AjO",
+    "confidence": 0.619
+   },
+   {
+    "time": 48.0,
+    "text": "se le desaparecen las",
+    "confidence": 0.786
+   },
+   {
+    "time": 48.0,
+    "text": "sinusitis las migran",
+    "confidence": 0.845
+   },
+   {
+    "time": 48.0,
+    "text": "as",
+    "confidence": 0.997
+   },
+   {
+    "time": 50.0,
+    "text": "LA CANDIDA SE VA",
+    "confidence": 0.719
+   },
+   {
+    "time": 50.0,
+    "text": "USANDOAJO",
+    "confidence": 0.88
+   },
+   {
+    "time": 50.0,
+    "text": "todo eso desaparece",
+    "confidence": 0.811
+   },
+   {
+    "time": 52.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.905
+   },
+   {
+    "time": 52.0,
+    "text": "todo eso desaparece",
+    "confidence": 0.85
+   },
+   {
+    "time": 52.0,
+    "text": "cuando uno Iimpia el",
+    "confidence": 0.898
+   },
+   {
+    "time": 52.0,
+    "text": "el hongo candida",
+    "confidence": 0.867
+   },
+   {
+    "time": 54.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.977
+   },
+   {
+    "time": 54.0,
+    "text": "USANDO AjO",
+    "confidence": 0.733
+   },
+   {
+    "time": 54.0,
+    "text": "y uno de los agentes",
+    "confidence": 0.701
+   },
+   {
+    "time": 54.0,
+    "text": "principales",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.973
+   },
+   {
+    "time": 56.0,
+    "text": "USANDO AJO",
+    "confidence": 0.972
+   },
+   {
+    "time": 56.0,
+    "text": "el ajo",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.0,
+    "text": "LACANDIDA SEVA",
+    "confidence": 0.872
+   },
+   {
+    "time": 58.0,
+    "text": "USANDO AJO",
+    "confidence": 0.838
+   },
+   {
+    "time": 58.0,
+    "text": "en realidad es",
+    "confidence": 0.856
+   },
+   {
+    "time": 60.0,
+    "text": "LA CANDIDA SEVA",
+    "confidence": 0.919
+   },
+   {
+    "time": 60.0,
+    "text": "USANDO AJO",
+    "confidence": 0.73
+   },
+   {
+    "time": 60.0,
+    "text": "en realidad es muy",
+    "confidence": 0.892
+   },
+   {
+    "time": 60.0,
+    "text": "beneficioso y esto se",
+    "confidence": 0.718
+   },
+   {
+    "time": 62.0,
+    "text": "LA CANDIDA SE VA",
+    "confidence": 0.851
+   },
+   {
+    "time": 62.0,
+    "text": "USANDOAjO",
+    "confidence": 0.951
+   }
+  ],
+  "captions": [
+   {
+    "text": "LA",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o1"
+   },
+   {
+    "text": "CANDIDA",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o2"
+   },
+   {
+    "text": "VA",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o3"
+   },
+   {
+    "text": "SE",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.997,
+    "id": "o4"
+   },
+   {
+    "text": "USANDO",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o5"
+   },
+   {
+    "text": "AJO",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.535,
+    "id": "o6"
+   },
+   {
+    "text": "LA",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o7"
+   },
+   {
+    "text": "CANDIDA",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.815,
+    "id": "o8"
+   },
+   {
+    "text": "VA",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.997,
+    "id": "o9"
+   },
+   {
+    "text": "SE",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.987,
+    "id": "o10"
+   },
+   {
+    "text": "USANDO",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.669,
+    "id": "o11"
+   },
+   {
+    "text": "AjO",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.635,
+    "id": "o12"
+   },
+   {
+    "text": "LA",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o13"
+   },
+   {
+    "text": "CANDIDA",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.999,
+    "id": "o14"
+   },
+   {
+    "text": "VA",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.998,
+    "id": "o15"
+   },
+   {
+    "text": "SE",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.999,
+    "id": "o16"
+   },
+   {
+    "text": "USANDO",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.999,
+    "id": "o17"
+   },
+   {
+    "text": "AjO",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.622,
+    "id": "o18"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.762,
+    "id": "o19"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.873,
+    "id": "o20"
+   },
+   {
+    "text": "nosotros",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.998,
+    "id": "o21"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.97,
+    "id": "o22"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.644,
+    "id": "o23"
+   },
+   {
+    "text": "nosotros por",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.981,
+    "id": "o24"
+   },
+   {
+    "text": "ejemplo que",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.784,
+    "id": "o25"
+   },
+   {
+    "text": "trabajamos con",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.741,
+    "id": "o26"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.983,
+    "id": "o27"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.603,
+    "id": "o28"
+   },
+   {
+    "text": "suplementos",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o29"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.94,
+    "id": "o30"
+   },
+   {
+    "text": "USANDOAJO",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.751,
+    "id": "o31"
+   },
+   {
+    "text": "suplementos para",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.648,
+    "id": "o32"
+   },
+   {
+    "text": "limpiar el hongo ca",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.936,
+    "id": "o33"
+   },
+   {
+    "text": "ndida",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o34"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.972,
+    "id": "o35"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.783,
+    "id": "o36"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.95,
+    "id": "o37"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.968,
+    "id": "o38"
+   },
+   {
+    "text": "suplementos",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o39"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.934,
+    "id": "o40"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.918,
+    "id": "o41"
+   },
+   {
+    "text": "uno dels",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.93,
+    "id": "o42"
+   },
+   {
+    "text": "suplementos Ileva",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.534,
+    "id": "o43"
+   },
+   {
+    "text": "compuesto bien",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.757,
+    "id": "o44"
+   },
+   {
+    "text": "un",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.896,
+    "id": "o45"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.725,
+    "id": "o46"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.935,
+    "id": "o47"
+   },
+   {
+    "text": "d una forma de",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.749,
+    "id": "o48"
+   },
+   {
+    "text": "EL AO:",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.928,
+    "id": "o49"
+   },
+   {
+    "text": "PLANTA ANTI FUNGAL",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.719,
+    "id": "o50"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.742,
+    "id": "o51"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.966,
+    "id": "o52"
+   },
+   {
+    "text": "que es muy eh",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.986,
+    "id": "o53"
+   },
+   {
+    "text": "EL AJO:",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.747,
+    "id": "o54"
+   },
+   {
+    "text": "PLANTA ANTI FUNGAL",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.651,
+    "id": "o55"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.956,
+    "id": "o56"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.973,
+    "id": "o57"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.795,
+    "id": "o58"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.715,
+    "id": "o59"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.949,
+    "id": "o60"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.967,
+    "id": "o61"
+   },
+   {
+    "text": "el allium es el agente",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.914,
+    "id": "o62"
+   },
+   {
+    "text": "activo del",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o63"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 30.0,
+    "end": 32.0,
+    "confidence": 0.988,
+    "id": "o64"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.955,
+    "id": "o65"
+   },
+   {
+    "text": "y entonces se usa un",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.791,
+    "id": "o66"
+   },
+   {
+    "text": "ajo bien",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.888,
+    "id": "o67"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.771,
+    "id": "o68"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.757,
+    "id": "o69"
+   },
+   {
+    "text": "en combinacion con",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.821,
+    "id": "o70"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.934,
+    "id": "o71"
+   },
+   {
+    "text": "USANDOAjO",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.834,
+    "id": "o72"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.948,
+    "id": "o73"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.772,
+    "id": "o74"
+   },
+   {
+    "text": "para de una forma",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.904,
+    "id": "o75"
+   },
+   {
+    "text": "natural matar",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.999,
+    "id": "o76"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.935,
+    "id": "o77"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.641,
+    "id": "o78"
+   },
+   {
+    "text": "y que el cuerpo se",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.666,
+    "id": "o79"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.983,
+    "id": "o80"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.571,
+    "id": "o81"
+   },
+   {
+    "text": "y cuando el cuerpo",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.956,
+    "id": "o82"
+   },
+   {
+    "text": "limpia de",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.815,
+    "id": "o83"
+   },
+   {
+    "text": "se",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.893,
+    "id": "o84"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.984,
+    "id": "o85"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.96,
+    "id": "o86"
+   },
+   {
+    "text": "pues entonces Ia",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.813,
+    "id": "o87"
+   },
+   {
+    "text": "persona tiene un",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.982,
+    "id": "o88"
+   },
+   {
+    "text": "buen metabolismo",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.915,
+    "id": "o89"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.984,
+    "id": "o90"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.778,
+    "id": "o91"
+   },
+   {
+    "text": "se le",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.81,
+    "id": "o92"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.99,
+    "id": "o93"
+   },
+   {
+    "text": "USANDO AjO",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.619,
+    "id": "o94"
+   },
+   {
+    "text": "se le desaparecen las",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.786,
+    "id": "o95"
+   },
+   {
+    "text": "sinusitis las migran",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.845,
+    "id": "o96"
+   },
+   {
+    "text": "as",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.997,
+    "id": "o97"
+   },
+   {
+    "text": "LA CANDIDA SE VA",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.719,
+    "id": "o98"
+   },
+   {
+    "text": "USANDOAJO",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.88,
+    "id": "o99"
+   },
+   {
+    "text": "todo eso desaparece",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.811,
+    "id": "o100"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.905,
+    "id": "o101"
+   },
+   {
+    "text": "todo eso desaparece",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.85,
+    "id": "o102"
+   },
+   {
+    "text": "cuando uno Iimpia el",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.898,
+    "id": "o103"
+   },
+   {
+    "text": "el hongo candida",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.867,
+    "id": "o104"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.977,
+    "id": "o105"
+   },
+   {
+    "text": "USANDO AjO",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.733,
+    "id": "o106"
+   },
+   {
+    "text": "y uno de los agentes",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.701,
+    "id": "o107"
+   },
+   {
+    "text": "principales",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o108"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.973,
+    "id": "o109"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.972,
+    "id": "o110"
+   },
+   {
+    "text": "el ajo",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 1.0,
+    "id": "o111"
+   },
+   {
+    "text": "LACANDIDA SEVA",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.872,
+    "id": "o112"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.838,
+    "id": "o113"
+   },
+   {
+    "text": "en realidad es",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.856,
+    "id": "o114"
+   },
+   {
+    "text": "LA CANDIDA SEVA",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.919,
+    "id": "o115"
+   },
+   {
+    "text": "USANDO AJO",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.73,
+    "id": "o116"
+   },
+   {
+    "text": "en realidad es muy",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.892,
+    "id": "o117"
+   },
+   {
+    "text": "beneficioso y esto se",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.718,
+    "id": "o118"
+   },
+   {
+    "text": "LA CANDIDA SE VA",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.851,
+    "id": "o119"
+   },
+   {
+    "text": "USANDOAjO",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.951,
+    "id": "o120"
+   }
+  ]
+ }
+}

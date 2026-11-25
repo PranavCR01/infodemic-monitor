@@ -1,0 +1,164 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 57.7,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 1.36,
+    "text": "When people tell you to eat healthy,"
+   },
+   {
+    "id": "t2",
+    "start": 1.36,
+    "end": 3.0,
+    "text": "what do they usually tell you to eat?"
+   },
+   {
+    "id": "t3",
+    "start": 3.0,
+    "end": 4.4,
+    "text": "Fruits and vegetables, right?"
+   },
+   {
+    "id": "t4",
+    "start": 4.4,
+    "end": 6.28,
+    "text": "Which totally, but what I find interesting"
+   },
+   {
+    "id": "t5",
+    "start": 6.28,
+    "end": 9.52,
+    "text": "is when the University of Michigan looked at 5,800 foods"
+   },
+   {
+    "id": "t6",
+    "start": 9.52,
+    "end": 11.52,
+    "text": "to see how many minutes they add or take away"
+   },
+   {
+    "id": "t7",
+    "start": 11.52,
+    "end": 13.4,
+    "text": "from your life based on various factors,"
+   },
+   {
+    "id": "t8",
+    "start": 13.4,
+    "end": 15.04,
+    "text": "while fruits and vegetables did well,"
+   },
+   {
+    "id": "t9",
+    "start": 15.04,
+    "end": 18.12,
+    "text": "there was one category that did significantly better"
+   },
+   {
+    "id": "t10",
+    "start": 18.12,
+    "end": 19.16,
+    "text": "than all the others."
+   },
+   {
+    "id": "t11",
+    "start": 19.16,
+    "end": 23.72,
+    "text": "And unfortunately, I see it demonized quite frequently."
+   },
+   {
+    "id": "t12",
+    "start": 23.72,
+    "end": 25.26,
+    "text": "What's another food that's deemed healthy"
+   },
+   {
+    "id": "t13",
+    "start": 25.26,
+    "end": 27.12,
+    "text": "but absolutely is not healthy?"
+   },
+   {
+    "id": "t14",
+    "start": 27.12,
+    "end": 27.96,
+    "text": "Nut butters."
+   },
+   {
+    "id": "t15",
+    "start": 27.96,
+    "end": 30.08,
+    "text": "Yup, nuts and or seeds."
+   },
+   {
+    "id": "t16",
+    "start": 30.08,
+    "end": 31.72,
+    "text": "And for all of you about to say peanuts aren't a nut,"
+   },
+   {
+    "id": "t17",
+    "start": 31.72,
+    "end": 34.48,
+    "text": "I would like to present to you technically all berries."
+   },
+   {
+    "id": "t18",
+    "start": 34.48,
+    "end": 38.56,
+    "text": "There is botanical and then culinary definitions."
+   },
+   {
+    "id": "t19",
+    "start": 38.56,
+    "end": 39.92,
+    "text": "Please learn the difference."
+   },
+   {
+    "id": "t20",
+    "start": 39.92,
+    "end": 41.68,
+    "text": "Seriously though, they have so many amazing things"
+   },
+   {
+    "id": "t21",
+    "start": 41.68,
+    "end": 43.2,
+    "text": "for your health, but because they're high calorie,"
+   },
+   {
+    "id": "t22",
+    "start": 43.2,
+    "end": 44.2,
+    "text": "people think they're unhealthy."
+   },
+   {
+    "id": "t23",
+    "start": 44.2,
+    "end": 49.2,
+    "text": "Fun fact, low calorie and healthy aren't the same thing."
+   },
+   {
+    "id": "t24",
+    "start": 50.27,
+    "end": 51.11,
+    "text": "Out of 10."
+   },
+   {
+    "id": "t25",
+    "start": 53.17,
+    "end": 54.01,
+    "text": "Okay, bye."
+   }
+  ]
+ }
+}

@@ -1,0 +1,450 @@
+{
+ "video_id": "v179",
+ "filename": "new_youtube_tVb3tRB-w8A.mp4",
+ "relative_path": "new_youtube_tVb3tRB-w8A.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:46:00",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 59.45,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.88,
+    "text": "I believed that if I was thin,"
+   },
+   {
+    "id": "t2",
+    "start": 2.88,
+    "end": 6.56,
+    "text": "if I weighed this magical number on the scale,"
+   },
+   {
+    "id": "t3",
+    "start": 6.56,
+    "end": 9.6,
+    "text": "then I was strong, then I was free,"
+   },
+   {
+    "id": "t4",
+    "start": 9.6,
+    "end": 12.92,
+    "text": "then I was worthy of love, but I had a crisis."
+   },
+   {
+    "id": "t5",
+    "start": 12.92,
+    "end": 15.68,
+    "text": "See, I was engaged to get married,"
+   },
+   {
+    "id": "t6",
+    "start": 15.68,
+    "end": 20.68,
+    "text": "and I got so depressed that I outgrew the wedding dress."
+   },
+   {
+    "id": "t7",
+    "start": 20.96,
+    "end": 24.32,
+    "text": "I had bought a wedding dress in the hope"
+   },
+   {
+    "id": "t8",
+    "start": 24.32,
+    "end": 28.04,
+    "text": "that I would be able to lose enough weight to wear it,"
+   },
+   {
+    "id": "t9",
+    "start": 28.04,
+    "end": 30.6,
+    "text": "But instead, I gained so much weight,"
+   },
+   {
+    "id": "t10",
+    "start": 30.6,
+    "end": 32.88,
+    "text": "they couldn't even zip it up."
+   },
+   {
+    "id": "t11",
+    "start": 32.88,
+    "end": 35.4,
+    "text": "I remember falling on my face and saying,"
+   },
+   {
+    "id": "t12",
+    "start": 35.4,
+    "end": 38.68,
+    "text": "God, now that I've become a Christian, I am fat."
+   },
+   {
+    "id": "t13",
+    "start": 38.68,
+    "end": 40.0,
+    "text": "Like it was his fault."
+   },
+   {
+    "id": "t14",
+    "start": 40.0,
+    "end": 41.48,
+    "text": "He was like, I didn't make you eat"
+   },
+   {
+    "id": "t15",
+    "start": 41.48,
+    "end": 43.76,
+    "text": "that whole row of chocolate chip cookie dough."
+   },
+   {
+    "id": "t16",
+    "start": 43.76,
+    "end": 48.04,
+    "text": "I didn't make you eat that Domino's Pizza by yourself."
+   },
+   {
+    "id": "t17",
+    "start": 48.04,
+    "end": 50.08,
+    "text": "Listen, he said, you have an idol."
+   },
+   {
+    "id": "t18",
+    "start": 50.08,
+    "end": 51.36,
+    "text": "And he said, give this to me."
+   },
+   {
+    "id": "t19",
+    "start": 51.36,
+    "end": 53.64,
+    "text": "I remember thinking, but that's a carnal thing."
+   },
+   {
+    "id": "t20",
+    "start": 53.64,
+    "end": 54.48,
+    "text": "It's the carnal thing."
+   },
+   {
+    "id": "t21",
+    "start": 54.48,
+    "end": 59.44,
+    "text": "He said, anything that has control over you is a concern for me."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 30,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "BELIEVED",
+    "confidence": 0.967
+   },
+   {
+    "time": 0.0,
+    "text": "I",
+    "confidence": 0.749
+   },
+   {
+    "time": 2.0,
+    "text": "WAS",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.0,
+    "text": "THIS MAGICAL NUMBER",
+    "confidence": 0.991
+   },
+   {
+    "time": 8.01,
+    "text": "THEN I WAS FREE",
+    "confidence": 0.975
+   },
+   {
+    "time": 10.01,
+    "text": "THEN I WAS",
+    "confidence": 0.911
+   },
+   {
+    "time": 12.01,
+    "text": "IHAD A CRISIS.",
+    "confidence": 0.645
+   },
+   {
+    "time": 14.01,
+    "text": "SEE; I WAS ENGAGED",
+    "confidence": 0.565
+   },
+   {
+    "time": 16.02,
+    "text": "AND I GOT SO",
+    "confidence": 0.581
+   },
+   {
+    "time": 18.02,
+    "text": "THAT I OUTGREW",
+    "confidence": 0.724
+   },
+   {
+    "time": 20.02,
+    "text": "THE WEDDING DRESS.",
+    "confidence": 0.759
+   },
+   {
+    "time": 22.02,
+    "text": "IHAD BOUGHT",
+    "confidence": 0.896
+   },
+   {
+    "time": 24.02,
+    "text": "IN THE HOPE THAT",
+    "confidence": 0.954
+   },
+   {
+    "time": 28.03,
+    "text": "BUT INSTEAD, I",
+    "confidence": 0.88
+   },
+   {
+    "time": 30.03,
+    "text": "GAINED 5@ MUCH WEIGHT",
+    "confidence": 0.545
+   },
+   {
+    "time": 32.03,
+    "text": "EVEN ZIP IT UP",
+    "confidence": 0.843
+   },
+   {
+    "time": 34.03,
+    "text": "FALLING ON MY FACE",
+    "confidence": 0.781
+   },
+   {
+    "time": 40.04,
+    "text": "HE WAS LIKE",
+    "confidence": 0.577
+   },
+   {
+    "time": 44.04,
+    "text": "I DIDN'T MAKE YOU",
+    "confidence": 0.655
+   },
+   {
+    "time": 46.05,
+    "text": "EAT THAT DOMINO'S",
+    "confidence": 0.995
+   },
+   {
+    "time": 48.05,
+    "text": "LISTEN,",
+    "confidence": 0.746
+   },
+   {
+    "time": 52.05,
+    "text": "REMEMBER THINKING,",
+    "confidence": 0.558
+   },
+   {
+    "time": 56.06,
+    "text": "THAT HAS CONTROL",
+    "confidence": 0.692
+   },
+   {
+    "time": 58.06,
+    "text": "CONCERN FOR ME:",
+    "confidence": 0.99
+   }
+  ],
+  "captions": [
+   {
+    "text": "BELIEVED",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.967,
+    "id": "o1"
+   },
+   {
+    "text": "I",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.749,
+    "id": "o2"
+   },
+   {
+    "text": "WAS",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.999,
+    "id": "o3"
+   },
+   {
+    "text": "THIS MAGICAL NUMBER",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.991,
+    "id": "o4"
+   },
+   {
+    "text": "THEN I WAS FREE",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.975,
+    "id": "o5"
+   },
+   {
+    "text": "THEN I WAS",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.911,
+    "id": "o6"
+   },
+   {
+    "text": "IHAD A CRISIS.",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.645,
+    "id": "o7"
+   },
+   {
+    "text": "SEE; I WAS ENGAGED",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.565,
+    "id": "o8"
+   },
+   {
+    "text": "AND I GOT SO",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.581,
+    "id": "o9"
+   },
+   {
+    "text": "THAT I OUTGREW",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.724,
+    "id": "o10"
+   },
+   {
+    "text": "THE WEDDING DRESS.",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.759,
+    "id": "o11"
+   },
+   {
+    "text": "IHAD BOUGHT",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.896,
+    "id": "o12"
+   },
+   {
+    "text": "IN THE HOPE THAT",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.954,
+    "id": "o13"
+   },
+   {
+    "text": "BUT INSTEAD, I",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.88,
+    "id": "o14"
+   },
+   {
+    "text": "GAINED 5@ MUCH WEIGHT",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.545,
+    "id": "o15"
+   },
+   {
+    "text": "EVEN ZIP IT UP",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.843,
+    "id": "o16"
+   },
+   {
+    "text": "FALLING ON MY FACE",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.781,
+    "id": "o17"
+   },
+   {
+    "text": "HE WAS LIKE",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.577,
+    "id": "o18"
+   },
+   {
+    "text": "I DIDN'T MAKE YOU",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.655,
+    "id": "o19"
+   },
+   {
+    "text": "EAT THAT DOMINO'S",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.995,
+    "id": "o20"
+   },
+   {
+    "text": "LISTEN,",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.746,
+    "id": "o21"
+   },
+   {
+    "text": "REMEMBER THINKING,",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.558,
+    "id": "o22"
+   },
+   {
+    "text": "THAT HAS CONTROL",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.692,
+    "id": "o23"
+   },
+   {
+    "text": "CONCERN FOR ME:",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 0.99,
+    "id": "o24"
+   }
+  ]
+ }
+}

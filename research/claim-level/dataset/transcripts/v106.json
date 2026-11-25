@@ -1,0 +1,3108 @@
+{
+ "video_id": "v106",
+ "filename": "new_TikTok_6944099177219591430.mp4",
+ "relative_path": "new_TikTok_6944099177219591430.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@javiitzy",
+ "extracted_at": "2026-11-23T08:45:56",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.982,
+  "duration_seconds": 51.02,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.59,
+    "end": 9.15,
+    "text": "Este video va para todas esas personas que me están comentando que yo soy un loco que no se puede y también para todos mis seguidores"
+   },
+   {
+    "id": "t2",
+    "start": 9.99,
+    "end": 11.79,
+    "text": "ok"
+   },
+   {
+    "id": "t3",
+    "start": 11.79,
+    "end": 17.18,
+    "text": "hace ratico hice un video hace tiempo hace como cuatro días hice un video del ajo y"
+   },
+   {
+    "id": "t4",
+    "start": 17.26,
+    "end": 20.82,
+    "text": "todo el mundo no que no se puede que no se puede que no se puede ok aquí les va"
+   },
+   {
+    "id": "t5",
+    "start": 22.14,
+    "end": 24.14,
+    "text": "usted coja un diente de ajo"
+   },
+   {
+    "id": "t6",
+    "start": 26.71,
+    "end": 27.79,
+    "text": "perdón"
+   },
+   {
+    "id": "t7",
+    "start": 27.79,
+    "end": 28.71,
+    "text": "crudo"
+   },
+   {
+    "id": "t8",
+    "start": 28.71,
+    "end": 31.38,
+    "text": "sin lavar y pelado"
+   },
+   {
+    "id": "t9",
+    "start": 31.38,
+    "end": 41.89,
+    "text": "por cinco noches se le introduce en su vagina previamente haciada y se lo retira cada mañana"
+   },
+   {
+    "id": "t10",
+    "start": 41.89,
+    "end": 46.58,
+    "text": "por cinco noches y usted me va a decir a mí si funciona o no"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 26,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "ADIOS",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "le dira",
+    "confidence": 0.859
+   },
+   {
+    "time": 0.0,
+    "text": "tu",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "en",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "olores",
+    "confidence": 0.999
+   },
+   {
+    "time": 0.0,
+    "text": "Remedio",
+    "confidence": 0.922
+   },
+   {
+    "time": 0.0,
+    "text": "Este",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "se",
+    "confidence": 0.956
+   },
+   {
+    "time": 0.0,
+    "text": "mal",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "tus",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "parasito",
+    "confidence": 0.757
+   },
+   {
+    "time": 0.0,
+    "text": "todos",
+    "confidence": 0.877
+   },
+   {
+    "time": 0.0,
+    "text": "cada",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "a",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "y",
+    "confidence": 0.832
+   },
+   {
+    "time": 0.0,
+    "text": "vagina",
+    "confidence": 0.644
+   },
+   {
+    "time": 0.0,
+    "text": "desaparesera",
+    "confidence": 0.704
+   },
+   {
+    "time": 2.0,
+    "text": "ADIOS",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "le dira",
+    "confidence": 0.893
+   },
+   {
+    "time": 2.0,
+    "text": "tu",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "en",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "olores",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "Remedio",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "Este",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "se",
+    "confidence": 0.95
+   },
+   {
+    "time": 2.0,
+    "text": "mal",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "tus",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "parasito",
+    "confidence": 0.975
+   },
+   {
+    "time": 2.0,
+    "text": "todos",
+    "confidence": 0.973
+   },
+   {
+    "time": 2.0,
+    "text": "cada",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "a",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "y",
+    "confidence": 0.836
+   },
+   {
+    "time": 2.0,
+    "text": "vagina",
+    "confidence": 0.72
+   },
+   {
+    "time": 2.0,
+    "text": "desaparesera",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "ADIOS",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.0,
+    "text": "le dira",
+    "confidence": 0.877
+   },
+   {
+    "time": 4.0,
+    "text": "en tu",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.0,
+    "text": "olores",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.0,
+    "text": "Remedio",
+    "confidence": 0.996
+   },
+   {
+    "time": 4.0,
+    "text": "Este",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "se",
+    "confidence": 0.943
+   },
+   {
+    "time": 4.0,
+    "text": "mal",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "tus",
+    "confidence": 0.662
+   },
+   {
+    "time": 4.0,
+    "text": "parasito",
+    "confidence": 0.987
+   },
+   {
+    "time": 4.0,
+    "text": "todos",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.0,
+    "text": "cada",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "a",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "y",
+    "confidence": 0.833
+   },
+   {
+    "time": 4.0,
+    "text": "vagina",
+    "confidence": 0.706
+   },
+   {
+    "time": 4.0,
+    "text": "desaparesera",
+    "confidence": 0.741
+   },
+   {
+    "time": 6.01,
+    "text": "ADIOS",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.01,
+    "text": "le dira",
+    "confidence": 0.896
+   },
+   {
+    "time": 6.01,
+    "text": "tu",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.01,
+    "text": "en",
+    "confidence": 0.561
+   },
+   {
+    "time": 6.01,
+    "text": "olores",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.01,
+    "text": "Remedio",
+    "confidence": 0.888
+   },
+   {
+    "time": 6.01,
+    "text": "Este",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.01,
+    "text": "se",
+    "confidence": 0.953
+   },
+   {
+    "time": 6.01,
+    "text": "mal",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.01,
+    "text": "tus",
+    "confidence": 0.6
+   },
+   {
+    "time": 6.01,
+    "text": "parasito",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.01,
+    "text": "todos",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.01,
+    "text": "cada",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.01,
+    "text": "a",
+    "confidence": 0.769
+   },
+   {
+    "time": 6.01,
+    "text": "y",
+    "confidence": 0.88
+   },
+   {
+    "time": 6.01,
+    "text": "vagina",
+    "confidence": 0.645
+   },
+   {
+    "time": 6.01,
+    "text": "desaparesera",
+    "confidence": 0.728
+   },
+   {
+    "time": 8.01,
+    "text": "ADIOS",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.01,
+    "text": "le dira",
+    "confidence": 0.881
+   },
+   {
+    "time": 8.01,
+    "text": "tu",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.01,
+    "text": "en",
+    "confidence": 0.996
+   },
+   {
+    "time": 8.01,
+    "text": "olores",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.01,
+    "text": "Remedio",
+    "confidence": 0.932
+   },
+   {
+    "time": 8.01,
+    "text": "Este",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.01,
+    "text": "se",
+    "confidence": 0.948
+   },
+   {
+    "time": 8.01,
+    "text": "mal",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.01,
+    "text": "tus",
+    "confidence": 0.548
+   },
+   {
+    "time": 8.01,
+    "text": "parasito",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.01,
+    "text": "todos",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.01,
+    "text": "cada",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.01,
+    "text": "y",
+    "confidence": 0.846
+   },
+   {
+    "time": 8.01,
+    "text": "vagina",
+    "confidence": 0.667
+   },
+   {
+    "time": 8.01,
+    "text": "desaparesera",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.01,
+    "text": "ADIOS",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.01,
+    "text": "le dira",
+    "confidence": 0.886
+   },
+   {
+    "time": 10.01,
+    "text": "en tu",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.01,
+    "text": "olores",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.01,
+    "text": "Remedio",
+    "confidence": 0.974
+   },
+   {
+    "time": 10.01,
+    "text": "Este",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.01,
+    "text": "se",
+    "confidence": 0.946
+   },
+   {
+    "time": 10.01,
+    "text": "mal",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.01,
+    "text": "tus",
+    "confidence": 0.574
+   },
+   {
+    "time": 10.01,
+    "text": "parasito",
+    "confidence": 0.791
+   },
+   {
+    "time": 10.01,
+    "text": "todos",
+    "confidence": 0.974
+   },
+   {
+    "time": 10.01,
+    "text": "cada",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.01,
+    "text": "a",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.01,
+    "text": "y",
+    "confidence": 0.863
+   },
+   {
+    "time": 10.01,
+    "text": "vagina",
+    "confidence": 0.647
+   },
+   {
+    "time": 10.01,
+    "text": "desaparesera",
+    "confidence": 0.689
+   },
+   {
+    "time": 12.01,
+    "text": "ADIOS",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.01,
+    "text": "le dira",
+    "confidence": 0.881
+   },
+   {
+    "time": 12.01,
+    "text": "en tu",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.01,
+    "text": "olores",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.01,
+    "text": "Remedio",
+    "confidence": 0.978
+   },
+   {
+    "time": 12.01,
+    "text": "Este",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.01,
+    "text": "se",
+    "confidence": 0.952
+   },
+   {
+    "time": 12.01,
+    "text": "mal",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.01,
+    "text": "tus",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.01,
+    "text": "parasito",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.01,
+    "text": "todos",
+    "confidence": 0.987
+   },
+   {
+    "time": 12.01,
+    "text": "cada",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.01,
+    "text": "a",
+    "confidence": 0.719
+   },
+   {
+    "time": 12.01,
+    "text": "y",
+    "confidence": 0.873
+   },
+   {
+    "time": 12.01,
+    "text": "vagina",
+    "confidence": 0.691
+   },
+   {
+    "time": 12.01,
+    "text": "desaparesera",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "ADIOS",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.01,
+    "text": "le dira",
+    "confidence": 0.897
+   },
+   {
+    "time": 14.01,
+    "text": "tu",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "en",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "olores",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.01,
+    "text": "Remedio",
+    "confidence": 0.977
+   },
+   {
+    "time": 14.01,
+    "text": "Este",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "se",
+    "confidence": 0.951
+   },
+   {
+    "time": 14.01,
+    "text": "mal",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "tus",
+    "confidence": 0.604
+   },
+   {
+    "time": 14.01,
+    "text": "parasito",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "todos",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "cada",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "a",
+    "confidence": 0.93
+   },
+   {
+    "time": 14.01,
+    "text": "y",
+    "confidence": 0.841
+   },
+   {
+    "time": 14.01,
+    "text": "vagina",
+    "confidence": 0.668
+   },
+   {
+    "time": 14.01,
+    "text": "desaparesera",
+    "confidence": 0.682
+   },
+   {
+    "time": 16.02,
+    "text": "ADIOS",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.02,
+    "text": "le dira",
+    "confidence": 0.882
+   },
+   {
+    "time": 16.02,
+    "text": "tu",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.02,
+    "text": "en",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.02,
+    "text": "olores",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.02,
+    "text": "Remedio",
+    "confidence": 0.998
+   },
+   {
+    "time": 16.02,
+    "text": "Este",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.02,
+    "text": "se",
+    "confidence": 0.949
+   },
+   {
+    "time": 16.02,
+    "text": "mal",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.02,
+    "text": "tus",
+    "confidence": 0.607
+   },
+   {
+    "time": 16.02,
+    "text": "parasito",
+    "confidence": 0.997
+   },
+   {
+    "time": 16.02,
+    "text": "todos",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.02,
+    "text": "cada",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.02,
+    "text": "a",
+    "confidence": 0.507
+   },
+   {
+    "time": 16.02,
+    "text": "y",
+    "confidence": 0.851
+   },
+   {
+    "time": 16.02,
+    "text": "vagina",
+    "confidence": 0.675
+   },
+   {
+    "time": 16.02,
+    "text": "desaparesera",
+    "confidence": 0.692
+   },
+   {
+    "time": 18.02,
+    "text": "ADIOS",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.02,
+    "text": "le dira",
+    "confidence": 0.887
+   },
+   {
+    "time": 18.02,
+    "text": "tu",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.02,
+    "text": "en",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.02,
+    "text": "olores",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.02,
+    "text": "Remedio",
+    "confidence": 0.984
+   },
+   {
+    "time": 18.02,
+    "text": "Este",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.02,
+    "text": "se",
+    "confidence": 0.947
+   },
+   {
+    "time": 18.02,
+    "text": "mal",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.02,
+    "text": "tus",
+    "confidence": 0.641
+   },
+   {
+    "time": 18.02,
+    "text": "parasito",
+    "confidence": 0.804
+   },
+   {
+    "time": 18.02,
+    "text": "todos",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.02,
+    "text": "cada",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.02,
+    "text": "a",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.02,
+    "text": "y",
+    "confidence": 0.854
+   },
+   {
+    "time": 18.02,
+    "text": "vagina",
+    "confidence": 0.651
+   },
+   {
+    "time": 18.02,
+    "text": "desaparesera",
+    "confidence": 0.723
+   },
+   {
+    "time": 20.02,
+    "text": "ADIOS",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.02,
+    "text": "le dira",
+    "confidence": 0.892
+   },
+   {
+    "time": 20.02,
+    "text": "tu",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.02,
+    "text": "en",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.02,
+    "text": "olores",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.02,
+    "text": "Remedio",
+    "confidence": 0.745
+   },
+   {
+    "time": 20.02,
+    "text": "Este",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.02,
+    "text": "se",
+    "confidence": 0.937
+   },
+   {
+    "time": 20.02,
+    "text": "mal",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.02,
+    "text": "tus",
+    "confidence": 0.914
+   },
+   {
+    "time": 20.02,
+    "text": "parasito",
+    "confidence": 0.99
+   },
+   {
+    "time": 20.02,
+    "text": "todos",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.02,
+    "text": "cada",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.02,
+    "text": "a",
+    "confidence": 0.986
+   },
+   {
+    "time": 20.02,
+    "text": "y",
+    "confidence": 0.845
+   },
+   {
+    "time": 20.02,
+    "text": "vagina",
+    "confidence": 0.658
+   },
+   {
+    "time": 20.02,
+    "text": "desaparesera",
+    "confidence": 0.743
+   },
+   {
+    "time": 22.02,
+    "text": "Ya q el ajo es un antibiotico",
+    "confidence": 0.663
+   },
+   {
+    "time": 22.02,
+    "text": "Natural",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.02,
+    "text": "Ya q el ajo es un antibiotico",
+    "confidence": 0.834
+   },
+   {
+    "time": 24.02,
+    "text": "Natural",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.03,
+    "text": "Ya q el ajo es un antibiotico",
+    "confidence": 0.643
+   },
+   {
+    "time": 26.03,
+    "text": "Natural",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.03,
+    "text": "autoxidante",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.03,
+    "text": "poderoso",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.03,
+    "text": "un",
+    "confidence": 0.994
+   },
+   {
+    "time": 30.03,
+    "text": "Es",
+    "confidence": 0.758
+   },
+   {
+    "time": 32.03,
+    "text": "autoxidante",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.03,
+    "text": "poderoso",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.03,
+    "text": "un",
+    "confidence": 0.997
+   },
+   {
+    "time": 32.03,
+    "text": "Es",
+    "confidence": 0.766
+   },
+   {
+    "time": 34.03,
+    "text": "autoxidante",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.03,
+    "text": "poderoso",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.03,
+    "text": "un",
+    "confidence": 0.997
+   },
+   {
+    "time": 34.03,
+    "text": "Es",
+    "confidence": 0.583
+   },
+   {
+    "time": 38.04,
+    "text": "Antitoxico",
+    "confidence": 0.915
+   },
+   {
+    "time": 38.04,
+    "text": "virus",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.04,
+    "text": "Es",
+    "confidence": 0.995
+   },
+   {
+    "time": 38.04,
+    "text": "combatir-",
+    "confidence": 0.504
+   },
+   {
+    "time": 38.04,
+    "text": "para",
+    "confidence": 0.895
+   },
+   {
+    "time": 38.04,
+    "text": "Ideal",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.04,
+    "text": "Antitoxico",
+    "confidence": 0.933
+   },
+   {
+    "time": 40.04,
+    "text": "virus",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.04,
+    "text": "Es",
+    "confidence": 0.957
+   },
+   {
+    "time": 40.04,
+    "text": "combatir-",
+    "confidence": 0.752
+   },
+   {
+    "time": 40.04,
+    "text": "para",
+    "confidence": 0.893
+   },
+   {
+    "time": 40.04,
+    "text": "Ideal",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.04,
+    "text": "natural",
+    "confidence": 0.778
+   },
+   {
+    "time": 44.04,
+    "text": "medicina",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.04,
+    "text": "quiere",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.04,
+    "text": "Existe",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.04,
+    "text": "se les",
+    "confidence": 0.975
+   },
+   {
+    "time": 44.04,
+    "text": "tambien",
+    "confidence": 0.975
+   },
+   {
+    "time": 44.04,
+    "text": "sigueme",
+    "confidence": 0.967
+   },
+   {
+    "time": 44.04,
+    "text": "y",
+    "confidence": 0.932
+   },
+   {
+    "time": 44.04,
+    "text": "mucho",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.05,
+    "text": "natural",
+    "confidence": 0.699
+   },
+   {
+    "time": 46.05,
+    "text": "medicina",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.05,
+    "text": "Ia",
+    "confidence": 0.864
+   },
+   {
+    "time": 46.05,
+    "text": "quiere",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.05,
+    "text": "Existe",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.05,
+    "text": "se les",
+    "confidence": 0.974
+   },
+   {
+    "time": 46.05,
+    "text": "tambien",
+    "confidence": 0.69
+   },
+   {
+    "time": 46.05,
+    "text": "sigueme",
+    "confidence": 0.996
+   },
+   {
+    "time": 46.05,
+    "text": "y",
+    "confidence": 0.93
+   },
+   {
+    "time": 46.05,
+    "text": "mucho",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.05,
+    "text": "natural",
+    "confidence": 0.843
+   },
+   {
+    "time": 48.05,
+    "text": "medicina",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.05,
+    "text": "Ia",
+    "confidence": 0.56
+   },
+   {
+    "time": 48.05,
+    "text": "quiere",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.05,
+    "text": "Existe",
+    "confidence": 0.668
+   },
+   {
+    "time": 48.05,
+    "text": "se les",
+    "confidence": 0.975
+   },
+   {
+    "time": 48.05,
+    "text": "tambien",
+    "confidence": 0.62
+   },
+   {
+    "time": 48.05,
+    "text": "sigueme",
+    "confidence": 0.961
+   },
+   {
+    "time": 48.05,
+    "text": "y",
+    "confidence": 0.923
+   },
+   {
+    "time": 48.05,
+    "text": "mucho",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.05,
+    "text": "natural",
+    "confidence": 0.653
+   },
+   {
+    "time": 50.05,
+    "text": "medicina",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.05,
+    "text": "quiere",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.05,
+    "text": "Existe",
+    "confidence": 0.652
+   },
+   {
+    "time": 50.05,
+    "text": "se les",
+    "confidence": 0.974
+   },
+   {
+    "time": 50.05,
+    "text": "tambien",
+    "confidence": 0.685
+   },
+   {
+    "time": 50.05,
+    "text": "sigueme",
+    "confidence": 0.996
+   },
+   {
+    "time": 50.05,
+    "text": "y",
+    "confidence": 0.926
+   },
+   {
+    "time": 50.05,
+    "text": "mucho",
+    "confidence": 1.0
+   }
+  ],
+  "captions": [
+   {
+    "text": "ADIOS",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o1"
+   },
+   {
+    "text": "le dira",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.859,
+    "id": "o2"
+   },
+   {
+    "text": "tu",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o3"
+   },
+   {
+    "text": "en",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o4"
+   },
+   {
+    "text": "olores",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o5"
+   },
+   {
+    "text": "Remedio",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.922,
+    "id": "o6"
+   },
+   {
+    "text": "Este",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o7"
+   },
+   {
+    "text": "se",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.956,
+    "id": "o8"
+   },
+   {
+    "text": "mal",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "tus",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o10"
+   },
+   {
+    "text": "parasito",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.757,
+    "id": "o11"
+   },
+   {
+    "text": "todos",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.877,
+    "id": "o12"
+   },
+   {
+    "text": "cada",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o13"
+   },
+   {
+    "text": "a",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o14"
+   },
+   {
+    "text": "y",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.832,
+    "id": "o15"
+   },
+   {
+    "text": "vagina",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.644,
+    "id": "o16"
+   },
+   {
+    "text": "desaparesera",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.704,
+    "id": "o17"
+   },
+   {
+    "text": "ADIOS",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.999,
+    "id": "o18"
+   },
+   {
+    "text": "le dira",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.893,
+    "id": "o19"
+   },
+   {
+    "text": "tu",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o20"
+   },
+   {
+    "text": "en",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o21"
+   },
+   {
+    "text": "olores",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.999,
+    "id": "o22"
+   },
+   {
+    "text": "Remedio",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.999,
+    "id": "o23"
+   },
+   {
+    "text": "Este",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o24"
+   },
+   {
+    "text": "se",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.95,
+    "id": "o25"
+   },
+   {
+    "text": "mal",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o26"
+   },
+   {
+    "text": "tus",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o27"
+   },
+   {
+    "text": "parasito",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.975,
+    "id": "o28"
+   },
+   {
+    "text": "todos",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.973,
+    "id": "o29"
+   },
+   {
+    "text": "cada",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o30"
+   },
+   {
+    "text": "a",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o31"
+   },
+   {
+    "text": "y",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.836,
+    "id": "o32"
+   },
+   {
+    "text": "vagina",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.72,
+    "id": "o33"
+   },
+   {
+    "text": "desaparesera",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o34"
+   },
+   {
+    "text": "ADIOS",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.999,
+    "id": "o35"
+   },
+   {
+    "text": "le dira",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.877,
+    "id": "o36"
+   },
+   {
+    "text": "en tu",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.999,
+    "id": "o37"
+   },
+   {
+    "text": "olores",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.999,
+    "id": "o38"
+   },
+   {
+    "text": "Remedio",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.996,
+    "id": "o39"
+   },
+   {
+    "text": "Este",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o40"
+   },
+   {
+    "text": "se",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.943,
+    "id": "o41"
+   },
+   {
+    "text": "mal",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o42"
+   },
+   {
+    "text": "tus",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.662,
+    "id": "o43"
+   },
+   {
+    "text": "parasito",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.987,
+    "id": "o44"
+   },
+   {
+    "text": "todos",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.999,
+    "id": "o45"
+   },
+   {
+    "text": "cada",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o46"
+   },
+   {
+    "text": "a",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o47"
+   },
+   {
+    "text": "y",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.833,
+    "id": "o48"
+   },
+   {
+    "text": "vagina",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.706,
+    "id": "o49"
+   },
+   {
+    "text": "desaparesera",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.741,
+    "id": "o50"
+   },
+   {
+    "text": "ADIOS",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.999,
+    "id": "o51"
+   },
+   {
+    "text": "le dira",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.896,
+    "id": "o52"
+   },
+   {
+    "text": "tu",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 1.0,
+    "id": "o53"
+   },
+   {
+    "text": "en",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.561,
+    "id": "o54"
+   },
+   {
+    "text": "olores",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.999,
+    "id": "o55"
+   },
+   {
+    "text": "Remedio",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.888,
+    "id": "o56"
+   },
+   {
+    "text": "Este",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 1.0,
+    "id": "o57"
+   },
+   {
+    "text": "se",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.953,
+    "id": "o58"
+   },
+   {
+    "text": "mal",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 1.0,
+    "id": "o59"
+   },
+   {
+    "text": "tus",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.6,
+    "id": "o60"
+   },
+   {
+    "text": "parasito",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 1.0,
+    "id": "o61"
+   },
+   {
+    "text": "todos",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 1.0,
+    "id": "o62"
+   },
+   {
+    "text": "cada",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 1.0,
+    "id": "o63"
+   },
+   {
+    "text": "a",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.769,
+    "id": "o64"
+   },
+   {
+    "text": "y",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.88,
+    "id": "o65"
+   },
+   {
+    "text": "vagina",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.645,
+    "id": "o66"
+   },
+   {
+    "text": "desaparesera",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.728,
+    "id": "o67"
+   },
+   {
+    "text": "ADIOS",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.999,
+    "id": "o68"
+   },
+   {
+    "text": "le dira",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.881,
+    "id": "o69"
+   },
+   {
+    "text": "tu",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 1.0,
+    "id": "o70"
+   },
+   {
+    "text": "en",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.996,
+    "id": "o71"
+   },
+   {
+    "text": "olores",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.999,
+    "id": "o72"
+   },
+   {
+    "text": "Remedio",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.932,
+    "id": "o73"
+   },
+   {
+    "text": "Este",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 1.0,
+    "id": "o74"
+   },
+   {
+    "text": "se",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.948,
+    "id": "o75"
+   },
+   {
+    "text": "mal",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 1.0,
+    "id": "o76"
+   },
+   {
+    "text": "tus",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.548,
+    "id": "o77"
+   },
+   {
+    "text": "parasito",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 1.0,
+    "id": "o78"
+   },
+   {
+    "text": "todos",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 1.0,
+    "id": "o79"
+   },
+   {
+    "text": "cada",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 1.0,
+    "id": "o80"
+   },
+   {
+    "text": "y",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.846,
+    "id": "o81"
+   },
+   {
+    "text": "vagina",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.667,
+    "id": "o82"
+   },
+   {
+    "text": "desaparesera",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 1.0,
+    "id": "o83"
+   },
+   {
+    "text": "ADIOS",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.999,
+    "id": "o84"
+   },
+   {
+    "text": "le dira",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.886,
+    "id": "o85"
+   },
+   {
+    "text": "en tu",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.999,
+    "id": "o86"
+   },
+   {
+    "text": "olores",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.999,
+    "id": "o87"
+   },
+   {
+    "text": "Remedio",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.974,
+    "id": "o88"
+   },
+   {
+    "text": "Este",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 1.0,
+    "id": "o89"
+   },
+   {
+    "text": "se",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.946,
+    "id": "o90"
+   },
+   {
+    "text": "mal",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 1.0,
+    "id": "o91"
+   },
+   {
+    "text": "tus",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.574,
+    "id": "o92"
+   },
+   {
+    "text": "parasito",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.791,
+    "id": "o93"
+   },
+   {
+    "text": "todos",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.974,
+    "id": "o94"
+   },
+   {
+    "text": "cada",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 1.0,
+    "id": "o95"
+   },
+   {
+    "text": "a",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 1.0,
+    "id": "o96"
+   },
+   {
+    "text": "y",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.863,
+    "id": "o97"
+   },
+   {
+    "text": "vagina",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.647,
+    "id": "o98"
+   },
+   {
+    "text": "desaparesera",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.689,
+    "id": "o99"
+   },
+   {
+    "text": "ADIOS",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.999,
+    "id": "o100"
+   },
+   {
+    "text": "le dira",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.881,
+    "id": "o101"
+   },
+   {
+    "text": "en tu",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.999,
+    "id": "o102"
+   },
+   {
+    "text": "olores",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.999,
+    "id": "o103"
+   },
+   {
+    "text": "Remedio",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.978,
+    "id": "o104"
+   },
+   {
+    "text": "Este",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 1.0,
+    "id": "o105"
+   },
+   {
+    "text": "se",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.952,
+    "id": "o106"
+   },
+   {
+    "text": "mal",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 1.0,
+    "id": "o107"
+   },
+   {
+    "text": "tus",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 1.0,
+    "id": "o108"
+   },
+   {
+    "text": "parasito",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.999,
+    "id": "o109"
+   },
+   {
+    "text": "todos",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.987,
+    "id": "o110"
+   },
+   {
+    "text": "cada",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 1.0,
+    "id": "o111"
+   },
+   {
+    "text": "a",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.719,
+    "id": "o112"
+   },
+   {
+    "text": "y",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.873,
+    "id": "o113"
+   },
+   {
+    "text": "vagina",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.691,
+    "id": "o114"
+   },
+   {
+    "text": "desaparesera",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 1.0,
+    "id": "o115"
+   },
+   {
+    "text": "ADIOS",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.999,
+    "id": "o116"
+   },
+   {
+    "text": "le dira",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.897,
+    "id": "o117"
+   },
+   {
+    "text": "tu",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 1.0,
+    "id": "o118"
+   },
+   {
+    "text": "en",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 1.0,
+    "id": "o119"
+   },
+   {
+    "text": "olores",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.999,
+    "id": "o120"
+   },
+   {
+    "text": "Remedio",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.977,
+    "id": "o121"
+   },
+   {
+    "text": "Este",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 1.0,
+    "id": "o122"
+   },
+   {
+    "text": "se",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.951,
+    "id": "o123"
+   },
+   {
+    "text": "mal",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 1.0,
+    "id": "o124"
+   },
+   {
+    "text": "tus",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.604,
+    "id": "o125"
+   },
+   {
+    "text": "parasito",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 1.0,
+    "id": "o126"
+   },
+   {
+    "text": "todos",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 1.0,
+    "id": "o127"
+   },
+   {
+    "text": "cada",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 1.0,
+    "id": "o128"
+   },
+   {
+    "text": "a",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.93,
+    "id": "o129"
+   },
+   {
+    "text": "y",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.841,
+    "id": "o130"
+   },
+   {
+    "text": "vagina",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.668,
+    "id": "o131"
+   },
+   {
+    "text": "desaparesera",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.682,
+    "id": "o132"
+   },
+   {
+    "text": "ADIOS",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.999,
+    "id": "o133"
+   },
+   {
+    "text": "le dira",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.882,
+    "id": "o134"
+   },
+   {
+    "text": "tu",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 1.0,
+    "id": "o135"
+   },
+   {
+    "text": "en",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 1.0,
+    "id": "o136"
+   },
+   {
+    "text": "olores",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.999,
+    "id": "o137"
+   },
+   {
+    "text": "Remedio",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.998,
+    "id": "o138"
+   },
+   {
+    "text": "Este",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 1.0,
+    "id": "o139"
+   },
+   {
+    "text": "se",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.949,
+    "id": "o140"
+   },
+   {
+    "text": "mal",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 1.0,
+    "id": "o141"
+   },
+   {
+    "text": "tus",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.607,
+    "id": "o142"
+   },
+   {
+    "text": "parasito",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.997,
+    "id": "o143"
+   },
+   {
+    "text": "todos",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 1.0,
+    "id": "o144"
+   },
+   {
+    "text": "cada",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 1.0,
+    "id": "o145"
+   },
+   {
+    "text": "a",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.507,
+    "id": "o146"
+   },
+   {
+    "text": "y",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.851,
+    "id": "o147"
+   },
+   {
+    "text": "vagina",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.675,
+    "id": "o148"
+   },
+   {
+    "text": "desaparesera",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.692,
+    "id": "o149"
+   },
+   {
+    "text": "ADIOS",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.999,
+    "id": "o150"
+   },
+   {
+    "text": "le dira",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.887,
+    "id": "o151"
+   },
+   {
+    "text": "tu",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 1.0,
+    "id": "o152"
+   },
+   {
+    "text": "en",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 1.0,
+    "id": "o153"
+   },
+   {
+    "text": "olores",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.999,
+    "id": "o154"
+   },
+   {
+    "text": "Remedio",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.984,
+    "id": "o155"
+   },
+   {
+    "text": "Este",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 1.0,
+    "id": "o156"
+   },
+   {
+    "text": "se",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.947,
+    "id": "o157"
+   },
+   {
+    "text": "mal",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 1.0,
+    "id": "o158"
+   },
+   {
+    "text": "tus",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.641,
+    "id": "o159"
+   },
+   {
+    "text": "parasito",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.804,
+    "id": "o160"
+   },
+   {
+    "text": "todos",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 1.0,
+    "id": "o161"
+   },
+   {
+    "text": "cada",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 1.0,
+    "id": "o162"
+   },
+   {
+    "text": "a",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 1.0,
+    "id": "o163"
+   },
+   {
+    "text": "y",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.854,
+    "id": "o164"
+   },
+   {
+    "text": "vagina",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.651,
+    "id": "o165"
+   },
+   {
+    "text": "desaparesera",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.723,
+    "id": "o166"
+   },
+   {
+    "text": "ADIOS",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 1.0,
+    "id": "o167"
+   },
+   {
+    "text": "le dira",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.892,
+    "id": "o168"
+   },
+   {
+    "text": "tu",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 1.0,
+    "id": "o169"
+   },
+   {
+    "text": "en",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 1.0,
+    "id": "o170"
+   },
+   {
+    "text": "olores",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.999,
+    "id": "o171"
+   },
+   {
+    "text": "Remedio",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.745,
+    "id": "o172"
+   },
+   {
+    "text": "Este",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 1.0,
+    "id": "o173"
+   },
+   {
+    "text": "se",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.937,
+    "id": "o174"
+   },
+   {
+    "text": "mal",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 1.0,
+    "id": "o175"
+   },
+   {
+    "text": "tus",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.914,
+    "id": "o176"
+   },
+   {
+    "text": "parasito",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.99,
+    "id": "o177"
+   },
+   {
+    "text": "todos",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 1.0,
+    "id": "o178"
+   },
+   {
+    "text": "cada",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 1.0,
+    "id": "o179"
+   },
+   {
+    "text": "a",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.986,
+    "id": "o180"
+   },
+   {
+    "text": "y",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.845,
+    "id": "o181"
+   },
+   {
+    "text": "vagina",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.658,
+    "id": "o182"
+   },
+   {
+    "text": "desaparesera",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.743,
+    "id": "o183"
+   },
+   {
+    "text": "Ya q el ajo es un antibiotico",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.663,
+    "id": "o184"
+   },
+   {
+    "text": "Natural",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 1.0,
+    "id": "o185"
+   },
+   {
+    "text": "Ya q el ajo es un antibiotico",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.834,
+    "id": "o186"
+   },
+   {
+    "text": "Natural",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 1.0,
+    "id": "o187"
+   },
+   {
+    "text": "Ya q el ajo es un antibiotico",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.643,
+    "id": "o188"
+   },
+   {
+    "text": "Natural",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 1.0,
+    "id": "o189"
+   },
+   {
+    "text": "autoxidante",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 1.0,
+    "id": "o190"
+   },
+   {
+    "text": "poderoso",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 1.0,
+    "id": "o191"
+   },
+   {
+    "text": "un",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.994,
+    "id": "o192"
+   },
+   {
+    "text": "Es",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.758,
+    "id": "o193"
+   },
+   {
+    "text": "autoxidante",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 1.0,
+    "id": "o194"
+   },
+   {
+    "text": "poderoso",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 1.0,
+    "id": "o195"
+   },
+   {
+    "text": "un",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.997,
+    "id": "o196"
+   },
+   {
+    "text": "Es",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.766,
+    "id": "o197"
+   },
+   {
+    "text": "autoxidante",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 1.0,
+    "id": "o198"
+   },
+   {
+    "text": "poderoso",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 1.0,
+    "id": "o199"
+   },
+   {
+    "text": "un",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.997,
+    "id": "o200"
+   },
+   {
+    "text": "Es",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.583,
+    "id": "o201"
+   },
+   {
+    "text": "Antitoxico",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.915,
+    "id": "o202"
+   },
+   {
+    "text": "virus",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 1.0,
+    "id": "o203"
+   },
+   {
+    "text": "Es",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.995,
+    "id": "o204"
+   },
+   {
+    "text": "combatir-",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.504,
+    "id": "o205"
+   },
+   {
+    "text": "para",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.895,
+    "id": "o206"
+   },
+   {
+    "text": "Ideal",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 1.0,
+    "id": "o207"
+   },
+   {
+    "text": "Antitoxico",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.933,
+    "id": "o208"
+   },
+   {
+    "text": "virus",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 1.0,
+    "id": "o209"
+   },
+   {
+    "text": "Es",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.957,
+    "id": "o210"
+   },
+   {
+    "text": "combatir-",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.752,
+    "id": "o211"
+   },
+   {
+    "text": "para",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.893,
+    "id": "o212"
+   },
+   {
+    "text": "Ideal",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 1.0,
+    "id": "o213"
+   },
+   {
+    "text": "natural",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.778,
+    "id": "o214"
+   },
+   {
+    "text": "medicina",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 1.0,
+    "id": "o215"
+   },
+   {
+    "text": "quiere",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 1.0,
+    "id": "o216"
+   },
+   {
+    "text": "Existe",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 1.0,
+    "id": "o217"
+   },
+   {
+    "text": "se les",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.975,
+    "id": "o218"
+   },
+   {
+    "text": "tambien",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.975,
+    "id": "o219"
+   },
+   {
+    "text": "sigueme",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.967,
+    "id": "o220"
+   },
+   {
+    "text": "y",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.932,
+    "id": "o221"
+   },
+   {
+    "text": "mucho",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 1.0,
+    "id": "o222"
+   },
+   {
+    "text": "natural",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.699,
+    "id": "o223"
+   },
+   {
+    "text": "medicina",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 1.0,
+    "id": "o224"
+   },
+   {
+    "text": "Ia",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.864,
+    "id": "o225"
+   },
+   {
+    "text": "quiere",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 1.0,
+    "id": "o226"
+   },
+   {
+    "text": "Existe",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 1.0,
+    "id": "o227"
+   },
+   {
+    "text": "se les",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.974,
+    "id": "o228"
+   },
+   {
+    "text": "tambien",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.69,
+    "id": "o229"
+   },
+   {
+    "text": "sigueme",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.996,
+    "id": "o230"
+   },
+   {
+    "text": "y",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.93,
+    "id": "o231"
+   },
+   {
+    "text": "mucho",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 1.0,
+    "id": "o232"
+   },
+   {
+    "text": "natural",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.843,
+    "id": "o233"
+   },
+   {
+    "text": "medicina",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 1.0,
+    "id": "o234"
+   },
+   {
+    "text": "Ia",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.56,
+    "id": "o235"
+   },
+   {
+    "text": "quiere",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 1.0,
+    "id": "o236"
+   },
+   {
+    "text": "Existe",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.668,
+    "id": "o237"
+   },
+   {
+    "text": "se les",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.975,
+    "id": "o238"
+   },
+   {
+    "text": "tambien",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.62,
+    "id": "o239"
+   },
+   {
+    "text": "sigueme",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.961,
+    "id": "o240"
+   },
+   {
+    "text": "y",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.923,
+    "id": "o241"
+   },
+   {
+    "text": "mucho",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 1.0,
+    "id": "o242"
+   },
+   {
+    "text": "natural",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.653,
+    "id": "o243"
+   },
+   {
+    "text": "medicina",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 1.0,
+    "id": "o244"
+   },
+   {
+    "text": "quiere",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 1.0,
+    "id": "o245"
+   },
+   {
+    "text": "Existe",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.652,
+    "id": "o246"
+   },
+   {
+    "text": "se les",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.974,
+    "id": "o247"
+   },
+   {
+    "text": "tambien",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.685,
+    "id": "o248"
+   },
+   {
+    "text": "sigueme",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.996,
+    "id": "o249"
+   },
+   {
+    "text": "y",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.926,
+    "id": "o250"
+   },
+   {
+    "text": "mucho",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 1.0,
+    "id": "o251"
+   }
+  ]
+ }
+}

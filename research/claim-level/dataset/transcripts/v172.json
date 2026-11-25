@@ -1,0 +1,515 @@
+{
+ "video_id": "v172",
+ "filename": "new_youtube_DKn5yUHYxhw.mp4",
+ "relative_path": "new_youtube_DKn5yUHYxhw.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:59",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.996,
+  "duration_seconds": 55.31,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.76,
+    "text": "Before I started traveling, I had Tourette's,"
+   },
+   {
+    "id": "t2",
+    "start": 3.76,
+    "end": 5.96,
+    "text": "where my arms were flailing around,"
+   },
+   {
+    "id": "t3",
+    "start": 5.96,
+    "end": 9.64,
+    "text": "uncontrollable movement, and I had severe OCD."
+   },
+   {
+    "id": "t4",
+    "start": 9.64,
+    "end": 12.48,
+    "text": "These conditions vanished as soon as I had"
+   },
+   {
+    "id": "t5",
+    "start": 12.48,
+    "end": 14.16,
+    "text": "a spiritual awakening almost,"
+   },
+   {
+    "id": "t6",
+    "start": 14.16,
+    "end": 17.0,
+    "text": "where I changed my lifestyle to one that was"
+   },
+   {
+    "id": "t7",
+    "start": 17.0,
+    "end": 18.76,
+    "text": "more in tune with nature,"
+   },
+   {
+    "id": "t8",
+    "start": 18.76,
+    "end": 21.0,
+    "text": "and these were dramatic shifts for me,"
+   },
+   {
+    "id": "t9",
+    "start": 21.0,
+    "end": 24.16,
+    "text": "which were able to result in me no longer having Tourette's."
+   },
+   {
+    "id": "t10",
+    "start": 24.16,
+    "end": 26.0,
+    "text": "So what was the spiritual experience"
+   },
+   {
+    "id": "t11",
+    "start": 26.0,
+    "end": 27.8,
+    "text": "that sort of prompted that?"
+   },
+   {
+    "id": "t12",
+    "start": 27.8,
+    "end": 29.2,
+    "text": "Was it all of a sudden?"
+   },
+   {
+    "id": "t13",
+    "start": 29.2,
+    "end": 31.2,
+    "text": "No, it was from people like you,"
+   },
+   {
+    "id": "t14",
+    "start": 31.2,
+    "end": 33.56,
+    "text": "people like me who make YouTube videos."
+   },
+   {
+    "id": "t15",
+    "start": 33.56,
+    "end": 35.64,
+    "text": "They were making YouTube videos about their experiences"
+   },
+   {
+    "id": "t16",
+    "start": 35.64,
+    "end": 37.48,
+    "text": "and I just caught a glimpse of it."
+   },
+   {
+    "id": "t17",
+    "start": 37.48,
+    "end": 40.16,
+    "text": "That's what really inspired me was YouTubers."
+   },
+   {
+    "id": "t18",
+    "start": 40.16,
+    "end": 41.0,
+    "text": "Really?"
+   },
+   {
+    "id": "t19",
+    "start": 41.0,
+    "end": 41.92,
+    "text": "Yeah, that's what changed my life."
+   },
+   {
+    "id": "t20",
+    "start": 41.92,
+    "end": 42.88,
+    "text": "YouTubers!"
+   },
+   {
+    "id": "t21",
+    "start": 42.88,
+    "end": 44.76,
+    "text": "That's why I make videos today."
+   },
+   {
+    "id": "t22",
+    "start": 44.76,
+    "end": 46.52,
+    "text": "I wanna give back to the people."
+   },
+   {
+    "id": "t23",
+    "start": 46.52,
+    "end": 48.56,
+    "text": "There was people who were making videos about traveling."
+   },
+   {
+    "id": "t24",
+    "start": 48.56,
+    "end": 49.88,
+    "text": "That's why I started traveling."
+   },
+   {
+    "id": "t25",
+    "start": 49.88,
+    "end": 51.2,
+    "text": "There was people who were making videos"
+   },
+   {
+    "id": "t26",
+    "start": 51.2,
+    "end": 53.52,
+    "text": "about their spiritual awakenings."
+   },
+   {
+    "id": "t27",
+    "start": 53.52,
+    "end": 55.32,
+    "text": "That's how I found spirituality."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 28,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Before I started traveling",
+    "confidence": 0.753
+   },
+   {
+    "time": 2.0,
+    "text": "Before I started traveling",
+    "confidence": 0.729
+   },
+   {
+    "time": 4.0,
+    "text": "where my arms were",
+    "confidence": 0.66
+   },
+   {
+    "time": 6.0,
+    "text": "uncontrollable movement",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "These conditions",
+    "confidence": 0.983
+   },
+   {
+    "time": 14.0,
+    "text": "almost where",
+    "confidence": 0.89
+   },
+   {
+    "time": 16.0,
+    "text": "to one that was",
+    "confidence": 0.667
+   },
+   {
+    "time": 18.0,
+    "text": "more in tune with nature",
+    "confidence": 0.733
+   },
+   {
+    "time": 20.0,
+    "text": "these were dramatic shifts",
+    "confidence": 0.727
+   },
+   {
+    "time": 22.0,
+    "text": "were able to result in me",
+    "confidence": 0.778
+   },
+   {
+    "time": 24.0,
+    "text": "having Tourette $",
+    "confidence": 0.918
+   },
+   {
+    "time": 26.0,
+    "text": "spiritual experience",
+    "confidence": 0.944
+   },
+   {
+    "time": 28.0,
+    "text": "Was it all of a sudden?",
+    "confidence": 0.748
+   },
+   {
+    "time": 30.0,
+    "text": "No,",
+    "confidence": 0.992
+   },
+   {
+    "time": 30.0,
+    "text": "it was from",
+    "confidence": 0.772
+   },
+   {
+    "time": 32.0,
+    "text": "people like me",
+    "confidence": 0.998
+   },
+   {
+    "time": 34.0,
+    "text": "YouTube videos",
+    "confidence": 0.998
+   },
+   {
+    "time": 36.0,
+    "text": "and Ijust",
+    "confidence": 0.641
+   },
+   {
+    "time": 40.0,
+    "text": "was YouTubers",
+    "confidence": 0.791
+   },
+   {
+    "time": 42.0,
+    "text": "YOUTUBERS!",
+    "confidence": 0.955
+   },
+   {
+    "time": 44.0,
+    "text": "videos todayl",
+    "confidence": 0.964
+   },
+   {
+    "time": 46.0,
+    "text": "to the people.",
+    "confidence": 0.673
+   },
+   {
+    "time": 48.0,
+    "text": "traveling",
+    "confidence": 0.971
+   },
+   {
+    "time": 48.0,
+    "text": "about",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "There was people who",
+    "confidence": 0.815
+   },
+   {
+    "time": 52.0,
+    "text": "spiritual awakenings",
+    "confidence": 0.976
+   },
+   {
+    "time": 54.0,
+    "text": "that' $ how I found",
+    "confidence": 0.572
+   }
+  ],
+  "captions": [
+   {
+    "text": "Before I started traveling",
+    "start": 0.0,
+    "end": 2.0,
+    "confidence": 0.753,
+    "id": "o1"
+   },
+   {
+    "text": "where my arms were",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.66,
+    "id": "o2"
+   },
+   {
+    "text": "uncontrollable movement",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o3"
+   },
+   {
+    "text": "These conditions",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.983,
+    "id": "o4"
+   },
+   {
+    "text": "almost where",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.89,
+    "id": "o5"
+   },
+   {
+    "text": "to one that was",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.667,
+    "id": "o6"
+   },
+   {
+    "text": "more in tune with nature",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.733,
+    "id": "o7"
+   },
+   {
+    "text": "these were dramatic shifts",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.727,
+    "id": "o8"
+   },
+   {
+    "text": "were able to result in me",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.778,
+    "id": "o9"
+   },
+   {
+    "text": "having Tourette $",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.918,
+    "id": "o10"
+   },
+   {
+    "text": "spiritual experience",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.944,
+    "id": "o11"
+   },
+   {
+    "text": "Was it all of a sudden?",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.748,
+    "id": "o12"
+   },
+   {
+    "text": "No,",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.992,
+    "id": "o13"
+   },
+   {
+    "text": "it was from",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.772,
+    "id": "o14"
+   },
+   {
+    "text": "people like me",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.998,
+    "id": "o15"
+   },
+   {
+    "text": "YouTube videos",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.998,
+    "id": "o16"
+   },
+   {
+    "text": "and Ijust",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.641,
+    "id": "o17"
+   },
+   {
+    "text": "was YouTubers",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.791,
+    "id": "o18"
+   },
+   {
+    "text": "YOUTUBERS!",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.955,
+    "id": "o19"
+   },
+   {
+    "text": "videos todayl",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.964,
+    "id": "o20"
+   },
+   {
+    "text": "to the people.",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.673,
+    "id": "o21"
+   },
+   {
+    "text": "traveling",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.971,
+    "id": "o22"
+   },
+   {
+    "text": "about",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o23"
+   },
+   {
+    "text": "There was people who",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.815,
+    "id": "o24"
+   },
+   {
+    "text": "spiritual awakenings",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.976,
+    "id": "o25"
+   },
+   {
+    "text": "that' $ how I found",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.572,
+    "id": "o26"
+   }
+  ]
+ }
+}

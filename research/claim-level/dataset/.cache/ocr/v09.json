@@ -1,0 +1,399 @@
+{
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "on_screen": {
+  "frames_sampled": 18,
+  "detections": [
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.919
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.987
+   },
+   {
+    "time": 4.0,
+    "text": "@ user69101790793946",
+    "confidence": 0.845
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 0.978
+   },
+   {
+    "time": 6.0,
+    "text": "user69101790793946",
+    "confidence": 0.995
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "WHH ONB",
+    "confidence": 0.549
+   },
+   {
+    "time": 10.0,
+    "text": "WOULD YOU",
+    "confidence": 0.608
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "@ User69101790793946",
+    "confidence": 0.603
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "User69101790793946",
+    "confidence": 0.903
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "user69101790793946",
+    "confidence": 0.903
+   },
+   {
+    "time": 20.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.0,
+    "text": "user69101790793946",
+    "confidence": 0.886
+   },
+   {
+    "time": 22.0,
+    "text": "COOL @T",
+    "confidence": 0.565
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "User69101790793946",
+    "confidence": 0.616
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "user69101790793946",
+    "confidence": 0.788
+   },
+   {
+    "time": 26.0,
+    "text": "DUDB",
+    "confidence": 0.796
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "user69101790793946",
+    "confidence": 0.783
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "user69101790793946",
+    "confidence": 0.775
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "user69101790793946",
+    "confidence": 0.785
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 32.0,
+    "text": "user69101790793_",
+    "confidence": 0.517
+   },
+   {
+    "time": 34.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 34.0,
+    "text": "user69101790793.",
+    "confidence": 0.775
+   }
+  ],
+  "captions": [
+   {
+    "text": "TikTok",
+    "start": 2.0,
+    "end": 4.0,
+    "confidence": 0.987,
+    "id": "o1"
+   },
+   {
+    "text": "@ user69101790793946",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.845,
+    "id": "o2"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.978,
+    "id": "o3"
+   },
+   {
+    "text": "user69101790793946",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.995,
+    "id": "o4"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o5"
+   },
+   {
+    "text": "WHH ONB",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.549,
+    "id": "o6"
+   },
+   {
+    "text": "WOULD YOU",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.608,
+    "id": "o7"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o8"
+   },
+   {
+    "text": "@ User69101790793946",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.603,
+    "id": "o9"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o10"
+   },
+   {
+    "text": "User69101790793946",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.903,
+    "id": "o11"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 1.0,
+    "id": "o12"
+   },
+   {
+    "text": "user69101790793946",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.903,
+    "id": "o13"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.999,
+    "id": "o14"
+   },
+   {
+    "text": "user69101790793946",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.886,
+    "id": "o15"
+   },
+   {
+    "text": "COOL @T",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.565,
+    "id": "o16"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o17"
+   },
+   {
+    "text": "User69101790793946",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.616,
+    "id": "o18"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o19"
+   },
+   {
+    "text": "user69101790793946",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.788,
+    "id": "o20"
+   },
+   {
+    "text": "DUDB",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.796,
+    "id": "o21"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o22"
+   },
+   {
+    "text": "user69101790793946",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.783,
+    "id": "o23"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o24"
+   },
+   {
+    "text": "user69101790793946",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.775,
+    "id": "o25"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o26"
+   },
+   {
+    "text": "user69101790793946",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.785,
+    "id": "o27"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.999,
+    "id": "o28"
+   },
+   {
+    "text": "user69101790793_",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.517,
+    "id": "o29"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.999,
+    "id": "o30"
+   },
+   {
+    "text": "user69101790793.",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.775,
+    "id": "o31"
+   }
+  ]
+ }
+}

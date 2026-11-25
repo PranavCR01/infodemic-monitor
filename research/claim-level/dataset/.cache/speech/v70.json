@@ -1,0 +1,320 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 202.83,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 12.2,
+    "text": "So, I don't use on milk, I don't use on milk, I usually tell patients to use the coconut milk or cream because it's the least processed of all the realms."
+   },
+   {
+    "id": "t2",
+    "start": 12.2,
+    "end": 24.97,
+    "text": "Okay guys, the ratio of actual healthcare professionals to random influencers online is already disappointingly low."
+   },
+   {
+    "id": "t3",
+    "start": 24.97,
+    "end": 29.27,
+    "text": "We cannot afford for our doctors to be spreading misinformation too."
+   },
+   {
+    "id": "t4",
+    "start": 29.27,
+    "end": 33.91,
+    "text": "But I'm Abby Sharp. I'm the internet's no BS dietitian. And while I guess I'm relieved she"
+   },
+   {
+    "id": "t5",
+    "start": 33.91,
+    "end": 41.99,
+    "text": "isn't recommending raw milk, I am hugely disappointed in a doctor spewing misinformation"
+   },
+   {
+    "id": "t6",
+    "start": 41.99,
+    "end": 48.39,
+    "text": "and food fear mongering. Let's break this down. Processing does not mean bad. This misinformed"
+   },
+   {
+    "id": "t7",
+    "start": 48.39,
+    "end": 55.51,
+    "text": "belief is grounded in an appeal to nature's fallacy, when in fact, in many cases, some processing"
+   },
+   {
+    "id": "t8",
+    "start": 55.51,
+    "end": 62.23,
+    "text": "can actually make a food healthier, more accessible or safer. In the context of non-dairy milk,"
+   },
+   {
+    "id": "t9",
+    "start": 62.23,
+    "end": 68.55,
+    "text": "a lot of the options are fortified with bone-supporting nutrients like calcium and vitamin D"
+   },
+   {
+    "id": "t10",
+    "start": 68.55,
+    "end": 74.47,
+    "text": "so that it can be more nutritionally comparable to dairy milk. Two, what kind of coconut milk"
+   },
+   {
+    "id": "t11",
+    "start": 74.47,
+    "end": 79.35,
+    "text": "are we even talking about? Because while the classic kind of coconut milk or cream that you"
+   },
+   {
+    "id": "t12",
+    "start": 79.35,
+    "end": 85.75,
+    "text": "find in the can is basically like water and coconut in most cases. The carton coconut beverage that"
+   },
+   {
+    "id": "t13",
+    "start": 85.75,
+    "end": 92.39,
+    "text": "we find alongside other non-dairy milks is basically processed the exact same with emulsifiers,"
+   },
+   {
+    "id": "t14",
+    "start": 92.39,
+    "end": 98.39,
+    "text": "gums, flavors, and added vitamins that we might see in almond or oat. Three, for the vast majority"
+   },
+   {
+    "id": "t15",
+    "start": 98.39,
+    "end": 105.03,
+    "text": "people, the level of processing should not be the most important indicator of a healthy option."
+   },
+   {
+    "id": "t16",
+    "start": 105.03,
+    "end": 108.47,
+    "text": "we should be looking at how much protein it contains,"
+   },
+   {
+    "id": "t17",
+    "start": 108.47,
+    "end": 112.43,
+    "text": "which spoiler alert, oat, almond, and coconut"
+   },
+   {
+    "id": "t18",
+    "start": 112.43,
+    "end": 114.15,
+    "text": "all kind of suck in that department."
+   },
+   {
+    "id": "t19",
+    "start": 114.15,
+    "end": 116.87,
+    "text": "We should also be considering how many calories,"
+   },
+   {
+    "id": "t20",
+    "start": 116.87,
+    "end": 120.43,
+    "text": "how much sugar, how much saturated fat is in that product,"
+   },
+   {
+    "id": "t21",
+    "start": 120.43,
+    "end": 123.55,
+    "text": "which is what actually increases the risk"
+   },
+   {
+    "id": "t22",
+    "start": 123.55,
+    "end": 125.71,
+    "text": "of chronic diseases like cancer."
+   },
+   {
+    "id": "t23",
+    "start": 125.71,
+    "end": 127.75,
+    "text": "Please, make it make sense."
+   },
+   {
+    "id": "t24",
+    "start": 127.75,
+    "end": 132.09,
+    "text": "And finally, not only does this post wrongfully insinuate"
+   },
+   {
+    "id": "t25",
+    "start": 132.09,
+    "end": 134.69,
+    "text": "that almond and oat milk cause cancer,"
+   },
+   {
+    "id": "t26",
+    "start": 134.69,
+    "end": 138.37,
+    "text": "which spoiler alert friends, they do not,"
+   },
+   {
+    "id": "t27",
+    "start": 138.37,
+    "end": 142.05,
+    "text": "but it instead makes a recommendation for the milk"
+   },
+   {
+    "id": "t28",
+    "start": 142.05,
+    "end": 144.05,
+    "text": "that provides the most calories"
+   },
+   {
+    "id": "t29",
+    "start": 144.05,
+    "end": 146.49,
+    "text": "and the highest saturated fat content,"
+   },
+   {
+    "id": "t30",
+    "start": 146.49,
+    "end": 149.13,
+    "text": "both of which are associated with an increased risk"
+   },
+   {
+    "id": "t31",
+    "start": 149.13,
+    "end": 151.21,
+    "text": "of chronic disease, obesity, heart disease,"
+   },
+   {
+    "id": "t32",
+    "start": 151.21,
+    "end": 153.13,
+    "text": "and yes, even some cancers."
+   },
+   {
+    "id": "t33",
+    "start": 153.13,
+    "end": 155.05,
+    "text": "Now, I'm certainly not saying that coconut milk"
+   },
+   {
+    "id": "t34",
+    "start": 155.05,
+    "end": 159.07,
+    "text": "or coconut beverage causes cancer or chronic disease,"
+   },
+   {
+    "id": "t35",
+    "start": 159.07,
+    "end": 161.95,
+    "text": "but I'm simply pointing out some factual gaps"
+   },
+   {
+    "id": "t36",
+    "start": 161.95,
+    "end": 164.63,
+    "text": "in this fear-mongering storyline"
+   },
+   {
+    "id": "t37",
+    "start": 164.63,
+    "end": 167.15,
+    "text": "that just do not add up."
+   },
+   {
+    "id": "t38",
+    "start": 167.15,
+    "end": 169.95,
+    "text": "Bottom line, friends, processing in non-dairy milk"
+   },
+   {
+    "id": "t39",
+    "start": 169.95,
+    "end": 171.63,
+    "text": "does not cause cancer."
+   },
+   {
+    "id": "t40",
+    "start": 171.63,
+    "end": 173.27,
+    "text": "How a food is processed"
+   },
+   {
+    "id": "t41",
+    "start": 173.27,
+    "end": 174.91,
+    "text": "shouldn't be the most important criteria"
+   },
+   {
+    "id": "t42",
+    "start": 174.91,
+    "end": 176.07,
+    "text": "for a healthy choice,"
+   },
+   {
+    "id": "t43",
+    "start": 176.07,
+    "end": 178.71,
+    "text": "and your choice in milk should come down"
+   },
+   {
+    "id": "t44",
+    "start": 178.71,
+    "end": 181.85,
+    "text": "to what values are most important to you in a product,"
+   },
+   {
+    "id": "t45",
+    "start": 181.85,
+    "end": 183.91,
+    "text": "whether that's the protein in soy,"
+   },
+   {
+    "id": "t46",
+    "start": 183.91,
+    "end": 186.03,
+    "text": "the omega-3s in grass-fed dairy,"
+   },
+   {
+    "id": "t47",
+    "start": 186.03,
+    "end": 188.49,
+    "text": "the minimal calories in almond,"
+   },
+   {
+    "id": "t48",
+    "start": 188.49,
+    "end": 190.71,
+    "text": "or the fiber or flavor of oat."
+   },
+   {
+    "id": "t49",
+    "start": 190.71,
+    "end": 194.43,
+    "text": "I promise you, what you put in your coffee"
+   },
+   {
+    "id": "t50",
+    "start": 194.43,
+    "end": 198.07,
+    "text": "will not make or break your health."
+   },
+   {
+    "id": "t51",
+    "start": 198.07,
+    "end": 198.91,
+    "text": "Next."
+   }
+  ]
+ }
+}

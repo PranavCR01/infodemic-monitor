@@ -1,0 +1,170 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.998,
+  "duration_seconds": 158.71,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.92,
+    "text": "More things that I just think you should know by now as a doctor and a dermatologist."
+   },
+   {
+    "id": "t2",
+    "start": 5.92,
+    "end": 11.8,
+    "text": "If you know all of these things already, feel free to leave a comment and claim your free cookie."
+   },
+   {
+    "id": "t3",
+    "start": 11.8,
+    "end": 21.0,
+    "text": "Washing your hands with antibacterial soap doesn't present any advantage over using regular soap for regular hand washing."
+   },
+   {
+    "id": "t4",
+    "start": 21.0,
+    "end": 25.0,
+    "text": "Somebody brought this up in my comments recently, so thank you for reminding me."
+   },
+   {
+    "id": "t5",
+    "start": 25.0,
+    "end": 30.3,
+    "text": "Specifically, using antibacterial soap over regular soap doesn't keep people from getting sick"
+   },
+   {
+    "id": "t6",
+    "start": 30.3,
+    "end": 37.1,
+    "text": "or getting like catching an illness and like that's the main reason that we're washing our hands regularly."
+   },
+   {
+    "id": "t7",
+    "start": 37.1,
+    "end": 42.6,
+    "text": "In the last few years, there's also been changes here in the US of like what you're allowed to use in antibacterial soap"
+   },
+   {
+    "id": "t8",
+    "start": 42.6,
+    "end": 50.0,
+    "text": "because some of those antibacterial agents were contributing potentially to antibiotic resistance."
+   },
+   {
+    "id": "t9",
+    "start": 50.0,
+    "end": 57.0,
+    "text": "This idea of just drink more water to have nice skin, total BS."
+   },
+   {
+    "id": "t10",
+    "start": 57.0,
+    "end": 64.0,
+    "text": "Drinking excessive amounts of water will not make your skin look different,"
+   },
+   {
+    "id": "t11",
+    "start": 64.0,
+    "end": 67.0,
+    "text": "and this is assuming normal fluid balance."
+   },
+   {
+    "id": "t12",
+    "start": 67.0,
+    "end": 73.0,
+    "text": "The only way it would make a difference is if you're extremely dehydrated,"
+   },
+   {
+    "id": "t13",
+    "start": 73.0,
+    "end": 78.0,
+    "text": "and I've said it before, if you're so dehydrated that it's showing on your skin,"
+   },
+   {
+    "id": "t14",
+    "start": 78.0,
+    "end": 85.52,
+    "text": "you will have had other symptoms first. Like you will feel crappy. Another thing about water,"
+   },
+   {
+    "id": "t15",
+    "start": 85.52,
+    "end": 92.24,
+    "text": "we don't know like what the optimal amount of water a standard adult human should be drinking"
+   },
+   {
+    "id": "t16",
+    "start": 92.24,
+    "end": 100.48,
+    "text": "every day is. Like there's no good evidence-based way to say like a number so that people say like"
+   },
+   {
+    "id": "t17",
+    "start": 100.48,
+    "end": 105.04,
+    "text": "three liters or eight eight ounce glasses or what like that's not evidence-based."
+   },
+   {
+    "id": "t18",
+    "start": 105.84,
+    "end": 111.87,
+    "text": "For most people, like just drinking water when you're thirsty, drinking with meals,"
+   },
+   {
+    "id": "t19",
+    "start": 111.87,
+    "end": 118.0,
+    "text": "like that's probably a good idea. And again, that's for the majority of people."
+   },
+   {
+    "id": "t20",
+    "start": 118.96,
+    "end": 124.56,
+    "text": "There are medical conditions that will change those recommendations. Do not bean soup me."
+   },
+   {
+    "id": "t21",
+    "start": 124.56,
+    "end": 131.04,
+    "text": "Also that drink water thing is often thrown at people with acne as a way to"
+   },
+   {
+    "id": "t22",
+    "start": 131.04,
+    "end": 136.92,
+    "text": "clear their skin. That does nothing. Also telling people with acne that they just"
+   },
+   {
+    "id": "t23",
+    "start": 136.92,
+    "end": 142.08,
+    "text": "need to wash their face. I assured you most of them that they're washing their"
+   },
+   {
+    "id": "t24",
+    "start": 142.08,
+    "end": 147.4,
+    "text": "face, probably excessively. Acne is not infectious, it's not something that you"
+   },
+   {
+    "id": "t25",
+    "start": 147.4,
+    "end": 152.64,
+    "text": "just wash away, it's a chronic inflammatory condition of the skin. Did you"
+   },
+   {
+    "id": "t26",
+    "start": 152.64,
+    "end": 154.64,
+    "text": "know all these, ask me for a cookie."
+   }
+  ]
+ }
+}

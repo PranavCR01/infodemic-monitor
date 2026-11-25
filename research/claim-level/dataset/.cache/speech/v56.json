@@ -1,0 +1,128 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 49.5,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.2,
+    "text": "As a heart surgeon, what are the things"
+   },
+   {
+    "id": "t2",
+    "start": 2.2,
+    "end": 5.08,
+    "text": "you absolutely avoid?"
+   },
+   {
+    "id": "t3",
+    "start": 5.08,
+    "end": 6.64,
+    "text": "Smoking's top of the list."
+   },
+   {
+    "id": "t4",
+    "start": 6.64,
+    "end": 10.94,
+    "text": "I mean, I cannot come up with one single thing"
+   },
+   {
+    "id": "t5",
+    "start": 10.94,
+    "end": 15.74,
+    "text": "that does as much damage to every organ in the body"
+   },
+   {
+    "id": "t6",
+    "start": 15.74,
+    "end": 17.58,
+    "text": "as smoking cigarettes."
+   },
+   {
+    "id": "t7",
+    "start": 17.58,
+    "end": 20.12,
+    "text": "And look, it's incredibly addictive."
+   },
+   {
+    "id": "t8",
+    "start": 20.12,
+    "end": 23.42,
+    "text": "And I know that and I pass no judgment"
+   },
+   {
+    "id": "t9",
+    "start": 23.42,
+    "end": 25.24,
+    "text": "because I know how difficult it is."
+   },
+   {
+    "id": "t10",
+    "start": 25.24,
+    "end": 26.54,
+    "text": "I've been dealing with patients"
+   },
+   {
+    "id": "t11",
+    "start": 26.54,
+    "end": 28.58,
+    "text": "that are chronic smokers for years."
+   },
+   {
+    "id": "t12",
+    "start": 28.58,
+    "end": 30.02,
+    "text": "I understand that."
+   },
+   {
+    "id": "t13",
+    "start": 30.02,
+    "end": 32.66,
+    "text": "that doesn't change the fact"
+   },
+   {
+    "id": "t14",
+    "start": 32.66,
+    "end": 34.98,
+    "text": "that it is the single most dangerous thing"
+   },
+   {
+    "id": "t15",
+    "start": 34.98,
+    "end": 35.82,
+    "text": "you can do for yourself."
+   },
+   {
+    "id": "t16",
+    "start": 35.82,
+    "end": 38.82,
+    "text": "Not to mention the causal relationship with lung cancer"
+   },
+   {
+    "id": "t17",
+    "start": 38.82,
+    "end": 40.6,
+    "text": "and I could keep going."
+   },
+   {
+    "id": "t18",
+    "start": 40.6,
+    "end": 43.7,
+    "text": "So it's probably one, two and three"
+   },
+   {
+    "id": "t19",
+    "start": 43.7,
+    "end": 45.62,
+    "text": "on the list to begin with."
+   }
+  ]
+ }
+}

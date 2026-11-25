@@ -1,0 +1,1241 @@
+{
+ "video_id": "v124",
+ "filename": "new_TikTok_7247643578179063083.mp4",
+ "relative_path": "new_TikTok_7247643578179063083.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@dr.austin.lake",
+ "extracted_at": "2026-11-23T08:45:57",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 53.85,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.52,
+    "text": "This is a primary indicator that you're dealing with parasites"
+   },
+   {
+    "id": "t2",
+    "start": 2.52,
+    "end": 3.64,
+    "text": "and you don't even know it."
+   },
+   {
+    "id": "t3",
+    "start": 3.64,
+    "end": 4.48,
+    "text": "My name is Dr. Lake,"
+   },
+   {
+    "id": "t4",
+    "start": 4.48,
+    "end": 5.76,
+    "text": "I'm a functional medicine practitioner"
+   },
+   {
+    "id": "t5",
+    "start": 5.76,
+    "end": 7.56,
+    "text": "and the creator of the active life program"
+   },
+   {
+    "id": "t6",
+    "start": 7.56,
+    "end": 10.0,
+    "text": "where I've helped hundreds of women get out the root cause"
+   },
+   {
+    "id": "t7",
+    "start": 10.0,
+    "end": 12.84,
+    "text": "of their hormonal imbalances and autoimmune conditions."
+   },
+   {
+    "id": "t8",
+    "start": 12.84,
+    "end": 14.56,
+    "text": "The first thing to understand about parasites"
+   },
+   {
+    "id": "t9",
+    "start": 14.56,
+    "end": 17.28,
+    "text": "is that they stimulate TH2 immune cells,"
+   },
+   {
+    "id": "t10",
+    "start": 17.28,
+    "end": 18.96,
+    "text": "which actually create antibodies."
+   },
+   {
+    "id": "t11",
+    "start": 18.96,
+    "end": 23.0,
+    "text": "The second thing they do is they actually suppress TH1 cells,"
+   },
+   {
+    "id": "t12",
+    "start": 23.0,
+    "end": 25.08,
+    "text": "which are our part of your innate immune system."
+   },
+   {
+    "id": "t13",
+    "start": 25.08,
+    "end": 27.04,
+    "text": "So the number one indicator of parasites"
+   },
+   {
+    "id": "t14",
+    "start": 27.04,
+    "end": 29.32,
+    "text": "is actually an autoimmune condition."
+   },
+   {
+    "id": "t15",
+    "start": 29.32,
+    "end": 31.8,
+    "text": "So things like MS, celiac disease, fibromyalgia,"
+   },
+   {
+    "id": "t16",
+    "start": 31.8,
+    "end": 35.04,
+    "text": "Hashimoto's can all be linked back to parasite activity."
+   },
+   {
+    "id": "t17",
+    "start": 35.04,
+    "end": 36.8,
+    "text": "Issue is if you don't fix the problem"
+   },
+   {
+    "id": "t18",
+    "start": 36.8,
+    "end": 37.76,
+    "text": "and get out the root cause,"
+   },
+   {
+    "id": "t19",
+    "start": 37.76,
+    "end": 39.4,
+    "text": "you're likely to develop other"
+   },
+   {
+    "id": "t20",
+    "start": 39.4,
+    "end": 41.04,
+    "text": "autoimmune conditions down the road."
+   },
+   {
+    "id": "t21",
+    "start": 41.04,
+    "end": 42.16,
+    "text": "So in my online program,"
+   },
+   {
+    "id": "t22",
+    "start": 42.16,
+    "end": 43.56,
+    "text": "I talk a lot about foods to include"
+   },
+   {
+    "id": "t23",
+    "start": 43.56,
+    "end": 45.52,
+    "text": "and foods to avoid as well as meal plans"
+   },
+   {
+    "id": "t24",
+    "start": 45.52,
+    "end": 46.72,
+    "text": "and supplements to actually get"
+   },
+   {
+    "id": "t25",
+    "start": 46.72,
+    "end": 48.4,
+    "text": "out the root cause of this naturally."
+   },
+   {
+    "id": "t26",
+    "start": 48.4,
+    "end": 50.04,
+    "text": "If this sounds like something you might be interested in,"
+   },
+   {
+    "id": "t27",
+    "start": 50.04,
+    "end": 52.36,
+    "text": "be sure to drop the word interested in the comment section"
+   },
+   {
+    "id": "t28",
+    "start": 52.36,
+    "end": 54.16,
+    "text": "and I will reach out to you directly."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 27,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "#I sign of parasites",
+    "confidence": 0.738
+   },
+   {
+    "time": 2.0,
+    "text": "#I sign of parasites",
+    "confidence": 0.738
+   },
+   {
+    "time": 2.0,
+    "text": "INDICATOR THAT",
+    "confidence": 0.811
+   },
+   {
+    "time": 2.0,
+    "text": "YOU'RE DEALING",
+    "confidence": 0.829
+   },
+   {
+    "time": 2.0,
+    "text": "WITH PARASITES",
+    "confidence": 0.727
+   },
+   {
+    "time": 4.0,
+    "text": "#I sign of parasites",
+    "confidence": 0.738
+   },
+   {
+    "time": 4.0,
+    "text": "DR",
+    "confidence": 0.997
+   },
+   {
+    "time": 6.0,
+    "text": "#I sign of parasites",
+    "confidence": 0.723
+   },
+   {
+    "time": 6.0,
+    "text": "FMA FUNCTIONAL",
+    "confidence": 0.966
+   },
+   {
+    "time": 6.0,
+    "text": "MEDICINE PRACTITIONER",
+    "confidence": 0.854
+   },
+   {
+    "time": 6.0,
+    "text": "AND THE CREATOR",
+    "confidence": 0.996
+   },
+   {
+    "time": 8.0,
+    "text": "#I sign of parasites",
+    "confidence": 0.723
+   },
+   {
+    "time": 8.0,
+    "text": "OF THE ACTIE",
+    "confidence": 0.7
+   },
+   {
+    "time": 8.0,
+    "text": "LIFE PROGRAM",
+    "confidence": 0.965
+   },
+   {
+    "time": 8.0,
+    "text": "WHERE I'VE HELPED",
+    "confidence": 0.751
+   },
+   {
+    "time": 10.0,
+    "text": "#1 sign of parasites",
+    "confidence": 0.878
+   },
+   {
+    "time": 10.0,
+    "text": "HUNDREDS OF",
+    "confidence": 0.991
+   },
+   {
+    "time": 10.0,
+    "text": "WOMEN GET AT",
+    "confidence": 0.904
+   },
+   {
+    "time": 10.0,
+    "text": "THE ROOT CAUSE",
+    "confidence": 0.993
+   },
+   {
+    "time": 12.0,
+    "text": "#1 sign of parasites",
+    "confidence": 0.873
+   },
+   {
+    "time": 12.0,
+    "text": "AUTOIMMUNE",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "#1 sign of parasites",
+    "confidence": 0.875
+   },
+   {
+    "time": 14.0,
+    "text": "ABOUT PARASITES",
+    "confidence": 0.719
+   },
+   {
+    "time": 14.0,
+    "text": "IS THAT THEY",
+    "confidence": 0.869
+   },
+   {
+    "time": 14.0,
+    "text": "STIMULATE",
+    "confidence": 0.924
+   },
+   {
+    "time": 16.0,
+    "text": "#1 sign of parasites",
+    "confidence": 0.873
+   },
+   {
+    "time": 16.0,
+    "text": "TH2",
+    "confidence": 0.943
+   },
+   {
+    "time": 18.0,
+    "text": "#1 sign of parasites",
+    "confidence": 0.878
+   },
+   {
+    "time": 18.0,
+    "text": "IMMUNE CELLS",
+    "confidence": 0.927
+   },
+   {
+    "time": 18.0,
+    "text": "WHICH ACTUALLY",
+    "confidence": 0.901
+   },
+   {
+    "time": 18.0,
+    "text": "CREATE ANTIBODIES",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.0,
+    "text": "#1 sign of parasites",
+    "confidence": 0.879
+   },
+   {
+    "time": 20.0,
+    "text": "THE SECOND THING",
+    "confidence": 0.987
+   },
+   {
+    "time": 20.0,
+    "text": "THEY DOIS THEY",
+    "confidence": 0.749
+   },
+   {
+    "time": 20.0,
+    "text": "ACTUALLY SUPPRESS",
+    "confidence": 0.882
+   },
+   {
+    "time": 22.0,
+    "text": "#1 sign of parasites",
+    "confidence": 0.879
+   },
+   {
+    "time": 24.0,
+    "text": "#I sign of parasites",
+    "confidence": 0.71
+   },
+   {
+    "time": 24.0,
+    "text": "INNATE IMMUNE",
+    "confidence": 0.994
+   },
+   {
+    "time": 24.0,
+    "text": "SYSTEM",
+    "confidence": 0.992
+   },
+   {
+    "time": 24.0,
+    "text": "SO THE NUMBER",
+    "confidence": 0.723
+   },
+   {
+    "time": 26.0,
+    "text": "#1 sign of parasites",
+    "confidence": 0.867
+   },
+   {
+    "time": 26.0,
+    "text": "ONE INDICATOR",
+    "confidence": 0.998
+   },
+   {
+    "time": 26.0,
+    "text": "OF PARASITES",
+    "confidence": 0.985
+   },
+   {
+    "time": 26.0,
+    "text": "IS ACTUALLY",
+    "confidence": 0.999
+   },
+   {
+    "time": 28.0,
+    "text": "#1 sign of parasites",
+    "confidence": 0.868
+   },
+   {
+    "time": 28.0,
+    "text": "AN",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "#I sign of parasites",
+    "confidence": 0.66
+   },
+   {
+    "time": 30.0,
+    "text": "MS",
+    "confidence": 0.998
+   },
+   {
+    "time": 32.0,
+    "text": "#I sign of parasites",
+    "confidence": 0.661
+   },
+   {
+    "time": 32.0,
+    "text": "HASHIMOTO'S",
+    "confidence": 0.862
+   },
+   {
+    "time": 34.0,
+    "text": "#I sign of parasites",
+    "confidence": 0.634
+   },
+   {
+    "time": 34.0,
+    "text": "CAN ALL BE LINKED",
+    "confidence": 0.957
+   },
+   {
+    "time": 34.0,
+    "text": "BACK TO PARASITE",
+    "confidence": 0.894
+   },
+   {
+    "time": 34.0,
+    "text": "ACTMTY",
+    "confidence": 0.976
+   },
+   {
+    "time": 36.0,
+    "text": "#I sign of parasites",
+    "confidence": 0.719
+   },
+   {
+    "time": 36.0,
+    "text": "THE ISSUE IS",
+    "confidence": 0.982
+   },
+   {
+    "time": 36.0,
+    "text": "IF YOU DONIT",
+    "confidence": 0.92
+   },
+   {
+    "time": 36.0,
+    "text": "FIX THE PROBLEM",
+    "confidence": 0.944
+   },
+   {
+    "time": 38.0,
+    "text": "#I sign of parasites",
+    "confidence": 0.72
+   },
+   {
+    "time": 38.0,
+    "text": "AND GET AT THE",
+    "confidence": 0.69
+   },
+   {
+    "time": 38.0,
+    "text": "ROOT CAUSE",
+    "confidence": 0.997
+   },
+   {
+    "time": 38.0,
+    "text": "YOUIRE LIKELY",
+    "confidence": 0.994
+   },
+   {
+    "time": 40.0,
+    "text": "#1 sign of parasites",
+    "confidence": 0.888
+   },
+   {
+    "time": 40.0,
+    "text": "CONDITIONS DOWN",
+    "confidence": 0.832
+   },
+   {
+    "time": 40.0,
+    "text": "THE ROAD",
+    "confidence": 0.999
+   },
+   {
+    "time": 40.0,
+    "text": "SO IN MY ONLINE",
+    "confidence": 0.946
+   },
+   {
+    "time": 42.0,
+    "text": "#1 sign of parasites",
+    "confidence": 0.888
+   },
+   {
+    "time": 42.0,
+    "text": "PROGRAM",
+    "confidence": 0.932
+   },
+   {
+    "time": 42.0,
+    "text": "TALKALOT",
+    "confidence": 0.995
+   },
+   {
+    "time": 42.0,
+    "text": "ABOUT",
+    "confidence": 0.999
+   },
+   {
+    "time": 44.0,
+    "text": "#1 sign of parasites",
+    "confidence": 0.896
+   },
+   {
+    "time": 44.0,
+    "text": "TO AVOIDAS",
+    "confidence": 0.989
+   },
+   {
+    "time": 44.0,
+    "text": "WELL AS",
+    "confidence": 0.684
+   },
+   {
+    "time": 46.0,
+    "text": "#I sign of parasites",
+    "confidence": 0.721
+   },
+   {
+    "time": 46.0,
+    "text": "SUPPLEMENTS",
+    "confidence": 0.909
+   },
+   {
+    "time": 48.0,
+    "text": "#1 sign of parasites",
+    "confidence": 0.893
+   },
+   {
+    "time": 48.0,
+    "text": "NATURALLY",
+    "confidence": 0.998
+   },
+   {
+    "time": 48.0,
+    "text": "IF THIS SOUNDS",
+    "confidence": 0.955
+   },
+   {
+    "time": 48.0,
+    "text": "LIKE SOMETHING",
+    "confidence": 0.689
+   },
+   {
+    "time": 50.0,
+    "text": "#1 sign of parasites",
+    "confidence": 0.893
+   },
+   {
+    "time": 50.0,
+    "text": "IN",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "BE SURE TO DROP",
+    "confidence": 0.588
+   },
+   {
+    "time": 50.0,
+    "text": "THE WORD",
+    "confidence": 0.945
+   },
+   {
+    "time": 52.0,
+    "text": "#1 sign of parasites",
+    "confidence": 0.888
+   },
+   {
+    "time": 52.0,
+    "text": "IN THE COMMENT",
+    "confidence": 0.902
+   },
+   {
+    "time": 52.0,
+    "text": "SECTION AND",
+    "confidence": 0.958
+   },
+   {
+    "time": 52.0,
+    "text": "WILL REACH",
+    "confidence": 0.985
+   }
+  ],
+  "captions": [
+   {
+    "text": "#I sign of parasites",
+    "start": 0.0,
+    "end": 2.0,
+    "confidence": 0.738,
+    "id": "o1"
+   },
+   {
+    "text": "INDICATOR THAT",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.811,
+    "id": "o2"
+   },
+   {
+    "text": "YOU'RE DEALING",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.829,
+    "id": "o3"
+   },
+   {
+    "text": "WITH PARASITES",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.727,
+    "id": "o4"
+   },
+   {
+    "text": "#I sign of parasites",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.738,
+    "id": "o5"
+   },
+   {
+    "text": "DR",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.997,
+    "id": "o6"
+   },
+   {
+    "text": "#I sign of parasites",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.723,
+    "id": "o7"
+   },
+   {
+    "text": "FMA FUNCTIONAL",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.966,
+    "id": "o8"
+   },
+   {
+    "text": "MEDICINE PRACTITIONER",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.854,
+    "id": "o9"
+   },
+   {
+    "text": "AND THE CREATOR",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.996,
+    "id": "o10"
+   },
+   {
+    "text": "#I sign of parasites",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.723,
+    "id": "o11"
+   },
+   {
+    "text": "OF THE ACTIE",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.7,
+    "id": "o12"
+   },
+   {
+    "text": "LIFE PROGRAM",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.965,
+    "id": "o13"
+   },
+   {
+    "text": "WHERE I'VE HELPED",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.751,
+    "id": "o14"
+   },
+   {
+    "text": "#1 sign of parasites",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.878,
+    "id": "o15"
+   },
+   {
+    "text": "HUNDREDS OF",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.991,
+    "id": "o16"
+   },
+   {
+    "text": "WOMEN GET AT",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.904,
+    "id": "o17"
+   },
+   {
+    "text": "THE ROOT CAUSE",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.993,
+    "id": "o18"
+   },
+   {
+    "text": "#1 sign of parasites",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.873,
+    "id": "o19"
+   },
+   {
+    "text": "AUTOIMMUNE",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o20"
+   },
+   {
+    "text": "#1 sign of parasites",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.875,
+    "id": "o21"
+   },
+   {
+    "text": "ABOUT PARASITES",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.719,
+    "id": "o22"
+   },
+   {
+    "text": "IS THAT THEY",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.869,
+    "id": "o23"
+   },
+   {
+    "text": "STIMULATE",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.924,
+    "id": "o24"
+   },
+   {
+    "text": "#1 sign of parasites",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.873,
+    "id": "o25"
+   },
+   {
+    "text": "TH2",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.943,
+    "id": "o26"
+   },
+   {
+    "text": "#1 sign of parasites",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.878,
+    "id": "o27"
+   },
+   {
+    "text": "IMMUNE CELLS",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.927,
+    "id": "o28"
+   },
+   {
+    "text": "WHICH ACTUALLY",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.901,
+    "id": "o29"
+   },
+   {
+    "text": "CREATE ANTIBODIES",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.999,
+    "id": "o30"
+   },
+   {
+    "text": "#1 sign of parasites",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.879,
+    "id": "o31"
+   },
+   {
+    "text": "THE SECOND THING",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.987,
+    "id": "o32"
+   },
+   {
+    "text": "THEY DOIS THEY",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.749,
+    "id": "o33"
+   },
+   {
+    "text": "ACTUALLY SUPPRESS",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.882,
+    "id": "o34"
+   },
+   {
+    "text": "#1 sign of parasites",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.879,
+    "id": "o35"
+   },
+   {
+    "text": "#I sign of parasites",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.71,
+    "id": "o36"
+   },
+   {
+    "text": "INNATE IMMUNE",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.994,
+    "id": "o37"
+   },
+   {
+    "text": "SYSTEM",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.992,
+    "id": "o38"
+   },
+   {
+    "text": "SO THE NUMBER",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.723,
+    "id": "o39"
+   },
+   {
+    "text": "#1 sign of parasites",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.867,
+    "id": "o40"
+   },
+   {
+    "text": "ONE INDICATOR",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.998,
+    "id": "o41"
+   },
+   {
+    "text": "OF PARASITES",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.985,
+    "id": "o42"
+   },
+   {
+    "text": "IS ACTUALLY",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.999,
+    "id": "o43"
+   },
+   {
+    "text": "#1 sign of parasites",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.868,
+    "id": "o44"
+   },
+   {
+    "text": "AN",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o45"
+   },
+   {
+    "text": "#I sign of parasites",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.66,
+    "id": "o46"
+   },
+   {
+    "text": "MS",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.998,
+    "id": "o47"
+   },
+   {
+    "text": "#I sign of parasites",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.661,
+    "id": "o48"
+   },
+   {
+    "text": "HASHIMOTO'S",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.862,
+    "id": "o49"
+   },
+   {
+    "text": "#I sign of parasites",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.634,
+    "id": "o50"
+   },
+   {
+    "text": "CAN ALL BE LINKED",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.957,
+    "id": "o51"
+   },
+   {
+    "text": "BACK TO PARASITE",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.894,
+    "id": "o52"
+   },
+   {
+    "text": "ACTMTY",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.976,
+    "id": "o53"
+   },
+   {
+    "text": "#I sign of parasites",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.719,
+    "id": "o54"
+   },
+   {
+    "text": "THE ISSUE IS",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.982,
+    "id": "o55"
+   },
+   {
+    "text": "IF YOU DONIT",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.92,
+    "id": "o56"
+   },
+   {
+    "text": "FIX THE PROBLEM",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.944,
+    "id": "o57"
+   },
+   {
+    "text": "#I sign of parasites",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.72,
+    "id": "o58"
+   },
+   {
+    "text": "AND GET AT THE",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.69,
+    "id": "o59"
+   },
+   {
+    "text": "ROOT CAUSE",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.997,
+    "id": "o60"
+   },
+   {
+    "text": "YOUIRE LIKELY",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.994,
+    "id": "o61"
+   },
+   {
+    "text": "#1 sign of parasites",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.888,
+    "id": "o62"
+   },
+   {
+    "text": "CONDITIONS DOWN",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.832,
+    "id": "o63"
+   },
+   {
+    "text": "THE ROAD",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.999,
+    "id": "o64"
+   },
+   {
+    "text": "SO IN MY ONLINE",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.946,
+    "id": "o65"
+   },
+   {
+    "text": "#1 sign of parasites",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.888,
+    "id": "o66"
+   },
+   {
+    "text": "PROGRAM",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.932,
+    "id": "o67"
+   },
+   {
+    "text": "TALKALOT",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.995,
+    "id": "o68"
+   },
+   {
+    "text": "ABOUT",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.999,
+    "id": "o69"
+   },
+   {
+    "text": "#1 sign of parasites",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.896,
+    "id": "o70"
+   },
+   {
+    "text": "TO AVOIDAS",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.989,
+    "id": "o71"
+   },
+   {
+    "text": "WELL AS",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.684,
+    "id": "o72"
+   },
+   {
+    "text": "#I sign of parasites",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.721,
+    "id": "o73"
+   },
+   {
+    "text": "SUPPLEMENTS",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.909,
+    "id": "o74"
+   },
+   {
+    "text": "#1 sign of parasites",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.893,
+    "id": "o75"
+   },
+   {
+    "text": "NATURALLY",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.998,
+    "id": "o76"
+   },
+   {
+    "text": "IF THIS SOUNDS",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.955,
+    "id": "o77"
+   },
+   {
+    "text": "LIKE SOMETHING",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.689,
+    "id": "o78"
+   },
+   {
+    "text": "#1 sign of parasites",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.893,
+    "id": "o79"
+   },
+   {
+    "text": "IN",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o80"
+   },
+   {
+    "text": "BE SURE TO DROP",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.588,
+    "id": "o81"
+   },
+   {
+    "text": "THE WORD",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.945,
+    "id": "o82"
+   },
+   {
+    "text": "#1 sign of parasites",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.888,
+    "id": "o83"
+   },
+   {
+    "text": "IN THE COMMENT",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.902,
+    "id": "o84"
+   },
+   {
+    "text": "SECTION AND",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.958,
+    "id": "o85"
+   },
+   {
+    "text": "WILL REACH",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.985,
+    "id": "o86"
+   }
+  ]
+ }
+}

@@ -1,0 +1,1122 @@
+{
+ "video_id": "v143",
+ "filename": "new_TikTok_7407842391924739361.mp4",
+ "relative_path": "new_TikTok_7407842391924739361.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@demotivateur_fr",
+ "extracted_at": "2026-11-23T08:45:58",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "fr",
+  "language_probability": 0.998,
+  "duration_seconds": 29.37,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.5,
+    "text": "A 15 ans, il vient d'inventer un savon qui traite le cancer de la peau."
+   },
+   {
+    "id": "t2",
+    "start": 3.5,
+    "end": 7.66,
+    "text": "L'américain Eman Beakhill, 15 ans, a déjà remporté de nombreux prix scientifiques."
+   },
+   {
+    "id": "t3",
+    "start": 7.66,
+    "end": 9.3,
+    "text": "Mais là, c'est très fort."
+   },
+   {
+    "id": "t4",
+    "start": 9.3,
+    "end": 13.02,
+    "text": "Il a conçu un savon qui protège du cancer de la peau, avec de nombreuses propriétés"
+   },
+   {
+    "id": "t5",
+    "start": 13.02,
+    "end": 14.78,
+    "text": "qui persistent même après rinçage."
+   },
+   {
+    "id": "t6",
+    "start": 14.78,
+    "end": 18.78,
+    "text": "Le coût est d'ailleurs estimé à 50 centimes, une au ben dans un pays où la médecine coûte cher"
+   },
+   {
+    "id": "t7",
+    "start": 18.78,
+    "end": 19.78,
+    "text": "comme aux États-Unis."
+   },
+   {
+    "id": "t8",
+    "start": 19.78,
+    "end": 23.6,
+    "text": "Avec un peu de patience, le produit pourrait être commercialisé dans les prochaines années."
+   },
+   {
+    "id": "t9",
+    "start": 23.6,
+    "end": 26.98,
+    "text": "Eman, lui, est déjà vu comme l'enfant de l'année 2024 par le Times."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 15,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "D",
+    "confidence": 0.871
+   },
+   {
+    "time": 0.0,
+    "text": "A 15 ans,",
+    "confidence": 0.614
+   },
+   {
+    "time": 0.0,
+    "text": "il vient dinventer",
+    "confidence": 0.96
+   },
+   {
+    "time": 0.0,
+    "text": "un savon qui",
+    "confidence": 0.998
+   },
+   {
+    "time": 0.0,
+    "text": "traite le cancer",
+    "confidence": 0.919
+   },
+   {
+    "time": 0.0,
+    "text": "de Ia",
+    "confidence": 0.988
+   },
+   {
+    "time": 0.0,
+    "text": "peau",
+    "confidence": 0.997
+   },
+   {
+    "time": 2.0,
+    "text": "D",
+    "confidence": 0.893
+   },
+   {
+    "time": 2.0,
+    "text": "DEMOTIVATEUR",
+    "confidence": 0.997
+   },
+   {
+    "time": 2.0,
+    "text": "A 15 ans,",
+    "confidence": 0.631
+   },
+   {
+    "time": 2.0,
+    "text": "il vient dinventer",
+    "confidence": 0.958
+   },
+   {
+    "time": 2.0,
+    "text": "un savon qui",
+    "confidence": 0.998
+   },
+   {
+    "time": 2.0,
+    "text": "traite le cancer",
+    "confidence": 0.709
+   },
+   {
+    "time": 2.0,
+    "text": "de Ia",
+    "confidence": 0.988
+   },
+   {
+    "time": 2.0,
+    "text": "peau",
+    "confidence": 0.998
+   },
+   {
+    "time": 4.0,
+    "text": "Skincincer",
+    "confidence": 0.534
+   },
+   {
+    "time": 4.0,
+    "text": "3M",
+    "confidence": 0.771
+   },
+   {
+    "time": 4.0,
+    "text": "D",
+    "confidence": 0.588
+   },
+   {
+    "time": 4.0,
+    "text": "DEMOTIVATEUR",
+    "confidence": 0.995
+   },
+   {
+    "time": 4.0,
+    "text": "8",
+    "confidence": 0.874
+   },
+   {
+    "time": 4.0,
+    "text": "LAmericain",
+    "confidence": 0.998
+   },
+   {
+    "time": 6.01,
+    "text": "By: Heman",
+    "confidence": 0.528
+   },
+   {
+    "time": 6.01,
+    "text": "3M",
+    "confidence": 0.768
+   },
+   {
+    "time": 6.01,
+    "text": "DEMOTIVATIEUR",
+    "confidence": 0.7
+   },
+   {
+    "time": 6.01,
+    "text": "deja-remporte",
+    "confidence": 0.788
+   },
+   {
+    "time": 6.01,
+    "text": "a",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.01,
+    "text": "Scientist",
+    "confidence": 0.915
+   },
+   {
+    "time": 8.01,
+    "text": "D",
+    "confidence": 0.657
+   },
+   {
+    "time": 8.01,
+    "text": "DEMOTIVATEUR",
+    "confidence": 0.997
+   },
+   {
+    "time": 8.01,
+    "text": "8",
+    "confidence": 0.619
+   },
+   {
+    "time": 8.01,
+    "text": "Mais Ia c'est tres fort:",
+    "confidence": 0.681
+   },
+   {
+    "time": 10.01,
+    "text": "D",
+    "confidence": 0.931
+   },
+   {
+    "time": 10.01,
+    "text": "DEMOTIVAIEUR",
+    "confidence": 0.554
+   },
+   {
+    "time": 10.01,
+    "text": "Il a concu un savon",
+    "confidence": 0.711
+   },
+   {
+    "time": 12.01,
+    "text": "D",
+    "confidence": 0.887
+   },
+   {
+    "time": 12.01,
+    "text": "DEMOTIVATEUR",
+    "confidence": 0.778
+   },
+   {
+    "time": 12.01,
+    "text": "Avec de nombreuses",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.01,
+    "text": "ids",
+    "confidence": 0.874
+   },
+   {
+    "time": 14.01,
+    "text": "D",
+    "confidence": 0.932
+   },
+   {
+    "time": 14.01,
+    "text": "DEMOTIVATEUR",
+    "confidence": 0.998
+   },
+   {
+    "time": 14.01,
+    "text": "apres rincage !",
+    "confidence": 0.98
+   },
+   {
+    "time": 14.01,
+    "text": "ds",
+    "confidence": 0.912
+   },
+   {
+    "time": 16.02,
+    "text": "D",
+    "confidence": 0.856
+   },
+   {
+    "time": 16.02,
+    "text": "DEMOTIVATEUR",
+    "confidence": 0.986
+   },
+   {
+    "time": 16.02,
+    "text": "eStime a",
+    "confidence": 0.576
+   },
+   {
+    "time": 18.02,
+    "text": "D",
+    "confidence": 0.887
+   },
+   {
+    "time": 18.02,
+    "text": "DEMOTIVATEUR",
+    "confidence": 0.998
+   },
+   {
+    "time": 18.02,
+    "text": "medecine coute cher",
+    "confidence": 0.968
+   },
+   {
+    "time": 20.02,
+    "text": "D",
+    "confidence": 0.892
+   },
+   {
+    "time": 20.02,
+    "text": "DEMOTINAIGUR",
+    "confidence": 0.602
+   },
+   {
+    "time": 20.02,
+    "text": "Avec un peu",
+    "confidence": 0.996
+   },
+   {
+    "time": 22.02,
+    "text": "D",
+    "confidence": 0.892
+   },
+   {
+    "time": 22.02,
+    "text": "8",
+    "confidence": 0.735
+   },
+   {
+    "time": 22.02,
+    "text": "etre commercialise",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.02,
+    "text": "D",
+    "confidence": 0.846
+   },
+   {
+    "time": 24.02,
+    "text": "Kid",
+    "confidence": 0.941
+   },
+   {
+    "time": 24.02,
+    "text": "DEMG",
+    "confidence": 0.572
+   },
+   {
+    "time": 24.02,
+    "text": "HEMAN",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.02,
+    "text": "BEKELE",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.02,
+    "text": "A15-YEAR-OLD",
+    "confidence": 0.809
+   },
+   {
+    "time": 24.02,
+    "text": "SCIENTIST WHO",
+    "confidence": 0.787
+   },
+   {
+    "time": 24.02,
+    "text": "COULD CHANGE",
+    "confidence": 0.796
+   },
+   {
+    "time": 24.02,
+    "text": "Heman, lui,",
+    "confidence": 0.586
+   },
+   {
+    "time": 24.02,
+    "text": "HOW WE TREAT",
+    "confidence": 0.715
+   },
+   {
+    "time": 24.02,
+    "text": "SKIN CANCER",
+    "confidence": 0.662
+   },
+   {
+    "time": 26.03,
+    "text": "D",
+    "confidence": 0.62
+   },
+   {
+    "time": 26.03,
+    "text": "Yea",
+    "confidence": 0.998
+   },
+   {
+    "time": 26.03,
+    "text": "HEN",
+    "confidence": 0.858
+   },
+   {
+    "time": 26.03,
+    "text": "BEK",
+    "confidence": 0.998
+   },
+   {
+    "time": 26.03,
+    "text": "8",
+    "confidence": 0.847
+   },
+   {
+    "time": 26.03,
+    "text": "A15-YEAR",
+    "confidence": 0.936
+   },
+   {
+    "time": 26.03,
+    "text": "SCIENTIST",
+    "confidence": 0.999
+   },
+   {
+    "time": 26.03,
+    "text": "COULD CHA",
+    "confidence": 0.736
+   },
+   {
+    "time": 26.03,
+    "text": "Fannee 2024\"",
+    "confidence": 0.518
+   },
+   {
+    "time": 26.03,
+    "text": "HOW WE Tl",
+    "confidence": 0.547
+   },
+   {
+    "time": 26.03,
+    "text": "SKIN CAI",
+    "confidence": 0.898
+   },
+   {
+    "time": 28.03,
+    "text": "D",
+    "confidence": 0.907
+   },
+   {
+    "time": 28.03,
+    "text": "K",
+    "confidence": 0.978
+   },
+   {
+    "time": 28.03,
+    "text": "DEMOTIVATEUR",
+    "confidence": 0.812
+   },
+   {
+    "time": 28.03,
+    "text": "Ye",
+    "confidence": 0.997
+   },
+   {
+    "time": 28.03,
+    "text": "D",
+    "confidence": 0.766
+   },
+   {
+    "time": 28.03,
+    "text": "A15-Y",
+    "confidence": 0.846
+   },
+   {
+    "time": 28.03,
+    "text": "SCIEN",
+    "confidence": 0.884
+   },
+   {
+    "time": 28.03,
+    "text": "COULD",
+    "confidence": 0.541
+   },
+   {
+    "time": 28.03,
+    "text": "SKIN",
+    "confidence": 0.943
+   },
+   {
+    "time": 28.03,
+    "text": "Abonne-toi !",
+    "confidence": 0.997
+   }
+  ],
+  "captions": [
+   {
+    "text": "D",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.871,
+    "id": "o1"
+   },
+   {
+    "text": "A 15 ans,",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.614,
+    "id": "o2"
+   },
+   {
+    "text": "il vient dinventer",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.96,
+    "id": "o3"
+   },
+   {
+    "text": "un savon qui",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.998,
+    "id": "o4"
+   },
+   {
+    "text": "traite le cancer",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.919,
+    "id": "o5"
+   },
+   {
+    "text": "de Ia",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.988,
+    "id": "o6"
+   },
+   {
+    "text": "peau",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.997,
+    "id": "o7"
+   },
+   {
+    "text": "D",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.893,
+    "id": "o8"
+   },
+   {
+    "text": "DEMOTIVATEUR",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.997,
+    "id": "o9"
+   },
+   {
+    "text": "A 15 ans,",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.631,
+    "id": "o10"
+   },
+   {
+    "text": "il vient dinventer",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.958,
+    "id": "o11"
+   },
+   {
+    "text": "un savon qui",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.998,
+    "id": "o12"
+   },
+   {
+    "text": "traite le cancer",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.709,
+    "id": "o13"
+   },
+   {
+    "text": "de Ia",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.988,
+    "id": "o14"
+   },
+   {
+    "text": "peau",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.998,
+    "id": "o15"
+   },
+   {
+    "text": "Skincincer",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.534,
+    "id": "o16"
+   },
+   {
+    "text": "3M",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.771,
+    "id": "o17"
+   },
+   {
+    "text": "D",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.588,
+    "id": "o18"
+   },
+   {
+    "text": "DEMOTIVATEUR",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.995,
+    "id": "o19"
+   },
+   {
+    "text": "8",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.874,
+    "id": "o20"
+   },
+   {
+    "text": "LAmericain",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.998,
+    "id": "o21"
+   },
+   {
+    "text": "By: Heman",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.528,
+    "id": "o22"
+   },
+   {
+    "text": "3M",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.768,
+    "id": "o23"
+   },
+   {
+    "text": "DEMOTIVATIEUR",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.7,
+    "id": "o24"
+   },
+   {
+    "text": "deja-remporte",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.788,
+    "id": "o25"
+   },
+   {
+    "text": "a",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.999,
+    "id": "o26"
+   },
+   {
+    "text": "Scientist",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.915,
+    "id": "o27"
+   },
+   {
+    "text": "D",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.657,
+    "id": "o28"
+   },
+   {
+    "text": "DEMOTIVATEUR",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.997,
+    "id": "o29"
+   },
+   {
+    "text": "8",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.619,
+    "id": "o30"
+   },
+   {
+    "text": "Mais Ia c'est tres fort:",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.681,
+    "id": "o31"
+   },
+   {
+    "text": "D",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.931,
+    "id": "o32"
+   },
+   {
+    "text": "DEMOTIVAIEUR",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.554,
+    "id": "o33"
+   },
+   {
+    "text": "Il a concu un savon",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.711,
+    "id": "o34"
+   },
+   {
+    "text": "D",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.887,
+    "id": "o35"
+   },
+   {
+    "text": "DEMOTIVATEUR",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.778,
+    "id": "o36"
+   },
+   {
+    "text": "Avec de nombreuses",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.999,
+    "id": "o37"
+   },
+   {
+    "text": "ids",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.874,
+    "id": "o38"
+   },
+   {
+    "text": "D",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.932,
+    "id": "o39"
+   },
+   {
+    "text": "DEMOTIVATEUR",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.998,
+    "id": "o40"
+   },
+   {
+    "text": "apres rincage !",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.98,
+    "id": "o41"
+   },
+   {
+    "text": "ds",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.912,
+    "id": "o42"
+   },
+   {
+    "text": "D",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.856,
+    "id": "o43"
+   },
+   {
+    "text": "DEMOTIVATEUR",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.986,
+    "id": "o44"
+   },
+   {
+    "text": "eStime a",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.576,
+    "id": "o45"
+   },
+   {
+    "text": "D",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.887,
+    "id": "o46"
+   },
+   {
+    "text": "DEMOTIVATEUR",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.998,
+    "id": "o47"
+   },
+   {
+    "text": "medecine coute cher",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.968,
+    "id": "o48"
+   },
+   {
+    "text": "D",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.892,
+    "id": "o49"
+   },
+   {
+    "text": "DEMOTINAIGUR",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.602,
+    "id": "o50"
+   },
+   {
+    "text": "Avec un peu",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.996,
+    "id": "o51"
+   },
+   {
+    "text": "D",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.892,
+    "id": "o52"
+   },
+   {
+    "text": "8",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.735,
+    "id": "o53"
+   },
+   {
+    "text": "etre commercialise",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 1.0,
+    "id": "o54"
+   },
+   {
+    "text": "D",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.846,
+    "id": "o55"
+   },
+   {
+    "text": "Kid",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.941,
+    "id": "o56"
+   },
+   {
+    "text": "DEMG",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.572,
+    "id": "o57"
+   },
+   {
+    "text": "HEMAN",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 1.0,
+    "id": "o58"
+   },
+   {
+    "text": "BEKELE",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 1.0,
+    "id": "o59"
+   },
+   {
+    "text": "A15-YEAR-OLD",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.809,
+    "id": "o60"
+   },
+   {
+    "text": "SCIENTIST WHO",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.787,
+    "id": "o61"
+   },
+   {
+    "text": "COULD CHANGE",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.796,
+    "id": "o62"
+   },
+   {
+    "text": "Heman, lui,",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.586,
+    "id": "o63"
+   },
+   {
+    "text": "HOW WE TREAT",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.715,
+    "id": "o64"
+   },
+   {
+    "text": "SKIN CANCER",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.662,
+    "id": "o65"
+   },
+   {
+    "text": "D",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.62,
+    "id": "o66"
+   },
+   {
+    "text": "Yea",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.998,
+    "id": "o67"
+   },
+   {
+    "text": "HEN",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.858,
+    "id": "o68"
+   },
+   {
+    "text": "BEK",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.998,
+    "id": "o69"
+   },
+   {
+    "text": "8",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.847,
+    "id": "o70"
+   },
+   {
+    "text": "A15-YEAR",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.936,
+    "id": "o71"
+   },
+   {
+    "text": "SCIENTIST",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.999,
+    "id": "o72"
+   },
+   {
+    "text": "COULD CHA",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.736,
+    "id": "o73"
+   },
+   {
+    "text": "Fannee 2024\"",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.518,
+    "id": "o74"
+   },
+   {
+    "text": "HOW WE Tl",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.547,
+    "id": "o75"
+   },
+   {
+    "text": "SKIN CAI",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.898,
+    "id": "o76"
+   },
+   {
+    "text": "D",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.907,
+    "id": "o77"
+   },
+   {
+    "text": "K",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.978,
+    "id": "o78"
+   },
+   {
+    "text": "DEMOTIVATEUR",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.812,
+    "id": "o79"
+   },
+   {
+    "text": "Ye",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.997,
+    "id": "o80"
+   },
+   {
+    "text": "D",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.766,
+    "id": "o81"
+   },
+   {
+    "text": "A15-Y",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.846,
+    "id": "o82"
+   },
+   {
+    "text": "SCIEN",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.884,
+    "id": "o83"
+   },
+   {
+    "text": "COULD",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.541,
+    "id": "o84"
+   },
+   {
+    "text": "SKIN",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.943,
+    "id": "o85"
+   },
+   {
+    "text": "Abonne-toi !",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.997,
+    "id": "o86"
+   }
+  ]
+ }
+}

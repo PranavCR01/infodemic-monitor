@@ -1,0 +1,64 @@
+{
+ "video_id": "v132",
+ "filename": "new_TikTok_7290617346274757894.mp4",
+ "relative_path": "new_TikTok_7290617346274757894.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@doctorchrisantiage",
+ "extracted_at": "2026-11-23T08:45:57",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.978,
+  "duration_seconds": 24.54,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.69,
+    "end": 6.25,
+    "text": "última vez que veo este tipo de videos la verdad me da demasiado tripofobia y"
+   },
+   {
+    "id": "t2",
+    "start": 6.25,
+    "end": 10.49,
+    "text": "bueno no se preocupen esto no es nada más de gente que se pegan con pegante"
+   },
+   {
+    "id": "t3",
+    "start": 10.49,
+    "end": 15.33,
+    "text": "son como como granos de o de frijoles o de café también otras personas usan"
+   },
+   {
+    "id": "t4",
+    "start": 15.33,
+    "end": 20.13,
+    "text": "no es nada raro esto no es ni ningún tipo de animal ni nada son gente que hace"
+   },
+   {
+    "id": "t5",
+    "start": 20.13,
+    "end": 26.05,
+    "text": "esto pues por contenido horrible la verdad es que es calor frío"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 13,
+  "detections": [],
+  "captions": []
+ }
+}

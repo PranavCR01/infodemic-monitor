@@ -1,0 +1,1468 @@
+{
+ "video_id": "v152",
+ "filename": "new_TikTok_7468357061244390698.mp4",
+ "relative_path": "new_TikTok_7468357061244390698.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:58",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 94.44,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.68,
+    "text": "A liquid water enhancer that has zero grams of sugar,"
+   },
+   {
+    "id": "t2",
+    "start": 2.68,
+    "end": 5.16,
+    "text": "zero calories and no red dye?"
+   },
+   {
+    "id": "t3",
+    "start": 5.16,
+    "end": 6.16,
+    "text": "Say less."
+   },
+   {
+    "id": "t4",
+    "start": 9.91,
+    "end": 13.23,
+    "text": "Strawberry lemonade, black raspberry, fruit punch,"
+   },
+   {
+    "id": "t5",
+    "start": 13.23,
+    "end": 15.59,
+    "text": "strawberry watermelon, and coconut pineapple."
+   },
+   {
+    "id": "t6",
+    "start": 15.59,
+    "end": 16.59,
+    "text": "Let's try this one."
+   },
+   {
+    "id": "t7",
+    "start": 16.59,
+    "end": 18.63,
+    "text": "All you do is add a few squirts to your water,"
+   },
+   {
+    "id": "t8",
+    "start": 18.63,
+    "end": 21.27,
+    "text": "sparkling water, your teas, whatever drink you're drinking."
+   },
+   {
+    "id": "t9",
+    "start": 21.27,
+    "end": 22.73,
+    "text": "It's made with real fruits and veggies"
+   },
+   {
+    "id": "t10",
+    "start": 22.73,
+    "end": 24.59,
+    "text": "and there's no artificial dyes."
+   },
+   {
+    "id": "t11",
+    "start": 40.59,
+    "end": 41.91,
+    "text": "Oh, that is good."
+   },
+   {
+    "id": "t12",
+    "start": 41.91,
+    "end": 45.19,
+    "text": "That is giving on the beach toes in the sand."
+   },
+   {
+    "id": "t13",
+    "start": 45.19,
+    "end": 51.65,
+    "text": "Oh, dang."
+   },
+   {
+    "id": "t14",
+    "start": 51.65,
+    "end": 53.49,
+    "text": "Okay, listen, I'm gonna get crazy."
+   },
+   {
+    "id": "t15",
+    "start": 53.49,
+    "end": 54.89,
+    "text": "Y'all, I'm gonna mix a little flavor."
+   },
+   {
+    "id": "t16",
+    "start": 54.89,
+    "end": 57.33,
+    "text": "Let's see, what do you think would be good with that?"
+   },
+   {
+    "id": "t17",
+    "start": 57.33,
+    "end": 59.33,
+    "text": "Let's add a little fruit punch in there too."
+   },
+   {
+    "id": "t18",
+    "start": 59.33,
+    "end": 75.05,
+    "text": "Hero sugar electrolyte enhancer, say less."
+   },
+   {
+    "id": "t19",
+    "start": 75.05,
+    "end": 76.29,
+    "text": "Okay, these are good."
+   },
+   {
+    "id": "t20",
+    "start": 76.29,
+    "end": 78.46,
+    "text": "10 out of 10, y'all."
+   },
+   {
+    "id": "t21",
+    "start": 78.46,
+    "end": 81.08,
+    "text": "You go buy three pack, five pack, or 10 pack."
+   },
+   {
+    "id": "t22",
+    "start": 81.08,
+    "end": 84.67,
+    "text": "I recommend you get the 10 pack."
+   },
+   {
+    "id": "t23",
+    "start": 84.67,
+    "end": 86.67,
+    "text": "They're doing a 15% off discount right now."
+   },
+   {
+    "id": "t24",
+    "start": 86.67,
+    "end": 87.67,
+    "text": "You do not wanna miss this."
+   },
+   {
+    "id": "t25",
+    "start": 87.67,
+    "end": 88.75,
+    "text": "These are good."
+   },
+   {
+    "id": "t26",
+    "start": 88.75,
+    "end": 89.59,
+    "text": "Click the card right there."
+   },
+   {
+    "id": "t27",
+    "start": 89.59,
+    "end": 91.15,
+    "text": "You taste buds will thank you."
+   },
+   {
+    "id": "t28",
+    "start": 91.15,
+    "end": 93.15,
+    "text": "You"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 48,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "that has no artificial dvesl?",
+    "confidence": 0.685
+   },
+   {
+    "time": 2.0,
+    "text": "liquid water enhancer",
+    "confidence": 0.957
+   },
+   {
+    "time": 2.0,
+    "text": "that has no artificial dvesl?",
+    "confidence": 0.723
+   },
+   {
+    "time": 2.0,
+    "text": "8",
+    "confidence": 0.589
+   },
+   {
+    "time": 4.0,
+    "text": "a liquid water enhancer",
+    "confidence": 0.985
+   },
+   {
+    "time": 6.0,
+    "text": "ute",
+    "confidence": 0.621
+   },
+   {
+    "time": 8.0,
+    "text": "STUR",
+    "confidence": 0.713
+   },
+   {
+    "time": 8.0,
+    "text": "Liquid Water Enhancer",
+    "confidence": 0.698
+   },
+   {
+    "time": 8.0,
+    "text": "TASTE TEST",
+    "confidence": 0.552
+   },
+   {
+    "time": 10.0,
+    "text": "Unanm",
+    "confidence": 0.529
+   },
+   {
+    "time": 10.0,
+    "text": "ute",
+    "confidence": 0.509
+   },
+   {
+    "time": 10.0,
+    "text": "TUR",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "Liquid Water Enhancer",
+    "confidence": 0.994
+   },
+   {
+    "time": 10.0,
+    "text": "TASTE TEST",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "uje",
+    "confidence": 0.722
+   },
+   {
+    "time": 12.0,
+    "text": "unadm",
+    "confidence": 0.61
+   },
+   {
+    "time": 12.0,
+    "text": "TUR",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.0,
+    "text": "Liquid Water Enhancer",
+    "confidence": 0.695
+   },
+   {
+    "time": 12.0,
+    "text": "TASTE TEST",
+    "confidence": 0.969
+   },
+   {
+    "time": 14.0,
+    "text": "YUJ?",
+    "confidence": 0.637
+   },
+   {
+    "time": 14.0,
+    "text": "TOR",
+    "confidence": 0.769
+   },
+   {
+    "time": 14.0,
+    "text": "Liquid Water Enhancer",
+    "confidence": 0.851
+   },
+   {
+    "time": 14.0,
+    "text": "TASTE TEST",
+    "confidence": 0.929
+   },
+   {
+    "time": 16.0,
+    "text": "YUj?",
+    "confidence": 0.588
+   },
+   {
+    "time": 16.0,
+    "text": "STUR",
+    "confidence": 0.997
+   },
+   {
+    "time": 16.0,
+    "text": "Liquid Water Enhancer",
+    "confidence": 0.661
+   },
+   {
+    "time": 16.0,
+    "text": "TASTE TEST",
+    "confidence": 0.993
+   },
+   {
+    "time": 18.0,
+    "text": "YuJ?",
+    "confidence": 0.813
+   },
+   {
+    "time": 18.0,
+    "text": "TUR",
+    "confidence": 0.99
+   },
+   {
+    "time": 18.0,
+    "text": "Liquid Water Enhander",
+    "confidence": 0.734
+   },
+   {
+    "time": 18.0,
+    "text": "TASTE TEST",
+    "confidence": 0.997
+   },
+   {
+    "time": 18.0,
+    "text": "UJ2",
+    "confidence": 0.507
+   },
+   {
+    "time": 18.0,
+    "text": "YUJ?",
+    "confidence": 0.541
+   },
+   {
+    "time": 20.0,
+    "text": "STUR",
+    "confidence": 0.998
+   },
+   {
+    "time": 20.0,
+    "text": "Liquid Water Enhancer",
+    "confidence": 0.876
+   },
+   {
+    "time": 20.0,
+    "text": "TASTE TEST",
+    "confidence": 0.998
+   },
+   {
+    "time": 22.0,
+    "text": "STUR",
+    "confidence": 0.943
+   },
+   {
+    "time": 22.0,
+    "text": "Liquid Water Enhancer",
+    "confidence": 0.844
+   },
+   {
+    "time": 22.0,
+    "text": "TASTE TEST",
+    "confidence": 0.923
+   },
+   {
+    "time": 24.0,
+    "text": "STUR",
+    "confidence": 0.886
+   },
+   {
+    "time": 24.0,
+    "text": "Liquid Water Enhancer",
+    "confidence": 0.738
+   },
+   {
+    "time": 26.0,
+    "text": "STUR",
+    "confidence": 0.965
+   },
+   {
+    "time": 26.0,
+    "text": "TASTE TEST",
+    "confidence": 0.983
+   },
+   {
+    "time": 28.0,
+    "text": "STUR",
+    "confidence": 0.904
+   },
+   {
+    "time": 28.0,
+    "text": "Liquid Water Elhancer",
+    "confidence": 0.539
+   },
+   {
+    "time": 30.0,
+    "text": "STUR",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.0,
+    "text": "Liquid Water Enhancer",
+    "confidence": 0.879
+   },
+   {
+    "time": 30.0,
+    "text": "TASTE TEST",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.0,
+    "text": "YUJ?",
+    "confidence": 0.568
+   },
+   {
+    "time": 32.0,
+    "text": "manm",
+    "confidence": 0.54
+   },
+   {
+    "time": 32.0,
+    "text": "STUR",
+    "confidence": 0.991
+   },
+   {
+    "time": 32.0,
+    "text": "Liquid Water Enhancer",
+    "confidence": 0.828
+   },
+   {
+    "time": 32.0,
+    "text": "TASTE TEST",
+    "confidence": 0.999
+   },
+   {
+    "time": 34.0,
+    "text": "Liquid Water Enhancer",
+    "confidence": 0.731
+   },
+   {
+    "time": 34.0,
+    "text": "TASTE TEST",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.0,
+    "text": "STUR",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.0,
+    "text": "Liquid Water Enhancer",
+    "confidence": 0.941
+   },
+   {
+    "time": 36.0,
+    "text": "TASTE TEST",
+    "confidence": 0.999
+   },
+   {
+    "time": 38.0,
+    "text": "STUR",
+    "confidence": 0.975
+   },
+   {
+    "time": 38.0,
+    "text": "Liquid Water Ernancer",
+    "confidence": 0.763
+   },
+   {
+    "time": 38.0,
+    "text": "TASTE TEST",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "R",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "Liquid Water Enhancer",
+    "confidence": 0.875
+   },
+   {
+    "time": 40.0,
+    "text": "TASTE TEST",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "UJ?",
+    "confidence": 0.687
+   },
+   {
+    "time": 42.0,
+    "text": "THAT",
+    "confidence": 0.997
+   },
+   {
+    "time": 42.0,
+    "text": "IS",
+    "confidence": 0.973
+   },
+   {
+    "time": 42.0,
+    "text": "GOOD",
+    "confidence": 0.998
+   },
+   {
+    "time": 42.0,
+    "text": "UJ?",
+    "confidence": 0.641
+   },
+   {
+    "time": 44.0,
+    "text": "Juje",
+    "confidence": 0.511
+   },
+   {
+    "time": 44.0,
+    "text": "ute",
+    "confidence": 0.877
+   },
+   {
+    "time": 52.0,
+    "text": "UJ?",
+    "confidence": 0.541
+   },
+   {
+    "time": 54.0,
+    "text": "another flavor",
+    "confidence": 0.903
+   },
+   {
+    "time": 56.0,
+    "text": "let's",
+    "confidence": 0.869
+   },
+   {
+    "time": 56.0,
+    "text": "another flavor",
+    "confidence": 0.787
+   },
+   {
+    "time": 56.0,
+    "text": "ufe",
+    "confidence": 0.66
+   },
+   {
+    "time": 58.0,
+    "text": "Unadm",
+    "confidence": 0.545
+   },
+   {
+    "time": 60.0,
+    "text": "zero sugel",
+    "confidence": 0.849
+   },
+   {
+    "time": 60.0,
+    "text": "electrolyte enhancer",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.0,
+    "text": "electrolyte enhancer",
+    "confidence": 0.959
+   },
+   {
+    "time": 64.0,
+    "text": "unanm",
+    "confidence": 0.571
+   },
+   {
+    "time": 76.0,
+    "text": "ut",
+    "confidence": 0.61
+   },
+   {
+    "time": 80.0,
+    "text": "VOU can get a",
+    "confidence": 0.721
+   },
+   {
+    "time": 80.0,
+    "text": "3 pack",
+    "confidence": 0.571
+   },
+   {
+    "time": 80.0,
+    "text": "5 pack",
+    "confidence": 0.524
+   },
+   {
+    "time": 80.0,
+    "text": "10 pack",
+    "confidence": 0.954
+   },
+   {
+    "time": 82.0,
+    "text": "vou can get",
+    "confidence": 0.568
+   },
+   {
+    "time": 82.0,
+    "text": "3 pack",
+    "confidence": 0.935
+   },
+   {
+    "time": 82.0,
+    "text": "5 pack",
+    "confidence": 0.607
+   },
+   {
+    "time": 82.0,
+    "text": "10 pack",
+    "confidence": 0.635
+   },
+   {
+    "time": 86.0,
+    "text": "15 % OFF",
+    "confidence": 0.536
+   },
+   {
+    "time": 86.0,
+    "text": "Discount?",
+    "confidence": 0.69
+   },
+   {
+    "time": 88.0,
+    "text": "15 % OFF",
+    "confidence": 0.925
+   },
+   {
+    "time": 88.0,
+    "text": "Discounti",
+    "confidence": 0.625
+   },
+   {
+    "time": 92.0,
+    "text": "tur",
+    "confidence": 0.967
+   },
+   {
+    "time": 92.0,
+    "text": "stur",
+    "confidence": 0.952
+   },
+   {
+    "time": 92.0,
+    "text": "lectrolytes",
+    "confidence": 0.993
+   },
+   {
+    "time": 92.0,
+    "text": "stur",
+    "confidence": 0.972
+   },
+   {
+    "time": 92.0,
+    "text": "stur",
+    "confidence": 0.999
+   },
+   {
+    "time": 92.0,
+    "text": "stur",
+    "confidence": 0.995
+   },
+   {
+    "time": 92.0,
+    "text": "real",
+    "confidence": 0.666
+   },
+   {
+    "time": 92.0,
+    "text": "cocon",
+    "confidence": 0.597
+   },
+   {
+    "time": 94.0,
+    "text": "stur",
+    "confidence": 0.999
+   },
+   {
+    "time": 94.0,
+    "text": "stur",
+    "confidence": 0.996
+   },
+   {
+    "time": 94.0,
+    "text": "stur",
+    "confidence": 0.988
+   },
+   {
+    "time": 94.0,
+    "text": "stur",
+    "confidence": 0.996
+   },
+   {
+    "time": 94.0,
+    "text": "stur",
+    "confidence": 0.999
+   },
+   {
+    "time": 94.0,
+    "text": "trolytes",
+    "confidence": 0.829
+   },
+   {
+    "time": 94.0,
+    "text": "trolytes",
+    "confidence": 0.855
+   },
+   {
+    "time": 94.0,
+    "text": "stur",
+    "confidence": 0.999
+   }
+  ],
+  "captions": [
+   {
+    "text": "that has no artificial dvesl?",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.685,
+    "id": "o1"
+   },
+   {
+    "text": "liquid water enhancer",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.957,
+    "id": "o2"
+   },
+   {
+    "text": "that has no artificial dvesl?",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.723,
+    "id": "o3"
+   },
+   {
+    "text": "8",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.589,
+    "id": "o4"
+   },
+   {
+    "text": "a liquid water enhancer",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.985,
+    "id": "o5"
+   },
+   {
+    "text": "ute",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.621,
+    "id": "o6"
+   },
+   {
+    "text": "STUR",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.713,
+    "id": "o7"
+   },
+   {
+    "text": "Liquid Water Enhancer",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.698,
+    "id": "o8"
+   },
+   {
+    "text": "TASTE TEST",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.552,
+    "id": "o9"
+   },
+   {
+    "text": "Unanm",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.529,
+    "id": "o10"
+   },
+   {
+    "text": "ute",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.509,
+    "id": "o11"
+   },
+   {
+    "text": "TUR",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o12"
+   },
+   {
+    "text": "Liquid Water Enhancer",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.994,
+    "id": "o13"
+   },
+   {
+    "text": "TASTE TEST",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o14"
+   },
+   {
+    "text": "uje",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.722,
+    "id": "o15"
+   },
+   {
+    "text": "unadm",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.61,
+    "id": "o16"
+   },
+   {
+    "text": "TUR",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o17"
+   },
+   {
+    "text": "Liquid Water Enhancer",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.695,
+    "id": "o18"
+   },
+   {
+    "text": "TASTE TEST",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.969,
+    "id": "o19"
+   },
+   {
+    "text": "YUJ?",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.637,
+    "id": "o20"
+   },
+   {
+    "text": "TOR",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.769,
+    "id": "o21"
+   },
+   {
+    "text": "Liquid Water Enhancer",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.851,
+    "id": "o22"
+   },
+   {
+    "text": "TASTE TEST",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.929,
+    "id": "o23"
+   },
+   {
+    "text": "YUj?",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.588,
+    "id": "o24"
+   },
+   {
+    "text": "STUR",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.997,
+    "id": "o25"
+   },
+   {
+    "text": "Liquid Water Enhancer",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.661,
+    "id": "o26"
+   },
+   {
+    "text": "TASTE TEST",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.993,
+    "id": "o27"
+   },
+   {
+    "text": "YuJ?",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.813,
+    "id": "o28"
+   },
+   {
+    "text": "TUR",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.99,
+    "id": "o29"
+   },
+   {
+    "text": "Liquid Water Enhander",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.734,
+    "id": "o30"
+   },
+   {
+    "text": "TASTE TEST",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.997,
+    "id": "o31"
+   },
+   {
+    "text": "UJ2",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.507,
+    "id": "o32"
+   },
+   {
+    "text": "YUJ?",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.541,
+    "id": "o33"
+   },
+   {
+    "text": "STUR",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.998,
+    "id": "o34"
+   },
+   {
+    "text": "Liquid Water Enhancer",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.876,
+    "id": "o35"
+   },
+   {
+    "text": "TASTE TEST",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.998,
+    "id": "o36"
+   },
+   {
+    "text": "STUR",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.943,
+    "id": "o37"
+   },
+   {
+    "text": "Liquid Water Enhancer",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.844,
+    "id": "o38"
+   },
+   {
+    "text": "TASTE TEST",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.923,
+    "id": "o39"
+   },
+   {
+    "text": "STUR",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.886,
+    "id": "o40"
+   },
+   {
+    "text": "Liquid Water Enhancer",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.738,
+    "id": "o41"
+   },
+   {
+    "text": "STUR",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.965,
+    "id": "o42"
+   },
+   {
+    "text": "TASTE TEST",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.983,
+    "id": "o43"
+   },
+   {
+    "text": "STUR",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.904,
+    "id": "o44"
+   },
+   {
+    "text": "Liquid Water Elhancer",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.539,
+    "id": "o45"
+   },
+   {
+    "text": "STUR",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.999,
+    "id": "o46"
+   },
+   {
+    "text": "Liquid Water Enhancer",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.879,
+    "id": "o47"
+   },
+   {
+    "text": "TASTE TEST",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.999,
+    "id": "o48"
+   },
+   {
+    "text": "YUJ?",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.568,
+    "id": "o49"
+   },
+   {
+    "text": "manm",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.54,
+    "id": "o50"
+   },
+   {
+    "text": "STUR",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.991,
+    "id": "o51"
+   },
+   {
+    "text": "Liquid Water Enhancer",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.828,
+    "id": "o52"
+   },
+   {
+    "text": "TASTE TEST",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.999,
+    "id": "o53"
+   },
+   {
+    "text": "Liquid Water Enhancer",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.731,
+    "id": "o54"
+   },
+   {
+    "text": "TASTE TEST",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.999,
+    "id": "o55"
+   },
+   {
+    "text": "STUR",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.999,
+    "id": "o56"
+   },
+   {
+    "text": "Liquid Water Enhancer",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.941,
+    "id": "o57"
+   },
+   {
+    "text": "TASTE TEST",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.999,
+    "id": "o58"
+   },
+   {
+    "text": "STUR",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.975,
+    "id": "o59"
+   },
+   {
+    "text": "Liquid Water Ernancer",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.763,
+    "id": "o60"
+   },
+   {
+    "text": "TASTE TEST",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o61"
+   },
+   {
+    "text": "R",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o62"
+   },
+   {
+    "text": "Liquid Water Enhancer",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.875,
+    "id": "o63"
+   },
+   {
+    "text": "TASTE TEST",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o64"
+   },
+   {
+    "text": "UJ?",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.687,
+    "id": "o65"
+   },
+   {
+    "text": "THAT",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.997,
+    "id": "o66"
+   },
+   {
+    "text": "IS",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.973,
+    "id": "o67"
+   },
+   {
+    "text": "GOOD",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.998,
+    "id": "o68"
+   },
+   {
+    "text": "UJ?",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.641,
+    "id": "o69"
+   },
+   {
+    "text": "Juje",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.511,
+    "id": "o70"
+   },
+   {
+    "text": "ute",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.877,
+    "id": "o71"
+   },
+   {
+    "text": "UJ?",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.541,
+    "id": "o72"
+   },
+   {
+    "text": "another flavor",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.903,
+    "id": "o73"
+   },
+   {
+    "text": "let's",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.869,
+    "id": "o74"
+   },
+   {
+    "text": "another flavor",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.787,
+    "id": "o75"
+   },
+   {
+    "text": "ufe",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.66,
+    "id": "o76"
+   },
+   {
+    "text": "Unadm",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.545,
+    "id": "o77"
+   },
+   {
+    "text": "zero sugel",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.849,
+    "id": "o78"
+   },
+   {
+    "text": "electrolyte enhancer",
+    "start": 60.0,
+    "end": 62.0,
+    "confidence": 1.0,
+    "id": "o79"
+   },
+   {
+    "text": "unanm",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.571,
+    "id": "o80"
+   },
+   {
+    "text": "ut",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.61,
+    "id": "o81"
+   },
+   {
+    "text": "VOU can get a",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.721,
+    "id": "o82"
+   },
+   {
+    "text": "3 pack",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.571,
+    "id": "o83"
+   },
+   {
+    "text": "5 pack",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.524,
+    "id": "o84"
+   },
+   {
+    "text": "10 pack",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.954,
+    "id": "o85"
+   },
+   {
+    "text": "vou can get",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.568,
+    "id": "o86"
+   },
+   {
+    "text": "3 pack",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.935,
+    "id": "o87"
+   },
+   {
+    "text": "5 pack",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.607,
+    "id": "o88"
+   },
+   {
+    "text": "10 pack",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.635,
+    "id": "o89"
+   },
+   {
+    "text": "15 % OFF",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.536,
+    "id": "o90"
+   },
+   {
+    "text": "Discount?",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.69,
+    "id": "o91"
+   },
+   {
+    "text": "15 % OFF",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.925,
+    "id": "o92"
+   },
+   {
+    "text": "Discounti",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.625,
+    "id": "o93"
+   },
+   {
+    "text": "tur",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.967,
+    "id": "o94"
+   },
+   {
+    "text": "stur",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.952,
+    "id": "o95"
+   },
+   {
+    "text": "lectrolytes",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.993,
+    "id": "o96"
+   },
+   {
+    "text": "stur",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.999,
+    "id": "o97"
+   },
+   {
+    "text": "real",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.666,
+    "id": "o98"
+   },
+   {
+    "text": "cocon",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.597,
+    "id": "o99"
+   },
+   {
+    "text": "stur",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.999,
+    "id": "o100"
+   },
+   {
+    "text": "trolytes",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.855,
+    "id": "o101"
+   },
+   {
+    "text": "stur",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.999,
+    "id": "o102"
+   }
+  ]
+ }
+}

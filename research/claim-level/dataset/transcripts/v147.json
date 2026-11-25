@@ -1,0 +1,1043 @@
+{
+ "video_id": "v147",
+ "filename": "new_TikTok_7460230514675338502.mp4",
+ "relative_path": "new_TikTok_7460230514675338502.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:58",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.377,
+  "duration_seconds": 56.73,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 4.21,
+    "end": 15.7,
+    "text": "Don't be shy, shy, shy, la, la, la, la, da"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 29,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "8",
+    "confidence": 0.98
+   },
+   {
+    "time": 0.0,
+    "text": "ntellian24",
+    "confidence": 0.998
+   },
+   {
+    "time": 0.0,
+    "text": "Experjence Skincane",
+    "confidence": 0.538
+   },
+   {
+    "time": 0.0,
+    "text": "Backed by",
+    "confidence": 0.743
+   },
+   {
+    "time": 0.0,
+    "text": "Korea\" s Finest",
+    "confidence": 0.923
+   },
+   {
+    "time": 0.0,
+    "text": "Pharmaceutical",
+    "confidence": 0.525
+   },
+   {
+    "time": 1.97,
+    "text": "8capCut",
+    "confidence": 0.828
+   },
+   {
+    "time": 1.97,
+    "text": "Centellian24",
+    "confidence": 0.999
+   },
+   {
+    "time": 1.97,
+    "text": "Experience Skincare",
+    "confidence": 0.955
+   },
+   {
+    "time": 1.97,
+    "text": "Backed by",
+    "confidence": 0.975
+   },
+   {
+    "time": 1.97,
+    "text": "Korea's Finest",
+    "confidence": 0.79
+   },
+   {
+    "time": 1.97,
+    "text": "Pharmaceutical",
+    "confidence": 0.735
+   },
+   {
+    "time": 1.97,
+    "text": "TechnoZogyl",
+    "confidence": 0.667
+   },
+   {
+    "time": 3.93,
+    "text": "8",
+    "confidence": 0.999
+   },
+   {
+    "time": 3.93,
+    "text": "Hello",
+    "confidence": 0.573
+   },
+   {
+    "time": 3.93,
+    "text": "Centellian24",
+    "confidence": 0.599
+   },
+   {
+    "time": 5.9,
+    "text": "8",
+    "confidence": 1.0
+   },
+   {
+    "time": 5.9,
+    "text": "Madeca Cream",
+    "confidence": 0.977
+   },
+   {
+    "time": 5.9,
+    "text": "Centellian24",
+    "confidence": 0.994
+   },
+   {
+    "time": 5.9,
+    "text": "MADECA",
+    "confidence": 0.999
+   },
+   {
+    "time": 5.9,
+    "text": "MELA CAPTURE AMPOULE PAD",
+    "confidence": 0.92
+   },
+   {
+    "time": 5.9,
+    "text": "Centellian24 Madeca",
+    "confidence": 0.875
+   },
+   {
+    "time": 5.9,
+    "text": "Time",
+    "confidence": 1.0
+   },
+   {
+    "time": 5.9,
+    "text": "Cream",
+    "confidence": 1.0
+   },
+   {
+    "time": 5.9,
+    "text": "Reverse",
+    "confidence": 1.0
+   },
+   {
+    "time": 5.9,
+    "text": "Best",
+    "confidence": 1.0
+   },
+   {
+    "time": 5.9,
+    "text": "1",
+    "confidence": 0.791
+   },
+   {
+    "time": 7.87,
+    "text": "8",
+    "confidence": 1.0
+   },
+   {
+    "time": 7.87,
+    "text": "21",
+    "confidence": 0.635
+   },
+   {
+    "time": 7.87,
+    "text": "Centellian",
+    "confidence": 0.979
+   },
+   {
+    "time": 7.87,
+    "text": "PAD",
+    "confidence": 1.0
+   },
+   {
+    "time": 7.87,
+    "text": "MADECA",
+    "confidence": 0.998
+   },
+   {
+    "time": 7.87,
+    "text": "AMPOULE",
+    "confidence": 0.706
+   },
+   {
+    "time": 7.87,
+    "text": "Centellian24 Madeca",
+    "confidence": 0.806
+   },
+   {
+    "time": 7.87,
+    "text": "Time",
+    "confidence": 1.0
+   },
+   {
+    "time": 7.87,
+    "text": "Cream",
+    "confidence": 1.0
+   },
+   {
+    "time": 7.87,
+    "text": "Reverse",
+    "confidence": 1.0
+   },
+   {
+    "time": 7.87,
+    "text": "Best",
+    "confidence": 1.0
+   },
+   {
+    "time": 9.83,
+    "text": "8",
+    "confidence": 1.0
+   },
+   {
+    "time": 9.83,
+    "text": "MFLA",
+    "confidence": 0.67
+   },
+   {
+    "time": 9.83,
+    "text": "Centellian24",
+    "confidence": 0.995
+   },
+   {
+    "time": 9.83,
+    "text": "MADECA",
+    "confidence": 0.999
+   },
+   {
+    "time": 9.83,
+    "text": "CAPTURE AMPOULE PAD",
+    "confidence": 0.977
+   },
+   {
+    "time": 9.83,
+    "text": "MELA",
+    "confidence": 0.997
+   },
+   {
+    "time": 11.8,
+    "text": "8",
+    "confidence": 0.997
+   },
+   {
+    "time": 11.8,
+    "text": "24",
+    "confidence": 0.561
+   },
+   {
+    "time": 11.8,
+    "text": "Centellian",
+    "confidence": 0.75
+   },
+   {
+    "time": 11.8,
+    "text": "MADECA",
+    "confidence": 0.999
+   },
+   {
+    "time": 11.8,
+    "text": "PAD",
+    "confidence": 0.998
+   },
+   {
+    "time": 11.8,
+    "text": "AMPOULE",
+    "confidence": 0.548
+   },
+   {
+    "time": 11.8,
+    "text": "MELA",
+    "confidence": 0.982
+   },
+   {
+    "time": 11.8,
+    "text": "1",
+    "confidence": 0.74
+   },
+   {
+    "time": 13.77,
+    "text": "Cmam",
+    "confidence": 0.96
+   },
+   {
+    "time": 13.77,
+    "text": "Madeca",
+    "confidence": 0.642
+   },
+   {
+    "time": 13.77,
+    "text": "8",
+    "confidence": 0.997
+   },
+   {
+    "time": 13.77,
+    "text": "Centellian 24\"",
+    "confidence": 0.95
+   },
+   {
+    "time": 13.77,
+    "text": "PAD",
+    "confidence": 0.998
+   },
+   {
+    "time": 13.77,
+    "text": "MADECA",
+    "confidence": 1.0
+   },
+   {
+    "time": 13.77,
+    "text": "AMPOULE",
+    "confidence": 0.697
+   },
+   {
+    "time": 13.77,
+    "text": "CAPTURE",
+    "confidence": 0.895
+   },
+   {
+    "time": 13.77,
+    "text": "MELA",
+    "confidence": 0.969
+   },
+   {
+    "time": 13.77,
+    "text": "Madeca Lab",
+    "confidence": 0.984
+   },
+   {
+    "time": 13.77,
+    "text": "Mask Water",
+    "confidence": 0.795
+   },
+   {
+    "time": 13.77,
+    "text": "Hydrating",
+    "confidence": 0.695
+   },
+   {
+    "time": 15.73,
+    "text": "8",
+    "confidence": 0.998
+   },
+   {
+    "time": 17.7,
+    "text": "8",
+    "confidence": 0.997
+   },
+   {
+    "time": 17.7,
+    "text": "Mil",
+    "confidence": 0.507
+   },
+   {
+    "time": 19.67,
+    "text": "8",
+    "confidence": 0.997
+   },
+   {
+    "time": 21.63,
+    "text": "8",
+    "confidence": 0.986
+   },
+   {
+    "time": 23.6,
+    "text": "8",
+    "confidence": 0.998
+   },
+   {
+    "time": 25.57,
+    "text": "8",
+    "confidence": 0.986
+   },
+   {
+    "time": 27.53,
+    "text": "8",
+    "confidence": 1.0
+   },
+   {
+    "time": 27.53,
+    "text": "Hydration",
+    "confidence": 0.702
+   },
+   {
+    "time": 29.5,
+    "text": "8",
+    "confidence": 0.999
+   },
+   {
+    "time": 29.5,
+    "text": "Hydration",
+    "confidence": 0.996
+   },
+   {
+    "time": 31.47,
+    "text": "8",
+    "confidence": 1.0
+   },
+   {
+    "time": 33.43,
+    "text": "8",
+    "confidence": 0.997
+   },
+   {
+    "time": 35.4,
+    "text": "8",
+    "confidence": 0.986
+   },
+   {
+    "time": 37.37,
+    "text": "8",
+    "confidence": 0.968
+   },
+   {
+    "time": 39.33,
+    "text": "8",
+    "confidence": 0.979
+   },
+   {
+    "time": 39.33,
+    "text": "Protection",
+    "confidence": 1.0
+   },
+   {
+    "time": 41.3,
+    "text": "8",
+    "confidence": 0.999
+   },
+   {
+    "time": 41.3,
+    "text": "Protection",
+    "confidence": 0.999
+   },
+   {
+    "time": 43.27,
+    "text": "8",
+    "confidence": 0.988
+   },
+   {
+    "time": 45.23,
+    "text": "8",
+    "confidence": 0.949
+   },
+   {
+    "time": 47.2,
+    "text": "8",
+    "confidence": 0.956
+   },
+   {
+    "time": 49.17,
+    "text": "8",
+    "confidence": 0.997
+   },
+   {
+    "time": 51.13,
+    "text": "8",
+    "confidence": 0.997
+   },
+   {
+    "time": 51.13,
+    "text": "Delighted with",
+    "confidence": 0.97
+   },
+   {
+    "time": 51.13,
+    "text": "my result",
+    "confidence": 0.764
+   },
+   {
+    "time": 53.1,
+    "text": "8",
+    "confidence": 0.998
+   }
+  ],
+  "captions": [
+   {
+    "text": "8",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.98,
+    "id": "o1"
+   },
+   {
+    "text": "ntellian24",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.998,
+    "id": "o2"
+   },
+   {
+    "text": "Experjence Skincane",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.538,
+    "id": "o3"
+   },
+   {
+    "text": "Backed by",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.743,
+    "id": "o4"
+   },
+   {
+    "text": "Korea\" s Finest",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.923,
+    "id": "o5"
+   },
+   {
+    "text": "Pharmaceutical",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.525,
+    "id": "o6"
+   },
+   {
+    "text": "8capCut",
+    "start": 1.97,
+    "end": 1.97,
+    "confidence": 0.828,
+    "id": "o7"
+   },
+   {
+    "text": "Centellian24",
+    "start": 1.97,
+    "end": 1.97,
+    "confidence": 0.999,
+    "id": "o8"
+   },
+   {
+    "text": "Experience Skincare",
+    "start": 1.97,
+    "end": 1.97,
+    "confidence": 0.955,
+    "id": "o9"
+   },
+   {
+    "text": "Backed by",
+    "start": 1.97,
+    "end": 1.97,
+    "confidence": 0.975,
+    "id": "o10"
+   },
+   {
+    "text": "Korea's Finest",
+    "start": 1.97,
+    "end": 1.97,
+    "confidence": 0.79,
+    "id": "o11"
+   },
+   {
+    "text": "Pharmaceutical",
+    "start": 1.97,
+    "end": 1.97,
+    "confidence": 0.735,
+    "id": "o12"
+   },
+   {
+    "text": "TechnoZogyl",
+    "start": 1.97,
+    "end": 1.97,
+    "confidence": 0.667,
+    "id": "o13"
+   },
+   {
+    "text": "8",
+    "start": 3.93,
+    "end": 3.93,
+    "confidence": 0.999,
+    "id": "o14"
+   },
+   {
+    "text": "Hello",
+    "start": 3.93,
+    "end": 3.93,
+    "confidence": 0.573,
+    "id": "o15"
+   },
+   {
+    "text": "Centellian24",
+    "start": 3.93,
+    "end": 3.93,
+    "confidence": 0.599,
+    "id": "o16"
+   },
+   {
+    "text": "8",
+    "start": 5.9,
+    "end": 5.9,
+    "confidence": 1.0,
+    "id": "o17"
+   },
+   {
+    "text": "Madeca Cream",
+    "start": 5.9,
+    "end": 5.9,
+    "confidence": 0.977,
+    "id": "o18"
+   },
+   {
+    "text": "Centellian24",
+    "start": 5.9,
+    "end": 5.9,
+    "confidence": 0.994,
+    "id": "o19"
+   },
+   {
+    "text": "MADECA",
+    "start": 5.9,
+    "end": 5.9,
+    "confidence": 0.999,
+    "id": "o20"
+   },
+   {
+    "text": "MELA CAPTURE AMPOULE PAD",
+    "start": 5.9,
+    "end": 5.9,
+    "confidence": 0.92,
+    "id": "o21"
+   },
+   {
+    "text": "Centellian24 Madeca",
+    "start": 5.9,
+    "end": 5.9,
+    "confidence": 0.875,
+    "id": "o22"
+   },
+   {
+    "text": "Time",
+    "start": 5.9,
+    "end": 5.9,
+    "confidence": 1.0,
+    "id": "o23"
+   },
+   {
+    "text": "Cream",
+    "start": 5.9,
+    "end": 5.9,
+    "confidence": 1.0,
+    "id": "o24"
+   },
+   {
+    "text": "Reverse",
+    "start": 5.9,
+    "end": 5.9,
+    "confidence": 1.0,
+    "id": "o25"
+   },
+   {
+    "text": "Best",
+    "start": 5.9,
+    "end": 5.9,
+    "confidence": 1.0,
+    "id": "o26"
+   },
+   {
+    "text": "1",
+    "start": 5.9,
+    "end": 5.9,
+    "confidence": 0.791,
+    "id": "o27"
+   },
+   {
+    "text": "8",
+    "start": 7.87,
+    "end": 7.87,
+    "confidence": 1.0,
+    "id": "o28"
+   },
+   {
+    "text": "21",
+    "start": 7.87,
+    "end": 7.87,
+    "confidence": 0.635,
+    "id": "o29"
+   },
+   {
+    "text": "Centellian",
+    "start": 7.87,
+    "end": 7.87,
+    "confidence": 0.979,
+    "id": "o30"
+   },
+   {
+    "text": "PAD",
+    "start": 7.87,
+    "end": 7.87,
+    "confidence": 1.0,
+    "id": "o31"
+   },
+   {
+    "text": "MADECA",
+    "start": 7.87,
+    "end": 7.87,
+    "confidence": 0.998,
+    "id": "o32"
+   },
+   {
+    "text": "AMPOULE",
+    "start": 7.87,
+    "end": 7.87,
+    "confidence": 0.706,
+    "id": "o33"
+   },
+   {
+    "text": "Centellian24 Madeca",
+    "start": 7.87,
+    "end": 7.87,
+    "confidence": 0.806,
+    "id": "o34"
+   },
+   {
+    "text": "Time",
+    "start": 7.87,
+    "end": 7.87,
+    "confidence": 1.0,
+    "id": "o35"
+   },
+   {
+    "text": "Cream",
+    "start": 7.87,
+    "end": 7.87,
+    "confidence": 1.0,
+    "id": "o36"
+   },
+   {
+    "text": "Reverse",
+    "start": 7.87,
+    "end": 7.87,
+    "confidence": 1.0,
+    "id": "o37"
+   },
+   {
+    "text": "Best",
+    "start": 7.87,
+    "end": 7.87,
+    "confidence": 1.0,
+    "id": "o38"
+   },
+   {
+    "text": "8",
+    "start": 9.83,
+    "end": 9.83,
+    "confidence": 1.0,
+    "id": "o39"
+   },
+   {
+    "text": "MFLA",
+    "start": 9.83,
+    "end": 9.83,
+    "confidence": 0.67,
+    "id": "o40"
+   },
+   {
+    "text": "Centellian24",
+    "start": 9.83,
+    "end": 9.83,
+    "confidence": 0.995,
+    "id": "o41"
+   },
+   {
+    "text": "MADECA",
+    "start": 9.83,
+    "end": 9.83,
+    "confidence": 0.999,
+    "id": "o42"
+   },
+   {
+    "text": "CAPTURE AMPOULE PAD",
+    "start": 9.83,
+    "end": 9.83,
+    "confidence": 0.977,
+    "id": "o43"
+   },
+   {
+    "text": "MELA",
+    "start": 9.83,
+    "end": 9.83,
+    "confidence": 0.997,
+    "id": "o44"
+   },
+   {
+    "text": "8",
+    "start": 11.8,
+    "end": 11.8,
+    "confidence": 0.997,
+    "id": "o45"
+   },
+   {
+    "text": "24",
+    "start": 11.8,
+    "end": 11.8,
+    "confidence": 0.561,
+    "id": "o46"
+   },
+   {
+    "text": "Centellian",
+    "start": 11.8,
+    "end": 11.8,
+    "confidence": 0.75,
+    "id": "o47"
+   },
+   {
+    "text": "MADECA",
+    "start": 11.8,
+    "end": 11.8,
+    "confidence": 0.999,
+    "id": "o48"
+   },
+   {
+    "text": "PAD",
+    "start": 11.8,
+    "end": 11.8,
+    "confidence": 0.998,
+    "id": "o49"
+   },
+   {
+    "text": "AMPOULE",
+    "start": 11.8,
+    "end": 11.8,
+    "confidence": 0.548,
+    "id": "o50"
+   },
+   {
+    "text": "MELA",
+    "start": 11.8,
+    "end": 11.8,
+    "confidence": 0.982,
+    "id": "o51"
+   },
+   {
+    "text": "1",
+    "start": 11.8,
+    "end": 11.8,
+    "confidence": 0.74,
+    "id": "o52"
+   },
+   {
+    "text": "Cmam",
+    "start": 13.77,
+    "end": 13.77,
+    "confidence": 0.96,
+    "id": "o53"
+   },
+   {
+    "text": "Madeca",
+    "start": 13.77,
+    "end": 13.77,
+    "confidence": 0.642,
+    "id": "o54"
+   },
+   {
+    "text": "8",
+    "start": 13.77,
+    "end": 13.77,
+    "confidence": 0.997,
+    "id": "o55"
+   },
+   {
+    "text": "Centellian 24\"",
+    "start": 13.77,
+    "end": 13.77,
+    "confidence": 0.95,
+    "id": "o56"
+   },
+   {
+    "text": "PAD",
+    "start": 13.77,
+    "end": 13.77,
+    "confidence": 0.998,
+    "id": "o57"
+   },
+   {
+    "text": "MADECA",
+    "start": 13.77,
+    "end": 13.77,
+    "confidence": 1.0,
+    "id": "o58"
+   },
+   {
+    "text": "AMPOULE",
+    "start": 13.77,
+    "end": 13.77,
+    "confidence": 0.697,
+    "id": "o59"
+   },
+   {
+    "text": "CAPTURE",
+    "start": 13.77,
+    "end": 13.77,
+    "confidence": 0.895,
+    "id": "o60"
+   },
+   {
+    "text": "MELA",
+    "start": 13.77,
+    "end": 13.77,
+    "confidence": 0.969,
+    "id": "o61"
+   },
+   {
+    "text": "Madeca Lab",
+    "start": 13.77,
+    "end": 13.77,
+    "confidence": 0.984,
+    "id": "o62"
+   },
+   {
+    "text": "Mask Water",
+    "start": 13.77,
+    "end": 13.77,
+    "confidence": 0.795,
+    "id": "o63"
+   },
+   {
+    "text": "Hydrating",
+    "start": 13.77,
+    "end": 13.77,
+    "confidence": 0.695,
+    "id": "o64"
+   },
+   {
+    "text": "8",
+    "start": 15.73,
+    "end": 17.7,
+    "confidence": 0.998,
+    "id": "o65"
+   },
+   {
+    "text": "Mil",
+    "start": 17.7,
+    "end": 17.7,
+    "confidence": 0.507,
+    "id": "o66"
+   },
+   {
+    "text": "8",
+    "start": 19.67,
+    "end": 27.53,
+    "confidence": 1.0,
+    "id": "o67"
+   },
+   {
+    "text": "Hydration",
+    "start": 27.53,
+    "end": 27.53,
+    "confidence": 0.702,
+    "id": "o68"
+   },
+   {
+    "text": "8",
+    "start": 29.5,
+    "end": 29.5,
+    "confidence": 0.999,
+    "id": "o69"
+   },
+   {
+    "text": "Hydration",
+    "start": 29.5,
+    "end": 29.5,
+    "confidence": 0.996,
+    "id": "o70"
+   },
+   {
+    "text": "8",
+    "start": 31.47,
+    "end": 39.33,
+    "confidence": 1.0,
+    "id": "o71"
+   },
+   {
+    "text": "Protection",
+    "start": 39.33,
+    "end": 39.33,
+    "confidence": 1.0,
+    "id": "o72"
+   },
+   {
+    "text": "8",
+    "start": 41.3,
+    "end": 41.3,
+    "confidence": 0.999,
+    "id": "o73"
+   },
+   {
+    "text": "Protection",
+    "start": 41.3,
+    "end": 41.3,
+    "confidence": 0.999,
+    "id": "o74"
+   },
+   {
+    "text": "8",
+    "start": 43.27,
+    "end": 51.13,
+    "confidence": 0.997,
+    "id": "o75"
+   },
+   {
+    "text": "Delighted with",
+    "start": 51.13,
+    "end": 51.13,
+    "confidence": 0.97,
+    "id": "o76"
+   },
+   {
+    "text": "my result",
+    "start": 51.13,
+    "end": 51.13,
+    "confidence": 0.764,
+    "id": "o77"
+   },
+   {
+    "text": "8",
+    "start": 53.1,
+    "end": 53.1,
+    "confidence": 0.998,
+    "id": "o78"
+   }
+  ]
+ }
+}

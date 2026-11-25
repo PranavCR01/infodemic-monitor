@@ -1,0 +1,8746 @@
+{
+ "video_id": "v35",
+ "filename": "ssstik.io_@healingartsapothecary_1761400198099.mp4",
+ "relative_path": "Misinfo Dataset/ssstik.io_@healingartsapothecary_1761400198099.mp4",
+ "collector": "Misinfo Dataset",
+ "collector_label": "",
+ "creator_handle": "@healingartsapothecary",
+ "extracted_at": "2026-11-21T18:03:12",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.968,
+  "duration_seconds": 59.05,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.52,
+    "text": "Did you know that Japanese doctors during World War 2 accidentally discovered that miso soup was a"
+   },
+   {
+    "id": "t2",
+    "start": 5.52,
+    "end": 11.84,
+    "text": "preventative and a way to stop radiation exposure and radiation poisoning? So the story is amazing"
+   },
+   {
+    "id": "t3",
+    "start": 11.84,
+    "end": 16.96,
+    "text": "because it's backed up by first-hand accounts and it's backed up by science. But Dr. Akazuki,"
+   },
+   {
+    "id": "t4",
+    "start": 16.96,
+    "end": 22.16,
+    "text": "if I can pronounce it correctly, was a doctor where basically they discovered after the bomb"
+   },
+   {
+    "id": "t5",
+    "start": 22.16,
+    "end": 27.84,
+    "text": "dropped that him, his staff, and pretty much all the patients in his care were the only ones who"
+   },
+   {
+    "id": "t6",
+    "start": 27.84,
+    "end": 30.96,
+    "text": "who did not suffer any form of radiation burns,"
+   },
+   {
+    "id": "t7",
+    "start": 30.96,
+    "end": 33.0,
+    "text": "radiation poisoning at all."
+   },
+   {
+    "id": "t8",
+    "start": 33.0,
+    "end": 33.88,
+    "text": "It was a mystery."
+   },
+   {
+    "id": "t9",
+    "start": 33.88,
+    "end": 36.4,
+    "text": "So fast forward into the future and studies be done,"
+   },
+   {
+    "id": "t10",
+    "start": 36.4,
+    "end": 39.12,
+    "text": "but they discovered that miso soup carried binders"
+   },
+   {
+    "id": "t11",
+    "start": 39.12,
+    "end": 42.12,
+    "text": "that would actually remove any form of radiation"
+   },
+   {
+    "id": "t12",
+    "start": 42.12,
+    "end": 44.12,
+    "text": "from the human body or the bloodstream."
+   },
+   {
+    "id": "t13",
+    "start": 44.12,
+    "end": 46.4,
+    "text": "Now, mind you, it did not work to treat it"
+   },
+   {
+    "id": "t14",
+    "start": 46.4,
+    "end": 49.16,
+    "text": "if you indeed had already been exposed to radiation."
+   },
+   {
+    "id": "t15",
+    "start": 49.16,
+    "end": 51.52,
+    "text": "However, it demonstrated the potential"
+   },
+   {
+    "id": "t16",
+    "start": 51.52,
+    "end": 54.16,
+    "text": "for miso to prevent radiation poisoning."
+   },
+   {
+    "id": "t17",
+    "start": 54.16,
+    "end": 55.92,
+    "text": "So why not have a bowl of miso soup"
+   },
+   {
+    "id": "t18",
+    "start": 55.92,
+    "end": 57.76,
+    "text": "before getting any kind of X-rays?"
+   },
+   {
+    "id": "t19",
+    "start": 57.76,
+    "end": 58.8,
+    "text": "Killing Arts, stop me."
+   },
+   {
+    "id": "t20",
+    "start": 58.8,
+    "end": 59.64,
+    "text": "Enjoy."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 30,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "The Atomic B",
+    "confidence": 0.975
+   },
+   {
+    "time": 0.0,
+    "text": "of Hiroshima",
+    "confidence": 0.565
+   },
+   {
+    "time": 0.0,
+    "text": "nation",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "01g",
+    "confidence": 0.54
+   },
+   {
+    "time": 0.0,
+    "text": "bomb",
+    "confidence": 0.999
+   },
+   {
+    "time": 0.0,
+    "text": "ationcom",
+    "confidence": 0.934
+   },
+   {
+    "time": 0.0,
+    "text": "After Hlroshima",
+    "confidence": 0.964
+   },
+   {
+    "time": 0.0,
+    "text": "Miso Soup",
+    "confidence": 0.997
+   },
+   {
+    "time": 0.0,
+    "text": "Radiation",
+    "confidence": 0.976
+   },
+   {
+    "time": 0.0,
+    "text": "Protection",
+    "confidence": 0.694
+   },
+   {
+    "time": 0.0,
+    "text": "Healthbosstv",
+    "confidence": 0.991
+   },
+   {
+    "time": 2.0,
+    "text": "The Atomic Bc",
+    "confidence": 0.764
+   },
+   {
+    "time": 2.0,
+    "text": "of Hiroshima",
+    "confidence": 0.746
+   },
+   {
+    "time": 2.0,
+    "text": "nationalwwzm",
+    "confidence": 0.703
+   },
+   {
+    "time": 2.0,
+    "text": "org,",
+    "confidence": 0.553
+   },
+   {
+    "time": 2.0,
+    "text": "bomb",
+    "confidence": 0.76
+   },
+   {
+    "time": 2.0,
+    "text": "MkTok",
+    "confidence": 0.717
+   },
+   {
+    "time": 2.0,
+    "text": "Ingartsapathecary",
+    "confidence": 0.81
+   },
+   {
+    "time": 2.0,
+    "text": "After Hiroshima",
+    "confidence": 0.841
+   },
+   {
+    "time": 2.0,
+    "text": "Lme",
+    "confidence": 0.504
+   },
+   {
+    "time": 2.0,
+    "text": "com",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "Healthbosstv",
+    "confidence": 0.975
+   },
+   {
+    "time": 4.0,
+    "text": "bombir",
+    "confidence": 0.914
+   },
+   {
+    "time": 4.0,
+    "text": "en:wik",
+    "confidence": 0.529
+   },
+   {
+    "time": 4.0,
+    "text": "The Atomic B",
+    "confidence": 0.771
+   },
+   {
+    "time": 4.0,
+    "text": "of Hiroshima",
+    "confidence": 0.894
+   },
+   {
+    "time": 4.0,
+    "text": "nationa",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "2mii",
+    "confidence": 0.557
+   },
+   {
+    "time": 4.0,
+    "text": "org",
+    "confidence": 0.993
+   },
+   {
+    "time": 4.0,
+    "text": "vomb",
+    "confidence": 0.839
+   },
+   {
+    "time": 4.0,
+    "text": "tion-com",
+    "confidence": 0.68
+   },
+   {
+    "time": 4.0,
+    "text": "After Hiroshima",
+    "confidence": 0.832
+   },
+   {
+    "time": 4.0,
+    "text": "com",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.0,
+    "text": "Healthbosstv",
+    "confidence": 0.931
+   },
+   {
+    "time": 4.0,
+    "text": "Healthbosstv",
+    "confidence": 0.996
+   },
+   {
+    "time": 6.0,
+    "text": "bomb",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "The Atomic B",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "of Hiroshima",
+    "confidence": 0.909
+   },
+   {
+    "time": 6.0,
+    "text": "nationalwwzm",
+    "confidence": 0.755
+   },
+   {
+    "time": 6.0,
+    "text": "org",
+    "confidence": 0.989
+   },
+   {
+    "time": 6.0,
+    "text": "bomb",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "sationcom",
+    "confidence": 0.997
+   },
+   {
+    "time": 6.0,
+    "text": "After Hiroshima",
+    "confidence": 0.84
+   },
+   {
+    "time": 6.0,
+    "text": "time.com",
+    "confidence": 0.596
+   },
+   {
+    "time": 6.0,
+    "text": "Healthbosstv",
+    "confidence": 0.932
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 0.911
+   },
+   {
+    "time": 6.0,
+    "text": "Healthbosstv",
+    "confidence": 0.997
+   },
+   {
+    "time": 8.0,
+    "text": "bombings of Hiroshima and Nagas __.",
+    "confidence": 0.674
+   },
+   {
+    "time": 8.0,
+    "text": "en.wikipedia org",
+    "confidence": 0.612
+   },
+   {
+    "time": 8.0,
+    "text": "The Atomic Bombing of Hiroshima",
+    "confidence": 0.808
+   },
+   {
+    "time": 8.0,
+    "text": "nationalwwZmuseum org",
+    "confidence": 0.724
+   },
+   {
+    "time": 8.0,
+    "text": "bomb",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "sation com",
+    "confidence": 0.608
+   },
+   {
+    "time": 8.0,
+    "text": "After Hiroshima",
+    "confidence": 0.84
+   },
+   {
+    "time": 8.0,
+    "text": "com",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "aga:",
+    "confidence": 0.81
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 0.856
+   },
+   {
+    "time": 8.0,
+    "text": "Healthbosstv",
+    "confidence": 0.998
+   },
+   {
+    "time": 10.0,
+    "text": "bombings of Hiroshima and Nagas__.",
+    "confidence": 0.902
+   },
+   {
+    "time": 10.0,
+    "text": "en.wikipedia org",
+    "confidence": 0.543
+   },
+   {
+    "time": 10.0,
+    "text": "The Atomic Bombing of Hiroshima",
+    "confidence": 0.864
+   },
+   {
+    "time": 10.0,
+    "text": "nationalwwZmuseum org",
+    "confidence": 0.787
+   },
+   {
+    "time": 10.0,
+    "text": "bomb",
+    "confidence": 0.998
+   },
+   {
+    "time": 10.0,
+    "text": "sationcom",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "After Hiroshin",
+    "confidence": 0.929
+   },
+   {
+    "time": 10.0,
+    "text": "time.com",
+    "confidence": 0.734
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 0.922
+   },
+   {
+    "time": 10.0,
+    "text": "Healthbosstv",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.0,
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "confidence": 0.802
+   },
+   {
+    "time": 12.0,
+    "text": "Imtroduction",
+    "confidence": 0.525
+   },
+   {
+    "time": 12.0,
+    "text": "August of 1945. the first atomic bomb was dropped in Hiroshima and U",
+    "confidence": 0.565
+   },
+   {
+    "time": 12.0,
+    "text": "second",
+    "confidence": 0.998
+   },
+   {
+    "time": 12.0,
+    "text": "leadig toJapan",
+    "confidence": 0.687
+   },
+   {
+    "time": 12.0,
+    "text": "unconditional surrender and the end of the Pacil",
+    "confidence": 0.637
+   },
+   {
+    "time": 12.0,
+    "text": "Japan:",
+    "confidence": 0.692
+   },
+   {
+    "time": 12.0,
+    "text": "Although most of the people within",
+    "confidence": 0.978
+   },
+   {
+    "time": 12.0,
+    "text": "two kilometer radius from the hypocenter diec",
+    "confidence": 0.666
+   },
+   {
+    "time": 12.0,
+    "text": "atomic bomb blast and radiation",
+    "confidence": 0.983
+   },
+   {
+    "time": 12.0,
+    "text": "indirect exposure",
+    "confidence": 0.924
+   },
+   {
+    "time": 12.0,
+    "text": "some did not suffer from",
+    "confidence": 0.97
+   },
+   {
+    "time": 12.0,
+    "text": "related to the radiation and are still alive at present:",
+    "confidence": 0.667
+   },
+   {
+    "time": 12.0,
+    "text": "did these people survive while others did not?\"",
+    "confidence": 0.693
+   },
+   {
+    "time": 12.0,
+    "text": "[Hiroshima Atomie Bombing:",
+    "confidence": 0.738
+   },
+   {
+    "time": 12.0,
+    "text": "Nagasaki at the time Of the bombing",
+    "confidence": 0.824
+   },
+   {
+    "time": 12.0,
+    "text": "medical doctor In",
+    "confidence": 0.969
+   },
+   {
+    "time": 12.0,
+    "text": "served t0 help the injured.",
+    "confidence": 0.698
+   },
+   {
+    "time": 12.0,
+    "text": "He observed that these survivon had",
+    "confidence": 0.839
+   },
+   {
+    "time": 12.0,
+    "text": "common diet prae",
+    "confidence": 0.532
+   },
+   {
+    "time": 12.0,
+    "text": "Dr; Akizuki unfortunately",
+    "confidence": 0.786
+   },
+   {
+    "time": 12.0,
+    "text": "traditional Japanese diet enriched with Miso",
+    "confidence": 0.593
+   },
+   {
+    "time": 12.0,
+    "text": "2005",
+    "confidence": 0.994
+   },
+   {
+    "time": 12.0,
+    "text": "but",
+    "confidence": 0.622
+   },
+   {
+    "time": 12.0,
+    "text": "Was in Japan in the summer of 2006",
+    "confidence": 0.828
+   },
+   {
+    "time": 12.0,
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "confidence": 0.586
+   },
+   {
+    "time": 12.0,
+    "text": "the interview data, this study will examine atomie bomb survivors\" dietary history",
+    "confidence": 0.622
+   },
+   {
+    "time": 12.0,
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "confidence": 0.576
+   },
+   {
+    "time": 12.0,
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "confidence": 0.695
+   },
+   {
+    "time": 12.0,
+    "text": "lom",
+    "confidence": 0.755
+   },
+   {
+    "time": 12.0,
+    "text": "tragic events. but we can (Um them into valuable lessons that can",
+    "confidence": 0.782
+   },
+   {
+    "time": 12.0,
+    "text": "eventually help us find ways t0 prevent and",
+    "confidence": 0.729
+   },
+   {
+    "time": 12.0,
+    "text": "or control cancer.",
+    "confidence": 0.715
+   },
+   {
+    "time": 12.0,
+    "text": "My hope",
+    "confidence": 0.898
+   },
+   {
+    "time": 12.0,
+    "text": "medicine.",
+    "confidence": 0.844
+   },
+   {
+    "time": 12.0,
+    "text": "IL. Previous Literatures",
+    "confidence": 0.556
+   },
+   {
+    "time": 12.0,
+    "text": "The nature of the problem to be examined",
+    "confidence": 0.535
+   },
+   {
+    "time": 12.0,
+    "text": "Healthbosstv",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.0,
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "confidence": 0.863
+   },
+   {
+    "time": 14.0,
+    "text": "Imtroduction",
+    "confidence": 0.612
+   },
+   {
+    "time": 14.0,
+    "text": "August of 1945. the first atomic bomb was dropped in Hiroshima and U",
+    "confidence": 0.553
+   },
+   {
+    "time": 14.0,
+    "text": "second",
+    "confidence": 0.998
+   },
+   {
+    "time": 14.0,
+    "text": "leadig toJapan",
+    "confidence": 0.645
+   },
+   {
+    "time": 14.0,
+    "text": "War belween",
+    "confidence": 0.628
+   },
+   {
+    "time": 14.0,
+    "text": "Japan:",
+    "confidence": 0.702
+   },
+   {
+    "time": 14.0,
+    "text": "Although most of the people within",
+    "confidence": 0.981
+   },
+   {
+    "time": 14.0,
+    "text": "two kilometer radius from the hypocenter diec",
+    "confidence": 0.51
+   },
+   {
+    "time": 14.0,
+    "text": "atomic bomb blast and radiation",
+    "confidence": 0.938
+   },
+   {
+    "time": 14.0,
+    "text": "indirect exposure",
+    "confidence": 0.938
+   },
+   {
+    "time": 14.0,
+    "text": "some did not suffer from",
+    "confidence": 0.968
+   },
+   {
+    "time": 14.0,
+    "text": "related to the radiation and are still alive at present:",
+    "confidence": 0.53
+   },
+   {
+    "time": 14.0,
+    "text": "did these people survive while others did not?\"",
+    "confidence": 0.75
+   },
+   {
+    "time": 14.0,
+    "text": "[Hiroshima Atomie Bombing:",
+    "confidence": 0.726
+   },
+   {
+    "time": 14.0,
+    "text": "medical doctor in Nagasaki at the time Of the bombing",
+    "confidence": 0.702
+   },
+   {
+    "time": 14.0,
+    "text": "served t0 help the injured.",
+    "confidence": 0.673
+   },
+   {
+    "time": 14.0,
+    "text": "He observed that these survivon had",
+    "confidence": 0.837
+   },
+   {
+    "time": 14.0,
+    "text": "Dr; Akizuki unfortunately passe",
+    "confidence": 0.664
+   },
+   {
+    "time": 14.0,
+    "text": "traditional Japanese diet enriched with Miso",
+    "confidence": 0.791
+   },
+   {
+    "time": 14.0,
+    "text": "2005",
+    "confidence": 0.994
+   },
+   {
+    "time": 14.0,
+    "text": "was able t0 interview Mrs",
+    "confidence": 0.736
+   },
+   {
+    "time": 14.0,
+    "text": "Akizuki;as well as other atomic bomb survil",
+    "confidence": 0.526
+   },
+   {
+    "time": 14.0,
+    "text": "but",
+    "confidence": 0.802
+   },
+   {
+    "time": 14.0,
+    "text": "was in Japan in the summer of 2006",
+    "confidence": 0.865
+   },
+   {
+    "time": 14.0,
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "confidence": 0.668
+   },
+   {
+    "time": 14.0,
+    "text": "the interview data, this study will examine atomie bomb survivors\" dietary history",
+    "confidence": 0.641
+   },
+   {
+    "time": 14.0,
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "confidence": 0.613
+   },
+   {
+    "time": 14.0,
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "confidence": 0.657
+   },
+   {
+    "time": 14.0,
+    "text": "lom",
+    "confidence": 0.781
+   },
+   {
+    "time": 14.0,
+    "text": "tragic events. but we can (Um them into valuable lessons that can",
+    "confidence": 0.798
+   },
+   {
+    "time": 14.0,
+    "text": "eventually help us find ways t0 prevent and",
+    "confidence": 0.72
+   },
+   {
+    "time": 14.0,
+    "text": "or control cancer.",
+    "confidence": 0.799
+   },
+   {
+    "time": 14.0,
+    "text": "My hope",
+    "confidence": 0.893
+   },
+   {
+    "time": 14.0,
+    "text": "shed light on the importance of diet t0 the human body",
+    "confidence": 0.579
+   },
+   {
+    "time": 14.0,
+    "text": "medicine.",
+    "confidence": 0.843
+   },
+   {
+    "time": 14.0,
+    "text": "IL. Previous Literatures",
+    "confidence": 0.567
+   },
+   {
+    "time": 14.0,
+    "text": "The nature of the problem to be examined",
+    "confidence": 0.525
+   },
+   {
+    "time": 14.0,
+    "text": "Healthbosstv",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.0,
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "confidence": 0.852
+   },
+   {
+    "time": 16.0,
+    "text": "second",
+    "confidence": 0.998
+   },
+   {
+    "time": 16.0,
+    "text": "leadig toJapan",
+    "confidence": 0.657
+   },
+   {
+    "time": 16.0,
+    "text": "unconditional surrender and the end of the Pacil",
+    "confidence": 0.51
+   },
+   {
+    "time": 16.0,
+    "text": "War between",
+    "confidence": 0.599
+   },
+   {
+    "time": 16.0,
+    "text": "Japan:",
+    "confidence": 0.702
+   },
+   {
+    "time": 16.0,
+    "text": "Although most of the people within",
+    "confidence": 0.98
+   },
+   {
+    "time": 16.0,
+    "text": "atomic bomb blast and radiation",
+    "confidence": 0.929
+   },
+   {
+    "time": 16.0,
+    "text": "some did not suffer from",
+    "confidence": 0.969
+   },
+   {
+    "time": 16.0,
+    "text": "indirect exposure",
+    "confidence": 0.862
+   },
+   {
+    "time": 16.0,
+    "text": "related to the radiation and are still alive at present:",
+    "confidence": 0.607
+   },
+   {
+    "time": 16.0,
+    "text": "did these people survive while others did not?\"",
+    "confidence": 0.922
+   },
+   {
+    "time": 16.0,
+    "text": "Bombing:",
+    "confidence": 0.996
+   },
+   {
+    "time": 16.0,
+    "text": "Nagasaki at the time Of the bombing",
+    "confidence": 0.86
+   },
+   {
+    "time": 16.0,
+    "text": "medical doctor In",
+    "confidence": 0.972
+   },
+   {
+    "time": 16.0,
+    "text": "served t0 help the injured.",
+    "confidence": 0.533
+   },
+   {
+    "time": 16.0,
+    "text": "He observed that these survivon had",
+    "confidence": 0.835
+   },
+   {
+    "time": 16.0,
+    "text": "Dr; Akizuki unfortunately",
+    "confidence": 0.854
+   },
+   {
+    "time": 16.0,
+    "text": "traditional Japanese diet enriched with Miso",
+    "confidence": 0.818
+   },
+   {
+    "time": 16.0,
+    "text": "2005",
+    "confidence": 0.993
+   },
+   {
+    "time": 16.0,
+    "text": "was able t0 interview Mrs",
+    "confidence": 0.734
+   },
+   {
+    "time": 16.0,
+    "text": "Akizuki;as well as other atomic bomb survil",
+    "confidence": 0.524
+   },
+   {
+    "time": 16.0,
+    "text": "but",
+    "confidence": 0.795
+   },
+   {
+    "time": 16.0,
+    "text": "was in Japan in the summer of 2006",
+    "confidence": 0.872
+   },
+   {
+    "time": 16.0,
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "confidence": 0.667
+   },
+   {
+    "time": 16.0,
+    "text": "the interview data, this study will examine atomie bomb survivors\" dietary history",
+    "confidence": 0.546
+   },
+   {
+    "time": 16.0,
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "confidence": 0.629
+   },
+   {
+    "time": 16.0,
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "confidence": 0.61
+   },
+   {
+    "time": 16.0,
+    "text": "lom",
+    "confidence": 0.764
+   },
+   {
+    "time": 16.0,
+    "text": "tragic events. but we can (Um them into valuable lessons that can",
+    "confidence": 0.802
+   },
+   {
+    "time": 16.0,
+    "text": "eventually help us find ways t0 prevent and",
+    "confidence": 0.708
+   },
+   {
+    "time": 16.0,
+    "text": "or control cancer.",
+    "confidence": 0.768
+   },
+   {
+    "time": 16.0,
+    "text": "My hope",
+    "confidence": 0.594
+   },
+   {
+    "time": 16.0,
+    "text": "shed light on the importance of diet t0 the human body",
+    "confidence": 0.508
+   },
+   {
+    "time": 16.0,
+    "text": "medicine.",
+    "confidence": 0.789
+   },
+   {
+    "time": 16.0,
+    "text": "t0 tOday",
+    "confidence": 0.502
+   },
+   {
+    "time": 16.0,
+    "text": "II. Previous Literatures",
+    "confidence": 0.581
+   },
+   {
+    "time": 16.0,
+    "text": "The nature of the problem to be examined",
+    "confidence": 0.572
+   },
+   {
+    "time": 16.0,
+    "text": "Healthbosstv",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.0,
+    "text": "ssociate Professor of Japanese Studies; Illinois Wesleyan University",
+    "confidence": 0.765
+   },
+   {
+    "time": 18.0,
+    "text": "Imtroduction",
+    "confidence": 0.556
+   },
+   {
+    "time": 18.0,
+    "text": "second",
+    "confidence": 0.998
+   },
+   {
+    "time": 18.0,
+    "text": "leadig toJapan",
+    "confidence": 0.668
+   },
+   {
+    "time": 18.0,
+    "text": "unconditional surrender and the end of the Pacil",
+    "confidence": 0.615
+   },
+   {
+    "time": 18.0,
+    "text": "War between",
+    "confidence": 0.6
+   },
+   {
+    "time": 18.0,
+    "text": "Japan:",
+    "confidence": 0.703
+   },
+   {
+    "time": 18.0,
+    "text": "Although most of the people within",
+    "confidence": 0.982
+   },
+   {
+    "time": 18.0,
+    "text": "atomic bomb blast and radiation",
+    "confidence": 0.931
+   },
+   {
+    "time": 18.0,
+    "text": "some did not suffer from",
+    "confidence": 0.966
+   },
+   {
+    "time": 18.0,
+    "text": "indirect exposure",
+    "confidence": 0.844
+   },
+   {
+    "time": 18.0,
+    "text": "related to the radiation and are still alive at present:",
+    "confidence": 0.609
+   },
+   {
+    "time": 18.0,
+    "text": "did these people survive while others did not?\"",
+    "confidence": 0.921
+   },
+   {
+    "time": 18.0,
+    "text": "Bombing:",
+    "confidence": 0.996
+   },
+   {
+    "time": 18.0,
+    "text": "Nagasaki at the time Of the bombing",
+    "confidence": 0.825
+   },
+   {
+    "time": 18.0,
+    "text": "The late Dr. Akizuki;",
+    "confidence": 0.576
+   },
+   {
+    "time": 18.0,
+    "text": "medical doctor In",
+    "confidence": 0.972
+   },
+   {
+    "time": 18.0,
+    "text": "served t0 help the injured.",
+    "confidence": 0.677
+   },
+   {
+    "time": 18.0,
+    "text": "He observed that these survivon had",
+    "confidence": 0.835
+   },
+   {
+    "time": 18.0,
+    "text": "common diet prae",
+    "confidence": 0.537
+   },
+   {
+    "time": 18.0,
+    "text": "Dr; Akizuki unfortunately",
+    "confidence": 0.854
+   },
+   {
+    "time": 18.0,
+    "text": "traditional Japanese diet enriched with Miso",
+    "confidence": 0.812
+   },
+   {
+    "time": 18.0,
+    "text": "2005",
+    "confidence": 0.993
+   },
+   {
+    "time": 18.0,
+    "text": "was able t0 interview Mrs",
+    "confidence": 0.734
+   },
+   {
+    "time": 18.0,
+    "text": "Akizuki;as well as other atomic bomb survil",
+    "confidence": 0.522
+   },
+   {
+    "time": 18.0,
+    "text": "but",
+    "confidence": 0.795
+   },
+   {
+    "time": 18.0,
+    "text": "was in Japan in the summer of 2006",
+    "confidence": 0.871
+   },
+   {
+    "time": 18.0,
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "confidence": 0.668
+   },
+   {
+    "time": 18.0,
+    "text": "the interview data, this study will examine atomic bomb survivors\" dietary history",
+    "confidence": 0.55
+   },
+   {
+    "time": 18.0,
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "confidence": 0.632
+   },
+   {
+    "time": 18.0,
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "confidence": 0.609
+   },
+   {
+    "time": 18.0,
+    "text": "lom",
+    "confidence": 0.766
+   },
+   {
+    "time": 18.0,
+    "text": "tragic events. but we can (Um them into valuable lessons that can",
+    "confidence": 0.797
+   },
+   {
+    "time": 18.0,
+    "text": "eventually help us find ways t0 prevent and",
+    "confidence": 0.707
+   },
+   {
+    "time": 18.0,
+    "text": "or control cancer.",
+    "confidence": 0.763
+   },
+   {
+    "time": 18.0,
+    "text": "My hope",
+    "confidence": 0.927
+   },
+   {
+    "time": 18.0,
+    "text": "shed light on the importance of diet t0 the human body",
+    "confidence": 0.618
+   },
+   {
+    "time": 18.0,
+    "text": "medicine.",
+    "confidence": 0.852
+   },
+   {
+    "time": 18.0,
+    "text": "t0 tOday",
+    "confidence": 0.594
+   },
+   {
+    "time": 18.0,
+    "text": "The nature of the problem to be examined",
+    "confidence": 0.573
+   },
+   {
+    "time": 18.0,
+    "text": "Healthbosstv",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.0,
+    "text": "Dietry Practice of Hiroshim:/Nagasaki Atomic Bomb Survivor",
+    "confidence": 0.516
+   },
+   {
+    "time": 20.0,
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "confidence": 0.843
+   },
+   {
+    "time": 20.0,
+    "text": "Introduction",
+    "confidence": 0.7
+   },
+   {
+    "time": 20.0,
+    "text": "August of 1945. the first atomic bomb was dropped in Hiroshima and u",
+    "confidence": 0.565
+   },
+   {
+    "time": 20.0,
+    "text": "second",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.0,
+    "text": "leadingto Japan",
+    "confidence": 0.549
+   },
+   {
+    "time": 20.0,
+    "text": "unconditional surrender and the end of the Pacil",
+    "confidence": 0.555
+   },
+   {
+    "time": 20.0,
+    "text": "War between",
+    "confidence": 0.616
+   },
+   {
+    "time": 20.0,
+    "text": "Japan:",
+    "confidence": 0.529
+   },
+   {
+    "time": 20.0,
+    "text": "Although most of the people within",
+    "confidence": 0.841
+   },
+   {
+    "time": 20.0,
+    "text": "two kilometer radius from the hypocenter diec",
+    "confidence": 0.646
+   },
+   {
+    "time": 20.0,
+    "text": "atomic bomb blast and radiation",
+    "confidence": 0.988
+   },
+   {
+    "time": 20.0,
+    "text": "indirect exposure",
+    "confidence": 0.772
+   },
+   {
+    "time": 20.0,
+    "text": "some did not suffer from",
+    "confidence": 0.97
+   },
+   {
+    "time": 20.0,
+    "text": "related to the radiation and are still alive at present:",
+    "confidence": 0.709
+   },
+   {
+    "time": 20.0,
+    "text": "did these people survive while others did not?\"",
+    "confidence": 0.899
+   },
+   {
+    "time": 20.0,
+    "text": "[Hiroshima Atomie Bombing:",
+    "confidence": 0.714
+   },
+   {
+    "time": 20.0,
+    "text": "medical doctor in Nagasaki at the time Of the bombing",
+    "confidence": 0.647
+   },
+   {
+    "time": 20.0,
+    "text": "served t0 help the injured:",
+    "confidence": 0.595
+   },
+   {
+    "time": 20.0,
+    "text": "He observed that these survivon had",
+    "confidence": 0.83
+   },
+   {
+    "time": 20.0,
+    "text": "common diet pra",
+    "confidence": 0.946
+   },
+   {
+    "time": 20.0,
+    "text": "traditional Japanese diet enriched with Miso",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.0,
+    "text": "Dr; Akizuki unfortunately passe",
+    "confidence": 0.682
+   },
+   {
+    "time": 20.0,
+    "text": "was in Japan in the summer of 2006",
+    "confidence": 0.888
+   },
+   {
+    "time": 20.0,
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "confidence": 0.581
+   },
+   {
+    "time": 20.0,
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "confidence": 0.616
+   },
+   {
+    "time": 20.0,
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "confidence": 0.622
+   },
+   {
+    "time": 20.0,
+    "text": "lom",
+    "confidence": 0.834
+   },
+   {
+    "time": 20.0,
+    "text": "tragic events",
+    "confidence": 0.789
+   },
+   {
+    "time": 20.0,
+    "text": "but we can (UM them into valuable lessons that can",
+    "confidence": 0.581
+   },
+   {
+    "time": 20.0,
+    "text": "eventually help us find ways t0 prevent and",
+    "confidence": 0.672
+   },
+   {
+    "time": 20.0,
+    "text": "or control cancer.",
+    "confidence": 0.715
+   },
+   {
+    "time": 20.0,
+    "text": "My hope",
+    "confidence": 0.84
+   },
+   {
+    "time": 20.0,
+    "text": "shed light on the importance of diet t0 the human body",
+    "confidence": 0.587
+   },
+   {
+    "time": 20.0,
+    "text": "medicine.",
+    "confidence": 0.808
+   },
+   {
+    "time": 20.0,
+    "text": "it t0 today",
+    "confidence": 0.847
+   },
+   {
+    "time": 20.0,
+    "text": "II. Previous Literatures",
+    "confidence": 0.58
+   },
+   {
+    "time": 20.0,
+    "text": "The nature of the problem to be examined",
+    "confidence": 0.681
+   },
+   {
+    "time": 20.0,
+    "text": "Healthbosstv",
+    "confidence": 0.999
+   },
+   {
+    "time": 22.0,
+    "text": "Dietry Practice of Hiroshim:/Nagasaki Atomic Bomb Survivor",
+    "confidence": 0.516
+   },
+   {
+    "time": 22.0,
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "confidence": 0.842
+   },
+   {
+    "time": 22.0,
+    "text": "Introduction",
+    "confidence": 0.7
+   },
+   {
+    "time": 22.0,
+    "text": "August of 1945. the first atomic bomb was dropped in Hiroshima and u",
+    "confidence": 0.565
+   },
+   {
+    "time": 22.0,
+    "text": "second",
+    "confidence": 0.999
+   },
+   {
+    "time": 22.0,
+    "text": "leadingto Japan",
+    "confidence": 0.555
+   },
+   {
+    "time": 22.0,
+    "text": "unconditional surrender and the end of the Pacil",
+    "confidence": 0.555
+   },
+   {
+    "time": 22.0,
+    "text": "War between",
+    "confidence": 0.616
+   },
+   {
+    "time": 22.0,
+    "text": "Japan:",
+    "confidence": 0.529
+   },
+   {
+    "time": 22.0,
+    "text": "Although most of the people within",
+    "confidence": 0.841
+   },
+   {
+    "time": 22.0,
+    "text": "two kilometer radius from the hypocenter diec",
+    "confidence": 0.646
+   },
+   {
+    "time": 22.0,
+    "text": "atomic bomb blast and radiation",
+    "confidence": 0.988
+   },
+   {
+    "time": 22.0,
+    "text": "indirect exposure",
+    "confidence": 0.772
+   },
+   {
+    "time": 22.0,
+    "text": "some did not suffer from",
+    "confidence": 0.97
+   },
+   {
+    "time": 22.0,
+    "text": "related to the radiation and are still alive at present:",
+    "confidence": 0.709
+   },
+   {
+    "time": 22.0,
+    "text": "did these people survive while others did not?\"",
+    "confidence": 0.899
+   },
+   {
+    "time": 22.0,
+    "text": "Bombing:",
+    "confidence": 0.996
+   },
+   {
+    "time": 22.0,
+    "text": "Nagasaki at the time Of the bombing",
+    "confidence": 0.73
+   },
+   {
+    "time": 22.0,
+    "text": "medical doctor In",
+    "confidence": 0.967
+   },
+   {
+    "time": 22.0,
+    "text": "served t0 help the injured:",
+    "confidence": 0.636
+   },
+   {
+    "time": 22.0,
+    "text": "He observed that these survivon had",
+    "confidence": 0.83
+   },
+   {
+    "time": 22.0,
+    "text": "common diet pra",
+    "confidence": 0.946
+   },
+   {
+    "time": 22.0,
+    "text": "Dr; Akizuki unfortunately passe",
+    "confidence": 0.682
+   },
+   {
+    "time": 22.0,
+    "text": "traditional Japanese diet enriched with Miso",
+    "confidence": 0.661
+   },
+   {
+    "time": 22.0,
+    "text": "2005",
+    "confidence": 0.954
+   },
+   {
+    "time": 22.0,
+    "text": "was able t0 interview Mrs",
+    "confidence": 0.888
+   },
+   {
+    "time": 22.0,
+    "text": "but",
+    "confidence": 0.731
+   },
+   {
+    "time": 22.0,
+    "text": "was in Japan in the summer of 2006",
+    "confidence": 0.916
+   },
+   {
+    "time": 22.0,
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "confidence": 0.582
+   },
+   {
+    "time": 22.0,
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "confidence": 0.616
+   },
+   {
+    "time": 22.0,
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "confidence": 0.622
+   },
+   {
+    "time": 22.0,
+    "text": "lom",
+    "confidence": 0.834
+   },
+   {
+    "time": 22.0,
+    "text": "tragic events",
+    "confidence": 0.789
+   },
+   {
+    "time": 22.0,
+    "text": "but we can (UM them into valuable lessons that can",
+    "confidence": 0.581
+   },
+   {
+    "time": 22.0,
+    "text": "eventually help us find ways t0 prevent and",
+    "confidence": 0.672
+   },
+   {
+    "time": 22.0,
+    "text": "or control cancer.",
+    "confidence": 0.715
+   },
+   {
+    "time": 22.0,
+    "text": "My hope",
+    "confidence": 0.84
+   },
+   {
+    "time": 22.0,
+    "text": "shed light on the importance of diet t0 the human body",
+    "confidence": 0.587
+   },
+   {
+    "time": 22.0,
+    "text": "it t0 today",
+    "confidence": 0.847
+   },
+   {
+    "time": 22.0,
+    "text": "medicine.",
+    "confidence": 0.933
+   },
+   {
+    "time": 22.0,
+    "text": "II. Previous Literatures",
+    "confidence": 0.58
+   },
+   {
+    "time": 22.0,
+    "text": "The nature of the problem to be examined",
+    "confidence": 0.671
+   },
+   {
+    "time": 22.0,
+    "text": "Healthbosstv",
+    "confidence": 0.999
+   },
+   {
+    "time": 24.0,
+    "text": "Dietry Practice of Hiroshim:/Nagasaki Atomic Bomb Survivor",
+    "confidence": 0.516
+   },
+   {
+    "time": 24.0,
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "confidence": 0.842
+   },
+   {
+    "time": 24.0,
+    "text": "Introduction",
+    "confidence": 0.7
+   },
+   {
+    "time": 24.0,
+    "text": "August of 1945. the first atomic bomb was dropped in Hiroshima and u",
+    "confidence": 0.573
+   },
+   {
+    "time": 24.0,
+    "text": "second",
+    "confidence": 0.999
+   },
+   {
+    "time": 24.0,
+    "text": "leadingto Japan",
+    "confidence": 0.566
+   },
+   {
+    "time": 24.0,
+    "text": "unconditional surrender and the end of the Pacil",
+    "confidence": 0.555
+   },
+   {
+    "time": 24.0,
+    "text": "War between",
+    "confidence": 0.616
+   },
+   {
+    "time": 24.0,
+    "text": "Japan:",
+    "confidence": 0.529
+   },
+   {
+    "time": 24.0,
+    "text": "Although most of the people within",
+    "confidence": 0.844
+   },
+   {
+    "time": 24.0,
+    "text": "two kilometer radius from the hypocenter diec",
+    "confidence": 0.646
+   },
+   {
+    "time": 24.0,
+    "text": "atomic bomb blast and radiation",
+    "confidence": 0.988
+   },
+   {
+    "time": 24.0,
+    "text": "indirect exposure",
+    "confidence": 0.772
+   },
+   {
+    "time": 24.0,
+    "text": "some did not suffer from",
+    "confidence": 0.97
+   },
+   {
+    "time": 24.0,
+    "text": "related to the radiation and are still alive at present:",
+    "confidence": 0.709
+   },
+   {
+    "time": 24.0,
+    "text": "did these people survive while others did not?\"",
+    "confidence": 0.899
+   },
+   {
+    "time": 24.0,
+    "text": "[Hiroshima Atomie Bombing:",
+    "confidence": 0.714
+   },
+   {
+    "time": 24.0,
+    "text": "medical doctor in Nagasaki at the time Of the bombing",
+    "confidence": 0.647
+   },
+   {
+    "time": 24.0,
+    "text": "served t0 help the injured:",
+    "confidence": 0.595
+   },
+   {
+    "time": 24.0,
+    "text": "He observed that these survivon had",
+    "confidence": 0.83
+   },
+   {
+    "time": 24.0,
+    "text": "common diet pra",
+    "confidence": 0.946
+   },
+   {
+    "time": 24.0,
+    "text": "traditional Japanese diet enriched with Miso",
+    "confidence": 0.999
+   },
+   {
+    "time": 24.0,
+    "text": "Dr; Akizuki unfortunately passe",
+    "confidence": 0.682
+   },
+   {
+    "time": 24.0,
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "confidence": 0.642
+   },
+   {
+    "time": 24.0,
+    "text": "Was in Japan in the summer of 2006",
+    "confidence": 0.845
+   },
+   {
+    "time": 24.0,
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "confidence": 0.616
+   },
+   {
+    "time": 24.0,
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "confidence": 0.622
+   },
+   {
+    "time": 24.0,
+    "text": "lom",
+    "confidence": 0.834
+   },
+   {
+    "time": 24.0,
+    "text": "tragic events",
+    "confidence": 0.789
+   },
+   {
+    "time": 24.0,
+    "text": "but we can (UM them into valuable lessons that can",
+    "confidence": 0.581
+   },
+   {
+    "time": 24.0,
+    "text": "eventually help us find ways t0 prevent and",
+    "confidence": 0.672
+   },
+   {
+    "time": 24.0,
+    "text": "or control cancer.",
+    "confidence": 0.715
+   },
+   {
+    "time": 24.0,
+    "text": "My hope",
+    "confidence": 0.84
+   },
+   {
+    "time": 24.0,
+    "text": "shed light on the importance of diet t0 the human body",
+    "confidence": 0.587
+   },
+   {
+    "time": 24.0,
+    "text": "medicine.",
+    "confidence": 0.808
+   },
+   {
+    "time": 24.0,
+    "text": "it t0 today",
+    "confidence": 0.847
+   },
+   {
+    "time": 24.0,
+    "text": "II. Previous Literatures",
+    "confidence": 0.58
+   },
+   {
+    "time": 24.0,
+    "text": "The nature of the problem to be examined",
+    "confidence": 0.671
+   },
+   {
+    "time": 24.0,
+    "text": "Healthbosstv",
+    "confidence": 0.999
+   },
+   {
+    "time": 26.0,
+    "text": "Dietry Practice of Hiroshim:/Nagasaki Atomic Bomb Survivor",
+    "confidence": 0.516
+   },
+   {
+    "time": 26.0,
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "confidence": 0.841
+   },
+   {
+    "time": 26.0,
+    "text": "Introduction",
+    "confidence": 0.7
+   },
+   {
+    "time": 26.0,
+    "text": "August of 1945. the first atomic bomb was dropped in Hiroshima and u",
+    "confidence": 0.573
+   },
+   {
+    "time": 26.0,
+    "text": "second",
+    "confidence": 0.999
+   },
+   {
+    "time": 26.0,
+    "text": "leadingto Japan",
+    "confidence": 0.563
+   },
+   {
+    "time": 26.0,
+    "text": "unconditional surrender and the end of the Pacil",
+    "confidence": 0.558
+   },
+   {
+    "time": 26.0,
+    "text": "War between",
+    "confidence": 0.616
+   },
+   {
+    "time": 26.0,
+    "text": "Japan:",
+    "confidence": 0.529
+   },
+   {
+    "time": 26.0,
+    "text": "Although most of the people within",
+    "confidence": 0.844
+   },
+   {
+    "time": 26.0,
+    "text": "two kilometer radius from the hypocenter diec",
+    "confidence": 0.646
+   },
+   {
+    "time": 26.0,
+    "text": "atomic bomb blast and radiation",
+    "confidence": 0.988
+   },
+   {
+    "time": 26.0,
+    "text": "indirect exposure",
+    "confidence": 0.772
+   },
+   {
+    "time": 26.0,
+    "text": "some did not suffer from",
+    "confidence": 0.97
+   },
+   {
+    "time": 26.0,
+    "text": "related to the radiation and are still alive at present:",
+    "confidence": 0.709
+   },
+   {
+    "time": 26.0,
+    "text": "did these people survive while others did not?\"",
+    "confidence": 0.782
+   },
+   {
+    "time": 26.0,
+    "text": "[Hiroshima Atomie Bombing:",
+    "confidence": 0.714
+   },
+   {
+    "time": 26.0,
+    "text": "Nagasaki at the time Of the bombing",
+    "confidence": 0.73
+   },
+   {
+    "time": 26.0,
+    "text": "medical doctor In",
+    "confidence": 0.967
+   },
+   {
+    "time": 26.0,
+    "text": "served t0 help the injured:",
+    "confidence": 0.595
+   },
+   {
+    "time": 26.0,
+    "text": "He observed that these survivon had",
+    "confidence": 0.83
+   },
+   {
+    "time": 26.0,
+    "text": "common diet pra",
+    "confidence": 0.946
+   },
+   {
+    "time": 26.0,
+    "text": "traditional Japanese diet enriched with Miso",
+    "confidence": 0.874
+   },
+   {
+    "time": 26.0,
+    "text": "Dr; Akizuki unfortunately passe",
+    "confidence": 0.682
+   },
+   {
+    "time": 26.0,
+    "text": "well as other atomic bomb survil",
+    "confidence": 0.683
+   },
+   {
+    "time": 26.0,
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "confidence": 0.694
+   },
+   {
+    "time": 26.0,
+    "text": "Was in Japan in the summer of 2006",
+    "confidence": 0.678
+   },
+   {
+    "time": 26.0,
+    "text": "the interview data, this study will examine atomic bomb survivors\" dietary history",
+    "confidence": 0.689
+   },
+   {
+    "time": 26.0,
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "confidence": 0.616
+   },
+   {
+    "time": 26.0,
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "confidence": 0.622
+   },
+   {
+    "time": 26.0,
+    "text": "lom",
+    "confidence": 0.834
+   },
+   {
+    "time": 26.0,
+    "text": "tragic events",
+    "confidence": 0.789
+   },
+   {
+    "time": 26.0,
+    "text": "but we can (UM them into valuable lessons that can",
+    "confidence": 0.581
+   },
+   {
+    "time": 26.0,
+    "text": "eventually help us find ways t0 prevent and",
+    "confidence": 0.672
+   },
+   {
+    "time": 26.0,
+    "text": "or control cancer.",
+    "confidence": 0.715
+   },
+   {
+    "time": 26.0,
+    "text": "My hope",
+    "confidence": 0.84
+   },
+   {
+    "time": 26.0,
+    "text": "shed light on the importance of diet t0 the human body",
+    "confidence": 0.587
+   },
+   {
+    "time": 26.0,
+    "text": "medicine.",
+    "confidence": 0.808
+   },
+   {
+    "time": 26.0,
+    "text": "it t0 today",
+    "confidence": 0.847
+   },
+   {
+    "time": 26.0,
+    "text": "II. Previous Literatures",
+    "confidence": 0.581
+   },
+   {
+    "time": 26.0,
+    "text": "The nature of the problem to be examined",
+    "confidence": 0.671
+   },
+   {
+    "time": 26.0,
+    "text": "Healthbosstv",
+    "confidence": 0.999
+   },
+   {
+    "time": 28.0,
+    "text": "Dietary Practice of Hiroshim:/Nagasaki Atomic Bomb Survivor",
+    "confidence": 0.59
+   },
+   {
+    "time": 28.0,
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "confidence": 0.781
+   },
+   {
+    "time": 28.0,
+    "text": "Imtroduction",
+    "confidence": 0.514
+   },
+   {
+    "time": 28.0,
+    "text": "August of 1945. the first atomic bomb was dropped in Hiroshima and U",
+    "confidence": 0.561
+   },
+   {
+    "time": 28.0,
+    "text": "second",
+    "confidence": 0.998
+   },
+   {
+    "time": 28.0,
+    "text": "leadig toJapan",
+    "confidence": 0.585
+   },
+   {
+    "time": 28.0,
+    "text": "unconditional surrender and the end of the Pacil",
+    "confidence": 0.546
+   },
+   {
+    "time": 28.0,
+    "text": "War belween",
+    "confidence": 0.604
+   },
+   {
+    "time": 28.0,
+    "text": "Japan:",
+    "confidence": 0.527
+   },
+   {
+    "time": 28.0,
+    "text": "Although most of the people within",
+    "confidence": 0.873
+   },
+   {
+    "time": 28.0,
+    "text": "two kilometer radius from the hypocenter diec",
+    "confidence": 0.501
+   },
+   {
+    "time": 28.0,
+    "text": "atomic bomb blast and radiation",
+    "confidence": 0.989
+   },
+   {
+    "time": 28.0,
+    "text": "indirect exposure",
+    "confidence": 0.99
+   },
+   {
+    "time": 28.0,
+    "text": "some did not suffer from",
+    "confidence": 0.972
+   },
+   {
+    "time": 28.0,
+    "text": "related to the radiation and are still alive at present:",
+    "confidence": 0.716
+   },
+   {
+    "time": 28.0,
+    "text": "did these people survive while others did not?\"",
+    "confidence": 0.921
+   },
+   {
+    "time": 28.0,
+    "text": "[Hiroshima Atomie Bombing:",
+    "confidence": 0.727
+   },
+   {
+    "time": 28.0,
+    "text": "Nagasaki at the time Of the bombing",
+    "confidence": 0.706
+   },
+   {
+    "time": 28.0,
+    "text": "The late Dr. Akizuki;",
+    "confidence": 0.51
+   },
+   {
+    "time": 28.0,
+    "text": "medical doctor In",
+    "confidence": 0.972
+   },
+   {
+    "time": 28.0,
+    "text": "served t0 help the injured:",
+    "confidence": 0.598
+   },
+   {
+    "time": 28.0,
+    "text": "He observed that these survivon had",
+    "confidence": 0.799
+   },
+   {
+    "time": 28.0,
+    "text": "common diet pra",
+    "confidence": 0.554
+   },
+   {
+    "time": 28.0,
+    "text": "traditional Japanese diet enriched with Miso",
+    "confidence": 0.826
+   },
+   {
+    "time": 28.0,
+    "text": "Dr; Akizuki unfortunately pass",
+    "confidence": 0.835
+   },
+   {
+    "time": 28.0,
+    "text": "well as other atomic bomb survil",
+    "confidence": 0.636
+   },
+   {
+    "time": 28.0,
+    "text": "was in Japan in the summer of 2006",
+    "confidence": 0.926
+   },
+   {
+    "time": 28.0,
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "confidence": 0.694
+   },
+   {
+    "time": 28.0,
+    "text": "the interview data, this study will examine atomic bomb survivors\" dietary history",
+    "confidence": 0.599
+   },
+   {
+    "time": 28.0,
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "confidence": 0.675
+   },
+   {
+    "time": 28.0,
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "confidence": 0.559
+   },
+   {
+    "time": 28.0,
+    "text": "lom",
+    "confidence": 0.756
+   },
+   {
+    "time": 28.0,
+    "text": "tragic events",
+    "confidence": 0.813
+   },
+   {
+    "time": 28.0,
+    "text": "but we can (UM them into valuable lessons that can",
+    "confidence": 0.594
+   },
+   {
+    "time": 28.0,
+    "text": "eventually help us find ways t0 prevent and",
+    "confidence": 0.673
+   },
+   {
+    "time": 28.0,
+    "text": "or control cancer.",
+    "confidence": 0.706
+   },
+   {
+    "time": 28.0,
+    "text": "My hope",
+    "confidence": 0.598
+   },
+   {
+    "time": 28.0,
+    "text": "it t0 today",
+    "confidence": 0.876
+   },
+   {
+    "time": 28.0,
+    "text": "medicine.",
+    "confidence": 0.957
+   },
+   {
+    "time": 28.0,
+    "text": "II. Previous Literatures",
+    "confidence": 0.567
+   },
+   {
+    "time": 28.0,
+    "text": "The nature of the problem to be examined",
+    "confidence": 0.693
+   },
+   {
+    "time": 28.0,
+    "text": "Healthbosstv",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.0,
+    "text": "Dietary Practice of Hiroshim:/Nagasaki Atomic Bomb Survivor",
+    "confidence": 0.59
+   },
+   {
+    "time": 30.0,
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "confidence": 0.779
+   },
+   {
+    "time": 30.0,
+    "text": "Imtroduction",
+    "confidence": 0.514
+   },
+   {
+    "time": 30.0,
+    "text": "August of 1945. the first atomic bomb was dropped in Hiroshima and U",
+    "confidence": 0.556
+   },
+   {
+    "time": 30.0,
+    "text": "second",
+    "confidence": 0.998
+   },
+   {
+    "time": 30.0,
+    "text": "leadig toJapan",
+    "confidence": 0.722
+   },
+   {
+    "time": 30.0,
+    "text": "unconditional surrender and the end of the Pacil",
+    "confidence": 0.546
+   },
+   {
+    "time": 30.0,
+    "text": "War belween",
+    "confidence": 0.607
+   },
+   {
+    "time": 30.0,
+    "text": "Japan:",
+    "confidence": 0.527
+   },
+   {
+    "time": 30.0,
+    "text": "Although most of the people within",
+    "confidence": 0.873
+   },
+   {
+    "time": 30.0,
+    "text": "two kilometer radius from the hypocenter diec",
+    "confidence": 0.501
+   },
+   {
+    "time": 30.0,
+    "text": "atomic bomb blast and radiation",
+    "confidence": 0.989
+   },
+   {
+    "time": 30.0,
+    "text": "indirect exposure",
+    "confidence": 0.99
+   },
+   {
+    "time": 30.0,
+    "text": "some did not suffer from",
+    "confidence": 0.972
+   },
+   {
+    "time": 30.0,
+    "text": "related to the radiation and are still alive at present:",
+    "confidence": 0.716
+   },
+   {
+    "time": 30.0,
+    "text": "did these people survive while others did not?\"",
+    "confidence": 0.921
+   },
+   {
+    "time": 30.0,
+    "text": "[Hiroshima Atomie Bombing:",
+    "confidence": 0.726
+   },
+   {
+    "time": 30.0,
+    "text": "Nagasaki at the time Of the bombing",
+    "confidence": 0.706
+   },
+   {
+    "time": 30.0,
+    "text": "The late Dr. Akizuki;",
+    "confidence": 0.51
+   },
+   {
+    "time": 30.0,
+    "text": "medical doctor In",
+    "confidence": 0.972
+   },
+   {
+    "time": 30.0,
+    "text": "served t0 help the injured:",
+    "confidence": 0.587
+   },
+   {
+    "time": 30.0,
+    "text": "He observed that these survivon had",
+    "confidence": 0.799
+   },
+   {
+    "time": 30.0,
+    "text": "common diet pra",
+    "confidence": 0.554
+   },
+   {
+    "time": 30.0,
+    "text": "Dr; Akizuki unfortunately pass",
+    "confidence": 0.834
+   },
+   {
+    "time": 30.0,
+    "text": "traditional Japanese diet enriched with Miso",
+    "confidence": 0.741
+   },
+   {
+    "time": 30.0,
+    "text": "2005",
+    "confidence": 0.992
+   },
+   {
+    "time": 30.0,
+    "text": "Akizuki;as well as other atomic bomb survil",
+    "confidence": 0.527
+   },
+   {
+    "time": 30.0,
+    "text": "but",
+    "confidence": 0.91
+   },
+   {
+    "time": 30.0,
+    "text": "was in Japan in the summer of 2006",
+    "confidence": 0.925
+   },
+   {
+    "time": 30.0,
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "confidence": 0.696
+   },
+   {
+    "time": 30.0,
+    "text": "the interview data, this study will examine atomic bomb survivors\" dietary history",
+    "confidence": 0.594
+   },
+   {
+    "time": 30.0,
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "confidence": 0.674
+   },
+   {
+    "time": 30.0,
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "confidence": 0.559
+   },
+   {
+    "time": 30.0,
+    "text": "lom",
+    "confidence": 0.756
+   },
+   {
+    "time": 30.0,
+    "text": "tragic events",
+    "confidence": 0.813
+   },
+   {
+    "time": 30.0,
+    "text": "but we can (UM them into valuable lessons that can",
+    "confidence": 0.594
+   },
+   {
+    "time": 30.0,
+    "text": "eventually help us find ways t0 prevent and",
+    "confidence": 0.673
+   },
+   {
+    "time": 30.0,
+    "text": "or control cancer.",
+    "confidence": 0.706
+   },
+   {
+    "time": 30.0,
+    "text": "My hope",
+    "confidence": 0.598
+   },
+   {
+    "time": 30.0,
+    "text": "it t0 today",
+    "confidence": 0.876
+   },
+   {
+    "time": 30.0,
+    "text": "medicine.",
+    "confidence": 0.957
+   },
+   {
+    "time": 30.0,
+    "text": "II. Previous Literatures",
+    "confidence": 0.567
+   },
+   {
+    "time": 30.0,
+    "text": "The nature of the problem to be examined",
+    "confidence": 0.693
+   },
+   {
+    "time": 30.0,
+    "text": "Healthbosstv",
+    "confidence": 0.999
+   },
+   {
+    "time": 32.0,
+    "text": "Dietary Practice of Hiroshim:/Nagasaki Atomic Bomb Survivor",
+    "confidence": 0.59
+   },
+   {
+    "time": 32.0,
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "confidence": 0.779
+   },
+   {
+    "time": 32.0,
+    "text": "Imtroduction",
+    "confidence": 0.514
+   },
+   {
+    "time": 32.0,
+    "text": "August of 1945. the first atomic bomb was dropped in Hiroshima and U",
+    "confidence": 0.556
+   },
+   {
+    "time": 32.0,
+    "text": "second",
+    "confidence": 0.998
+   },
+   {
+    "time": 32.0,
+    "text": "leadig toJapan",
+    "confidence": 0.722
+   },
+   {
+    "time": 32.0,
+    "text": "unconditional surrender and the end of the Pacil",
+    "confidence": 0.546
+   },
+   {
+    "time": 32.0,
+    "text": "War belween",
+    "confidence": 0.607
+   },
+   {
+    "time": 32.0,
+    "text": "Japan:",
+    "confidence": 0.632
+   },
+   {
+    "time": 32.0,
+    "text": "Although most of the people within",
+    "confidence": 0.873
+   },
+   {
+    "time": 32.0,
+    "text": "two kilometer radius from the hypocenter diec",
+    "confidence": 0.501
+   },
+   {
+    "time": 32.0,
+    "text": "atomic bomb blast and radiation",
+    "confidence": 0.989
+   },
+   {
+    "time": 32.0,
+    "text": "indirect exposure",
+    "confidence": 0.99
+   },
+   {
+    "time": 32.0,
+    "text": "some did not suffer from",
+    "confidence": 0.972
+   },
+   {
+    "time": 32.0,
+    "text": "related to the radiation and are still alive at present:",
+    "confidence": 0.716
+   },
+   {
+    "time": 32.0,
+    "text": "did these people survive while others did not?\"",
+    "confidence": 0.921
+   },
+   {
+    "time": 32.0,
+    "text": "[Hiroshima Atomie Bombing:",
+    "confidence": 0.726
+   },
+   {
+    "time": 32.0,
+    "text": "Nagasaki at the time Of the bombing",
+    "confidence": 0.706
+   },
+   {
+    "time": 32.0,
+    "text": "The late Dr. Akizuki;",
+    "confidence": 0.51
+   },
+   {
+    "time": 32.0,
+    "text": "medical doctor In",
+    "confidence": 0.972
+   },
+   {
+    "time": 32.0,
+    "text": "served t0 help the injured:",
+    "confidence": 0.587
+   },
+   {
+    "time": 32.0,
+    "text": "He observed that these survivon had",
+    "confidence": 0.799
+   },
+   {
+    "time": 32.0,
+    "text": "common diet pra",
+    "confidence": 0.554
+   },
+   {
+    "time": 32.0,
+    "text": "Dr; Akizuki unfortunately pass",
+    "confidence": 0.834
+   },
+   {
+    "time": 32.0,
+    "text": "traditional Japanese diet enriched with Miso",
+    "confidence": 0.735
+   },
+   {
+    "time": 32.0,
+    "text": "2005",
+    "confidence": 0.992
+   },
+   {
+    "time": 32.0,
+    "text": "Akizuki;as well as other atomic bomb survil",
+    "confidence": 0.527
+   },
+   {
+    "time": 32.0,
+    "text": "but",
+    "confidence": 0.911
+   },
+   {
+    "time": 32.0,
+    "text": "was in Japan in the summer of 2006",
+    "confidence": 0.925
+   },
+   {
+    "time": 32.0,
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "confidence": 0.59
+   },
+   {
+    "time": 32.0,
+    "text": "the interview data, this study will examine atomic bomb survivors\" dietary history",
+    "confidence": 0.594
+   },
+   {
+    "time": 32.0,
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "confidence": 0.674
+   },
+   {
+    "time": 32.0,
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "confidence": 0.559
+   },
+   {
+    "time": 32.0,
+    "text": "lom",
+    "confidence": 0.756
+   },
+   {
+    "time": 32.0,
+    "text": "tragic events",
+    "confidence": 0.813
+   },
+   {
+    "time": 32.0,
+    "text": "but we can (UM them into valuable lessons that can",
+    "confidence": 0.594
+   },
+   {
+    "time": 32.0,
+    "text": "eventually help us find ways t0 prevent and",
+    "confidence": 0.673
+   },
+   {
+    "time": 32.0,
+    "text": "or control cancer.",
+    "confidence": 0.706
+   },
+   {
+    "time": 32.0,
+    "text": "My hope",
+    "confidence": 0.598
+   },
+   {
+    "time": 32.0,
+    "text": "it t0 today",
+    "confidence": 0.876
+   },
+   {
+    "time": 32.0,
+    "text": "medicine.",
+    "confidence": 0.957
+   },
+   {
+    "time": 32.0,
+    "text": "II. Previous Literatures",
+    "confidence": 0.567
+   },
+   {
+    "time": 32.0,
+    "text": "The nature of the problem to be examined",
+    "confidence": 0.693
+   },
+   {
+    "time": 32.0,
+    "text": "Healthbosstv",
+    "confidence": 0.999
+   },
+   {
+    "time": 34.0,
+    "text": "collahoralors",
+    "confidence": 0.647
+   },
+   {
+    "time": 34.0,
+    "text": "Aulln",
+    "confidence": 0.503
+   },
+   {
+    "time": 34.0,
+    "text": "Acuton",
+    "confidence": 0.583
+   },
+   {
+    "time": 34.0,
+    "text": "ml",
+    "confidence": 0.911
+   },
+   {
+    "time": 34.0,
+    "text": "Sunival. Cypt Lengths",
+    "confidence": 0.519
+   },
+   {
+    "time": 34.0,
+    "text": "Healthbosstv",
+    "confidence": 0.998
+   },
+   {
+    "time": 36.0,
+    "text": "Healthbosstv",
+    "confidence": 0.998
+   },
+   {
+    "time": 38.0,
+    "text": "collaboralors",
+    "confidence": 0.541
+   },
+   {
+    "time": 38.0,
+    "text": "Miso is a fermented bean",
+    "confidence": 0.985
+   },
+   {
+    "time": 38.0,
+    "text": "paste",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "Cnm",
+    "confidence": 0.586
+   },
+   {
+    "time": 38.0,
+    "text": "~Spilie",
+    "confidence": 0.789
+   },
+   {
+    "time": 38.0,
+    "text": "Healthbosstv",
+    "confidence": 0.998
+   },
+   {
+    "time": 40.0,
+    "text": "collaboralors",
+    "confidence": 0.514
+   },
+   {
+    "time": 40.0,
+    "text": "the intake of misoand dieay",
+    "confidence": 0.567
+   },
+   {
+    "time": 40.0,
+    "text": "chan",
+    "confidence": 0.992
+   },
+   {
+    "time": 40.0,
+    "text": "Miso is a fermented bean",
+    "confidence": 0.932
+   },
+   {
+    "time": 40.0,
+    "text": "paste",
+    "confidence": 0.736
+   },
+   {
+    "time": 40.0,
+    "text": "Healthbosstv",
+    "confidence": 0.998
+   },
+   {
+    "time": 42.0,
+    "text": "collaboralors",
+    "confidence": 0.519
+   },
+   {
+    "time": 42.0,
+    "text": "the intake of misoand dieas",
+    "confidence": 0.51
+   },
+   {
+    "time": 42.0,
+    "text": "controll",
+    "confidence": 0.625
+   },
+   {
+    "time": 42.0,
+    "text": "Aullon",
+    "confidence": 0.601
+   },
+   {
+    "time": 42.0,
+    "text": "Dath",
+    "confidence": 0.713
+   },
+   {
+    "time": 42.0,
+    "text": "W B ' R B",
+    "confidence": 0.525
+   },
+   {
+    "time": 42.0,
+    "text": "Healthbosstv",
+    "confidence": 0.998
+   },
+   {
+    "time": 44.0,
+    "text": "P",
+    "confidence": 0.595
+   },
+   {
+    "time": 44.0,
+    "text": "Miso is a fermented soybean paste made from",
+    "confidence": 0.952
+   },
+   {
+    "time": 44.0,
+    "text": "cuisine asa soup.",
+    "confidence": 0.746
+   },
+   {
+    "time": 44.0,
+    "text": "study from Hiroshima University has",
+    "confidence": 0.91
+   },
+   {
+    "time": 44.0,
+    "text": "demonstrated the potential for miso to prevent",
+    "confidence": 0.977
+   },
+   {
+    "time": 44.0,
+    "text": "adiation poisoning, but not treat it afterthe",
+    "confidence": 0.656
+   },
+   {
+    "time": 44.0,
+    "text": "fact",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "The protective qualities of miso seem to",
+    "confidence": 0.798
+   },
+   {
+    "time": 44.0,
+    "text": "correlato",
+    "confidence": 0.654
+   },
+   {
+    "time": 44.0,
+    "text": "longer;",
+    "confidence": 0.94
+   },
+   {
+    "time": 44.0,
+    "text": "iso that's been",
+    "confidence": 0.959
+   },
+   {
+    "time": 44.0,
+    "text": "aged",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "boiling water; which could",
+    "confidence": 0.978
+   },
+   {
+    "time": 44.0,
+    "text": "an",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "ki",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "ures.",
+    "confidence": 0.862
+   },
+   {
+    "time": 44.0,
+    "text": "nnst",
+    "confidence": 0.64
+   },
+   {
+    "time": 44.0,
+    "text": "ing a W",
+    "confidence": 0.949
+   },
+   {
+    "time": 44.0,
+    "text": "1945 wl",
+    "confidence": 0.693
+   },
+   {
+    "time": 44.0,
+    "text": "Kedical team",
+    "confidence": 0.985
+   },
+   {
+    "time": 44.0,
+    "text": "sickness after",
+    "confidence": 0.999
+   },
+   {
+    "time": 44.0,
+    "text": "no",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "ed",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "ation",
+    "confidence": 0.906
+   },
+   {
+    "time": 44.0,
+    "text": "canok",
+    "confidence": 0.564
+   },
+   {
+    "time": 44.0,
+    "text": "ving",
+    "confidence": 0.539
+   },
+   {
+    "time": 44.0,
+    "text": "but it takes",
+    "confidence": 0.744
+   },
+   {
+    "time": 44.0,
+    "text": "that you",
+    "confidence": 0.968
+   },
+   {
+    "time": 44.0,
+    "text": "Healthbosstv",
+    "confidence": 0.999
+   },
+   {
+    "time": 46.0,
+    "text": "P",
+    "confidence": 0.601
+   },
+   {
+    "time": 46.0,
+    "text": "Miso is a fermented soybean paste made from",
+    "confidence": 0.954
+   },
+   {
+    "time": 46.0,
+    "text": "cuisine asa soup.",
+    "confidence": 0.682
+   },
+   {
+    "time": 46.0,
+    "text": "study from Hiroshima University has",
+    "confidence": 0.887
+   },
+   {
+    "time": 46.0,
+    "text": "demonstrated the potential for miso to prevent",
+    "confidence": 0.918
+   },
+   {
+    "time": 46.0,
+    "text": "fact",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "The protective qualities of miso seem to",
+    "confidence": 0.969
+   },
+   {
+    "time": 46.0,
+    "text": "correlat",
+    "confidence": 0.94
+   },
+   {
+    "time": 46.0,
+    "text": "fermentation, so opt for",
+    "confidence": 0.634
+   },
+   {
+    "time": 46.0,
+    "text": "niso that's been aged longer;",
+    "confidence": 0.869
+   },
+   {
+    "time": 46.0,
+    "text": "unpa",
+    "confidence": 0.915
+   },
+   {
+    "time": 46.0,
+    "text": "boiling",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "water; which could",
+    "confidence": 0.931
+   },
+   {
+    "time": 46.0,
+    "text": "an",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "kil",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "ures.",
+    "confidence": 0.86
+   },
+   {
+    "time": 46.0,
+    "text": "ng a ward agai' st",
+    "confidence": 0.751
+   },
+   {
+    "time": 46.0,
+    "text": "945",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "m dica' team",
+    "confidence": 0.793
+   },
+   {
+    "time": 46.0,
+    "text": "SS after",
+    "confidence": 0.954
+   },
+   {
+    "time": 46.0,
+    "text": "no",
+    "confidence": 0.76
+   },
+   {
+    "time": 46.0,
+    "text": "iery",
+    "confidence": 0.508
+   },
+   {
+    "time": 46.0,
+    "text": "d abod",
+    "confidence": 0.722
+   },
+   {
+    "time": 46.0,
+    "text": "nan due",
+    "confidence": 0.678
+   },
+   {
+    "time": 46.0,
+    "text": "ma mel",
+    "confidence": 0.994
+   },
+   {
+    "time": 46.0,
+    "text": "ou can",
+    "confidence": 0.829
+   },
+   {
+    "time": 46.0,
+    "text": "wing",
+    "confidence": 0.994
+   },
+   {
+    "time": 46.0,
+    "text": "but it takes",
+    "confidence": 0.778
+   },
+   {
+    "time": 46.0,
+    "text": "that you",
+    "confidence": 0.975
+   },
+   {
+    "time": 46.0,
+    "text": "Healthbosstv",
+    "confidence": 0.999
+   },
+   {
+    "time": 48.0,
+    "text": "P",
+    "confidence": 0.601
+   },
+   {
+    "time": 48.0,
+    "text": "Miso is a fermented soybean paste made from",
+    "confidence": 0.919
+   },
+   {
+    "time": 48.0,
+    "text": "cuisine asa soup.",
+    "confidence": 0.796
+   },
+   {
+    "time": 48.0,
+    "text": "study from Hiroshima University has",
+    "confidence": 0.797
+   },
+   {
+    "time": 48.0,
+    "text": "demonstrated the potential for miso to prevent",
+    "confidence": 0.912
+   },
+   {
+    "time": 48.0,
+    "text": "fac",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "The pro",
+    "confidence": 0.989
+   },
+   {
+    "time": 48.0,
+    "text": "lities of miso seem to",
+    "confidence": 0.998
+   },
+   {
+    "time": 48.0,
+    "text": "nentation, So opt for",
+    "confidence": 0.517
+   },
+   {
+    "time": 48.0,
+    "text": "cor",
+    "confidence": 0.99
+   },
+   {
+    "time": 48.0,
+    "text": "that'$ been aged longer;",
+    "confidence": 0.669
+   },
+   {
+    "time": 48.0,
+    "text": "oiling water; which could",
+    "confidence": 0.968
+   },
+   {
+    "time": 48.0,
+    "text": "res.",
+    "confidence": 0.762
+   },
+   {
+    "time": 48.0,
+    "text": "ng a ward",
+    "confidence": 0.768
+   },
+   {
+    "time": 48.0,
+    "text": "agair",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "st",
+    "confidence": 0.997
+   },
+   {
+    "time": 48.0,
+    "text": "945",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "medica' team",
+    "confidence": 0.983
+   },
+   {
+    "time": 48.0,
+    "text": "SS after",
+    "confidence": 0.973
+   },
+   {
+    "time": 48.0,
+    "text": "no",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "very",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "ed abou",
+    "confidence": 0.815
+   },
+   {
+    "time": 48.0,
+    "text": "due",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "me",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "You",
+    "confidence": 0.963
+   },
+   {
+    "time": 48.0,
+    "text": "but it takes",
+    "confidence": 0.801
+   },
+   {
+    "time": 48.0,
+    "text": "that you",
+    "confidence": 0.976
+   },
+   {
+    "time": 48.0,
+    "text": "Healthbosstv",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "P",
+    "confidence": 0.619
+   },
+   {
+    "time": 50.0,
+    "text": "Miso is a fermented soybean paste made from",
+    "confidence": 0.933
+   },
+   {
+    "time": 50.0,
+    "text": "cuisine asa soup.",
+    "confidence": 0.859
+   },
+   {
+    "time": 50.0,
+    "text": "study from Hiroshima University has",
+    "confidence": 0.799
+   },
+   {
+    "time": 50.0,
+    "text": "demonstrated the potential for miso to prevent",
+    "confidence": 0.917
+   },
+   {
+    "time": 50.0,
+    "text": "fact",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "The protective qualities of miso seem to",
+    "confidence": 0.854
+   },
+   {
+    "time": 50.0,
+    "text": "correl?",
+    "confidence": 0.837
+   },
+   {
+    "time": 50.0,
+    "text": "fermentation, So opt for",
+    "confidence": 0.527
+   },
+   {
+    "time": 50.0,
+    "text": "that'$ been aged longer;",
+    "confidence": 0.678
+   },
+   {
+    "time": 50.0,
+    "text": "unp",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "boiling water; which could",
+    "confidence": 0.793
+   },
+   {
+    "time": 50.0,
+    "text": "an",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "res.",
+    "confidence": 0.73
+   },
+   {
+    "time": 50.0,
+    "text": "ng a ward agai' st",
+    "confidence": 0.821
+   },
+   {
+    "time": 50.0,
+    "text": "945",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "mi dica' team",
+    "confidence": 0.576
+   },
+   {
+    "time": 50.0,
+    "text": "SS after",
+    "confidence": 0.913
+   },
+   {
+    "time": 50.0,
+    "text": "no",
+    "confidence": 0.747
+   },
+   {
+    "time": 50.0,
+    "text": "ery",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "d abod",
+    "confidence": 0.576
+   },
+   {
+    "time": 50.0,
+    "text": "an due",
+    "confidence": 0.865
+   },
+   {
+    "time": 50.0,
+    "text": "mel",
+    "confidence": 0.999
+   },
+   {
+    "time": 50.0,
+    "text": "ou",
+    "confidence": 0.897
+   },
+   {
+    "time": 50.0,
+    "text": "ing",
+    "confidence": 0.999
+   },
+   {
+    "time": 50.0,
+    "text": "but it takes",
+    "confidence": 0.755
+   },
+   {
+    "time": 50.0,
+    "text": "that you",
+    "confidence": 0.973
+   },
+   {
+    "time": 50.0,
+    "text": "Healthbosstv",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "P",
+    "confidence": 0.619
+   },
+   {
+    "time": 52.0,
+    "text": "Miso is a fermented soybean paste made from",
+    "confidence": 0.96
+   },
+   {
+    "time": 52.0,
+    "text": "cuisine asa soup.",
+    "confidence": 0.836
+   },
+   {
+    "time": 52.0,
+    "text": "study from Hiroshima University has",
+    "confidence": 0.8
+   },
+   {
+    "time": 52.0,
+    "text": "demonstrated the potential for miso to prevent",
+    "confidence": 0.915
+   },
+   {
+    "time": 52.0,
+    "text": "fact",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "qualities of miso seem to",
+    "confidence": 0.616
+   },
+   {
+    "time": 52.0,
+    "text": "The protect",
+    "confidence": 0.611
+   },
+   {
+    "time": 52.0,
+    "text": "correl",
+    "confidence": 0.999
+   },
+   {
+    "time": 52.0,
+    "text": "'so that's been aged longer;",
+    "confidence": 0.633
+   },
+   {
+    "time": 52.0,
+    "text": "unp",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "voiling water; which could",
+    "confidence": 0.534
+   },
+   {
+    "time": 52.0,
+    "text": "an",
+    "confidence": 0.999
+   },
+   {
+    "time": 52.0,
+    "text": "ki",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "res.",
+    "confidence": 0.786
+   },
+   {
+    "time": 52.0,
+    "text": "against",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "ng a ward",
+    "confidence": 0.995
+   },
+   {
+    "time": 52.0,
+    "text": "945 when a medical team",
+    "confidence": 0.748
+   },
+   {
+    "time": 52.0,
+    "text": "no radiation sickness after",
+    "confidence": 0.909
+   },
+   {
+    "time": 52.0,
+    "text": "day:",
+    "confidence": 0.705
+   },
+   {
+    "time": 52.0,
+    "text": "eating foods",
+    "confidence": 0.949
+   },
+   {
+    "time": 52.0,
+    "text": "due to contamination",
+    "confidence": 0.799
+   },
+   {
+    "time": 52.0,
+    "text": "meltdown. You",
+    "confidence": 0.903
+   },
+   {
+    "time": 52.0,
+    "text": "but it takes",
+    "confidence": 0.763
+   },
+   {
+    "time": 52.0,
+    "text": "that you",
+    "confidence": 0.974
+   },
+   {
+    "time": 52.0,
+    "text": "Healthbosstv",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "X-Rays? Electromagnetic Spectru_",
+    "confidence": 0.781
+   },
+   {
+    "time": 54.0,
+    "text": "livescience com",
+    "confidence": 0.773
+   },
+   {
+    "time": 54.0,
+    "text": "Drugs.",
+    "confidence": 0.683
+   },
+   {
+    "time": 54.0,
+    "text": "X-Rays Guide",
+    "confidence": 0.799
+   },
+   {
+    "time": 54.0,
+    "text": "com",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "drugs com",
+    "confidence": 0.984
+   },
+   {
+    "time": 54.0,
+    "text": "irist",
+    "confidence": 0.512
+   },
+   {
+    "time": 54.0,
+    "text": "Imaging Healthcare Specialists",
+    "confidence": 0.81
+   },
+   {
+    "time": 54.0,
+    "text": "imaginghealthcare com",
+    "confidence": 0.906
+   },
+   {
+    "time": 54.0,
+    "text": "TikTok",
+    "confidence": 0.964
+   },
+   {
+    "time": 54.0,
+    "text": "maging",
+    "confidence": 0.512
+   },
+   {
+    "time": 54.0,
+    "text": "Healthbosstv",
+    "confidence": 0.999
+   },
+   {
+    "time": 56.0,
+    "text": "livescient",
+    "confidence": 0.606
+   },
+   {
+    "time": 56.0,
+    "text": "Healingartsapothecary",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "drugs com",
+    "confidence": 0.983
+   },
+   {
+    "time": 56.0,
+    "text": "iris",
+    "confidence": 0.858
+   },
+   {
+    "time": 56.0,
+    "text": "Imaging Healthcare Specialists",
+    "confidence": 0.746
+   },
+   {
+    "time": 56.0,
+    "text": "imaginghealthcare com",
+    "confidence": 0.88
+   },
+   {
+    "time": 56.0,
+    "text": "TikTok",
+    "confidence": 0.94
+   },
+   {
+    "time": 56.0,
+    "text": "naging",
+    "confidence": 0.742
+   },
+   {
+    "time": 56.0,
+    "text": "Healthbosstv",
+    "confidence": 0.999
+   },
+   {
+    "time": 58.0,
+    "text": "livescient",
+    "confidence": 0.57
+   },
+   {
+    "time": 58.0,
+    "text": "Healingartsapothecary",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.0,
+    "text": "K-hays Guiae",
+    "confidence": 0.533
+   },
+   {
+    "time": 58.0,
+    "text": "drugs com",
+    "confidence": 0.988
+   },
+   {
+    "time": 58.0,
+    "text": "Are",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.0,
+    "text": "irish",
+    "confidence": 0.634
+   },
+   {
+    "time": 58.0,
+    "text": "Imaging Healthcare Specialists",
+    "confidence": 0.766
+   },
+   {
+    "time": 58.0,
+    "text": "imaginghealthcare com",
+    "confidence": 0.908
+   },
+   {
+    "time": 58.0,
+    "text": "TikTok",
+    "confidence": 0.964
+   },
+   {
+    "time": 58.0,
+    "text": "aging",
+    "confidence": 0.764
+   },
+   {
+    "time": 58.0,
+    "text": "Healthbosstv",
+    "confidence": 0.999
+   }
+  ],
+  "captions": [
+   {
+    "text": "The Atomic B",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.975,
+    "id": "o1"
+   },
+   {
+    "text": "of Hiroshima",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.565,
+    "id": "o2"
+   },
+   {
+    "text": "nation",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o3"
+   },
+   {
+    "text": "01g",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.54,
+    "id": "o4"
+   },
+   {
+    "text": "bomb",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o5"
+   },
+   {
+    "text": "ationcom",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.934,
+    "id": "o6"
+   },
+   {
+    "text": "After Hlroshima",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.964,
+    "id": "o7"
+   },
+   {
+    "text": "Miso Soup",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.997,
+    "id": "o8"
+   },
+   {
+    "text": "Radiation",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.976,
+    "id": "o9"
+   },
+   {
+    "text": "Protection",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.694,
+    "id": "o10"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.991,
+    "id": "o11"
+   },
+   {
+    "text": "The Atomic Bc",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.764,
+    "id": "o12"
+   },
+   {
+    "text": "of Hiroshima",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.746,
+    "id": "o13"
+   },
+   {
+    "text": "nationalwwzm",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.703,
+    "id": "o14"
+   },
+   {
+    "text": "org,",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.553,
+    "id": "o15"
+   },
+   {
+    "text": "bomb",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.76,
+    "id": "o16"
+   },
+   {
+    "text": "MkTok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.717,
+    "id": "o17"
+   },
+   {
+    "text": "Ingartsapathecary",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.81,
+    "id": "o18"
+   },
+   {
+    "text": "After Hiroshima",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.841,
+    "id": "o19"
+   },
+   {
+    "text": "Lme",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.504,
+    "id": "o20"
+   },
+   {
+    "text": "com",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.999,
+    "id": "o21"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.975,
+    "id": "o22"
+   },
+   {
+    "text": "bombir",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.914,
+    "id": "o23"
+   },
+   {
+    "text": "en:wik",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.529,
+    "id": "o24"
+   },
+   {
+    "text": "The Atomic B",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.771,
+    "id": "o25"
+   },
+   {
+    "text": "of Hiroshima",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.894,
+    "id": "o26"
+   },
+   {
+    "text": "nationa",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o27"
+   },
+   {
+    "text": "2mii",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.557,
+    "id": "o28"
+   },
+   {
+    "text": "org",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.993,
+    "id": "o29"
+   },
+   {
+    "text": "vomb",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.839,
+    "id": "o30"
+   },
+   {
+    "text": "tion-com",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.68,
+    "id": "o31"
+   },
+   {
+    "text": "After Hiroshima",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.832,
+    "id": "o32"
+   },
+   {
+    "text": "com",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.999,
+    "id": "o33"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.996,
+    "id": "o34"
+   },
+   {
+    "text": "bomb",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o35"
+   },
+   {
+    "text": "The Atomic B",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o36"
+   },
+   {
+    "text": "of Hiroshima",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.909,
+    "id": "o37"
+   },
+   {
+    "text": "nationalwwzm",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.755,
+    "id": "o38"
+   },
+   {
+    "text": "org",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.989,
+    "id": "o39"
+   },
+   {
+    "text": "bomb",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o40"
+   },
+   {
+    "text": "sationcom",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.997,
+    "id": "o41"
+   },
+   {
+    "text": "After Hiroshima",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.84,
+    "id": "o42"
+   },
+   {
+    "text": "time.com",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.596,
+    "id": "o43"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.932,
+    "id": "o44"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.911,
+    "id": "o45"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.997,
+    "id": "o46"
+   },
+   {
+    "text": "bombings of Hiroshima and Nagas __.",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.674,
+    "id": "o47"
+   },
+   {
+    "text": "en.wikipedia org",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.612,
+    "id": "o48"
+   },
+   {
+    "text": "The Atomic Bombing of Hiroshima",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.808,
+    "id": "o49"
+   },
+   {
+    "text": "nationalwwZmuseum org",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.724,
+    "id": "o50"
+   },
+   {
+    "text": "bomb",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o51"
+   },
+   {
+    "text": "sation com",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.608,
+    "id": "o52"
+   },
+   {
+    "text": "After Hiroshima",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.84,
+    "id": "o53"
+   },
+   {
+    "text": "com",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.999,
+    "id": "o54"
+   },
+   {
+    "text": "aga:",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.81,
+    "id": "o55"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.856,
+    "id": "o56"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.998,
+    "id": "o57"
+   },
+   {
+    "text": "bombings of Hiroshima and Nagas__.",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.902,
+    "id": "o58"
+   },
+   {
+    "text": "en.wikipedia org",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.543,
+    "id": "o59"
+   },
+   {
+    "text": "The Atomic Bombing of Hiroshima",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.864,
+    "id": "o60"
+   },
+   {
+    "text": "nationalwwZmuseum org",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.787,
+    "id": "o61"
+   },
+   {
+    "text": "bomb",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.998,
+    "id": "o62"
+   },
+   {
+    "text": "sationcom",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o63"
+   },
+   {
+    "text": "After Hiroshin",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.929,
+    "id": "o64"
+   },
+   {
+    "text": "time.com",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.734,
+    "id": "o65"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.922,
+    "id": "o66"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o67"
+   },
+   {
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.802,
+    "id": "o68"
+   },
+   {
+    "text": "Imtroduction",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.525,
+    "id": "o69"
+   },
+   {
+    "text": "August of 1945. the first atomic bomb was dropped in Hiroshima and U",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.565,
+    "id": "o70"
+   },
+   {
+    "text": "second",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.998,
+    "id": "o71"
+   },
+   {
+    "text": "leadig toJapan",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.687,
+    "id": "o72"
+   },
+   {
+    "text": "unconditional surrender and the end of the Pacil",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.637,
+    "id": "o73"
+   },
+   {
+    "text": "Japan:",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.692,
+    "id": "o74"
+   },
+   {
+    "text": "Although most of the people within",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.978,
+    "id": "o75"
+   },
+   {
+    "text": "two kilometer radius from the hypocenter diec",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.666,
+    "id": "o76"
+   },
+   {
+    "text": "atomic bomb blast and radiation",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.983,
+    "id": "o77"
+   },
+   {
+    "text": "indirect exposure",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.924,
+    "id": "o78"
+   },
+   {
+    "text": "some did not suffer from",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.97,
+    "id": "o79"
+   },
+   {
+    "text": "related to the radiation and are still alive at present:",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.667,
+    "id": "o80"
+   },
+   {
+    "text": "did these people survive while others did not?\"",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.693,
+    "id": "o81"
+   },
+   {
+    "text": "[Hiroshima Atomie Bombing:",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.738,
+    "id": "o82"
+   },
+   {
+    "text": "Nagasaki at the time Of the bombing",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.824,
+    "id": "o83"
+   },
+   {
+    "text": "medical doctor In",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.969,
+    "id": "o84"
+   },
+   {
+    "text": "served t0 help the injured.",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.698,
+    "id": "o85"
+   },
+   {
+    "text": "He observed that these survivon had",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.839,
+    "id": "o86"
+   },
+   {
+    "text": "common diet prae",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.532,
+    "id": "o87"
+   },
+   {
+    "text": "Dr; Akizuki unfortunately",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.786,
+    "id": "o88"
+   },
+   {
+    "text": "traditional Japanese diet enriched with Miso",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.593,
+    "id": "o89"
+   },
+   {
+    "text": "2005",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.994,
+    "id": "o90"
+   },
+   {
+    "text": "but",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.622,
+    "id": "o91"
+   },
+   {
+    "text": "Was in Japan in the summer of 2006",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.828,
+    "id": "o92"
+   },
+   {
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.586,
+    "id": "o93"
+   },
+   {
+    "text": "the interview data, this study will examine atomie bomb survivors\" dietary history",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.622,
+    "id": "o94"
+   },
+   {
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.576,
+    "id": "o95"
+   },
+   {
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.695,
+    "id": "o96"
+   },
+   {
+    "text": "lom",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.755,
+    "id": "o97"
+   },
+   {
+    "text": "tragic events. but we can (Um them into valuable lessons that can",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.782,
+    "id": "o98"
+   },
+   {
+    "text": "eventually help us find ways t0 prevent and",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.729,
+    "id": "o99"
+   },
+   {
+    "text": "or control cancer.",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.715,
+    "id": "o100"
+   },
+   {
+    "text": "My hope",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.898,
+    "id": "o101"
+   },
+   {
+    "text": "medicine.",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.844,
+    "id": "o102"
+   },
+   {
+    "text": "IL. Previous Literatures",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.556,
+    "id": "o103"
+   },
+   {
+    "text": "The nature of the problem to be examined",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.535,
+    "id": "o104"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o105"
+   },
+   {
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.863,
+    "id": "o106"
+   },
+   {
+    "text": "Imtroduction",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.612,
+    "id": "o107"
+   },
+   {
+    "text": "August of 1945. the first atomic bomb was dropped in Hiroshima and U",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.553,
+    "id": "o108"
+   },
+   {
+    "text": "second",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.998,
+    "id": "o109"
+   },
+   {
+    "text": "leadig toJapan",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.645,
+    "id": "o110"
+   },
+   {
+    "text": "War belween",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.628,
+    "id": "o111"
+   },
+   {
+    "text": "Japan:",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.702,
+    "id": "o112"
+   },
+   {
+    "text": "Although most of the people within",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.981,
+    "id": "o113"
+   },
+   {
+    "text": "two kilometer radius from the hypocenter diec",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.51,
+    "id": "o114"
+   },
+   {
+    "text": "atomic bomb blast and radiation",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.938,
+    "id": "o115"
+   },
+   {
+    "text": "indirect exposure",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.938,
+    "id": "o116"
+   },
+   {
+    "text": "some did not suffer from",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.968,
+    "id": "o117"
+   },
+   {
+    "text": "related to the radiation and are still alive at present:",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.53,
+    "id": "o118"
+   },
+   {
+    "text": "did these people survive while others did not?\"",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.75,
+    "id": "o119"
+   },
+   {
+    "text": "[Hiroshima Atomie Bombing:",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.726,
+    "id": "o120"
+   },
+   {
+    "text": "medical doctor in Nagasaki at the time Of the bombing",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.702,
+    "id": "o121"
+   },
+   {
+    "text": "served t0 help the injured.",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.673,
+    "id": "o122"
+   },
+   {
+    "text": "He observed that these survivon had",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.837,
+    "id": "o123"
+   },
+   {
+    "text": "Dr; Akizuki unfortunately passe",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.664,
+    "id": "o124"
+   },
+   {
+    "text": "traditional Japanese diet enriched with Miso",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.791,
+    "id": "o125"
+   },
+   {
+    "text": "2005",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.994,
+    "id": "o126"
+   },
+   {
+    "text": "was able t0 interview Mrs",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.736,
+    "id": "o127"
+   },
+   {
+    "text": "Akizuki;as well as other atomic bomb survil",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.526,
+    "id": "o128"
+   },
+   {
+    "text": "but",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.802,
+    "id": "o129"
+   },
+   {
+    "text": "was in Japan in the summer of 2006",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.865,
+    "id": "o130"
+   },
+   {
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.668,
+    "id": "o131"
+   },
+   {
+    "text": "the interview data, this study will examine atomie bomb survivors\" dietary history",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.641,
+    "id": "o132"
+   },
+   {
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.613,
+    "id": "o133"
+   },
+   {
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.657,
+    "id": "o134"
+   },
+   {
+    "text": "lom",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.781,
+    "id": "o135"
+   },
+   {
+    "text": "tragic events. but we can (Um them into valuable lessons that can",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.798,
+    "id": "o136"
+   },
+   {
+    "text": "eventually help us find ways t0 prevent and",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.72,
+    "id": "o137"
+   },
+   {
+    "text": "or control cancer.",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.799,
+    "id": "o138"
+   },
+   {
+    "text": "My hope",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.893,
+    "id": "o139"
+   },
+   {
+    "text": "shed light on the importance of diet t0 the human body",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.579,
+    "id": "o140"
+   },
+   {
+    "text": "medicine.",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.843,
+    "id": "o141"
+   },
+   {
+    "text": "IL. Previous Literatures",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.567,
+    "id": "o142"
+   },
+   {
+    "text": "The nature of the problem to be examined",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.525,
+    "id": "o143"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.999,
+    "id": "o144"
+   },
+   {
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.852,
+    "id": "o145"
+   },
+   {
+    "text": "second",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.998,
+    "id": "o146"
+   },
+   {
+    "text": "leadig toJapan",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.657,
+    "id": "o147"
+   },
+   {
+    "text": "unconditional surrender and the end of the Pacil",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.51,
+    "id": "o148"
+   },
+   {
+    "text": "War between",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.599,
+    "id": "o149"
+   },
+   {
+    "text": "Japan:",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.702,
+    "id": "o150"
+   },
+   {
+    "text": "Although most of the people within",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.98,
+    "id": "o151"
+   },
+   {
+    "text": "atomic bomb blast and radiation",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.929,
+    "id": "o152"
+   },
+   {
+    "text": "some did not suffer from",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.969,
+    "id": "o153"
+   },
+   {
+    "text": "indirect exposure",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.862,
+    "id": "o154"
+   },
+   {
+    "text": "related to the radiation and are still alive at present:",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.607,
+    "id": "o155"
+   },
+   {
+    "text": "did these people survive while others did not?\"",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.922,
+    "id": "o156"
+   },
+   {
+    "text": "Bombing:",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.996,
+    "id": "o157"
+   },
+   {
+    "text": "Nagasaki at the time Of the bombing",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.86,
+    "id": "o158"
+   },
+   {
+    "text": "medical doctor In",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.972,
+    "id": "o159"
+   },
+   {
+    "text": "served t0 help the injured.",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.533,
+    "id": "o160"
+   },
+   {
+    "text": "He observed that these survivon had",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.835,
+    "id": "o161"
+   },
+   {
+    "text": "Dr; Akizuki unfortunately",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.854,
+    "id": "o162"
+   },
+   {
+    "text": "traditional Japanese diet enriched with Miso",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.818,
+    "id": "o163"
+   },
+   {
+    "text": "2005",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.993,
+    "id": "o164"
+   },
+   {
+    "text": "was able t0 interview Mrs",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.734,
+    "id": "o165"
+   },
+   {
+    "text": "Akizuki;as well as other atomic bomb survil",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.524,
+    "id": "o166"
+   },
+   {
+    "text": "but",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.795,
+    "id": "o167"
+   },
+   {
+    "text": "was in Japan in the summer of 2006",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.872,
+    "id": "o168"
+   },
+   {
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.667,
+    "id": "o169"
+   },
+   {
+    "text": "the interview data, this study will examine atomie bomb survivors\" dietary history",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.546,
+    "id": "o170"
+   },
+   {
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.629,
+    "id": "o171"
+   },
+   {
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.61,
+    "id": "o172"
+   },
+   {
+    "text": "lom",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.764,
+    "id": "o173"
+   },
+   {
+    "text": "tragic events. but we can (Um them into valuable lessons that can",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.802,
+    "id": "o174"
+   },
+   {
+    "text": "eventually help us find ways t0 prevent and",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.708,
+    "id": "o175"
+   },
+   {
+    "text": "or control cancer.",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.768,
+    "id": "o176"
+   },
+   {
+    "text": "My hope",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.594,
+    "id": "o177"
+   },
+   {
+    "text": "shed light on the importance of diet t0 the human body",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.508,
+    "id": "o178"
+   },
+   {
+    "text": "medicine.",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.789,
+    "id": "o179"
+   },
+   {
+    "text": "t0 tOday",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.502,
+    "id": "o180"
+   },
+   {
+    "text": "II. Previous Literatures",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.581,
+    "id": "o181"
+   },
+   {
+    "text": "The nature of the problem to be examined",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.572,
+    "id": "o182"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.999,
+    "id": "o183"
+   },
+   {
+    "text": "ssociate Professor of Japanese Studies; Illinois Wesleyan University",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.765,
+    "id": "o184"
+   },
+   {
+    "text": "Imtroduction",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.556,
+    "id": "o185"
+   },
+   {
+    "text": "second",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.998,
+    "id": "o186"
+   },
+   {
+    "text": "leadig toJapan",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.668,
+    "id": "o187"
+   },
+   {
+    "text": "unconditional surrender and the end of the Pacil",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.615,
+    "id": "o188"
+   },
+   {
+    "text": "War between",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.6,
+    "id": "o189"
+   },
+   {
+    "text": "Japan:",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.703,
+    "id": "o190"
+   },
+   {
+    "text": "Although most of the people within",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.982,
+    "id": "o191"
+   },
+   {
+    "text": "atomic bomb blast and radiation",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.931,
+    "id": "o192"
+   },
+   {
+    "text": "some did not suffer from",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.966,
+    "id": "o193"
+   },
+   {
+    "text": "indirect exposure",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.844,
+    "id": "o194"
+   },
+   {
+    "text": "related to the radiation and are still alive at present:",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.609,
+    "id": "o195"
+   },
+   {
+    "text": "did these people survive while others did not?\"",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.921,
+    "id": "o196"
+   },
+   {
+    "text": "Bombing:",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.996,
+    "id": "o197"
+   },
+   {
+    "text": "Nagasaki at the time Of the bombing",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.825,
+    "id": "o198"
+   },
+   {
+    "text": "The late Dr. Akizuki;",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.576,
+    "id": "o199"
+   },
+   {
+    "text": "medical doctor In",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.972,
+    "id": "o200"
+   },
+   {
+    "text": "served t0 help the injured.",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.677,
+    "id": "o201"
+   },
+   {
+    "text": "He observed that these survivon had",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.835,
+    "id": "o202"
+   },
+   {
+    "text": "common diet prae",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.537,
+    "id": "o203"
+   },
+   {
+    "text": "Dr; Akizuki unfortunately",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.854,
+    "id": "o204"
+   },
+   {
+    "text": "traditional Japanese diet enriched with Miso",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.812,
+    "id": "o205"
+   },
+   {
+    "text": "2005",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.993,
+    "id": "o206"
+   },
+   {
+    "text": "was able t0 interview Mrs",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.734,
+    "id": "o207"
+   },
+   {
+    "text": "Akizuki;as well as other atomic bomb survil",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.522,
+    "id": "o208"
+   },
+   {
+    "text": "but",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.795,
+    "id": "o209"
+   },
+   {
+    "text": "was in Japan in the summer of 2006",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.871,
+    "id": "o210"
+   },
+   {
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.668,
+    "id": "o211"
+   },
+   {
+    "text": "the interview data, this study will examine atomic bomb survivors\" dietary history",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.55,
+    "id": "o212"
+   },
+   {
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.632,
+    "id": "o213"
+   },
+   {
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.609,
+    "id": "o214"
+   },
+   {
+    "text": "lom",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.766,
+    "id": "o215"
+   },
+   {
+    "text": "tragic events. but we can (Um them into valuable lessons that can",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.797,
+    "id": "o216"
+   },
+   {
+    "text": "eventually help us find ways t0 prevent and",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.707,
+    "id": "o217"
+   },
+   {
+    "text": "or control cancer.",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.763,
+    "id": "o218"
+   },
+   {
+    "text": "My hope",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.927,
+    "id": "o219"
+   },
+   {
+    "text": "shed light on the importance of diet t0 the human body",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.618,
+    "id": "o220"
+   },
+   {
+    "text": "medicine.",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.852,
+    "id": "o221"
+   },
+   {
+    "text": "t0 tOday",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.594,
+    "id": "o222"
+   },
+   {
+    "text": "The nature of the problem to be examined",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.573,
+    "id": "o223"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.999,
+    "id": "o224"
+   },
+   {
+    "text": "Dietry Practice of Hiroshim:/Nagasaki Atomic Bomb Survivor",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.516,
+    "id": "o225"
+   },
+   {
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.843,
+    "id": "o226"
+   },
+   {
+    "text": "Introduction",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.7,
+    "id": "o227"
+   },
+   {
+    "text": "August of 1945. the first atomic bomb was dropped in Hiroshima and u",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.565,
+    "id": "o228"
+   },
+   {
+    "text": "second",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.999,
+    "id": "o229"
+   },
+   {
+    "text": "leadingto Japan",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.549,
+    "id": "o230"
+   },
+   {
+    "text": "unconditional surrender and the end of the Pacil",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.555,
+    "id": "o231"
+   },
+   {
+    "text": "War between",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.616,
+    "id": "o232"
+   },
+   {
+    "text": "Japan:",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.529,
+    "id": "o233"
+   },
+   {
+    "text": "Although most of the people within",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.841,
+    "id": "o234"
+   },
+   {
+    "text": "two kilometer radius from the hypocenter diec",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.646,
+    "id": "o235"
+   },
+   {
+    "text": "atomic bomb blast and radiation",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.988,
+    "id": "o236"
+   },
+   {
+    "text": "indirect exposure",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.772,
+    "id": "o237"
+   },
+   {
+    "text": "some did not suffer from",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.97,
+    "id": "o238"
+   },
+   {
+    "text": "related to the radiation and are still alive at present:",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.709,
+    "id": "o239"
+   },
+   {
+    "text": "did these people survive while others did not?\"",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.899,
+    "id": "o240"
+   },
+   {
+    "text": "[Hiroshima Atomie Bombing:",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.714,
+    "id": "o241"
+   },
+   {
+    "text": "medical doctor in Nagasaki at the time Of the bombing",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.647,
+    "id": "o242"
+   },
+   {
+    "text": "served t0 help the injured:",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.595,
+    "id": "o243"
+   },
+   {
+    "text": "He observed that these survivon had",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.83,
+    "id": "o244"
+   },
+   {
+    "text": "common diet pra",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.946,
+    "id": "o245"
+   },
+   {
+    "text": "traditional Japanese diet enriched with Miso",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.999,
+    "id": "o246"
+   },
+   {
+    "text": "Dr; Akizuki unfortunately passe",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.682,
+    "id": "o247"
+   },
+   {
+    "text": "was in Japan in the summer of 2006",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.888,
+    "id": "o248"
+   },
+   {
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.581,
+    "id": "o249"
+   },
+   {
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.616,
+    "id": "o250"
+   },
+   {
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.622,
+    "id": "o251"
+   },
+   {
+    "text": "lom",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.834,
+    "id": "o252"
+   },
+   {
+    "text": "tragic events",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.789,
+    "id": "o253"
+   },
+   {
+    "text": "but we can (UM them into valuable lessons that can",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.581,
+    "id": "o254"
+   },
+   {
+    "text": "eventually help us find ways t0 prevent and",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.672,
+    "id": "o255"
+   },
+   {
+    "text": "or control cancer.",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.715,
+    "id": "o256"
+   },
+   {
+    "text": "My hope",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.84,
+    "id": "o257"
+   },
+   {
+    "text": "shed light on the importance of diet t0 the human body",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.587,
+    "id": "o258"
+   },
+   {
+    "text": "medicine.",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.808,
+    "id": "o259"
+   },
+   {
+    "text": "it t0 today",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.847,
+    "id": "o260"
+   },
+   {
+    "text": "II. Previous Literatures",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.58,
+    "id": "o261"
+   },
+   {
+    "text": "The nature of the problem to be examined",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.681,
+    "id": "o262"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.999,
+    "id": "o263"
+   },
+   {
+    "text": "Dietry Practice of Hiroshim:/Nagasaki Atomic Bomb Survivor",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.516,
+    "id": "o264"
+   },
+   {
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.842,
+    "id": "o265"
+   },
+   {
+    "text": "Introduction",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.7,
+    "id": "o266"
+   },
+   {
+    "text": "August of 1945. the first atomic bomb was dropped in Hiroshima and u",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.565,
+    "id": "o267"
+   },
+   {
+    "text": "second",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.999,
+    "id": "o268"
+   },
+   {
+    "text": "leadingto Japan",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.555,
+    "id": "o269"
+   },
+   {
+    "text": "unconditional surrender and the end of the Pacil",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.555,
+    "id": "o270"
+   },
+   {
+    "text": "War between",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.616,
+    "id": "o271"
+   },
+   {
+    "text": "Japan:",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.529,
+    "id": "o272"
+   },
+   {
+    "text": "Although most of the people within",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.841,
+    "id": "o273"
+   },
+   {
+    "text": "two kilometer radius from the hypocenter diec",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.646,
+    "id": "o274"
+   },
+   {
+    "text": "atomic bomb blast and radiation",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.988,
+    "id": "o275"
+   },
+   {
+    "text": "indirect exposure",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.772,
+    "id": "o276"
+   },
+   {
+    "text": "some did not suffer from",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.97,
+    "id": "o277"
+   },
+   {
+    "text": "related to the radiation and are still alive at present:",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.709,
+    "id": "o278"
+   },
+   {
+    "text": "did these people survive while others did not?\"",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.899,
+    "id": "o279"
+   },
+   {
+    "text": "Bombing:",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.996,
+    "id": "o280"
+   },
+   {
+    "text": "Nagasaki at the time Of the bombing",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.73,
+    "id": "o281"
+   },
+   {
+    "text": "medical doctor In",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.967,
+    "id": "o282"
+   },
+   {
+    "text": "served t0 help the injured:",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.636,
+    "id": "o283"
+   },
+   {
+    "text": "He observed that these survivon had",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.83,
+    "id": "o284"
+   },
+   {
+    "text": "common diet pra",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.946,
+    "id": "o285"
+   },
+   {
+    "text": "Dr; Akizuki unfortunately passe",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.682,
+    "id": "o286"
+   },
+   {
+    "text": "traditional Japanese diet enriched with Miso",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.661,
+    "id": "o287"
+   },
+   {
+    "text": "2005",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.954,
+    "id": "o288"
+   },
+   {
+    "text": "was able t0 interview Mrs",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.888,
+    "id": "o289"
+   },
+   {
+    "text": "but",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.731,
+    "id": "o290"
+   },
+   {
+    "text": "was in Japan in the summer of 2006",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.916,
+    "id": "o291"
+   },
+   {
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.582,
+    "id": "o292"
+   },
+   {
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.616,
+    "id": "o293"
+   },
+   {
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.622,
+    "id": "o294"
+   },
+   {
+    "text": "lom",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.834,
+    "id": "o295"
+   },
+   {
+    "text": "tragic events",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.789,
+    "id": "o296"
+   },
+   {
+    "text": "but we can (UM them into valuable lessons that can",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.581,
+    "id": "o297"
+   },
+   {
+    "text": "eventually help us find ways t0 prevent and",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.672,
+    "id": "o298"
+   },
+   {
+    "text": "or control cancer.",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.715,
+    "id": "o299"
+   },
+   {
+    "text": "My hope",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.84,
+    "id": "o300"
+   },
+   {
+    "text": "shed light on the importance of diet t0 the human body",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.587,
+    "id": "o301"
+   },
+   {
+    "text": "it t0 today",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.847,
+    "id": "o302"
+   },
+   {
+    "text": "medicine.",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.933,
+    "id": "o303"
+   },
+   {
+    "text": "II. Previous Literatures",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.58,
+    "id": "o304"
+   },
+   {
+    "text": "The nature of the problem to be examined",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.671,
+    "id": "o305"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.999,
+    "id": "o306"
+   },
+   {
+    "text": "Dietry Practice of Hiroshim:/Nagasaki Atomic Bomb Survivor",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.516,
+    "id": "o307"
+   },
+   {
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.842,
+    "id": "o308"
+   },
+   {
+    "text": "Introduction",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.7,
+    "id": "o309"
+   },
+   {
+    "text": "August of 1945. the first atomic bomb was dropped in Hiroshima and u",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.573,
+    "id": "o310"
+   },
+   {
+    "text": "second",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.999,
+    "id": "o311"
+   },
+   {
+    "text": "leadingto Japan",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.566,
+    "id": "o312"
+   },
+   {
+    "text": "unconditional surrender and the end of the Pacil",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.555,
+    "id": "o313"
+   },
+   {
+    "text": "War between",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.616,
+    "id": "o314"
+   },
+   {
+    "text": "Japan:",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.529,
+    "id": "o315"
+   },
+   {
+    "text": "Although most of the people within",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.844,
+    "id": "o316"
+   },
+   {
+    "text": "two kilometer radius from the hypocenter diec",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.646,
+    "id": "o317"
+   },
+   {
+    "text": "atomic bomb blast and radiation",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.988,
+    "id": "o318"
+   },
+   {
+    "text": "indirect exposure",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.772,
+    "id": "o319"
+   },
+   {
+    "text": "some did not suffer from",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.97,
+    "id": "o320"
+   },
+   {
+    "text": "related to the radiation and are still alive at present:",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.709,
+    "id": "o321"
+   },
+   {
+    "text": "did these people survive while others did not?\"",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.899,
+    "id": "o322"
+   },
+   {
+    "text": "[Hiroshima Atomie Bombing:",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.714,
+    "id": "o323"
+   },
+   {
+    "text": "medical doctor in Nagasaki at the time Of the bombing",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.647,
+    "id": "o324"
+   },
+   {
+    "text": "served t0 help the injured:",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.595,
+    "id": "o325"
+   },
+   {
+    "text": "He observed that these survivon had",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.83,
+    "id": "o326"
+   },
+   {
+    "text": "common diet pra",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.946,
+    "id": "o327"
+   },
+   {
+    "text": "traditional Japanese diet enriched with Miso",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.999,
+    "id": "o328"
+   },
+   {
+    "text": "Dr; Akizuki unfortunately passe",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.682,
+    "id": "o329"
+   },
+   {
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.642,
+    "id": "o330"
+   },
+   {
+    "text": "Was in Japan in the summer of 2006",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.845,
+    "id": "o331"
+   },
+   {
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.616,
+    "id": "o332"
+   },
+   {
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.622,
+    "id": "o333"
+   },
+   {
+    "text": "lom",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.834,
+    "id": "o334"
+   },
+   {
+    "text": "tragic events",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.789,
+    "id": "o335"
+   },
+   {
+    "text": "but we can (UM them into valuable lessons that can",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.581,
+    "id": "o336"
+   },
+   {
+    "text": "eventually help us find ways t0 prevent and",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.672,
+    "id": "o337"
+   },
+   {
+    "text": "or control cancer.",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.715,
+    "id": "o338"
+   },
+   {
+    "text": "My hope",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.84,
+    "id": "o339"
+   },
+   {
+    "text": "shed light on the importance of diet t0 the human body",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.587,
+    "id": "o340"
+   },
+   {
+    "text": "medicine.",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.808,
+    "id": "o341"
+   },
+   {
+    "text": "it t0 today",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.847,
+    "id": "o342"
+   },
+   {
+    "text": "II. Previous Literatures",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.58,
+    "id": "o343"
+   },
+   {
+    "text": "The nature of the problem to be examined",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.671,
+    "id": "o344"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.999,
+    "id": "o345"
+   },
+   {
+    "text": "Dietry Practice of Hiroshim:/Nagasaki Atomic Bomb Survivor",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.516,
+    "id": "o346"
+   },
+   {
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.841,
+    "id": "o347"
+   },
+   {
+    "text": "Introduction",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.7,
+    "id": "o348"
+   },
+   {
+    "text": "August of 1945. the first atomic bomb was dropped in Hiroshima and u",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.573,
+    "id": "o349"
+   },
+   {
+    "text": "second",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.999,
+    "id": "o350"
+   },
+   {
+    "text": "leadingto Japan",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.563,
+    "id": "o351"
+   },
+   {
+    "text": "unconditional surrender and the end of the Pacil",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.558,
+    "id": "o352"
+   },
+   {
+    "text": "War between",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.616,
+    "id": "o353"
+   },
+   {
+    "text": "Japan:",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.529,
+    "id": "o354"
+   },
+   {
+    "text": "Although most of the people within",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.844,
+    "id": "o355"
+   },
+   {
+    "text": "two kilometer radius from the hypocenter diec",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.646,
+    "id": "o356"
+   },
+   {
+    "text": "atomic bomb blast and radiation",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.988,
+    "id": "o357"
+   },
+   {
+    "text": "indirect exposure",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.772,
+    "id": "o358"
+   },
+   {
+    "text": "some did not suffer from",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.97,
+    "id": "o359"
+   },
+   {
+    "text": "related to the radiation and are still alive at present:",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.709,
+    "id": "o360"
+   },
+   {
+    "text": "did these people survive while others did not?\"",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.782,
+    "id": "o361"
+   },
+   {
+    "text": "[Hiroshima Atomie Bombing:",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.714,
+    "id": "o362"
+   },
+   {
+    "text": "Nagasaki at the time Of the bombing",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.73,
+    "id": "o363"
+   },
+   {
+    "text": "medical doctor In",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.967,
+    "id": "o364"
+   },
+   {
+    "text": "served t0 help the injured:",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.595,
+    "id": "o365"
+   },
+   {
+    "text": "He observed that these survivon had",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.83,
+    "id": "o366"
+   },
+   {
+    "text": "common diet pra",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.946,
+    "id": "o367"
+   },
+   {
+    "text": "traditional Japanese diet enriched with Miso",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.874,
+    "id": "o368"
+   },
+   {
+    "text": "Dr; Akizuki unfortunately passe",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.682,
+    "id": "o369"
+   },
+   {
+    "text": "well as other atomic bomb survil",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.683,
+    "id": "o370"
+   },
+   {
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.694,
+    "id": "o371"
+   },
+   {
+    "text": "Was in Japan in the summer of 2006",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.678,
+    "id": "o372"
+   },
+   {
+    "text": "the interview data, this study will examine atomic bomb survivors\" dietary history",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.689,
+    "id": "o373"
+   },
+   {
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.616,
+    "id": "o374"
+   },
+   {
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.622,
+    "id": "o375"
+   },
+   {
+    "text": "lom",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.834,
+    "id": "o376"
+   },
+   {
+    "text": "tragic events",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.789,
+    "id": "o377"
+   },
+   {
+    "text": "but we can (UM them into valuable lessons that can",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.581,
+    "id": "o378"
+   },
+   {
+    "text": "eventually help us find ways t0 prevent and",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.672,
+    "id": "o379"
+   },
+   {
+    "text": "or control cancer.",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.715,
+    "id": "o380"
+   },
+   {
+    "text": "My hope",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.84,
+    "id": "o381"
+   },
+   {
+    "text": "shed light on the importance of diet t0 the human body",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.587,
+    "id": "o382"
+   },
+   {
+    "text": "medicine.",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.808,
+    "id": "o383"
+   },
+   {
+    "text": "it t0 today",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.847,
+    "id": "o384"
+   },
+   {
+    "text": "II. Previous Literatures",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.581,
+    "id": "o385"
+   },
+   {
+    "text": "The nature of the problem to be examined",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.671,
+    "id": "o386"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.999,
+    "id": "o387"
+   },
+   {
+    "text": "Dietary Practice of Hiroshim:/Nagasaki Atomic Bomb Survivor",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.59,
+    "id": "o388"
+   },
+   {
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.781,
+    "id": "o389"
+   },
+   {
+    "text": "Imtroduction",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.514,
+    "id": "o390"
+   },
+   {
+    "text": "August of 1945. the first atomic bomb was dropped in Hiroshima and U",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.561,
+    "id": "o391"
+   },
+   {
+    "text": "second",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.998,
+    "id": "o392"
+   },
+   {
+    "text": "leadig toJapan",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.585,
+    "id": "o393"
+   },
+   {
+    "text": "unconditional surrender and the end of the Pacil",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.546,
+    "id": "o394"
+   },
+   {
+    "text": "War belween",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.604,
+    "id": "o395"
+   },
+   {
+    "text": "Japan:",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.527,
+    "id": "o396"
+   },
+   {
+    "text": "Although most of the people within",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.873,
+    "id": "o397"
+   },
+   {
+    "text": "two kilometer radius from the hypocenter diec",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.501,
+    "id": "o398"
+   },
+   {
+    "text": "atomic bomb blast and radiation",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.989,
+    "id": "o399"
+   },
+   {
+    "text": "indirect exposure",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.99,
+    "id": "o400"
+   },
+   {
+    "text": "some did not suffer from",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.972,
+    "id": "o401"
+   },
+   {
+    "text": "related to the radiation and are still alive at present:",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.716,
+    "id": "o402"
+   },
+   {
+    "text": "did these people survive while others did not?\"",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.921,
+    "id": "o403"
+   },
+   {
+    "text": "[Hiroshima Atomie Bombing:",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.727,
+    "id": "o404"
+   },
+   {
+    "text": "Nagasaki at the time Of the bombing",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.706,
+    "id": "o405"
+   },
+   {
+    "text": "The late Dr. Akizuki;",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.51,
+    "id": "o406"
+   },
+   {
+    "text": "medical doctor In",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.972,
+    "id": "o407"
+   },
+   {
+    "text": "served t0 help the injured:",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.598,
+    "id": "o408"
+   },
+   {
+    "text": "He observed that these survivon had",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.799,
+    "id": "o409"
+   },
+   {
+    "text": "common diet pra",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.554,
+    "id": "o410"
+   },
+   {
+    "text": "traditional Japanese diet enriched with Miso",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.826,
+    "id": "o411"
+   },
+   {
+    "text": "Dr; Akizuki unfortunately pass",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.835,
+    "id": "o412"
+   },
+   {
+    "text": "well as other atomic bomb survil",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.636,
+    "id": "o413"
+   },
+   {
+    "text": "was in Japan in the summer of 2006",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.926,
+    "id": "o414"
+   },
+   {
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.694,
+    "id": "o415"
+   },
+   {
+    "text": "the interview data, this study will examine atomic bomb survivors\" dietary history",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.599,
+    "id": "o416"
+   },
+   {
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.675,
+    "id": "o417"
+   },
+   {
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.559,
+    "id": "o418"
+   },
+   {
+    "text": "lom",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.756,
+    "id": "o419"
+   },
+   {
+    "text": "tragic events",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.813,
+    "id": "o420"
+   },
+   {
+    "text": "but we can (UM them into valuable lessons that can",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.594,
+    "id": "o421"
+   },
+   {
+    "text": "eventually help us find ways t0 prevent and",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.673,
+    "id": "o422"
+   },
+   {
+    "text": "or control cancer.",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.706,
+    "id": "o423"
+   },
+   {
+    "text": "My hope",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.598,
+    "id": "o424"
+   },
+   {
+    "text": "it t0 today",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.876,
+    "id": "o425"
+   },
+   {
+    "text": "medicine.",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.957,
+    "id": "o426"
+   },
+   {
+    "text": "II. Previous Literatures",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.567,
+    "id": "o427"
+   },
+   {
+    "text": "The nature of the problem to be examined",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.693,
+    "id": "o428"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.999,
+    "id": "o429"
+   },
+   {
+    "text": "Dietary Practice of Hiroshim:/Nagasaki Atomic Bomb Survivor",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.59,
+    "id": "o430"
+   },
+   {
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.779,
+    "id": "o431"
+   },
+   {
+    "text": "Imtroduction",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.514,
+    "id": "o432"
+   },
+   {
+    "text": "August of 1945. the first atomic bomb was dropped in Hiroshima and U",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.556,
+    "id": "o433"
+   },
+   {
+    "text": "second",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.998,
+    "id": "o434"
+   },
+   {
+    "text": "leadig toJapan",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.722,
+    "id": "o435"
+   },
+   {
+    "text": "unconditional surrender and the end of the Pacil",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.546,
+    "id": "o436"
+   },
+   {
+    "text": "War belween",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.607,
+    "id": "o437"
+   },
+   {
+    "text": "Japan:",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.527,
+    "id": "o438"
+   },
+   {
+    "text": "Although most of the people within",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.873,
+    "id": "o439"
+   },
+   {
+    "text": "two kilometer radius from the hypocenter diec",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.501,
+    "id": "o440"
+   },
+   {
+    "text": "atomic bomb blast and radiation",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.989,
+    "id": "o441"
+   },
+   {
+    "text": "indirect exposure",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.99,
+    "id": "o442"
+   },
+   {
+    "text": "some did not suffer from",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.972,
+    "id": "o443"
+   },
+   {
+    "text": "related to the radiation and are still alive at present:",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.716,
+    "id": "o444"
+   },
+   {
+    "text": "did these people survive while others did not?\"",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.921,
+    "id": "o445"
+   },
+   {
+    "text": "[Hiroshima Atomie Bombing:",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.726,
+    "id": "o446"
+   },
+   {
+    "text": "Nagasaki at the time Of the bombing",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.706,
+    "id": "o447"
+   },
+   {
+    "text": "The late Dr. Akizuki;",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.51,
+    "id": "o448"
+   },
+   {
+    "text": "medical doctor In",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.972,
+    "id": "o449"
+   },
+   {
+    "text": "served t0 help the injured:",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.587,
+    "id": "o450"
+   },
+   {
+    "text": "He observed that these survivon had",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.799,
+    "id": "o451"
+   },
+   {
+    "text": "common diet pra",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.554,
+    "id": "o452"
+   },
+   {
+    "text": "Dr; Akizuki unfortunately pass",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.834,
+    "id": "o453"
+   },
+   {
+    "text": "traditional Japanese diet enriched with Miso",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.741,
+    "id": "o454"
+   },
+   {
+    "text": "2005",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.992,
+    "id": "o455"
+   },
+   {
+    "text": "Akizuki;as well as other atomic bomb survil",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.527,
+    "id": "o456"
+   },
+   {
+    "text": "but",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.91,
+    "id": "o457"
+   },
+   {
+    "text": "was in Japan in the summer of 2006",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.925,
+    "id": "o458"
+   },
+   {
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.696,
+    "id": "o459"
+   },
+   {
+    "text": "the interview data, this study will examine atomic bomb survivors\" dietary history",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.594,
+    "id": "o460"
+   },
+   {
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.674,
+    "id": "o461"
+   },
+   {
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.559,
+    "id": "o462"
+   },
+   {
+    "text": "lom",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.756,
+    "id": "o463"
+   },
+   {
+    "text": "tragic events",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.813,
+    "id": "o464"
+   },
+   {
+    "text": "but we can (UM them into valuable lessons that can",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.594,
+    "id": "o465"
+   },
+   {
+    "text": "eventually help us find ways t0 prevent and",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.673,
+    "id": "o466"
+   },
+   {
+    "text": "or control cancer.",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.706,
+    "id": "o467"
+   },
+   {
+    "text": "My hope",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.598,
+    "id": "o468"
+   },
+   {
+    "text": "it t0 today",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.876,
+    "id": "o469"
+   },
+   {
+    "text": "medicine.",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.957,
+    "id": "o470"
+   },
+   {
+    "text": "II. Previous Literatures",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.567,
+    "id": "o471"
+   },
+   {
+    "text": "The nature of the problem to be examined",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.693,
+    "id": "o472"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.999,
+    "id": "o473"
+   },
+   {
+    "text": "Dietary Practice of Hiroshim:/Nagasaki Atomic Bomb Survivor",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.59,
+    "id": "o474"
+   },
+   {
+    "text": "ssociate Professor of Japanese Studies, Illinois Wesleyan University",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.779,
+    "id": "o475"
+   },
+   {
+    "text": "Imtroduction",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.514,
+    "id": "o476"
+   },
+   {
+    "text": "August of 1945. the first atomic bomb was dropped in Hiroshima and U",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.556,
+    "id": "o477"
+   },
+   {
+    "text": "second",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.998,
+    "id": "o478"
+   },
+   {
+    "text": "leadig toJapan",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.722,
+    "id": "o479"
+   },
+   {
+    "text": "unconditional surrender and the end of the Pacil",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.546,
+    "id": "o480"
+   },
+   {
+    "text": "War belween",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.607,
+    "id": "o481"
+   },
+   {
+    "text": "Japan:",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.632,
+    "id": "o482"
+   },
+   {
+    "text": "Although most of the people within",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.873,
+    "id": "o483"
+   },
+   {
+    "text": "two kilometer radius from the hypocenter diec",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.501,
+    "id": "o484"
+   },
+   {
+    "text": "atomic bomb blast and radiation",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.989,
+    "id": "o485"
+   },
+   {
+    "text": "indirect exposure",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.99,
+    "id": "o486"
+   },
+   {
+    "text": "some did not suffer from",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.972,
+    "id": "o487"
+   },
+   {
+    "text": "related to the radiation and are still alive at present:",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.716,
+    "id": "o488"
+   },
+   {
+    "text": "did these people survive while others did not?\"",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.921,
+    "id": "o489"
+   },
+   {
+    "text": "[Hiroshima Atomie Bombing:",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.726,
+    "id": "o490"
+   },
+   {
+    "text": "Nagasaki at the time Of the bombing",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.706,
+    "id": "o491"
+   },
+   {
+    "text": "The late Dr. Akizuki;",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.51,
+    "id": "o492"
+   },
+   {
+    "text": "medical doctor In",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.972,
+    "id": "o493"
+   },
+   {
+    "text": "served t0 help the injured:",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.587,
+    "id": "o494"
+   },
+   {
+    "text": "He observed that these survivon had",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.799,
+    "id": "o495"
+   },
+   {
+    "text": "common diet pra",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.554,
+    "id": "o496"
+   },
+   {
+    "text": "Dr; Akizuki unfortunately pass",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.834,
+    "id": "o497"
+   },
+   {
+    "text": "traditional Japanese diet enriched with Miso",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.735,
+    "id": "o498"
+   },
+   {
+    "text": "2005",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.992,
+    "id": "o499"
+   },
+   {
+    "text": "Akizuki;as well as other atomic bomb survil",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.527,
+    "id": "o500"
+   },
+   {
+    "text": "but",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.911,
+    "id": "o501"
+   },
+   {
+    "text": "was in Japan in the summer of 2006",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.925,
+    "id": "o502"
+   },
+   {
+    "text": "30 people: in Hiroshima and Nagasaki. while",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.59,
+    "id": "o503"
+   },
+   {
+    "text": "the interview data, this study will examine atomic bomb survivors\" dietary history",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.594,
+    "id": "o504"
+   },
+   {
+    "text": "purpose of qualitatively discussing the relationship between traditional Japanese fo(",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.674,
+    "id": "o505"
+   },
+   {
+    "text": "with Miso and their health conditions alter exposure t0 the atomic bomb",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.559,
+    "id": "o506"
+   },
+   {
+    "text": "lom",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.756,
+    "id": "o507"
+   },
+   {
+    "text": "tragic events",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.813,
+    "id": "o508"
+   },
+   {
+    "text": "but we can (UM them into valuable lessons that can",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.594,
+    "id": "o509"
+   },
+   {
+    "text": "eventually help us find ways t0 prevent and",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.673,
+    "id": "o510"
+   },
+   {
+    "text": "or control cancer.",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.706,
+    "id": "o511"
+   },
+   {
+    "text": "My hope",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.598,
+    "id": "o512"
+   },
+   {
+    "text": "it t0 today",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.876,
+    "id": "o513"
+   },
+   {
+    "text": "medicine.",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.957,
+    "id": "o514"
+   },
+   {
+    "text": "II. Previous Literatures",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.567,
+    "id": "o515"
+   },
+   {
+    "text": "The nature of the problem to be examined",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.693,
+    "id": "o516"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.999,
+    "id": "o517"
+   },
+   {
+    "text": "collahoralors",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.647,
+    "id": "o518"
+   },
+   {
+    "text": "Aulln",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.503,
+    "id": "o519"
+   },
+   {
+    "text": "Acuton",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.583,
+    "id": "o520"
+   },
+   {
+    "text": "ml",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.911,
+    "id": "o521"
+   },
+   {
+    "text": "Sunival. Cypt Lengths",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.519,
+    "id": "o522"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 34.0,
+    "end": 36.0,
+    "confidence": 0.998,
+    "id": "o523"
+   },
+   {
+    "text": "collaboralors",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.541,
+    "id": "o524"
+   },
+   {
+    "text": "Miso is a fermented bean",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.985,
+    "id": "o525"
+   },
+   {
+    "text": "paste",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o526"
+   },
+   {
+    "text": "Cnm",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.586,
+    "id": "o527"
+   },
+   {
+    "text": "~Spilie",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.789,
+    "id": "o528"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.998,
+    "id": "o529"
+   },
+   {
+    "text": "collaboralors",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.514,
+    "id": "o530"
+   },
+   {
+    "text": "the intake of misoand dieay",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.567,
+    "id": "o531"
+   },
+   {
+    "text": "chan",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.992,
+    "id": "o532"
+   },
+   {
+    "text": "Miso is a fermented bean",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.932,
+    "id": "o533"
+   },
+   {
+    "text": "paste",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.736,
+    "id": "o534"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.998,
+    "id": "o535"
+   },
+   {
+    "text": "collaboralors",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.519,
+    "id": "o536"
+   },
+   {
+    "text": "the intake of misoand dieas",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.51,
+    "id": "o537"
+   },
+   {
+    "text": "controll",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.625,
+    "id": "o538"
+   },
+   {
+    "text": "Aullon",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.601,
+    "id": "o539"
+   },
+   {
+    "text": "Dath",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.713,
+    "id": "o540"
+   },
+   {
+    "text": "W B ' R B",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.525,
+    "id": "o541"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.998,
+    "id": "o542"
+   },
+   {
+    "text": "P",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.595,
+    "id": "o543"
+   },
+   {
+    "text": "Miso is a fermented soybean paste made from",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.952,
+    "id": "o544"
+   },
+   {
+    "text": "cuisine asa soup.",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.746,
+    "id": "o545"
+   },
+   {
+    "text": "study from Hiroshima University has",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.91,
+    "id": "o546"
+   },
+   {
+    "text": "demonstrated the potential for miso to prevent",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.977,
+    "id": "o547"
+   },
+   {
+    "text": "adiation poisoning, but not treat it afterthe",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.656,
+    "id": "o548"
+   },
+   {
+    "text": "fact",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o549"
+   },
+   {
+    "text": "The protective qualities of miso seem to",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.798,
+    "id": "o550"
+   },
+   {
+    "text": "correlato",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.654,
+    "id": "o551"
+   },
+   {
+    "text": "longer;",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.94,
+    "id": "o552"
+   },
+   {
+    "text": "iso that's been",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.959,
+    "id": "o553"
+   },
+   {
+    "text": "aged",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o554"
+   },
+   {
+    "text": "boiling water; which could",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.978,
+    "id": "o555"
+   },
+   {
+    "text": "an",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o556"
+   },
+   {
+    "text": "ki",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o557"
+   },
+   {
+    "text": "ures.",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.862,
+    "id": "o558"
+   },
+   {
+    "text": "nnst",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.64,
+    "id": "o559"
+   },
+   {
+    "text": "ing a W",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.949,
+    "id": "o560"
+   },
+   {
+    "text": "1945 wl",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.693,
+    "id": "o561"
+   },
+   {
+    "text": "Kedical team",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.985,
+    "id": "o562"
+   },
+   {
+    "text": "sickness after",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.999,
+    "id": "o563"
+   },
+   {
+    "text": "no",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o564"
+   },
+   {
+    "text": "ed",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o565"
+   },
+   {
+    "text": "ation",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.906,
+    "id": "o566"
+   },
+   {
+    "text": "canok",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.564,
+    "id": "o567"
+   },
+   {
+    "text": "ving",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.539,
+    "id": "o568"
+   },
+   {
+    "text": "but it takes",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.744,
+    "id": "o569"
+   },
+   {
+    "text": "that you",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.968,
+    "id": "o570"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.999,
+    "id": "o571"
+   },
+   {
+    "text": "P",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.601,
+    "id": "o572"
+   },
+   {
+    "text": "Miso is a fermented soybean paste made from",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.954,
+    "id": "o573"
+   },
+   {
+    "text": "cuisine asa soup.",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.682,
+    "id": "o574"
+   },
+   {
+    "text": "study from Hiroshima University has",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.887,
+    "id": "o575"
+   },
+   {
+    "text": "demonstrated the potential for miso to prevent",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.918,
+    "id": "o576"
+   },
+   {
+    "text": "fact",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o577"
+   },
+   {
+    "text": "The protective qualities of miso seem to",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.969,
+    "id": "o578"
+   },
+   {
+    "text": "correlat",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.94,
+    "id": "o579"
+   },
+   {
+    "text": "fermentation, so opt for",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.634,
+    "id": "o580"
+   },
+   {
+    "text": "niso that's been aged longer;",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.869,
+    "id": "o581"
+   },
+   {
+    "text": "unpa",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.915,
+    "id": "o582"
+   },
+   {
+    "text": "boiling",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o583"
+   },
+   {
+    "text": "water; which could",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.931,
+    "id": "o584"
+   },
+   {
+    "text": "an",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o585"
+   },
+   {
+    "text": "kil",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o586"
+   },
+   {
+    "text": "ures.",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.86,
+    "id": "o587"
+   },
+   {
+    "text": "ng a ward agai' st",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.751,
+    "id": "o588"
+   },
+   {
+    "text": "945",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o589"
+   },
+   {
+    "text": "m dica' team",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.793,
+    "id": "o590"
+   },
+   {
+    "text": "SS after",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.954,
+    "id": "o591"
+   },
+   {
+    "text": "no",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.76,
+    "id": "o592"
+   },
+   {
+    "text": "iery",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.508,
+    "id": "o593"
+   },
+   {
+    "text": "d abod",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.722,
+    "id": "o594"
+   },
+   {
+    "text": "nan due",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.678,
+    "id": "o595"
+   },
+   {
+    "text": "ma mel",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.994,
+    "id": "o596"
+   },
+   {
+    "text": "ou can",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.829,
+    "id": "o597"
+   },
+   {
+    "text": "wing",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.994,
+    "id": "o598"
+   },
+   {
+    "text": "but it takes",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.778,
+    "id": "o599"
+   },
+   {
+    "text": "that you",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.975,
+    "id": "o600"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.999,
+    "id": "o601"
+   },
+   {
+    "text": "P",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.601,
+    "id": "o602"
+   },
+   {
+    "text": "Miso is a fermented soybean paste made from",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.919,
+    "id": "o603"
+   },
+   {
+    "text": "cuisine asa soup.",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.796,
+    "id": "o604"
+   },
+   {
+    "text": "study from Hiroshima University has",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.797,
+    "id": "o605"
+   },
+   {
+    "text": "demonstrated the potential for miso to prevent",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.912,
+    "id": "o606"
+   },
+   {
+    "text": "fac",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o607"
+   },
+   {
+    "text": "The pro",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.989,
+    "id": "o608"
+   },
+   {
+    "text": "lities of miso seem to",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.998,
+    "id": "o609"
+   },
+   {
+    "text": "nentation, So opt for",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.517,
+    "id": "o610"
+   },
+   {
+    "text": "cor",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.99,
+    "id": "o611"
+   },
+   {
+    "text": "that'$ been aged longer;",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.669,
+    "id": "o612"
+   },
+   {
+    "text": "oiling water; which could",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.968,
+    "id": "o613"
+   },
+   {
+    "text": "res.",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.762,
+    "id": "o614"
+   },
+   {
+    "text": "ng a ward",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.768,
+    "id": "o615"
+   },
+   {
+    "text": "agair",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o616"
+   },
+   {
+    "text": "st",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.997,
+    "id": "o617"
+   },
+   {
+    "text": "945",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o618"
+   },
+   {
+    "text": "medica' team",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.983,
+    "id": "o619"
+   },
+   {
+    "text": "SS after",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.973,
+    "id": "o620"
+   },
+   {
+    "text": "no",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o621"
+   },
+   {
+    "text": "very",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o622"
+   },
+   {
+    "text": "ed abou",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.815,
+    "id": "o623"
+   },
+   {
+    "text": "due",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o624"
+   },
+   {
+    "text": "me",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o625"
+   },
+   {
+    "text": "You",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.963,
+    "id": "o626"
+   },
+   {
+    "text": "but it takes",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.801,
+    "id": "o627"
+   },
+   {
+    "text": "that you",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.976,
+    "id": "o628"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o629"
+   },
+   {
+    "text": "P",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.619,
+    "id": "o630"
+   },
+   {
+    "text": "Miso is a fermented soybean paste made from",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.933,
+    "id": "o631"
+   },
+   {
+    "text": "cuisine asa soup.",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.859,
+    "id": "o632"
+   },
+   {
+    "text": "study from Hiroshima University has",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.799,
+    "id": "o633"
+   },
+   {
+    "text": "demonstrated the potential for miso to prevent",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.917,
+    "id": "o634"
+   },
+   {
+    "text": "fact",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o635"
+   },
+   {
+    "text": "The protective qualities of miso seem to",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.854,
+    "id": "o636"
+   },
+   {
+    "text": "correl?",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.837,
+    "id": "o637"
+   },
+   {
+    "text": "fermentation, So opt for",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.527,
+    "id": "o638"
+   },
+   {
+    "text": "that'$ been aged longer;",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.678,
+    "id": "o639"
+   },
+   {
+    "text": "unp",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o640"
+   },
+   {
+    "text": "boiling water; which could",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.793,
+    "id": "o641"
+   },
+   {
+    "text": "an",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o642"
+   },
+   {
+    "text": "res.",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.73,
+    "id": "o643"
+   },
+   {
+    "text": "ng a ward agai' st",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.821,
+    "id": "o644"
+   },
+   {
+    "text": "945",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o645"
+   },
+   {
+    "text": "mi dica' team",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.576,
+    "id": "o646"
+   },
+   {
+    "text": "SS after",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.913,
+    "id": "o647"
+   },
+   {
+    "text": "no",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.747,
+    "id": "o648"
+   },
+   {
+    "text": "ery",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o649"
+   },
+   {
+    "text": "d abod",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.576,
+    "id": "o650"
+   },
+   {
+    "text": "an due",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.865,
+    "id": "o651"
+   },
+   {
+    "text": "mel",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.999,
+    "id": "o652"
+   },
+   {
+    "text": "ou",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.897,
+    "id": "o653"
+   },
+   {
+    "text": "ing",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.999,
+    "id": "o654"
+   },
+   {
+    "text": "but it takes",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.755,
+    "id": "o655"
+   },
+   {
+    "text": "that you",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.973,
+    "id": "o656"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o657"
+   },
+   {
+    "text": "P",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.619,
+    "id": "o658"
+   },
+   {
+    "text": "Miso is a fermented soybean paste made from",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.96,
+    "id": "o659"
+   },
+   {
+    "text": "cuisine asa soup.",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.836,
+    "id": "o660"
+   },
+   {
+    "text": "study from Hiroshima University has",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.8,
+    "id": "o661"
+   },
+   {
+    "text": "demonstrated the potential for miso to prevent",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.915,
+    "id": "o662"
+   },
+   {
+    "text": "fact",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o663"
+   },
+   {
+    "text": "qualities of miso seem to",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.616,
+    "id": "o664"
+   },
+   {
+    "text": "The protect",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.611,
+    "id": "o665"
+   },
+   {
+    "text": "correl",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.999,
+    "id": "o666"
+   },
+   {
+    "text": "'so that's been aged longer;",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.633,
+    "id": "o667"
+   },
+   {
+    "text": "unp",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o668"
+   },
+   {
+    "text": "voiling water; which could",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.534,
+    "id": "o669"
+   },
+   {
+    "text": "an",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.999,
+    "id": "o670"
+   },
+   {
+    "text": "ki",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o671"
+   },
+   {
+    "text": "res.",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.786,
+    "id": "o672"
+   },
+   {
+    "text": "against",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o673"
+   },
+   {
+    "text": "ng a ward",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.995,
+    "id": "o674"
+   },
+   {
+    "text": "945 when a medical team",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.748,
+    "id": "o675"
+   },
+   {
+    "text": "no radiation sickness after",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.909,
+    "id": "o676"
+   },
+   {
+    "text": "day:",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.705,
+    "id": "o677"
+   },
+   {
+    "text": "eating foods",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.949,
+    "id": "o678"
+   },
+   {
+    "text": "due to contamination",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.799,
+    "id": "o679"
+   },
+   {
+    "text": "meltdown. You",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.903,
+    "id": "o680"
+   },
+   {
+    "text": "but it takes",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.763,
+    "id": "o681"
+   },
+   {
+    "text": "that you",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.974,
+    "id": "o682"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o683"
+   },
+   {
+    "text": "X-Rays? Electromagnetic Spectru_",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.781,
+    "id": "o684"
+   },
+   {
+    "text": "livescience com",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.773,
+    "id": "o685"
+   },
+   {
+    "text": "Drugs.",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.683,
+    "id": "o686"
+   },
+   {
+    "text": "X-Rays Guide",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.799,
+    "id": "o687"
+   },
+   {
+    "text": "com",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o688"
+   },
+   {
+    "text": "drugs com",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.984,
+    "id": "o689"
+   },
+   {
+    "text": "irist",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.512,
+    "id": "o690"
+   },
+   {
+    "text": "Imaging Healthcare Specialists",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.81,
+    "id": "o691"
+   },
+   {
+    "text": "imaginghealthcare com",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.906,
+    "id": "o692"
+   },
+   {
+    "text": "TikTok",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.964,
+    "id": "o693"
+   },
+   {
+    "text": "maging",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.512,
+    "id": "o694"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.999,
+    "id": "o695"
+   },
+   {
+    "text": "livescient",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.606,
+    "id": "o696"
+   },
+   {
+    "text": "Healingartsapothecary",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 1.0,
+    "id": "o697"
+   },
+   {
+    "text": "drugs com",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.983,
+    "id": "o698"
+   },
+   {
+    "text": "iris",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.858,
+    "id": "o699"
+   },
+   {
+    "text": "Imaging Healthcare Specialists",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.746,
+    "id": "o700"
+   },
+   {
+    "text": "imaginghealthcare com",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.88,
+    "id": "o701"
+   },
+   {
+    "text": "TikTok",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.94,
+    "id": "o702"
+   },
+   {
+    "text": "naging",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.742,
+    "id": "o703"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.999,
+    "id": "o704"
+   },
+   {
+    "text": "livescient",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.57,
+    "id": "o705"
+   },
+   {
+    "text": "Healingartsapothecary",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 1.0,
+    "id": "o706"
+   },
+   {
+    "text": "K-hays Guiae",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.533,
+    "id": "o707"
+   },
+   {
+    "text": "drugs com",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.988,
+    "id": "o708"
+   },
+   {
+    "text": "Are",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 1.0,
+    "id": "o709"
+   },
+   {
+    "text": "irish",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.634,
+    "id": "o710"
+   },
+   {
+    "text": "Imaging Healthcare Specialists",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.766,
+    "id": "o711"
+   },
+   {
+    "text": "imaginghealthcare com",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.908,
+    "id": "o712"
+   },
+   {
+    "text": "TikTok",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.964,
+    "id": "o713"
+   },
+   {
+    "text": "aging",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.764,
+    "id": "o714"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.999,
+    "id": "o715"
+   }
+  ]
+ }
+}

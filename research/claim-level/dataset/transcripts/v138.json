@@ -1,0 +1,1037 @@
+{
+ "video_id": "v138",
+ "filename": "new_TikTok_7368885069718637857.mp4",
+ "relative_path": "new_TikTok_7368885069718637857.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@dar_nutricion",
+ "extracted_at": "2026-11-23T08:45:58",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.987,
+  "duration_seconds": 77.44,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.68,
+    "text": "Sabías que es una dieta alcalina. La dieta alcalina lo que hace es potenciar tu cuerpo al máximo nivel."
+   },
+   {
+    "id": "t2",
+    "start": 5.68,
+    "end": 10.8,
+    "text": "Aumentar tu sistema inmunológico, mejorar tu sueño, tu digestión, tu nivel de vitalidad."
+   },
+   {
+    "id": "t3",
+    "start": 10.8,
+    "end": 15.0,
+    "text": "Y esto es muy fácil de realizar. Simplemente tenemos que prestar la atención a los alimentos."
+   },
+   {
+    "id": "t4",
+    "start": 15.0,
+    "end": 20.0,
+    "text": "En nuestro cuerpo hay un pH y cuanto más alcalino somos, más eliminación de toxinas."
+   },
+   {
+    "id": "t5",
+    "start": 20.0,
+    "end": 26.0,
+    "text": "Y cuanto más eliminación de toxinas, que es exponencial, tu cuerpo tiene mucha más energía"
+   },
+   {
+    "id": "t6",
+    "start": 26.0,
+    "end": 29.0,
+    "text": "para revitalizar todos los procesos que necesitas."
+   },
+   {
+    "id": "t7",
+    "start": 29.0,
+    "end": 30.24,
+    "text": "¿Cómo es una dieta alcalina?"
+   },
+   {
+    "id": "t8",
+    "start": 30.24,
+    "end": 36.64,
+    "text": "Bueno, el primer paso es espaciar el consumo de alimentos que acidifiquen, que te inflamen."
+   },
+   {
+    "id": "t9",
+    "start": 36.64,
+    "end": 42.76,
+    "text": "Hay muchos, pero lo más importante es el alcohol, la carne roja y los alimentos procesados."
+   },
+   {
+    "id": "t10",
+    "start": 42.76,
+    "end": 46.72,
+    "text": "Espaciando estos consumos, tu cuerpo va a tener mucha más energía."
+   },
+   {
+    "id": "t11",
+    "start": 46.72,
+    "end": 54.44,
+    "text": "Y por otro lado, tenemos que alimentarnos de comida que nos brinde mucha energía con poco desgaste digestivo,"
+   },
+   {
+    "id": "t12",
+    "start": 54.44,
+    "end": 57.6,
+    "text": "para que tu cuerpo se potencia en su alcalinidad,"
+   },
+   {
+    "id": "t13",
+    "start": 57.6,
+    "end": 62.36,
+    "text": "legumbres, vegetales en general, frutas, verduras."
+   },
+   {
+    "id": "t14",
+    "start": 62.36,
+    "end": 64.68,
+    "text": "Y hay otras técnicas para alcalizar tu cuerpo,"
+   },
+   {
+    "id": "t15",
+    "start": 64.68,
+    "end": 66.56,
+    "text": "que te lo contaré en un detalle en el próximo vídeo,"
+   },
+   {
+    "id": "t16",
+    "start": 66.56,
+    "end": 69.32,
+    "text": "pero tiene que ver con la respiración y tiene que ver con el ejercicio."
+   },
+   {
+    "id": "t17",
+    "start": 69.32,
+    "end": 72.28,
+    "text": "Todo es un conjunto y tu cuerpo tiende la alcalinidad,"
+   },
+   {
+    "id": "t18",
+    "start": 72.28,
+    "end": 74.28,
+    "text": "solamente hay que ayudarlo un poquito."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 39,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Dieta Alcalina",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Dieta Alcalina",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "La dieta",
+    "confidence": 0.77
+   },
+   {
+    "time": 4.0,
+    "text": "Dieta Alcalina",
+    "confidence": 0.731
+   },
+   {
+    "time": 4.0,
+    "text": "lo que hace es",
+    "confidence": 0.718
+   },
+   {
+    "time": 4.0,
+    "text": "potenciar",
+    "confidence": 0.994
+   },
+   {
+    "time": 6.0,
+    "text": "Beneficios",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "aumentar",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "Beneficios",
+    "confidence": 0.831
+   },
+   {
+    "time": 8.0,
+    "text": "mejorar tu",
+    "confidence": 0.987
+   },
+   {
+    "time": 10.0,
+    "text": "Beneficios",
+    "confidence": 0.884
+   },
+   {
+    "time": 10.0,
+    "text": "tu nivel",
+    "confidence": 0.98
+   },
+   {
+    "time": 12.0,
+    "text": "tunivel de vitalidad y",
+    "confidence": 0.847
+   },
+   {
+    "time": 12.0,
+    "text": "esto es muy facil de",
+    "confidence": 0.877
+   },
+   {
+    "time": 14.0,
+    "text": "simplemente",
+    "confidence": 0.992
+   },
+   {
+    "time": 14.0,
+    "text": "tenemos que",
+    "confidence": 0.925
+   },
+   {
+    "time": 14.0,
+    "text": "prestarle atencion",
+    "confidence": 0.869
+   },
+   {
+    "time": 16.0,
+    "text": "en nuestro cuerpo",
+    "confidence": 0.997
+   },
+   {
+    "time": 16.0,
+    "text": "hay",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "un",
+    "confidence": 0.994
+   },
+   {
+    "time": 18.0,
+    "text": "en nuestro cuerpo",
+    "confidence": 0.632
+   },
+   {
+    "time": 18.0,
+    "text": "hhay",
+    "confidence": 0.935
+   },
+   {
+    "time": 18.0,
+    "text": "un pH ycuanto",
+    "confidence": 0.761
+   },
+   {
+    "time": 18.0,
+    "text": "mas alcalinos S0",
+    "confidence": 0.754
+   },
+   {
+    "time": 20.0,
+    "text": "mas eliminacion de",
+    "confidence": 0.743
+   },
+   {
+    "time": 20.0,
+    "text": "toxinas",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "y cuanto mas",
+    "confidence": 0.621
+   },
+   {
+    "time": 22.0,
+    "text": "eliminacion de",
+    "confidence": 0.904
+   },
+   {
+    "time": 22.0,
+    "text": "toxinas",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "tu cuerpo",
+    "confidence": 0.786
+   },
+   {
+    "time": 28.0,
+    "text": "para revitalizar",
+    "confidence": 0.998
+   },
+   {
+    "time": 28.0,
+    "text": "todos los procesos",
+    "confidence": 0.988
+   },
+   {
+    "time": 30.0,
+    "text": "{Como es una dieta",
+    "confidence": 0.842
+   },
+   {
+    "time": 30.0,
+    "text": "alcalina?",
+    "confidence": 0.999
+   },
+   {
+    "time": 32.0,
+    "text": "bueno elprimer paso",
+    "confidence": 0.987
+   },
+   {
+    "time": 32.0,
+    "text": "espaciar",
+    "confidence": 0.993
+   },
+   {
+    "time": 32.0,
+    "text": "es",
+    "confidence": 0.975
+   },
+   {
+    "time": 34.0,
+    "text": "que",
+    "confidence": 0.89
+   },
+   {
+    "time": 36.0,
+    "text": "que te",
+    "confidence": 0.76
+   },
+   {
+    "time": 38.0,
+    "text": "hay",
+    "confidence": 0.999
+   },
+   {
+    "time": 38.0,
+    "text": "muchos pero 1d",
+    "confidence": 0.53
+   },
+   {
+    "time": 38.0,
+    "text": "mas",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "la",
+    "confidence": 0.854
+   },
+   {
+    "time": 42.0,
+    "text": "la carne roja y los",
+    "confidence": 0.519
+   },
+   {
+    "time": 42.0,
+    "text": "alimentos",
+    "confidence": 0.989
+   },
+   {
+    "time": 42.0,
+    "text": "pcesados",
+    "confidence": 0.999
+   },
+   {
+    "time": 44.0,
+    "text": "espaciando estos",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "cuerpo va a tener",
+    "confidence": 0.724
+   },
+   {
+    "time": 46.0,
+    "text": "tu",
+    "confidence": 0.995
+   },
+   {
+    "time": 48.0,
+    "text": "y por otro lado",
+    "confidence": 0.819
+   },
+   {
+    "time": 48.0,
+    "text": "tenemos",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "de comida que nos",
+    "confidence": 0.997
+   },
+   {
+    "time": 52.0,
+    "text": "brinde",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "con poco desgaste",
+    "confidence": 0.875
+   },
+   {
+    "time": 54.0,
+    "text": "Stivo",
+    "confidence": 0.903
+   },
+   {
+    "time": 58.0,
+    "text": "qumbres",
+    "confidence": 0.548
+   },
+   {
+    "time": 60.0,
+    "text": "legumbres; vegetales",
+    "confidence": 0.825
+   },
+   {
+    "time": 60.0,
+    "text": "general",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.0,
+    "text": "en",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.0,
+    "text": "verduras",
+    "confidence": 0.95
+   },
+   {
+    "time": 64.0,
+    "text": "hay otras tecnicas",
+    "confidence": 0.982
+   },
+   {
+    "time": 64.0,
+    "text": "y",
+    "confidence": 0.557
+   },
+   {
+    "time": 64.0,
+    "text": "para alcalinizar",
+    "confidence": 0.993
+   },
+   {
+    "time": 66.0,
+    "text": "que te lo contare en",
+    "confidence": 0.941
+   },
+   {
+    "time": 66.0,
+    "text": "detalle en el",
+    "confidence": 0.998
+   },
+   {
+    "time": 70.0,
+    "text": "Todo es un",
+    "confidence": 0.927
+   },
+   {
+    "time": 70.0,
+    "text": "to",
+    "confidence": 0.711
+   },
+   {
+    "time": 72.0,
+    "text": "conjunto",
+    "confidence": 1.0
+   },
+   {
+    "time": 72.0,
+    "text": "Todo es un",
+    "confidence": 0.699
+   },
+   {
+    "time": 72.0,
+    "text": "y tu cuerpo tiende la",
+    "confidence": 0.613
+   },
+   {
+    "time": 72.0,
+    "text": "alcalinidad",
+    "confidence": 1.0
+   },
+   {
+    "time": 74.0,
+    "text": "solamente hay que",
+    "confidence": 0.968
+   },
+   {
+    "time": 74.0,
+    "text": "ayudarlo un poquito",
+    "confidence": 0.929
+   },
+   {
+    "time": 76.0,
+    "text": "Apuntate a las charlas",
+    "confidence": 0.821
+   },
+   {
+    "time": 76.0,
+    "text": "gratuitas mensuales",
+    "confidence": 0.732
+   }
+  ],
+  "captions": [
+   {
+    "text": "Dieta Alcalina",
+    "start": 0.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o1"
+   },
+   {
+    "text": "La dieta",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.77,
+    "id": "o2"
+   },
+   {
+    "text": "Dieta Alcalina",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.731,
+    "id": "o3"
+   },
+   {
+    "text": "lo que hace es",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.718,
+    "id": "o4"
+   },
+   {
+    "text": "potenciar",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.994,
+    "id": "o5"
+   },
+   {
+    "text": "Beneficios",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o6"
+   },
+   {
+    "text": "aumentar",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.999,
+    "id": "o7"
+   },
+   {
+    "text": "Beneficios",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.831,
+    "id": "o8"
+   },
+   {
+    "text": "mejorar tu",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.987,
+    "id": "o9"
+   },
+   {
+    "text": "Beneficios",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.884,
+    "id": "o10"
+   },
+   {
+    "text": "tu nivel",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.98,
+    "id": "o11"
+   },
+   {
+    "text": "tunivel de vitalidad y",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.847,
+    "id": "o12"
+   },
+   {
+    "text": "esto es muy facil de",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.877,
+    "id": "o13"
+   },
+   {
+    "text": "simplemente",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.992,
+    "id": "o14"
+   },
+   {
+    "text": "tenemos que",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.925,
+    "id": "o15"
+   },
+   {
+    "text": "prestarle atencion",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.869,
+    "id": "o16"
+   },
+   {
+    "text": "en nuestro cuerpo",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.997,
+    "id": "o17"
+   },
+   {
+    "text": "hay",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o18"
+   },
+   {
+    "text": "un",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.994,
+    "id": "o19"
+   },
+   {
+    "text": "en nuestro cuerpo",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.632,
+    "id": "o20"
+   },
+   {
+    "text": "hhay",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.935,
+    "id": "o21"
+   },
+   {
+    "text": "un pH ycuanto",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.761,
+    "id": "o22"
+   },
+   {
+    "text": "mas alcalinos S0",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.754,
+    "id": "o23"
+   },
+   {
+    "text": "mas eliminacion de",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.743,
+    "id": "o24"
+   },
+   {
+    "text": "toxinas",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o25"
+   },
+   {
+    "text": "y cuanto mas",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.621,
+    "id": "o26"
+   },
+   {
+    "text": "eliminacion de",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.904,
+    "id": "o27"
+   },
+   {
+    "text": "toxinas",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o28"
+   },
+   {
+    "text": "tu cuerpo",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.786,
+    "id": "o29"
+   },
+   {
+    "text": "para revitalizar",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.998,
+    "id": "o30"
+   },
+   {
+    "text": "todos los procesos",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.988,
+    "id": "o31"
+   },
+   {
+    "text": "{Como es una dieta",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.842,
+    "id": "o32"
+   },
+   {
+    "text": "alcalina?",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.999,
+    "id": "o33"
+   },
+   {
+    "text": "bueno elprimer paso",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.987,
+    "id": "o34"
+   },
+   {
+    "text": "espaciar",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.993,
+    "id": "o35"
+   },
+   {
+    "text": "es",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.975,
+    "id": "o36"
+   },
+   {
+    "text": "que",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.89,
+    "id": "o37"
+   },
+   {
+    "text": "que te",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.76,
+    "id": "o38"
+   },
+   {
+    "text": "hay",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.999,
+    "id": "o39"
+   },
+   {
+    "text": "muchos pero 1d",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.53,
+    "id": "o40"
+   },
+   {
+    "text": "mas",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o41"
+   },
+   {
+    "text": "la",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.854,
+    "id": "o42"
+   },
+   {
+    "text": "la carne roja y los",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.519,
+    "id": "o43"
+   },
+   {
+    "text": "alimentos",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.989,
+    "id": "o44"
+   },
+   {
+    "text": "pcesados",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.999,
+    "id": "o45"
+   },
+   {
+    "text": "espaciando estos",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o46"
+   },
+   {
+    "text": "cuerpo va a tener",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.724,
+    "id": "o47"
+   },
+   {
+    "text": "tu",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.995,
+    "id": "o48"
+   },
+   {
+    "text": "y por otro lado",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.819,
+    "id": "o49"
+   },
+   {
+    "text": "tenemos",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o50"
+   },
+   {
+    "text": "de comida que nos",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.997,
+    "id": "o51"
+   },
+   {
+    "text": "brinde",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o52"
+   },
+   {
+    "text": "con poco desgaste",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.875,
+    "id": "o53"
+   },
+   {
+    "text": "Stivo",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.903,
+    "id": "o54"
+   },
+   {
+    "text": "qumbres",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.548,
+    "id": "o55"
+   },
+   {
+    "text": "legumbres; vegetales",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.825,
+    "id": "o56"
+   },
+   {
+    "text": "general",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 1.0,
+    "id": "o57"
+   },
+   {
+    "text": "en",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 1.0,
+    "id": "o58"
+   },
+   {
+    "text": "verduras",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.95,
+    "id": "o59"
+   },
+   {
+    "text": "hay otras tecnicas",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.982,
+    "id": "o60"
+   },
+   {
+    "text": "y",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.557,
+    "id": "o61"
+   },
+   {
+    "text": "para alcalinizar",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.993,
+    "id": "o62"
+   },
+   {
+    "text": "que te lo contare en",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.941,
+    "id": "o63"
+   },
+   {
+    "text": "detalle en el",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.998,
+    "id": "o64"
+   },
+   {
+    "text": "Todo es un",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.927,
+    "id": "o65"
+   },
+   {
+    "text": "to",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.711,
+    "id": "o66"
+   },
+   {
+    "text": "conjunto",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 1.0,
+    "id": "o67"
+   },
+   {
+    "text": "Todo es un",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.699,
+    "id": "o68"
+   },
+   {
+    "text": "y tu cuerpo tiende la",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.613,
+    "id": "o69"
+   },
+   {
+    "text": "alcalinidad",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 1.0,
+    "id": "o70"
+   },
+   {
+    "text": "solamente hay que",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.968,
+    "id": "o71"
+   },
+   {
+    "text": "ayudarlo un poquito",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.929,
+    "id": "o72"
+   },
+   {
+    "text": "Apuntate a las charlas",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.821,
+    "id": "o73"
+   },
+   {
+    "text": "gratuitas mensuales",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.732,
+    "id": "o74"
+   }
+  ]
+ }
+}

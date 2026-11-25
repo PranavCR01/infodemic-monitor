@@ -1,0 +1,224 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 100.73,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.56,
+    "text": "This is an extreme hidden competition show with a $100,000 prize, where six elite experts"
+   },
+   {
+    "id": "t2",
+    "start": 5.56,
+    "end": 9.68,
+    "text": "must hide inside an abandoned courthouse, and if they avoid being found for one hour,"
+   },
+   {
+    "id": "t3",
+    "start": 9.68,
+    "end": 10.68,
+    "text": "they win."
+   },
+   {
+    "id": "t4",
+    "start": 10.68,
+    "end": 13.6,
+    "text": "At first, they get three days to study the building and build their hiding spots."
+   },
+   {
+    "id": "t5",
+    "start": 13.6,
+    "end": 18.12,
+    "text": "The first player, Alex, chooses a cabinet, and it sounds obvious, but the cabinet actually"
+   },
+   {
+    "id": "t6",
+    "start": 18.12,
+    "end": 19.24,
+    "text": "has two levels."
+   },
+   {
+    "id": "t7",
+    "start": 19.24,
+    "end": 23.76,
+    "text": "He reconstructs the whole thing, lowering the upper compartment by 1.6 feet and creates"
+   },
+   {
+    "id": "t8",
+    "start": 23.76,
+    "end": 25.28,
+    "text": "a hidden door at the bottom."
+   },
+   {
+    "id": "t9",
+    "start": 25.28,
+    "end": 27.52,
+    "text": "Even if the hunter opens it, he'll see nothing wrong."
+   },
+   {
+    "id": "t10",
+    "start": 27.52,
+    "end": 29.56,
+    "text": "Sam refuses to hide inside the main building."
+   },
+   {
+    "id": "t11",
+    "start": 29.56,
+    "end": 33.36,
+    "text": "He targets the entrance gate because between the walls there's a narrow space that perfectly"
+   },
+   {
+    "id": "t12",
+    "start": 33.36,
+    "end": 36.8,
+    "text": "follows the rules, and it's the last place the Hunter would ever check."
+   },
+   {
+    "id": "t13",
+    "start": 36.8,
+    "end": 38.08,
+    "text": "Tony decides to go underground."
+   },
+   {
+    "id": "t14",
+    "start": 38.08,
+    "end": 39.88,
+    "text": "He installs a custom-made marble step."
+   },
+   {
+    "id": "t15",
+    "start": 39.88,
+    "end": 43.92,
+    "text": "In previous seasons, the Hunter knocked on floors to detect hollow spaces, so Tony used"
+   },
+   {
+    "id": "t16",
+    "start": 43.92,
+    "end": 47.36,
+    "text": "thick marble that absorbs sound and made the perfect silent bunker."
+   },
+   {
+    "id": "t17",
+    "start": 47.36,
+    "end": 51.08,
+    "text": "Max is the craziest because he notices the production team always sets up a control"
+   },
+   {
+    "id": "t18",
+    "start": 51.08,
+    "end": 54.56,
+    "text": "room where hiding is forbidden, and the Hunter never looks there, so he spends two and a"
+   },
+   {
+    "id": "t19",
+    "start": 54.56,
+    "end": 57.96,
+    "text": "half days building an entire fake studio design, even with the fake staff."
+   },
+   {
+    "id": "t20",
+    "start": 57.96,
+    "end": 62.12,
+    "text": "Jack discovers a secret office door during scouting, but it's not safe enough, so he"
+   },
+   {
+    "id": "t21",
+    "start": 62.12,
+    "end": 66.24,
+    "text": "hires a renovation team, transforms the whole wall, adds golden frames, and camouflages the"
+   },
+   {
+    "id": "t22",
+    "start": 66.24,
+    "end": 68.68,
+    "text": "door so perfectly, you'd swear it was always there."
+   },
+   {
+    "id": "t23",
+    "start": 68.68,
+    "end": 72.2,
+    "text": "Chris uses the courtroom furniture, he rebuilds a door with a small hole at the bottom, then"
+   },
+   {
+    "id": "t24",
+    "start": 72.2,
+    "end": 74.52,
+    "text": "brings a full row of folding chairs to block the opening."
+   },
+   {
+    "id": "t25",
+    "start": 74.52,
+    "end": 76.92,
+    "text": "When the chairs fold, the hole becomes completely invisible."
+   },
+   {
+    "id": "t26",
+    "start": 76.92,
+    "end": 80.12,
+    "text": "These hiding spots are insane, but will the hunter find the hiding experts?"
+   },
+   {
+    "id": "t27",
+    "start": 80.12,
+    "end": 81.12,
+    "text": "The countdown starts."
+   },
+   {
+    "id": "t28",
+    "start": 81.12,
+    "end": 84.4,
+    "text": "The hunter enters through the courthouse doors and he doesn't even consider the entrance,"
+   },
+   {
+    "id": "t29",
+    "start": 84.4,
+    "end": 85.72,
+    "text": "meaning Sam is safe."
+   },
+   {
+    "id": "t30",
+    "start": 85.72,
+    "end": 88.0,
+    "text": "He taps statues and walls to detect hollows."
+   },
+   {
+    "id": "t31",
+    "start": 88.0,
+    "end": 90.0,
+    "text": "Tony's thick marble floor gives him nothing."
+   },
+   {
+    "id": "t32",
+    "start": 90.0,
+    "end": 91.6,
+    "text": "Then he reaches Max's fake studio."
+   },
+   {
+    "id": "t33",
+    "start": 91.6,
+    "end": 93.32,
+    "text": "At first, he only planned to greet the staff,"
+   },
+   {
+    "id": "t34",
+    "start": 93.32,
+    "end": 94.88,
+    "text": "but then he notices something strange."
+   },
+   {
+    "id": "t35",
+    "start": 94.88,
+    "end": 96.88,
+    "text": "He doesn't recognize any of the cameramen."
+   }
+  ]
+ }
+}

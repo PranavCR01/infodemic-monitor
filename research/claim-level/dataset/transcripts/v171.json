@@ -1,0 +1,1616 @@
+{
+ "video_id": "v171",
+ "filename": "new_youtube_bwzeDGbn_KA.webm",
+ "relative_path": "new_youtube_bwzeDGbn_KA.webm",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:59",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.995,
+  "duration_seconds": 54.91,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 7.0,
+    "text": "María Calas falleció sola en París a los 53 años, en 1977. Tras su muerte se descubrieron"
+   },
+   {
+    "id": "t2",
+    "start": 7.0,
+    "end": 11.64,
+    "text": "secretos de su trágica pero talentosa vida. Perfeccionista y exigente la cantante de"
+   },
+   {
+    "id": "t3",
+    "start": 11.64,
+    "end": 17.0,
+    "text": "ópera más eminente del siglo XX, quedó marcada tras leer en un periódico la reseña"
+   },
+   {
+    "id": "t4",
+    "start": 17.0,
+    "end": 21.92,
+    "text": "de una de sus primeras interpretaciones de Aida. Imposible distinguir entre las patas"
+   },
+   {
+    "id": "t5",
+    "start": 21.92,
+    "end": 27.24,
+    "text": "de los elefantes del escenario y las piernas de la Calas. Un maldito crítico le diagnosticaba"
+   },
+   {
+    "id": "t6",
+    "start": 27.24,
+    "end": 32.52,
+    "text": "elefanteasis y se olvidaba de su excelencia como cantante. Indignada, aunque nunca superaría"
+   },
+   {
+    "id": "t7",
+    "start": 32.52,
+    "end": 37.64,
+    "text": "su complejo de brazos fláxidos y tobillos hinchados, María juró solucionarlo. En"
+   },
+   {
+    "id": "t8",
+    "start": 37.64,
+    "end": 42.36,
+    "text": "solo una temporada, perdió 50 kilos entre su interpretación de la yoconda y la de"
+   },
+   {
+    "id": "t9",
+    "start": 42.36,
+    "end": 47.28,
+    "text": "Don Carlos en la escala. La hipótesis brutal de su transformación sostenía que María"
+   },
+   {
+    "id": "t10",
+    "start": 47.28,
+    "end": 52.36,
+    "text": "Calas había ingerido una tenia solitaria que se encargaba de todo, una moda que se"
+   },
+   {
+    "id": "t11",
+    "start": 52.36,
+    "end": 54.8,
+    "text": "impuso en Europa desde 1900."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 28,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "MV",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "HISTORIA",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "REAL",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "MV",
+    "confidence": 0.602
+   },
+   {
+    "time": 2.0,
+    "text": "HISTORIA",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "REAL",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "LOMBRIZ",
+    "confidence": 0.98
+   },
+   {
+    "time": 4.0,
+    "text": "MV",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "MV",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "MV",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "Maria",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "CALLAS",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "1925.1977",
+    "confidence": 0.829
+   },
+   {
+    "time": 8.0,
+    "text": "CETTE PLAQUEA CTE",
+    "confidence": 0.795
+   },
+   {
+    "time": 8.0,
+    "text": "APPOSEE PAR LE",
+    "confidence": 0.898
+   },
+   {
+    "time": 8.0,
+    "text": "MARIA CALLAS",
+    "confidence": 0.981
+   },
+   {
+    "time": 10.0,
+    "text": "MV",
+    "confidence": 0.997
+   },
+   {
+    "time": 10.0,
+    "text": "SUNDAY",
+    "confidence": 0.555
+   },
+   {
+    "time": 10.0,
+    "text": "TIMES",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "MY",
+    "confidence": 0.977
+   },
+   {
+    "time": 10.0,
+    "text": "STORY",
+    "confidence": 0.966
+   },
+   {
+    "time": 10.0,
+    "text": "by",
+    "confidence": 0.998
+   },
+   {
+    "time": 10.0,
+    "text": "MARIa",
+    "confidence": 0.915
+   },
+   {
+    "time": 10.0,
+    "text": "Callas",
+    "confidence": 0.824
+   },
+   {
+    "time": 12.0,
+    "text": "MV",
+    "confidence": 0.997
+   },
+   {
+    "time": 12.0,
+    "text": "SUNDA",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "TIMES",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "MY",
+    "confidence": 0.978
+   },
+   {
+    "time": 12.0,
+    "text": "STORY",
+    "confidence": 0.965
+   },
+   {
+    "time": 12.0,
+    "text": "by",
+    "confidence": 0.998
+   },
+   {
+    "time": 12.0,
+    "text": "MARIa",
+    "confidence": 0.92
+   },
+   {
+    "time": 12.0,
+    "text": "Callas",
+    "confidence": 0.82
+   },
+   {
+    "time": 14.0,
+    "text": "MV",
+    "confidence": 0.997
+   },
+   {
+    "time": 14.0,
+    "text": "VERDI",
+    "confidence": 0.936
+   },
+   {
+    "time": 14.0,
+    "text": "di",
+    "confidence": 0.961
+   },
+   {
+    "time": 14.0,
+    "text": "Nuovo",
+    "confidence": 0.656
+   },
+   {
+    "time": 16.0,
+    "text": "MV",
+    "confidence": 0.997
+   },
+   {
+    "time": 16.0,
+    "text": "VERDI",
+    "confidence": 0.936
+   },
+   {
+    "time": 16.0,
+    "text": "di",
+    "confidence": 0.961
+   },
+   {
+    "time": 16.0,
+    "text": "Nuovo",
+    "confidence": 0.655
+   },
+   {
+    "time": 18.0,
+    "text": "MV",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.0,
+    "text": "MV",
+    "confidence": 0.999
+   },
+   {
+    "time": 26.0,
+    "text": "MV",
+    "confidence": 0.998
+   },
+   {
+    "time": 28.0,
+    "text": "MV",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "MV",
+    "confidence": 0.999
+   },
+   {
+    "time": 32.0,
+    "text": "MV",
+    "confidence": 0.999
+   },
+   {
+    "time": 34.0,
+    "text": "MV",
+    "confidence": 0.997
+   },
+   {
+    "time": 36.0,
+    "text": "VIETA",
+    "confidence": 0.562
+   },
+   {
+    "time": 36.0,
+    "text": "MV",
+    "confidence": 0.997
+   },
+   {
+    "time": 36.0,
+    "text": "LA TRAVIATA =",
+    "confidence": 0.525
+   },
+   {
+    "time": 36.0,
+    "text": "GIUSEPPE VERDI",
+    "confidence": 0.659
+   },
+   {
+    "time": 38.0,
+    "text": "MV",
+    "confidence": 0.998
+   },
+   {
+    "time": 40.0,
+    "text": "Lusichid",
+    "confidence": 0.743
+   },
+   {
+    "time": 40.0,
+    "text": "MV",
+    "confidence": 0.995
+   },
+   {
+    "time": 40.0,
+    "text": "Salurday Review",
+    "confidence": 0.703
+   },
+   {
+    "time": 40.0,
+    "text": "IV",
+    "confidence": 0.582
+   },
+   {
+    "time": 40.0,
+    "text": "News",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "k",
+    "confidence": 0.995
+   },
+   {
+    "time": 40.0,
+    "text": "RNO",
+    "confidence": 0.691
+   },
+   {
+    "time": 40.0,
+    "text": "una",
+    "confidence": 0.86
+   },
+   {
+    "time": 40.0,
+    "text": "VITA",
+    "confidence": 0.999
+   },
+   {
+    "time": 40.0,
+    "text": "WER",
+    "confidence": 0.816
+   },
+   {
+    "time": 40.0,
+    "text": "THEATRE ARTSE",
+    "confidence": 0.524
+   },
+   {
+    "time": 42.0,
+    "text": "Lusichid",
+    "confidence": 0.72
+   },
+   {
+    "time": 42.0,
+    "text": "MV",
+    "confidence": 0.995
+   },
+   {
+    "time": 42.0,
+    "text": "Salurday Review",
+    "confidence": 0.701
+   },
+   {
+    "time": 42.0,
+    "text": "IV",
+    "confidence": 0.577
+   },
+   {
+    "time": 42.0,
+    "text": "News",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "k",
+    "confidence": 0.995
+   },
+   {
+    "time": 42.0,
+    "text": "RNO",
+    "confidence": 0.751
+   },
+   {
+    "time": 42.0,
+    "text": "una",
+    "confidence": 0.875
+   },
+   {
+    "time": 42.0,
+    "text": "VITA",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.0,
+    "text": "IV",
+    "confidence": 0.533
+   },
+   {
+    "time": 42.0,
+    "text": "WER",
+    "confidence": 0.807
+   },
+   {
+    "time": 42.0,
+    "text": "THEATRE ARTSE",
+    "confidence": 0.519
+   },
+   {
+    "time": 44.0,
+    "text": "MV",
+    "confidence": 0.997
+   },
+   {
+    "time": 44.0,
+    "text": "C",
+    "confidence": 0.564
+   },
+   {
+    "time": 44.0,
+    "text": "25",
+    "confidence": 0.608
+   },
+   {
+    "time": 46.0,
+    "text": "MV",
+    "confidence": 0.997
+   },
+   {
+    "time": 48.0,
+    "text": "MV",
+    "confidence": 0.999
+   },
+   {
+    "time": 48.0,
+    "text": "DON CARL",
+    "confidence": 0.642
+   },
+   {
+    "time": 48.0,
+    "text": "OPERA IN CINQUE ATTI",
+    "confidence": 0.578
+   },
+   {
+    "time": 48.0,
+    "text": "e CAMILLO DU",
+    "confidence": 0.875
+   },
+   {
+    "time": 48.0,
+    "text": "MERY",
+    "confidence": 0.997
+   },
+   {
+    "time": 48.0,
+    "text": "LOCLE",
+    "confidence": 0.845
+   },
+   {
+    "time": 48.0,
+    "text": "VER D I",
+    "confidence": 0.743
+   },
+   {
+    "time": 48.0,
+    "text": "G",
+    "confidence": 0.9
+   },
+   {
+    "time": 48.0,
+    "text": "TEATRO PAGLIANO",
+    "confidence": 0.759
+   },
+   {
+    "time": 48.0,
+    "text": "IN FRENZE",
+    "confidence": 0.946
+   },
+   {
+    "time": 48.0,
+    "text": "Maggio 1869.",
+    "confidence": 0.991
+   },
+   {
+    "time": 48.0,
+    "text": "Aprile",
+    "confidence": 0.999
+   },
+   {
+    "time": 48.0,
+    "text": "R. STABILIMENTO RICORDI",
+    "confidence": 0.846
+   },
+   {
+    "time": 48.0,
+    "text": "MILANO",
+    "confidence": 0.997
+   },
+   {
+    "time": 48.0,
+    "text": "NAPOLI",
+    "confidence": 0.996
+   },
+   {
+    "time": 48.0,
+    "text": "FIRENZE",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "paesi",
+    "confidence": 0.991
+   },
+   {
+    "time": 48.0,
+    "text": "Dejosto",
+    "confidence": 0.655
+   },
+   {
+    "time": 48.0,
+    "text": "norma",
+    "confidence": 0.71
+   },
+   {
+    "time": 48.0,
+    "text": "Diritti di trailuzione riserrati",
+    "confidence": 0.821
+   },
+   {
+    "time": 50.0,
+    "text": "MV",
+    "confidence": 0.999
+   },
+   {
+    "time": 52.0,
+    "text": "MV",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "STAY",
+    "confidence": 0.745
+   },
+   {
+    "time": 52.0,
+    "text": "ALWAYS",
+    "confidence": 0.825
+   },
+   {
+    "time": 52.0,
+    "text": "TEIILTI",
+    "confidence": 0.526
+   },
+   {
+    "time": 52.0,
+    "text": "GAT",
+    "confidence": 0.9
+   },
+   {
+    "time": 52.0,
+    "text": "DANGER",
+    "confidence": 0.739
+   },
+   {
+    "time": 52.0,
+    "text": "EIOTT?",
+    "confidence": 0.549
+   },
+   {
+    "time": 52.0,
+    "text": "SANITIZED",
+    "confidence": 0.995
+   },
+   {
+    "time": 52.0,
+    "text": "TAPE",
+    "confidence": 0.986
+   },
+   {
+    "time": 52.0,
+    "text": "GASWELL",
+    "confidence": 0.548
+   },
+   {
+    "time": 52.0,
+    "text": "WORMS",
+    "confidence": 0.972
+   },
+   {
+    "time": 52.0,
+    "text": "Jar Packed",
+    "confidence": 0.658
+   },
+   {
+    "time": 52.0,
+    "text": "'FRIENDS FOR",
+    "confidence": 0.85
+   },
+   {
+    "time": 52.0,
+    "text": "FAIR",
+    "confidence": 0.999
+   },
+   {
+    "time": 52.0,
+    "text": "Swallowl",
+    "confidence": 0.705
+   },
+   {
+    "time": 52.0,
+    "text": "Na 9U",
+    "confidence": 0.512
+   },
+   {
+    "time": 52.0,
+    "text": "PRUNES",
+    "confidence": 0.68
+   },
+   {
+    "time": 52.0,
+    "text": "PA RTICULARS",
+    "confidence": 0.753
+   },
+   {
+    "time": 52.0,
+    "text": "FREE",
+    "confidence": 0.996
+   },
+   {
+    "time": 54.0,
+    "text": "MV",
+    "confidence": 0.999
+   },
+   {
+    "time": 54.0,
+    "text": "iHASTA",
+    "confidence": 0.962
+   },
+   {
+    "time": 54.0,
+    "text": "PRONTOI",
+    "confidence": 0.562
+   },
+   {
+    "time": 54.0,
+    "text": "nunca",
+    "confidence": 0.616
+   },
+   {
+    "time": 54.0,
+    "text": "TAPE",
+    "confidence": 0.992
+   },
+   {
+    "time": 54.0,
+    "text": "Jar Packed",
+    "confidence": 0.595
+   },
+   {
+    "time": 54.0,
+    "text": "COMO",
+    "confidence": 0.965
+   },
+   {
+    "time": 54.0,
+    "text": "Pl",
+    "confidence": 0.516
+   },
+   {
+    "time": 54.0,
+    "text": "Gloe",
+    "confidence": 0.751
+   },
+   {
+    "time": 54.0,
+    "text": "Ellecta",
+    "confidence": 0.593
+   },
+   {
+    "time": 54.0,
+    "text": "PARTICULARS",
+    "confidence": 0.979
+   },
+   {
+    "time": 54.0,
+    "text": "MAILED",
+    "confidence": 0.718
+   },
+   {
+    "time": 54.0,
+    "text": "FREE",
+    "confidence": 0.968
+   }
+  ],
+  "captions": [
+   {
+    "text": "MV",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o1"
+   },
+   {
+    "text": "HISTORIA",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o2"
+   },
+   {
+    "text": "REAL",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o3"
+   },
+   {
+    "text": "MV",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.602,
+    "id": "o4"
+   },
+   {
+    "text": "HISTORIA",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o5"
+   },
+   {
+    "text": "REAL",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o6"
+   },
+   {
+    "text": "LOMBRIZ",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.98,
+    "id": "o7"
+   },
+   {
+    "text": "MV",
+    "start": 4.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o8"
+   },
+   {
+    "text": "Maria",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "CALLAS",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.999,
+    "id": "o10"
+   },
+   {
+    "text": "1925.1977",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.829,
+    "id": "o11"
+   },
+   {
+    "text": "CETTE PLAQUEA CTE",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.795,
+    "id": "o12"
+   },
+   {
+    "text": "APPOSEE PAR LE",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.898,
+    "id": "o13"
+   },
+   {
+    "text": "MARIA CALLAS",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.981,
+    "id": "o14"
+   },
+   {
+    "text": "MV",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.997,
+    "id": "o15"
+   },
+   {
+    "text": "SUNDAY",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.555,
+    "id": "o16"
+   },
+   {
+    "text": "TIMES",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o17"
+   },
+   {
+    "text": "MY",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.977,
+    "id": "o18"
+   },
+   {
+    "text": "STORY",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.966,
+    "id": "o19"
+   },
+   {
+    "text": "by",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.998,
+    "id": "o20"
+   },
+   {
+    "text": "MARIa",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.915,
+    "id": "o21"
+   },
+   {
+    "text": "Callas",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.824,
+    "id": "o22"
+   },
+   {
+    "text": "MV",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.997,
+    "id": "o23"
+   },
+   {
+    "text": "SUNDA",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o24"
+   },
+   {
+    "text": "TIMES",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o25"
+   },
+   {
+    "text": "MY",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.978,
+    "id": "o26"
+   },
+   {
+    "text": "STORY",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.965,
+    "id": "o27"
+   },
+   {
+    "text": "by",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.998,
+    "id": "o28"
+   },
+   {
+    "text": "MARIa",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.92,
+    "id": "o29"
+   },
+   {
+    "text": "Callas",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.82,
+    "id": "o30"
+   },
+   {
+    "text": "MV",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.997,
+    "id": "o31"
+   },
+   {
+    "text": "VERDI",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.936,
+    "id": "o32"
+   },
+   {
+    "text": "di",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.961,
+    "id": "o33"
+   },
+   {
+    "text": "Nuovo",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.656,
+    "id": "o34"
+   },
+   {
+    "text": "MV",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.997,
+    "id": "o35"
+   },
+   {
+    "text": "VERDI",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.936,
+    "id": "o36"
+   },
+   {
+    "text": "di",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.961,
+    "id": "o37"
+   },
+   {
+    "text": "Nuovo",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.655,
+    "id": "o38"
+   },
+   {
+    "text": "MV",
+    "start": 18.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o39"
+   },
+   {
+    "text": "VIETA",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.562,
+    "id": "o40"
+   },
+   {
+    "text": "MV",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.997,
+    "id": "o41"
+   },
+   {
+    "text": "LA TRAVIATA =",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.525,
+    "id": "o42"
+   },
+   {
+    "text": "GIUSEPPE VERDI",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.659,
+    "id": "o43"
+   },
+   {
+    "text": "MV",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.998,
+    "id": "o44"
+   },
+   {
+    "text": "Lusichid",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.743,
+    "id": "o45"
+   },
+   {
+    "text": "MV",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.995,
+    "id": "o46"
+   },
+   {
+    "text": "Salurday Review",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.703,
+    "id": "o47"
+   },
+   {
+    "text": "IV",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.582,
+    "id": "o48"
+   },
+   {
+    "text": "News",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o49"
+   },
+   {
+    "text": "k",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.995,
+    "id": "o50"
+   },
+   {
+    "text": "RNO",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.691,
+    "id": "o51"
+   },
+   {
+    "text": "una",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.86,
+    "id": "o52"
+   },
+   {
+    "text": "VITA",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.999,
+    "id": "o53"
+   },
+   {
+    "text": "WER",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.816,
+    "id": "o54"
+   },
+   {
+    "text": "THEATRE ARTSE",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.524,
+    "id": "o55"
+   },
+   {
+    "text": "Lusichid",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.72,
+    "id": "o56"
+   },
+   {
+    "text": "MV",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.995,
+    "id": "o57"
+   },
+   {
+    "text": "Salurday Review",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.701,
+    "id": "o58"
+   },
+   {
+    "text": "IV",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.577,
+    "id": "o59"
+   },
+   {
+    "text": "News",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o60"
+   },
+   {
+    "text": "k",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.995,
+    "id": "o61"
+   },
+   {
+    "text": "RNO",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.751,
+    "id": "o62"
+   },
+   {
+    "text": "una",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.875,
+    "id": "o63"
+   },
+   {
+    "text": "VITA",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.999,
+    "id": "o64"
+   },
+   {
+    "text": "IV",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.533,
+    "id": "o65"
+   },
+   {
+    "text": "WER",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.807,
+    "id": "o66"
+   },
+   {
+    "text": "THEATRE ARTSE",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.519,
+    "id": "o67"
+   },
+   {
+    "text": "MV",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.997,
+    "id": "o68"
+   },
+   {
+    "text": "C",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.564,
+    "id": "o69"
+   },
+   {
+    "text": "25",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.608,
+    "id": "o70"
+   },
+   {
+    "text": "MV",
+    "start": 46.0,
+    "end": 48.0,
+    "confidence": 0.999,
+    "id": "o71"
+   },
+   {
+    "text": "DON CARL",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.642,
+    "id": "o72"
+   },
+   {
+    "text": "OPERA IN CINQUE ATTI",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.578,
+    "id": "o73"
+   },
+   {
+    "text": "e CAMILLO DU",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.875,
+    "id": "o74"
+   },
+   {
+    "text": "MERY",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.997,
+    "id": "o75"
+   },
+   {
+    "text": "LOCLE",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.845,
+    "id": "o76"
+   },
+   {
+    "text": "VER D I",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.743,
+    "id": "o77"
+   },
+   {
+    "text": "G",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.9,
+    "id": "o78"
+   },
+   {
+    "text": "TEATRO PAGLIANO",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.759,
+    "id": "o79"
+   },
+   {
+    "text": "IN FRENZE",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.946,
+    "id": "o80"
+   },
+   {
+    "text": "Maggio 1869.",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.991,
+    "id": "o81"
+   },
+   {
+    "text": "Aprile",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.999,
+    "id": "o82"
+   },
+   {
+    "text": "R. STABILIMENTO RICORDI",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.846,
+    "id": "o83"
+   },
+   {
+    "text": "MILANO",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.997,
+    "id": "o84"
+   },
+   {
+    "text": "NAPOLI",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.996,
+    "id": "o85"
+   },
+   {
+    "text": "FIRENZE",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o86"
+   },
+   {
+    "text": "paesi",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.991,
+    "id": "o87"
+   },
+   {
+    "text": "Dejosto",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.655,
+    "id": "o88"
+   },
+   {
+    "text": "norma",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.71,
+    "id": "o89"
+   },
+   {
+    "text": "Diritti di trailuzione riserrati",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.821,
+    "id": "o90"
+   },
+   {
+    "text": "MV",
+    "start": 50.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o91"
+   },
+   {
+    "text": "STAY",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.745,
+    "id": "o92"
+   },
+   {
+    "text": "ALWAYS",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.825,
+    "id": "o93"
+   },
+   {
+    "text": "TEIILTI",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.526,
+    "id": "o94"
+   },
+   {
+    "text": "GAT",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.9,
+    "id": "o95"
+   },
+   {
+    "text": "DANGER",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.739,
+    "id": "o96"
+   },
+   {
+    "text": "EIOTT?",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.549,
+    "id": "o97"
+   },
+   {
+    "text": "SANITIZED",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.995,
+    "id": "o98"
+   },
+   {
+    "text": "TAPE",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.986,
+    "id": "o99"
+   },
+   {
+    "text": "GASWELL",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.548,
+    "id": "o100"
+   },
+   {
+    "text": "WORMS",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.972,
+    "id": "o101"
+   },
+   {
+    "text": "Jar Packed",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.658,
+    "id": "o102"
+   },
+   {
+    "text": "'FRIENDS FOR",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.85,
+    "id": "o103"
+   },
+   {
+    "text": "FAIR",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.999,
+    "id": "o104"
+   },
+   {
+    "text": "Swallowl",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.705,
+    "id": "o105"
+   },
+   {
+    "text": "Na 9U",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.512,
+    "id": "o106"
+   },
+   {
+    "text": "PRUNES",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.68,
+    "id": "o107"
+   },
+   {
+    "text": "PA RTICULARS",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.753,
+    "id": "o108"
+   },
+   {
+    "text": "FREE",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.996,
+    "id": "o109"
+   },
+   {
+    "text": "MV",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.999,
+    "id": "o110"
+   },
+   {
+    "text": "iHASTA",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.962,
+    "id": "o111"
+   },
+   {
+    "text": "PRONTOI",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.562,
+    "id": "o112"
+   },
+   {
+    "text": "nunca",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.616,
+    "id": "o113"
+   },
+   {
+    "text": "TAPE",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.992,
+    "id": "o114"
+   },
+   {
+    "text": "Jar Packed",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.595,
+    "id": "o115"
+   },
+   {
+    "text": "COMO",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.965,
+    "id": "o116"
+   },
+   {
+    "text": "Pl",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.516,
+    "id": "o117"
+   },
+   {
+    "text": "Gloe",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.751,
+    "id": "o118"
+   },
+   {
+    "text": "Ellecta",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.593,
+    "id": "o119"
+   },
+   {
+    "text": "PARTICULARS",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.979,
+    "id": "o120"
+   },
+   {
+    "text": "MAILED",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.718,
+    "id": "o121"
+   },
+   {
+    "text": "FREE",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.968,
+    "id": "o122"
+   }
+  ]
+ }
+}

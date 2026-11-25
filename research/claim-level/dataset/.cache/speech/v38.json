@@ -1,0 +1,20 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.416,
+  "duration_seconds": 59.05,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.82,
+    "end": 2.88,
+    "text": "you"
+   }
+  ]
+ }
+}

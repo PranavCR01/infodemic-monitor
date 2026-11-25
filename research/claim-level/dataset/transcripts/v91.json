@@ -1,0 +1,1110 @@
+{
+ "video_id": "v91",
+ "filename": "new_Instagram_Cmmx6SEI5kw.mp4",
+ "relative_path": "new_Instagram_Cmmx6SEI5kw.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:55",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 58.03,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.84,
+    "text": "Canola oil is toxic. Here's how it's made. It starts with the seeds of a raped plant,"
+   },
+   {
+    "id": "t2",
+    "start": 5.84,
+    "end": 10.56,
+    "text": "which are completely toxic to humans. In order to make canola oil, these plants must be specially"
+   },
+   {
+    "id": "t3",
+    "start": 10.56,
+    "end": 17.04,
+    "text": "bred to lower the levels of erusic acid, a toxic fatty acid strongly associated with heart lesions."
+   },
+   {
+    "id": "t4",
+    "start": 17.04,
+    "end": 21.28,
+    "text": "These seeds are then ground at high temperatures to extract the fragile oil,"
+   },
+   {
+    "id": "t5",
+    "start": 21.28,
+    "end": 26.4,
+    "text": "which is inevitably oxidized because of this harsh process. This oil must then be washed"
+   },
+   {
+    "id": "t6",
+    "start": 26.4,
+    "end": 30.32,
+    "text": "with solvents like hexane, a known neurological toxin."
+   },
+   {
+    "id": "t7",
+    "start": 30.32,
+    "end": 35.04,
+    "text": "Then it must be processed with bleaching and deodorization so it doesn't smell rancid like it"
+   },
+   {
+    "id": "t8",
+    "start": 35.04,
+    "end": 40.72,
+    "text": "really is. After all of these steps, the canola oil is left oxidized, contaminated with solvents,"
+   },
+   {
+    "id": "t9",
+    "start": 40.72,
+    "end": 47.6,
+    "text": "and containing significant levels of trans fatty acids. And this oil is marketed to you as healthy"
+   },
+   {
+    "id": "t10",
+    "start": 47.6,
+    "end": 52.8,
+    "text": "by the American Heart Association and found in so many of our food stuffs today. If you want to"
+   },
+   {
+    "id": "t11",
+    "start": 52.8,
+    "end": 56.3,
+    "text": "If you want to be healthy, get this damaged oil out of your diet completely."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 29,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "CANOLA OIL IS",
+    "confidence": 0.76
+   },
+   {
+    "time": 0.0,
+    "text": "TOXIIC",
+    "confidence": 0.597
+   },
+   {
+    "time": 2.0,
+    "text": "CANOLA OIL IS",
+    "confidence": 0.98
+   },
+   {
+    "time": 2.0,
+    "text": "TOXIC",
+    "confidence": 0.668
+   },
+   {
+    "time": 4.0,
+    "text": "IT STARTS WI THE SEEDS",
+    "confidence": 0.935
+   },
+   {
+    "time": 4.0,
+    "text": "OF A RAPE PLANT",
+    "confidence": 0.891
+   },
+   {
+    "time": 6.0,
+    "text": "WHICH ARE COMPLETELY",
+    "confidence": 0.942
+   },
+   {
+    "time": 6.0,
+    "text": "TOXIC TO HUMANS",
+    "confidence": 0.79
+   },
+   {
+    "time": 8.0,
+    "text": "IN ORDER TO MAKE",
+    "confidence": 0.922
+   },
+   {
+    "time": 8.0,
+    "text": "CANOLA OIL",
+    "confidence": 0.969
+   },
+   {
+    "time": 10.0,
+    "text": "THESE PLANTS MUST",
+    "confidence": 0.743
+   },
+   {
+    "time": 10.0,
+    "text": "BE SPECIALLY BRED",
+    "confidence": 0.996
+   },
+   {
+    "time": 12.0,
+    "text": "To LOWER THE LEVELS",
+    "confidence": 0.704
+   },
+   {
+    "time": 12.0,
+    "text": "OF ERUCIC ACID",
+    "confidence": 0.823
+   },
+   {
+    "time": 14.0,
+    "text": "A TOXIC FATTY ACID",
+    "confidence": 0.951
+   },
+   {
+    "time": 14.0,
+    "text": "8",
+    "confidence": 0.997
+   },
+   {
+    "time": 16.0,
+    "text": "STRONGLY ASSOCIATED W/",
+    "confidence": 0.782
+   },
+   {
+    "time": 16.0,
+    "text": "HEART LESIONS",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.0,
+    "text": "Canol",
+    "confidence": 0.953
+   },
+   {
+    "time": 18.0,
+    "text": "AT HIGH TEMPERATURES",
+    "confidence": 0.991
+   },
+   {
+    "time": 20.0,
+    "text": "TO EXTRACT THE FRAGILE OIL",
+    "confidence": 0.863
+   },
+   {
+    "time": 22.0,
+    "text": "WHICH IS INEVITABLY",
+    "confidence": 0.783
+   },
+   {
+    "time": 22.0,
+    "text": "OXIDIZED DUE TO THIS",
+    "confidence": 0.703
+   },
+   {
+    "time": 22.0,
+    "text": "HARSH PROCESS",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "WHICH IS INEVITABLY",
+    "confidence": 0.782
+   },
+   {
+    "time": 24.0,
+    "text": "OXIDIZED DUE TO THIS",
+    "confidence": 0.971
+   },
+   {
+    "time": 24.0,
+    "text": "HARSH PROCESS",
+    "confidence": 0.98
+   },
+   {
+    "time": 26.0,
+    "text": "THIS OIL MUST THEN",
+    "confidence": 0.689
+   },
+   {
+    "time": 26.0,
+    "text": "BE WASHED",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "WITH SOLVENTS LIKE HEXANE",
+    "confidence": 0.887
+   },
+   {
+    "time": 30.0,
+    "text": "A KNOWN",
+    "confidence": 0.784
+   },
+   {
+    "time": 30.0,
+    "text": "NEUROLOGICAL TOXIN",
+    "confidence": 0.999
+   },
+   {
+    "time": 32.0,
+    "text": "THEN IT MUST BE",
+    "confidence": 0.952
+   },
+   {
+    "time": 32.0,
+    "text": "PROCESSED WI BLEACHING",
+    "confidence": 0.951
+   },
+   {
+    "time": 32.0,
+    "text": "DEODORIZATION",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "SO IT DOESN'T SMELL",
+    "confidence": 0.74
+   },
+   {
+    "time": 34.0,
+    "text": "RANCID LIKE IT REALLY IS",
+    "confidence": 0.878
+   },
+   {
+    "time": 36.0,
+    "text": "AFTER ALL OF THESE STEPS",
+    "confidence": 0.903
+   },
+   {
+    "time": 38.0,
+    "text": "THE CANOLA OIL IS LEFT",
+    "confidence": 0.839
+   },
+   {
+    "time": 38.0,
+    "text": "OXIDIZED,",
+    "confidence": 0.94
+   },
+   {
+    "time": 38.0,
+    "text": "CONTAMINATED WI SOLVENTS",
+    "confidence": 0.701
+   },
+   {
+    "time": 40.0,
+    "text": "eulur",
+    "confidence": 0.679
+   },
+   {
+    "time": 40.0,
+    "text": "THE CANOLA OIL IS LEFT",
+    "confidence": 0.976
+   },
+   {
+    "time": 40.0,
+    "text": "OXIDIZED,",
+    "confidence": 0.961
+   },
+   {
+    "time": 40.0,
+    "text": "CONTAMINATED W/ SOLVENTS",
+    "confidence": 0.646
+   },
+   {
+    "time": 42.0,
+    "text": "lapo",
+    "confidence": 0.617
+   },
+   {
+    "time": 42.0,
+    "text": "& CONTAINING SIGNIFICANT",
+    "confidence": 0.997
+   },
+   {
+    "time": 42.0,
+    "text": "LEVELS OF TRANS",
+    "confidence": 0.991
+   },
+   {
+    "time": 42.0,
+    "text": "FATTY ACIDS",
+    "confidence": 0.996
+   },
+   {
+    "time": 44.0,
+    "text": "THIS OIL IS MARKETED",
+    "confidence": 0.972
+   },
+   {
+    "time": 44.0,
+    "text": "To YOU AS HEALTHY",
+    "confidence": 0.668
+   },
+   {
+    "time": 44.0,
+    "text": "Conola",
+    "confidence": 0.994
+   },
+   {
+    "time": 46.0,
+    "text": "& THIS OIL IS MARKETED",
+    "confidence": 0.814
+   },
+   {
+    "time": 46.0,
+    "text": "Loua",
+    "confidence": 0.597
+   },
+   {
+    "time": 48.0,
+    "text": "THE AMERICAN HEART",
+    "confidence": 0.9
+   },
+   {
+    "time": 48.0,
+    "text": "ASSOCIATION",
+    "confidence": 0.963
+   },
+   {
+    "time": 48.0,
+    "text": "American",
+    "confidence": 0.998
+   },
+   {
+    "time": 48.0,
+    "text": "Heart",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "Association",
+    "confidence": 0.821
+   },
+   {
+    "time": 48.0,
+    "text": "Lou",
+    "confidence": 0.888
+   },
+   {
+    "time": 48.0,
+    "text": "Meets Criteria For",
+    "confidence": 0.735
+   },
+   {
+    "time": 48.0,
+    "text": "Heart-Healthy Food",
+    "confidence": 0.915
+   },
+   {
+    "time": 50.0,
+    "text": "& FOUND IN SO MANY",
+    "confidence": 0.782
+   },
+   {
+    "time": 50.0,
+    "text": "OF OUR FOOD STUFFS TODAY",
+    "confidence": 0.948
+   },
+   {
+    "time": 50.0,
+    "text": "American",
+    "confidence": 0.999
+   },
+   {
+    "time": 50.0,
+    "text": "Heart",
+    "confidence": 0.999
+   },
+   {
+    "time": 50.0,
+    "text": "Association",
+    "confidence": 0.995
+   },
+   {
+    "time": 50.0,
+    "text": "Meets Criteria For",
+    "confidence": 0.998
+   },
+   {
+    "time": 50.0,
+    "text": "Heart-Healthy Food",
+    "confidence": 0.938
+   },
+   {
+    "time": 52.0,
+    "text": "FOUND IN SO MANY",
+    "confidence": 0.95
+   },
+   {
+    "time": 52.0,
+    "text": "OF OUR FOOD STUFFS TODAY",
+    "confidence": 0.754
+   },
+   {
+    "time": 52.0,
+    "text": "Fisco",
+    "confidence": 0.7
+   },
+   {
+    "time": 52.0,
+    "text": "American",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "Heart",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "Association",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "Meets Criteria For",
+    "confidence": 0.992
+   },
+   {
+    "time": 52.0,
+    "text": "Heart-Healthy Food",
+    "confidence": 0.934
+   },
+   {
+    "time": 54.0,
+    "text": "GET THIS DAMAGED OIL",
+    "confidence": 0.768
+   },
+   {
+    "time": 54.0,
+    "text": "OUT OF YOUR DIET",
+    "confidence": 0.885
+   },
+   {
+    "time": 54.0,
+    "text": "COMPLETELY",
+    "confidence": 0.992
+   },
+   {
+    "time": 56.0,
+    "text": "IBak",
+    "confidence": 0.603
+   },
+   {
+    "time": 56.0,
+    "text": "GET THIS DAMAGED OlL",
+    "confidence": 0.684
+   },
+   {
+    "time": 56.0,
+    "text": "OUT OF YOUR DIET",
+    "confidence": 0.924
+   },
+   {
+    "time": 56.0,
+    "text": "COMPLETELY",
+    "confidence": 0.998
+   }
+  ],
+  "captions": [
+   {
+    "text": "CANOLA OIL IS",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.76,
+    "id": "o1"
+   },
+   {
+    "text": "TOXIIC",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.597,
+    "id": "o2"
+   },
+   {
+    "text": "CANOLA OIL IS",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.98,
+    "id": "o3"
+   },
+   {
+    "text": "TOXIC",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.668,
+    "id": "o4"
+   },
+   {
+    "text": "IT STARTS WI THE SEEDS",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.935,
+    "id": "o5"
+   },
+   {
+    "text": "OF A RAPE PLANT",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.891,
+    "id": "o6"
+   },
+   {
+    "text": "WHICH ARE COMPLETELY",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.942,
+    "id": "o7"
+   },
+   {
+    "text": "TOXIC TO HUMANS",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.79,
+    "id": "o8"
+   },
+   {
+    "text": "IN ORDER TO MAKE",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.922,
+    "id": "o9"
+   },
+   {
+    "text": "CANOLA OIL",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.969,
+    "id": "o10"
+   },
+   {
+    "text": "THESE PLANTS MUST",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.743,
+    "id": "o11"
+   },
+   {
+    "text": "BE SPECIALLY BRED",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.996,
+    "id": "o12"
+   },
+   {
+    "text": "To LOWER THE LEVELS",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.704,
+    "id": "o13"
+   },
+   {
+    "text": "OF ERUCIC ACID",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.823,
+    "id": "o14"
+   },
+   {
+    "text": "A TOXIC FATTY ACID",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.951,
+    "id": "o15"
+   },
+   {
+    "text": "8",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.997,
+    "id": "o16"
+   },
+   {
+    "text": "STRONGLY ASSOCIATED W/",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.782,
+    "id": "o17"
+   },
+   {
+    "text": "HEART LESIONS",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.999,
+    "id": "o18"
+   },
+   {
+    "text": "Canol",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.953,
+    "id": "o19"
+   },
+   {
+    "text": "AT HIGH TEMPERATURES",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.991,
+    "id": "o20"
+   },
+   {
+    "text": "TO EXTRACT THE FRAGILE OIL",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.863,
+    "id": "o21"
+   },
+   {
+    "text": "WHICH IS INEVITABLY",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.783,
+    "id": "o22"
+   },
+   {
+    "text": "OXIDIZED DUE TO THIS",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.703,
+    "id": "o23"
+   },
+   {
+    "text": "HARSH PROCESS",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o24"
+   },
+   {
+    "text": "WHICH IS INEVITABLY",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.782,
+    "id": "o25"
+   },
+   {
+    "text": "OXIDIZED DUE TO THIS",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.971,
+    "id": "o26"
+   },
+   {
+    "text": "HARSH PROCESS",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.98,
+    "id": "o27"
+   },
+   {
+    "text": "THIS OIL MUST THEN",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.689,
+    "id": "o28"
+   },
+   {
+    "text": "BE WASHED",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o29"
+   },
+   {
+    "text": "WITH SOLVENTS LIKE HEXANE",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.887,
+    "id": "o30"
+   },
+   {
+    "text": "A KNOWN",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.784,
+    "id": "o31"
+   },
+   {
+    "text": "NEUROLOGICAL TOXIN",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.999,
+    "id": "o32"
+   },
+   {
+    "text": "THEN IT MUST BE",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.952,
+    "id": "o33"
+   },
+   {
+    "text": "PROCESSED WI BLEACHING",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.951,
+    "id": "o34"
+   },
+   {
+    "text": "DEODORIZATION",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o35"
+   },
+   {
+    "text": "SO IT DOESN'T SMELL",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.74,
+    "id": "o36"
+   },
+   {
+    "text": "RANCID LIKE IT REALLY IS",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.878,
+    "id": "o37"
+   },
+   {
+    "text": "AFTER ALL OF THESE STEPS",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.903,
+    "id": "o38"
+   },
+   {
+    "text": "THE CANOLA OIL IS LEFT",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.839,
+    "id": "o39"
+   },
+   {
+    "text": "OXIDIZED,",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.94,
+    "id": "o40"
+   },
+   {
+    "text": "CONTAMINATED WI SOLVENTS",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.701,
+    "id": "o41"
+   },
+   {
+    "text": "eulur",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.679,
+    "id": "o42"
+   },
+   {
+    "text": "THE CANOLA OIL IS LEFT",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.976,
+    "id": "o43"
+   },
+   {
+    "text": "OXIDIZED,",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.961,
+    "id": "o44"
+   },
+   {
+    "text": "CONTAMINATED W/ SOLVENTS",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.646,
+    "id": "o45"
+   },
+   {
+    "text": "lapo",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.617,
+    "id": "o46"
+   },
+   {
+    "text": "& CONTAINING SIGNIFICANT",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.997,
+    "id": "o47"
+   },
+   {
+    "text": "LEVELS OF TRANS",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.991,
+    "id": "o48"
+   },
+   {
+    "text": "FATTY ACIDS",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.996,
+    "id": "o49"
+   },
+   {
+    "text": "THIS OIL IS MARKETED",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.972,
+    "id": "o50"
+   },
+   {
+    "text": "To YOU AS HEALTHY",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.668,
+    "id": "o51"
+   },
+   {
+    "text": "Conola",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.994,
+    "id": "o52"
+   },
+   {
+    "text": "& THIS OIL IS MARKETED",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.814,
+    "id": "o53"
+   },
+   {
+    "text": "Loua",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.597,
+    "id": "o54"
+   },
+   {
+    "text": "THE AMERICAN HEART",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.9,
+    "id": "o55"
+   },
+   {
+    "text": "ASSOCIATION",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.963,
+    "id": "o56"
+   },
+   {
+    "text": "American",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.998,
+    "id": "o57"
+   },
+   {
+    "text": "Heart",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o58"
+   },
+   {
+    "text": "Association",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.821,
+    "id": "o59"
+   },
+   {
+    "text": "Lou",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.888,
+    "id": "o60"
+   },
+   {
+    "text": "Meets Criteria For",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.735,
+    "id": "o61"
+   },
+   {
+    "text": "Heart-Healthy Food",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.915,
+    "id": "o62"
+   },
+   {
+    "text": "& FOUND IN SO MANY",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.782,
+    "id": "o63"
+   },
+   {
+    "text": "OF OUR FOOD STUFFS TODAY",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.948,
+    "id": "o64"
+   },
+   {
+    "text": "American",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.999,
+    "id": "o65"
+   },
+   {
+    "text": "Heart",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.999,
+    "id": "o66"
+   },
+   {
+    "text": "Association",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.995,
+    "id": "o67"
+   },
+   {
+    "text": "Meets Criteria For",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.998,
+    "id": "o68"
+   },
+   {
+    "text": "Heart-Healthy Food",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.938,
+    "id": "o69"
+   },
+   {
+    "text": "FOUND IN SO MANY",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.95,
+    "id": "o70"
+   },
+   {
+    "text": "OF OUR FOOD STUFFS TODAY",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.754,
+    "id": "o71"
+   },
+   {
+    "text": "Fisco",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.7,
+    "id": "o72"
+   },
+   {
+    "text": "American",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o73"
+   },
+   {
+    "text": "Heart",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o74"
+   },
+   {
+    "text": "Association",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o75"
+   },
+   {
+    "text": "Meets Criteria For",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.992,
+    "id": "o76"
+   },
+   {
+    "text": "Heart-Healthy Food",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.934,
+    "id": "o77"
+   },
+   {
+    "text": "GET THIS DAMAGED OIL",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.768,
+    "id": "o78"
+   },
+   {
+    "text": "OUT OF YOUR DIET",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.885,
+    "id": "o79"
+   },
+   {
+    "text": "COMPLETELY",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.992,
+    "id": "o80"
+   },
+   {
+    "text": "IBak",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.603,
+    "id": "o81"
+   },
+   {
+    "text": "GET THIS DAMAGED OlL",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.684,
+    "id": "o82"
+   },
+   {
+    "text": "OUT OF YOUR DIET",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.924,
+    "id": "o83"
+   },
+   {
+    "text": "COMPLETELY",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.998,
+    "id": "o84"
+   }
+  ]
+ }
+}

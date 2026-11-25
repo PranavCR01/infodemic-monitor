@@ -1,0 +1,5916 @@
+{
+ "video_id": "v57",
+ "filename": "v12025gd0000dbrmg8vog65selj1cjr0.mp4",
+ "relative_path": "Dataset-Sept-2026/Joshua Ryan Fajardo/NO-MISINFO/v12025gd0000dbrmg8vog65selj1cjr0.mp4",
+ "collector": "Joshua Ryan Fajardo",
+ "collector_label": "NO_MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:42:33",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 132.21,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 8.2,
+    "text": "For people who don't appreciate just how powerful this virus is can you just remind us how does it compare say to how easy it is to catch COVID or a cold."
+   },
+   {
+    "id": "t2",
+    "start": 10.11,
+    "end": 23.67,
+    "text": "William it is the most contagious virus that we know. One of the things she alluded to was a person who is shedding breathes out the measles virus can leave the room."
+   },
+   {
+    "id": "t3",
+    "start": 24.27,
+    "end": 29.67,
+    "text": "And if a susceptible person comes into that room up to two hours later."
+   },
+   {
+    "id": "t4",
+    "start": 30.61,
+    "end": 37.49,
+    "text": "they can still inhale the few viral particles that are hovering in the air and become infected"
+   },
+   {
+    "id": "t5",
+    "start": 37.49,
+    "end": 46.21,
+    "text": "and become ill. This is a virus that is extremely contagious and obviously that's why we want to"
+   },
+   {
+    "id": "t6",
+    "start": 47.81,
+    "end": 54.53,
+    "text": "vaccinate everyone. As Ms. Rivera said, we're protecting not only ourselves, our own children,"
+   },
+   {
+    "id": "t7",
+    "start": 54.53,
+    "end": 60.37,
+    "text": "our own families, but we're contributing to protection of everyone in the neighborhood"
+   },
+   {
+    "id": "t8",
+    "start": 60.37,
+    "end": 67.17,
+    "text": "and in our communities because there are little babies who could get measles and they have high"
+   },
+   {
+    "id": "t9",
+    "start": 67.17,
+    "end": 72.85,
+    "text": "mortality associated with that who can't be vaccinated yet. And there are people who are"
+   },
+   {
+    "id": "t10",
+    "start": 72.85,
+    "end": 80.05,
+    "text": "immune compromised. They can't take the vaccine. How do we protect them? All the rest of us are"
+   },
+   {
+    "id": "t11",
+    "start": 80.05,
+    "end": 87.97,
+    "text": "protected. We create a cocoon of protection around them so that the virus can't get to those most"
+   },
+   {
+    "id": "t12",
+    "start": 87.97,
+    "end": 98.16,
+    "text": "susceptible who live amongst us are more frail brothers and sisters. A quick note before you"
+   },
+   {
+    "id": "t13",
+    "start": 98.16,
+    "end": 103.52,
+    "text": "go. We want to tell you about a new way you can help support the work that we do here at PBS News."
+   },
+   {
+    "id": "t14",
+    "start": 103.52,
+    "end": 108.16,
+    "text": "PressPass is our new supporter program complete with special benefits for viewers and readers"
+   },
+   {
+    "id": "t15",
+    "start": 108.16,
+    "end": 113.44,
+    "text": "who value independent trustworthy journalism. Learn more about PressPass on our website"
+   },
+   {
+    "id": "t16",
+    "start": 113.44,
+    "end": 115.44,
+    "text": "and sign up today."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 67,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "OPBS NEWS",
+    "confidence": 0.977
+   },
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.932
+   },
+   {
+    "time": 0.0,
+    "text": "@ pbsnews",
+    "confidence": 0.968
+   },
+   {
+    "time": 0.0,
+    "text": "How contagious is",
+    "confidence": 0.793
+   },
+   {
+    "time": 0.0,
+    "text": "measles compared",
+    "confidence": 0.917
+   },
+   {
+    "time": 0.0,
+    "text": "to COVID or a cold?",
+    "confidence": 0.921
+   },
+   {
+    "time": 2.0,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "OPBS NEWS",
+    "confidence": 0.714
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.95
+   },
+   {
+    "time": 2.0,
+    "text": "@ pbsnews",
+    "confidence": 0.972
+   },
+   {
+    "time": 2.0,
+    "text": "How contagious is",
+    "confidence": 0.982
+   },
+   {
+    "time": 2.0,
+    "text": "measles compared",
+    "confidence": 0.86
+   },
+   {
+    "time": 2.0,
+    "text": "to COVID or a cold?",
+    "confidence": 0.914
+   },
+   {
+    "time": 4.0,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "OPBS NEWS",
+    "confidence": 0.985
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.954
+   },
+   {
+    "time": 4.0,
+    "text": "@ pbsnews",
+    "confidence": 0.792
+   },
+   {
+    "time": 4.0,
+    "text": "How contagious is",
+    "confidence": 0.82
+   },
+   {
+    "time": 4.0,
+    "text": "measles compared",
+    "confidence": 0.905
+   },
+   {
+    "time": 4.0,
+    "text": "to COVID or a cold?",
+    "confidence": 0.913
+   },
+   {
+    "time": 6.01,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.01,
+    "text": "OPBS NEWS",
+    "confidence": 0.958
+   },
+   {
+    "time": 6.01,
+    "text": "How contagious is",
+    "confidence": 0.82
+   },
+   {
+    "time": 6.01,
+    "text": "measles compared",
+    "confidence": 0.873
+   },
+   {
+    "time": 6.01,
+    "text": "to COVID or a cold?",
+    "confidence": 0.649
+   },
+   {
+    "time": 6.01,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.01,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.01,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.01,
+    "text": "OPBS NEWS",
+    "confidence": 0.971
+   },
+   {
+    "time": 8.01,
+    "text": "How contagious is",
+    "confidence": 0.982
+   },
+   {
+    "time": 8.01,
+    "text": "measles compared",
+    "confidence": 0.873
+   },
+   {
+    "time": 8.01,
+    "text": "to COVID or a cold?",
+    "confidence": 0.917
+   },
+   {
+    "time": 8.01,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.01,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.01,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.01,
+    "text": "OPBS NEWS",
+    "confidence": 0.971
+   },
+   {
+    "time": 10.01,
+    "text": "How contagious is",
+    "confidence": 0.936
+   },
+   {
+    "time": 10.01,
+    "text": "measles compared",
+    "confidence": 0.85
+   },
+   {
+    "time": 10.01,
+    "text": "to COVID or a cold?",
+    "confidence": 0.914
+   },
+   {
+    "time": 10.01,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.01,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.01,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.01,
+    "text": "OPBS NEWS",
+    "confidence": 0.895
+   },
+   {
+    "time": 12.01,
+    "text": "How contagious is",
+    "confidence": 0.981
+   },
+   {
+    "time": 12.01,
+    "text": "measles compared",
+    "confidence": 0.924
+   },
+   {
+    "time": 12.01,
+    "text": "to COVID or a cold?",
+    "confidence": 0.915
+   },
+   {
+    "time": 12.01,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.01,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "OPBS NEWS",
+    "confidence": 0.981
+   },
+   {
+    "time": 14.01,
+    "text": "How contagious is",
+    "confidence": 0.735
+   },
+   {
+    "time": 14.01,
+    "text": "measles compared",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "to COVID or a cold?",
+    "confidence": 0.915
+   },
+   {
+    "time": 14.01,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.02,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.02,
+    "text": "OPBS NEWS",
+    "confidence": 0.955
+   },
+   {
+    "time": 16.02,
+    "text": "DR. WILLIAM SCHAFFNER",
+    "confidence": 0.788
+   },
+   {
+    "time": 16.02,
+    "text": "How contagious is",
+    "confidence": 0.98
+   },
+   {
+    "time": 16.02,
+    "text": "measles compared",
+    "confidence": 0.886
+   },
+   {
+    "time": 16.02,
+    "text": "to COVID or a cold?",
+    "confidence": 0.918
+   },
+   {
+    "time": 16.02,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.02,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.02,
+    "text": "HORIZONS",
+    "confidence": 0.986
+   },
+   {
+    "time": 18.02,
+    "text": "OPBS NEWS",
+    "confidence": 0.979
+   },
+   {
+    "time": 18.02,
+    "text": "DR: WILLIAM SCHAFFNER",
+    "confidence": 0.564
+   },
+   {
+    "time": 18.02,
+    "text": "How contagious is",
+    "confidence": 0.978
+   },
+   {
+    "time": 18.02,
+    "text": "measles compared",
+    "confidence": 0.868
+   },
+   {
+    "time": 18.02,
+    "text": "to COVID or a cold?",
+    "confidence": 0.918
+   },
+   {
+    "time": 18.02,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.02,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.02,
+    "text": "HORIZONS",
+    "confidence": 0.949
+   },
+   {
+    "time": 20.02,
+    "text": "OPBS NEWS",
+    "confidence": 0.914
+   },
+   {
+    "time": 20.02,
+    "text": "DR: WILLIAM SCHAFFNER",
+    "confidence": 0.515
+   },
+   {
+    "time": 20.02,
+    "text": "How contagious is",
+    "confidence": 0.979
+   },
+   {
+    "time": 20.02,
+    "text": "measles compared",
+    "confidence": 0.882
+   },
+   {
+    "time": 20.02,
+    "text": "to COVID or a cold?",
+    "confidence": 0.919
+   },
+   {
+    "time": 20.02,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.02,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.02,
+    "text": "HORIZONS",
+    "confidence": 0.995
+   },
+   {
+    "time": 22.02,
+    "text": "OPBS NEWS",
+    "confidence": 0.987
+   },
+   {
+    "time": 22.02,
+    "text": "DR: WILLIAM SCHAFFNER",
+    "confidence": 0.65
+   },
+   {
+    "time": 22.02,
+    "text": "How contagious is",
+    "confidence": 0.979
+   },
+   {
+    "time": 22.02,
+    "text": "measles compared",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.02,
+    "text": "to COVID or a cold?",
+    "confidence": 0.916
+   },
+   {
+    "time": 22.02,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.02,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.02,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.02,
+    "text": "OPBS NEWS",
+    "confidence": 0.881
+   },
+   {
+    "time": 24.02,
+    "text": "DR: WILLIAM SCHAFFNER",
+    "confidence": 0.51
+   },
+   {
+    "time": 24.02,
+    "text": "How contagious is",
+    "confidence": 0.978
+   },
+   {
+    "time": 24.02,
+    "text": "measles compared",
+    "confidence": 0.932
+   },
+   {
+    "time": 24.02,
+    "text": "to COVID or a cold?",
+    "confidence": 0.917
+   },
+   {
+    "time": 24.02,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.02,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.03,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.03,
+    "text": "OPBS NEWS",
+    "confidence": 0.979
+   },
+   {
+    "time": 26.03,
+    "text": "OpBs NEWS HORIZ",
+    "confidence": 0.514
+   },
+   {
+    "time": 26.03,
+    "text": "How contagious is",
+    "confidence": 0.98
+   },
+   {
+    "time": 26.03,
+    "text": "measles compared",
+    "confidence": 0.877
+   },
+   {
+    "time": 26.03,
+    "text": "to COVID or a cold?",
+    "confidence": 0.905
+   },
+   {
+    "time": 26.03,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 26.03,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.03,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.03,
+    "text": "OPBS NEWS",
+    "confidence": 0.979
+   },
+   {
+    "time": 28.03,
+    "text": "How contagious is",
+    "confidence": 0.98
+   },
+   {
+    "time": 28.03,
+    "text": "measles compared",
+    "confidence": 0.872
+   },
+   {
+    "time": 28.03,
+    "text": "to COVID or a cold?",
+    "confidence": 0.905
+   },
+   {
+    "time": 28.03,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 28.03,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.03,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.03,
+    "text": "OPBS NEWS",
+    "confidence": 0.981
+   },
+   {
+    "time": 30.03,
+    "text": "How contagious is",
+    "confidence": 0.98
+   },
+   {
+    "time": 30.03,
+    "text": "measles compared",
+    "confidence": 0.925
+   },
+   {
+    "time": 30.03,
+    "text": "to COVID or a cold?",
+    "confidence": 0.905
+   },
+   {
+    "time": 30.03,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.03,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.03,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.03,
+    "text": "OPBS NEWS",
+    "confidence": 0.979
+   },
+   {
+    "time": 32.03,
+    "text": "How contagious is",
+    "confidence": 0.98
+   },
+   {
+    "time": 32.03,
+    "text": "measles compared",
+    "confidence": 0.88
+   },
+   {
+    "time": 32.03,
+    "text": "to COVID or a cold?",
+    "confidence": 0.903
+   },
+   {
+    "time": 32.03,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 32.03,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.03,
+    "text": "HORIZONS",
+    "confidence": 0.993
+   },
+   {
+    "time": 34.03,
+    "text": "OPBS NEWS",
+    "confidence": 0.971
+   },
+   {
+    "time": 34.03,
+    "text": "How contagious is",
+    "confidence": 0.967
+   },
+   {
+    "time": 34.03,
+    "text": "measles compared",
+    "confidence": 0.84
+   },
+   {
+    "time": 34.03,
+    "text": "to COVID or a cold?",
+    "confidence": 0.907
+   },
+   {
+    "time": 34.03,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.03,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.04,
+    "text": "HORIZONS",
+    "confidence": 0.976
+   },
+   {
+    "time": 36.04,
+    "text": "OPBS NEWS",
+    "confidence": 0.98
+   },
+   {
+    "time": 36.04,
+    "text": "Op8s NEWS HO",
+    "confidence": 0.513
+   },
+   {
+    "time": 36.04,
+    "text": "How contagious is",
+    "confidence": 0.966
+   },
+   {
+    "time": 36.04,
+    "text": "measles compared",
+    "confidence": 0.839
+   },
+   {
+    "time": 36.04,
+    "text": "to COVID or a cold?",
+    "confidence": 0.907
+   },
+   {
+    "time": 36.04,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.04,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.04,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.04,
+    "text": "OPBS NEWS",
+    "confidence": 0.98
+   },
+   {
+    "time": 38.04,
+    "text": "How contagious is",
+    "confidence": 0.984
+   },
+   {
+    "time": 38.04,
+    "text": "measles compared",
+    "confidence": 0.847
+   },
+   {
+    "time": 38.04,
+    "text": "to COVID or a cold?",
+    "confidence": 0.909
+   },
+   {
+    "time": 38.04,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.04,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.04,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.04,
+    "text": "OPBS NEWS",
+    "confidence": 0.981
+   },
+   {
+    "time": 40.04,
+    "text": "How contagious is",
+    "confidence": 0.983
+   },
+   {
+    "time": 40.04,
+    "text": "measles compared",
+    "confidence": 0.849
+   },
+   {
+    "time": 40.04,
+    "text": "to COVID or a cold?",
+    "confidence": 0.91
+   },
+   {
+    "time": 40.04,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.04,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.04,
+    "text": "HORIZONS",
+    "confidence": 0.982
+   },
+   {
+    "time": 42.04,
+    "text": "OPBS NEWS",
+    "confidence": 0.984
+   },
+   {
+    "time": 42.04,
+    "text": "How contagious is",
+    "confidence": 0.981
+   },
+   {
+    "time": 42.04,
+    "text": "measles compared",
+    "confidence": 0.874
+   },
+   {
+    "time": 42.04,
+    "text": "to COVID or a cold?",
+    "confidence": 0.912
+   },
+   {
+    "time": 42.04,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.04,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.04,
+    "text": "HORIZONS",
+    "confidence": 0.997
+   },
+   {
+    "time": 44.04,
+    "text": "OPBS NEWS",
+    "confidence": 0.984
+   },
+   {
+    "time": 44.04,
+    "text": "OpBs NEWS HOR",
+    "confidence": 0.504
+   },
+   {
+    "time": 44.04,
+    "text": "How contagious is",
+    "confidence": 0.98
+   },
+   {
+    "time": 44.04,
+    "text": "measles compared",
+    "confidence": 0.922
+   },
+   {
+    "time": 44.04,
+    "text": "to COVID or a cold?",
+    "confidence": 0.912
+   },
+   {
+    "time": 44.04,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 44.04,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.05,
+    "text": "HORIZONS",
+    "confidence": 0.998
+   },
+   {
+    "time": 46.05,
+    "text": "OPBS NEWS",
+    "confidence": 0.984
+   },
+   {
+    "time": 46.05,
+    "text": "How contagious is",
+    "confidence": 0.981
+   },
+   {
+    "time": 46.05,
+    "text": "measles compared",
+    "confidence": 0.866
+   },
+   {
+    "time": 46.05,
+    "text": "to COVID or a cold?",
+    "confidence": 0.912
+   },
+   {
+    "time": 46.05,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.05,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.05,
+    "text": "HORIZONS",
+    "confidence": 0.999
+   },
+   {
+    "time": 48.05,
+    "text": "OPBS NEWS",
+    "confidence": 0.983
+   },
+   {
+    "time": 48.05,
+    "text": "How contagious is",
+    "confidence": 0.934
+   },
+   {
+    "time": 48.05,
+    "text": "measles compared",
+    "confidence": 0.844
+   },
+   {
+    "time": 48.05,
+    "text": "to COVID or a cold?",
+    "confidence": 0.911
+   },
+   {
+    "time": 48.05,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.05,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.05,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.05,
+    "text": "OPBS NEWS",
+    "confidence": 0.98
+   },
+   {
+    "time": 50.05,
+    "text": "OpBs NEWS HORI",
+    "confidence": 0.512
+   },
+   {
+    "time": 50.05,
+    "text": "How contagious is",
+    "confidence": 0.981
+   },
+   {
+    "time": 50.05,
+    "text": "measles compared",
+    "confidence": 0.944
+   },
+   {
+    "time": 50.05,
+    "text": "to COVID or a cold?",
+    "confidence": 0.905
+   },
+   {
+    "time": 50.05,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.05,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.05,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.05,
+    "text": "OPBS NEWS",
+    "confidence": 0.981
+   },
+   {
+    "time": 52.05,
+    "text": "OpBs NEWS HORI",
+    "confidence": 0.53
+   },
+   {
+    "time": 52.05,
+    "text": "How contagious is",
+    "confidence": 0.959
+   },
+   {
+    "time": 52.05,
+    "text": "measles compared",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.05,
+    "text": "to COVID or a cold?",
+    "confidence": 0.906
+   },
+   {
+    "time": 52.05,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.05,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.05,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.05,
+    "text": "OPBS NEWS",
+    "confidence": 0.981
+   },
+   {
+    "time": 54.05,
+    "text": "OpBs NEWS HORI",
+    "confidence": 0.527
+   },
+   {
+    "time": 54.05,
+    "text": "How contagious is",
+    "confidence": 0.981
+   },
+   {
+    "time": 54.05,
+    "text": "measles compared",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.05,
+    "text": "to COVID or a cold?",
+    "confidence": 0.905
+   },
+   {
+    "time": 54.05,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.05,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.06,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.06,
+    "text": "OPBS NEWS",
+    "confidence": 0.786
+   },
+   {
+    "time": 56.06,
+    "text": "How contagious is",
+    "confidence": 0.981
+   },
+   {
+    "time": 56.06,
+    "text": "measles compared",
+    "confidence": 0.948
+   },
+   {
+    "time": 56.06,
+    "text": "to COVID or a cold?",
+    "confidence": 0.905
+   },
+   {
+    "time": 56.06,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.06,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.06,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.06,
+    "text": "OPBS NEWS",
+    "confidence": 0.989
+   },
+   {
+    "time": 58.06,
+    "text": "How contagious is",
+    "confidence": 0.981
+   },
+   {
+    "time": 58.06,
+    "text": "measles compared",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.06,
+    "text": "to COVID or a cold?",
+    "confidence": 0.907
+   },
+   {
+    "time": 58.06,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.06,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.06,
+    "text": "HORIZONS",
+    "confidence": 0.95
+   },
+   {
+    "time": 60.06,
+    "text": "OPBS NEWS",
+    "confidence": 0.973
+   },
+   {
+    "time": 60.06,
+    "text": "How contagious is",
+    "confidence": 0.979
+   },
+   {
+    "time": 60.06,
+    "text": "measles compared",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.06,
+    "text": "to COVID or a cold?",
+    "confidence": 0.913
+   },
+   {
+    "time": 60.06,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.06,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.06,
+    "text": "HORIZONS",
+    "confidence": 0.804
+   },
+   {
+    "time": 62.06,
+    "text": "OPBS NEWS",
+    "confidence": 0.973
+   },
+   {
+    "time": 62.06,
+    "text": "How contagious is",
+    "confidence": 0.978
+   },
+   {
+    "time": 62.06,
+    "text": "measles compared",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.06,
+    "text": "to COVID or a cold?",
+    "confidence": 0.913
+   },
+   {
+    "time": 62.06,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 62.06,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 64.06,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 64.06,
+    "text": "OPBS NEWS",
+    "confidence": 0.974
+   },
+   {
+    "time": 64.06,
+    "text": "How contagious is",
+    "confidence": 0.962
+   },
+   {
+    "time": 64.06,
+    "text": "measles compared",
+    "confidence": 0.805
+   },
+   {
+    "time": 64.06,
+    "text": "to COVID or a cold?",
+    "confidence": 0.912
+   },
+   {
+    "time": 64.06,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 64.06,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 66.07,
+    "text": "HORIZONS",
+    "confidence": 0.686
+   },
+   {
+    "time": 66.07,
+    "text": "OPBS NEWS",
+    "confidence": 0.974
+   },
+   {
+    "time": 66.07,
+    "text": "How contagious is",
+    "confidence": 0.737
+   },
+   {
+    "time": 66.07,
+    "text": "measles compared",
+    "confidence": 1.0
+   },
+   {
+    "time": 66.07,
+    "text": "to COVID or a cold?",
+    "confidence": 0.907
+   },
+   {
+    "time": 66.07,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 66.07,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 68.07,
+    "text": "HORIZONS",
+    "confidence": 0.885
+   },
+   {
+    "time": 68.07,
+    "text": "OPBS NEWS",
+    "confidence": 0.984
+   },
+   {
+    "time": 68.07,
+    "text": "How contagious is",
+    "confidence": 0.958
+   },
+   {
+    "time": 68.07,
+    "text": "measles compared",
+    "confidence": 0.856
+   },
+   {
+    "time": 68.07,
+    "text": "to COVID or a cold?",
+    "confidence": 0.913
+   },
+   {
+    "time": 68.07,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 68.07,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 70.07,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 70.07,
+    "text": "OPBS NEWS",
+    "confidence": 0.982
+   },
+   {
+    "time": 70.07,
+    "text": "How contagious is",
+    "confidence": 0.98
+   },
+   {
+    "time": 70.07,
+    "text": "measles compared",
+    "confidence": 1.0
+   },
+   {
+    "time": 70.07,
+    "text": "to COVID or a cold?",
+    "confidence": 0.914
+   },
+   {
+    "time": 70.07,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 70.07,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 72.07,
+    "text": "HORIZONS",
+    "confidence": 0.947
+   },
+   {
+    "time": 72.07,
+    "text": "OPBS NEWS",
+    "confidence": 0.983
+   },
+   {
+    "time": 72.07,
+    "text": "MEASLES",
+    "confidence": 0.999
+   },
+   {
+    "time": 72.07,
+    "text": "TESTING",
+    "confidence": 0.921
+   },
+   {
+    "time": 72.07,
+    "text": "How contagious is",
+    "confidence": 0.956
+   },
+   {
+    "time": 72.07,
+    "text": "measles compared",
+    "confidence": 0.85
+   },
+   {
+    "time": 72.07,
+    "text": "to COVID or a cold?",
+    "confidence": 0.914
+   },
+   {
+    "time": 72.07,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 72.07,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 74.07,
+    "text": "HORIZONS",
+    "confidence": 0.974
+   },
+   {
+    "time": 74.07,
+    "text": "OPBS NEWS",
+    "confidence": 0.982
+   },
+   {
+    "time": 74.07,
+    "text": "MEASLES",
+    "confidence": 0.707
+   },
+   {
+    "time": 74.07,
+    "text": "TEST ING",
+    "confidence": 0.934
+   },
+   {
+    "time": 74.07,
+    "text": "How contagious is",
+    "confidence": 0.958
+   },
+   {
+    "time": 74.07,
+    "text": "measles compared",
+    "confidence": 1.0
+   },
+   {
+    "time": 74.07,
+    "text": "to COVID or a cold?",
+    "confidence": 0.914
+   },
+   {
+    "time": 74.07,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 74.07,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 76.08,
+    "text": "HORIZONS",
+    "confidence": 0.964
+   },
+   {
+    "time": 76.08,
+    "text": "OPBS NEWS",
+    "confidence": 0.98
+   },
+   {
+    "time": 76.08,
+    "text": "OpBS NEWS HORIZONS",
+    "confidence": 0.641
+   },
+   {
+    "time": 76.08,
+    "text": "How contagious is",
+    "confidence": 0.979
+   },
+   {
+    "time": 76.08,
+    "text": "measles compared",
+    "confidence": 1.0
+   },
+   {
+    "time": 76.08,
+    "text": "to COVID or a cold?",
+    "confidence": 0.911
+   },
+   {
+    "time": 76.08,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 76.08,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 78.08,
+    "text": "HORIZONS",
+    "confidence": 0.946
+   },
+   {
+    "time": 78.08,
+    "text": "OPBS NEWS",
+    "confidence": 0.916
+   },
+   {
+    "time": 78.08,
+    "text": "Op8s NEWS HORI",
+    "confidence": 0.618
+   },
+   {
+    "time": 78.08,
+    "text": "How contagious is",
+    "confidence": 0.98
+   },
+   {
+    "time": 78.08,
+    "text": "measles compared",
+    "confidence": 0.989
+   },
+   {
+    "time": 78.08,
+    "text": "to COVID or a cold?",
+    "confidence": 0.912
+   },
+   {
+    "time": 78.08,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 78.08,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 80.08,
+    "text": "HORIZONS",
+    "confidence": 0.999
+   },
+   {
+    "time": 80.08,
+    "text": "OPBS NEWS",
+    "confidence": 0.978
+   },
+   {
+    "time": 80.08,
+    "text": "How contagious is",
+    "confidence": 0.813
+   },
+   {
+    "time": 80.08,
+    "text": "measles compared",
+    "confidence": 0.864
+   },
+   {
+    "time": 80.08,
+    "text": "to COVID or a cold?",
+    "confidence": 0.918
+   },
+   {
+    "time": 80.08,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 80.08,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 82.08,
+    "text": "HORIZONS",
+    "confidence": 0.998
+   },
+   {
+    "time": 82.08,
+    "text": "OPBS NEWS",
+    "confidence": 0.94
+   },
+   {
+    "time": 82.08,
+    "text": "EWs HORIZONS",
+    "confidence": 0.509
+   },
+   {
+    "time": 82.08,
+    "text": "How contagious is",
+    "confidence": 0.813
+   },
+   {
+    "time": 82.08,
+    "text": "measles compared",
+    "confidence": 0.989
+   },
+   {
+    "time": 82.08,
+    "text": "to COVID or a cold?",
+    "confidence": 0.911
+   },
+   {
+    "time": 82.08,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 82.08,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 84.08,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 84.08,
+    "text": "OPBS NEWS",
+    "confidence": 0.988
+   },
+   {
+    "time": 84.08,
+    "text": "How contagious is",
+    "confidence": 0.98
+   },
+   {
+    "time": 84.08,
+    "text": "measles compared",
+    "confidence": 1.0
+   },
+   {
+    "time": 84.08,
+    "text": "to COVID or a cold?",
+    "confidence": 0.912
+   },
+   {
+    "time": 84.08,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 84.08,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 86.09,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 86.09,
+    "text": "OPBS NEWS",
+    "confidence": 0.983
+   },
+   {
+    "time": 86.09,
+    "text": "How contagious is",
+    "confidence": 0.98
+   },
+   {
+    "time": 86.09,
+    "text": "measles compared",
+    "confidence": 1.0
+   },
+   {
+    "time": 86.09,
+    "text": "to COVID or a cold?",
+    "confidence": 0.913
+   },
+   {
+    "time": 86.09,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 86.09,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 88.09,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 88.09,
+    "text": "OPBS NEWS",
+    "confidence": 0.982
+   },
+   {
+    "time": 88.09,
+    "text": "Op8s NEWS HORI",
+    "confidence": 0.503
+   },
+   {
+    "time": 88.09,
+    "text": "How contagious is",
+    "confidence": 0.979
+   },
+   {
+    "time": 88.09,
+    "text": "measles compared",
+    "confidence": 1.0
+   },
+   {
+    "time": 88.09,
+    "text": "to COVID or a cold?",
+    "confidence": 0.913
+   },
+   {
+    "time": 88.09,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 88.09,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 90.09,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 90.09,
+    "text": "OPBS NEWS",
+    "confidence": 0.983
+   },
+   {
+    "time": 90.09,
+    "text": "How contagious is",
+    "confidence": 0.979
+   },
+   {
+    "time": 90.09,
+    "text": "measles compared",
+    "confidence": 1.0
+   },
+   {
+    "time": 90.09,
+    "text": "to COVID or a cold?",
+    "confidence": 0.915
+   },
+   {
+    "time": 90.09,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 90.09,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 92.09,
+    "text": "HORIZONS",
+    "confidence": 1.0
+   },
+   {
+    "time": 92.09,
+    "text": "OPBS NEWS",
+    "confidence": 0.888
+   },
+   {
+    "time": 92.09,
+    "text": "OpBs NEWS HORI",
+    "confidence": 0.511
+   },
+   {
+    "time": 92.09,
+    "text": "How contagious is",
+    "confidence": 0.982
+   },
+   {
+    "time": 92.09,
+    "text": "measles compared",
+    "confidence": 0.821
+   },
+   {
+    "time": 92.09,
+    "text": "to COVID or a cold?",
+    "confidence": 0.919
+   },
+   {
+    "time": 92.09,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 92.09,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 94.09,
+    "text": "HORIZONS",
+    "confidence": 0.979
+   },
+   {
+    "time": 94.09,
+    "text": "PBS NEWS",
+    "confidence": 0.997
+   },
+   {
+    "time": 94.09,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 94.09,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 96.1,
+    "text": "HORIZONS",
+    "confidence": 0.779
+   },
+   {
+    "time": 96.1,
+    "text": "PBS NEWS",
+    "confidence": 0.997
+   },
+   {
+    "time": 96.1,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 96.1,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 98.1,
+    "text": "PBS",
+    "confidence": 0.999
+   },
+   {
+    "time": 98.1,
+    "text": "NEWS",
+    "confidence": 1.0
+   },
+   {
+    "time": 98.1,
+    "text": "TikTok",
+    "confidence": 0.978
+   },
+   {
+    "time": 98.1,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 100.1,
+    "text": "PBS",
+    "confidence": 0.999
+   },
+   {
+    "time": 100.1,
+    "text": "NEWS",
+    "confidence": 1.0
+   },
+   {
+    "time": 100.1,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 100.1,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 102.1,
+    "text": "PBS",
+    "confidence": 0.999
+   },
+   {
+    "time": 102.1,
+    "text": "NEWS",
+    "confidence": 0.608
+   },
+   {
+    "time": 102.1,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 102.1,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 104.1,
+    "text": "NEWS",
+    "confidence": 1.0
+   },
+   {
+    "time": 104.1,
+    "text": "Press Pass",
+    "confidence": 0.999
+   },
+   {
+    "time": 104.1,
+    "text": "gopbsnewsorg",
+    "confidence": 1.0
+   },
+   {
+    "time": 104.1,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 104.1,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 106.11,
+    "text": "NEWS",
+    "confidence": 1.0
+   },
+   {
+    "time": 106.11,
+    "text": "Press Pass",
+    "confidence": 0.999
+   },
+   {
+    "time": 106.11,
+    "text": "gopbsnews orgljoin",
+    "confidence": 0.803
+   },
+   {
+    "time": 106.11,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 106.11,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 108.11,
+    "text": "PBS",
+    "confidence": 1.0
+   },
+   {
+    "time": 108.11,
+    "text": "NEWS",
+    "confidence": 1.0
+   },
+   {
+    "time": 108.11,
+    "text": "Press Pass",
+    "confidence": 0.999
+   },
+   {
+    "time": 108.11,
+    "text": "gopbsnews orgljoin",
+    "confidence": 0.816
+   },
+   {
+    "time": 108.11,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 108.11,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 110.11,
+    "text": "NEWS",
+    "confidence": 1.0
+   },
+   {
+    "time": 110.11,
+    "text": "Press Pass",
+    "confidence": 0.999
+   },
+   {
+    "time": 110.11,
+    "text": "gopbsnews orgljoin",
+    "confidence": 0.817
+   },
+   {
+    "time": 110.11,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 110.11,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 112.11,
+    "text": "PBS",
+    "confidence": 0.999
+   },
+   {
+    "time": 112.11,
+    "text": "NEWS",
+    "confidence": 1.0
+   },
+   {
+    "time": 112.11,
+    "text": "Press Pass",
+    "confidence": 0.999
+   },
+   {
+    "time": 112.11,
+    "text": "gopbsnews orgljoin",
+    "confidence": 0.802
+   },
+   {
+    "time": 112.11,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 112.11,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 114.11,
+    "text": "PBS",
+    "confidence": 1.0
+   },
+   {
+    "time": 114.11,
+    "text": "NEWS",
+    "confidence": 1.0
+   },
+   {
+    "time": 114.11,
+    "text": "Press Pass",
+    "confidence": 0.999
+   },
+   {
+    "time": 114.11,
+    "text": "gopbsnews orgljoin",
+    "confidence": 0.792
+   },
+   {
+    "time": 114.11,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 114.11,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 116.12,
+    "text": "PBS",
+    "confidence": 1.0
+   },
+   {
+    "time": 116.12,
+    "text": "NEWS",
+    "confidence": 1.0
+   },
+   {
+    "time": 116.12,
+    "text": "EXCLUSIVE BENEFITS",
+    "confidence": 0.98
+   },
+   {
+    "time": 116.12,
+    "text": "A new supporter program",
+    "confidence": 0.836
+   },
+   {
+    "time": 116.12,
+    "text": "to stand with free and",
+    "confidence": 0.758
+   },
+   {
+    "time": 116.12,
+    "text": "independent journalism:",
+    "confidence": 0.899
+   },
+   {
+    "time": 116.12,
+    "text": "go-pbsnewsorg/join",
+    "confidence": 0.864
+   },
+   {
+    "time": 116.12,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 116.12,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 118.12,
+    "text": "PBS",
+    "confidence": 1.0
+   },
+   {
+    "time": 118.12,
+    "text": "NEWS",
+    "confidence": 1.0
+   },
+   {
+    "time": 118.12,
+    "text": "EXCLUSIVE BENEFITS",
+    "confidence": 0.973
+   },
+   {
+    "time": 118.12,
+    "text": "A new supporter program",
+    "confidence": 0.828
+   },
+   {
+    "time": 118.12,
+    "text": "to stand with free and",
+    "confidence": 0.964
+   },
+   {
+    "time": 118.12,
+    "text": "independent journalism:",
+    "confidence": 0.927
+   },
+   {
+    "time": 118.12,
+    "text": "Join Press Pass:",
+    "confidence": 0.851
+   },
+   {
+    "time": 118.12,
+    "text": "go-pbsnewsorg/join",
+    "confidence": 0.883
+   },
+   {
+    "time": 118.12,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 118.12,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 120.12,
+    "text": "PBS",
+    "confidence": 0.999
+   },
+   {
+    "time": 120.12,
+    "text": "NEWS",
+    "confidence": 1.0
+   },
+   {
+    "time": 120.12,
+    "text": "EXCLUSIVE BENEFITS",
+    "confidence": 0.979
+   },
+   {
+    "time": 120.12,
+    "text": "A new",
+    "confidence": 0.905
+   },
+   {
+    "time": 120.12,
+    "text": "supporter program",
+    "confidence": 0.885
+   },
+   {
+    "time": 120.12,
+    "text": "to stand with free and",
+    "confidence": 0.965
+   },
+   {
+    "time": 120.12,
+    "text": "independent journalism:",
+    "confidence": 0.664
+   },
+   {
+    "time": 120.12,
+    "text": "Join Press Pass:",
+    "confidence": 0.855
+   },
+   {
+    "time": 120.12,
+    "text": "go-pbsnewsorg/join",
+    "confidence": 0.874
+   },
+   {
+    "time": 120.12,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 120.12,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 122.12,
+    "text": "PBS",
+    "confidence": 0.999
+   },
+   {
+    "time": 122.12,
+    "text": "NEWS",
+    "confidence": 1.0
+   },
+   {
+    "time": 122.12,
+    "text": "EXCLUSIVE BENEFITS",
+    "confidence": 0.994
+   },
+   {
+    "time": 122.12,
+    "text": "A new",
+    "confidence": 0.905
+   },
+   {
+    "time": 122.12,
+    "text": "supporter program",
+    "confidence": 0.861
+   },
+   {
+    "time": 122.12,
+    "text": "to stand with free and",
+    "confidence": 0.964
+   },
+   {
+    "time": 122.12,
+    "text": "independent journalism:",
+    "confidence": 0.757
+   },
+   {
+    "time": 122.12,
+    "text": "Join Press Pass:",
+    "confidence": 0.855
+   },
+   {
+    "time": 122.12,
+    "text": "gopbsnewsorg/join",
+    "confidence": 0.848
+   },
+   {
+    "time": 122.12,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 122.12,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 124.12,
+    "text": "PBS",
+    "confidence": 0.999
+   },
+   {
+    "time": 124.12,
+    "text": "NEWS",
+    "confidence": 1.0
+   },
+   {
+    "time": 124.12,
+    "text": "EXCLUSIVE BENEFITS",
+    "confidence": 0.994
+   },
+   {
+    "time": 124.12,
+    "text": "A new",
+    "confidence": 0.905
+   },
+   {
+    "time": 124.12,
+    "text": "supporter program",
+    "confidence": 0.87
+   },
+   {
+    "time": 124.12,
+    "text": "to stand with free and",
+    "confidence": 0.964
+   },
+   {
+    "time": 124.12,
+    "text": "independent journalism:",
+    "confidence": 0.964
+   },
+   {
+    "time": 124.12,
+    "text": "Join Press Pass:",
+    "confidence": 0.855
+   },
+   {
+    "time": 124.12,
+    "text": "gopbsnewsorg/join",
+    "confidence": 0.848
+   },
+   {
+    "time": 124.12,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 124.12,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 126.13,
+    "text": "PBS",
+    "confidence": 0.999
+   },
+   {
+    "time": 126.13,
+    "text": "NEWS",
+    "confidence": 1.0
+   },
+   {
+    "time": 126.13,
+    "text": "EXCLUSIVE BENEFITS",
+    "confidence": 0.974
+   },
+   {
+    "time": 126.13,
+    "text": "A new",
+    "confidence": 0.905
+   },
+   {
+    "time": 126.13,
+    "text": "supporter program",
+    "confidence": 0.87
+   },
+   {
+    "time": 126.13,
+    "text": "to stand with free and",
+    "confidence": 0.964
+   },
+   {
+    "time": 126.13,
+    "text": "independent journalism:",
+    "confidence": 0.964
+   },
+   {
+    "time": 126.13,
+    "text": "Join Press Pass:",
+    "confidence": 0.855
+   },
+   {
+    "time": 126.13,
+    "text": "gopbsnewsorg/join",
+    "confidence": 0.632
+   },
+   {
+    "time": 126.13,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 126.13,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 128.13,
+    "text": "PBS",
+    "confidence": 0.997
+   },
+   {
+    "time": 128.13,
+    "text": "NEWS",
+    "confidence": 1.0
+   },
+   {
+    "time": 128.13,
+    "text": "EXCLUSIVE BENEFITS",
+    "confidence": 0.972
+   },
+   {
+    "time": 128.13,
+    "text": "A new",
+    "confidence": 0.869
+   },
+   {
+    "time": 128.13,
+    "text": "supporter program",
+    "confidence": 0.883
+   },
+   {
+    "time": 128.13,
+    "text": "to stand with free and",
+    "confidence": 0.968
+   },
+   {
+    "time": 128.13,
+    "text": "independent journalism:",
+    "confidence": 0.964
+   },
+   {
+    "time": 128.13,
+    "text": "Join Press Pass:",
+    "confidence": 0.853
+   },
+   {
+    "time": 128.13,
+    "text": "gopbsnewsorg/join",
+    "confidence": 0.854
+   },
+   {
+    "time": 128.13,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 128.13,
+    "text": "pbsnews",
+    "confidence": 1.0
+   },
+   {
+    "time": 130.13,
+    "text": "J",
+    "confidence": 0.598
+   },
+   {
+    "time": 130.13,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 130.13,
+    "text": "@ pbsnews",
+    "confidence": 0.803
+   },
+   {
+    "time": 132.13,
+    "text": "J",
+    "confidence": 0.683
+   },
+   {
+    "time": 132.13,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 132.13,
+    "text": "@ pbsnews",
+    "confidence": 0.803
+   }
+  ],
+  "captions": [
+   {
+    "text": "HORIZONS",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o1"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.977,
+    "id": "o2"
+   },
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.932,
+    "id": "o3"
+   },
+   {
+    "text": "@ pbsnews",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.968,
+    "id": "o4"
+   },
+   {
+    "text": "How contagious is",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.793,
+    "id": "o5"
+   },
+   {
+    "text": "measles compared",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.917,
+    "id": "o6"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.921,
+    "id": "o7"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o8"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.714,
+    "id": "o9"
+   },
+   {
+    "text": "TikTok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.95,
+    "id": "o10"
+   },
+   {
+    "text": "@ pbsnews",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.972,
+    "id": "o11"
+   },
+   {
+    "text": "How contagious is",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.982,
+    "id": "o12"
+   },
+   {
+    "text": "measles compared",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.86,
+    "id": "o13"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.914,
+    "id": "o14"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o15"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.985,
+    "id": "o16"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.954,
+    "id": "o17"
+   },
+   {
+    "text": "@ pbsnews",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.792,
+    "id": "o18"
+   },
+   {
+    "text": "How contagious is",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.82,
+    "id": "o19"
+   },
+   {
+    "text": "measles compared",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.905,
+    "id": "o20"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.913,
+    "id": "o21"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 1.0,
+    "id": "o22"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.958,
+    "id": "o23"
+   },
+   {
+    "text": "How contagious is",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.82,
+    "id": "o24"
+   },
+   {
+    "text": "measles compared",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.873,
+    "id": "o25"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.649,
+    "id": "o26"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.999,
+    "id": "o27"
+   },
+   {
+    "text": "pbsnews",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 1.0,
+    "id": "o28"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 1.0,
+    "id": "o29"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.971,
+    "id": "o30"
+   },
+   {
+    "text": "How contagious is",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.982,
+    "id": "o31"
+   },
+   {
+    "text": "measles compared",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.873,
+    "id": "o32"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.917,
+    "id": "o33"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.999,
+    "id": "o34"
+   },
+   {
+    "text": "pbsnews",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 1.0,
+    "id": "o35"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 1.0,
+    "id": "o36"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.971,
+    "id": "o37"
+   },
+   {
+    "text": "How contagious is",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.936,
+    "id": "o38"
+   },
+   {
+    "text": "measles compared",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.85,
+    "id": "o39"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.914,
+    "id": "o40"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 1.0,
+    "id": "o41"
+   },
+   {
+    "text": "pbsnews",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 1.0,
+    "id": "o42"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 1.0,
+    "id": "o43"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.895,
+    "id": "o44"
+   },
+   {
+    "text": "How contagious is",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.981,
+    "id": "o45"
+   },
+   {
+    "text": "measles compared",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.924,
+    "id": "o46"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.915,
+    "id": "o47"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 1.0,
+    "id": "o48"
+   },
+   {
+    "text": "pbsnews",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 1.0,
+    "id": "o49"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 1.0,
+    "id": "o50"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.981,
+    "id": "o51"
+   },
+   {
+    "text": "How contagious is",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.735,
+    "id": "o52"
+   },
+   {
+    "text": "measles compared",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 1.0,
+    "id": "o53"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.915,
+    "id": "o54"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 1.0,
+    "id": "o55"
+   },
+   {
+    "text": "pbsnews",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 1.0,
+    "id": "o56"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 1.0,
+    "id": "o57"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.955,
+    "id": "o58"
+   },
+   {
+    "text": "DR. WILLIAM SCHAFFNER",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.788,
+    "id": "o59"
+   },
+   {
+    "text": "How contagious is",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.98,
+    "id": "o60"
+   },
+   {
+    "text": "measles compared",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.886,
+    "id": "o61"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.918,
+    "id": "o62"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 1.0,
+    "id": "o63"
+   },
+   {
+    "text": "pbsnews",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 1.0,
+    "id": "o64"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.986,
+    "id": "o65"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.979,
+    "id": "o66"
+   },
+   {
+    "text": "DR: WILLIAM SCHAFFNER",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.564,
+    "id": "o67"
+   },
+   {
+    "text": "How contagious is",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.978,
+    "id": "o68"
+   },
+   {
+    "text": "measles compared",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.868,
+    "id": "o69"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.918,
+    "id": "o70"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 1.0,
+    "id": "o71"
+   },
+   {
+    "text": "pbsnews",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 1.0,
+    "id": "o72"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.949,
+    "id": "o73"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.914,
+    "id": "o74"
+   },
+   {
+    "text": "DR: WILLIAM SCHAFFNER",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.515,
+    "id": "o75"
+   },
+   {
+    "text": "How contagious is",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.979,
+    "id": "o76"
+   },
+   {
+    "text": "measles compared",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.882,
+    "id": "o77"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.919,
+    "id": "o78"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 1.0,
+    "id": "o79"
+   },
+   {
+    "text": "pbsnews",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 1.0,
+    "id": "o80"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.995,
+    "id": "o81"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.987,
+    "id": "o82"
+   },
+   {
+    "text": "DR: WILLIAM SCHAFFNER",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.65,
+    "id": "o83"
+   },
+   {
+    "text": "How contagious is",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.979,
+    "id": "o84"
+   },
+   {
+    "text": "measles compared",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 1.0,
+    "id": "o85"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.916,
+    "id": "o86"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 1.0,
+    "id": "o87"
+   },
+   {
+    "text": "pbsnews",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 1.0,
+    "id": "o88"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 1.0,
+    "id": "o89"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.881,
+    "id": "o90"
+   },
+   {
+    "text": "DR: WILLIAM SCHAFFNER",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.51,
+    "id": "o91"
+   },
+   {
+    "text": "How contagious is",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.978,
+    "id": "o92"
+   },
+   {
+    "text": "measles compared",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.932,
+    "id": "o93"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.917,
+    "id": "o94"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 1.0,
+    "id": "o95"
+   },
+   {
+    "text": "pbsnews",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 1.0,
+    "id": "o96"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 1.0,
+    "id": "o97"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.979,
+    "id": "o98"
+   },
+   {
+    "text": "OpBs NEWS HORIZ",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.514,
+    "id": "o99"
+   },
+   {
+    "text": "How contagious is",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.98,
+    "id": "o100"
+   },
+   {
+    "text": "measles compared",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.877,
+    "id": "o101"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.905,
+    "id": "o102"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.999,
+    "id": "o103"
+   },
+   {
+    "text": "pbsnews",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 1.0,
+    "id": "o104"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 1.0,
+    "id": "o105"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.979,
+    "id": "o106"
+   },
+   {
+    "text": "How contagious is",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.98,
+    "id": "o107"
+   },
+   {
+    "text": "measles compared",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.872,
+    "id": "o108"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.905,
+    "id": "o109"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.999,
+    "id": "o110"
+   },
+   {
+    "text": "pbsnews",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 1.0,
+    "id": "o111"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 1.0,
+    "id": "o112"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.981,
+    "id": "o113"
+   },
+   {
+    "text": "How contagious is",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.98,
+    "id": "o114"
+   },
+   {
+    "text": "measles compared",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.925,
+    "id": "o115"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.905,
+    "id": "o116"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 1.0,
+    "id": "o117"
+   },
+   {
+    "text": "pbsnews",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 1.0,
+    "id": "o118"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 1.0,
+    "id": "o119"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.979,
+    "id": "o120"
+   },
+   {
+    "text": "How contagious is",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.98,
+    "id": "o121"
+   },
+   {
+    "text": "measles compared",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.88,
+    "id": "o122"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.903,
+    "id": "o123"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.999,
+    "id": "o124"
+   },
+   {
+    "text": "pbsnews",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 1.0,
+    "id": "o125"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.993,
+    "id": "o126"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.971,
+    "id": "o127"
+   },
+   {
+    "text": "How contagious is",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.967,
+    "id": "o128"
+   },
+   {
+    "text": "measles compared",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.84,
+    "id": "o129"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.907,
+    "id": "o130"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 1.0,
+    "id": "o131"
+   },
+   {
+    "text": "pbsnews",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 1.0,
+    "id": "o132"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.976,
+    "id": "o133"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.98,
+    "id": "o134"
+   },
+   {
+    "text": "Op8s NEWS HO",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.513,
+    "id": "o135"
+   },
+   {
+    "text": "How contagious is",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.966,
+    "id": "o136"
+   },
+   {
+    "text": "measles compared",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.839,
+    "id": "o137"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.907,
+    "id": "o138"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 1.0,
+    "id": "o139"
+   },
+   {
+    "text": "pbsnews",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 1.0,
+    "id": "o140"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 1.0,
+    "id": "o141"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.98,
+    "id": "o142"
+   },
+   {
+    "text": "How contagious is",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.984,
+    "id": "o143"
+   },
+   {
+    "text": "measles compared",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.847,
+    "id": "o144"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.909,
+    "id": "o145"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 1.0,
+    "id": "o146"
+   },
+   {
+    "text": "pbsnews",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 1.0,
+    "id": "o147"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 1.0,
+    "id": "o148"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.981,
+    "id": "o149"
+   },
+   {
+    "text": "How contagious is",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.983,
+    "id": "o150"
+   },
+   {
+    "text": "measles compared",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.849,
+    "id": "o151"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.91,
+    "id": "o152"
+   },
+   {
+    "text": "TikTok",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 1.0,
+    "id": "o153"
+   },
+   {
+    "text": "pbsnews",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 1.0,
+    "id": "o154"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.982,
+    "id": "o155"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.984,
+    "id": "o156"
+   },
+   {
+    "text": "How contagious is",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.981,
+    "id": "o157"
+   },
+   {
+    "text": "measles compared",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.874,
+    "id": "o158"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.912,
+    "id": "o159"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 1.0,
+    "id": "o160"
+   },
+   {
+    "text": "pbsnews",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 1.0,
+    "id": "o161"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.997,
+    "id": "o162"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.984,
+    "id": "o163"
+   },
+   {
+    "text": "OpBs NEWS HOR",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.504,
+    "id": "o164"
+   },
+   {
+    "text": "How contagious is",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.98,
+    "id": "o165"
+   },
+   {
+    "text": "measles compared",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.922,
+    "id": "o166"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.912,
+    "id": "o167"
+   },
+   {
+    "text": "TikTok",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.999,
+    "id": "o168"
+   },
+   {
+    "text": "pbsnews",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 1.0,
+    "id": "o169"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.998,
+    "id": "o170"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.984,
+    "id": "o171"
+   },
+   {
+    "text": "How contagious is",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.981,
+    "id": "o172"
+   },
+   {
+    "text": "measles compared",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.866,
+    "id": "o173"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.912,
+    "id": "o174"
+   },
+   {
+    "text": "TikTok",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 1.0,
+    "id": "o175"
+   },
+   {
+    "text": "pbsnews",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 1.0,
+    "id": "o176"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.999,
+    "id": "o177"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.983,
+    "id": "o178"
+   },
+   {
+    "text": "How contagious is",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.934,
+    "id": "o179"
+   },
+   {
+    "text": "measles compared",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.844,
+    "id": "o180"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.911,
+    "id": "o181"
+   },
+   {
+    "text": "TikTok",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 1.0,
+    "id": "o182"
+   },
+   {
+    "text": "pbsnews",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 1.0,
+    "id": "o183"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 1.0,
+    "id": "o184"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.98,
+    "id": "o185"
+   },
+   {
+    "text": "OpBs NEWS HORI",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.512,
+    "id": "o186"
+   },
+   {
+    "text": "How contagious is",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.981,
+    "id": "o187"
+   },
+   {
+    "text": "measles compared",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.944,
+    "id": "o188"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.905,
+    "id": "o189"
+   },
+   {
+    "text": "TikTok",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 1.0,
+    "id": "o190"
+   },
+   {
+    "text": "pbsnews",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 1.0,
+    "id": "o191"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 1.0,
+    "id": "o192"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.981,
+    "id": "o193"
+   },
+   {
+    "text": "OpBs NEWS HORI",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.53,
+    "id": "o194"
+   },
+   {
+    "text": "How contagious is",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.959,
+    "id": "o195"
+   },
+   {
+    "text": "measles compared",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 1.0,
+    "id": "o196"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.906,
+    "id": "o197"
+   },
+   {
+    "text": "TikTok",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 1.0,
+    "id": "o198"
+   },
+   {
+    "text": "pbsnews",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 1.0,
+    "id": "o199"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 1.0,
+    "id": "o200"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.981,
+    "id": "o201"
+   },
+   {
+    "text": "OpBs NEWS HORI",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.527,
+    "id": "o202"
+   },
+   {
+    "text": "How contagious is",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.981,
+    "id": "o203"
+   },
+   {
+    "text": "measles compared",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 1.0,
+    "id": "o204"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.905,
+    "id": "o205"
+   },
+   {
+    "text": "TikTok",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 1.0,
+    "id": "o206"
+   },
+   {
+    "text": "pbsnews",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 1.0,
+    "id": "o207"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 1.0,
+    "id": "o208"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.786,
+    "id": "o209"
+   },
+   {
+    "text": "How contagious is",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.981,
+    "id": "o210"
+   },
+   {
+    "text": "measles compared",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.948,
+    "id": "o211"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.905,
+    "id": "o212"
+   },
+   {
+    "text": "TikTok",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 1.0,
+    "id": "o213"
+   },
+   {
+    "text": "pbsnews",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 1.0,
+    "id": "o214"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 1.0,
+    "id": "o215"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 0.989,
+    "id": "o216"
+   },
+   {
+    "text": "How contagious is",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 0.981,
+    "id": "o217"
+   },
+   {
+    "text": "measles compared",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 1.0,
+    "id": "o218"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 0.907,
+    "id": "o219"
+   },
+   {
+    "text": "TikTok",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 1.0,
+    "id": "o220"
+   },
+   {
+    "text": "pbsnews",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 1.0,
+    "id": "o221"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 0.95,
+    "id": "o222"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 0.973,
+    "id": "o223"
+   },
+   {
+    "text": "How contagious is",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 0.979,
+    "id": "o224"
+   },
+   {
+    "text": "measles compared",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 1.0,
+    "id": "o225"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 0.913,
+    "id": "o226"
+   },
+   {
+    "text": "TikTok",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 1.0,
+    "id": "o227"
+   },
+   {
+    "text": "pbsnews",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 1.0,
+    "id": "o228"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 62.06,
+    "end": 62.06,
+    "confidence": 0.804,
+    "id": "o229"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 62.06,
+    "end": 62.06,
+    "confidence": 0.973,
+    "id": "o230"
+   },
+   {
+    "text": "How contagious is",
+    "start": 62.06,
+    "end": 62.06,
+    "confidence": 0.978,
+    "id": "o231"
+   },
+   {
+    "text": "measles compared",
+    "start": 62.06,
+    "end": 62.06,
+    "confidence": 1.0,
+    "id": "o232"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 62.06,
+    "end": 62.06,
+    "confidence": 0.913,
+    "id": "o233"
+   },
+   {
+    "text": "TikTok",
+    "start": 62.06,
+    "end": 62.06,
+    "confidence": 0.999,
+    "id": "o234"
+   },
+   {
+    "text": "pbsnews",
+    "start": 62.06,
+    "end": 62.06,
+    "confidence": 1.0,
+    "id": "o235"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 64.06,
+    "end": 64.06,
+    "confidence": 1.0,
+    "id": "o236"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 64.06,
+    "end": 64.06,
+    "confidence": 0.974,
+    "id": "o237"
+   },
+   {
+    "text": "How contagious is",
+    "start": 64.06,
+    "end": 64.06,
+    "confidence": 0.962,
+    "id": "o238"
+   },
+   {
+    "text": "measles compared",
+    "start": 64.06,
+    "end": 64.06,
+    "confidence": 0.805,
+    "id": "o239"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 64.06,
+    "end": 64.06,
+    "confidence": 0.912,
+    "id": "o240"
+   },
+   {
+    "text": "TikTok",
+    "start": 64.06,
+    "end": 64.06,
+    "confidence": 0.999,
+    "id": "o241"
+   },
+   {
+    "text": "pbsnews",
+    "start": 64.06,
+    "end": 64.06,
+    "confidence": 1.0,
+    "id": "o242"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 66.07,
+    "end": 66.07,
+    "confidence": 0.686,
+    "id": "o243"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 66.07,
+    "end": 66.07,
+    "confidence": 0.974,
+    "id": "o244"
+   },
+   {
+    "text": "How contagious is",
+    "start": 66.07,
+    "end": 66.07,
+    "confidence": 0.737,
+    "id": "o245"
+   },
+   {
+    "text": "measles compared",
+    "start": 66.07,
+    "end": 66.07,
+    "confidence": 1.0,
+    "id": "o246"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 66.07,
+    "end": 66.07,
+    "confidence": 0.907,
+    "id": "o247"
+   },
+   {
+    "text": "TikTok",
+    "start": 66.07,
+    "end": 66.07,
+    "confidence": 0.999,
+    "id": "o248"
+   },
+   {
+    "text": "pbsnews",
+    "start": 66.07,
+    "end": 66.07,
+    "confidence": 1.0,
+    "id": "o249"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 68.07,
+    "end": 68.07,
+    "confidence": 0.885,
+    "id": "o250"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 68.07,
+    "end": 68.07,
+    "confidence": 0.984,
+    "id": "o251"
+   },
+   {
+    "text": "How contagious is",
+    "start": 68.07,
+    "end": 68.07,
+    "confidence": 0.958,
+    "id": "o252"
+   },
+   {
+    "text": "measles compared",
+    "start": 68.07,
+    "end": 68.07,
+    "confidence": 0.856,
+    "id": "o253"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 68.07,
+    "end": 68.07,
+    "confidence": 0.913,
+    "id": "o254"
+   },
+   {
+    "text": "TikTok",
+    "start": 68.07,
+    "end": 68.07,
+    "confidence": 0.999,
+    "id": "o255"
+   },
+   {
+    "text": "pbsnews",
+    "start": 68.07,
+    "end": 68.07,
+    "confidence": 1.0,
+    "id": "o256"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 70.07,
+    "end": 70.07,
+    "confidence": 1.0,
+    "id": "o257"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 70.07,
+    "end": 70.07,
+    "confidence": 0.982,
+    "id": "o258"
+   },
+   {
+    "text": "How contagious is",
+    "start": 70.07,
+    "end": 70.07,
+    "confidence": 0.98,
+    "id": "o259"
+   },
+   {
+    "text": "measles compared",
+    "start": 70.07,
+    "end": 70.07,
+    "confidence": 1.0,
+    "id": "o260"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 70.07,
+    "end": 70.07,
+    "confidence": 0.914,
+    "id": "o261"
+   },
+   {
+    "text": "TikTok",
+    "start": 70.07,
+    "end": 70.07,
+    "confidence": 1.0,
+    "id": "o262"
+   },
+   {
+    "text": "pbsnews",
+    "start": 70.07,
+    "end": 70.07,
+    "confidence": 1.0,
+    "id": "o263"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 72.07,
+    "end": 72.07,
+    "confidence": 0.947,
+    "id": "o264"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 72.07,
+    "end": 72.07,
+    "confidence": 0.983,
+    "id": "o265"
+   },
+   {
+    "text": "MEASLES",
+    "start": 72.07,
+    "end": 72.07,
+    "confidence": 0.999,
+    "id": "o266"
+   },
+   {
+    "text": "TESTING",
+    "start": 72.07,
+    "end": 72.07,
+    "confidence": 0.921,
+    "id": "o267"
+   },
+   {
+    "text": "How contagious is",
+    "start": 72.07,
+    "end": 72.07,
+    "confidence": 0.956,
+    "id": "o268"
+   },
+   {
+    "text": "measles compared",
+    "start": 72.07,
+    "end": 72.07,
+    "confidence": 0.85,
+    "id": "o269"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 72.07,
+    "end": 72.07,
+    "confidence": 0.914,
+    "id": "o270"
+   },
+   {
+    "text": "TikTok",
+    "start": 72.07,
+    "end": 72.07,
+    "confidence": 0.999,
+    "id": "o271"
+   },
+   {
+    "text": "pbsnews",
+    "start": 72.07,
+    "end": 72.07,
+    "confidence": 1.0,
+    "id": "o272"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 74.07,
+    "end": 74.07,
+    "confidence": 0.974,
+    "id": "o273"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 74.07,
+    "end": 74.07,
+    "confidence": 0.982,
+    "id": "o274"
+   },
+   {
+    "text": "MEASLES",
+    "start": 74.07,
+    "end": 74.07,
+    "confidence": 0.707,
+    "id": "o275"
+   },
+   {
+    "text": "TEST ING",
+    "start": 74.07,
+    "end": 74.07,
+    "confidence": 0.934,
+    "id": "o276"
+   },
+   {
+    "text": "How contagious is",
+    "start": 74.07,
+    "end": 74.07,
+    "confidence": 0.958,
+    "id": "o277"
+   },
+   {
+    "text": "measles compared",
+    "start": 74.07,
+    "end": 74.07,
+    "confidence": 1.0,
+    "id": "o278"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 74.07,
+    "end": 74.07,
+    "confidence": 0.914,
+    "id": "o279"
+   },
+   {
+    "text": "TikTok",
+    "start": 74.07,
+    "end": 74.07,
+    "confidence": 1.0,
+    "id": "o280"
+   },
+   {
+    "text": "pbsnews",
+    "start": 74.07,
+    "end": 74.07,
+    "confidence": 1.0,
+    "id": "o281"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 76.08,
+    "end": 76.08,
+    "confidence": 0.964,
+    "id": "o282"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 76.08,
+    "end": 76.08,
+    "confidence": 0.98,
+    "id": "o283"
+   },
+   {
+    "text": "OpBS NEWS HORIZONS",
+    "start": 76.08,
+    "end": 76.08,
+    "confidence": 0.641,
+    "id": "o284"
+   },
+   {
+    "text": "How contagious is",
+    "start": 76.08,
+    "end": 76.08,
+    "confidence": 0.979,
+    "id": "o285"
+   },
+   {
+    "text": "measles compared",
+    "start": 76.08,
+    "end": 76.08,
+    "confidence": 1.0,
+    "id": "o286"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 76.08,
+    "end": 76.08,
+    "confidence": 0.911,
+    "id": "o287"
+   },
+   {
+    "text": "TikTok",
+    "start": 76.08,
+    "end": 76.08,
+    "confidence": 1.0,
+    "id": "o288"
+   },
+   {
+    "text": "pbsnews",
+    "start": 76.08,
+    "end": 76.08,
+    "confidence": 1.0,
+    "id": "o289"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 78.08,
+    "end": 78.08,
+    "confidence": 0.946,
+    "id": "o290"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 78.08,
+    "end": 78.08,
+    "confidence": 0.916,
+    "id": "o291"
+   },
+   {
+    "text": "Op8s NEWS HORI",
+    "start": 78.08,
+    "end": 78.08,
+    "confidence": 0.618,
+    "id": "o292"
+   },
+   {
+    "text": "How contagious is",
+    "start": 78.08,
+    "end": 78.08,
+    "confidence": 0.98,
+    "id": "o293"
+   },
+   {
+    "text": "measles compared",
+    "start": 78.08,
+    "end": 78.08,
+    "confidence": 0.989,
+    "id": "o294"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 78.08,
+    "end": 78.08,
+    "confidence": 0.912,
+    "id": "o295"
+   },
+   {
+    "text": "TikTok",
+    "start": 78.08,
+    "end": 78.08,
+    "confidence": 1.0,
+    "id": "o296"
+   },
+   {
+    "text": "pbsnews",
+    "start": 78.08,
+    "end": 78.08,
+    "confidence": 1.0,
+    "id": "o297"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 80.08,
+    "end": 80.08,
+    "confidence": 0.999,
+    "id": "o298"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 80.08,
+    "end": 80.08,
+    "confidence": 0.978,
+    "id": "o299"
+   },
+   {
+    "text": "How contagious is",
+    "start": 80.08,
+    "end": 80.08,
+    "confidence": 0.813,
+    "id": "o300"
+   },
+   {
+    "text": "measles compared",
+    "start": 80.08,
+    "end": 80.08,
+    "confidence": 0.864,
+    "id": "o301"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 80.08,
+    "end": 80.08,
+    "confidence": 0.918,
+    "id": "o302"
+   },
+   {
+    "text": "TikTok",
+    "start": 80.08,
+    "end": 80.08,
+    "confidence": 1.0,
+    "id": "o303"
+   },
+   {
+    "text": "pbsnews",
+    "start": 80.08,
+    "end": 80.08,
+    "confidence": 1.0,
+    "id": "o304"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 82.08,
+    "end": 82.08,
+    "confidence": 0.998,
+    "id": "o305"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 82.08,
+    "end": 82.08,
+    "confidence": 0.94,
+    "id": "o306"
+   },
+   {
+    "text": "EWs HORIZONS",
+    "start": 82.08,
+    "end": 82.08,
+    "confidence": 0.509,
+    "id": "o307"
+   },
+   {
+    "text": "How contagious is",
+    "start": 82.08,
+    "end": 82.08,
+    "confidence": 0.813,
+    "id": "o308"
+   },
+   {
+    "text": "measles compared",
+    "start": 82.08,
+    "end": 82.08,
+    "confidence": 0.989,
+    "id": "o309"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 82.08,
+    "end": 82.08,
+    "confidence": 0.911,
+    "id": "o310"
+   },
+   {
+    "text": "TikTok",
+    "start": 82.08,
+    "end": 82.08,
+    "confidence": 1.0,
+    "id": "o311"
+   },
+   {
+    "text": "pbsnews",
+    "start": 82.08,
+    "end": 82.08,
+    "confidence": 1.0,
+    "id": "o312"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 84.08,
+    "end": 84.08,
+    "confidence": 1.0,
+    "id": "o313"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 84.08,
+    "end": 84.08,
+    "confidence": 0.988,
+    "id": "o314"
+   },
+   {
+    "text": "How contagious is",
+    "start": 84.08,
+    "end": 84.08,
+    "confidence": 0.98,
+    "id": "o315"
+   },
+   {
+    "text": "measles compared",
+    "start": 84.08,
+    "end": 84.08,
+    "confidence": 1.0,
+    "id": "o316"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 84.08,
+    "end": 84.08,
+    "confidence": 0.912,
+    "id": "o317"
+   },
+   {
+    "text": "TikTok",
+    "start": 84.08,
+    "end": 84.08,
+    "confidence": 1.0,
+    "id": "o318"
+   },
+   {
+    "text": "pbsnews",
+    "start": 84.08,
+    "end": 84.08,
+    "confidence": 1.0,
+    "id": "o319"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 86.09,
+    "end": 86.09,
+    "confidence": 1.0,
+    "id": "o320"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 86.09,
+    "end": 86.09,
+    "confidence": 0.983,
+    "id": "o321"
+   },
+   {
+    "text": "How contagious is",
+    "start": 86.09,
+    "end": 86.09,
+    "confidence": 0.98,
+    "id": "o322"
+   },
+   {
+    "text": "measles compared",
+    "start": 86.09,
+    "end": 86.09,
+    "confidence": 1.0,
+    "id": "o323"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 86.09,
+    "end": 86.09,
+    "confidence": 0.913,
+    "id": "o324"
+   },
+   {
+    "text": "TikTok",
+    "start": 86.09,
+    "end": 86.09,
+    "confidence": 1.0,
+    "id": "o325"
+   },
+   {
+    "text": "pbsnews",
+    "start": 86.09,
+    "end": 86.09,
+    "confidence": 1.0,
+    "id": "o326"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 88.09,
+    "end": 88.09,
+    "confidence": 1.0,
+    "id": "o327"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 88.09,
+    "end": 88.09,
+    "confidence": 0.982,
+    "id": "o328"
+   },
+   {
+    "text": "Op8s NEWS HORI",
+    "start": 88.09,
+    "end": 88.09,
+    "confidence": 0.503,
+    "id": "o329"
+   },
+   {
+    "text": "How contagious is",
+    "start": 88.09,
+    "end": 88.09,
+    "confidence": 0.979,
+    "id": "o330"
+   },
+   {
+    "text": "measles compared",
+    "start": 88.09,
+    "end": 88.09,
+    "confidence": 1.0,
+    "id": "o331"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 88.09,
+    "end": 88.09,
+    "confidence": 0.913,
+    "id": "o332"
+   },
+   {
+    "text": "TikTok",
+    "start": 88.09,
+    "end": 88.09,
+    "confidence": 0.999,
+    "id": "o333"
+   },
+   {
+    "text": "pbsnews",
+    "start": 88.09,
+    "end": 88.09,
+    "confidence": 1.0,
+    "id": "o334"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 90.09,
+    "end": 90.09,
+    "confidence": 1.0,
+    "id": "o335"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 90.09,
+    "end": 90.09,
+    "confidence": 0.983,
+    "id": "o336"
+   },
+   {
+    "text": "How contagious is",
+    "start": 90.09,
+    "end": 90.09,
+    "confidence": 0.979,
+    "id": "o337"
+   },
+   {
+    "text": "measles compared",
+    "start": 90.09,
+    "end": 90.09,
+    "confidence": 1.0,
+    "id": "o338"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 90.09,
+    "end": 90.09,
+    "confidence": 0.915,
+    "id": "o339"
+   },
+   {
+    "text": "TikTok",
+    "start": 90.09,
+    "end": 90.09,
+    "confidence": 0.999,
+    "id": "o340"
+   },
+   {
+    "text": "pbsnews",
+    "start": 90.09,
+    "end": 90.09,
+    "confidence": 1.0,
+    "id": "o341"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 92.09,
+    "end": 92.09,
+    "confidence": 1.0,
+    "id": "o342"
+   },
+   {
+    "text": "OPBS NEWS",
+    "start": 92.09,
+    "end": 92.09,
+    "confidence": 0.888,
+    "id": "o343"
+   },
+   {
+    "text": "OpBs NEWS HORI",
+    "start": 92.09,
+    "end": 92.09,
+    "confidence": 0.511,
+    "id": "o344"
+   },
+   {
+    "text": "How contagious is",
+    "start": 92.09,
+    "end": 92.09,
+    "confidence": 0.982,
+    "id": "o345"
+   },
+   {
+    "text": "measles compared",
+    "start": 92.09,
+    "end": 92.09,
+    "confidence": 0.821,
+    "id": "o346"
+   },
+   {
+    "text": "to COVID or a cold?",
+    "start": 92.09,
+    "end": 92.09,
+    "confidence": 0.919,
+    "id": "o347"
+   },
+   {
+    "text": "TikTok",
+    "start": 92.09,
+    "end": 92.09,
+    "confidence": 1.0,
+    "id": "o348"
+   },
+   {
+    "text": "pbsnews",
+    "start": 92.09,
+    "end": 92.09,
+    "confidence": 1.0,
+    "id": "o349"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 94.09,
+    "end": 94.09,
+    "confidence": 0.979,
+    "id": "o350"
+   },
+   {
+    "text": "PBS NEWS",
+    "start": 94.09,
+    "end": 94.09,
+    "confidence": 0.997,
+    "id": "o351"
+   },
+   {
+    "text": "TikTok",
+    "start": 94.09,
+    "end": 94.09,
+    "confidence": 1.0,
+    "id": "o352"
+   },
+   {
+    "text": "pbsnews",
+    "start": 94.09,
+    "end": 94.09,
+    "confidence": 1.0,
+    "id": "o353"
+   },
+   {
+    "text": "HORIZONS",
+    "start": 96.1,
+    "end": 96.1,
+    "confidence": 0.779,
+    "id": "o354"
+   },
+   {
+    "text": "PBS NEWS",
+    "start": 96.1,
+    "end": 96.1,
+    "confidence": 0.997,
+    "id": "o355"
+   },
+   {
+    "text": "TikTok",
+    "start": 96.1,
+    "end": 96.1,
+    "confidence": 1.0,
+    "id": "o356"
+   },
+   {
+    "text": "pbsnews",
+    "start": 96.1,
+    "end": 96.1,
+    "confidence": 1.0,
+    "id": "o357"
+   },
+   {
+    "text": "PBS",
+    "start": 98.1,
+    "end": 98.1,
+    "confidence": 0.999,
+    "id": "o358"
+   },
+   {
+    "text": "NEWS",
+    "start": 98.1,
+    "end": 98.1,
+    "confidence": 1.0,
+    "id": "o359"
+   },
+   {
+    "text": "TikTok",
+    "start": 98.1,
+    "end": 98.1,
+    "confidence": 0.978,
+    "id": "o360"
+   },
+   {
+    "text": "pbsnews",
+    "start": 98.1,
+    "end": 98.1,
+    "confidence": 1.0,
+    "id": "o361"
+   },
+   {
+    "text": "PBS",
+    "start": 100.1,
+    "end": 100.1,
+    "confidence": 0.999,
+    "id": "o362"
+   },
+   {
+    "text": "NEWS",
+    "start": 100.1,
+    "end": 100.1,
+    "confidence": 1.0,
+    "id": "o363"
+   },
+   {
+    "text": "TikTok",
+    "start": 100.1,
+    "end": 100.1,
+    "confidence": 0.999,
+    "id": "o364"
+   },
+   {
+    "text": "pbsnews",
+    "start": 100.1,
+    "end": 100.1,
+    "confidence": 1.0,
+    "id": "o365"
+   },
+   {
+    "text": "PBS",
+    "start": 102.1,
+    "end": 102.1,
+    "confidence": 0.999,
+    "id": "o366"
+   },
+   {
+    "text": "NEWS",
+    "start": 102.1,
+    "end": 102.1,
+    "confidence": 0.608,
+    "id": "o367"
+   },
+   {
+    "text": "TikTok",
+    "start": 102.1,
+    "end": 102.1,
+    "confidence": 1.0,
+    "id": "o368"
+   },
+   {
+    "text": "pbsnews",
+    "start": 102.1,
+    "end": 102.1,
+    "confidence": 1.0,
+    "id": "o369"
+   },
+   {
+    "text": "NEWS",
+    "start": 104.1,
+    "end": 104.1,
+    "confidence": 1.0,
+    "id": "o370"
+   },
+   {
+    "text": "Press Pass",
+    "start": 104.1,
+    "end": 104.1,
+    "confidence": 0.999,
+    "id": "o371"
+   },
+   {
+    "text": "gopbsnewsorg",
+    "start": 104.1,
+    "end": 104.1,
+    "confidence": 1.0,
+    "id": "o372"
+   },
+   {
+    "text": "TikTok",
+    "start": 104.1,
+    "end": 104.1,
+    "confidence": 1.0,
+    "id": "o373"
+   },
+   {
+    "text": "pbsnews",
+    "start": 104.1,
+    "end": 104.1,
+    "confidence": 1.0,
+    "id": "o374"
+   },
+   {
+    "text": "NEWS",
+    "start": 106.11,
+    "end": 106.11,
+    "confidence": 1.0,
+    "id": "o375"
+   },
+   {
+    "text": "Press Pass",
+    "start": 106.11,
+    "end": 106.11,
+    "confidence": 0.999,
+    "id": "o376"
+   },
+   {
+    "text": "gopbsnews orgljoin",
+    "start": 106.11,
+    "end": 106.11,
+    "confidence": 0.803,
+    "id": "o377"
+   },
+   {
+    "text": "TikTok",
+    "start": 106.11,
+    "end": 106.11,
+    "confidence": 1.0,
+    "id": "o378"
+   },
+   {
+    "text": "pbsnews",
+    "start": 106.11,
+    "end": 106.11,
+    "confidence": 1.0,
+    "id": "o379"
+   },
+   {
+    "text": "PBS",
+    "start": 108.11,
+    "end": 108.11,
+    "confidence": 1.0,
+    "id": "o380"
+   },
+   {
+    "text": "NEWS",
+    "start": 108.11,
+    "end": 108.11,
+    "confidence": 1.0,
+    "id": "o381"
+   },
+   {
+    "text": "Press Pass",
+    "start": 108.11,
+    "end": 108.11,
+    "confidence": 0.999,
+    "id": "o382"
+   },
+   {
+    "text": "gopbsnews orgljoin",
+    "start": 108.11,
+    "end": 108.11,
+    "confidence": 0.816,
+    "id": "o383"
+   },
+   {
+    "text": "TikTok",
+    "start": 108.11,
+    "end": 108.11,
+    "confidence": 1.0,
+    "id": "o384"
+   },
+   {
+    "text": "pbsnews",
+    "start": 108.11,
+    "end": 108.11,
+    "confidence": 1.0,
+    "id": "o385"
+   },
+   {
+    "text": "NEWS",
+    "start": 110.11,
+    "end": 110.11,
+    "confidence": 1.0,
+    "id": "o386"
+   },
+   {
+    "text": "Press Pass",
+    "start": 110.11,
+    "end": 110.11,
+    "confidence": 0.999,
+    "id": "o387"
+   },
+   {
+    "text": "gopbsnews orgljoin",
+    "start": 110.11,
+    "end": 110.11,
+    "confidence": 0.817,
+    "id": "o388"
+   },
+   {
+    "text": "TikTok",
+    "start": 110.11,
+    "end": 110.11,
+    "confidence": 1.0,
+    "id": "o389"
+   },
+   {
+    "text": "pbsnews",
+    "start": 110.11,
+    "end": 110.11,
+    "confidence": 1.0,
+    "id": "o390"
+   },
+   {
+    "text": "PBS",
+    "start": 112.11,
+    "end": 112.11,
+    "confidence": 0.999,
+    "id": "o391"
+   },
+   {
+    "text": "NEWS",
+    "start": 112.11,
+    "end": 112.11,
+    "confidence": 1.0,
+    "id": "o392"
+   },
+   {
+    "text": "Press Pass",
+    "start": 112.11,
+    "end": 112.11,
+    "confidence": 0.999,
+    "id": "o393"
+   },
+   {
+    "text": "gopbsnews orgljoin",
+    "start": 112.11,
+    "end": 112.11,
+    "confidence": 0.802,
+    "id": "o394"
+   },
+   {
+    "text": "TikTok",
+    "start": 112.11,
+    "end": 112.11,
+    "confidence": 1.0,
+    "id": "o395"
+   },
+   {
+    "text": "pbsnews",
+    "start": 112.11,
+    "end": 112.11,
+    "confidence": 1.0,
+    "id": "o396"
+   },
+   {
+    "text": "PBS",
+    "start": 114.11,
+    "end": 114.11,
+    "confidence": 1.0,
+    "id": "o397"
+   },
+   {
+    "text": "NEWS",
+    "start": 114.11,
+    "end": 114.11,
+    "confidence": 1.0,
+    "id": "o398"
+   },
+   {
+    "text": "Press Pass",
+    "start": 114.11,
+    "end": 114.11,
+    "confidence": 0.999,
+    "id": "o399"
+   },
+   {
+    "text": "gopbsnews orgljoin",
+    "start": 114.11,
+    "end": 114.11,
+    "confidence": 0.792,
+    "id": "o400"
+   },
+   {
+    "text": "TikTok",
+    "start": 114.11,
+    "end": 114.11,
+    "confidence": 1.0,
+    "id": "o401"
+   },
+   {
+    "text": "pbsnews",
+    "start": 114.11,
+    "end": 114.11,
+    "confidence": 1.0,
+    "id": "o402"
+   },
+   {
+    "text": "PBS",
+    "start": 116.12,
+    "end": 116.12,
+    "confidence": 1.0,
+    "id": "o403"
+   },
+   {
+    "text": "NEWS",
+    "start": 116.12,
+    "end": 116.12,
+    "confidence": 1.0,
+    "id": "o404"
+   },
+   {
+    "text": "EXCLUSIVE BENEFITS",
+    "start": 116.12,
+    "end": 116.12,
+    "confidence": 0.98,
+    "id": "o405"
+   },
+   {
+    "text": "A new supporter program",
+    "start": 116.12,
+    "end": 116.12,
+    "confidence": 0.836,
+    "id": "o406"
+   },
+   {
+    "text": "to stand with free and",
+    "start": 116.12,
+    "end": 116.12,
+    "confidence": 0.758,
+    "id": "o407"
+   },
+   {
+    "text": "independent journalism:",
+    "start": 116.12,
+    "end": 116.12,
+    "confidence": 0.899,
+    "id": "o408"
+   },
+   {
+    "text": "go-pbsnewsorg/join",
+    "start": 116.12,
+    "end": 116.12,
+    "confidence": 0.864,
+    "id": "o409"
+   },
+   {
+    "text": "TikTok",
+    "start": 116.12,
+    "end": 116.12,
+    "confidence": 1.0,
+    "id": "o410"
+   },
+   {
+    "text": "pbsnews",
+    "start": 116.12,
+    "end": 116.12,
+    "confidence": 1.0,
+    "id": "o411"
+   },
+   {
+    "text": "PBS",
+    "start": 118.12,
+    "end": 118.12,
+    "confidence": 1.0,
+    "id": "o412"
+   },
+   {
+    "text": "NEWS",
+    "start": 118.12,
+    "end": 118.12,
+    "confidence": 1.0,
+    "id": "o413"
+   },
+   {
+    "text": "EXCLUSIVE BENEFITS",
+    "start": 118.12,
+    "end": 118.12,
+    "confidence": 0.973,
+    "id": "o414"
+   },
+   {
+    "text": "A new supporter program",
+    "start": 118.12,
+    "end": 118.12,
+    "confidence": 0.828,
+    "id": "o415"
+   },
+   {
+    "text": "to stand with free and",
+    "start": 118.12,
+    "end": 118.12,
+    "confidence": 0.964,
+    "id": "o416"
+   },
+   {
+    "text": "independent journalism:",
+    "start": 118.12,
+    "end": 118.12,
+    "confidence": 0.927,
+    "id": "o417"
+   },
+   {
+    "text": "Join Press Pass:",
+    "start": 118.12,
+    "end": 118.12,
+    "confidence": 0.851,
+    "id": "o418"
+   },
+   {
+    "text": "go-pbsnewsorg/join",
+    "start": 118.12,
+    "end": 118.12,
+    "confidence": 0.883,
+    "id": "o419"
+   },
+   {
+    "text": "TikTok",
+    "start": 118.12,
+    "end": 118.12,
+    "confidence": 1.0,
+    "id": "o420"
+   },
+   {
+    "text": "pbsnews",
+    "start": 118.12,
+    "end": 118.12,
+    "confidence": 1.0,
+    "id": "o421"
+   },
+   {
+    "text": "PBS",
+    "start": 120.12,
+    "end": 120.12,
+    "confidence": 0.999,
+    "id": "o422"
+   },
+   {
+    "text": "NEWS",
+    "start": 120.12,
+    "end": 120.12,
+    "confidence": 1.0,
+    "id": "o423"
+   },
+   {
+    "text": "EXCLUSIVE BENEFITS",
+    "start": 120.12,
+    "end": 120.12,
+    "confidence": 0.979,
+    "id": "o424"
+   },
+   {
+    "text": "A new",
+    "start": 120.12,
+    "end": 120.12,
+    "confidence": 0.905,
+    "id": "o425"
+   },
+   {
+    "text": "supporter program",
+    "start": 120.12,
+    "end": 120.12,
+    "confidence": 0.885,
+    "id": "o426"
+   },
+   {
+    "text": "to stand with free and",
+    "start": 120.12,
+    "end": 120.12,
+    "confidence": 0.965,
+    "id": "o427"
+   },
+   {
+    "text": "independent journalism:",
+    "start": 120.12,
+    "end": 120.12,
+    "confidence": 0.664,
+    "id": "o428"
+   },
+   {
+    "text": "Join Press Pass:",
+    "start": 120.12,
+    "end": 120.12,
+    "confidence": 0.855,
+    "id": "o429"
+   },
+   {
+    "text": "go-pbsnewsorg/join",
+    "start": 120.12,
+    "end": 120.12,
+    "confidence": 0.874,
+    "id": "o430"
+   },
+   {
+    "text": "TikTok",
+    "start": 120.12,
+    "end": 120.12,
+    "confidence": 1.0,
+    "id": "o431"
+   },
+   {
+    "text": "pbsnews",
+    "start": 120.12,
+    "end": 120.12,
+    "confidence": 1.0,
+    "id": "o432"
+   },
+   {
+    "text": "PBS",
+    "start": 122.12,
+    "end": 122.12,
+    "confidence": 0.999,
+    "id": "o433"
+   },
+   {
+    "text": "NEWS",
+    "start": 122.12,
+    "end": 122.12,
+    "confidence": 1.0,
+    "id": "o434"
+   },
+   {
+    "text": "EXCLUSIVE BENEFITS",
+    "start": 122.12,
+    "end": 122.12,
+    "confidence": 0.994,
+    "id": "o435"
+   },
+   {
+    "text": "A new",
+    "start": 122.12,
+    "end": 122.12,
+    "confidence": 0.905,
+    "id": "o436"
+   },
+   {
+    "text": "supporter program",
+    "start": 122.12,
+    "end": 122.12,
+    "confidence": 0.861,
+    "id": "o437"
+   },
+   {
+    "text": "to stand with free and",
+    "start": 122.12,
+    "end": 122.12,
+    "confidence": 0.964,
+    "id": "o438"
+   },
+   {
+    "text": "independent journalism:",
+    "start": 122.12,
+    "end": 122.12,
+    "confidence": 0.757,
+    "id": "o439"
+   },
+   {
+    "text": "Join Press Pass:",
+    "start": 122.12,
+    "end": 122.12,
+    "confidence": 0.855,
+    "id": "o440"
+   },
+   {
+    "text": "gopbsnewsorg/join",
+    "start": 122.12,
+    "end": 122.12,
+    "confidence": 0.848,
+    "id": "o441"
+   },
+   {
+    "text": "TikTok",
+    "start": 122.12,
+    "end": 122.12,
+    "confidence": 1.0,
+    "id": "o442"
+   },
+   {
+    "text": "pbsnews",
+    "start": 122.12,
+    "end": 122.12,
+    "confidence": 1.0,
+    "id": "o443"
+   },
+   {
+    "text": "PBS",
+    "start": 124.12,
+    "end": 124.12,
+    "confidence": 0.999,
+    "id": "o444"
+   },
+   {
+    "text": "NEWS",
+    "start": 124.12,
+    "end": 124.12,
+    "confidence": 1.0,
+    "id": "o445"
+   },
+   {
+    "text": "EXCLUSIVE BENEFITS",
+    "start": 124.12,
+    "end": 124.12,
+    "confidence": 0.994,
+    "id": "o446"
+   },
+   {
+    "text": "A new",
+    "start": 124.12,
+    "end": 124.12,
+    "confidence": 0.905,
+    "id": "o447"
+   },
+   {
+    "text": "supporter program",
+    "start": 124.12,
+    "end": 124.12,
+    "confidence": 0.87,
+    "id": "o448"
+   },
+   {
+    "text": "to stand with free and",
+    "start": 124.12,
+    "end": 124.12,
+    "confidence": 0.964,
+    "id": "o449"
+   },
+   {
+    "text": "independent journalism:",
+    "start": 124.12,
+    "end": 124.12,
+    "confidence": 0.964,
+    "id": "o450"
+   },
+   {
+    "text": "Join Press Pass:",
+    "start": 124.12,
+    "end": 124.12,
+    "confidence": 0.855,
+    "id": "o451"
+   },
+   {
+    "text": "gopbsnewsorg/join",
+    "start": 124.12,
+    "end": 124.12,
+    "confidence": 0.848,
+    "id": "o452"
+   },
+   {
+    "text": "TikTok",
+    "start": 124.12,
+    "end": 124.12,
+    "confidence": 1.0,
+    "id": "o453"
+   },
+   {
+    "text": "pbsnews",
+    "start": 124.12,
+    "end": 124.12,
+    "confidence": 1.0,
+    "id": "o454"
+   },
+   {
+    "text": "PBS",
+    "start": 126.13,
+    "end": 126.13,
+    "confidence": 0.999,
+    "id": "o455"
+   },
+   {
+    "text": "NEWS",
+    "start": 126.13,
+    "end": 126.13,
+    "confidence": 1.0,
+    "id": "o456"
+   },
+   {
+    "text": "EXCLUSIVE BENEFITS",
+    "start": 126.13,
+    "end": 126.13,
+    "confidence": 0.974,
+    "id": "o457"
+   },
+   {
+    "text": "A new",
+    "start": 126.13,
+    "end": 126.13,
+    "confidence": 0.905,
+    "id": "o458"
+   },
+   {
+    "text": "supporter program",
+    "start": 126.13,
+    "end": 126.13,
+    "confidence": 0.87,
+    "id": "o459"
+   },
+   {
+    "text": "to stand with free and",
+    "start": 126.13,
+    "end": 126.13,
+    "confidence": 0.964,
+    "id": "o460"
+   },
+   {
+    "text": "independent journalism:",
+    "start": 126.13,
+    "end": 126.13,
+    "confidence": 0.964,
+    "id": "o461"
+   },
+   {
+    "text": "Join Press Pass:",
+    "start": 126.13,
+    "end": 126.13,
+    "confidence": 0.855,
+    "id": "o462"
+   },
+   {
+    "text": "gopbsnewsorg/join",
+    "start": 126.13,
+    "end": 126.13,
+    "confidence": 0.632,
+    "id": "o463"
+   },
+   {
+    "text": "TikTok",
+    "start": 126.13,
+    "end": 126.13,
+    "confidence": 1.0,
+    "id": "o464"
+   },
+   {
+    "text": "pbsnews",
+    "start": 126.13,
+    "end": 126.13,
+    "confidence": 1.0,
+    "id": "o465"
+   },
+   {
+    "text": "PBS",
+    "start": 128.13,
+    "end": 128.13,
+    "confidence": 0.997,
+    "id": "o466"
+   },
+   {
+    "text": "NEWS",
+    "start": 128.13,
+    "end": 128.13,
+    "confidence": 1.0,
+    "id": "o467"
+   },
+   {
+    "text": "EXCLUSIVE BENEFITS",
+    "start": 128.13,
+    "end": 128.13,
+    "confidence": 0.972,
+    "id": "o468"
+   },
+   {
+    "text": "A new",
+    "start": 128.13,
+    "end": 128.13,
+    "confidence": 0.869,
+    "id": "o469"
+   },
+   {
+    "text": "supporter program",
+    "start": 128.13,
+    "end": 128.13,
+    "confidence": 0.883,
+    "id": "o470"
+   },
+   {
+    "text": "to stand with free and",
+    "start": 128.13,
+    "end": 128.13,
+    "confidence": 0.968,
+    "id": "o471"
+   },
+   {
+    "text": "independent journalism:",
+    "start": 128.13,
+    "end": 128.13,
+    "confidence": 0.964,
+    "id": "o472"
+   },
+   {
+    "text": "Join Press Pass:",
+    "start": 128.13,
+    "end": 128.13,
+    "confidence": 0.853,
+    "id": "o473"
+   },
+   {
+    "text": "gopbsnewsorg/join",
+    "start": 128.13,
+    "end": 128.13,
+    "confidence": 0.854,
+    "id": "o474"
+   },
+   {
+    "text": "TikTok",
+    "start": 128.13,
+    "end": 128.13,
+    "confidence": 1.0,
+    "id": "o475"
+   },
+   {
+    "text": "pbsnews",
+    "start": 128.13,
+    "end": 128.13,
+    "confidence": 1.0,
+    "id": "o476"
+   },
+   {
+    "text": "J",
+    "start": 130.13,
+    "end": 130.13,
+    "confidence": 0.598,
+    "id": "o477"
+   },
+   {
+    "text": "TikTok",
+    "start": 130.13,
+    "end": 130.13,
+    "confidence": 0.998,
+    "id": "o478"
+   },
+   {
+    "text": "@ pbsnews",
+    "start": 130.13,
+    "end": 130.13,
+    "confidence": 0.803,
+    "id": "o479"
+   },
+   {
+    "text": "J",
+    "start": 132.13,
+    "end": 132.13,
+    "confidence": 0.683,
+    "id": "o480"
+   },
+   {
+    "text": "TikTok",
+    "start": 132.13,
+    "end": 132.13,
+    "confidence": 0.999,
+    "id": "o481"
+   },
+   {
+    "text": "@ pbsnews",
+    "start": 132.13,
+    "end": 132.13,
+    "confidence": 0.803,
+    "id": "o482"
+   }
+  ]
+ }
+}

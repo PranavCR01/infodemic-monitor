@@ -58,3 +58,9 @@ backend/pytest-report.xml
 backend/eval_runs/
 frontend/e2e-report/
 frontend/e2e-results/
+
+# Golden label set: archives, audio and the per-stage extraction cache never get committed
+*.m4a
+*.wav
+*.zip
+research/claim-level/dataset/.cache/

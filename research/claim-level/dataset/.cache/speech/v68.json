@@ -1,0 +1,164 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 92.09,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 1.12,
+    "text": "Google is straight up lying to you."
+   },
+   {
+    "id": "t2",
+    "start": 1.12,
+    "end": 2.28,
+    "text": "I'm going to show you exactly how they're doing it,"
+   },
+   {
+    "id": "t3",
+    "start": 2.28,
+    "end": 3.8,
+    "text": "because we're in the middle of the biggest information war"
+   },
+   {
+    "id": "t4",
+    "start": 3.8,
+    "end": 4.24,
+    "text": "of all time."
+   },
+   {
+    "id": "t5",
+    "start": 4.24,
+    "end": 8.04,
+    "text": "If you Google, does tap water lower testosterone?"
+   },
+   {
+    "id": "t6",
+    "start": 8.04,
+    "end": 9.55,
+    "text": "Google straight up tells you no."
+   },
+   {
+    "id": "t7",
+    "start": 9.55,
+    "end": 11.11,
+    "text": "Tap water does not lower testosterone."
+   },
+   {
+    "id": "t8",
+    "start": 11.11,
+    "end": 14.68,
+    "text": "Does tap water contain atrazine?"
+   },
+   {
+    "id": "t9",
+    "start": 14.68,
+    "end": 16.88,
+    "text": "Yes, atrazine is commonly found in tap water in the US."
+   },
+   {
+    "id": "t10",
+    "start": 16.88,
+    "end": 19.92,
+    "text": "Is atrazine an endocrine disruptor?"
+   },
+   {
+    "id": "t11",
+    "start": 20.46,
+    "end": 21.26,
+    "text": "Did you look at that?"
+   },
+   {
+    "id": "t12",
+    "start": 21.26,
+    "end": 21.76,
+    "text": "Yes."
+   },
+   {
+    "id": "t13",
+    "start": 21.76,
+    "end": 26.91,
+    "text": "Do endocrine disruptors lower testosterone?"
+   },
+   {
+    "id": "t14",
+    "start": 26.91,
+    "end": 28.62,
+    "text": "Oh."
+   },
+   {
+    "id": "t15",
+    "start": 28.62,
+    "end": 30.26,
+    "text": "If you ask Google simple questions,"
+   },
+   {
+    "id": "t16",
+    "start": 30.26,
+    "end": 31.62,
+    "text": "you're going to get a simple answer."
+   },
+   {
+    "id": "t17",
+    "start": 31.62,
+    "end": 37.14,
+    "text": "another example of the dose makes the poison of the item itself. Atrazine, a common pesticide"
+   },
+   {
+    "id": "t18",
+    "start": 37.14,
+    "end": 44.77,
+    "text": "that's found in tap water, has a regulatory limit of three parts per billion. They actually looked"
+   },
+   {
+    "id": "t19",
+    "start": 44.77,
+    "end": 50.45,
+    "text": "at its effect on rats when it comes to lowering testosterone and they filled up those rats at"
+   },
+   {
+    "id": "t20",
+    "start": 50.45,
+    "end": 61.41,
+    "text": "50 milligrams per kilogram, which in humans you would need to drink 1.2 million liters of tap water"
+   },
+   {
+    "id": "t21",
+    "start": 61.41,
+    "end": 67.57,
+    "text": "a day to have it affect your testosterone, meaning you would need to drink half an Olympic swimming"
+   },
+   {
+    "id": "t22",
+    "start": 67.57,
+    "end": 74.13,
+    "text": "pool for it to affect you. Especially considering a large percentage of the American public depend"
+   },
+   {
+    "id": "t23",
+    "start": 74.13,
+    "end": 79.01,
+    "text": "on tap water, not just for drinking, but also things like cooking, cleaning, and the like that"
+   },
+   {
+    "id": "t24",
+    "start": 79.01,
+    "end": 85.09,
+    "text": "may be demonizing tap water isn't the move. Be very careful where you're getting your scientific"
+   },
+   {
+    "id": "t25",
+    "start": 85.09,
+    "end": 88.13,
+    "text": "information from. Don't get scammed, take back your health."
+   }
+  ]
+ }
+}

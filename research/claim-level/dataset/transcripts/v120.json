@@ -1,0 +1,613 @@
+{
+ "video_id": "v120",
+ "filename": "new_TikTok_7219706932297338117.mp4",
+ "relative_path": "new_TikTok_7219706932297338117.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@marcomendoza007",
+ "extracted_at": "2026-11-23T08:45:56",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.984,
+  "duration_seconds": 178.26,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.0,
+    "text": "hola amigos ahora les voy a enseñar cómo debemos tomar agua de mar"
+   },
+   {
+    "id": "t2",
+    "start": 5.0,
+    "end": 10.52,
+    "text": "mi primera recomendación es que sea un lugar apartado que no haya pueblo de"
+   },
+   {
+    "id": "t3",
+    "start": 10.52,
+    "end": 19.74,
+    "text": "aledaños es la primera la segunda te metes al mar donde no haya mucho"
+   },
+   {
+    "id": "t4",
+    "start": 19.74,
+    "end": 26.74,
+    "text": "mucha dolas trata de meterte lomada al fondo yo voy a llenar esta botellita con"
+   },
+   {
+    "id": "t5",
+    "start": 26.74,
+    "end": 37.42,
+    "text": "agua de mar y bueno los beneficios son muchísimo primero elimina los metales pesados del cuerpo"
+   },
+   {
+    "id": "t6",
+    "start": 37.42,
+    "end": 47.02,
+    "text": "acuérdate que venimos de una vacuna experimental y se dice que en la vacuna hay muchos metales"
+   },
+   {
+    "id": "t7",
+    "start": 47.02,
+    "end": 55.88,
+    "text": "pesados que no son beneficiosos para nuestro cuerpo tenemos la duda de eso si es que como sabemos"
+   },
+   {
+    "id": "t8",
+    "start": 55.88,
+    "end": 63.87,
+    "text": "que los minerales que tiene el agua de mar pueden eliminar esos metales pesados"
+   },
+   {
+    "id": "t9",
+    "start": 63.87,
+    "end": 72.58,
+    "text": "pues yo los invitaría a todos ustedes que lo hagan, es una recomendación aparte"
+   },
+   {
+    "id": "t10",
+    "start": 72.58,
+    "end": 80.01,
+    "text": "que el agua de mar contiene 118 minerales de la tabla periódica, imagínense"
+   },
+   {
+    "id": "t11",
+    "start": 80.01,
+    "end": 91.5,
+    "text": "es la única bebida que realmente les da clasma marino y bueno aquí estamos de la parte más"
+   },
+   {
+    "id": "t12",
+    "start": 91.5,
+    "end": 101.71,
+    "text": "donde está llena una ola ojalá lo que vamos a hacer es coger directamente el agua de mar con esta"
+   },
+   {
+    "id": "t13",
+    "start": 101.71,
+    "end": 114.53,
+    "text": "botellita y nos vamos a beber aquí está el agua de mar mire lo hago para que vean que no pasa nada"
+   },
+   {
+    "id": "t14",
+    "start": 114.53,
+    "end": 119.59,
+    "text": "lo que sí les va a mandar al baño y obviamente porque les va a hacer una"
+   },
+   {
+    "id": "t15",
+    "start": 119.59,
+    "end": 125.15,
+    "text": "limpieza de todo lo que han comido y si lo hacen constantemente va a limpiar"
+   },
+   {
+    "id": "t16",
+    "start": 125.15,
+    "end": 130.19,
+    "text": "todos los residuos que han tenido todas las veces acumuladas por muchísimo"
+   },
+   {
+    "id": "t17",
+    "start": 130.19,
+    "end": 148.66,
+    "text": "daño a su salud ese es un desayuno marino listo"
+   },
+   {
+    "id": "t18",
+    "start": 148.66,
+    "end": 156.86,
+    "text": "esta es la explicación espero que les guste sigan mis consejos estudien es"
+   },
+   {
+    "id": "t19",
+    "start": 156.86,
+    "end": 167.53,
+    "text": "importante que lo hagan, el sol, el agua de mar son fuentes de energía. Les mando un fuerte"
+   },
+   {
+    "id": "t20",
+    "start": 167.53,
+    "end": 176.95,
+    "text": "abrazo de luz, ya nos estamos viendo por ahí, por la calle, para hablar del Dios verdadero, chao."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 90,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 2.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 4.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 6.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 8.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 10.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 12.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 14.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 16.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 18.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 20.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 22.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 24.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 26.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 28.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 30.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 32.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 34.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 36.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 38.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 40.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 42.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 44.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 46.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 48.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 50.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 52.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 54.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 56.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 58.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 60.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 62.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 64.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 66.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 68.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 70.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 72.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 74.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 76.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 78.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.999
+   },
+   {
+    "time": 80.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 82.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 84.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 86.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.997
+   },
+   {
+    "time": 88.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 90.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 92.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 94.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 96.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.996
+   },
+   {
+    "time": 98.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.997
+   },
+   {
+    "time": 100.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.997
+   },
+   {
+    "time": 102.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.997
+   },
+   {
+    "time": 104.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 106.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 108.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 110.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 112.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 114.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 116.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 118.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 120.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 122.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 124.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.997
+   },
+   {
+    "time": 126.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.997
+   },
+   {
+    "time": 128.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 130.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 132.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 134.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 136.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.997
+   },
+   {
+    "time": 138.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.997
+   },
+   {
+    "time": 140.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.997
+   },
+   {
+    "time": 142.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.997
+   },
+   {
+    "time": 144.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.997
+   },
+   {
+    "time": 146.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.997
+   },
+   {
+    "time": 148.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 150.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 152.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.996
+   },
+   {
+    "time": 154.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 156.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 158.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 160.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 162.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 164.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 166.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.997
+   },
+   {
+    "time": 168.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 170.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 172.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.997
+   },
+   {
+    "time": 174.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.998
+   },
+   {
+    "time": 176.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.999
+   },
+   {
+    "time": 178.0,
+    "text": "AGUA DE MAR",
+    "confidence": 0.999
+   }
+  ],
+  "captions": [
+   {
+    "text": "AGUA DE MAR",
+    "start": 0.0,
+    "end": 178.0,
+    "confidence": 0.999,
+    "id": "o1"
+   }
+  ]
+ }
+}

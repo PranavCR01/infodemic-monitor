@@ -1,0 +1,10032 @@
+{
+ "video_id": "v135",
+ "filename": "new_TikTok_7345066820736486664.mp4",
+ "relative_path": "new_TikTok_7345066820736486664.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@labmuffinbeautyscience",
+ "extracted_at": "2026-11-23T08:45:57",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 90.91,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.84,
+    "text": "I've talked about how this report on benzene and acne products use really high heat, but"
+   },
+   {
+    "id": "t2",
+    "start": 3.84,
+    "end": 6.42,
+    "text": "how scared should we be at normal temperatures?"
+   },
+   {
+    "id": "t3",
+    "start": 6.42,
+    "end": 9.8,
+    "text": "The Valetial Report doesn't specifically tell us the numbers, but if we look at these"
+   },
+   {
+    "id": "t4",
+    "start": 9.8,
+    "end": 11.92,
+    "text": "graphs we can estimate them from day zero."
+   },
+   {
+    "id": "t5",
+    "start": 11.92,
+    "end": 15.36,
+    "text": "Assuming they measured these correctly, it looks like most of them are quite low, but"
+   },
+   {
+    "id": "t6",
+    "start": 15.36,
+    "end": 17.84,
+    "text": "a few might have about 20 parts per million."
+   },
+   {
+    "id": "t7",
+    "start": 17.84,
+    "end": 22.24,
+    "text": "This is 10 times more than a limit the FDA has used before, which isn't great, but"
+   },
+   {
+    "id": "t8",
+    "start": 22.24,
+    "end": 25.28,
+    "text": "it's less scary than some people are making a sound."
+   },
+   {
+    "id": "t9",
+    "start": 25.28,
+    "end": 28.08,
+    "text": "Benzene is actually all around us because it's in fossil fuels."
+   },
+   {
+    "id": "t10",
+    "start": 28.08,
+    "end": 31.4,
+    "text": "It's at a thousand parts per million in petrol and it evaporates into the air, it's"
+   },
+   {
+    "id": "t11",
+    "start": 31.4,
+    "end": 34.0,
+    "text": "also in natural gas and paints and furniture."
+   },
+   {
+    "id": "t12",
+    "start": 34.0,
+    "end": 38.28,
+    "text": "Yes, it is a known carcinogen and there's no safe level, but that doesn't mean that"
+   },
+   {
+    "id": "t13",
+    "start": 38.28,
+    "end": 39.84,
+    "text": "any amount is dangerous."
+   },
+   {
+    "id": "t14",
+    "start": 39.84,
+    "end": 43.0,
+    "text": "It means that little bits will add up to increase your risk of cancer."
+   },
+   {
+    "id": "t15",
+    "start": 43.0,
+    "end": 46.76,
+    "text": "And even though we all breathe in benzene all the time, the vast majority of us don't"
+   },
+   {
+    "id": "t16",
+    "start": 46.76,
+    "end": 48.84,
+    "text": "end up with benzene-related cancers."
+   },
+   {
+    "id": "t17",
+    "start": 48.84,
+    "end": 52.84,
+    "text": "So let's compare how much benzene we can get from these products to other sources."
+   },
+   {
+    "id": "t18",
+    "start": 52.84,
+    "end": 55.76,
+    "text": "Benzene doesn't get through skin easily, so this is how much you would breathe in"
+   },
+   {
+    "id": "t19",
+    "start": 55.76,
+    "end": 60.16,
+    "text": "if all of the benzene evaporated and then went straight up your nostrils which obviously doesn't"
+   },
+   {
+    "id": "t20",
+    "start": 60.16,
+    "end": 63.92,
+    "text": "happen. Here's how much is produced when you cook, how much you breathe in when you fill up your"
+   },
+   {
+    "id": "t21",
+    "start": 63.92,
+    "end": 68.88,
+    "text": "car or just breathing at home. Obviously reducing benzene is a good idea. I'm guessing there might"
+   },
+   {
+    "id": "t22",
+    "start": 68.88,
+    "end": 74.24,
+    "text": "be some recall soon but there is really no need to freak out. Benzoproxide has been used for acne"
+   },
+   {
+    "id": "t23",
+    "start": 74.24,
+    "end": 78.64,
+    "text": "for 60 years and there's no recorded increased cancer in people who use it. And compared to"
+   },
+   {
+    "id": "t24",
+    "start": 78.64,
+    "end": 83.52,
+    "text": "benzene in sunscreen which also wasn't that scary it looks like less benzene. The concentration"
+   },
+   {
+    "id": "t25",
+    "start": 83.52,
+    "end": 88.16,
+    "text": "was lower in sunscreen, but the amount we use is much higher. And this study didn't find"
+   },
+   {
+    "id": "t26",
+    "start": 88.16,
+    "end": 90.72,
+    "text": "higher benzene levels in people who use sunscreen."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 46,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "alhealth",
+    "confidence": 0.558
+   },
+   {
+    "time": 0.0,
+    "text": "Live TV",
+    "confidence": 0.912
+   },
+   {
+    "time": 0.0,
+    "text": "Log",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "Watch",
+    "confidence": 0.988
+   },
+   {
+    "time": 0.0,
+    "text": "Audio",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "Cancer-causing chemical can form at",
+    "confidence": 0.953
+   },
+   {
+    "time": 0.0,
+    "text": "'unacceptably high levels' in certain",
+    "confidence": 0.909
+   },
+   {
+    "time": 0.0,
+    "text": "acne products, independent lab claims",
+    "confidence": 0.715
+   },
+   {
+    "time": 0.0,
+    "text": "By Jacqueline Howard, CNN",
+    "confidence": 0.722
+   },
+   {
+    "time": 0.0,
+    "text": "Updated 7.14 PM EST, Wed March 6, 2024",
+    "confidence": 0.634
+   },
+   {
+    "time": 0.0,
+    "text": "minute read",
+    "confidence": 0.848
+   },
+   {
+    "time": 0.0,
+    "text": "The independent laboratory Valisure tes",
+    "confidence": 0.625
+   },
+   {
+    "time": 0.0,
+    "text": "ent",
+    "confidence": 0.994
+   },
+   {
+    "time": 0.0,
+    "text": "products for benzene. Valisure",
+    "confidence": 0.855
+   },
+   {
+    "time": 0.0,
+    "text": "chemical, can form in",
+    "confidence": 0.733
+   },
+   {
+    "time": 0.0,
+    "text": "benzoyl peroxide,",
+    "confidence": 0.991
+   },
+   {
+    "time": 0.0,
+    "text": "ac",
+    "confidence": 0.993
+   },
+   {
+    "time": 2.0,
+    "text": "Live TV",
+    "confidence": 0.904
+   },
+   {
+    "time": 2.0,
+    "text": "Log",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Watch",
+    "confidence": 0.941
+   },
+   {
+    "time": 2.0,
+    "text": "Audio",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Cancer-causing chemical can form at",
+    "confidence": 0.928
+   },
+   {
+    "time": 2.0,
+    "text": "'unacceptably high levels' in certain",
+    "confidence": 0.89
+   },
+   {
+    "time": 2.0,
+    "text": "acne products, independent lab claims",
+    "confidence": 0.7
+   },
+   {
+    "time": 2.0,
+    "text": "By Jacqueline Howard, CNN",
+    "confidence": 0.831
+   },
+   {
+    "time": 2.0,
+    "text": "Howmuchbenzene?",
+    "confidence": 0.621
+   },
+   {
+    "time": 2.0,
+    "text": "202",
+    "confidence": 0.994
+   },
+   {
+    "time": 2.0,
+    "text": "Undated",
+    "confidence": 0.813
+   },
+   {
+    "time": 2.0,
+    "text": "chemstexplains",
+    "confidence": 0.947
+   },
+   {
+    "time": 2.0,
+    "text": "The independent laboratory Valisure tes",
+    "confidence": 0.877
+   },
+   {
+    "time": 2.0,
+    "text": "products for benzene. Valisure",
+    "confidence": 0.727
+   },
+   {
+    "time": 2.0,
+    "text": "chemical, can form in ac",
+    "confidence": 0.517
+   },
+   {
+    "time": 2.0,
+    "text": "benzoyl peroxide,",
+    "confidence": 0.94
+   },
+   {
+    "time": 2.0,
+    "text": "ac",
+    "confidence": 0.983
+   },
+   {
+    "time": 4.0,
+    "text": "alhealth",
+    "confidence": 0.51
+   },
+   {
+    "time": 4.0,
+    "text": "Live TV",
+    "confidence": 0.906
+   },
+   {
+    "time": 4.0,
+    "text": "Log",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Watch",
+    "confidence": 0.921
+   },
+   {
+    "time": 4.0,
+    "text": "Audio",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Cancer-causing chemical can form at",
+    "confidence": 0.928
+   },
+   {
+    "time": 4.0,
+    "text": "'unacceptably high levels' in certain",
+    "confidence": 0.898
+   },
+   {
+    "time": 4.0,
+    "text": "acne products, independent lab claims",
+    "confidence": 0.683
+   },
+   {
+    "time": 4.0,
+    "text": "By Jacqueline Howard, CNN",
+    "confidence": 0.691
+   },
+   {
+    "time": 4.0,
+    "text": "Howmuchbenzene?",
+    "confidence": 0.628
+   },
+   {
+    "time": 4.0,
+    "text": "202",
+    "confidence": 0.994
+   },
+   {
+    "time": 4.0,
+    "text": "Undated",
+    "confidence": 0.75
+   },
+   {
+    "time": 4.0,
+    "text": "chemstexplains",
+    "confidence": 0.946
+   },
+   {
+    "time": 4.0,
+    "text": "The independent laboratory Valisure tes",
+    "confidence": 0.703
+   },
+   {
+    "time": 4.0,
+    "text": "products for benzene. Valisure",
+    "confidence": 0.854
+   },
+   {
+    "time": 4.0,
+    "text": "(cbughowscared should we be",
+    "confidence": 0.683
+   },
+   {
+    "time": 4.0,
+    "text": "chemical, can form in",
+    "confidence": 0.765
+   },
+   {
+    "time": 4.0,
+    "text": "benzoyl peroxide,",
+    "confidence": 0.938
+   },
+   {
+    "time": 4.0,
+    "text": "ac",
+    "confidence": 0.984
+   },
+   {
+    "time": 6.0,
+    "text": "alhealth",
+    "confidence": 0.51
+   },
+   {
+    "time": 6.0,
+    "text": "Live TV",
+    "confidence": 0.91
+   },
+   {
+    "time": 6.0,
+    "text": "Log",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "Watch",
+    "confidence": 0.966
+   },
+   {
+    "time": 6.0,
+    "text": "Audio",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "Cancer-causing chemical can form at",
+    "confidence": 0.924
+   },
+   {
+    "time": 6.0,
+    "text": "'unacceptably high levels' in certain",
+    "confidence": 0.912
+   },
+   {
+    "time": 6.0,
+    "text": "acne products, independent lab claims",
+    "confidence": 0.68
+   },
+   {
+    "time": 6.0,
+    "text": "By Jacqueline Howard, CNN",
+    "confidence": 0.821
+   },
+   {
+    "time": 6.0,
+    "text": "Updated 7.14 PM EST, Wed March 6, 2024",
+    "confidence": 0.5
+   },
+   {
+    "time": 6.0,
+    "text": "minute read",
+    "confidence": 0.758
+   },
+   {
+    "time": 6.0,
+    "text": "The independent laboratory Valisure",
+    "confidence": 0.788
+   },
+   {
+    "time": 6.0,
+    "text": "tes",
+    "confidence": 0.998
+   },
+   {
+    "time": 6.0,
+    "text": "products for benzene. Valisure",
+    "confidence": 0.702
+   },
+   {
+    "time": 6.0,
+    "text": "chemical, can form in",
+    "confidence": 0.831
+   },
+   {
+    "time": 6.0,
+    "text": "benzoyl peroxide,",
+    "confidence": 0.992
+   },
+   {
+    "time": 6.0,
+    "text": "ac",
+    "confidence": 0.987
+   },
+   {
+    "time": 8.0,
+    "text": "valisure",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "Page",
+    "confidence": 0.796
+   },
+   {
+    "time": 8.0,
+    "text": "purposcs",
+    "confidence": 0.771
+   },
+   {
+    "time": 8.0,
+    "text": "Flgure 4(4",
+    "confidence": 0.551
+   },
+   {
+    "time": 8.0,
+    "text": "prducts incukated",
+    "confidence": 0.586
+   },
+   {
+    "time": 8.0,
+    "text": "clfectively",
+    "confidence": 0.649
+   },
+   {
+    "time": 8.0,
+    "text": "MOS[",
+    "confidence": 0.711
+   },
+   {
+    "time": 8.0,
+    "text": "numbct.",
+    "confidence": 0.5
+   },
+   {
+    "time": 8.0,
+    "text": "Figure =",
+    "confidence": 0.632
+   },
+   {
+    "time": 8.0,
+    "text": "Flgure JC",
+    "confidence": 0.52
+   },
+   {
+    "time": 8.0,
+    "text": "pecifically tell us the",
+    "confidence": 0.679
+   },
+   {
+    "time": 8.0,
+    "text": "numbers",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "valisure",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "Page",
+    "confidence": 0.695
+   },
+   {
+    "time": 10.0,
+    "text": "different y-axis scale for display",
+    "confidence": 0.548
+   },
+   {
+    "time": 10.0,
+    "text": "shown bclow in Figue",
+    "confidence": 0.689
+   },
+   {
+    "time": 10.0,
+    "text": "purposcs",
+    "confidence": 0.885
+   },
+   {
+    "time": 10.0,
+    "text": "Flgure 4(4",
+    "confidence": 0.515
+   },
+   {
+    "time": 10.0,
+    "text": "Ppm of 66 BPO containing acns trcatmcnt",
+    "confidence": 0.522
+   },
+   {
+    "time": 10.0,
+    "text": "products incukatcd",
+    "confidence": 0.552
+   },
+   {
+    "time": 10.0,
+    "text": "clfectively",
+    "confidence": 0.51
+   },
+   {
+    "time": 10.0,
+    "text": "MOS[",
+    "confidence": 0.729
+   },
+   {
+    "time": 10.0,
+    "text": "Flgure JC",
+    "confidence": 0.576
+   },
+   {
+    "time": 10.0,
+    "text": "but ff we lookat these",
+    "confidence": 0.578
+   },
+   {
+    "time": 10.0,
+    "text": "graphs",
+    "confidence": 0.859
+   },
+   {
+    "time": 10.0,
+    "text": "Vallsure; LLC",
+    "confidence": 0.607
+   },
+   {
+    "time": 12.0,
+    "text": "Figure 4D",
+    "confidence": 0.901
+   },
+   {
+    "time": 12.0,
+    "text": "Figure 4E",
+    "confidence": 0.991
+   },
+   {
+    "time": 12.0,
+    "text": "Figure 4F",
+    "confidence": 0.931
+   },
+   {
+    "time": 12.0,
+    "text": "assuming they measured",
+    "confidence": 0.82
+   },
+   {
+    "time": 14.0,
+    "text": "Figure 4D",
+    "confidence": 0.908
+   },
+   {
+    "time": 14.0,
+    "text": "Figure 4E",
+    "confidence": 0.988
+   },
+   {
+    "time": 14.0,
+    "text": "Figure 4F",
+    "confidence": 0.91
+   },
+   {
+    "time": 14.0,
+    "text": "it @ooks like most of them",
+    "confidence": 0.613
+   },
+   {
+    "time": 16.0,
+    "text": "Figure 4D",
+    "confidence": 0.916
+   },
+   {
+    "time": 16.0,
+    "text": "Figure 4E",
+    "confidence": 0.988
+   },
+   {
+    "time": 16.0,
+    "text": "Figure 4F",
+    "confidence": 0.867
+   },
+   {
+    "time": 16.0,
+    "text": "a@ qute low but a few might",
+    "confidence": 0.698
+   },
+   {
+    "time": 18.0,
+    "text": "2 ppm",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.0,
+    "text": "this is 10 times more than &",
+    "confidence": 0.705
+   },
+   {
+    "time": 18.0,
+    "text": "limit",
+    "confidence": 0.993
+   },
+   {
+    "time": 20.0,
+    "text": "2 ppm",
+    "confidence": 0.996
+   },
+   {
+    "time": 20.0,
+    "text": "the FDA has used before",
+    "confidence": 0.72
+   },
+   {
+    "time": 22.0,
+    "text": "but it\"s less scary than some",
+    "confidence": 0.63
+   },
+   {
+    "time": 24.0,
+    "text": "people are making it sound",
+    "confidence": 0.707
+   },
+   {
+    "time": 26.0,
+    "text": "Human exposure to benzene has been associated",
+    "confidence": 0.899
+   },
+   {
+    "time": 26.0,
+    "text": "with a range of acute and long-term adverse",
+    "confidence": 0.656
+   },
+   {
+    "time": 26.0,
+    "text": "health effects and diseases, including cancer and",
+    "confidence": 0.883
+   },
+   {
+    "time": 26.0,
+    "text": "haematological effects Exposure can occur",
+    "confidence": 0.917
+   },
+   {
+    "time": 26.0,
+    "text": "occupationally; in the general environment and in",
+    "confidence": 0.72
+   },
+   {
+    "time": 26.0,
+    "text": "the home as a result of the ubiquitous use of",
+    "confidence": 0.696
+   },
+   {
+    "time": 26.0,
+    "text": "benzene-containing petroleum products,",
+    "confidence": 0.963
+   },
+   {
+    "time": 26.0,
+    "text": "including motor fuels and solvents. Active and",
+    "confidence": 0.929
+   },
+   {
+    "time": 26.0,
+    "text": "passive exposure to tobacco smoke is also a",
+    "confidence": 0.865
+   },
+   {
+    "time": 26.0,
+    "text": "significant source of exposure",
+    "confidence": 0.958
+   },
+   {
+    "time": 26.0,
+    "text": "Benzene is highly volatile",
+    "confidence": 0.989
+   },
+   {
+    "time": 26.0,
+    "text": "mostly through inhalatic",
+    "confidence": 0.797
+   },
+   {
+    "time": 26.0,
+    "text": "reduce both work and",
+    "confidence": 0.74
+   },
+   {
+    "time": 26.0,
+    "text": "exposure include proma",
+    "confidence": 0.687
+   },
+   {
+    "time": 26.0,
+    "text": "alternative solvents in in",
+    "confidence": 0.838
+   },
+   {
+    "time": 26.0,
+    "text": "developing and impleme",
+    "confidence": 0.886
+   },
+   {
+    "time": 26.0,
+    "text": "legislation to remove ben.",
+    "confidence": 0.862
+   },
+   {
+    "time": 26.0,
+    "text": "ner",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "enzene-",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "around",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "produs",
+    "confidence": 0.995
+   },
+   {
+    "time": 26.0,
+    "text": "requiring detac",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "the WHO Frame",
+    "confidence": 0.694
+   },
+   {
+    "time": 28.0,
+    "text": "1% = 1000 ppm",
+    "confidence": 0.713
+   },
+   {
+    "time": 30.0,
+    "text": "1000 ppm",
+    "confidence": 0.914
+   },
+   {
+    "time": 30.0,
+    "text": "1%",
+    "confidence": 0.979
+   },
+   {
+    "time": 30.0,
+    "text": "=",
+    "confidence": 0.529
+   },
+   {
+    "time": 30.0,
+    "text": "in petrol and it evaporates",
+    "confidence": 0.547
+   },
+   {
+    "time": 36.0,
+    "text": "\"Known carcinogen'",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.0,
+    "text": "evidence",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "of link is certain, whether cancer",
+    "confidence": 0.807
+   },
+   {
+    "time": 36.0,
+    "text": "develops still depends on",
+    "confidence": 0.788
+   },
+   {
+    "time": 36.0,
+    "text": "exposure e.g: dose",
+    "confidence": 0.899
+   },
+   {
+    "time": 36.0,
+    "text": "Bacon, alcohol and sunlight are",
+    "confidence": 0.708
+   },
+   {
+    "time": 36.0,
+    "text": "known carcinogens",
+    "confidence": 0.867
+   },
+   {
+    "time": 36.0,
+    "text": "\"No",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "safe level\"",
+    "confidence": 0.748
+   },
+   {
+    "time": 36.0,
+    "text": "small exposures",
+    "confidence": 0.998
+   },
+   {
+    "time": 36.0,
+    "text": "still add to total risk",
+    "confidence": 0.791
+   },
+   {
+    "time": 36.0,
+    "text": "and therels \"n@ safe level\"",
+    "confidence": 0.663
+   },
+   {
+    "time": 38.0,
+    "text": "\"Known carcinogen'",
+    "confidence": 0.999
+   },
+   {
+    "time": 38.0,
+    "text": "evidence",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "of link is certain, whether cancer",
+    "confidence": 0.829
+   },
+   {
+    "time": 38.0,
+    "text": "develops still depends on",
+    "confidence": 0.812
+   },
+   {
+    "time": 38.0,
+    "text": "exposure e.g: dose",
+    "confidence": 0.904
+   },
+   {
+    "time": 38.0,
+    "text": "Bacon, alcohol and sunlight are",
+    "confidence": 0.872
+   },
+   {
+    "time": 38.0,
+    "text": "carcinogens",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "known",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "\"No",
+    "confidence": 0.87
+   },
+   {
+    "time": 38.0,
+    "text": "safe level\"",
+    "confidence": 0.708
+   },
+   {
+    "time": 38.0,
+    "text": "small exposures",
+    "confidence": 0.998
+   },
+   {
+    "time": 38.0,
+    "text": "still add to total risk",
+    "confidence": 0.772
+   },
+   {
+    "time": 38.0,
+    "text": "but that doesntt mean that",
+    "confidence": 0.571
+   },
+   {
+    "time": 40.0,
+    "text": "\"Known carcinogen'",
+    "confidence": 0.999
+   },
+   {
+    "time": 40.0,
+    "text": "evidence",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "of link is certain, whether cancer",
+    "confidence": 0.683
+   },
+   {
+    "time": 40.0,
+    "text": "develops still depends on",
+    "confidence": 0.809
+   },
+   {
+    "time": 40.0,
+    "text": "exposure e.g: dose",
+    "confidence": 0.904
+   },
+   {
+    "time": 40.0,
+    "text": "Bacon, alcohol and sunlight are",
+    "confidence": 0.878
+   },
+   {
+    "time": 40.0,
+    "text": "known carcinogens",
+    "confidence": 0.866
+   },
+   {
+    "time": 40.0,
+    "text": "\"No",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "safe level\"",
+    "confidence": 0.703
+   },
+   {
+    "time": 40.0,
+    "text": "small exposures",
+    "confidence": 0.998
+   },
+   {
+    "time": 40.0,
+    "text": "still add to total risk",
+    "confidence": 0.782
+   },
+   {
+    "time": 40.0,
+    "text": "it means that little bits will",
+    "confidence": 0.786
+   },
+   {
+    "time": 40.0,
+    "text": "addup",
+    "confidence": 0.887
+   },
+   {
+    "time": 42.0,
+    "text": "\"Known carcinogen'",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.0,
+    "text": "evidence",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "of link is certain, whether cancer",
+    "confidence": 0.701
+   },
+   {
+    "time": 42.0,
+    "text": "develops still depends on",
+    "confidence": 0.806
+   },
+   {
+    "time": 42.0,
+    "text": "exposure e.g: dose",
+    "confidence": 0.902
+   },
+   {
+    "time": 42.0,
+    "text": "Bacon, alcohol and sunlight are",
+    "confidence": 0.878
+   },
+   {
+    "time": 42.0,
+    "text": "known carcinogens",
+    "confidence": 0.867
+   },
+   {
+    "time": 42.0,
+    "text": "\"No",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "safe level\"",
+    "confidence": 0.701
+   },
+   {
+    "time": 42.0,
+    "text": "small exposures",
+    "confidence": 0.998
+   },
+   {
+    "time": 42.0,
+    "text": "still add to total risk",
+    "confidence": 0.783
+   },
+   {
+    "time": 42.0,
+    "text": "cancer",
+    "confidence": 0.903
+   },
+   {
+    "time": 44.0,
+    "text": "careceran",
+    "confidence": 0.605
+   },
+   {
+    "time": 44.0,
+    "text": "Donate",
+    "confidence": 0.997
+   },
+   {
+    "time": 44.0,
+    "text": "Society",
+    "confidence": 0.812
+   },
+   {
+    "time": 44.0,
+    "text": "Exposure to benzene has been linked with",
+    "confidence": 0.936
+   },
+   {
+    "time": 44.0,
+    "text": "higher risk of cancer;",
+    "confidence": 0.749
+   },
+   {
+    "time": 44.0,
+    "text": "particularly leukemia and other cancers of blood cells;",
+    "confidence": 0.616
+   },
+   {
+    "time": 44.0,
+    "text": "What do studies show?",
+    "confidence": 0.926
+   },
+   {
+    "time": 44.0,
+    "text": "Researchers try to determine if",
+    "confidence": 0.825
+   },
+   {
+    "time": 44.0,
+    "text": "substance causes cancer",
+    "confidence": 0.878
+   },
+   {
+    "time": 44.0,
+    "text": "main types",
+    "confidence": 0.987
+   },
+   {
+    "time": 44.0,
+    "text": "of studies:",
+    "confidence": 0.924
+   },
+   {
+    "time": 44.0,
+    "text": "Studies in people (epidemiologic studies)",
+    "confidence": 0.973
+   },
+   {
+    "time": 44.0,
+    "text": "Lab studies (studies done using lab animals or cells in lab dishes)",
+    "confidence": 0.762
+   },
+   {
+    "time": 44.0,
+    "text": "Often neither type of study provides conclusive evidence on its own, so",
+    "confidence": 0.505
+   },
+   {
+    "time": 44.0,
+    "text": "researchers usually look at both human and lab-based studies when trying to",
+    "confidence": 0.778
+   },
+   {
+    "time": 44.0,
+    "text": "figure out if something causes cancer",
+    "confidence": 0.769
+   },
+   {
+    "time": 44.0,
+    "text": "Studies in people",
+    "confidence": 0.979
+   },
+   {
+    "time": 44.0,
+    "text": "found to be higher in studies of workers exposed to high levels of benzene",
+    "confidence": 0.781
+   },
+   {
+    "time": 44.0,
+    "text": "and oil refining industries.",
+    "confidence": 0.881
+   },
+   {
+    "time": 44.0,
+    "text": "suchas those in the chemical, shoemal",
+    "confidence": 0.9
+   },
+   {
+    "time": 44.0,
+    "text": "suggested links to childhood leukemia (particularly",
+    "confidence": 0.783
+   },
+   {
+    "time": 44.0,
+    "text": "Some studies have also",
+    "confidence": 0.811
+   },
+   {
+    "time": 44.0,
+    "text": "AML) as well as acute lymphocytic leukemia (ALL), chronic lymphocytic",
+    "confidence": 0.69
+   },
+   {
+    "time": 44.0,
+    "text": "leukemia (CLLI, and other blood-related cancers (such as multiple",
+    "confidence": 0.642
+   },
+   {
+    "time": 44.0,
+    "text": "myeloma and non-Hodgkin Iymphoma)",
+    "confidence": 0.667
+   },
+   {
+    "time": 44.0,
+    "text": "in adults. However",
+    "confidence": 0.826
+   },
+   {
+    "time": 44.0,
+    "text": "evidence is",
+    "confidence": 0.993
+   },
+   {
+    "time": 44.0,
+    "text": "strong",
+    "confidence": 0.999
+   },
+   {
+    "time": 44.0,
+    "text": "not as",
+    "confidence": 0.805
+   },
+   {
+    "time": 44.0,
+    "text": "for these cancers.",
+    "confidence": 0.956
+   },
+   {
+    "time": 44.0,
+    "text": "There is much less evidence linking benzene to",
+    "confidence": 0.603
+   },
+   {
+    "time": 44.0,
+    "text": "Lab studies",
+    "confidence": 0.672
+   },
+   {
+    "time": 44.0,
+    "text": "been",
+    "confidence": 0.997
+   },
+   {
+    "time": 44.0,
+    "text": "When inhaled or swallowed, benzene has",
+    "confidence": 0.848
+   },
+   {
+    "time": 44.0,
+    "text": "of tumors in lab animals such as rats and mice",
+    "confidence": 0.745
+   },
+   {
+    "time": 44.0,
+    "text": "finding of an excess risk of leukemia in human",
+    "confidence": 0.746
+   },
+   {
+    "time": 44.0,
+    "text": "people have not found an increased risk of canc",
+    "confidence": 0.909
+   },
+   {
+    "time": 44.0,
+    "text": "among those with higher exposures",
+    "confidence": 0.942
+   },
+   {
+    "time": 44.0,
+    "text": "Berendeventhoughweale",
+    "confidence": 0.597
+   },
+   {
+    "time": 44.0,
+    "text": "cells",
+    "confidence": 0.975
+   },
+   {
+    "time": 44.0,
+    "text": "in the",
+    "confidence": 0.944
+   },
+   {
+    "time": 44.0,
+    "text": "(The",
+    "confidence": 0.657
+   },
+   {
+    "time": 44.0,
+    "text": "here new blo",
+    "confidence": 0.663
+   },
+   {
+    "time": 44.0,
+    "text": "uman",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "careceran",
+    "confidence": 0.596
+   },
+   {
+    "time": 46.0,
+    "text": "Donate",
+    "confidence": 0.996
+   },
+   {
+    "time": 46.0,
+    "text": "Society",
+    "confidence": 0.98
+   },
+   {
+    "time": 46.0,
+    "text": "Exposure to benzene has been linked with",
+    "confidence": 0.933
+   },
+   {
+    "time": 46.0,
+    "text": "higher risk of cancer;",
+    "confidence": 0.712
+   },
+   {
+    "time": 46.0,
+    "text": "particularly leukemia and other cancers of blood cells;",
+    "confidence": 0.689
+   },
+   {
+    "time": 46.0,
+    "text": "What do studies show?",
+    "confidence": 0.927
+   },
+   {
+    "time": 46.0,
+    "text": "Researchers try to determine if",
+    "confidence": 0.848
+   },
+   {
+    "time": 46.0,
+    "text": "substance causes cancer",
+    "confidence": 0.989
+   },
+   {
+    "time": 46.0,
+    "text": "main types",
+    "confidence": 0.987
+   },
+   {
+    "time": 46.0,
+    "text": "of studies:",
+    "confidence": 0.92
+   },
+   {
+    "time": 46.0,
+    "text": "Studies in people (epidemiologic studies)",
+    "confidence": 0.975
+   },
+   {
+    "time": 46.0,
+    "text": "Lab studies (studies done using lab animals or cells in lab dishes)",
+    "confidence": 0.764
+   },
+   {
+    "time": 46.0,
+    "text": "researchers usually look at both human and lab-based studies when trying to",
+    "confidence": 0.72
+   },
+   {
+    "time": 46.0,
+    "text": "figure out if something causes cancer",
+    "confidence": 0.879
+   },
+   {
+    "time": 46.0,
+    "text": "Studies in people",
+    "confidence": 0.978
+   },
+   {
+    "time": 46.0,
+    "text": "Rates of Jeukemia, particularly acute myeloid leukemia (AML), have been",
+    "confidence": 0.521
+   },
+   {
+    "time": 46.0,
+    "text": "found to be higher in studies of workers exposed to high levels of benzene",
+    "confidence": 0.898
+   },
+   {
+    "time": 46.0,
+    "text": "and oil refining industries.",
+    "confidence": 0.748
+   },
+   {
+    "time": 46.0,
+    "text": "suchas those in the chemical, shoemal",
+    "confidence": 0.907
+   },
+   {
+    "time": 46.0,
+    "text": "suggested links to childhood leukemia (particularly",
+    "confidence": 0.786
+   },
+   {
+    "time": 46.0,
+    "text": "Some studies have also",
+    "confidence": 0.846
+   },
+   {
+    "time": 46.0,
+    "text": "AML) as well as acute lymphocytic leukemia (ALL), chronic lymphocytic",
+    "confidence": 0.666
+   },
+   {
+    "time": 46.0,
+    "text": "myeloma and non-Hodgkin Iymphoma)",
+    "confidence": 0.681
+   },
+   {
+    "time": 46.0,
+    "text": "in adults. However the evidence is",
+    "confidence": 0.635
+   },
+   {
+    "time": 46.0,
+    "text": "strong",
+    "confidence": 0.999
+   },
+   {
+    "time": 46.0,
+    "text": "not as",
+    "confidence": 0.837
+   },
+   {
+    "time": 46.0,
+    "text": "for these cancers.",
+    "confidence": 0.854
+   },
+   {
+    "time": 46.0,
+    "text": "There is much less evidence linking benzene to",
+    "confidence": 0.735
+   },
+   {
+    "time": 46.0,
+    "text": "Lab studies",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "been",
+    "confidence": 0.517
+   },
+   {
+    "time": 46.0,
+    "text": "When inhaled or swallowed, benzene has",
+    "confidence": 0.843
+   },
+   {
+    "time": 46.0,
+    "text": "of tumors in lab animals such as rats and mice.",
+    "confidence": 0.817
+   },
+   {
+    "time": 46.0,
+    "text": "finding of an excess risk of leukemia in humans:",
+    "confidence": 0.745
+   },
+   {
+    "time": 46.0,
+    "text": "people have not found an increased risk of cancer",
+    "confidence": 0.831
+   },
+   {
+    "time": 46.0,
+    "text": "among those with higher exposures",
+    "confidence": 0.927
+   },
+   {
+    "time": 46.0,
+    "text": "has peen",
+    "confidence": 0.868
+   },
+   {
+    "time": 46.0,
+    "text": "chromosome",
+    "confidence": 0.985
+   },
+   {
+    "time": 46.0,
+    "text": "@nt",
+    "confidence": 0.842
+   },
+   {
+    "time": 46.0,
+    "text": "changes are commonly found in human",
+    "confidence": 0.613
+   },
+   {
+    "time": 48.0,
+    "text": "careceran",
+    "confidence": 0.578
+   },
+   {
+    "time": 48.0,
+    "text": "Donate",
+    "confidence": 0.997
+   },
+   {
+    "time": 48.0,
+    "text": "Society",
+    "confidence": 0.993
+   },
+   {
+    "time": 48.0,
+    "text": "Exposure to benzene has been linked with",
+    "confidence": 0.894
+   },
+   {
+    "time": 48.0,
+    "text": "higher risk of cancer;",
+    "confidence": 0.712
+   },
+   {
+    "time": 48.0,
+    "text": "particularly leukemia and other cancers of blood cells;",
+    "confidence": 0.687
+   },
+   {
+    "time": 48.0,
+    "text": "What do studies show?",
+    "confidence": 0.931
+   },
+   {
+    "time": 48.0,
+    "text": "Researchers try to determine if",
+    "confidence": 0.847
+   },
+   {
+    "time": 48.0,
+    "text": "substance causes cancer",
+    "confidence": 0.989
+   },
+   {
+    "time": 48.0,
+    "text": "main types",
+    "confidence": 0.987
+   },
+   {
+    "time": 48.0,
+    "text": "of studies:",
+    "confidence": 0.92
+   },
+   {
+    "time": 48.0,
+    "text": "Studies in people (epidemiologic studies)",
+    "confidence": 0.974
+   },
+   {
+    "time": 48.0,
+    "text": "Lab studies (studies done using lab animals or cells in lab dishes)",
+    "confidence": 0.768
+   },
+   {
+    "time": 48.0,
+    "text": "Often neither type of study provides conclusive evidence on its own, so",
+    "confidence": 0.604
+   },
+   {
+    "time": 48.0,
+    "text": "researchers usually look at both human and lab-based studies when trying to",
+    "confidence": 0.737
+   },
+   {
+    "time": 48.0,
+    "text": "figure out if something causes cancer",
+    "confidence": 0.827
+   },
+   {
+    "time": 48.0,
+    "text": "Studies in people",
+    "confidence": 0.97
+   },
+   {
+    "time": 48.0,
+    "text": "Rates of Jeukemia, particularly acute myeloid leukemia (AML), have been",
+    "confidence": 0.527
+   },
+   {
+    "time": 48.0,
+    "text": "found to be higher in studies of workers exposed to high levels of benzene",
+    "confidence": 0.898
+   },
+   {
+    "time": 48.0,
+    "text": "and oil refining industries.",
+    "confidence": 0.745
+   },
+   {
+    "time": 48.0,
+    "text": "suchas those in the chemical, shoemal",
+    "confidence": 0.9
+   },
+   {
+    "time": 48.0,
+    "text": "suggested links to childhood leukemia (particularly",
+    "confidence": 0.787
+   },
+   {
+    "time": 48.0,
+    "text": "Some studies have also",
+    "confidence": 0.85
+   },
+   {
+    "time": 48.0,
+    "text": "AML) as well as acute lymphocytic leukemia (ALL), chronic lymphocytic",
+    "confidence": 0.664
+   },
+   {
+    "time": 48.0,
+    "text": "leukemia (CLLI, and other blood-related cancers (such as multiple",
+    "confidence": 0.628
+   },
+   {
+    "time": 48.0,
+    "text": "myeloma and non-Hodgkin Iymphoma)",
+    "confidence": 0.679
+   },
+   {
+    "time": 48.0,
+    "text": "in adults. Howe",
+    "confidence": 0.707
+   },
+   {
+    "time": 48.0,
+    "text": "dence is",
+    "confidence": 0.604
+   },
+   {
+    "time": 48.0,
+    "text": "strong",
+    "confidence": 0.999
+   },
+   {
+    "time": 48.0,
+    "text": "not as",
+    "confidence": 0.834
+   },
+   {
+    "time": 48.0,
+    "text": "for these cancers.",
+    "confidence": 0.895
+   },
+   {
+    "time": 48.0,
+    "text": "There is much less evidence linking benzene to",
+    "confidence": 0.738
+   },
+   {
+    "time": 48.0,
+    "text": "Lab studies",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "been",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "When inhaled or swallowed, benzene has",
+    "confidence": 0.851
+   },
+   {
+    "time": 48.0,
+    "text": "of tumors in lab animals such as rats and mice,",
+    "confidence": 0.747
+   },
+   {
+    "time": 48.0,
+    "text": "finding of an excess risk of leukemia in humans",
+    "confidence": 0.774
+   },
+   {
+    "time": 48.0,
+    "text": "people have not found an increased risk of cancel",
+    "confidence": 0.748
+   },
+   {
+    "time": 48.0,
+    "text": "among those with higher exposures",
+    "confidence": 0.928
+   },
+   {
+    "time": 48.0,
+    "text": "Mhere new",
+    "confidence": 0.672
+   },
+   {
+    "time": 48.0,
+    "text": "changes are commom",
+    "confidence": 0.547
+   },
+   {
+    "time": 48.0,
+    "text": "humar",
+    "confidence": 0.996
+   },
+   {
+    "time": 50.0,
+    "text": "AudIO",
+    "confidence": 0.943
+   },
+   {
+    "time": 50.0,
+    "text": "Live",
+    "confidence": 0.785
+   },
+   {
+    "time": 50.0,
+    "text": "Log",
+    "confidence": 0.967
+   },
+   {
+    "time": 50.0,
+    "text": "Cancer-causing chemical can form at",
+    "confidence": 0.884
+   },
+   {
+    "time": 50.0,
+    "text": "'unacceptably high levels' in certain",
+    "confidence": 0.913
+   },
+   {
+    "time": 50.0,
+    "text": "acne products, independent lab claims",
+    "confidence": 0.647
+   },
+   {
+    "time": 50.0,
+    "text": "By Jacqueline Howard, CNN",
+    "confidence": 0.817
+   },
+   {
+    "time": 50.0,
+    "text": "minute read",
+    "confidence": 0.997
+   },
+   {
+    "time": 50.0,
+    "text": "Updated 7.14 PM EST, Wed March 6, 2024",
+    "confidence": 0.778
+   },
+   {
+    "time": 50.0,
+    "text": "The independent labors",
+    "confidence": 0.536
+   },
+   {
+    "time": 50.0,
+    "text": "treatment",
+    "confidence": 0.998
+   },
+   {
+    "time": 50.0,
+    "text": "products for benzene",
+    "confidence": 0.995
+   },
+   {
+    "time": 50.0,
+    "text": "(CNN)",
+    "confidence": 0.851
+   },
+   {
+    "time": 50.0,
+    "text": "High levels",
+    "confidence": 0.64
+   },
+   {
+    "time": 50.0,
+    "text": "ausing",
+    "confidence": 0.992
+   },
+   {
+    "time": 50.0,
+    "text": "containing",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "chemical, can form in",
+    "confidence": 0.723
+   },
+   {
+    "time": 50.0,
+    "text": "cts",
+    "confidence": 0.998
+   },
+   {
+    "time": 50.0,
+    "text": "benzoyl peroxide",
+    "confidence": 0.975
+   },
+   {
+    "time": 50.0,
+    "text": "from Valisure",
+    "confidence": 0.999
+   },
+   {
+    "time": 50.0,
+    "text": "acco",
+    "confidence": 0.995
+   },
+   {
+    "time": 50.0,
+    "text": "an",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "how",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "s@ lets @ompare",
+    "confidence": 0.634
+   },
+   {
+    "time": 50.0,
+    "text": "much",
+    "confidence": 0.994
+   },
+   {
+    "time": 50.0,
+    "text": "@enzene",
+    "confidence": 0.785
+   },
+   {
+    "time": 52.0,
+    "text": "AudIO",
+    "confidence": 0.945
+   },
+   {
+    "time": 52.0,
+    "text": "Live",
+    "confidence": 0.818
+   },
+   {
+    "time": 52.0,
+    "text": "Log",
+    "confidence": 0.966
+   },
+   {
+    "time": 52.0,
+    "text": "Cancer-causing chemical can form at",
+    "confidence": 0.882
+   },
+   {
+    "time": 52.0,
+    "text": "'unacceptably high levels' in certain",
+    "confidence": 0.913
+   },
+   {
+    "time": 52.0,
+    "text": "acne products, independent lab claims",
+    "confidence": 0.652
+   },
+   {
+    "time": 52.0,
+    "text": "By Jacqueline Howard, CNN",
+    "confidence": 0.698
+   },
+   {
+    "time": 52.0,
+    "text": "minute read",
+    "confidence": 0.997
+   },
+   {
+    "time": 52.0,
+    "text": "Updated 7.14 PM EST, Wed March 6, 2024",
+    "confidence": 0.781
+   },
+   {
+    "time": 52.0,
+    "text": "The independent Iabora",
+    "confidence": 0.657
+   },
+   {
+    "time": 52.0,
+    "text": "eatment",
+    "confidence": 0.945
+   },
+   {
+    "time": 52.0,
+    "text": "products for benzene:",
+    "confidence": 0.812
+   },
+   {
+    "time": 52.0,
+    "text": "(CNN)",
+    "confidence": 0.853
+   },
+   {
+    "time": 52.0,
+    "text": "High levels",
+    "confidence": 0.798
+   },
+   {
+    "time": 52.0,
+    "text": "sing",
+    "confidence": 0.999
+   },
+   {
+    "time": 52.0,
+    "text": "containing",
+    "confidence": 0.998
+   },
+   {
+    "time": 52.0,
+    "text": "chemical, can form in",
+    "confidence": 0.706
+   },
+   {
+    "time": 52.0,
+    "text": "benzoyl peroxide",
+    "confidence": 0.974
+   },
+   {
+    "time": 52.0,
+    "text": "from Valisure",
+    "confidence": 0.99
+   },
+   {
+    "time": 52.0,
+    "text": "acco",
+    "confidence": 0.995
+   },
+   {
+    "time": 52.0,
+    "text": "an",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "t@ @ther sources",
+    "confidence": 0.758
+   },
+   {
+    "time": 54.0,
+    "text": "Benzoyl peroxide: worst case scenario",
+    "confidence": 0.882
+   },
+   {
+    "time": 54.0,
+    "text": "application",
+    "confidence": 0.999
+   },
+   {
+    "time": 54.0,
+    "text": "0.5-1.0g (1-2 finger tip units)",
+    "confidence": 0.658
+   },
+   {
+    "time": 54.0,
+    "text": "10-20 ug* in 1 application of 20 ppm product",
+    "confidence": 0.926
+   },
+   {
+    "time": 54.0,
+    "text": "1-2 ug* in 1 application of 2 ppm product",
+    "confidence": 0.812
+   },
+   {
+    "time": 54.0,
+    "text": "*not all inhaled",
+    "confidence": 0.774
+   },
+   {
+    "time": 54.0,
+    "text": "Cooking",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "100 ug",
+    "confidence": 0.644
+   },
+   {
+    "time": 54.0,
+    "text": "stove with",
+    "confidence": 0.961
+   },
+   {
+    "time": 54.0,
+    "text": "ow and oven",
+    "confidence": 0.931
+   },
+   {
+    "time": 54.0,
+    "text": "one bu",
+    "confidence": 0.804
+   },
+   {
+    "time": 54.0,
+    "text": "at 350",
+    "confidence": 0.864
+   },
+   {
+    "time": 54.0,
+    "text": "*not",
+    "confidence": 0.567
+   },
+   {
+    "time": 54.0,
+    "text": "Petra",
+    "confidence": 0.978
+   },
+   {
+    "time": 54.0,
+    "text": "lia)",
+    "confidence": 0.802
+   },
+   {
+    "time": 54.0,
+    "text": "While",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "(avera",
+    "confidence": 0.864
+   },
+   {
+    "time": 54.0,
+    "text": "Air ex",
+    "confidence": 0.996
+   },
+   {
+    "time": 54.0,
+    "text": "1.25",
+    "confidence": 0.941
+   },
+   {
+    "time": 54.0,
+    "text": "9.4 to",
+    "confidence": 0.757
+   },
+   {
+    "time": 54.0,
+    "text": "(average",
+    "confidence": 0.754
+   },
+   {
+    "time": 54.0,
+    "text": "Inside",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "Aata)",
+    "confidence": 0.975
+   },
+   {
+    "time": 54.0,
+    "text": "Ave",
+    "confidence": 0.965
+   },
+   {
+    "time": 54.0,
+    "text": "easily s@",
+    "confidence": 0.671
+   },
+   {
+    "time": 54.0,
+    "text": "skin",
+    "confidence": 0.669
+   },
+   {
+    "time": 56.0,
+    "text": "Benzoyl peroxide: worst case scenario",
+    "confidence": 0.884
+   },
+   {
+    "time": 56.0,
+    "text": "application",
+    "confidence": 0.999
+   },
+   {
+    "time": 56.0,
+    "text": "0.5-1.0g (1-2 finger tip units)",
+    "confidence": 0.788
+   },
+   {
+    "time": 56.0,
+    "text": "10-20 ug* in 1 application of 20 ppm product",
+    "confidence": 0.928
+   },
+   {
+    "time": 56.0,
+    "text": "application of 2 ppm product",
+    "confidence": 0.981
+   },
+   {
+    "time": 56.0,
+    "text": "1-2 ug* in",
+    "confidence": 0.54
+   },
+   {
+    "time": 56.0,
+    "text": "*not all inhaled",
+    "confidence": 0.773
+   },
+   {
+    "time": 56.0,
+    "text": "100 ug",
+    "confidence": 0.501
+   },
+   {
+    "time": 56.0,
+    "text": "as stove with",
+    "confidence": 0.995
+   },
+   {
+    "time": 56.0,
+    "text": "low and oven",
+    "confidence": 0.978
+   },
+   {
+    "time": 56.0,
+    "text": "one bu",
+    "confidence": 0.652
+   },
+   {
+    "time": 56.0,
+    "text": "at 35",
+    "confidence": 0.995
+   },
+   {
+    "time": 56.0,
+    "text": "*not",
+    "confidence": 0.525
+   },
+   {
+    "time": 56.0,
+    "text": "Petre",
+    "confidence": 0.799
+   },
+   {
+    "time": 56.0,
+    "text": "ralia)",
+    "confidence": 0.973
+   },
+   {
+    "time": 56.0,
+    "text": "Whill",
+    "confidence": 0.729
+   },
+   {
+    "time": 56.0,
+    "text": "(aver",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "Air ex",
+    "confidence": 0.996
+   },
+   {
+    "time": 56.0,
+    "text": "1.25",
+    "confidence": 0.959
+   },
+   {
+    "time": 56.0,
+    "text": "9.4 to 3",
+    "confidence": 0.894
+   },
+   {
+    "time": 56.0,
+    "text": "(average",
+    "confidence": 0.998
+   },
+   {
+    "time": 56.0,
+    "text": "data",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "Inside",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "Aver",
+    "confidence": 0.999
+   },
+   {
+    "time": 56.0,
+    "text": "breathe in ff all @f the",
+    "confidence": 0.898
+   },
+   {
+    "time": 56.0,
+    "text": "benzene",
+    "confidence": 0.99
+   },
+   {
+    "time": 58.0,
+    "text": "Benzoyl peroxide: worst case scenario",
+    "confidence": 0.781
+   },
+   {
+    "time": 58.0,
+    "text": "application",
+    "confidence": 0.999
+   },
+   {
+    "time": 58.0,
+    "text": "0.5-1.0g (1-2 finger tip units)",
+    "confidence": 0.776
+   },
+   {
+    "time": 58.0,
+    "text": "10-20 ug* in 1 application of 20 ppm product",
+    "confidence": 0.934
+   },
+   {
+    "time": 58.0,
+    "text": "application of 2 ppm product",
+    "confidence": 0.984
+   },
+   {
+    "time": 58.0,
+    "text": "1-2 ug* in",
+    "confidence": 0.73
+   },
+   {
+    "time": 58.0,
+    "text": "*not all inhaled",
+    "confidence": 0.718
+   },
+   {
+    "time": 58.0,
+    "text": "Cooking (Kash",
+    "confidence": 0.521
+   },
+   {
+    "time": 58.0,
+    "text": "S stove with",
+    "confidence": 0.708
+   },
+   {
+    "time": 58.0,
+    "text": "low and oven",
+    "confidence": 0.98
+   },
+   {
+    "time": 58.0,
+    "text": "one bur",
+    "confidence": 0.916
+   },
+   {
+    "time": 58.0,
+    "text": "at 350",
+    "confidence": 0.864
+   },
+   {
+    "time": 58.0,
+    "text": "*not a",
+    "confidence": 0.769
+   },
+   {
+    "time": 58.0,
+    "text": "Petrol",
+    "confidence": 0.873
+   },
+   {
+    "time": 58.0,
+    "text": "alia)",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.0,
+    "text": "While",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.0,
+    "text": "(avr",
+    "confidence": 0.762
+   },
+   {
+    "time": 58.0,
+    "text": "rage",
+    "confidence": 0.866
+   },
+   {
+    "time": 58.0,
+    "text": "straight up your nostrils",
+    "confidence": 0.796
+   },
+   {
+    "time": 60.0,
+    "text": "Benzoyl peroxide: worst case scenario",
+    "confidence": 0.792
+   },
+   {
+    "time": 60.0,
+    "text": "application",
+    "confidence": 0.999
+   },
+   {
+    "time": 60.0,
+    "text": "0.5-1.0g (1-2 finger tip units)",
+    "confidence": 0.775
+   },
+   {
+    "time": 60.0,
+    "text": "10-20 ug* in 1 application of 20 ppm product",
+    "confidence": 0.934
+   },
+   {
+    "time": 60.0,
+    "text": "1-2 ug* in",
+    "confidence": 0.705
+   },
+   {
+    "time": 60.0,
+    "text": "application of 2 ppm product",
+    "confidence": 0.974
+   },
+   {
+    "time": 60.0,
+    "text": "*not all inhaled",
+    "confidence": 0.738
+   },
+   {
+    "time": 60.0,
+    "text": "Cooking",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.0,
+    "text": "stove with",
+    "confidence": 0.981
+   },
+   {
+    "time": 60.0,
+    "text": "ow and oven",
+    "confidence": 0.946
+   },
+   {
+    "time": 60.0,
+    "text": "one",
+    "confidence": 0.999
+   },
+   {
+    "time": 60.0,
+    "text": "at 35",
+    "confidence": 0.951
+   },
+   {
+    "time": 60.0,
+    "text": "Petre",
+    "confidence": 0.686
+   },
+   {
+    "time": 60.0,
+    "text": "alia)",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.0,
+    "text": "(ave",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.0,
+    "text": "Air e:",
+    "confidence": 0.942
+   },
+   {
+    "time": 60.0,
+    "text": "1.2'",
+    "confidence": 0.81
+   },
+   {
+    "time": 60.0,
+    "text": "(avera",
+    "confidence": 0.981
+   },
+   {
+    "time": 60.0,
+    "text": "Insid",
+    "confidence": 0.99
+   },
+   {
+    "time": 60.0,
+    "text": "which obviously desntt",
+    "confidence": 0.679
+   },
+   {
+    "time": 60.0,
+    "text": "happen",
+    "confidence": 0.997
+   },
+   {
+    "time": 62.0,
+    "text": "Benzoyl peroxide: worst case scenario",
+    "confidence": 0.774
+   },
+   {
+    "time": 62.0,
+    "text": "application",
+    "confidence": 0.999
+   },
+   {
+    "time": 62.0,
+    "text": "0.5-1.0g (1-2 finger tip units)",
+    "confidence": 0.917
+   },
+   {
+    "time": 62.0,
+    "text": "10-20 ug* in 1 application of 20 ppm product",
+    "confidence": 0.934
+   },
+   {
+    "time": 62.0,
+    "text": "1-2 ug* in",
+    "confidence": 0.731
+   },
+   {
+    "time": 62.0,
+    "text": "application of 2 ppm product",
+    "confidence": 0.974
+   },
+   {
+    "time": 62.0,
+    "text": "*not all inhaled",
+    "confidence": 0.66
+   },
+   {
+    "time": 62.0,
+    "text": "Cooking (Kashtan 2023: US)",
+    "confidence": 0.747
+   },
+   {
+    "time": 62.0,
+    "text": "100 ug produced per meal* (gas stove with",
+    "confidence": 0.602
+   },
+   {
+    "time": 62.0,
+    "text": "one burner on high, one burner on low and oven",
+    "confidence": 0.841
+   },
+   {
+    "time": 62.0,
+    "text": "*not all inhaled",
+    "confidence": 0.793
+   },
+   {
+    "time": 62.0,
+    "text": "polo 2014: Australia)",
+    "confidence": 0.998
+   },
+   {
+    "time": 62.0,
+    "text": "Petrol",
+    "confidence": 0.876
+   },
+   {
+    "time": 62.0,
+    "text": "Whil",
+    "confidence": 0.999
+   },
+   {
+    "time": 62.0,
+    "text": "(av",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.0,
+    "text": "sity (EPA)",
+    "confidence": 0.964
+   },
+   {
+    "time": 62.0,
+    "text": "Air",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.0,
+    "text": "5 min",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.0,
+    "text": "(avel",
+    "confidence": 0.504
+   },
+   {
+    "time": 62.0,
+    "text": "Ja, France,",
+    "confidence": 0.951
+   },
+   {
+    "time": 62.0,
+    "text": "Insid",
+    "confidence": 0.997
+   },
+   {
+    "time": 62.0,
+    "text": "Av",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.0,
+    "text": "ene is",
+    "confidence": 0.893
+   },
+   {
+    "time": 62.0,
+    "text": "when you cook",
+    "confidence": 0.733
+   },
+   {
+    "time": 64.0,
+    "text": "Benzoyl peroxide: worst case scenario",
+    "confidence": 0.92
+   },
+   {
+    "time": 64.0,
+    "text": "application",
+    "confidence": 0.999
+   },
+   {
+    "time": 64.0,
+    "text": "0.5-1.0g (1-2 finger tip units)",
+    "confidence": 0.919
+   },
+   {
+    "time": 64.0,
+    "text": "10-20 ug* in 1 application of 20 ppm product",
+    "confidence": 0.934
+   },
+   {
+    "time": 64.0,
+    "text": "1-2 ug* in",
+    "confidence": 0.732
+   },
+   {
+    "time": 64.0,
+    "text": "application of 2 ppm product",
+    "confidence": 0.976
+   },
+   {
+    "time": 64.0,
+    "text": "*not all inhaled",
+    "confidence": 0.635
+   },
+   {
+    "time": 64.0,
+    "text": "Cooking (Kashtan 2023: US)",
+    "confidence": 0.834
+   },
+   {
+    "time": 64.0,
+    "text": "100 ug produced per meal* (gas stove with",
+    "confidence": 0.717
+   },
+   {
+    "time": 64.0,
+    "text": "one burner on high, one burner on low and oven",
+    "confidence": 0.85
+   },
+   {
+    "time": 64.0,
+    "text": "'F for 30 min)",
+    "confidence": 0.704
+   },
+   {
+    "time": 64.0,
+    "text": "at 350",
+    "confidence": 0.852
+   },
+   {
+    "time": 64.0,
+    "text": "*not all inhaled",
+    "confidence": 0.782
+   },
+   {
+    "time": 64.0,
+    "text": "Petrol station (Edokpolo 2014: Australia)",
+    "confidence": 0.85
+   },
+   {
+    "time": 64.0,
+    "text": "While refueling: 150 to 4900 ug/m? air",
+    "confidence": 0.706
+   },
+   {
+    "time": 64.0,
+    "text": "(average 1767)",
+    "confidence": 0.707
+   },
+   {
+    "time": 64.0,
+    "text": "Air exchange, light intensity (EPA)",
+    "confidence": 0.647
+   },
+   {
+    "time": 64.0,
+    "text": "1.25 x 10-2 m/min",
+    "confidence": 0.914
+   },
+   {
+    "time": 64.0,
+    "text": "9.4 to 306 [g inhaled in 5 min",
+    "confidence": 0.513
+   },
+   {
+    "time": 64.0,
+    "text": "(average 110 ug)",
+    "confidence": 0.75
+   },
+   {
+    "time": 64.0,
+    "text": "Inside house (Canada, France",
+    "confidence": 0.984
+   },
+   {
+    "time": 64.0,
+    "text": "Average 2.0 to 4.07 ug/m? air",
+    "confidence": 0.737
+   },
+   {
+    "time": 64.0,
+    "text": "Air exchange (EPA)",
+    "confidence": 0.924
+   },
+   {
+    "time": 64.0,
+    "text": "day",
+    "confidence": 1.0
+   },
+   {
+    "time": 64.0,
+    "text": "31 to 63 ug inhaled per",
+    "confidence": 0.566
+   },
+   {
+    "time": 64.0,
+    "text": "Note: Continuous exposure of ben",
+    "confidence": 0.948
+   },
+   {
+    "time": 64.0,
+    "text": "worse than a spike (carcinogen",
+    "confidence": 0.664
+   },
+   {
+    "time": 64.0,
+    "text": "metabolic pathway gets $",
+    "confidence": 0.652
+   },
+   {
+    "time": 66.0,
+    "text": "Benzoyl peroxide: worst case scenario",
+    "confidence": 0.852
+   },
+   {
+    "time": 66.0,
+    "text": "application",
+    "confidence": 1.0
+   },
+   {
+    "time": 66.0,
+    "text": "0.5-1.0 g (1-2 finger tip units)",
+    "confidence": 0.742
+   },
+   {
+    "time": 66.0,
+    "text": "10-20 ug* in 1 application of 20 ppm product",
+    "confidence": 0.93
+   },
+   {
+    "time": 66.0,
+    "text": "1-2 ug* in",
+    "confidence": 0.732
+   },
+   {
+    "time": 66.0,
+    "text": "application of 2 ppm product",
+    "confidence": 0.975
+   },
+   {
+    "time": 66.0,
+    "text": "*not all inhaled",
+    "confidence": 0.632
+   },
+   {
+    "time": 66.0,
+    "text": "Cooking (Kashtan 2023: US)",
+    "confidence": 0.804
+   },
+   {
+    "time": 66.0,
+    "text": "100 ug produced per meal* (gas stov",
+    "confidence": 0.882
+   },
+   {
+    "time": 66.0,
+    "text": "one burner on high, one burner on lov",
+    "confidence": 0.669
+   },
+   {
+    "time": 66.0,
+    "text": "'F for 30 min)",
+    "confidence": 0.714
+   },
+   {
+    "time": 66.0,
+    "text": "at 350",
+    "confidence": 0.697
+   },
+   {
+    "time": 66.0,
+    "text": "*not all inhaled",
+    "confidence": 0.62
+   },
+   {
+    "time": 66.0,
+    "text": "Petrol station (Edokpolo 2014: Austral",
+    "confidence": 0.905
+   },
+   {
+    "time": 66.0,
+    "text": "While refueling: 150 to 4900 ug/m? air",
+    "confidence": 0.696
+   },
+   {
+    "time": 66.0,
+    "text": "(average 1767)",
+    "confidence": 0.733
+   },
+   {
+    "time": 66.0,
+    "text": "Air exchange, light intensity (EF",
+    "confidence": 0.67
+   },
+   {
+    "time": 66.0,
+    "text": "1.25 x 10-2 m/min",
+    "confidence": 0.679
+   },
+   {
+    "time": 66.0,
+    "text": "9.4 to 306 [g inhaled in 5 min",
+    "confidence": 0.519
+   },
+   {
+    "time": 66.0,
+    "text": "(average 110 ug)",
+    "confidence": 0.688
+   },
+   {
+    "time": 66.0,
+    "text": "Inside house (Canada, France",
+    "confidence": 0.972
+   },
+   {
+    "time": 66.0,
+    "text": "Average 2.0 to 4.07 ug/m? air",
+    "confidence": 0.768
+   },
+   {
+    "time": 66.0,
+    "text": "Air exchange (EPA)",
+    "confidence": 0.845
+   },
+   {
+    "time": 66.0,
+    "text": "day",
+    "confidence": 1.0
+   },
+   {
+    "time": 66.0,
+    "text": "31 to 63 ug inhaled per",
+    "confidence": 0.527
+   },
+   {
+    "time": 66.0,
+    "text": "Note: Continuous exposure of benzene is",
+    "confidence": 0.899
+   },
+   {
+    "time": 66.0,
+    "text": "(carcinogen-forming",
+    "confidence": 0.999
+   },
+   {
+    "time": 66.0,
+    "text": "worse than a spike",
+    "confidence": 0.905
+   },
+   {
+    "time": 66.0,
+    "text": "metabolic pathway gets saturated)",
+    "confidence": 0.925
+   },
+   {
+    "time": 68.0,
+    "text": "Benzoyl peroxide: worst case scenario",
+    "confidence": 0.855
+   },
+   {
+    "time": 68.0,
+    "text": "application",
+    "confidence": 0.999
+   },
+   {
+    "time": 68.0,
+    "text": "0.5-1.0g (1-2 finger tip units)",
+    "confidence": 0.747
+   },
+   {
+    "time": 68.0,
+    "text": "10-20 ug* in 1 application of 20 ppm product",
+    "confidence": 0.93
+   },
+   {
+    "time": 68.0,
+    "text": "1-2 ug* in",
+    "confidence": 0.733
+   },
+   {
+    "time": 68.0,
+    "text": "application of 2 ppm product",
+    "confidence": 0.975
+   },
+   {
+    "time": 68.0,
+    "text": "*not all inhaled",
+    "confidence": 0.657
+   },
+   {
+    "time": 68.0,
+    "text": "Cooking (Kashtan 2023: US)",
+    "confidence": 0.815
+   },
+   {
+    "time": 68.0,
+    "text": "100 ug produced per meal* (gas stov",
+    "confidence": 0.888
+   },
+   {
+    "time": 68.0,
+    "text": "one burner on high, one burner on low",
+    "confidence": 0.729
+   },
+   {
+    "time": 68.0,
+    "text": "at 350 %F for 30 min)",
+    "confidence": 0.71
+   },
+   {
+    "time": 68.0,
+    "text": "*not all inhaled",
+    "confidence": 0.619
+   },
+   {
+    "time": 68.0,
+    "text": "Petrol station (Edokpolo 2014: Australi",
+    "confidence": 0.983
+   },
+   {
+    "time": 68.0,
+    "text": "While refueling: 150 to 4900 ug/m? air",
+    "confidence": 0.695
+   },
+   {
+    "time": 68.0,
+    "text": "(average 1767)",
+    "confidence": 0.735
+   },
+   {
+    "time": 68.0,
+    "text": "Air exchange, light intensity (EF",
+    "confidence": 0.668
+   },
+   {
+    "time": 68.0,
+    "text": "1.25 x 10-2 m/min",
+    "confidence": 0.681
+   },
+   {
+    "time": 68.0,
+    "text": "9.4 to 306 [g inhaled in 5 min",
+    "confidence": 0.521
+   },
+   {
+    "time": 68.0,
+    "text": "(average 110 g)",
+    "confidence": 0.994
+   },
+   {
+    "time": 68.0,
+    "text": "Inside house (Canada, France",
+    "confidence": 0.984
+   },
+   {
+    "time": 68.0,
+    "text": "Average 2.0 to 4.07 ug/m? air",
+    "confidence": 0.749
+   },
+   {
+    "time": 68.0,
+    "text": "Air exchange (EPA)",
+    "confidence": 0.829
+   },
+   {
+    "time": 68.0,
+    "text": "day",
+    "confidence": 1.0
+   },
+   {
+    "time": 68.0,
+    "text": "31 to 63 ug inhaled per",
+    "confidence": 0.546
+   },
+   {
+    "time": 68.0,
+    "text": "Note: Continuous exposure of benzene is",
+    "confidence": 0.909
+   },
+   {
+    "time": 68.0,
+    "text": "(carcinogen-forming",
+    "confidence": 0.999
+   },
+   {
+    "time": 68.0,
+    "text": "worse than a spike",
+    "confidence": 0.893
+   },
+   {
+    "time": 68.0,
+    "text": "metabolic pathway gets saturated)",
+    "confidence": 0.949
+   },
+   {
+    "time": 68.0,
+    "text": "idea",
+    "confidence": 0.781
+   },
+   {
+    "time": 68.0,
+    "text": "isa",
+    "confidence": 0.862
+   },
+   {
+    "time": 70.0,
+    "text": "Benzoyl peroxide: worst case scenario",
+    "confidence": 0.932
+   },
+   {
+    "time": 70.0,
+    "text": "application",
+    "confidence": 0.999
+   },
+   {
+    "time": 70.0,
+    "text": "0.5-1.0g (1-2 finger tip units)",
+    "confidence": 0.693
+   },
+   {
+    "time": 70.0,
+    "text": "application of 20 ppm product",
+    "confidence": 0.961
+   },
+   {
+    "time": 70.0,
+    "text": "10-20 ug* in 1",
+    "confidence": 0.705
+   },
+   {
+    "time": 70.0,
+    "text": "1-2 ug* in",
+    "confidence": 0.719
+   },
+   {
+    "time": 70.0,
+    "text": "application of 2 ppm product",
+    "confidence": 0.968
+   },
+   {
+    "time": 70.0,
+    "text": "*not all inhaled",
+    "confidence": 0.747
+   },
+   {
+    "time": 70.0,
+    "text": "Cooking (Kashtan 2023: US)",
+    "confidence": 0.859
+   },
+   {
+    "time": 70.0,
+    "text": "100 ug produced per meal* (gas stov",
+    "confidence": 0.772
+   },
+   {
+    "time": 70.0,
+    "text": "one burner on high, one burner on low",
+    "confidence": 0.681
+   },
+   {
+    "time": 70.0,
+    "text": "'F for 30 min)",
+    "confidence": 0.685
+   },
+   {
+    "time": 70.0,
+    "text": "at 350",
+    "confidence": 0.709
+   },
+   {
+    "time": 70.0,
+    "text": "*not all inhaled",
+    "confidence": 0.704
+   },
+   {
+    "time": 70.0,
+    "text": "Petrol station (Edokpolo 2014: Australl:",
+    "confidence": 0.833
+   },
+   {
+    "time": 70.0,
+    "text": "While refueling: 150 to 4900 ug/m? air",
+    "confidence": 0.695
+   },
+   {
+    "time": 70.0,
+    "text": "(average 1767)",
+    "confidence": 0.74
+   },
+   {
+    "time": 70.0,
+    "text": "Air exchange, light intensity (EF",
+    "confidence": 0.621
+   },
+   {
+    "time": 70.0,
+    "text": "1.25 x 10-2 m/min",
+    "confidence": 0.684
+   },
+   {
+    "time": 70.0,
+    "text": "9.4 to 306 [g inhaled in 5 min",
+    "confidence": 0.504
+   },
+   {
+    "time": 70.0,
+    "text": "(average 110 ug)",
+    "confidence": 0.742
+   },
+   {
+    "time": 70.0,
+    "text": "Inside house (Canada, France",
+    "confidence": 0.982
+   },
+   {
+    "time": 70.0,
+    "text": "Average 2.0 to 4.07 ug/m? air",
+    "confidence": 0.763
+   },
+   {
+    "time": 70.0,
+    "text": "Air exchange (EPA)",
+    "confidence": 0.876
+   },
+   {
+    "time": 70.0,
+    "text": "day",
+    "confidence": 1.0
+   },
+   {
+    "time": 70.0,
+    "text": "31 to 63 ug inhaled per",
+    "confidence": 0.579
+   },
+   {
+    "time": 70.0,
+    "text": "Note: Continuous exposure of benzene is",
+    "confidence": 0.926
+   },
+   {
+    "time": 70.0,
+    "text": "(carcinogen-forming",
+    "confidence": 1.0
+   },
+   {
+    "time": 70.0,
+    "text": "worse than a spike",
+    "confidence": 0.888
+   },
+   {
+    "time": 70.0,
+    "text": "metabolic pathway gets saturated)",
+    "confidence": 0.977
+   },
+   {
+    "time": 72.0,
+    "text": "Benzoyl peroxide: worst case scenario",
+    "confidence": 0.932
+   },
+   {
+    "time": 72.0,
+    "text": "application",
+    "confidence": 0.999
+   },
+   {
+    "time": 72.0,
+    "text": "0.5-1.0g (1-2 finger tip units)",
+    "confidence": 0.708
+   },
+   {
+    "time": 72.0,
+    "text": "application of 20 ppm product",
+    "confidence": 0.959
+   },
+   {
+    "time": 72.0,
+    "text": "10-20 ug* in 1",
+    "confidence": 0.711
+   },
+   {
+    "time": 72.0,
+    "text": "1-2 ug* in",
+    "confidence": 0.704
+   },
+   {
+    "time": 72.0,
+    "text": "application of 2 ppm product",
+    "confidence": 0.968
+   },
+   {
+    "time": 72.0,
+    "text": "*not all inhaled",
+    "confidence": 0.752
+   },
+   {
+    "time": 72.0,
+    "text": "Cooking (Kashtan 2023: US)",
+    "confidence": 0.864
+   },
+   {
+    "time": 72.0,
+    "text": "100 ug produced per meal* (gas stove",
+    "confidence": 0.79
+   },
+   {
+    "time": 72.0,
+    "text": "one burner on high, one burner on low",
+    "confidence": 0.677
+   },
+   {
+    "time": 72.0,
+    "text": "'F for 30 min)",
+    "confidence": 0.68
+   },
+   {
+    "time": 72.0,
+    "text": "at 350",
+    "confidence": 0.893
+   },
+   {
+    "time": 72.0,
+    "text": "*not all inhaled",
+    "confidence": 0.694
+   },
+   {
+    "time": 72.0,
+    "text": "Petrol station (Edokpolo 2014: Australi:",
+    "confidence": 0.964
+   },
+   {
+    "time": 72.0,
+    "text": "While refueling: 150 to 4900 ug/m? air",
+    "confidence": 0.696
+   },
+   {
+    "time": 72.0,
+    "text": "(average 1767)",
+    "confidence": 0.734
+   },
+   {
+    "time": 72.0,
+    "text": "Air exchange, light intensity (EF",
+    "confidence": 0.553
+   },
+   {
+    "time": 72.0,
+    "text": "1.25 x 10-2 m/min",
+    "confidence": 0.698
+   },
+   {
+    "time": 72.0,
+    "text": "9.4 to 306 [g inhaled in 5 min",
+    "confidence": 0.555
+   },
+   {
+    "time": 72.0,
+    "text": "(average 110 ug)",
+    "confidence": 0.754
+   },
+   {
+    "time": 72.0,
+    "text": "Inside house (Canada, France",
+    "confidence": 0.984
+   },
+   {
+    "time": 72.0,
+    "text": "Average 2.0 to 4.07 ug/m? air",
+    "confidence": 0.759
+   },
+   {
+    "time": 72.0,
+    "text": "Air exchange (EPA)",
+    "confidence": 0.879
+   },
+   {
+    "time": 72.0,
+    "text": "day",
+    "confidence": 1.0
+   },
+   {
+    "time": 72.0,
+    "text": "31 to 63 ug inhaled per",
+    "confidence": 0.566
+   },
+   {
+    "time": 72.0,
+    "text": "Note: Continuous exposure of benzene is",
+    "confidence": 0.927
+   },
+   {
+    "time": 72.0,
+    "text": "(carcinogen-forming",
+    "confidence": 1.0
+   },
+   {
+    "time": 72.0,
+    "text": "worse than a spike",
+    "confidence": 0.768
+   },
+   {
+    "time": 72.0,
+    "text": "metabolic pathway gets saturated)",
+    "confidence": 0.945
+   },
+   {
+    "time": 72.0,
+    "text": "to freak @ut",
+    "confidence": 0.714
+   },
+   {
+    "time": 74.0,
+    "text": "used for acne for 60 years",
+    "confidence": 0.913
+   },
+   {
+    "time": 76.0,
+    "text": "and there's no recorded",
+    "confidence": 0.508
+   },
+   {
+    "time": 76.0,
+    "text": "increased",
+    "confidence": 0.995
+   },
+   {
+    "time": 78.0,
+    "text": "cancer in people who use it",
+    "confidence": 0.827
+   },
+   {
+    "time": 80.0,
+    "text": "BENZENE",
+    "confidence": 1.0
+   },
+   {
+    "time": 80.0,
+    "text": "FREAK OUT?",
+    "confidence": 0.725
+   },
+   {
+    "time": 80.0,
+    "text": "Is Benzene in Sunscreen Giving",
+    "confidence": 0.996
+   },
+   {
+    "time": 80.0,
+    "text": "You Cancer? Lab Muffin Beauty S_",
+    "confidence": 0.655
+   },
+   {
+    "time": 80.0,
+    "text": "Lab Muffin Beauty Science",
+    "confidence": 0.578
+   },
+   {
+    "time": 80.0,
+    "text": "A7K views",
+    "confidence": 0.676
+   },
+   {
+    "time": 80.0,
+    "text": "years ago",
+    "confidence": 0.934
+   },
+   {
+    "time": 80.0,
+    "text": "in sunscreen which",
+    "confidence": 0.616
+   },
+   {
+    "time": 82.0,
+    "text": "BENZENE",
+    "confidence": 1.0
+   },
+   {
+    "time": 82.0,
+    "text": "FREAK OUT?",
+    "confidence": 0.729
+   },
+   {
+    "time": 82.0,
+    "text": "Is Benzene in Sunscreen Giving",
+    "confidence": 0.996
+   },
+   {
+    "time": 82.0,
+    "text": "You Cancer? Lab Muffin Beauty S_",
+    "confidence": 0.68
+   },
+   {
+    "time": 82.0,
+    "text": "Lab Muffin Beauty Science",
+    "confidence": 0.706
+   },
+   {
+    "time": 82.0,
+    "text": "47K views",
+    "confidence": 0.983
+   },
+   {
+    "time": 82.0,
+    "text": "years ago",
+    "confidence": 0.939
+   },
+   {
+    "time": 82.0,
+    "text": "it @ooks like less benzene",
+    "confidence": 0.576
+   },
+   {
+    "time": 84.0,
+    "text": "carcinogen in dozens of",
+    "confidence": 0.71
+   },
+   {
+    "time": 84.0,
+    "text": "lab found a",
+    "confidence": 0.784
+   },
+   {
+    "time": 84.0,
+    "text": "sunscreens. Heres what those",
+    "confidence": 0.598
+   },
+   {
+    "time": 84.0,
+    "text": "findings really mean.",
+    "confidence": 0.584
+   },
+   {
+    "time": 84.0,
+    "text": "washingtonpostcom",
+    "confidence": 1.0
+   },
+   {
+    "time": 84.0,
+    "text": "By Janna Mandell",
+    "confidence": 0.911
+   },
+   {
+    "time": 84.0,
+    "text": "professor of toxicology and the",
+    "confidence": 0.954
+   },
+   {
+    "time": 84.0,
+    "text": "Martvn Smith",
+    "confidence": 0.835
+   },
+   {
+    "time": 84.0,
+    "text": "Kenneth Howard and Marjorie Witherspoon Kaiser",
+    "confidence": 0.842
+   },
+   {
+    "time": 84.0,
+    "text": "Epidemiology at University of",
+    "confidence": 0.772
+   },
+   {
+    "time": 84.0,
+    "text": "Endowed Chair in Cancer",
+    "confidence": 0.759
+   },
+   {
+    "time": 84.0,
+    "text": "California at Berkeley,",
+    "confidence": 0.976
+   },
+   {
+    "time": 84.0,
+    "text": "Smith said he compared the highest level of benzene",
+    "confidence": 0.552
+   },
+   {
+    "time": 84.0,
+    "text": "contamination mentioned in Valisure",
+    "confidence": 0.69
+   },
+   {
+    "time": 84.0,
+    "text": "report t0 urban",
+    "confidence": 0.841
+   },
+   {
+    "time": 84.0,
+    "text": "breathing for 24 hours, and estimated that applying",
+    "confidence": 0.943
+   },
+   {
+    "time": 84.0,
+    "text": "10 ml ofthe contaminated sunscreen (approximatel",
+    "confidence": 0.684
+   },
+   {
+    "time": 84.0,
+    "text": "one application) could",
+    "confidence": 0.753
+   },
+   {
+    "time": 84.0,
+    "text": "in the Wonst-case scenano",
+    "confidence": 0.589
+   },
+   {
+    "time": 84.0,
+    "text": "ahsorbing about half the amount of benzene",
+    "confidence": 0.784
+   },
+   {
+    "time": 84.0,
+    "text": "breathing city air in for a",
+    "confidence": 0.505
+   },
+   {
+    "time": 84.0,
+    "text": "day=",
+    "confidence": 0.58
+   },
+   {
+    "time": 84.0,
+    "text": "Trom",
+    "confidence": 0.675
+   },
+   {
+    "time": 84.0,
+    "text": "Healso noted that 16 of the 20 most contaminated",
+    "confidence": 0.826
+   },
+   {
+    "time": 84.0,
+    "text": "products according to the Valisure report were",
+    "confidence": 0.576
+   },
+   {
+    "time": 84.0,
+    "text": "spravs. Despite their high contamination",
+    "confidence": 0.777
+   },
+   {
+    "time": 84.0,
+    "text": "low. \"You would have to cover yourself in spray\" t0 ge",
+    "confidence": 0.597
+   },
+   {
+    "time": 84.0,
+    "text": "dangerous level, he said.",
+    "confidence": 0.948
+   },
+   {
+    "time": 84.0,
+    "text": "And the level would",
+    "confidence": 0.92
+   },
+   {
+    "time": 84.0,
+    "text": "the concentration was lower",
+    "confidence": 0.628
+   },
+   {
+    "time": 84.0,
+    "text": "The experts said that while there",
+    "confidence": 0.782
+   },
+   {
+    "time": 84.0,
+    "text": "value i the sort of consumer testing",
+    "confidence": 0.771
+   },
+   {
+    "time": 84.0,
+    "text": "Valisure does, independent labs should be curelul",
+    "confidence": 0.671
+   },
+   {
+    "time": 84.0,
+    "text": "their chetoric",
+    "confidence": 0.685
+   },
+   {
+    "time": 84.0,
+    "text": "Smith Said; \"but [",
+    "confidence": 0.503
+   },
+   {
+    "time": 84.0,
+    "text": "no nced nO",
+    "confidence": 0.546
+   },
+   {
+    "time": 84.0,
+    "text": "need for that",
+    "confidence": 0.928
+   },
+   {
+    "time": 86.0,
+    "text": "carcinogen in dozens of",
+    "confidence": 0.68
+   },
+   {
+    "time": 86.0,
+    "text": "lab found a",
+    "confidence": 0.869
+   },
+   {
+    "time": 86.0,
+    "text": "findings really mean.",
+    "confidence": 0.639
+   },
+   {
+    "time": 86.0,
+    "text": "washingtonpostcom",
+    "confidence": 1.0
+   },
+   {
+    "time": 86.0,
+    "text": "By Janna Mandell",
+    "confidence": 0.897
+   },
+   {
+    "time": 86.0,
+    "text": "professor of toxicology and the",
+    "confidence": 0.918
+   },
+   {
+    "time": 86.0,
+    "text": "Martvn Smith",
+    "confidence": 0.823
+   },
+   {
+    "time": 86.0,
+    "text": "Kenneth Howard and Marjorie Witherspoon Kaiser",
+    "confidence": 0.836
+   },
+   {
+    "time": 86.0,
+    "text": "Epidemiology at University of",
+    "confidence": 0.781
+   },
+   {
+    "time": 86.0,
+    "text": "Endowed Chair in Cancer",
+    "confidence": 0.777
+   },
+   {
+    "time": 86.0,
+    "text": "California at Berkeley,",
+    "confidence": 0.843
+   },
+   {
+    "time": 86.0,
+    "text": "Smith said he compared the highest level of benzene",
+    "confidence": 0.732
+   },
+   {
+    "time": 86.0,
+    "text": "contamination mentioned in Valisure < report t0 urban",
+    "confidence": 0.66
+   },
+   {
+    "time": 86.0,
+    "text": "breathing for 24 hours, and estimated that applying",
+    "confidence": 0.867
+   },
+   {
+    "time": 86.0,
+    "text": "10 ml ofthe contaminated sunsereen (approximatel",
+    "confidence": 0.618
+   },
+   {
+    "time": 86.0,
+    "text": "one application) could",
+    "confidence": 0.989
+   },
+   {
+    "time": 86.0,
+    "text": "in the Wonst-case scenano",
+    "confidence": 0.582
+   },
+   {
+    "time": 86.0,
+    "text": "ahsorbing about half the amount of benzene",
+    "confidence": 0.941
+   },
+   {
+    "time": 86.0,
+    "text": "Healso noted that 16 of the 20 most contaminated",
+    "confidence": 0.658
+   },
+   {
+    "time": 86.0,
+    "text": "products according to the Valisure report were",
+    "confidence": 0.649
+   },
+   {
+    "time": 86.0,
+    "text": "sprays. Despite their high contamination",
+    "confidence": 0.842
+   },
+   {
+    "time": 86.0,
+    "text": "levels; Smith said the risk of exposure would be very",
+    "confidence": 0.587
+   },
+   {
+    "time": 86.0,
+    "text": "dangerous level, he said.",
+    "confidence": 0.968
+   },
+   {
+    "time": 86.0,
+    "text": "And the level would",
+    "confidence": 0.903
+   },
+   {
+    "time": 86.0,
+    "text": "diluted by the same stuff that propels the spray.",
+    "confidence": 0.666
+   },
+   {
+    "time": 86.0,
+    "text": "use Is much higher",
+    "confidence": 0.794
+   },
+   {
+    "time": 86.0,
+    "text": "The experts said that while there is value in the sort of consumer testing",
+    "confidence": 0.58
+   },
+   {
+    "time": 86.0,
+    "text": "Valisure does, independent labs should be curelul with their chetorie",
+    "confidence": 0.61
+   },
+   {
+    "time": 86.0,
+    "text": "and mindful of how their research mav be construed by the public.",
+    "confidence": 0.513
+   },
+   {
+    "time": 86.0,
+    "text": "Smith Sid, \"but [",
+    "confidence": 0.535
+   },
+   {
+    "time": 86.0,
+    "text": "need for that;",
+    "confidence": 0.798
+   },
+   {
+    "time": 88.0,
+    "text": "VOLUME 87,",
+    "confidence": 0.998
+   },
+   {
+    "time": 88.0,
+    "text": "SSUE",
+    "confidence": 0.995
+   },
+   {
+    "time": 88.0,
+    "text": "Pa40-443, AUGUST 2022",
+    "confidence": 0.747
+   },
+   {
+    "time": 88.0,
+    "text": "~ Dowmload Full Issue",
+    "confidence": 0.706
+   },
+   {
+    "time": 88.0,
+    "text": "Sunscreen use is not associated with increased",
+    "confidence": 0.979
+   },
+   {
+    "time": 88.0,
+    "text": "blood concentrations of benzene among adults in",
+    "confidence": 0.764
+   },
+   {
+    "time": 88.0,
+    "text": "the United States: Data from the National Health and",
+    "confidence": 0.64
+   },
+   {
+    "time": 88.0,
+    "text": "Nutrition Examination Survey 2003-2006 and 2009-",
+    "confidence": 0.828
+   },
+   {
+    "time": 88.0,
+    "text": "2018",
+    "confidence": 1.0
+   },
+   {
+    "time": 88.0,
+    "text": "Michael $. Chang",
+    "confidence": 0.723
+   },
+   {
+    "time": 88.0,
+    "text": "Kevin",
+    "confidence": 1.0
+   },
+   {
+    "time": 88.0,
+    "text": "Moore, MD, MPH",
+    "confidence": 0.76
+   },
+   {
+    "time": 88.0,
+    "text": "Nicole Trepanowski, BS",
+    "confidence": 0.968
+   },
+   {
+    "time": 88.0,
+    "text": "Tulay Koru-Sengul, PhD, MHS",
+    "confidence": 0.903
+   },
+   {
+    "time": 88.0,
+    "text": "Rebecca",
+    "confidence": 0.848
+   },
+   {
+    "time": 88.0,
+    "text": "Hartman; MD, MPH",
+    "confidence": 0.535
+   },
+   {
+    "time": 88.0,
+    "text": "Published: September 09, 2021",
+    "confidence": 0.979
+   },
+   {
+    "time": 88.0,
+    "text": "DOI:",
+    "confidence": 0.919
+   },
+   {
+    "time": 88.0,
+    "text": "PlumX Metrics",
+    "confidence": 0.653
+   },
+   {
+    "time": 88.0,
+    "text": "To the Editor; Sunscreens",
+    "confidence": 0.97
+   },
+   {
+    "time": 88.0,
+    "text": "nd regulated",
+    "confidence": 0.929
+   },
+   {
+    "time": 88.0,
+    "text": "Valisure ,",
+    "confidence": 0.699
+   },
+   {
+    "time": 88.0,
+    "text": "as over-the-counter drugs",
+    "confidence": 0.813
+   },
+   {
+    "time": 88.0,
+    "text": "an independent pharmace",
+    "confidence": 0.999
+   },
+   {
+    "time": 88.0,
+    "text": "rated levels",
+    "confidence": 0.968
+   },
+   {
+    "time": 88.0,
+    "text": "known hum",
+    "confidence": 1.0
+   },
+   {
+    "time": 88.0,
+    "text": "batches of",
+    "confidence": 0.974
+   },
+   {
+    "time": 88.0,
+    "text": "times the",
+    "confidence": 0.981
+   },
+   {
+    "time": 88.0,
+    "text": "sunscreen and after-sun Ca",
+    "confidence": 0.866
+   },
+   {
+    "time": 88.0,
+    "text": "US Food and Drug Adminis",
+    "confidence": 0.965
+   },
+   {
+    "time": 88.0,
+    "text": "million) 2.3",
+    "confidence": 0.626
+   },
+   {
+    "time": 88.0,
+    "text": "Thus, it is",
+    "confidence": 0.941
+   },
+   {
+    "time": 88.0,
+    "text": "Benzene exposure",
+    "confidence": 1.0
+   },
+   {
+    "time": 88.0,
+    "text": "strong",
+    "confidence": 0.984
+   },
+   {
+    "time": 88.0,
+    "text": "important t0 understand syst",
+    "confidence": 0.68
+   },
+   {
+    "time": 88.0,
+    "text": "context of sunscreen",
+    "confidence": 0.999
+   },
+   {
+    "time": 88.0,
+    "text": "In this retrospeclive cross",
+    "confidence": 0.848
+   },
+   {
+    "time": 88.0,
+    "text": "Hata Irom the",
+    "confidence": 0.555
+   },
+   {
+    "time": 88.0,
+    "text": "use",
+    "confidence": 0.97
+   },
+   {
+    "time": 88.0,
+    "text": "National Health",
+    "confidence": 1.0
+   },
+   {
+    "time": 88.0,
+    "text": "Nutritio",
+    "confidence": 0.735
+   },
+   {
+    "time": 88.0,
+    "text": "and",
+    "confidence": 0.988
+   },
+   {
+    "time": 88.0,
+    "text": "adults aged 20 years",
+    "confidence": 0.945
+   },
+   {
+    "time": 88.0,
+    "text": "andthis study didn't find",
+    "confidence": 0.568
+   },
+   {
+    "time": 88.0,
+    "text": "use",
+    "confidence": 0.999
+   },
+   {
+    "time": 88.0,
+    "text": "higher",
+    "confidence": 0.992
+   },
+   {
+    "time": 88.0,
+    "text": "Data on blood",
+    "confidence": 0.702
+   },
+   {
+    "time": 88.0,
+    "text": "for 10,861 adu",
+    "confidence": 0.996
+   },
+   {
+    "time": 88.0,
+    "text": "estimate of 15",
+    "confidence": 0.742
+   },
+   {
+    "time": 88.0,
+    "text": "gas",
+    "confidence": 1.0
+   },
+   {
+    "time": 88.0,
+    "text": "iing det",
+    "confidence": 0.536
+   },
+   {
+    "time": 90.0,
+    "text": "VOLUME 87,",
+    "confidence": 0.998
+   },
+   {
+    "time": 90.0,
+    "text": "SSUE",
+    "confidence": 0.994
+   },
+   {
+    "time": 90.0,
+    "text": "Pa40-443, AUGUST 2022",
+    "confidence": 0.74
+   },
+   {
+    "time": 90.0,
+    "text": "~ Dowmload Full Issue",
+    "confidence": 0.814
+   },
+   {
+    "time": 90.0,
+    "text": "Sunscreen use is not associated with increased",
+    "confidence": 0.977
+   },
+   {
+    "time": 90.0,
+    "text": "blood concentrations of benzene among adults in",
+    "confidence": 0.88
+   },
+   {
+    "time": 90.0,
+    "text": "the United States: Data from the National Health and",
+    "confidence": 0.932
+   },
+   {
+    "time": 90.0,
+    "text": "Nutrition Examination Survey 2003-2006 and 2009-",
+    "confidence": 0.815
+   },
+   {
+    "time": 90.0,
+    "text": "2018",
+    "confidence": 1.0
+   },
+   {
+    "time": 90.0,
+    "text": "S. Chang",
+    "confidence": 0.635
+   },
+   {
+    "time": 90.0,
+    "text": "Michael",
+    "confidence": 0.959
+   },
+   {
+    "time": 90.0,
+    "text": "Kevin",
+    "confidence": 1.0
+   },
+   {
+    "time": 90.0,
+    "text": "Moore, MD, MPH",
+    "confidence": 0.764
+   },
+   {
+    "time": 90.0,
+    "text": "Nicole Trepanowski, BS",
+    "confidence": 0.966
+   },
+   {
+    "time": 90.0,
+    "text": "Tulay Koru-Sengul, PhD, MHS",
+    "confidence": 0.911
+   },
+   {
+    "time": 90.0,
+    "text": "Rebecca",
+    "confidence": 0.73
+   },
+   {
+    "time": 90.0,
+    "text": "Hartman; MD; MPH",
+    "confidence": 0.583
+   },
+   {
+    "time": 90.0,
+    "text": "Published: September 09, 2021",
+    "confidence": 0.985
+   },
+   {
+    "time": 90.0,
+    "text": "DOI: htt",
+    "confidence": 0.575
+   },
+   {
+    "time": 90.0,
+    "text": "Sii jaad 2021.09.003",
+    "confidence": 0.527
+   },
+   {
+    "time": 90.0,
+    "text": "'lumX Metrics",
+    "confidence": 0.933
+   },
+   {
+    "time": 90.0,
+    "text": "To the Editor; Sunscreens",
+    "confidence": 0.949
+   },
+   {
+    "time": 90.0,
+    "text": "regulated",
+    "confidence": 0.668
+   },
+   {
+    "time": 90.0,
+    "text": "Valisure ,",
+    "confidence": 0.642
+   },
+   {
+    "time": 90.0,
+    "text": "as over-the-counter drugs",
+    "confidence": 0.828
+   },
+   {
+    "time": 90.0,
+    "text": "an independent pharmacel",
+    "confidence": 0.696
+   },
+   {
+    "time": 90.0,
+    "text": "ed levels",
+    "confidence": 0.979
+   },
+   {
+    "time": 90.0,
+    "text": "known huma",
+    "confidence": 0.991
+   },
+   {
+    "time": 90.0,
+    "text": "atches of",
+    "confidence": 0.99
+   },
+   {
+    "time": 90.0,
+    "text": "3 times the",
+    "confidence": 0.839
+   },
+   {
+    "time": 90.0,
+    "text": "sunscreen and after-sun care",
+    "confidence": 0.987
+   },
+   {
+    "time": 90.0,
+    "text": "US Food and Drug Administra",
+    "confidence": 0.791
+   },
+   {
+    "time": 90.0,
+    "text": "million) 2.3",
+    "confidence": 0.715
+   },
+   {
+    "time": 90.0,
+    "text": "Thus, it is",
+    "confidence": 0.954
+   },
+   {
+    "time": 90.0,
+    "text": "Benzene exposure",
+    "confidence": 0.743
+   },
+   {
+    "time": 90.0,
+    "text": "strongly",
+    "confidence": 1.0
+   },
+   {
+    "time": 90.0,
+    "text": "important t0 understand syster",
+    "confidence": 0.662
+   },
+   {
+    "time": 90.0,
+    "text": "ntext of sunscreen",
+    "confidence": 0.633
+   },
+   {
+    "time": 90.0,
+    "text": "In this retrospeclive cross-",
+    "confidence": 0.8
+   },
+   {
+    "time": 90.0,
+    "text": "use",
+    "confidence": 0.973
+   },
+   {
+    "time": 90.0,
+    "text": "National Health",
+    "confidence": 1.0
+   },
+   {
+    "time": 90.0,
+    "text": "Nutritio",
+    "confidence": 0.948
+   },
+   {
+    "time": 90.0,
+    "text": "and",
+    "confidence": 0.987
+   },
+   {
+    "time": 90.0,
+    "text": "adults aged 20 years",
+    "confidence": 0.974
+   },
+   {
+    "time": 90.0,
+    "text": "Iwho use sunscreen",
+    "confidence": 0.945
+   },
+   {
+    "time": 90.0,
+    "text": "use and bl",
+    "confidence": 0.801
+   },
+   {
+    "time": 90.0,
+    "text": "for 10,861 adu",
+    "confidence": 0.996
+   },
+   {
+    "time": 90.0,
+    "text": "estimate of 15",
+    "confidence": 0.693
+   },
+   {
+    "time": 90.0,
+    "text": "gas",
+    "confidence": 1.0
+   },
+   {
+    "time": 90.0,
+    "text": "iing det",
+    "confidence": 0.747
+   }
+  ],
+  "captions": [
+   {
+    "text": "alhealth",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.558,
+    "id": "o1"
+   },
+   {
+    "text": "Live TV",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.912,
+    "id": "o2"
+   },
+   {
+    "text": "Log",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o3"
+   },
+   {
+    "text": "Watch",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.988,
+    "id": "o4"
+   },
+   {
+    "text": "Audio",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o5"
+   },
+   {
+    "text": "Cancer-causing chemical can form at",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.953,
+    "id": "o6"
+   },
+   {
+    "text": "'unacceptably high levels' in certain",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.909,
+    "id": "o7"
+   },
+   {
+    "text": "acne products, independent lab claims",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.715,
+    "id": "o8"
+   },
+   {
+    "text": "By Jacqueline Howard, CNN",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.722,
+    "id": "o9"
+   },
+   {
+    "text": "Updated 7.14 PM EST, Wed March 6, 2024",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.634,
+    "id": "o10"
+   },
+   {
+    "text": "minute read",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.848,
+    "id": "o11"
+   },
+   {
+    "text": "The independent laboratory Valisure tes",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.625,
+    "id": "o12"
+   },
+   {
+    "text": "ent",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.994,
+    "id": "o13"
+   },
+   {
+    "text": "products for benzene. Valisure",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.855,
+    "id": "o14"
+   },
+   {
+    "text": "chemical, can form in",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.733,
+    "id": "o15"
+   },
+   {
+    "text": "benzoyl peroxide,",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.991,
+    "id": "o16"
+   },
+   {
+    "text": "ac",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.993,
+    "id": "o17"
+   },
+   {
+    "text": "Live TV",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.904,
+    "id": "o18"
+   },
+   {
+    "text": "Log",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o19"
+   },
+   {
+    "text": "Watch",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.941,
+    "id": "o20"
+   },
+   {
+    "text": "Audio",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o21"
+   },
+   {
+    "text": "Cancer-causing chemical can form at",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.928,
+    "id": "o22"
+   },
+   {
+    "text": "'unacceptably high levels' in certain",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.89,
+    "id": "o23"
+   },
+   {
+    "text": "acne products, independent lab claims",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.7,
+    "id": "o24"
+   },
+   {
+    "text": "By Jacqueline Howard, CNN",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.831,
+    "id": "o25"
+   },
+   {
+    "text": "Howmuchbenzene?",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.621,
+    "id": "o26"
+   },
+   {
+    "text": "202",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.994,
+    "id": "o27"
+   },
+   {
+    "text": "Undated",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.813,
+    "id": "o28"
+   },
+   {
+    "text": "chemstexplains",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.947,
+    "id": "o29"
+   },
+   {
+    "text": "The independent laboratory Valisure tes",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.877,
+    "id": "o30"
+   },
+   {
+    "text": "products for benzene. Valisure",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.727,
+    "id": "o31"
+   },
+   {
+    "text": "chemical, can form in ac",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.517,
+    "id": "o32"
+   },
+   {
+    "text": "benzoyl peroxide,",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.94,
+    "id": "o33"
+   },
+   {
+    "text": "ac",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.983,
+    "id": "o34"
+   },
+   {
+    "text": "alhealth",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.51,
+    "id": "o35"
+   },
+   {
+    "text": "Live TV",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.906,
+    "id": "o36"
+   },
+   {
+    "text": "Log",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o37"
+   },
+   {
+    "text": "Watch",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.921,
+    "id": "o38"
+   },
+   {
+    "text": "Audio",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o39"
+   },
+   {
+    "text": "Cancer-causing chemical can form at",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.928,
+    "id": "o40"
+   },
+   {
+    "text": "'unacceptably high levels' in certain",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.898,
+    "id": "o41"
+   },
+   {
+    "text": "acne products, independent lab claims",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.683,
+    "id": "o42"
+   },
+   {
+    "text": "By Jacqueline Howard, CNN",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.691,
+    "id": "o43"
+   },
+   {
+    "text": "Howmuchbenzene?",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.628,
+    "id": "o44"
+   },
+   {
+    "text": "202",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.994,
+    "id": "o45"
+   },
+   {
+    "text": "Undated",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.75,
+    "id": "o46"
+   },
+   {
+    "text": "chemstexplains",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.946,
+    "id": "o47"
+   },
+   {
+    "text": "The independent laboratory Valisure tes",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.703,
+    "id": "o48"
+   },
+   {
+    "text": "products for benzene. Valisure",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.854,
+    "id": "o49"
+   },
+   {
+    "text": "(cbughowscared should we be",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.683,
+    "id": "o50"
+   },
+   {
+    "text": "chemical, can form in",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.765,
+    "id": "o51"
+   },
+   {
+    "text": "benzoyl peroxide,",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.938,
+    "id": "o52"
+   },
+   {
+    "text": "ac",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.984,
+    "id": "o53"
+   },
+   {
+    "text": "alhealth",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.51,
+    "id": "o54"
+   },
+   {
+    "text": "Live TV",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.91,
+    "id": "o55"
+   },
+   {
+    "text": "Log",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o56"
+   },
+   {
+    "text": "Watch",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.966,
+    "id": "o57"
+   },
+   {
+    "text": "Audio",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o58"
+   },
+   {
+    "text": "Cancer-causing chemical can form at",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.924,
+    "id": "o59"
+   },
+   {
+    "text": "'unacceptably high levels' in certain",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.912,
+    "id": "o60"
+   },
+   {
+    "text": "acne products, independent lab claims",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.68,
+    "id": "o61"
+   },
+   {
+    "text": "By Jacqueline Howard, CNN",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.821,
+    "id": "o62"
+   },
+   {
+    "text": "Updated 7.14 PM EST, Wed March 6, 2024",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.5,
+    "id": "o63"
+   },
+   {
+    "text": "minute read",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.758,
+    "id": "o64"
+   },
+   {
+    "text": "The independent laboratory Valisure",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.788,
+    "id": "o65"
+   },
+   {
+    "text": "tes",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.998,
+    "id": "o66"
+   },
+   {
+    "text": "products for benzene. Valisure",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.702,
+    "id": "o67"
+   },
+   {
+    "text": "chemical, can form in",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.831,
+    "id": "o68"
+   },
+   {
+    "text": "benzoyl peroxide,",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.992,
+    "id": "o69"
+   },
+   {
+    "text": "ac",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.987,
+    "id": "o70"
+   },
+   {
+    "text": "valisure",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o71"
+   },
+   {
+    "text": "Page",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.796,
+    "id": "o72"
+   },
+   {
+    "text": "purposcs",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.771,
+    "id": "o73"
+   },
+   {
+    "text": "Flgure 4(4",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.551,
+    "id": "o74"
+   },
+   {
+    "text": "prducts incukated",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.586,
+    "id": "o75"
+   },
+   {
+    "text": "clfectively",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.649,
+    "id": "o76"
+   },
+   {
+    "text": "MOS[",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.711,
+    "id": "o77"
+   },
+   {
+    "text": "numbct.",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.5,
+    "id": "o78"
+   },
+   {
+    "text": "Figure =",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.632,
+    "id": "o79"
+   },
+   {
+    "text": "Flgure JC",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.52,
+    "id": "o80"
+   },
+   {
+    "text": "pecifically tell us the",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.679,
+    "id": "o81"
+   },
+   {
+    "text": "numbers",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o82"
+   },
+   {
+    "text": "valisure",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o83"
+   },
+   {
+    "text": "Page",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.695,
+    "id": "o84"
+   },
+   {
+    "text": "different y-axis scale for display",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.548,
+    "id": "o85"
+   },
+   {
+    "text": "shown bclow in Figue",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.689,
+    "id": "o86"
+   },
+   {
+    "text": "purposcs",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.885,
+    "id": "o87"
+   },
+   {
+    "text": "Flgure 4(4",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.515,
+    "id": "o88"
+   },
+   {
+    "text": "Ppm of 66 BPO containing acns trcatmcnt",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.522,
+    "id": "o89"
+   },
+   {
+    "text": "products incukatcd",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.552,
+    "id": "o90"
+   },
+   {
+    "text": "clfectively",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.51,
+    "id": "o91"
+   },
+   {
+    "text": "MOS[",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.729,
+    "id": "o92"
+   },
+   {
+    "text": "Flgure JC",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.576,
+    "id": "o93"
+   },
+   {
+    "text": "but ff we lookat these",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.578,
+    "id": "o94"
+   },
+   {
+    "text": "graphs",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.859,
+    "id": "o95"
+   },
+   {
+    "text": "Vallsure; LLC",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.607,
+    "id": "o96"
+   },
+   {
+    "text": "Figure 4D",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.901,
+    "id": "o97"
+   },
+   {
+    "text": "Figure 4E",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.991,
+    "id": "o98"
+   },
+   {
+    "text": "Figure 4F",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.931,
+    "id": "o99"
+   },
+   {
+    "text": "assuming they measured",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.82,
+    "id": "o100"
+   },
+   {
+    "text": "Figure 4D",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.908,
+    "id": "o101"
+   },
+   {
+    "text": "Figure 4E",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.988,
+    "id": "o102"
+   },
+   {
+    "text": "Figure 4F",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.91,
+    "id": "o103"
+   },
+   {
+    "text": "it @ooks like most of them",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.613,
+    "id": "o104"
+   },
+   {
+    "text": "Figure 4D",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.916,
+    "id": "o105"
+   },
+   {
+    "text": "Figure 4E",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.988,
+    "id": "o106"
+   },
+   {
+    "text": "Figure 4F",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.867,
+    "id": "o107"
+   },
+   {
+    "text": "a@ qute low but a few might",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.698,
+    "id": "o108"
+   },
+   {
+    "text": "2 ppm",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.999,
+    "id": "o109"
+   },
+   {
+    "text": "this is 10 times more than &",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.705,
+    "id": "o110"
+   },
+   {
+    "text": "limit",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.993,
+    "id": "o111"
+   },
+   {
+    "text": "2 ppm",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.996,
+    "id": "o112"
+   },
+   {
+    "text": "the FDA has used before",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.72,
+    "id": "o113"
+   },
+   {
+    "text": "but it\"s less scary than some",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.63,
+    "id": "o114"
+   },
+   {
+    "text": "people are making it sound",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.707,
+    "id": "o115"
+   },
+   {
+    "text": "Human exposure to benzene has been associated",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.899,
+    "id": "o116"
+   },
+   {
+    "text": "with a range of acute and long-term adverse",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.656,
+    "id": "o117"
+   },
+   {
+    "text": "health effects and diseases, including cancer and",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.883,
+    "id": "o118"
+   },
+   {
+    "text": "haematological effects Exposure can occur",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.917,
+    "id": "o119"
+   },
+   {
+    "text": "occupationally; in the general environment and in",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.72,
+    "id": "o120"
+   },
+   {
+    "text": "the home as a result of the ubiquitous use of",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.696,
+    "id": "o121"
+   },
+   {
+    "text": "benzene-containing petroleum products,",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.963,
+    "id": "o122"
+   },
+   {
+    "text": "including motor fuels and solvents. Active and",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.929,
+    "id": "o123"
+   },
+   {
+    "text": "passive exposure to tobacco smoke is also a",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.865,
+    "id": "o124"
+   },
+   {
+    "text": "significant source of exposure",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.958,
+    "id": "o125"
+   },
+   {
+    "text": "Benzene is highly volatile",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.989,
+    "id": "o126"
+   },
+   {
+    "text": "mostly through inhalatic",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.797,
+    "id": "o127"
+   },
+   {
+    "text": "reduce both work and",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.74,
+    "id": "o128"
+   },
+   {
+    "text": "exposure include proma",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.687,
+    "id": "o129"
+   },
+   {
+    "text": "alternative solvents in in",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.838,
+    "id": "o130"
+   },
+   {
+    "text": "developing and impleme",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.886,
+    "id": "o131"
+   },
+   {
+    "text": "legislation to remove ben.",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.862,
+    "id": "o132"
+   },
+   {
+    "text": "ner",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o133"
+   },
+   {
+    "text": "enzene-",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o134"
+   },
+   {
+    "text": "around",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o135"
+   },
+   {
+    "text": "produs",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.995,
+    "id": "o136"
+   },
+   {
+    "text": "requiring detac",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o137"
+   },
+   {
+    "text": "the WHO Frame",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.694,
+    "id": "o138"
+   },
+   {
+    "text": "1% = 1000 ppm",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.713,
+    "id": "o139"
+   },
+   {
+    "text": "1000 ppm",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.914,
+    "id": "o140"
+   },
+   {
+    "text": "1%",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.979,
+    "id": "o141"
+   },
+   {
+    "text": "=",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.529,
+    "id": "o142"
+   },
+   {
+    "text": "in petrol and it evaporates",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.547,
+    "id": "o143"
+   },
+   {
+    "text": "\"Known carcinogen'",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.999,
+    "id": "o144"
+   },
+   {
+    "text": "evidence",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o145"
+   },
+   {
+    "text": "of link is certain, whether cancer",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.807,
+    "id": "o146"
+   },
+   {
+    "text": "develops still depends on",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.788,
+    "id": "o147"
+   },
+   {
+    "text": "exposure e.g: dose",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.899,
+    "id": "o148"
+   },
+   {
+    "text": "Bacon, alcohol and sunlight are",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.708,
+    "id": "o149"
+   },
+   {
+    "text": "known carcinogens",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.867,
+    "id": "o150"
+   },
+   {
+    "text": "\"No",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o151"
+   },
+   {
+    "text": "safe level\"",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.748,
+    "id": "o152"
+   },
+   {
+    "text": "small exposures",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.998,
+    "id": "o153"
+   },
+   {
+    "text": "still add to total risk",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.791,
+    "id": "o154"
+   },
+   {
+    "text": "and therels \"n@ safe level\"",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.663,
+    "id": "o155"
+   },
+   {
+    "text": "\"Known carcinogen'",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.999,
+    "id": "o156"
+   },
+   {
+    "text": "evidence",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o157"
+   },
+   {
+    "text": "of link is certain, whether cancer",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.829,
+    "id": "o158"
+   },
+   {
+    "text": "develops still depends on",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.812,
+    "id": "o159"
+   },
+   {
+    "text": "exposure e.g: dose",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.904,
+    "id": "o160"
+   },
+   {
+    "text": "Bacon, alcohol and sunlight are",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.872,
+    "id": "o161"
+   },
+   {
+    "text": "carcinogens",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o162"
+   },
+   {
+    "text": "known",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o163"
+   },
+   {
+    "text": "\"No",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.87,
+    "id": "o164"
+   },
+   {
+    "text": "safe level\"",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.708,
+    "id": "o165"
+   },
+   {
+    "text": "small exposures",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.998,
+    "id": "o166"
+   },
+   {
+    "text": "still add to total risk",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.772,
+    "id": "o167"
+   },
+   {
+    "text": "but that doesntt mean that",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.571,
+    "id": "o168"
+   },
+   {
+    "text": "\"Known carcinogen'",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.999,
+    "id": "o169"
+   },
+   {
+    "text": "evidence",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o170"
+   },
+   {
+    "text": "of link is certain, whether cancer",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.683,
+    "id": "o171"
+   },
+   {
+    "text": "develops still depends on",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.809,
+    "id": "o172"
+   },
+   {
+    "text": "exposure e.g: dose",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.904,
+    "id": "o173"
+   },
+   {
+    "text": "Bacon, alcohol and sunlight are",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.878,
+    "id": "o174"
+   },
+   {
+    "text": "known carcinogens",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.866,
+    "id": "o175"
+   },
+   {
+    "text": "\"No",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o176"
+   },
+   {
+    "text": "safe level\"",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.703,
+    "id": "o177"
+   },
+   {
+    "text": "small exposures",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.998,
+    "id": "o178"
+   },
+   {
+    "text": "still add to total risk",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.782,
+    "id": "o179"
+   },
+   {
+    "text": "it means that little bits will",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.786,
+    "id": "o180"
+   },
+   {
+    "text": "addup",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.887,
+    "id": "o181"
+   },
+   {
+    "text": "\"Known carcinogen'",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.999,
+    "id": "o182"
+   },
+   {
+    "text": "evidence",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o183"
+   },
+   {
+    "text": "of link is certain, whether cancer",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.701,
+    "id": "o184"
+   },
+   {
+    "text": "develops still depends on",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.806,
+    "id": "o185"
+   },
+   {
+    "text": "exposure e.g: dose",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.902,
+    "id": "o186"
+   },
+   {
+    "text": "Bacon, alcohol and sunlight are",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.878,
+    "id": "o187"
+   },
+   {
+    "text": "known carcinogens",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.867,
+    "id": "o188"
+   },
+   {
+    "text": "\"No",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o189"
+   },
+   {
+    "text": "safe level\"",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.701,
+    "id": "o190"
+   },
+   {
+    "text": "small exposures",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.998,
+    "id": "o191"
+   },
+   {
+    "text": "still add to total risk",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.783,
+    "id": "o192"
+   },
+   {
+    "text": "cancer",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.903,
+    "id": "o193"
+   },
+   {
+    "text": "careceran",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.605,
+    "id": "o194"
+   },
+   {
+    "text": "Donate",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.997,
+    "id": "o195"
+   },
+   {
+    "text": "Society",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.812,
+    "id": "o196"
+   },
+   {
+    "text": "Exposure to benzene has been linked with",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.936,
+    "id": "o197"
+   },
+   {
+    "text": "higher risk of cancer;",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.749,
+    "id": "o198"
+   },
+   {
+    "text": "particularly leukemia and other cancers of blood cells;",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.616,
+    "id": "o199"
+   },
+   {
+    "text": "What do studies show?",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.926,
+    "id": "o200"
+   },
+   {
+    "text": "Researchers try to determine if",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.825,
+    "id": "o201"
+   },
+   {
+    "text": "substance causes cancer",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.878,
+    "id": "o202"
+   },
+   {
+    "text": "main types",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.987,
+    "id": "o203"
+   },
+   {
+    "text": "of studies:",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.924,
+    "id": "o204"
+   },
+   {
+    "text": "Studies in people (epidemiologic studies)",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.973,
+    "id": "o205"
+   },
+   {
+    "text": "Lab studies (studies done using lab animals or cells in lab dishes)",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.762,
+    "id": "o206"
+   },
+   {
+    "text": "Often neither type of study provides conclusive evidence on its own, so",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.505,
+    "id": "o207"
+   },
+   {
+    "text": "researchers usually look at both human and lab-based studies when trying to",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.778,
+    "id": "o208"
+   },
+   {
+    "text": "figure out if something causes cancer",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.769,
+    "id": "o209"
+   },
+   {
+    "text": "Studies in people",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.979,
+    "id": "o210"
+   },
+   {
+    "text": "found to be higher in studies of workers exposed to high levels of benzene",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.781,
+    "id": "o211"
+   },
+   {
+    "text": "and oil refining industries.",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.881,
+    "id": "o212"
+   },
+   {
+    "text": "suchas those in the chemical, shoemal",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.9,
+    "id": "o213"
+   },
+   {
+    "text": "suggested links to childhood leukemia (particularly",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.783,
+    "id": "o214"
+   },
+   {
+    "text": "Some studies have also",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.811,
+    "id": "o215"
+   },
+   {
+    "text": "AML) as well as acute lymphocytic leukemia (ALL), chronic lymphocytic",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.69,
+    "id": "o216"
+   },
+   {
+    "text": "leukemia (CLLI, and other blood-related cancers (such as multiple",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.642,
+    "id": "o217"
+   },
+   {
+    "text": "myeloma and non-Hodgkin Iymphoma)",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.667,
+    "id": "o218"
+   },
+   {
+    "text": "in adults. However",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.826,
+    "id": "o219"
+   },
+   {
+    "text": "evidence is",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.993,
+    "id": "o220"
+   },
+   {
+    "text": "strong",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.999,
+    "id": "o221"
+   },
+   {
+    "text": "not as",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.805,
+    "id": "o222"
+   },
+   {
+    "text": "for these cancers.",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.956,
+    "id": "o223"
+   },
+   {
+    "text": "There is much less evidence linking benzene to",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.603,
+    "id": "o224"
+   },
+   {
+    "text": "Lab studies",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.672,
+    "id": "o225"
+   },
+   {
+    "text": "been",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.997,
+    "id": "o226"
+   },
+   {
+    "text": "When inhaled or swallowed, benzene has",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.848,
+    "id": "o227"
+   },
+   {
+    "text": "of tumors in lab animals such as rats and mice",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.745,
+    "id": "o228"
+   },
+   {
+    "text": "finding of an excess risk of leukemia in human",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.746,
+    "id": "o229"
+   },
+   {
+    "text": "people have not found an increased risk of canc",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.909,
+    "id": "o230"
+   },
+   {
+    "text": "among those with higher exposures",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.942,
+    "id": "o231"
+   },
+   {
+    "text": "Berendeventhoughweale",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.597,
+    "id": "o232"
+   },
+   {
+    "text": "cells",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.975,
+    "id": "o233"
+   },
+   {
+    "text": "in the",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.944,
+    "id": "o234"
+   },
+   {
+    "text": "(The",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.657,
+    "id": "o235"
+   },
+   {
+    "text": "here new blo",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.663,
+    "id": "o236"
+   },
+   {
+    "text": "uman",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o237"
+   },
+   {
+    "text": "careceran",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.596,
+    "id": "o238"
+   },
+   {
+    "text": "Donate",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.996,
+    "id": "o239"
+   },
+   {
+    "text": "Society",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.98,
+    "id": "o240"
+   },
+   {
+    "text": "Exposure to benzene has been linked with",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.933,
+    "id": "o241"
+   },
+   {
+    "text": "higher risk of cancer;",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.712,
+    "id": "o242"
+   },
+   {
+    "text": "particularly leukemia and other cancers of blood cells;",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.689,
+    "id": "o243"
+   },
+   {
+    "text": "What do studies show?",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.927,
+    "id": "o244"
+   },
+   {
+    "text": "Researchers try to determine if",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.848,
+    "id": "o245"
+   },
+   {
+    "text": "substance causes cancer",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.989,
+    "id": "o246"
+   },
+   {
+    "text": "main types",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.987,
+    "id": "o247"
+   },
+   {
+    "text": "of studies:",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.92,
+    "id": "o248"
+   },
+   {
+    "text": "Studies in people (epidemiologic studies)",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.975,
+    "id": "o249"
+   },
+   {
+    "text": "Lab studies (studies done using lab animals or cells in lab dishes)",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.764,
+    "id": "o250"
+   },
+   {
+    "text": "researchers usually look at both human and lab-based studies when trying to",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.72,
+    "id": "o251"
+   },
+   {
+    "text": "figure out if something causes cancer",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.879,
+    "id": "o252"
+   },
+   {
+    "text": "Studies in people",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.978,
+    "id": "o253"
+   },
+   {
+    "text": "Rates of Jeukemia, particularly acute myeloid leukemia (AML), have been",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.521,
+    "id": "o254"
+   },
+   {
+    "text": "found to be higher in studies of workers exposed to high levels of benzene",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.898,
+    "id": "o255"
+   },
+   {
+    "text": "and oil refining industries.",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.748,
+    "id": "o256"
+   },
+   {
+    "text": "suchas those in the chemical, shoemal",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.907,
+    "id": "o257"
+   },
+   {
+    "text": "suggested links to childhood leukemia (particularly",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.786,
+    "id": "o258"
+   },
+   {
+    "text": "Some studies have also",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.846,
+    "id": "o259"
+   },
+   {
+    "text": "AML) as well as acute lymphocytic leukemia (ALL), chronic lymphocytic",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.666,
+    "id": "o260"
+   },
+   {
+    "text": "myeloma and non-Hodgkin Iymphoma)",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.681,
+    "id": "o261"
+   },
+   {
+    "text": "in adults. However the evidence is",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.635,
+    "id": "o262"
+   },
+   {
+    "text": "strong",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.999,
+    "id": "o263"
+   },
+   {
+    "text": "not as",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.837,
+    "id": "o264"
+   },
+   {
+    "text": "for these cancers.",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.854,
+    "id": "o265"
+   },
+   {
+    "text": "There is much less evidence linking benzene to",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.735,
+    "id": "o266"
+   },
+   {
+    "text": "Lab studies",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o267"
+   },
+   {
+    "text": "been",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.517,
+    "id": "o268"
+   },
+   {
+    "text": "When inhaled or swallowed, benzene has",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.843,
+    "id": "o269"
+   },
+   {
+    "text": "of tumors in lab animals such as rats and mice.",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.817,
+    "id": "o270"
+   },
+   {
+    "text": "finding of an excess risk of leukemia in humans:",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.745,
+    "id": "o271"
+   },
+   {
+    "text": "people have not found an increased risk of cancer",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.831,
+    "id": "o272"
+   },
+   {
+    "text": "among those with higher exposures",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.927,
+    "id": "o273"
+   },
+   {
+    "text": "has peen",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.868,
+    "id": "o274"
+   },
+   {
+    "text": "chromosome",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.985,
+    "id": "o275"
+   },
+   {
+    "text": "@nt",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.842,
+    "id": "o276"
+   },
+   {
+    "text": "changes are commonly found in human",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.613,
+    "id": "o277"
+   },
+   {
+    "text": "careceran",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.578,
+    "id": "o278"
+   },
+   {
+    "text": "Donate",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.997,
+    "id": "o279"
+   },
+   {
+    "text": "Society",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.993,
+    "id": "o280"
+   },
+   {
+    "text": "Exposure to benzene has been linked with",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.894,
+    "id": "o281"
+   },
+   {
+    "text": "higher risk of cancer;",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.712,
+    "id": "o282"
+   },
+   {
+    "text": "particularly leukemia and other cancers of blood cells;",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.687,
+    "id": "o283"
+   },
+   {
+    "text": "What do studies show?",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.931,
+    "id": "o284"
+   },
+   {
+    "text": "Researchers try to determine if",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.847,
+    "id": "o285"
+   },
+   {
+    "text": "substance causes cancer",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.989,
+    "id": "o286"
+   },
+   {
+    "text": "main types",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.987,
+    "id": "o287"
+   },
+   {
+    "text": "of studies:",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.92,
+    "id": "o288"
+   },
+   {
+    "text": "Studies in people (epidemiologic studies)",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.974,
+    "id": "o289"
+   },
+   {
+    "text": "Lab studies (studies done using lab animals or cells in lab dishes)",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.768,
+    "id": "o290"
+   },
+   {
+    "text": "Often neither type of study provides conclusive evidence on its own, so",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.604,
+    "id": "o291"
+   },
+   {
+    "text": "researchers usually look at both human and lab-based studies when trying to",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.737,
+    "id": "o292"
+   },
+   {
+    "text": "figure out if something causes cancer",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.827,
+    "id": "o293"
+   },
+   {
+    "text": "Studies in people",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.97,
+    "id": "o294"
+   },
+   {
+    "text": "Rates of Jeukemia, particularly acute myeloid leukemia (AML), have been",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.527,
+    "id": "o295"
+   },
+   {
+    "text": "found to be higher in studies of workers exposed to high levels of benzene",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.898,
+    "id": "o296"
+   },
+   {
+    "text": "and oil refining industries.",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.745,
+    "id": "o297"
+   },
+   {
+    "text": "suchas those in the chemical, shoemal",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.9,
+    "id": "o298"
+   },
+   {
+    "text": "suggested links to childhood leukemia (particularly",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.787,
+    "id": "o299"
+   },
+   {
+    "text": "Some studies have also",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.85,
+    "id": "o300"
+   },
+   {
+    "text": "AML) as well as acute lymphocytic leukemia (ALL), chronic lymphocytic",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.664,
+    "id": "o301"
+   },
+   {
+    "text": "leukemia (CLLI, and other blood-related cancers (such as multiple",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.628,
+    "id": "o302"
+   },
+   {
+    "text": "myeloma and non-Hodgkin Iymphoma)",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.679,
+    "id": "o303"
+   },
+   {
+    "text": "in adults. Howe",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.707,
+    "id": "o304"
+   },
+   {
+    "text": "dence is",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.604,
+    "id": "o305"
+   },
+   {
+    "text": "strong",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.999,
+    "id": "o306"
+   },
+   {
+    "text": "not as",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.834,
+    "id": "o307"
+   },
+   {
+    "text": "for these cancers.",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.895,
+    "id": "o308"
+   },
+   {
+    "text": "There is much less evidence linking benzene to",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.738,
+    "id": "o309"
+   },
+   {
+    "text": "Lab studies",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o310"
+   },
+   {
+    "text": "been",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o311"
+   },
+   {
+    "text": "When inhaled or swallowed, benzene has",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.851,
+    "id": "o312"
+   },
+   {
+    "text": "of tumors in lab animals such as rats and mice,",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.747,
+    "id": "o313"
+   },
+   {
+    "text": "finding of an excess risk of leukemia in humans",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.774,
+    "id": "o314"
+   },
+   {
+    "text": "people have not found an increased risk of cancel",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.748,
+    "id": "o315"
+   },
+   {
+    "text": "among those with higher exposures",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.928,
+    "id": "o316"
+   },
+   {
+    "text": "Mhere new",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.672,
+    "id": "o317"
+   },
+   {
+    "text": "changes are commom",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.547,
+    "id": "o318"
+   },
+   {
+    "text": "humar",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.996,
+    "id": "o319"
+   },
+   {
+    "text": "AudIO",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.943,
+    "id": "o320"
+   },
+   {
+    "text": "Live",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.785,
+    "id": "o321"
+   },
+   {
+    "text": "Log",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.967,
+    "id": "o322"
+   },
+   {
+    "text": "Cancer-causing chemical can form at",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.884,
+    "id": "o323"
+   },
+   {
+    "text": "'unacceptably high levels' in certain",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.913,
+    "id": "o324"
+   },
+   {
+    "text": "acne products, independent lab claims",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.647,
+    "id": "o325"
+   },
+   {
+    "text": "By Jacqueline Howard, CNN",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.817,
+    "id": "o326"
+   },
+   {
+    "text": "minute read",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.997,
+    "id": "o327"
+   },
+   {
+    "text": "Updated 7.14 PM EST, Wed March 6, 2024",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.778,
+    "id": "o328"
+   },
+   {
+    "text": "The independent labors",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.536,
+    "id": "o329"
+   },
+   {
+    "text": "treatment",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.998,
+    "id": "o330"
+   },
+   {
+    "text": "products for benzene",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.995,
+    "id": "o331"
+   },
+   {
+    "text": "(CNN)",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.851,
+    "id": "o332"
+   },
+   {
+    "text": "High levels",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.64,
+    "id": "o333"
+   },
+   {
+    "text": "ausing",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.992,
+    "id": "o334"
+   },
+   {
+    "text": "containing",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o335"
+   },
+   {
+    "text": "chemical, can form in",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.723,
+    "id": "o336"
+   },
+   {
+    "text": "cts",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.998,
+    "id": "o337"
+   },
+   {
+    "text": "benzoyl peroxide",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.975,
+    "id": "o338"
+   },
+   {
+    "text": "from Valisure",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.999,
+    "id": "o339"
+   },
+   {
+    "text": "acco",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.995,
+    "id": "o340"
+   },
+   {
+    "text": "an",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o341"
+   },
+   {
+    "text": "how",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o342"
+   },
+   {
+    "text": "s@ lets @ompare",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.634,
+    "id": "o343"
+   },
+   {
+    "text": "much",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.994,
+    "id": "o344"
+   },
+   {
+    "text": "@enzene",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.785,
+    "id": "o345"
+   },
+   {
+    "text": "AudIO",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.945,
+    "id": "o346"
+   },
+   {
+    "text": "Live",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.818,
+    "id": "o347"
+   },
+   {
+    "text": "Log",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.966,
+    "id": "o348"
+   },
+   {
+    "text": "Cancer-causing chemical can form at",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.882,
+    "id": "o349"
+   },
+   {
+    "text": "'unacceptably high levels' in certain",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.913,
+    "id": "o350"
+   },
+   {
+    "text": "acne products, independent lab claims",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.652,
+    "id": "o351"
+   },
+   {
+    "text": "By Jacqueline Howard, CNN",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.698,
+    "id": "o352"
+   },
+   {
+    "text": "minute read",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.997,
+    "id": "o353"
+   },
+   {
+    "text": "Updated 7.14 PM EST, Wed March 6, 2024",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.781,
+    "id": "o354"
+   },
+   {
+    "text": "The independent Iabora",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.657,
+    "id": "o355"
+   },
+   {
+    "text": "eatment",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.945,
+    "id": "o356"
+   },
+   {
+    "text": "products for benzene:",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.812,
+    "id": "o357"
+   },
+   {
+    "text": "(CNN)",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.853,
+    "id": "o358"
+   },
+   {
+    "text": "High levels",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.798,
+    "id": "o359"
+   },
+   {
+    "text": "sing",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.999,
+    "id": "o360"
+   },
+   {
+    "text": "containing",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.998,
+    "id": "o361"
+   },
+   {
+    "text": "chemical, can form in",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.706,
+    "id": "o362"
+   },
+   {
+    "text": "benzoyl peroxide",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.974,
+    "id": "o363"
+   },
+   {
+    "text": "from Valisure",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.99,
+    "id": "o364"
+   },
+   {
+    "text": "acco",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.995,
+    "id": "o365"
+   },
+   {
+    "text": "an",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o366"
+   },
+   {
+    "text": "t@ @ther sources",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.758,
+    "id": "o367"
+   },
+   {
+    "text": "Benzoyl peroxide: worst case scenario",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.882,
+    "id": "o368"
+   },
+   {
+    "text": "application",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.999,
+    "id": "o369"
+   },
+   {
+    "text": "0.5-1.0g (1-2 finger tip units)",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.658,
+    "id": "o370"
+   },
+   {
+    "text": "10-20 ug* in 1 application of 20 ppm product",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.926,
+    "id": "o371"
+   },
+   {
+    "text": "1-2 ug* in 1 application of 2 ppm product",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.812,
+    "id": "o372"
+   },
+   {
+    "text": "*not all inhaled",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.774,
+    "id": "o373"
+   },
+   {
+    "text": "Cooking",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o374"
+   },
+   {
+    "text": "100 ug",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.644,
+    "id": "o375"
+   },
+   {
+    "text": "stove with",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.961,
+    "id": "o376"
+   },
+   {
+    "text": "ow and oven",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.931,
+    "id": "o377"
+   },
+   {
+    "text": "one bu",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.804,
+    "id": "o378"
+   },
+   {
+    "text": "at 350",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.864,
+    "id": "o379"
+   },
+   {
+    "text": "*not",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.567,
+    "id": "o380"
+   },
+   {
+    "text": "Petra",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.978,
+    "id": "o381"
+   },
+   {
+    "text": "lia)",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.802,
+    "id": "o382"
+   },
+   {
+    "text": "While",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o383"
+   },
+   {
+    "text": "(avera",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.864,
+    "id": "o384"
+   },
+   {
+    "text": "Air ex",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.996,
+    "id": "o385"
+   },
+   {
+    "text": "1.25",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.941,
+    "id": "o386"
+   },
+   {
+    "text": "9.4 to",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.757,
+    "id": "o387"
+   },
+   {
+    "text": "(average",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.754,
+    "id": "o388"
+   },
+   {
+    "text": "Inside",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o389"
+   },
+   {
+    "text": "Aata)",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.975,
+    "id": "o390"
+   },
+   {
+    "text": "Ave",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.965,
+    "id": "o391"
+   },
+   {
+    "text": "easily s@",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.671,
+    "id": "o392"
+   },
+   {
+    "text": "skin",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.669,
+    "id": "o393"
+   },
+   {
+    "text": "Benzoyl peroxide: worst case scenario",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.884,
+    "id": "o394"
+   },
+   {
+    "text": "application",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.999,
+    "id": "o395"
+   },
+   {
+    "text": "0.5-1.0g (1-2 finger tip units)",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.788,
+    "id": "o396"
+   },
+   {
+    "text": "10-20 ug* in 1 application of 20 ppm product",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.928,
+    "id": "o397"
+   },
+   {
+    "text": "application of 2 ppm product",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.981,
+    "id": "o398"
+   },
+   {
+    "text": "1-2 ug* in",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.54,
+    "id": "o399"
+   },
+   {
+    "text": "*not all inhaled",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.773,
+    "id": "o400"
+   },
+   {
+    "text": "100 ug",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.501,
+    "id": "o401"
+   },
+   {
+    "text": "as stove with",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.995,
+    "id": "o402"
+   },
+   {
+    "text": "low and oven",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.978,
+    "id": "o403"
+   },
+   {
+    "text": "one bu",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.652,
+    "id": "o404"
+   },
+   {
+    "text": "at 35",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.995,
+    "id": "o405"
+   },
+   {
+    "text": "*not",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.525,
+    "id": "o406"
+   },
+   {
+    "text": "Petre",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.799,
+    "id": "o407"
+   },
+   {
+    "text": "ralia)",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.973,
+    "id": "o408"
+   },
+   {
+    "text": "Whill",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.729,
+    "id": "o409"
+   },
+   {
+    "text": "(aver",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 1.0,
+    "id": "o410"
+   },
+   {
+    "text": "Air ex",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.996,
+    "id": "o411"
+   },
+   {
+    "text": "1.25",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.959,
+    "id": "o412"
+   },
+   {
+    "text": "9.4 to 3",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.894,
+    "id": "o413"
+   },
+   {
+    "text": "(average",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.998,
+    "id": "o414"
+   },
+   {
+    "text": "data",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 1.0,
+    "id": "o415"
+   },
+   {
+    "text": "Inside",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 1.0,
+    "id": "o416"
+   },
+   {
+    "text": "Aver",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.999,
+    "id": "o417"
+   },
+   {
+    "text": "breathe in ff all @f the",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.898,
+    "id": "o418"
+   },
+   {
+    "text": "benzene",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.99,
+    "id": "o419"
+   },
+   {
+    "text": "Benzoyl peroxide: worst case scenario",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.781,
+    "id": "o420"
+   },
+   {
+    "text": "application",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.999,
+    "id": "o421"
+   },
+   {
+    "text": "0.5-1.0g (1-2 finger tip units)",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.776,
+    "id": "o422"
+   },
+   {
+    "text": "10-20 ug* in 1 application of 20 ppm product",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.934,
+    "id": "o423"
+   },
+   {
+    "text": "application of 2 ppm product",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.984,
+    "id": "o424"
+   },
+   {
+    "text": "1-2 ug* in",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.73,
+    "id": "o425"
+   },
+   {
+    "text": "*not all inhaled",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.718,
+    "id": "o426"
+   },
+   {
+    "text": "Cooking (Kash",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.521,
+    "id": "o427"
+   },
+   {
+    "text": "S stove with",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.708,
+    "id": "o428"
+   },
+   {
+    "text": "low and oven",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.98,
+    "id": "o429"
+   },
+   {
+    "text": "one bur",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.916,
+    "id": "o430"
+   },
+   {
+    "text": "at 350",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.864,
+    "id": "o431"
+   },
+   {
+    "text": "*not a",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.769,
+    "id": "o432"
+   },
+   {
+    "text": "Petrol",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.873,
+    "id": "o433"
+   },
+   {
+    "text": "alia)",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 1.0,
+    "id": "o434"
+   },
+   {
+    "text": "While",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 1.0,
+    "id": "o435"
+   },
+   {
+    "text": "(avr",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.762,
+    "id": "o436"
+   },
+   {
+    "text": "rage",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.866,
+    "id": "o437"
+   },
+   {
+    "text": "straight up your nostrils",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.796,
+    "id": "o438"
+   },
+   {
+    "text": "Benzoyl peroxide: worst case scenario",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.792,
+    "id": "o439"
+   },
+   {
+    "text": "application",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.999,
+    "id": "o440"
+   },
+   {
+    "text": "0.5-1.0g (1-2 finger tip units)",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.775,
+    "id": "o441"
+   },
+   {
+    "text": "10-20 ug* in 1 application of 20 ppm product",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.934,
+    "id": "o442"
+   },
+   {
+    "text": "1-2 ug* in",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.705,
+    "id": "o443"
+   },
+   {
+    "text": "application of 2 ppm product",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.974,
+    "id": "o444"
+   },
+   {
+    "text": "*not all inhaled",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.738,
+    "id": "o445"
+   },
+   {
+    "text": "Cooking",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 1.0,
+    "id": "o446"
+   },
+   {
+    "text": "stove with",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.981,
+    "id": "o447"
+   },
+   {
+    "text": "ow and oven",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.946,
+    "id": "o448"
+   },
+   {
+    "text": "one",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.999,
+    "id": "o449"
+   },
+   {
+    "text": "at 35",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.951,
+    "id": "o450"
+   },
+   {
+    "text": "Petre",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.686,
+    "id": "o451"
+   },
+   {
+    "text": "alia)",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 1.0,
+    "id": "o452"
+   },
+   {
+    "text": "(ave",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 1.0,
+    "id": "o453"
+   },
+   {
+    "text": "Air e:",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.942,
+    "id": "o454"
+   },
+   {
+    "text": "1.2'",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.81,
+    "id": "o455"
+   },
+   {
+    "text": "(avera",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.981,
+    "id": "o456"
+   },
+   {
+    "text": "Insid",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.99,
+    "id": "o457"
+   },
+   {
+    "text": "which obviously desntt",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.679,
+    "id": "o458"
+   },
+   {
+    "text": "happen",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.997,
+    "id": "o459"
+   },
+   {
+    "text": "Benzoyl peroxide: worst case scenario",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.774,
+    "id": "o460"
+   },
+   {
+    "text": "application",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.999,
+    "id": "o461"
+   },
+   {
+    "text": "0.5-1.0g (1-2 finger tip units)",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.917,
+    "id": "o462"
+   },
+   {
+    "text": "10-20 ug* in 1 application of 20 ppm product",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.934,
+    "id": "o463"
+   },
+   {
+    "text": "1-2 ug* in",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.731,
+    "id": "o464"
+   },
+   {
+    "text": "application of 2 ppm product",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.974,
+    "id": "o465"
+   },
+   {
+    "text": "*not all inhaled",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.66,
+    "id": "o466"
+   },
+   {
+    "text": "Cooking (Kashtan 2023: US)",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.747,
+    "id": "o467"
+   },
+   {
+    "text": "100 ug produced per meal* (gas stove with",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.602,
+    "id": "o468"
+   },
+   {
+    "text": "one burner on high, one burner on low and oven",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.841,
+    "id": "o469"
+   },
+   {
+    "text": "*not all inhaled",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.793,
+    "id": "o470"
+   },
+   {
+    "text": "polo 2014: Australia)",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.998,
+    "id": "o471"
+   },
+   {
+    "text": "Petrol",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.876,
+    "id": "o472"
+   },
+   {
+    "text": "Whil",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.999,
+    "id": "o473"
+   },
+   {
+    "text": "(av",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 1.0,
+    "id": "o474"
+   },
+   {
+    "text": "sity (EPA)",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.964,
+    "id": "o475"
+   },
+   {
+    "text": "Air",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 1.0,
+    "id": "o476"
+   },
+   {
+    "text": "5 min",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 1.0,
+    "id": "o477"
+   },
+   {
+    "text": "(avel",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.504,
+    "id": "o478"
+   },
+   {
+    "text": "Ja, France,",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.951,
+    "id": "o479"
+   },
+   {
+    "text": "Insid",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.997,
+    "id": "o480"
+   },
+   {
+    "text": "Av",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 1.0,
+    "id": "o481"
+   },
+   {
+    "text": "ene is",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.893,
+    "id": "o482"
+   },
+   {
+    "text": "when you cook",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.733,
+    "id": "o483"
+   },
+   {
+    "text": "Benzoyl peroxide: worst case scenario",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.92,
+    "id": "o484"
+   },
+   {
+    "text": "application",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.999,
+    "id": "o485"
+   },
+   {
+    "text": "0.5-1.0g (1-2 finger tip units)",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.919,
+    "id": "o486"
+   },
+   {
+    "text": "10-20 ug* in 1 application of 20 ppm product",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.934,
+    "id": "o487"
+   },
+   {
+    "text": "1-2 ug* in",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.732,
+    "id": "o488"
+   },
+   {
+    "text": "application of 2 ppm product",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.976,
+    "id": "o489"
+   },
+   {
+    "text": "*not all inhaled",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.635,
+    "id": "o490"
+   },
+   {
+    "text": "Cooking (Kashtan 2023: US)",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.834,
+    "id": "o491"
+   },
+   {
+    "text": "100 ug produced per meal* (gas stove with",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.717,
+    "id": "o492"
+   },
+   {
+    "text": "one burner on high, one burner on low and oven",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.85,
+    "id": "o493"
+   },
+   {
+    "text": "'F for 30 min)",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.704,
+    "id": "o494"
+   },
+   {
+    "text": "at 350",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.852,
+    "id": "o495"
+   },
+   {
+    "text": "*not all inhaled",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.782,
+    "id": "o496"
+   },
+   {
+    "text": "Petrol station (Edokpolo 2014: Australia)",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.85,
+    "id": "o497"
+   },
+   {
+    "text": "While refueling: 150 to 4900 ug/m? air",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.706,
+    "id": "o498"
+   },
+   {
+    "text": "(average 1767)",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.707,
+    "id": "o499"
+   },
+   {
+    "text": "Air exchange, light intensity (EPA)",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.647,
+    "id": "o500"
+   },
+   {
+    "text": "1.25 x 10-2 m/min",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.914,
+    "id": "o501"
+   },
+   {
+    "text": "9.4 to 306 [g inhaled in 5 min",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.513,
+    "id": "o502"
+   },
+   {
+    "text": "(average 110 ug)",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.75,
+    "id": "o503"
+   },
+   {
+    "text": "Inside house (Canada, France",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.984,
+    "id": "o504"
+   },
+   {
+    "text": "Average 2.0 to 4.07 ug/m? air",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.737,
+    "id": "o505"
+   },
+   {
+    "text": "Air exchange (EPA)",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.924,
+    "id": "o506"
+   },
+   {
+    "text": "day",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 1.0,
+    "id": "o507"
+   },
+   {
+    "text": "31 to 63 ug inhaled per",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.566,
+    "id": "o508"
+   },
+   {
+    "text": "Note: Continuous exposure of ben",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.948,
+    "id": "o509"
+   },
+   {
+    "text": "worse than a spike (carcinogen",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.664,
+    "id": "o510"
+   },
+   {
+    "text": "metabolic pathway gets $",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.652,
+    "id": "o511"
+   },
+   {
+    "text": "Benzoyl peroxide: worst case scenario",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.852,
+    "id": "o512"
+   },
+   {
+    "text": "application",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 1.0,
+    "id": "o513"
+   },
+   {
+    "text": "0.5-1.0 g (1-2 finger tip units)",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.742,
+    "id": "o514"
+   },
+   {
+    "text": "10-20 ug* in 1 application of 20 ppm product",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.93,
+    "id": "o515"
+   },
+   {
+    "text": "1-2 ug* in",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.732,
+    "id": "o516"
+   },
+   {
+    "text": "application of 2 ppm product",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.975,
+    "id": "o517"
+   },
+   {
+    "text": "*not all inhaled",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.632,
+    "id": "o518"
+   },
+   {
+    "text": "Cooking (Kashtan 2023: US)",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.804,
+    "id": "o519"
+   },
+   {
+    "text": "100 ug produced per meal* (gas stov",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.882,
+    "id": "o520"
+   },
+   {
+    "text": "one burner on high, one burner on lov",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.669,
+    "id": "o521"
+   },
+   {
+    "text": "'F for 30 min)",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.714,
+    "id": "o522"
+   },
+   {
+    "text": "at 350",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.697,
+    "id": "o523"
+   },
+   {
+    "text": "*not all inhaled",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.62,
+    "id": "o524"
+   },
+   {
+    "text": "Petrol station (Edokpolo 2014: Austral",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.905,
+    "id": "o525"
+   },
+   {
+    "text": "While refueling: 150 to 4900 ug/m? air",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.696,
+    "id": "o526"
+   },
+   {
+    "text": "(average 1767)",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.733,
+    "id": "o527"
+   },
+   {
+    "text": "Air exchange, light intensity (EF",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.67,
+    "id": "o528"
+   },
+   {
+    "text": "1.25 x 10-2 m/min",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.679,
+    "id": "o529"
+   },
+   {
+    "text": "9.4 to 306 [g inhaled in 5 min",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.519,
+    "id": "o530"
+   },
+   {
+    "text": "(average 110 ug)",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.688,
+    "id": "o531"
+   },
+   {
+    "text": "Inside house (Canada, France",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.972,
+    "id": "o532"
+   },
+   {
+    "text": "Average 2.0 to 4.07 ug/m? air",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.768,
+    "id": "o533"
+   },
+   {
+    "text": "Air exchange (EPA)",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.845,
+    "id": "o534"
+   },
+   {
+    "text": "day",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 1.0,
+    "id": "o535"
+   },
+   {
+    "text": "31 to 63 ug inhaled per",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.527,
+    "id": "o536"
+   },
+   {
+    "text": "Note: Continuous exposure of benzene is",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.899,
+    "id": "o537"
+   },
+   {
+    "text": "(carcinogen-forming",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.999,
+    "id": "o538"
+   },
+   {
+    "text": "worse than a spike",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.905,
+    "id": "o539"
+   },
+   {
+    "text": "metabolic pathway gets saturated)",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.925,
+    "id": "o540"
+   },
+   {
+    "text": "Benzoyl peroxide: worst case scenario",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.855,
+    "id": "o541"
+   },
+   {
+    "text": "application",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.999,
+    "id": "o542"
+   },
+   {
+    "text": "0.5-1.0g (1-2 finger tip units)",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.747,
+    "id": "o543"
+   },
+   {
+    "text": "10-20 ug* in 1 application of 20 ppm product",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.93,
+    "id": "o544"
+   },
+   {
+    "text": "1-2 ug* in",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.733,
+    "id": "o545"
+   },
+   {
+    "text": "application of 2 ppm product",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.975,
+    "id": "o546"
+   },
+   {
+    "text": "*not all inhaled",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.657,
+    "id": "o547"
+   },
+   {
+    "text": "Cooking (Kashtan 2023: US)",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.815,
+    "id": "o548"
+   },
+   {
+    "text": "100 ug produced per meal* (gas stov",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.888,
+    "id": "o549"
+   },
+   {
+    "text": "one burner on high, one burner on low",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.729,
+    "id": "o550"
+   },
+   {
+    "text": "at 350 %F for 30 min)",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.71,
+    "id": "o551"
+   },
+   {
+    "text": "*not all inhaled",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.619,
+    "id": "o552"
+   },
+   {
+    "text": "Petrol station (Edokpolo 2014: Australi",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.983,
+    "id": "o553"
+   },
+   {
+    "text": "While refueling: 150 to 4900 ug/m? air",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.695,
+    "id": "o554"
+   },
+   {
+    "text": "(average 1767)",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.735,
+    "id": "o555"
+   },
+   {
+    "text": "Air exchange, light intensity (EF",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.668,
+    "id": "o556"
+   },
+   {
+    "text": "1.25 x 10-2 m/min",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.681,
+    "id": "o557"
+   },
+   {
+    "text": "9.4 to 306 [g inhaled in 5 min",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.521,
+    "id": "o558"
+   },
+   {
+    "text": "(average 110 g)",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.994,
+    "id": "o559"
+   },
+   {
+    "text": "Inside house (Canada, France",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.984,
+    "id": "o560"
+   },
+   {
+    "text": "Average 2.0 to 4.07 ug/m? air",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.749,
+    "id": "o561"
+   },
+   {
+    "text": "Air exchange (EPA)",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.829,
+    "id": "o562"
+   },
+   {
+    "text": "day",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 1.0,
+    "id": "o563"
+   },
+   {
+    "text": "31 to 63 ug inhaled per",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.546,
+    "id": "o564"
+   },
+   {
+    "text": "Note: Continuous exposure of benzene is",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.909,
+    "id": "o565"
+   },
+   {
+    "text": "(carcinogen-forming",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.999,
+    "id": "o566"
+   },
+   {
+    "text": "worse than a spike",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.893,
+    "id": "o567"
+   },
+   {
+    "text": "metabolic pathway gets saturated)",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.949,
+    "id": "o568"
+   },
+   {
+    "text": "idea",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.781,
+    "id": "o569"
+   },
+   {
+    "text": "isa",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.862,
+    "id": "o570"
+   },
+   {
+    "text": "Benzoyl peroxide: worst case scenario",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.932,
+    "id": "o571"
+   },
+   {
+    "text": "application",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.999,
+    "id": "o572"
+   },
+   {
+    "text": "0.5-1.0g (1-2 finger tip units)",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.693,
+    "id": "o573"
+   },
+   {
+    "text": "application of 20 ppm product",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.961,
+    "id": "o574"
+   },
+   {
+    "text": "10-20 ug* in 1",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.705,
+    "id": "o575"
+   },
+   {
+    "text": "1-2 ug* in",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.719,
+    "id": "o576"
+   },
+   {
+    "text": "application of 2 ppm product",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.968,
+    "id": "o577"
+   },
+   {
+    "text": "*not all inhaled",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.747,
+    "id": "o578"
+   },
+   {
+    "text": "Cooking (Kashtan 2023: US)",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.859,
+    "id": "o579"
+   },
+   {
+    "text": "100 ug produced per meal* (gas stov",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.772,
+    "id": "o580"
+   },
+   {
+    "text": "one burner on high, one burner on low",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.681,
+    "id": "o581"
+   },
+   {
+    "text": "'F for 30 min)",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.685,
+    "id": "o582"
+   },
+   {
+    "text": "at 350",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.709,
+    "id": "o583"
+   },
+   {
+    "text": "*not all inhaled",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.704,
+    "id": "o584"
+   },
+   {
+    "text": "Petrol station (Edokpolo 2014: Australl:",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.833,
+    "id": "o585"
+   },
+   {
+    "text": "While refueling: 150 to 4900 ug/m? air",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.695,
+    "id": "o586"
+   },
+   {
+    "text": "(average 1767)",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.74,
+    "id": "o587"
+   },
+   {
+    "text": "Air exchange, light intensity (EF",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.621,
+    "id": "o588"
+   },
+   {
+    "text": "1.25 x 10-2 m/min",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.684,
+    "id": "o589"
+   },
+   {
+    "text": "9.4 to 306 [g inhaled in 5 min",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.504,
+    "id": "o590"
+   },
+   {
+    "text": "(average 110 ug)",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.742,
+    "id": "o591"
+   },
+   {
+    "text": "Inside house (Canada, France",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.982,
+    "id": "o592"
+   },
+   {
+    "text": "Average 2.0 to 4.07 ug/m? air",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.763,
+    "id": "o593"
+   },
+   {
+    "text": "Air exchange (EPA)",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.876,
+    "id": "o594"
+   },
+   {
+    "text": "day",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 1.0,
+    "id": "o595"
+   },
+   {
+    "text": "31 to 63 ug inhaled per",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.579,
+    "id": "o596"
+   },
+   {
+    "text": "Note: Continuous exposure of benzene is",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.926,
+    "id": "o597"
+   },
+   {
+    "text": "(carcinogen-forming",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 1.0,
+    "id": "o598"
+   },
+   {
+    "text": "worse than a spike",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.888,
+    "id": "o599"
+   },
+   {
+    "text": "metabolic pathway gets saturated)",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.977,
+    "id": "o600"
+   },
+   {
+    "text": "Benzoyl peroxide: worst case scenario",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.932,
+    "id": "o601"
+   },
+   {
+    "text": "application",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.999,
+    "id": "o602"
+   },
+   {
+    "text": "0.5-1.0g (1-2 finger tip units)",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.708,
+    "id": "o603"
+   },
+   {
+    "text": "application of 20 ppm product",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.959,
+    "id": "o604"
+   },
+   {
+    "text": "10-20 ug* in 1",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.711,
+    "id": "o605"
+   },
+   {
+    "text": "1-2 ug* in",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.704,
+    "id": "o606"
+   },
+   {
+    "text": "application of 2 ppm product",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.968,
+    "id": "o607"
+   },
+   {
+    "text": "*not all inhaled",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.752,
+    "id": "o608"
+   },
+   {
+    "text": "Cooking (Kashtan 2023: US)",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.864,
+    "id": "o609"
+   },
+   {
+    "text": "100 ug produced per meal* (gas stove",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.79,
+    "id": "o610"
+   },
+   {
+    "text": "one burner on high, one burner on low",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.677,
+    "id": "o611"
+   },
+   {
+    "text": "'F for 30 min)",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.68,
+    "id": "o612"
+   },
+   {
+    "text": "at 350",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.893,
+    "id": "o613"
+   },
+   {
+    "text": "*not all inhaled",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.694,
+    "id": "o614"
+   },
+   {
+    "text": "Petrol station (Edokpolo 2014: Australi:",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.964,
+    "id": "o615"
+   },
+   {
+    "text": "While refueling: 150 to 4900 ug/m? air",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.696,
+    "id": "o616"
+   },
+   {
+    "text": "(average 1767)",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.734,
+    "id": "o617"
+   },
+   {
+    "text": "Air exchange, light intensity (EF",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.553,
+    "id": "o618"
+   },
+   {
+    "text": "1.25 x 10-2 m/min",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.698,
+    "id": "o619"
+   },
+   {
+    "text": "9.4 to 306 [g inhaled in 5 min",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.555,
+    "id": "o620"
+   },
+   {
+    "text": "(average 110 ug)",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.754,
+    "id": "o621"
+   },
+   {
+    "text": "Inside house (Canada, France",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.984,
+    "id": "o622"
+   },
+   {
+    "text": "Average 2.0 to 4.07 ug/m? air",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.759,
+    "id": "o623"
+   },
+   {
+    "text": "Air exchange (EPA)",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.879,
+    "id": "o624"
+   },
+   {
+    "text": "day",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 1.0,
+    "id": "o625"
+   },
+   {
+    "text": "31 to 63 ug inhaled per",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.566,
+    "id": "o626"
+   },
+   {
+    "text": "Note: Continuous exposure of benzene is",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.927,
+    "id": "o627"
+   },
+   {
+    "text": "(carcinogen-forming",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 1.0,
+    "id": "o628"
+   },
+   {
+    "text": "worse than a spike",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.768,
+    "id": "o629"
+   },
+   {
+    "text": "metabolic pathway gets saturated)",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.945,
+    "id": "o630"
+   },
+   {
+    "text": "to freak @ut",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.714,
+    "id": "o631"
+   },
+   {
+    "text": "used for acne for 60 years",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.913,
+    "id": "o632"
+   },
+   {
+    "text": "and there's no recorded",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.508,
+    "id": "o633"
+   },
+   {
+    "text": "increased",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.995,
+    "id": "o634"
+   },
+   {
+    "text": "cancer in people who use it",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.827,
+    "id": "o635"
+   },
+   {
+    "text": "BENZENE",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 1.0,
+    "id": "o636"
+   },
+   {
+    "text": "FREAK OUT?",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.725,
+    "id": "o637"
+   },
+   {
+    "text": "Is Benzene in Sunscreen Giving",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.996,
+    "id": "o638"
+   },
+   {
+    "text": "You Cancer? Lab Muffin Beauty S_",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.655,
+    "id": "o639"
+   },
+   {
+    "text": "Lab Muffin Beauty Science",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.578,
+    "id": "o640"
+   },
+   {
+    "text": "A7K views",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.676,
+    "id": "o641"
+   },
+   {
+    "text": "years ago",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.934,
+    "id": "o642"
+   },
+   {
+    "text": "in sunscreen which",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.616,
+    "id": "o643"
+   },
+   {
+    "text": "BENZENE",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 1.0,
+    "id": "o644"
+   },
+   {
+    "text": "FREAK OUT?",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.729,
+    "id": "o645"
+   },
+   {
+    "text": "Is Benzene in Sunscreen Giving",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.996,
+    "id": "o646"
+   },
+   {
+    "text": "You Cancer? Lab Muffin Beauty S_",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.68,
+    "id": "o647"
+   },
+   {
+    "text": "Lab Muffin Beauty Science",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.706,
+    "id": "o648"
+   },
+   {
+    "text": "47K views",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.983,
+    "id": "o649"
+   },
+   {
+    "text": "years ago",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.939,
+    "id": "o650"
+   },
+   {
+    "text": "it @ooks like less benzene",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.576,
+    "id": "o651"
+   },
+   {
+    "text": "carcinogen in dozens of",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.71,
+    "id": "o652"
+   },
+   {
+    "text": "lab found a",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.784,
+    "id": "o653"
+   },
+   {
+    "text": "sunscreens. Heres what those",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.598,
+    "id": "o654"
+   },
+   {
+    "text": "findings really mean.",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.584,
+    "id": "o655"
+   },
+   {
+    "text": "washingtonpostcom",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 1.0,
+    "id": "o656"
+   },
+   {
+    "text": "By Janna Mandell",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.911,
+    "id": "o657"
+   },
+   {
+    "text": "professor of toxicology and the",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.954,
+    "id": "o658"
+   },
+   {
+    "text": "Martvn Smith",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.835,
+    "id": "o659"
+   },
+   {
+    "text": "Kenneth Howard and Marjorie Witherspoon Kaiser",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.842,
+    "id": "o660"
+   },
+   {
+    "text": "Epidemiology at University of",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.772,
+    "id": "o661"
+   },
+   {
+    "text": "Endowed Chair in Cancer",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.759,
+    "id": "o662"
+   },
+   {
+    "text": "California at Berkeley,",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.976,
+    "id": "o663"
+   },
+   {
+    "text": "Smith said he compared the highest level of benzene",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.552,
+    "id": "o664"
+   },
+   {
+    "text": "contamination mentioned in Valisure",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.69,
+    "id": "o665"
+   },
+   {
+    "text": "report t0 urban",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.841,
+    "id": "o666"
+   },
+   {
+    "text": "breathing for 24 hours, and estimated that applying",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.943,
+    "id": "o667"
+   },
+   {
+    "text": "10 ml ofthe contaminated sunscreen (approximatel",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.684,
+    "id": "o668"
+   },
+   {
+    "text": "one application) could",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.753,
+    "id": "o669"
+   },
+   {
+    "text": "in the Wonst-case scenano",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.589,
+    "id": "o670"
+   },
+   {
+    "text": "ahsorbing about half the amount of benzene",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.784,
+    "id": "o671"
+   },
+   {
+    "text": "breathing city air in for a",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.505,
+    "id": "o672"
+   },
+   {
+    "text": "day=",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.58,
+    "id": "o673"
+   },
+   {
+    "text": "Trom",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.675,
+    "id": "o674"
+   },
+   {
+    "text": "Healso noted that 16 of the 20 most contaminated",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.826,
+    "id": "o675"
+   },
+   {
+    "text": "products according to the Valisure report were",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.576,
+    "id": "o676"
+   },
+   {
+    "text": "spravs. Despite their high contamination",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.777,
+    "id": "o677"
+   },
+   {
+    "text": "low. \"You would have to cover yourself in spray\" t0 ge",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.597,
+    "id": "o678"
+   },
+   {
+    "text": "dangerous level, he said.",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.948,
+    "id": "o679"
+   },
+   {
+    "text": "And the level would",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.92,
+    "id": "o680"
+   },
+   {
+    "text": "the concentration was lower",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.628,
+    "id": "o681"
+   },
+   {
+    "text": "The experts said that while there",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.782,
+    "id": "o682"
+   },
+   {
+    "text": "value i the sort of consumer testing",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.771,
+    "id": "o683"
+   },
+   {
+    "text": "Valisure does, independent labs should be curelul",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.671,
+    "id": "o684"
+   },
+   {
+    "text": "their chetoric",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.685,
+    "id": "o685"
+   },
+   {
+    "text": "Smith Said; \"but [",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.503,
+    "id": "o686"
+   },
+   {
+    "text": "no nced nO",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.546,
+    "id": "o687"
+   },
+   {
+    "text": "need for that",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.928,
+    "id": "o688"
+   },
+   {
+    "text": "carcinogen in dozens of",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.68,
+    "id": "o689"
+   },
+   {
+    "text": "lab found a",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.869,
+    "id": "o690"
+   },
+   {
+    "text": "findings really mean.",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.639,
+    "id": "o691"
+   },
+   {
+    "text": "washingtonpostcom",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 1.0,
+    "id": "o692"
+   },
+   {
+    "text": "By Janna Mandell",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.897,
+    "id": "o693"
+   },
+   {
+    "text": "professor of toxicology and the",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.918,
+    "id": "o694"
+   },
+   {
+    "text": "Martvn Smith",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.823,
+    "id": "o695"
+   },
+   {
+    "text": "Kenneth Howard and Marjorie Witherspoon Kaiser",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.836,
+    "id": "o696"
+   },
+   {
+    "text": "Epidemiology at University of",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.781,
+    "id": "o697"
+   },
+   {
+    "text": "Endowed Chair in Cancer",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.777,
+    "id": "o698"
+   },
+   {
+    "text": "California at Berkeley,",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.843,
+    "id": "o699"
+   },
+   {
+    "text": "Smith said he compared the highest level of benzene",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.732,
+    "id": "o700"
+   },
+   {
+    "text": "contamination mentioned in Valisure < report t0 urban",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.66,
+    "id": "o701"
+   },
+   {
+    "text": "breathing for 24 hours, and estimated that applying",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.867,
+    "id": "o702"
+   },
+   {
+    "text": "10 ml ofthe contaminated sunsereen (approximatel",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.618,
+    "id": "o703"
+   },
+   {
+    "text": "one application) could",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.989,
+    "id": "o704"
+   },
+   {
+    "text": "in the Wonst-case scenano",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.582,
+    "id": "o705"
+   },
+   {
+    "text": "ahsorbing about half the amount of benzene",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.941,
+    "id": "o706"
+   },
+   {
+    "text": "Healso noted that 16 of the 20 most contaminated",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.658,
+    "id": "o707"
+   },
+   {
+    "text": "products according to the Valisure report were",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.649,
+    "id": "o708"
+   },
+   {
+    "text": "sprays. Despite their high contamination",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.842,
+    "id": "o709"
+   },
+   {
+    "text": "levels; Smith said the risk of exposure would be very",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.587,
+    "id": "o710"
+   },
+   {
+    "text": "dangerous level, he said.",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.968,
+    "id": "o711"
+   },
+   {
+    "text": "And the level would",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.903,
+    "id": "o712"
+   },
+   {
+    "text": "diluted by the same stuff that propels the spray.",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.666,
+    "id": "o713"
+   },
+   {
+    "text": "use Is much higher",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.794,
+    "id": "o714"
+   },
+   {
+    "text": "The experts said that while there is value in the sort of consumer testing",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.58,
+    "id": "o715"
+   },
+   {
+    "text": "Valisure does, independent labs should be curelul with their chetorie",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.61,
+    "id": "o716"
+   },
+   {
+    "text": "and mindful of how their research mav be construed by the public.",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.513,
+    "id": "o717"
+   },
+   {
+    "text": "Smith Sid, \"but [",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.535,
+    "id": "o718"
+   },
+   {
+    "text": "need for that;",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.798,
+    "id": "o719"
+   },
+   {
+    "text": "VOLUME 87,",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.998,
+    "id": "o720"
+   },
+   {
+    "text": "SSUE",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.995,
+    "id": "o721"
+   },
+   {
+    "text": "Pa40-443, AUGUST 2022",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.747,
+    "id": "o722"
+   },
+   {
+    "text": "~ Dowmload Full Issue",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.706,
+    "id": "o723"
+   },
+   {
+    "text": "Sunscreen use is not associated with increased",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.979,
+    "id": "o724"
+   },
+   {
+    "text": "blood concentrations of benzene among adults in",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.764,
+    "id": "o725"
+   },
+   {
+    "text": "the United States: Data from the National Health and",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.64,
+    "id": "o726"
+   },
+   {
+    "text": "Nutrition Examination Survey 2003-2006 and 2009-",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.828,
+    "id": "o727"
+   },
+   {
+    "text": "2018",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 1.0,
+    "id": "o728"
+   },
+   {
+    "text": "Michael $. Chang",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.723,
+    "id": "o729"
+   },
+   {
+    "text": "Kevin",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 1.0,
+    "id": "o730"
+   },
+   {
+    "text": "Moore, MD, MPH",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.76,
+    "id": "o731"
+   },
+   {
+    "text": "Nicole Trepanowski, BS",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.968,
+    "id": "o732"
+   },
+   {
+    "text": "Tulay Koru-Sengul, PhD, MHS",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.903,
+    "id": "o733"
+   },
+   {
+    "text": "Rebecca",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.848,
+    "id": "o734"
+   },
+   {
+    "text": "Hartman; MD, MPH",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.535,
+    "id": "o735"
+   },
+   {
+    "text": "Published: September 09, 2021",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.979,
+    "id": "o736"
+   },
+   {
+    "text": "DOI:",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.919,
+    "id": "o737"
+   },
+   {
+    "text": "PlumX Metrics",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.653,
+    "id": "o738"
+   },
+   {
+    "text": "To the Editor; Sunscreens",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.97,
+    "id": "o739"
+   },
+   {
+    "text": "nd regulated",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.929,
+    "id": "o740"
+   },
+   {
+    "text": "Valisure ,",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.699,
+    "id": "o741"
+   },
+   {
+    "text": "as over-the-counter drugs",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.813,
+    "id": "o742"
+   },
+   {
+    "text": "an independent pharmace",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.999,
+    "id": "o743"
+   },
+   {
+    "text": "rated levels",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.968,
+    "id": "o744"
+   },
+   {
+    "text": "known hum",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 1.0,
+    "id": "o745"
+   },
+   {
+    "text": "batches of",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.974,
+    "id": "o746"
+   },
+   {
+    "text": "times the",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.981,
+    "id": "o747"
+   },
+   {
+    "text": "sunscreen and after-sun Ca",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.866,
+    "id": "o748"
+   },
+   {
+    "text": "US Food and Drug Adminis",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.965,
+    "id": "o749"
+   },
+   {
+    "text": "million) 2.3",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.626,
+    "id": "o750"
+   },
+   {
+    "text": "Thus, it is",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.941,
+    "id": "o751"
+   },
+   {
+    "text": "Benzene exposure",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 1.0,
+    "id": "o752"
+   },
+   {
+    "text": "strong",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.984,
+    "id": "o753"
+   },
+   {
+    "text": "important t0 understand syst",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.68,
+    "id": "o754"
+   },
+   {
+    "text": "context of sunscreen",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.999,
+    "id": "o755"
+   },
+   {
+    "text": "In this retrospeclive cross",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.848,
+    "id": "o756"
+   },
+   {
+    "text": "Hata Irom the",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.555,
+    "id": "o757"
+   },
+   {
+    "text": "use",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.97,
+    "id": "o758"
+   },
+   {
+    "text": "National Health",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 1.0,
+    "id": "o759"
+   },
+   {
+    "text": "Nutritio",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.735,
+    "id": "o760"
+   },
+   {
+    "text": "and",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.988,
+    "id": "o761"
+   },
+   {
+    "text": "adults aged 20 years",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.945,
+    "id": "o762"
+   },
+   {
+    "text": "andthis study didn't find",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.568,
+    "id": "o763"
+   },
+   {
+    "text": "use",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.999,
+    "id": "o764"
+   },
+   {
+    "text": "higher",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.992,
+    "id": "o765"
+   },
+   {
+    "text": "Data on blood",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.702,
+    "id": "o766"
+   },
+   {
+    "text": "for 10,861 adu",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.996,
+    "id": "o767"
+   },
+   {
+    "text": "estimate of 15",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.742,
+    "id": "o768"
+   },
+   {
+    "text": "gas",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 1.0,
+    "id": "o769"
+   },
+   {
+    "text": "iing det",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.536,
+    "id": "o770"
+   },
+   {
+    "text": "VOLUME 87,",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.998,
+    "id": "o771"
+   },
+   {
+    "text": "SSUE",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.994,
+    "id": "o772"
+   },
+   {
+    "text": "Pa40-443, AUGUST 2022",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.74,
+    "id": "o773"
+   },
+   {
+    "text": "~ Dowmload Full Issue",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.814,
+    "id": "o774"
+   },
+   {
+    "text": "Sunscreen use is not associated with increased",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.977,
+    "id": "o775"
+   },
+   {
+    "text": "blood concentrations of benzene among adults in",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.88,
+    "id": "o776"
+   },
+   {
+    "text": "the United States: Data from the National Health and",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.932,
+    "id": "o777"
+   },
+   {
+    "text": "Nutrition Examination Survey 2003-2006 and 2009-",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.815,
+    "id": "o778"
+   },
+   {
+    "text": "2018",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 1.0,
+    "id": "o779"
+   },
+   {
+    "text": "S. Chang",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.635,
+    "id": "o780"
+   },
+   {
+    "text": "Michael",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.959,
+    "id": "o781"
+   },
+   {
+    "text": "Kevin",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 1.0,
+    "id": "o782"
+   },
+   {
+    "text": "Moore, MD, MPH",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.764,
+    "id": "o783"
+   },
+   {
+    "text": "Nicole Trepanowski, BS",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.966,
+    "id": "o784"
+   },
+   {
+    "text": "Tulay Koru-Sengul, PhD, MHS",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.911,
+    "id": "o785"
+   },
+   {
+    "text": "Rebecca",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.73,
+    "id": "o786"
+   },
+   {
+    "text": "Hartman; MD; MPH",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.583,
+    "id": "o787"
+   },
+   {
+    "text": "Published: September 09, 2021",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.985,
+    "id": "o788"
+   },
+   {
+    "text": "DOI: htt",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.575,
+    "id": "o789"
+   },
+   {
+    "text": "Sii jaad 2021.09.003",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.527,
+    "id": "o790"
+   },
+   {
+    "text": "'lumX Metrics",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.933,
+    "id": "o791"
+   },
+   {
+    "text": "To the Editor; Sunscreens",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.949,
+    "id": "o792"
+   },
+   {
+    "text": "regulated",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.668,
+    "id": "o793"
+   },
+   {
+    "text": "Valisure ,",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.642,
+    "id": "o794"
+   },
+   {
+    "text": "as over-the-counter drugs",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.828,
+    "id": "o795"
+   },
+   {
+    "text": "an independent pharmacel",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.696,
+    "id": "o796"
+   },
+   {
+    "text": "ed levels",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.979,
+    "id": "o797"
+   },
+   {
+    "text": "known huma",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.991,
+    "id": "o798"
+   },
+   {
+    "text": "atches of",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.99,
+    "id": "o799"
+   },
+   {
+    "text": "3 times the",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.839,
+    "id": "o800"
+   },
+   {
+    "text": "sunscreen and after-sun care",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.987,
+    "id": "o801"
+   },
+   {
+    "text": "US Food and Drug Administra",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.791,
+    "id": "o802"
+   },
+   {
+    "text": "million) 2.3",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.715,
+    "id": "o803"
+   },
+   {
+    "text": "Thus, it is",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.954,
+    "id": "o804"
+   },
+   {
+    "text": "Benzene exposure",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.743,
+    "id": "o805"
+   },
+   {
+    "text": "strongly",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 1.0,
+    "id": "o806"
+   },
+   {
+    "text": "important t0 understand syster",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.662,
+    "id": "o807"
+   },
+   {
+    "text": "ntext of sunscreen",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.633,
+    "id": "o808"
+   },
+   {
+    "text": "In this retrospeclive cross-",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.8,
+    "id": "o809"
+   },
+   {
+    "text": "use",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.973,
+    "id": "o810"
+   },
+   {
+    "text": "National Health",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 1.0,
+    "id": "o811"
+   },
+   {
+    "text": "Nutritio",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.948,
+    "id": "o812"
+   },
+   {
+    "text": "and",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.987,
+    "id": "o813"
+   },
+   {
+    "text": "adults aged 20 years",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.974,
+    "id": "o814"
+   },
+   {
+    "text": "Iwho use sunscreen",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.945,
+    "id": "o815"
+   },
+   {
+    "text": "use and bl",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.801,
+    "id": "o816"
+   },
+   {
+    "text": "for 10,861 adu",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.996,
+    "id": "o817"
+   },
+   {
+    "text": "estimate of 15",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.693,
+    "id": "o818"
+   },
+   {
+    "text": "gas",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 1.0,
+    "id": "o819"
+   },
+   {
+    "text": "iing det",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.747,
+    "id": "o820"
+   }
+  ]
+ }
+}

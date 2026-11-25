@@ -1,0 +1,98 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 54.81,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 4.08,
+    "text": "I can't respect a doctor who proposes seed oils as part of his diet."
+   },
+   {
+    "id": "t2",
+    "start": 4.08,
+    "end": 8.88,
+    "text": "I never asked for your respect. Nameless, faceless troll person who's in a troll farm in China."
+   },
+   {
+    "id": "t3",
+    "start": 8.88,
+    "end": 12.4,
+    "text": "The seed oils thing is really funny. I get smacked for that all the time. You know, I was curious"
+   },
+   {
+    "id": "t4",
+    "start": 12.4,
+    "end": 15.28,
+    "text": "about the issue because so many people are talking about seed oils being bad. They've done"
+   },
+   {
+    "id": "t5",
+    "start": 15.28,
+    "end": 18.96,
+    "text": "multiple studies where they take people who eat a lot of saturated fats, which are totally fine,"
+   },
+   {
+    "id": "t6",
+    "start": 18.96,
+    "end": 22.72,
+    "text": "by the way, but they replace some fraction of those with seed oils. And in almost every study,"
+   },
+   {
+    "id": "t7",
+    "start": 22.72,
+    "end": 26.48,
+    "text": "the people are months later healthier. And so like the idea that seed oils are bad for you"
+   },
+   {
+    "id": "t8",
+    "start": 26.48,
+    "end": 32.48,
+    "text": "is usually concluded by folks that are like a really deep into lipidology research and they're"
+   },
+   {
+    "id": "t9",
+    "start": 32.48,
+    "end": 37.52,
+    "text": "inferring that seed oil should be bad for you based on various cooking process modifications."
+   },
+   {
+    "id": "t10",
+    "start": 37.52,
+    "end": 41.44,
+    "text": "But inference is dope and I use it all the time in decision making, but it never beats actual"
+   },
+   {
+    "id": "t11",
+    "start": 41.44,
+    "end": 45.52,
+    "text": "empirical randomized control trials because that's like what the real world actually is. It's like,"
+   },
+   {
+    "id": "t12",
+    "start": 45.52,
+    "end": 49.6,
+    "text": "well, I think Stacy likes me. Go ask her. She's like, no, you're like, okay, I was wrong."
+   },
+   {
+    "id": "t13",
+    "start": 49.6,
+    "end": 54.4,
+    "text": "Inference doesn't beat the real thing. So seed oils are super great for your health. They're totally"
+   },
+   {
+    "id": "t14",
+    "start": 54.4,
+    "end": 54.8,
+    "text": "fine."
+   }
+  ]
+ }
+}

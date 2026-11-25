@@ -1,0 +1,412 @@
+{
+ "video_id": "v107",
+ "filename": "new_TikTok_7139253224883653894.mp4",
+ "relative_path": "new_TikTok_7139253224883653894.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@oftalmovillarreal",
+ "extracted_at": "2026-11-23T08:45:56",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.992,
+  "duration_seconds": 30.21,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.6,
+    "text": "Estás circulando en redes videos de personas que están utilizando un procedimiento láser"
+   },
+   {
+    "id": "t2",
+    "start": 5.6,
+    "end": 8.08,
+    "text": "para cambiar el color de sus ojos."
+   },
+   {
+    "id": "t3",
+    "start": 8.08,
+    "end": 12.32,
+    "text": "Mucho cuidado con lo que haces con tus ojos, este procedimiento no está avalado por los"
+   },
+   {
+    "id": "t4",
+    "start": 12.32,
+    "end": 15.68,
+    "text": "organismos internacionales de ortalmología."
+   },
+   {
+    "id": "t5",
+    "start": 15.68,
+    "end": 21.0,
+    "text": "Utilizan un láser para remover el pigmento que tenemos en el iris, pudiendo producir"
+   },
+   {
+    "id": "t6",
+    "start": 21.0,
+    "end": 26.72,
+    "text": "muchas complicaciones para nuestros ojos, incluso poniendo en riesgo nuestra visión."
+   },
+   {
+    "id": "t7",
+    "start": 26.72,
+    "end": 27.44,
+    "text": "Cuida tus ojos."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 16,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "kok",
+    "confidence": 0.891
+   },
+   {
+    "time": 2.0,
+    "text": "kok",
+    "confidence": 0.929
+   },
+   {
+    "time": 2.0,
+    "text": "Antonio Villarreal",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Dr",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Oftalmologo especialista en",
+    "confidence": 0.994
+   },
+   {
+    "time": 2.0,
+    "text": "Cirugia Refractiva Laser y Catarata",
+    "confidence": 0.599
+   },
+   {
+    "time": 4.0,
+    "text": "AFTER 2 SESSIONS",
+    "confidence": 0.773
+   },
+   {
+    "time": 4.0,
+    "text": "oftalmovillarreal",
+    "confidence": 0.586
+   },
+   {
+    "time": 4.0,
+    "text": "Antonio Villarreal",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Dr.",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Oftalmologo especialista en",
+    "confidence": 0.994
+   },
+   {
+    "time": 4.0,
+    "text": "Cirugia Refractiva Laser y Catarata",
+    "confidence": 0.799
+   },
+   {
+    "time": 6.0,
+    "text": "AFTER 3 SESSIONS",
+    "confidence": 0.988
+   },
+   {
+    "time": 8.0,
+    "text": "AFTER 7 SESSIONS",
+    "confidence": 0.976
+   },
+   {
+    "time": 10.0,
+    "text": "AFTER 11 SESSIONS",
+    "confidence": 0.956
+   },
+   {
+    "time": 10.0,
+    "text": "oftalovillarreal",
+    "confidence": 0.51
+   },
+   {
+    "time": 12.0,
+    "text": "AFTER 15 SESSIONS",
+    "confidence": 0.938
+   },
+   {
+    "time": 14.0,
+    "text": "weeks after",
+    "confidence": 0.758
+   },
+   {
+    "time": 16.0,
+    "text": "weeks after",
+    "confidence": 0.787
+   },
+   {
+    "time": 16.0,
+    "text": "nikTok",
+    "confidence": 0.584
+   },
+   {
+    "time": 16.0,
+    "text": "oftalmovillarreal",
+    "confidence": 0.713
+   },
+   {
+    "time": 18.0,
+    "text": "oftolmovillarreal",
+    "confidence": 0.514
+   },
+   {
+    "time": 20.0,
+    "text": "MikTok",
+    "confidence": 0.527
+   },
+   {
+    "time": 28.0,
+    "text": "Dr. Antonio Villarreal",
+    "confidence": 0.953
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 0.875
+   },
+   {
+    "time": 28.0,
+    "text": "oftalmovillarreal",
+    "confidence": 0.626
+   },
+   {
+    "time": 30.0,
+    "text": "Dr. Antonio Villarreal",
+    "confidence": 0.952
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 0.865
+   },
+   {
+    "time": 30.0,
+    "text": "oftalmovillarreal",
+    "confidence": 0.626
+   }
+  ],
+  "captions": [
+   {
+    "text": "kok",
+    "start": 0.0,
+    "end": 2.0,
+    "confidence": 0.929,
+    "id": "o1"
+   },
+   {
+    "text": "Antonio Villarreal",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o2"
+   },
+   {
+    "text": "Dr",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o3"
+   },
+   {
+    "text": "Oftalmologo especialista en",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.994,
+    "id": "o4"
+   },
+   {
+    "text": "Cirugia Refractiva Laser y Catarata",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.599,
+    "id": "o5"
+   },
+   {
+    "text": "AFTER 2 SESSIONS",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.773,
+    "id": "o6"
+   },
+   {
+    "text": "oftalmovillarreal",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.586,
+    "id": "o7"
+   },
+   {
+    "text": "Antonio Villarreal",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o8"
+   },
+   {
+    "text": "Dr.",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "Oftalmologo especialista en",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.994,
+    "id": "o10"
+   },
+   {
+    "text": "Cirugia Refractiva Laser y Catarata",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.799,
+    "id": "o11"
+   },
+   {
+    "text": "AFTER 3 SESSIONS",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.988,
+    "id": "o12"
+   },
+   {
+    "text": "AFTER 7 SESSIONS",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.976,
+    "id": "o13"
+   },
+   {
+    "text": "AFTER 11 SESSIONS",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.956,
+    "id": "o14"
+   },
+   {
+    "text": "oftalovillarreal",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.51,
+    "id": "o15"
+   },
+   {
+    "text": "AFTER 15 SESSIONS",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.938,
+    "id": "o16"
+   },
+   {
+    "text": "weeks after",
+    "start": 14.0,
+    "end": 16.0,
+    "confidence": 0.787,
+    "id": "o17"
+   },
+   {
+    "text": "nikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.584,
+    "id": "o18"
+   },
+   {
+    "text": "oftalmovillarreal",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.713,
+    "id": "o19"
+   },
+   {
+    "text": "oftolmovillarreal",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.514,
+    "id": "o20"
+   },
+   {
+    "text": "MikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.527,
+    "id": "o21"
+   },
+   {
+    "text": "Dr. Antonio Villarreal",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.953,
+    "id": "o22"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.875,
+    "id": "o23"
+   },
+   {
+    "text": "oftalmovillarreal",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.626,
+    "id": "o24"
+   },
+   {
+    "text": "Dr. Antonio Villarreal",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.952,
+    "id": "o25"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.865,
+    "id": "o26"
+   },
+   {
+    "text": "oftalmovillarreal",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.626,
+    "id": "o27"
+   }
+  ]
+ }
+}

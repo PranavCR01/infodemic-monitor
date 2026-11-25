@@ -1,0 +1,1488 @@
+{
+ "video_id": "v166",
+ "filename": "new_TikTok_7635224092433599766.mp4",
+ "relative_path": "new_TikTok_7635224092433599766.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@farmaceuticofernandez",
+ "extracted_at": "2026-11-23T08:45:59",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.997,
+  "duration_seconds": 67.04,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.4,
+    "text": "Este no soy yo, aunque lo parezca."
+   },
+   {
+    "id": "t2",
+    "start": 2.4,
+    "end": 7.28,
+    "text": "Están usando mi cara y mi voz para con inteligencia artificial crear estas cuentas falsas y hacer estos vídeos,"
+   },
+   {
+    "id": "t3",
+    "start": 7.28,
+    "end": 10.24,
+    "text": "alguno como este con más de 5 millones de reproducciones."
+   },
+   {
+    "id": "t4",
+    "start": 10.24,
+    "end": 13.2,
+    "text": "Dan consejos de salud y venden cosas como si lo estuviera haciendo yo,"
+   },
+   {
+    "id": "t5",
+    "start": 13.2,
+    "end": 16.64,
+    "text": "pero no son ciertos con el peligro que eso conlleva para que lo escuche y se lo crea."
+   },
+   {
+    "id": "t6",
+    "start": 16.64,
+    "end": 20.8,
+    "text": "Y las redes sociales no hacen nada, por más que lo denuncias dicen que no incumple ninguna norma."
+   },
+   {
+    "id": "t7",
+    "start": 20.8,
+    "end": 24.16,
+    "text": "A ver, en el fondo yo creo que se nota que es una inteligencia artificial."
+   },
+   {
+    "id": "t8",
+    "start": 24.16,
+    "end": 29.6,
+    "text": "Si tu mujer duerme de lado, valora la más de lo que te das cuenta, porque dormir de lado no es una coincidencia."
+   },
+   {
+    "id": "t9",
+    "start": 29.6,
+    "end": 33.12,
+    "text": "Pero es cierto que cada vez está mejor logrado y es más difícil de diferenciar."
+   },
+   {
+    "id": "t10",
+    "start": 33.12,
+    "end": 38.16,
+    "text": "Yo ya lo he denunciado en la Agencia Española de Protección de Datos, pero es verdad que para que eso resulte en algo lleva tiempo."
+   },
+   {
+    "id": "t11",
+    "start": 38.16,
+    "end": 48.08,
+    "text": "Y o empiezan a agilizarlo y a protegernos de esto, las redes sociales se van a llenar de inteligencias artificiales dando consejos falsos de salud y vendiendo productos mágicos con la cara de tus sanitarios de confianza."
+   },
+   {
+    "id": "t12",
+    "start": 48.08,
+    "end": 52.56,
+    "text": "Mis únicas cuentas son a Roba Farmacéutico Fernández en Instagram, Facebook, YouTube y TikTok."
+   },
+   {
+    "id": "t13",
+    "start": 52.56,
+    "end": 55.68,
+    "text": "Todas están verificadas y jamás público desde otro sitio."
+   },
+   {
+    "id": "t14",
+    "start": 55.68,
+    "end": 59.08,
+    "text": "Bueno, el perfil de farmasexólogo Fernández en Instagram también es mío."
+   },
+   {
+    "id": "t15",
+    "start": 59.08,
+    "end": 63.0,
+    "text": "Pero si el vídeo no viene de ahí, probablemente lo que diga no he sido yo el que lo ha dicho."
+   },
+   {
+    "id": "t16",
+    "start": 63.0,
+    "end": 66.84,
+    "text": "Si es que ya no me puedo fiar ni de mí mismo, a veces doy unos consejos malísimos."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 34,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Dr Gracias",
+    "confidence": 0.621
+   },
+   {
+    "time": 0.0,
+    "text": "@aldowita08",
+    "confidence": 0.953
+   },
+   {
+    "time": 0.0,
+    "text": "7340",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "29,4 mil",
+    "confidence": 0.677
+   },
+   {
+    "time": 0.0,
+    "text": "350,4 mil",
+    "confidence": 0.936
+   },
+   {
+    "time": 0.0,
+    "text": "Siguiendo",
+    "confidence": 0.908
+   },
+   {
+    "time": 0.0,
+    "text": "Seguidores",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "Me gusta",
+    "confidence": 0.985
+   },
+   {
+    "time": 0.0,
+    "text": "Seguir",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "Mensaje",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "Este no SOV yo",
+    "confidence": 0.571
+   },
+   {
+    "time": 0.0,
+    "text": "aunque lo parezca",
+    "confidence": 0.943
+   },
+   {
+    "time": 0.0,
+    "text": "Anclado",
+    "confidence": 0.999
+   },
+   {
+    "time": 0.0,
+    "text": "Nunca Ignores",
+    "confidence": 0.942
+   },
+   {
+    "time": 0.0,
+    "text": "1371 mil",
+    "confidence": 0.57
+   },
+   {
+    "time": 0.0,
+    "text": "5,7 mill:",
+    "confidence": 0.585
+   },
+   {
+    "time": 0.0,
+    "text": "muler duerme",
+    "confidence": 0.538
+   },
+   {
+    "time": 0.0,
+    "text": "Por Quc Dormir Con",
+    "confidence": 0.676
+   },
+   {
+    "time": 0.0,
+    "text": "Ventilador Es Peligroso",
+    "confidence": 0.928
+   },
+   {
+    "time": 2.0,
+    "text": "Dr Gracias",
+    "confidence": 0.603
+   },
+   {
+    "time": 2.0,
+    "text": "@aldowita08",
+    "confidence": 0.95
+   },
+   {
+    "time": 2.0,
+    "text": "7340",
+    "confidence": 0.998
+   },
+   {
+    "time": 2.0,
+    "text": "29,4 mil",
+    "confidence": 0.711
+   },
+   {
+    "time": 2.0,
+    "text": "350,4 mil",
+    "confidence": 0.933
+   },
+   {
+    "time": 2.0,
+    "text": "Siguiendo",
+    "confidence": 0.993
+   },
+   {
+    "time": 2.0,
+    "text": "Seguidores",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Me gusta",
+    "confidence": 0.986
+   },
+   {
+    "time": 2.0,
+    "text": "Seguir",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Mensaje",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Este no SOV yo",
+    "confidence": 0.568
+   },
+   {
+    "time": 2.0,
+    "text": "aunque lo parezca",
+    "confidence": 0.944
+   },
+   {
+    "time": 2.0,
+    "text": "Anclado",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "siclones",
+    "confidence": 0.92
+   },
+   {
+    "time": 2.0,
+    "text": "Tu Columni",
+    "confidence": 0.576
+   },
+   {
+    "time": 2.0,
+    "text": "Nunca Ignores",
+    "confidence": 0.936
+   },
+   {
+    "time": 2.0,
+    "text": "1371 mil",
+    "confidence": 0.686
+   },
+   {
+    "time": 2.0,
+    "text": "Por Quc Dormir Con",
+    "confidence": 0.583
+   },
+   {
+    "time": 2.0,
+    "text": "Ventilador Es Peligroso",
+    "confidence": 0.931
+   },
+   {
+    "time": 4.0,
+    "text": "Anclado",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Nunca Ignores Si Tu Mujer",
+    "confidence": 0.971
+   },
+   {
+    "time": 4.0,
+    "text": "Duerme De Lado",
+    "confidence": 0.885
+   },
+   {
+    "time": 4.0,
+    "text": "para con inteligencia",
+    "confidence": 0.813
+   },
+   {
+    "time": 4.0,
+    "text": "artificfal",
+    "confidence": 0.813
+   },
+   {
+    "time": 4.0,
+    "text": "5,7 mill:",
+    "confidence": 0.593
+   },
+   {
+    "time": 6.0,
+    "text": "Anclado",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "Nunca Ignores Si Tu Mujer",
+    "confidence": 0.854
+   },
+   {
+    "time": 6.0,
+    "text": "Duerme De Lado",
+    "confidence": 0.773
+   },
+   {
+    "time": 6.0,
+    "text": "crear estas cuemtas falsas",
+    "confidence": 0.876
+   },
+   {
+    "time": 6.0,
+    "text": "5,7 mill",
+    "confidence": 0.977
+   },
+   {
+    "time": 8.0,
+    "text": "Anclado",
+    "confidence": 0.964
+   },
+   {
+    "time": 8.0,
+    "text": "Nunca Ignores Si Tu Mujer",
+    "confidence": 0.983
+   },
+   {
+    "time": 8.0,
+    "text": "Duerme De Lado",
+    "confidence": 0.89
+   },
+   {
+    "time": 8.0,
+    "text": "yhacer estos vdeos,alguno",
+    "confidence": 0.61
+   },
+   {
+    "time": 8.0,
+    "text": "como este",
+    "confidence": 0.851
+   },
+   {
+    "time": 8.0,
+    "text": "5,7 mill:",
+    "confidence": 0.68
+   },
+   {
+    "time": 10.0,
+    "text": "Anclado",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "Nunca Ignores Si Tu Mujer",
+    "confidence": 0.647
+   },
+   {
+    "time": 10.0,
+    "text": "Duerme De Lado",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "con mas de 5 millnes",
+    "confidence": 0.832
+   },
+   {
+    "time": 10.0,
+    "text": "reproducciones",
+    "confidence": 0.697
+   },
+   {
+    "time": 12.0,
+    "text": "Dan consejos de saludy",
+    "confidence": 0.807
+   },
+   {
+    "time": 12.0,
+    "text": "venden cosas",
+    "confidence": 0.997
+   },
+   {
+    "time": 14.0,
+    "text": "pero no son ciertos,",
+    "confidence": 0.547
+   },
+   {
+    "time": 14.0,
+    "text": "K",
+    "confidence": 0.903
+   },
+   {
+    "time": 16.0,
+    "text": "para el que lo escuche y se lo",
+    "confidence": 0.716
+   },
+   {
+    "time": 16.0,
+    "text": "crea",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "Y las redes sociales no",
+    "confidence": 0.791
+   },
+   {
+    "time": 18.0,
+    "text": "hacen nada",
+    "confidence": 0.513
+   },
+   {
+    "time": 18.0,
+    "text": "K",
+    "confidence": 0.837
+   },
+   {
+    "time": 20.0,
+    "text": "dicen que no incumplen",
+    "confidence": 0.774
+   },
+   {
+    "time": 20.0,
+    "text": "ninguna norma",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "Aver , en el fondo yo creo",
+    "confidence": 0.722
+   },
+   {
+    "time": 24.0,
+    "text": "que se nota que es una",
+    "confidence": 0.802
+   },
+   {
+    "time": 24.0,
+    "text": "inteligencia artificial",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "Nunca Ignores Si Tu Mujer",
+    "confidence": 0.895
+   },
+   {
+    "time": 26.0,
+    "text": "Duerme De Lado",
+    "confidence": 0.864
+   },
+   {
+    "time": 28.0,
+    "text": "Nunca Ignores Si Tu Mujer",
+    "confidence": 0.97
+   },
+   {
+    "time": 28.0,
+    "text": "Duerme De Lado",
+    "confidence": 0.752
+   },
+   {
+    "time": 30.0,
+    "text": "c",
+    "confidence": 0.624
+   },
+   {
+    "time": 30.0,
+    "text": "Pero es cierto que cada vez",
+    "confidence": 0.878
+   },
+   {
+    "time": 32.0,
+    "text": "esta mejor logrado y es mas",
+    "confidence": 0.609
+   },
+   {
+    "time": 32.0,
+    "text": "dificil de diferenciar",
+    "confidence": 0.862
+   },
+   {
+    "time": 34.0,
+    "text": "Yo ya lo he denunciado",
+    "confidence": 0.638
+   },
+   {
+    "time": 36.0,
+    "text": "pero es verdad que para que",
+    "confidence": 0.864
+   },
+   {
+    "time": 36.0,
+    "text": "eso resulte en algo",
+    "confidence": 0.839
+   },
+   {
+    "time": 38.0,
+    "text": "Ileva tiempo",
+    "confidence": 0.891
+   },
+   {
+    "time": 40.0,
+    "text": "empiezan",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "Yo",
+    "confidence": 0.999
+   },
+   {
+    "time": 40.0,
+    "text": "agilizarlo y a",
+    "confidence": 0.959
+   },
+   {
+    "time": 40.0,
+    "text": "protegernos de esto",
+    "confidence": 0.982
+   },
+   {
+    "time": 42.0,
+    "text": "de inteligencias artificiales",
+    "confidence": 0.991
+   },
+   {
+    "time": 46.0,
+    "text": "con Ia cara de tus sanitarios",
+    "confidence": 0.644
+   },
+   {
+    "time": 46.0,
+    "text": "de confianza",
+    "confidence": 0.533
+   },
+   {
+    "time": 50.0,
+    "text": "Instagram, Facebook,",
+    "confidence": 0.987
+   },
+   {
+    "time": 50.0,
+    "text": "en",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "Youtube y TikTok",
+    "confidence": 0.865
+   },
+   {
+    "time": 52.0,
+    "text": "Instagram, Facebook",
+    "confidence": 0.99
+   },
+   {
+    "time": 52.0,
+    "text": "en",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "Youtube y TikTok",
+    "confidence": 0.88
+   },
+   {
+    "time": 54.0,
+    "text": "yjamas publico desde otro",
+    "confidence": 0.982
+   },
+   {
+    "time": 54.0,
+    "text": "sitio",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "Bueno, el perfil de",
+    "confidence": 0.816
+   },
+   {
+    "time": 56.0,
+    "text": "FarmasexologoFernandez",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.0,
+    "text": "Instagram tambien es mio",
+    "confidence": 0.864
+   },
+   {
+    "time": 58.0,
+    "text": "en",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.0,
+    "text": "Pero si el video no viene de",
+    "confidence": 0.835
+   },
+   {
+    "time": 60.0,
+    "text": "ahi,",
+    "confidence": 0.908
+   },
+   {
+    "time": 62.0,
+    "text": "no he sido yo el que lo ha",
+    "confidence": 0.697
+   },
+   {
+    "time": 62.0,
+    "text": "dicho",
+    "confidence": 1.0
+   },
+   {
+    "time": 64.0,
+    "text": "Sies que ya no me puedo fiar",
+    "confidence": 0.811
+   },
+   {
+    "time": 64.0,
+    "text": "ni de mi mismo",
+    "confidence": 0.604
+   },
+   {
+    "time": 66.0,
+    "text": "Aveces doy unos consejos",
+    "confidence": 0.963
+   },
+   {
+    "time": 66.0,
+    "text": "malisimos",
+    "confidence": 1.0
+   }
+  ],
+  "captions": [
+   {
+    "text": "Dr Gracias",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.621,
+    "id": "o1"
+   },
+   {
+    "text": "@aldowita08",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.953,
+    "id": "o2"
+   },
+   {
+    "text": "7340",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o3"
+   },
+   {
+    "text": "29,4 mil",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.677,
+    "id": "o4"
+   },
+   {
+    "text": "350,4 mil",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.936,
+    "id": "o5"
+   },
+   {
+    "text": "Siguiendo",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.908,
+    "id": "o6"
+   },
+   {
+    "text": "Seguidores",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o7"
+   },
+   {
+    "text": "Me gusta",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.985,
+    "id": "o8"
+   },
+   {
+    "text": "Seguir",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "Mensaje",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o10"
+   },
+   {
+    "text": "Este no SOV yo",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.571,
+    "id": "o11"
+   },
+   {
+    "text": "aunque lo parezca",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.943,
+    "id": "o12"
+   },
+   {
+    "text": "Anclado",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o13"
+   },
+   {
+    "text": "Nunca Ignores",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.942,
+    "id": "o14"
+   },
+   {
+    "text": "1371 mil",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.57,
+    "id": "o15"
+   },
+   {
+    "text": "5,7 mill:",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.585,
+    "id": "o16"
+   },
+   {
+    "text": "muler duerme",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.538,
+    "id": "o17"
+   },
+   {
+    "text": "Por Quc Dormir Con",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.676,
+    "id": "o18"
+   },
+   {
+    "text": "Ventilador Es Peligroso",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.928,
+    "id": "o19"
+   },
+   {
+    "text": "Dr Gracias",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.603,
+    "id": "o20"
+   },
+   {
+    "text": "@aldowita08",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.95,
+    "id": "o21"
+   },
+   {
+    "text": "7340",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.998,
+    "id": "o22"
+   },
+   {
+    "text": "29,4 mil",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.711,
+    "id": "o23"
+   },
+   {
+    "text": "350,4 mil",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.933,
+    "id": "o24"
+   },
+   {
+    "text": "Siguiendo",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.993,
+    "id": "o25"
+   },
+   {
+    "text": "Seguidores",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o26"
+   },
+   {
+    "text": "Me gusta",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.986,
+    "id": "o27"
+   },
+   {
+    "text": "Seguir",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o28"
+   },
+   {
+    "text": "Mensaje",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o29"
+   },
+   {
+    "text": "Este no SOV yo",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.568,
+    "id": "o30"
+   },
+   {
+    "text": "aunque lo parezca",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.944,
+    "id": "o31"
+   },
+   {
+    "text": "Anclado",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.999,
+    "id": "o32"
+   },
+   {
+    "text": "siclones",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.92,
+    "id": "o33"
+   },
+   {
+    "text": "Tu Columni",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.576,
+    "id": "o34"
+   },
+   {
+    "text": "Nunca Ignores",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.936,
+    "id": "o35"
+   },
+   {
+    "text": "1371 mil",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.686,
+    "id": "o36"
+   },
+   {
+    "text": "Por Quc Dormir Con",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.583,
+    "id": "o37"
+   },
+   {
+    "text": "Ventilador Es Peligroso",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.931,
+    "id": "o38"
+   },
+   {
+    "text": "Anclado",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o39"
+   },
+   {
+    "text": "Nunca Ignores Si Tu Mujer",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.971,
+    "id": "o40"
+   },
+   {
+    "text": "Duerme De Lado",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.885,
+    "id": "o41"
+   },
+   {
+    "text": "para con inteligencia",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.813,
+    "id": "o42"
+   },
+   {
+    "text": "artificfal",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.813,
+    "id": "o43"
+   },
+   {
+    "text": "5,7 mill:",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.593,
+    "id": "o44"
+   },
+   {
+    "text": "Anclado",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o45"
+   },
+   {
+    "text": "Nunca Ignores Si Tu Mujer",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.854,
+    "id": "o46"
+   },
+   {
+    "text": "Duerme De Lado",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.773,
+    "id": "o47"
+   },
+   {
+    "text": "crear estas cuemtas falsas",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.876,
+    "id": "o48"
+   },
+   {
+    "text": "5,7 mill",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.977,
+    "id": "o49"
+   },
+   {
+    "text": "Anclado",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.964,
+    "id": "o50"
+   },
+   {
+    "text": "Nunca Ignores Si Tu Mujer",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.983,
+    "id": "o51"
+   },
+   {
+    "text": "Duerme De Lado",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.89,
+    "id": "o52"
+   },
+   {
+    "text": "yhacer estos vdeos,alguno",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.61,
+    "id": "o53"
+   },
+   {
+    "text": "como este",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.851,
+    "id": "o54"
+   },
+   {
+    "text": "5,7 mill:",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.68,
+    "id": "o55"
+   },
+   {
+    "text": "Anclado",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o56"
+   },
+   {
+    "text": "Nunca Ignores Si Tu Mujer",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.647,
+    "id": "o57"
+   },
+   {
+    "text": "Duerme De Lado",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o58"
+   },
+   {
+    "text": "con mas de 5 millnes",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.832,
+    "id": "o59"
+   },
+   {
+    "text": "reproducciones",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.697,
+    "id": "o60"
+   },
+   {
+    "text": "Dan consejos de saludy",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.807,
+    "id": "o61"
+   },
+   {
+    "text": "venden cosas",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.997,
+    "id": "o62"
+   },
+   {
+    "text": "pero no son ciertos,",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.547,
+    "id": "o63"
+   },
+   {
+    "text": "K",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.903,
+    "id": "o64"
+   },
+   {
+    "text": "para el que lo escuche y se lo",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.716,
+    "id": "o65"
+   },
+   {
+    "text": "crea",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o66"
+   },
+   {
+    "text": "Y las redes sociales no",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.791,
+    "id": "o67"
+   },
+   {
+    "text": "hacen nada",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.513,
+    "id": "o68"
+   },
+   {
+    "text": "K",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.837,
+    "id": "o69"
+   },
+   {
+    "text": "dicen que no incumplen",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.774,
+    "id": "o70"
+   },
+   {
+    "text": "ninguna norma",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o71"
+   },
+   {
+    "text": "Aver , en el fondo yo creo",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.722,
+    "id": "o72"
+   },
+   {
+    "text": "que se nota que es una",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.802,
+    "id": "o73"
+   },
+   {
+    "text": "inteligencia artificial",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o74"
+   },
+   {
+    "text": "Nunca Ignores Si Tu Mujer",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.895,
+    "id": "o75"
+   },
+   {
+    "text": "Duerme De Lado",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.864,
+    "id": "o76"
+   },
+   {
+    "text": "Nunca Ignores Si Tu Mujer",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.97,
+    "id": "o77"
+   },
+   {
+    "text": "Duerme De Lado",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.752,
+    "id": "o78"
+   },
+   {
+    "text": "c",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.624,
+    "id": "o79"
+   },
+   {
+    "text": "Pero es cierto que cada vez",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.878,
+    "id": "o80"
+   },
+   {
+    "text": "esta mejor logrado y es mas",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.609,
+    "id": "o81"
+   },
+   {
+    "text": "dificil de diferenciar",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.862,
+    "id": "o82"
+   },
+   {
+    "text": "Yo ya lo he denunciado",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.638,
+    "id": "o83"
+   },
+   {
+    "text": "pero es verdad que para que",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.864,
+    "id": "o84"
+   },
+   {
+    "text": "eso resulte en algo",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.839,
+    "id": "o85"
+   },
+   {
+    "text": "Ileva tiempo",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.891,
+    "id": "o86"
+   },
+   {
+    "text": "empiezan",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o87"
+   },
+   {
+    "text": "Yo",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.999,
+    "id": "o88"
+   },
+   {
+    "text": "agilizarlo y a",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.959,
+    "id": "o89"
+   },
+   {
+    "text": "protegernos de esto",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.982,
+    "id": "o90"
+   },
+   {
+    "text": "de inteligencias artificiales",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.991,
+    "id": "o91"
+   },
+   {
+    "text": "con Ia cara de tus sanitarios",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.644,
+    "id": "o92"
+   },
+   {
+    "text": "de confianza",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.533,
+    "id": "o93"
+   },
+   {
+    "text": "Instagram, Facebook,",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.987,
+    "id": "o94"
+   },
+   {
+    "text": "en",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o95"
+   },
+   {
+    "text": "Youtube y TikTok",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.865,
+    "id": "o96"
+   },
+   {
+    "text": "Instagram, Facebook",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.99,
+    "id": "o97"
+   },
+   {
+    "text": "en",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o98"
+   },
+   {
+    "text": "Youtube y TikTok",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.88,
+    "id": "o99"
+   },
+   {
+    "text": "yjamas publico desde otro",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.982,
+    "id": "o100"
+   },
+   {
+    "text": "sitio",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o101"
+   },
+   {
+    "text": "Bueno, el perfil de",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.816,
+    "id": "o102"
+   },
+   {
+    "text": "FarmasexologoFernandez",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 1.0,
+    "id": "o103"
+   },
+   {
+    "text": "Instagram tambien es mio",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.864,
+    "id": "o104"
+   },
+   {
+    "text": "en",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 1.0,
+    "id": "o105"
+   },
+   {
+    "text": "Pero si el video no viene de",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.835,
+    "id": "o106"
+   },
+   {
+    "text": "ahi,",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.908,
+    "id": "o107"
+   },
+   {
+    "text": "no he sido yo el que lo ha",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.697,
+    "id": "o108"
+   },
+   {
+    "text": "dicho",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 1.0,
+    "id": "o109"
+   },
+   {
+    "text": "Sies que ya no me puedo fiar",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.811,
+    "id": "o110"
+   },
+   {
+    "text": "ni de mi mismo",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.604,
+    "id": "o111"
+   },
+   {
+    "text": "Aveces doy unos consejos",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.963,
+    "id": "o112"
+   },
+   {
+    "text": "malisimos",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 1.0,
+    "id": "o113"
+   }
+  ]
+ }
+}

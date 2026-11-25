@@ -1,0 +1,1848 @@
+{
+ "video_id": "v122",
+ "filename": "new_TikTok_7227664343737978117.mp4",
+ "relative_path": "new_TikTok_7227664343737978117.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@alquimiamariel",
+ "extracted_at": "2026-11-23T08:45:57",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.985,
+  "duration_seconds": 61.23,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 4.6,
+    "text": "Quiero decirle que ya se ha descubierto que los medicamentos para el colesterol,"
+   },
+   {
+    "id": "t2",
+    "start": 4.6,
+    "end": 11.4,
+    "text": "los que llaman las famosas estatinas, como Lipitor, Crestor, Atorbastatin y todas"
+   },
+   {
+    "id": "t3",
+    "start": 11.4,
+    "end": 17.28,
+    "text": "esas estatinas, hacen daño al corazón. Está demostrado que interfieren con la"
+   },
+   {
+    "id": "t4",
+    "start": 17.28,
+    "end": 22.88,
+    "text": "creación de COQ10, que necesita el músculo del corazón. La única forma de"
+   },
+   {
+    "id": "t5",
+    "start": 22.88,
+    "end": 26.16,
+    "text": "bajar el colesterol es bajar los carbohidratos refinados."
+   },
+   {
+    "id": "t6",
+    "start": 26.16,
+    "end": 30.66,
+    "text": "Tejanse del tema en este de las estatinas, bajan los alimentos tipo A y automáticamente"
+   },
+   {
+    "id": "t7",
+    "start": 30.66,
+    "end": 35.24,
+    "text": "ya no tienen colesterol alto, no sigan con el tema del colesterol, les va a costar la"
+   },
+   {
+    "id": "t8",
+    "start": 35.24,
+    "end": 42.28,
+    "text": "salud, el corazón, la mente, trae demencia, por favor protejan a los suyos."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 31,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "CUIDADOW!",
+    "confidence": 0.807
+   },
+   {
+    "time": 0.0,
+    "text": "QUIERO DECIRLE",
+    "confidence": 0.941
+   },
+   {
+    "time": 0.0,
+    "text": "QUE YA SE HA",
+    "confidence": 0.819
+   },
+   {
+    "time": 0.0,
+    "text": "DESCUBIERTO QUE;",
+    "confidence": 0.89
+   },
+   {
+    "time": 1.87,
+    "text": "CUIDADOW!",
+    "confidence": 0.755
+   },
+   {
+    "time": 1.87,
+    "text": "QUIERO DECIRLE",
+    "confidence": 0.997
+   },
+   {
+    "time": 1.87,
+    "text": "QUE YA SE HA",
+    "confidence": 0.998
+   },
+   {
+    "time": 1.87,
+    "text": "DESCUBIERTO QUE,",
+    "confidence": 0.798
+   },
+   {
+    "time": 3.73,
+    "text": "LOS MEDICAMENTOS",
+    "confidence": 1.0
+   },
+   {
+    "time": 3.73,
+    "text": "PARA EL COLESTEROL,",
+    "confidence": 0.85
+   },
+   {
+    "time": 5.6,
+    "text": "LOS QUE LLAMAN:",
+    "confidence": 0.994
+   },
+   {
+    "time": 5.6,
+    "text": "LAS FAMOSAS",
+    "confidence": 1.0
+   },
+   {
+    "time": 5.6,
+    "text": "\"ESTATINAS\"",
+    "confidence": 1.0
+   },
+   {
+    "time": 7.47,
+    "text": "COMO. LIPITOR,",
+    "confidence": 0.825
+   },
+   {
+    "time": 7.47,
+    "text": "CRESTOR",
+    "confidence": 1.0
+   },
+   {
+    "time": 7.47,
+    "text": "Y ATORVASTATIN",
+    "confidence": 0.933
+   },
+   {
+    "time": 9.33,
+    "text": "COMO. LIPITOR,",
+    "confidence": 0.638
+   },
+   {
+    "time": 9.33,
+    "text": "CRESTOR",
+    "confidence": 1.0
+   },
+   {
+    "time": 9.33,
+    "text": "Y ATORVASTATIN",
+    "confidence": 0.991
+   },
+   {
+    "time": 11.2,
+    "text": "COMO. LIPITOR,",
+    "confidence": 0.86
+   },
+   {
+    "time": 11.2,
+    "text": "CRESTOR",
+    "confidence": 1.0
+   },
+   {
+    "time": 11.2,
+    "text": "Y ATORVASTATIN",
+    "confidence": 0.993
+   },
+   {
+    "time": 13.07,
+    "text": "Y TODAS ESAS",
+    "confidence": 0.926
+   },
+   {
+    "time": 13.07,
+    "text": "ESTATINAS HACEN",
+    "confidence": 0.993
+   },
+   {
+    "time": 13.07,
+    "text": "DANO AL CORAZON,",
+    "confidence": 0.894
+   },
+   {
+    "time": 14.93,
+    "text": "ESTA DEMOSTRADO",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.93,
+    "text": "QUE INTERFIEREN",
+    "confidence": 0.996
+   },
+   {
+    "time": 14.93,
+    "text": "CON LA",
+    "confidence": 0.951
+   },
+   {
+    "time": 16.8,
+    "text": "ESTA DEMOSTRADO",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.8,
+    "text": "QUE INTERFIEREN",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.8,
+    "text": "CON LA",
+    "confidence": 0.972
+   },
+   {
+    "time": 18.67,
+    "text": "CREACION",
+    "confidence": 0.784
+   },
+   {
+    "time": 18.67,
+    "text": "DE COQ1O",
+    "confidence": 0.645
+   },
+   {
+    "time": 20.53,
+    "text": "QUE LA NECESITA EL",
+    "confidence": 0.815
+   },
+   {
+    "time": 20.53,
+    "text": "MUSCULO DEL",
+    "confidence": 0.943
+   },
+   {
+    "time": 20.53,
+    "text": "CORAZON",
+    "confidence": 0.998
+   },
+   {
+    "time": 22.4,
+    "text": "LA UNICA FORMA",
+    "confidence": 0.73
+   },
+   {
+    "time": 22.4,
+    "text": "DE BAJAR EL",
+    "confidence": 0.984
+   },
+   {
+    "time": 22.4,
+    "text": "COLESTEROL",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.27,
+    "text": "ES BAJAR LOS",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.27,
+    "text": "CARBOHIDRATOS",
+    "confidence": 0.969
+   },
+   {
+    "time": 24.27,
+    "text": "REFINADOS",
+    "confidence": 0.997
+   },
+   {
+    "time": 26.13,
+    "text": "ES BAJAR LOS",
+    "confidence": 0.794
+   },
+   {
+    "time": 26.13,
+    "text": "CARBOHIDRATOS",
+    "confidence": 0.707
+   },
+   {
+    "time": 26.13,
+    "text": "REFINADOS",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "TEMA ESTE DE LAS",
+    "confidence": 0.851
+   },
+   {
+    "time": 28.0,
+    "text": "ESTATINAS",
+    "confidence": 1.0
+   },
+   {
+    "time": 29.87,
+    "text": "BAJAN LOS",
+    "confidence": 0.904
+   },
+   {
+    "time": 29.87,
+    "text": "ALIMENTOS TIPO E Y",
+    "confidence": 0.679
+   },
+   {
+    "time": 29.87,
+    "text": "AUTOMATICAMENTE,",
+    "confidence": 0.756
+   },
+   {
+    "time": 31.73,
+    "text": "YA NO TIENEN",
+    "confidence": 0.844
+   },
+   {
+    "time": 31.73,
+    "text": "COLESTEROL ALTO",
+    "confidence": 0.947
+   },
+   {
+    "time": 33.6,
+    "text": "NO SIGAN CON EL",
+    "confidence": 0.997
+   },
+   {
+    "time": 33.6,
+    "text": "TEMA DEL",
+    "confidence": 0.992
+   },
+   {
+    "time": 33.6,
+    "text": "COLESTEROL",
+    "confidence": 0.958
+   },
+   {
+    "time": 35.47,
+    "text": "LES VA A COSTAR",
+    "confidence": 0.743
+   },
+   {
+    "time": 35.47,
+    "text": "LA SALUD,",
+    "confidence": 0.992
+   },
+   {
+    "time": 37.33,
+    "text": "EL CORAZON;",
+    "confidence": 0.877
+   },
+   {
+    "time": 37.33,
+    "text": "LA MENTE,",
+    "confidence": 0.832
+   },
+   {
+    "time": 39.2,
+    "text": "TRAE DEMENCIA, POR",
+    "confidence": 0.991
+   },
+   {
+    "time": 39.2,
+    "text": "FAVOR PROTEJAN",
+    "confidence": 0.997
+   },
+   {
+    "time": 39.2,
+    "text": "A LOS SUYOS",
+    "confidence": 0.871
+   },
+   {
+    "time": 41.07,
+    "text": "TRAE DEMENCIA, POR",
+    "confidence": 0.932
+   },
+   {
+    "time": 41.07,
+    "text": "FAVOR PROTEJAN",
+    "confidence": 0.999
+   },
+   {
+    "time": 41.07,
+    "text": "A LOS SUYOS",
+    "confidence": 0.99
+   },
+   {
+    "time": 42.93,
+    "text": "Las estatinas pueden",
+    "confidence": 0.993
+   },
+   {
+    "time": 42.93,
+    "text": "causar una infinidad",
+    "confidence": 0.736
+   },
+   {
+    "time": 42.93,
+    "text": "de sintomas",
+    "confidence": 0.806
+   },
+   {
+    "time": 42.93,
+    "text": "musculares,dolor,",
+    "confidence": 0.742
+   },
+   {
+    "time": 42.93,
+    "text": "rigidez, fatiga,",
+    "confidence": 0.99
+   },
+   {
+    "time": 42.93,
+    "text": "aumento de la",
+    "confidence": 0.901
+   },
+   {
+    "time": 42.93,
+    "text": "sensibilidad,",
+    "confidence": 0.61
+   },
+   {
+    "time": 42.93,
+    "text": "debilidad ,calambres,",
+    "confidence": 0.586
+   },
+   {
+    "time": 42.93,
+    "text": "pesadez.",
+    "confidence": 0.969
+   },
+   {
+    "time": 45.27,
+    "text": "Las estatinas pueden",
+    "confidence": 0.995
+   },
+   {
+    "time": 45.27,
+    "text": "causar una infinidad",
+    "confidence": 0.965
+   },
+   {
+    "time": 45.27,
+    "text": "de sintomas",
+    "confidence": 0.718
+   },
+   {
+    "time": 45.27,
+    "text": "musculares,dolor,",
+    "confidence": 0.574
+   },
+   {
+    "time": 45.27,
+    "text": "rigidez, fatiga,",
+    "confidence": 0.99
+   },
+   {
+    "time": 45.27,
+    "text": "aumento de la",
+    "confidence": 0.923
+   },
+   {
+    "time": 45.27,
+    "text": "sensibilidad,",
+    "confidence": 0.801
+   },
+   {
+    "time": 45.27,
+    "text": "debilidad ,calambres,",
+    "confidence": 0.659
+   },
+   {
+    "time": 45.27,
+    "text": "pesadez.",
+    "confidence": 0.805
+   },
+   {
+    "time": 47.6,
+    "text": "El tratamiento con",
+    "confidence": 0.951
+   },
+   {
+    "time": 47.6,
+    "text": "estatinas se asocio con",
+    "confidence": 0.991
+   },
+   {
+    "time": 47.6,
+    "text": "un 46 % mas de riesgo",
+    "confidence": 0.998
+   },
+   {
+    "time": 47.6,
+    "text": "de la diabetes tipo 2.",
+    "confidence": 0.861
+   },
+   {
+    "time": 47.6,
+    "text": "Ademas inhiben la",
+    "confidence": 0.809
+   },
+   {
+    "time": 47.6,
+    "text": "absorcion de la",
+    "confidence": 0.821
+   },
+   {
+    "time": 47.6,
+    "text": "vitamina B12,",
+    "confidence": 0.993
+   },
+   {
+    "time": 47.6,
+    "text": "disminuyen la",
+    "confidence": 0.968
+   },
+   {
+    "time": 47.6,
+    "text": "absorcion de la",
+    "confidence": 0.806
+   },
+   {
+    "time": 47.6,
+    "text": "vitamina Ky acido",
+    "confidence": 0.922
+   },
+   {
+    "time": 47.6,
+    "text": "folico lo que puede",
+    "confidence": 0.975
+   },
+   {
+    "time": 47.6,
+    "text": "inducir anemias e",
+    "confidence": 0.718
+   },
+   {
+    "time": 47.6,
+    "text": "interferencias con",
+    "confidence": 1.0
+   },
+   {
+    "time": 47.6,
+    "text": "anticoagulantes.",
+    "confidence": 0.974
+   },
+   {
+    "time": 49.93,
+    "text": "Ademas inhiben la",
+    "confidence": 0.609
+   },
+   {
+    "time": 49.93,
+    "text": "absorcion de la",
+    "confidence": 0.835
+   },
+   {
+    "time": 49.93,
+    "text": "vitamina B12,",
+    "confidence": 0.993
+   },
+   {
+    "time": 49.93,
+    "text": "disminuyen la",
+    "confidence": 0.648
+   },
+   {
+    "time": 49.93,
+    "text": "absorcion de la",
+    "confidence": 0.803
+   },
+   {
+    "time": 49.93,
+    "text": "vitamina Ky acido",
+    "confidence": 0.918
+   },
+   {
+    "time": 49.93,
+    "text": "folico lo que puede",
+    "confidence": 0.734
+   },
+   {
+    "time": 49.93,
+    "text": "inducir anemias e",
+    "confidence": 0.782
+   },
+   {
+    "time": 49.93,
+    "text": "interferencias con",
+    "confidence": 0.662
+   },
+   {
+    "time": 49.93,
+    "text": "anticoagulantes.",
+    "confidence": 0.971
+   },
+   {
+    "time": 52.27,
+    "text": "Tambien bloquean la",
+    "confidence": 0.791
+   },
+   {
+    "time": 52.27,
+    "text": "coenzima q10, siendo",
+    "confidence": 0.934
+   },
+   {
+    "time": 52.27,
+    "text": "esta la que disminuye",
+    "confidence": 0.919
+   },
+   {
+    "time": 52.27,
+    "text": "el riesgo de muerte en",
+    "confidence": 0.739
+   },
+   {
+    "time": 52.27,
+    "text": "pacientes con",
+    "confidence": 0.925
+   },
+   {
+    "time": 52.27,
+    "text": "insuficiencia cardiaca:",
+    "confidence": 0.879
+   },
+   {
+    "time": 54.6,
+    "text": "Tambien bloquean la",
+    "confidence": 0.822
+   },
+   {
+    "time": 54.6,
+    "text": "coenzima q10, siendo",
+    "confidence": 0.931
+   },
+   {
+    "time": 54.6,
+    "text": "esta la que disminuye",
+    "confidence": 0.928
+   },
+   {
+    "time": 54.6,
+    "text": "el riesgo de muerte en",
+    "confidence": 0.605
+   },
+   {
+    "time": 54.6,
+    "text": "pacientes con",
+    "confidence": 0.917
+   },
+   {
+    "time": 54.6,
+    "text": "insuficiencia cardiaca:",
+    "confidence": 0.707
+   },
+   {
+    "time": 56.93,
+    "text": "Para que se entienda,",
+    "confidence": 0.907
+   },
+   {
+    "time": 56.93,
+    "text": "la coenzima Q10 que",
+    "confidence": 0.622
+   },
+   {
+    "time": 56.93,
+    "text": "este farmaco bloquea,",
+    "confidence": 0.961
+   },
+   {
+    "time": 56.93,
+    "text": "reduce la presion",
+    "confidence": 0.893
+   },
+   {
+    "time": 56.93,
+    "text": "arterial, protege la",
+    "confidence": 0.89
+   },
+   {
+    "time": 56.93,
+    "text": "salud cardiaca en",
+    "confidence": 0.996
+   },
+   {
+    "time": 56.93,
+    "text": "ayuda a las",
+    "confidence": 0.995
+   },
+   {
+    "time": 56.93,
+    "text": "gral",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.93,
+    "text": "mitocondrias a",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.93,
+    "text": "obtener energia,",
+    "confidence": 0.999
+   },
+   {
+    "time": 56.93,
+    "text": "fortalece el sistema",
+    "confidence": 0.963
+   },
+   {
+    "time": 56.93,
+    "text": "inmune... entre",
+    "confidence": 0.844
+   },
+   {
+    "time": 56.93,
+    "text": "muchos otros",
+    "confidence": 0.704
+   },
+   {
+    "time": 56.93,
+    "text": "beneficios mas.",
+    "confidence": 0.878
+   },
+   {
+    "time": 59.27,
+    "text": "Para que se entienda,",
+    "confidence": 0.908
+   },
+   {
+    "time": 59.27,
+    "text": "la coenzima Q10 que",
+    "confidence": 0.664
+   },
+   {
+    "time": 59.27,
+    "text": "este farmaco bloquea,",
+    "confidence": 0.958
+   },
+   {
+    "time": 59.27,
+    "text": "reduce la presion",
+    "confidence": 0.901
+   },
+   {
+    "time": 59.27,
+    "text": "arterial, protege la",
+    "confidence": 0.891
+   },
+   {
+    "time": 59.27,
+    "text": "salud cardiaca en",
+    "confidence": 0.996
+   },
+   {
+    "time": 59.27,
+    "text": "ayuda a las",
+    "confidence": 0.996
+   },
+   {
+    "time": 59.27,
+    "text": "gral",
+    "confidence": 1.0
+   },
+   {
+    "time": 59.27,
+    "text": "mitocondrias a",
+    "confidence": 0.956
+   },
+   {
+    "time": 59.27,
+    "text": "obtener energia,",
+    "confidence": 0.979
+   },
+   {
+    "time": 59.27,
+    "text": "fortalece el sistema",
+    "confidence": 0.967
+   },
+   {
+    "time": 59.27,
+    "text": "inmune... entre",
+    "confidence": 0.848
+   },
+   {
+    "time": 59.27,
+    "text": "muchos otros",
+    "confidence": 0.653
+   },
+   {
+    "time": 59.27,
+    "text": "beneficios mas.",
+    "confidence": 0.946
+   }
+  ],
+  "captions": [
+   {
+    "text": "CUIDADOW!",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.807,
+    "id": "o1"
+   },
+   {
+    "text": "QUIERO DECIRLE",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.941,
+    "id": "o2"
+   },
+   {
+    "text": "QUE YA SE HA",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.819,
+    "id": "o3"
+   },
+   {
+    "text": "DESCUBIERTO QUE;",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.89,
+    "id": "o4"
+   },
+   {
+    "text": "CUIDADOW!",
+    "start": 1.87,
+    "end": 1.87,
+    "confidence": 0.755,
+    "id": "o5"
+   },
+   {
+    "text": "QUIERO DECIRLE",
+    "start": 1.87,
+    "end": 1.87,
+    "confidence": 0.997,
+    "id": "o6"
+   },
+   {
+    "text": "QUE YA SE HA",
+    "start": 1.87,
+    "end": 1.87,
+    "confidence": 0.998,
+    "id": "o7"
+   },
+   {
+    "text": "DESCUBIERTO QUE,",
+    "start": 1.87,
+    "end": 1.87,
+    "confidence": 0.798,
+    "id": "o8"
+   },
+   {
+    "text": "LOS MEDICAMENTOS",
+    "start": 3.73,
+    "end": 3.73,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "PARA EL COLESTEROL,",
+    "start": 3.73,
+    "end": 3.73,
+    "confidence": 0.85,
+    "id": "o10"
+   },
+   {
+    "text": "LOS QUE LLAMAN:",
+    "start": 5.6,
+    "end": 5.6,
+    "confidence": 0.994,
+    "id": "o11"
+   },
+   {
+    "text": "LAS FAMOSAS",
+    "start": 5.6,
+    "end": 5.6,
+    "confidence": 1.0,
+    "id": "o12"
+   },
+   {
+    "text": "\"ESTATINAS\"",
+    "start": 5.6,
+    "end": 5.6,
+    "confidence": 1.0,
+    "id": "o13"
+   },
+   {
+    "text": "COMO. LIPITOR,",
+    "start": 7.47,
+    "end": 7.47,
+    "confidence": 0.825,
+    "id": "o14"
+   },
+   {
+    "text": "CRESTOR",
+    "start": 7.47,
+    "end": 7.47,
+    "confidence": 1.0,
+    "id": "o15"
+   },
+   {
+    "text": "Y ATORVASTATIN",
+    "start": 7.47,
+    "end": 7.47,
+    "confidence": 0.933,
+    "id": "o16"
+   },
+   {
+    "text": "COMO. LIPITOR,",
+    "start": 9.33,
+    "end": 9.33,
+    "confidence": 0.638,
+    "id": "o17"
+   },
+   {
+    "text": "CRESTOR",
+    "start": 9.33,
+    "end": 9.33,
+    "confidence": 1.0,
+    "id": "o18"
+   },
+   {
+    "text": "Y ATORVASTATIN",
+    "start": 9.33,
+    "end": 9.33,
+    "confidence": 0.991,
+    "id": "o19"
+   },
+   {
+    "text": "COMO. LIPITOR,",
+    "start": 11.2,
+    "end": 11.2,
+    "confidence": 0.86,
+    "id": "o20"
+   },
+   {
+    "text": "CRESTOR",
+    "start": 11.2,
+    "end": 11.2,
+    "confidence": 1.0,
+    "id": "o21"
+   },
+   {
+    "text": "Y ATORVASTATIN",
+    "start": 11.2,
+    "end": 11.2,
+    "confidence": 0.993,
+    "id": "o22"
+   },
+   {
+    "text": "Y TODAS ESAS",
+    "start": 13.07,
+    "end": 13.07,
+    "confidence": 0.926,
+    "id": "o23"
+   },
+   {
+    "text": "ESTATINAS HACEN",
+    "start": 13.07,
+    "end": 13.07,
+    "confidence": 0.993,
+    "id": "o24"
+   },
+   {
+    "text": "DANO AL CORAZON,",
+    "start": 13.07,
+    "end": 13.07,
+    "confidence": 0.894,
+    "id": "o25"
+   },
+   {
+    "text": "ESTA DEMOSTRADO",
+    "start": 14.93,
+    "end": 14.93,
+    "confidence": 1.0,
+    "id": "o26"
+   },
+   {
+    "text": "QUE INTERFIEREN",
+    "start": 14.93,
+    "end": 14.93,
+    "confidence": 0.996,
+    "id": "o27"
+   },
+   {
+    "text": "CON LA",
+    "start": 14.93,
+    "end": 14.93,
+    "confidence": 0.951,
+    "id": "o28"
+   },
+   {
+    "text": "ESTA DEMOSTRADO",
+    "start": 16.8,
+    "end": 16.8,
+    "confidence": 0.999,
+    "id": "o29"
+   },
+   {
+    "text": "QUE INTERFIEREN",
+    "start": 16.8,
+    "end": 16.8,
+    "confidence": 1.0,
+    "id": "o30"
+   },
+   {
+    "text": "CON LA",
+    "start": 16.8,
+    "end": 16.8,
+    "confidence": 0.972,
+    "id": "o31"
+   },
+   {
+    "text": "CREACION",
+    "start": 18.67,
+    "end": 18.67,
+    "confidence": 0.784,
+    "id": "o32"
+   },
+   {
+    "text": "DE COQ1O",
+    "start": 18.67,
+    "end": 18.67,
+    "confidence": 0.645,
+    "id": "o33"
+   },
+   {
+    "text": "QUE LA NECESITA EL",
+    "start": 20.53,
+    "end": 20.53,
+    "confidence": 0.815,
+    "id": "o34"
+   },
+   {
+    "text": "MUSCULO DEL",
+    "start": 20.53,
+    "end": 20.53,
+    "confidence": 0.943,
+    "id": "o35"
+   },
+   {
+    "text": "CORAZON",
+    "start": 20.53,
+    "end": 20.53,
+    "confidence": 0.998,
+    "id": "o36"
+   },
+   {
+    "text": "LA UNICA FORMA",
+    "start": 22.4,
+    "end": 22.4,
+    "confidence": 0.73,
+    "id": "o37"
+   },
+   {
+    "text": "DE BAJAR EL",
+    "start": 22.4,
+    "end": 22.4,
+    "confidence": 0.984,
+    "id": "o38"
+   },
+   {
+    "text": "COLESTEROL",
+    "start": 22.4,
+    "end": 22.4,
+    "confidence": 1.0,
+    "id": "o39"
+   },
+   {
+    "text": "ES BAJAR LOS",
+    "start": 24.27,
+    "end": 24.27,
+    "confidence": 1.0,
+    "id": "o40"
+   },
+   {
+    "text": "CARBOHIDRATOS",
+    "start": 24.27,
+    "end": 24.27,
+    "confidence": 0.969,
+    "id": "o41"
+   },
+   {
+    "text": "REFINADOS",
+    "start": 24.27,
+    "end": 24.27,
+    "confidence": 0.997,
+    "id": "o42"
+   },
+   {
+    "text": "ES BAJAR LOS",
+    "start": 26.13,
+    "end": 26.13,
+    "confidence": 0.794,
+    "id": "o43"
+   },
+   {
+    "text": "CARBOHIDRATOS",
+    "start": 26.13,
+    "end": 26.13,
+    "confidence": 0.707,
+    "id": "o44"
+   },
+   {
+    "text": "REFINADOS",
+    "start": 26.13,
+    "end": 26.13,
+    "confidence": 1.0,
+    "id": "o45"
+   },
+   {
+    "text": "TEMA ESTE DE LAS",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.851,
+    "id": "o46"
+   },
+   {
+    "text": "ESTATINAS",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o47"
+   },
+   {
+    "text": "BAJAN LOS",
+    "start": 29.87,
+    "end": 29.87,
+    "confidence": 0.904,
+    "id": "o48"
+   },
+   {
+    "text": "ALIMENTOS TIPO E Y",
+    "start": 29.87,
+    "end": 29.87,
+    "confidence": 0.679,
+    "id": "o49"
+   },
+   {
+    "text": "AUTOMATICAMENTE,",
+    "start": 29.87,
+    "end": 29.87,
+    "confidence": 0.756,
+    "id": "o50"
+   },
+   {
+    "text": "YA NO TIENEN",
+    "start": 31.73,
+    "end": 31.73,
+    "confidence": 0.844,
+    "id": "o51"
+   },
+   {
+    "text": "COLESTEROL ALTO",
+    "start": 31.73,
+    "end": 31.73,
+    "confidence": 0.947,
+    "id": "o52"
+   },
+   {
+    "text": "NO SIGAN CON EL",
+    "start": 33.6,
+    "end": 33.6,
+    "confidence": 0.997,
+    "id": "o53"
+   },
+   {
+    "text": "TEMA DEL",
+    "start": 33.6,
+    "end": 33.6,
+    "confidence": 0.992,
+    "id": "o54"
+   },
+   {
+    "text": "COLESTEROL",
+    "start": 33.6,
+    "end": 33.6,
+    "confidence": 0.958,
+    "id": "o55"
+   },
+   {
+    "text": "LES VA A COSTAR",
+    "start": 35.47,
+    "end": 35.47,
+    "confidence": 0.743,
+    "id": "o56"
+   },
+   {
+    "text": "LA SALUD,",
+    "start": 35.47,
+    "end": 35.47,
+    "confidence": 0.992,
+    "id": "o57"
+   },
+   {
+    "text": "EL CORAZON;",
+    "start": 37.33,
+    "end": 37.33,
+    "confidence": 0.877,
+    "id": "o58"
+   },
+   {
+    "text": "LA MENTE,",
+    "start": 37.33,
+    "end": 37.33,
+    "confidence": 0.832,
+    "id": "o59"
+   },
+   {
+    "text": "TRAE DEMENCIA, POR",
+    "start": 39.2,
+    "end": 39.2,
+    "confidence": 0.991,
+    "id": "o60"
+   },
+   {
+    "text": "FAVOR PROTEJAN",
+    "start": 39.2,
+    "end": 39.2,
+    "confidence": 0.997,
+    "id": "o61"
+   },
+   {
+    "text": "A LOS SUYOS",
+    "start": 39.2,
+    "end": 39.2,
+    "confidence": 0.871,
+    "id": "o62"
+   },
+   {
+    "text": "TRAE DEMENCIA, POR",
+    "start": 41.07,
+    "end": 41.07,
+    "confidence": 0.932,
+    "id": "o63"
+   },
+   {
+    "text": "FAVOR PROTEJAN",
+    "start": 41.07,
+    "end": 41.07,
+    "confidence": 0.999,
+    "id": "o64"
+   },
+   {
+    "text": "A LOS SUYOS",
+    "start": 41.07,
+    "end": 41.07,
+    "confidence": 0.99,
+    "id": "o65"
+   },
+   {
+    "text": "Las estatinas pueden",
+    "start": 42.93,
+    "end": 42.93,
+    "confidence": 0.993,
+    "id": "o66"
+   },
+   {
+    "text": "causar una infinidad",
+    "start": 42.93,
+    "end": 42.93,
+    "confidence": 0.736,
+    "id": "o67"
+   },
+   {
+    "text": "de sintomas",
+    "start": 42.93,
+    "end": 42.93,
+    "confidence": 0.806,
+    "id": "o68"
+   },
+   {
+    "text": "musculares,dolor,",
+    "start": 42.93,
+    "end": 42.93,
+    "confidence": 0.742,
+    "id": "o69"
+   },
+   {
+    "text": "rigidez, fatiga,",
+    "start": 42.93,
+    "end": 42.93,
+    "confidence": 0.99,
+    "id": "o70"
+   },
+   {
+    "text": "aumento de la",
+    "start": 42.93,
+    "end": 42.93,
+    "confidence": 0.901,
+    "id": "o71"
+   },
+   {
+    "text": "sensibilidad,",
+    "start": 42.93,
+    "end": 42.93,
+    "confidence": 0.61,
+    "id": "o72"
+   },
+   {
+    "text": "debilidad ,calambres,",
+    "start": 42.93,
+    "end": 42.93,
+    "confidence": 0.586,
+    "id": "o73"
+   },
+   {
+    "text": "pesadez.",
+    "start": 42.93,
+    "end": 42.93,
+    "confidence": 0.969,
+    "id": "o74"
+   },
+   {
+    "text": "Las estatinas pueden",
+    "start": 45.27,
+    "end": 45.27,
+    "confidence": 0.995,
+    "id": "o75"
+   },
+   {
+    "text": "causar una infinidad",
+    "start": 45.27,
+    "end": 45.27,
+    "confidence": 0.965,
+    "id": "o76"
+   },
+   {
+    "text": "de sintomas",
+    "start": 45.27,
+    "end": 45.27,
+    "confidence": 0.718,
+    "id": "o77"
+   },
+   {
+    "text": "musculares,dolor,",
+    "start": 45.27,
+    "end": 45.27,
+    "confidence": 0.574,
+    "id": "o78"
+   },
+   {
+    "text": "rigidez, fatiga,",
+    "start": 45.27,
+    "end": 45.27,
+    "confidence": 0.99,
+    "id": "o79"
+   },
+   {
+    "text": "aumento de la",
+    "start": 45.27,
+    "end": 45.27,
+    "confidence": 0.923,
+    "id": "o80"
+   },
+   {
+    "text": "sensibilidad,",
+    "start": 45.27,
+    "end": 45.27,
+    "confidence": 0.801,
+    "id": "o81"
+   },
+   {
+    "text": "debilidad ,calambres,",
+    "start": 45.27,
+    "end": 45.27,
+    "confidence": 0.659,
+    "id": "o82"
+   },
+   {
+    "text": "pesadez.",
+    "start": 45.27,
+    "end": 45.27,
+    "confidence": 0.805,
+    "id": "o83"
+   },
+   {
+    "text": "El tratamiento con",
+    "start": 47.6,
+    "end": 47.6,
+    "confidence": 0.951,
+    "id": "o84"
+   },
+   {
+    "text": "estatinas se asocio con",
+    "start": 47.6,
+    "end": 47.6,
+    "confidence": 0.991,
+    "id": "o85"
+   },
+   {
+    "text": "un 46 % mas de riesgo",
+    "start": 47.6,
+    "end": 47.6,
+    "confidence": 0.998,
+    "id": "o86"
+   },
+   {
+    "text": "de la diabetes tipo 2.",
+    "start": 47.6,
+    "end": 47.6,
+    "confidence": 0.861,
+    "id": "o87"
+   },
+   {
+    "text": "Ademas inhiben la",
+    "start": 47.6,
+    "end": 47.6,
+    "confidence": 0.809,
+    "id": "o88"
+   },
+   {
+    "text": "absorcion de la",
+    "start": 47.6,
+    "end": 47.6,
+    "confidence": 0.821,
+    "id": "o89"
+   },
+   {
+    "text": "vitamina B12,",
+    "start": 47.6,
+    "end": 47.6,
+    "confidence": 0.993,
+    "id": "o90"
+   },
+   {
+    "text": "disminuyen la",
+    "start": 47.6,
+    "end": 47.6,
+    "confidence": 0.968,
+    "id": "o91"
+   },
+   {
+    "text": "absorcion de la",
+    "start": 47.6,
+    "end": 47.6,
+    "confidence": 0.806,
+    "id": "o92"
+   },
+   {
+    "text": "vitamina Ky acido",
+    "start": 47.6,
+    "end": 47.6,
+    "confidence": 0.922,
+    "id": "o93"
+   },
+   {
+    "text": "folico lo que puede",
+    "start": 47.6,
+    "end": 47.6,
+    "confidence": 0.975,
+    "id": "o94"
+   },
+   {
+    "text": "inducir anemias e",
+    "start": 47.6,
+    "end": 47.6,
+    "confidence": 0.718,
+    "id": "o95"
+   },
+   {
+    "text": "interferencias con",
+    "start": 47.6,
+    "end": 47.6,
+    "confidence": 1.0,
+    "id": "o96"
+   },
+   {
+    "text": "anticoagulantes.",
+    "start": 47.6,
+    "end": 47.6,
+    "confidence": 0.974,
+    "id": "o97"
+   },
+   {
+    "text": "Ademas inhiben la",
+    "start": 49.93,
+    "end": 49.93,
+    "confidence": 0.609,
+    "id": "o98"
+   },
+   {
+    "text": "absorcion de la",
+    "start": 49.93,
+    "end": 49.93,
+    "confidence": 0.835,
+    "id": "o99"
+   },
+   {
+    "text": "vitamina B12,",
+    "start": 49.93,
+    "end": 49.93,
+    "confidence": 0.993,
+    "id": "o100"
+   },
+   {
+    "text": "disminuyen la",
+    "start": 49.93,
+    "end": 49.93,
+    "confidence": 0.648,
+    "id": "o101"
+   },
+   {
+    "text": "absorcion de la",
+    "start": 49.93,
+    "end": 49.93,
+    "confidence": 0.803,
+    "id": "o102"
+   },
+   {
+    "text": "vitamina Ky acido",
+    "start": 49.93,
+    "end": 49.93,
+    "confidence": 0.918,
+    "id": "o103"
+   },
+   {
+    "text": "folico lo que puede",
+    "start": 49.93,
+    "end": 49.93,
+    "confidence": 0.734,
+    "id": "o104"
+   },
+   {
+    "text": "inducir anemias e",
+    "start": 49.93,
+    "end": 49.93,
+    "confidence": 0.782,
+    "id": "o105"
+   },
+   {
+    "text": "interferencias con",
+    "start": 49.93,
+    "end": 49.93,
+    "confidence": 0.662,
+    "id": "o106"
+   },
+   {
+    "text": "anticoagulantes.",
+    "start": 49.93,
+    "end": 49.93,
+    "confidence": 0.971,
+    "id": "o107"
+   },
+   {
+    "text": "Tambien bloquean la",
+    "start": 52.27,
+    "end": 52.27,
+    "confidence": 0.791,
+    "id": "o108"
+   },
+   {
+    "text": "coenzima q10, siendo",
+    "start": 52.27,
+    "end": 52.27,
+    "confidence": 0.934,
+    "id": "o109"
+   },
+   {
+    "text": "esta la que disminuye",
+    "start": 52.27,
+    "end": 52.27,
+    "confidence": 0.919,
+    "id": "o110"
+   },
+   {
+    "text": "el riesgo de muerte en",
+    "start": 52.27,
+    "end": 52.27,
+    "confidence": 0.739,
+    "id": "o111"
+   },
+   {
+    "text": "pacientes con",
+    "start": 52.27,
+    "end": 52.27,
+    "confidence": 0.925,
+    "id": "o112"
+   },
+   {
+    "text": "insuficiencia cardiaca:",
+    "start": 52.27,
+    "end": 52.27,
+    "confidence": 0.879,
+    "id": "o113"
+   },
+   {
+    "text": "Tambien bloquean la",
+    "start": 54.6,
+    "end": 54.6,
+    "confidence": 0.822,
+    "id": "o114"
+   },
+   {
+    "text": "coenzima q10, siendo",
+    "start": 54.6,
+    "end": 54.6,
+    "confidence": 0.931,
+    "id": "o115"
+   },
+   {
+    "text": "esta la que disminuye",
+    "start": 54.6,
+    "end": 54.6,
+    "confidence": 0.928,
+    "id": "o116"
+   },
+   {
+    "text": "el riesgo de muerte en",
+    "start": 54.6,
+    "end": 54.6,
+    "confidence": 0.605,
+    "id": "o117"
+   },
+   {
+    "text": "pacientes con",
+    "start": 54.6,
+    "end": 54.6,
+    "confidence": 0.917,
+    "id": "o118"
+   },
+   {
+    "text": "insuficiencia cardiaca:",
+    "start": 54.6,
+    "end": 54.6,
+    "confidence": 0.707,
+    "id": "o119"
+   },
+   {
+    "text": "Para que se entienda,",
+    "start": 56.93,
+    "end": 56.93,
+    "confidence": 0.907,
+    "id": "o120"
+   },
+   {
+    "text": "la coenzima Q10 que",
+    "start": 56.93,
+    "end": 56.93,
+    "confidence": 0.622,
+    "id": "o121"
+   },
+   {
+    "text": "este farmaco bloquea,",
+    "start": 56.93,
+    "end": 56.93,
+    "confidence": 0.961,
+    "id": "o122"
+   },
+   {
+    "text": "reduce la presion",
+    "start": 56.93,
+    "end": 56.93,
+    "confidence": 0.893,
+    "id": "o123"
+   },
+   {
+    "text": "arterial, protege la",
+    "start": 56.93,
+    "end": 56.93,
+    "confidence": 0.89,
+    "id": "o124"
+   },
+   {
+    "text": "salud cardiaca en",
+    "start": 56.93,
+    "end": 56.93,
+    "confidence": 0.996,
+    "id": "o125"
+   },
+   {
+    "text": "ayuda a las",
+    "start": 56.93,
+    "end": 56.93,
+    "confidence": 0.995,
+    "id": "o126"
+   },
+   {
+    "text": "gral",
+    "start": 56.93,
+    "end": 56.93,
+    "confidence": 1.0,
+    "id": "o127"
+   },
+   {
+    "text": "mitocondrias a",
+    "start": 56.93,
+    "end": 56.93,
+    "confidence": 1.0,
+    "id": "o128"
+   },
+   {
+    "text": "obtener energia,",
+    "start": 56.93,
+    "end": 56.93,
+    "confidence": 0.999,
+    "id": "o129"
+   },
+   {
+    "text": "fortalece el sistema",
+    "start": 56.93,
+    "end": 56.93,
+    "confidence": 0.963,
+    "id": "o130"
+   },
+   {
+    "text": "inmune... entre",
+    "start": 56.93,
+    "end": 56.93,
+    "confidence": 0.844,
+    "id": "o131"
+   },
+   {
+    "text": "muchos otros",
+    "start": 56.93,
+    "end": 56.93,
+    "confidence": 0.704,
+    "id": "o132"
+   },
+   {
+    "text": "beneficios mas.",
+    "start": 56.93,
+    "end": 56.93,
+    "confidence": 0.878,
+    "id": "o133"
+   },
+   {
+    "text": "Para que se entienda,",
+    "start": 59.27,
+    "end": 59.27,
+    "confidence": 0.908,
+    "id": "o134"
+   },
+   {
+    "text": "la coenzima Q10 que",
+    "start": 59.27,
+    "end": 59.27,
+    "confidence": 0.664,
+    "id": "o135"
+   },
+   {
+    "text": "este farmaco bloquea,",
+    "start": 59.27,
+    "end": 59.27,
+    "confidence": 0.958,
+    "id": "o136"
+   },
+   {
+    "text": "reduce la presion",
+    "start": 59.27,
+    "end": 59.27,
+    "confidence": 0.901,
+    "id": "o137"
+   },
+   {
+    "text": "arterial, protege la",
+    "start": 59.27,
+    "end": 59.27,
+    "confidence": 0.891,
+    "id": "o138"
+   },
+   {
+    "text": "salud cardiaca en",
+    "start": 59.27,
+    "end": 59.27,
+    "confidence": 0.996,
+    "id": "o139"
+   },
+   {
+    "text": "ayuda a las",
+    "start": 59.27,
+    "end": 59.27,
+    "confidence": 0.996,
+    "id": "o140"
+   },
+   {
+    "text": "gral",
+    "start": 59.27,
+    "end": 59.27,
+    "confidence": 1.0,
+    "id": "o141"
+   },
+   {
+    "text": "mitocondrias a",
+    "start": 59.27,
+    "end": 59.27,
+    "confidence": 0.956,
+    "id": "o142"
+   },
+   {
+    "text": "obtener energia,",
+    "start": 59.27,
+    "end": 59.27,
+    "confidence": 0.979,
+    "id": "o143"
+   },
+   {
+    "text": "fortalece el sistema",
+    "start": 59.27,
+    "end": 59.27,
+    "confidence": 0.967,
+    "id": "o144"
+   },
+   {
+    "text": "inmune... entre",
+    "start": 59.27,
+    "end": 59.27,
+    "confidence": 0.848,
+    "id": "o145"
+   },
+   {
+    "text": "muchos otros",
+    "start": 59.27,
+    "end": 59.27,
+    "confidence": 0.653,
+    "id": "o146"
+   },
+   {
+    "text": "beneficios mas.",
+    "start": 59.27,
+    "end": 59.27,
+    "confidence": 0.946,
+    "id": "o147"
+   }
+  ]
+ }
+}

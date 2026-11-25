@@ -1,0 +1,45 @@
+{
+ "query": "hirsutism shaving hair",
+ "db": "books",
+ "ids": [
+  "5780970",
+  "5763122",
+  "5090886",
+  "4713310",
+  "4506662"
+ ],
+ "records": [
+  {
+   "id": "5780970",
+   "title": "18.18. Polycystic Ovary Syndrome",
+   "book": "openrnnhp",
+   "accession": "NBK615366"
+  },
+  {
+   "id": "5763122",
+   "title": "Deterrence and Patient Education",
+   "book": "statpearls",
+   "accession": "NBK459251"
+  },
+  {
+   "id": "5090886",
+   "title": "PHARMACOLOGY OF ANDROGENS",
+   "book": "endotext",
+   "accession": "NBK279000"
+  },
+  {
+   "id": "4713310",
+   "title": "Clinical Significance",
+   "book": "statpearls",
+   "accession": "NBK537131"
+  },
+  {
+   "id": "4506662",
+   "title": "History and Physical",
+   "book": "statpearls",
+   "accession": "NBK482168"
+  }
+ ],
+ "_key": "books::hirsutism shaving hair::5",
+ "_retrieved_at": "2026-11-22T12:00:22"
+}

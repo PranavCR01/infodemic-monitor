@@ -1,0 +1,1182 @@
+{
+ "video_id": "v44",
+ "filename": "test_clip09.mp4",
+ "relative_path": "Misinfo Dataset/Haoran Zhang/No misinfo/test_clip09.mp4",
+ "collector": "Haoran Zhang",
+ "collector_label": "NO_MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:13:13",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 65.55,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.5,
+    "text": "This girl makes the last mistake of her life, drinking this clear glacial water in Antarctica."
+   },
+   {
+    "id": "t2",
+    "start": 5.5,
+    "end": 9.58,
+    "text": "And three days later, she was urgently taken to the hospital, where she died."
+   },
+   {
+    "id": "t3",
+    "start": 9.58,
+    "end": 11.7,
+    "text": "But what's wrong with this glacial water?"
+   },
+   {
+    "id": "t4",
+    "start": 11.7,
+    "end": 16.18,
+    "text": "At first glance, this water looks like the purest liquid that exists on the planet, and"
+   },
+   {
+    "id": "t5",
+    "start": 16.18,
+    "end": 20.94,
+    "text": "many tourists try to try it, of course, and they don't even realize how much they risk."
+   },
+   {
+    "id": "t6",
+    "start": 20.94,
+    "end": 25.98,
+    "text": "In fact, behind the transparency of this water, there are many dangers invisible to the eyes."
+   },
+   {
+    "id": "t7",
+    "start": 25.98,
+    "end": 30.48,
+    "text": "The thing is, that this water comes from ancient glaciers in Antarctica, that are several tens"
+   },
+   {
+    "id": "t8",
+    "start": 30.48,
+    "end": 34.94,
+    "text": "of millions of years old, and every drop of this frozen water is like a time capsule,"
+   },
+   {
+    "id": "t9",
+    "start": 34.94,
+    "end": 38.9,
+    "text": "and the age of this water exceeds the age when those very dinosaurs walk the earth."
+   },
+   {
+    "id": "t10",
+    "start": 38.9,
+    "end": 43.1,
+    "text": "But the most frightening thing is that if you start studying this water under a microscope,"
+   },
+   {
+    "id": "t11",
+    "start": 43.1,
+    "end": 47.58,
+    "text": "you can see ancient bacteria and parasites there, which are also older than those very"
+   },
+   {
+    "id": "t12",
+    "start": 47.58,
+    "end": 51.78,
+    "text": "dinosaurs, and people just don't have immunity from these ancient organisms."
+   },
+   {
+    "id": "t13",
+    "start": 51.78,
+    "end": 55.44,
+    "text": "And this blogger didn't know about it either, and what happened to him after taking a sip"
+   },
+   {
+    "id": "t14",
+    "start": 55.44,
+    "end": 59.56,
+    "text": "of this water was shocking, you can take a look at it yourself by searching for TikTok"
+   },
+   {
+    "id": "t15",
+    "start": 59.56,
+    "end": 61.84,
+    "text": "for the last sip of glacial water."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 33,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "THESE LUIDS POURED OUT ANCIENT",
+    "confidence": 0.896
+   },
+   {
+    "time": 0.0,
+    "text": "GLACIAL WATER AND REGRETTED IT",
+    "confidence": 0.716
+   },
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.709
+   },
+   {
+    "time": 0.0,
+    "text": "@mvstical_lizard",
+    "confidence": 0.697
+   },
+   {
+    "time": 0.0,
+    "text": "this",
+    "confidence": 0.791
+   },
+   {
+    "time": 2.0,
+    "text": "THESE LUIDS POURED OUT ANCIENT",
+    "confidence": 0.529
+   },
+   {
+    "time": 2.0,
+    "text": "GLACIAL WATER AND REGRETTED It",
+    "confidence": 0.636
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.887
+   },
+   {
+    "time": 2.0,
+    "text": "@ mystical_lizard",
+    "confidence": 0.509
+   },
+   {
+    "time": 2.0,
+    "text": "her",
+    "confidence": 0.998
+   },
+   {
+    "time": 4.0,
+    "text": "THESE LUIds POURED OUT ANCIENT",
+    "confidence": 0.622
+   },
+   {
+    "time": 4.0,
+    "text": "GLACIAL WATER AND REGRETTED IT",
+    "confidence": 0.715
+   },
+   {
+    "time": 4.0,
+    "text": "glacial",
+    "confidence": 0.998
+   },
+   {
+    "time": 6.0,
+    "text": "days",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "mvstical_lizard",
+    "confidence": 0.934
+   },
+   {
+    "time": 8.0,
+    "text": "hospital",
+    "confidence": 0.79
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "mvstical_lizard",
+    "confidence": 0.871
+   },
+   {
+    "time": 10.0,
+    "text": "what's",
+    "confidence": 0.914
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 12.0,
+    "text": "frst",
+    "confidence": 0.998
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "mystical_lizard",
+    "confidence": 0.985
+   },
+   {
+    "time": 14.0,
+    "text": "purest",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "mystical",
+    "confidence": 0.63
+   },
+   {
+    "time": 16.0,
+    "text": "planet",
+    "confidence": 0.991
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "@ mystical_lizard",
+    "confidence": 0.763
+   },
+   {
+    "time": 18.0,
+    "text": "of",
+    "confidence": 0.765
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 0.977
+   },
+   {
+    "time": 20.0,
+    "text": "much",
+    "confidence": 0.53
+   },
+   {
+    "time": 20.0,
+    "text": "TikTok",
+    "confidence": 0.992
+   },
+   {
+    "time": 22.0,
+    "text": "behind",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 0.745
+   },
+   {
+    "time": 24.0,
+    "text": "many",
+    "confidence": 0.999
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "mystical",
+    "confidence": 0.687
+   },
+   {
+    "time": 24.0,
+    "text": "Jizard",
+    "confidence": 0.557
+   },
+   {
+    "time": 26.0,
+    "text": "the",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "ancient",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 0.972
+   },
+   {
+    "time": 30.0,
+    "text": "several",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "mystical_lizard",
+    "confidence": 0.749
+   },
+   {
+    "time": 32.0,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "mystical_lizard",
+    "confidence": 0.711
+   },
+   {
+    "time": 34.0,
+    "text": "TikTok",
+    "confidence": 0.95
+   },
+   {
+    "time": 36.0,
+    "text": "exceeds",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.0,
+    "text": "mvstical_lizard",
+    "confidence": 0.641
+   },
+   {
+    "time": 38.0,
+    "text": "dinosaurs",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "mystical_lizard",
+    "confidence": 0.948
+   },
+   {
+    "time": 40.0,
+    "text": "thing",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 40.0,
+    "text": "mystical_lizard",
+    "confidence": 0.783
+   },
+   {
+    "time": 42.0,
+    "text": "under",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "mystical_lizard",
+    "confidence": 0.897
+   },
+   {
+    "time": 44.0,
+    "text": "ancient",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "TikTok",
+    "confidence": 0.704
+   },
+   {
+    "time": 46.0,
+    "text": "there",
+    "confidence": 0.993
+   },
+   {
+    "time": 46.0,
+    "text": "TikTok",
+    "confidence": 0.937
+   },
+   {
+    "time": 48.0,
+    "text": "dinosaurs",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "immunity",
+    "confidence": 0.944
+   },
+   {
+    "time": 50.0,
+    "text": "TikTok",
+    "confidence": 0.738
+   },
+   {
+    "time": 50.0,
+    "text": "@ mystical_lizard",
+    "confidence": 0.738
+   },
+   {
+    "time": 52.0,
+    "text": "this",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "mystical_lizard",
+    "confidence": 0.512
+   },
+   {
+    "time": 54.0,
+    "text": "happened",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 56.0,
+    "text": "water",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "TikTok",
+    "confidence": 0.994
+   },
+   {
+    "time": 58.0,
+    "text": "yourself",
+    "confidence": 0.999
+   },
+   {
+    "time": 58.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 58.0,
+    "text": "mystical_lizard",
+    "confidence": 0.88
+   },
+   {
+    "time": 60.0,
+    "text": "last",
+    "confidence": 0.813
+   },
+   {
+    "time": 60.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.0,
+    "text": "mystical_lizard",
+    "confidence": 0.873
+   },
+   {
+    "time": 62.0,
+    "text": "J",
+    "confidence": 0.826
+   },
+   {
+    "time": 62.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 64.0,
+    "text": "J",
+    "confidence": 0.779
+   },
+   {
+    "time": 64.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 64.0,
+    "text": "@ mystical_lizard",
+    "confidence": 0.958
+   }
+  ],
+  "captions": [
+   {
+    "text": "THESE LUIDS POURED OUT ANCIENT",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.896,
+    "id": "o1"
+   },
+   {
+    "text": "GLACIAL WATER AND REGRETTED IT",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.716,
+    "id": "o2"
+   },
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.709,
+    "id": "o3"
+   },
+   {
+    "text": "@mvstical_lizard",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.697,
+    "id": "o4"
+   },
+   {
+    "text": "this",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.791,
+    "id": "o5"
+   },
+   {
+    "text": "THESE LUIDS POURED OUT ANCIENT",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.529,
+    "id": "o6"
+   },
+   {
+    "text": "GLACIAL WATER AND REGRETTED It",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.636,
+    "id": "o7"
+   },
+   {
+    "text": "TikTok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.887,
+    "id": "o8"
+   },
+   {
+    "text": "@ mystical_lizard",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.509,
+    "id": "o9"
+   },
+   {
+    "text": "her",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.998,
+    "id": "o10"
+   },
+   {
+    "text": "THESE LUIds POURED OUT ANCIENT",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.622,
+    "id": "o11"
+   },
+   {
+    "text": "GLACIAL WATER AND REGRETTED IT",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.715,
+    "id": "o12"
+   },
+   {
+    "text": "glacial",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.998,
+    "id": "o13"
+   },
+   {
+    "text": "days",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o14"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o15"
+   },
+   {
+    "text": "mvstical_lizard",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.934,
+    "id": "o16"
+   },
+   {
+    "text": "hospital",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.79,
+    "id": "o17"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.999,
+    "id": "o18"
+   },
+   {
+    "text": "mvstical_lizard",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.871,
+    "id": "o19"
+   },
+   {
+    "text": "what's",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.914,
+    "id": "o20"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.997,
+    "id": "o21"
+   },
+   {
+    "text": "frst",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.998,
+    "id": "o22"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o23"
+   },
+   {
+    "text": "mystical_lizard",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.985,
+    "id": "o24"
+   },
+   {
+    "text": "purest",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o25"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o26"
+   },
+   {
+    "text": "mystical",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.63,
+    "id": "o27"
+   },
+   {
+    "text": "planet",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.991,
+    "id": "o28"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o29"
+   },
+   {
+    "text": "@ mystical_lizard",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.763,
+    "id": "o30"
+   },
+   {
+    "text": "of",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.765,
+    "id": "o31"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.977,
+    "id": "o32"
+   },
+   {
+    "text": "much",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.53,
+    "id": "o33"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.992,
+    "id": "o34"
+   },
+   {
+    "text": "behind",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o35"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.745,
+    "id": "o36"
+   },
+   {
+    "text": "many",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.999,
+    "id": "o37"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o38"
+   },
+   {
+    "text": "mystical",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.687,
+    "id": "o39"
+   },
+   {
+    "text": "Jizard",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.557,
+    "id": "o40"
+   },
+   {
+    "text": "the",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o41"
+   },
+   {
+    "text": "ancient",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o42"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.972,
+    "id": "o43"
+   },
+   {
+    "text": "several",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.999,
+    "id": "o44"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o45"
+   },
+   {
+    "text": "mystical_lizard",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.749,
+    "id": "o46"
+   },
+   {
+    "text": "and",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o47"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o48"
+   },
+   {
+    "text": "mystical_lizard",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.711,
+    "id": "o49"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.95,
+    "id": "o50"
+   },
+   {
+    "text": "exceeds",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o51"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.999,
+    "id": "o52"
+   },
+   {
+    "text": "mvstical_lizard",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.641,
+    "id": "o53"
+   },
+   {
+    "text": "dinosaurs",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o54"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o55"
+   },
+   {
+    "text": "mystical_lizard",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.948,
+    "id": "o56"
+   },
+   {
+    "text": "thing",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o57"
+   },
+   {
+    "text": "TikTok",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.999,
+    "id": "o58"
+   },
+   {
+    "text": "mystical_lizard",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.783,
+    "id": "o59"
+   },
+   {
+    "text": "under",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o60"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o61"
+   },
+   {
+    "text": "mystical_lizard",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.897,
+    "id": "o62"
+   },
+   {
+    "text": "ancient",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o63"
+   },
+   {
+    "text": "TikTok",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.704,
+    "id": "o64"
+   },
+   {
+    "text": "there",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.993,
+    "id": "o65"
+   },
+   {
+    "text": "TikTok",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.937,
+    "id": "o66"
+   },
+   {
+    "text": "dinosaurs",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o67"
+   },
+   {
+    "text": "immunity",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.944,
+    "id": "o68"
+   },
+   {
+    "text": "TikTok",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.738,
+    "id": "o69"
+   },
+   {
+    "text": "@ mystical_lizard",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.738,
+    "id": "o70"
+   },
+   {
+    "text": "this",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o71"
+   },
+   {
+    "text": "TikTok",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o72"
+   },
+   {
+    "text": "mystical_lizard",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.512,
+    "id": "o73"
+   },
+   {
+    "text": "happened",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o74"
+   },
+   {
+    "text": "TikTok",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.999,
+    "id": "o75"
+   },
+   {
+    "text": "water",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 1.0,
+    "id": "o76"
+   },
+   {
+    "text": "TikTok",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.994,
+    "id": "o77"
+   },
+   {
+    "text": "yourself",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.999,
+    "id": "o78"
+   },
+   {
+    "text": "TikTok",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.999,
+    "id": "o79"
+   },
+   {
+    "text": "mystical_lizard",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.88,
+    "id": "o80"
+   },
+   {
+    "text": "last",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.813,
+    "id": "o81"
+   },
+   {
+    "text": "TikTok",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 1.0,
+    "id": "o82"
+   },
+   {
+    "text": "mystical_lizard",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.873,
+    "id": "o83"
+   },
+   {
+    "text": "J",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.826,
+    "id": "o84"
+   },
+   {
+    "text": "TikTok",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.999,
+    "id": "o85"
+   },
+   {
+    "text": "J",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.779,
+    "id": "o86"
+   },
+   {
+    "text": "TikTok",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.999,
+    "id": "o87"
+   },
+   {
+    "text": "@ mystical_lizard",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.958,
+    "id": "o88"
+   }
+  ]
+ }
+}
