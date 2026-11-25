@@ -1,0 +1,182 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 66.73,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.4,
+    "end": 3.8,
+    "text": "Stop drinking water, it is actually quite dangerous."
+   },
+   {
+    "id": "t2",
+    "start": 3.8,
+    "end": 5.0,
+    "text": "Let me explain."
+   },
+   {
+    "id": "t3",
+    "start": 5.0,
+    "end": 7.64,
+    "text": "Most city tap water has three things in it"
+   },
+   {
+    "id": "t4",
+    "start": 7.64,
+    "end": 9.5,
+    "text": "that you want to avoid that are not only harmful"
+   },
+   {
+    "id": "t5",
+    "start": 9.5,
+    "end": 11.98,
+    "text": "to your brain, but harmful to your overall body health."
+   },
+   {
+    "id": "t6",
+    "start": 11.98,
+    "end": 14.3,
+    "text": "Number one, this has been reported in the news a lot,"
+   },
+   {
+    "id": "t7",
+    "start": 14.3,
+    "end": 16.18,
+    "text": "it is prescription drugs."
+   },
+   {
+    "id": "t8",
+    "start": 16.18,
+    "end": 19.26,
+    "text": "A lot of city water has prescription drugs in it."
+   },
+   {
+    "id": "t9",
+    "start": 19.26,
+    "end": 20.1,
+    "text": "Why?"
+   },
+   {
+    "id": "t10",
+    "start": 20.1,
+    "end": 22.56,
+    "text": "Well, a lot of people flush their unused medications"
+   },
+   {
+    "id": "t11",
+    "start": 22.56,
+    "end": 23.62,
+    "text": "down the toilet."
+   },
+   {
+    "id": "t12",
+    "start": 23.62,
+    "end": 26.04,
+    "text": "Number two, this ingredient is actually illegal in Europe."
+   },
+   {
+    "id": "t13",
+    "start": 26.04,
+    "end": 28.06,
+    "text": "It is glyphosate, also known as Roundup."
+   },
+   {
+    "id": "t14",
+    "start": 28.06,
+    "end": 30.86,
+    "text": "We now know that roundup is actually in our rainwater."
+   },
+   {
+    "id": "t15",
+    "start": 30.86,
+    "end": 33.14,
+    "text": "That means it's in our groundwater, it's in our well water,"
+   },
+   {
+    "id": "t16",
+    "start": 33.14,
+    "end": 35.74,
+    "text": "and it's in our tap water."
+   },
+   {
+    "id": "t17",
+    "start": 35.74,
+    "end": 37.3,
+    "text": "So you don't wanna drink tap water"
+   },
+   {
+    "id": "t18",
+    "start": 37.3,
+    "end": 39.26,
+    "text": "because it likely has glyphosate in it."
+   },
+   {
+    "id": "t19",
+    "start": 39.26,
+    "end": 41.1,
+    "text": "That is a neurotoxin."
+   },
+   {
+    "id": "t20",
+    "start": 41.1,
+    "end": 42.34,
+    "text": "Number three is fluoride."
+   },
+   {
+    "id": "t21",
+    "start": 42.34,
+    "end": 44.9,
+    "text": "Fluoride is damaging to both the brain and the body."
+   },
+   {
+    "id": "t22",
+    "start": 44.9,
+    "end": 47.22,
+    "text": "Big studies in China show that children"
+   },
+   {
+    "id": "t23",
+    "start": 47.22,
+    "end": 49.78,
+    "text": "who drink fluoridated tap water actually have lower IQ."
+   },
+   {
+    "id": "t24",
+    "start": 49.78,
+    "end": 52.26,
+    "text": "So it actually lowers IQ in children."
+   },
+   {
+    "id": "t25",
+    "start": 52.26,
+    "end": 53.58,
+    "text": "It can harm the pineal gland."
+   },
+   {
+    "id": "t26",
+    "start": 53.58,
+    "end": 55.22,
+    "text": "It can even harm the teeth and the bones."
+   },
+   {
+    "id": "t27",
+    "start": 55.22,
+    "end": 56.98,
+    "text": "So to avoid all three of these things"
+   },
+   {
+    "id": "t28",
+    "start": 56.98,
+    "end": 63.54,
+    "text": "are found in most tap water in the United States. I recommend drinking reverse osmosis or distilled water."
+   }
+  ]
+ }
+}

@@ -1,0 +1,272 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 165.02,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.36,
+    "text": "Here are three things you could start doing today to make yourself cancer proof naturally."
+   },
+   {
+    "id": "t2",
+    "start": 5.92,
+    "end": 11.28,
+    "text": "My name is Dr. Gregg and I have been a functional medicine doctor now for more than 25 years."
+   },
+   {
+    "id": "t3",
+    "start": 11.92,
+    "end": 20.48,
+    "text": "Number one, take a hard look at alcohol. Alcohol is a group one carcinogen, same category as tobacco"
+   },
+   {
+    "id": "t4",
+    "start": 20.48,
+    "end": 27.36,
+    "text": "and asbestos. It's actually linked to at least seven different cancers including breast cancer"
+   },
+   {
+    "id": "t5",
+    "start": 27.36,
+    "end": 32.98,
+    "text": "and colon cancer. And when you survey people, fewer than half the people actually knew that."
+   },
+   {
+    "id": "t6",
+    "start": 33.7,
+    "end": 41.65,
+    "text": "There's no amount that's been shown to be protective. Less is better, and none is better"
+   },
+   {
+    "id": "t7",
+    "start": 41.65,
+    "end": 50.37,
+    "text": "than less. Number two, get the fat off of your midsection. Excess body fat is second only to"
+   },
+   {
+    "id": "t8",
+    "start": 50.37,
+    "end": 54.83,
+    "text": "smoking as a modifiable cause of cancer."
+   },
+   {
+    "id": "t9",
+    "start": 54.83,
+    "end": 58.99,
+    "text": "And it's linked to 13 of them."
+   },
+   {
+    "id": "t10",
+    "start": 58.99,
+    "end": 61.15,
+    "text": "And it's not only about weight."
+   },
+   {
+    "id": "t11",
+    "start": 61.15,
+    "end": 65.35,
+    "text": "Visceral fat drives chronic inflammation"
+   },
+   {
+    "id": "t12",
+    "start": 65.35,
+    "end": 67.47,
+    "text": "and pushes up your insulin."
+   },
+   {
+    "id": "t13",
+    "start": 67.47,
+    "end": 70.95,
+    "text": "And insulin is a growth signal."
+   },
+   {
+    "id": "t14",
+    "start": 70.95,
+    "end": 75.33,
+    "text": "Leave a growth signal switched on for 30 years"
+   },
+   {
+    "id": "t15",
+    "start": 75.33,
+    "end": 77.89,
+    "text": "and you've changed the environment"
+   },
+   {
+    "id": "t16",
+    "start": 77.89,
+    "end": 80.5,
+    "text": "your cells are dividing in."
+   },
+   {
+    "id": "t17",
+    "start": 80.5,
+    "end": 84.34,
+    "text": "Number three, fix your fiber."
+   },
+   {
+    "id": "t18",
+    "start": 84.34,
+    "end": 88.66,
+    "text": "Most adults get about half the fiber they actually need."
+   },
+   {
+    "id": "t19",
+    "start": 88.66,
+    "end": 92.82,
+    "text": "Meanwhile, colorectal cancer is climbing in people under 50."
+   },
+   {
+    "id": "t20",
+    "start": 92.82,
+    "end": 96.82,
+    "text": "And that's the trend keeping oncologists up at night."
+   },
+   {
+    "id": "t21",
+    "start": 96.82,
+    "end": 99.22,
+    "text": "You see fiber feeds the bacteria"
+   },
+   {
+    "id": "t22",
+    "start": 99.22,
+    "end": 101.54,
+    "text": "that produce something called butyrate,"
+   },
+   {
+    "id": "t23",
+    "start": 101.54,
+    "end": 105.7,
+    "text": "which is what the cells lining your colon run on."
+   },
+   {
+    "id": "t24",
+    "start": 105.7,
+    "end": 110.0,
+    "text": "So things like beans, lentils, berries, vegetables,"
+   },
+   {
+    "id": "t25",
+    "start": 110.0,
+    "end": 112.36,
+    "text": "and some of you are not gonna like this,"
+   },
+   {
+    "id": "t26",
+    "start": 112.36,
+    "end": 113.84,
+    "text": "gotta cut out the processed meat,"
+   },
+   {
+    "id": "t27",
+    "start": 113.84,
+    "end": 116.56,
+    "text": "the bacon, the hot dogs, the deli meat,"
+   },
+   {
+    "id": "t28",
+    "start": 116.56,
+    "end": 120.72,
+    "text": "the summer sausages, that's one group as well."
+   },
+   {
+    "id": "t29",
+    "start": 120.72,
+    "end": 123.86,
+    "text": "And more important, it matters,"
+   },
+   {
+    "id": "t30",
+    "start": 123.86,
+    "end": 126.14,
+    "text": "it's, I think it's important to get your screenings done,"
+   },
+   {
+    "id": "t31",
+    "start": 126.14,
+    "end": 129.67,
+    "text": "right, a colonoscopy, I'm a fan of them,"
+   },
+   {
+    "id": "t32",
+    "start": 129.67,
+    "end": 132.39,
+    "text": "is one of the only tests in medicine"
+   },
+   {
+    "id": "t33",
+    "start": 132.39,
+    "end": 136.35,
+    "text": "that doesn't just find cancer, it actually can prevent it."
+   },
+   {
+    "id": "t34",
+    "start": 136.35,
+    "end": 137.79,
+    "text": "Many times they'll go in there,"
+   },
+   {
+    "id": "t35",
+    "start": 137.79,
+    "end": 141.03,
+    "text": "they'll take out a polyp before it even moves"
+   },
+   {
+    "id": "t36",
+    "start": 141.03,
+    "end": 142.39,
+    "text": "into the next state."
+   },
+   {
+    "id": "t37",
+    "start": 142.39,
+    "end": 144.81,
+    "text": "So, I'm a functional medicine doctor"
+   },
+   {
+    "id": "t38",
+    "start": 144.81,
+    "end": 147.75,
+    "text": "and I will still tell you to get one done."
+   },
+   {
+    "id": "t39",
+    "start": 147.75,
+    "end": 153.39,
+    "text": "So, number one cause fear of people under 50"
+   },
+   {
+    "id": "t40",
+    "start": 153.87,
+    "end": 155.79,
+    "text": "with their health is cancer."
+   },
+   {
+    "id": "t41",
+    "start": 155.79,
+    "end": 157.35,
+    "text": "The number one fear of people"
+   },
+   {
+    "id": "t42",
+    "start": 157.35,
+    "end": 159.83,
+    "text": "regarding their health over 50 is dementia."
+   },
+   {
+    "id": "t43",
+    "start": 159.83,
+    "end": 161.43,
+    "text": "We got some videos on that too."
+   }
+  ]
+ }
+}

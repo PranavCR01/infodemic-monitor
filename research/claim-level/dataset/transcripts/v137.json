@@ -1,0 +1,359 @@
+{
+ "video_id": "v137",
+ "filename": "new_TikTok_7351423259067370757.mp4",
+ "relative_path": "new_TikTok_7351423259067370757.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@gennaaann",
+ "extracted_at": "2026-11-23T08:45:57",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.989,
+  "duration_seconds": 77.77,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 54.04,
+    "text": "During plus salt, pregnancy tests after five minutes help me. What is the result?"
+   },
+   {
+    "id": "t2",
+    "start": 61.13,
+    "end": 70.66,
+    "text": "Positive or negative? Is this accurate?"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 39,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "urine $ sdl",
+    "confidence": 0.642
+   },
+   {
+    "time": 0.0,
+    "text": "pregnancvtest",
+    "confidence": 0.701
+   },
+   {
+    "time": 2.0,
+    "text": "urine + salt",
+    "confidence": 0.521
+   },
+   {
+    "time": 2.0,
+    "text": "pregnancv test",
+    "confidence": 0.752
+   },
+   {
+    "time": 4.0,
+    "text": "pregpanctest",
+    "confidence": 0.765
+   },
+   {
+    "time": 6.0,
+    "text": "urine # salt",
+    "confidence": 0.614
+   },
+   {
+    "time": 6.0,
+    "text": "pregnancv test",
+    "confidence": 0.827
+   },
+   {
+    "time": 8.0,
+    "text": "urine + salt",
+    "confidence": 0.905
+   },
+   {
+    "time": 8.0,
+    "text": "pregnancptest",
+    "confidence": 0.784
+   },
+   {
+    "time": 10.0,
+    "text": "urine + salt",
+    "confidence": 0.848
+   },
+   {
+    "time": 12.0,
+    "text": "afiter Sminutes",
+    "confidence": 0.663
+   },
+   {
+    "time": 14.0,
+    "text": "afiter Sminutes",
+    "confidence": 0.725
+   },
+   {
+    "time": 16.0,
+    "text": "after Sminutes",
+    "confidence": 0.986
+   },
+   {
+    "time": 18.0,
+    "text": "afiter Sminutes",
+    "confidence": 0.698
+   },
+   {
+    "time": 20.0,
+    "text": "afiter Sminutes",
+    "confidence": 0.773
+   },
+   {
+    "time": 22.0,
+    "text": "afiter Sminutes",
+    "confidence": 0.76
+   },
+   {
+    "time": 24.0,
+    "text": "after Sminutes",
+    "confidence": 0.562
+   },
+   {
+    "time": 26.0,
+    "text": "after Sminutes",
+    "confidence": 0.547
+   },
+   {
+    "time": 28.0,
+    "text": "afiter Sminutes",
+    "confidence": 0.624
+   },
+   {
+    "time": 30.0,
+    "text": "afiter Sminutes",
+    "confidence": 0.758
+   },
+   {
+    "time": 54.0,
+    "text": "helpmel whatistheresult?",
+    "confidence": 0.857
+   },
+   {
+    "time": 56.0,
+    "text": "helpmel whatis the result?",
+    "confidence": 0.916
+   },
+   {
+    "time": 58.0,
+    "text": "helpmel whatistheresult?",
+    "confidence": 0.79
+   },
+   {
+    "time": 62.0,
+    "text": "positive Onegative?",
+    "confidence": 0.674
+   },
+   {
+    "time": 66.0,
+    "text": "positiveornegative?",
+    "confidence": 0.875
+   },
+   {
+    "time": 68.0,
+    "text": "positiveornegative?",
+    "confidence": 0.72
+   },
+   {
+    "time": 70.0,
+    "text": "isthisaccurate?",
+    "confidence": 0.595
+   },
+   {
+    "time": 72.0,
+    "text": "isthisaccurate?",
+    "confidence": 0.736
+   },
+   {
+    "time": 74.0,
+    "text": "isthis accurate?",
+    "confidence": 0.722
+   },
+   {
+    "time": 76.0,
+    "text": "is this accurate?",
+    "confidence": 0.884
+   }
+  ],
+  "captions": [
+   {
+    "text": "urine $ sdl",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.642,
+    "id": "o1"
+   },
+   {
+    "text": "pregnancvtest",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.701,
+    "id": "o2"
+   },
+   {
+    "text": "urine + salt",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.521,
+    "id": "o3"
+   },
+   {
+    "text": "pregnancv test",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.752,
+    "id": "o4"
+   },
+   {
+    "text": "pregpanctest",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.765,
+    "id": "o5"
+   },
+   {
+    "text": "urine # salt",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.614,
+    "id": "o6"
+   },
+   {
+    "text": "pregnancv test",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.827,
+    "id": "o7"
+   },
+   {
+    "text": "urine + salt",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.905,
+    "id": "o8"
+   },
+   {
+    "text": "pregnancptest",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.784,
+    "id": "o9"
+   },
+   {
+    "text": "urine + salt",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.848,
+    "id": "o10"
+   },
+   {
+    "text": "afiter Sminutes",
+    "start": 12.0,
+    "end": 14.0,
+    "confidence": 0.725,
+    "id": "o11"
+   },
+   {
+    "text": "after Sminutes",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.986,
+    "id": "o12"
+   },
+   {
+    "text": "afiter Sminutes",
+    "start": 18.0,
+    "end": 22.0,
+    "confidence": 0.773,
+    "id": "o13"
+   },
+   {
+    "text": "after Sminutes",
+    "start": 24.0,
+    "end": 26.0,
+    "confidence": 0.562,
+    "id": "o14"
+   },
+   {
+    "text": "afiter Sminutes",
+    "start": 28.0,
+    "end": 30.0,
+    "confidence": 0.758,
+    "id": "o15"
+   },
+   {
+    "text": "helpmel whatistheresult?",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.857,
+    "id": "o16"
+   },
+   {
+    "text": "helpmel whatis the result?",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.916,
+    "id": "o17"
+   },
+   {
+    "text": "helpmel whatistheresult?",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.79,
+    "id": "o18"
+   },
+   {
+    "text": "positive Onegative?",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.674,
+    "id": "o19"
+   },
+   {
+    "text": "positiveornegative?",
+    "start": 66.0,
+    "end": 68.0,
+    "confidence": 0.875,
+    "id": "o20"
+   },
+   {
+    "text": "isthisaccurate?",
+    "start": 70.0,
+    "end": 72.0,
+    "confidence": 0.736,
+    "id": "o21"
+   },
+   {
+    "text": "isthis accurate?",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.722,
+    "id": "o22"
+   },
+   {
+    "text": "is this accurate?",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.884,
+    "id": "o23"
+   }
+  ]
+ }
+}

@@ -1,0 +1,492 @@
+{
+ "video_id": "v96",
+ "filename": "new_Instagram_DLZYm0BtAHs.mp4",
+ "relative_path": "new_Instagram_DLZYm0BtAHs.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:55",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.998,
+  "duration_seconds": 36.81,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 6.36,
+    "text": "de las que se siente bien reaprovechando el aceitito de las conservas de pescado? Pues puede que lo"
+   },
+   {
+    "id": "t2",
+    "start": 6.36,
+    "end": 10.6,
+    "text": "que aprendas en este vídeo te choque un poco. ¿Cómo puede ser que no haya caído en esto antes?"
+   },
+   {
+    "id": "t3",
+    "start": 10.6,
+    "end": 17.4,
+    "text": "Os he divulgado mucho sobre qué pescados escoger, cuáles son más seguros a nivel de metales pesados,"
+   },
+   {
+    "id": "t4",
+    "start": 17.4,
+    "end": 23.84,
+    "text": "sin caer que estos que los metales pesados se disuelven en la grasa. Comer el aceite de las"
+   },
+   {
+    "id": "t5",
+    "start": 23.84,
+    "end": 29.96,
+    "text": "conservas, ya sea vio, melba, aceite de oliva virgen extra, va a ser comer una concentración más alta,"
+   },
+   {
+    "id": "t6",
+    "start": 29.96,
+    "end": 36.56,
+    "text": "de estos metales pesados. Así que muy a mi pesar, chao a este aceitito."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 19,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "ERES DE LAS",
+    "confidence": 0.731
+   },
+   {
+    "time": 2.0,
+    "text": "REAPKOVECHANDO",
+    "confidence": 0.74
+   },
+   {
+    "time": 4.0,
+    "text": "E4 ACEITITO",
+    "confidence": 0.572
+   },
+   {
+    "time": 6.0,
+    "text": "PUES PUEDE QUE",
+    "confidence": 0.937
+   },
+   {
+    "time": 10.0,
+    "text": "CATdo ENESTO",
+    "confidence": 0.743
+   },
+   {
+    "time": 14.0,
+    "text": "QUE PESCADOS ESCOGER",
+    "confidence": 0.9
+   },
+   {
+    "time": 16.0,
+    "text": "DE",
+    "confidence": 0.996
+   },
+   {
+    "time": 18.0,
+    "text": "CAER QUE ESTOS",
+    "confidence": 0.872
+   },
+   {
+    "time": 20.0,
+    "text": "PESADOS SE DISUELVEN",
+    "confidence": 0.76
+   },
+   {
+    "time": 22.0,
+    "text": "COMER EL ACEITE",
+    "confidence": 0.759
+   },
+   {
+    "time": 24.0,
+    "text": "DE LAS CONSERVAS",
+    "confidence": 0.752
+   },
+   {
+    "time": 24.0,
+    "text": "Efectos del enlalado en Ia extraccion de",
+    "confidence": 0.554
+   },
+   {
+    "time": 24.0,
+    "text": "metales pesados del atun",
+    "confidence": 0.686
+   },
+   {
+    "time": 26.0,
+    "text": "ACEITE DE OLIVA",
+    "confidence": 0.987
+   },
+   {
+    "time": 26.0,
+    "text": "Efectos del enlatado en la extraccion de",
+    "confidence": 0.879
+   },
+   {
+    "time": 26.0,
+    "text": "metales pesados del atun",
+    "confidence": 0.752
+   },
+   {
+    "time": 26.0,
+    "text": "Revista Italiana de_Ciencia de_los Alimentos",
+    "confidence": 0.601
+   },
+   {
+    "time": 26.0,
+    "text": "Enero de 2011",
+    "confidence": 0.938
+   },
+   {
+    "time": 26.0,
+    "text": "23(4)",
+    "confidence": 0.976
+   },
+   {
+    "time": 28.0,
+    "text": "Efectos del enlatado en la extraccion de",
+    "confidence": 0.765
+   },
+   {
+    "time": 28.0,
+    "text": "metales pesados del atun",
+    "confidence": 0.965
+   },
+   {
+    "time": 28.0,
+    "text": "Enero de 2011",
+    "confidence": 0.82
+   },
+   {
+    "time": 28.0,
+    "text": "Revista Italiana de_Ciencia de los Alimentos",
+    "confidence": 0.674
+   },
+   {
+    "time": 28.0,
+    "text": "23(4)",
+    "confidence": 0.68
+   },
+   {
+    "time": 30.0,
+    "text": "Efectos del enlatado en la extraccion de",
+    "confidence": 0.854
+   },
+   {
+    "time": 30.0,
+    "text": "metales pesados del atun",
+    "confidence": 0.97
+   },
+   {
+    "time": 30.0,
+    "text": "Revista Italiana de_Ciencia de_los Alimentos",
+    "confidence": 0.652
+   },
+   {
+    "time": 30.0,
+    "text": "Enero de 2011",
+    "confidence": 0.878
+   },
+   {
+    "time": 30.0,
+    "text": "23(4)",
+    "confidence": 0.973
+   },
+   {
+    "time": 34.0,
+    "text": "CHAO",
+    "confidence": 0.997
+   },
+   {
+    "time": 34.0,
+    "text": "A ESTE",
+    "confidence": 0.723
+   },
+   {
+    "time": 34.0,
+    "text": "ACEITIVO",
+    "confidence": 0.594
+   },
+   {
+    "time": 36.0,
+    "text": "CHAO",
+    "confidence": 0.979
+   },
+   {
+    "time": 36.0,
+    "text": "A ESTE",
+    "confidence": 0.977
+   },
+   {
+    "time": 36.0,
+    "text": "AGEITITO",
+    "confidence": 0.892
+   }
+  ],
+  "captions": [
+   {
+    "text": "ERES DE LAS",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.731,
+    "id": "o1"
+   },
+   {
+    "text": "REAPKOVECHANDO",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.74,
+    "id": "o2"
+   },
+   {
+    "text": "E4 ACEITITO",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.572,
+    "id": "o3"
+   },
+   {
+    "text": "PUES PUEDE QUE",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.937,
+    "id": "o4"
+   },
+   {
+    "text": "CATdo ENESTO",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.743,
+    "id": "o5"
+   },
+   {
+    "text": "QUE PESCADOS ESCOGER",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.9,
+    "id": "o6"
+   },
+   {
+    "text": "DE",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.996,
+    "id": "o7"
+   },
+   {
+    "text": "CAER QUE ESTOS",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.872,
+    "id": "o8"
+   },
+   {
+    "text": "PESADOS SE DISUELVEN",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.76,
+    "id": "o9"
+   },
+   {
+    "text": "COMER EL ACEITE",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.759,
+    "id": "o10"
+   },
+   {
+    "text": "DE LAS CONSERVAS",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.752,
+    "id": "o11"
+   },
+   {
+    "text": "Efectos del enlalado en Ia extraccion de",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.554,
+    "id": "o12"
+   },
+   {
+    "text": "metales pesados del atun",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.686,
+    "id": "o13"
+   },
+   {
+    "text": "ACEITE DE OLIVA",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.987,
+    "id": "o14"
+   },
+   {
+    "text": "Efectos del enlatado en la extraccion de",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.879,
+    "id": "o15"
+   },
+   {
+    "text": "metales pesados del atun",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.752,
+    "id": "o16"
+   },
+   {
+    "text": "Revista Italiana de_Ciencia de_los Alimentos",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.601,
+    "id": "o17"
+   },
+   {
+    "text": "Enero de 2011",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.938,
+    "id": "o18"
+   },
+   {
+    "text": "23(4)",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.976,
+    "id": "o19"
+   },
+   {
+    "text": "Efectos del enlatado en la extraccion de",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.765,
+    "id": "o20"
+   },
+   {
+    "text": "metales pesados del atun",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.965,
+    "id": "o21"
+   },
+   {
+    "text": "Enero de 2011",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.82,
+    "id": "o22"
+   },
+   {
+    "text": "Revista Italiana de_Ciencia de los Alimentos",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.674,
+    "id": "o23"
+   },
+   {
+    "text": "23(4)",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.68,
+    "id": "o24"
+   },
+   {
+    "text": "Efectos del enlatado en la extraccion de",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.854,
+    "id": "o25"
+   },
+   {
+    "text": "metales pesados del atun",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.97,
+    "id": "o26"
+   },
+   {
+    "text": "Revista Italiana de_Ciencia de_los Alimentos",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.652,
+    "id": "o27"
+   },
+   {
+    "text": "Enero de 2011",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.878,
+    "id": "o28"
+   },
+   {
+    "text": "23(4)",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.973,
+    "id": "o29"
+   },
+   {
+    "text": "CHAO",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.997,
+    "id": "o30"
+   },
+   {
+    "text": "A ESTE",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.723,
+    "id": "o31"
+   },
+   {
+    "text": "ACEITIVO",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.594,
+    "id": "o32"
+   },
+   {
+    "text": "CHAO",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.979,
+    "id": "o33"
+   },
+   {
+    "text": "A ESTE",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.977,
+    "id": "o34"
+   },
+   {
+    "text": "AGEITITO",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.892,
+    "id": "o35"
+   }
+  ]
+ }
+}

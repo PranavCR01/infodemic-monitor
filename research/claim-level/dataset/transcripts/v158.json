@@ -1,0 +1,33 @@
+{
+ "video_id": "v158",
+ "filename": "new_TikTok_7472897185990872326.mp4",
+ "relative_path": "new_TikTok_7472897185990872326.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:59",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.437,
+  "duration_seconds": 18.09,
+  "segments": []
+ },
+ "on_screen": {
+  "frames_sampled": 10,
+  "detections": [],
+  "captions": []
+ }
+}

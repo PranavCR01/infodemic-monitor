@@ -1,0 +1,3420 @@
+{
+ "video_id": "v49",
+ "filename": "v01_ @dr.noc_how_vaccines_work.mp4",
+ "relative_path": "Dataset-Sept-2026/Joshua Ryan Fajardo/NO-MISINFO/v01_ @dr.noc_how_vaccines_work.mp4",
+ "collector": "Joshua Ryan Fajardo",
+ "collector_label": "NO_MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:13:13",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 176.47,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 6.32,
+    "text": "As someone with a PhD in pharmacology and I will mention immunology, explain the actual science"
+   },
+   {
+    "id": "t2",
+    "start": 7.2,
+    "end": 13.12,
+    "text": "of how vaccines work and how the body then goes to create the necessary antibodies."
+   },
+   {
+    "id": "t3",
+    "start": 13.12,
+    "end": 18.64,
+    "text": "Actually the same process as when you're infected with the virus. And so it's the same answer for"
+   },
+   {
+    "id": "t4",
+    "start": 18.64,
+    "end": 23.2,
+    "text": "both. My answer from a vaccine standpoint. You get the injection in your arm. What have you"
+   },
+   {
+    "id": "t5",
+    "start": 23.2,
+    "end": 28.64,
+    "text": "just injected? Most often little pieces of the pathogen. So what happens in your arm tissue?"
+   },
+   {
+    "id": "t6",
+    "start": 28.64,
+    "end": 33.12,
+    "text": "pretty much nothing right there you've got one big immune cell that comes in and scoops it up"
+   },
+   {
+    "id": "t7",
+    "start": 33.12,
+    "end": 37.04,
+    "text": "it takes it to your draining lymph node is what it's called so it goes through this whole separate"
+   },
+   {
+    "id": "t8",
+    "start": 37.04,
+    "end": 41.2,
+    "text": "pathway in your body you've got your blood circulatory system most people don't know you"
+   },
+   {
+    "id": "t9",
+    "start": 41.2,
+    "end": 46.16,
+    "text": "actually have a separate almost circulation system called lymph lymphatic system so the white blood"
+   },
+   {
+    "id": "t10",
+    "start": 46.16,
+    "end": 51.04,
+    "text": "cells travel from wherever you got the injection it carries it back to a lymph node and it starts"
+   },
+   {
+    "id": "t11",
+    "start": 51.04,
+    "end": 55.12,
+    "text": "showing it to all these other immune cells and it says do you recognize this no do you recognize"
+   },
+   {
+    "id": "t12",
+    "start": 55.12,
+    "end": 61.84,
+    "text": "this. No. Until it finds one. It's like a lineup. It is. And the neat part is all of those cells that"
+   },
+   {
+    "id": "t13",
+    "start": 61.84,
+    "end": 65.2,
+    "text": "are just sitting in your lymph node waiting to be shown something they recognize. They like this."
+   },
+   {
+    "id": "t14",
+    "start": 66.08,
+    "end": 70.24,
+    "text": "Exactly like the guy for the car at the airport. They don't recognize it then what? Nothing happens."
+   },
+   {
+    "id": "t15",
+    "start": 70.24,
+    "end": 76.0,
+    "text": "And then the one lymph node is just like take your time. It's okay. Exactly. Even cells get"
+   },
+   {
+    "id": "t16",
+    "start": 76.0,
+    "end": 83.06,
+    "text": "entirely walking along. But all of those cells were randomly generated in advance. Right. So"
+   },
+   {
+    "id": "t17",
+    "start": 83.06,
+    "end": 84.46,
+    "text": "So before COVID ever existed,"
+   },
+   {
+    "id": "t18",
+    "start": 84.46,
+    "end": 86.7,
+    "text": "you had in your body T cells and B cells"
+   },
+   {
+    "id": "t19",
+    "start": 86.7,
+    "end": 88.82,
+    "text": "that recognized COVID."
+   },
+   {
+    "id": "t20",
+    "start": 88.82,
+    "end": 90.02,
+    "text": "And then when you eventually got infected"
+   },
+   {
+    "id": "t21",
+    "start": 90.02,
+    "end": 91.78,
+    "text": "for the first time or got your vaccine,"
+   },
+   {
+    "id": "t22",
+    "start": 91.78,
+    "end": 93.42,
+    "text": "it was like their time to shine basically."
+   },
+   {
+    "id": "t23",
+    "start": 93.42,
+    "end": 95.5,
+    "text": "They go, oh, hey, I know that one."
+   },
+   {
+    "id": "t24",
+    "start": 95.5,
+    "end": 97.86,
+    "text": "When that happens, that cell gets activated."
+   },
+   {
+    "id": "t25",
+    "start": 97.86,
+    "end": 99.78,
+    "text": "It multiplies, multiplies, multiplies."
+   },
+   {
+    "id": "t26",
+    "start": 99.78,
+    "end": 101.62,
+    "text": "It starts making antibodies"
+   },
+   {
+    "id": "t27",
+    "start": 101.62,
+    "end": 103.18,
+    "text": "that go back to your site of infection,"
+   },
+   {
+    "id": "t28",
+    "start": 103.18,
+    "end": 104.54,
+    "text": "go throughout your whole body."
+   },
+   {
+    "id": "t29",
+    "start": 104.54,
+    "end": 106.58,
+    "text": "It also activates T cells."
+   },
+   {
+    "id": "t30",
+    "start": 106.58,
+    "end": 108.58,
+    "text": "So T cells are the ones that recognize,"
+   },
+   {
+    "id": "t31",
+    "start": 108.58,
+    "end": 111.22,
+    "text": "oh, that friendly cells infected with a virus."
+   },
+   {
+    "id": "t32",
+    "start": 111.22,
+    "end": 112.06,
+    "text": "I better kill that cell."
+   },
+   {
+    "id": "t33",
+    "start": 112.06,
+    "end": 116.5,
+    "text": "kill that cell. Right. Exactly. So you get this combination of antibodies that are"
+   },
+   {
+    "id": "t34",
+    "start": 116.5,
+    "end": 120.66,
+    "text": "floating around to neutralize the virus when it's in between cells and T cells"
+   },
+   {
+    "id": "t35",
+    "start": 120.66,
+    "end": 124.3,
+    "text": "to kill the ones that are incubating virus actively. And that same process"
+   },
+   {
+    "id": "t36",
+    "start": 124.3,
+    "end": 127.14,
+    "text": "happens whether you've been affected with a virus. It still takes the piece of"
+   },
+   {
+    "id": "t37",
+    "start": 127.14,
+    "end": 130.58,
+    "text": "virus and goes to the lymph node and activates the B and T cells. Here's something"
+   },
+   {
+    "id": "t38",
+    "start": 130.58,
+    "end": 134.02,
+    "text": "I never understood. There are people who had pretty serious side effects to the"
+   },
+   {
+    "id": "t39",
+    "start": 134.02,
+    "end": 138.94,
+    "text": "COVID vaccine. If the vaccine is doing what COVID itself would have done, does"
+   },
+   {
+    "id": "t40",
+    "start": 138.94,
+    "end": 141.54,
+    "text": "that mean they would have had those same side effects had they gotten COVID"
+   },
+   {
+    "id": "t41",
+    "start": 141.54,
+    "end": 146.74,
+    "text": "straight up. I don't think so. I don't know of data to say one way or the other. If the severity of"
+   },
+   {
+    "id": "t42",
+    "start": 146.74,
+    "end": 155.22,
+    "text": "your vaccine response is predictive, honest, but boring. That's what I can cope with that."
+   },
+   {
+    "id": "t43",
+    "start": 155.22,
+    "end": 159.46,
+    "text": "No, I just want to call out that when a scientist is speaking and they're honest about their work,"
+   },
+   {
+    "id": "t44",
+    "start": 159.46,
+    "end": 164.34,
+    "text": "and they don't just say, I don't know one way or another. I'd rather that. Right. Yeah. I could"
+   },
+   {
+    "id": "t45",
+    "start": 164.34,
+    "end": 168.9,
+    "text": "lie to us and be really confident and then do what you say. Yeah, man. If you got a bad fever"
+   },
+   {
+    "id": "t46",
+    "start": 168.9,
+    "end": 170.9,
+    "text": "after the injection, he would have died from COVID."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 89,
+  "detections": [
+   {
+    "time": 2.0,
+    "text": "Tiktok",
+    "confidence": 0.649
+   },
+   {
+    "time": 2.0,
+    "text": "PhD in pharmacology",
+    "confidence": 0.953
+   },
+   {
+    "time": 4.0,
+    "text": "Tiktok",
+    "confidence": 0.691
+   },
+   {
+    "time": 4.0,
+    "text": "immunology, explain",
+    "confidence": 0.716
+   },
+   {
+    "time": 6.0,
+    "text": "the actual science",
+    "confidence": 0.959
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "drnoc",
+    "confidence": 0.889
+   },
+   {
+    "time": 8.0,
+    "text": "of how vaccines work",
+    "confidence": 0.926
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "drnoc",
+    "confidence": 0.897
+   },
+   {
+    "time": 10.0,
+    "text": "and how the body then",
+    "confidence": 0.889
+   },
+   {
+    "time": 10.0,
+    "text": "goes",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "TTikTok",
+    "confidence": 0.838
+   },
+   {
+    "time": 10.0,
+    "text": "@dimoc",
+    "confidence": 0.541
+   },
+   {
+    "time": 12.0,
+    "text": "the necessary antibodies:",
+    "confidence": 0.826
+   },
+   {
+    "time": 12.0,
+    "text": "Tik Tok",
+    "confidence": 0.801
+   },
+   {
+    "time": 14.0,
+    "text": "Actually, the same process",
+    "confidence": 0.73
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "drnoc",
+    "confidence": 0.982
+   },
+   {
+    "time": 16.0,
+    "text": "'re infected",
+    "confidence": 0.956
+   },
+   {
+    "time": 16.0,
+    "text": "as when",
+    "confidence": 0.706
+   },
+   {
+    "time": 16.0,
+    "text": "you'r",
+    "confidence": 0.687
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.0,
+    "text": "@ drnoc",
+    "confidence": 0.894
+   },
+   {
+    "time": 18.0,
+    "text": "And so it's",
+    "confidence": 0.89
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.0,
+    "text": "@ drnoc",
+    "confidence": 0.859
+   },
+   {
+    "time": 20.0,
+    "text": "from a vaccine standpoint,",
+    "confidence": 0.802
+   },
+   {
+    "time": 20.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "dr_noc",
+    "confidence": 0.519
+   },
+   {
+    "time": 22.0,
+    "text": "in your arm, right;",
+    "confidence": 0.648
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "@ drnoc",
+    "confidence": 0.925
+   },
+   {
+    "time": 24.0,
+    "text": "injected_",
+    "confidence": 0.635
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "@ drnoc",
+    "confidence": 0.91
+   },
+   {
+    "time": 26.0,
+    "text": "of the pathogen.",
+    "confidence": 0.747
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 26.0,
+    "text": "drnoc",
+    "confidence": 0.98
+   },
+   {
+    "time": 28.0,
+    "text": "So what happens in your",
+    "confidence": 0.613
+   },
+   {
+    "time": 28.0,
+    "text": "arm",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 30.0,
+    "text": "nothing right there:",
+    "confidence": 0.934
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 30.0,
+    "text": "drnoc",
+    "confidence": 0.907
+   },
+   {
+    "time": 32.0,
+    "text": "that comes in and scoops",
+    "confidence": 0.939
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 0.692
+   },
+   {
+    "time": 32.0,
+    "text": "drnoc",
+    "confidence": 0.962
+   },
+   {
+    "time": 34.0,
+    "text": "to your draining lymph",
+    "confidence": 0.679
+   },
+   {
+    "time": 34.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 34.0,
+    "text": "drnoc",
+    "confidence": 0.966
+   },
+   {
+    "time": 36.0,
+    "text": "So it goes through",
+    "confidence": 0.764
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 0.994
+   },
+   {
+    "time": 36.0,
+    "text": "drnoc",
+    "confidence": 0.976
+   },
+   {
+    "time": 38.0,
+    "text": "pathway in your body:",
+    "confidence": 0.815
+   },
+   {
+    "time": 38.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 38.0,
+    "text": "@ drnoc",
+    "confidence": 0.907
+   },
+   {
+    "time": 40.0,
+    "text": "circulatory system_",
+    "confidence": 0.998
+   },
+   {
+    "time": 40.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.0,
+    "text": "separate",
+    "confidence": 0.897
+   },
+   {
+    "time": 42.0,
+    "text": "a",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.0,
+    "text": "@ drnoc",
+    "confidence": 0.934
+   },
+   {
+    "time": 44.0,
+    "text": "called lymph",
+    "confidence": 0.624
+   },
+   {
+    "time": 44.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "drnoc",
+    "confidence": 0.978
+   },
+   {
+    "time": 46.0,
+    "text": "So the white blood cells",
+    "confidence": 0.968
+   },
+   {
+    "time": 46.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "drnoc",
+    "confidence": 0.974
+   },
+   {
+    "time": 48.0,
+    "text": "the injection",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "it back to a lymph node",
+    "confidence": 0.734
+   },
+   {
+    "time": 50.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "drnoc",
+    "confidence": 0.972
+   },
+   {
+    "time": 52.0,
+    "text": "to all these other",
+    "confidence": 0.911
+   },
+   {
+    "time": 52.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 52.0,
+    "text": "@ drnoc",
+    "confidence": 0.849
+   },
+   {
+    "time": 54.0,
+    "text": "do you recognize this? No.",
+    "confidence": 0.823
+   },
+   {
+    "time": 54.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 54.0,
+    "text": "@ drnoc",
+    "confidence": 0.847
+   },
+   {
+    "time": 56.0,
+    "text": "Until it finds one_",
+    "confidence": 0.958
+   },
+   {
+    "time": 56.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 56.0,
+    "text": "@ drnoc",
+    "confidence": 0.841
+   },
+   {
+    "time": 58.0,
+    "text": "It is.",
+    "confidence": 0.958
+   },
+   {
+    "time": 58.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 58.0,
+    "text": "dr_noc",
+    "confidence": 0.693
+   },
+   {
+    "time": 60.0,
+    "text": "And the neat",
+    "confidence": 0.998
+   },
+   {
+    "time": 60.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 60.0,
+    "text": "@ drnoc",
+    "confidence": 0.919
+   },
+   {
+    "time": 62.0,
+    "text": "that are just sitting",
+    "confidence": 0.862
+   },
+   {
+    "time": 62.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.0,
+    "text": "dr.noc",
+    "confidence": 0.508
+   },
+   {
+    "time": 64.0,
+    "text": "something they recognize.",
+    "confidence": 0.718
+   },
+   {
+    "time": 64.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 64.0,
+    "text": "@ drnoc",
+    "confidence": 0.907
+   },
+   {
+    "time": 66.0,
+    "text": "exactly",
+    "confidence": 1.0
+   },
+   {
+    "time": 66.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 68.0,
+    "text": "like the guy for the car",
+    "confidence": 0.886
+   },
+   {
+    "time": 68.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 68.0,
+    "text": "drnoc",
+    "confidence": 0.98
+   },
+   {
+    "time": 70.0,
+    "text": "Nothing happens.",
+    "confidence": 0.695
+   },
+   {
+    "time": 70.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 70.0,
+    "text": "@ drnoc",
+    "confidence": 0.946
+   },
+   {
+    "time": 72.0,
+    "text": "the one lymph node,",
+    "confidence": 0.811
+   },
+   {
+    "time": 72.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 72.0,
+    "text": "dr_noc",
+    "confidence": 0.543
+   },
+   {
+    "time": 74.0,
+    "text": "take your time_",
+    "confidence": 0.764
+   },
+   {
+    "time": 74.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 74.0,
+    "text": "dr_noc",
+    "confidence": 0.63
+   },
+   {
+    "time": 76.0,
+    "text": "The immune cell is",
+    "confidence": 0.936
+   },
+   {
+    "time": 76.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 76.0,
+    "text": "drnoc",
+    "confidence": 0.987
+   },
+   {
+    "time": 78.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 80.0,
+    "text": "But all of those cells",
+    "confidence": 0.903
+   },
+   {
+    "time": 80.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 80.0,
+    "text": "drnoc",
+    "confidence": 0.977
+   },
+   {
+    "time": 82.0,
+    "text": "in advance: Right:",
+    "confidence": 0.678
+   },
+   {
+    "time": 82.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 82.0,
+    "text": "drnoc",
+    "confidence": 0.98
+   },
+   {
+    "time": 84.0,
+    "text": "existed, yoU",
+    "confidence": 0.706
+   },
+   {
+    "time": 84.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 84.0,
+    "text": "@ drnoc",
+    "confidence": 0.927
+   },
+   {
+    "time": 86.0,
+    "text": "T cells and B cells",
+    "confidence": 0.712
+   },
+   {
+    "time": 86.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 86.0,
+    "text": "@ drnoc",
+    "confidence": 0.905
+   },
+   {
+    "time": 88.0,
+    "text": "that recognized Covid.",
+    "confidence": 0.942
+   },
+   {
+    "time": 88.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 88.0,
+    "text": "dr_noc",
+    "confidence": 0.529
+   },
+   {
+    "time": 90.0,
+    "text": "for the first time,",
+    "confidence": 0.99
+   },
+   {
+    "time": 90.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 90.0,
+    "text": "@ drnoc",
+    "confidence": 0.894
+   },
+   {
+    "time": 92.0,
+    "text": "It was like their time",
+    "confidence": 0.818
+   },
+   {
+    "time": 92.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 94.0,
+    "text": "Hey,",
+    "confidence": 0.986
+   },
+   {
+    "time": 94.0,
+    "text": "I know that onel",
+    "confidence": 0.775
+   },
+   {
+    "time": 94.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 94.0,
+    "text": "dr_noc",
+    "confidence": 0.593
+   },
+   {
+    "time": 96.0,
+    "text": "When that happens",
+    "confidence": 0.993
+   },
+   {
+    "time": 96.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 96.0,
+    "text": "drnoc",
+    "confidence": 0.986
+   },
+   {
+    "time": 98.0,
+    "text": "It multiplies",
+    "confidence": 1.0
+   },
+   {
+    "time": 98.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 98.0,
+    "text": "drnoc",
+    "confidence": 0.986
+   },
+   {
+    "time": 100.0,
+    "text": "It starts making",
+    "confidence": 0.821
+   },
+   {
+    "time": 100.0,
+    "text": "antibodies",
+    "confidence": 0.74
+   },
+   {
+    "time": 100.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 100.0,
+    "text": "drnoc",
+    "confidence": 0.983
+   },
+   {
+    "time": 102.0,
+    "text": "that go back to your site",
+    "confidence": 0.914
+   },
+   {
+    "time": 102.0,
+    "text": "TikTok",
+    "confidence": 0.992
+   },
+   {
+    "time": 102.0,
+    "text": "dr_noc",
+    "confidence": 0.562
+   },
+   {
+    "time": 104.0,
+    "text": "your whole body:",
+    "confidence": 0.953
+   },
+   {
+    "time": 104.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 104.0,
+    "text": "@ dr_noc",
+    "confidence": 0.569
+   },
+   {
+    "time": 106.0,
+    "text": "It also activates T cells.",
+    "confidence": 0.743
+   },
+   {
+    "time": 106.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 108.0,
+    "text": "are the ones that",
+    "confidence": 0.981
+   },
+   {
+    "time": 108.0,
+    "text": "recognize",
+    "confidence": 1.0
+   },
+   {
+    "time": 108.0,
+    "text": "TikTok",
+    "confidence": 0.881
+   },
+   {
+    "time": 108.0,
+    "text": "@ drnoc",
+    "confidence": 0.611
+   },
+   {
+    "time": 110.0,
+    "text": "cell is infected",
+    "confidence": 0.991
+   },
+   {
+    "time": 110.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 110.0,
+    "text": "drnoc",
+    "confidence": 0.983
+   },
+   {
+    "time": 112.0,
+    "text": "I better kill that:",
+    "confidence": 0.924
+   },
+   {
+    "time": 112.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 114.0,
+    "text": "Right; Exactly:",
+    "confidence": 0.604
+   },
+   {
+    "time": 114.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 114.0,
+    "text": "drnoc",
+    "confidence": 0.986
+   },
+   {
+    "time": 116.0,
+    "text": "of antibodies",
+    "confidence": 0.92
+   },
+   {
+    "time": 116.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 116.0,
+    "text": "dcnoc",
+    "confidence": 0.565
+   },
+   {
+    "time": 118.0,
+    "text": "to neutralize the virus",
+    "confidence": 0.918
+   },
+   {
+    "time": 118.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 118.0,
+    "text": "@ dr.noc",
+    "confidence": 0.501
+   },
+   {
+    "time": 120.0,
+    "text": "and T cells",
+    "confidence": 0.99
+   },
+   {
+    "time": 120.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 120.0,
+    "text": "@ drnoc",
+    "confidence": 0.906
+   },
+   {
+    "time": 122.0,
+    "text": "incubating virus actively:",
+    "confidence": 0.838
+   },
+   {
+    "time": 122.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 122.0,
+    "text": "@ drnoc",
+    "confidence": 0.919
+   },
+   {
+    "time": 124.0,
+    "text": "process happens",
+    "confidence": 1.0
+   },
+   {
+    "time": 124.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 124.0,
+    "text": "drnoc",
+    "confidence": 0.977
+   },
+   {
+    "time": 126.0,
+    "text": "with the virus,",
+    "confidence": 0.998
+   },
+   {
+    "time": 126.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 126.0,
+    "text": "@ drnoc",
+    "confidence": 0.897
+   },
+   {
+    "time": 128.0,
+    "text": "and goes to the lymph",
+    "confidence": 0.696
+   },
+   {
+    "time": 128.0,
+    "text": "node",
+    "confidence": 1.0
+   },
+   {
+    "time": 128.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 128.0,
+    "text": "@ drnoc",
+    "confidence": 0.869
+   },
+   {
+    "time": 130.0,
+    "text": "the B and T cells.",
+    "confidence": 0.611
+   },
+   {
+    "time": 130.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 132.0,
+    "text": "There are people who had",
+    "confidence": 0.995
+   },
+   {
+    "time": 132.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 132.0,
+    "text": "@ dr.noc",
+    "confidence": 0.516
+   },
+   {
+    "time": 134.0,
+    "text": "to the Covid vaccine",
+    "confidence": 0.916
+   },
+   {
+    "time": 134.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 136.0,
+    "text": "If the vaccine is doing",
+    "confidence": 0.866
+   },
+   {
+    "time": 136.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 136.0,
+    "text": "@ drnoc",
+    "confidence": 0.917
+   },
+   {
+    "time": 138.0,
+    "text": "itself would have done,",
+    "confidence": 0.892
+   },
+   {
+    "time": 138.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 138.0,
+    "text": "@ dr.noc",
+    "confidence": 0.542
+   },
+   {
+    "time": 140.0,
+    "text": "those same side",
+    "confidence": 0.899
+   },
+   {
+    "time": 140.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 140.0,
+    "text": "@ dr.noc",
+    "confidence": 0.653
+   },
+   {
+    "time": 142.0,
+    "text": "straight up?",
+    "confidence": 0.985
+   },
+   {
+    "time": 142.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 144.0,
+    "text": "I dont know of data",
+    "confidence": 0.846
+   },
+   {
+    "time": 144.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 144.0,
+    "text": "@ drnoc",
+    "confidence": 0.883
+   },
+   {
+    "time": 146.0,
+    "text": "If the severity",
+    "confidence": 0.998
+   },
+   {
+    "time": 146.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 146.0,
+    "text": "@ drnoc",
+    "confidence": 0.87
+   },
+   {
+    "time": 148.0,
+    "text": "is predictive of the data:",
+    "confidence": 0.844
+   },
+   {
+    "time": 148.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 148.0,
+    "text": "@ drnoc",
+    "confidence": 0.918
+   },
+   {
+    "time": 150.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 150.0,
+    "text": "drnoc",
+    "confidence": 0.987
+   },
+   {
+    "time": 152.0,
+    "text": "Honest but boring:",
+    "confidence": 0.704
+   },
+   {
+    "time": 152.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 152.0,
+    "text": "drnoc",
+    "confidence": 0.981
+   },
+   {
+    "time": 154.0,
+    "text": "The trade off:",
+    "confidence": 0.917
+   },
+   {
+    "time": 154.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 154.0,
+    "text": "drnoc",
+    "confidence": 0.981
+   },
+   {
+    "time": 156.0,
+    "text": "NO,",
+    "confidence": 0.913
+   },
+   {
+    "time": 156.0,
+    "text": "I just want to call out",
+    "confidence": 0.784
+   },
+   {
+    "time": 156.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 156.0,
+    "text": "drnoc",
+    "confidence": 0.982
+   },
+   {
+    "time": 158.0,
+    "text": "scientist is speaking",
+    "confidence": 0.776
+   },
+   {
+    "time": 158.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 158.0,
+    "text": "@ drnoc",
+    "confidence": 0.908
+   },
+   {
+    "time": 160.0,
+    "text": "mean, say,",
+    "confidence": 0.786
+   },
+   {
+    "time": 160.0,
+    "text": "I",
+    "confidence": 0.82
+   },
+   {
+    "time": 160.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 160.0,
+    "text": "drnoc",
+    "confidence": 0.983
+   },
+   {
+    "time": 162.0,
+    "text": "Id rather that;",
+    "confidence": 0.843
+   },
+   {
+    "time": 162.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 162.0,
+    "text": "@ drnoc",
+    "confidence": 0.83
+   },
+   {
+    "time": 164.0,
+    "text": "I",
+    "confidence": 0.834
+   },
+   {
+    "time": 164.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 164.0,
+    "text": "drnoc",
+    "confidence": 0.976
+   },
+   {
+    "time": 166.0,
+    "text": "and then we would do",
+    "confidence": 0.701
+   },
+   {
+    "time": 166.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 166.0,
+    "text": "drnoc",
+    "confidence": 0.976
+   },
+   {
+    "time": 168.0,
+    "text": "a bad fever",
+    "confidence": 0.959
+   },
+   {
+    "time": 168.0,
+    "text": "If you",
+    "confidence": 0.819
+   },
+   {
+    "time": 168.0,
+    "text": "got",
+    "confidence": 1.0
+   },
+   {
+    "time": 168.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 168.0,
+    "text": "@ drnoc",
+    "confidence": 0.915
+   },
+   {
+    "time": 170.0,
+    "text": "died from Covid_",
+    "confidence": 0.73
+   },
+   {
+    "time": 170.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 170.0,
+    "text": "@ drnoc",
+    "confidence": 0.935
+   },
+   {
+    "time": 172.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 172.0,
+    "text": "drnoc",
+    "confidence": 0.981
+   },
+   {
+    "time": 174.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 174.0,
+    "text": "drnoc",
+    "confidence": 0.99
+   },
+   {
+    "time": 176.0,
+    "text": "J",
+    "confidence": 0.601
+   },
+   {
+    "time": 176.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 176.0,
+    "text": "drnoc",
+    "confidence": 0.99
+   }
+  ],
+  "captions": [
+   {
+    "text": "Tiktok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.649,
+    "id": "o1"
+   },
+   {
+    "text": "PhD in pharmacology",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.953,
+    "id": "o2"
+   },
+   {
+    "text": "Tiktok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.691,
+    "id": "o3"
+   },
+   {
+    "text": "immunology, explain",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.716,
+    "id": "o4"
+   },
+   {
+    "text": "the actual science",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.959,
+    "id": "o5"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o6"
+   },
+   {
+    "text": "drnoc",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.889,
+    "id": "o7"
+   },
+   {
+    "text": "of how vaccines work",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.926,
+    "id": "o8"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "drnoc",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.897,
+    "id": "o10"
+   },
+   {
+    "text": "and how the body then",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.889,
+    "id": "o11"
+   },
+   {
+    "text": "goes",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o12"
+   },
+   {
+    "text": "TTikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.838,
+    "id": "o13"
+   },
+   {
+    "text": "@dimoc",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.541,
+    "id": "o14"
+   },
+   {
+    "text": "the necessary antibodies:",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.826,
+    "id": "o15"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.801,
+    "id": "o16"
+   },
+   {
+    "text": "Actually, the same process",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.73,
+    "id": "o17"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o18"
+   },
+   {
+    "text": "drnoc",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.982,
+    "id": "o19"
+   },
+   {
+    "text": "'re infected",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.956,
+    "id": "o20"
+   },
+   {
+    "text": "as when",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.706,
+    "id": "o21"
+   },
+   {
+    "text": "you'r",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.687,
+    "id": "o22"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.999,
+    "id": "o23"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.894,
+    "id": "o24"
+   },
+   {
+    "text": "And so it's",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.89,
+    "id": "o25"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.999,
+    "id": "o26"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.859,
+    "id": "o27"
+   },
+   {
+    "text": "from a vaccine standpoint,",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.802,
+    "id": "o28"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o29"
+   },
+   {
+    "text": "dr_noc",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.519,
+    "id": "o30"
+   },
+   {
+    "text": "in your arm, right;",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.648,
+    "id": "o31"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o32"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.925,
+    "id": "o33"
+   },
+   {
+    "text": "injected_",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.635,
+    "id": "o34"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o35"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.91,
+    "id": "o36"
+   },
+   {
+    "text": "of the pathogen.",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.747,
+    "id": "o37"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.999,
+    "id": "o38"
+   },
+   {
+    "text": "drnoc",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.98,
+    "id": "o39"
+   },
+   {
+    "text": "So what happens in your",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.613,
+    "id": "o40"
+   },
+   {
+    "text": "arm",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o41"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.998,
+    "id": "o42"
+   },
+   {
+    "text": "nothing right there:",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.934,
+    "id": "o43"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.998,
+    "id": "o44"
+   },
+   {
+    "text": "drnoc",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.907,
+    "id": "o45"
+   },
+   {
+    "text": "that comes in and scoops",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.939,
+    "id": "o46"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.692,
+    "id": "o47"
+   },
+   {
+    "text": "drnoc",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.962,
+    "id": "o48"
+   },
+   {
+    "text": "to your draining lymph",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.679,
+    "id": "o49"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.999,
+    "id": "o50"
+   },
+   {
+    "text": "drnoc",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.966,
+    "id": "o51"
+   },
+   {
+    "text": "So it goes through",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.764,
+    "id": "o52"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.994,
+    "id": "o53"
+   },
+   {
+    "text": "drnoc",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.976,
+    "id": "o54"
+   },
+   {
+    "text": "pathway in your body:",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.815,
+    "id": "o55"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.999,
+    "id": "o56"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.907,
+    "id": "o57"
+   },
+   {
+    "text": "circulatory system_",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.998,
+    "id": "o58"
+   },
+   {
+    "text": "TikTok",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.999,
+    "id": "o59"
+   },
+   {
+    "text": "separate",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.897,
+    "id": "o60"
+   },
+   {
+    "text": "a",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o61"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.999,
+    "id": "o62"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.934,
+    "id": "o63"
+   },
+   {
+    "text": "called lymph",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.624,
+    "id": "o64"
+   },
+   {
+    "text": "TikTok",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o65"
+   },
+   {
+    "text": "drnoc",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.978,
+    "id": "o66"
+   },
+   {
+    "text": "So the white blood cells",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.968,
+    "id": "o67"
+   },
+   {
+    "text": "TikTok",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o68"
+   },
+   {
+    "text": "drnoc",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.974,
+    "id": "o69"
+   },
+   {
+    "text": "the injection",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o70"
+   },
+   {
+    "text": "TikTok",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o71"
+   },
+   {
+    "text": "it back to a lymph node",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.734,
+    "id": "o72"
+   },
+   {
+    "text": "TikTok",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o73"
+   },
+   {
+    "text": "drnoc",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.972,
+    "id": "o74"
+   },
+   {
+    "text": "to all these other",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.911,
+    "id": "o75"
+   },
+   {
+    "text": "TikTok",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.999,
+    "id": "o76"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.849,
+    "id": "o77"
+   },
+   {
+    "text": "do you recognize this? No.",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.823,
+    "id": "o78"
+   },
+   {
+    "text": "TikTok",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.999,
+    "id": "o79"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.847,
+    "id": "o80"
+   },
+   {
+    "text": "Until it finds one_",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.958,
+    "id": "o81"
+   },
+   {
+    "text": "TikTok",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.999,
+    "id": "o82"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.841,
+    "id": "o83"
+   },
+   {
+    "text": "It is.",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.958,
+    "id": "o84"
+   },
+   {
+    "text": "TikTok",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.999,
+    "id": "o85"
+   },
+   {
+    "text": "dr_noc",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.693,
+    "id": "o86"
+   },
+   {
+    "text": "And the neat",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.998,
+    "id": "o87"
+   },
+   {
+    "text": "TikTok",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.999,
+    "id": "o88"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.919,
+    "id": "o89"
+   },
+   {
+    "text": "that are just sitting",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.862,
+    "id": "o90"
+   },
+   {
+    "text": "TikTok",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 1.0,
+    "id": "o91"
+   },
+   {
+    "text": "dr.noc",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.508,
+    "id": "o92"
+   },
+   {
+    "text": "something they recognize.",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.718,
+    "id": "o93"
+   },
+   {
+    "text": "TikTok",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.999,
+    "id": "o94"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.907,
+    "id": "o95"
+   },
+   {
+    "text": "exactly",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 1.0,
+    "id": "o96"
+   },
+   {
+    "text": "TikTok",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.999,
+    "id": "o97"
+   },
+   {
+    "text": "like the guy for the car",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.886,
+    "id": "o98"
+   },
+   {
+    "text": "TikTok",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 1.0,
+    "id": "o99"
+   },
+   {
+    "text": "drnoc",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.98,
+    "id": "o100"
+   },
+   {
+    "text": "Nothing happens.",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.695,
+    "id": "o101"
+   },
+   {
+    "text": "TikTok",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 1.0,
+    "id": "o102"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.946,
+    "id": "o103"
+   },
+   {
+    "text": "the one lymph node,",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.811,
+    "id": "o104"
+   },
+   {
+    "text": "TikTok",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.999,
+    "id": "o105"
+   },
+   {
+    "text": "dr_noc",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.543,
+    "id": "o106"
+   },
+   {
+    "text": "take your time_",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.764,
+    "id": "o107"
+   },
+   {
+    "text": "TikTok",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.999,
+    "id": "o108"
+   },
+   {
+    "text": "dr_noc",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.63,
+    "id": "o109"
+   },
+   {
+    "text": "The immune cell is",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.936,
+    "id": "o110"
+   },
+   {
+    "text": "TikTok",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 1.0,
+    "id": "o111"
+   },
+   {
+    "text": "drnoc",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.987,
+    "id": "o112"
+   },
+   {
+    "text": "TikTok",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 1.0,
+    "id": "o113"
+   },
+   {
+    "text": "But all of those cells",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.903,
+    "id": "o114"
+   },
+   {
+    "text": "TikTok",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 1.0,
+    "id": "o115"
+   },
+   {
+    "text": "drnoc",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.977,
+    "id": "o116"
+   },
+   {
+    "text": "in advance: Right:",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.678,
+    "id": "o117"
+   },
+   {
+    "text": "TikTok",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 1.0,
+    "id": "o118"
+   },
+   {
+    "text": "drnoc",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.98,
+    "id": "o119"
+   },
+   {
+    "text": "existed, yoU",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.706,
+    "id": "o120"
+   },
+   {
+    "text": "TikTok",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.999,
+    "id": "o121"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.927,
+    "id": "o122"
+   },
+   {
+    "text": "T cells and B cells",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.712,
+    "id": "o123"
+   },
+   {
+    "text": "TikTok",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.999,
+    "id": "o124"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.905,
+    "id": "o125"
+   },
+   {
+    "text": "that recognized Covid.",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.942,
+    "id": "o126"
+   },
+   {
+    "text": "TikTok",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.999,
+    "id": "o127"
+   },
+   {
+    "text": "dr_noc",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.529,
+    "id": "o128"
+   },
+   {
+    "text": "for the first time,",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.99,
+    "id": "o129"
+   },
+   {
+    "text": "TikTok",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.999,
+    "id": "o130"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.894,
+    "id": "o131"
+   },
+   {
+    "text": "It was like their time",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.818,
+    "id": "o132"
+   },
+   {
+    "text": "TikTok",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.999,
+    "id": "o133"
+   },
+   {
+    "text": "Hey,",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.986,
+    "id": "o134"
+   },
+   {
+    "text": "I know that onel",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.775,
+    "id": "o135"
+   },
+   {
+    "text": "TikTok",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.999,
+    "id": "o136"
+   },
+   {
+    "text": "dr_noc",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.593,
+    "id": "o137"
+   },
+   {
+    "text": "When that happens",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.993,
+    "id": "o138"
+   },
+   {
+    "text": "TikTok",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 1.0,
+    "id": "o139"
+   },
+   {
+    "text": "drnoc",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.986,
+    "id": "o140"
+   },
+   {
+    "text": "It multiplies",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 1.0,
+    "id": "o141"
+   },
+   {
+    "text": "TikTok",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 1.0,
+    "id": "o142"
+   },
+   {
+    "text": "drnoc",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.986,
+    "id": "o143"
+   },
+   {
+    "text": "It starts making",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.821,
+    "id": "o144"
+   },
+   {
+    "text": "antibodies",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.74,
+    "id": "o145"
+   },
+   {
+    "text": "TikTok",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 1.0,
+    "id": "o146"
+   },
+   {
+    "text": "drnoc",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.983,
+    "id": "o147"
+   },
+   {
+    "text": "that go back to your site",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.914,
+    "id": "o148"
+   },
+   {
+    "text": "TikTok",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.992,
+    "id": "o149"
+   },
+   {
+    "text": "dr_noc",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.562,
+    "id": "o150"
+   },
+   {
+    "text": "your whole body:",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.953,
+    "id": "o151"
+   },
+   {
+    "text": "TikTok",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.999,
+    "id": "o152"
+   },
+   {
+    "text": "@ dr_noc",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.569,
+    "id": "o153"
+   },
+   {
+    "text": "It also activates T cells.",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.743,
+    "id": "o154"
+   },
+   {
+    "text": "TikTok",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 1.0,
+    "id": "o155"
+   },
+   {
+    "text": "are the ones that",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.981,
+    "id": "o156"
+   },
+   {
+    "text": "recognize",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 1.0,
+    "id": "o157"
+   },
+   {
+    "text": "TikTok",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.881,
+    "id": "o158"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.611,
+    "id": "o159"
+   },
+   {
+    "text": "cell is infected",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.991,
+    "id": "o160"
+   },
+   {
+    "text": "TikTok",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.998,
+    "id": "o161"
+   },
+   {
+    "text": "drnoc",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.983,
+    "id": "o162"
+   },
+   {
+    "text": "I better kill that:",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.924,
+    "id": "o163"
+   },
+   {
+    "text": "TikTok",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.999,
+    "id": "o164"
+   },
+   {
+    "text": "Right; Exactly:",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 0.604,
+    "id": "o165"
+   },
+   {
+    "text": "TikTok",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 0.999,
+    "id": "o166"
+   },
+   {
+    "text": "drnoc",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 0.986,
+    "id": "o167"
+   },
+   {
+    "text": "of antibodies",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 0.92,
+    "id": "o168"
+   },
+   {
+    "text": "TikTok",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 1.0,
+    "id": "o169"
+   },
+   {
+    "text": "dcnoc",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 0.565,
+    "id": "o170"
+   },
+   {
+    "text": "to neutralize the virus",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.918,
+    "id": "o171"
+   },
+   {
+    "text": "TikTok",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.999,
+    "id": "o172"
+   },
+   {
+    "text": "@ dr.noc",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.501,
+    "id": "o173"
+   },
+   {
+    "text": "and T cells",
+    "start": 120.0,
+    "end": 120.0,
+    "confidence": 0.99,
+    "id": "o174"
+   },
+   {
+    "text": "TikTok",
+    "start": 120.0,
+    "end": 120.0,
+    "confidence": 0.999,
+    "id": "o175"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 120.0,
+    "end": 120.0,
+    "confidence": 0.906,
+    "id": "o176"
+   },
+   {
+    "text": "incubating virus actively:",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.838,
+    "id": "o177"
+   },
+   {
+    "text": "TikTok",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.999,
+    "id": "o178"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.919,
+    "id": "o179"
+   },
+   {
+    "text": "process happens",
+    "start": 124.0,
+    "end": 124.0,
+    "confidence": 1.0,
+    "id": "o180"
+   },
+   {
+    "text": "TikTok",
+    "start": 124.0,
+    "end": 124.0,
+    "confidence": 0.999,
+    "id": "o181"
+   },
+   {
+    "text": "drnoc",
+    "start": 124.0,
+    "end": 124.0,
+    "confidence": 0.977,
+    "id": "o182"
+   },
+   {
+    "text": "with the virus,",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.998,
+    "id": "o183"
+   },
+   {
+    "text": "TikTok",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 1.0,
+    "id": "o184"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.897,
+    "id": "o185"
+   },
+   {
+    "text": "and goes to the lymph",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.696,
+    "id": "o186"
+   },
+   {
+    "text": "node",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 1.0,
+    "id": "o187"
+   },
+   {
+    "text": "TikTok",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.999,
+    "id": "o188"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.869,
+    "id": "o189"
+   },
+   {
+    "text": "the B and T cells.",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.611,
+    "id": "o190"
+   },
+   {
+    "text": "TikTok",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 1.0,
+    "id": "o191"
+   },
+   {
+    "text": "There are people who had",
+    "start": 132.0,
+    "end": 132.0,
+    "confidence": 0.995,
+    "id": "o192"
+   },
+   {
+    "text": "TikTok",
+    "start": 132.0,
+    "end": 132.0,
+    "confidence": 1.0,
+    "id": "o193"
+   },
+   {
+    "text": "@ dr.noc",
+    "start": 132.0,
+    "end": 132.0,
+    "confidence": 0.516,
+    "id": "o194"
+   },
+   {
+    "text": "to the Covid vaccine",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.916,
+    "id": "o195"
+   },
+   {
+    "text": "TikTok",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 1.0,
+    "id": "o196"
+   },
+   {
+    "text": "If the vaccine is doing",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.866,
+    "id": "o197"
+   },
+   {
+    "text": "TikTok",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 1.0,
+    "id": "o198"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 136.0,
+    "end": 136.0,
+    "confidence": 0.917,
+    "id": "o199"
+   },
+   {
+    "text": "itself would have done,",
+    "start": 138.0,
+    "end": 138.0,
+    "confidence": 0.892,
+    "id": "o200"
+   },
+   {
+    "text": "TikTok",
+    "start": 138.0,
+    "end": 138.0,
+    "confidence": 0.999,
+    "id": "o201"
+   },
+   {
+    "text": "@ dr.noc",
+    "start": 138.0,
+    "end": 138.0,
+    "confidence": 0.542,
+    "id": "o202"
+   },
+   {
+    "text": "those same side",
+    "start": 140.0,
+    "end": 140.0,
+    "confidence": 0.899,
+    "id": "o203"
+   },
+   {
+    "text": "TikTok",
+    "start": 140.0,
+    "end": 140.0,
+    "confidence": 1.0,
+    "id": "o204"
+   },
+   {
+    "text": "@ dr.noc",
+    "start": 140.0,
+    "end": 140.0,
+    "confidence": 0.653,
+    "id": "o205"
+   },
+   {
+    "text": "straight up?",
+    "start": 142.0,
+    "end": 142.0,
+    "confidence": 0.985,
+    "id": "o206"
+   },
+   {
+    "text": "TikTok",
+    "start": 142.0,
+    "end": 142.0,
+    "confidence": 1.0,
+    "id": "o207"
+   },
+   {
+    "text": "I dont know of data",
+    "start": 144.0,
+    "end": 144.0,
+    "confidence": 0.846,
+    "id": "o208"
+   },
+   {
+    "text": "TikTok",
+    "start": 144.0,
+    "end": 144.0,
+    "confidence": 0.999,
+    "id": "o209"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 144.0,
+    "end": 144.0,
+    "confidence": 0.883,
+    "id": "o210"
+   },
+   {
+    "text": "If the severity",
+    "start": 146.0,
+    "end": 146.0,
+    "confidence": 0.998,
+    "id": "o211"
+   },
+   {
+    "text": "TikTok",
+    "start": 146.0,
+    "end": 146.0,
+    "confidence": 0.999,
+    "id": "o212"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 146.0,
+    "end": 146.0,
+    "confidence": 0.87,
+    "id": "o213"
+   },
+   {
+    "text": "is predictive of the data:",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 0.844,
+    "id": "o214"
+   },
+   {
+    "text": "TikTok",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 1.0,
+    "id": "o215"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 148.0,
+    "end": 148.0,
+    "confidence": 0.918,
+    "id": "o216"
+   },
+   {
+    "text": "TikTok",
+    "start": 150.0,
+    "end": 150.0,
+    "confidence": 1.0,
+    "id": "o217"
+   },
+   {
+    "text": "drnoc",
+    "start": 150.0,
+    "end": 150.0,
+    "confidence": 0.987,
+    "id": "o218"
+   },
+   {
+    "text": "Honest but boring:",
+    "start": 152.0,
+    "end": 152.0,
+    "confidence": 0.704,
+    "id": "o219"
+   },
+   {
+    "text": "TikTok",
+    "start": 152.0,
+    "end": 152.0,
+    "confidence": 1.0,
+    "id": "o220"
+   },
+   {
+    "text": "drnoc",
+    "start": 152.0,
+    "end": 152.0,
+    "confidence": 0.981,
+    "id": "o221"
+   },
+   {
+    "text": "The trade off:",
+    "start": 154.0,
+    "end": 154.0,
+    "confidence": 0.917,
+    "id": "o222"
+   },
+   {
+    "text": "TikTok",
+    "start": 154.0,
+    "end": 154.0,
+    "confidence": 1.0,
+    "id": "o223"
+   },
+   {
+    "text": "drnoc",
+    "start": 154.0,
+    "end": 154.0,
+    "confidence": 0.981,
+    "id": "o224"
+   },
+   {
+    "text": "NO,",
+    "start": 156.0,
+    "end": 156.0,
+    "confidence": 0.913,
+    "id": "o225"
+   },
+   {
+    "text": "I just want to call out",
+    "start": 156.0,
+    "end": 156.0,
+    "confidence": 0.784,
+    "id": "o226"
+   },
+   {
+    "text": "TikTok",
+    "start": 156.0,
+    "end": 156.0,
+    "confidence": 1.0,
+    "id": "o227"
+   },
+   {
+    "text": "drnoc",
+    "start": 156.0,
+    "end": 156.0,
+    "confidence": 0.982,
+    "id": "o228"
+   },
+   {
+    "text": "scientist is speaking",
+    "start": 158.0,
+    "end": 158.0,
+    "confidence": 0.776,
+    "id": "o229"
+   },
+   {
+    "text": "TikTok",
+    "start": 158.0,
+    "end": 158.0,
+    "confidence": 1.0,
+    "id": "o230"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 158.0,
+    "end": 158.0,
+    "confidence": 0.908,
+    "id": "o231"
+   },
+   {
+    "text": "mean, say,",
+    "start": 160.0,
+    "end": 160.0,
+    "confidence": 0.786,
+    "id": "o232"
+   },
+   {
+    "text": "I",
+    "start": 160.0,
+    "end": 160.0,
+    "confidence": 0.82,
+    "id": "o233"
+   },
+   {
+    "text": "TikTok",
+    "start": 160.0,
+    "end": 160.0,
+    "confidence": 1.0,
+    "id": "o234"
+   },
+   {
+    "text": "drnoc",
+    "start": 160.0,
+    "end": 160.0,
+    "confidence": 0.983,
+    "id": "o235"
+   },
+   {
+    "text": "Id rather that;",
+    "start": 162.0,
+    "end": 162.0,
+    "confidence": 0.843,
+    "id": "o236"
+   },
+   {
+    "text": "TikTok",
+    "start": 162.0,
+    "end": 162.0,
+    "confidence": 0.997,
+    "id": "o237"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 162.0,
+    "end": 162.0,
+    "confidence": 0.83,
+    "id": "o238"
+   },
+   {
+    "text": "I",
+    "start": 164.0,
+    "end": 164.0,
+    "confidence": 0.834,
+    "id": "o239"
+   },
+   {
+    "text": "TikTok",
+    "start": 164.0,
+    "end": 164.0,
+    "confidence": 1.0,
+    "id": "o240"
+   },
+   {
+    "text": "drnoc",
+    "start": 164.0,
+    "end": 164.0,
+    "confidence": 0.976,
+    "id": "o241"
+   },
+   {
+    "text": "and then we would do",
+    "start": 166.0,
+    "end": 166.0,
+    "confidence": 0.701,
+    "id": "o242"
+   },
+   {
+    "text": "TikTok",
+    "start": 166.0,
+    "end": 166.0,
+    "confidence": 1.0,
+    "id": "o243"
+   },
+   {
+    "text": "drnoc",
+    "start": 166.0,
+    "end": 166.0,
+    "confidence": 0.976,
+    "id": "o244"
+   },
+   {
+    "text": "a bad fever",
+    "start": 168.0,
+    "end": 168.0,
+    "confidence": 0.959,
+    "id": "o245"
+   },
+   {
+    "text": "If you",
+    "start": 168.0,
+    "end": 168.0,
+    "confidence": 0.819,
+    "id": "o246"
+   },
+   {
+    "text": "got",
+    "start": 168.0,
+    "end": 168.0,
+    "confidence": 1.0,
+    "id": "o247"
+   },
+   {
+    "text": "TikTok",
+    "start": 168.0,
+    "end": 168.0,
+    "confidence": 0.999,
+    "id": "o248"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 168.0,
+    "end": 168.0,
+    "confidence": 0.915,
+    "id": "o249"
+   },
+   {
+    "text": "died from Covid_",
+    "start": 170.0,
+    "end": 170.0,
+    "confidence": 0.73,
+    "id": "o250"
+   },
+   {
+    "text": "TikTok",
+    "start": 170.0,
+    "end": 170.0,
+    "confidence": 0.999,
+    "id": "o251"
+   },
+   {
+    "text": "@ drnoc",
+    "start": 170.0,
+    "end": 170.0,
+    "confidence": 0.935,
+    "id": "o252"
+   },
+   {
+    "text": "TikTok",
+    "start": 172.0,
+    "end": 172.0,
+    "confidence": 1.0,
+    "id": "o253"
+   },
+   {
+    "text": "drnoc",
+    "start": 172.0,
+    "end": 172.0,
+    "confidence": 0.981,
+    "id": "o254"
+   },
+   {
+    "text": "TikTok",
+    "start": 174.0,
+    "end": 174.0,
+    "confidence": 1.0,
+    "id": "o255"
+   },
+   {
+    "text": "drnoc",
+    "start": 174.0,
+    "end": 174.0,
+    "confidence": 0.99,
+    "id": "o256"
+   },
+   {
+    "text": "J",
+    "start": 176.0,
+    "end": 176.0,
+    "confidence": 0.601,
+    "id": "o257"
+   },
+   {
+    "text": "TikTok",
+    "start": 176.0,
+    "end": 176.0,
+    "confidence": 1.0,
+    "id": "o258"
+   },
+   {
+    "text": "drnoc",
+    "start": 176.0,
+    "end": 176.0,
+    "confidence": 0.99,
+    "id": "o259"
+   }
+  ]
+ }
+}

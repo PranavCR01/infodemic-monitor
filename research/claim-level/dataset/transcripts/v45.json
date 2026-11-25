@@ -1,0 +1,2201 @@
+{
+ "video_id": "v45",
+ "filename": "test_clip10.mp4",
+ "relative_path": "Misinfo Dataset/Haoran Zhang/No misinfo/test_clip10.mp4",
+ "collector": "Haoran Zhang",
+ "collector_label": "NO_MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:13:13",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.972,
+  "duration_seconds": 140.04,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.01,
+    "text": "Let's do game theory."
+   },
+   {
+    "id": "t2",
+    "start": 2.01,
+    "end": 5.01,
+    "text": "Game theory is just a study of how to win games, okay?"
+   },
+   {
+    "id": "t3",
+    "start": 5.01,
+    "end": 6.41,
+    "text": "It's a very general thing."
+   },
+   {
+    "id": "t4",
+    "start": 6.41,
+    "end": 8.25,
+    "text": "Let's do a thought experiment and just say,"
+   },
+   {
+    "id": "t5",
+    "start": 8.25,
+    "end": 10.37,
+    "text": "there's about a million people in the world, okay?"
+   },
+   {
+    "id": "t6",
+    "start": 10.37,
+    "end": 11.61,
+    "text": "There's a million people in the world"
+   },
+   {
+    "id": "t7",
+    "start": 11.61,
+    "end": 14.61,
+    "text": "all trying to win the game against each other,"
+   },
+   {
+    "id": "t8",
+    "start": 14.61,
+    "end": 16.65,
+    "text": "but only one can win."
+   },
+   {
+    "id": "t9",
+    "start": 16.65,
+    "end": 18.01,
+    "text": "According to game theory,"
+   },
+   {
+    "id": "t10",
+    "start": 18.01,
+    "end": 20.93,
+    "text": "the best way to win a game is by,"
+   },
+   {
+    "id": "t11",
+    "start": 20.93,
+    "end": 22.95,
+    "text": "does anyone know?"
+   },
+   {
+    "id": "t12",
+    "start": 22.95,
+    "end": 24.19,
+    "text": "Cheating, okay?"
+   },
+   {
+    "id": "t13",
+    "start": 24.19,
+    "end": 25.59,
+    "text": "If you follow the rules, you will never win a game,"
+   },
+   {
+    "id": "t14",
+    "start": 25.59,
+    "end": 26.87,
+    "text": "you have to cheat."
+   },
+   {
+    "id": "t15",
+    "start": 26.87,
+    "end": 29.99,
+    "text": "And in this game, the best way to win"
+   },
+   {
+    "id": "t16",
+    "start": 29.99,
+    "end": 34.58,
+    "text": "is by coordinating with other people, right?"
+   },
+   {
+    "id": "t17",
+    "start": 34.58,
+    "end": 35.9,
+    "text": "Cause everyone's playing by himself."
+   },
+   {
+    "id": "t18",
+    "start": 35.9,
+    "end": 38.14,
+    "text": "So if you can work with other people,"
+   },
+   {
+    "id": "t19",
+    "start": 38.14,
+    "end": 40.46,
+    "text": "then that gives you a huge advantage over everyone else,"
+   },
+   {
+    "id": "t20",
+    "start": 40.46,
+    "end": 41.3,
+    "text": "right?"
+   },
+   {
+    "id": "t21",
+    "start": 41.3,
+    "end": 43.18,
+    "text": "The problem with this is,"
+   },
+   {
+    "id": "t22",
+    "start": 43.18,
+    "end": 45.18,
+    "text": "the moment that people start coordinating,"
+   },
+   {
+    "id": "t23",
+    "start": 45.18,
+    "end": 48.58,
+    "text": "it forces an arms race of coordination."
+   },
+   {
+    "id": "t24",
+    "start": 48.58,
+    "end": 49.96,
+    "text": "So maybe these two are working together,"
+   },
+   {
+    "id": "t25",
+    "start": 49.96,
+    "end": 52.86,
+    "text": "these four now are forced to work together."
+   },
+   {
+    "id": "t26",
+    "start": 52.86,
+    "end": 56.74,
+    "text": "Which now forces these five to work together."
+   },
+   {
+    "id": "t27",
+    "start": 56.74,
+    "end": 59.06,
+    "text": "If you are the first to work together,"
+   },
+   {
+    "id": "t28",
+    "start": 59.06,
+    "end": 61.18,
+    "text": "you get screwed in the process."
+   },
+   {
+    "id": "t29",
+    "start": 61.18,
+    "end": 64.7,
+    "text": "So if you cheat, you have to cheat secretly."
+   },
+   {
+    "id": "t30",
+    "start": 64.7,
+    "end": 67.5,
+    "text": "You have to coordinate without people knowing"
+   },
+   {
+    "id": "t31",
+    "start": 67.5,
+    "end": 69.26,
+    "text": "you're actually coordinating together."
+   },
+   {
+    "id": "t32",
+    "start": 69.26,
+    "end": 71.06,
+    "text": "You have to conspire secretly."
+   },
+   {
+    "id": "t33",
+    "start": 71.06,
+    "end": 73.54,
+    "text": "And there are different ways to collaborate secretly, okay?"
+   },
+   {
+    "id": "t34",
+    "start": 73.54,
+    "end": 75.86,
+    "text": "So let's look at examples."
+   },
+   {
+    "id": "t35",
+    "start": 75.86,
+    "end": 78.14,
+    "text": "So family is one example, right?"
+   },
+   {
+    "id": "t36",
+    "start": 78.14,
+    "end": 81.14,
+    "text": "Another example is religion."
+   },
+   {
+    "id": "t37",
+    "start": 81.14,
+    "end": 82.18,
+    "text": "You have a leader."
+   },
+   {
+    "id": "t38",
+    "start": 82.18,
+    "end": 87.66,
+    "text": "If you have a similar race, ethnicity,"
+   },
+   {
+    "id": "t39",
+    "start": 87.66,
+    "end": 89.54,
+    "text": "You have a simple language."
+   },
+   {
+    "id": "t40",
+    "start": 89.54,
+    "end": 92.3,
+    "text": "So these are examples of how you get people"
+   },
+   {
+    "id": "t41",
+    "start": 92.3,
+    "end": 93.86,
+    "text": "to coordinate together."
+   },
+   {
+    "id": "t42",
+    "start": 93.86,
+    "end": 98.86,
+    "text": "The problem is that these are all obvious to people,"
+   },
+   {
+    "id": "t43",
+    "start": 98.98,
+    "end": 102.34,
+    "text": "which forces them to do the same thing."
+   },
+   {
+    "id": "t44",
+    "start": 102.34,
+    "end": 105.86,
+    "text": "But there's a strategy that you can use"
+   },
+   {
+    "id": "t45",
+    "start": 105.86,
+    "end": 108.34,
+    "text": "that allows you to coordinate secretly"
+   },
+   {
+    "id": "t46",
+    "start": 108.34,
+    "end": 109.82,
+    "text": "and defeat all your enemies."
+   },
+   {
+    "id": "t47",
+    "start": 109.82,
+    "end": 112.9,
+    "text": "And this strategy is called transgression."
+   },
+   {
+    "id": "t48",
+    "start": 112.9,
+    "end": 114.38,
+    "text": "Transgression."
+   },
+   {
+    "id": "t49",
+    "start": 114.38,
+    "end": 117.54,
+    "text": "The breaking of taboos, the breaking of social norm,"
+   },
+   {
+    "id": "t50",
+    "start": 117.54,
+    "end": 119.98,
+    "text": "the breaking of social laws, okay?"
+   },
+   {
+    "id": "t51",
+    "start": 119.98,
+    "end": 121.66,
+    "text": "So let's study this concept."
+   },
+   {
+    "id": "t52",
+    "start": 121.66,
+    "end": 125.42,
+    "text": "The theory is that the greater you transgress, okay?"
+   },
+   {
+    "id": "t53",
+    "start": 125.42,
+    "end": 127.1,
+    "text": "This is the level of transgression."
+   },
+   {
+    "id": "t54",
+    "start": 127.1,
+    "end": 129.5,
+    "text": "The greater your cohesion,"
+   },
+   {
+    "id": "t55",
+    "start": 129.5,
+    "end": 132.3,
+    "text": "which leads to synchronicity, okay?"
+   },
+   {
+    "id": "t56",
+    "start": 132.3,
+    "end": 135.92,
+    "text": "That's a theory I wanna propose to you, all right?"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 71,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.97
+   },
+   {
+    "time": 0.0,
+    "text": "@ profjianginsight",
+    "confidence": 0.965
+   },
+   {
+    "time": 0.0,
+    "text": "theory",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "Let's do game",
+    "confidence": 0.928
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.854
+   },
+   {
+    "time": 2.0,
+    "text": "@ profjianginsight",
+    "confidence": 0.734
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 4.0,
+    "text": "proffanginsighhow to win games; okay",
+    "confidence": 0.843
+   },
+   {
+    "time": 6.0,
+    "text": "thing",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "Its & very general",
+    "confidence": 0.52
+   },
+   {
+    "time": 8.0,
+    "text": "and just say there'$ about",
+    "confidence": 0.758
+   },
+   {
+    "time": 8.0,
+    "text": "million people",
+    "confidence": 0.901
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 0.944
+   },
+   {
+    "time": 10.0,
+    "text": "in the world, okay",
+    "confidence": 0.715
+   },
+   {
+    "time": 12.0,
+    "text": "All trying to win the game",
+    "confidence": 0.956
+   },
+   {
+    "time": 12.0,
+    "text": "proljiangbigh",
+    "confidence": 0.55
+   },
+   {
+    "time": 14.0,
+    "text": "against each other",
+    "confidence": 0.971
+   },
+   {
+    "time": 14.0,
+    "text": "Tiktok",
+    "confidence": 0.526
+   },
+   {
+    "time": 16.0,
+    "text": "but only one can win",
+    "confidence": 0.997
+   },
+   {
+    "time": 20.0,
+    "text": "the best way to win",
+    "confidence": 0.988
+   },
+   {
+    "time": 20.0,
+    "text": "a game is by_",
+    "confidence": 0.722
+   },
+   {
+    "time": 22.0,
+    "text": "Jikok",
+    "confidence": 0.513
+   },
+   {
+    "time": 22.0,
+    "text": "profjiangjnsight",
+    "confidence": 0.849
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 0.996
+   },
+   {
+    "time": 24.0,
+    "text": "profjianginsight",
+    "confidence": 0.83
+   },
+   {
+    "time": 26.0,
+    "text": "You have to cheat",
+    "confidence": 0.876
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.0,
+    "text": "the best way to win is by",
+    "confidence": 0.794
+   },
+   {
+    "time": 32.0,
+    "text": "AC",
+    "confidence": 0.592
+   },
+   {
+    "time": 34.0,
+    "text": "coordinating with other people",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 0.963
+   },
+   {
+    "time": 38.0,
+    "text": "So if you can work with",
+    "confidence": 0.661
+   },
+   {
+    "time": 38.0,
+    "text": "other people",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "huge",
+    "confidence": 0.999
+   },
+   {
+    "time": 40.0,
+    "text": "then that gives you a",
+    "confidence": 0.87
+   },
+   {
+    "time": 40.0,
+    "text": "advantage over",
+    "confidence": 0.994
+   },
+   {
+    "time": 42.0,
+    "text": "The problem with this is",
+    "confidence": 0.925
+   },
+   {
+    "time": 42.0,
+    "text": "the moment",
+    "confidence": 0.99
+   },
+   {
+    "time": 44.0,
+    "text": "that people start coordinating",
+    "confidence": 0.999
+   },
+   {
+    "time": 46.0,
+    "text": "it forces an arms race of",
+    "confidence": 0.853
+   },
+   {
+    "time": 46.0,
+    "text": "coordination",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "Tiktok",
+    "confidence": 0.531
+   },
+   {
+    "time": 48.0,
+    "text": "S",
+    "confidence": 0.587
+   },
+   {
+    "time": 48.0,
+    "text": "it forces an arms race of",
+    "confidence": 0.781
+   },
+   {
+    "time": 48.0,
+    "text": "coordination",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "Jkok",
+    "confidence": 0.833
+   },
+   {
+    "time": 52.0,
+    "text": "6",
+    "confidence": 0.93
+   },
+   {
+    "time": 52.0,
+    "text": "These four now are forced to",
+    "confidence": 0.785
+   },
+   {
+    "time": 52.0,
+    "text": "work together",
+    "confidence": 0.799
+   },
+   {
+    "time": 52.0,
+    "text": "proljianguusight",
+    "confidence": 0.725
+   },
+   {
+    "time": 54.0,
+    "text": "/80/",
+    "confidence": 0.51
+   },
+   {
+    "time": 54.0,
+    "text": "which now forces these five to",
+    "confidence": 0.961
+   },
+   {
+    "time": 54.0,
+    "text": "together",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "protjianguusight",
+    "confidence": 0.556
+   },
+   {
+    "time": 56.0,
+    "text": "which now forces these five to",
+    "confidence": 0.832
+   },
+   {
+    "time": 56.0,
+    "text": "work together",
+    "confidence": 0.999
+   },
+   {
+    "time": 56.0,
+    "text": "protjianguusight",
+    "confidence": 0.595
+   },
+   {
+    "time": 58.0,
+    "text": "If you are the first to work",
+    "confidence": 0.898
+   },
+   {
+    "time": 58.0,
+    "text": "together",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.0,
+    "text": "Jikok",
+    "confidence": 0.682
+   },
+   {
+    "time": 60.0,
+    "text": "screwed in the process",
+    "confidence": 0.995
+   },
+   {
+    "time": 60.0,
+    "text": "get",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.0,
+    "text": "you",
+    "confidence": 0.992
+   },
+   {
+    "time": 62.0,
+    "text": "So if you cheat",
+    "confidence": 0.991
+   },
+   {
+    "time": 64.0,
+    "text": "you have to cheat secretly",
+    "confidence": 0.637
+   },
+   {
+    "time": 64.0,
+    "text": "@ proljianginsight",
+    "confidence": 0.642
+   },
+   {
+    "time": 66.0,
+    "text": "You have to coordinate without",
+    "confidence": 0.95
+   },
+   {
+    "time": 66.0,
+    "text": "people knowing",
+    "confidence": 1.0
+   },
+   {
+    "time": 68.0,
+    "text": "you re actually coordinating",
+    "confidence": 0.912
+   },
+   {
+    "time": 68.0,
+    "text": "together",
+    "confidence": 1.0
+   },
+   {
+    "time": 70.0,
+    "text": "conspire secretly",
+    "confidence": 0.971
+   },
+   {
+    "time": 70.0,
+    "text": "You have to",
+    "confidence": 0.977
+   },
+   {
+    "time": 72.0,
+    "text": "And there are different ways to",
+    "confidence": 0.928
+   },
+   {
+    "time": 74.0,
+    "text": "So let's look at examples",
+    "confidence": 0.669
+   },
+   {
+    "time": 74.0,
+    "text": "Jkok",
+    "confidence": 0.63
+   },
+   {
+    "time": 76.0,
+    "text": "Tiktok",
+    "confidence": 0.565
+   },
+   {
+    "time": 78.0,
+    "text": "Tikiok",
+    "confidence": 0.504
+   },
+   {
+    "time": 80.0,
+    "text": "Another example is religion",
+    "confidence": 0.947
+   },
+   {
+    "time": 80.0,
+    "text": "profjianginsight",
+    "confidence": 0.984
+   },
+   {
+    "time": 82.0,
+    "text": "F",
+    "confidence": 0.604
+   },
+   {
+    "time": 82.0,
+    "text": "Tiktok",
+    "confidence": 0.891
+   },
+   {
+    "time": 82.0,
+    "text": "profjianginsight",
+    "confidence": 0.982
+   },
+   {
+    "time": 84.0,
+    "text": "if you have a similar race",
+    "confidence": 0.995
+   },
+   {
+    "time": 84.0,
+    "text": "Tikaok",
+    "confidence": 0.576
+   },
+   {
+    "time": 84.0,
+    "text": "profjianginsight",
+    "confidence": 0.999
+   },
+   {
+    "time": 86.0,
+    "text": "Tikaok",
+    "confidence": 0.648
+   },
+   {
+    "time": 86.0,
+    "text": "profjianginsight",
+    "confidence": 0.998
+   },
+   {
+    "time": 88.0,
+    "text": "have",
+    "confidence": 1.0
+   },
+   {
+    "time": 88.0,
+    "text": "language",
+    "confidence": 1.0
+   },
+   {
+    "time": 88.0,
+    "text": "a similar",
+    "confidence": 0.961
+   },
+   {
+    "time": 88.0,
+    "text": "you",
+    "confidence": 0.993
+   },
+   {
+    "time": 88.0,
+    "text": "Tiktok",
+    "confidence": 0.543
+   },
+   {
+    "time": 88.0,
+    "text": "profjianginsight",
+    "confidence": 0.995
+   },
+   {
+    "time": 90.0,
+    "text": "So these are examples of",
+    "confidence": 0.957
+   },
+   {
+    "time": 90.0,
+    "text": "TikTok",
+    "confidence": 0.878
+   },
+   {
+    "time": 90.0,
+    "text": "profjianginsight",
+    "confidence": 0.938
+   },
+   {
+    "time": 92.0,
+    "text": "how you get people to coordinate",
+    "confidence": 0.796
+   },
+   {
+    "time": 92.0,
+    "text": "together",
+    "confidence": 1.0
+   },
+   {
+    "time": 92.0,
+    "text": "TikTok",
+    "confidence": 0.613
+   },
+   {
+    "time": 92.0,
+    "text": "profjianginsight",
+    "confidence": 0.945
+   },
+   {
+    "time": 94.0,
+    "text": "Cacckn",
+    "confidence": 0.81
+   },
+   {
+    "time": 94.0,
+    "text": "TikTok",
+    "confidence": 0.815
+   },
+   {
+    "time": 94.0,
+    "text": "protjianginsight",
+    "confidence": 0.867
+   },
+   {
+    "time": 96.0,
+    "text": "The problen is that these are all",
+    "confidence": 0.696
+   },
+   {
+    "time": 96.0,
+    "text": "obvious to people",
+    "confidence": 0.678
+   },
+   {
+    "time": 98.0,
+    "text": "The problem is that these are all",
+    "confidence": 0.98
+   },
+   {
+    "time": 98.0,
+    "text": "obvious to people",
+    "confidence": 1.0
+   },
+   {
+    "time": 98.0,
+    "text": "TikTok",
+    "confidence": 0.758
+   },
+   {
+    "time": 100.0,
+    "text": "which forces them to do the",
+    "confidence": 0.857
+   },
+   {
+    "time": 100.0,
+    "text": "thing",
+    "confidence": 1.0
+   },
+   {
+    "time": 100.0,
+    "text": "same",
+    "confidence": 0.984
+   },
+   {
+    "time": 100.0,
+    "text": "Tikdok",
+    "confidence": 0.826
+   },
+   {
+    "time": 100.0,
+    "text": "profjianginsight",
+    "confidence": 0.67
+   },
+   {
+    "time": 102.0,
+    "text": "which forces them to do the",
+    "confidence": 0.828
+   },
+   {
+    "time": 102.0,
+    "text": "thing",
+    "confidence": 1.0
+   },
+   {
+    "time": 102.0,
+    "text": "same",
+    "confidence": 0.997
+   },
+   {
+    "time": 104.0,
+    "text": "But there's a strategy",
+    "confidence": 0.912
+   },
+   {
+    "time": 106.0,
+    "text": "0",
+    "confidence": 0.639
+   },
+   {
+    "time": 108.0,
+    "text": "(0",
+    "confidence": 0.534
+   },
+   {
+    "time": 108.0,
+    "text": "that allows you to coordinate",
+    "confidence": 0.875
+   },
+   {
+    "time": 108.0,
+    "text": "secretly",
+    "confidence": 0.999
+   },
+   {
+    "time": 110.0,
+    "text": "0",
+    "confidence": 0.991
+   },
+   {
+    "time": 112.0,
+    "text": "(2",
+    "confidence": 0.634
+   },
+   {
+    "time": 112.0,
+    "text": "0",
+    "confidence": 0.676
+   },
+   {
+    "time": 112.0,
+    "text": "And this strategy is called",
+    "confidence": 0.91
+   },
+   {
+    "time": 112.0,
+    "text": "transgression",
+    "confidence": 1.0
+   },
+   {
+    "time": 114.0,
+    "text": "TikTok",
+    "confidence": 0.996
+   },
+   {
+    "time": 114.0,
+    "text": "profjianginsight",
+    "confidence": 1.0
+   },
+   {
+    "time": 118.0,
+    "text": "4o ,",
+    "confidence": 0.618
+   },
+   {
+    "time": 118.0,
+    "text": ".",
+    "confidence": 0.505
+   },
+   {
+    "time": 118.0,
+    "text": "breaking of sociel laws",
+    "confidence": 0.791
+   },
+   {
+    "time": 118.0,
+    "text": "the",
+    "confidence": 1.0
+   },
+   {
+    "time": 118.0,
+    "text": "Jiktok",
+    "confidence": 0.502
+   },
+   {
+    "time": 120.0,
+    "text": "Okay, so let's study this concept",
+    "confidence": 0.546
+   },
+   {
+    "time": 122.0,
+    "text": "theory",
+    "confidence": 1.0
+   },
+   {
+    "time": 122.0,
+    "text": "is that",
+    "confidence": 0.977
+   },
+   {
+    "time": 122.0,
+    "text": "the",
+    "confidence": 0.98
+   },
+   {
+    "time": 122.0,
+    "text": "Tiktok",
+    "confidence": 0.527
+   },
+   {
+    "time": 124.0,
+    "text": "the greater you transgress, okay",
+    "confidence": 0.639
+   },
+   {
+    "time": 126.0,
+    "text": "this is the level of transgression",
+    "confidence": 0.96
+   },
+   {
+    "time": 126.0,
+    "text": "proijiangusight",
+    "confidence": 0.56
+   },
+   {
+    "time": 128.0,
+    "text": "the greater your cohesion",
+    "confidence": 0.999
+   },
+   {
+    "time": 130.0,
+    "text": "h leads to, ynchronicity",
+    "confidence": 0.6
+   },
+   {
+    "time": 130.0,
+    "text": "which",
+    "confidence": 0.932
+   },
+   {
+    "time": 130.0,
+    "text": "Tikdok",
+    "confidence": 0.677
+   },
+   {
+    "time": 130.0,
+    "text": "prorjianginsight",
+    "confidence": 0.801
+   },
+   {
+    "time": 132.0,
+    "text": "prorjianginsight",
+    "confidence": 0.735
+   },
+   {
+    "time": 134.0,
+    "text": "proljianginsight",
+    "confidence": 0.638
+   },
+   {
+    "time": 138.0,
+    "text": "J",
+    "confidence": 0.579
+   },
+   {
+    "time": 138.0,
+    "text": "TikTok",
+    "confidence": 0.922
+   },
+   {
+    "time": 138.0,
+    "text": "profjianginsigh_",
+    "confidence": 0.693
+   },
+   {
+    "time": 140.0,
+    "text": "TikTok",
+    "confidence": 0.884
+   },
+   {
+    "time": 140.0,
+    "text": "profjianginsigh _",
+    "confidence": 0.778
+   }
+  ],
+  "captions": [
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.97,
+    "id": "o1"
+   },
+   {
+    "text": "@ profjianginsight",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.965,
+    "id": "o2"
+   },
+   {
+    "text": "theory",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o3"
+   },
+   {
+    "text": "Let's do game",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.928,
+    "id": "o4"
+   },
+   {
+    "text": "TikTok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.854,
+    "id": "o5"
+   },
+   {
+    "text": "@ profjianginsight",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.734,
+    "id": "o6"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.998,
+    "id": "o7"
+   },
+   {
+    "text": "proffanginsighhow to win games; okay",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.843,
+    "id": "o8"
+   },
+   {
+    "text": "thing",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "Its & very general",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.52,
+    "id": "o10"
+   },
+   {
+    "text": "and just say there'$ about",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.758,
+    "id": "o11"
+   },
+   {
+    "text": "million people",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.901,
+    "id": "o12"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.944,
+    "id": "o13"
+   },
+   {
+    "text": "in the world, okay",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.715,
+    "id": "o14"
+   },
+   {
+    "text": "All trying to win the game",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.956,
+    "id": "o15"
+   },
+   {
+    "text": "proljiangbigh",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.55,
+    "id": "o16"
+   },
+   {
+    "text": "against each other",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.971,
+    "id": "o17"
+   },
+   {
+    "text": "Tiktok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.526,
+    "id": "o18"
+   },
+   {
+    "text": "but only one can win",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.997,
+    "id": "o19"
+   },
+   {
+    "text": "the best way to win",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.988,
+    "id": "o20"
+   },
+   {
+    "text": "a game is by_",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.722,
+    "id": "o21"
+   },
+   {
+    "text": "Jikok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.513,
+    "id": "o22"
+   },
+   {
+    "text": "profjiangjnsight",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.849,
+    "id": "o23"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.996,
+    "id": "o24"
+   },
+   {
+    "text": "profjianginsight",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.83,
+    "id": "o25"
+   },
+   {
+    "text": "You have to cheat",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.876,
+    "id": "o26"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.999,
+    "id": "o27"
+   },
+   {
+    "text": "the best way to win is by",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.794,
+    "id": "o28"
+   },
+   {
+    "text": "AC",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.592,
+    "id": "o29"
+   },
+   {
+    "text": "coordinating with other people",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o30"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.963,
+    "id": "o31"
+   },
+   {
+    "text": "So if you can work with",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.661,
+    "id": "o32"
+   },
+   {
+    "text": "other people",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o33"
+   },
+   {
+    "text": "huge",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.999,
+    "id": "o34"
+   },
+   {
+    "text": "then that gives you a",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.87,
+    "id": "o35"
+   },
+   {
+    "text": "advantage over",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.994,
+    "id": "o36"
+   },
+   {
+    "text": "The problem with this is",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.925,
+    "id": "o37"
+   },
+   {
+    "text": "the moment",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.99,
+    "id": "o38"
+   },
+   {
+    "text": "that people start coordinating",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.999,
+    "id": "o39"
+   },
+   {
+    "text": "it forces an arms race of",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.853,
+    "id": "o40"
+   },
+   {
+    "text": "coordination",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o41"
+   },
+   {
+    "text": "Tiktok",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.531,
+    "id": "o42"
+   },
+   {
+    "text": "S",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.587,
+    "id": "o43"
+   },
+   {
+    "text": "it forces an arms race of",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.781,
+    "id": "o44"
+   },
+   {
+    "text": "coordination",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o45"
+   },
+   {
+    "text": "Jkok",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.833,
+    "id": "o46"
+   },
+   {
+    "text": "6",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.93,
+    "id": "o47"
+   },
+   {
+    "text": "These four now are forced to",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.785,
+    "id": "o48"
+   },
+   {
+    "text": "work together",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.799,
+    "id": "o49"
+   },
+   {
+    "text": "proljianguusight",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.725,
+    "id": "o50"
+   },
+   {
+    "text": "/80/",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.51,
+    "id": "o51"
+   },
+   {
+    "text": "which now forces these five to",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.961,
+    "id": "o52"
+   },
+   {
+    "text": "together",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o53"
+   },
+   {
+    "text": "protjianguusight",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.556,
+    "id": "o54"
+   },
+   {
+    "text": "which now forces these five to",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.832,
+    "id": "o55"
+   },
+   {
+    "text": "work together",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.999,
+    "id": "o56"
+   },
+   {
+    "text": "protjianguusight",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.595,
+    "id": "o57"
+   },
+   {
+    "text": "If you are the first to work",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.898,
+    "id": "o58"
+   },
+   {
+    "text": "together",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 1.0,
+    "id": "o59"
+   },
+   {
+    "text": "Jikok",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.682,
+    "id": "o60"
+   },
+   {
+    "text": "screwed in the process",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.995,
+    "id": "o61"
+   },
+   {
+    "text": "get",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 1.0,
+    "id": "o62"
+   },
+   {
+    "text": "you",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.992,
+    "id": "o63"
+   },
+   {
+    "text": "So if you cheat",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.991,
+    "id": "o64"
+   },
+   {
+    "text": "you have to cheat secretly",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.637,
+    "id": "o65"
+   },
+   {
+    "text": "@ proljianginsight",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.642,
+    "id": "o66"
+   },
+   {
+    "text": "You have to coordinate without",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.95,
+    "id": "o67"
+   },
+   {
+    "text": "people knowing",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 1.0,
+    "id": "o68"
+   },
+   {
+    "text": "you re actually coordinating",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.912,
+    "id": "o69"
+   },
+   {
+    "text": "together",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 1.0,
+    "id": "o70"
+   },
+   {
+    "text": "conspire secretly",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.971,
+    "id": "o71"
+   },
+   {
+    "text": "You have to",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.977,
+    "id": "o72"
+   },
+   {
+    "text": "And there are different ways to",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.928,
+    "id": "o73"
+   },
+   {
+    "text": "So let's look at examples",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.669,
+    "id": "o74"
+   },
+   {
+    "text": "Jkok",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.63,
+    "id": "o75"
+   },
+   {
+    "text": "Tiktok",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.565,
+    "id": "o76"
+   },
+   {
+    "text": "Tikiok",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.504,
+    "id": "o77"
+   },
+   {
+    "text": "Another example is religion",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.947,
+    "id": "o78"
+   },
+   {
+    "text": "profjianginsight",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.984,
+    "id": "o79"
+   },
+   {
+    "text": "F",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.604,
+    "id": "o80"
+   },
+   {
+    "text": "Tiktok",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.891,
+    "id": "o81"
+   },
+   {
+    "text": "profjianginsight",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.982,
+    "id": "o82"
+   },
+   {
+    "text": "if you have a similar race",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.995,
+    "id": "o83"
+   },
+   {
+    "text": "Tikaok",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.576,
+    "id": "o84"
+   },
+   {
+    "text": "profjianginsight",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.999,
+    "id": "o85"
+   },
+   {
+    "text": "Tikaok",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.648,
+    "id": "o86"
+   },
+   {
+    "text": "profjianginsight",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.998,
+    "id": "o87"
+   },
+   {
+    "text": "have",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 1.0,
+    "id": "o88"
+   },
+   {
+    "text": "language",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 1.0,
+    "id": "o89"
+   },
+   {
+    "text": "a similar",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.961,
+    "id": "o90"
+   },
+   {
+    "text": "you",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.993,
+    "id": "o91"
+   },
+   {
+    "text": "Tiktok",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.543,
+    "id": "o92"
+   },
+   {
+    "text": "profjianginsight",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.995,
+    "id": "o93"
+   },
+   {
+    "text": "So these are examples of",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.957,
+    "id": "o94"
+   },
+   {
+    "text": "TikTok",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.878,
+    "id": "o95"
+   },
+   {
+    "text": "profjianginsight",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.938,
+    "id": "o96"
+   },
+   {
+    "text": "how you get people to coordinate",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.796,
+    "id": "o97"
+   },
+   {
+    "text": "together",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 1.0,
+    "id": "o98"
+   },
+   {
+    "text": "TikTok",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.613,
+    "id": "o99"
+   },
+   {
+    "text": "profjianginsight",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.945,
+    "id": "o100"
+   },
+   {
+    "text": "Cacckn",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.81,
+    "id": "o101"
+   },
+   {
+    "text": "TikTok",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.815,
+    "id": "o102"
+   },
+   {
+    "text": "protjianginsight",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.867,
+    "id": "o103"
+   },
+   {
+    "text": "The problen is that these are all",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.696,
+    "id": "o104"
+   },
+   {
+    "text": "obvious to people",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.678,
+    "id": "o105"
+   },
+   {
+    "text": "The problem is that these are all",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.98,
+    "id": "o106"
+   },
+   {
+    "text": "obvious to people",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 1.0,
+    "id": "o107"
+   },
+   {
+    "text": "TikTok",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.758,
+    "id": "o108"
+   },
+   {
+    "text": "which forces them to do the",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.857,
+    "id": "o109"
+   },
+   {
+    "text": "thing",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 1.0,
+    "id": "o110"
+   },
+   {
+    "text": "same",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.984,
+    "id": "o111"
+   },
+   {
+    "text": "Tikdok",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.826,
+    "id": "o112"
+   },
+   {
+    "text": "profjianginsight",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.67,
+    "id": "o113"
+   },
+   {
+    "text": "which forces them to do the",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.828,
+    "id": "o114"
+   },
+   {
+    "text": "thing",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 1.0,
+    "id": "o115"
+   },
+   {
+    "text": "same",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.997,
+    "id": "o116"
+   },
+   {
+    "text": "But there's a strategy",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.912,
+    "id": "o117"
+   },
+   {
+    "text": "0",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.639,
+    "id": "o118"
+   },
+   {
+    "text": "(0",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.534,
+    "id": "o119"
+   },
+   {
+    "text": "that allows you to coordinate",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.875,
+    "id": "o120"
+   },
+   {
+    "text": "secretly",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.999,
+    "id": "o121"
+   },
+   {
+    "text": "0",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.991,
+    "id": "o122"
+   },
+   {
+    "text": "(2",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.634,
+    "id": "o123"
+   },
+   {
+    "text": "0",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.676,
+    "id": "o124"
+   },
+   {
+    "text": "And this strategy is called",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.91,
+    "id": "o125"
+   },
+   {
+    "text": "transgression",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 1.0,
+    "id": "o126"
+   },
+   {
+    "text": "TikTok",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 0.996,
+    "id": "o127"
+   },
+   {
+    "text": "profjianginsight",
+    "start": 114.0,
+    "end": 114.0,
+    "confidence": 1.0,
+    "id": "o128"
+   },
+   {
+    "text": "4o ,",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.618,
+    "id": "o129"
+   },
+   {
+    "text": ".",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.505,
+    "id": "o130"
+   },
+   {
+    "text": "breaking of sociel laws",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.791,
+    "id": "o131"
+   },
+   {
+    "text": "the",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 1.0,
+    "id": "o132"
+   },
+   {
+    "text": "Jiktok",
+    "start": 118.0,
+    "end": 118.0,
+    "confidence": 0.502,
+    "id": "o133"
+   },
+   {
+    "text": "Okay, so let's study this concept",
+    "start": 120.0,
+    "end": 120.0,
+    "confidence": 0.546,
+    "id": "o134"
+   },
+   {
+    "text": "theory",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 1.0,
+    "id": "o135"
+   },
+   {
+    "text": "is that",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.977,
+    "id": "o136"
+   },
+   {
+    "text": "the",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.98,
+    "id": "o137"
+   },
+   {
+    "text": "Tiktok",
+    "start": 122.0,
+    "end": 122.0,
+    "confidence": 0.527,
+    "id": "o138"
+   },
+   {
+    "text": "the greater you transgress, okay",
+    "start": 124.0,
+    "end": 124.0,
+    "confidence": 0.639,
+    "id": "o139"
+   },
+   {
+    "text": "this is the level of transgression",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.96,
+    "id": "o140"
+   },
+   {
+    "text": "proijiangusight",
+    "start": 126.0,
+    "end": 126.0,
+    "confidence": 0.56,
+    "id": "o141"
+   },
+   {
+    "text": "the greater your cohesion",
+    "start": 128.0,
+    "end": 128.0,
+    "confidence": 0.999,
+    "id": "o142"
+   },
+   {
+    "text": "h leads to, ynchronicity",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.6,
+    "id": "o143"
+   },
+   {
+    "text": "which",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.932,
+    "id": "o144"
+   },
+   {
+    "text": "Tikdok",
+    "start": 130.0,
+    "end": 130.0,
+    "confidence": 0.677,
+    "id": "o145"
+   },
+   {
+    "text": "prorjianginsight",
+    "start": 130.0,
+    "end": 132.0,
+    "confidence": 0.801,
+    "id": "o146"
+   },
+   {
+    "text": "proljianginsight",
+    "start": 134.0,
+    "end": 134.0,
+    "confidence": 0.638,
+    "id": "o147"
+   },
+   {
+    "text": "J",
+    "start": 138.0,
+    "end": 138.0,
+    "confidence": 0.579,
+    "id": "o148"
+   },
+   {
+    "text": "TikTok",
+    "start": 138.0,
+    "end": 138.0,
+    "confidence": 0.922,
+    "id": "o149"
+   },
+   {
+    "text": "profjianginsigh_",
+    "start": 138.0,
+    "end": 138.0,
+    "confidence": 0.693,
+    "id": "o150"
+   },
+   {
+    "text": "TikTok",
+    "start": 140.0,
+    "end": 140.0,
+    "confidence": 0.884,
+    "id": "o151"
+   },
+   {
+    "text": "profjianginsigh _",
+    "start": 140.0,
+    "end": 140.0,
+    "confidence": 0.778,
+    "id": "o152"
+   }
+  ]
+ }
+}

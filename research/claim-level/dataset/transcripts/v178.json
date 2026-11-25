@@ -1,0 +1,2982 @@
+{
+ "video_id": "v178",
+ "filename": "new_youtube_TQfZhNUPN9s.mp4",
+ "relative_path": "new_youtube_TQfZhNUPN9s.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:46:00",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 59.63,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.72,
+    "text": "What often happens is that someone who's autistic,"
+   },
+   {
+    "id": "t2",
+    "start": 2.72,
+    "end": 6.08,
+    "text": "however severe or moderate or mild their autism is,"
+   },
+   {
+    "id": "t3",
+    "start": 6.08,
+    "end": 8.54,
+    "text": "comes enmeshed in a culture where their issues"
+   },
+   {
+    "id": "t4",
+    "start": 8.54,
+    "end": 12.04,
+    "text": "can be explained away by way of gender identity ideology."
+   },
+   {
+    "id": "t5",
+    "start": 12.04,
+    "end": 13.68,
+    "text": "I would want to be very careful"
+   },
+   {
+    "id": "t6",
+    "start": 13.68,
+    "end": 15.8,
+    "text": "that I'm not linking the two necessarily,"
+   },
+   {
+    "id": "t7",
+    "start": 15.8,
+    "end": 17.72,
+    "text": "but it seems that of all the phone calls"
+   },
+   {
+    "id": "t8",
+    "start": 17.72,
+    "end": 19.52,
+    "text": "that I feel from parents who are desperate,"
+   },
+   {
+    "id": "t9",
+    "start": 19.52,
+    "end": 20.72,
+    "text": "my son's on the spectrum."
+   },
+   {
+    "id": "t10",
+    "start": 20.72,
+    "end": 22.92,
+    "text": "Got obsessed with this and I won't let it go."
+   },
+   {
+    "id": "t11",
+    "start": 22.92,
+    "end": 25.6,
+    "text": "Somehow the transgender identification"
+   },
+   {
+    "id": "t12",
+    "start": 25.6,
+    "end": 26.8,
+    "text": "and the autism thing,"
+   },
+   {
+    "id": "t13",
+    "start": 26.8,
+    "end": 28.96,
+    "text": "there could probably needs to be an entire book"
+   },
+   {
+    "id": "t14",
+    "start": 28.96,
+    "end": 31.36,
+    "text": "written about what's going on with this connection."
+   },
+   {
+    "id": "t15",
+    "start": 31.36,
+    "end": 33.96,
+    "text": "These people who are dealing with these struggles,"
+   },
+   {
+    "id": "t16",
+    "start": 33.96,
+    "end": 36.84,
+    "text": "not just autism, social anxiety, depression,"
+   },
+   {
+    "id": "t17",
+    "start": 36.84,
+    "end": 39.12,
+    "text": "other psychiatric ailments and disorders,"
+   },
+   {
+    "id": "t18",
+    "start": 39.12,
+    "end": 40.64,
+    "text": "they're all very vulnerable to this."
+   },
+   {
+    "id": "t19",
+    "start": 40.64,
+    "end": 43.54,
+    "text": "And I think that's probably one of the worst aspects"
+   },
+   {
+    "id": "t20",
+    "start": 43.54,
+    "end": 45.16,
+    "text": "of what this ideology does to people."
+   },
+   {
+    "id": "t21",
+    "start": 45.16,
+    "end": 48.16,
+    "text": "Not only is it false that you can become the opposite sex,"
+   },
+   {
+    "id": "t22",
+    "start": 48.16,
+    "end": 50.48,
+    "text": "it preys upon those who are already having"
+   },
+   {
+    "id": "t23",
+    "start": 50.48,
+    "end": 52.64,
+    "text": "a really hard time in life with their mental health,"
+   },
+   {
+    "id": "t24",
+    "start": 52.64,
+    "end": 54.04,
+    "text": "with their psychological struggles,"
+   },
+   {
+    "id": "t25",
+    "start": 54.04,
+    "end": 56.04,
+    "text": "including and especially autistic people."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 30,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "THOUGHT",
+    "confidence": 0.742
+   },
+   {
+    "time": 0.0,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "What often",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "THOUGHT",
+    "confidence": 0.606
+   },
+   {
+    "time": 2.0,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "THOUGHT",
+    "confidence": 0.772
+   },
+   {
+    "time": 4.0,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "or moderate",
+    "confidence": 0.712
+   },
+   {
+    "time": 6.01,
+    "text": "THOUGHT",
+    "confidence": 0.8
+   },
+   {
+    "time": 6.01,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.01,
+    "text": "becomes",
+    "confidence": 0.998
+   },
+   {
+    "time": 8.01,
+    "text": "THOUGHT",
+    "confidence": 0.658
+   },
+   {
+    "time": 8.01,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.01,
+    "text": "IRANS",
+    "confidence": 0.719
+   },
+   {
+    "time": 8.01,
+    "text": "HUMAN",
+    "confidence": 0.794
+   },
+   {
+    "time": 8.01,
+    "text": "Rigkts",
+    "confidence": 0.649
+   },
+   {
+    "time": 8.01,
+    "text": "their issues  MEon",
+    "confidence": 0.655
+   },
+   {
+    "time": 8.01,
+    "text": "the MT GOP",
+    "confidence": 0.963
+   },
+   {
+    "time": 8.01,
+    "text": "Zooey",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.01,
+    "text": "Let",
+    "confidence": 0.671
+   },
+   {
+    "time": 8.01,
+    "text": "Speak!",
+    "confidence": 0.833
+   },
+   {
+    "time": 10.01,
+    "text": "ThOUGHT",
+    "confidence": 0.526
+   },
+   {
+    "time": 10.01,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.01,
+    "text": "Not",
+    "confidence": 0.507
+   },
+   {
+    "time": 10.01,
+    "text": "DESTINZ",
+    "confidence": 0.628
+   },
+   {
+    "time": 10.01,
+    "text": "Are",
+    "confidence": 0.774
+   },
+   {
+    "time": 10.01,
+    "text": "SISTERS",
+    "confidence": 0.527
+   },
+   {
+    "time": 10.01,
+    "text": "by way",
+    "confidence": 0.914
+   },
+   {
+    "time": 12.01,
+    "text": "THOUGHT",
+    "confidence": 0.924
+   },
+   {
+    "time": 12.01,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.01,
+    "text": "would want",
+    "confidence": 0.986
+   },
+   {
+    "time": 14.01,
+    "text": "THOUGHT",
+    "confidence": 0.925
+   },
+   {
+    "time": 14.01,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "that |'m not",
+    "confidence": 0.745
+   },
+   {
+    "time": 16.02,
+    "text": "THOUGHT",
+    "confidence": 0.953
+   },
+   {
+    "time": 16.02,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.02,
+    "text": "but it seems",
+    "confidence": 0.959
+   },
+   {
+    "time": 18.02,
+    "text": "THOUGHT",
+    "confidence": 0.61
+   },
+   {
+    "time": 18.02,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.02,
+    "text": "field",
+    "confidence": 0.993
+   },
+   {
+    "time": 20.02,
+    "text": "THOUGHT",
+    "confidence": 0.834
+   },
+   {
+    "time": 20.02,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.02,
+    "text": "the spectrum,",
+    "confidence": 0.925
+   },
+   {
+    "time": 22.02,
+    "text": "THOUGHT",
+    "confidence": 0.662
+   },
+   {
+    "time": 22.02,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.02,
+    "text": "he wont",
+    "confidence": 0.995
+   },
+   {
+    "time": 24.02,
+    "text": "DONAT",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.02,
+    "text": "THOUGHT",
+    "confidence": 0.834
+   },
+   {
+    "time": 24.02,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.02,
+    "text": "Search",
+    "confidence": 0.948
+   },
+   {
+    "time": 24.02,
+    "text": "Technology",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.02,
+    "text": "News & Politics",
+    "confidence": 0.821
+   },
+   {
+    "time": 24.02,
+    "text": "Culture",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.02,
+    "text": "Business",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.02,
+    "text": "Human Interest",
+    "confidence": 0.598
+   },
+   {
+    "time": 24.02,
+    "text": "HANDLING AN ALMOST UNIMAGINABLY DIFFICULT QUERY",
+    "confidence": 0.987
+   },
+   {
+    "time": 24.02,
+    "text": "FOLLOW US",
+    "confidence": 0.858
+   },
+   {
+    "time": 24.02,
+    "text": "LIFE",
+    "confidence": 0.999
+   },
+   {
+    "time": 24.02,
+    "text": "ADisproportionate Number",
+    "confidence": 0.986
+   },
+   {
+    "time": 24.02,
+    "text": "of Autistic Youth Are",
+    "confidence": 0.805
+   },
+   {
+    "time": 24.02,
+    "text": "Transgender: Why?",
+    "confidence": 0.722
+   },
+   {
+    "time": 24.02,
+    "text": "BY EVAN URQUHART",
+    "confidence": 0.946
+   },
+   {
+    "time": 24.02,
+    "text": "MARCH 21, 2018",
+    "confidence": 0.7
+   },
+   {
+    "time": 24.02,
+    "text": "1.33 PM",
+    "confidence": 0.916
+   },
+   {
+    "time": 24.02,
+    "text": "the transgender",
+    "confidence": 0.631
+   },
+   {
+    "time": 24.02,
+    "text": "Photo illustration by Natalie Matthews-Ramo/Slate; Image hy Thinkstock:",
+    "confidence": 0.547
+   },
+   {
+    "time": 24.02,
+    "text": "This",
+    "confidence": 0.999
+   },
+   {
+    "time": 24.02,
+    "text": "post is part of Outward; Slate's home for coverage of LGBTQ life,",
+    "confidence": 0.663
+   },
+   {
+    "time": 24.02,
+    "text": "thought; and culture: Read more here:",
+    "confidence": 0.536
+   },
+   {
+    "time": 24.02,
+    "text": "large",
+    "confidence": 0.638
+   },
+   {
+    "time": 24.02,
+    "text": "Gender specialists first noticed decades ago that a",
+    "confidence": 0.731
+   },
+   {
+    "time": 24.02,
+    "text": "number of people",
+    "confidence": 0.923
+   },
+   {
+    "time": 24.02,
+    "text": "who seek treatment for gender dysphoria also seemed to have autistic",
+    "confidence": 0.756
+   },
+   {
+    "time": 26.03,
+    "text": "DONAT",
+    "confidence": 0.998
+   },
+   {
+    "time": 26.03,
+    "text": "THOUGHT",
+    "confidence": 0.649
+   },
+   {
+    "time": 26.03,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.03,
+    "text": "Search",
+    "confidence": 0.999
+   },
+   {
+    "time": 26.03,
+    "text": "Technology",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.03,
+    "text": "News & Politics",
+    "confidence": 0.966
+   },
+   {
+    "time": 26.03,
+    "text": "Culture",
+    "confidence": 0.76
+   },
+   {
+    "time": 26.03,
+    "text": "Business",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.03,
+    "text": "Human Interest",
+    "confidence": 0.998
+   },
+   {
+    "time": 26.03,
+    "text": "HANDLING AN ALMOST UNIMAGINABLY DIFFICULT QUERY",
+    "confidence": 0.933
+   },
+   {
+    "time": 26.03,
+    "text": "FOLLOW US",
+    "confidence": 0.502
+   },
+   {
+    "time": 26.03,
+    "text": "LIFE",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.03,
+    "text": "ADisproportionate Number",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.03,
+    "text": "of Autistic Youth Are",
+    "confidence": 0.605
+   },
+   {
+    "time": 26.03,
+    "text": "Transgender: Why?",
+    "confidence": 0.727
+   },
+   {
+    "time": 26.03,
+    "text": "BY EVAN URQUHART",
+    "confidence": 0.993
+   },
+   {
+    "time": 26.03,
+    "text": "MARCH 21,2018",
+    "confidence": 0.931
+   },
+   {
+    "time": 26.03,
+    "text": "1.33 PM",
+    "confidence": 0.803
+   },
+   {
+    "time": 26.03,
+    "text": "and(the autism",
+    "confidence": 0.532
+   },
+   {
+    "time": 26.03,
+    "text": "Photo illustration by Natalie Matthews-Ramo/Slate Image by Thinkstock",
+    "confidence": 0.702
+   },
+   {
+    "time": 26.03,
+    "text": "This post is part of Outward, Slate's home for coverage of LGBTQ life,",
+    "confidence": 0.683
+   },
+   {
+    "time": 26.03,
+    "text": "thought; and culture: Read more here:",
+    "confidence": 0.738
+   },
+   {
+    "time": 26.03,
+    "text": "Gender specialists first noticed decades ago that a",
+    "confidence": 0.837
+   },
+   {
+    "time": 26.03,
+    "text": "number of people",
+    "confidence": 0.998
+   },
+   {
+    "time": 26.03,
+    "text": "who seek treatment for gender dysphoriaalso seemed to have autistic",
+    "confidence": 0.859
+   },
+   {
+    "time": 28.03,
+    "text": "THOUGHT",
+    "confidence": 0.633
+   },
+   {
+    "time": 28.03,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.03,
+    "text": "p",
+    "confidence": 0.731
+   },
+   {
+    "time": 28.03,
+    "text": "DONATE",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.03,
+    "text": "HEALTH",
+    "confidence": 0.995
+   },
+   {
+    "time": 28.03,
+    "text": "first",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.03,
+    "text": "LISTEN & FOLLOW",
+    "confidence": 0.773
+   },
+   {
+    "time": 28.03,
+    "text": "Transgender and non-binary",
+    "confidence": 0.716
+   },
+   {
+    "time": 28.03,
+    "text": "people are up to six times",
+    "confidence": 0.796
+   },
+   {
+    "time": 28.03,
+    "text": "more likely to have autism",
+    "confidence": 0.933
+   },
+   {
+    "time": 28.03,
+    "text": "January 15,2023",
+    "confidence": 0.935
+   },
+   {
+    "time": 28.03,
+    "text": "8.02 AMET",
+    "confidence": 0.949
+   },
+   {
+    "time": 28.03,
+    "text": "Heard on Weekend Edition Sunday",
+    "confidence": 0.867
+   },
+   {
+    "time": 28.03,
+    "text": "By Lesley McClurg",
+    "confidence": 0.826
+   },
+   {
+    "time": 28.03,
+    "text": "Transgender and non-binary people are up to",
+    "confidence": 0.763
+   },
+   {
+    "time": 28.03,
+    "text": "likely",
+    "confidence": 0.673
+   },
+   {
+    "time": 28.03,
+    "text": "to also have autism: This",
+    "confidence": 0.607
+   },
+   {
+    "time": 28.03,
+    "text": "six times more",
+    "confidence": 0.965
+   },
+   {
+    "time": 28.03,
+    "text": "intersection has researchers trying to",
+    "confidence": 0.877
+   },
+   {
+    "time": 28.03,
+    "text": "and how society",
+    "confidence": 0.948
+   },
+   {
+    "time": 28.03,
+    "text": "understand the",
+    "confidence": 0.743
+   },
+   {
+    "time": 28.03,
+    "text": "views these identities",
+    "confidence": 0.803
+   },
+   {
+    "time": 28.03,
+    "text": "Transcript",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.03,
+    "text": "AYESHA RASCOE, HOST:",
+    "confidence": 0.765
+   },
+   {
+    "time": 30.03,
+    "text": "THOUGHT",
+    "confidence": 0.762
+   },
+   {
+    "time": 30.03,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.03,
+    "text": "DONATE",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.03,
+    "text": "HEALTH",
+    "confidence": 0.983
+   },
+   {
+    "time": 30.03,
+    "text": "Up",
+    "confidence": 0.659
+   },
+   {
+    "time": 30.03,
+    "text": "first",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.03,
+    "text": "LISTEN & FOLLOW",
+    "confidence": 0.795
+   },
+   {
+    "time": 30.03,
+    "text": "Transgender and non-binary",
+    "confidence": 0.868
+   },
+   {
+    "time": 30.03,
+    "text": "more likely to have autism",
+    "confidence": 0.984
+   },
+   {
+    "time": 30.03,
+    "text": "January 15,2023",
+    "confidence": 0.623
+   },
+   {
+    "time": 30.03,
+    "text": "8.02 AMET",
+    "confidence": 0.879
+   },
+   {
+    "time": 30.03,
+    "text": "Heard on Weekend Edition Sunday",
+    "confidence": 0.652
+   },
+   {
+    "time": 30.03,
+    "text": "By Lesley McClurg",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.03,
+    "text": "Transgender and non-binary people are up to",
+    "confidence": 0.978
+   },
+   {
+    "time": 30.03,
+    "text": "six times more likely to also have autism: This",
+    "confidence": 0.788
+   },
+   {
+    "time": 30.03,
+    "text": "intersection has researchers trying to",
+    "confidence": 0.849
+   },
+   {
+    "time": 30.03,
+    "text": "how society",
+    "confidence": 0.825
+   },
+   {
+    "time": 30.03,
+    "text": "understand",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.03,
+    "text": "views these",
+    "confidence": 0.96
+   },
+   {
+    "time": 30.03,
+    "text": "id",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.03,
+    "text": "Transcript",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.03,
+    "text": "AYESHA RASCOE, HOST:",
+    "confidence": 0.81
+   },
+   {
+    "time": 32.03,
+    "text": "THOUGHT",
+    "confidence": 0.677
+   },
+   {
+    "time": 32.03,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.03,
+    "text": "who are",
+    "confidence": 0.996
+   },
+   {
+    "time": 34.03,
+    "text": "THOUGHT",
+    "confidence": 0.616
+   },
+   {
+    "time": 34.03,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.03,
+    "text": "not just",
+    "confidence": 0.824
+   },
+   {
+    "time": 36.04,
+    "text": "THOUGHT",
+    "confidence": 0.575
+   },
+   {
+    "time": 36.04,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.04,
+    "text": "depression;",
+    "confidence": 0.863
+   },
+   {
+    "time": 38.04,
+    "text": "THOUGHT",
+    "confidence": 0.603
+   },
+   {
+    "time": 38.04,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.04,
+    "text": "ailments",
+    "confidence": 0.981
+   },
+   {
+    "time": 40.04,
+    "text": "THOUGHT",
+    "confidence": 0.616
+   },
+   {
+    "time": 40.04,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.04,
+    "text": "to this.",
+    "confidence": 0.66
+   },
+   {
+    "time": 42.04,
+    "text": "ThOUGHT",
+    "confidence": 0.517
+   },
+   {
+    "time": 42.04,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.04,
+    "text": "probably",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.04,
+    "text": "THOUGHT",
+    "confidence": 0.803
+   },
+   {
+    "time": 44.04,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.04,
+    "text": "PEOPLE",
+    "confidence": 0.995
+   },
+   {
+    "time": 44.04,
+    "text": "TRANS",
+    "confidence": 0.997
+   },
+   {
+    "time": 44.04,
+    "text": "BHC NG",
+    "confidence": 0.545
+   },
+   {
+    "time": 44.04,
+    "text": "IN MONIANA",
+    "confidence": 0.934
+   },
+   {
+    "time": 44.04,
+    "text": "this ideology",
+    "confidence": 0.777
+   },
+   {
+    "time": 46.05,
+    "text": "THOUGHT",
+    "confidence": 0.796
+   },
+   {
+    "time": 46.05,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.05,
+    "text": "it false",
+    "confidence": 0.858
+   },
+   {
+    "time": 48.05,
+    "text": "THOUGHT",
+    "confidence": 0.851
+   },
+   {
+    "time": 48.05,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.05,
+    "text": "sex, it",
+    "confidence": 0.692
+   },
+   {
+    "time": 50.05,
+    "text": "THOUGHT",
+    "confidence": 0.739
+   },
+   {
+    "time": 50.05,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.05,
+    "text": "irdependen",
+    "confidence": 0.563
+   },
+   {
+    "time": 50.05,
+    "text": "Identity Crisis",
+    "confidence": 0.648
+   },
+   {
+    "time": 50.05,
+    "text": "California Mom Says",
+    "confidence": 0.999
+   },
+   {
+    "time": 50.05,
+    "text": "Ideology Drove",
+    "confidence": 0.995
+   },
+   {
+    "time": 50.05,
+    "text": "Gender",
+    "confidence": 0.826
+   },
+   {
+    "time": 50.05,
+    "text": "Autistic Daughter Into",
+    "confidence": 0.582
+   },
+   {
+    "time": 50.05,
+    "text": "Mental Breakdown",
+    "confidence": 0.893
+   },
+   {
+    "time": 50.05,
+    "text": "Mom Accuses Educators; Therapist of",
+    "confidence": 0.702
+   },
+   {
+    "time": 50.05,
+    "text": "Driving Her Aulistic. Gender Confused",
+    "confidence": 0.723
+   },
+   {
+    "time": 50.05,
+    "text": "Child",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.05,
+    "text": "By Kelsey Bolar",
+    "confidence": 0.877
+   },
+   {
+    "time": 50.05,
+    "text": "After educators and a therapist drove",
+    "confidence": 0.928
+   },
+   {
+    "time": 50.05,
+    "text": "her high-functioning autistic, gender-",
+    "confidence": 0.895
+   },
+   {
+    "time": 52.05,
+    "text": "THOUGHT",
+    "confidence": 0.897
+   },
+   {
+    "time": 52.05,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.05,
+    "text": "Independent",
+    "confidence": 0.543
+   },
+   {
+    "time": 52.05,
+    "text": "AII Issues Are Women's Issues",
+    "confidence": 0.521
+   },
+   {
+    "time": 52.05,
+    "text": "Identity Crisis",
+    "confidence": 0.892
+   },
+   {
+    "time": 52.05,
+    "text": "California Mom Says",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.05,
+    "text": "Gender Ideology Drove",
+    "confidence": 0.762
+   },
+   {
+    "time": 52.05,
+    "text": "Aulistic Daughter Into",
+    "confidence": 0.8
+   },
+   {
+    "time": 52.05,
+    "text": "Mental Breakdown",
+    "confidence": 0.914
+   },
+   {
+    "time": 52.05,
+    "text": "Mom Accuses Educators; Thcrapist of",
+    "confidence": 0.595
+   },
+   {
+    "time": 52.05,
+    "text": "Driving Her Autistic. Gender Confused",
+    "confidence": 0.722
+   },
+   {
+    "time": 52.05,
+    "text": "mental health,",
+    "confidence": 0.674
+   },
+   {
+    "time": 52.05,
+    "text": "Child",
+    "confidence": 0.667
+   },
+   {
+    "time": 52.05,
+    "text": "By Kelsey Bolar",
+    "confidence": 0.998
+   },
+   {
+    "time": 52.05,
+    "text": "After educators and a therapist drove",
+    "confidence": 0.926
+   },
+   {
+    "time": 52.05,
+    "text": "her high-functioning autistic, gender-",
+    "confidence": 0.646
+   },
+   {
+    "time": 54.05,
+    "text": "THOUGHT",
+    "confidence": 0.897
+   },
+   {
+    "time": 54.05,
+    "text": "independent",
+    "confidence": 0.888
+   },
+   {
+    "time": 54.05,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.05,
+    "text": "Women's Forum",
+    "confidence": 0.953
+   },
+   {
+    "time": 54.05,
+    "text": "AlI Issues Are Women's Issues",
+    "confidence": 0.653
+   },
+   {
+    "time": 54.05,
+    "text": "Identity Crisis",
+    "confidence": 0.757
+   },
+   {
+    "time": 54.05,
+    "text": "California Mom Says",
+    "confidence": 0.996
+   },
+   {
+    "time": 54.05,
+    "text": "Gender Ideology Drove",
+    "confidence": 0.92
+   },
+   {
+    "time": 54.05,
+    "text": "Autistic Daughter Into",
+    "confidence": 0.621
+   },
+   {
+    "time": 54.05,
+    "text": "Mental Breakdown",
+    "confidence": 0.997
+   },
+   {
+    "time": 54.05,
+    "text": "Mom Accuses Educators: Therapist of",
+    "confidence": 0.579
+   },
+   {
+    "time": 54.05,
+    "text": "Driving Her Autistic. Gender Confused",
+    "confidence": 0.973
+   },
+   {
+    "time": 54.05,
+    "text": "induding",
+    "confidence": 0.763
+   },
+   {
+    "time": 54.05,
+    "text": "Child Into",
+    "confidence": 0.887
+   },
+   {
+    "time": 54.05,
+    "text": "By Kelsey Bolar",
+    "confidence": 0.71
+   },
+   {
+    "time": 54.05,
+    "text": "After educators and",
+    "confidence": 0.815
+   },
+   {
+    "time": 54.05,
+    "text": "therapist drove",
+    "confidence": 0.732
+   },
+   {
+    "time": 54.05,
+    "text": "her high-functioning autistic, gender-",
+    "confidence": 0.837
+   },
+   {
+    "time": 56.06,
+    "text": "THOUGHT",
+    "confidence": 0.806
+   },
+   {
+    "time": 56.06,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.06,
+    "text": "WATCH NOW ON",
+    "confidence": 0.987
+   },
+   {
+    "time": 56.06,
+    "text": "EPOCH",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.06,
+    "text": "DTV",
+    "confidence": 0.684
+   },
+   {
+    "time": 58.06,
+    "text": "THOUGHT",
+    "confidence": 0.822
+   },
+   {
+    "time": 58.06,
+    "text": "LEADERS",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.06,
+    "text": "EPOCHTV.COM]",
+    "confidence": 0.759
+   },
+   {
+    "time": 58.06,
+    "text": "ATL",
+    "confidence": 1.0
+   }
+  ],
+  "captions": [
+   {
+    "text": "THOUGHT",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.742,
+    "id": "o1"
+   },
+   {
+    "text": "LEADERS",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o2"
+   },
+   {
+    "text": "What often",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o3"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.606,
+    "id": "o4"
+   },
+   {
+    "text": "LEADERS",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o5"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.772,
+    "id": "o6"
+   },
+   {
+    "text": "LEADERS",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o7"
+   },
+   {
+    "text": "or moderate",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.712,
+    "id": "o8"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.8,
+    "id": "o9"
+   },
+   {
+    "text": "LEADERS",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 1.0,
+    "id": "o10"
+   },
+   {
+    "text": "becomes",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.998,
+    "id": "o11"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.658,
+    "id": "o12"
+   },
+   {
+    "text": "LEADERS",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 1.0,
+    "id": "o13"
+   },
+   {
+    "text": "IRANS",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.719,
+    "id": "o14"
+   },
+   {
+    "text": "HUMAN",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.794,
+    "id": "o15"
+   },
+   {
+    "text": "Rigkts",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.649,
+    "id": "o16"
+   },
+   {
+    "text": "their issues  MEon",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.655,
+    "id": "o17"
+   },
+   {
+    "text": "the MT GOP",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.963,
+    "id": "o18"
+   },
+   {
+    "text": "Zooey",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.999,
+    "id": "o19"
+   },
+   {
+    "text": "Let",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.671,
+    "id": "o20"
+   },
+   {
+    "text": "Speak!",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.833,
+    "id": "o21"
+   },
+   {
+    "text": "ThOUGHT",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.526,
+    "id": "o22"
+   },
+   {
+    "text": "LEADERS",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 1.0,
+    "id": "o23"
+   },
+   {
+    "text": "Not",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.507,
+    "id": "o24"
+   },
+   {
+    "text": "DESTINZ",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.628,
+    "id": "o25"
+   },
+   {
+    "text": "Are",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.774,
+    "id": "o26"
+   },
+   {
+    "text": "SISTERS",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.527,
+    "id": "o27"
+   },
+   {
+    "text": "by way",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.914,
+    "id": "o28"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.924,
+    "id": "o29"
+   },
+   {
+    "text": "LEADERS",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 1.0,
+    "id": "o30"
+   },
+   {
+    "text": "would want",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.986,
+    "id": "o31"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.925,
+    "id": "o32"
+   },
+   {
+    "text": "LEADERS",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 1.0,
+    "id": "o33"
+   },
+   {
+    "text": "that |'m not",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.745,
+    "id": "o34"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.953,
+    "id": "o35"
+   },
+   {
+    "text": "LEADERS",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 1.0,
+    "id": "o36"
+   },
+   {
+    "text": "but it seems",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.959,
+    "id": "o37"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.61,
+    "id": "o38"
+   },
+   {
+    "text": "LEADERS",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 1.0,
+    "id": "o39"
+   },
+   {
+    "text": "field",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.993,
+    "id": "o40"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.834,
+    "id": "o41"
+   },
+   {
+    "text": "LEADERS",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 1.0,
+    "id": "o42"
+   },
+   {
+    "text": "the spectrum,",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.925,
+    "id": "o43"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.662,
+    "id": "o44"
+   },
+   {
+    "text": "LEADERS",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 1.0,
+    "id": "o45"
+   },
+   {
+    "text": "he wont",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.995,
+    "id": "o46"
+   },
+   {
+    "text": "DONAT",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 1.0,
+    "id": "o47"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.834,
+    "id": "o48"
+   },
+   {
+    "text": "LEADERS",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 1.0,
+    "id": "o49"
+   },
+   {
+    "text": "Search",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.948,
+    "id": "o50"
+   },
+   {
+    "text": "Technology",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 1.0,
+    "id": "o51"
+   },
+   {
+    "text": "News & Politics",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.821,
+    "id": "o52"
+   },
+   {
+    "text": "Culture",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 1.0,
+    "id": "o53"
+   },
+   {
+    "text": "Business",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 1.0,
+    "id": "o54"
+   },
+   {
+    "text": "Human Interest",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.598,
+    "id": "o55"
+   },
+   {
+    "text": "HANDLING AN ALMOST UNIMAGINABLY DIFFICULT QUERY",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.987,
+    "id": "o56"
+   },
+   {
+    "text": "FOLLOW US",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.858,
+    "id": "o57"
+   },
+   {
+    "text": "LIFE",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.999,
+    "id": "o58"
+   },
+   {
+    "text": "ADisproportionate Number",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.986,
+    "id": "o59"
+   },
+   {
+    "text": "of Autistic Youth Are",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.805,
+    "id": "o60"
+   },
+   {
+    "text": "Transgender: Why?",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.722,
+    "id": "o61"
+   },
+   {
+    "text": "BY EVAN URQUHART",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.946,
+    "id": "o62"
+   },
+   {
+    "text": "MARCH 21, 2018",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.7,
+    "id": "o63"
+   },
+   {
+    "text": "1.33 PM",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.916,
+    "id": "o64"
+   },
+   {
+    "text": "the transgender",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.631,
+    "id": "o65"
+   },
+   {
+    "text": "Photo illustration by Natalie Matthews-Ramo/Slate; Image hy Thinkstock:",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.547,
+    "id": "o66"
+   },
+   {
+    "text": "This",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.999,
+    "id": "o67"
+   },
+   {
+    "text": "post is part of Outward; Slate's home for coverage of LGBTQ life,",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.663,
+    "id": "o68"
+   },
+   {
+    "text": "thought; and culture: Read more here:",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.536,
+    "id": "o69"
+   },
+   {
+    "text": "large",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.638,
+    "id": "o70"
+   },
+   {
+    "text": "Gender specialists first noticed decades ago that a",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.731,
+    "id": "o71"
+   },
+   {
+    "text": "number of people",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.923,
+    "id": "o72"
+   },
+   {
+    "text": "who seek treatment for gender dysphoria also seemed to have autistic",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.756,
+    "id": "o73"
+   },
+   {
+    "text": "DONAT",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.998,
+    "id": "o74"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.649,
+    "id": "o75"
+   },
+   {
+    "text": "LEADERS",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 1.0,
+    "id": "o76"
+   },
+   {
+    "text": "Search",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.999,
+    "id": "o77"
+   },
+   {
+    "text": "Technology",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 1.0,
+    "id": "o78"
+   },
+   {
+    "text": "News & Politics",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.966,
+    "id": "o79"
+   },
+   {
+    "text": "Culture",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.76,
+    "id": "o80"
+   },
+   {
+    "text": "Business",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 1.0,
+    "id": "o81"
+   },
+   {
+    "text": "Human Interest",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.998,
+    "id": "o82"
+   },
+   {
+    "text": "HANDLING AN ALMOST UNIMAGINABLY DIFFICULT QUERY",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.933,
+    "id": "o83"
+   },
+   {
+    "text": "FOLLOW US",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.502,
+    "id": "o84"
+   },
+   {
+    "text": "LIFE",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 1.0,
+    "id": "o85"
+   },
+   {
+    "text": "ADisproportionate Number",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 1.0,
+    "id": "o86"
+   },
+   {
+    "text": "of Autistic Youth Are",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.605,
+    "id": "o87"
+   },
+   {
+    "text": "Transgender: Why?",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.727,
+    "id": "o88"
+   },
+   {
+    "text": "BY EVAN URQUHART",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.993,
+    "id": "o89"
+   },
+   {
+    "text": "MARCH 21,2018",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.931,
+    "id": "o90"
+   },
+   {
+    "text": "1.33 PM",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.803,
+    "id": "o91"
+   },
+   {
+    "text": "and(the autism",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.532,
+    "id": "o92"
+   },
+   {
+    "text": "Photo illustration by Natalie Matthews-Ramo/Slate Image by Thinkstock",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.702,
+    "id": "o93"
+   },
+   {
+    "text": "This post is part of Outward, Slate's home for coverage of LGBTQ life,",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.683,
+    "id": "o94"
+   },
+   {
+    "text": "thought; and culture: Read more here:",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.738,
+    "id": "o95"
+   },
+   {
+    "text": "Gender specialists first noticed decades ago that a",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.837,
+    "id": "o96"
+   },
+   {
+    "text": "number of people",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.998,
+    "id": "o97"
+   },
+   {
+    "text": "who seek treatment for gender dysphoriaalso seemed to have autistic",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.859,
+    "id": "o98"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.633,
+    "id": "o99"
+   },
+   {
+    "text": "LEADERS",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 1.0,
+    "id": "o100"
+   },
+   {
+    "text": "p",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.731,
+    "id": "o101"
+   },
+   {
+    "text": "DONATE",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 1.0,
+    "id": "o102"
+   },
+   {
+    "text": "HEALTH",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.995,
+    "id": "o103"
+   },
+   {
+    "text": "first",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 1.0,
+    "id": "o104"
+   },
+   {
+    "text": "LISTEN & FOLLOW",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.773,
+    "id": "o105"
+   },
+   {
+    "text": "Transgender and non-binary",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.716,
+    "id": "o106"
+   },
+   {
+    "text": "people are up to six times",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.796,
+    "id": "o107"
+   },
+   {
+    "text": "more likely to have autism",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.933,
+    "id": "o108"
+   },
+   {
+    "text": "January 15,2023",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.935,
+    "id": "o109"
+   },
+   {
+    "text": "8.02 AMET",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.949,
+    "id": "o110"
+   },
+   {
+    "text": "Heard on Weekend Edition Sunday",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.867,
+    "id": "o111"
+   },
+   {
+    "text": "By Lesley McClurg",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.826,
+    "id": "o112"
+   },
+   {
+    "text": "Transgender and non-binary people are up to",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.763,
+    "id": "o113"
+   },
+   {
+    "text": "likely",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.673,
+    "id": "o114"
+   },
+   {
+    "text": "to also have autism: This",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.607,
+    "id": "o115"
+   },
+   {
+    "text": "six times more",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.965,
+    "id": "o116"
+   },
+   {
+    "text": "intersection has researchers trying to",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.877,
+    "id": "o117"
+   },
+   {
+    "text": "and how society",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.948,
+    "id": "o118"
+   },
+   {
+    "text": "understand the",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.743,
+    "id": "o119"
+   },
+   {
+    "text": "views these identities",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.803,
+    "id": "o120"
+   },
+   {
+    "text": "Transcript",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 1.0,
+    "id": "o121"
+   },
+   {
+    "text": "AYESHA RASCOE, HOST:",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.765,
+    "id": "o122"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.762,
+    "id": "o123"
+   },
+   {
+    "text": "LEADERS",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 1.0,
+    "id": "o124"
+   },
+   {
+    "text": "DONATE",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 1.0,
+    "id": "o125"
+   },
+   {
+    "text": "HEALTH",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.983,
+    "id": "o126"
+   },
+   {
+    "text": "Up",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.659,
+    "id": "o127"
+   },
+   {
+    "text": "first",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 1.0,
+    "id": "o128"
+   },
+   {
+    "text": "LISTEN & FOLLOW",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.795,
+    "id": "o129"
+   },
+   {
+    "text": "Transgender and non-binary",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.868,
+    "id": "o130"
+   },
+   {
+    "text": "more likely to have autism",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.984,
+    "id": "o131"
+   },
+   {
+    "text": "January 15,2023",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.623,
+    "id": "o132"
+   },
+   {
+    "text": "8.02 AMET",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.879,
+    "id": "o133"
+   },
+   {
+    "text": "Heard on Weekend Edition Sunday",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.652,
+    "id": "o134"
+   },
+   {
+    "text": "By Lesley McClurg",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.999,
+    "id": "o135"
+   },
+   {
+    "text": "Transgender and non-binary people are up to",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.978,
+    "id": "o136"
+   },
+   {
+    "text": "six times more likely to also have autism: This",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.788,
+    "id": "o137"
+   },
+   {
+    "text": "intersection has researchers trying to",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.849,
+    "id": "o138"
+   },
+   {
+    "text": "how society",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.825,
+    "id": "o139"
+   },
+   {
+    "text": "understand",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 1.0,
+    "id": "o140"
+   },
+   {
+    "text": "views these",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.96,
+    "id": "o141"
+   },
+   {
+    "text": "id",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 1.0,
+    "id": "o142"
+   },
+   {
+    "text": "Transcript",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 1.0,
+    "id": "o143"
+   },
+   {
+    "text": "AYESHA RASCOE, HOST:",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.81,
+    "id": "o144"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.677,
+    "id": "o145"
+   },
+   {
+    "text": "LEADERS",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 1.0,
+    "id": "o146"
+   },
+   {
+    "text": "who are",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.996,
+    "id": "o147"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.616,
+    "id": "o148"
+   },
+   {
+    "text": "LEADERS",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 1.0,
+    "id": "o149"
+   },
+   {
+    "text": "not just",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.824,
+    "id": "o150"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.575,
+    "id": "o151"
+   },
+   {
+    "text": "LEADERS",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 1.0,
+    "id": "o152"
+   },
+   {
+    "text": "depression;",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.863,
+    "id": "o153"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.603,
+    "id": "o154"
+   },
+   {
+    "text": "LEADERS",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 1.0,
+    "id": "o155"
+   },
+   {
+    "text": "ailments",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.981,
+    "id": "o156"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.616,
+    "id": "o157"
+   },
+   {
+    "text": "LEADERS",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 1.0,
+    "id": "o158"
+   },
+   {
+    "text": "to this.",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.66,
+    "id": "o159"
+   },
+   {
+    "text": "ThOUGHT",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.517,
+    "id": "o160"
+   },
+   {
+    "text": "LEADERS",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 1.0,
+    "id": "o161"
+   },
+   {
+    "text": "probably",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 1.0,
+    "id": "o162"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.803,
+    "id": "o163"
+   },
+   {
+    "text": "LEADERS",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 1.0,
+    "id": "o164"
+   },
+   {
+    "text": "PEOPLE",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.995,
+    "id": "o165"
+   },
+   {
+    "text": "TRANS",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.997,
+    "id": "o166"
+   },
+   {
+    "text": "BHC NG",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.545,
+    "id": "o167"
+   },
+   {
+    "text": "IN MONIANA",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.934,
+    "id": "o168"
+   },
+   {
+    "text": "this ideology",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.777,
+    "id": "o169"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.796,
+    "id": "o170"
+   },
+   {
+    "text": "LEADERS",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 1.0,
+    "id": "o171"
+   },
+   {
+    "text": "it false",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.858,
+    "id": "o172"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.851,
+    "id": "o173"
+   },
+   {
+    "text": "LEADERS",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 1.0,
+    "id": "o174"
+   },
+   {
+    "text": "sex, it",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.692,
+    "id": "o175"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.739,
+    "id": "o176"
+   },
+   {
+    "text": "LEADERS",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 1.0,
+    "id": "o177"
+   },
+   {
+    "text": "irdependen",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.563,
+    "id": "o178"
+   },
+   {
+    "text": "Identity Crisis",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.648,
+    "id": "o179"
+   },
+   {
+    "text": "California Mom Says",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.999,
+    "id": "o180"
+   },
+   {
+    "text": "Ideology Drove",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.995,
+    "id": "o181"
+   },
+   {
+    "text": "Gender",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.826,
+    "id": "o182"
+   },
+   {
+    "text": "Autistic Daughter Into",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.582,
+    "id": "o183"
+   },
+   {
+    "text": "Mental Breakdown",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.893,
+    "id": "o184"
+   },
+   {
+    "text": "Mom Accuses Educators; Therapist of",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.702,
+    "id": "o185"
+   },
+   {
+    "text": "Driving Her Aulistic. Gender Confused",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.723,
+    "id": "o186"
+   },
+   {
+    "text": "Child",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 1.0,
+    "id": "o187"
+   },
+   {
+    "text": "By Kelsey Bolar",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.877,
+    "id": "o188"
+   },
+   {
+    "text": "After educators and a therapist drove",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.928,
+    "id": "o189"
+   },
+   {
+    "text": "her high-functioning autistic, gender-",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.895,
+    "id": "o190"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.897,
+    "id": "o191"
+   },
+   {
+    "text": "LEADERS",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 1.0,
+    "id": "o192"
+   },
+   {
+    "text": "Independent",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.543,
+    "id": "o193"
+   },
+   {
+    "text": "AII Issues Are Women's Issues",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.521,
+    "id": "o194"
+   },
+   {
+    "text": "Identity Crisis",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.892,
+    "id": "o195"
+   },
+   {
+    "text": "California Mom Says",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 1.0,
+    "id": "o196"
+   },
+   {
+    "text": "Gender Ideology Drove",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.762,
+    "id": "o197"
+   },
+   {
+    "text": "Aulistic Daughter Into",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.8,
+    "id": "o198"
+   },
+   {
+    "text": "Mental Breakdown",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.914,
+    "id": "o199"
+   },
+   {
+    "text": "Mom Accuses Educators; Thcrapist of",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.595,
+    "id": "o200"
+   },
+   {
+    "text": "Driving Her Autistic. Gender Confused",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.722,
+    "id": "o201"
+   },
+   {
+    "text": "mental health,",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.674,
+    "id": "o202"
+   },
+   {
+    "text": "Child",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.667,
+    "id": "o203"
+   },
+   {
+    "text": "By Kelsey Bolar",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.998,
+    "id": "o204"
+   },
+   {
+    "text": "After educators and a therapist drove",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.926,
+    "id": "o205"
+   },
+   {
+    "text": "her high-functioning autistic, gender-",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.646,
+    "id": "o206"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.897,
+    "id": "o207"
+   },
+   {
+    "text": "independent",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.888,
+    "id": "o208"
+   },
+   {
+    "text": "LEADERS",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 1.0,
+    "id": "o209"
+   },
+   {
+    "text": "Women's Forum",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.953,
+    "id": "o210"
+   },
+   {
+    "text": "AlI Issues Are Women's Issues",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.653,
+    "id": "o211"
+   },
+   {
+    "text": "Identity Crisis",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.757,
+    "id": "o212"
+   },
+   {
+    "text": "California Mom Says",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.996,
+    "id": "o213"
+   },
+   {
+    "text": "Gender Ideology Drove",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.92,
+    "id": "o214"
+   },
+   {
+    "text": "Autistic Daughter Into",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.621,
+    "id": "o215"
+   },
+   {
+    "text": "Mental Breakdown",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.997,
+    "id": "o216"
+   },
+   {
+    "text": "Mom Accuses Educators: Therapist of",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.579,
+    "id": "o217"
+   },
+   {
+    "text": "Driving Her Autistic. Gender Confused",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.973,
+    "id": "o218"
+   },
+   {
+    "text": "induding",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.763,
+    "id": "o219"
+   },
+   {
+    "text": "Child Into",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.887,
+    "id": "o220"
+   },
+   {
+    "text": "By Kelsey Bolar",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.71,
+    "id": "o221"
+   },
+   {
+    "text": "After educators and",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.815,
+    "id": "o222"
+   },
+   {
+    "text": "therapist drove",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.732,
+    "id": "o223"
+   },
+   {
+    "text": "her high-functioning autistic, gender-",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.837,
+    "id": "o224"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.806,
+    "id": "o225"
+   },
+   {
+    "text": "LEADERS",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 1.0,
+    "id": "o226"
+   },
+   {
+    "text": "WATCH NOW ON",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.987,
+    "id": "o227"
+   },
+   {
+    "text": "EPOCH",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 1.0,
+    "id": "o228"
+   },
+   {
+    "text": "DTV",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.684,
+    "id": "o229"
+   },
+   {
+    "text": "THOUGHT",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 0.822,
+    "id": "o230"
+   },
+   {
+    "text": "LEADERS",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 1.0,
+    "id": "o231"
+   },
+   {
+    "text": "EPOCHTV.COM]",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 0.759,
+    "id": "o232"
+   },
+   {
+    "text": "ATL",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 1.0,
+    "id": "o233"
+   }
+  ]
+ }
+}

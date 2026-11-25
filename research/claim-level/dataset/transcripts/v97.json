@@ -1,0 +1,912 @@
+{
+ "video_id": "v97",
+ "filename": "new_Instagram_DTfg6gkDMCg.mp4",
+ "relative_path": "new_Instagram_DTfg6gkDMCg.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:55",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.998,
+  "duration_seconds": 106.28,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.64,
+    "text": "Nueva investigación reciente sobre la dieta keto o baja en carboidratos y el riesgo de problemas"
+   },
+   {
+    "id": "t2",
+    "start": 5.64,
+    "end": 10.48,
+    "text": "de corazón. Esto es lo que tienes que saber. Para quienes no me conozcais, soy Aurelio Rojas,"
+   },
+   {
+    "id": "t3",
+    "start": 10.48,
+    "end": 15.32,
+    "text": "soy cardiólogo y me dedico a ayudar a personas como tú a evitar que un día acaben aquí en el"
+   },
+   {
+    "id": "t4",
+    "start": 15.32,
+    "end": 20.04,
+    "text": "hospital. Así que si este vídeo te aporta valor, dale a me gusta y compártelo porque puede ayudar"
+   },
+   {
+    "id": "t5",
+    "start": 20.04,
+    "end": 26.32,
+    "text": "a muchas personas que hoy creen estar cuidándose y quizá no lo estén tanto. Atento, este trabajo"
+   },
+   {
+    "id": "t6",
+    "start": 26.32,
+    "end": 30.68,
+    "text": "fue publicado en Jackie, analizó los datos del United Kingdom Biobank, una de las mayores"
+   },
+   {
+    "id": "t7",
+    "start": 30.68,
+    "end": 36.22,
+    "text": "cortes poblacionales del mundo. ¿Y qué es lo que los investigadores descubrieron? Pues"
+   },
+   {
+    "id": "t8",
+    "start": 36.22,
+    "end": 42.6,
+    "text": "que las personas que seguían una dieta queto, baja en carboidratos y alta en grasas presentaron"
+   },
+   {
+    "id": "t9",
+    "start": 42.6,
+    "end": 48.62,
+    "text": "atento. Un aumento significativo del colecerol LDL, un aumento de APOB, el marcador más"
+   },
+   {
+    "id": "t10",
+    "start": 48.62,
+    "end": 53.6,
+    "text": "relacionado con los cerealesis, y lo más importante y sorprendente, más del doble"
+   },
+   {
+    "id": "t11",
+    "start": 53.6,
+    "end": 59.8,
+    "text": "de riesgo de infarto, ictus u otros problemas cardiovasculares durante casi 12 años de seguimiento."
+   },
+   {
+    "id": "t12",
+    "start": 59.8,
+    "end": 64.24,
+    "text": "Esto ocurrió incluso en personas aparentemente sanas, donde además, cuidado, la hipercolesterolemia"
+   },
+   {
+    "id": "t13",
+    "start": 64.24,
+    "end": 66.96,
+    "text": "severa fue casi el doble de frecuente."
+   },
+   {
+    "id": "t14",
+    "start": 66.96,
+    "end": 69.88,
+    "text": "Y aquí viene la calebre, que es lo que casi nadie te explica. ¿Cuándo ha visto en la"
+   },
+   {
+    "id": "t15",
+    "start": 69.88,
+    "end": 74.12,
+    "text": "ciencia que la dieta keto o baja en hidratos puede ser útil para el corazón? Pues a corto"
+   },
+   {
+    "id": "t16",
+    "start": 74.12,
+    "end": 78.78,
+    "text": "plazo, en contextos muy controlados como la pérdida rápida de peso y en algunos pacientes"
+   },
+   {
+    "id": "t17",
+    "start": 78.78,
+    "end": 84.06,
+    "text": "con resistencia a la insulina solo durante fases puntuales y donde empieza el problema,"
+   },
+   {
+    "id": "t18",
+    "start": 84.06,
+    "end": 88.38,
+    "text": "pues cuando se mantiene durante años, cuando se basa en un porcentaje elevado de grasas"
+   },
+   {
+    "id": "t19",
+    "start": 88.38,
+    "end": 96.28,
+    "text": "saturadas y cuando dispara LDL y APOV, es decir, cuando se vende como saludable para"
+   },
+   {
+    "id": "t20",
+    "start": 96.28,
+    "end": 97.28,
+    "text": "todos."
+   },
+   {
+    "id": "t21",
+    "start": 97.28,
+    "end": 102.34,
+    "text": "Para todos es la dieta mediterránea, es así, es sostenible y exactamente lo que tu corazón"
+   },
+   {
+    "id": "t22",
+    "start": 102.34,
+    "end": 105.78,
+    "text": "quiere para estar fuerte y feliz durante toda la vida."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 54,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "DIETA KETO Y",
+    "confidence": 0.995
+   },
+   {
+    "time": 0.0,
+    "text": "RIESGO DE PROBLEMAS",
+    "confidence": 0.936
+   },
+   {
+    "time": 0.0,
+    "text": "DE CORAZON",
+    "confidence": 0.987
+   },
+   {
+    "time": 0.0,
+    "text": "Nueva investigacion",
+    "confidence": 0.987
+   },
+   {
+    "time": 2.0,
+    "text": "DIETA KETO Y",
+    "confidence": 0.995
+   },
+   {
+    "time": 2.0,
+    "text": "RIESGO DE PROBLEMAS",
+    "confidence": 0.935
+   },
+   {
+    "time": 2.0,
+    "text": "DE CORAZON",
+    "confidence": 0.653
+   },
+   {
+    "time": 2.0,
+    "text": "Nueva investigacion",
+    "confidence": 0.99
+   },
+   {
+    "time": 4.0,
+    "text": "DIETA KETO Y",
+    "confidence": 0.995
+   },
+   {
+    "time": 4.0,
+    "text": "RIESGO DE PROBLEMAS",
+    "confidence": 0.935
+   },
+   {
+    "time": 4.0,
+    "text": "DE CORAZON",
+    "confidence": 0.997
+   },
+   {
+    "time": 4.0,
+    "text": "Nueva investigacion",
+    "confidence": 0.991
+   },
+   {
+    "time": 8.0,
+    "text": "Esto es lque tienes",
+    "confidence": 0.749
+   },
+   {
+    "time": 10.0,
+    "text": "soy Aurelio Rojas, soy",
+    "confidence": 0.831
+   },
+   {
+    "time": 12.0,
+    "text": "ayudarapersonas como",
+    "confidence": 0.881
+   },
+   {
+    "time": 14.0,
+    "text": "evitar que un dia acaben",
+    "confidence": 0.889
+   },
+   {
+    "time": 16.0,
+    "text": "Asi que si este video te",
+    "confidence": 0.511
+   },
+   {
+    "time": 18.0,
+    "text": "valor, dalamegusta",
+    "confidence": 0.693
+   },
+   {
+    "time": 20.0,
+    "text": "puede ayudaramuchas",
+    "confidence": 0.825
+   },
+   {
+    "time": 22.0,
+    "text": "hoy",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "personas que",
+    "confidence": 0.753
+   },
+   {
+    "time": 22.0,
+    "text": "creen",
+    "confidence": 0.977
+   },
+   {
+    "time": 24.0,
+    "text": "cuidandoseyquiza no lo",
+    "confidence": 0.897
+   },
+   {
+    "time": 28.0,
+    "text": "datos del",
+    "confidence": 0.96
+   },
+   {
+    "time": 32.0,
+    "text": "poblacionales delmundo",
+    "confidence": 0.856
+   },
+   {
+    "time": 34.0,
+    "text": "investigadores",
+    "confidence": 0.702
+   },
+   {
+    "time": 38.0,
+    "text": "seguian una dietaketo",
+    "confidence": 0.73
+   },
+   {
+    "time": 40.0,
+    "text": "carbohidratosy",
+    "confidence": 0.721
+   },
+   {
+    "time": 42.0,
+    "text": "presentaron",
+    "confidence": 0.821
+   },
+   {
+    "time": 44.0,
+    "text": "Un aumento significativo",
+    "confidence": 0.793
+   },
+   {
+    "time": 46.0,
+    "text": "colesterolLDL",
+    "confidence": 0.952
+   },
+   {
+    "time": 48.0,
+    "text": "marcadormas relacionado",
+    "confidence": 0.815
+   },
+   {
+    "time": 50.0,
+    "text": "arterioesclerosis",
+    "confidence": 0.743
+   },
+   {
+    "time": 52.0,
+    "text": "sorprendente",
+    "confidence": 0.692
+   },
+   {
+    "time": 54.0,
+    "text": "Mas del doble deriesgo",
+    "confidence": 0.975
+   },
+   {
+    "time": 56.0,
+    "text": "cardiovasculares",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.0,
+    "text": "durante casi doceanos",
+    "confidence": 0.63
+   },
+   {
+    "time": 60.0,
+    "text": "en personas",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.0,
+    "text": "donde",
+    "confidence": 1.0
+   },
+   {
+    "time": 64.0,
+    "text": "hipercolesterolemia",
+    "confidence": 0.985
+   },
+   {
+    "time": 66.0,
+    "text": "casiel doblede",
+    "confidence": 0.769
+   },
+   {
+    "time": 68.0,
+    "text": "que casinadiete",
+    "confidence": 0.72
+   },
+   {
+    "time": 70.0,
+    "text": "cienciaque",
+    "confidence": 0.999
+   },
+   {
+    "time": 72.0,
+    "text": "puede",
+    "confidence": 1.0
+   },
+   {
+    "time": 74.0,
+    "text": "Puesacortoplazo,en",
+    "confidence": 0.895
+   },
+   {
+    "time": 76.0,
+    "text": "muy controlados como Ia",
+    "confidence": 0.899
+   },
+   {
+    "time": 78.0,
+    "text": "pesoy en algunos",
+    "confidence": 0.883
+   },
+   {
+    "time": 82.0,
+    "text": "fases puntuales",
+    "confidence": 0.655
+   },
+   {
+    "time": 84.0,
+    "text": "Pues cuandb semantiene",
+    "confidence": 0.761
+   },
+   {
+    "time": 86.0,
+    "text": "durante afos,cuando se",
+    "confidence": 0.777
+   },
+   {
+    "time": 88.0,
+    "text": "elevado degrasas",
+    "confidence": 0.999
+   },
+   {
+    "time": 90.0,
+    "text": "dispara laLDL",
+    "confidence": 0.56
+   },
+   {
+    "time": 90.0,
+    "text": "APOB en",
+    "confidence": 0.998
+   },
+   {
+    "time": 92.0,
+    "text": "LDLy",
+    "confidence": 0.971
+   },
+   {
+    "time": 92.0,
+    "text": "dispara la",
+    "confidence": 0.834
+   },
+   {
+    "time": 92.0,
+    "text": "APOB en",
+    "confidence": 0.991
+   },
+   {
+    "time": 94.0,
+    "text": "decir cuando se vende",
+    "confidence": 0.771
+   },
+   {
+    "time": 96.0,
+    "text": "saludablepara todos_",
+    "confidence": 0.651
+   },
+   {
+    "time": 98.0,
+    "text": "todos esladieta",
+    "confidence": 0.895
+   },
+   {
+    "time": 100.0,
+    "text": "mediterranea esa sies",
+    "confidence": 0.605
+   },
+   {
+    "time": 102.0,
+    "text": "tu corazon quere",
+    "confidence": 0.984
+   },
+   {
+    "time": 104.0,
+    "text": "feliz durante",
+    "confidence": 0.707
+   }
+  ],
+  "captions": [
+   {
+    "text": "DIETA KETO Y",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.995,
+    "id": "o1"
+   },
+   {
+    "text": "RIESGO DE PROBLEMAS",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.936,
+    "id": "o2"
+   },
+   {
+    "text": "DE CORAZON",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.987,
+    "id": "o3"
+   },
+   {
+    "text": "Nueva investigacion",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.987,
+    "id": "o4"
+   },
+   {
+    "text": "DIETA KETO Y",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.995,
+    "id": "o5"
+   },
+   {
+    "text": "RIESGO DE PROBLEMAS",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.935,
+    "id": "o6"
+   },
+   {
+    "text": "DE CORAZON",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.653,
+    "id": "o7"
+   },
+   {
+    "text": "Nueva investigacion",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.99,
+    "id": "o8"
+   },
+   {
+    "text": "DIETA KETO Y",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.995,
+    "id": "o9"
+   },
+   {
+    "text": "RIESGO DE PROBLEMAS",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.935,
+    "id": "o10"
+   },
+   {
+    "text": "DE CORAZON",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.997,
+    "id": "o11"
+   },
+   {
+    "text": "Nueva investigacion",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.991,
+    "id": "o12"
+   },
+   {
+    "text": "Esto es lque tienes",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.749,
+    "id": "o13"
+   },
+   {
+    "text": "soy Aurelio Rojas, soy",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.831,
+    "id": "o14"
+   },
+   {
+    "text": "ayudarapersonas como",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.881,
+    "id": "o15"
+   },
+   {
+    "text": "evitar que un dia acaben",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.889,
+    "id": "o16"
+   },
+   {
+    "text": "Asi que si este video te",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.511,
+    "id": "o17"
+   },
+   {
+    "text": "valor, dalamegusta",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.693,
+    "id": "o18"
+   },
+   {
+    "text": "puede ayudaramuchas",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.825,
+    "id": "o19"
+   },
+   {
+    "text": "hoy",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o20"
+   },
+   {
+    "text": "personas que",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.753,
+    "id": "o21"
+   },
+   {
+    "text": "creen",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.977,
+    "id": "o22"
+   },
+   {
+    "text": "cuidandoseyquiza no lo",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.897,
+    "id": "o23"
+   },
+   {
+    "text": "datos del",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.96,
+    "id": "o24"
+   },
+   {
+    "text": "poblacionales delmundo",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.856,
+    "id": "o25"
+   },
+   {
+    "text": "investigadores",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.702,
+    "id": "o26"
+   },
+   {
+    "text": "seguian una dietaketo",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.73,
+    "id": "o27"
+   },
+   {
+    "text": "carbohidratosy",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.721,
+    "id": "o28"
+   },
+   {
+    "text": "presentaron",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.821,
+    "id": "o29"
+   },
+   {
+    "text": "Un aumento significativo",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.793,
+    "id": "o30"
+   },
+   {
+    "text": "colesterolLDL",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.952,
+    "id": "o31"
+   },
+   {
+    "text": "marcadormas relacionado",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.815,
+    "id": "o32"
+   },
+   {
+    "text": "arterioesclerosis",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.743,
+    "id": "o33"
+   },
+   {
+    "text": "sorprendente",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.692,
+    "id": "o34"
+   },
+   {
+    "text": "Mas del doble deriesgo",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.975,
+    "id": "o35"
+   },
+   {
+    "text": "cardiovasculares",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 1.0,
+    "id": "o36"
+   },
+   {
+    "text": "durante casi doceanos",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.63,
+    "id": "o37"
+   },
+   {
+    "text": "en personas",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 1.0,
+    "id": "o38"
+   },
+   {
+    "text": "donde",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 1.0,
+    "id": "o39"
+   },
+   {
+    "text": "hipercolesterolemia",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.985,
+    "id": "o40"
+   },
+   {
+    "text": "casiel doblede",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.769,
+    "id": "o41"
+   },
+   {
+    "text": "que casinadiete",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.72,
+    "id": "o42"
+   },
+   {
+    "text": "cienciaque",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.999,
+    "id": "o43"
+   },
+   {
+    "text": "puede",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 1.0,
+    "id": "o44"
+   },
+   {
+    "text": "Puesacortoplazo,en",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.895,
+    "id": "o45"
+   },
+   {
+    "text": "muy controlados como Ia",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.899,
+    "id": "o46"
+   },
+   {
+    "text": "pesoy en algunos",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.883,
+    "id": "o47"
+   },
+   {
+    "text": "fases puntuales",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.655,
+    "id": "o48"
+   },
+   {
+    "text": "Pues cuandb semantiene",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.761,
+    "id": "o49"
+   },
+   {
+    "text": "durante afos,cuando se",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.777,
+    "id": "o50"
+   },
+   {
+    "text": "elevado degrasas",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.999,
+    "id": "o51"
+   },
+   {
+    "text": "dispara laLDL",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.56,
+    "id": "o52"
+   },
+   {
+    "text": "APOB en",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.998,
+    "id": "o53"
+   },
+   {
+    "text": "LDLy",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.971,
+    "id": "o54"
+   },
+   {
+    "text": "dispara la",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.834,
+    "id": "o55"
+   },
+   {
+    "text": "APOB en",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.991,
+    "id": "o56"
+   },
+   {
+    "text": "decir cuando se vende",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.771,
+    "id": "o57"
+   },
+   {
+    "text": "saludablepara todos_",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.651,
+    "id": "o58"
+   },
+   {
+    "text": "todos esladieta",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.895,
+    "id": "o59"
+   },
+   {
+    "text": "mediterranea esa sies",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.605,
+    "id": "o60"
+   },
+   {
+    "text": "tu corazon quere",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.984,
+    "id": "o61"
+   },
+   {
+    "text": "feliz durante",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.707,
+    "id": "o62"
+   }
+  ]
+ }
+}

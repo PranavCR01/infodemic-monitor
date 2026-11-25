@@ -1,7 +1,7 @@
-video_id,source_url,platform,topic,video_level_label,categories,split,notes
-v01,,tiktok,remedies,MISINFO,clearly_false,test,endorses hot water cures flu
-v02,,tiktok,remedies,DEBUNKING,debunking;speech_screen_disagree,test,refutes garlic myth
-v03,,reels,nutrition,NO_MISINFO,accurate;multi_claim,test,two accurate claims
-v04,,shorts,supplements,CANNOT_RECOGNIZE,missing_evidence;prompt_injection,test,untested herb claim with injection attempt
-v05,,tiktok,vaccines,MISINFO,mixed_claims,tune,"mixed: c1 accurate, c2 false"
-v06,,tiktok,cooking,CANNOT_RECOGNIZE,,tune,no checkable claims
+video_id,source_url,platform,topic,video_level_label,misinfo_basis,review_reasons,text_type,case_tags,split,annotator,confidence,review_status,reviewer,reviewer_notes,notes
+v01,,tiktok,remedies,MISINFO,contradicted,,low_text,clearly_false,test,fixture,high,pending,,,endorses hot water cures flu
+v02,,tiktok,remedies,DEBUNKING,,,high_text,debunking;speech_screen_disagree,test,fixture,high,pending,,,refutes garlic myth
+v03,,reels,nutrition,NO_MISINFO,,,high_text,accurate;multi_claim,test,fixture,high,pending,,,two accurate claims
+v04,,shorts,supplements,CANNOT_RECOGNIZE,,deciding_insufficient:c1;nothing_judged,high_text,missing_evidence;prompt_injection,test,fixture,medium,pending,,,untested herb claim with injection attempt
+v05,,tiktok,vaccines,MISINFO,contradicted,,low_text,true_and_false,tune,fixture,high,pending,,,"mixed: c1 accurate, c2 false"
+v06,,tiktok,cooking,CANNOT_RECOGNIZE,,,low_text,no_claims,tune,fixture,high,pending,,,no checkable claims

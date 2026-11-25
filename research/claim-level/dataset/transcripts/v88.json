@@ -1,0 +1,390 @@
+{
+ "video_id": "v88",
+ "filename": "new_Instagram_C9Vfv2MS25D.mp4",
+ "relative_path": "new_Instagram_C9Vfv2MS25D.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:54",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 1.0,
+  "duration_seconds": 31.51,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 1.4,
+    "text": "¿Cómo escoger el sexo de tu bebé?"
+   },
+   {
+    "id": "t2",
+    "start": 1.4,
+    "end": 2.4,
+    "text": "Parte 2."
+   },
+   {
+    "id": "t3",
+    "start": 2.4,
+    "end": 6.2,
+    "text": "¿Sabías que los espermatosoides que van a ser mujeres son más resistentes que los espermatosoides"
+   },
+   {
+    "id": "t4",
+    "start": 6.2,
+    "end": 7.2,
+    "text": "que van a ser varones?"
+   },
+   {
+    "id": "t5",
+    "start": 7.2,
+    "end": 11.84,
+    "text": "Sabiendo esto, existe un método donde se programan las relaciones un día específico en el"
+   },
+   {
+    "id": "t6",
+    "start": 11.84,
+    "end": 12.84,
+    "text": "siglo de la mujer."
+   },
+   {
+    "id": "t7",
+    "start": 12.84,
+    "end": 14.08,
+    "text": "¿Y cómo funciona esto?"
+   },
+   {
+    "id": "t8",
+    "start": 14.08,
+    "end": 17.72,
+    "text": "Si las relaciones ocurren muy cerca al día de la ovulación, pues hay más probabilidades"
+   },
+   {
+    "id": "t9",
+    "start": 17.72,
+    "end": 18.72,
+    "text": "de tener un varón."
+   },
+   {
+    "id": "t10",
+    "start": 18.72,
+    "end": 22.48,
+    "text": "En cambio, si las relaciones ocurren 3 días antes de la ovulación, la probabilidad de"
+   },
+   {
+    "id": "t11",
+    "start": 22.48,
+    "end": 24.0,
+    "text": "tener una niña es mayor."
+   },
+   {
+    "id": "t12",
+    "start": 24.0,
+    "end": 27.88,
+    "text": "Esto se debe a que los espermatosoides que van a ser mujeres sobreviven más días."
+   },
+   {
+    "id": "t13",
+    "start": 27.88,
+    "end": 31.32,
+    "text": "Sígueme porque en mi próximo video te enseñaré cómo reconocer el día de volación."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 16,
+  "detections": [
+   {
+    "time": 2.0,
+    "text": "Paltet2",
+    "confidence": 0.604
+   },
+   {
+    "time": 8.0,
+    "text": "EXISTE",
+    "confidence": 0.946
+   },
+   {
+    "time": 10.0,
+    "text": "DONDE SE PROGRAMAN",
+    "confidence": 0.801
+   },
+   {
+    "time": 12.0,
+    "text": "EN EL CIcLo dE",
+    "confidence": 0.545
+   },
+   {
+    "time": 12.0,
+    "text": "Ciclo menstrual",
+    "confidence": 0.919
+   },
+   {
+    "time": 12.0,
+    "text": "Iutea",
+    "confidence": 0.815
+   },
+   {
+    "time": 12.0,
+    "text": "Fase folicular",
+    "confidence": 0.881
+   },
+   {
+    "time": 12.0,
+    "text": "Ovocito",
+    "confidence": 0.986
+   },
+   {
+    "time": 12.0,
+    "text": "Foliculo en",
+    "confidence": 0.985
+   },
+   {
+    "time": 12.0,
+    "text": "Cuerpo luteo",
+    "confidence": 0.719
+   },
+   {
+    "time": 12.0,
+    "text": "crecimiento",
+    "confidence": 0.847
+   },
+   {
+    "time": 12.0,
+    "text": "Menstruacion",
+    "confidence": 0.98
+   },
+   {
+    "time": 12.0,
+    "text": "Preovulacion",
+    "confidence": 0.962
+   },
+   {
+    "time": 12.0,
+    "text": "Ovulacion",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.0,
+    "text": "Postovulacion",
+    "confidence": 0.998
+   },
+   {
+    "time": 14.0,
+    "text": "stLas RELACIONES",
+    "confidence": 0.738
+   },
+   {
+    "time": 14.0,
+    "text": "ocurREN",
+    "confidence": 0.743
+   },
+   {
+    "time": 20.0,
+    "text": "dias",
+    "confidence": 0.928
+   },
+   {
+    "time": 22.0,
+    "text": "La probabtLtdad",
+    "confidence": 0.622
+   },
+   {
+    "time": 24.0,
+    "text": "Esto SE @EBE A QUE",
+    "confidence": 0.773
+   },
+   {
+    "time": 26.0,
+    "text": "QUE VAN A seR",
+    "confidence": 0.542
+   },
+   {
+    "time": 26.0,
+    "text": "MUJERES",
+    "confidence": 0.556
+   },
+   {
+    "time": 30.0,
+    "text": "coMo ReconoceR",
+    "confidence": 0.529
+   }
+  ],
+  "captions": [
+   {
+    "text": "Paltet2",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.604,
+    "id": "o1"
+   },
+   {
+    "text": "EXISTE",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.946,
+    "id": "o2"
+   },
+   {
+    "text": "DONDE SE PROGRAMAN",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.801,
+    "id": "o3"
+   },
+   {
+    "text": "EN EL CIcLo dE",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.545,
+    "id": "o4"
+   },
+   {
+    "text": "Ciclo menstrual",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.919,
+    "id": "o5"
+   },
+   {
+    "text": "Iutea",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.815,
+    "id": "o6"
+   },
+   {
+    "text": "Fase folicular",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.881,
+    "id": "o7"
+   },
+   {
+    "text": "Ovocito",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.986,
+    "id": "o8"
+   },
+   {
+    "text": "Foliculo en",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.985,
+    "id": "o9"
+   },
+   {
+    "text": "Cuerpo luteo",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.719,
+    "id": "o10"
+   },
+   {
+    "text": "crecimiento",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.847,
+    "id": "o11"
+   },
+   {
+    "text": "Menstruacion",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.98,
+    "id": "o12"
+   },
+   {
+    "text": "Preovulacion",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.962,
+    "id": "o13"
+   },
+   {
+    "text": "Ovulacion",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o14"
+   },
+   {
+    "text": "Postovulacion",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.998,
+    "id": "o15"
+   },
+   {
+    "text": "stLas RELACIONES",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.738,
+    "id": "o16"
+   },
+   {
+    "text": "ocurREN",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.743,
+    "id": "o17"
+   },
+   {
+    "text": "dias",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.928,
+    "id": "o18"
+   },
+   {
+    "text": "La probabtLtdad",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.622,
+    "id": "o19"
+   },
+   {
+    "text": "Esto SE @EBE A QUE",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.773,
+    "id": "o20"
+   },
+   {
+    "text": "QUE VAN A seR",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.542,
+    "id": "o21"
+   },
+   {
+    "text": "MUJERES",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.556,
+    "id": "o22"
+   },
+   {
+    "text": "coMo ReconoceR",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.529,
+    "id": "o23"
+   }
+  ]
+ }
+}

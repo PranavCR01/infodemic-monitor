@@ -1,0 +1,220 @@
+{
+ "video_id": "v144",
+ "filename": "new_TikTok_7456345749358480662.mp4",
+ "relative_path": "new_TikTok_7456345749358480662.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:58",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.437,
+  "duration_seconds": 30.21,
+  "segments": []
+ },
+ "on_screen": {
+  "frames_sampled": 16,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "When your fifStweek atthe gm isover",
+    "confidence": 0.553
+   },
+   {
+    "time": 2.0,
+    "text": "When vour firstweekatthe gvm is over",
+    "confidence": 0.717
+   },
+   {
+    "time": 4.0,
+    "text": "When vour firstweekat the gvm isover",
+    "confidence": 0.59
+   },
+   {
+    "time": 6.0,
+    "text": "firstweekatthe gvmis over",
+    "confidence": 0.756
+   },
+   {
+    "time": 6.0,
+    "text": "When vour",
+    "confidence": 0.963
+   },
+   {
+    "time": 8.0,
+    "text": "Whenpvour first weekatthe gvm isover",
+    "confidence": 0.564
+   },
+   {
+    "time": 10.0,
+    "text": "When pour first week atthe",
+    "confidence": 0.858
+   },
+   {
+    "time": 10.0,
+    "text": "gvm is",
+    "confidence": 0.97
+   },
+   {
+    "time": 10.0,
+    "text": "over",
+    "confidence": 0.944
+   },
+   {
+    "time": 12.0,
+    "text": "When pour first week atthe gpm isover",
+    "confidence": 0.647
+   },
+   {
+    "time": 14.0,
+    "text": "When vour first weekatthe gvm is over",
+    "confidence": 0.823
+   },
+   {
+    "time": 20.0,
+    "text": "When vour first weekatthe gvm is over",
+    "confidence": 0.619
+   },
+   {
+    "time": 22.0,
+    "text": "Whenpour first weekatthe gvm isover",
+    "confidence": 0.507
+   },
+   {
+    "time": 26.0,
+    "text": "When vour first weekatthegvmisover",
+    "confidence": 0.942
+   },
+   {
+    "time": 28.0,
+    "text": "Whenpour first weekatthegvm isover",
+    "confidence": 0.71
+   },
+   {
+    "time": 30.0,
+    "text": "Whenpour first weekatthegvmisover",
+    "confidence": 0.702
+   }
+  ],
+  "captions": [
+   {
+    "text": "When your fifStweek atthe gm isover",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.553,
+    "id": "o1"
+   },
+   {
+    "text": "When vour firstweekatthe gvm is over",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.717,
+    "id": "o2"
+   },
+   {
+    "text": "When vour firstweekat the gvm isover",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.59,
+    "id": "o3"
+   },
+   {
+    "text": "firstweekatthe gvmis over",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.756,
+    "id": "o4"
+   },
+   {
+    "text": "When vour",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.963,
+    "id": "o5"
+   },
+   {
+    "text": "Whenpvour first weekatthe gvm isover",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.564,
+    "id": "o6"
+   },
+   {
+    "text": "When pour first week atthe",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.858,
+    "id": "o7"
+   },
+   {
+    "text": "gvm is",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.97,
+    "id": "o8"
+   },
+   {
+    "text": "over",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.944,
+    "id": "o9"
+   },
+   {
+    "text": "When pour first week atthe gpm isover",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.647,
+    "id": "o10"
+   },
+   {
+    "text": "When vour first weekatthe gvm is over",
+    "start": 14.0,
+    "end": 20.0,
+    "confidence": 0.823,
+    "id": "o11"
+   },
+   {
+    "text": "Whenpour first weekatthe gvm isover",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.507,
+    "id": "o12"
+   },
+   {
+    "text": "When vour first weekatthegvmisover",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.942,
+    "id": "o13"
+   },
+   {
+    "text": "Whenpour first weekatthegvm isover",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.71,
+    "id": "o14"
+   },
+   {
+    "text": "Whenpour first weekatthegvmisover",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.702,
+    "id": "o15"
+   }
+  ]
+ }
+}

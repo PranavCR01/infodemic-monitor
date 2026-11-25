@@ -1,0 +1,3382 @@
+{
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "on_screen": {
+  "frames_sampled": 76,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Diary of a CEO podcast caught",
+    "confidence": 0.937
+   },
+   {
+    "time": 0.0,
+    "text": "spreading misinformation",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "Steven Bartlett",
+    "confidence": 0.998
+   },
+   {
+    "time": 0.0,
+    "text": "pode",
+    "confidence": 0.635
+   },
+   {
+    "time": 0.0,
+    "text": "cast",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "sharing 'harmful",
+    "confidence": 0.942
+   },
+   {
+    "time": 0.0,
+    "text": "health misinformation'",
+    "confidence": 0.986
+   },
+   {
+    "time": 2.0,
+    "text": "Diary of a CEO podcast caught",
+    "confidence": 0.939
+   },
+   {
+    "time": 2.0,
+    "text": "spreading misinformation",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Warning: Misleading",
+    "confidence": 0.995
+   },
+   {
+    "time": 2.0,
+    "text": "and unevidenced",
+    "confidence": 0.933
+   },
+   {
+    "time": 2.0,
+    "text": "gluten can cause everything",
+    "confidence": 0.776
+   },
+   {
+    "time": 2.0,
+    "text": "from osteoporosis to autism",
+    "confidence": 0.984
+   },
+   {
+    "time": 4.0,
+    "text": "Diary of a CEO podcast caught",
+    "confidence": 0.937
+   },
+   {
+    "time": 4.0,
+    "text": "spreading misinformation",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Warning: Misleading",
+    "confidence": 0.992
+   },
+   {
+    "time": 4.0,
+    "text": "and unevidenced",
+    "confidence": 0.904
+   },
+   {
+    "time": 4.0,
+    "text": "the covidvaccine",
+    "confidence": 0.768
+   },
+   {
+    "time": 4.0,
+    "text": "introductionhas had a",
+    "confidence": 0.792
+   },
+   {
+    "time": 4.0,
+    "text": "catastrophicnegative",
+    "confidence": 0.993
+   },
+   {
+    "time": 4.0,
+    "text": "effect",
+    "confidence": 0.936
+   },
+   {
+    "time": 6.01,
+    "text": "Diary of a CEO podcast caught",
+    "confidence": 0.943
+   },
+   {
+    "time": 6.01,
+    "text": "spreading misinformation",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.01,
+    "text": "Warning: Misleading",
+    "confidence": 0.989
+   },
+   {
+    "time": 6.01,
+    "text": "and unevidenced",
+    "confidence": 0.9
+   },
+   {
+    "time": 6.01,
+    "text": "the covidvaccine",
+    "confidence": 0.722
+   },
+   {
+    "time": 6.01,
+    "text": "introductionhas had a",
+    "confidence": 0.767
+   },
+   {
+    "time": 6.01,
+    "text": "catastrophicnegative",
+    "confidence": 0.993
+   },
+   {
+    "time": 6.01,
+    "text": "effect",
+    "confidence": 0.919
+   },
+   {
+    "time": 8.01,
+    "text": "Diary of a CEO podcast caught",
+    "confidence": 0.943
+   },
+   {
+    "time": 8.01,
+    "text": "spreading misinformation",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.01,
+    "text": "Warning: Misleading",
+    "confidence": 0.988
+   },
+   {
+    "time": 8.01,
+    "text": "and unevidenced",
+    "confidence": 0.9
+   },
+   {
+    "time": 8.01,
+    "text": "thecovidvaccine",
+    "confidence": 0.998
+   },
+   {
+    "time": 8.01,
+    "text": "introductionhas had a",
+    "confidence": 0.933
+   },
+   {
+    "time": 8.01,
+    "text": "catastrophicnegative",
+    "confidence": 0.946
+   },
+   {
+    "time": 8.01,
+    "text": "effect",
+    "confidence": 0.93
+   },
+   {
+    "time": 10.01,
+    "text": "is killing youl",
+    "confidence": 0.74
+   },
+   {
+    "time": 10.01,
+    "text": "and this my friends",
+    "confidence": 0.92
+   },
+   {
+    "time": 12.01,
+    "text": "DOAC",
+    "confidence": 0.941
+   },
+   {
+    "time": 12.01,
+    "text": "this wil",
+    "confidence": 0.772
+   },
+   {
+    "time": 12.01,
+    "text": "M",
+    "confidence": 0.856
+   },
+   {
+    "time": 12.01,
+    "text": "yeai",
+    "confidence": 0.994
+   },
+   {
+    "time": 12.01,
+    "text": "is why we have to be",
+    "confidence": 0.946
+   },
+   {
+    "time": 12.01,
+    "text": "incredibly careful what",
+    "confidence": 0.857
+   },
+   {
+    "time": 12.01,
+    "text": "wellness podcast",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "DOAC",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.01,
+    "text": "\"theyre lying",
+    "confidence": 0.933
+   },
+   {
+    "time": 14.01,
+    "text": "toyou about",
+    "confidence": 0.965
+   },
+   {
+    "time": 14.01,
+    "text": "menopaseave",
+    "confidence": 0.938
+   },
+   {
+    "time": 14.01,
+    "text": "why we have to be",
+    "confidence": 0.809
+   },
+   {
+    "time": 14.01,
+    "text": "incredibly careful what",
+    "confidence": 0.876
+   },
+   {
+    "time": 14.01,
+    "text": "wellness podcast",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.02,
+    "text": "'this food",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.02,
+    "text": "kills",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.02,
+    "text": "11 million",
+    "confidence": 0.934
+   },
+   {
+    "time": 16.02,
+    "text": "or channelsiwe arelgetting",
+    "confidence": 0.895
+   },
+   {
+    "time": 16.02,
+    "text": "our health information from",
+    "confidence": 0.833
+   },
+   {
+    "time": 18.02,
+    "text": "if you missed it Steven",
+    "confidence": 0.778
+   },
+   {
+    "time": 18.02,
+    "text": "Barlet of the No. 1ranked",
+    "confidence": 0.652
+   },
+   {
+    "time": 18.02,
+    "text": "podcast",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.02,
+    "text": "THE",
+    "confidence": 0.794
+   },
+   {
+    "time": 20.02,
+    "text": "DIARY",
+    "confidence": 0.975
+   },
+   {
+    "time": 20.02,
+    "text": "0F A",
+    "confidence": 0.754
+   },
+   {
+    "time": 20.02,
+    "text": "if vou missed it Steven",
+    "confidence": 0.569
+   },
+   {
+    "time": 20.02,
+    "text": "Barlet of the No. Tranked",
+    "confidence": 0.518
+   },
+   {
+    "time": 20.02,
+    "text": "podcast",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.02,
+    "text": "THE",
+    "confidence": 0.794
+   },
+   {
+    "time": 22.02,
+    "text": "DIARY",
+    "confidence": 0.975
+   },
+   {
+    "time": 22.02,
+    "text": "0F A",
+    "confidence": 0.755
+   },
+   {
+    "time": 22.02,
+    "text": "CE0",
+    "confidence": 0.612
+   },
+   {
+    "time": 22.02,
+    "text": "STEVEN BARTLETT",
+    "confidence": 0.925
+   },
+   {
+    "time": 22.02,
+    "text": "diarv",
+    "confidence": 0.933
+   },
+   {
+    "time": 22.02,
+    "text": "of a CEO",
+    "confidence": 0.798
+   },
+   {
+    "time": 24.02,
+    "text": "has come into some hot",
+    "confidence": 0.649
+   },
+   {
+    "time": 24.02,
+    "text": "water after a damning",
+    "confidence": 0.997
+   },
+   {
+    "time": 24.02,
+    "text": "report from BBC World",
+    "confidence": 0.977
+   },
+   {
+    "time": 24.02,
+    "text": "Service",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.03,
+    "text": "has come into some hot",
+    "confidence": 0.837
+   },
+   {
+    "time": 26.03,
+    "text": "water after a damning",
+    "confidence": 0.998
+   },
+   {
+    "time": 26.03,
+    "text": "report from BBC World",
+    "confidence": 0.774
+   },
+   {
+    "time": 26.03,
+    "text": "Service",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.03,
+    "text": "B",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.03,
+    "text": "B",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.03,
+    "text": "has come into some hot",
+    "confidence": 0.667
+   },
+   {
+    "time": 28.03,
+    "text": "water after a damning",
+    "confidence": 0.997
+   },
+   {
+    "time": 28.03,
+    "text": "report from BBC World",
+    "confidence": 0.644
+   },
+   {
+    "time": 28.03,
+    "text": "Service",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.03,
+    "text": "in an analysis of 15 health",
+    "confidence": 0.878
+   },
+   {
+    "time": 30.03,
+    "text": "related podcast episodes",
+    "confidence": 0.887
+   },
+   {
+    "time": 30.03,
+    "text": "his podcast",
+    "confidence": 0.99
+   },
+   {
+    "time": 30.03,
+    "text": "on",
+    "confidence": 0.987
+   },
+   {
+    "time": 32.03,
+    "text": "in an analysis of 15 health",
+    "confidence": 0.851
+   },
+   {
+    "time": 32.03,
+    "text": "related podcast episodes",
+    "confidence": 0.885
+   },
+   {
+    "time": 32.03,
+    "text": "his podcast",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.03,
+    "text": "on",
+    "confidence": 0.982
+   },
+   {
+    "time": 34.03,
+    "text": "in an analysis of 15 health",
+    "confidence": 0.843
+   },
+   {
+    "time": 34.03,
+    "text": "related podcast episodes",
+    "confidence": 0.89
+   },
+   {
+    "time": 34.03,
+    "text": "his podcast",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.03,
+    "text": "on",
+    "confidence": 0.982
+   },
+   {
+    "time": 36.04,
+    "text": "the BBC found that each",
+    "confidence": 0.898
+   },
+   {
+    "time": 36.04,
+    "text": "contained an average of 14",
+    "confidence": 0.659
+   },
+   {
+    "time": 36.04,
+    "text": "harmful health claims",
+    "confidence": 0.899
+   },
+   {
+    "time": 38.04,
+    "text": "the BBC found that each",
+    "confidence": 0.879
+   },
+   {
+    "time": 38.04,
+    "text": "contained an average of 14",
+    "confidence": 0.872
+   },
+   {
+    "time": 38.04,
+    "text": "harmful health claims",
+    "confidence": 0.905
+   },
+   {
+    "time": 40.04,
+    "text": "the BBC found that each",
+    "confidence": 0.923
+   },
+   {
+    "time": 40.04,
+    "text": "contained an average of 14",
+    "confidence": 0.793
+   },
+   {
+    "time": 40.04,
+    "text": "harmful health claims",
+    "confidence": 0.676
+   },
+   {
+    "time": 42.04,
+    "text": "that went against extensive",
+    "confidence": 0.857
+   },
+   {
+    "time": 42.04,
+    "text": "scientific evidence",
+    "confidence": 0.923
+   },
+   {
+    "time": 44.04,
+    "text": "including anti vaccine",
+    "confidence": 0.77
+   },
+   {
+    "time": 44.04,
+    "text": "conspiracies",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.05,
+    "text": "including anti vaccine",
+    "confidence": 0.88
+   },
+   {
+    "time": 46.05,
+    "text": "conspiracies",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.05,
+    "text": "calling proven cancer",
+    "confidence": 0.995
+   },
+   {
+    "time": 48.05,
+    "text": "treatments toxic",
+    "confidence": 0.999
+   },
+   {
+    "time": 50.05,
+    "text": "calling proven cancer",
+    "confidence": 0.997
+   },
+   {
+    "time": 50.05,
+    "text": "treatments toxic",
+    "confidence": 0.999
+   },
+   {
+    "time": 52.05,
+    "text": "in the unfounded assertion",
+    "confidence": 0.985
+   },
+   {
+    "time": 52.05,
+    "text": "can reverse autism",
+    "confidence": 0.685
+   },
+   {
+    "time": 52.05,
+    "text": "that",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.05,
+    "text": "through diet",
+    "confidence": 0.997
+   },
+   {
+    "time": 54.05,
+    "text": "in the unfounded assertion",
+    "confidence": 0.985
+   },
+   {
+    "time": 54.05,
+    "text": "can reverse autism",
+    "confidence": 0.613
+   },
+   {
+    "time": 54.05,
+    "text": "that",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.05,
+    "text": "through diet",
+    "confidence": 0.997
+   },
+   {
+    "time": 56.06,
+    "text": "and as a rapidly growing",
+    "confidence": 0.938
+   },
+   {
+    "time": 56.06,
+    "text": "podcast",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.06,
+    "text": "this has massive",
+    "confidence": 0.705
+   },
+   {
+    "time": 58.06,
+    "text": "implications for public",
+    "confidence": 0.696
+   },
+   {
+    "time": 58.06,
+    "text": "health",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.06,
+    "text": "this has massive",
+    "confidence": 0.723
+   },
+   {
+    "time": 60.06,
+    "text": "implications for public",
+    "confidence": 0.79
+   },
+   {
+    "time": 60.06,
+    "text": "health",
+    "confidence": 0.999
+   },
+   {
+    "time": 62.06,
+    "text": "unfortunately this is just",
+    "confidence": 0.848
+   },
+   {
+    "time": 62.06,
+    "text": "whatseems to happen",
+    "confidence": 0.859
+   },
+   {
+    "time": 64.06,
+    "text": "unfortunately this is just",
+    "confidence": 0.999
+   },
+   {
+    "time": 64.06,
+    "text": "what seems to happen",
+    "confidence": 0.977
+   },
+   {
+    "time": 66.07,
+    "text": "when folks that have no",
+    "confidence": 0.693
+   },
+   {
+    "time": 66.07,
+    "text": "actual training or education",
+    "confidence": 0.995
+   },
+   {
+    "time": 66.07,
+    "text": "in evidence space",
+    "confidence": 0.999
+   },
+   {
+    "time": 68.07,
+    "text": "when folks thathaveno",
+    "confidence": 0.706
+   },
+   {
+    "time": 68.07,
+    "text": "actual training or education",
+    "confidence": 0.997
+   },
+   {
+    "time": 68.07,
+    "text": "in evidence space",
+    "confidence": 0.981
+   },
+   {
+    "time": 70.07,
+    "text": "when folks that have no",
+    "confidence": 0.839
+   },
+   {
+    "time": 70.07,
+    "text": "actual training or education",
+    "confidence": 0.908
+   },
+   {
+    "time": 70.07,
+    "text": "in evidence space",
+    "confidence": 0.903
+   },
+   {
+    "time": 72.07,
+    "text": "health or wellness take on",
+    "confidence": 0.849
+   },
+   {
+    "time": 72.07,
+    "text": "health related content as",
+    "confidence": 0.908
+   },
+   {
+    "time": 72.07,
+    "text": "their niche",
+    "confidence": 0.999
+   },
+   {
+    "time": 74.07,
+    "text": "health or wellness take on",
+    "confidence": 0.805
+   },
+   {
+    "time": 74.07,
+    "text": "health related content as",
+    "confidence": 0.905
+   },
+   {
+    "time": 74.07,
+    "text": "their niche",
+    "confidence": 0.999
+   },
+   {
+    "time": 76.08,
+    "text": "health or wellness take on",
+    "confidence": 0.84
+   },
+   {
+    "time": 76.08,
+    "text": "health related content as",
+    "confidence": 0.892
+   },
+   {
+    "time": 76.08,
+    "text": "their niche",
+    "confidence": 0.998
+   },
+   {
+    "time": 78.08,
+    "text": "we see this with Steven",
+    "confidence": 0.984
+   },
+   {
+    "time": 78.08,
+    "text": "who is an investor and also",
+    "confidence": 0.711
+   },
+   {
+    "time": 78.08,
+    "text": "like Joe Rogan",
+    "confidence": 0.908
+   },
+   {
+    "time": 80.08,
+    "text": "we see this with Steven",
+    "confidence": 0.991
+   },
+   {
+    "time": 80.08,
+    "text": "who is an investor and also",
+    "confidence": 0.75
+   },
+   {
+    "time": 80.08,
+    "text": "like Joe Rogan",
+    "confidence": 0.853
+   },
+   {
+    "time": 82.08,
+    "text": "whobeforepodcastingwas",
+    "confidence": 0.998
+   },
+   {
+    "time": 82.08,
+    "text": "an actor",
+    "confidence": 0.999
+   },
+   {
+    "time": 84.08,
+    "text": "rather than seeking",
+    "confidence": 0.694
+   },
+   {
+    "time": 84.08,
+    "text": "out",
+    "confidence": 0.999
+   },
+   {
+    "time": 84.08,
+    "text": "respected experts in the",
+    "confidence": 0.789
+   },
+   {
+    "time": 84.08,
+    "text": "field",
+    "confidence": 1.0
+   },
+   {
+    "time": 86.09,
+    "text": "rather than seeking",
+    "confidence": 0.787
+   },
+   {
+    "time": 86.09,
+    "text": "out",
+    "confidence": 0.999
+   },
+   {
+    "time": 86.09,
+    "text": "respected experts in the",
+    "confidence": 0.809
+   },
+   {
+    "time": 86.09,
+    "text": "field",
+    "confidence": 1.0
+   },
+   {
+    "time": 88.09,
+    "text": "they bring on those who are",
+    "confidence": 0.876
+   },
+   {
+    "time": 88.09,
+    "text": "sure to make the biggest",
+    "confidence": 0.863
+   },
+   {
+    "time": 88.09,
+    "text": "splash",
+    "confidence": 0.896
+   },
+   {
+    "time": 90.09,
+    "text": "they bring on those who are",
+    "confidence": 0.934
+   },
+   {
+    "time": 90.09,
+    "text": "sure to make the biggest",
+    "confidence": 0.634
+   },
+   {
+    "time": 90.09,
+    "text": "splash",
+    "confidence": 0.891
+   },
+   {
+    "time": 92.09,
+    "text": "they bring on those who are",
+    "confidence": 0.794
+   },
+   {
+    "time": 92.09,
+    "text": "sure to make the biggest",
+    "confidence": 0.828
+   },
+   {
+    "time": 92.09,
+    "text": "~splash",
+    "confidence": 0.614
+   },
+   {
+    "time": 94.09,
+    "text": "and deliver the most",
+    "confidence": 0.997
+   },
+   {
+    "time": 94.09,
+    "text": "extreme messages and",
+    "confidence": 0.865
+   },
+   {
+    "time": 94.09,
+    "text": "sound bites",
+    "confidence": 0.999
+   },
+   {
+    "time": 96.1,
+    "text": "and deliver the most",
+    "confidence": 0.985
+   },
+   {
+    "time": 96.1,
+    "text": "extreme messages and",
+    "confidence": 1.0
+   },
+   {
+    "time": 96.1,
+    "text": "sound bites",
+    "confidence": 0.999
+   },
+   {
+    "time": 98.1,
+    "text": "and in their defense",
+    "confidence": 0.758
+   },
+   {
+    "time": 98.1,
+    "text": "comedians",
+    "confidence": 0.826
+   },
+   {
+    "time": 100.1,
+    "text": "business CEOs are just",
+    "confidence": 0.882
+   },
+   {
+    "time": 100.1,
+    "text": "not equipped to critically",
+    "confidence": 0.964
+   },
+   {
+    "time": 100.1,
+    "text": "evaluate the cleans",
+    "confidence": 0.787
+   },
+   {
+    "time": 102.1,
+    "text": "business CEOs are just",
+    "confidence": 0.968
+   },
+   {
+    "time": 102.1,
+    "text": "Or",
+    "confidence": 0.529
+   },
+   {
+    "time": 102.1,
+    "text": "not equipped to critically",
+    "confidence": 0.99
+   },
+   {
+    "time": 102.1,
+    "text": "evaluate the cleans",
+    "confidence": 0.999
+   },
+   {
+    "time": 104.1,
+    "text": "business CEOs are just",
+    "confidence": 0.996
+   },
+   {
+    "time": 104.1,
+    "text": "Or",
+    "confidence": 0.674
+   },
+   {
+    "time": 104.1,
+    "text": "not equipped to critically",
+    "confidence": 0.951
+   },
+   {
+    "time": 104.1,
+    "text": "evaluate the cleans",
+    "confidence": 0.865
+   },
+   {
+    "time": 106.11,
+    "text": "suggestions they're",
+    "confidence": 0.975
+   },
+   {
+    "time": 106.11,
+    "text": "or",
+    "confidence": 0.868
+   },
+   {
+    "time": 106.11,
+    "text": "making",
+    "confidence": 1.0
+   },
+   {
+    "time": 108.11,
+    "text": "but for podcasts that are",
+    "confidence": 0.942
+   },
+   {
+    "time": 108.11,
+    "text": "said to be earning tens of",
+    "confidence": 0.862
+   },
+   {
+    "time": 108.11,
+    "text": "millions",
+    "confidence": 1.0
+   },
+   {
+    "time": 110.11,
+    "text": "each year it seems SO wildly",
+    "confidence": 0.565
+   },
+   {
+    "time": 110.11,
+    "text": "irresponsible",
+    "confidence": 0.878
+   },
+   {
+    "time": 112.11,
+    "text": "each year it seems so wildly",
+    "confidence": 0.62
+   },
+   {
+    "time": 112.11,
+    "text": "irresponsible",
+    "confidence": 0.684
+   },
+   {
+    "time": 114.11,
+    "text": "that these podcasters don't",
+    "confidence": 0.974
+   },
+   {
+    "time": 114.11,
+    "text": "have teams in place to fact",
+    "confidence": 0.838
+   },
+   {
+    "time": 114.11,
+    "text": "check",
+    "confidence": 1.0
+   },
+   {
+    "time": 116.12,
+    "text": "that these podcasters don't",
+    "confidence": 0.994
+   },
+   {
+    "time": 116.12,
+    "text": "have teams in place to fact",
+    "confidence": 0.73
+   },
+   {
+    "time": 116.12,
+    "text": "check",
+    "confidence": 1.0
+   },
+   {
+    "time": 118.12,
+    "text": "that these podcasters don't",
+    "confidence": 0.994
+   },
+   {
+    "time": 118.12,
+    "text": "have teams in place to fact",
+    "confidence": 0.691
+   },
+   {
+    "time": 118.12,
+    "text": "check",
+    "confidence": 1.0
+   },
+   {
+    "time": 120.12,
+    "text": "edit out any",
+    "confidence": 0.874
+   },
+   {
+    "time": 120.12,
+    "text": "recommendations Or",
+    "confidence": 0.827
+   },
+   {
+    "time": 120.12,
+    "text": "statements that may cause",
+    "confidence": 0.638
+   },
+   {
+    "time": 120.12,
+    "text": "harm",
+    "confidence": 1.0
+   },
+   {
+    "time": 122.12,
+    "text": "edit out any",
+    "confidence": 0.827
+   },
+   {
+    "time": 122.12,
+    "text": "recommendations Or",
+    "confidence": 0.9
+   },
+   {
+    "time": 122.12,
+    "text": "statements that may cause",
+    "confidence": 0.935
+   },
+   {
+    "time": 122.12,
+    "text": "harm",
+    "confidence": 1.0
+   },
+   {
+    "time": 124.12,
+    "text": "' just a friendly little",
+    "confidence": 0.785
+   },
+   {
+    "time": 124.12,
+    "text": "SO",
+    "confidence": 0.675
+   },
+   {
+    "time": 124.12,
+    "text": "reminder here",
+    "confidence": 1.0
+   },
+   {
+    "time": 126.13,
+    "text": "folks to do vour due",
+    "confidence": 0.734
+   },
+   {
+    "time": 126.13,
+    "text": "diligence on ahost of a",
+    "confidence": 0.884
+   },
+   {
+    "time": 126.13,
+    "text": "podcast or YouTube",
+    "confidence": 0.975
+   },
+   {
+    "time": 126.13,
+    "text": "channel",
+    "confidence": 1.0
+   },
+   {
+    "time": 128.13,
+    "text": "folks to do vour due",
+    "confidence": 0.841
+   },
+   {
+    "time": 128.13,
+    "text": "diligence on a host of a",
+    "confidence": 0.651
+   },
+   {
+    "time": 128.13,
+    "text": "podcast or YouTube",
+    "confidence": 0.976
+   },
+   {
+    "time": 128.13,
+    "text": "channel",
+    "confidence": 1.0
+   },
+   {
+    "time": 130.13,
+    "text": "folks to do vour due",
+    "confidence": 0.904
+   },
+   {
+    "time": 130.13,
+    "text": "diligence on a host of a",
+    "confidence": 0.668
+   },
+   {
+    "time": 130.13,
+    "text": "podcast or YouTube",
+    "confidence": 0.979
+   },
+   {
+    "time": 130.13,
+    "text": "channel",
+    "confidence": 1.0
+   },
+   {
+    "time": 132.13,
+    "text": "rjust a content creator to",
+    "confidence": 0.826
+   },
+   {
+    "time": 132.13,
+    "text": "Or",
+    "confidence": 0.524
+   },
+   {
+    "time": 132.13,
+    "text": "evaluate their ability",
+    "confidence": 0.849
+   },
+   {
+    "time": 134.13,
+    "text": "or just a content creator to",
+    "confidence": 0.926
+   },
+   {
+    "time": 134.13,
+    "text": "evaluate their ability",
+    "confidence": 0.83
+   },
+   {
+    "time": 136.14,
+    "text": "critically evaluate",
+    "confidence": 0.962
+   },
+   {
+    "time": 136.14,
+    "text": "to",
+    "confidence": 1.0
+   },
+   {
+    "time": 136.14,
+    "text": "evidence based nutrition",
+    "confidence": 0.811
+   },
+   {
+    "time": 136.14,
+    "text": "wellness information",
+    "confidence": 0.756
+   },
+   {
+    "time": 136.14,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 138.14,
+    "text": "critically evaluate",
+    "confidence": 0.967
+   },
+   {
+    "time": 138.14,
+    "text": "to",
+    "confidence": 1.0
+   },
+   {
+    "time": 138.14,
+    "text": "evidence based nutrition",
+    "confidence": 0.82
+   },
+   {
+    "time": 138.14,
+    "text": "wellness information",
+    "confidence": 0.752
+   },
+   {
+    "time": 138.14,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 140.14,
+    "text": "critically evaluate",
+    "confidence": 0.866
+   },
+   {
+    "time": 140.14,
+    "text": "to",
+    "confidence": 1.0
+   },
+   {
+    "time": 140.14,
+    "text": "evidence based nutrition",
+    "confidence": 0.818
+   },
+   {
+    "time": 140.14,
+    "text": "wellness information",
+    "confidence": 0.826
+   },
+   {
+    "time": 140.14,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 142.14,
+    "text": "before taking the content",
+    "confidence": 0.996
+   },
+   {
+    "time": 142.14,
+    "text": "they share at face value",
+    "confidence": 0.841
+   },
+   {
+    "time": 144.14,
+    "text": "andif VoU are looking for an",
+    "confidence": 0.614
+   },
+   {
+    "time": 144.14,
+    "text": "evidence based nutrition",
+    "confidence": 0.98
+   },
+   {
+    "time": 144.14,
+    "text": "podcast",
+    "confidence": 1.0
+   },
+   {
+    "time": 146.15,
+    "text": "and if yoU",
+    "confidence": 0.548
+   },
+   {
+    "time": 146.15,
+    "text": "looking for an",
+    "confidence": 0.994
+   },
+   {
+    "time": 146.15,
+    "text": "are",
+    "confidence": 1.0
+   },
+   {
+    "time": 146.15,
+    "text": "evidence based nutrition",
+    "confidence": 0.791
+   },
+   {
+    "time": 146.15,
+    "text": "podcast",
+    "confidence": 1.0
+   },
+   {
+    "time": 148.15,
+    "text": "definitely hit up my new",
+    "confidence": 0.757
+   },
+   {
+    "time": 148.15,
+    "text": "podcast",
+    "confidence": 1.0
+   },
+   {
+    "time": 150.15,
+    "text": "Frequency",
+    "confidence": 0.903
+   },
+   {
+    "time": 150.15,
+    "text": "Abbey Shanp",
+    "confidence": 0.728
+   },
+   {
+    "time": 150.15,
+    "text": "with",
+    "confidence": 0.592
+   },
+   {
+    "time": 150.15,
+    "text": "1",
+    "confidence": 0.947
+   },
+   {
+    "time": 150.15,
+    "text": "rightbackwith Abby Sharp",
+    "confidence": 0.821
+   },
+   {
+    "time": 150.15,
+    "text": "next",
+    "confidence": 0.656
+   }
+  ],
+  "captions": [
+   {
+    "text": "Diary of a CEO podcast caught",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.937,
+    "id": "o1"
+   },
+   {
+    "text": "spreading misinformation",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o2"
+   },
+   {
+    "text": "Steven Bartlett",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.998,
+    "id": "o3"
+   },
+   {
+    "text": "pode",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.635,
+    "id": "o4"
+   },
+   {
+    "text": "cast",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o5"
+   },
+   {
+    "text": "sharing 'harmful",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.942,
+    "id": "o6"
+   },
+   {
+    "text": "health misinformation'",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.986,
+    "id": "o7"
+   },
+   {
+    "text": "Diary of a CEO podcast caught",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.939,
+    "id": "o8"
+   },
+   {
+    "text": "spreading misinformation",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "Warning: Misleading",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.995,
+    "id": "o10"
+   },
+   {
+    "text": "and unevidenced",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.933,
+    "id": "o11"
+   },
+   {
+    "text": "gluten can cause everything",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.776,
+    "id": "o12"
+   },
+   {
+    "text": "from osteoporosis to autism",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.984,
+    "id": "o13"
+   },
+   {
+    "text": "Diary of a CEO podcast caught",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.937,
+    "id": "o14"
+   },
+   {
+    "text": "spreading misinformation",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o15"
+   },
+   {
+    "text": "Warning: Misleading",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.992,
+    "id": "o16"
+   },
+   {
+    "text": "and unevidenced",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.904,
+    "id": "o17"
+   },
+   {
+    "text": "the covidvaccine",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.768,
+    "id": "o18"
+   },
+   {
+    "text": "introductionhas had a",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.792,
+    "id": "o19"
+   },
+   {
+    "text": "catastrophicnegative",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.993,
+    "id": "o20"
+   },
+   {
+    "text": "effect",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.936,
+    "id": "o21"
+   },
+   {
+    "text": "Diary of a CEO podcast caught",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.943,
+    "id": "o22"
+   },
+   {
+    "text": "spreading misinformation",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 1.0,
+    "id": "o23"
+   },
+   {
+    "text": "Warning: Misleading",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.989,
+    "id": "o24"
+   },
+   {
+    "text": "and unevidenced",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.9,
+    "id": "o25"
+   },
+   {
+    "text": "the covidvaccine",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.722,
+    "id": "o26"
+   },
+   {
+    "text": "introductionhas had a",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.767,
+    "id": "o27"
+   },
+   {
+    "text": "catastrophicnegative",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.993,
+    "id": "o28"
+   },
+   {
+    "text": "effect",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.919,
+    "id": "o29"
+   },
+   {
+    "text": "Diary of a CEO podcast caught",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.943,
+    "id": "o30"
+   },
+   {
+    "text": "spreading misinformation",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 1.0,
+    "id": "o31"
+   },
+   {
+    "text": "Warning: Misleading",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.988,
+    "id": "o32"
+   },
+   {
+    "text": "and unevidenced",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.9,
+    "id": "o33"
+   },
+   {
+    "text": "thecovidvaccine",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.998,
+    "id": "o34"
+   },
+   {
+    "text": "introductionhas had a",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.933,
+    "id": "o35"
+   },
+   {
+    "text": "catastrophicnegative",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.946,
+    "id": "o36"
+   },
+   {
+    "text": "effect",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.93,
+    "id": "o37"
+   },
+   {
+    "text": "is killing youl",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.74,
+    "id": "o38"
+   },
+   {
+    "text": "and this my friends",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.92,
+    "id": "o39"
+   },
+   {
+    "text": "DOAC",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.941,
+    "id": "o40"
+   },
+   {
+    "text": "this wil",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.772,
+    "id": "o41"
+   },
+   {
+    "text": "M",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.856,
+    "id": "o42"
+   },
+   {
+    "text": "yeai",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.994,
+    "id": "o43"
+   },
+   {
+    "text": "is why we have to be",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.946,
+    "id": "o44"
+   },
+   {
+    "text": "incredibly careful what",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.857,
+    "id": "o45"
+   },
+   {
+    "text": "wellness podcast",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 1.0,
+    "id": "o46"
+   },
+   {
+    "text": "DOAC",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 1.0,
+    "id": "o47"
+   },
+   {
+    "text": "\"theyre lying",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.933,
+    "id": "o48"
+   },
+   {
+    "text": "toyou about",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.965,
+    "id": "o49"
+   },
+   {
+    "text": "menopaseave",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.938,
+    "id": "o50"
+   },
+   {
+    "text": "why we have to be",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.809,
+    "id": "o51"
+   },
+   {
+    "text": "incredibly careful what",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.876,
+    "id": "o52"
+   },
+   {
+    "text": "wellness podcast",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 1.0,
+    "id": "o53"
+   },
+   {
+    "text": "'this food",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 1.0,
+    "id": "o54"
+   },
+   {
+    "text": "kills",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 1.0,
+    "id": "o55"
+   },
+   {
+    "text": "11 million",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.934,
+    "id": "o56"
+   },
+   {
+    "text": "or channelsiwe arelgetting",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.895,
+    "id": "o57"
+   },
+   {
+    "text": "our health information from",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.833,
+    "id": "o58"
+   },
+   {
+    "text": "if you missed it Steven",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.778,
+    "id": "o59"
+   },
+   {
+    "text": "Barlet of the No. 1ranked",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.652,
+    "id": "o60"
+   },
+   {
+    "text": "podcast",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 1.0,
+    "id": "o61"
+   },
+   {
+    "text": "THE",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.794,
+    "id": "o62"
+   },
+   {
+    "text": "DIARY",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.975,
+    "id": "o63"
+   },
+   {
+    "text": "0F A",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.754,
+    "id": "o64"
+   },
+   {
+    "text": "if vou missed it Steven",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.569,
+    "id": "o65"
+   },
+   {
+    "text": "Barlet of the No. Tranked",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.518,
+    "id": "o66"
+   },
+   {
+    "text": "podcast",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 1.0,
+    "id": "o67"
+   },
+   {
+    "text": "THE",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.794,
+    "id": "o68"
+   },
+   {
+    "text": "DIARY",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.975,
+    "id": "o69"
+   },
+   {
+    "text": "0F A",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.755,
+    "id": "o70"
+   },
+   {
+    "text": "CE0",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.612,
+    "id": "o71"
+   },
+   {
+    "text": "STEVEN BARTLETT",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.925,
+    "id": "o72"
+   },
+   {
+    "text": "diarv",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.933,
+    "id": "o73"
+   },
+   {
+    "text": "of a CEO",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.798,
+    "id": "o74"
+   },
+   {
+    "text": "has come into some hot",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.649,
+    "id": "o75"
+   },
+   {
+    "text": "water after a damning",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.997,
+    "id": "o76"
+   },
+   {
+    "text": "report from BBC World",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.977,
+    "id": "o77"
+   },
+   {
+    "text": "Service",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 1.0,
+    "id": "o78"
+   },
+   {
+    "text": "has come into some hot",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.837,
+    "id": "o79"
+   },
+   {
+    "text": "water after a damning",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.998,
+    "id": "o80"
+   },
+   {
+    "text": "report from BBC World",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.774,
+    "id": "o81"
+   },
+   {
+    "text": "Service",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 1.0,
+    "id": "o82"
+   },
+   {
+    "text": "B",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 1.0,
+    "id": "o83"
+   },
+   {
+    "text": "has come into some hot",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.667,
+    "id": "o84"
+   },
+   {
+    "text": "water after a damning",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.997,
+    "id": "o85"
+   },
+   {
+    "text": "report from BBC World",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.644,
+    "id": "o86"
+   },
+   {
+    "text": "Service",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 1.0,
+    "id": "o87"
+   },
+   {
+    "text": "in an analysis of 15 health",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.878,
+    "id": "o88"
+   },
+   {
+    "text": "related podcast episodes",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.887,
+    "id": "o89"
+   },
+   {
+    "text": "his podcast",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.99,
+    "id": "o90"
+   },
+   {
+    "text": "on",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.987,
+    "id": "o91"
+   },
+   {
+    "text": "in an analysis of 15 health",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.851,
+    "id": "o92"
+   },
+   {
+    "text": "related podcast episodes",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.885,
+    "id": "o93"
+   },
+   {
+    "text": "his podcast",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 1.0,
+    "id": "o94"
+   },
+   {
+    "text": "on",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.982,
+    "id": "o95"
+   },
+   {
+    "text": "in an analysis of 15 health",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.843,
+    "id": "o96"
+   },
+   {
+    "text": "related podcast episodes",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.89,
+    "id": "o97"
+   },
+   {
+    "text": "his podcast",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 1.0,
+    "id": "o98"
+   },
+   {
+    "text": "on",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.982,
+    "id": "o99"
+   },
+   {
+    "text": "the BBC found that each",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.898,
+    "id": "o100"
+   },
+   {
+    "text": "contained an average of 14",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.659,
+    "id": "o101"
+   },
+   {
+    "text": "harmful health claims",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.899,
+    "id": "o102"
+   },
+   {
+    "text": "the BBC found that each",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.879,
+    "id": "o103"
+   },
+   {
+    "text": "contained an average of 14",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.872,
+    "id": "o104"
+   },
+   {
+    "text": "harmful health claims",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.905,
+    "id": "o105"
+   },
+   {
+    "text": "the BBC found that each",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.923,
+    "id": "o106"
+   },
+   {
+    "text": "contained an average of 14",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.793,
+    "id": "o107"
+   },
+   {
+    "text": "harmful health claims",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.676,
+    "id": "o108"
+   },
+   {
+    "text": "that went against extensive",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.857,
+    "id": "o109"
+   },
+   {
+    "text": "scientific evidence",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.923,
+    "id": "o110"
+   },
+   {
+    "text": "including anti vaccine",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.77,
+    "id": "o111"
+   },
+   {
+    "text": "conspiracies",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 1.0,
+    "id": "o112"
+   },
+   {
+    "text": "including anti vaccine",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.88,
+    "id": "o113"
+   },
+   {
+    "text": "conspiracies",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 1.0,
+    "id": "o114"
+   },
+   {
+    "text": "calling proven cancer",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.995,
+    "id": "o115"
+   },
+   {
+    "text": "treatments toxic",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.999,
+    "id": "o116"
+   },
+   {
+    "text": "calling proven cancer",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.997,
+    "id": "o117"
+   },
+   {
+    "text": "treatments toxic",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.999,
+    "id": "o118"
+   },
+   {
+    "text": "in the unfounded assertion",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.985,
+    "id": "o119"
+   },
+   {
+    "text": "can reverse autism",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.685,
+    "id": "o120"
+   },
+   {
+    "text": "that",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 1.0,
+    "id": "o121"
+   },
+   {
+    "text": "through diet",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.997,
+    "id": "o122"
+   },
+   {
+    "text": "in the unfounded assertion",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.985,
+    "id": "o123"
+   },
+   {
+    "text": "can reverse autism",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.613,
+    "id": "o124"
+   },
+   {
+    "text": "that",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 1.0,
+    "id": "o125"
+   },
+   {
+    "text": "through diet",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.997,
+    "id": "o126"
+   },
+   {
+    "text": "and as a rapidly growing",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.938,
+    "id": "o127"
+   },
+   {
+    "text": "podcast",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 1.0,
+    "id": "o128"
+   },
+   {
+    "text": "this has massive",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 0.705,
+    "id": "o129"
+   },
+   {
+    "text": "implications for public",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 0.696,
+    "id": "o130"
+   },
+   {
+    "text": "health",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 1.0,
+    "id": "o131"
+   },
+   {
+    "text": "this has massive",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 0.723,
+    "id": "o132"
+   },
+   {
+    "text": "implications for public",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 0.79,
+    "id": "o133"
+   },
+   {
+    "text": "health",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 0.999,
+    "id": "o134"
+   },
+   {
+    "text": "unfortunately this is just",
+    "start": 62.06,
+    "end": 62.06,
+    "confidence": 0.848,
+    "id": "o135"
+   },
+   {
+    "text": "whatseems to happen",
+    "start": 62.06,
+    "end": 62.06,
+    "confidence": 0.859,
+    "id": "o136"
+   },
+   {
+    "text": "unfortunately this is just",
+    "start": 64.06,
+    "end": 64.06,
+    "confidence": 0.999,
+    "id": "o137"
+   },
+   {
+    "text": "what seems to happen",
+    "start": 64.06,
+    "end": 64.06,
+    "confidence": 0.977,
+    "id": "o138"
+   },
+   {
+    "text": "when folks that have no",
+    "start": 66.07,
+    "end": 66.07,
+    "confidence": 0.693,
+    "id": "o139"
+   },
+   {
+    "text": "actual training or education",
+    "start": 66.07,
+    "end": 66.07,
+    "confidence": 0.995,
+    "id": "o140"
+   },
+   {
+    "text": "in evidence space",
+    "start": 66.07,
+    "end": 66.07,
+    "confidence": 0.999,
+    "id": "o141"
+   },
+   {
+    "text": "when folks thathaveno",
+    "start": 68.07,
+    "end": 68.07,
+    "confidence": 0.706,
+    "id": "o142"
+   },
+   {
+    "text": "actual training or education",
+    "start": 68.07,
+    "end": 68.07,
+    "confidence": 0.997,
+    "id": "o143"
+   },
+   {
+    "text": "in evidence space",
+    "start": 68.07,
+    "end": 68.07,
+    "confidence": 0.981,
+    "id": "o144"
+   },
+   {
+    "text": "when folks that have no",
+    "start": 70.07,
+    "end": 70.07,
+    "confidence": 0.839,
+    "id": "o145"
+   },
+   {
+    "text": "actual training or education",
+    "start": 70.07,
+    "end": 70.07,
+    "confidence": 0.908,
+    "id": "o146"
+   },
+   {
+    "text": "in evidence space",
+    "start": 70.07,
+    "end": 70.07,
+    "confidence": 0.903,
+    "id": "o147"
+   },
+   {
+    "text": "health or wellness take on",
+    "start": 72.07,
+    "end": 72.07,
+    "confidence": 0.849,
+    "id": "o148"
+   },
+   {
+    "text": "health related content as",
+    "start": 72.07,
+    "end": 72.07,
+    "confidence": 0.908,
+    "id": "o149"
+   },
+   {
+    "text": "their niche",
+    "start": 72.07,
+    "end": 72.07,
+    "confidence": 0.999,
+    "id": "o150"
+   },
+   {
+    "text": "health or wellness take on",
+    "start": 74.07,
+    "end": 74.07,
+    "confidence": 0.805,
+    "id": "o151"
+   },
+   {
+    "text": "health related content as",
+    "start": 74.07,
+    "end": 74.07,
+    "confidence": 0.905,
+    "id": "o152"
+   },
+   {
+    "text": "their niche",
+    "start": 74.07,
+    "end": 74.07,
+    "confidence": 0.999,
+    "id": "o153"
+   },
+   {
+    "text": "health or wellness take on",
+    "start": 76.08,
+    "end": 76.08,
+    "confidence": 0.84,
+    "id": "o154"
+   },
+   {
+    "text": "health related content as",
+    "start": 76.08,
+    "end": 76.08,
+    "confidence": 0.892,
+    "id": "o155"
+   },
+   {
+    "text": "their niche",
+    "start": 76.08,
+    "end": 76.08,
+    "confidence": 0.998,
+    "id": "o156"
+   },
+   {
+    "text": "we see this with Steven",
+    "start": 78.08,
+    "end": 78.08,
+    "confidence": 0.984,
+    "id": "o157"
+   },
+   {
+    "text": "who is an investor and also",
+    "start": 78.08,
+    "end": 78.08,
+    "confidence": 0.711,
+    "id": "o158"
+   },
+   {
+    "text": "like Joe Rogan",
+    "start": 78.08,
+    "end": 78.08,
+    "confidence": 0.908,
+    "id": "o159"
+   },
+   {
+    "text": "we see this with Steven",
+    "start": 80.08,
+    "end": 80.08,
+    "confidence": 0.991,
+    "id": "o160"
+   },
+   {
+    "text": "who is an investor and also",
+    "start": 80.08,
+    "end": 80.08,
+    "confidence": 0.75,
+    "id": "o161"
+   },
+   {
+    "text": "like Joe Rogan",
+    "start": 80.08,
+    "end": 80.08,
+    "confidence": 0.853,
+    "id": "o162"
+   },
+   {
+    "text": "whobeforepodcastingwas",
+    "start": 82.08,
+    "end": 82.08,
+    "confidence": 0.998,
+    "id": "o163"
+   },
+   {
+    "text": "an actor",
+    "start": 82.08,
+    "end": 82.08,
+    "confidence": 0.999,
+    "id": "o164"
+   },
+   {
+    "text": "rather than seeking",
+    "start": 84.08,
+    "end": 84.08,
+    "confidence": 0.694,
+    "id": "o165"
+   },
+   {
+    "text": "out",
+    "start": 84.08,
+    "end": 84.08,
+    "confidence": 0.999,
+    "id": "o166"
+   },
+   {
+    "text": "respected experts in the",
+    "start": 84.08,
+    "end": 84.08,
+    "confidence": 0.789,
+    "id": "o167"
+   },
+   {
+    "text": "field",
+    "start": 84.08,
+    "end": 84.08,
+    "confidence": 1.0,
+    "id": "o168"
+   },
+   {
+    "text": "rather than seeking",
+    "start": 86.09,
+    "end": 86.09,
+    "confidence": 0.787,
+    "id": "o169"
+   },
+   {
+    "text": "out",
+    "start": 86.09,
+    "end": 86.09,
+    "confidence": 0.999,
+    "id": "o170"
+   },
+   {
+    "text": "respected experts in the",
+    "start": 86.09,
+    "end": 86.09,
+    "confidence": 0.809,
+    "id": "o171"
+   },
+   {
+    "text": "field",
+    "start": 86.09,
+    "end": 86.09,
+    "confidence": 1.0,
+    "id": "o172"
+   },
+   {
+    "text": "they bring on those who are",
+    "start": 88.09,
+    "end": 88.09,
+    "confidence": 0.876,
+    "id": "o173"
+   },
+   {
+    "text": "sure to make the biggest",
+    "start": 88.09,
+    "end": 88.09,
+    "confidence": 0.863,
+    "id": "o174"
+   },
+   {
+    "text": "splash",
+    "start": 88.09,
+    "end": 88.09,
+    "confidence": 0.896,
+    "id": "o175"
+   },
+   {
+    "text": "they bring on those who are",
+    "start": 90.09,
+    "end": 90.09,
+    "confidence": 0.934,
+    "id": "o176"
+   },
+   {
+    "text": "sure to make the biggest",
+    "start": 90.09,
+    "end": 90.09,
+    "confidence": 0.634,
+    "id": "o177"
+   },
+   {
+    "text": "splash",
+    "start": 90.09,
+    "end": 90.09,
+    "confidence": 0.891,
+    "id": "o178"
+   },
+   {
+    "text": "they bring on those who are",
+    "start": 92.09,
+    "end": 92.09,
+    "confidence": 0.794,
+    "id": "o179"
+   },
+   {
+    "text": "sure to make the biggest",
+    "start": 92.09,
+    "end": 92.09,
+    "confidence": 0.828,
+    "id": "o180"
+   },
+   {
+    "text": "~splash",
+    "start": 92.09,
+    "end": 92.09,
+    "confidence": 0.614,
+    "id": "o181"
+   },
+   {
+    "text": "and deliver the most",
+    "start": 94.09,
+    "end": 94.09,
+    "confidence": 0.997,
+    "id": "o182"
+   },
+   {
+    "text": "extreme messages and",
+    "start": 94.09,
+    "end": 94.09,
+    "confidence": 0.865,
+    "id": "o183"
+   },
+   {
+    "text": "sound bites",
+    "start": 94.09,
+    "end": 94.09,
+    "confidence": 0.999,
+    "id": "o184"
+   },
+   {
+    "text": "and deliver the most",
+    "start": 96.1,
+    "end": 96.1,
+    "confidence": 0.985,
+    "id": "o185"
+   },
+   {
+    "text": "extreme messages and",
+    "start": 96.1,
+    "end": 96.1,
+    "confidence": 1.0,
+    "id": "o186"
+   },
+   {
+    "text": "sound bites",
+    "start": 96.1,
+    "end": 96.1,
+    "confidence": 0.999,
+    "id": "o187"
+   },
+   {
+    "text": "and in their defense",
+    "start": 98.1,
+    "end": 98.1,
+    "confidence": 0.758,
+    "id": "o188"
+   },
+   {
+    "text": "comedians",
+    "start": 98.1,
+    "end": 98.1,
+    "confidence": 0.826,
+    "id": "o189"
+   },
+   {
+    "text": "business CEOs are just",
+    "start": 100.1,
+    "end": 100.1,
+    "confidence": 0.882,
+    "id": "o190"
+   },
+   {
+    "text": "not equipped to critically",
+    "start": 100.1,
+    "end": 100.1,
+    "confidence": 0.964,
+    "id": "o191"
+   },
+   {
+    "text": "evaluate the cleans",
+    "start": 100.1,
+    "end": 100.1,
+    "confidence": 0.787,
+    "id": "o192"
+   },
+   {
+    "text": "business CEOs are just",
+    "start": 102.1,
+    "end": 102.1,
+    "confidence": 0.968,
+    "id": "o193"
+   },
+   {
+    "text": "Or",
+    "start": 102.1,
+    "end": 102.1,
+    "confidence": 0.529,
+    "id": "o194"
+   },
+   {
+    "text": "not equipped to critically",
+    "start": 102.1,
+    "end": 102.1,
+    "confidence": 0.99,
+    "id": "o195"
+   },
+   {
+    "text": "evaluate the cleans",
+    "start": 102.1,
+    "end": 102.1,
+    "confidence": 0.999,
+    "id": "o196"
+   },
+   {
+    "text": "business CEOs are just",
+    "start": 104.1,
+    "end": 104.1,
+    "confidence": 0.996,
+    "id": "o197"
+   },
+   {
+    "text": "Or",
+    "start": 104.1,
+    "end": 104.1,
+    "confidence": 0.674,
+    "id": "o198"
+   },
+   {
+    "text": "not equipped to critically",
+    "start": 104.1,
+    "end": 104.1,
+    "confidence": 0.951,
+    "id": "o199"
+   },
+   {
+    "text": "evaluate the cleans",
+    "start": 104.1,
+    "end": 104.1,
+    "confidence": 0.865,
+    "id": "o200"
+   },
+   {
+    "text": "suggestions they're",
+    "start": 106.11,
+    "end": 106.11,
+    "confidence": 0.975,
+    "id": "o201"
+   },
+   {
+    "text": "or",
+    "start": 106.11,
+    "end": 106.11,
+    "confidence": 0.868,
+    "id": "o202"
+   },
+   {
+    "text": "making",
+    "start": 106.11,
+    "end": 106.11,
+    "confidence": 1.0,
+    "id": "o203"
+   },
+   {
+    "text": "but for podcasts that are",
+    "start": 108.11,
+    "end": 108.11,
+    "confidence": 0.942,
+    "id": "o204"
+   },
+   {
+    "text": "said to be earning tens of",
+    "start": 108.11,
+    "end": 108.11,
+    "confidence": 0.862,
+    "id": "o205"
+   },
+   {
+    "text": "millions",
+    "start": 108.11,
+    "end": 108.11,
+    "confidence": 1.0,
+    "id": "o206"
+   },
+   {
+    "text": "each year it seems SO wildly",
+    "start": 110.11,
+    "end": 110.11,
+    "confidence": 0.565,
+    "id": "o207"
+   },
+   {
+    "text": "irresponsible",
+    "start": 110.11,
+    "end": 110.11,
+    "confidence": 0.878,
+    "id": "o208"
+   },
+   {
+    "text": "each year it seems so wildly",
+    "start": 112.11,
+    "end": 112.11,
+    "confidence": 0.62,
+    "id": "o209"
+   },
+   {
+    "text": "irresponsible",
+    "start": 112.11,
+    "end": 112.11,
+    "confidence": 0.684,
+    "id": "o210"
+   },
+   {
+    "text": "that these podcasters don't",
+    "start": 114.11,
+    "end": 114.11,
+    "confidence": 0.974,
+    "id": "o211"
+   },
+   {
+    "text": "have teams in place to fact",
+    "start": 114.11,
+    "end": 114.11,
+    "confidence": 0.838,
+    "id": "o212"
+   },
+   {
+    "text": "check",
+    "start": 114.11,
+    "end": 114.11,
+    "confidence": 1.0,
+    "id": "o213"
+   },
+   {
+    "text": "that these podcasters don't",
+    "start": 116.12,
+    "end": 116.12,
+    "confidence": 0.994,
+    "id": "o214"
+   },
+   {
+    "text": "have teams in place to fact",
+    "start": 116.12,
+    "end": 116.12,
+    "confidence": 0.73,
+    "id": "o215"
+   },
+   {
+    "text": "check",
+    "start": 116.12,
+    "end": 116.12,
+    "confidence": 1.0,
+    "id": "o216"
+   },
+   {
+    "text": "that these podcasters don't",
+    "start": 118.12,
+    "end": 118.12,
+    "confidence": 0.994,
+    "id": "o217"
+   },
+   {
+    "text": "have teams in place to fact",
+    "start": 118.12,
+    "end": 118.12,
+    "confidence": 0.691,
+    "id": "o218"
+   },
+   {
+    "text": "check",
+    "start": 118.12,
+    "end": 118.12,
+    "confidence": 1.0,
+    "id": "o219"
+   },
+   {
+    "text": "edit out any",
+    "start": 120.12,
+    "end": 120.12,
+    "confidence": 0.874,
+    "id": "o220"
+   },
+   {
+    "text": "recommendations Or",
+    "start": 120.12,
+    "end": 120.12,
+    "confidence": 0.827,
+    "id": "o221"
+   },
+   {
+    "text": "statements that may cause",
+    "start": 120.12,
+    "end": 120.12,
+    "confidence": 0.638,
+    "id": "o222"
+   },
+   {
+    "text": "harm",
+    "start": 120.12,
+    "end": 120.12,
+    "confidence": 1.0,
+    "id": "o223"
+   },
+   {
+    "text": "edit out any",
+    "start": 122.12,
+    "end": 122.12,
+    "confidence": 0.827,
+    "id": "o224"
+   },
+   {
+    "text": "recommendations Or",
+    "start": 122.12,
+    "end": 122.12,
+    "confidence": 0.9,
+    "id": "o225"
+   },
+   {
+    "text": "statements that may cause",
+    "start": 122.12,
+    "end": 122.12,
+    "confidence": 0.935,
+    "id": "o226"
+   },
+   {
+    "text": "harm",
+    "start": 122.12,
+    "end": 122.12,
+    "confidence": 1.0,
+    "id": "o227"
+   },
+   {
+    "text": "' just a friendly little",
+    "start": 124.12,
+    "end": 124.12,
+    "confidence": 0.785,
+    "id": "o228"
+   },
+   {
+    "text": "SO",
+    "start": 124.12,
+    "end": 124.12,
+    "confidence": 0.675,
+    "id": "o229"
+   },
+   {
+    "text": "reminder here",
+    "start": 124.12,
+    "end": 124.12,
+    "confidence": 1.0,
+    "id": "o230"
+   },
+   {
+    "text": "folks to do vour due",
+    "start": 126.13,
+    "end": 126.13,
+    "confidence": 0.734,
+    "id": "o231"
+   },
+   {
+    "text": "diligence on ahost of a",
+    "start": 126.13,
+    "end": 126.13,
+    "confidence": 0.884,
+    "id": "o232"
+   },
+   {
+    "text": "podcast or YouTube",
+    "start": 126.13,
+    "end": 126.13,
+    "confidence": 0.975,
+    "id": "o233"
+   },
+   {
+    "text": "channel",
+    "start": 126.13,
+    "end": 126.13,
+    "confidence": 1.0,
+    "id": "o234"
+   },
+   {
+    "text": "folks to do vour due",
+    "start": 128.13,
+    "end": 128.13,
+    "confidence": 0.841,
+    "id": "o235"
+   },
+   {
+    "text": "diligence on a host of a",
+    "start": 128.13,
+    "end": 128.13,
+    "confidence": 0.651,
+    "id": "o236"
+   },
+   {
+    "text": "podcast or YouTube",
+    "start": 128.13,
+    "end": 128.13,
+    "confidence": 0.976,
+    "id": "o237"
+   },
+   {
+    "text": "channel",
+    "start": 128.13,
+    "end": 128.13,
+    "confidence": 1.0,
+    "id": "o238"
+   },
+   {
+    "text": "folks to do vour due",
+    "start": 130.13,
+    "end": 130.13,
+    "confidence": 0.904,
+    "id": "o239"
+   },
+   {
+    "text": "diligence on a host of a",
+    "start": 130.13,
+    "end": 130.13,
+    "confidence": 0.668,
+    "id": "o240"
+   },
+   {
+    "text": "podcast or YouTube",
+    "start": 130.13,
+    "end": 130.13,
+    "confidence": 0.979,
+    "id": "o241"
+   },
+   {
+    "text": "channel",
+    "start": 130.13,
+    "end": 130.13,
+    "confidence": 1.0,
+    "id": "o242"
+   },
+   {
+    "text": "rjust a content creator to",
+    "start": 132.13,
+    "end": 132.13,
+    "confidence": 0.826,
+    "id": "o243"
+   },
+   {
+    "text": "Or",
+    "start": 132.13,
+    "end": 132.13,
+    "confidence": 0.524,
+    "id": "o244"
+   },
+   {
+    "text": "evaluate their ability",
+    "start": 132.13,
+    "end": 132.13,
+    "confidence": 0.849,
+    "id": "o245"
+   },
+   {
+    "text": "or just a content creator to",
+    "start": 134.13,
+    "end": 134.13,
+    "confidence": 0.926,
+    "id": "o246"
+   },
+   {
+    "text": "evaluate their ability",
+    "start": 134.13,
+    "end": 134.13,
+    "confidence": 0.83,
+    "id": "o247"
+   },
+   {
+    "text": "critically evaluate",
+    "start": 136.14,
+    "end": 136.14,
+    "confidence": 0.962,
+    "id": "o248"
+   },
+   {
+    "text": "to",
+    "start": 136.14,
+    "end": 136.14,
+    "confidence": 1.0,
+    "id": "o249"
+   },
+   {
+    "text": "evidence based nutrition",
+    "start": 136.14,
+    "end": 136.14,
+    "confidence": 0.811,
+    "id": "o250"
+   },
+   {
+    "text": "wellness information",
+    "start": 136.14,
+    "end": 136.14,
+    "confidence": 0.756,
+    "id": "o251"
+   },
+   {
+    "text": "and",
+    "start": 136.14,
+    "end": 136.14,
+    "confidence": 1.0,
+    "id": "o252"
+   },
+   {
+    "text": "critically evaluate",
+    "start": 138.14,
+    "end": 138.14,
+    "confidence": 0.967,
+    "id": "o253"
+   },
+   {
+    "text": "to",
+    "start": 138.14,
+    "end": 138.14,
+    "confidence": 1.0,
+    "id": "o254"
+   },
+   {
+    "text": "evidence based nutrition",
+    "start": 138.14,
+    "end": 138.14,
+    "confidence": 0.82,
+    "id": "o255"
+   },
+   {
+    "text": "wellness information",
+    "start": 138.14,
+    "end": 138.14,
+    "confidence": 0.752,
+    "id": "o256"
+   },
+   {
+    "text": "and",
+    "start": 138.14,
+    "end": 138.14,
+    "confidence": 1.0,
+    "id": "o257"
+   },
+   {
+    "text": "critically evaluate",
+    "start": 140.14,
+    "end": 140.14,
+    "confidence": 0.866,
+    "id": "o258"
+   },
+   {
+    "text": "to",
+    "start": 140.14,
+    "end": 140.14,
+    "confidence": 1.0,
+    "id": "o259"
+   },
+   {
+    "text": "evidence based nutrition",
+    "start": 140.14,
+    "end": 140.14,
+    "confidence": 0.818,
+    "id": "o260"
+   },
+   {
+    "text": "wellness information",
+    "start": 140.14,
+    "end": 140.14,
+    "confidence": 0.826,
+    "id": "o261"
+   },
+   {
+    "text": "and",
+    "start": 140.14,
+    "end": 140.14,
+    "confidence": 1.0,
+    "id": "o262"
+   },
+   {
+    "text": "before taking the content",
+    "start": 142.14,
+    "end": 142.14,
+    "confidence": 0.996,
+    "id": "o263"
+   },
+   {
+    "text": "they share at face value",
+    "start": 142.14,
+    "end": 142.14,
+    "confidence": 0.841,
+    "id": "o264"
+   },
+   {
+    "text": "andif VoU are looking for an",
+    "start": 144.14,
+    "end": 144.14,
+    "confidence": 0.614,
+    "id": "o265"
+   },
+   {
+    "text": "evidence based nutrition",
+    "start": 144.14,
+    "end": 144.14,
+    "confidence": 0.98,
+    "id": "o266"
+   },
+   {
+    "text": "podcast",
+    "start": 144.14,
+    "end": 144.14,
+    "confidence": 1.0,
+    "id": "o267"
+   },
+   {
+    "text": "and if yoU",
+    "start": 146.15,
+    "end": 146.15,
+    "confidence": 0.548,
+    "id": "o268"
+   },
+   {
+    "text": "looking for an",
+    "start": 146.15,
+    "end": 146.15,
+    "confidence": 0.994,
+    "id": "o269"
+   },
+   {
+    "text": "are",
+    "start": 146.15,
+    "end": 146.15,
+    "confidence": 1.0,
+    "id": "o270"
+   },
+   {
+    "text": "evidence based nutrition",
+    "start": 146.15,
+    "end": 146.15,
+    "confidence": 0.791,
+    "id": "o271"
+   },
+   {
+    "text": "podcast",
+    "start": 146.15,
+    "end": 146.15,
+    "confidence": 1.0,
+    "id": "o272"
+   },
+   {
+    "text": "definitely hit up my new",
+    "start": 148.15,
+    "end": 148.15,
+    "confidence": 0.757,
+    "id": "o273"
+   },
+   {
+    "text": "podcast",
+    "start": 148.15,
+    "end": 148.15,
+    "confidence": 1.0,
+    "id": "o274"
+   },
+   {
+    "text": "Frequency",
+    "start": 150.15,
+    "end": 150.15,
+    "confidence": 0.903,
+    "id": "o275"
+   },
+   {
+    "text": "Abbey Shanp",
+    "start": 150.15,
+    "end": 150.15,
+    "confidence": 0.728,
+    "id": "o276"
+   },
+   {
+    "text": "with",
+    "start": 150.15,
+    "end": 150.15,
+    "confidence": 0.592,
+    "id": "o277"
+   },
+   {
+    "text": "1",
+    "start": 150.15,
+    "end": 150.15,
+    "confidence": 0.947,
+    "id": "o278"
+   },
+   {
+    "text": "rightbackwith Abby Sharp",
+    "start": 150.15,
+    "end": 150.15,
+    "confidence": 0.821,
+    "id": "o279"
+   },
+   {
+    "text": "next",
+    "start": 150.15,
+    "end": 150.15,
+    "confidence": 0.656,
+    "id": "o280"
+   }
+  ]
+ }
+}

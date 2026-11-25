@@ -1,0 +1,822 @@
+{
+ "video_id": "v169",
+ "filename": "new_youtube_3YE2FFPoN3c.mp4",
+ "relative_path": "new_youtube_3YE2FFPoN3c.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:59",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.999,
+  "duration_seconds": 59.35,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.12,
+    "text": "Tu piel se vuelve adicta a la crema hidratante."
+   },
+   {
+    "id": "t2",
+    "start": 2.12,
+    "end": 6.36,
+    "text": "Sí, las cremas hidratantes faciales usadas a diario podrían estar estropeando tu piel."
+   },
+   {
+    "id": "t3",
+    "start": 6.36,
+    "end": 11.0,
+    "text": "Este estudio científico ha revelado una verdad que parte de la industria de Skincare no quiere que sepas."
+   },
+   {
+    "id": "t4",
+    "start": 11.0,
+    "end": 16.4,
+    "text": "En él se observó qué pasa cuando dejas de usar hidratante en el rostro y los resultados son sorprendentes."
+   },
+   {
+    "id": "t5",
+    "start": 16.4,
+    "end": 20.76,
+    "text": "En personas que llevaban mucho tiempo utilizando crema hidratante tras un día sin usarlo,"
+   },
+   {
+    "id": "t6",
+    "start": 20.76,
+    "end": 26.24,
+    "text": "la piel mostró sequedad, enrojecimiento y descamación y después tardó en recuperarse hasta tres semanas."
+   },
+   {
+    "id": "t7",
+    "start": 26.24,
+    "end": 28.68,
+    "text": "Eso sí, sin volver a tocar una crema hidratante."
+   },
+   {
+    "id": "t8",
+    "start": 28.68,
+    "end": 33.0,
+    "text": "Por tanto, eso de que todas las personas tienen que usar cremas hidratantes faciales todos"
+   },
+   {
+    "id": "t9",
+    "start": 33.0,
+    "end": 35.76,
+    "text": "los días es un mito, un truco de marketing."
+   },
+   {
+    "id": "t10",
+    "start": 35.76,
+    "end": 40.12,
+    "text": "El uso constante de cremas hidratantes podría hacer que tu piel se vuelva dependiente, debilitando"
+   },
+   {
+    "id": "t11",
+    "start": 40.12,
+    "end": 43.52,
+    "text": "su capacidad natural para mantenerse hidratada desde dentro."
+   },
+   {
+    "id": "t12",
+    "start": 43.52,
+    "end": 47.52,
+    "text": "Todo lo que ponemos en nuestra piel puede tener un efecto y mucha gente confunde tener la piel"
+   },
+   {
+    "id": "t13",
+    "start": 47.52,
+    "end": 52.0,
+    "text": "de la cara seca con una piel grasa deshidratada, lo cual es más frecuente y aquí el problema"
+   },
+   {
+    "id": "t14",
+    "start": 52.0,
+    "end": 55.68,
+    "text": "es realmente el exceso de sebo, no la falta de hidratación externa."
+   },
+   {
+    "id": "t15",
+    "start": 55.68,
+    "end": 59.28,
+    "text": "aplicar un exceso de cremas hidratantes puede grabar problemas como la rosacia."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 30,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Dermatologo:",
+    "confidence": 0.985
+   },
+   {
+    "time": 0.0,
+    "text": "TU PIEL SE VUELVE",
+    "confidence": 0.682
+   },
+   {
+    "time": 0.0,
+    "text": "ADICTA",
+    "confidence": 0.997
+   },
+   {
+    "time": 0.0,
+    "text": "LA CREMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "A",
+    "confidence": 0.992
+   },
+   {
+    "time": 0.0,
+    "text": "HIDRATANTE",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "Dermatologo3",
+    "confidence": 0.693
+   },
+   {
+    "time": 2.0,
+    "text": "TU PIEL SE VUELVE",
+    "confidence": 0.875
+   },
+   {
+    "time": 2.0,
+    "text": "ADICTA",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "A LA CREMA",
+    "confidence": 0.834
+   },
+   {
+    "time": 2.0,
+    "text": "HIDRATANTE",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.0,
+    "text": "USADAS A",
+    "confidence": 0.969
+   },
+   {
+    "time": 6.0,
+    "text": "PIEL",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "PMID;",
+    "confidence": 0.533
+   },
+   {
+    "time": 8.0,
+    "text": "Skin Recovery After Discontinuation of Long-Term Moisturizer Application:",
+    "confidence": 0.828
+   },
+   {
+    "time": 8.0,
+    "text": "Split-",
+    "confidence": 0.667
+   },
+   {
+    "time": 8.0,
+    "text": "Face Comparison Pilot Study",
+    "confidence": 0.96
+   },
+   {
+    "time": 8.0,
+    "text": "Yuki Chen",
+    "confidence": 0.897
+   },
+   {
+    "time": 8.0,
+    "text": "HA REVELADO",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "UNA",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "VERDAD",
+    "confidence": 0.996
+   },
+   {
+    "time": 10.0,
+    "text": "1302",
+    "confidence": 0.811
+   },
+   {
+    "time": 10.0,
+    "text": "FMCID PHC784917J",
+    "confidence": 0.613
+   },
+   {
+    "time": 10.0,
+    "text": "Skin Recovery After Discontinuation of Long-Term Moisturizer Application: A Split-",
+    "confidence": 0.791
+   },
+   {
+    "time": 10.0,
+    "text": "Face Comparison Pilot Study",
+    "confidence": 0.824
+   },
+   {
+    "time": 10.0,
+    "text": "INDUSTRIA DEL",
+    "confidence": 0.997
+   },
+   {
+    "time": 10.0,
+    "text": "SKINCARE NO",
+    "confidence": 0.742
+   },
+   {
+    "time": 12.0,
+    "text": "QUe PASA",
+    "confidence": 0.863
+   },
+   {
+    "time": 14.0,
+    "text": "EL ROSTRO",
+    "confidence": 0.813
+   },
+   {
+    "time": 16.0,
+    "text": "SORPRENDENTES",
+    "confidence": 0.998
+   },
+   {
+    "time": 18.0,
+    "text": "UTILIZANDO CREMA",
+    "confidence": 0.97
+   },
+   {
+    "time": 20.0,
+    "text": "USARLO",
+    "confidence": 0.866
+   },
+   {
+    "time": 22.0,
+    "text": "ENROJECIMIENTO",
+    "confidence": 0.907
+   },
+   {
+    "time": 22.0,
+    "text": "Y",
+    "confidence": 0.977
+   },
+   {
+    "time": 24.0,
+    "text": "DESPUeS",
+    "confidence": 0.662
+   },
+   {
+    "time": 26.0,
+    "text": "SEMANAS",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "HIDRATANTE",
+    "confidence": 0.997
+   },
+   {
+    "time": 30.0,
+    "text": "TODAS LAS",
+    "confidence": 0.946
+   },
+   {
+    "time": 30.0,
+    "text": "PERSONAS",
+    "confidence": 0.95
+   },
+   {
+    "time": 32.0,
+    "text": "HIDRATANTES",
+    "confidence": 0.999
+   },
+   {
+    "time": 34.0,
+    "text": "ES UN",
+    "confidence": 0.588
+   },
+   {
+    "time": 34.0,
+    "text": "MITO UN",
+    "confidence": 0.742
+   },
+   {
+    "time": 36.0,
+    "text": "EL USO",
+    "confidence": 0.796
+   },
+   {
+    "time": 38.0,
+    "text": "PODRiA HACER",
+    "confidence": 0.899
+   },
+   {
+    "time": 38.0,
+    "text": "QUE TU",
+    "confidence": 0.803
+   },
+   {
+    "time": 40.0,
+    "text": "DEBILITANDO SU",
+    "confidence": 0.993
+   },
+   {
+    "time": 42.0,
+    "text": "HIDRATADA",
+    "confidence": 0.965
+   },
+   {
+    "time": 44.0,
+    "text": "EN NUESTRA",
+    "confidence": 0.738
+   },
+   {
+    "time": 46.0,
+    "text": "Y MUCHA",
+    "confidence": 0.665
+   },
+   {
+    "time": 48.0,
+    "text": "LA CARA",
+    "confidence": 0.786
+   },
+   {
+    "time": 48.0,
+    "text": "SECA",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "DESHIDRATADA",
+    "confidence": 0.923
+   },
+   {
+    "time": 52.0,
+    "text": "EL PROBLEMA",
+    "confidence": 0.927
+   },
+   {
+    "time": 54.0,
+    "text": "NO LA",
+    "confidence": 0.536
+   },
+   {
+    "time": 54.0,
+    "text": "FALTA DE",
+    "confidence": 0.998
+   },
+   {
+    "time": 56.0,
+    "text": "APLICAR UN",
+    "confidence": 0.729
+   },
+   {
+    "time": 58.0,
+    "text": "PUEDE AGRAVAR",
+    "confidence": 0.999
+   },
+   {
+    "time": 58.0,
+    "text": "PROBLEMAS COMO",
+    "confidence": 0.998
+   }
+  ],
+  "captions": [
+   {
+    "text": "Dermatologo:",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.985,
+    "id": "o1"
+   },
+   {
+    "text": "TU PIEL SE VUELVE",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.682,
+    "id": "o2"
+   },
+   {
+    "text": "ADICTA",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.997,
+    "id": "o3"
+   },
+   {
+    "text": "LA CREMA",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o4"
+   },
+   {
+    "text": "A",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.992,
+    "id": "o5"
+   },
+   {
+    "text": "HIDRATANTE",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o6"
+   },
+   {
+    "text": "Dermatologo3",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.693,
+    "id": "o7"
+   },
+   {
+    "text": "TU PIEL SE VUELVE",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.875,
+    "id": "o8"
+   },
+   {
+    "text": "ADICTA",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "A LA CREMA",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.834,
+    "id": "o10"
+   },
+   {
+    "text": "HIDRATANTE",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.999,
+    "id": "o11"
+   },
+   {
+    "text": "USADAS A",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.969,
+    "id": "o12"
+   },
+   {
+    "text": "PIEL",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.999,
+    "id": "o13"
+   },
+   {
+    "text": "PMID;",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.533,
+    "id": "o14"
+   },
+   {
+    "text": "Skin Recovery After Discontinuation of Long-Term Moisturizer Application:",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.828,
+    "id": "o15"
+   },
+   {
+    "text": "Split-",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.667,
+    "id": "o16"
+   },
+   {
+    "text": "Face Comparison Pilot Study",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.96,
+    "id": "o17"
+   },
+   {
+    "text": "Yuki Chen",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.897,
+    "id": "o18"
+   },
+   {
+    "text": "HA REVELADO",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.999,
+    "id": "o19"
+   },
+   {
+    "text": "UNA",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.999,
+    "id": "o20"
+   },
+   {
+    "text": "VERDAD",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.996,
+    "id": "o21"
+   },
+   {
+    "text": "1302",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.811,
+    "id": "o22"
+   },
+   {
+    "text": "FMCID PHC784917J",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.613,
+    "id": "o23"
+   },
+   {
+    "text": "Skin Recovery After Discontinuation of Long-Term Moisturizer Application: A Split-",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.791,
+    "id": "o24"
+   },
+   {
+    "text": "Face Comparison Pilot Study",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.824,
+    "id": "o25"
+   },
+   {
+    "text": "INDUSTRIA DEL",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.997,
+    "id": "o26"
+   },
+   {
+    "text": "SKINCARE NO",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.742,
+    "id": "o27"
+   },
+   {
+    "text": "QUe PASA",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.863,
+    "id": "o28"
+   },
+   {
+    "text": "EL ROSTRO",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.813,
+    "id": "o29"
+   },
+   {
+    "text": "SORPRENDENTES",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.998,
+    "id": "o30"
+   },
+   {
+    "text": "UTILIZANDO CREMA",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.97,
+    "id": "o31"
+   },
+   {
+    "text": "USARLO",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.866,
+    "id": "o32"
+   },
+   {
+    "text": "ENROJECIMIENTO",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.907,
+    "id": "o33"
+   },
+   {
+    "text": "Y",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.977,
+    "id": "o34"
+   },
+   {
+    "text": "DESPUeS",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.662,
+    "id": "o35"
+   },
+   {
+    "text": "SEMANAS",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o36"
+   },
+   {
+    "text": "HIDRATANTE",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.997,
+    "id": "o37"
+   },
+   {
+    "text": "TODAS LAS",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.946,
+    "id": "o38"
+   },
+   {
+    "text": "PERSONAS",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.95,
+    "id": "o39"
+   },
+   {
+    "text": "HIDRATANTES",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.999,
+    "id": "o40"
+   },
+   {
+    "text": "ES UN",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.588,
+    "id": "o41"
+   },
+   {
+    "text": "MITO UN",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.742,
+    "id": "o42"
+   },
+   {
+    "text": "EL USO",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.796,
+    "id": "o43"
+   },
+   {
+    "text": "PODRiA HACER",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.899,
+    "id": "o44"
+   },
+   {
+    "text": "QUE TU",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.803,
+    "id": "o45"
+   },
+   {
+    "text": "DEBILITANDO SU",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.993,
+    "id": "o46"
+   },
+   {
+    "text": "HIDRATADA",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.965,
+    "id": "o47"
+   },
+   {
+    "text": "EN NUESTRA",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.738,
+    "id": "o48"
+   },
+   {
+    "text": "Y MUCHA",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.665,
+    "id": "o49"
+   },
+   {
+    "text": "LA CARA",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.786,
+    "id": "o50"
+   },
+   {
+    "text": "SECA",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o51"
+   },
+   {
+    "text": "DESHIDRATADA",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.923,
+    "id": "o52"
+   },
+   {
+    "text": "EL PROBLEMA",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.927,
+    "id": "o53"
+   },
+   {
+    "text": "NO LA",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.536,
+    "id": "o54"
+   },
+   {
+    "text": "FALTA DE",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.998,
+    "id": "o55"
+   },
+   {
+    "text": "APLICAR UN",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.729,
+    "id": "o56"
+   },
+   {
+    "text": "PUEDE AGRAVAR",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.999,
+    "id": "o57"
+   },
+   {
+    "text": "PROBLEMAS COMO",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.998,
+    "id": "o58"
+   }
+  ]
+ }
+}

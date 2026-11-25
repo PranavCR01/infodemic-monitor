@@ -1,0 +1,104 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 74.56,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 6.16,
+    "text": "What's your best fighting chance against cancer? It's actually muscle mass. So I know a lot of"
+   },
+   {
+    "id": "t2",
+    "start": 6.16,
+    "end": 10.72,
+    "text": "people out there when they get a diagnosis of cancer or when they have cancer in their family,"
+   },
+   {
+    "id": "t3",
+    "start": 11.28,
+    "end": 15.12,
+    "text": "they like to focus on a lot of different things that they can try to be proactive about. So here's"
+   },
+   {
+    "id": "t4",
+    "start": 15.12,
+    "end": 20.64,
+    "text": "your number one tip from me on how you can best survive cancer if you get it, which we all know"
+   },
+   {
+    "id": "t5",
+    "start": 20.64,
+    "end": 25.36,
+    "text": "as humans our chance of getting cancer in our lifetime is actually super high. So if you're"
+   },
+   {
+    "id": "t6",
+    "start": 25.36,
+    "end": 30.08,
+    "text": "going to have to go through cancer treatment, the best possible thing that you can have before you"
+   },
+   {
+    "id": "t7",
+    "start": 30.08,
+    "end": 36.24,
+    "text": "start that journey is good muscle mass. So we know that chemotherapy drugs, and most of us honestly"
+   },
+   {
+    "id": "t8",
+    "start": 36.24,
+    "end": 41.76,
+    "text": "fear the chemo more than we fear the cancer, but chemotherapy drugs deplete skeletal muscle. And if"
+   },
+   {
+    "id": "t9",
+    "start": 41.76,
+    "end": 47.52,
+    "text": "you don't start with much, if you don't start off with a good muscle mass, then you're already starting"
+   },
+   {
+    "id": "t10",
+    "start": 47.52,
+    "end": 53.12,
+    "text": "your tank on zero. And so not only can weight lifting and weight training and building muscle"
+   },
+   {
+    "id": "t11",
+    "start": 53.12,
+    "end": 57.32,
+    "text": "mass help you in your day to day life, but it could end up being the thing that saves"
+   },
+   {
+    "id": "t12",
+    "start": 57.32,
+    "end": 60.0,
+    "text": "your life if you ever have to get cancer treatment."
+   },
+   {
+    "id": "t13",
+    "start": 60.0,
+    "end": 65.0,
+    "text": "So hit the weights, hit the gym, we're not concentrating on being skinny girls anymore."
+   },
+   {
+    "id": "t14",
+    "start": 65.0,
+    "end": 68.08,
+    "text": "What we need to be is strong and healthy, okay?"
+   },
+   {
+    "id": "t15",
+    "start": 68.08,
+    "end": 71.36,
+    "text": "And strong means healthy."
+   }
+  ]
+ }
+}

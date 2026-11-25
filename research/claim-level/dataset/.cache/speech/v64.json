@@ -1,0 +1,272 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 162.45,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.96,
+    "text": "I've explained to you very quickly how this graphic put out by our federal government"
+   },
+   {
+    "id": "t2",
+    "start": 3.96,
+    "end": 5.64,
+    "text": "is complete misinformation."
+   },
+   {
+    "id": "t3",
+    "start": 5.64,
+    "end": 9.92,
+    "text": "This graphic coming out on X from the official White House account representing the HHS and"
+   },
+   {
+    "id": "t4",
+    "start": 9.92,
+    "end": 14.2,
+    "text": "President Trump's announcements of the decreased vaccination schedule saying that in European"
+   },
+   {
+    "id": "t5",
+    "start": 14.2,
+    "end": 18.68,
+    "text": "countries they get 11 injections in the United States, we give 72."
+   },
+   {
+    "id": "t6",
+    "start": 18.68,
+    "end": 22.76,
+    "text": "Quite simply, let's take a look at each country's vaccine schedule by injection."
+   },
+   {
+    "id": "t7",
+    "start": 22.76,
+    "end": 26.8,
+    "text": "Since most of the injections happen before age two, let's just count them comparing"
+   },
+   {
+    "id": "t8",
+    "start": 26.8,
+    "end": 28.52,
+    "text": "from age zero to two."
+   },
+   {
+    "id": "t9",
+    "start": 28.52,
+    "end": 32.44,
+    "text": "the US schedule as recommended by the American Academy of Pediatrics, which is similar to"
+   },
+   {
+    "id": "t10",
+    "start": 32.44,
+    "end": 36.28,
+    "text": "what it was before the CDC made their massive changes. And if you count up the number of"
+   },
+   {
+    "id": "t11",
+    "start": 36.28,
+    "end": 41.32,
+    "text": "blue boxes that represent injections, not oral things, you're going to see there's about 24"
+   },
+   {
+    "id": "t12",
+    "start": 41.32,
+    "end": 46.84,
+    "text": "vaccines that children will receive by the age of two. In said 24 injections, you'll get protection"
+   },
+   {
+    "id": "t13",
+    "start": 46.84,
+    "end": 53.08,
+    "text": "from 16 different diseases. Here in Italy, we see very same thing, 29 different injections,"
+   },
+   {
+    "id": "t14",
+    "start": 53.08,
+    "end": 58.36,
+    "text": "protecting against around 12 to 13 diseases. Looking at Norway, you're going to get about 24"
+   },
+   {
+    "id": "t15",
+    "start": 58.36,
+    "end": 63.96,
+    "text": "injections protecting between 10 and 11 different diseases. Same numbers for Sweden. Here's"
+   },
+   {
+    "id": "t16",
+    "start": 63.96,
+    "end": 68.28,
+    "text": "Denmark who were supposedly modeling our vaccine recommendations to the CDC off of"
+   },
+   {
+    "id": "t17",
+    "start": 68.28,
+    "end": 74.28,
+    "text": "for 21 injections with about 10 diseases protected. And finally here's Germany coming in at 30"
+   },
+   {
+    "id": "t18",
+    "start": 74.28,
+    "end": 80.28,
+    "text": "injections for 13 diseases protected. So the basis of the misrepresentation in this graphic"
+   },
+   {
+    "id": "t19",
+    "start": 80.28,
+    "end": 86.44,
+    "text": "comes from disease protected versus injections. Some of the European countries do recommend"
+   },
+   {
+    "id": "t20",
+    "start": 86.44,
+    "end": 90.24,
+    "text": "less diseases protected for kids under the age of two."
+   },
+   {
+    "id": "t21",
+    "start": 90.24,
+    "end": 93.7,
+    "text": "And the new CDC schedule does mirror that more closely."
+   },
+   {
+    "id": "t22",
+    "start": 93.7,
+    "end": 96.62,
+    "text": "That does not mean there's only 11 injections,"
+   },
+   {
+    "id": "t23",
+    "start": 96.62,
+    "end": 98.66,
+    "text": "as we showed, at the minimum,"
+   },
+   {
+    "id": "t24",
+    "start": 98.66,
+    "end": 101.02,
+    "text": "there'd be a minimum of 21 injections"
+   },
+   {
+    "id": "t25",
+    "start": 101.02,
+    "end": 103.78,
+    "text": "to protect against those 10 to 11 diseases."
+   },
+   {
+    "id": "t26",
+    "start": 103.78,
+    "end": 106.94,
+    "text": "As compared to the US, where in 24 injections,"
+   },
+   {
+    "id": "t27",
+    "start": 106.94,
+    "end": 109.86,
+    "text": "we protect against 16 different diseases."
+   },
+   {
+    "id": "t28",
+    "start": 109.86,
+    "end": 113.42,
+    "text": "Where in the world does this number 72 even come from?"
+   },
+   {
+    "id": "t29",
+    "start": 113.42,
+    "end": 116.32,
+    "text": "From a graphic that is circulated in anti-vax circles"
+   },
+   {
+    "id": "t30",
+    "start": 116.32,
+    "end": 120.32,
+    "text": "for years that our government was just dumb enough to believe."
+   },
+   {
+    "id": "t31",
+    "start": 120.32,
+    "end": 123.2,
+    "text": "And the only way they get there is by separating out"
+   },
+   {
+    "id": "t32",
+    "start": 123.2,
+    "end": 125.32,
+    "text": "the DTAP shots and MMR shots"
+   },
+   {
+    "id": "t33",
+    "start": 125.32,
+    "end": 128.24,
+    "text": "as if those were separate injections, which they're not."
+   },
+   {
+    "id": "t34",
+    "start": 128.24,
+    "end": 130.94,
+    "text": "And combines that with a yearly flu shot"
+   },
+   {
+    "id": "t35",
+    "start": 130.94,
+    "end": 134.54,
+    "text": "and a yearly COVID shot for all 18 years of life."
+   },
+   {
+    "id": "t36",
+    "start": 134.54,
+    "end": 137.44,
+    "text": "And the actual reality is using combo shots,"
+   },
+   {
+    "id": "t37",
+    "start": 137.44,
+    "end": 140.92,
+    "text": "I can actually get most kids fully vaccinated by H2"
+   },
+   {
+    "id": "t38",
+    "start": 140.92,
+    "end": 143.84,
+    "text": "with around 14 to 16 injections."
+   },
+   {
+    "id": "t39",
+    "start": 143.84,
+    "end": 147.68,
+    "text": "and that protects them for around 16 diseases."
+   },
+   {
+    "id": "t40",
+    "start": 147.68,
+    "end": 150.44,
+    "text": "I know RFK is not a doctor and he's a lawyer."
+   },
+   {
+    "id": "t41",
+    "start": 150.44,
+    "end": 152.56,
+    "text": "As a lawyer, I would have hoped he would have at least"
+   },
+   {
+    "id": "t42",
+    "start": 152.56,
+    "end": 154.84,
+    "text": "fact-checked the graphic before he put it out"
+   },
+   {
+    "id": "t43",
+    "start": 154.84,
+    "end": 157.2,
+    "text": "as an official White House announcement."
+   }
+  ]
+ }
+}

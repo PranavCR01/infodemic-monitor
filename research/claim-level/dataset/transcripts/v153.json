@@ -1,0 +1,575 @@
+{
+ "video_id": "v153",
+ "filename": "new_TikTok_7469364373715209494.mp4",
+ "relative_path": "new_TikTok_7469364373715209494.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:58",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.437,
+  "duration_seconds": 17.53,
+  "segments": []
+ },
+ "on_screen": {
+  "frames_sampled": 9,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "When you wake up at night, it",
+    "confidence": 0.731
+   },
+   {
+    "time": 0.0,
+    "text": "means someone who loves you or",
+    "confidence": 0.959
+   },
+   {
+    "time": 0.0,
+    "text": "'thinking",
+    "confidence": 0.97
+   },
+   {
+    "time": 0.0,
+    "text": "your ex is watching or",
+    "confidence": 0.899
+   },
+   {
+    "time": 0.0,
+    "text": "about you:",
+    "confidence": 0.782
+   },
+   {
+    "time": 2.0,
+    "text": "When you wake up at night, it",
+    "confidence": 0.858
+   },
+   {
+    "time": 2.0,
+    "text": "means someone who loves you or",
+    "confidence": 0.97
+   },
+   {
+    "time": 2.0,
+    "text": "'thinking",
+    "confidence": 0.97
+   },
+   {
+    "time": 2.0,
+    "text": "your ex is watching or",
+    "confidence": 0.889
+   },
+   {
+    "time": 2.0,
+    "text": "about you:",
+    "confidence": 0.772
+   },
+   {
+    "time": 4.0,
+    "text": "When you wake up at night, it",
+    "confidence": 0.802
+   },
+   {
+    "time": 4.0,
+    "text": "means someone who loves you or",
+    "confidence": 0.923
+   },
+   {
+    "time": 4.0,
+    "text": "'thinking",
+    "confidence": 0.97
+   },
+   {
+    "time": 4.0,
+    "text": "your ex is watching or",
+    "confidence": 0.889
+   },
+   {
+    "time": 4.0,
+    "text": "about you:",
+    "confidence": 0.778
+   },
+   {
+    "time": 6.0,
+    "text": "When you wake up at night, it",
+    "confidence": 0.803
+   },
+   {
+    "time": 6.0,
+    "text": "means someone who loves you or",
+    "confidence": 0.959
+   },
+   {
+    "time": 6.0,
+    "text": "'thinking",
+    "confidence": 0.969
+   },
+   {
+    "time": 6.0,
+    "text": "your ex is watching or",
+    "confidence": 0.887
+   },
+   {
+    "time": 6.0,
+    "text": "about you:",
+    "confidence": 0.775
+   },
+   {
+    "time": 8.0,
+    "text": "When you wake up at night, it",
+    "confidence": 0.743
+   },
+   {
+    "time": 8.0,
+    "text": "means someone who loves you or",
+    "confidence": 0.991
+   },
+   {
+    "time": 8.0,
+    "text": "'thinking",
+    "confidence": 0.968
+   },
+   {
+    "time": 8.0,
+    "text": "your ex is watching or",
+    "confidence": 0.906
+   },
+   {
+    "time": 8.0,
+    "text": "about you:",
+    "confidence": 0.743
+   },
+   {
+    "time": 10.0,
+    "text": "When you wake up at night, it",
+    "confidence": 0.804
+   },
+   {
+    "time": 10.0,
+    "text": "means someone who loves you or",
+    "confidence": 0.991
+   },
+   {
+    "time": 10.0,
+    "text": "'thinking",
+    "confidence": 0.967
+   },
+   {
+    "time": 10.0,
+    "text": "your ex is watching or",
+    "confidence": 0.905
+   },
+   {
+    "time": 10.0,
+    "text": "about you:",
+    "confidence": 0.748
+   },
+   {
+    "time": 12.0,
+    "text": "When you wake up at night, it",
+    "confidence": 0.77
+   },
+   {
+    "time": 12.0,
+    "text": "means someone who loves you or",
+    "confidence": 0.991
+   },
+   {
+    "time": 12.0,
+    "text": "'thinking",
+    "confidence": 0.969
+   },
+   {
+    "time": 12.0,
+    "text": "your ex is watching or",
+    "confidence": 0.904
+   },
+   {
+    "time": 12.0,
+    "text": "about you:",
+    "confidence": 0.75
+   },
+   {
+    "time": 14.0,
+    "text": "When you wake up at night, it",
+    "confidence": 0.762
+   },
+   {
+    "time": 14.0,
+    "text": "means someone who loves you or",
+    "confidence": 0.99
+   },
+   {
+    "time": 14.0,
+    "text": "'thinking",
+    "confidence": 0.968
+   },
+   {
+    "time": 14.0,
+    "text": "your ex is watching or",
+    "confidence": 0.892
+   },
+   {
+    "time": 14.0,
+    "text": "about you:",
+    "confidence": 0.765
+   },
+   {
+    "time": 16.0,
+    "text": "When you wake up at night, it",
+    "confidence": 0.765
+   },
+   {
+    "time": 16.0,
+    "text": "means someone who loves you or",
+    "confidence": 0.783
+   },
+   {
+    "time": 16.0,
+    "text": "'thinking",
+    "confidence": 0.968
+   },
+   {
+    "time": 16.0,
+    "text": "your ex is watching or",
+    "confidence": 0.895
+   },
+   {
+    "time": 16.0,
+    "text": "about you:",
+    "confidence": 0.766
+   }
+  ],
+  "captions": [
+   {
+    "text": "When you wake up at night, it",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.731,
+    "id": "o1"
+   },
+   {
+    "text": "means someone who loves you or",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.959,
+    "id": "o2"
+   },
+   {
+    "text": "'thinking",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.97,
+    "id": "o3"
+   },
+   {
+    "text": "your ex is watching or",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.899,
+    "id": "o4"
+   },
+   {
+    "text": "about you:",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.782,
+    "id": "o5"
+   },
+   {
+    "text": "When you wake up at night, it",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.858,
+    "id": "o6"
+   },
+   {
+    "text": "means someone who loves you or",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.97,
+    "id": "o7"
+   },
+   {
+    "text": "'thinking",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.97,
+    "id": "o8"
+   },
+   {
+    "text": "your ex is watching or",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.889,
+    "id": "o9"
+   },
+   {
+    "text": "about you:",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.772,
+    "id": "o10"
+   },
+   {
+    "text": "When you wake up at night, it",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.802,
+    "id": "o11"
+   },
+   {
+    "text": "means someone who loves you or",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.923,
+    "id": "o12"
+   },
+   {
+    "text": "'thinking",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.97,
+    "id": "o13"
+   },
+   {
+    "text": "your ex is watching or",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.889,
+    "id": "o14"
+   },
+   {
+    "text": "about you:",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.778,
+    "id": "o15"
+   },
+   {
+    "text": "When you wake up at night, it",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.803,
+    "id": "o16"
+   },
+   {
+    "text": "means someone who loves you or",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.959,
+    "id": "o17"
+   },
+   {
+    "text": "'thinking",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.969,
+    "id": "o18"
+   },
+   {
+    "text": "your ex is watching or",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.887,
+    "id": "o19"
+   },
+   {
+    "text": "about you:",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.775,
+    "id": "o20"
+   },
+   {
+    "text": "When you wake up at night, it",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.743,
+    "id": "o21"
+   },
+   {
+    "text": "means someone who loves you or",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.991,
+    "id": "o22"
+   },
+   {
+    "text": "'thinking",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.968,
+    "id": "o23"
+   },
+   {
+    "text": "your ex is watching or",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.906,
+    "id": "o24"
+   },
+   {
+    "text": "about you:",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.743,
+    "id": "o25"
+   },
+   {
+    "text": "When you wake up at night, it",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.804,
+    "id": "o26"
+   },
+   {
+    "text": "means someone who loves you or",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.991,
+    "id": "o27"
+   },
+   {
+    "text": "'thinking",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.967,
+    "id": "o28"
+   },
+   {
+    "text": "your ex is watching or",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.905,
+    "id": "o29"
+   },
+   {
+    "text": "about you:",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.748,
+    "id": "o30"
+   },
+   {
+    "text": "When you wake up at night, it",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.77,
+    "id": "o31"
+   },
+   {
+    "text": "means someone who loves you or",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.991,
+    "id": "o32"
+   },
+   {
+    "text": "'thinking",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.969,
+    "id": "o33"
+   },
+   {
+    "text": "your ex is watching or",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.904,
+    "id": "o34"
+   },
+   {
+    "text": "about you:",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.75,
+    "id": "o35"
+   },
+   {
+    "text": "When you wake up at night, it",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.762,
+    "id": "o36"
+   },
+   {
+    "text": "means someone who loves you or",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.99,
+    "id": "o37"
+   },
+   {
+    "text": "'thinking",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.968,
+    "id": "o38"
+   },
+   {
+    "text": "your ex is watching or",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.892,
+    "id": "o39"
+   },
+   {
+    "text": "about you:",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.765,
+    "id": "o40"
+   },
+   {
+    "text": "When you wake up at night, it",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.765,
+    "id": "o41"
+   },
+   {
+    "text": "means someone who loves you or",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.783,
+    "id": "o42"
+   },
+   {
+    "text": "'thinking",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.968,
+    "id": "o43"
+   },
+   {
+    "text": "your ex is watching or",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.895,
+    "id": "o44"
+   },
+   {
+    "text": "about you:",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.766,
+    "id": "o45"
+   }
+  ]
+ }
+}

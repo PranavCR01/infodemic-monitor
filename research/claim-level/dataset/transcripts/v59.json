@@ -1,0 +1,826 @@
+{
+ "video_id": "v59",
+ "filename": "v12044gd0000cngh68nog65g1rtvh190.mp4",
+ "relative_path": "Dataset-Sept-2026/Joshua Ryan Fajardo/NO-MISINFO/v12044gd0000cngh68nog65g1rtvh190.mp4",
+ "collector": "Joshua Ryan Fajardo",
+ "collector_label": "NO_MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:42:33",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 74.56,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 6.16,
+    "text": "What's your best fighting chance against cancer? It's actually muscle mass. So I know a lot of"
+   },
+   {
+    "id": "t2",
+    "start": 6.16,
+    "end": 10.72,
+    "text": "people out there when they get a diagnosis of cancer or when they have cancer in their family,"
+   },
+   {
+    "id": "t3",
+    "start": 11.28,
+    "end": 15.12,
+    "text": "they like to focus on a lot of different things that they can try to be proactive about. So here's"
+   },
+   {
+    "id": "t4",
+    "start": 15.12,
+    "end": 20.64,
+    "text": "your number one tip from me on how you can best survive cancer if you get it, which we all know"
+   },
+   {
+    "id": "t5",
+    "start": 20.64,
+    "end": 25.36,
+    "text": "as humans our chance of getting cancer in our lifetime is actually super high. So if you're"
+   },
+   {
+    "id": "t6",
+    "start": 25.36,
+    "end": 30.08,
+    "text": "going to have to go through cancer treatment, the best possible thing that you can have before you"
+   },
+   {
+    "id": "t7",
+    "start": 30.08,
+    "end": 36.24,
+    "text": "start that journey is good muscle mass. So we know that chemotherapy drugs, and most of us honestly"
+   },
+   {
+    "id": "t8",
+    "start": 36.24,
+    "end": 41.76,
+    "text": "fear the chemo more than we fear the cancer, but chemotherapy drugs deplete skeletal muscle. And if"
+   },
+   {
+    "id": "t9",
+    "start": 41.76,
+    "end": 47.52,
+    "text": "you don't start with much, if you don't start off with a good muscle mass, then you're already starting"
+   },
+   {
+    "id": "t10",
+    "start": 47.52,
+    "end": 53.12,
+    "text": "your tank on zero. And so not only can weight lifting and weight training and building muscle"
+   },
+   {
+    "id": "t11",
+    "start": 53.12,
+    "end": 57.32,
+    "text": "mass help you in your day to day life, but it could end up being the thing that saves"
+   },
+   {
+    "id": "t12",
+    "start": 57.32,
+    "end": 60.0,
+    "text": "your life if you ever have to get cancer treatment."
+   },
+   {
+    "id": "t13",
+    "start": 60.0,
+    "end": 65.0,
+    "text": "So hit the weights, hit the gym, we're not concentrating on being skinny girls anymore."
+   },
+   {
+    "id": "t14",
+    "start": 65.0,
+    "end": 68.08,
+    "text": "What we need to be is strong and healthy, okay?"
+   },
+   {
+    "id": "t15",
+    "start": 68.08,
+    "end": 71.36,
+    "text": "And strong means healthy."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 38,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.596
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.647
+   },
+   {
+    "time": 2.0,
+    "text": "laurenvancev909",
+    "confidence": 0.548
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.619
+   },
+   {
+    "time": 6.0,
+    "text": "Decreasedlean mass",
+    "confidence": 0.927
+   },
+   {
+    "time": 6.0,
+    "text": "associatedwith",
+    "confidence": 0.867
+   },
+   {
+    "time": 6.0,
+    "text": "Increased mortality",
+    "confidence": 0.983
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 0.982
+   },
+   {
+    "time": 6.0,
+    "text": "laurenyancev909",
+    "confidence": 0.936
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "laurenyancev909",
+    "confidence": 0.924
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "laurenyancev909",
+    "confidence": 0.936
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "laurenyancev909",
+    "confidence": 0.911
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 0.966
+   },
+   {
+    "time": 14.0,
+    "text": "laurenyancev909",
+    "confidence": 0.916
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 0.964
+   },
+   {
+    "time": 16.0,
+    "text": "laurenyancev909",
+    "confidence": 0.733
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 0.958
+   },
+   {
+    "time": 18.0,
+    "text": "laurenyancev909",
+    "confidence": 0.915
+   },
+   {
+    "time": 20.0,
+    "text": "laurenyancev909",
+    "confidence": 0.718
+   },
+   {
+    "time": 22.0,
+    "text": "TikTOk",
+    "confidence": 0.529
+   },
+   {
+    "time": 24.0,
+    "text": "Lifetime cancerrisk:",
+    "confidence": 0.992
+   },
+   {
+    "time": 24.0,
+    "text": "Men 41.6%",
+    "confidence": 0.999
+   },
+   {
+    "time": 24.0,
+    "text": "Women 39.6 %",
+    "confidence": 0.877
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "laurenyancey909",
+    "confidence": 0.838
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 0.907
+   },
+   {
+    "time": 28.0,
+    "text": "laurenvancey9oo",
+    "confidence": 0.586
+   },
+   {
+    "time": 32.0,
+    "text": "aurenvancey9o",
+    "confidence": 0.621
+   },
+   {
+    "time": 34.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "laurenvancev909",
+    "confidence": 0.892
+   },
+   {
+    "time": 46.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 46.0,
+    "text": "laurenvancev909",
+    "confidence": 0.869
+   },
+   {
+    "time": 48.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "laurenvancev909",
+    "confidence": 0.849
+   },
+   {
+    "time": 50.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "laurenyancev909",
+    "confidence": 0.867
+   },
+   {
+    "time": 52.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.0,
+    "text": "laurenvancev909",
+    "confidence": 0.893
+   },
+   {
+    "time": 54.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "laurenvancev909",
+    "confidence": 0.747
+   },
+   {
+    "time": 58.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 60.0,
+    "text": "laurenvancev909",
+    "confidence": 0.838
+   },
+   {
+    "time": 62.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 64.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 66.0,
+    "text": "TikTok",
+    "confidence": 0.986
+   },
+   {
+    "time": 66.0,
+    "text": "@ laurenyancev909",
+    "confidence": 0.855
+   },
+   {
+    "time": 68.0,
+    "text": "TikTok",
+    "confidence": 0.996
+   },
+   {
+    "time": 68.0,
+    "text": "laurenyancev909",
+    "confidence": 0.837
+   },
+   {
+    "time": 70.0,
+    "text": "TikTok",
+    "confidence": 0.989
+   },
+   {
+    "time": 70.0,
+    "text": "laurenvancev909",
+    "confidence": 0.933
+   },
+   {
+    "time": 72.0,
+    "text": "J",
+    "confidence": 0.649
+   },
+   {
+    "time": 72.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 72.0,
+    "text": "@ laurenyancey90g",
+    "confidence": 0.788
+   },
+   {
+    "time": 74.0,
+    "text": "J",
+    "confidence": 0.838
+   },
+   {
+    "time": 74.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 74.0,
+    "text": "@ laurenyancey90g",
+    "confidence": 0.788
+   }
+  ],
+  "captions": [
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 2.0,
+    "confidence": 0.647,
+    "id": "o1"
+   },
+   {
+    "text": "laurenvancev909",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.548,
+    "id": "o2"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.619,
+    "id": "o3"
+   },
+   {
+    "text": "Decreasedlean mass",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.927,
+    "id": "o4"
+   },
+   {
+    "text": "associatedwith",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.867,
+    "id": "o5"
+   },
+   {
+    "text": "Increased mortality",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.983,
+    "id": "o6"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.982,
+    "id": "o7"
+   },
+   {
+    "text": "laurenyancev909",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.936,
+    "id": "o8"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "laurenyancev909",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.924,
+    "id": "o10"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o11"
+   },
+   {
+    "text": "laurenyancev909",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.936,
+    "id": "o12"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o13"
+   },
+   {
+    "text": "laurenyancev909",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.911,
+    "id": "o14"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.966,
+    "id": "o15"
+   },
+   {
+    "text": "laurenyancev909",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.916,
+    "id": "o16"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.964,
+    "id": "o17"
+   },
+   {
+    "text": "laurenyancev909",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.733,
+    "id": "o18"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.958,
+    "id": "o19"
+   },
+   {
+    "text": "laurenyancev909",
+    "start": 18.0,
+    "end": 20.0,
+    "confidence": 0.915,
+    "id": "o20"
+   },
+   {
+    "text": "TikTOk",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.529,
+    "id": "o21"
+   },
+   {
+    "text": "Lifetime cancerrisk:",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.992,
+    "id": "o22"
+   },
+   {
+    "text": "Men 41.6%",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.999,
+    "id": "o23"
+   },
+   {
+    "text": "Women 39.6 %",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.877,
+    "id": "o24"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o25"
+   },
+   {
+    "text": "laurenyancey909",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.838,
+    "id": "o26"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.907,
+    "id": "o27"
+   },
+   {
+    "text": "laurenvancey9oo",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.586,
+    "id": "o28"
+   },
+   {
+    "text": "aurenvancey9o",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.621,
+    "id": "o29"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o30"
+   },
+   {
+    "text": "laurenvancev909",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.892,
+    "id": "o31"
+   },
+   {
+    "text": "TikTok",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.999,
+    "id": "o32"
+   },
+   {
+    "text": "laurenvancev909",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.869,
+    "id": "o33"
+   },
+   {
+    "text": "TikTok",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o34"
+   },
+   {
+    "text": "laurenvancev909",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.849,
+    "id": "o35"
+   },
+   {
+    "text": "TikTok",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o36"
+   },
+   {
+    "text": "laurenyancev909",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.867,
+    "id": "o37"
+   },
+   {
+    "text": "TikTok",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o38"
+   },
+   {
+    "text": "laurenvancev909",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.893,
+    "id": "o39"
+   },
+   {
+    "text": "TikTok",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o40"
+   },
+   {
+    "text": "laurenvancev909",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.747,
+    "id": "o41"
+   },
+   {
+    "text": "TikTok",
+    "start": 58.0,
+    "end": 60.0,
+    "confidence": 1.0,
+    "id": "o42"
+   },
+   {
+    "text": "laurenvancev909",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.838,
+    "id": "o43"
+   },
+   {
+    "text": "TikTok",
+    "start": 62.0,
+    "end": 66.0,
+    "confidence": 1.0,
+    "id": "o44"
+   },
+   {
+    "text": "@ laurenyancev909",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.855,
+    "id": "o45"
+   },
+   {
+    "text": "TikTok",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.996,
+    "id": "o46"
+   },
+   {
+    "text": "laurenyancev909",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.837,
+    "id": "o47"
+   },
+   {
+    "text": "TikTok",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.989,
+    "id": "o48"
+   },
+   {
+    "text": "laurenvancev909",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.933,
+    "id": "o49"
+   },
+   {
+    "text": "J",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.649,
+    "id": "o50"
+   },
+   {
+    "text": "TikTok",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 1.0,
+    "id": "o51"
+   },
+   {
+    "text": "@ laurenyancey90g",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.788,
+    "id": "o52"
+   },
+   {
+    "text": "J",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.838,
+    "id": "o53"
+   },
+   {
+    "text": "TikTok",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 1.0,
+    "id": "o54"
+   },
+   {
+    "text": "@ laurenyancey90g",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.788,
+    "id": "o55"
+   }
+  ]
+ }
+}

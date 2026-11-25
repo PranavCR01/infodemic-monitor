@@ -1,0 +1,44 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 38.71,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 9.52,
+    "text": "The FDA has approved over 863 chemicals in these foods as well as thousands of others and it's"
+   },
+   {
+    "id": "t2",
+    "start": 9.52,
+    "end": 16.0,
+    "text": "gotten so bad that the state of Texas has demanded that all of these foods must have a warning label"
+   },
+   {
+    "id": "t3",
+    "start": 16.0,
+    "end": 23.81,
+    "text": "on them that says unfit for human consumption. Most people have absolutely no idea that all"
+   },
+   {
+    "id": "t4",
+    "start": 23.81,
+    "end": 27.97,
+    "text": "of these foods behind me literally contain hundreds of dangerous chemicals. Parents,"
+   },
+   {
+    "id": "t5",
+    "start": 27.97,
+    "end": 34.09,
+    "text": "especially please listen. Follow me for more tips. Check out my bio because there's some amazing information up there."
+   }
+  ]
+ }
+}

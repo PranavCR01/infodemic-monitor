@@ -1,0 +1,56 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.985,
+  "duration_seconds": 42.1,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.46,
+    "end": 7.0,
+    "text": "see me in the mirror I'm covering up my face learn no part of my face is in front"
+   },
+   {
+    "id": "t2",
+    "start": 7.0,
+    "end": 16.9,
+    "text": "of the mirror how are you seeing me that I think this is actually where I'm"
+   },
+   {
+    "id": "t3",
+    "start": 16.9,
+    "end": 25.22,
+    "text": "supposed to know something super guys how do you see me in the mirror yeah how"
+   },
+   {
+    "id": "t4",
+    "start": 25.22,
+    "end": 29.62,
+    "text": "do you see me in the mirror I'm covering up my face there's none of me in the"
+   },
+   {
+    "id": "t5",
+    "start": 29.62,
+    "end": 33.22,
+    "text": "Come here."
+   },
+   {
+    "id": "t6",
+    "start": 33.22,
+    "end": 34.22,
+    "text": "That's voodoo."
+   },
+   {
+    "id": "t7",
+    "start": 34.22,
+    "end": 37.44,
+    "text": "That's garbage traffic."
+   }
+  ]
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 30.54,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.18,
+    "end": 4.38,
+    "text": "How to properly wash your hands in food service."
+   },
+   {
+    "id": "t2",
+    "start": 4.38,
+    "end": 7.86,
+    "text": "Turn on the faucet with warm water and wet your hands."
+   },
+   {
+    "id": "t3",
+    "start": 7.86,
+    "end": 12.46,
+    "text": "With either a soap dispenser or a bar of soap, apply some to your hands."
+   },
+   {
+    "id": "t4",
+    "start": 12.46,
+    "end": 17.2,
+    "text": "Scrub your entire hands up to just above your wrists for 20 seconds."
+   },
+   {
+    "id": "t5",
+    "start": 17.2,
+    "end": 21.32,
+    "text": "Rinse your hands in warm water to wash off all the soap."
+   },
+   {
+    "id": "t6",
+    "start": 21.32,
+    "end": 26.15,
+    "text": "Use a hand drying station or paper towel to dry your hands."
+   },
+   {
+    "id": "t7",
+    "start": 26.15,
+    "end": 28.95,
+    "text": "Use a piece of paper towel to turn off the faucet."
+   }
+  ]
+ }
+}

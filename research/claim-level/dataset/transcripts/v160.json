@@ -1,0 +1,40 @@
+{
+ "video_id": "v160",
+ "filename": "new_TikTok_7476888198380031287.mp4",
+ "relative_path": "new_TikTok_7476888198380031287.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:59",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.915,
+  "duration_seconds": 6.9,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 1.9,
+    "end": 6.84,
+    "text": "Love it and fight it, accuse it and deny it, I can't imagine"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 4,
+  "detections": [],
+  "captions": []
+ }
+}

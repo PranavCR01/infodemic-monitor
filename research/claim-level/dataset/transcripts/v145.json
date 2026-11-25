@@ -1,0 +1,82 @@
+{
+ "video_id": "v145",
+ "filename": "new_TikTok_7458197720013098273.mp4",
+ "relative_path": "new_TikTok_7458197720013098273.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:58",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.437,
+  "duration_seconds": 15.02,
+  "segments": []
+ },
+ "on_screen": {
+  "frames_sampled": 8,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "3",
+    "confidence": 0.91
+   },
+   {
+    "time": 2.0,
+    "text": "3",
+    "confidence": 0.908
+   },
+   {
+    "time": 4.0,
+    "text": "3",
+    "confidence": 0.903
+   },
+   {
+    "time": 6.0,
+    "text": "3",
+    "confidence": 0.903
+   },
+   {
+    "time": 8.0,
+    "text": "3",
+    "confidence": 0.89
+   },
+   {
+    "time": 10.0,
+    "text": "3",
+    "confidence": 0.891
+   },
+   {
+    "time": 12.0,
+    "text": "3",
+    "confidence": 0.896
+   },
+   {
+    "time": 14.0,
+    "text": "3",
+    "confidence": 0.894
+   }
+  ],
+  "captions": [
+   {
+    "text": "3",
+    "start": 0.0,
+    "end": 14.0,
+    "confidence": 0.91,
+    "id": "o1"
+   }
+  ]
+ }
+}

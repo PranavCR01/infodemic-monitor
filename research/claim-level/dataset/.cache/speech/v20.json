@@ -1,0 +1,44 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.996,
+  "duration_seconds": 26.54,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.36,
+    "text": "Did you know that if you place a sliced onion in 2 liters of water, followed by 3 cloves"
+   },
+   {
+    "id": "t2",
+    "start": 5.36,
+    "end": 10.6,
+    "text": "of garlic, a sliced lemon, ginger and cinnamon and let it boil for 10 minutes, you'll be"
+   },
+   {
+    "id": "t3",
+    "start": 10.6,
+    "end": 17.28,
+    "text": "preparing a remedy capable of relieving dry cough, bronchitis, expelling mucus stuck in"
+   },
+   {
+    "id": "t4",
+    "start": 17.28,
+    "end": 22.84,
+    "text": "the lungs, improving sinusitis and easing cold symptoms, can sweeten it with honey and"
+   },
+   {
+    "id": "t5",
+    "start": 22.84,
+    "end": 26.4,
+    "text": "drink it warm, and don't forget to follow for more healthy recipes."
+   }
+  ]
+ }
+}

@@ -1,0 +1,570 @@
+{
+ "video_id": "v150",
+ "filename": "new_TikTok_7464566918108761349.mp4",
+ "relative_path": "new_TikTok_7464566918108761349.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:58",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.991,
+  "duration_seconds": 12.61,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 2.22,
+    "end": 6.02,
+    "text": "¿En qué cuerpo tan impresionante? No tiene ni un defecto."
+   },
+   {
+    "id": "t2",
+    "start": 6.52,
+    "end": 8.52,
+    "text": "Yo iba a decir lo mismo del tuyo."
+   },
+   {
+    "id": "t3",
+    "start": 9.35,
+    "end": 11.35,
+    "text": "Dime cómo lograste esa musculatura."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 7,
+  "detections": [
+   {
+    "time": 2.0,
+    "text": "MI GYM BRO Y YO CADA",
+    "confidence": 0.739
+   },
+   {
+    "time": 2.0,
+    "text": "VEZ QUE NOS VEMOS EN",
+    "confidence": 0.997
+   },
+   {
+    "time": 2.0,
+    "text": "EL GYM",
+    "confidence": 0.995
+   },
+   {
+    "time": 2.0,
+    "text": "WWW_MECASPORTFUEL_COMMX",
+    "confidence": 0.824
+   },
+   {
+    "time": 2.0,
+    "text": "MEGA",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "SPOPT",
+    "confidence": 0.799
+   },
+   {
+    "time": 2.0,
+    "text": "FUEL",
+    "confidence": 0.976
+   },
+   {
+    "time": 4.0,
+    "text": "MI GYM BRO Y YO CADA",
+    "confidence": 0.738
+   },
+   {
+    "time": 4.0,
+    "text": "VEZ QUE NOS VEMOS EN",
+    "confidence": 0.998
+   },
+   {
+    "time": 4.0,
+    "text": "EL GYM",
+    "confidence": 0.995
+   },
+   {
+    "time": 4.0,
+    "text": "WWW_MECASPORTFUEL COMMX",
+    "confidence": 0.685
+   },
+   {
+    "time": 4.0,
+    "text": "MEGA",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "SPOPT",
+    "confidence": 0.705
+   },
+   {
+    "time": 4.0,
+    "text": "FUEL",
+    "confidence": 0.976
+   },
+   {
+    "time": 6.0,
+    "text": "MI GYM BRO Y YO CADA",
+    "confidence": 0.737
+   },
+   {
+    "time": 6.0,
+    "text": "VEZ QUE NOS VEMOS EN",
+    "confidence": 0.769
+   },
+   {
+    "time": 6.0,
+    "text": "EL GYM",
+    "confidence": 0.995
+   },
+   {
+    "time": 6.0,
+    "text": "La",
+    "confidence": 0.517
+   },
+   {
+    "time": 6.0,
+    "text": "WWW MECASPORTFUELS COMMX",
+    "confidence": 0.856
+   },
+   {
+    "time": 6.0,
+    "text": "MEGA",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "SPOPT",
+    "confidence": 0.665
+   },
+   {
+    "time": 6.0,
+    "text": "FUEL",
+    "confidence": 0.976
+   },
+   {
+    "time": 8.0,
+    "text": "MI GYM BRO Y YO CADA",
+    "confidence": 0.735
+   },
+   {
+    "time": 8.0,
+    "text": "VEZ QUE NOS VEMOS EN",
+    "confidence": 0.59
+   },
+   {
+    "time": 8.0,
+    "text": "EL GYM",
+    "confidence": 0.787
+   },
+   {
+    "time": 8.0,
+    "text": "MEGA",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "SPOPT",
+    "confidence": 0.659
+   },
+   {
+    "time": 8.0,
+    "text": "FUEL",
+    "confidence": 0.976
+   },
+   {
+    "time": 10.0,
+    "text": "MI GYM BRO Y YO CADA",
+    "confidence": 0.7
+   },
+   {
+    "time": 10.0,
+    "text": "VEZ QUE NOS VEMOS EN",
+    "confidence": 0.823
+   },
+   {
+    "time": 10.0,
+    "text": "EL GYM",
+    "confidence": 0.992
+   },
+   {
+    "time": 10.0,
+    "text": "WWW_MECASPORTFUEL_COMMX",
+    "confidence": 0.82
+   },
+   {
+    "time": 10.0,
+    "text": "MEGA",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "FUEL",
+    "confidence": 0.975
+   },
+   {
+    "time": 10.0,
+    "text": "\"SUPERA TUS LiMITES\"",
+    "confidence": 0.638
+   },
+   {
+    "time": 12.0,
+    "text": "MI GYM BRO Y YO CADA",
+    "confidence": 0.7
+   },
+   {
+    "time": 12.0,
+    "text": "VEZ QUE NOS VEMOS EN",
+    "confidence": 0.823
+   },
+   {
+    "time": 12.0,
+    "text": "EL GYM",
+    "confidence": 0.992
+   },
+   {
+    "time": 12.0,
+    "text": "WWW_MEGASPORTFUELCOM MX",
+    "confidence": 0.852
+   },
+   {
+    "time": 12.0,
+    "text": "SPOPT",
+    "confidence": 0.61
+   },
+   {
+    "time": 12.0,
+    "text": "MEGA",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "FUEL",
+    "confidence": 0.975
+   },
+   {
+    "time": 12.0,
+    "text": "\"SUPERA TUS LiMITES\"",
+    "confidence": 0.634
+   }
+  ],
+  "captions": [
+   {
+    "text": "MI GYM BRO Y YO CADA",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.739,
+    "id": "o1"
+   },
+   {
+    "text": "VEZ QUE NOS VEMOS EN",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.997,
+    "id": "o2"
+   },
+   {
+    "text": "EL GYM",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.995,
+    "id": "o3"
+   },
+   {
+    "text": "WWW_MECASPORTFUEL_COMMX",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.824,
+    "id": "o4"
+   },
+   {
+    "text": "MEGA",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o5"
+   },
+   {
+    "text": "SPOPT",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.799,
+    "id": "o6"
+   },
+   {
+    "text": "FUEL",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.976,
+    "id": "o7"
+   },
+   {
+    "text": "MI GYM BRO Y YO CADA",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.738,
+    "id": "o8"
+   },
+   {
+    "text": "VEZ QUE NOS VEMOS EN",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.998,
+    "id": "o9"
+   },
+   {
+    "text": "EL GYM",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.995,
+    "id": "o10"
+   },
+   {
+    "text": "WWW_MECASPORTFUEL COMMX",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.685,
+    "id": "o11"
+   },
+   {
+    "text": "MEGA",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o12"
+   },
+   {
+    "text": "SPOPT",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.705,
+    "id": "o13"
+   },
+   {
+    "text": "FUEL",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.976,
+    "id": "o14"
+   },
+   {
+    "text": "MI GYM BRO Y YO CADA",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.737,
+    "id": "o15"
+   },
+   {
+    "text": "VEZ QUE NOS VEMOS EN",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.769,
+    "id": "o16"
+   },
+   {
+    "text": "EL GYM",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.995,
+    "id": "o17"
+   },
+   {
+    "text": "La",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.517,
+    "id": "o18"
+   },
+   {
+    "text": "WWW MECASPORTFUELS COMMX",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.856,
+    "id": "o19"
+   },
+   {
+    "text": "MEGA",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o20"
+   },
+   {
+    "text": "SPOPT",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.665,
+    "id": "o21"
+   },
+   {
+    "text": "FUEL",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.976,
+    "id": "o22"
+   },
+   {
+    "text": "MI GYM BRO Y YO CADA",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.735,
+    "id": "o23"
+   },
+   {
+    "text": "VEZ QUE NOS VEMOS EN",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.59,
+    "id": "o24"
+   },
+   {
+    "text": "EL GYM",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.787,
+    "id": "o25"
+   },
+   {
+    "text": "MEGA",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o26"
+   },
+   {
+    "text": "SPOPT",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.659,
+    "id": "o27"
+   },
+   {
+    "text": "FUEL",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.976,
+    "id": "o28"
+   },
+   {
+    "text": "MI GYM BRO Y YO CADA",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.7,
+    "id": "o29"
+   },
+   {
+    "text": "VEZ QUE NOS VEMOS EN",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.823,
+    "id": "o30"
+   },
+   {
+    "text": "EL GYM",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.992,
+    "id": "o31"
+   },
+   {
+    "text": "WWW_MECASPORTFUEL_COMMX",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.82,
+    "id": "o32"
+   },
+   {
+    "text": "MEGA",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o33"
+   },
+   {
+    "text": "FUEL",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.975,
+    "id": "o34"
+   },
+   {
+    "text": "\"SUPERA TUS LiMITES\"",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.638,
+    "id": "o35"
+   },
+   {
+    "text": "MI GYM BRO Y YO CADA",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.7,
+    "id": "o36"
+   },
+   {
+    "text": "VEZ QUE NOS VEMOS EN",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.823,
+    "id": "o37"
+   },
+   {
+    "text": "EL GYM",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.992,
+    "id": "o38"
+   },
+   {
+    "text": "WWW_MEGASPORTFUELCOM MX",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.852,
+    "id": "o39"
+   },
+   {
+    "text": "SPOPT",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.61,
+    "id": "o40"
+   },
+   {
+    "text": "MEGA",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o41"
+   },
+   {
+    "text": "FUEL",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.975,
+    "id": "o42"
+   },
+   {
+    "text": "\"SUPERA TUS LiMITES\"",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.634,
+    "id": "o43"
+   }
+  ]
+ }
+}

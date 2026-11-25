@@ -1,0 +1,746 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.998,
+  "duration_seconds": 389.61,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 1.72,
+    "text": "I'm sorry, but this, I feel like this just needs to be said."
+   },
+   {
+    "id": "t2",
+    "start": 1.72,
+    "end": 3.16,
+    "text": "Nothing influences your care."
+   },
+   {
+    "id": "t3",
+    "start": 3.16,
+    "end": 5.16,
+    "text": "Hey, the color of your skin makes no difference."
+   },
+   {
+    "id": "t4",
+    "start": 5.16,
+    "end": 6.72,
+    "text": "How much money you have makes no difference."
+   },
+   {
+    "id": "t5",
+    "start": 6.72,
+    "end": 8.4,
+    "text": "What insurance you have makes no difference."
+   },
+   {
+    "id": "t6",
+    "start": 8.4,
+    "end": 10.24,
+    "text": "Whether you're a man or a woman makes no difference."
+   },
+   {
+    "id": "t7",
+    "start": 10.24,
+    "end": 11.92,
+    "text": "Occupation makes no difference."
+   },
+   {
+    "id": "t8",
+    "start": 11.92,
+    "end": 13.12,
+    "text": "Nothing matters."
+   },
+   {
+    "id": "t9",
+    "start": 13.12,
+    "end": 14.4,
+    "text": "Nothing makes a difference."
+   },
+   {
+    "id": "t10",
+    "start": 14.4,
+    "end": 17.32,
+    "text": "Oh man, this is all just so objectively false."
+   },
+   {
+    "id": "t11",
+    "start": 17.32,
+    "end": 20.16,
+    "text": "And it's unfortunate because ignorance with good intent"
+   },
+   {
+    "id": "t12",
+    "start": 20.16,
+    "end": 22.2,
+    "text": "doesn't negate the fact that it's still ignorance"
+   },
+   {
+    "id": "t13",
+    "start": 22.2,
+    "end": 24.16,
+    "text": "and misinformation that's being shared."
+   },
+   {
+    "id": "t14",
+    "start": 24.16,
+    "end": 26.32,
+    "text": "Misinformation because according to all the research"
+   },
+   {
+    "id": "t15",
+    "start": 26.32,
+    "end": 28.04,
+    "text": "and data, and I'm gonna share them with you,"
+   },
+   {
+    "id": "t16",
+    "start": 28.04,
+    "end": 29.56,
+    "text": "articles and research and journals"
+   },
+   {
+    "id": "t17",
+    "start": 29.56,
+    "end": 31.58,
+    "text": "within the National Institute of Health that confirm"
+   },
+   {
+    "id": "t18",
+    "start": 31.58,
+    "end": 35.26,
+    "text": "that yes, other things outside of your medical care needs"
+   },
+   {
+    "id": "t19",
+    "start": 35.26,
+    "end": 37.22,
+    "text": "does impact the quality of your care needs,"
+   },
+   {
+    "id": "t20",
+    "start": 37.22,
+    "end": 40.74,
+    "text": "such as racial demographics, socioeconomic statuses,"
+   },
+   {
+    "id": "t21",
+    "start": 40.74,
+    "end": 43.34,
+    "text": "and disabilities, even though that shouldn't be,"
+   },
+   {
+    "id": "t22",
+    "start": 43.34,
+    "end": 45.3,
+    "text": "and even though you would like to presume that it doesn't,"
+   },
+   {
+    "id": "t23",
+    "start": 45.3,
+    "end": 48.38,
+    "text": "because maybe you as an individual do not act that way"
+   },
+   {
+    "id": "t24",
+    "start": 48.38,
+    "end": 50.26,
+    "text": "as someone who works with the medical field."
+   },
+   {
+    "id": "t25",
+    "start": 50.26,
+    "end": 52.9,
+    "text": "It does not negate the fact that those things are true."
+   },
+   {
+    "id": "t26",
+    "start": 52.9,
+    "end": 55.74,
+    "text": "Those things do impact the quality of care that you receive,"
+   },
+   {
+    "id": "t27",
+    "start": 55.74,
+    "end": 58.06,
+    "text": "and those things do impact the way that you're going"
+   },
+   {
+    "id": "t28",
+    "start": 58.06,
+    "end": 61.2,
+    "text": "to be treated within the medical system, including within ERs."
+   },
+   {
+    "id": "t29",
+    "start": 61.2,
+    "end": 63.56,
+    "text": "A lot of people often only associate projection"
+   },
+   {
+    "id": "t30",
+    "start": 63.56,
+    "end": 66.4,
+    "text": "with projecting negative mindsets and negative mentalities"
+   },
+   {
+    "id": "t31",
+    "start": 66.4,
+    "end": 68.04,
+    "text": "and negative attributes into someone else,"
+   },
+   {
+    "id": "t32",
+    "start": 68.04,
+    "end": 70.16,
+    "text": "but you can also project the positive"
+   },
+   {
+    "id": "t33",
+    "start": 70.16,
+    "end": 71.8,
+    "text": "and that can also be ignorance"
+   },
+   {
+    "id": "t34",
+    "start": 71.8,
+    "end": 74.72,
+    "text": "and that can also lead to misinformation being spread."
+   },
+   {
+    "id": "t35",
+    "start": 74.72,
+    "end": 76.56,
+    "text": "The color of your skin makes no difference."
+   },
+   {
+    "id": "t36",
+    "start": 76.56,
+    "end": 79.08,
+    "text": "So this first article I'm gonna share is from Harvard."
+   },
+   {
+    "id": "t37",
+    "start": 79.08,
+    "end": 81.48,
+    "text": "This is about the racial bias in medicine."
+   },
+   {
+    "id": "t38",
+    "start": 81.48,
+    "end": 83.72,
+    "text": "Now, a lot of people within the world of medicine"
+   },
+   {
+    "id": "t39",
+    "start": 83.72,
+    "end": 86.08,
+    "text": "or anyone who's even just studied the history of medicine"
+   },
+   {
+    "id": "t40",
+    "start": 86.08,
+    "end": 87.92,
+    "text": "and science knows that a lot of physicians"
+   },
+   {
+    "id": "t41",
+    "start": 87.92,
+    "end": 91.04,
+    "text": "were taught misinformation regarding black people"
+   },
+   {
+    "id": "t42",
+    "start": 91.04,
+    "end": 92.68,
+    "text": "and how they had higher pain tolerance"
+   },
+   {
+    "id": "t43",
+    "start": 92.68,
+    "end": 94.16,
+    "text": "and how they had higher X, Y, and Z."
+   },
+   {
+    "id": "t44",
+    "start": 94.16,
+    "end": 95.56,
+    "text": "It's one of the reasons why black women"
+   },
+   {
+    "id": "t45",
+    "start": 95.56,
+    "end": 99.04,
+    "text": "die at disproportionately higher rates during childbirth."
+   },
+   {
+    "id": "t46",
+    "start": 99.04,
+    "end": 100.36,
+    "text": "In this article, it goes on to say"
+   },
+   {
+    "id": "t47",
+    "start": 100.36,
+    "end": 101.8,
+    "text": "that several years ago, researchers"
+   },
+   {
+    "id": "t48",
+    "start": 101.8,
+    "end": 103.44,
+    "text": "at the University of Virginia"
+   },
+   {
+    "id": "t49",
+    "start": 103.44,
+    "end": 106.28,
+    "text": "pro-oped the beliefs of 222 white medical students"
+   },
+   {
+    "id": "t50",
+    "start": 106.28,
+    "end": 107.68,
+    "text": "and residents and published results"
+   },
+   {
+    "id": "t51",
+    "start": 107.68,
+    "end": 110.32,
+    "text": "in the proceedings of the National Academy of Science."
+   },
+   {
+    "id": "t52",
+    "start": 110.32,
+    "end": 113.02,
+    "text": "Half of them held false physiological beliefs"
+   },
+   {
+    "id": "t53",
+    "start": 113.02,
+    "end": 113.96,
+    "text": "about African-Americans."
+   },
+   {
+    "id": "t54",
+    "start": 113.96,
+    "end": 116.2,
+    "text": "Nearly 60% thought their skins were thicker"
+   },
+   {
+    "id": "t55",
+    "start": 116.2,
+    "end": 120.28,
+    "text": "12% thought that their nerve endings were less sensitive than those of white people."
+   },
+   {
+    "id": "t56",
+    "start": 120.28,
+    "end": 124.84,
+    "text": "The entire article goes on to share how providers within the medical system and medical field,"
+   },
+   {
+    "id": "t57",
+    "start": 124.84,
+    "end": 128.92,
+    "text": "even in the ER, will treat people differently, which means that the quality of care that they"
+   },
+   {
+    "id": "t58",
+    "start": 128.92,
+    "end": 133.08,
+    "text": "receive will be different based on their beliefs about your racial identity."
+   },
+   {
+    "id": "t59",
+    "start": 133.08,
+    "end": 136.76,
+    "text": "Even the American Bar Association has shared information about this. You can find it on"
+   },
+   {
+    "id": "t60",
+    "start": 136.76,
+    "end": 141.56,
+    "text": "their website. So the current organization called the National Academy of Medicine,"
+   },
+   {
+    "id": "t61",
+    "start": 141.56,
+    "end": 145.4,
+    "text": "they released a report documenting that the poverty in which black people disproportionately"
+   },
+   {
+    "id": "t62",
+    "start": 145.4,
+    "end": 149.32,
+    "text": "live cannot account for the fact that black people are sicker and have shorter life spans"
+   },
+   {
+    "id": "t63",
+    "start": 149.32,
+    "end": 153.72,
+    "text": "than their white compliments. NAMM found that racial and ethnic minorities receive lower"
+   },
+   {
+    "id": "t64",
+    "start": 153.72,
+    "end": 158.44,
+    "text": "quality health care than white people, even when insurance status, income, age, and severity"
+   },
+   {
+    "id": "t65",
+    "start": 158.44,
+    "end": 163.24,
+    "text": "of conditions are comparable. By lower quality health care, NAMM means the concrete and"
+   },
+   {
+    "id": "t66",
+    "start": 163.24,
+    "end": 168.36,
+    "text": "inferior care that physicians give their black patients. NAMM reported that minority persons"
+   },
+   {
+    "id": "t67",
+    "start": 168.36,
+    "end": 173.32,
+    "text": "are less likely than white people to be given appropriate cardiac care to receive kidney"
+   },
+   {
+    "id": "t68",
+    "start": 173.32,
+    "end": 178.04,
+    "text": "dialysis or transplants, and to receive the best treatments for stroke, cancer, or AIDS."
+   },
+   {
+    "id": "t69",
+    "start": 178.04,
+    "end": 182.04,
+    "text": "You can find this one in the National Institute of Health Database. This one's called Implicit"
+   },
+   {
+    "id": "t70",
+    "start": 182.04,
+    "end": 187.16,
+    "text": "Racial Ethnic Bias Among Healthcare Professionals, and it's influence on healthcare outcomes,"
+   },
+   {
+    "id": "t71",
+    "start": 187.16,
+    "end": 192.36,
+    "text": "a systematic review. States that in the United States of America, people of color face disparities"
+   },
+   {
+    "id": "t72",
+    "start": 192.36,
+    "end": 196.84,
+    "text": "and access to healthcare, the quality of care received and the health outcomes. The attitudes"
+   },
+   {
+    "id": "t73",
+    "start": 196.84,
+    "end": 200.84,
+    "text": "and behaviors of healthcare providers have been identified as one of the many factors that contribute"
+   },
+   {
+    "id": "t74",
+    "start": 200.84,
+    "end": 205.32,
+    "text": "to help disparities. This was their conclusion, but I do recommend you read the entire article."
+   },
+   {
+    "id": "t75",
+    "start": 205.32,
+    "end": 210.36,
+    "text": "Most health care providers appear to have implicit bias in terms of positive attitudes toward whites"
+   },
+   {
+    "id": "t76",
+    "start": 210.36,
+    "end": 214.2,
+    "text": "and negative attitudes toward people of color. And by the way, this article defined that the"
+   },
+   {
+    "id": "t77",
+    "start": 214.2,
+    "end": 219.16,
+    "text": "treatment of people of color is consistent across the board, comparable to the white people. So"
+   },
+   {
+    "id": "t78",
+    "start": 219.16,
+    "end": 224.28,
+    "text": "it doesn't matter if you're Latino or from India or African American or Native American, it doesn't"
+   },
+   {
+    "id": "t79",
+    "start": 224.28,
+    "end": 227.72,
+    "text": "matter. You're going to receive that lower care. There's not really like disproportionate levels"
+   },
+   {
+    "id": "t80",
+    "start": 227.72,
+    "end": 232.68,
+    "text": "between people of color but there is people of color versus white people. Positive attitudes"
+   },
+   {
+    "id": "t81",
+    "start": 232.68,
+    "end": 236.52,
+    "text": "toward whites and negative attitudes toward people of color. How much money you have makes no"
+   },
+   {
+    "id": "t82",
+    "start": 236.52,
+    "end": 240.12,
+    "text": "difference. This article also in the National Institute of Health talks about health care"
+   },
+   {
+    "id": "t83",
+    "start": 240.12,
+    "end": 244.44,
+    "text": "professionals implicit bias of patients with low socioeconomic status and its effect on clinical"
+   },
+   {
+    "id": "t84",
+    "start": 244.44,
+    "end": 249.64,
+    "text": "decision making. Research indicates that people with lower socioeconomic status receive inferior"
+   },
+   {
+    "id": "t85",
+    "start": 249.64,
+    "end": 255.0,
+    "text": "health care and experience poorer health outcomes compared with those of higher socioeconomic status"
+   },
+   {
+    "id": "t86",
+    "start": 255.0,
+    "end": 258.04,
+    "text": "in part due to health care professionals bias."
+   },
+   {
+    "id": "t87",
+    "start": 258.04,
+    "end": 260.76,
+    "text": "Here's another article in the National Institute of Health talking about the"
+   },
+   {
+    "id": "t88",
+    "start": 260.76,
+    "end": 264.76,
+    "text": "explicit and implicit disability attitudes of health care providers."
+   },
+   {
+    "id": "t89",
+    "start": 264.76,
+    "end": 268.52,
+    "text": "This one talked about how even though providers' explicit attitudes"
+   },
+   {
+    "id": "t90",
+    "start": 268.52,
+    "end": 272.52,
+    "text": "indicate little prejudice because that's based on what they're aware of,"
+   },
+   {
+    "id": "t91",
+    "start": 272.52,
+    "end": 276.12,
+    "text": "their implicit attitudes revealed they moderately preferred"
+   },
+   {
+    "id": "t92",
+    "start": 276.12,
+    "end": 280.44,
+    "text": "non-disabled people, they were aversive ableist. This correlates of"
+   },
+   {
+    "id": "t93",
+    "start": 280.44,
+    "end": 283.64,
+    "text": "professionals' explicit and implicit attitudes also"
+   },
+   {
+    "id": "t94",
+    "start": 283.64,
+    "end": 287.68,
+    "text": "included age, gender, political orientation, and having relationships with disability."
+   },
+   {
+    "id": "t95",
+    "start": 287.68,
+    "end": 291.92,
+    "text": "The study revealed that despite a majority of providers self-reporting not being biased"
+   },
+   {
+    "id": "t96",
+    "start": 291.92,
+    "end": 296.96,
+    "text": "against people with disabilities, implicitly the overwhelming majority were biased, which"
+   },
+   {
+    "id": "t97",
+    "start": 296.96,
+    "end": 300.2,
+    "text": "then resulted in lower quality of care."
+   },
+   {
+    "id": "t98",
+    "start": 300.2,
+    "end": 306.04,
+    "text": "So when a white man has the privilege to come on the internet and project how maybe he will"
+   },
+   {
+    "id": "t99",
+    "start": 306.04,
+    "end": 311.2,
+    "text": "operate as someone who is a provider in the ER as a nurse, that is not representative of"
+   },
+   {
+    "id": "t100",
+    "start": 311.2,
+    "end": 312.72,
+    "text": "the entire system."
+   },
+   {
+    "id": "t101",
+    "start": 312.72,
+    "end": 317.28,
+    "text": "And so to say that nothing affects or impacts the quality of care you're going to receive"
+   },
+   {
+    "id": "t102",
+    "start": 317.28,
+    "end": 322.52,
+    "text": "when you come into the ER, come into the hospital, that's misinformation, anti-intellectualism."
+   },
+   {
+    "id": "t103",
+    "start": 322.52,
+    "end": 326.4,
+    "text": "A lot of people think anti-intellectualism is just critiquing academia and critiquing"
+   },
+   {
+    "id": "t104",
+    "start": 326.4,
+    "end": 328.16,
+    "text": "the people who are experts."
+   },
+   {
+    "id": "t105",
+    "start": 328.16,
+    "end": 333.68,
+    "text": "But to not be acknowledging what the research and data says, that's also anti-intellectual."
+   },
+   {
+    "id": "t106",
+    "start": 333.68,
+    "end": 337.84,
+    "text": "Even if the research and data shows the biases that exist within the experts, we need to"
+   },
+   {
+    "id": "t107",
+    "start": 337.84,
+    "end": 341.58,
+    "text": "acknowledge that because that's the only way that we can actually make effective sort of"
+   },
+   {
+    "id": "t108",
+    "start": 341.58,
+    "end": 344.94,
+    "text": "of changes on a societal and legalistic level."
+   },
+   {
+    "id": "t109",
+    "start": 344.94,
+    "end": 347.5,
+    "text": "Yes, if you are poor, you are more likely"
+   },
+   {
+    "id": "t110",
+    "start": 347.5,
+    "end": 349.74,
+    "text": "to receive less quality of care."
+   },
+   {
+    "id": "t111",
+    "start": 349.74,
+    "end": 351.26,
+    "text": "People who work at hospitals will tell you"
+   },
+   {
+    "id": "t112",
+    "start": 351.26,
+    "end": 354.78,
+    "text": "they have VIP patients who get put into different rooms"
+   },
+   {
+    "id": "t113",
+    "start": 354.78,
+    "end": 356.38,
+    "text": "and treated a lot better."
+   },
+   {
+    "id": "t114",
+    "start": 356.38,
+    "end": 358.86,
+    "text": "If you are black, if you are Hispanic,"
+   },
+   {
+    "id": "t115",
+    "start": 358.86,
+    "end": 361.26,
+    "text": "if you're Native American, if you are Middle Eastern,"
+   },
+   {
+    "id": "t116",
+    "start": 361.26,
+    "end": 363.98,
+    "text": "if you appear to visibly be not white,"
+   },
+   {
+    "id": "t117",
+    "start": 363.98,
+    "end": 367.22,
+    "text": "you will receive worse quality care, on average,"
+   },
+   {
+    "id": "t118",
+    "start": 367.22,
+    "end": 369.86,
+    "text": "according to the data, according to the research."
+   },
+   {
+    "id": "t119",
+    "start": 369.86,
+    "end": 375.7,
+    "text": "If you are disabled, you will more likely experience or have a higher likelihood of experiencing"
+   },
+   {
+    "id": "t120",
+    "start": 375.7,
+    "end": 380.46,
+    "text": "poor treatment, poor quality care in terms of the care that you're receiving at a hospital"
+   },
+   {
+    "id": "t121",
+    "start": 380.46,
+    "end": 381.46,
+    "text": "or in the ER."
+   },
+   {
+    "id": "t122",
+    "start": 381.46,
+    "end": 385.18,
+    "text": "Again, intent doesn't matter when it comes to spreading misinformation."
+   }
+  ]
+ }
+}

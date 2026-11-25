@@ -1,0 +1,960 @@
+{
+ "video_id": "v92",
+ "filename": "new_Instagram_CoAlZZgJtkU.mp4",
+ "relative_path": "new_Instagram_CoAlZZgJtkU.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:55",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 33.18,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.08,
+    "text": "What if I told you you could heal whatever inflammatory disease that you have and start"
+   },
+   {
+    "id": "t2",
+    "start": 5.08,
+    "end": 6.6,
+    "text": "doing it for free?"
+   },
+   {
+    "id": "t3",
+    "start": 6.6,
+    "end": 8.48,
+    "text": "Well, it is free."
+   },
+   {
+    "id": "t4",
+    "start": 8.48,
+    "end": 10.68,
+    "text": "You can heal any kind of disease that you have for free."
+   },
+   {
+    "id": "t5",
+    "start": 10.68,
+    "end": 12.72,
+    "text": "Basically, all you have to do is get your feet grounded."
+   },
+   {
+    "id": "t6",
+    "start": 12.72,
+    "end": 17.08,
+    "text": "A body that is consistently grounded cannot sustain chronic inflammation."
+   },
+   {
+    "id": "t7",
+    "start": 17.08,
+    "end": 22.0,
+    "text": "It's not the endocural, but it will disrupt the inflammation cycle enough for your body"
+   },
+   {
+    "id": "t8",
+    "start": 22.0,
+    "end": 24.32,
+    "text": "to start repairing itself."
+   },
+   {
+    "id": "t9",
+    "start": 24.32,
+    "end": 26.8,
+    "text": "You can start healing for free, and it's really simple."
+   },
+   {
+    "id": "t10",
+    "start": 26.8,
+    "end": 27.8,
+    "text": "Get your body grounded."
+   },
+   {
+    "id": "t11",
+    "start": 27.8,
+    "end": 30.54,
+    "text": "or grounding sheets and if you don't believe me go watch everything in the"
+   },
+   {
+    "id": "t12",
+    "start": 30.54,
+    "end": 34.68,
+    "text": "movie and then come back and tell me that I'm wrong. You're welcome."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 17,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "you you could",
+    "confidence": 0.754
+   },
+   {
+    "time": 0.0,
+    "text": "heal",
+    "confidence": 0.995
+   },
+   {
+    "time": 2.0,
+    "text": "watever",
+    "confidence": 0.648
+   },
+   {
+    "time": 2.0,
+    "text": "iniflammatory",
+    "confidence": 0.686
+   },
+   {
+    "time": 2.0,
+    "text": "disease that",
+    "confidence": 0.922
+   },
+   {
+    "time": 2.0,
+    "text": "you have",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Columbia",
+    "confidence": 0.89
+   },
+   {
+    "time": 4.0,
+    "text": "whatever",
+    "confidence": 0.773
+   },
+   {
+    "time": 4.0,
+    "text": "you have",
+    "confidence": 0.801
+   },
+   {
+    "time": 4.0,
+    "text": "Columbia",
+    "confidence": 0.832
+   },
+   {
+    "time": 6.0,
+    "text": "Start doing",
+    "confidence": 0.998
+   },
+   {
+    "time": 6.0,
+    "text": "and",
+    "confidence": 0.923
+   },
+   {
+    "time": 6.0,
+    "text": "ft for free",
+    "confidence": 0.574
+   },
+   {
+    "time": 8.0,
+    "text": "what is iree",
+    "confidence": 0.79
+   },
+   {
+    "time": 10.0,
+    "text": "you cam heal",
+    "confidence": 0.726
+   },
+   {
+    "time": 10.0,
+    "text": "disease that",
+    "confidence": 0.995
+   },
+   {
+    "time": 10.0,
+    "text": "yoU havve for",
+    "confidence": 0.749
+   },
+   {
+    "time": 10.0,
+    "text": "free",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.0,
+    "text": "basically all",
+    "confidence": 0.985
+   },
+   {
+    "time": 12.0,
+    "text": "get",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "feet groundeed",
+    "confidence": 0.914
+   },
+   {
+    "time": 12.0,
+    "text": "Columbia",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "body thatt is",
+    "confidence": 0.587
+   },
+   {
+    "time": 14.0,
+    "text": "a",
+    "confidence": 0.998
+   },
+   {
+    "time": 14.0,
+    "text": "consistently",
+    "confidence": 0.891
+   },
+   {
+    "time": 14.0,
+    "text": "grounded",
+    "confidence": 0.986
+   },
+   {
+    "time": 14.0,
+    "text": "Inflammation is",
+    "confidence": 0.886
+   },
+   {
+    "time": 14.0,
+    "text": "the ROOT CAUSE",
+    "confidence": 0.987
+   },
+   {
+    "time": 14.0,
+    "text": "Of every disease",
+    "confidence": 0.787
+   },
+   {
+    "time": 14.0,
+    "text": "known to man",
+    "confidence": 0.779
+   },
+   {
+    "time": 14.0,
+    "text": "Thank about it",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "Columbia",
+    "confidence": 0.95
+   },
+   {
+    "time": 16.0,
+    "text": "cann@t sustain",
+    "confidence": 0.622
+   },
+   {
+    "time": 16.0,
+    "text": "chronic",
+    "confidence": 0.972
+   },
+   {
+    "time": 16.0,
+    "text": "inflamnmation",
+    "confidence": 0.71
+   },
+   {
+    "time": 16.0,
+    "text": "Inflammation is",
+    "confidence": 0.708
+   },
+   {
+    "time": 16.0,
+    "text": "the ROOT CAUSE",
+    "confidence": 0.897
+   },
+   {
+    "time": 16.0,
+    "text": "Of every disease",
+    "confidence": 0.779
+   },
+   {
+    "time": 16.0,
+    "text": "known to man",
+    "confidence": 0.863
+   },
+   {
+    "time": 16.0,
+    "text": "Thank about it",
+    "confidence": 0.795
+   },
+   {
+    "time": 16.0,
+    "text": "Columbia",
+    "confidence": 0.998
+   },
+   {
+    "time": 18.0,
+    "text": "all cure all",
+    "confidence": 0.529
+   },
+   {
+    "time": 18.0,
+    "text": "Inflammation is",
+    "confidence": 0.832
+   },
+   {
+    "time": 18.0,
+    "text": "the ROOT CAUSE",
+    "confidence": 0.895
+   },
+   {
+    "time": 18.0,
+    "text": "Of every disease",
+    "confidence": 0.971
+   },
+   {
+    "time": 18.0,
+    "text": "known to mano",
+    "confidence": 0.664
+   },
+   {
+    "time": 18.0,
+    "text": "Thank about it",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "Columbia",
+    "confidence": 0.924
+   },
+   {
+    "time": 20.0,
+    "text": "disrupt the",
+    "confidence": 0.57
+   },
+   {
+    "time": 20.0,
+    "text": "inflammation",
+    "confidence": 0.929
+   },
+   {
+    "time": 20.0,
+    "text": "cycle",
+    "confidence": 0.976
+   },
+   {
+    "time": 20.0,
+    "text": "~Columbia",
+    "confidence": 0.963
+   },
+   {
+    "time": 22.0,
+    "text": "enough for",
+    "confidence": 0.763
+   },
+   {
+    "time": 22.0,
+    "text": "your body t",
+    "confidence": 0.807
+   },
+   {
+    "time": 22.0,
+    "text": "Start repairing",
+    "confidence": 0.753
+   },
+   {
+    "time": 22.0,
+    "text": "ftself",
+    "confidence": 0.706
+   },
+   {
+    "time": 24.0,
+    "text": "~Columbia",
+    "confidence": 0.579
+   },
+   {
+    "time": 26.0,
+    "text": "and it?s really",
+    "confidence": 0.916
+   },
+   {
+    "time": 26.0,
+    "text": "simple",
+    "confidence": 0.99
+   },
+   {
+    "time": 28.0,
+    "text": "groundling",
+    "confidence": 0.795
+   },
+   {
+    "time": 28.0,
+    "text": "mats @r",
+    "confidence": 0.77
+   },
+   {
+    "time": 28.0,
+    "text": "groundling",
+    "confidence": 0.837
+   },
+   {
+    "time": 28.0,
+    "text": "sheets",
+    "confidence": 0.989
+   },
+   {
+    "time": 28.0,
+    "text": "Columbia",
+    "confidence": 0.989
+   },
+   {
+    "time": 30.0,
+    "text": "Watch",
+    "confidence": 0.789
+   },
+   {
+    "time": 30.0,
+    "text": "g",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.0,
+    "text": "everything the",
+    "confidence": 0.904
+   },
+   {
+    "time": 30.0,
+    "text": "movl",
+    "confidence": 0.912
+   },
+   {
+    "time": 32.0,
+    "text": "and then come",
+    "confidence": 0.67
+   },
+   {
+    "time": 32.0,
+    "text": "back and tel",
+    "confidence": 0.829
+   },
+   {
+    "time": 32.0,
+    "text": "wrong",
+    "confidence": 1.0
+   }
+  ],
+  "captions": [
+   {
+    "text": "you you could",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.754,
+    "id": "o1"
+   },
+   {
+    "text": "heal",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.995,
+    "id": "o2"
+   },
+   {
+    "text": "watever",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.648,
+    "id": "o3"
+   },
+   {
+    "text": "iniflammatory",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.686,
+    "id": "o4"
+   },
+   {
+    "text": "disease that",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.922,
+    "id": "o5"
+   },
+   {
+    "text": "you have",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o6"
+   },
+   {
+    "text": "Columbia",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.89,
+    "id": "o7"
+   },
+   {
+    "text": "whatever",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.773,
+    "id": "o8"
+   },
+   {
+    "text": "you have",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.801,
+    "id": "o9"
+   },
+   {
+    "text": "Columbia",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.832,
+    "id": "o10"
+   },
+   {
+    "text": "Start doing",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.998,
+    "id": "o11"
+   },
+   {
+    "text": "and",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.923,
+    "id": "o12"
+   },
+   {
+    "text": "ft for free",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.574,
+    "id": "o13"
+   },
+   {
+    "text": "what is iree",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.79,
+    "id": "o14"
+   },
+   {
+    "text": "you cam heal",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.726,
+    "id": "o15"
+   },
+   {
+    "text": "disease that",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.995,
+    "id": "o16"
+   },
+   {
+    "text": "yoU havve for",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.749,
+    "id": "o17"
+   },
+   {
+    "text": "free",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o18"
+   },
+   {
+    "text": "basically all",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.985,
+    "id": "o19"
+   },
+   {
+    "text": "get",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o20"
+   },
+   {
+    "text": "feet groundeed",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.914,
+    "id": "o21"
+   },
+   {
+    "text": "Columbia",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o22"
+   },
+   {
+    "text": "body thatt is",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.587,
+    "id": "o23"
+   },
+   {
+    "text": "a",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.998,
+    "id": "o24"
+   },
+   {
+    "text": "consistently",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.891,
+    "id": "o25"
+   },
+   {
+    "text": "grounded",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.986,
+    "id": "o26"
+   },
+   {
+    "text": "Inflammation is",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.886,
+    "id": "o27"
+   },
+   {
+    "text": "the ROOT CAUSE",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.987,
+    "id": "o28"
+   },
+   {
+    "text": "Of every disease",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.787,
+    "id": "o29"
+   },
+   {
+    "text": "known to man",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.779,
+    "id": "o30"
+   },
+   {
+    "text": "Thank about it",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o31"
+   },
+   {
+    "text": "Columbia",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.95,
+    "id": "o32"
+   },
+   {
+    "text": "cann@t sustain",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.622,
+    "id": "o33"
+   },
+   {
+    "text": "chronic",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.972,
+    "id": "o34"
+   },
+   {
+    "text": "inflamnmation",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.71,
+    "id": "o35"
+   },
+   {
+    "text": "Inflammation is",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.708,
+    "id": "o36"
+   },
+   {
+    "text": "the ROOT CAUSE",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.897,
+    "id": "o37"
+   },
+   {
+    "text": "Of every disease",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.779,
+    "id": "o38"
+   },
+   {
+    "text": "known to man",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.863,
+    "id": "o39"
+   },
+   {
+    "text": "Thank about it",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.795,
+    "id": "o40"
+   },
+   {
+    "text": "Columbia",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.998,
+    "id": "o41"
+   },
+   {
+    "text": "all cure all",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.529,
+    "id": "o42"
+   },
+   {
+    "text": "Inflammation is",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.832,
+    "id": "o43"
+   },
+   {
+    "text": "the ROOT CAUSE",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.895,
+    "id": "o44"
+   },
+   {
+    "text": "Of every disease",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.971,
+    "id": "o45"
+   },
+   {
+    "text": "known to mano",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.664,
+    "id": "o46"
+   },
+   {
+    "text": "Thank about it",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 1.0,
+    "id": "o47"
+   },
+   {
+    "text": "Columbia",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.924,
+    "id": "o48"
+   },
+   {
+    "text": "disrupt the",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.57,
+    "id": "o49"
+   },
+   {
+    "text": "inflammation",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.929,
+    "id": "o50"
+   },
+   {
+    "text": "cycle",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.976,
+    "id": "o51"
+   },
+   {
+    "text": "~Columbia",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.963,
+    "id": "o52"
+   },
+   {
+    "text": "enough for",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.763,
+    "id": "o53"
+   },
+   {
+    "text": "your body t",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.807,
+    "id": "o54"
+   },
+   {
+    "text": "Start repairing",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.753,
+    "id": "o55"
+   },
+   {
+    "text": "ftself",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.706,
+    "id": "o56"
+   },
+   {
+    "text": "~Columbia",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.579,
+    "id": "o57"
+   },
+   {
+    "text": "and it?s really",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.916,
+    "id": "o58"
+   },
+   {
+    "text": "simple",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.99,
+    "id": "o59"
+   },
+   {
+    "text": "groundling",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.795,
+    "id": "o60"
+   },
+   {
+    "text": "mats @r",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.77,
+    "id": "o61"
+   },
+   {
+    "text": "groundling",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.837,
+    "id": "o62"
+   },
+   {
+    "text": "sheets",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.989,
+    "id": "o63"
+   },
+   {
+    "text": "Columbia",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.989,
+    "id": "o64"
+   },
+   {
+    "text": "Watch",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.789,
+    "id": "o65"
+   },
+   {
+    "text": "g",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.999,
+    "id": "o66"
+   },
+   {
+    "text": "everything the",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.904,
+    "id": "o67"
+   },
+   {
+    "text": "movl",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.912,
+    "id": "o68"
+   },
+   {
+    "text": "and then come",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.67,
+    "id": "o69"
+   },
+   {
+    "text": "back and tel",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.829,
+    "id": "o70"
+   },
+   {
+    "text": "wrong",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o71"
+   }
+  ]
+ }
+}

@@ -1,0 +1,6606 @@
+{
+ "video_id": "v125",
+ "filename": "new_TikTok_7248639001706515755.mp4",
+ "relative_path": "new_TikTok_7248639001706515755.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@kennythetrainer",
+ "extracted_at": "2026-11-23T08:45:57",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.997,
+  "duration_seconds": 112.08,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.66,
+    "end": 9.25,
+    "text": "Hey, look, I'm just here to report the news y'all can Google it. Don't everybody believe in Google go Google that shit"
+   },
+   {
+    "id": "t2",
+    "start": 9.25,
+    "end": 11.97,
+    "text": "Do you own research to find out if it's true or not?"
+   },
+   {
+    "id": "t3",
+    "start": 12.49,
+    "end": 17.61,
+    "text": "But this girl says I watched a video saying they use"
+   },
+   {
+    "id": "t4",
+    "start": 18.65,
+    "end": 23.73,
+    "text": "Pre-cancer cells now. This is in regard to my video about the lab grown meat"
+   },
+   {
+    "id": "t5",
+    "start": 24.43,
+    "end": 26.43,
+    "text": "Now the Associated Press"
+   },
+   {
+    "id": "t6",
+    "start": 26.63,
+    "end": 30.54,
+    "text": "Did a video on the lab grown meat?"
+   },
+   {
+    "id": "t7",
+    "start": 30.54,
+    "end": 35.18,
+    "text": "You might be right, Reesey Cup. Check this out."
+   },
+   {
+    "id": "t8",
+    "start": 35.18,
+    "end": 40.18,
+    "text": "The U.S. approved the sale of lab-grown meat made from animal cells for the first time."
+   },
+   {
+    "id": "t9",
+    "start": 40.18,
+    "end": 43.18,
+    "text": "What is it? We spoke with a California company who creates it."
+   },
+   {
+    "id": "t10",
+    "start": 43.18,
+    "end": 48.18,
+    "text": "So cultivated meat, put really simply, is real meat that is grown from animal cells."
+   },
+   {
+    "id": "t11",
+    "start": 48.18,
+    "end": 54.18,
+    "text": "These cells can come from a biopsy of a living animal, a fertilized egg, or a special bank of stored cells."
+   },
+   {
+    "id": "t12",
+    "start": 54.18,
+    "end": 57.18,
+    "text": "Companies choose the cells most likely to reproduce quickly."
+   },
+   {
+    "id": "t13",
+    "start": 57.18,
+    "end": 65.1,
+    "text": "Okay, no wait. Did you hear what they said? The cells that reproduce the fastest."
+   },
+   {
+    "id": "t14",
+    "start": 65.1,
+    "end": 70.34,
+    "text": "So I went and looked up one of the most rapidly growing cells. Look at that."
+   },
+   {
+    "id": "t15",
+    "start": 70.34,
+    "end": 80.04,
+    "text": "Cancer cells. Typically grow and divide more rapidly than normal cells. And the"
+   },
+   {
+    "id": "t16",
+    "start": 80.04,
+    "end": 85.28,
+    "text": "cells multiply over and over and over. After several days or weeks, the meat is"
+   },
+   {
+    "id": "t17",
+    "start": 85.28,
+    "end": 90.94,
+    "text": "removed from the tanks to be shaped into cutlets, hot dogs, nuggets, and sausages."
+   },
+   {
+    "id": "t18",
+    "start": 90.94,
+    "end": 93.74,
+    "text": "Then it's ready to be cooked, served, and eaten."
+   },
+   {
+    "id": "t19",
+    "start": 93.74,
+    "end": 101.64,
+    "text": "So it sounds like they're taking the cancerous cells or pre-cancerous cells from these animals"
+   },
+   {
+    "id": "t20",
+    "start": 101.64,
+    "end": 107.76,
+    "text": "to reproduce, to make the meat that we bout to eat."
+   },
+   {
+    "id": "t21",
+    "start": 107.76,
+    "end": 112.06,
+    "text": "Well, you all about to eat cause I don't fuck with meat, pause."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 57,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "What dvall tik",
+    "confidence": 0.638
+   },
+   {
+    "time": 0.0,
+    "text": "Is It \"Cancer Mlade Meat\"???",
+    "confidence": 0.596
+   },
+   {
+    "time": 2.0,
+    "text": "Whatdovall dik",
+    "confidence": 0.653
+   },
+   {
+    "time": 2.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.633
+   },
+   {
+    "time": 2.0,
+    "text": "hey",
+    "confidence": 0.792
+   },
+   {
+    "time": 2.0,
+    "text": "look Im just here to",
+    "confidence": 0.819
+   },
+   {
+    "time": 2.0,
+    "text": "report",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "the",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "news",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Is It \"Cancer Made Mleat\"???",
+    "confidence": 0.592
+   },
+   {
+    "time": 4.0,
+    "text": "hey",
+    "confidence": 0.708
+   },
+   {
+    "time": 4.0,
+    "text": "look I'm just here to",
+    "confidence": 0.582
+   },
+   {
+    "time": 4.0,
+    "text": "report the news",
+    "confidence": 0.898
+   },
+   {
+    "time": 6.0,
+    "text": "What dVall tik",
+    "confidence": 0.512
+   },
+   {
+    "time": 6.0,
+    "text": "Is It \"Cancer Made Meat\"???",
+    "confidence": 0.75
+   },
+   {
+    "time": 6.0,
+    "text": "Vall can Google it",
+    "confidence": 0.577
+   },
+   {
+    "time": 8.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.707
+   },
+   {
+    "time": 8.0,
+    "text": "don't everybody believefn",
+    "confidence": 0.823
+   },
+   {
+    "time": 8.0,
+    "text": "Google",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "4",
+    "confidence": 0.716
+   },
+   {
+    "time": 10.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.698
+   },
+   {
+    "time": 10.0,
+    "text": "do vour own research to find",
+    "confidence": 0.892
+   },
+   {
+    "time": 10.0,
+    "text": "out if it's true or not",
+    "confidence": 0.634
+   },
+   {
+    "time": 12.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.555
+   },
+   {
+    "time": 12.0,
+    "text": "do vour own research to find",
+    "confidence": 0.868
+   },
+   {
+    "time": 12.0,
+    "text": "out if it's true or not",
+    "confidence": 0.88
+   },
+   {
+    "time": 14.0,
+    "text": "What dvall tik",
+    "confidence": 0.526
+   },
+   {
+    "time": 14.0,
+    "text": "'Cancer Mlade Mleat\"???",
+    "confidence": 0.514
+   },
+   {
+    "time": 14.0,
+    "text": "Is It",
+    "confidence": 0.834
+   },
+   {
+    "time": 14.0,
+    "text": "but this girl says",
+    "confidence": 0.837
+   },
+   {
+    "time": 14.0,
+    "text": "watched a",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.0,
+    "text": "video saying they use",
+    "confidence": 0.854
+   },
+   {
+    "time": 14.0,
+    "text": "pre",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "cancer cells",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "Reply to Ressiecup921's",
+    "confidence": 0.926
+   },
+   {
+    "time": 16.0,
+    "text": "comment",
+    "confidence": 0.715
+   },
+   {
+    "time": 16.0,
+    "text": "watched video",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "saying they use pre",
+    "confidence": 0.758
+   },
+   {
+    "time": 16.0,
+    "text": "cancer cells",
+    "confidence": 0.88
+   },
+   {
+    "time": 16.0,
+    "text": "What dvall tik",
+    "confidence": 0.552
+   },
+   {
+    "time": 16.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.55
+   },
+   {
+    "time": 16.0,
+    "text": "but this girl says",
+    "confidence": 0.807
+   },
+   {
+    "time": 16.0,
+    "text": "watched a",
+    "confidence": 0.658
+   },
+   {
+    "time": 16.0,
+    "text": "video saying they use",
+    "confidence": 0.872
+   },
+   {
+    "time": 16.0,
+    "text": "pre",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "cancer cells",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "Reply to Ressiecup921's",
+    "confidence": 0.891
+   },
+   {
+    "time": 18.0,
+    "text": "comment",
+    "confidence": 0.733
+   },
+   {
+    "time": 18.0,
+    "text": "watched video",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "saying they use pre",
+    "confidence": 0.802
+   },
+   {
+    "time": 18.0,
+    "text": "cancer cells",
+    "confidence": 0.979
+   },
+   {
+    "time": 18.0,
+    "text": "What dvall tik",
+    "confidence": 0.542
+   },
+   {
+    "time": 18.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.707
+   },
+   {
+    "time": 18.0,
+    "text": "but this girl says",
+    "confidence": 0.82
+   },
+   {
+    "time": 18.0,
+    "text": "watched a",
+    "confidence": 0.758
+   },
+   {
+    "time": 18.0,
+    "text": "video saying they use",
+    "confidence": 0.649
+   },
+   {
+    "time": 18.0,
+    "text": "pre",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "cancer cells",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "Reply to Ressiecup921's",
+    "confidence": 0.91
+   },
+   {
+    "time": 20.0,
+    "text": "comment",
+    "confidence": 0.716
+   },
+   {
+    "time": 20.0,
+    "text": "watched video",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "saying they use pre",
+    "confidence": 0.644
+   },
+   {
+    "time": 20.0,
+    "text": "cancer cells",
+    "confidence": 0.983
+   },
+   {
+    "time": 20.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.697
+   },
+   {
+    "time": 22.0,
+    "text": "Reply to Ressiecup921's",
+    "confidence": 0.91
+   },
+   {
+    "time": 22.0,
+    "text": "comment",
+    "confidence": 0.716
+   },
+   {
+    "time": 22.0,
+    "text": "watched video",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "saying they use pre",
+    "confidence": 0.607
+   },
+   {
+    "time": 22.0,
+    "text": "cancer cells",
+    "confidence": 0.989
+   },
+   {
+    "time": 22.0,
+    "text": "Whtdvall tik",
+    "confidence": 0.681
+   },
+   {
+    "time": 22.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.696
+   },
+   {
+    "time": 22.0,
+    "text": "now this is in regard to my",
+    "confidence": 0.941
+   },
+   {
+    "time": 22.0,
+    "text": "video about the lab grown",
+    "confidence": 0.813
+   },
+   {
+    "time": 22.0,
+    "text": "meat",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "Reply to Ressiecup921's",
+    "confidence": 0.91
+   },
+   {
+    "time": 24.0,
+    "text": "comment",
+    "confidence": 0.719
+   },
+   {
+    "time": 24.0,
+    "text": "watched video",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "saying they use pre",
+    "confidence": 0.608
+   },
+   {
+    "time": 24.0,
+    "text": "cancer cells",
+    "confidence": 0.992
+   },
+   {
+    "time": 24.0,
+    "text": "Whatdoyall dik",
+    "confidence": 0.576
+   },
+   {
+    "time": 24.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.694
+   },
+   {
+    "time": 24.0,
+    "text": "now this is in regard to my",
+    "confidence": 0.746
+   },
+   {
+    "time": 24.0,
+    "text": "video about the lab grown",
+    "confidence": 0.878
+   },
+   {
+    "time": 24.0,
+    "text": "meat",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "Reply to Ressiecup921's",
+    "confidence": 0.909
+   },
+   {
+    "time": 26.0,
+    "text": "comment",
+    "confidence": 0.704
+   },
+   {
+    "time": 26.0,
+    "text": "watched video",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "saying they use pre",
+    "confidence": 0.804
+   },
+   {
+    "time": 26.0,
+    "text": "cancer cells",
+    "confidence": 0.991
+   },
+   {
+    "time": 26.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.607
+   },
+   {
+    "time": 26.0,
+    "text": "now the Associated Press did",
+    "confidence": 0.863
+   },
+   {
+    "time": 26.0,
+    "text": "a video",
+    "confidence": 0.948
+   },
+   {
+    "time": 28.0,
+    "text": "Reply to Ressiecup921's",
+    "confidence": 0.912
+   },
+   {
+    "time": 28.0,
+    "text": "comment",
+    "confidence": 0.701
+   },
+   {
+    "time": 28.0,
+    "text": "watched video",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "saying they use pre",
+    "confidence": 0.798
+   },
+   {
+    "time": 28.0,
+    "text": "cancer cells",
+    "confidence": 0.992
+   },
+   {
+    "time": 28.0,
+    "text": "Whatdvall tik",
+    "confidence": 0.609
+   },
+   {
+    "time": 28.0,
+    "text": "Is It \"Cancer Mlade Meat\"???",
+    "confidence": 0.562
+   },
+   {
+    "time": 30.0,
+    "text": "Reply to Ressiecup921's",
+    "confidence": 0.902
+   },
+   {
+    "time": 30.0,
+    "text": "comment",
+    "confidence": 0.701
+   },
+   {
+    "time": 30.0,
+    "text": "watched video",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "saying they use pre",
+    "confidence": 0.797
+   },
+   {
+    "time": 30.0,
+    "text": "cancer cells",
+    "confidence": 0.991
+   },
+   {
+    "time": 30.0,
+    "text": "Whatdvall tik",
+    "confidence": 0.588
+   },
+   {
+    "time": 30.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.69
+   },
+   {
+    "time": 30.0,
+    "text": "on the lab grown meat",
+    "confidence": 0.945
+   },
+   {
+    "time": 32.0,
+    "text": "Reply to Ressiecup921's",
+    "confidence": 0.901
+   },
+   {
+    "time": 32.0,
+    "text": "comment",
+    "confidence": 0.705
+   },
+   {
+    "time": 32.0,
+    "text": "watched video",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "saying they use pre",
+    "confidence": 0.798
+   },
+   {
+    "time": 32.0,
+    "text": "cancer cells",
+    "confidence": 0.991
+   },
+   {
+    "time": 32.0,
+    "text": "Is It \"Cancer Mlade Meat\"???",
+    "confidence": 0.571
+   },
+   {
+    "time": 32.0,
+    "text": "vou might be right Reese Cup",
+    "confidence": 0.689
+   },
+   {
+    "time": 34.0,
+    "text": "Reply to Ressiecup921's",
+    "confidence": 0.909
+   },
+   {
+    "time": 34.0,
+    "text": "comment",
+    "confidence": 0.694
+   },
+   {
+    "time": 34.0,
+    "text": "watched video",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "saying they use pre",
+    "confidence": 0.802
+   },
+   {
+    "time": 34.0,
+    "text": "cancer cells",
+    "confidence": 0.992
+   },
+   {
+    "time": 34.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.573
+   },
+   {
+    "time": 36.0,
+    "text": "Reply to Ressiecup921's",
+    "confidence": 0.916
+   },
+   {
+    "time": 36.0,
+    "text": "comment",
+    "confidence": 0.682
+   },
+   {
+    "time": 36.0,
+    "text": "watched video",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "saying they use pre",
+    "confidence": 0.993
+   },
+   {
+    "time": 36.0,
+    "text": "cancer cells",
+    "confidence": 0.993
+   },
+   {
+    "time": 36.0,
+    "text": "the",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "wn",
+    "confidence": 0.967
+   },
+   {
+    "time": 36.0,
+    "text": "meat:",
+    "confidence": 0.962
+   },
+   {
+    "time": 36.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.668
+   },
+   {
+    "time": 36.0,
+    "text": "ne",
+    "confidence": 0.969
+   },
+   {
+    "time": 36.0,
+    "text": "the US approved the sale of",
+    "confidence": 0.954
+   },
+   {
+    "time": 36.0,
+    "text": "lab grown meat",
+    "confidence": 0.846
+   },
+   {
+    "time": 38.0,
+    "text": "Reply to Ressiecup921's",
+    "confidence": 0.92
+   },
+   {
+    "time": 38.0,
+    "text": "comment",
+    "confidence": 0.671
+   },
+   {
+    "time": 38.0,
+    "text": "watched video",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "saying they use pre",
+    "confidence": 0.789
+   },
+   {
+    "time": 38.0,
+    "text": "cancer cells",
+    "confidence": 0.985
+   },
+   {
+    "time": 38.0,
+    "text": "he U.S: jus",
+    "confidence": 0.721
+   },
+   {
+    "time": 38.0,
+    "text": "the",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "meat:",
+    "confidence": 0.978
+   },
+   {
+    "time": 38.0,
+    "text": "made from animal cells for",
+    "confidence": 0.963
+   },
+   {
+    "time": 38.0,
+    "text": "the first time",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "Reply to Ressiecup921's",
+    "confidence": 0.917
+   },
+   {
+    "time": 40.0,
+    "text": "comment",
+    "confidence": 0.661
+   },
+   {
+    "time": 40.0,
+    "text": "watched video",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "saying they use pre",
+    "confidence": 0.789
+   },
+   {
+    "time": 40.0,
+    "text": "cancer cells",
+    "confidence": 0.99
+   },
+   {
+    "time": 40.0,
+    "text": "U.S: just approved the",
+    "confidence": 0.763
+   },
+   {
+    "time": 40.0,
+    "text": "n's first 'lab-grown' meat:",
+    "confidence": 0.572
+   },
+   {
+    "time": 40.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.669
+   },
+   {
+    "time": 40.0,
+    "text": "made from animal cellsfor",
+    "confidence": 0.921
+   },
+   {
+    "time": 40.0,
+    "text": "the first time",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.0,
+    "text": "Reply to Ressiecup921's",
+    "confidence": 0.849
+   },
+   {
+    "time": 42.0,
+    "text": "comment",
+    "confidence": 0.719
+   },
+   {
+    "time": 42.0,
+    "text": "watched video",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "saying they use pre",
+    "confidence": 0.79
+   },
+   {
+    "time": 42.0,
+    "text": "cancer cells",
+    "confidence": 0.973
+   },
+   {
+    "time": 42.0,
+    "text": "WhatdoVall think",
+    "confidence": 0.991
+   },
+   {
+    "time": 42.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.671
+   },
+   {
+    "time": 42.0,
+    "text": "what is it we spoke with a",
+    "confidence": 0.925
+   },
+   {
+    "time": 42.0,
+    "text": "California companywho",
+    "confidence": 0.827
+   },
+   {
+    "time": 42.0,
+    "text": "createsit",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "Reply to Ressiecup921's",
+    "confidence": 0.793
+   },
+   {
+    "time": 44.0,
+    "text": "comment",
+    "confidence": 0.73
+   },
+   {
+    "time": 44.0,
+    "text": "watched video",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "saying they use pre",
+    "confidence": 0.767
+   },
+   {
+    "time": 44.0,
+    "text": "cancer cells",
+    "confidence": 0.969
+   },
+   {
+    "time": 44.0,
+    "text": "Whatdvall tikk",
+    "confidence": 0.595
+   },
+   {
+    "time": 44.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.596
+   },
+   {
+    "time": 44.0,
+    "text": "so cultivated meat",
+    "confidence": 0.712
+   },
+   {
+    "time": 46.0,
+    "text": "Reply to Ressiecup921's",
+    "confidence": 0.905
+   },
+   {
+    "time": 46.0,
+    "text": "comment",
+    "confidence": 0.697
+   },
+   {
+    "time": 46.0,
+    "text": "watched video",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "saying they use pre",
+    "confidence": 0.993
+   },
+   {
+    "time": 46.0,
+    "text": "cancer cells",
+    "confidence": 0.987
+   },
+   {
+    "time": 46.0,
+    "text": "Whatdvall tdkk",
+    "confidence": 0.551
+   },
+   {
+    "time": 46.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.594
+   },
+   {
+    "time": 46.0,
+    "text": "Ieiis:",
+    "confidence": 0.785
+   },
+   {
+    "time": 46.0,
+    "text": "is real meat that is grown",
+    "confidence": 0.871
+   },
+   {
+    "time": 46.0,
+    "text": "from animal cells",
+    "confidence": 0.997
+   },
+   {
+    "time": 48.0,
+    "text": "Whatdvall tik",
+    "confidence": 0.612
+   },
+   {
+    "time": 48.0,
+    "text": "Is It \"Cancer Mlade Meat\"???",
+    "confidence": 0.62
+   },
+   {
+    "time": 48.0,
+    "text": "Ceiis:",
+    "confidence": 0.541
+   },
+   {
+    "time": 48.0,
+    "text": "is real meat that is grown",
+    "confidence": 0.655
+   },
+   {
+    "time": 48.0,
+    "text": "from animal cells",
+    "confidence": 0.946
+   },
+   {
+    "time": 50.0,
+    "text": "Whatdo Vall think",
+    "confidence": 0.698
+   },
+   {
+    "time": 50.0,
+    "text": "Is It \"Cancer Mlade Meat\"???",
+    "confidence": 0.625
+   },
+   {
+    "time": 50.0,
+    "text": "these cells can come froma",
+    "confidence": 0.918
+   },
+   {
+    "time": 50.0,
+    "text": "living animal",
+    "confidence": 0.852
+   },
+   {
+    "time": 50.0,
+    "text": "biopsy",
+    "confidence": 0.972
+   },
+   {
+    "time": 50.0,
+    "text": "'of a",
+    "confidence": 0.64
+   },
+   {
+    "time": 52.0,
+    "text": "Whatdo Vall think",
+    "confidence": 0.721
+   },
+   {
+    "time": 52.0,
+    "text": "Is It \"Cancer Made Meat\"???",
+    "confidence": 0.759
+   },
+   {
+    "time": 52.0,
+    "text": "a fertilized egg or a special",
+    "confidence": 0.86
+   },
+   {
+    "time": 52.0,
+    "text": "bank of stored cells",
+    "confidence": 0.778
+   },
+   {
+    "time": 54.0,
+    "text": "Whatdo vall think",
+    "confidence": 0.753
+   },
+   {
+    "time": 54.0,
+    "text": "Is It \"Cancer Mlade Meat\"???",
+    "confidence": 0.609
+   },
+   {
+    "time": 54.0,
+    "text": "a fertilized egg or a special",
+    "confidence": 0.892
+   },
+   {
+    "time": 54.0,
+    "text": "bank of stored cells",
+    "confidence": 0.776
+   },
+   {
+    "time": 56.0,
+    "text": "cells",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "Whatdo vall think",
+    "confidence": 0.761
+   },
+   {
+    "time": 56.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.658
+   },
+   {
+    "time": 56.0,
+    "text": "companies choose the Cells",
+    "confidence": 0.771
+   },
+   {
+    "time": 56.0,
+    "text": "Most Likely to Reproduce",
+    "confidence": 0.999
+   },
+   {
+    "time": 56.0,
+    "text": "Quickly",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.0,
+    "text": "'Cancer Mlade Mleat\"???",
+    "confidence": 0.515
+   },
+   {
+    "time": 58.0,
+    "text": "Is It",
+    "confidence": 0.848
+   },
+   {
+    "time": 58.0,
+    "text": "okay",
+    "confidence": 0.94
+   },
+   {
+    "time": 58.0,
+    "text": "that",
+    "confidence": 0.646
+   },
+   {
+    "time": 58.0,
+    "text": "now wait",
+    "confidence": 0.93
+   },
+   {
+    "time": 60.0,
+    "text": "Whatd Vall tik",
+    "confidence": 0.724
+   },
+   {
+    "time": 60.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.607
+   },
+   {
+    "time": 60.0,
+    "text": "thev",
+    "confidence": 0.948
+   },
+   {
+    "time": 60.0,
+    "text": "'said",
+    "confidence": 0.7
+   },
+   {
+    "time": 60.0,
+    "text": "did you hear what",
+    "confidence": 0.952
+   },
+   {
+    "time": 62.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.614
+   },
+   {
+    "time": 64.0,
+    "text": "WhatdVall tik",
+    "confidence": 0.57
+   },
+   {
+    "time": 64.0,
+    "text": "Is It",
+    "confidence": 0.993
+   },
+   {
+    "time": 64.0,
+    "text": "the cells that reproduce the",
+    "confidence": 0.999
+   },
+   {
+    "time": 64.0,
+    "text": "fastest",
+    "confidence": 1.0
+   },
+   {
+    "time": 66.0,
+    "text": "What are the most rapidly growing cells?",
+    "confidence": 0.818
+   },
+   {
+    "time": 66.0,
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "confidence": 0.816
+   },
+   {
+    "time": 66.0,
+    "text": "than normal cells. The fast-growing normal cells most",
+    "confidence": 0.812
+   },
+   {
+    "time": 66.0,
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "confidence": 0.842
+   },
+   {
+    "time": 66.0,
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "confidence": 0.815
+   },
+   {
+    "time": 66.0,
+    "text": "tract, reproductive system, and hair follicles:",
+    "confidence": 0.547
+   },
+   {
+    "time": 66.0,
+    "text": "https //training seer cancergov",
+    "confidence": 0.595
+   },
+   {
+    "time": 66.0,
+    "text": "sid:",
+    "confidence": 0.728
+   },
+   {
+    "time": 66.0,
+    "text": "SEER Training",
+    "confidence": 0.987
+   },
+   {
+    "time": 66.0,
+    "text": "Possible Side Effects",
+    "confidence": 0.997
+   },
+   {
+    "time": 66.0,
+    "text": "FSULTS",
+    "confidence": 0.707
+   },
+   {
+    "time": 66.0,
+    "text": "Which is",
+    "confidence": 0.937
+   },
+   {
+    "time": 66.0,
+    "text": "human?",
+    "confidence": 0.945
+   },
+   {
+    "time": 66.0,
+    "text": "What ce",
+    "confidence": 0.758
+   },
+   {
+    "time": 66.0,
+    "text": "What are",
+    "confidence": 0.912
+   },
+   {
+    "time": 66.0,
+    "text": "nples?",
+    "confidence": 0.998
+   },
+   {
+    "time": 66.0,
+    "text": "life?",
+    "confidence": 0.99
+   },
+   {
+    "time": 66.0,
+    "text": "What",
+    "confidence": 1.0
+   },
+   {
+    "time": 66.0,
+    "text": "Is It \"Cancer Made Meat\"???",
+    "confidence": 0.765
+   },
+   {
+    "time": 66.0,
+    "text": "so [ went and looked up one",
+    "confidence": 0.504
+   },
+   {
+    "time": 66.0,
+    "text": "of the most rapidly growing",
+    "confidence": 0.842
+   },
+   {
+    "time": 66.0,
+    "text": "cells look at that",
+    "confidence": 0.724
+   },
+   {
+    "time": 68.0,
+    "text": "What are the most rapidly growing cells?",
+    "confidence": 0.641
+   },
+   {
+    "time": 68.0,
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "confidence": 0.872
+   },
+   {
+    "time": 68.0,
+    "text": "than normal cells: The fast-growing normal cells most",
+    "confidence": 0.83
+   },
+   {
+    "time": 68.0,
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "confidence": 0.791
+   },
+   {
+    "time": 68.0,
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "confidence": 0.795
+   },
+   {
+    "time": 68.0,
+    "text": "tract, reproductive system, and hair follicles:",
+    "confidence": 0.551
+   },
+   {
+    "time": 68.0,
+    "text": "https / /training seer cancergov",
+    "confidence": 0.532
+   },
+   {
+    "time": 68.0,
+    "text": "sid:",
+    "confidence": 0.652
+   },
+   {
+    "time": 68.0,
+    "text": "SEER Training",
+    "confidence": 0.983
+   },
+   {
+    "time": 68.0,
+    "text": "Possible Side Effects",
+    "confidence": 0.985
+   },
+   {
+    "time": 68.0,
+    "text": "Which is",
+    "confidence": 0.884
+   },
+   {
+    "time": 68.0,
+    "text": "Juman?",
+    "confidence": 0.658
+   },
+   {
+    "time": 68.0,
+    "text": "What cells",
+    "confidence": 0.575
+   },
+   {
+    "time": 68.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.727
+   },
+   {
+    "time": 68.0,
+    "text": "so | went and looked up one",
+    "confidence": 0.67
+   },
+   {
+    "time": 68.0,
+    "text": "of the most rapidly growing",
+    "confidence": 0.675
+   },
+   {
+    "time": 68.0,
+    "text": "cells look at that",
+    "confidence": 0.76
+   },
+   {
+    "time": 70.0,
+    "text": "What are the most rapidly growing cells?",
+    "confidence": 0.658
+   },
+   {
+    "time": 70.0,
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "confidence": 0.844
+   },
+   {
+    "time": 70.0,
+    "text": "than normal cells: The fast-growing normal cells most",
+    "confidence": 0.774
+   },
+   {
+    "time": 70.0,
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "confidence": 0.874
+   },
+   {
+    "time": 70.0,
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "confidence": 0.703
+   },
+   {
+    "time": 70.0,
+    "text": "tract, reproductive system, and hair follicles:",
+    "confidence": 0.662
+   },
+   {
+    "time": 70.0,
+    "text": "sid",
+    "confidence": 1.0
+   },
+   {
+    "time": 70.0,
+    "text": "ining",
+    "confidence": 1.0
+   },
+   {
+    "time": 70.0,
+    "text": "Possible Side",
+    "confidence": 0.997
+   },
+   {
+    "time": 70.0,
+    "text": "Which is",
+    "confidence": 0.941
+   },
+   {
+    "time": 70.0,
+    "text": "man?",
+    "confidence": 0.93
+   },
+   {
+    "time": 70.0,
+    "text": "What cells",
+    "confidence": 0.743
+   },
+   {
+    "time": 70.0,
+    "text": "What",
+    "confidence": 1.0
+   },
+   {
+    "time": 70.0,
+    "text": "Whatdovall tik",
+    "confidence": 0.564
+   },
+   {
+    "time": 70.0,
+    "text": "Is It \"Cancer Made Meat\"???",
+    "confidence": 0.743
+   },
+   {
+    "time": 70.0,
+    "text": "so | went and looked up one",
+    "confidence": 0.57
+   },
+   {
+    "time": 70.0,
+    "text": "of the most rapidly growing",
+    "confidence": 0.562
+   },
+   {
+    "time": 70.0,
+    "text": "cells look at that",
+    "confidence": 0.673
+   },
+   {
+    "time": 72.0,
+    "text": "What are the most rapidly growing cells?",
+    "confidence": 0.665
+   },
+   {
+    "time": 72.0,
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "confidence": 0.848
+   },
+   {
+    "time": 72.0,
+    "text": "than normal cells: The fast-growing normal cells most",
+    "confidence": 0.777
+   },
+   {
+    "time": 72.0,
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "confidence": 0.856
+   },
+   {
+    "time": 72.0,
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "confidence": 0.697
+   },
+   {
+    "time": 72.0,
+    "text": "tract, reproductive system, and hair follicles:",
+    "confidence": 0.545
+   },
+   {
+    "time": 72.0,
+    "text": "https: / /training seer",
+    "confidence": 0.558
+   },
+   {
+    "time": 72.0,
+    "text": "Possible Side",
+    "confidence": 0.998
+   },
+   {
+    "time": 72.0,
+    "text": "Which is th",
+    "confidence": 0.865
+   },
+   {
+    "time": 72.0,
+    "text": "man?",
+    "confidence": 0.999
+   },
+   {
+    "time": 72.0,
+    "text": "What cells re",
+    "confidence": 0.996
+   },
+   {
+    "time": 72.0,
+    "text": "Whatdovall tik",
+    "confidence": 0.607
+   },
+   {
+    "time": 72.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.502
+   },
+   {
+    "time": 72.0,
+    "text": "cancer cells typically grow",
+    "confidence": 0.826
+   },
+   {
+    "time": 72.0,
+    "text": "and divide more rapidly than",
+    "confidence": 0.995
+   },
+   {
+    "time": 72.0,
+    "text": "normal cells",
+    "confidence": 1.0
+   },
+   {
+    "time": 74.0,
+    "text": "What are the most rapidly growing cells?",
+    "confidence": 0.606
+   },
+   {
+    "time": 74.0,
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "confidence": 0.719
+   },
+   {
+    "time": 74.0,
+    "text": "than normal cells: The fast-growing normal cells most",
+    "confidence": 0.573
+   },
+   {
+    "time": 74.0,
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "confidence": 0.648
+   },
+   {
+    "time": 74.0,
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "confidence": 0.704
+   },
+   {
+    "time": 74.0,
+    "text": "tract, reproductive system, and hair follicles:",
+    "confidence": 0.655
+   },
+   {
+    "time": 74.0,
+    "text": "https: / /training seer cancergov",
+    "confidence": 0.621
+   },
+   {
+    "time": 74.0,
+    "text": "sid",
+    "confidence": 1.0
+   },
+   {
+    "time": 74.0,
+    "text": "Possible Side Effe",
+    "confidence": 0.689
+   },
+   {
+    "time": 74.0,
+    "text": "Which is th",
+    "confidence": 0.964
+   },
+   {
+    "time": 74.0,
+    "text": "nan?",
+    "confidence": 0.954
+   },
+   {
+    "time": 74.0,
+    "text": "What cells",
+    "confidence": 0.711
+   },
+   {
+    "time": 74.0,
+    "text": "What are",
+    "confidence": 1.0
+   },
+   {
+    "time": 74.0,
+    "text": "Whatdovall tik",
+    "confidence": 0.521
+   },
+   {
+    "time": 74.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.662
+   },
+   {
+    "time": 74.0,
+    "text": "cancer cells typically grow",
+    "confidence": 0.831
+   },
+   {
+    "time": 74.0,
+    "text": "and divide more rapidly than",
+    "confidence": 0.996
+   },
+   {
+    "time": 74.0,
+    "text": "normal cells",
+    "confidence": 1.0
+   },
+   {
+    "time": 76.0,
+    "text": "What are the most rapidly growing cells?",
+    "confidence": 0.606
+   },
+   {
+    "time": 76.0,
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "confidence": 0.715
+   },
+   {
+    "time": 76.0,
+    "text": "than normal cells: The fast-growing normal cells most",
+    "confidence": 0.574
+   },
+   {
+    "time": 76.0,
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "confidence": 0.65
+   },
+   {
+    "time": 76.0,
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "confidence": 0.701
+   },
+   {
+    "time": 76.0,
+    "text": "tract, reproductive system, and hair follicles:",
+    "confidence": 0.777
+   },
+   {
+    "time": 76.0,
+    "text": "https:I/training seercancergov",
+    "confidence": 0.775
+   },
+   {
+    "time": 76.0,
+    "text": "sid",
+    "confidence": 1.0
+   },
+   {
+    "time": 76.0,
+    "text": "Training",
+    "confidence": 1.0
+   },
+   {
+    "time": 76.0,
+    "text": "Possible Side Effec",
+    "confidence": 0.967
+   },
+   {
+    "time": 76.0,
+    "text": "Which is th",
+    "confidence": 0.954
+   },
+   {
+    "time": 76.0,
+    "text": "nan?",
+    "confidence": 0.809
+   },
+   {
+    "time": 76.0,
+    "text": "What cells",
+    "confidence": 0.731
+   },
+   {
+    "time": 76.0,
+    "text": "What are",
+    "confidence": 1.0
+   },
+   {
+    "time": 76.0,
+    "text": "WhatdoVall tik",
+    "confidence": 0.563
+   },
+   {
+    "time": 76.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.662
+   },
+   {
+    "time": 76.0,
+    "text": "cancer cells typically grow",
+    "confidence": 0.823
+   },
+   {
+    "time": 76.0,
+    "text": "and divide more rapidly than",
+    "confidence": 0.787
+   },
+   {
+    "time": 76.0,
+    "text": "normal cells",
+    "confidence": 1.0
+   },
+   {
+    "time": 78.0,
+    "text": "What are the most rapidly growing cells?",
+    "confidence": 0.696
+   },
+   {
+    "time": 78.0,
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "confidence": 0.782
+   },
+   {
+    "time": 78.0,
+    "text": "than normal cells: The fast-growing normal cells most",
+    "confidence": 0.719
+   },
+   {
+    "time": 78.0,
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "confidence": 0.726
+   },
+   {
+    "time": 78.0,
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "confidence": 0.831
+   },
+   {
+    "time": 78.0,
+    "text": "tract, reproductive system, and hair follicles:",
+    "confidence": 0.64
+   },
+   {
+    "time": 78.0,
+    "text": "https:I/training seercancergov",
+    "confidence": 0.725
+   },
+   {
+    "time": 78.0,
+    "text": "raining",
+    "confidence": 0.944
+   },
+   {
+    "time": 78.0,
+    "text": "Possible Side Effects",
+    "confidence": 0.759
+   },
+   {
+    "time": 78.0,
+    "text": "Which is the",
+    "confidence": 0.855
+   },
+   {
+    "time": 78.0,
+    "text": "an?",
+    "confidence": 1.0
+   },
+   {
+    "time": 78.0,
+    "text": "What cells repr",
+    "confidence": 0.899
+   },
+   {
+    "time": 78.0,
+    "text": "What are ra",
+    "confidence": 0.886
+   },
+   {
+    "time": 78.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.667
+   },
+   {
+    "time": 78.0,
+    "text": "cancer cells typically grow",
+    "confidence": 0.686
+   },
+   {
+    "time": 78.0,
+    "text": "and divide more rapidly than",
+    "confidence": 0.797
+   },
+   {
+    "time": 78.0,
+    "text": "normal cells",
+    "confidence": 1.0
+   },
+   {
+    "time": 80.0,
+    "text": "muscle",
+    "confidence": 0.999
+   },
+   {
+    "time": 80.0,
+    "text": "connective tissue",
+    "confidence": 0.983
+   },
+   {
+    "time": 80.0,
+    "text": "fat",
+    "confidence": 1.0
+   },
+   {
+    "time": 80.0,
+    "text": "What do Vall think",
+    "confidence": 0.971
+   },
+   {
+    "time": 80.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.547
+   },
+   {
+    "time": 80.0,
+    "text": "and the cells multipliover",
+    "confidence": 0.617
+   },
+   {
+    "time": 80.0,
+    "text": "and over and@ver",
+    "confidence": 0.694
+   },
+   {
+    "time": 82.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.568
+   },
+   {
+    "time": 82.0,
+    "text": "and the cells multipliover",
+    "confidence": 0.539
+   },
+   {
+    "time": 82.0,
+    "text": "and over and over",
+    "confidence": 0.819
+   },
+   {
+    "time": 84.0,
+    "text": "Whatdovall think",
+    "confidence": 0.887
+   },
+   {
+    "time": 84.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.708
+   },
+   {
+    "time": 84.0,
+    "text": "EEKS,",
+    "confidence": 0.519
+   },
+   {
+    "time": 84.0,
+    "text": "after several daysorweeks",
+    "confidence": 0.802
+   },
+   {
+    "time": 86.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.567
+   },
+   {
+    "time": 86.0,
+    "text": "the meat is removed from the",
+    "confidence": 0.837
+   },
+   {
+    "time": 86.0,
+    "text": "tanks to be shapedinto",
+    "confidence": 0.866
+   },
+   {
+    "time": 86.0,
+    "text": "cutlets hot dogs",
+    "confidence": 0.874
+   },
+   {
+    "time": 88.0,
+    "text": "What do vall think",
+    "confidence": 0.622
+   },
+   {
+    "time": 88.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.716
+   },
+   {
+    "time": 88.0,
+    "text": "ved ftom the",
+    "confidence": 0.74
+   },
+   {
+    "time": 88.0,
+    "text": "the meat is removed",
+    "confidence": 0.863
+   },
+   {
+    "time": 88.0,
+    "text": "tanks to be shapedinto",
+    "confidence": 0.995
+   },
+   {
+    "time": 88.0,
+    "text": "cutlets hot dogs",
+    "confidence": 0.884
+   },
+   {
+    "time": 90.0,
+    "text": "What do vall think",
+    "confidence": 0.72
+   },
+   {
+    "time": 90.0,
+    "text": "Is It \"Cancer Mlade Meat\"???",
+    "confidence": 0.608
+   },
+   {
+    "time": 90.0,
+    "text": "nuggets and sausages",
+    "confidence": 0.941
+   },
+   {
+    "time": 92.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.617
+   },
+   {
+    "time": 92.0,
+    "text": "then it's ready to be cooked",
+    "confidence": 0.722
+   },
+   {
+    "time": 94.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.662
+   },
+   {
+    "time": 96.0,
+    "text": "What are the most rapidly growing cells?",
+    "confidence": 0.615
+   },
+   {
+    "time": 96.0,
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "confidence": 0.851
+   },
+   {
+    "time": 96.0,
+    "text": "than normal cells: The fast-growing normal cells most",
+    "confidence": 0.746
+   },
+   {
+    "time": 96.0,
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "confidence": 0.807
+   },
+   {
+    "time": 96.0,
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "confidence": 0.709
+   },
+   {
+    "time": 96.0,
+    "text": "tract, reproductive system, and hair follicles:",
+    "confidence": 0.595
+   },
+   {
+    "time": 96.0,
+    "text": "https / /training seer cancergov",
+    "confidence": 0.564
+   },
+   {
+    "time": 96.0,
+    "text": "sid:",
+    "confidence": 0.738
+   },
+   {
+    "time": 96.0,
+    "text": "SFER Training",
+    "confidence": 0.927
+   },
+   {
+    "time": 96.0,
+    "text": "Possible Side Effects",
+    "confidence": 0.996
+   },
+   {
+    "time": 96.0,
+    "text": "Which is the",
+    "confidence": 0.979
+   },
+   {
+    "time": 96.0,
+    "text": "an?",
+    "confidence": 1.0
+   },
+   {
+    "time": 96.0,
+    "text": "What cells rer",
+    "confidence": 0.826
+   },
+   {
+    "time": 96.0,
+    "text": "What are rapia",
+    "confidence": 0.712
+   },
+   {
+    "time": 96.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.675
+   },
+   {
+    "time": 96.0,
+    "text": "so it sounds like they're",
+    "confidence": 0.502
+   },
+   {
+    "time": 96.0,
+    "text": "taking the cancerous cells",
+    "confidence": 0.903
+   },
+   {
+    "time": 98.0,
+    "text": "What are the most rapidly growing cells?",
+    "confidence": 0.773
+   },
+   {
+    "time": 98.0,
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "confidence": 0.7
+   },
+   {
+    "time": 98.0,
+    "text": "than normal cells: The fast-growing normal cells most",
+    "confidence": 0.734
+   },
+   {
+    "time": 98.0,
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "confidence": 0.864
+   },
+   {
+    "time": 98.0,
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "confidence": 0.651
+   },
+   {
+    "time": 98.0,
+    "text": "tract, reproductive system, and hair follicles:",
+    "confidence": 0.522
+   },
+   {
+    "time": 98.0,
+    "text": "SEER Training",
+    "confidence": 0.989
+   },
+   {
+    "time": 98.0,
+    "text": "Possible Side Effects",
+    "confidence": 0.952
+   },
+   {
+    "time": 98.0,
+    "text": "Which is the fa",
+    "confidence": 0.966
+   },
+   {
+    "time": 98.0,
+    "text": "an",
+    "confidence": 1.0
+   },
+   {
+    "time": 98.0,
+    "text": "What cells rep",
+    "confidence": 0.992
+   },
+   {
+    "time": 98.0,
+    "text": "What are rapidl",
+    "confidence": 0.771
+   },
+   {
+    "time": 98.0,
+    "text": "es?",
+    "confidence": 1.0
+   },
+   {
+    "time": 98.0,
+    "text": "What",
+    "confidence": 1.0
+   },
+   {
+    "time": 98.0,
+    "text": "life?",
+    "confidence": 0.965
+   },
+   {
+    "time": 98.0,
+    "text": "so it sounds like they're",
+    "confidence": 0.599
+   },
+   {
+    "time": 98.0,
+    "text": "taking the cancerous cells",
+    "confidence": 1.0
+   },
+   {
+    "time": 100.0,
+    "text": "What are the most rapidly growing cells?",
+    "confidence": 0.774
+   },
+   {
+    "time": 100.0,
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "confidence": 0.701
+   },
+   {
+    "time": 100.0,
+    "text": "than normal cells: The fast-growing normal cells most",
+    "confidence": 0.733
+   },
+   {
+    "time": 100.0,
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "confidence": 0.864
+   },
+   {
+    "time": 100.0,
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "confidence": 0.651
+   },
+   {
+    "time": 100.0,
+    "text": "tract, reproductive system, and hair follicles:",
+    "confidence": 0.52
+   },
+   {
+    "time": 100.0,
+    "text": "SEER Training",
+    "confidence": 0.989
+   },
+   {
+    "time": 100.0,
+    "text": "Possible Side Effects",
+    "confidence": 0.942
+   },
+   {
+    "time": 100.0,
+    "text": "ESULTS",
+    "confidence": 0.76
+   },
+   {
+    "time": 100.0,
+    "text": "Which is",
+    "confidence": 0.938
+   },
+   {
+    "time": 100.0,
+    "text": "human?",
+    "confidence": 0.858
+   },
+   {
+    "time": 100.0,
+    "text": "What cell",
+    "confidence": 0.999
+   },
+   {
+    "time": 100.0,
+    "text": "nples?",
+    "confidence": 0.718
+   },
+   {
+    "time": 100.0,
+    "text": "What",
+    "confidence": 1.0
+   },
+   {
+    "time": 100.0,
+    "text": "life?",
+    "confidence": 0.96
+   },
+   {
+    "time": 100.0,
+    "text": "What dvall tik",
+    "confidence": 0.513
+   },
+   {
+    "time": 100.0,
+    "text": "or pre cancerous cells from",
+    "confidence": 0.594
+   },
+   {
+    "time": 100.0,
+    "text": "these animals to reproduce",
+    "confidence": 0.728
+   },
+   {
+    "time": 102.0,
+    "text": "What are the most rapidly growing cells?",
+    "confidence": 0.65
+   },
+   {
+    "time": 102.0,
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "confidence": 0.869
+   },
+   {
+    "time": 102.0,
+    "text": "than normal cells: The fast-growing normal cells most",
+    "confidence": 0.728
+   },
+   {
+    "time": 102.0,
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "confidence": 0.859
+   },
+   {
+    "time": 102.0,
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "confidence": 0.737
+   },
+   {
+    "time": 102.0,
+    "text": "tract, reproductive system, and hair follicles:",
+    "confidence": 0.533
+   },
+   {
+    "time": 102.0,
+    "text": "https / /training seer cancergov",
+    "confidence": 0.569
+   },
+   {
+    "time": 102.0,
+    "text": "SEER Training",
+    "confidence": 0.985
+   },
+   {
+    "time": 102.0,
+    "text": "Possible Side Effects",
+    "confidence": 0.922
+   },
+   {
+    "time": 102.0,
+    "text": "ULTS",
+    "confidence": 0.898
+   },
+   {
+    "time": 102.0,
+    "text": "Which is",
+    "confidence": 0.943
+   },
+   {
+    "time": 102.0,
+    "text": "human?",
+    "confidence": 1.0
+   },
+   {
+    "time": 102.0,
+    "text": "What cell",
+    "confidence": 0.552
+   },
+   {
+    "time": 102.0,
+    "text": "What are rap",
+    "confidence": 0.567
+   },
+   {
+    "time": 102.0,
+    "text": "ples?",
+    "confidence": 0.911
+   },
+   {
+    "time": 102.0,
+    "text": "What",
+    "confidence": 1.0
+   },
+   {
+    "time": 102.0,
+    "text": "cancerous cells from",
+    "confidence": 0.94
+   },
+   {
+    "time": 102.0,
+    "text": "pre",
+    "confidence": 1.0
+   },
+   {
+    "time": 102.0,
+    "text": "Or",
+    "confidence": 0.614
+   },
+   {
+    "time": 102.0,
+    "text": "these animals to reproduce",
+    "confidence": 0.852
+   },
+   {
+    "time": 104.0,
+    "text": "What are the most rapidly growing cells?",
+    "confidence": 0.62
+   },
+   {
+    "time": 104.0,
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "confidence": 0.756
+   },
+   {
+    "time": 104.0,
+    "text": "than normal cells: The fast-growing normal cells most",
+    "confidence": 0.719
+   },
+   {
+    "time": 104.0,
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "confidence": 0.738
+   },
+   {
+    "time": 104.0,
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "confidence": 0.736
+   },
+   {
+    "time": 104.0,
+    "text": "tract, reproductive system, and hair follicles:",
+    "confidence": 0.547
+   },
+   {
+    "time": 104.0,
+    "text": "https:I/training seercancergov",
+    "confidence": 0.664
+   },
+   {
+    "time": 104.0,
+    "text": "SEER Training",
+    "confidence": 0.985
+   },
+   {
+    "time": 104.0,
+    "text": "Possible Side Effects",
+    "confidence": 0.933
+   },
+   {
+    "time": 104.0,
+    "text": "TS",
+    "confidence": 0.998
+   },
+   {
+    "time": 104.0,
+    "text": "Which is th",
+    "confidence": 0.8
+   },
+   {
+    "time": 104.0,
+    "text": "Juman?",
+    "confidence": 0.679
+   },
+   {
+    "time": 104.0,
+    "text": "What cells",
+    "confidence": 0.967
+   },
+   {
+    "time": 104.0,
+    "text": "ples?",
+    "confidence": 0.972
+   },
+   {
+    "time": 104.0,
+    "text": "What are rap",
+    "confidence": 0.846
+   },
+   {
+    "time": 104.0,
+    "text": "Wha",
+    "confidence": 1.0
+   },
+   {
+    "time": 104.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.671
+   },
+   {
+    "time": 104.0,
+    "text": "to make the meat that we",
+    "confidence": 0.763
+   },
+   {
+    "time": 104.0,
+    "text": "bout to eat",
+    "confidence": 0.966
+   },
+   {
+    "time": 106.0,
+    "text": "What are the most rapidly growing cells?",
+    "confidence": 0.62
+   },
+   {
+    "time": 106.0,
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "confidence": 0.747
+   },
+   {
+    "time": 106.0,
+    "text": "than normal cells: The fast-growing normal cells most",
+    "confidence": 0.722
+   },
+   {
+    "time": 106.0,
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "confidence": 0.739
+   },
+   {
+    "time": 106.0,
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "confidence": 0.736
+   },
+   {
+    "time": 106.0,
+    "text": "tract, reproductive system, and hair follicles:",
+    "confidence": 0.547
+   },
+   {
+    "time": 106.0,
+    "text": "https / /training seer cancergov",
+    "confidence": 0.545
+   },
+   {
+    "time": 106.0,
+    "text": "SEER Training",
+    "confidence": 0.989
+   },
+   {
+    "time": 106.0,
+    "text": "Possible Side Effects",
+    "confidence": 0.762
+   },
+   {
+    "time": 106.0,
+    "text": "Which is the",
+    "confidence": 0.871
+   },
+   {
+    "time": 106.0,
+    "text": "nan?",
+    "confidence": 0.73
+   },
+   {
+    "time": 106.0,
+    "text": "What cells",
+    "confidence": 0.797
+   },
+   {
+    "time": 106.0,
+    "text": "What are rap",
+    "confidence": 0.939
+   },
+   {
+    "time": 106.0,
+    "text": "les?",
+    "confidence": 0.786
+   },
+   {
+    "time": 106.0,
+    "text": "Wh",
+    "confidence": 0.958
+   },
+   {
+    "time": 106.0,
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "confidence": 0.672
+   },
+   {
+    "time": 106.0,
+    "text": "to make the meat that we",
+    "confidence": 0.821
+   },
+   {
+    "time": 106.0,
+    "text": "bout to eat",
+    "confidence": 0.964
+   },
+   {
+    "time": 108.0,
+    "text": "What are the most rapidly growing cells?",
+    "confidence": 0.621
+   },
+   {
+    "time": 108.0,
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "confidence": 0.75
+   },
+   {
+    "time": 108.0,
+    "text": "than normal cells: The fast-growing normal cells most",
+    "confidence": 0.721
+   },
+   {
+    "time": 108.0,
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "confidence": 0.738
+   },
+   {
+    "time": 108.0,
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "confidence": 0.739
+   },
+   {
+    "time": 108.0,
+    "text": "tract, reproductive system, and hair follicles:",
+    "confidence": 0.545
+   },
+   {
+    "time": 108.0,
+    "text": "https / /training seer cancergov",
+    "confidence": 0.545
+   },
+   {
+    "time": 108.0,
+    "text": "SEER Training",
+    "confidence": 0.986
+   },
+   {
+    "time": 108.0,
+    "text": "Possible Side Effects",
+    "confidence": 0.762
+   },
+   {
+    "time": 108.0,
+    "text": "Which is",
+    "confidence": 0.961
+   },
+   {
+    "time": 108.0,
+    "text": "uman?",
+    "confidence": 0.893
+   },
+   {
+    "time": 108.0,
+    "text": "What cel",
+    "confidence": 0.995
+   },
+   {
+    "time": 108.0,
+    "text": "What are rap",
+    "confidence": 0.904
+   },
+   {
+    "time": 108.0,
+    "text": "es?",
+    "confidence": 0.987
+   },
+   {
+    "time": 108.0,
+    "text": "'Cancer Mlade Mleat\"???",
+    "confidence": 0.51
+   },
+   {
+    "time": 108.0,
+    "text": "Is It",
+    "confidence": 0.829
+   },
+   {
+    "time": 108.0,
+    "text": "well y'all about to eat",
+    "confidence": 0.916
+   },
+   {
+    "time": 110.0,
+    "text": "What are the most rapidly growing cells?",
+    "confidence": 0.615
+   },
+   {
+    "time": 110.0,
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "confidence": 0.746
+   },
+   {
+    "time": 110.0,
+    "text": "than normal cells: The fast-growing normal cells most",
+    "confidence": 0.681
+   },
+   {
+    "time": 110.0,
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "confidence": 0.869
+   },
+   {
+    "time": 110.0,
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "confidence": 0.602
+   },
+   {
+    "time": 110.0,
+    "text": "tract, reproductive system, and hair follicles:",
+    "confidence": 0.549
+   },
+   {
+    "time": 110.0,
+    "text": "https / /training seer cancergov",
+    "confidence": 0.538
+   },
+   {
+    "time": 110.0,
+    "text": "Possible Side Effects",
+    "confidence": 0.953
+   },
+   {
+    "time": 110.0,
+    "text": "SEER",
+    "confidence": 0.995
+   },
+   {
+    "time": 110.0,
+    "text": "Which is the",
+    "confidence": 0.738
+   },
+   {
+    "time": 110.0,
+    "text": "What cells re",
+    "confidence": 0.731
+   },
+   {
+    "time": 110.0,
+    "text": "What are rapic",
+    "confidence": 0.578
+   },
+   {
+    "time": 110.0,
+    "text": "don't fuck with meat",
+    "confidence": 0.974
+   },
+   {
+    "time": 110.0,
+    "text": "cause",
+    "confidence": 0.818
+   },
+   {
+    "time": 110.0,
+    "text": "pause",
+    "confidence": 0.912
+   },
+   {
+    "time": 112.0,
+    "text": "What are the most rapidly growing cells?",
+    "confidence": 0.662
+   },
+   {
+    "time": 112.0,
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "confidence": 0.912
+   },
+   {
+    "time": 112.0,
+    "text": "than normal cells: The fast-growing normal cells most",
+    "confidence": 0.774
+   },
+   {
+    "time": 112.0,
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "confidence": 0.72
+   },
+   {
+    "time": 112.0,
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "confidence": 0.797
+   },
+   {
+    "time": 112.0,
+    "text": "tract, reproductive system, and hair follicles:",
+    "confidence": 0.663
+   },
+   {
+    "time": 112.0,
+    "text": "https / /training seer cancergov",
+    "confidence": 0.558
+   },
+   {
+    "time": 112.0,
+    "text": "sid:",
+    "confidence": 0.552
+   },
+   {
+    "time": 112.0,
+    "text": "SEER Training",
+    "confidence": 0.993
+   },
+   {
+    "time": 112.0,
+    "text": "Possible Side Effects",
+    "confidence": 0.968
+   },
+   {
+    "time": 112.0,
+    "text": "Which is the",
+    "confidence": 0.913
+   },
+   {
+    "time": 112.0,
+    "text": "What cells",
+    "confidence": 0.798
+   },
+   {
+    "time": 112.0,
+    "text": "ples?",
+    "confidence": 1.0
+   },
+   {
+    "time": 112.0,
+    "text": "What are",
+    "confidence": 0.641
+   },
+   {
+    "time": 112.0,
+    "text": "rap",
+    "confidence": 0.999
+   },
+   {
+    "time": 112.0,
+    "text": "life?",
+    "confidence": 0.966
+   },
+   {
+    "time": 112.0,
+    "text": "Wh",
+    "confidence": 1.0
+   },
+   {
+    "time": 112.0,
+    "text": "cause | don't fuck with meat",
+    "confidence": 0.54
+   },
+   {
+    "time": 112.0,
+    "text": "pause",
+    "confidence": 0.932
+   }
+  ],
+  "captions": [
+   {
+    "text": "What dvall tik",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.638,
+    "id": "o1"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Meat\"???",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.596,
+    "id": "o2"
+   },
+   {
+    "text": "Whatdovall dik",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.653,
+    "id": "o3"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.633,
+    "id": "o4"
+   },
+   {
+    "text": "hey",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.792,
+    "id": "o5"
+   },
+   {
+    "text": "look Im just here to",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.819,
+    "id": "o6"
+   },
+   {
+    "text": "report",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o7"
+   },
+   {
+    "text": "the",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o8"
+   },
+   {
+    "text": "news",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "Is It \"Cancer Made Mleat\"???",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.592,
+    "id": "o10"
+   },
+   {
+    "text": "hey",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.708,
+    "id": "o11"
+   },
+   {
+    "text": "look I'm just here to",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.582,
+    "id": "o12"
+   },
+   {
+    "text": "report the news",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.898,
+    "id": "o13"
+   },
+   {
+    "text": "What dVall tik",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.512,
+    "id": "o14"
+   },
+   {
+    "text": "Is It \"Cancer Made Meat\"???",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.75,
+    "id": "o15"
+   },
+   {
+    "text": "Vall can Google it",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.577,
+    "id": "o16"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.707,
+    "id": "o17"
+   },
+   {
+    "text": "don't everybody believefn",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.823,
+    "id": "o18"
+   },
+   {
+    "text": "Google",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o19"
+   },
+   {
+    "text": "4",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.716,
+    "id": "o20"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.698,
+    "id": "o21"
+   },
+   {
+    "text": "do vour own research to find",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.892,
+    "id": "o22"
+   },
+   {
+    "text": "out if it's true or not",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.634,
+    "id": "o23"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.555,
+    "id": "o24"
+   },
+   {
+    "text": "do vour own research to find",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.868,
+    "id": "o25"
+   },
+   {
+    "text": "out if it's true or not",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.88,
+    "id": "o26"
+   },
+   {
+    "text": "What dvall tik",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.526,
+    "id": "o27"
+   },
+   {
+    "text": "'Cancer Mlade Mleat\"???",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.514,
+    "id": "o28"
+   },
+   {
+    "text": "Is It",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.834,
+    "id": "o29"
+   },
+   {
+    "text": "but this girl says",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.837,
+    "id": "o30"
+   },
+   {
+    "text": "watched a",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.999,
+    "id": "o31"
+   },
+   {
+    "text": "video saying they use",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.854,
+    "id": "o32"
+   },
+   {
+    "text": "pre",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o33"
+   },
+   {
+    "text": "cancer cells",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o34"
+   },
+   {
+    "text": "Reply to Ressiecup921's",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.926,
+    "id": "o35"
+   },
+   {
+    "text": "comment",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.715,
+    "id": "o36"
+   },
+   {
+    "text": "watched video",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o37"
+   },
+   {
+    "text": "saying they use pre",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.758,
+    "id": "o38"
+   },
+   {
+    "text": "cancer cells",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.88,
+    "id": "o39"
+   },
+   {
+    "text": "What dvall tik",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.552,
+    "id": "o40"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.55,
+    "id": "o41"
+   },
+   {
+    "text": "but this girl says",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.807,
+    "id": "o42"
+   },
+   {
+    "text": "watched a",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.658,
+    "id": "o43"
+   },
+   {
+    "text": "video saying they use",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.872,
+    "id": "o44"
+   },
+   {
+    "text": "pre",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o45"
+   },
+   {
+    "text": "cancer cells",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o46"
+   },
+   {
+    "text": "Reply to Ressiecup921's",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.891,
+    "id": "o47"
+   },
+   {
+    "text": "comment",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.733,
+    "id": "o48"
+   },
+   {
+    "text": "watched video",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 1.0,
+    "id": "o49"
+   },
+   {
+    "text": "saying they use pre",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.802,
+    "id": "o50"
+   },
+   {
+    "text": "cancer cells",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.979,
+    "id": "o51"
+   },
+   {
+    "text": "What dvall tik",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.542,
+    "id": "o52"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.707,
+    "id": "o53"
+   },
+   {
+    "text": "but this girl says",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.82,
+    "id": "o54"
+   },
+   {
+    "text": "watched a",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.758,
+    "id": "o55"
+   },
+   {
+    "text": "video saying they use",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.649,
+    "id": "o56"
+   },
+   {
+    "text": "pre",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 1.0,
+    "id": "o57"
+   },
+   {
+    "text": "cancer cells",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 1.0,
+    "id": "o58"
+   },
+   {
+    "text": "Reply to Ressiecup921's",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.91,
+    "id": "o59"
+   },
+   {
+    "text": "comment",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.716,
+    "id": "o60"
+   },
+   {
+    "text": "watched video",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o61"
+   },
+   {
+    "text": "saying they use pre",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.644,
+    "id": "o62"
+   },
+   {
+    "text": "cancer cells",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.983,
+    "id": "o63"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.697,
+    "id": "o64"
+   },
+   {
+    "text": "Reply to Ressiecup921's",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.91,
+    "id": "o65"
+   },
+   {
+    "text": "comment",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.716,
+    "id": "o66"
+   },
+   {
+    "text": "watched video",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o67"
+   },
+   {
+    "text": "saying they use pre",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.607,
+    "id": "o68"
+   },
+   {
+    "text": "cancer cells",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.989,
+    "id": "o69"
+   },
+   {
+    "text": "Whtdvall tik",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.681,
+    "id": "o70"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.696,
+    "id": "o71"
+   },
+   {
+    "text": "now this is in regard to my",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.941,
+    "id": "o72"
+   },
+   {
+    "text": "video about the lab grown",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.813,
+    "id": "o73"
+   },
+   {
+    "text": "meat",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o74"
+   },
+   {
+    "text": "Reply to Ressiecup921's",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.91,
+    "id": "o75"
+   },
+   {
+    "text": "comment",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.719,
+    "id": "o76"
+   },
+   {
+    "text": "watched video",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o77"
+   },
+   {
+    "text": "saying they use pre",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.608,
+    "id": "o78"
+   },
+   {
+    "text": "cancer cells",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.992,
+    "id": "o79"
+   },
+   {
+    "text": "Whatdoyall dik",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.576,
+    "id": "o80"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.694,
+    "id": "o81"
+   },
+   {
+    "text": "now this is in regard to my",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.746,
+    "id": "o82"
+   },
+   {
+    "text": "video about the lab grown",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.878,
+    "id": "o83"
+   },
+   {
+    "text": "meat",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o84"
+   },
+   {
+    "text": "Reply to Ressiecup921's",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.909,
+    "id": "o85"
+   },
+   {
+    "text": "comment",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.704,
+    "id": "o86"
+   },
+   {
+    "text": "watched video",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o87"
+   },
+   {
+    "text": "saying they use pre",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.804,
+    "id": "o88"
+   },
+   {
+    "text": "cancer cells",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.991,
+    "id": "o89"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.607,
+    "id": "o90"
+   },
+   {
+    "text": "now the Associated Press did",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.863,
+    "id": "o91"
+   },
+   {
+    "text": "a video",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.948,
+    "id": "o92"
+   },
+   {
+    "text": "Reply to Ressiecup921's",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.912,
+    "id": "o93"
+   },
+   {
+    "text": "comment",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.701,
+    "id": "o94"
+   },
+   {
+    "text": "watched video",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o95"
+   },
+   {
+    "text": "saying they use pre",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.798,
+    "id": "o96"
+   },
+   {
+    "text": "cancer cells",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.992,
+    "id": "o97"
+   },
+   {
+    "text": "Whatdvall tik",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.609,
+    "id": "o98"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Meat\"???",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.562,
+    "id": "o99"
+   },
+   {
+    "text": "Reply to Ressiecup921's",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.902,
+    "id": "o100"
+   },
+   {
+    "text": "comment",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.701,
+    "id": "o101"
+   },
+   {
+    "text": "watched video",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o102"
+   },
+   {
+    "text": "saying they use pre",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.797,
+    "id": "o103"
+   },
+   {
+    "text": "cancer cells",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.991,
+    "id": "o104"
+   },
+   {
+    "text": "Whatdvall tik",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.588,
+    "id": "o105"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.69,
+    "id": "o106"
+   },
+   {
+    "text": "on the lab grown meat",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.945,
+    "id": "o107"
+   },
+   {
+    "text": "Reply to Ressiecup921's",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.901,
+    "id": "o108"
+   },
+   {
+    "text": "comment",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.705,
+    "id": "o109"
+   },
+   {
+    "text": "watched video",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o110"
+   },
+   {
+    "text": "saying they use pre",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.798,
+    "id": "o111"
+   },
+   {
+    "text": "cancer cells",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.991,
+    "id": "o112"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Meat\"???",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.571,
+    "id": "o113"
+   },
+   {
+    "text": "vou might be right Reese Cup",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.689,
+    "id": "o114"
+   },
+   {
+    "text": "Reply to Ressiecup921's",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.909,
+    "id": "o115"
+   },
+   {
+    "text": "comment",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.694,
+    "id": "o116"
+   },
+   {
+    "text": "watched video",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o117"
+   },
+   {
+    "text": "saying they use pre",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.802,
+    "id": "o118"
+   },
+   {
+    "text": "cancer cells",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.992,
+    "id": "o119"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.573,
+    "id": "o120"
+   },
+   {
+    "text": "Reply to Ressiecup921's",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.916,
+    "id": "o121"
+   },
+   {
+    "text": "comment",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.682,
+    "id": "o122"
+   },
+   {
+    "text": "watched video",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o123"
+   },
+   {
+    "text": "saying they use pre",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.993,
+    "id": "o124"
+   },
+   {
+    "text": "cancer cells",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.993,
+    "id": "o125"
+   },
+   {
+    "text": "the",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o126"
+   },
+   {
+    "text": "wn",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.967,
+    "id": "o127"
+   },
+   {
+    "text": "meat:",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.962,
+    "id": "o128"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.668,
+    "id": "o129"
+   },
+   {
+    "text": "ne",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.969,
+    "id": "o130"
+   },
+   {
+    "text": "the US approved the sale of",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.954,
+    "id": "o131"
+   },
+   {
+    "text": "lab grown meat",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.846,
+    "id": "o132"
+   },
+   {
+    "text": "Reply to Ressiecup921's",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.92,
+    "id": "o133"
+   },
+   {
+    "text": "comment",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.671,
+    "id": "o134"
+   },
+   {
+    "text": "watched video",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o135"
+   },
+   {
+    "text": "saying they use pre",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.789,
+    "id": "o136"
+   },
+   {
+    "text": "cancer cells",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.985,
+    "id": "o137"
+   },
+   {
+    "text": "he U.S: jus",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.721,
+    "id": "o138"
+   },
+   {
+    "text": "the",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o139"
+   },
+   {
+    "text": "meat:",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.978,
+    "id": "o140"
+   },
+   {
+    "text": "made from animal cells for",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.963,
+    "id": "o141"
+   },
+   {
+    "text": "the first time",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o142"
+   },
+   {
+    "text": "Reply to Ressiecup921's",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.917,
+    "id": "o143"
+   },
+   {
+    "text": "comment",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.661,
+    "id": "o144"
+   },
+   {
+    "text": "watched video",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o145"
+   },
+   {
+    "text": "saying they use pre",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.789,
+    "id": "o146"
+   },
+   {
+    "text": "cancer cells",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.99,
+    "id": "o147"
+   },
+   {
+    "text": "U.S: just approved the",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.763,
+    "id": "o148"
+   },
+   {
+    "text": "n's first 'lab-grown' meat:",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.572,
+    "id": "o149"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.669,
+    "id": "o150"
+   },
+   {
+    "text": "made from animal cellsfor",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.921,
+    "id": "o151"
+   },
+   {
+    "text": "the first time",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.999,
+    "id": "o152"
+   },
+   {
+    "text": "Reply to Ressiecup921's",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.849,
+    "id": "o153"
+   },
+   {
+    "text": "comment",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.719,
+    "id": "o154"
+   },
+   {
+    "text": "watched video",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o155"
+   },
+   {
+    "text": "saying they use pre",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.79,
+    "id": "o156"
+   },
+   {
+    "text": "cancer cells",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.973,
+    "id": "o157"
+   },
+   {
+    "text": "WhatdoVall think",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.991,
+    "id": "o158"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.671,
+    "id": "o159"
+   },
+   {
+    "text": "what is it we spoke with a",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.925,
+    "id": "o160"
+   },
+   {
+    "text": "California companywho",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.827,
+    "id": "o161"
+   },
+   {
+    "text": "createsit",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o162"
+   },
+   {
+    "text": "Reply to Ressiecup921's",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.793,
+    "id": "o163"
+   },
+   {
+    "text": "comment",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.73,
+    "id": "o164"
+   },
+   {
+    "text": "watched video",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o165"
+   },
+   {
+    "text": "saying they use pre",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.767,
+    "id": "o166"
+   },
+   {
+    "text": "cancer cells",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.969,
+    "id": "o167"
+   },
+   {
+    "text": "Whatdvall tikk",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.595,
+    "id": "o168"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.596,
+    "id": "o169"
+   },
+   {
+    "text": "so cultivated meat",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.712,
+    "id": "o170"
+   },
+   {
+    "text": "Reply to Ressiecup921's",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.905,
+    "id": "o171"
+   },
+   {
+    "text": "comment",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.697,
+    "id": "o172"
+   },
+   {
+    "text": "watched video",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o173"
+   },
+   {
+    "text": "saying they use pre",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.993,
+    "id": "o174"
+   },
+   {
+    "text": "cancer cells",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.987,
+    "id": "o175"
+   },
+   {
+    "text": "Whatdvall tdkk",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.551,
+    "id": "o176"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.594,
+    "id": "o177"
+   },
+   {
+    "text": "Ieiis:",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.785,
+    "id": "o178"
+   },
+   {
+    "text": "is real meat that is grown",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.871,
+    "id": "o179"
+   },
+   {
+    "text": "from animal cells",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.997,
+    "id": "o180"
+   },
+   {
+    "text": "Whatdvall tik",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.612,
+    "id": "o181"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Meat\"???",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.62,
+    "id": "o182"
+   },
+   {
+    "text": "Ceiis:",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.541,
+    "id": "o183"
+   },
+   {
+    "text": "is real meat that is grown",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.655,
+    "id": "o184"
+   },
+   {
+    "text": "from animal cells",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.946,
+    "id": "o185"
+   },
+   {
+    "text": "Whatdo Vall think",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.698,
+    "id": "o186"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Meat\"???",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.625,
+    "id": "o187"
+   },
+   {
+    "text": "these cells can come froma",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.918,
+    "id": "o188"
+   },
+   {
+    "text": "living animal",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.852,
+    "id": "o189"
+   },
+   {
+    "text": "biopsy",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.972,
+    "id": "o190"
+   },
+   {
+    "text": "'of a",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.64,
+    "id": "o191"
+   },
+   {
+    "text": "Whatdo Vall think",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.721,
+    "id": "o192"
+   },
+   {
+    "text": "Is It \"Cancer Made Meat\"???",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.759,
+    "id": "o193"
+   },
+   {
+    "text": "a fertilized egg or a special",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.86,
+    "id": "o194"
+   },
+   {
+    "text": "bank of stored cells",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.778,
+    "id": "o195"
+   },
+   {
+    "text": "Whatdo vall think",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.753,
+    "id": "o196"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Meat\"???",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.609,
+    "id": "o197"
+   },
+   {
+    "text": "a fertilized egg or a special",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.892,
+    "id": "o198"
+   },
+   {
+    "text": "bank of stored cells",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.776,
+    "id": "o199"
+   },
+   {
+    "text": "cells",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 1.0,
+    "id": "o200"
+   },
+   {
+    "text": "Whatdo vall think",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.761,
+    "id": "o201"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.658,
+    "id": "o202"
+   },
+   {
+    "text": "companies choose the Cells",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.771,
+    "id": "o203"
+   },
+   {
+    "text": "Most Likely to Reproduce",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.999,
+    "id": "o204"
+   },
+   {
+    "text": "Quickly",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 1.0,
+    "id": "o205"
+   },
+   {
+    "text": "'Cancer Mlade Mleat\"???",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.515,
+    "id": "o206"
+   },
+   {
+    "text": "Is It",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.848,
+    "id": "o207"
+   },
+   {
+    "text": "okay",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.94,
+    "id": "o208"
+   },
+   {
+    "text": "that",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.646,
+    "id": "o209"
+   },
+   {
+    "text": "now wait",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.93,
+    "id": "o210"
+   },
+   {
+    "text": "Whatd Vall tik",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.724,
+    "id": "o211"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.607,
+    "id": "o212"
+   },
+   {
+    "text": "thev",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.948,
+    "id": "o213"
+   },
+   {
+    "text": "'said",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.7,
+    "id": "o214"
+   },
+   {
+    "text": "did you hear what",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.952,
+    "id": "o215"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.614,
+    "id": "o216"
+   },
+   {
+    "text": "WhatdVall tik",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.57,
+    "id": "o217"
+   },
+   {
+    "text": "Is It",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.993,
+    "id": "o218"
+   },
+   {
+    "text": "the cells that reproduce the",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.999,
+    "id": "o219"
+   },
+   {
+    "text": "fastest",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 1.0,
+    "id": "o220"
+   },
+   {
+    "text": "What are the most rapidly growing cells?",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.818,
+    "id": "o221"
+   },
+   {
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.816,
+    "id": "o222"
+   },
+   {
+    "text": "than normal cells. The fast-growing normal cells most",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.812,
+    "id": "o223"
+   },
+   {
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.842,
+    "id": "o224"
+   },
+   {
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.815,
+    "id": "o225"
+   },
+   {
+    "text": "tract, reproductive system, and hair follicles:",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.547,
+    "id": "o226"
+   },
+   {
+    "text": "https //training seer cancergov",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.595,
+    "id": "o227"
+   },
+   {
+    "text": "sid:",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.728,
+    "id": "o228"
+   },
+   {
+    "text": "SEER Training",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.987,
+    "id": "o229"
+   },
+   {
+    "text": "Possible Side Effects",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.997,
+    "id": "o230"
+   },
+   {
+    "text": "FSULTS",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.707,
+    "id": "o231"
+   },
+   {
+    "text": "Which is",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.937,
+    "id": "o232"
+   },
+   {
+    "text": "human?",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.945,
+    "id": "o233"
+   },
+   {
+    "text": "What ce",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.758,
+    "id": "o234"
+   },
+   {
+    "text": "What are",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.912,
+    "id": "o235"
+   },
+   {
+    "text": "nples?",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.998,
+    "id": "o236"
+   },
+   {
+    "text": "life?",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.99,
+    "id": "o237"
+   },
+   {
+    "text": "What",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 1.0,
+    "id": "o238"
+   },
+   {
+    "text": "Is It \"Cancer Made Meat\"???",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.765,
+    "id": "o239"
+   },
+   {
+    "text": "so [ went and looked up one",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.504,
+    "id": "o240"
+   },
+   {
+    "text": "of the most rapidly growing",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.842,
+    "id": "o241"
+   },
+   {
+    "text": "cells look at that",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.724,
+    "id": "o242"
+   },
+   {
+    "text": "What are the most rapidly growing cells?",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.641,
+    "id": "o243"
+   },
+   {
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.872,
+    "id": "o244"
+   },
+   {
+    "text": "than normal cells: The fast-growing normal cells most",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.83,
+    "id": "o245"
+   },
+   {
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.791,
+    "id": "o246"
+   },
+   {
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.795,
+    "id": "o247"
+   },
+   {
+    "text": "tract, reproductive system, and hair follicles:",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.551,
+    "id": "o248"
+   },
+   {
+    "text": "https / /training seer cancergov",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.532,
+    "id": "o249"
+   },
+   {
+    "text": "sid:",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.652,
+    "id": "o250"
+   },
+   {
+    "text": "SEER Training",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.983,
+    "id": "o251"
+   },
+   {
+    "text": "Possible Side Effects",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.985,
+    "id": "o252"
+   },
+   {
+    "text": "Which is",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.884,
+    "id": "o253"
+   },
+   {
+    "text": "Juman?",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.658,
+    "id": "o254"
+   },
+   {
+    "text": "What cells",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.575,
+    "id": "o255"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.727,
+    "id": "o256"
+   },
+   {
+    "text": "so | went and looked up one",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.67,
+    "id": "o257"
+   },
+   {
+    "text": "of the most rapidly growing",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.675,
+    "id": "o258"
+   },
+   {
+    "text": "cells look at that",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.76,
+    "id": "o259"
+   },
+   {
+    "text": "What are the most rapidly growing cells?",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.658,
+    "id": "o260"
+   },
+   {
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.844,
+    "id": "o261"
+   },
+   {
+    "text": "than normal cells: The fast-growing normal cells most",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.774,
+    "id": "o262"
+   },
+   {
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.874,
+    "id": "o263"
+   },
+   {
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.703,
+    "id": "o264"
+   },
+   {
+    "text": "tract, reproductive system, and hair follicles:",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.662,
+    "id": "o265"
+   },
+   {
+    "text": "sid",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 1.0,
+    "id": "o266"
+   },
+   {
+    "text": "ining",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 1.0,
+    "id": "o267"
+   },
+   {
+    "text": "Possible Side",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.997,
+    "id": "o268"
+   },
+   {
+    "text": "Which is",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.941,
+    "id": "o269"
+   },
+   {
+    "text": "man?",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.93,
+    "id": "o270"
+   },
+   {
+    "text": "What cells",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.743,
+    "id": "o271"
+   },
+   {
+    "text": "What",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 1.0,
+    "id": "o272"
+   },
+   {
+    "text": "Whatdovall tik",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.564,
+    "id": "o273"
+   },
+   {
+    "text": "Is It \"Cancer Made Meat\"???",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.743,
+    "id": "o274"
+   },
+   {
+    "text": "so | went and looked up one",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.57,
+    "id": "o275"
+   },
+   {
+    "text": "of the most rapidly growing",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.562,
+    "id": "o276"
+   },
+   {
+    "text": "cells look at that",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.673,
+    "id": "o277"
+   },
+   {
+    "text": "What are the most rapidly growing cells?",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.665,
+    "id": "o278"
+   },
+   {
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.848,
+    "id": "o279"
+   },
+   {
+    "text": "than normal cells: The fast-growing normal cells most",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.777,
+    "id": "o280"
+   },
+   {
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.856,
+    "id": "o281"
+   },
+   {
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.697,
+    "id": "o282"
+   },
+   {
+    "text": "tract, reproductive system, and hair follicles:",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.545,
+    "id": "o283"
+   },
+   {
+    "text": "https: / /training seer",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.558,
+    "id": "o284"
+   },
+   {
+    "text": "Possible Side",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.998,
+    "id": "o285"
+   },
+   {
+    "text": "Which is th",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.865,
+    "id": "o286"
+   },
+   {
+    "text": "man?",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.999,
+    "id": "o287"
+   },
+   {
+    "text": "What cells re",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.996,
+    "id": "o288"
+   },
+   {
+    "text": "Whatdovall tik",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.607,
+    "id": "o289"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.502,
+    "id": "o290"
+   },
+   {
+    "text": "cancer cells typically grow",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.826,
+    "id": "o291"
+   },
+   {
+    "text": "and divide more rapidly than",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.995,
+    "id": "o292"
+   },
+   {
+    "text": "normal cells",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 1.0,
+    "id": "o293"
+   },
+   {
+    "text": "What are the most rapidly growing cells?",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.606,
+    "id": "o294"
+   },
+   {
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.719,
+    "id": "o295"
+   },
+   {
+    "text": "than normal cells: The fast-growing normal cells most",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.573,
+    "id": "o296"
+   },
+   {
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.648,
+    "id": "o297"
+   },
+   {
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.704,
+    "id": "o298"
+   },
+   {
+    "text": "tract, reproductive system, and hair follicles:",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.655,
+    "id": "o299"
+   },
+   {
+    "text": "https: / /training seer cancergov",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.621,
+    "id": "o300"
+   },
+   {
+    "text": "sid",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 1.0,
+    "id": "o301"
+   },
+   {
+    "text": "Possible Side Effe",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.689,
+    "id": "o302"
+   },
+   {
+    "text": "Which is th",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.964,
+    "id": "o303"
+   },
+   {
+    "text": "nan?",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.954,
+    "id": "o304"
+   },
+   {
+    "text": "What cells",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.711,
+    "id": "o305"
+   },
+   {
+    "text": "What are",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 1.0,
+    "id": "o306"
+   },
+   {
+    "text": "Whatdovall tik",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.521,
+    "id": "o307"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.662,
+    "id": "o308"
+   },
+   {
+    "text": "cancer cells typically grow",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.831,
+    "id": "o309"
+   },
+   {
+    "text": "and divide more rapidly than",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.996,
+    "id": "o310"
+   },
+   {
+    "text": "normal cells",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 1.0,
+    "id": "o311"
+   },
+   {
+    "text": "What are the most rapidly growing cells?",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.606,
+    "id": "o312"
+   },
+   {
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.715,
+    "id": "o313"
+   },
+   {
+    "text": "than normal cells: The fast-growing normal cells most",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.574,
+    "id": "o314"
+   },
+   {
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.65,
+    "id": "o315"
+   },
+   {
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.701,
+    "id": "o316"
+   },
+   {
+    "text": "tract, reproductive system, and hair follicles:",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.777,
+    "id": "o317"
+   },
+   {
+    "text": "https:I/training seercancergov",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.775,
+    "id": "o318"
+   },
+   {
+    "text": "sid",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 1.0,
+    "id": "o319"
+   },
+   {
+    "text": "Training",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 1.0,
+    "id": "o320"
+   },
+   {
+    "text": "Possible Side Effec",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.967,
+    "id": "o321"
+   },
+   {
+    "text": "Which is th",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.954,
+    "id": "o322"
+   },
+   {
+    "text": "nan?",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.809,
+    "id": "o323"
+   },
+   {
+    "text": "What cells",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.731,
+    "id": "o324"
+   },
+   {
+    "text": "What are",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 1.0,
+    "id": "o325"
+   },
+   {
+    "text": "WhatdoVall tik",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.563,
+    "id": "o326"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.662,
+    "id": "o327"
+   },
+   {
+    "text": "cancer cells typically grow",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.823,
+    "id": "o328"
+   },
+   {
+    "text": "and divide more rapidly than",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.787,
+    "id": "o329"
+   },
+   {
+    "text": "normal cells",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 1.0,
+    "id": "o330"
+   },
+   {
+    "text": "What are the most rapidly growing cells?",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.696,
+    "id": "o331"
+   },
+   {
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.782,
+    "id": "o332"
+   },
+   {
+    "text": "than normal cells: The fast-growing normal cells most",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.719,
+    "id": "o333"
+   },
+   {
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.726,
+    "id": "o334"
+   },
+   {
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.831,
+    "id": "o335"
+   },
+   {
+    "text": "tract, reproductive system, and hair follicles:",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.64,
+    "id": "o336"
+   },
+   {
+    "text": "https:I/training seercancergov",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.725,
+    "id": "o337"
+   },
+   {
+    "text": "raining",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.944,
+    "id": "o338"
+   },
+   {
+    "text": "Possible Side Effects",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.759,
+    "id": "o339"
+   },
+   {
+    "text": "Which is the",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.855,
+    "id": "o340"
+   },
+   {
+    "text": "an?",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 1.0,
+    "id": "o341"
+   },
+   {
+    "text": "What cells repr",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.899,
+    "id": "o342"
+   },
+   {
+    "text": "What are ra",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.886,
+    "id": "o343"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.667,
+    "id": "o344"
+   },
+   {
+    "text": "cancer cells typically grow",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.686,
+    "id": "o345"
+   },
+   {
+    "text": "and divide more rapidly than",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.797,
+    "id": "o346"
+   },
+   {
+    "text": "normal cells",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 1.0,
+    "id": "o347"
+   },
+   {
+    "text": "muscle",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.999,
+    "id": "o348"
+   },
+   {
+    "text": "connective tissue",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.983,
+    "id": "o349"
+   },
+   {
+    "text": "fat",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 1.0,
+    "id": "o350"
+   },
+   {
+    "text": "What do Vall think",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.971,
+    "id": "o351"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.547,
+    "id": "o352"
+   },
+   {
+    "text": "and the cells multipliover",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.617,
+    "id": "o353"
+   },
+   {
+    "text": "and over and@ver",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.694,
+    "id": "o354"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.568,
+    "id": "o355"
+   },
+   {
+    "text": "and the cells multipliover",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.539,
+    "id": "o356"
+   },
+   {
+    "text": "and over and over",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.819,
+    "id": "o357"
+   },
+   {
+    "text": "Whatdovall think",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.887,
+    "id": "o358"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.708,
+    "id": "o359"
+   },
+   {
+    "text": "EEKS,",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.519,
+    "id": "o360"
+   },
+   {
+    "text": "after several daysorweeks",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.802,
+    "id": "o361"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.567,
+    "id": "o362"
+   },
+   {
+    "text": "the meat is removed from the",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.837,
+    "id": "o363"
+   },
+   {
+    "text": "tanks to be shapedinto",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.866,
+    "id": "o364"
+   },
+   {
+    "text": "cutlets hot dogs",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.874,
+    "id": "o365"
+   },
+   {
+    "text": "What do vall think",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.622,
+    "id": "o366"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.716,
+    "id": "o367"
+   },
+   {
+    "text": "ved ftom the",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.74,
+    "id": "o368"
+   },
+   {
+    "text": "the meat is removed",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.863,
+    "id": "o369"
+   },
+   {
+    "text": "tanks to be shapedinto",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.995,
+    "id": "o370"
+   },
+   {
+    "text": "cutlets hot dogs",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.884,
+    "id": "o371"
+   },
+   {
+    "text": "What do vall think",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.72,
+    "id": "o372"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Meat\"???",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.608,
+    "id": "o373"
+   },
+   {
+    "text": "nuggets and sausages",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.941,
+    "id": "o374"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.617,
+    "id": "o375"
+   },
+   {
+    "text": "then it's ready to be cooked",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.722,
+    "id": "o376"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.662,
+    "id": "o377"
+   },
+   {
+    "text": "What are the most rapidly growing cells?",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.615,
+    "id": "o378"
+   },
+   {
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.851,
+    "id": "o379"
+   },
+   {
+    "text": "than normal cells: The fast-growing normal cells most",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.746,
+    "id": "o380"
+   },
+   {
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.807,
+    "id": "o381"
+   },
+   {
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.709,
+    "id": "o382"
+   },
+   {
+    "text": "tract, reproductive system, and hair follicles:",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.595,
+    "id": "o383"
+   },
+   {
+    "text": "https / /training seer cancergov",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.564,
+    "id": "o384"
+   },
+   {
+    "text": "sid:",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.738,
+    "id": "o385"
+   },
+   {
+    "text": "SFER Training",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.927,
+    "id": "o386"
+   },
+   {
+    "text": "Possible Side Effects",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.996,
+    "id": "o387"
+   },
+   {
+    "text": "Which is the",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.979,
+    "id": "o388"
+   },
+   {
+    "text": "an?",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 1.0,
+    "id": "o389"
+   },
+   {
+    "text": "What cells rer",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.826,
+    "id": "o390"
+   },
+   {
+    "text": "What are rapia",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.712,
+    "id": "o391"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.675,
+    "id": "o392"
+   },
+   {
+    "text": "so it sounds like they're",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.502,
+    "id": "o393"
+   },
+   {
+    "text": "taking the cancerous cells",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.903,
+    "id": "o394"
+   },
+   {
+    "text": "What are the most rapidly growing cells?",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.773,
+    "id": "o395"
+   },
+   {
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.7,
+    "id": "o396"
+   },
+   {
+    "text": "than normal cells: The fast-growing normal cells most",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.734,
+    "id": "o397"
+   },
+   {
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.864,
+    "id": "o398"
+   },
+   {
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.651,
+    "id": "o399"
+   },
+   {
+    "text": "tract, reproductive system, and hair follicles:",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.522,
+    "id": "o400"
+   },
+   {
+    "text": "SEER Training",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.989,
+    "id": "o401"
+   },
+   {
+    "text": "Possible Side Effects",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.952,
+    "id": "o402"
+   },
+   {
+    "text": "Which is the fa",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.966,
+    "id": "o403"
+   },
+   {
+    "text": "an",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 1.0,
+    "id": "o404"
+   },
+   {
+    "text": "What cells rep",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.992,
+    "id": "o405"
+   },
+   {
+    "text": "What are rapidl",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.771,
+    "id": "o406"
+   },
+   {
+    "text": "es?",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 1.0,
+    "id": "o407"
+   },
+   {
+    "text": "What",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 1.0,
+    "id": "o408"
+   },
+   {
+    "text": "life?",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.965,
+    "id": "o409"
+   },
+   {
+    "text": "so it sounds like they're",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 0.599,
+    "id": "o410"
+   },
+   {
+    "text": "taking the cancerous cells",
+    "start": 98.0,
+    "end": 98.0,
+    "confidence": 1.0,
+    "id": "o411"
+   },
+   {
+    "text": "What are the most rapidly growing cells?",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.774,
+    "id": "o412"
+   },
+   {
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.701,
+    "id": "o413"
+   },
+   {
+    "text": "than normal cells: The fast-growing normal cells most",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.733,
+    "id": "o414"
+   },
+   {
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.864,
+    "id": "o415"
+   },
+   {
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.651,
+    "id": "o416"
+   },
+   {
+    "text": "tract, reproductive system, and hair follicles:",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.52,
+    "id": "o417"
+   },
+   {
+    "text": "SEER Training",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.989,
+    "id": "o418"
+   },
+   {
+    "text": "Possible Side Effects",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.942,
+    "id": "o419"
+   },
+   {
+    "text": "ESULTS",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.76,
+    "id": "o420"
+   },
+   {
+    "text": "Which is",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.938,
+    "id": "o421"
+   },
+   {
+    "text": "human?",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.858,
+    "id": "o422"
+   },
+   {
+    "text": "What cell",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.999,
+    "id": "o423"
+   },
+   {
+    "text": "nples?",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.718,
+    "id": "o424"
+   },
+   {
+    "text": "What",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 1.0,
+    "id": "o425"
+   },
+   {
+    "text": "life?",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.96,
+    "id": "o426"
+   },
+   {
+    "text": "What dvall tik",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.513,
+    "id": "o427"
+   },
+   {
+    "text": "or pre cancerous cells from",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.594,
+    "id": "o428"
+   },
+   {
+    "text": "these animals to reproduce",
+    "start": 100.0,
+    "end": 100.0,
+    "confidence": 0.728,
+    "id": "o429"
+   },
+   {
+    "text": "What are the most rapidly growing cells?",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.65,
+    "id": "o430"
+   },
+   {
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.869,
+    "id": "o431"
+   },
+   {
+    "text": "than normal cells: The fast-growing normal cells most",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.728,
+    "id": "o432"
+   },
+   {
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.859,
+    "id": "o433"
+   },
+   {
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.737,
+    "id": "o434"
+   },
+   {
+    "text": "tract, reproductive system, and hair follicles:",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.533,
+    "id": "o435"
+   },
+   {
+    "text": "https / /training seer cancergov",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.569,
+    "id": "o436"
+   },
+   {
+    "text": "SEER Training",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.985,
+    "id": "o437"
+   },
+   {
+    "text": "Possible Side Effects",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.922,
+    "id": "o438"
+   },
+   {
+    "text": "ULTS",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.898,
+    "id": "o439"
+   },
+   {
+    "text": "Which is",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.943,
+    "id": "o440"
+   },
+   {
+    "text": "human?",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 1.0,
+    "id": "o441"
+   },
+   {
+    "text": "What cell",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.552,
+    "id": "o442"
+   },
+   {
+    "text": "What are rap",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.567,
+    "id": "o443"
+   },
+   {
+    "text": "ples?",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.911,
+    "id": "o444"
+   },
+   {
+    "text": "What",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 1.0,
+    "id": "o445"
+   },
+   {
+    "text": "cancerous cells from",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.94,
+    "id": "o446"
+   },
+   {
+    "text": "pre",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 1.0,
+    "id": "o447"
+   },
+   {
+    "text": "Or",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.614,
+    "id": "o448"
+   },
+   {
+    "text": "these animals to reproduce",
+    "start": 102.0,
+    "end": 102.0,
+    "confidence": 0.852,
+    "id": "o449"
+   },
+   {
+    "text": "What are the most rapidly growing cells?",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.62,
+    "id": "o450"
+   },
+   {
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.756,
+    "id": "o451"
+   },
+   {
+    "text": "than normal cells: The fast-growing normal cells most",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.719,
+    "id": "o452"
+   },
+   {
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.738,
+    "id": "o453"
+   },
+   {
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.736,
+    "id": "o454"
+   },
+   {
+    "text": "tract, reproductive system, and hair follicles:",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.547,
+    "id": "o455"
+   },
+   {
+    "text": "https:I/training seercancergov",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.664,
+    "id": "o456"
+   },
+   {
+    "text": "SEER Training",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.985,
+    "id": "o457"
+   },
+   {
+    "text": "Possible Side Effects",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.933,
+    "id": "o458"
+   },
+   {
+    "text": "TS",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.998,
+    "id": "o459"
+   },
+   {
+    "text": "Which is th",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.8,
+    "id": "o460"
+   },
+   {
+    "text": "Juman?",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.679,
+    "id": "o461"
+   },
+   {
+    "text": "What cells",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.967,
+    "id": "o462"
+   },
+   {
+    "text": "ples?",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.972,
+    "id": "o463"
+   },
+   {
+    "text": "What are rap",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.846,
+    "id": "o464"
+   },
+   {
+    "text": "Wha",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 1.0,
+    "id": "o465"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.671,
+    "id": "o466"
+   },
+   {
+    "text": "to make the meat that we",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.763,
+    "id": "o467"
+   },
+   {
+    "text": "bout to eat",
+    "start": 104.0,
+    "end": 104.0,
+    "confidence": 0.966,
+    "id": "o468"
+   },
+   {
+    "text": "What are the most rapidly growing cells?",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.62,
+    "id": "o469"
+   },
+   {
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.747,
+    "id": "o470"
+   },
+   {
+    "text": "than normal cells: The fast-growing normal cells most",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.722,
+    "id": "o471"
+   },
+   {
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.739,
+    "id": "o472"
+   },
+   {
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.736,
+    "id": "o473"
+   },
+   {
+    "text": "tract, reproductive system, and hair follicles:",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.547,
+    "id": "o474"
+   },
+   {
+    "text": "https / /training seer cancergov",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.545,
+    "id": "o475"
+   },
+   {
+    "text": "SEER Training",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.989,
+    "id": "o476"
+   },
+   {
+    "text": "Possible Side Effects",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.762,
+    "id": "o477"
+   },
+   {
+    "text": "Which is the",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.871,
+    "id": "o478"
+   },
+   {
+    "text": "nan?",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.73,
+    "id": "o479"
+   },
+   {
+    "text": "What cells",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.797,
+    "id": "o480"
+   },
+   {
+    "text": "What are rap",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.939,
+    "id": "o481"
+   },
+   {
+    "text": "les?",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.786,
+    "id": "o482"
+   },
+   {
+    "text": "Wh",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.958,
+    "id": "o483"
+   },
+   {
+    "text": "Is It \"Cancer Mlade Mleat\"???",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.672,
+    "id": "o484"
+   },
+   {
+    "text": "to make the meat that we",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.821,
+    "id": "o485"
+   },
+   {
+    "text": "bout to eat",
+    "start": 106.0,
+    "end": 106.0,
+    "confidence": 0.964,
+    "id": "o486"
+   },
+   {
+    "text": "What are the most rapidly growing cells?",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.621,
+    "id": "o487"
+   },
+   {
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.75,
+    "id": "o488"
+   },
+   {
+    "text": "than normal cells: The fast-growing normal cells most",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.721,
+    "id": "o489"
+   },
+   {
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.738,
+    "id": "o490"
+   },
+   {
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.739,
+    "id": "o491"
+   },
+   {
+    "text": "tract, reproductive system, and hair follicles:",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.545,
+    "id": "o492"
+   },
+   {
+    "text": "https / /training seer cancergov",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.545,
+    "id": "o493"
+   },
+   {
+    "text": "SEER Training",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.986,
+    "id": "o494"
+   },
+   {
+    "text": "Possible Side Effects",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.762,
+    "id": "o495"
+   },
+   {
+    "text": "Which is",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.961,
+    "id": "o496"
+   },
+   {
+    "text": "uman?",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.893,
+    "id": "o497"
+   },
+   {
+    "text": "What cel",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.995,
+    "id": "o498"
+   },
+   {
+    "text": "What are rap",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.904,
+    "id": "o499"
+   },
+   {
+    "text": "es?",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.987,
+    "id": "o500"
+   },
+   {
+    "text": "'Cancer Mlade Mleat\"???",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.51,
+    "id": "o501"
+   },
+   {
+    "text": "Is It",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.829,
+    "id": "o502"
+   },
+   {
+    "text": "well y'all about to eat",
+    "start": 108.0,
+    "end": 108.0,
+    "confidence": 0.916,
+    "id": "o503"
+   },
+   {
+    "text": "What are the most rapidly growing cells?",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.615,
+    "id": "o504"
+   },
+   {
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.746,
+    "id": "o505"
+   },
+   {
+    "text": "than normal cells: The fast-growing normal cells most",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.681,
+    "id": "o506"
+   },
+   {
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.869,
+    "id": "o507"
+   },
+   {
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.602,
+    "id": "o508"
+   },
+   {
+    "text": "tract, reproductive system, and hair follicles:",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.549,
+    "id": "o509"
+   },
+   {
+    "text": "https / /training seer cancergov",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.538,
+    "id": "o510"
+   },
+   {
+    "text": "Possible Side Effects",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.953,
+    "id": "o511"
+   },
+   {
+    "text": "SEER",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.995,
+    "id": "o512"
+   },
+   {
+    "text": "Which is the",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.738,
+    "id": "o513"
+   },
+   {
+    "text": "What cells re",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.731,
+    "id": "o514"
+   },
+   {
+    "text": "What are rapic",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.578,
+    "id": "o515"
+   },
+   {
+    "text": "don't fuck with meat",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.974,
+    "id": "o516"
+   },
+   {
+    "text": "cause",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.818,
+    "id": "o517"
+   },
+   {
+    "text": "pause",
+    "start": 110.0,
+    "end": 110.0,
+    "confidence": 0.912,
+    "id": "o518"
+   },
+   {
+    "text": "What are the most rapidly growing cells?",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.662,
+    "id": "o519"
+   },
+   {
+    "text": "Cancer cells typically grow and divide more rapidly",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.912,
+    "id": "o520"
+   },
+   {
+    "text": "than normal cells: The fast-growing normal cells most",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.774,
+    "id": "o521"
+   },
+   {
+    "text": "likely to be affected by chemotherapy are blood cells",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.72,
+    "id": "o522"
+   },
+   {
+    "text": "forming in the bone marrow, and cells in the digestive",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.797,
+    "id": "o523"
+   },
+   {
+    "text": "tract, reproductive system, and hair follicles:",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.663,
+    "id": "o524"
+   },
+   {
+    "text": "https / /training seer cancergov",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.558,
+    "id": "o525"
+   },
+   {
+    "text": "sid:",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.552,
+    "id": "o526"
+   },
+   {
+    "text": "SEER Training",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.993,
+    "id": "o527"
+   },
+   {
+    "text": "Possible Side Effects",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.968,
+    "id": "o528"
+   },
+   {
+    "text": "Which is the",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.913,
+    "id": "o529"
+   },
+   {
+    "text": "What cells",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.798,
+    "id": "o530"
+   },
+   {
+    "text": "ples?",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 1.0,
+    "id": "o531"
+   },
+   {
+    "text": "What are",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.641,
+    "id": "o532"
+   },
+   {
+    "text": "rap",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.999,
+    "id": "o533"
+   },
+   {
+    "text": "life?",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.966,
+    "id": "o534"
+   },
+   {
+    "text": "Wh",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 1.0,
+    "id": "o535"
+   },
+   {
+    "text": "cause | don't fuck with meat",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.54,
+    "id": "o536"
+   },
+   {
+    "text": "pause",
+    "start": 112.0,
+    "end": 112.0,
+    "confidence": 0.932,
+    "id": "o537"
+   }
+  ]
+ }
+}

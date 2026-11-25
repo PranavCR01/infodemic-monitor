@@ -46,8 +46,7 @@ def cmd_dataset_info(args) -> int:
         return 1
     _print({
         "name": ds.name, "version": ds.version, "hash": ds.hash,
-        "videos": len(ds.videos), "claims": sum(len(v.claims) for v in ds.videos),
-        "splits": {s: len(ds.split(s)) for s in ("tune", "test")},
+        **ds.summary(),
         "videos_with_inputs": len(ds.inputs),
         "coverage": ds.coverage(),
         "missing_categories": [c for c, n in ds.coverage().items() if n == 0],

@@ -1,0 +1,419 @@
+{
+ "video_id": "v136",
+ "filename": "new_TikTok_7347247675558858016.mp4",
+ "relative_path": "new_TikTok_7347247675558858016.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@nursemotuntv",
+ "extracted_at": "2026-11-23T08:45:57",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.437,
+  "duration_seconds": 15.07,
+  "segments": []
+ },
+ "on_screen": {
+  "frames_sampled": 8,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Do You Know You Can Run",
+    "confidence": 0.991
+   },
+   {
+    "time": 0.0,
+    "text": "Pregnancy Test At Home",
+    "confidence": 0.855
+   },
+   {
+    "time": 0.0,
+    "text": "Using SALT",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Do You Know You Can Run",
+    "confidence": 0.992
+   },
+   {
+    "time": 2.0,
+    "text": "Pregnancy Test At Home",
+    "confidence": 0.946
+   },
+   {
+    "time": 2.0,
+    "text": "Using SALT",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Do You Know You Can Run",
+    "confidence": 0.992
+   },
+   {
+    "time": 4.0,
+    "text": "Pregnancy Test At Home",
+    "confidence": 0.947
+   },
+   {
+    "time": 4.0,
+    "text": "Using SALT",
+    "confidence": 0.704
+   },
+   {
+    "time": 6.0,
+    "text": "Do You Know You Can Run",
+    "confidence": 0.992
+   },
+   {
+    "time": 6.0,
+    "text": "Pregnancy Test At Home",
+    "confidence": 0.949
+   },
+   {
+    "time": 6.0,
+    "text": "Using SALT",
+    "confidence": 0.676
+   },
+   {
+    "time": 6.0,
+    "text": "Take your early morning",
+    "confidence": 0.904
+   },
+   {
+    "time": 6.0,
+    "text": "Urine",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "Do You Know You Can Run",
+    "confidence": 0.991
+   },
+   {
+    "time": 8.0,
+    "text": "Pregnancy Test At Home",
+    "confidence": 0.949
+   },
+   {
+    "time": 8.0,
+    "text": "Using SALT",
+    "confidence": 0.684
+   },
+   {
+    "time": 8.0,
+    "text": "Get some salt",
+    "confidence": 0.888
+   },
+   {
+    "time": 8.0,
+    "text": "SALT",
+    "confidence": 0.989
+   },
+   {
+    "time": 10.0,
+    "text": "Do You Know You Can Run",
+    "confidence": 0.806
+   },
+   {
+    "time": 10.0,
+    "text": "Pregnancy Test At Home",
+    "confidence": 0.949
+   },
+   {
+    "time": 10.0,
+    "text": "Using SALT",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "Pour 2 tablespoons of salt",
+    "confidence": 0.995
+   },
+   {
+    "time": 10.0,
+    "text": "Inside the morning urine",
+    "confidence": 0.835
+   },
+   {
+    "time": 10.0,
+    "text": "SALT",
+    "confidence": 0.993
+   },
+   {
+    "time": 12.0,
+    "text": "Do You Know You Can Run",
+    "confidence": 0.81
+   },
+   {
+    "time": 12.0,
+    "text": "Pregnancy Test At Home",
+    "confidence": 0.95
+   },
+   {
+    "time": 12.0,
+    "text": "Using SALT",
+    "confidence": 0.702
+   },
+   {
+    "time": 14.0,
+    "text": "Do You Know You Can Run",
+    "confidence": 0.811
+   },
+   {
+    "time": 14.0,
+    "text": "Pregnancy Test At Home",
+    "confidence": 0.95
+   },
+   {
+    "time": 14.0,
+    "text": "Using SALT",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "Follow for More",
+    "confidence": 0.996
+   }
+  ],
+  "captions": [
+   {
+    "text": "Do You Know You Can Run",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.991,
+    "id": "o1"
+   },
+   {
+    "text": "Pregnancy Test At Home",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.855,
+    "id": "o2"
+   },
+   {
+    "text": "Using SALT",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o3"
+   },
+   {
+    "text": "Do You Know You Can Run",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.992,
+    "id": "o4"
+   },
+   {
+    "text": "Pregnancy Test At Home",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.946,
+    "id": "o5"
+   },
+   {
+    "text": "Using SALT",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o6"
+   },
+   {
+    "text": "Do You Know You Can Run",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.992,
+    "id": "o7"
+   },
+   {
+    "text": "Pregnancy Test At Home",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.947,
+    "id": "o8"
+   },
+   {
+    "text": "Using SALT",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.704,
+    "id": "o9"
+   },
+   {
+    "text": "Do You Know You Can Run",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.992,
+    "id": "o10"
+   },
+   {
+    "text": "Pregnancy Test At Home",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.949,
+    "id": "o11"
+   },
+   {
+    "text": "Using SALT",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.676,
+    "id": "o12"
+   },
+   {
+    "text": "Take your early morning",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.904,
+    "id": "o13"
+   },
+   {
+    "text": "Urine",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.999,
+    "id": "o14"
+   },
+   {
+    "text": "Do You Know You Can Run",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.991,
+    "id": "o15"
+   },
+   {
+    "text": "Pregnancy Test At Home",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.949,
+    "id": "o16"
+   },
+   {
+    "text": "Using SALT",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.684,
+    "id": "o17"
+   },
+   {
+    "text": "Get some salt",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.888,
+    "id": "o18"
+   },
+   {
+    "text": "SALT",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.989,
+    "id": "o19"
+   },
+   {
+    "text": "Do You Know You Can Run",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.806,
+    "id": "o20"
+   },
+   {
+    "text": "Pregnancy Test At Home",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.949,
+    "id": "o21"
+   },
+   {
+    "text": "Using SALT",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o22"
+   },
+   {
+    "text": "Pour 2 tablespoons of salt",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.995,
+    "id": "o23"
+   },
+   {
+    "text": "Inside the morning urine",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.835,
+    "id": "o24"
+   },
+   {
+    "text": "SALT",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.993,
+    "id": "o25"
+   },
+   {
+    "text": "Do You Know You Can Run",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.81,
+    "id": "o26"
+   },
+   {
+    "text": "Pregnancy Test At Home",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.95,
+    "id": "o27"
+   },
+   {
+    "text": "Using SALT",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.702,
+    "id": "o28"
+   },
+   {
+    "text": "Do You Know You Can Run",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.811,
+    "id": "o29"
+   },
+   {
+    "text": "Pregnancy Test At Home",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.95,
+    "id": "o30"
+   },
+   {
+    "text": "Using SALT",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o31"
+   },
+   {
+    "text": "Follow for More",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.996,
+    "id": "o32"
+   }
+  ]
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.998,
+  "duration_seconds": 54.89,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.05,
+    "end": 6.13,
+    "text": "This is why you don't ever want to touch the receipts on thermal paper"
+   },
+   {
+    "id": "t2",
+    "start": 11.77,
+    "end": 15.17,
+    "text": "These thermal paper receipts contain BPA and BPS"
+   },
+   {
+    "id": "t3",
+    "start": 15.53,
+    "end": 20.25,
+    "text": "These are endocrine disrupting chemicals that can actually be absorbed through your skin"
+   },
+   {
+    "id": "t4",
+    "start": 20.29,
+    "end": 23.73,
+    "text": "So just touching one of the grocery store every once in a while isn't the end of the world"
+   },
+   {
+    "id": "t5",
+    "start": 23.73,
+    "end": 28.37,
+    "text": "But I would like to avoid as many endocrine disruptors in my life. Thank you as I can"
+   },
+   {
+    "id": "t6",
+    "start": 28.37,
+    "end": 35.73,
+    "text": "So I either don't get the receipt or I'm just going to use my handy-dandy wool shirt here to put the receipt in the trash"
+   },
+   {
+    "id": "t7",
+    "start": 36.33,
+    "end": 37.77,
+    "text": "And not touch it"
+   },
+   {
+    "id": "t8",
+    "start": 37.77,
+    "end": 40.45,
+    "text": "So if you are touching a lot of receipts or in your daily life"
+   },
+   {
+    "id": "t9",
+    "start": 40.57,
+    "end": 44.49,
+    "text": "Don't touch the thermal paper receipts and you will decrease your exposure"
+   },
+   {
+    "id": "t10",
+    "start": 45.05,
+    "end": 50.85,
+    "text": "VPA and VPS endocrine deceptive chemicals that can be messing up your hormones. Don't touch them"
+   }
+  ]
+ }
+}

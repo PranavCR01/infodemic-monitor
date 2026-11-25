@@ -1,0 +1,1198 @@
+{
+ "video_id": "v142",
+ "filename": "new_TikTok_7407459116433591585.mp4",
+ "relative_path": "new_TikTok_7407459116433591585.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@mapy255",
+ "extracted_at": "2026-11-23T08:45:58",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.931,
+  "duration_seconds": 102.52,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 15.62,
+    "text": "Estos son los huevos que nos venden ahora, huevos que ni se parten, ni se parten aplastando, mirar, mirar"
+   },
+   {
+    "id": "t2",
+    "start": 15.62,
+    "end": 25.93,
+    "text": "que no se puede aplastar, que no se puede aplastar, no se puede aplastar, pero no solo ese, le he puesto"
+   },
+   {
+    "id": "t3",
+    "start": 25.93,
+    "end": 36.97,
+    "text": "plato a mi hijo de comida mirar qué huevos mirar qué huevos que no no se lo no se lo va a comer"
+   },
+   {
+    "id": "t4",
+    "start": 36.97,
+    "end": 45.21,
+    "text": "claro está mirar estos son los huevos que nos están vendiendo ahora mira este fuerte"
+   },
+   {
+    "id": "t5",
+    "start": 45.21,
+    "end": 52.55,
+    "text": "que se te va la mano como está apretando mira ni se desborona amo que no se lo va a comer"
+   },
+   {
+    "id": "t6",
+    "start": 52.55,
+    "end": 60.72,
+    "text": "mi hijo claro está mirar qué huevos mirar que se doblan se doblan y se parten por todos los"
+   },
+   {
+    "id": "t7",
+    "start": 60.72,
+    "end": 67.64,
+    "text": "pero no se parte donde aplastamos mirar mi dedo totalmente morado apretando y se queda como nuevo"
+   },
+   {
+    "id": "t8",
+    "start": 67.64,
+    "end": 79.45,
+    "text": "esta es la mierda que nos están vendiendo huevos de plástico de plástico todo y bueno"
+   },
+   {
+    "id": "t9",
+    "start": 79.45,
+    "end": 91.48,
+    "text": "no, creaper es totalmente, vamos, mirad, mirad el plástico, mirad, mirad, mirad, mirad,"
+   },
+   {
+    "id": "t10",
+    "start": 91.48,
+    "end": 100.52,
+    "text": "esa es la mierda que nos están metiendo y a 8 euros es el cartón de plástico, de plástico,"
+   },
+   {
+    "id": "t11",
+    "start": 100.52,
+    "end": 100.8,
+    "text": "mirad."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 52,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.542
+   },
+   {
+    "time": 0.0,
+    "text": "tener cuidado",
+    "confidence": 0.806
+   },
+   {
+    "time": 2.02,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.61
+   },
+   {
+    "time": 2.02,
+    "text": "tener cuidado",
+    "confidence": 0.93
+   },
+   {
+    "time": 4.02,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.88
+   },
+   {
+    "time": 4.02,
+    "text": "tener cuidado",
+    "confidence": 0.942
+   },
+   {
+    "time": 6.02,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.586
+   },
+   {
+    "time": 6.02,
+    "text": "tener cuidado",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.02,
+    "text": "tener cuidado",
+    "confidence": 0.947
+   },
+   {
+    "time": 10.0,
+    "text": "tener cuidado",
+    "confidence": 0.953
+   },
+   {
+    "time": 12.0,
+    "text": "tener cuidado",
+    "confidence": 0.943
+   },
+   {
+    "time": 14.0,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.513
+   },
+   {
+    "time": 14.0,
+    "text": "tener cuidado",
+    "confidence": 0.95
+   },
+   {
+    "time": 16.0,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.503
+   },
+   {
+    "time": 16.0,
+    "text": "tener cuidado",
+    "confidence": 0.712
+   },
+   {
+    "time": 18.0,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.583
+   },
+   {
+    "time": 18.0,
+    "text": "tener cuidado",
+    "confidence": 0.735
+   },
+   {
+    "time": 19.98,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.78
+   },
+   {
+    "time": 19.98,
+    "text": "tener cuidado",
+    "confidence": 0.941
+   },
+   {
+    "time": 21.98,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.755
+   },
+   {
+    "time": 21.98,
+    "text": "tener cuidado",
+    "confidence": 1.0
+   },
+   {
+    "time": 23.98,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.536
+   },
+   {
+    "time": 23.98,
+    "text": "tener cuidado",
+    "confidence": 0.706
+   },
+   {
+    "time": 25.98,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.718
+   },
+   {
+    "time": 25.98,
+    "text": "tener cuidado",
+    "confidence": 0.696
+   },
+   {
+    "time": 28.0,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.51
+   },
+   {
+    "time": 28.0,
+    "text": "tener cuidado",
+    "confidence": 0.824
+   },
+   {
+    "time": 30.0,
+    "text": "tener cuidado",
+    "confidence": 0.808
+   },
+   {
+    "time": 32.0,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.741
+   },
+   {
+    "time": 32.0,
+    "text": "tener cuidado",
+    "confidence": 0.785
+   },
+   {
+    "time": 34.0,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.564
+   },
+   {
+    "time": 34.0,
+    "text": "tener cuidado",
+    "confidence": 0.812
+   },
+   {
+    "time": 35.98,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.961
+   },
+   {
+    "time": 35.98,
+    "text": "tener cuidado",
+    "confidence": 0.835
+   },
+   {
+    "time": 37.98,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.854
+   },
+   {
+    "time": 37.98,
+    "text": "tener cuidado",
+    "confidence": 0.839
+   },
+   {
+    "time": 39.98,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.906
+   },
+   {
+    "time": 39.98,
+    "text": "tener cuidado",
+    "confidence": 0.935
+   },
+   {
+    "time": 41.98,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.734
+   },
+   {
+    "time": 41.98,
+    "text": "tener cuidado",
+    "confidence": 0.813
+   },
+   {
+    "time": 43.98,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.672
+   },
+   {
+    "time": 43.98,
+    "text": "tener cuidado",
+    "confidence": 0.817
+   },
+   {
+    "time": 45.97,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.671
+   },
+   {
+    "time": 45.97,
+    "text": "tener cuidado",
+    "confidence": 0.835
+   },
+   {
+    "time": 47.97,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.893
+   },
+   {
+    "time": 47.97,
+    "text": "tener cuidado",
+    "confidence": 0.764
+   },
+   {
+    "time": 49.97,
+    "text": "tener cuidado",
+    "confidence": 0.762
+   },
+   {
+    "time": 51.98,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.768
+   },
+   {
+    "time": 51.98,
+    "text": "tener cuidado",
+    "confidence": 0.949
+   },
+   {
+    "time": 53.97,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.604
+   },
+   {
+    "time": 53.97,
+    "text": "tener cuidado",
+    "confidence": 0.793
+   },
+   {
+    "time": 55.98,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.506
+   },
+   {
+    "time": 55.98,
+    "text": "tener cuidado",
+    "confidence": 0.839
+   },
+   {
+    "time": 57.98,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.916
+   },
+   {
+    "time": 57.98,
+    "text": "tener cuidado",
+    "confidence": 0.822
+   },
+   {
+    "time": 59.98,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.525
+   },
+   {
+    "time": 59.98,
+    "text": "tener cuidado",
+    "confidence": 0.799
+   },
+   {
+    "time": 61.97,
+    "text": "tener cuidado",
+    "confidence": 0.551
+   },
+   {
+    "time": 63.97,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.524
+   },
+   {
+    "time": 63.97,
+    "text": "tener cuidado",
+    "confidence": 1.0
+   },
+   {
+    "time": 65.97,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.523
+   },
+   {
+    "time": 65.97,
+    "text": "tener cuidado",
+    "confidence": 0.945
+   },
+   {
+    "time": 67.97,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.658
+   },
+   {
+    "time": 67.97,
+    "text": "tener cuidado",
+    "confidence": 0.956
+   },
+   {
+    "time": 69.97,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.57
+   },
+   {
+    "time": 69.97,
+    "text": "tener cuidado",
+    "confidence": 0.928
+   },
+   {
+    "time": 71.97,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.893
+   },
+   {
+    "time": 71.97,
+    "text": "tener cuidado",
+    "confidence": 0.946
+   },
+   {
+    "time": 73.97,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.594
+   },
+   {
+    "time": 73.97,
+    "text": "tener cuidado",
+    "confidence": 0.959
+   },
+   {
+    "time": 75.97,
+    "text": "tener cuidado",
+    "confidence": 0.954
+   },
+   {
+    "time": 77.97,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.81
+   },
+   {
+    "time": 77.97,
+    "text": "tener cuidado",
+    "confidence": 0.84
+   },
+   {
+    "time": 79.97,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.753
+   },
+   {
+    "time": 79.97,
+    "text": "tener cuidado",
+    "confidence": 0.944
+   },
+   {
+    "time": 81.97,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.649
+   },
+   {
+    "time": 81.97,
+    "text": "tener cuidado",
+    "confidence": 0.939
+   },
+   {
+    "time": 83.97,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.566
+   },
+   {
+    "time": 83.97,
+    "text": "tener cuidado",
+    "confidence": 0.926
+   },
+   {
+    "time": 85.95,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.525
+   },
+   {
+    "time": 85.95,
+    "text": "tener cuidado",
+    "confidence": 0.898
+   },
+   {
+    "time": 87.95,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.536
+   },
+   {
+    "time": 87.95,
+    "text": "tener cuidado",
+    "confidence": 0.924
+   },
+   {
+    "time": 89.95,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.887
+   },
+   {
+    "time": 89.95,
+    "text": "tener cuidado",
+    "confidence": 0.941
+   },
+   {
+    "time": 91.95,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.872
+   },
+   {
+    "time": 91.95,
+    "text": "tener cuidado",
+    "confidence": 0.939
+   },
+   {
+    "time": 93.95,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.791
+   },
+   {
+    "time": 93.95,
+    "text": "tener cuidado",
+    "confidence": 0.987
+   },
+   {
+    "time": 95.95,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.547
+   },
+   {
+    "time": 95.95,
+    "text": "tener cuidado",
+    "confidence": 0.702
+   },
+   {
+    "time": 97.95,
+    "text": "tener cuidado",
+    "confidence": 0.824
+   },
+   {
+    "time": 99.95,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.573
+   },
+   {
+    "time": 99.95,
+    "text": "tener cuidado",
+    "confidence": 0.813
+   },
+   {
+    "time": 101.95,
+    "text": "peligro comida plastica ya",
+    "confidence": 0.798
+   },
+   {
+    "time": 101.95,
+    "text": "tener cuidado",
+    "confidence": 0.955
+   }
+  ],
+  "captions": [
+   {
+    "text": "peligro comida plastica ya",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.542,
+    "id": "o1"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.806,
+    "id": "o2"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 2.02,
+    "end": 2.02,
+    "confidence": 0.61,
+    "id": "o3"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 2.02,
+    "end": 2.02,
+    "confidence": 0.93,
+    "id": "o4"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 4.02,
+    "end": 4.02,
+    "confidence": 0.88,
+    "id": "o5"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 4.02,
+    "end": 4.02,
+    "confidence": 0.942,
+    "id": "o6"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 6.02,
+    "end": 6.02,
+    "confidence": 0.586,
+    "id": "o7"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 6.02,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o8"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.513,
+    "id": "o9"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.95,
+    "id": "o10"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.503,
+    "id": "o11"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.712,
+    "id": "o12"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.583,
+    "id": "o13"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.735,
+    "id": "o14"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 19.98,
+    "end": 19.98,
+    "confidence": 0.78,
+    "id": "o15"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 19.98,
+    "end": 19.98,
+    "confidence": 0.941,
+    "id": "o16"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 21.98,
+    "end": 21.98,
+    "confidence": 0.755,
+    "id": "o17"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 21.98,
+    "end": 21.98,
+    "confidence": 1.0,
+    "id": "o18"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 23.98,
+    "end": 23.98,
+    "confidence": 0.536,
+    "id": "o19"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 23.98,
+    "end": 23.98,
+    "confidence": 0.706,
+    "id": "o20"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 25.98,
+    "end": 25.98,
+    "confidence": 0.718,
+    "id": "o21"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 25.98,
+    "end": 25.98,
+    "confidence": 0.696,
+    "id": "o22"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.51,
+    "id": "o23"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 28.0,
+    "end": 30.0,
+    "confidence": 0.824,
+    "id": "o24"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.741,
+    "id": "o25"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.785,
+    "id": "o26"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.564,
+    "id": "o27"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.812,
+    "id": "o28"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 35.98,
+    "end": 35.98,
+    "confidence": 0.961,
+    "id": "o29"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 35.98,
+    "end": 35.98,
+    "confidence": 0.835,
+    "id": "o30"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 37.98,
+    "end": 37.98,
+    "confidence": 0.854,
+    "id": "o31"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 37.98,
+    "end": 37.98,
+    "confidence": 0.839,
+    "id": "o32"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 39.98,
+    "end": 39.98,
+    "confidence": 0.906,
+    "id": "o33"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 39.98,
+    "end": 39.98,
+    "confidence": 0.935,
+    "id": "o34"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 41.98,
+    "end": 41.98,
+    "confidence": 0.734,
+    "id": "o35"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 41.98,
+    "end": 41.98,
+    "confidence": 0.813,
+    "id": "o36"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 43.98,
+    "end": 43.98,
+    "confidence": 0.672,
+    "id": "o37"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 43.98,
+    "end": 43.98,
+    "confidence": 0.817,
+    "id": "o38"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 45.97,
+    "end": 45.97,
+    "confidence": 0.671,
+    "id": "o39"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 45.97,
+    "end": 45.97,
+    "confidence": 0.835,
+    "id": "o40"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 47.97,
+    "end": 47.97,
+    "confidence": 0.893,
+    "id": "o41"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 47.97,
+    "end": 49.97,
+    "confidence": 0.764,
+    "id": "o42"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 51.98,
+    "end": 51.98,
+    "confidence": 0.768,
+    "id": "o43"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 51.98,
+    "end": 51.98,
+    "confidence": 0.949,
+    "id": "o44"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 53.97,
+    "end": 53.97,
+    "confidence": 0.604,
+    "id": "o45"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 53.97,
+    "end": 53.97,
+    "confidence": 0.793,
+    "id": "o46"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 55.98,
+    "end": 55.98,
+    "confidence": 0.506,
+    "id": "o47"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 55.98,
+    "end": 55.98,
+    "confidence": 0.839,
+    "id": "o48"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 57.98,
+    "end": 57.98,
+    "confidence": 0.916,
+    "id": "o49"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 57.98,
+    "end": 57.98,
+    "confidence": 0.822,
+    "id": "o50"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 59.98,
+    "end": 59.98,
+    "confidence": 0.525,
+    "id": "o51"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 59.98,
+    "end": 61.97,
+    "confidence": 0.799,
+    "id": "o52"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 63.97,
+    "end": 63.97,
+    "confidence": 0.524,
+    "id": "o53"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 63.97,
+    "end": 63.97,
+    "confidence": 1.0,
+    "id": "o54"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 65.97,
+    "end": 65.97,
+    "confidence": 0.523,
+    "id": "o55"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 65.97,
+    "end": 65.97,
+    "confidence": 0.945,
+    "id": "o56"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 67.97,
+    "end": 67.97,
+    "confidence": 0.658,
+    "id": "o57"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 67.97,
+    "end": 67.97,
+    "confidence": 0.956,
+    "id": "o58"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 69.97,
+    "end": 69.97,
+    "confidence": 0.57,
+    "id": "o59"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 69.97,
+    "end": 69.97,
+    "confidence": 0.928,
+    "id": "o60"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 71.97,
+    "end": 71.97,
+    "confidence": 0.893,
+    "id": "o61"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 71.97,
+    "end": 71.97,
+    "confidence": 0.946,
+    "id": "o62"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 73.97,
+    "end": 73.97,
+    "confidence": 0.594,
+    "id": "o63"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 73.97,
+    "end": 75.97,
+    "confidence": 0.959,
+    "id": "o64"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 77.97,
+    "end": 77.97,
+    "confidence": 0.81,
+    "id": "o65"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 77.97,
+    "end": 77.97,
+    "confidence": 0.84,
+    "id": "o66"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 79.97,
+    "end": 79.97,
+    "confidence": 0.753,
+    "id": "o67"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 79.97,
+    "end": 79.97,
+    "confidence": 0.944,
+    "id": "o68"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 81.97,
+    "end": 81.97,
+    "confidence": 0.649,
+    "id": "o69"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 81.97,
+    "end": 81.97,
+    "confidence": 0.939,
+    "id": "o70"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 83.97,
+    "end": 83.97,
+    "confidence": 0.566,
+    "id": "o71"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 83.97,
+    "end": 83.97,
+    "confidence": 0.926,
+    "id": "o72"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 85.95,
+    "end": 85.95,
+    "confidence": 0.525,
+    "id": "o73"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 85.95,
+    "end": 85.95,
+    "confidence": 0.898,
+    "id": "o74"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 87.95,
+    "end": 87.95,
+    "confidence": 0.536,
+    "id": "o75"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 87.95,
+    "end": 87.95,
+    "confidence": 0.924,
+    "id": "o76"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 89.95,
+    "end": 89.95,
+    "confidence": 0.887,
+    "id": "o77"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 89.95,
+    "end": 89.95,
+    "confidence": 0.941,
+    "id": "o78"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 91.95,
+    "end": 91.95,
+    "confidence": 0.872,
+    "id": "o79"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 91.95,
+    "end": 91.95,
+    "confidence": 0.939,
+    "id": "o80"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 93.95,
+    "end": 93.95,
+    "confidence": 0.791,
+    "id": "o81"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 93.95,
+    "end": 93.95,
+    "confidence": 0.987,
+    "id": "o82"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 95.95,
+    "end": 95.95,
+    "confidence": 0.547,
+    "id": "o83"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 95.95,
+    "end": 97.95,
+    "confidence": 0.824,
+    "id": "o84"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 99.95,
+    "end": 99.95,
+    "confidence": 0.573,
+    "id": "o85"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 99.95,
+    "end": 99.95,
+    "confidence": 0.813,
+    "id": "o86"
+   },
+   {
+    "text": "peligro comida plastica ya",
+    "start": 101.95,
+    "end": 101.95,
+    "confidence": 0.798,
+    "id": "o87"
+   },
+   {
+    "text": "tener cuidado",
+    "start": 101.95,
+    "end": 101.95,
+    "confidence": 0.955,
+    "id": "o88"
+   }
+  ]
+ }
+}

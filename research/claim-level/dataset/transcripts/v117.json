@@ -1,0 +1,2430 @@
+{
+ "video_id": "v117",
+ "filename": "new_TikTok_7208348653017124139.mp4",
+ "relative_path": "new_TikTok_7208348653017124139.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@teawithmd",
+ "extracted_at": "2026-11-23T08:45:56",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.998,
+  "duration_seconds": 61.46,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.21,
+    "end": 9.57,
+    "text": "I love how she's pretending that this is like bugs coming off when clearly these"
+   },
+   {
+    "id": "t2",
+    "start": 9.57,
+    "end": 17.21,
+    "text": "are obviously beans and like you can see the glue you can see the residue"
+   },
+   {
+    "id": "t3",
+    "start": 17.21,
+    "end": 23.48,
+    "text": "honestly as a dermatologist like it's alarming to me that this patient is"
+   },
+   {
+    "id": "t4",
+    "start": 23.48,
+    "end": 28.84,
+    "text": "gluing beans on her skin like you can get a nasty allergy from glue on your"
+   },
+   {
+    "id": "t5",
+    "start": 28.84,
+    "end": 34.28,
+    "text": "skin and this person with the gloves on I doubt it's a real doctor or"
+   },
+   {
+    "id": "t6",
+    "start": 34.28,
+    "end": 39.36,
+    "text": "practitioner because literally they're pretending beans are insects and bugs"
+   },
+   {
+    "id": "t7",
+    "start": 39.36,
+    "end": 43.52,
+    "text": "which they these are not but she's being very aggressive and removing these as"
+   },
+   {
+    "id": "t8",
+    "start": 43.52,
+    "end": 47.64,
+    "text": "well like she could definitely be causing some irritation to the skin"
+   },
+   {
+    "id": "t9",
+    "start": 47.64,
+    "end": 51.96,
+    "text": "anyways I don't know who watches these or believes that these are actual bugs"
+   },
+   {
+    "id": "t10",
+    "start": 51.96,
+    "end": 55.92,
+    "text": "oh she gave up on the stick and she's just straight up like removing them with"
+   },
+   {
+    "id": "t11",
+    "start": 55.92,
+    "end": 61.27,
+    "text": "our hands. Anyways, that's an uptick talk for today."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 31,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Duet with a",
+    "confidence": 0.882
+   },
+   {
+    "time": 0.0,
+    "text": "Dermatologist",
+    "confidence": 0.763
+   },
+   {
+    "time": 0.0,
+    "text": "Bugs",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "or",
+    "confidence": 0.677
+   },
+   {
+    "time": 0.0,
+    "text": "beans?",
+    "confidence": 0.501
+   },
+   {
+    "time": 0.0,
+    "text": "Che",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Duet with a",
+    "confidence": 0.882
+   },
+   {
+    "time": 2.0,
+    "text": "Dermatologist",
+    "confidence": 0.748
+   },
+   {
+    "time": 2.0,
+    "text": "I lve how shels",
+    "confidence": 0.811
+   },
+   {
+    "time": 2.0,
+    "text": "pretending",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Check my caption",
+    "confidence": 0.989
+   },
+   {
+    "time": 2.0,
+    "text": "for part 1",
+    "confidence": 0.982
+   },
+   {
+    "time": 4.0,
+    "text": "Duet with a",
+    "confidence": 0.924
+   },
+   {
+    "time": 4.0,
+    "text": "Dermatologist",
+    "confidence": 0.732
+   },
+   {
+    "time": 4.0,
+    "text": "pretending",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Check my caption",
+    "confidence": 0.705
+   },
+   {
+    "time": 4.0,
+    "text": "for part 1",
+    "confidence": 0.978
+   },
+   {
+    "time": 6.0,
+    "text": "Duet with a",
+    "confidence": 0.869
+   },
+   {
+    "time": 6.0,
+    "text": "Dermatologist",
+    "confidence": 0.798
+   },
+   {
+    "time": 6.0,
+    "text": "Check my caption",
+    "confidence": 0.788
+   },
+   {
+    "time": 6.0,
+    "text": "for part 1",
+    "confidence": 0.973
+   },
+   {
+    "time": 8.0,
+    "text": "Duet with a",
+    "confidence": 0.865
+   },
+   {
+    "time": 8.0,
+    "text": "Dermatologist",
+    "confidence": 0.745
+   },
+   {
+    "time": 8.0,
+    "text": "bugs coming @ff",
+    "confidence": 0.987
+   },
+   {
+    "time": 8.0,
+    "text": "Check my caption",
+    "confidence": 0.857
+   },
+   {
+    "time": 8.0,
+    "text": "for part 1",
+    "confidence": 0.952
+   },
+   {
+    "time": 10.0,
+    "text": "Duet with a",
+    "confidence": 0.936
+   },
+   {
+    "time": 10.0,
+    "text": "Dermatologist",
+    "confidence": 0.745
+   },
+   {
+    "time": 10.0,
+    "text": "when clearly these are",
+    "confidence": 0.663
+   },
+   {
+    "time": 10.0,
+    "text": "obviously beans",
+    "confidence": 0.793
+   },
+   {
+    "time": 10.0,
+    "text": "Check my caption",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "for part 1",
+    "confidence": 0.976
+   },
+   {
+    "time": 10.0,
+    "text": "4",
+    "confidence": 0.649
+   },
+   {
+    "time": 12.0,
+    "text": "Duet with a",
+    "confidence": 0.714
+   },
+   {
+    "time": 12.0,
+    "text": "Dermatologist",
+    "confidence": 0.762
+   },
+   {
+    "time": 12.0,
+    "text": "Check my caption",
+    "confidence": 0.78
+   },
+   {
+    "time": 12.0,
+    "text": "for part 1",
+    "confidence": 0.572
+   },
+   {
+    "time": 14.0,
+    "text": "Duet with a",
+    "confidence": 0.749
+   },
+   {
+    "time": 14.0,
+    "text": "Dermatologist",
+    "confidence": 0.737
+   },
+   {
+    "time": 14.0,
+    "text": "and likeyou can see the",
+    "confidence": 0.778
+   },
+   {
+    "time": 14.0,
+    "text": "glue",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "Check my caption",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "for part",
+    "confidence": 0.634
+   },
+   {
+    "time": 16.0,
+    "text": "Duet with a",
+    "confidence": 0.605
+   },
+   {
+    "time": 16.0,
+    "text": "Dermatologist",
+    "confidence": 0.762
+   },
+   {
+    "time": 16.0,
+    "text": "you can see the residue",
+    "confidence": 0.714
+   },
+   {
+    "time": 16.0,
+    "text": "Check my caption",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "for part",
+    "confidence": 0.99
+   },
+   {
+    "time": 16.0,
+    "text": "3",
+    "confidence": 0.513
+   },
+   {
+    "time": 18.0,
+    "text": "Duet with a",
+    "confidence": 0.778
+   },
+   {
+    "time": 18.0,
+    "text": "Dermatologist",
+    "confidence": 0.751
+   },
+   {
+    "time": 18.0,
+    "text": "Check my caption",
+    "confidence": 0.837
+   },
+   {
+    "time": 18.0,
+    "text": "for part 1",
+    "confidence": 0.971
+   },
+   {
+    "time": 18.0,
+    "text": "3",
+    "confidence": 0.543
+   },
+   {
+    "time": 20.0,
+    "text": "Duet with a",
+    "confidence": 0.774
+   },
+   {
+    "time": 20.0,
+    "text": "Dermatologist",
+    "confidence": 0.784
+   },
+   {
+    "time": 20.0,
+    "text": "honestly asa",
+    "confidence": 0.668
+   },
+   {
+    "time": 20.0,
+    "text": "dermatologist like",
+    "confidence": 0.904
+   },
+   {
+    "time": 20.0,
+    "text": "Check",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "caption",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.0,
+    "text": "my",
+    "confidence": 0.853
+   },
+   {
+    "time": 20.0,
+    "text": "for part 1",
+    "confidence": 0.975
+   },
+   {
+    "time": 20.0,
+    "text": "3",
+    "confidence": 0.758
+   },
+   {
+    "time": 22.0,
+    "text": "Duet with a",
+    "confidence": 0.791
+   },
+   {
+    "time": 22.0,
+    "text": "Dermatologist",
+    "confidence": 0.78
+   },
+   {
+    "time": 22.0,
+    "text": "this patient is gluing",
+    "confidence": 0.888
+   },
+   {
+    "time": 22.0,
+    "text": "beans @n her skin",
+    "confidence": 0.737
+   },
+   {
+    "time": 22.0,
+    "text": "Checkmy caption",
+    "confidence": 0.994
+   },
+   {
+    "time": 22.0,
+    "text": "for part 1",
+    "confidence": 0.981
+   },
+   {
+    "time": 24.0,
+    "text": "Duet with a",
+    "confidence": 0.919
+   },
+   {
+    "time": 24.0,
+    "text": "Dermatologist",
+    "confidence": 0.779
+   },
+   {
+    "time": 24.0,
+    "text": "this patient is gluing",
+    "confidence": 0.952
+   },
+   {
+    "time": 24.0,
+    "text": "beans on her skin",
+    "confidence": 0.982
+   },
+   {
+    "time": 24.0,
+    "text": "Check my caption",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "for part 1",
+    "confidence": 0.972
+   },
+   {
+    "time": 26.0,
+    "text": "Duet with a",
+    "confidence": 0.671
+   },
+   {
+    "time": 26.0,
+    "text": "Dermatologist",
+    "confidence": 0.708
+   },
+   {
+    "time": 26.0,
+    "text": "like you could geta nasty",
+    "confidence": 0.706
+   },
+   {
+    "time": 26.0,
+    "text": "allergy ftom",
+    "confidence": 0.725
+   },
+   {
+    "time": 26.0,
+    "text": "glue",
+    "confidence": 0.602
+   },
+   {
+    "time": 26.0,
+    "text": "onyour",
+    "confidence": 0.7
+   },
+   {
+    "time": 26.0,
+    "text": "skin",
+    "confidence": 0.999
+   },
+   {
+    "time": 26.0,
+    "text": "Check my caption",
+    "confidence": 0.999
+   },
+   {
+    "time": 26.0,
+    "text": "for part",
+    "confidence": 0.98
+   },
+   {
+    "time": 26.0,
+    "text": "3",
+    "confidence": 0.624
+   },
+   {
+    "time": 28.0,
+    "text": "Duet with a",
+    "confidence": 0.926
+   },
+   {
+    "time": 28.0,
+    "text": "Dermatologist",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "like you could geta nasty",
+    "confidence": 0.708
+   },
+   {
+    "time": 28.0,
+    "text": "allergy from glue @your",
+    "confidence": 0.858
+   },
+   {
+    "time": 28.0,
+    "text": "skin",
+    "confidence": 0.999
+   },
+   {
+    "time": 28.0,
+    "text": "Check my caption",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "for part",
+    "confidence": 0.961
+   },
+   {
+    "time": 28.0,
+    "text": "3",
+    "confidence": 0.681
+   },
+   {
+    "time": 30.0,
+    "text": "Duet with a",
+    "confidence": 0.945
+   },
+   {
+    "time": 30.0,
+    "text": "Dermatologist",
+    "confidence": 0.898
+   },
+   {
+    "time": 30.0,
+    "text": "and this persom with the",
+    "confidence": 0.806
+   },
+   {
+    "time": 30.0,
+    "text": "gloves on",
+    "confidence": 0.985
+   },
+   {
+    "time": 30.0,
+    "text": "Check my caption",
+    "confidence": 0.985
+   },
+   {
+    "time": 32.0,
+    "text": "Duet with a",
+    "confidence": 0.968
+   },
+   {
+    "time": 32.0,
+    "text": "Dermatologist",
+    "confidence": 0.732
+   },
+   {
+    "time": 32.0,
+    "text": "'practitioner",
+    "confidence": 0.872
+   },
+   {
+    "time": 32.0,
+    "text": "Check my caption",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "for part",
+    "confidence": 0.96
+   },
+   {
+    "time": 34.0,
+    "text": "Duet with a",
+    "confidence": 0.925
+   },
+   {
+    "time": 34.0,
+    "text": "Dermatologist",
+    "confidence": 0.92
+   },
+   {
+    "time": 34.0,
+    "text": "practitioner",
+    "confidence": 0.68
+   },
+   {
+    "time": 34.0,
+    "text": "or",
+    "confidence": 0.808
+   },
+   {
+    "time": 34.0,
+    "text": "Check my caption",
+    "confidence": 0.826
+   },
+   {
+    "time": 34.0,
+    "text": "for part",
+    "confidence": 0.986
+   },
+   {
+    "time": 36.0,
+    "text": "Duet with a",
+    "confidence": 0.852
+   },
+   {
+    "time": 36.0,
+    "text": "Dermatologist",
+    "confidence": 0.713
+   },
+   {
+    "time": 36.0,
+    "text": "because literally theylte",
+    "confidence": 0.887
+   },
+   {
+    "time": 36.0,
+    "text": "pretending beans",
+    "confidence": 0.992
+   },
+   {
+    "time": 36.0,
+    "text": "Check my caption",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.0,
+    "text": "for part",
+    "confidence": 0.968
+   },
+   {
+    "time": 36.0,
+    "text": "3",
+    "confidence": 0.882
+   },
+   {
+    "time": 38.0,
+    "text": "Duet with a",
+    "confidence": 0.659
+   },
+   {
+    "time": 38.0,
+    "text": "Dermatologist",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "because literally theylte",
+    "confidence": 0.763
+   },
+   {
+    "time": 38.0,
+    "text": "pretending beans",
+    "confidence": 0.997
+   },
+   {
+    "time": 38.0,
+    "text": "Check my caption",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "for part 1",
+    "confidence": 0.927
+   },
+   {
+    "time": 40.0,
+    "text": "Duet with a",
+    "confidence": 0.733
+   },
+   {
+    "time": 40.0,
+    "text": "Dermatologist",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "are insects and bugs",
+    "confidence": 0.921
+   },
+   {
+    "time": 40.0,
+    "text": "which they",
+    "confidence": 0.923
+   },
+   {
+    "time": 40.0,
+    "text": "Check my caption",
+    "confidence": 0.997
+   },
+   {
+    "time": 40.0,
+    "text": "for part",
+    "confidence": 0.928
+   },
+   {
+    "time": 42.0,
+    "text": "Duet with a",
+    "confidence": 0.684
+   },
+   {
+    "time": 42.0,
+    "text": "Dermatologist",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.0,
+    "text": "but shels being very",
+    "confidence": 0.943
+   },
+   {
+    "time": 42.0,
+    "text": "aggressive",
+    "confidence": 0.984
+   },
+   {
+    "time": 42.0,
+    "text": "Check my caption",
+    "confidence": 0.995
+   },
+   {
+    "time": 42.0,
+    "text": "for part",
+    "confidence": 0.935
+   },
+   {
+    "time": 42.0,
+    "text": "3",
+    "confidence": 0.688
+   },
+   {
+    "time": 44.0,
+    "text": "Duet with a",
+    "confidence": 0.736
+   },
+   {
+    "time": 44.0,
+    "text": "Dermatologist",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "and removing theseas",
+    "confidence": 0.875
+   },
+   {
+    "time": 44.0,
+    "text": "well",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "Check my caption",
+    "confidence": 0.959
+   },
+   {
+    "time": 44.0,
+    "text": "for part 1",
+    "confidence": 0.949
+   },
+   {
+    "time": 44.0,
+    "text": "3",
+    "confidence": 0.624
+   },
+   {
+    "time": 46.0,
+    "text": "Duet with &",
+    "confidence": 0.506
+   },
+   {
+    "time": 46.0,
+    "text": "Dermatologist",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "like she could definitely",
+    "confidence": 0.792
+   },
+   {
+    "time": 46.0,
+    "text": "be causing",
+    "confidence": 0.931
+   },
+   {
+    "time": 46.0,
+    "text": "Check my caption",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "for part 1",
+    "confidence": 0.969
+   },
+   {
+    "time": 46.0,
+    "text": "3",
+    "confidence": 0.914
+   },
+   {
+    "time": 48.0,
+    "text": "Duet with a",
+    "confidence": 0.957
+   },
+   {
+    "time": 48.0,
+    "text": "Dermatologist",
+    "confidence": 0.832
+   },
+   {
+    "time": 48.0,
+    "text": "anyays I donlt know",
+    "confidence": 0.784
+   },
+   {
+    "time": 48.0,
+    "text": "who watches these",
+    "confidence": 0.822
+   },
+   {
+    "time": 48.0,
+    "text": "Check my caption",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "for part 1",
+    "confidence": 0.969
+   },
+   {
+    "time": 48.0,
+    "text": "3",
+    "confidence": 0.875
+   },
+   {
+    "time": 50.0,
+    "text": "Duet with a",
+    "confidence": 0.673
+   },
+   {
+    "time": 50.0,
+    "text": "Dermatologist",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "who watches these",
+    "confidence": 0.949
+   },
+   {
+    "time": 50.0,
+    "text": "Check my caption",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "for part 1",
+    "confidence": 0.994
+   },
+   {
+    "time": 50.0,
+    "text": "3",
+    "confidence": 0.525
+   },
+   {
+    "time": 52.0,
+    "text": "Duet with a",
+    "confidence": 0.801
+   },
+   {
+    "time": 52.0,
+    "text": "Dermatologist",
+    "confidence": 0.664
+   },
+   {
+    "time": 52.0,
+    "text": "@h she gavve @p @ the",
+    "confidence": 0.748
+   },
+   {
+    "time": 52.0,
+    "text": "stick",
+    "confidence": 0.774
+   },
+   {
+    "time": 52.0,
+    "text": "Check my caption",
+    "confidence": 0.999
+   },
+   {
+    "time": 52.0,
+    "text": "for part",
+    "confidence": 0.951
+   },
+   {
+    "time": 52.0,
+    "text": "3",
+    "confidence": 0.928
+   },
+   {
+    "time": 54.0,
+    "text": "Duet with a",
+    "confidence": 0.879
+   },
+   {
+    "time": 54.0,
+    "text": "Dermatologist",
+    "confidence": 0.82
+   },
+   {
+    "time": 54.0,
+    "text": "and shels just staight up",
+    "confidence": 0.67
+   },
+   {
+    "time": 54.0,
+    "text": "like",
+    "confidence": 0.868
+   },
+   {
+    "time": 54.0,
+    "text": "Check my caption",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "for part 1",
+    "confidence": 0.972
+   },
+   {
+    "time": 56.0,
+    "text": "Duet with",
+    "confidence": 0.999
+   },
+   {
+    "time": 56.0,
+    "text": "Dermatologist",
+    "confidence": 0.7
+   },
+   {
+    "time": 56.0,
+    "text": "removing them with her",
+    "confidence": 0.745
+   },
+   {
+    "time": 56.0,
+    "text": "hands anyways",
+    "confidence": 0.94
+   },
+   {
+    "time": 56.0,
+    "text": "Check my caption",
+    "confidence": 0.999
+   },
+   {
+    "time": 56.0,
+    "text": "for part 1",
+    "confidence": 0.935
+   },
+   {
+    "time": 56.0,
+    "text": "3",
+    "confidence": 0.943
+   },
+   {
+    "time": 58.0,
+    "text": "Duet with a",
+    "confidence": 0.957
+   },
+   {
+    "time": 58.0,
+    "text": "Dermatologist",
+    "confidence": 0.823
+   },
+   {
+    "time": 58.0,
+    "text": "removing them with her",
+    "confidence": 0.749
+   },
+   {
+    "time": 58.0,
+    "text": "hands anyways",
+    "confidence": 0.845
+   },
+   {
+    "time": 58.0,
+    "text": "Check my caption",
+    "confidence": 0.981
+   },
+   {
+    "time": 58.0,
+    "text": "for part 1",
+    "confidence": 0.95
+   },
+   {
+    "time": 60.0,
+    "text": "Duet with a",
+    "confidence": 0.884
+   },
+   {
+    "time": 60.0,
+    "text": "Dermatologist",
+    "confidence": 0.708
+   },
+   {
+    "time": 60.0,
+    "text": "thats enough Tikiokfor",
+    "confidence": 0.704
+   },
+   {
+    "time": 60.0,
+    "text": "today",
+    "confidence": 0.999
+   },
+   {
+    "time": 60.0,
+    "text": "Check my caption",
+    "confidence": 0.998
+   },
+   {
+    "time": 60.0,
+    "text": "for part 1",
+    "confidence": 0.978
+   }
+  ],
+  "captions": [
+   {
+    "text": "Duet with a",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.882,
+    "id": "o1"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.763,
+    "id": "o2"
+   },
+   {
+    "text": "Bugs",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o3"
+   },
+   {
+    "text": "or",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.677,
+    "id": "o4"
+   },
+   {
+    "text": "beans?",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.501,
+    "id": "o5"
+   },
+   {
+    "text": "Che",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o6"
+   },
+   {
+    "text": "Duet with a",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.882,
+    "id": "o7"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.748,
+    "id": "o8"
+   },
+   {
+    "text": "I lve how shels",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.811,
+    "id": "o9"
+   },
+   {
+    "text": "pretending",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o10"
+   },
+   {
+    "text": "Check my caption",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.989,
+    "id": "o11"
+   },
+   {
+    "text": "for part 1",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.982,
+    "id": "o12"
+   },
+   {
+    "text": "Duet with a",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.924,
+    "id": "o13"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.732,
+    "id": "o14"
+   },
+   {
+    "text": "pretending",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o15"
+   },
+   {
+    "text": "Check my caption",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.705,
+    "id": "o16"
+   },
+   {
+    "text": "for part 1",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.978,
+    "id": "o17"
+   },
+   {
+    "text": "Duet with a",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.869,
+    "id": "o18"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.798,
+    "id": "o19"
+   },
+   {
+    "text": "Check my caption",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.788,
+    "id": "o20"
+   },
+   {
+    "text": "for part 1",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.973,
+    "id": "o21"
+   },
+   {
+    "text": "Duet with a",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.865,
+    "id": "o22"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.745,
+    "id": "o23"
+   },
+   {
+    "text": "bugs coming @ff",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.987,
+    "id": "o24"
+   },
+   {
+    "text": "Check my caption",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.857,
+    "id": "o25"
+   },
+   {
+    "text": "for part 1",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.952,
+    "id": "o26"
+   },
+   {
+    "text": "Duet with a",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.936,
+    "id": "o27"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.745,
+    "id": "o28"
+   },
+   {
+    "text": "when clearly these are",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.663,
+    "id": "o29"
+   },
+   {
+    "text": "obviously beans",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.793,
+    "id": "o30"
+   },
+   {
+    "text": "Check my caption",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o31"
+   },
+   {
+    "text": "for part 1",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.976,
+    "id": "o32"
+   },
+   {
+    "text": "4",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.649,
+    "id": "o33"
+   },
+   {
+    "text": "Duet with a",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.714,
+    "id": "o34"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.762,
+    "id": "o35"
+   },
+   {
+    "text": "Check my caption",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.78,
+    "id": "o36"
+   },
+   {
+    "text": "for part 1",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.572,
+    "id": "o37"
+   },
+   {
+    "text": "Duet with a",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.749,
+    "id": "o38"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.737,
+    "id": "o39"
+   },
+   {
+    "text": "and likeyou can see the",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.778,
+    "id": "o40"
+   },
+   {
+    "text": "glue",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o41"
+   },
+   {
+    "text": "Check my caption",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o42"
+   },
+   {
+    "text": "for part",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.634,
+    "id": "o43"
+   },
+   {
+    "text": "Duet with a",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.605,
+    "id": "o44"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.762,
+    "id": "o45"
+   },
+   {
+    "text": "you can see the residue",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.714,
+    "id": "o46"
+   },
+   {
+    "text": "Check my caption",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o47"
+   },
+   {
+    "text": "for part",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.99,
+    "id": "o48"
+   },
+   {
+    "text": "3",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.513,
+    "id": "o49"
+   },
+   {
+    "text": "Duet with a",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.778,
+    "id": "o50"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.751,
+    "id": "o51"
+   },
+   {
+    "text": "Check my caption",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.837,
+    "id": "o52"
+   },
+   {
+    "text": "for part 1",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.971,
+    "id": "o53"
+   },
+   {
+    "text": "3",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.543,
+    "id": "o54"
+   },
+   {
+    "text": "Duet with a",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.774,
+    "id": "o55"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.784,
+    "id": "o56"
+   },
+   {
+    "text": "honestly asa",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.668,
+    "id": "o57"
+   },
+   {
+    "text": "dermatologist like",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.904,
+    "id": "o58"
+   },
+   {
+    "text": "Check",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o59"
+   },
+   {
+    "text": "caption",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.999,
+    "id": "o60"
+   },
+   {
+    "text": "my",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.853,
+    "id": "o61"
+   },
+   {
+    "text": "for part 1",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.975,
+    "id": "o62"
+   },
+   {
+    "text": "3",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.758,
+    "id": "o63"
+   },
+   {
+    "text": "Duet with a",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.791,
+    "id": "o64"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.78,
+    "id": "o65"
+   },
+   {
+    "text": "this patient is gluing",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.888,
+    "id": "o66"
+   },
+   {
+    "text": "beans @n her skin",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.737,
+    "id": "o67"
+   },
+   {
+    "text": "Checkmy caption",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.994,
+    "id": "o68"
+   },
+   {
+    "text": "for part 1",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.981,
+    "id": "o69"
+   },
+   {
+    "text": "Duet with a",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.919,
+    "id": "o70"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.779,
+    "id": "o71"
+   },
+   {
+    "text": "this patient is gluing",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.952,
+    "id": "o72"
+   },
+   {
+    "text": "beans on her skin",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.982,
+    "id": "o73"
+   },
+   {
+    "text": "Check my caption",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o74"
+   },
+   {
+    "text": "for part 1",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.972,
+    "id": "o75"
+   },
+   {
+    "text": "Duet with a",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.671,
+    "id": "o76"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.708,
+    "id": "o77"
+   },
+   {
+    "text": "like you could geta nasty",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.706,
+    "id": "o78"
+   },
+   {
+    "text": "allergy ftom",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.725,
+    "id": "o79"
+   },
+   {
+    "text": "glue",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.602,
+    "id": "o80"
+   },
+   {
+    "text": "onyour",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.7,
+    "id": "o81"
+   },
+   {
+    "text": "skin",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.999,
+    "id": "o82"
+   },
+   {
+    "text": "Check my caption",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.999,
+    "id": "o83"
+   },
+   {
+    "text": "for part",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.98,
+    "id": "o84"
+   },
+   {
+    "text": "3",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.624,
+    "id": "o85"
+   },
+   {
+    "text": "Duet with a",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.926,
+    "id": "o86"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o87"
+   },
+   {
+    "text": "like you could geta nasty",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.708,
+    "id": "o88"
+   },
+   {
+    "text": "allergy from glue @your",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.858,
+    "id": "o89"
+   },
+   {
+    "text": "skin",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.999,
+    "id": "o90"
+   },
+   {
+    "text": "Check my caption",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o91"
+   },
+   {
+    "text": "for part",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.961,
+    "id": "o92"
+   },
+   {
+    "text": "3",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.681,
+    "id": "o93"
+   },
+   {
+    "text": "Duet with a",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.945,
+    "id": "o94"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.898,
+    "id": "o95"
+   },
+   {
+    "text": "and this persom with the",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.806,
+    "id": "o96"
+   },
+   {
+    "text": "gloves on",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.985,
+    "id": "o97"
+   },
+   {
+    "text": "Check my caption",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.985,
+    "id": "o98"
+   },
+   {
+    "text": "Duet with a",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.968,
+    "id": "o99"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.732,
+    "id": "o100"
+   },
+   {
+    "text": "'practitioner",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.872,
+    "id": "o101"
+   },
+   {
+    "text": "Check my caption",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o102"
+   },
+   {
+    "text": "for part",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.96,
+    "id": "o103"
+   },
+   {
+    "text": "Duet with a",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.925,
+    "id": "o104"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.92,
+    "id": "o105"
+   },
+   {
+    "text": "practitioner",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.68,
+    "id": "o106"
+   },
+   {
+    "text": "or",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.808,
+    "id": "o107"
+   },
+   {
+    "text": "Check my caption",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.826,
+    "id": "o108"
+   },
+   {
+    "text": "for part",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.986,
+    "id": "o109"
+   },
+   {
+    "text": "Duet with a",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.852,
+    "id": "o110"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.713,
+    "id": "o111"
+   },
+   {
+    "text": "because literally theylte",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.887,
+    "id": "o112"
+   },
+   {
+    "text": "pretending beans",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.992,
+    "id": "o113"
+   },
+   {
+    "text": "Check my caption",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.999,
+    "id": "o114"
+   },
+   {
+    "text": "for part",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.968,
+    "id": "o115"
+   },
+   {
+    "text": "3",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.882,
+    "id": "o116"
+   },
+   {
+    "text": "Duet with a",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.659,
+    "id": "o117"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o118"
+   },
+   {
+    "text": "because literally theylte",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.763,
+    "id": "o119"
+   },
+   {
+    "text": "pretending beans",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.997,
+    "id": "o120"
+   },
+   {
+    "text": "Check my caption",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o121"
+   },
+   {
+    "text": "for part 1",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.927,
+    "id": "o122"
+   },
+   {
+    "text": "Duet with a",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.733,
+    "id": "o123"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o124"
+   },
+   {
+    "text": "are insects and bugs",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.921,
+    "id": "o125"
+   },
+   {
+    "text": "which they",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.923,
+    "id": "o126"
+   },
+   {
+    "text": "Check my caption",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.997,
+    "id": "o127"
+   },
+   {
+    "text": "for part",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.928,
+    "id": "o128"
+   },
+   {
+    "text": "Duet with a",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.684,
+    "id": "o129"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.999,
+    "id": "o130"
+   },
+   {
+    "text": "but shels being very",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.943,
+    "id": "o131"
+   },
+   {
+    "text": "aggressive",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.984,
+    "id": "o132"
+   },
+   {
+    "text": "Check my caption",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.995,
+    "id": "o133"
+   },
+   {
+    "text": "for part",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.935,
+    "id": "o134"
+   },
+   {
+    "text": "3",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.688,
+    "id": "o135"
+   },
+   {
+    "text": "Duet with a",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.736,
+    "id": "o136"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o137"
+   },
+   {
+    "text": "and removing theseas",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.875,
+    "id": "o138"
+   },
+   {
+    "text": "well",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o139"
+   },
+   {
+    "text": "Check my caption",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.959,
+    "id": "o140"
+   },
+   {
+    "text": "for part 1",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.949,
+    "id": "o141"
+   },
+   {
+    "text": "3",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.624,
+    "id": "o142"
+   },
+   {
+    "text": "Duet with &",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.506,
+    "id": "o143"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o144"
+   },
+   {
+    "text": "like she could definitely",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.792,
+    "id": "o145"
+   },
+   {
+    "text": "be causing",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.931,
+    "id": "o146"
+   },
+   {
+    "text": "Check my caption",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o147"
+   },
+   {
+    "text": "for part 1",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.969,
+    "id": "o148"
+   },
+   {
+    "text": "3",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.914,
+    "id": "o149"
+   },
+   {
+    "text": "Duet with a",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.957,
+    "id": "o150"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.832,
+    "id": "o151"
+   },
+   {
+    "text": "anyays I donlt know",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.784,
+    "id": "o152"
+   },
+   {
+    "text": "who watches these",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.822,
+    "id": "o153"
+   },
+   {
+    "text": "Check my caption",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o154"
+   },
+   {
+    "text": "for part 1",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.969,
+    "id": "o155"
+   },
+   {
+    "text": "3",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.875,
+    "id": "o156"
+   },
+   {
+    "text": "Duet with a",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.673,
+    "id": "o157"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o158"
+   },
+   {
+    "text": "who watches these",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.949,
+    "id": "o159"
+   },
+   {
+    "text": "Check my caption",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o160"
+   },
+   {
+    "text": "for part 1",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.994,
+    "id": "o161"
+   },
+   {
+    "text": "3",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.525,
+    "id": "o162"
+   },
+   {
+    "text": "Duet with a",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.801,
+    "id": "o163"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.664,
+    "id": "o164"
+   },
+   {
+    "text": "@h she gavve @p @ the",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.748,
+    "id": "o165"
+   },
+   {
+    "text": "stick",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.774,
+    "id": "o166"
+   },
+   {
+    "text": "Check my caption",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.999,
+    "id": "o167"
+   },
+   {
+    "text": "for part",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.951,
+    "id": "o168"
+   },
+   {
+    "text": "3",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.928,
+    "id": "o169"
+   },
+   {
+    "text": "Duet with a",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.879,
+    "id": "o170"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.82,
+    "id": "o171"
+   },
+   {
+    "text": "and shels just staight up",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.67,
+    "id": "o172"
+   },
+   {
+    "text": "like",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.868,
+    "id": "o173"
+   },
+   {
+    "text": "Check my caption",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o174"
+   },
+   {
+    "text": "for part 1",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.972,
+    "id": "o175"
+   },
+   {
+    "text": "Duet with",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.999,
+    "id": "o176"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.7,
+    "id": "o177"
+   },
+   {
+    "text": "removing them with her",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.745,
+    "id": "o178"
+   },
+   {
+    "text": "hands anyways",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.94,
+    "id": "o179"
+   },
+   {
+    "text": "Check my caption",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.999,
+    "id": "o180"
+   },
+   {
+    "text": "for part 1",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.935,
+    "id": "o181"
+   },
+   {
+    "text": "3",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.943,
+    "id": "o182"
+   },
+   {
+    "text": "Duet with a",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.957,
+    "id": "o183"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.823,
+    "id": "o184"
+   },
+   {
+    "text": "removing them with her",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.749,
+    "id": "o185"
+   },
+   {
+    "text": "hands anyways",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.845,
+    "id": "o186"
+   },
+   {
+    "text": "Check my caption",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.981,
+    "id": "o187"
+   },
+   {
+    "text": "for part 1",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.95,
+    "id": "o188"
+   },
+   {
+    "text": "Duet with a",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.884,
+    "id": "o189"
+   },
+   {
+    "text": "Dermatologist",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.708,
+    "id": "o190"
+   },
+   {
+    "text": "thats enough Tikiokfor",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.704,
+    "id": "o191"
+   },
+   {
+    "text": "today",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.999,
+    "id": "o192"
+   },
+   {
+    "text": "Check my caption",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.998,
+    "id": "o193"
+   },
+   {
+    "text": "for part 1",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.978,
+    "id": "o194"
+   }
+  ]
+ }
+}

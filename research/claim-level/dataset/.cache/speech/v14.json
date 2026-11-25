@@ -1,0 +1,134 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.991,
+  "duration_seconds": 64.36,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 6.09,
+    "text": "The average grade on the last exam was a 47."
+   },
+   {
+    "id": "t2",
+    "start": 6.09,
+    "end": 8.25,
+    "text": "And there is no curve."
+   },
+   {
+    "id": "t3",
+    "start": 8.25,
+    "end": 10.05,
+    "text": "You got that in 47?"
+   },
+   {
+    "id": "t4",
+    "start": 10.05,
+    "end": 11.97,
+    "text": "There's no curve."
+   },
+   {
+    "id": "t5",
+    "start": 11.97,
+    "end": 16.09,
+    "text": "All right, if you've got anything above that, above 50%,"
+   },
+   {
+    "id": "t6",
+    "start": 16.09,
+    "end": 18.66,
+    "text": "you should feel good about yourself."
+   },
+   {
+    "id": "t7",
+    "start": 18.66,
+    "end": 19.9,
+    "text": "Yes, sir."
+   },
+   {
+    "id": "t8",
+    "start": 19.9,
+    "end": 22.28,
+    "text": "So I just want to understand."
+   },
+   {
+    "id": "t9",
+    "start": 22.28,
+    "end": 24.16,
+    "text": "I want to make sure we're on the same page."
+   },
+   {
+    "id": "t10",
+    "start": 24.16,
+    "end": 26.4,
+    "text": "So you're saying the whole class,"
+   },
+   {
+    "id": "t11",
+    "start": 26.4,
+    "end": 30.16,
+    "text": "majority of the class, is around the 47%."
+   },
+   {
+    "id": "t12",
+    "start": 30.16,
+    "end": 36.16,
+    "text": "There's no curve, and only people who get above a 50% should be proud of themselves."
+   },
+   {
+    "id": "t13",
+    "start": 36.16,
+    "end": 38.16,
+    "text": "That's how low the bar is."
+   },
+   {
+    "id": "t14",
+    "start": 38.16,
+    "end": 40.16,
+    "text": "Yes, that's accurate."
+   },
+   {
+    "id": "t15",
+    "start": 40.16,
+    "end": 45.16,
+    "text": "So you don't see a problem with the whole class being at a 47% and you telling us that there's no curve?"
+   },
+   {
+    "id": "t16",
+    "start": 45.16,
+    "end": 47.16,
+    "text": "It doesn't even make sense."
+   },
+   {
+    "id": "t17",
+    "start": 47.16,
+    "end": 52.32,
+    "text": "I do not care what other teachers or professors do."
+   },
+   {
+    "id": "t18",
+    "start": 52.32,
+    "end": 54.32,
+    "text": "Okay, I can tell. That's why your rating is so low."
+   },
+   {
+    "id": "t19",
+    "start": 54.32,
+    "end": 58.32,
+    "text": "You have a 1.3 on rate my professor for a reason, obviously."
+   },
+   {
+    "id": "t20",
+    "start": 58.32,
+    "end": 60.86,
+    "text": "a good reason"
+   }
+  ]
+ }
+}

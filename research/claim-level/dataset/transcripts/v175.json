@@ -1,0 +1,497 @@
+{
+ "video_id": "v175",
+ "filename": "new_youtube_NWGTijnvQ9I.mp4",
+ "relative_path": "new_youtube_NWGTijnvQ9I.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:59",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.998,
+  "duration_seconds": 48.61,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.4,
+    "text": "¿Qué pasa con la fruta en Estados Unidos?"
+   },
+   {
+    "id": "t2",
+    "start": 21.11,
+    "end": 24.87,
+    "text": "La gente está comprando frutas que en lugar de estar frescas y jugosas,"
+   },
+   {
+    "id": "t3",
+    "start": 24.87,
+    "end": 28.15,
+    "text": "parecen estar hechas de goma, como si fueran de juguete."
+   },
+   {
+    "id": "t4",
+    "start": 28.15,
+    "end": 35.15,
+    "text": "Varios usuarios han compartido videos de estas frutas con un aspecto plástico y que se doblan de manera extraña."
+   },
+   {
+    "id": "t5",
+    "start": 35.15,
+    "end": 43.15,
+    "text": "Una de las primeras fue KivaBody, una creadora de contenido de Seattle que mostró una sandía comprada en un supermercado local."
+   },
+   {
+    "id": "t6",
+    "start": 43.15,
+    "end": 48.15,
+    "text": "Resultó ser elástica, con poco jugo y un sabor extraño."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 25,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "pasa",
+    "confidence": 0.998
+   },
+   {
+    "time": 0.0,
+    "text": "con la fruta",
+    "confidence": 0.96
+   },
+   {
+    "time": 2.0,
+    "text": "en",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Estados Unidos?",
+    "confidence": 0.995
+   },
+   {
+    "time": 4.0,
+    "text": "de gente compartiendo",
+    "confidence": 0.936
+   },
+   {
+    "time": 4.0,
+    "text": "sandia de goma.",
+    "confidence": 0.953
+   },
+   {
+    "time": 6.0,
+    "text": "de gente compartiendo",
+    "confidence": 0.773
+   },
+   {
+    "time": 6.0,
+    "text": "sandia de goma.",
+    "confidence": 0.98
+   },
+   {
+    "time": 8.0,
+    "text": "No",
+    "confidence": 0.996
+   },
+   {
+    "time": 8.0,
+    "text": "puedo",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "creer",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "que tenga una.",
+    "confidence": 0.79
+   },
+   {
+    "time": 14.0,
+    "text": "Tienes que doblarla mucho",
+    "confidence": 0.997
+   },
+   {
+    "time": 16.0,
+    "text": "Tienes que doblarla mucho",
+    "confidence": 0.993
+   },
+   {
+    "time": 18.0,
+    "text": "para que se rompa:",
+    "confidence": 0.756
+   },
+   {
+    "time": 22.0,
+    "text": "comprando",
+    "confidence": 0.999
+   },
+   {
+    "time": 22.0,
+    "text": "frutas",
+    "confidence": 0.955
+   },
+   {
+    "time": 24.0,
+    "text": "frescas y jugosas,",
+    "confidence": 0.85
+   },
+   {
+    "time": 26.0,
+    "text": "parecen estar",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "hechas de goma,",
+    "confidence": 0.817
+   },
+   {
+    "time": 28.0,
+    "text": "de juguele.",
+    "confidence": 0.784
+   },
+   {
+    "time": 30.0,
+    "text": "han compartido",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "videos",
+    "confidence": 0.65
+   },
+   {
+    "time": 32.0,
+    "text": "con Un",
+    "confidence": 0.551
+   },
+   {
+    "time": 34.0,
+    "text": "y que se doblan",
+    "confidence": 0.665
+   },
+   {
+    "time": 36.0,
+    "text": "Una de las",
+    "confidence": 0.987
+   },
+   {
+    "time": 36.0,
+    "text": "primeras fue",
+    "confidence": 0.988
+   },
+   {
+    "time": 40.0,
+    "text": "de Seattle;",
+    "confidence": 0.853
+   },
+   {
+    "time": 42.0,
+    "text": "supermercado",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.0,
+    "text": "local.",
+    "confidence": 0.579
+   },
+   {
+    "time": 44.0,
+    "text": "Resulto ser",
+    "confidence": 0.68
+   },
+   {
+    "time": 44.0,
+    "text": "elastica,",
+    "confidence": 0.829
+   },
+   {
+    "time": 46.0,
+    "text": "poco jugo",
+    "confidence": 0.998
+   },
+   {
+    "time": 46.0,
+    "text": "con",
+    "confidence": 0.961
+   },
+   {
+    "time": 48.0,
+    "text": "un sabor",
+    "confidence": 0.976
+   },
+   {
+    "time": 48.0,
+    "text": "extrano.",
+    "confidence": 0.999
+   }
+  ],
+  "captions": [
+   {
+    "text": "pasa",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.998,
+    "id": "o1"
+   },
+   {
+    "text": "con la fruta",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.96,
+    "id": "o2"
+   },
+   {
+    "text": "en",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o3"
+   },
+   {
+    "text": "Estados Unidos?",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.995,
+    "id": "o4"
+   },
+   {
+    "text": "de gente compartiendo",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.936,
+    "id": "o5"
+   },
+   {
+    "text": "sandia de goma.",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.953,
+    "id": "o6"
+   },
+   {
+    "text": "de gente compartiendo",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.773,
+    "id": "o7"
+   },
+   {
+    "text": "sandia de goma.",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.98,
+    "id": "o8"
+   },
+   {
+    "text": "No",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.996,
+    "id": "o9"
+   },
+   {
+    "text": "puedo",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o10"
+   },
+   {
+    "text": "creer",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o11"
+   },
+   {
+    "text": "que tenga una.",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.79,
+    "id": "o12"
+   },
+   {
+    "text": "Tienes que doblarla mucho",
+    "start": 14.0,
+    "end": 16.0,
+    "confidence": 0.997,
+    "id": "o13"
+   },
+   {
+    "text": "para que se rompa:",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.756,
+    "id": "o14"
+   },
+   {
+    "text": "comprando",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.999,
+    "id": "o15"
+   },
+   {
+    "text": "frutas",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.955,
+    "id": "o16"
+   },
+   {
+    "text": "frescas y jugosas,",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.85,
+    "id": "o17"
+   },
+   {
+    "text": "parecen estar",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o18"
+   },
+   {
+    "text": "hechas de goma,",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.817,
+    "id": "o19"
+   },
+   {
+    "text": "de juguele.",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.784,
+    "id": "o20"
+   },
+   {
+    "text": "han compartido",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o21"
+   },
+   {
+    "text": "videos",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.65,
+    "id": "o22"
+   },
+   {
+    "text": "con Un",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.551,
+    "id": "o23"
+   },
+   {
+    "text": "y que se doblan",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.665,
+    "id": "o24"
+   },
+   {
+    "text": "Una de las",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.987,
+    "id": "o25"
+   },
+   {
+    "text": "primeras fue",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.988,
+    "id": "o26"
+   },
+   {
+    "text": "de Seattle;",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.853,
+    "id": "o27"
+   },
+   {
+    "text": "supermercado",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.999,
+    "id": "o28"
+   },
+   {
+    "text": "local.",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.579,
+    "id": "o29"
+   },
+   {
+    "text": "Resulto ser",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.68,
+    "id": "o30"
+   },
+   {
+    "text": "elastica,",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.829,
+    "id": "o31"
+   },
+   {
+    "text": "poco jugo",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.998,
+    "id": "o32"
+   },
+   {
+    "text": "con",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.961,
+    "id": "o33"
+   },
+   {
+    "text": "un sabor",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.976,
+    "id": "o34"
+   },
+   {
+    "text": "extrano.",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.999,
+    "id": "o35"
+   }
+  ]
+ }
+}

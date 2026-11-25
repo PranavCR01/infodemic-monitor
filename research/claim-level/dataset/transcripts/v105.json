@@ -1,0 +1,106 @@
+{
+ "video_id": "v105",
+ "filename": "new_TikTok_6938780357328260358.mp4",
+ "relative_path": "new_TikTok_6938780357328260358.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@malditobulo",
+ "extracted_at": "2026-11-23T08:45:56",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.996,
+  "duration_seconds": 49.44,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 1.17,
+    "end": 8.57,
+    "text": "Los gusanitos y otros aperitivos están hechos de petróleo, mira como arden ¿Cómo?"
+   },
+   {
+    "id": "t2",
+    "start": 8.57,
+    "end": 11.57,
+    "text": "A ver, a ver ¿Que los gusanitos pueden arder?"
+   },
+   {
+    "id": "t3",
+    "start": 11.57,
+    "end": 15.37,
+    "text": "Si, significa eso que lleven petróleo, pues no."
+   },
+   {
+    "id": "t4",
+    "start": 15.37,
+    "end": 19.37,
+    "text": "Arden con facilidad porque su estructura es hueca, por su bajo contenido en agua"
+   },
+   {
+    "id": "t5",
+    "start": 19.37,
+    "end": 23.37,
+    "text": "y porque el maíz y la grasa vegetal que contienen está muy arden."
+   },
+   {
+    "id": "t6",
+    "start": 23.37,
+    "end": 26.46,
+    "text": "Pero todos los componentes con los que están hechos son seguros."
+   },
+   {
+    "id": "t7",
+    "start": 26.46,
+    "end": 31.14,
+    "text": "Ahora, que muy saludables, muy saludables no son."
+   },
+   {
+    "id": "t8",
+    "start": 31.14,
+    "end": 36.02,
+    "text": "El problema que tienen los pisanitos y otros aperitivos de este estilo es que son productos"
+   },
+   {
+    "id": "t9",
+    "start": 36.02,
+    "end": 40.26,
+    "text": "ultra procesados que no nos acortan demasiado y no triunfean en su cuerpo, así que recomendables"
+   },
+   {
+    "id": "t10",
+    "start": 40.26,
+    "end": 41.94,
+    "text": "tampoco son."
+   },
+   {
+    "id": "t11",
+    "start": 41.94,
+    "end": 45.58,
+    "text": "Resumiendo que petróleo no llevan poderes tan tranquilos, espero que si reducimos se"
+   },
+   {
+    "id": "t12",
+    "start": 45.58,
+    "end": 46.34,
+    "text": "consumen mucho mejor."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 25,
+  "detections": [],
+  "captions": []
+ }
+}
