@@ -1,11 +1,11 @@
 {
  "source": {
   "ref": "data/golden-label-set",
-  "commit": "dcf77b084267e07a07f67086bc47dc4398a35047",
+  "commit": "948b1c2badfc3d00ab667cc40e863e40fd4ef63b",
   "judge_path": "research/claim-level/dataset/scripts/judge.py",
   "judge_blob_sha": "0a49a3f037b77c261248aa9c0d72da0ae9c6b9fe",
-  "videos_blob_sha": "a75175389d28189bf47aecc834cc6474ac75e53f",
-  "claims_blob_sha": "dcb65c865f556122efda90badbbb4d749cecd61a",
+  "videos_blob_sha": "9f18146c72892ac97068b66351c7c9bceb37bbab",
+  "claims_blob_sha": "32ce2d2033f59064d1143af1c2275c42ef6b037f",
   "note": "Claim-level fields only (stance, verdict, cited evidence IDs) and the recorded video label / review_reasons. Labels are data under human review (PR #62), not ground truth. Regenerate with scripts/judge_crosscheck.py --write-fixture."
  },
  "videos": [
@@ -718,9 +718,11 @@
   {
    "video_id": "v22",
    "out_of_scope": false,
-   "recorded_label": "NO_MISINFO",
-   "recorded_review_reasons": [],
-   "recorded_basis": "",
+   "recorded_label": "MISINFO",
+   "recorded_review_reasons": [
+    "unproven_claim:c2"
+   ],
+   "recorded_basis": "unproven",
    "claims": [
     {
      "claim_id": "c1",
@@ -735,10 +737,8 @@
     {
      "claim_id": "c2",
      "speaker_stance": "ENDORSES",
-     "claim_verdict": "INSUFFICIENT_EVIDENCE",
-     "evidence_supporting": [
-      "PMID:35215476"
-     ],
+     "claim_verdict": "UNSUPPORTED",
+     "evidence_supporting": [],
      "evidence_contradicting": []
     },
     {
@@ -1349,11 +1349,11 @@
   {
    "video_id": "v35",
    "out_of_scope": false,
-   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_label": "MISINFO",
    "recorded_review_reasons": [
-    "nothing_judged"
+    "unproven_claim:c2"
    ],
-   "recorded_basis": "",
+   "recorded_basis": "unproven",
    "claims": [
     {
      "claim_id": "c1",
@@ -1365,10 +1365,8 @@
     {
      "claim_id": "c2",
      "speaker_stance": "ENDORSES",
-     "claim_verdict": "INSUFFICIENT_EVIDENCE",
-     "evidence_supporting": [
-      "PMID:11833659"
-     ],
+     "claim_verdict": "UNSUPPORTED",
+     "evidence_supporting": [],
      "evidence_contradicting": []
     },
     {
@@ -1388,7 +1386,9 @@
    "recorded_label": "MISINFO",
    "recorded_review_reasons": [
     "unproven_claim:c6",
-    "unproven_claim:c7"
+    "unproven_claim:c7",
+    "unproven_claim:c10",
+    "unproven_claim:c14"
    ],
    "recorded_basis": "unproven",
    "claims": [
@@ -1450,6 +1450,81 @@
      "claim_verdict": "INSUFFICIENT_EVIDENCE",
      "evidence_supporting": [
       "PMID:28348972"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c9",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:34220241"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c10",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "UNSUPPORTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c11",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c12",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:16521107"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c13",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:41111517"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c14",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "UNSUPPORTED",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c15",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:37765399"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c16",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:27437504"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c17",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:23972244"
      ],
      "evidence_contradicting": []
     }
@@ -3062,6 +3137,29 @@
    "claims": [
     {
      "claim_id": "c1",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c2",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c3",
+     "speaker_stance": "ENDORSES",
+     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "evidence_supporting": [
+      "PMID:2794965"
+     ],
+     "evidence_contradicting": []
+    },
+    {
+     "claim_id": "c4",
      "speaker_stance": "ENDORSES",
      "claim_verdict": "INSUFFICIENT_EVIDENCE",
      "evidence_supporting": [],
@@ -5365,7 +5463,10 @@
    "video_id": "v139",
    "out_of_scope": false,
    "recorded_label": "MISINFO",
-   "recorded_review_reasons": [],
+   "recorded_review_reasons": [
+    "unproven_claim:c5",
+    "unproven_claim:c6"
+   ],
    "recorded_basis": "contradicted",
    "claims": [
     {
@@ -5406,20 +5507,16 @@
     {
      "claim_id": "c5",
      "speaker_stance": "ENDORSES",
-     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "claim_verdict": "UNSUPPORTED",
      "evidence_supporting": [],
-     "evidence_contradicting": [
-      "PMID:2247104"
-     ]
+     "evidence_contradicting": []
     },
     {
      "claim_id": "c6",
      "speaker_stance": "ENDORSES",
-     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "claim_verdict": "UNSUPPORTED",
      "evidence_supporting": [],
-     "evidence_contradicting": [
-      "PMID:2247104"
-     ]
+     "evidence_contradicting": []
     }
    ]
   },
@@ -5785,11 +5882,11 @@
   {
    "video_id": "v161",
    "out_of_scope": false,
-   "recorded_label": "CANNOT_RECOGNIZE",
+   "recorded_label": "MISINFO",
    "recorded_review_reasons": [
-    "nothing_judged"
+    "unproven_claim:c6"
    ],
-   "recorded_basis": "",
+   "recorded_basis": "unproven",
    "claims": [
     {
      "claim_id": "c1",
@@ -5835,7 +5932,7 @@
     {
      "claim_id": "c6",
      "speaker_stance": "ENDORSES",
-     "claim_verdict": "INSUFFICIENT_EVIDENCE",
+     "claim_verdict": "UNSUPPORTED",
      "evidence_supporting": [],
      "evidence_contradicting": []
     }
