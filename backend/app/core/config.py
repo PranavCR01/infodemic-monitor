@@ -13,7 +13,12 @@ class Settings(BaseSettings):
     SUPABASE_URL: str = ""
     SUPABASE_SERVICE_KEY: str = ""
     SUPABASE_STORAGE_BUCKET: str = "videos"
+    # Legacy shared secret (HS256). Optional fallback (T48): leave empty once the
+    # project's legacy secret is revoked. Asymmetric tokens (ES256/RS256) are checked
+    # against the project's JWKS at SUPABASE_URL + /auth/v1/.well-known/jwks.json.
     SUPABASE_JWT_SECRET: str = ""
+    SUPABASE_JWKS_CACHE_SECONDS: int = 600       # how long a fetched JWKS is fresh
+    SUPABASE_JWKS_MIN_REFETCH_SECONDS: int = 30  # at most one JWKS fetch per interval
 
     # Inference
     INFERENCE_PROVIDER: str = "openai"  # "openai" | "anthropic"

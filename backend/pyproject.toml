@@ -19,7 +19,7 @@ dependencies = [
   "aiofiles>=23.0",
   # Storage / auth
   "supabase>=2.0.0",
-  "PyJWT>=2.8.0",
+  "PyJWT[crypto]>=2.8.0,<3",  # ES256/RS256 via JWKS (T48)
   "httpx>=0.26",
   # Inference
   "anthropic>=0.28",

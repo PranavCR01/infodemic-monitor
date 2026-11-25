@@ -132,7 +132,7 @@ cp frontend/.env.example frontend/.env.local   # frontend
 | `REDIS_URL` | Upstash Redis URL (`rediss://...`) |
 | `SUPABASE_URL` | Supabase project URL |
 | `SUPABASE_SERVICE_KEY` | Supabase service role key |
-| `SUPABASE_JWT_SECRET` | Supabase JWT secret (Settings → API) |
+| `SUPABASE_JWT_SECRET` | Optional legacy HS256 secret; access tokens are verified via the project's JWKS (`SUPABASE_URL` + `/auth/v1/.well-known/jwks.json`) |
 | `SUPABASE_STORAGE_BUCKET` | Storage bucket name (default: `videos`) |
 | `INFERENCE_PROVIDER` | `openai` or `anthropic` |
 | `WHISPER_PROVIDER` | `openai` or `faster_whisper` |
