@@ -261,4 +261,5 @@ def test_mounted_in_main_app():
         return
     from app.main import app as main_app
 
-    assert any(getattr(r, "path", "") == "/v1/jobs/{job_id}/playback" for r in main_app.routes)
+    # Newer FastAPI nests included routers in app.routes, so check the generated OpenAPI paths.
+    assert "/v1/jobs/{job_id}/playback" in main_app.openapi()["paths"]
