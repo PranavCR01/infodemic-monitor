@@ -39,7 +39,6 @@ How it fits:
 """
 from __future__ import annotations
 
-import re
 from typing import Any, Callable, Iterable, Optional, Protocol, Sequence
 
 from app.core.graph import routing as r
@@ -57,6 +56,7 @@ from app.core.guardrails.untrusted import (
 )
 from app.core.retrieval.claim_kind import resolve_claim_kind
 from app.core.retrieval.schemas import CLAIM_KINDS
+from app.core.text_tokens import word_tokens
 
 STEP = "extract_claims"  # routing.yaml step name (§13)
 DEFAULT_PROMPT_VERSION = "extract_v2"  # v2 adds claim_kind (T17)
@@ -205,7 +205,6 @@ def windows(
 
 # ------------------------------------------------------------------ dedup
 
-_WORD = re.compile(r"[a-z0-9]+")
 _NEGATIONS = frozenset({"no", "not", "never", "dont", "doesnt", "isnt", "cannot", "cant", "without", "nor"})
 _STOP = frozenset(
     "a an the and or of to in on for with is are be was were it this that these those "
@@ -214,7 +213,9 @@ _STOP = frozenset(
 
 
 def _words(text: str) -> list[str]:
-    return [w for w in _WORD.findall(text.lower().replace("'", "")) if w not in _STOP]
+    # Unicode-aware since T45 (same tokens as the grounding guardrail); before, a
+    # Devanagari claim had no words, so overlapping windows' copies never merged.
+    return [w for w in word_tokens(text.replace("'", "")) if w not in _STOP]
 
 
 def lexical_similarity(a: str, b: str) -> float:

@@ -17,6 +17,7 @@ from typing import Any, Optional
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator
 
 from app.core.graph.state import CriticDecision, Stance, Verdict
+from app.core.text_tokens import word_tokens
 
 MAX_TEXT_FIELD = 2000
 MAX_LIST = 50
@@ -173,7 +174,6 @@ def check_segment_citations(
     return split_citations(cited, allowed_ids)
 
 
-_WORD = re.compile(r"[a-z0-9]+")
 _STOP = frozenset(
     "a an the and or of to in on for with is are be was were it this that these those "
     "your you my our i we they he she its as at by from".split()
@@ -185,9 +185,12 @@ def grounding_overlap(claim_text: str, source_text: str) -> float:
 
     Extraction must "quote, don't invent" (§4). A claim with little overlap with the
     segments it cites was not taken from them.
+
+    Words are Unicode-aware (``app.core.text_tokens``, T45): before T45 only ASCII
+    letters counted, so a Hindi claim scored 0.0 even against itself and was dropped.
     """
-    words = [w for w in _WORD.findall(claim_text.lower()) if w not in _STOP]
+    words = [w for w in word_tokens(claim_text) if w not in _STOP]
     if not words:
         return 0.0
-    source = set(_WORD.findall(source_text.lower()))
+    source = set(word_tokens(source_text))
     return sum(1 for w in words if w in source) / len(words)

@@ -1,0 +1,102 @@
+{
+  "mode": "dry_run",
+  "golden": "git:948b1c2@948b1c2badfc:research/claim-level/dataset",
+  "split": "tune",
+  "evidence_mode": null,
+  "evidence_assumed": false,
+  "use_ocr": true,
+  "steps": {
+    "extract_claims": {
+      "items": 48,
+      "metric": "claim_f1",
+      "candidates": [
+        {
+          "candidate": "anthropic/claude-sonnet-5-5@extract_v2",
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "prompt": "extract_v2",
+          "calls": 50,
+          "input_tokens": 235832,
+          "expected_output_tokens": 30000,
+          "max_output_tokens": 102400,
+          "reasoning_tokens": 0,
+          "output_cap_tokens": 102400,
+          "upper_bound_input_tokens": 589580,
+          "upper_bound_output_tokens": 204800,
+          "expected_usd": 0.7717,
+          "upper_bound_usd": 3.2272,
+          "priced": true,
+          "placeholder_id": false
+        },
+        {
+          "candidate": "anthropic/claude-sonnet-5-5@extract_v3",
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "prompt": "extract_v3",
+          "calls": 50,
+          "input_tokens": 274360,
+          "expected_output_tokens": 30000,
+          "max_output_tokens": 102400,
+          "reasoning_tokens": 0,
+          "output_cap_tokens": 102400,
+          "upper_bound_input_tokens": 685900,
+          "upper_bound_output_tokens": 204800,
+          "expected_usd": 0.8487,
+          "upper_bound_usd": 3.4198,
+          "priced": true,
+          "placeholder_id": false
+        }
+      ]
+    },
+    "analyze_stance": {
+      "items": 187,
+      "metric": "stance_macro_f1",
+      "candidates": [
+        {
+          "candidate": "anthropic/claude-sonnet-5-5@stance_v1",
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "prompt": "stance_v1",
+          "calls": 187,
+          "input_tokens": 430614,
+          "expected_output_tokens": 28050,
+          "max_output_tokens": 95744,
+          "reasoning_tokens": 0,
+          "output_cap_tokens": 95744,
+          "upper_bound_input_tokens": 538268,
+          "upper_bound_output_tokens": 95744,
+          "expected_usd": 1.1417,
+          "upper_bound_usd": 2.034,
+          "priced": true,
+          "placeholder_id": false
+        },
+        {
+          "candidate": "anthropic/claude-sonnet-5-5@stance_v2",
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "prompt": "stance_v2",
+          "calls": 187,
+          "input_tokens": 522354,
+          "expected_output_tokens": 28050,
+          "max_output_tokens": 95744,
+          "reasoning_tokens": 0,
+          "output_cap_tokens": 95744,
+          "upper_bound_input_tokens": 652943,
+          "upper_bound_output_tokens": 95744,
+          "expected_usd": 1.3252,
+          "upper_bound_usd": 2.2633,
+          "priced": true,
+          "placeholder_id": false
+        }
+      ]
+    }
+  },
+  "total_expected_usd": 4.0873,
+  "total_upper_bound_usd": 10.9443,
+  "unpriced_candidates": [],
+  "placeholder_candidates": [],
+  "critic_provider_warnings": [],
+  "reasoning_config_problems": [],
+  "notes": [],
+  "written_at": "2026-11-25T02:36:33+00:00"
+}

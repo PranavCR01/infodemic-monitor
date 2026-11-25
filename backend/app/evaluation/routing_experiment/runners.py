@@ -157,7 +157,35 @@ def verify_extras(gold: list[str], pred: list[Optional[str]]) -> dict:
     }
 
 
+def extract_extras(gold: list[list[str]], pred: list[Optional[list[str]]]) -> dict:
+    """T45: claim P/R/F1 under both matchers, side by side.
+
+    ``strict`` is the selection metric (``claim_f1``, token Jaccard >= 0.5). ``meaning``
+    is T43's meaning-based matcher (``error_analysis.matching.meaning_match``: content-word
+    overlap >= 0.6, at least 2 shared). A reworded but faithful claim fails strict and can
+    pass meaning; a gain under strict alone may be wording, not meaning. Text only: the
+    gold items carry no time spans, so the matcher's 0.34 timed relaxation is not used
+    (a little stricter than T43's ceiling numbers). A failed item counts as no claims.
+    The meaning matcher keeps compare_blind.py's ASCII-only words (so the ceiling stays
+    comparable): it cannot match Devanagari claims, which the strict matcher now can.
+    """
+    from app.evaluation.error_analysis import matching as mt
+
+    out: dict = {}
+    for name, match in (("strict", mt.strict_match), ("meaning", mt.meaning_match)):
+        matched = n_gold = n_pred = 0
+        for g, p in zip(gold, pred):
+            p = list(p or [])
+            matched += len(match(list(g), p))
+            n_gold += len(g)
+            n_pred += len(p)
+        prf = mt.prf(matched, n_gold, n_pred)
+        out[name] = {**prf, "matched": matched, "n_gold": n_gold, "n_pred": n_pred}
+    return out
+
+
 EXTRAS: dict[str, Callable[[list, list], dict]] = {
+    "extract_claims": extract_extras,
     "analyze_stance": stance_extras,
     "verify_claims": verify_extras,
 }

@@ -2073,6 +2073,17 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-25**: T45 (design §4, §5, §13, §14) accuracy fixes from T43, no paid calls. Unicode-aware
+  tokens (`app/core/text_tokens.py`) in the grounding guardrail, claim dedup and the strict matcher: v167's
+  4 Devanagari tune claims are no longer dropped as ungrounded, and Devanagari pairs no longer score
+  similarity 1.0; ASCII tokenisation is unchanged (tested), accented words are now one token. Meaning-based
+  claim P/R/F1 is reported next to strict in the routing report and the eval scorer (selection stays
+  strict). New candidate prompts `extract_v3` and `stance_v2` (T43 §8) added for sonnet in
+  `config/routing_experiment.yaml` only; `config/routing.yaml` and the live defaults are unchanged.
+  Dry-run estimate for the proposed re-run (sonnet extract v2/v3 + stance v1/v2, plus the use_ocr=false
+  extraction ablation, tune @ 948b1c2): $5.31 expected, $16.42 upper bound. Open for the lead: stance_v2
+  treats a clear sarcastic debunk as REFUTES where the guide says UNCLEAR. Report
+  `evals/reports/T45/README.md`. Branch `auto/T45`.
 - **2026-11-25**: T46 (design §14) evaluation loader for the golden label set, no spend. Branch
   `auto/T46` from `integrate/golden-set` (dataset byte-identical to `data/golden-label-set` @ 948b1c2).
   `app/evaluation/dataset.py` now reads the golden schema (`claim_verdict` incl. UNSUPPORTED,
