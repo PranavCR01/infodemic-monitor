@@ -1,0 +1,690 @@
+{
+ "video_id": "v164",
+ "filename": "new_TikTok_7558525680649129238.mp4",
+ "relative_path": "new_TikTok_7558525680649129238.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@healfroots",
+ "extracted_at": "2026-11-23T08:45:59",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "fr",
+  "language_probability": 0.997,
+  "duration_seconds": 64.44,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.28,
+    "text": "Que se passe-t-il si tu ne manges que de la viande pendant une semaine ?"
+   },
+   {
+    "id": "t2",
+    "start": 3.28,
+    "end": 5.88,
+    "text": "Le premier jour, tu te sentiras en pleine forme."
+   },
+   {
+    "id": "t3",
+    "start": 5.88,
+    "end": 10.44,
+    "text": "Ton corps reçoit une grande dose de protéines et ton énergie grimpe en flèches."
+   },
+   {
+    "id": "t4",
+    "start": 10.44,
+    "end": 16.12,
+    "text": "Le deuxième jour, ton corps commencera à réclamer du sucre et des glucides, mais croit-moi, ça en vaut la peine."
+   },
+   {
+    "id": "t5",
+    "start": 16.12,
+    "end": 18.4,
+    "text": "Au troisième jour, tu entres en ces thoses."
+   },
+   {
+    "id": "t6",
+    "start": 18.4,
+    "end": 22.84,
+    "text": "Ton corps commence à brûler les graisses pour produire de l'énergie au lieu du sucre."
+   },
+   {
+    "id": "t7",
+    "start": 22.84,
+    "end": 26.0,
+    "text": "Résultat, la perte de poids devient plus facile."
+   },
+   {
+    "id": "t8",
+    "start": 26.0,
+    "end": 29.08,
+    "text": "Le quatrième jour, l'inflammation dans ton corps diminue."
+   },
+   {
+    "id": "t9",
+    "start": 29.08,
+    "end": 33.62,
+    "text": "Tu te sens plus énergique, plus concentré, et même les douleurs dans les articulations"
+   },
+   {
+    "id": "t10",
+    "start": 33.62,
+    "end": 35.14,
+    "text": "commencent à disparaître."
+   },
+   {
+    "id": "t11",
+    "start": 35.14,
+    "end": 41.7,
+    "text": "Le 5ème jour, ton organisme s'adapte complètement et tire enfin profit des nutriments biodisponibles"
+   },
+   {
+    "id": "t12",
+    "start": 41.7,
+    "end": 42.7,
+    "text": "de la viande."
+   },
+   {
+    "id": "t13",
+    "start": 42.7,
+    "end": 45.42,
+    "text": "En clair, ton corps utilise vraiment ce que tu manges."
+   },
+   {
+    "id": "t14",
+    "start": 45.42,
+    "end": 49.74,
+    "text": "Le 6ème jour, tu ressens tout le potentiel de ton corps et tu regrettes de ne pas avoir"
+   },
+   {
+    "id": "t15",
+    "start": 49.74,
+    "end": 50.74,
+    "text": "commencé plus tôt."
+   },
+   {
+    "id": "t16",
+    "start": 50.74,
+    "end": 55.74,
+    "text": "Le 7ème jour, ton inflammation a diminué, ton énergie et ta concentration ont augmenté"
+   },
+   {
+    "id": "t17",
+    "start": 55.74,
+    "end": 57.18,
+    "text": "et ton corps est plus fort."
+   },
+   {
+    "id": "t18",
+    "start": 57.18,
+    "end": 61.88,
+    "text": "plus affûté, prêt pour une deuxième semaine, et celui à qui tu en verras cette vidéo"
+   },
+   {
+    "id": "t19",
+    "start": 61.88,
+    "end": 64.28,
+    "text": "te devra indiner avec un bon steak."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 33,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "QUE",
+    "confidence": 0.927
+   },
+   {
+    "time": 2.0,
+    "text": "VIANDE",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.0,
+    "text": "JOUR",
+    "confidence": 0.984
+   },
+   {
+    "time": 4.0,
+    "text": "HEALFROOTS",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "TON",
+    "confidence": 0.984
+   },
+   {
+    "time": 10.0,
+    "text": "GRIMPE",
+    "confidence": 0.821
+   },
+   {
+    "time": 10.0,
+    "text": "HEALFROQTS",
+    "confidence": 0.784
+   },
+   {
+    "time": 12.0,
+    "text": "COMMENCERA",
+    "confidence": 0.996
+   },
+   {
+    "time": 12.0,
+    "text": "HEAL",
+    "confidence": 0.706
+   },
+   {
+    "time": 14.0,
+    "text": "CLUCIDES",
+    "confidence": 0.945
+   },
+   {
+    "time": 16.0,
+    "text": "HEALFROOTS",
+    "confidence": 0.997
+   },
+   {
+    "time": 16.0,
+    "text": "PEINE",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "HE",
+    "confidence": 0.993
+   },
+   {
+    "time": 18.0,
+    "text": "CETOSE",
+    "confidence": 0.998
+   },
+   {
+    "time": 20.0,
+    "text": "HEALFROOTS",
+    "confidence": 0.998
+   },
+   {
+    "time": 20.0,
+    "text": "ORAISSES",
+    "confidence": 0.649
+   },
+   {
+    "time": 22.0,
+    "text": "LIEU",
+    "confidence": 0.866
+   },
+   {
+    "time": 24.0,
+    "text": "PERTE",
+    "confidence": 0.97
+   },
+   {
+    "time": 28.0,
+    "text": "HEALFROOTS",
+    "confidence": 0.999
+   },
+   {
+    "time": 28.0,
+    "text": "DANS",
+    "confidence": 0.994
+   },
+   {
+    "time": 30.0,
+    "text": "HEALFROOTS",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.0,
+    "text": "ENERCIQUE",
+    "confidence": 0.898
+   },
+   {
+    "time": 34.0,
+    "text": "COMMENCENT",
+    "confidence": 0.951
+   },
+   {
+    "time": 36.0,
+    "text": "HEALFROOTS",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.0,
+    "text": "JOUR",
+    "confidence": 0.995
+   },
+   {
+    "time": 38.0,
+    "text": "EROOTS",
+    "confidence": 0.951
+   },
+   {
+    "time": 40.0,
+    "text": "PROFIT",
+    "confidence": 0.921
+   },
+   {
+    "time": 42.0,
+    "text": "HEALFROOTS",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.0,
+    "text": "WA",
+    "confidence": 0.69
+   },
+   {
+    "time": 44.0,
+    "text": "HEALFROOTS",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "UTILISE",
+    "confidence": 0.992
+   },
+   {
+    "time": 46.0,
+    "text": "JOUR",
+    "confidence": 0.998
+   },
+   {
+    "time": 48.0,
+    "text": "HEALFROOTS",
+    "confidence": 0.999
+   },
+   {
+    "time": 50.0,
+    "text": "HE",
+    "confidence": 0.987
+   },
+   {
+    "time": 50.0,
+    "text": "COMMENCE",
+    "confidence": 0.831
+   },
+   {
+    "time": 52.0,
+    "text": "HEALFROOTS",
+    "confidence": 0.998
+   },
+   {
+    "time": 52.0,
+    "text": "INFLAMMATION",
+    "confidence": 0.994
+   },
+   {
+    "time": 54.0,
+    "text": "EST",
+    "confidence": 0.999
+   },
+   {
+    "time": 56.0,
+    "text": "ET",
+    "confidence": 0.998
+   },
+   {
+    "time": 58.0,
+    "text": "AFFUTE",
+    "confidence": 0.932
+   },
+   {
+    "time": 60.0,
+    "text": "CELUI",
+    "confidence": 0.962
+   },
+   {
+    "time": 62.0,
+    "text": "1",
+    "confidence": 0.999
+   },
+   {
+    "time": 62.0,
+    "text": "TE",
+    "confidence": 0.984
+   },
+   {
+    "time": 64.0,
+    "text": "STEAK",
+    "confidence": 0.999
+   },
+   {
+    "time": 64.0,
+    "text": "HEALFRUUS",
+    "confidence": 0.682
+   }
+  ],
+  "captions": [
+   {
+    "text": "QUE",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.927,
+    "id": "o1"
+   },
+   {
+    "text": "VIANDE",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.999,
+    "id": "o2"
+   },
+   {
+    "text": "JOUR",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.984,
+    "id": "o3"
+   },
+   {
+    "text": "HEALFROOTS",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o4"
+   },
+   {
+    "text": "TON",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.984,
+    "id": "o5"
+   },
+   {
+    "text": "GRIMPE",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.821,
+    "id": "o6"
+   },
+   {
+    "text": "HEALFROQTS",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.784,
+    "id": "o7"
+   },
+   {
+    "text": "COMMENCERA",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.996,
+    "id": "o8"
+   },
+   {
+    "text": "HEAL",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.706,
+    "id": "o9"
+   },
+   {
+    "text": "CLUCIDES",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.945,
+    "id": "o10"
+   },
+   {
+    "text": "HEALFROOTS",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.997,
+    "id": "o11"
+   },
+   {
+    "text": "PEINE",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o12"
+   },
+   {
+    "text": "HE",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.993,
+    "id": "o13"
+   },
+   {
+    "text": "CETOSE",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.998,
+    "id": "o14"
+   },
+   {
+    "text": "HEALFROOTS",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.998,
+    "id": "o15"
+   },
+   {
+    "text": "ORAISSES",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.649,
+    "id": "o16"
+   },
+   {
+    "text": "LIEU",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.866,
+    "id": "o17"
+   },
+   {
+    "text": "PERTE",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.97,
+    "id": "o18"
+   },
+   {
+    "text": "HEALFROOTS",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.999,
+    "id": "o19"
+   },
+   {
+    "text": "DANS",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.994,
+    "id": "o20"
+   },
+   {
+    "text": "HEALFROOTS",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.999,
+    "id": "o21"
+   },
+   {
+    "text": "ENERCIQUE",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.898,
+    "id": "o22"
+   },
+   {
+    "text": "COMMENCENT",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.951,
+    "id": "o23"
+   },
+   {
+    "text": "HEALFROOTS",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.999,
+    "id": "o24"
+   },
+   {
+    "text": "JOUR",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.995,
+    "id": "o25"
+   },
+   {
+    "text": "EROOTS",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.951,
+    "id": "o26"
+   },
+   {
+    "text": "PROFIT",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.921,
+    "id": "o27"
+   },
+   {
+    "text": "HEALFROOTS",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.999,
+    "id": "o28"
+   },
+   {
+    "text": "WA",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.69,
+    "id": "o29"
+   },
+   {
+    "text": "HEALFROOTS",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o30"
+   },
+   {
+    "text": "UTILISE",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.992,
+    "id": "o31"
+   },
+   {
+    "text": "JOUR",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.998,
+    "id": "o32"
+   },
+   {
+    "text": "HEALFROOTS",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.999,
+    "id": "o33"
+   },
+   {
+    "text": "HE",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.987,
+    "id": "o34"
+   },
+   {
+    "text": "COMMENCE",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.831,
+    "id": "o35"
+   },
+   {
+    "text": "HEALFROOTS",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.998,
+    "id": "o36"
+   },
+   {
+    "text": "INFLAMMATION",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.994,
+    "id": "o37"
+   },
+   {
+    "text": "EST",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.999,
+    "id": "o38"
+   },
+   {
+    "text": "ET",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.998,
+    "id": "o39"
+   },
+   {
+    "text": "AFFUTE",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.932,
+    "id": "o40"
+   },
+   {
+    "text": "CELUI",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.962,
+    "id": "o41"
+   },
+   {
+    "text": "1",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.999,
+    "id": "o42"
+   },
+   {
+    "text": "TE",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.984,
+    "id": "o43"
+   },
+   {
+    "text": "STEAK",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.999,
+    "id": "o44"
+   },
+   {
+    "text": "HEALFRUUS",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.682,
+    "id": "o45"
+   }
+  ]
+ }
+}

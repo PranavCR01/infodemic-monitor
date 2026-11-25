@@ -1,0 +1,38 @@
+{
+  "format": 1,
+  "pages": {
+    "cdc_adult_schedule": {
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-age.html",
+      "current": "cc7bde5e661e7aa8b23a902c491c8d714eb9c1dcb61a8d3e0d20f289f0b9b521",
+      "versions": [
+        {
+          "sha256": "cc7bde5e661e7aa8b23a902c491c8d714eb9c1dcb61a8d3e0d20f289f0b9b521",
+          "retrieved_at": "2026-11-23T15:28:42+00:00",
+          "method": "fetched"
+        }
+      ]
+    },
+    "cdc_child_schedule": {
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/child-adolescent-age.html",
+      "current": "f28853ab597c0c5804cc54d2b95e595261808b82d057b215ceedb67b261b2ad0",
+      "versions": [
+        {
+          "sha256": "f28853ab597c0c5804cc54d2b95e595261808b82d057b215ceedb67b261b2ad0",
+          "retrieved_at": "2026-11-23T15:28:42+00:00",
+          "method": "fetched"
+        }
+      ]
+    },
+    "cdc_measles_vaccine": {
+      "url": "https://www.cdc.gov/measles/vaccines/index.html",
+      "current": "061b62769671a1e5ea1f5105efdafaf89b91ec071237d21f955f8096b338e48c",
+      "versions": [
+        {
+          "sha256": "061b62769671a1e5ea1f5105efdafaf89b91ec071237d21f955f8096b338e48c",
+          "retrieved_at": "2026-11-23T15:28:42+00:00",
+          "method": "fetched"
+        }
+      ]
+    }
+  }
+}

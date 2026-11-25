@@ -1,0 +1,45 @@
+{
+ "query": "poliomyelitis StatPearls",
+ "db": "books",
+ "ids": [
+  "5873322",
+  "5857944",
+  "5781716",
+  "5781248",
+  "5763570"
+ ],
+ "records": [
+  {
+   "id": "5873322",
+   "title": "Table 1. Etiologies of Facial Paralysis",
+   "book": "statpearls",
+   "accession": "NBK549815"
+  },
+  {
+   "id": "5857944",
+   "title": "Clinical Significance",
+   "book": "statpearls",
+   "accession": "NBK542179"
+  },
+  {
+   "id": "5781716",
+   "title": "16.22. Other Pediatric Disorders",
+   "book": "openrnnhp",
+   "accession": "NBK615329"
+  },
+  {
+   "id": "5781248",
+   "title": "13.4. Nursing and Medical Care for the Developing Child",
+   "book": "openrnnhp",
+   "accession": "NBK615351"
+  },
+  {
+   "id": "5763570",
+   "title": "G.2. CHARGE QUESTION 2- NONCANCER HAZARD IDENTIFICATION",
+   "book": "epairistoxrevpfhxs",
+   "accession": "NBK614207"
+  }
+ ],
+ "_key": "books::poliomyelitis StatPearls::5",
+ "_retrieved_at": "2026-11-22T12:00:20"
+}

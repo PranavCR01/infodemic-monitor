@@ -1,0 +1,5406 @@
+{
+ "video_id": "v119",
+ "filename": "new_TikTok_7217602050299809066.mp4",
+ "relative_path": "new_TikTok_7217602050299809066.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@the_lost_mind_guy",
+ "extracted_at": "2026-11-23T08:45:56",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.623,
+  "duration_seconds": 60.16,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.24,
+    "end": 9.4,
+    "text": "We're gonna starve that cancer. How do you starve it? To starve it, you've got to know what it loves."
+   },
+   {
+    "id": "t2",
+    "start": 10.02,
+    "end": 15.1,
+    "text": "It loves glucose. And so we suggested six weeks"
+   },
+   {
+    "id": "t3",
+    "start": 15.74,
+    "end": 24.26,
+    "text": "No sugar, no honey, no sweet at all. What's she gonna eat? There's a lot of vegetables."
+   },
+   {
+    "id": "t4",
+    "start": 24.82,
+    "end": 29.98,
+    "text": "There's a lot of legumes. There's a lot of nuts. There's a lot of seeds."
+   },
+   {
+    "id": "t5",
+    "start": 30.62,
+    "end": 32.91,
+    "text": "So you can get a lovely variety."
+   },
+   {
+    "id": "t6",
+    "start": 32.91,
+    "end": 39.31,
+    "text": "Some people that come to us they decide to make Monday lima bean day, Tuesday"
+   },
+   {
+    "id": "t7",
+    "start": 39.31,
+    "end": 49.04,
+    "text": "lentil day, Wednesday organic tofu day, Thursday black-eyed bean day. There's so"
+   },
+   {
+    "id": "t8",
+    "start": 49.04,
+    "end": 53.87,
+    "text": "many that you can have a different one every day and so many different"
+   },
+   {
+    "id": "t9",
+    "start": 53.87,
+    "end": 61.68,
+    "text": "vegetables. She also had to check her house."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 30,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Come vegetales",
+    "confidence": 0.733
+   },
+   {
+    "time": 0.0,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.819
+   },
+   {
+    "time": 0.0,
+    "text": "Curate del cancer",
+    "confidence": 0.721
+   },
+   {
+    "time": 0.0,
+    "text": "matandolo de hambre:",
+    "confidence": 0.905
+   },
+   {
+    "time": 0.0,
+    "text": "0 'Niell)",
+    "confidence": 0.665
+   },
+   {
+    "time": 0.0,
+    "text": "(Barbara",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "El Bicarbonato es",
+    "confidence": 0.986
+   },
+   {
+    "time": 0.0,
+    "text": "bueno",
+    "confidence": 0.87
+   },
+   {
+    "time": 0.0,
+    "text": "El Cancer es un hongo",
+    "confidence": 0.637
+   },
+   {
+    "time": 0.0,
+    "text": "Jugo verde",
+    "confidence": 0.999
+   },
+   {
+    "time": 0.0,
+    "text": "ktok",
+    "confidence": 0.777
+   },
+   {
+    "time": 0.0,
+    "text": "Vamos a matar de",
+    "confidence": 0.852
+   },
+   {
+    "time": 0.0,
+    "text": "Hambre al Cancer",
+    "confidence": 0.986
+   },
+   {
+    "time": 2.01,
+    "text": "Come vegetales",
+    "confidence": 0.737
+   },
+   {
+    "time": 2.01,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.836
+   },
+   {
+    "time": 2.01,
+    "text": "Curate del cancer",
+    "confidence": 0.843
+   },
+   {
+    "time": 2.01,
+    "text": "matandolo de hambre:",
+    "confidence": 0.91
+   },
+   {
+    "time": 2.01,
+    "text": "Niell)",
+    "confidence": 0.989
+   },
+   {
+    "time": 2.01,
+    "text": "(Barbara",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.01,
+    "text": "0'",
+    "confidence": 0.967
+   },
+   {
+    "time": 2.01,
+    "text": "El Bicarbonato es",
+    "confidence": 0.982
+   },
+   {
+    "time": 2.01,
+    "text": "bueno",
+    "confidence": 0.724
+   },
+   {
+    "time": 2.01,
+    "text": "El Cancer es un hongo",
+    "confidence": 0.769
+   },
+   {
+    "time": 2.01,
+    "text": "Jugo verde",
+    "confidence": 0.71
+   },
+   {
+    "time": 2.01,
+    "text": "ktok",
+    "confidence": 0.814
+   },
+   {
+    "time": 2.01,
+    "text": "Vamos a matar de",
+    "confidence": 0.9
+   },
+   {
+    "time": 2.01,
+    "text": "Hambre al Cancer",
+    "confidence": 0.979
+   },
+   {
+    "time": 4.03,
+    "text": "Come vegetales",
+    "confidence": 0.741
+   },
+   {
+    "time": 4.03,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.836
+   },
+   {
+    "time": 4.03,
+    "text": "Curate del cancer",
+    "confidence": 0.844
+   },
+   {
+    "time": 4.03,
+    "text": "matandolo de hambre:",
+    "confidence": 0.909
+   },
+   {
+    "time": 4.03,
+    "text": "Niell)",
+    "confidence": 0.989
+   },
+   {
+    "time": 4.03,
+    "text": "(Barbara",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.03,
+    "text": "0'",
+    "confidence": 0.969
+   },
+   {
+    "time": 4.03,
+    "text": "El Bicarbonato es",
+    "confidence": 0.98
+   },
+   {
+    "time": 4.03,
+    "text": "bueno",
+    "confidence": 0.894
+   },
+   {
+    "time": 4.03,
+    "text": "El Cancer es un hongo",
+    "confidence": 0.802
+   },
+   {
+    "time": 4.03,
+    "text": "Jugo verde",
+    "confidence": 0.708
+   },
+   {
+    "time": 4.03,
+    "text": "ktok",
+    "confidence": 0.835
+   },
+   {
+    "time": 4.03,
+    "text": "Vamos a matar de",
+    "confidence": 0.888
+   },
+   {
+    "time": 4.03,
+    "text": "Hambre al Cancer",
+    "confidence": 0.979
+   },
+   {
+    "time": 6.04,
+    "text": "Come vegetales",
+    "confidence": 0.656
+   },
+   {
+    "time": 6.04,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.954
+   },
+   {
+    "time": 6.04,
+    "text": "Curate del cancer",
+    "confidence": 0.947
+   },
+   {
+    "time": 6.04,
+    "text": "matandolo de hambre:",
+    "confidence": 0.941
+   },
+   {
+    "time": 6.04,
+    "text": "Niell)",
+    "confidence": 0.985
+   },
+   {
+    "time": 6.04,
+    "text": "(Barbara",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.04,
+    "text": "0'",
+    "confidence": 0.965
+   },
+   {
+    "time": 6.04,
+    "text": "El Bicarbonato es",
+    "confidence": 0.992
+   },
+   {
+    "time": 6.04,
+    "text": "bueno",
+    "confidence": 0.625
+   },
+   {
+    "time": 6.04,
+    "text": "El Cancer es un hongo",
+    "confidence": 0.849
+   },
+   {
+    "time": 6.04,
+    "text": "Jugo verde",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.04,
+    "text": "hambre?",
+    "confidence": 0.855
+   },
+   {
+    "time": 8.06,
+    "text": "Come vegetales",
+    "confidence": 0.656
+   },
+   {
+    "time": 8.06,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.954
+   },
+   {
+    "time": 8.06,
+    "text": "Curate del cancer",
+    "confidence": 0.947
+   },
+   {
+    "time": 8.06,
+    "text": "matandolo de hambre:",
+    "confidence": 0.918
+   },
+   {
+    "time": 8.06,
+    "text": "Niell)",
+    "confidence": 0.985
+   },
+   {
+    "time": 8.06,
+    "text": "(Barbara",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.06,
+    "text": "0'",
+    "confidence": 0.963
+   },
+   {
+    "time": 8.06,
+    "text": "El Bicarbonato es",
+    "confidence": 0.993
+   },
+   {
+    "time": 8.06,
+    "text": "bueno",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.06,
+    "text": "EI Cancer es un hongo",
+    "confidence": 0.792
+   },
+   {
+    "time": 8.06,
+    "text": "Jugo verde",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.06,
+    "text": "hambre?",
+    "confidence": 0.854
+   },
+   {
+    "time": 10.07,
+    "text": "Come vegetales",
+    "confidence": 0.893
+   },
+   {
+    "time": 10.07,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.948
+   },
+   {
+    "time": 10.07,
+    "text": "Curate del cancer",
+    "confidence": 0.868
+   },
+   {
+    "time": 10.07,
+    "text": "matandolo de hambre:",
+    "confidence": 0.778
+   },
+   {
+    "time": 10.07,
+    "text": "Niell)",
+    "confidence": 0.983
+   },
+   {
+    "time": 10.07,
+    "text": "(Barbara",
+    "confidence": 0.838
+   },
+   {
+    "time": 10.07,
+    "text": "0'",
+    "confidence": 0.978
+   },
+   {
+    "time": 10.07,
+    "text": "El Bicarbonato es",
+    "confidence": 0.972
+   },
+   {
+    "time": 10.07,
+    "text": "bueno",
+    "confidence": 0.903
+   },
+   {
+    "time": 10.07,
+    "text": "EI Cancer es un hongo",
+    "confidence": 0.841
+   },
+   {
+    "time": 10.07,
+    "text": "Jugo verde",
+    "confidence": 0.683
+   },
+   {
+    "time": 10.07,
+    "text": "Para matarlos debes",
+    "confidence": 0.792
+   },
+   {
+    "time": 10.07,
+    "text": "saber que es l que",
+    "confidence": 0.509
+   },
+   {
+    "time": 10.07,
+    "text": "amay lo que ama es La",
+    "confidence": 0.905
+   },
+   {
+    "time": 10.07,
+    "text": "Glucosa",
+    "confidence": 0.611
+   },
+   {
+    "time": 12.08,
+    "text": "Come vegetales",
+    "confidence": 0.898
+   },
+   {
+    "time": 12.08,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.947
+   },
+   {
+    "time": 12.08,
+    "text": "Curate del cancer",
+    "confidence": 0.859
+   },
+   {
+    "time": 12.08,
+    "text": "matandolo de hambre:",
+    "confidence": 0.841
+   },
+   {
+    "time": 12.08,
+    "text": "Niell)",
+    "confidence": 0.982
+   },
+   {
+    "time": 12.08,
+    "text": "(Barbara",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.08,
+    "text": "0'",
+    "confidence": 0.971
+   },
+   {
+    "time": 12.08,
+    "text": "El Bicarbonato es",
+    "confidence": 0.969
+   },
+   {
+    "time": 12.08,
+    "text": "bueno",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.08,
+    "text": "EI Cancer es un hongo",
+    "confidence": 0.786
+   },
+   {
+    "time": 12.08,
+    "text": "Jugo verde",
+    "confidence": 0.705
+   },
+   {
+    "time": 12.08,
+    "text": "Tktok",
+    "confidence": 0.523
+   },
+   {
+    "time": 12.08,
+    "text": "Para matarlos debes",
+    "confidence": 0.711
+   },
+   {
+    "time": 12.08,
+    "text": "amay loque ama es La",
+    "confidence": 0.628
+   },
+   {
+    "time": 12.08,
+    "text": "Glucosa",
+    "confidence": 0.545
+   },
+   {
+    "time": 14.1,
+    "text": "Come vegetales",
+    "confidence": 0.898
+   },
+   {
+    "time": 14.1,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.947
+   },
+   {
+    "time": 14.1,
+    "text": "Curate del cancer",
+    "confidence": 0.859
+   },
+   {
+    "time": 14.1,
+    "text": "matandolo de hambre:",
+    "confidence": 0.841
+   },
+   {
+    "time": 14.1,
+    "text": "Niell)",
+    "confidence": 0.982
+   },
+   {
+    "time": 14.1,
+    "text": "(Barbara",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.1,
+    "text": "0'",
+    "confidence": 0.97
+   },
+   {
+    "time": 14.1,
+    "text": "El Bicarbonato es",
+    "confidence": 0.969
+   },
+   {
+    "time": 14.1,
+    "text": "bueno",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.1,
+    "text": "EI Cancer es un hongo",
+    "confidence": 0.785
+   },
+   {
+    "time": 14.1,
+    "text": "Jugo verde",
+    "confidence": 0.702
+   },
+   {
+    "time": 14.1,
+    "text": "Tktok",
+    "confidence": 0.523
+   },
+   {
+    "time": 14.1,
+    "text": "Para matarlos debes",
+    "confidence": 0.724
+   },
+   {
+    "time": 14.1,
+    "text": "amay lo que ama es La",
+    "confidence": 0.663
+   },
+   {
+    "time": 14.1,
+    "text": "Glucosa",
+    "confidence": 0.55
+   },
+   {
+    "time": 16.11,
+    "text": "Come vegetales",
+    "confidence": 0.901
+   },
+   {
+    "time": 16.11,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.938
+   },
+   {
+    "time": 16.11,
+    "text": "Curate del cancer",
+    "confidence": 0.997
+   },
+   {
+    "time": 16.11,
+    "text": "matandolo de hambre:",
+    "confidence": 0.742
+   },
+   {
+    "time": 16.11,
+    "text": "Niell)",
+    "confidence": 0.989
+   },
+   {
+    "time": 16.11,
+    "text": "(Barbara",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.11,
+    "text": "0'",
+    "confidence": 0.968
+   },
+   {
+    "time": 16.11,
+    "text": "El Bicarbonato es",
+    "confidence": 0.873
+   },
+   {
+    "time": 16.11,
+    "text": "bueno",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.11,
+    "text": "EI Cancer es un hongo",
+    "confidence": 0.672
+   },
+   {
+    "time": 16.11,
+    "text": "Jugo verde",
+    "confidence": 0.842
+   },
+   {
+    "time": 16.11,
+    "text": "Asi que sugerimos 6",
+    "confidence": 0.846
+   },
+   {
+    "time": 16.11,
+    "text": "semanas sin azucar; sin",
+    "confidence": 0.811
+   },
+   {
+    "time": 16.11,
+    "text": "miel, sin nada de dulce",
+    "confidence": 0.779
+   },
+   {
+    "time": 16.11,
+    "text": "en absoluto:",
+    "confidence": 0.674
+   },
+   {
+    "time": 18.13,
+    "text": "Come vegetales",
+    "confidence": 0.901
+   },
+   {
+    "time": 18.13,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.939
+   },
+   {
+    "time": 18.13,
+    "text": "Curate del cancer",
+    "confidence": 0.997
+   },
+   {
+    "time": 18.13,
+    "text": "matandolo de hambre:",
+    "confidence": 0.742
+   },
+   {
+    "time": 18.13,
+    "text": "Niell)",
+    "confidence": 0.989
+   },
+   {
+    "time": 18.13,
+    "text": "(Barbara",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.13,
+    "text": "0'",
+    "confidence": 0.968
+   },
+   {
+    "time": 18.13,
+    "text": "El Bicarbonato es",
+    "confidence": 0.871
+   },
+   {
+    "time": 18.13,
+    "text": "bueno",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.13,
+    "text": "EI Cancer es un hongo",
+    "confidence": 0.667
+   },
+   {
+    "time": 18.13,
+    "text": "Jugo verde",
+    "confidence": 0.842
+   },
+   {
+    "time": 18.13,
+    "text": "Asi que sugerimos 6",
+    "confidence": 0.84
+   },
+   {
+    "time": 18.13,
+    "text": "semanas sin azucar; sin",
+    "confidence": 0.812
+   },
+   {
+    "time": 18.13,
+    "text": "miel, sin nada de dulce",
+    "confidence": 0.567
+   },
+   {
+    "time": 18.13,
+    "text": "en absoluto:",
+    "confidence": 0.674
+   },
+   {
+    "time": 20.14,
+    "text": "Come vegetales",
+    "confidence": 0.921
+   },
+   {
+    "time": 20.14,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.934
+   },
+   {
+    "time": 20.14,
+    "text": "Curate del cancer",
+    "confidence": 0.992
+   },
+   {
+    "time": 20.14,
+    "text": "matandolo de hambre:",
+    "confidence": 0.808
+   },
+   {
+    "time": 20.14,
+    "text": "Niell)",
+    "confidence": 0.99
+   },
+   {
+    "time": 20.14,
+    "text": "(Barbara",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.14,
+    "text": "El Bicarbonato es",
+    "confidence": 0.976
+   },
+   {
+    "time": 20.14,
+    "text": "bueno",
+    "confidence": 0.639
+   },
+   {
+    "time": 20.14,
+    "text": "EI Cancer es un hongo",
+    "confidence": 0.836
+   },
+   {
+    "time": 20.14,
+    "text": "Jugo verde",
+    "confidence": 0.755
+   },
+   {
+    "time": 20.14,
+    "text": "ktok",
+    "confidence": 0.635
+   },
+   {
+    "time": 20.14,
+    "text": "Asi que sugerimos 6",
+    "confidence": 0.774
+   },
+   {
+    "time": 20.14,
+    "text": "semanas sin azucar; sin",
+    "confidence": 0.708
+   },
+   {
+    "time": 20.14,
+    "text": "en absolutos",
+    "confidence": 0.54
+   },
+   {
+    "time": 22.15,
+    "text": "Come vegetales",
+    "confidence": 0.935
+   },
+   {
+    "time": 22.15,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.796
+   },
+   {
+    "time": 22.15,
+    "text": "Curate del cancer",
+    "confidence": 0.845
+   },
+   {
+    "time": 22.15,
+    "text": "matandolo de hambre:",
+    "confidence": 0.827
+   },
+   {
+    "time": 22.15,
+    "text": "Niell)",
+    "confidence": 0.991
+   },
+   {
+    "time": 22.15,
+    "text": "(Barbara",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.15,
+    "text": "El Bicarbonato es",
+    "confidence": 0.979
+   },
+   {
+    "time": 22.15,
+    "text": "bueno",
+    "confidence": 0.941
+   },
+   {
+    "time": 22.15,
+    "text": "EI Cancer es un hongo",
+    "confidence": 0.829
+   },
+   {
+    "time": 22.15,
+    "text": "Jugo verde",
+    "confidence": 0.766
+   },
+   {
+    "time": 22.15,
+    "text": "ktok",
+    "confidence": 0.713
+   },
+   {
+    "time": 22.15,
+    "text": "Existen muchos",
+    "confidence": 0.868
+   },
+   {
+    "time": 22.15,
+    "text": "vegetales; muchas",
+    "confidence": 0.714
+   },
+   {
+    "time": 22.15,
+    "text": "legumbres;",
+    "confidence": 0.973
+   },
+   {
+    "time": 24.17,
+    "text": "Come vegetales",
+    "confidence": 0.955
+   },
+   {
+    "time": 24.17,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.812
+   },
+   {
+    "time": 24.17,
+    "text": "Curate del cancer",
+    "confidence": 0.964
+   },
+   {
+    "time": 24.17,
+    "text": "matandolo de hambre:",
+    "confidence": 0.819
+   },
+   {
+    "time": 24.17,
+    "text": "Niell)",
+    "confidence": 0.99
+   },
+   {
+    "time": 24.17,
+    "text": "(Barbara",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.17,
+    "text": "El Bicarbonato es",
+    "confidence": 0.979
+   },
+   {
+    "time": 24.17,
+    "text": "bueno",
+    "confidence": 0.989
+   },
+   {
+    "time": 24.17,
+    "text": "EI Cancer es un hongo",
+    "confidence": 0.825
+   },
+   {
+    "time": 24.17,
+    "text": "Jugo verde",
+    "confidence": 0.767
+   },
+   {
+    "time": 24.17,
+    "text": "Existen muchos",
+    "confidence": 0.878
+   },
+   {
+    "time": 24.17,
+    "text": "vegetales; muchas",
+    "confidence": 0.702
+   },
+   {
+    "time": 24.17,
+    "text": "legumbres;",
+    "confidence": 0.976
+   },
+   {
+    "time": 26.18,
+    "text": "Come vegetales",
+    "confidence": 0.964
+   },
+   {
+    "time": 26.18,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.858
+   },
+   {
+    "time": 26.18,
+    "text": "Curate del cancer",
+    "confidence": 0.988
+   },
+   {
+    "time": 26.18,
+    "text": "matandolo de hambre:",
+    "confidence": 0.845
+   },
+   {
+    "time": 26.18,
+    "text": "Niell)",
+    "confidence": 0.993
+   },
+   {
+    "time": 26.18,
+    "text": "(Barbara",
+    "confidence": 0.926
+   },
+   {
+    "time": 26.18,
+    "text": "0'",
+    "confidence": 0.97
+   },
+   {
+    "time": 26.18,
+    "text": "El Bicarbonato es",
+    "confidence": 0.9
+   },
+   {
+    "time": 26.18,
+    "text": "bueno",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.18,
+    "text": "El Cancer es un hongo",
+    "confidence": 0.513
+   },
+   {
+    "time": 26.18,
+    "text": "Jugo verde",
+    "confidence": 0.786
+   },
+   {
+    "time": 26.18,
+    "text": "Existen muchos",
+    "confidence": 0.851
+   },
+   {
+    "time": 26.18,
+    "text": "vegetales; muchas",
+    "confidence": 0.645
+   },
+   {
+    "time": 26.18,
+    "text": "legumbres;",
+    "confidence": 0.979
+   },
+   {
+    "time": 28.2,
+    "text": "Come vegetales",
+    "confidence": 0.964
+   },
+   {
+    "time": 28.2,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.858
+   },
+   {
+    "time": 28.2,
+    "text": "Curate del cancer",
+    "confidence": 0.988
+   },
+   {
+    "time": 28.2,
+    "text": "matandolo de hambre:",
+    "confidence": 0.845
+   },
+   {
+    "time": 28.2,
+    "text": "Niell)",
+    "confidence": 0.993
+   },
+   {
+    "time": 28.2,
+    "text": "(Barbara",
+    "confidence": 0.923
+   },
+   {
+    "time": 28.2,
+    "text": "0'",
+    "confidence": 0.968
+   },
+   {
+    "time": 28.2,
+    "text": "El Bicarbonato es",
+    "confidence": 0.9
+   },
+   {
+    "time": 28.2,
+    "text": "bueno",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.2,
+    "text": "El Cancer es un hongo",
+    "confidence": 0.516
+   },
+   {
+    "time": 28.2,
+    "text": "Jugo verde",
+    "confidence": 0.787
+   },
+   {
+    "time": 28.2,
+    "text": "Hay",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.2,
+    "text": "muchas nueces;",
+    "confidence": 0.712
+   },
+   {
+    "time": 28.2,
+    "text": "muchas semillass",
+    "confidence": 0.72
+   },
+   {
+    "time": 28.2,
+    "text": "Asi que puedes tener",
+    "confidence": 0.994
+   },
+   {
+    "time": 28.2,
+    "text": "una bella variedad:",
+    "confidence": 0.524
+   },
+   {
+    "time": 30.21,
+    "text": "Come vegetales",
+    "confidence": 0.964
+   },
+   {
+    "time": 30.21,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.849
+   },
+   {
+    "time": 30.21,
+    "text": "Curate del cancer",
+    "confidence": 0.997
+   },
+   {
+    "time": 30.21,
+    "text": "matandolo de hambre.",
+    "confidence": 0.756
+   },
+   {
+    "time": 30.21,
+    "text": "Niell)",
+    "confidence": 0.993
+   },
+   {
+    "time": 30.21,
+    "text": "(Barbara",
+    "confidence": 0.838
+   },
+   {
+    "time": 30.21,
+    "text": "0'",
+    "confidence": 0.975
+   },
+   {
+    "time": 30.21,
+    "text": "El Bicarbonato es",
+    "confidence": 0.977
+   },
+   {
+    "time": 30.21,
+    "text": "bueno",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.21,
+    "text": "El Cancer es un hongo",
+    "confidence": 0.579
+   },
+   {
+    "time": 30.21,
+    "text": "Jugo verde",
+    "confidence": 0.765
+   },
+   {
+    "time": 30.21,
+    "text": "Tktok",
+    "confidence": 0.525
+   },
+   {
+    "time": 30.21,
+    "text": "Hay",
+    "confidence": 0.623
+   },
+   {
+    "time": 30.21,
+    "text": "muchas nueces;",
+    "confidence": 0.739
+   },
+   {
+    "time": 30.21,
+    "text": "muchas semillas:",
+    "confidence": 0.647
+   },
+   {
+    "time": 30.21,
+    "text": "Asi que puedes tener",
+    "confidence": 0.863
+   },
+   {
+    "time": 30.21,
+    "text": "una bella variedad:",
+    "confidence": 0.553
+   },
+   {
+    "time": 32.22,
+    "text": "Come vegetales",
+    "confidence": 0.956
+   },
+   {
+    "time": 32.22,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.787
+   },
+   {
+    "time": 32.22,
+    "text": "Curate del cancer",
+    "confidence": 0.832
+   },
+   {
+    "time": 32.22,
+    "text": "matandolo de hambre:",
+    "confidence": 0.847
+   },
+   {
+    "time": 32.22,
+    "text": "Niell)",
+    "confidence": 0.994
+   },
+   {
+    "time": 32.22,
+    "text": "(Barbara",
+    "confidence": 0.722
+   },
+   {
+    "time": 32.22,
+    "text": "0'",
+    "confidence": 0.987
+   },
+   {
+    "time": 32.22,
+    "text": "El Bicarbonato es",
+    "confidence": 0.978
+   },
+   {
+    "time": 32.22,
+    "text": "bueno",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.22,
+    "text": "El Cancer es un hongo",
+    "confidence": 0.524
+   },
+   {
+    "time": 32.22,
+    "text": "Jugo verde",
+    "confidence": 0.734
+   },
+   {
+    "time": 32.22,
+    "text": "Hay",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.22,
+    "text": "muchas nueces;",
+    "confidence": 0.712
+   },
+   {
+    "time": 32.22,
+    "text": "muchas semillas:",
+    "confidence": 0.647
+   },
+   {
+    "time": 32.22,
+    "text": "Asi que puedes tener",
+    "confidence": 0.927
+   },
+   {
+    "time": 32.22,
+    "text": "una bella variedad:",
+    "confidence": 0.615
+   },
+   {
+    "time": 34.24,
+    "text": "Come vegetales",
+    "confidence": 0.98
+   },
+   {
+    "time": 34.24,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.912
+   },
+   {
+    "time": 34.24,
+    "text": "Curate del cancer",
+    "confidence": 0.972
+   },
+   {
+    "time": 34.24,
+    "text": "matandolo de hambre.",
+    "confidence": 0.732
+   },
+   {
+    "time": 34.24,
+    "text": "Niell)",
+    "confidence": 0.993
+   },
+   {
+    "time": 34.24,
+    "text": "(Barbara",
+    "confidence": 0.738
+   },
+   {
+    "time": 34.24,
+    "text": "0'",
+    "confidence": 0.984
+   },
+   {
+    "time": 34.24,
+    "text": "El Bicarbonato es",
+    "confidence": 0.908
+   },
+   {
+    "time": 34.24,
+    "text": "bueno",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.24,
+    "text": "El Cancer es un hongo",
+    "confidence": 0.552
+   },
+   {
+    "time": 34.24,
+    "text": "Jugo verde",
+    "confidence": 0.74
+   },
+   {
+    "time": 34.24,
+    "text": "Tktok",
+    "confidence": 0.537
+   },
+   {
+    "time": 34.24,
+    "text": "Algunas personas han",
+    "confidence": 0.891
+   },
+   {
+    "time": 34.24,
+    "text": "Ilegado a nosotrosy",
+    "confidence": 0.762
+   },
+   {
+    "time": 34.24,
+    "text": "han decidido hacer?",
+    "confidence": 0.876
+   },
+   {
+    "time": 36.25,
+    "text": "Come vegetales",
+    "confidence": 0.674
+   },
+   {
+    "time": 36.25,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.941
+   },
+   {
+    "time": 36.25,
+    "text": "Curate del cancer",
+    "confidence": 0.717
+   },
+   {
+    "time": 36.25,
+    "text": "matandolo de hambre:",
+    "confidence": 0.763
+   },
+   {
+    "time": 36.25,
+    "text": "Niell)",
+    "confidence": 0.993
+   },
+   {
+    "time": 36.25,
+    "text": "(Barbara",
+    "confidence": 0.807
+   },
+   {
+    "time": 36.25,
+    "text": "0'",
+    "confidence": 0.972
+   },
+   {
+    "time": 36.25,
+    "text": "El Bicarbonato es",
+    "confidence": 0.976
+   },
+   {
+    "time": 36.25,
+    "text": "bueno",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.25,
+    "text": "EI Cancer es un hongo",
+    "confidence": 0.79
+   },
+   {
+    "time": 36.25,
+    "text": "Jugo verde",
+    "confidence": 0.756
+   },
+   {
+    "time": 36.25,
+    "text": "Algunas personas han",
+    "confidence": 0.938
+   },
+   {
+    "time": 36.25,
+    "text": "Ilegado a nosotrosy",
+    "confidence": 0.97
+   },
+   {
+    "time": 36.25,
+    "text": "han decidido hacer?",
+    "confidence": 0.641
+   },
+   {
+    "time": 38.27,
+    "text": "Come vegetales",
+    "confidence": 0.682
+   },
+   {
+    "time": 38.27,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.939
+   },
+   {
+    "time": 38.27,
+    "text": "Curate del cancer",
+    "confidence": 0.992
+   },
+   {
+    "time": 38.27,
+    "text": "matandolo de hambre:",
+    "confidence": 0.762
+   },
+   {
+    "time": 38.27,
+    "text": "Niell)",
+    "confidence": 0.993
+   },
+   {
+    "time": 38.27,
+    "text": "(Barbara",
+    "confidence": 0.807
+   },
+   {
+    "time": 38.27,
+    "text": "0'",
+    "confidence": 0.972
+   },
+   {
+    "time": 38.27,
+    "text": "El Bicarbonato es",
+    "confidence": 0.975
+   },
+   {
+    "time": 38.27,
+    "text": "bueno",
+    "confidence": 0.865
+   },
+   {
+    "time": 38.27,
+    "text": "EI Cancer es un hongo",
+    "confidence": 0.789
+   },
+   {
+    "time": 38.27,
+    "text": "Jugo verde",
+    "confidence": 0.754
+   },
+   {
+    "time": 38.27,
+    "text": "1 Lunes: Dia de comer",
+    "confidence": 0.78
+   },
+   {
+    "time": 38.27,
+    "text": "Ftijol ancho (tambien",
+    "confidence": 0.807
+   },
+   {
+    "time": 38.27,
+    "text": "Ilamado judia de Lima;",
+    "confidence": 0.727
+   },
+   {
+    "time": 38.27,
+    "text": "pallat; caratua)",
+    "confidence": 0.75
+   },
+   {
+    "time": 38.27,
+    "text": "TikTok",
+    "confidence": 0.995
+   },
+   {
+    "time": 40.28,
+    "text": "Come vegetales",
+    "confidence": 0.918
+   },
+   {
+    "time": 40.28,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.946
+   },
+   {
+    "time": 40.28,
+    "text": "Curate del cancer",
+    "confidence": 0.854
+   },
+   {
+    "time": 40.28,
+    "text": "matandolo de hambre:",
+    "confidence": 0.931
+   },
+   {
+    "time": 40.28,
+    "text": "Niell)",
+    "confidence": 0.99
+   },
+   {
+    "time": 40.28,
+    "text": "(Barbara",
+    "confidence": 0.998
+   },
+   {
+    "time": 40.28,
+    "text": "0'",
+    "confidence": 0.949
+   },
+   {
+    "time": 40.28,
+    "text": "El Bicarbonato es",
+    "confidence": 0.678
+   },
+   {
+    "time": 40.28,
+    "text": "bueno",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.28,
+    "text": "El Cancer es un hongo",
+    "confidence": 0.636
+   },
+   {
+    "time": 40.28,
+    "text": "Jugo verde",
+    "confidence": 0.88
+   },
+   {
+    "time": 40.28,
+    "text": "comer lentejas",
+    "confidence": 0.987
+   },
+   {
+    "time": 40.28,
+    "text": "(tambien Ilamadas",
+    "confidence": 0.537
+   },
+   {
+    "time": 40.28,
+    "text": "habichuelas @",
+    "confidence": 0.952
+   },
+   {
+    "time": 40.28,
+    "text": "garbanzos)",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.28,
+    "text": "TikTok",
+    "confidence": 0.996
+   },
+   {
+    "time": 42.29,
+    "text": "Come vegetales",
+    "confidence": 0.889
+   },
+   {
+    "time": 42.29,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.737
+   },
+   {
+    "time": 42.29,
+    "text": "Curate del cancer",
+    "confidence": 0.996
+   },
+   {
+    "time": 42.29,
+    "text": "matandolo de hambre:",
+    "confidence": 0.682
+   },
+   {
+    "time": 42.29,
+    "text": "Niell)",
+    "confidence": 0.991
+   },
+   {
+    "time": 42.29,
+    "text": "(Barbara",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.29,
+    "text": "0'",
+    "confidence": 0.953
+   },
+   {
+    "time": 42.29,
+    "text": "El Bicarbonato es",
+    "confidence": 0.679
+   },
+   {
+    "time": 42.29,
+    "text": "bueno",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.29,
+    "text": "EI Cancer es un hongo",
+    "confidence": 0.825
+   },
+   {
+    "time": 42.29,
+    "text": "Jugo verde",
+    "confidence": 0.891
+   },
+   {
+    "time": 42.29,
+    "text": "3 Miercoles: Dia de",
+    "confidence": 0.592
+   },
+   {
+    "time": 42.29,
+    "text": "comer tofu (Queso de",
+    "confidence": 0.74
+   },
+   {
+    "time": 42.29,
+    "text": "Soja, derivados de la",
+    "confidence": 0.71
+   },
+   {
+    "time": 42.29,
+    "text": "soja, soya):",
+    "confidence": 0.918
+   },
+   {
+    "time": 42.29,
+    "text": "TikTok",
+    "confidence": 0.996
+   },
+   {
+    "time": 44.31,
+    "text": "Come vegetales",
+    "confidence": 0.914
+   },
+   {
+    "time": 44.31,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.945
+   },
+   {
+    "time": 44.31,
+    "text": "Curate del cancer",
+    "confidence": 0.839
+   },
+   {
+    "time": 44.31,
+    "text": "matandolo de hambre:",
+    "confidence": 0.688
+   },
+   {
+    "time": 44.31,
+    "text": "0 'Niell)",
+    "confidence": 0.702
+   },
+   {
+    "time": 44.31,
+    "text": "(Barbara",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.31,
+    "text": "El Bicarbonato es",
+    "confidence": 0.678
+   },
+   {
+    "time": 44.31,
+    "text": "bueno",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.31,
+    "text": "El Cancer es un hongo",
+    "confidence": 0.559
+   },
+   {
+    "time": 44.31,
+    "text": "Jugo verde",
+    "confidence": 0.988
+   },
+   {
+    "time": 44.31,
+    "text": "3 Miercoles: Dia de",
+    "confidence": 0.592
+   },
+   {
+    "time": 44.31,
+    "text": "comer tofu (Queso de",
+    "confidence": 0.984
+   },
+   {
+    "time": 44.31,
+    "text": "Soja, derivados de la",
+    "confidence": 0.725
+   },
+   {
+    "time": 44.31,
+    "text": "soja, soya):",
+    "confidence": 0.928
+   },
+   {
+    "time": 44.31,
+    "text": "TikTok",
+    "confidence": 0.996
+   },
+   {
+    "time": 46.32,
+    "text": "Come vegetales",
+    "confidence": 0.768
+   },
+   {
+    "time": 46.32,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.78
+   },
+   {
+    "time": 46.32,
+    "text": "Curate del cancer",
+    "confidence": 0.996
+   },
+   {
+    "time": 46.32,
+    "text": "matandolo de hambre:",
+    "confidence": 0.818
+   },
+   {
+    "time": 46.32,
+    "text": "Niell)",
+    "confidence": 0.991
+   },
+   {
+    "time": 46.32,
+    "text": "(Barbara",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.32,
+    "text": "0'",
+    "confidence": 0.961
+   },
+   {
+    "time": 46.32,
+    "text": "El Bicarbonato es",
+    "confidence": 0.975
+   },
+   {
+    "time": 46.32,
+    "text": "bueno",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.32,
+    "text": "El Cancer es un hongo",
+    "confidence": 0.551
+   },
+   {
+    "time": 46.32,
+    "text": "Jugo verde",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.32,
+    "text": "43 Jueves: Dia de",
+    "confidence": 0.509
+   },
+   {
+    "time": 46.32,
+    "text": "comer ftijoles negros",
+    "confidence": 0.986
+   },
+   {
+    "time": 46.32,
+    "text": "(Alubia Black-eyed, @jo",
+    "confidence": 0.608
+   },
+   {
+    "time": 46.32,
+    "text": "TikTok",
+    "confidence": 0.996
+   },
+   {
+    "time": 48.34,
+    "text": "Come vegetales",
+    "confidence": 0.778
+   },
+   {
+    "time": 48.34,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.788
+   },
+   {
+    "time": 48.34,
+    "text": "Curate del cancer",
+    "confidence": 0.941
+   },
+   {
+    "time": 48.34,
+    "text": "matandolo de hambre:",
+    "confidence": 0.816
+   },
+   {
+    "time": 48.34,
+    "text": "Niell)",
+    "confidence": 0.99
+   },
+   {
+    "time": 48.34,
+    "text": "(Barbara",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.34,
+    "text": "0'",
+    "confidence": 0.963
+   },
+   {
+    "time": 48.34,
+    "text": "El Bicarbonato es",
+    "confidence": 0.989
+   },
+   {
+    "time": 48.34,
+    "text": "bueno",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.34,
+    "text": "El Cancer es un hongo",
+    "confidence": 0.901
+   },
+   {
+    "time": 48.34,
+    "text": "Jugo verde",
+    "confidence": 0.845
+   },
+   {
+    "time": 48.34,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 50.35,
+    "text": "Come vegetales",
+    "confidence": 0.775
+   },
+   {
+    "time": 50.35,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.887
+   },
+   {
+    "time": 50.35,
+    "text": "Curate del cancer",
+    "confidence": 0.943
+   },
+   {
+    "time": 50.35,
+    "text": "matandolo de hambre:",
+    "confidence": 0.802
+   },
+   {
+    "time": 50.35,
+    "text": "Niell)",
+    "confidence": 0.992
+   },
+   {
+    "time": 50.35,
+    "text": "(Barbara",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.35,
+    "text": "0'",
+    "confidence": 0.959
+   },
+   {
+    "time": 50.35,
+    "text": "El Bicarbonato es",
+    "confidence": 0.967
+   },
+   {
+    "time": 50.35,
+    "text": "bueno",
+    "confidence": 0.879
+   },
+   {
+    "time": 50.35,
+    "text": "El Cancer es un hongo",
+    "confidence": 0.539
+   },
+   {
+    "time": 50.35,
+    "text": "Jugo verde",
+    "confidence": 0.831
+   },
+   {
+    "time": 50.35,
+    "text": "iHay tantos que",
+    "confidence": 0.749
+   },
+   {
+    "time": 50.35,
+    "text": "puedes tener una",
+    "confidence": 0.91
+   },
+   {
+    "time": 50.35,
+    "text": "diferente cada dial",
+    "confidence": 0.978
+   },
+   {
+    "time": 50.35,
+    "text": "TikTok",
+    "confidence": 0.996
+   },
+   {
+    "time": 52.36,
+    "text": "Come vegetales",
+    "confidence": 0.801
+   },
+   {
+    "time": 52.36,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.905
+   },
+   {
+    "time": 52.36,
+    "text": "Curate del cancer",
+    "confidence": 0.998
+   },
+   {
+    "time": 52.36,
+    "text": "matandolo de hambre:",
+    "confidence": 0.783
+   },
+   {
+    "time": 52.36,
+    "text": "Niell)",
+    "confidence": 0.992
+   },
+   {
+    "time": 52.36,
+    "text": "(Barbara",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.36,
+    "text": "0'",
+    "confidence": 0.965
+   },
+   {
+    "time": 52.36,
+    "text": "El Bicarbonato es",
+    "confidence": 0.968
+   },
+   {
+    "time": 52.36,
+    "text": "bueno",
+    "confidence": 0.999
+   },
+   {
+    "time": 52.36,
+    "text": "El Cancer es un hongo",
+    "confidence": 0.539
+   },
+   {
+    "time": 52.36,
+    "text": "Jugo verde",
+    "confidence": 0.822
+   },
+   {
+    "time": 52.36,
+    "text": "iHay tantos que",
+    "confidence": 0.686
+   },
+   {
+    "time": 52.36,
+    "text": "puedes tener una",
+    "confidence": 0.76
+   },
+   {
+    "time": 52.36,
+    "text": "diferente cada dial",
+    "confidence": 0.741
+   },
+   {
+    "time": 52.36,
+    "text": "TikTok",
+    "confidence": 0.996
+   },
+   {
+    "time": 54.38,
+    "text": "Come vegetales",
+    "confidence": 0.646
+   },
+   {
+    "time": 54.38,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.912
+   },
+   {
+    "time": 54.38,
+    "text": "Curate del cancer",
+    "confidence": 0.952
+   },
+   {
+    "time": 54.38,
+    "text": "matandolo de hambre:",
+    "confidence": 0.761
+   },
+   {
+    "time": 54.38,
+    "text": "Niell)",
+    "confidence": 0.992
+   },
+   {
+    "time": 54.38,
+    "text": "(Barbara",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.38,
+    "text": "0'",
+    "confidence": 0.969
+   },
+   {
+    "time": 54.38,
+    "text": "El Bicarbonato es",
+    "confidence": 0.968
+   },
+   {
+    "time": 54.38,
+    "text": "bueno",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.38,
+    "text": "EI Cancer es un hongo",
+    "confidence": 0.639
+   },
+   {
+    "time": 54.38,
+    "text": "Jugo verde",
+    "confidence": 0.814
+   },
+   {
+    "time": 54.38,
+    "text": "iTantos vegetales",
+    "confidence": 0.516
+   },
+   {
+    "time": 54.38,
+    "text": "diferentesl",
+    "confidence": 0.709
+   },
+   {
+    "time": 54.38,
+    "text": "TikTok",
+    "confidence": 0.996
+   },
+   {
+    "time": 56.39,
+    "text": "Come vegetales",
+    "confidence": 0.775
+   },
+   {
+    "time": 56.39,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.934
+   },
+   {
+    "time": 56.39,
+    "text": "Curate del cancer",
+    "confidence": 0.847
+   },
+   {
+    "time": 56.39,
+    "text": "matandolo de hambre:",
+    "confidence": 0.794
+   },
+   {
+    "time": 56.39,
+    "text": "Niell)",
+    "confidence": 0.99
+   },
+   {
+    "time": 56.39,
+    "text": "(Barbara",
+    "confidence": 0.966
+   },
+   {
+    "time": 56.39,
+    "text": "0'",
+    "confidence": 0.967
+   },
+   {
+    "time": 56.39,
+    "text": "El Bicarbonato es",
+    "confidence": 0.97
+   },
+   {
+    "time": 56.39,
+    "text": "bueno",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.39,
+    "text": "El Cancer es un hongo",
+    "confidence": 0.845
+   },
+   {
+    "time": 56.39,
+    "text": "Jugo verde",
+    "confidence": 0.803
+   },
+   {
+    "time": 56.39,
+    "text": "Tambien debes revisar",
+    "confidence": 0.866
+   },
+   {
+    "time": 56.39,
+    "text": "tu casa para ver que n@",
+    "confidence": 0.521
+   },
+   {
+    "time": 56.39,
+    "text": "tenga contaminacion",
+    "confidence": 0.992
+   },
+   {
+    "time": 56.39,
+    "text": "con Mohos",
+    "confidence": 0.951
+   },
+   {
+    "time": 56.39,
+    "text": "(Vinagre y Bicarbonato",
+    "confidence": 0.752
+   },
+   {
+    "time": 56.39,
+    "text": "ayudan mucho)",
+    "confidence": 0.998
+   },
+   {
+    "time": 56.39,
+    "text": "TikTok",
+    "confidence": 0.996
+   },
+   {
+    "time": 58.41,
+    "text": "Come vegetales",
+    "confidence": 0.775
+   },
+   {
+    "time": 58.41,
+    "text": "Alcaliniza tu cuerpo",
+    "confidence": 0.936
+   },
+   {
+    "time": 58.41,
+    "text": "Curate del cancer",
+    "confidence": 0.848
+   },
+   {
+    "time": 58.41,
+    "text": "matandolo de hambre:",
+    "confidence": 0.794
+   },
+   {
+    "time": 58.41,
+    "text": "Niell)",
+    "confidence": 0.99
+   },
+   {
+    "time": 58.41,
+    "text": "(Barbara",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.41,
+    "text": "0'",
+    "confidence": 0.966
+   },
+   {
+    "time": 58.41,
+    "text": "El Bicarbonato es",
+    "confidence": 0.971
+   },
+   {
+    "time": 58.41,
+    "text": "bueno",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.41,
+    "text": "El Cancer es un hongo",
+    "confidence": 0.55
+   },
+   {
+    "time": 58.41,
+    "text": "Jugo verde",
+    "confidence": 0.804
+   },
+   {
+    "time": 58.41,
+    "text": "Tambien debes revisar",
+    "confidence": 0.829
+   },
+   {
+    "time": 58.41,
+    "text": "tu casa para ver que n@",
+    "confidence": 0.684
+   },
+   {
+    "time": 58.41,
+    "text": "tenga contaminacion",
+    "confidence": 0.991
+   },
+   {
+    "time": 58.41,
+    "text": "con Mohos",
+    "confidence": 0.92
+   },
+   {
+    "time": 58.41,
+    "text": "(Vinagre y Bicarbonato",
+    "confidence": 0.781
+   },
+   {
+    "time": 58.41,
+    "text": "ayudan mucho)",
+    "confidence": 0.998
+   },
+   {
+    "time": 58.41,
+    "text": "TikTok",
+    "confidence": 0.996
+   }
+  ],
+  "captions": [
+   {
+    "text": "Come vegetales",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.733,
+    "id": "o1"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.819,
+    "id": "o2"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.721,
+    "id": "o3"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.905,
+    "id": "o4"
+   },
+   {
+    "text": "0 'Niell)",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.665,
+    "id": "o5"
+   },
+   {
+    "text": "(Barbara",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o6"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.986,
+    "id": "o7"
+   },
+   {
+    "text": "bueno",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.87,
+    "id": "o8"
+   },
+   {
+    "text": "El Cancer es un hongo",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.637,
+    "id": "o9"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o10"
+   },
+   {
+    "text": "ktok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.777,
+    "id": "o11"
+   },
+   {
+    "text": "Vamos a matar de",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.852,
+    "id": "o12"
+   },
+   {
+    "text": "Hambre al Cancer",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.986,
+    "id": "o13"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 2.01,
+    "end": 2.01,
+    "confidence": 0.737,
+    "id": "o14"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 2.01,
+    "end": 2.01,
+    "confidence": 0.836,
+    "id": "o15"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 2.01,
+    "end": 2.01,
+    "confidence": 0.843,
+    "id": "o16"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 2.01,
+    "end": 2.01,
+    "confidence": 0.91,
+    "id": "o17"
+   },
+   {
+    "text": "Niell)",
+    "start": 2.01,
+    "end": 2.01,
+    "confidence": 0.989,
+    "id": "o18"
+   },
+   {
+    "text": "(Barbara",
+    "start": 2.01,
+    "end": 2.01,
+    "confidence": 1.0,
+    "id": "o19"
+   },
+   {
+    "text": "0'",
+    "start": 2.01,
+    "end": 2.01,
+    "confidence": 0.967,
+    "id": "o20"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 2.01,
+    "end": 2.01,
+    "confidence": 0.982,
+    "id": "o21"
+   },
+   {
+    "text": "bueno",
+    "start": 2.01,
+    "end": 2.01,
+    "confidence": 0.724,
+    "id": "o22"
+   },
+   {
+    "text": "El Cancer es un hongo",
+    "start": 2.01,
+    "end": 2.01,
+    "confidence": 0.769,
+    "id": "o23"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 2.01,
+    "end": 2.01,
+    "confidence": 0.71,
+    "id": "o24"
+   },
+   {
+    "text": "ktok",
+    "start": 2.01,
+    "end": 2.01,
+    "confidence": 0.814,
+    "id": "o25"
+   },
+   {
+    "text": "Vamos a matar de",
+    "start": 2.01,
+    "end": 2.01,
+    "confidence": 0.9,
+    "id": "o26"
+   },
+   {
+    "text": "Hambre al Cancer",
+    "start": 2.01,
+    "end": 2.01,
+    "confidence": 0.979,
+    "id": "o27"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 4.03,
+    "end": 4.03,
+    "confidence": 0.741,
+    "id": "o28"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 4.03,
+    "end": 4.03,
+    "confidence": 0.836,
+    "id": "o29"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 4.03,
+    "end": 4.03,
+    "confidence": 0.844,
+    "id": "o30"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 4.03,
+    "end": 4.03,
+    "confidence": 0.909,
+    "id": "o31"
+   },
+   {
+    "text": "Niell)",
+    "start": 4.03,
+    "end": 4.03,
+    "confidence": 0.989,
+    "id": "o32"
+   },
+   {
+    "text": "(Barbara",
+    "start": 4.03,
+    "end": 4.03,
+    "confidence": 1.0,
+    "id": "o33"
+   },
+   {
+    "text": "0'",
+    "start": 4.03,
+    "end": 4.03,
+    "confidence": 0.969,
+    "id": "o34"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 4.03,
+    "end": 4.03,
+    "confidence": 0.98,
+    "id": "o35"
+   },
+   {
+    "text": "bueno",
+    "start": 4.03,
+    "end": 4.03,
+    "confidence": 0.894,
+    "id": "o36"
+   },
+   {
+    "text": "El Cancer es un hongo",
+    "start": 4.03,
+    "end": 4.03,
+    "confidence": 0.802,
+    "id": "o37"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 4.03,
+    "end": 4.03,
+    "confidence": 0.708,
+    "id": "o38"
+   },
+   {
+    "text": "ktok",
+    "start": 4.03,
+    "end": 4.03,
+    "confidence": 0.835,
+    "id": "o39"
+   },
+   {
+    "text": "Vamos a matar de",
+    "start": 4.03,
+    "end": 4.03,
+    "confidence": 0.888,
+    "id": "o40"
+   },
+   {
+    "text": "Hambre al Cancer",
+    "start": 4.03,
+    "end": 4.03,
+    "confidence": 0.979,
+    "id": "o41"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 6.04,
+    "end": 6.04,
+    "confidence": 0.656,
+    "id": "o42"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 6.04,
+    "end": 6.04,
+    "confidence": 0.954,
+    "id": "o43"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 6.04,
+    "end": 6.04,
+    "confidence": 0.947,
+    "id": "o44"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 6.04,
+    "end": 6.04,
+    "confidence": 0.941,
+    "id": "o45"
+   },
+   {
+    "text": "Niell)",
+    "start": 6.04,
+    "end": 6.04,
+    "confidence": 0.985,
+    "id": "o46"
+   },
+   {
+    "text": "(Barbara",
+    "start": 6.04,
+    "end": 6.04,
+    "confidence": 1.0,
+    "id": "o47"
+   },
+   {
+    "text": "0'",
+    "start": 6.04,
+    "end": 6.04,
+    "confidence": 0.965,
+    "id": "o48"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 6.04,
+    "end": 6.04,
+    "confidence": 0.992,
+    "id": "o49"
+   },
+   {
+    "text": "bueno",
+    "start": 6.04,
+    "end": 6.04,
+    "confidence": 0.625,
+    "id": "o50"
+   },
+   {
+    "text": "El Cancer es un hongo",
+    "start": 6.04,
+    "end": 6.04,
+    "confidence": 0.849,
+    "id": "o51"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 6.04,
+    "end": 6.04,
+    "confidence": 0.999,
+    "id": "o52"
+   },
+   {
+    "text": "hambre?",
+    "start": 6.04,
+    "end": 6.04,
+    "confidence": 0.855,
+    "id": "o53"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 8.06,
+    "end": 8.06,
+    "confidence": 0.656,
+    "id": "o54"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 8.06,
+    "end": 8.06,
+    "confidence": 0.954,
+    "id": "o55"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 8.06,
+    "end": 8.06,
+    "confidence": 0.947,
+    "id": "o56"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 8.06,
+    "end": 8.06,
+    "confidence": 0.918,
+    "id": "o57"
+   },
+   {
+    "text": "Niell)",
+    "start": 8.06,
+    "end": 8.06,
+    "confidence": 0.985,
+    "id": "o58"
+   },
+   {
+    "text": "(Barbara",
+    "start": 8.06,
+    "end": 8.06,
+    "confidence": 1.0,
+    "id": "o59"
+   },
+   {
+    "text": "0'",
+    "start": 8.06,
+    "end": 8.06,
+    "confidence": 0.963,
+    "id": "o60"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 8.06,
+    "end": 8.06,
+    "confidence": 0.993,
+    "id": "o61"
+   },
+   {
+    "text": "bueno",
+    "start": 8.06,
+    "end": 8.06,
+    "confidence": 1.0,
+    "id": "o62"
+   },
+   {
+    "text": "EI Cancer es un hongo",
+    "start": 8.06,
+    "end": 8.06,
+    "confidence": 0.792,
+    "id": "o63"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 8.06,
+    "end": 8.06,
+    "confidence": 0.999,
+    "id": "o64"
+   },
+   {
+    "text": "hambre?",
+    "start": 8.06,
+    "end": 8.06,
+    "confidence": 0.854,
+    "id": "o65"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 10.07,
+    "end": 10.07,
+    "confidence": 0.893,
+    "id": "o66"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 10.07,
+    "end": 10.07,
+    "confidence": 0.948,
+    "id": "o67"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 10.07,
+    "end": 10.07,
+    "confidence": 0.868,
+    "id": "o68"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 10.07,
+    "end": 10.07,
+    "confidence": 0.778,
+    "id": "o69"
+   },
+   {
+    "text": "Niell)",
+    "start": 10.07,
+    "end": 10.07,
+    "confidence": 0.983,
+    "id": "o70"
+   },
+   {
+    "text": "(Barbara",
+    "start": 10.07,
+    "end": 10.07,
+    "confidence": 0.838,
+    "id": "o71"
+   },
+   {
+    "text": "0'",
+    "start": 10.07,
+    "end": 10.07,
+    "confidence": 0.978,
+    "id": "o72"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 10.07,
+    "end": 10.07,
+    "confidence": 0.972,
+    "id": "o73"
+   },
+   {
+    "text": "bueno",
+    "start": 10.07,
+    "end": 10.07,
+    "confidence": 0.903,
+    "id": "o74"
+   },
+   {
+    "text": "EI Cancer es un hongo",
+    "start": 10.07,
+    "end": 10.07,
+    "confidence": 0.841,
+    "id": "o75"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 10.07,
+    "end": 10.07,
+    "confidence": 0.683,
+    "id": "o76"
+   },
+   {
+    "text": "Para matarlos debes",
+    "start": 10.07,
+    "end": 10.07,
+    "confidence": 0.792,
+    "id": "o77"
+   },
+   {
+    "text": "saber que es l que",
+    "start": 10.07,
+    "end": 10.07,
+    "confidence": 0.509,
+    "id": "o78"
+   },
+   {
+    "text": "amay lo que ama es La",
+    "start": 10.07,
+    "end": 10.07,
+    "confidence": 0.905,
+    "id": "o79"
+   },
+   {
+    "text": "Glucosa",
+    "start": 10.07,
+    "end": 10.07,
+    "confidence": 0.611,
+    "id": "o80"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 12.08,
+    "end": 12.08,
+    "confidence": 0.898,
+    "id": "o81"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 12.08,
+    "end": 12.08,
+    "confidence": 0.947,
+    "id": "o82"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 12.08,
+    "end": 12.08,
+    "confidence": 0.859,
+    "id": "o83"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 12.08,
+    "end": 12.08,
+    "confidence": 0.841,
+    "id": "o84"
+   },
+   {
+    "text": "Niell)",
+    "start": 12.08,
+    "end": 12.08,
+    "confidence": 0.982,
+    "id": "o85"
+   },
+   {
+    "text": "(Barbara",
+    "start": 12.08,
+    "end": 12.08,
+    "confidence": 1.0,
+    "id": "o86"
+   },
+   {
+    "text": "0'",
+    "start": 12.08,
+    "end": 12.08,
+    "confidence": 0.971,
+    "id": "o87"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 12.08,
+    "end": 12.08,
+    "confidence": 0.969,
+    "id": "o88"
+   },
+   {
+    "text": "bueno",
+    "start": 12.08,
+    "end": 12.08,
+    "confidence": 1.0,
+    "id": "o89"
+   },
+   {
+    "text": "EI Cancer es un hongo",
+    "start": 12.08,
+    "end": 12.08,
+    "confidence": 0.786,
+    "id": "o90"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 12.08,
+    "end": 12.08,
+    "confidence": 0.705,
+    "id": "o91"
+   },
+   {
+    "text": "Tktok",
+    "start": 12.08,
+    "end": 12.08,
+    "confidence": 0.523,
+    "id": "o92"
+   },
+   {
+    "text": "Para matarlos debes",
+    "start": 12.08,
+    "end": 12.08,
+    "confidence": 0.711,
+    "id": "o93"
+   },
+   {
+    "text": "amay loque ama es La",
+    "start": 12.08,
+    "end": 12.08,
+    "confidence": 0.628,
+    "id": "o94"
+   },
+   {
+    "text": "Glucosa",
+    "start": 12.08,
+    "end": 12.08,
+    "confidence": 0.545,
+    "id": "o95"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 14.1,
+    "end": 14.1,
+    "confidence": 0.898,
+    "id": "o96"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 14.1,
+    "end": 14.1,
+    "confidence": 0.947,
+    "id": "o97"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 14.1,
+    "end": 14.1,
+    "confidence": 0.859,
+    "id": "o98"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 14.1,
+    "end": 14.1,
+    "confidence": 0.841,
+    "id": "o99"
+   },
+   {
+    "text": "Niell)",
+    "start": 14.1,
+    "end": 14.1,
+    "confidence": 0.982,
+    "id": "o100"
+   },
+   {
+    "text": "(Barbara",
+    "start": 14.1,
+    "end": 14.1,
+    "confidence": 1.0,
+    "id": "o101"
+   },
+   {
+    "text": "0'",
+    "start": 14.1,
+    "end": 14.1,
+    "confidence": 0.97,
+    "id": "o102"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 14.1,
+    "end": 14.1,
+    "confidence": 0.969,
+    "id": "o103"
+   },
+   {
+    "text": "bueno",
+    "start": 14.1,
+    "end": 14.1,
+    "confidence": 1.0,
+    "id": "o104"
+   },
+   {
+    "text": "EI Cancer es un hongo",
+    "start": 14.1,
+    "end": 14.1,
+    "confidence": 0.785,
+    "id": "o105"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 14.1,
+    "end": 14.1,
+    "confidence": 0.702,
+    "id": "o106"
+   },
+   {
+    "text": "Tktok",
+    "start": 14.1,
+    "end": 14.1,
+    "confidence": 0.523,
+    "id": "o107"
+   },
+   {
+    "text": "Para matarlos debes",
+    "start": 14.1,
+    "end": 14.1,
+    "confidence": 0.724,
+    "id": "o108"
+   },
+   {
+    "text": "amay lo que ama es La",
+    "start": 14.1,
+    "end": 14.1,
+    "confidence": 0.663,
+    "id": "o109"
+   },
+   {
+    "text": "Glucosa",
+    "start": 14.1,
+    "end": 14.1,
+    "confidence": 0.55,
+    "id": "o110"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 16.11,
+    "end": 16.11,
+    "confidence": 0.901,
+    "id": "o111"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 16.11,
+    "end": 16.11,
+    "confidence": 0.938,
+    "id": "o112"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 16.11,
+    "end": 16.11,
+    "confidence": 0.997,
+    "id": "o113"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 16.11,
+    "end": 16.11,
+    "confidence": 0.742,
+    "id": "o114"
+   },
+   {
+    "text": "Niell)",
+    "start": 16.11,
+    "end": 16.11,
+    "confidence": 0.989,
+    "id": "o115"
+   },
+   {
+    "text": "(Barbara",
+    "start": 16.11,
+    "end": 16.11,
+    "confidence": 1.0,
+    "id": "o116"
+   },
+   {
+    "text": "0'",
+    "start": 16.11,
+    "end": 16.11,
+    "confidence": 0.968,
+    "id": "o117"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 16.11,
+    "end": 16.11,
+    "confidence": 0.873,
+    "id": "o118"
+   },
+   {
+    "text": "bueno",
+    "start": 16.11,
+    "end": 16.11,
+    "confidence": 1.0,
+    "id": "o119"
+   },
+   {
+    "text": "EI Cancer es un hongo",
+    "start": 16.11,
+    "end": 16.11,
+    "confidence": 0.672,
+    "id": "o120"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 16.11,
+    "end": 16.11,
+    "confidence": 0.842,
+    "id": "o121"
+   },
+   {
+    "text": "Asi que sugerimos 6",
+    "start": 16.11,
+    "end": 16.11,
+    "confidence": 0.846,
+    "id": "o122"
+   },
+   {
+    "text": "semanas sin azucar; sin",
+    "start": 16.11,
+    "end": 16.11,
+    "confidence": 0.811,
+    "id": "o123"
+   },
+   {
+    "text": "miel, sin nada de dulce",
+    "start": 16.11,
+    "end": 16.11,
+    "confidence": 0.779,
+    "id": "o124"
+   },
+   {
+    "text": "en absoluto:",
+    "start": 16.11,
+    "end": 16.11,
+    "confidence": 0.674,
+    "id": "o125"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 18.13,
+    "end": 18.13,
+    "confidence": 0.901,
+    "id": "o126"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 18.13,
+    "end": 18.13,
+    "confidence": 0.939,
+    "id": "o127"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 18.13,
+    "end": 18.13,
+    "confidence": 0.997,
+    "id": "o128"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 18.13,
+    "end": 18.13,
+    "confidence": 0.742,
+    "id": "o129"
+   },
+   {
+    "text": "Niell)",
+    "start": 18.13,
+    "end": 18.13,
+    "confidence": 0.989,
+    "id": "o130"
+   },
+   {
+    "text": "(Barbara",
+    "start": 18.13,
+    "end": 18.13,
+    "confidence": 1.0,
+    "id": "o131"
+   },
+   {
+    "text": "0'",
+    "start": 18.13,
+    "end": 18.13,
+    "confidence": 0.968,
+    "id": "o132"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 18.13,
+    "end": 18.13,
+    "confidence": 0.871,
+    "id": "o133"
+   },
+   {
+    "text": "bueno",
+    "start": 18.13,
+    "end": 18.13,
+    "confidence": 1.0,
+    "id": "o134"
+   },
+   {
+    "text": "EI Cancer es un hongo",
+    "start": 18.13,
+    "end": 18.13,
+    "confidence": 0.667,
+    "id": "o135"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 18.13,
+    "end": 18.13,
+    "confidence": 0.842,
+    "id": "o136"
+   },
+   {
+    "text": "Asi que sugerimos 6",
+    "start": 18.13,
+    "end": 18.13,
+    "confidence": 0.84,
+    "id": "o137"
+   },
+   {
+    "text": "semanas sin azucar; sin",
+    "start": 18.13,
+    "end": 18.13,
+    "confidence": 0.812,
+    "id": "o138"
+   },
+   {
+    "text": "miel, sin nada de dulce",
+    "start": 18.13,
+    "end": 18.13,
+    "confidence": 0.567,
+    "id": "o139"
+   },
+   {
+    "text": "en absoluto:",
+    "start": 18.13,
+    "end": 18.13,
+    "confidence": 0.674,
+    "id": "o140"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 20.14,
+    "end": 20.14,
+    "confidence": 0.921,
+    "id": "o141"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 20.14,
+    "end": 20.14,
+    "confidence": 0.934,
+    "id": "o142"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 20.14,
+    "end": 20.14,
+    "confidence": 0.992,
+    "id": "o143"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 20.14,
+    "end": 20.14,
+    "confidence": 0.808,
+    "id": "o144"
+   },
+   {
+    "text": "Niell)",
+    "start": 20.14,
+    "end": 20.14,
+    "confidence": 0.99,
+    "id": "o145"
+   },
+   {
+    "text": "(Barbara",
+    "start": 20.14,
+    "end": 20.14,
+    "confidence": 1.0,
+    "id": "o146"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 20.14,
+    "end": 20.14,
+    "confidence": 0.976,
+    "id": "o147"
+   },
+   {
+    "text": "bueno",
+    "start": 20.14,
+    "end": 20.14,
+    "confidence": 0.639,
+    "id": "o148"
+   },
+   {
+    "text": "EI Cancer es un hongo",
+    "start": 20.14,
+    "end": 20.14,
+    "confidence": 0.836,
+    "id": "o149"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 20.14,
+    "end": 20.14,
+    "confidence": 0.755,
+    "id": "o150"
+   },
+   {
+    "text": "ktok",
+    "start": 20.14,
+    "end": 20.14,
+    "confidence": 0.635,
+    "id": "o151"
+   },
+   {
+    "text": "Asi que sugerimos 6",
+    "start": 20.14,
+    "end": 20.14,
+    "confidence": 0.774,
+    "id": "o152"
+   },
+   {
+    "text": "semanas sin azucar; sin",
+    "start": 20.14,
+    "end": 20.14,
+    "confidence": 0.708,
+    "id": "o153"
+   },
+   {
+    "text": "en absolutos",
+    "start": 20.14,
+    "end": 20.14,
+    "confidence": 0.54,
+    "id": "o154"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 22.15,
+    "end": 22.15,
+    "confidence": 0.935,
+    "id": "o155"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 22.15,
+    "end": 22.15,
+    "confidence": 0.796,
+    "id": "o156"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 22.15,
+    "end": 22.15,
+    "confidence": 0.845,
+    "id": "o157"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 22.15,
+    "end": 22.15,
+    "confidence": 0.827,
+    "id": "o158"
+   },
+   {
+    "text": "Niell)",
+    "start": 22.15,
+    "end": 22.15,
+    "confidence": 0.991,
+    "id": "o159"
+   },
+   {
+    "text": "(Barbara",
+    "start": 22.15,
+    "end": 22.15,
+    "confidence": 1.0,
+    "id": "o160"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 22.15,
+    "end": 22.15,
+    "confidence": 0.979,
+    "id": "o161"
+   },
+   {
+    "text": "bueno",
+    "start": 22.15,
+    "end": 22.15,
+    "confidence": 0.941,
+    "id": "o162"
+   },
+   {
+    "text": "EI Cancer es un hongo",
+    "start": 22.15,
+    "end": 22.15,
+    "confidence": 0.829,
+    "id": "o163"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 22.15,
+    "end": 22.15,
+    "confidence": 0.766,
+    "id": "o164"
+   },
+   {
+    "text": "ktok",
+    "start": 22.15,
+    "end": 22.15,
+    "confidence": 0.713,
+    "id": "o165"
+   },
+   {
+    "text": "Existen muchos",
+    "start": 22.15,
+    "end": 22.15,
+    "confidence": 0.868,
+    "id": "o166"
+   },
+   {
+    "text": "vegetales; muchas",
+    "start": 22.15,
+    "end": 22.15,
+    "confidence": 0.714,
+    "id": "o167"
+   },
+   {
+    "text": "legumbres;",
+    "start": 22.15,
+    "end": 22.15,
+    "confidence": 0.973,
+    "id": "o168"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 24.17,
+    "end": 24.17,
+    "confidence": 0.955,
+    "id": "o169"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 24.17,
+    "end": 24.17,
+    "confidence": 0.812,
+    "id": "o170"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 24.17,
+    "end": 24.17,
+    "confidence": 0.964,
+    "id": "o171"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 24.17,
+    "end": 24.17,
+    "confidence": 0.819,
+    "id": "o172"
+   },
+   {
+    "text": "Niell)",
+    "start": 24.17,
+    "end": 24.17,
+    "confidence": 0.99,
+    "id": "o173"
+   },
+   {
+    "text": "(Barbara",
+    "start": 24.17,
+    "end": 24.17,
+    "confidence": 1.0,
+    "id": "o174"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 24.17,
+    "end": 24.17,
+    "confidence": 0.979,
+    "id": "o175"
+   },
+   {
+    "text": "bueno",
+    "start": 24.17,
+    "end": 24.17,
+    "confidence": 0.989,
+    "id": "o176"
+   },
+   {
+    "text": "EI Cancer es un hongo",
+    "start": 24.17,
+    "end": 24.17,
+    "confidence": 0.825,
+    "id": "o177"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 24.17,
+    "end": 24.17,
+    "confidence": 0.767,
+    "id": "o178"
+   },
+   {
+    "text": "Existen muchos",
+    "start": 24.17,
+    "end": 24.17,
+    "confidence": 0.878,
+    "id": "o179"
+   },
+   {
+    "text": "vegetales; muchas",
+    "start": 24.17,
+    "end": 24.17,
+    "confidence": 0.702,
+    "id": "o180"
+   },
+   {
+    "text": "legumbres;",
+    "start": 24.17,
+    "end": 24.17,
+    "confidence": 0.976,
+    "id": "o181"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 26.18,
+    "end": 26.18,
+    "confidence": 0.964,
+    "id": "o182"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 26.18,
+    "end": 26.18,
+    "confidence": 0.858,
+    "id": "o183"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 26.18,
+    "end": 26.18,
+    "confidence": 0.988,
+    "id": "o184"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 26.18,
+    "end": 26.18,
+    "confidence": 0.845,
+    "id": "o185"
+   },
+   {
+    "text": "Niell)",
+    "start": 26.18,
+    "end": 26.18,
+    "confidence": 0.993,
+    "id": "o186"
+   },
+   {
+    "text": "(Barbara",
+    "start": 26.18,
+    "end": 26.18,
+    "confidence": 0.926,
+    "id": "o187"
+   },
+   {
+    "text": "0'",
+    "start": 26.18,
+    "end": 26.18,
+    "confidence": 0.97,
+    "id": "o188"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 26.18,
+    "end": 26.18,
+    "confidence": 0.9,
+    "id": "o189"
+   },
+   {
+    "text": "bueno",
+    "start": 26.18,
+    "end": 26.18,
+    "confidence": 1.0,
+    "id": "o190"
+   },
+   {
+    "text": "El Cancer es un hongo",
+    "start": 26.18,
+    "end": 26.18,
+    "confidence": 0.513,
+    "id": "o191"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 26.18,
+    "end": 26.18,
+    "confidence": 0.786,
+    "id": "o192"
+   },
+   {
+    "text": "Existen muchos",
+    "start": 26.18,
+    "end": 26.18,
+    "confidence": 0.851,
+    "id": "o193"
+   },
+   {
+    "text": "vegetales; muchas",
+    "start": 26.18,
+    "end": 26.18,
+    "confidence": 0.645,
+    "id": "o194"
+   },
+   {
+    "text": "legumbres;",
+    "start": 26.18,
+    "end": 26.18,
+    "confidence": 0.979,
+    "id": "o195"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 28.2,
+    "end": 28.2,
+    "confidence": 0.964,
+    "id": "o196"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 28.2,
+    "end": 28.2,
+    "confidence": 0.858,
+    "id": "o197"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 28.2,
+    "end": 28.2,
+    "confidence": 0.988,
+    "id": "o198"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 28.2,
+    "end": 28.2,
+    "confidence": 0.845,
+    "id": "o199"
+   },
+   {
+    "text": "Niell)",
+    "start": 28.2,
+    "end": 28.2,
+    "confidence": 0.993,
+    "id": "o200"
+   },
+   {
+    "text": "(Barbara",
+    "start": 28.2,
+    "end": 28.2,
+    "confidence": 0.923,
+    "id": "o201"
+   },
+   {
+    "text": "0'",
+    "start": 28.2,
+    "end": 28.2,
+    "confidence": 0.968,
+    "id": "o202"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 28.2,
+    "end": 28.2,
+    "confidence": 0.9,
+    "id": "o203"
+   },
+   {
+    "text": "bueno",
+    "start": 28.2,
+    "end": 28.2,
+    "confidence": 1.0,
+    "id": "o204"
+   },
+   {
+    "text": "El Cancer es un hongo",
+    "start": 28.2,
+    "end": 28.2,
+    "confidence": 0.516,
+    "id": "o205"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 28.2,
+    "end": 28.2,
+    "confidence": 0.787,
+    "id": "o206"
+   },
+   {
+    "text": "Hay",
+    "start": 28.2,
+    "end": 28.2,
+    "confidence": 1.0,
+    "id": "o207"
+   },
+   {
+    "text": "muchas nueces;",
+    "start": 28.2,
+    "end": 28.2,
+    "confidence": 0.712,
+    "id": "o208"
+   },
+   {
+    "text": "muchas semillass",
+    "start": 28.2,
+    "end": 28.2,
+    "confidence": 0.72,
+    "id": "o209"
+   },
+   {
+    "text": "Asi que puedes tener",
+    "start": 28.2,
+    "end": 28.2,
+    "confidence": 0.994,
+    "id": "o210"
+   },
+   {
+    "text": "una bella variedad:",
+    "start": 28.2,
+    "end": 28.2,
+    "confidence": 0.524,
+    "id": "o211"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 30.21,
+    "end": 30.21,
+    "confidence": 0.964,
+    "id": "o212"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 30.21,
+    "end": 30.21,
+    "confidence": 0.849,
+    "id": "o213"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 30.21,
+    "end": 30.21,
+    "confidence": 0.997,
+    "id": "o214"
+   },
+   {
+    "text": "matandolo de hambre.",
+    "start": 30.21,
+    "end": 30.21,
+    "confidence": 0.756,
+    "id": "o215"
+   },
+   {
+    "text": "Niell)",
+    "start": 30.21,
+    "end": 30.21,
+    "confidence": 0.993,
+    "id": "o216"
+   },
+   {
+    "text": "(Barbara",
+    "start": 30.21,
+    "end": 30.21,
+    "confidence": 0.838,
+    "id": "o217"
+   },
+   {
+    "text": "0'",
+    "start": 30.21,
+    "end": 30.21,
+    "confidence": 0.975,
+    "id": "o218"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 30.21,
+    "end": 30.21,
+    "confidence": 0.977,
+    "id": "o219"
+   },
+   {
+    "text": "bueno",
+    "start": 30.21,
+    "end": 30.21,
+    "confidence": 1.0,
+    "id": "o220"
+   },
+   {
+    "text": "El Cancer es un hongo",
+    "start": 30.21,
+    "end": 30.21,
+    "confidence": 0.579,
+    "id": "o221"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 30.21,
+    "end": 30.21,
+    "confidence": 0.765,
+    "id": "o222"
+   },
+   {
+    "text": "Tktok",
+    "start": 30.21,
+    "end": 30.21,
+    "confidence": 0.525,
+    "id": "o223"
+   },
+   {
+    "text": "Hay",
+    "start": 30.21,
+    "end": 30.21,
+    "confidence": 0.623,
+    "id": "o224"
+   },
+   {
+    "text": "muchas nueces;",
+    "start": 30.21,
+    "end": 30.21,
+    "confidence": 0.739,
+    "id": "o225"
+   },
+   {
+    "text": "muchas semillas:",
+    "start": 30.21,
+    "end": 30.21,
+    "confidence": 0.647,
+    "id": "o226"
+   },
+   {
+    "text": "Asi que puedes tener",
+    "start": 30.21,
+    "end": 30.21,
+    "confidence": 0.863,
+    "id": "o227"
+   },
+   {
+    "text": "una bella variedad:",
+    "start": 30.21,
+    "end": 30.21,
+    "confidence": 0.553,
+    "id": "o228"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 32.22,
+    "end": 32.22,
+    "confidence": 0.956,
+    "id": "o229"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 32.22,
+    "end": 32.22,
+    "confidence": 0.787,
+    "id": "o230"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 32.22,
+    "end": 32.22,
+    "confidence": 0.832,
+    "id": "o231"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 32.22,
+    "end": 32.22,
+    "confidence": 0.847,
+    "id": "o232"
+   },
+   {
+    "text": "Niell)",
+    "start": 32.22,
+    "end": 32.22,
+    "confidence": 0.994,
+    "id": "o233"
+   },
+   {
+    "text": "(Barbara",
+    "start": 32.22,
+    "end": 32.22,
+    "confidence": 0.722,
+    "id": "o234"
+   },
+   {
+    "text": "0'",
+    "start": 32.22,
+    "end": 32.22,
+    "confidence": 0.987,
+    "id": "o235"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 32.22,
+    "end": 32.22,
+    "confidence": 0.978,
+    "id": "o236"
+   },
+   {
+    "text": "bueno",
+    "start": 32.22,
+    "end": 32.22,
+    "confidence": 1.0,
+    "id": "o237"
+   },
+   {
+    "text": "El Cancer es un hongo",
+    "start": 32.22,
+    "end": 32.22,
+    "confidence": 0.524,
+    "id": "o238"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 32.22,
+    "end": 32.22,
+    "confidence": 0.734,
+    "id": "o239"
+   },
+   {
+    "text": "Hay",
+    "start": 32.22,
+    "end": 32.22,
+    "confidence": 1.0,
+    "id": "o240"
+   },
+   {
+    "text": "muchas nueces;",
+    "start": 32.22,
+    "end": 32.22,
+    "confidence": 0.712,
+    "id": "o241"
+   },
+   {
+    "text": "muchas semillas:",
+    "start": 32.22,
+    "end": 32.22,
+    "confidence": 0.647,
+    "id": "o242"
+   },
+   {
+    "text": "Asi que puedes tener",
+    "start": 32.22,
+    "end": 32.22,
+    "confidence": 0.927,
+    "id": "o243"
+   },
+   {
+    "text": "una bella variedad:",
+    "start": 32.22,
+    "end": 32.22,
+    "confidence": 0.615,
+    "id": "o244"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 34.24,
+    "end": 34.24,
+    "confidence": 0.98,
+    "id": "o245"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 34.24,
+    "end": 34.24,
+    "confidence": 0.912,
+    "id": "o246"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 34.24,
+    "end": 34.24,
+    "confidence": 0.972,
+    "id": "o247"
+   },
+   {
+    "text": "matandolo de hambre.",
+    "start": 34.24,
+    "end": 34.24,
+    "confidence": 0.732,
+    "id": "o248"
+   },
+   {
+    "text": "Niell)",
+    "start": 34.24,
+    "end": 34.24,
+    "confidence": 0.993,
+    "id": "o249"
+   },
+   {
+    "text": "(Barbara",
+    "start": 34.24,
+    "end": 34.24,
+    "confidence": 0.738,
+    "id": "o250"
+   },
+   {
+    "text": "0'",
+    "start": 34.24,
+    "end": 34.24,
+    "confidence": 0.984,
+    "id": "o251"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 34.24,
+    "end": 34.24,
+    "confidence": 0.908,
+    "id": "o252"
+   },
+   {
+    "text": "bueno",
+    "start": 34.24,
+    "end": 34.24,
+    "confidence": 1.0,
+    "id": "o253"
+   },
+   {
+    "text": "El Cancer es un hongo",
+    "start": 34.24,
+    "end": 34.24,
+    "confidence": 0.552,
+    "id": "o254"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 34.24,
+    "end": 34.24,
+    "confidence": 0.74,
+    "id": "o255"
+   },
+   {
+    "text": "Tktok",
+    "start": 34.24,
+    "end": 34.24,
+    "confidence": 0.537,
+    "id": "o256"
+   },
+   {
+    "text": "Algunas personas han",
+    "start": 34.24,
+    "end": 34.24,
+    "confidence": 0.891,
+    "id": "o257"
+   },
+   {
+    "text": "Ilegado a nosotrosy",
+    "start": 34.24,
+    "end": 34.24,
+    "confidence": 0.762,
+    "id": "o258"
+   },
+   {
+    "text": "han decidido hacer?",
+    "start": 34.24,
+    "end": 34.24,
+    "confidence": 0.876,
+    "id": "o259"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 36.25,
+    "end": 36.25,
+    "confidence": 0.674,
+    "id": "o260"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 36.25,
+    "end": 36.25,
+    "confidence": 0.941,
+    "id": "o261"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 36.25,
+    "end": 36.25,
+    "confidence": 0.717,
+    "id": "o262"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 36.25,
+    "end": 36.25,
+    "confidence": 0.763,
+    "id": "o263"
+   },
+   {
+    "text": "Niell)",
+    "start": 36.25,
+    "end": 36.25,
+    "confidence": 0.993,
+    "id": "o264"
+   },
+   {
+    "text": "(Barbara",
+    "start": 36.25,
+    "end": 36.25,
+    "confidence": 0.807,
+    "id": "o265"
+   },
+   {
+    "text": "0'",
+    "start": 36.25,
+    "end": 36.25,
+    "confidence": 0.972,
+    "id": "o266"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 36.25,
+    "end": 36.25,
+    "confidence": 0.976,
+    "id": "o267"
+   },
+   {
+    "text": "bueno",
+    "start": 36.25,
+    "end": 36.25,
+    "confidence": 1.0,
+    "id": "o268"
+   },
+   {
+    "text": "EI Cancer es un hongo",
+    "start": 36.25,
+    "end": 36.25,
+    "confidence": 0.79,
+    "id": "o269"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 36.25,
+    "end": 36.25,
+    "confidence": 0.756,
+    "id": "o270"
+   },
+   {
+    "text": "Algunas personas han",
+    "start": 36.25,
+    "end": 36.25,
+    "confidence": 0.938,
+    "id": "o271"
+   },
+   {
+    "text": "Ilegado a nosotrosy",
+    "start": 36.25,
+    "end": 36.25,
+    "confidence": 0.97,
+    "id": "o272"
+   },
+   {
+    "text": "han decidido hacer?",
+    "start": 36.25,
+    "end": 36.25,
+    "confidence": 0.641,
+    "id": "o273"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 38.27,
+    "end": 38.27,
+    "confidence": 0.682,
+    "id": "o274"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 38.27,
+    "end": 38.27,
+    "confidence": 0.939,
+    "id": "o275"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 38.27,
+    "end": 38.27,
+    "confidence": 0.992,
+    "id": "o276"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 38.27,
+    "end": 38.27,
+    "confidence": 0.762,
+    "id": "o277"
+   },
+   {
+    "text": "Niell)",
+    "start": 38.27,
+    "end": 38.27,
+    "confidence": 0.993,
+    "id": "o278"
+   },
+   {
+    "text": "(Barbara",
+    "start": 38.27,
+    "end": 38.27,
+    "confidence": 0.807,
+    "id": "o279"
+   },
+   {
+    "text": "0'",
+    "start": 38.27,
+    "end": 38.27,
+    "confidence": 0.972,
+    "id": "o280"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 38.27,
+    "end": 38.27,
+    "confidence": 0.975,
+    "id": "o281"
+   },
+   {
+    "text": "bueno",
+    "start": 38.27,
+    "end": 38.27,
+    "confidence": 0.865,
+    "id": "o282"
+   },
+   {
+    "text": "EI Cancer es un hongo",
+    "start": 38.27,
+    "end": 38.27,
+    "confidence": 0.789,
+    "id": "o283"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 38.27,
+    "end": 38.27,
+    "confidence": 0.754,
+    "id": "o284"
+   },
+   {
+    "text": "1 Lunes: Dia de comer",
+    "start": 38.27,
+    "end": 38.27,
+    "confidence": 0.78,
+    "id": "o285"
+   },
+   {
+    "text": "Ftijol ancho (tambien",
+    "start": 38.27,
+    "end": 38.27,
+    "confidence": 0.807,
+    "id": "o286"
+   },
+   {
+    "text": "Ilamado judia de Lima;",
+    "start": 38.27,
+    "end": 38.27,
+    "confidence": 0.727,
+    "id": "o287"
+   },
+   {
+    "text": "pallat; caratua)",
+    "start": 38.27,
+    "end": 38.27,
+    "confidence": 0.75,
+    "id": "o288"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.27,
+    "end": 38.27,
+    "confidence": 0.995,
+    "id": "o289"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 40.28,
+    "end": 40.28,
+    "confidence": 0.918,
+    "id": "o290"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 40.28,
+    "end": 40.28,
+    "confidence": 0.946,
+    "id": "o291"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 40.28,
+    "end": 40.28,
+    "confidence": 0.854,
+    "id": "o292"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 40.28,
+    "end": 40.28,
+    "confidence": 0.931,
+    "id": "o293"
+   },
+   {
+    "text": "Niell)",
+    "start": 40.28,
+    "end": 40.28,
+    "confidence": 0.99,
+    "id": "o294"
+   },
+   {
+    "text": "(Barbara",
+    "start": 40.28,
+    "end": 40.28,
+    "confidence": 0.998,
+    "id": "o295"
+   },
+   {
+    "text": "0'",
+    "start": 40.28,
+    "end": 40.28,
+    "confidence": 0.949,
+    "id": "o296"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 40.28,
+    "end": 40.28,
+    "confidence": 0.678,
+    "id": "o297"
+   },
+   {
+    "text": "bueno",
+    "start": 40.28,
+    "end": 40.28,
+    "confidence": 1.0,
+    "id": "o298"
+   },
+   {
+    "text": "El Cancer es un hongo",
+    "start": 40.28,
+    "end": 40.28,
+    "confidence": 0.636,
+    "id": "o299"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 40.28,
+    "end": 40.28,
+    "confidence": 0.88,
+    "id": "o300"
+   },
+   {
+    "text": "comer lentejas",
+    "start": 40.28,
+    "end": 40.28,
+    "confidence": 0.987,
+    "id": "o301"
+   },
+   {
+    "text": "(tambien Ilamadas",
+    "start": 40.28,
+    "end": 40.28,
+    "confidence": 0.537,
+    "id": "o302"
+   },
+   {
+    "text": "habichuelas @",
+    "start": 40.28,
+    "end": 40.28,
+    "confidence": 0.952,
+    "id": "o303"
+   },
+   {
+    "text": "garbanzos)",
+    "start": 40.28,
+    "end": 40.28,
+    "confidence": 1.0,
+    "id": "o304"
+   },
+   {
+    "text": "TikTok",
+    "start": 40.28,
+    "end": 40.28,
+    "confidence": 0.996,
+    "id": "o305"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 42.29,
+    "end": 42.29,
+    "confidence": 0.889,
+    "id": "o306"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 42.29,
+    "end": 42.29,
+    "confidence": 0.737,
+    "id": "o307"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 42.29,
+    "end": 42.29,
+    "confidence": 0.996,
+    "id": "o308"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 42.29,
+    "end": 42.29,
+    "confidence": 0.682,
+    "id": "o309"
+   },
+   {
+    "text": "Niell)",
+    "start": 42.29,
+    "end": 42.29,
+    "confidence": 0.991,
+    "id": "o310"
+   },
+   {
+    "text": "(Barbara",
+    "start": 42.29,
+    "end": 42.29,
+    "confidence": 0.999,
+    "id": "o311"
+   },
+   {
+    "text": "0'",
+    "start": 42.29,
+    "end": 42.29,
+    "confidence": 0.953,
+    "id": "o312"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 42.29,
+    "end": 42.29,
+    "confidence": 0.679,
+    "id": "o313"
+   },
+   {
+    "text": "bueno",
+    "start": 42.29,
+    "end": 42.29,
+    "confidence": 1.0,
+    "id": "o314"
+   },
+   {
+    "text": "EI Cancer es un hongo",
+    "start": 42.29,
+    "end": 42.29,
+    "confidence": 0.825,
+    "id": "o315"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 42.29,
+    "end": 42.29,
+    "confidence": 0.891,
+    "id": "o316"
+   },
+   {
+    "text": "3 Miercoles: Dia de",
+    "start": 42.29,
+    "end": 42.29,
+    "confidence": 0.592,
+    "id": "o317"
+   },
+   {
+    "text": "comer tofu (Queso de",
+    "start": 42.29,
+    "end": 42.29,
+    "confidence": 0.74,
+    "id": "o318"
+   },
+   {
+    "text": "Soja, derivados de la",
+    "start": 42.29,
+    "end": 42.29,
+    "confidence": 0.71,
+    "id": "o319"
+   },
+   {
+    "text": "soja, soya):",
+    "start": 42.29,
+    "end": 42.29,
+    "confidence": 0.918,
+    "id": "o320"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.29,
+    "end": 42.29,
+    "confidence": 0.996,
+    "id": "o321"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 44.31,
+    "end": 44.31,
+    "confidence": 0.914,
+    "id": "o322"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 44.31,
+    "end": 44.31,
+    "confidence": 0.945,
+    "id": "o323"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 44.31,
+    "end": 44.31,
+    "confidence": 0.839,
+    "id": "o324"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 44.31,
+    "end": 44.31,
+    "confidence": 0.688,
+    "id": "o325"
+   },
+   {
+    "text": "0 'Niell)",
+    "start": 44.31,
+    "end": 44.31,
+    "confidence": 0.702,
+    "id": "o326"
+   },
+   {
+    "text": "(Barbara",
+    "start": 44.31,
+    "end": 44.31,
+    "confidence": 1.0,
+    "id": "o327"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 44.31,
+    "end": 44.31,
+    "confidence": 0.678,
+    "id": "o328"
+   },
+   {
+    "text": "bueno",
+    "start": 44.31,
+    "end": 44.31,
+    "confidence": 1.0,
+    "id": "o329"
+   },
+   {
+    "text": "El Cancer es un hongo",
+    "start": 44.31,
+    "end": 44.31,
+    "confidence": 0.559,
+    "id": "o330"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 44.31,
+    "end": 44.31,
+    "confidence": 0.988,
+    "id": "o331"
+   },
+   {
+    "text": "3 Miercoles: Dia de",
+    "start": 44.31,
+    "end": 44.31,
+    "confidence": 0.592,
+    "id": "o332"
+   },
+   {
+    "text": "comer tofu (Queso de",
+    "start": 44.31,
+    "end": 44.31,
+    "confidence": 0.984,
+    "id": "o333"
+   },
+   {
+    "text": "Soja, derivados de la",
+    "start": 44.31,
+    "end": 44.31,
+    "confidence": 0.725,
+    "id": "o334"
+   },
+   {
+    "text": "soja, soya):",
+    "start": 44.31,
+    "end": 44.31,
+    "confidence": 0.928,
+    "id": "o335"
+   },
+   {
+    "text": "TikTok",
+    "start": 44.31,
+    "end": 44.31,
+    "confidence": 0.996,
+    "id": "o336"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 46.32,
+    "end": 46.32,
+    "confidence": 0.768,
+    "id": "o337"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 46.32,
+    "end": 46.32,
+    "confidence": 0.78,
+    "id": "o338"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 46.32,
+    "end": 46.32,
+    "confidence": 0.996,
+    "id": "o339"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 46.32,
+    "end": 46.32,
+    "confidence": 0.818,
+    "id": "o340"
+   },
+   {
+    "text": "Niell)",
+    "start": 46.32,
+    "end": 46.32,
+    "confidence": 0.991,
+    "id": "o341"
+   },
+   {
+    "text": "(Barbara",
+    "start": 46.32,
+    "end": 46.32,
+    "confidence": 1.0,
+    "id": "o342"
+   },
+   {
+    "text": "0'",
+    "start": 46.32,
+    "end": 46.32,
+    "confidence": 0.961,
+    "id": "o343"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 46.32,
+    "end": 46.32,
+    "confidence": 0.975,
+    "id": "o344"
+   },
+   {
+    "text": "bueno",
+    "start": 46.32,
+    "end": 46.32,
+    "confidence": 1.0,
+    "id": "o345"
+   },
+   {
+    "text": "El Cancer es un hongo",
+    "start": 46.32,
+    "end": 46.32,
+    "confidence": 0.551,
+    "id": "o346"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 46.32,
+    "end": 46.32,
+    "confidence": 1.0,
+    "id": "o347"
+   },
+   {
+    "text": "43 Jueves: Dia de",
+    "start": 46.32,
+    "end": 46.32,
+    "confidence": 0.509,
+    "id": "o348"
+   },
+   {
+    "text": "comer ftijoles negros",
+    "start": 46.32,
+    "end": 46.32,
+    "confidence": 0.986,
+    "id": "o349"
+   },
+   {
+    "text": "(Alubia Black-eyed, @jo",
+    "start": 46.32,
+    "end": 46.32,
+    "confidence": 0.608,
+    "id": "o350"
+   },
+   {
+    "text": "TikTok",
+    "start": 46.32,
+    "end": 46.32,
+    "confidence": 0.996,
+    "id": "o351"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 48.34,
+    "end": 48.34,
+    "confidence": 0.778,
+    "id": "o352"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 48.34,
+    "end": 48.34,
+    "confidence": 0.788,
+    "id": "o353"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 48.34,
+    "end": 48.34,
+    "confidence": 0.941,
+    "id": "o354"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 48.34,
+    "end": 48.34,
+    "confidence": 0.816,
+    "id": "o355"
+   },
+   {
+    "text": "Niell)",
+    "start": 48.34,
+    "end": 48.34,
+    "confidence": 0.99,
+    "id": "o356"
+   },
+   {
+    "text": "(Barbara",
+    "start": 48.34,
+    "end": 48.34,
+    "confidence": 1.0,
+    "id": "o357"
+   },
+   {
+    "text": "0'",
+    "start": 48.34,
+    "end": 48.34,
+    "confidence": 0.963,
+    "id": "o358"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 48.34,
+    "end": 48.34,
+    "confidence": 0.989,
+    "id": "o359"
+   },
+   {
+    "text": "bueno",
+    "start": 48.34,
+    "end": 48.34,
+    "confidence": 1.0,
+    "id": "o360"
+   },
+   {
+    "text": "El Cancer es un hongo",
+    "start": 48.34,
+    "end": 48.34,
+    "confidence": 0.901,
+    "id": "o361"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 48.34,
+    "end": 48.34,
+    "confidence": 0.845,
+    "id": "o362"
+   },
+   {
+    "text": "TikTok",
+    "start": 48.34,
+    "end": 48.34,
+    "confidence": 0.997,
+    "id": "o363"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 50.35,
+    "end": 50.35,
+    "confidence": 0.775,
+    "id": "o364"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 50.35,
+    "end": 50.35,
+    "confidence": 0.887,
+    "id": "o365"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 50.35,
+    "end": 50.35,
+    "confidence": 0.943,
+    "id": "o366"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 50.35,
+    "end": 50.35,
+    "confidence": 0.802,
+    "id": "o367"
+   },
+   {
+    "text": "Niell)",
+    "start": 50.35,
+    "end": 50.35,
+    "confidence": 0.992,
+    "id": "o368"
+   },
+   {
+    "text": "(Barbara",
+    "start": 50.35,
+    "end": 50.35,
+    "confidence": 1.0,
+    "id": "o369"
+   },
+   {
+    "text": "0'",
+    "start": 50.35,
+    "end": 50.35,
+    "confidence": 0.959,
+    "id": "o370"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 50.35,
+    "end": 50.35,
+    "confidence": 0.967,
+    "id": "o371"
+   },
+   {
+    "text": "bueno",
+    "start": 50.35,
+    "end": 50.35,
+    "confidence": 0.879,
+    "id": "o372"
+   },
+   {
+    "text": "El Cancer es un hongo",
+    "start": 50.35,
+    "end": 50.35,
+    "confidence": 0.539,
+    "id": "o373"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 50.35,
+    "end": 50.35,
+    "confidence": 0.831,
+    "id": "o374"
+   },
+   {
+    "text": "iHay tantos que",
+    "start": 50.35,
+    "end": 50.35,
+    "confidence": 0.749,
+    "id": "o375"
+   },
+   {
+    "text": "puedes tener una",
+    "start": 50.35,
+    "end": 50.35,
+    "confidence": 0.91,
+    "id": "o376"
+   },
+   {
+    "text": "diferente cada dial",
+    "start": 50.35,
+    "end": 50.35,
+    "confidence": 0.978,
+    "id": "o377"
+   },
+   {
+    "text": "TikTok",
+    "start": 50.35,
+    "end": 50.35,
+    "confidence": 0.996,
+    "id": "o378"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 52.36,
+    "end": 52.36,
+    "confidence": 0.801,
+    "id": "o379"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 52.36,
+    "end": 52.36,
+    "confidence": 0.905,
+    "id": "o380"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 52.36,
+    "end": 52.36,
+    "confidence": 0.998,
+    "id": "o381"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 52.36,
+    "end": 52.36,
+    "confidence": 0.783,
+    "id": "o382"
+   },
+   {
+    "text": "Niell)",
+    "start": 52.36,
+    "end": 52.36,
+    "confidence": 0.992,
+    "id": "o383"
+   },
+   {
+    "text": "(Barbara",
+    "start": 52.36,
+    "end": 52.36,
+    "confidence": 1.0,
+    "id": "o384"
+   },
+   {
+    "text": "0'",
+    "start": 52.36,
+    "end": 52.36,
+    "confidence": 0.965,
+    "id": "o385"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 52.36,
+    "end": 52.36,
+    "confidence": 0.968,
+    "id": "o386"
+   },
+   {
+    "text": "bueno",
+    "start": 52.36,
+    "end": 52.36,
+    "confidence": 0.999,
+    "id": "o387"
+   },
+   {
+    "text": "El Cancer es un hongo",
+    "start": 52.36,
+    "end": 52.36,
+    "confidence": 0.539,
+    "id": "o388"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 52.36,
+    "end": 52.36,
+    "confidence": 0.822,
+    "id": "o389"
+   },
+   {
+    "text": "iHay tantos que",
+    "start": 52.36,
+    "end": 52.36,
+    "confidence": 0.686,
+    "id": "o390"
+   },
+   {
+    "text": "puedes tener una",
+    "start": 52.36,
+    "end": 52.36,
+    "confidence": 0.76,
+    "id": "o391"
+   },
+   {
+    "text": "diferente cada dial",
+    "start": 52.36,
+    "end": 52.36,
+    "confidence": 0.741,
+    "id": "o392"
+   },
+   {
+    "text": "TikTok",
+    "start": 52.36,
+    "end": 52.36,
+    "confidence": 0.996,
+    "id": "o393"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 54.38,
+    "end": 54.38,
+    "confidence": 0.646,
+    "id": "o394"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 54.38,
+    "end": 54.38,
+    "confidence": 0.912,
+    "id": "o395"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 54.38,
+    "end": 54.38,
+    "confidence": 0.952,
+    "id": "o396"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 54.38,
+    "end": 54.38,
+    "confidence": 0.761,
+    "id": "o397"
+   },
+   {
+    "text": "Niell)",
+    "start": 54.38,
+    "end": 54.38,
+    "confidence": 0.992,
+    "id": "o398"
+   },
+   {
+    "text": "(Barbara",
+    "start": 54.38,
+    "end": 54.38,
+    "confidence": 1.0,
+    "id": "o399"
+   },
+   {
+    "text": "0'",
+    "start": 54.38,
+    "end": 54.38,
+    "confidence": 0.969,
+    "id": "o400"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 54.38,
+    "end": 54.38,
+    "confidence": 0.968,
+    "id": "o401"
+   },
+   {
+    "text": "bueno",
+    "start": 54.38,
+    "end": 54.38,
+    "confidence": 1.0,
+    "id": "o402"
+   },
+   {
+    "text": "EI Cancer es un hongo",
+    "start": 54.38,
+    "end": 54.38,
+    "confidence": 0.639,
+    "id": "o403"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 54.38,
+    "end": 54.38,
+    "confidence": 0.814,
+    "id": "o404"
+   },
+   {
+    "text": "iTantos vegetales",
+    "start": 54.38,
+    "end": 54.38,
+    "confidence": 0.516,
+    "id": "o405"
+   },
+   {
+    "text": "diferentesl",
+    "start": 54.38,
+    "end": 54.38,
+    "confidence": 0.709,
+    "id": "o406"
+   },
+   {
+    "text": "TikTok",
+    "start": 54.38,
+    "end": 54.38,
+    "confidence": 0.996,
+    "id": "o407"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 56.39,
+    "end": 56.39,
+    "confidence": 0.775,
+    "id": "o408"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 56.39,
+    "end": 56.39,
+    "confidence": 0.934,
+    "id": "o409"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 56.39,
+    "end": 56.39,
+    "confidence": 0.847,
+    "id": "o410"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 56.39,
+    "end": 56.39,
+    "confidence": 0.794,
+    "id": "o411"
+   },
+   {
+    "text": "Niell)",
+    "start": 56.39,
+    "end": 56.39,
+    "confidence": 0.99,
+    "id": "o412"
+   },
+   {
+    "text": "(Barbara",
+    "start": 56.39,
+    "end": 56.39,
+    "confidence": 0.966,
+    "id": "o413"
+   },
+   {
+    "text": "0'",
+    "start": 56.39,
+    "end": 56.39,
+    "confidence": 0.967,
+    "id": "o414"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 56.39,
+    "end": 56.39,
+    "confidence": 0.97,
+    "id": "o415"
+   },
+   {
+    "text": "bueno",
+    "start": 56.39,
+    "end": 56.39,
+    "confidence": 1.0,
+    "id": "o416"
+   },
+   {
+    "text": "El Cancer es un hongo",
+    "start": 56.39,
+    "end": 56.39,
+    "confidence": 0.845,
+    "id": "o417"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 56.39,
+    "end": 56.39,
+    "confidence": 0.803,
+    "id": "o418"
+   },
+   {
+    "text": "Tambien debes revisar",
+    "start": 56.39,
+    "end": 56.39,
+    "confidence": 0.866,
+    "id": "o419"
+   },
+   {
+    "text": "tu casa para ver que n@",
+    "start": 56.39,
+    "end": 56.39,
+    "confidence": 0.521,
+    "id": "o420"
+   },
+   {
+    "text": "tenga contaminacion",
+    "start": 56.39,
+    "end": 56.39,
+    "confidence": 0.992,
+    "id": "o421"
+   },
+   {
+    "text": "con Mohos",
+    "start": 56.39,
+    "end": 56.39,
+    "confidence": 0.951,
+    "id": "o422"
+   },
+   {
+    "text": "(Vinagre y Bicarbonato",
+    "start": 56.39,
+    "end": 56.39,
+    "confidence": 0.752,
+    "id": "o423"
+   },
+   {
+    "text": "ayudan mucho)",
+    "start": 56.39,
+    "end": 56.39,
+    "confidence": 0.998,
+    "id": "o424"
+   },
+   {
+    "text": "TikTok",
+    "start": 56.39,
+    "end": 56.39,
+    "confidence": 0.996,
+    "id": "o425"
+   },
+   {
+    "text": "Come vegetales",
+    "start": 58.41,
+    "end": 58.41,
+    "confidence": 0.775,
+    "id": "o426"
+   },
+   {
+    "text": "Alcaliniza tu cuerpo",
+    "start": 58.41,
+    "end": 58.41,
+    "confidence": 0.936,
+    "id": "o427"
+   },
+   {
+    "text": "Curate del cancer",
+    "start": 58.41,
+    "end": 58.41,
+    "confidence": 0.848,
+    "id": "o428"
+   },
+   {
+    "text": "matandolo de hambre:",
+    "start": 58.41,
+    "end": 58.41,
+    "confidence": 0.794,
+    "id": "o429"
+   },
+   {
+    "text": "Niell)",
+    "start": 58.41,
+    "end": 58.41,
+    "confidence": 0.99,
+    "id": "o430"
+   },
+   {
+    "text": "(Barbara",
+    "start": 58.41,
+    "end": 58.41,
+    "confidence": 1.0,
+    "id": "o431"
+   },
+   {
+    "text": "0'",
+    "start": 58.41,
+    "end": 58.41,
+    "confidence": 0.966,
+    "id": "o432"
+   },
+   {
+    "text": "El Bicarbonato es",
+    "start": 58.41,
+    "end": 58.41,
+    "confidence": 0.971,
+    "id": "o433"
+   },
+   {
+    "text": "bueno",
+    "start": 58.41,
+    "end": 58.41,
+    "confidence": 1.0,
+    "id": "o434"
+   },
+   {
+    "text": "El Cancer es un hongo",
+    "start": 58.41,
+    "end": 58.41,
+    "confidence": 0.55,
+    "id": "o435"
+   },
+   {
+    "text": "Jugo verde",
+    "start": 58.41,
+    "end": 58.41,
+    "confidence": 0.804,
+    "id": "o436"
+   },
+   {
+    "text": "Tambien debes revisar",
+    "start": 58.41,
+    "end": 58.41,
+    "confidence": 0.829,
+    "id": "o437"
+   },
+   {
+    "text": "tu casa para ver que n@",
+    "start": 58.41,
+    "end": 58.41,
+    "confidence": 0.684,
+    "id": "o438"
+   },
+   {
+    "text": "tenga contaminacion",
+    "start": 58.41,
+    "end": 58.41,
+    "confidence": 0.991,
+    "id": "o439"
+   },
+   {
+    "text": "con Mohos",
+    "start": 58.41,
+    "end": 58.41,
+    "confidence": 0.92,
+    "id": "o440"
+   },
+   {
+    "text": "(Vinagre y Bicarbonato",
+    "start": 58.41,
+    "end": 58.41,
+    "confidence": 0.781,
+    "id": "o441"
+   },
+   {
+    "text": "ayudan mucho)",
+    "start": 58.41,
+    "end": 58.41,
+    "confidence": 0.998,
+    "id": "o442"
+   },
+   {
+    "text": "TikTok",
+    "start": 58.41,
+    "end": 58.41,
+    "confidence": 0.996,
+    "id": "o443"
+   }
+  ]
+ }
+}

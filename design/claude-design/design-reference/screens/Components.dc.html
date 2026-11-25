@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Component sheet</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../im.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5F99}a:hover{color:#174A78}
+</style>
+</helmet>
+<div class="im" data-theme="{{theme}}" style="width: 1440px; min-height: 2400px; padding: 48px; display: flex; flex-direction: column; gap: 32px">
+  <div><h1 class="t-display">Components</h1><p class="muted" style="margin: 4px 0 0">Class names match the shared stylesheet; build each as a React component with the same props. Toggle dark mode in Tweaks.</p></div>
+
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+    <section class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 16px">
+      <h2 class="t-h2">LabelBadge <span class="mono t-cap faint" style="font-weight: 400">label, size: sm | lg</span></h2>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap">
+        <span class="lb lb-mis"><span class="i i-alert i-sm" aria-hidden="true"></span>MISINFO</span>
+        <span class="lb lb-nomis"><span class="i i-checkc i-sm" aria-hidden="true"></span>NO-MISINFO</span>
+        <span class="lb lb-deb"><span class="i i-shield i-sm" aria-hidden="true"></span>DEBUNKED</span>
+        <span class="lb lb-cr"><span class="i i-helpc i-sm" aria-hidden="true"></span>CANNOT RECOGNIZE</span>
+      </div>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap">
+        <span class="lb lb-mis lb-lg"><span class="i i-alert" aria-hidden="true"></span>MISINFO</span>
+        <span class="lb lb-deb lb-lg"><span class="i i-shield" aria-hidden="true"></span>DEBUNKED</span>
+      </div>
+      <p class="t-cap faint" style="margin: 0">Always icon + display name. Internal enum (MISINFO, NO_MISINFO, DEBUNKING, CANNOT_RECOGNIZE) maps to display name in one place: <span class="mono">labelMeta.ts</span>.</p>
+    </section>
+
+    <section class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 16px">
+      <h2 class="t-h2">VerdictChip · StanceChip</h2>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap">
+        <span class="vd vd-sup"><span class="i i-checkc i-sm" aria-hidden="true"></span>SUPPORTED</span>
+        <span class="vd vd-con"><span class="i i-xc i-sm" aria-hidden="true"></span>CONTRADICTED</span>
+        <span class="vd vd-mix"><span class="i i-mixed i-sm" aria-hidden="true"></span>MIXED</span>
+        <span class="vd vd-ins"><span class="i i-dashed i-sm" aria-hidden="true"></span>INSUFFICIENT EVIDENCE</span>
+        <span class="vd vd-nv"><span class="i i-ban i-sm" aria-hidden="true"></span>NOT VERIFIABLE</span>
+      </div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap">
+        <span class="st"><span class="i i-endorse i-sm" aria-hidden="true"></span>ENDORSES</span>
+        <span class="st"><span class="i i-refute i-sm" aria-hidden="true"></span>REFUTES</span>
+        <span class="st"><span class="i i-quote i-sm" aria-hidden="true"></span>QUOTES</span>
+        <span class="st"><span class="i i-minus i-sm" aria-hidden="true"></span>NEUTRAL</span>
+        <span class="st st-unclear"><span class="i i-question i-sm" aria-hidden="true"></span>UNCLEAR</span>
+      </div>
+      <p class="t-cap faint" style="margin: 0">Verdicts: pill, coloured. Stances: square, colourless. A stance chip always sits next to the speaker's quoted words.</p>
+    </section>
+
+    <section class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 16px">
+      <h2 class="t-h2">ReviewStatus · JobState</h2>
+      <div style="display: flex; gap: 20px; flex-wrap: wrap">
+        <span class="rs rs-pending"><span class="i i-clock i-sm" aria-hidden="true"></span>Pending review</span>
+        <span class="rs rs-verified"><span class="i i-checkc i-sm" aria-hidden="true"></span>Verified</span>
+        <span class="rs rs-corrected"><span class="i i-pencil i-sm" aria-hidden="true"></span>Corrected</span>
+        <span class="rs rs-rejected"><span class="i i-ban i-sm" aria-hidden="true"></span>Rejected</span>
+        <span class="rs muted">Not required</span>
+      </div>
+      <div style="display: flex; gap: 20px; flex-wrap: wrap">
+        <span class="js js-queued"><span class="i i-clock i-sm" aria-hidden="true"></span>Queued</span>
+        <span class="js js-running"><span class="i i-loader i-sm" aria-hidden="true"></span>Running</span>
+        <span class="js js-retrying"><span class="i i-refresh i-sm" aria-hidden="true"></span>Retrying</span>
+        <span class="js js-review"><span class="i i-flag i-sm" aria-hidden="true"></span>Needs review</span>
+        <span class="js js-done"><span class="i i-checkc i-sm" aria-hidden="true"></span>Completed</span>
+        <span class="js js-failed"><span class="i i-alert i-sm" aria-hidden="true"></span>Failed</span>
+      </div>
+      <p class="t-cap faint" style="margin: 0">Text-and-icon, no fill, so they never compete with the label badge in the same row. Running icon rotates (respect prefers-reduced-motion).</p>
+    </section>
+
+    <section class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 16px">
+      <h2 class="t-h2">ReviewReasonChip</h2>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap">
+        <span class="rr"><span class="i i-alert i-sm" aria-hidden="true"></span>The speaker appears to deny an established finding</span>
+        <span class="rr"><span class="i i-mixed i-sm" aria-hidden="true"></span>Evidence is mixed</span>
+        <span class="rr"><span class="i i-question i-sm" aria-hidden="true"></span>Stance unclear (possible sarcasm)</span>
+        <span class="rr"><span class="i i-shield i-sm" aria-hidden="true"></span>The speaker refutes a claim the evidence can't settle (possible debunk)</span>
+        <span class="rr"><span class="i i-info i-sm" aria-hidden="true"></span>Low confidence</span>
+      </div>
+      <p class="t-cap faint" style="margin: 0">Plain-language sentence from a reason-code table; never the raw code. Ochre = “needs attention”, distinct from MISINFO rust.</p>
+    </section>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+    <section class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 14px">
+      <h2 class="t-h2">ClaimCard <span class="mono t-cap faint" style="font-weight: 400">default · active · decisive debunk</span></h2>
+      <a class="claim" href="#">
+        <div style="display: flex; gap: 8px; align-items: center"><span class="mono t-small">0:12–0:15</span><span class="tag"><span class="i i-mic i-sm" aria-hidden="true"></span>Speech</span></div>
+        <p class="claim-text">The flu is caused by a virus.</p>
+        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap"><span class="st"><span class="i i-endorse i-sm" aria-hidden="true"></span>ENDORSES</span><span class="vd vd-sup"><span class="i i-checkc i-sm" aria-hidden="true"></span>SUPPORTED</span><span class="t-small tnum">1 supports</span></div>
+      </a>
+      <a class="claim is-active" href="#">
+        <div style="display: flex; gap: 8px; align-items: center"><span class="mono t-small">0:03–0:08</span><span class="tag"><span class="i i-mic i-sm" aria-hidden="true"></span>Speech</span><span class="tag"><span class="i i-screen i-sm" aria-hidden="true"></span>On-screen</span><span class="decided" style="margin-left: auto"><span class="i i-star i-sm" aria-hidden="true"></span>Decided the label</span></div>
+        <p class="claim-text">Drinking hot water every morning cures the flu.</p>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap"><span class="st"><span class="i i-endorse i-sm" aria-hidden="true"></span>ENDORSES</span><span class="say" style="flex: 1 1 200px"><span class="i i-quote i-sm" aria-hidden="true"></span><q>this is the cure, trust me</q></span></div>
+        <div style="display: flex; gap: 10px; align-items: center"><span class="vd vd-con"><span class="i i-xc i-sm" aria-hidden="true"></span>CONTRADICTED</span><span class="t-small tnum">2 contradict · 0 support</span></div>
+        <p class="meaning" style="margin: 0"><span class="i i-info i-sm" aria-hidden="true" style="margin-top: 3px"></span>The speaker promotes a claim that the evidence contradicts.</p>
+      </a>
+      <a class="claim" href="#" style="border-color: var(--deb-bd)">
+        <div style="display: flex; gap: 8px; align-items: center"><span class="mono t-small">0:04–0:11</span><span class="decided" style="margin-left: auto"><span class="i i-star i-sm" aria-hidden="true"></span>Decided the label</span></div>
+        <p class="claim-text">Vaccines cause autism.</p>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap"><span class="st"><span class="i i-refute i-sm" aria-hidden="true"></span>REFUTES</span><span class="say" style="flex: 1 1 200px"><span class="i i-quote i-sm" aria-hidden="true"></span><q>that study was retracted, there is no link</q></span></div>
+        <div style="display: flex; gap: 10px; align-items: center"><span class="vd vd-con"><span class="i i-xc i-sm" aria-hidden="true"></span>CONTRADICTED</span><span class="t-small tnum">1 contradicts</span><span class="t-small faint">Systematic review, 2014</span></div>
+        <p class="meaning" style="margin: 0; color: var(--deb-fg); font-weight: 600"><span class="i i-shield i-sm" aria-hidden="true" style="margin-top: 3px"></span>The speaker refutes a claim the evidence contradicts. This corrects misinformation.</p>
+      </a>
+    </section>
+
+    <section class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 14px">
+      <h2 class="t-h2">SourceCard <span class="mono t-cap faint" style="font-weight: 400">kind: pubmed | official | internal</span></h2>
+      <article class="card" style="padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; box-shadow: none">
+        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap"><span class="sk"><span class="i i-book i-sm" aria-hidden="true"></span>PubMed paper</span><span class="tag tag-strong">Systematic review</span><span class="vd vd-con" style="margin-left: auto"><span class="i i-xc i-sm" aria-hidden="true"></span>Contradicts</span></div>
+        <h3 class="t-h3">Vaccines are not associated with autism: an evidence-based meta-analysis of case-control and cohort studies</h3>
+        <p class="t-small muted" style="margin: 0">Vaccine · 2014</p>
+        <blockquote class="t-small" style="margin: 0; padding: 8px 12px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 6px">“[Quoted passage from the abstract, returned by the evidence step.]”</blockquote>
+        <a class="t-small" href="#" style="display: inline-flex; gap: 4px; align-items: center">View on PubMed <span class="i i-ext i-sm" aria-hidden="true"></span></a>
+      </article>
+      <article class="card" style="padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; box-shadow: none">
+        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap"><span class="sk"><span class="i i-landmark i-sm" aria-hidden="true"></span>Official reference · CDC</span><span class="tag tag-strong">Official guidance</span><span class="vd vd-sup" style="margin-left: auto"><span class="i i-checkc i-sm" aria-hidden="true"></span>Supports</span></div>
+        <h3 class="t-h3">[Official page title]</h3>
+        <p class="t-small muted" style="margin: 0">Centers for Disease Control and Prevention · [year]</p>
+        <a class="t-small" href="#" style="display: inline-flex; gap: 4px; align-items: center">Open on cdc.gov <span class="i i-ext i-sm" aria-hidden="true"></span></a>
+      </article>
+      <article class="card" style="padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; box-shadow: none; background: var(--surface-2); border-style: dashed">
+        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap"><span class="sk"><span class="i i-archive i-sm" aria-hidden="true"></span>Internal library · scanned</span><span class="tag"><span class="i i-lock i-sm" aria-hidden="true"></span>Internal only</span><span class="vd vd-sup" style="margin-left: auto"><span class="i i-checkc i-sm" aria-hidden="true"></span>Supports</span></div>
+        <h3 class="t-h3">[Internal document title]</h3>
+        <p class="t-small muted" style="margin: 0">Scanned PDF, p. 14 · OCR text may contain errors</p>
+        <button class="btn btn-ghost btn-sm" type="button" style="align-self: flex-start"><span class="i i-file i-sm" aria-hidden="true"></span>Open in internal viewer</button>
+      </article>
+      <p class="t-cap faint" style="margin: 0">Study-type tag ladder: Systematic review · Randomised trial · Observational · Animal or lab · Official reference. Order evidence by this ladder, not by count.</p>
+    </section>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+    <section class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 12px">
+      <h2 class="t-h2">JobProgressStepper</h2>
+      <ol class="steps">
+        <li class="step done"><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg></span><span style="padding-top: 3px">Finding claims</span><span class="mono t-small faint" style="padding-top: 3px">0:11</span><span class="step-line" aria-hidden="true"></span></li>
+        <li class="step now" aria-current="step"><span class="dot">5</span><div style="padding-top: 3px"><div style="font-weight: 600">Checking stance</div><div class="t-small muted">Current step</div></div><span class="mono t-small faint" style="padding-top: 3px">0:06</span><span class="step-line" aria-hidden="true"></span></li>
+        <li class="step warn"><span class="dot">6</span><div style="padding-top: 3px"><div>Searching evidence</div><div class="t-small muted">Retrying</div></div><span></span><span class="step-line" aria-hidden="true"></span></li>
+        <li class="step fail"><span class="dot">7</span><div style="padding-top: 3px"><div>Verifying</div><div class="t-small muted">Failed</div></div><span></span></li>
+      </ol>
+      <p class="t-cap faint" style="margin: 0">States: pending · done · now · warn (retrying) · fail.</p>
+    </section>
+
+    <section class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 12px">
+      <h2 class="t-h2">Buttons + fields</h2>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap"><button class="btn btn-primary" type="button">Primary</button><button class="btn btn-secondary" type="button">Secondary</button><button class="btn btn-ghost" type="button">Ghost</button><button class="btn btn-primary" type="button" disabled>Disabled</button></div>
+      <div class="field"><label for="cx">Reason <span class="req">*</span></label><textarea class="textarea" id="cx" style="min-height: 64px" placeholder="Required"></textarea><span class="hint">Helper text sits under the field.</span></div>
+      <div class="seg" role="group" aria-label="Example"><button type="button" aria-pressed="true">By time</button><button type="button" aria-pressed="false">Decisive first</button></div>
+      <p class="t-cap faint" style="margin: 0">Min target 40 px desktop, 44 px tablet. Focus ring 2 px primary, offset 2.</p>
+    </section>
+
+    <section class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 12px">
+      <h2 class="t-h2">Empty · error</h2>
+      <div style="padding: 20px; border: 1px dashed var(--border-strong); border-radius: 10px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center">
+        <span class="i i-inbox i-xl faint" aria-hidden="true"></span><strong>No claims found</strong><span class="t-small muted">The video has no health claims we could identify. Label: NO-MISINFO.</span>
+      </div>
+      <div class="banner banner-err"><span class="i i-alert" aria-hidden="true" style="margin-top: 2px"></span><div class="t-small"><strong>Couldn't load sources.</strong> <a href="#">Try again</a></div></div>
+      <div class="banner banner-review"><span class="i i-flag" aria-hidden="true" style="margin-top: 2px"></span><div class="t-small"><strong>Waiting for a reviewer.</strong> Treat this label as provisional.</div></div>
+      <p class="t-cap faint" style="margin: 0">Pattern: what happened · what it means for the result · one action.</p>
+    </section>
+  </div>
+
+  <section class="card" style="padding: 24px; display: flex; flex-direction: column; gap: 12px">
+    <h2 class="t-h2">DataTable <span class="mono t-cap faint" style="font-weight: 400">sortable header · hover row · numeric right-aligned · scroll box below 1024 px</span></h2>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th scope="col">Video</th><th scope="col" aria-sort="descending"><span class="sort">Submitted <span class="i i-chevd i-sm" aria-hidden="true"></span></span></th><th scope="col">State</th><th scope="col">Label</th><th scope="col">Review</th><th scope="col" class="num">Claims</th></tr></thead>
+      <tbody>
+        <tr><td><div style="display: flex; gap: 12px; align-items: center"><span class="thumb" aria-hidden="true"></span><div><div style="font-weight: 600">Hot water flu cure</div><div class="mono t-cap faint">hot-water-flu.mp4</div></div></div></td><td class="tnum muted">Today, 06:56</td><td><span class="js js-done"><span class="i i-checkc i-sm" aria-hidden="true"></span>Completed</span></td><td><span class="lb lb-mis"><span class="i i-alert i-sm" aria-hidden="true"></span>MISINFO</span></td><td class="muted">Not required</td><td class="num">3</td></tr>
+        <tr><td><div style="display: flex; gap: 12px; align-items: center"><span class="thumb" aria-hidden="true"></span><div><div style="font-weight: 600">Nurse responds to vaccine myth</div><div class="mono t-cap faint">nurse-autism-myth.mp4</div></div></div></td><td class="tnum muted">Yesterday, 17:12</td><td><span class="js js-done"><span class="i i-checkc i-sm" aria-hidden="true"></span>Completed</span></td><td><span class="lb lb-deb"><span class="i i-shield i-sm" aria-hidden="true"></span>DEBUNKED</span></td><td><span class="rs rs-verified"><span class="i i-checkc i-sm" aria-hidden="true"></span>Verified</span></td><td class="num">2</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light","section":"Display"},"$preview":{"width":1440,"height":2400}}'>
+class Component extends DCLogic {
+  renderVals() { return { theme: this.props.theme ?? 'light' }; }
+}
+</script>
+</body>
+</html>

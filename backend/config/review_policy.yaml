@@ -1,0 +1,30 @@
+# Human-review rule (target design §11 "The review rule", §12). Loaded by
+# app.core.graph.review_policy. Starting values, not measured ones: the threshold is
+# meant to be chosen on the labelled set (§11 "who sets the threshold?", T15), and the
+# evaluation reports how many cases each rule sends to review (§12).
+version: review_v1
+status: provisional
+
+# Calibrated confidence below this goes to review. Dormant until confidence is
+# calibrated (T15): an uncalibrated (null) confidence never fires this rule.
+confidence_threshold: 0.70
+
+# A deciding claim whose cited papers are all of these study types "rests only on weak
+# study types" (§11: lab, animal or single-case studies). Names are the reranker's
+# StudyType values (app/core/retrieval/rerank.py). "unknown" is deliberately not here.
+weak_study_types: [in_vitro, animal, case_report]
+
+# Claim categories treated as high-risk medical advice (issue #36: "uncertain high-risk
+# medical claims"). A claim in one of these that the speaker endorses and the evidence
+# could not settle goes to review even when it didn't decide the label. Provisional:
+# there is no agreed category taxonomy yet (context/CLAIM_LEVEL.md); align with it.
+high_risk_categories:
+  - treatment_efficacy
+  - treatment_discontinuation
+  - medication
+  - dosage
+  - vaccine_safety
+  - vaccination
+  - cancer_treatment
+  - pregnancy
+  - child_health

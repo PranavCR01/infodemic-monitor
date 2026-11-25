@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bg font-sans text-body text-ink;
+  }
+  :focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+}
+
+/* Export / print (HANDOFF §6.10): US Letter, 0.75 in margins, 12 pt body. */
+@page {
+  size: letter;
+  margin: 0.75in;
+}
+@media print {
+  body {
+    background: #fff;
+    font-size: 12pt;
+  }
+  .export {
+    box-shadow: none !important;
+  }
+}

@@ -1,0 +1,1325 @@
+{
+ "video_id": "v47",
+ "filename": "test_clip12.mp4",
+ "relative_path": "Misinfo Dataset/Haoran Zhang/No misinfo/test_clip12.mp4",
+ "collector": "Haoran Zhang",
+ "collector_label": "NO_MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:13:13",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 68.29,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.9,
+    "text": "Did you know that lobsters are considered biologically immortal?"
+   },
+   {
+    "id": "t2",
+    "start": 2.9,
+    "end": 6.98,
+    "text": "If you were a lobster, as long as you had enough food and managed to avoid predators,"
+   },
+   {
+    "id": "t3",
+    "start": 6.98,
+    "end": 9.62,
+    "text": "you could keep growing endlessly and technically never die."
+   },
+   {
+    "id": "t4",
+    "start": 9.62,
+    "end": 13.36,
+    "text": "There's a lobster named Big George that lived for more than 140 years."
+   },
+   {
+    "id": "t5",
+    "start": 13.36,
+    "end": 14.72,
+    "text": "But there's a catch."
+   },
+   {
+    "id": "t6",
+    "start": 14.72,
+    "end": 16.36,
+    "text": "Lobsters don't actually live forever."
+   },
+   {
+    "id": "t7",
+    "start": 16.36,
+    "end": 20.6,
+    "text": "The reason they eventually die is that their soft bodies keep growing, while their hard"
+   },
+   {
+    "id": "t8",
+    "start": 20.6,
+    "end": 21.88,
+    "text": "shells do not."
+   },
+   {
+    "id": "t9",
+    "start": 21.88,
+    "end": 26.96,
+    "text": "To manage this, they must molt, shedding their old exoskeleton and growing a new one."
+   },
+   {
+    "id": "t10",
+    "start": 26.96,
+    "end": 32.28,
+    "text": "The problem is, as lobsters get bigger, this process demands more and more energy."
+   },
+   {
+    "id": "t11",
+    "start": 32.28,
+    "end": 35.44,
+    "text": "Eventually, it becomes too exhausting and they die."
+   },
+   {
+    "id": "t12",
+    "start": 35.44,
+    "end": 38.4,
+    "text": "So why don't lobsters age the way humans do?"
+   },
+   {
+    "id": "t13",
+    "start": 38.4,
+    "end": 43.84,
+    "text": "The reason is, human cells can only divide about 40 times before they stop replicating,"
+   },
+   {
+    "id": "t14",
+    "start": 43.84,
+    "end": 48.56,
+    "text": "partly due to structures called telomeres, protective caps at the ends of our chromosome."
+   },
+   {
+    "id": "t15",
+    "start": 48.56,
+    "end": 53.28,
+    "text": "Each time a cell divides, these telomeres shorten until they're too small to protect"
+   },
+   {
+    "id": "t16",
+    "start": 53.28,
+    "end": 56.4,
+    "text": "the DNA and the cell can no longer divide."
+   },
+   {
+    "id": "t17",
+    "start": 56.4,
+    "end": 61.36,
+    "text": "however, have a special enzyme called telomerase that repairs and rebuilds these telomeres,"
+   },
+   {
+    "id": "t18",
+    "start": 61.36,
+    "end": 64.16,
+    "text": "letting them effectively bypass the normal aging process."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 35,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "DID",
+    "confidence": 0.995
+   },
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.978
+   },
+   {
+    "time": 0.0,
+    "text": "dr peter81",
+    "confidence": 0.673
+   },
+   {
+    "time": 2.0,
+    "text": "BIOLOGICALLY",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.777
+   },
+   {
+    "time": 2.0,
+    "text": "dr-peter81",
+    "confidence": 0.835
+   },
+   {
+    "time": 4.0,
+    "text": "LOBSTER",
+    "confidence": 0.995
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.852
+   },
+   {
+    "time": 6.0,
+    "text": "To",
+    "confidence": 0.805
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.0,
+    "text": "@ dr-peter81",
+    "confidence": 0.902
+   },
+   {
+    "time": 8.0,
+    "text": "ENDLESSLY",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "dr-peter81",
+    "confidence": 0.89
+   },
+   {
+    "time": 10.0,
+    "text": "LOBSTER",
+    "confidence": 0.891
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "@ drpeter81",
+    "confidence": 0.732
+   },
+   {
+    "time": 12.0,
+    "text": "THAN",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.0,
+    "text": "@ dr-peter81",
+    "confidence": 0.943
+   },
+   {
+    "time": 14.0,
+    "text": "CATCH",
+    "confidence": 0.995
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.0,
+    "text": "@ dr-peter81",
+    "confidence": 0.942
+   },
+   {
+    "time": 16.0,
+    "text": "FOREVER",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.0,
+    "text": "dr peter81",
+    "confidence": 0.961
+   },
+   {
+    "time": 18.0,
+    "text": "I5",
+    "confidence": 0.539
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.0,
+    "text": "dr-peter81",
+    "confidence": 0.95
+   },
+   {
+    "time": 20.0,
+    "text": "GROWING",
+    "confidence": 0.666
+   },
+   {
+    "time": 20.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 20.0,
+    "text": "@ dr-peter81",
+    "confidence": 0.986
+   },
+   {
+    "time": 22.0,
+    "text": "To",
+    "confidence": 0.848
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 22.0,
+    "text": "@ dr peter81",
+    "confidence": 0.732
+   },
+   {
+    "time": 24.0,
+    "text": "MOLT",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 26.0,
+    "text": "AND",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 26.0,
+    "text": "@ dr-peter81",
+    "confidence": 0.931
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 28.0,
+    "text": "dr-peter81",
+    "confidence": 0.814
+   },
+   {
+    "time": 30.0,
+    "text": "PROCESS",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 0.847
+   },
+   {
+    "time": 30.0,
+    "text": "dr-peter81",
+    "confidence": 0.671
+   },
+   {
+    "time": 32.0,
+    "text": "ENERGY",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 32.0,
+    "text": "@ drpeter81",
+    "confidence": 0.935
+   },
+   {
+    "time": 34.0,
+    "text": "EXHAUSTING",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 34.0,
+    "text": "@ drpeter81",
+    "confidence": 0.651
+   },
+   {
+    "time": 36.0,
+    "text": "SO",
+    "confidence": 0.657
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.0,
+    "text": "dr-peter81",
+    "confidence": 0.884
+   },
+   {
+    "time": 38.0,
+    "text": "HUMANS",
+    "confidence": 0.999
+   },
+   {
+    "time": 38.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 38.0,
+    "text": "dr-peter81",
+    "confidence": 0.695
+   },
+   {
+    "time": 40.0,
+    "text": "HUMAN",
+    "confidence": 0.99
+   },
+   {
+    "time": 40.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 40.0,
+    "text": "@ drpeter81",
+    "confidence": 0.693
+   },
+   {
+    "time": 42.0,
+    "text": "TIMES",
+    "confidence": 0.993
+   },
+   {
+    "time": 42.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.0,
+    "text": "@ dr-peter81",
+    "confidence": 0.935
+   },
+   {
+    "time": 44.0,
+    "text": "PARTLY",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 44.0,
+    "text": "@ dr-peter81",
+    "confidence": 0.946
+   },
+   {
+    "time": 46.0,
+    "text": "TELOMERES",
+    "confidence": 0.996
+   },
+   {
+    "time": 46.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 46.0,
+    "text": "~peter81",
+    "confidence": 0.982
+   },
+   {
+    "time": 46.0,
+    "text": "@ dr",
+    "confidence": 0.934
+   },
+   {
+    "time": 48.0,
+    "text": "OUR",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 48.0,
+    "text": "@ dr-peter81",
+    "confidence": 0.689
+   },
+   {
+    "time": 50.0,
+    "text": "DIVIDES",
+    "confidence": 0.998
+   },
+   {
+    "time": 50.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 50.0,
+    "text": "@ dr-peter81",
+    "confidence": 0.689
+   },
+   {
+    "time": 52.0,
+    "text": "SHORTEN",
+    "confidence": 0.999
+   },
+   {
+    "time": 52.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 52.0,
+    "text": "@ dr peter81",
+    "confidence": 0.884
+   },
+   {
+    "time": 54.0,
+    "text": "DNA",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 54.0,
+    "text": "@ dr-peter81",
+    "confidence": 0.955
+   },
+   {
+    "time": 56.0,
+    "text": "DIVIDE",
+    "confidence": 0.997
+   },
+   {
+    "time": 56.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 56.0,
+    "text": "@ dr-peter81",
+    "confidence": 0.933
+   },
+   {
+    "time": 58.0,
+    "text": "ENZYME",
+    "confidence": 0.997
+   },
+   {
+    "time": 58.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 60.0,
+    "text": "REPAIRS",
+    "confidence": 0.999
+   },
+   {
+    "time": 60.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.0,
+    "text": "@dr peter81",
+    "confidence": 0.612
+   },
+   {
+    "time": 62.0,
+    "text": "EFFECTIVELY",
+    "confidence": 0.911
+   },
+   {
+    "time": 62.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.0,
+    "text": "dr-peter81",
+    "confidence": 0.712
+   },
+   {
+    "time": 64.0,
+    "text": "PROCESS",
+    "confidence": 0.997
+   },
+   {
+    "time": 64.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 66.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 66.0,
+    "text": "drpeter81",
+    "confidence": 1.0
+   },
+   {
+    "time": 68.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 68.0,
+    "text": "drpeter81",
+    "confidence": 0.983
+   }
+  ],
+  "captions": [
+   {
+    "text": "DID",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.995,
+    "id": "o1"
+   },
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.978,
+    "id": "o2"
+   },
+   {
+    "text": "dr peter81",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.673,
+    "id": "o3"
+   },
+   {
+    "text": "BIOLOGICALLY",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.999,
+    "id": "o4"
+   },
+   {
+    "text": "TikTok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.777,
+    "id": "o5"
+   },
+   {
+    "text": "dr-peter81",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.835,
+    "id": "o6"
+   },
+   {
+    "text": "LOBSTER",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.995,
+    "id": "o7"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.852,
+    "id": "o8"
+   },
+   {
+    "text": "To",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.805,
+    "id": "o9"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.999,
+    "id": "o10"
+   },
+   {
+    "text": "@ dr-peter81",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.902,
+    "id": "o11"
+   },
+   {
+    "text": "ENDLESSLY",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.999,
+    "id": "o12"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.999,
+    "id": "o13"
+   },
+   {
+    "text": "dr-peter81",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.89,
+    "id": "o14"
+   },
+   {
+    "text": "LOBSTER",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.891,
+    "id": "o15"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o16"
+   },
+   {
+    "text": "@ drpeter81",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.732,
+    "id": "o17"
+   },
+   {
+    "text": "THAN",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o18"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o19"
+   },
+   {
+    "text": "@ dr-peter81",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.943,
+    "id": "o20"
+   },
+   {
+    "text": "CATCH",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.995,
+    "id": "o21"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.999,
+    "id": "o22"
+   },
+   {
+    "text": "@ dr-peter81",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.942,
+    "id": "o23"
+   },
+   {
+    "text": "FOREVER",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o24"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.999,
+    "id": "o25"
+   },
+   {
+    "text": "dr peter81",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.961,
+    "id": "o26"
+   },
+   {
+    "text": "I5",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.539,
+    "id": "o27"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.999,
+    "id": "o28"
+   },
+   {
+    "text": "dr-peter81",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.95,
+    "id": "o29"
+   },
+   {
+    "text": "GROWING",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.666,
+    "id": "o30"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.997,
+    "id": "o31"
+   },
+   {
+    "text": "@ dr-peter81",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.986,
+    "id": "o32"
+   },
+   {
+    "text": "To",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.848,
+    "id": "o33"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.999,
+    "id": "o34"
+   },
+   {
+    "text": "@ dr peter81",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.732,
+    "id": "o35"
+   },
+   {
+    "text": "MOLT",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o36"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.997,
+    "id": "o37"
+   },
+   {
+    "text": "AND",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o38"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.999,
+    "id": "o39"
+   },
+   {
+    "text": "@ dr-peter81",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.931,
+    "id": "o40"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.999,
+    "id": "o41"
+   },
+   {
+    "text": "dr-peter81",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.814,
+    "id": "o42"
+   },
+   {
+    "text": "PROCESS",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.999,
+    "id": "o43"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.847,
+    "id": "o44"
+   },
+   {
+    "text": "dr-peter81",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.671,
+    "id": "o45"
+   },
+   {
+    "text": "ENERGY",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o46"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.999,
+    "id": "o47"
+   },
+   {
+    "text": "@ drpeter81",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.935,
+    "id": "o48"
+   },
+   {
+    "text": "EXHAUSTING",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o49"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.999,
+    "id": "o50"
+   },
+   {
+    "text": "@ drpeter81",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.651,
+    "id": "o51"
+   },
+   {
+    "text": "SO",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.657,
+    "id": "o52"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.999,
+    "id": "o53"
+   },
+   {
+    "text": "dr-peter81",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.884,
+    "id": "o54"
+   },
+   {
+    "text": "HUMANS",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.999,
+    "id": "o55"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.999,
+    "id": "o56"
+   },
+   {
+    "text": "dr-peter81",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.695,
+    "id": "o57"
+   },
+   {
+    "text": "HUMAN",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.99,
+    "id": "o58"
+   },
+   {
+    "text": "TikTok",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.999,
+    "id": "o59"
+   },
+   {
+    "text": "@ drpeter81",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.693,
+    "id": "o60"
+   },
+   {
+    "text": "TIMES",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.993,
+    "id": "o61"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.999,
+    "id": "o62"
+   },
+   {
+    "text": "@ dr-peter81",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.935,
+    "id": "o63"
+   },
+   {
+    "text": "PARTLY",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o64"
+   },
+   {
+    "text": "TikTok",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.999,
+    "id": "o65"
+   },
+   {
+    "text": "@ dr-peter81",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.946,
+    "id": "o66"
+   },
+   {
+    "text": "TELOMERES",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.996,
+    "id": "o67"
+   },
+   {
+    "text": "TikTok",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.999,
+    "id": "o68"
+   },
+   {
+    "text": "~peter81",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.982,
+    "id": "o69"
+   },
+   {
+    "text": "@ dr",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.934,
+    "id": "o70"
+   },
+   {
+    "text": "OUR",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o71"
+   },
+   {
+    "text": "TikTok",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.999,
+    "id": "o72"
+   },
+   {
+    "text": "@ dr-peter81",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.689,
+    "id": "o73"
+   },
+   {
+    "text": "DIVIDES",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.998,
+    "id": "o74"
+   },
+   {
+    "text": "TikTok",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.999,
+    "id": "o75"
+   },
+   {
+    "text": "@ dr-peter81",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.689,
+    "id": "o76"
+   },
+   {
+    "text": "SHORTEN",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.999,
+    "id": "o77"
+   },
+   {
+    "text": "TikTok",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.999,
+    "id": "o78"
+   },
+   {
+    "text": "@ dr peter81",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.884,
+    "id": "o79"
+   },
+   {
+    "text": "DNA",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o80"
+   },
+   {
+    "text": "TikTok",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.999,
+    "id": "o81"
+   },
+   {
+    "text": "@ dr-peter81",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.955,
+    "id": "o82"
+   },
+   {
+    "text": "DIVIDE",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.997,
+    "id": "o83"
+   },
+   {
+    "text": "TikTok",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.999,
+    "id": "o84"
+   },
+   {
+    "text": "@ dr-peter81",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.933,
+    "id": "o85"
+   },
+   {
+    "text": "ENZYME",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.997,
+    "id": "o86"
+   },
+   {
+    "text": "TikTok",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.999,
+    "id": "o87"
+   },
+   {
+    "text": "REPAIRS",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.999,
+    "id": "o88"
+   },
+   {
+    "text": "TikTok",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 1.0,
+    "id": "o89"
+   },
+   {
+    "text": "@dr peter81",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.612,
+    "id": "o90"
+   },
+   {
+    "text": "EFFECTIVELY",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.911,
+    "id": "o91"
+   },
+   {
+    "text": "TikTok",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 1.0,
+    "id": "o92"
+   },
+   {
+    "text": "dr-peter81",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.712,
+    "id": "o93"
+   },
+   {
+    "text": "PROCESS",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.997,
+    "id": "o94"
+   },
+   {
+    "text": "TikTok",
+    "start": 64.0,
+    "end": 66.0,
+    "confidence": 0.999,
+    "id": "o95"
+   },
+   {
+    "text": "drpeter81",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 1.0,
+    "id": "o96"
+   },
+   {
+    "text": "TikTok",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.999,
+    "id": "o97"
+   },
+   {
+    "text": "drpeter81",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.983,
+    "id": "o98"
+   }
+  ]
+ }
+}

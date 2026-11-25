@@ -1,0 +1,89 @@
+{
+ "video_id": "v123",
+ "filename": "new_TikTok_7229809831291555118.mp4",
+ "relative_path": "new_TikTok_7229809831291555118.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@dermdoctor",
+ "extracted_at": "2026-11-23T08:45:57",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.993,
+  "duration_seconds": 10.98,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 7.2,
+    "text": "What on earth is going on here? I genuinely don't understand these videos or what the purpose is."
+   },
+   {
+    "id": "t2",
+    "start": 7.2,
+    "end": 10.8,
+    "text": "This guy really went and glued garbanzo beans to his legs."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 6,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "DermDoctor Explains",
+    "confidence": 0.871
+   },
+   {
+    "time": 2.0,
+    "text": "DermDoctor Explains",
+    "confidence": 0.86
+   },
+   {
+    "time": 10.0,
+    "text": "Heirloom",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "beans",
+    "confidence": 1.0
+   }
+  ],
+  "captions": [
+   {
+    "text": "DermDoctor Explains",
+    "start": 0.0,
+    "end": 2.0,
+    "confidence": 0.871,
+    "id": "o1"
+   },
+   {
+    "text": "Heirloom",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o2"
+   },
+   {
+    "text": "beans",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o3"
+   }
+  ]
+ }
+}

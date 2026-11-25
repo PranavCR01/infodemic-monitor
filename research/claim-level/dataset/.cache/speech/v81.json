@@ -1,0 +1,464 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.998,
+  "duration_seconds": 169.32,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.76,
+    "text": "These are the habits and wellness rituals"
+   },
+   {
+    "id": "t2",
+    "start": 2.76,
+    "end": 4.92,
+    "text": "that I swear by for women's health"
+   },
+   {
+    "id": "t3",
+    "start": 4.92,
+    "end": 6.2,
+    "text": "that are beginner-friendly."
+   },
+   {
+    "id": "t4",
+    "start": 6.2,
+    "end": 8.84,
+    "text": "If you're wanting to get started on a health and wellness journey"
+   },
+   {
+    "id": "t5",
+    "start": 8.84,
+    "end": 10.48,
+    "text": "and implement new habits and rituals"
+   },
+   {
+    "id": "t6",
+    "start": 10.48,
+    "end": 11.84,
+    "text": "that's fairly easy to commit to,"
+   },
+   {
+    "id": "t7",
+    "start": 11.84,
+    "end": 14.4,
+    "text": "I think these give good fun for their book"
+   },
+   {
+    "id": "t8",
+    "start": 14.4,
+    "end": 15.72,
+    "text": "and path of least resistance."
+   },
+   {
+    "id": "t9",
+    "start": 15.72,
+    "end": 17.24,
+    "text": "I think they are pretty easy"
+   },
+   {
+    "id": "t10",
+    "start": 17.24,
+    "end": 18.88,
+    "text": "to start implementing in your lifestyle."
+   },
+   {
+    "id": "t11",
+    "start": 18.88,
+    "end": 19.72,
+    "text": "Number one."
+   },
+   {
+    "id": "t12",
+    "start": 19.72,
+    "end": 21.36,
+    "text": "We've got Legs Up the Wall."
+   },
+   {
+    "id": "t13",
+    "start": 21.36,
+    "end": 23.32,
+    "text": "Legs Up the Wall, you probably see this everywhere."
+   },
+   {
+    "id": "t14",
+    "start": 23.32,
+    "end": 24.32,
+    "text": "It's not, here's a picture."
+   },
+   {
+    "id": "t15",
+    "start": 24.32,
+    "end": 26.92,
+    "text": "This is a restorative yoga pose, by the way."
+   },
+   {
+    "id": "t16",
+    "start": 26.92,
+    "end": 27.84,
+    "text": "I am the new teacher,"
+   },
+   {
+    "id": "t17",
+    "start": 27.84,
+    "end": 29.92,
+    "text": "managing enemy trio systemistically."
+   },
+   {
+    "id": "t18",
+    "start": 29.92,
+    "end": 33.84,
+    "text": "Legs up the wall is a great way to regulate your nervous system,"
+   },
+   {
+    "id": "t19",
+    "start": 33.84,
+    "end": 36.04,
+    "text": "improve circulation, the board is a digestion."
+   },
+   {
+    "id": "t20",
+    "start": 36.04,
+    "end": 38.12,
+    "text": "It has so many benefits, and it's so easy to insulate."
+   },
+   {
+    "id": "t21",
+    "start": 38.12,
+    "end": 39.32,
+    "text": "However, get started with it,"
+   },
+   {
+    "id": "t22",
+    "start": 39.32,
+    "end": 42.08,
+    "text": "is you probably scroll on your phone in bed."
+   },
+   {
+    "id": "t23",
+    "start": 42.08,
+    "end": 42.92,
+    "text": "I know you do."
+   },
+   {
+    "id": "t24",
+    "start": 42.92,
+    "end": 44.92,
+    "text": "You might read in bed if you do."
+   },
+   {
+    "id": "t25",
+    "start": 44.92,
+    "end": 47.4,
+    "text": "Props to you, love that for you."
+   },
+   {
+    "id": "t26",
+    "start": 47.4,
+    "end": 48.44,
+    "text": "You might watch TV."
+   },
+   {
+    "id": "t27",
+    "start": 48.44,
+    "end": 50.68,
+    "text": "You can do legs up the wall by doing all of those things."
+   },
+   {
+    "id": "t28",
+    "start": 50.68,
+    "end": 52.84,
+    "text": "You might go, ah, if you're already scrolling,"
+   },
+   {
+    "id": "t29",
+    "start": 52.84,
+    "end": 55.64,
+    "text": "if you're already watching tech TV, already reading,"
+   },
+   {
+    "id": "t30",
+    "start": 55.64,
+    "end": 57.08,
+    "text": "doing whatever you're doing,"
+   },
+   {
+    "id": "t31",
+    "start": 57.08,
+    "end": 63.02,
+    "text": "might as well put your legs up the wall whilst you do it right nice and easy then from there"
+   },
+   {
+    "id": "t32",
+    "start": 63.66,
+    "end": 67.66,
+    "text": "maybe you start shifting habit when it's already ingrained as a habit then maybe you can introduce"
+   },
+   {
+    "id": "t33",
+    "start": 67.66,
+    "end": 72.38,
+    "text": "some meditation whilst you do it maybe you can introduce some diaphragmatic breathing"
+   },
+   {
+    "id": "t34",
+    "start": 72.38,
+    "end": 76.22,
+    "text": "whilst you do it you know you can start to have it stuck and then for my next one this one's my"
+   },
+   {
+    "id": "t35",
+    "start": 76.22,
+    "end": 81.02,
+    "text": "favorite I do perhaps have an addiction whilst I'm traveling this is one of the things I missed"
+   },
+   {
+    "id": "t36",
+    "start": 81.02,
+    "end": 84.98,
+    "text": "I think it's the shacky mat or acupressure mat."
+   },
+   {
+    "id": "t37",
+    "start": 84.98,
+    "end": 87.44,
+    "text": "Me and my acupressure mat, besties."
+   },
+   {
+    "id": "t38",
+    "start": 87.44,
+    "end": 89.88,
+    "text": "I have been known to fall asleep on my acupressure mat."
+   },
+   {
+    "id": "t39",
+    "start": 89.88,
+    "end": 91.48,
+    "text": "I would live on that thing."
+   },
+   {
+    "id": "t40",
+    "start": 91.48,
+    "end": 92.76,
+    "text": "I would lie on that."
+   },
+   {
+    "id": "t41",
+    "start": 92.76,
+    "end": 95.5,
+    "text": "Legs up the wall, work from home."
+   },
+   {
+    "id": "t42",
+    "start": 95.5,
+    "end": 96.58,
+    "text": "Great."
+   },
+   {
+    "id": "t43",
+    "start": 96.58,
+    "end": 97.42,
+    "text": "It's great."
+   },
+   {
+    "id": "t44",
+    "start": 97.42,
+    "end": 98.42,
+    "text": "And it's so easy to implement"
+   },
+   {
+    "id": "t45",
+    "start": 98.42,
+    "end": 99.66,
+    "text": "if you're already doing legs up the wall"
+   },
+   {
+    "id": "t46",
+    "start": 99.66,
+    "end": 100.86,
+    "text": "because then you just do legs up the wall"
+   },
+   {
+    "id": "t47",
+    "start": 100.86,
+    "end": 101.7,
+    "text": "on the shacky mat."
+   },
+   {
+    "id": "t48",
+    "start": 101.7,
+    "end": 103.14,
+    "text": "I would even just lie on that shacky mat,"
+   },
+   {
+    "id": "t49",
+    "start": 103.14,
+    "end": 104.86,
+    "text": "scroll on my phone, lie on the floor on it,"
+   },
+   {
+    "id": "t50",
+    "start": 104.86,
+    "end": 106.98,
+    "text": "work while I'm on it, I just sleep on it."
+   },
+   {
+    "id": "t51",
+    "start": 106.98,
+    "end": 108.38,
+    "text": "You can just lie on it in bed before sleep"
+   },
+   {
+    "id": "t52",
+    "start": 108.38,
+    "end": 110.88,
+    "text": "and then just peel it off yourself"
+   },
+   {
+    "id": "t53",
+    "start": 110.88,
+    "end": 112.46,
+    "text": "I love that I'm in a wake-up."
+   },
+   {
+    "id": "t54",
+    "start": 112.46,
+    "end": 115.22,
+    "text": "Just kidding, I feel like I highly recommend ShaktiMap."
+   },
+   {
+    "id": "t55",
+    "start": 115.22,
+    "end": 116.14,
+    "text": "That's number two."
+   },
+   {
+    "id": "t56",
+    "start": 116.14,
+    "end": 118.06,
+    "text": "Number three, and we're just gonna do three,"
+   },
+   {
+    "id": "t57",
+    "start": 118.06,
+    "end": 119.5,
+    "text": "because I think this is a great place to start."
+   },
+   {
+    "id": "t58",
+    "start": 119.5,
+    "end": 121.38,
+    "text": "If you can do number three,"
+   },
+   {
+    "id": "t59",
+    "start": 121.38,
+    "end": 125.5,
+    "text": "your onto a winner is fat protein carbs combo."
+   },
+   {
+    "id": "t60",
+    "start": 125.5,
+    "end": 126.74,
+    "text": "You're already eating, right?"
+   },
+   {
+    "id": "t61",
+    "start": 126.74,
+    "end": 127.82,
+    "text": "You're already eating."
+   },
+   {
+    "id": "t62",
+    "start": 127.82,
+    "end": 128.98,
+    "text": "That's how I think about it."
+   },
+   {
+    "id": "t63",
+    "start": 128.98,
+    "end": 131.54,
+    "text": "Fat protein carbs is so ingrained into my brain."
+   },
+   {
+    "id": "t64",
+    "start": 131.54,
+    "end": 133.94,
+    "text": "Whatever I'm making, I'm thinking."
+   },
+   {
+    "id": "t65",
+    "start": 133.94,
+    "end": 136.82,
+    "text": "Where's the fat, where's the protein, and where's the carbs?"
+   },
+   {
+    "id": "t66",
+    "start": 136.82,
+    "end": 138.54,
+    "text": "Because we need them, we need them."
+   },
+   {
+    "id": "t67",
+    "start": 138.54,
+    "end": 139.94,
+    "text": "We need them in combination."
+   },
+   {
+    "id": "t68",
+    "start": 139.94,
+    "end": 144.96,
+    "text": "And if you're a woman and you're trying to improve anything, specifically hormonally,"
+   },
+   {
+    "id": "t69",
+    "start": 144.96,
+    "end": 149.6,
+    "text": "blood sugar balance, fertility, ovulation, optimizing your health, blood sugar balance"
+   },
+   {
+    "id": "t70",
+    "start": 149.6,
+    "end": 150.6,
+    "text": "is key."
+   },
+   {
+    "id": "t71",
+    "start": 150.6,
+    "end": 156.04,
+    "text": "All of the gym bros online telling you blood sugar balance doesn't matter."
+   },
+   {
+    "id": "t72",
+    "start": 156.04,
+    "end": 157.04,
+    "text": "I haven't even got anywhere."
+   },
+   {
+    "id": "t73",
+    "start": 157.04,
+    "end": 160.48,
+    "text": "And I think that is a really great place to start with nutrition as well, like just get"
+   },
+   {
+    "id": "t74",
+    "start": 160.48,
+    "end": 163.04,
+    "text": "those basics down and then just start layering on top of that."
+   },
+   {
+    "id": "t75",
+    "start": 163.04,
+    "end": 166.04,
+    "text": "Those are where I start on my health and wellness journey."
+   }
+  ]
+ }
+}

@@ -1,0 +1,451 @@
+{
+ "video_id": "v84",
+ "filename": "new_facebook_667344055083567.mp4",
+ "relative_path": "new_facebook_667344055083567.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:54",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.534,
+  "duration_seconds": 120.26,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 8.54,
+    "text": "Friends, the Omicron is rampant and we are all very concerned. I am speaking to you"
+   },
+   {
+    "id": "t2",
+    "start": 9.34,
+    "end": 15.42,
+    "text": "to make you worry free with a very simple technique which you can use for yourself,"
+   },
+   {
+    "id": "t3",
+    "start": 16.14,
+    "end": 23.42,
+    "text": "your friends, your family and all your loved ones. I have been using this for more than four or five"
+   },
+   {
+    "id": "t4",
+    "start": 23.42,
+    "end": 32.9,
+    "text": "months and I have distributed about thousand packets of dried ginger which is also called"
+   },
+   {
+    "id": "t5",
+    "start": 32.9,
+    "end": 45.38,
+    "text": "soint it's ginger powder to these people what you have to do is you have to take a bit of this"
+   },
+   {
+    "id": "t6",
+    "start": 45.38,
+    "end": 54.16,
+    "text": "can you see this on my finger put it in your nostril snot put it in the other nostril snot"
+   },
+   {
+    "id": "t7",
+    "start": 54.16,
+    "end": 63.42,
+    "text": "I do it every morning and evening. The reason is very scientific. Dry ginger is"
+   },
+   {
+    "id": "t8",
+    "start": 63.42,
+    "end": 70.5,
+    "text": "highly alkaline and it has a high pH value. When you do it inside all the mucus"
+   },
+   {
+    "id": "t9",
+    "start": 70.5,
+    "end": 76.78,
+    "text": "and the acid the infections which you have are all acidic and have low pH. They"
+   },
+   {
+    "id": "t10",
+    "start": 76.78,
+    "end": 84.08,
+    "text": "get killed instantly. As you know the virus COVID and other virus travels"
+   },
+   {
+    "id": "t11",
+    "start": 84.08,
+    "end": 90.88,
+    "text": "through the nostrils, through the mucus, into the throat and then possibly onto the lungs."
+   },
+   {
+    "id": "t12",
+    "start": 91.76,
+    "end": 99.28,
+    "text": "So from the nostril itself where we ingest it, if we take care of it, we'll be perfectly fine."
+   },
+   {
+    "id": "t13",
+    "start": 99.84,
+    "end": 107.2,
+    "text": "So please circulate this in the public interest to as many people as you can and benefit from it."
+   },
+   {
+    "id": "t14",
+    "start": 107.2,
+    "end": 108.42,
+    "text": "it."
+   },
+   {
+    "id": "t15",
+    "start": 108.42,
+    "end": 118.98,
+    "text": "Regards, take care."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 61,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.741
+   },
+   {
+    "time": 2.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.829
+   },
+   {
+    "time": 4.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.829
+   },
+   {
+    "time": 6.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.759
+   },
+   {
+    "time": 8.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.757
+   },
+   {
+    "time": 10.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.803
+   },
+   {
+    "time": 12.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.75
+   },
+   {
+    "time": 14.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.751
+   },
+   {
+    "time": 16.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.881
+   },
+   {
+    "time": 18.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.882
+   },
+   {
+    "time": 20.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.854
+   },
+   {
+    "time": 22.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.821
+   },
+   {
+    "time": 24.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.805
+   },
+   {
+    "time": 26.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.868
+   },
+   {
+    "time": 28.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.868
+   },
+   {
+    "time": 30.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.617
+   },
+   {
+    "time": 32.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.865
+   },
+   {
+    "time": 34.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.868
+   },
+   {
+    "time": 36.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.927
+   },
+   {
+    "time": 38.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.928
+   },
+   {
+    "time": 40.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.924
+   },
+   {
+    "time": 42.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.924
+   },
+   {
+    "time": 44.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.925
+   },
+   {
+    "time": 46.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.903
+   },
+   {
+    "time": 48.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.902
+   },
+   {
+    "time": 50.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.941
+   },
+   {
+    "time": 52.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.941
+   },
+   {
+    "time": 54.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.947
+   },
+   {
+    "time": 56.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.674
+   },
+   {
+    "time": 58.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.673
+   },
+   {
+    "time": 60.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.899
+   },
+   {
+    "time": 62.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.897
+   },
+   {
+    "time": 64.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.902
+   },
+   {
+    "time": 66.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.914
+   },
+   {
+    "time": 68.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.914
+   },
+   {
+    "time": 70.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.851
+   },
+   {
+    "time": 72.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.853
+   },
+   {
+    "time": 74.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.859
+   },
+   {
+    "time": 76.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.905
+   },
+   {
+    "time": 78.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.905
+   },
+   {
+    "time": 80.0,
+    "text": "WATANKi PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.78
+   },
+   {
+    "time": 82.0,
+    "text": "WATANKi PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.762
+   },
+   {
+    "time": 84.0,
+    "text": "WATANKi PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.771
+   },
+   {
+    "time": 86.0,
+    "text": "WATANKi PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.924
+   },
+   {
+    "time": 88.0,
+    "text": "WATANKi PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.926
+   },
+   {
+    "time": 90.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.931
+   },
+   {
+    "time": 92.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.918
+   },
+   {
+    "time": 94.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.919
+   },
+   {
+    "time": 96.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.649
+   },
+   {
+    "time": 98.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.646
+   },
+   {
+    "time": 100.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.954
+   },
+   {
+    "time": 102.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.957
+   },
+   {
+    "time": 104.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.957
+   },
+   {
+    "time": 106.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.684
+   },
+   {
+    "time": 108.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.683
+   },
+   {
+    "time": 110.0,
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "confidence": 0.885
+   },
+   {
+    "time": 116.0,
+    "text": "WATAN",
+    "confidence": 0.999
+   },
+   {
+    "time": 116.0,
+    "text": "MEDIA NLIVS",
+    "confidence": 0.806
+   }
+  ],
+  "captions": [
+   {
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "start": 0.0,
+    "end": 78.0,
+    "confidence": 0.947,
+    "id": "o1"
+   },
+   {
+    "text": "WATANKi PUKAR MEDIA NEWS CHANNEL",
+    "start": 80.0,
+    "end": 88.0,
+    "confidence": 0.926,
+    "id": "o2"
+   },
+   {
+    "text": "WATAN Ki PUKAR MEDIA NEWS CHANNEL",
+    "start": 90.0,
+    "end": 110.0,
+    "confidence": 0.957,
+    "id": "o3"
+   },
+   {
+    "text": "WATAN",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 0.999,
+    "id": "o4"
+   },
+   {
+    "text": "MEDIA NLIVS",
+    "start": 116.0,
+    "end": 116.0,
+    "confidence": 0.806,
+    "id": "o5"
+   }
+  ]
+ }
+}

@@ -1,0 +1,3218 @@
+{
+ "video_id": "v66",
+ "filename": "v12044gd0000da6rf6fog65vj384sdpg.mp4",
+ "relative_path": "Dataset-Sept-2026/Joshua Ryan Fajardo/DEBUNKING/v12044gd0000da6rf6fog65vj384sdpg.mp4",
+ "collector": "Joshua Ryan Fajardo",
+ "collector_label": "DEBUNKING",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:42:33",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.996,
+  "duration_seconds": 97.55,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 4.8,
+    "text": "will don't eat fish because it's high in mercury levels. Okay, but you want to give my daughter"
+   },
+   {
+    "id": "t2",
+    "start": 4.8,
+    "end": 8.32,
+    "text": "moments after her arrival into this world vaccines with copious amounts of mercury."
+   },
+   {
+    "id": "t3",
+    "start": 8.32,
+    "end": 12.56,
+    "text": "Hi Ivy and Maha Mums. Thank you for reminding me why it's so important to speak out on this"
+   },
+   {
+    "id": "t4",
+    "start": 12.56,
+    "end": 17.04,
+    "text": "platform because not only are you acting like you've uncovered some information all the world"
+   },
+   {
+    "id": "t5",
+    "start": 17.04,
+    "end": 20.56,
+    "text": "scientists and doctors have missed but you're intentionally pushing this information that"
+   },
+   {
+    "id": "t6",
+    "start": 20.56,
+    "end": 23.84,
+    "text": "can affect the medical decisions someone else makes for their child when you haven't spent"
+   },
+   {
+    "id": "t7",
+    "start": 23.84,
+    "end": 28.08,
+    "text": "five minutes reading about vaccines because if you had you would know that metal mercury"
+   },
+   {
+    "id": "t8",
+    "start": 28.08,
+    "end": 32.24,
+    "text": "which is the compound found in certain seafood, can accumulate within the body and be toxic at"
+   },
+   {
+    "id": "t9",
+    "start": 32.24,
+    "end": 36.48,
+    "text": "relatively low doses, which is why it's not recommended during pregnancy, whereas epimercary"
+   },
+   {
+    "id": "t10",
+    "start": 36.48,
+    "end": 41.36,
+    "text": "is a different compound that's rapidly excreted and is not toxic at low doses. The same is how"
+   },
+   {
+    "id": "t11",
+    "start": 41.36,
+    "end": 45.44,
+    "text": "methanol and ethanol are also not the same compound. Although they're both simple alcohols,"
+   },
+   {
+    "id": "t12",
+    "start": 45.44,
+    "end": 50.32,
+    "text": "methanol can kill or paralyze you, with very small amounts, and ethanol is readily used in beer,"
+   },
+   {
+    "id": "t13",
+    "start": 50.32,
+    "end": 54.8,
+    "text": "wine, and kombucha. By Marisol, which is another compound used as a preservative,"
+   },
+   {
+    "id": "t14",
+    "start": 54.8,
+    "end": 59.92,
+    "text": "hasn't been used in routine childhood vaccinations since 2001 and only remained in a multi-dose"
+   },
+   {
+    "id": "t15",
+    "start": 59.92,
+    "end": 65.04,
+    "text": "version of flu vaccine given to less than 6% of the population and even now has been replaced"
+   },
+   {
+    "id": "t16",
+    "start": 65.04,
+    "end": 70.72,
+    "text": "with another preservative. So no, your daughter would not be given a vaccine full of mercury"
+   },
+   {
+    "id": "t17",
+    "start": 70.72,
+    "end": 75.76,
+    "text": "found in seafood or otherwise, but you are full of misinformation that you feel very comfortable"
+   },
+   {
+    "id": "t18",
+    "start": 75.76,
+    "end": 81.2,
+    "text": "speaking on in an attempt to go in favor with this administration in order to try to stay relevant."
+   },
+   {
+    "id": "t19",
+    "start": 81.2,
+    "end": 84.56,
+    "text": "So grateful for the transparency that we have seen from this administration"
+   },
+   {
+    "id": "t20",
+    "start": 84.56,
+    "end": 89.28,
+    "text": "but this is why it's important to actually read about something before you spread straight-up lies"
+   },
+   {
+    "id": "t21",
+    "start": 89.28,
+    "end": 93.04,
+    "text": "that can affect medical decisions other people make for their children and jeopardize public health."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 49,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "05",
+    "confidence": 0.581
+   },
+   {
+    "time": 0.0,
+    "text": "THINGS LIKE",
+    "confidence": 0.973
+   },
+   {
+    "time": 0.0,
+    "text": "RILEY GAINES",
+    "confidence": 0.986
+   },
+   {
+    "time": 2.0,
+    "text": "IT$ HIGH IN",
+    "confidence": 0.518
+   },
+   {
+    "time": 2.0,
+    "text": "RILEY GAINES",
+    "confidence": 0.987
+   },
+   {
+    "time": 2.0,
+    "text": "TikTo",
+    "confidence": 0.639
+   },
+   {
+    "time": 4.0,
+    "text": "RILEY GAINES",
+    "confidence": 0.994
+   },
+   {
+    "time": 4.0,
+    "text": "TikTo",
+    "confidence": 0.662
+   },
+   {
+    "time": 6.0,
+    "text": "MOMENTS AFTER HER",
+    "confidence": 0.985
+   },
+   {
+    "time": 6.0,
+    "text": "ARRIVAL",
+    "confidence": 0.631
+   },
+   {
+    "time": 6.0,
+    "text": "RILEY GAINES",
+    "confidence": 0.985
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 0.989
+   },
+   {
+    "time": 8.0,
+    "text": "OF MERCURY",
+    "confidence": 0.642
+   },
+   {
+    "time": 8.0,
+    "text": "RILEY GAINES",
+    "confidence": 0.986
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 0.991
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 0.84
+   },
+   {
+    "time": 12.0,
+    "text": "cleanlivingmama",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.0,
+    "text": "There is no mercury",
+    "confidence": 0.855
+   },
+   {
+    "time": 14.0,
+    "text": "inyour children'$ vaccines:",
+    "confidence": 0.781
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 0.509
+   },
+   {
+    "time": 14.0,
+    "text": "cleanlivingmama",
+    "confidence": 0.988
+   },
+   {
+    "time": 16.0,
+    "text": "There is no mercury",
+    "confidence": 0.866
+   },
+   {
+    "time": 16.0,
+    "text": "inyour children'$ vaccines:",
+    "confidence": 0.772
+   },
+   {
+    "time": 16.0,
+    "text": "Tik Tok",
+    "confidence": 0.725
+   },
+   {
+    "time": 16.0,
+    "text": "cleanlivingmama",
+    "confidence": 0.954
+   },
+   {
+    "time": 18.0,
+    "text": "There is no mercury",
+    "confidence": 0.842
+   },
+   {
+    "time": 18.0,
+    "text": "inyour children'$ vaccines:",
+    "confidence": 0.77
+   },
+   {
+    "time": 18.0,
+    "text": "cleanlivingmama",
+    "confidence": 0.888
+   },
+   {
+    "time": 20.0,
+    "text": "talking",
+    "confidence": 0.778
+   },
+   {
+    "time": 20.0,
+    "text": "Anyone who starts",
+    "confidence": 0.733
+   },
+   {
+    "time": 20.0,
+    "text": "about \"injecting mercury'",
+    "confidence": 0.692
+   },
+   {
+    "time": 20.0,
+    "text": "hasn 't done an ounce of",
+    "confidence": 0.578
+   },
+   {
+    "time": 20.0,
+    "text": "actual \"research\".",
+    "confidence": 0.962
+   },
+   {
+    "time": 20.0,
+    "text": "TikTok",
+    "confidence": 0.943
+   },
+   {
+    "time": 20.0,
+    "text": "leanlivingmama",
+    "confidence": 0.944
+   },
+   {
+    "time": 22.0,
+    "text": "talking",
+    "confidence": 0.738
+   },
+   {
+    "time": 22.0,
+    "text": "Anyone who starts",
+    "confidence": 0.638
+   },
+   {
+    "time": 22.0,
+    "text": "about \"injecting mercury'",
+    "confidence": 0.702
+   },
+   {
+    "time": 22.0,
+    "text": "hasn 't done an ounce of",
+    "confidence": 0.578
+   },
+   {
+    "time": 22.0,
+    "text": "actual \"research\".",
+    "confidence": 0.968
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 0.753
+   },
+   {
+    "time": 22.0,
+    "text": "cleanlivingmama",
+    "confidence": 0.975
+   },
+   {
+    "time": 24.0,
+    "text": "talking",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "Anyone who starts",
+    "confidence": 0.998
+   },
+   {
+    "time": 24.0,
+    "text": "about \"injecting mercury'",
+    "confidence": 0.7
+   },
+   {
+    "time": 24.0,
+    "text": "hasn 't done an ounce of",
+    "confidence": 0.52
+   },
+   {
+    "time": 24.0,
+    "text": "actual \"research\".",
+    "confidence": 0.98
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 0.73
+   },
+   {
+    "time": 24.0,
+    "text": "cleanlivingmama",
+    "confidence": 0.918
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 0.809
+   },
+   {
+    "time": 28.0,
+    "text": "Methylmercury is the most toxic form of mercury",
+    "confidence": 0.953
+   },
+   {
+    "time": 28.0,
+    "text": "for the effects it produces on human health when",
+    "confidence": 0.769
+   },
+   {
+    "time": 28.0,
+    "text": "exposed to it; and fish is the food that contributes",
+    "confidence": 0.747
+   },
+   {
+    "time": 28.0,
+    "text": "most t0 the intake of this contaminant Predatory",
+    "confidence": 0.681
+   },
+   {
+    "time": 28.0,
+    "text": "species (swordfish, shark Or tuna) have higher",
+    "confidence": 0.731
+   },
+   {
+    "time": 28.0,
+    "text": "levels of mercury, swordfish being the species",
+    "confidence": 0.754
+   },
+   {
+    "time": 28.0,
+    "text": "ktok",
+    "confidence": 0.652
+   },
+   {
+    "time": 28.0,
+    "text": "that showed the highest content; while",
+    "confidence": 0.808
+   },
+   {
+    "time": 28.0,
+    "text": "cephalopods and bivalves had the lowest",
+    "confidence": 0.905
+   },
+   {
+    "time": 30.0,
+    "text": "Methylmercury is the most toxic form of mercury",
+    "confidence": 0.95
+   },
+   {
+    "time": 30.0,
+    "text": "for the effects it produces on human health when",
+    "confidence": 0.787
+   },
+   {
+    "time": 30.0,
+    "text": "exposed to it; and fish is the food that contributes",
+    "confidence": 0.757
+   },
+   {
+    "time": 30.0,
+    "text": "most t0 the intake of this contaminant Predatory",
+    "confidence": 0.722
+   },
+   {
+    "time": 30.0,
+    "text": "species (swordfish, shark Or tuna) have higher",
+    "confidence": 0.736
+   },
+   {
+    "time": 30.0,
+    "text": "levels of mercury, swordfish being the species",
+    "confidence": 0.806
+   },
+   {
+    "time": 30.0,
+    "text": "that showed the highest content; while",
+    "confidence": 0.818
+   },
+   {
+    "time": 30.0,
+    "text": "cephalopods and bivalves had the lowest",
+    "confidence": 0.917
+   },
+   {
+    "time": 32.0,
+    "text": "Methylmercury is the most toxic form of mercury",
+    "confidence": 0.929
+   },
+   {
+    "time": 32.0,
+    "text": "for the effects it produces on human health when",
+    "confidence": 0.752
+   },
+   {
+    "time": 32.0,
+    "text": "exposed to it; and fish is the food that contributes",
+    "confidence": 0.764
+   },
+   {
+    "time": 32.0,
+    "text": "most t0 the intake of this contaminant Predatory",
+    "confidence": 0.722
+   },
+   {
+    "time": 32.0,
+    "text": "species (swordfish, shark Or tuna) have higher",
+    "confidence": 0.871
+   },
+   {
+    "time": 32.0,
+    "text": "levels of mercury, swordfish being the species",
+    "confidence": 0.815
+   },
+   {
+    "time": 32.0,
+    "text": "that showed the highest content; while",
+    "confidence": 0.813
+   },
+   {
+    "time": 32.0,
+    "text": "cephalopods and bivalves had the lowest",
+    "confidence": 0.916
+   },
+   {
+    "time": 34.0,
+    "text": "Methylmercury is the most toxic form of mercury",
+    "confidence": 0.937
+   },
+   {
+    "time": 34.0,
+    "text": "for the effects it produces on human health when",
+    "confidence": 0.798
+   },
+   {
+    "time": 34.0,
+    "text": "exposed to it; and fish is the food that contributes",
+    "confidence": 0.772
+   },
+   {
+    "time": 34.0,
+    "text": "most t0 the intake of this contaminant Predatory",
+    "confidence": 0.681
+   },
+   {
+    "time": 34.0,
+    "text": "species (swordfish, shark Or tuna) have higher",
+    "confidence": 0.724
+   },
+   {
+    "time": 34.0,
+    "text": "levels of mercury, swordfish being the species",
+    "confidence": 0.666
+   },
+   {
+    "time": 34.0,
+    "text": "that showed the highest content; while",
+    "confidence": 0.815
+   },
+   {
+    "time": 34.0,
+    "text": "cephalopods and bivalves had the lowest",
+    "confidence": 0.946
+   },
+   {
+    "time": 36.0,
+    "text": "Ethylmercury cation: C2H;Hg+",
+    "confidence": 0.682
+   },
+   {
+    "time": 36.0,
+    "text": "Methylmercury cation: CH;Hg-",
+    "confidence": 0.511
+   },
+   {
+    "time": 36.0,
+    "text": "Ethylmercury:",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.0,
+    "text": "Leaves the blood much faster (a half-life of",
+    "confidence": 0.759
+   },
+   {
+    "time": 36.0,
+    "text": "about 3 to 10 days):",
+    "confidence": 0.693
+   },
+   {
+    "time": 36.0,
+    "text": "Is cleared out and excreted from the body",
+    "confidence": 0.687
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 0.886
+   },
+   {
+    "time": 36.0,
+    "text": "roughly 10 times quicker than",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.0,
+    "text": "cleanlivingamma",
+    "confidence": 0.835
+   },
+   {
+    "time": 36.0,
+    "text": "methylmercury; preventing buildup:",
+    "confidence": 0.833
+   },
+   {
+    "time": 38.0,
+    "text": "Ethylmercury cation: C2H;Hg+",
+    "confidence": 0.593
+   },
+   {
+    "time": 38.0,
+    "text": "Methylmercury cation: CHgHg-",
+    "confidence": 0.508
+   },
+   {
+    "time": 38.0,
+    "text": "Ethylmercury:",
+    "confidence": 0.999
+   },
+   {
+    "time": 38.0,
+    "text": "Leaves the blood much faster (a half-life f",
+    "confidence": 0.895
+   },
+   {
+    "time": 38.0,
+    "text": "about 3 to 10 days).",
+    "confidence": 0.656
+   },
+   {
+    "time": 38.0,
+    "text": "Is cleared out and excreted from the body",
+    "confidence": 0.799
+   },
+   {
+    "time": 38.0,
+    "text": "TikTok",
+    "confidence": 0.816
+   },
+   {
+    "time": 38.0,
+    "text": "roughly 10 times quicker than",
+    "confidence": 0.999
+   },
+   {
+    "time": 38.0,
+    "text": "cleanlivingmama",
+    "confidence": 0.98
+   },
+   {
+    "time": 38.0,
+    "text": "methylmercury; preventing buildup:",
+    "confidence": 0.887
+   },
+   {
+    "time": 40.0,
+    "text": "Ethylmercury cation: C2H;Hg+",
+    "confidence": 0.605
+   },
+   {
+    "time": 40.0,
+    "text": "Ethylmercury:",
+    "confidence": 0.999
+   },
+   {
+    "time": 40.0,
+    "text": "Leaves the blood much faster (a half-life of",
+    "confidence": 0.787
+   },
+   {
+    "time": 40.0,
+    "text": "about 3 to 10 days).",
+    "confidence": 0.635
+   },
+   {
+    "time": 40.0,
+    "text": "Is cleared out and excreted from the body",
+    "confidence": 0.783
+   },
+   {
+    "time": 40.0,
+    "text": "roughly 10 times quicker than",
+    "confidence": 0.999
+   },
+   {
+    "time": 40.0,
+    "text": "cleanlivingmama",
+    "confidence": 0.981
+   },
+   {
+    "time": 40.0,
+    "text": "methylmercury; preventing buildup:",
+    "confidence": 0.879
+   },
+   {
+    "time": 42.0,
+    "text": "TikTok",
+    "confidence": 0.651
+   },
+   {
+    "time": 44.0,
+    "text": "While methanol and ethanol are both",
+    "confidence": 0.963
+   },
+   {
+    "time": 44.0,
+    "text": "alcohols; they are very different types of",
+    "confidence": 0.647
+   },
+   {
+    "time": 44.0,
+    "text": "alcohol: Ethanol is formed by combining an",
+    "confidence": 0.949
+   },
+   {
+    "time": 44.0,
+    "text": "ethyl group to a hydroxyl group; and",
+    "confidence": 0.678
+   },
+   {
+    "time": 44.0,
+    "text": "methyl",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "methanol is created by combining a",
+    "confidence": 0.868
+   },
+   {
+    "time": 44.0,
+    "text": "group to a hydroxyl group: Ethanol has two",
+    "confidence": 0.628
+   },
+   {
+    "time": 44.0,
+    "text": "carbon atoms; while methanol is only one",
+    "confidence": 0.792
+   },
+   {
+    "time": 44.0,
+    "text": "TikTok",
+    "confidence": 0.892
+   },
+   {
+    "time": 44.0,
+    "text": "atom: Ethanol is less acidic than water; Cid'",
+    "confidence": 0.516
+   },
+   {
+    "time": 44.0,
+    "text": "Wingmama",
+    "confidence": 0.509
+   },
+   {
+    "time": 44.0,
+    "text": "methanol is more acidic than water:",
+    "confidence": 0.694
+   },
+   {
+    "time": 46.0,
+    "text": "While methanol and ethanol are both",
+    "confidence": 0.953
+   },
+   {
+    "time": 46.0,
+    "text": "alcohols; they are very different types of",
+    "confidence": 0.702
+   },
+   {
+    "time": 46.0,
+    "text": "alcohol: Ethanol is formed by combining an",
+    "confidence": 0.954
+   },
+   {
+    "time": 46.0,
+    "text": "ethyl group to a hydroxyl group; and",
+    "confidence": 0.677
+   },
+   {
+    "time": 46.0,
+    "text": "methyl",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "methanol is created by combining a",
+    "confidence": 0.873
+   },
+   {
+    "time": 46.0,
+    "text": "group to a hydroxyl group: Ethanol has two",
+    "confidence": 0.78
+   },
+   {
+    "time": 46.0,
+    "text": "carbon atoms; while methanol is only one",
+    "confidence": 0.791
+   },
+   {
+    "time": 46.0,
+    "text": "TikTok",
+    "confidence": 0.896
+   },
+   {
+    "time": 46.0,
+    "text": "Wingmama",
+    "confidence": 0.561
+   },
+   {
+    "time": 46.0,
+    "text": "methanol is more acidic than water:",
+    "confidence": 0.851
+   },
+   {
+    "time": 48.0,
+    "text": "While methanol and ethanol are both",
+    "confidence": 0.934
+   },
+   {
+    "time": 48.0,
+    "text": "alcohols; they are very different types of",
+    "confidence": 0.66
+   },
+   {
+    "time": 48.0,
+    "text": "alcohol: Ethanol is formed by combining an",
+    "confidence": 0.949
+   },
+   {
+    "time": 48.0,
+    "text": "ethyl group to a hydroxyl group; and",
+    "confidence": 0.685
+   },
+   {
+    "time": 48.0,
+    "text": "methyl",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "methanol is created by combining a",
+    "confidence": 0.877
+   },
+   {
+    "time": 48.0,
+    "text": "group to a hydroxyl group: Ethanol has two",
+    "confidence": 0.657
+   },
+   {
+    "time": 48.0,
+    "text": "carbon atoms; while methanol is only one",
+    "confidence": 0.79
+   },
+   {
+    "time": 48.0,
+    "text": "Wingmama",
+    "confidence": 0.541
+   },
+   {
+    "time": 48.0,
+    "text": "methanol is more acidic than water:",
+    "confidence": 0.696
+   },
+   {
+    "time": 50.0,
+    "text": "While methanol and ethanol are both",
+    "confidence": 0.953
+   },
+   {
+    "time": 50.0,
+    "text": "alcohols; they are very different types of",
+    "confidence": 0.767
+   },
+   {
+    "time": 50.0,
+    "text": "alcohol: Ethanol is formed by combining an",
+    "confidence": 0.92
+   },
+   {
+    "time": 50.0,
+    "text": "ethyl group to a hydroxyl group; and",
+    "confidence": 0.814
+   },
+   {
+    "time": 50.0,
+    "text": "methyl",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "methanol is created by combining a",
+    "confidence": 0.795
+   },
+   {
+    "time": 50.0,
+    "text": "group to a hydroxyl group: Ethanol has two",
+    "confidence": 0.652
+   },
+   {
+    "time": 50.0,
+    "text": "carbon atoms; while methanol is only one",
+    "confidence": 0.619
+   },
+   {
+    "time": 50.0,
+    "text": "TikTok",
+    "confidence": 0.936
+   },
+   {
+    "time": 50.0,
+    "text": "vingmama",
+    "confidence": 0.704
+   },
+   {
+    "time": 50.0,
+    "text": "methanol is more acidic than water:",
+    "confidence": 0.715
+   },
+   {
+    "time": 52.0,
+    "text": "Tiktok",
+    "confidence": 0.91
+   },
+   {
+    "time": 54.0,
+    "text": "Thimerosal: CgHgHgNaO2S",
+    "confidence": 0.811
+   },
+   {
+    "time": 54.0,
+    "text": "TikTok",
+    "confidence": 0.943
+   },
+   {
+    "time": 54.0,
+    "text": "cleanlivingmama",
+    "confidence": 0.752
+   },
+   {
+    "time": 56.0,
+    "text": "Thimerosal: compound",
+    "confidence": 0.75
+   },
+   {
+    "time": 56.0,
+    "text": "containing ethylmercury",
+    "confidence": 0.979
+   },
+   {
+    "time": 56.0,
+    "text": "Removed to reduce",
+    "confidence": 0.989
+   },
+   {
+    "time": 56.0,
+    "text": "hesitancy around vaccines",
+    "confidence": 0.655
+   },
+   {
+    "time": 56.0,
+    "text": "public",
+    "confidence": 0.999
+   },
+   {
+    "time": 56.0,
+    "text": "Routinely recommended childhood vaccines",
+    "confidence": 0.917
+   },
+   {
+    "time": 56.0,
+    "text": "in the U.S: have not contained thimerosal",
+    "confidence": 0.638
+   },
+   {
+    "time": 56.0,
+    "text": "since the late 1990s. By 2025, when the",
+    "confidence": 0.91
+   },
+   {
+    "time": 56.0,
+    "text": "Secretary of Health and Human Services",
+    "confidence": 0.989
+   },
+   {
+    "time": 56.0,
+    "text": "required removal of thimerosal from vaccines,",
+    "confidence": 0.813
+   },
+   {
+    "time": 56.0,
+    "text": "kktok",
+    "confidence": 0.51
+   },
+   {
+    "time": 56.0,
+    "text": "only multi-dose vials of influenza vaccizc",
+    "confidence": 0.664
+   },
+   {
+    "time": 56.0,
+    "text": "in the U.S. contained thimerosal. However; in",
+    "confidence": 0.755
+   },
+   {
+    "time": 58.0,
+    "text": "Thimerosal: compound",
+    "confidence": 0.981
+   },
+   {
+    "time": 58.0,
+    "text": "containing ethylmercury",
+    "confidence": 0.977
+   },
+   {
+    "time": 58.0,
+    "text": "Removed to reduce",
+    "confidence": 0.988
+   },
+   {
+    "time": 58.0,
+    "text": "hesitancy around vaccines",
+    "confidence": 0.64
+   },
+   {
+    "time": 58.0,
+    "text": "public",
+    "confidence": 0.999
+   },
+   {
+    "time": 58.0,
+    "text": "Routinely recommended childhood vaccines",
+    "confidence": 0.663
+   },
+   {
+    "time": 58.0,
+    "text": "in the U.S: have not contained thimerosal",
+    "confidence": 0.574
+   },
+   {
+    "time": 58.0,
+    "text": "since the late 1990s. By 2025, when the",
+    "confidence": 0.658
+   },
+   {
+    "time": 58.0,
+    "text": "Secretary of Health and Human Services",
+    "confidence": 0.954
+   },
+   {
+    "time": 58.0,
+    "text": "required removal of thimerosal from vaccines,",
+    "confidence": 0.897
+   },
+   {
+    "time": 58.0,
+    "text": "only multi-dose vials of influenza vaccizc",
+    "confidence": 0.794
+   },
+   {
+    "time": 58.0,
+    "text": "gmama",
+    "confidence": 0.609
+   },
+   {
+    "time": 58.0,
+    "text": "in the U.S contained thimerosal. However; in",
+    "confidence": 0.769
+   },
+   {
+    "time": 60.0,
+    "text": "Thimerosal: compound",
+    "confidence": 0.979
+   },
+   {
+    "time": 60.0,
+    "text": "containing ethylmercury",
+    "confidence": 0.975
+   },
+   {
+    "time": 60.0,
+    "text": "Removed to reduce",
+    "confidence": 0.719
+   },
+   {
+    "time": 60.0,
+    "text": "publichesitancy around vaccines:",
+    "confidence": 0.705
+   },
+   {
+    "time": 60.0,
+    "text": "Routinely recommended childhood vaccines",
+    "confidence": 0.78
+   },
+   {
+    "time": 60.0,
+    "text": "in the U.S: have not contained thimerosal",
+    "confidence": 0.643
+   },
+   {
+    "time": 60.0,
+    "text": "since the late 1990s. By 2025, when the",
+    "confidence": 0.822
+   },
+   {
+    "time": 60.0,
+    "text": "Secretary of Health and Human Services",
+    "confidence": 0.84
+   },
+   {
+    "time": 60.0,
+    "text": "required removal of thimerosal from vaccines,",
+    "confidence": 0.888
+   },
+   {
+    "time": 60.0,
+    "text": "kktok",
+    "confidence": 0.682
+   },
+   {
+    "time": 60.0,
+    "text": "only multi-dose vials of influenza vaccizc",
+    "confidence": 0.781
+   },
+   {
+    "time": 60.0,
+    "text": "gmamma",
+    "confidence": 0.589
+   },
+   {
+    "time": 60.0,
+    "text": "in the U.S. contained thimerosal.",
+    "confidence": 0.831
+   },
+   {
+    "time": 60.0,
+    "text": "However, in",
+    "confidence": 0.771
+   },
+   {
+    "time": 62.0,
+    "text": "Thimerosal: compound",
+    "confidence": 0.979
+   },
+   {
+    "time": 62.0,
+    "text": "containing ethylmercury",
+    "confidence": 0.974
+   },
+   {
+    "time": 62.0,
+    "text": "Removed to reduce",
+    "confidence": 0.987
+   },
+   {
+    "time": 62.0,
+    "text": "hesitancy around vaccines",
+    "confidence": 0.656
+   },
+   {
+    "time": 62.0,
+    "text": "public",
+    "confidence": 0.999
+   },
+   {
+    "time": 62.0,
+    "text": "Routinely recommended childhood vaccines",
+    "confidence": 0.812
+   },
+   {
+    "time": 62.0,
+    "text": "in the U.S: have not contained thimerosal",
+    "confidence": 0.652
+   },
+   {
+    "time": 62.0,
+    "text": "since the late 1990s. By 2025, when the",
+    "confidence": 0.799
+   },
+   {
+    "time": 62.0,
+    "text": "Secretary of Health and Human Services",
+    "confidence": 0.84
+   },
+   {
+    "time": 62.0,
+    "text": "required removal of thimerosal from vaccines,",
+    "confidence": 0.836
+   },
+   {
+    "time": 62.0,
+    "text": "only multi-dose vials of influenza vaccizc",
+    "confidence": 0.778
+   },
+   {
+    "time": 62.0,
+    "text": "gmamma",
+    "confidence": 0.678
+   },
+   {
+    "time": 62.0,
+    "text": "in the U.S. contained thimerosal. However; in",
+    "confidence": 0.835
+   },
+   {
+    "time": 64.0,
+    "text": "TikTok",
+    "confidence": 0.927
+   },
+   {
+    "time": 64.0,
+    "text": "leanlivingmama",
+    "confidence": 0.649
+   },
+   {
+    "time": 66.0,
+    "text": "TikTok",
+    "confidence": 0.933
+   },
+   {
+    "time": 66.0,
+    "text": "cleanlivingmama",
+    "confidence": 0.711
+   },
+   {
+    "time": 68.0,
+    "text": "TikTok",
+    "confidence": 0.947
+   },
+   {
+    "time": 72.0,
+    "text": "Tik Tok",
+    "confidence": 0.798
+   },
+   {
+    "time": 74.0,
+    "text": "TikTok",
+    "confidence": 0.954
+   },
+   {
+    "time": 76.0,
+    "text": "TikTok",
+    "confidence": 0.954
+   },
+   {
+    "time": 76.0,
+    "text": "cleanlivingmama",
+    "confidence": 1.0
+   },
+   {
+    "time": 78.0,
+    "text": "TikTok",
+    "confidence": 0.927
+   },
+   {
+    "time": 80.0,
+    "text": "TikTok",
+    "confidence": 0.951
+   },
+   {
+    "time": 80.0,
+    "text": "leanlvingmama",
+    "confidence": 0.825
+   },
+   {
+    "time": 82.0,
+    "text": "18K",
+    "confidence": 0.801
+   },
+   {
+    "time": 82.0,
+    "text": "TM SO GRATEFUL FOR",
+    "confidence": 0.935
+   },
+   {
+    "time": 82.0,
+    "text": "172",
+    "confidence": 0.993
+   },
+   {
+    "time": 82.0,
+    "text": "RILEY GAINES",
+    "confidence": 0.887
+   },
+   {
+    "time": 82.0,
+    "text": "MAHA",
+    "confidence": 1.0
+   },
+   {
+    "time": 82.0,
+    "text": "Tok",
+    "confidence": 1.0
+   },
+   {
+    "time": 82.0,
+    "text": "82",
+    "confidence": 0.563
+   },
+   {
+    "time": 82.0,
+    "text": "MAHA Action",
+    "confidence": 0.726
+   },
+   {
+    "time": 82.0,
+    "text": "Follow",
+    "confidence": 0.997
+   },
+   {
+    "time": 82.0,
+    "text": "Add a comment",
+    "confidence": 0.619
+   },
+   {
+    "time": 84.0,
+    "text": "1.8K",
+    "confidence": 0.685
+   },
+   {
+    "time": 84.0,
+    "text": "HAVE SEEN FROM THE",
+    "confidence": 0.999
+   },
+   {
+    "time": 84.0,
+    "text": "172",
+    "confidence": 0.807
+   },
+   {
+    "time": 84.0,
+    "text": "RILEY GAINES",
+    "confidence": 0.71
+   },
+   {
+    "time": 84.0,
+    "text": "MAHA",
+    "confidence": 1.0
+   },
+   {
+    "time": 84.0,
+    "text": "Tok",
+    "confidence": 1.0
+   },
+   {
+    "time": 84.0,
+    "text": "MAHA Action",
+    "confidence": 0.975
+   },
+   {
+    "time": 84.0,
+    "text": "Follow",
+    "confidence": 0.863
+   },
+   {
+    "time": 84.0,
+    "text": "more",
+    "confidence": 0.999
+   },
+   {
+    "time": 84.0,
+    "text": "Add a comment",
+    "confidence": 0.609
+   },
+   {
+    "time": 86.0,
+    "text": "TikTok",
+    "confidence": 0.884
+   },
+   {
+    "time": 86.0,
+    "text": "cleanlivingmama",
+    "confidence": 0.716
+   },
+   {
+    "time": 88.0,
+    "text": "TikTok",
+    "confidence": 0.951
+   },
+   {
+    "time": 88.0,
+    "text": "cleanlivingmama",
+    "confidence": 0.811
+   },
+   {
+    "time": 90.0,
+    "text": "TikTok",
+    "confidence": 0.627
+   },
+   {
+    "time": 92.0,
+    "text": "TikTok",
+    "confidence": 0.947
+   },
+   {
+    "time": 92.0,
+    "text": "cleanlivingmama",
+    "confidence": 0.88
+   },
+   {
+    "time": 94.0,
+    "text": "J",
+    "confidence": 0.827
+   },
+   {
+    "time": 94.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 96.0,
+    "text": "J",
+    "confidence": 0.716
+   },
+   {
+    "time": 96.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 96.0,
+    "text": "cleanlivingmama",
+    "confidence": 1.0
+   }
+  ],
+  "captions": [
+   {
+    "text": "05",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.581,
+    "id": "o1"
+   },
+   {
+    "text": "THINGS LIKE",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.973,
+    "id": "o2"
+   },
+   {
+    "text": "RILEY GAINES",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.986,
+    "id": "o3"
+   },
+   {
+    "text": "IT$ HIGH IN",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.518,
+    "id": "o4"
+   },
+   {
+    "text": "RILEY GAINES",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.987,
+    "id": "o5"
+   },
+   {
+    "text": "TikTo",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.639,
+    "id": "o6"
+   },
+   {
+    "text": "RILEY GAINES",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.994,
+    "id": "o7"
+   },
+   {
+    "text": "TikTo",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.662,
+    "id": "o8"
+   },
+   {
+    "text": "MOMENTS AFTER HER",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.985,
+    "id": "o9"
+   },
+   {
+    "text": "ARRIVAL",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.631,
+    "id": "o10"
+   },
+   {
+    "text": "RILEY GAINES",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.985,
+    "id": "o11"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.989,
+    "id": "o12"
+   },
+   {
+    "text": "OF MERCURY",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.642,
+    "id": "o13"
+   },
+   {
+    "text": "RILEY GAINES",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.986,
+    "id": "o14"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 12.0,
+    "confidence": 0.991,
+    "id": "o15"
+   },
+   {
+    "text": "cleanlivingmama",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o16"
+   },
+   {
+    "text": "There is no mercury",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.855,
+    "id": "o17"
+   },
+   {
+    "text": "inyour children'$ vaccines:",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.781,
+    "id": "o18"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.509,
+    "id": "o19"
+   },
+   {
+    "text": "cleanlivingmama",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.988,
+    "id": "o20"
+   },
+   {
+    "text": "There is no mercury",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.866,
+    "id": "o21"
+   },
+   {
+    "text": "inyour children'$ vaccines:",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.772,
+    "id": "o22"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.725,
+    "id": "o23"
+   },
+   {
+    "text": "cleanlivingmama",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.954,
+    "id": "o24"
+   },
+   {
+    "text": "There is no mercury",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.842,
+    "id": "o25"
+   },
+   {
+    "text": "inyour children'$ vaccines:",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.77,
+    "id": "o26"
+   },
+   {
+    "text": "cleanlivingmama",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.888,
+    "id": "o27"
+   },
+   {
+    "text": "talking",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.778,
+    "id": "o28"
+   },
+   {
+    "text": "Anyone who starts",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.733,
+    "id": "o29"
+   },
+   {
+    "text": "about \"injecting mercury'",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.692,
+    "id": "o30"
+   },
+   {
+    "text": "hasn 't done an ounce of",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.578,
+    "id": "o31"
+   },
+   {
+    "text": "actual \"research\".",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.962,
+    "id": "o32"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.943,
+    "id": "o33"
+   },
+   {
+    "text": "leanlivingmama",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.944,
+    "id": "o34"
+   },
+   {
+    "text": "talking",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.738,
+    "id": "o35"
+   },
+   {
+    "text": "Anyone who starts",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.638,
+    "id": "o36"
+   },
+   {
+    "text": "about \"injecting mercury'",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.702,
+    "id": "o37"
+   },
+   {
+    "text": "hasn 't done an ounce of",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.578,
+    "id": "o38"
+   },
+   {
+    "text": "actual \"research\".",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.968,
+    "id": "o39"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.753,
+    "id": "o40"
+   },
+   {
+    "text": "cleanlivingmama",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.975,
+    "id": "o41"
+   },
+   {
+    "text": "talking",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o42"
+   },
+   {
+    "text": "Anyone who starts",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.998,
+    "id": "o43"
+   },
+   {
+    "text": "about \"injecting mercury'",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.7,
+    "id": "o44"
+   },
+   {
+    "text": "hasn 't done an ounce of",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.52,
+    "id": "o45"
+   },
+   {
+    "text": "actual \"research\".",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.98,
+    "id": "o46"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.73,
+    "id": "o47"
+   },
+   {
+    "text": "cleanlivingmama",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.918,
+    "id": "o48"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.809,
+    "id": "o49"
+   },
+   {
+    "text": "Methylmercury is the most toxic form of mercury",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.953,
+    "id": "o50"
+   },
+   {
+    "text": "for the effects it produces on human health when",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.769,
+    "id": "o51"
+   },
+   {
+    "text": "exposed to it; and fish is the food that contributes",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.747,
+    "id": "o52"
+   },
+   {
+    "text": "most t0 the intake of this contaminant Predatory",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.681,
+    "id": "o53"
+   },
+   {
+    "text": "species (swordfish, shark Or tuna) have higher",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.731,
+    "id": "o54"
+   },
+   {
+    "text": "levels of mercury, swordfish being the species",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.754,
+    "id": "o55"
+   },
+   {
+    "text": "ktok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.652,
+    "id": "o56"
+   },
+   {
+    "text": "that showed the highest content; while",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.808,
+    "id": "o57"
+   },
+   {
+    "text": "cephalopods and bivalves had the lowest",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.905,
+    "id": "o58"
+   },
+   {
+    "text": "Methylmercury is the most toxic form of mercury",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.95,
+    "id": "o59"
+   },
+   {
+    "text": "for the effects it produces on human health when",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.787,
+    "id": "o60"
+   },
+   {
+    "text": "exposed to it; and fish is the food that contributes",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.757,
+    "id": "o61"
+   },
+   {
+    "text": "most t0 the intake of this contaminant Predatory",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.722,
+    "id": "o62"
+   },
+   {
+    "text": "species (swordfish, shark Or tuna) have higher",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.736,
+    "id": "o63"
+   },
+   {
+    "text": "levels of mercury, swordfish being the species",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.806,
+    "id": "o64"
+   },
+   {
+    "text": "that showed the highest content; while",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.818,
+    "id": "o65"
+   },
+   {
+    "text": "cephalopods and bivalves had the lowest",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.917,
+    "id": "o66"
+   },
+   {
+    "text": "Methylmercury is the most toxic form of mercury",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.929,
+    "id": "o67"
+   },
+   {
+    "text": "for the effects it produces on human health when",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.752,
+    "id": "o68"
+   },
+   {
+    "text": "exposed to it; and fish is the food that contributes",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.764,
+    "id": "o69"
+   },
+   {
+    "text": "most t0 the intake of this contaminant Predatory",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.722,
+    "id": "o70"
+   },
+   {
+    "text": "species (swordfish, shark Or tuna) have higher",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.871,
+    "id": "o71"
+   },
+   {
+    "text": "levels of mercury, swordfish being the species",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.815,
+    "id": "o72"
+   },
+   {
+    "text": "that showed the highest content; while",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.813,
+    "id": "o73"
+   },
+   {
+    "text": "cephalopods and bivalves had the lowest",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.916,
+    "id": "o74"
+   },
+   {
+    "text": "Methylmercury is the most toxic form of mercury",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.937,
+    "id": "o75"
+   },
+   {
+    "text": "for the effects it produces on human health when",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.798,
+    "id": "o76"
+   },
+   {
+    "text": "exposed to it; and fish is the food that contributes",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.772,
+    "id": "o77"
+   },
+   {
+    "text": "most t0 the intake of this contaminant Predatory",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.681,
+    "id": "o78"
+   },
+   {
+    "text": "species (swordfish, shark Or tuna) have higher",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.724,
+    "id": "o79"
+   },
+   {
+    "text": "levels of mercury, swordfish being the species",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.666,
+    "id": "o80"
+   },
+   {
+    "text": "that showed the highest content; while",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.815,
+    "id": "o81"
+   },
+   {
+    "text": "cephalopods and bivalves had the lowest",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.946,
+    "id": "o82"
+   },
+   {
+    "text": "Ethylmercury cation: C2H;Hg+",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.682,
+    "id": "o83"
+   },
+   {
+    "text": "Methylmercury cation: CH;Hg-",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.511,
+    "id": "o84"
+   },
+   {
+    "text": "Ethylmercury:",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.999,
+    "id": "o85"
+   },
+   {
+    "text": "Leaves the blood much faster (a half-life of",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.759,
+    "id": "o86"
+   },
+   {
+    "text": "about 3 to 10 days):",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.693,
+    "id": "o87"
+   },
+   {
+    "text": "Is cleared out and excreted from the body",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.687,
+    "id": "o88"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.886,
+    "id": "o89"
+   },
+   {
+    "text": "roughly 10 times quicker than",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.999,
+    "id": "o90"
+   },
+   {
+    "text": "cleanlivingamma",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.835,
+    "id": "o91"
+   },
+   {
+    "text": "methylmercury; preventing buildup:",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.833,
+    "id": "o92"
+   },
+   {
+    "text": "Ethylmercury cation: C2H;Hg+",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.593,
+    "id": "o93"
+   },
+   {
+    "text": "Methylmercury cation: CHgHg-",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.508,
+    "id": "o94"
+   },
+   {
+    "text": "Ethylmercury:",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.999,
+    "id": "o95"
+   },
+   {
+    "text": "Leaves the blood much faster (a half-life f",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.895,
+    "id": "o96"
+   },
+   {
+    "text": "about 3 to 10 days).",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.656,
+    "id": "o97"
+   },
+   {
+    "text": "Is cleared out and excreted from the body",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.799,
+    "id": "o98"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.816,
+    "id": "o99"
+   },
+   {
+    "text": "roughly 10 times quicker than",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.999,
+    "id": "o100"
+   },
+   {
+    "text": "cleanlivingmama",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.98,
+    "id": "o101"
+   },
+   {
+    "text": "methylmercury; preventing buildup:",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.887,
+    "id": "o102"
+   },
+   {
+    "text": "Ethylmercury cation: C2H;Hg+",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.605,
+    "id": "o103"
+   },
+   {
+    "text": "Ethylmercury:",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.999,
+    "id": "o104"
+   },
+   {
+    "text": "Leaves the blood much faster (a half-life of",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.787,
+    "id": "o105"
+   },
+   {
+    "text": "about 3 to 10 days).",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.635,
+    "id": "o106"
+   },
+   {
+    "text": "Is cleared out and excreted from the body",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.783,
+    "id": "o107"
+   },
+   {
+    "text": "roughly 10 times quicker than",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.999,
+    "id": "o108"
+   },
+   {
+    "text": "cleanlivingmama",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.981,
+    "id": "o109"
+   },
+   {
+    "text": "methylmercury; preventing buildup:",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.879,
+    "id": "o110"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.651,
+    "id": "o111"
+   },
+   {
+    "text": "While methanol and ethanol are both",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.963,
+    "id": "o112"
+   },
+   {
+    "text": "alcohols; they are very different types of",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.647,
+    "id": "o113"
+   },
+   {
+    "text": "alcohol: Ethanol is formed by combining an",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.949,
+    "id": "o114"
+   },
+   {
+    "text": "ethyl group to a hydroxyl group; and",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.678,
+    "id": "o115"
+   },
+   {
+    "text": "methyl",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o116"
+   },
+   {
+    "text": "methanol is created by combining a",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.868,
+    "id": "o117"
+   },
+   {
+    "text": "group to a hydroxyl group: Ethanol has two",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.628,
+    "id": "o118"
+   },
+   {
+    "text": "carbon atoms; while methanol is only one",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.792,
+    "id": "o119"
+   },
+   {
+    "text": "TikTok",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.892,
+    "id": "o120"
+   },
+   {
+    "text": "atom: Ethanol is less acidic than water; Cid'",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.516,
+    "id": "o121"
+   },
+   {
+    "text": "Wingmama",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.509,
+    "id": "o122"
+   },
+   {
+    "text": "methanol is more acidic than water:",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.694,
+    "id": "o123"
+   },
+   {
+    "text": "While methanol and ethanol are both",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.953,
+    "id": "o124"
+   },
+   {
+    "text": "alcohols; they are very different types of",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.702,
+    "id": "o125"
+   },
+   {
+    "text": "alcohol: Ethanol is formed by combining an",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.954,
+    "id": "o126"
+   },
+   {
+    "text": "ethyl group to a hydroxyl group; and",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.677,
+    "id": "o127"
+   },
+   {
+    "text": "methyl",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o128"
+   },
+   {
+    "text": "methanol is created by combining a",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.873,
+    "id": "o129"
+   },
+   {
+    "text": "group to a hydroxyl group: Ethanol has two",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.78,
+    "id": "o130"
+   },
+   {
+    "text": "carbon atoms; while methanol is only one",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.791,
+    "id": "o131"
+   },
+   {
+    "text": "TikTok",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.896,
+    "id": "o132"
+   },
+   {
+    "text": "Wingmama",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.561,
+    "id": "o133"
+   },
+   {
+    "text": "methanol is more acidic than water:",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.851,
+    "id": "o134"
+   },
+   {
+    "text": "While methanol and ethanol are both",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.934,
+    "id": "o135"
+   },
+   {
+    "text": "alcohols; they are very different types of",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.66,
+    "id": "o136"
+   },
+   {
+    "text": "alcohol: Ethanol is formed by combining an",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.949,
+    "id": "o137"
+   },
+   {
+    "text": "ethyl group to a hydroxyl group; and",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.685,
+    "id": "o138"
+   },
+   {
+    "text": "methyl",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o139"
+   },
+   {
+    "text": "methanol is created by combining a",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.877,
+    "id": "o140"
+   },
+   {
+    "text": "group to a hydroxyl group: Ethanol has two",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.657,
+    "id": "o141"
+   },
+   {
+    "text": "carbon atoms; while methanol is only one",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.79,
+    "id": "o142"
+   },
+   {
+    "text": "Wingmama",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.541,
+    "id": "o143"
+   },
+   {
+    "text": "methanol is more acidic than water:",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.696,
+    "id": "o144"
+   },
+   {
+    "text": "While methanol and ethanol are both",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.953,
+    "id": "o145"
+   },
+   {
+    "text": "alcohols; they are very different types of",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.767,
+    "id": "o146"
+   },
+   {
+    "text": "alcohol: Ethanol is formed by combining an",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.92,
+    "id": "o147"
+   },
+   {
+    "text": "ethyl group to a hydroxyl group; and",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.814,
+    "id": "o148"
+   },
+   {
+    "text": "methyl",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o149"
+   },
+   {
+    "text": "methanol is created by combining a",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.795,
+    "id": "o150"
+   },
+   {
+    "text": "group to a hydroxyl group: Ethanol has two",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.652,
+    "id": "o151"
+   },
+   {
+    "text": "carbon atoms; while methanol is only one",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.619,
+    "id": "o152"
+   },
+   {
+    "text": "TikTok",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.936,
+    "id": "o153"
+   },
+   {
+    "text": "vingmama",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.704,
+    "id": "o154"
+   },
+   {
+    "text": "methanol is more acidic than water:",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.715,
+    "id": "o155"
+   },
+   {
+    "text": "Tiktok",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.91,
+    "id": "o156"
+   },
+   {
+    "text": "Thimerosal: CgHgHgNaO2S",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.811,
+    "id": "o157"
+   },
+   {
+    "text": "TikTok",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.943,
+    "id": "o158"
+   },
+   {
+    "text": "cleanlivingmama",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.752,
+    "id": "o159"
+   },
+   {
+    "text": "Thimerosal: compound",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.75,
+    "id": "o160"
+   },
+   {
+    "text": "containing ethylmercury",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.979,
+    "id": "o161"
+   },
+   {
+    "text": "Removed to reduce",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.989,
+    "id": "o162"
+   },
+   {
+    "text": "hesitancy around vaccines",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.655,
+    "id": "o163"
+   },
+   {
+    "text": "public",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.999,
+    "id": "o164"
+   },
+   {
+    "text": "Routinely recommended childhood vaccines",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.917,
+    "id": "o165"
+   },
+   {
+    "text": "in the U.S: have not contained thimerosal",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.638,
+    "id": "o166"
+   },
+   {
+    "text": "since the late 1990s. By 2025, when the",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.91,
+    "id": "o167"
+   },
+   {
+    "text": "Secretary of Health and Human Services",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.989,
+    "id": "o168"
+   },
+   {
+    "text": "required removal of thimerosal from vaccines,",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.813,
+    "id": "o169"
+   },
+   {
+    "text": "kktok",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.51,
+    "id": "o170"
+   },
+   {
+    "text": "only multi-dose vials of influenza vaccizc",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.664,
+    "id": "o171"
+   },
+   {
+    "text": "in the U.S. contained thimerosal. However; in",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.755,
+    "id": "o172"
+   },
+   {
+    "text": "Thimerosal: compound",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.981,
+    "id": "o173"
+   },
+   {
+    "text": "containing ethylmercury",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.977,
+    "id": "o174"
+   },
+   {
+    "text": "Removed to reduce",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.988,
+    "id": "o175"
+   },
+   {
+    "text": "hesitancy around vaccines",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.64,
+    "id": "o176"
+   },
+   {
+    "text": "public",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.999,
+    "id": "o177"
+   },
+   {
+    "text": "Routinely recommended childhood vaccines",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.663,
+    "id": "o178"
+   },
+   {
+    "text": "in the U.S: have not contained thimerosal",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.574,
+    "id": "o179"
+   },
+   {
+    "text": "since the late 1990s. By 2025, when the",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.658,
+    "id": "o180"
+   },
+   {
+    "text": "Secretary of Health and Human Services",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.954,
+    "id": "o181"
+   },
+   {
+    "text": "required removal of thimerosal from vaccines,",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.897,
+    "id": "o182"
+   },
+   {
+    "text": "only multi-dose vials of influenza vaccizc",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.794,
+    "id": "o183"
+   },
+   {
+    "text": "gmama",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.609,
+    "id": "o184"
+   },
+   {
+    "text": "in the U.S contained thimerosal. However; in",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.769,
+    "id": "o185"
+   },
+   {
+    "text": "Thimerosal: compound",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.979,
+    "id": "o186"
+   },
+   {
+    "text": "containing ethylmercury",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.975,
+    "id": "o187"
+   },
+   {
+    "text": "Removed to reduce",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.719,
+    "id": "o188"
+   },
+   {
+    "text": "publichesitancy around vaccines:",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.705,
+    "id": "o189"
+   },
+   {
+    "text": "Routinely recommended childhood vaccines",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.78,
+    "id": "o190"
+   },
+   {
+    "text": "in the U.S: have not contained thimerosal",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.643,
+    "id": "o191"
+   },
+   {
+    "text": "since the late 1990s. By 2025, when the",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.822,
+    "id": "o192"
+   },
+   {
+    "text": "Secretary of Health and Human Services",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.84,
+    "id": "o193"
+   },
+   {
+    "text": "required removal of thimerosal from vaccines,",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.888,
+    "id": "o194"
+   },
+   {
+    "text": "kktok",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.682,
+    "id": "o195"
+   },
+   {
+    "text": "only multi-dose vials of influenza vaccizc",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.781,
+    "id": "o196"
+   },
+   {
+    "text": "gmamma",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.589,
+    "id": "o197"
+   },
+   {
+    "text": "in the U.S. contained thimerosal.",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.831,
+    "id": "o198"
+   },
+   {
+    "text": "However, in",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.771,
+    "id": "o199"
+   },
+   {
+    "text": "Thimerosal: compound",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.979,
+    "id": "o200"
+   },
+   {
+    "text": "containing ethylmercury",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.974,
+    "id": "o201"
+   },
+   {
+    "text": "Removed to reduce",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.987,
+    "id": "o202"
+   },
+   {
+    "text": "hesitancy around vaccines",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.656,
+    "id": "o203"
+   },
+   {
+    "text": "public",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.999,
+    "id": "o204"
+   },
+   {
+    "text": "Routinely recommended childhood vaccines",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.812,
+    "id": "o205"
+   },
+   {
+    "text": "in the U.S: have not contained thimerosal",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.652,
+    "id": "o206"
+   },
+   {
+    "text": "since the late 1990s. By 2025, when the",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.799,
+    "id": "o207"
+   },
+   {
+    "text": "Secretary of Health and Human Services",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.84,
+    "id": "o208"
+   },
+   {
+    "text": "required removal of thimerosal from vaccines,",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.836,
+    "id": "o209"
+   },
+   {
+    "text": "only multi-dose vials of influenza vaccizc",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.778,
+    "id": "o210"
+   },
+   {
+    "text": "gmamma",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.678,
+    "id": "o211"
+   },
+   {
+    "text": "in the U.S. contained thimerosal. However; in",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.835,
+    "id": "o212"
+   },
+   {
+    "text": "TikTok",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.927,
+    "id": "o213"
+   },
+   {
+    "text": "leanlivingmama",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.649,
+    "id": "o214"
+   },
+   {
+    "text": "TikTok",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.933,
+    "id": "o215"
+   },
+   {
+    "text": "cleanlivingmama",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.711,
+    "id": "o216"
+   },
+   {
+    "text": "TikTok",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.947,
+    "id": "o217"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.798,
+    "id": "o218"
+   },
+   {
+    "text": "TikTok",
+    "start": 74.0,
+    "end": 76.0,
+    "confidence": 0.954,
+    "id": "o219"
+   },
+   {
+    "text": "cleanlivingmama",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 1.0,
+    "id": "o220"
+   },
+   {
+    "text": "TikTok",
+    "start": 78.0,
+    "end": 80.0,
+    "confidence": 0.951,
+    "id": "o221"
+   },
+   {
+    "text": "leanlvingmama",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.825,
+    "id": "o222"
+   },
+   {
+    "text": "18K",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.801,
+    "id": "o223"
+   },
+   {
+    "text": "TM SO GRATEFUL FOR",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.935,
+    "id": "o224"
+   },
+   {
+    "text": "172",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.993,
+    "id": "o225"
+   },
+   {
+    "text": "RILEY GAINES",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.887,
+    "id": "o226"
+   },
+   {
+    "text": "MAHA",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 1.0,
+    "id": "o227"
+   },
+   {
+    "text": "Tok",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 1.0,
+    "id": "o228"
+   },
+   {
+    "text": "82",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.563,
+    "id": "o229"
+   },
+   {
+    "text": "MAHA Action",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.726,
+    "id": "o230"
+   },
+   {
+    "text": "Follow",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.997,
+    "id": "o231"
+   },
+   {
+    "text": "Add a comment",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.619,
+    "id": "o232"
+   },
+   {
+    "text": "1.8K",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.685,
+    "id": "o233"
+   },
+   {
+    "text": "HAVE SEEN FROM THE",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.999,
+    "id": "o234"
+   },
+   {
+    "text": "172",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.807,
+    "id": "o235"
+   },
+   {
+    "text": "RILEY GAINES",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.71,
+    "id": "o236"
+   },
+   {
+    "text": "MAHA",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 1.0,
+    "id": "o237"
+   },
+   {
+    "text": "Tok",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 1.0,
+    "id": "o238"
+   },
+   {
+    "text": "MAHA Action",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.975,
+    "id": "o239"
+   },
+   {
+    "text": "Follow",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.863,
+    "id": "o240"
+   },
+   {
+    "text": "more",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.999,
+    "id": "o241"
+   },
+   {
+    "text": "Add a comment",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.609,
+    "id": "o242"
+   },
+   {
+    "text": "TikTok",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.884,
+    "id": "o243"
+   },
+   {
+    "text": "cleanlivingmama",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.716,
+    "id": "o244"
+   },
+   {
+    "text": "TikTok",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.951,
+    "id": "o245"
+   },
+   {
+    "text": "cleanlivingmama",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.811,
+    "id": "o246"
+   },
+   {
+    "text": "TikTok",
+    "start": 90.0,
+    "end": 92.0,
+    "confidence": 0.947,
+    "id": "o247"
+   },
+   {
+    "text": "cleanlivingmama",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.88,
+    "id": "o248"
+   },
+   {
+    "text": "J",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.827,
+    "id": "o249"
+   },
+   {
+    "text": "TikTok",
+    "start": 94.0,
+    "end": 94.0,
+    "confidence": 0.999,
+    "id": "o250"
+   },
+   {
+    "text": "J",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.716,
+    "id": "o251"
+   },
+   {
+    "text": "TikTok",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 0.999,
+    "id": "o252"
+   },
+   {
+    "text": "cleanlivingmama",
+    "start": 96.0,
+    "end": 96.0,
+    "confidence": 1.0,
+    "id": "o253"
+   }
+  ]
+ }
+}

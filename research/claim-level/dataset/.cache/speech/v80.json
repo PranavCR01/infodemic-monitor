@@ -1,0 +1,80 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 46.14,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 4.32,
+    "text": "why overload the body and makes more sense to space them out? Because you're not overloading"
+   },
+   {
+    "id": "t2",
+    "start": 4.32,
+    "end": 11.76,
+    "text": "the body. A newborn baby is exposed to 2,000 to 6,000 new antigens every day. Antigen is just"
+   },
+   {
+    "id": "t3",
+    "start": 11.76,
+    "end": 17.52,
+    "text": "the fancy scientific term for foreign substance in their food, in the air, on the ground, in the"
+   },
+   {
+    "id": "t4",
+    "start": 17.52,
+    "end": 22.16,
+    "text": "things that they touch and put in their mouths. Meanwhile, in the entire childhood vaccination"
+   },
+   {
+    "id": "t5",
+    "start": 22.16,
+    "end": 28.56,
+    "text": "series, all 18 years, there are less than 200 antigens, less than one tenth of what babies are"
+   },
+   {
+    "id": "t6",
+    "start": 28.56,
+    "end": 30.72,
+    "text": "are exposed to on a daily basis."
+   },
+   {
+    "id": "t7",
+    "start": 30.72,
+    "end": 33.36,
+    "text": "There is zero evidence for any benefit"
+   },
+   {
+    "id": "t8",
+    "start": 33.36,
+    "end": 35.88,
+    "text": "for spacing out or separating vaccinations,"
+   },
+   {
+    "id": "t9",
+    "start": 35.88,
+    "end": 37.92,
+    "text": "which is why they needed an executive order"
+   },
+   {
+    "id": "t10",
+    "start": 37.92,
+    "end": 39.8,
+    "text": "because it wasn't backed by science."
+   },
+   {
+    "id": "t11",
+    "start": 39.8,
+    "end": 42.28,
+    "text": "Leap healthcare to the healthcare professionals."
+   }
+  ]
+ }
+}

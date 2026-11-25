@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>System states</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../im.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5F99}a:hover{color:#174A78}
+</style>
+</helmet>
+<div class="im" data-theme="{{theme}}" style="width: 1440px; min-height: 1960px; padding: 48px; display: flex; flex-direction: column; gap: 32px">
+  <div><h1 class="t-h1">System states</h1><p class="muted" style="margin: 4px 0 0">Loading, empty, error and abstention states. Each one says what happened and what to do next, in plain language.</p></div>
+
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+
+    <!-- Loading -->
+    <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px"><figcaption class="t-over">Loading · video result skeleton</figcaption>
+      <div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 14px; height: 320px" aria-busy="true" aria-label="Loading result">
+        <div style="display: flex; gap: 12px; align-items: center"><span class="sk-line" style="width: 150px; height: 40px; border-radius: 6px"></span><span class="sk-line" style="width: 120px"></span></div>
+        <span class="sk-line" style="width: 95%; height: 16px"></span><span class="sk-line" style="width: 70%; height: 16px"></span>
+        <div style="display: flex; gap: 14px; margin-top: 6px"><span class="sk-line" style="width: 90px; height: 150px; border-radius: 8px"></span>
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 10px"><span class="sk-line" style="height: 64px; border-radius: 8px"></span><span class="sk-line" style="height: 64px; border-radius: 8px"></span></div></div>
+        <span class="t-cap faint">Skeleton keeps the real layout. No spinner over the whole page.</span>
+      </div>
+    </figure>
+
+    <!-- Empty review queue -->
+    <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px"><figcaption class="t-over">Empty · review queue clear</figcaption>
+      <div class="card" style="padding: 32px 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center; height: 320px">
+        <span style="width: 48px; height: 48px; border-radius: 50%; background: var(--nomis-bg); color: var(--nomis-fg); display: grid; place-items: center"><span class="i i-checkc i-lg" aria-hidden="true"></span></span>
+        <h2 class="t-h2">Nothing to review</h2>
+        <p class="t-small muted" style="margin: 0; max-width: 34ch">Every result has a decision. New items appear here automatically.</p>
+        <a class="btn btn-secondary btn-sm" href="#">See what you decided</a>
+      </div>
+    </figure>
+
+    <!-- Empty filter -->
+    <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px"><figcaption class="t-over">Empty · no matches for filters</figcaption>
+      <div class="card" style="padding: 32px 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center; height: 320px">
+        <span style="width: 48px; height: 48px; border-radius: 50%; background: var(--sunken); color: var(--text-2); display: grid; place-items: center"><span class="i i-search i-lg" aria-hidden="true"></span></span>
+        <h2 class="t-h2">No videos match</h2>
+        <p class="t-small muted" style="margin: 0; max-width: 36ch">No DEBUNKED videos contain “ginger”. Try a different word or clear the filters.</p>
+        <button class="btn btn-secondary btn-sm" type="button">Clear filters</button>
+      </div>
+    </figure>
+
+    <!-- Failed upload -->
+    <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px"><figcaption class="t-over">Error · upload failed</figcaption>
+      <div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 14px; height: 300px">
+        <div style="display: flex; gap: 12px; align-items: center"><span class="thumb" aria-hidden="true"></span><div><div class="mono" style="font-weight: 500">turmeric-joints.mov</div><div class="t-small muted tnum">42.0 MB · stopped at 61%</div></div></div>
+        <div class="bar"><span style="width: 61%; background: var(--err-fg)"></span></div>
+        <div class="banner banner-err" role="alert"><span class="i i-alert" aria-hidden="true" style="margin-top: 2px"></span><div class="t-small"><strong>The upload stopped.</strong> Your connection dropped. Nothing was analysed and nothing was saved.</div></div>
+        <div style="display: flex; gap: 8px"><button class="btn btn-primary btn-sm" type="button"><span class="i i-refresh i-sm" aria-hidden="true"></span>Try again</button><button class="btn btn-ghost btn-sm" type="button">Choose another file</button></div>
+      </div>
+    </figure>
+
+    <!-- Failed job -->
+    <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px"><figcaption class="t-over">Error · job failed (see Job in progress)</figcaption>
+      <div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 12px; height: 300px">
+        <span class="js js-failed" style="font-weight: 600"><span class="i i-alert" aria-hidden="true"></span>Failed at step 2 of 8</span>
+        <h2 class="t-h2">We couldn't read the audio in this video</h2>
+        <p class="t-small muted" style="margin: 0">The sound track may be missing or damaged. No label was produced, and none is guessed.</p>
+        <div style="display: flex; gap: 8px; margin-top: auto"><button class="btn btn-primary btn-sm" type="button"><span class="i i-refresh i-sm" aria-hidden="true"></span>Retry analysis</button><a class="btn btn-secondary btn-sm" href="#">Upload a different file</a></div>
+        <span class="t-cap faint mono">Reference: job_8f2c41</span>
+      </div>
+    </figure>
+
+    <!-- Polling stalled -->
+    <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px"><figcaption class="t-over">Warning · can't reach the server</figcaption>
+      <div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 12px; height: 300px">
+        <div class="banner banner-review"><span class="i i-refresh" aria-hidden="true" style="margin-top: 2px"></span><div class="t-small"><strong>Lost connection. Checking again in 20 s.</strong> Your video is still being analysed on the server; this page will catch up.</div></div>
+        <p class="t-small muted" style="margin: 0">Shown after 3 failed status checks in a row. Polling backs off (3 s, 10 s, 20 s) and resumes when the tab regains focus.</p>
+        <button class="btn btn-secondary btn-sm" type="button" style="align-self: flex-start">Check now</button>
+      </div>
+    </figure>
+
+    <!-- Permission denied -->
+    <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px"><figcaption class="t-over">Permission denied</figcaption>
+      <div class="card" style="padding: 32px 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center; height: 300px">
+        <span style="width: 48px; height: 48px; border-radius: 50%; background: var(--sunken); color: var(--text-2); display: grid; place-items: center"><span class="i i-lock i-lg" aria-hidden="true"></span></span>
+        <h2 class="t-h2">You don't have access to this page</h2>
+        <p class="t-small muted" style="margin: 0; max-width: 38ch">The review queue is for reviewers. Ask your project lead if you need reviewer access.</p>
+        <a class="btn btn-secondary btn-sm" href="#">Go to your videos</a>
+      </div>
+    </figure>
+
+    <!-- Not found -->
+    <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px"><figcaption class="t-over">Not found</figcaption>
+      <div class="card" style="padding: 32px 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center; height: 300px">
+        <span style="width: 48px; height: 48px; border-radius: 50%; background: var(--sunken); color: var(--text-2); display: grid; place-items: center"><span class="i i-file i-lg" aria-hidden="true"></span></span>
+        <h2 class="t-h2">We can't find that video</h2>
+        <p class="t-small muted" style="margin: 0; max-width: 38ch">The link may be wrong, or the video was submitted by someone who hasn't shared it with you.</p>
+        <a class="btn btn-secondary btn-sm" href="#">Go to your videos</a>
+      </div>
+    </figure>
+
+    <!-- Session expired -->
+    <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px"><figcaption class="t-over">Session expired (modal over current page)</figcaption>
+      <div class="card" style="height: 300px; position: relative; overflow: hidden; background: var(--sunken)">
+        <div class="scrim"></div>
+        <div role="dialog" aria-modal="true" aria-labelledby="se" class="card" style="position: absolute; left: 24px; right: 24px; top: 40px; padding: 20px; display: flex; flex-direction: column; gap: 10px; box-shadow: var(--sh-3)">
+          <h2 class="t-h3" id="se">Please sign in again</h2>
+          <p class="t-small muted" style="margin: 0">For security, you were signed out after 8 hours. Your review draft is kept on this device.</p>
+          <div style="display: flex; gap: 8px"><a class="btn btn-primary btn-sm" href="#">Sign in</a><button class="btn btn-ghost btn-sm" type="button">Sign out</button></div>
+        </div>
+      </div>
+    </figure>
+  </div>
+
+  <h2 class="t-h2" style="margin-top: 8px">Label states that must never be confused</h2>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+
+    <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px"><figcaption class="t-over">DEBUNKED · a good video</figcaption>
+      <div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 12px; border-color: var(--deb-bd)">
+        <span class="lb lb-deb lb-lg" style="align-self: flex-start"><span class="i i-shield" aria-hidden="true"></span>DEBUNKED</span>
+        <p class="serif" style="margin: 0; font-size: 17px; line-height: 26px">A nurse raises the claim that vaccines cause autism in order to correct it. A 2014 meta-analysis found no link.</p>
+        <div class="claim" style="cursor: default">
+          <div style="display: flex; gap: 8px; align-items: center"><span class="mono t-small">0:04–0:11</span><span class="decided" style="margin-left: auto"><span class="i i-star i-sm" aria-hidden="true"></span>Decided the label</span></div>
+          <p class="claim-text" style="font-size: 14px">Vaccines cause autism.</p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap"><span class="st"><span class="i i-refute i-sm" aria-hidden="true"></span>REFUTES</span><span class="vd vd-con"><span class="i i-xc i-sm" aria-hidden="true"></span>CONTRADICTED</span></div>
+          <p class="meaning" style="margin: 0; color: var(--deb-fg); font-weight: 600"><span class="i i-shield i-sm" aria-hidden="true" style="margin-top: 3px"></span>The speaker refutes a claim the evidence contradicts. This corrects misinformation.</p>
+        </div>
+      </div>
+    </figure>
+
+    <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px"><figcaption class="t-over">CANNOT RECOGNIZE · honest abstention</figcaption>
+      <div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 12px">
+        <span class="lb lb-cr lb-lg" style="align-self: flex-start"><span class="i i-helpc" aria-hidden="true"></span>CANNOT RECOGNIZE</span>
+        <p class="serif" style="margin: 0; font-size: 17px; line-height: 26px">The evidence can't settle the main claim, so no label is given. A reviewer will decide.</p>
+        <p class="t-small muted" style="margin: 0">Styled like a deliberate result (dashed border, neutral grey), never like an error: no red, no alert icon, no “something went wrong”.</p>
+        <span class="rr" style="align-self: flex-start"><span class="i i-shield i-sm" aria-hidden="true"></span>Possible debunk</span>
+      </div>
+    </figure>
+
+    <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px"><figcaption class="t-over">Confidence · both states</figcaption>
+      <div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 16px">
+        <div><div class="t-small muted">Before calibration</div><div style="display: flex; gap: 6px; align-items: center; margin-top: 4px"><span style="font-weight: 600">Not yet calibrated</span><span class="i i-info i-sm faint" aria-hidden="true"></span></div><p class="t-cap faint" style="margin: 4px 0 0">Tooltip: “Confidence scores will appear once we've checked they match real accuracy.”</p></div>
+        <hr class="divider">
+        <div><div class="t-small muted">After calibration</div><div style="display: flex; gap: 8px; align-items: baseline; margin-top: 4px"><span style="font-weight: 600">High</span><span class="mono muted">0.91</span></div><p class="t-cap faint" style="margin: 4px 0 0">Bands: High ≥ 0.85 · Moderate 0.6–0.85 · Low &lt; 0.6 (Low always goes to review).</p></div>
+      </div>
+    </figure>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light","section":"Display"},"$preview":{"width":1440,"height":1960}}'>
+class Component extends DCLogic {
+  renderVals() { return { theme: this.props.theme ?? 'light' }; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+{
+"v": 3,
+"createdOnFiles": {
+"v": 1,
+"at": "2026-11-23T15:10:00Z"
+},
+"title": "WHO Infodemic Monitor: web frontend",
+"launch": {
+"view": "canvas",
+"page": "direction3"
+},
+"pages": [
+{
+"id": "direction3",
+"name": "Direction 3 (research-backed)"
+},
+{
+"id": "analyst",
+"name": "Analyst flow"
+},
+{
+"id": "review",
+"name": "Review"
+},
+{
+"id": "tablet",
+"name": "Tablet"
+},
+{
+"id": "admin",
+"name": "Evaluation & export"
+},
+{
+"id": "states",
+"name": "System states"
+},
+{
+"id": "foundations",
+"name": "Foundations"
+}
+],
+"boards": {
+"Main.dc.html": {
+"x": 0,
+"y": 0,
+"w": 1440,
+"h": 1240,
+"title": "5 · Video result",
+"page": "analyst",
+"expand": "fill",
+"is_interactive": true
+},
+"ClaimDetail.dc.html": {
+"x": 1520,
+"y": 0,
+"w": 1440,
+"h": 1240,
+"title": "6 · Claim detail (drawer) over transcript tab",
+"page": "analyst",
+"expand": "fill",
+"is_interactive": true
+},
+"SignIn.dc.html": {
+"x": 0,
+"y": 1360,
+"w": 1440,
+"h": 860,
+"title": "1 · Sign in",
+"page": "analyst",
+"expand": "fill"
+},
+"Submit.dc.html": {
+"x": 1520,
+"y": 1360,
+"w": 1440,
+"h": 860,
+"title": "2 · Submit a video (uploading)",
+"page": "analyst",
+"expand": "fill",
+"is_interactive": true
+},
+"Jobs.dc.html": {
+"x": 0,
+"y": 2340,
+"w": 1440,
+"h": 980,
+"title": "3 · Jobs list",
+"page": "analyst",
+"expand": "fill",
+"is_interactive": true
+},
+"JobProgress.dc.html": {
+"x": 1520,
+"y": 2340,
+"w": 1440,
+"h": 980,
+"title": "4 · Job in progress",
+"page": "analyst",
+"expand": "fill",
+"is_interactive": true
+},
+"ReviewQueue.dc.html": {
+"x": 0,
+"y": 0,
+"w": 1440,
+"h": 860,
+"title": "7 · Review queue",
+"page": "review",
+"expand": "fill",
+"is_interactive": true
+},
+"ReviewWorkspace.dc.html": {
+"x": 1520,
+"y": 0,
+"w": 1440,
+"h": 1360,
+"title": "8 · Review workspace (Correct selected; try the decision radios)",
+"page": "review",
+"expand": "fill",
+"is_interactive": true
+},
+"ResultTablet.dc.html": {
+"x": 0,
+"y": 0,
+"w": 834,
+"h": 1780,
+"title": "5T · Video result, tablet 834",
+"page": "tablet"
+},
+"ReviewTablet.dc.html": {
+"x": 914,
+"y": 0,
+"w": 834,
+"h": 1900,
+"title": "8T · Review workspace, tablet 834",
+"page": "tablet"
+},
+"Evaluation.dc.html": {
+"x": 0,
+"y": 0,
+"w": 1440,
+"h": 1180,
+"title": "9 · Evaluation (admin)",
+"page": "admin",
+"expand": "fill"
+},
+"Export.dc.html": {
+"x": 1520,
+"y": 0,
+"w": 816,
+"h": 2000,
+"title": "10 · Export (Letter, flows onto pages)",
+"page": "admin",
+"print": "flow",
+"paper": "letter"
+},
+"States.dc.html": {
+"x": 0,
+"y": 0,
+"w": 1440,
+"h": 1960,
+"title": "11 · System states",
+"page": "states"
+},
+"Tokens.dc.html": {
+"x": 0,
+"y": 0,
+"w": 1440,
+"h": 2240,
+"title": "Design tokens (light + dark)",
+"page": "foundations"
+},
+"Components.dc.html": {
+"x": 1520,
+"y": 0,
+"w": 1440,
+"h": 2400,
+"title": "Component sheet",
+"page": "foundations"
+},
+"DevNotes.dc.html": {
+"x": 3040,
+"y": 0,
+"w": 1200,
+"h": 2200,
+"title": "Developer notes",
+"page": "foundations"
+},
+"ResultV2.dc.html": {
+"x": 3040,
+"y": 0,
+"w": 1440,
+"h": 1640,
+"title": "5 · Video result, EXPLORATION: claim map + annotated transcript",
+"page": "analyst",
+"expand": "fill",
+"is_interactive": true
+},
+"ResultV3.dc.html": {
+"x": 0,
+"y": 0,
+"w": 1440,
+"h": 1900,
+"title": "Video result · evidence summary + annotated transcript",
+"page": "direction3",
+"expand": "fill",
+"is_interactive": true
+},
+"ReviewV3.dc.html": {
+"x": 1520,
+"y": 0,
+"w": 1440,
+"h": 1160,
+"title": "Review · judge first, then reveal (high-priority items)",
+"page": "direction3",
+"expand": "fill",
+"is_interactive": true
+}
+},
+"order": [
+"Main.dc.html",
+"ClaimDetail.dc.html",
+"SignIn.dc.html",
+"Submit.dc.html",
+"Jobs.dc.html",
+"JobProgress.dc.html",
+"ReviewQueue.dc.html",
+"ReviewWorkspace.dc.html",
+"ResultTablet.dc.html",
+"ReviewTablet.dc.html",
+"Evaluation.dc.html",
+"Export.dc.html",
+"States.dc.html",
+"Tokens.dc.html",
+"Components.dc.html",
+"DevNotes.dc.html",
+"ResultV2.dc.html",
+"ResultV3.dc.html",
+"ReviewV3.dc.html"
+],
+"notes": {
+"n_main": {
+"x": -440,
+"y": 0,
+"w": 380,
+"page": "analyst",
+"fill": "blue",
+"text": "VIDEO RESULT, dev notes\n• Timeline segment click: seek video to claim start, scroll its card into view, set card active (blue ring).\n• Claim card click / Enter: open Claim detail drawer (URL /videos/[id]?claim=[cid] so it is linkable).\n• Playing video: the card whose time range contains currentTime gets the active ring.\n• 'What this means' line is derived from stance + verdict (table on DevNotes). Never free text from the model.\n• Confidence: show 'Not yet calibrated' until calibration exists. Tweak 'calibrated' shows the later state.\n• Review banner only when review_reasons is non-empty."
+},
+"n_detail": {
+"x": -440,
+"y": 560,
+"w": 380,
+"page": "analyst",
+"fill": "orange",
+"text": "CLAIM DETAIL\n• Drawer on desktop and tablet, full page on phone. Esc and the X close it and restore focus to the card.\n• Evidence split Contradicts / Supports, strongest study type first.\n• Critic's notes: <details>, collapsed by default.\n• Internal library docs never get an external link."
+},
+"n_jobs": {
+"x": -440,
+"y": 2340,
+"w": 380,
+"page": "analyst",
+"fill": "blue",
+"text": "JOBS + PROGRESS\n• Jobs list polls every 10 s only while any visible row is Queued / Running / Retrying; stops otherwise.\n• Job page polls GET /jobs/[id] every 3 s (back off to 10 s after 3 min; stop on Completed / Failed / Needs review), and on tab focus.\n• On Completed or Needs review: auto-route to the result.\n• Elapsed time is computed client-side from started_at."
+},
+"n_review": {
+"x": -440,
+"y": 0,
+"w": 380,
+"page": "review",
+"fill": "orange",
+"text": "REVIEW\n• A reason is required for every decision; Save stays disabled until it's filled.\n• Reviewers can't decide their own submissions (also enforced server-side).\n• Correcting claims doesn't recompute the label; the panel warns on mismatch.\n• Audit trail is append-only and shows who, what, when."
+},
+"n_v2": {
+"x": 4560,
+"y": 0,
+"w": 400,
+"page": "analyst",
+"fill": "purple",
+"text": "WHAT CHANGED vs. 5\n1. Finding as a sentence ('This video promotes a false cure for the flu'), badge demoted to a tag.\n2. Claim map: speaker stance × evidence. MISINFO and DEBUNKED are opposite corners, so the core distinction is spatial, not just colour. Unsettled claims sit in a dashed gutter, never on the map.\n3. Claims and transcript merged: transcript is the spine, claims are margin notes on the line where they were said. No tabs.\n4. Evidence pyramid glyph replaces '2 contradict · 0 support' as the lead signal: shows which study levels exist, so one systematic review outweighs three lab studies.\n5. Linked selection: a number on the map, timeline or transcript highlights the same claim everywhere (try it in Play)."
+},
+"n_d3": {
+"x": -480,
+"y": 0,
+"w": 420,
+"page": "direction3",
+"fill": "teal",
+"text": "DIRECTION 3: what the research changed\n• Style: clinical evidence summary (GRADE 'Summary of findings' rows, footnoted reasons) + annotated manuscript (serif transcript, claims in the margin) inside a calm institutional shell.\n• Verdict shown small and last: an 'Assessment' line with the reasoning chain, not a hero badge.\n• Wording: 'Contradicted by evidence', 'Insufficient evidence'. System output marked 'System assessment' until an analyst confirms.\n• Evidence strip (SR / RCT / OBS / LAB + guidance) with ▲▼ direction, replacing counts and the pyramid.\n• 2×2 map dropped for a stance × evidence table (empty rows hidden). The 2×2 can live in help.\n• Review: high-priority items ask the analyst to judge before the system's answer is revealed (reduces over-reliance; slower).\n• Dark mode: research says defer; the toggle stays but isn't a priority."
+}
+},
+"designSystems": []
+}

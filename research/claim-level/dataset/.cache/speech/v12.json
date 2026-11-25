@@ -1,0 +1,122 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 74.65,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.04,
+    "text": "So I lost 15 pounds in 20 days and I'm going to tell you exactly how I did it."
+   },
+   {
+    "id": "t2",
+    "start": 3.04,
+    "end": 6.96,
+    "text": "I'm Bray. I'm a fitness specialist and I just want to help you reach your goal because"
+   },
+   {
+    "id": "t3",
+    "start": 6.96,
+    "end": 11.52,
+    "text": "it's really not that hard. First things first, it's all mental. If you think you can do it,"
+   },
+   {
+    "id": "t4",
+    "start": 11.52,
+    "end": 14.56,
+    "text": "you can do it. If you don't think you can do it, you're not going to be able to do it. So"
+   },
+   {
+    "id": "t5",
+    "start": 14.56,
+    "end": 18.0,
+    "text": "you need to be able to be stronger than the voice that's in your head that's telling you"
+   },
+   {
+    "id": "t6",
+    "start": 18.0,
+    "end": 21.52,
+    "text": "go eat that burger, go get Chick-fil-A. You got to be stronger than that, okay?"
+   },
+   {
+    "id": "t7",
+    "start": 22.24,
+    "end": 26.56,
+    "text": "Second thing, you need to eliminate your sugar addiction. If you didn't know, your body runs"
+   },
+   {
+    "id": "t8",
+    "start": 26.56,
+    "end": 30.96,
+    "text": "off sugar, aka glucose. So if you stop feeding yourself sugar, your body will burn the sugar"
+   },
+   {
+    "id": "t9",
+    "start": 30.96,
+    "end": 35.52,
+    "text": "that is stored. Next thing, you need to be drinking a hundred ounces of water a day."
+   },
+   {
+    "id": "t10",
+    "start": 35.52,
+    "end": 38.72,
+    "text": "Really, you should be drinking your body weight in ounces, but a hundred ounces will do because"
+   },
+   {
+    "id": "t11",
+    "start": 38.72,
+    "end": 41.68,
+    "text": "you didn't know your body actually flushes out the fat cells through your bloodstream,"
+   },
+   {
+    "id": "t12",
+    "start": 41.68,
+    "end": 44.8,
+    "text": "and you pee it out. You don't poop it out. I literally thought you poop out the fat,"
+   },
+   {
+    "id": "t13",
+    "start": 44.8,
+    "end": 48.72,
+    "text": "but you pee out the fat, okay? So that's why you need to stay hydrated with a hundred ounces of"
+   },
+   {
+    "id": "t14",
+    "start": 48.72,
+    "end": 53.36,
+    "text": "water. But if you need a detailed list on what to eat, what foods to avoid, what time to eat,"
+   },
+   {
+    "id": "t15",
+    "start": 53.36,
+    "end": 58.56,
+    "text": "how much to eat. I have that all in a meal plan on my website under a fat loss guide and honestly"
+   },
+   {
+    "id": "t16",
+    "start": 58.56,
+    "end": 62.32,
+    "text": "those are the three things that help me lose 15 pounds in 20 days because I decided that I rather"
+   },
+   {
+    "id": "t17",
+    "start": 62.32,
+    "end": 66.96,
+    "text": "be uncomfortable for 20 days rather than 20 years in my own body so the choice is really up to you."
+   },
+   {
+    "id": "t18",
+    "start": 66.96,
+    "end": 69.76,
+    "text": "Go ahead and check it out and I wish you the best on your journey."
+   }
+  ]
+ }
+}

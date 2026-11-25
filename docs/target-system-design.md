@@ -138,10 +138,15 @@ One LLM pass reads the whole fused timeline and returns each distinct, checkable
 ```json
 {"claim_id": "c1", "claim_text": "Drinking hot water cures the flu",
  "claim_category": "treatment_efficacy",
+ "claim_kind": "research_question",
  "source_segment_ids": ["t1", "o1"],
  "start_seconds": 3.5, "end_seconds": 8.0,
  "requires_verification": true}
 ```
+
+`claim_kind` is `research_question` (does X work, does X cause Y) or `fact_of_record` (a schedule, a legal limit, a statistic, a basic physiological fact). Retrieval uses it to choose between studies and the authoritative references in section 6.
+
+**Out of scope for now:** claims about laws and regulators rather than health effects ("banned in Europe", "Texas requires warning labels", "this dye was renamed to hide it"). They are noted on the video but not extracted as claims. Revisit after the first evaluation.
 
 The output format is enforced with a forced tool call and a Pydantic schema, so the model can't return free text.
 
@@ -175,7 +180,7 @@ For each claim, a separate LLM step decides what the speaker does with it. This 
 | REFUTES | says it's false or corrects it | "Some people say garlic stops colds. That's a myth." |
 | QUOTES | repeats someone else's claim without taking a side | "My aunt swears garlic stops colds." |
 | NEUTRAL | discusses it without a position | "Researchers are still studying whether…" |
-| UNCLEAR | can't be determined | sarcasm, or two speakers disagreeing |
+| UNCLEAR | can't be determined | irony with no clear target, or two speakers disagreeing |
 
 **Every stance cites the words it's based on** (`stance_segment_ids`), so a reviewer can see why. For the garlic example, the deciding words are "That's a myth." "Some people say…" on its own would only be QUOTES.
 
@@ -183,7 +188,9 @@ For each claim, a separate LLM step decides what the speaker does with it. This 
 
 **Screen-only claims** have no spoken context. A bare caption stated as fact ("HERB X: +300% IMMUNITY") is read as ENDORSES, unless it's framed as a myth ("MYTH:", "FALSE", a cross mark).
 
-**Hard cases go to UNCLEAR, not a guess:** sarcasm, irony, several speakers with different views, and a speaker who contradicts themselves. UNCLEAR is one of the triggers for human review.
+**Hard cases go to UNCLEAR, not a guess:** genuinely ambiguous tone, irony or a joke with no clear claim being rejected, several speakers with different views, and a speaker who contradicts themselves. UNCLEAR is one of the triggers for human review.
+
+**Sarcastic debunks are REFUTES** (project lead, 2026-11-25): a sarcastic or mocking debunk with a clear target is REFUTES, so the video can come out DEBUNKING under §9. The stance rationale says the speaker used sarcasm, and the user-facing explanation carries that nuance ("Debunked (the speaker uses sarcasm): ...").
 
 **Confidence:** the stance step doesn't produce a usable confidence number until it's calibrated against labelled data (section 11). Until then the design leaves it empty rather than show a number nobody can interpret.
 
@@ -207,6 +214,27 @@ Retrieval is deterministic code that searches PubMed for each claim, falling bac
 - **Rate limits:** NCBI allows about 3 requests a second without an API key and 10 with one. Requests are spaced out and retried with backoff on errors.
 - **Cache** results by query, so retries, repeated claims and re-runs don't hit PubMed again.
 - **Treat abstracts as untrusted text,** like the transcript (section 15).
+
+### Trusted sources beyond PubMed
+
+PubMed answers "what does the research say?", but many health claims are facts of record rather than research questions: a vaccination schedule, a legal limit, a national statistic, the nutrient content of a food, basic physiology. For those, retrieval also searches a short, fixed list of authoritative references.
+
+| Kind of claim | Source |
+| --- | --- |
+| Textbook physiology, standard medical facts | NCBI Bookshelf (e.g. StatPearls), searched through the same E-utilities API |
+| Vaccination schedules | CDC and WHO immunisation schedules |
+| Drug, food and supplement rules, safety limits | FDA, EMA, EFSA |
+| Public-health guidance and fact sheets | WHO, CDC, NHS, ECDC |
+| Disease statistics | WHO Global Health Observatory, national statistics offices |
+| Food composition | USDA FoodData Central |
+
+**Rules for these sources:**
+
+- **A fixed allow-list in config.** Code fetches only these domains; the model can't add a source. A general web search is still excluded.
+- **Cited like papers.** Each record gets an `evidence_id` built by code (`ref_<hash>`), `"source": "reference"`, the URL, the date retrieved and the quoted passage. Pages change, so a snapshot of the fetched text is stored with its hash.
+- **Same verdict rules.** A reference supports CONTRADICTED only when it states the claim is false or gives a figure that conflicts with it. "There is no evidence that X works" is still absence of evidence, so the claim stays INSUFFICIENT\_EVIDENCE.
+- **Ranked with the strongest evidence for facts of record.** For a schedule, a legal limit or a statistic, the official source outranks any single study. For questions of efficacy, studies still come first.
+- **Searched alongside PubMed, not as a fallback.** Claim extraction marks each claim as a research question or a fact of record, and retrieval picks the sources from that. The offline library below remains the fallback for both.
 
 ### When nothing comes back
 
@@ -315,8 +343,11 @@ The verifier reads one claim and its reranked papers and decides what the eviden
 | SUPPORTED | The evidence backs the claim as stated |
 | CONTRADICTED | The evidence shows the claim is false |
 | MIXED | Good studies point in different directions |
-| INSUFFICIENT\_EVIDENCE | Nothing tests this claim directly, or what exists is too weak |
+| UNSUPPORTED | An **efficacy claim** (X cures, treats, prevents or reverses Y) for which the full search, PubMed plus the section 6 references, found no evidence for or against. Presenting an untested remedy as working is itself misleading: the burden of proof is on the claim |
+| INSUFFICIENT\_EVIDENCE | Any other claim that nothing tests directly, or where what exists is too weak (including claims about harm or side effects: no evidence of harm is not evidence of harm) |
 | NOT\_VERIFIABLE | The claim can't be tested ("this tea feels amazing") |
+
+**UNSUPPORTED is not CONTRADICTED.** The explanation always says "no evidence supports this", never "this is false". It applies only after the retrieval budget is exhausted, and only when `claim_category` is treatment or prevention efficacy.
 
 **Output:**
 
@@ -378,20 +409,50 @@ By the time the judge runs, the judgment has already been made, claim by claim: 
 | If any claim… | Video label |
 | --- | --- |
 | is **endorsed** by the speaker and **contradicted** by the evidence | MISINFO |
+| otherwise, is **refuted** by the speaker but **supported** by the evidence (the speaker denies something true) | MISINFO, always sent to review |
+| otherwise, is an **endorsed efficacy claim** the evidence leaves **unsupported** | MISINFO (unproven), always sent to review |
 | otherwise, is **refuted** by the speaker and contradicted by the evidence | DEBUNKED (`DEBUNKING`) |
 | otherwise, at least one claim was judged and nothing false is endorsed | NO-MISINFO |
-| no claim could be judged (all insufficient or not verifiable, or no claims) | CANNOT RECOGNIZE |
+| otherwise, is **refuted** by the speaker while the evidence is mixed or insufficient | CANNOT RECOGNIZE, sent to review as a possible debunk |
+| no claim could be judged (all insufficient or not verifiable, or no claims) | CANNOT RECOGNIZE; sent to review if any claim needed checking but had too little evidence |
+
+MISINFO carries a `misinfo_basis`: `contradicted`, `denies_supported` or `unproven`. The internal label stays one of the four; the interface shows "MISINFO (unproven)" when the basis is `unproven`.
 
 ```python
 def judge(claims):
     endorsed_false = [c for c in claims if c.stance == "ENDORSES" and c.verdict == "CONTRADICTED"]
+    denied_true    = [c for c in claims if c.stance == "REFUTES"  and c.verdict == "SUPPORTED"]
+    unproven       = [c for c in claims if c.stance == "ENDORSES" and c.verdict == "UNSUPPORTED"]
     refuted_false  = [c for c in claims if c.stance == "REFUTES"  and c.verdict == "CONTRADICTED"]
     judged         = [c for c in claims if c.verdict in ("SUPPORTED", "CONTRADICTED")]
-    if endorsed_false: return "MISINFO", endorsed_false
-    if refuted_false:  return "DEBUNKING", refuted_false
-    if judged:         return "NO_MISINFO", judged
-    return "CANNOT_RECOGNIZE", []
+    refuted_open   = [c for c in claims if c.stance == "REFUTES"  and c.verdict in ("MIXED", "INSUFFICIENT_EVIDENCE")]
+
+    # Review reasons come from every claim, whichever rule decides the label.
+    reasons  = [f"denies_supported:{c.id}" for c in denied_true]
+    reasons += [f"unproven_claim:{c.id}" for c in unproven]
+    reasons += [f"possible_debunk:{c.id}" for c in refuted_open]
+    reasons += [f"mixed_evidence:{c.id}" for c in claims if c.verdict == "MIXED"]
+    if (endorsed_false or unproven) and refuted_false:
+        reasons.append("mixed_video")
+
+    if endorsed_false: return "MISINFO", "contradicted", endorsed_false, reasons
+    if denied_true:    return "MISINFO", "denies_supported", denied_true, reasons
+    if unproven:       return "MISINFO", "unproven", unproven, reasons
+    if refuted_false:  return "DEBUNKING", None, refuted_false, reasons
+    if judged:         return "NO_MISINFO", None, judged, reasons
+    if refuted_open:   return "CANNOT_RECOGNIZE", None, refuted_open, reasons
+    # Nothing could be judged. If a claim needed checking but the evidence was too thin,
+    # a person should still see it; videos with no checkable claims are not sent.
+    if any(c.verdict == "INSUFFICIENT_EVIDENCE" for c in claims):
+        reasons.append("nothing_judged")
+    return "CANNOT_RECOGNIZE", None, [], reasons
 ```
+
+The second value is the `misinfo_basis`, the third the deciding claims, and the fourth the list of review reasons the rule itself adds (section 11). Review reasons are collected from every claim, whichever rule decides the label: a refuted claim the evidence can't settle raises "possible debunk" even when another claim makes the video NO-MISINFO. Mixed videos (one false or unproven claim endorsed, another refuted) are labelled MISINFO and always sent to review.
+
+**Probe: why MISINFO for an unproven claim?** In the golden set, 39 videos were rated false by fact-checkers while no study tested the specific claim ("sea moss cures thyroid disease"). Fact-checkers and WHO treat promoting an untested cure as misinformation, because the burden of proof is on the claim. Calling those videos CANNOT RECOGNIZE would hide the most common kind of health misinformation. The label is kept honest by three limits: it applies only to endorsed efficacy claims (never to harm or mechanism claims), only after the full retrieval budget finds nothing, and it is shown as "MISINFO (unproven)", never as "false", and always reviewed.
+
+**Probe: why two new branches?** Labelling the first golden-set batch exposed two gaps. A speaker who *refutes a true claim* ("vaccines don't prevent measles, that's a lie") was falling through to NO-MISINFO, because only endorsed false claims counted as misinformation. Denying established evidence is misinformation too, so it now is, and it always goes to a person, because it rests entirely on the stance being right. The second gap: clear debunks of claims the sources couldn't settle were landing in CANNOT RECOGNIZE with nothing to flag them. They still don't get DEBUNKED automatically, since refuting an unsettled claim isn't the same as correcting a false one, but a person now sees them. Most of the other missed debunks (statistics, schedules, regulatory limits) are fixed at the source: section 6 now allows authoritative reference sources, so those claims can be checked and reach CONTRADICTED.
 
 The label always comes with the claims that decided it, so the explanation can point at them: "MISINFO because claim 1 is endorsed and contradicted by these two papers."
 
@@ -441,7 +502,7 @@ Whether a case is "weak" is decided by a written code rule. The rule combines si
 
 ### Judgments from the LLM steps
 
-- A verdict of INSUFFICIENT\_EVIDENCE or MIXED.
+- A verdict of INSUFFICIENT\_EVIDENCE, MIXED or UNSUPPORTED.
 - Limitations noted by the verifier (wrong population, indirect outcome).
 - A stance of UNCLEAR.
 - The critic choosing ESCALATE or marking the case for review.
@@ -462,7 +523,8 @@ Whether a case is "weak" is decided by a written code rule. The rule combines si
 
 A case goes to a person if **any** of these hold:
 
-- a deciding claim is INSUFFICIENT\_EVIDENCE or MIXED;
+- a deciding claim is INSUFFICIENT\_EVIDENCE, MIXED or UNSUPPORTED (so every "MISINFO (unproven)" video is reviewed);
+- no claim could be judged, but at least one claim needed checking and had too little evidence (`nothing_judged`). A person should see what the system could not check. The reason never lowers a case's priority: severity still comes from the claims (section 12);
 - supporting and contradicting papers both exist for a deciding claim;
 - a deciding claim rests only on weak study types;
 - a deciding claim's stance is UNCLEAR;
@@ -486,11 +548,27 @@ Review is a real step in the workflow, not a flag. A case in review has its own 
 - **Request re-analysis**, for example after the retrieval terms are fixed.
 - **Reject** the result.
 
-Every action records who, when and why.
+Every action records who, when and why: a reason code (claim overgeneralised, evidence misread, stance misread, missing source, system correct, other) and a written note.
+
+**HIGH severity: your judgement first.** On a HIGH-severity case each reviewer first records their own stance and verdict for every claim; only then does the server show them the system's. A decision without that step is refused, and both are kept in the audit trail.
 
 **Feedback loop, done carefully.** Reviewer corrections are valuable test data, but they are **not** fed straight back into prompts or models. A correction becomes a candidate evaluation example; it's checked for quality, normalised and deduplicated, checked so it can't leak between training and test sets, and added to a new dataset version. Changes are then evaluated offline before anything is promoted.
 
 **Probe: what if review becomes a bottleneck?** The evaluation reports how many cases each rule sends to review. If one rule floods the queue, it's tuned with data: raising the confidence threshold, or splitting a broad rule. It's never switched off silently. Reviewer overturn rates per rule show which rules catch real problems and which only create work.
+
+### Severity: which reviews come first
+
+Severity ranks how much harm a claim could do if someone acted on it. It sets the order of the review queue and the alerts. **It never changes a label or a verdict.**
+
+| Severity | When | Examples |
+| --- | --- | --- |
+| HIGH | Acting on it could cause serious harm: stopping or replacing medical treatment, vaccines, cancer "cures", medication doses, pregnancy and children, self-harm and eating disorders | "Cut sugar to starve your cancer", "skip the MMR, it causes autism" |
+| MEDIUM | Could lead to wasted money or delayed care, but rarely to direct harm | Supplements "replacing" a diet, detox products |
+| LOW | Little realistic harm | "Legs up the wall improves circulation" |
+
+**Who decides:** code, not a model. Each claim's `claim_category` and topic map to a severity through a table in config. The table starts from the high-risk topic list the review rule already uses (section 11). **The project lead and Dr. Brooks own the table, and it is confirmed with WHO** before it is used for real triage. Reviewers can override a claim's severity with a reason, and every override is logged, so the table can be corrected from real cases.
+
+A video's severity is the highest severity among its MISINFO-relevant claims (endorsed and CONTRADICTED, endorsed and unsettled, or refuted while the evidence SUPPORTS it). The review queue sorts by severity first, then age.
 
 ## 13. Model routing
 
@@ -538,7 +616,7 @@ Evaluation is what turns every design claim in this document into something meas
 
 - **One shared, versioned set** used by every track, not separate spreadsheets.
 - **Labelled at both levels:** a label per video, and per claim the claim text, its truth (supported, contradicted, insufficient), the speaker's stance, and the source the label is based on.
-- **Two independent labellers** per item, with agreement measured (Cohen's kappa). Disagreements are settled and recorded. Human agreement is the ceiling the system is compared against.
+- **Two independent labellers** per item, with agreement measured (Cohen's kappa). Disagreements are settled and recorded. Videos with no health content are tagged out\_of\_scope and left out of every metric, so they can't inflate CANNOT RECOGNIZE. Human agreement is the ceiling the system is compared against.
 - **Split by video, not by sentence,** so no video appears in both tuning and test data.
 - **Covers the hard cases on purpose:**
 
@@ -668,7 +746,7 @@ Calls to the MCP retrieval server are traced too, with the client ID, tool, late
 
 | Table | Holds |
 | --- | --- |
-| `users` | User ID, auth identity, role |
+| `users` | User ID, auth identity (email, display name); roles come from the verified token |
 | `videos` | Owner, storage location, SHA-256 hash, duration |
 | `jobs` | Video, state, pipeline version, attempts, error code |
 | `job_events` | Every state change, with time |
@@ -681,7 +759,7 @@ Calls to the MCP retrieval server are traced too, with the client ID, tool, late
 | `claim_evidence` | Which paper relates to which claim, and how (supports or contradicts) |
 | `verification_results` | Verdict, explanation, limitations, version |
 | `critic_reviews` | Decision and issues raised |
-| `classifications` | Video label, deciding claims, confidence, version |
+| `classifications` | Video label, MISINFO basis (`contradicted` / `denies_supported` / `unproven`), deciding claims, confidence, version |
 | `human_reviews` | Reviewer, decision, reason, time |
 | `model_runs` | Step, model, prompt version, tokens, cost, latency |
 | `audit_events` | Who did what to which record, and when |
@@ -702,6 +780,7 @@ Everything has stable IDs and foreign keys, and schema changes go through number
 | GET | `/v1/videos/{video_id}/results` | Final label and explanation |
 | GET | `/v1/videos/{video_id}/claims` | Claims with stance and verdict |
 | GET | `/v1/claims/{claim_id}/evidence` | Papers for one claim |
+| POST | `/v1/reviews/{review_id}/pre-reveal` | A reviewer's own judgement on a HIGH case, before the system's is shown |
 | POST | `/v1/reviews/{review_id}/decision` | A reviewer's decision |
 | GET | `/v1/admin/evaluations` | Evaluation summaries |
 

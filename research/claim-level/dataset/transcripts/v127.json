@@ -1,0 +1,180 @@
+{
+ "video_id": "v127",
+ "filename": "new_TikTok_7255212264200998170.mp4",
+ "relative_path": "new_TikTok_7255212264200998170.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@farmaceuticofernandez",
+ "extracted_at": "2026-11-23T08:45:57",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.995,
+  "duration_seconds": 30.54,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 4.0,
+    "text": "El otro día me preguntaron en la telebañador con o sin calzón"
+   },
+   {
+    "id": "t2",
+    "start": 4.0,
+    "end": 9.5,
+    "text": "Y claro, entiendo el dilema porque aquello de repente se pone a apuntar a cualquiera y puede ser un problema"
+   },
+   {
+    "id": "t3",
+    "start": 9.5,
+    "end": 15.0,
+    "text": "Pero claro es que el bañador está pensado para que se seque rápido y si te pones debajo un calzón de algodón eso ya no pasa"
+   },
+   {
+    "id": "t4",
+    "start": 15.0,
+    "end": 18.5,
+    "text": "Y se favorece que se produzca una infección y bastante irritación"
+   },
+   {
+    "id": "t5",
+    "start": 18.5,
+    "end": 24.5,
+    "text": "Y que sepas que el calzoncillo puede subir la temperatura y reducir la producción de soldaditos así que puede no ser bueno para los testículos"
+   },
+   {
+    "id": "t6",
+    "start": 24.5,
+    "end": 30.5,
+    "text": "Y si lo haces porque te piensas que es muy malo aunque se vea la tira con la marca del calzón, entonces consiste en al bañador."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 16,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "sin calzon?",
+    "confidence": 0.886
+   },
+   {
+    "time": 2.0,
+    "text": "eBanador con",
+    "confidence": 0.502
+   },
+   {
+    "time": 2.0,
+    "text": "sin calzon?",
+    "confidence": 0.914
+   },
+   {
+    "time": 28.0,
+    "text": "No mola nada y",
+    "confidence": 0.91
+   },
+   {
+    "time": 28.0,
+    "text": "guarrada",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "es Una",
+    "confidence": 0.868
+   },
+   {
+    "time": 30.0,
+    "text": "No mola nada y",
+    "confidence": 0.885
+   },
+   {
+    "time": 30.0,
+    "text": "guarrada",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "es Una",
+    "confidence": 0.878
+   }
+  ],
+  "captions": [
+   {
+    "text": "sin calzon?",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.886,
+    "id": "o1"
+   },
+   {
+    "text": "eBanador con",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.502,
+    "id": "o2"
+   },
+   {
+    "text": "sin calzon?",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.914,
+    "id": "o3"
+   },
+   {
+    "text": "No mola nada y",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.91,
+    "id": "o4"
+   },
+   {
+    "text": "guarrada",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o5"
+   },
+   {
+    "text": "es Una",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.868,
+    "id": "o6"
+   },
+   {
+    "text": "No mola nada y",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.885,
+    "id": "o7"
+   },
+   {
+    "text": "guarrada",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o8"
+   },
+   {
+    "text": "es Una",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.878,
+    "id": "o9"
+   }
+  ]
+ }
+}

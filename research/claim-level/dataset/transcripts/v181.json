@@ -1,0 +1,828 @@
+{
+ "video_id": "v181",
+ "filename": "new_youtube_Wt0aPy1ZXSg.mp4",
+ "relative_path": "new_youtube_Wt0aPy1ZXSg.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:46:00",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 51.17,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.52,
+    "text": "Try this easy hack for your anxiety. Do you ever crave salty foods when you are stressed out and"
+   },
+   {
+    "id": "t2",
+    "start": 5.52,
+    "end": 11.12,
+    "text": "you're very anxious? Well that's because your brain has very specific sensors for sodium and this"
+   },
+   {
+    "id": "t3",
+    "start": 11.12,
+    "end": 16.88,
+    "text": "is going to help to maintain your homeostasis and of course the balance between your fight or flight,"
+   },
+   {
+    "id": "t4",
+    "start": 16.88,
+    "end": 21.44,
+    "text": "your sympathetic nervous system and your parasympathetic. So my tip here, just get a little bit"
+   },
+   {
+    "id": "t5",
+    "start": 21.44,
+    "end": 27.68,
+    "text": "of salt and put a pinch into your mouth, ideally under your tongue and drink that down with a little"
+   },
+   {
+    "id": "t6",
+    "start": 27.68,
+    "end": 31.68,
+    "text": "bit of water. You can do this throughout the day when you are feeling anxious to help to balance"
+   },
+   {
+    "id": "t7",
+    "start": 31.68,
+    "end": 36.08,
+    "text": "those electrolytes and maintaining your other electrolytes as well. So magnesium is going to"
+   },
+   {
+    "id": "t8",
+    "start": 36.08,
+    "end": 41.6,
+    "text": "be really important for your nervous system and other herbal medicines that I love for anxiety."
+   },
+   {
+    "id": "t9",
+    "start": 41.6,
+    "end": 46.8,
+    "text": "So things like valerian, skull cat, passion flower, and lemon balm, that combination together is"
+   },
+   {
+    "id": "t10",
+    "start": 46.8,
+    "end": 51.04,
+    "text": "amazing for chronic anxiety. Follow for more natural health tips."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 26,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Dr:",
+    "confidence": 0.976
+   },
+   {
+    "time": 0.0,
+    "text": "Janine",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "ADIO'",
+    "confidence": 0.725
+   },
+   {
+    "time": 0.0,
+    "text": "8",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "anxilety",
+    "confidence": 0.59
+   },
+   {
+    "time": 4.0,
+    "text": "when you are",
+    "confidence": 0.995
+   },
+   {
+    "time": 4.0,
+    "text": "stressed out",
+    "confidence": 0.985
+   },
+   {
+    "time": 6.01,
+    "text": "and you're",
+    "confidence": 0.819
+   },
+   {
+    "time": 6.01,
+    "text": "very anxious?",
+    "confidence": 0.998
+   },
+   {
+    "time": 8.01,
+    "text": "4D1O}",
+    "confidence": 0.532
+   },
+   {
+    "time": 8.01,
+    "text": "8",
+    "confidence": 0.99
+   },
+   {
+    "time": 10.01,
+    "text": "sensors for",
+    "confidence": 0.997
+   },
+   {
+    "time": 10.01,
+    "text": "sodium",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.01,
+    "text": "help to",
+    "confidence": 0.666
+   },
+   {
+    "time": 12.01,
+    "text": "maintain",
+    "confidence": 0.806
+   },
+   {
+    "time": 14.01,
+    "text": "Jan",
+    "confidence": 0.982
+   },
+   {
+    "time": 14.01,
+    "text": "And of course",
+    "confidence": 0.944
+   },
+   {
+    "time": 18.02,
+    "text": "your sympathetic",
+    "confidence": 0.994
+   },
+   {
+    "time": 18.02,
+    "text": "nervous",
+    "confidence": 0.975
+   },
+   {
+    "time": 20.02,
+    "text": "here,",
+    "confidence": 0.975
+   },
+   {
+    "time": 22.02,
+    "text": "Dr:",
+    "confidence": 0.982
+   },
+   {
+    "time": 22.02,
+    "text": "Janine",
+    "confidence": 0.987
+   },
+   {
+    "time": 22.02,
+    "text": "little bit",
+    "confidence": 0.663
+   },
+   {
+    "time": 22.02,
+    "text": "of Salt",
+    "confidence": 0.758
+   },
+   {
+    "time": 24.02,
+    "text": "ine",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.02,
+    "text": "AD",
+    "confidence": 0.9
+   },
+   {
+    "time": 24.02,
+    "text": "8",
+    "confidence": 0.801
+   },
+   {
+    "time": 24.02,
+    "text": "ideally under",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.02,
+    "text": "your tongue,",
+    "confidence": 0.851
+   },
+   {
+    "time": 26.03,
+    "text": "ind",
+    "confidence": 0.988
+   },
+   {
+    "time": 26.03,
+    "text": "ideallyunder",
+    "confidence": 0.983
+   },
+   {
+    "time": 26.03,
+    "text": "your tongues",
+    "confidence": 0.554
+   },
+   {
+    "time": 30.03,
+    "text": "D",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.03,
+    "text": "Jan",
+    "confidence": 0.616
+   },
+   {
+    "time": 30.03,
+    "text": "4D10}",
+    "confidence": 0.503
+   },
+   {
+    "time": 30.03,
+    "text": "when yoWare",
+    "confidence": 0.859
+   },
+   {
+    "time": 32.03,
+    "text": "Dr",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.03,
+    "text": "Jan",
+    "confidence": 0.975
+   },
+   {
+    "time": 32.03,
+    "text": "those",
+    "confidence": 0.985
+   },
+   {
+    "time": 32.03,
+    "text": "electfolytes,",
+    "confidence": 0.92
+   },
+   {
+    "time": 34.03,
+    "text": "D",
+    "confidence": 0.999
+   },
+   {
+    "time": 34.03,
+    "text": "Jai",
+    "confidence": 0.974
+   },
+   {
+    "time": 34.03,
+    "text": "and",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.03,
+    "text": "youother",
+    "confidence": 0.998
+   },
+   {
+    "time": 36.04,
+    "text": "Js golng to be",
+    "confidence": 0.596
+   },
+   {
+    "time": 38.04,
+    "text": "Dr",
+    "confidence": 0.962
+   },
+   {
+    "time": 38.04,
+    "text": "nine",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.04,
+    "text": "for our",
+    "confidence": 0.886
+   },
+   {
+    "time": 38.04,
+    "text": "nervous System",
+    "confidence": 0.955
+   },
+   {
+    "time": 42.04,
+    "text": "Duine",
+    "confidence": 0.546
+   },
+   {
+    "time": 42.04,
+    "text": "So things",
+    "confidence": 0.707
+   },
+   {
+    "time": 42.04,
+    "text": "like",
+    "confidence": 0.693
+   },
+   {
+    "time": 44.04,
+    "text": "passionilower",
+    "confidence": 0.596
+   },
+   {
+    "time": 46.05,
+    "text": "ADIO}",
+    "confidence": 0.54
+   },
+   {
+    "time": 46.05,
+    "text": "that combination",
+    "confidence": 0.813
+   },
+   {
+    "time": 46.05,
+    "text": "together",
+    "confidence": 0.999
+   },
+   {
+    "time": 48.05,
+    "text": "Ja",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.05,
+    "text": "forchronic",
+    "confidence": 0.714
+   },
+   {
+    "time": 48.05,
+    "text": "anxiety:",
+    "confidence": 0.902
+   },
+   {
+    "time": 50.05,
+    "text": "natural",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.05,
+    "text": "health tips.",
+    "confidence": 0.703
+   }
+  ],
+  "captions": [
+   {
+    "text": "Dr:",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.976,
+    "id": "o1"
+   },
+   {
+    "text": "Janine",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o2"
+   },
+   {
+    "text": "ADIO'",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.725,
+    "id": "o3"
+   },
+   {
+    "text": "8",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o4"
+   },
+   {
+    "text": "anxilety",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.59,
+    "id": "o5"
+   },
+   {
+    "text": "when you are",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.995,
+    "id": "o6"
+   },
+   {
+    "text": "stressed out",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.985,
+    "id": "o7"
+   },
+   {
+    "text": "and you're",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.819,
+    "id": "o8"
+   },
+   {
+    "text": "very anxious?",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.998,
+    "id": "o9"
+   },
+   {
+    "text": "4D1O}",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.532,
+    "id": "o10"
+   },
+   {
+    "text": "8",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.99,
+    "id": "o11"
+   },
+   {
+    "text": "sensors for",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.997,
+    "id": "o12"
+   },
+   {
+    "text": "sodium",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 1.0,
+    "id": "o13"
+   },
+   {
+    "text": "help to",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.666,
+    "id": "o14"
+   },
+   {
+    "text": "maintain",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.806,
+    "id": "o15"
+   },
+   {
+    "text": "Jan",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.982,
+    "id": "o16"
+   },
+   {
+    "text": "And of course",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.944,
+    "id": "o17"
+   },
+   {
+    "text": "your sympathetic",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.994,
+    "id": "o18"
+   },
+   {
+    "text": "nervous",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.975,
+    "id": "o19"
+   },
+   {
+    "text": "here,",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.975,
+    "id": "o20"
+   },
+   {
+    "text": "Dr:",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.982,
+    "id": "o21"
+   },
+   {
+    "text": "Janine",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.987,
+    "id": "o22"
+   },
+   {
+    "text": "little bit",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.663,
+    "id": "o23"
+   },
+   {
+    "text": "of Salt",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.758,
+    "id": "o24"
+   },
+   {
+    "text": "ine",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 1.0,
+    "id": "o25"
+   },
+   {
+    "text": "AD",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.9,
+    "id": "o26"
+   },
+   {
+    "text": "8",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.801,
+    "id": "o27"
+   },
+   {
+    "text": "ideally under",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 1.0,
+    "id": "o28"
+   },
+   {
+    "text": "your tongue,",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.851,
+    "id": "o29"
+   },
+   {
+    "text": "ind",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.988,
+    "id": "o30"
+   },
+   {
+    "text": "ideallyunder",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.983,
+    "id": "o31"
+   },
+   {
+    "text": "your tongues",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.554,
+    "id": "o32"
+   },
+   {
+    "text": "D",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 1.0,
+    "id": "o33"
+   },
+   {
+    "text": "Jan",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.616,
+    "id": "o34"
+   },
+   {
+    "text": "4D10}",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.503,
+    "id": "o35"
+   },
+   {
+    "text": "when yoWare",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.859,
+    "id": "o36"
+   },
+   {
+    "text": "Dr",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 1.0,
+    "id": "o37"
+   },
+   {
+    "text": "Jan",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.975,
+    "id": "o38"
+   },
+   {
+    "text": "those",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.985,
+    "id": "o39"
+   },
+   {
+    "text": "electfolytes,",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.92,
+    "id": "o40"
+   },
+   {
+    "text": "D",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.999,
+    "id": "o41"
+   },
+   {
+    "text": "Jai",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.974,
+    "id": "o42"
+   },
+   {
+    "text": "and",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 1.0,
+    "id": "o43"
+   },
+   {
+    "text": "youother",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.998,
+    "id": "o44"
+   },
+   {
+    "text": "Js golng to be",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.596,
+    "id": "o45"
+   },
+   {
+    "text": "Dr",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.962,
+    "id": "o46"
+   },
+   {
+    "text": "nine",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 1.0,
+    "id": "o47"
+   },
+   {
+    "text": "for our",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.886,
+    "id": "o48"
+   },
+   {
+    "text": "nervous System",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.955,
+    "id": "o49"
+   },
+   {
+    "text": "Duine",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.546,
+    "id": "o50"
+   },
+   {
+    "text": "So things",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.707,
+    "id": "o51"
+   },
+   {
+    "text": "like",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.693,
+    "id": "o52"
+   },
+   {
+    "text": "passionilower",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.596,
+    "id": "o53"
+   },
+   {
+    "text": "ADIO}",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.54,
+    "id": "o54"
+   },
+   {
+    "text": "that combination",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.813,
+    "id": "o55"
+   },
+   {
+    "text": "together",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.999,
+    "id": "o56"
+   },
+   {
+    "text": "Ja",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 1.0,
+    "id": "o57"
+   },
+   {
+    "text": "forchronic",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.714,
+    "id": "o58"
+   },
+   {
+    "text": "anxiety:",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.902,
+    "id": "o59"
+   },
+   {
+    "text": "natural",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 1.0,
+    "id": "o60"
+   },
+   {
+    "text": "health tips.",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.703,
+    "id": "o61"
+   }
+  ]
+ }
+}

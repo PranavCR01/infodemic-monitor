@@ -1,0 +1,32 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.992,
+  "duration_seconds": 15.67,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.18,
+    "end": 5.22,
+    "text": "Help us. If you or a loved one has been diagnosed with cancer, any form of cancer, the first"
+   },
+   {
+    "id": "t2",
+    "start": 5.22,
+    "end": 10.18,
+    "text": "word of advice I would give is to cut out any form of processed sugar. Starving cancer"
+   },
+   {
+    "id": "t3",
+    "start": 10.18,
+    "end": 15.14,
+    "text": "to death by removing one food in particular, refined sugars, could end up saving your life."
+   }
+  ]
+ }
+}

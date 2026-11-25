@@ -23,14 +23,20 @@ aiofiles>=23.0
 
 # Storage / auth
 supabase>=2.0.0
-PyJWT>=2.8.0
+PyJWT[crypto]>=2.8.0,<3  # crypto extra: ES256/RS256 verification via JWKS (T48)
 httpx>=0.26
 
 # Inference
 anthropic>=0.28
-openai>=1.13
+openai>=1.66  # Responses API (T41)
 tiktoken>=0.6
+
+# LangGraph pipeline (app/core/graph); the Postgres checkpointer uses psycopg 3
+langgraph>=1.0
+langgraph-checkpoint-postgres>=3.0
+psycopg[binary]>=3.1
 
 # Utilities
 requests>=2.31
 tenacity>=8.2
+PyYAML>=6.0

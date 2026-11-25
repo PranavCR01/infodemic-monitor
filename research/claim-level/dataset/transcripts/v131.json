@@ -1,0 +1,1392 @@
+{
+ "video_id": "v131",
+ "filename": "new_TikTok_7284274028485938462.mp4",
+ "relative_path": "new_TikTok_7284274028485938462.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@drone721xxx",
+ "extracted_at": "2026-11-23T08:45:57",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.987,
+  "duration_seconds": 41.54,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.0,
+    "text": "is called ADHD."
+   },
+   {
+    "id": "t2",
+    "start": 2.0,
+    "end": 7.03,
+    "text": "Sugar in an adult's brain is called dementia and Alzheimer's."
+   },
+   {
+    "id": "t3",
+    "start": 7.03,
+    "end": 10.03,
+    "text": "Sugar in your eyes is called glaucoma."
+   },
+   {
+    "id": "t4",
+    "start": 10.03,
+    "end": 13.03,
+    "text": "Sugar in your teeth is called cavities."
+   },
+   {
+    "id": "t5",
+    "start": 13.03,
+    "end": 16.03,
+    "text": "Sugar on your skin is called aging."
+   },
+   {
+    "id": "t6",
+    "start": 16.03,
+    "end": 19.03,
+    "text": "Sugar in your sleep is called insomnia."
+   },
+   {
+    "id": "t7",
+    "start": 19.03,
+    "end": 22.03,
+    "text": "Sugar in your blood is called diabetes."
+   },
+   {
+    "id": "t8",
+    "start": 22.03,
+    "end": 26.03,
+    "text": "Excess sugar in your system is called cancer."
+   },
+   {
+    "id": "t9",
+    "start": 26.03,
+    "end": 32.87,
+    "text": "Sugar on Wall Street. It's called billion dollar industry. Addiction to sugar is"
+   },
+   {
+    "id": "t10",
+    "start": 32.87,
+    "end": 42.3,
+    "text": "eight times, eight times, more powerful than cocaine. Know who the real enemy is."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 21,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "STUDY",
+    "confidence": 0.999
+   },
+   {
+    "time": 0.0,
+    "text": "TIME",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "The more you know",
+    "confidence": 0.597
+   },
+   {
+    "time": 0.0,
+    "text": "sugar in a baby's brain is called",
+    "confidence": 0.892
+   },
+   {
+    "time": 0.0,
+    "text": "ADHD",
+    "confidence": 0.997
+   },
+   {
+    "time": 2.04,
+    "text": "STUDY",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.04,
+    "text": "TIME",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.04,
+    "text": "The more ya",
+    "confidence": 0.716
+   },
+   {
+    "time": 2.04,
+    "text": "sugar in a baby's brain is called",
+    "confidence": 0.908
+   },
+   {
+    "time": 2.04,
+    "text": "ADHD",
+    "confidence": 0.997
+   },
+   {
+    "time": 4.04,
+    "text": "STUDY",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.04,
+    "text": "TIME",
+    "confidence": 0.994
+   },
+   {
+    "time": 4.04,
+    "text": "The more you know",
+    "confidence": 0.845
+   },
+   {
+    "time": 4.04,
+    "text": "sugar in an adult's brain is calle",
+    "confidence": 0.829
+   },
+   {
+    "time": 4.04,
+    "text": "dementia and alzheimer's",
+    "confidence": 0.957
+   },
+   {
+    "time": 6.04,
+    "text": "STUDY",
+    "confidence": 0.998
+   },
+   {
+    "time": 6.04,
+    "text": "TIME",
+    "confidence": 0.996
+   },
+   {
+    "time": 6.04,
+    "text": "The more Vou know",
+    "confidence": 0.781
+   },
+   {
+    "time": 6.04,
+    "text": "sugar in an adult's brain is calle",
+    "confidence": 0.585
+   },
+   {
+    "time": 6.04,
+    "text": "dementia and alzheimer's",
+    "confidence": 0.936
+   },
+   {
+    "time": 8.04,
+    "text": "STUDY",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.04,
+    "text": "The more you know",
+    "confidence": 0.844
+   },
+   {
+    "time": 8.04,
+    "text": "sugar in an adult's brain is calle",
+    "confidence": 0.76
+   },
+   {
+    "time": 8.04,
+    "text": "dementia and alzheimer's",
+    "confidence": 0.942
+   },
+   {
+    "time": 8.04,
+    "text": "S",
+    "confidence": 0.743
+   },
+   {
+    "time": 8.04,
+    "text": "#R",
+    "confidence": 0.611
+   },
+   {
+    "time": 10.04,
+    "text": "STUDY",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.04,
+    "text": "TIME",
+    "confidence": 0.995
+   },
+   {
+    "time": 10.04,
+    "text": "The more you know",
+    "confidence": 0.95
+   },
+   {
+    "time": 10.04,
+    "text": "sugar in your eyes is called",
+    "confidence": 0.828
+   },
+   {
+    "time": 10.04,
+    "text": "glaucoma",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.05,
+    "text": "STUDY",
+    "confidence": 0.523
+   },
+   {
+    "time": 12.05,
+    "text": "TIME",
+    "confidence": 0.996
+   },
+   {
+    "time": 12.05,
+    "text": "The more you know",
+    "confidence": 0.971
+   },
+   {
+    "time": 12.05,
+    "text": "sugar in your teeth is called",
+    "confidence": 0.776
+   },
+   {
+    "time": 12.05,
+    "text": "cavities",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.05,
+    "text": "STUDY",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.05,
+    "text": "TIME",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.05,
+    "text": "The more you know",
+    "confidence": 0.938
+   },
+   {
+    "time": 14.05,
+    "text": "sugar on your skin is called agin",
+    "confidence": 0.892
+   },
+   {
+    "time": 16.05,
+    "text": "STUDY",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.05,
+    "text": "TIME",
+    "confidence": 0.685
+   },
+   {
+    "time": 16.05,
+    "text": "The more you know",
+    "confidence": 0.994
+   },
+   {
+    "time": 16.05,
+    "text": "sugar on your skin is called agin",
+    "confidence": 0.887
+   },
+   {
+    "time": 18.05,
+    "text": "STUDY",
+    "confidence": 0.998
+   },
+   {
+    "time": 18.05,
+    "text": "TIME",
+    "confidence": 0.989
+   },
+   {
+    "time": 18.05,
+    "text": "The more Vou know",
+    "confidence": 0.942
+   },
+   {
+    "time": 18.05,
+    "text": "sugar in your sleep is called",
+    "confidence": 0.962
+   },
+   {
+    "time": 18.05,
+    "text": "insomnia",
+    "confidence": 0.728
+   },
+   {
+    "time": 18.05,
+    "text": "#R",
+    "confidence": 0.536
+   },
+   {
+    "time": 20.05,
+    "text": "STUDY",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.05,
+    "text": "TIME",
+    "confidence": 0.994
+   },
+   {
+    "time": 20.05,
+    "text": "The more vou know",
+    "confidence": 0.951
+   },
+   {
+    "time": 20.05,
+    "text": "sugar in your blood is called",
+    "confidence": 0.989
+   },
+   {
+    "time": 20.05,
+    "text": "diabetes",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.06,
+    "text": "STUDY",
+    "confidence": 0.999
+   },
+   {
+    "time": 22.06,
+    "text": "TIME",
+    "confidence": 0.999
+   },
+   {
+    "time": 22.06,
+    "text": "The more you know",
+    "confidence": 0.704
+   },
+   {
+    "time": 22.06,
+    "text": "sugar in your blood is called",
+    "confidence": 0.993
+   },
+   {
+    "time": 22.06,
+    "text": "diabetes",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.06,
+    "text": "STUDY",
+    "confidence": 0.999
+   },
+   {
+    "time": 24.06,
+    "text": "TIME",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.06,
+    "text": "The more you know",
+    "confidence": 0.969
+   },
+   {
+    "time": 24.06,
+    "text": "excess sugar in your system is",
+    "confidence": 0.759
+   },
+   {
+    "time": 24.06,
+    "text": "called cancer",
+    "confidence": 0.936
+   },
+   {
+    "time": 24.06,
+    "text": "#R",
+    "confidence": 0.645
+   },
+   {
+    "time": 26.06,
+    "text": "STUDy",
+    "confidence": 0.599
+   },
+   {
+    "time": 26.06,
+    "text": "TIME",
+    "confidence": 0.998
+   },
+   {
+    "time": 26.06,
+    "text": "The more you know",
+    "confidence": 0.627
+   },
+   {
+    "time": 26.06,
+    "text": "excess sugar in your",
+    "confidence": 0.822
+   },
+   {
+    "time": 26.06,
+    "text": "is",
+    "confidence": 0.971
+   },
+   {
+    "time": 26.06,
+    "text": "system",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.06,
+    "text": "called cancer",
+    "confidence": 0.943
+   },
+   {
+    "time": 28.06,
+    "text": "STUDY",
+    "confidence": 0.999
+   },
+   {
+    "time": 28.06,
+    "text": "TIME",
+    "confidence": 0.999
+   },
+   {
+    "time": 28.06,
+    "text": "The more you know",
+    "confidence": 0.74
+   },
+   {
+    "time": 28.06,
+    "text": "sugar on Wall Street",
+    "confidence": 0.917
+   },
+   {
+    "time": 30.06,
+    "text": "STUDY",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.06,
+    "text": "The more you know",
+    "confidence": 0.951
+   },
+   {
+    "time": 30.06,
+    "text": "it's called",
+    "confidence": 0.702
+   },
+   {
+    "time": 30.06,
+    "text": "billion dollar industry",
+    "confidence": 0.982
+   },
+   {
+    "time": 30.06,
+    "text": "R",
+    "confidence": 0.956
+   },
+   {
+    "time": 32.07,
+    "text": "STUDY",
+    "confidence": 0.999
+   },
+   {
+    "time": 32.07,
+    "text": "TIME",
+    "confidence": 0.999
+   },
+   {
+    "time": 32.07,
+    "text": "The more you know",
+    "confidence": 0.693
+   },
+   {
+    "time": 32.07,
+    "text": "Addiction to sugar is eight",
+    "confidence": 0.945
+   },
+   {
+    "time": 32.07,
+    "text": "times",
+    "confidence": 0.997
+   },
+   {
+    "time": 34.07,
+    "text": "STUDY",
+    "confidence": 0.998
+   },
+   {
+    "time": 34.07,
+    "text": "TIME",
+    "confidence": 0.992
+   },
+   {
+    "time": 34.07,
+    "text": "The more you know",
+    "confidence": 0.788
+   },
+   {
+    "time": 34.07,
+    "text": "Addiction to sugar is eight",
+    "confidence": 0.98
+   },
+   {
+    "time": 34.07,
+    "text": "times",
+    "confidence": 0.998
+   },
+   {
+    "time": 36.07,
+    "text": "STUDY",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.07,
+    "text": "TIME",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.07,
+    "text": "The more youknow",
+    "confidence": 0.713
+   },
+   {
+    "time": 36.07,
+    "text": "EIGHT TIMES!",
+    "confidence": 0.609
+   },
+   {
+    "time": 36.07,
+    "text": "powerful than cocainel",
+    "confidence": 0.824
+   },
+   {
+    "time": 36.07,
+    "text": "more",
+    "confidence": 0.944
+   },
+   {
+    "time": 38.07,
+    "text": "STUDY",
+    "confidence": 0.999
+   },
+   {
+    "time": 38.07,
+    "text": "TIME",
+    "confidence": 0.999
+   },
+   {
+    "time": 38.07,
+    "text": "The more you know",
+    "confidence": 0.96
+   },
+   {
+    "time": 38.07,
+    "text": "EIGHT TIMES!",
+    "confidence": 0.618
+   },
+   {
+    "time": 38.07,
+    "text": "powerful than cocainel",
+    "confidence": 0.933
+   },
+   {
+    "time": 38.07,
+    "text": "more",
+    "confidence": 0.918
+   },
+   {
+    "time": 40.07,
+    "text": "STUDY",
+    "confidence": 0.999
+   },
+   {
+    "time": 40.07,
+    "text": "TIME",
+    "confidence": 0.997
+   },
+   {
+    "time": 40.07,
+    "text": "The more you know",
+    "confidence": 0.908
+   },
+   {
+    "time": 40.07,
+    "text": "know who the real enemy is",
+    "confidence": 0.833
+   }
+  ],
+  "captions": [
+   {
+    "text": "STUDY",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o1"
+   },
+   {
+    "text": "TIME",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o2"
+   },
+   {
+    "text": "The more you know",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.597,
+    "id": "o3"
+   },
+   {
+    "text": "sugar in a baby's brain is called",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.892,
+    "id": "o4"
+   },
+   {
+    "text": "ADHD",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.997,
+    "id": "o5"
+   },
+   {
+    "text": "STUDY",
+    "start": 2.04,
+    "end": 2.04,
+    "confidence": 0.999,
+    "id": "o6"
+   },
+   {
+    "text": "TIME",
+    "start": 2.04,
+    "end": 2.04,
+    "confidence": 0.999,
+    "id": "o7"
+   },
+   {
+    "text": "The more ya",
+    "start": 2.04,
+    "end": 2.04,
+    "confidence": 0.716,
+    "id": "o8"
+   },
+   {
+    "text": "sugar in a baby's brain is called",
+    "start": 2.04,
+    "end": 2.04,
+    "confidence": 0.908,
+    "id": "o9"
+   },
+   {
+    "text": "ADHD",
+    "start": 2.04,
+    "end": 2.04,
+    "confidence": 0.997,
+    "id": "o10"
+   },
+   {
+    "text": "STUDY",
+    "start": 4.04,
+    "end": 4.04,
+    "confidence": 0.999,
+    "id": "o11"
+   },
+   {
+    "text": "TIME",
+    "start": 4.04,
+    "end": 4.04,
+    "confidence": 0.994,
+    "id": "o12"
+   },
+   {
+    "text": "The more you know",
+    "start": 4.04,
+    "end": 4.04,
+    "confidence": 0.845,
+    "id": "o13"
+   },
+   {
+    "text": "sugar in an adult's brain is calle",
+    "start": 4.04,
+    "end": 4.04,
+    "confidence": 0.829,
+    "id": "o14"
+   },
+   {
+    "text": "dementia and alzheimer's",
+    "start": 4.04,
+    "end": 4.04,
+    "confidence": 0.957,
+    "id": "o15"
+   },
+   {
+    "text": "STUDY",
+    "start": 6.04,
+    "end": 6.04,
+    "confidence": 0.998,
+    "id": "o16"
+   },
+   {
+    "text": "TIME",
+    "start": 6.04,
+    "end": 6.04,
+    "confidence": 0.996,
+    "id": "o17"
+   },
+   {
+    "text": "The more Vou know",
+    "start": 6.04,
+    "end": 6.04,
+    "confidence": 0.781,
+    "id": "o18"
+   },
+   {
+    "text": "sugar in an adult's brain is calle",
+    "start": 6.04,
+    "end": 6.04,
+    "confidence": 0.585,
+    "id": "o19"
+   },
+   {
+    "text": "dementia and alzheimer's",
+    "start": 6.04,
+    "end": 6.04,
+    "confidence": 0.936,
+    "id": "o20"
+   },
+   {
+    "text": "STUDY",
+    "start": 8.04,
+    "end": 8.04,
+    "confidence": 0.999,
+    "id": "o21"
+   },
+   {
+    "text": "The more you know",
+    "start": 8.04,
+    "end": 8.04,
+    "confidence": 0.844,
+    "id": "o22"
+   },
+   {
+    "text": "sugar in an adult's brain is calle",
+    "start": 8.04,
+    "end": 8.04,
+    "confidence": 0.76,
+    "id": "o23"
+   },
+   {
+    "text": "dementia and alzheimer's",
+    "start": 8.04,
+    "end": 8.04,
+    "confidence": 0.942,
+    "id": "o24"
+   },
+   {
+    "text": "S",
+    "start": 8.04,
+    "end": 8.04,
+    "confidence": 0.743,
+    "id": "o25"
+   },
+   {
+    "text": "#R",
+    "start": 8.04,
+    "end": 8.04,
+    "confidence": 0.611,
+    "id": "o26"
+   },
+   {
+    "text": "STUDY",
+    "start": 10.04,
+    "end": 10.04,
+    "confidence": 0.999,
+    "id": "o27"
+   },
+   {
+    "text": "TIME",
+    "start": 10.04,
+    "end": 10.04,
+    "confidence": 0.995,
+    "id": "o28"
+   },
+   {
+    "text": "The more you know",
+    "start": 10.04,
+    "end": 10.04,
+    "confidence": 0.95,
+    "id": "o29"
+   },
+   {
+    "text": "sugar in your eyes is called",
+    "start": 10.04,
+    "end": 10.04,
+    "confidence": 0.828,
+    "id": "o30"
+   },
+   {
+    "text": "glaucoma",
+    "start": 10.04,
+    "end": 10.04,
+    "confidence": 0.999,
+    "id": "o31"
+   },
+   {
+    "text": "STUDY",
+    "start": 12.05,
+    "end": 12.05,
+    "confidence": 0.523,
+    "id": "o32"
+   },
+   {
+    "text": "TIME",
+    "start": 12.05,
+    "end": 12.05,
+    "confidence": 0.996,
+    "id": "o33"
+   },
+   {
+    "text": "The more you know",
+    "start": 12.05,
+    "end": 12.05,
+    "confidence": 0.971,
+    "id": "o34"
+   },
+   {
+    "text": "sugar in your teeth is called",
+    "start": 12.05,
+    "end": 12.05,
+    "confidence": 0.776,
+    "id": "o35"
+   },
+   {
+    "text": "cavities",
+    "start": 12.05,
+    "end": 12.05,
+    "confidence": 1.0,
+    "id": "o36"
+   },
+   {
+    "text": "STUDY",
+    "start": 14.05,
+    "end": 14.05,
+    "confidence": 0.999,
+    "id": "o37"
+   },
+   {
+    "text": "TIME",
+    "start": 14.05,
+    "end": 14.05,
+    "confidence": 1.0,
+    "id": "o38"
+   },
+   {
+    "text": "The more you know",
+    "start": 14.05,
+    "end": 14.05,
+    "confidence": 0.938,
+    "id": "o39"
+   },
+   {
+    "text": "sugar on your skin is called agin",
+    "start": 14.05,
+    "end": 14.05,
+    "confidence": 0.892,
+    "id": "o40"
+   },
+   {
+    "text": "STUDY",
+    "start": 16.05,
+    "end": 16.05,
+    "confidence": 0.999,
+    "id": "o41"
+   },
+   {
+    "text": "TIME",
+    "start": 16.05,
+    "end": 16.05,
+    "confidence": 0.685,
+    "id": "o42"
+   },
+   {
+    "text": "The more you know",
+    "start": 16.05,
+    "end": 16.05,
+    "confidence": 0.994,
+    "id": "o43"
+   },
+   {
+    "text": "sugar on your skin is called agin",
+    "start": 16.05,
+    "end": 16.05,
+    "confidence": 0.887,
+    "id": "o44"
+   },
+   {
+    "text": "STUDY",
+    "start": 18.05,
+    "end": 18.05,
+    "confidence": 0.998,
+    "id": "o45"
+   },
+   {
+    "text": "TIME",
+    "start": 18.05,
+    "end": 18.05,
+    "confidence": 0.989,
+    "id": "o46"
+   },
+   {
+    "text": "The more Vou know",
+    "start": 18.05,
+    "end": 18.05,
+    "confidence": 0.942,
+    "id": "o47"
+   },
+   {
+    "text": "sugar in your sleep is called",
+    "start": 18.05,
+    "end": 18.05,
+    "confidence": 0.962,
+    "id": "o48"
+   },
+   {
+    "text": "insomnia",
+    "start": 18.05,
+    "end": 18.05,
+    "confidence": 0.728,
+    "id": "o49"
+   },
+   {
+    "text": "#R",
+    "start": 18.05,
+    "end": 18.05,
+    "confidence": 0.536,
+    "id": "o50"
+   },
+   {
+    "text": "STUDY",
+    "start": 20.05,
+    "end": 20.05,
+    "confidence": 0.999,
+    "id": "o51"
+   },
+   {
+    "text": "TIME",
+    "start": 20.05,
+    "end": 20.05,
+    "confidence": 0.994,
+    "id": "o52"
+   },
+   {
+    "text": "The more vou know",
+    "start": 20.05,
+    "end": 20.05,
+    "confidence": 0.951,
+    "id": "o53"
+   },
+   {
+    "text": "sugar in your blood is called",
+    "start": 20.05,
+    "end": 20.05,
+    "confidence": 0.989,
+    "id": "o54"
+   },
+   {
+    "text": "diabetes",
+    "start": 20.05,
+    "end": 20.05,
+    "confidence": 1.0,
+    "id": "o55"
+   },
+   {
+    "text": "STUDY",
+    "start": 22.06,
+    "end": 22.06,
+    "confidence": 0.999,
+    "id": "o56"
+   },
+   {
+    "text": "TIME",
+    "start": 22.06,
+    "end": 22.06,
+    "confidence": 0.999,
+    "id": "o57"
+   },
+   {
+    "text": "The more you know",
+    "start": 22.06,
+    "end": 22.06,
+    "confidence": 0.704,
+    "id": "o58"
+   },
+   {
+    "text": "sugar in your blood is called",
+    "start": 22.06,
+    "end": 22.06,
+    "confidence": 0.993,
+    "id": "o59"
+   },
+   {
+    "text": "diabetes",
+    "start": 22.06,
+    "end": 22.06,
+    "confidence": 1.0,
+    "id": "o60"
+   },
+   {
+    "text": "STUDY",
+    "start": 24.06,
+    "end": 24.06,
+    "confidence": 0.999,
+    "id": "o61"
+   },
+   {
+    "text": "TIME",
+    "start": 24.06,
+    "end": 24.06,
+    "confidence": 1.0,
+    "id": "o62"
+   },
+   {
+    "text": "The more you know",
+    "start": 24.06,
+    "end": 24.06,
+    "confidence": 0.969,
+    "id": "o63"
+   },
+   {
+    "text": "excess sugar in your system is",
+    "start": 24.06,
+    "end": 24.06,
+    "confidence": 0.759,
+    "id": "o64"
+   },
+   {
+    "text": "called cancer",
+    "start": 24.06,
+    "end": 24.06,
+    "confidence": 0.936,
+    "id": "o65"
+   },
+   {
+    "text": "#R",
+    "start": 24.06,
+    "end": 24.06,
+    "confidence": 0.645,
+    "id": "o66"
+   },
+   {
+    "text": "STUDy",
+    "start": 26.06,
+    "end": 26.06,
+    "confidence": 0.599,
+    "id": "o67"
+   },
+   {
+    "text": "TIME",
+    "start": 26.06,
+    "end": 26.06,
+    "confidence": 0.998,
+    "id": "o68"
+   },
+   {
+    "text": "The more you know",
+    "start": 26.06,
+    "end": 26.06,
+    "confidence": 0.627,
+    "id": "o69"
+   },
+   {
+    "text": "excess sugar in your",
+    "start": 26.06,
+    "end": 26.06,
+    "confidence": 0.822,
+    "id": "o70"
+   },
+   {
+    "text": "is",
+    "start": 26.06,
+    "end": 26.06,
+    "confidence": 0.971,
+    "id": "o71"
+   },
+   {
+    "text": "system",
+    "start": 26.06,
+    "end": 26.06,
+    "confidence": 1.0,
+    "id": "o72"
+   },
+   {
+    "text": "called cancer",
+    "start": 26.06,
+    "end": 26.06,
+    "confidence": 0.943,
+    "id": "o73"
+   },
+   {
+    "text": "STUDY",
+    "start": 28.06,
+    "end": 28.06,
+    "confidence": 0.999,
+    "id": "o74"
+   },
+   {
+    "text": "TIME",
+    "start": 28.06,
+    "end": 28.06,
+    "confidence": 0.999,
+    "id": "o75"
+   },
+   {
+    "text": "The more you know",
+    "start": 28.06,
+    "end": 28.06,
+    "confidence": 0.74,
+    "id": "o76"
+   },
+   {
+    "text": "sugar on Wall Street",
+    "start": 28.06,
+    "end": 28.06,
+    "confidence": 0.917,
+    "id": "o77"
+   },
+   {
+    "text": "STUDY",
+    "start": 30.06,
+    "end": 30.06,
+    "confidence": 0.999,
+    "id": "o78"
+   },
+   {
+    "text": "The more you know",
+    "start": 30.06,
+    "end": 30.06,
+    "confidence": 0.951,
+    "id": "o79"
+   },
+   {
+    "text": "it's called",
+    "start": 30.06,
+    "end": 30.06,
+    "confidence": 0.702,
+    "id": "o80"
+   },
+   {
+    "text": "billion dollar industry",
+    "start": 30.06,
+    "end": 30.06,
+    "confidence": 0.982,
+    "id": "o81"
+   },
+   {
+    "text": "R",
+    "start": 30.06,
+    "end": 30.06,
+    "confidence": 0.956,
+    "id": "o82"
+   },
+   {
+    "text": "STUDY",
+    "start": 32.07,
+    "end": 32.07,
+    "confidence": 0.999,
+    "id": "o83"
+   },
+   {
+    "text": "TIME",
+    "start": 32.07,
+    "end": 32.07,
+    "confidence": 0.999,
+    "id": "o84"
+   },
+   {
+    "text": "The more you know",
+    "start": 32.07,
+    "end": 32.07,
+    "confidence": 0.693,
+    "id": "o85"
+   },
+   {
+    "text": "Addiction to sugar is eight",
+    "start": 32.07,
+    "end": 32.07,
+    "confidence": 0.945,
+    "id": "o86"
+   },
+   {
+    "text": "times",
+    "start": 32.07,
+    "end": 32.07,
+    "confidence": 0.997,
+    "id": "o87"
+   },
+   {
+    "text": "STUDY",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.998,
+    "id": "o88"
+   },
+   {
+    "text": "TIME",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.992,
+    "id": "o89"
+   },
+   {
+    "text": "The more you know",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.788,
+    "id": "o90"
+   },
+   {
+    "text": "Addiction to sugar is eight",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.98,
+    "id": "o91"
+   },
+   {
+    "text": "times",
+    "start": 34.07,
+    "end": 34.07,
+    "confidence": 0.998,
+    "id": "o92"
+   },
+   {
+    "text": "STUDY",
+    "start": 36.07,
+    "end": 36.07,
+    "confidence": 0.999,
+    "id": "o93"
+   },
+   {
+    "text": "TIME",
+    "start": 36.07,
+    "end": 36.07,
+    "confidence": 1.0,
+    "id": "o94"
+   },
+   {
+    "text": "The more youknow",
+    "start": 36.07,
+    "end": 36.07,
+    "confidence": 0.713,
+    "id": "o95"
+   },
+   {
+    "text": "EIGHT TIMES!",
+    "start": 36.07,
+    "end": 36.07,
+    "confidence": 0.609,
+    "id": "o96"
+   },
+   {
+    "text": "powerful than cocainel",
+    "start": 36.07,
+    "end": 36.07,
+    "confidence": 0.824,
+    "id": "o97"
+   },
+   {
+    "text": "more",
+    "start": 36.07,
+    "end": 36.07,
+    "confidence": 0.944,
+    "id": "o98"
+   },
+   {
+    "text": "STUDY",
+    "start": 38.07,
+    "end": 38.07,
+    "confidence": 0.999,
+    "id": "o99"
+   },
+   {
+    "text": "TIME",
+    "start": 38.07,
+    "end": 38.07,
+    "confidence": 0.999,
+    "id": "o100"
+   },
+   {
+    "text": "The more you know",
+    "start": 38.07,
+    "end": 38.07,
+    "confidence": 0.96,
+    "id": "o101"
+   },
+   {
+    "text": "EIGHT TIMES!",
+    "start": 38.07,
+    "end": 38.07,
+    "confidence": 0.618,
+    "id": "o102"
+   },
+   {
+    "text": "powerful than cocainel",
+    "start": 38.07,
+    "end": 38.07,
+    "confidence": 0.933,
+    "id": "o103"
+   },
+   {
+    "text": "more",
+    "start": 38.07,
+    "end": 38.07,
+    "confidence": 0.918,
+    "id": "o104"
+   },
+   {
+    "text": "STUDY",
+    "start": 40.07,
+    "end": 40.07,
+    "confidence": 0.999,
+    "id": "o105"
+   },
+   {
+    "text": "TIME",
+    "start": 40.07,
+    "end": 40.07,
+    "confidence": 0.997,
+    "id": "o106"
+   },
+   {
+    "text": "The more you know",
+    "start": 40.07,
+    "end": 40.07,
+    "confidence": 0.908,
+    "id": "o107"
+   },
+   {
+    "text": "know who the real enemy is",
+    "start": 40.07,
+    "end": 40.07,
+    "confidence": 0.833,
+    "id": "o108"
+   }
+  ]
+ }
+}

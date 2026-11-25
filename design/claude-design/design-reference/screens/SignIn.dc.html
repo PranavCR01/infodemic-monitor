@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sign in</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../im.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5F99}a:hover{color:#174A78}
+</style>
+</helmet>
+<div class="im" data-theme="{{theme}}" style="min-height: 100vh; display: flex; flex-wrap: wrap">
+  <section style="flex: 1 1 480px; background: #14213D; color: #E8ECF3; padding: 48px 56px; display: flex; flex-direction: column; justify-content: space-between; gap: 48px; min-height: 320px">
+    <div class="brand" style="color: #E8ECF3"><span class="brand-mark" style="background: #F7F6F2; color: #14213D" aria-hidden="true">IM</span><span>Infodemic Monitor</span></div>
+    <div style="max-width: 520px; display: flex; flex-direction: column; gap: 16px">
+      <h1 class="t-display" style="color: #FFFFFF; font-size: 40px; line-height: 48px">Check what health videos claim, against what the evidence shows.</h1>
+      <p style="margin: 0; font-size: 16px; line-height: 26px; color: #C9D2E3">Every label links back to the claim, the speaker's exact words and the published sources behind it.</p>
+    </div>
+    <p class="t-small" style="margin: 0; color: #A9B3C6">A research tool used with the World Health Organization. Access is by invitation.</p>
+  </section>
+
+  <main style="flex: 1 1 520px; display: grid; place-items: center; padding: 48px 24px">
+    <div style="width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 24px">
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <h2 class="t-h1">Sign in</h2>
+        <p class="t-small muted" style="margin: 0">Use the email address your invitation was sent to.</p>
+      </div>
+
+      <sc-if value="{{isSent}}" hint-placeholder-val="{{ false }}">
+        <div class="banner banner-info" role="status"><span class="i i-mail i-lg" aria-hidden="true"></span><div style="display: flex; flex-direction: column; gap: 4px"><strong>Check your email</strong><span class="t-small">We sent a sign-in link to a.mensah@who-research.org. It works once and expires in 1 hour.</span><a class="t-small" href="#">Send it again</a></div></div>
+      </sc-if>
+
+      <sc-if value="{{isForm}}" hint-placeholder-val="{{ true }}">
+        <form style="display: flex; flex-direction: column; gap: 16px">
+          <div class="field"><label for="em">Email</label><input class="input" id="em" type="email" autocomplete="email" value="a.mensah@who-research.org"></div>
+          <div class="field">
+            <div style="display: flex; justify-content: space-between"><label for="pw">Password</label><a class="t-small" href="#">Forgot password?</a></div>
+            <input class="input" id="pw" type="password" autocomplete="current-password" value="************">
+          </div>
+          <button class="btn btn-primary" type="submit" style="width: 100%">Sign in</button>
+        </form>
+        <div style="display: flex; align-items: center; gap: 12px" aria-hidden="true"><hr class="divider" style="flex: 1"><span class="t-cap faint">or</span><hr class="divider" style="flex: 1"></div>
+        <button class="btn btn-secondary" type="button" style="width: 100%"><span class="i i-mail" aria-hidden="true"></span>Email me a sign-in link</button>
+      </sc-if>
+
+      <p class="t-cap faint" style="margin: 0">No account? Ask your project lead for an invitation. <a href="#">Privacy notice</a></p>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light","section":"Display"},"state":{"editor":"enum","options":["form","link sent"],"default":"form","section":"State"},"$preview":{"width":1440,"height":860}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.props.state ?? 'form';
+    return { theme: this.props.theme ?? 'light', isForm: s === 'form', isSent: s === 'link sent' };
+  }
+}
+</script>
+</body>
+</html>

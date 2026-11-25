@@ -1,0 +1,485 @@
+{
+ "video_id": "v170",
+ "filename": "new_youtube_5gpIG1EHusE.mp4",
+ "relative_path": "new_youtube_5gpIG1EHusE.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:59",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.995,
+  "duration_seconds": 35.11,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 4.12,
+    "text": "This autistic kid had a demon inside of him and you're not going to believe what happened."
+   },
+   {
+    "id": "t2",
+    "start": 4.12,
+    "end": 4.62,
+    "text": "Watch this."
+   },
+   {
+    "id": "t3",
+    "start": 4.62,
+    "end": 10.11,
+    "text": "One moment this kid has a demon of autism and then in Jesus and he's instantly set free."
+   },
+   {
+    "id": "t4",
+    "start": 10.11,
+    "end": 14.51,
+    "text": "Every spirit of autism and mental sickness must leave in Jesus' name."
+   },
+   {
+    "id": "t5",
+    "start": 14.51,
+    "end": 17.23,
+    "text": "One, two, three."
+   },
+   {
+    "id": "t6",
+    "start": 17.23,
+    "end": 34.91,
+    "text": "Subscribe now if you believe Jesus does miracles."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 18,
+  "detections": [
+   {
+    "time": 2.0,
+    "text": "THIS AUTISTICKID",
+    "confidence": 0.628
+   },
+   {
+    "time": 2.0,
+    "text": "HAD A",
+    "confidence": 0.952
+   },
+   {
+    "time": 2.0,
+    "text": "DEMON",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "INSIDE",
+    "confidence": 0.653
+   },
+   {
+    "time": 4.0,
+    "text": "GOINGTO BELIEVE",
+    "confidence": 0.719
+   },
+   {
+    "time": 4.0,
+    "text": "WHAT",
+    "confidence": 0.997
+   },
+   {
+    "time": 4.0,
+    "text": "HAPPENED:",
+    "confidence": 0.948
+   },
+   {
+    "time": 6.0,
+    "text": "ONEMOMENT THIS",
+    "confidence": 0.793
+   },
+   {
+    "time": 6.0,
+    "text": "KID HAS",
+    "confidence": 0.886
+   },
+   {
+    "time": 8.0,
+    "text": "AND THEMIM",
+    "confidence": 0.752
+   },
+   {
+    "time": 10.0,
+    "text": "AND THEMIM",
+    "confidence": 0.751
+   },
+   {
+    "time": 10.0,
+    "text": "JESUS",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "NAME HE'S",
+    "confidence": 0.653
+   },
+   {
+    "time": 10.0,
+    "text": "INSTANTLY SET",
+    "confidence": 0.905
+   },
+   {
+    "time": 12.0,
+    "text": "RENOUNCED",
+    "confidence": 0.662
+   },
+   {
+    "time": 12.0,
+    "text": "EVERY",
+    "confidence": 0.998
+   },
+   {
+    "time": 12.0,
+    "text": "SPIRIT OF",
+    "confidence": 0.671
+   },
+   {
+    "time": 12.0,
+    "text": "AUTISM AND",
+    "confidence": 0.83
+   },
+   {
+    "time": 12.0,
+    "text": "MENTAL",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.0,
+    "text": "SICKNESS",
+    "confidence": 0.813
+   },
+   {
+    "time": 18.0,
+    "text": "OKA",
+    "confidence": 0.888
+   },
+   {
+    "time": 18.0,
+    "text": "OKAY ILEAVE",
+    "confidence": 0.815
+   },
+   {
+    "time": 18.0,
+    "text": "(DEMON SPEAKING)",
+    "confidence": 0.983
+   },
+   {
+    "time": 20.0,
+    "text": "OKAY",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.0,
+    "text": "LEAVE",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.0,
+    "text": "(DEMON SPEAKING)",
+    "confidence": 0.996
+   },
+   {
+    "time": 28.0,
+    "text": "WHAT Just",
+    "confidence": 0.7
+   },
+   {
+    "time": 28.0,
+    "text": "HAPPENED?",
+    "confidence": 0.798
+   },
+   {
+    "time": 28.0,
+    "text": "WHAT JUST HAPPENED?",
+    "confidence": 0.843
+   },
+   {
+    "time": 30.0,
+    "text": "DONT",
+    "confidence": 0.539
+   },
+   {
+    "time": 30.0,
+    "text": "DONT KNOW WHAT JUST HAPPENED?",
+    "confidence": 0.634
+   },
+   {
+    "time": 34.0,
+    "text": "SUBSCRIBENOWTF",
+    "confidence": 0.651
+   },
+   {
+    "time": 34.0,
+    "text": "YOU",
+    "confidence": 0.951
+   },
+   {
+    "time": 34.0,
+    "text": "BELIEVE",
+    "confidence": 0.995
+   },
+   {
+    "time": 34.0,
+    "text": "JESUS",
+    "confidence": 1.0
+   }
+  ],
+  "captions": [
+   {
+    "text": "THIS AUTISTICKID",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.628,
+    "id": "o1"
+   },
+   {
+    "text": "HAD A",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.952,
+    "id": "o2"
+   },
+   {
+    "text": "DEMON",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o3"
+   },
+   {
+    "text": "INSIDE",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.653,
+    "id": "o4"
+   },
+   {
+    "text": "GOINGTO BELIEVE",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.719,
+    "id": "o5"
+   },
+   {
+    "text": "WHAT",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.997,
+    "id": "o6"
+   },
+   {
+    "text": "HAPPENED:",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.948,
+    "id": "o7"
+   },
+   {
+    "text": "ONEMOMENT THIS",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.793,
+    "id": "o8"
+   },
+   {
+    "text": "KID HAS",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.886,
+    "id": "o9"
+   },
+   {
+    "text": "AND THEMIM",
+    "start": 8.0,
+    "end": 10.0,
+    "confidence": 0.752,
+    "id": "o10"
+   },
+   {
+    "text": "JESUS",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o11"
+   },
+   {
+    "text": "NAME HE'S",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.653,
+    "id": "o12"
+   },
+   {
+    "text": "INSTANTLY SET",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.905,
+    "id": "o13"
+   },
+   {
+    "text": "RENOUNCED",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.662,
+    "id": "o14"
+   },
+   {
+    "text": "EVERY",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.998,
+    "id": "o15"
+   },
+   {
+    "text": "SPIRIT OF",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.671,
+    "id": "o16"
+   },
+   {
+    "text": "AUTISM AND",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.83,
+    "id": "o17"
+   },
+   {
+    "text": "MENTAL",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o18"
+   },
+   {
+    "text": "SICKNESS",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.813,
+    "id": "o19"
+   },
+   {
+    "text": "OKA",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.888,
+    "id": "o20"
+   },
+   {
+    "text": "OKAY ILEAVE",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.815,
+    "id": "o21"
+   },
+   {
+    "text": "(DEMON SPEAKING)",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.983,
+    "id": "o22"
+   },
+   {
+    "text": "OKAY",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.999,
+    "id": "o23"
+   },
+   {
+    "text": "LEAVE",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.999,
+    "id": "o24"
+   },
+   {
+    "text": "(DEMON SPEAKING)",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.996,
+    "id": "o25"
+   },
+   {
+    "text": "WHAT Just",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.7,
+    "id": "o26"
+   },
+   {
+    "text": "HAPPENED?",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.798,
+    "id": "o27"
+   },
+   {
+    "text": "WHAT JUST HAPPENED?",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.843,
+    "id": "o28"
+   },
+   {
+    "text": "DONT",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.539,
+    "id": "o29"
+   },
+   {
+    "text": "DONT KNOW WHAT JUST HAPPENED?",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.634,
+    "id": "o30"
+   },
+   {
+    "text": "SUBSCRIBENOWTF",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.651,
+    "id": "o31"
+   },
+   {
+    "text": "YOU",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.951,
+    "id": "o32"
+   },
+   {
+    "text": "BELIEVE",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.995,
+    "id": "o33"
+   },
+   {
+    "text": "JESUS",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o34"
+   }
+  ]
+ }
+}

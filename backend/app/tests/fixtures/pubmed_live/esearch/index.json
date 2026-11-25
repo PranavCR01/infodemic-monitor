@@ -1,0 +1,12 @@
+{
+ "(\"hot drinks\"[tiab] OR \"hot beverages\"[tiab] OR \"hot water\"[tiab]) AND (\"Influenza, Human\"[MeSH Terms] OR influenza[tiab] OR flu[tiab])": "search_01.json",
+ "(Garlic[MeSH Terms] OR garlic[tiab] OR allicin[tiab]) AND (\"Common Cold\"[MeSH Terms] OR \"common cold\"[tiab])": "search_02.json",
+ "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND (\"Autism Spectrum Disorder\"[MeSH Terms] OR autism[tiab]) AND (Child[MeSH Terms] OR children[tiab])": "search_03.json",
+ "(\"Ascorbic Acid\"[MeSH Terms] OR \"vitamin c\"[tiab] OR \"ascorbic acid\"[tiab]) AND (\"Common Cold\"[MeSH Terms] OR \"common cold\"[tiab])": "search_04.json",
+ "(lemon[tiab] OR citrus[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])": "search_05.json",
+ "(Ivermectin[MeSH Terms] OR ivermectin[tiab]) AND (\"COVID-19\"[MeSH Terms] OR \"covid-19\"[tiab] OR \"sars-cov-2\"[tiab])": "search_06.json",
+ "(Fasting[MeSH Terms] OR fasting[tiab]) AND (\"Diabetes Mellitus\"[MeSH Terms] OR diabetes[tiab])": "search_07.json",
+ "(Fluorides[MeSH Terms] OR fluoride[tiab]) AND (\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab]) AND (Intelligence[MeSH Terms] OR intelligence[tiab] OR iq[tiab]) AND (Child[MeSH Terms] OR children[tiab])": "search_08.json",
+ "(\"Electromagnetic Fields\"[MeSH Terms] OR 5g[tiab] OR radiofrequency[tiab]) AND (\"COVID-19\"[MeSH Terms] OR \"covid-19\"[tiab] OR \"sars-cov-2\"[tiab])": "search_09.json",
+ "(\"Acetic Acid\"[MeSH Terms] OR \"apple cider vinegar\"[tiab] OR vinegar[tiab]) AND (\"Weight Loss\"[MeSH Terms] OR \"weight loss\"[tiab])": "search_10.json"
+}

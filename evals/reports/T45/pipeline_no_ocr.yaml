@@ -1,0 +1,15 @@
+# T45 copy for the no-OCR extraction ablation (T43 §9). Only use_ocr differs.
+# Pipeline input options (design §2–§3; task T43).
+#
+# One place for switches that change what a step is given, not which model runs it
+# (that is config/routing.yaml). Read by app.core.pipeline_options; the graph provider
+# and the routing experiment both apply it, so node code never checks these flags.
+version: pipeline_v1
+
+extraction:
+  # true: extract_claims sees speech fused with on-screen text (OCR), as today.
+  # false: extract_claims sees the transcript only (no OCR captions, no caption-only
+  # segments). Only extraction changes: stance, the judge and validation still get OCR.
+  # For the no-OCR ablation (T43), point the routing experiment at a copy of this file
+  # with `--pipeline-options`; keep this file at true for live traffic.
+  use_ocr: false

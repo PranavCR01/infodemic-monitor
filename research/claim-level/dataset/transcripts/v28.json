@@ -1,0 +1,684 @@
+{
+ "video_id": "v28",
+ "filename": "ssstik.io_@doctorbodyhealthtips_1761443190913.mp4",
+ "relative_path": "Misinfo Dataset/Chaerin Kim/ssstik.io_@doctorbodyhealthtips_1761443190913.mp4",
+ "collector": "Chaerin Kim",
+ "collector_label": "",
+ "creator_handle": "@doctorbodyhealthtips",
+ "extracted_at": "2026-11-21T18:03:12",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 69.08,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.8,
+    "text": "All diabetics must avoid eating these four fruits."
+   },
+   {
+    "id": "t2",
+    "start": 3.8,
+    "end": 6.04,
+    "text": "One, watermelon."
+   },
+   {
+    "id": "t3",
+    "start": 6.04,
+    "end": 9.0,
+    "text": "Watermelon has a very high glycemic index,"
+   },
+   {
+    "id": "t4",
+    "start": 9.0,
+    "end": 11.6,
+    "text": "although it's relatively low in calories."
+   },
+   {
+    "id": "t5",
+    "start": 11.6,
+    "end": 14.0,
+    "text": "That means it raises blood sugar quickly,"
+   },
+   {
+    "id": "t6",
+    "start": 14.0,
+    "end": 15.92,
+    "text": "even in small portions."
+   },
+   {
+    "id": "t7",
+    "start": 15.92,
+    "end": 19.24,
+    "text": "It's also easy to eat a lot of it without feeling full,"
+   },
+   {
+    "id": "t8",
+    "start": 19.24,
+    "end": 22.8,
+    "text": "which can lead to overconsumption of sugar and carbs."
+   },
+   {
+    "id": "t9",
+    "start": 22.8,
+    "end": 25.36,
+    "text": "Let me know where you are watching this video from."
+   },
+   {
+    "id": "t10",
+    "start": 25.36,
+    "end": 28.96,
+    "text": "Two, bananas, especially ripe ones."
+   },
+   {
+    "id": "t11",
+    "start": 28.96,
+    "end": 34.82,
+    "text": "Ripe bananas have a high glycemic index and sugar content, which can rapidly elevate blood"
+   },
+   {
+    "id": "t12",
+    "start": 34.82,
+    "end": 40.08,
+    "text": "sugar levels, especially when eaten without any fiber or protein."
+   },
+   {
+    "id": "t13",
+    "start": 40.08,
+    "end": 43.32,
+    "text": "Hit that follow button to get daily health tips."
+   },
+   {
+    "id": "t14",
+    "start": 43.32,
+    "end": 44.32,
+    "text": "3."
+   },
+   {
+    "id": "t15",
+    "start": 44.32,
+    "end": 45.32,
+    "text": "Mangos."
+   },
+   {
+    "id": "t16",
+    "start": 45.32,
+    "end": 49.88,
+    "text": "Mangos, especially when ripe, contain a lot of sugar that can cause quick blood sugar"
+   },
+   {
+    "id": "t17",
+    "start": 49.88,
+    "end": 55.92,
+    "text": "spikes and should be limited in portion or avoided if blood sugar is uncontrolled."
+   },
+   {
+    "id": "t18",
+    "start": 55.92,
+    "end": 56.92,
+    "text": "4."
+   },
+   {
+    "id": "t19",
+    "start": 56.92,
+    "end": 62.8,
+    "text": "Apple has a high glycemic index and can sharply raise blood glucose, especially when eaten"
+   },
+   {
+    "id": "t20",
+    "start": 62.8,
+    "end": 68.16,
+    "text": "in large portions or as juice, which removes fiber and increases absorption speed."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 35,
+  "detections": [
+   {
+    "time": 1.8,
+    "text": "guidancel",
+    "confidence": 0.848
+   },
+   {
+    "time": 1.8,
+    "text": "hasnoharmful",
+    "confidence": 0.638
+   },
+   {
+    "time": 3.6,
+    "text": "guldancel",
+    "confidence": 0.512
+   },
+   {
+    "time": 3.6,
+    "text": "hasnoharmfull",
+    "confidence": 0.847
+   },
+   {
+    "time": 5.5,
+    "text": "FOURFRUITS ONE WATERMELON:",
+    "confidence": 0.963
+   },
+   {
+    "time": 5.5,
+    "text": "LIFE",
+    "confidence": 0.999
+   },
+   {
+    "time": 7.3,
+    "text": "VERY HIGHGLYCENIC INDEX",
+    "confidence": 0.699
+   },
+   {
+    "time": 9.1,
+    "text": "VERY HIGH GLYCENIC INDEX,",
+    "confidence": 0.625
+   },
+   {
+    "time": 10.9,
+    "text": "LOWIN CALORIES:",
+    "confidence": 0.606
+   },
+   {
+    "time": 12.7,
+    "text": "RAISES BLOOD SUGAR",
+    "confidence": 0.86
+   },
+   {
+    "time": 14.5,
+    "text": "QUIcKLY EVEN IN",
+    "confidence": 0.914
+   },
+   {
+    "time": 16.3,
+    "text": "IT\"S ALSO EASY",
+    "confidence": 0.76
+   },
+   {
+    "time": 18.1,
+    "text": "WIthOUT FEELINC FULL,",
+    "confidence": 0.516
+   },
+   {
+    "time": 19.9,
+    "text": "WHICH CAN LEAD",
+    "confidence": 0.784
+   },
+   {
+    "time": 21.7,
+    "text": "SUGAR AND CARBS:",
+    "confidence": 0.732
+   },
+   {
+    "time": 23.5,
+    "text": "LET ME KNOW",
+    "confidence": 0.732
+   },
+   {
+    "time": 25.57,
+    "text": "TWO BANANAS; ESPECIALLY",
+    "confidence": 0.836
+   },
+   {
+    "time": 29.17,
+    "text": "RIPEBANANASHAVE",
+    "confidence": 0.932
+   },
+   {
+    "time": 32.77,
+    "text": "INDEX ANDSUGAR CONTENT",
+    "confidence": 0.845
+   },
+   {
+    "time": 36.37,
+    "text": "ESPECIALLY WHEN EATEN",
+    "confidence": 0.999
+   },
+   {
+    "time": 39.7,
+    "text": "THISIS ACTUALLY]",
+    "confidence": 0.79
+   },
+   {
+    "time": 41.5,
+    "text": "POV: 3Dscience popularization",
+    "confidence": 0.782
+   },
+   {
+    "time": 41.5,
+    "text": "BUTTON TOGET",
+    "confidence": 0.884
+   },
+   {
+    "time": 45.1,
+    "text": "3.MANGOES. MANGOES;",
+    "confidence": 0.608
+   },
+   {
+    "time": 46.9,
+    "text": "ESPECIALLY WHEN RIPE;",
+    "confidence": 0.874
+   },
+   {
+    "time": 48.7,
+    "text": "OF SUGAR THAT",
+    "confidence": 0.797
+   },
+   {
+    "time": 50.5,
+    "text": "BLOODSUCAR SPIKES",
+    "confidence": 0.841
+   },
+   {
+    "time": 52.3,
+    "text": "LINITED IN PORTION",
+    "confidence": 0.861
+   },
+   {
+    "time": 54.1,
+    "text": "OR AVOIDED IF",
+    "confidence": 0.648
+   },
+   {
+    "time": 55.9,
+    "text": "BLOOD SUGAR IS UNCONTROLLED:",
+    "confidence": 0.566
+   },
+   {
+    "time": 57.7,
+    "text": "HICH GLYCENIC",
+    "confidence": 0.57
+   },
+   {
+    "time": 59.5,
+    "text": "INDEX AND CAN",
+    "confidence": 0.918
+   },
+   {
+    "time": 61.3,
+    "text": "SHARPLY RAISE BLOOD GLUCOSE,",
+    "confidence": 0.787
+   },
+   {
+    "time": 63.1,
+    "text": "POV: 3D science popularization",
+    "confidence": 0.628
+   },
+   {
+    "time": 63.1,
+    "text": "EARGEPORTIONSAL",
+    "confidence": 0.537
+   },
+   {
+    "time": 64.9,
+    "text": "POV: 3D science popularization",
+    "confidence": 0.502
+   },
+   {
+    "time": 64.9,
+    "text": "guidance! ! !",
+    "confidence": 0.627
+   },
+   {
+    "time": 64.9,
+    "text": "hasno harmful",
+    "confidence": 0.997
+   },
+   {
+    "time": 64.9,
+    "text": "FEEL BALANCEDAGAIN",
+    "confidence": 0.94
+   },
+   {
+    "time": 64.9,
+    "text": "OR ASJUICES",
+    "confidence": 0.556
+   },
+   {
+    "time": 66.7,
+    "text": "POV: 3D science popularization",
+    "confidence": 0.799
+   },
+   {
+    "time": 66.7,
+    "text": "guidance!",
+    "confidence": 0.795
+   },
+   {
+    "time": 66.7,
+    "text": "has no harmful",
+    "confidence": 0.863
+   },
+   {
+    "time": 68.5,
+    "text": "AND INCREASES ABSORPTIONSPEEDS",
+    "confidence": 0.561
+   }
+  ],
+  "captions": [
+   {
+    "text": "guidancel",
+    "start": 1.8,
+    "end": 1.8,
+    "confidence": 0.848,
+    "id": "o1"
+   },
+   {
+    "text": "hasnoharmful",
+    "start": 1.8,
+    "end": 1.8,
+    "confidence": 0.638,
+    "id": "o2"
+   },
+   {
+    "text": "guldancel",
+    "start": 3.6,
+    "end": 3.6,
+    "confidence": 0.512,
+    "id": "o3"
+   },
+   {
+    "text": "hasnoharmfull",
+    "start": 3.6,
+    "end": 3.6,
+    "confidence": 0.847,
+    "id": "o4"
+   },
+   {
+    "text": "FOURFRUITS ONE WATERMELON:",
+    "start": 5.5,
+    "end": 5.5,
+    "confidence": 0.963,
+    "id": "o5"
+   },
+   {
+    "text": "LIFE",
+    "start": 5.5,
+    "end": 5.5,
+    "confidence": 0.999,
+    "id": "o6"
+   },
+   {
+    "text": "VERY HIGHGLYCENIC INDEX",
+    "start": 7.3,
+    "end": 7.3,
+    "confidence": 0.699,
+    "id": "o7"
+   },
+   {
+    "text": "VERY HIGH GLYCENIC INDEX,",
+    "start": 9.1,
+    "end": 9.1,
+    "confidence": 0.625,
+    "id": "o8"
+   },
+   {
+    "text": "LOWIN CALORIES:",
+    "start": 10.9,
+    "end": 10.9,
+    "confidence": 0.606,
+    "id": "o9"
+   },
+   {
+    "text": "RAISES BLOOD SUGAR",
+    "start": 12.7,
+    "end": 12.7,
+    "confidence": 0.86,
+    "id": "o10"
+   },
+   {
+    "text": "QUIcKLY EVEN IN",
+    "start": 14.5,
+    "end": 14.5,
+    "confidence": 0.914,
+    "id": "o11"
+   },
+   {
+    "text": "IT\"S ALSO EASY",
+    "start": 16.3,
+    "end": 16.3,
+    "confidence": 0.76,
+    "id": "o12"
+   },
+   {
+    "text": "WIthOUT FEELINC FULL,",
+    "start": 18.1,
+    "end": 18.1,
+    "confidence": 0.516,
+    "id": "o13"
+   },
+   {
+    "text": "WHICH CAN LEAD",
+    "start": 19.9,
+    "end": 19.9,
+    "confidence": 0.784,
+    "id": "o14"
+   },
+   {
+    "text": "SUGAR AND CARBS:",
+    "start": 21.7,
+    "end": 21.7,
+    "confidence": 0.732,
+    "id": "o15"
+   },
+   {
+    "text": "LET ME KNOW",
+    "start": 23.5,
+    "end": 23.5,
+    "confidence": 0.732,
+    "id": "o16"
+   },
+   {
+    "text": "TWO BANANAS; ESPECIALLY",
+    "start": 25.57,
+    "end": 25.57,
+    "confidence": 0.836,
+    "id": "o17"
+   },
+   {
+    "text": "RIPEBANANASHAVE",
+    "start": 29.17,
+    "end": 29.17,
+    "confidence": 0.932,
+    "id": "o18"
+   },
+   {
+    "text": "INDEX ANDSUGAR CONTENT",
+    "start": 32.77,
+    "end": 32.77,
+    "confidence": 0.845,
+    "id": "o19"
+   },
+   {
+    "text": "ESPECIALLY WHEN EATEN",
+    "start": 36.37,
+    "end": 36.37,
+    "confidence": 0.999,
+    "id": "o20"
+   },
+   {
+    "text": "THISIS ACTUALLY]",
+    "start": 39.7,
+    "end": 39.7,
+    "confidence": 0.79,
+    "id": "o21"
+   },
+   {
+    "text": "POV: 3Dscience popularization",
+    "start": 41.5,
+    "end": 41.5,
+    "confidence": 0.782,
+    "id": "o22"
+   },
+   {
+    "text": "BUTTON TOGET",
+    "start": 41.5,
+    "end": 41.5,
+    "confidence": 0.884,
+    "id": "o23"
+   },
+   {
+    "text": "3.MANGOES. MANGOES;",
+    "start": 45.1,
+    "end": 45.1,
+    "confidence": 0.608,
+    "id": "o24"
+   },
+   {
+    "text": "ESPECIALLY WHEN RIPE;",
+    "start": 46.9,
+    "end": 46.9,
+    "confidence": 0.874,
+    "id": "o25"
+   },
+   {
+    "text": "OF SUGAR THAT",
+    "start": 48.7,
+    "end": 48.7,
+    "confidence": 0.797,
+    "id": "o26"
+   },
+   {
+    "text": "BLOODSUCAR SPIKES",
+    "start": 50.5,
+    "end": 50.5,
+    "confidence": 0.841,
+    "id": "o27"
+   },
+   {
+    "text": "LINITED IN PORTION",
+    "start": 52.3,
+    "end": 52.3,
+    "confidence": 0.861,
+    "id": "o28"
+   },
+   {
+    "text": "OR AVOIDED IF",
+    "start": 54.1,
+    "end": 54.1,
+    "confidence": 0.648,
+    "id": "o29"
+   },
+   {
+    "text": "BLOOD SUGAR IS UNCONTROLLED:",
+    "start": 55.9,
+    "end": 55.9,
+    "confidence": 0.566,
+    "id": "o30"
+   },
+   {
+    "text": "HICH GLYCENIC",
+    "start": 57.7,
+    "end": 57.7,
+    "confidence": 0.57,
+    "id": "o31"
+   },
+   {
+    "text": "INDEX AND CAN",
+    "start": 59.5,
+    "end": 59.5,
+    "confidence": 0.918,
+    "id": "o32"
+   },
+   {
+    "text": "SHARPLY RAISE BLOOD GLUCOSE,",
+    "start": 61.3,
+    "end": 61.3,
+    "confidence": 0.787,
+    "id": "o33"
+   },
+   {
+    "text": "POV: 3D science popularization",
+    "start": 63.1,
+    "end": 63.1,
+    "confidence": 0.628,
+    "id": "o34"
+   },
+   {
+    "text": "EARGEPORTIONSAL",
+    "start": 63.1,
+    "end": 63.1,
+    "confidence": 0.537,
+    "id": "o35"
+   },
+   {
+    "text": "POV: 3D science popularization",
+    "start": 64.9,
+    "end": 64.9,
+    "confidence": 0.502,
+    "id": "o36"
+   },
+   {
+    "text": "guidance! ! !",
+    "start": 64.9,
+    "end": 64.9,
+    "confidence": 0.627,
+    "id": "o37"
+   },
+   {
+    "text": "hasno harmful",
+    "start": 64.9,
+    "end": 64.9,
+    "confidence": 0.997,
+    "id": "o38"
+   },
+   {
+    "text": "FEEL BALANCEDAGAIN",
+    "start": 64.9,
+    "end": 64.9,
+    "confidence": 0.94,
+    "id": "o39"
+   },
+   {
+    "text": "OR ASJUICES",
+    "start": 64.9,
+    "end": 64.9,
+    "confidence": 0.556,
+    "id": "o40"
+   },
+   {
+    "text": "POV: 3D science popularization",
+    "start": 66.7,
+    "end": 66.7,
+    "confidence": 0.799,
+    "id": "o41"
+   },
+   {
+    "text": "guidance!",
+    "start": 66.7,
+    "end": 66.7,
+    "confidence": 0.795,
+    "id": "o42"
+   },
+   {
+    "text": "has no harmful",
+    "start": 66.7,
+    "end": 66.7,
+    "confidence": 0.863,
+    "id": "o43"
+   },
+   {
+    "text": "AND INCREASES ABSORPTIONSPEEDS",
+    "start": 68.5,
+    "end": 68.5,
+    "confidence": 0.561,
+    "id": "o44"
+   }
+  ]
+ }
+}

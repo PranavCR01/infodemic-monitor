@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Videos</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../im.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5F99}a:hover{color:#174A78}
+</style>
+</helmet>
+<div class="im" data-theme="{{theme}}" style="min-height: 100vh">
+<header class="topbar">
+  <a class="brand" href="Jobs.dc.html"><span class="brand-mark" aria-hidden="true">IM</span><span>Infodemic Monitor <span class="faint" style="font-weight: 400">· WHO research</span></span></a>
+  <nav class="nav" aria-label="Main" style="flex: 1">
+    <a href="Jobs.dc.html" aria-current="page"><span class="i i-grid" aria-hidden="true"></span>Videos</a>
+    <a href="Submit.dc.html"><span class="i i-upload" aria-hidden="true"></span>Submit</a>
+    <a href="#"><span class="i i-inbox" aria-hidden="true"></span>Review queue <span class="count">4</span></a>
+  </nav>
+  <span class="avatar" aria-label="Signed in as Dr. A. Mensah">AM</span>
+</header>
+
+<main class="page" style="display: flex; flex-direction: column; gap: 20px">
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+    <div><h1 class="t-h1">Your videos</h1><p class="t-small muted" style="margin: 4px 0 0">Videos you submitted, newest first.</p></div>
+    <a class="btn btn-primary" href="Submit.dc.html"><span class="i i-upload" aria-hidden="true"></span>Submit a video</a>
+  </div>
+
+  <sc-if value="{{isEmpty}}" hint-placeholder-val="{{ false }}">
+    <section class="card" style="padding: 64px 24px; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center">
+      <span style="width: 56px; height: 56px; border-radius: 50%; background: var(--primary-subtle); color: var(--primary); display: grid; place-items: center"><span class="i i-upload i-xl" aria-hidden="true"></span></span>
+      <h2 class="t-h2">No videos yet</h2>
+      <p class="muted" style="margin: 0; max-width: 46ch">Upload a short health video (MP4 or MOV, up to 3 minutes). You'll get each claim it makes, checked against published evidence.</p>
+      <a class="btn btn-primary" href="Submit.dc.html" style="margin-top: 8px">Submit your first video</a>
+    </section>
+  </sc-if>
+
+  <sc-if value="{{hasTable}}" hint-placeholder-val="{{ true }}">
+    <section class="card" aria-label="Videos">
+      <div style="display: flex; gap: 12px; padding: 12px 16px; flex-wrap: wrap; align-items: center; border-bottom: 1px solid var(--border)">
+        <div class="input-wrap" style="flex: 1 1 280px; max-width: 360px"><span class="i i-search" aria-hidden="true"></span><input class="input" type="search" aria-label="Search videos" placeholder="Search by title or file name"></div>
+        <select class="select" aria-label="Filter by label" style="width: auto"><option>All labels</option><option>MISINFO</option><option>NO-MISINFO</option><option>DEBUNKED</option><option>CANNOT RECOGNIZE</option></select>
+        <select class="select" aria-label="Filter by state" style="width: auto"><option>All states</option><option>Queued</option><option>Running</option><option>Retrying</option><option>Needs review</option><option>Completed</option><option>Failed</option></select>
+        <label class="t-small" style="display: inline-flex; gap: 8px; align-items: center; min-height: 40px"><input type="checkbox"> Needs review only</label>
+        <span class="t-small faint" style="margin-left: auto; display: inline-flex; gap: 6px; align-items: center"><span class="i i-refresh i-sm" aria-hidden="true"></span>Updating 3 running jobs</span>
+      </div>
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr>
+            <th scope="col">Video</th>
+            <th scope="col" aria-sort="descending"><span class="sort">Submitted <span class="i i-chevd i-sm" aria-hidden="true"></span></span></th>
+            <th scope="col">State</th>
+            <th scope="col">Label</th>
+            <th scope="col">Review</th>
+            <th scope="col" class="num">Claims</th>
+            <th scope="col"><span style="position: absolute; left: -9999px">Open</span></th>
+          </tr></thead>
+          <tbody>
+            <sc-if value="{{isLoading}}" hint-placeholder-val="{{ false }}">
+              <sc-for list="{{skel}}" as="s" hint-placeholder-count="6">
+                <tr><td><div style="display: flex; gap: 12px; align-items: center"><span class="thumb" style="background: var(--sunken)"></span><div style="display: flex; flex-direction: column; gap: 8px; width: 220px"><span class="sk-line" style="width: 80%"></span><span class="sk-line" style="width: 50%"></span></div></div></td><td><span class="sk-line" style="display: block; width: 90px"></span></td><td><span class="sk-line" style="display: block; width: 80px"></span></td><td><span class="sk-line" style="display: block; width: 96px; height: 22px"></span></td><td><span class="sk-line" style="display: block; width: 90px"></span></td><td></td><td></td></tr>
+              </sc-for>
+            </sc-if>
+            <sc-if value="{{hasRows}}" hint-placeholder-val="{{ true }}">
+              <sc-for list="{{rows}}" as="r" hint-placeholder-count="9">
+                <tr>
+                  <td><a href="Main.dc.html" style="display: flex; gap: 12px; align-items: center; text-decoration: none; color: inherit"><span class="thumb" aria-hidden="true"></span><span style="display: flex; flex-direction: column; min-width: 0"><span style="font-weight: 600; color: var(--text)">{{r.title}}</span><span class="mono t-cap faint">{{r.file}}</span></span></a></td>
+                  <td class="tnum muted" style="white-space: nowrap">{{r.when}}</td>
+                  <td><span class="js {{r.stCls}}"><span class="i {{r.stIcon}} i-sm" aria-hidden="true"></span>{{r.st}}</span><sc-if value="{{r.hasSub}}" hint-placeholder-val="{{ false }}"><div class="t-cap faint">{{r.sub}}</div></sc-if></td>
+                  <td><sc-if value="{{r.hasLabel}}" hint-placeholder-val="{{ true }}"><span class="lb {{r.lbCls}}"><span class="i {{r.lbIcon}} i-sm" aria-hidden="true"></span>{{r.lb}}</span></sc-if><sc-if value="{{r.noLabel}}" hint-placeholder-val="{{ false }}"><span class="faint">Not yet</span></sc-if></td>
+                  <td><span class="rs {{r.rsCls}}"><sc-if value="{{r.hasRsIcon}}" hint-placeholder-val="{{ false }}"><span class="i {{r.rsIcon}} i-sm" aria-hidden="true"></span></sc-if>{{r.rs}}</span></td>
+                  <td class="num">{{r.claims}}</td>
+                  <td><a href="Main.dc.html" aria-label="Open {{r.title}}" style="color: var(--text-3)"><span class="i i-chevr" aria-hidden="true"></span></a></td>
+                </tr>
+              </sc-for>
+            </sc-if>
+          </tbody>
+        </table>
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; flex-wrap: wrap; gap: 12px">
+        <span class="t-small muted tnum">Showing 1–9 of 23</span>
+        <nav aria-label="Pagination" style="display: flex; gap: 4px">
+          <button class="btn btn-secondary btn-sm" type="button" disabled>Previous</button>
+          <button class="btn btn-secondary btn-sm" type="button" aria-current="page" style="background: var(--primary-subtle)">1</button>
+          <button class="btn btn-secondary btn-sm" type="button">2</button>
+          <button class="btn btn-secondary btn-sm" type="button">3</button>
+          <button class="btn btn-secondary btn-sm" type="button">Next</button>
+        </nav>
+      </div>
+    </section>
+  </sc-if>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light","section":"Display"},"state":{"editor":"enum","options":["list","loading","empty"],"default":"list","section":"State"},"$preview":{"width":1440,"height":980}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.props.state ?? 'list';
+    const L = {
+      MISINFO: ['lb-mis', 'i-alert'], 'NO-MISINFO': ['lb-nomis', 'i-checkc'],
+      DEBUNKED: ['lb-deb', 'i-shield'], 'CANNOT RECOGNIZE': ['lb-cr', 'i-helpc']
+    };
+    const S = {
+      Completed: ['js-done', 'i-checkc'], 'Needs review': ['js-review', 'i-flag'], Running: ['js-running', 'i-loader'],
+      Queued: ['js-queued', 'i-clock'], Retrying: ['js-retrying', 'i-refresh'], Failed: ['js-failed', 'i-alert']
+    };
+    const R = {
+      'Not required': ['muted', ''], 'Pending review': ['rs-pending', 'i-clock'], Verified: ['rs-verified', 'i-checkc'],
+      Corrected: ['rs-corrected', 'i-pencil'], Rejected: ['rs-rejected', 'i-ban'], '': ['faint', '']
+    };
+    const raw = [
+      ['Hot water flu cure', 'hot-water-flu.mp4', 'Today, 06:56', 'Completed', '', 'MISINFO', 'Not required', '3'],
+      ['Dr. K on fasting and immunity', 'dr-k-fasting.mov', 'Today, 06:40', 'Needs review', '', 'CANNOT RECOGNIZE', 'Pending review', '4'],
+      ['Garlic for colds', 'garlic-cold.mp4', 'Today, 07:02', 'Running', 'Searching evidence · 1:12', '', '', '–'],
+      ['Ginger shot routine', 'ginger-shot.mov', 'Today, 07:03', 'Queued', '2nd in line', '', '', '–'],
+      ['Zinc lozenges', 'zinc-lozenges.mp4', 'Today, 06:31', 'Retrying', 'Evidence search timed out, retrying', '', '', '–'],
+      ['Nurse responds to vaccine myth', 'nurse-autism-myth.mp4', 'Yesterday, 17:12', 'Completed', '', 'DEBUNKED', 'Verified', '2'],
+      ['Vitamin C megadose', 'vitc-megadose.mp4', 'Yesterday, 11:48', 'Completed', '', 'MISINFO', 'Corrected', '5'],
+      ['Handwashing tips', 'handwashing-tips.mp4', '20 Nov, 15:20', 'Completed', '', 'NO-MISINFO', 'Not required', '3'],
+      ['Sunscreen myths', 'sunscreen-myths.mov', '19 Nov, 09:05', 'Failed', 'Audio could not be read', '', '', '–']
+    ];
+    const rows = raw.map(([title, file, when, st, sub, lb, rs, claims]) => ({
+      title, file, when, st, sub, hasSub: !!sub, stCls: S[st][0], stIcon: S[st][1],
+      lb, hasLabel: !!lb, noLabel: !lb, lbCls: lb ? L[lb][0] : '', lbIcon: lb ? L[lb][1] : '',
+      rs: rs || '–', rsCls: R[rs][0], rsIcon: R[rs][1], hasRsIcon: !!R[rs][1], claims
+    }));
+    return {
+      theme: this.props.theme ?? 'light', rows, skel: [1, 2, 3, 4, 5, 6],
+      isEmpty: s === 'empty', hasTable: s !== 'empty', isLoading: s === 'loading', hasRows: s === 'list'
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,822 @@
+{
+ "video_id": "v79",
+ "filename": "v15044gf0000d9tjq5nog65jf2v3a4lg.mp4",
+ "relative_path": "Dataset-Sept-2026/Joshua Ryan Fajardo/DEBUNKING/v15044gf0000d9tjq5nog65jf2v3a4lg.mp4",
+ "collector": "Joshua Ryan Fajardo",
+ "collector_label": "DEBUNKING",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:42:34",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 34.85,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.2,
+    "text": "So at year one, you should have five separate visits for vaccines rather than giving them all in the same day."
+   },
+   {
+    "id": "t2",
+    "start": 5.2,
+    "end": 8.72,
+    "text": "An executive order does not replace scientific evidence."
+   },
+   {
+    "id": "t3",
+    "start": 8.72,
+    "end": 11.92,
+    "text": "The combination MMR vaccine has been shown to be safe."
+   },
+   {
+    "id": "t4",
+    "start": 11.92,
+    "end": 14.48,
+    "text": "There is no evidence that it needs to be separated."
+   },
+   {
+    "id": "t5",
+    "start": 14.48,
+    "end": 17.2,
+    "text": "That just means unnecessary extra visits."
+   },
+   {
+    "id": "t6",
+    "start": 17.2,
+    "end": 19.44,
+    "text": "More days off to take your babies in."
+   },
+   {
+    "id": "t7",
+    "start": 19.44,
+    "end": 20.64,
+    "text": "More co-pays."
+   },
+   {
+    "id": "t8",
+    "start": 20.64,
+    "end": 21.92,
+    "text": "More needle sticks."
+   },
+   {
+    "id": "t9",
+    "start": 21.92,
+    "end": 24.56,
+    "text": "And a higher likelihood of missing doses."
+   },
+   {
+    "id": "t10",
+    "start": 24.56,
+    "end": 28.48,
+    "text": "Also, there has been no evidence that any of the childhood vaccinations cause autism."
+   },
+   {
+    "id": "t11",
+    "start": 28.48,
+    "end": 30.8,
+    "text": "Leave healthcare to the healthcare professionals."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 18,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "\"Vaccines in 5 separate visits",
+    "confidence": 0.914
+   },
+   {
+    "time": 0.0,
+    "text": "vs same day\"",
+    "confidence": 0.719
+   },
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.995
+   },
+   {
+    "time": 0.0,
+    "text": "@ vickichanmd",
+    "confidence": 0.721
+   },
+   {
+    "time": 0.0,
+    "text": "NEWS",
+    "confidence": 0.998
+   },
+   {
+    "time": 0.0,
+    "text": "SO AT YEAR",
+    "confidence": 0.937
+   },
+   {
+    "time": 2.0,
+    "text": "\"Vaccines in 5 separate visits",
+    "confidence": 0.914
+   },
+   {
+    "time": 2.0,
+    "text": "vs same day\"",
+    "confidence": 0.729
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 2.0,
+    "text": "@ vickichanmd",
+    "confidence": 0.989
+   },
+   {
+    "time": 2.0,
+    "text": "NEWS",
+    "confidence": 0.996
+   },
+   {
+    "time": 2.0,
+    "text": "VISITS FOR VACCINES",
+    "confidence": 0.932
+   },
+   {
+    "time": 4.0,
+    "text": "\"Vaccines in 5 separate visits",
+    "confidence": 0.913
+   },
+   {
+    "time": 4.0,
+    "text": "vs same day\"",
+    "confidence": 0.727
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 4.0,
+    "text": "@ vickichanmd",
+    "confidence": 0.992
+   },
+   {
+    "time": 4.0,
+    "text": "NEWS",
+    "confidence": 0.996
+   },
+   {
+    "time": 4.0,
+    "text": "THEM ALL IN",
+    "confidence": 0.98
+   },
+   {
+    "time": 6.0,
+    "text": "AN EXECUTIVEORDER",
+    "confidence": 0.943
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "vickichanmd",
+    "confidence": 0.986
+   },
+   {
+    "time": 8.0,
+    "text": "SCIENTIIC EVIDENCE:",
+    "confidence": 0.742
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "vickichanmd",
+    "confidence": 0.692
+   },
+   {
+    "time": 10.0,
+    "text": "MR. VACCINE",
+    "confidence": 0.584
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "vickichanmd",
+    "confidence": 0.78
+   },
+   {
+    "time": 12.0,
+    "text": "TO BE SAFE:",
+    "confidence": 0.877
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "vickichanmd",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.0,
+    "text": "SEPARATED:",
+    "confidence": 0.93
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.0,
+    "text": "vickichanmd",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.0,
+    "text": "UNNECESSARY EXTRA VISITS,",
+    "confidence": 0.987
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "vickichanmd",
+    "confidence": 0.979
+   },
+   {
+    "time": 18.0,
+    "text": "MORE DAYS OFF",
+    "confidence": 0.784
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "vickichanmd",
+    "confidence": 0.655
+   },
+   {
+    "time": 20.0,
+    "text": "MORE COPAYS, MORE",
+    "confidence": 0.985
+   },
+   {
+    "time": 20.0,
+    "text": "Tik Tok",
+    "confidence": 0.675
+   },
+   {
+    "time": 22.0,
+    "text": "NEEDLE STICKS,",
+    "confidence": 0.998
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "vickichanmd",
+    "confidence": 0.708
+   },
+   {
+    "time": 24.0,
+    "text": "DOSES.",
+    "confidence": 0.75
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 24.0,
+    "text": "vickichanmd",
+    "confidence": 0.97
+   },
+   {
+    "time": 26.0,
+    "text": "NO EVIDENCE THAT",
+    "confidence": 0.741
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "vickichanmd",
+    "confidence": 0.999
+   },
+   {
+    "time": 28.0,
+    "text": "AUTISM:",
+    "confidence": 0.997
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "vickichanmd",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.0,
+    "text": "THE HEALTHCARE PROFESSIONALS.",
+    "confidence": 0.724
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "vickichanmd",
+    "confidence": 0.999
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "vickichanmd",
+    "confidence": 0.997
+   },
+   {
+    "time": 34.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "vickichanmd",
+    "confidence": 0.997
+   }
+  ],
+  "captions": [
+   {
+    "text": "\"Vaccines in 5 separate visits",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.914,
+    "id": "o1"
+   },
+   {
+    "text": "vs same day\"",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.719,
+    "id": "o2"
+   },
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.995,
+    "id": "o3"
+   },
+   {
+    "text": "@ vickichanmd",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.721,
+    "id": "o4"
+   },
+   {
+    "text": "NEWS",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.998,
+    "id": "o5"
+   },
+   {
+    "text": "SO AT YEAR",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.937,
+    "id": "o6"
+   },
+   {
+    "text": "\"Vaccines in 5 separate visits",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.914,
+    "id": "o7"
+   },
+   {
+    "text": "vs same day\"",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.729,
+    "id": "o8"
+   },
+   {
+    "text": "TikTok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.997,
+    "id": "o9"
+   },
+   {
+    "text": "@ vickichanmd",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.989,
+    "id": "o10"
+   },
+   {
+    "text": "NEWS",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.996,
+    "id": "o11"
+   },
+   {
+    "text": "VISITS FOR VACCINES",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.932,
+    "id": "o12"
+   },
+   {
+    "text": "\"Vaccines in 5 separate visits",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.913,
+    "id": "o13"
+   },
+   {
+    "text": "vs same day\"",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.727,
+    "id": "o14"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.997,
+    "id": "o15"
+   },
+   {
+    "text": "@ vickichanmd",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.992,
+    "id": "o16"
+   },
+   {
+    "text": "NEWS",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.996,
+    "id": "o17"
+   },
+   {
+    "text": "THEM ALL IN",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.98,
+    "id": "o18"
+   },
+   {
+    "text": "AN EXECUTIVEORDER",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.943,
+    "id": "o19"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o20"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.986,
+    "id": "o21"
+   },
+   {
+    "text": "SCIENTIIC EVIDENCE:",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.742,
+    "id": "o22"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o23"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.692,
+    "id": "o24"
+   },
+   {
+    "text": "MR. VACCINE",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.584,
+    "id": "o25"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o26"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.78,
+    "id": "o27"
+   },
+   {
+    "text": "TO BE SAFE:",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.877,
+    "id": "o28"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o29"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o30"
+   },
+   {
+    "text": "SEPARATED:",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.93,
+    "id": "o31"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.999,
+    "id": "o32"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.999,
+    "id": "o33"
+   },
+   {
+    "text": "UNNECESSARY EXTRA VISITS,",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.987,
+    "id": "o34"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o35"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.979,
+    "id": "o36"
+   },
+   {
+    "text": "MORE DAYS OFF",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.784,
+    "id": "o37"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 1.0,
+    "id": "o38"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.655,
+    "id": "o39"
+   },
+   {
+    "text": "MORE COPAYS, MORE",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.985,
+    "id": "o40"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.675,
+    "id": "o41"
+   },
+   {
+    "text": "NEEDLE STICKS,",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.998,
+    "id": "o42"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o43"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.708,
+    "id": "o44"
+   },
+   {
+    "text": "DOSES.",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.75,
+    "id": "o45"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.999,
+    "id": "o46"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.97,
+    "id": "o47"
+   },
+   {
+    "text": "NO EVIDENCE THAT",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.741,
+    "id": "o48"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o49"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.999,
+    "id": "o50"
+   },
+   {
+    "text": "AUTISM:",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.997,
+    "id": "o51"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o52"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.999,
+    "id": "o53"
+   },
+   {
+    "text": "THE HEALTHCARE PROFESSIONALS.",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.724,
+    "id": "o54"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o55"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.999,
+    "id": "o56"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o57"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.997,
+    "id": "o58"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o59"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.997,
+    "id": "o60"
+   }
+  ]
+ }
+}

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Video result: hot-water-flu.mp4</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../im.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5F99}a:hover{color:#174A78}
+</style>
+</helmet>
+<div class="im" data-theme="{{theme}}" style="min-height: 100vh">
+
+<header class="topbar">
+  <a class="brand" href="Jobs.dc.html"><span class="brand-mark" aria-hidden="true">IM</span><span>Infodemic Monitor <span class="faint" style="font-weight: 400">· WHO research</span></span></a>
+  <nav class="nav" aria-label="Main" style="flex: 1">
+    <a href="Jobs.dc.html" aria-current="page"><span class="i i-grid" aria-hidden="true"></span>Videos</a>
+    <a href="Submit.dc.html"><span class="i i-upload" aria-hidden="true"></span>Submit</a>
+    <a href="#"><span class="i i-inbox" aria-hidden="true"></span>Review queue <span class="count">4</span></a>
+  </nav>
+  <span class="avatar" aria-label="Signed in as Dr. A. Mensah">AM</span>
+</header>
+
+<main class="page" style="display: flex; flex-direction: column; gap: 20px">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="Jobs.dc.html">Videos</a><span class="i i-chevr i-sm" aria-hidden="true"></span><span class="mono">hot-water-flu.mp4</span></nav>
+
+  <!-- Result header -->
+  <section class="card" style="padding: 24px; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start" aria-labelledby="verdict-h">
+    <div style="flex: 999 1 640px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+      <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap">
+        <span class="lb lb-mis lb-lg" id="verdict-h"><span class="i i-alert" aria-hidden="true"></span>MISINFO</span>
+        <span class="t-small muted">Promotes a false or misleading health claim</span>
+      </div>
+      <p class="serif" style="margin: 0; font-size: 20px; line-height: 30px; max-width: 72ch">The speaker presents drinking hot water as a cure for the flu. Clinical evidence shows hot drinks can ease symptoms but do not cure or shorten influenza.</p>
+      <p class="t-small muted" style="margin: 0; display: flex; gap: 6px; align-items: center"><span class="i i-info i-sm" aria-hidden="true"></span>Label decided by claim 1: the speaker endorses it and the evidence contradicts it.</p>
+    </div>
+    <div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 14px">
+      <div style="display: flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap">
+        <button class="btn btn-secondary" type="button"><span class="i i-flag" aria-hidden="true"></span>Request review</button>
+        <a class="btn btn-primary" href="#"><span class="i i-download" aria-hidden="true"></span>Export</a>
+      </div>
+      <dl class="kv" style="justify-content: end">
+        <dt>Review</dt>
+        <dd><sc-if value="{{needsReview}}" hint-placeholder-val="{{ false }}"><span class="rs rs-pending"><span class="i i-clock i-sm" aria-hidden="true"></span>Pending review</span></sc-if><sc-if value="{{noReview}}" hint-placeholder-val="{{ true }}"><span class="muted">Not required</span></sc-if></dd>
+        <dt>Confidence</dt>
+        <dd><sc-if value="{{calibrated}}" hint-placeholder-val="{{ false }}"><span style="font-weight: 600">High</span> <span class="mono muted">0.91</span></sc-if><sc-if value="{{uncalibrated}}" hint-placeholder-val="{{ true }}"><span class="muted" style="display: inline-flex; gap: 6px; align-items: center">Not yet calibrated <a href="#" aria-label="What does not yet calibrated mean?" style="display: inline-flex"><span class="i i-info i-sm" aria-hidden="true"></span></a></span></sc-if></dd>
+        <dt>Analysed</dt><dd class="tnum">23 Nov 2026, 06:58</dd>
+        <dt>Video</dt><dd class="tnum">0:42 · MP4 · 18.4 MB</dd>
+      </dl>
+    </div>
+  </section>
+
+  <sc-if value="{{needsReview}}" hint-placeholder-val="{{ false }}">
+    <div class="banner banner-review" role="status">
+      <span class="i i-flag i-lg" aria-hidden="true"></span>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <strong>Waiting for a reviewer. Treat this label as provisional.</strong>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap">
+          <span class="rr"><span class="i i-mixed i-sm" aria-hidden="true"></span>Evidence is mixed</span>
+          <span class="rr"><span class="i i-question i-sm" aria-hidden="true"></span>Stance unclear (possible sarcasm)</span>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- Body: player + claims -->
+  <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+    <aside style="flex: 1 1 320px; max-width: 360px; display: flex; flex-direction: column; gap: 12px" aria-label="Video">
+      <div class="player" style="width: 100%">
+        <span class="faint mono" style="position: absolute; top: 12px; left: 12px; font-size: 12px; color: #A9B3C6">hot-water-flu.mp4</span>
+        <div style="position: absolute; left: 16px; right: 16px; bottom: 96px; text-align: center; font-weight: 700; font-size: 18px; color: #FFFFFF">HOT WATER EVERY MORNING = NO MORE FLU</div>
+        <button class="btn" type="button" aria-label="Play video" style="width: 64px; height: 64px; border-radius: 50%; background: rgba(255,255,255,.92); color: #14213D"><span class="i i-play i-lg" aria-hidden="true"></span></button>
+        <div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 12px; display: flex; align-items: center; gap: 10px; background: rgba(11,17,32,.7); font-size: 12px">
+          <span class="mono">0:05 / 0:42</span>
+          <div style="flex: 1; height: 4px; background: rgba(255,255,255,.25); border-radius: 2px"><div style="width: 12%; height: 100%; background: #FFFFFF; border-radius: 2px"></div></div>
+        </div>
+      </div>
+
+      <div class="card" style="padding: 12px 12px 10px; display: flex; flex-direction: column; gap: 8px">
+        <div style="display: flex; justify-content: space-between; align-items: baseline"><span class="t-over">Claims on the timeline</span><span class="mono t-cap faint">0:42</span></div>
+        <div class="track" role="group" aria-label="Claim timeline">
+          <a class="seg-mark seg-con" href="#c1" style="left: 7.1%; width: 11.9%" aria-label="Claim 1, 0:03 to 0:08, contradicted"><span class="i i-xc" aria-hidden="true"></span></a>
+          <a class="seg-mark seg-sup" href="#c2" style="left: 28.6%; width: 7.1%" aria-label="Claim 2, 0:12 to 0:15, supported"><span class="i i-checkc" aria-hidden="true"></span></a>
+          <a class="seg-mark seg-ins" href="#c3" style="left: 47.6%; width: 9.5%" aria-label="Claim 3, 0:20 to 0:24, insufficient evidence"><span class="i i-dashed" aria-hidden="true"></span></a>
+          <span class="playhead" style="left: 11.9%" aria-hidden="true"></span>
+        </div>
+        <div class="mono t-cap faint" style="display: flex; justify-content: space-between"><span>0:00</span><span>0:10</span><span>0:20</span><span>0:30</span><span>0:42</span></div>
+        <div class="t-cap muted" style="display: flex; gap: 12px; flex-wrap: wrap">
+          <span style="display: inline-flex; gap: 4px; align-items: center"><span class="i i-xc i-sm" style="color: var(--mis-fg)" aria-hidden="true"></span>Contradicted</span>
+          <span style="display: inline-flex; gap: 4px; align-items: center"><span class="i i-checkc i-sm" style="color: var(--nomis-fg)" aria-hidden="true"></span>Supported</span>
+          <span style="display: inline-flex; gap: 4px; align-items: center"><span class="i i-dashed i-sm" style="color: var(--cr-fg)" aria-hidden="true"></span>Insufficient</span>
+        </div>
+      </div>
+    </aside>
+
+    <section class="card" style="flex: 999 1 560px; min-width: 0" aria-label="Claims and text">
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" aria-selected="true" type="button">Claims <span class="count">3</span></button>
+        <a class="tab" role="tab" aria-selected="false" href="ClaimDetail.dc.html" style="text-decoration: none">Transcript</a>
+        <button class="tab" role="tab" aria-selected="false" type="button">On-screen text</button>
+      </div>
+      <div style="padding: 16px; display: flex; flex-direction: column; gap: 12px">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
+          <p class="t-small muted" style="margin: 0">3 claims found. Open a claim to see the sources and the exact words.</p>
+          <div class="seg" role="group" aria-label="Order claims"><button type="button" aria-pressed="true">By time</button><button type="button" aria-pressed="false">Decisive first</button></div>
+        </div>
+
+        <!-- Claim 1 -->
+        <a class="claim is-active" id="c1" href="ClaimDetail.dc.html">
+          <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap">
+            <span class="mono t-cap faint">1</span>
+            <span class="mono t-small">0:03–0:08</span>
+            <span class="tag"><span class="i i-mic i-sm" aria-hidden="true"></span>Speech</span><span class="tag"><span class="i i-screen i-sm" aria-hidden="true"></span>On-screen</span>
+            <span class="decided" style="margin-left: auto"><span class="i i-star i-sm" aria-hidden="true"></span>Decided the label</span>
+          </div>
+          <p class="claim-text">Drinking hot water every morning cures the flu.</p>
+          <div style="display: flex; gap: 10px; align-items: flex-start; flex-wrap: wrap">
+            <span class="st"><span class="i i-endorse i-sm" aria-hidden="true"></span>ENDORSES</span>
+            <span class="say" style="flex: 1 1 240px"><span class="i i-quote i-sm" aria-hidden="true"></span><q>this is the cure, trust me</q></span>
+          </div>
+          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap">
+            <span class="vd vd-con"><span class="i i-xc i-sm" aria-hidden="true"></span>CONTRADICTED</span>
+            <span class="t-small tnum"><strong>2</strong> contradict · <strong>0</strong> support</span>
+            <span class="t-small faint">Randomised trial · WHO fact sheet</span>
+            <span class="i i-chevr" style="margin-left: auto; color: var(--text-3)" aria-hidden="true"></span>
+          </div>
+          <p class="meaning" style="margin: 0"><span class="i i-info i-sm" aria-hidden="true" style="margin-top: 3px"></span>The speaker promotes a claim that the evidence contradicts.</p>
+        </a>
+
+        <!-- Claim 2 -->
+        <a class="claim" id="c2" href="ClaimDetail.dc.html">
+          <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap">
+            <span class="mono t-cap faint">2</span>
+            <span class="mono t-small">0:12–0:15</span>
+            <span class="tag"><span class="i i-mic i-sm" aria-hidden="true"></span>Speech</span>
+          </div>
+          <p class="claim-text">The flu is caused by a virus.</p>
+          <div style="display: flex; gap: 10px; align-items: flex-start; flex-wrap: wrap">
+            <span class="st"><span class="i i-endorse i-sm" aria-hidden="true"></span>ENDORSES</span>
+            <span class="say" style="flex: 1 1 240px"><span class="i i-quote i-sm" aria-hidden="true"></span><q>the flu is caused by a virus, right</q></span>
+          </div>
+          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap">
+            <span class="vd vd-sup"><span class="i i-checkc i-sm" aria-hidden="true"></span>SUPPORTED</span>
+            <span class="t-small tnum"><strong>0</strong> contradict · <strong>1</strong> supports</span>
+            <span class="t-small faint">WHO fact sheet</span>
+            <span class="i i-chevr" style="margin-left: auto; color: var(--text-3)" aria-hidden="true"></span>
+          </div>
+        </a>
+
+        <!-- Claim 3 -->
+        <a class="claim" id="c3" href="ClaimDetail.dc.html">
+          <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap">
+            <span class="mono t-cap faint">3</span>
+            <span class="mono t-small">0:20–0:24</span>
+            <span class="tag"><span class="i i-screen i-sm" aria-hidden="true"></span>On-screen only</span>
+          </div>
+          <p class="claim-text">Lemon makes the cure work twice as fast.</p>
+          <div style="display: flex; gap: 10px; align-items: flex-start; flex-wrap: wrap">
+            <span class="st"><span class="i i-endorse i-sm" aria-hidden="true"></span>ENDORSES</span>
+            <span class="say" style="flex: 1 1 240px"><span class="i i-screen i-sm" aria-hidden="true"></span><q>ADD LEMON = 2X FASTER</q></span>
+          </div>
+          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap">
+            <span class="vd vd-ins"><span class="i i-dashed i-sm" aria-hidden="true"></span>INSUFFICIENT EVIDENCE</span>
+            <span class="t-small muted">No study tests this claim. This is not the same as false.</span>
+            <span class="i i-chevr" style="margin-left: auto; color: var(--text-3)" aria-hidden="true"></span>
+          </div>
+        </a>
+
+        <details style="border-top: 1px solid var(--border); padding-top: 12px">
+          <summary class="t-small" style="display: flex; gap: 6px; align-items: center; color: var(--text-2); font-weight: 600"><span class="i i-chevr i-sm" aria-hidden="true"></span>How the video label is reached</summary>
+          <p class="t-small muted" style="margin: 8px 0 0 20px">A video is MISINFO when the speaker endorses at least one claim the evidence contradicts.</p>
+        </details>
+      </div>
+    </section>
+  </div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light","section":"Display"},"needsReview":{"editor":"boolean","default":false,"section":"State"},"calibrated":{"editor":"boolean","default":false,"section":"State"},"$preview":{"width":1440,"height":1240}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const nr = this.props.needsReview ?? false;
+    const cal = this.props.calibrated ?? false;
+    return { theme: this.props.theme ?? 'light', needsReview: nr, noReview: !nr, calibrated: cal, uncalibrated: !cal };
+  }
+}
+</script>
+</body>
+</html>

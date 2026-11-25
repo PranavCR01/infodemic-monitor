@@ -1,0 +1,875 @@
+{
+ "video_id": "v52",
+ "filename": "v04_ @itsmammayo_sitting_after_eating.mp4",
+ "relative_path": "Dataset-Sept-2026/Joshua Ryan Fajardo/NO-MISINFO/v04_ @itsmammayo_sitting_after_eating.mp4",
+ "collector": "Joshua Ryan Fajardo",
+ "collector_label": "NO_MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:42:33",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 48.27,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 6.16,
+    "text": "If your first instinct after eating dinner is to head straight over to the couch, hold on for 10"
+   },
+   {
+    "id": "t2",
+    "start": 6.16,
+    "end": 11.52,
+    "text": "minutes. If you never met me, I'm Yolanda. At 64, I lost 28 pounds and have kept it off for over a"
+   },
+   {
+    "id": "t3",
+    "start": 11.52,
+    "end": 16.72,
+    "text": "year now. All naturally, no shots, no meds, and no calorie count. And I'm not AI. Here's why 10"
+   },
+   {
+    "id": "t4",
+    "start": 16.72,
+    "end": 22.4,
+    "text": "minutes after your meal, glucose starts flooding your bloodstream. If you sit down, that sugar just"
+   },
+   {
+    "id": "t5",
+    "start": 22.4,
+    "end": 27.6,
+    "text": "sits there forcing your body to pump out excess insulin. But if you keep your legs moving, just"
+   },
+   {
+    "id": "t6",
+    "start": 27.6,
+    "end": 34.0,
+    "text": "15 chair squats or calf raises while washing dishes or march in place your muscles will act"
+   },
+   {
+    "id": "t7",
+    "start": 34.0,
+    "end": 39.28,
+    "text": "like a sponge and soak up that sugar no intense workouts required got it so let me know in the"
+   },
+   {
+    "id": "t8",
+    "start": 39.28,
+    "end": 43.2,
+    "text": "comments are you gonna try this 10 minute trick after your next meal drop a yes and don't forget"
+   },
+   {
+    "id": "t9",
+    "start": 43.2,
+    "end": 45.04,
+    "text": "to share this with a friend"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 25,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Tiktok",
+    "confidence": 0.695
+   },
+   {
+    "time": 0.0,
+    "text": "@itsmammmavo",
+    "confidence": 0.705
+   },
+   {
+    "time": 2.0,
+    "text": "Tiktok",
+    "confidence": 0.937
+   },
+   {
+    "time": 2.0,
+    "text": "EATING",
+    "confidence": 0.835
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.809
+   },
+   {
+    "time": 4.0,
+    "text": "Ovar",
+    "confidence": 0.714
+   },
+   {
+    "time": 6.0,
+    "text": "10",
+    "confidence": 0.769
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "itsmammavo",
+    "confidence": 0.68
+   },
+   {
+    "time": 8.0,
+    "text": "YOLANDA",
+    "confidence": 0.997
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 0.986
+   },
+   {
+    "time": 8.0,
+    "text": "@itsmammavo",
+    "confidence": 0.866
+   },
+   {
+    "time": 10.0,
+    "text": "POUNDS",
+    "confidence": 0.989
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 0.662
+   },
+   {
+    "time": 10.0,
+    "text": "@ itsmammavo",
+    "confidence": 0.774
+   },
+   {
+    "time": 12.0,
+    "text": "NOW:",
+    "confidence": 0.884
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 0.982
+   },
+   {
+    "time": 12.0,
+    "text": "itsmammavo",
+    "confidence": 0.875
+   },
+   {
+    "time": 14.0,
+    "text": "NO",
+    "confidence": 0.96
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 0.987
+   },
+   {
+    "time": 14.0,
+    "text": "itsmammavo",
+    "confidence": 0.721
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 0.993
+   },
+   {
+    "time": 16.0,
+    "text": "itsmammavo",
+    "confidence": 0.729
+   },
+   {
+    "time": 18.0,
+    "text": "MEAL,",
+    "confidence": 0.95
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 0.798
+   },
+   {
+    "time": 18.0,
+    "text": "itsmammavo",
+    "confidence": 0.998
+   },
+   {
+    "time": 20.0,
+    "text": "YOUR",
+    "confidence": 0.672
+   },
+   {
+    "time": 20.0,
+    "text": "TikTok",
+    "confidence": 0.942
+   },
+   {
+    "time": 20.0,
+    "text": "@ itsmammavo",
+    "confidence": 0.96
+   },
+   {
+    "time": 22.0,
+    "text": "SUGAR",
+    "confidence": 0.999
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 0.647
+   },
+   {
+    "time": 22.0,
+    "text": "itsmammavo",
+    "confidence": 0.682
+   },
+   {
+    "time": 24.0,
+    "text": "To",
+    "confidence": 0.76
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 0.667
+   },
+   {
+    "time": 24.0,
+    "text": "itsmammavo",
+    "confidence": 0.944
+   },
+   {
+    "time": 26.0,
+    "text": "BUT",
+    "confidence": 0.972
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 0.62
+   },
+   {
+    "time": 26.0,
+    "text": "@ itsmammay",
+    "confidence": 0.724
+   },
+   {
+    "time": 28.0,
+    "text": "15",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 0.615
+   },
+   {
+    "time": 30.0,
+    "text": "RAJSES",
+    "confidence": 0.597
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 0.971
+   },
+   {
+    "time": 30.0,
+    "text": "itsmammavo",
+    "confidence": 0.912
+   },
+   {
+    "time": 32.0,
+    "text": "MARCH",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 0.757
+   },
+   {
+    "time": 32.0,
+    "text": "itsmamm",
+    "confidence": 0.871
+   },
+   {
+    "time": 34.0,
+    "text": "Act",
+    "confidence": 0.519
+   },
+   {
+    "time": 34.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "itsmammavo",
+    "confidence": 0.985
+   },
+   {
+    "time": 36.0,
+    "text": "SUGAR:",
+    "confidence": 0.721
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.0,
+    "text": "itsmammavo",
+    "confidence": 0.894
+   },
+   {
+    "time": 38.0,
+    "text": "GOT",
+    "confidence": 0.742
+   },
+   {
+    "time": 38.0,
+    "text": "TikTok",
+    "confidence": 0.991
+   },
+   {
+    "time": 40.0,
+    "text": "GONNA",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "TikTok",
+    "confidence": 0.995
+   },
+   {
+    "time": 40.0,
+    "text": "@ itsmammav@",
+    "confidence": 0.533
+   },
+   {
+    "time": 42.0,
+    "text": "MEAL?",
+    "confidence": 0.867
+   },
+   {
+    "time": 42.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.0,
+    "text": "itsmammav@",
+    "confidence": 0.502
+   },
+   {
+    "time": 44.0,
+    "text": "FRIEND.",
+    "confidence": 0.6
+   },
+   {
+    "time": 44.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 46.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 46.0,
+    "text": "itsmammayo",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 48.0,
+    "text": "itsmammayo",
+    "confidence": 1.0
+   }
+  ],
+  "captions": [
+   {
+    "text": "Tiktok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.695,
+    "id": "o1"
+   },
+   {
+    "text": "@itsmammmavo",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.705,
+    "id": "o2"
+   },
+   {
+    "text": "Tiktok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.937,
+    "id": "o3"
+   },
+   {
+    "text": "EATING",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.835,
+    "id": "o4"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.809,
+    "id": "o5"
+   },
+   {
+    "text": "Ovar",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.714,
+    "id": "o6"
+   },
+   {
+    "text": "10",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.769,
+    "id": "o7"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o8"
+   },
+   {
+    "text": "itsmammavo",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.68,
+    "id": "o9"
+   },
+   {
+    "text": "YOLANDA",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.997,
+    "id": "o10"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.986,
+    "id": "o11"
+   },
+   {
+    "text": "@itsmammavo",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.866,
+    "id": "o12"
+   },
+   {
+    "text": "POUNDS",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.989,
+    "id": "o13"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.662,
+    "id": "o14"
+   },
+   {
+    "text": "@ itsmammavo",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.774,
+    "id": "o15"
+   },
+   {
+    "text": "NOW:",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.884,
+    "id": "o16"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.982,
+    "id": "o17"
+   },
+   {
+    "text": "itsmammavo",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.875,
+    "id": "o18"
+   },
+   {
+    "text": "NO",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.96,
+    "id": "o19"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.987,
+    "id": "o20"
+   },
+   {
+    "text": "itsmammavo",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.721,
+    "id": "o21"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.993,
+    "id": "o22"
+   },
+   {
+    "text": "itsmammavo",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.729,
+    "id": "o23"
+   },
+   {
+    "text": "MEAL,",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.95,
+    "id": "o24"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.798,
+    "id": "o25"
+   },
+   {
+    "text": "itsmammavo",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.998,
+    "id": "o26"
+   },
+   {
+    "text": "YOUR",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.672,
+    "id": "o27"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.942,
+    "id": "o28"
+   },
+   {
+    "text": "@ itsmammavo",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.96,
+    "id": "o29"
+   },
+   {
+    "text": "SUGAR",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.999,
+    "id": "o30"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.647,
+    "id": "o31"
+   },
+   {
+    "text": "itsmammavo",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.682,
+    "id": "o32"
+   },
+   {
+    "text": "To",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.76,
+    "id": "o33"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.667,
+    "id": "o34"
+   },
+   {
+    "text": "itsmammavo",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.944,
+    "id": "o35"
+   },
+   {
+    "text": "BUT",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.972,
+    "id": "o36"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.62,
+    "id": "o37"
+   },
+   {
+    "text": "@ itsmammay",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.724,
+    "id": "o38"
+   },
+   {
+    "text": "15",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o39"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.615,
+    "id": "o40"
+   },
+   {
+    "text": "RAJSES",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.597,
+    "id": "o41"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.971,
+    "id": "o42"
+   },
+   {
+    "text": "itsmammavo",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.912,
+    "id": "o43"
+   },
+   {
+    "text": "MARCH",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o44"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.757,
+    "id": "o45"
+   },
+   {
+    "text": "itsmamm",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.871,
+    "id": "o46"
+   },
+   {
+    "text": "Act",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.519,
+    "id": "o47"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o48"
+   },
+   {
+    "text": "itsmammavo",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.985,
+    "id": "o49"
+   },
+   {
+    "text": "SUGAR:",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.721,
+    "id": "o50"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.999,
+    "id": "o51"
+   },
+   {
+    "text": "itsmammavo",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.894,
+    "id": "o52"
+   },
+   {
+    "text": "GOT",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.742,
+    "id": "o53"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.991,
+    "id": "o54"
+   },
+   {
+    "text": "GONNA",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o55"
+   },
+   {
+    "text": "TikTok",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.995,
+    "id": "o56"
+   },
+   {
+    "text": "@ itsmammav@",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.533,
+    "id": "o57"
+   },
+   {
+    "text": "MEAL?",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.867,
+    "id": "o58"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.999,
+    "id": "o59"
+   },
+   {
+    "text": "itsmammav@",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.502,
+    "id": "o60"
+   },
+   {
+    "text": "FRIEND.",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.6,
+    "id": "o61"
+   },
+   {
+    "text": "TikTok",
+    "start": 44.0,
+    "end": 46.0,
+    "confidence": 0.999,
+    "id": "o62"
+   },
+   {
+    "text": "itsmammayo",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o63"
+   },
+   {
+    "text": "TikTok",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.999,
+    "id": "o64"
+   },
+   {
+    "text": "itsmammayo",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o65"
+   }
+  ]
+ }
+}

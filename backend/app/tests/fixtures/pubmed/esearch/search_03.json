@@ -1,0 +1,19 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "4",
+  "retmax": "4",
+  "retstart": "0",
+  "idlist": [
+   "99000201",
+   "99000202",
+   "99000203",
+   "99000204"
+  ],
+  "translationset": [],
+  "querytranslation": "(Garlic[MeSH Terms] OR garlic[tiab] OR allicin[tiab]) AND (\"Common Cold\"[MeSH Terms] OR \"common cold\"[tiab])"
+ }
+}

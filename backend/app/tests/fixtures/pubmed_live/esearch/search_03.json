@@ -1,0 +1,27 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "646",
+  "retmax": "3",
+  "retstart": "0",
+  "idlist": [
+   "24814559",
+   "30831578",
+   "30986133"
+  ],
+  "translationset": [
+   {
+    "from": "Vaccines[MeSH Terms]",
+    "to": "\"vaccines\"[MeSH Terms]"
+   },
+   {
+    "from": "Child[MeSH Terms]",
+    "to": "\"child\"[MeSH Terms]"
+   }
+  ],
+  "querytranslation": "(\"vaccines\"[MeSH Terms] OR \"vaccine\"[Title/Abstract] OR \"vaccination\"[Title/Abstract]) AND (\"Autism Spectrum Disorder\"[MeSH Terms] OR \"autism\"[Title/Abstract]) AND (\"child\"[MeSH Terms] OR \"children\"[Title/Abstract])"
+ }
+}

@@ -1,0 +1,1625 @@
+{
+ "video_id": "v74",
+ "filename": "v15044gf0000d3076pvog65rj9dg0kbg.MP4",
+ "relative_path": "Dataset-Sept-2026/Anjali Penamutcha/v15044gf0000d3076pvog65rj9dg0kbg.MP4",
+ "collector": "Anjali Penamutcha",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:42:34",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.992,
+  "duration_seconds": 69.94,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.74,
+    "text": "best foods to eat for an anti-cancer diet."
+   },
+   {
+    "id": "t2",
+    "start": 2.84,
+    "end": 6.24,
+    "text": "Right. There's a bunch of foods that were analyzed"
+   },
+   {
+    "id": "t3",
+    "start": 6.34,
+    "end": 7.74,
+    "text": "in terms of these tumor markers,"
+   },
+   {
+    "id": "t4",
+    "start": 7.84,
+    "end": 9.58,
+    "text": "like nine tumor markers across the board."
+   },
+   {
+    "id": "t5",
+    "start": 9.68,
+    "end": 10.68,
+    "text": "Oh, wow."
+   },
+   {
+    "id": "t6",
+    "start": 10.78,
+    "end": 11.78,
+    "text": "And this is fascinating."
+   },
+   {
+    "id": "t7",
+    "start": 11.88,
+    "end": 14.88,
+    "text": "And the first one was, I think it was radicchio."
+   },
+   {
+    "id": "t8",
+    "start": 14.98,
+    "end": 16.38,
+    "text": "Second one was spinach."
+   },
+   {
+    "id": "t9",
+    "start": 16.48,
+    "end": 17.48,
+    "text": "Oh."
+   },
+   {
+    "id": "t10",
+    "start": 17.58,
+    "end": 19.18,
+    "text": "And then it was all the cruciferous vegetables."
+   },
+   {
+    "id": "t11",
+    "start": 19.28,
+    "end": 22.36,
+    "text": "And then it was all the onions, garlic, leek vegetables."
+   },
+   {
+    "id": "t12",
+    "start": 22.46,
+    "end": 25.8,
+    "text": "All of those foods actually lowered all nine"
+   },
+   {
+    "id": "t13",
+    "start": 25.9,
+    "end": 27.96,
+    "text": "of those tumor markers across the board."
+   },
+   {
+    "id": "t14",
+    "start": 27.96,
+    "end": 30.2,
+    "text": "They did, like, a 10-year study on this."
+   },
+   {
+    "id": "t15",
+    "start": 30.2,
+    "end": 31.2,
+    "text": "Okay."
+   },
+   {
+    "id": "t16",
+    "start": 31.2,
+    "end": 32.7,
+    "text": "So, that's a pretty easy one."
+   },
+   {
+    "id": "t17",
+    "start": 32.7,
+    "end": 38.16,
+    "text": "And then, of course, we know that, you know, antioxidant foods and spices and, you know,"
+   },
+   {
+    "id": "t18",
+    "start": 38.16,
+    "end": 43.6,
+    "text": "green tea and just, like, berries and really good whole foods, you know."
+   },
+   {
+    "id": "t19",
+    "start": 43.6,
+    "end": 47.92,
+    "text": "That is kind of why I designed the cleanse is I want people to go back to the basics"
+   },
+   {
+    "id": "t20",
+    "start": 47.92,
+    "end": 53.8,
+    "text": "of eating real food because I was eating sugar-free, fat-free cookies."
+   },
+   {
+    "id": "t21",
+    "start": 53.8,
+    "end": 55.76,
+    "text": "That was what was hot in those days."
+   },
+   {
+    "id": "t22",
+    "start": 55.76,
+    "end": 56.76,
+    "text": "Of course."
+   },
+   {
+    "id": "t23",
+    "start": 56.76,
+    "end": 63.4,
+    "text": "of chemicals, and we still do a lot of that. We still have bad seed oils. And so I just,"
+   },
+   {
+    "id": "t24",
+    "start": 63.4,
+    "end": 66.76,
+    "text": "you know, it's really not rocket science here."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 35,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.927
+   },
+   {
+    "time": 0.0,
+    "text": "areallygoodcry",
+    "confidence": 0.69
+   },
+   {
+    "time": 0.0,
+    "text": "The best foods",
+    "confidence": 0.99
+   },
+   {
+    "time": 0.0,
+    "text": "to fight cancer!",
+    "confidence": 0.986
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.914
+   },
+   {
+    "time": 2.0,
+    "text": "areallygoodcry",
+    "confidence": 0.974
+   },
+   {
+    "time": 2.0,
+    "text": "an anti-cancer diet",
+    "confidence": 0.996
+   },
+   {
+    "time": 2.0,
+    "text": "The best foods",
+    "confidence": 0.99
+   },
+   {
+    "time": 2.0,
+    "text": "to fight cancer!",
+    "confidence": 0.987
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.977
+   },
+   {
+    "time": 4.0,
+    "text": "areallygoodcry",
+    "confidence": 0.752
+   },
+   {
+    "time": 4.0,
+    "text": "a bunch of foods that were",
+    "confidence": 0.838
+   },
+   {
+    "time": 4.0,
+    "text": "The best foods",
+    "confidence": 0.99
+   },
+   {
+    "time": 4.0,
+    "text": "to fight cancer!",
+    "confidence": 0.987
+   },
+   {
+    "time": 6.01,
+    "text": "analyzed in terms",
+    "confidence": 0.737
+   },
+   {
+    "time": 6.01,
+    "text": "The best foods",
+    "confidence": 0.99
+   },
+   {
+    "time": 6.01,
+    "text": "to fight cancer!",
+    "confidence": 0.986
+   },
+   {
+    "time": 6.01,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.01,
+    "text": "areallygoodcry",
+    "confidence": 0.986
+   },
+   {
+    "time": 8.01,
+    "text": "like nine tumor markers",
+    "confidence": 0.826
+   },
+   {
+    "time": 8.01,
+    "text": "The best foods",
+    "confidence": 0.99
+   },
+   {
+    "time": 8.01,
+    "text": "to fight cancer!",
+    "confidence": 0.986
+   },
+   {
+    "time": 8.01,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.01,
+    "text": "areallygoodcry",
+    "confidence": 0.917
+   },
+   {
+    "time": 10.01,
+    "text": "across the board:",
+    "confidence": 0.542
+   },
+   {
+    "time": 10.01,
+    "text": "The best foods",
+    "confidence": 0.985
+   },
+   {
+    "time": 10.01,
+    "text": "to fight cancer!",
+    "confidence": 0.988
+   },
+   {
+    "time": 10.01,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.01,
+    "text": "areallygoodcry",
+    "confidence": 0.992
+   },
+   {
+    "time": 12.01,
+    "text": "And the first one was",
+    "confidence": 0.928
+   },
+   {
+    "time": 12.01,
+    "text": "The best foods",
+    "confidence": 0.985
+   },
+   {
+    "time": 12.01,
+    "text": "to fight cancer!",
+    "confidence": 0.988
+   },
+   {
+    "time": 12.01,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.01,
+    "text": "areallygoodcry",
+    "confidence": 0.989
+   },
+   {
+    "time": 14.01,
+    "text": "think it was radicchio_",
+    "confidence": 0.849
+   },
+   {
+    "time": 14.01,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.01,
+    "text": "areallygoodcry",
+    "confidence": 0.99
+   },
+   {
+    "time": 16.02,
+    "text": "Second one was spinach_",
+    "confidence": 0.966
+   },
+   {
+    "time": 16.02,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.02,
+    "text": "areallygoodcry",
+    "confidence": 0.99
+   },
+   {
+    "time": 18.02,
+    "text": "the cruciferous vegetables_",
+    "confidence": 0.781
+   },
+   {
+    "time": 18.02,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.02,
+    "text": "areallygoodcry",
+    "confidence": 0.99
+   },
+   {
+    "time": 20.02,
+    "text": "And then it was all the onions",
+    "confidence": 0.811
+   },
+   {
+    "time": 20.02,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.02,
+    "text": "areallygoodcry",
+    "confidence": 0.99
+   },
+   {
+    "time": 22.02,
+    "text": "garlic, leek, vegetables:",
+    "confidence": 0.523
+   },
+   {
+    "time": 22.02,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.02,
+    "text": "areallygoodcry",
+    "confidence": 0.986
+   },
+   {
+    "time": 24.02,
+    "text": "All of those foods",
+    "confidence": 0.985
+   },
+   {
+    "time": 24.02,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 24.02,
+    "text": "areallygoodcry",
+    "confidence": 0.978
+   },
+   {
+    "time": 26.03,
+    "text": "all nine of those tumor markers;",
+    "confidence": 0.681
+   },
+   {
+    "time": 26.03,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.03,
+    "text": "areallygoodcry",
+    "confidence": 0.991
+   },
+   {
+    "time": 28.03,
+    "text": "across the board:",
+    "confidence": 0.64
+   },
+   {
+    "time": 28.03,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.03,
+    "text": "areallygoodcry",
+    "confidence": 0.992
+   },
+   {
+    "time": 30.03,
+    "text": "study on this",
+    "confidence": 0.906
+   },
+   {
+    "time": 30.03,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.03,
+    "text": "areallygoodcry",
+    "confidence": 0.982
+   },
+   {
+    "time": 32.03,
+    "text": "So that's a pretty easy one_",
+    "confidence": 0.96
+   },
+   {
+    "time": 32.03,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 32.03,
+    "text": "areallygoodcry",
+    "confidence": 0.986
+   },
+   {
+    "time": 34.03,
+    "text": "we know that;",
+    "confidence": 0.801
+   },
+   {
+    "time": 34.03,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 34.03,
+    "text": "areallygoodcry",
+    "confidence": 0.984
+   },
+   {
+    "time": 36.04,
+    "text": "and spices,",
+    "confidence": 0.93
+   },
+   {
+    "time": 36.04,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.04,
+    "text": "areallygoodcry",
+    "confidence": 0.992
+   },
+   {
+    "time": 38.04,
+    "text": "and you know; green tea",
+    "confidence": 0.942
+   },
+   {
+    "time": 38.04,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.04,
+    "text": "areallygoodcry",
+    "confidence": 0.987
+   },
+   {
+    "time": 40.04,
+    "text": "and just like berries",
+    "confidence": 0.913
+   },
+   {
+    "time": 40.04,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.04,
+    "text": "areallygoodcry",
+    "confidence": 0.995
+   },
+   {
+    "time": 42.04,
+    "text": "and really good whole foods",
+    "confidence": 0.865
+   },
+   {
+    "time": 42.04,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.04,
+    "text": "areallygoodcry",
+    "confidence": 0.995
+   },
+   {
+    "time": 44.04,
+    "text": "you know; that is kind of why",
+    "confidence": 0.741
+   },
+   {
+    "time": 44.04,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.04,
+    "text": "areallygoodcry",
+    "confidence": 0.995
+   },
+   {
+    "time": 46.05,
+    "text": "want people",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.05,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 46.05,
+    "text": "areallygoodcry",
+    "confidence": 0.994
+   },
+   {
+    "time": 48.05,
+    "text": "eating",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.05,
+    "text": "of",
+    "confidence": 0.996
+   },
+   {
+    "time": 48.05,
+    "text": "real food",
+    "confidence": 0.997
+   },
+   {
+    "time": 48.05,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 48.05,
+    "text": "areallygoodcry",
+    "confidence": 0.991
+   },
+   {
+    "time": 50.05,
+    "text": "was eating sugar-free,",
+    "confidence": 0.814
+   },
+   {
+    "time": 50.05,
+    "text": "Because",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.05,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.05,
+    "text": "areallygoodcry",
+    "confidence": 0.99
+   },
+   {
+    "time": 52.05,
+    "text": "Because",
+    "confidence": 1.0
+   },
+   {
+    "time": 52.05,
+    "text": "was eating sugar-free,",
+    "confidence": 0.873
+   },
+   {
+    "time": 52.05,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 52.05,
+    "text": "areallygoodcry",
+    "confidence": 0.712
+   },
+   {
+    "time": 54.05,
+    "text": "That was what was",
+    "confidence": 0.758
+   },
+   {
+    "time": 54.05,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.05,
+    "text": "areallygoodcry",
+    "confidence": 0.991
+   },
+   {
+    "time": 56.06,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.06,
+    "text": "areallygoodcry",
+    "confidence": 0.986
+   },
+   {
+    "time": 58.06,
+    "text": "and we still do a lot of that:",
+    "confidence": 0.711
+   },
+   {
+    "time": 58.06,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.06,
+    "text": "areallygoodcry",
+    "confidence": 0.988
+   },
+   {
+    "time": 60.06,
+    "text": "have",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.06,
+    "text": "We still",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.06,
+    "text": "bad seed oils",
+    "confidence": 0.773
+   },
+   {
+    "time": 60.06,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.06,
+    "text": "areallygoodcry",
+    "confidence": 0.982
+   },
+   {
+    "time": 62.06,
+    "text": "and sO",
+    "confidence": 0.564
+   },
+   {
+    "time": 62.06,
+    "text": "just,",
+    "confidence": 0.592
+   },
+   {
+    "time": 62.06,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.06,
+    "text": "areallygoodcry",
+    "confidence": 0.971
+   },
+   {
+    "time": 64.06,
+    "text": "you know; it's really",
+    "confidence": 0.61
+   },
+   {
+    "time": 64.06,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 64.06,
+    "text": "areallygoodcry",
+    "confidence": 0.991
+   },
+   {
+    "time": 66.07,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 68.07,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 68.07,
+    "text": "@ areallygoodcry",
+    "confidence": 0.902
+   }
+  ],
+  "captions": [
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.927,
+    "id": "o1"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.69,
+    "id": "o2"
+   },
+   {
+    "text": "The best foods",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.99,
+    "id": "o3"
+   },
+   {
+    "text": "to fight cancer!",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.986,
+    "id": "o4"
+   },
+   {
+    "text": "TikTok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.914,
+    "id": "o5"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.974,
+    "id": "o6"
+   },
+   {
+    "text": "an anti-cancer diet",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.996,
+    "id": "o7"
+   },
+   {
+    "text": "The best foods",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.99,
+    "id": "o8"
+   },
+   {
+    "text": "to fight cancer!",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.987,
+    "id": "o9"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.977,
+    "id": "o10"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.752,
+    "id": "o11"
+   },
+   {
+    "text": "a bunch of foods that were",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.838,
+    "id": "o12"
+   },
+   {
+    "text": "The best foods",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.99,
+    "id": "o13"
+   },
+   {
+    "text": "to fight cancer!",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.987,
+    "id": "o14"
+   },
+   {
+    "text": "analyzed in terms",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.737,
+    "id": "o15"
+   },
+   {
+    "text": "The best foods",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.99,
+    "id": "o16"
+   },
+   {
+    "text": "to fight cancer!",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.986,
+    "id": "o17"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.999,
+    "id": "o18"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 6.01,
+    "end": 6.01,
+    "confidence": 0.986,
+    "id": "o19"
+   },
+   {
+    "text": "like nine tumor markers",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.826,
+    "id": "o20"
+   },
+   {
+    "text": "The best foods",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.99,
+    "id": "o21"
+   },
+   {
+    "text": "to fight cancer!",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.986,
+    "id": "o22"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 1.0,
+    "id": "o23"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 8.01,
+    "end": 8.01,
+    "confidence": 0.917,
+    "id": "o24"
+   },
+   {
+    "text": "across the board:",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.542,
+    "id": "o25"
+   },
+   {
+    "text": "The best foods",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.985,
+    "id": "o26"
+   },
+   {
+    "text": "to fight cancer!",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.988,
+    "id": "o27"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 1.0,
+    "id": "o28"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 10.01,
+    "end": 10.01,
+    "confidence": 0.992,
+    "id": "o29"
+   },
+   {
+    "text": "And the first one was",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.928,
+    "id": "o30"
+   },
+   {
+    "text": "The best foods",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.985,
+    "id": "o31"
+   },
+   {
+    "text": "to fight cancer!",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.988,
+    "id": "o32"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.999,
+    "id": "o33"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 12.01,
+    "end": 12.01,
+    "confidence": 0.989,
+    "id": "o34"
+   },
+   {
+    "text": "think it was radicchio_",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.849,
+    "id": "o35"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.999,
+    "id": "o36"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 14.01,
+    "end": 14.01,
+    "confidence": 0.99,
+    "id": "o37"
+   },
+   {
+    "text": "Second one was spinach_",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.966,
+    "id": "o38"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.999,
+    "id": "o39"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 16.02,
+    "end": 16.02,
+    "confidence": 0.99,
+    "id": "o40"
+   },
+   {
+    "text": "the cruciferous vegetables_",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.781,
+    "id": "o41"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 1.0,
+    "id": "o42"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 18.02,
+    "end": 18.02,
+    "confidence": 0.99,
+    "id": "o43"
+   },
+   {
+    "text": "And then it was all the onions",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.811,
+    "id": "o44"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 1.0,
+    "id": "o45"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 20.02,
+    "end": 20.02,
+    "confidence": 0.99,
+    "id": "o46"
+   },
+   {
+    "text": "garlic, leek, vegetables:",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.523,
+    "id": "o47"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 1.0,
+    "id": "o48"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 22.02,
+    "end": 22.02,
+    "confidence": 0.986,
+    "id": "o49"
+   },
+   {
+    "text": "All of those foods",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.985,
+    "id": "o50"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.999,
+    "id": "o51"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 24.02,
+    "end": 24.02,
+    "confidence": 0.978,
+    "id": "o52"
+   },
+   {
+    "text": "all nine of those tumor markers;",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.681,
+    "id": "o53"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 1.0,
+    "id": "o54"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 26.03,
+    "end": 26.03,
+    "confidence": 0.991,
+    "id": "o55"
+   },
+   {
+    "text": "across the board:",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.64,
+    "id": "o56"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 1.0,
+    "id": "o57"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 28.03,
+    "end": 28.03,
+    "confidence": 0.992,
+    "id": "o58"
+   },
+   {
+    "text": "study on this",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.906,
+    "id": "o59"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.999,
+    "id": "o60"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 30.03,
+    "end": 30.03,
+    "confidence": 0.982,
+    "id": "o61"
+   },
+   {
+    "text": "So that's a pretty easy one_",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.96,
+    "id": "o62"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.999,
+    "id": "o63"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 32.03,
+    "end": 32.03,
+    "confidence": 0.986,
+    "id": "o64"
+   },
+   {
+    "text": "we know that;",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.801,
+    "id": "o65"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.999,
+    "id": "o66"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 34.03,
+    "end": 34.03,
+    "confidence": 0.984,
+    "id": "o67"
+   },
+   {
+    "text": "and spices,",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.93,
+    "id": "o68"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.999,
+    "id": "o69"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 36.04,
+    "end": 36.04,
+    "confidence": 0.992,
+    "id": "o70"
+   },
+   {
+    "text": "and you know; green tea",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.942,
+    "id": "o71"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 1.0,
+    "id": "o72"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 38.04,
+    "end": 38.04,
+    "confidence": 0.987,
+    "id": "o73"
+   },
+   {
+    "text": "and just like berries",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.913,
+    "id": "o74"
+   },
+   {
+    "text": "TikTok",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 1.0,
+    "id": "o75"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 40.04,
+    "end": 40.04,
+    "confidence": 0.995,
+    "id": "o76"
+   },
+   {
+    "text": "and really good whole foods",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.865,
+    "id": "o77"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.999,
+    "id": "o78"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 42.04,
+    "end": 42.04,
+    "confidence": 0.995,
+    "id": "o79"
+   },
+   {
+    "text": "you know; that is kind of why",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.741,
+    "id": "o80"
+   },
+   {
+    "text": "TikTok",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 1.0,
+    "id": "o81"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 44.04,
+    "end": 44.04,
+    "confidence": 0.995,
+    "id": "o82"
+   },
+   {
+    "text": "want people",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 1.0,
+    "id": "o83"
+   },
+   {
+    "text": "TikTok",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.999,
+    "id": "o84"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 46.05,
+    "end": 46.05,
+    "confidence": 0.994,
+    "id": "o85"
+   },
+   {
+    "text": "eating",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 1.0,
+    "id": "o86"
+   },
+   {
+    "text": "of",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.996,
+    "id": "o87"
+   },
+   {
+    "text": "real food",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.997,
+    "id": "o88"
+   },
+   {
+    "text": "TikTok",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.999,
+    "id": "o89"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 48.05,
+    "end": 48.05,
+    "confidence": 0.991,
+    "id": "o90"
+   },
+   {
+    "text": "was eating sugar-free,",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.814,
+    "id": "o91"
+   },
+   {
+    "text": "Because",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 1.0,
+    "id": "o92"
+   },
+   {
+    "text": "TikTok",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 1.0,
+    "id": "o93"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 50.05,
+    "end": 50.05,
+    "confidence": 0.99,
+    "id": "o94"
+   },
+   {
+    "text": "Because",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 1.0,
+    "id": "o95"
+   },
+   {
+    "text": "was eating sugar-free,",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.873,
+    "id": "o96"
+   },
+   {
+    "text": "TikTok",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.999,
+    "id": "o97"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 52.05,
+    "end": 52.05,
+    "confidence": 0.712,
+    "id": "o98"
+   },
+   {
+    "text": "That was what was",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.758,
+    "id": "o99"
+   },
+   {
+    "text": "TikTok",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 1.0,
+    "id": "o100"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 54.05,
+    "end": 54.05,
+    "confidence": 0.991,
+    "id": "o101"
+   },
+   {
+    "text": "TikTok",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 1.0,
+    "id": "o102"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 56.06,
+    "end": 56.06,
+    "confidence": 0.986,
+    "id": "o103"
+   },
+   {
+    "text": "and we still do a lot of that:",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 0.711,
+    "id": "o104"
+   },
+   {
+    "text": "TikTok",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 1.0,
+    "id": "o105"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 58.06,
+    "end": 58.06,
+    "confidence": 0.988,
+    "id": "o106"
+   },
+   {
+    "text": "have",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 1.0,
+    "id": "o107"
+   },
+   {
+    "text": "We still",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 1.0,
+    "id": "o108"
+   },
+   {
+    "text": "bad seed oils",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 0.773,
+    "id": "o109"
+   },
+   {
+    "text": "TikTok",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 1.0,
+    "id": "o110"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 60.06,
+    "end": 60.06,
+    "confidence": 0.982,
+    "id": "o111"
+   },
+   {
+    "text": "and sO",
+    "start": 62.06,
+    "end": 62.06,
+    "confidence": 0.564,
+    "id": "o112"
+   },
+   {
+    "text": "just,",
+    "start": 62.06,
+    "end": 62.06,
+    "confidence": 0.592,
+    "id": "o113"
+   },
+   {
+    "text": "TikTok",
+    "start": 62.06,
+    "end": 62.06,
+    "confidence": 1.0,
+    "id": "o114"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 62.06,
+    "end": 62.06,
+    "confidence": 0.971,
+    "id": "o115"
+   },
+   {
+    "text": "you know; it's really",
+    "start": 64.06,
+    "end": 64.06,
+    "confidence": 0.61,
+    "id": "o116"
+   },
+   {
+    "text": "TikTok",
+    "start": 64.06,
+    "end": 64.06,
+    "confidence": 1.0,
+    "id": "o117"
+   },
+   {
+    "text": "areallygoodcry",
+    "start": 64.06,
+    "end": 64.06,
+    "confidence": 0.991,
+    "id": "o118"
+   },
+   {
+    "text": "TikTok",
+    "start": 66.07,
+    "end": 68.07,
+    "confidence": 0.999,
+    "id": "o119"
+   },
+   {
+    "text": "@ areallygoodcry",
+    "start": 68.07,
+    "end": 68.07,
+    "confidence": 0.902,
+    "id": "o120"
+   }
+  ]
+ }
+}

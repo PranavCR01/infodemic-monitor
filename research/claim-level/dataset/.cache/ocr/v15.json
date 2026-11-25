@@ -1,0 +1,670 @@
+{
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "on_screen": {
+  "frames_sampled": 22,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.669
+   },
+   {
+    "time": 0.0,
+    "text": "@ritsnaomimever",
+    "confidence": 0.731
+   },
+   {
+    "time": 2.0,
+    "text": "Tiktok",
+    "confidence": 0.614
+   },
+   {
+    "time": 2.0,
+    "text": "Tm covering up my face.",
+    "confidence": 0.571
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.996
+   },
+   {
+    "time": 4.0,
+    "text": "@ itsnaomimever",
+    "confidence": 0.792
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 0.989
+   },
+   {
+    "time": 6.0,
+    "text": "itsnaomimeyer",
+    "confidence": 0.775
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "itsnaomimever",
+    "confidence": 0.73
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "itsnaomimever",
+    "confidence": 0.992
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "itsnaomimever",
+    "confidence": 0.588
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 0.932
+   },
+   {
+    "time": 14.0,
+    "text": "itshaomimever",
+    "confidence": 0.603
+   },
+   {
+    "time": 16.0,
+    "text": "That I think this is actually",
+    "confidence": 0.845
+   },
+   {
+    "time": 16.0,
+    "text": "where ['m supposed to",
+    "confidence": 0.57
+   },
+   {
+    "time": 16.0,
+    "text": "know something super",
+    "confidence": 0.878
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 0.879
+   },
+   {
+    "time": 18.0,
+    "text": "thing super",
+    "confidence": 0.796
+   },
+   {
+    "time": 18.0,
+    "text": "know some",
+    "confidence": 0.935
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "itsnaomimever",
+    "confidence": 0.956
+   },
+   {
+    "time": 20.0,
+    "text": "How do you seethow doyou",
+    "confidence": 0.526
+   },
+   {
+    "time": 20.0,
+    "text": "Tik Tok",
+    "confidence": 0.902
+   },
+   {
+    "time": 22.0,
+    "text": "How do you see how do you",
+    "confidence": 0.873
+   },
+   {
+    "time": 22.0,
+    "text": "see Naomi?",
+    "confidence": 0.708
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "Look Naomi'$ can you see",
+    "confidence": 0.847
+   },
+   {
+    "time": 24.0,
+    "text": "in the mirror?",
+    "confidence": 0.823
+   },
+   {
+    "time": 24.0,
+    "text": "me",
+    "confidence": 0.99
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 0.966
+   },
+   {
+    "time": 24.0,
+    "text": "itsnaomimeyer",
+    "confidence": 0.56
+   },
+   {
+    "time": 26.0,
+    "text": "mirror?",
+    "confidence": 0.946
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 0.994
+   },
+   {
+    "time": 28.0,
+    "text": "covering up my face.",
+    "confidence": 0.84
+   },
+   {
+    "time": 28.0,
+    "text": "Tm",
+    "confidence": 0.699
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 0.995
+   },
+   {
+    "time": 30.0,
+    "text": "aomimeyer",
+    "confidence": 0.65
+   },
+   {
+    "time": 32.0,
+    "text": "3",
+    "confidence": 0.652
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "itsnaomimever",
+    "confidence": 0.682
+   },
+   {
+    "time": 34.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "That'$ garbage trash:",
+    "confidence": 0.822
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.0,
+    "text": "itsnaomimever",
+    "confidence": 0.987
+   },
+   {
+    "time": 38.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 38.0,
+    "text": "itsnaomimever",
+    "confidence": 0.961
+   },
+   {
+    "time": 40.0,
+    "text": "J",
+    "confidence": 0.6
+   },
+   {
+    "time": 40.0,
+    "text": "TikTok",
+    "confidence": 0.748
+   },
+   {
+    "time": 40.0,
+    "text": "@ itsnaomimeyer",
+    "confidence": 0.991
+   },
+   {
+    "time": 42.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "@ itsnaomimeyer",
+    "confidence": 0.996
+   }
+  ],
+  "captions": [
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.669,
+    "id": "o1"
+   },
+   {
+    "text": "@ritsnaomimever",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.731,
+    "id": "o2"
+   },
+   {
+    "text": "Tiktok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.614,
+    "id": "o3"
+   },
+   {
+    "text": "Tm covering up my face.",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.571,
+    "id": "o4"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.996,
+    "id": "o5"
+   },
+   {
+    "text": "@ itsnaomimever",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.792,
+    "id": "o6"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.989,
+    "id": "o7"
+   },
+   {
+    "text": "itsnaomimeyer",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.775,
+    "id": "o8"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.999,
+    "id": "o9"
+   },
+   {
+    "text": "itsnaomimever",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.73,
+    "id": "o10"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o11"
+   },
+   {
+    "text": "itsnaomimever",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.992,
+    "id": "o12"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o13"
+   },
+   {
+    "text": "itsnaomimever",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.588,
+    "id": "o14"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.932,
+    "id": "o15"
+   },
+   {
+    "text": "itshaomimever",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.603,
+    "id": "o16"
+   },
+   {
+    "text": "That I think this is actually",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.845,
+    "id": "o17"
+   },
+   {
+    "text": "where ['m supposed to",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.57,
+    "id": "o18"
+   },
+   {
+    "text": "know something super",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.878,
+    "id": "o19"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.879,
+    "id": "o20"
+   },
+   {
+    "text": "thing super",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.796,
+    "id": "o21"
+   },
+   {
+    "text": "know some",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.935,
+    "id": "o22"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 1.0,
+    "id": "o23"
+   },
+   {
+    "text": "itsnaomimever",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.956,
+    "id": "o24"
+   },
+   {
+    "text": "How do you seethow doyou",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.526,
+    "id": "o25"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.902,
+    "id": "o26"
+   },
+   {
+    "text": "How do you see how do you",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.873,
+    "id": "o27"
+   },
+   {
+    "text": "see Naomi?",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.708,
+    "id": "o28"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o29"
+   },
+   {
+    "text": "Look Naomi'$ can you see",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.847,
+    "id": "o30"
+   },
+   {
+    "text": "in the mirror?",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.823,
+    "id": "o31"
+   },
+   {
+    "text": "me",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.99,
+    "id": "o32"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.966,
+    "id": "o33"
+   },
+   {
+    "text": "itsnaomimeyer",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.56,
+    "id": "o34"
+   },
+   {
+    "text": "mirror?",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.946,
+    "id": "o35"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.994,
+    "id": "o36"
+   },
+   {
+    "text": "covering up my face.",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.84,
+    "id": "o37"
+   },
+   {
+    "text": "Tm",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.699,
+    "id": "o38"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 30.0,
+    "confidence": 0.999,
+    "id": "o39"
+   },
+   {
+    "text": "aomimeyer",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.65,
+    "id": "o40"
+   },
+   {
+    "text": "3",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.652,
+    "id": "o41"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o42"
+   },
+   {
+    "text": "itsnaomimever",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.682,
+    "id": "o43"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o44"
+   },
+   {
+    "text": "That'$ garbage trash:",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.822,
+    "id": "o45"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.999,
+    "id": "o46"
+   },
+   {
+    "text": "itsnaomimever",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.987,
+    "id": "o47"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.999,
+    "id": "o48"
+   },
+   {
+    "text": "itsnaomimever",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.961,
+    "id": "o49"
+   },
+   {
+    "text": "J",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.6,
+    "id": "o50"
+   },
+   {
+    "text": "TikTok",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.748,
+    "id": "o51"
+   },
+   {
+    "text": "@ itsnaomimeyer",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.991,
+    "id": "o52"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o53"
+   },
+   {
+    "text": "@ itsnaomimeyer",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.996,
+    "id": "o54"
+   }
+  ]
+ }
+}

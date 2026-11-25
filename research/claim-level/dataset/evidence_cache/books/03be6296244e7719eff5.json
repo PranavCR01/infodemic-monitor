@@ -1,0 +1,17 @@
+{
+ "query": "hirsutism[title] AND statpearls[book]",
+ "db": "books",
+ "ids": [
+  "4482814"
+ ],
+ "records": [
+  {
+   "id": "4482814",
+   "title": "Hirsutism",
+   "book": "statpearls",
+   "accession": "NBK470417"
+  }
+ ],
+ "_key": "books::hirsutism[title] AND statpearls[book]::5",
+ "_retrieved_at": "2026-11-22T12:00:40"
+}

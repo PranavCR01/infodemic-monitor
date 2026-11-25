@@ -1,0 +1,488 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.996,
+  "duration_seconds": 238.82,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.68,
+    "text": "Welcome back to medical school. Let's talk about something really important. Your immune system"
+   },
+   {
+    "id": "t2",
+    "start": 3.68,
+    "end": 8.72,
+    "text": "does not act like a muscle. Your muscle gets stronger when you stress it. Your immune system is"
+   },
+   {
+    "id": "t3",
+    "start": 8.72,
+    "end": 13.12,
+    "text": "more like a memory bank. It's something that you teach. When you get an infection, your body's"
+   },
+   {
+    "id": "t4",
+    "start": 13.12,
+    "end": 18.72,
+    "text": "first-line response is typically your innate immune response. It is fast, and most importantly,"
+   },
+   {
+    "id": "t5",
+    "start": 18.72,
+    "end": 24.08,
+    "text": "it's nonspecific. All cylinders on go. Your temperature rises to slow down the replication"
+   },
+   {
+    "id": "t6",
+    "start": 24.08,
+    "end": 29.44,
+    "text": "of whatever is invading your body. Mucus increases to trap pathogens. Even cytokine"
+   },
+   {
+    "id": "t7",
+    "start": 29.44,
+    "end": 31.64,
+    "text": "and messaged your proteins or sent around your body,"
+   },
+   {
+    "id": "t8",
+    "start": 31.64,
+    "end": 33.8,
+    "text": "this is what makes you feel like crap when you're sick."
+   },
+   {
+    "id": "t9",
+    "start": 33.8,
+    "end": 35.36,
+    "text": "Your body does not know what it's fighting,"
+   },
+   {
+    "id": "t10",
+    "start": 35.36,
+    "end": 37.12,
+    "text": "but it's going to fight for your life."
+   },
+   {
+    "id": "t11",
+    "start": 37.12,
+    "end": 38.84,
+    "text": "Imagine me in this room right now,"
+   },
+   {
+    "id": "t12",
+    "start": 38.84,
+    "end": 41.04,
+    "text": "put a blindfold on me, and I'm just swinging."
+   },
+   {
+    "id": "t13",
+    "start": 41.04,
+    "end": 42.6,
+    "text": "I'm gonna take out someone,"
+   },
+   {
+    "id": "t14",
+    "start": 42.6,
+    "end": 44.96,
+    "text": "and I'm gonna make sure I get out of this room alive."
+   },
+   {
+    "id": "t15",
+    "start": 44.96,
+    "end": 46.84,
+    "text": "That is what your immune system is doing"
+   },
+   {
+    "id": "t16",
+    "start": 46.84,
+    "end": 48.84,
+    "text": "when you get that first response to an infection."
+   },
+   {
+    "id": "t17",
+    "start": 48.84,
+    "end": 52.02,
+    "text": "Now, for most infections, your body will be successful,"
+   },
+   {
+    "id": "t18",
+    "start": 52.02,
+    "end": 53.52,
+    "text": "but there are some infections,"
+   },
+   {
+    "id": "t19",
+    "start": 53.52,
+    "end": 56.28,
+    "text": "and we have evidence where your risk is substantial."
+   },
+   {
+    "id": "t20",
+    "start": 56.28,
+    "end": 57.56,
+    "text": "I'm getting out of this room,"
+   },
+   {
+    "id": "t21",
+    "start": 57.56,
+    "end": 59.28,
+    "text": "but the chances of me getting harmed"
+   },
+   {
+    "id": "t22",
+    "start": 59.28,
+    "end": 61.52,
+    "text": "before getting out of this room are very high."
+   },
+   {
+    "id": "t23",
+    "start": 61.52,
+    "end": 63.0,
+    "text": "We'll use polio as an example."
+   },
+   {
+    "id": "t24",
+    "start": 63.0,
+    "end": 64.12,
+    "text": "From the data that we have,"
+   },
+   {
+    "id": "t25",
+    "start": 64.12,
+    "end": 67.36,
+    "text": "90% of the people who get polio or who have gotten polio"
+   },
+   {
+    "id": "t26",
+    "start": 67.36,
+    "end": 70.32,
+    "text": "were asymptomatic, meaning they have no symptoms at all."
+   },
+   {
+    "id": "t27",
+    "start": 70.32,
+    "end": 72.94,
+    "text": "Their bodies were successful at eliminating the threat."
+   },
+   {
+    "id": "t28",
+    "start": 72.94,
+    "end": 74.2,
+    "text": "But for a small percent of people"
+   },
+   {
+    "id": "t29",
+    "start": 74.2,
+    "end": 75.56,
+    "text": "who get infected with polio,"
+   },
+   {
+    "id": "t30",
+    "start": 75.56,
+    "end": 77.2,
+    "text": "that virus moves out of the gut"
+   },
+   {
+    "id": "t31",
+    "start": 77.2,
+    "end": 79.32,
+    "text": "where it likes to replicate and multiply"
+   },
+   {
+    "id": "t32",
+    "start": 79.32,
+    "end": 81.84,
+    "text": "and into the spine where it causes paralysis."
+   },
+   {
+    "id": "t33",
+    "start": 81.84,
+    "end": 85.04,
+    "text": "Before 1955, before the polio vaccine was licensed,"
+   },
+   {
+    "id": "t34",
+    "start": 85.04,
+    "end": 86.88,
+    "text": "there were nearly 20,000 cases"
+   },
+   {
+    "id": "t35",
+    "start": 86.88,
+    "end": 88.6,
+    "text": "of polio paralysis every year."
+   },
+   {
+    "id": "t36",
+    "start": 88.6,
+    "end": 93.84,
+    "text": "playgrounds emptied, public pools closed, and the modern ICU that you see in the hospital,"
+   },
+   {
+    "id": "t37",
+    "start": 93.84,
+    "end": 97.4,
+    "text": "the ICU, was created as a result of polio cases."
+   },
+   {
+    "id": "t38",
+    "start": 97.4,
+    "end": 101.68,
+    "text": "If you survive that infection, your body collects that information about what that infection"
+   },
+   {
+    "id": "t39",
+    "start": 101.68,
+    "end": 104.94,
+    "text": "looks like and creates an adaptive immunity."
+   },
+   {
+    "id": "t40",
+    "start": 104.94,
+    "end": 107.32,
+    "text": "This is your immune response that is specific."
+   },
+   {
+    "id": "t41",
+    "start": 107.32,
+    "end": 111.04,
+    "text": "In the event that you come across that type of infection again, your body knows what to"
+   },
+   {
+    "id": "t42",
+    "start": 111.04,
+    "end": 112.04,
+    "text": "do."
+   },
+   {
+    "id": "t43",
+    "start": 112.04,
+    "end": 115.36,
+    "text": "Your immune system gets smarter by storing that information in a memory bank."
+   },
+   {
+    "id": "t44",
+    "start": 115.36,
+    "end": 120.04,
+    "text": "Some viruses, if they're left uncontrolled, can get into that memory bank and delete it."
+   },
+   {
+    "id": "t45",
+    "start": 120.04,
+    "end": 122.08,
+    "text": "This is one of the complications of measles."
+   },
+   {
+    "id": "t46",
+    "start": 122.08,
+    "end": 124.64,
+    "text": "It can cause something called immune amnesia."
+   },
+   {
+    "id": "t47",
+    "start": 124.64,
+    "end": 128.28,
+    "text": "Measles can actually make your body forget how you fought prior infections, making you"
+   },
+   {
+    "id": "t48",
+    "start": 128.28,
+    "end": 129.8,
+    "text": "susceptible to disease."
+   },
+   {
+    "id": "t49",
+    "start": 129.8,
+    "end": 133.64,
+    "text": "And some infections can lead you permanently harmed before you get out of this room."
+   },
+   {
+    "id": "t50",
+    "start": 133.64,
+    "end": 137.96,
+    "text": "For example, hemophilus influenza is another preventable infection, and before the vaccine"
+   },
+   {
+    "id": "t51",
+    "start": 137.96,
+    "end": 143.08,
+    "text": "for it was licensed in 1985, there were at least 20,000 invasive cases of hemophilus"
+   },
+   {
+    "id": "t52",
+    "start": 143.08,
+    "end": 144.08,
+    "text": "influenza."
+   },
+   {
+    "id": "t53",
+    "start": 144.08,
+    "end": 148.5,
+    "text": "Obligation of this is encephalitis, and one in four children who get that are left with"
+   },
+   {
+    "id": "t54",
+    "start": 148.5,
+    "end": 149.88,
+    "text": "permanent brain damage."
+   },
+   {
+    "id": "t55",
+    "start": 149.88,
+    "end": 154.62,
+    "text": "And some infections, like the blue, can change what they look like to evade your adaptive"
+   },
+   {
+    "id": "t56",
+    "start": 154.62,
+    "end": 157.44,
+    "text": "response and leave you fighting for your life every season."
+   },
+   {
+    "id": "t57",
+    "start": 157.44,
+    "end": 160.3,
+    "text": "Each infection isn't a workout, it's a risk."
+   },
+   {
+    "id": "t58",
+    "start": 160.3,
+    "end": 164.8,
+    "text": "And vaccines give your immune system a lesson without the life-threatening consequences."
+   },
+   {
+    "id": "t59",
+    "start": 164.8,
+    "end": 168.78,
+    "text": "This allows your immune system to learn through safe practices without the danger of trial"
+   },
+   {
+    "id": "t60",
+    "start": 168.78,
+    "end": 169.78,
+    "text": "and error."
+   },
+   {
+    "id": "t61",
+    "start": 169.78,
+    "end": 173.54,
+    "text": "Important to acknowledge, there are rare risks associated with vaccinations."
+   },
+   {
+    "id": "t62",
+    "start": 173.54,
+    "end": 176.54,
+    "text": "Every intervention of medicine has some level of risk."
+   },
+   {
+    "id": "t63",
+    "start": 176.54,
+    "end": 180.74,
+    "text": "But vaccines are actually one of the most studied interventions within medicine because"
+   },
+   {
+    "id": "t64",
+    "start": 180.74,
+    "end": 184.54,
+    "text": "they are interventions that are given to healthy people to keep them healthy."
+   },
+   {
+    "id": "t65",
+    "start": 184.54,
+    "end": 189.3,
+    "text": "The data behind vaccines goes miles beyond the majority of the medications that you might"
+   },
+   {
+    "id": "t66",
+    "start": 189.3,
+    "end": 194.34,
+    "text": "be prescribed for a disease or disorder and way beyond any supplement that you might grab"
+   },
+   {
+    "id": "t67",
+    "start": 194.34,
+    "end": 195.34,
+    "text": "over the counter."
+   },
+   {
+    "id": "t68",
+    "start": 195.34,
+    "end": 197.7,
+    "text": "Let's talk about supplements in another video."
+   },
+   {
+    "id": "t69",
+    "start": 197.7,
+    "end": 201.58,
+    "text": "And your risk of exposure to one of these diseases at some point in your lifetime or"
+   },
+   {
+    "id": "t70",
+    "start": 201.58,
+    "end": 206.38,
+    "text": "your child's lifetime is almost certain as we live in a globally connected community."
+   },
+   {
+    "id": "t71",
+    "start": 206.38,
+    "end": 208.34,
+    "text": "But this is what misinformation does."
+   },
+   {
+    "id": "t72",
+    "start": 208.34,
+    "end": 213.98,
+    "text": "It downplays the real risk of disease, it exaggerates the rare risk associated with vaccinations,"
+   },
+   {
+    "id": "t73",
+    "start": 213.98,
+    "end": 218.26,
+    "text": "and it leaves you confused and fearful and more likely to choose a decision that is a"
+   },
+   {
+    "id": "t74",
+    "start": 218.26,
+    "end": 220.18,
+    "text": "higher risk option for you."
+   },
+   {
+    "id": "t75",
+    "start": 220.18,
+    "end": 223.54,
+    "text": "So when you're making important decisions about your health, make sure you choose a"
+   },
+   {
+    "id": "t76",
+    "start": 223.54,
+    "end": 228.66,
+    "text": "qualified professional who has verified clinical experience that can back up their statements"
+   },
+   {
+    "id": "t77",
+    "start": 228.66,
+    "end": 229.66,
+    "text": "with data."
+   },
+   {
+    "id": "t78",
+    "start": 229.66,
+    "end": 233.66,
+    "text": "Without data, they're just giving you random opinions that you don't need."
+   },
+   {
+    "id": "t79",
+    "start": 233.66,
+    "end": 234.66,
+    "text": "Alright, talk soon."
+   }
+  ]
+ }
+}

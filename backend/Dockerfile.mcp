@@ -1,0 +1,19 @@
+# Retrieval MCP server (app/mcp_server, design section 6): its own Railway service.
+# Build from the repo root: docker build -f backend/Dockerfile.mcp .
+FROM python:3.11-slim
+
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE=1
+
+WORKDIR /app
+
+COPY backend/requirements.txt ./backend/requirements.txt
+RUN pip install --no-cache-dir -r ./backend/requirements.txt "mcp>=2.0,<3"
+
+COPY backend/ ./backend/
+RUN pip install --no-cache-dir --no-deps -e ./backend
+
+WORKDIR /app/backend
+# Needs MCP_PUBLIC_URL, MCP_CLIENTS (or MCP_CLIENTS_FILE), REDIS_URL, MCP_ALLOWED_HOSTS;
+# optional NCBI_API_KEY, NCBI_EMAIL, DATABASE_URL_SYNC. See app/mcp_server/README.md.
+CMD ["python", "-m", "app.mcp_server"]

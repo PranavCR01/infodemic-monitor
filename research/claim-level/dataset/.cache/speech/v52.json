@@ -1,0 +1,68 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 48.27,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 6.16,
+    "text": "If your first instinct after eating dinner is to head straight over to the couch, hold on for 10"
+   },
+   {
+    "id": "t2",
+    "start": 6.16,
+    "end": 11.52,
+    "text": "minutes. If you never met me, I'm Yolanda. At 64, I lost 28 pounds and have kept it off for over a"
+   },
+   {
+    "id": "t3",
+    "start": 11.52,
+    "end": 16.72,
+    "text": "year now. All naturally, no shots, no meds, and no calorie count. And I'm not AI. Here's why 10"
+   },
+   {
+    "id": "t4",
+    "start": 16.72,
+    "end": 22.4,
+    "text": "minutes after your meal, glucose starts flooding your bloodstream. If you sit down, that sugar just"
+   },
+   {
+    "id": "t5",
+    "start": 22.4,
+    "end": 27.6,
+    "text": "sits there forcing your body to pump out excess insulin. But if you keep your legs moving, just"
+   },
+   {
+    "id": "t6",
+    "start": 27.6,
+    "end": 34.0,
+    "text": "15 chair squats or calf raises while washing dishes or march in place your muscles will act"
+   },
+   {
+    "id": "t7",
+    "start": 34.0,
+    "end": 39.28,
+    "text": "like a sponge and soak up that sugar no intense workouts required got it so let me know in the"
+   },
+   {
+    "id": "t8",
+    "start": 39.28,
+    "end": 43.2,
+    "text": "comments are you gonna try this 10 minute trick after your next meal drop a yes and don't forget"
+   },
+   {
+    "id": "t9",
+    "start": 43.2,
+    "end": 45.04,
+    "text": "to share this with a friend"
+   }
+  ]
+ }
+}

@@ -1,0 +1,176 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 113.01,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 6.68,
+    "text": "Over 80% of heart attacks and strokes are not plaque cholesterol or calcium that's blocking"
+   },
+   {
+    "id": "t2",
+    "start": 6.68,
+    "end": 7.68,
+    "text": "your arteries."
+   },
+   {
+    "id": "t3",
+    "start": 7.68,
+    "end": 13.28,
+    "text": "Most of the time, when someone has a heart attack or a stroke, they die from a clot."
+   },
+   {
+    "id": "t4",
+    "start": 13.28,
+    "end": 16.4,
+    "text": "The biggest trigger of a clot is not cholesterol."
+   },
+   {
+    "id": "t5",
+    "start": 16.4,
+    "end": 17.48,
+    "text": "It's not calcium."
+   },
+   {
+    "id": "t6",
+    "start": 17.48,
+    "end": 22.36,
+    "text": "Number one, and people know this, is the inhalation of smoke from cigarettes."
+   },
+   {
+    "id": "t7",
+    "start": 22.36,
+    "end": 27.04,
+    "text": "Now your arteries are exposed to all these chemicals and it's going to create inflammation."
+   },
+   {
+    "id": "t8",
+    "start": 27.04,
+    "end": 32.16,
+    "text": "pollution or being around any type of chemicals in the environment can do that as well. A solution"
+   },
+   {
+    "id": "t9",
+    "start": 32.16,
+    "end": 36.88,
+    "text": "is not to do vaping, okay? You need to just stop smoking. Alcohol is another one. You're"
+   },
+   {
+    "id": "t10",
+    "start": 36.88,
+    "end": 40.92,
+    "text": "drinking alcohol. It's considered a poison to the liver. It gets in the bloodstream."
+   },
+   {
+    "id": "t11",
+    "start": 40.92,
+    "end": 45.88,
+    "text": "Birth control pills or hormone replacement therapy is another thing that can actually"
+   },
+   {
+    "id": "t12",
+    "start": 45.88,
+    "end": 51.16,
+    "text": "affect the arteries because of the hormonal interaction, increasing the risk of a stroke"
+   },
+   {
+    "id": "t13",
+    "start": 51.16,
+    "end": 55.68,
+    "text": "and heart attacks. Then you have stress. And this is an interesting one because there's"
+   },
+   {
+    "id": "t14",
+    "start": 55.68,
+    "end": 61.04,
+    "text": "There's something called the broken heart syndrome, where someone has a loss of a loved"
+   },
+   {
+    "id": "t15",
+    "start": 61.04,
+    "end": 62.04,
+    "text": "one."
+   },
+   {
+    "id": "t16",
+    "start": 62.04,
+    "end": 67.08,
+    "text": "And their risk of having a heart attack goes up by 2,000%, which by the way triggers the"
+   },
+   {
+    "id": "t17",
+    "start": 67.08,
+    "end": 68.84,
+    "text": "clotting action."
+   },
+   {
+    "id": "t18",
+    "start": 68.84,
+    "end": 72.08,
+    "text": "What turns down clotting?"
+   },
+   {
+    "id": "t19",
+    "start": 72.08,
+    "end": 75.4,
+    "text": "The big one is something called nitric oxide."
+   },
+   {
+    "id": "t20",
+    "start": 75.4,
+    "end": 78.56,
+    "text": "Here are some things that can increase nitric oxide, vitamin D."
+   },
+   {
+    "id": "t21",
+    "start": 78.56,
+    "end": 82.8,
+    "text": "L-arginine is an amino acid that can help nitric oxide."
+   },
+   {
+    "id": "t22",
+    "start": 82.8,
+    "end": 89.14,
+    "text": "And one of the best sources of L-arginine is meat and liver, the exact things that they"
+   },
+   {
+    "id": "t23",
+    "start": 89.14,
+    "end": 91.06,
+    "text": "tell you not to eat."
+   },
+   {
+    "id": "t24",
+    "start": 91.06,
+    "end": 96.5,
+    "text": "There's something else that increases nitric oxide, sunlight, that can penetrate deep into"
+   },
+   {
+    "id": "t25",
+    "start": 96.5,
+    "end": 101.5,
+    "text": "the body and help increase nitric oxide in the inside of the arteries."
+   },
+   {
+    "id": "t26",
+    "start": 101.5,
+    "end": 106.94,
+    "text": "This is why getting sun is so valuable in so many different ways, not just vitamin D,"
+   },
+   {
+    "id": "t27",
+    "start": 106.94,
+    "end": 108.34,
+    "text": "but other ways as well."
+   }
+  ]
+ }
+}

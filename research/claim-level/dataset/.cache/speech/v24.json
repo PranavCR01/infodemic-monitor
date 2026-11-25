@@ -1,0 +1,230 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.998,
+  "duration_seconds": 178.26,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.0,
+    "text": "Foods that I will never eat again as a food science major with a master's in agriculture."
+   },
+   {
+    "id": "t2",
+    "start": 5.0,
+    "end": 9.66,
+    "text": "People on this app are ruthless."
+   },
+   {
+    "id": "t3",
+    "start": 9.66,
+    "end": 15.82,
+    "text": "I don't think I've ever had so many hateful things said about me in such a short period of time."
+   },
+   {
+    "id": "t4",
+    "start": 15.82,
+    "end": 21.24,
+    "text": "I agree, people on TikTok can be kind of spicy, but compared to YouTube, you guys are mean."
+   },
+   {
+    "id": "t5",
+    "start": 21.24,
+    "end": 25.24,
+    "text": "I was preemptively blocked by this creator, but this video detailing this specific food,"
+   },
+   {
+    "id": "t6",
+    "start": 25.24,
+    "end": 31.24,
+    "text": "she doesn't eat at the grocery store and explaining why your cereal is a spawn of Satan."
+   },
+   {
+    "id": "t7",
+    "start": 31.24,
+    "end": 37.44,
+    "text": "got six million views. And per her video I stitched, it didn't seem like her"
+   },
+   {
+    "id": "t8",
+    "start": 37.44,
+    "end": 42.2,
+    "text": "message was received very well. Let's talk about why. To begin, videos where a"
+   },
+   {
+    "id": "t9",
+    "start": 42.2,
+    "end": 45.68,
+    "text": "random person tells you the specific foods that they avoid at the grocery"
+   },
+   {
+    "id": "t10",
+    "start": 45.68,
+    "end": 50.4,
+    "text": "store aren't really that helpful. I know it sounds callous, but I don't care."
+   },
+   {
+    "id": "t11",
+    "start": 50.4,
+    "end": 54.96,
+    "text": "Everyone has different dietary needs, food preferences, medical conditions,"
+   },
+   {
+    "id": "t12",
+    "start": 54.96,
+    "end": 59.76,
+    "text": "cultural diets, food allergies, access to food, food budgets, and if she buys"
+   },
+   {
+    "id": "t13",
+    "start": 59.76,
+    "end": 66.02,
+    "text": "Cheerios or not at the grocery store that doesn't affect any of those factors for me personally"
+   },
+   {
+    "id": "t14",
+    "start": 66.16,
+    "end": 69.44,
+    "text": "That is until she starts spreading misinformation about Cheerios"
+   },
+   {
+    "id": "t15",
+    "start": 69.44,
+    "end": 76.72,
+    "text": "Which may reach a vulnerable parent who feeds their toddler Cheerios because they're a shelf-stable cheap palatable source of iron"
+   },
+   {
+    "id": "t16",
+    "start": 76.84,
+    "end": 78.84,
+    "text": "This is where we run into more trouble"
+   },
+   {
+    "id": "t17",
+    "start": 78.84,
+    "end": 86.12,
+    "text": "Our other issue is that if you use an appeal to authority tactic to establish yourself as an expert like you have a food science and an agriculture"
+   },
+   {
+    "id": "t18",
+    "start": 86.12,
+    "end": 91.72,
+    "text": "Agriculture degree when food science topics like the amount of glyphosate residues or"
+   },
+   {
+    "id": "t19",
+    "start": 92.72,
+    "end": 98.5,
+    "text": "Agriculture topics like the carcinogenicity of glyphosate come up. You need to get your facts correct"
+   },
+   {
+    "id": "t20",
+    "start": 98.76,
+    "end": 101.44,
+    "text": "And if you don't people might not be very happy"
+   },
+   {
+    "id": "t21",
+    "start": 102.43,
+    "end": 107.45,
+    "text": "Granted, I don't know if glyphosate residues on Cheerios is more food science or food cam"
+   },
+   {
+    "id": "t22",
+    "start": 107.45,
+    "end": 112.95,
+    "text": "But potato potato regardless we know that Cheerios do not have high amounts of glyphosate residues"
+   },
+   {
+    "id": "t23",
+    "start": 112.95,
+    "end": 118.15,
+    "text": "This is a post by Food Science Babe from the Gram and when the EWG tested Cheerios for Glyphosate"
+   },
+   {
+    "id": "t24",
+    "start": 118.15,
+    "end": 125.59,
+    "text": "residues, values measured at 833 parts per billion, which is significantly below EPA tolerance levels."
+   },
+   {
+    "id": "t25",
+    "start": 125.59,
+    "end": 131.27,
+    "text": "So, an 150 pound adult would have to eat over 5,000 cups a day for a prolonged period of time"
+   },
+   {
+    "id": "t26",
+    "start": 131.27,
+    "end": 137.83,
+    "text": "for Glyphosate to become an issue. 5,000 cups every day, four months and months. Good luck with that."
+   },
+   {
+    "id": "t27",
+    "start": 138.66,
+    "end": 142.42,
+    "text": "Now, if someone has agriculture knowledge, this, my friends, is a no-brainer."
+   },
+   {
+    "id": "t28",
+    "start": 142.42,
+    "end": 148.02,
+    "text": "The Bayer lawsuit had to do with farmers using glyphosate in combination with other pesticides"
+   },
+   {
+    "id": "t29",
+    "start": 148.02,
+    "end": 152.58,
+    "text": "for decades and inhaled. This had nothing to do with food. And when research actually"
+   },
+   {
+    "id": "t30",
+    "start": 152.58,
+    "end": 157.14,
+    "text": "studied this further and looked at glyphosate independently, it wasn't significantly associated"
+   },
+   {
+    "id": "t31",
+    "start": 157.14,
+    "end": 162.82,
+    "text": "with cancer at any site in a study of 54,000 people. And a look at 15 government agencies"
+   },
+   {
+    "id": "t32",
+    "start": 162.82,
+    "end": 168.66,
+    "text": "and their consensus on glyphosate. Not genotoxic doesn't represent a risk of cancer."
+   },
+   {
+    "id": "t33",
+    "start": 168.66,
+    "end": 173.58,
+    "text": "not carcinogenic, not neurotoxic, et cetera."
+   },
+   {
+    "id": "t34",
+    "start": 173.58,
+    "end": 175.82,
+    "text": "So enjoy your Cheerios, even though Reese's Pups"
+   },
+   {
+    "id": "t35",
+    "start": 175.82,
+    "end": 177.3,
+    "text": "are still better."
+   },
+   {
+    "id": "t36",
+    "start": 177.3,
+    "end": 178.14,
+    "text": "Okay, bye."
+   }
+  ]
+ }
+}

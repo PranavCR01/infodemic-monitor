@@ -1,0 +1,482 @@
+{
+ "video_id": "v101",
+ "filename": "new_TikTok_6831566126573571333.mp4",
+ "relative_path": "new_TikTok_6831566126573571333.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@malditobulo",
+ "extracted_at": "2026-11-23T08:45:55",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.991,
+  "duration_seconds": 51.9,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.34,
+    "end": 5.34,
+    "text": "Espera, espera, déjame adivinarlo. Te encantan, te flipan las fresas,"
+   },
+   {
+    "id": "t2",
+    "start": 5.34,
+    "end": 8.34,
+    "text": "pero últimamente te están dando un poco de repeluz."
+   },
+   {
+    "id": "t3",
+    "start": 8.34,
+    "end": 13.37,
+    "text": "¿Por qué? Por una serie de vídeos que se mueven justo aquí, por TikTok."
+   },
+   {
+    "id": "t4",
+    "start": 13.37,
+    "end": 17.37,
+    "text": "En estos vídeos lo que se hace es echar un par de cucharadas de sal"
+   },
+   {
+    "id": "t5",
+    "start": 17.37,
+    "end": 25.29,
+    "text": "en un recipiente con agua, posteriormente se añaden unas cuantas fresas"
+   },
+   {
+    "id": "t6",
+    "start": 25.29,
+    "end": 29.54,
+    "text": "y en momentos de descuento salen todo tipo de bicho de ellas."
+   },
+   {
+    "id": "t7",
+    "start": 29.54,
+    "end": 32.54,
+    "text": "¿Te podrías llegar a pasar esto?"
+   },
+   {
+    "id": "t8",
+    "start": 32.54,
+    "end": 36.34,
+    "text": "pero no van a salir cien pies como en esta clase de vídeos."
+   },
+   {
+    "id": "t9",
+    "start": 36.34,
+    "end": 39.58,
+    "text": "¿Cómo mucho podría salir alguna larva de los agujeritos"
+   },
+   {
+    "id": "t10",
+    "start": 39.58,
+    "end": 42.3,
+    "text": "en los que alguna mosca podría haber puesto sus huevos?"
+   },
+   {
+    "id": "t11",
+    "start": 42.3,
+    "end": 46.98,
+    "text": "Pero puedes estar tranquilo porque estas marquitas se ven a simple vista"
+   },
+   {
+    "id": "t12",
+    "start": 46.98,
+    "end": 49.98,
+    "text": "y posiblemente las fresas donde estén se han descartado"
+   },
+   {
+    "id": "t13",
+    "start": 49.98,
+    "end": 51.98,
+    "text": "antes de que el paquete llegue a tu nivela."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 26,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Bichos en las fresas?",
+    "confidence": 0.701
+   },
+   {
+    "time": 2.0,
+    "text": "Bichos en las fresas?",
+    "confidence": 0.707
+   },
+   {
+    "time": 4.0,
+    "text": "Bichos en las fresas?",
+    "confidence": 0.732
+   },
+   {
+    "time": 6.0,
+    "text": "iBichos en las fresas?",
+    "confidence": 0.582
+   },
+   {
+    "time": 8.0,
+    "text": "iBichos en las fresas?",
+    "confidence": 0.646
+   },
+   {
+    "time": 32.0,
+    "text": "No saldran bichos",
+    "confidence": 0.983
+   },
+   {
+    "time": 32.0,
+    "text": "monstruosos",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "No saldran bichos",
+    "confidence": 0.777
+   },
+   {
+    "time": 34.0,
+    "text": "monstruosos",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "No saldran bichos",
+    "confidence": 0.991
+   },
+   {
+    "time": 36.0,
+    "text": "monstruosos",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "No saldran bichos",
+    "confidence": 0.963
+   },
+   {
+    "time": 38.0,
+    "text": "monstruosos",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "Podrian salir larvas de",
+    "confidence": 0.878
+   },
+   {
+    "time": 38.0,
+    "text": "mosca, pero es muy poco",
+    "confidence": 0.592
+   },
+   {
+    "time": 38.0,
+    "text": "probable",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "No saldran bichos",
+    "confidence": 0.984
+   },
+   {
+    "time": 40.0,
+    "text": "monstruosos",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "Podrian salir larvas de",
+    "confidence": 0.819
+   },
+   {
+    "time": 40.0,
+    "text": "mosca, pero es muy poco",
+    "confidence": 0.632
+   },
+   {
+    "time": 40.0,
+    "text": "probable",
+    "confidence": 0.974
+   },
+   {
+    "time": 42.0,
+    "text": "No saldran bichos",
+    "confidence": 0.63
+   },
+   {
+    "time": 42.0,
+    "text": "monstruosos",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "Podrian salir larvas de",
+    "confidence": 0.879
+   },
+   {
+    "time": 42.0,
+    "text": "mosca, pero es muy pOCO",
+    "confidence": 0.592
+   },
+   {
+    "time": 42.0,
+    "text": "probable",
+    "confidence": 0.989
+   },
+   {
+    "time": 44.0,
+    "text": "Si las comes, tranquil@",
+    "confidence": 0.59
+   },
+   {
+    "time": 46.0,
+    "text": "Si las comes, tranquil@",
+    "confidence": 0.612
+   },
+   {
+    "time": 46.0,
+    "text": "iNo es peligrosol",
+    "confidence": 0.634
+   },
+   {
+    "time": 48.0,
+    "text": "Si las comes, tranquil@",
+    "confidence": 0.627
+   },
+   {
+    "time": 48.0,
+    "text": "iNo es peligrosol",
+    "confidence": 0.735
+   },
+   {
+    "time": 50.0,
+    "text": "Si las comes, tranquil@",
+    "confidence": 0.65
+   },
+   {
+    "time": 50.0,
+    "text": "iNo es peligrosol",
+    "confidence": 0.947
+   }
+  ],
+  "captions": [
+   {
+    "text": "Bichos en las fresas?",
+    "start": 0.0,
+    "end": 4.0,
+    "confidence": 0.732,
+    "id": "o1"
+   },
+   {
+    "text": "iBichos en las fresas?",
+    "start": 6.0,
+    "end": 8.0,
+    "confidence": 0.646,
+    "id": "o2"
+   },
+   {
+    "text": "No saldran bichos",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.983,
+    "id": "o3"
+   },
+   {
+    "text": "monstruosos",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o4"
+   },
+   {
+    "text": "No saldran bichos",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.777,
+    "id": "o5"
+   },
+   {
+    "text": "monstruosos",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o6"
+   },
+   {
+    "text": "No saldran bichos",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.991,
+    "id": "o7"
+   },
+   {
+    "text": "monstruosos",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o8"
+   },
+   {
+    "text": "No saldran bichos",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.963,
+    "id": "o9"
+   },
+   {
+    "text": "monstruosos",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o10"
+   },
+   {
+    "text": "Podrian salir larvas de",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.878,
+    "id": "o11"
+   },
+   {
+    "text": "mosca, pero es muy poco",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.592,
+    "id": "o12"
+   },
+   {
+    "text": "probable",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o13"
+   },
+   {
+    "text": "No saldran bichos",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.984,
+    "id": "o14"
+   },
+   {
+    "text": "monstruosos",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o15"
+   },
+   {
+    "text": "Podrian salir larvas de",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.819,
+    "id": "o16"
+   },
+   {
+    "text": "mosca, pero es muy poco",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.632,
+    "id": "o17"
+   },
+   {
+    "text": "probable",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.974,
+    "id": "o18"
+   },
+   {
+    "text": "No saldran bichos",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.63,
+    "id": "o19"
+   },
+   {
+    "text": "monstruosos",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o20"
+   },
+   {
+    "text": "Podrian salir larvas de",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.879,
+    "id": "o21"
+   },
+   {
+    "text": "mosca, pero es muy pOCO",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.592,
+    "id": "o22"
+   },
+   {
+    "text": "probable",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.989,
+    "id": "o23"
+   },
+   {
+    "text": "Si las comes, tranquil@",
+    "start": 44.0,
+    "end": 46.0,
+    "confidence": 0.612,
+    "id": "o24"
+   },
+   {
+    "text": "iNo es peligrosol",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.634,
+    "id": "o25"
+   },
+   {
+    "text": "Si las comes, tranquil@",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.627,
+    "id": "o26"
+   },
+   {
+    "text": "iNo es peligrosol",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.735,
+    "id": "o27"
+   },
+   {
+    "text": "Si las comes, tranquil@",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.65,
+    "id": "o28"
+   },
+   {
+    "text": "iNo es peligrosol",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.947,
+    "id": "o29"
+   }
+  ]
+ }
+}

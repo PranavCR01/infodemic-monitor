@@ -1,0 +1,8 @@
+video_id,claim_id,claim_text,claim_source,claim_kind,start_seconds,end_seconds,speaker_stance,claim_verdict,evidence_supporting,evidence_contradicting,annotator,confidence,review_status,reviewer,reviewer_notes,notes
+v01,c1,Drinking hot water cures the flu,speech,research_question,0.0,3.0,ENDORSES,CONTRADICTED,,PMID:1001;PMID:1002,fixture,high,pending,,,
+v02,c1,Garlic stops colds,both,research_question,0.0,4.0,REFUTES,CONTRADICTED,,PMID:2001,fixture,high,pending,,,
+v03,c1,Vitamin D supports bone health in older adults,speech,research_question,0.0,3.0,ENDORSES,SUPPORTED,PMID:3001,,fixture,high,pending,,,
+v03,c2,Regular exercise lowers blood pressure,screen,research_question,0.0,3.0,ENDORSES,SUPPORTED,PMID:3002,,fixture,high,pending,,,
+v04,c1,Herb X boosts immunity by 300 percent,screen,research_question,0.0,3.0,ENDORSES,INSUFFICIENT_EVIDENCE,,,fixture,medium,pending,,,no study found
+v05,c1,Vaccines are tested in clinical trials,speech,fact_of_record,0.0,3.0,ENDORSES,SUPPORTED,PMID:5001,,fixture,high,pending,,,
+v05,c2,Vaccines cause autism,speech,research_question,3.0,6.0,ENDORSES,CONTRADICTED,,PMID:5002,fixture,high,pending,,,

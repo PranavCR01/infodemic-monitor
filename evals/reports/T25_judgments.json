@@ -1,0 +1,376 @@
+{
+ "judged_by": "T25 automated session (no model API), under unchanged design §7, 2026-11-23",
+ "claims": {
+  "v84/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "No Cochrane review; Europe PMC and trial registry hits are herbal COVID remedies generally (e.g. NCT06636760 herbal combination) with no nasal ginger arm. Untested."
+  },
+  "v84/c2": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Nothing measures the pH of dry ginger powder; hits are animal-feed and phytochemistry papers."
+  },
+  "v84/c3": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Hits concern airway physiology and nasal-spray tolerability; nothing tests 'alkaline kills acidic infections'."
+  },
+  "v85/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:42154547 (PNAS 2026, 120,000 US households: no detectable health effects of turbine proximity; CIs exclude moderate-to-large effects)",
+   "why": "A strong population null on the syndrome's symptoms, but it cannot rule out a disease in a susceptible minority and does not address recognition as a disease. Evidence against, not proof the claim is false: still INSUFFICIENT under §7 (see 'left for a person')."
+  },
+  "v92/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:41302225, 40507606 (small barefoot/earthing studies)",
+   "why": "Small uncontrolled or narrow-outcome studies; none tests 'heals any disease'."
+  },
+  "v92/c2": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:39684992 (barefoot forest walking lowered salivary CRP in high-CRP subgroup, n=14)",
+   "why": "One small subgroup finding on one marker does not test 'cannot sustain chronic inflammation'."
+  },
+  "v92/c3": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Too sweeping for any study; hits are unrelated."
+  },
+  "v94/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "A national statistic; no research source or allow-listed reference (no Spanish ministry source on the list) reports it."
+  },
+  "v94/c2": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "As c1."
+  },
+  "v96/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Nothing measures metal partitioning into fat or oil."
+  },
+  "v96/c2": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:42053908 (oil-packed tuna had higher Hg than water-packed, 105 cans)",
+   "why": "Measures the fish by packing medium, not the oil itself; indirect, and in the claim's direction only for the meat."
+  },
+  "v106/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:42922240 (narrative review of plant remedies vs metronidazole for BV)",
+   "why": "Covers oral/standardised garlic preparations at most; no study of a raw clove inserted vaginally. No registered trial."
+  },
+  "v106/c2": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:25386977 (Cochrane: Garlic for the common cold, 2014)",
+   "why": "The Cochrane review finds insufficient evidence; absence of evidence, not contradiction."
+  },
+  "v113/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMC13655435 (deep-sea water + exercise RCT, metabolic syndrome)",
+   "why": "Desalinated deep-sea water, not seawater, and not cancer."
+  },
+  "v113/c2": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "NCT06600243 (microfiltered seawater + resistance training, BP)",
+   "why": "Registry entry without posted results; no tested result to judge."
+  },
+  "v113/c3": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "NCT03956914 (deep-sea water on blood glucose), NCT01580852 (Dead Sea immersion)",
+   "why": "Deep-sea (desalinated) water and immersion, not drinking seawater; no posted results."
+  },
+  "v113/c4": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:41311774 (SR: topical seawater/balneotherapy for atopic dermatitis); PMID:32368795 (Cochrane: salt-water baths + UVB for psoriasis)",
+   "why": "Topical/bathing interventions, not drinking seawater: indirect."
+  },
+  "v113/c5": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Nothing tests colon cleansing or 'cell regeneration' by seawater."
+  },
+  "v113/c6": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Too broad to test."
+  },
+  "v120/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "Bookshelf: Heavy Metal Toxicity (StatPearls)",
+   "why": "The chapter covers chelation therapy; it says nothing about seawater removing metals."
+  },
+  "v120/c2": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "QUOTES stance (cannot decide the label either way); nothing measures metals in the vaccine."
+  },
+  "v120/c3": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Almost certainly false (several of the 118 elements are synthetic), but no retrieved source states seawater composition against it."
+  },
+  "v120/c4": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "No study of seawater as a laxative or 'cleanse'."
+  },
+  "v129/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:35726131 (Cochrane: Ivermectin for preventing and treating COVID-19, 2022); NCT04390022 etc.",
+   "why": "These test efficacy, not what the FDA says; the regulatory claim is still unsettled by any retrieved source."
+  },
+  "v136/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "No study or trial of a salt-urine pregnancy test."
+  },
+  "v137/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "As v136/c1 (NEUTRAL stance)."
+  },
+  "v138/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Dietary-acid-load cohorts on kidney outcomes; nothing on immunity."
+  },
+  "v138/c2": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:42443252, 40846926 (cross-sectional: dietary acid load vs sleep quality)",
+   "why": "Cross-sectional associations in Iranian adults; do not test an alkaline diet improving sleep. Indirect."
+  },
+  "v138/c3": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:42433989 (review: alkaline water)",
+   "why": "Alkaline water, not diet; nothing tests digestion."
+  },
+  "v138/c4": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "NCT02501343 (alkaline diet for insulin sensitivity)",
+   "why": "Different outcome; no vitality outcome tested."
+  },
+  "v138/c5": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Nothing tests 'more alkaline body, more toxin elimination'."
+  },
+  "v138/c6": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Acid-load/inflammation associations only in cross-sectional data; claim not tested."
+  },
+  "v138/c7": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Dietary acid load changes urine pH, which is not what the claim asserts; untested as stated."
+  },
+  "v142/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Only egg-authentication technique reviews; nothing on plastic eggs."
+  },
+  "v143/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Cochrane and trial hits are for established topical drugs, not this soap."
+  },
+  "v143/c2": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:27455163 (Cochrane: sun protection for BCC/SCC)",
+   "why": "Sunscreen, not a rinse-off soap; indirect."
+  },
+  "v149/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Unnamed product; probiotic/enzyme reviews are not this formula."
+  },
+  "v149/c2": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "As c1."
+  },
+  "v149/c3": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "As c1."
+  },
+  "v149/c4": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:42039908 (mini-review: detox teas)",
+   "why": "Different products; no test of this formula."
+  },
+  "v155/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:43051256 (Cochrane 2026: Curcuma longa for knee OA); PMID:42797011 (curcumin and inflammatory markers in T2DM)",
+   "why": "Oral extracts/supplements, not a turmeric spread; 'healthy inflammatory function' is vague. Indirect, as the labelling found for PMID:36804260."
+  },
+  "v155/c2": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:37323050 (Cochrane: non-Chinese herbal medicines for functional dyspepsia)",
+   "why": "Not specific to a turmeric spread."
+  },
+  "v155/c3": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Supplement reviews only."
+  },
+  "v155/c4": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Supplement and mechanism papers only."
+  },
+  "v155/c5": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Reviews and small topical/oral supplement trials; not a spread."
+  },
+  "v159/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:39820024 (WBV squats measure 3.8-7.3 METs)",
+   "why": "Gives a vibration-exercise figure, but no retrieved source gives a jogging figure to set against it, so the equivalence is still not tested by what was retrieved (see 'left for a person')."
+  },
+  "v161/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:23440782 (Cochrane: Vitamin C for the common cold)",
+   "why": "Vitamin C supplements, not oranges; no study compares fruits."
+  },
+  "v161/c2": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:42245557 (review: bromelain)",
+   "why": "Bromelain extract, not pineapple; no comparison of fruits."
+  },
+  "v161/c3": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:42191861 (RCT, wild blueberry and cognition)",
+   "why": "Supports blueberries for some cognitive outcomes, but not 'the best fruit'; superlative untested."
+  },
+  "v161/c4": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Nothing on bananas and stress."
+  },
+  "v161/c5": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:42153011 (meta-analysis: pomegranate juice and lipids)",
+   "why": "Not a comparison of fruits."
+  },
+  "v161/c6": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Nothing on lemon and liver detoxification in people."
+  },
+  "v163/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Occupational-exposure cohorts are unrelated; nothing on this workplace cluster."
+  },
+  "v167/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:22592697 (Cochrane: herbal medicines for advanced colorectal cancer)",
+   "why": "Different remedies; nothing tests a 40-day cure."
+  },
+  "v167/c2": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:43038230 (mice: glycolytic tumours grow without ketones)",
+   "why": "Animal evidence that tumours grow despite carbohydrate restriction; not a human test, so not enough to contradict under §7 directness."
+  },
+  "v167/c3": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Neem and turmeric papers are mechanistic or reviews; no clinical test."
+  },
+  "v181/c1": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "Nothing tests the causal claim in people."
+  },
+  "v181/c2": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "No human test of salt for anxiety."
+  },
+  "v181/c3": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "—",
+   "why": "No new magnesium-anxiety review beyond the labelling's PMID:28445426."
+  },
+  "v181/c4": {
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "resolved_by": [],
+   "relevant": "PMID:17054208 (Cochrane: Valerian for anxiety), PMID:17253512 (Cochrane: Passiflora for anxiety)",
+   "why": "Both Cochrane reviews were already cited and find too little to conclude; no trial of the combination (NCT01178632 is a different herbal product)."
+  }
+ },
+ "notes": [
+  "**Reachability.** At the first probe (2026-11-23, about 22:00 UTC) both www.ebi.ac.uk and clinicaltrials.gov were refused by this environment's proxy (`curl: (56) CONNECT tunnel failed, response 403`). By the full run (22:30 UTC) both answered, so every claim was searched in all four sources; no source was unreachable during the run. Europe PMC answers HTTP 503 to an explicit `sort=RELEVANCE` (its default order is already relevance), so the script does not send it.",
+  "**Why nothing moved.** The extra sources mostly return (a) Cochrane reviews that themselves conclude the evidence is insufficient (valerian, passionflower, garlic for colds), (b) studies of a related but different intervention (topical seawater for eczema, desalinated deep-sea water, curcumin supplements instead of a turmeric spread, vitamin C instead of oranges), (c) animal or cross-sectional studies, or (d) registry entries with no posted results. Under §7 none of these makes a claim SUPPORTED or CONTRADICTED. The claims in scope are mostly untested remedies and product slogans, and searching more databases does not create tests that were never run.",
+  "**The allow-list barely applies.** The reference catalogue has 11 pages (schedules, measles, malaria, salt, caffeine, vitamin C); only the v181 salt claims matched a page (WHO sodium fact sheet), and no passage passed the overlap threshold. NCBI Bookshelf returned chapters for four claims (v92/c3, v120/c1, v149/c1, v161/c2), none of which addresses the claim."
+ ],
+ "for_a_person": [
+  "**v159/c1 (vibration plate = an hour of jogging).** Retrieved: whole-body-vibration squats at 3.8-7.3 METs (PMID:39820024), plus the labelling's Rittweger and Kang VO2 figures. A standard jogging MET value (e.g. the Compendium of Physical Activities) would make this CONTRADICTED by arithmetic, but no allowed source returns one. Adding a compendium-type fact-of-record source would decide this claim and v159 would become MISINFO.",
+  "**v85/c1 (wind turbine syndrome).** The 2026 PNAS longitudinal study (PMID:42154547) finds no detectable health effects and excludes moderate-to-large effects. I kept INSUFFICIENT because it cannot exclude a syndrome in a minority and does not speak to 'recognised as a disease'. A person may reasonably call it CONTRADICTED; if so, v85 becomes MISINFO.",
+  "**v120/c3 (seawater has 118 elements).** False on basic chemistry (synthetic elements), but nothing on the allow-list states it. Another fact-of-record gap rather than a research gap.",
+  "**The 'unproven claim' decision.** On this sample, more databases do not resolve 'source says false, evidence is silent': 0 of 60 claims and 0 of 39 videos change. The gap is about what the label means, not about missing data. That supports deciding on an explicit unproven/unsupported-claim verdict or label rather than expecting retrieval to close it."
+ ]
+}

@@ -1,0 +1,56 @@
+# Routing experiment candidates (design §13 "How the choice is made"; task T38).
+#
+# Every candidate below runs on its step's labelled items from the golden set's TUNE
+# split; app.evaluation.selection picks the best score within budget, and when two are
+# within `tie_margin` the cheaper/faster wins. The result is a PROPOSED routing table
+# (routing_v2.yaml in the output directory); config/routing.yaml is never edited by the
+# runner. Prices come from config/routing.yaml's pricing table: a model without a price
+# there is refused by a live run.
+#
+#   python -m app.evaluation.routing_experiment dry-run            # free, no calls
+#   python -m app.evaluation.routing_experiment run --live --max-usd <cap>   # paid
+version: routing_experiment_v1
+
+tie_margin: 0.01
+
+# Selection budget per step (selection.Budget). max_failure_rate is the share of items
+# a candidate may fail (provider error after retries) and still be eligible.
+budget:
+  extract_claims: {max_failure_rate: 0.05}
+  analyze_stance: {max_failure_rate: 0.05}
+  verify_claims:  {max_failure_rate: 0.05}
+
+# Candidate set from the project lead (relayed by the coordinating session, 2026-11-24):
+# two Claude models per step plus one OpenAI model; critique and judge_explanation are
+# not part of this run.
+#
+# OpenAI models (lead, 2026-11-24, from OpenAI's model pages): GPT-5.6 Luna (cost tier,
+# $0.20 / $1.20 per 1M) for extraction and stance; GPT-5.6 Terra (balanced tier,
+# $2.00 / $12.00) for verification. GPT-5 / GPT-5 mini are no longer listed. OpenAI
+# publishes no dated snapshot for the 5.6 models, only the alias; the run report must
+# record the model id each response reports, so the result stays traceable.
+#
+# reasoning_tokens: expected hidden reasoning tokens per call for reasoning (GPT-5-class)
+# models. They are billed as output, so the dry-run estimate adds them to each call's
+# output. Rough allowances, to be tuned from the first paid run's reported usage.
+#
+# T45 (from T43 §8): extract_v3 and stance_v2 are added as sonnet candidates next to the
+# current prompts, so a re-run compares v2 vs v3 extraction and v1 vs v2 stance on the
+# same model. They are candidates only: config/routing.yaml and the live default prompt
+# versions are unchanged. The use_ocr=false extraction ablation is a separate run with a
+# copy of config/pipeline.yaml (see evals/reports/T45/README.md).
+candidates:
+  extract_claims:
+    - {provider: anthropic, model: claude-haiku-5-5,  prompt: extract_v2}
+    - {provider: anthropic, model: claude-sonnet-5-5, prompt: extract_v2}
+    - {provider: openai,    model: gpt-5.6-luna, prompt: extract_v2, reasoning_tokens: 1500}
+    - {provider: anthropic, model: claude-sonnet-5-5, prompt: extract_v3}   # T45 candidate
+  analyze_stance:
+    - {provider: anthropic, model: claude-haiku-5-5,  prompt: stance_v1}
+    - {provider: anthropic, model: claude-sonnet-5-5, prompt: stance_v1}
+    - {provider: openai,    model: gpt-5.6-luna, prompt: stance_v1, reasoning_tokens: 800}
+    - {provider: anthropic, model: claude-sonnet-5-5, prompt: stance_v2}    # T45 candidate
+  verify_claims:
+    - {provider: anthropic, model: claude-sonnet-5-5, prompt: verify_v3}
+    - {provider: anthropic, model: claude-opus-5-5,   prompt: verify_v3}
+    - {provider: openai,    model: gpt-5.6-terra, prompt: verify_v3, reasoning_tokens: 2500}

@@ -1,0 +1,1632 @@
+{
+ "video_id": "v72",
+ "filename": "v15025gf0000dbn3nufog65hhu8kbmf0.mp4",
+ "relative_path": "Dataset-Sept-2026/Joshua Ryan Fajardo/MISINFO/v15025gf0000dbn3nufog65hhu8kbmf0.mp4",
+ "collector": "Joshua Ryan Fajardo",
+ "collector_label": "MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:42:34",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 58.72,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.7,
+    "text": "The most dangerous food for your liver is not alcohol,"
+   },
+   {
+    "id": "t2",
+    "start": 2.7,
+    "end": 4.82,
+    "text": "it's not cholesterol-heavy foods, and it's not sugar."
+   },
+   {
+    "id": "t3",
+    "start": 4.82,
+    "end": 6.34,
+    "text": "If you're trying to prevent a fatty liver,"
+   },
+   {
+    "id": "t4",
+    "start": 6.34,
+    "end": 9.46,
+    "text": "this food can penetrate deep into the fat cells,"
+   },
+   {
+    "id": "t5",
+    "start": 9.46,
+    "end": 10.3,
+    "text": "including your liver,"
+   },
+   {
+    "id": "t6",
+    "start": 10.3,
+    "end": 12.42,
+    "text": "and can get lodged in there for a year and a half."
+   },
+   {
+    "id": "t7",
+    "start": 12.42,
+    "end": 14.86,
+    "text": "It's also in salad dressing and mayo."
+   },
+   {
+    "id": "t8",
+    "start": 14.86,
+    "end": 17.02,
+    "text": "They use it in virtually every single restaurant"
+   },
+   {
+    "id": "t9",
+    "start": 17.02,
+    "end": 19.86,
+    "text": "to fry everything, your protein bars."
+   },
+   {
+    "id": "t10",
+    "start": 19.86,
+    "end": 22.98,
+    "text": "And all of the chips and crackers that are zero sugar,"
+   },
+   {
+    "id": "t11",
+    "start": 22.98,
+    "end": 26.34,
+    "text": "it goes to incredible chemical processing and heat."
+   },
+   {
+    "id": "t12",
+    "start": 26.34,
+    "end": 28.34,
+    "text": "It's very high in omega-6 fatty acids."
+   },
+   {
+    "id": "t13",
+    "start": 28.34,
+    "end": 29.46,
+    "text": "It causes inflammation."
+   },
+   {
+    "id": "t14",
+    "start": 29.46,
+    "end": 32.1,
+    "text": "The most dangerous food for the liver is seed oil,"
+   },
+   {
+    "id": "t15",
+    "start": 32.1,
+    "end": 34.62,
+    "text": "which is an industrial oil exposed to hexane,"
+   },
+   {
+    "id": "t16",
+    "start": 34.62,
+    "end": 36.5,
+    "text": "which is a solvent that's a gasoline."
+   },
+   {
+    "id": "t17",
+    "start": 36.5,
+    "end": 39.82,
+    "text": "Main seed oils I'm talking about are corn, soy, canola,"
+   },
+   {
+    "id": "t18",
+    "start": 39.82,
+    "end": 41.82,
+    "text": "cotton seed, but it's also in sunflower,"
+   },
+   {
+    "id": "t19",
+    "start": 41.82,
+    "end": 43.42,
+    "text": "safflower, and grape seed oil."
+   },
+   {
+    "id": "t20",
+    "start": 43.42,
+    "end": 45.38,
+    "text": "One of the best things to help with a fatty liver"
+   },
+   {
+    "id": "t21",
+    "start": 45.38,
+    "end": 47.1,
+    "text": "is to take something called cut cut."
+   },
+   {
+    "id": "t22",
+    "start": 47.1,
+    "end": 48.86,
+    "text": "That's a special bile salt that can help reduce"
+   },
+   {
+    "id": "t23",
+    "start": 48.86,
+    "end": 50.06,
+    "text": "the inflammation in your liver."
+   },
+   {
+    "id": "t24",
+    "start": 50.06,
+    "end": 51.94,
+    "text": "But instead of seed oils, cook with butter,"
+   },
+   {
+    "id": "t25",
+    "start": 51.94,
+    "end": 54.82,
+    "text": "coconut oil, olive oil, tallow, and lard."
+   },
+   {
+    "id": "t26",
+    "start": 54.82,
+    "end": 56.82,
+    "text": "You"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 30,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.818
+   },
+   {
+    "time": 0.0,
+    "text": "@ drbergofficial",
+    "confidence": 0.703
+   },
+   {
+    "time": 0.0,
+    "text": "THE MOST DANGEROUS",
+    "confidence": 0.987
+   },
+   {
+    "time": 0.0,
+    "text": "FOOD FOR YOUR LIVER",
+    "confidence": 0.996
+   },
+   {
+    "time": 2.0,
+    "text": "@HOL",
+    "confidence": 0.608
+   },
+   {
+    "time": 2.0,
+    "text": "IS NOT",
+    "confidence": 0.991
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.682
+   },
+   {
+    "time": 4.0,
+    "text": "@ drbergofficial",
+    "confidence": 0.98
+   },
+   {
+    "time": 4.0,
+    "text": "It'S NOT",
+    "confidence": 0.73
+   },
+   {
+    "time": 4.0,
+    "text": "CHOLESTEROL-HEAVY",
+    "confidence": 0.96
+   },
+   {
+    "time": 4.0,
+    "text": "FOODS",
+    "confidence": 0.998
+   },
+   {
+    "time": 6.0,
+    "text": "AND IT'$ NOT SUGAR",
+    "confidence": 0.725
+   },
+   {
+    "time": 6.0,
+    "text": "IF YOU'RE TRYING TO",
+    "confidence": 0.873
+   },
+   {
+    "time": 6.0,
+    "text": "PREVENT A FATTY",
+    "confidence": 0.938
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "drbergofficial",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "THIS FOOD CAN",
+    "confidence": 0.833
+   },
+   {
+    "time": 8.0,
+    "text": "PENETRATE DEEP",
+    "confidence": 0.874
+   },
+   {
+    "time": 8.0,
+    "text": "TikTol",
+    "confidence": 0.649
+   },
+   {
+    "time": 10.0,
+    "text": "INCLUDING YOUR",
+    "confidence": 0.964
+   },
+   {
+    "time": 10.0,
+    "text": "LIVER",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "drbergofficial",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "INCLUDING YOUR",
+    "confidence": 0.974
+   },
+   {
+    "time": 12.0,
+    "text": "LIVER AND CAN GET",
+    "confidence": 0.916
+   },
+   {
+    "time": 12.0,
+    "text": "LODGED IN THERE FOR",
+    "confidence": 0.783
+   },
+   {
+    "time": 12.0,
+    "text": "YEAR AND A",
+    "confidence": 0.971
+   },
+   {
+    "time": 12.0,
+    "text": "A",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "IT'S ALSO IN SALAD",
+    "confidence": 0.545
+   },
+   {
+    "time": 14.0,
+    "text": "DRESSING",
+    "confidence": 0.746
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.0,
+    "text": "drbergofficial",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "THEY USE IT IN",
+    "confidence": 0.562
+   },
+   {
+    "time": 16.0,
+    "text": "VIRTUALLY EVERY",
+    "confidence": 0.991
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "drbergofficial",
+    "confidence": 0.994
+   },
+   {
+    "time": 18.0,
+    "text": "THEY USE IT IN",
+    "confidence": 0.947
+   },
+   {
+    "time": 18.0,
+    "text": "VIRTUALLY EVERY",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.0,
+    "text": "SINGLE RESTAURANT",
+    "confidence": 0.78
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 0.843
+   },
+   {
+    "time": 18.0,
+    "text": "TO FRYVERYTHE",
+    "confidence": 0.662
+   },
+   {
+    "time": 18.0,
+    "text": "@ drbergofficial",
+    "confidence": 0.887
+   },
+   {
+    "time": 20.0,
+    "text": "AND ALL",
+    "confidence": 0.727
+   },
+   {
+    "time": 20.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.0,
+    "text": "drbergofficial",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "AND ALL OF THE CHIPS",
+    "confidence": 0.862
+   },
+   {
+    "time": 22.0,
+    "text": "AND CRACKERS THAT",
+    "confidence": 0.734
+   },
+   {
+    "time": 22.0,
+    "text": "ARE ZERO",
+    "confidence": 0.734
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 22.0,
+    "text": "drbergofficial",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "It GOES THROUGH",
+    "confidence": 0.956
+   },
+   {
+    "time": 24.0,
+    "text": "INCREDIBLE",
+    "confidence": 0.999
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "drbergofficial",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "It GOES THROUGH",
+    "confidence": 0.922
+   },
+   {
+    "time": 26.0,
+    "text": "INCREDIBLE CHEMICAL",
+    "confidence": 0.705
+   },
+   {
+    "time": 26.0,
+    "text": "PROCESSING AND",
+    "confidence": 0.995
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 26.0,
+    "text": "HEAT",
+    "confidence": 0.954
+   },
+   {
+    "time": 26.0,
+    "text": "drbergofficial",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "It'S VERY HIGH IN",
+    "confidence": 0.595
+   },
+   {
+    "time": 28.0,
+    "text": "OMEGA-6 FATTY",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "AcIDS",
+    "confidence": 0.578
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 28.0,
+    "text": "drbergofficial",
+    "confidence": 0.782
+   },
+   {
+    "time": 30.0,
+    "text": "THE MOST DANGEROUS",
+    "confidence": 0.953
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "drbergofficial",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "THE MOST DANGEROUS",
+    "confidence": 0.885
+   },
+   {
+    "time": 32.0,
+    "text": "FOOD FOR THE LIVER",
+    "confidence": 0.801
+   },
+   {
+    "time": 32.0,
+    "text": "IS SEED OIL",
+    "confidence": 0.938
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 0.971
+   },
+   {
+    "time": 32.0,
+    "text": "drbergofficial",
+    "confidence": 0.996
+   },
+   {
+    "time": 34.0,
+    "text": "WHICH IS AN",
+    "confidence": 0.995
+   },
+   {
+    "time": 34.0,
+    "text": "INDUSTRIAL OIL",
+    "confidence": 0.867
+   },
+   {
+    "time": 34.0,
+    "text": "EXPOSED TO",
+    "confidence": 0.755
+   },
+   {
+    "time": 34.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "drbergofficial",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "WHICH IS A SOLVENT",
+    "confidence": 0.969
+   },
+   {
+    "time": 36.0,
+    "text": "THAT'$ INGASOLINETikTok",
+    "confidence": 0.745
+   },
+   {
+    "time": 36.0,
+    "text": "drbergofficial",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "Corn",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "Oil",
+    "confidence": 0.998
+   },
+   {
+    "time": 38.0,
+    "text": "drbergofficial",
+    "confidence": 0.636
+   },
+   {
+    "time": 40.0,
+    "text": "Cottonseed",
+    "confidence": 0.99
+   },
+   {
+    "time": 40.0,
+    "text": "Oil",
+    "confidence": 0.993
+   },
+   {
+    "time": 40.0,
+    "text": "TikTok",
+    "confidence": 0.948
+   },
+   {
+    "time": 40.0,
+    "text": "drbergofficial",
+    "confidence": 0.876
+   },
+   {
+    "time": 42.0,
+    "text": "Safflower 0",
+    "confidence": 0.988
+   },
+   {
+    "time": 42.0,
+    "text": "Sunilower Oil",
+    "confidence": 0.545
+   },
+   {
+    "time": 42.0,
+    "text": "TikTok",
+    "confidence": 0.961
+   },
+   {
+    "time": 42.0,
+    "text": "drbergofficial",
+    "confidence": 0.926
+   },
+   {
+    "time": 44.0,
+    "text": "ONE OF THE BEST",
+    "confidence": 0.985
+   },
+   {
+    "time": 44.0,
+    "text": "THINGS",
+    "confidence": 0.995
+   },
+   {
+    "time": 44.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 44.0,
+    "text": "drbergofficial",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "IS TO TAKE",
+    "confidence": 0.978
+   },
+   {
+    "time": 46.0,
+    "text": "SOMETHING",
+    "confidence": 0.651
+   },
+   {
+    "time": 46.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 46.0,
+    "text": "drbergofficial",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "THAT'$ A SPECIAL BILE",
+    "confidence": 0.946
+   },
+   {
+    "time": 48.0,
+    "text": "SALT",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 48.0,
+    "text": "drbergofficial",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "THAT CAN HELP",
+    "confidence": 0.893
+   },
+   {
+    "time": 50.0,
+    "text": "REDUCE THE",
+    "confidence": 0.983
+   },
+   {
+    "time": 50.0,
+    "text": "INFLAMMATION IN",
+    "confidence": 0.868
+   },
+   {
+    "time": 50.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "YOUR LIVER",
+    "confidence": 0.975
+   },
+   {
+    "time": 50.0,
+    "text": "drbergofficial",
+    "confidence": 0.793
+   },
+   {
+    "time": 52.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 52.0,
+    "text": "drbergofficial",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "TALLOW AND",
+    "confidence": 0.886
+   },
+   {
+    "time": 54.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 54.0,
+    "text": "drbergofficial",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "J",
+    "confidence": 0.672
+   },
+   {
+    "time": 56.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 56.0,
+    "text": "drbergofficial",
+    "confidence": 0.997
+   },
+   {
+    "time": 58.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 58.0,
+    "text": "drbergofficial",
+    "confidence": 0.997
+   }
+  ],
+  "captions": [
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.818,
+    "id": "o1"
+   },
+   {
+    "text": "@ drbergofficial",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.703,
+    "id": "o2"
+   },
+   {
+    "text": "THE MOST DANGEROUS",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.987,
+    "id": "o3"
+   },
+   {
+    "text": "FOOD FOR YOUR LIVER",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.996,
+    "id": "o4"
+   },
+   {
+    "text": "@HOL",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.608,
+    "id": "o5"
+   },
+   {
+    "text": "IS NOT",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.991,
+    "id": "o6"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.682,
+    "id": "o7"
+   },
+   {
+    "text": "@ drbergofficial",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.98,
+    "id": "o8"
+   },
+   {
+    "text": "It'S NOT",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.73,
+    "id": "o9"
+   },
+   {
+    "text": "CHOLESTEROL-HEAVY",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.96,
+    "id": "o10"
+   },
+   {
+    "text": "FOODS",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.998,
+    "id": "o11"
+   },
+   {
+    "text": "AND IT'$ NOT SUGAR",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.725,
+    "id": "o12"
+   },
+   {
+    "text": "IF YOU'RE TRYING TO",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.873,
+    "id": "o13"
+   },
+   {
+    "text": "PREVENT A FATTY",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.938,
+    "id": "o14"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o15"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o16"
+   },
+   {
+    "text": "THIS FOOD CAN",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.833,
+    "id": "o17"
+   },
+   {
+    "text": "PENETRATE DEEP",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.874,
+    "id": "o18"
+   },
+   {
+    "text": "TikTol",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.649,
+    "id": "o19"
+   },
+   {
+    "text": "INCLUDING YOUR",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.964,
+    "id": "o20"
+   },
+   {
+    "text": "LIVER",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o21"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o22"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o23"
+   },
+   {
+    "text": "INCLUDING YOUR",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.974,
+    "id": "o24"
+   },
+   {
+    "text": "LIVER AND CAN GET",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.916,
+    "id": "o25"
+   },
+   {
+    "text": "LODGED IN THERE FOR",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.783,
+    "id": "o26"
+   },
+   {
+    "text": "YEAR AND A",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.971,
+    "id": "o27"
+   },
+   {
+    "text": "A",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o28"
+   },
+   {
+    "text": "IT'S ALSO IN SALAD",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.545,
+    "id": "o29"
+   },
+   {
+    "text": "DRESSING",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.746,
+    "id": "o30"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.999,
+    "id": "o31"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o32"
+   },
+   {
+    "text": "THEY USE IT IN",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.562,
+    "id": "o33"
+   },
+   {
+    "text": "VIRTUALLY EVERY",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.991,
+    "id": "o34"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o35"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.994,
+    "id": "o36"
+   },
+   {
+    "text": "THEY USE IT IN",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.947,
+    "id": "o37"
+   },
+   {
+    "text": "VIRTUALLY EVERY",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.999,
+    "id": "o38"
+   },
+   {
+    "text": "SINGLE RESTAURANT",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.78,
+    "id": "o39"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.843,
+    "id": "o40"
+   },
+   {
+    "text": "TO FRYVERYTHE",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.662,
+    "id": "o41"
+   },
+   {
+    "text": "@ drbergofficial",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.887,
+    "id": "o42"
+   },
+   {
+    "text": "AND ALL",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.727,
+    "id": "o43"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.999,
+    "id": "o44"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o45"
+   },
+   {
+    "text": "AND ALL OF THE CHIPS",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.862,
+    "id": "o46"
+   },
+   {
+    "text": "AND CRACKERS THAT",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.734,
+    "id": "o47"
+   },
+   {
+    "text": "ARE ZERO",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.734,
+    "id": "o48"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.999,
+    "id": "o49"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o50"
+   },
+   {
+    "text": "It GOES THROUGH",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.956,
+    "id": "o51"
+   },
+   {
+    "text": "INCREDIBLE",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.999,
+    "id": "o52"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o53"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o54"
+   },
+   {
+    "text": "It GOES THROUGH",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.922,
+    "id": "o55"
+   },
+   {
+    "text": "INCREDIBLE CHEMICAL",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.705,
+    "id": "o56"
+   },
+   {
+    "text": "PROCESSING AND",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.995,
+    "id": "o57"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.997,
+    "id": "o58"
+   },
+   {
+    "text": "HEAT",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.954,
+    "id": "o59"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o60"
+   },
+   {
+    "text": "It'S VERY HIGH IN",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.595,
+    "id": "o61"
+   },
+   {
+    "text": "OMEGA-6 FATTY",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o62"
+   },
+   {
+    "text": "AcIDS",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.578,
+    "id": "o63"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.998,
+    "id": "o64"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.782,
+    "id": "o65"
+   },
+   {
+    "text": "THE MOST DANGEROUS",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.953,
+    "id": "o66"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o67"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o68"
+   },
+   {
+    "text": "THE MOST DANGEROUS",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.885,
+    "id": "o69"
+   },
+   {
+    "text": "FOOD FOR THE LIVER",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.801,
+    "id": "o70"
+   },
+   {
+    "text": "IS SEED OIL",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.938,
+    "id": "o71"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.971,
+    "id": "o72"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.996,
+    "id": "o73"
+   },
+   {
+    "text": "WHICH IS AN",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.995,
+    "id": "o74"
+   },
+   {
+    "text": "INDUSTRIAL OIL",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.867,
+    "id": "o75"
+   },
+   {
+    "text": "EXPOSED TO",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.755,
+    "id": "o76"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o77"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o78"
+   },
+   {
+    "text": "WHICH IS A SOLVENT",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.969,
+    "id": "o79"
+   },
+   {
+    "text": "THAT'$ INGASOLINETikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.745,
+    "id": "o80"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o81"
+   },
+   {
+    "text": "Corn",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o82"
+   },
+   {
+    "text": "Oil",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.998,
+    "id": "o83"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.636,
+    "id": "o84"
+   },
+   {
+    "text": "Cottonseed",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.99,
+    "id": "o85"
+   },
+   {
+    "text": "Oil",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.993,
+    "id": "o86"
+   },
+   {
+    "text": "TikTok",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.948,
+    "id": "o87"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.876,
+    "id": "o88"
+   },
+   {
+    "text": "Safflower 0",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.988,
+    "id": "o89"
+   },
+   {
+    "text": "Sunilower Oil",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.545,
+    "id": "o90"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.961,
+    "id": "o91"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.926,
+    "id": "o92"
+   },
+   {
+    "text": "ONE OF THE BEST",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.985,
+    "id": "o93"
+   },
+   {
+    "text": "THINGS",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.995,
+    "id": "o94"
+   },
+   {
+    "text": "TikTok",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.999,
+    "id": "o95"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o96"
+   },
+   {
+    "text": "IS TO TAKE",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.978,
+    "id": "o97"
+   },
+   {
+    "text": "SOMETHING",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.651,
+    "id": "o98"
+   },
+   {
+    "text": "TikTok",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.999,
+    "id": "o99"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o100"
+   },
+   {
+    "text": "THAT'$ A SPECIAL BILE",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.946,
+    "id": "o101"
+   },
+   {
+    "text": "SALT",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o102"
+   },
+   {
+    "text": "TikTok",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.999,
+    "id": "o103"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o104"
+   },
+   {
+    "text": "THAT CAN HELP",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.893,
+    "id": "o105"
+   },
+   {
+    "text": "REDUCE THE",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.983,
+    "id": "o106"
+   },
+   {
+    "text": "INFLAMMATION IN",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.868,
+    "id": "o107"
+   },
+   {
+    "text": "TikTok",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o108"
+   },
+   {
+    "text": "YOUR LIVER",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.975,
+    "id": "o109"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.793,
+    "id": "o110"
+   },
+   {
+    "text": "TikTok",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.999,
+    "id": "o111"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 1.0,
+    "id": "o112"
+   },
+   {
+    "text": "TALLOW AND",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.886,
+    "id": "o113"
+   },
+   {
+    "text": "TikTok",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.999,
+    "id": "o114"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o115"
+   },
+   {
+    "text": "J",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.672,
+    "id": "o116"
+   },
+   {
+    "text": "TikTok",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.999,
+    "id": "o117"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.997,
+    "id": "o118"
+   },
+   {
+    "text": "TikTok",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.999,
+    "id": "o119"
+   },
+   {
+    "text": "drbergofficial",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.997,
+    "id": "o120"
+   }
+  ]
+ }
+}

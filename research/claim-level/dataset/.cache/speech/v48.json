@@ -1,0 +1,128 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.991,
+  "duration_seconds": 60.25,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.21,
+    "end": 4.59,
+    "text": "You're telling me the Great Wall of China isn't just long. It's impossible."
+   },
+   {
+    "id": "t2",
+    "start": 5.09,
+    "end": 10.39,
+    "text": "Exactly. People say it's 13,000 miles, but they don't really process what that means."
+   },
+   {
+    "id": "t3",
+    "start": 10.39,
+    "end": 16.39,
+    "text": "That's four times the entire U.S. stretched coast to coast, plus another 1,000 miles,"
+   },
+   {
+    "id": "t4",
+    "start": 16.39,
+    "end": 23.21,
+    "text": "and it was started in 220 B.C. before Jesus, before most empires even existed. That's the point."
+   },
+   {
+    "id": "t5",
+    "start": 23.21,
+    "end": 28.21,
+    "text": "But how does an ancient civilization build something that massive without modern machines?"
+   },
+   {
+    "id": "t6",
+    "start": 28.21,
+    "end": 30.29,
+    "text": "It took over a thousand years."
+   },
+   {
+    "id": "t7",
+    "start": 30.29,
+    "end": 32.25,
+    "text": "No empire commits that kind of time"
+   },
+   {
+    "id": "t8",
+    "start": 32.25,
+    "end": 34.21,
+    "text": "unless they're terrified of something."
+   },
+   {
+    "id": "t9",
+    "start": 34.21,
+    "end": 36.45,
+    "text": "And here's the part nobody talks about."
+   },
+   {
+    "id": "t10",
+    "start": 36.45,
+    "end": 39.25,
+    "text": "The steep defensive side, the battlements,"
+   },
+   {
+    "id": "t11",
+    "start": 39.25,
+    "end": 41.69,
+    "text": "they're facing China, not the outside."
+   },
+   {
+    "id": "t12",
+    "start": 41.69,
+    "end": 44.29,
+    "text": "So the wall wasn't built to keep people out."
+   },
+   {
+    "id": "t13",
+    "start": 44.29,
+    "end": 45.97,
+    "text": "It was built to keep something in,"
+   },
+   {
+    "id": "t14",
+    "start": 45.97,
+    "end": 47.49,
+    "text": "and some researchers even claim"
+   },
+   {
+    "id": "t15",
+    "start": 47.49,
+    "end": 49.53,
+    "text": "it may not be Chinese at all,"
+   },
+   {
+    "id": "t16",
+    "start": 49.53,
+    "end": 53.25,
+    "text": "but a leftover structure from the old Tartarian empire."
+   },
+   {
+    "id": "t17",
+    "start": 53.25,
+    "end": 56.45,
+    "text": "If that's true, then you have to ask yourself,"
+   },
+   {
+    "id": "t18",
+    "start": 56.45,
+    "end": 58.13,
+    "text": "what were they trying to contain?"
+   },
+   {
+    "id": "t19",
+    "start": 58.13,
+    "end": 60.13,
+    "text": "And why is everyone so quiet about it?"
+   }
+  ]
+ }
+}

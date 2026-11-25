@@ -19,15 +19,20 @@ dependencies = [
   "aiofiles>=23.0",
   # Storage / auth
   "supabase>=2.0.0",
-  "PyJWT>=2.8.0",
+  "PyJWT[crypto]>=2.8.0,<3",  # ES256/RS256 via JWKS (T48)
   "httpx>=0.26",
   # Inference
   "anthropic>=0.28",
-  "openai>=1.13",
+  "openai>=1.66",
   "tiktoken>=0.6",
+  # LangGraph pipeline (app/core/graph); Postgres checkpointer uses psycopg 3
+  "langgraph>=1.0",
+  "langgraph-checkpoint-postgres>=3.0",
   # Utilities
   "requests>=2.31",
   "tenacity>=8.2",
+  # Config (routing table, benchmark runs)
+  "PyYAML>=6.0",
 ]
 
 [project.optional-dependencies]
@@ -40,11 +45,35 @@ ml = [
   "easyocr>=1.7.0",
   "opencv-python-headless>=4.9",
 ]
+# Offline library ingestion (design section 6): an offline batch job, not part of the
+# API or worker image. OCRmyPDF also needs the tesseract-ocr and ghostscript system
+# packages; the Postgres needs the pgvector extension.
+library = [
+  "pymupdf>=1.24",
+  "ocrmypdf>=16.0",
+  "transformers>=4.40",
+  "torch>=2.2",
+]
+# Retrieval MCP server (app/mcp_server, design section 6): its own Railway service.
+# The MCP SDK's 2.x line (FastMCP renamed MCPServer). Not in requirements.txt, so the
+# API and worker images don't change.
+mcp = [
+  "mcp>=2.0,<3",
+]
 test = [
   "pytest>=8.0",
+  # MCP server tests (skipped when missing)
+  "mcp>=2.0,<3",
+  # Generated sample scans for the library tests (skipped when missing)
+  "pymupdf>=1.24",
+  "reportlab>=4.0",
 ]
 
 [tool.pytest.ini_options]
 testpaths = ["app/tests"]
 python_files = ["test_*.py"]
 python_functions = ["test_*"]
+
+# Only `app` is a Python package; `config/` holds YAML (routing table, benchmarks).
+[tool.setuptools.packages.find]
+include = ["app*"]

@@ -1,0 +1,350 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.972,
+  "duration_seconds": 140.04,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.01,
+    "text": "Let's do game theory."
+   },
+   {
+    "id": "t2",
+    "start": 2.01,
+    "end": 5.01,
+    "text": "Game theory is just a study of how to win games, okay?"
+   },
+   {
+    "id": "t3",
+    "start": 5.01,
+    "end": 6.41,
+    "text": "It's a very general thing."
+   },
+   {
+    "id": "t4",
+    "start": 6.41,
+    "end": 8.25,
+    "text": "Let's do a thought experiment and just say,"
+   },
+   {
+    "id": "t5",
+    "start": 8.25,
+    "end": 10.37,
+    "text": "there's about a million people in the world, okay?"
+   },
+   {
+    "id": "t6",
+    "start": 10.37,
+    "end": 11.61,
+    "text": "There's a million people in the world"
+   },
+   {
+    "id": "t7",
+    "start": 11.61,
+    "end": 14.61,
+    "text": "all trying to win the game against each other,"
+   },
+   {
+    "id": "t8",
+    "start": 14.61,
+    "end": 16.65,
+    "text": "but only one can win."
+   },
+   {
+    "id": "t9",
+    "start": 16.65,
+    "end": 18.01,
+    "text": "According to game theory,"
+   },
+   {
+    "id": "t10",
+    "start": 18.01,
+    "end": 20.93,
+    "text": "the best way to win a game is by,"
+   },
+   {
+    "id": "t11",
+    "start": 20.93,
+    "end": 22.95,
+    "text": "does anyone know?"
+   },
+   {
+    "id": "t12",
+    "start": 22.95,
+    "end": 24.19,
+    "text": "Cheating, okay?"
+   },
+   {
+    "id": "t13",
+    "start": 24.19,
+    "end": 25.59,
+    "text": "If you follow the rules, you will never win a game,"
+   },
+   {
+    "id": "t14",
+    "start": 25.59,
+    "end": 26.87,
+    "text": "you have to cheat."
+   },
+   {
+    "id": "t15",
+    "start": 26.87,
+    "end": 29.99,
+    "text": "And in this game, the best way to win"
+   },
+   {
+    "id": "t16",
+    "start": 29.99,
+    "end": 34.58,
+    "text": "is by coordinating with other people, right?"
+   },
+   {
+    "id": "t17",
+    "start": 34.58,
+    "end": 35.9,
+    "text": "Cause everyone's playing by himself."
+   },
+   {
+    "id": "t18",
+    "start": 35.9,
+    "end": 38.14,
+    "text": "So if you can work with other people,"
+   },
+   {
+    "id": "t19",
+    "start": 38.14,
+    "end": 40.46,
+    "text": "then that gives you a huge advantage over everyone else,"
+   },
+   {
+    "id": "t20",
+    "start": 40.46,
+    "end": 41.3,
+    "text": "right?"
+   },
+   {
+    "id": "t21",
+    "start": 41.3,
+    "end": 43.18,
+    "text": "The problem with this is,"
+   },
+   {
+    "id": "t22",
+    "start": 43.18,
+    "end": 45.18,
+    "text": "the moment that people start coordinating,"
+   },
+   {
+    "id": "t23",
+    "start": 45.18,
+    "end": 48.58,
+    "text": "it forces an arms race of coordination."
+   },
+   {
+    "id": "t24",
+    "start": 48.58,
+    "end": 49.96,
+    "text": "So maybe these two are working together,"
+   },
+   {
+    "id": "t25",
+    "start": 49.96,
+    "end": 52.86,
+    "text": "these four now are forced to work together."
+   },
+   {
+    "id": "t26",
+    "start": 52.86,
+    "end": 56.74,
+    "text": "Which now forces these five to work together."
+   },
+   {
+    "id": "t27",
+    "start": 56.74,
+    "end": 59.06,
+    "text": "If you are the first to work together,"
+   },
+   {
+    "id": "t28",
+    "start": 59.06,
+    "end": 61.18,
+    "text": "you get screwed in the process."
+   },
+   {
+    "id": "t29",
+    "start": 61.18,
+    "end": 64.7,
+    "text": "So if you cheat, you have to cheat secretly."
+   },
+   {
+    "id": "t30",
+    "start": 64.7,
+    "end": 67.5,
+    "text": "You have to coordinate without people knowing"
+   },
+   {
+    "id": "t31",
+    "start": 67.5,
+    "end": 69.26,
+    "text": "you're actually coordinating together."
+   },
+   {
+    "id": "t32",
+    "start": 69.26,
+    "end": 71.06,
+    "text": "You have to conspire secretly."
+   },
+   {
+    "id": "t33",
+    "start": 71.06,
+    "end": 73.54,
+    "text": "And there are different ways to collaborate secretly, okay?"
+   },
+   {
+    "id": "t34",
+    "start": 73.54,
+    "end": 75.86,
+    "text": "So let's look at examples."
+   },
+   {
+    "id": "t35",
+    "start": 75.86,
+    "end": 78.14,
+    "text": "So family is one example, right?"
+   },
+   {
+    "id": "t36",
+    "start": 78.14,
+    "end": 81.14,
+    "text": "Another example is religion."
+   },
+   {
+    "id": "t37",
+    "start": 81.14,
+    "end": 82.18,
+    "text": "You have a leader."
+   },
+   {
+    "id": "t38",
+    "start": 82.18,
+    "end": 87.66,
+    "text": "If you have a similar race, ethnicity,"
+   },
+   {
+    "id": "t39",
+    "start": 87.66,
+    "end": 89.54,
+    "text": "You have a simple language."
+   },
+   {
+    "id": "t40",
+    "start": 89.54,
+    "end": 92.3,
+    "text": "So these are examples of how you get people"
+   },
+   {
+    "id": "t41",
+    "start": 92.3,
+    "end": 93.86,
+    "text": "to coordinate together."
+   },
+   {
+    "id": "t42",
+    "start": 93.86,
+    "end": 98.86,
+    "text": "The problem is that these are all obvious to people,"
+   },
+   {
+    "id": "t43",
+    "start": 98.98,
+    "end": 102.34,
+    "text": "which forces them to do the same thing."
+   },
+   {
+    "id": "t44",
+    "start": 102.34,
+    "end": 105.86,
+    "text": "But there's a strategy that you can use"
+   },
+   {
+    "id": "t45",
+    "start": 105.86,
+    "end": 108.34,
+    "text": "that allows you to coordinate secretly"
+   },
+   {
+    "id": "t46",
+    "start": 108.34,
+    "end": 109.82,
+    "text": "and defeat all your enemies."
+   },
+   {
+    "id": "t47",
+    "start": 109.82,
+    "end": 112.9,
+    "text": "And this strategy is called transgression."
+   },
+   {
+    "id": "t48",
+    "start": 112.9,
+    "end": 114.38,
+    "text": "Transgression."
+   },
+   {
+    "id": "t49",
+    "start": 114.38,
+    "end": 117.54,
+    "text": "The breaking of taboos, the breaking of social norm,"
+   },
+   {
+    "id": "t50",
+    "start": 117.54,
+    "end": 119.98,
+    "text": "the breaking of social laws, okay?"
+   },
+   {
+    "id": "t51",
+    "start": 119.98,
+    "end": 121.66,
+    "text": "So let's study this concept."
+   },
+   {
+    "id": "t52",
+    "start": 121.66,
+    "end": 125.42,
+    "text": "The theory is that the greater you transgress, okay?"
+   },
+   {
+    "id": "t53",
+    "start": 125.42,
+    "end": 127.1,
+    "text": "This is the level of transgression."
+   },
+   {
+    "id": "t54",
+    "start": 127.1,
+    "end": 129.5,
+    "text": "The greater your cohesion,"
+   },
+   {
+    "id": "t55",
+    "start": 129.5,
+    "end": 132.3,
+    "text": "which leads to synchronicity, okay?"
+   },
+   {
+    "id": "t56",
+    "start": 132.3,
+    "end": 135.92,
+    "text": "That's a theory I wanna propose to you, all right?"
+   }
+  ]
+ }
+}

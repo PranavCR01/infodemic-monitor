@@ -1,0 +1,104 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 65.55,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.5,
+    "text": "This girl makes the last mistake of her life, drinking this clear glacial water in Antarctica."
+   },
+   {
+    "id": "t2",
+    "start": 5.5,
+    "end": 9.58,
+    "text": "And three days later, she was urgently taken to the hospital, where she died."
+   },
+   {
+    "id": "t3",
+    "start": 9.58,
+    "end": 11.7,
+    "text": "But what's wrong with this glacial water?"
+   },
+   {
+    "id": "t4",
+    "start": 11.7,
+    "end": 16.18,
+    "text": "At first glance, this water looks like the purest liquid that exists on the planet, and"
+   },
+   {
+    "id": "t5",
+    "start": 16.18,
+    "end": 20.94,
+    "text": "many tourists try to try it, of course, and they don't even realize how much they risk."
+   },
+   {
+    "id": "t6",
+    "start": 20.94,
+    "end": 25.98,
+    "text": "In fact, behind the transparency of this water, there are many dangers invisible to the eyes."
+   },
+   {
+    "id": "t7",
+    "start": 25.98,
+    "end": 30.48,
+    "text": "The thing is, that this water comes from ancient glaciers in Antarctica, that are several tens"
+   },
+   {
+    "id": "t8",
+    "start": 30.48,
+    "end": 34.94,
+    "text": "of millions of years old, and every drop of this frozen water is like a time capsule,"
+   },
+   {
+    "id": "t9",
+    "start": 34.94,
+    "end": 38.9,
+    "text": "and the age of this water exceeds the age when those very dinosaurs walk the earth."
+   },
+   {
+    "id": "t10",
+    "start": 38.9,
+    "end": 43.1,
+    "text": "But the most frightening thing is that if you start studying this water under a microscope,"
+   },
+   {
+    "id": "t11",
+    "start": 43.1,
+    "end": 47.58,
+    "text": "you can see ancient bacteria and parasites there, which are also older than those very"
+   },
+   {
+    "id": "t12",
+    "start": 47.58,
+    "end": 51.78,
+    "text": "dinosaurs, and people just don't have immunity from these ancient organisms."
+   },
+   {
+    "id": "t13",
+    "start": 51.78,
+    "end": 55.44,
+    "text": "And this blogger didn't know about it either, and what happened to him after taking a sip"
+   },
+   {
+    "id": "t14",
+    "start": 55.44,
+    "end": 59.56,
+    "text": "of this water was shocking, you can take a look at it yourself by searching for TikTok"
+   },
+   {
+    "id": "t15",
+    "start": 59.56,
+    "end": 61.84,
+    "text": "for the last sip of glacial water."
+   }
+  ]
+ }
+}

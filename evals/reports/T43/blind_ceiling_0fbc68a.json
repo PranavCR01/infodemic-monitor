@@ -1,0 +1,202 @@
+{
+ "first": "git:0fbc68a@0fbc68a05a7d:research/claim-level/dataset",
+ "videos": 26,
+ "first_claims": 117,
+ "second_claims": 127,
+ "strict": {
+  "matched": 83,
+  "precision": 0.6535433070866141,
+  "recall": 0.7094017094017094,
+  "f1": 0.6803278688524591
+ },
+ "meaning": {
+  "matched": 96,
+  "precision": 0.7559055118110236,
+  "recall": 0.8205128205128205,
+  "f1": 0.7868852459016393
+ },
+ "per_video": [
+  {
+   "video_id": "v11",
+   "first": 3,
+   "second": 3,
+   "strict_matched": 3,
+   "meaning_matched": 3
+  },
+  {
+   "video_id": "v21",
+   "first": 6,
+   "second": 8,
+   "strict_matched": 5,
+   "meaning_matched": 6
+  },
+  {
+   "video_id": "v22",
+   "first": 6,
+   "second": 7,
+   "strict_matched": 6,
+   "meaning_matched": 6
+  },
+  {
+   "video_id": "v23",
+   "first": 3,
+   "second": 3,
+   "strict_matched": 3,
+   "meaning_matched": 3
+  },
+  {
+   "video_id": "v24",
+   "first": 4,
+   "second": 3,
+   "strict_matched": 2,
+   "meaning_matched": 2
+  },
+  {
+   "video_id": "v36",
+   "first": 5,
+   "second": 9,
+   "strict_matched": 3,
+   "meaning_matched": 5
+  },
+  {
+   "video_id": "v44",
+   "first": 2,
+   "second": 2,
+   "strict_matched": 2,
+   "meaning_matched": 2
+  },
+  {
+   "video_id": "v68",
+   "first": 3,
+   "second": 5,
+   "strict_matched": 2,
+   "meaning_matched": 3
+  },
+  {
+   "video_id": "v69",
+   "first": 7,
+   "second": 13,
+   "strict_matched": 6,
+   "meaning_matched": 7
+  },
+  {
+   "video_id": "v71",
+   "first": 6,
+   "second": 12,
+   "strict_matched": 6,
+   "meaning_matched": 6
+  },
+  {
+   "video_id": "v78",
+   "first": 2,
+   "second": 2,
+   "strict_matched": 2,
+   "meaning_matched": 2
+  },
+  {
+   "video_id": "v79",
+   "first": 3,
+   "second": 5,
+   "strict_matched": 3,
+   "meaning_matched": 3
+  },
+  {
+   "video_id": "v100",
+   "first": 3,
+   "second": 1,
+   "strict_matched": 0,
+   "meaning_matched": 1
+  },
+  {
+   "video_id": "v109",
+   "first": 11,
+   "second": 11,
+   "strict_matched": 7,
+   "meaning_matched": 9
+  },
+  {
+   "video_id": "v110",
+   "first": 1,
+   "second": 1,
+   "strict_matched": 1,
+   "meaning_matched": 1
+  },
+  {
+   "video_id": "v114",
+   "first": 5,
+   "second": 3,
+   "strict_matched": 3,
+   "meaning_matched": 3
+  },
+  {
+   "video_id": "v120",
+   "first": 4,
+   "second": 4,
+   "strict_matched": 2,
+   "meaning_matched": 4
+  },
+  {
+   "video_id": "v121",
+   "first": 3,
+   "second": 2,
+   "strict_matched": 2,
+   "meaning_matched": 2
+  },
+  {
+   "video_id": "v122",
+   "first": 9,
+   "second": 4,
+   "strict_matched": 3,
+   "meaning_matched": 4
+  },
+  {
+   "video_id": "v131",
+   "first": 9,
+   "second": 9,
+   "strict_matched": 9,
+   "meaning_matched": 9
+  },
+  {
+   "video_id": "v135",
+   "first": 6,
+   "second": 5,
+   "strict_matched": 4,
+   "meaning_matched": 5
+  },
+  {
+   "video_id": "v141",
+   "first": 4,
+   "second": 4,
+   "strict_matched": 3,
+   "meaning_matched": 3
+  },
+  {
+   "video_id": "v143",
+   "first": 2,
+   "second": 2,
+   "strict_matched": 2,
+   "meaning_matched": 2
+  },
+  {
+   "video_id": "v167",
+   "first": 4,
+   "second": 3,
+   "strict_matched": 0,
+   "meaning_matched": 0
+  },
+  {
+   "video_id": "v176",
+   "first": 2,
+   "second": 2,
+   "strict_matched": 1,
+   "meaning_matched": 2
+  },
+  {
+   "video_id": "v177",
+   "first": 4,
+   "second": 4,
+   "strict_matched": 3,
+   "meaning_matched": 3
+  }
+ ]
+}

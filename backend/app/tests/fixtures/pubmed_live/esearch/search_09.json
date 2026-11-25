@@ -1,0 +1,18 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "258",
+  "retmax": "3",
+  "retstart": "0",
+  "idlist": [
+   "36848916",
+   "32684122",
+   "32898686"
+  ],
+  "translationset": [],
+  "querytranslation": "(\"Electromagnetic Fields\"[MeSH Terms] OR \"5g\"[Title/Abstract] OR \"radiofrequency\"[Title/Abstract]) AND (\"covid 19\"[MeSH Terms] OR \"covid 19\"[Title/Abstract] OR \"sars-cov-2\"[Title/Abstract])"
+ }
+}

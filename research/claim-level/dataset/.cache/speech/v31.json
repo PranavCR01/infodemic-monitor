@@ -1,0 +1,188 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.971,
+  "duration_seconds": 103.54,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.36,
+    "text": "Hey, it's Mike. I'm a doctor. I'm gonna debunk some of this crap that I keep seeing all over TikTok."
+   },
+   {
+    "id": "t2",
+    "start": 5.92,
+    "end": 9.12,
+    "text": "After working 17 years as an OBGYN, I got randomly fired."
+   },
+   {
+    "id": "t3",
+    "start": 10.16,
+    "end": 13.68,
+    "text": "So here's the health benefits. I wasn't supposed to share with patients."
+   },
+   {
+    "id": "t4",
+    "start": 13.68,
+    "end": 16.24,
+    "text": "Wow, I can't wait to see this. It's gonna be good."
+   },
+   {
+    "id": "t5",
+    "start": 16.24,
+    "end": 22.3,
+    "text": "Tea tree reduces all acne by 512 percent. 512 percent."
+   },
+   {
+    "id": "t6",
+    "start": 23.5,
+    "end": 27.74,
+    "text": "I'm pretty sure, I'm not 100% no, but I'm pretty sure that you can't"
+   },
+   {
+    "id": "t7",
+    "start": 27.74,
+    "end": 32.74,
+    "text": "Reverse something more than 100% but I could be wrong."
+   },
+   {
+    "id": "t8",
+    "start": 32.74,
+    "end": 36.74,
+    "text": "Mathematicians don't come at me if that's wrong but 512%."
+   },
+   {
+    "id": "t9",
+    "start": 36.74,
+    "end": 38.74,
+    "text": "Look, stick to simple things for acne."
+   },
+   {
+    "id": "t10",
+    "start": 38.74,
+    "end": 40.74,
+    "text": "I've already done lots of videos on it. Do that."
+   },
+   {
+    "id": "t11",
+    "start": 40.74,
+    "end": 41.74,
+    "text": "Don't bother with tea tree."
+   },
+   {
+    "id": "t12",
+    "start": 41.74,
+    "end": 45.74,
+    "text": "It can actually be quite damaging to your skin if you apply it directly and don't dilute it down."
+   },
+   {
+    "id": "t13",
+    "start": 45.74,
+    "end": 46.74,
+    "text": "Anyway, next."
+   },
+   {
+    "id": "t14",
+    "start": 46.74,
+    "end": 47.74,
+    "text": "Macker root."
+   },
+   {
+    "id": "t15",
+    "start": 47.74,
+    "end": 50.74,
+    "text": "Three times your pencil size in 30 days."
+   },
+   {
+    "id": "t16",
+    "start": 50.74,
+    "end": 52.03,
+    "text": "Really?"
+   },
+   {
+    "id": "t17",
+    "start": 52.03,
+    "end": 54.79,
+    "text": "Beat root."
+   },
+   {
+    "id": "t18",
+    "start": 54.79,
+    "end": 55.79,
+    "text": "Spikes."
+   },
+   {
+    "id": "t19",
+    "start": 55.79,
+    "end": 57.79,
+    "text": "Muscle growth in 30 days."
+   },
+   {
+    "id": "t20",
+    "start": 57.79,
+    "end": 63.79,
+    "text": "Yeah, that's him, you know, the Ronnie Coleman diet, how he used to eat just tubs of beetroot. I'm joking. He didn't."
+   },
+   {
+    "id": "t21",
+    "start": 63.79,
+    "end": 69.61,
+    "text": "Yeah, it's nonsense. And lastly, Batana oil adds three inches of hair to your scalp."
+   },
+   {
+    "id": "t22",
+    "start": 71.17,
+    "end": 76.05,
+    "text": "Reverse's you're balding completely. Wow. Yeah, this is great. I mean the hair transplant"
+   },
+   {
+    "id": "t23",
+    "start": 76.45,
+    "end": 78.89,
+    "text": "surgeons in Turkey are really shaking in the boots with this one."
+   },
+   {
+    "id": "t24",
+    "start": 78.89,
+    "end": 84.73,
+    "text": "And look, people are gonna try and sell you stuff on TikTok and social media and claim that they have a cure for everything."
+   },
+   {
+    "id": "t25",
+    "start": 84.73,
+    "end": 88.41,
+    "text": "There's no simple fixes these days, there's no quick fixes."
+   },
+   {
+    "id": "t26",
+    "start": 88.41,
+    "end": 92.73,
+    "text": "You know, normally I come out with studies and evidence to back up what I say but for"
+   },
+   {
+    "id": "t27",
+    "start": 92.73,
+    "end": 94.61,
+    "text": "this lot of shit, I don't really need to do it."
+   },
+   {
+    "id": "t28",
+    "start": 94.61,
+    "end": 99.53,
+    "text": "It's just nonsense, you know, think about what you're seeing and what you're consuming"
+   },
+   {
+    "id": "t29",
+    "start": 99.53,
+    "end": 103.33,
+    "text": "on social media and if it sounds too good to be true, it probably is."
+   }
+  ]
+ }
+}

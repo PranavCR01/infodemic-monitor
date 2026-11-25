@@ -17,6 +17,8 @@ build/
 # Node
 frontend/node_modules/
 frontend/.next/
+frontend/next-env.d.ts
+frontend/tsconfig.tsbuildinfo
 
 # IDE
 .idea/
@@ -48,3 +50,17 @@ research/claim-level/dataset/videos/
 *.mov
 *.webm
 *.mkv
+
+# CI test report (backend-tests workflow)
+backend/pytest-report.xml
+
+# Evaluation run outputs (predictions, traces)
+backend/eval_runs/
+frontend/e2e-report/
+frontend/e2e-results/
+
+# Golden label set: archives, audio and the per-stage extraction cache never get committed
+*.m4a
+*.wav
+*.zip
+research/claim-level/dataset/.cache/

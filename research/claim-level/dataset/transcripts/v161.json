@@ -1,0 +1,180 @@
+{
+ "video_id": "v161",
+ "filename": "new_TikTok_7477874661959699734.mp4",
+ "relative_path": "new_TikTok_7477874661959699734.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "",
+ "extracted_at": "2026-11-23T08:45:59",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.984,
+  "duration_seconds": 21.71,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.68,
+    "text": "Did you know that? The best fruit for boosting immunity is oranges. The best fruit for digestion"
+   },
+   {
+    "id": "t2",
+    "start": 5.68,
+    "end": 10.72,
+    "text": "is pineapple. The best fruit for brain health is blueberries. The best fruit for reducing"
+   },
+   {
+    "id": "t3",
+    "start": 10.72,
+    "end": 16.64,
+    "text": "stress is bananas. The best fruit for heart health is pomegranate. The best fruit for detoxing the"
+   },
+   {
+    "id": "t4",
+    "start": 16.64,
+    "end": 21.52,
+    "text": "liver is lemon. Let food be your medicine. Follow me for more health tips."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 11,
+  "detections": [
+   {
+    "time": 2.0,
+    "text": "FRUIT FOR BOOSTING",
+    "confidence": 0.723
+   },
+   {
+    "time": 4.0,
+    "text": "IMMUNITY IS ORANCES",
+    "confidence": 0.93
+   },
+   {
+    "time": 6.0,
+    "text": "FOR DICESTION IS",
+    "confidence": 0.714
+   },
+   {
+    "time": 8.0,
+    "text": "BRAIN HEALTH IS",
+    "confidence": 0.855
+   },
+   {
+    "time": 10.0,
+    "text": "THEBEST FRUIT",
+    "confidence": 0.968
+   },
+   {
+    "time": 12.0,
+    "text": "IS BANANAS",
+    "confidence": 0.854
+   },
+   {
+    "time": 14.0,
+    "text": "IS PALM CRANITE",
+    "confidence": 0.683
+   },
+   {
+    "time": 16.0,
+    "text": "FORDETOXINC THE",
+    "confidence": 0.511
+   },
+   {
+    "time": 18.0,
+    "text": "LET FOODBE",
+    "confidence": 0.922
+   },
+   {
+    "time": 20.0,
+    "text": "FOLLOW MEFOR",
+    "confidence": 0.958
+   }
+  ],
+  "captions": [
+   {
+    "text": "FRUIT FOR BOOSTING",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.723,
+    "id": "o1"
+   },
+   {
+    "text": "IMMUNITY IS ORANCES",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.93,
+    "id": "o2"
+   },
+   {
+    "text": "FOR DICESTION IS",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.714,
+    "id": "o3"
+   },
+   {
+    "text": "BRAIN HEALTH IS",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.855,
+    "id": "o4"
+   },
+   {
+    "text": "THEBEST FRUIT",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.968,
+    "id": "o5"
+   },
+   {
+    "text": "IS BANANAS",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.854,
+    "id": "o6"
+   },
+   {
+    "text": "IS PALM CRANITE",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.683,
+    "id": "o7"
+   },
+   {
+    "text": "FORDETOXINC THE",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.511,
+    "id": "o8"
+   },
+   {
+    "text": "LET FOODBE",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.922,
+    "id": "o9"
+   },
+   {
+    "text": "FOLLOW MEFOR",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.958,
+    "id": "o10"
+   }
+  ]
+ }
+}

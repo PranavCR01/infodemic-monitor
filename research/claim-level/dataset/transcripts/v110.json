@@ -1,0 +1,316 @@
+{
+ "video_id": "v110",
+ "filename": "new_TikTok_7182235931003456773.mp4",
+ "relative_path": "new_TikTok_7182235931003456773.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@charlotteinga",
+ "extracted_at": "2026-11-23T08:45:56",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.318,
+  "duration_seconds": 30.35,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 1.07,
+    "end": 3.07,
+    "text": "You"
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 16,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Sabias que puedes",
+    "confidence": 0.998
+   },
+   {
+    "time": 0.0,
+    "text": "cambiar el color",
+    "confidence": 0.715
+   },
+   {
+    "time": 0.0,
+    "text": "detus @jos?",
+    "confidence": 0.939
+   },
+   {
+    "time": 2.0,
+    "text": "Sabias que puedes",
+    "confidence": 0.815
+   },
+   {
+    "time": 2.0,
+    "text": "cambiar el color",
+    "confidence": 0.725
+   },
+   {
+    "time": 2.0,
+    "text": "detus @jos?",
+    "confidence": 0.985
+   },
+   {
+    "time": 4.0,
+    "text": "Los mios eran",
+    "confidence": 0.705
+   },
+   {
+    "time": 4.0,
+    "text": "color avellana",
+    "confidence": 0.95
+   },
+   {
+    "time": 6.0,
+    "text": "Primera sesion",
+    "confidence": 0.763
+   },
+   {
+    "time": 8.0,
+    "text": "Lentes para Ia",
+    "confidence": 0.892
+   },
+   {
+    "time": 8.0,
+    "text": "sensibilidad a la luz",
+    "confidence": 0.659
+   },
+   {
+    "time": 10.0,
+    "text": "Camino a la",
+    "confidence": 0.694
+   },
+   {
+    "time": 10.0,
+    "text": "Segunda sesion",
+    "confidence": 0.725
+   },
+   {
+    "time": 12.0,
+    "text": "Camino a la",
+    "confidence": 0.647
+   },
+   {
+    "time": 12.0,
+    "text": "Segunda sesion",
+    "confidence": 0.777
+   },
+   {
+    "time": 14.0,
+    "text": "Vina Del Mar",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.0,
+    "text": "De nuevo lentes",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.0,
+    "text": "Com@ vamos",
+    "confidence": 0.702
+   },
+   {
+    "time": 20.0,
+    "text": "Com@ vamos",
+    "confidence": 0.579
+   },
+   {
+    "time": 22.0,
+    "text": "Tercera sesion",
+    "confidence": 0.956
+   },
+   {
+    "time": 24.0,
+    "text": "Como van",
+    "confidence": 0.941
+   },
+   {
+    "time": 26.0,
+    "text": "Como van",
+    "confidence": 0.999
+   },
+   {
+    "time": 30.0,
+    "text": "Hasta ahora el",
+    "confidence": 0.976
+   },
+   {
+    "time": 30.0,
+    "text": "antesy despues",
+    "confidence": 0.967
+   }
+  ],
+  "captions": [
+   {
+    "text": "Sabias que puedes",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.998,
+    "id": "o1"
+   },
+   {
+    "text": "cambiar el color",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.715,
+    "id": "o2"
+   },
+   {
+    "text": "detus @jos?",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.939,
+    "id": "o3"
+   },
+   {
+    "text": "Sabias que puedes",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.815,
+    "id": "o4"
+   },
+   {
+    "text": "cambiar el color",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.725,
+    "id": "o5"
+   },
+   {
+    "text": "detus @jos?",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.985,
+    "id": "o6"
+   },
+   {
+    "text": "Los mios eran",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.705,
+    "id": "o7"
+   },
+   {
+    "text": "color avellana",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.95,
+    "id": "o8"
+   },
+   {
+    "text": "Primera sesion",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.763,
+    "id": "o9"
+   },
+   {
+    "text": "Lentes para Ia",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.892,
+    "id": "o10"
+   },
+   {
+    "text": "sensibilidad a la luz",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.659,
+    "id": "o11"
+   },
+   {
+    "text": "Camino a la",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.694,
+    "id": "o12"
+   },
+   {
+    "text": "Segunda sesion",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.725,
+    "id": "o13"
+   },
+   {
+    "text": "Camino a la",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.647,
+    "id": "o14"
+   },
+   {
+    "text": "Segunda sesion",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.777,
+    "id": "o15"
+   },
+   {
+    "text": "Vina Del Mar",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.999,
+    "id": "o16"
+   },
+   {
+    "text": "De nuevo lentes",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.999,
+    "id": "o17"
+   },
+   {
+    "text": "Com@ vamos",
+    "start": 18.0,
+    "end": 20.0,
+    "confidence": 0.702,
+    "id": "o18"
+   },
+   {
+    "text": "Tercera sesion",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.956,
+    "id": "o19"
+   },
+   {
+    "text": "Como van",
+    "start": 24.0,
+    "end": 26.0,
+    "confidence": 0.999,
+    "id": "o20"
+   },
+   {
+    "text": "Hasta ahora el",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.976,
+    "id": "o21"
+   },
+   {
+    "text": "antesy despues",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.967,
+    "id": "o22"
+   }
+  ]
+ }
+}

@@ -100,6 +100,10 @@ Only start these once 5a–5d are done and merged.
 
 ### 6a. Per-user job isolation
 
+**Update (2026-11-23): built on `langgraph-build` by T28 as migration `0011`** (`jobs.user_id`,
+ownership checks in `app/api/ownership.py`; see context/MULTI_AGENT.md §7w). Old jobs
+have no owner and need one assigned by a person.
+
 - Add `user_id` (populated from the JWT `sub` claim) to the `Job` model.
 - In `create_job`, read `current_user["sub"]` and store it on the new job.
 - In `list_jobs`, filter by the current user's `sub` — no more global job list.
@@ -107,7 +111,12 @@ Only start these once 5a–5d are done and merged.
   job/result should get a 404, not a 403 (don't leak existence).
 - Migration number follows whatever the dedup migration landed as — **0005 if dedup
   hasn't shipped yet, 0006 if it has.** Check `backend/app/db/migrations/versions/` before
-  naming your revision.
+  naming your revision. **Update (2026-11-22):** on `langgraph-build`, `0006` is the offline library tables
+  (T12) and `0007` is the `REVIEW_REQUIRED` job state and `human_reviews` table (T09,
+  #36); `0008` is the graph pipeline's claim-level tables (T11, #38), so per-user
+  isolation should be `0009` with `down_revision = "0008"` once
+  `langgraph-build` is merged into `main`; if it lands on `main` first, the
+  `langgraph-build` migrations are renumbered after it at merge time.
 
 ### 6b. URL ingestion
 

@@ -1,0 +1,98 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 86.54,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 2.88,
+    "text": "So, someone went on the news and said this."
+   },
+   {
+    "id": "t2",
+    "start": 2.88,
+    "end": 9.04,
+    "text": "Well, cane sugar, our bodies can actually digest it. High fructose corn syrup, our body doesn't really know what to do with it, it doesn't have the proper enzymes or stuff to break it down."
+   },
+   {
+    "id": "t3",
+    "start": 9.04,
+    "end": 14.96,
+    "text": "So by adding cane sugar instead of high fructose corn syrup, it wouldn't be as overwhelming to the liver and wouldn't have as high of blood sugar spikes."
+   },
+   {
+    "id": "t4",
+    "start": 14.96,
+    "end": 21.84,
+    "text": "So ignoring the fact that the news, if you can call it that, is bringing on nutrition influencers instead of experts to talk about scientific topics."
+   },
+   {
+    "id": "t5",
+    "start": 21.84,
+    "end": 26.72,
+    "text": "the fact that table sugar sucrose and high fructose corn syrup are very chemically similar,"
+   },
+   {
+    "id": "t6",
+    "start": 26.72,
+    "end": 32.16,
+    "text": "table sugar being 50% fructose, 50% glucose, and high fructose corn syrup often being"
+   },
+   {
+    "id": "t7",
+    "start": 32.16,
+    "end": 39.04,
+    "text": "55% fructose and 45% glucose, and that your body does contain the machinery and the enzymes to"
+   },
+   {
+    "id": "t8",
+    "start": 39.04,
+    "end": 43.76,
+    "text": "break them down. And a beverage that is basically liquid sugar substituting one type of sugar for"
+   },
+   {
+    "id": "t9",
+    "start": 43.76,
+    "end": 48.96,
+    "text": "a very similar type of sugar is probably not gonna do a whole lot in the realm of making people"
+   },
+   {
+    "id": "t10",
+    "start": 48.96,
+    "end": 53.36,
+    "text": "healthier. And if messages like that cause the public to think that sugar sweetened beverages"
+   },
+   {
+    "id": "t11",
+    "start": 53.36,
+    "end": 57.52,
+    "text": "are now healthier because they have a different type of sugar, resulting in the population"
+   },
+   {
+    "id": "t12",
+    "start": 57.52,
+    "end": 63.04,
+    "text": "drinking more, that's probably not a positive outcome. Dr. Nurek made a great video discussing"
+   },
+   {
+    "id": "t13",
+    "start": 63.04,
+    "end": 66.96,
+    "text": "that interview in more depth, but this is what I thought when I started to hear that woman speak."
+   },
+   {
+    "id": "t14",
+    "start": 82.53,
+    "end": 85.73,
+    "text": "So ignore influencers on the internet and on the news!"
+   }
+  ]
+ }
+}

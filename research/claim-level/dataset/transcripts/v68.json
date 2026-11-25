@@ -1,0 +1,3402 @@
+{
+ "video_id": "v68",
+ "filename": "v12044gd0000dbmj3q7og65nrbkntlig.mp4",
+ "relative_path": "Dataset-Sept-2026/Joshua Ryan Fajardo/DEBUNKING/v12044gd0000dbmj3q7og65nrbkntlig.mp4",
+ "collector": "Joshua Ryan Fajardo",
+ "collector_label": "DEBUNKING",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:42:34",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 92.09,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 1.12,
+    "text": "Google is straight up lying to you."
+   },
+   {
+    "id": "t2",
+    "start": 1.12,
+    "end": 2.28,
+    "text": "I'm going to show you exactly how they're doing it,"
+   },
+   {
+    "id": "t3",
+    "start": 2.28,
+    "end": 3.8,
+    "text": "because we're in the middle of the biggest information war"
+   },
+   {
+    "id": "t4",
+    "start": 3.8,
+    "end": 4.24,
+    "text": "of all time."
+   },
+   {
+    "id": "t5",
+    "start": 4.24,
+    "end": 8.04,
+    "text": "If you Google, does tap water lower testosterone?"
+   },
+   {
+    "id": "t6",
+    "start": 8.04,
+    "end": 9.55,
+    "text": "Google straight up tells you no."
+   },
+   {
+    "id": "t7",
+    "start": 9.55,
+    "end": 11.11,
+    "text": "Tap water does not lower testosterone."
+   },
+   {
+    "id": "t8",
+    "start": 11.11,
+    "end": 14.68,
+    "text": "Does tap water contain atrazine?"
+   },
+   {
+    "id": "t9",
+    "start": 14.68,
+    "end": 16.88,
+    "text": "Yes, atrazine is commonly found in tap water in the US."
+   },
+   {
+    "id": "t10",
+    "start": 16.88,
+    "end": 19.92,
+    "text": "Is atrazine an endocrine disruptor?"
+   },
+   {
+    "id": "t11",
+    "start": 20.46,
+    "end": 21.26,
+    "text": "Did you look at that?"
+   },
+   {
+    "id": "t12",
+    "start": 21.26,
+    "end": 21.76,
+    "text": "Yes."
+   },
+   {
+    "id": "t13",
+    "start": 21.76,
+    "end": 26.91,
+    "text": "Do endocrine disruptors lower testosterone?"
+   },
+   {
+    "id": "t14",
+    "start": 26.91,
+    "end": 28.62,
+    "text": "Oh."
+   },
+   {
+    "id": "t15",
+    "start": 28.62,
+    "end": 30.26,
+    "text": "If you ask Google simple questions,"
+   },
+   {
+    "id": "t16",
+    "start": 30.26,
+    "end": 31.62,
+    "text": "you're going to get a simple answer."
+   },
+   {
+    "id": "t17",
+    "start": 31.62,
+    "end": 37.14,
+    "text": "another example of the dose makes the poison of the item itself. Atrazine, a common pesticide"
+   },
+   {
+    "id": "t18",
+    "start": 37.14,
+    "end": 44.77,
+    "text": "that's found in tap water, has a regulatory limit of three parts per billion. They actually looked"
+   },
+   {
+    "id": "t19",
+    "start": 44.77,
+    "end": 50.45,
+    "text": "at its effect on rats when it comes to lowering testosterone and they filled up those rats at"
+   },
+   {
+    "id": "t20",
+    "start": 50.45,
+    "end": 61.41,
+    "text": "50 milligrams per kilogram, which in humans you would need to drink 1.2 million liters of tap water"
+   },
+   {
+    "id": "t21",
+    "start": 61.41,
+    "end": 67.57,
+    "text": "a day to have it affect your testosterone, meaning you would need to drink half an Olympic swimming"
+   },
+   {
+    "id": "t22",
+    "start": 67.57,
+    "end": 74.13,
+    "text": "pool for it to affect you. Especially considering a large percentage of the American public depend"
+   },
+   {
+    "id": "t23",
+    "start": 74.13,
+    "end": 79.01,
+    "text": "on tap water, not just for drinking, but also things like cooking, cleaning, and the like that"
+   },
+   {
+    "id": "t24",
+    "start": 79.01,
+    "end": 85.09,
+    "text": "may be demonizing tap water isn't the move. Be very careful where you're getting your scientific"
+   },
+   {
+    "id": "t25",
+    "start": 85.09,
+    "end": 88.13,
+    "text": "information from. Don't get scammed, take back your health."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 47,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "Proof that Google is",
+    "confidence": 0.569
+   },
+   {
+    "time": 0.0,
+    "text": "drantihero md",
+    "confidence": 0.908
+   },
+   {
+    "time": 2.0,
+    "text": "Proof that Google is",
+    "confidence": 0.748
+   },
+   {
+    "time": 2.0,
+    "text": "Tiktok",
+    "confidence": 0.827
+   },
+   {
+    "time": 2.0,
+    "text": "@ drantihero md",
+    "confidence": 0.855
+   },
+   {
+    "time": 4.0,
+    "text": "Proof that Google is",
+    "confidence": 0.783
+   },
+   {
+    "time": 4.0,
+    "text": "Tiktok",
+    "confidence": 0.805
+   },
+   {
+    "time": 4.0,
+    "text": "@ drantihero md",
+    "confidence": 0.731
+   },
+   {
+    "time": 6.0,
+    "text": "gle",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "6",
+    "confidence": 0.811
+   },
+   {
+    "time": 6.0,
+    "text": "VOTE )",
+    "confidence": 0.795
+   },
+   {
+    "time": 8.0,
+    "text": "Standard tap water does not Hirectly or significantly",
+    "confidence": 0.634
+   },
+   {
+    "time": 8.0,
+    "text": "lower testosterone levels in healthy adults, though it",
+    "confidence": 0.797
+   },
+   {
+    "time": 10.0,
+    "text": "Standard tap water does not Hirectly or significantly",
+    "confidence": 0.703
+   },
+   {
+    "time": 10.0,
+    "text": "lower testosterone levels in healthy adults, though it",
+    "confidence": 0.717
+   },
+   {
+    "time": 10.0,
+    "text": "diamtihero md",
+    "confidence": 0.534
+   },
+   {
+    "time": 12.0,
+    "text": "gle",
+    "confidence": 0.998
+   },
+   {
+    "time": 12.0,
+    "text": "6",
+    "confidence": 0.726
+   },
+   {
+    "time": 12.0,
+    "text": "VOTE",
+    "confidence": 0.953
+   },
+   {
+    "time": 12.0,
+    "text": "dlamtihero md",
+    "confidence": 0.563
+   },
+   {
+    "time": 14.0,
+    "text": "diamtihero.md",
+    "confidence": 0.531
+   },
+   {
+    "time": 16.0,
+    "text": "atrazine;",
+    "confidence": 0.689
+   },
+   {
+    "time": 16.0,
+    "text": "widely used agricultural herbicide primarily",
+    "confidence": 0.81
+   },
+   {
+    "time": 16.0,
+    "text": "sugarcane crops:",
+    "confidence": 0.857
+   },
+   {
+    "time": 16.0,
+    "text": "sprayed on corn; sorghum; and",
+    "confidence": 0.878
+   },
+   {
+    "time": 16.0,
+    "text": "Key",
+    "confidence": 0.746
+   },
+   {
+    "time": 16.0,
+    "text": "Facts About Atrazine in Tap Water",
+    "confidence": 0.805
+   },
+   {
+    "time": 16.0,
+    "text": "Widespread Contamination: Atrazine",
+    "confidence": 0.985
+   },
+   {
+    "time": 16.0,
+    "text": "one of the",
+    "confidence": 0.69
+   },
+   {
+    "time": 16.0,
+    "text": "mostufrequentl detected pesticidesin U Swater",
+    "confidence": 0.568
+   },
+   {
+    "time": 18.0,
+    "text": "6",
+    "confidence": 0.998
+   },
+   {
+    "time": 18.0,
+    "text": "VOTE",
+    "confidence": 0.673
+   },
+   {
+    "time": 20.0,
+    "text": "widely used chlorotriazine herbicide that",
+    "confidence": 0.961
+   },
+   {
+    "time": 20.0,
+    "text": "Atrazine IS",
+    "confidence": 0.901
+   },
+   {
+    "time": 20.0,
+    "text": "functions as an endocrine disruptor, interfering with",
+    "confidence": 0.806
+   },
+   {
+    "time": 20.0,
+    "text": "hormone systems in humans; animals; and wildlife_",
+    "confidence": 0.648
+   },
+   {
+    "time": 20.0,
+    "text": "How Atrazine Disrupts Hormones",
+    "confidence": 0.895
+   },
+   {
+    "time": 22.0,
+    "text": "To",
+    "confidence": 0.71
+   },
+   {
+    "time": 24.0,
+    "text": "b",
+    "confidence": 0.558
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 0.633
+   },
+   {
+    "time": 26.0,
+    "text": "Overview",
+    "confidence": 0.983
+   },
+   {
+    "time": 26.0,
+    "text": "Yes; endocrine-disrupting chemicals",
+    "confidence": 0.93
+   },
+   {
+    "time": 26.0,
+    "text": "EDCs) can",
+    "confidence": 0.824
+   },
+   {
+    "time": 26.0,
+    "text": "lower testosterone levels",
+    "confidence": 0.729
+   },
+   {
+    "time": 26.0,
+    "text": "intertere with how",
+    "confidence": 0.711
+   },
+   {
+    "time": 26.0,
+    "text": "the body;",
+    "confidence": 0.694
+   },
+   {
+    "time": 26.0,
+    "text": "testosterone works",
+    "confidence": 0.991
+   },
+   {
+    "time": 28.0,
+    "text": "m",
+    "confidence": 0.605
+   },
+   {
+    "time": 28.0,
+    "text": "Overview",
+    "confidence": 0.981
+   },
+   {
+    "time": 28.0,
+    "text": "Yes; endocrine-disrupting chemicals",
+    "confidence": 0.932
+   },
+   {
+    "time": 28.0,
+    "text": "EDCs) can",
+    "confidence": 0.831
+   },
+   {
+    "time": 28.0,
+    "text": "interfere with how",
+    "confidence": 0.756
+   },
+   {
+    "time": 28.0,
+    "text": "lower testosterone levels",
+    "confidence": 0.737
+   },
+   {
+    "time": 28.0,
+    "text": "the body;",
+    "confidence": 0.739
+   },
+   {
+    "time": 28.0,
+    "text": "testosterone works",
+    "confidence": 0.989
+   },
+   {
+    "time": 30.0,
+    "text": "Proof that Google is",
+    "confidence": 0.802
+   },
+   {
+    "time": 30.0,
+    "text": "lying to you",
+    "confidence": 0.577
+   },
+   {
+    "time": 30.0,
+    "text": "GOOCLE SIMPLE QUESTIONS;",
+    "confidence": 0.552
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "@ drantihero md",
+    "confidence": 0.742
+   },
+   {
+    "time": 32.0,
+    "text": "Proof that Google is",
+    "confidence": 0.806
+   },
+   {
+    "time": 32.0,
+    "text": "THIS IS ANOTHER",
+    "confidence": 0.956
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 32.0,
+    "text": "@ drantihero md",
+    "confidence": 0.748
+   },
+   {
+    "time": 34.0,
+    "text": "Proof that Google is",
+    "confidence": 0.782
+   },
+   {
+    "time": 34.0,
+    "text": "lying to you",
+    "confidence": 0.589
+   },
+   {
+    "time": 34.0,
+    "text": "NOT THE ITEM ITSELF.",
+    "confidence": 0.949
+   },
+   {
+    "time": 34.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 34.0,
+    "text": "drantihero md",
+    "confidence": 0.84
+   },
+   {
+    "time": 36.0,
+    "text": "ATRAZINE, A COMMON",
+    "confidence": 0.795
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.0,
+    "text": "dr antihero md",
+    "confidence": 0.55
+   },
+   {
+    "time": 38.0,
+    "text": "INTAP WATER;",
+    "confidence": 0.625
+   },
+   {
+    "time": 38.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "@ dr-antihero md",
+    "confidence": 0.703
+   },
+   {
+    "time": 40.0,
+    "text": "Acrylamide",
+    "confidence": 0.946
+   },
+   {
+    "time": 40.0,
+    "text": "MCL",
+    "confidence": 0.997
+   },
+   {
+    "time": 40.0,
+    "text": "Aluchlor",
+    "confidence": 0.669
+   },
+   {
+    "time": 40.0,
+    "text": "0.002",
+    "confidence": 0.696
+   },
+   {
+    "time": 40.0,
+    "text": "Atrazine",
+    "confidence": 0.981
+   },
+   {
+    "time": 40.0,
+    "text": "MCL",
+    "confidence": 0.984
+   },
+   {
+    "time": 40.0,
+    "text": "0.003",
+    "confidence": 0.696
+   },
+   {
+    "time": 40.0,
+    "text": "Benzene",
+    "confidence": 0.982
+   },
+   {
+    "time": 40.0,
+    "text": "MCL",
+    "confidence": 0.992
+   },
+   {
+    "time": 40.0,
+    "text": "0.005",
+    "confidence": 0.999
+   },
+   {
+    "time": 40.0,
+    "text": "Benzo(alpyrene (PAHs)",
+    "confidence": 0.925
+   },
+   {
+    "time": 40.0,
+    "text": "MCL",
+    "confidence": 0.998
+   },
+   {
+    "time": 40.0,
+    "text": "0.0002",
+    "confidence": 0.987
+   },
+   {
+    "time": 40.0,
+    "text": "Reviel Article",
+    "confidence": 0.576
+   },
+   {
+    "time": 40.0,
+    "text": "Open access",
+    "confidence": 0.868
+   },
+   {
+    "time": 40.0,
+    "text": "Published: 22 September 2023",
+    "confidence": 0.974
+   },
+   {
+    "time": 40.0,
+    "text": "US drinking water quality:",
+    "confidence": 0.639
+   },
+   {
+    "time": 40.0,
+    "text": "exposure risk profiles for",
+    "confidence": 0.964
+   },
+   {
+    "time": 40.0,
+    "text": "seven legacy and emerging",
+    "confidence": 0.903
+   },
+   {
+    "time": 40.0,
+    "text": "contaminants",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "LIMIT OF 3",
+    "confidence": 0.994
+   },
+   {
+    "time": 40.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "@ drantihero md",
+    "confidence": 0.625
+   },
+   {
+    "time": 42.0,
+    "text": "Acrylamide",
+    "confidence": 0.925
+   },
+   {
+    "time": 42.0,
+    "text": "MCL",
+    "confidence": 0.996
+   },
+   {
+    "time": 42.0,
+    "text": "Aluchlor",
+    "confidence": 0.742
+   },
+   {
+    "time": 42.0,
+    "text": "0.002",
+    "confidence": 0.711
+   },
+   {
+    "time": 42.0,
+    "text": "Atrazine",
+    "confidence": 0.987
+   },
+   {
+    "time": 42.0,
+    "text": "0.00}",
+    "confidence": 0.628
+   },
+   {
+    "time": 42.0,
+    "text": "Benzene",
+    "confidence": 0.984
+   },
+   {
+    "time": 42.0,
+    "text": "MCL",
+    "confidence": 0.994
+   },
+   {
+    "time": 42.0,
+    "text": "0.005",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.0,
+    "text": "Benzolalpyrene (PAHs)",
+    "confidence": 0.856
+   },
+   {
+    "time": 42.0,
+    "text": "MCL",
+    "confidence": 0.998
+   },
+   {
+    "time": 42.0,
+    "text": "0.0002",
+    "confidence": 0.983
+   },
+   {
+    "time": 42.0,
+    "text": "Reviel Article",
+    "confidence": 0.54
+   },
+   {
+    "time": 42.0,
+    "text": "Open access",
+    "confidence": 0.841
+   },
+   {
+    "time": 42.0,
+    "text": "Published: 22 September 2023",
+    "confidence": 0.778
+   },
+   {
+    "time": 42.0,
+    "text": "US drinking water quality:",
+    "confidence": 0.637
+   },
+   {
+    "time": 42.0,
+    "text": "exposure risk profiles for",
+    "confidence": 0.856
+   },
+   {
+    "time": 42.0,
+    "text": "seven legacy and emerging",
+    "confidence": 0.904
+   },
+   {
+    "time": 42.0,
+    "text": "contaminants",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "PARTS PER BILLION:",
+    "confidence": 0.797
+   },
+   {
+    "time": 42.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 42.0,
+    "text": "drantihero md",
+    "confidence": 0.72
+   },
+   {
+    "time": 44.0,
+    "text": "THEY ACTUALLY LOOKED",
+    "confidence": 0.982
+   },
+   {
+    "time": 44.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "drantihero md",
+    "confidence": 0.767
+   },
+   {
+    "time": 46.0,
+    "text": "ON RATS",
+    "confidence": 0.987
+   },
+   {
+    "time": 46.0,
+    "text": "TikTok",
+    "confidence": 0.854
+   },
+   {
+    "time": 46.0,
+    "text": "drantihero md",
+    "confidence": 0.878
+   },
+   {
+    "time": 48.0,
+    "text": "every day; the Group IIl received atrazine (50",
+    "confidence": 0.919
+   },
+   {
+    "time": 48.0,
+    "text": "mglkg bw) through a gastric tube for two",
+    "confidence": 0.903
+   },
+   {
+    "time": 48.0,
+    "text": "Articte",
+    "confidence": 0.525
+   },
+   {
+    "time": 48.0,
+    "text": "Open access",
+    "confidence": 0.976
+   },
+   {
+    "time": 48.0,
+    "text": "Published; 31 July 2024",
+    "confidence": 0.597
+   },
+   {
+    "time": 48.0,
+    "text": "Resveratrol ameliorates",
+    "confidence": 0.978
+   },
+   {
+    "time": 48.0,
+    "text": "atrazine-induced caspase-",
+    "confidence": 0.856
+   },
+   {
+    "time": 48.0,
+    "text": "dependent apoptosis and",
+    "confidence": 0.806
+   },
+   {
+    "time": 48.0,
+    "text": "fibrosis in the testis of adult",
+    "confidence": 0.718
+   },
+   {
+    "time": 48.0,
+    "text": "albino rats",
+    "confidence": 0.989
+   },
+   {
+    "time": 48.0,
+    "text": "Hala Mohamed Hassanin, Asmaa",
+    "confidence": 0.808
+   },
+   {
+    "time": 48.0,
+    "text": "Kamal",
+    "confidence": 0.999
+   },
+   {
+    "time": 48.0,
+    "text": "Omna",
+    "confidence": 0.988
+   },
+   {
+    "time": 48.0,
+    "text": "TO LOWERINC TESTOSTERONE,",
+    "confidence": 0.667
+   },
+   {
+    "time": 48.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "@ drantihero md",
+    "confidence": 0.672
+   },
+   {
+    "time": 50.0,
+    "text": "every day; the Group IIl received atrazine (50",
+    "confidence": 0.836
+   },
+   {
+    "time": 50.0,
+    "text": "mglkg bw) through a gastric tube for two",
+    "confidence": 0.874
+   },
+   {
+    "time": 50.0,
+    "text": "Open access",
+    "confidence": 0.986
+   },
+   {
+    "time": 50.0,
+    "text": "Published; 31 July 2024",
+    "confidence": 0.752
+   },
+   {
+    "time": 50.0,
+    "text": "Resveratrol ameliorates",
+    "confidence": 0.973
+   },
+   {
+    "time": 50.0,
+    "text": "atrazine-induced caspase-",
+    "confidence": 0.867
+   },
+   {
+    "time": 50.0,
+    "text": "dependent apoptosis and",
+    "confidence": 0.845
+   },
+   {
+    "time": 50.0,
+    "text": "fibrosis in the testis of adult",
+    "confidence": 0.778
+   },
+   {
+    "time": 50.0,
+    "text": "albino rats",
+    "confidence": 0.989
+   },
+   {
+    "time": 50.0,
+    "text": "Hala Mohamed Hassanin, Asmaa",
+    "confidence": 0.81
+   },
+   {
+    "time": 50.0,
+    "text": "Kamal",
+    "confidence": 0.999
+   },
+   {
+    "time": 50.0,
+    "text": "Omna",
+    "confidence": 0.991
+   },
+   {
+    "time": 50.0,
+    "text": "UP THOSE RATS",
+    "confidence": 0.998
+   },
+   {
+    "time": 50.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "drantihero md",
+    "confidence": 0.802
+   },
+   {
+    "time": 52.0,
+    "text": "every day; the Group IIl received atrazine (50",
+    "confidence": 0.843
+   },
+   {
+    "time": 52.0,
+    "text": "mglkg bw) through a gastric tube for two",
+    "confidence": 0.91
+   },
+   {
+    "time": 52.0,
+    "text": "Articte",
+    "confidence": 0.515
+   },
+   {
+    "time": 52.0,
+    "text": "Open access",
+    "confidence": 0.989
+   },
+   {
+    "time": 52.0,
+    "text": "Published; 31 July 2024",
+    "confidence": 0.777
+   },
+   {
+    "time": 52.0,
+    "text": "Resveratrol ameliorates",
+    "confidence": 0.977
+   },
+   {
+    "time": 52.0,
+    "text": "atrazine-induced caspase-",
+    "confidence": 0.871
+   },
+   {
+    "time": 52.0,
+    "text": "dependent apoptosis and",
+    "confidence": 0.84
+   },
+   {
+    "time": 52.0,
+    "text": "fibrosis in the testis of adult",
+    "confidence": 0.965
+   },
+   {
+    "time": 52.0,
+    "text": "albino rats",
+    "confidence": 0.988
+   },
+   {
+    "time": 52.0,
+    "text": "Hala Mohamed Hassanin, Asmaa",
+    "confidence": 0.789
+   },
+   {
+    "time": 52.0,
+    "text": "Kamal",
+    "confidence": 0.999
+   },
+   {
+    "time": 52.0,
+    "text": "Omna",
+    "confidence": 0.983
+   },
+   {
+    "time": 52.0,
+    "text": "AT 50 MILLICRAMS",
+    "confidence": 0.664
+   },
+   {
+    "time": 52.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 52.0,
+    "text": "drantihero md",
+    "confidence": 0.802
+   },
+   {
+    "time": 54.0,
+    "text": "WHICH IN HUMANS,",
+    "confidence": 0.629
+   },
+   {
+    "time": 54.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 54.0,
+    "text": "@ drantihero md",
+    "confidence": 0.589
+   },
+   {
+    "time": 56.0,
+    "text": "YOU WOULD NEED",
+    "confidence": 0.951
+   },
+   {
+    "time": 56.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 56.0,
+    "text": "drantihero md",
+    "confidence": 0.652
+   },
+   {
+    "time": 58.0,
+    "text": "1.2 MILLION LITERS",
+    "confidence": 0.707
+   },
+   {
+    "time": 58.0,
+    "text": "TO DRINK 1.2",
+    "confidence": 0.602
+   },
+   {
+    "time": 58.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.0,
+    "text": "drantihero md",
+    "confidence": 0.668
+   },
+   {
+    "time": 60.0,
+    "text": "1.2 MILLION LITERS",
+    "confidence": 0.724
+   },
+   {
+    "time": 60.0,
+    "text": "MILLION LITERS OF",
+    "confidence": 0.985
+   },
+   {
+    "time": 60.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.0,
+    "text": "@ drantihero md",
+    "confidence": 0.597
+   },
+   {
+    "time": 62.0,
+    "text": "1.2 MILLION LITERS",
+    "confidence": 0.891
+   },
+   {
+    "time": 62.0,
+    "text": "TAP WATER A DAY",
+    "confidence": 0.99
+   },
+   {
+    "time": 62.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 62.0,
+    "text": "dr antihero.md",
+    "confidence": 0.63
+   },
+   {
+    "time": 64.0,
+    "text": "1.2 MILLION LITERS",
+    "confidence": 0.781
+   },
+   {
+    "time": 64.0,
+    "text": "AFFECT YOUR TESTOSTERONE.",
+    "confidence": 0.673
+   },
+   {
+    "time": 64.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 64.0,
+    "text": "@ drantihero md",
+    "confidence": 0.586
+   },
+   {
+    "time": 66.0,
+    "text": "TO DRINK HALF",
+    "confidence": 0.904
+   },
+   {
+    "time": 66.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 68.0,
+    "text": "POOL FOR IT",
+    "confidence": 0.755
+   },
+   {
+    "time": 68.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 68.0,
+    "text": "drantihero md",
+    "confidence": 0.706
+   },
+   {
+    "time": 70.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 70.0,
+    "text": "@ drantihero md",
+    "confidence": 0.867
+   },
+   {
+    "time": 72.0,
+    "text": "Using",
+    "confidence": 1.0
+   },
+   {
+    "time": 72.0,
+    "text": "Water Intake Dietary Recall",
+    "confidence": 0.916
+   },
+   {
+    "time": 72.0,
+    "text": "Data to Provide a Window into US",
+    "confidence": 0.83
+   },
+   {
+    "time": 72.0,
+    "text": "Insecurity",
+    "confidence": 0.797
+   },
+   {
+    "time": 72.0,
+    "text": "Water",
+    "confidence": 1.0
+   },
+   {
+    "time": 72.0,
+    "text": "Asher Y Rosinger: J Nutr. 2022.",
+    "confidence": 0.771
+   },
+   {
+    "time": 72.0,
+    "text": "LARGE PERCENTACE OF",
+    "confidence": 0.757
+   },
+   {
+    "time": 72.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 72.0,
+    "text": "@ drantihero md",
+    "confidence": 0.597
+   },
+   {
+    "time": 74.0,
+    "text": "Using Water Intake Dietary Recall",
+    "confidence": 0.626
+   },
+   {
+    "time": 74.0,
+    "text": "Data to Provide a Window into US",
+    "confidence": 0.987
+   },
+   {
+    "time": 74.0,
+    "text": "Insecurity",
+    "confidence": 0.817
+   },
+   {
+    "time": 74.0,
+    "text": "Water",
+    "confidence": 1.0
+   },
+   {
+    "time": 74.0,
+    "text": "Asher Y Rosinger: J Nutr. 2022.",
+    "confidence": 0.839
+   },
+   {
+    "time": 74.0,
+    "text": "DEPEND ON TAP",
+    "confidence": 0.996
+   },
+   {
+    "time": 74.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 74.0,
+    "text": "@ dr antihero md",
+    "confidence": 0.573
+   },
+   {
+    "time": 76.0,
+    "text": "Using",
+    "confidence": 1.0
+   },
+   {
+    "time": 76.0,
+    "text": "Water Intake Dietary Recall",
+    "confidence": 0.731
+   },
+   {
+    "time": 76.0,
+    "text": "Data to Provide a Window into US",
+    "confidence": 0.957
+   },
+   {
+    "time": 76.0,
+    "text": "Insecurity",
+    "confidence": 0.817
+   },
+   {
+    "time": 76.0,
+    "text": "Water",
+    "confidence": 1.0
+   },
+   {
+    "time": 76.0,
+    "text": "Asher Y Rosinger: J Nutr. 2022.",
+    "confidence": 0.855
+   },
+   {
+    "time": 76.0,
+    "text": "FOR DRINKING,",
+    "confidence": 0.662
+   },
+   {
+    "time": 76.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 76.0,
+    "text": "@ drantihero md",
+    "confidence": 0.822
+   },
+   {
+    "time": 78.0,
+    "text": "Using",
+    "confidence": 1.0
+   },
+   {
+    "time": 78.0,
+    "text": "Water Intake Dietary Recall",
+    "confidence": 0.912
+   },
+   {
+    "time": 78.0,
+    "text": "Data to Provide a Window into US",
+    "confidence": 0.987
+   },
+   {
+    "time": 78.0,
+    "text": "Insecurity",
+    "confidence": 0.812
+   },
+   {
+    "time": 78.0,
+    "text": "Water",
+    "confidence": 1.0
+   },
+   {
+    "time": 78.0,
+    "text": "Asher Y Rosinger: J Nutr. 2022.",
+    "confidence": 0.862
+   },
+   {
+    "time": 78.0,
+    "text": "CLEANING AND THE",
+    "confidence": 0.763
+   },
+   {
+    "time": 78.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 80.0,
+    "text": "Using",
+    "confidence": 1.0
+   },
+   {
+    "time": 80.0,
+    "text": "Water Intake Dietary Recall",
+    "confidence": 0.902
+   },
+   {
+    "time": 80.0,
+    "text": "Data to Provide a Window into US",
+    "confidence": 0.787
+   },
+   {
+    "time": 80.0,
+    "text": "Insecurity",
+    "confidence": 0.858
+   },
+   {
+    "time": 80.0,
+    "text": "Water",
+    "confidence": 0.838
+   },
+   {
+    "time": 80.0,
+    "text": "Asher Y Rosinger: J Nutr. 2022.",
+    "confidence": 0.788
+   },
+   {
+    "time": 80.0,
+    "text": "DEMONIZING TAP WATER",
+    "confidence": 0.929
+   },
+   {
+    "time": 80.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 80.0,
+    "text": "@ drantihero md",
+    "confidence": 0.76
+   },
+   {
+    "time": 82.0,
+    "text": "Using",
+    "confidence": 1.0
+   },
+   {
+    "time": 82.0,
+    "text": "Water Intake Dietary Recall",
+    "confidence": 0.902
+   },
+   {
+    "time": 82.0,
+    "text": "Data to Provide a Window into US",
+    "confidence": 0.698
+   },
+   {
+    "time": 82.0,
+    "text": "Insecurity",
+    "confidence": 0.858
+   },
+   {
+    "time": 82.0,
+    "text": "Water",
+    "confidence": 0.852
+   },
+   {
+    "time": 82.0,
+    "text": "Asher Y Rosinger: J Nutr. 2022.",
+    "confidence": 0.79
+   },
+   {
+    "time": 82.0,
+    "text": "ISN'T THE MOVE:",
+    "confidence": 0.648
+   },
+   {
+    "time": 82.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 82.0,
+    "text": "@ drantihero md",
+    "confidence": 0.742
+   },
+   {
+    "time": 84.0,
+    "text": "WHERE YOURE GETTING",
+    "confidence": 0.883
+   },
+   {
+    "time": 84.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 84.0,
+    "text": "drantihero md",
+    "confidence": 0.791
+   },
+   {
+    "time": 86.0,
+    "text": "YOUR SCIENTIFIC INFORMATION FRQM",
+    "confidence": 0.93
+   },
+   {
+    "time": 86.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 86.0,
+    "text": "@ drantihero md",
+    "confidence": 0.681
+   },
+   {
+    "time": 88.0,
+    "text": "TAKE BACK YOUR HEALTH:",
+    "confidence": 0.765
+   },
+   {
+    "time": 88.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 88.0,
+    "text": "drantihero md",
+    "confidence": 0.814
+   },
+   {
+    "time": 90.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 90.0,
+    "text": "@ drantihero md",
+    "confidence": 0.861
+   },
+   {
+    "time": 92.0,
+    "text": "J",
+    "confidence": 0.663
+   },
+   {
+    "time": 92.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 92.0,
+    "text": "@ drantihero md",
+    "confidence": 0.861
+   }
+  ],
+  "captions": [
+   {
+    "text": "Proof that Google is",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.569,
+    "id": "o1"
+   },
+   {
+    "text": "drantihero md",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.908,
+    "id": "o2"
+   },
+   {
+    "text": "Proof that Google is",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.748,
+    "id": "o3"
+   },
+   {
+    "text": "Tiktok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.827,
+    "id": "o4"
+   },
+   {
+    "text": "@ drantihero md",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.855,
+    "id": "o5"
+   },
+   {
+    "text": "Proof that Google is",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.783,
+    "id": "o6"
+   },
+   {
+    "text": "Tiktok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.805,
+    "id": "o7"
+   },
+   {
+    "text": "@ drantihero md",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.731,
+    "id": "o8"
+   },
+   {
+    "text": "gle",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "6",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.811,
+    "id": "o10"
+   },
+   {
+    "text": "VOTE )",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.795,
+    "id": "o11"
+   },
+   {
+    "text": "Standard tap water does not Hirectly or significantly",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.634,
+    "id": "o12"
+   },
+   {
+    "text": "lower testosterone levels in healthy adults, though it",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.797,
+    "id": "o13"
+   },
+   {
+    "text": "Standard tap water does not Hirectly or significantly",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.703,
+    "id": "o14"
+   },
+   {
+    "text": "lower testosterone levels in healthy adults, though it",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.717,
+    "id": "o15"
+   },
+   {
+    "text": "diamtihero md",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.534,
+    "id": "o16"
+   },
+   {
+    "text": "gle",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.998,
+    "id": "o17"
+   },
+   {
+    "text": "6",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.726,
+    "id": "o18"
+   },
+   {
+    "text": "VOTE",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.953,
+    "id": "o19"
+   },
+   {
+    "text": "dlamtihero md",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.563,
+    "id": "o20"
+   },
+   {
+    "text": "diamtihero.md",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.531,
+    "id": "o21"
+   },
+   {
+    "text": "atrazine;",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.689,
+    "id": "o22"
+   },
+   {
+    "text": "widely used agricultural herbicide primarily",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.81,
+    "id": "o23"
+   },
+   {
+    "text": "sugarcane crops:",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.857,
+    "id": "o24"
+   },
+   {
+    "text": "sprayed on corn; sorghum; and",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.878,
+    "id": "o25"
+   },
+   {
+    "text": "Key",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.746,
+    "id": "o26"
+   },
+   {
+    "text": "Facts About Atrazine in Tap Water",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.805,
+    "id": "o27"
+   },
+   {
+    "text": "Widespread Contamination: Atrazine",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.985,
+    "id": "o28"
+   },
+   {
+    "text": "one of the",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.69,
+    "id": "o29"
+   },
+   {
+    "text": "mostufrequentl detected pesticidesin U Swater",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.568,
+    "id": "o30"
+   },
+   {
+    "text": "6",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.998,
+    "id": "o31"
+   },
+   {
+    "text": "VOTE",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.673,
+    "id": "o32"
+   },
+   {
+    "text": "widely used chlorotriazine herbicide that",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.961,
+    "id": "o33"
+   },
+   {
+    "text": "Atrazine IS",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.901,
+    "id": "o34"
+   },
+   {
+    "text": "functions as an endocrine disruptor, interfering with",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.806,
+    "id": "o35"
+   },
+   {
+    "text": "hormone systems in humans; animals; and wildlife_",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.648,
+    "id": "o36"
+   },
+   {
+    "text": "How Atrazine Disrupts Hormones",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.895,
+    "id": "o37"
+   },
+   {
+    "text": "To",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.71,
+    "id": "o38"
+   },
+   {
+    "text": "b",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.558,
+    "id": "o39"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.633,
+    "id": "o40"
+   },
+   {
+    "text": "Overview",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.983,
+    "id": "o41"
+   },
+   {
+    "text": "Yes; endocrine-disrupting chemicals",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.93,
+    "id": "o42"
+   },
+   {
+    "text": "EDCs) can",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.824,
+    "id": "o43"
+   },
+   {
+    "text": "lower testosterone levels",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.729,
+    "id": "o44"
+   },
+   {
+    "text": "intertere with how",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.711,
+    "id": "o45"
+   },
+   {
+    "text": "the body;",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.694,
+    "id": "o46"
+   },
+   {
+    "text": "testosterone works",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.991,
+    "id": "o47"
+   },
+   {
+    "text": "m",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.605,
+    "id": "o48"
+   },
+   {
+    "text": "Overview",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.981,
+    "id": "o49"
+   },
+   {
+    "text": "Yes; endocrine-disrupting chemicals",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.932,
+    "id": "o50"
+   },
+   {
+    "text": "EDCs) can",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.831,
+    "id": "o51"
+   },
+   {
+    "text": "interfere with how",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.756,
+    "id": "o52"
+   },
+   {
+    "text": "lower testosterone levels",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.737,
+    "id": "o53"
+   },
+   {
+    "text": "the body;",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.739,
+    "id": "o54"
+   },
+   {
+    "text": "testosterone works",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.989,
+    "id": "o55"
+   },
+   {
+    "text": "Proof that Google is",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.802,
+    "id": "o56"
+   },
+   {
+    "text": "lying to you",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.577,
+    "id": "o57"
+   },
+   {
+    "text": "GOOCLE SIMPLE QUESTIONS;",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.552,
+    "id": "o58"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o59"
+   },
+   {
+    "text": "@ drantihero md",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.742,
+    "id": "o60"
+   },
+   {
+    "text": "Proof that Google is",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.806,
+    "id": "o61"
+   },
+   {
+    "text": "THIS IS ANOTHER",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.956,
+    "id": "o62"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.999,
+    "id": "o63"
+   },
+   {
+    "text": "@ drantihero md",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.748,
+    "id": "o64"
+   },
+   {
+    "text": "Proof that Google is",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.782,
+    "id": "o65"
+   },
+   {
+    "text": "lying to you",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.589,
+    "id": "o66"
+   },
+   {
+    "text": "NOT THE ITEM ITSELF.",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.949,
+    "id": "o67"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.999,
+    "id": "o68"
+   },
+   {
+    "text": "drantihero md",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.84,
+    "id": "o69"
+   },
+   {
+    "text": "ATRAZINE, A COMMON",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.795,
+    "id": "o70"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.999,
+    "id": "o71"
+   },
+   {
+    "text": "dr antihero md",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.55,
+    "id": "o72"
+   },
+   {
+    "text": "INTAP WATER;",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.625,
+    "id": "o73"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o74"
+   },
+   {
+    "text": "@ dr-antihero md",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.703,
+    "id": "o75"
+   },
+   {
+    "text": "Acrylamide",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.946,
+    "id": "o76"
+   },
+   {
+    "text": "MCL",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.997,
+    "id": "o77"
+   },
+   {
+    "text": "Aluchlor",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.669,
+    "id": "o78"
+   },
+   {
+    "text": "0.002",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.696,
+    "id": "o79"
+   },
+   {
+    "text": "Atrazine",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.981,
+    "id": "o80"
+   },
+   {
+    "text": "MCL",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.984,
+    "id": "o81"
+   },
+   {
+    "text": "0.003",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.696,
+    "id": "o82"
+   },
+   {
+    "text": "Benzene",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.982,
+    "id": "o83"
+   },
+   {
+    "text": "MCL",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.992,
+    "id": "o84"
+   },
+   {
+    "text": "0.005",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.999,
+    "id": "o85"
+   },
+   {
+    "text": "Benzo(alpyrene (PAHs)",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.925,
+    "id": "o86"
+   },
+   {
+    "text": "MCL",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.998,
+    "id": "o87"
+   },
+   {
+    "text": "0.0002",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.987,
+    "id": "o88"
+   },
+   {
+    "text": "Reviel Article",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.576,
+    "id": "o89"
+   },
+   {
+    "text": "Open access",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.868,
+    "id": "o90"
+   },
+   {
+    "text": "Published: 22 September 2023",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.974,
+    "id": "o91"
+   },
+   {
+    "text": "US drinking water quality:",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.639,
+    "id": "o92"
+   },
+   {
+    "text": "exposure risk profiles for",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.964,
+    "id": "o93"
+   },
+   {
+    "text": "seven legacy and emerging",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.903,
+    "id": "o94"
+   },
+   {
+    "text": "contaminants",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o95"
+   },
+   {
+    "text": "LIMIT OF 3",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.994,
+    "id": "o96"
+   },
+   {
+    "text": "TikTok",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o97"
+   },
+   {
+    "text": "@ drantihero md",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.625,
+    "id": "o98"
+   },
+   {
+    "text": "Acrylamide",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.925,
+    "id": "o99"
+   },
+   {
+    "text": "MCL",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.996,
+    "id": "o100"
+   },
+   {
+    "text": "Aluchlor",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.742,
+    "id": "o101"
+   },
+   {
+    "text": "0.002",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.711,
+    "id": "o102"
+   },
+   {
+    "text": "Atrazine",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.987,
+    "id": "o103"
+   },
+   {
+    "text": "0.00}",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.628,
+    "id": "o104"
+   },
+   {
+    "text": "Benzene",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.984,
+    "id": "o105"
+   },
+   {
+    "text": "MCL",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.994,
+    "id": "o106"
+   },
+   {
+    "text": "0.005",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.999,
+    "id": "o107"
+   },
+   {
+    "text": "Benzolalpyrene (PAHs)",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.856,
+    "id": "o108"
+   },
+   {
+    "text": "MCL",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.998,
+    "id": "o109"
+   },
+   {
+    "text": "0.0002",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.983,
+    "id": "o110"
+   },
+   {
+    "text": "Reviel Article",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.54,
+    "id": "o111"
+   },
+   {
+    "text": "Open access",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.841,
+    "id": "o112"
+   },
+   {
+    "text": "Published: 22 September 2023",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.778,
+    "id": "o113"
+   },
+   {
+    "text": "US drinking water quality:",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.637,
+    "id": "o114"
+   },
+   {
+    "text": "exposure risk profiles for",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.856,
+    "id": "o115"
+   },
+   {
+    "text": "seven legacy and emerging",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.904,
+    "id": "o116"
+   },
+   {
+    "text": "contaminants",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o117"
+   },
+   {
+    "text": "PARTS PER BILLION:",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.797,
+    "id": "o118"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.999,
+    "id": "o119"
+   },
+   {
+    "text": "drantihero md",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.72,
+    "id": "o120"
+   },
+   {
+    "text": "THEY ACTUALLY LOOKED",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.982,
+    "id": "o121"
+   },
+   {
+    "text": "TikTok",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o122"
+   },
+   {
+    "text": "drantihero md",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.767,
+    "id": "o123"
+   },
+   {
+    "text": "ON RATS",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.987,
+    "id": "o124"
+   },
+   {
+    "text": "TikTok",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.854,
+    "id": "o125"
+   },
+   {
+    "text": "drantihero md",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.878,
+    "id": "o126"
+   },
+   {
+    "text": "every day; the Group IIl received atrazine (50",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.919,
+    "id": "o127"
+   },
+   {
+    "text": "mglkg bw) through a gastric tube for two",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.903,
+    "id": "o128"
+   },
+   {
+    "text": "Articte",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.525,
+    "id": "o129"
+   },
+   {
+    "text": "Open access",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.976,
+    "id": "o130"
+   },
+   {
+    "text": "Published; 31 July 2024",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.597,
+    "id": "o131"
+   },
+   {
+    "text": "Resveratrol ameliorates",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.978,
+    "id": "o132"
+   },
+   {
+    "text": "atrazine-induced caspase-",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.856,
+    "id": "o133"
+   },
+   {
+    "text": "dependent apoptosis and",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.806,
+    "id": "o134"
+   },
+   {
+    "text": "fibrosis in the testis of adult",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.718,
+    "id": "o135"
+   },
+   {
+    "text": "albino rats",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.989,
+    "id": "o136"
+   },
+   {
+    "text": "Hala Mohamed Hassanin, Asmaa",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.808,
+    "id": "o137"
+   },
+   {
+    "text": "Kamal",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.999,
+    "id": "o138"
+   },
+   {
+    "text": "Omna",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.988,
+    "id": "o139"
+   },
+   {
+    "text": "TO LOWERINC TESTOSTERONE,",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.667,
+    "id": "o140"
+   },
+   {
+    "text": "TikTok",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o141"
+   },
+   {
+    "text": "@ drantihero md",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.672,
+    "id": "o142"
+   },
+   {
+    "text": "every day; the Group IIl received atrazine (50",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.836,
+    "id": "o143"
+   },
+   {
+    "text": "mglkg bw) through a gastric tube for two",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.874,
+    "id": "o144"
+   },
+   {
+    "text": "Open access",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.986,
+    "id": "o145"
+   },
+   {
+    "text": "Published; 31 July 2024",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.752,
+    "id": "o146"
+   },
+   {
+    "text": "Resveratrol ameliorates",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.973,
+    "id": "o147"
+   },
+   {
+    "text": "atrazine-induced caspase-",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.867,
+    "id": "o148"
+   },
+   {
+    "text": "dependent apoptosis and",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.845,
+    "id": "o149"
+   },
+   {
+    "text": "fibrosis in the testis of adult",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.778,
+    "id": "o150"
+   },
+   {
+    "text": "albino rats",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.989,
+    "id": "o151"
+   },
+   {
+    "text": "Hala Mohamed Hassanin, Asmaa",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.81,
+    "id": "o152"
+   },
+   {
+    "text": "Kamal",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.999,
+    "id": "o153"
+   },
+   {
+    "text": "Omna",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.991,
+    "id": "o154"
+   },
+   {
+    "text": "UP THOSE RATS",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.998,
+    "id": "o155"
+   },
+   {
+    "text": "TikTok",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o156"
+   },
+   {
+    "text": "drantihero md",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.802,
+    "id": "o157"
+   },
+   {
+    "text": "every day; the Group IIl received atrazine (50",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.843,
+    "id": "o158"
+   },
+   {
+    "text": "mglkg bw) through a gastric tube for two",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.91,
+    "id": "o159"
+   },
+   {
+    "text": "Articte",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.515,
+    "id": "o160"
+   },
+   {
+    "text": "Open access",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.989,
+    "id": "o161"
+   },
+   {
+    "text": "Published; 31 July 2024",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.777,
+    "id": "o162"
+   },
+   {
+    "text": "Resveratrol ameliorates",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.977,
+    "id": "o163"
+   },
+   {
+    "text": "atrazine-induced caspase-",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.871,
+    "id": "o164"
+   },
+   {
+    "text": "dependent apoptosis and",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.84,
+    "id": "o165"
+   },
+   {
+    "text": "fibrosis in the testis of adult",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.965,
+    "id": "o166"
+   },
+   {
+    "text": "albino rats",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.988,
+    "id": "o167"
+   },
+   {
+    "text": "Hala Mohamed Hassanin, Asmaa",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.789,
+    "id": "o168"
+   },
+   {
+    "text": "Kamal",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.999,
+    "id": "o169"
+   },
+   {
+    "text": "Omna",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.983,
+    "id": "o170"
+   },
+   {
+    "text": "AT 50 MILLICRAMS",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.664,
+    "id": "o171"
+   },
+   {
+    "text": "TikTok",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.999,
+    "id": "o172"
+   },
+   {
+    "text": "drantihero md",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.802,
+    "id": "o173"
+   },
+   {
+    "text": "WHICH IN HUMANS,",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.629,
+    "id": "o174"
+   },
+   {
+    "text": "TikTok",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.999,
+    "id": "o175"
+   },
+   {
+    "text": "@ drantihero md",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.589,
+    "id": "o176"
+   },
+   {
+    "text": "YOU WOULD NEED",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.951,
+    "id": "o177"
+   },
+   {
+    "text": "TikTok",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 1.0,
+    "id": "o178"
+   },
+   {
+    "text": "drantihero md",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.652,
+    "id": "o179"
+   },
+   {
+    "text": "1.2 MILLION LITERS",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.707,
+    "id": "o180"
+   },
+   {
+    "text": "TO DRINK 1.2",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.602,
+    "id": "o181"
+   },
+   {
+    "text": "TikTok",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 1.0,
+    "id": "o182"
+   },
+   {
+    "text": "drantihero md",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.668,
+    "id": "o183"
+   },
+   {
+    "text": "1.2 MILLION LITERS",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.724,
+    "id": "o184"
+   },
+   {
+    "text": "MILLION LITERS OF",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.985,
+    "id": "o185"
+   },
+   {
+    "text": "TikTok",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 1.0,
+    "id": "o186"
+   },
+   {
+    "text": "@ drantihero md",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.597,
+    "id": "o187"
+   },
+   {
+    "text": "1.2 MILLION LITERS",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.891,
+    "id": "o188"
+   },
+   {
+    "text": "TAP WATER A DAY",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.99,
+    "id": "o189"
+   },
+   {
+    "text": "TikTok",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.999,
+    "id": "o190"
+   },
+   {
+    "text": "dr antihero.md",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.63,
+    "id": "o191"
+   },
+   {
+    "text": "1.2 MILLION LITERS",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.781,
+    "id": "o192"
+   },
+   {
+    "text": "AFFECT YOUR TESTOSTERONE.",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.673,
+    "id": "o193"
+   },
+   {
+    "text": "TikTok",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 1.0,
+    "id": "o194"
+   },
+   {
+    "text": "@ drantihero md",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.586,
+    "id": "o195"
+   },
+   {
+    "text": "TO DRINK HALF",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 0.904,
+    "id": "o196"
+   },
+   {
+    "text": "TikTok",
+    "start": 66.0,
+    "end": 66.0,
+    "confidence": 1.0,
+    "id": "o197"
+   },
+   {
+    "text": "POOL FOR IT",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.755,
+    "id": "o198"
+   },
+   {
+    "text": "TikTok",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 1.0,
+    "id": "o199"
+   },
+   {
+    "text": "drantihero md",
+    "start": 68.0,
+    "end": 68.0,
+    "confidence": 0.706,
+    "id": "o200"
+   },
+   {
+    "text": "TikTok",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 1.0,
+    "id": "o201"
+   },
+   {
+    "text": "@ drantihero md",
+    "start": 70.0,
+    "end": 70.0,
+    "confidence": 0.867,
+    "id": "o202"
+   },
+   {
+    "text": "Using",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 1.0,
+    "id": "o203"
+   },
+   {
+    "text": "Water Intake Dietary Recall",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.916,
+    "id": "o204"
+   },
+   {
+    "text": "Data to Provide a Window into US",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.83,
+    "id": "o205"
+   },
+   {
+    "text": "Insecurity",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.797,
+    "id": "o206"
+   },
+   {
+    "text": "Water",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 1.0,
+    "id": "o207"
+   },
+   {
+    "text": "Asher Y Rosinger: J Nutr. 2022.",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.771,
+    "id": "o208"
+   },
+   {
+    "text": "LARGE PERCENTACE OF",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.757,
+    "id": "o209"
+   },
+   {
+    "text": "TikTok",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 1.0,
+    "id": "o210"
+   },
+   {
+    "text": "@ drantihero md",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 0.597,
+    "id": "o211"
+   },
+   {
+    "text": "Using Water Intake Dietary Recall",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.626,
+    "id": "o212"
+   },
+   {
+    "text": "Data to Provide a Window into US",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.987,
+    "id": "o213"
+   },
+   {
+    "text": "Insecurity",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.817,
+    "id": "o214"
+   },
+   {
+    "text": "Water",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 1.0,
+    "id": "o215"
+   },
+   {
+    "text": "Asher Y Rosinger: J Nutr. 2022.",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.839,
+    "id": "o216"
+   },
+   {
+    "text": "DEPEND ON TAP",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.996,
+    "id": "o217"
+   },
+   {
+    "text": "TikTok",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 1.0,
+    "id": "o218"
+   },
+   {
+    "text": "@ dr antihero md",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.573,
+    "id": "o219"
+   },
+   {
+    "text": "Using",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 1.0,
+    "id": "o220"
+   },
+   {
+    "text": "Water Intake Dietary Recall",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.731,
+    "id": "o221"
+   },
+   {
+    "text": "Data to Provide a Window into US",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.957,
+    "id": "o222"
+   },
+   {
+    "text": "Insecurity",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.817,
+    "id": "o223"
+   },
+   {
+    "text": "Water",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 1.0,
+    "id": "o224"
+   },
+   {
+    "text": "Asher Y Rosinger: J Nutr. 2022.",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.855,
+    "id": "o225"
+   },
+   {
+    "text": "FOR DRINKING,",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.662,
+    "id": "o226"
+   },
+   {
+    "text": "TikTok",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 1.0,
+    "id": "o227"
+   },
+   {
+    "text": "@ drantihero md",
+    "start": 76.0,
+    "end": 76.0,
+    "confidence": 0.822,
+    "id": "o228"
+   },
+   {
+    "text": "Using",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 1.0,
+    "id": "o229"
+   },
+   {
+    "text": "Water Intake Dietary Recall",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.912,
+    "id": "o230"
+   },
+   {
+    "text": "Data to Provide a Window into US",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.987,
+    "id": "o231"
+   },
+   {
+    "text": "Insecurity",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.812,
+    "id": "o232"
+   },
+   {
+    "text": "Water",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 1.0,
+    "id": "o233"
+   },
+   {
+    "text": "Asher Y Rosinger: J Nutr. 2022.",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.862,
+    "id": "o234"
+   },
+   {
+    "text": "CLEANING AND THE",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 0.763,
+    "id": "o235"
+   },
+   {
+    "text": "TikTok",
+    "start": 78.0,
+    "end": 78.0,
+    "confidence": 1.0,
+    "id": "o236"
+   },
+   {
+    "text": "Using",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 1.0,
+    "id": "o237"
+   },
+   {
+    "text": "Water Intake Dietary Recall",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.902,
+    "id": "o238"
+   },
+   {
+    "text": "Data to Provide a Window into US",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.787,
+    "id": "o239"
+   },
+   {
+    "text": "Insecurity",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.858,
+    "id": "o240"
+   },
+   {
+    "text": "Water",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.838,
+    "id": "o241"
+   },
+   {
+    "text": "Asher Y Rosinger: J Nutr. 2022.",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.788,
+    "id": "o242"
+   },
+   {
+    "text": "DEMONIZING TAP WATER",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.929,
+    "id": "o243"
+   },
+   {
+    "text": "TikTok",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 1.0,
+    "id": "o244"
+   },
+   {
+    "text": "@ drantihero md",
+    "start": 80.0,
+    "end": 80.0,
+    "confidence": 0.76,
+    "id": "o245"
+   },
+   {
+    "text": "Using",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 1.0,
+    "id": "o246"
+   },
+   {
+    "text": "Water Intake Dietary Recall",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.902,
+    "id": "o247"
+   },
+   {
+    "text": "Data to Provide a Window into US",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.698,
+    "id": "o248"
+   },
+   {
+    "text": "Insecurity",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.858,
+    "id": "o249"
+   },
+   {
+    "text": "Water",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.852,
+    "id": "o250"
+   },
+   {
+    "text": "Asher Y Rosinger: J Nutr. 2022.",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.79,
+    "id": "o251"
+   },
+   {
+    "text": "ISN'T THE MOVE:",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.648,
+    "id": "o252"
+   },
+   {
+    "text": "TikTok",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 1.0,
+    "id": "o253"
+   },
+   {
+    "text": "@ drantihero md",
+    "start": 82.0,
+    "end": 82.0,
+    "confidence": 0.742,
+    "id": "o254"
+   },
+   {
+    "text": "WHERE YOURE GETTING",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.883,
+    "id": "o255"
+   },
+   {
+    "text": "TikTok",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 1.0,
+    "id": "o256"
+   },
+   {
+    "text": "drantihero md",
+    "start": 84.0,
+    "end": 84.0,
+    "confidence": 0.791,
+    "id": "o257"
+   },
+   {
+    "text": "YOUR SCIENTIFIC INFORMATION FRQM",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.93,
+    "id": "o258"
+   },
+   {
+    "text": "TikTok",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 1.0,
+    "id": "o259"
+   },
+   {
+    "text": "@ drantihero md",
+    "start": 86.0,
+    "end": 86.0,
+    "confidence": 0.681,
+    "id": "o260"
+   },
+   {
+    "text": "TAKE BACK YOUR HEALTH:",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.765,
+    "id": "o261"
+   },
+   {
+    "text": "TikTok",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 1.0,
+    "id": "o262"
+   },
+   {
+    "text": "drantihero md",
+    "start": 88.0,
+    "end": 88.0,
+    "confidence": 0.814,
+    "id": "o263"
+   },
+   {
+    "text": "TikTok",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.999,
+    "id": "o264"
+   },
+   {
+    "text": "@ drantihero md",
+    "start": 90.0,
+    "end": 90.0,
+    "confidence": 0.861,
+    "id": "o265"
+   },
+   {
+    "text": "J",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.663,
+    "id": "o266"
+   },
+   {
+    "text": "TikTok",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.999,
+    "id": "o267"
+   },
+   {
+    "text": "@ drantihero md",
+    "start": 92.0,
+    "end": 92.0,
+    "confidence": 0.861,
+    "id": "o268"
+   }
+  ]
+ }
+}

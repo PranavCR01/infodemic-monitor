@@ -22,6 +22,18 @@ class MisinfoLabel(str, enum.Enum):
     CANNOT_RECOGNIZE = "CANNOT_RECOGNIZE"
 
 
+def display_label(label: "MisinfoLabel | str | None", misinfo_basis: Optional[str] = None) -> Optional[str]:
+    """The label as the interface shows it (target design §9, T30): "MISINFO (unproven)"
+    when a MISINFO label's basis is ``unproven``, otherwise the label with spaces
+    ("CANNOT RECOGNIZE", "NO MISINFO"). The stored label is always one of the four."""
+    if label is None:
+        return None
+    value = label.value if isinstance(label, MisinfoLabel) else str(label)
+    if value == MisinfoLabel.MISINFO.value and misinfo_basis == "unproven":
+        return "MISINFO (unproven)"
+    return value.replace("_", " ")
+
+
 class PubMedCitation(BaseModel):
     """A single PubMed citation linked to a specific health claim in the transcript."""
     claim_id: Optional[str] = None

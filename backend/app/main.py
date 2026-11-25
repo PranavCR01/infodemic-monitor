@@ -44,4 +44,14 @@ app.include_router(health.router)
 # Protected routes
 from app.api.routers import videos, jobs  # noqa: E402
 app.include_router(videos.router)
+app.include_router(videos.v1_router)  # §1 signed uploads (T20)
 app.include_router(jobs.router)
+app.include_router(jobs.v1_router)  # §17 job state, events and list (T28)
+
+# Review API and roles (T27, §12/§15/§17)
+from app.api.routers import reviews  # noqa: E402
+app.include_router(reviews.router)
+from app.api.routers import results  # noqa: E402
+app.include_router(results.router)  # §17 result reads (T26)
+from app.api.routers import playback  # noqa: E402
+app.include_router(playback.router)  # signed playback URL (T29)

@@ -1,0 +1,86 @@
+{
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 40.06,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 5.52,
+    "text": "When you are diagnosed with cancer, inevitably when people find out they will tell you about"
+   },
+   {
+    "id": "t2",
+    "start": 5.52,
+    "end": 11.04,
+    "text": "some miracle cure that worked for their cousin or their uncle. I have heard a lot of these,"
+   },
+   {
+    "id": "t3",
+    "start": 11.04,
+    "end": 16.88,
+    "text": "I'm not easily surprised, but today I heard a new one, so I'm wondering if other people have heard"
+   },
+   {
+    "id": "t4",
+    "start": 16.88,
+    "end": 27.5,
+    "text": "of this. Venus fly trout. Yes, the carnivorous plants, apparently you blend up three to four of them"
+   },
+   {
+    "id": "t5",
+    "start": 27.5,
+    "end": 29.97,
+    "text": "and eats them every day."
+   },
+   {
+    "id": "t6",
+    "start": 29.97,
+    "end": 31.13,
+    "text": "And that kills your cancer."
+   },
+   {
+    "id": "t7",
+    "start": 31.13,
+    "end": 32.97,
+    "text": "So has anyone heard of that one yet?"
+   },
+   {
+    "id": "t8",
+    "start": 32.97,
+    "end": 34.73,
+    "text": "Because that was a new one for me."
+   },
+   {
+    "id": "t9",
+    "start": 34.73,
+    "end": 35.81,
+    "text": "Kind of fun."
+   },
+   {
+    "id": "t10",
+    "start": 35.81,
+    "end": 37.53,
+    "text": "Let me know if you've tried it and it works."
+   },
+   {
+    "id": "t11",
+    "start": 37.53,
+    "end": 38.93,
+    "text": "Sending you so much love."
+   },
+   {
+    "id": "t12",
+    "start": 38.93,
+    "end": 39.77,
+    "text": "Aloha."
+   }
+  ]
+ }
+}

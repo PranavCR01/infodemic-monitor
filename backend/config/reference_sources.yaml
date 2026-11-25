@@ -1,0 +1,171 @@
+# Authoritative reference sources for facts of record (design doc section 6,
+# "Trusted sources beyond PubMed"; task T17).
+#
+# Read by app.core.retrieval.references.config. This file IS the allow-list: code
+# fetches only the hosts and path prefixes named here, models can never add a
+# source, and there is no general web search. Every catalogue URL must sit on its
+# source's allowed hosts and path prefixes, or the config fails to load.
+#
+# STATUS: starting values (context/MULTI_AGENT.md §7n). T18 fetched WHO, FDA, EFSA,
+# NHS and Bookshelf live. Grow the catalogue from the golden-set claims.
+#
+# retrieval (T19, §7q): "live" pages are fetched at claim time. "stored" pages belong
+# to publishers that block scripted requests (www.cdc.gov answers 403 to cloud hosts):
+# claims read the current version from data/reference_snapshots/ (committed, versioned,
+# cited by snapshot hash) and never request the page. Refresh them with
+#   python scripts/refresh_reference_snapshots.py            # fetch every stored page
+#   python scripts/refresh_reference_snapshots.py --check    # verify, show ages
+# or, where the publisher refuses the script too, save the page from a browser and
+#   python scripts/refresh_reference_snapshots.py --import cdc_child_schedule=page.html
+version: references_v1
+
+# Records per claim taken from references before the reranker (which still caps a
+# claim at 10 items in total, studies and references together).
+max_records_per_claim: 5
+# Catalogue pages fetched per claim (best keyword matches first).
+max_pages_per_claim: 3
+# A page must match at least this many of its keyword phrases in the claim.
+min_keyword_hits: 1
+# Quoted passage size, and the share of the claim's content words a passage must
+# contain to be quoted at all.
+max_passage_chars: 1200
+min_passage_overlap: 0.3
+# Fetch limits (section 15): HTTPS only, no redirects, a timeout, a body cap.
+timeout_seconds: 10
+max_response_bytes: 3000000
+# Fetched pages are cached this long; the snapshot keeps the exact text cited.
+cache_ttl_seconds: 86400
+# A stored snapshot older than this is still cited (with its capture date) but
+# reported as stale on every use, so someone re-runs the refresh script.
+stored_snapshot_max_age_days: 180
+
+sources:
+  - id: ncbi_bookshelf
+    name: NCBI Bookshelf
+    publisher: NCBI (U.S. National Library of Medicine)
+    covers: [physiology, medical_fact]
+    # E-utilities only: ESearch db=pubmed with booksdocs[filter], then EFetch db=pubmed
+    # (PubmedBookArticle: accession, title, chapter summary). The www.ncbi.nlm.nih.gov
+    # /books/ page is the citation link only and is never fetched (it serves a
+    # reCAPTCHA to scripts); efetch on db=books returns no text (T19).
+    backend: bookshelf
+    allowed_hosts: [eutils.ncbi.nlm.nih.gov, www.ncbi.nlm.nih.gov]
+    allowed_path_prefixes: [/entrez/eutils/, /books/]
+    max_results: 3
+  - id: cdc
+    name: Centers for Disease Control and Prevention
+    publisher: CDC
+    covers: [vaccination_schedule, guidance, statistic]
+    backend: catalogue
+    retrieval: stored           # www.cdc.gov blocks scripted requests (Akamai 403)
+    allowed_hosts: [www.cdc.gov]
+    allowed_path_prefixes: [/]
+  - id: who
+    name: World Health Organization
+    publisher: WHO
+    covers: [vaccination_schedule, guidance, statistic]
+    backend: catalogue
+    allowed_hosts: [www.who.int]
+    allowed_path_prefixes: [/news-room/fact-sheets/, /teams/immunization-vaccines-and-biologicals/, /data/gho/]
+  - id: fda
+    name: U.S. Food and Drug Administration
+    publisher: FDA
+    covers: [regulatory_limit, safety]
+    backend: catalogue
+    allowed_hosts: [www.fda.gov]
+    allowed_path_prefixes: [/]
+  - id: ema
+    name: European Medicines Agency
+    publisher: EMA
+    covers: [regulatory_limit, safety]
+    backend: catalogue
+    allowed_hosts: [www.ema.europa.eu]
+    allowed_path_prefixes: [/en/]
+  - id: efsa
+    name: European Food Safety Authority
+    publisher: EFSA
+    covers: [regulatory_limit, safety, nutrition]
+    backend: catalogue
+    allowed_hosts: [www.efsa.europa.eu]
+    allowed_path_prefixes: [/en/]
+  - id: nhs
+    name: National Health Service (England)
+    publisher: NHS
+    covers: [guidance, vaccination_schedule]
+    backend: catalogue
+    allowed_hosts: [www.nhs.uk]
+    allowed_path_prefixes: [/]
+  - id: ecdc
+    name: European Centre for Disease Prevention and Control
+    publisher: ECDC
+    covers: [guidance, statistic, vaccination_schedule]
+    backend: catalogue
+    allowed_hosts: [www.ecdc.europa.eu]
+    allowed_path_prefixes: [/en/]
+  - id: usda_fooddata
+    name: USDA FoodData Central
+    publisher: USDA Agricultural Research Service
+    covers: [food_composition]
+    backend: catalogue
+    allowed_hosts: [fdc.nal.usda.gov]
+    allowed_path_prefixes: [/]
+
+# Pages each catalogue source serves. Matching is by keyword phrase in the claim
+# (lower case, whole words); the passage quoted is chosen from the fetched text.
+catalogue:
+  - id: cdc_child_schedule
+    source: cdc
+    title: Child and Adolescent Immunization Schedule by Age
+    url: https://www.cdc.gov/vaccines/hcp/imz-schedules/child-adolescent-age.html
+    keywords: [vaccine schedule, vaccination schedule, immunization schedule, mmr, measles vaccine, dtap, hepatitis b vaccine, polio vaccine, months old, doses]
+  - id: cdc_adult_schedule
+    source: cdc
+    title: Adult Immunization Schedule by Age
+    url: https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-age.html
+    keywords: [adult vaccine schedule, adult vaccination schedule, adult immunization schedule, shingles vaccine, zoster vaccine, pneumococcal vaccine, tdap booster, td booster]
+  - id: cdc_measles_vaccine
+    source: cdc
+    title: Measles Vaccination
+    url: https://www.cdc.gov/measles/vaccines/index.html
+    keywords: [mmr, measles vaccine, measles vaccination, two doses, mmr vaccine]
+  - id: who_routine_immunization
+    source: who
+    title: WHO recommendations for routine immunization - summary tables
+    url: https://www.who.int/teams/immunization-vaccines-and-biologicals/policies/who-recommendations-for-routine-immunization---summary-tables
+    keywords: [vaccine schedule, vaccination schedule, immunization schedule, routine immunization, doses]
+  - id: who_measles
+    source: who
+    title: Measles fact sheet
+    url: https://www.who.int/news-room/fact-sheets/detail/measles
+    keywords: [measles, measles deaths, measles cases]
+  - id: who_salt
+    source: who
+    title: Sodium reduction fact sheet
+    # Moved: the old .../detail/salt-reduction URL now answers 301 (T18 smoke run).
+    url: https://www.who.int/news-room/fact-sheets/detail/sodium-reduction
+    keywords: [salt, sodium, grams of salt, salt intake]
+  - id: who_malaria
+    source: who
+    title: Malaria fact sheet
+    url: https://www.who.int/news-room/fact-sheets/detail/malaria
+    keywords: [malaria, malaria deaths, malaria cases]
+  - id: fda_caffeine
+    source: fda
+    title: Spilling the Beans - How Much Caffeine is Too Much?
+    url: https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much
+    keywords: [caffeine, milligrams of caffeine, cups of coffee, energy drinks]
+  - id: efsa_caffeine
+    source: efsa
+    title: Caffeine
+    url: https://www.efsa.europa.eu/en/topics/topic/caffeine
+    keywords: [caffeine, milligrams of caffeine, cups of coffee, energy drinks]
+  - id: nhs_vitamin_c
+    source: nhs
+    title: Vitamins and minerals - Vitamin C
+    url: https://www.nhs.uk/conditions/vitamins-and-minerals/vitamin-c/
+    keywords: [vitamin c, ascorbic acid, mg of vitamin c]
+  - id: nhs_vaccinations
+    source: nhs
+    title: NHS vaccinations and when to have them
+    url: https://www.nhs.uk/vaccinations/nhs-vaccinations-and-when-to-have-them/
+    keywords: [vaccine schedule, vaccination schedule, mmr, when to have, doses]

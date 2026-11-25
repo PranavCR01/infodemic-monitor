@@ -1,0 +1,596 @@
+{
+ "video_id": "v04",
+ "filename": "4564c8c83157207207a766d0a92c0590.mp4",
+ "relative_path": "Misinfo Dataset/Haoran Zhang/debunking/4564c8c83157207207a766d0a92c0590.mp4",
+ "collector": "Haoran Zhang",
+ "collector_label": "DEBUNKING",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T16:30:07",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 62.99,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 2.8,
+    "end": 7.7,
+    "text": "I hate to break it to you there, Eleven, but that's just wind."
+   },
+   {
+    "id": "t2",
+    "start": 7.7,
+    "end": 9.34,
+    "text": "That's how wind works."
+   },
+   {
+    "id": "t3",
+    "start": 9.34,
+    "end": 10.34,
+    "text": "That's not telekinesis."
+   },
+   {
+    "id": "t4",
+    "start": 10.34,
+    "end": 12.18,
+    "text": "There's a reason you're using tinfoil."
+   },
+   {
+    "id": "t5",
+    "start": 12.18,
+    "end": 14.82,
+    "text": "It's because it's really, really light and easy to move."
+   },
+   {
+    "id": "t6",
+    "start": 14.82,
+    "end": 18.94,
+    "text": "And also, they're folded in such a way that air is caught much more easily."
+   },
+   {
+    "id": "t7",
+    "start": 18.94,
+    "end": 21.5,
+    "text": "And I love you do this thing where you're going like this and you're like, look, they're"
+   },
+   {
+    "id": "t8",
+    "start": 21.5,
+    "end": 22.5,
+    "text": "barely moving."
+   },
+   {
+    "id": "t9",
+    "start": 22.5,
+    "end": 25.54,
+    "text": "And then they move, which is hilarious because it proves my point even more, but you're doing"
+   },
+   {
+    "id": "t10",
+    "start": 25.54,
+    "end": 26.54,
+    "text": "this."
+   },
+   {
+    "id": "t11",
+    "start": 26.54,
+    "end": 27.54,
+    "text": "You're barely doing anything."
+   },
+   {
+    "id": "t12",
+    "start": 27.54,
+    "end": 31.58,
+    "text": "You're not, you're just flapping your hand loosely over the aluminum foil."
+   },
+   {
+    "id": "t13",
+    "start": 31.58,
+    "end": 37.03,
+    "text": "It's not going to push it forward and then you go like this, of course that's going to"
+   },
+   {
+    "id": "t14",
+    "start": 37.03,
+    "end": 38.03,
+    "text": "move them."
+   },
+   {
+    "id": "t15",
+    "start": 38.03,
+    "end": 39.03,
+    "text": "You're pushing air towards them."
+   },
+   {
+    "id": "t16",
+    "start": 39.03,
+    "end": 43.31,
+    "text": "Now what I would love for you to try is take a piece, flatten it completely out so that"
+   },
+   {
+    "id": "t17",
+    "start": 43.31,
+    "end": 46.47,
+    "text": "there's no lips, and then try the same thing."
+   },
+   {
+    "id": "t18",
+    "start": 46.47,
+    "end": 50.63,
+    "text": "You're going to notice it doesn't move much because now it's not able to catch wind easily"
+   },
+   {
+    "id": "t19",
+    "start": 50.63,
+    "end": 54.03,
+    "text": "but I'll tell you what, if you do it under a live with me, under my conditions, do it"
+   },
+   {
+    "id": "t20",
+    "start": 54.03,
+    "end": 58.39,
+    "text": "under a sealed container, I'll give you $10,000, otherwise pack it up, Fecna."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 32,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "DEBUNK INCOMING",
+    "confidence": 0.887
+   },
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.637
+   },
+   {
+    "time": 0.0,
+    "text": "dustindeanmental",
+    "confidence": 0.853
+   },
+   {
+    "time": 2.0,
+    "text": "DEBUNK INCOMING",
+    "confidence": 0.906
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.926
+   },
+   {
+    "time": 2.0,
+    "text": "dustindeanmentalist",
+    "confidence": 0.951
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.93
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 0.914
+   },
+   {
+    "time": 12.0,
+    "text": "mentalist",
+    "confidence": 0.846
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 0.975
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 24.0,
+    "text": "ealmentalist",
+    "confidence": 0.826
+   },
+   {
+    "time": 24.0,
+    "text": "dus",
+    "confidence": 0.917
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 0.997
+   },
+   {
+    "time": 30.0,
+    "text": "dus",
+    "confidence": 0.991
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 0.996
+   },
+   {
+    "time": 34.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 38.0,
+    "text": "TikTok",
+    "confidence": 0.935
+   },
+   {
+    "time": 40.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 40.0,
+    "text": "dustindeanmnentalist",
+    "confidence": 0.831
+   },
+   {
+    "time": 42.0,
+    "text": "TikTok",
+    "confidence": 0.807
+   },
+   {
+    "time": 44.0,
+    "text": "TikTok",
+    "confidence": 0.971
+   },
+   {
+    "time": 46.0,
+    "text": "TikTok",
+    "confidence": 0.841
+   },
+   {
+    "time": 48.0,
+    "text": "TikTok",
+    "confidence": 0.647
+   },
+   {
+    "time": 50.0,
+    "text": "TikTok",
+    "confidence": 0.767
+   },
+   {
+    "time": 52.0,
+    "text": "TikTok",
+    "confidence": 0.992
+   },
+   {
+    "time": 52.0,
+    "text": "dustindeammentalist",
+    "confidence": 0.595
+   },
+   {
+    "time": 54.0,
+    "text": "TikTok",
+    "confidence": 0.976
+   },
+   {
+    "time": 54.0,
+    "text": "dustindeanmentalist",
+    "confidence": 0.558
+   },
+   {
+    "time": 56.0,
+    "text": "TikTok",
+    "confidence": 0.872
+   },
+   {
+    "time": 58.0,
+    "text": "Like and follow to see if",
+    "confidence": 0.987
+   },
+   {
+    "time": 58.0,
+    "text": "challenge",
+    "confidence": 1.0
+   },
+   {
+    "time": 58.0,
+    "text": "he takes the",
+    "confidence": 0.667
+   },
+   {
+    "time": 58.0,
+    "text": "TikTok",
+    "confidence": 0.644
+   },
+   {
+    "time": 60.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 60.0,
+    "text": "dustindeanmenta_",
+    "confidence": 0.701
+   },
+   {
+    "time": 62.0,
+    "text": "J",
+    "confidence": 0.869
+   },
+   {
+    "time": 62.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 62.0,
+    "text": "~dustindeanmenta_",
+    "confidence": 0.558
+   }
+  ],
+  "captions": [
+   {
+    "text": "DEBUNK INCOMING",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.887,
+    "id": "o1"
+   },
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.637,
+    "id": "o2"
+   },
+   {
+    "text": "dustindeanmental",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.853,
+    "id": "o3"
+   },
+   {
+    "text": "DEBUNK INCOMING",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.906,
+    "id": "o4"
+   },
+   {
+    "text": "TikTok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.926,
+    "id": "o5"
+   },
+   {
+    "text": "dustindeanmentalist",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.951,
+    "id": "o6"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o7"
+   },
+   {
+    "text": "mentalist",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.846,
+    "id": "o8"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "ealmentalist",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.826,
+    "id": "o10"
+   },
+   {
+    "text": "dus",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.917,
+    "id": "o11"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o12"
+   },
+   {
+    "text": "dus",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.991,
+    "id": "o13"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 40.0,
+    "confidence": 0.999,
+    "id": "o14"
+   },
+   {
+    "text": "dustindeanmnentalist",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.831,
+    "id": "o15"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.0,
+    "end": 52.0,
+    "confidence": 0.992,
+    "id": "o16"
+   },
+   {
+    "text": "dustindeammentalist",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.595,
+    "id": "o17"
+   },
+   {
+    "text": "TikTok",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.976,
+    "id": "o18"
+   },
+   {
+    "text": "dustindeanmentalist",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.558,
+    "id": "o19"
+   },
+   {
+    "text": "TikTok",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.872,
+    "id": "o20"
+   },
+   {
+    "text": "Like and follow to see if",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.987,
+    "id": "o21"
+   },
+   {
+    "text": "challenge",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 1.0,
+    "id": "o22"
+   },
+   {
+    "text": "he takes the",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.667,
+    "id": "o23"
+   },
+   {
+    "text": "TikTok",
+    "start": 58.0,
+    "end": 60.0,
+    "confidence": 0.999,
+    "id": "o24"
+   },
+   {
+    "text": "dustindeanmenta_",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.701,
+    "id": "o25"
+   },
+   {
+    "text": "J",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.869,
+    "id": "o26"
+   },
+   {
+    "text": "TikTok",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.999,
+    "id": "o27"
+   },
+   {
+    "text": "~dustindeanmenta_",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.558,
+    "id": "o28"
+   }
+  ]
+ }
+}

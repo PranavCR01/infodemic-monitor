@@ -1,0 +1,2242 @@
+{
+ "video_id": "v12",
+ "filename": "c5d3bf4e135179fb94c119a8e91455cf.mp4",
+ "relative_path": "Misinfo Dataset/Haoran Zhang/Misinformation/c5d3bf4e135179fb94c119a8e91455cf.mp4",
+ "collector": "Haoran Zhang",
+ "collector_label": "MISINFO",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T17:48:47",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.999,
+  "duration_seconds": 74.65,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.04,
+    "text": "So I lost 15 pounds in 20 days and I'm going to tell you exactly how I did it."
+   },
+   {
+    "id": "t2",
+    "start": 3.04,
+    "end": 6.96,
+    "text": "I'm Bray. I'm a fitness specialist and I just want to help you reach your goal because"
+   },
+   {
+    "id": "t3",
+    "start": 6.96,
+    "end": 11.52,
+    "text": "it's really not that hard. First things first, it's all mental. If you think you can do it,"
+   },
+   {
+    "id": "t4",
+    "start": 11.52,
+    "end": 14.56,
+    "text": "you can do it. If you don't think you can do it, you're not going to be able to do it. So"
+   },
+   {
+    "id": "t5",
+    "start": 14.56,
+    "end": 18.0,
+    "text": "you need to be able to be stronger than the voice that's in your head that's telling you"
+   },
+   {
+    "id": "t6",
+    "start": 18.0,
+    "end": 21.52,
+    "text": "go eat that burger, go get Chick-fil-A. You got to be stronger than that, okay?"
+   },
+   {
+    "id": "t7",
+    "start": 22.24,
+    "end": 26.56,
+    "text": "Second thing, you need to eliminate your sugar addiction. If you didn't know, your body runs"
+   },
+   {
+    "id": "t8",
+    "start": 26.56,
+    "end": 30.96,
+    "text": "off sugar, aka glucose. So if you stop feeding yourself sugar, your body will burn the sugar"
+   },
+   {
+    "id": "t9",
+    "start": 30.96,
+    "end": 35.52,
+    "text": "that is stored. Next thing, you need to be drinking a hundred ounces of water a day."
+   },
+   {
+    "id": "t10",
+    "start": 35.52,
+    "end": 38.72,
+    "text": "Really, you should be drinking your body weight in ounces, but a hundred ounces will do because"
+   },
+   {
+    "id": "t11",
+    "start": 38.72,
+    "end": 41.68,
+    "text": "you didn't know your body actually flushes out the fat cells through your bloodstream,"
+   },
+   {
+    "id": "t12",
+    "start": 41.68,
+    "end": 44.8,
+    "text": "and you pee it out. You don't poop it out. I literally thought you poop out the fat,"
+   },
+   {
+    "id": "t13",
+    "start": 44.8,
+    "end": 48.72,
+    "text": "but you pee out the fat, okay? So that's why you need to stay hydrated with a hundred ounces of"
+   },
+   {
+    "id": "t14",
+    "start": 48.72,
+    "end": 53.36,
+    "text": "water. But if you need a detailed list on what to eat, what foods to avoid, what time to eat,"
+   },
+   {
+    "id": "t15",
+    "start": 53.36,
+    "end": 58.56,
+    "text": "how much to eat. I have that all in a meal plan on my website under a fat loss guide and honestly"
+   },
+   {
+    "id": "t16",
+    "start": 58.56,
+    "end": 62.32,
+    "text": "those are the three things that help me lose 15 pounds in 20 days because I decided that I rather"
+   },
+   {
+    "id": "t17",
+    "start": 62.32,
+    "end": 66.96,
+    "text": "be uncomfortable for 20 days rather than 20 years in my own body so the choice is really up to you."
+   },
+   {
+    "id": "t18",
+    "start": 66.96,
+    "end": 69.76,
+    "text": "Go ahead and check it out and I wish you the best on your journey."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 38,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.801
+   },
+   {
+    "time": 0.0,
+    "text": "@ builtbybra",
+    "confidence": 0.99
+   },
+   {
+    "time": 0.0,
+    "text": "Ilost 15 pounds in 20 days",
+    "confidence": 0.93
+   },
+   {
+    "time": 0.0,
+    "text": "exercise",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "~no",
+    "confidence": 0.687
+   },
+   {
+    "time": 0.0,
+    "text": "magic pill",
+    "confidence": 0.946
+   },
+   {
+    "time": 0.0,
+    "text": "-no",
+    "confidence": 0.906
+   },
+   {
+    "time": 0.0,
+    "text": "~no weird stair stepper thing",
+    "confidence": 0.763
+   },
+   {
+    "time": 0.0,
+    "text": "(receipts",
+    "confidence": 0.84
+   },
+   {
+    "time": 0.0,
+    "text": "the end)",
+    "confidence": 0.99
+   },
+   {
+    "time": 2.0,
+    "text": "Ilost 15 pounds in 20 days",
+    "confidence": 0.914
+   },
+   {
+    "time": 2.0,
+    "text": "exercise",
+    "confidence": 0.734
+   },
+   {
+    "time": 2.0,
+    "text": "~no",
+    "confidence": 0.652
+   },
+   {
+    "time": 2.0,
+    "text": "magic pill",
+    "confidence": 0.946
+   },
+   {
+    "time": 2.0,
+    "text": "-no",
+    "confidence": 0.858
+   },
+   {
+    "time": 2.0,
+    "text": "~no weird stair stepper thing",
+    "confidence": 0.742
+   },
+   {
+    "time": 2.0,
+    "text": "(receipts",
+    "confidence": 0.76
+   },
+   {
+    "time": 2.0,
+    "text": "the end)",
+    "confidence": 0.99
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.814
+   },
+   {
+    "time": 4.0,
+    "text": "lost 15 pounds in 20 days",
+    "confidence": 0.765
+   },
+   {
+    "time": 4.0,
+    "text": "exercise",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "~no",
+    "confidence": 0.541
+   },
+   {
+    "time": 4.0,
+    "text": "magic pill",
+    "confidence": 0.966
+   },
+   {
+    "time": 4.0,
+    "text": "-no",
+    "confidence": 0.918
+   },
+   {
+    "time": 4.0,
+    "text": "no weird stair stepper thing",
+    "confidence": 0.674
+   },
+   {
+    "time": 4.0,
+    "text": "(receipts",
+    "confidence": 0.987
+   },
+   {
+    "time": 4.0,
+    "text": "the end)",
+    "confidence": 0.963
+   },
+   {
+    "time": 6.0,
+    "text": "Ilost 15 pounds in 20 days",
+    "confidence": 0.814
+   },
+   {
+    "time": 6.0,
+    "text": "~no exercise",
+    "confidence": 0.908
+   },
+   {
+    "time": 6.0,
+    "text": "magic pill",
+    "confidence": 0.962
+   },
+   {
+    "time": 6.0,
+    "text": "-no",
+    "confidence": 0.903
+   },
+   {
+    "time": 6.0,
+    "text": "-no weird stair stepper thing",
+    "confidence": 0.875
+   },
+   {
+    "time": 6.0,
+    "text": "(receipts",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "the end)",
+    "confidence": 0.994
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "builtbybrav",
+    "confidence": 0.911
+   },
+   {
+    "time": 8.0,
+    "text": "Ilost 15 pounds in 20 days",
+    "confidence": 0.744
+   },
+   {
+    "time": 8.0,
+    "text": "~no exercise",
+    "confidence": 0.923
+   },
+   {
+    "time": 8.0,
+    "text": "magic pill",
+    "confidence": 0.95
+   },
+   {
+    "time": 8.0,
+    "text": "-no",
+    "confidence": 0.903
+   },
+   {
+    "time": 8.0,
+    "text": "-no weird stair stepper thing",
+    "confidence": 0.875
+   },
+   {
+    "time": 8.0,
+    "text": "(receipts",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "the end)",
+    "confidence": 0.994
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "builtbybrav",
+    "confidence": 0.649
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "buillbybray",
+    "confidence": 0.501
+   },
+   {
+    "time": 12.0,
+    "text": "1 Mindsethas tobethere",
+    "confidence": 0.731
+   },
+   {
+    "time": 12.0,
+    "text": "Makesure vourllongtemm",
+    "confidence": 0.625
+   },
+   {
+    "time": 12.0,
+    "text": "\"want\" is strongerthanyour",
+    "confidence": 0.799
+   },
+   {
+    "time": 12.0,
+    "text": "losingweight> chikckfila",
+    "confidence": 0.653
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "Makesurevourlongterm",
+    "confidence": 0.73
+   },
+   {
+    "time": 14.0,
+    "text": "short term \"want\"",
+    "confidence": 0.526
+   },
+   {
+    "time": 14.0,
+    "text": "losingweight> chickfila",
+    "confidence": 0.754
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "bviltbybrav",
+    "confidence": 0.602
+   },
+   {
+    "time": 16.0,
+    "text": "1 Mindsethas tobethere",
+    "confidence": 0.596
+   },
+   {
+    "time": 16.0,
+    "text": "Makesurevourlongterm",
+    "confidence": 0.768
+   },
+   {
+    "time": 16.0,
+    "text": "\"want\" Isstrongerthanyour",
+    "confidence": 0.586
+   },
+   {
+    "time": 16.0,
+    "text": "shortterm \"want\"",
+    "confidence": 0.763
+   },
+   {
+    "time": 16.0,
+    "text": "losingweight> chickfila",
+    "confidence": 0.678
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "@ builtbybrav",
+    "confidence": 0.95
+   },
+   {
+    "time": 18.0,
+    "text": "1 Midsethastobetheres",
+    "confidence": 0.635
+   },
+   {
+    "time": 18.0,
+    "text": "Makesurevourlongterm",
+    "confidence": 0.882
+   },
+   {
+    "time": 18.0,
+    "text": "\"want\" Isstrongerthanyour",
+    "confidence": 0.595
+   },
+   {
+    "time": 18.0,
+    "text": "short teum \"want\"",
+    "confidence": 0.67
+   },
+   {
+    "time": 18.0,
+    "text": "aka,",
+    "confidence": 0.517
+   },
+   {
+    "time": 18.0,
+    "text": "losingweight> chickfila",
+    "confidence": 0.816
+   },
+   {
+    "time": 18.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 18.0,
+    "text": "builtbybrav",
+    "confidence": 0.745
+   },
+   {
+    "time": 20.0,
+    "text": "1 Midsethas tobetheres",
+    "confidence": 0.62
+   },
+   {
+    "time": 20.0,
+    "text": "Makesurevourlongterm",
+    "confidence": 0.927
+   },
+   {
+    "time": 20.0,
+    "text": "short term \"want\"",
+    "confidence": 0.667
+   },
+   {
+    "time": 20.0,
+    "text": "aka,",
+    "confidence": 0.538
+   },
+   {
+    "time": 20.0,
+    "text": "losingweight> chickfila",
+    "confidence": 0.821
+   },
+   {
+    "time": 20.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "builtbybrav",
+    "confidence": 0.681
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 22.0,
+    "text": "builtbybrav",
+    "confidence": 0.846
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 0.956
+   },
+   {
+    "time": 24.0,
+    "text": "builtbybrav",
+    "confidence": 0.952
+   },
+   {
+    "time": 26.0,
+    "text": "2 Eliminateyousugar",
+    "confidence": 0.755
+   },
+   {
+    "time": 26.0,
+    "text": "addiction:",
+    "confidence": 0.929
+   },
+   {
+    "time": 26.0,
+    "text": "Sincevourbodyrunsoff",
+    "confidence": 0.715
+   },
+   {
+    "time": 26.0,
+    "text": "VS feedingitmoresugarl",
+    "confidence": 0.503
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "builtbybrav",
+    "confidence": 0.978
+   },
+   {
+    "time": 28.0,
+    "text": "2 Eliminate",
+    "confidence": 0.787
+   },
+   {
+    "time": 28.0,
+    "text": "sugar",
+    "confidence": 0.96
+   },
+   {
+    "time": 28.0,
+    "text": "addiction",
+    "confidence": 0.999
+   },
+   {
+    "time": 28.0,
+    "text": "Sincevourbodyruns@ff",
+    "confidence": 0.793
+   },
+   {
+    "time": 28.0,
+    "text": "sugar;letitbu theexcess",
+    "confidence": 0.894
+   },
+   {
+    "time": 28.0,
+    "text": "feedingitmoresugarl",
+    "confidence": 0.706
+   },
+   {
+    "time": 28.0,
+    "text": "VSs",
+    "confidence": 0.908
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "builtbybray",
+    "confidence": 0.614
+   },
+   {
+    "time": 30.0,
+    "text": "2  Eliminatevousugar",
+    "confidence": 0.59
+   },
+   {
+    "time": 30.0,
+    "text": "addlction",
+    "confidence": 0.505
+   },
+   {
+    "time": 30.0,
+    "text": "Sincevourbodyrunsoff",
+    "confidence": 0.654
+   },
+   {
+    "time": 30.0,
+    "text": "sugar letfibum theexcess",
+    "confidence": 0.642
+   },
+   {
+    "time": 30.0,
+    "text": "VS feedingitmore sugar!",
+    "confidence": 0.634
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 0.641
+   },
+   {
+    "time": 30.0,
+    "text": "buillbybrav",
+    "confidence": 0.844
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 32.0,
+    "text": "builtbybrav",
+    "confidence": 0.906
+   },
+   {
+    "time": 34.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 34.0,
+    "text": "builtbybrav",
+    "confidence": 0.749
+   },
+   {
+    "time": 36.0,
+    "text": "So vourbodycan flush the",
+    "confidence": 0.55
+   },
+   {
+    "time": 36.0,
+    "text": "fatcellsthuvourblood",
+    "confidence": 0.809
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "builtbybrav",
+    "confidence": 0.867
+   },
+   {
+    "time": 38.0,
+    "text": "3Drink 1oz@f wateraday",
+    "confidence": 0.575
+   },
+   {
+    "time": 38.0,
+    "text": "60",
+    "confidence": 0.997
+   },
+   {
+    "time": 38.0,
+    "text": "fatcellsthruyourblood",
+    "confidence": 0.663
+   },
+   {
+    "time": 38.0,
+    "text": "stream and out@f vour bodvl",
+    "confidence": 0.526
+   },
+   {
+    "time": 38.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 40.0,
+    "text": "3Drink 1OOoz of waterac",
+    "confidence": 0.514
+   },
+   {
+    "time": 40.0,
+    "text": "day",
+    "confidence": 0.59
+   },
+   {
+    "time": 40.0,
+    "text": "60",
+    "confidence": 0.907
+   },
+   {
+    "time": 40.0,
+    "text": "fat cellsthruyourblood",
+    "confidence": 0.754
+   },
+   {
+    "time": 40.0,
+    "text": "stream andout@fvourbodyl",
+    "confidence": 0.503
+   },
+   {
+    "time": 40.0,
+    "text": "TikTok",
+    "confidence": 0.992
+   },
+   {
+    "time": 42.0,
+    "text": "3Drink 10Ooz@f wateraday",
+    "confidence": 0.59
+   },
+   {
+    "time": 42.0,
+    "text": "yourbodycan flush the",
+    "confidence": 0.674
+   },
+   {
+    "time": 42.0,
+    "text": "S",
+    "confidence": 0.519
+   },
+   {
+    "time": 42.0,
+    "text": "fatcellsthruvourblood",
+    "confidence": 0.744
+   },
+   {
+    "time": 42.0,
+    "text": "stream andoutofvourbody!",
+    "confidence": 0.509
+   },
+   {
+    "time": 42.0,
+    "text": "TikTok",
+    "confidence": 0.893
+   },
+   {
+    "time": 42.0,
+    "text": "builtbybray",
+    "confidence": 0.736
+   },
+   {
+    "time": 44.0,
+    "text": "Drink 10Ooz of wateraday",
+    "confidence": 0.749
+   },
+   {
+    "time": 44.0,
+    "text": "fat cells thruvourblood",
+    "confidence": 0.698
+   },
+   {
+    "time": 44.0,
+    "text": "stream andoutofvourbodyl",
+    "confidence": 0.623
+   },
+   {
+    "time": 44.0,
+    "text": "TikTok",
+    "confidence": 0.985
+   },
+   {
+    "time": 44.0,
+    "text": "builtbybray",
+    "confidence": 0.707
+   },
+   {
+    "time": 46.0,
+    "text": "Drink I0ozof wateraday",
+    "confidence": 0.721
+   },
+   {
+    "time": 46.0,
+    "text": "sovourbodycan flush the",
+    "confidence": 0.719
+   },
+   {
+    "time": 46.0,
+    "text": "fatcells thruyourblood",
+    "confidence": 0.653
+   },
+   {
+    "time": 46.0,
+    "text": "Tik Tok",
+    "confidence": 0.937
+   },
+   {
+    "time": 48.0,
+    "text": "Tik Tok",
+    "confidence": 0.598
+   },
+   {
+    "time": 50.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 52.0,
+    "text": "Fal Loss Diet",
+    "confidence": 0.898
+   },
+   {
+    "time": 52.0,
+    "text": "TikTok",
+    "confidence": 0.516
+   },
+   {
+    "time": 52.0,
+    "text": "buillbybray",
+    "confidence": 0.651
+   },
+   {
+    "time": 54.0,
+    "text": "BUILT BY BRAY",
+    "confidence": 0.579
+   },
+   {
+    "time": 54.0,
+    "text": "Fal Loss Diet",
+    "confidence": 0.854
+   },
+   {
+    "time": 54.0,
+    "text": "TikTok",
+    "confidence": 0.813
+   },
+   {
+    "time": 54.0,
+    "text": "builtbybray",
+    "confidence": 0.668
+   },
+   {
+    "time": 56.0,
+    "text": "BUILT BY BRAY",
+    "confidence": 0.579
+   },
+   {
+    "time": 56.0,
+    "text": "Fal Loss Diet",
+    "confidence": 0.854
+   },
+   {
+    "time": 56.0,
+    "text": "TikTok",
+    "confidence": 0.996
+   },
+   {
+    "time": 56.0,
+    "text": "buillbvbray",
+    "confidence": 0.775
+   },
+   {
+    "time": 58.0,
+    "text": "BUILT BY BRAY",
+    "confidence": 0.639
+   },
+   {
+    "time": 58.0,
+    "text": "Fal Loss Dlet",
+    "confidence": 0.826
+   },
+   {
+    "time": 58.0,
+    "text": "Viltbybray",
+    "confidence": 0.529
+   },
+   {
+    "time": 60.0,
+    "text": "Day",
+    "confidence": 0.956
+   },
+   {
+    "time": 60.0,
+    "text": "20",
+    "confidence": 1.0
+   },
+   {
+    "time": 60.0,
+    "text": "Results",
+    "confidence": 0.765
+   },
+   {
+    "time": 60.0,
+    "text": "builth",
+    "confidence": 0.607
+   },
+   {
+    "time": 62.0,
+    "text": "My",
+    "confidence": 0.51
+   },
+   {
+    "time": 62.0,
+    "text": "Day",
+    "confidence": 0.95
+   },
+   {
+    "time": 62.0,
+    "text": "20",
+    "confidence": 1.0
+   },
+   {
+    "time": 62.0,
+    "text": "Results",
+    "confidence": 0.77
+   },
+   {
+    "time": 62.0,
+    "text": "Tok",
+    "confidence": 0.547
+   },
+   {
+    "time": 64.0,
+    "text": "Doy",
+    "confidence": 0.756
+   },
+   {
+    "time": 64.0,
+    "text": "My 20",
+    "confidence": 0.955
+   },
+   {
+    "time": 64.0,
+    "text": "Results",
+    "confidence": 0.959
+   },
+   {
+    "time": 64.0,
+    "text": "TikTok",
+    "confidence": 0.993
+   },
+   {
+    "time": 64.0,
+    "text": "builtbybrav",
+    "confidence": 0.678
+   },
+   {
+    "time": 68.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 72.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 72.0,
+    "text": "builtbybray",
+    "confidence": 1.0
+   },
+   {
+    "time": 74.0,
+    "text": "J",
+    "confidence": 0.666
+   },
+   {
+    "time": 74.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 74.0,
+    "text": "builtbybray",
+    "confidence": 1.0
+   }
+  ],
+  "captions": [
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.801,
+    "id": "o1"
+   },
+   {
+    "text": "@ builtbybra",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.99,
+    "id": "o2"
+   },
+   {
+    "text": "Ilost 15 pounds in 20 days",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.93,
+    "id": "o3"
+   },
+   {
+    "text": "exercise",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o4"
+   },
+   {
+    "text": "~no",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.687,
+    "id": "o5"
+   },
+   {
+    "text": "magic pill",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.946,
+    "id": "o6"
+   },
+   {
+    "text": "-no",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.906,
+    "id": "o7"
+   },
+   {
+    "text": "~no weird stair stepper thing",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.763,
+    "id": "o8"
+   },
+   {
+    "text": "(receipts",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.84,
+    "id": "o9"
+   },
+   {
+    "text": "the end)",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.99,
+    "id": "o10"
+   },
+   {
+    "text": "Ilost 15 pounds in 20 days",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.914,
+    "id": "o11"
+   },
+   {
+    "text": "exercise",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.734,
+    "id": "o12"
+   },
+   {
+    "text": "~no",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.652,
+    "id": "o13"
+   },
+   {
+    "text": "magic pill",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.946,
+    "id": "o14"
+   },
+   {
+    "text": "-no",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.858,
+    "id": "o15"
+   },
+   {
+    "text": "~no weird stair stepper thing",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.742,
+    "id": "o16"
+   },
+   {
+    "text": "(receipts",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.76,
+    "id": "o17"
+   },
+   {
+    "text": "the end)",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.99,
+    "id": "o18"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.814,
+    "id": "o19"
+   },
+   {
+    "text": "lost 15 pounds in 20 days",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.765,
+    "id": "o20"
+   },
+   {
+    "text": "exercise",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o21"
+   },
+   {
+    "text": "~no",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.541,
+    "id": "o22"
+   },
+   {
+    "text": "magic pill",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.966,
+    "id": "o23"
+   },
+   {
+    "text": "-no",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.918,
+    "id": "o24"
+   },
+   {
+    "text": "no weird stair stepper thing",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.674,
+    "id": "o25"
+   },
+   {
+    "text": "(receipts",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.987,
+    "id": "o26"
+   },
+   {
+    "text": "the end)",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.963,
+    "id": "o27"
+   },
+   {
+    "text": "Ilost 15 pounds in 20 days",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.814,
+    "id": "o28"
+   },
+   {
+    "text": "~no exercise",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.908,
+    "id": "o29"
+   },
+   {
+    "text": "magic pill",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.962,
+    "id": "o30"
+   },
+   {
+    "text": "-no",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.903,
+    "id": "o31"
+   },
+   {
+    "text": "-no weird stair stepper thing",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.875,
+    "id": "o32"
+   },
+   {
+    "text": "(receipts",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o33"
+   },
+   {
+    "text": "the end)",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.994,
+    "id": "o34"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o35"
+   },
+   {
+    "text": "builtbybrav",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.911,
+    "id": "o36"
+   },
+   {
+    "text": "Ilost 15 pounds in 20 days",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.744,
+    "id": "o37"
+   },
+   {
+    "text": "~no exercise",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.923,
+    "id": "o38"
+   },
+   {
+    "text": "magic pill",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.95,
+    "id": "o39"
+   },
+   {
+    "text": "-no",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.903,
+    "id": "o40"
+   },
+   {
+    "text": "-no weird stair stepper thing",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.875,
+    "id": "o41"
+   },
+   {
+    "text": "(receipts",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o42"
+   },
+   {
+    "text": "the end)",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.994,
+    "id": "o43"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.999,
+    "id": "o44"
+   },
+   {
+    "text": "builtbybrav",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.649,
+    "id": "o45"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o46"
+   },
+   {
+    "text": "buillbybray",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.501,
+    "id": "o47"
+   },
+   {
+    "text": "1 Mindsethas tobethere",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.731,
+    "id": "o48"
+   },
+   {
+    "text": "Makesure vourllongtemm",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.625,
+    "id": "o49"
+   },
+   {
+    "text": "\"want\" is strongerthanyour",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.799,
+    "id": "o50"
+   },
+   {
+    "text": "losingweight> chikckfila",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.653,
+    "id": "o51"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o52"
+   },
+   {
+    "text": "Makesurevourlongterm",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.73,
+    "id": "o53"
+   },
+   {
+    "text": "short term \"want\"",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.526,
+    "id": "o54"
+   },
+   {
+    "text": "losingweight> chickfila",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.754,
+    "id": "o55"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o56"
+   },
+   {
+    "text": "bviltbybrav",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.602,
+    "id": "o57"
+   },
+   {
+    "text": "1 Mindsethas tobethere",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.596,
+    "id": "o58"
+   },
+   {
+    "text": "Makesurevourlongterm",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.768,
+    "id": "o59"
+   },
+   {
+    "text": "\"want\" Isstrongerthanyour",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.586,
+    "id": "o60"
+   },
+   {
+    "text": "shortterm \"want\"",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.763,
+    "id": "o61"
+   },
+   {
+    "text": "losingweight> chickfila",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.678,
+    "id": "o62"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o63"
+   },
+   {
+    "text": "@ builtbybrav",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.95,
+    "id": "o64"
+   },
+   {
+    "text": "1 Midsethastobetheres",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.635,
+    "id": "o65"
+   },
+   {
+    "text": "Makesurevourlongterm",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.882,
+    "id": "o66"
+   },
+   {
+    "text": "\"want\" Isstrongerthanyour",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.595,
+    "id": "o67"
+   },
+   {
+    "text": "short teum \"want\"",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.67,
+    "id": "o68"
+   },
+   {
+    "text": "aka,",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.517,
+    "id": "o69"
+   },
+   {
+    "text": "losingweight> chickfila",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.816,
+    "id": "o70"
+   },
+   {
+    "text": "TikTok",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.999,
+    "id": "o71"
+   },
+   {
+    "text": "builtbybrav",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.745,
+    "id": "o72"
+   },
+   {
+    "text": "1 Midsethas tobetheres",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.62,
+    "id": "o73"
+   },
+   {
+    "text": "Makesurevourlongterm",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.927,
+    "id": "o74"
+   },
+   {
+    "text": "short term \"want\"",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.667,
+    "id": "o75"
+   },
+   {
+    "text": "aka,",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.538,
+    "id": "o76"
+   },
+   {
+    "text": "losingweight> chickfila",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.821,
+    "id": "o77"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o78"
+   },
+   {
+    "text": "builtbybrav",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.681,
+    "id": "o79"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.999,
+    "id": "o80"
+   },
+   {
+    "text": "builtbybrav",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.846,
+    "id": "o81"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.956,
+    "id": "o82"
+   },
+   {
+    "text": "builtbybrav",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.952,
+    "id": "o83"
+   },
+   {
+    "text": "2 Eliminateyousugar",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.755,
+    "id": "o84"
+   },
+   {
+    "text": "addiction:",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.929,
+    "id": "o85"
+   },
+   {
+    "text": "Sincevourbodyrunsoff",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.715,
+    "id": "o86"
+   },
+   {
+    "text": "VS feedingitmoresugarl",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.503,
+    "id": "o87"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o88"
+   },
+   {
+    "text": "builtbybrav",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.978,
+    "id": "o89"
+   },
+   {
+    "text": "2 Eliminate",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.787,
+    "id": "o90"
+   },
+   {
+    "text": "sugar",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.96,
+    "id": "o91"
+   },
+   {
+    "text": "addiction",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.999,
+    "id": "o92"
+   },
+   {
+    "text": "Sincevourbodyruns@ff",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.793,
+    "id": "o93"
+   },
+   {
+    "text": "sugar;letitbu theexcess",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.894,
+    "id": "o94"
+   },
+   {
+    "text": "feedingitmoresugarl",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.706,
+    "id": "o95"
+   },
+   {
+    "text": "VSs",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.908,
+    "id": "o96"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o97"
+   },
+   {
+    "text": "builtbybray",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.614,
+    "id": "o98"
+   },
+   {
+    "text": "2  Eliminatevousugar",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.59,
+    "id": "o99"
+   },
+   {
+    "text": "addlction",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.505,
+    "id": "o100"
+   },
+   {
+    "text": "Sincevourbodyrunsoff",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.654,
+    "id": "o101"
+   },
+   {
+    "text": "sugar letfibum theexcess",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.642,
+    "id": "o102"
+   },
+   {
+    "text": "VS feedingitmore sugar!",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.634,
+    "id": "o103"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.641,
+    "id": "o104"
+   },
+   {
+    "text": "buillbybrav",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.844,
+    "id": "o105"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.998,
+    "id": "o106"
+   },
+   {
+    "text": "builtbybrav",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.906,
+    "id": "o107"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.999,
+    "id": "o108"
+   },
+   {
+    "text": "builtbybrav",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.749,
+    "id": "o109"
+   },
+   {
+    "text": "So vourbodycan flush the",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.55,
+    "id": "o110"
+   },
+   {
+    "text": "fatcellsthuvourblood",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.809,
+    "id": "o111"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o112"
+   },
+   {
+    "text": "builtbybrav",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.867,
+    "id": "o113"
+   },
+   {
+    "text": "3Drink 1oz@f wateraday",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.575,
+    "id": "o114"
+   },
+   {
+    "text": "60",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.997,
+    "id": "o115"
+   },
+   {
+    "text": "fatcellsthruyourblood",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.663,
+    "id": "o116"
+   },
+   {
+    "text": "stream and out@f vour bodvl",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.526,
+    "id": "o117"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.998,
+    "id": "o118"
+   },
+   {
+    "text": "3Drink 1OOoz of waterac",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.514,
+    "id": "o119"
+   },
+   {
+    "text": "day",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.59,
+    "id": "o120"
+   },
+   {
+    "text": "60",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.907,
+    "id": "o121"
+   },
+   {
+    "text": "fat cellsthruyourblood",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.754,
+    "id": "o122"
+   },
+   {
+    "text": "stream andout@fvourbodyl",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.503,
+    "id": "o123"
+   },
+   {
+    "text": "TikTok",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.992,
+    "id": "o124"
+   },
+   {
+    "text": "3Drink 10Ooz@f wateraday",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.59,
+    "id": "o125"
+   },
+   {
+    "text": "yourbodycan flush the",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.674,
+    "id": "o126"
+   },
+   {
+    "text": "S",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.519,
+    "id": "o127"
+   },
+   {
+    "text": "fatcellsthruvourblood",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.744,
+    "id": "o128"
+   },
+   {
+    "text": "stream andoutofvourbody!",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.509,
+    "id": "o129"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.893,
+    "id": "o130"
+   },
+   {
+    "text": "builtbybray",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.736,
+    "id": "o131"
+   },
+   {
+    "text": "Drink 10Ooz of wateraday",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.749,
+    "id": "o132"
+   },
+   {
+    "text": "fat cells thruvourblood",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.698,
+    "id": "o133"
+   },
+   {
+    "text": "stream andoutofvourbodyl",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.623,
+    "id": "o134"
+   },
+   {
+    "text": "TikTok",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.985,
+    "id": "o135"
+   },
+   {
+    "text": "builtbybray",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.707,
+    "id": "o136"
+   },
+   {
+    "text": "Drink I0ozof wateraday",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.721,
+    "id": "o137"
+   },
+   {
+    "text": "sovourbodycan flush the",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.719,
+    "id": "o138"
+   },
+   {
+    "text": "fatcells thruyourblood",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.653,
+    "id": "o139"
+   },
+   {
+    "text": "Tik Tok",
+    "start": 46.0,
+    "end": 48.0,
+    "confidence": 0.937,
+    "id": "o140"
+   },
+   {
+    "text": "TikTok",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.998,
+    "id": "o141"
+   },
+   {
+    "text": "Fal Loss Diet",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.898,
+    "id": "o142"
+   },
+   {
+    "text": "TikTok",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.516,
+    "id": "o143"
+   },
+   {
+    "text": "buillbybray",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.651,
+    "id": "o144"
+   },
+   {
+    "text": "BUILT BY BRAY",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.579,
+    "id": "o145"
+   },
+   {
+    "text": "Fal Loss Diet",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.854,
+    "id": "o146"
+   },
+   {
+    "text": "TikTok",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.813,
+    "id": "o147"
+   },
+   {
+    "text": "builtbybray",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.668,
+    "id": "o148"
+   },
+   {
+    "text": "BUILT BY BRAY",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.579,
+    "id": "o149"
+   },
+   {
+    "text": "Fal Loss Diet",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.854,
+    "id": "o150"
+   },
+   {
+    "text": "TikTok",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.996,
+    "id": "o151"
+   },
+   {
+    "text": "buillbvbray",
+    "start": 56.0,
+    "end": 56.0,
+    "confidence": 0.775,
+    "id": "o152"
+   },
+   {
+    "text": "BUILT BY BRAY",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.639,
+    "id": "o153"
+   },
+   {
+    "text": "Fal Loss Dlet",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.826,
+    "id": "o154"
+   },
+   {
+    "text": "Viltbybray",
+    "start": 58.0,
+    "end": 58.0,
+    "confidence": 0.529,
+    "id": "o155"
+   },
+   {
+    "text": "Day",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.956,
+    "id": "o156"
+   },
+   {
+    "text": "20",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 1.0,
+    "id": "o157"
+   },
+   {
+    "text": "Results",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.765,
+    "id": "o158"
+   },
+   {
+    "text": "builth",
+    "start": 60.0,
+    "end": 60.0,
+    "confidence": 0.607,
+    "id": "o159"
+   },
+   {
+    "text": "My",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.51,
+    "id": "o160"
+   },
+   {
+    "text": "Day",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.95,
+    "id": "o161"
+   },
+   {
+    "text": "20",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 1.0,
+    "id": "o162"
+   },
+   {
+    "text": "Results",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.77,
+    "id": "o163"
+   },
+   {
+    "text": "Tok",
+    "start": 62.0,
+    "end": 62.0,
+    "confidence": 0.547,
+    "id": "o164"
+   },
+   {
+    "text": "Doy",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.756,
+    "id": "o165"
+   },
+   {
+    "text": "My 20",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.955,
+    "id": "o166"
+   },
+   {
+    "text": "Results",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.959,
+    "id": "o167"
+   },
+   {
+    "text": "TikTok",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.993,
+    "id": "o168"
+   },
+   {
+    "text": "builtbybrav",
+    "start": 64.0,
+    "end": 64.0,
+    "confidence": 0.678,
+    "id": "o169"
+   },
+   {
+    "text": "TikTok",
+    "start": 68.0,
+    "end": 72.0,
+    "confidence": 0.999,
+    "id": "o170"
+   },
+   {
+    "text": "builtbybray",
+    "start": 72.0,
+    "end": 72.0,
+    "confidence": 1.0,
+    "id": "o171"
+   },
+   {
+    "text": "J",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.666,
+    "id": "o172"
+   },
+   {
+    "text": "TikTok",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 0.998,
+    "id": "o173"
+   },
+   {
+    "text": "builtbybray",
+    "start": 74.0,
+    "end": 74.0,
+    "confidence": 1.0,
+    "id": "o174"
+   }
+  ]
+ }
+}

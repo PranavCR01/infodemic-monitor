@@ -1,0 +1,894 @@
+{
+ "video_id": "v34",
+ "filename": "ssstik.io_@healingartsapothecary_1761400155630.mp4",
+ "relative_path": "Misinfo Dataset/ssstik.io_@healingartsapothecary_1761400155630.mp4",
+ "collector": "Misinfo Dataset",
+ "collector_label": "",
+ "creator_handle": "@healingartsapothecary",
+ "extracted_at": "2026-11-21T18:03:12",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 0.992,
+  "duration_seconds": 15.67,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.18,
+    "end": 5.22,
+    "text": "Help us. If you or a loved one has been diagnosed with cancer, any form of cancer, the first"
+   },
+   {
+    "id": "t2",
+    "start": 5.22,
+    "end": 10.18,
+    "text": "word of advice I would give is to cut out any form of processed sugar. Starving cancer"
+   },
+   {
+    "id": "t3",
+    "start": 10.18,
+    "end": 15.14,
+    "text": "to death by removing one food in particular, refined sugars, could end up saving your life."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 8,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "No",
+    "confidence": 0.999
+   },
+   {
+    "time": 0.0,
+    "text": "Sugar",
+    "confidence": 0.79
+   },
+   {
+    "time": 0.0,
+    "text": "STARVING CANCER",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "by",
+    "confidence": 0.994
+   },
+   {
+    "time": 0.0,
+    "text": "TO DEATH",
+    "confidence": 0.999
+   },
+   {
+    "time": 0.0,
+    "text": "Removing one Food:",
+    "confidence": 0.968
+   },
+   {
+    "time": 0.0,
+    "text": "Refined Sugar",
+    "confidence": 0.99
+   },
+   {
+    "time": 0.0,
+    "text": "Cancer & Sugar",
+    "confidence": 0.721
+   },
+   {
+    "time": 0.0,
+    "text": "Healthbosstv",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "No",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "Sugar",
+    "confidence": 0.821
+   },
+   {
+    "time": 2.0,
+    "text": "STARVING CANCER",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "by",
+    "confidence": 0.991
+   },
+   {
+    "time": 2.0,
+    "text": "TO DEATH",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "Removing one Food:",
+    "confidence": 0.966
+   },
+   {
+    "time": 2.0,
+    "text": "Refined Sugar",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Sv",
+    "confidence": 0.874
+   },
+   {
+    "time": 2.0,
+    "text": "Healthbosstv",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "No",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.0,
+    "text": "Sugar",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "STARVING CANCER",
+    "confidence": 0.986
+   },
+   {
+    "time": 4.0,
+    "text": "by",
+    "confidence": 0.992
+   },
+   {
+    "time": 4.0,
+    "text": "TO DEATH",
+    "confidence": 0.765
+   },
+   {
+    "time": 4.0,
+    "text": "Removing one Food:",
+    "confidence": 0.801
+   },
+   {
+    "time": 4.0,
+    "text": "Refined Sugar",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Healthbosstv",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "No",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.0,
+    "text": "Sugar",
+    "confidence": 0.687
+   },
+   {
+    "time": 6.0,
+    "text": "STARVING CANCER",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "by",
+    "confidence": 0.992
+   },
+   {
+    "time": 6.0,
+    "text": "TO DEATH",
+    "confidence": 0.984
+   },
+   {
+    "time": 6.0,
+    "text": "Removing one Food:",
+    "confidence": 0.786
+   },
+   {
+    "time": 6.0,
+    "text": "Refined Sugar",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "Sv",
+    "confidence": 0.908
+   },
+   {
+    "time": 6.0,
+    "text": "#R",
+    "confidence": 0.583
+   },
+   {
+    "time": 6.0,
+    "text": "Healthbosstv",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "No",
+    "confidence": 0.999
+   },
+   {
+    "time": 8.0,
+    "text": "Sugar",
+    "confidence": 0.749
+   },
+   {
+    "time": 8.0,
+    "text": "STARVING CANCER",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "by",
+    "confidence": 0.992
+   },
+   {
+    "time": 8.0,
+    "text": "TO DEATH",
+    "confidence": 0.936
+   },
+   {
+    "time": 8.0,
+    "text": "Removing one Food:",
+    "confidence": 0.773
+   },
+   {
+    "time": 8.0,
+    "text": "Refined Sugar",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "Sv",
+    "confidence": 0.792
+   },
+   {
+    "time": 8.0,
+    "text": "Healthbosstv",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "No",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "Sugar",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "STARVING CANCER",
+    "confidence": 0.943
+   },
+   {
+    "time": 10.0,
+    "text": "by",
+    "confidence": 0.988
+   },
+   {
+    "time": 10.0,
+    "text": "TO DEATH",
+    "confidence": 0.657
+   },
+   {
+    "time": 10.0,
+    "text": "Removing one Food:",
+    "confidence": 0.975
+   },
+   {
+    "time": 10.0,
+    "text": "Refined Sugar",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "Healthbosstv",
+    "confidence": 0.934
+   },
+   {
+    "time": 12.0,
+    "text": "No",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.0,
+    "text": "Sugar",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "STARVING CANCER",
+    "confidence": 0.858
+   },
+   {
+    "time": 12.0,
+    "text": "by",
+    "confidence": 0.988
+   },
+   {
+    "time": 12.0,
+    "text": "TO DEATH",
+    "confidence": 0.66
+   },
+   {
+    "time": 12.0,
+    "text": "Removing one Food:",
+    "confidence": 0.974
+   },
+   {
+    "time": 12.0,
+    "text": "Refined Sugar",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "Sv",
+    "confidence": 0.873
+   },
+   {
+    "time": 12.0,
+    "text": "Healthbosstv",
+    "confidence": 0.933
+   },
+   {
+    "time": 14.0,
+    "text": "No",
+    "confidence": 0.999
+   },
+   {
+    "time": 14.0,
+    "text": "Sugar",
+    "confidence": 0.744
+   },
+   {
+    "time": 14.0,
+    "text": "STARVING CANCER",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "by",
+    "confidence": 0.991
+   },
+   {
+    "time": 14.0,
+    "text": "TO DEATH",
+    "confidence": 0.897
+   },
+   {
+    "time": 14.0,
+    "text": "Removing one Food:",
+    "confidence": 0.978
+   },
+   {
+    "time": 14.0,
+    "text": "Refined Sugar",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "Healthbosstv",
+    "confidence": 0.938
+   }
+  ],
+  "captions": [
+   {
+    "text": "No",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o1"
+   },
+   {
+    "text": "Sugar",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.79,
+    "id": "o2"
+   },
+   {
+    "text": "STARVING CANCER",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o3"
+   },
+   {
+    "text": "by",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.994,
+    "id": "o4"
+   },
+   {
+    "text": "TO DEATH",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o5"
+   },
+   {
+    "text": "Removing one Food:",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.968,
+    "id": "o6"
+   },
+   {
+    "text": "Refined Sugar",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.99,
+    "id": "o7"
+   },
+   {
+    "text": "Cancer & Sugar",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.721,
+    "id": "o8"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "No",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.999,
+    "id": "o10"
+   },
+   {
+    "text": "Sugar",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.821,
+    "id": "o11"
+   },
+   {
+    "text": "STARVING CANCER",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o12"
+   },
+   {
+    "text": "by",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.991,
+    "id": "o13"
+   },
+   {
+    "text": "TO DEATH",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.999,
+    "id": "o14"
+   },
+   {
+    "text": "Removing one Food:",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.966,
+    "id": "o15"
+   },
+   {
+    "text": "Refined Sugar",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o16"
+   },
+   {
+    "text": "Sv",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.874,
+    "id": "o17"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o18"
+   },
+   {
+    "text": "No",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.999,
+    "id": "o19"
+   },
+   {
+    "text": "Sugar",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o20"
+   },
+   {
+    "text": "STARVING CANCER",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.986,
+    "id": "o21"
+   },
+   {
+    "text": "by",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.992,
+    "id": "o22"
+   },
+   {
+    "text": "TO DEATH",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.765,
+    "id": "o23"
+   },
+   {
+    "text": "Removing one Food:",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.801,
+    "id": "o24"
+   },
+   {
+    "text": "Refined Sugar",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o25"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o26"
+   },
+   {
+    "text": "No",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.999,
+    "id": "o27"
+   },
+   {
+    "text": "Sugar",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.687,
+    "id": "o28"
+   },
+   {
+    "text": "STARVING CANCER",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o29"
+   },
+   {
+    "text": "by",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.992,
+    "id": "o30"
+   },
+   {
+    "text": "TO DEATH",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.984,
+    "id": "o31"
+   },
+   {
+    "text": "Removing one Food:",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.786,
+    "id": "o32"
+   },
+   {
+    "text": "Refined Sugar",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o33"
+   },
+   {
+    "text": "Sv",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.908,
+    "id": "o34"
+   },
+   {
+    "text": "#R",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.583,
+    "id": "o35"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o36"
+   },
+   {
+    "text": "No",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.999,
+    "id": "o37"
+   },
+   {
+    "text": "Sugar",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.749,
+    "id": "o38"
+   },
+   {
+    "text": "STARVING CANCER",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o39"
+   },
+   {
+    "text": "by",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.992,
+    "id": "o40"
+   },
+   {
+    "text": "TO DEATH",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.936,
+    "id": "o41"
+   },
+   {
+    "text": "Removing one Food:",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.773,
+    "id": "o42"
+   },
+   {
+    "text": "Refined Sugar",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o43"
+   },
+   {
+    "text": "Sv",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.792,
+    "id": "o44"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o45"
+   },
+   {
+    "text": "No",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o46"
+   },
+   {
+    "text": "Sugar",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o47"
+   },
+   {
+    "text": "STARVING CANCER",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.943,
+    "id": "o48"
+   },
+   {
+    "text": "by",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.988,
+    "id": "o49"
+   },
+   {
+    "text": "TO DEATH",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.657,
+    "id": "o50"
+   },
+   {
+    "text": "Removing one Food:",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.975,
+    "id": "o51"
+   },
+   {
+    "text": "Refined Sugar",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o52"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.934,
+    "id": "o53"
+   },
+   {
+    "text": "No",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o54"
+   },
+   {
+    "text": "Sugar",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o55"
+   },
+   {
+    "text": "STARVING CANCER",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.858,
+    "id": "o56"
+   },
+   {
+    "text": "by",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.988,
+    "id": "o57"
+   },
+   {
+    "text": "TO DEATH",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.66,
+    "id": "o58"
+   },
+   {
+    "text": "Removing one Food:",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.974,
+    "id": "o59"
+   },
+   {
+    "text": "Refined Sugar",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o60"
+   },
+   {
+    "text": "Sv",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.873,
+    "id": "o61"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.933,
+    "id": "o62"
+   },
+   {
+    "text": "No",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.999,
+    "id": "o63"
+   },
+   {
+    "text": "Sugar",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.744,
+    "id": "o64"
+   },
+   {
+    "text": "STARVING CANCER",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o65"
+   },
+   {
+    "text": "by",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.991,
+    "id": "o66"
+   },
+   {
+    "text": "TO DEATH",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.897,
+    "id": "o67"
+   },
+   {
+    "text": "Removing one Food:",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.978,
+    "id": "o68"
+   },
+   {
+    "text": "Refined Sugar",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o69"
+   },
+   {
+    "text": "Healthbosstv",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.938,
+    "id": "o70"
+   }
+  ]
+ }
+}

@@ -1,0 +1,2850 @@
+{
+ "video_id": "v80",
+ "filename": "v15044gf0000d9v36lnog65vm561t2ig.mp4",
+ "relative_path": "Dataset-Sept-2026/Joshua Ryan Fajardo/DEBUNKING/v15044gf0000d9v36lnog65vm561t2ig.mp4",
+ "collector": "Joshua Ryan Fajardo",
+ "collector_label": "DEBUNKING",
+ "creator_handle": "",
+ "extracted_at": "2026-11-21T18:42:34",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "en",
+  "language_probability": 1.0,
+  "duration_seconds": 46.14,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 4.32,
+    "text": "why overload the body and makes more sense to space them out? Because you're not overloading"
+   },
+   {
+    "id": "t2",
+    "start": 4.32,
+    "end": 11.76,
+    "text": "the body. A newborn baby is exposed to 2,000 to 6,000 new antigens every day. Antigen is just"
+   },
+   {
+    "id": "t3",
+    "start": 11.76,
+    "end": 17.52,
+    "text": "the fancy scientific term for foreign substance in their food, in the air, on the ground, in the"
+   },
+   {
+    "id": "t4",
+    "start": 17.52,
+    "end": 22.16,
+    "text": "things that they touch and put in their mouths. Meanwhile, in the entire childhood vaccination"
+   },
+   {
+    "id": "t5",
+    "start": 22.16,
+    "end": 28.56,
+    "text": "series, all 18 years, there are less than 200 antigens, less than one tenth of what babies are"
+   },
+   {
+    "id": "t6",
+    "start": 28.56,
+    "end": 30.72,
+    "text": "are exposed to on a daily basis."
+   },
+   {
+    "id": "t7",
+    "start": 30.72,
+    "end": 33.36,
+    "text": "There is zero evidence for any benefit"
+   },
+   {
+    "id": "t8",
+    "start": 33.36,
+    "end": 35.88,
+    "text": "for spacing out or separating vaccinations,"
+   },
+   {
+    "id": "t9",
+    "start": 35.88,
+    "end": 37.92,
+    "text": "which is why they needed an executive order"
+   },
+   {
+    "id": "t10",
+    "start": 37.92,
+    "end": 39.8,
+    "text": "because it wasn't backed by science."
+   },
+   {
+    "id": "t11",
+    "start": 39.8,
+    "end": 42.28,
+    "text": "Leap healthcare to the healthcare professionals."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 24,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "'Vaccine overload?\"",
+    "confidence": 0.769
+   },
+   {
+    "time": 0.0,
+    "text": "TikTok",
+    "confidence": 0.922
+   },
+   {
+    "time": 0.0,
+    "text": "@ vickichanmd",
+    "confidence": 0.933
+   },
+   {
+    "time": 0.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.614
+   },
+   {
+    "time": 0.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "Why overload the",
+    "confidence": 0.999
+   },
+   {
+    "time": 0.0,
+    "text": "body: It makes more",
+    "confidence": 0.895
+   },
+   {
+    "time": 0.0,
+    "text": "sense to space them",
+    "confidence": 0.929
+   },
+   {
+    "time": 0.0,
+    "text": "out:",
+    "confidence": 0.875
+   },
+   {
+    "time": 2.0,
+    "text": "TikTok",
+    "confidence": 0.858
+   },
+   {
+    "time": 2.0,
+    "text": "@vickichanmd",
+    "confidence": 0.98
+   },
+   {
+    "time": 2.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.607
+   },
+   {
+    "time": 2.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "Why overload the",
+    "confidence": 0.999
+   },
+   {
+    "time": 2.0,
+    "text": "body: It makes more",
+    "confidence": 0.896
+   },
+   {
+    "time": 2.0,
+    "text": "sense to space them",
+    "confidence": 0.927
+   },
+   {
+    "time": 2.0,
+    "text": "out:",
+    "confidence": 0.882
+   },
+   {
+    "time": 4.0,
+    "text": "\"Vaccine overload?\"",
+    "confidence": 0.791
+   },
+   {
+    "time": 4.0,
+    "text": "TikTok",
+    "confidence": 0.961
+   },
+   {
+    "time": 4.0,
+    "text": "vickichanmd",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.615
+   },
+   {
+    "time": 4.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "Why",
+    "confidence": 0.999
+   },
+   {
+    "time": 4.0,
+    "text": "overload the",
+    "confidence": 0.994
+   },
+   {
+    "time": 4.0,
+    "text": "body: It makes more",
+    "confidence": 0.898
+   },
+   {
+    "time": 4.0,
+    "text": "sense to space them",
+    "confidence": 0.924
+   },
+   {
+    "time": 4.0,
+    "text": "out:",
+    "confidence": 0.882
+   },
+   {
+    "time": 4.0,
+    "text": "OVERLOADING THEBODYa",
+    "confidence": 0.801
+   },
+   {
+    "time": 6.0,
+    "text": "\"Vaccineoverload?\"",
+    "confidence": 0.759
+   },
+   {
+    "time": 6.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.621
+   },
+   {
+    "time": 6.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "Why overload the",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.0,
+    "text": "body: It makes more",
+    "confidence": 0.889
+   },
+   {
+    "time": 6.0,
+    "text": "sense to space them",
+    "confidence": 0.949
+   },
+   {
+    "time": 6.0,
+    "text": "out:",
+    "confidence": 0.882
+   },
+   {
+    "time": 6.0,
+    "text": "NEWBORNBABY",
+    "confidence": 0.999
+   },
+   {
+    "time": 6.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "vickichanmd",
+    "confidence": 0.995
+   },
+   {
+    "time": 8.0,
+    "text": "\"Vaccineoverload?m",
+    "confidence": 0.642
+   },
+   {
+    "time": 8.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.62
+   },
+   {
+    "time": 8.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "Why overload the",
+    "confidence": 0.797
+   },
+   {
+    "time": 8.0,
+    "text": "body: It makes more",
+    "confidence": 0.889
+   },
+   {
+    "time": 8.0,
+    "text": "sense to space them",
+    "confidence": 0.949
+   },
+   {
+    "time": 8.0,
+    "text": "out:",
+    "confidence": 0.882
+   },
+   {
+    "time": 8.0,
+    "text": "2,000 TO 6,000",
+    "confidence": 0.887
+   },
+   {
+    "time": 8.0,
+    "text": "TikTok",
+    "confidence": 0.988
+   },
+   {
+    "time": 10.0,
+    "text": "\"Vaccine overload?\"",
+    "confidence": 0.84
+   },
+   {
+    "time": 10.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.799
+   },
+   {
+    "time": 10.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "Why",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "overload the",
+    "confidence": 0.993
+   },
+   {
+    "time": 10.0,
+    "text": "body: It makes more",
+    "confidence": 0.877
+   },
+   {
+    "time": 10.0,
+    "text": "sense to space them",
+    "confidence": 0.924
+   },
+   {
+    "time": 10.0,
+    "text": "out:",
+    "confidence": 0.891
+   },
+   {
+    "time": 10.0,
+    "text": "NEWANTIGENSEVERYDAY",
+    "confidence": 0.999
+   },
+   {
+    "time": 10.0,
+    "text": "TikTok",
+    "confidence": 0.881
+   },
+   {
+    "time": 12.0,
+    "text": "\"Vaccine overload?m",
+    "confidence": 0.95
+   },
+   {
+    "time": 12.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.81
+   },
+   {
+    "time": 12.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "Why overload the",
+    "confidence": 0.999
+   },
+   {
+    "time": 12.0,
+    "text": "body: It makes more",
+    "confidence": 0.876
+   },
+   {
+    "time": 12.0,
+    "text": "sense to space them",
+    "confidence": 0.924
+   },
+   {
+    "time": 12.0,
+    "text": "out:",
+    "confidence": 0.894
+   },
+   {
+    "time": 12.0,
+    "text": "THEFANCY SCIENTIFIC",
+    "confidence": 0.977
+   },
+   {
+    "time": 12.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 12.0,
+    "text": "vickichanmd",
+    "confidence": 0.882
+   },
+   {
+    "time": 14.0,
+    "text": "\"Vaccine overload?\"",
+    "confidence": 0.814
+   },
+   {
+    "time": 14.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.81
+   },
+   {
+    "time": 14.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "Why",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "overload the",
+    "confidence": 0.993
+   },
+   {
+    "time": 14.0,
+    "text": "body: It makes more",
+    "confidence": 0.877
+   },
+   {
+    "time": 14.0,
+    "text": "sense to space them",
+    "confidence": 0.924
+   },
+   {
+    "time": 14.0,
+    "text": "out:",
+    "confidence": 0.892
+   },
+   {
+    "time": 14.0,
+    "text": "FOREIGNSUBSTANCE",
+    "confidence": 0.985
+   },
+   {
+    "time": 14.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "vickichanmd",
+    "confidence": 0.574
+   },
+   {
+    "time": 16.0,
+    "text": "\"Vaccine overload?m",
+    "confidence": 0.553
+   },
+   {
+    "time": 16.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.81
+   },
+   {
+    "time": 16.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "Why",
+    "confidence": 0.997
+   },
+   {
+    "time": 16.0,
+    "text": "overload the",
+    "confidence": 0.993
+   },
+   {
+    "time": 16.0,
+    "text": "body: It makes more",
+    "confidence": 0.877
+   },
+   {
+    "time": 16.0,
+    "text": "sense to space them",
+    "confidence": 0.924
+   },
+   {
+    "time": 16.0,
+    "text": "out:",
+    "confidence": 0.891
+   },
+   {
+    "time": 16.0,
+    "text": "INTHE AIR,",
+    "confidence": 0.851
+   },
+   {
+    "time": 16.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 16.0,
+    "text": "vickichanmd",
+    "confidence": 0.804
+   },
+   {
+    "time": 18.0,
+    "text": "\"Vaccine overload?\"",
+    "confidence": 0.724
+   },
+   {
+    "time": 18.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.72
+   },
+   {
+    "time": 18.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "Why",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "overload the",
+    "confidence": 0.994
+   },
+   {
+    "time": 18.0,
+    "text": "body: It makes more",
+    "confidence": 0.886
+   },
+   {
+    "time": 18.0,
+    "text": "sense to space them",
+    "confidence": 0.938
+   },
+   {
+    "time": 18.0,
+    "text": "out:",
+    "confidence": 0.896
+   },
+   {
+    "time": 18.0,
+    "text": "THATTHEY TOUCH",
+    "confidence": 0.976
+   },
+   {
+    "time": 20.0,
+    "text": "\"Vaccineoverload?\"",
+    "confidence": 0.938
+   },
+   {
+    "time": 20.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.723
+   },
+   {
+    "time": 20.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "Why",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "overload the",
+    "confidence": 0.994
+   },
+   {
+    "time": 20.0,
+    "text": "body: It makes more",
+    "confidence": 0.885
+   },
+   {
+    "time": 20.0,
+    "text": "sense to space them",
+    "confidence": 0.94
+   },
+   {
+    "time": 20.0,
+    "text": "out:",
+    "confidence": 0.897
+   },
+   {
+    "time": 20.0,
+    "text": "MEANWHILE, INTHE",
+    "confidence": 0.787
+   },
+   {
+    "time": 20.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 20.0,
+    "text": "vickichanmd",
+    "confidence": 0.94
+   },
+   {
+    "time": 22.0,
+    "text": "\"Vaccineoverload?\"",
+    "confidence": 0.96
+   },
+   {
+    "time": 22.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.705
+   },
+   {
+    "time": 22.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "Why overload the",
+    "confidence": 0.962
+   },
+   {
+    "time": 22.0,
+    "text": "body: It makes more",
+    "confidence": 0.886
+   },
+   {
+    "time": 22.0,
+    "text": "sense to space them",
+    "confidence": 0.939
+   },
+   {
+    "time": 22.0,
+    "text": "out:",
+    "confidence": 0.893
+   },
+   {
+    "time": 22.0,
+    "text": "ENTIRECHIDHOODVACCINATION",
+    "confidence": 0.997
+   },
+   {
+    "time": 22.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "vickichanmd",
+    "confidence": 0.869
+   },
+   {
+    "time": 24.0,
+    "text": "\"Vaccine overload?\"",
+    "confidence": 0.749
+   },
+   {
+    "time": 24.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.718
+   },
+   {
+    "time": 24.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 24.0,
+    "text": "Why overload the",
+    "confidence": 0.962
+   },
+   {
+    "time": 24.0,
+    "text": "body: It makes more",
+    "confidence": 0.886
+   },
+   {
+    "time": 24.0,
+    "text": "sense to space them",
+    "confidence": 0.939
+   },
+   {
+    "time": 24.0,
+    "text": "out:",
+    "confidence": 0.892
+   },
+   {
+    "time": 24.0,
+    "text": "ALL 18 YEARS;",
+    "confidence": 0.753
+   },
+   {
+    "time": 24.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 24.0,
+    "text": "vickichanmd",
+    "confidence": 0.938
+   },
+   {
+    "time": 26.0,
+    "text": "\"Vaccine overload?\"",
+    "confidence": 0.81
+   },
+   {
+    "time": 26.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.721
+   },
+   {
+    "time": 26.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "Why",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "overload the",
+    "confidence": 0.994
+   },
+   {
+    "time": 26.0,
+    "text": "body: It makes more",
+    "confidence": 0.878
+   },
+   {
+    "time": 26.0,
+    "text": "sense to space them",
+    "confidence": 0.94
+   },
+   {
+    "time": 26.0,
+    "text": "out:",
+    "confidence": 0.888
+   },
+   {
+    "time": 26.0,
+    "text": "THAN 2OOANTIGENS,",
+    "confidence": 0.696
+   },
+   {
+    "time": 26.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "vickichanmd",
+    "confidence": 0.985
+   },
+   {
+    "time": 28.0,
+    "text": "\"Vaccine overload?m",
+    "confidence": 0.96
+   },
+   {
+    "time": 28.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.718
+   },
+   {
+    "time": 28.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "Why",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "overload the",
+    "confidence": 0.994
+   },
+   {
+    "time": 28.0,
+    "text": "body: It makes more",
+    "confidence": 0.878
+   },
+   {
+    "time": 28.0,
+    "text": "sense to space them",
+    "confidence": 0.94
+   },
+   {
+    "time": 28.0,
+    "text": "out:",
+    "confidence": 0.887
+   },
+   {
+    "time": 28.0,
+    "text": "OF WHAT BABIES",
+    "confidence": 0.845
+   },
+   {
+    "time": 28.0,
+    "text": "TikTok",
+    "confidence": 0.989
+   },
+   {
+    "time": 28.0,
+    "text": "vickichanmd",
+    "confidence": 0.703
+   },
+   {
+    "time": 30.0,
+    "text": "\"Vaccine overloade\"",
+    "confidence": 0.894
+   },
+   {
+    "time": 30.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.718
+   },
+   {
+    "time": 30.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "Why",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "overload the",
+    "confidence": 0.994
+   },
+   {
+    "time": 30.0,
+    "text": "body: It makes more",
+    "confidence": 0.878
+   },
+   {
+    "time": 30.0,
+    "text": "sense to space them",
+    "confidence": 0.94
+   },
+   {
+    "time": 30.0,
+    "text": "out:",
+    "confidence": 0.89
+   },
+   {
+    "time": 30.0,
+    "text": "ONADAILY",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "TikTok",
+    "confidence": 0.728
+   },
+   {
+    "time": 30.0,
+    "text": "vickichanmd",
+    "confidence": 0.946
+   },
+   {
+    "time": 32.0,
+    "text": "\"Vaccineoverload?m",
+    "confidence": 0.843
+   },
+   {
+    "time": 32.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.718
+   },
+   {
+    "time": 32.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "Why",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "overload the",
+    "confidence": 0.994
+   },
+   {
+    "time": 32.0,
+    "text": "body: It makes more",
+    "confidence": 0.906
+   },
+   {
+    "time": 32.0,
+    "text": "sense to space them",
+    "confidence": 0.94
+   },
+   {
+    "time": 32.0,
+    "text": "out:",
+    "confidence": 0.886
+   },
+   {
+    "time": 32.0,
+    "text": "EVIDENCEFOR ANY",
+    "confidence": 0.85
+   },
+   {
+    "time": 32.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 32.0,
+    "text": "vickichanmd",
+    "confidence": 0.758
+   },
+   {
+    "time": 34.0,
+    "text": "\"Vaccine overload?\"",
+    "confidence": 0.816
+   },
+   {
+    "time": 34.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.782
+   },
+   {
+    "time": 34.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "Why",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "overload the",
+    "confidence": 0.994
+   },
+   {
+    "time": 34.0,
+    "text": "body: It makes more",
+    "confidence": 0.877
+   },
+   {
+    "time": 34.0,
+    "text": "sense to space them",
+    "confidence": 0.94
+   },
+   {
+    "time": 34.0,
+    "text": "out:",
+    "confidence": 0.897
+   },
+   {
+    "time": 34.0,
+    "text": "FORSPACINGOUT",
+    "confidence": 0.997
+   },
+   {
+    "time": 34.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 34.0,
+    "text": "vickichanmd",
+    "confidence": 0.991
+   },
+   {
+    "time": 36.0,
+    "text": "\"Vaccine overload?\"",
+    "confidence": 0.614
+   },
+   {
+    "time": 36.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.781
+   },
+   {
+    "time": 36.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "Why overload the",
+    "confidence": 0.95
+   },
+   {
+    "time": 36.0,
+    "text": "body: It makes more",
+    "confidence": 0.867
+   },
+   {
+    "time": 36.0,
+    "text": "sense to space them",
+    "confidence": 0.948
+   },
+   {
+    "time": 36.0,
+    "text": "out:",
+    "confidence": 0.9
+   },
+   {
+    "time": 36.0,
+    "text": "WHICHIS WHY",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "vickichanmd",
+    "confidence": 0.933
+   },
+   {
+    "time": 38.0,
+    "text": "\"Vaccineoverload?\"",
+    "confidence": 0.886
+   },
+   {
+    "time": 38.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.779
+   },
+   {
+    "time": 38.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "Why",
+    "confidence": 1.0
+   },
+   {
+    "time": 38.0,
+    "text": "overload the",
+    "confidence": 0.994
+   },
+   {
+    "time": 38.0,
+    "text": "body: It makes more",
+    "confidence": 0.87
+   },
+   {
+    "time": 38.0,
+    "text": "sense to space them",
+    "confidence": 0.944
+   },
+   {
+    "time": 38.0,
+    "text": "out:",
+    "confidence": 0.898
+   },
+   {
+    "time": 38.0,
+    "text": "BECAUSE IT WASNT",
+    "confidence": 0.823
+   },
+   {
+    "time": 38.0,
+    "text": "TikTok",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "\"Vaccine overload?\"",
+    "confidence": 0.574
+   },
+   {
+    "time": 40.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.751
+   },
+   {
+    "time": 40.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "Why",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "overload the",
+    "confidence": 0.993
+   },
+   {
+    "time": 40.0,
+    "text": "body: It makes more",
+    "confidence": 0.877
+   },
+   {
+    "time": 40.0,
+    "text": "sense to space them",
+    "confidence": 0.944
+   },
+   {
+    "time": 40.0,
+    "text": "out:",
+    "confidence": 0.894
+   },
+   {
+    "time": 40.0,
+    "text": "LEAVE HEALTHCARE TO",
+    "confidence": 0.814
+   },
+   {
+    "time": 40.0,
+    "text": "TikTok",
+    "confidence": 0.998
+   },
+   {
+    "time": 40.0,
+    "text": "vickichanmd",
+    "confidence": 0.923
+   },
+   {
+    "time": 42.0,
+    "text": "\"Vaccine overload?\"",
+    "confidence": 0.57
+   },
+   {
+    "time": 42.0,
+    "text": "Reply to BoBbulugabuluga101's",
+    "confidence": 0.58
+   },
+   {
+    "time": 42.0,
+    "text": "comment",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "Why overload the",
+    "confidence": 0.979
+   },
+   {
+    "time": 42.0,
+    "text": "body: It makes more",
+    "confidence": 0.885
+   },
+   {
+    "time": 42.0,
+    "text": "sense to space them",
+    "confidence": 0.927
+   },
+   {
+    "time": 42.0,
+    "text": "out:",
+    "confidence": 0.894
+   },
+   {
+    "time": 42.0,
+    "text": "THE HEALTHCAREPROFESSIONALS:",
+    "confidence": 0.962
+   },
+   {
+    "time": 42.0,
+    "text": "TikTok",
+    "confidence": 0.992
+   },
+   {
+    "time": 44.0,
+    "text": "J",
+    "confidence": 0.675
+   },
+   {
+    "time": 44.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 44.0,
+    "text": "vickichanmd",
+    "confidence": 0.997
+   },
+   {
+    "time": 46.0,
+    "text": "TikTok",
+    "confidence": 0.999
+   },
+   {
+    "time": 46.0,
+    "text": "vickichanmd",
+    "confidence": 0.997
+   }
+  ],
+  "captions": [
+   {
+    "text": "'Vaccine overload?\"",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.769,
+    "id": "o1"
+   },
+   {
+    "text": "TikTok",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.922,
+    "id": "o2"
+   },
+   {
+    "text": "@ vickichanmd",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.933,
+    "id": "o3"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.614,
+    "id": "o4"
+   },
+   {
+    "text": "comment",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o5"
+   },
+   {
+    "text": "Why overload the",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.999,
+    "id": "o6"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.895,
+    "id": "o7"
+   },
+   {
+    "text": "sense to space them",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.929,
+    "id": "o8"
+   },
+   {
+    "text": "out:",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.875,
+    "id": "o9"
+   },
+   {
+    "text": "TikTok",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.858,
+    "id": "o10"
+   },
+   {
+    "text": "@vickichanmd",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.98,
+    "id": "o11"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.607,
+    "id": "o12"
+   },
+   {
+    "text": "comment",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o13"
+   },
+   {
+    "text": "Why overload the",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.999,
+    "id": "o14"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.896,
+    "id": "o15"
+   },
+   {
+    "text": "sense to space them",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.927,
+    "id": "o16"
+   },
+   {
+    "text": "out:",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.882,
+    "id": "o17"
+   },
+   {
+    "text": "\"Vaccine overload?\"",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.791,
+    "id": "o18"
+   },
+   {
+    "text": "TikTok",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.961,
+    "id": "o19"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o20"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.615,
+    "id": "o21"
+   },
+   {
+    "text": "comment",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o22"
+   },
+   {
+    "text": "Why",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.999,
+    "id": "o23"
+   },
+   {
+    "text": "overload the",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.994,
+    "id": "o24"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.898,
+    "id": "o25"
+   },
+   {
+    "text": "sense to space them",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.924,
+    "id": "o26"
+   },
+   {
+    "text": "out:",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.882,
+    "id": "o27"
+   },
+   {
+    "text": "OVERLOADING THEBODYa",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.801,
+    "id": "o28"
+   },
+   {
+    "text": "\"Vaccineoverload?\"",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.759,
+    "id": "o29"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.621,
+    "id": "o30"
+   },
+   {
+    "text": "comment",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o31"
+   },
+   {
+    "text": "Why overload the",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.999,
+    "id": "o32"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.889,
+    "id": "o33"
+   },
+   {
+    "text": "sense to space them",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.949,
+    "id": "o34"
+   },
+   {
+    "text": "out:",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.882,
+    "id": "o35"
+   },
+   {
+    "text": "NEWBORNBABY",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.999,
+    "id": "o36"
+   },
+   {
+    "text": "TikTok",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o37"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.995,
+    "id": "o38"
+   },
+   {
+    "text": "\"Vaccineoverload?m",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.642,
+    "id": "o39"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.62,
+    "id": "o40"
+   },
+   {
+    "text": "comment",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o41"
+   },
+   {
+    "text": "Why overload the",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.797,
+    "id": "o42"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.889,
+    "id": "o43"
+   },
+   {
+    "text": "sense to space them",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.949,
+    "id": "o44"
+   },
+   {
+    "text": "out:",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.882,
+    "id": "o45"
+   },
+   {
+    "text": "2,000 TO 6,000",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.887,
+    "id": "o46"
+   },
+   {
+    "text": "TikTok",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.988,
+    "id": "o47"
+   },
+   {
+    "text": "\"Vaccine overload?\"",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.84,
+    "id": "o48"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.799,
+    "id": "o49"
+   },
+   {
+    "text": "comment",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o50"
+   },
+   {
+    "text": "Why",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o51"
+   },
+   {
+    "text": "overload the",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.993,
+    "id": "o52"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.877,
+    "id": "o53"
+   },
+   {
+    "text": "sense to space them",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.924,
+    "id": "o54"
+   },
+   {
+    "text": "out:",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.891,
+    "id": "o55"
+   },
+   {
+    "text": "NEWANTIGENSEVERYDAY",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.999,
+    "id": "o56"
+   },
+   {
+    "text": "TikTok",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.881,
+    "id": "o57"
+   },
+   {
+    "text": "\"Vaccine overload?m",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.95,
+    "id": "o58"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.81,
+    "id": "o59"
+   },
+   {
+    "text": "comment",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o60"
+   },
+   {
+    "text": "Why overload the",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.999,
+    "id": "o61"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.876,
+    "id": "o62"
+   },
+   {
+    "text": "sense to space them",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.924,
+    "id": "o63"
+   },
+   {
+    "text": "out:",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.894,
+    "id": "o64"
+   },
+   {
+    "text": "THEFANCY SCIENTIFIC",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.977,
+    "id": "o65"
+   },
+   {
+    "text": "TikTok",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 1.0,
+    "id": "o66"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.882,
+    "id": "o67"
+   },
+   {
+    "text": "\"Vaccine overload?\"",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.814,
+    "id": "o68"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.81,
+    "id": "o69"
+   },
+   {
+    "text": "comment",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o70"
+   },
+   {
+    "text": "Why",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o71"
+   },
+   {
+    "text": "overload the",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.993,
+    "id": "o72"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.877,
+    "id": "o73"
+   },
+   {
+    "text": "sense to space them",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.924,
+    "id": "o74"
+   },
+   {
+    "text": "out:",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.892,
+    "id": "o75"
+   },
+   {
+    "text": "FOREIGNSUBSTANCE",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.985,
+    "id": "o76"
+   },
+   {
+    "text": "TikTok",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o77"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.574,
+    "id": "o78"
+   },
+   {
+    "text": "\"Vaccine overload?m",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.553,
+    "id": "o79"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.81,
+    "id": "o80"
+   },
+   {
+    "text": "comment",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o81"
+   },
+   {
+    "text": "Why",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.997,
+    "id": "o82"
+   },
+   {
+    "text": "overload the",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.993,
+    "id": "o83"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.877,
+    "id": "o84"
+   },
+   {
+    "text": "sense to space them",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.924,
+    "id": "o85"
+   },
+   {
+    "text": "out:",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.891,
+    "id": "o86"
+   },
+   {
+    "text": "INTHE AIR,",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.851,
+    "id": "o87"
+   },
+   {
+    "text": "TikTok",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.999,
+    "id": "o88"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.804,
+    "id": "o89"
+   },
+   {
+    "text": "\"Vaccine overload?\"",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.724,
+    "id": "o90"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.72,
+    "id": "o91"
+   },
+   {
+    "text": "comment",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 1.0,
+    "id": "o92"
+   },
+   {
+    "text": "Why",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 1.0,
+    "id": "o93"
+   },
+   {
+    "text": "overload the",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.994,
+    "id": "o94"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.886,
+    "id": "o95"
+   },
+   {
+    "text": "sense to space them",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.938,
+    "id": "o96"
+   },
+   {
+    "text": "out:",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.896,
+    "id": "o97"
+   },
+   {
+    "text": "THATTHEY TOUCH",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.976,
+    "id": "o98"
+   },
+   {
+    "text": "\"Vaccineoverload?\"",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.938,
+    "id": "o99"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.723,
+    "id": "o100"
+   },
+   {
+    "text": "comment",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o101"
+   },
+   {
+    "text": "Why",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o102"
+   },
+   {
+    "text": "overload the",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.994,
+    "id": "o103"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.885,
+    "id": "o104"
+   },
+   {
+    "text": "sense to space them",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.94,
+    "id": "o105"
+   },
+   {
+    "text": "out:",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.897,
+    "id": "o106"
+   },
+   {
+    "text": "MEANWHILE, INTHE",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.787,
+    "id": "o107"
+   },
+   {
+    "text": "TikTok",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.999,
+    "id": "o108"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.94,
+    "id": "o109"
+   },
+   {
+    "text": "\"Vaccineoverload?\"",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.96,
+    "id": "o110"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.705,
+    "id": "o111"
+   },
+   {
+    "text": "comment",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o112"
+   },
+   {
+    "text": "Why overload the",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.962,
+    "id": "o113"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.886,
+    "id": "o114"
+   },
+   {
+    "text": "sense to space them",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.939,
+    "id": "o115"
+   },
+   {
+    "text": "out:",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.893,
+    "id": "o116"
+   },
+   {
+    "text": "ENTIRECHIDHOODVACCINATION",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.997,
+    "id": "o117"
+   },
+   {
+    "text": "TikTok",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o118"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.869,
+    "id": "o119"
+   },
+   {
+    "text": "\"Vaccine overload?\"",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.749,
+    "id": "o120"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.718,
+    "id": "o121"
+   },
+   {
+    "text": "comment",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 1.0,
+    "id": "o122"
+   },
+   {
+    "text": "Why overload the",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.962,
+    "id": "o123"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.886,
+    "id": "o124"
+   },
+   {
+    "text": "sense to space them",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.939,
+    "id": "o125"
+   },
+   {
+    "text": "out:",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.892,
+    "id": "o126"
+   },
+   {
+    "text": "ALL 18 YEARS;",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.753,
+    "id": "o127"
+   },
+   {
+    "text": "TikTok",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.999,
+    "id": "o128"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.938,
+    "id": "o129"
+   },
+   {
+    "text": "\"Vaccine overload?\"",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.81,
+    "id": "o130"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.721,
+    "id": "o131"
+   },
+   {
+    "text": "comment",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o132"
+   },
+   {
+    "text": "Why",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o133"
+   },
+   {
+    "text": "overload the",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.994,
+    "id": "o134"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.878,
+    "id": "o135"
+   },
+   {
+    "text": "sense to space them",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.94,
+    "id": "o136"
+   },
+   {
+    "text": "out:",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.888,
+    "id": "o137"
+   },
+   {
+    "text": "THAN 2OOANTIGENS,",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.696,
+    "id": "o138"
+   },
+   {
+    "text": "TikTok",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o139"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.985,
+    "id": "o140"
+   },
+   {
+    "text": "\"Vaccine overload?m",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.96,
+    "id": "o141"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.718,
+    "id": "o142"
+   },
+   {
+    "text": "comment",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o143"
+   },
+   {
+    "text": "Why",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o144"
+   },
+   {
+    "text": "overload the",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.994,
+    "id": "o145"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.878,
+    "id": "o146"
+   },
+   {
+    "text": "sense to space them",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.94,
+    "id": "o147"
+   },
+   {
+    "text": "out:",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.887,
+    "id": "o148"
+   },
+   {
+    "text": "OF WHAT BABIES",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.845,
+    "id": "o149"
+   },
+   {
+    "text": "TikTok",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.989,
+    "id": "o150"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.703,
+    "id": "o151"
+   },
+   {
+    "text": "\"Vaccine overloade\"",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.894,
+    "id": "o152"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.718,
+    "id": "o153"
+   },
+   {
+    "text": "comment",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o154"
+   },
+   {
+    "text": "Why",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o155"
+   },
+   {
+    "text": "overload the",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.994,
+    "id": "o156"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.878,
+    "id": "o157"
+   },
+   {
+    "text": "sense to space them",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.94,
+    "id": "o158"
+   },
+   {
+    "text": "out:",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.89,
+    "id": "o159"
+   },
+   {
+    "text": "ONADAILY",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o160"
+   },
+   {
+    "text": "TikTok",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.728,
+    "id": "o161"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.946,
+    "id": "o162"
+   },
+   {
+    "text": "\"Vaccineoverload?m",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.843,
+    "id": "o163"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.718,
+    "id": "o164"
+   },
+   {
+    "text": "comment",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o165"
+   },
+   {
+    "text": "Why",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o166"
+   },
+   {
+    "text": "overload the",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.994,
+    "id": "o167"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.906,
+    "id": "o168"
+   },
+   {
+    "text": "sense to space them",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.94,
+    "id": "o169"
+   },
+   {
+    "text": "out:",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.886,
+    "id": "o170"
+   },
+   {
+    "text": "EVIDENCEFOR ANY",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.85,
+    "id": "o171"
+   },
+   {
+    "text": "TikTok",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.999,
+    "id": "o172"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.758,
+    "id": "o173"
+   },
+   {
+    "text": "\"Vaccine overload?\"",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.816,
+    "id": "o174"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.782,
+    "id": "o175"
+   },
+   {
+    "text": "comment",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o176"
+   },
+   {
+    "text": "Why",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o177"
+   },
+   {
+    "text": "overload the",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.994,
+    "id": "o178"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.877,
+    "id": "o179"
+   },
+   {
+    "text": "sense to space them",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.94,
+    "id": "o180"
+   },
+   {
+    "text": "out:",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.897,
+    "id": "o181"
+   },
+   {
+    "text": "FORSPACINGOUT",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.997,
+    "id": "o182"
+   },
+   {
+    "text": "TikTok",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.999,
+    "id": "o183"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.991,
+    "id": "o184"
+   },
+   {
+    "text": "\"Vaccine overload?\"",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.614,
+    "id": "o185"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.781,
+    "id": "o186"
+   },
+   {
+    "text": "comment",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o187"
+   },
+   {
+    "text": "Why overload the",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.95,
+    "id": "o188"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.867,
+    "id": "o189"
+   },
+   {
+    "text": "sense to space them",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.948,
+    "id": "o190"
+   },
+   {
+    "text": "out:",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.9,
+    "id": "o191"
+   },
+   {
+    "text": "WHICHIS WHY",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o192"
+   },
+   {
+    "text": "TikTok",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o193"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.933,
+    "id": "o194"
+   },
+   {
+    "text": "\"Vaccineoverload?\"",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.886,
+    "id": "o195"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.779,
+    "id": "o196"
+   },
+   {
+    "text": "comment",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o197"
+   },
+   {
+    "text": "Why",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o198"
+   },
+   {
+    "text": "overload the",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.994,
+    "id": "o199"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.87,
+    "id": "o200"
+   },
+   {
+    "text": "sense to space them",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.944,
+    "id": "o201"
+   },
+   {
+    "text": "out:",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.898,
+    "id": "o202"
+   },
+   {
+    "text": "BECAUSE IT WASNT",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.823,
+    "id": "o203"
+   },
+   {
+    "text": "TikTok",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 1.0,
+    "id": "o204"
+   },
+   {
+    "text": "\"Vaccine overload?\"",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.574,
+    "id": "o205"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.751,
+    "id": "o206"
+   },
+   {
+    "text": "comment",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o207"
+   },
+   {
+    "text": "Why",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o208"
+   },
+   {
+    "text": "overload the",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.993,
+    "id": "o209"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.877,
+    "id": "o210"
+   },
+   {
+    "text": "sense to space them",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.944,
+    "id": "o211"
+   },
+   {
+    "text": "out:",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.894,
+    "id": "o212"
+   },
+   {
+    "text": "LEAVE HEALTHCARE TO",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.814,
+    "id": "o213"
+   },
+   {
+    "text": "TikTok",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.998,
+    "id": "o214"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.923,
+    "id": "o215"
+   },
+   {
+    "text": "\"Vaccine overload?\"",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.57,
+    "id": "o216"
+   },
+   {
+    "text": "Reply to BoBbulugabuluga101's",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.58,
+    "id": "o217"
+   },
+   {
+    "text": "comment",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o218"
+   },
+   {
+    "text": "Why overload the",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.979,
+    "id": "o219"
+   },
+   {
+    "text": "body: It makes more",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.885,
+    "id": "o220"
+   },
+   {
+    "text": "sense to space them",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.927,
+    "id": "o221"
+   },
+   {
+    "text": "out:",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.894,
+    "id": "o222"
+   },
+   {
+    "text": "THE HEALTHCAREPROFESSIONALS:",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.962,
+    "id": "o223"
+   },
+   {
+    "text": "TikTok",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.992,
+    "id": "o224"
+   },
+   {
+    "text": "J",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.675,
+    "id": "o225"
+   },
+   {
+    "text": "TikTok",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.999,
+    "id": "o226"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.997,
+    "id": "o227"
+   },
+   {
+    "text": "TikTok",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.999,
+    "id": "o228"
+   },
+   {
+    "text": "vickichanmd",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.997,
+    "id": "o229"
+   }
+  ]
+ }
+}

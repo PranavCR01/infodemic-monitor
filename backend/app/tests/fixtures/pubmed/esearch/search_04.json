@@ -1,0 +1,18 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "3",
+  "retmax": "3",
+  "retstart": "0",
+  "idlist": [
+   "99000302",
+   "99000303",
+   "99000304"
+  ],
+  "translationset": [],
+  "querytranslation": "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND (\"Autism Spectrum Disorder\"[MeSH Terms] OR autism[tiab]) AND (Child[MeSH Terms] OR children[tiab])"
+ }
+}

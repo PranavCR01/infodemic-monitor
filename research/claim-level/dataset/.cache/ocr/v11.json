@@ -1,0 +1,569 @@
+{
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "on_screen": {
+  "frames_sampled": 28,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "\"ICAN'T\"",
+    "confidence": 0.918
+   },
+   {
+    "time": 2.0,
+    "text": "\"WHO PROPOSES\"",
+    "confidence": 0.724
+   },
+   {
+    "time": 2.0,
+    "text": "ARE SEED OILS BAD",
+    "confidence": 0.977
+   },
+   {
+    "time": 2.0,
+    "text": "FOR YOU HEALTH?",
+    "confidence": 0.742
+   },
+   {
+    "time": 4.0,
+    "text": "D   0 M E",
+    "confidence": 0.771
+   },
+   {
+    "time": 6.0,
+    "text": "NAMELESS",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "MRR",
+    "confidence": 0.706
+   },
+   {
+    "time": 8.0,
+    "text": "TROLL FARM",
+    "confidence": 0.831
+   },
+   {
+    "time": 10.0,
+    "text": "REALLY FUNNY",
+    "confidence": 0.983
+   },
+   {
+    "time": 10.0,
+    "text": "RP",
+    "confidence": 0.913
+   },
+   {
+    "time": 10.0,
+    "text": "ZENAISSA",
+    "confidence": 0.83
+   },
+   {
+    "time": 12.0,
+    "text": "WAS CURIOUS",
+    "confidence": 0.994
+   },
+   {
+    "time": 12.0,
+    "text": "VSSANG",
+    "confidence": 0.69
+   },
+   {
+    "time": 14.0,
+    "text": "ABOUT SEED OILS",
+    "confidence": 0.968
+   },
+   {
+    "time": 14.0,
+    "text": "MRP",
+    "confidence": 0.515
+   },
+   {
+    "time": 16.0,
+    "text": "WHeRE THEY TAKE",
+    "confidence": 0.59
+   },
+   {
+    "time": 18.0,
+    "text": "SATURATED FATS",
+    "confidence": 0.868
+   },
+   {
+    "time": 18.0,
+    "text": "IRR",
+    "confidence": 0.919
+   },
+   {
+    "time": 22.0,
+    "text": "AND IN ALMOST",
+    "confidence": 0.701
+   },
+   {
+    "time": 24.0,
+    "text": "HEALTHIER",
+    "confidence": 0.996
+   },
+   {
+    "time": 26.0,
+    "text": "BAD FOR YOU",
+    "confidence": 0.887
+   },
+   {
+    "time": 26.0,
+    "text": "KSSAN",
+    "confidence": 0.646
+   },
+   {
+    "time": 28.0,
+    "text": "BY FOLKS",
+    "confidence": 0.995
+   },
+   {
+    "time": 28.0,
+    "text": "MRP",
+    "confidence": 0.525
+   },
+   {
+    "time": 30.0,
+    "text": "REALLY DEEP INTO",
+    "confidence": 0.995
+   },
+   {
+    "time": 32.0,
+    "text": "AND THEY'RE",
+    "confidence": 0.987
+   },
+   {
+    "time": 32.0,
+    "text": "MRP",
+    "confidence": 0.537
+   },
+   {
+    "time": 32.0,
+    "text": "VSSAN",
+    "confidence": 0.505
+   },
+   {
+    "time": 32.0,
+    "text": "TNA",
+    "confidence": 0.525
+   },
+   {
+    "time": 34.0,
+    "text": "SHOULD BE",
+    "confidence": 0.926
+   },
+   {
+    "time": 34.0,
+    "text": "MRR",
+    "confidence": 0.612
+   },
+   {
+    "time": 36.0,
+    "text": "COOKING PROCESS",
+    "confidence": 0.719
+   },
+   {
+    "time": 38.0,
+    "text": "BUT INFERENCE",
+    "confidence": 0.618
+   },
+   {
+    "time": 40.0,
+    "text": "IN DECISION MAKING",
+    "confidence": 0.93
+   },
+   {
+    "time": 40.0,
+    "text": "RP",
+    "confidence": 0.985
+   },
+   {
+    "time": 42.0,
+    "text": "RANDOMIZED",
+    "confidence": 0.815
+   },
+   {
+    "time": 42.0,
+    "text": "RR",
+    "confidence": 0.996
+   },
+   {
+    "time": 44.0,
+    "text": "THE REAL WorLD",
+    "confidence": 0.521
+   },
+   {
+    "time": 46.0,
+    "text": "It'S LIKE WELL",
+    "confidence": 0.738
+   },
+   {
+    "time": 46.0,
+    "text": "RR",
+    "confidence": 0.943
+   },
+   {
+    "time": 46.0,
+    "text": "ZNA1SSA",
+    "confidence": 0.624
+   },
+   {
+    "time": 48.0,
+    "text": "SHE'S LIKE",
+    "confidence": 0.527
+   },
+   {
+    "time": 50.0,
+    "text": "INFERENCE",
+    "confidence": 0.999
+   },
+   {
+    "time": 52.0,
+    "text": "So SEED OILS",
+    "confidence": 0.605
+   },
+   {
+    "time": 54.0,
+    "text": "They'RE TOTALLY FINE",
+    "confidence": 0.509
+   },
+   {
+    "time": 54.0,
+    "text": "RP",
+    "confidence": 0.979
+   }
+  ],
+  "captions": [
+   {
+    "text": "\"ICAN'T\"",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.918,
+    "id": "o1"
+   },
+   {
+    "text": "\"WHO PROPOSES\"",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.724,
+    "id": "o2"
+   },
+   {
+    "text": "ARE SEED OILS BAD",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.977,
+    "id": "o3"
+   },
+   {
+    "text": "FOR YOU HEALTH?",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.742,
+    "id": "o4"
+   },
+   {
+    "text": "D   0 M E",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.771,
+    "id": "o5"
+   },
+   {
+    "text": "NAMELESS",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o6"
+   },
+   {
+    "text": "MRR",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.706,
+    "id": "o7"
+   },
+   {
+    "text": "TROLL FARM",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.831,
+    "id": "o8"
+   },
+   {
+    "text": "REALLY FUNNY",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.983,
+    "id": "o9"
+   },
+   {
+    "text": "RP",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.913,
+    "id": "o10"
+   },
+   {
+    "text": "ZENAISSA",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.83,
+    "id": "o11"
+   },
+   {
+    "text": "WAS CURIOUS",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.994,
+    "id": "o12"
+   },
+   {
+    "text": "VSSANG",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.69,
+    "id": "o13"
+   },
+   {
+    "text": "ABOUT SEED OILS",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.968,
+    "id": "o14"
+   },
+   {
+    "text": "MRP",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.515,
+    "id": "o15"
+   },
+   {
+    "text": "WHeRE THEY TAKE",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.59,
+    "id": "o16"
+   },
+   {
+    "text": "SATURATED FATS",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.868,
+    "id": "o17"
+   },
+   {
+    "text": "IRR",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.919,
+    "id": "o18"
+   },
+   {
+    "text": "AND IN ALMOST",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.701,
+    "id": "o19"
+   },
+   {
+    "text": "HEALTHIER",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.996,
+    "id": "o20"
+   },
+   {
+    "text": "BAD FOR YOU",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.887,
+    "id": "o21"
+   },
+   {
+    "text": "KSSAN",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.646,
+    "id": "o22"
+   },
+   {
+    "text": "BY FOLKS",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.995,
+    "id": "o23"
+   },
+   {
+    "text": "MRP",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.525,
+    "id": "o24"
+   },
+   {
+    "text": "REALLY DEEP INTO",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.995,
+    "id": "o25"
+   },
+   {
+    "text": "AND THEY'RE",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.987,
+    "id": "o26"
+   },
+   {
+    "text": "MRP",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.537,
+    "id": "o27"
+   },
+   {
+    "text": "VSSAN",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.505,
+    "id": "o28"
+   },
+   {
+    "text": "TNA",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.525,
+    "id": "o29"
+   },
+   {
+    "text": "SHOULD BE",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.926,
+    "id": "o30"
+   },
+   {
+    "text": "MRR",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.612,
+    "id": "o31"
+   },
+   {
+    "text": "COOKING PROCESS",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.719,
+    "id": "o32"
+   },
+   {
+    "text": "BUT INFERENCE",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.618,
+    "id": "o33"
+   },
+   {
+    "text": "IN DECISION MAKING",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.93,
+    "id": "o34"
+   },
+   {
+    "text": "RP",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.985,
+    "id": "o35"
+   },
+   {
+    "text": "RANDOMIZED",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.815,
+    "id": "o36"
+   },
+   {
+    "text": "RR",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.996,
+    "id": "o37"
+   },
+   {
+    "text": "THE REAL WorLD",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.521,
+    "id": "o38"
+   },
+   {
+    "text": "It'S LIKE WELL",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.738,
+    "id": "o39"
+   },
+   {
+    "text": "RR",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.943,
+    "id": "o40"
+   },
+   {
+    "text": "ZNA1SSA",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.624,
+    "id": "o41"
+   },
+   {
+    "text": "SHE'S LIKE",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.527,
+    "id": "o42"
+   },
+   {
+    "text": "INFERENCE",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.999,
+    "id": "o43"
+   },
+   {
+    "text": "So SEED OILS",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.605,
+    "id": "o44"
+   },
+   {
+    "text": "They'RE TOTALLY FINE",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.509,
+    "id": "o45"
+   },
+   {
+    "text": "RP",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.979,
+    "id": "o46"
+   }
+  ]
+ }
+}

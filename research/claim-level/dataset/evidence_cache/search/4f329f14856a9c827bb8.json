@@ -1,0 +1,55 @@
+{
+ "query": "banana starch ripening",
+ "sort": "relevance",
+ "pmids": [
+  "31001305",
+  "37177912",
+  "36438126",
+  "33656245"
+ ],
+ "records": [
+  {
+   "pmid": "31001305",
+   "title": "The Starch Is (Not) Just Another Brick in the Wall: The Primary Metabolism of Sugars During Banana Ripening.",
+   "journal": "Frontiers in plant science",
+   "year": "2019",
+   "pubtypes": [
+    "Journal Article",
+    "Review"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31001305/"
+  },
+  {
+   "pmid": "37177912",
+   "title": "MaBEL1 regulates banana fruit ripening by activating cell wall and starch degradation-related genes.",
+   "journal": "Journal of integrative plant biology",
+   "year": "2023",
+   "pubtypes": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37177912/"
+  },
+  {
+   "pmid": "36438126",
+   "title": "A banana transcriptional repressor MaAP2a participates in fruit starch degradation during postharvest ripening.",
+   "journal": "Frontiers in plant science",
+   "year": "2022",
+   "pubtypes": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36438126/"
+  },
+  {
+   "pmid": "33656245",
+   "title": "Alternative splicing of MaMYB16L regulates starch degradation in banana fruit during ripening.",
+   "journal": "Journal of integrative plant biology",
+   "year": "2021",
+   "pubtypes": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33656245/"
+  }
+ ],
+ "_key": "search::banana starch ripening::4::relevance",
+ "_retrieved_at": "2026-11-23T08:51:29"
+}

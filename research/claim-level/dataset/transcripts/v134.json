@@ -1,0 +1,918 @@
+{
+ "video_id": "v134",
+ "filename": "new_TikTok_7342591349893483808.mp4",
+ "relative_path": "new_TikTok_7342591349893483808.mp4",
+ "collector": "",
+ "collector_label": "",
+ "creator_handle": "@fundacionpielsana",
+ "extracted_at": "2026-11-23T08:45:57",
+ "whisper": {
+  "model": "small",
+  "device": "cuda",
+  "compute_type": "float16"
+ },
+ "ocr": {
+  "engine": "easyocr",
+  "lang": "en",
+  "fps": 0.5,
+  "max_side": 960,
+  "min_confidence": 0.5,
+  "gpu": true
+ },
+ "transcript": {
+  "language": "es",
+  "language_probability": 0.998,
+  "duration_seconds": 55.61,
+  "segments": [
+   {
+    "id": "t1",
+    "start": 0.0,
+    "end": 3.1,
+    "text": "¿Existe el calle solar?"
+   },
+   {
+    "id": "t2",
+    "start": 3.1,
+    "end": 7.38,
+    "text": "Podríamos decir que el calle solar existe, pero eso no quiere decir que el calle solar"
+   },
+   {
+    "id": "t3",
+    "start": 7.38,
+    "end": 8.38,
+    "text": "sea bueno."
+   },
+   {
+    "id": "t4",
+    "start": 8.38,
+    "end": 12.14,
+    "text": "Quien habla del calle solar dice que la piel se tiene que ir exponiendo sin protección"
+   },
+   {
+    "id": "t5",
+    "start": 12.14,
+    "end": 15.14,
+    "text": "solar al sol, ya que progresivamente se va curtiendo."
+   },
+   {
+    "id": "t6",
+    "start": 15.14,
+    "end": 19.66,
+    "text": "Eso es verdad, porque la piel, a medida que ya va cogiendo color la melanina se estimula"
+   },
+   {
+    "id": "t7",
+    "start": 19.66,
+    "end": 24.18,
+    "text": "y deja de quemarse en algún momento, pero sigue recibiendo el daño crónico del sol."
+   },
+   {
+    "id": "t8",
+    "start": 24.18,
+    "end": 28.38,
+    "text": "Y vemos el calle solar, no solo por el aumento de riesgo del cáncer de piel, sino que también"
+   },
+   {
+    "id": "t9",
+    "start": 28.38,
+    "end": 33.18,
+    "text": "lo vemos por los signos que se manifiestan de envejecimiento prematuro en nuestra cara."
+   },
+   {
+    "id": "t10",
+    "start": 33.18,
+    "end": 38.58,
+    "text": "Así que, si quieres tener callo solar, pues sí, tendrás más arrugas, más flacidez,"
+   },
+   {
+    "id": "t11",
+    "start": 38.58,
+    "end": 42.5,
+    "text": "porque perderás colágeno, más manchas, un aspecto más envejecido, pero la piel estará"
+   },
+   {
+    "id": "t12",
+    "start": 42.5,
+    "end": 47.74,
+    "text": "curtida, estará curtida. Así que, tú decides si quieres callo solar o prefieres protección"
+   },
+   {
+    "id": "t13",
+    "start": 47.74,
+    "end": 51.82,
+    "text": "solar y tener una cara más joven y más sana para el resto de la vida."
+   }
+  ]
+ },
+ "on_screen": {
+  "frames_sampled": 28,
+  "detections": [
+   {
+    "time": 0.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 0.0,
+    "text": "TV",
+    "confidence": 0.541
+   },
+   {
+    "time": 0.0,
+    "text": "{EXISTE EL CALLO SOLAR?",
+    "confidence": 0.911
+   },
+   {
+    "time": 0.0,
+    "text": "Dra. Paloma Borregon",
+    "confidence": 0.77
+   },
+   {
+    "time": 2.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 2.0,
+    "text": "T",
+    "confidence": 0.992
+   },
+   {
+    "time": 4.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 4.0,
+    "text": "TV",
+    "confidence": 0.538
+   },
+   {
+    "time": 6.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 6.0,
+    "text": "TV",
+    "confidence": 0.55
+   },
+   {
+    "time": 6.0,
+    "text": "{EXISTE EL CALLO SOLAR?",
+    "confidence": 0.995
+   },
+   {
+    "time": 6.0,
+    "text": "Dra. Paloma Borregon",
+    "confidence": 0.666
+   },
+   {
+    "time": 8.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 8.0,
+    "text": "TV",
+    "confidence": 0.892
+   },
+   {
+    "time": 8.0,
+    "text": "{EXISTE EL CALLO SOLAR?",
+    "confidence": 0.995
+   },
+   {
+    "time": 8.0,
+    "text": "Dra. Paloma Borregon",
+    "confidence": 0.847
+   },
+   {
+    "time": 10.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 10.0,
+    "text": "TV",
+    "confidence": 0.591
+   },
+   {
+    "time": 10.0,
+    "text": "{EXISTE EL CALLO SOLAR?",
+    "confidence": 0.777
+   },
+   {
+    "time": 10.0,
+    "text": "Dra. Paloma Borregon",
+    "confidence": 0.834
+   },
+   {
+    "time": 12.0,
+    "text": "DERMA",
+    "confidence": 0.991
+   },
+   {
+    "time": 12.0,
+    "text": "TV",
+    "confidence": 0.555
+   },
+   {
+    "time": 14.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 14.0,
+    "text": "TV",
+    "confidence": 0.879
+   },
+   {
+    "time": 16.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 16.0,
+    "text": "TV",
+    "confidence": 0.876
+   },
+   {
+    "time": 18.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 18.0,
+    "text": "TV",
+    "confidence": 0.875
+   },
+   {
+    "time": 20.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 20.0,
+    "text": "TV",
+    "confidence": 0.526
+   },
+   {
+    "time": 22.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 22.0,
+    "text": "TV",
+    "confidence": 0.882
+   },
+   {
+    "time": 24.0,
+    "text": "DERMA",
+    "confidence": 0.988
+   },
+   {
+    "time": 24.0,
+    "text": "TV",
+    "confidence": 0.57
+   },
+   {
+    "time": 26.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 26.0,
+    "text": "TV",
+    "confidence": 0.619
+   },
+   {
+    "time": 28.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 28.0,
+    "text": "TV",
+    "confidence": 0.881
+   },
+   {
+    "time": 30.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 30.0,
+    "text": "TV",
+    "confidence": 0.544
+   },
+   {
+    "time": 32.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 32.0,
+    "text": "TV",
+    "confidence": 0.882
+   },
+   {
+    "time": 34.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 34.0,
+    "text": "TV",
+    "confidence": 0.9
+   },
+   {
+    "time": 36.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 36.0,
+    "text": "TV",
+    "confidence": 0.566
+   },
+   {
+    "time": 38.0,
+    "text": "DERMA",
+    "confidence": 0.981
+   },
+   {
+    "time": 38.0,
+    "text": "TV",
+    "confidence": 0.587
+   },
+   {
+    "time": 40.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 40.0,
+    "text": "TV",
+    "confidence": 0.746
+   },
+   {
+    "time": 42.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 42.0,
+    "text": "TV",
+    "confidence": 0.926
+   },
+   {
+    "time": 44.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 44.0,
+    "text": "TV",
+    "confidence": 0.934
+   },
+   {
+    "time": 46.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 46.0,
+    "text": "TV",
+    "confidence": 0.811
+   },
+   {
+    "time": 48.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 48.0,
+    "text": "TV",
+    "confidence": 0.927
+   },
+   {
+    "time": 50.0,
+    "text": "DERMA",
+    "confidence": 1.0
+   },
+   {
+    "time": 50.0,
+    "text": "TV",
+    "confidence": 0.933
+   },
+   {
+    "time": 52.0,
+    "text": "FV",
+    "confidence": 0.529
+   },
+   {
+    "time": 54.0,
+    "text": "AE",
+    "confidence": 0.935
+   },
+   {
+    "time": 54.0,
+    "text": "DV",
+    "confidence": 0.998
+   },
+   {
+    "time": 54.0,
+    "text": "1909",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "ACADEMIA ESPANOLA",
+    "confidence": 1.0
+   },
+   {
+    "time": 54.0,
+    "text": "DE DERMATOLOGIA",
+    "confidence": 0.738
+   },
+   {
+    "time": 54.0,
+    "text": "VENEREOLOGIA",
+    "confidence": 0.989
+   }
+  ],
+  "captions": [
+   {
+    "text": "DERMA",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 1.0,
+    "id": "o1"
+   },
+   {
+    "text": "TV",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.541,
+    "id": "o2"
+   },
+   {
+    "text": "{EXISTE EL CALLO SOLAR?",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.911,
+    "id": "o3"
+   },
+   {
+    "text": "Dra. Paloma Borregon",
+    "start": 0.0,
+    "end": 0.0,
+    "confidence": 0.77,
+    "id": "o4"
+   },
+   {
+    "text": "DERMA",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 1.0,
+    "id": "o5"
+   },
+   {
+    "text": "T",
+    "start": 2.0,
+    "end": 2.0,
+    "confidence": 0.992,
+    "id": "o6"
+   },
+   {
+    "text": "DERMA",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 1.0,
+    "id": "o7"
+   },
+   {
+    "text": "TV",
+    "start": 4.0,
+    "end": 4.0,
+    "confidence": 0.538,
+    "id": "o8"
+   },
+   {
+    "text": "DERMA",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 1.0,
+    "id": "o9"
+   },
+   {
+    "text": "TV",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.55,
+    "id": "o10"
+   },
+   {
+    "text": "{EXISTE EL CALLO SOLAR?",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.995,
+    "id": "o11"
+   },
+   {
+    "text": "Dra. Paloma Borregon",
+    "start": 6.0,
+    "end": 6.0,
+    "confidence": 0.666,
+    "id": "o12"
+   },
+   {
+    "text": "DERMA",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 1.0,
+    "id": "o13"
+   },
+   {
+    "text": "TV",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.892,
+    "id": "o14"
+   },
+   {
+    "text": "{EXISTE EL CALLO SOLAR?",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.995,
+    "id": "o15"
+   },
+   {
+    "text": "Dra. Paloma Borregon",
+    "start": 8.0,
+    "end": 8.0,
+    "confidence": 0.847,
+    "id": "o16"
+   },
+   {
+    "text": "DERMA",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 1.0,
+    "id": "o17"
+   },
+   {
+    "text": "TV",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.591,
+    "id": "o18"
+   },
+   {
+    "text": "{EXISTE EL CALLO SOLAR?",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.777,
+    "id": "o19"
+   },
+   {
+    "text": "Dra. Paloma Borregon",
+    "start": 10.0,
+    "end": 10.0,
+    "confidence": 0.834,
+    "id": "o20"
+   },
+   {
+    "text": "DERMA",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.991,
+    "id": "o21"
+   },
+   {
+    "text": "TV",
+    "start": 12.0,
+    "end": 12.0,
+    "confidence": 0.555,
+    "id": "o22"
+   },
+   {
+    "text": "DERMA",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 1.0,
+    "id": "o23"
+   },
+   {
+    "text": "TV",
+    "start": 14.0,
+    "end": 14.0,
+    "confidence": 0.879,
+    "id": "o24"
+   },
+   {
+    "text": "DERMA",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 1.0,
+    "id": "o25"
+   },
+   {
+    "text": "TV",
+    "start": 16.0,
+    "end": 16.0,
+    "confidence": 0.876,
+    "id": "o26"
+   },
+   {
+    "text": "DERMA",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 1.0,
+    "id": "o27"
+   },
+   {
+    "text": "TV",
+    "start": 18.0,
+    "end": 18.0,
+    "confidence": 0.875,
+    "id": "o28"
+   },
+   {
+    "text": "DERMA",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 1.0,
+    "id": "o29"
+   },
+   {
+    "text": "TV",
+    "start": 20.0,
+    "end": 20.0,
+    "confidence": 0.526,
+    "id": "o30"
+   },
+   {
+    "text": "DERMA",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 1.0,
+    "id": "o31"
+   },
+   {
+    "text": "TV",
+    "start": 22.0,
+    "end": 22.0,
+    "confidence": 0.882,
+    "id": "o32"
+   },
+   {
+    "text": "DERMA",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.988,
+    "id": "o33"
+   },
+   {
+    "text": "TV",
+    "start": 24.0,
+    "end": 24.0,
+    "confidence": 0.57,
+    "id": "o34"
+   },
+   {
+    "text": "DERMA",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 1.0,
+    "id": "o35"
+   },
+   {
+    "text": "TV",
+    "start": 26.0,
+    "end": 26.0,
+    "confidence": 0.619,
+    "id": "o36"
+   },
+   {
+    "text": "DERMA",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 1.0,
+    "id": "o37"
+   },
+   {
+    "text": "TV",
+    "start": 28.0,
+    "end": 28.0,
+    "confidence": 0.881,
+    "id": "o38"
+   },
+   {
+    "text": "DERMA",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 1.0,
+    "id": "o39"
+   },
+   {
+    "text": "TV",
+    "start": 30.0,
+    "end": 30.0,
+    "confidence": 0.544,
+    "id": "o40"
+   },
+   {
+    "text": "DERMA",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 1.0,
+    "id": "o41"
+   },
+   {
+    "text": "TV",
+    "start": 32.0,
+    "end": 32.0,
+    "confidence": 0.882,
+    "id": "o42"
+   },
+   {
+    "text": "DERMA",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 1.0,
+    "id": "o43"
+   },
+   {
+    "text": "TV",
+    "start": 34.0,
+    "end": 34.0,
+    "confidence": 0.9,
+    "id": "o44"
+   },
+   {
+    "text": "DERMA",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 1.0,
+    "id": "o45"
+   },
+   {
+    "text": "TV",
+    "start": 36.0,
+    "end": 36.0,
+    "confidence": 0.566,
+    "id": "o46"
+   },
+   {
+    "text": "DERMA",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.981,
+    "id": "o47"
+   },
+   {
+    "text": "TV",
+    "start": 38.0,
+    "end": 38.0,
+    "confidence": 0.587,
+    "id": "o48"
+   },
+   {
+    "text": "DERMA",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 1.0,
+    "id": "o49"
+   },
+   {
+    "text": "TV",
+    "start": 40.0,
+    "end": 40.0,
+    "confidence": 0.746,
+    "id": "o50"
+   },
+   {
+    "text": "DERMA",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 1.0,
+    "id": "o51"
+   },
+   {
+    "text": "TV",
+    "start": 42.0,
+    "end": 42.0,
+    "confidence": 0.926,
+    "id": "o52"
+   },
+   {
+    "text": "DERMA",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 1.0,
+    "id": "o53"
+   },
+   {
+    "text": "TV",
+    "start": 44.0,
+    "end": 44.0,
+    "confidence": 0.934,
+    "id": "o54"
+   },
+   {
+    "text": "DERMA",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 1.0,
+    "id": "o55"
+   },
+   {
+    "text": "TV",
+    "start": 46.0,
+    "end": 46.0,
+    "confidence": 0.811,
+    "id": "o56"
+   },
+   {
+    "text": "DERMA",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 1.0,
+    "id": "o57"
+   },
+   {
+    "text": "TV",
+    "start": 48.0,
+    "end": 48.0,
+    "confidence": 0.927,
+    "id": "o58"
+   },
+   {
+    "text": "DERMA",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 1.0,
+    "id": "o59"
+   },
+   {
+    "text": "TV",
+    "start": 50.0,
+    "end": 50.0,
+    "confidence": 0.933,
+    "id": "o60"
+   },
+   {
+    "text": "FV",
+    "start": 52.0,
+    "end": 52.0,
+    "confidence": 0.529,
+    "id": "o61"
+   },
+   {
+    "text": "AE",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.935,
+    "id": "o62"
+   },
+   {
+    "text": "DV",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.998,
+    "id": "o63"
+   },
+   {
+    "text": "1909",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o64"
+   },
+   {
+    "text": "ACADEMIA ESPANOLA",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 1.0,
+    "id": "o65"
+   },
+   {
+    "text": "DE DERMATOLOGIA",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.738,
+    "id": "o66"
+   },
+   {
+    "text": "VENEREOLOGIA",
+    "start": 54.0,
+    "end": 54.0,
+    "confidence": 0.989,
+    "id": "o67"
+   }
+  ]
+ }
+}
