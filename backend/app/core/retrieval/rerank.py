@@ -12,6 +12,10 @@ claim*, scores them, and caps them at 10 per claim. Two scores, kept apart on pu
     MeSH heading appears, 0 when absent. The two sides
     are combined by a geometric mean, so a paper about only the intervention or only
     the outcome scores 0, however often it says the word;
+  - a mention of an *intervention* concept immediately followed by "antagonist(s)" does
+    not count (T64 e, as T50 did for the unproven guard): "vitamin K antagonists" are
+    warfarin-type anticoagulants, so a paper whose only vitamin K match is that phrase
+    scores as if vitamin K were absent and is demoted (below the threshold, it is dropped);
   - when the lexicon found no concept on one side ("honey cures *cough*"), that side is
     the claim's leftover content words, so a missing outcome can't turn the check into
     "mentions the intervention";
@@ -286,6 +290,24 @@ def _term_pattern(term: str) -> re.Pattern[str]:
     return re.compile(r"(?<![\w-])" + re.escape(t) + r"(?:e?s)?(?![\w-])")
 
 
+# T64 (e): "<intervention> antagonist(s)" is a drug class that blocks the intervention,
+# not the intervention ("vitamin K antagonists" = warfarin). Same rule as the T49 guard.
+# The phrase is blanked out before an intervention concept is matched, so neither the
+# concept's names nor its parent heading ("Vitamins") can match inside it.
+_ANTAGONIST = r"\s+(?:antagonists?|antagonism|antagonistic)(?![\w])"
+
+
+@lru_cache(maxsize=4096)
+def _antagonist_phrase(term: str) -> re.Pattern[str]:
+    return re.compile(_term_pattern(term).pattern + _ANTAGONIST)
+
+
+def _without_antagonists(terms: Iterable[str], text: str) -> str:
+    for t in terms:
+        text = _antagonist_phrase(t).sub(" ", text)
+    return text
+
+
 def concept_terms(concept: Concept) -> tuple[str, ...]:
     terms = {concept.label, concept.matched_text, *concept.synonyms, *_lexicon_terms(concept.key)}
     if concept.mesh:
@@ -309,11 +331,15 @@ def _coverage(concepts: Sequence[Concept], title: str, abstract: str) -> Optiona
     total = 0.0
     for c in concepts:
         terms = concept_terms(c)
-        if _found(terms, title):
+        # T64 (e): by the concept's kind, not its side (the planner can frame "bleeding
+        # caused by skipping vitamin K" with vitamin K on the outcome side).
+        t, a = (_without_antagonists(terms, title), _without_antagonists(terms, abstract)) \
+            if c.kind == "intervention" else (title, abstract)
+        if _found(terms, t):
             total += TITLE_HIT
-        elif _found(terms, abstract):
+        elif _found(terms, a):
             total += ABSTRACT_HIT
-        elif c.parent_mesh and _found((c.parent_mesh,), f"{title} {abstract}"):
+        elif c.parent_mesh and _found((c.parent_mesh,), f"{t} {a}"):
             total += PARENT_HIT
     return total / len(concepts)
 

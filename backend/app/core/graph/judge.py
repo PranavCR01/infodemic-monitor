@@ -28,6 +28,18 @@ verdict take part.
    It never lowers a case's priority; severity still comes from the claims (§12). A video with no claims, or
    only NOT_VERIFIABLE ones, is not sent for this reason.
 
+**Review coverage (T64 f, lead 2026-11-26).** When the label is NO_MISINFO and at least
+half of the ENDORSED claims in category ``treatment_efficacy`` or ``prevention`` are
+INSUFFICIENT_EVIDENCE (and there is at least one such claim), the judge adds the
+video-level review reason ``main_claims_unchecked``: the label rests on side claims while
+the video's main claims could not be checked. The label is unchanged and severity still
+comes from the claims (§12), so it never lowers a case's priority.
+
+**Sibling claims (T64 b).** An UNSUPPORTED claim the verify step turned into
+INSUFFICIENT_EVIDENCE because a sibling claim about the same intervention is SUPPORTED
+(limitation ``contradicted_by_sibling_claim``) no longer decides the label, but an
+ENDORSES one keeps its ``unproven_claim:<cid>`` review reason, so a person still sees it.
+
 MISINFO carries a ``misinfo_basis`` (§9): ``contradicted`` (rule 1),
 ``denies_supported`` (rule 2) or ``unproven`` (rule 3). The label stays one of the four;
 ``display_label`` gives the interface text ("MISINFO (unproven)").
@@ -142,10 +154,14 @@ FLAG_DENIES_SUPPORTED = "denies_supported"
 FLAG_POSSIBLE_DEBUNK = "possible_debunk"
 FLAG_UNPROVEN = "unproven_claim"  # T30
 FLAG_NOTHING_JUDGED = "nothing_judged"  # T37: video-level (§11)
+FLAG_MAIN_CLAIMS_UNCHECKED = "main_claims_unchecked"  # T64 (f): video-level, label unchanged
+MAIN_CLAIM_CATEGORIES = frozenset({"treatment_efficacy", "prevention"})
+SIBLING_LIMITATION = "contradicted_by_sibling_claim"  # T64 (b), set by unproven_guard
 # Since T21 these are collected from every claim, not only when their rule fires, and a
 # mixed video is always reviewed (§9).
 RULE_REVIEW_FLAGS = frozenset({
     FLAG_DENIES_SUPPORTED, FLAG_POSSIBLE_DEBUNK, FLAG_UNPROVEN, FLAG_MIXED_VIDEO, FLAG_NOTHING_JUDGED,
+    FLAG_MAIN_CLAIMS_UNCHECKED,
 })
 
 # ``misinfo_basis`` values (§9), set only when the label is MISINFO.
@@ -308,6 +324,14 @@ def _cited(view: ClaimView, rule: str) -> list[str]:
     return [*v.supporting_evidence_ids, *v.contradicting_evidence_ids]
 
 
+def main_claims_unchecked(views: Sequence[ClaimView]) -> bool:
+    """T64 (f): at least half of the endorsed treatment / prevention claims (and at least
+    one) are INSUFFICIENT_EVIDENCE."""
+    main = [v for v in views if v.stance == Stance.ENDORSES and v.claim.claim_category in MAIN_CLAIM_CATEGORIES]
+    unchecked = [v for v in main if v.verdict == Verdict.INSUFFICIENT_EVIDENCE]
+    return bool(main) and 2 * len(unchecked) >= len(main)
+
+
 def decide(views: Sequence[ClaimView], *, has_claims: Optional[bool] = None) -> Decision:
     """Apply the §9 rules in order. Pure: no state, no model."""
     views = list(views)
@@ -321,9 +345,14 @@ def decide(views: Sequence[ClaimView], *, has_claims: Optional[bool] = None) -> 
     refuted_open = [v for v in views if v.stance == Stance.REFUTES and v.verdict in UNSETTLED_VERDICTS]
 
     # Review reasons come from every claim, whichever rule decides the label (§9, T21).
+    # T64 (b): demoted by a SUPPORTED sibling; no longer decides, still reviewed.
+    sibling_demoted = [
+        v for v in views if v.stance == Stance.ENDORSES and v.verdict == Verdict.INSUFFICIENT_EVIDENCE
+        and SIBLING_LIMITATION in (v.verification.limitations or [])
+    ]
     rule_flags: list[str] = [
         *(f"{FLAG_DENIES_SUPPORTED}:{v.claim_id}" for v in denied_true),
-        *(f"{FLAG_UNPROVEN}:{v.claim_id}" for v in unproven),
+        *(f"{FLAG_UNPROVEN}:{v.claim_id}" for v in [*unproven, *sibling_demoted]),
         *(f"{FLAG_POSSIBLE_DEBUNK}:{v.claim_id}" for v in refuted_open),
     ]
     if (endorsed_false or unproven) and refuted_false:
@@ -353,6 +382,8 @@ def decide(views: Sequence[ClaimView], *, has_claims: Optional[bool] = None) -> 
         # ones, are not sent.
         if any(v.verdict == Verdict.INSUFFICIENT_EVIDENCE for v in views):
             rule_flags.append(FLAG_NOTHING_JUDGED)
+    if label == MisinfoLabel.NO_MISINFO and main_claims_unchecked(views):
+        rule_flags.append(FLAG_MAIN_CLAIMS_UNCHECKED)
 
     # Citations: only IDs the deciding verdicts cited AND that were retrieved for that
     # same claim. Anything else is dropped and recorded (sends the run to review).
@@ -457,6 +488,8 @@ _FLAG_TEXT = {
     FLAG_POSSIBLE_DEBUNK: "the speaker may be debunking {ref}, which the evidence can't settle",
     FLAG_UNPROVEN: "no evidence supports {ref}, which the speaker presents as working",
     FLAG_NOTHING_JUDGED: "no claim in this video could be checked against the evidence",
+    FLAG_MAIN_CLAIMS_UNCHECKED: "at least half of the treatment and prevention claims the speaker "
+                                "makes could not be checked against the evidence",
 }
 
 

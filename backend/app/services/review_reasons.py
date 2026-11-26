@@ -50,6 +50,9 @@ REASON_TEXT: dict[str, str] = {
     "possible_debunk": "The speaker refutes {claim}, but the evidence could not settle it: possibly a debunk.",
     # T37: video-level (§11)
     "nothing_judged": "No claim in this video could be checked against the evidence.",
+    # T64 (f): video-level; the label is unchanged
+    "main_claims_unchecked": "The label rests on side claims: at least half of the treatment and "
+                             "prevention claims the speaker makes could not be checked against the evidence.",
     # guardrails (§15)
     "prompt_injection_suspected": "Text in {source} looks like an attempt to instruct the system.",
     "guardrail": "A safety check stopped part of the analysis{on_claim}.",
