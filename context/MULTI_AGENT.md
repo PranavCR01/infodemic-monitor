@@ -2425,6 +2425,37 @@ extraction context resolution is deferred.
   one of two endorsed efficacy claims is unchecked, so the expected flags gain
   `main_claims_unchecked`.
 
+## 7aj. Critic-Budget and Thin-Contradiction Label Rules (T67; design §8, §9, §11)
+
+The lead approved both changes on 2026-11-26, with an offline gate: ship a change only if it
+makes no tune label worse. Both were built, both failed the gate, and both ship **off**
+(module switches, not config):
+`routing.KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED` and `judge.THIN_CONTRADICTION_RULE`.
+Full numbers are in `evals/reports/T67/report.md`.
+
+- **Change 1 (keep the stored verdict).**
+  - When the switch is on, `verdicts_for_judge` keeps an exhausted claim's cited verdict, appends `SECOND_CHECK_LIMITATION` plus the critic's issues to its limitations, and `critic_review_reasons` adds `second_check_disagreed:<cid>`.
+  - That reason has its own review rule (`second_check_disagreed`; pipeline-only in the cross-check).
+  - **Hard failures (`verdict_hard_failure`) still withdraw the verdict:**
+    - a cited ID was not retrieved for the claim;
+    - any `guardrail:` error for the claim;
+    - a retryable `verify_claims` error.
+  - "repair requested" errors are not failures.
+  - A nothing-cited INSUFFICIENT_EVIDENCE / UNSUPPORTED verdict is handled as before.
+  - **Gate:** +4 correct on the T66 states (v71, v78, v87, v122), but v114 (gold MISINFO) goes CANNOT_RECOGNIZE → DEBUNKING. That is the T66 stance error (REFUTES) on c1, no longer hidden by the withdrawal. **Dropped.**
+- **Change 2 (thin contradictions can't decide).**
+  - "Rests on" is read as the claim's **contradicting** records among those retrieved for it.
+  - The verdict decides if ≥2 of them pass T49 `on_topic`, without `on_topic_ids`' rule that cited records count as on topic (otherwise every cited record would pass), or if ≥1 of them is `systematic_review` / `rct` / `guideline` by `unproven_guard._study_type`.
+  - **"Can't decide" is applied to rules 1, 4 and 5.** Without rule 5, a thin endorsed contradiction would let rule 5 call the video "nothing false endorsed".
+  - A thin REFUTES claim does not join `refuted_open`. Its verdict stays CONTRADICTED, so with nothing else to decide, the video falls through to rule 7.
+  - The rule applies to ENDORSES / REFUTES claims only.
+  - **Gate:** fixes T66 v65. It makes v88 (A) and golden v119 and v177 (B) worse, all gold MISINFO. T49's term check returns junk terms for Spanish and non-intervention claims. **Dropped.** A topic check that fits these claims would come first.
+- **Replay inputs.**
+  - A: T66 states from `origin/auto/T66` @ 72633ea, copied read-only; v21 is excluded (partial).
+  - B: golden claims, with cited records rebuilt from the golden set's offline `evidence_cache` (search titles and pubtypes, abstracts) and `reference_citations.csv`.
+  - Both baselines reproduce exactly: T66's stored labels on 18/18, and T64 `after.json` on 48/48.
+- **Why the cross-check is unchanged.** With both switches off it is byte-identical. Its stub evidence (`title = id`, `claim_text = claim_id`) would make every contradiction thin, so if change 2 is ever turned on, `judge_crosscheck` needs real evidence or the switch off.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -2446,6 +2477,15 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-26**: T67 (design §8, §9, §11) critic-budget and thin-contradiction label rules, no
+  spend, no migration, test split not read. Both rules built and **switched off** after the offline
+  replay gate (no tune label worse).
+  - Change 1 (keep the verdict when the critic budget runs out, review reason
+    `second_check_disagreed`): T66 states 7/18 → 11/18, but v114 (gold MISINFO) goes
+    CANNOT_RECOGNIZE → DEBUNKING.
+  - Change 2 (`thin_contradiction`): golden tune 43/48 → 41/48 (v119, v177 worse), and T66 v88 worse.
+  - Reason codes and plain text are added in the backend and frontend, with 16 new tests.
+  - Report: `evals/reports/T67/`. Registry: `T67-label_rules-*`. Decisions in §7aj. Branch `auto/T67`.
 - **2026-11-26**: T65 backend (report and result polish from production job d2bf4179; design §7,
   §12, §17), no migration, no paid call. Evidence ids rendered as short titles/PMIDs with a
   repair-once output check; critic notes called "a second automated check"; one study type with

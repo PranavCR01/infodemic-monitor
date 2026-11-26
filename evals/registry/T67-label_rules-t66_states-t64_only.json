@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "run_group": "T67-label-rules-replay",
+  "date": "2026-11-26",
+  "task": "T67",
+  "pipeline_step": "judge_classification",
+  "split": "tune",
+  "synthetic": false,
+  "golden_set_ref": "origin/data/golden-label-set @ 92a731e (T66 run); labels from in-repo research/claim-level/dataset @ 2de5e8f",
+  "models": [],
+  "metric_name": "video_label_accuracy",
+  "ci95": null,
+  "n_items": 18,
+  "n_unit": "finished T66 tune videos (v21 excluded: partial, not run)",
+  "cost_usd": 0.0,
+  "report_path": "evals/reports/T67/report.md",
+  "run_id": "T67-label_rules-t66_states-t64_only",
+  "variant": "t64_only",
+  "value": 0.3889,
+  "notes": "Tune split: development numbers, not product accuracy. 7/18 correct; sent to review 17/18; second_check_disagreed x0, thin_contradiction x0. Replay of judge + T64 guard + review rule on T66 stored states (pipeline 3372ef3, pre-T64 upstream); extraction/verification/critic not re-run. No CI (report gives none). Both changes ship OFF (gate failed: change 1 v114; change 2 v88, v119, v177)."
+}

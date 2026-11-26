@@ -1,0 +1,4945 @@
+{
+ "code_revision": "0db34d34e9d96a688594842fe3a88374acc827fa",
+ "excluded": [
+  "v21 (status 'not_run:budget_mid_video')"
+ ],
+ "missing_evidence": [
+  "v68:c2:https://wwwn.cdc.gov/tsp/PHS/PHS.aspx?phsid=336&toxid=59",
+  "v70:c2:https://api.nal.usda.gov/fdc/v1/food/174832?api_key=DEMO_KEY",
+  "v70:c2:https://api.nal.usda.gov/fdc/v1/food/2257045?api_key=DEMO_KEY",
+  "v70:c2:https://api.nal.usda.gov/fdc/v1/food/2257046?api_key=DEMO_KEY",
+  "v70:c2:https://api.nal.usda.gov/fdc/v1/food/171265?api_key=DEMO_KEY"
+ ],
+ "summary": {
+  "A": {
+   "a": {
+    "correct": 7,
+    "n": 18,
+    "accuracy": 0.3889,
+    "reviewed": 17,
+    "second_check_disagreed": 0,
+    "thin_contradiction": 0,
+    "matrix": [
+     [
+      2,
+      2,
+      0,
+      3
+     ],
+     [
+      0,
+      1,
+      0,
+      2
+     ],
+     [
+      1,
+      0,
+      1,
+      0
+     ],
+     [
+      2,
+      0,
+      1,
+      3
+     ]
+    ]
+   },
+   "b": {
+    "correct": 11,
+    "n": 18,
+    "accuracy": 0.6111,
+    "reviewed": 17,
+    "second_check_disagreed": 43,
+    "thin_contradiction": 0,
+    "matrix": [
+     [
+      5,
+      1,
+      1,
+      0
+     ],
+     [
+      0,
+      2,
+      0,
+      1
+     ],
+     [
+      1,
+      0,
+      1,
+      0
+     ],
+     [
+      3,
+      0,
+      0,
+      3
+     ]
+    ],
+    "changed": [
+     "v11",
+     "v114",
+     "v122",
+     "v71",
+     "v78",
+     "v87"
+    ],
+    "worse": [
+     "v114"
+    ]
+   },
+   "c": {
+    "correct": 7,
+    "n": 18,
+    "accuracy": 0.3889,
+    "reviewed": 17,
+    "second_check_disagreed": 0,
+    "thin_contradiction": 2,
+    "matrix": [
+     [
+      1,
+      2,
+      0,
+      4
+     ],
+     [
+      0,
+      1,
+      0,
+      2
+     ],
+     [
+      1,
+      0,
+      1,
+      0
+     ],
+     [
+      1,
+      0,
+      1,
+      4
+     ]
+    ],
+    "changed": [
+     "v65",
+     "v88"
+    ],
+    "worse": [
+     "v88"
+    ]
+   },
+   "d": {
+    "correct": 10,
+    "n": 18,
+    "accuracy": 0.5556,
+    "reviewed": 17,
+    "second_check_disagreed": 43,
+    "thin_contradiction": 3,
+    "matrix": [
+     [
+      4,
+      1,
+      1,
+      1
+     ],
+     [
+      0,
+      2,
+      0,
+      1
+     ],
+     [
+      1,
+      0,
+      1,
+      0
+     ],
+     [
+      2,
+      0,
+      1,
+      3
+     ]
+    ],
+    "changed": [
+     "v11",
+     "v114",
+     "v122",
+     "v65",
+     "v71",
+     "v78",
+     "v87",
+     "v88"
+    ],
+    "worse": [
+     "v114",
+     "v88"
+    ]
+   }
+  },
+  "B": {
+   "a": {
+    "correct": 43,
+    "n": 48,
+    "accuracy": 0.8958,
+    "reviewed": 24,
+    "second_check_disagreed": 0,
+    "thin_contradiction": 0,
+    "matrix": [
+     [
+      13,
+      2,
+      0,
+      3
+     ],
+     [
+      0,
+      11,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      3,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      16
+     ]
+    ]
+   },
+   "b": {
+    "correct": 43,
+    "n": 48,
+    "accuracy": 0.8958,
+    "reviewed": 24,
+    "second_check_disagreed": 0,
+    "thin_contradiction": 0,
+    "matrix": [
+     [
+      13,
+      2,
+      0,
+      3
+     ],
+     [
+      0,
+      11,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      3,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      16
+     ]
+    ],
+    "changed": [],
+    "worse": []
+   },
+   "c": {
+    "correct": 41,
+    "n": 48,
+    "accuracy": 0.8542,
+    "reviewed": 31,
+    "second_check_disagreed": 0,
+    "thin_contradiction": 10,
+    "matrix": [
+     [
+      11,
+      3,
+      0,
+      4
+     ],
+     [
+      0,
+      11,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      3,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      16
+     ]
+    ],
+    "changed": [
+     "v119",
+     "v177"
+    ],
+    "worse": [
+     "v119",
+     "v177"
+    ]
+   },
+   "d": {
+    "correct": 41,
+    "n": 48,
+    "accuracy": 0.8542,
+    "reviewed": 31,
+    "second_check_disagreed": 0,
+    "thin_contradiction": 10,
+    "matrix": [
+     [
+      11,
+      3,
+      0,
+      4
+     ],
+     [
+      0,
+      11,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      3,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      16
+     ]
+    ],
+    "changed": [
+     "v119",
+     "v177"
+    ],
+    "worse": [
+     "v119",
+     "v177"
+    ]
+   }
+  }
+ },
+ "A": [
+  {
+   "video_id": "v109",
+   "gold": "MISINFO",
+   "t66_stored": "NO_MISINFO",
+   "a": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c8",
+     "high_risk_uncertain:c1",
+     "high_risk_uncertain:c2",
+     "high_risk_uncertain:c4",
+     "high_risk_uncertain:c11",
+     "high_risk_uncertain:c12",
+     "judge:main_claims_unchecked",
+     "guardrail:extract_claims:claim_ungrounded"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "b": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2",
+     "c3",
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c8",
+     "second_check_disagreed:c2",
+     "second_check_disagreed:c4",
+     "second_check_disagreed:c6",
+     "high_risk_uncertain:c1",
+     "high_risk_uncertain:c11",
+     "high_risk_uncertain:c12",
+     "judge:main_claims_unchecked",
+     "judge:mixed_evidence:c6",
+     "guardrail:extract_claims:claim_ungrounded"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c2",
+     "c4",
+     "c6"
+    ]
+   },
+   "c": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c8",
+     "high_risk_uncertain:c1",
+     "high_risk_uncertain:c2",
+     "high_risk_uncertain:c4",
+     "high_risk_uncertain:c11",
+     "high_risk_uncertain:c12",
+     "judge:main_claims_unchecked",
+     "guardrail:extract_claims:claim_ungrounded"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "d": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2",
+     "c3",
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c8",
+     "second_check_disagreed:c2",
+     "second_check_disagreed:c4",
+     "second_check_disagreed:c6",
+     "high_risk_uncertain:c1",
+     "high_risk_uncertain:c11",
+     "high_risk_uncertain:c12",
+     "judge:main_claims_unchecked",
+     "judge:mixed_evidence:c6",
+     "guardrail:extract_claims:claim_ungrounded"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c2",
+     "c4",
+     "c6"
+    ]
+   }
+  },
+  {
+   "video_id": "v11",
+   "gold": "CANNOT_RECOGNIZE",
+   "t66_stored": "DEBUNKING",
+   "a": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "high_risk_uncertain:c3"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "second_check_disagreed:c2",
+     "second_check_disagreed:c3",
+     "second_check_disagreed:c4",
+     "high_risk_uncertain:c3",
+     "judge:mixed_video",
+     "judge:mixed_evidence:c3"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c2",
+     "c3",
+     "c4"
+    ]
+   },
+   "c": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "high_risk_uncertain:c3"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "d": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "second_check_disagreed:c2",
+     "second_check_disagreed:c3",
+     "second_check_disagreed:c4",
+     "high_risk_uncertain:c3",
+     "judge:mixed_video",
+     "judge:mixed_evidence:c3"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c2",
+     "c3",
+     "c4"
+    ]
+   }
+  },
+  {
+   "video_id": "v114",
+   "gold": "MISINFO",
+   "t66_stored": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "refuted_unsettled",
+    "deciding": [
+     "c1"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c1",
+     "validation_failed:quote_membership:c3",
+     "weak_evidence:c1",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "judge:possible_debunk:c1"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "b": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c1",
+     "validation_failed:quote_membership:c3",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "second_check_disagreed:c1"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c1"
+    ]
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "refuted_unsettled",
+    "deciding": [
+     "c1"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c1",
+     "validation_failed:quote_membership:c3",
+     "weak_evidence:c1",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "judge:possible_debunk:c1"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "d": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c1",
+     "validation_failed:quote_membership:c3",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "second_check_disagreed:c1"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c1"
+    ]
+   }
+  },
+  {
+   "video_id": "v120",
+   "gold": "MISINFO",
+   "t66_stored": "MISINFO",
+   "a": {
+    "label": "MISINFO",
+    "basis": "unproven",
+    "rule": "unproven",
+    "deciding": [
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:merge_plausibility:c1",
+     "weak_evidence:c3",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c7",
+     "high_risk_uncertain:c1",
+     "high_risk_uncertain:c3",
+     "high_risk_uncertain:c7",
+     "high_risk_uncertain:c8",
+     "judge:unproven_claim:c3"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "unproven",
+    "rule": "unproven",
+    "deciding": [
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:merge_plausibility:c1",
+     "weak_evidence:c3",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c7",
+     "high_risk_uncertain:c1",
+     "high_risk_uncertain:c3",
+     "high_risk_uncertain:c7",
+     "high_risk_uncertain:c8",
+     "judge:unproven_claim:c3"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "c": {
+    "label": "MISINFO",
+    "basis": "unproven",
+    "rule": "unproven",
+    "deciding": [
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:merge_plausibility:c1",
+     "weak_evidence:c3",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c7",
+     "high_risk_uncertain:c1",
+     "high_risk_uncertain:c3",
+     "high_risk_uncertain:c7",
+     "high_risk_uncertain:c8",
+     "judge:unproven_claim:c3"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "d": {
+    "label": "MISINFO",
+    "basis": "unproven",
+    "rule": "unproven",
+    "deciding": [
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:merge_plausibility:c1",
+     "weak_evidence:c3",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c7",
+     "high_risk_uncertain:c1",
+     "high_risk_uncertain:c3",
+     "high_risk_uncertain:c7",
+     "high_risk_uncertain:c8",
+     "judge:unproven_claim:c3"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   }
+  },
+  {
+   "video_id": "v122",
+   "gold": "MISINFO",
+   "t66_stored": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c6",
+     "validation_failed:quote_membership:c7",
+     "validation_failed:quote_membership:c8",
+     "validation_failed:quote_membership:c9",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c9",
+     "budget_exhausted:c10",
+     "high_risk_uncertain:c3",
+     "high_risk_uncertain:c4",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1",
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c6",
+     "validation_failed:quote_membership:c7",
+     "validation_failed:quote_membership:c8",
+     "validation_failed:quote_membership:c9",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c9",
+     "budget_exhausted:c10",
+     "second_check_disagreed:c1",
+     "second_check_disagreed:c3",
+     "second_check_disagreed:c6",
+     "second_check_disagreed:c8",
+     "second_check_disagreed:c9",
+     "high_risk_uncertain:c4"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c1",
+     "c3",
+     "c6",
+     "c8",
+     "c9"
+    ]
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c6",
+     "validation_failed:quote_membership:c7",
+     "validation_failed:quote_membership:c8",
+     "validation_failed:quote_membership:c9",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c9",
+     "budget_exhausted:c10",
+     "high_risk_uncertain:c3",
+     "high_risk_uncertain:c4",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "d": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1",
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c6",
+     "validation_failed:quote_membership:c7",
+     "validation_failed:quote_membership:c8",
+     "validation_failed:quote_membership:c9",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c9",
+     "budget_exhausted:c10",
+     "second_check_disagreed:c1",
+     "second_check_disagreed:c3",
+     "second_check_disagreed:c6",
+     "second_check_disagreed:c8",
+     "second_check_disagreed:c9",
+     "high_risk_uncertain:c4"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c1",
+     "c3",
+     "c6",
+     "c8",
+     "c9"
+    ]
+   }
+  },
+  {
+   "video_id": "v150",
+   "gold": "CANNOT_RECOGNIZE",
+   "t66_stored": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": [],
+    "second_check_kept": []
+   }
+  },
+  {
+   "video_id": "v176",
+   "gold": "CANNOT_RECOGNIZE",
+   "t66_stored": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "validation_failed:merge_plausibility:c1",
+     "budget_exhausted:c1",
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "validation_failed:merge_plausibility:c1",
+     "budget_exhausted:c1",
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "validation_failed:merge_plausibility:c1",
+     "budget_exhausted:c1",
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "validation_failed:merge_plausibility:c1",
+     "budget_exhausted:c1",
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   }
+  },
+  {
+   "video_id": "v23",
+   "gold": "DEBUNKING",
+   "t66_stored": "MISINFO",
+   "a": {
+    "label": "MISINFO",
+    "basis": "denies_supported",
+    "rule": "refuted_supported",
+    "deciding": [
+     "c5"
+    ],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c6",
+     "judge:denies_supported:c5",
+     "judge:possible_debunk:c1",
+     "judge:possible_debunk:c2",
+     "judge:possible_debunk:c6"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "denies_supported",
+    "rule": "refuted_supported",
+    "deciding": [
+     "c5"
+    ],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c6",
+     "judge:denies_supported:c5",
+     "judge:possible_debunk:c1",
+     "judge:possible_debunk:c2",
+     "judge:possible_debunk:c6"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "c": {
+    "label": "MISINFO",
+    "basis": "denies_supported",
+    "rule": "refuted_supported",
+    "deciding": [
+     "c5"
+    ],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c6",
+     "judge:denies_supported:c5",
+     "judge:possible_debunk:c1",
+     "judge:possible_debunk:c2",
+     "judge:possible_debunk:c6"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "d": {
+    "label": "MISINFO",
+    "basis": "denies_supported",
+    "rule": "refuted_supported",
+    "deciding": [
+     "c5"
+    ],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c6",
+     "judge:denies_supported:c5",
+     "judge:possible_debunk:c1",
+     "judge:possible_debunk:c2",
+     "judge:possible_debunk:c6"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   }
+  },
+  {
+   "video_id": "v39",
+   "gold": "DEBUNKING",
+   "t66_stored": "DEBUNKING",
+   "a": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c8",
+     "c13"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c13",
+     "budget_exhausted:c1",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c9",
+     "budget_exhausted:c10",
+     "budget_exhausted:c14",
+     "budget_exhausted:c15",
+     "budget_exhausted:c16",
+     "judge:possible_debunk:c1",
+     "judge:possible_debunk:c2",
+     "judge:possible_debunk:c3",
+     "judge:possible_debunk:c11"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "b": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c8",
+     "c13"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c13",
+     "budget_exhausted:c1",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c9",
+     "budget_exhausted:c10",
+     "budget_exhausted:c14",
+     "budget_exhausted:c15",
+     "budget_exhausted:c16",
+     "second_check_disagreed:c3",
+     "second_check_disagreed:c14",
+     "judge:possible_debunk:c1",
+     "judge:possible_debunk:c2",
+     "judge:possible_debunk:c3",
+     "judge:possible_debunk:c11",
+     "judge:mixed_evidence:c3"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c3",
+     "c14"
+    ]
+   },
+   "c": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c8",
+     "c13"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c13",
+     "budget_exhausted:c1",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c9",
+     "budget_exhausted:c10",
+     "budget_exhausted:c14",
+     "budget_exhausted:c15",
+     "budget_exhausted:c16",
+     "judge:possible_debunk:c1",
+     "judge:possible_debunk:c2",
+     "judge:possible_debunk:c3",
+     "judge:possible_debunk:c11"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "d": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c8",
+     "c13"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c13",
+     "budget_exhausted:c1",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c9",
+     "budget_exhausted:c10",
+     "budget_exhausted:c14",
+     "budget_exhausted:c15",
+     "budget_exhausted:c16",
+     "second_check_disagreed:c3",
+     "second_check_disagreed:c14",
+     "judge:possible_debunk:c1",
+     "judge:possible_debunk:c2",
+     "judge:possible_debunk:c3",
+     "judge:possible_debunk:c11",
+     "judge:mixed_evidence:c3"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c3",
+     "c14"
+    ]
+   }
+  },
+  {
+   "video_id": "v65",
+   "gold": "CANNOT_RECOGNIZE",
+   "t66_stored": "MISINFO",
+   "a": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c11"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c16",
+     "validation_failed:quote_membership:c17",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c9",
+     "budget_exhausted:c12",
+     "budget_exhausted:c13",
+     "budget_exhausted:c14",
+     "budget_exhausted:c16",
+     "budget_exhausted:c18",
+     "judge:possible_debunk:c1",
+     "judge:possible_debunk:c3",
+     "judge:possible_debunk:c14"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c11"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c16",
+     "validation_failed:quote_membership:c17",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c9",
+     "budget_exhausted:c12",
+     "budget_exhausted:c13",
+     "budget_exhausted:c14",
+     "budget_exhausted:c16",
+     "budget_exhausted:c18",
+     "second_check_disagreed:c1",
+     "second_check_disagreed:c2",
+     "second_check_disagreed:c3",
+     "second_check_disagreed:c5",
+     "second_check_disagreed:c6",
+     "second_check_disagreed:c7",
+     "second_check_disagreed:c9",
+     "second_check_disagreed:c12",
+     "second_check_disagreed:c16",
+     "second_check_disagreed:c18",
+     "judge:possible_debunk:c14",
+     "judge:mixed_video",
+     "judge:mixed_evidence:c2",
+     "judge:mixed_evidence:c7"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c1",
+     "c2",
+     "c3",
+     "c5",
+     "c6",
+     "c7",
+     "c9",
+     "c12",
+     "c16",
+     "c18"
+    ]
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "refuted_unsettled",
+    "deciding": [
+     "c1",
+     "c3",
+     "c14"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c16",
+     "validation_failed:quote_membership:c17",
+     "weak_evidence:c1",
+     "weak_evidence:c3",
+     "weak_evidence:c14",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c9",
+     "budget_exhausted:c12",
+     "budget_exhausted:c13",
+     "budget_exhausted:c14",
+     "budget_exhausted:c16",
+     "budget_exhausted:c18",
+     "judge:possible_debunk:c1",
+     "judge:possible_debunk:c3",
+     "judge:possible_debunk:c14",
+     "judge:thin_contradiction:c11"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "d": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c1",
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c16",
+     "validation_failed:quote_membership:c17",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c9",
+     "budget_exhausted:c12",
+     "budget_exhausted:c13",
+     "budget_exhausted:c14",
+     "budget_exhausted:c16",
+     "budget_exhausted:c18",
+     "second_check_disagreed:c1",
+     "second_check_disagreed:c2",
+     "second_check_disagreed:c3",
+     "second_check_disagreed:c5",
+     "second_check_disagreed:c6",
+     "second_check_disagreed:c7",
+     "second_check_disagreed:c9",
+     "second_check_disagreed:c12",
+     "second_check_disagreed:c16",
+     "second_check_disagreed:c18",
+     "judge:possible_debunk:c14",
+     "judge:thin_contradiction:c11",
+     "judge:mixed_evidence:c2",
+     "judge:mixed_evidence:c7"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c1",
+     "c2",
+     "c3",
+     "c5",
+     "c6",
+     "c7",
+     "c9",
+     "c12",
+     "c16",
+     "c18"
+    ]
+   }
+  },
+  {
+   "video_id": "v69",
+   "gold": "NO_MISINFO",
+   "t66_stored": "NO_MISINFO",
+   "a": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2",
+     "c4",
+     "c9"
+    ],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c11",
+     "budget_exhausted:c15",
+     "budget_exhausted:c16",
+     "budget_exhausted:c17",
+     "budget_exhausted:c18",
+     "high_risk_uncertain:c18",
+     "judge:main_claims_unchecked",
+     "prompt_injection_suspected:evidence_abstract:ev_26283667"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "b": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2",
+     "c4",
+     "c8",
+     "c9",
+     "c11",
+     "c17"
+    ],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c11",
+     "budget_exhausted:c15",
+     "budget_exhausted:c16",
+     "budget_exhausted:c17",
+     "budget_exhausted:c18",
+     "second_check_disagreed:c8",
+     "second_check_disagreed:c11",
+     "second_check_disagreed:c17",
+     "high_risk_uncertain:c18",
+     "judge:main_claims_unchecked",
+     "prompt_injection_suspected:evidence_abstract:ev_26283667"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c8",
+     "c11",
+     "c17"
+    ]
+   },
+   "c": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2",
+     "c4",
+     "c9"
+    ],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c11",
+     "budget_exhausted:c15",
+     "budget_exhausted:c16",
+     "budget_exhausted:c17",
+     "budget_exhausted:c18",
+     "high_risk_uncertain:c18",
+     "judge:main_claims_unchecked",
+     "prompt_injection_suspected:evidence_abstract:ev_26283667"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "d": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2",
+     "c4",
+     "c8",
+     "c9",
+     "c11",
+     "c17"
+    ],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c11",
+     "budget_exhausted:c15",
+     "budget_exhausted:c16",
+     "budget_exhausted:c17",
+     "budget_exhausted:c18",
+     "second_check_disagreed:c8",
+     "second_check_disagreed:c11",
+     "second_check_disagreed:c17",
+     "high_risk_uncertain:c18",
+     "judge:main_claims_unchecked",
+     "prompt_injection_suspected:evidence_abstract:ev_26283667"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c8",
+     "c11",
+     "c17"
+    ]
+   }
+  },
+  {
+   "video_id": "v71",
+   "gold": "NO_MISINFO",
+   "t66_stored": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "critic_escalated:c10",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c9",
+     "budget_exhausted:c11",
+     "budget_exhausted:c13",
+     "budget_exhausted:c14",
+     "budget_exhausted:c15",
+     "budget_exhausted:c16",
+     "budget_exhausted:c17",
+     "budget_exhausted:c18",
+     "budget_exhausted:c19",
+     "budget_exhausted:c20",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "b": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c8",
+     "c9",
+     "c15",
+     "c20"
+    ],
+    "review": true,
+    "reasons": [
+     "conflicting_evidence:c9",
+     "critic_escalated:c10",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c9",
+     "budget_exhausted:c11",
+     "budget_exhausted:c13",
+     "budget_exhausted:c14",
+     "budget_exhausted:c15",
+     "budget_exhausted:c16",
+     "budget_exhausted:c17",
+     "budget_exhausted:c18",
+     "budget_exhausted:c19",
+     "budget_exhausted:c20",
+     "second_check_disagreed:c8",
+     "second_check_disagreed:c9",
+     "second_check_disagreed:c14",
+     "second_check_disagreed:c15",
+     "second_check_disagreed:c18",
+     "second_check_disagreed:c19",
+     "second_check_disagreed:c20",
+     "judge:main_claims_unchecked",
+     "judge:mixed_evidence:c14",
+     "judge:mixed_evidence:c18"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c8",
+     "c9",
+     "c14",
+     "c15",
+     "c18",
+     "c19",
+     "c20"
+    ]
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "critic_escalated:c10",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c9",
+     "budget_exhausted:c11",
+     "budget_exhausted:c13",
+     "budget_exhausted:c14",
+     "budget_exhausted:c15",
+     "budget_exhausted:c16",
+     "budget_exhausted:c17",
+     "budget_exhausted:c18",
+     "budget_exhausted:c19",
+     "budget_exhausted:c20",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "d": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c8",
+     "c9",
+     "c15",
+     "c20"
+    ],
+    "review": true,
+    "reasons": [
+     "conflicting_evidence:c9",
+     "critic_escalated:c10",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c9",
+     "budget_exhausted:c11",
+     "budget_exhausted:c13",
+     "budget_exhausted:c14",
+     "budget_exhausted:c15",
+     "budget_exhausted:c16",
+     "budget_exhausted:c17",
+     "budget_exhausted:c18",
+     "budget_exhausted:c19",
+     "budget_exhausted:c20",
+     "second_check_disagreed:c8",
+     "second_check_disagreed:c9",
+     "second_check_disagreed:c14",
+     "second_check_disagreed:c15",
+     "second_check_disagreed:c18",
+     "second_check_disagreed:c19",
+     "second_check_disagreed:c20",
+     "judge:main_claims_unchecked",
+     "judge:mixed_evidence:c14",
+     "judge:mixed_evidence:c18"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c8",
+     "c9",
+     "c14",
+     "c15",
+     "c18",
+     "c19",
+     "c20"
+    ]
+   }
+  },
+  {
+   "video_id": "v78",
+   "gold": "MISINFO",
+   "t66_stored": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "refuted_unsettled",
+    "deciding": [
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:merge_plausibility:c1",
+     "weak_evidence:c3",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "judge:possible_debunk:c3"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:merge_plausibility:c1",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "second_check_disagreed:c1",
+     "second_check_disagreed:c3",
+     "second_check_disagreed:c4",
+     "judge:denies_supported:c3"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c1",
+     "c3",
+     "c4"
+    ]
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "refuted_unsettled",
+    "deciding": [
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:merge_plausibility:c1",
+     "weak_evidence:c3",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "judge:possible_debunk:c3"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "d": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:merge_plausibility:c1",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "second_check_disagreed:c1",
+     "second_check_disagreed:c3",
+     "second_check_disagreed:c4",
+     "judge:denies_supported:c3"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c1",
+     "c3",
+     "c4"
+    ]
+   }
+  },
+  {
+   "video_id": "v87",
+   "gold": "MISINFO",
+   "t66_stored": "NO_MISINFO",
+   "a": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c7",
+     "validation_failed:merge_plausibility:c2",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c9",
+     "judge:possible_debunk:c6"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "denies_supported",
+    "rule": "refuted_supported",
+    "deciding": [
+     "c6"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c7",
+     "validation_failed:merge_plausibility:c2",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c9",
+     "second_check_disagreed:c2",
+     "second_check_disagreed:c5",
+     "second_check_disagreed:c6",
+     "judge:denies_supported:c6"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c2",
+     "c5",
+     "c6"
+    ]
+   },
+   "c": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c7",
+     "validation_failed:merge_plausibility:c2",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c9",
+     "judge:possible_debunk:c6"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "d": {
+    "label": "MISINFO",
+    "basis": "denies_supported",
+    "rule": "refuted_supported",
+    "deciding": [
+     "c6"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c7",
+     "validation_failed:merge_plausibility:c2",
+     "budget_exhausted:c1",
+     "budget_exhausted:c2",
+     "budget_exhausted:c5",
+     "budget_exhausted:c6",
+     "budget_exhausted:c7",
+     "budget_exhausted:c8",
+     "budget_exhausted:c9",
+     "second_check_disagreed:c2",
+     "second_check_disagreed:c5",
+     "second_check_disagreed:c6",
+     "judge:denies_supported:c6"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c2",
+     "c5",
+     "c6"
+    ]
+   }
+  },
+  {
+   "video_id": "v88",
+   "gold": "MISINFO",
+   "t66_stored": "MISINFO",
+   "a": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c5",
+     "budget_exhausted:c1",
+     "budget_exhausted:c3",
+     "budget_exhausted:c5"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c4",
+     "c5"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c5",
+     "budget_exhausted:c1",
+     "budget_exhausted:c3",
+     "budget_exhausted:c5",
+     "second_check_disagreed:c5"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c5"
+    ]
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c5",
+     "budget_exhausted:c1",
+     "budget_exhausted:c3",
+     "budget_exhausted:c5",
+     "judge:thin_contradiction:c4",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c5",
+     "budget_exhausted:c1",
+     "budget_exhausted:c3",
+     "budget_exhausted:c5",
+     "second_check_disagreed:c5",
+     "judge:thin_contradiction:c4",
+     "judge:thin_contradiction:c5",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c5"
+    ]
+   }
+  },
+  {
+   "video_id": "v92",
+   "gold": "CANNOT_RECOGNIZE",
+   "t66_stored": "MISINFO",
+   "a": {
+    "label": "MISINFO",
+    "basis": "unproven",
+    "rule": "unproven",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c1",
+     "weak_evidence:c2",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "high_risk_uncertain:c3",
+     "high_risk_uncertain:c4",
+     "high_risk_uncertain:c5",
+     "judge:unproven_claim:c2"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "unproven",
+    "rule": "unproven",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c1",
+     "weak_evidence:c2",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "second_check_disagreed:c3",
+     "high_risk_uncertain:c3",
+     "high_risk_uncertain:c4",
+     "high_risk_uncertain:c5",
+     "judge:unproven_claim:c2"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c3"
+    ]
+   },
+   "c": {
+    "label": "MISINFO",
+    "basis": "unproven",
+    "rule": "unproven",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c1",
+     "weak_evidence:c2",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "high_risk_uncertain:c3",
+     "high_risk_uncertain:c4",
+     "high_risk_uncertain:c5",
+     "judge:unproven_claim:c2"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "d": {
+    "label": "MISINFO",
+    "basis": "unproven",
+    "rule": "unproven",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "validation_failed:quote_membership:c1",
+     "weak_evidence:c2",
+     "budget_exhausted:c2",
+     "budget_exhausted:c3",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "second_check_disagreed:c3",
+     "high_risk_uncertain:c3",
+     "high_risk_uncertain:c4",
+     "high_risk_uncertain:c5",
+     "judge:unproven_claim:c2"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c3"
+    ]
+   }
+  },
+  {
+   "video_id": "v94",
+   "gold": "CANNOT_RECOGNIZE",
+   "t66_stored": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c4",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c4",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c4",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c4",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   }
+  },
+  {
+   "video_id": "v95",
+   "gold": "NO_MISINFO",
+   "t66_stored": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "budget_exhausted:c7",
+     "budget_exhausted:c9",
+     "budget_exhausted:c12",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "budget_exhausted:c7",
+     "budget_exhausted:c9",
+     "budget_exhausted:c12",
+     "second_check_disagreed:c4",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c4"
+    ]
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "budget_exhausted:c7",
+     "budget_exhausted:c9",
+     "budget_exhausted:c12",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": [],
+    "second_check_kept": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "budget_exhausted:c1",
+     "budget_exhausted:c4",
+     "budget_exhausted:c5",
+     "budget_exhausted:c7",
+     "budget_exhausted:c9",
+     "budget_exhausted:c12",
+     "second_check_disagreed:c4",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": [],
+    "second_check_kept": [
+     "c4"
+    ]
+   }
+  }
+ ],
+ "B": [
+  {
+   "video_id": "v11",
+   "gold": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c1",
+     "judge:mixed_evidence:c2",
+     "judge:mixed_evidence:c3"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c1",
+     "judge:mixed_evidence:c2",
+     "judge:mixed_evidence:c3"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c1",
+     "judge:mixed_evidence:c2",
+     "judge:mixed_evidence:c3"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c1",
+     "judge:mixed_evidence:c2",
+     "judge:mixed_evidence:c3"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v21",
+   "gold": "MISINFO",
+   "a": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c2"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c2"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c2"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c2"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v22",
+   "gold": "MISINFO",
+   "a": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1",
+     "c3",
+     "c5"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:main_claims_unchecked"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1",
+     "c3",
+     "c5"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:main_claims_unchecked"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1",
+     "c3",
+     "c5"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:main_claims_unchecked"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1",
+     "c3",
+     "c5"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:main_claims_unchecked"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v23",
+   "gold": "DEBUNKING",
+   "a": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c2",
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c1"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c2",
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c1"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c1",
+     "judge:thin_contradiction:c2"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c1",
+     "judge:thin_contradiction:c2"
+    ],
+    "judge_errors": []
+   },
+   "thin": [
+    {
+     "claim": "c2",
+     "stance": "REFUTES",
+     "contradicting": [
+      "PMID:40711778"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v24",
+   "gold": "NO_MISINFO",
+   "a": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c1",
+     "judge:mixed_evidence:c1",
+     "judge:mixed_evidence:c3"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c1",
+     "judge:mixed_evidence:c1",
+     "judge:mixed_evidence:c3"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c1",
+     "judge:mixed_evidence:c1",
+     "judge:mixed_evidence:c3"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c1",
+     "judge:mixed_evidence:c1",
+     "judge:mixed_evidence:c3"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v27",
+   "gold": "MISINFO",
+   "a": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c3",
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "prompt_injection_suspected:evidence_abstract:PMID:27297008"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c3",
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "prompt_injection_suspected:evidence_abstract:PMID:27297008"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:thin_contradiction:c3",
+     "prompt_injection_suspected:evidence_abstract:PMID:27297008"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:thin_contradiction:c3",
+     "prompt_injection_suspected:evidence_abstract:PMID:27297008"
+    ],
+    "judge_errors": []
+   },
+   "thin": [
+    {
+     "claim": "c3",
+     "stance": "ENDORSES",
+     "contradicting": [
+      "PMID:38282081"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v36",
+   "gold": "MISINFO",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c6",
+     "high_risk_uncertain:c7",
+     "high_risk_uncertain:c10",
+     "high_risk_uncertain:c14",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c6",
+     "high_risk_uncertain:c7",
+     "high_risk_uncertain:c10",
+     "high_risk_uncertain:c14",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c6",
+     "high_risk_uncertain:c7",
+     "high_risk_uncertain:c10",
+     "high_risk_uncertain:c14",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c6",
+     "high_risk_uncertain:c7",
+     "high_risk_uncertain:c10",
+     "high_risk_uncertain:c14",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v39",
+   "gold": "DEBUNKING",
+   "a": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c1",
+     "c5"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c2",
+     "judge:possible_debunk:c3",
+     "judge:possible_debunk:c4",
+     "judge:mixed_evidence:c3"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c1",
+     "c5"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c2",
+     "judge:possible_debunk:c3",
+     "judge:possible_debunk:c4",
+     "judge:mixed_evidence:c3"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c1",
+     "c5"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c2",
+     "judge:possible_debunk:c3",
+     "judge:possible_debunk:c4",
+     "judge:mixed_evidence:c3"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c1",
+     "c5"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c2",
+     "judge:possible_debunk:c3",
+     "judge:possible_debunk:c4",
+     "judge:mixed_evidence:c3"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v44",
+   "gold": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v51",
+   "gold": "NO_MISINFO",
+   "a": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v58",
+   "gold": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v65",
+   "gold": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "refuted_unsettled",
+    "deciding": [
+     "c1",
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "weak_evidence:c1",
+     "weak_evidence:c2",
+     "conflicting_evidence:c2",
+     "judge:possible_debunk:c1",
+     "judge:possible_debunk:c2",
+     "judge:mixed_evidence:c2"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "refuted_unsettled",
+    "deciding": [
+     "c1",
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "weak_evidence:c1",
+     "weak_evidence:c2",
+     "conflicting_evidence:c2",
+     "judge:possible_debunk:c1",
+     "judge:possible_debunk:c2",
+     "judge:mixed_evidence:c2"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "refuted_unsettled",
+    "deciding": [
+     "c1",
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "weak_evidence:c1",
+     "weak_evidence:c2",
+     "conflicting_evidence:c2",
+     "judge:possible_debunk:c1",
+     "judge:possible_debunk:c2",
+     "judge:mixed_evidence:c2"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "refuted_unsettled",
+    "deciding": [
+     "c1",
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "weak_evidence:c1",
+     "weak_evidence:c2",
+     "conflicting_evidence:c2",
+     "judge:possible_debunk:c1",
+     "judge:possible_debunk:c2",
+     "judge:mixed_evidence:c2"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v68",
+   "gold": "NO_MISINFO",
+   "a": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c1"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c1"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c1"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c1"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v69",
+   "gold": "NO_MISINFO",
+   "a": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1",
+     "c2",
+     "c3",
+     "c5",
+     "c6",
+     "c7"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1",
+     "c2",
+     "c3",
+     "c5",
+     "c6",
+     "c7"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1",
+     "c2",
+     "c3",
+     "c5",
+     "c6",
+     "c7"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1",
+     "c2",
+     "c3",
+     "c5",
+     "c6",
+     "c7"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v70",
+   "gold": "NO_MISINFO",
+   "a": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c3",
+     "judge:mixed_evidence:c4"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c3",
+     "judge:mixed_evidence:c4"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c3",
+     "judge:mixed_evidence:c4"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:possible_debunk:c3",
+     "judge:mixed_evidence:c4"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v71",
+   "gold": "NO_MISINFO",
+   "a": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2",
+     "c3",
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c1"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2",
+     "c3",
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c1"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2",
+     "c3",
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c1"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2",
+     "c3",
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c1"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v78",
+   "gold": "MISINFO",
+   "a": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1",
+     "c2"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1",
+     "c2"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:thin_contradiction:c2"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:thin_contradiction:c2"
+    ],
+    "judge_errors": []
+   },
+   "thin": [
+    {
+     "claim": "c2",
+     "stance": "ENDORSES",
+     "contradicting": [
+      "PMID:34401872"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v79",
+   "gold": "DEBUNKING",
+   "a": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "DEBUNKING",
+    "basis": "",
+    "rule": "refuted_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v86",
+   "gold": "MISINFO",
+   "a": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c2",
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:denies_supported:c3"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c2",
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:denies_supported:c3"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:denies_supported:c3",
+     "judge:thin_contradiction:c2"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:denies_supported:c3",
+     "judge:thin_contradiction:c2"
+    ],
+    "judge_errors": []
+   },
+   "thin": [
+    {
+     "claim": "c2",
+     "stance": "ENDORSES",
+     "contradicting": [
+      "PMID:38169370",
+      "PMID:22229120"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v87",
+   "gold": "MISINFO",
+   "a": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1",
+     "c3"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1",
+     "c3"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:thin_contradiction:c1"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:thin_contradiction:c1"
+    ],
+    "judge_errors": []
+   },
+   "thin": [
+    {
+     "claim": "c1",
+     "stance": "ENDORSES",
+     "contradicting": [
+      "PMID:29528501"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v88",
+   "gold": "MISINFO",
+   "a": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c2",
+     "c3"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c2",
+     "c3"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:thin_contradiction:c3"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c2"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:thin_contradiction:c3"
+    ],
+    "judge_errors": []
+   },
+   "thin": [
+    {
+     "claim": "c3",
+     "stance": "ENDORSES",
+     "contradicting": [
+      "PMID:7477165"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v92",
+   "gold": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v94",
+   "gold": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v95",
+   "gold": "NO_MISINFO",
+   "a": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2",
+     "c3"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2",
+     "c3"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2",
+     "c3"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2",
+     "c3"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v96",
+   "gold": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v100",
+   "gold": "NO_MISINFO",
+   "a": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v109",
+   "gold": "MISINFO",
+   "a": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c6",
+     "c7",
+     "c8",
+     "c9"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c6",
+     "c7",
+     "c8",
+     "c9"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c6",
+     "c8",
+     "c9"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:thin_contradiction:c7"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c6",
+     "c8",
+     "c9"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:thin_contradiction:c7"
+    ],
+    "judge_errors": []
+   },
+   "thin": [
+    {
+     "claim": "c7",
+     "stance": "ENDORSES",
+     "contradicting": [
+      "PMID:42308439",
+      "PMID:39764175"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v110",
+   "gold": "NO_MISINFO",
+   "a": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v111",
+   "gold": "MISINFO",
+   "a": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c2",
+     "c5"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c2",
+     "c5"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c5"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:thin_contradiction:c2"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c5"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:thin_contradiction:c2"
+    ],
+    "judge_errors": []
+   },
+   "thin": [
+    {
+     "claim": "c2",
+     "stance": "ENDORSES",
+     "contradicting": [
+      "PMID:29771297"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v114",
+   "gold": "MISINFO",
+   "a": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c2"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c2"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c2"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c2"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v119",
+   "gold": "MISINFO",
+   "a": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c4"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c4"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:thin_contradiction:c4",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:thin_contradiction:c4",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "thin": [
+    {
+     "claim": "c4",
+     "stance": "ENDORSES",
+     "contradicting": [
+      "PMID:34459009",
+      "PMID:21376230"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v120",
+   "gold": "MISINFO",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v121",
+   "gold": "NO_MISINFO",
+   "a": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2",
+     "c3"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2",
+     "c3"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2",
+     "c3"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c2",
+     "c3"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v122",
+   "gold": "MISINFO",
+   "a": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1",
+     "c3",
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c9"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1",
+     "c3",
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c9"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1",
+     "c3",
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c9"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1",
+     "c3",
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c9"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v123",
+   "gold": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v131",
+   "gold": "MISINFO",
+   "a": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c1"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v135",
+   "gold": "NO_MISINFO",
+   "a": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1",
+     "c3",
+     "c5",
+     "c6"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1",
+     "c3",
+     "c5",
+     "c6"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1",
+     "c3",
+     "c5",
+     "c6"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1",
+     "c3",
+     "c5",
+     "c6"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v141",
+   "gold": "MISINFO",
+   "a": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:main_claims_unchecked"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:main_claims_unchecked"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:main_claims_unchecked"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c3"
+    ],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:main_claims_unchecked"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v143",
+   "gold": "MISINFO",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "high_risk_uncertain:c1",
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v144",
+   "gold": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v146",
+   "gold": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v150",
+   "gold": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v152",
+   "gold": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v160",
+   "gold": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "no_claims",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v167",
+   "gold": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:nothing_judged"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v176",
+   "gold": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "thin": []
+  },
+  {
+   "video_id": "v177",
+   "gold": "MISINFO",
+   "a": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c2"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "rule": "endorsed_contradicted",
+    "deciding": [
+     "c2"
+    ],
+    "review": false,
+    "reasons": [],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1",
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:thin_contradiction:c2"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "NO_MISINFO",
+    "basis": "",
+    "rule": "judged_nothing_false_endorsed",
+    "deciding": [
+     "c1",
+     "c4"
+    ],
+    "review": true,
+    "reasons": [
+     "judge:thin_contradiction:c2"
+    ],
+    "judge_errors": []
+   },
+   "thin": [
+    {
+     "claim": "c2",
+     "stance": "ENDORSES",
+     "contradicting": [
+      "PMID:17987546",
+      "PMID:23459877",
+      "PMID:18652789"
+     ]
+    }
+   ]
+  },
+  {
+   "video_id": "v180",
+   "gold": "CANNOT_RECOGNIZE",
+   "a": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c2"
+    ],
+    "judge_errors": []
+   },
+   "b": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c2"
+    ],
+    "judge_errors": []
+   },
+   "c": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c2"
+    ],
+    "judge_errors": []
+   },
+   "d": {
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "rule": "nothing_judged",
+    "deciding": [],
+    "review": true,
+    "reasons": [
+     "judge:mixed_evidence:c2"
+    ],
+    "judge_errors": []
+   },
+   "thin": []
+  }
+ ]
+}
