@@ -90,8 +90,42 @@ class ExplanationOutput(_Out):
     _e = field_validator("explanation")(_no_urls)
 
 
+class SearchTermSpec(_Out):
+    mesh: Optional[str] = Field(default=None, max_length=120)
+    tiab: list[str] = Field(default_factory=list, max_length=3)
+
+
+class SearchAssistOutput(_Out):
+    """T50 c. Terms are re-sanitised by ``app.core.retrieval.assist`` before use."""
+
+    intervention: list[SearchTermSpec] = Field(default_factory=list, max_length=3)
+    outcome: list[SearchTermSpec] = Field(default_factory=list, max_length=3)
+    population: list[SearchTermSpec] = Field(default_factory=list, max_length=3)
+
+
+class TranslationOutput(_Out):
+    english: str = Field(min_length=1, max_length=600)
+
+    _e = field_validator("english")(_no_urls)
+
+
+class StudyCandidateOut(_Out):
+    pmid: Optional[str] = Field(default=None, max_length=40)
+    doi: Optional[str] = Field(default=None, max_length=240)
+    title: Optional[str] = Field(default=None, max_length=500)
+
+
+class FindStudyOutput(_Out):
+    """T50 i. Ids only; each is validated by format and verified by code."""
+
+    candidates: list[StudyCandidateOut] = Field(default_factory=list, max_length=3)
+
+
 OUTPUT_SCHEMAS: dict[str, type[_Out]] = {
     "extract_claims": ExtractionOutput,
+    "plan_search": SearchAssistOutput,
+    "translate_claim": TranslationOutput,
+    "find_study": FindStudyOutput,
     "analyze_stance": StanceOutput,
     "verify_claims": VerificationOutput,
     "critique": CriticOutput,

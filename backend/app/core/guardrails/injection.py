@@ -191,7 +191,8 @@ def scan_state(state: PipelineState) -> list[InjectionFinding]:
     for c in state.get("claims", []):
         findings += detect(c.claim_text, source="claim", item_id=c.claim_id)
     seen: set[str] = set()
-    evidence_maps = (state.get("retrieved_evidence", {}), state.get("library_evidence", {}))
+    evidence_maps = (state.get("retrieved_evidence", {}), state.get("library_evidence", {}),
+                     state.get("found_study_evidence", {}))
     for records in (recs for m in evidence_maps for recs in m.values()):
         for e in records:
             if e.evidence_id in seen:

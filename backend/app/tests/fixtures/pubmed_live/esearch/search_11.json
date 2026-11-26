@@ -4,13 +4,13 @@
   "version": "0.3"
  },
  "esearchresult": {
-  "count": "65614",
+  "count": "35485",
   "retmax": "3",
   "retstart": "0",
   "idlist": [
-   "35016991",
-   "30980151",
-   "32330491"
+   "30553010",
+   "38719726",
+   "38176412"
   ],
   "translationset": [
    {
@@ -18,6 +18,6 @@
     "to": "\"fasting\"[MeSH Terms]"
    }
   ],
-  "querytranslation": "(\"fasting\"[MeSH Terms] OR \"fasting\"[Title/Abstract]) AND (\"Diabetes Mellitus\"[MeSH Terms] OR \"diabetes\"[Title/Abstract])"
+  "querytranslation": "(\"fasting\"[MeSH Terms] OR \"fasting\"[Title/Abstract]) AND (\"diabetes mellitus, type 2\"[MeSH Terms] OR \"type 2 diabetes\"[Title/Abstract])"
  }
 }

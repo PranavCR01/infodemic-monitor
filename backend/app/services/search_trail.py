@@ -13,7 +13,11 @@ from typing import Any, Optional
 from app.core.graph.routing import DEFAULT_BUDGETS, Budgets
 from app.core.retrieval.rerank import MAX_EVIDENCE_PER_CLAIM
 from app.core.schemas.search_trail import (
+    MAX_SCREENED_OUT,
+    FindStudyView,
     LibrarySearchView,
+    PlanningView,
+    ScreenedOutView,
     PubMedQueryView,
     ReferenceItemView,
     ReferenceSourceView,
@@ -73,7 +77,8 @@ def build_search_trail(state: dict, claim_id: str, budgets: Budgets = DEFAULT_BU
                 pubmed.append(PubMedQueryView(
                     round=rnd.round, query=rnd.pubmed_query[:MAX_QUERY_CHARS], results=rnd.pubmed_hits,
                     after_filters=rnd.pubmed_records, new_records=rnd.new_records, from_cache=rnd.from_cache,
-                    failed=rnd.pubmed_error is not None, error_type=rnd.pubmed_error, repeat=repeat))
+                    failed=rnd.pubmed_error is not None, error_type=rnd.pubmed_error, repeat=repeat,
+                    kind=getattr(rnd, "query_kind", None)))
                 if not repeat:
                     retrieved += int(rnd.pubmed_hits or 0)
             retrieved += int(rnd.reference_passages or 0)
@@ -88,9 +93,27 @@ def build_search_trail(state: dict, claim_id: str, budgets: Budgets = DEFAULT_BU
         retrieved = None
         recorded = "queries_only"
 
+    found_records = list((state.get("found_study_evidence") or {}).get(claim_id, []))
     screened = len(retrieved_set or []) + len(library_records)
-    kept = len((state.get("reranked_evidence") or {}).get(claim_id, []))
+    kept_records = list((state.get("reranked_evidence") or {}).get(claim_id, []))
+    kept = len(kept_records)
     rounds_used = attempts or len(rounds)
+    kept_ids = {e.evidence_id for e in kept_records}
+    kept_pmids = {e.pmid for e in kept_records if getattr(e, "pmid", None)}
+    screened_out: list[ScreenedOutView] = []
+    seen_out: set[str] = set()
+    for rec in [*(retrieved_set or []), *library_records, *found_records]:
+        if rec.evidence_id in kept_ids or rec.evidence_id in seen_out or (rec.pmid and rec.pmid in kept_pmids):
+            continue
+        seen_out.add(rec.evidence_id)
+        screened_out.append(ScreenedOutView(evidence_id=rec.evidence_id, pmid=rec.pmid, title=(rec.title or "")[:300],
+                                            year=rec.publication_year, source=rec.source))
+    planning = None
+    plan = next((rnd.plan for rnd in rounds if getattr(rnd, "plan", None)), None)
+    if plan:
+        planning = PlanningView(**{k: plan.get(k) for k in PlanningView.model_fields if plan.get(k) is not None})
+    study = (state.get("find_study_trail") or {}).get(claim_id)
+    find_study = FindStudyView.model_validate(study.model_dump()) if study is not None else None
     trail = SearchTrailView(
         recorded=recorded,
         pubmed_queries=pubmed,
@@ -99,6 +122,11 @@ def build_search_trail(state: dict, claim_id: str, budgets: Budgets = DEFAULT_BU
         counts=SearchCountsView(retrieved=retrieved, screened=screened, kept=kept),
         budget=SearchBudgetView(
             rounds_used=rounds_used, rounds_max=budgets.max_retrieval_attempts,
-            exhausted=rounds_used >= budgets.max_retrieval_attempts, evidence_cap=MAX_EVIDENCE_PER_CLAIM),
+            exhausted=rounds_used >= budgets.max_retrieval_attempts, evidence_cap=MAX_EVIDENCE_PER_CLAIM,
+            ladder_exhausted=any(getattr(rnd, "ladder_exhausted", False) for rnd in rounds)),
+        planning=planning,
+        find_study=find_study,
+        screened_out=screened_out[:MAX_SCREENED_OUT],
+        screened_out_truncated=len(screened_out) > MAX_SCREENED_OUT,
     )
     return trail.model_dump(mode="json")

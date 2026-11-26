@@ -1,19 +1,18 @@
 """T51: statements about study design, quality or quantity are not efficacy claims.
 
-Production job 5cc07f48 ("Download (4).mp4", vitamin K video, 2026-11-26). c12 "These
-studies on newborns are observational" asserts no effect: category ``evidence_meta``
-(prompt extract_v4, plus fixed rules that override the model for every prompt
-version), never UNSUPPORTED. c13 "The evidence that the vitamin K shot prevents
-dangerous bleeding in newborns is overwhelming" is, after the PR #122 review, an
-efficacy claim in an evidence wrapper: it keeps its efficacy category and stays
-eligible for UNSUPPORTED, and T49's on-topic guard is what stops its empty search
-from producing it. Both claims come from T49's fixture, which is RECONSTRUCTED from the
-queue's description (no production DB access in the build env; see its ``_provenance``).
+Production job 5cc07f48 ("Download (4).mp4", vitamin K video, 2026-11-26), real rows
+(``vitamin_k_job.real.json``, copied from production by the coordinating session; T50
+replaced T49's reconstructed fixture). c12 "the studies are observational, so they
+cannot prove that every bleeding event was caused by skipping vitamin K" asserts no
+effect: category ``evidence_meta`` (prompt extract_v4, plus fixed rules that override
+the model for every prompt version), never UNSUPPORTED. c13 "the evidence supporting
+the preventive vitamin K injection for newborns is overwhelming" is, after the PR #122
+review, an efficacy claim in an evidence wrapper: it keeps its efficacy category and
+stays eligible for UNSUPPORTED, and T49's on-topic guard is what stops its empty search
+from producing it.
 """
 from __future__ import annotations
 
-import json
-from pathlib import Path
 from types import SimpleNamespace
 
 import pytest
@@ -27,7 +26,6 @@ from app.core.graph.nodes import make_stub_nodes
 from app.core.graph.stance import load_prompt
 from app.core.graph.unproven_guard import OFF_TOPIC_LIMITATION
 from app.core.graph.state import (
-    EvidenceRecord,
     FusedSegment,
     GraphClaim,
     Stance,
@@ -39,12 +37,10 @@ from app.core.graph.state import (
 from app.core.graph.validation import validate
 from app.core.schemas.pipeline import MisinfoLabel
 from app.evaluation.routing_experiment.items import efficacy_category
-
-FIXTURE = Path(__file__).parent / "fixtures" / "prod_5cc07f48" / "vitamin_k_job.json"
-
+from app.tests.vitamin_k_fixture import evidence_of, load_real, stance_of, verifier_answer
 
 def job() -> dict:
-    return json.loads(FIXTURE.read_text())
+    return load_real()
 
 
 def prod_claim(cid: str) -> dict:
@@ -55,18 +51,20 @@ C12 = prod_claim("c12")["text"]
 C13 = prod_claim("c13")["text"]
 
 
-def test_fixture_is_reconstructed_and_c13_was_tagged_as_efficacy():
+def test_fixture_is_the_real_job_and_c13_was_tagged_as_efficacy():
     j = job()
-    assert j["_provenance"].startswith("RECONSTRUCTED")
-    assert C12 == "These studies on newborns are observational"
+    assert j["_provenance"].startswith("COPIED FROM PRODUCTION")
+    assert C12.startswith("the studies are observational")
+    assert C13 == "the evidence supporting the preventive vitamin K injection for newborns is overwhelming"
     assert prod_claim("c13")["category"] == "treatment_efficacy"
-    assert prod_claim("c13")["production_verdict"] == "UNSUPPORTED"
+    assert prod_claim("c13")["verdict"] == "UNSUPPORTED"
 
 
 # ------------------------------------------------------------------ the fixed rules
 
 EVIDENCE_STATEMENTS = [
     C12,
+    "These studies on newborns are observational",
     "the sample was small",
     "it's only one study",
     "the trials weren't randomised",
@@ -253,7 +251,7 @@ def test_gate_refuses_design_statements_but_not_support_statements():
 
 
 def test_frozen_eval_categoriser_agrees():
-    assert efficacy_category(C13) == "prevention"
+    assert efficacy_category(C13) != EVIDENCE_META  # the eval's own cue words decide the rest
     assert efficacy_category(C12) == EVIDENCE_META
     assert efficacy_category("Vitamin K prevents osteoporosis") == "prevention"
 
@@ -273,14 +271,14 @@ def replay(c_ids: tuple[str, ...], recorded: bool = False) -> dict:
                            start_seconds=c["start_seconds"], end_seconds=c["end_seconds"]) for c in claims_],
         transcript_segments=[TranscriptSegment(segment_id=f"t_{c['claim_id']}", start=c["start_seconds"],
                                                end=c["end_seconds"], text=c["text"]) for c in claims_],
-        stance_results={c["claim_id"]: StanceResult(claim_id=c["claim_id"], stance=Stance(c["stance"]),
+        stance_results={c["claim_id"]: StanceResult(claim_id=c["claim_id"], stance=Stance(stance_of(c)),
                                                     stance_segment_ids=[f"t_{c['claim_id']}"]) for c in claims_},
-        retrieved_evidence={c["claim_id"]: [EvidenceRecord.model_validate(e) for e in c["evidence"]] for c in claims_},
-        reranked_evidence={c["claim_id"]: [EvidenceRecord.model_validate(e) for e in c["evidence"]] for c in claims_},
+        retrieved_evidence={c["claim_id"]: evidence_of(c) for c in claims_},
+        reranked_evidence={c["claim_id"]: evidence_of(c) for c in claims_},
         retrieval_attempts={c["claim_id"]: c["retrieval_attempts"] for c in claims_},
     )
 
-    answers = {c["claim_id"]: c["verifier_answer"] for c in claims_ if c["verifier_answer"]}
+    answers = {c["claim_id"]: a for c in claims_ if (a := verifier_answer(c))}
 
     class Recorded:
         def call(self, step, input, *, system=None):
@@ -310,10 +308,12 @@ def test_c12_is_insufficient_and_c13_is_stopped_by_the_t49_guard():
     assert not any("unproven_claim" in x for x in out["review_reasons"])
 
 
-def test_the_full_vitamin_k_job_is_cannot_recognize_with_c13_kept_as_efficacy():
+def test_the_full_real_job_with_c13_kept_as_efficacy():
+    # On the real rows the stored SUPPORTED c8 decides (T50 review): NO_MISINFO. What T51
+    # adds: c13 reaches the guard as an efficacy claim and is downgraded there.
     out = replay(tuple(c["claim_id"] for c in job()["claims"]), recorded=True)
     vr = out["verification_results"]
     assert vr["c13"].verdict == Verdict.INSUFFICIENT_EVIDENCE
     assert vr["c13"].limitations[-1] == OFF_TOPIC_LIMITATION
     assert not any(v.verdict == Verdict.UNSUPPORTED for v in vr.values())
-    assert out["final_result"].classification == MisinfoLabel.CANNOT_RECOGNIZE
+    assert out["final_result"].classification == MisinfoLabel.NO_MISINFO

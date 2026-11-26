@@ -1,6 +1,6 @@
 {
  "(\"hot drinks\"[tiab] OR \"hot beverages\"[tiab] OR \"hot water\"[tiab]) AND (\"Influenza, Human\"[MeSH Terms] OR influenza[tiab] OR flu[tiab])": "search_01.json",
- "Beverages[MeSH Terms] AND \"Respiratory Tract Infections\"[MeSH Terms]": "search_02.json",
+ "(\"hot drinks\"[tiab] OR \"hot beverages\"[tiab] OR \"hot water\"[tiab]) AND \"Respiratory Tract Infections\"[MeSH Terms]": "search_02.json",
  "(Garlic[MeSH Terms] OR garlic[tiab] OR allicin[tiab]) AND (\"Common Cold\"[MeSH Terms] OR \"common cold\"[tiab])": "search_03.json",
  "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND (\"Autism Spectrum Disorder\"[MeSH Terms] OR autism[tiab]) AND (Child[MeSH Terms] OR children[tiab])": "search_04.json",
  "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND (\"Autism Spectrum Disorder\"[MeSH Terms] OR autism[tiab])": "search_05.json"

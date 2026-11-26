@@ -114,19 +114,26 @@ def test_each_round_records_the_pubmed_query_actually_run_and_what_it_returned()
     assert_checkpoint_safe(state["search_trail"])
 
 
-def test_repeated_query_is_marked_cached_and_the_budget_is_reported_exhausted():
+def test_ladder_that_runs_out_stops_and_is_reported_not_repeated():
+    """T50 d: every round runs a different, broader query; when the ladder runs out the
+    search stops and the trail says so (before T50 rounds 2-3 repeated the query)."""
     server = RecordedPubMed()
     nodes = make_retrieval_nodes(EvidenceRetriever(server.client()))
     state = _rounds(nodes, _state(_claim("c1", "Bananas are amazing for your skin")), 3)
     rounds = state["search_trail"]["c1"]
     assert len(rounds) == 3 and state["retrieval_attempts"]["c1"] == 3
-    assert [x.from_cache for x in rounds] == [False, True, True]  # served from the query cache
+    assert [x.pubmed_query for x in rounds] == ["bananas skin", "bananas", None]
+    assert [x.query_kind for x in rounds] == ["keywords", "keywords", None]
+    assert [x.ladder_exhausted for x in rounds] == [False, False, True]
+    assert rounds[0].plan["language"] == "en" and rounds[1].plan is None
     state["reranked_evidence"] = {"c1": []}
     trail = build_search_trail(state, "c1")
     SearchTrailView.model_validate(trail)
-    assert [q["repeat"] for q in trail["pubmed_queries"]] == [False, True, True]
+    assert [q["repeat"] for q in trail["pubmed_queries"]] == [False, False]
+    assert [q["kind"] for q in trail["pubmed_queries"]] == ["keywords", "keywords"]
     assert trail["counts"] == {"retrieved": 0, "screened": 0, "kept": 0}
-    assert trail["budget"] == {"rounds_used": 3, "rounds_max": 3, "exhausted": True, "evidence_cap": 10}
+    assert trail["budget"] == {"rounds_used": 3, "rounds_max": 3, "exhausted": True, "evidence_cap": 10,
+                               "ladder_exhausted": True}
 
 
 def test_a_failed_search_records_the_error_type_only_never_the_message_or_key():
@@ -303,7 +310,8 @@ def test_trail_is_returned_by_every_result_endpoint(persisted):
         assert body and all(c["search_trail"] for c in body)
         for c in body:
             t = c["search_trail"]
-            assert set(t) == {"version", "recorded", "pubmed_queries", "references", "library", "counts", "budget"}
+            assert set(t) == {"version", "recorded", "pubmed_queries", "references", "library", "counts", "budget",
+                              "planning", "find_study", "screened_out", "screened_out_truncated"}  # T50
             assert set(t["counts"]) == {"retrieved", "screened", "kept"}
             assert t["pubmed_queries"] and t["pubmed_queries"][0]["query"]
     # existing T11/T26 claim fields are still there, unchanged

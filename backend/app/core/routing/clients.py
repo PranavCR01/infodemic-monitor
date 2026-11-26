@@ -85,6 +85,12 @@ def _reported_model(resp: Any) -> Optional[str]:
     return model if isinstance(model, str) and model else None
 
 
+def _is_server_tool(tool: Any) -> bool:
+    """A provider-run tool (``{"type": "web_search_20250305", ...}``), not a function
+    the caller defines (those carry an ``input_schema``)."""
+    return isinstance(tool, dict) and "input_schema" not in tool and str(tool.get("type", "")).startswith("web_")
+
+
 def _forced_tool_name(tool_choice: Optional[dict]) -> Optional[str]:
     if not tool_choice:
         return None
@@ -149,9 +155,18 @@ class AnthropicModelClient:
                 break
             if kind == "text":
                 texts.append(getattr(block, "text", ""))
+        usage = getattr(resp, "usage", None)
         if output is None and not tools:
             output = "".join(texts)
-        usage = getattr(resp, "usage", None)
+        elif output is None and tools and all(_is_server_tool(t) for t in tools):
+            # Server tools only (T50: web search for the find-the-study step): the answer
+            # is the text, plus what the tool did, for the search trail and the cost.
+            queries = [str((getattr(b, "input", None) or {}).get("query", ""))
+                       for b in getattr(resp, "content", None) or []
+                       if getattr(b, "type", None) == "server_tool_use"]
+            stu = getattr(usage, "server_tool_use", None)
+            output = {"text": "".join(texts), "web_queries": [q for q in queries if q],
+                      "web_search_requests": int(getattr(stu, "web_search_requests", 0) or len(queries))}
         return ModelResponse(
             output=output,
             input_tokens=int(getattr(usage, "input_tokens", 0) or 0),

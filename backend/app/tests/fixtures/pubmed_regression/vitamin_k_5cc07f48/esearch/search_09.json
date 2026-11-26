@@ -1,0 +1,25 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "8768",
+  "retmax": "5",
+  "retstart": "0",
+  "idlist": [
+   "38238225",
+   "29913536",
+   "36117074",
+   "37847277",
+   "14159598"
+  ],
+  "translationset": [
+   {
+    "from": "Hemorrhage[MeSH Terms]",
+    "to": "\"hemorrhage\"[MeSH Terms]"
+   }
+  ],
+  "querytranslation": "(\"Vitamin K\"[MeSH Terms] OR \"Vitamin K\"[Title/Abstract] OR \"phytonadione\"[Title/Abstract] OR \"phylloquinone\"[Title/Abstract]) AND (\"hemorrhage\"[MeSH Terms] OR \"bleeding\"[Title/Abstract] OR \"hemorrhage\"[Title/Abstract])"
+ }
+}

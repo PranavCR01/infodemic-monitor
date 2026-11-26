@@ -21,7 +21,8 @@ CANNOT_RECOGNIZE with the ``nothing_judged`` review reason.
 2. its title or abstract contains the claim's intervention terms (below), matched
    case-insensitively on whole words after the same normalisation as claims
    (``planning.normalize_claim``; hyphens read as spaces; a trailing ``s``/``es``
-   plural is allowed).
+   plural is allowed). A match immediately followed by "antagonist(s)" does not count
+   (T50: "vitamin K antagonists" are warfarin-type drugs, not vitamin K).
 
 **Intervention terms.**
 
@@ -149,9 +150,15 @@ def intervention_terms(claim_text: str) -> InterventionTerms:
     return InterventionTerms(tuple(words), require_all=True, source="fallback")
 
 
+# A drug class named after what it blocks is not about that thing: "vitamin K
+# antagonists" are warfarin-type anticoagulants (T50 review), so a mention immediately
+# followed by one of these words does not count.
+_NOT_ABOUT_SUFFIX = r"(?!\s+(?:antagonists?|antagonism|antagonistic)\b)"
+
+
 def _term_re(term: str) -> re.Pattern[str]:
     stem = term[:-1] if term.endswith("s") and len(term) > 3 else term
-    return re.compile(r"(?<!\w)" + re.escape(stem) + r"(?:s|es)?(?!\w)")
+    return re.compile(r"(?<!\w)" + re.escape(stem) + r"(?:s|es)?(?!\w)" + _NOT_ABOUT_SUFFIX)
 
 
 def on_topic(record: EvidenceRecord, terms: InterventionTerms) -> bool:

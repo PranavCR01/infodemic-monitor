@@ -15,11 +15,14 @@ from typing import Literal, Optional
 import yaml
 from pydantic import BaseModel, Field, field_validator, model_validator
 
-# LLM steps of the target pipeline. plan_search is optional: rules first.
+# LLM steps of the target pipeline. plan_search, translate_claim and find_study are
+# optional (T50): rules first, and retrieval runs rules-only when they are absent.
 LLM_STEPS: tuple[str, ...] = (
     "extract_claims",
     "analyze_stance",
     "plan_search",
+    "translate_claim",
+    "find_study",
     "verify_claims",
     "critique",
     "judge_explanation",

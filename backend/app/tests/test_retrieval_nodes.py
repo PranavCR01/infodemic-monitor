@@ -100,10 +100,13 @@ def test_sample_video_retrieves_real_records_and_broadens_empty_search():
 def test_claim_with_no_results_stops_at_the_budget():
     server = RecordedPubMed()
     _, out, calls = run(server, extra={r.EXTRACT_CLAIMS: claims_node("Bananas are amazing for your skin")})
-    assert out["retrieval_attempts"]["c1"] == 3  # initial + 2 reformulations
+    assert out["retrieval_attempts"]["c1"] == 3  # the budget is used up
     assert out["retrieved_evidence"]["c1"] == []
-    assert len(out["retrieval_queries"]["c1"]) == 3
-    assert server.calls["esearch"] == 1  # the only distinct query was cached after round 1
+    # T50 d: two distinct keyword queries, then the ladder ran out: the search stopped
+    # and said so instead of re-running a query from the cache.
+    assert out["retrieval_queries"]["c1"] == ["bananas skin", "bananas"]
+    assert server.calls["esearch"] == 2
+    assert [x.ladder_exhausted for x in out["search_trail"]["c1"]] == [False, False, True]
     assert out["verification_results"]["c1"].verdict.value == "INSUFFICIENT_EVIDENCE"
     assert calls[r.RERANK_EVIDENCE] == 1
 

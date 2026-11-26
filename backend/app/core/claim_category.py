@@ -132,7 +132,18 @@ _PREVENTION_CUE = re.compile(
 
 # After "<evidence> is weak", a colon or "that ..." means the sentence goes on to assert
 # something else; keep the model's category then.
-_WRAPPER_TAIL = re.compile(r"\s*(?:[:—–]|-\s|,?\s*(?:and\s+)?(?:that|because|since|so|now)\b)")
+_WRAPPER_TAIL = re.compile(r"\s*(?:[:—–]|-\s|,?\s*(?:and\s+)?that\b)")
+# A finding verb is fine when negated: "the studies are observational, so they cannot
+# prove that every bleeding event was caused by skipping vitamin K" (production c12)
+# asserts no effect; "the trials are small, but they show X cures Y" asserts one.
+_NEGATION = re.compile(
+    r"\b(?:not|cannot|can't|can not|couldn't|don't|doesn't|didn't|won't|never|no|unable to|fail(?:s|ed)? to)"
+    r"(?:\s+\w+){0,2}\s*$"
+)
+
+
+def _asserted_finding(tail: str) -> bool:
+    return any(not _NEGATION.search(tail[:m.start()]) for m in _FINDING.finditer(tail))
 
 
 def _normalize(text: str) -> str:
@@ -146,7 +157,7 @@ def _state_match(text: str) -> bool:
         if _FINDING.search(m.group("gap") or ""):
             continue
         tail = text[m.end():]
-        if _WRAPPER_TAIL.match(tail) or _FINDING.search(tail):
+        if _WRAPPER_TAIL.match(tail) or _asserted_finding(tail):
             continue
         return True
     return False
