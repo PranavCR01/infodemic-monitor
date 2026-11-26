@@ -35,12 +35,20 @@ How it fits:
   model (prompt ``extract_v2``); a missing or unknown value is decided by the fixed
   rules in ``app.core.retrieval.claim_kind``. Retrieval uses it to add authoritative
   references for facts of record (§6).
+- **Evidence-strength statements** (T51): "the evidence for X is overwhelming", "these
+  studies are observational" get ``claim_category = evidence_meta`` (prompt
+  ``extract_v4``; and, for every prompt version, the fixed rules in
+  ``app.core.claim_category``, which override the model). ``evidence_meta`` is not an
+  efficacy category, so §7's UNSUPPORTED can never apply to them. The tool's category
+  enum lists ``evidence_meta`` only from ``extract_v4`` on, so older prompts send the
+  same request as before.
 - Writes only ``claims`` (plus the shared, append-only ``errors``).
 """
 from __future__ import annotations
 
 from typing import Any, Callable, Iterable, Optional, Protocol, Sequence
 
+from app.core.claim_category import EVIDENCE_META, resolve_claim_category
 from app.core.graph import routing as r
 from app.core.graph.stance import load_prompt
 from app.core.graph.state import FusedSegment, GraphClaim, NodeError, PipelineState
@@ -69,12 +77,36 @@ DEFAULT_OVERLAP_SECONDS = 20.0
 DEDUP_THRESHOLD = 0.85
 MAX_REPAIRS = 1
 
-CATEGORIES = (
+LEGACY_CATEGORIES = (
     "treatment_efficacy", "prevention", "causation", "safety", "diagnosis",
     "nutrition", "statistic", "other",
 )
+# T51: evidence_meta (statements about the state or strength of evidence). Every
+# claim may carry it (the rules assign it whatever the prompt); the tool offers it to
+# the model only from extract_v4 on.
+CATEGORIES = (*LEGACY_CATEGORIES[:-1], EVIDENCE_META, "other")
+# Prompt versions that describe evidence_meta and so get it in the tool's enum.
+EVIDENCE_META_PROMPTS = frozenset({"extract_v4"})
 
-EXTRACT_TOOL: dict = {
+
+def extract_tool(categories: Sequence[str] = LEGACY_CATEGORIES) -> dict:
+    """The ``record_claims`` tool with the given category enum."""
+    tool = {**EXTRACT_TOOL_BASE}
+    schema = tool["input_schema"]
+    item = schema["properties"]["claims"]["items"]
+    props = {**item["properties"], "claim_category": {"type": "string", "enum": list(categories)}}
+    tool["input_schema"] = {
+        **schema,
+        "properties": {"claims": {**schema["properties"]["claims"], "items": {**item, "properties": props}}},
+    }
+    return tool
+
+
+def categories_for(prompt_version: Optional[str]) -> tuple[str, ...]:
+    return CATEGORIES if prompt_version in EVIDENCE_META_PROMPTS else LEGACY_CATEGORIES
+
+
+EXTRACT_TOOL_BASE: dict = {
     "name": TOOL_NAME,
     "description": "Record every distinct, checkable health claim in the video, citing block IDs.",
     "input_schema": {
@@ -86,7 +118,7 @@ EXTRACT_TOOL: dict = {
                     "type": "object",
                     "properties": {
                         "claim_text": {"type": "string", "description": "The claim, close to the original words."},
-                        "claim_category": {"type": "string", "enum": list(CATEGORIES)},
+                        "claim_category": {"type": "string", "enum": list(LEGACY_CATEGORIES)},
                         "source_segment_ids": {
                             "type": "array", "items": {"type": "string"},
                             "description": "Block IDs from the SEGMENT INDEX the claim comes from.",
@@ -107,6 +139,7 @@ EXTRACT_TOOL: dict = {
         "additionalProperties": False,
     },
 }
+EXTRACT_TOOL: dict = extract_tool(LEGACY_CATEGORIES)  # extract_v1..v3 (unchanged)
 TOOL_CHOICE: dict = {"type": "tool", "name": TOOL_NAME}
 
 
@@ -169,10 +202,10 @@ def build_prompt(
     })
 
 
-def build_request(prompt: GuardedPrompt) -> dict:
+def build_request(prompt: GuardedPrompt, tool: Optional[dict] = None) -> dict:
     return {
         "messages": [{"role": "user", "content": prompt.render()}],
-        "tools": [EXTRACT_TOOL],
+        "tools": [tool or EXTRACT_TOOL],
         "tool_choice": TOOL_CHOICE,
         "max_tokens": 2048,
         "temperature": 0,
@@ -279,6 +312,7 @@ def _parse(raw: Any, blocks: dict[str, dict]) -> ExtractionOutput:
 def extract_window(
     segments: Sequence[FusedSegment], piece_ids: set[str], caller: StepCaller,
     system_prompt: str, *, max_chars: int = DEFAULT_MAX_BLOCK_CHARS, max_repairs: int = MAX_REPAIRS,
+    tool: Optional[dict] = None,
 ) -> tuple[list[GraphClaim], list[NodeError], bool]:
     """Claims from one window. Returns ``(claims, errors, unavailable)``; claim IDs are
     provisional and renumbered by the node."""
@@ -289,7 +323,7 @@ def extract_window(
     for attempt in range(max_repairs + 1):
         prompt = build_prompt(segments, blocks, system_prompt, repair_note=repair_note, max_chars=max_chars)
         try:
-            result = caller.call(STEP, build_request(prompt), system=prompt.system)
+            result = caller.call(STEP, build_request(prompt, tool), system=prompt.system)
         except Exception as exc:  # routing / provider errors
             errors.append(NodeError(
                 node=r.EXTRACT_CLAIMS, retryable=True,
@@ -316,7 +350,8 @@ def extract_window(
             errors.append(_gerr("claim_ungrounded", item.claim_text[:80]))
             continue
         pieces = list(dict.fromkeys(p for b in cited for p in blocks[b]["pieces"]))
-        category = item.claim_category if item.claim_category in CATEGORIES else "other"
+        # T51: an evidence-strength statement is evidence_meta whatever the model said.
+        category = resolve_claim_category(item.claim_category, item.claim_text, CATEGORIES)
         claims.append(GraphClaim(
             claim_id=f"w{len(claims) + 1}",
             claim_text=item.claim_text,
@@ -361,6 +396,7 @@ def make_extract_claims(
     routing config fails at start-up, not mid-run."""
     version = resolve_prompt_version(caller, prompt_version)
     system_prompt = load_prompt(version)
+    tool = extract_tool(categories_for(version))
     g = guardrails or load_guardrails()
 
     def extract_claims(state: PipelineState) -> dict:
@@ -372,7 +408,7 @@ def make_extract_claims(
         errors: list[NodeError] = []
         for window in windows(segments, window_seconds, overlap_seconds):
             claims, errs, unavailable = extract_window(
-                window, piece_ids, caller, system_prompt, max_chars=g.input.max_segment_chars,
+                window, piece_ids, caller, system_prompt, max_chars=g.input.max_segment_chars, tool=tool,
             )
             errors += errs
             if unavailable:

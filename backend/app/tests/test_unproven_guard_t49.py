@@ -178,14 +178,22 @@ def verify_and_judge(s: dict, verify_node) -> dict:
     return {**s, **make_stub_nodes()[r.ROUTE_FOR_REVIEW](s)}
 
 
+def pre_t51_eligible(state, cid: str) -> bool:
+    """``routing.unproven_eligible`` as it was before T51: category only, so an
+    evidence-strength statement tagged treatment_efficacy (c13) was eligible."""
+    c = next(c for c in state["claims"] if c.claim_id == cid)
+    return (c.requires_verification and c.claim_category in r.UNPROVEN_CATEGORIES
+            and not r.retrieval_incomplete(state, cid))
+
+
 def without_guard(caller):
-    """The verifier node as it was before T49 (for the reproduction)."""
+    """The verifier node as it was before T49 (and T51), for the reproduction."""
     def node(state):
         out = {}
         for c in state["claims"]:
             out[c.claim_id], _ = vf.verify_claim(
                 c, state["reranked_evidence"][c.claim_id], caller, "system", "verify_v3",
-                allow_unsupported=r.unproven_eligible(state, c.claim_id))
+                allow_unsupported=pre_t51_eligible(state, c.claim_id))
         return {"verification_results": out}
     return node
 
@@ -221,7 +229,10 @@ def test_vitamin_k_video_is_cannot_recognize_with_the_guard():
     vr = out["verification_results"]
     for cid in ("c11", "c13"):
         assert vr[cid].verdict == Verdict.INSUFFICIENT_EVIDENCE
-        assert vr[cid].limitations[-1] == OFF_TOPIC_LIMITATION
+    assert vr["c11"].limitations[-1] == OFF_TOPIC_LIMITATION
+    # T51: c13 is an evidence-strength statement, so UNSUPPORTED is never offered and
+    # the guard has nothing to downgrade (test_evidence_meta_t51 covers it).
+    assert OFF_TOPIC_LIMITATION not in vr["c13"].limitations
     assert sorted(caller.calls) == ["c1", "c11"]  # c13 had nothing to read: no model call
     assert not any(v.verdict == Verdict.UNSUPPORTED for v in vr.values())
     final = out["final_result"]

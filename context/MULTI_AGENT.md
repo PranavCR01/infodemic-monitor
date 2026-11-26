@@ -2073,6 +2073,17 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-26**: T51 (design §4, §7) evidence-strength statements are not efficacy claims, no spend.
+  New claim_category `evidence_meta` (chosen over a claim_kind `not_verifiable`: claim_kind picks the
+  sources, and the golden guide verifies such statements, e.g. tune v79 c3 SUPPORTED). Prompt
+  `extract_v4` (v3 + the rule, invented examples; v3 still selectable, routing.yaml untouched), fixed
+  rules `app/core/claim_category.py` that override the model's category for every prompt version, and
+  the same rules in `routing.unproven_category`, so c12/c13 of job 5cc07f48 (T49's RECONSTRUCTED fixture)
+  can never be UNSUPPORTED. Reported findings ("studies show X lowers Y", "clinically proven") keep their
+  category. Tool enum lists `evidence_meta` only for extract_v4 (older prompts send identical requests).
+  Severity `evidence_meta: LOW`. Golden tune: 2/187 claims match (v79 c2, c3; both SUPPORTED), 0/11
+  UNSUPPORTED match; no label disagreement. Cross-check and T49 replay identical. Branch `auto/T51`.
+
 - **2026-11-26**: T49 (design §7; §9 unchanged) unproven guard, urgent, no spend. After the vitamin K
   production job 5cc07f48 (accurate video labelled MISINFO (unproven) from an empty and an off-topic
   search), `app.core.graph.unproven_guard` runs in the `verify_claims` node right after each verdict

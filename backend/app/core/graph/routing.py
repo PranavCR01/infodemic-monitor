@@ -7,6 +7,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from app.core.claim_category import is_evidence_meta
 from app.core.graph.state import CriticDecision, PipelineState, Verdict, VerificationResult
 
 
@@ -187,9 +188,17 @@ def retrieval_incomplete(state: PipelineState, claim_id: str) -> bool:
 
 
 def unproven_category(state: PipelineState, claim_id: str) -> bool:
+    """An efficacy claim (§7). T51: a statement about the state or strength of the
+    evidence ("the evidence that X prevents Y is overwhelming") never is, whatever
+    category it carries: the fixed rules are checked here as well as in the extractor,
+    so a claim from any path (an older run, the single-call fallback) is covered."""
     for c in state.get("claims") or []:
         if c.claim_id == claim_id:
-            return c.requires_verification and (c.claim_category or "").strip() in UNPROVEN_CATEGORIES
+            return (
+                c.requires_verification
+                and (c.claim_category or "").strip() in UNPROVEN_CATEGORIES
+                and not is_evidence_meta(c.claim_text)
+            )
     return False
 
 

@@ -41,6 +41,9 @@ categories:
   diagnosis: MEDIUM
   nutrition: MEDIUM
   statistic: LOW
+  # T51: statements about the state or strength of evidence ("these studies are
+  # observational"); topic terms in the text still raise it.
+  evidence_meta: LOW
   other: LOW
 
 # Topics matched in the claim text (case-insensitive, whole words; a trailing * matches
