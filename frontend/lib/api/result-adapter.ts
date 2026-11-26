@@ -5,6 +5,7 @@
 // internal names in free text, claim ordering and numbering. When the backend
 // shape changes, this file changes; the components don't.
 
+import { cleanClaimText, cleanTitle, formatPubDate, replaceEvidenceIds, type NamedSource } from "@/lib/report-text";
 import {
   displayText,
   evidenceLevel,
@@ -13,6 +14,8 @@ import {
   isVerdict,
   isVideoLabel,
   reasonText,
+  studyTypeCount,
+  studyTypeKey,
   toJobState,
   toReviewStatus,
   type EvidenceLevel,
@@ -40,6 +43,10 @@ export type Source = {
   snippet: string;
   url: string | null;
   pmid: string | null;
+  /** T65: PubMed journal abbreviation, when the result has it. */
+  journal: string | null;
+  /** T65: publication date, formatted ("5 Nov 2026", "Nov 2026", "2026"), when the result has it. */
+  pubDate: string | null;
 };
 
 export type Segment = {
@@ -56,7 +63,12 @@ export type EvidenceSummary = {
   /** Best levels found, per direction, strongest first. */
   levels: { level: EvidenceLevel; direction: "supports" | "contradicts"; count: number }[];
   guidance: { direction: "supports" | "contradicts"; count: number }[];
+  /** T65: sources with no strip level, counted by the same study type the source list shows. */
+  others: { studyType: string; direction: "supports" | "contradicts"; count: number }[];
 };
+
+/** "The speaker says": the backend's best-overlap words (T65), else the first stance quote. */
+export type SpeakerQuote = { text: string; at: number | null; source: "speech" | "screen" | null };
 
 /** "How we searched" for one claim (T31). */
 export type ClaimSearch = {
@@ -89,6 +101,7 @@ export type Claim = {
   limitations: string[];
   stanceRationale: string;
   quotes: Segment[];
+  speakerQuote: SpeakerQuote | null;
   modality: "speech" | "screen" | "both" | null;
   sourceSegmentIds: string[];
   sources: Source[];
@@ -168,7 +181,7 @@ function toSource(e: RawEvidence): Source {
   const kind: SourceKind = e.source_kind ?? (e.pmid ? "pubmed" : "other");
   return {
     id: e.evidence_id,
-    title: e.title,
+    title: cleanTitle(e.title) || (e.pmid ? `PMID ${e.pmid}` : "Untitled source"),
     relation: toRelation(e.relation),
     studyType: e.study_type ?? null,
     level: evidenceLevel(e.study_type),
@@ -179,7 +192,26 @@ function toSource(e: RawEvidence): Source {
     // Internal library documents never get an external link (HANDOFF §4 SourceCard).
     url: kind === "library" ? null : e.url ?? (e.pmid ? `https://pubmed.ncbi.nlm.nih.gov/${e.pmid}/` : null),
     pmid: e.pmid ?? null,
+    journal: e.journal?.trim() || null,
+    pubDate: formatPubDate(e.pub_date),
   };
+}
+
+/** The source line under a title: journal (or publisher) and date (or year), whichever exist. */
+export function sourceMeta(s: Pick<Source, "kind" | "publisher" | "year"> & Partial<Pick<Source, "journal" | "pubDate">>): string[] {
+  const where = s.journal || (s.kind !== "reference" ? s.publisher : null);
+  const when = s.pubDate || (s.year ? String(s.year) : null);
+  return [where, when].filter((x): x is string => Boolean(x));
+}
+
+function toSpeakerQuote(raw: string | null | undefined, quotes: Segment[]): SpeakerQuote | null {
+  const text = raw?.trim();
+  if (text) {
+    const seg = quotes.find((q) => q.text.trim() === text) ?? null;
+    return { text, at: seg?.start ?? null, source: seg?.source ?? null };
+  }
+  const q = quotes[0];
+  return q ? { text: q.text, at: q.start, source: q.source } : null;
 }
 
 export function summariseEvidence(sources: Source[]): EvidenceSummary {
@@ -195,11 +227,18 @@ export function summariseEvidence(sources: Source[]): EvidenceSummary {
   const guidance = (["contradicts", "supports"] as const)
     .map((direction) => ({ direction, count: directional.filter((s) => s.level === "GUIDANCE" && dir(s) === direction).length }))
     .filter((g) => g.count > 0);
+  const others: EvidenceSummary["others"] = [];
+  for (const direction of ["contradicts", "supports"] as const) {
+    const counts = new Map<string, number>();
+    for (const s of directional) if (s.level === null && dir(s) === direction) counts.set(studyTypeKey(s.studyType), (counts.get(studyTypeKey(s.studyType)) ?? 0) + 1);
+    counts.forEach((count, studyType) => others.push({ studyType, direction, count }));
+  }
   return {
     supports: directional.filter((s) => s.relation === "SUPPORTS").length,
     contradicts: directional.filter((s) => s.relation === "CONTRADICTS").length,
     levels,
     guidance,
+    others,
   };
 }
 
@@ -278,6 +317,8 @@ function combineSearches(claims: Claim[]): ResultModel["search"] {
 function toClaim(c: RawClaim, number: number): Claim {
   const sources = (c.evidence ?? []).map(toSource);
   const severity = c.severity?.severity;
+  const clean = (t: string | null | undefined) => cleanClaimText(displayText(t), sources);
+  const quotes = (c.stance_quotes ?? []).map(toSegment);
   return {
     id: c.claim_id,
     number,
@@ -287,15 +328,16 @@ function toClaim(c: RawClaim, number: number): Claim {
     deciding: c.deciding,
     stance: isStance(c.stance) ? c.stance : null,
     verdict: isVerdict(c.verdict) ? c.verdict : null,
-    verdictExplanation: displayText(c.verdict_explanation),
-    limitations: (c.limitations ?? []).map(displayText),
-    stanceRationale: displayText(c.stance_rationale),
-    quotes: (c.stance_quotes ?? []).map(toSegment),
+    verdictExplanation: clean(c.verdict_explanation),
+    limitations: (c.limitations ?? []).map(clean),
+    stanceRationale: clean(c.stance_rationale),
+    quotes,
+    speakerQuote: toSpeakerQuote(c.speaker_quote, quotes),
     modality: c.modality ?? null,
     sourceSegmentIds: c.source_segment_ids ?? [],
     sources,
     evidence: summariseEvidence(sources),
-    criticNotes: (c.critic?.issues ?? []).map(displayText),
+    criticNotes: (c.critic?.issues ?? []).map(clean),
     severity: isSeverity(severity) ? severity : null,
     search: toSearch(c.search_trail),
   };
@@ -304,7 +346,7 @@ function toClaim(c: RawClaim, number: number): Claim {
 /** Text that still names a claim by its internal id ("claim c2") is not shown as is. */
 const INTERNAL_CLAIM_REF = /\bclaim [a-z]\d+\b/i;
 
-function toReason(r: RawReason | string, numberOf: (cid: string | null | undefined) => number | null): Reason {
+function toReason(r: RawReason | string, numberOf: (cid: string | null | undefined) => number | null, allSources: NamedSource[] = []): Reason {
   if (typeof r === "string") {
     const parts = r.split(":");
     const cid = parts.length > 1 && /^[a-z]\d+$/i.test(parts[parts.length - 1]) ? parts[parts.length - 1] : null;
@@ -314,7 +356,7 @@ function toReason(r: RawReason | string, numberOf: (cid: string | null | undefin
   return {
     code: r.code,
     claimNumber: numberOf(r.claim_id),
-    text: usable ? displayText(r.text) : reasonText(r.code),
+    text: usable ? replaceEvidenceIds(displayText(r.text), allSources) : reasonText(r.code),
   };
 }
 
@@ -325,6 +367,7 @@ export function adaptResult(raw: RawResult): ResultModel {
   const claims = rawClaims.map((c, i) => toClaim(c, i + 1));
   const byId = new Map(claims.map((c) => [c.id, c]));
   const numberOf = (cid: string | null | undefined) => (cid ? byId.get(cid)?.number ?? null : null);
+  const allSources = claims.flatMap((c) => c.sources);
 
   const decidingIds = raw.deciding_claim_ids?.length ? raw.deciding_claim_ids : claims.filter((c) => c.deciding).map((c) => c.id);
   const decidingClaims = decidingIds.map((id) => byId.get(id)).filter((c): c is Claim => Boolean(c));
@@ -332,8 +375,8 @@ export function adaptResult(raw: RawResult): ResultModel {
   const review = raw.review ?? null;
   const reasons = review
     ? review.reason_details?.length
-      ? review.reason_details.map((r) => toReason(r, numberOf))
-      : review.reasons.map((r) => toReason(r, numberOf))
+      ? review.reason_details.map((r) => toReason(r, numberOf, allSources))
+      : review.reasons.map((r) => toReason(r, numberOf, allSources))
     : [];
 
   const label = isVideoLabel(raw.label) ? raw.label : null;
@@ -350,7 +393,7 @@ export function adaptResult(raw: RawResult): ResultModel {
     label,
     basis: label === "MISINFO" && isMisinfoBasis(raw.misinfo_basis) ? raw.misinfo_basis : null,
     correctedLabel: corrected,
-    explanation: displayText(raw.explanation),
+    explanation: replaceEvidenceIds(displayText(raw.explanation), allSources),
     decisionRule: raw.decision_rule ?? null,
     reviewStatus: raw.review === undefined && raw.status === "REVIEW_REQUIRED" ? "PENDING" : toReviewStatus(review),
     reviewDecidedAt: review?.decided_at ?? null,
@@ -401,9 +444,7 @@ export function evidenceText(e: EvidenceSummary, levelNames: Record<EvidenceLeve
     ...e.levels.map((l) => `${plural(l.count, levelNames[l.level].one, levelNames[l.level].many)} ${l.direction === "supports" ? "for" : "against"}`),
     ...e.guidance.map((g) => `official guidance ${g.direction === "supports" ? "for" : "against"}`),
   ];
-  if (parts.length === 0) {
-    const n = e.supports + e.contradicts;
-    return n === 0 ? "No source found that tests this claim" : `${plural(n, "source", "sources")} without a study type`;
-  }
-  return parts.join(" · ");
+  // T65: sources with no strip level are named by the same study type the source list shows.
+  for (const o of e.others ?? []) parts.push(`${studyTypeCount(o.studyType, o.count)} ${o.direction === "supports" ? "for" : "against"}`);
+  return parts.length === 0 ? "No source found that tests this claim" : parts.join(" · ");
 }

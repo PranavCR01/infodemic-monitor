@@ -5,7 +5,7 @@ import { SourceList } from "./SourceList";
 
 const src = (i: number): Source => ({
   id: `s${i}`, title: `Paper ${i}`, relation: "CONSIDERED", studyType: "rct", level: "RCT", kind: "pubmed",
-  year: 2020, publisher: null, snippet: "", url: null, pmid: null,
+  year: 2020, publisher: null, snippet: "", url: null, pmid: null, journal: null, pubDate: null,
 });
 
 describe("SourceList (T59)", () => {

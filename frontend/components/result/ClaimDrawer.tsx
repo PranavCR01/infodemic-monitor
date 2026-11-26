@@ -33,7 +33,11 @@ export function defaultDirection(c: Claim): Direction {
 }
 
 function quotesFor(c: Claim, transcript: Segment[]): Segment[] {
-  if (c.quotes.length) return c.quotes;
+  if (c.quotes.length) {
+    // T65: the words that carry the claim come first.
+    const lead = c.speakerQuote?.text;
+    return lead ? [...c.quotes].sort((a, b) => Number(b.text.trim() === lead) - Number(a.text.trim() === lead)) : c.quotes;
+  }
   return transcript.filter((s) => c.sourceSegmentIds.includes(s.id));
 }
 
