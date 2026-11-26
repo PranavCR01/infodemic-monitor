@@ -2073,6 +2073,17 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-26**: T51 (design §4, §7) design/quality/quantity statements are not efficacy claims, no
+  spend. New claim_category `evidence_meta` (chosen over a claim_kind `not_verifiable`: claim_kind picks
+  the sources, and the golden guide verifies such statements, e.g. tune v79 c3 SUPPORTED) for statements
+  that assert no effect ("these studies are observational", "only one study", "not randomised").
+  Narrowed after the PR #122 review: "the evidence for X is strong/overwhelming/clear/proven" keeps the
+  implied efficacy category and stays eligible for UNSUPPORTED (T49's guard stops empty searches).
+  Prompt `extract_v4` (v3 kept, routing.yaml untouched); rules in `app/core/claim_category.py` override
+  the model for every prompt version and are rechecked in `routing.unproven_category`. Job 5cc07f48
+  (real rows from T50): c12 evidence_meta; c13 stays efficacy and the T49 guard downgrades it (video
+  NO_MISINFO via c8, CANNOT_RECOGNIZE without c8). Severity `evidence_meta: LOW`. Golden tune: 2/187 match (v79 c2, c3; SUPPORTED),
+  0/11 UNSUPPORTED; no disagreement. Cross-check and T49 replay identical. Branch `auto/T51`.
 - **2026-11-26**: T50 (design §6, §13) search planning rewrite and find-the-study step, no paid
   calls. (a) term-aware content words (`vitamin k`, `type 2 diabetes`, never `vitamin`); (b) 88
   lexicon entries added (vitamin K, VKDB, newborns, breast milk, coagulation, intracranial
