@@ -7,6 +7,11 @@ from sqlalchemy import text
 from app.core.config import settings
 from app.core.storage import get_storage_backend
 
+
+def redis_client_kwargs(url: str) -> dict:
+    """TLS options only apply to rediss:// URLs; redis-py rejects them on plain redis://."""
+    return {"ssl_cert_reqs": None} if url.startswith("rediss://") else {}
+
 router = APIRouter(tags=["health"])
 
 
@@ -31,7 +36,7 @@ async def health_check():
     # 2. Redis — async ping
     try:
         import redis.asyncio as aioredis
-        r = aioredis.from_url(settings.REDIS_URL, ssl_cert_reqs=None)
+        r = aioredis.from_url(settings.REDIS_URL, **redis_client_kwargs(settings.REDIS_URL))
         await r.ping()
         await r.aclose()
         checks["redis"] = "ok"
