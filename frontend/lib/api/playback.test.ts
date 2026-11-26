@@ -18,6 +18,8 @@ describe("fetchPlayback (T29)", () => {
     expect(apiFetch).toHaveBeenCalledWith("/v1/jobs/j1/playback", { cache: "no-store" });
   });
 
+  // 404 also covers an analyst asking for someone else's job: T33's ownership rule answers
+  // a hidden job exactly like a missing one (backend test_ownership_t33 covers the route).
   it.each([404, 501, 503])("gives no player on %s", async (status) => {
     apiFetch.mockResolvedValueOnce(json(status, { detail: "x" }));
     expect(await fetchPlayback("j1")).toBeNull();
