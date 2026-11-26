@@ -1,0 +1,158 @@
+{
+ "_provenance": "BUILT FROM THE EXPORTED REPORT of production job 3d48e75e (vitamin K re-analysis, main a7d9458, 2026-11-26 22:53 UTC) pasted by the lead; the coordinating session's DB access had been revoked, so these are the report's own claim texts, stances, verdicts and limitations, not raw DB rows. Root cause of the failures: the production Anthropic account ran out of credit at ~22:54 UTC (every Anthropic call 400 from then; Sonnet/Haiku included). Public video content only.",
+ "job_id_prefix": "3d48e75e",
+ "production_label": "NO_MISINFO",
+ "production_rule": "judged_nothing_false_endorsed",
+ "expected_after_T67": "CANNOT_RECOGNIZE (analysis_incomplete)",
+ "claims": [
+  {
+   "claim_id": "c1",
+   "text": "we are now seeing newborn babies suffering from potentially life threatening bleeding because fewer parents are giving them a simple vitamin K injection",
+   "start_seconds": 0,
+   "end_seconds": 8,
+   "stance": "ENDORSES",
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "verification_failed": true,
+   "limitations": [
+    "verdict not determined: the verifier model could not be reached"
+   ],
+   "evidence": []
+  },
+  {
+   "claim_id": "c2",
+   "text": "the percentage of newborns not receiving vitamin K more than doubled from 3.1% in 2017 to 6.8% in 2025",
+   "start_seconds": 16,
+   "end_seconds": 25,
+   "stance": "ENDORSES",
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "verification_failed": true,
+   "limitations": [
+    "verdict not determined: the verifier model could not be reached"
+   ],
+   "evidence": []
+  },
+  {
+   "claim_id": "c3",
+   "text": "babies who didn't receive vitamin K had a 47% higher risk of bleeding during their first six months of life and more than twice the risk of bleeding inside the brain",
+   "start_seconds": 25,
+   "end_seconds": 35,
+   "stance": "ENDORSES",
+   "verdict": "SUPPORTED",
+   "verification_failed": false,
+   "limitations": [],
+   "evidence": [
+    {
+     "pmid": "42440325",
+     "title": "Vitamin K Prophylaxis in Newborns and Bleeding in Infancy",
+     "year": 2026,
+     "study_type": "observational",
+     "relation": "SUPPORTS"
+    }
+   ]
+  },
+  {
+   "claim_id": "c4",
+   "text": "a higher risk of death associated with bleeding during the birth hospitalization",
+   "start_seconds": 35,
+   "end_seconds": 41,
+   "stance": "ENDORSES",
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "verification_failed": true,
+   "limitations": [
+    "verdict not determined: the verifier model could not be reached"
+   ],
+   "evidence": []
+  },
+  {
+   "claim_id": "c5",
+   "text": "Babies are naturally born with very low levels of vitamin K, which is essential for blood clotting",
+   "start_seconds": 41,
+   "end_seconds": 46,
+   "stance": "ENDORSES",
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "verification_failed": true,
+   "limitations": [
+    "verdict not determined: the verifier model could not be reached"
+   ],
+   "evidence": []
+  },
+  {
+   "claim_id": "c6",
+   "text": "Without enough of it [vitamin K], babies can develop spontaneous internal bleeding, sometimes without any warning",
+   "start_seconds": 43,
+   "end_seconds": 52,
+   "stance": "ENDORSES",
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "verification_failed": true,
+   "limitations": [
+    "verdict not determined: the verifier model could not be reached"
+   ],
+   "evidence": []
+  },
+  {
+   "claim_id": "c7",
+   "text": "bleeding in the brain can cause permanent neurological damage or death",
+   "start_seconds": 49,
+   "end_seconds": 55,
+   "stance": "ENDORSES",
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "verification_failed": true,
+   "limitations": [
+    "verdict not determined: the verifier model could not be reached"
+   ],
+   "evidence": []
+  },
+  {
+   "claim_id": "c8",
+   "text": "we routinely give newborns a vitamin K injection for more than 60 years",
+   "start_seconds": 55,
+   "end_seconds": 61,
+   "stance": "ENDORSES",
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "verification_failed": true,
+   "limitations": [
+    "verdict not determined: the verifier model could not be reached"
+   ],
+   "evidence": []
+  },
+  {
+   "claim_id": "c9",
+   "text": "[Vitamin K] helps prevent a potentially devastating condition",
+   "start_seconds": 61,
+   "end_seconds": 67,
+   "stance": "ENDORSES",
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "verification_failed": true,
+   "limitations": [
+    "verdict not determined: the verifier model could not be reached"
+   ],
+   "evidence": []
+  },
+  {
+   "claim_id": "c10",
+   "text": "vitamin K is not a vaccine",
+   "start_seconds": 61,
+   "end_seconds": 65,
+   "stance": "ENDORSES",
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "verification_failed": true,
+   "limitations": [
+    "verdict not determined: the verifier model could not be reached"
+   ],
+   "evidence": []
+  },
+  {
+   "claim_id": "c11",
+   "text": "the evidence supporting this preventive injection is overwhelming",
+   "start_seconds": 78,
+   "end_seconds": 83,
+   "stance": "ENDORSES",
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "verification_failed": true,
+   "limitations": [
+    "verdict not determined: the verifier model could not be reached"
+   ],
+   "evidence": []
+  }
+ ]
+}
