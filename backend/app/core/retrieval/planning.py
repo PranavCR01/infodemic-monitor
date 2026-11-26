@@ -1,26 +1,32 @@
 """Retrieval planning: claim → PICO frame → PubMed queries (§6 "Planning the search").
 
-Rules do all of the work by default:
+Rules do the work by default:
 
 1. ``normalize_claim`` lower-cases and strips punctuation and emoji.
 2. ``frame_claim`` splits the claim at its claim verb ("cures", "causes", "prevents"…):
    concepts before the verb are the intervention, after it the outcome. Population
    ("in children") and comparator ("better than X") phrases are pulled out first.
    Concepts come from the MeSH lexicon (``mesh.py``).
-3. ``QueryPlanner.ladder`` builds a list of queries from narrow to broad; round *n* of a
-   claim's search uses the *n*-th distinct one (§6 "When nothing comes back"):
+3. ``QueryPlanner.plan`` builds a ``SearchPlan``: a ladder of queries, each different from
+   and broader than the one before (T50 d); round *n* runs the *n*-th rung and the search
+   stops when they run out (no query is repeated):
 
-   - round 1: intervention AND outcome AND population, MeSH plus free-text synonyms;
-   - round 2: the qualifiers and population dropped;
-   - round 3: parent MeSH headings;
-   - last resort: the claim's content words as free text, left to PubMed's Automatic
-     Term Mapping.
+   - a citation lookup first when the claim cites a study (journal [ta], year [dp],
+     topic; ``citation.py``, T50 e);
+   - intervention AND outcome AND population, MeSH plus [tiab] synonyms;
+   - the population dropped; the outcome broadened to its parent heading; the
+     intervention alone (an intervention is never broadened to its parent heading);
+   - with no concept recognised: the search assistant's structured query (if one is
+     configured), then at most three of the claim's own terms (T50 c, f).
 
-An optional ``assistant`` (a small LLM, per §6 step 3 and §13 "Search planning") is
-consulted only when the rules find no concept at all. Whatever it returns is treated as
-plain search terms and sanitised like any other untrusted query text; it never supplies
-identifiers. The assistant is injected by the caller, which picks the model from the
-routing config; nothing here names a model.
+   Terms keep their one-letter or digit part (``vitamin k``, ``type 2 diabetes``; T50 a).
+   A claim that refers to the video's main intervention without naming it gets that
+   concept (``context``). A non-English claim is translated first when a translator is
+   configured, else planned with its language's stop words (``language.py``, T50 h).
+
+The ``assistant`` and ``translator`` are small LLMs injected by the caller, which picks
+the model from the routing config (§13); nothing here names a model. Whatever they
+return is untrusted text and sanitised; neither ever supplies an identifier.
 """
 from __future__ import annotations
 

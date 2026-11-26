@@ -1,0 +1,6142 @@
+{
+ "before": {
+  "code_revision": "b52e9521935b658dd27ab472308a6965dd70261c",
+  "rows": {
+   "v11:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "eat lot saturated fats fine way",
+     "eat lot saturated fats fine way",
+     "eat lot saturated fats fine way"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v11:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 57,
+    "kept": 10,
+    "queries": [
+     "(\"Plant Oils\"[MeSH Terms] OR \"seed oils\"[tiab] OR \"vegetable oils\"[tiab])",
+     "\"Dietary Fats\"[MeSH Terms]",
+     "\"seed oils\""
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v11:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 57,
+    "kept": 10,
+    "queries": [
+     "(\"Plant Oils\"[MeSH Terms] OR \"seed oils\"[tiab] OR \"vegetable oils\"[tiab])",
+     "\"Dietary Fats\"[MeSH Terms]",
+     "\"seed oils\""
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v21:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 59,
+    "kept": 0,
+    "queries": [
+     "(\"Weight Loss\"[MeSH Terms] OR \"weight loss\"[tiab])",
+     "\"Body Weight\"[MeSH Terms]",
+     "\"lose weight\""
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v21:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 1,
+    "kept": 1,
+    "queries": [
+     "almonds rich unsaturated fats promote cholesterol",
+     "almonds rich unsaturated fats promote cholesterol",
+     "almonds rich unsaturated fats promote cholesterol"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v21:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "thanks fiber protein content almonds make feel full",
+     "thanks fiber protein content almonds make feel full",
+     "thanks fiber protein content almonds make feel full"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v21:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "almonds excellent source magnesium plays essential role mood",
+     "almonds excellent source magnesium plays essential role mood",
+     "almonds excellent source magnesium plays essential role mood"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v21:c5": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "almonds naturally rich tryptophan amino acid plays key",
+     "almonds naturally rich tryptophan amino acid plays key",
+     "almonds naturally rich tryptophan amino acid plays key"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v21:c6": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 6,
+    "kept": 6,
+    "queries": [
+     "almonds rich antioxidants vitamin oxidative stress",
+     "almonds rich antioxidants vitamin oxidative stress",
+     "almonds rich antioxidants vitamin oxidative stress"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v21:c7": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 19,
+    "kept": 6,
+    "queries": [
+     "almonds protect heart",
+     "almonds protect heart",
+     "almonds protect heart"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v22:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "you're going consuming quality protein muscles connective tissue",
+     "you're going consuming quality protein muscles connective tissue",
+     "you're going consuming quality protein muscles connective tissue"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v22:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "eggs high antioxidants something called macular degeneration well",
+     "eggs high antioxidants something called macular degeneration well",
+     "eggs high antioxidants something called macular degeneration well"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v22:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "eggs also high something called choline fatty liver",
+     "eggs also high something called choline fatty liver",
+     "eggs also high something called choline fatty liver"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v22:c4": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 6,
+    "kept": 6,
+    "queries": [
+     "choline support brain focus concentration memory",
+     "choline support brain focus concentration memory",
+     "choline support brain focus concentration memory"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v22:c5": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "even though eggs high cholesterol you're going find",
+     "even though eggs high cholesterol you're going find",
+     "even though eggs high cholesterol you're going find"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v22:c6": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 37,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab])",
+     "sugars",
+     "sugars"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v23:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 60,
+    "kept": 0,
+    "queries": [
+     "(\"Autism Spectrum Disorder\"[MeSH Terms] OR autism[tiab])",
+     "\"Neurodevelopmental Disorders\"[MeSH Terms]",
+     "autism"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v23:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 60,
+    "kept": 10,
+    "queries": [
+     "(\"COVID-19 Vaccines\"[MeSH Terms] OR \"covid-19 vaccine\"[tiab])",
+     "Vaccines[MeSH Terms]",
+     "\"covid vaccine\""
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v23:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 60,
+    "kept": 10,
+    "queries": [
+     "(\"Autism Spectrum Disorder\"[MeSH Terms] OR autism[tiab])",
+     "\"Neurodevelopmental Disorders\"[MeSH Terms]",
+     "autism"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v24:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "cheerios carry harmful glyphosate residues cereal spawn satan",
+     "cheerios carry harmful glyphosate residues cereal spawn satan",
+     "cheerios carry harmful glyphosate residues cereal spawn satan"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v24:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "cancer",
+     "cancer"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v24:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "cancer",
+     "cancer"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v24:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "pound adult eat over prolonged period time glyphosate",
+     "pound adult eat over prolonged period time glyphosate",
+     "pound adult eat over prolonged period time glyphosate"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v27:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 38,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "sugar cancer",
+     "sugar cancer"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v27:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "cancer",
+     "cancer"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v27:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab])",
+     "sugar",
+     "sugar"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v27:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "cancer",
+     "cancer"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v27:c5": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 34,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab]) AND (\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab])",
+     "cancer sugar",
+     "cancer sugar"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v27:c6": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "remember genetics loads gun lifestyle pulls",
+     "remember genetics loads gun lifestyle pulls",
+     "remember genetics loads gun lifestyle pulls"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v27:c7": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 52,
+    "kept": 10,
+    "queries": [
+     "(\"Ascorbic Acid\"[MeSH Terms] OR \"vitamin c\"[tiab] OR \"ascorbic acid\"[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "Vitamins[MeSH Terms] AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "\"vitamin c\" cancer"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v36:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "entire physical makeup comprised minerals trace amounts",
+     "entire physical makeup comprised minerals trace amounts",
+     "entire physical makeup comprised minerals trace amounts"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v36:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "according two-time nobel prize winning chemist dr linus",
+     "according two-time nobel prize winning chemist dr linus",
+     "according two-time nobel prize winning chemist dr linus"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v36:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "burdock root contains all minerals",
+     "burdock root contains all minerals",
+     "burdock root contains all minerals"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v36:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "iris seamos irish moss gelatinous sea algae contains",
+     "iris seamos irish moss gelatinous sea algae contains",
+     "iris seamos irish moss gelatinous sea algae contains"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v36:c5": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "moranga moringa powder about highest concentration vitamins any",
+     "moranga moringa powder about highest concentration vitamins any",
+     "moranga moringa powder about highest concentration vitamins any"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v36:c6": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "und",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "irish sea moss thyroid issues",
+     "irish sea moss thyroid issues",
+     "irish sea moss thyroid issues"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v36:c7": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "und",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "burdock root rids kidney gallbladder stones",
+     "burdock root rids kidney gallbladder stones",
+     "burdock root rids kidney gallbladder stones"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v36:c8": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 5,
+    "kept": 1,
+    "queries": [
+     "burdock root blood-sugar levels",
+     "burdock root blood-sugar levels",
+     "burdock root blood-sugar levels"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v36:c9": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "irish sea moss mens sexual wellness",
+     "irish sea moss mens sexual wellness",
+     "irish sea moss mens sexual wellness"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v36:c10": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "und",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "irish sea moss building muscles mass",
+     "irish sea moss building muscles mass",
+     "irish sea moss building muscles mass"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v36:c11": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "und",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "irish sea moss diseases risk",
+     "irish sea moss diseases risk",
+     "irish sea moss diseases risk"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v36:c12": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 40,
+    "kept": 0,
+    "queries": [
+     "(Infections[MeSH Terms] OR infection[tiab])",
+     "infections",
+     "infections"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v36:c13": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "burdock root soothes eczema",
+     "burdock root soothes eczema",
+     "burdock root soothes eczema"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v36:c14": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "burdock root assists pms symptoms",
+     "burdock root assists pms symptoms",
+     "burdock root assists pms symptoms"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v36:c15": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 13,
+    "kept": 3,
+    "queries": [
+     "moringa promotes liver protection",
+     "moringa promotes liver protection",
+     "moringa promotes liver protection"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v36:c16": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 20,
+    "kept": 3,
+    "queries": [
+     "moringa urinary disorders",
+     "moringa urinary disorders",
+     "moringa urinary disorders"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v36:c17": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 14,
+    "kept": 8,
+    "queries": [
+     "moringa anti-ulcer",
+     "moringa anti-ulcer",
+     "moringa anti-ulcer"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v39:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 3,
+    "queries": [
+     "(\"Plant Oils\"[MeSH Terms] OR \"seed oils\"[tiab] OR \"vegetable oils\"[tiab]) AND (Inflammation[MeSH Terms] OR inflammation[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab]) AND (Obesity[MeSH Terms] OR obesity[tiab])",
+     "\"Dietary Fats\"[MeSH Terms] AND (Inflammation[MeSH Terms] OR inflammation[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab]) AND \"Nutritional and Metabolic Diseases\"[MeSH Terms]",
+     "\"seed oils\" inflammation \"heart disease\" obesity"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v39:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 0,
+    "queries": [
+     "carbs make fat",
+     "carbs make fat",
+     "carbs make fat"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v39:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "butter should eaten snack healthy",
+     "butter should eaten snack healthy",
+     "butter should eaten snack healthy"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v39:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "gain fat calorie deficit due hormonal problems endocrine",
+     "gain fat calorie deficit due hormonal problems endocrine",
+     "gain fat calorie deficit due hormonal problems endocrine"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v39:c5": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "vegetables",
+     "vegetables",
+     "vegetables"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v44:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 59,
+    "kept": 10,
+    "queries": [
+     "(\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab])",
+     "Beverages[MeSH Terms]",
+     "water"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v44:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Infections[MeSH Terms] OR infection[tiab])",
+     "bacteria",
+     "bacteria"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v51:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(\"Tobacco Smoking\"[MeSH Terms] OR smoking[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "smoking \"heart attack\"",
+     "smoking \"heart attack\""
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v51:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 60,
+    "kept": 10,
+    "queries": [
+     "(Hypertension[MeSH Terms] OR hypertension[tiab] OR \"blood pressure\"[tiab])",
+     "\"Cardiovascular Diseases\"[MeSH Terms]",
+     "\"high blood pressure\""
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v51:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "operated multiple patients over years smoke marijuana regularly",
+     "operated multiple patients over years smoke marijuana regularly",
+     "operated multiple patients over years smoke marijuana regularly"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v58:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "you're constipated works time about five minutes grab",
+     "you're constipated works time about five minutes grab",
+     "you're constipated works time about five minutes grab"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v65:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 10,
+    "queries": [
+     "(\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "\"heart attack\"",
+     "\"heart attack\""
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v65:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "gigantic studies over hundred thousand proved eating little",
+     "gigantic studies over hundred thousand proved eating little",
+     "gigantic studies over hundred thousand proved eating little"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v65:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "study called pure published lancet looked tens thousands",
+     "study called pure published lancet looked tens thousands",
+     "study called pure published lancet looked tens thousands"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v68:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 59,
+    "kept": 2,
+    "queries": [
+     "(\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab])",
+     "Beverages[MeSH Terms]",
+     "water"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v68:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 59,
+    "kept": 10,
+    "queries": [
+     "(\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab])",
+     "Beverages[MeSH Terms]",
+     "water"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v68:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 59,
+    "kept": 10,
+    "queries": [
+     "(\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab])",
+     "Beverages[MeSH Terms]",
+     "water"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v69:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 38,
+    "kept": 10,
+    "queries": [
+     "(\"Alcohol Drinking\"[MeSH Terms] OR alcohol[tiab]) AND (\"Tobacco Smoking\"[MeSH Terms] OR smoking[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "alcohol tobacco cancers",
+     "alcohol tobacco cancers"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v69:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 1,
+    "queries": [
+     "(\"Alcohol Drinking\"[MeSH Terms] OR alcohol[tiab])",
+     "alcohol",
+     "alcohol"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v69:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 10,
+    "queries": [
+     "(\"Tobacco Smoking\"[MeSH Terms] OR smoking[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "smoking cancer",
+     "smoking cancer"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v69:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "adults get about half fiber need",
+     "adults get about half fiber need",
+     "adults get about half fiber need"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v69:c5": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Infections[MeSH Terms] OR infection[tiab])",
+     "bacteria",
+     "bacteria"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v69:c6": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "gotta cut processed meat bacon hot dogs deli",
+     "gotta cut processed meat bacon hot dogs deli",
+     "gotta cut processed meat bacon hot dogs deli"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v69:c7": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 0,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "cancer",
+     "cancer"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v70:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "usually tell patients use coconut milk cream because",
+     "usually tell patients use coconut milk cream because",
+     "usually tell patients use coconut milk cream because"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v70:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 56,
+    "kept": 10,
+    "queries": [
+     "(\"Vitamin D\"[MeSH Terms] OR \"vitamin d\"[tiab])",
+     "Vitamins[MeSH Terms]",
+     "\"vitamin d\""
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v70:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 0,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "cancer",
+     "cancer"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v70:c4": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 53,
+    "kept": 10,
+    "queries": [
+     "(Obesity[MeSH Terms] OR obesity[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "\"Nutritional and Metabolic Diseases\"[MeSH Terms] AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "obesity \"heart disease\" cancers"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v71:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 38,
+    "kept": 10,
+    "queries": [
+     "(\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "\"heart attacks\"",
+     "\"heart attacks\""
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v71:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 10,
+    "queries": [
+     "(\"Tobacco Smoking\"[MeSH Terms] OR smoking[tiab]) AND (Inflammation[MeSH Terms] OR inflammation[tiab])",
+     "cigarettes inflammation",
+     "cigarettes inflammation"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v71:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 38,
+    "kept": 10,
+    "queries": [
+     "(\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "\"heart attacks\"",
+     "\"heart attacks\""
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v71:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 10,
+    "queries": [
+     "(\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "\"heart attack\"",
+     "\"heart attack\""
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v71:c5": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "sources l-arginine meat liver exact things tell eat",
+     "sources l-arginine meat liver exact things tell eat",
+     "sources l-arginine meat liver exact things tell eat"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v71:c6": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "sunlight penetrate deep body nitric oxide inside arteries",
+     "sunlight penetrate deep body nitric oxide inside arteries",
+     "sunlight penetrate deep body nitric oxide inside arteries"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v78:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 59,
+    "kept": 1,
+    "queries": [
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND (Pregnancy[MeSH Terms] OR pregnancy[tiab])",
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab])",
+     "\"Biological Products\"[MeSH Terms]"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v78:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 60,
+    "kept": 10,
+    "queries": [
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab])",
+     "\"Biological Products\"[MeSH Terms]",
+     "vaccine"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v79:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 60,
+    "kept": 10,
+    "queries": [
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab])",
+     "\"Biological Products\"[MeSH Terms]",
+     "vaccines"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v79:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 55,
+    "kept": 10,
+    "queries": [
+     "(\"Measles-Mumps-Rubella Vaccine\"[MeSH Terms] OR \"mmr vaccine\"[tiab])",
+     "Vaccines[MeSH Terms]",
+     "\"mmr vaccine\""
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v79:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 36,
+    "kept": 10,
+    "queries": [
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND (\"Autism Spectrum Disorder\"[MeSH Terms] OR autism[tiab])",
+     "\"Biological Products\"[MeSH Terms] AND \"Neurodevelopmental Disorders\"[MeSH Terms]",
+     "vaccinations autism"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v86:c1": {
+    "on_topic": true,
+    "on_topic_round1": false,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 57,
+    "kept": 1,
+    "queries": [
+     "(\"HIV Infections\"[MeSH Terms] OR hiv[tiab])",
+     "\"Virus Diseases\"[MeSH Terms]",
+     "hiv"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v86:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 36,
+    "kept": 10,
+    "queries": [
+     "(\"Immune System\"[MeSH Terms] OR \"immune system\"[tiab] OR immunity[tiab])",
+     "\"immune system\"",
+     "\"immune system\""
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v86:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "come monkey africa person slept hopped plane took",
+     "come monkey africa person slept hopped plane took",
+     "come monkey africa person slept hopped plane took"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v86:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 36,
+    "kept": 0,
+    "queries": [
+     "(\"Immune System\"[MeSH Terms] OR \"immune system\"[tiab] OR immunity[tiab])",
+     "\"immune system\"",
+     "\"immune system\""
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v87:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 1,
+    "kept": 1,
+    "queries": [
+     "babies brains blood brain barrier fully formed until",
+     "babies brains blood brain barrier fully formed until",
+     "babies brains blood brain barrier fully formed until"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v87:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 50,
+    "kept": 10,
+    "queries": [
+     "(Fluorides[MeSH Terms] OR fluoride[tiab]) AND (\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab]) AND (Infant[MeSH Terms] OR infants[tiab])",
+     "(Fluorides[MeSH Terms] OR fluoride[tiab]) AND (\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab])",
+     "(Fluorides[MeSH Terms] OR fluoride[tiab]) AND Beverages[MeSH Terms]"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v87:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 48,
+    "kept": 10,
+    "queries": [
+     "(Fluorides[MeSH Terms] OR fluoride[tiab]) AND (\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab])",
+     "(Fluorides[MeSH Terms] OR fluoride[tiab]) AND Beverages[MeSH Terms]",
+     "fluoride water"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v87:c4": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 38,
+    "kept": 4,
+    "queries": [
+     "(Fluorides[MeSH Terms] OR fluoride[tiab])",
+     "fluoride",
+     "fluoride"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v88:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "los espermatozoides que van ser mujeres son más",
+     "los espermatozoides que van ser mujeres son más",
+     "los espermatozoides que van ser mujeres son más"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v88:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "si las relaciones ocurren muy cerca al día",
+     "si las relaciones ocurren muy cerca al día",
+     "si las relaciones ocurren muy cerca al día"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v88:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "si las relaciones ocurren días antes de la",
+     "si las relaciones ocurren días antes de la",
+     "si las relaciones ocurren días antes de la"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v92:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "any kind disease free basically all get feet",
+     "any kind disease free basically all get feet",
+     "any kind disease free basically all get feet"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v92:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Inflammation[MeSH Terms] OR inflammation[tiab])",
+     "inflammation",
+     "inflammation"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v92:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Inflammation[MeSH Terms] OR inflammation[tiab])",
+     "inflammation",
+     "inflammation"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v94:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 60,
+    "kept": 10,
+    "queries": [
+     "(\"COVID-19\"[MeSH Terms] OR \"covid-19\"[tiab] OR \"sars-cov-2\"[tiab])",
+     "\"Coronavirus Infections\"[MeSH Terms]",
+     "coronavirus"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v94:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 59,
+    "kept": 10,
+    "queries": [
+     "(\"COVID-19\"[MeSH Terms] OR \"covid-19\"[tiab] OR \"sars-cov-2\"[tiab])",
+     "\"Coronavirus Infections\"[MeSH Terms]",
+     "covid"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v95:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "tumors",
+     "tumors"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v95:c2": {
+    "on_topic": true,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "tumors",
+     "tumors"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v95:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "tumors",
+     "tumors"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v95:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 7,
+    "kept": 3,
+    "queries": [
+     "think type commonality environmental exposure identified",
+     "think type commonality environmental exposure identified",
+     "think type commonality environmental exposure identified"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v96:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "los metales pesados se disuelven en la grasa",
+     "los metales pesados se disuelven en la grasa",
+     "los metales pesados se disuelven en la grasa"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v96:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "comer el aceite de las conservas va ser",
+     "comer el aceite de las conservas va ser",
+     "comer el aceite de las conservas va ser"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v100:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 60,
+    "kept": 10,
+    "queries": [
+     "(\"Diabetes Mellitus\"[MeSH Terms] OR diabetes[tiab])",
+     "\"Endocrine System Diseases\"[MeSH Terms]",
+     "diabetes"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v100:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 60,
+    "kept": 10,
+    "queries": [
+     "(\"Diabetes Mellitus\"[MeSH Terms] OR diabetes[tiab])",
+     "\"Endocrine System Diseases\"[MeSH Terms]",
+     "diabetes"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v100:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "cientificos chinos logran que el pancreas vuelva funcionar",
+     "cientificos chinos logran que el pancreas vuelva funcionar",
+     "cientificos chinos logran que el pancreas vuelva funcionar"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v109:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 60,
+    "kept": 10,
+    "queries": [
+     "(\"Diabetes Mellitus\"[MeSH Terms] OR diabetes[tiab])",
+     "\"Endocrine System Diseases\"[MeSH Terms]",
+     "diabetes"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v109:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "el riesgo de un derrame cerebral",
+     "el riesgo de un derrame cerebral",
+     "el riesgo de un derrame cerebral"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v109:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "los riesgos de ataques cardíacos",
+     "los riesgos de ataques cardíacos",
+     "los riesgos de ataques cardíacos"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v109:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 60,
+    "kept": 10,
+    "queries": [
+     "(\"Diabetes Mellitus\"[MeSH Terms] OR diabetes[tiab])",
+     "\"Endocrine System Diseases\"[MeSH Terms]",
+     "diabetes"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v109:c5": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "tumor",
+     "tumor"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v109:c6": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "puede llegar darte pancreatitis",
+     "puede llegar darte pancreatitis",
+     "puede llegar darte pancreatitis"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v109:c7": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "puede llegar darte convulsiones",
+     "puede llegar darte convulsiones",
+     "puede llegar darte convulsiones"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v109:c8": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 60,
+    "kept": 10,
+    "queries": [
+     "(\"Diabetes Mellitus\"[MeSH Terms] OR diabetes[tiab])",
+     "\"Endocrine System Diseases\"[MeSH Terms]",
+     "diabetes"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v109:c9": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "derrames cerebrales entre otras tragedias que te pueden",
+     "derrames cerebrales entre otras tragedias que te pueden",
+     "derrames cerebrales entre otras tragedias que te pueden"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v109:c10": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "se tiene que ir aumentando la dosis poco",
+     "se tiene que ir aumentando la dosis poco",
+     "se tiene que ir aumentando la dosis poco"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v109:c11": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "obviamente vas regresar tu peso en el que",
+     "obviamente vas regresar tu peso en el que",
+     "obviamente vas regresar tu peso en el que"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v110:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "sabías que puedes cambiar el color de tus",
+     "sabías que puedes cambiar el color de tus",
+     "sabías que puedes cambiar el color de tus"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v111:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "la legumbre es buena porque está hecha de",
+     "la legumbre es buena porque está hecha de",
+     "la legumbre es buena porque está hecha de"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v111:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 1,
+    "kept": 1,
+    "queries": [
+     "que se digiere",
+     "que se digiere",
+     "que se digiere"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v111:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "te vas estar con gases inflamación una digestión",
+     "te vas estar con gases inflamación una digestión",
+     "te vas estar con gases inflamación una digestión"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v111:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "eso al final se pudre fermenta",
+     "eso al final se pudre fermenta",
+     "eso al final se pudre fermenta"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v111:c5": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "hay gente que piensa la legumbre es sana",
+     "hay gente que piensa la legumbre es sana",
+     "hay gente que piensa la legumbre es sana"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v114:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "eliminar toda la sal sube presión arterial",
+     "eliminar toda la sal sube presión arterial",
+     "eliminar toda la sal sube presión arterial"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v114:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "eliminar toda la sal se tiene incidencia infarto",
+     "eliminar toda la sal se tiene incidencia infarto",
+     "eliminar toda la sal se tiene incidencia infarto"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v114:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "la causa de hipertensión es prediabetes el azúcar",
+     "la causa de hipertensión es prediabetes el azúcar",
+     "la causa de hipertensión es prediabetes el azúcar"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v114:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "la sal es vida el cuerpo puede fabricar",
+     "la sal es vida el cuerpo puede fabricar",
+     "la sal es vida el cuerpo puede fabricar"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v114:c5": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "sin embargo el azúcar sí puede fabricar cuerpo",
+     "sin embargo el azúcar sí puede fabricar cuerpo",
+     "sin embargo el azúcar sí puede fabricar cuerpo"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v119:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 32,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab]) AND (\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (Honey[MeSH Terms] OR honey[tiab])",
+     "cancer sugar honey",
+     "cancer sugar honey"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v119:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 0,
+    "queries": [
+     "alcaliniza tu cuerpo",
+     "alcaliniza tu cuerpo",
+     "alcaliniza tu cuerpo"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v119:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "el bicarbonato es bueno",
+     "el bicarbonato es bueno",
+     "el bicarbonato es bueno"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v119:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "cancer",
+     "cancer"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v120:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "los beneficios son muchísimo primero elimina metales pesados",
+     "los beneficios son muchísimo primero elimina metales pesados",
+     "los beneficios son muchísimo primero elimina metales pesados"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v120:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "se dice que en la vacuna hay muchos",
+     "se dice que en la vacuna hay muchos",
+     "se dice que en la vacuna hay muchos"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v120:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "el agua de mar contiene minerales la tabla",
+     "el agua de mar contiene minerales la tabla",
+     "el agua de mar contiene minerales la tabla"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v120:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "les va mandar al baño porque hacer una",
+     "les va mandar al baño porque hacer una",
+     "les va mandar al baño porque hacer una"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v121:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "si andás necesitando anticoncepción puede ser una opción",
+     "si andás necesitando anticoncepción puede ser una opción",
+     "si andás necesitando anticoncepción puede ser una opción"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v121:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "aún cosas naturales pueden irritar la mucosa vaginal",
+     "aún cosas naturales pueden irritar la mucosa vaginal",
+     "aún cosas naturales pueden irritar la mucosa vaginal"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v121:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "todo lo que pica en los genitales son",
+     "todo lo que pica en los genitales son",
+     "todo lo que pica en los genitales son"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v122:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "los medicamentos para el colesterol que llaman las",
+     "los medicamentos para el colesterol que llaman las",
+     "los medicamentos para el colesterol que llaman las"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v122:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "está demostrado que interfieren con la creación de",
+     "está demostrado que interfieren con la creación de",
+     "está demostrado que interfieren con la creación de"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v122:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "la única forma de bajar el colesterol es",
+     "la única forma de bajar el colesterol es",
+     "la única forma de bajar el colesterol es"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v122:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "las estatinas trae demencia",
+     "las estatinas trae demencia",
+     "las estatinas trae demencia"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v122:c5": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "las estatinas pueden causar una infinidad de síntomas",
+     "las estatinas pueden causar una infinidad de síntomas",
+     "las estatinas pueden causar una infinidad de síntomas"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v122:c6": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 60,
+    "kept": 10,
+    "queries": [
+     "(\"Diabetes Mellitus\"[MeSH Terms] OR diabetes[tiab])",
+     "\"Endocrine System Diseases\"[MeSH Terms]",
+     "diabetes"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v122:c7": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "además inhiben la absorción de vitamina b12 disminuyen",
+     "además inhiben la absorción de vitamina b12 disminuyen",
+     "además inhiben la absorción de vitamina b12 disminuyen"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v122:c8": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "la coenzima q10 disminuye el riesgo de muerte",
+     "la coenzima q10 disminuye el riesgo de muerte",
+     "la coenzima q10 disminuye el riesgo de muerte"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v122:c9": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "la coenzima q10 presión arterial",
+     "la coenzima q10 presión arterial",
+     "la coenzima q10 presión arterial"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v123:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "guy went glued garbanzo beans his legs",
+     "guy went glued garbanzo beans his legs",
+     "guy went glued garbanzo beans his legs"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v131:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 58,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (Infant[MeSH Terms] OR infants[tiab])",
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab])",
+     "sugar"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v131:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 42,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (\"Alzheimer Disease\"[MeSH Terms] OR alzheimer[tiab] OR dementia[tiab])",
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND Dementia[MeSH Terms]",
+     "sugar alzheimer's"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v131:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab])",
+     "sugar",
+     "sugar"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v131:c4": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab])",
+     "sugar",
+     "sugar"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v131:c5": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab])",
+     "sugar",
+     "sugar"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v131:c6": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab])",
+     "sugar",
+     "sugar"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v131:c7": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (\"Diabetes Mellitus\"[MeSH Terms] OR diabetes[tiab])",
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND \"Endocrine System Diseases\"[MeSH Terms]",
+     "sugar diabetes"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v131:c8": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 38,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "sugar cancer",
+     "sugar cancer"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v131:c9": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab])",
+     "sugar",
+     "sugar"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v135:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "looks quite low few about parts per million",
+     "looks quite low few about parts per million",
+     "looks quite low few about parts per million"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v135:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 7,
+    "queries": [
+     "limit fda used before",
+     "limit fda used before",
+     "limit fda used before"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v135:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 1,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "cancer",
+     "cancer"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v135:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "benzene doesn't get through skin easily",
+     "benzene doesn't get through skin easily",
+     "benzene doesn't get through skin easily"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v135:c5": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 0,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "cancer",
+     "cancer"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v135:c6": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 35,
+    "kept": 10,
+    "queries": [
+     "(\"Sunscreening Agents\"[MeSH Terms] OR sunscreen[tiab])",
+     "sunscreen",
+     "sunscreen"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v141:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "fr",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "cancer",
+     "cancer"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v141:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "fr",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "cancer",
+     "cancer"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v141:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "fr",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "la crème médicament imiquimode efficace",
+     "la crème médicament imiquimode efficace",
+     "la crème médicament imiquimode efficace"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v141:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "fr",
+    "retrieved": 40,
+    "kept": 0,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "cancer",
+     "cancer"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v143:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "fr",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "cancer",
+     "cancer"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v143:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "fr",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "cancer",
+     "cancer"
+    ],
+    "repeats": 1,
+    "stopped": false
+   },
+   "v167:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "hi",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "सर तर गर पर",
+     "सर तर गर पर",
+     "सर तर गर पर"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v167:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "hi",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "सर अगर गआप गर नह ईढर दब दम",
+     "सर अगर गआप गर नह ईढर दब दम",
+     "सर अगर गआप गर नह ईढर दब दम"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v167:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "hi",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "पत कच हल और रक",
+     "पत कच हल और रक",
+     "पत कच हल और रक"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v167:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "hi",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "ईल कन सर वह वर",
+     "ईल कन सर वह वर",
+     "ईल कन सर वह वर"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v176:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 60,
+    "kept": 10,
+    "queries": [
+     "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "\"Mental Disorders\"[MeSH Terms]",
+     "anxiety"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v176:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 2,
+    "kept": 2,
+    "queries": [
+     "he scripture overcome",
+     "he scripture overcome",
+     "he scripture overcome"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v177:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "schizophrenia hearing voices seeing things",
+     "schizophrenia hearing voices seeing things",
+     "schizophrenia hearing voices seeing things"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v177:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 6,
+    "kept": 6,
+    "queries": [
+     "multiple personality yes",
+     "multiple personality yes",
+     "multiple personality yes"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v177:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "oftentimes being misdiagnosed thinking they're mentally ill demon",
+     "oftentimes being misdiagnosed thinking they're mentally ill demon",
+     "oftentimes being misdiagnosed thinking they're mentally ill demon"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v177:c4": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 9,
+    "kept": 6,
+    "queries": [
+     "there's brain scan",
+     "there's brain scan",
+     "there's brain scan"
+    ],
+    "repeats": 2,
+    "stopped": false
+   },
+   "v180:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 60,
+    "kept": 10,
+    "queries": [
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab])",
+     "\"Biological Products\"[MeSH Terms]",
+     "vaccine"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v180:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 59,
+    "kept": 10,
+    "queries": [
+     "(\"COVID-19\"[MeSH Terms] OR \"covid-19\"[tiab] OR \"sars-cov-2\"[tiab])",
+     "\"Coronavirus Infections\"[MeSH Terms]",
+     "covid"
+    ],
+    "repeats": 0,
+    "stopped": false
+   }
+  }
+ },
+ "after": {
+  "code_revision": "dce350920dbcc738511528da47005b94cc62ffe3",
+  "rows": {
+   "v11:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"saturated fat\"[tiab] OR \"saturated fatty acids\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v11:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 35,
+    "kept": 10,
+    "queries": [
+     "(\"saturated fat\"[tiab] OR \"saturated fatty acids\"[tiab]) AND (\"Plant Oils\"[MeSH Terms] OR \"seed oils\"[tiab] OR \"vegetable oils\"[tiab])",
+     "((\"saturated fat\"[tiab] OR \"saturated fatty acids\"[tiab]) OR (\"Plant Oils\"[MeSH Terms] OR \"seed oils\"[tiab] OR \"vegetable oils\"[tiab]))"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v11:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Plant Oils\"[MeSH Terms] OR \"seed oils\"[tiab] OR \"vegetable oils\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v21:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 56,
+    "kept": 10,
+    "queries": [
+     "(\"Prunus dulcis\"[MeSH Terms] OR almond[tiab]) AND (\"Weight Loss\"[MeSH Terms] OR \"weight loss\"[tiab])",
+     "(\"Prunus dulcis\"[MeSH Terms] OR almond[tiab]) AND \"Body Weight\"[MeSH Terms]",
+     "(\"Prunus dulcis\"[MeSH Terms] OR almond[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v21:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 58,
+    "kept": 10,
+    "queries": [
+     "(\"Prunus dulcis\"[MeSH Terms] OR almond[tiab]) AND (Cholesterol[MeSH Terms] OR cholesterol[tiab])",
+     "(\"Prunus dulcis\"[MeSH Terms] OR almond[tiab]) AND Lipids[MeSH Terms]",
+     "(\"Prunus dulcis\"[MeSH Terms] OR almond[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v21:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 38,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Fiber\"[MeSH Terms] OR fiber[tiab]) AND (\"Prunus dulcis\"[MeSH Terms] OR almond[tiab])",
+     "((\"Dietary Fiber\"[MeSH Terms] OR fiber[tiab]) OR (\"Prunus dulcis\"[MeSH Terms] OR almond[tiab]))"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v21:c4": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(\"Prunus dulcis\"[MeSH Terms] OR almond[tiab]) AND (Magnesium[MeSH Terms] OR magnesium[tiab])",
+     "((\"Prunus dulcis\"[MeSH Terms] OR almond[tiab]) OR (Magnesium[MeSH Terms] OR magnesium[tiab]))"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v21:c5": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Prunus dulcis\"[MeSH Terms] OR almond[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v21:c6": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(\"Prunus dulcis\"[MeSH Terms] OR almond[tiab]) AND (Antioxidants[MeSH Terms] OR antioxidant[tiab]) AND (\"Vitamin E\"[MeSH Terms] OR \"vitamin e\"[tiab])",
+     "((\"Prunus dulcis\"[MeSH Terms] OR almond[tiab]) OR (Antioxidants[MeSH Terms] OR antioxidant[tiab]) OR (\"Vitamin E\"[MeSH Terms] OR \"vitamin e\"[tiab]))"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v21:c7": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Prunus dulcis\"[MeSH Terms] OR almond[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v22:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 36,
+    "kept": 2,
+    "queries": [
+     "consuming quality connective",
+     "consuming connective"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v22:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 48,
+    "kept": 10,
+    "queries": [
+     "(Eggs[MeSH Terms] OR egg[tiab] OR eggs[tiab]) AND (Antioxidants[MeSH Terms] OR antioxidant[tiab]) AND (\"Macular Degeneration\"[MeSH Terms] OR \"macular degeneration\"[tiab])",
+     "(Eggs[MeSH Terms] OR egg[tiab] OR eggs[tiab]) AND (Antioxidants[MeSH Terms] OR antioxidant[tiab]) AND \"Eye Diseases\"[MeSH Terms]",
+     "(Eggs[MeSH Terms] OR egg[tiab] OR eggs[tiab]) AND (Antioxidants[MeSH Terms] OR antioxidant[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v22:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 32,
+    "kept": 10,
+    "queries": [
+     "(Eggs[MeSH Terms] OR egg[tiab] OR eggs[tiab]) AND (Choline[MeSH Terms] OR choline[tiab]) AND (\"Fatty Liver\"[MeSH Terms] OR \"fatty liver\"[tiab])",
+     "(Eggs[MeSH Terms] OR egg[tiab] OR eggs[tiab]) AND (Choline[MeSH Terms] OR choline[tiab]) AND \"Liver Diseases\"[MeSH Terms]",
+     "(Eggs[MeSH Terms] OR egg[tiab] OR eggs[tiab]) AND (Choline[MeSH Terms] OR choline[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v22:c4": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Choline[MeSH Terms] OR choline[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v22:c5": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 51,
+    "kept": 10,
+    "queries": [
+     "(Eggs[MeSH Terms] OR egg[tiab] OR eggs[tiab]) AND (Cholesterol[MeSH Terms] OR cholesterol[tiab])",
+     "(Eggs[MeSH Terms] OR egg[tiab] OR eggs[tiab]) AND Lipids[MeSH Terms]",
+     "(Eggs[MeSH Terms] OR egg[tiab] OR eggs[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v22:c6": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 55,
+    "kept": 10,
+    "queries": [
+     "(Eggs[MeSH Terms] OR egg[tiab] OR eggs[tiab]) AND (\"Diabetes Mellitus\"[MeSH Terms] OR diabetes[tiab])",
+     "(Eggs[MeSH Terms] OR egg[tiab] OR eggs[tiab]) AND \"Endocrine System Diseases\"[MeSH Terms]",
+     "(Eggs[MeSH Terms] OR egg[tiab] OR eggs[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v23:c1": {
+    "on_topic": true,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 0,
+    "queries": [
+     "(Glutens[MeSH Terms] OR gluten[tiab]) AND (Osteoporosis[MeSH Terms] OR osteoporosis[tiab]) AND (\"Autism Spectrum Disorder\"[MeSH Terms] OR autism[tiab])",
+     "(Glutens[MeSH Terms] OR gluten[tiab]) AND \"Bone Diseases, Metabolic\"[MeSH Terms] AND \"Neurodevelopmental Disorders\"[MeSH Terms]",
+     "(Glutens[MeSH Terms] OR gluten[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v23:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"COVID-19 Vaccines\"[MeSH Terms] OR \"covid-19 vaccine\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v23:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(\"Autism Spectrum Disorder\"[MeSH Terms] OR autism[tiab])",
+     "\"Neurodevelopmental Disorders\"[MeSH Terms]"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v24:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Glyphosate[MeSH Terms] OR glyphosate[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v24:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 10,
+    "queries": [
+     "(Glyphosate[MeSH Terms] OR glyphosate[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "(Glyphosate[MeSH Terms] OR glyphosate[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v24:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 10,
+    "queries": [
+     "(Glyphosate[MeSH Terms] OR glyphosate[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "(Glyphosate[MeSH Terms] OR glyphosate[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v24:c4": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Glyphosate[MeSH Terms] OR glyphosate[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v27:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 38,
+    "kept": 9,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (Glucose[MeSH Terms] OR glucose[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (Glucose[MeSH Terms] OR glucose[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v27:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v27:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v27:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v27:c5": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab]) AND (\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (Glucose[MeSH Terms] OR glucose[tiab])",
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v27:c6": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 37,
+    "kept": 2,
+    "queries": [
+     "remember genetics lifestyle",
+     "remember lifestyle"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v27:c7": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(\"Ascorbic Acid\"[MeSH Terms] OR \"vitamin c\"[tiab] OR \"ascorbic acid\"[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "(\"Ascorbic Acid\"[MeSH Terms] OR \"vitamin c\"[tiab] OR \"ascorbic acid\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v36:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 0,
+    "queries": [
+     "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v36:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 0,
+    "queries": [
+     "according \"two-time\" winning",
+     "according \"two-time\""
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v36:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v36:c4": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 18,
+    "kept": 10,
+    "queries": [
+     "(Chondrus[MeSH Terms] OR \"irish moss\"[tiab] OR \"sea moss\"[tiab] OR \"chondrus crispus\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v36:c5": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Moringa oleifera\"[MeSH Terms] OR moringa[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v36:c6": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "und",
+    "retrieved": 20,
+    "kept": 2,
+    "queries": [
+     "(Chondrus[MeSH Terms] OR \"irish moss\"[tiab] OR \"sea moss\"[tiab] OR \"chondrus crispus\"[tiab]) AND (\"Thyroid Diseases\"[MeSH Terms] OR thyroid[tiab])",
+     "(Chondrus[MeSH Terms] OR \"irish moss\"[tiab] OR \"sea moss\"[tiab] OR \"chondrus crispus\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v36:c7": {
+    "on_topic": true,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "und",
+    "retrieved": 20,
+    "kept": 0,
+    "queries": [
+     "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab]) AND (Gallstones[MeSH Terms] OR gallstones[tiab])",
+     "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v36:c8": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 44,
+    "kept": 10,
+    "queries": [
+     "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab]) AND (\"Diabetes Mellitus\"[MeSH Terms] OR diabetes[tiab])",
+     "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab]) AND \"Endocrine System Diseases\"[MeSH Terms]",
+     "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v36:c9": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 18,
+    "kept": 0,
+    "queries": [
+     "(Chondrus[MeSH Terms] OR \"irish moss\"[tiab] OR \"sea moss\"[tiab] OR \"chondrus crispus\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v36:c10": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "und",
+    "retrieved": 18,
+    "kept": 10,
+    "queries": [
+     "(Chondrus[MeSH Terms] OR \"irish moss\"[tiab] OR \"sea moss\"[tiab] OR \"chondrus crispus\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v36:c11": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "und",
+    "retrieved": 18,
+    "kept": 1,
+    "queries": [
+     "(Chondrus[MeSH Terms] OR \"irish moss\"[tiab] OR \"sea moss\"[tiab] OR \"chondrus crispus\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v36:c12": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 37,
+    "kept": 10,
+    "queries": [
+     "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab]) AND (Infections[MeSH Terms] OR infection[tiab])",
+     "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v36:c13": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 40,
+    "kept": 1,
+    "queries": [
+     "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab]) AND (Eczema[MeSH Terms] OR eczema[tiab])",
+     "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab]) AND \"Skin Diseases\"[MeSH Terms]",
+     "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v36:c14": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v36:c15": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Moringa oleifera\"[MeSH Terms] OR moringa[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v36:c16": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 20,
+    "kept": 0,
+    "queries": [
+     "(\"Moringa oleifera\"[MeSH Terms] OR moringa[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v36:c17": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Moringa oleifera\"[MeSH Terms] OR moringa[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v39:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 54,
+    "kept": 9,
+    "queries": [
+     "(\"Plant Oils\"[MeSH Terms] OR \"seed oils\"[tiab] OR \"vegetable oils\"[tiab]) AND (Inflammation[MeSH Terms] OR inflammation[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab]) AND (Obesity[MeSH Terms] OR obesity[tiab])",
+     "(\"Plant Oils\"[MeSH Terms] OR \"seed oils\"[tiab] OR \"vegetable oils\"[tiab]) AND (Inflammation[MeSH Terms] OR inflammation[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab]) AND \"Nutritional and Metabolic Diseases\"[MeSH Terms]",
+     "(\"Plant Oils\"[MeSH Terms] OR \"seed oils\"[tiab] OR \"vegetable oils\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v39:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v39:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Butter[MeSH Terms] OR butter[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v39:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 1,
+    "queries": [
+     "hormonal problems endocrine",
+     "hormonal endocrine"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v39:c5": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "vegetables"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v44:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v44:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Infections[MeSH Terms] OR infection[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v51:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 9,
+    "queries": [
+     "(\"Marijuana Smoking\"[MeSH Terms] OR marijuana[tiab] OR cannabis[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "(\"Marijuana Smoking\"[MeSH Terms] OR marijuana[tiab] OR cannabis[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v51:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 59,
+    "kept": 10,
+    "queries": [
+     "(\"Marijuana Smoking\"[MeSH Terms] OR marijuana[tiab] OR cannabis[tiab]) AND (Hypertension[MeSH Terms] OR hypertension[tiab] OR \"blood pressure\"[tiab]) AND (Cholesterol[MeSH Terms] OR cholesterol[tiab])",
+     "(\"Marijuana Smoking\"[MeSH Terms] OR marijuana[tiab] OR cannabis[tiab]) AND \"Cardiovascular Diseases\"[MeSH Terms] AND Lipids[MeSH Terms]",
+     "(\"Marijuana Smoking\"[MeSH Terms] OR marijuana[tiab] OR cannabis[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v51:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Marijuana Smoking\"[MeSH Terms] OR marijuana[tiab] OR cannabis[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v58:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 18,
+    "kept": 0,
+    "queries": [
+     "you're constipated minutes",
+     "constipated minutes"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v65:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 30,
+    "kept": 10,
+    "queries": [
+     "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v65:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v65:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "\"Lancet\"[ta] AND 2018[dp] AND (\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (Adult[MeSH Terms] OR adults[tiab])",
+     "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v68:c1": {
+    "on_topic": true,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 0,
+    "queries": [
+     "(\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab]) AND (Testosterone[MeSH Terms] OR testosterone[tiab]) AND (Atrazine[MeSH Terms] OR atrazine[tiab])",
+     "(\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab]) AND (Testosterone[MeSH Terms] OR testosterone[tiab]) AND Herbicides[MeSH Terms]",
+     "(\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v68:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 38,
+    "kept": 10,
+    "queries": [
+     "(Atrazine[MeSH Terms] OR atrazine[tiab]) AND (\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab])",
+     "((Atrazine[MeSH Terms] OR atrazine[tiab]) OR (\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab]))"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v68:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 10,
+    "queries": [
+     "(\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab]) AND (Testosterone[MeSH Terms] OR testosterone[tiab])",
+     "(\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v69:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 35,
+    "kept": 10,
+    "queries": [
+     "(\"Alcohol Drinking\"[MeSH Terms] OR alcohol[tiab]) AND (\"Tobacco Smoking\"[MeSH Terms] OR smoking[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "(\"Alcohol Drinking\"[MeSH Terms] OR alcohol[tiab]) AND (\"Tobacco Smoking\"[MeSH Terms] OR smoking[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v69:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 0,
+    "queries": [
+     "(\"Alcohol Drinking\"[MeSH Terms] OR alcohol[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v69:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(\"Tobacco Smoking\"[MeSH Terms] OR smoking[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "(\"Tobacco Smoking\"[MeSH Terms] OR smoking[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v69:c4": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 35,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Fiber\"[MeSH Terms] OR fiber[tiab]) AND (Adult[MeSH Terms] OR adults[tiab])",
+     "(\"Dietary Fiber\"[MeSH Terms] OR fiber[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v69:c5": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 2,
+    "queries": [
+     "(\"Dietary Fiber\"[MeSH Terms] OR fiber[tiab]) AND (Infections[MeSH Terms] OR infection[tiab])",
+     "(\"Dietary Fiber\"[MeSH Terms] OR fiber[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v69:c6": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 0,
+    "queries": [
+     "(\"Alcohol Drinking\"[MeSH Terms] OR alcohol[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v69:c7": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 0,
+    "queries": [
+     "(\"Alcohol Drinking\"[MeSH Terms] OR alcohol[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v70:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 30,
+    "kept": 1,
+    "queries": [
+     "usually patients coconut",
+     "usually patients"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v70:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 25,
+    "kept": 10,
+    "queries": [
+     "(Calcium[MeSH Terms] OR calcium[tiab]) AND (\"Vitamin D\"[MeSH Terms] OR \"vitamin d\"[tiab])",
+     "((Calcium[MeSH Terms] OR calcium[tiab]) OR (\"Vitamin D\"[MeSH Terms] OR \"vitamin d\"[tiab]))"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v70:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 7,
+    "queries": [
+     "(\"Prunus dulcis\"[MeSH Terms] OR almond[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "(\"Prunus dulcis\"[MeSH Terms] OR almond[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v70:c4": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 53,
+    "kept": 10,
+    "queries": [
+     "(\"saturated fat\"[tiab] OR \"saturated fatty acids\"[tiab]) AND (Obesity[MeSH Terms] OR obesity[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "(\"saturated fat\"[tiab] OR \"saturated fatty acids\"[tiab]) AND \"Nutritional and Metabolic Diseases\"[MeSH Terms] AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "(\"saturated fat\"[tiab] OR \"saturated fatty acids\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v71:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 58,
+    "kept": 10,
+    "queries": [
+     "(Calcium[MeSH Terms] OR calcium[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab]) AND (Stroke[MeSH Terms] OR stroke[tiab]) AND (Cholesterol[MeSH Terms] OR cholesterol[tiab])",
+     "(Calcium[MeSH Terms] OR calcium[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab]) AND \"Cerebrovascular Disorders\"[MeSH Terms] AND Lipids[MeSH Terms]",
+     "(Calcium[MeSH Terms] OR calcium[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v71:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(\"Tobacco Smoking\"[MeSH Terms] OR smoking[tiab]) AND (Inflammation[MeSH Terms] OR inflammation[tiab])",
+     "(\"Tobacco Smoking\"[MeSH Terms] OR smoking[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v71:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 51,
+    "kept": 10,
+    "queries": [
+     "(\"Contraceptives, Oral\"[MeSH Terms] OR \"oral contraceptives\"[tiab]) AND (Stroke[MeSH Terms] OR stroke[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "(\"Contraceptives, Oral\"[MeSH Terms] OR \"oral contraceptives\"[tiab]) AND \"Cerebrovascular Disorders\"[MeSH Terms] AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "(\"Contraceptives, Oral\"[MeSH Terms] OR \"oral contraceptives\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v71:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v71:c5": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 2,
+    "queries": [
+     "sources \"l-arginine\" liver",
+     "sources \"l-arginine\""
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v71:c6": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 0,
+    "queries": [
+     "sunlight penetrate arteries",
+     "sunlight penetrate"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v78:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 49,
+    "kept": 10,
+    "queries": [
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND (\"Abortion, Spontaneous\"[MeSH Terms] OR miscarriage[tiab]) AND (Pregnancy[MeSH Terms] OR pregnancy[tiab])",
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND (\"Abortion, Spontaneous\"[MeSH Terms] OR miscarriage[tiab])",
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND \"Pregnancy Complications\"[MeSH Terms]"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v78:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 58,
+    "kept": 7,
+    "queries": [
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND (\"Abortion, Spontaneous\"[MeSH Terms] OR miscarriage[tiab])",
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND \"Pregnancy Complications\"[MeSH Terms]",
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v79:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v79:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 0,
+    "queries": [
+     "(\"Measles-Mumps-Rubella Vaccine\"[MeSH Terms] OR \"mmr vaccine\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v79:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 43,
+    "kept": 10,
+    "queries": [
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND (\"Autism Spectrum Disorder\"[MeSH Terms] OR autism[tiab])",
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND \"Neurodevelopmental Disorders\"[MeSH Terms]",
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v86:c1": {
+    "on_topic": true,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 0,
+    "queries": [
+     "(\"HIV Infections\"[MeSH Terms] OR hiv[tiab])",
+     "\"Virus Diseases\"[MeSH Terms]"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v86:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Immune System\"[MeSH Terms] OR \"immune system\"[tiab] OR immunity[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v86:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 0,
+    "queries": [
+     "monkey africa hopped",
+     "monkey africa"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v86:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 0,
+    "queries": [
+     "(\"Immune System\"[MeSH Terms] OR \"immune system\"[tiab] OR immunity[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v87:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(\"Blood-Brain Barrier\"[MeSH Terms] OR \"blood-brain barrier\"[tiab]) AND (Infant[MeSH Terms] OR infants[tiab])",
+     "(\"Blood-Brain Barrier\"[MeSH Terms] OR \"blood-brain barrier\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v87:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 46,
+    "kept": 10,
+    "queries": [
+     "(Fluorides[MeSH Terms] OR fluoride[tiab]) AND (\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab]) AND (Infant[MeSH Terms] OR infants[tiab])",
+     "(Fluorides[MeSH Terms] OR fluoride[tiab]) AND (\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab])",
+     "((Fluorides[MeSH Terms] OR fluoride[tiab]) OR (\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab]))"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v87:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 49,
+    "kept": 10,
+    "queries": [
+     "(Fluorides[MeSH Terms] OR fluoride[tiab]) AND (\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab])",
+     "(Fluorides[MeSH Terms] OR fluoride[tiab]) AND Beverages[MeSH Terms]",
+     "(Fluorides[MeSH Terms] OR fluoride[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v87:c4": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Fluorides[MeSH Terms] OR fluoride[tiab]) AND (\"Bone Density\"[MeSH Terms] OR \"bone mineral density\"[tiab] OR \"bone health\"[tiab])",
+     "(Fluorides[MeSH Terms] OR fluoride[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v88:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "espermatozoides mujeres resistentes",
+     "espermatozoides resistentes"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v88:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Ovulation[MeSH Terms] OR ovulation[tiab]) AND (\"Sex Preselection\"[MeSH Terms] OR \"sex selection\"[tiab] OR \"sex ratio\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v88:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Ovulation[MeSH Terms] OR ovulation[tiab]) AND (\"Sex Preselection\"[MeSH Terms] OR \"sex selection\"[tiab] OR \"sex ratio\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v92:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 1,
+    "queries": [
+     "(grounding[tiab] OR earthing[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v92:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 34,
+    "kept": 10,
+    "queries": [
+     "(grounding[tiab] OR earthing[tiab]) AND (Inflammation[MeSH Terms] OR inflammation[tiab])",
+     "(grounding[tiab] OR earthing[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v92:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 8,
+    "queries": [
+     "(Inflammation[MeSH Terms] OR inflammation[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v94:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 55,
+    "kept": 10,
+    "queries": [
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND (\"COVID-19\"[MeSH Terms] OR \"covid-19\"[tiab] OR \"sars-cov-2\"[tiab])",
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND \"Coronavirus Infections\"[MeSH Terms]",
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v94:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(\"COVID-19\"[MeSH Terms] OR \"covid-19\"[tiab] OR \"sars-cov-2\"[tiab])",
+     "\"Coronavirus Infections\"[MeSH Terms]"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v95:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(\"Brain Neoplasms\"[MeSH Terms] OR \"brain tumor\"[tiab] OR meningioma[tiab])",
+     "Neoplasms[MeSH Terms]"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v95:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(\"Brain Neoplasms\"[MeSH Terms] OR \"brain tumor\"[tiab] OR meningioma[tiab])",
+     "Neoplasms[MeSH Terms]"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v95:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(\"Radiation, Ionizing\"[MeSH Terms] OR \"ionizing radiation\"[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "(\"Radiation, Ionizing\"[MeSH Terms] OR \"ionizing radiation\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v95:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 37,
+    "kept": 2,
+    "queries": [
+     "commonality environmental identified",
+     "commonality environmental"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v96:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Metals, Heavy\"[MeSH Terms] OR \"heavy metals\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v96:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Metals, Heavy\"[MeSH Terms] OR \"heavy metals\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v100:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 57,
+    "kept": 10,
+    "queries": [
+     "(\"Cellular Reprogramming\"[MeSH Terms] OR \"cell reprogramming\"[tiab] OR \"stem cell\"[tiab]) AND (\"Diabetes Mellitus, Type 1\"[MeSH Terms] OR \"type 1 diabetes\"[tiab])",
+     "(\"Cellular Reprogramming\"[MeSH Terms] OR \"cell reprogramming\"[tiab] OR \"stem cell\"[tiab]) AND \"Diabetes Mellitus\"[MeSH Terms]",
+     "(\"Cellular Reprogramming\"[MeSH Terms] OR \"cell reprogramming\"[tiab] OR \"stem cell\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v100:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 58,
+    "kept": 7,
+    "queries": [
+     "(\"Cellular Reprogramming\"[MeSH Terms] OR \"cell reprogramming\"[tiab] OR \"stem cell\"[tiab]) AND (\"Diabetes Mellitus, Type 2\"[MeSH Terms] OR \"type 2 diabetes\"[tiab])",
+     "(\"Cellular Reprogramming\"[MeSH Terms] OR \"cell reprogramming\"[tiab] OR \"stem cell\"[tiab]) AND \"Diabetes Mellitus\"[MeSH Terms]",
+     "(\"Cellular Reprogramming\"[MeSH Terms] OR \"cell reprogramming\"[tiab] OR \"stem cell\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v100:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 1,
+    "kept": 0,
+    "queries": [
+     "cientificos pancreas funcionar",
+     "cientificos funcionar"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v109:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(\"Diabetes Mellitus, Type 2\"[MeSH Terms] OR \"type 2 diabetes\"[tiab])",
+     "\"Diabetes Mellitus\"[MeSH Terms]"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v109:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Stroke[MeSH Terms] OR stroke[tiab])",
+     "\"Cerebrovascular Disorders\"[MeSH Terms]"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v109:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v109:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(\"Diabetes Mellitus, Type 2\"[MeSH Terms] OR \"type 2 diabetes\"[tiab])",
+     "\"Diabetes Mellitus\"[MeSH Terms]"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v109:c5": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v109:c6": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Pancreatitis[MeSH Terms] OR pancreatitis[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v109:c7": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Seizures[MeSH Terms] OR seizures[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v109:c8": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(\"Diabetes Mellitus, Type 2\"[MeSH Terms] OR \"type 2 diabetes\"[tiab])",
+     "\"Diabetes Mellitus\"[MeSH Terms]"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v109:c9": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Stroke[MeSH Terms] OR stroke[tiab])",
+     "\"Cerebrovascular Disorders\"[MeSH Terms]"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v109:c10": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 1,
+    "kept": 0,
+    "queries": [
+     "aumentando páncreas funcionar",
+     "aumentando funcionar"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v109:c11": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "obviamente regresar estabas",
+     "obviamente regresar"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v110:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "puedes cambiar color",
+     "puedes cambiar"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v111:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 0,
+    "queries": [
+     "(Fabaceae[MeSH Terms] OR legumes[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v111:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 1,
+    "kept": 1,
+    "queries": [
+     "digiere"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v111:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Inflammation[MeSH Terms] OR inflammation[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v111:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 4,
+    "kept": 0,
+    "queries": [
+     "final pudre fermenta",
+     "final fermenta"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v111:c5": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Fabaceae[MeSH Terms] OR legumes[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v114:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 38,
+    "kept": 10,
+    "queries": [
+     "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (Hypertension[MeSH Terms] OR hypertension[tiab] OR \"blood pressure\"[tiab])",
+     "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND \"Cardiovascular Diseases\"[MeSH Terms]",
+     "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v114:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 30,
+    "kept": 10,
+    "queries": [
+     "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v114:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 54,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab]) AND (Hypertension[MeSH Terms] OR hypertension[tiab] OR \"blood pressure\"[tiab])",
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab]) AND \"Cardiovascular Diseases\"[MeSH Terms]",
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v114:c4": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v114:c5": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v119:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 29,
+    "kept": 7,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab]) AND (Glucose[MeSH Terms] OR glucose[tiab]) AND (\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (Honey[MeSH Terms] OR honey[tiab])",
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab]) AND (Glucose[MeSH Terms] OR glucose[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v119:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "alcaliniza"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v119:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Sodium Bicarbonate\"[MeSH Terms] OR \"sodium bicarbonate\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v119:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v120:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Metals, Heavy\"[MeSH Terms] OR \"heavy metals\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v120:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 40,
+    "kept": 0,
+    "queries": [
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND (\"Metals, Heavy\"[MeSH Terms] OR \"heavy metals\"[tiab])",
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v120:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Seawater[MeSH Terms] OR seawater[tiab] OR \"sea water\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v120:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [
+     "mandar limpieza constantemente",
+     "limpieza constantemente"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v121:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 8,
+    "queries": [
+     "(\"Contraceptives, Oral\"[MeSH Terms] OR \"oral contraceptives\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v121:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 39,
+    "kept": 0,
+    "queries": [
+     "naturales irritar vaginal",
+     "naturales irritar"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v121:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 19,
+    "kept": 0,
+    "queries": [
+     "pica genitales",
+     "genitales"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v122:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 51,
+    "kept": 10,
+    "queries": [
+     "(\"Hydroxymethylglutaryl-CoA Reductase Inhibitors\"[MeSH Terms] OR statin[tiab]) AND (Cholesterol[MeSH Terms] OR cholesterol[tiab])",
+     "(\"Hydroxymethylglutaryl-CoA Reductase Inhibitors\"[MeSH Terms] OR statin[tiab]) AND Lipids[MeSH Terms]",
+     "(\"Hydroxymethylglutaryl-CoA Reductase Inhibitors\"[MeSH Terms] OR statin[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v122:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Ubiquinone[MeSH Terms] OR \"coenzyme q10\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v122:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 57,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab]) AND (Cholesterol[MeSH Terms] OR cholesterol[tiab])",
+     "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab]) AND Lipids[MeSH Terms]",
+     "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v122:c4": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 49,
+    "kept": 10,
+    "queries": [
+     "(\"Hydroxymethylglutaryl-CoA Reductase Inhibitors\"[MeSH Terms] OR statin[tiab]) AND (\"Alzheimer Disease\"[MeSH Terms] OR alzheimer[tiab] OR dementia[tiab])",
+     "(\"Hydroxymethylglutaryl-CoA Reductase Inhibitors\"[MeSH Terms] OR statin[tiab]) AND Dementia[MeSH Terms]",
+     "(\"Hydroxymethylglutaryl-CoA Reductase Inhibitors\"[MeSH Terms] OR statin[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v122:c5": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Hydroxymethylglutaryl-CoA Reductase Inhibitors\"[MeSH Terms] OR statin[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v122:c6": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 50,
+    "kept": 10,
+    "queries": [
+     "(\"Hydroxymethylglutaryl-CoA Reductase Inhibitors\"[MeSH Terms] OR statin[tiab]) AND (\"Diabetes Mellitus, Type 2\"[MeSH Terms] OR \"type 2 diabetes\"[tiab])",
+     "(\"Hydroxymethylglutaryl-CoA Reductase Inhibitors\"[MeSH Terms] OR statin[tiab]) AND \"Diabetes Mellitus\"[MeSH Terms]",
+     "(\"Hydroxymethylglutaryl-CoA Reductase Inhibitors\"[MeSH Terms] OR statin[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v122:c7": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "es",
+    "retrieved": 35,
+    "kept": 10,
+    "queries": [
+     "(\"Vitamin B 12\"[MeSH Terms] OR \"vitamin b12\"[tiab]) AND (\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab])",
+     "((\"Vitamin B 12\"[MeSH Terms] OR \"vitamin b12\"[tiab]) OR (\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]))"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v122:c8": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "es",
+    "retrieved": 48,
+    "kept": 10,
+    "queries": [
+     "(Ubiquinone[MeSH Terms] OR \"coenzyme q10\"[tiab]) AND (\"Heart Failure\"[MeSH Terms] OR \"heart failure\"[tiab])",
+     "(Ubiquinone[MeSH Terms] OR \"coenzyme q10\"[tiab]) AND \"Cardiovascular Diseases\"[MeSH Terms]",
+     "(Ubiquinone[MeSH Terms] OR \"coenzyme q10\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v122:c9": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 51,
+    "kept": 10,
+    "queries": [
+     "(Ubiquinone[MeSH Terms] OR \"coenzyme q10\"[tiab]) AND (Hypertension[MeSH Terms] OR hypertension[tiab] OR \"blood pressure\"[tiab])",
+     "(Ubiquinone[MeSH Terms] OR \"coenzyme q10\"[tiab]) AND \"Cardiovascular Diseases\"[MeSH Terms]",
+     "(Ubiquinone[MeSH Terms] OR \"coenzyme q10\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v123:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Fabaceae[MeSH Terms] OR legumes[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v131:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 36,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (\"Attention Deficit Disorder with Hyperactivity\"[MeSH Terms] OR adhd[tiab]) AND (Infant[MeSH Terms] OR infants[tiab])",
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (\"Attention Deficit Disorder with Hyperactivity\"[MeSH Terms] OR adhd[tiab])",
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND \"Neurodevelopmental Disorders\"[MeSH Terms]"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v131:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 46,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (\"Alzheimer Disease\"[MeSH Terms] OR alzheimer[tiab] OR dementia[tiab])",
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND Dementia[MeSH Terms]",
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v131:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 55,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (Glaucoma[MeSH Terms] OR glaucoma[tiab])",
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND \"Eye Diseases\"[MeSH Terms]",
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v131:c4": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (\"Dental Caries\"[MeSH Terms] OR \"dental caries\"[tiab])",
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v131:c5": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v131:c6": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (\"Sleep Initiation and Maintenance Disorders\"[MeSH Terms] OR insomnia[tiab])",
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v131:c7": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 37,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (\"Diabetes Mellitus\"[MeSH Terms] OR diabetes[tiab])",
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND \"Endocrine System Diseases\"[MeSH Terms]",
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v131:c8": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v131:c9": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v135:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 19,
+    "kept": 1,
+    "queries": [
+     "quite about million",
+     "quite million"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v135:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 0,
+    "queries": [
+     "(Benzene[MeSH Terms] OR benzene[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v135:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 37,
+    "kept": 5,
+    "queries": [
+     "(Benzene[MeSH Terms] OR benzene[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "(Benzene[MeSH Terms] OR benzene[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v135:c4": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Benzene[MeSH Terms] OR benzene[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v135:c5": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 37,
+    "kept": 10,
+    "queries": [
+     "(\"Benzoyl Peroxide\"[MeSH Terms] OR \"benzoyl peroxide\"[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "(\"Benzoyl Peroxide\"[MeSH Terms] OR \"benzoyl peroxide\"[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v135:c6": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": true,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 10,
+    "queries": [
+     "(Benzene[MeSH Terms] OR benzene[tiab]) AND (\"Sunscreening Agents\"[MeSH Terms] OR sunscreen[tiab])",
+     "((Benzene[MeSH Terms] OR benzene[tiab]) OR (\"Sunscreening Agents\"[MeSH Terms] OR sunscreen[tiab]))"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v141:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "fr",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v141:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "fr",
+    "retrieved": 51,
+    "kept": 6,
+    "queries": [
+     "(Soaps[MeSH Terms] OR soap[tiab]) AND (\"Skin Neoplasms\"[MeSH Terms] OR \"skin cancer\"[tiab] OR melanoma[tiab])",
+     "(Soaps[MeSH Terms] OR soap[tiab]) AND Neoplasms[MeSH Terms]",
+     "(Soaps[MeSH Terms] OR soap[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v141:c3": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "fr",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Imiquimod[MeSH Terms] OR imiquimod[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v141:c4": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "fr",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Soaps[MeSH Terms] OR soap[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "(Soaps[MeSH Terms] OR soap[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v143:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "fr",
+    "retrieved": 51,
+    "kept": 6,
+    "queries": [
+     "(Soaps[MeSH Terms] OR soap[tiab]) AND (\"Skin Neoplasms\"[MeSH Terms] OR \"skin cancer\"[tiab] OR melanoma[tiab])",
+     "(Soaps[MeSH Terms] OR soap[tiab]) AND Neoplasms[MeSH Terms]",
+     "(Soaps[MeSH Terms] OR soap[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v143:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "fr",
+    "retrieved": 51,
+    "kept": 6,
+    "queries": [
+     "(Soaps[MeSH Terms] OR soap[tiab]) AND (\"Skin Neoplasms\"[MeSH Terms] OR \"skin cancer\"[tiab] OR melanoma[tiab])",
+     "(Soaps[MeSH Terms] OR soap[tiab]) AND Neoplasms[MeSH Terms]",
+     "(Soaps[MeSH Terms] OR soap[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   },
+   "v167:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "hi",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v167:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "hi",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v167:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "hi",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v167:c4": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "hi",
+    "retrieved": 0,
+    "kept": 0,
+    "queries": [],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v176:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(\"Panic Disorder\"[MeSH Terms] OR \"panic attack\"[tiab])",
+     "\"Anxiety Disorders\"[MeSH Terms]"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v176:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 9,
+    "kept": 5,
+    "queries": [
+     "he scripture overcome",
+     "scripture overcome"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v177:c1": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 40,
+    "kept": 10,
+    "queries": [
+     "(Schizophrenia[MeSH Terms] OR schizophrenia[tiab])",
+     "\"Mental Disorders\"[MeSH Terms]"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v177:c2": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 39,
+    "kept": 10,
+    "queries": [
+     "multiple personality",
+     "personality"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v177:c3": {
+    "on_topic": false,
+    "on_topic_round1": false,
+    "on_topic_kept": false,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 0,
+    "queries": [
+     "oftentimes misdiagnosed thinking",
+     "oftentimes misdiagnosed"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v177:c4": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "und",
+    "retrieved": 28,
+    "kept": 10,
+    "queries": [
+     "there's brain scan",
+     "there's brain"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v180:c1": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": false,
+    "lang": "en",
+    "retrieved": 20,
+    "kept": 10,
+    "queries": [
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": true
+   },
+   "v180:c2": {
+    "on_topic": true,
+    "on_topic_round1": true,
+    "on_topic_kept": true,
+    "golden_hit": false,
+    "has_golden_pmid": true,
+    "lang": "en",
+    "retrieved": 55,
+    "kept": 10,
+    "queries": [
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND (\"COVID-19\"[MeSH Terms] OR \"covid-19\"[tiab] OR \"sars-cov-2\"[tiab])",
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND \"Coronavirus Infections\"[MeSH Terms]",
+     "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab])"
+    ],
+    "repeats": 0,
+    "stopped": false
+   }
+  }
+ }
+}

@@ -551,3 +551,48 @@ def test_retrieval_helpers_degrade_to_rules_without_routes():
     planner, find_study = retrieval_helpers(router, EvidenceRetriever(RecordedPubMed().client()), None,
                                             DEFAULT_OPTIONS)
     assert planner.assistant is not None and planner.translator is not None and find_study is not None
+
+
+# ------------------------------------------------------------------ paid-run guard and dry run
+
+
+def _paid_module():
+    import importlib.util
+    import sys as _sys
+
+    scripts = Path(__file__).resolve().parents[2] / "scripts"
+    _sys.path.insert(0, str(scripts))
+    spec = importlib.util.spec_from_file_location("t50_paid_runs", scripts / "t50_paid_runs.py")
+    mod = importlib.util.module_from_spec(spec)
+    _sys.modules["t50_paid_runs"] = mod  # dataclasses look their module up
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def test_paid_run_refuses_without_live_and_a_cap():
+    mod = _paid_module()
+    with pytest.raises(SystemExit, match="--live"):
+        mod.check_live(False, 5.0)
+    with pytest.raises(SystemExit, match="--max-usd"):
+        mod.check_live(True, None)
+    with pytest.raises(SystemExit, match="--max-usd"):
+        mod.check_live(True, 0)
+
+
+def test_capped_caller_stops_before_a_call_that_could_pass_the_cap():
+    mod = _paid_module()
+    router, client = _router(lambda m, q: "A soap")
+    capped = mod.CappedCaller(router, max_usd=1e-9)
+    with pytest.raises(mod.BudgetExceeded):
+        capped.call("translate_claim", {"messages": [{"role": "user", "content": "x"}], "max_tokens": 10})
+    assert router.records == []  # refused before the router was called
+
+
+def test_dry_run_estimate_makes_no_model_call_and_prices_the_vitamin_k_fixture():
+    mod = _paid_module()
+    text, data = mod.estimate(None, None)
+    (name,) = data
+    est = data[name]
+    assert est["steps"]["find_study"]["calls"] >= 4  # forced on c2-c5
+    assert 0 < est["expected_usd"] <= est["upper_usd"]
+    assert "no model was called" in text

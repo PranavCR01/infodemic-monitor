@@ -1,0 +1,997 @@
+[
+ {
+  "mode": "t50_kept",
+  "videos": [
+   {
+    "video_id": "v22",
+    "label_after": "MISINFO",
+    "basis_after": "unproven",
+    "kept": true,
+    "reasons_after": [
+     "unproven_claim:c2",
+     "weak_evidence:c2"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v22:c2",
+      "text": "Eggs are high in antioxidants, which is really good to prevent something called macular degeneration as well as cataracts",
+      "frozen": true,
+      "kept_records": 10,
+      "terms": [
+       "eggs",
+       "egg",
+       "antioxidants",
+       "antioxidant"
+      ],
+      "terms_source": "concept",
+      "require_all": false,
+      "on_topic_ids": [
+       "ev_42343583",
+       "ev_27080067",
+       "ev_11023002",
+       "ev_33027903",
+       "ev_34071459",
+       "ev_34323086",
+       "ev_20355006",
+       "ev_38393321",
+       "ev_26793307",
+       "ev_15949677"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "titles": [
+       "Assessment of Dietary Nutritional Profile in Turkish Patients with Age-Related Macular Degeneration.",
+       "Effect of dietary α-tocopherol on the bioavailability of lutein in laying hen.",
+       "The potential role of dietary xanthophylls in cataract and age-related macular degeneration.",
+       "Dietary and Lifestyle Factors Modulate the Activity of the Endogenous Antioxidant System in Patients with Age-Related Ma",
+       "Searching for the Antioxidant, Anti-Inflammatory, and Neuroprotective Potential of Natural Food and Nutritional Suppleme"
+      ],
+      "queries": [
+       "(Eggs[MeSH Terms] OR egg[tiab] OR eggs[tiab]) AND (Antioxidants[MeSH Terms] OR antioxidant[tiab]) AND (\"Macular Degeneration\"[MeSH Terms] OR \"macular degeneration\"[tiab])",
+       "(Eggs[MeSH Terms] OR egg[tiab] OR eggs[tiab]) AND (Antioxidants[MeSH Terms] OR antioxidant[tiab]) AND \"Eye Diseases\"[MeSH Terms]",
+       "(Eggs[MeSH Terms] OR egg[tiab] OR eggs[tiab]) AND (Antioxidants[MeSH Terms] OR antioxidant[tiab])"
+      ]
+     }
+    ]
+   },
+   {
+    "video_id": "v36",
+    "label_after": "MISINFO",
+    "basis_after": "unproven",
+    "kept": true,
+    "reasons_after": [
+     "unproven_claim:c10",
+     "unproven_claim:c14",
+     "unproven_claim:c6",
+     "weak_evidence:c10",
+     "weak_evidence:c14",
+     "weak_evidence:c6"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v36:c6",
+      "text": "Irish Sea Moss: Cures Thyroid Issues",
+      "frozen": true,
+      "kept_records": 2,
+      "terms": [
+       "irish sea moss",
+       "chondrus",
+       "irish moss",
+       "sea moss",
+       "chondrus crispus"
+      ],
+      "terms_source": "concept",
+      "require_all": false,
+      "on_topic_ids": [
+       "ev_40499895",
+       "ev_30990756"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "titles": [
+       "Feeding incremental amounts of the red seaweed Chondrus crispus: Effects on production performance, methane emissions, n",
+       "Iodine in Edible Seaweed, Its Absorption, Dietary Use, and Relation to Iodine Nutrition in Arctic People."
+      ],
+      "queries": [
+       "(Chondrus[MeSH Terms] OR \"irish moss\"[tiab] OR \"sea moss\"[tiab] OR \"chondrus crispus\"[tiab]) AND (\"Thyroid Diseases\"[MeSH Terms] OR thyroid[tiab])",
+       "(Chondrus[MeSH Terms] OR \"irish moss\"[tiab] OR \"sea moss\"[tiab] OR \"chondrus crispus\"[tiab])"
+      ]
+     },
+     {
+      "claim": "v36:c7",
+      "text": "Burdock Root: Rids Kidney & Gallbladder Stones",
+      "frozen": true,
+      "kept_records": 0,
+      "terms": [
+       "burdock root",
+       "arctium",
+       "burdock"
+      ],
+      "terms_source": "concept",
+      "require_all": false,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": [],
+      "queries": [
+       "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab]) AND (Gallstones[MeSH Terms] OR gallstones[tiab])",
+       "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab])"
+      ]
+     },
+     {
+      "claim": "v36:c10",
+      "text": "Irish Sea Moss: Building Muscles Mass",
+      "frozen": true,
+      "kept_records": 10,
+      "terms": [
+       "irish sea moss",
+       "chondrus",
+       "irish moss",
+       "sea moss",
+       "chondrus crispus"
+      ],
+      "terms_source": "concept",
+      "require_all": false,
+      "on_topic_ids": [
+       "ev_5968606",
+       "ev_18144183",
+       "ev_37396716",
+       "ev_34512571",
+       "ev_39977652",
+       "ev_36196656",
+       "ev_6774761",
+       "ev_36575846",
+       "ev_38551463",
+       "ev_35090190"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "titles": [
+       "Sterols in Irish moss (Chondrus crispus).",
+       "CHONDRUS extract.",
+       "Carrageenan biosynthesis in red algae: A review.",
+       "A Review of Green Synthesis of Metal Nanoparticles Using Algae.",
+       "Settlement Preferences in Temperate Sea Stars."
+      ],
+      "queries": [
+       "(Chondrus[MeSH Terms] OR \"irish moss\"[tiab] OR \"sea moss\"[tiab] OR \"chondrus crispus\"[tiab])"
+      ]
+     },
+     {
+      "claim": "v36:c14",
+      "text": "Burdock Root: Assists with PMS Symptoms",
+      "frozen": true,
+      "kept_records": 10,
+      "terms": [
+       "burdock root",
+       "arctium",
+       "burdock"
+      ],
+      "terms_source": "concept",
+      "require_all": false,
+      "on_topic_ids": [
+       "ev_20981575",
+       "ev_31338098",
+       "ev_20320691",
+       "ev_5900499",
+       "ev_37802844",
+       "ev_39777584",
+       "ev_5300884",
+       "ev_37236381",
+       "ev_35975861",
+       "ev_40177855"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "titles": [
+       "A review of the pharmacological effects of Arctium lappa (burdock).",
+       "Arctium Species Secondary Metabolites Chemodiversity and Bioactivities.",
+       "Burdock Blood Bitters.",
+       "Burdock ophthalmia.",
+       "[A new norsesquiterpenoid from Arctium lappa leaves]."
+      ],
+      "queries": [
+       "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab])"
+      ]
+     }
+    ]
+   },
+   {
+    "video_id": "v120",
+    "label_after": "CANNOT_RECOGNIZE",
+    "basis_after": "",
+    "kept": false,
+    "reasons_after": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v120:c1",
+      "text": "los beneficios son muchísimo primero elimina los metales pesados del cuerpo",
+      "frozen": true,
+      "kept_records": 10,
+      "terms": [
+       "los",
+       "beneficios",
+       "son",
+       "muchísimo"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": [
+       "Bioremediation of Heavy Metals by the Genus Bacillus.",
+       "Disorders of heavy metals.",
+       "Heavy metals in food crops: Health risks, fate, mechanisms, and management.",
+       "Bioremediation of Heavy Metals by Rhizobacteria.",
+       "Research progresses on the effects of heavy metals on the circadian clock system."
+      ],
+      "queries": [
+       "(\"Metals, Heavy\"[MeSH Terms] OR \"heavy metals\"[tiab])"
+      ]
+     }
+    ]
+   },
+   {
+    "video_id": "v141",
+    "label_after": "MISINFO",
+    "basis_after": "unproven",
+    "kept": true,
+    "reasons_after": [
+     "unproven_claim:c2",
+     "weak_evidence:c2"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v141:c1",
+      "text": "Ce gamin de 15 ans a inventé un remède contre le cancer",
+      "frozen": true,
+      "kept_records": 10,
+      "terms": [
+       "ce",
+       "gamin",
+       "de 15",
+       "ans"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": [
+       "Familial Pancreatic Cancer.",
+       "Cancer cachexia.",
+       "Angiogenesis in cancer.",
+       "[Local treatment of penile cancer].",
+       "Papillary thyroid cancer."
+      ],
+      "queries": [
+       "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])"
+      ]
+     },
+     {
+      "claim": "v141:c2",
+      "text": "a fabriqué un savon qui prévient et traite le cancer de la peau",
+      "frozen": true,
+      "kept_records": 6,
+      "terms": [
+       "savon",
+       "soap",
+       "soaps"
+      ],
+      "terms_source": "concept",
+      "require_all": false,
+      "on_topic_ids": [
+       "ev_12637935",
+       "ev_39423608",
+       "ev_10499830",
+       "ev_33400407",
+       "ev_22014861",
+       "ev_3070998"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "titles": [
+       "UVA, melanoma, and antibacterial soaps.",
+       "From science fair to TIME cover: The hype surrounding a teen's skin cancer treating soap.",
+       "Is cutaneous malignant melanoma associated with the use of antibacterial soaps?",
+       "Men's Attitudes and Behaviors About Skincare and Sunscreen Use Behaviors.",
+       "Knowledge, perceptions, and practices of chiropractic interns in the early detection of atypical moles."
+      ],
+      "queries": [
+       "(Soaps[MeSH Terms] OR soap[tiab]) AND (\"Skin Neoplasms\"[MeSH Terms] OR \"skin cancer\"[tiab] OR melanoma[tiab])",
+       "(Soaps[MeSH Terms] OR soap[tiab]) AND Neoplasms[MeSH Terms]",
+       "(Soaps[MeSH Terms] OR soap[tiab])"
+      ]
+     }
+    ]
+   },
+   {
+    "video_id": "v143",
+    "label_after": "MISINFO",
+    "basis_after": "unproven",
+    "kept": true,
+    "reasons_after": [
+     "unproven_claim:c1",
+     "unproven_claim:c2",
+     "weak_evidence:c1",
+     "weak_evidence:c2"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v143:c1",
+      "text": "il vient d'inventer un savon qui traite le cancer de la peau",
+      "frozen": true,
+      "kept_records": 6,
+      "terms": [
+       "savon",
+       "soap",
+       "soaps"
+      ],
+      "terms_source": "concept",
+      "require_all": false,
+      "on_topic_ids": [
+       "ev_12637935",
+       "ev_39423608",
+       "ev_10499830",
+       "ev_33400407",
+       "ev_22014861",
+       "ev_3070998"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "titles": [
+       "UVA, melanoma, and antibacterial soaps.",
+       "From science fair to TIME cover: The hype surrounding a teen's skin cancer treating soap.",
+       "Is cutaneous malignant melanoma associated with the use of antibacterial soaps?",
+       "Men's Attitudes and Behaviors About Skincare and Sunscreen Use Behaviors.",
+       "Knowledge, perceptions, and practices of chiropractic interns in the early detection of atypical moles."
+      ],
+      "queries": [
+       "(Soaps[MeSH Terms] OR soap[tiab]) AND (\"Skin Neoplasms\"[MeSH Terms] OR \"skin cancer\"[tiab] OR melanoma[tiab])",
+       "(Soaps[MeSH Terms] OR soap[tiab]) AND Neoplasms[MeSH Terms]",
+       "(Soaps[MeSH Terms] OR soap[tiab])"
+      ]
+     },
+     {
+      "claim": "v143:c2",
+      "text": "Il a conçu un savon qui protège du cancer de la peau, avec de nombreuses propriétés qui persistent même après rinçage",
+      "frozen": true,
+      "kept_records": 6,
+      "terms": [
+       "savon",
+       "soap",
+       "soaps"
+      ],
+      "terms_source": "concept",
+      "require_all": false,
+      "on_topic_ids": [
+       "ev_12637935",
+       "ev_39423608",
+       "ev_10499830",
+       "ev_33400407",
+       "ev_22014861",
+       "ev_3070998"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "titles": [
+       "UVA, melanoma, and antibacterial soaps.",
+       "From science fair to TIME cover: The hype surrounding a teen's skin cancer treating soap.",
+       "Is cutaneous malignant melanoma associated with the use of antibacterial soaps?",
+       "Men's Attitudes and Behaviors About Skincare and Sunscreen Use Behaviors.",
+       "Knowledge, perceptions, and practices of chiropractic interns in the early detection of atypical moles."
+      ],
+      "queries": [
+       "(Soaps[MeSH Terms] OR soap[tiab]) AND (\"Skin Neoplasms\"[MeSH Terms] OR \"skin cancer\"[tiab] OR melanoma[tiab])",
+       "(Soaps[MeSH Terms] OR soap[tiab]) AND Neoplasms[MeSH Terms]",
+       "(Soaps[MeSH Terms] OR soap[tiab])"
+      ]
+     }
+    ]
+   }
+  ],
+  "kept": 4,
+  "total": 5
+ },
+ {
+  "mode": "t50_retrieved",
+  "videos": [
+   {
+    "video_id": "v22",
+    "label_after": "MISINFO",
+    "basis_after": "unproven",
+    "kept": true,
+    "reasons_after": [
+     "unproven_claim:c2",
+     "weak_evidence:c2"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v22:c2",
+      "text": "Eggs are high in antioxidants, which is really good to prevent something called macular degeneration as well as cataracts",
+      "frozen": true,
+      "kept_records": 48,
+      "terms": [
+       "eggs",
+       "egg",
+       "antioxidants",
+       "antioxidant"
+      ],
+      "terms_source": "concept",
+      "require_all": false,
+      "on_topic_ids": [
+       "ev_32526861",
+       "ev_40019526",
+       "ev_20355006",
+       "ev_27431371",
+       "ev_15949677",
+       "ev_34323086",
+       "ev_11023002",
+       "ev_38393321",
+       "ev_27080067",
+       "ev_42343583",
+       "ev_34071459",
+       "ev_39819528",
+       "ev_18293208",
+       "ev_26793307",
+       "ev_33027903",
+       "ev_37260421",
+       "ev_12134711",
+       "ev_26042352",
+       "ev_33595497",
+       "ev_15950595",
+       "ev_31823923",
+       "ev_21303692",
+       "ev_36479474",
+       "ev_38222446",
+       "ev_38629738",
+       "ev_38270195",
+       "ev_32957855",
+       "ev_4065235",
+       "ev_16309738",
+       "ev_29542353",
+       "ev_20096093",
+       "ev_32009394",
+       "ev_32948224",
+       "ev_10552692",
+       "ev_32569696",
+       "ev_39116973",
+       "ev_29969321",
+       "ev_38067564",
+       "ev_28043836",
+       "ev_38427027",
+       "ev_37633567",
+       "ev_23977988",
+       "ev_29748217",
+       "ev_38353895",
+       "ev_29860972",
+       "ev_39408328",
+       "ev_10606563",
+       "ev_38656056"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "titles": [
+       "Lutein Supplementation for Eye Diseases.",
+       "Micelle nanogel-based drug delivery system for lutein in ocular administration.",
+       "Effects of lutein and zeaxanthin on aspects of eye health.",
+       "Lutein and Zeaxanthin Isomers in Eye Health and Disease.",
+       "Synergistic effects of zeaxanthin and its binding protein in the prevention of lipid membrane oxidation."
+      ],
+      "queries": [
+       "(Eggs[MeSH Terms] OR egg[tiab] OR eggs[tiab]) AND (Antioxidants[MeSH Terms] OR antioxidant[tiab]) AND (\"Macular Degeneration\"[MeSH Terms] OR \"macular degeneration\"[tiab])",
+       "(Eggs[MeSH Terms] OR egg[tiab] OR eggs[tiab]) AND (Antioxidants[MeSH Terms] OR antioxidant[tiab]) AND \"Eye Diseases\"[MeSH Terms]",
+       "(Eggs[MeSH Terms] OR egg[tiab] OR eggs[tiab]) AND (Antioxidants[MeSH Terms] OR antioxidant[tiab])"
+      ]
+     }
+    ]
+   },
+   {
+    "video_id": "v36",
+    "label_after": "MISINFO",
+    "basis_after": "unproven",
+    "kept": true,
+    "reasons_after": [
+     "unproven_claim:c10",
+     "unproven_claim:c14",
+     "unproven_claim:c6",
+     "unproven_claim:c7",
+     "weak_evidence:c10",
+     "weak_evidence:c14",
+     "weak_evidence:c6",
+     "weak_evidence:c7"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v36:c6",
+      "text": "Irish Sea Moss: Cures Thyroid Issues",
+      "frozen": true,
+      "kept_records": 20,
+      "terms": [
+       "irish sea moss",
+       "chondrus",
+       "irish moss",
+       "sea moss",
+       "chondrus crispus"
+      ],
+      "terms_source": "concept",
+      "require_all": false,
+      "on_topic_ids": [
+       "ev_40499895",
+       "ev_30990756",
+       "ev_39977652",
+       "ev_37396716",
+       "ev_39456739",
+       "ev_36196656",
+       "ev_5968606",
+       "ev_18144183",
+       "ev_6774761",
+       "ev_32985066",
+       "ev_36575846",
+       "ev_38551463",
+       "ev_34512571",
+       "ev_35090190",
+       "ev_32058961",
+       "ev_26817952",
+       "ev_39233176",
+       "ev_39692706"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "titles": [
+       "Feeding incremental amounts of the red seaweed Chondrus crispus: Effects on production performance, methane emissions, n",
+       "Iodine in Edible Seaweed, Its Absorption, Dietary Use, and Relation to Iodine Nutrition in Arctic People.",
+       "Settlement Preferences in Temperate Sea Stars.",
+       "Carrageenan biosynthesis in red algae: A review.",
+       "Intricate Evolution of Multifunctional Lipoxygenase in Red Algae."
+      ],
+      "queries": [
+       "(Chondrus[MeSH Terms] OR \"irish moss\"[tiab] OR \"sea moss\"[tiab] OR \"chondrus crispus\"[tiab]) AND (\"Thyroid Diseases\"[MeSH Terms] OR thyroid[tiab])",
+       "(Chondrus[MeSH Terms] OR \"irish moss\"[tiab] OR \"sea moss\"[tiab] OR \"chondrus crispus\"[tiab])"
+      ]
+     },
+     {
+      "claim": "v36:c7",
+      "text": "Burdock Root: Rids Kidney & Gallbladder Stones",
+      "frozen": true,
+      "kept_records": 20,
+      "terms": [
+       "burdock root",
+       "arctium",
+       "burdock"
+      ],
+      "terms_source": "concept",
+      "require_all": false,
+      "on_topic_ids": [
+       "ev_20981575",
+       "ev_20320691",
+       "ev_5900499",
+       "ev_31338098",
+       "ev_37802844",
+       "ev_37382195",
+       "ev_38660399",
+       "ev_39396403",
+       "ev_39777584",
+       "ev_28912875",
+       "ev_31362372",
+       "ev_5300884",
+       "ev_37236381",
+       "ev_40177855",
+       "ev_36829899",
+       "ev_39049476",
+       "ev_38489894",
+       "ev_35975861"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "titles": [
+       "Essiac.",
+       "A review of the pharmacological effects of Arctium lappa (burdock).",
+       "Burdock Blood Bitters.",
+       "Essiac for cancer?",
+       "Burdock ophthalmia."
+      ],
+      "queries": [
+       "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab]) AND (Gallstones[MeSH Terms] OR gallstones[tiab])",
+       "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab])"
+      ]
+     },
+     {
+      "claim": "v36:c10",
+      "text": "Irish Sea Moss: Building Muscles Mass",
+      "frozen": true,
+      "kept_records": 18,
+      "terms": [
+       "irish sea moss",
+       "chondrus",
+       "irish moss",
+       "sea moss",
+       "chondrus crispus"
+      ],
+      "terms_source": "concept",
+      "require_all": false,
+      "on_topic_ids": [
+       "ev_39977652",
+       "ev_37396716",
+       "ev_39456739",
+       "ev_36196656",
+       "ev_5968606",
+       "ev_18144183",
+       "ev_6774761",
+       "ev_32985066",
+       "ev_36575846",
+       "ev_38551463",
+       "ev_34512571",
+       "ev_35090190",
+       "ev_32058961",
+       "ev_26817952",
+       "ev_39233176",
+       "ev_39692706"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "titles": [
+       "Settlement Preferences in Temperate Sea Stars.",
+       "Carrageenan biosynthesis in red algae: A review.",
+       "Intricate Evolution of Multifunctional Lipoxygenase in Red Algae.",
+       "PlantRNA 2.0: an updated database dedicated to tRNAs of photosynthetic eukaryotes.",
+       "Sterols in Irish moss (Chondrus crispus)."
+      ],
+      "queries": [
+       "(Chondrus[MeSH Terms] OR \"irish moss\"[tiab] OR \"sea moss\"[tiab] OR \"chondrus crispus\"[tiab])"
+      ]
+     },
+     {
+      "claim": "v36:c14",
+      "text": "Burdock Root: Assists with PMS Symptoms",
+      "frozen": true,
+      "kept_records": 20,
+      "terms": [
+       "burdock root",
+       "arctium",
+       "burdock"
+      ],
+      "terms_source": "concept",
+      "require_all": false,
+      "on_topic_ids": [
+       "ev_20981575",
+       "ev_20320691",
+       "ev_5900499",
+       "ev_31338098",
+       "ev_37802844",
+       "ev_37382195",
+       "ev_38660399",
+       "ev_39396403",
+       "ev_39777584",
+       "ev_28912875",
+       "ev_31362372",
+       "ev_5300884",
+       "ev_37236381",
+       "ev_40177855",
+       "ev_36829899",
+       "ev_39049476",
+       "ev_38489894",
+       "ev_35975861"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "titles": [
+       "Essiac.",
+       "A review of the pharmacological effects of Arctium lappa (burdock).",
+       "Burdock Blood Bitters.",
+       "Essiac for cancer?",
+       "Burdock ophthalmia."
+      ],
+      "queries": [
+       "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab])"
+      ]
+     }
+    ]
+   },
+   {
+    "video_id": "v120",
+    "label_after": "CANNOT_RECOGNIZE",
+    "basis_after": "",
+    "kept": false,
+    "reasons_after": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v120:c1",
+      "text": "los beneficios son muchísimo primero elimina los metales pesados del cuerpo",
+      "frozen": true,
+      "kept_records": 20,
+      "terms": [
+       "los",
+       "beneficios",
+       "son",
+       "muchísimo"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": [
+       "Bioremediation of Heavy Metals by the Genus Bacillus.",
+       "Disorders of heavy metals.",
+       "Heavy lipids protect against heavy metals.",
+       "Heavy metals in the environment: sources, interactions and human health.",
+       "Editorial for Special Issue \"Heavy Metals Accumulation, Toxicity, and Detoxification in Plants\"."
+      ],
+      "queries": [
+       "(\"Metals, Heavy\"[MeSH Terms] OR \"heavy metals\"[tiab])"
+      ]
+     }
+    ]
+   },
+   {
+    "video_id": "v141",
+    "label_after": "MISINFO",
+    "basis_after": "unproven",
+    "kept": true,
+    "reasons_after": [
+     "unproven_claim:c2",
+     "weak_evidence:c2"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v141:c1",
+      "text": "Ce gamin de 15 ans a inventé un remède contre le cancer",
+      "frozen": true,
+      "kept_records": 20,
+      "terms": [
+       "ce",
+       "gamin",
+       "de 15",
+       "ans"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": [
+       "Familial Pancreatic Cancer.",
+       "DAB2IP in cancer.",
+       "TERATOMA.",
+       "[Breast granular cell tumor].",
+       "Mapping the colorectal tumor microbiota."
+      ],
+      "queries": [
+       "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])"
+      ]
+     },
+     {
+      "claim": "v141:c2",
+      "text": "a fabriqué un savon qui prévient et traite le cancer de la peau",
+      "frozen": true,
+      "kept_records": 51,
+      "terms": [
+       "savon",
+       "soap",
+       "soaps"
+      ],
+      "terms_source": "concept",
+      "require_all": false,
+      "on_topic_ids": [
+       "ev_27755208",
+       "ev_3070998",
+       "ev_12637935",
+       "ev_39870475",
+       "ev_26888244",
+       "ev_39423608",
+       "ev_33400407",
+       "ev_20718175",
+       "ev_22014861",
+       "ev_10499830",
+       "ev_31904206",
+       "ev_34697136",
+       "ev_3457915",
+       "ev_34636215",
+       "ev_36695919",
+       "ev_25432179",
+       "ev_21506644",
+       "ev_37844945",
+       "ev_3616557",
+       "ev_36805875",
+       "ev_31150164",
+       "ev_37144625",
+       "ev_31843241",
+       "ev_37837480",
+       "ev_35067732",
+       "ev_38625718",
+       "ev_29713774",
+       "ev_18789465",
+       "ev_3849074",
+       "ev_5087724",
+       "ev_34935417",
+       "ev_1679445",
+       "ev_31307789",
+       "ev_28455208",
+       "ev_36780893",
+       "ev_13208946",
+       "ev_6074511",
+       "ev_24028453",
+       "ev_11838388",
+       "ev_9260414",
+       "ev_5696518",
+       "ev_11558206",
+       "ev_4871909",
+       "ev_5711439",
+       "ev_18101501",
+       "ev_4191519",
+       "ev_20947740"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "titles": [
+       "Second cite.",
+       "Cutaneous Metastasis From Sacral Chordoma.",
+       "[The skin in the elderly].",
+       "UVA, melanoma, and antibacterial soaps.",
+       "Clear cell variant of calcifying epithelial odontogenic tumour (Pindborg tumour) of the mandible."
+      ],
+      "queries": [
+       "(Soaps[MeSH Terms] OR soap[tiab]) AND (\"Skin Neoplasms\"[MeSH Terms] OR \"skin cancer\"[tiab] OR melanoma[tiab])",
+       "(Soaps[MeSH Terms] OR soap[tiab]) AND Neoplasms[MeSH Terms]",
+       "(Soaps[MeSH Terms] OR soap[tiab])"
+      ]
+     }
+    ]
+   },
+   {
+    "video_id": "v143",
+    "label_after": "MISINFO",
+    "basis_after": "unproven",
+    "kept": true,
+    "reasons_after": [
+     "unproven_claim:c1",
+     "unproven_claim:c2",
+     "weak_evidence:c1",
+     "weak_evidence:c2"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v143:c1",
+      "text": "il vient d'inventer un savon qui traite le cancer de la peau",
+      "frozen": true,
+      "kept_records": 51,
+      "terms": [
+       "savon",
+       "soap",
+       "soaps"
+      ],
+      "terms_source": "concept",
+      "require_all": false,
+      "on_topic_ids": [
+       "ev_27755208",
+       "ev_3070998",
+       "ev_12637935",
+       "ev_39870475",
+       "ev_26888244",
+       "ev_39423608",
+       "ev_33400407",
+       "ev_20718175",
+       "ev_22014861",
+       "ev_10499830",
+       "ev_31904206",
+       "ev_34697136",
+       "ev_3457915",
+       "ev_34636215",
+       "ev_36695919",
+       "ev_25432179",
+       "ev_21506644",
+       "ev_37844945",
+       "ev_3616557",
+       "ev_36805875",
+       "ev_31150164",
+       "ev_37144625",
+       "ev_31843241",
+       "ev_37837480",
+       "ev_35067732",
+       "ev_38625718",
+       "ev_29713774",
+       "ev_18789465",
+       "ev_3849074",
+       "ev_5087724",
+       "ev_34935417",
+       "ev_1679445",
+       "ev_31307789",
+       "ev_28455208",
+       "ev_36780893",
+       "ev_13208946",
+       "ev_6074511",
+       "ev_24028453",
+       "ev_11838388",
+       "ev_9260414",
+       "ev_5696518",
+       "ev_11558206",
+       "ev_4871909",
+       "ev_5711439",
+       "ev_18101501",
+       "ev_4191519",
+       "ev_20947740"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "titles": [
+       "Second cite.",
+       "Cutaneous Metastasis From Sacral Chordoma.",
+       "[The skin in the elderly].",
+       "UVA, melanoma, and antibacterial soaps.",
+       "Clear cell variant of calcifying epithelial odontogenic tumour (Pindborg tumour) of the mandible."
+      ],
+      "queries": [
+       "(Soaps[MeSH Terms] OR soap[tiab]) AND (\"Skin Neoplasms\"[MeSH Terms] OR \"skin cancer\"[tiab] OR melanoma[tiab])",
+       "(Soaps[MeSH Terms] OR soap[tiab]) AND Neoplasms[MeSH Terms]",
+       "(Soaps[MeSH Terms] OR soap[tiab])"
+      ]
+     },
+     {
+      "claim": "v143:c2",
+      "text": "Il a conçu un savon qui protège du cancer de la peau, avec de nombreuses propriétés qui persistent même après rinçage",
+      "frozen": true,
+      "kept_records": 51,
+      "terms": [
+       "savon",
+       "soap",
+       "soaps"
+      ],
+      "terms_source": "concept",
+      "require_all": false,
+      "on_topic_ids": [
+       "ev_27755208",
+       "ev_3070998",
+       "ev_12637935",
+       "ev_39870475",
+       "ev_26888244",
+       "ev_39423608",
+       "ev_33400407",
+       "ev_20718175",
+       "ev_22014861",
+       "ev_10499830",
+       "ev_31904206",
+       "ev_34697136",
+       "ev_3457915",
+       "ev_34636215",
+       "ev_36695919",
+       "ev_25432179",
+       "ev_21506644",
+       "ev_37844945",
+       "ev_3616557",
+       "ev_36805875",
+       "ev_31150164",
+       "ev_37144625",
+       "ev_31843241",
+       "ev_37837480",
+       "ev_35067732",
+       "ev_38625718",
+       "ev_29713774",
+       "ev_18789465",
+       "ev_3849074",
+       "ev_5087724",
+       "ev_34935417",
+       "ev_1679445",
+       "ev_31307789",
+       "ev_28455208",
+       "ev_36780893",
+       "ev_13208946",
+       "ev_6074511",
+       "ev_24028453",
+       "ev_11838388",
+       "ev_9260414",
+       "ev_5696518",
+       "ev_11558206",
+       "ev_4871909",
+       "ev_5711439",
+       "ev_18101501",
+       "ev_4191519",
+       "ev_20947740"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "titles": [
+       "Second cite.",
+       "Cutaneous Metastasis From Sacral Chordoma.",
+       "[The skin in the elderly].",
+       "UVA, melanoma, and antibacterial soaps.",
+       "Clear cell variant of calcifying epithelial odontogenic tumour (Pindborg tumour) of the mandible."
+      ],
+      "queries": [
+       "(Soaps[MeSH Terms] OR soap[tiab]) AND (\"Skin Neoplasms\"[MeSH Terms] OR \"skin cancer\"[tiab] OR melanoma[tiab])",
+       "(Soaps[MeSH Terms] OR soap[tiab]) AND Neoplasms[MeSH Terms]",
+       "(Soaps[MeSH Terms] OR soap[tiab])"
+      ]
+     }
+    ]
+   }
+  ],
+  "kept": 4,
+  "total": 5
+ }
+]

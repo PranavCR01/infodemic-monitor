@@ -2073,6 +2073,24 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-26**: T50 (design §6, §13) search planning rewrite and find-the-study step, no paid
+  calls. (a) term-aware content words (`vitamin k`, `type 2 diabetes`, never `vitamin`); (b) 88
+  lexicon entries added (vitamin K, VKDB, newborns, breast milk, coagulation, intracranial
+  haemorrhage + tune-split gaps, es/fr surface forms); (c) `plan_search` assistant wired behind
+  `config/routing.yaml` + `config/pipeline.yaml`, output sanitised; (d) each round a distinct,
+  broader rung, `ladder_exhausted` instead of repeats (intervention never broadened to its parent);
+  (e) citation lookup (`"JAMA"[ta] AND 2026[dp] AND topic`); (f) keyword fallback <= 3 terms, no
+  filler; (g) screened-out papers in the search trail / result API; (h) language detection +
+  `translate_claim`, rules-only fallback with that language's stop words; (i) `find_study`
+  (web-search model proposes ids; we verify via EFetch / ESearch `[doi]` / Crossref; only verified
+  PubMed or `journal_doi` records become evidence), run from `rerank_evidence`, records pinned.
+  JAMA DOI verified to PMID 42986716 via E-utilities. Crossref blocked from the build env
+  (synthetic fixture). Tune recall (rules only, on topic): 57/187 → 122/187; non-English 1/59 →
+  26/59; golden PMID retrieved 7/118 → 20/118; repeated rounds 253 → 0. Vitamin K fixture: 9/9
+  expected claims keep vitamin K / VKDB papers. T49 replay on T50 evidence: 4/5 tune unproven
+  videos regain MISINFO (unproven) (v120 stays CANNOT_RECOGNIZE: seawater not recognised as the
+  intervention rules-only). Dry-run paid estimate: vitamin K ~$0.17 (upper $0.52), tune ~$0.80
+  (upper $2.52). Cross-check unchanged. Report `evals/reports/T50/`. Branch `auto/T50`.
 - **2026-11-26**: T49 (design §7; §9 unchanged) unproven guard, urgent, no spend. After the vitamin K
   production job 5cc07f48 (accurate video labelled MISINFO (unproven) from an empty and an off-topic
   search), `app.core.graph.unproven_guard` runs in the `verify_claims` node right after each verdict

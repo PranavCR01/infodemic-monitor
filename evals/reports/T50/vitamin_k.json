@@ -1,0 +1,335 @@
+[
+ {
+  "claim": "c1",
+  "text": "Newborns are born with very low levels of vitamin K",
+  "expected": true,
+  "before_queries": [
+   "vitamin"
+  ],
+  "after_queries": [
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Infant, Newborn\"[MeSH Terms] OR newborn[tiab] OR neonatal[tiab])",
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab])"
+  ],
+  "kinds": [
+   "intervention_population",
+   "intervention_only"
+  ],
+  "context_concept": null,
+  "retrieved": 39,
+  "vitk_retrieved": 36,
+  "kept": 10,
+  "vitk_kept": 10,
+  "first_kept": [
+   "Prophylactic vitamin K for vitamin K deficiency bleeding in neonates. (PMID 11034761)",
+   "Prevention of Vitamin K Deficiency Bleeding in Newborn Infants: A Position Paper by the ES (PMID 27050049)"
+  ]
+ },
+ {
+  "claim": "c2",
+  "text": "Vitamin K is needed for the blood to clot",
+  "expected": true,
+  "before_queries": [
+   "vitamin"
+  ],
+  "after_queries": [
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Blood Coagulation\"[MeSH Terms] OR coagulation[tiab] OR clotting[tiab])",
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab])"
+  ],
+  "kinds": [
+   "intervention_outcome",
+   "intervention_only"
+  ],
+  "context_concept": null,
+  "retrieved": 39,
+  "vitk_retrieved": 36,
+  "kept": 10,
+  "vitk_kept": 10,
+  "first_kept": [
+   "Drug-drug interactions between vitamin K antagonists and statins: a systematic review. (PMID 33895864)",
+   "Vitamin K: Double Bonds beyond Coagulation Insights into Differences between Vitamin K1 an (PMID 30791399)"
+  ]
+ },
+ {
+  "claim": "c3",
+  "text": "Without vitamin K a baby can bleed into the brain",
+  "expected": true,
+  "before_queries": [
+   "vitamin"
+  ],
+  "after_queries": [
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Intracranial Hemorrhages\"[MeSH Terms] OR \"intracranial hemorrhage\"[tiab]) AND (Infant[MeSH Terms] OR infants[tiab])",
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Intracranial Hemorrhages\"[MeSH Terms] OR \"intracranial hemorrhage\"[tiab])",
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND Hemorrhage[MeSH Terms]"
+  ],
+  "kinds": [
+   "pico",
+   "intervention_outcome",
+   "broader_outcome"
+  ],
+  "context_concept": null,
+  "retrieved": 53,
+  "vitk_retrieved": 46,
+  "kept": 10,
+  "vitk_kept": 10,
+  "first_kept": [
+   "Intracranial haemorrhage associated with Vitamin K deficiency in Egyptian infants. (PMID 34196053)",
+   "Timing and Safety of Anticoagulation Reinitiation After Intracranial Hemorrhage in Patient (PMID 40997282)"
+  ]
+ },
+ {
+  "claim": "c4",
+  "text": "This bleeding is called vitamin K deficiency bleeding",
+  "expected": true,
+  "before_queries": [
+   "vitamin"
+  ],
+  "after_queries": [
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (Hemorrhage[MeSH Terms] OR bleeding[tiab] OR hemorrhage[tiab]) AND (\"Vitamin K Deficiency Bleeding\"[MeSH Terms] OR \"vitamin k deficiency bleeding\"[tiab] OR VKDB[tiab])",
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (Hemorrhage[MeSH Terms] OR bleeding[tiab] OR hemorrhage[tiab]) AND \"Vitamin K Deficiency\"[MeSH Terms]",
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab])"
+  ],
+  "kinds": [
+   "intervention_outcome",
+   "broader_outcome",
+   "intervention_only"
+  ],
+  "context_concept": "vitamin_k",
+  "retrieved": 42,
+  "vitk_retrieved": 39,
+  "kept": 10,
+  "vitk_kept": 10,
+  "first_kept": [
+   "Vitamin K prophylaxis for prevention of vitamin K deficiency bleeding: a systematic review (PMID 27109090)",
+   "Prevention of Vitamin K Deficiency Bleeding in Newborn Infants: A Position Paper by the ES (PMID 27050049)"
+  ]
+ },
+ {
+  "claim": "c5",
+  "text": "Breast milk contains very little vitamin K",
+  "expected": true,
+  "before_queries": [
+   "vitamin"
+  ],
+  "after_queries": [
+   "(\"Milk, Human\"[MeSH Terms] OR \"breast milk\"[tiab] OR \"human milk\"[tiab]) AND (\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab])",
+   "((\"Milk, Human\"[MeSH Terms] OR \"breast milk\"[tiab] OR \"human milk\"[tiab]) OR (\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]))"
+  ],
+  "kinds": [
+   "intervention_only",
+   "intervention_any"
+  ],
+  "context_concept": null,
+  "retrieved": 36,
+  "vitk_retrieved": 32,
+  "kept": 10,
+  "vitk_kept": 10,
+  "first_kept": [
+   "Vitamin K supplementation during pregnancy for improving outcomes: a systematic review and (PMID 30061633)",
+   "Nutritional supplements and mother's milk composition: a systematic review of intervention (PMID 33397426)"
+  ]
+ },
+ {
+  "claim": "c6",
+  "text": "Late vitamin K deficiency bleeding can happen up to six months of age",
+  "expected": true,
+  "before_queries": [
+   "vitamin"
+  ],
+  "after_queries": [
+   "(\"Vitamin K Deficiency Bleeding\"[MeSH Terms] OR \"vitamin k deficiency bleeding\"[tiab] OR VKDB[tiab])",
+   "\"Vitamin K Deficiency\"[MeSH Terms]"
+  ],
+  "kinds": [
+   "outcome_only",
+   "broader_condition"
+  ],
+  "context_concept": null,
+  "retrieved": 30,
+  "vitk_retrieved": 24,
+  "kept": 10,
+  "vitk_kept": 10,
+  "first_kept": [
+   "Vitamin K prophylaxis for prevention of vitamin K deficiency bleeding: a systematic review (PMID 27109090)",
+   "Prevention of Vitamin K Deficiency Bleeding in Newborn Infants: A Position Paper by the ES (PMID 27050049)"
+  ]
+ },
+ {
+  "claim": "c7",
+  "text": "Babies who don't get the shot are 81 times more likely to develop late bleeding",
+  "expected": true,
+  "before_queries": [
+   "vitamin"
+  ],
+  "after_queries": [
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (Hemorrhage[MeSH Terms] OR bleeding[tiab] OR hemorrhage[tiab]) AND (Infant[MeSH Terms] OR infants[tiab])",
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (Hemorrhage[MeSH Terms] OR bleeding[tiab] OR hemorrhage[tiab])",
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab])"
+  ],
+  "kinds": [
+   "pico",
+   "intervention_outcome",
+   "intervention_only"
+  ],
+  "context_concept": "vitamin_k",
+  "retrieved": 57,
+  "vitk_retrieved": 52,
+  "kept": 9,
+  "vitk_kept": 9,
+  "first_kept": [
+   "Vitamin K prophylaxis for prevention of vitamin K deficiency bleeding: a systematic review (PMID 27109090)",
+   "Prophylactic vitamin K for the prevention of vitamin K deficiency bleeding in preterm neon (PMID 29401369)"
+  ]
+ },
+ {
+  "claim": "c8",
+  "text": "The shot has been given routinely since 1961",
+  "expected": false,
+  "before_queries": [
+   "vitamin"
+  ],
+  "after_queries": [
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab])"
+  ],
+  "kinds": [
+   "intervention_only"
+  ],
+  "context_concept": "vitamin_k",
+  "retrieved": 20,
+  "vitk_retrieved": 18,
+  "kept": 1,
+  "vitk_kept": 1,
+  "first_kept": [
+   "Vitamin K insufficiency and the prophylaxis strategy in term healthy infants: A multicentr (PMID 38071415)"
+  ]
+ },
+ {
+  "claim": "c9",
+  "text": "Oral vitamin K drops are less effective than the shot",
+  "expected": true,
+  "before_queries": [
+   "vitamin"
+  ],
+  "after_queries": [
+   "(\"Administration, Oral\"[MeSH Terms] OR oral[tiab]) AND (\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab])",
+   "((\"Administration, Oral\"[MeSH Terms] OR oral[tiab]) OR (\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]))"
+  ],
+  "kinds": [
+   "intervention_only",
+   "intervention_any"
+  ],
+  "context_concept": null,
+  "retrieved": 28,
+  "vitk_retrieved": 27,
+  "kept": 10,
+  "vitk_kept": 10,
+  "first_kept": [
+   "Perioperative Management of Vitamin K Antagonists and Direct Oral Anticoagulants: A System (PMID 36462533)",
+   "An updated meta-analysis of novel oral anticoagulants versus vitamin K antagonists for uni (PMID 28917562)"
+  ]
+ },
+ {
+  "claim": "c10",
+  "text": "The amount of preservative in the shot is tiny and safe",
+  "expected": false,
+  "before_queries": [
+   "vitamin"
+  ],
+  "after_queries": [
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab])"
+  ],
+  "kinds": [
+   "intervention_only"
+  ],
+  "context_concept": "vitamin_k",
+  "retrieved": 20,
+  "vitk_retrieved": 18,
+  "kept": 1,
+  "vitk_kept": 1,
+  "first_kept": [
+   "Vitamin K insufficiency and the prophylaxis strategy in term healthy infants: A multicentr (PMID 38071415)"
+  ]
+ },
+ {
+  "claim": "c11",
+  "text": "Vitamin K helps keep calcium in your bones and prevents osteoporosis",
+  "expected": false,
+  "before_queries": [
+   "(\"Osteoporosis\"[MeSH Terms] OR osteoporosis[tiab]) AND vitamin",
+   "vitamin osteoporosis",
+   "vitamin osteoporosis"
+  ],
+  "after_queries": [
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (Calcium[MeSH Terms] OR calcium[tiab]) AND (\"Bone Density\"[MeSH Terms] OR \"bone mineral density\"[tiab] OR \"bone health\"[tiab]) AND (Osteoporosis[MeSH Terms] OR osteoporosis[tiab])",
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (Calcium[MeSH Terms] OR calcium[tiab]) AND (\"Bone Density\"[MeSH Terms] OR \"bone mineral density\"[tiab] OR \"bone health\"[tiab]) AND \"Bone Diseases, Metabolic\"[MeSH Terms]",
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab])"
+  ],
+  "kinds": [
+   "intervention_outcome",
+   "broader_outcome",
+   "intervention_only"
+  ],
+  "context_concept": null,
+  "retrieved": 43,
+  "vitk_retrieved": 39,
+  "kept": 10,
+  "vitk_kept": 10,
+  "first_kept": [
+   "The combined effect of vitamin K and calcium on bone mineral density in humans: a meta-ana (PMID 34649591)",
+   "Effect of combined administration of vitamin D3 and vitamin K2 on bone mineral density of  (PMID 11180916)"
+  ]
+ },
+ {
+  "claim": "c12",
+  "text": "These studies on newborns are observational",
+  "expected": true,
+  "before_queries": [
+   "vitamin"
+  ],
+  "after_queries": [
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Infant, Newborn\"[MeSH Terms] OR newborn[tiab] OR neonatal[tiab])",
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab])"
+  ],
+  "kinds": [
+   "intervention_population",
+   "intervention_only"
+  ],
+  "context_concept": "vitamin_k",
+  "retrieved": 39,
+  "vitk_retrieved": 36,
+  "kept": 6,
+  "vitk_kept": 6,
+  "first_kept": [
+   "Vitamin K insufficiency and the prophylaxis strategy in term healthy infants: A multicentr (PMID 38071415)",
+   "Prevention of Vitamin K Deficiency Bleeding in Newborn Infants: A Position Paper by the ES (PMID 27050049)"
+  ]
+ },
+ {
+  "claim": "c13",
+  "text": "The evidence that the vitamin K shot prevents dangerous bleeding in newborns is overwhelming",
+  "expected": false,
+  "before_queries": [
+   "vitamin evidence shot dangerous bleeding newborns overwhelming",
+   "vitamin evidence shot dangerous bleeding newborns overwhelming",
+   "vitamin evidence shot dangerous bleeding newborns overwhelming"
+  ],
+  "after_queries": [
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Injections, Intramuscular\"[MeSH Terms] OR injection[tiab] OR intramuscular[tiab]) AND (Hemorrhage[MeSH Terms] OR bleeding[tiab] OR hemorrhage[tiab]) AND (\"Infant, Newborn\"[MeSH Terms] OR newborn[tiab] OR neonatal[tiab])",
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Injections, Intramuscular\"[MeSH Terms] OR injection[tiab] OR intramuscular[tiab]) AND (Hemorrhage[MeSH Terms] OR bleeding[tiab] OR hemorrhage[tiab])",
+   "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Injections, Intramuscular\"[MeSH Terms] OR injection[tiab] OR intramuscular[tiab])"
+  ],
+  "kinds": [
+   "pico",
+   "intervention_outcome",
+   "intervention_only"
+  ],
+  "context_concept": null,
+  "retrieved": 30,
+  "vitk_retrieved": 27,
+  "kept": 10,
+  "vitk_kept": 10,
+  "first_kept": [
+   "Vitamin K prophylaxis for prevention of vitamin K deficiency bleeding: a systematic review (PMID 27109090)",
+   "Prophylactic vitamin K for vitamin K deficiency bleeding in neonates. (PMID 11034761)"
+  ]
+ }
+]
