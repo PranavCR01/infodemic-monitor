@@ -9,12 +9,9 @@ export function HowWeSearched({ search }: { search: NonNullable<ResultModel["sea
         {search.queries.length > 0 && (
           <>
             <dt className="font-semibold text-ink">PubMed searches</dt>
-            <dd className="flex flex-col gap-1">
-              {search.queries.map((q) => (
-                <code key={q} className="break-words rounded-sm bg-surface-sunken px-1.5 py-0.5 font-mono text-cap text-ink">
-                  {q}
-                </code>
-              ))}
+            {/* T52: a count, not the raw queries; each claim's drawer says how its search went. */}
+            <dd className="text-ink-2">
+              {search.queries.length} {search.queries.length === 1 ? "distinct search" : "distinct searches"}, across all claims
             </dd>
           </>
         )}

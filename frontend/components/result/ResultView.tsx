@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Icon, ReviewBanner, ReviewReasonChip, buttonClass } from "@/components/ui";
 import { claimAt, type Claim, type ResultModel } from "@/lib/api/result-adapter";
 import type { RequestOutcome } from "@/lib/api/review-request";
@@ -11,6 +11,7 @@ import { ClaimDrawer } from "./ClaimDrawer";
 import { ClaimCard } from "./ClaimCard";
 import { ClaimTimeline } from "./ClaimTimeline";
 import { HowWeSearched } from "./HowWeSearched";
+import { flaggedClaimIds } from "@/lib/search-finding";
 import { Transcript } from "./Transcript";
 
 type Props = {
@@ -28,6 +29,7 @@ type Props = {
  * One `activeId` is shared by the timeline, the transcript and the claim cards.
  */
 export function ResultView({ result: r, videoUrl = null, onVideoError, onRequestReview }: Props) {
+  const flagged = useMemo(() => flaggedClaimIds(r), [r]);
   const [activeId, setActiveId] = useState<string | null>(r.decidingClaims[0]?.id ?? r.claims[0]?.id ?? null);
   const videoRef = useRef<HTMLVideoElement>(null);
   // The open claim lives in the URL (?claim=c2), so a claim can be linked to.
@@ -160,6 +162,7 @@ export function ResultView({ result: r, videoUrl = null, onVideoError, onRequest
         onNavigate={(id) => setOpen(id)}
         onClose={() => setOpen(null)}
         onPlay={seek}
+        flagged={flagged}
       />
 
       <p className="text-cap text-ink-3">
