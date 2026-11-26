@@ -29,6 +29,8 @@
   - It is used as committed: claim text, stance, verdict, cited record, and `verification_failed` mapped to the retryable verifier error the pipeline records. No other field is invented.
   - Without the rule it reproduces production: NO_MISINFO by `judged_nothing_false_endorsed`, decided by c3 (SUPPORTED).
   - With the rule: **CANNOT_RECOGNIZE (`analysis_incomplete`)**, 10 of 11 claims failed, sent to review.
+  - **"Verifiable" (the denominator)** is counted as the judge already does: claims with a verdict whose `requires_verification` is true. Claims excluded from checking (not verifiable) never count. **"Failed"** means a retryable `verify_claims` error for the claim, i.e. the verifier could not be reached. It is the same signal as `verification_failed:<cid>`. A valid INSUFFICIENT_EVIDENCE verdict does not count, and neither does a repair request that later succeeded.
+  - **Fields the report format lacks:** claim category, segment IDs, evidence IDs and retrieval counts. These are needed only to build the judge's input structure, so placeholders were used: category `unknown`, segment `t1`, evidence ID `ev_<pmid>` from the record's PMID, 1 retrieval attempt. `verification_failed: true` was mapped to the error the pipeline records. No claim text, stance, verdict or citation was added or changed.
 
 ## Gate: offline replay (`backend/scripts/t67_label_rules_replay.py`)
 
@@ -48,15 +50,16 @@
 
 | config | A: 18 T66 videos | B: 48 golden tune videos | A: videos sent to review | B: videos sent to review |
 |---|---|---|---|---|
-| (e) T64 + change 3 | 7/18 = 0.389 (no change) | 43/48 = 0.896 (no change) | 17/18 (0 `analysis_incomplete`) | 24/48 (0) |
+| (e) T64 + changes 1, 2 and 3 (orchestrator's (e)) | 10/18 = 0.556 (= d) | 41/48 = 0.854 (= d) | 17/18 (0 `analysis_incomplete`) | 31/48 (0) |
+| (f) T64 + change 3 only (**as shipped**) | 7/18 = 0.389 (= a) | 43/48 = 0.896 (= a) | 17/18 (0) | 24/48 (0) |
 | (a) T64 only | 7/18 = 0.389 | 43/48 = 0.896 | 17/18 | 24/48 |
 | (b) T64 + change 1 | **11/18 = 0.611** | 43/48 = 0.896 | 17/18 (+43 `second_check_disagreed` reasons, 0 new videos) | 24/48 |
 | (c) T64 + change 2 | 7/18 = 0.389 | **41/48 = 0.854** | 17/18 (+2 `thin_contradiction`, 0 new videos) | 31/48 (+10 `thin_contradiction`; +7 videos: v78, v87, v88, v109, v111, v119, v177) |
 | (d) T64 + both | 10/18 = 0.556 | 41/48 = 0.854 | 17/18 (+43, +3) | 31/48 (+10) |
 
-(e) is listed first because it ships. It fires on no scored video: the only T66 state with verifier errors is the excluded v21 (5 calls refused by the spend guard), and the golden set has none. Its pass is real but vacuous, and its only positive evidence is 3d48e75e. The confusion matrices for (a)–(e) are in `replay.md`. Raw output is in `results.json`.
+Change 3 flips **no** tune video in either input: (e) = (d) and (f) = (a), label for label. It fires on no scored video: the only T66 state with verifier errors is the excluded v21 (5 calls refused by the spend guard), and the golden set has none. Its pass is real but vacuous, and its only positive evidence is 3d48e75e. The confusion matrices for (a)–(e) are in `replay.md`. Raw output is in `results.json`.
 
-### Every label change vs (a) ((e) changes none)
+### Every label change vs (a) (change 3 adds none: (e) changes exactly the (d) videos, (f) none)
 
 | input | video | gold | (a) | (b) | (c) | (d) | verdict |
 |---|---|---|---|---|---|---|---|

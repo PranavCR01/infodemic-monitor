@@ -17,5 +17,5 @@
   "run_id": "T67-label_rules-t66_states-t64_change3",
   "variant": "t64_change3",
   "value": 0.3889,
-  "notes": "Tune split: development numbers, not product accuracy. 7/18 correct; sent to review 17/18; analysis_incomplete x0; worse vs t64_only: none. Change 3 fires on no scored video (vacuous pass); ships ON. Replay of judge + T64 guard + review rule on T66 stored states (pipeline 3372ef3, pre-T64 upstream); extraction/verification/critic not re-run. No CI (report gives none)."
+  "notes": "Tune split: development numbers, not product accuracy. 7/18 correct; sent to review 17/18; analysis_incomplete x0; worse vs t64_only: none. Config (f): T64 + change 3 only, as shipped. Change 3 fires on no scored video (vacuous pass); ships ON. Replay of judge + T64 guard + review rule on T66 stored states (pipeline 3372ef3, pre-T64 upstream); extraction/verification/critic not re-run. No CI (report gives none)."
 }

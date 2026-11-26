@@ -17,5 +17,5 @@
   "run_id": "T67-label_rules-golden_claims-t64_change3",
   "variant": "t64_change3",
   "value": 0.8958,
-  "notes": "Tune split: development numbers, not product accuracy. 43/48 correct; sent to review 24/48; analysis_incomplete x0; worse vs t64_only: none. Change 3 fires on no scored video (vacuous pass); ships ON. Golden stances/verdicts; T64 guard on T38 frozen evidence; cited records from the golden offline evidence cache. No critic and no verifier errors, so changes 1 and 3 cannot fire. No CI (report gives none)."
+  "notes": "Tune split: development numbers, not product accuracy. 43/48 correct; sent to review 24/48; analysis_incomplete x0; worse vs t64_only: none. Config (f): T64 + change 3 only, as shipped. Change 3 fires on no scored video (vacuous pass); ships ON. Golden stances/verdicts; T64 guard on T38 frozen evidence; cited records from the golden offline evidence cache. No critic and no verifier errors, so changes 1 and 3 cannot fire. No CI (report gives none)."
 }
