@@ -49,6 +49,8 @@ describe("requiredRole", () => {
     ["/review/123", "reviewer"],
     ["/reviewers-guide", "analyst"],
     ["/evaluation", "admin"],
+    ["/admin/evals", "admin"],
+    ["/administrative-guide", "analyst"],
   ])("%s needs %s", (path, role) => {
     expect(requiredRole(path)).toBe(role);
   });
@@ -67,6 +69,14 @@ describe("decideAccess", () => {
   it("denies a page above the user's role instead of redirecting", () => {
     expect(decideAccess("/review", "", user("analyst"))).toEqual({ kind: "denied", need: "reviewer" });
     expect(decideAccess("/evaluation", "", user("reviewer"))).toEqual({ kind: "denied", need: "admin" });
+  });
+
+  it("keeps /admin/evals (T63) to admins: analysts and reviewers are denied, signed-out users sign in", () => {
+    expect(decideAccess("/admin/evals", "", user("analyst"))).toEqual({ kind: "denied", need: "admin" });
+    expect(decideAccess("/admin/evals", "", user("reviewer"))).toEqual({ kind: "denied", need: "admin" });
+    expect(decideAccess("/admin/evals", "", user())).toEqual({ kind: "denied", need: "admin" });
+    expect(decideAccess("/admin/evals", "", user("admin"))).toEqual({ kind: "allow" });
+    expect(decideAccess("/admin/evals", "", null)).toEqual({ kind: "sign-in", next: "/admin/evals" });
   });
 
   it("allows a page at or below the user's role", () => {
