@@ -164,8 +164,11 @@ counting larger pools, and about 1.6 GB RSS.
 - **Backend suite.** Results are in the PR description.
 - **Download note.** The Hugging Face client's Xet transfer stalled behind the proxy.
   `HF_HUB_DISABLE_XET=1` (plain HTTPS via `us.aws.cdn.hf.co`) worked.
-- **Eval registry.** T63's registry (#135) had not merged into `langgraph-build` when this was
-  written, so there is no `evals/registry/` record. Add one when #135 lands.
+- **Eval registry.** T63's registry (#135) merged while this ran. 14 records are in
+  `evals/registry/T60-rerank-*.json` (run group `T60-rerank-relevance`): P@3, P@10 and recall
+  for both scorers, the two bootstrap differences with their CIs, and MedCPT CPU latency on 1
+  and 2 vCPU. `test_eval_registry_t63.py`'s "no T60/T61 records" check now only requires that
+  T60/T61 records belong to their own run group.
 
 ## If someone revisits this
 
