@@ -1,10 +1,14 @@
-# T67: critic-budget and thin-contradiction label rules
+# T67: critic-budget, thin-contradiction and analysis-incomplete label rules
 
-> **Result: both changes were built and are switched OFF.** Each one made at least one tune
+> **Result: changes 1 and 2 were built and are switched OFF.** Each made at least one tune
 > label worse on the offline replay, and the lead's gate was "ship a change only if it
-> makes no tune label worse". These are development numbers on the TUNE split, not
-> product accuracy. No model calls were made ($0), no migration was needed, and the test
-> split was not read.
+> makes no tune label worse".
+>
+> **Change 3 (`analysis_incomplete`, lead addendum) ships ON.** It changes no tune label
+> (it fires on none of them), and it turns production job 3d48e75e into CANNOT RECOGNIZE.
+>
+> These are development numbers on the TUNE split, not product accuracy. No model calls
+> were made ($0), no migration was needed, and the test split was not read.
 
 ## What was built
 
@@ -14,6 +18,17 @@
 | Switch (default) | `routing.KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED = False` | `judge.THIN_CONTRADICTION_RULE = False` |
 | When on | The budget runs out with the critic still objecting. The judge keeps the stored verdict, and the critic's issues are added to the verdict's limitations. Review reason: `second_check_disagreed:<cid>`. Withdrawal stays only for hard failures: a cited record that was not retrieved for the claim, a `guardrail:` error for the claim, or a retryable verifier error. | An ENDORSES or REFUTES + CONTRADICTED claim decides only if its contradicting records include ≥2 that pass T49's on-topic check, or ≥1 systematic review / RCT / guideline. Otherwise the verdict stays but the claim does not decide, and the label falls through. Review reason: `judge:thin_contradiction:<cid>`. |
 | Plain text | "A second automated check still disagreed with the verdict on this claim…" (backend `REASON_TEXT`, frontend `REVIEW_REASONS`) | "The evidence against this claim is too thin to decide the label on its own…" |
+
+**Change 3: `analysis_incomplete` (lead addendum, ~23:00 UTC)**
+- **Where:** `judge.analysis_incomplete`, checked in `judge.decide` before rule 1.
+- **Switch:** `judge.ANALYSIS_INCOMPLETE_RULE = True`, i.e. on.
+- **Rule:** the verifier failed (`verification_failed`: a retryable `verify_claims` error, the same signal as the existing `verification_failed:<cid>` flag) for ≥50% of the verifiable claims. The label is then CANNOT_RECOGNIZE, with rule `analysis_incomplete` and the video-level review reason `judge:analysis_incomplete`. Other rule reasons are still collected.
+- **Plain text:** "The evidence check could not run for at least half of the claims, so the video could not be assessed…" (backend, frontend reason and decision-rule text).
+- **Regression, production job 3d48e75e:** `backend/app/tests/fixtures/prod_3d48e75e/vitamin_k_verifier_down.report.json` (commit 033dbed).
+  - The fixture is the coordinator's. Its provenance says it was **built from the exported report, not raw DB rows**: the coordinator's DB access had been revoked.
+  - It is used as committed: claim text, stance, verdict, cited record, and `verification_failed` mapped to the retryable verifier error the pipeline records. No other field is invented.
+  - Without the rule it reproduces production: NO_MISINFO by `judged_nothing_false_endorsed`, decided by c3 (SUPPORTED).
+  - With the rule: **CANNOT_RECOGNIZE (`analysis_incomplete`)**, 10 of 11 claims failed, sent to review.
 
 ## Gate: offline replay (`backend/scripts/t67_label_rules_replay.py`)
 
@@ -33,14 +48,15 @@
 
 | config | A: 18 T66 videos | B: 48 golden tune videos | A: videos sent to review | B: videos sent to review |
 |---|---|---|---|---|
+| (e) T64 + change 3 | 7/18 = 0.389 (no change) | 43/48 = 0.896 (no change) | 17/18 (0 `analysis_incomplete`) | 24/48 (0) |
 | (a) T64 only | 7/18 = 0.389 | 43/48 = 0.896 | 17/18 | 24/48 |
 | (b) T64 + change 1 | **11/18 = 0.611** | 43/48 = 0.896 | 17/18 (+43 `second_check_disagreed` reasons, 0 new videos) | 24/48 |
 | (c) T64 + change 2 | 7/18 = 0.389 | **41/48 = 0.854** | 17/18 (+2 `thin_contradiction`, 0 new videos) | 31/48 (+10 `thin_contradiction`; +7 videos: v78, v87, v88, v109, v111, v119, v177) |
 | (d) T64 + both | 10/18 = 0.556 | 41/48 = 0.854 | 17/18 (+43, +3) | 31/48 (+10) |
 
-The four confusion matrices per input are in `replay.md`. Raw output is in `results.json`.
+(e) is listed first because it ships. It fires on no scored video: the only T66 state with verifier errors is the excluded v21 (5 calls refused by the spend guard), and the golden set has none. Its pass is real but vacuous, and its only positive evidence is 3d48e75e. The confusion matrices for (a)–(e) are in `replay.md`. Raw output is in `results.json`.
 
-### Every label change vs (a)
+### Every label change vs (a) ((e) changes none)
 
 | input | video | gold | (a) | (b) | (c) | (d) | verdict |
 |---|---|---|---|---|---|---|---|

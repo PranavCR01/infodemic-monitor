@@ -2425,7 +2425,7 @@ extraction context resolution is deferred.
   one of two endorsed efficacy claims is unchecked, so the expected flags gain
   `main_claims_unchecked`.
 
-## 7aj. Critic-Budget and Thin-Contradiction Label Rules (T67; design §8, §9, §11)
+## 7aj. Critic-Budget, Thin-Contradiction and Analysis-Incomplete Label Rules (T67; design §8, §9, §11)
 
 The lead approved both changes on 2026-11-26, with an offline gate: ship a change only if it
 makes no tune label worse. Both were built, both failed the gate, and both ship **off**
@@ -2454,6 +2454,13 @@ Full numbers are in `evals/reports/T67/report.md`.
   - A: T66 states from `origin/auto/T66` @ 72633ea, copied read-only; v21 is excluded (partial).
   - B: golden claims, with cited records rebuilt from the golden set's offline `evidence_cache` (search titles and pubtypes, abstracts) and `reference_citations.csv`.
   - Both baselines reproduce exactly: T66's stored labels on 18/18, and T64 `after.json` on 48/48.
+- **Change 3 `analysis_incomplete` (lead addendum ~23:00 UTC; ON).**
+  - "The verifier failed" uses the signal the judge already had: a retryable `verify_claims` error for the claim (`ClaimView.verification_failed`). "Repair requested" errors do not count.
+  - The denominator is the views with `requires_verification`.
+  - The threshold is `>= 0.5` and needs at least one failure, so 1 of 2 already fires. `test_judge.test_flag_verification_failed` was updated for that (1 of 2 → analysis_incomplete) and gained a 1-of-3 case that keeps the T64 expectation.
+  - It is checked before rule 1 and overrides every label, including MISINFO, because with half the verdicts missing no rule's output is an assessment of the video.
+  - Regression: the coordinator's 3d48e75e fixture. It is report-derived, not raw rows, as its provenance says. It was used as committed, nothing reconstructed beyond mapping `verification_failed` to the pipeline's error.
+  - Gate (e): no tune label changes, and the rule fires on no scored video, so the pass is vacuous.
 - **Why the cross-check is unchanged.** With both switches off it is byte-identical. Its stub evidence (`title = id`, `claim_text = claim_id`) would make every contradiction thin, so if change 2 is ever turned on, `judge_crosscheck` needs real evidence or the switch off.
 
 ## 8. Team
@@ -2484,7 +2491,10 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
     `second_check_disagreed`): T66 states 7/18 → 11/18, but v114 (gold MISINFO) goes
     CANNOT_RECOGNIZE → DEBUNKING.
   - Change 2 (`thin_contradiction`): golden tune 43/48 → 41/48 (v119, v177 worse), and T66 v88 worse.
-  - Reason codes and plain text are added in the backend and frontend, with 16 new tests.
+  - Change 3 (lead addendum, `analysis_incomplete`: verifier failed for ≥50% of verifiable claims
+    → CANNOT_RECOGNIZE) passed the gate (no tune label changes) and **ships on**. Prod 3d48e75e
+    goes NO_MISINFO → CANNOT_RECOGNIZE.
+  - Reason codes and plain text are added in the backend and frontend, with 23 new tests.
   - Report: `evals/reports/T67/`. Registry: `T67-label_rules-*`. Decisions in §7aj. Branch `auto/T67`.
 - **2026-11-26**: T65 backend (report and result polish from production job d2bf4179; design §7,
   §12, §17), no migration, no paid call. Evidence ids rendered as short titles/PMIDs with a
