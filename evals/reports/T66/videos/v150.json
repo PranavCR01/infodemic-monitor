@@ -1,0 +1,88 @@
+{
+ "video_id": "v150",
+ "status": "finished",
+ "pipeline": "graph",
+ "fallback_reason": null,
+ "label": "CANNOT_RECOGNIZE",
+ "cost_usd": 0.01268,
+ "latency_ms": 2613,
+ "guarded_calls": 2,
+ "pipeline_version": "graph_v1+3372ef3+p70b785e4",
+ "segment_counts_omitted": {
+  "transcript_segments": 3,
+  "ocr_segments": 3,
+  "fused_segments": 3
+ },
+ "model_calls": [
+  {
+   "step": "extract_claims",
+   "provider": "anthropic",
+   "model": "claude-sonnet-5-5",
+   "prompt_version": "extract_v3",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 1050,
+   "input_tokens": 3557,
+   "output_tokens": 48,
+   "reasoning_tokens": 0,
+   "response_model": "claude-sonnet-5-5",
+   "reasoning_effort": null,
+   "cost_usd": 0.007594,
+   "error": null
+  },
+  {
+   "step": "judge_explanation",
+   "provider": "anthropic",
+   "model": "claude-sonnet-5-5",
+   "prompt_version": "explain_v2",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 1537,
+   "input_tokens": 1808,
+   "output_tokens": 147,
+   "reasoning_tokens": 0,
+   "response_model": "claude-sonnet-5-5",
+   "reasoning_effort": null,
+   "cost_usd": 0.005086,
+   "error": null
+  }
+ ],
+ "state": {
+  "state_schema_version": "1.0.0",
+  "job_id": "t66-v150",
+  "video_id": "v150",
+  "pipeline_version": "graph_v1+3372ef3+p70b785e4",
+  "media_uri": "fusion://t66-v150",
+  "artifacts": [
+   {
+    "kind": "video",
+    "uri": "fusion://t66-v150",
+    "sha256": null
+   }
+  ],
+  "claims": [],
+  "stance_results": {},
+  "final_result": {
+   "video_id": "v150",
+   "classification": "CANNOT_RECOGNIZE",
+   "claim_ids": [],
+   "evidence_ids": [],
+   "explanation": "The video is labelled CANNOT RECOGNIZE because the rule \"no_claims\" applied: the earlier steps found no health claims in it that could be checked. With no claims in the claim table, there was no speaker stance to assess and no evidence to weigh. No evidence is cited, because there was no claim to test.",
+   "limitations": [],
+   "confidence": null,
+   "decision_rule": "no_claims",
+   "review_flags": [],
+   "model": "claude-sonnet-5-5",
+   "prompt_version": "explain_v2",
+   "misinfo_basis": null
+  },
+  "validation_errors": [],
+  "validation_attempts": 1,
+  "requires_human_review": false,
+  "review_reasons": [],
+  "persisted_result_ref": "artifacts/t66-v150/result.json",
+  "errors": []
+ }
+}
