@@ -351,17 +351,21 @@ def test_jobs_list_without_a_result_has_null_basis(env):
 
 
 def test_persisted_unproven_outcome_end_to_end():
-    """Through the real graph (mocked models, nothing found by search) and the real
+    """Through the real graph (mocked models; search kept only on-topic records that
+    don't test the claim, T49) and the real
     persist path: the stored result carries the basis and the case goes to review."""
     from app.db.models.review import HumanReview
     from app.services.pipeline_result_service import persist_outcome
-    from app.tests.test_graph_integration import NOTHING_FOUND, fusion, make_provider
+    from app.tests.test_graph_integration import (
+        ON_TOPIC_UNTESTED, ScriptedClient, fusion, make_provider, unproven_script,
+    )
 
     db = _session()
     db.add(Video(id="vid-1", filename="v.mp4", file_path="/tmp/v.mp4", file_size=1))
     db.add(Job(id="job-1", video_id="vid-1", status=JobStatus.STARTED, user_id=ALICE["sub"]))
     db.commit()
-    outcome = make_provider(node_overrides=NOTHING_FOUND).run(fusion(), job_id="job-1", video_id="vid-1")
+    outcome = make_provider(ScriptedClient(unproven_script), node_overrides=ON_TOPIC_UNTESTED).run(
+        fusion(), job_id="job-1", video_id="vid-1")
     persist_outcome(db, "job-1", fusion(), outcome)
     res = db.query(Result).filter_by(job_id="job-1").one()
     assert (res.label, res.misinfo_basis, res.decision_rule) == ("MISINFO", "unproven", "unproven")

@@ -343,11 +343,20 @@ The verifier reads one claim and its reranked papers and decides what the eviden
 | SUPPORTED | The evidence backs the claim as stated |
 | CONTRADICTED | The evidence shows the claim is false |
 | MIXED | Good studies point in different directions |
-| UNSUPPORTED | An **efficacy claim** (X cures, treats, prevents or reverses Y) for which the full search, PubMed plus the section 6 references, found no evidence for or against. Presenting an untested remedy as working is itself misleading: the burden of proof is on the claim |
+| UNSUPPORTED | An **efficacy claim** (X cures, treats, prevents or reverses Y) for which the full search, PubMed plus the section 6 references, reached the claim's topic but found no evidence for or against. Presenting an untested remedy as working is itself misleading: the burden of proof is on the claim. An empty or off-topic search never gives UNSUPPORTED (see "On-topic guard" below) |
 | INSUFFICIENT\_EVIDENCE | Any other claim that nothing tests directly, or where what exists is too weak (including claims about harm or side effects: no evidence of harm is not evidence of harm) |
 | NOT\_VERIFIABLE | The claim can't be tested ("this tea feels amazing") |
 
-**UNSUPPORTED is not CONTRADICTED.** The explanation always says "no evidence supports this", never "this is false". It applies only after the retrieval budget is exhausted, and only when `claim_category` is treatment or prevention efficacy.
+**UNSUPPORTED is not CONTRADICTED.** The explanation always says "no evidence supports this", never "this is false". It applies only after the retrieval budget is exhausted, only when `claim_category` is treatment or prevention efficacy, and only when retrieval kept at least one record on the claim's topic.
+
+**On-topic guard: an empty or off-topic search is not "nothing supports it".** In production job 5cc07f48 (a vitamin K video, 2026-11-26), one claim's search returned nothing and another's returned only vitamin D / osteoporosis papers; both became UNSUPPORTED and an accurate video was labelled MISINFO (unproven). A search that never reached the claim says nothing about it. So, right after the verifier and before the critic and the judge, code (no model) checks every UNSUPPORTED verdict: it stands only if the claim's reranked evidence (what retrieval kept) holds at least one **on-topic** record. Otherwise the verdict becomes INSUFFICIENT\_EVIDENCE with the limitation `search_found_nothing_on_topic`; if no other claim is judged, the judge's last branch (section 9, unchanged) gives CANNOT RECOGNIZE with the `nothing_judged` review reason.
+
+A record is on topic if the verifier cited it, or if its title or abstract contains the claim's intervention terms (whole words, case-insensitive, hyphens read as spaces, a plural `s`/`es` allowed):
+
+- **A recognised intervention** (the section 6 planner's lexicon finds an intervention concept in the claim): any of the concept's names counts (the words matched in the claim, its label, MeSH heading and synonyms), never its parent heading ("Vitamins" would make every vitamin paper on topic).
+- **Otherwise**, the intervention-side words of the claim: the label before a colon ("Burdock Root: rids kidney stones"), else the content words before the first claim verb (cures, prevents, helps...), else those of the whole claim; stop words, filler words ("high", "natural", "drinking") and words the lexicon knows as a condition, outcome or population are dropped; a one-letter or short digit token stays glued to the word before it ("vitamin k", "omega 3"), so "vitamin K" never shrinks to "vitamin". **All** of the first four such words must appear. This is strict on purpose: when the system does not know what the intervention is, the safe error is CANNOT RECOGNIZE and review, not MISINFO.
+
+The check lives in the verify step, not the judge, so the section 9 rules are unchanged. Its cost, measured on the tune split's frozen evidence (T49): none of the 5 tune videos the golden set labels MISINFO (unproven) keeps that label with today's retrieval, because each of their unproven claims got an empty search, generic papers on the condition only (cancer papers for a "soap that treats skin cancer"), or no recorded search. Better search planning (T50) is what brings them back; the guard makes sure that, until it does, a failed search reads as "could not check", not "unproven".
 
 **Output:**
 

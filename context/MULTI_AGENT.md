@@ -2073,6 +2073,19 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-26**: T49 (design §7; §9 unchanged) unproven guard, urgent, no spend. After the vitamin K
+  production job 5cc07f48 (accurate video labelled MISINFO (unproven) from an empty and an off-topic
+  search), `app.core.graph.unproven_guard` runs in the `verify_claims` node right after each verdict
+  (and in the routing experiment's verify runner): UNSUPPORTED stands only if the claim's reranked
+  evidence holds a record on topic for its intervention (verifier-cited, or the intervention terms in
+  title/abstract: a recognised lexicon concept's names, else the claim's intervention-side words, all
+  required, "vitamin k" kept whole); otherwise INSUFFICIENT_EVIDENCE + `search_found_nothing_on_topic`.
+  Replay of the job (fixture RECONSTRUCTED from the queue text, no prod access; lead to swap in real
+  rows) gives CANNOT_RECOGNIZE + `nothing_judged`; without the guard it reproduces MISINFO (unproven).
+  Tune frozen evidence (T38): 0/5 tune golden unproven videos keep the label (the other 7 of 12 are
+  test split, not read): empty search (v22, v120), cancer-only search for a "soap" (v141, v143), no
+  recorded search (v36). T50 is what restores them. Judge cross-check unchanged (162/162, 149/162
+  exact). Report `evals/reports/T49/`. Branch `auto/T49`.
 - **2026-11-25**: T48 (design §15, §17) Supabase asymmetric JWT verification, no spend.
   `app/auth/dependencies.py` now verifies ES256/RS256 tokens against the project JWKS
   (`SUPABASE_URL/auth/v1/.well-known/jwks.json`, new `app/auth/jwks.py`): key chosen by

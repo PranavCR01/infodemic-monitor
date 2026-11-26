@@ -36,6 +36,10 @@ How it fits:
   eligible, is INSUFFICIENT_EVIDENCE. Whether the *full* search budget was used is
   checked later: the critic asks for another search while budget is left, and
   ``routing.verdicts_for_judge`` passes UNSUPPORTED to the judge only once it is spent.
+- **Unproven guard (T49).** Right after each verdict the node runs
+  ``unproven_guard.apply_unproven_guard``: UNSUPPORTED stands only if the claim's
+  reranked evidence holds a record on topic for the claim's intervention; an empty or
+  off-topic search gives INSUFFICIENT_EVIDENCE with ``search_found_nothing_on_topic``.
 - **Loop-aware.** Only ``routing.claims_to_verify`` claims are (re)judged; others keep
   their verdict. A REVISE_VERIFICATION re-run counts against the revision budget and
   shows the critic's notes; a RETRIEVE_MORE re-run judges the new evidence.
@@ -62,6 +66,7 @@ from app.core.graph.state import (
     VerificationResult,
 )
 from app.core.graph.stance import PromptNotFoundError, load_prompt  # shared prompt loader
+from app.core.graph.unproven_guard import apply_unproven_guard
 from app.core.guardrails.injection import GUARDRAIL_ERROR_PREFIX
 from app.core.guardrails.outputs import OutputViolation, VerificationOutput, _no_urls, parse_output
 from app.core.guardrails.untrusted import (
@@ -472,11 +477,14 @@ def make_verify_claims(
             critic = critics.get(cid)
             if critic and critic.decision == CriticDecision.REVISE_VERIFICATION:
                 revisions[cid] = revisions.get(cid, 0) + 1
+            evidence = list(reranked.get(cid, []))[:MAX_EVIDENCE_PER_CLAIM]
             result, errs = verify_claim(
-                claims[cid], reranked.get(cid, []), caller, system_prompt, version,
+                claims[cid], evidence, caller, system_prompt, version,
                 critic=critic, max_repairs=max_repairs, max_chars=max_chars,
                 allow_unsupported=r.unproven_eligible(state, cid),
             )
+            # T49 (§7): UNSUPPORTED only with an on-topic record in what retrieval kept.
+            result = apply_unproven_guard(claims[cid], evidence, result)
             results[cid] = result
             errors += errs
         update: dict = {"verification_results": results, "verification_revisions": revisions}

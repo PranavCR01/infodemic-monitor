@@ -18,6 +18,7 @@ from app.core.graph import claims as claims_mod
 from app.core.graph import stance as stance_mod
 from app.core.graph import verifier as verifier_mod
 from app.core.graph.state import initial_state
+from app.core.graph.unproven_guard import apply_unproven_guard
 from app.core.guardrails.config import load_guardrails
 from app.core.routing.router import ModelRouter
 from app.evaluation.routing_experiment.items import (
@@ -80,6 +81,8 @@ def run_verify(router: ModelRouter, item: StepItem) -> str:
         x.claim, x.evidence, router, verifier_mod.load_prompt(version), version,
         allow_unsupported=x.allow_unsupported,
     )
+    # Same post-verifier step as the graph node (T49, §7).
+    result = apply_unproven_guard(x.claim, list(x.evidence)[:verifier_mod.MAX_EVIDENCE_PER_CLAIM], result)
     return result.verdict.value
 
 
