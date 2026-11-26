@@ -2332,6 +2332,55 @@ leave it out of chart scales or draw it as a hatched "under 5" bar; `window` is 
 query parameter; `pending_now`, `running_now` and `backlog_now` are "now" whatever the
 window.
 
+## 7ai. Report and Result Polish (T65, backend; design §7, §12, §17)
+
+Built by the automated build on 2026-11-26 (lead approved, before the 2026-11-27 demo);
+frontend/export part by the frontend session in parallel. **No migration**, no paid call.
+Regression data: the real rows of production job d2bf4179
+(`backend/app/tests/fixtures/prod_d2bf4179/vitamin_k_rerun.real.json`); tests in
+`app/tests/test_report_polish_t65.py`. One formatter for source text:
+`app/core/user_text.py`.
+
+- **(a) No evidence ids in user-facing text.** The verifier prompt says: ids only in the two
+  id lists; name papers by short title or PMID. Output check in `verify_claim`: an
+  explanation or limitation containing `ev_…` gets **one** repair (shared with the citation
+  repair budget; logged as `repair requested: evidence_id_in_text`, not a guardrail error);
+  if the answer still has ids they are rendered: short title in quotes (main title before
+  a subtitle, max 8 words), else `PMID n`; an id naming no known source is dropped (or
+  "a retrieved paper" mid-sentence). The result API applies the same rendering on read, so
+  rows stored before T65 (e.g. d2bf4179 c7) are clean too: `verdict_explanation`,
+  `limitations` and the video `explanation`.
+- **(b) "The reviewer".** Critic notes reach the verifier as "NOTES FROM A SECOND AUTOMATED
+  CHECK … never 'the reviewer'"; the verifier's text and the API's read path rewrite
+  "the reviewer" to "a second automated check" (`reword_reviewer`).
+- **(c) One study type.** `claims[].evidence[].study_type` is the single source (the
+  reranker's `StudyType` value; a row stored without one gets the same classifier on its
+  stored metadata, else `unknown`; never null in new responses). New
+  `claims[].study_type_counts: [{study_type, relation, count}]` counts the cited sources
+  (`relation` SUPPORTS | CONTRADICTS) by that same field. Frontend: build the summary
+  ("4 narrative reviews · 2 case reports") from `study_type_counts` and the list from
+  `study_type`; the old "N sources without a study type" came from counting only the
+  strip levels.
+- **(d) Titles.** `evidence[].title` has PubMed's trailing full stop stripped
+  (`clean_title`; '?' / '!' kept), so the export adds the only one. `source_line` is the
+  backend version of "Title. Journal, date.".
+- **(e) Speaker quote.** New `claims[].speaker_quote` (string | null) and
+  `speaker_quote_segment_ids`: the run of 1–3 adjacent speech segments inside the claim's
+  span (plus its source segments) covering the most distinct content words of the claim
+  (T45 `word_tokens`), shortest then earliest on ties; null when no segment shares a
+  content word. (There was no `speaker_quote` field before: the export quoted
+  `stance_quotes[0]`. `stance_quotes` is unchanged.) Code: `app/core/speaker_quote.py`.
+- **(f) Journal and date.** EFetch now parses `journal_abbrev` (ISOAbbreviation, else
+  MedlineTA) and `pub_date` (ISO "YYYY" / "YYYY-MM" / "YYYY-MM-DD"; the electronic
+  ArticleDate when it is more precise than the issue date) into `EvidenceRecord.journal`
+  / `.pub_date`, shown to the verifier in the evidence index (`journal: JAMA | published:
+  2026-11-05`). Stored without a column: in the claim's `search_trail` JSON under
+  `source_meta` (evidence id → {journal, pub_date}; `SearchTrailView` ignores the key).
+  API: `claims[].evidence[].journal` (string | null) and `.pub_date` (string | null). Rows
+  before T65: `journal` null (journal_doi records: their Crossref journal, also in
+  `publisher`), `pub_date` = `year` as "YYYY". The MCP contract record carries the two
+  fields too (additive, optional; `contract/tools.json` refreshed), so `fetch_pubmed_records`
+  returns the retriever's records unchanged and `rerank_evidence` accepts them. `publisher` is unchanged.
 ## 7ai. Unproven-Label Fixes (T64; design §6, §7, §9)
 
 Production job d2bf4179 (vitamin K re-analysis, main 91a7a13) was still MISINFO (unproven).
@@ -2397,6 +2446,12 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-26**: T65 backend (report and result polish from production job d2bf4179; design §7,
+  §12, §17), no migration, no paid call. Evidence ids rendered as short titles/PMIDs with a
+  repair-once output check; critic notes called "a second automated check"; one study type with
+  `study_type_counts`; titles without trailing full stop; `speaker_quote` = best-overlap segments;
+  PubMed journal abbreviation and publication date to the verifier and the API (`journal`,
+  `pub_date`, stored in the search trail JSON). Field note in §7ai.
 - **2026-11-26**: T64 (design §6, §7, §9) unproven-label fixes (a, b, c, e, f; (d) deferred),
   no spend, no migration. Real rows of job d2bf4179: MISINFO (unproven) reproduced without T64,
   NO_MISINFO with it (+ `main_claims_unchecked`). On rows treated as on topic, as in

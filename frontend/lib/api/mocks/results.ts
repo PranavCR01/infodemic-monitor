@@ -303,6 +303,8 @@ export const MOCK_OLDER_VERSION: RawResult = {
   previous_jobs: [],
 };
 
+import { MOCK_T65 } from "./t65";
+
 export const MOCK_RESULTS: Record<string, RawResult> = {
   pending: MOCK_MISINFO_PENDING,
   debunked: MOCK_DEBUNKED_VERIFIED,
@@ -311,4 +313,5 @@ export const MOCK_RESULTS: Record<string, RawResult> = {
   legacy: MOCK_LEGACY,
   reanalysed: MOCK_REANALYSED,
   "older-version": MOCK_OLDER_VERSION,
+  "t65-polish": MOCK_T65,
 };

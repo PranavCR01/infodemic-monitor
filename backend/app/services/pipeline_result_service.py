@@ -99,6 +99,17 @@ def _evidence_for_claim(state: dict, cid: str) -> list:
     return list(seen.values())
 
 
+def _with_source_meta(trail: Optional[dict], records: list) -> Optional[dict]:
+    """T65 (f): keep each source's journal and publication date with the claim's search
+    trail JSON (``source_meta``: evidence id -> {journal, pub_date}), since
+    ``evidence_records`` has no column for them and T65 adds no migration."""
+    meta = {r.evidence_id: {"journal": r.journal, "pub_date": r.pub_date}
+            for r in records if getattr(r, "journal", None) or getattr(r, "pub_date", None)}
+    if trail is None or not meta:
+        return trail
+    return {**trail, "source_meta": meta}
+
+
 def _write_claim_level(db: Session, job_id: str, state: dict) -> None:
     from app.core.graph.judge import claim_label
     from app.services.search_trail import build_search_trail
@@ -130,7 +141,7 @@ def _write_claim_level(db: Session, job_id: str, state: dict) -> None:
             claim_kind=claim.claim_kind,
             label=claim_label(stance.stance if stance else None, verdict.verdict).value if verdict else None,
             deciding=cid in deciding,
-            search_trail=build_search_trail(state, cid),
+            search_trail=_with_source_meta(build_search_trail(state, cid), _evidence_for_claim(state, cid)),
         )
         db.add(row)
         if stance is not None:

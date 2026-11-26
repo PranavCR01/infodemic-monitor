@@ -24,7 +24,8 @@ type Props = { claim: Claim; active: boolean; onSelect: () => void; onSeek: (s: 
 
 export const ClaimCard = forwardRef<HTMLElement, Props>(function ClaimCard({ claim: c, active, onSelect, onSeek, onOpen }, ref) {
   const modalities = c.modality === "both" ? (["speech", "screen"] as const) : c.modality ? [c.modality] : [];
-  const quote = c.quotes[0];
+  // T65: the backend's best-overlap words when sent, else the first stance quote.
+  const quote = c.speakerQuote;
   return (
     <article
       ref={ref}
@@ -62,7 +63,7 @@ export const ClaimCard = forwardRef<HTMLElement, Props>(function ClaimCard({ cla
           {quote && (
             <span className="text-small text-ink-2">
               <q>{quote.text}</q>{" "}
-              <span className="font-mono text-cap text-ink-3">({quote.source === "screen" ? "on screen, " : ""}{clock(quote.start)})</span>
+              <span className="font-mono text-cap text-ink-3">({quote.source === "screen" ? "on screen, " : ""}{clock(quote.at ?? c.start)})</span>
             </span>
           )}
         </div>

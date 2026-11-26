@@ -26,10 +26,10 @@ function Provenance({ r }: { r: ResultModel }) {
 
 /** Deciding claim → stance → evidence → verdict → label (Direction 3 "How it was reached"). */
 function Chain({ claim, r }: { claim: Claim; r: ResultModel }) {
-  const quote = claim.quotes[0]?.text ?? claim.text;
+  const quote = claim.speakerQuote?.text ?? claim.text;
   return (
     <li className="flex flex-wrap items-center gap-x-2 gap-y-1.5 text-small">
-      <span className="font-mono text-ink-2">{clock(claim.start)}</span>
+      <span className="font-mono text-ink-2">{clock(claim.speakerQuote?.at ?? claim.start)}</span>
       <q className="font-serif text-ink">{quote}</q>
       <Icon name="chevr" className="!h-3.5 !w-3.5 text-ink-3" />
       {claim.stance && <StanceChip stance={claim.stance} />}

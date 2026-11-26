@@ -1,4 +1,4 @@
-import { clock, evidenceText, type ResultModel } from "@/lib/api/result-adapter";
+import { clock, evidenceText, sourceMeta, type ResultModel } from "@/lib/api/result-adapter";
 import { sortSources } from "@/components/result/SourceCard";
 import { LabelBadge } from "@/components/ui";
 import {
@@ -97,7 +97,7 @@ export function ExportReport({ r, recordUrl }: { r: ResultModel; recordUrl: stri
                 </p>
                 <p className="text-small">
                   <strong>{c.stance ? STANCES[c.stance].display : "Stance not assessed"}</strong>
-                  {c.quotes[0] ? <> · The speaker says: <q>{c.quotes[0].text}</q></> : null}
+                  {c.speakerQuote ? <> · The speaker says: <q>{c.speakerQuote.text}</q></> : null}
                 </p>
                 <p className="text-small">
                   <strong>{c.verdict ? VERDICTS[c.verdict].display : "Not checked"}</strong> · {evidenceText(c.evidence, EVIDENCE_LEVEL_DISPLAY)}.
@@ -109,11 +109,11 @@ export function ExportReport({ r, recordUrl }: { r: ResultModel; recordUrl: stri
                   <ol className="list-decimal pl-6 text-small">
                     {sources.map((s) => (
                       <li key={s.id}>
-                        {s.title}. {[s.publisher, s.year].filter(Boolean).join(", ")}
-                        {s.publisher || s.year ? ". " : ""}
+                        {s.title}. {sourceMeta(s).join(", ")}
+                        {sourceMeta(s).length ? ". " : ""}
                         {s.level === "GUIDANCE" ? "Official guidance" : studyTypeDisplay(s.studyType)}.{" "}
                         {s.relation === "SUPPORTS" ? "Supports." : s.relation === "CONTRADICTS" ? "Contradicts." : ""}{" "}
-                        {s.kind === "library" ? "Internal library (cited by title only)." : s.pmid ? `PMID ${s.pmid}.` : s.url ?? ""}
+                        {s.kind === "library" ? "Internal library (cited by title only)." : s.pmid && s.title !== `PMID ${s.pmid}` ? `PMID ${s.pmid}.` : s.pmid ? "" : s.url ?? ""}
                       </li>
                     ))}
                   </ol>

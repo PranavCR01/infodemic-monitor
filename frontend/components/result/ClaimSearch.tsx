@@ -68,7 +68,7 @@ export function ClaimSearch({ claim: c, sentToReviewer, technical = false }: Pro
             {s.partial && <p>This older analysis recorded only the queries planned, not what each returned.</p>}
             {c.criticNotes.length > 0 && (
               <div>
-                <p className="font-semibold text-ink">Critic&apos;s notes</p>
+                <p className="font-semibold text-ink">Notes from the second automated check</p>
                 <ul className="mt-1 list-disc pl-5">
                   {c.criticNotes.map((note, k) => (
                     <li key={k}>{note}</li>

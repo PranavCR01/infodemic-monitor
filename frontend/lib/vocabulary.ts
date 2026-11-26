@@ -220,6 +220,34 @@ export function studyTypeDisplay(t: string | null | undefined): string {
   return STUDY_TYPE_DISPLAY[(t ?? "unknown").toLowerCase()] ?? STUDY_TYPE_DISPLAY.unknown;
 }
 
+/** Count wording per study type, for summaries built from the same field as the list (T65). */
+const STUDY_TYPE_COUNT: Record<string, { one: string; many: string }> = {
+  systematic_review: { one: "systematic review", many: "systematic reviews" },
+  meta_analysis: { one: "meta-analysis", many: "meta-analyses" },
+  rct: { one: "randomised trial", many: "randomised trials" },
+  guideline: { one: "guideline", many: "guidelines" },
+  clinical_trial: { one: "clinical trial", many: "clinical trials" },
+  observational: { one: "observational study", many: "observational studies" },
+  narrative_review: { one: "narrative review", many: "narrative reviews" },
+  case_report: { one: "case report", many: "case reports" },
+  animal: { one: "animal study", many: "animal studies" },
+  in_vitro: { one: "lab study", many: "lab studies" },
+  opinion: { one: "opinion piece", many: "opinion pieces" },
+  other: { one: "other source", many: "other sources" },
+  unknown: { one: "source without a recorded study type", many: "sources without a recorded study type" },
+};
+
+export function studyTypeCount(t: string | null | undefined, n: number): string {
+  const w = STUDY_TYPE_COUNT[(t ?? "unknown").toLowerCase()] ?? STUDY_TYPE_COUNT.unknown;
+  return `${n} ${n === 1 ? w.one : w.many}`;
+}
+
+/** The key a study type is counted under: unknown and unrecognised values together. */
+export function studyTypeKey(t: string | null | undefined): string {
+  const k = (t ?? "unknown").toLowerCase();
+  return k in STUDY_TYPE_COUNT ? k : "unknown";
+}
+
 // ---------------------------------------------------------------- parsing
 
 const has = <T extends string>(values: readonly T[], v: unknown): v is T =>
