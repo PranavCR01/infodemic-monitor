@@ -10,10 +10,11 @@ SUCCESS / REVIEW_REQUIRED job (T11/T28).
   the video owner's. A re-run belongs to the video owner even when an admin starts it,
   so it shows in the owner's job list (as in ``start_reanalysis``, T28). Each new job
   links to the newest job of its lineage through ``jobs.previous_job_id``.
-- **Rate limit.** Each caller may start ``REANALYSIS_MAX_PER_VIDEO`` re-runs of one
-  video per rolling ``REANALYSIS_WINDOW_HOURS``, counted from the audit log (action
-  ``reanalysis_requested``, entity the video). A re-run whose dispatch failed doesn't
-  count: nothing was analysed.
+- **Rate limits.** Each caller may start ``REANALYSIS_MAX_PER_VIDEO`` re-runs of one
+  video, and ``REANALYSIS_MAX_PER_USER`` in total across videos, per rolling
+  ``REANALYSIS_WINDOW_HOURS``, counted from the audit log (action
+  ``reanalysis_requested``, entity the video). Admins count too (no setting exempts
+  them). A re-run whose dispatch failed doesn't count: nothing was analysed.
 - **Open review case.** An OPEN case on the lineage becomes SUPERSEDED, linked to the new
   job, with an audit entry; it leaves the queue (which lists OPEN cases) without a
   decision. The old job keeps its REVIEW_REQUIRED status: its result was never
@@ -47,12 +48,21 @@ DISPATCH_FAILED = "DISPATCH_FAILED"
 REVIEW_REJECTED = "REVIEW_REJECTED"
 
 
+PER_VIDEO = "per_video"
+PER_USER = "per_user"
+
+
 class ReanalysisRateLimited(Exception):
-    def __init__(self, retry_after: int, limit: int, window_hours: int):
-        super().__init__(f"at most {limit} re-analyses of this video per {window_hours} h")
+    """Over a limit. ``limit_kind`` is the one blocking (``per_video`` or ``per_user``;
+    when both are, the one that frees up later, since both must free up)."""
+
+    def __init__(self, retry_after: int, limit: int, window_hours: int, limit_kind: str):
+        what = "of this video" if limit_kind == PER_VIDEO else "in total"
+        super().__init__(f"at most {limit} re-analyses {what} per {window_hours} h")
         self.retry_after = retry_after
         self.limit = limit
         self.window_hours = window_hours
+        self.limit_kind = limit_kind
 
 
 class ReanalysisDisabled(Exception):
@@ -107,36 +117,47 @@ def _window(now: datetime) -> tuple[timedelta, datetime]:
     return span, now - span
 
 
-def recent_requests(db: Session, actor_id: str, video_id: str, now: datetime) -> list[datetime]:
-    """When ``actor_id`` started counted re-runs of the video inside the window, oldest first."""
+def recent_requests(db: Session, actor_id: str, video_id: Optional[str], now: datetime) -> list[datetime]:
+    """When ``actor_id`` started counted re-runs inside the window, oldest first: of one
+    video, or of every video when ``video_id`` is None."""
     _, since = _window(now)
-    rows = (
-        db.query(AuditEvent)
-        .filter(AuditEvent.action == REANALYSIS_REQUESTED_ACTION, AuditEvent.actor_id == actor_id,
-                AuditEvent.entity_type == "video", AuditEvent.entity_id == video_id,
-                AuditEvent.created_at >= since)
-        .order_by(AuditEvent.created_at.asc(), AuditEvent.id.asc())
-        .all()
-    )
+    q = db.query(AuditEvent).filter(
+        AuditEvent.action == REANALYSIS_REQUESTED_ACTION, AuditEvent.actor_id == actor_id,
+        AuditEvent.entity_type == "video", AuditEvent.created_at >= since)
+    if video_id is not None:
+        q = q.filter(AuditEvent.entity_id == video_id)
+    rows = q.order_by(AuditEvent.created_at.asc(), AuditEvent.id.asc()).all()
     # Filtered in Python: ``details`` is JSON (portable across SQLite and Postgres).
     return [_utc(e.created_at) for e in rows if not (e.details or {}).get("dispatch_failed")]
 
 
+def _seconds_until_free(times: list[datetime], limit: int, now: datetime) -> int:
+    """Seconds until enough of the oldest requests leave the window to drop the count
+    below ``limit``."""
+    span, _ = _window(now)
+    frees_at = times[len(times) - limit] + span
+    return max(1, math.ceil((frees_at - now).total_seconds()))
+
+
 def check_rate(db: Session, actor_id: str, video_id: str, now: datetime) -> int:
-    """How many re-runs are left after this one; raises ``ReanalysisRateLimited`` with
-    the seconds until a slot frees up when none is left."""
-    limit = settings.REANALYSIS_MAX_PER_VIDEO
-    if limit <= 0:
+    """How many re-runs are left after this one (the smaller of the per-video and the
+    per-user allowance); raises ``ReanalysisRateLimited`` when either is used up, with
+    the seconds until both allow another."""
+    limits = ((PER_VIDEO, settings.REANALYSIS_MAX_PER_VIDEO, video_id),
+              (PER_USER, settings.REANALYSIS_MAX_PER_USER, None))
+    if any(limit <= 0 for _, limit, _ in limits):
         raise ReanalysisDisabled("re-analysis is turned off")
-    times = recent_requests(db, actor_id, video_id, now)
-    if len(times) >= limit:
-        span, _ = _window(now)
-        # A slot frees when enough of the oldest requests leave the window to drop the
-        # count below the limit.
-        frees_at = times[len(times) - limit] + span
-        retry_after = max(1, math.ceil((frees_at - now).total_seconds()))
-        raise ReanalysisRateLimited(retry_after, limit, settings.REANALYSIS_WINDOW_HOURS)
-    return limit - len(times) - 1
+    blocked: list[tuple[int, str, int]] = []
+    remaining = []
+    for kind, limit, vid in limits:
+        times = recent_requests(db, actor_id, vid, now)
+        if len(times) >= limit:
+            blocked.append((_seconds_until_free(times, limit, now), kind, limit))
+        remaining.append(limit - len(times) - 1)
+    if blocked:
+        retry_after, kind, limit = max(blocked)
+        raise ReanalysisRateLimited(retry_after, limit, settings.REANALYSIS_WINDOW_HOURS, kind)
+    return min(remaining)
 
 
 # ------------------------------------------------------------------ start
@@ -162,8 +183,13 @@ def reanalyse_video(
     if reason is not None and len(reason) > REASON_MAX:
         raise ValueError(f"the reason is longer than {REASON_MAX} characters")
 
-    # Serialise re-runs of one video (Postgres row lock; SQLite has one writer anyway),
-    # so two requests at once can't both take the last slot.
+    # Serialise one caller's re-runs (a Postgres advisory lock for the transaction, and
+    # the video row) so two requests at once can't both take the last slot of either
+    # limit. SQLite has one writer anyway.
+    if db.get_bind().dialect.name == "postgresql":
+        from sqlalchemy import text
+
+        db.execute(text("SELECT pg_advisory_xact_lock(hashtext(:k))"), {"k": f"reanalysis:{actor_id}"})
     db.query(Video).filter(Video.id == video.id).with_for_update().one()
     remaining = check_rate(db, actor_id, video.id, now)
 

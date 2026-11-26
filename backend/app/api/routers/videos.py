@@ -172,7 +172,7 @@ class ReanalyseResponse(BaseModel):
     celery_task_id: Optional[str] = None
     previous_job_id: Optional[str] = None
     superseded_review_ids: list[str] = Field(default_factory=list)
-    reanalyses_remaining: int
+    reanalyses_remaining: int  # the smaller of the per-video and per-user allowances left
     created_at: Optional[datetime] = None
 
 
@@ -203,7 +203,9 @@ def reanalyse_video(
     a new job linked to the video's previous one (``previous_job_id``); the reuse rules
     of POST /jobs/create don't apply. An open review case on the video is SUPERSEDED.
     At most ``REANALYSIS_MAX_PER_VIDEO`` per caller per video per
-    ``REANALYSIS_WINDOW_HOURS``: over it, 429 with Retry-After."""
+    ``REANALYSIS_WINDOW_HOURS``, and ``REANALYSIS_MAX_PER_USER`` per caller across all
+    videos in the same window (admins included): over either, 429 with Retry-After and
+    ``limit_kind``."""
     from app.auth.roles import role_of
     from app.db.models.video import Video
     from app.services import reanalysis_service as rs
@@ -231,6 +233,7 @@ def reanalyse_video(
         raise HTTPException(
             status_code=429,
             detail={"code": "REANALYSIS_RATE_LIMITED", "message": str(exc),
+                    "limit_kind": exc.limit_kind,  # "per_video" or "per_user"
                     "retry_after_seconds": exc.retry_after, "limit": exc.limit,
                     "window_hours": exc.window_hours},
             headers={"Retry-After": str(exc.retry_after)},

@@ -171,7 +171,7 @@ def test_rate_limit_three_per_day_then_429_with_retry_after(env):
     assert 24 * 3600 - 60 <= retry <= 24 * 3600
     d = r.json()["detail"]
     assert d["code"] == "REANALYSIS_RATE_LIMITED" and d["retry_after_seconds"] == retry
-    assert d["limit"] == 3 and d["window_hours"] == 24
+    assert d["limit"] == 3 and d["window_hours"] == 24 and d["limit_kind"] == "per_video"
     s = env["Session"]()
     assert s.query(Job).filter(Job.video_id == "vid-alice").count() == 4  # seed + 3
     s.close()
@@ -185,6 +185,98 @@ def test_rate_limit_is_per_user_and_per_video(env):
     assert _post(env, "admin", "bob").status_code == 202    # another video
 
 
+def _add_videos(env, n, owner="alice"):
+    s = env["Session"]()
+    for i in range(n):
+        s.add(Video(id=f"vid-{owner}{i}", filename=f"{i}.mp4", file_path=f"/x/{i}.mp4", file_size=1,
+                    file_hash=f"{owner}{i}".ljust(64, "f")[:64], storage_key=f"uploads/{owner}/{i}.mp4",
+                    user_id=owner))
+    s.commit()
+    s.close()
+    return [f"{owner}{i}" for i in range(n)]
+
+
+def test_per_user_limit_refuses_the_21st_across_videos(env):
+    assert settings.REANALYSIS_MAX_PER_USER == 20
+    tags = _add_videos(env, 21)
+    for i, tag in enumerate(tags[:20]):
+        r = _post(env, "owner", tag)
+        assert r.status_code == 202, (i, r.text)
+    assert r.json()["reanalyses_remaining"] == 0  # the per-user allowance is the smaller one
+    r = _post(env, "owner", tags[20])
+    assert r.status_code == 429
+    d = r.json()["detail"]
+    assert d["limit_kind"] == "per_user" and d["limit"] == 20 and d["window_hours"] == 24
+    assert d["retry_after_seconds"] == int(r.headers["Retry-After"])
+    assert 24 * 3600 - 120 <= d["retry_after_seconds"] <= 24 * 3600
+    s = env["Session"]()
+    assert s.query(Job).filter(Job.video_id == "vid-alice20").count() == 0
+    s.close()
+    # Per user: another user isn't affected.
+    assert _post(env, "admin", tags[20]).status_code == 202
+
+
+def test_per_user_limit_applies_to_admins(env, monkeypatch):
+    monkeypatch.setattr(settings, "REANALYSIS_MAX_PER_USER", 2)
+    assert _post(env, "admin", "alice").status_code == 202
+    assert _post(env, "admin", "bob").status_code == 202
+    r = _post(env, "admin", "legacy")
+    assert r.status_code == 429 and r.json()["detail"]["limit_kind"] == "per_user"
+
+
+def test_per_video_limit_applies_on_its_own(env, monkeypatch):
+    """Far below the per-user total, the per-video limit still refuses a 4th run."""
+    for _ in range(3):
+        assert _post(env, "owner").status_code == 202
+    r = _post(env, "owner")
+    assert r.status_code == 429 and r.json()["detail"]["limit_kind"] == "per_video"
+    assert _post(env, "owner", _add_videos(env, 1)[0]).status_code == 202  # per-user allows more
+
+
+def _seed_requests(s, hours_and_videos, now):
+    for hours, vid in hours_and_videos:
+        s.add(AuditEvent(actor_id="alice", action=rsvc.REANALYSIS_REQUESTED_ACTION, entity_type="video",
+                         entity_id=vid, details={}, created_at=now - timedelta(hours=hours)))
+    s.commit()
+
+
+def test_retry_after_for_the_per_user_limit(env, monkeypatch):
+    """Per-user limit 3: requests 22 h, 5 h and 1 h ago on three other videos. A slot
+    frees when the 22 h one turns 24 h old, in two hours; the video itself is free."""
+    monkeypatch.setattr(settings, "REANALYSIS_MAX_PER_USER", 3)
+    now = datetime.now(timezone.utc)
+    s = env["Session"]()
+    _seed_requests(s, [(30, "vid-x"), (22, "vid-a"), (5, "vid-b"), (1, "vid-c")], now)
+    with pytest.raises(rsvc.ReanalysisRateLimited) as exc:
+        rsvc.check_rate(s, "alice", "vid-alice", now)
+    assert (exc.value.limit_kind, exc.value.retry_after, exc.value.limit) == ("per_user", 7200, 3)
+    assert rsvc.check_rate(s, "alice", "vid-alice", now + timedelta(hours=2, seconds=1)) == 0
+    s.close()
+
+
+@pytest.mark.parametrize("seed,kind,seconds", [
+    # This video: 23, 2, 1 h ago (per-video frees in 1 h). Overall also 20 and 3 h ago on
+    # another video: 5 >= 4, frees when the 20 h one leaves, in 4 h. Both block; the
+    # per-user one frees later, so it is the answer.
+    ([(23, "vid-alice"), (2, "vid-alice"), (1, "vid-alice"), (20, "vid-o"), (3, "vid-o")], "per_user", 4 * 3600),
+    # This video: 2, 1.5, 1 h ago (frees in 22 h). Overall 4 with one 23 h ago elsewhere
+    # (frees in 1 h). The per-video one frees later.
+    ([(2, "vid-alice"), (1.5, "vid-alice"), (1, "vid-alice"), (23, "vid-o")], "per_video", 22 * 3600),
+])
+def test_retry_after_when_both_limits_block_is_the_later_one(env, monkeypatch, seed, kind, seconds):
+    monkeypatch.setattr(settings, "REANALYSIS_MAX_PER_USER", 4)
+    now = datetime.now(timezone.utc)
+    s = env["Session"]()
+    _seed_requests(s, seed, now)
+    with pytest.raises(rsvc.ReanalysisRateLimited) as exc:
+        rsvc.check_rate(s, "alice", "vid-alice", now)
+    assert (exc.value.limit_kind, exc.value.retry_after) == (kind, seconds)
+    with pytest.raises(rsvc.ReanalysisRateLimited):
+        rsvc.check_rate(s, "alice", "vid-alice", now + timedelta(seconds=seconds - 1))
+    assert rsvc.check_rate(s, "alice", "vid-alice", now + timedelta(seconds=seconds + 1)) >= 0
+    s.close()
+
+
 def test_rate_limit_is_configurable(env, monkeypatch):
     monkeypatch.setattr(settings, "REANALYSIS_MAX_PER_VIDEO", 1)
     monkeypatch.setattr(settings, "REANALYSIS_WINDOW_HOURS", 2)
@@ -193,8 +285,9 @@ def test_rate_limit_is_configurable(env, monkeypatch):
     assert r.status_code == 429 and 7140 <= int(r.headers["Retry-After"]) <= 7200
 
 
-def test_zero_turns_the_route_off(env, monkeypatch):
-    monkeypatch.setattr(settings, "REANALYSIS_MAX_PER_VIDEO", 0)
+@pytest.mark.parametrize("name", ["REANALYSIS_MAX_PER_VIDEO", "REANALYSIS_MAX_PER_USER"])
+def test_zero_turns_the_route_off(env, monkeypatch, name):
+    monkeypatch.setattr(settings, name, 0)
     r = _post(env, "owner")
     assert r.status_code == 403 and r.json()["detail"]["code"] == "REANALYSIS_DISABLED"
 
@@ -211,7 +304,7 @@ def test_retry_after_counts_from_the_request_that_frees_a_slot(env):
     assert rsvc.recent_requests(s, "alice", "vid-alice", now)[0] == now - timedelta(hours=23)
     with pytest.raises(rsvc.ReanalysisRateLimited) as exc:
         rsvc.check_rate(s, "alice", "vid-alice", now)
-    assert exc.value.retry_after == 3600
+    assert (exc.value.limit_kind, exc.value.retry_after) == ("per_video", 3600)
     assert rsvc.check_rate(s, "alice", "vid-alice", now + timedelta(hours=1, seconds=1)) == 0
     s.close()
 

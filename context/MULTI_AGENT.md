@@ -2071,12 +2071,17 @@ session builds the UI from the API note below. Migration **0017** (single head).
   video gets 403 `REANALYSIS_FORBIDDEN`; anyone who can't see it gets 404 (§15). Legacy
   videos with no owner: admin only (with REQUIRE_AUTH off, the dev user). Classified in
   T33's route table as `OWNER_OR_ADMIN`.
-- **Rate limit.** `REANALYSIS_MAX_PER_VIDEO` (3) per caller per video per rolling
-  `REANALYSIS_WINDOW_HOURS` (24), counted from `audit_events` (`reanalysis_requested`,
-  entity = the video, actor = the caller). Retry-After is when the request that frees a
-  slot leaves the window. A re-run whose dispatch failed doesn't count. 0 turns the route
-  off (403 `REANALYSIS_DISABLED`). The video row is locked (Postgres) while counting so
-  two requests can't both take the last slot.
+- **Rate limits.** Two, both per rolling `REANALYSIS_WINDOW_HOURS` (24), counted from
+  `audit_events` (`reanalysis_requested`, entity = the video, actor = the caller):
+  `REANALYSIS_MAX_PER_VIDEO` (3) per caller per video, and `REANALYSIS_MAX_PER_USER`
+  (20) per caller across all videos (added by the lead on 2026-11-26). **Admins count
+  against the per-user limit too**: no setting exempts any role from a limit, so there
+  was no pattern to follow. Retry-After is when the request that frees a slot leaves the
+  window; if both limits block, the later of the two (both must free up), and
+  `limit_kind` names that one. A re-run whose dispatch failed doesn't count. 0 in either
+  setting turns the route off (403 `REANALYSIS_DISABLED`). A Postgres advisory lock per
+  caller plus the video row lock stop two requests at once from both taking the last
+  slot.
 - **Open review case.** OPEN cases of the lineage become `SUPERSEDED` (new
   `reviewcasestatus` value) with `human_reviews.superseded_by_job_id`, and a
   `review_superseded` audit event (actor, reason, new job). They leave the default OPEN
@@ -2114,7 +2119,7 @@ Request body (optional; `{}` or no body is fine):
   "celery_task_id": "…",
   "previous_job_id": "…",       // the job this re-runs (null if the video had none)
   "superseded_review_ids": ["…"],  // open review cases closed by this re-run
-  "reanalyses_remaining": 2,    // left in the current window for this caller and video
+  "reanalyses_remaining": 2,    // left in the window: the smaller of the per-video and per-user allowances
   "created_at": "…"
 }
 ```
@@ -2127,7 +2132,7 @@ Then poll `GET /v1/jobs/{job_id}` as for any job.
 | 403 | re-analysis turned off (`REANALYSIS_MAX_PER_VIDEO=0`) | `detail.code = "REANALYSIS_DISABLED"` |
 | 404 | no such video, or the caller can't see it | `detail = "Video not found"` |
 | 422 | reason longer than 2000 characters | |
-| 429 | over the limit | header `Retry-After: <seconds>`; `detail = {code: "REANALYSIS_RATE_LIMITED", message, retry_after_seconds, limit, window_hours}` |
+| 429 | over a limit: 3 per video or 20 in total per caller per 24 h (admins included) | header `Retry-After: <seconds>`; `detail = {code: "REANALYSIS_RATE_LIMITED", limit_kind: "per_video" \| "per_user", message, retry_after_seconds, limit, window_hours}`. If both limits block, `limit_kind` and `Retry-After` are for the one that frees up later |
 
 Show the button when `GET /v1/me` says the caller is an admin, or the result's
 `submitted_by` is the caller (the server checks again).
