@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "run_id": "T50-recall-old_rules_only_b52e952-strict_recall_golden_pmid_kept",
+  "run_group": "T50-recall-old_rules_only_b52e952",
+  "date": "2026-11-26",
+  "task": "T50",
+  "pipeline_step": "retrieve_evidence",
+  "split": "tune",
+  "synthetic": false,
+  "golden_set_ref": "in-repo research/claim-level/dataset (commit not recorded in the report)",
+  "models": [],
+  "variant": "old_rules_only_b52e952",
+  "metric_name": "strict_recall_golden_pmid_kept",
+  "value": 0.0339,
+  "ci95": null,
+  "n_items": 118,
+  "n_unit": "tune claims with a golden-cited PMID",
+  "cost_usd": 0.0,
+  "report_path": "evals/reports/T50/recall.md",
+  "notes": "Tune split: development numbers, not product accuracy. 4/118. D8 search bar (lead, 2026-11-26): strict = a golden-cited PMID is among the records the reranker kept (claims with a golden PMID); lenient = strict, or a kept record is on topic (intervention = T49 check only; claim = T49 check or one of the claim's concepts). Live PubMed, up to 3 rounds per claim; covers plan -> retrieve -> rerank. Overall only: the report also splits English / non-English. Golden-set commit not recorded in the report. No CI in the report. Rules only, no model call. Baseline: code before the T50 rewrite (b52e952)."
+}

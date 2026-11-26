@@ -2158,6 +2158,64 @@ what came before them.
 `review.superseded_by_job_id` → show "Superseded by a newer analysis" with a link.
 `GET /v1/reviews` takes `status=SUPERSEDED` (default `OPEN` leaves them out).
 
+## 7ag. Evaluation Registry and Admin Evals API (T63, backend; design §13, §14, §15)
+
+- **Record per measurement:** `evals/registry/<run_id>.json`, one metric of one run
+  (`app/evaluation/registry.py`, `EvalRecord`; JSON schema `evals/eval_record.schema.json`,
+  generated from the model: `python -m app.evaluation.registry schema`, a test keeps them in
+  step). Fields: `run_id`, `run_group` (records of one run; `cost_usd` is per group, so count
+  it once per group), `date`, `task`, `pipeline_step` (a graph node name; tested against
+  `NODE_OUTPUTS`), `split` (`tune` / `test` / `null` = not one golden split, notes say why),
+  `synthetic`, `golden_set_ref`, `models` (`[{provider, model, prompt, role}]`; `[]` = no
+  model, `null` = report doesn't say), `variant`, `metric_name`, `value`, `ci95`
+  (`{low, high, method}` or null), `n_items`, `n_unit`, `cost_usd` (0 = no paid call),
+  `report_path` (repo-relative, must exist), `notes`. Values are copied from reports, never
+  recomputed; anything a report lacks is `null` with the reason in `notes`.
+  `python -m app.evaluation.registry validate` checks a directory.
+- **Backfill (32 records):** T05 (2, synthetic), T07 (2, synthetic), T24 judge cross-check
+  (2, split null: whole golden set), T38 (9: 3 steps × 3 candidates, Claude + OpenAI), T43
+  blind extraction ceiling (2, with the report's bootstrap CIs), T49 guard on frozen evidence
+  (2), T50 T49 replay (2), T50 recall rules-only old/new (6), T50 vitamin K rules-only (1),
+  T53 recall helpers on (3) and vitamin K helpers on (1). No CI anywhere except T43 (T38 kept
+  no per-item outputs). Several reports don't record the golden commit (T49, T50, T53): the
+  ref says so. T60 and T61 add their own records; every evaluation task now does
+  (`automation/TASK_PROMPT.md`).
+- **Image:** `backend/Dockerfile` and `Dockerfile.gpu` copy `evals/registry/` to
+  `/app/evals/registry` (records only, not the reports). `EVALS_REGISTRY_DIR` overrides the
+  location.
+
+**API for the frontend (`/admin/evals`):** `GET /v1/admin/evals`, bearer token required.
+No token or bad token 401; any role below admin 403 (checked before the registry is read;
+`user_metadata.role` is ignored). Query (all optional): `split=tune|test|none`,
+`step=` (repeated or comma-separated graph node names; unknown = 422), `synthetic=true|false`,
+`task=T38`. Response:
+```json
+{
+  "total": 32,
+  "step_order": ["load_artifacts", "...", "extract_claims", "analyze_stance", "plan_retrieval",
+                 "retrieve_evidence", "rerank_evidence", "verify_claims", "critique_verification",
+                 "judge_classification", "...", "persist_result"],
+  "groups": [{"step": "extract_claims", "step_index": 4, "count": 5, "run_ids": ["…"]}],
+  "items": [{
+    "schema_version": "1", "run_id": "T38-verify_claims-claude-opus-5-5", "run_group": null,
+    "date": "2026-11-24", "task": "T38", "pipeline_step": "verify_claims", "step_index": 9,
+    "split": "tune", "synthetic": false, "golden_set_ref": "origin/data/golden-label-set@0fbc68a05a7d",
+    "models": [{"provider": "anthropic", "model": "claude-opus-5-5", "prompt": "verify_v3", "role": null}],
+    "variant": null, "metric_name": "verification_macro_f1", "value": 0.6759, "ci95": null,
+    "n_items": 174, "n_unit": "claims", "cost_usd": 5.9869,
+    "report_path": "evals/reports/T38_routing/combined/report.md",
+    "report_url": "https://github.com/PranavCR01/infodemic-monitor/blob/langgraph-build/evals/reports/T38_routing/combined/report.md",
+    "notes": "Tune split: development numbers, not product accuracy. …"
+  }]
+}
+```
+Items are sorted by `step_index`, then newest date, then `run_id`; `groups` follows the same
+order. `split: null` rows (synthetic sets, whole-golden-set checks, the vitamin K job) need
+their own filter value (`none`) and label; show `synthetic: true` rows as synthetic. The
+report base URL is `EVALS_REPORT_BASE_URL` (default the `langgraph-build` blob URL above).
+Records are read per request, so a deploy is all a new record needs. An invalid registry
+is a 500 (logged); the validation test stops that from merging.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -2179,6 +2237,12 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-26**: T63 (backend; design §13, §14, §15) evaluation registry and admin evals API, no
+  spend. `evals/registry/<run_id>.json` per metric per run, Pydantic model + JSON schema + a test that
+  validates every file; 32 records backfilled from existing reports (T05, T07 synthetic; T24, T38, T43,
+  T49, T50, T53), numbers copied, missing fields null with the reason in notes. `GET /v1/admin/evals`
+  (admin only: 401/403 otherwise) reads the registry shipped in the image. Standing rule added to
+  TASK_PROMPT.md: every evaluation task adds its own record. Decisions and API shape in §7ag.
 - **2026-11-26**: T51 (design §4, §7) design/quality/quantity statements are not efficacy claims, no
   spend. New claim_category `evidence_meta` (chosen over a claim_kind `not_verifiable`: claim_kind picks
   the sources, and the golden guide verifies such statements, e.g. tune v79 c3 SUPPORTED) for statements

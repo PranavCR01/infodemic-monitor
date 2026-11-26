@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "run_id": "T50-t49_replay-t50_retrieved",
+  "run_group": "T50-t49-replay",
+  "date": "2026-11-26",
+  "task": "T50",
+  "pipeline_step": "verify_claims",
+  "split": "tune",
+  "synthetic": false,
+  "golden_set_ref": "in-repo research/claim-level/dataset (commit not recorded in the report)",
+  "models": [],
+  "variant": "t50_retrieved",
+  "metric_name": "unproven_videos_keeping_misinfo",
+  "value": 0.8,
+  "ci95": null,
+  "n_items": 5,
+  "n_unit": "tune videos labelled MISINFO (unproven) in gold",
+  "cost_usd": 0.0,
+  "report_path": "evals/reports/T50/t49_replay/report.md",
+  "notes": "Tune split: development numbers, not product accuracy. 4/5 tune MISINFO (unproven) videos keep that label (v120 becomes CANNOT_RECOGNIZE) when the T49 guard is replayed on the rewritten rules-only search's evidence (t50_retrieved). Live PubMed, recorded 2026-11-26T03:30:17Z, code ed5504c6ab49; no model (find-the-study and the search assistant not included). Golden-set commit not recorded in the report. No CI."
+}

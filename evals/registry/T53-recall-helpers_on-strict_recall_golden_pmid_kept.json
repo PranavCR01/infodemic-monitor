@@ -1,0 +1,40 @@
+{
+  "schema_version": "1",
+  "run_id": "T53-recall-helpers_on-strict_recall_golden_pmid_kept",
+  "run_group": "T53-recall-helpers_on",
+  "date": "2026-11-26",
+  "task": "T53",
+  "pipeline_step": "retrieve_evidence",
+  "split": "tune",
+  "synthetic": false,
+  "golden_set_ref": "in-repo research/claim-level/dataset (commit not recorded in the report)",
+  "models": [
+    {
+      "provider": "anthropic",
+      "model": "claude-haiku-5-5",
+      "prompt": null,
+      "role": "plan_search"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-haiku-5-5",
+      "prompt": null,
+      "role": "translate_claim"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-haiku-5-5",
+      "prompt": null,
+      "role": "find_study"
+    }
+  ],
+  "variant": "helpers_on",
+  "metric_name": "strict_recall_golden_pmid_kept",
+  "value": 0.1525,
+  "ci95": null,
+  "n_items": 118,
+  "n_unit": "tune claims with a golden-cited PMID",
+  "cost_usd": 1.0421,
+  "report_path": "evals/reports/T50/paid_run.md",
+  "notes": "Tune split: development numbers, not product accuracy. 18/118. D8 search bar (lead, 2026-11-26): strict = a golden-cited PMID is among the records the reranker kept (claims with a golden PMID); lenient = strict, or a kept record is on topic (intervention = T49 check only; claim = T49 check or one of the claim's concepts). Live PubMed, up to 3 rounds per claim; covers plan -> retrieve -> rerank. Overall only: the report also splits English / non-English. Golden-set commit not recorded in the report. No CI in the report. Helpers plan_search, translate_claim, find_study on claude-haiku-5-5 (routing_v1; prompt ids not named in the report). cost_usd = the whole tune run ($0.1521 tokens + $0.89 web search), shared by the 3 records of this run group. Report table: evals/reports/T50/paid_run.md; scorer output evals/reports/T50/recall_paid.md. The old rules-only baseline was re-recorded for this report with slightly different counts (51/74/4) from T50's (52/75/4): live PubMed is not frozen."
+}
