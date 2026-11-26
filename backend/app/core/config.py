@@ -76,6 +76,16 @@ class Settings(BaseSettings):
     # expires_at so the player asks again when it runs out.
     PLAYBACK_URL_TTL_SECONDS: int = 600
 
+    # Deliberate re-analysis (T55): POST /v1/videos/{id}/reanalyse allows each user at
+    # most REANALYSIS_MAX_PER_VIDEO re-runs of one video per rolling
+    # REANALYSIS_WINDOW_HOURS (each re-run is one more paid analysis). Over the limit the
+    # route answers 429 with Retry-After. On top of that, each user may start at most
+    # REANALYSIS_MAX_PER_USER re-runs in the same window across all videos (admins
+    # included). 0 in either turns the route off for everyone.
+    REANALYSIS_MAX_PER_VIDEO: int = 3
+    REANALYSIS_MAX_PER_USER: int = 20
+    REANALYSIS_WINDOW_HOURS: int = 24
+
     # Migrations
     RUN_MIGRATIONS: bool = True  # set False on Railway worker service
 

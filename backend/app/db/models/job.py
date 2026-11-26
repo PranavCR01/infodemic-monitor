@@ -50,6 +50,12 @@ class Job(Base):
     state: Mapped[Optional[str]] = mapped_column(String(32), nullable=True, index=True)
     current_step: Mapped[Optional[str]] = mapped_column(String(32), nullable=True)
     attempts: Mapped[int] = mapped_column(Integer, nullable=False, default=0, server_default="0")
+    # T55 (migration 0017): the job this one re-analyses (a deliberate re-run from
+    # POST /v1/videos/{id}/reanalyse, or a reviewer's REQUEST_REANALYSIS). NULL on first
+    # runs and on jobs created before 0017.
+    previous_job_id: Mapped[Optional[str]] = mapped_column(
+        String, ForeignKey("jobs.id"), nullable=True, index=True
+    )
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )

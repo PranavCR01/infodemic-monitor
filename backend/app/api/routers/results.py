@@ -1,8 +1,8 @@
 """§17 read endpoints for results (T26).
 
 - ``GET /v1/videos/{video_id}/results``: final label, explanation, review case, claims,
-  segments (the same body as ``GET /jobs/{job_id}/result``) for the caller's latest
-  job on that video.
+  segments (the same body as ``GET /jobs/{job_id}/result``) for the video's current
+  result: the newest finished job the caller may see (T55), with ``previous_jobs``.
 - ``GET /v1/videos/{video_id}/claims``: claims with stance, verdict, critic and papers.
 - ``GET /v1/claims/{claim_id}/evidence``: every paper the verifier saw for one claim
   (``claim_id`` is the claim's stable ``id`` from the claims response).
@@ -28,6 +28,7 @@ from app.db.models.job import Job, JobStatus
 from app.db.models.result import Result
 from app.db.session import get_db
 from app.services.blind_review import require_revealed
+from app.services.reanalysis_service import is_finished, latest_finished_first
 from app.services.result_view_service import claim_views, evidence_views, job_result, review_case
 
 router = APIRouter(prefix="/v1", tags=["results"])
@@ -36,12 +37,15 @@ REVIEW_REJECTED = "REVIEW_REJECTED"
 
 
 def _latest_job(db: Session, video_id: str, user: dict) -> Job:
+    """The video's current result (T55): the newest finished job the caller may see, so
+    a re-analysis that is still running or failed doesn't hide the last result. With no
+    finished job, the newest job (answered with 202 / 409)."""
     ownership.video_or_404(db, video_id, user)
-    job = (
+    job = latest_finished_first(
+        db,
         ownership.visible_jobs(db.query(Job), user)
         .filter(Job.video_id == video_id)
-        .order_by(Job.created_at.desc(), Job.id.desc())
-        .first()
+        .order_by(Job.created_at.desc(), Job.id.desc()),
     )
     if job is None:
         raise HTTPException(status_code=404, detail="Video not found")
@@ -51,9 +55,7 @@ def _latest_job(db: Session, video_id: str, user: dict) -> Job:
 def _finished(job: Job) -> bool:
     """A result can be shown: done, in review, or rejected by a reviewer (the rejected
     result stays readable so the page can say why)."""
-    return job.status in (JobStatus.SUCCESS, JobStatus.REVIEW_REQUIRED) or (
-        job.status == JobStatus.FAILED and job.error_code == REVIEW_REJECTED
-    )
+    return is_finished(job)
 
 
 def _result_or_error(db: Session, job: Job) -> Result:

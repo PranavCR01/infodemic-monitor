@@ -1,10 +1,14 @@
 import logging
 from typing import Optional
 
-from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
+from datetime import datetime
+from typing import Callable
+
+from fastapi import APIRouter, Body, Depends, File, HTTPException, Response, UploadFile
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 
+from app.api import ownership
 from app.api.ownership import owner_id
 from app.auth.dependencies import get_current_user
 from app.core.config import settings
@@ -150,3 +154,101 @@ def register_video(
         "container": checked.media.container,
         "duplicate": duplicate,
     }
+
+
+# ------------------------------------------------------------------ re-analysis (T55)
+
+
+class ReanalyseRequest(BaseModel):
+    reason: Optional[str] = Field(default=None, max_length=2000)
+
+
+class ReanalyseResponse(BaseModel):
+    job_id: str
+    video_id: str
+    status: str            # PENDING; FAILED (error_code DISPATCH_FAILED) if queuing failed
+    state: str             # §1 state: QUEUED; FAILED if queuing failed
+    error_code: Optional[str] = None
+    celery_task_id: Optional[str] = None
+    previous_job_id: Optional[str] = None
+    superseded_review_ids: list[str] = Field(default_factory=list)
+    reanalyses_remaining: int  # the smaller of the per-video and per-user allowances left
+    created_at: Optional[datetime] = None
+
+
+def get_reanalysis_dispatcher() -> Callable[[str, Optional[str]], Optional[str]]:
+    """Queues the new job exactly as POST /jobs/create does; returns the task id.
+    Overridden in tests."""
+
+    def _dispatch(job_id: str, storage_key: Optional[str]) -> Optional[str]:
+        from app.api.routers.jobs import process_video_task
+
+        return process_video_task.delay(job_id, storage_key=storage_key).id
+
+    return _dispatch
+
+
+@v1_router.post("/{video_id}/reanalyse", response_model=ReanalyseResponse, status_code=202)
+def reanalyse_video(
+    video_id: str,
+    response: Response,
+    payload: Optional[ReanalyseRequest] = Body(default=None),
+    db: Session = Depends(get_db),
+    current_user: dict = Depends(get_current_user),
+    dispatch: Callable = Depends(get_reanalysis_dispatcher),
+):
+    """Analyse a video again on purpose (T55), e.g. to check a pipeline change on it.
+
+    Only the video's owner or an admin; the reviewer role is not enough. Always creates
+    a new job linked to the video's previous one (``previous_job_id``); the reuse rules
+    of POST /jobs/create don't apply. An open review case on the video is SUPERSEDED.
+    At most ``REANALYSIS_MAX_PER_VIDEO`` per caller per video per
+    ``REANALYSIS_WINDOW_HOURS``, and ``REANALYSIS_MAX_PER_USER`` per caller across all
+    videos in the same window (admins included): over either, 429 with Retry-After and
+    ``limit_kind``."""
+    from app.auth.roles import role_of
+    from app.db.models.video import Video
+    from app.services import reanalysis_service as rs
+    from app.services import users_service
+
+    uid = ownership.owner_id(current_user)
+    video = db.get(Video, video_id)
+    if uid is None or video is None or not ownership.can_view_video(db, video, current_user):
+        raise HTTPException(status_code=404, detail="Video not found")
+    is_owner = video.user_id == uid or (video.user_id is None and not settings.REQUIRE_AUTH)
+    if not (is_owner or ownership.is_admin(current_user)):
+        # The caller may see the video (a reviewer) but not re-run it.
+        raise HTTPException(status_code=403, detail={
+            "code": "REANALYSIS_FORBIDDEN",
+            "message": "only the video's owner or an admin can re-analyse it",
+        })
+    users_service.remember(db, current_user)
+    try:
+        out = rs.reanalyse_video(
+            db, video, actor_id=uid, actor_role=role_of(current_user).value,
+            reason=payload.reason if payload else None, dispatch=dispatch,
+        )
+    except rs.ReanalysisRateLimited as exc:
+        db.rollback()
+        raise HTTPException(
+            status_code=429,
+            detail={"code": "REANALYSIS_RATE_LIMITED", "message": str(exc),
+                    "limit_kind": exc.limit_kind,  # "per_video" or "per_user"
+                    "retry_after_seconds": exc.retry_after, "limit": exc.limit,
+                    "window_hours": exc.window_hours},
+            headers={"Retry-After": str(exc.retry_after)},
+        ) from exc
+    except rs.ReanalysisDisabled as exc:
+        db.rollback()
+        raise HTTPException(status_code=403, detail={"code": "REANALYSIS_DISABLED", "message": str(exc)}) from exc
+
+    from app.services.job_events import effective_state
+
+    job = out.job
+    response.headers["X-Reanalyses-Remaining"] = str(out.remaining)
+    return ReanalyseResponse(
+        job_id=job.id, video_id=job.video_id, status=job.status.value, state=effective_state(job),
+        error_code=job.error_code, celery_task_id=job.celery_task_id, previous_job_id=out.previous_job_id,
+        superseded_review_ids=out.superseded_review_ids, reanalyses_remaining=out.remaining,
+        created_at=job.created_at,
+    )

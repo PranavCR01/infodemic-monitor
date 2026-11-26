@@ -19,8 +19,10 @@ Modality = Literal["speech", "screen", "both"]
 SourceKind = Literal["pubmed", "reference", "library", "journal_doi", "other"]
 # OPEN case → REVIEW_REQUIRED (what the current frontend checks). Resolved cases:
 # APPROVE → VERIFIED; CORRECT / MARK_INSUFFICIENT → CORRECTED; REJECT → REJECTED;
-# REQUEST_REANALYSIS → REANALYSIS_REQUESTED.
-ReviewStatus = Literal["REVIEW_REQUIRED", "VERIFIED", "CORRECTED", "REJECTED", "REANALYSIS_REQUESTED"]
+# REQUEST_REANALYSIS → REANALYSIS_REQUESTED. T55: a case closed by a deliberate
+# re-analysis before anyone decided it → SUPERSEDED.
+ReviewStatus = Literal["REVIEW_REQUIRED", "VERIFIED", "CORRECTED", "REJECTED", "REANALYSIS_REQUESTED",
+                       "SUPERSEDED"]
 
 
 class SegmentView(BaseModel):
@@ -109,8 +111,8 @@ class ReviewView(BaseModel):
     reasons: list[str] = Field(default_factory=list)
     # T26
     review_id: str
-    case_status: Literal["OPEN", "RESOLVED"]
-    resolved: bool
+    case_status: Literal["OPEN", "RESOLVED", "SUPERSEDED"]
+    resolved: bool  # a reviewer decided it (false while OPEN and when SUPERSEDED)
     action: Optional[str] = None
     reason_details: list[ReasonView] = Field(default_factory=list)
     rules_fired: list[dict[str, Any]] = Field(default_factory=list)
@@ -122,6 +124,30 @@ class ReviewView(BaseModel):
     decision_reason: Optional[str] = None
     created_at: Optional[datetime] = None
     decided_at: Optional[datetime] = None
+    # T55: the re-analysis that superseded this case (case_status SUPERSEDED).
+    superseded_by_job_id: Optional[str] = None
+
+
+class PreviousJobView(BaseModel):
+    """An earlier finished analysis of the same video (T55)."""
+
+    job_id: str
+    finished_at: Optional[datetime] = None  # when its result was stored
+    label: str
+    label_display: Optional[str] = None
+    pipeline_version: Optional[str] = None
+    status: str  # job status: SUCCESS, REVIEW_REQUIRED, or FAILED (rejected by a reviewer)
+
+
+class LatestJobView(BaseModel):
+    """The video's newest job when it isn't the one shown (T55): a re-analysis still
+    running (PENDING / STARTED), or one that failed."""
+
+    job_id: str
+    status: str
+    state: str
+    error_code: Optional[str] = None
+    created_at: Optional[datetime] = None
 
 
 class JobResultResponse(BaseModel):
@@ -162,6 +188,15 @@ class JobResultResponse(BaseModel):
     ocr_segments: list[SegmentView] = Field(default_factory=list)
     # T33: who started the job (``jobs.user_id``, the JWT ``sub``); NULL on legacy jobs.
     submitted_by: Optional[str] = None
+    # T55: versions. Other finished analyses of this video (same owner) that came before
+    # this one, newest first; the job this one re-analysed; the video's current result
+    # (its newest finished job) and whether this is it; and the newest job if it is a
+    # later run that hasn't finished.
+    previous_jobs: list[PreviousJobView] = Field(default_factory=list)
+    previous_job_id: Optional[str] = None
+    current_job_id: Optional[str] = None
+    is_current: bool = True
+    latest_job: Optional[LatestJobView] = None
 
 
 class ClaimsResponse(BaseModel):
