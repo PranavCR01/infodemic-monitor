@@ -411,6 +411,22 @@ the lexicon's "antibiotic". Narrative reviews of cell and animal work ("citrus f
 in cancer biology") still pass. Fixes belong in the MeSH lexicon (which also changes T03's
 queries and fixtures) or in a learned relevance model, judged on the real labelled set.
 
+**T60: lexical vs MedCPT on real records (decision: keep lexical).** A real relevance set
+replaced the synthetic one for this decision: 30 tune-split claims (25 English, 4 Spanish,
+1 Hindi; includes the vitamin K job's c8) × their first 20 retrieved records (599 PubMed
+records), labelled 2/1/0 by an AI assistant, to be spot-checked by the lead (one labeller, not
+inter-annotator agreement). `ncbi/MedCPT-Cross-Encoder` ran locally through the
+`RelevanceModel` hook (`app/core/retrieval/cross_encoder.py`, opt-in, not wired in). At the
+current threshold (lexical 0.4) vs MedCPT at 0.5: precision on "partly relevant or better" is
+a little higher for MedCPT (P@10 0.35 vs 0.28) and it passes on half as many off-topic papers
+(76 vs 150), but the per-claim gain is inside noise (paired bootstrap, P@10 +0.025, 95% CI
+−0.035 to +0.097). It loses strictly relevant papers (recall 9/16 vs 13/16; per-claim −0.39,
+CI −0.72 to −0.07). It also keeps nothing for the Spanish claims, because it reads the claim
+in its own language. The Hindi claim goes the other way: MedCPT keeps 8 of its 9 relevant
+records and lexical keeps none. Not clearly better, so the default stays lexical. Numbers,
+latency and image size: `evals/reports/T60/README.md`. If revisited: score the *translated*
+claim text (the planner already has it) and re-label with two people.
+
 ## 7g. Evidence Verifier Decisions (T06, #33)
 
 The node is `backend/app/core/graph/verifier.py` (`make_verify_claims(caller)`); the

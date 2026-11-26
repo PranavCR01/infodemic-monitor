@@ -14,9 +14,17 @@ Run from backend/:
     # 3. score both scorers, threshold sweep
     python scripts/t60_rerank_measure.py score --candidates ../evals/reports/T60/candidates.json \
         --labels ../evals/reports/T60/labels.json --out ../evals/reports/T60/results.json
+    # 3b. subsets (English / non-English), claims-with-relevant ranking, paired bootstrap
+    python scripts/t60_rerank_measure.py compare --candidates ../evals/reports/T60/candidates.json \
+        --labels ../evals/reports/T60/labels.json --results ../evals/reports/T60/results.json \
+        --medcpt-threshold 0.5 --out ../evals/reports/T60/compare.json
     # 4. CPU latency and memory, pinned to N cores (run once per core count)
     taskset -c 0 python scripts/t60_rerank_measure.py latency --threads 1 \
         --candidates ../evals/reports/T60/candidates.json --out ../evals/reports/T60/latency_1cpu.json
+
+``score`` and ``latency`` need ``torch`` and ``transformers`` (not in requirements.txt). Set
+``HF_HUB_DISABLE_XET=1``: the Xet transfer path stalled behind the proxy, while the plain
+HTTPS download (huggingface.co → us.aws.cdn.hf.co) worked.
 
 Claim selection (deterministic, tune split only; the test split is never read):
 ``evals/reports/T50/tune_paid.json`` claims with >= 20 retrieved records, sorted by id;
@@ -262,6 +270,68 @@ def score(cand: Path, labels_path: Path, out: Path) -> None:
     print(f"-> {out}")
 
 
+# -------------------------------------------------------------------- compare
+
+
+def _subset_metrics(claims, labels, scores, threshold, min_label) -> dict[str, Any]:
+    ev = evaluate(claims, labels, scores, threshold, min_label)
+    with_rel = [c for c in claims if any(v >= min_label for v in labels[c["claim_id"]].values())]
+    ev.pop("per_claim")
+    ev["ranking_only_claims_with_relevant"] = (
+        ranking_only(with_rel, labels, scores, min_label) if with_rel else None)
+    ev["n_claims"] = len(claims)
+    return ev
+
+
+def _paired_bootstrap(claims, labels, sa, ta, sb, tb, min_label, metric, n=2000, seed=60):
+    """Paired bootstrap over claims of mean(metric_b - metric_a); claims where either side
+    has no value (nothing kept, or no relevant record for recall) are dropped."""
+    import random
+
+    def per_claim(scores, t):
+        return evaluate(claims, labels, scores, t, min_label)["per_claim"]
+
+    pa, pb = per_claim(sa, ta), per_claim(sb, tb)
+
+    def val(pc):
+        if metric == "recall":
+            return None if pc["relevant"] == 0 else pc["relevant_kept"] / pc["relevant"]
+        return pc[metric]
+
+    diffs = [val(pb[c["claim_id"]]) - val(pa[c["claim_id"]]) for c in claims
+             if val(pa[c["claim_id"]]) is not None and val(pb[c["claim_id"]]) is not None]
+    if not diffs:
+        return None
+    rng = random.Random(seed)
+    boots = sorted(statistics.mean(rng.choice(diffs) for _ in diffs) for _ in range(n))
+    return {"n_claims": len(diffs), "mean_diff": round(statistics.mean(diffs), 3),
+            "ci95": [round(boots[int(0.025 * n)], 3), round(boots[int(0.975 * n) - 1], 3)]}
+
+
+def compare(cand: Path, labels_path: Path, results: Path, out: Path, medcpt_t: float) -> None:
+    claims = json.loads(cand.read_text())["claims"]
+    labels = {cid: v["labels"] for cid, v in json.loads(labels_path.read_text())["claims"].items()}
+    res = json.loads(results.read_text())
+    lex, med = res["scores"]["lexical"], res["scores"]["medcpt"]
+    lex_t = DEFAULT_RERANK_CONFIG.min_relevance
+    subsets = {"all": claims,
+               "english": [c for c in claims if c["language"] == "en"],
+               "non_english": [c for c in claims if c["language"] != "en"]}
+    report: dict[str, Any] = {"lexical_threshold": lex_t, "medcpt_threshold": medcpt_t, "subsets": {}}
+    for name, cs in subsets.items():
+        report["subsets"][name] = {
+            lab: {"lexical": _subset_metrics(cs, labels, lex, lex_t, ml),
+                  "medcpt": _subset_metrics(cs, labels, med, medcpt_t, ml)}
+            for lab, ml in (("strict", 2), ("lenient", 1))}
+    report["bootstrap_medcpt_minus_lexical"] = {
+        name: {lab: {m: _paired_bootstrap(cs, labels, lex, lex_t, med, medcpt_t, ml, m)
+                     for m in ("p@3", "p@10", "recall")}
+               for lab, ml in (("strict", 2), ("lenient", 1))}
+        for name, cs in subsets.items()}
+    out.write_text(json.dumps(report, indent=1))
+    print(json.dumps(report, indent=1))
+
+
 # -------------------------------------------------------------------- latency
 
 
@@ -312,6 +382,12 @@ def main() -> None:
     s.add_argument("--candidates", type=Path, required=True)
     s.add_argument("--labels", type=Path, required=True)
     s.add_argument("--out", type=Path, required=True)
+    cp = sub.add_parser("compare")
+    cp.add_argument("--candidates", type=Path, required=True)
+    cp.add_argument("--labels", type=Path, required=True)
+    cp.add_argument("--results", type=Path, required=True)
+    cp.add_argument("--medcpt-threshold", type=float, default=0.5)
+    cp.add_argument("--out", type=Path, required=True)
     lt = sub.add_parser("latency")
     lt.add_argument("--candidates", type=Path, required=True)
     lt.add_argument("--threads", type=int, required=True)
@@ -322,6 +398,8 @@ def main() -> None:
         build(a.out)
     elif a.cmd == "score":
         score(a.candidates, a.labels, a.out)
+    elif a.cmd == "compare":
+        compare(a.candidates, a.labels, a.results, a.out, a.medcpt_threshold)
     else:
         latency(a.candidates, a.threads, a.out, a.repeats)
 

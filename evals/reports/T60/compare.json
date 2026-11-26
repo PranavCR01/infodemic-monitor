@@ -1,0 +1,392 @@
+{
+ "lexical_threshold": 0.4,
+ "medcpt_threshold": 0.5,
+ "subsets": {
+  "all": {
+   "strict": {
+    "lexical": {
+     "threshold": 0.4,
+     "p@3": 0.101,
+     "p@10": 0.06,
+     "recall_macro": 0.756,
+     "recall_micro": 0.812,
+     "claims_nothing_kept": 7,
+     "kept_total": 209,
+     "not_relevant_kept": 150,
+     "claims_with_relevant": 9,
+     "ranking_only_claims_with_relevant": {
+      "p@3": 0.259,
+      "p@10": 0.156,
+      "MAP": 0.488
+     },
+     "n_claims": 30
+    },
+    "medcpt": {
+     "threshold": 0.5,
+     "p@3": 0.1,
+     "p@10": 0.052,
+     "recall_macro": 0.37,
+     "recall_micro": 0.562,
+     "claims_nothing_kept": 10,
+     "kept_total": 132,
+     "not_relevant_kept": 76,
+     "claims_with_relevant": 9,
+     "ranking_only_claims_with_relevant": {
+      "p@3": 0.185,
+      "p@10": 0.111,
+      "MAP": 0.336
+     },
+     "n_claims": 30
+    }
+   },
+   "lenient": {
+    "lexical": {
+     "threshold": 0.4,
+     "p@3": 0.355,
+     "p@10": 0.283,
+     "recall_macro": 0.536,
+     "recall_micro": 0.573,
+     "claims_nothing_kept": 7,
+     "kept_total": 209,
+     "not_relevant_kept": 150,
+     "claims_with_relevant": 18,
+     "ranking_only_claims_with_relevant": {
+      "p@3": 0.519,
+      "p@10": 0.4,
+      "MAP": 0.558
+     },
+     "n_claims": 30
+    },
+    "medcpt": {
+     "threshold": 0.5,
+     "p@3": 0.417,
+     "p@10": 0.35,
+     "recall_macro": 0.502,
+     "recall_micro": 0.544,
+     "claims_nothing_kept": 10,
+     "kept_total": 132,
+     "not_relevant_kept": 76,
+     "claims_with_relevant": 18,
+     "ranking_only_claims_with_relevant": {
+      "p@3": 0.407,
+      "p@10": 0.428,
+      "MAP": 0.556
+     },
+     "n_claims": 30
+    }
+   }
+  },
+  "english": {
+   "strict": {
+    "lexical": {
+     "threshold": 0.4,
+     "p@3": 0.1,
+     "p@10": 0.064,
+     "recall_macro": 0.829,
+     "recall_micro": 0.857,
+     "claims_nothing_kept": 5,
+     "kept_total": 179,
+     "not_relevant_kept": 131,
+     "claims_with_relevant": 7,
+     "ranking_only_claims_with_relevant": {
+      "p@3": 0.286,
+      "p@10": 0.186,
+      "MAP": 0.474
+     },
+     "n_claims": 25
+    },
+    "medcpt": {
+     "threshold": 0.5,
+     "p@3": 0.111,
+     "p@10": 0.058,
+     "recall_macro": 0.476,
+     "recall_micro": 0.643,
+     "claims_nothing_kept": 7,
+     "kept_total": 121,
+     "not_relevant_kept": 73,
+     "claims_with_relevant": 7,
+     "ranking_only_claims_with_relevant": {
+      "p@3": 0.238,
+      "p@10": 0.143,
+      "MAP": 0.411
+     },
+     "n_claims": 25
+    }
+   },
+   "lenient": {
+    "lexical": {
+     "threshold": 0.4,
+     "p@3": 0.325,
+     "p@10": 0.271,
+     "recall_macro": 0.543,
+     "recall_micro": 0.608,
+     "claims_nothing_kept": 5,
+     "kept_total": 179,
+     "not_relevant_kept": 131,
+     "claims_with_relevant": 15,
+     "ranking_only_claims_with_relevant": {
+      "p@3": 0.467,
+      "p@10": 0.373,
+      "MAP": 0.521
+     },
+     "n_claims": 25
+    },
+    "medcpt": {
+     "threshold": 0.5,
+     "p@3": 0.407,
+     "p@10": 0.345,
+     "recall_macro": 0.544,
+     "recall_micro": 0.608,
+     "claims_nothing_kept": 7,
+     "kept_total": 121,
+     "not_relevant_kept": 73,
+     "claims_with_relevant": 15,
+     "ranking_only_claims_with_relevant": {
+      "p@3": 0.422,
+      "p@10": 0.4,
+      "MAP": 0.556
+     },
+     "n_claims": 25
+    }
+   }
+  },
+  "non_english": {
+   "strict": {
+    "lexical": {
+     "threshold": 0.4,
+     "p@3": 0.111,
+     "p@10": 0.033,
+     "recall_macro": 0.5,
+     "recall_micro": 0.5,
+     "claims_nothing_kept": 2,
+     "kept_total": 30,
+     "not_relevant_kept": 19,
+     "claims_with_relevant": 2,
+     "ranking_only_claims_with_relevant": {
+      "p@3": 0.167,
+      "p@10": 0.05,
+      "MAP": 0.536
+     },
+     "n_claims": 5
+    },
+    "medcpt": {
+     "threshold": 0.5,
+     "p@3": 0.0,
+     "p@10": 0.0,
+     "recall_macro": 0.0,
+     "recall_micro": 0.0,
+     "claims_nothing_kept": 3,
+     "kept_total": 11,
+     "not_relevant_kept": 3,
+     "claims_with_relevant": 2,
+     "ranking_only_claims_with_relevant": {
+      "p@3": 0.0,
+      "p@10": 0.0,
+      "MAP": 0.077
+     },
+     "n_claims": 5
+    }
+   },
+   "lenient": {
+    "lexical": {
+     "threshold": 0.4,
+     "p@3": 0.556,
+     "p@10": 0.367,
+     "recall_macro": 0.5,
+     "recall_micro": 0.458,
+     "claims_nothing_kept": 2,
+     "kept_total": 30,
+     "not_relevant_kept": 19,
+     "claims_with_relevant": 3,
+     "ranking_only_claims_with_relevant": {
+      "p@3": 0.778,
+      "p@10": 0.533,
+      "MAP": 0.74
+     },
+     "n_claims": 5
+    },
+    "medcpt": {
+     "threshold": 0.5,
+     "p@3": 0.5,
+     "p@10": 0.4,
+     "recall_macro": 0.296,
+     "recall_micro": 0.333,
+     "claims_nothing_kept": 3,
+     "kept_total": 11,
+     "not_relevant_kept": 3,
+     "claims_with_relevant": 3,
+     "ranking_only_claims_with_relevant": {
+      "p@3": 0.333,
+      "p@10": 0.567,
+      "MAP": 0.558
+     },
+     "n_claims": 5
+    }
+   }
+  }
+ },
+ "bootstrap_medcpt_minus_lexical": {
+  "all": {
+   "strict": {
+    "p@3": {
+     "n_claims": 18,
+     "mean_diff": 0.0,
+     "ci95": [
+      -0.056,
+      0.056
+     ]
+    },
+    "p@10": {
+     "n_claims": 18,
+     "mean_diff": -0.013,
+     "ci95": [
+      -0.044,
+      0.014
+     ]
+    },
+    "recall": {
+     "n_claims": 9,
+     "mean_diff": -0.385,
+     "ci95": [
+      -0.719,
+      -0.067
+     ]
+    }
+   },
+   "lenient": {
+    "p@3": {
+     "n_claims": 18,
+     "mean_diff": 0.028,
+     "ci95": [
+      -0.083,
+      0.148
+     ]
+    },
+    "p@10": {
+     "n_claims": 18,
+     "mean_diff": 0.025,
+     "ci95": [
+      -0.035,
+      0.097
+     ]
+    },
+    "recall": {
+     "n_claims": 18,
+     "mean_diff": -0.034,
+     "ci95": [
+      -0.189,
+      0.123
+     ]
+    }
+   }
+  },
+  "english": {
+   "strict": {
+    "p@3": {
+     "n_claims": 17,
+     "mean_diff": 0.0,
+     "ci95": [
+      -0.059,
+      0.059
+     ]
+    },
+    "p@10": {
+     "n_claims": 17,
+     "mean_diff": -0.014,
+     "ci95": [
+      -0.047,
+      0.013
+     ]
+    },
+    "recall": {
+     "n_claims": 7,
+     "mean_diff": -0.352,
+     "ci95": [
+      -0.714,
+      -0.038
+     ]
+    }
+   },
+   "lenient": {
+    "p@3": {
+     "n_claims": 17,
+     "mean_diff": 0.029,
+     "ci95": [
+      -0.088,
+      0.157
+     ]
+    },
+    "p@10": {
+     "n_claims": 17,
+     "mean_diff": 0.027,
+     "ci95": [
+      -0.038,
+      0.1
+     ]
+    },
+    "recall": {
+     "n_claims": 15,
+     "mean_diff": 0.001,
+     "ci95": [
+      -0.061,
+      0.067
+     ]
+    }
+   }
+  },
+  "non_english": {
+   "strict": {
+    "p@3": {
+     "n_claims": 1,
+     "mean_diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "p@10": {
+     "n_claims": 1,
+     "mean_diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "recall": {
+     "n_claims": 2,
+     "mean_diff": -0.5,
+     "ci95": [
+      -1.0,
+      0.0
+     ]
+    }
+   },
+   "lenient": {
+    "p@3": {
+     "n_claims": 1,
+     "mean_diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "p@10": {
+     "n_claims": 1,
+     "mean_diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "recall": {
+     "n_claims": 3,
+     "mean_diff": -0.204,
+     "ci95": [
+      -0.8,
+      0.889
+     ]
+    }
+   }
+  }
+ }
+}
