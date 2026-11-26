@@ -63,3 +63,5 @@ from app.api.routers import playback  # noqa: E402
 app.include_router(playback.router)  # signed playback URL (T29)
 from app.api.routers import admin  # noqa: E402
 app.include_router(admin.router)  # admin-only eval registry (T63)
+from app.api.routers import stats  # noqa: E402
+app.include_router(stats.router)  # research dashboard aggregates (T62)
