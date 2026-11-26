@@ -499,3 +499,31 @@ def test_full_t64_node_with_production_on_topic_check(production_on_topic):
     assert c12.verdict == Verdict.INSUFFICIENT_EVIDENCE
     assert c12.limitations[-1] == ug.OUTCOME_UNSPECIFIED_LIMITATION  # (c) fires first in the guard
     assert out["final_result"].classification == MisinfoLabel.NO_MISINFO
+
+
+# ------------------------------------------------------------------ judge cross-check note
+
+
+def test_crosscheck_classifies_main_claims_unchecked_as_a_known_backend_only_kind():
+    from app.evaluation import judge_crosscheck as xc
+
+    video = xc.GoldenVideo(video_id="vx", out_of_scope=False, recorded_label="NO_MISINFO",
+                           recorded_review_reasons=(), claims=(
+                               xc.GoldenClaim("c1", "ENDORSES", "SUPPORTED", ("PMID:1",), (), "other"),
+                               xc.GoldenClaim("c2", "ENDORSES", "INSUFFICIENT_EVIDENCE", (), (), "prevention")))
+    backend = xc.run_backend(video)
+    assert backend.label == "NO_MISINFO" and "main_claims_unchecked" in backend.reasons
+    golden = xc.JudgeOutput(label="NO_MISINFO", deciding=("c1",), reasons=frozenset())
+    kind = xc.classify_difference("main_claims_unchecked", "backend", video, golden)
+    assert kind == "main_claims_unchecked_not_in_golden_judge" and kind in xc.DIFFERENCE_KINDS
+
+
+def test_golden_set_without_categories_never_raises_main_claims_unchecked():
+    """Why the T24 cross-check is unchanged: no categories in the golden set."""
+    from app.evaluation import judge_crosscheck as xc
+
+    video = xc.GoldenVideo(video_id="vy", out_of_scope=False, recorded_label="NO_MISINFO",
+                           recorded_review_reasons=(), claims=(
+                               xc.GoldenClaim("c1", "ENDORSES", "SUPPORTED", ("PMID:1",)),
+                               xc.GoldenClaim("c2", "ENDORSES", "INSUFFICIENT_EVIDENCE")))
+    assert "main_claims_unchecked" not in xc.run_backend(video).reasons

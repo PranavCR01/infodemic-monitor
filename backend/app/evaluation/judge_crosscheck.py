@@ -27,10 +27,21 @@ mapped to one vocabulary (``<kind>[:<claim_id>]``):
 | ``unclear_stance`` | ``unclear_stance:<cid>`` | "claim <cid> stance is UNCLEAR" |
 | ``mixed_evidence`` etc. | the judge's other §9 pattern flags | — |
 | ``nothing_judged`` | ``judge:nothing_judged`` | ``nothing_judged`` (once the golden judge has the T37 rule) |
+| ``main_claims_unchecked`` | ``judge:main_claims_unchecked`` (T64 f) | — (not in the golden judge) |
 
 Backend reasons from signals the golden set cannot carry (critic, validation, budget,
 calibrated confidence, study type, high-risk category, guardrails) are left out: the
 state built here has none of them, and :data:`PIPELINE_ONLY_RULES` names them.
+
+**T64 (f) note.** ``main_claims_unchecked`` (NO_MISINFO with at least half of the endorsed
+treatment / prevention claims INSUFFICIENT_EVIDENCE; label unchanged) needs claim
+categories. The golden set's claims.csv has none, so :func:`build_state` gives only
+UNSUPPORTED claims an efficacy category, and an INSUFFICIENT_EVIDENCE claim is never a
+"main" claim here: the reason cannot fire on the golden set and the cross-check is
+unchanged (T64: identical report on 92a731e). If categories are added later it would show
+as the backend-only kind ``main_claims_unchecked_not_in_golden_judge``. T64's other rules
+(a, b, c, e) live in the verify step and the reranker, not the judge, so they don't reach
+this cross-check either (as T49's guard).
 
 Every difference is classified (:func:`classify_difference`) with the side that matches
 §9, so a new kind of difference shows up as ``unclassified``.
@@ -393,6 +404,14 @@ DIFFERENCE_KINDS: dict[str, dict[str, str]] = {
                "(data/golden-label-set 0fbc68a has the rule; there the reason matches on "
                "all 28 videos).",
     },
+    "main_claims_unchecked_not_in_golden_judge": {
+        "matches": "backend (expected; review coverage rule the golden judge does not model)",
+        "why": "T64 (f), lead decision 2026-11-26: when the label is NO_MISINFO and at least "
+               "half of the endorsed treatment_efficacy / prevention claims are "
+               "INSUFFICIENT_EVIDENCE, the backend judge adds the video-level review reason "
+               "main_claims_unchecked (label unchanged, severity unchanged). The golden "
+               "judge has no such rule and the golden set has no claim categories.",
+    },
 }
 
 
@@ -445,6 +464,8 @@ def classify_difference(reason: str, side: str, video: GoldenVideo, golden: Judg
             return "nothing_judged_not_in_pinned_golden_judge"
         if kind in ("unclear_stance_contradicted", "false_claim_not_refuted"):
             return kind
+        if kind == "main_claims_unchecked" and golden.label == "NO_MISINFO":
+            return "main_claims_unchecked_not_in_golden_judge"
         if kind == "weak_evidence" and (
             f"unproven_claim:{cid}" in golden.reasons or f"mixed_evidence:{cid}" in golden.reasons
         ):

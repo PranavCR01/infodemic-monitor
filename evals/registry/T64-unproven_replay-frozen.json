@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "run_group": "T64-unproven-replay",
+  "date": "2026-11-26",
+  "task": "T64",
+  "pipeline_step": "verify_claims",
+  "split": "tune",
+  "synthetic": false,
+  "golden_set_ref": "in-repo research/claim-level/dataset @ 2de5e8f (last commit touching it)",
+  "models": [],
+  "metric_name": "unproven_videos_keeping_misinfo",
+  "ci95": null,
+  "n_items": 5,
+  "n_unit": "tune videos labelled MISINFO (unproven) in gold",
+  "cost_usd": 0.0,
+  "report_path": "evals/reports/T64/report.md",
+  "run_id": "T64-unproven_replay-frozen",
+  "variant": "t38_frozen",
+  "value": 0.0,
+  "notes": "Tune split: development numbers, not product accuracy. 0/5 on the T38 frozen evidence, unchanged from before T64 (T49 explains why: empty or condition-only searches). No tune video changes label (0/55); main_claims_unchecked raised on v22 and v141 (categories from the frozen recording). No CI."
+}
