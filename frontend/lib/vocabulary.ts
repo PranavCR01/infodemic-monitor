@@ -314,6 +314,12 @@ export const REVIEW_REASONS: Record<string, string> = {
   // T64 (f): video-level, no claim id; the label is unchanged.
   main_claims_unchecked:
     "The label rests on side claims: at least half of the treatment and prevention claims the speaker makes could not be checked against the evidence.",
+  // T67 (1): per claim. Off by default (failed the T67 replay gate); text kept so the reason reads plainly if switched on.
+  second_check_disagreed:
+    "A second automated check still disagreed with this claim's verdict when its attempts ran out; the verdict was kept for a person to confirm.",
+  // T67 (2): judge:thin_contradiction:<cid>. Off by default (failed the T67 replay gate).
+  thin_contradiction:
+    "The evidence against this claim is too thin to decide the label on its own: fewer than two papers on its topic and no review, trial or guideline.",
   // judge:<flag>
   mixed_video: "The video both spreads and corrects false claims.",
   unclear_stance_contradicted: "A false claim is made, but the speaker's position on it is unclear.",

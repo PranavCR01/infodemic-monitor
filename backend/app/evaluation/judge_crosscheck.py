@@ -71,7 +71,7 @@ from app.core.graph.state import (
 # Review rules whose inputs only exist in a running pipeline (§11 "the rest of the rule
 # belongs to the running pipeline, not to a hand-labelled set").
 PIPELINE_ONLY_RULES = frozenset({
-    "validation_failed", "weak_study_types", "critic_escalated", "budget_exhausted",
+    "validation_failed", "weak_study_types", "critic_escalated", "budget_exhausted", "second_check_disagreed",
     "low_confidence", "high_risk_uncertain", "guardrails",
 })
 

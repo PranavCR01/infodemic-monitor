@@ -35,6 +35,9 @@ REASON_TEXT: dict[str, str] = {
     "unclear_stance": "It is unclear whether the speaker agrees with {claim}.",
     "critic_escalated": "The automatic critic asked for a person to check {claim}.",
     "budget_exhausted": "The search for evidence on {claim} ran out of attempts before it was settled.",
+    # T67 (1): the critic is "a second automated check" in user-facing text (T65)
+    "second_check_disagreed": "A second automated check still disagreed with the verdict on {claim} when "
+                              "its attempts ran out; the verdict was kept for a person to confirm.",
     "validation_failed": "An automatic consistency check on the result failed{on_claim}.",
     "low_confidence": "The system's confidence in the result is low.",
     "high_risk_uncertain": "{Claim} is about a high-risk health topic and the evidence could not settle it.",
@@ -53,6 +56,9 @@ REASON_TEXT: dict[str, str] = {
     # T64 (f): video-level; the label is unchanged
     "main_claims_unchecked": "The label rests on side claims: at least half of the treatment and "
                              "prevention claims the speaker makes could not be checked against the evidence.",
+    # T67 (2): per claim; the claim did not decide the label
+    "thin_contradiction": "The evidence against {claim} is too thin to decide the label on its own: fewer "
+                          "than two papers on its topic and no review, trial or guideline.",
     # guardrails (§15)
     "prompt_injection_suspected": "Text in {source} looks like an attempt to instruct the system.",
     "guardrail": "A safety check stopped part of the analysis{on_claim}.",
@@ -73,7 +79,7 @@ _SOURCE_TEXT = {
 # reason heads whose next part is the claim id
 _CLAIM_RULES = {
     "weak_evidence", "conflicting_evidence", "weak_study_types", "unclear_stance",
-    "critic_escalated", "budget_exhausted", "high_risk_uncertain",
+    "critic_escalated", "budget_exhausted", "high_risk_uncertain", "second_check_disagreed",
 }
 
 

@@ -155,14 +155,29 @@ FLAG_POSSIBLE_DEBUNK = "possible_debunk"
 FLAG_UNPROVEN = "unproven_claim"  # T30
 FLAG_NOTHING_JUDGED = "nothing_judged"  # T37: video-level (§11)
 FLAG_MAIN_CLAIMS_UNCHECKED = "main_claims_unchecked"  # T64 (f): video-level, label unchanged
+FLAG_THIN_CONTRADICTION = "thin_contradiction"  # T67 (2): per claim; the claim can't decide
 MAIN_CLAIM_CATEGORIES = frozenset({"treatment_efficacy", "prevention"})
 SIBLING_LIMITATION = "contradicted_by_sibling_claim"  # T64 (b), set by unproven_guard
 # Since T21 these are collected from every claim, not only when their rule fires, and a
 # mixed video is always reviewed (§9).
 RULE_REVIEW_FLAGS = frozenset({
     FLAG_DENIES_SUPPORTED, FLAG_POSSIBLE_DEBUNK, FLAG_UNPROVEN, FLAG_MIXED_VIDEO, FLAG_NOTHING_JUDGED,
-    FLAG_MAIN_CLAIMS_UNCHECKED,
+    FLAG_MAIN_CLAIMS_UNCHECKED, FLAG_THIN_CONTRADICTION,
 })
+
+# T67 (2), lead 2026-11-26: an ENDORSES / REFUTES + CONTRADICTED claim decides the label
+# (rules 1 and 4, and so also rule 5) only if the evidence it cites against the claim
+# holds at least ``MIN_CONTRADICTING_ON_TOPIC`` records on topic for the claim's
+# intervention (T49's check) or at least one systematic review, RCT or guideline.
+# Otherwise the verdict stays but the claim can't decide, the label falls through, and
+# the claim raises ``thin_contradiction:<cid>``.
+# OFF (False): the T67 replay gate dropped this change. It made three tune labels worse
+# (T66 v88; golden v119 and v177, all gold MISINFO): T49's intervention-term check finds no
+# usable terms in non-English or non-intervention claims ("El Cancer es un hongo",
+# "multiple personality"), so well-cited contradictions read as thin
+# (evals/reports/T67/report.md). Turning it on is a lead decision.
+THIN_CONTRADICTION_RULE = False
+MIN_CONTRADICTING_ON_TOPIC = 2
 
 # ``misinfo_basis`` values (§9), set only when the label is MISINFO.
 BASIS_CONTRADICTED = "contradicted"
@@ -205,6 +220,9 @@ class ClaimView:
     verification_failed: bool = False
     position: int = 0  # 1-based place in extraction order (0: unknown; see ``_names``)
     stance_rationale: str = ""  # the stance step's rationale (T47: carries the sarcasm note)
+    # T67 (2): the records retrieved for this claim, by ID (for the thin-contradiction
+    # check). Empty when the caller built the view without them.
+    evidence: tuple[EvidenceRecord, ...] = field(default=(), compare=False)
 
     @property
     def claim_id(self) -> str:
@@ -278,6 +296,7 @@ def claim_views(
             verification_failed=c.claim_id in failed,
             position=i,
             stance_rationale=stances[c.claim_id].rationale if c.claim_id in stances else "",
+            evidence=tuple(evidence.get(c.claim_id, {}).values()),
         )
         for i, c in enumerate(claims, start=1) if c.claim_id in verdicts
     ]
@@ -332,16 +351,41 @@ def main_claims_unchecked(views: Sequence[ClaimView]) -> bool:
     return bool(main) and 2 * len(unchecked) >= len(main)
 
 
+def thin_contradiction(view: ClaimView) -> bool:
+    """T67 (2): a CONTRADICTED verdict whose contradicting evidence (among the records
+    retrieved for the claim) has fewer than ``MIN_CONTRADICTING_ON_TOPIC`` records on
+    topic for the claim's intervention (T49's ``on_topic`` check, cited records not
+    counted as on topic by default) and no systematic review, RCT or guideline."""
+    from app.core.graph import unproven_guard as ug  # avoid an import cycle at load time
+
+    if view.verdict != Verdict.CONTRADICTED:
+        return False
+    by_id = {e.evidence_id: e for e in view.evidence}
+    cited = [by_id[eid] for eid in dict.fromkeys(view.verification.contradicting_evidence_ids) if eid in by_id]
+    if any(ug._study_type(e) in ug.STRONG_STUDY_TYPES for e in cited):
+        return False
+    return len(ug.on_topic_ids(view.claim, cited)) < MIN_CONTRADICTING_ON_TOPIC
+
+
 def decide(views: Sequence[ClaimView], *, has_claims: Optional[bool] = None) -> Decision:
     """Apply the §9 rules in order. Pure: no state, no model."""
     views = list(views)
     has_claims = bool(views) if has_claims is None else has_claims
 
-    endorsed_false = [v for v in views if v.stance == Stance.ENDORSES and v.verdict == Verdict.CONTRADICTED]
+    # T67 (2): endorsed / refuted contradictions on thin evidence keep their verdict but
+    # can't decide (rules 1, 4 and 5); each raises thin_contradiction:<cid>.
+    thin = [
+        v for v in views if THIN_CONTRADICTION_RULE and v.stance in (Stance.ENDORSES, Stance.REFUTES)
+        and thin_contradiction(v)
+    ]
+    thin_ids = {v.claim_id for v in thin}
+    endorsed_false = [v for v in views if v.stance == Stance.ENDORSES and v.verdict == Verdict.CONTRADICTED
+                      and v.claim_id not in thin_ids]
     denied_true = [v for v in views if v.stance == Stance.REFUTES and v.verdict == Verdict.SUPPORTED]
     unproven = [v for v in views if v.stance == Stance.ENDORSES and v.verdict == Verdict.UNSUPPORTED]
-    refuted_false = [v for v in views if v.stance == Stance.REFUTES and v.verdict == Verdict.CONTRADICTED]
-    judged = [v for v in views if v.verdict in JUDGED_VERDICTS]
+    refuted_false = [v for v in views if v.stance == Stance.REFUTES and v.verdict == Verdict.CONTRADICTED
+                     and v.claim_id not in thin_ids]
+    judged = [v for v in views if v.verdict in JUDGED_VERDICTS and v.claim_id not in thin_ids]
     refuted_open = [v for v in views if v.stance == Stance.REFUTES and v.verdict in UNSETTLED_VERDICTS]
 
     # Review reasons come from every claim, whichever rule decides the label (§9, T21).
@@ -354,6 +398,7 @@ def decide(views: Sequence[ClaimView], *, has_claims: Optional[bool] = None) -> 
         *(f"{FLAG_DENIES_SUPPORTED}:{v.claim_id}" for v in denied_true),
         *(f"{FLAG_UNPROVEN}:{v.claim_id}" for v in [*unproven, *sibling_demoted]),
         *(f"{FLAG_POSSIBLE_DEBUNK}:{v.claim_id}" for v in refuted_open),
+        *(f"{FLAG_THIN_CONTRADICTION}:{v.claim_id}" for v in thin),
     ]
     if (endorsed_false or unproven) and refuted_false:
         rule_flags.append(FLAG_MIXED_VIDEO)  # MISINFO, always reviewed
@@ -490,6 +535,8 @@ _FLAG_TEXT = {
     FLAG_NOTHING_JUDGED: "no claim in this video could be checked against the evidence",
     FLAG_MAIN_CLAIMS_UNCHECKED: "at least half of the treatment and prevention claims the speaker "
                                 "makes could not be checked against the evidence",
+    FLAG_THIN_CONTRADICTION: "the evidence against {ref} is too thin to decide the label on its own "
+                             "(fewer than two papers on its topic and no review, trial or guideline)",
 }
 
 
