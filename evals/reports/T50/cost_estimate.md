@@ -21,14 +21,14 @@ find_study triggers: {'forced': 4, 'nothing_on_topic': 4}.
 
 | step | calls | expected USD | upper bound USD |
 | --- | --- | --- | --- |
-| plan_search | 31 | 0.0045 | 0.0167 |
+| plan_search | 32 | 0.0046 | 0.0172 |
 | translate_claim | 59 | 0.0030 | 0.0143 |
-| find_study | 38 | 0.7903 | 2.4907 |
-| **total** | 128 | **0.7978** | **2.5216** |
+| find_study | 40 | 0.8319 | 2.6217 |
+| **total** | 131 | **0.8395** | **2.6532** |
 
-Per claim: expected 0.00427 USD, upper 0.01348 USD on average; max upper for one claim 0.06633 USD.
+Per claim: expected 0.00449 USD, upper 0.01419 USD on average; max upper for one claim 0.06633 USD.
 
-find_study triggers: {'nothing_on_topic': 36, 'cites_study': 2}.
+find_study triggers: {'nothing_on_topic': 38, 'cites_study': 2}.
 
 ## Latency (expected, per claim that calls the step)
 

@@ -9,6 +9,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -26,6 +29,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 57,
     "kept": 10,
     "queries": [
@@ -43,6 +49,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 57,
     "kept": 10,
     "queries": [
@@ -60,6 +69,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 59,
     "kept": 0,
     "queries": [
@@ -77,6 +89,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 1,
     "kept": 1,
     "queries": [
@@ -94,6 +109,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -111,6 +129,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -128,6 +149,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -145,6 +169,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 6,
     "kept": 6,
     "queries": [
@@ -162,6 +189,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 19,
     "kept": 6,
     "queries": [
@@ -179,6 +209,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -196,6 +229,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -213,6 +249,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -230,6 +269,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 6,
     "kept": 6,
     "queries": [
@@ -247,6 +289,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -264,6 +309,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 37,
     "kept": 10,
     "queries": [
@@ -281,6 +329,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 60,
     "kept": 0,
     "queries": [
@@ -298,6 +349,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 60,
     "kept": 10,
     "queries": [
@@ -315,6 +369,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 60,
     "kept": 10,
     "queries": [
@@ -332,6 +389,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -349,6 +409,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -366,6 +429,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -383,6 +449,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -400,6 +469,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 38,
     "kept": 10,
     "queries": [
@@ -417,6 +489,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -434,6 +509,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 10,
     "queries": [
@@ -451,6 +529,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -468,6 +549,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 34,
     "kept": 10,
     "queries": [
@@ -485,6 +569,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -502,6 +589,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 52,
     "kept": 10,
     "queries": [
@@ -519,6 +609,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -536,6 +629,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -553,6 +649,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -570,6 +669,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -587,6 +689,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -604,6 +709,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "und",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -621,6 +729,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "und",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -638,6 +749,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 5,
     "kept": 1,
     "queries": [
@@ -655,6 +769,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -672,6 +789,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "und",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -689,6 +809,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "und",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -706,6 +829,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 40,
     "kept": 0,
     "queries": [
@@ -723,6 +849,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -740,6 +869,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -757,6 +889,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 13,
     "kept": 3,
     "queries": [
@@ -774,6 +909,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 3,
     "queries": [
@@ -791,6 +929,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 14,
     "kept": 8,
     "queries": [
@@ -808,6 +949,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 3,
     "queries": [
@@ -825,6 +969,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 20,
     "kept": 0,
     "queries": [
@@ -842,6 +989,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -859,6 +1009,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -876,6 +1029,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -893,6 +1049,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 59,
     "kept": 10,
     "queries": [
@@ -910,6 +1069,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -927,6 +1089,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -944,6 +1109,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 60,
     "kept": 10,
     "queries": [
@@ -961,6 +1129,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -978,6 +1149,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -995,6 +1169,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 39,
     "kept": 10,
     "queries": [
@@ -1012,6 +1189,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -1029,6 +1209,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -1046,6 +1229,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 59,
     "kept": 2,
     "queries": [
@@ -1063,6 +1249,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 59,
     "kept": 10,
     "queries": [
@@ -1080,6 +1269,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 59,
     "kept": 10,
     "queries": [
@@ -1097,6 +1289,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 38,
     "kept": 10,
     "queries": [
@@ -1114,6 +1309,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 1,
     "queries": [
@@ -1131,6 +1329,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 10,
     "queries": [
@@ -1148,6 +1349,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -1165,6 +1369,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -1182,6 +1389,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -1199,6 +1409,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 40,
     "kept": 0,
     "queries": [
@@ -1216,6 +1429,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -1233,6 +1449,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 56,
     "kept": 10,
     "queries": [
@@ -1250,6 +1469,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 40,
     "kept": 0,
     "queries": [
@@ -1267,6 +1489,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 53,
     "kept": 10,
     "queries": [
@@ -1284,6 +1509,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 38,
     "kept": 10,
     "queries": [
@@ -1301,6 +1529,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 10,
     "queries": [
@@ -1318,6 +1549,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 38,
     "kept": 10,
     "queries": [
@@ -1335,6 +1569,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 10,
     "queries": [
@@ -1352,6 +1589,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -1369,6 +1609,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -1386,6 +1629,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 59,
     "kept": 1,
     "queries": [
@@ -1403,6 +1649,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 60,
     "kept": 10,
     "queries": [
@@ -1420,6 +1669,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 60,
     "kept": 10,
     "queries": [
@@ -1437,6 +1689,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 55,
     "kept": 10,
     "queries": [
@@ -1454,6 +1709,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 36,
     "kept": 10,
     "queries": [
@@ -1471,6 +1729,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 57,
     "kept": 1,
     "queries": [
@@ -1488,6 +1749,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 36,
     "kept": 10,
     "queries": [
@@ -1505,6 +1769,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -1522,6 +1789,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 36,
     "kept": 0,
     "queries": [
@@ -1539,6 +1809,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 1,
     "kept": 1,
     "queries": [
@@ -1556,6 +1829,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 50,
     "kept": 10,
     "queries": [
@@ -1573,6 +1849,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 48,
     "kept": 10,
     "queries": [
@@ -1590,6 +1869,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 38,
     "kept": 4,
     "queries": [
@@ -1607,6 +1889,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -1624,6 +1909,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -1641,6 +1929,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -1658,6 +1949,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -1675,6 +1969,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -1692,6 +1989,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -1709,6 +2009,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 60,
     "kept": 10,
     "queries": [
@@ -1726,6 +2029,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 59,
     "kept": 10,
     "queries": [
@@ -1743,6 +2049,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -1760,6 +2069,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -1777,6 +2089,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -1794,6 +2109,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 7,
     "kept": 3,
     "queries": [
@@ -1811,6 +2129,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -1828,6 +2149,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -1845,6 +2169,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 60,
     "kept": 10,
     "queries": [
@@ -1862,6 +2189,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 60,
     "kept": 10,
     "queries": [
@@ -1879,6 +2209,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -1896,6 +2229,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 60,
     "kept": 10,
     "queries": [
@@ -1913,6 +2249,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -1930,6 +2269,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -1947,6 +2289,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 60,
     "kept": 10,
     "queries": [
@@ -1964,6 +2309,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -1981,6 +2329,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -1998,6 +2349,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2015,6 +2369,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 60,
     "kept": 10,
     "queries": [
@@ -2032,6 +2389,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2049,6 +2409,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2066,6 +2429,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2083,6 +2449,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2100,6 +2469,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2117,6 +2489,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 1,
     "kept": 1,
     "queries": [
@@ -2134,6 +2509,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2151,6 +2529,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2168,6 +2549,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2185,6 +2569,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2202,6 +2589,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2219,6 +2609,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2236,6 +2629,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2253,6 +2649,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2270,6 +2669,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 32,
     "kept": 10,
     "queries": [
@@ -2287,6 +2689,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 20,
     "kept": 0,
     "queries": [
@@ -2304,6 +2709,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2321,6 +2729,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -2338,6 +2749,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2355,6 +2769,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2372,6 +2789,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2389,6 +2809,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2406,6 +2829,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2423,6 +2849,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2440,6 +2869,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2457,6 +2889,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2474,6 +2909,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2491,6 +2929,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2508,6 +2949,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2525,6 +2969,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2542,6 +2989,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 60,
     "kept": 10,
     "queries": [
@@ -2559,6 +3009,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2576,6 +3029,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2593,6 +3049,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2610,6 +3069,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2627,6 +3089,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 58,
     "kept": 10,
     "queries": [
@@ -2644,6 +3109,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 42,
     "kept": 10,
     "queries": [
@@ -2661,6 +3129,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 10,
     "queries": [
@@ -2678,6 +3149,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 10,
     "queries": [
@@ -2695,6 +3169,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 10,
     "queries": [
@@ -2712,6 +3189,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 10,
     "queries": [
@@ -2729,6 +3209,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 10,
     "queries": [
@@ -2746,6 +3229,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 38,
     "kept": 10,
     "queries": [
@@ -2763,6 +3249,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 10,
     "queries": [
@@ -2780,6 +3269,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2797,6 +3289,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 7,
     "queries": [
@@ -2814,6 +3309,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 1,
     "queries": [
@@ -2831,6 +3329,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2848,6 +3349,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 40,
     "kept": 0,
     "queries": [
@@ -2865,6 +3369,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 35,
     "kept": 10,
     "queries": [
@@ -2882,6 +3389,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "fr",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -2899,6 +3409,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "fr",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -2916,6 +3429,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "fr",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -2933,6 +3449,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "fr",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 40,
     "kept": 0,
     "queries": [
@@ -2950,6 +3469,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "fr",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -2967,6 +3489,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "fr",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -2984,6 +3509,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "hi",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -3001,6 +3529,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "hi",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -3018,6 +3549,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "hi",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -3035,6 +3569,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "hi",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -3052,6 +3589,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 60,
     "kept": 10,
     "queries": [
@@ -3069,6 +3609,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 2,
     "kept": 2,
     "queries": [
@@ -3086,6 +3629,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -3103,6 +3649,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 6,
     "kept": 6,
     "queries": [
@@ -3120,6 +3669,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -3137,6 +3689,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 9,
     "kept": 6,
     "queries": [
@@ -3154,6 +3709,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 60,
     "kept": 10,
     "queries": [
@@ -3171,6 +3729,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 59,
     "kept": 10,
     "queries": [
@@ -3184,7 +3745,7 @@
   }
  },
  "after": {
-  "code_revision": "dce350920dbcc738511528da47005b94cc62ffe3",
+  "code_revision": "95025fb99ab2b9bf58581602ee354993c9a93bef",
   "rows": {
    "v11:c1": {
     "on_topic": true,
@@ -3193,6 +3754,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -3208,6 +3772,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 35,
     "kept": 10,
     "queries": [
@@ -3224,6 +3791,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -3239,6 +3809,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 56,
     "kept": 10,
     "queries": [
@@ -3256,6 +3829,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 58,
     "kept": 10,
     "queries": [
@@ -3273,6 +3849,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 38,
     "kept": 10,
     "queries": [
@@ -3289,6 +3868,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -3305,6 +3887,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -3320,6 +3905,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -3336,6 +3924,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -3351,6 +3942,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 36,
     "kept": 2,
     "queries": [
@@ -3367,6 +3961,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 48,
     "kept": 10,
     "queries": [
@@ -3384,6 +3981,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 32,
     "kept": 10,
     "queries": [
@@ -3401,6 +4001,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -3416,6 +4019,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 51,
     "kept": 10,
     "queries": [
@@ -3433,6 +4039,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 55,
     "kept": 10,
     "queries": [
@@ -3450,6 +4059,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 20,
     "kept": 0,
     "queries": [
@@ -3467,6 +4079,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -3482,6 +4097,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -3498,6 +4116,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -3513,6 +4134,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 10,
     "queries": [
@@ -3529,6 +4153,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 10,
     "queries": [
@@ -3545,6 +4172,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -3560,6 +4190,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 38,
     "kept": 9,
     "queries": [
@@ -3576,6 +4209,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -3591,6 +4227,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -3606,6 +4245,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -3621,6 +4263,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 10,
     "queries": [
@@ -3637,6 +4282,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 37,
     "kept": 2,
     "queries": [
@@ -3653,6 +4301,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -3669,10 +4320,14 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
-    "retrieved": 20,
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
+    "retrieved": 39,
     "kept": 0,
     "queries": [
-     "(Arctium[MeSH Terms] OR burdock[tiab] OR arctium[tiab])"
+     "physical comprised minerals",
+     "physical comprised"
     ],
     "repeats": 0,
     "stopped": true
@@ -3684,6 +4339,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 20,
     "kept": 0,
     "queries": [
@@ -3700,6 +4358,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -3715,6 +4376,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 18,
     "kept": 10,
     "queries": [
@@ -3730,6 +4394,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -3745,6 +4412,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "und",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 2,
     "queries": [
@@ -3761,6 +4431,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "und",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 20,
     "kept": 0,
     "queries": [
@@ -3777,6 +4450,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 44,
     "kept": 10,
     "queries": [
@@ -3794,6 +4470,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 18,
     "kept": 0,
     "queries": [
@@ -3809,6 +4488,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "und",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 18,
     "kept": 10,
     "queries": [
@@ -3824,6 +4506,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "und",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 18,
     "kept": 1,
     "queries": [
@@ -3839,6 +4524,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 37,
     "kept": 10,
     "queries": [
@@ -3855,6 +4543,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 1,
     "queries": [
@@ -3872,6 +4563,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -3887,6 +4581,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -3902,6 +4599,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 20,
     "kept": 0,
     "queries": [
@@ -3917,6 +4617,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -3932,6 +4635,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 54,
     "kept": 9,
     "queries": [
@@ -3949,6 +4655,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -3964,6 +4673,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -3979,6 +4691,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 1,
     "queries": [
@@ -3995,6 +4710,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -4010,6 +4728,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -4025,6 +4746,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -4040,6 +4764,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 9,
     "queries": [
@@ -4056,6 +4783,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 59,
     "kept": 10,
     "queries": [
@@ -4073,6 +4803,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -4088,6 +4821,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 18,
     "kept": 0,
     "queries": [
@@ -4104,6 +4840,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 30,
     "kept": 10,
     "queries": [
@@ -4120,6 +4859,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -4135,6 +4877,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -4152,6 +4897,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 20,
     "kept": 0,
     "queries": [
@@ -4169,6 +4917,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 38,
     "kept": 10,
     "queries": [
@@ -4185,6 +4936,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 10,
     "queries": [
@@ -4201,6 +4955,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 35,
     "kept": 10,
     "queries": [
@@ -4217,6 +4974,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 20,
     "kept": 0,
     "queries": [
@@ -4232,6 +4992,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -4248,6 +5011,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 35,
     "kept": 10,
     "queries": [
@@ -4264,6 +5030,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 2,
     "queries": [
@@ -4280,10 +5049,14 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
-    "retrieved": 20,
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
+    "retrieved": 40,
     "kept": 0,
     "queries": [
-     "(\"Alcohol Drinking\"[MeSH Terms] OR alcohol[tiab])"
+     "processed bacon summer",
+     "processed summer"
     ],
     "repeats": 0,
     "stopped": true
@@ -4295,10 +5068,13 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 20,
     "kept": 0,
     "queries": [
-     "(\"Alcohol Drinking\"[MeSH Terms] OR alcohol[tiab])"
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])"
     ],
     "repeats": 0,
     "stopped": true
@@ -4310,6 +5086,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 30,
     "kept": 1,
     "queries": [
@@ -4326,6 +5105,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 25,
     "kept": 10,
     "queries": [
@@ -4342,6 +5124,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 7,
     "queries": [
@@ -4358,6 +5143,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 53,
     "kept": 10,
     "queries": [
@@ -4375,6 +5163,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 58,
     "kept": 10,
     "queries": [
@@ -4392,6 +5183,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -4408,6 +5202,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 51,
     "kept": 10,
     "queries": [
@@ -4425,6 +5222,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -4440,6 +5240,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 2,
     "queries": [
@@ -4456,6 +5259,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 40,
     "kept": 0,
     "queries": [
@@ -4472,6 +5278,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 49,
     "kept": 10,
     "queries": [
@@ -4489,6 +5298,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 58,
     "kept": 7,
     "queries": [
@@ -4506,6 +5318,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -4521,6 +5336,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 20,
     "kept": 0,
     "queries": [
@@ -4536,6 +5354,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 43,
     "kept": 10,
     "queries": [
@@ -4553,6 +5374,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 40,
     "kept": 0,
     "queries": [
@@ -4569,6 +5393,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -4584,6 +5411,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 20,
     "kept": 0,
     "queries": [
@@ -4600,6 +5430,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 20,
     "kept": 0,
     "queries": [
@@ -4615,6 +5448,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -4631,6 +5467,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 46,
     "kept": 10,
     "queries": [
@@ -4648,6 +5487,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 49,
     "kept": 10,
     "queries": [
@@ -4665,6 +5507,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -4681,6 +5526,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -4697,6 +5545,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -4712,6 +5563,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -4727,6 +5581,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 1,
     "queries": [
@@ -4742,6 +5599,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 34,
     "kept": 10,
     "queries": [
@@ -4758,6 +5618,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 8,
     "queries": [
@@ -4773,6 +5636,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 55,
     "kept": 10,
     "queries": [
@@ -4790,6 +5656,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -4806,6 +5675,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -4822,6 +5694,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -4838,6 +5713,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -4854,6 +5732,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 37,
     "kept": 2,
     "queries": [
@@ -4870,6 +5751,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -4885,6 +5769,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -4900,6 +5787,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 57,
     "kept": 10,
     "queries": [
@@ -4917,6 +5807,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 58,
     "kept": 7,
     "queries": [
@@ -4934,6 +5827,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 1,
     "kept": 0,
     "queries": [
@@ -4950,6 +5846,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -4966,6 +5865,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -4982,6 +5884,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -4997,6 +5902,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -5013,6 +5921,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -5028,6 +5939,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -5043,6 +5957,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -5058,6 +5975,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -5074,6 +5994,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -5090,6 +6013,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 1,
     "kept": 0,
     "queries": [
@@ -5106,6 +6032,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -5122,6 +6051,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -5138,6 +6070,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 20,
     "kept": 0,
     "queries": [
@@ -5153,6 +6088,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 1,
     "kept": 1,
     "queries": [
@@ -5168,6 +6106,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -5183,6 +6124,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 4,
     "kept": 0,
     "queries": [
@@ -5199,6 +6143,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -5214,6 +6161,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 38,
     "kept": 10,
     "queries": [
@@ -5231,6 +6181,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 30,
     "kept": 10,
     "queries": [
@@ -5247,6 +6200,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 54,
     "kept": 10,
     "queries": [
@@ -5264,6 +6220,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -5279,6 +6238,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -5294,6 +6256,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 29,
     "kept": 7,
     "queries": [
@@ -5310,6 +6275,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -5325,6 +6293,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -5340,6 +6311,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -5355,6 +6329,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -5370,6 +6347,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 40,
     "kept": 0,
     "queries": [
@@ -5386,6 +6366,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -5401,6 +6384,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [
@@ -5417,6 +6403,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 8,
     "queries": [
@@ -5432,6 +6421,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 39,
     "kept": 0,
     "queries": [
@@ -5448,6 +6440,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 19,
     "kept": 0,
     "queries": [
@@ -5464,6 +6459,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 51,
     "kept": 10,
     "queries": [
@@ -5481,6 +6479,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -5496,6 +6497,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 57,
     "kept": 10,
     "queries": [
@@ -5513,6 +6517,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 49,
     "kept": 10,
     "queries": [
@@ -5530,6 +6537,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -5545,6 +6555,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 50,
     "kept": 10,
     "queries": [
@@ -5562,6 +6575,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "es",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 35,
     "kept": 10,
     "queries": [
@@ -5578,6 +6594,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "es",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 48,
     "kept": 10,
     "queries": [
@@ -5595,6 +6614,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 51,
     "kept": 10,
     "queries": [
@@ -5612,6 +6634,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -5627,6 +6652,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 36,
     "kept": 10,
     "queries": [
@@ -5644,6 +6672,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 46,
     "kept": 10,
     "queries": [
@@ -5661,6 +6692,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 55,
     "kept": 10,
     "queries": [
@@ -5678,6 +6712,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 10,
     "queries": [
@@ -5694,6 +6731,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -5709,6 +6749,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -5725,6 +6768,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 37,
     "kept": 10,
     "queries": [
@@ -5742,6 +6788,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 10,
     "queries": [
@@ -5758,6 +6807,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -5773,11 +6825,13 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
-    "retrieved": 19,
-    "kept": 1,
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
+    "retrieved": 20,
+    "kept": 0,
     "queries": [
-     "quite about million",
-     "quite million"
+     "(Benzene[MeSH Terms] OR benzene[tiab])"
     ],
     "repeats": 0,
     "stopped": true
@@ -5789,6 +6843,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 20,
     "kept": 0,
     "queries": [
@@ -5801,14 +6858,16 @@
     "on_topic": false,
     "on_topic_round1": false,
     "on_topic_kept": false,
-    "golden_hit": true,
+    "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
-    "retrieved": 37,
-    "kept": 5,
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
+    "retrieved": 20,
+    "kept": 0,
     "queries": [
-     "(Benzene[MeSH Terms] OR benzene[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
-     "(Benzene[MeSH Terms] OR benzene[tiab])"
+     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])"
     ],
     "repeats": 0,
     "stopped": true
@@ -5820,6 +6879,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -5835,6 +6897,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 37,
     "kept": 10,
     "queries": [
@@ -5851,6 +6916,9 @@
     "golden_hit": true,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": true,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 10,
     "queries": [
@@ -5867,6 +6935,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "fr",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -5882,6 +6953,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "fr",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 51,
     "kept": 6,
     "queries": [
@@ -5899,6 +6973,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "fr",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -5914,6 +6991,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "fr",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -5930,6 +7010,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "fr",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 51,
     "kept": 6,
     "queries": [
@@ -5947,6 +7030,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "fr",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 51,
     "kept": 6,
     "queries": [
@@ -5964,6 +7050,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "hi",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [],
@@ -5977,6 +7066,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "hi",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [],
@@ -5990,6 +7082,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "hi",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [],
@@ -6003,6 +7098,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "hi",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 0,
     "kept": 0,
     "queries": [],
@@ -6016,6 +7114,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -6032,6 +7133,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 9,
     "kept": 5,
     "queries": [
@@ -6048,6 +7152,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 40,
     "kept": 10,
     "queries": [
@@ -6064,6 +7171,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": true,
     "retrieved": 39,
     "kept": 10,
     "queries": [
@@ -6080,6 +7190,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": false,
+    "lenient_claim": false,
     "retrieved": 20,
     "kept": 0,
     "queries": [
@@ -6096,6 +7209,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "und",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 28,
     "kept": 10,
     "queries": [
@@ -6112,6 +7228,9 @@
     "golden_hit": false,
     "has_golden_pmid": false,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 20,
     "kept": 10,
     "queries": [
@@ -6127,6 +7246,9 @@
     "golden_hit": false,
     "has_golden_pmid": true,
     "lang": "en",
+    "strict": false,
+    "lenient": true,
+    "lenient_claim": true,
     "retrieved": 55,
     "kept": 10,
     "queries": [

@@ -1,0 +1,20 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "9244",
+  "retmax": "5",
+  "retstart": "0",
+  "idlist": [
+   "32187975",
+   "34496783",
+   "36462533",
+   "28917562",
+   "27261231"
+  ],
+  "translationset": [],
+  "querytranslation": "(\"administration, oral\"[MeSH Terms] OR \"oral\"[Title/Abstract]) AND (\"Vitamin K\"[MeSH Terms] OR \"Vitamin K\"[Title/Abstract] OR \"phytonadione\"[Title/Abstract] OR \"phylloquinone\"[Title/Abstract])"
+ }
+}

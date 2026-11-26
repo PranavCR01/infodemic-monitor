@@ -1,6 +1,6 @@
 # T49 replay after the T50 search rewrite
 
-Evidence: the rewritten planner's own retrieval on the tune split (`scripts/t50_search_recall.py record`, live PubMed, rules only, no model; recorded 2026-11-26T03:07:38Z, code dce350920dbc). `t50_kept` is what the reranker kept (what the verifier would see); `t50_retrieved` is everything the searches returned. Guard and judge unchanged. The find-the-study step and the search assistant need a model and are not in this replay.
+Evidence: the rewritten planner's own retrieval on the tune split (`scripts/t50_search_recall.py record`, live PubMed, rules only, no model; recorded 2026-11-26T03:18:06Z, code 95025fb99ab2). `t50_kept` is what the reranker kept (what the verifier would see); `t50_retrieved` is everything the searches returned. Guard and judge unchanged. The find-the-study step and the search assistant need a model and are not in this replay.
 
 ## `t50_kept`: 4/5 tune videos keep MISINFO (unproven)
 

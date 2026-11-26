@@ -142,9 +142,9 @@
  "tune split recall (187 claims)": {
   "steps": {
    "plan_search": {
-    "calls": 31,
-    "expected": 0.004459100000000002,
-    "upper": 0.016668199999999998
+    "calls": 32,
+    "expected": 0.004603600000000002,
+    "upper": 0.0172072
    },
    "translate_claim": {
     "calls": 59,
@@ -152,13 +152,13 @@
     "upper": 0.0142928
    },
    "find_study": {
-    "calls": 38,
-    "expected": 0.7902751,
-    "upper": 2.4906501999999997
+    "calls": 40,
+    "expected": 0.8318705000000001,
+    "upper": 2.6217409999999997
    }
   },
-  "expected_usd": 0.7977506,
-  "upper_usd": 2.5216111999999997,
+  "expected_usd": 0.8394905,
+  "upper_usd": 2.6532409999999995,
   "per_claim": [
    {
     "claim": "v11:c1",
@@ -433,11 +433,11 @@
    {
     "claim": "v36:c1",
     "translate": false,
-    "assistant": false,
+    "assistant": true,
     "find_study": true,
     "find_study_reason": "nothing_on_topic",
-    "expected_usd": 0.0208,
-    "upper_usd": 0.06554
+    "expected_usd": 0.02094,
+    "upper_usd": 0.06608
    },
    {
     "claim": "v36:c2",
@@ -784,11 +784,11 @@
    {
     "claim": "v69:c6",
     "translate": false,
-    "assistant": false,
+    "assistant": true,
     "find_study": true,
     "find_study_reason": "nothing_on_topic",
-    "expected_usd": 0.0208,
-    "upper_usd": 0.06554
+    "expected_usd": 0.02094,
+    "upper_usd": 0.06608
    },
    {
     "claim": "v69:c7",
@@ -1630,11 +1630,11 @@
    {
     "claim": "v135:c1",
     "translate": false,
-    "assistant": true,
-    "find_study": false,
-    "find_study_reason": null,
-    "expected_usd": 0.00014,
-    "upper_usd": 0.00054
+    "assistant": false,
+    "find_study": true,
+    "find_study_reason": "nothing_on_topic",
+    "expected_usd": 0.0208,
+    "upper_usd": 0.06554
    },
    {
     "claim": "v135:c2",
@@ -1649,10 +1649,10 @@
     "claim": "v135:c3",
     "translate": false,
     "assistant": false,
-    "find_study": false,
-    "find_study_reason": null,
-    "expected_usd": 0.0,
-    "upper_usd": 0.0
+    "find_study": true,
+    "find_study_reason": "nothing_on_topic",
+    "expected_usd": 0.0208,
+    "upper_usd": 0.06555
    },
    {
     "claim": "v135:c4",

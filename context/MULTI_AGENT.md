@@ -2085,8 +2085,11 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   (web-search model proposes ids; we verify via EFetch / ESearch `[doi]` / Crossref; only verified
   PubMed or `journal_doi` records become evidence), run from `rerank_evidence`, records pinned.
   JAMA DOI verified to PMID 42986716 via E-utilities. Crossref blocked from the build env
-  (synthetic fixture). Tune recall (rules only, on topic): 57/187 → 122/187; non-English 1/59 →
-  26/59; golden PMID retrieved 7/118 → 20/118; repeated rounds 253 → 0. Vitamin K fixture: 9/9
+  (synthetic fixture). D8 tune recall, rules only: strict (golden PMID kept) 4/118 → 16/118;
+  lenient 52/187 → 113/187 (T49 intervention yardstick) or 75/187 → 149/187 = 79.7% (claim-concept
+  yardstick): target 80% not met without the model helpers; non-English lenient 1/59 → 26/59 (42/59
+  claim yardstick); repeated rounds 253 → 0. D8 CI regression set: `fixtures/pubmed_regression/`
+  (job 5cc07f48, real E-utilities answers, reconstructed claim texts). Vitamin K fixture: 9/9
   expected claims keep vitamin K / VKDB papers. T49 replay on T50 evidence: 4/5 tune unproven
   videos regain MISINFO (unproven) (v120 stays CANNOT_RECOGNIZE: seawater not recognised as the
   intervention rules-only). Dry-run paid estimate: vitamin K ~$0.17 (upper $0.52), tune ~$0.80

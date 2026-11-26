@@ -1,0 +1,20 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "1230",
+  "retmax": "5",
+  "retstart": "0",
+  "idlist": [
+   "32187975",
+   "26583746",
+   "37847280",
+   "37847277",
+   "15509671"
+  ],
+  "translationset": [],
+  "querytranslation": "(\"Vitamin K\"[MeSH Terms] OR \"Vitamin K\"[Title/Abstract] OR \"phytonadione\"[Title/Abstract] OR \"phylloquinone\"[Title/Abstract]) AND (\"Intracranial Hemorrhages\"[MeSH Terms] OR \"intracranial hemorrhage\"[Title/Abstract])"
+ }
+}

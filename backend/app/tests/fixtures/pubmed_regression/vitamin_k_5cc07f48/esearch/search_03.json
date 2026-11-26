@@ -1,0 +1,20 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "4926",
+  "retmax": "5",
+  "retstart": "0",
+  "idlist": [
+   "27067969",
+   "30791399",
+   "38795872",
+   "7823718",
+   "18374189"
+  ],
+  "translationset": [],
+  "querytranslation": "(\"Vitamin K\"[MeSH Terms] OR \"Vitamin K\"[Title/Abstract] OR \"phytonadione\"[Title/Abstract] OR \"phylloquinone\"[Title/Abstract]) AND (\"Blood Coagulation\"[MeSH Terms] OR \"coagulation\"[Title/Abstract] OR \"clotting\"[Title/Abstract])"
+ }
+}

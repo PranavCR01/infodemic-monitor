@@ -11,6 +11,8 @@ cost estimate only; the paid run waits for the lead's approval and cap.
 | `t49_replay/` | T49's unproven-guard replay on the evidence the rewritten search retrieves |
 | `cost_estimate.md`, `cost_estimate.json` | Dry-run cost of the paid runs (vitamin K fixture; tune recall) |
 
+The D8 CI regression set (real production misses, offline) is `backend/app/tests/fixtures/pubmed_regression/` with `backend/app/tests/test_search_regression_set.py`.
+
 **How they were made** (from `backend/`, live NCBI E-utilities at <= 2.5 requests/s, no key):
 
     # before: on origin/langgraph-build b52e952 (a checkout of the old code)
@@ -30,8 +32,10 @@ the commands above rebuild them.
 
 - *On topic* is the T49 deterministic check (`unproven_guard.on_topic`) from the new code,
   applied to both runs. It uses the same MeSH lexicon the new planner searches with, so it
-  is partly circular for claims whose concept T50 added; the golden-cited-PMID column is the
-  independent check (6% → 17% of claims with a golden PMID retrieve one).
+  is partly circular for claims whose concept T50 added; the golden-cited-PMID numbers are the
+  independent check (D8 strict, golden PMID kept: 3.4% → 13.6%; retrieved at all: 5.9% → 16.9%).
+- D8 target (lenient >= 80%) is **not met** rules-only: 60.4% on the T49 intervention yardstick,
+  79.7% on the claim-concept yardstick. The model helpers would add to it; that needs the paid run.
 - The lexicon additions were chosen from the **tune** split's claims (the design says to grow
   the lexicon from the evaluation set). Expect a smaller gain on the test split, which was not read.
 - The recall run uses the full budget (3 rounds) for every claim; in the graph a claim gets

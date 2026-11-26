@@ -308,7 +308,13 @@ class Translator(Protocol):
 # only intervention is one of these ("babies who don't get the shot") is about the
 # video's main substance (T50, context carry-over).
 GENERIC_INTERVENTIONS = frozenset({"injection", "oral_drops"})
-_ANAPHORA_RE = re.compile(r"(?<![\w-])(?:this|these|that|those|the shot|the injection|the drops|the jab)(?![\w-])")
+# A claim refers back to something it doesn't name: it opens with a demonstrative
+# ("These studies on newborns ...", "This bleeding is ..."), or names a delivery or
+# study by a definite phrase ("the shot"). A relative "that" mid-sentence does not count.
+_ANAPHORA_RE = re.compile(
+    r"^(?:this|these|that|those|it|they)(?![\w-])|"
+    r"(?<![\w-])(?:the shot|the injection|the drops|the jab|this (?:study|treatment|supplement|drug)|"
+    r"these (?:studies|drugs|supplements|trials))(?![\w-])")
 _NON_LATIN_LANGS = frozenset({"hi", "ru", "ar", "zh", "ja", "ko", "el", "he", "th", "bn", "ta"})
 MAX_KEYWORD_TERMS = 3  # the keyword fallback never ANDs more than this many terms (T50 f)
 _PLAN_CACHE_SIZE = 512

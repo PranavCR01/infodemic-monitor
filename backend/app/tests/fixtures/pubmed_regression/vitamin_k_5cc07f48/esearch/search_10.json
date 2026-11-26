@@ -1,0 +1,20 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "73292",
+  "retmax": "5",
+  "retstart": "0",
+  "idlist": [
+   "32187975",
+   "39125301",
+   "34472618",
+   "30970568",
+   "30791399"
+  ],
+  "translationset": [],
+  "querytranslation": "\"milk, human\"[MeSH Terms] OR \"breast milk\"[Title/Abstract] OR \"human milk\"[Title/Abstract] OR \"Vitamin K\"[MeSH Terms] OR \"Vitamin K\"[Title/Abstract] OR \"phytonadione\"[Title/Abstract] OR \"phylloquinone\"[Title/Abstract]"
+ }
+}

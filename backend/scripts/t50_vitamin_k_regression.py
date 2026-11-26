@@ -19,6 +19,7 @@ import json
 import os
 import re
 import sys
+import time
 from pathlib import Path
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
@@ -38,11 +39,56 @@ def is_vitamin_k(rec) -> bool:
     return bool(_VITK.search(f"{rec.title} {rec.abstract}"))
 
 
+def record_fixture(out_dir: Path, top: int = 5) -> None:
+    """Record the live E-utilities answers for every query the rewritten planner runs on
+    the job's 13 claims into the ``RecordedPubMed`` layout, trimmed (top ``top`` PMIDs per
+    search, ``<ReferenceList>`` removed), for the CI regression set (D8)."""
+    import re as _re
+
+    import httpx
+
+    from app.core.retrieval.pubmed import EFETCH_URL, ESEARCH_URL, TOOL_NAME
+
+    job = json.loads(FIXTURE.read_text())
+    context = [c["text"] for c in job["claims"]]
+    planner = QueryPlanner()
+    (out_dir / "esearch").mkdir(parents=True, exist_ok=True)
+    (out_dir / "efetch").mkdir(parents=True, exist_ok=True)
+    index, pmids = {}, set()
+    for c in job["claims"]:
+        for q in planner.ladder(c["text"], claim_kind=c["claim_kind"], context=context)[:3]:
+            if q in index:
+                continue
+            time.sleep(0.4)
+            r = httpx.get(ESEARCH_URL, params={"db": "pubmed", "tool": TOOL_NAME, "term": q, "retmax": 20,
+                                               "retmode": "json", "sort": "relevance"}, timeout=30).json()
+            ids = r["esearchresult"]["idlist"][:top]
+            r["esearchresult"]["idlist"], r["esearchresult"]["retmax"] = ids, str(len(ids))
+            name = f"search_{len(index) + 1:02d}.json"
+            (out_dir / "esearch" / name).write_text(json.dumps(r, indent=1))
+            index[q] = name
+            pmids.update(ids)
+    (out_dir / "esearch" / "index.json").write_text(json.dumps(index, indent=1))
+    todo = sorted(pmids)
+    for i in range(0, len(todo), 50):
+        time.sleep(0.4)
+        xml = httpx.get(EFETCH_URL, params={"db": "pubmed", "tool": TOOL_NAME, "id": ",".join(todo[i:i + 50]),
+                                            "rettype": "abstract", "retmode": "xml"}, timeout=60).text
+        for art in _re.findall(r"<PubmedArticle>.*?</PubmedArticle>", xml, _re.S):
+            pmid = _re.search(r'<PMID Version="\d+">(\d+)</PMID>', art).group(1)
+            art = _re.sub(r"<ReferenceList>.*?</ReferenceList>", "", art, flags=_re.S)
+            (out_dir / "efetch" / f"{pmid}.xml").write_text(art)
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--out")
     ap.add_argument("--cache")
+    ap.add_argument("--record-fixture", help="write the CI regression fixture (RecordedPubMed layout) here")
     args = ap.parse_args(argv)
+    if args.record_fixture:
+        record_fixture(Path(args.record_fixture))
+        return 0
     sys.path.insert(0, str(HERE))
     from t50_search_recall import FileCache  # noqa: E402
 

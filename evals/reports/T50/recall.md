@@ -1,12 +1,26 @@
 # T50: search recall on the tune split (rules only, no model)
 
-Before: code b52e9521935b; after: code dce350920dbc. Live PubMed, up to 3 rounds per claim. On topic = the T49 deterministic check (`unproven_guard.on_topic`, from the after code, for both runs).
+Before: code b52e9521935b; after: code 95025fb99ab2. Live PubMed, up to 3 rounds per claim. On topic = the T49 deterministic check (`unproven_guard.on_topic`, from the after code, for both runs).
+
+## D8 search quality bar (lead, 2026-11-26)
+
+Strict: a golden-cited PMID is among the records the reranker kept (claims with a golden PMID). Lenient: strict, or at least one kept record is on topic. Target: lenient >= 80%. Two on-topic yardsticks: *intervention* = the T49 check only (for a claim with no recognised intervention it needs every leftover word, e.g. 'also loves acid', so it under-counts); *claim* = the T49 check when the claim has a recognised intervention, else one of the claim's concepts in the record (the rule that triggers find-the-study).
+
+| set | claims | lenient (intervention) before → after | lenient (claim) before → after | strict before → after |
+| --- | --- | --- | --- | --- |
+| all tune claims | 187 | 52/187 (27.8%) → 113/187 (60.4%) | 75/187 (40.1%) → 149/187 (79.7%) | 4/118 (3.4%) → 16/118 (13.6%) |
+| English | 128 | 51/128 (39.8%) → 87/128 (68.0%) | 67/128 (52.3%) → 107/128 (83.6%) | 4/84 (4.8%) → 12/84 (14.3%) |
+| non-English | 59 | 1/59 (1.7%) → 26/59 (44.1%) | 8/59 (13.6%) → 42/59 (71.2%) | 0/34 (0.0%) → 4/34 (11.8%) |
+
+Target lenient >= 80%: **not met** rules-only (intervention 113/187 (60.4%), claim 149/187 (79.7%)); the model helpers (assistant, translation, find-the-study) are not in these numbers.
+
+## Retrieval detail
 
 | set | claims | on topic (any round) before → after | round 1 only | kept by reranker | empty searches | repeated rounds | golden PMID retrieved |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| all tune claims | 187 | 57/187 (30%) → 122/187 (65%) | 55/187 (29%) → 118/187 (63%) | 52/187 (28%) → 111/187 (59%) | 84 → 9 | 253 → 0 | 7/118 (6%) → 20/118 (17%) |
-| English | 128 | 56/128 (44%) → 96/128 (75%) | 54/128 (42%) → 92/128 (72%) | 51/128 (40%) → 87/128 (68%) | 42 → 0 | 158 → 0 | 7/84 (8%) → 15/84 (18%) |
-| non-English | 59 | 1/59 (2%) → 26/59 (44%) | 1/59 (2%) → 26/59 (44%) | 1/59 (2%) → 24/59 (41%) | 42 → 9 | 95 → 0 | 0/34 (0%) → 5/34 (15%) |
+| all tune claims | 187 | 57/187 (30.5%) → 122/187 (65.2%) | 55/187 (29.4%) → 118/187 (63.1%) | 52/187 (27.8%) → 111/187 (59.4%) | 84 → 9 | 253 → 0 | 7/118 (5.9%) → 19/118 (16.1%) |
+| English | 128 | 56/128 (43.8%) → 96/128 (75.0%) | 54/128 (42.2%) → 92/128 (71.9%) | 51/128 (39.8%) → 87/128 (68.0%) | 42 → 0 | 158 → 0 | 7/84 (8.3%) → 14/84 (16.7%) |
+| non-English | 59 | 1/59 (1.7%) → 26/59 (44.1%) | 1/59 (1.7%) → 26/59 (44.1%) | 1/59 (1.7%) → 24/59 (40.7%) | 42 → 9 | 95 → 0 | 0/34 (0.0%) → 5/34 (14.7%) |
 
 Gained on topic: 68; lost: 3.
 

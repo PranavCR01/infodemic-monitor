@@ -130,15 +130,24 @@ def record(out: Path, cache_path: Path, limit: int | None = None) -> None:
                                "split": "tune", "rounds": ROUNDS, "claims": claims_out}, ensure_ascii=False))
 
 
-def _found(claim: dict, ids: list[str]) -> tuple[bool, bool]:
+def _found(claim: dict, ids: list[str], yardstick: str = "intervention") -> tuple[bool, bool]:
+    """(on topic, golden PMID among ``ids``). ``yardstick``: ``intervention`` is the T49
+    check alone; ``claim`` uses it when the claim has a recognised intervention and
+    otherwise the claim's own concepts (``find_study.topic_match``), the same rule that
+    decides when find-the-study fires: the T49 fallback requires every leftover word
+    ("also", "loves", "acid"), so no paper is ever on topic for such claims."""
     from app.core.graph.state import GraphClaim
-    from app.core.graph.unproven_guard import on_topic_ids
+    from app.core.graph.unproven_guard import intervention_terms, on_topic_ids
+    from app.core.retrieval.find_study import topic_match
 
     gc = GraphClaim(claim_id="c", claim_text=claim["text"], claim_category="other",
                     source_segment_ids=["s"], start_seconds=0, end_seconds=1)
     recs = [EvidenceRecord(evidence_id=i, source="pubmed", title=claim["records"][i]["title"],
                            abstract=claim["records"][i]["abstract"]) for i in ids if i in claim["records"]]
-    on_topic = bool(on_topic_ids(gc, recs))
+    if yardstick == "claim" and intervention_terms(claim["text"]).source != "concept":
+        on_topic = any(topic_match(claim["text"], r.title, r.abstract) for r in recs)
+    else:
+        on_topic = bool(on_topic_ids(gc, recs))
     golden = {p.replace("PMID:", "") for p in claim["golden_cited"] if p.startswith("PMID:")}
     pmids = {claim["records"][i]["pmid"] for i in ids if i in claim["records"]}
     return on_topic, bool(golden & pmids)
@@ -154,11 +163,16 @@ def score_file(path: Path) -> dict:
         r1 = [i for rnd in c["rounds"][:1] for i in rnd.get("ids", [])]
         on_any, gold_any = _found(c, retrieved)
         on_r1, _ = _found(c, r1)
-        on_kept, _ = _found(c, c["kept"])
+        on_kept, gold_kept = _found(c, c["kept"])
+        on_kept_claim, _ = _found(c, c["kept"], "claim")
         lang = detect_language(c["text"])
         has_gold = any(p.startswith("PMID:") for p in c["golden_cited"])
         rows[key] = {"on_topic": on_any, "on_topic_round1": on_r1, "on_topic_kept": on_kept,
                      "golden_hit": gold_any, "has_golden_pmid": has_gold, "lang": lang,
+                     # D8 (lead, 2026-11-26): strict = a golden-cited PMID kept by the
+                     # reranker; lenient = strict or an on-topic kept record.
+                     "strict": gold_kept, "lenient": gold_kept or on_kept,
+                     "lenient_claim": gold_kept or on_kept_claim,
                      "retrieved": len(retrieved), "kept": len(c["kept"]),
                      "queries": [r.get("query") for r in c["rounds"] if r.get("query")],
                      "repeats": sum(1 for r in c["rounds"] if r.get("repeat")),
@@ -170,7 +184,10 @@ def _summary(rows: dict, keys: list[str]) -> dict:
     n = len(keys)
     pick = lambda f: sum(1 for k in keys if rows[k][f])  # noqa: E731
     gold_keys = [k for k in keys if rows[k]["has_golden_pmid"]]
-    return {"claims": n, "on_topic": pick("on_topic"), "on_topic_round1": pick("on_topic_round1"),
+    return {"claims": n, "strict": sum(1 for k in gold_keys if rows[k].get("strict")),
+            "lenient": pick("lenient") if all("lenient" in rows[k] for k in keys) else 0,
+            "lenient_claim": pick("lenient_claim") if all("lenient_claim" in rows[k] for k in keys) else 0,
+            "on_topic": pick("on_topic"), "on_topic_round1": pick("on_topic_round1"),
             "on_topic_kept": pick("on_topic_kept"), "empty": sum(1 for k in keys if rows[k]["retrieved"] == 0),
             "repeat_rounds": sum(rows[k]["repeats"] for k in keys),
             "golden_claims": len(gold_keys), "golden_hit": sum(1 for k in gold_keys if rows[k]["golden_hit"])}
@@ -181,11 +198,32 @@ def score(before: Path, after: Path, out: Path | None) -> str:
     keys = sorted(set(b["rows"]) & set(a["rows"]))
     non_en = [k for k in keys if a["rows"][k]["lang"] not in ("en", "und")]
     en = [k for k in keys if k not in non_en]
-    pct = lambda x, n: f"{x}/{n} ({100 * x / n:.0f}%)" if n else "0/0"  # noqa: E731
+    pct = lambda x, n: f"{x}/{n} ({100 * x / n:.1f}%)" if n else "0/0"  # noqa: E731
     lines = ["# T50: search recall on the tune split (rules only, no model)", "",
              f"Before: code {str(b['code_revision'])[:12]}; after: code {str(a['code_revision'])[:12]}. "
              f"Live PubMed, up to {ROUNDS} rounds per claim. On topic = the T49 deterministic check "
              "(`unproven_guard.on_topic`, from the after code, for both runs).", "",
+             "## D8 search quality bar (lead, 2026-11-26)", "",
+             "Strict: a golden-cited PMID is among the records the reranker kept (claims with a golden PMID). "
+             "Lenient: strict, or at least one kept record is on topic. Target: lenient >= 80%. Two on-topic "
+             "yardsticks: *intervention* = the T49 check only (for a claim with no recognised intervention it "
+             "needs every leftover word, e.g. 'also loves acid', so it under-counts); *claim* = the T49 check "
+             "when the claim has a recognised intervention, else one of the claim's concepts in the record "
+             "(the rule that triggers find-the-study).", "",
+             "| set | claims | lenient (intervention) before → after | lenient (claim) before → after | "
+             "strict before → after |", "| --- | --- | --- | --- | --- |"]
+    for name, ks in (("all tune claims", keys), ("English", en), ("non-English", non_en)):
+        sb, sa = _summary(b["rows"], ks), _summary(a["rows"], ks)
+        n = sb["claims"]
+        lines.append(f"| {name} | {n} | {pct(sb['lenient'], n)} → {pct(sa['lenient'], n)} | "
+                     f"{pct(sb['lenient_claim'], n)} → {pct(sa['lenient_claim'], n)} | "
+                     f"{pct(sb['strict'], sb['golden_claims'])} → {pct(sa['strict'], sa['golden_claims'])} |")
+    sa_all = _summary(a["rows"], keys)
+    best = max(sa_all["lenient"], sa_all["lenient_claim"])
+    lines += ["", f"Target lenient >= 80%: **{'met' if best >= 0.8 * len(keys) else 'not met'}** rules-only "
+              f"(intervention {pct(sa_all['lenient'], len(keys))}, claim {pct(sa_all['lenient_claim'], len(keys))}); "
+              "the model helpers (assistant, translation, find-the-study) are not in these numbers.", "",
+             "## Retrieval detail", "",
              "| set | claims | on topic (any round) before → after | round 1 only | kept by reranker | "
              "empty searches | repeated rounds | golden PMID retrieved |",
              "| --- | --- | --- | --- | --- | --- | --- | --- |"]
