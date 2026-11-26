@@ -62,7 +62,7 @@ def per_claim(data: dict) -> list[str]:
     return [f"Claims: {n}. Claim latency (plan + 3 PubMed rounds + rerank + find-the-study): median "
             f"{statistics.median(lat):.0f} ms, p90 {_pct(lat, 0.9)} ms, max {max(lat)} ms. "
             f"Cost per claim: {data['spent_usd'] / n:.5f} USD on average; find-the-study claims "
-            f"{len(fs)}, mean {statistics.mean(fs_cost) if fs_cost else 0:.4f} USD (tokens), "
+            f"{len(fs)}, mean {statistics.mean(fs_cost) if fs_cost else 0:.4f} USD (tokens + search fees), "
             f"max {max(fs_cost) if fs_cost else 0:.4f} USD."]
 
 
