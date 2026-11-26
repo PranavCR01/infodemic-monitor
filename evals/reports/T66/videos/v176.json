@@ -1,0 +1,1003 @@
+{
+ "video_id": "v176",
+ "status": "finished",
+ "pipeline": "graph",
+ "fallback_reason": null,
+ "label": "CANNOT_RECOGNIZE",
+ "cost_usd": 0.152709,
+ "latency_ms": 19500,
+ "guarded_calls": 7,
+ "pipeline_version": "graph_v1+3372ef3+p70b785e4",
+ "segment_counts_omitted": {
+  "transcript_segments": 11,
+  "ocr_segments": 19,
+  "fused_segments": 11
+ },
+ "model_calls": [
+  {
+   "step": "extract_claims",
+   "provider": "anthropic",
+   "model": "claude-sonnet-5-5",
+   "prompt_version": "extract_v3",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 3642,
+   "input_tokens": 6514,
+   "output_tokens": 437,
+   "reasoning_tokens": 0,
+   "response_model": "claude-sonnet-5-5",
+   "reasoning_effort": null,
+   "cost_usd": 0.017398,
+   "error": null
+  },
+  {
+   "step": "analyze_stance",
+   "provider": "anthropic",
+   "model": "claude-sonnet-5-5",
+   "prompt_version": "stance_v1",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 1808,
+   "input_tokens": 3344,
+   "output_tokens": 172,
+   "reasoning_tokens": 0,
+   "response_model": "claude-sonnet-5-5",
+   "reasoning_effort": null,
+   "cost_usd": 0.008408,
+   "error": null
+  },
+  {
+   "step": "verify_claims",
+   "provider": "anthropic",
+   "model": "claude-opus-5-5",
+   "prompt_version": "verify_v3",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 4083,
+   "input_tokens": 9582,
+   "output_tokens": 383,
+   "reasoning_tokens": 0,
+   "response_model": "claude-opus-5-5",
+   "reasoning_effort": null,
+   "cost_usd": 0.045988,
+   "error": null
+  },
+  {
+   "step": "critique",
+   "provider": "openai",
+   "model": "gpt-4o-2024-08-06",
+   "prompt_version": "critic_v1",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 1332,
+   "input_tokens": 5125,
+   "output_tokens": 90,
+   "reasoning_tokens": 0,
+   "response_model": "gpt-4o-2024-08-06",
+   "reasoning_effort": null,
+   "cost_usd": 0.0137125,
+   "error": null
+  },
+  {
+   "step": "verify_claims",
+   "provider": "anthropic",
+   "model": "claude-opus-5-5",
+   "prompt_version": "verify_v3",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 4483,
+   "input_tokens": 9807,
+   "output_tokens": 399,
+   "reasoning_tokens": 0,
+   "response_model": "claude-opus-5-5",
+   "reasoning_effort": null,
+   "cost_usd": 0.047208,
+   "error": null
+  },
+  {
+   "step": "critique",
+   "provider": "openai",
+   "model": "gpt-4o-2024-08-06",
+   "prompt_version": "critic_v1",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 1031,
+   "input_tokens": 5125,
+   "output_tokens": 104,
+   "reasoning_tokens": 0,
+   "response_model": "gpt-4o-2024-08-06",
+   "reasoning_effort": null,
+   "cost_usd": 0.0138525,
+   "error": null
+  },
+  {
+   "step": "judge_explanation",
+   "provider": "anthropic",
+   "model": "claude-sonnet-5-5",
+   "prompt_version": "explain_v2",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 1817,
+   "input_tokens": 2111,
+   "output_tokens": 192,
+   "reasoning_tokens": 0,
+   "response_model": "claude-sonnet-5-5",
+   "reasoning_effort": null,
+   "cost_usd": 0.006142,
+   "error": null
+  }
+ ],
+ "state": {
+  "state_schema_version": "1.0.0",
+  "job_id": "t66-v176",
+  "video_id": "v176",
+  "pipeline_version": "graph_v1+3372ef3+p70b785e4",
+  "media_uri": "fusion://t66-v176",
+  "artifacts": [
+   {
+    "kind": "video",
+    "uri": "fusion://t66-v176",
+    "sha256": null
+   }
+  ],
+  "claims": [
+   {
+    "claim_id": "c1",
+    "claim_text": "He gives you a scripture to overcome [anxiety attacks]",
+    "claim_category": "treatment_efficacy",
+    "source_segment_ids": [
+     "t3",
+     "t8"
+    ],
+    "start_seconds": 6.72,
+    "end_seconds": 27.44,
+    "requires_verification": true,
+    "claim_kind": "research_question"
+   }
+  ],
+  "stance_results": {
+   "c1": {
+    "claim_id": "c1",
+    "stance": "ENDORSES",
+    "stance_segment_ids": [
+     "t8",
+     "t9",
+     "t11"
+    ],
+    "rationale": "The speaker says \"do you know that He gives you a scripture to overcome?\" and then gives 2 Timothy 1:7. They finish with \"God has given you a sound mind. Believe it.\"",
+    "confidence": null,
+    "model": "claude-sonnet-5-5",
+    "prompt_version": "stance_v1"
+   }
+  },
+  "retrieval_queries": {
+   "c1": [
+    "(Anxiety[MeSH Terms] OR anxiety[tiab])"
+   ]
+  },
+  "retrieved_evidence": {
+   "c1": [
+    {
+     "evidence_id": "ev_39080237",
+     "source": "pubmed",
+     "title": "Exercise and Anxiety.",
+     "abstract": "Anxiety disorders are among the most commonly diagnosed mental health disorders in the United States - affecting over 40 million adults per year. Although anxiety disorders are commonly treated via psychotherapy and/or pharmacotherapy, there is also accumulating evidence to suggest that physical activity and exercise may play an important role in prevention and treatment. This chapter provides an extensive overview of literature examining the effects of physical activity, acute bouts of exercise, and chronic exercise training on several anxiety outcomes, primarily in adults. The collective evidence to date suggests that: (1) an acute bout of aerobic or resistance exercise generally results in reductions in state anxiety among adults with and without clinical anxiety disorders, (2) greater levels of physical activity are associated with fewer anxiety symptoms and a reduced likelihood of developing an anxiety disorder, (3) exercise training (aerobic and resistance) appears to reduce general anxiety symptoms in adults without a clinical anxiety disorder and adults with a chronic illness (e.g., cardiovascular disease) and may reduce disorder-specific symptoms of anxiety in adults with a clinical anxiety disorder. Although the collective body of evidence is promising, there is a need for additional well-designed and adequately powered randomized controlled trials, especially among adults with clinical anxiety disorders.",
+     "pmid": "39080237",
+     "doi": "10.1007/7854_2024_498",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2024,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/39080237/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_37572550",
+     "source": "pubmed",
+     "title": "Hope and anxiety.",
+     "abstract": "Anxiety-related disorders continue to be one of the most prevalent and burdensome psychiatric disorders. Research has examined resilience factors, such as hope, that can build resilience toward or mitigate the impact of anxiety disorders. The following review provides a summary of hope as a factor of resilience as well as a mechanism of change in reducing levels of anxiety. First, hope and anxiety are conceptualized as future-oriented traits. Then, hope as a source of resilience against trait anxiety is discussed. The article then discusses the moderate, indirect relationship between hope and general as well as specific forms of anxiety before providing empirical support for hope as a mechanism of change in the reduction of anxiety. Finally, considerations for future study of hope and anxiety are discussed.",
+     "pmid": "37572550",
+     "doi": "10.1016/j.copsyc.2023.101664",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2023,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/37572550/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_36373844",
+     "source": "pubmed",
+     "title": "Anxiety in Wiedemann-Steiner syndrome.",
+     "abstract": "This study examined anxiety in Wiedemann-Steiner syndrome (WSS). Eighteen caregivers and participants with WSS completed the parent- and self-report versions of the Screen for Child Anxiety Related Disorder or the adapted version of the Screen for Adult Anxiety Related Disorder. Approximately 33.33% of parents and 65% of participants with WSS rated in the clinical range for overall anxiety. Across anxiety subtypes, parents primarily indicated concerns with Separation Anxiety (72%), which was also endorsed by the majority of participants with WSS (82%). The emergent trend showed Total Anxiety increased with age based on parent-informant ratings. The behavioral phenotype of WSS includes elevated anxiety. Clinical management should include incorporating early behavioral interventions to bolster emotion regulation given the observed risk of anxiety with age.",
+     "pmid": "36373844",
+     "doi": "10.1002/ajmg.a.63040",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2023,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/36373844/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_22588767",
+     "source": "pubmed",
+     "title": "Measures of anxiety: State-Trait Anxiety Inventory (STAI), Beck Anxiety Inventory (BAI), and Hospital Anxiety and Depression Scale-Anxiety (HADS-A).",
+     "abstract": "",
+     "pmid": "22588767",
+     "doi": "10.1002/acr.20561",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2011,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/22588767/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_34979033",
+     "source": "pubmed",
+     "title": "Anxiety in Angelman Syndrome.",
+     "abstract": "Angelman Syndrome (AS) is a neurodevelopmental disorder most commonly caused by the impaired expression of the maternal UBE3A gene on chromosome 15. Though anxiety has been identified as a frequently present characteristic in AS, there are limited studies examining anxiety in this population. Studies of anxiety in other neurodevelopmental disorders have found disorder specific symptoms of anxiety and age specific displays of anxiety symptoms. However, there is a consistent challenge in identifying anxiety in people with neurodevelopmental disorders given the lack of measurement instruments specifically designed for this population. Given the limited information about AS and anxiety, the aims of the current project were to (a) examine symptoms of anxiety in children with AS and (b) determine the correlates of anxiety in children with AS. Participants included 42 adult caregivers of youth with AS in the AS Natural History study who completed the Developmental Behavior Checklist (DBC). The results found that 26% of the sample demonstrated elevated symptoms of anxiety and established a relationship between elevated anxiety in youth with AS and higher levels of irritability, hyperactivity, self-absorbed behaviors, and disruptive/antisocial behaviors. Findings from this research provide a foundation for tailoring evidence-based assessments and treatments for youth with AS and anxiety.",
+     "pmid": "34979033",
+     "doi": "10.1352/1944-7558-127.1.1",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2022,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/34979033/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_39412028",
+     "source": "pubmed",
+     "title": "[Preventing dental anxiety in adults and children].",
+     "abstract": "PREVENTING DENTAL ANXIETY IN ADULTS AND CHILDREN. In 2014, according to INSEE, dental anxiety affected 7% of the French population. Severity of anxiety can range from minor to severe, minor anxiety manifesting for patients as physical symptoms without compromising dental care to severe anxiety by avoiding dental consultation and compromising dental care. This article explains the problems associated with dental anxiety and suggests ways in which practitioners can help their patients to come to the dentist for dental care, in particular by using cognitive-behavioural therapies.",
+     "pmid": "39412028",
+     "doi": null,
+     "document_id": null,
+     "page": null,
+     "publication_year": 2024,
+     "publication_type": [
+      "English Abstract",
+      "Journal Article"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/39412028/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_32772060",
+     "source": "pubmed",
+     "title": "Anxiety in persons with visual impairment.",
+     "abstract": "Anxiety and anxiety disorders among people with visual impairment are more frequent than in the general population. It is estimated that . of people with visual impairment face depression and/or anxiety, whereas 4-6% of people are diagnosed with anxiety disorders. The purpose of this paper is analyzing the occurrence of anxiety in people with visual impairment based on current information. Literature review indicates that people with visual impairment experience the common, as well as the more specific, often chronic anxiety symptoms. Despite the significance of the foregoing phenomenon and its negative consequences, literature does not explain its causes, specify the problem, and most importantly, does not provide recommendations for preventing the occurrence of anxiety in the foregoing group of people. In order to understand the nature of anxiety, it is important to learn more about its causes and consequences for health,both biopsychosocial and spiritual wellbeing. In people with visual impairment this may depend on particular conditions which these people face every day, therefore the concept of anxiety in this group of people requires a separate consideration.",
+     "pmid": "32772060",
+     "doi": "10.12740/pp/onlinefirst/85408",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2020,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/32772060/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_36655572",
+     "source": "pubmed",
+     "title": "Anxiety trajectories among cancer survivors during the COVID-19 pandemic.",
+     "abstract": "PURPOSE: To describe trajectories of general and bodily vigilance anxiety among cancer survivors during COVID-19 and examine associated factors.\nDESIGN: Longitudinal survey study (May-December 2020).\nSAMPLE: Colorado-based cancer survivors (N = 147).\nMETHODS: Latent class growth analyses were used to examine trajectories for two types of anxiety (general and body vigilance), and to evaluate associations with fear of cancer recurrence (FCR), loneliness, and emotional approach coping.\nFINDINGS: Anxiety levels remained stable over time. Most participants were best characterized by the mild general anxiety and moderate bodily vigilance anxiety classes. FCR predicted both general and bodily vigilance anxiety class, and loneliness distinguished between mild and moderate bodily vigilance anxiety classes.\nCONCLUSIONS: Current cancer survivors experienced mild general anxiety and moderate body vigilance anxiety during the early pandemic with no detectable improvement over time, and FCR consistently predicted anxiety outcomes.\nIMPLICATIONS FOR PSYCHOSOCIAL PROVIDERS: These findings provide insight into the anxiety profiles of cancer survivors during COVID-19 and possible therapeutic targets.",
+     "pmid": "36655572",
+     "doi": "10.1080/07347332.2022.2154187",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2023,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/36655572/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_36084246",
+     "source": "pubmed",
+     "title": "Precompetitive anxiety profiles in runners: Differences in the running motives.",
+     "abstract": "The study aimed to identify precompetitive anxiety profiles and analyze the impact of those profiles in their reasons to adhere to running. A sample of 473 Spanish Amateur Athletes participated in the study. Results revealed the emergence of three profiles: (a) a high precompetitive anxiety profile characterized by high cognitive and somatic anxiety and low self-confidence; (b) a precompetitive medium-low anxiety profile characterized by medium-low scores in cognitive and somatic anxiety and medium self-confidence; (c) a precompetitive low anxiety profile characterized by low scores in cognitive and somatic anxiety and medium self-confidence. Results showed that most of the working runners, who participate in ten-kilometer races, who practice three days a week, and most experienced runners, belonged to the extremely low anxiety profile. In conclusion, the precompetitive low anxiety profile reported the most suited outcomes which mean that is a more adaptive profile.",
+     "pmid": "36084246",
+     "doi": "10.1080/07448481.2022.2119395",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2024,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/36084246/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_37634799",
+     "source": "pubmed",
+     "title": "Performance Anxiety in Radiology Education and Clinical Practice.",
+     "abstract": "Performance anxiety is fear, anxiety, or avoidance of performative tasks, due to possible evaluation or criticism by others. Performance anxiety is well described in public speakers, musicians, and even surgeons. Its impact on radiologists and especially radiology trainees has not been explored. This article details performance anxiety, framing radiologists as performers, and highlights its potential impact on trainees and practicing radiologists. We offer strategies to manage and enhance the effects of performance anxiety that can be implemented in a training environment.",
+     "pmid": "37634799",
+     "doi": "10.1016/j.jacr.2023.06.038",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2023,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/37634799/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_38679905",
+     "source": "pubmed",
+     "title": "Anxiety among youth with food allergy.",
+     "abstract": "OBJECTIVE: Anxiety is among the major psychological concerns for children living with food allergy (FA). Yet research exploring the variables driving anxiety symptoms in FA remains sparse, and most studies still utilize homogeneous samples to assess anxiety symptoms. The current study seeks to evaluate the rates of clinically significant anxiety symptoms among a diverse sample of youth with FA and examine whether a heightened risk perception of FA outcomes and FA burden (vs. FA medical history) is associated with anxiety in youth.\nMETHODS: 94 youth ages 10-14 and their parents were recruited from FA clinics at a mid-Atlantic children's hospital. Both youth and parents completed demographic and FA medical history questionnaires, the Screen for Child Anxiety Related Emotional Disorders, and the Food Allergy Independent Measure as part of a longitudinal study about FA adjustment and adherence.\nRESULTS: Over a third (37%) of youth scored above clinical cut-offs for overall anxiety symptoms. At least 25% of youth reported clinically significant scores on panic disorder, generalized anxiety, social anxiety, separation anxiety, and school avoidance subscales. Perception of risk of adverse FA outcomes and burden-but not FA medical history-were associated with total anxiety, generalized anxiety, panic disorder, and school avoidance symptoms, but not social anxiety and separation anxiety. Having more FAs was associated with higher social anxiety scores but not with other anxiety subscales.\nCONCLUSIONS: Youth with FA might benefit from psychosocial interventions that address FA risk perception management and promote appropriate FA vigilance to cope with anxiety symptoms.",
+     "pmid": "38679905",
+     "doi": "10.1093/jpepsy/jsae026",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2024,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/38679905/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_34417655",
+     "source": "pubmed",
+     "title": "Parent Description of Anxiety in Angelman Syndrome.",
+     "abstract": "Anxiety is being increasingly identified in Angelman syndrome (AS). Qualitative questions and quantitative assessments were used to evaluate for anxiety in 50 subjects with AS. In-person evaluations assessed behaviors concerning for anxiety and circumstances wherein they occurred. Caregivers completed anxiety and other behavioral rating scales. Caregiver responses were categorized and compared to items from anxiety rating scales. The most common behavioral manifestation of anxiety was \"aggression.\" The most common circumstance was \"separation from caregiver/parent.\" Subjects had elevated scores on anxiety, irritability and hyperactivity scales with lower mean scores among subjects with a maternal deletion. The Pediatric Anxiety Rating Scale best captured behaviors described by caregivers. Existing anxiety scales should be adapted for use in AS.",
+     "pmid": "34417655",
+     "doi": "10.1007/s10803-021-05238-8",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2022,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/34417655/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_20199609",
+     "source": "pubmed",
+     "title": "Perioperative anxiety in children.",
+     "abstract": "UNLABELLED: OBJECTIVES & AIM: The purpose of this investigation was to examine children's anxiety across the perioperative setting.\nBACKGROUND: Although several studies have examined preoperative anxiety in children, few researchers have illustrated perioperative anxiety; that is, anxiety in children throughout the pre and postoperative continuum.\nMETHODS: Participants were 261 children ages 2-12. Anxiety was rated prior to surgery, immediately after surgery, and for 2 weeks at home following surgery.\nRESULTS: Low child sociability and high parent anxiety predicted perioperative anxiety. Perioperative anxiety was related to postoperative pain and negative postoperative behavioral change.\nCONCLUSIONS: Identification and prevention of anxiety in children can help prevent negative outcomes following surgery.",
+     "pmid": "20199609",
+     "doi": "10.1111/j.1460-9592.2010.03263.x",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2010,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/20199609/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_40830577",
+     "source": "pubmed",
+     "title": "Clinical features and genetic mechanisms of anxiety, fear, and avoidance: A comprehensive review of five anxiety disorders.",
+     "abstract": "Anxiety disorders, including social anxiety disorder (SAD), generalized anxiety disorder (GAD), panic disorder (PD), agoraphobia (AG), and specific phobia (SP), are characterized by core features of excessive anxiety and fear. Furthermore, these disorders are often accompanied by avoidance behaviors. While avoidance is a common behavioral response, it may be a consequence of or a cocontributor to the anxiety and fear driving these disorders. This narrative review integrates the interactions among anxiety, fear, and avoidance behaviors across these five disorders and synthesizes findings from clinical, neuropsychological, brain function, treatment, genetic, and epigenetic studies. Based on the intensity of anxiety and fear, these anxiety five disorders can be categorized into three groups: fear-dominant (SP, AG), mixed (PD, SAD), and anxiety-dominant (GAD). The intensity of avoidance behaviors is related to the age of onset. Each group responds to different treatment approaches. In fear-dominant disorders, exposure therapy is highly effective in reducing avoidance behaviors and fear responses. Cognitive behavioral therapy (CBT) with an emphasis on exposure is useful. In the mixed group, CBT is the preferred treatment, with a focus on both exposure therapy and cognitive restructuring. In addition to CBT, selective serotonin and serotonin-norepinephrine reuptake inhibitors (SSRIs/SNRIs) are commonly used to reduce anticipatory anxiety and fear symptoms. In anxiety-dominant disorders, both SSRIs/SNRIs and CBT with an emphasis on cognitive restructuring are effective for managing chronic worry. Anxiety and fear are regulated by distinct but interacting neurobiological mechanisms, with the amygdala central to fear processing and the hypothalamic\u2012pituitary\u2012adrenal axis involved in chronic anxiety regulation. Genetic and epigenetic studies demonstrate substantial heritability across anxiety disorders, with varying degrees of genetic influence on anxiety, fear, and avoidance. Avoidance behaviors, particularly in early-onset disorders such as SP and SAD, may be more strongly influenced by genetic factors. Large-scale genome-wide association studies (GWASs) grouping anxiety disorders have identified shared genetic loci, but GWASs for individual anxiety disorders are limited by small sample sizes. Grouping anxiety disorders into broader categories - namely, fear-dominant, mixed, and anxiety-dominant - rather than considering each specific anxiety disorder in isolation may lead to increased statistical power and yield more comprehensive perspectives on the shared and distinct clinical and genetic risk factors among anxiety disorders.",
+     "pmid": "40830577",
+     "doi": "10.1038/s41380-025-03155-1",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2025,
+     "publication_type": [
+      "Journal Article",
+      "Review",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/40830577/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_37350221",
+     "source": "pubmed",
+     "title": "Anxiety in autistic preschool children: Phenomenology and a network analysis of correlates.",
+     "abstract": "Anxiety disorders in autistic children are associated with significant functional impairment. Few studies have examined impairing anxiety presentations in autistic preschool children (i.e., 3-5 years old). This cross-sectional study examined the phenomenology of impairing anxiety and the strongest correlates of anxiety in 75 autistic preschool children. Parents completed a diagnostic interview that assesses two anxiety types, DSM-5 anxiety disorders and impairing distinct anxiety presentations, and measures of anxiety correlates. An exploratory network analysis examined connections between anxiety and its correlates. Forty percent of children had impairing anxiety. Specific phobia followed by 'other social fear,' a type of distinct anxiety, were the most common anxiety types. Child intolerance of uncertainty (IU) was the only correlate that was associated with anxiety in a network analysis framework. Child IU linked anxiety to two other correlates, sensory over-responsivity and somatic symptoms. Findings emphasize the need for early intervention for anxiety and further research on its correlates.",
+     "pmid": "37350221",
+     "doi": "10.1002/aur.2968",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2023,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/37350221/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_25012435",
+     "source": "pubmed",
+     "title": "Disability in anxiety disorders.",
+     "abstract": "BACKGROUND: This study compares disability levels between different anxiety disorders and healthy controls. We further investigate the role of anxiety arousal and avoidance behaviour in disability, and whether differences in these symptom patterns contribute to disability differences between anxiety disorders.\nMETHODS: Data were from 1826 subjects from the Netherlands Study of Depression and Anxiety (NESDA). The Composite Interview Diagnostic Instrument was used to diagnose anxiety disorders. The World Health Organization Disability Assessment Schedule II was used to measure disability in six domains (cognition, mobility, selfcare, social interaction, life activities, participation). Severity of anxiety arousal and avoidance behaviour symptoms was measured using the Beck Anxiety Inventory and the Fear Questionnaire.\nRESULTS: All anxiety disorders were associated with higher disability. Disability was generally highest in multiple anxiety disorder (e.g. mean disability in cognition=33.7) and social anxiety disorder (mean=32.7), followed by generalized anxiety disorder (mean=27.2) and panic disorder with agoraphobia (mean=26.3), and lowest in panic disorder without agoraphobia (mean=22.1). Anxiety arousal was more associated with disability in life activities (B=8.5, p<0.001) and participation (B=9.9, p<0.001) whereas avoidance behaviour was more associated with disability in cognition (B=7.4, p<0.001) and social interaction (B=8.6, p<0.001). Different disability patterns between anxiety disorders were not completely explained by anxiety arousal and avoidance behaviour.\nLIMITATIONS: The cross-sectional study design precludes any causal interpretations. In order to examine the full range of comorbidity among anxiety, a greater range of anxiety disorders would have been preferable.\nCONCLUSIONS: Disability is highest in social anxiety disorder and multiple anxiety disorder. Both anxiety arousal and avoidance behaviour are associated with higher disability levels but do not fully explain the differences across anxiety disorders.",
+     "pmid": "25012435",
+     "doi": "10.1016/j.jad.2014.05.006",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2014,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/25012435/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_35659789",
+     "source": "pubmed",
+     "title": "Detecting Anxiety in Long-Term Care Residents: A Systematic Review.",
+     "abstract": "Anxiety is common in long-term care (LTC), but it is unclear which anxiety detection tools are accurate when compared to a reference standard for residents of LTC. Four databases and grey literature sources were searched using the search concepts \"anxiety\" and \"LTC\". Included studies evaluated the diagnostic accuracy of an anxiety detection tool compared to a reference standard in LTC residents. Diagnostic accuracy measures were extracted. Four articles out of 4,620 met the inclusion criteria. Despite limited evidence and poorly reported study procedures and characteristics, the Geriatric Anxiety Inventory (sensitivity: 90.0%, specificity: 86.2%) and the Hospital Anxiety and Depression Scale-Anxiety (sensitivity: 90.0%, specificity: 80.6%) had the best performance when detecting generalized anxiety disorder. We identified four anxiety detection tools appropriate for use in LTC; a critical first step to diagnosing and managing anxiety in residents of LTC. Non-generalized anxiety disorders and tool feasibility must be further evaluated.",
+     "pmid": "35659789",
+     "doi": "10.1017/s0714980822000101",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2023,
+     "publication_type": [
+      "Systematic Review",
+      "Journal Article"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/35659789/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_30502722",
+     "source": "pubmed",
+     "title": "Predictors of behavioral avoidance during respiratory symptom provocation.",
+     "abstract": "Excessive anxiety and avoidance during provocation of body symptoms are core features of anxiety-related disorders and might contribute to the development and maintenance of these disorders. Previous studies examined psychological (anxiety sensitivity, fear of suffocation and trait anxiety) and biobehavioral (breath-holding time) predictors of reported anxiety during symptom provocation. However, the role of these predictors on avoidance of feared body symptoms remains unclear. Therefore, the present work aimed at investigating the main and interactive effects of psychological and biobehavioral variables in predicting avoidance during provocation of dyspnea that successively increased in severity. 28 of 69 participants prematurely terminated the provocation sequence, thus preventing further progression of symptom provocation. Logistic regressions revealed that higher anxiety sensitivity and lower breath-holding time were significantly associated with avoidance during exposure. Suffocation fear and trait anxiety were not related to avoidance. Moreover, there was a significant interaction between breath-holding time and anxiety sensitivity in predicting avoidance. Participants with a lower breath-holding time showed more avoidance behavior when reporting high as compared to low anxiety sensitivity. The data suggest that anxiety sensitivity and breath-holding time increase the risk to show avoidance and thus might contribute to the development and maintenance of anxiety-related disorders.",
+     "pmid": "30502722",
+     "doi": "10.1016/j.brat.2018.11.012",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2019,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/30502722/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_36115543",
+     "source": "pubmed",
+     "title": "The immune phenotype of perinatal anxiety.",
+     "abstract": "BACKGROUND: Immune dysregulation has been linked to both psychiatric illness and pregnancy morbidity, including perinatal depression, but little is known about the immune phenotype of perinatal anxiety. Here, we sought to identify the unique immune profile of antenatal anxiety.\nMATERIALS AND METHODS: Pregnant women (n = 107) were followed prospectively at 2nd and 3rd trimesters (T2, T3) and 6 weeks postpartum (PP6). Each visit included a blood draw and psychological evaluation, with clinical anxiety assessed using the Spielberg State-Trait Anxiety Scale. We enrolled both healthy controls and participants with anxiety alone; those with comorbid depression were excluded. Multiplex cytokine assays and flow cytometry were used to examine the association of anxiety symptoms with secreted immune markers and PBMC-derived immune cells.\nRESULTS: K cluster means revealed three clusters of anxiety symptomatology; due to low numbers in the highest severity anxiety group, these were collapsed into two groups: Non-Anxiety and Anxiety. Principal components analysis revealed two distinct clusters of cytokine secretion including one cluster that consisted of many innate immune cytokines and differed between groups. Compared to women in the Non-Anxiety group, women in the Anxiety group had lower levels of cytokine expression during pregnancy and an increase in levels into the postpartum, whereas Non-Anxiety women experienced a time-dependent decline. Immune cell populations also differed between our two groups, with the Anxiety group showing a decrease in the ratio of B cells to T cells from pregnancy to postpartum, whereas the Non-Anxiety women showed an increase in this ratio over time. Women in the Anxiety group also demonstrated an increased ratio of cytotoxic to helper T cells throughout pregnancy, a modest increase in the Th1:Th2 ratio across pregnancy, and a lower ratio of Th17:TREG cells in the postpartum as compared with Non-Anxiety women.\nCONCLUSION: These data suggest that the immune response throughout the antenatal period differs for women with anxiety symptoms compared to those without, suggestive of a unique immune phenotype of perinatal anxiety.",
+     "pmid": "36115543",
+     "doi": "10.1016/j.bbi.2022.09.005",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2022,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/36115543/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_40398191",
+     "source": "pubmed",
+     "title": "Health anxiety and somatic symptoms in adults on the autism spectrum.",
+     "abstract": "BACKGROUND: Somatic symptoms and health anxiety impact quality of life. Whether somatic symptoms and health anxiety correlate with autistic traits, anxiety/depression, sensory and personality characteristics has yet to be systematically investigated among autistic people. This study aimed to investigate somatic symptoms and health anxiety in autistic, and their clinical correlates.\nMETHODS: This study recruited 221 autistic adults (aged 28.1\u00b18.5), 514 somatic symptom disorder (SSD), 194 anxiety or depressive disorders (affective disorder group, AFD), and 555 non-autistic controls. All participants completed the Health Anxiety Questionnaire and Patient Health Questionnaire-15 scales to assess health anxiety and somatic symptoms.\nRESULTS: Autistic adults showed greater somatic symptoms and health anxiety than non-autistic controls. The level was similar to the AFD but lower than the SSD groups. Harm avoidance and low registration were associated with health anxiety and somatic symptoms in autism, while attention to details was positively associated with the needs of reassurance. Health-related anxiety was related to both depression and anxiety, and most domains on quality of life, with excessive health-related worries associated with greater anxiety and lower environmental life quality.\nCONCLUSION: Findings suggest significant somatic symptoms and health anxiety in autistic adults that warrants clinical attention.",
+     "pmid": "40398191",
+     "doi": "10.1016/j.psychres.2025.116550",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2025,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/40398191/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    }
+   ]
+  },
+  "retrieval_attempts": {
+   "c1": 1
+  },
+  "reranked_evidence": {
+   "c1": [
+    {
+     "evidence_id": "ev_35659789",
+     "source": "pubmed",
+     "title": "Detecting Anxiety in Long-Term Care Residents: A Systematic Review.",
+     "abstract": "Anxiety is common in long-term care (LTC), but it is unclear which anxiety detection tools are accurate when compared to a reference standard for residents of LTC. Four databases and grey literature sources were searched using the search concepts \"anxiety\" and \"LTC\". Included studies evaluated the diagnostic accuracy of an anxiety detection tool compared to a reference standard in LTC residents. Diagnostic accuracy measures were extracted. Four articles out of 4,620 met the inclusion criteria. Despite limited evidence and poorly reported study procedures and characteristics, the Geriatric Anxiety Inventory (sensitivity: 90.0%, specificity: 86.2%) and the Hospital Anxiety and Depression Scale-Anxiety (sensitivity: 90.0%, specificity: 80.6%) had the best performance when detecting generalized anxiety disorder. We identified four anxiety detection tools appropriate for use in LTC; a critical first step to diagnosing and managing anxiety in residents of LTC. Non-generalized anxiety disorders and tool feasibility must be further evaluated.",
+     "pmid": "35659789",
+     "doi": "10.1017/s0714980822000101",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2023,
+     "publication_type": [
+      "Systematic Review",
+      "Journal Article"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/35659789/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "systematic_review",
+     "quality_score": 1.0,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_37350221",
+     "source": "pubmed",
+     "title": "Anxiety in autistic preschool children: Phenomenology and a network analysis of correlates.",
+     "abstract": "Anxiety disorders in autistic children are associated with significant functional impairment. Few studies have examined impairing anxiety presentations in autistic preschool children (i.e., 3-5 years old). This cross-sectional study examined the phenomenology of impairing anxiety and the strongest correlates of anxiety in 75 autistic preschool children. Parents completed a diagnostic interview that assesses two anxiety types, DSM-5 anxiety disorders and impairing distinct anxiety presentations, and measures of anxiety correlates. An exploratory network analysis examined connections between anxiety and its correlates. Forty percent of children had impairing anxiety. Specific phobia followed by 'other social fear,' a type of distinct anxiety, were the most common anxiety types. Child intolerance of uncertainty (IU) was the only correlate that was associated with anxiety in a network analysis framework. Child IU linked anxiety to two other correlates, sensory over-responsivity and somatic symptoms. Findings emphasize the need for early intervention for anxiety and further research on its correlates.",
+     "pmid": "37350221",
+     "doi": "10.1002/aur.2968",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2023,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/37350221/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "observational",
+     "quality_score": 0.55,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_25012435",
+     "source": "pubmed",
+     "title": "Disability in anxiety disorders.",
+     "abstract": "BACKGROUND: This study compares disability levels between different anxiety disorders and healthy controls. We further investigate the role of anxiety arousal and avoidance behaviour in disability, and whether differences in these symptom patterns contribute to disability differences between anxiety disorders.\nMETHODS: Data were from 1826 subjects from the Netherlands Study of Depression and Anxiety (NESDA). The Composite Interview Diagnostic Instrument was used to diagnose anxiety disorders. The World Health Organization Disability Assessment Schedule II was used to measure disability in six domains (cognition, mobility, selfcare, social interaction, life activities, participation). Severity of anxiety arousal and avoidance behaviour symptoms was measured using the Beck Anxiety Inventory and the Fear Questionnaire.\nRESULTS: All anxiety disorders were associated with higher disability. Disability was generally highest in multiple anxiety disorder (e.g. mean disability in cognition=33.7) and social anxiety disorder (mean=32.7), followed by generalized anxiety disorder (mean=27.2) and panic disorder with agoraphobia (mean=26.3), and lowest in panic disorder without agoraphobia (mean=22.1). Anxiety arousal was more associated with disability in life activities (B=8.5, p<0.001) and participation (B=9.9, p<0.001) whereas avoidance behaviour was more associated with disability in cognition (B=7.4, p<0.001) and social interaction (B=8.6, p<0.001). Different disability patterns between anxiety disorders were not completely explained by anxiety arousal and avoidance behaviour.\nLIMITATIONS: The cross-sectional study design precludes any causal interpretations. In order to examine the full range of comorbidity among anxiety, a greater range of anxiety disorders would have been preferable.\nCONCLUSIONS: Disability is highest in social anxiety disorder and multiple anxiety disorder. Both anxiety arousal and avoidance behaviour are associated with higher disability levels but do not fully explain the differences across anxiety disorders.",
+     "pmid": "25012435",
+     "doi": "10.1016/j.jad.2014.05.006",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2014,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/25012435/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "observational",
+     "quality_score": 0.55,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_39080237",
+     "source": "pubmed",
+     "title": "Exercise and Anxiety.",
+     "abstract": "Anxiety disorders are among the most commonly diagnosed mental health disorders in the United States - affecting over 40 million adults per year. Although anxiety disorders are commonly treated via psychotherapy and/or pharmacotherapy, there is also accumulating evidence to suggest that physical activity and exercise may play an important role in prevention and treatment. This chapter provides an extensive overview of literature examining the effects of physical activity, acute bouts of exercise, and chronic exercise training on several anxiety outcomes, primarily in adults. The collective evidence to date suggests that: (1) an acute bout of aerobic or resistance exercise generally results in reductions in state anxiety among adults with and without clinical anxiety disorders, (2) greater levels of physical activity are associated with fewer anxiety symptoms and a reduced likelihood of developing an anxiety disorder, (3) exercise training (aerobic and resistance) appears to reduce general anxiety symptoms in adults without a clinical anxiety disorder and adults with a chronic illness (e.g., cardiovascular disease) and may reduce disorder-specific symptoms of anxiety in adults with a clinical anxiety disorder. Although the collective body of evidence is promising, there is a need for additional well-designed and adequately powered randomized controlled trials, especially among adults with clinical anxiety disorders.",
+     "pmid": "39080237",
+     "doi": "10.1007/7854_2024_498",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2024,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/39080237/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "narrative_review",
+     "quality_score": 0.35,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_37572550",
+     "source": "pubmed",
+     "title": "Hope and anxiety.",
+     "abstract": "Anxiety-related disorders continue to be one of the most prevalent and burdensome psychiatric disorders. Research has examined resilience factors, such as hope, that can build resilience toward or mitigate the impact of anxiety disorders. The following review provides a summary of hope as a factor of resilience as well as a mechanism of change in reducing levels of anxiety. First, hope and anxiety are conceptualized as future-oriented traits. Then, hope as a source of resilience against trait anxiety is discussed. The article then discusses the moderate, indirect relationship between hope and general as well as specific forms of anxiety before providing empirical support for hope as a mechanism of change in the reduction of anxiety. Finally, considerations for future study of hope and anxiety are discussed.",
+     "pmid": "37572550",
+     "doi": "10.1016/j.copsyc.2023.101664",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2023,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/37572550/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "narrative_review",
+     "quality_score": 0.35,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_22588767",
+     "source": "pubmed",
+     "title": "Measures of anxiety: State-Trait Anxiety Inventory (STAI), Beck Anxiety Inventory (BAI), and Hospital Anxiety and Depression Scale-Anxiety (HADS-A).",
+     "abstract": "",
+     "pmid": "22588767",
+     "doi": "10.1002/acr.20561",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2011,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/22588767/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "narrative_review",
+     "quality_score": 0.35,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_32772060",
+     "source": "pubmed",
+     "title": "Anxiety in persons with visual impairment.",
+     "abstract": "Anxiety and anxiety disorders among people with visual impairment are more frequent than in the general population. It is estimated that . of people with visual impairment face depression and/or anxiety, whereas 4-6% of people are diagnosed with anxiety disorders. The purpose of this paper is analyzing the occurrence of anxiety in people with visual impairment based on current information. Literature review indicates that people with visual impairment experience the common, as well as the more specific, often chronic anxiety symptoms. Despite the significance of the foregoing phenomenon and its negative consequences, literature does not explain its causes, specify the problem, and most importantly, does not provide recommendations for preventing the occurrence of anxiety in the foregoing group of people. In order to understand the nature of anxiety, it is important to learn more about its causes and consequences for health,both biopsychosocial and spiritual wellbeing. In people with visual impairment this may depend on particular conditions which these people face every day, therefore the concept of anxiety in this group of people requires a separate consideration.",
+     "pmid": "32772060",
+     "doi": "10.12740/pp/onlinefirst/85408",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2020,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/32772060/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "narrative_review",
+     "quality_score": 0.35,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_40830577",
+     "source": "pubmed",
+     "title": "Clinical features and genetic mechanisms of anxiety, fear, and avoidance: A comprehensive review of five anxiety disorders.",
+     "abstract": "Anxiety disorders, including social anxiety disorder (SAD), generalized anxiety disorder (GAD), panic disorder (PD), agoraphobia (AG), and specific phobia (SP), are characterized by core features of excessive anxiety and fear. Furthermore, these disorders are often accompanied by avoidance behaviors. While avoidance is a common behavioral response, it may be a consequence of or a cocontributor to the anxiety and fear driving these disorders. This narrative review integrates the interactions among anxiety, fear, and avoidance behaviors across these five disorders and synthesizes findings from clinical, neuropsychological, brain function, treatment, genetic, and epigenetic studies. Based on the intensity of anxiety and fear, these anxiety five disorders can be categorized into three groups: fear-dominant (SP, AG), mixed (PD, SAD), and anxiety-dominant (GAD). The intensity of avoidance behaviors is related to the age of onset. Each group responds to different treatment approaches. In fear-dominant disorders, exposure therapy is highly effective in reducing avoidance behaviors and fear responses. Cognitive behavioral therapy (CBT) with an emphasis on exposure is useful. In the mixed group, CBT is the preferred treatment, with a focus on both exposure therapy and cognitive restructuring. In addition to CBT, selective serotonin and serotonin-norepinephrine reuptake inhibitors (SSRIs/SNRIs) are commonly used to reduce anticipatory anxiety and fear symptoms. In anxiety-dominant disorders, both SSRIs/SNRIs and CBT with an emphasis on cognitive restructuring are effective for managing chronic worry. Anxiety and fear are regulated by distinct but interacting neurobiological mechanisms, with the amygdala central to fear processing and the hypothalamic\u2012pituitary\u2012adrenal axis involved in chronic anxiety regulation. Genetic and epigenetic studies demonstrate substantial heritability across anxiety disorders, with varying degrees of genetic influence on anxiety, fear, and avoidance. Avoidance behaviors, particularly in early-onset disorders such as SP and SAD, may be more strongly influenced by genetic factors. Large-scale genome-wide association studies (GWASs) grouping anxiety disorders have identified shared genetic loci, but GWASs for individual anxiety disorders are limited by small sample sizes. Grouping anxiety disorders into broader categories - namely, fear-dominant, mixed, and anxiety-dominant - rather than considering each specific anxiety disorder in isolation may lead to increased statistical power and yield more comprehensive perspectives on the shared and distinct clinical and genetic risk factors among anxiety disorders.",
+     "pmid": "40830577",
+     "doi": "10.1038/s41380-025-03155-1",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2025,
+     "publication_type": [
+      "Journal Article",
+      "Review",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/40830577/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "narrative_review",
+     "quality_score": 0.35,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_36373844",
+     "source": "pubmed",
+     "title": "Anxiety in Wiedemann-Steiner syndrome.",
+     "abstract": "This study examined anxiety in Wiedemann-Steiner syndrome (WSS). Eighteen caregivers and participants with WSS completed the parent- and self-report versions of the Screen for Child Anxiety Related Disorder or the adapted version of the Screen for Adult Anxiety Related Disorder. Approximately 33.33% of parents and 65% of participants with WSS rated in the clinical range for overall anxiety. Across anxiety subtypes, parents primarily indicated concerns with Separation Anxiety (72%), which was also endorsed by the majority of participants with WSS (82%). The emergent trend showed Total Anxiety increased with age based on parent-informant ratings. The behavioral phenotype of WSS includes elevated anxiety. Clinical management should include incorporating early behavioral interventions to bolster emotion regulation given the observed risk of anxiety with age.",
+     "pmid": "36373844",
+     "doi": "10.1002/ajmg.a.63040",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2023,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/36373844/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "other",
+     "quality_score": 0.1,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_34979033",
+     "source": "pubmed",
+     "title": "Anxiety in Angelman Syndrome.",
+     "abstract": "Angelman Syndrome (AS) is a neurodevelopmental disorder most commonly caused by the impaired expression of the maternal UBE3A gene on chromosome 15. Though anxiety has been identified as a frequently present characteristic in AS, there are limited studies examining anxiety in this population. Studies of anxiety in other neurodevelopmental disorders have found disorder specific symptoms of anxiety and age specific displays of anxiety symptoms. However, there is a consistent challenge in identifying anxiety in people with neurodevelopmental disorders given the lack of measurement instruments specifically designed for this population. Given the limited information about AS and anxiety, the aims of the current project were to (a) examine symptoms of anxiety in children with AS and (b) determine the correlates of anxiety in children with AS. Participants included 42 adult caregivers of youth with AS in the AS Natural History study who completed the Developmental Behavior Checklist (DBC). The results found that 26% of the sample demonstrated elevated symptoms of anxiety and established a relationship between elevated anxiety in youth with AS and higher levels of irritability, hyperactivity, self-absorbed behaviors, and disruptive/antisocial behaviors. Findings from this research provide a foundation for tailoring evidence-based assessments and treatments for youth with AS and anxiety.",
+     "pmid": "34979033",
+     "doi": "10.1352/1944-7558-127.1.1",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2022,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/34979033/",
+     "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "other",
+     "quality_score": 0.1,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    }
+   ]
+  },
+  "search_trail": {
+   "c1": [
+    {
+     "round": 1,
+     "pubmed_query": "(Anxiety[MeSH Terms] OR anxiety[tiab])",
+     "pubmed_hits": 20,
+     "pubmed_records": 20,
+     "from_cache": false,
+     "pubmed_error": null,
+     "references": [],
+     "reference_passages": null,
+     "reference_error": null,
+     "new_records": 20,
+     "query_kind": "outcome_only",
+     "ladder_exhausted": false,
+     "plan": {
+      "language": "en",
+      "translated": false,
+      "search_text": null,
+      "translation_error": null,
+      "context_concept": null,
+      "citation": null,
+      "assistant_used": false,
+      "assistant_error": null,
+      "no_query_reason": null,
+      "rungs": [
+       {
+        "kind": "outcome_only",
+        "query": "(Anxiety[MeSH Terms] OR anxiety[tiab])"
+       },
+       {
+        "kind": "broader_condition",
+        "query": "\"Mental Disorders\"[MeSH Terms]"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "found_study_evidence": {},
+  "find_study_trail": {},
+  "verification_results": {
+   "c1": {
+    "claim_id": "c1",
+    "verdict": "INSUFFICIENT_EVIDENCE",
+    "supporting_evidence_ids": [],
+    "contradicting_evidence_ids": [],
+    "explanation": "Not determined: the search kept no record about this claim's intervention, so it is unknown whether any study tests the claim.",
+    "limitations": [
+     "No study of scripture or other religious interventions for anxiety or panic attacks was retrieved",
+     "The hope review (ev_37572550) is about hope as a psychological trait, not religious texts",
+     "The claim is partly a statement of faith (divine provision), which cannot be fully tested by research",
+     "search_found_nothing_on_topic"
+    ],
+    "raw_confidence": 0.85,
+    "model": "claude-opus-5-5",
+    "prompt_version": "verify_v3"
+   }
+  },
+  "verification_revisions": {
+   "c1": 1
+  },
+  "critic_results": {
+   "c1": {
+    "claim_id": "c1",
+    "decision": "REVISE_VERIFICATION",
+    "issues": [
+     "Claim fidelity issue: The claim is about using scripture to overcome anxiety attacks, but the evidence does not address this intervention.",
+     "Relevance issue: None of the cited evidence addresses the use of scripture or religious interventions for anxiety attacks.",
+     "Strength issue: The verdict of INSUFFICIENT_EVIDENCE is appropriate, but the explanation should clarify that no relevant studies were found on the specific intervention of scripture for anxiety attacks.",
+     "revision budget exhausted (1 of 1): the claim abstains and goes to review"
+    ],
+    "suggested_queries": [],
+    "requires_review": false,
+    "reviewed_attempt": 1,
+    "reviewed_revision": 1,
+    "checks": [
+     "model"
+    ],
+    "model": "gpt-4o-2024-08-06",
+    "prompt_version": "critic_v1"
+   }
+  },
+  "final_result": {
+   "video_id": "v176",
+   "classification": "CANNOT_RECOGNIZE",
+   "claim_ids": [],
+   "evidence_ids": [],
+   "explanation": "No claim could be judged against the evidence: the first claim has insufficient evidence. Needs review: no claim in this video could be checked against the evidence.",
+   "limitations": [],
+   "confidence": null,
+   "decision_rule": "nothing_judged",
+   "review_flags": [
+    "nothing_judged"
+   ],
+   "model": null,
+   "prompt_version": null,
+   "misinfo_basis": null
+  },
+  "validation_errors": [
+   "merge_plausibility:extract_claims:c1: segment 't8' starts 14.1s after the rest of the claim ends"
+  ],
+  "validation_attempts": 2,
+  "requires_human_review": true,
+  "review_reasons": [
+   "validation_failed:merge_plausibility:c1",
+   "budget_exhausted:c1",
+   "high_risk_uncertain:c1",
+   "judge:nothing_judged"
+  ],
+  "review_status": "REVIEW_REQUIRED",
+  "persisted_result_ref": "artifacts/t66-v176/result.json",
+  "errors": []
+ }
+}
