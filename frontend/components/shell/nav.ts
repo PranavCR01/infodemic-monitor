@@ -5,6 +5,7 @@ export type NavItem = { href: string; label: string; icon: string; role: Role; m
 // Routes move to the design's names (/videos, /review, /evaluation) as their
 // screens are built; each item is listed only once its page exists.
 export const NAV: NavItem[] = [
+  { href: "/dashboard", label: "Dashboard", icon: "chart", role: "analyst", match: (p) => p === "/dashboard" },
   { href: "/jobs", label: "Videos", icon: "grid", role: "analyst", match: (p) => p === "/jobs" || p.startsWith("/jobs/") },
   { href: "/", label: "Submit", icon: "upload", role: "analyst", match: (p) => p === "/" },
   { href: "/review", label: "Review queue", icon: "inbox", role: "reviewer", match: (p) => p === "/review" || p.startsWith("/review/") },

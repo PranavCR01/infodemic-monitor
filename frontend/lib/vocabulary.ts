@@ -344,6 +344,44 @@ export function claimMeaning(stance: Stance, verdict: Verdict): string {
   return row[2];
 }
 
+// ---------------------------------------------------------------- research dashboard (T62)
+
+/** Always shown on the dashboard (queue row T62, §7ah `note`). */
+export const DASHBOARD_NOTE = "These figures describe videos uploaded to this tool, not how common misinformation is online.";
+
+export const STATS_WINDOWS = ["7d", "30d", "90d", "all"] as const;
+export type StatsWindow = (typeof STATS_WINDOWS)[number];
+export const STATS_WINDOW_DISPLAY: Record<StatsWindow, string> = { "7d": "7 days", "30d": "30 days", "90d": "90 days", all: "All time" };
+
+/** How a MISINFO label was reached, for the dashboard split. `unspecified` = not recorded (older results). */
+export const MISINFO_BASIS_DISPLAY: Record<MisinfoBasis | "unspecified", string> = {
+  contradicted: "Evidence contradicts the claim",
+  unproven: "Unproven remedy presented as working",
+  denies_supported: "Denies a claim the evidence supports",
+  unspecified: "Basis not recorded (older results)",
+};
+
+/** Claim categories from the extraction prompt (extract_v4). */
+export const CLAIM_CATEGORY_DISPLAY: Record<string, string> = {
+  treatment_efficacy: "Treatment works",
+  prevention: "Prevention",
+  causation: "Cause of illness",
+  safety: "Safety",
+  diagnosis: "Diagnosis",
+  nutrition: "Nutrition",
+  statistic: "Statistics",
+  evidence_meta: "About the evidence itself",
+  other: "Other",
+};
+
+export function categoryDisplay(c: string): string {
+  const k = c.toLowerCase();
+  if (CLAIM_CATEGORY_DISPLAY[k]) return CLAIM_CATEGORY_DISPLAY[k];
+  const words = k.replace(/[_-]+/g, " ").trim();
+  return words ? words[0].toUpperCase() + words.slice(1) : "Unnamed";
+}
+
+
 // ---------------------------------------------------------------- free text from the API
 
 const ENUM_DISPLAY: [RegExp, string][] = [
