@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "run_id": "T07-critic-code_only-unnecessary_retry",
+  "run_group": "T07-critic-small-set",
+  "date": "2026-11-22",
+  "task": "T07",
+  "pipeline_step": "critique_verification",
+  "split": null,
+  "synthetic": true,
+  "golden_set_ref": null,
+  "models": [],
+  "variant": "code_only",
+  "metric_name": "unnecessary_retry_rate",
+  "value": 0.0,
+  "ci95": null,
+  "n_items": null,
+  "n_unit": null,
+  "cost_usd": 0.0,
+  "report_path": "context/MULTI_AGENT.md",
+  "notes": "SYNTHETIC, self-labelled 16-claim set (see T07-critic-code_only-defect_detection). Lower is better. Report: context/MULTI_AGENT.md section 7i (T07). split and golden_set_ref are null: not golden-set data. No CI in the report. n_items is null: the report gives the rate but not its denominator."
+}

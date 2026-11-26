@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "run_id": "T24-judge_crosscheck-review_reason_agreement",
+  "run_group": "T24-judge-crosscheck",
+  "date": "2026-11-23",
+  "task": "T24",
+  "pipeline_step": "route_for_review",
+  "split": null,
+  "synthetic": false,
+  "golden_set_ref": "origin/data/golden-label-set@45244b0",
+  "models": [],
+  "variant": null,
+  "metric_name": "review_reasons_exact_agreement",
+  "value": 0.7273,
+  "ci95": null,
+  "n_items": 66,
+  "n_unit": "in-scope videos",
+  "cost_usd": 0.0,
+  "report_path": "context/MULTI_AGENT.md",
+  "notes": "48/66 in-scope videos have exactly the same review reasons (value = 48/66). The 18 others differ in four classified kinds, review reasons only; the backend never drops a review the golden judge asks for. Deterministic comparison of the backend judge + review rule with the golden set's own scripts/judge.py on recorded claim-level inputs; no model calls. Report: context/MULTI_AGENT.md section 7s (T24). split is null: the report covers the whole golden set (82 videos, more than the 55 tune videos, so test-split videos are included) and does not break it down by split. No CI in the report."
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "run_id": "T49-unproven_guard-retrieved_plus_cited",
+  "run_group": "T49-unproven-guard-replay",
+  "date": "2026-11-26",
+  "task": "T49",
+  "pipeline_step": "verify_claims",
+  "split": "tune",
+  "synthetic": false,
+  "golden_set_ref": "in-repo research/claim-level/dataset (commit not recorded in the report)",
+  "models": [],
+  "variant": "t38_frozen_evidence:retrieved+cited",
+  "metric_name": "unproven_videos_keeping_misinfo",
+  "value": 0.0,
+  "ci95": null,
+  "n_items": 5,
+  "n_unit": "tune videos labelled MISINFO (unproven) in gold",
+  "cost_usd": 0.0,
+  "report_path": "evals/reports/T49/report.md",
+  "notes": "Tune split: development numbers, not product accuracy. 0/5 tune MISINFO (unproven) videos keep that label after the guard, evidence mode retrieved+cited, on the T38 frozen evidence: every UNSUPPORTED claim had an empty, off-topic or unrecorded search, so the guard turned it into INSUFFICIENT_EVIDENCE. Measures the guard plus the then-current search, not the verifier model (verdicts replayed, no model calls). The other 7 unproven videos are in the test split and were not read. Golden-set commit not recorded in the report. No CI."
+}

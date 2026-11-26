@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "run_id": "T43-extraction_ceiling-claim_f1_meaning",
+  "run_group": "T43-blind-ceiling",
+  "date": "2026-11-24",
+  "task": "T43",
+  "pipeline_step": "extract_claims",
+  "split": "tune",
+  "synthetic": false,
+  "golden_set_ref": "origin/data/golden-label-set@0fbc68a (first pass); blind re-label from dcf77b0",
+  "models": null,
+  "variant": "second_labelling_pass_vs_first",
+  "metric_name": "claim_f1_meaning",
+  "value": 0.787,
+  "ci95": {
+    "low": 0.708,
+    "high": 0.856,
+    "method": "bootstrap over videos, 1000 resamples"
+  },
+  "n_items": 26,
+  "n_unit": "in-scope tune videos (117 first-pass claims, 127 second-pass)",
+  "cost_usd": 0.0,
+  "report_path": "evals/reports/T43_error_analysis.md",
+  "notes": "Tune split: development numbers, not product accuracy. Labeller-agreement ceiling for extraction, not a pipeline candidate: the blind second labelling pass scored against the first pass (true two-pass agreement, 0fbc68a). models is null: the second pass was a Claude labelling pass and the report does not name the model. Strict = token-Jaccard matcher T38 used; meaning = the T43 deterministic overlap matcher. Report section 3b; per-video counts in evals/reports/T43/blind_ceiling_0fbc68a.json. No paid calls."
+}

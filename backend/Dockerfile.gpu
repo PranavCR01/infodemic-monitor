@@ -34,4 +34,7 @@ RUN python -c "from faster_whisper import WhisperModel; WhisperModel('base', dev
 
 COPY .env.example .env.example
 
+# Evaluation registry for GET /v1/admin/evals (T63). Only the records, not the reports.
+COPY evals/registry/ ./evals/registry/
+
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

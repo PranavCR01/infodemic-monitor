@@ -1,0 +1,296 @@
+{
+  "$defs": {
+    "CI95": {
+      "additionalProperties": false,
+      "properties": {
+        "high": {
+          "title": "High",
+          "type": "number"
+        },
+        "low": {
+          "title": "Low",
+          "type": "number"
+        },
+        "method": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "e.g. bootstrap over videos, 1000 resamples",
+          "title": "Method"
+        }
+      },
+      "required": [
+        "low",
+        "high"
+      ],
+      "title": "CI95",
+      "type": "object"
+    },
+    "ModelRef": {
+      "additionalProperties": false,
+      "description": "A model and the prompt it ran with, as the report names them.",
+      "properties": {
+        "model": {
+          "description": "Model id as reported, e.g. claude-sonnet-5-5",
+          "minLength": 1,
+          "title": "Model",
+          "type": "string"
+        },
+        "prompt": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Prompt id, e.g. extract_v2 (null if none or not reported)",
+          "title": "Prompt"
+        },
+        "provider": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "anthropic, openai, ... (null if the report does not say)",
+          "title": "Provider"
+        },
+        "role": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "What the model did in this run, when more than one ran",
+          "title": "Role"
+        }
+      },
+      "required": [
+        "model"
+      ],
+      "title": "ModelRef",
+      "type": "object"
+    }
+  },
+  "$id": "evals/eval_record.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "One metric of one evaluation run.",
+  "properties": {
+    "ci95": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CI95"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "95% CI as reported; null if the report has none"
+    },
+    "cost_usd": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Spend of the run group; 0 = no paid call",
+      "title": "Cost Usd"
+    },
+    "date": {
+      "description": "Date the run was made (YYYY-MM-DD)",
+      "format": "date",
+      "title": "Date",
+      "type": "string"
+    },
+    "golden_set_ref": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Golden-set branch@commit the labels came from; null if none",
+      "title": "Golden Set Ref"
+    },
+    "metric_name": {
+      "minLength": 1,
+      "title": "Metric Name",
+      "type": "string"
+    },
+    "models": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "#/$defs/ModelRef"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Models and prompts measured; [] = no model; null = not reported",
+      "title": "Models"
+    },
+    "n_items": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Items the metric is computed over",
+      "title": "N Items"
+    },
+    "n_unit": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "What n_items counts: claims, videos, items, ...",
+      "title": "N Unit"
+    },
+    "notes": {
+      "default": "",
+      "description": "Caveats, and why any field is null",
+      "title": "Notes",
+      "type": "string"
+    },
+    "pipeline_step": {
+      "description": "Graph node the metric measures (PIPELINE_STEPS)",
+      "title": "Pipeline Step",
+      "type": "string"
+    },
+    "report_path": {
+      "description": "Repo-relative path of the report",
+      "minLength": 1,
+      "title": "Report Path",
+      "type": "string"
+    },
+    "run_group": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Records from the same run share this; cost_usd is per group",
+      "title": "Run Group"
+    },
+    "run_id": {
+      "description": "Unique id; the file is evals/registry/<run_id>.json",
+      "title": "Run Id",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1",
+      "default": "1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "split": {
+      "anyOf": [
+        {
+          "enum": [
+            "tune",
+            "test"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Golden-set split; null when the data is not one golden split (see notes)",
+      "title": "Split"
+    },
+    "synthetic": {
+      "description": "True when the data is self-made, not the golden set",
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "task": {
+      "description": "Build task id, e.g. T38",
+      "title": "Task",
+      "type": "string"
+    },
+    "value": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Metric value as reported; null if not computable",
+      "title": "Value"
+    },
+    "variant": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Configuration measured when a run compares several (e.g. baseline)",
+      "title": "Variant"
+    }
+  },
+  "required": [
+    "run_id",
+    "date",
+    "task",
+    "pipeline_step",
+    "split",
+    "synthetic",
+    "golden_set_ref",
+    "models",
+    "metric_name",
+    "value",
+    "ci95",
+    "n_items",
+    "cost_usd",
+    "report_path"
+  ],
+  "title": "EvalRecord",
+  "type": "object"
+}
