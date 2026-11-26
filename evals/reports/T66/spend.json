@@ -1,15 +1,15 @@
 {
   "cap_usd": 25.0,
-  "spent_usd": 8.457839,
-  "calls": 254,
+  "spent_usd": 10.713119,
+  "calls": 347,
   "refused_calls": 0,
   "stopped_at_cap": false,
   "by_model": {
-    "claude-sonnet-5-5": 0.820338,
+    "claude-sonnet-5-5": 1.038694,
     "claude-haiku-5-5": 0.030848,
     "web_search_fees": 0.21,
-    "claude-opus-5-5": 4.589476,
-    "gpt-4o-2024-08-06": 1.27916
+    "claude-opus-5-5": 6.20132,
+    "gpt-4o-2024-08-06": 1.70424
   },
   "billing_error": null
 }
