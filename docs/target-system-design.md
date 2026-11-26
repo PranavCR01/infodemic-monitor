@@ -265,6 +265,25 @@ Some claims are about one paper ("a 2026 JAMA study of 5 million babies"), and a
 - **Untrusted input (§15).** The model's answer is parsed for ids only; nothing in a web page is followed.
 - **Recorded.** The web searches the model ran, each candidate and its verification outcome, cost and latency go into the claim's search trail. Verified records are kept ahead of the reranker's picks, within the cap of 10.
 
+### A cited study, shared across the video's claims (T57)
+
+A video that cites one study usually spreads its numbers over several claims, and only one of them may name the journal. In the vitamin K paid run, find_study verified the JAMA 2026 paper (PMID 42986716) for c2 ("a JAMA study ... 5.2 million infants") and c4, but proposed nothing for c3 ("... more than doubled from 3.1% in 2017 to 6.8% in 2025") or c5. The finder only sees each claim's own text.
+
+- **What is shared.** Once any claim of the video holds a verified record for a study it cites, that record is offered to the video's other claims inside `rerank_evidence`. A verified record means one find_study verified, or the citation lookup's best record: the top record the citing claim's reranker kept from its `"JAMA"[ta] AND 2026[dp] AND (topic)` query, on the claim's topic and within a year of the year the claim states. Only one such record per citing claim is shared, because the lookup can return many papers from the same journal. A claim's ordinary search results are never shared.
+- **Who decides.** Nothing is pinned. The receiving claim keeps a shared record only if all three hold:
+  - its own reranker keeps the record, scored against the claim's own papers under the same threshold and cap of 10;
+  - the record passes the §7 T49 on-topic check for that claim;
+  - if the claim names its own journal or year, the record agrees with it.
+- **No new cost and no shortcut.** The step makes no model call and no web search. It never bypasses verification, because only records our own checks verified are offered. A record that fails the on-topic check is never added, so an off-topic shared record can't decide a verdict.
+- **Deterministic.** Shared records are gathered in claim-id order (c2 before c10), so the result doesn't depend on the order claims are processed in. The trail is rebuilt each round.
+- **Recorded.** For each claim, the search trail (`shared_studies`, trail version 3) lists every record offered to it, with `shared_from` (the claim it came from), the outcome (`kept`, `not_kept_by_reranker`, `off_topic` or `citation_mismatch`) and the reason.
+
+**Vitamin K, replayed offline from the paid run.** c3 and c5 now keep PMID 42986716, shared from c2. c2 and c4 keep it as before. It also reaches c1, c7, c9, c10 and c13, which are all about vitamin K and newborn bleeding. It is refused for four claims:
+- c6 and c11: the reranker scored it below the threshold;
+- c8 ("bleeding in the brain ...") and c12 ("the studies are observational ..."): it failed the strict T49 on-topic check. Neither claim has a recognised intervention, and the paper doesn't contain their intervention words.
+
+The T49 replay and the judge cross-check are unchanged.
+
 **Screened-out papers.** The search trail also lists the papers the searches returned that the reranker did not keep (ID, PMID, title, year; up to 100), so the result page can show what was looked at when nothing was kept.
 
 ### Fallback: the lab's offline library

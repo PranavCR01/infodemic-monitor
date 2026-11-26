@@ -301,6 +301,21 @@ class FindStudyTrail(_Record):
     error: Optional[str] = None
 
 
+class SharedStudy(_Record):
+    """A cited-study record another claim of the video holds, offered to this claim
+    (T57, ``app.core.graph.shared_study``). ``shared_from``: the claim it came from.
+    ``outcome``: kept | not_kept_by_reranker | off_topic | citation_mismatch."""
+
+    evidence_id: str
+    pmid: Optional[str] = None
+    doi: Optional[str] = None
+    title: str = ""
+    shared_from: str
+    outcome: str
+    reason: str = ""
+    relevance_score: Optional[float] = None
+
+
 class NodeError(_Record):
     """A recoverable error a node recorded instead of raising."""
 
@@ -330,6 +345,7 @@ CHECKPOINT_TYPES: tuple[type, ...] = (
     FinalClassification,
     FindStudyCandidate,
     FindStudyTrail,
+    SharedStudy,
     ReferenceConsulted,
     SearchRound,
     NodeError,
@@ -386,6 +402,11 @@ class PipelineState(TypedDict, total=False):
     # records are kept through reranking. Optional and additive.
     found_study_evidence: dict[str, list[EvidenceRecord]]
     find_study_trail: dict[str, FindStudyTrail]
+    # A study the video cites, shared across its claims (T57): per claim, the
+    # cited-study records other claims hold that were offered to it, where each came
+    # from (``shared_from``) and whether the reranker and the on-topic check kept it.
+    # Rebuilt by rerank_evidence every round. Optional and additive.
+    shared_study_trail: dict[str, list[SharedStudy]]
     verification_results: dict[str, VerificationResult]
     verification_revisions: dict[str, int]
     critic_results: dict[str, CriticResult]
