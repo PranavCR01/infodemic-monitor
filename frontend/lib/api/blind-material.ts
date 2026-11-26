@@ -3,6 +3,7 @@
 // contradicts), verdict, stance, citation or deciding marker, score or reasons.
 // Papers come in retrieval (rerank) order, and the frontend keeps that order: it
 // never re-sorts them by study strength, which would be a reading of its own.
+import { cleanTitle, formatPubDate } from "@/lib/report-text";
 import { apiFetch } from "@/lib/api";
 import { evidenceLevel } from "@/lib/vocabulary";
 import { toSegment, type Segment, type Source, type SourceKind } from "./result-adapter";
@@ -20,6 +21,9 @@ export type RawBlindReference = {
   url?: string | null;
   pmid?: string | null;
   doi?: string | null;
+  // T65, when the backend sends them
+  journal?: string | null;
+  pub_date?: string | null;
 };
 
 export type RawBlindClaim = {
@@ -59,7 +63,7 @@ function toBlindSource(r: RawBlindReference): BlindSource {
   const kind = r.source_kind;
   return {
     id: r.evidence_id,
-    title: r.title,
+    title: cleanTitle(r.title) || (r.pmid ? `PMID ${r.pmid}` : "Untitled source"),
     studyType: r.study_type ?? null,
     level: evidenceLevel(r.study_type),
     kind,
@@ -69,6 +73,8 @@ function toBlindSource(r: RawBlindReference): BlindSource {
     // Internal library documents never get an external link (HANDOFF §4 SourceCard).
     url: kind === "library" ? null : r.url ?? (r.pmid ? `https://pubmed.ncbi.nlm.nih.gov/${r.pmid}/` : null),
     pmid: r.pmid ?? null,
+    journal: r.journal?.trim() || null,
+    pubDate: formatPubDate(r.pub_date),
   };
 }
 

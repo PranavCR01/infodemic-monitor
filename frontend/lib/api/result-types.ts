@@ -29,6 +29,9 @@ export type RawEvidence = {
   publication_type?: string[];
   abstract_snippet?: string;
   rank?: number | null;
+  // T65: PubMed journal abbreviation and publication date ("YYYY", "YYYY-MM" or "YYYY-MM-DD").
+  journal?: string | null;
+  pub_date?: string | null;
 };
 
 export type RawClaimSeverity = {
@@ -64,6 +67,8 @@ export type RawClaim = {
   severity?: RawClaimSeverity | null;
   // T31
   search_trail?: RawSearchTrail | null;
+  // T65: the transcript words that carry the claim (best-overlap segment text).
+  speaker_quote?: string | null;
 };
 
 export type RawReason = {
