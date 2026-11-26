@@ -75,23 +75,21 @@ What is NOT a claim:
 claim_category is one of: treatment_efficacy, prevention, causation, safety,
 diagnosis, nutrition, statistic, evidence_meta, other.
 
-evidence_meta is for statements about the evidence itself (its state, strength,
-amount, design, funding or age) rather than about what an intervention does:
-- "the evidence that flossing prevents gum disease is strong",
-- "the research on cold plunges is still thin",
-- "these trials were tiny", "that was a rat study", "the study was paid for by a
-  juice company", "this powder has never been tested in people",
+evidence_meta is for statements about the design, quality or quantity of the evidence
+that assert no effect:
+- "these trials were tiny", "the sample was small", "it's only one study", "the
+  trials weren't randomised", "that was a rat study",
+- "the research on cold plunges is still thin", "the study was paid for by a juice
+  company", "this powder has never been tested in people",
 - "there is very little good data on collagen".
-Such a statement is never treatment_efficacy or prevention, even when it names an
-effect ("the evidence that X prevents Y is overwhelming" is evidence_meta). Extract it
-as written; do not turn it into a separate "X prevents Y" claim. If the video also
-asserts the effect itself elsewhere ("X prevents Y"), that sentence is its own claim with
-its own category.
-Not evidence_meta: a statement that reports what studies found. "Studies show beetroot
-juice lowers blood pressure", "clinically proven to clear acne" and "research proves
-garlic kills viruses" assert the effect, so they take the category of the effect
-(treatment_efficacy, prevention, ...). When a speaker uses "there's no evidence that X"
-to debunk X, rule 5 still applies: the claim is X.
+Not evidence_meta: a statement that the evidence FOR something is strong, overwhelming,
+clear or proven, with or without a named effect. "The evidence that flossing prevents
+gum disease is strong", "the evidence for this sleep spray is overwhelming", "there is
+clear evidence that zinc lozenges shorten colds" are claims that the thing works: give
+them the category of that effect (treatment_efficacy, prevention, ...). The same goes
+for statements reporting what studies found: "studies show beetroot juice lowers blood
+pressure", "clinically proven to clear acne". When a speaker uses "there's no evidence
+that X" to debunk X, rule 5 still applies: the claim is X.
 claim_kind for evidence_meta is research_question unless the statement is itself a
 fact of record.
 

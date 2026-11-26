@@ -1,14 +1,14 @@
-"""T51: statements about the state or strength of evidence are not efficacy claims.
+"""T51: statements about study design, quality or quantity are not efficacy claims.
 
-Production job 5cc07f48 ("Download (4).mp4", vitamin K video, 2026-11-26): c13 "The
-evidence that the vitamin K shot prevents dangerous bleeding in newborns is
-overwhelming" was tagged treatment_efficacy and became UNSUPPORTED; c12 "These studies
-on newborns are observational" is the same kind of statement. Both claims come from
-T49's fixture, which is RECONSTRUCTED from the queue's description (no production DB
-access in the build env; see its ``_provenance``).
-
-The fix: category ``evidence_meta`` (prompt extract_v4 and fixed rules that override
-the model for every prompt version), and the UNSUPPORTED gate refuses such statements.
+Production job 5cc07f48 ("Download (4).mp4", vitamin K video, 2026-11-26). c12 "These
+studies on newborns are observational" asserts no effect: category ``evidence_meta``
+(prompt extract_v4, plus fixed rules that override the model for every prompt
+version), never UNSUPPORTED. c13 "The evidence that the vitamin K shot prevents
+dangerous bleeding in newborns is overwhelming" is, after the PR #122 review, an
+efficacy claim in an evidence wrapper: it keeps its efficacy category and stays
+eligible for UNSUPPORTED, and T49's on-topic guard is what stops its empty search
+from producing it. Both claims come from T49's fixture, which is RECONSTRUCTED from the
+queue's description (no production DB access in the build env; see its ``_provenance``).
 """
 from __future__ import annotations
 
@@ -18,14 +18,16 @@ from types import SimpleNamespace
 
 import pytest
 
-from app.core.claim_category import EVIDENCE_META, is_evidence_meta, resolve_claim_category
+from app.core.claim_category import EVIDENCE_META, is_evidence_meta, is_support_statement, resolve_claim_category
 from app.core.graph import claims as cl
 from app.core.graph import judge as jg
 from app.core.graph import routing as r
 from app.core.graph import verifier as vf
 from app.core.graph.nodes import make_stub_nodes
 from app.core.graph.stance import load_prompt
+from app.core.graph.unproven_guard import OFF_TOPIC_LIMITATION
 from app.core.graph.state import (
+    EvidenceRecord,
     FusedSegment,
     GraphClaim,
     Stance,
@@ -65,7 +67,10 @@ def test_fixture_is_reconstructed_and_c13_was_tagged_as_efficacy():
 
 EVIDENCE_STATEMENTS = [
     C12,
-    C13,
+    "the sample was small",
+    "it's only one study",
+    "the trials weren't randomised",
+    "the evidence that turmeric cures cancer is weak",
     "The research on turmeric is still very preliminary",
     "There is little good evidence for detox teas",
     "there's no evidence that energy drinks cause strokes",
@@ -75,13 +80,24 @@ EVIDENCE_STATEMENTS = [
     "the data we have is weak",
     "Most of these trials were small",
     "Les études sont observationnelles",
-    "La evidencia es abrumadora",
-    "The evidence is overwhelming.",
+    "Hay pocos estudios sobre el colágeno",
 ]
 
-# Reported findings: an efficacy claim in an evidence wrapper keeps its category,
-# so an unproven remedy can't escape UNSUPPORTED by saying "studies show".
-NOT_EVIDENCE_STATEMENTS = [
+# Support statements and reported findings: an efficacy claim in an evidence wrapper
+# keeps its category, so an unproven remedy can't escape UNSUPPORTED by saying "the
+# evidence is overwhelming" or "studies show" (PR #122 review).
+SUPPORT_STATEMENTS = [
+    C13,
+    "the evidence supporting this preventive injection is overwhelming",
+    "the evidence for this detox tea is overwhelming",
+    "the evidence that turmeric cures cancer is overwhelming",
+    "There is overwhelming evidence that garlic kills viruses",
+    "La evidencia es abrumadora",
+    "Studies show that almonds can help you lose weight",
+    "Clinically proven to cure acne",
+]
+
+NOT_EVIDENCE_STATEMENTS = [*SUPPORT_STATEMENTS,
     "Studies show that almonds can help you lose weight",
     "this study didn't find higher benzene levels in people who use sunscreen",
     "Clinically proven to cure acne",
@@ -108,10 +124,20 @@ def test_reported_findings_and_plain_claims_are_not(text):
     assert not is_evidence_meta(text)
 
 
+@pytest.mark.parametrize("text", SUPPORT_STATEMENTS)
+def test_support_statements_keep_an_efficacy_category_even_if_the_model_says_evidence_meta(text):
+    assert is_support_statement(text)
+    assert resolve_claim_category(EVIDENCE_META, text, cl.CATEGORIES) in r.UNPROVEN_CATEGORIES
+
+
 def test_rules_override_the_model_category():
     known = cl.CATEGORIES
-    assert resolve_claim_category("treatment_efficacy", C13, known) == EVIDENCE_META
     assert resolve_claim_category("other", C12, known) == EVIDENCE_META
+    assert resolve_claim_category("treatment_efficacy", C12, known) == EVIDENCE_META
+    assert resolve_claim_category("treatment_efficacy", C13, known) == "treatment_efficacy"  # production's tag
+    assert resolve_claim_category(EVIDENCE_META, C13, known) == "prevention"  # the implied effect
+    assert resolve_claim_category(EVIDENCE_META, "the evidence for this detox tea is overwhelming",
+                                  known) == "treatment_efficacy"
     assert resolve_claim_category("prevention", "Vitamin K prevents bleeding", known) == "prevention"
     assert resolve_claim_category("bogus", "Vitamin K prevents bleeding", known) == "other"
     # A model may tag evidence_meta where the rules don't fire; it is kept.
@@ -119,14 +145,16 @@ def test_rules_override_the_model_category():
 
 
 def test_prompt_examples_agree_with_the_rules():
-    for text in ["the evidence that flossing prevents gum disease is strong",
-                 "the research on cold plunges is still thin", "these trials were tiny",
-                 "that was a rat study", "the study was paid for by a juice company",
+    for text in ["these trials were tiny", "the sample was small", "it's only one study",
+                 "the trials weren't randomised", "that was a rat study",
+                 "the research on cold plunges is still thin", "the study was paid for by a juice company",
                  "this powder has never been tested in people", "there is very little good data on collagen"]:
         assert is_evidence_meta(text), text
-    for text in ["Studies show beetroot juice lowers blood pressure", "clinically proven to clear acne",
-                 "research proves garlic kills viruses"]:
-        assert not is_evidence_meta(text), text
+    for text in ["The evidence that flossing prevents gum disease is strong",
+                 "the evidence for this sleep spray is overwhelming",
+                 "there is clear evidence that zinc lozenges shorten colds",
+                 "studies show beetroot juice lowers blood pressure", "clinically proven to clear acne"]:
+        assert not is_evidence_meta(text) and is_support_statement(text), text
 
 
 # ------------------------------------------------------------------ prompts and requests
@@ -136,7 +164,8 @@ def test_extract_v4_describes_evidence_meta_and_v3_is_unchanged():
     v4 = " ".join(load_prompt("extract_v4").split())
     v3 = " ".join(load_prompt("extract_v3").split())
     assert "evidence_meta" in v4 and "evidence_meta" not in v3
-    assert "never treatment_efficacy or prevention" in v4
+    assert "design, quality or quantity of the evidence that assert no effect" in v4
+    assert "Not evidence_meta: a statement that the evidence FOR something is strong" in v4
     # v4 is v3 plus the evidence_meta section: every v3 rule is still there.
     for rule in ("Quote in the original language", "State the myth, not the correction",
                  "One predicate with a list of objects or outcomes is ONE claim"):
@@ -179,10 +208,10 @@ def extract(prompt: str, model_categories: tuple[str, str]):
 
 
 @pytest.mark.parametrize("prompt", ["extract_v2", "extract_v3", "extract_v4"])
-def test_extractor_tags_c12_and_c13_evidence_meta_even_when_the_model_says_efficacy(prompt):
-    out, caller = extract(prompt, ("other", "treatment_efficacy"))
+def test_extractor_tags_c12_evidence_meta_and_c13_keeps_its_efficacy_category(prompt):
+    out, caller = extract(prompt, ("treatment_efficacy", "treatment_efficacy"))
     cats = {c.claim_text: c.claim_category for c in out["claims"]}
-    assert cats == {C12: EVIDENCE_META, C13: EVIDENCE_META}
+    assert cats == {C12: EVIDENCE_META, C13: "treatment_efficacy"}
     assert all(c.claim_kind == "research_question" for c in out["claims"])
     # Only extract_v4 explains evidence_meta to the model; the rules cover older prompts.
     assert ("evidence_meta" in caller.calls[0].system) == (prompt == "extract_v4")
@@ -209,19 +238,22 @@ def claim(cid: str, text: str, category: str) -> GraphClaim:
                       source_segment_ids=[f"t_{cid}"], start_seconds=0.0, end_seconds=1.0)
 
 
-def test_gate_refuses_evidence_statements_whatever_their_category():
+def test_gate_refuses_design_statements_but_not_support_statements():
     s = initial_state(job_id="j", video_id="v", media_uri="mem://v", pipeline_version="test")
-    s["claims"] = [claim("c12", C12, "other"), claim("c13", C13, "treatment_efficacy"),
-                   claim("c13b", C13, EVIDENCE_META),
+    s["claims"] = [claim("c12", C12, "treatment_efficacy"),  # an older run's tag: the rules still refuse it
+                   claim("c12b", C12, EVIDENCE_META),
+                   claim("c13", C13, "prevention"),
+                   claim("t1", "the evidence that turmeric cures cancer is overwhelming", "treatment_efficacy"),
+                   claim("t2", "the evidence for this detox tea is overwhelming", "treatment_efficacy"),
                    claim("c11", "Vitamin K prevents osteoporosis", "prevention")]
     assert not r.unproven_eligible(s, "c12")
-    assert not r.unproven_eligible(s, "c13")  # an older run's claim, still tagged efficacy
-    assert not r.unproven_eligible(s, "c13b")
-    assert r.unproven_eligible(s, "c11")  # a real prevention claim is unaffected
+    assert not r.unproven_eligible(s, "c12b")
+    for cid in ("c13", "t1", "t2", "c11"):
+        assert r.unproven_eligible(s, cid), cid
 
 
 def test_frozen_eval_categoriser_agrees():
-    assert efficacy_category(C13) == EVIDENCE_META
+    assert efficacy_category(C13) == "prevention"
     assert efficacy_category(C12) == EVIDENCE_META
     assert efficacy_category("Vitamin K prevents osteoporosis") == "prevention"
 
@@ -229,53 +261,59 @@ def test_frozen_eval_categoriser_agrees():
 # ------------------------------------------------------------------ c12 / c13 replay
 
 
-def replay(c_ids: tuple[str, ...], category_override: dict[str, str] | None = None) -> dict:
+def replay(c_ids: tuple[str, ...], recorded: bool = False) -> dict:
     """c12/c13 through the verifier (T49 guard included), the judge and validation,
     as stored in the fixture: empty searches, full budget spent, endorsed."""
     claims_ = [c for c in job()["claims"] if c["claim_id"] in c_ids]
     s = initial_state(job_id="5cc07f48", video_id="vid", media_uri="mem://vid", pipeline_version="test")
     s.update(
         claims=[GraphClaim(claim_id=c["claim_id"], claim_text=c["text"],
-                           claim_category=(category_override or {}).get(c["claim_id"], c["category"]),
+                           claim_category=c["category"],
                            claim_kind=c["claim_kind"], source_segment_ids=[f"t_{c['claim_id']}"],
                            start_seconds=c["start_seconds"], end_seconds=c["end_seconds"]) for c in claims_],
         transcript_segments=[TranscriptSegment(segment_id=f"t_{c['claim_id']}", start=c["start_seconds"],
                                                end=c["end_seconds"], text=c["text"]) for c in claims_],
         stance_results={c["claim_id"]: StanceResult(claim_id=c["claim_id"], stance=Stance(c["stance"]),
                                                     stance_segment_ids=[f"t_{c['claim_id']}"]) for c in claims_},
-        retrieved_evidence={c["claim_id"]: [] for c in claims_},
-        reranked_evidence={c["claim_id"]: [] for c in claims_},
+        retrieved_evidence={c["claim_id"]: [EvidenceRecord.model_validate(e) for e in c["evidence"]] for c in claims_},
+        reranked_evidence={c["claim_id"]: [EvidenceRecord.model_validate(e) for e in c["evidence"]] for c in claims_},
         retrieval_attempts={c["claim_id"]: c["retrieval_attempts"] for c in claims_},
     )
 
-    class NoModel:
-        def call(self, *a, **k):
-            raise AssertionError("nothing was retrieved: the verifier must not call a model")
+    answers = {c["claim_id"]: c["verifier_answer"] for c in claims_ if c["verifier_answer"]}
 
-    s = {**s, **vf.make_verify_claims(NoModel(), prompt_version="verify_v3")(s)}
+    class Recorded:
+        def call(self, step, input, *, system=None):
+            import re
+            assert recorded, "nothing was retrieved: the verifier must not call a model"
+            cid = re.search(r"Judge claim (\S+) ", input["messages"][0]["content"]).group(1)
+            return SimpleNamespace(output=answers[cid], record=SimpleNamespace(model="recorded",
+                                                                               prompt_version="verify_v3"))
+
+    s = {**s, **vf.make_verify_claims(Recorded(), prompt_version="verify_v3")(s)}
     s["final_result"] = jg.make_judge_classification(None)(s)["final_result"]
     s["validation_errors"] = [str(i) for i in validate(s)]
     s["validation_attempts"] = 1
     return {**s, **make_stub_nodes()[r.ROUTE_FOR_REVIEW](s)}
 
 
-@pytest.mark.parametrize("override", [None, {"c13": EVIDENCE_META}])
-def test_c12_and_c13_never_become_unsupported(override):
-    # None: c13 still carries production's treatment_efficacy tag (the gate's own
-    # check); {"c13": evidence_meta}: what the T51 extractor now stores.
-    out = replay(("c12", "c13"), override)
+def test_c12_is_insufficient_and_c13_is_stopped_by_the_t49_guard():
+    out = replay(("c12", "c13"))
     vr = out["verification_results"]
     assert {cid: v.verdict for cid, v in vr.items()} == {
         "c12": Verdict.INSUFFICIENT_EVIDENCE, "c13": Verdict.INSUFFICIENT_EVIDENCE}
+    assert OFF_TOPIC_LIMITATION not in vr["c12"].limitations  # never offered UNSUPPORTED
+    assert vr["c13"].limitations[-1] == OFF_TOPIC_LIMITATION  # eligible; the empty search stops it
     final = out["final_result"]
     assert final.classification == MisinfoLabel.CANNOT_RECOGNIZE and final.misinfo_basis is None
+    assert "judge:nothing_judged" in out["review_reasons"]
     assert not any("unproven_claim" in x for x in out["review_reasons"])
 
 
-def test_a_real_efficacy_claim_with_the_same_empty_search_still_can_be_unsupported():
-    # Control: T51 narrows UNSUPPORTED to non-evidence statements only. The same empty
-    # search on a plain efficacy claim still offers it (the T49 guard then decides).
-    s = initial_state(job_id="j", video_id="v", media_uri="mem://v", pipeline_version="test")
-    s["claims"] = [claim("c1", "The vitamin K shot prevents dangerous bleeding in newborns", "prevention")]
-    s["retrieval_attempts"] = {"c1": 3}
-    assert r.unproven_eligible(s, "c1")
+def test_the_full_vitamin_k_job_is_cannot_recognize_with_c13_kept_as_efficacy():
+    out = replay(tuple(c["claim_id"] for c in job()["claims"]), recorded=True)
+    vr = out["verification_results"]
+    assert vr["c13"].verdict == Verdict.INSUFFICIENT_EVIDENCE
+    assert vr["c13"].limitations[-1] == OFF_TOPIC_LIMITATION
+    assert not any(v.verdict == Verdict.UNSUPPORTED for v in vr.values())
+    assert out["final_result"].classification == MisinfoLabel.CANNOT_RECOGNIZE

@@ -35,11 +35,12 @@ How it fits:
   model (prompt ``extract_v2``); a missing or unknown value is decided by the fixed
   rules in ``app.core.retrieval.claim_kind``. Retrieval uses it to add authoritative
   references for facts of record (§6).
-- **Evidence-strength statements** (T51): "the evidence for X is overwhelming", "these
-  studies are observational" get ``claim_category = evidence_meta`` (prompt
-  ``extract_v4``; and, for every prompt version, the fixed rules in
-  ``app.core.claim_category``, which override the model). ``evidence_meta`` is not an
-  efficacy category, so §7's UNSUPPORTED can never apply to them. The tool's category
+- **Design / quality / quantity statements** (T51): "these studies are observational",
+  "it's only one study" get ``claim_category = evidence_meta`` (prompt ``extract_v4``;
+  and, for every prompt version, the fixed rules in ``app.core.claim_category``, which
+  override the model). ``evidence_meta`` is not an efficacy category, so §7's
+  UNSUPPORTED can never apply to them. "The evidence for X is overwhelming" is not one
+  of them: it keeps the implied efficacy category. The tool's category
   enum lists ``evidence_meta`` only from ``extract_v4`` on, so older prompts send the
   same request as before.
 - Writes only ``claims`` (plus the shared, append-only ``errors``).
@@ -81,7 +82,7 @@ LEGACY_CATEGORIES = (
     "treatment_efficacy", "prevention", "causation", "safety", "diagnosis",
     "nutrition", "statistic", "other",
 )
-# T51: evidence_meta (statements about the state or strength of evidence). Every
+# T51: evidence_meta (statements about study design, quality or quantity that assert no effect). Every
 # claim may carry it (the rules assign it whatever the prompt); the tool offers it to
 # the model only from extract_v4 on.
 CATEGORIES = (*LEGACY_CATEGORIES[:-1], EVIDENCE_META, "other")
@@ -350,7 +351,8 @@ def extract_window(
             errors.append(_gerr("claim_ungrounded", item.claim_text[:80]))
             continue
         pieces = list(dict.fromkeys(p for b in cited for p in blocks[b]["pieces"]))
-        # T51: an evidence-strength statement is evidence_meta whatever the model said.
+        # T51: a design / quality / quantity statement is evidence_meta whatever the model
+        # said; a "the evidence for X is overwhelming" statement is never evidence_meta.
         category = resolve_claim_category(item.claim_category, item.claim_text, CATEGORIES)
         claims.append(GraphClaim(
             claim_id=f"w{len(claims) + 1}",

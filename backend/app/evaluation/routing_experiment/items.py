@@ -208,8 +208,8 @@ _PREVENTION = re.compile(
 
 def efficacy_category(text: str) -> str:
     """``treatment_efficacy`` / ``prevention`` / ``evidence_meta`` / ``other`` from fixed
-    cue words. Applied the same way to every claim, whatever its gold verdict. T51: an
-    evidence-strength statement is ``evidence_meta`` first, as in the extractor."""
+    cue words. Applied the same way to every claim, whatever its gold verdict. T51: a design /
+    quality / quantity statement is ``evidence_meta`` first, as in the extractor."""
     if is_evidence_meta(text):
         return EVIDENCE_META
     if _PREVENTION.search(text):
