@@ -10,8 +10,9 @@ guideline; otherwise it can't decide (review reason ``thin_contradiction:<cid>``
 Change 3 (``judge.ANALYSIS_INCOMPLETE_RULE``, lead addendum): the verifier failed for at least
 half of the verifiable claims → CANNOT_RECOGNIZE, rule and review reason ``analysis_incomplete``.
 
-Five configurations, each with the T64 guard as merged: (a) T64 only, (b) + change 1,
-(c) + change 2, (d) + changes 1 and 2, (e) + change 3. (a)-(d) run with change 3 off. Two inputs:
+Six configurations, each with the T64 guard as merged: (a) T64 only, (b) + change 1,
+(c) + change 2, (d) + changes 1 and 2, (e) + changes 1, 2 and 3 (the orchestrator's (e)),
+(f) + change 3 only (what ships). (a)-(d) run with change 3 off. Two inputs:
 
 A. ``--t66 <dir>``: the finished T66 videos' stored final states (``videos/<id>.json`` from
    ``origin/auto/T66``, PR #146, pipeline at 3372ef3, pre-T64 upstream). A video whose
@@ -73,9 +74,9 @@ DATASET = REPO / "research" / "claim-level" / "dataset"
 FROZEN_REF = "origin/data/t38-frozen-evidence:frozen_evidence_tune.json"
 LABELS = ("MISINFO", "NO_MISINFO", "DEBUNKING", "CANNOT_RECOGNIZE")
 CONFIGS = {"a": (False, False, False), "b": (True, False, False), "c": (False, True, False),
-           "d": (True, True, False), "e": (False, False, True)}
+           "d": (True, True, False), "e": (True, True, True), "f": (False, False, True)}
 CONFIG_NAMES = {"a": "T64 only", "b": "T64 + change 1", "c": "T64 + change 2", "d": "T64 + changes 1 and 2",
-                "e": "T64 + change 3 (analysis_incomplete)"}
+                "e": "T64 + changes 1, 2 and 3", "f": "T64 + change 3 only (as shipped)"}
 EFFICACY = ("treatment_efficacy", "prevention")
 # "Further from MISINFO" (gate): MISINFO 0, CANNOT_RECOGNIZE 1 (undecided, goes to a
 # person), NO_MISINFO / DEBUNKING 2 (the video is cleared).
@@ -312,7 +313,7 @@ def section(name: str, rows: list[dict]) -> tuple[list[str], dict]:
         lines += [f"| **{g}** | " + " | ".join(f"**{c}**" if i == j else str(c) for j, c in enumerate(m[i]))
                   + f" | {sum(m[i])} |" for i, g in enumerate(LABELS)]
         lines.append("")
-    for key in ("b", "c", "d", "e"):
+    for key in ("b", "c", "d", "e", "f"):
         changed = [r for r in rows if (r["a"]["label"], r["a"]["basis"]) != (r[key]["label"], r[key]["basis"])]
         bad = [r["video_id"] for r in changed if worse(r["gold"], r["a"]["label"], r[key]["label"])]
         summary[key]["changed"] = [r["video_id"] for r in changed]
@@ -344,7 +345,7 @@ def render(a_rows, excluded, b_rows, missing, rev) -> tuple[str, dict]:
     lines += ["## B. Golden claims, all in-scope tune videos", "",
               "Golden stances and verdicts; the T64 guard re-checks golden UNSUPPORTED claims on the T38 "
               "frozen evidence. Cited records come from the golden set's offline evidence cache. No critic, "
-              "so change 1 cannot fire here: (b) = (a), (d) = (c). No verifier errors in the golden set, so change 3 cannot fire: (e) = (a).",
+              "so change 1 cannot fire here: (b) = (a), (d) = (c). No verifier errors in the golden set, so change 3 cannot fire: (e) = (c), (f) = (a).",
               f"Cited evidence IDs not in the offline cache (treated as empty records): {len(missing)}"
               + (f" ({', '.join(missing)})" if missing else ""), ""] + lb
     thin = [(r["video_id"], t) for r in b_rows for t in r["thin"]]
