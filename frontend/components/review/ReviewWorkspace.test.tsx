@@ -206,6 +206,52 @@ describe("ReviewWorkspace: how we searched (T52)", () => {
   });
 });
 
+describe("ReviewWorkspace: fewer sources on screen (T59)", () => {
+  const ref = (i: number) => ({ evidence_id: `p${i}`, source_kind: "pubmed" as const, rank: i, title: `Retrieved paper ${i}`, study_type: "rct" });
+  const many = adaptBlindMaterial({
+    ...MOCK_BLIND_MATERIAL,
+    claims: MOCK_BLIND_MATERIAL.claims!.map((c, k) => (k === 0 ? { ...c, references: [1, 2, 3, 4, 5, 6].map(ref) } : c)),
+  });
+
+  it("shows the top 3 in retrieval order in the blind step, the rest behind a button, with no relation hints", () => {
+    render(<Harness raw={MOCK_CASE_HIGH} onDecide={vi.fn()} onPreReveal={vi.fn()} blind={many} />);
+    const claim1 = screen.getByRole("article", { name: "Claim 1" });
+    expect(within(claim1).getAllByText(/Retrieved paper \d/).map((e) => e.textContent)).toEqual(["Retrieved paper 1", "Retrieved paper 2", "Retrieved paper 3"]);
+    fireEvent.click(within(claim1).getByRole("button", { name: "Show 3 more sources" }));
+    expect(within(claim1).getAllByText(/Retrieved paper \d/).map((e) => e.textContent)).toEqual([1, 2, 3, 4, 5, 6].map((i) => `Retrieved paper ${i}`));
+    expect(within(claim1).queryByText(/Contradicts|Supports/)).not.toBeInTheDocument();
+  });
+
+  it("after the reveal, puts the cited sources first and collapses the rest beyond 3", () => {
+    const withUnused = {
+      ...MOCK_MISINFO_PENDING,
+      claims: [
+        {
+          ...MOCK_MISINFO_PENDING.claims![0],
+          evidence: [
+            { evidence_id: "u1", title: "Unused paper A", relation: "CONSIDERED", source_kind: "pubmed" as const, study_type: "rct" },
+            ...MOCK_MISINFO_PENDING.claims![0].evidence!,
+            { evidence_id: "u2", title: "Unused paper B", relation: "CONSIDERED", source_kind: "pubmed" as const, study_type: "rct" },
+            { evidence_id: "u3", title: "Unused paper C", relation: "CONSIDERED", source_kind: "pubmed" as const, study_type: "rct" },
+          ],
+        },
+        ...MOCK_MISINFO_PENDING.claims!.slice(1),
+      ],
+    };
+    render(
+      <ReviewWorkspace review={adaptCase(MOCK_CASE_NORMAL, MOCK_VIEWER_ID)} result={adaptResult(withUnused)} onDecide={vi.fn()} onPreReveal={vi.fn()} onOverrideSeverity={vi.fn()} />,
+    );
+    const claim1 = screen.getByRole("article", { name: "Claim 1" });
+    const titles = () => within(claim1).getAllByRole("heading", { level: 4 }).map((h) => h.textContent).filter((t) => t && !/^(What|How)/i.test(t));
+    // the 2 cited sources first, then the first unused one; 2 more behind the button
+    expect(titles()).toHaveLength(3);
+    expect(titles()[2]).toBe("Unused paper A");
+    expect(within(claim1).getAllByText("Contradicts")).toHaveLength(2);
+    fireEvent.click(within(claim1).getByRole("button", { name: "Show 2 more sources" }));
+    expect(titles().slice(3)).toEqual(["Unused paper B", "Unused paper C"]);
+  });
+});
+
 describe("ReviewWorkspace: video (T56)", () => {
   const URL_ = "https://storage.example/signed/video.mp4?token=x";
   const video = () => document.querySelector("video") as HTMLVideoElement | null;

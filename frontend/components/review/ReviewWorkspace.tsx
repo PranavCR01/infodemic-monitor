@@ -15,7 +15,8 @@ import {
 import { TONE } from "@/components/ui/tone";
 import { ClaimSearch } from "@/components/result/ClaimSearch";
 import { VideoPlayer, type PlayerHandle } from "@/components/result/VideoPlayer";
-import { SourceCard, sortSources } from "@/components/result/SourceCard";
+import { sortSources } from "@/components/result/SourceCard";
+import { SourceList } from "@/components/result/SourceList";
 import { flaggedClaimIds } from "@/lib/search-finding";
 import { clock, type Claim, type ResultModel, type Segment } from "@/lib/api/result-adapter";
 import type { BlindClaimMaterial, BlindMaterial } from "@/lib/api/blind-material";
@@ -521,9 +522,8 @@ function BlindClaim({
           <div className="flex flex-col gap-2">
             <h4 className="text-cap font-semibold uppercase tracking-wider text-ink-3">Sources the search found</h4>
             {!material?.sources.length && <p className="text-small text-ink-2">The search found no source for this claim.</p>}
-            {material?.sources.map((s) => (
-              <SourceCard key={s.id} s={s} />
-            ))}
+            {/* T59: the first 3, in retrieval order; the rest behind "Show N more sources". */}
+            {material && <SourceList sources={material.sources} />}
           </div>
         </div>
       )}
@@ -542,7 +542,8 @@ function EvidenceClaim({
   sentToReviewer: boolean;
   onSeek: ((t: number) => void) | null;
 }) {
-  const sources = sortSources(c.sources);
+  // T59: the sources the check cited first (strongest study first), then those it saw but didn't use.
+  const sources = [...sortSources(c.sources.filter((s) => s.relation !== "CONSIDERED")), ...c.sources.filter((s) => s.relation === "CONSIDERED")];
   return (
     <article aria-labelledby={`rv-${c.id}`} className="flex flex-col gap-3 rounded-lg border border-line bg-surface p-4 shadow-1">
       <header className="flex flex-wrap items-center gap-2">
@@ -566,9 +567,7 @@ function EvidenceClaim({
         <div className="flex flex-col gap-2">
           <h4 className="text-cap font-semibold uppercase tracking-wider text-ink-3">What the sources say</h4>
           {sources.length === 0 && <p className="text-small text-ink-2">No source was found that tests this claim.</p>}
-          {sources.map((s) => (
-            <SourceCard key={s.id} s={s} />
-          ))}
+          <SourceList sources={sources} />
           {showSystem && c.verdict && (
             <p className="flex flex-wrap items-center gap-2 text-small text-ink-2">System: <VerdictChip verdict={c.verdict} /></p>
           )}

@@ -142,7 +142,7 @@ describe("ClaimDrawer: how we searched (T31, T52)", () => {
     expect(within(dialog).queryByText("Technical details")).not.toBeInTheDocument();
   });
 
-  it("lists papers retrieved but not used, collapsed, with PubMed links", () => {
+  it("lists papers retrieved but not used after the cited sources, collapsed, with PubMed links (T52, T59)", () => {
     const raw: RawResult = {
       ...MOCK_MISINFO_PENDING,
       claims: [
@@ -157,10 +157,17 @@ describe("ClaimDrawer: how we searched (T31, T52)", () => {
     };
     render(<ResultView result={adaptResult(raw)} />);
     const dialog = open(1);
-    const details = within(dialog).getByText(/Papers retrieved but not used/).closest("details")!;
+    const details = within(dialog).getByText(/Also retrieved, not used/).closest("details")!;
     expect(details).not.toHaveAttribute("open");
     expect(within(details).getByText(/\(1\)/)).toBeInTheDocument();
-    expect(within(details).getByRole("link", { name: /Vitamin D and bone density/ })).toHaveAttribute("href", "https://pubmed.ncbi.nlm.nih.gov/12345678/");
+    expect(within(details).getByText("Vitamin D and bone density in older women")).toBeInTheDocument();
+    expect(within(details).getByRole("link", { name: /View on PubMed/ })).toHaveAttribute("href", "https://pubmed.ncbi.nlm.nih.gov/12345678/");
+    // cited sources come first, inside the Sources section
+    const sourcesSection = within(dialog).getByRole("heading", { name: "Sources" }).closest("section")!;
+    expect(sourcesSection).toContainElement(details);
+    const firstCited = within(sourcesSection).getAllByRole("article")[0];
+    expect(firstCited.compareDocumentPosition(details) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(within(details).queryByText("Contradicts")).not.toBeInTheDocument();
   });
 });
 
