@@ -114,13 +114,24 @@ def our_view(rec: dict) -> dict:
             for e in recs or []:
                 if e["evidence_id"] not in {x["evidence_id"] for x in kept.get(cid, [])}:
                     kept.setdefault(cid, []).append(e)
+    reasons = st.get("review_reasons") or []
     claims = []
     for c in st.get("claims") or []:
         cid = c["claim_id"]
         ev = kept.get(cid, [])
+        vr = verdicts.get(cid) or {}
+        raw = vr.get("verdict")
+        cited = bool(vr.get("supporting_evidence_ids") or vr.get("contradicting_evidence_ids"))
+        # What the judge saw (routing.verdicts_for_judge, §8): a claim whose critic still
+        # objected when the budget ran out abstains as INSUFFICIENT_EVIDENCE, unless it
+        # cited nothing and was already IE/UNSUPPORTED.
+        abstained = f"budget_exhausted:{cid}" in reasons and raw is not None and not (
+            raw in ("INSUFFICIENT_EVIDENCE", "UNSUPPORTED") and not cited)
+        eff = "INSUFFICIENT_EVIDENCE" if abstained else raw
         on = sum(topic_match(c["claim_text"], e.get("title") or "", e.get("abstract") or "") for e in ev)
         claims.append({"id": cid, "text": c["claim_text"], "stance": (stances.get(cid) or {}).get("stance"),
-                       "verdict": (verdicts.get(cid) or {}).get("verdict"), "kept": len(ev), "on_topic": on,
+                       "verdict": eff, "raw_verdict": raw, "abstained_budget": abstained,
+                       "kept": len(ev), "on_topic": on,
                        "requires_verification": c.get("requires_verification"), "kind": c.get("claim_kind")})
     return {"claims": claims, "label": rec["label"], "basis": fr.get("misinfo_basis"), "rule": fr.get("decision_rule"),
             "deciding": fr.get("claim_ids") or [], "reviewed": bool(st.get("requires_human_review")),
@@ -148,6 +159,14 @@ def main() -> int:
     for vid in finished:
         g, o = gold_view(gold[vid]), our_view(recs[vid])
         rows.append({"video_id": vid, "gold": g, "ours": o})
+    for r in rows:
+        o = r["ours"]
+        _, rule_eff = gold_deciding(o["claims"])
+        o["rule_recomputed_effective"] = rule_eff
+        raw_claims = [{**c, "verdict": c["raw_verdict"]} for c in o["claims"]]
+        _, rule_raw = gold_deciding(raw_claims)
+        o["label_if_no_budget_abstention"] = _rule_label(rule_raw)
+        o["n_abstained_budget"] = sum(c["abstained_budget"] for c in o["claims"])
     gl = [r["gold"]["label"] for r in rows]
     pl = [r["ours"]["label"] for r in rows]
     n = len(rows)
@@ -194,6 +213,21 @@ def main() -> int:
                      "ours": r["ours"]["label"], "ours_basis": r["ours"]["basis"], "rule": r["ours"]["rule"],
                      "deciding": r["ours"]["deciding"], "sent_to_review": r["ours"]["reviewed"]}
                     for r in rows if r["gold"]["label"] != r["ours"]["label"]]
+    out["budget_abstention"] = {
+        "videos_with_any": sum(r["ours"]["n_abstained_budget"] > 0 for r in rows),
+        "claims_abstained": sum(r["ours"]["n_abstained_budget"] for r in rows),
+        "claims_total": sum(len(r["ours"]["claims"]) for r in rows),
+        "recomputed_rule_matches_actual": [
+            r["video_id"] for r in rows if _rule_label(r["ours"]["rule_recomputed_effective"]) == r["ours"]["label"]],
+        "recomputed_rule_differs": [
+            {"video_id": r["video_id"], "actual": r["ours"]["rule"], "recomputed": r["ours"]["rule_recomputed_effective"]}
+            for r in rows if _rule_label(r["ours"]["rule_recomputed_effective"]) != r["ours"]["label"]],
+        "counterfactual_raw_verdicts": [
+            {"video_id": r["video_id"], "gold": r["gold"]["label"], "actual": r["ours"]["label"],
+             "raw": r["ours"]["label_if_no_budget_abstention"]} for r in rows
+            if r["ours"]["label_if_no_budget_abstention"] != r["ours"]["label"]],
+        "counterfactual_accuracy": M.accuracy(gl, [r["ours"]["label_if_no_budget_abstention"] for r in rows]) if rows else None,
+    }
     # Gold label vs §9 rules applied to gold claims (consistency of the golden set itself)
     out["gold_rule_label_mismatch_finished"] = [
         r["video_id"] for r in rows if _rule_label(r["gold"]["rule"]) != r["gold"]["label"]]
@@ -216,7 +250,14 @@ def main() -> int:
     gc_f, gd_f = gap_counts([(r["video_id"], r["gold"]) for r in rows])
     oc_f, od_f = gap_counts([(r["video_id"], r["ours"]) for r in rows])
     gc_all, gd_all = gap_counts([(vid, gold_view(gold[vid])) for vid in order])
+
+    def raw_view(o):
+        cl = [{**c, "verdict": c["raw_verdict"]} for c in o["claims"]]
+        dec, rule = gold_deciding(cl)
+        return {**o, "claims": cl, "label": _rule_label(rule), "rule": rule, "deciding": dec}
+    rc_f, rd_f = gap_counts([(r["video_id"], raw_view(r["ours"])) for r in rows])
     out["gaps"] = {"gold_on_finished": gc_f, "ours_on_finished": oc_f, "gold_on_all_48": gc_all,
+                   "ours_raw_verdicts_on_finished": rc_f, "detail_ours_raw_finished": rd_f,
                    "detail_gold_finished": gd_f, "detail_ours_finished": od_f, "detail_gold_all": gd_all}
 
     # Cost & latency (every video that ran, finished or fallback; not-run excluded)
@@ -274,7 +315,8 @@ def write_wrong_cases(rows) -> None:
         lines.append("")
         lines.append("Our claims:")
         for c in o["claims"]:
-            lines.append(f"- {c['id']} [{c['stance']}/{c['verdict']}, kept {c['kept']}, on-topic {c['on_topic']}] {c['text']}")
+            ab = f" (raw {c['raw_verdict']}, abstained: critic budget)" if c["abstained_budget"] else ""
+            lines.append(f"- {c['id']} [{c['stance']}/{c['verdict']}{ab}, kept {c['kept']}, on-topic {c['on_topic']}] {c['text']}")
         matches = M.match_claims([c["text"] for c in g["claims"]], [c["text"] for c in o["claims"]], threshold=0.3)
         lines.append("")
         lines.append("Token-overlap matches (>=0.3): " + ", ".join(

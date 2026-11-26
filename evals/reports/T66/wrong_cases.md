@@ -14,7 +14,7 @@ Our claims:
 - c1 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] At least 10 nurses from one maternity ward at a Massachusetts hospital have been diagnosed with brain tumors.
 - c2 [QUOTES/INSUFFICIENT_EVIDENCE, kept 1, on-topic 1] this investigation found no environmental risks which could be linked to the development of a brain tumor
 - c3 [ENDORSES/NOT_VERIFIABLE, kept 10, on-topic 10] none of these tumors have been proven to be cancerous
-- c4 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] The most common types of benign brain tumors include meningiomas, which are tumors surrounding the covering of the brain, pituitary macroadenomas, which are tumors of the pituitary gland, as well as schwannomas
+- c4 [ENDORSES/INSUFFICIENT_EVIDENCE (raw INSUFFICIENT_EVIDENCE, abstained: critic budget), kept 10, on-topic 10] The most common types of benign brain tumors include meningiomas, which are tumors surrounding the covering of the brain, pituitary macroadenomas, which are tumors of the pituitary gland, as well as schwannomas
 - c5 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] schwannomas, which are benign tumors that grow off the coating of the nerve, such as an acoustic neuroma, which is a commonly found tumor at the base of the skull
 - c6 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 1, on-topic 1] there is going to be extreme difficulty in trying to identify a singular cause of all of these different types of tumors
 - c7 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] The most common environmental risk factor for these types of tumors is ionizing radiation
@@ -26,3 +26,244 @@ Our claims:
 - c13 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 2, on-topic 2] there is some type of commonality in an environmental exposure that may or may not be identified
 
 Token-overlap matches (>=0.3): c1~c1 (1.00), c2~c4 (0.75), c3~c7 (1.00), c4~c13 (0.84)
+
+## v65: gold CANNOT_RECOGNIZE (None) vs ours MISINFO (contradicted)
+- ours: rule `endorsed_contradicted`, deciding ['c11'], review True ['validation_failed:quote_membership:c16', 'validation_failed:quote_membership:c17', 'budget_exhausted:c1', 'budget_exhausted:c2', 'budget_exhausted:c3', 'budget_exhausted:c4', 'budget_exhausted:c5', 'budget_exhausted:c6', 'budget_exhausted:c7', 'budget_exhausted:c8', 'budget_exhausted:c9', 'budget_exhausted:c12', 'budget_exhausted:c13', 'budget_exhausted:c14', 'budget_exhausted:c16', 'budget_exhausted:c18', 'judge:possible_debunk:c1', 'judge:possible_debunk:c3', 'judge:possible_debunk:c14']
+- gold: §9 on gold claims -> `nothing_judged/no_claims` deciding []; review reasons ['possible_debunk:c1', 'possible_debunk:c2', 'mixed_evidence:c2', 'deciding_insufficient:c1', 'evidence_both_sides:c2']
+
+Gold claims:
+- c1 [REFUTES/INSUFFICIENT_EVIDENCE, 0 cited] salt we were told is this devil white powder that if you eat it you're going to give yourself a heart attack and you're going to shut down your kidneys
+- c2 [REFUTES/MIXED, 2 cited] there are gigantic studies of over a hundred thousand people that proved that eating too little salt is actually more dangerous than eating too much
+- c3 [ENDORSES/INSUFFICIENT_EVIDENCE, 0 cited] This study ... is called the Pure Study that was published in the Lancet in 2018 and what they did was they looked at tens of thousands of adults and got spot urine sodium samples ... And that is not the most accurate way to do it. This is more observational in nature
+
+Our claims:
+- c1 [REFUTES/INSUFFICIENT_EVIDENCE (raw CONTRADICTED, abstained: critic budget), kept 10, on-topic 10] doctors … lied to you about [salt] being unhealthy … physicians were withholding information on purpose for some type of secondary gain
+- c2 [QUOTES/INSUFFICIENT_EVIDENCE (raw MIXED, abstained: critic budget), kept 10, on-topic 10] salt … if you eat it you're going to give yourself a heart attack and you're going to shut down your kidneys
+- c3 [REFUTES/INSUFFICIENT_EVIDENCE (raw CONTRADICTED, abstained: critic budget), kept 10, on-topic 10] gigantic studies of over a hundred thousand people that proved that eating too little salt is actually more dangerous than eating too much
+- c4 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 0, on-topic 0] This study … the Pure Study that was published in the Lancet in 2018 … looked at tens of thousands of adults
+- c5 [ENDORSES/INSUFFICIENT_EVIDENCE (raw SUPPORTED, abstained: critic budget), kept 10, on-topic 10] spot urine sodium samples … is not the most accurate way to do it … it can vary widely throughout the day itself or across multiple days
+- c6 [ENDORSES/INSUFFICIENT_EVIDENCE (raw SUPPORTED, abstained: critic budget), kept 10, on-topic 10] what you're really supposed to do as a gold standard is to measure urine sodium over a 24-hour collection period, and then do that multiple times
+- c7 [ENDORSES/INSUFFICIENT_EVIDENCE (raw MIXED, abstained: critic budget), kept 10, on-topic 10] they reported a J phenomenon, meaning that those who had lower salt intake and those that had very high salt intake were both groups having higher risk of developing cardiovascular disease
+- c8 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 0, on-topic 0] this was not the strongest study to begin with
+- c9 [QUOTES/INSUFFICIENT_EVIDENCE (raw CONTRADICTED, abstained: critic budget), kept 10, on-topic 10] [Salt] prevents a lot of disease, specifically the profitable ones
+- c10 [QUOTES/INSUFFICIENT_EVIDENCE, kept 1, on-topic 1] Eating less than 3,000 milligrams per day of salt resulted in more cardiac events than eating above the threshold they told us was dangerous
+- c11 [ENDORSES/CONTRADICTED, kept 1, on-topic 1] What disease right now takes up more medical expense than anything, heart disease.
+- c12 [ENDORSES/INSUFFICIENT_EVIDENCE (raw SUPPORTED, abstained: critic budget), kept 10, on-topic 10] What kills us at higher rates than anything else? Heart disease
+- c13 [QUOTES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] Without sodium, we develop insulin resistance, destroying our thyroid, slowing our metabolism and making it harder to gain muscle
+- c14 [REFUTES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] don't eat that salt, You could accidentally get in great shape and feel awesome all the time
+- c15 [REFUTES/NOT_VERIFIABLE, kept 5, on-topic 5] doctors are making guideline recommendations that are purposely making people sick
+- c16 [ENDORSES/INSUFFICIENT_EVIDENCE (raw SUPPORTED, abstained: critic budget), kept 10, on-topic 10] Ideal salt consumption ends up being about 5,000 milligrams per day.
+- c17 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 6, on-topic 6] doctors don't tell all of their patients to completely eliminate salt from their diet
+- c18 [ENDORSES/INSUFFICIENT_EVIDENCE (raw SUPPORTED, abstained: critic budget), kept 10, on-topic 10] Most guidelines suggest consuming salt in moderation, not completely eliminating it.
+
+Token-overlap matches (>=0.3): c1~c2 (0.67), c2~c3 (0.91), c3~c4 (0.43)
+
+## v109: gold MISINFO (contradicted) vs ours NO_MISINFO (None)
+- ours: rule `judged_nothing_false_endorsed`, deciding ['c3'], review True ['budget_exhausted:c1', 'budget_exhausted:c2', 'budget_exhausted:c4', 'budget_exhausted:c5', 'budget_exhausted:c6', 'budget_exhausted:c8', 'high_risk_uncertain:c1', 'high_risk_uncertain:c2', 'high_risk_uncertain:c4', 'high_risk_uncertain:c11', 'high_risk_uncertain:c12', 'guardrail:extract_claims:claim_ungrounded']
+- gold: §9 on gold claims -> `endorsed_contradicted` deciding ['c6', 'c7', 'c8', 'c9']; review reasons []
+
+Gold claims:
+- c1 [ENDORSES/SUPPORTED, 2 cited] Es un medicamento que trata diabetes tipo 2
+- c2 [ENDORSES/SUPPORTED, 2 cited] reduce el riesgo de un derrame cerebral
+- c3 [ENDORSES/SUPPORTED, 2 cited] reduce los riesgos de ataques cardíacos
+- c4 [ENDORSES/SUPPORTED, 1 cited] reduce los riesgos de la muerte causada por diabetes tipo 2
+- c5 [ENDORSES/SUPPORTED, 2 cited] si no está llevado de la mano con un médico especialista, puede llegar a darte un tumor en la glándula tiroidea
+- c6 [ENDORSES/CONTRADICTED, 2 cited] [puede llegar a darte] pancreatitis
+- c7 [ENDORSES/CONTRADICTED, 2 cited] [puede llegar a darte] convulsiones
+- c8 [ENDORSES/CONTRADICTED, 1 cited] puedes desarrollar diabetes tipo 2
+- c9 [ENDORSES/CONTRADICTED, 2 cited] derrames cerebrales entre otras tragedias que te pueden llegar a pasar si lo consumes por ti sola
+- c10 [ENDORSES/INSUFFICIENT_EVIDENCE, 0 cited] se tiene que ir aumentando la dosis poco a poco ya que si no se hace esto tu páncreas puede dejar de funcionar
+- c11 [ENDORSES/SUPPORTED, 1 cited] obviamente vas a regresar a tu peso en el que estabas
+
+Our claims:
+- c1 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] Es un medicamento que trata diabetes tipo 2
+- c2 [ENDORSES/INSUFFICIENT_EVIDENCE (raw SUPPORTED, abstained: critic budget), kept 10, on-topic 10] [Ozempic] reduce el riesgo de un derrame cerebral
+- c3 [ENDORSES/SUPPORTED, kept 7, on-topic 7] [Ozempic] reduce los riesgos de ataques cardíacos
+- c4 [ENDORSES/INSUFFICIENT_EVIDENCE (raw SUPPORTED, abstained: critic budget), kept 10, on-topic 10] [Ozempic] reduce los riesgos de la muerte causada por diabetes tipo 2
+- c5 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] si no está llevado de la mano con un médico especialista, puede llegar a darte un tumor en la glándula tiroidea
+- c6 [ENDORSES/INSUFFICIENT_EVIDENCE (raw MIXED, abstained: critic budget), kept 10, on-topic 10] [Ozempic] puede llegar a darte … pancreatitis
+- c7 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] [Ozempic] puedes desarrollar diabetes tipo 2
+- c8 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] [Ozempic] derrames cerebrales entre otras tragedias que te pueden llegar a pasar si lo consumes por ti sola
+- c9 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 0, on-topic 0] se tiene que ir aumentando la dosis poco a poco
+- c10 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 0, on-topic 0] si no se hace esto tu páncreas puede dejar de funcionar
+- c11 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 0, on-topic 0] obviamente vas a regresar a tu peso en el que estabas
+- c12 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 0, on-topic 0] Son medicamentos educadores si no andan de la mano de dieta y ejercicio te regreso a su peso normal
+
+Token-overlap matches (>=0.3): c1~c1 (1.00), c2~c2 (0.88), c3~c3 (0.86), c4~c4 (0.92), c5~c5 (1.00), c6~c6 (0.83), c8~c7 (0.83), c9~c8 (0.94), c10~c10 (0.55), c11~c11 (1.00)
+
+## v11: gold CANNOT_RECOGNIZE (None) vs ours DEBUNKING (None)
+- ours: rule `refuted_contradicted`, deciding ['c1'], review True ['budget_exhausted:c2', 'budget_exhausted:c3', 'budget_exhausted:c4', 'high_risk_uncertain:c3']
+- gold: §9 on gold claims -> `nothing_judged/no_claims` deciding []; review reasons ['mixed_evidence:c1', 'mixed_evidence:c2', 'mixed_evidence:c3']
+
+Gold claims:
+- c1 [ENDORSES/MIXED, 2 cited] people who eat a lot of saturated fats, which are totally fine, by the way
+- c2 [ENDORSES/MIXED, 3 cited] they replace some fraction of those [saturated fats] with seed oils. And in almost every study, the people are months later healthier
+- c3 [ENDORSES/MIXED, 4 cited] seed oils are super great for your health. They're totally fine
+
+Our claims:
+- c1 [REFUTES/CONTRADICTED, kept 10, on-topic 10] seed oils are bad for you
+- c2 [ENDORSES/INSUFFICIENT_EVIDENCE (raw CONTRADICTED, abstained: critic budget), kept 10, on-topic 10] saturated fats, which are totally fine
+- c3 [ENDORSES/INSUFFICIENT_EVIDENCE (raw MIXED, abstained: critic budget), kept 7, on-topic 7] [people who replace some saturated fats with seed oils] in almost every study, the people are months later healthier
+- c4 [ENDORSES/INSUFFICIENT_EVIDENCE (raw SUPPORTED, abstained: critic budget), kept 10, on-topic 10] seed oils are super great for your health. They're totally fine
+
+Token-overlap matches (>=0.3): c1~c2 (0.40), c2~c3 (0.74), c3~c4 (1.00)
+
+## v23: gold DEBUNKING (None) vs ours MISINFO (denies_supported)
+- ours: rule `refuted_supported`, deciding ['c5'], review True ['budget_exhausted:c1', 'budget_exhausted:c2', 'budget_exhausted:c6', 'judge:denies_supported:c5', 'judge:possible_debunk:c1', 'judge:possible_debunk:c2', 'judge:possible_debunk:c6']
+- gold: §9 on gold claims -> `refuted_contradicted` deciding ['c2', 'c3']; review reasons ['possible_debunk:c1']
+
+Gold claims:
+- c1 [REFUTES/INSUFFICIENT_EVIDENCE, 0 cited] [gluten] can cause everything from osteoporosis to autism
+- c2 [REFUTES/CONTRADICTED, 1 cited] The COVID vaccine introduction has had a catastrophic negative effect
+- c3 [REFUTES/CONTRADICTED, 2 cited] you can reverse autism through diet
+
+Our claims:
+- c1 [REFUTES/INSUFFICIENT_EVIDENCE, kept 2, on-topic 2] [Gluten] can cause everything from osteoporosis to autism.
+- c2 [REFUTES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] The COVID vaccine introduction has had a catastrophic negative effect.
+- c3 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 1, on-topic 1] In an analysis of 15 health-related podcast episodes on his podcast, the BBC found that each contained an average of 14 harmful health claims that went against extensive scientific evidence
+- c4 [REFUTES/NOT_VERIFIABLE, kept 2, on-topic 2] anti-vaccine conspiracies
+- c5 [REFUTES/SUPPORTED, kept 10, on-topic 10] [proven cancer treatments are] toxic
+- c6 [REFUTES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] you can reverse autism through diet
+
+Token-overlap matches (>=0.3): c1~c1 (1.00), c2~c2 (1.00), c3~c6 (1.00)
+
+## v92: gold CANNOT_RECOGNIZE (None) vs ours MISINFO (unproven)
+- ours: rule `unproven`, deciding ['c2'], review True ['validation_failed:quote_membership:c1', 'weak_evidence:c2', 'budget_exhausted:c2', 'budget_exhausted:c3', 'budget_exhausted:c4', 'budget_exhausted:c5', 'high_risk_uncertain:c3', 'high_risk_uncertain:c4', 'high_risk_uncertain:c5', 'judge:unproven_claim:c2']
+- gold: §9 on gold claims -> `nothing_judged/no_claims` deciding []; review reasons ['nothing_judged']
+
+Gold claims:
+- c1 [ENDORSES/INSUFFICIENT_EVIDENCE, 0 cited] You can heal any kind of disease that you have for free. Basically, all you have to do is get your feet grounded
+- c2 [ENDORSES/INSUFFICIENT_EVIDENCE, 0 cited] A body that is consistently grounded cannot sustain chronic inflammation
+- c3 [ENDORSES/INSUFFICIENT_EVIDENCE, 0 cited] Inflammation is the ROOT CAUSE Of every disease known to man
+
+Our claims:
+- c1 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 8, on-topic 8] Inflammation is the ROOT CAUSE Of every disease known to man
+- c2 [ENDORSES/UNSUPPORTED, kept 10, on-topic 10] A body that is consistently grounded cannot sustain chronic inflammation.
+- c3 [ENDORSES/INSUFFICIENT_EVIDENCE (raw INSUFFICIENT_EVIDENCE, abstained: critic budget), kept 10, on-topic 10] [Grounding] will disrupt the inflammation cycle enough for your body to start repairing itself.
+- c4 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 9, on-topic 9] You can heal any kind of disease that you have for free.
+- c5 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] all you have to do is get your feet grounded
+
+Token-overlap matches (>=0.3): c1~c4 (0.55), c2~c2 (1.00), c3~c1 (1.00)
+
+## v114: gold MISINFO (contradicted) vs ours CANNOT_RECOGNIZE (None)
+- ours: rule `refuted_unsettled`, deciding ['c1'], review True ['validation_failed:quote_membership:c1', 'validation_failed:quote_membership:c3', 'weak_evidence:c1', 'budget_exhausted:c1', 'budget_exhausted:c2', 'budget_exhausted:c3', 'judge:possible_debunk:c1']
+- gold: §9 on gold claims -> `endorsed_contradicted` deciding ['c1']; review reasons ['mixed_evidence:c2']
+
+Gold claims:
+- c1 [ENDORSES/CONTRADICTED, 1 cited] Eliminar toda la sal sube la presión arterial
+- c2 [ENDORSES/MIXED, 3 cited] [Eliminar toda la sal ...] y se tiene incidencia a infarto de miocardio
+- c3 [ENDORSES/INSUFFICIENT_EVIDENCE, 1 cited] La causa de hipertensión es la prediabetes, el azúcar de los carbohidratos refinados
+- c4 [ENDORSES/INSUFFICIENT_EVIDENCE, 0 cited] La sal es vida, el cuerpo puede fabricar,
+- c5 [ENDORSES/SUPPORTED, 1 cited] sin embargo el azúcar sí [puede fabricar el cuerpo]
+
+Our claims:
+- c1 [REFUTES/INSUFFICIENT_EVIDENCE (raw CONTRADICTED, abstained: critic budget), kept 10, on-topic 10] Eliminar toda Ia sal sube la presion arterial,Y se tiene incidencia a infarto de meocardio
+- c2 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] La causa de hipertension prediabetes, el es Ja azucar de los carbohidratos refinados
+- c3 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 0, on-topic 0] el cuerpo [no] puede fabricar [sal], sinembargo el azucar si
+
+Token-overlap matches (>=0.3): c2~c1 (0.65), c3~c2 (0.64), c4~c3 (0.42)
+
+## v71: gold NO_MISINFO (None) vs ours CANNOT_RECOGNIZE (None)
+- ours: rule `nothing_judged`, deciding [], review True ['critic_escalated:c10', 'budget_exhausted:c2', 'budget_exhausted:c3', 'budget_exhausted:c5', 'budget_exhausted:c6', 'budget_exhausted:c7', 'budget_exhausted:c8', 'budget_exhausted:c9', 'budget_exhausted:c11', 'budget_exhausted:c13', 'budget_exhausted:c14', 'budget_exhausted:c15', 'budget_exhausted:c16', 'budget_exhausted:c17', 'budget_exhausted:c18', 'budget_exhausted:c19', 'budget_exhausted:c20', 'judge:nothing_judged']
+- gold: §9 on gold claims -> `judged_nothing_false_endorsed` deciding ['c2', 'c3', 'c4']; review reasons ['mixed_evidence:c1']
+
+Gold claims:
+- c1 [ENDORSES/MIXED, 4 cited] Over 80% of heart attacks and strokes are not plaque cholesterol or calcium that's blocking your arteries
+- c2 [ENDORSES/SUPPORTED, 1 cited] Number one, and people know this, is the inhalation of smoke from cigarettes. Now your arteries are exposed to all these chemicals and it's going to create inflammation
+- c3 [ENDORSES/SUPPORTED, 2 cited] Birth control pills or hormone replacement therapy is another thing that can actually affect the arteries because of the hormonal interaction, increasing the risk of a stroke and heart attacks
+- c4 [ENDORSES/SUPPORTED, 1 cited] there's something called the broken heart syndrome, where someone has a loss of a loved one. And their risk of having a heart attack goes up by 2,000%
+- c5 [ENDORSES/INSUFFICIENT_EVIDENCE, 0 cited] one of the best sources of L-arginine is meat and liver, the exact things that they tell you not to eat
+- c6 [ENDORSES/INSUFFICIENT_EVIDENCE, 3 cited] sunlight, that can penetrate deep into the body and help increase nitric oxide in the inside of the arteries
+
+Our claims:
+- c1 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] Over 80% of heart attacks and strokes are not plaque cholesterol or calcium that's blocking your arteries
+- c2 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] Most of the time, when someone has a heart attack or a stroke, they die from a clot.
+- c3 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 0, on-topic 0] The biggest trigger of a clot is not cholesterol.
+- c4 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 9, on-topic 9] [The biggest trigger of a clot] is the inhalation of smoke from cigarettes.
+- c5 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] Now your arteries are exposed to all these chemicals and it's going to create inflammation.
+- c6 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 4, on-topic 4] pollution or being around any type of chemicals in the environment can do that as well
+- c7 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] A solution is not to do vaping
+- c8 [ENDORSES/INSUFFICIENT_EVIDENCE (raw SUPPORTED, abstained: critic budget), kept 10, on-topic 10] Alcohol is another one. [Alcohol] is considered a poison to the liver. It gets in the bloodstream.
+- c9 [ENDORSES/INSUFFICIENT_EVIDENCE (raw SUPPORTED, abstained: critic budget), kept 10, on-topic 10] Birth control pills or hormone replacement therapy is another thing that can actually affect the arteries because of the hormonal interaction, increasing the risk of a stroke and heart attacks.
+- c10 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] Then you have stress.
+- c11 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] There's something called the broken heart syndrome, where someone has a loss of a loved one. And their risk of having a heart attack goes up by 2,000%
+- c12 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 2, on-topic 2] [Heart attack risk going up by 2,000%] triggers the clotting action.
+- c13 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] The big one [that turns down clotting] is something called nitric oxide.
+- c14 [ENDORSES/INSUFFICIENT_EVIDENCE (raw MIXED, abstained: critic budget), kept 4, on-topic 4] [Vitamin D] can increase nitric oxide
+- c15 [ENDORSES/INSUFFICIENT_EVIDENCE (raw SUPPORTED, abstained: critic budget), kept 10, on-topic 10] L-arginine is an amino acid that can help nitric oxide.
+- c16 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] one of the best sources of L-arginine is meat and liver
+- c17 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] [Meat and liver are] the exact things that they tell you not to eat.
+- c18 [ENDORSES/INSUFFICIENT_EVIDENCE (raw MIXED, abstained: critic budget), kept 2, on-topic 2] sunlight, that can penetrate deep into the body and help increase nitric oxide in the inside of the arteries.
+- c19 [ENDORSES/INSUFFICIENT_EVIDENCE (raw INSUFFICIENT_EVIDENCE, abstained: critic budget), kept 10, on-topic 10] getting sun is so valuable in so many different ways, not just vitamin D, but other ways as well.
+- c20 [ENDORSES/INSUFFICIENT_EVIDENCE (raw SUPPORTED, abstained: critic budget), kept 10, on-topic 10] You need to just stop smoking.
+
+Token-overlap matches (>=0.3): c1~c1 (1.00), c2~c5 (0.56), c3~c9 (1.00), c4~c11 (1.00), c5~c17 (0.62), c6~c18 (1.00)
+
+## v122: gold MISINFO (contradicted) vs ours CANNOT_RECOGNIZE (None)
+- ours: rule `nothing_judged`, deciding [], review True ['validation_failed:quote_membership:c6', 'validation_failed:quote_membership:c7', 'validation_failed:quote_membership:c8', 'validation_failed:quote_membership:c9', 'budget_exhausted:c1', 'budget_exhausted:c2', 'budget_exhausted:c3', 'budget_exhausted:c4', 'budget_exhausted:c5', 'budget_exhausted:c6', 'budget_exhausted:c7', 'budget_exhausted:c8', 'budget_exhausted:c9', 'budget_exhausted:c10', 'high_risk_uncertain:c3', 'high_risk_uncertain:c4', 'judge:nothing_judged']
+- gold: §9 on gold claims -> `endorsed_contradicted` deciding ['c1', 'c3', 'c4']; review reasons ['mixed_evidence:c9']
+
+Gold claims:
+- c1 [ENDORSES/CONTRADICTED, 1 cited] los medicamentos para el colesterol, los que llaman las famosas estatinas ... hacen daño al corazón
+- c2 [ENDORSES/SUPPORTED, 1 cited] Está demostrado que interfieren con la creación de COQ10, que necesita el músculo del corazón
+- c3 [ENDORSES/CONTRADICTED, 2 cited] La única forma de bajar el colesterol es bajar los carbohidratos refinados
+- c4 [ENDORSES/CONTRADICTED, 1 cited] [las estatinas] trae demencia
+- c5 [ENDORSES/SUPPORTED, 1 cited] Las estatinas pueden causar una infinidad de síntomas musculares, dolor, rigidez, fatiga, aumento de la sensibilidad, debilidad, calambres, pesadez
+- c6 [ENDORSES/SUPPORTED, 1 cited] El tratamiento con estatinas se asoció con un 46% más de riesgo de la diabetes tipo 2
+- c7 [ENDORSES/INSUFFICIENT_EVIDENCE, 0 cited] Además inhiben la absorción de la vitamina B12, disminuyen la vitamina K y ácido fólico lo que puede inducir anemias e interferencias con anticoagulantes
+- c8 [ENDORSES/SUPPORTED, 1 cited] la coenzima q10 ... disminuye el riesgo de muerte en pacientes con insuficiencia cardiaca
+- c9 [ENDORSES/MIXED, 2 cited] la coenzima Q10 ... reduce la presión arterial
+
+Our claims:
+- c1 [ENDORSES/INSUFFICIENT_EVIDENCE (raw CONTRADICTED, abstained: critic budget), kept 10, on-topic 10] esas estatinas, hacen daño al corazón
+- c2 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] Está demostrado que interfieren con la creación de COQ10, que necesita el músculo del corazón
+- c3 [ENDORSES/INSUFFICIENT_EVIDENCE (raw CONTRADICTED, abstained: critic budget), kept 10, on-topic 10] La única forma de bajar el colesterol es bajar los carbohidratos refinados
+- c4 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 0, on-topic 0] bajan los alimentos tipo A y automáticamente ya no tienen colesterol alto
+- c5 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] no sigan con el tema del colesterol, les va a costar la salud, el corazón, la mente, trae demencia
+- c6 [ENDORSES/INSUFFICIENT_EVIDENCE (raw SUPPORTED, abstained: critic budget), kept 10, on-topic 10] Las estatinas pueden causar una infinidad de sintomas musculares,dolor, rigidez, fatiga, aumento de la sensibilidad, debilidad ,calambres, pesadez.
+- c7 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] El tratamiento con estatinas se asocio con un 46 % mas de riesgo de la diabetes tipo 2.
+- c8 [ENDORSES/INSUFFICIENT_EVIDENCE (raw INSUFFICIENT_EVIDENCE, abstained: critic budget), kept 10, on-topic 10] inhiben la absorcion de la vitamina B12, disminuyen la absorcion de la vitamina Ky acido folico lo que puede inducir anemias e interferencias con anticoagulantes.
+- c9 [ENDORSES/INSUFFICIENT_EVIDENCE (raw INSUFFICIENT_EVIDENCE, abstained: critic budget), kept 10, on-topic 10] Tambien bloquean la coenzima q10, siendo esta la que disminuye el riesgo de muerte en pacientes con insuficiencia cardiaca
+- c10 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 1, on-topic 1] la coenzima Q10 que este farmaco bloquea, reduce la presion arterial, protege la salud cardiaca en ayuda a las gral mitocondrias a obtener energia, fortalece el sistema inmune
+
+Token-overlap matches (>=0.3): c1~c1 (0.33), c2~c2 (1.00), c3~c3 (1.00), c5~c6 (0.89), c6~c7 (0.76), c7~c8 (0.60), c8~c9 (0.72)
+
+## v78: gold MISINFO (contradicted) vs ours CANNOT_RECOGNIZE (None)
+- ours: rule `refuted_unsettled`, deciding ['c3'], review True ['validation_failed:merge_plausibility:c1', 'weak_evidence:c3', 'budget_exhausted:c1', 'budget_exhausted:c2', 'budget_exhausted:c3', 'budget_exhausted:c4', 'judge:possible_debunk:c3']
+- gold: §9 on gold claims -> `endorsed_contradicted` deciding ['c1', 'c2']; review reasons []
+
+Gold claims:
+- c1 [ENDORSES/CONTRADICTED, 3 cited] the vaccine and the booster was linked to miscarriages in pregnant women in the first trimester and Dr. Fauci knew it
+- c2 [ENDORSES/CONTRADICTED, 1 cited] 81 to 82% of women who got the vaccine in the first trimester experience a miscarriage. 82%
+
+Our claims:
+- c1 [ENDORSES/INSUFFICIENT_EVIDENCE (raw CONTRADICTED, abstained: critic budget), kept 6, on-topic 6] the vaccine and the booster was linked to miscarriages in pregnant women in the first trimester
+- c2 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 0, on-topic 0] Dr. Fauci knew it
+- c3 [REFUTES/INSUFFICIENT_EVIDENCE (raw SUPPORTED, abstained: critic budget), kept 9, on-topic 9] it is okay for them, for pregnant women to get vaccinated
+- c4 [QUOTES/INSUFFICIENT_EVIDENCE (raw SUPPORTED, abstained: critic budget), kept 8, on-topic 8] it is recommended for pregnant women get vaccinated
+- c5 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 4, on-topic 4] 81 to 82% of women who got the vaccine in the first trimester experience a miscarriage
+
+Token-overlap matches (>=0.3): c1~c1 (0.76), c2~c5 (1.00)
+
+## v87: gold MISINFO (contradicted) vs ours NO_MISINFO (None)
+- ours: rule `judged_nothing_false_endorsed`, deciding ['c4'], review True ['validation_failed:quote_membership:c7', 'validation_failed:merge_plausibility:c2', 'budget_exhausted:c1', 'budget_exhausted:c2', 'budget_exhausted:c5', 'budget_exhausted:c6', 'budget_exhausted:c7', 'budget_exhausted:c8', 'budget_exhausted:c9', 'judge:possible_debunk:c6']
+- gold: §9 on gold claims -> `endorsed_contradicted` deciding ['c1', 'c3']; review reasons []
+
+Gold claims:
+- c1 [ENDORSES/CONTRADICTED, 1 cited] babies' brains, the blood brain barrier is not fully formed until six months
+- c2 [ENDORSES/INSUFFICIENT_EVIDENCE, 2 cited] do not buy this water for your babies. It is very dangerous ... This water has fluoride ... You do not want babies drinking water with fluoride
+- c3 [ENDORSES/CONTRADICTED, 2 cited] Some people believe that fluoride is good for your teeth if you put in the water that's basically been disproven
+- c4 [ENDORSES/INSUFFICIENT_EVIDENCE, 0 cited] fluoride does a lot of damage to bones and teeth
+
+Our claims:
+- c1 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] do not buy this water for your babies. It is very dangerous.
+- c2 [ENDORSES/INSUFFICIENT_EVIDENCE (raw INSUFFICIENT_EVIDENCE, abstained: critic budget), kept 10, on-topic 10] You do not want babies drinking water with fluoride.
+- c3 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] babies' brains, the blood brain barrier is not fully formed until six months of age.
+- c4 [ENDORSES/SUPPORTED, kept 5, on-topic 5] Fluoride therefore can cross the blood brain barrier.
+- c5 [ENDORSES/INSUFFICIENT_EVIDENCE (raw INSUFFICIENT_EVIDENCE, abstained: critic budget), kept 10, on-topic 10] In infants, you do not want fluoride in the brain of a developing brain that's a really really bad idea.
+- c6 [REFUTES/INSUFFICIENT_EVIDENCE (raw SUPPORTED, abstained: critic budget), kept 10, on-topic 10] fluoride is good for your teeth if you put in the water
+- c7 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] fluoride does a lot of damage to bones and teeth and potentially. The brain
+- c8 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 2, on-topic 2] Babies need to be drinking breast milk otherwise they need to be drinking distilled water or reverse osmosis water with minerals added to it
+- c9 [ENDORSES/INSUFFICIENT_EVIDENCE, kept 10, on-topic 10] babies brains are not able to protect themselves from the chemicals in the water.
+
+Token-overlap matches (>=0.3): c1~c3 (0.87), c2~c1 (0.67), c3~c6 (0.60), c4~c7 (0.77)

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1",
+  "run_group": "T66-e2e-graph-tune",
+  "date": "2026-11-26",
+  "task": "T66",
+  "split": "tune",
+  "synthetic": false,
+  "golden_set_ref": "data/golden-label-set@92a731e",
+  "models": [
+    {
+      "provider": "anthropic",
+      "model": "claude-sonnet-5-5",
+      "prompt": "extract_v3",
+      "role": "extract_claims"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-sonnet-5-5",
+      "prompt": "stance_v1",
+      "role": "analyze_stance"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-haiku-5-5",
+      "prompt": "find_study_v1",
+      "role": "find_study"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "prompt": "verify_v3",
+      "role": "verify_claims"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-4o-2024-08-06",
+      "prompt": "critic_v1",
+      "role": "critique"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-sonnet-5-5",
+      "prompt": "explain_v2",
+      "role": "judge_explanation"
+    }
+  ],
+  "variant": "graph_routing_as_merged",
+  "n_items": 18,
+  "n_unit": "videos",
+  "cost_usd": 22.91,
+  "report_path": "evals/reports/T66/README.md",
+  "run_id": "T66-e2e-graph-label_macro_f1",
+  "pipeline_step": "judge_classification",
+  "metric_name": "video_label_macro_f1",
+  "value": 0.399,
+  "ci95": {
+    "low": 0.134,
+    "high": 0.624,
+    "method": "bootstrap over videos, 10000 resamples, seed 66"
+  },
+  "notes": "PARTIAL: 18 of 48 in-scope tune videos finished before the $25 cap (fixed seeded order, evals/reports/T66/order.json); v21 stopped mid-video (not run), 29 not started. Development numbers on the tune split, not product accuracy. Full graph at langgraph-build 3372ef3, routing.yaml/pipeline.yaml as merged, references on, single-call fallback not called (0 fallbacks). Bootstrap over videos, B=10000, seed 66. No stored T18 baseline predictions, so no paired comparison."
+}
