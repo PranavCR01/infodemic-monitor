@@ -43,6 +43,8 @@ def to_evidence(article: PubMedArticle, query: str) -> EvidenceRecord:
         publication_type=list(article.publication_types),
         source_url=pubmed_url(article.pmid),
         query=query,
+        journal=article.journal_abbrev,
+        pub_date=article.pub_date,
     )
 
 

@@ -55,6 +55,22 @@ class EvidenceView(BaseModel):
     rank: Optional[int] = None
     retrieved_at: Optional[str] = None
     snapshot_sha256: Optional[str] = None
+    # T65 (f): PubMed journal abbreviation (ISO / MedlineTA, e.g. "JAMA") and
+    # publication date, ISO "YYYY", "YYYY-MM" or "YYYY-MM-DD" as precise as PubMed
+    # gives. ``pub_date`` falls back to ``year`` ("YYYY") on rows stored before T65;
+    # ``journal`` is then null. For journal_doi records ``journal`` is the Crossref
+    # journal (also in ``publisher``, as before).
+    journal: Optional[str] = None
+    pub_date: Optional[str] = None
+
+
+class StudyTypeCountView(BaseModel):
+    """How many cited sources of one study type back or contradict a claim (T65 c).
+    Counted from the same ``study_type`` field the source list shows."""
+
+    study_type: str
+    relation: str  # SUPPORTS | CONTRADICTS
+    count: int
 
 
 class CriticView(BaseModel):
@@ -101,6 +117,13 @@ class ClaimView(BaseModel):
     # T31: "How we searched". Null when the claim was never searched, for
     # single-call results, and for rows stored before T31.
     search_trail: Optional[SearchTrailView] = None
+    # T65 (e): "The speaker says": the transcript words that carry the claim, the
+    # best-overlap segment(s) within the claim's span. Null when no segment in the span
+    # shares a content word with the claim.
+    speaker_quote: Optional[str] = None
+    speaker_quote_segment_ids: list[str] = Field(default_factory=list)
+    # T65 (c): counts of the cited sources (``evidence``) by ``study_type`` and relation.
+    study_type_counts: list[StudyTypeCountView] = Field(default_factory=list)
 
 
 class ReviewView(BaseModel):

@@ -56,7 +56,8 @@ class _Out(BaseModel):
 # record, and the contract only changes additively, under new tool names (§6
 # "Versioning"). No tool here returns references; exposing them would be a new tool.
 # The docstring is the published schema description: keep it as it was.
-_T17_FIELDS = frozenset({"publisher", "retrieved_at", "snapshot_sha256"})
+_T17_FIELDS = frozenset({"publisher", "retrieved_at", "snapshot_sha256",
+                         "journal", "pub_date"})  # T65: pipeline-only, not in contract v1
 
 
 class EvidenceRecord(BaseModel):
