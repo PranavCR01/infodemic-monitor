@@ -230,7 +230,7 @@ LEXICON: tuple[LexiconEntry, ...] = (
        "carbohidratos refinados", "glucides"], "Dietary Carbohydrates", ["carbohydrate"]),
     _e("seawater", "intervention", ["seawater", "sea water", "ocean water", "agua de mar", "eau de mer"],
        "Seawater", ["seawater", "sea water"]),
-    _e("heavy_metals", "intervention", ["heavy metals", "metales pesados", "métaux lourds"], "Metals, Heavy",
+    _e("heavy_metals", "outcome", ["heavy metals", "metales pesados", "métaux lourds"], "Metals, Heavy",
        ["heavy metals"]),
     _e("soap", "intervention", ["soap", "soaps", "savon", "jabón"], "Soaps", ["soap"]),
     _e("skin_cancer", "condition", ["skin cancer", "melanoma", "cancer de la peau", "cáncer de piel"],

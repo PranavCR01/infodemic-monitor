@@ -206,6 +206,17 @@ Retrieval is deterministic code that searches PubMed for each claim, falling bac
 2. **Map terms to medical vocabulary** (MeSH, PubMed's controlled vocabulary). "Flu" becomes "Influenza, Human", which finds papers that never use the word "flu".
 3. **Build queries** from those terms, for example `hot drinks AND influenza`. Rules do this first; a small LLM helps only when rules produce nothing usable, and its output is still just search terms.
 
+**How planning works in detail (T50).** Production job 5cc07f48 (a vitamin K video) searched `vitamin` for every claim, repeated the same query in rounds 2 and 3, and ANDed conversational words such as "didn't" and "47". The rules now:
+
+- **Keep terms whole.** A one-letter or digit token stays with the word it belongs to: `vitamin k`, `hepatitis b`, `type 2 diabetes`, `covid 19`, `omega 3`. Plain numbers ("81 times", "15 ans") and conversational filler ("didn't", "higher", "likely", "evidence") are never search words.
+- **Know more concepts.** The MeSH lexicon (`app/core/retrieval/mesh.py`) gained vitamin K, vitamin K deficiency bleeding, newborns, breast milk, coagulation, intracranial haemorrhage and the high-frequency concepts the golden tune split's claims named (statins, salt, eggs, gluten, sea moss, burdock, skin cancer ...), with Spanish and French surface forms. Searches stay in English.
+- **Carry the video's topic.** A claim that refers to the video's main intervention without naming it ("babies who don't get *the shot*", "*these studies* on newborns") is searched with it: the intervention concept named by most of the video's claims (at least two). Only for claims with no intervention of their own, or only a delivery route (shot, drops), and an anaphoric word.
+- **Look up a cited study first.** A claim that names a journal, or says "study" with a year, sample size or institution, first gets a citation lookup: `"JAMA"[ta] AND 2026[dp] AND (topic)`. A year alone ("since 1961") is not a citation.
+- **Read other languages.** A non-English claim (rule-based detection) is translated to English by a cheap model before planning; without that model, or if it fails, its own language's stop words and the lexicon's Spanish/French forms apply. The translation is sanitised like any model text.
+- **Fall back carefully.** When no concept is recognised, the search assistant (a cheap model, `plan_search`) writes intervention, outcome and population as MeSH headings plus `[tiab]` synonyms; each term is sanitised and checked against stop words and filler. Then the claim's own keywords: at most three terms, the most specific first, then one fewer.
+
+Every model helper is optional: with no route in `config/routing.yaml` (or switched off in `config/pipeline.yaml`), planning runs on the rules alone. What planning decided (language, translation, carried-over concept, citation cue, assistant use, each query's rung) is recorded in the claim's search trail.
+
 ### Calling PubMed
 
 - **ESearch** with `sort=relevance` returns matching paper IDs (PMIDs). Without that flag PubMed returns the newest papers first, which is how "vaccines cause autism" once returned unrelated 2026 genetics papers.
@@ -239,6 +250,19 @@ PubMed answers "what does the research say?", but many health claims are facts o
 ### When nothing comes back
 
 If a query returns no results, planning **retries with broader terms**: drop a qualifier, use a parent MeSH term or a synonym. Each claim has a budget (the initial search plus 2 reformulations). An exhausted budget is a signal in its own right: the claim moves on with whatever was found, and "insufficient evidence" becomes likely.
+
+**Every round runs a different, broader query (T50).** The ladder goes PICO → intervention and outcome → the outcome's parent heading → the intervention alone. The intervention is never replaced by its parent heading: `Vitamins` for vitamin K makes every vitamin paper a hit. When the ladder runs out before the budget does, the claim's search stops and the trail records `ladder_exhausted`; no query is re-run from the cache.
+
+### Finding a cited study (T50)
+
+Some claims are about one paper ("a 2026 JAMA study of 5 million babies"), and a topic search can miss it among thousands. For a claim that cites a study, and as a fallback for any claim whose search kept nothing on topic (the §7 on-topic check for claims with a recognised intervention; otherwise the claim's own concepts), a cheap model with a web search tool (`find_study` in `config/routing.yaml`) proposes candidate PMIDs or DOIs, once per claim. The fallback waits while an empty search still has rounds left.
+
+- **We verify every candidate.** Ids are validated by format first. A PMID must exist in PubMed (EFetch). A DOI is looked up in PubMed (`"<doi>"[doi]`, and the fetched record's DOI must match) and, if PubMed doesn't have it yet, in Crossref (`api.crossref.org/works/<doi>`). The record must be on the claim's topic and, when the claim names them, from the same journal and within a year of the stated date.
+- **Only verified records become evidence:** a PubMed record, or a journal article cited by DOI with Crossref metadata (`source: journal_doi`, shown as such in the interface), whose metadata text is kept as a snapshot with its hash. Web page text, search snippets and the model's answer never become evidence or citations. Unverifiable ids are dropped.
+- **Untrusted input (§15).** The model's answer is parsed for ids only; nothing in a web page is followed.
+- **Recorded.** The web searches the model ran, each candidate and its verification outcome, cost and latency go into the claim's search trail. Verified records are kept ahead of the reranker's picks, within the cap of 10.
+
+**Screened-out papers.** The search trail also lists the papers the searches returned that the reranker did not keep (ID, PMID, title, year; up to 100), so the result page can show what was looked at when nothing was kept.
 
 ### Fallback: the lab's offline library
 
@@ -283,6 +307,11 @@ Its value is measured, not assumed: how often the fallback fires, and how often 
  "publication_type": ["Systematic Review"],
  "source_url": "https://pubmed.ncbi.nlm.nih.gov/<pmid>/",
  "query": "garlic AND common cold prevention", "relevance_score": 0.91}
+
+// a journal article cited by DOI that PubMed doesn't have yet (T50): verified via Crossref
+{"evidence_id": "doi_<hash>", "source": "journal_doi", "doi": "…", "title": "…",
+ "abstract": "<Crossref-deposited abstract, if any>", "publication_year": 2026,
+ "publisher": "<journal>", "source_url": "https://doi.org/<doi>", "snapshot_sha256": "…"}
 
 // a library record: same fields, plus where the passage is
 {"evidence_id": "lib_<document_id>_p<page>", "source": "library",
@@ -589,7 +618,7 @@ Each LLM step uses the model that scored best on that step's own test set, weigh
 | --- | --- | --- |
 | Claim extraction | Small, fast model with structured output | High volume, well-defined task |
 | Stance | Small or medium model | Short inputs, a fixed set of answers |
-| Search planning | Rules first; small model only if needed | Mostly mechanical |
+| Search planning | Rules first; small model only if needed (T50: `plan_search` when rules fall back to keywords, `translate_claim` for non-English claims, `find_study` with a web search tool to propose ids that code verifies) | Mostly mechanical |
 | Verification | Strong reasoning model | The hardest judgment in the pipeline |
 | Critic | A different model or prompt from the verifier | Independence from the verifier's blind spots |
 | Judge explanation | Medium model | Writing quality; the label is already decided |

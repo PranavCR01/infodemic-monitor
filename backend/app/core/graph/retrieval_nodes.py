@@ -317,17 +317,23 @@ def _find_study_reason(claim, kept: list, context: tuple[str, ...],
                        planner: Optional[QueryPlanner]) -> Optional[str]:
     """Why the find-the-study step should run for this claim now, or None (T50 i):
     ``cites_study`` when the claim names a study (journal, year, sample size,
-    institution); ``nothing_on_topic`` when nothing the reranker kept is on topic for
-    the claim's intervention (the T49 deterministic check)."""
-    from app.core.graph.unproven_guard import on_topic_ids
+    institution); ``nothing_on_topic`` when nothing the reranker kept is on topic: for
+    a claim with a recognised intervention, the T49 deterministic check; otherwise one
+    of the claim's concepts (or most of its content words) in a title or abstract."""
+    from app.core.graph.unproven_guard import intervention_terms, on_topic_ids
     from app.core.retrieval.citation import citation_cue
+    from app.core.retrieval.find_study import topic_match
     from app.core.retrieval.planning import normalize_claim
 
     if citation_cue(normalize_claim(claim.claim_text)).cites_study:
         return "cites_study"
-    if not on_topic_ids(claim, kept):
-        return "nothing_on_topic"
-    return None
+    if intervention_terms(claim.claim_text).source == "concept":
+        on_topic = bool(on_topic_ids(claim, kept))
+    else:
+        # No recognised intervention ("This bleeding is called VKDB"): the T49 check
+        # would call every record off topic, so the claim's own concepts decide.
+        on_topic = any(topic_match(claim.claim_text, e.title, e.abstract) for e in kept)
+    return None if on_topic else "nothing_on_topic"
 
 
 def retriever_from_settings(cache=None) -> EvidenceRetriever:

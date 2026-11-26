@@ -303,6 +303,7 @@ class Translator(Protocol):
 # video's main substance (T50, context carry-over).
 GENERIC_INTERVENTIONS = frozenset({"injection", "oral_drops"})
 _ANAPHORA_RE = re.compile(r"(?<![\w-])(?:this|these|that|those|the shot|the injection|the drops|the jab)(?![\w-])")
+_NON_LATIN_LANGS = frozenset({"hi", "ru", "ar", "zh", "ja", "ko", "el", "he", "th", "bn", "ta"})
 MAX_KEYWORD_TERMS = 3  # the keyword fallback never ANDs more than this many terms (T50 f)
 _PLAN_CACHE_SIZE = 512
 
@@ -511,6 +512,10 @@ class QueryPlanner:
         frame = frame_claim(search_text)
         frame, context_concept = _with_context(frame, [c for c in context if c != claim_text])
         keywords = content_words(frame.normalized_text, rules_lang)
+        if not translated and lang in _NON_LATIN_LANGS:
+            # The rules can't read this script (normalisation even splits Devanagari
+            # words at their vowel signs): no keyword query rather than a junk one.
+            keywords = []
         cue = citation_cue(frame.normalized_text)
         rungs: list[PlannedQuery] = []
         cq = citation_query(cue, frame, keywords) if cue.cites_study else None
