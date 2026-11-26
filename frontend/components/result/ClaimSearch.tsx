@@ -6,7 +6,7 @@ import { studyTypeDisplay } from "@/lib/vocabulary";
 const n = (k: number, one: string, many: string) => `${k} ${k === 1 ? one : many}`;
 
 type Props = {
-  claim: Pick<Claim, "id" | "search" | "sources" | "criticNotes">;
+  claim: Pick<Claim, "id" | "search" | "sources" | "criticNotes" | "verdict">;
   /** A review reason names this claim. */
   sentToReviewer: boolean;
   /** Review screen only: the raw critic notes and every query, behind a toggle (T52). */

@@ -16,8 +16,10 @@ export function unusedSources(c: Pick<Claim, "sources">): Source[] {
  * searches. 3 papers were retrieved and none was relevant enough to check the claim
  * against, so this claim could not be checked and was sent to a reviewer."
  * Counts distinct queries only. `sentToReviewer`: a review reason names this claim.
+ * An UNSUPPORTED verdict is a judgement (it can make the video "MISINFO (unproven)"),
+ * so it is described as "treated as unproven", never as "could not be checked".
  */
-export function searchFinding(c: Pick<Claim, "search" | "sources">, sentToReviewer: boolean): string | null {
+export function searchFinding(c: Pick<Claim, "search" | "sources" | "verdict">, sentToReviewer: boolean): string | null {
   const s = c.search;
   if (!s) return null;
   const q = s.queries.length;
@@ -25,7 +27,10 @@ export function searchFinding(c: Pick<Claim, "search" | "sources">, sentToReview
   const against = tested.filter((x) => x.relation === "CONTRADICTS").length;
   const forIt = tested.length - against;
   const reviewer = sentToReviewer ? " and was sent to a reviewer" : "";
-  const notChecked = `so this claim could not be checked${reviewer}.`;
+  const unproven = c.verdict === "UNSUPPORTED";
+  // How a search that found nothing usable ends: a judgement (unproven) or no verdict.
+  const notChecked = unproven ? `so the claim is treated as unproven${reviewer}.` : `so this claim could not be checked${reviewer}.`;
+  const noneFound = unproven ? "No study was found that tests this claim" : "No relevant study was found";
   const after = q > 0 ? ` after ${n(q, "search", "searches")}` : "";
   const out: string[] = [];
 
@@ -42,17 +47,22 @@ export function searchFinding(c: Pick<Claim, "search" | "sources">, sentToReview
     if (sentToReviewer) out.push("The claim was sent to a reviewer.");
   } else if (s.kept > 0) {
     out.push(
-      `No relevant study was found${after}. ${n(s.kept, "source was", "sources were")} checked and none of them supported or contradicted the claim, ${notChecked}`,
+      `${noneFound}${after}. ${n(s.kept, "source was", "sources were")} checked and none of them supported or contradicted the claim, ${notChecked}`,
     );
   } else if ((s.retrieved ?? s.screened) > 0) {
     const found = s.retrieved ?? s.screened;
     out.push(
-      `No relevant study was found${after}. ${n(found, "paper was", "papers were")} retrieved and none was relevant enough to check the claim against, ${notChecked}`,
+      `${noneFound}${after}. ${n(found, "paper was", "papers were")} retrieved and none was relevant enough to check the claim against, ${notChecked}`,
     );
   } else {
     out.push(`No study was found${after}, ${notChecked}`);
   }
-  if (s.budgetExhausted && !s.partial) out.push(`The search used all ${s.roundsMax} rounds allowed for a claim.`);
+  if (s.budgetExhausted && !s.partial) {
+    // Only claim the full budget when that many distinct searches ran. When later rounds
+    // repeated an earlier query (the planner ran out of terms), say that instead.
+    if (q >= s.roundsMax) out.push(`The search used all ${s.roundsMax} rounds allowed for a claim.`);
+    else if (s.rounds.some((r) => r.repeat)) out.push("No other search terms were left to try.");
+  }
   return out.join(" ");
 }
 
