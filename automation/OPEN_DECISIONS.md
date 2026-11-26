@@ -16,7 +16,6 @@ How to use it:
 |---|---|---|---|
 | D2 | Golden-set `annotator` column names a person on model-drafted rows | Neutral value (`labelling_pipeline_v1`) | With the lead's local session |
 | D3 | Exclude M4Health from the external-agreement number | Exclude, report separately | With the lead's local session |
-| D8 | Evidence-search quality bar: tune-split recall (golden-cited PMID or equivalent found) target and CI regression set of real misses; production search-health metrics; reviewer "missing source" PMIDs feed the regression set | Fold recall + regression set into T50's acceptance; queue monitoring + feedback after T50 | Proposed 2026-11-26, not answered |
 
 Already decided (recorded here so they aren't asked again):
 - **Production, no staging (lead, 2026-11-25).** Supabase project 'sentinel' (kscfszhdrlsbpsqwfirv) was an unrelated app: exported (sent to the lead) and wiped, renamed **infodemic-prod**. Done: pgvector 0.8.2, private 'videos' bucket (100 MB, mp4/mov), sign-ups disabled, site URL https://infodemic-monitor.vercel.app, redirects <site>/auth/callback + localhost, lead invited as admin. Tables are created by the API's migrations on first start. Blocker: T48 (project signs ES256; backend accepted HS256 only). Lead to revoke the Supabase access token after the first deploy. Ops session runs in environment 'infodemic-monitor-ops' (api.supabase.com only).
@@ -30,6 +29,7 @@ Already decided (recorded here so they aren't asked again):
 - Whisper stays on the hosted API at current scale.
 - Calibration: Platt scaling (T15, after T14).
 - Separate API keys per place (prod on Railway, dev in local `.env`, eval in the `infodemic-monitor` environment). A $20 prepaid balance acts as the cap, with auto-recharge off.
+- **D8 search quality bar (lead, 2026-11-26):** T50 must report tune-split search recall (strict: golden-cited PMID kept; lenient: or an on-topic kept record), target lenient ≥ 80%, and add a CI regression set of real production misses. Still to queue after T50: production search-health metrics and reviewer MISSING_SOURCE → regression case.
 - **Evidence by DOI (lead, 2026-11-26):** when PubMed doesn't have a paper yet, a journal page cited by DOI (verified via Crossref, with a text snapshot) is acceptable evidence. Web search may *find* studies, but only records we verify (PMID via E-utilities, DOI via Crossref) become evidence; web text never does. T50 (i).
 - **Unproven guard (T49, merged #121, 2026-11-26):** UNSUPPORTED stands only if retrieval kept a record on topic for the claim's intervention; otherwise INSUFFICIENT_EVIDENCE → CANNOT_RECOGNIZE + nothing_judged. Cause: prod labelled an accurate vitamin K video MISINFO (unproven). Effect today: all 5 tune unproven videos lose the label because their searches were broken; T50 should restore real ones.
 - **Production deploy (lead, 2026-11-25):** directly on prod, no staging; Jared not involved.
