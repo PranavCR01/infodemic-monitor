@@ -289,6 +289,15 @@ describe("ReviewWorkspace: video (T56)", () => {
   });
 });
 
+describe("ReviewWorkspace: superseded case (T55)", () => {
+  it("says the case was superseded, links the newer analysis and can't be decided", () => {
+    setup({ ...MOCK_CASE_NORMAL, status: "SUPERSEDED", superseded_by_job_id: "new-job" });
+    expect(screen.getByText("Superseded by a newer analysis.")).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Open the newer analysis" })).toHaveAttribute("href", "/jobs/new-job");
+    expect(screen.getByRole("radio", { name: /Approve the label/ })).toBeDisabled();
+  });
+});
+
 describe("ReviewWorkspace: read-only cases", () => {
   it("doesn't let reviewers decide their own submission", () => {
     setup({ ...MOCK_CASE_OWN, severity: "MEDIUM", blind_step_required: false, system_view_withheld: false });

@@ -55,6 +55,12 @@ describe("ReviewQueue", () => {
     expect(screen.getAllByRole("row")).toHaveLength(2);
   });
 
+  it("never offers 'Review' on a superseded case (T55)", () => {
+    const superseded = adaptQueueItem({ ...MOCK_QUEUE[3], status: "SUPERSEDED", superseded_by_job_id: "new-job" }, MOCK_VIEWER_ID);
+    view([superseded]);
+    expect(screen.queryByRole("link", { name: /^Review / })).not.toBeInTheDocument();
+  });
+
   it("says when there's nothing to review", () => {
     view([]);
     expect(screen.getByText("Nothing to review")).toBeInTheDocument();

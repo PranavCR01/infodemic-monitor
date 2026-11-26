@@ -6,7 +6,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Icon, ReviewBanner, ReviewReasonChip, buttonClass } from "@/components/ui";
 import { claimAt, type Claim, type ResultModel } from "@/lib/api/result-adapter";
 import type { RequestOutcome } from "@/lib/api/review-request";
-import { Assessment } from "./Assessment";
+import { Assessment, type ReanalyseControls } from "./Assessment";
+import { PreviousAnalyses, VersionNotices } from "./Versions";
 import { ClaimDrawer } from "./ClaimDrawer";
 import { ClaimCard } from "./ClaimCard";
 import { ClaimTimeline } from "./ClaimTimeline";
@@ -23,13 +24,15 @@ type Props = {
   onVideoError?: () => void;
   /** T32: ask for a person to check a result the review rule didn't send to review. */
   onRequestReview?: (note: string) => Promise<RequestOutcome>;
+  /** T55: the Re-analyse button, for the video's owner or an admin. */
+  reanalyse?: ReanalyseControls;
 };
 
 /**
  * Video result, two-column version (Q5: Direction 3's margin notes come last).
  * One `activeId` is shared by the timeline, the transcript and the claim cards.
  */
-export function ResultView({ result: r, videoUrl = null, onVideoError, onRequestReview }: Props) {
+export function ResultView({ result: r, videoUrl = null, onVideoError, onRequestReview, reanalyse }: Props) {
   const flagged = useMemo(() => flaggedClaimIds(r), [r]);
   const [activeId, setActiveId] = useState<string | null>(r.decidingClaims[0]?.id ?? r.claims[0]?.id ?? null);
   const playerRef = useRef<PlayerHandle>(null);
@@ -102,7 +105,11 @@ export function ResultView({ result: r, videoUrl = null, onVideoError, onRequest
         </ReviewBanner>
       )}
 
-      <Assessment r={r} onRequestReview={onRequestReview} />
+      <VersionNotices r={r} />
+
+      <Assessment r={r} onRequestReview={onRequestReview} reanalyse={reanalyse} />
+
+      <PreviousAnalyses r={r} />
 
       {!r.hasClaimLevel ? (
         <section className="rounded-lg border border-line bg-surface p-6 text-small text-ink-2 shadow-1">

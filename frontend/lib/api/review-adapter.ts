@@ -28,6 +28,8 @@ export type QueueItem = {
   ageSeconds: number;
   submittedBy: string | null;
   isOwn: boolean;
+  /** T55: a re-analysis closed this case; it can't be decided. The newer job's id. */
+  supersededByJobId: string | null;
   /** T34: an open HIGH case that needs each reviewer's own judgement first. */
   blindRequired: boolean;
   /** T34: the server is withholding the system's view until this reviewer gives theirs. */
@@ -127,7 +129,9 @@ export function adaptQueueItem(r: RawQueueItem, viewerId: string | null = null):
     reviewId: r.review_id,
     jobId: r.job_id,
     filename: r.filename ?? "Untitled video",
+    // Only OPEN cases can be decided: RESOLVED and T55's SUPERSEDED cannot.
     open: r.status === "OPEN",
+    supersededByJobId: r.status === "SUPERSEDED" ? r.superseded_by_job_id ?? null : null,
     severity: isSeverity(r.severity) ? r.severity : null,
     proposedLabel: isVideoLabel(r.proposed_label) ? r.proposed_label : null,
     reasons: reasonChips(r.reasons),

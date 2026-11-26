@@ -13,6 +13,7 @@ import {
   isVerdict,
   isVideoLabel,
   reasonText,
+  toJobState,
   toReviewStatus,
   type EvidenceLevel,
   type MisinfoBasis,
@@ -97,6 +98,26 @@ export type Claim = {
   search: ClaimSearch | null;
 };
 
+export type PreviousAnalysis = {
+  jobId: string;
+  finishedAt: string | null;
+  label: VideoLabel | null;
+  basis: MisinfoBasis | null;
+  pipelineVersion: string | null;
+  /** Rejected by a reviewer: the API can't open its result (GET /jobs/{id}/result answers 202). */
+  rejected: boolean;
+};
+
+export type Versions = {
+  /** Earlier finished analyses, newest first (as the API sends them). */
+  previous: PreviousAnalysis[];
+  /** False on an older version: link to currentJobId. */
+  isCurrent: boolean;
+  currentJobId: string | null;
+  /** A newer run of this video that is still going, or that failed. */
+  latest: { jobId: string; running: boolean; failed: boolean } | null;
+};
+
 export type Reason = { code: string; claimNumber: number | null; text: string };
 
 export type ResultModel = {
@@ -112,6 +133,12 @@ export type ResultModel = {
   reviewStatus: ReviewStatus;
   reviewDecidedAt: string | null;
   reviewSeverity: Severity | null;
+  /** T55: the newer job that superseded this result's review case. */
+  supersededByJobId: string | null;
+  /** T33: the job's owner (Supabase user id), for who may re-analyse. */
+  submittedBy: string | null;
+  /** T55: versions of this video's analysis. */
+  versions: Versions;
   reasons: Reason[];
   claims: Claim[];
   decidingClaims: Claim[];
@@ -174,6 +201,36 @@ export function summariseEvidence(sources: Source[]): EvidenceSummary {
     levels,
     guidance,
   };
+}
+
+function toVersions(raw: RawResult): Versions {
+  const latest = raw.latest_job;
+  const latestState = latest ? toJobState(latest.state ?? latest.status) : null;
+  return {
+    previous: (raw.previous_jobs ?? []).map((p) => {
+      const label = isVideoLabel(p.label) ? p.label : null;
+      return {
+        jobId: p.job_id,
+        finishedAt: p.finished_at ?? null,
+        label,
+        // "MISINFO (unproven)" etc. comes from label_display; read the basis back from it.
+        basis: label === "MISINFO" ? basisFromDisplay(p.label_display) : null,
+        pipelineVersion: p.pipeline_version ?? null,
+        rejected: p.status === "FAILED",
+      };
+    }),
+    isCurrent: raw.is_current ?? true,
+    currentJobId: raw.current_job_id ?? null,
+    latest:
+      latest && latest.job_id !== raw.job_id
+        ? { jobId: latest.job_id, running: latestState === "QUEUED" || latestState === "RUNNING" || latestState === "RETRYING", failed: latestState === "FAILED" }
+        : null,
+  };
+}
+
+/** Only "unproven" changes how MISINFO is shown ("MISINFO (unproven)"), so it is the only basis the display text tells apart. */
+function basisFromDisplay(display: string | null | undefined): MisinfoBasis | null {
+  return /\(unproven\)/i.test(display ?? "") ? "unproven" : null;
 }
 
 export function toSegment(s: RawSegment): Segment {
@@ -298,6 +355,9 @@ export function adaptResult(raw: RawResult): ResultModel {
     reviewStatus: raw.review === undefined && raw.status === "REVIEW_REQUIRED" ? "PENDING" : toReviewStatus(review),
     reviewDecidedAt: review?.decided_at ?? null,
     reviewSeverity: isSeverity(review?.severity) ? (review?.severity as Severity) : null,
+    supersededByJobId: review?.superseded_by_job_id ?? null,
+    submittedBy: raw.submitted_by ?? null,
+    versions: toVersions(raw),
     reasons,
     claims,
     decidingClaims,
