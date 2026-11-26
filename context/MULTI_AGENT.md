@@ -2158,6 +2158,106 @@ what came before them.
 `review.superseded_by_job_id` → show "Superseded by a newer analysis" with a link.
 `GET /v1/reviews` takes `status=SUPERSEDED` (default `OPEN` leaves them out).
 
+## 7ah. Research Dashboard Stats API (T62, backend; design §12, §16, §17)
+
+Built by the automated build on 2026-11-26 (lead approved). Backend only; the frontend
+session builds `/dashboard` from the API note below. **No migration**, no new table.
+(§7ag is taken by T63's open PR.)
+
+- **Route.** `GET /v1/stats?window=7d|30d|90d|all` (default `30d`; anything else 422).
+  Any signed-in user, any role (analyst, reviewer, admin) gets the **same** body; no
+  token or a bad one is 401. Classified in T33's route table as `AGGREGATE`. Code:
+  `app/services/stats_service.py`, `app/api/routers/stats.py`.
+- **Aggregates only.** The body holds counts, two shares/medians and category names.
+  No video, job, claim, review or user id, file name, hash or claim text (a test greps
+  the body for every such value in the database).
+- **Cache.** Per window, process-wide, `STATS_CACHE_SECONDS` (60; 0 = off); the figures
+  are the same for everyone, so one cache serves all callers. Response header
+  `Cache-Control: private, max-age=60`. With several API replicas each has its own cache.
+- **What is counted.**
+  - *Videos*: each video once, with its **newest result created in the window** (a
+    re-analysis replaces, doesn't add). Only the four canonical labels; a legacy row
+    with any other label is left out of the whole population.
+  - *Per week*: ISO weeks (Monday, UTC) from the window start's week (for `all`, the
+    first result's week) to the current week, empty weeks included; a video falls in
+    the week of the result counted, so the weeks add up to `videos.total`.
+  - *Labels*: the **system** label (`results.label`), not a reviewer's correction (that
+    is what `reviews.changed_label` measures). MISINFO split by `misinfo_basis`;
+    `unspecified` = no basis (rows before T30, single-call/fallback path).
+  - *Jobs*: `pending_now` (§1 state PENDING/QUEUED/RETRY_PENDING, or status PENDING on
+    pre-T28 rows) and `running_now` (RUNNING / STARTED) are **snapshots of now**, not
+    windowed, so a job stuck since before the window still shows. `failed` = status
+    FAILED created in the window, excluding reviewer rejections (`REVIEW_REJECTED`).
+  - *Reviews*: `backlog_now` = OPEN cases now. `decisions` = RESOLVED cases with
+    `decided_at` in the window (SUPERSEDED cases are not decisions). A decision
+    *changed the label* when `corrected_label` is set and differs from
+    `proposed_label`; every other decision (approve, claim-only correction, insufficient,
+    re-analysis request, reject) *kept* it. `median_hours_to_decision` = median of
+    `decided_at - created_at`.
+  - *Top categories*: up to 10 `claims.category` values (lower-cased), counted as
+    **videos** with at least one claim in the category, not claims, so one upload with
+    many claims can't reach the threshold alone.
+- **Small cells.** Every count under 5, **zero included**, is published as the string
+  `"<5"`. Zero is suppressed too because the queue row says "any count < 5", and a
+  visible 0 next to a `"<5"` would narrow the hidden cell.
+- **Differencing.** Groups whose cells add up to a published total: weeks and labels
+  (total `videos.total`), MISINFO basis (total: the MISINFO cell), changed/kept (total
+  `reviews.decisions`). In each group, after the primary suppression more cells are
+  hidden, smallest first (ties by name), until nothing is hidden or **at least two cells
+  are hidden and the hidden cells add up to 5 or more**; so total minus the shown cells
+  never pins one cell down and is never itself a small number. A hidden total hides its
+  whole group; a hidden MISINFO hides the whole basis split. `changed_label_share` is
+  null unless both changed and kept are shown; `median_hours_to_decision` is null under
+  5 decisions. Groups with no total (jobs, backlog, categories) get primary suppression
+  only; categories under 5 are **left out** of the list (their names are model text and
+  a rare one could describe a single video). Tested on fixed cases, a seeded sweep of
+  3000 random groups, and every group of real responses.
+- **Not covered (for the lead).** Differencing **between** responses: 30-day minus
+  7-day figures, or the figures just before and after one video finishes (someone who
+  knows a colleague just uploaded could see which label moved by one). Each response is
+  safe on its own; closing this needs rounding or noise on every figure, which the queue
+  row didn't ask for. The 60 s cache only coarsens the timing. Also not covered:
+  several videos from **one uploader** can together reach 5 (the unit is the upload, as
+  the queue row says, not the person).
+- **Deviations.** No `classifications` table exists (§7k), so labels come from
+  `results`. Aggregation runs in Python over the window's rows (cheap at this volume,
+  and the same on SQLite and Postgres); move it into SQL if the `all` window gets slow.
+
+**Response shape** (`StatsResponse` in `app/api/routers/stats.py`; a *cell* is an
+integer ≥ 5 or the string `"<5"`):
+
+```jsonc
+{
+  "window": "30d",
+  "window_start": "2026-10-27T12:00:00+00:00",   // null for "all"
+  "window_end": "2026-11-26T12:00:00+00:00",
+  "generated_at": "2026-11-26T12:00:00+00:00",
+  "cache_seconds": 60,
+  "min_cell": 5,
+  "note": "These figures describe videos uploaded to this tool, not how common misinformation is online.",
+  "videos": {
+    "total": 30,
+    "per_week": [{"week_start": "2026-10-26", "videos": "<5"}, {"week_start": "2026-11-23", "videos": 19}]
+  },
+  "jobs": {"pending_now": 5, "running_now": "<5", "failed": 6},
+  "labels": {
+    "MISINFO": 12, "NO_MISINFO": 7, "DEBUNKING": 5, "CANNOT_RECOGNIZE": 6,
+    "misinfo_basis": {"contradicted": 6, "unproven": "<5", "denies_supported": "<5", "unspecified": "<5"}
+  },
+  "reviews": {
+    "backlog_now": "<5", "decisions": 8, "changed_label": "<5", "kept_label": "<5",
+    "changed_label_share": null,          // 0..1, 3 decimals, or null
+    "median_hours_to_decision": 4.5       // hours, 1 decimal, or null
+  },
+  "top_categories": [{"category": "treatment_efficacy", "videos": 6}]
+}
+```
+
+Frontend notes: show `note` as the fixed caption; render `"<5"` as text (not 0) and
+leave it out of chart scales or draw it as a hatched "under 5" bar; `window` is the only
+query parameter; `pending_now`, `running_now` and `backlog_now` are "now" whatever the
+window.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -2179,6 +2279,14 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-26**: T62 backend (research dashboard stats, design §12, §16, §17) built by the automated
+  build: `GET /v1/stats?window=7d|30d|90d|all` for any signed-in user, totals across all users only,
+  cached 60 s; videos per week, jobs pending/running/failed, label mix with the MISINFO basis split,
+  review backlog / median time to decision / share that changed the label, top claim categories.
+  Every count under 5 (zero included) is `"<5"`, with secondary suppression so no hidden cell can be
+  recovered from a total. No migration. 21 new tests; full suite 1909 passed, 198 skipped (stats
+  tests also pass on a local Postgres 16). Cross-window / before-and-after differencing is not
+  covered and needs a lead decision. Frontend next, from the §7ah API note.
 - **2026-11-26**: T51 (design §4, §7) design/quality/quantity statements are not efficacy claims, no
   spend. New claim_category `evidence_meta` (chosen over a claim_kind `not_verifiable`: claim_kind picks
   the sources, and the golden guide verifies such statements, e.g. tune v79 c3 SUPPORTED) for statements

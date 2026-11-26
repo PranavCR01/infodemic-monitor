@@ -86,6 +86,10 @@ class Settings(BaseSettings):
     REANALYSIS_MAX_PER_USER: int = 20
     REANALYSIS_WINDOW_HOURS: int = 24
 
+    # Research dashboard (T62): GET /v1/stats is cached per window for this many
+    # seconds, process-wide (aggregates only, the same for every caller). 0 = no cache.
+    STATS_CACHE_SECONDS: int = 60
+
     # Migrations
     RUN_MIGRATIONS: bool = True  # set False on Railway worker service
 
