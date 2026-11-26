@@ -1,0 +1,1475 @@
+{
+ "_provenance": "COPIED FROM PRODUCTION (Supabase infodemic-prod) by the coordinating session on 2026-11-26. Public video content only: no user ids, emails or storage paths. Supersedes the RECONSTRUCTED fixture.",
+ "job_id_prefix": "5cc07f48",
+ "filename": "Download (4).mp4",
+ "result": {
+  "label": "MISINFO",
+  "misinfo_basis": "unproven",
+  "decision_rule": "unproven",
+  "deciding_claim_ids": [
+   "c11",
+   "c13"
+  ],
+  "confidence": 0.6,
+  "explanation": "The speaker presents claim 11 (\"vitamin K is a vitamin that helps prevent a potentially devastating condition\") as working; the speaker presents claim 13 (\"the evidence supporting the preventive vitamin K injection for newborns is overwhelming\") as working, but a full search of the research and reference sources found no evidence for or against it: no evidence supports this claim. Promoting an untested treatment or prevention claim is misleading, so the video is labelled MISINFO (unproven). Needs review: no evidence supports claim 11, which the speaker presents as working; no evidence supports claim 13, which the speaker presents as working.",
+  "pipeline_version": "graph_v1+952db33+p5a9c9b71"
+ },
+ "transcript_segments": [
+  {
+   "segment_id": "t1",
+   "start_seconds": 0,
+   "end_seconds": 2.6800000667572,
+   "text": "Like our folks we are now seeing newborn babies suffering from"
+  },
+  {
+   "segment_id": "t2",
+   "start_seconds": 2.6800000667572,
+   "end_seconds": 5.28000020980835,
+   "text": "potentially life threatening bleeding because fewer parents"
+  },
+  {
+   "segment_id": "t3",
+   "start_seconds": 5.28000020980835,
+   "end_seconds": 8.11999988555908,
+   "text": "are giving them a simple vitamin K injection. And the"
+  },
+  {
+   "segment_id": "t4",
+   "start_seconds": 8.11999988555908,
+   "end_seconds": 10.5200004577637,
+   "text": "latest research is very concerning. The new study"
+  },
+  {
+   "segment_id": "t5",
+   "start_seconds": 10.5200004577637,
+   "end_seconds": 13.8800001144409,
+   "text": "published November 5th in JAMA examined more than 5.2 million"
+  },
+  {
+   "segment_id": "t6",
+   "start_seconds": 13.8800001144409,
+   "end_seconds": 16.7199993133545,
+   "text": "infants in the United States. Researchers found that the"
+  },
+  {
+   "segment_id": "t7",
+   "start_seconds": 16.7199993133545,
+   "end_seconds": 19.6399993896484,
+   "text": "percentage of newborns not receiving vitamin K more than"
+  },
+  {
+   "segment_id": "t8",
+   "start_seconds": 19.6399993896484,
+   "end_seconds": 25.1200008392334,
+   "text": "doubled from 3.1% in 2017 to 6.8% in 2025. And the"
+  },
+  {
+   "segment_id": "t9",
+   "start_seconds": 25.1200008392334,
+   "end_seconds": 29.0799999237061,
+   "text": "consequences, babies who didn't receive vitamin K had a 47%"
+  },
+  {
+   "segment_id": "t10",
+   "start_seconds": 29.0799999237061,
+   "end_seconds": 31.9599990844727,
+   "text": "higher risk of bleeding during their first six months of life"
+  },
+  {
+   "segment_id": "t11",
+   "start_seconds": 31.9599990844727,
+   "end_seconds": 35.3199996948242,
+   "text": "and more than twice the risk of bleeding inside the brain."
+  },
+  {
+   "segment_id": "t12",
+   "start_seconds": 35.6399993896484,
+   "end_seconds": 38.2799987792969,
+   "text": "Researchers also found a higher risk of death associated with"
+  },
+  {
+   "segment_id": "t13",
+   "start_seconds": 38.2799987792969,
+   "end_seconds": 41.2000007629395,
+   "text": "bleeding during the birth hospitalization. So why does"
+  },
+  {
+   "segment_id": "t14",
+   "start_seconds": 41.2000007629395,
+   "end_seconds": 43.5999984741211,
+   "text": "this matter? Babies are naturally born with very low"
+  },
+  {
+   "segment_id": "t15",
+   "start_seconds": 43.5999984741211,
+   "end_seconds": 46.6800003051758,
+   "text": "levels of vitamin K, which is essential for blood clotting."
+  },
+  {
+   "segment_id": "t16",
+   "start_seconds": 46.7999992370605,
+   "end_seconds": 49.7200012207031,
+   "text": "Without enough of it, babies can develop spontaneous internal"
+  },
+  {
+   "segment_id": "t17",
+   "start_seconds": 49.7200012207031,
+   "end_seconds": 52.4000015258789,
+   "text": "bleeding, sometimes without any warning. And bleeding in the"
+  },
+  {
+   "segment_id": "t18",
+   "start_seconds": 52.4000015258789,
+   "end_seconds": 55.2400016784668,
+   "text": "brain can cause permanent neurological damage or death."
+  },
+  {
+   "segment_id": "t19",
+   "start_seconds": 55.439998626709,
+   "end_seconds": 58.6800003051758,
+   "text": "That's why we routinely give newborns a vitamin K injection"
+  },
+  {
+   "segment_id": "t20",
+   "start_seconds": 58.6800003051758,
+   "end_seconds": 61.5999984741211,
+   "text": "for more than 60 years. And here's something important,"
+  },
+  {
+   "segment_id": "t21",
+   "start_seconds": 61.6399993896484,
+   "end_seconds": 65.2399978637695,
+   "text": "vitamin K is not a vaccine. It's a vitamin that helps prevent a"
+  },
+  {
+   "segment_id": "t22",
+   "start_seconds": 65.2399978637695,
+   "end_seconds": 67.8399963378906,
+   "text": "potentially devastating condition. Unfortunately, we're"
+  },
+  {
+   "segment_id": "t23",
+   "start_seconds": 67.8399963378906,
+   "end_seconds": 69.879997253418,
+   "text": "seeing growing distrust of established medical"
+  },
+  {
+   "segment_id": "t24",
+   "start_seconds": 69.879997253418,
+   "end_seconds": 72.6800003051758,
+   "text": "interventions, and babies are paying the price. Now, these"
+  },
+  {
+   "segment_id": "t25",
+   "start_seconds": 72.6800003051758,
+   "end_seconds": 75.2399978637695,
+   "text": "studies are observational, so they cannot prove that every"
+  },
+  {
+   "segment_id": "t26",
+   "start_seconds": 75.2399978637695,
+   "end_seconds": 78.0800018310547,
+   "text": "bleeding event was caused by skipping vitamin K. But the"
+  },
+  {
+   "segment_id": "t27",
+   "start_seconds": 78.120002746582,
+   "end_seconds": 80.6399993896484,
+   "text": "evidence supporting this preventive injection is"
+  },
+  {
+   "segment_id": "t28",
+   "start_seconds": 80.6399993896484,
+   "end_seconds": 83.8399963378906,
+   "text": "overwhelming. Parents deserve accurate information, not fear"
+  },
+  {
+   "segment_id": "t29",
+   "start_seconds": 83.8399963378906,
+   "end_seconds": 86.9599990844727,
+   "text": "driven misinformation, because protecting newborn babies should"
+  },
+  {
+   "segment_id": "t30",
+   "start_seconds": 86.9599990844727,
+   "end_seconds": 90.0800018310547,
+   "text": "never be controversial. Please share this with someone who's"
+  },
+  {
+   "segment_id": "t31",
+   "start_seconds": 90.0800018310547,
+   "end_seconds": 91.2799987792969,
+   "text": "expecting a baby."
+  }
+ ],
+ "claims": [
+  {
+   "claim_id": "c1",
+   "text": "newborn babies are suffering from potentially life threatening bleeding because fewer parents are giving them a simple vitamin K injection",
+   "category": "causation",
+   "claim_kind": "research_question",
+   "label": "CANNOT_RECOGNIZE",
+   "deciding": false,
+   "start_seconds": 0,
+   "end_seconds": 8.11999988555908,
+   "search_trail": {
+    "version": 1,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "newborn babies suffering potentially life threatening bleeding because",
+      "results": 16,
+      "after_filters": 16,
+      "new_records": 16,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 16,
+     "screened": 16,
+     "kept": 1
+    },
+    "budget": {
+     "rounds_used": 1,
+     "rounds_max": 3,
+     "exhausted": false,
+     "evidence_cap": 10
+    }
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact \"we are now seeing newborn babies suffering from potentially life threatening bleeding because fewer parents are giving them a simple vitamin K injection.\" They add that \"the latest research is very concerning\" and cite a JAMA study."
+    }
+   ],
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "explanation": "The one review found describes vitamin K deficiency bleeding as rare but potentially life-threatening. It also says a vitamin K injection at birth largely prevents it, and that the condition is more common without the shot, which fits the idea behind the claim. However, it does not look at whether fewer parents are now accepting the injection, or whether that has led to more cases, so the central part of the claim goes untested.",
+   "limitations": [
+    "Only one narrative review from 2009, which comes before recent trends in parents declining the shot",
+    "No data on how often parents decline the injection or on changes in bleeding cases over time",
+    "The review confirms the medical link but not the claimed rise in cases"
+   ],
+   "retrieval_attempts": 1,
+   "evidence": [
+    {
+     "pmid": "18804903",
+     "title": "Vitamin K deficiency bleeding (VKDB) in early infancy.",
+     "year": 2009,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 1
+    }
+   ]
+  },
+  {
+   "claim_id": "c2",
+   "text": "a JAMA study published November 5th examined more than 5.2 million infants in the United States",
+   "category": "statistic",
+   "claim_kind": "fact_of_record",
+   "label": "CANNOT_RECOGNIZE",
+   "deciding": false,
+   "start_seconds": 8.11999988555908,
+   "end_seconds": 16.7199993133545,
+   "search_trail": {
+    "version": 1,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "jama study published november 5th examined 5.2 million",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false
+     },
+     {
+      "round": 2,
+      "query": "jama study published november 5th examined 5.2 million",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     },
+     {
+      "round": 3,
+      "query": "jama study published november 5th examined 5.2 million",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 0,
+     "screened": 0,
+     "kept": 0
+    },
+    "budget": {
+     "rounds_used": 3,
+     "rounds_max": 3,
+     "exhausted": true,
+     "evidence_cap": 10
+    }
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact that \"the new study published November 5th in JAMA examined more than 5.2 million infants in the United States,\" and calls the research \"very concerning.\""
+    }
+   ],
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "explanation": "",
+   "limitations": [
+    "no evidence was retrieved for this claim"
+   ],
+   "retrieval_attempts": 3,
+   "evidence": null
+  },
+  {
+   "claim_id": "c3",
+   "text": "the percentage of newborns not receiving vitamin K more than doubled from 3.1% in 2017 to 6.8% in 2025",
+   "category": "statistic",
+   "claim_kind": "fact_of_record",
+   "label": "CANNOT_RECOGNIZE",
+   "deciding": false,
+   "start_seconds": 13.8800001144409,
+   "end_seconds": 25.1200008392334,
+   "search_trail": {
+    "version": 1,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "percentage newborns receiving vitamin doubled 3.1 6.8",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false
+     },
+     {
+      "round": 2,
+      "query": "percentage newborns receiving vitamin doubled 3.1 6.8",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     },
+     {
+      "round": 3,
+      "query": "percentage newborns receiving vitamin doubled 3.1 6.8",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 0,
+     "screened": 0,
+     "kept": 0
+    },
+    "budget": {
+     "rounds_used": 3,
+     "rounds_max": 3,
+     "exhausted": true,
+     "evidence_cap": 10
+    }
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact, citing a JAMA study, that \"the percentage of newborns not receiving vitamin K more than doubled from 3.1% in 2017 to 6.8% in 2025,\" and calls the research \"very concerning.\""
+    }
+   ],
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "explanation": "",
+   "limitations": [
+    "no evidence was retrieved for this claim"
+   ],
+   "retrieval_attempts": 3,
+   "evidence": null
+  },
+  {
+   "claim_id": "c4",
+   "text": "babies who didn't receive vitamin K had a 47% higher risk of bleeding during their first six months of life",
+   "category": "causation",
+   "claim_kind": "fact_of_record",
+   "label": "CANNOT_RECOGNIZE",
+   "deciding": false,
+   "start_seconds": 25.1200008392334,
+   "end_seconds": 31.9599990844727,
+   "search_trail": {
+    "version": 1,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "babies didn't receive vitamin 47 higher risk bleeding",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false
+     },
+     {
+      "round": 2,
+      "query": "babies didn't receive vitamin 47 higher risk bleeding",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     },
+     {
+      "round": 3,
+      "query": "babies didn't receive vitamin 47 higher risk bleeding",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 0,
+     "screened": 0,
+     "kept": 0
+    },
+    "budget": {
+     "rounds_used": 3,
+     "rounds_max": 3,
+     "exhausted": true,
+     "evidence_cap": 10
+    }
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact from a new JAMA study: \"babies who didn't receive vitamin K had a 47% higher risk of bleeding during their first six months of life\". They call the research \"very concerning\" and add the clotting rationale."
+    }
+   ],
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "explanation": "",
+   "limitations": [
+    "no evidence was retrieved for this claim"
+   ],
+   "retrieval_attempts": 3,
+   "evidence": null
+  },
+  {
+   "claim_id": "c5",
+   "text": "babies who didn't receive vitamin K had a higher risk of death associated with bleeding during the birth hospitalization",
+   "category": "causation",
+   "claim_kind": "research_question",
+   "label": "CANNOT_RECOGNIZE",
+   "deciding": false,
+   "start_seconds": 35.6399993896484,
+   "end_seconds": 41.2000007629395,
+   "search_trail": {
+    "version": 1,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "babies didn't receive vitamin higher risk death associated",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false
+     },
+     {
+      "round": 2,
+      "query": "babies didn't receive vitamin higher risk death associated",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     },
+     {
+      "round": 3,
+      "query": "babies didn't receive vitamin higher risk death associated",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 0,
+     "screened": 0,
+     "kept": 0
+    },
+    "budget": {
+     "rounds_used": 3,
+     "rounds_max": 3,
+     "exhausted": true,
+     "evidence_cap": 10
+    }
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact that \"Researchers also found a higher risk of death associated with bleeding during the birth hospitalization\". They then conclude \"That's why we routinely give newborns a vitamin K injection.\""
+    }
+   ],
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "explanation": "",
+   "limitations": [
+    "no evidence was retrieved for this claim"
+   ],
+   "retrieval_attempts": 3,
+   "evidence": null
+  },
+  {
+   "claim_id": "c6",
+   "text": "babies are naturally born with very low levels of vitamin K, which is essential for blood clotting",
+   "category": "nutrition",
+   "claim_kind": "research_question",
+   "label": "CANNOT_RECOGNIZE",
+   "deciding": false,
+   "start_seconds": 41.2000007629395,
+   "end_seconds": 46.6800003051758,
+   "search_trail": {
+    "version": 1,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "babies naturally born low levels vitamin essential blood",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false
+     },
+     {
+      "round": 2,
+      "query": "babies naturally born low levels vitamin essential blood",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     },
+     {
+      "round": 3,
+      "query": "babies naturally born low levels vitamin essential blood",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 0,
+     "screened": 0,
+     "kept": 0
+    },
+    "budget": {
+     "rounds_used": 3,
+     "rounds_max": 3,
+     "exhausted": true,
+     "evidence_cap": 10
+    }
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact: \"Babies are naturally born with very low levels of vitamin K, which is essential for blood clotting.\" They then use it to justify routine vitamin K injections."
+    }
+   ],
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "explanation": "",
+   "limitations": [
+    "no evidence was retrieved for this claim"
+   ],
+   "retrieval_attempts": 3,
+   "evidence": null
+  },
+  {
+   "claim_id": "c7",
+   "text": "without enough vitamin K, babies can develop spontaneous internal bleeding, sometimes without any warning",
+   "category": "causation",
+   "claim_kind": "research_question",
+   "label": "CANNOT_RECOGNIZE",
+   "deciding": false,
+   "start_seconds": 43.5999984741211,
+   "end_seconds": 52.4000015258789,
+   "search_trail": {
+    "version": 1,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "without enough vitamin babies develop spontaneous internal bleeding",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false
+     },
+     {
+      "round": 2,
+      "query": "without enough vitamin babies develop spontaneous internal bleeding",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     },
+     {
+      "round": 3,
+      "query": "without enough vitamin babies develop spontaneous internal bleeding",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 0,
+     "screened": 0,
+     "kept": 0
+    },
+    "budget": {
+     "rounds_used": 3,
+     "rounds_max": 3,
+     "exhausted": true,
+     "evidence_cap": 10
+    }
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact: \"Without enough of it, babies can develop spontaneous internal bleeding, sometimes without any warning,\" and uses it to justify routine vitamin K injections."
+    }
+   ],
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "explanation": "",
+   "limitations": [
+    "no evidence was retrieved for this claim"
+   ],
+   "retrieval_attempts": 3,
+   "evidence": null
+  },
+  {
+   "claim_id": "c8",
+   "text": "bleeding in the brain can cause permanent neurological damage or death",
+   "category": "causation",
+   "claim_kind": "research_question",
+   "label": "NO_MISINFO",
+   "deciding": false,
+   "start_seconds": 49.7200012207031,
+   "end_seconds": 55.2400016784668,
+   "search_trail": {
+    "version": 1,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "bleeding brain permanent neurological death",
+      "results": 20,
+      "after_filters": 19,
+      "new_records": 19,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 20,
+     "screened": 19,
+     "kept": 10
+    },
+    "budget": {
+     "rounds_used": 1,
+     "rounds_max": 3,
+     "exhausted": false,
+     "evidence_cap": 10
+    }
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact: \"bleeding in the brain can cause permanent neurological damage or death,\" and uses it to justify routine vitamin K injections for newborns."
+    }
+   ],
+   "verdict": "SUPPORTED",
+   "explanation": "Several papers agree that bleeding in the brain can leave lasting neurological damage or kill. Hemorrhage from untreated brain arteriovenous malformations led to a new permanent deficit or death in about 42% of patients, and intraventricular hemorrhage is described as causing permanent deficits or death. Surgical series also report permanent deficits after intracerebral hemorrhage and deaths caused by hemorrhage.",
+   "limitations": [
+    "Most papers come at the question indirectly, through surgical complications or specific conditions such as brain arteriovenous malformations",
+    "The evidence is mainly observational data and reviews",
+    "The stroke cohort mixes ischemic and hemorrhagic deaths"
+   ],
+   "retrieval_attempts": 1,
+   "evidence": [
+    {
+     "pmid": "31900737",
+     "title": "Complications after frame-based stereotactic brain biopsy: a systematic review.",
+     "year": 2021,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 1
+    },
+    {
+     "pmid": "22068993",
+     "title": "Treatment of brain arteriovenous malformations: a systematic review and meta-analysis.",
+     "year": 2011,
+     "publication_type": [
+      "Journal Article",
+      "Meta-Analysis",
+      "Research Support, Non-U.S. Gov't",
+      "Systematic Review"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 2
+    },
+    {
+     "pmid": "34289929",
+     "title": "Neurological Determination of Death Following Infratentorial Stroke: A Population-Based Cohort Study.",
+     "year": 2022,
+     "publication_type": [
+      "Journal Article",
+      "Multicenter Study"
+     ],
+     "relation": "SUPPORTS",
+     "rank": 3
+    },
+    {
+     "pmid": "21631203",
+     "title": "Complications of endoscopic third ventriculostomy.",
+     "year": 2011,
+     "publication_type": [
+      "Journal Article",
+      "Meta-Analysis",
+      "Systematic Review"
+     ],
+     "relation": "SUPPORTS",
+     "rank": 4
+    },
+    {
+     "pmid": "12137707",
+     "title": "Fibrinolytic therapy for intraventricular hemorrhage in adults.",
+     "year": 2002,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review"
+     ],
+     "relation": "SUPPORTS",
+     "rank": 5
+    },
+    {
+     "pmid": "36422479",
+     "title": "Microglial iron trafficking: new player in brain injury.",
+     "year": 2022,
+     "publication_type": [
+      "Review",
+      "Journal Article"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 6
+    },
+    {
+     "pmid": "28555270",
+     "title": "Critical review of brain AVM surgery, surgical results and natural history in 2017.",
+     "year": 2017,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "relation": "SUPPORTS",
+     "rank": 7
+    },
+    {
+     "pmid": "25795265",
+     "title": "Deep brain stimulation for psychiatric diseases: what are the risks?",
+     "year": 2015,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "relation": "SUPPORTS",
+     "rank": 8
+    },
+    {
+     "pmid": "24132564",
+     "title": "Glibenclamide in cerebral ischemia and stroke.",
+     "year": 2014,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural",
+      "Review"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 9
+    },
+    {
+     "pmid": "19535956",
+     "title": "Therapeutic hypothermia for acute liver failure.",
+     "year": 2009,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 10
+    }
+   ]
+  },
+  {
+   "claim_id": "c9",
+   "text": "newborns are routinely given a vitamin K injection for more than 60 years",
+   "category": "other",
+   "claim_kind": "research_question",
+   "label": "CANNOT_RECOGNIZE",
+   "deciding": false,
+   "start_seconds": 55.439998626709,
+   "end_seconds": 61.5999984741211,
+   "search_trail": {
+    "version": 1,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "newborns routinely given vitamin injection years",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false
+     },
+     {
+      "round": 2,
+      "query": "newborns routinely given vitamin injection years",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     },
+     {
+      "round": 3,
+      "query": "newborns routinely given vitamin injection years",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 0,
+     "screened": 0,
+     "kept": 0
+    },
+    "budget": {
+     "rounds_used": 3,
+     "rounds_max": 3,
+     "exhausted": true,
+     "evidence_cap": 10
+    }
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact: \"That's why we routinely give newborns a vitamin K injection for more than 60 years,\" and defends it as preventing a devastating condition."
+    }
+   ],
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "explanation": "",
+   "limitations": [
+    "no evidence was retrieved for this claim"
+   ],
+   "retrieval_attempts": 3,
+   "evidence": null
+  },
+  {
+   "claim_id": "c10",
+   "text": "vitamin K is not a vaccine",
+   "category": "other",
+   "claim_kind": "research_question",
+   "label": "CANNOT_RECOGNIZE",
+   "deciding": false,
+   "start_seconds": 61.6399993896484,
+   "end_seconds": 65.2399978637695,
+   "search_trail": {
+    "version": 1,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab])",
+      "results": 20,
+      "after_filters": 20,
+      "new_records": 20,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 20,
+     "screened": 20,
+     "kept": 10
+    },
+    "budget": {
+     "rounds_used": 1,
+     "rounds_max": 3,
+     "exhausted": false,
+     "evidence_cap": 10
+    }
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact: \"vitamin K is not a vaccine. It's a vitamin that helps prevent a potentially devastating condition.\""
+    }
+   ],
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "explanation": "None of the retrieved papers mention vitamin K. They cover vaccines in general: HPV, MMR, diphtheria, typhoid, varicella, adjuvants and COVID-19 side effects. Vitamin K is a vitamin given to newborns to prevent bleeding, not something that triggers an immune response, so the claim matches basic, well-established pharmacology. But no retrieved paper or reference confirms this, so the verdict cannot rest on the evidence provided.",
+   "limitations": [
+    "No retrieved paper or reference addresses vitamin K at all.",
+    "The claim is a basic fact of record that an official reference (e.g., CDC or NCBI Bookshelf on vitamin K deficiency bleeding) would likely confirm, but none was retrieved."
+   ],
+   "retrieval_attempts": 1,
+   "evidence": [
+    {
+     "pmid": "34127299",
+     "title": "School-based HPV vaccination positively impacts parents' attitudes toward adolescent vaccination.",
+     "year": 2021,
+     "publication_type": [
+      "Journal Article",
+      "Randomized Controlled Trial",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 1
+    },
+    {
+     "pmid": "30986133",
+     "title": "The MMR Vaccine and Autism.",
+     "year": 2019,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, U.S. Gov't, P.H.S.",
+      "Review"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 2
+    },
+    {
+     "pmid": "30333279",
+     "title": "Adult Diphtheria Vaccination.",
+     "year": 2018,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 3
+    },
+    {
+     "pmid": "36586639",
+     "title": "Emerging adjuvants for intradermal vaccination.",
+     "year": 2023,
+     "publication_type": [
+      "Review",
+      "Journal Article"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 4
+    },
+    {
+     "pmid": "25902360",
+     "title": "Typhoid fever vaccination strategies.",
+     "year": 2015,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 5
+    },
+    {
+     "pmid": "31313172",
+     "title": "[Vaccination of the immunocompromised patient].",
+     "year": 2019,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 6
+    },
+    {
+     "pmid": "37608523",
+     "title": "Overview of the global vaccine ecosystem.",
+     "year": 2023,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Review"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 7
+    },
+    {
+     "pmid": "33326320",
+     "title": "Acceptance of varicella vaccination.",
+     "year": 2021,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 8
+    },
+    {
+     "pmid": "30963866",
+     "title": "Imperfect vaccine and hysteresis.",
+     "year": 2019,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 9
+    },
+    {
+     "pmid": "36502671",
+     "title": "Vertigo/dizziness following COVID-19 vaccination.",
+     "year": 2023,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 10
+    }
+   ]
+  },
+  {
+   "claim_id": "c11",
+   "text": "vitamin K is a vitamin that helps prevent a potentially devastating condition",
+   "category": "prevention",
+   "claim_kind": "research_question",
+   "label": "MISINFO",
+   "deciding": true,
+   "start_seconds": 61.6399993896484,
+   "end_seconds": 67.8399963378906,
+   "search_trail": {
+    "version": 1,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "vitamin potentially devastating condition",
+      "results": 20,
+      "after_filters": 20,
+      "new_records": 20,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false
+     },
+     {
+      "round": 2,
+      "query": "vitamin potentially devastating condition",
+      "results": 20,
+      "after_filters": 20,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     },
+     {
+      "round": 3,
+      "query": "vitamin potentially devastating condition",
+      "results": 20,
+      "after_filters": 20,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 20,
+     "screened": 20,
+     "kept": 10
+    },
+    "budget": {
+     "rounds_used": 3,
+     "rounds_max": 3,
+     "exhausted": true,
+     "evidence_cap": 10
+    }
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact that \"vitamin K is not a vaccine. It's a vitamin that helps prevent a potentially devastating condition,\" and calls the evidence for the injection \"overwhelming.\""
+    }
+   ],
+   "verdict": "UNSUPPORTED",
+   "explanation": "None of the retrieved papers tests whether vitamin K prevents any condition, so no retrieved evidence supports this claim. The only mention of vitamin K as a vitamin is one osteoporosis review that lists it as \"possibly\" useful, without testing it. The other papers are about vitamin D, thiamine, other micronutrients, or vitamin K antagonists (blood thinners), not vitamin K itself.",
+   "limitations": [
+    "The claim does not name the condition; it probably means vitamin K deficiency bleeding in newborns, which none of the papers covers",
+    "ev_40738610 mentions vitamin K for osteoporosis only in passing, as a possible add-on, and does not test it",
+    "This result reflects gaps in what was retrieved, not evidence that the claim is false"
+   ],
+   "retrieval_attempts": 3,
+   "evidence": [
+    {
+     "pmid": "29450091",
+     "title": "The importance of vitamin D in maternal and child health: a global perspective.",
+     "year": 2017,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 1
+    },
+    {
+     "pmid": "40900846",
+     "title": "Scoping review of micronutrient imbalances, clinical manifestations, and interventions.",
+     "year": 2025,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 2
+    },
+    {
+     "pmid": "15561547",
+     "title": "Falls in the elderly population.",
+     "year": 2005,
+     "publication_type": [
+      "Case Reports",
+      "Journal Article",
+      "Review"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 3
+    },
+    {
+     "pmid": "40738610",
+     "title": "Advances in the management of osteoporosis.",
+     "year": 2025,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 4
+    },
+    {
+     "pmid": "30574812",
+     "title": "Calciphylaxis-as a drug induced adverse event.",
+     "year": 2019,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 5
+    },
+    {
+     "pmid": "23157990",
+     "title": "Wernicke-Korsakoff-syndrome: under-recognized and under-treated.",
+     "year": 2012,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 6
+    },
+    {
+     "pmid": "16834943",
+     "title": "Management of chemotherapy-induced peripheral neuropathy.",
+     "year": 2006,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 7
+    },
+    {
+     "pmid": "37039408",
+     "title": "Diagnosis and Treatment of Cerebral Venous Thrombosis.",
+     "year": 2023,
+     "publication_type": [
+      "Review",
+      "Journal Article"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 8
+    },
+    {
+     "pmid": "39763665",
+     "title": "Epstein-Barr virus, vitamin D and the immune response: connections with consequences for multiple sclerosis.",
+     "year": 2024,
+     "publication_type": [
+      "Journal Article",
+      "Review",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 9
+    },
+    {
+     "pmid": "39093058",
+     "title": "Nutritional Composition of Post-Catastrophic Foods.",
+     "year": 2024,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "relation": "CONSIDERED",
+     "rank": 10
+    }
+   ]
+  },
+  {
+   "claim_id": "c12",
+   "text": "the studies are observational, so they cannot prove that every bleeding event was caused by skipping vitamin K",
+   "category": "causation",
+   "claim_kind": "research_question",
+   "label": "CANNOT_RECOGNIZE",
+   "deciding": false,
+   "start_seconds": 72.6800003051758,
+   "end_seconds": 78.0800018310547,
+   "search_trail": {
+    "version": 1,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "studies observational cannot prove bleeding event skipping vitamin",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false
+     },
+     {
+      "round": 2,
+      "query": "studies observational cannot prove bleeding event skipping vitamin",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     },
+     {
+      "round": 3,
+      "query": "studies observational cannot prove bleeding event skipping vitamin",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 0,
+     "screened": 0,
+     "kept": 0
+    },
+    "budget": {
+     "rounds_used": 3,
+     "rounds_max": 3,
+     "exhausted": true,
+     "evidence_cap": 10
+    }
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact \"these studies are observational, so they cannot prove that every bleeding event was caused by skipping vitamin K,\" then adds \"But the evidence... is overwhelming.\""
+    }
+   ],
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "explanation": "",
+   "limitations": [
+    "no evidence was retrieved for this claim"
+   ],
+   "retrieval_attempts": 3,
+   "evidence": null
+  },
+  {
+   "claim_id": "c13",
+   "text": "the evidence supporting the preventive vitamin K injection for newborns is overwhelming",
+   "category": "treatment_efficacy",
+   "claim_kind": "research_question",
+   "label": "MISINFO",
+   "deciding": true,
+   "start_seconds": 78.120002746582,
+   "end_seconds": 83.8399963378906,
+   "search_trail": {
+    "version": 1,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "evidence supporting preventive vitamin injection newborns overwhelming",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false
+     },
+     {
+      "round": 2,
+      "query": "evidence supporting preventive vitamin injection newborns overwhelming",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     },
+     {
+      "round": 3,
+      "query": "evidence supporting preventive vitamin injection newborns overwhelming",
+      "results": 0,
+      "after_filters": 0,
+      "new_records": 0,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": true
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 0,
+     "screened": 0,
+     "kept": 0
+    },
+    "budget": {
+     "rounds_used": 3,
+     "rounds_max": 3,
+     "exhausted": true,
+     "evidence_cap": 10
+    }
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker says \"the evidence supporting this preventive injection is overwhelming.\" They go on to call opposition \"fear driven misinformation\" and urge viewers to share the video."
+    }
+   ],
+   "verdict": "UNSUPPORTED",
+   "explanation": "No evidence supports this claim: the search found no study or reference that tests it, for or against.",
+   "limitations": [
+    "no evidence was retrieved for this claim"
+   ],
+   "retrieval_attempts": 3,
+   "evidence": null
+  }
+ ]
+}

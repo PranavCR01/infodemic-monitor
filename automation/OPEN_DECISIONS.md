@@ -36,7 +36,7 @@ Already decided (recorded here so they aren't asked again):
 
 ## 2. Waiting on the project lead
 
-- **Merge `langgraph-build` → `main`** to put T49 (unproven guard) and T52 (#119, plain-language "How we searched") in production before anyone uses the demo. Production runs from `main`.
+- Done 2026-11-26: release #123 (T49 + T52) merged to `main` and live on API and worker (c1187b2).
 - **Revoke the temporary tokens** used for the deploy (Supabase PAT, Railway project token, Vercel token) once deploy work is finished.
 - T14 accuracy run on the test split (~$45–50): needs an Anthropic top-up and approval in the orchestrator. Better after T50, since search quality now dominates accuracy.
 
@@ -49,7 +49,7 @@ Already decided (recorded here so they aren't asked again):
 ## 4. Production (live since 2026-11-25)
 
 - **Frontend:** Vercel `infodemic-monitor.vercel.app` (root `frontend`).
-- **API + worker:** Railway project `340ecd09…`, services `infodemic-monitor` (API, `infodemic-monitor-production.up.railway.app`, runs migrations on start) and `worker` (Celery, `RUN_MIGRATIONS=false`), plus Railway Redis (`REDIS_URL=${{Redis.REDIS_URL}}` on both). `USE_GRAPH_PIPELINE=true`.
+- **API + worker:** Railway project `340ecd09…`, services `infodemic-monitor` (API, `infodemic-monitor-production.up.railway.app`, runs migrations on start) and `worker` (Celery, `RUN_MIGRATIONS=false`; auto-deploy on `main` enabled by the lead 2026-11-26, it had none before, so it missed #120 until redeployed by hand), plus Railway Redis (`REDIS_URL=${{Redis.REDIS_URL}}` on both). `USE_GRAPH_PIPELINE=true`.
 - **Supabase infodemic-prod** (`kscfszhdrlsbpsqwfirv`): Postgres + pgvector, migrations 0001–0016, private `videos` bucket, ES256 auth (T48 JWKS), sign-ups disabled; lead is admin.
 - `PUBMED_RESULTS_PER_CLAIM=2` on Railway is read only by the legacy single-call path; harmless, left as is.
 - First real runs (2026-11-26): `Download.mp4` and `Download (4).mp4` (vitamin K, job 5cc07f48). Both exposed search failures → T49–T52.

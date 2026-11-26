@@ -42,7 +42,7 @@ def test_caption_with_equals_sign_reads_as_claim():
         ("Lemon water cures cancer", ["lemon"], ["cancer"], [], []),
         ("5G spreads coronavirus", ["5g"], ["covid19"], [], []),
         ("Ivermectin cures COVID-19", ["ivermectin"], ["covid19"], [], []),
-        ("Intermittent fasting reverses type 2 diabetes", ["fasting"], ["diabetes"], [], []),
+        ("Intermittent fasting reverses type 2 diabetes", ["fasting"], ["diabetes_t2"], [], []),
         ("Pregnant women should never get the flu shot because it causes autism",
          ["flu_vaccine"], ["autism"], ["pregnancy"], []),
     ],
@@ -76,13 +76,18 @@ def test_ladder_goes_narrow_to_broad_and_is_distinct():
         '(Child[MeSH Terms] OR children[tiab])'
     )
     assert "Child" not in ladder[1]  # population dropped
-    assert '"Biological Products"[MeSH Terms]' in ladder[2]  # parent headings
-    assert ladder[-1] == "vaccines autism"  # free text, left to PubMed's term mapping
+    # T50 d: the outcome is broadened to its parent heading, the intervention never is
+    # ("Vitamins" for vitamin K made every vitamin paper a hit in job 5cc07f48).
+    assert ladder[2] == ('(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]) AND '
+                         '"Neurodevelopmental Disorders"[MeSH Terms]')
+    assert ladder[3] == "(Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab])"  # intervention only
+    assert "Biological Products" not in " ".join(ladder)
     assert len(ladder) == len(set(ladder))
 
 
 def test_no_concepts_falls_back_to_keywords_without_assistant():
-    assert QueryPlanner().ladder("Bananas are amazing for your skin") == ["bananas skin"]
+    # T50 f: at most three terms, then one fewer; a distinct, broader query each round.
+    assert QueryPlanner().ladder("Bananas are amazing for your skin") == ["bananas skin", "bananas"]
 
 
 def test_assistant_only_used_when_rules_find_nothing():
@@ -105,7 +110,7 @@ def test_failing_assistant_does_not_break_planning():
     def boom(text):
         raise RuntimeError("model down")
 
-    assert QueryPlanner(assistant=boom).ladder("Bananas fix skin") == ["bananas fix skin"]
+    assert QueryPlanner(assistant=boom).ladder("Bananas fix skin") == ["bananas fix skin", "bananas skin"]
 
 
 def test_next_query_prefers_critic_suggestion_then_unrun_rungs():

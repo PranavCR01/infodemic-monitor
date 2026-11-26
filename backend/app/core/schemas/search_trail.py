@@ -23,7 +23,8 @@ from typing import Literal, Optional
 
 from pydantic import BaseModel, Field
 
-SEARCH_TRAIL_VERSION = 1
+MAX_SCREENED_OUT = 100
+SEARCH_TRAIL_VERSION = 2  # 2 (T50): kind, planning, ladder_exhausted, screened_out, find_study
 
 ReferenceOutcome = Literal["passage", "no_passage", "no_results", "skipped", "error"]
 
@@ -46,6 +47,66 @@ class PubMedQueryView(BaseModel):
     # out and the broadest query was repeated, served from the cache). Its results
     # are not counted twice in ``counts.retrieved``.
     repeat: bool = False
+    # T50: which rung of the plan this query was (citation, pico, intervention_outcome,
+    # broader_outcome, intervention_only, assistant, keywords, critic ...).
+    kind: Optional[str] = None
+
+
+class PlanningView(BaseModel):
+    """What planning decided before searching (T50, §6 "Planning the search")."""
+
+    language: str = "en"
+    # A non-English claim translated before planning: the English text searched.
+    translated: bool = False
+    search_text: Optional[str] = None
+    translation_error: Optional[str] = None
+    # The video's main intervention, carried over to a claim that refers to it without
+    # naming it ("babies who don't get the shot").
+    context_concept: Optional[str] = None
+    # What the claim says about a study it cites (journal [ta], year, sample size,
+    # institution); such a claim gets a citation lookup first.
+    citation: Optional[dict] = None
+    assistant_used: bool = False
+    assistant_error: Optional[str] = None
+    # No query at all, and why: "needs_translation" (a script the rules can't read and no
+    # translator configured) or "no_terms".
+    no_query_reason: Optional[str] = None
+
+
+class ScreenedOutView(BaseModel):
+    """A paper the searches returned that the reranker did not keep (T50 g): listed so
+    the result page can show what was screened out when nothing was kept."""
+
+    evidence_id: str
+    pmid: Optional[str] = None
+    title: str
+    year: Optional[int] = None
+    source: str = "pubmed"
+
+
+class StudyCandidateView(BaseModel):
+    pmid: Optional[str] = None
+    doi: Optional[str] = None
+    outcome: str
+    reason: str = ""
+    evidence_id: Optional[str] = None
+    via: Optional[str] = None
+
+
+class FindStudyView(BaseModel):
+    """The find-the-study step (T50 i): the web searches the model ran, the ids it
+    proposed and how each was verified. Web text never appears here."""
+
+    reason: str
+    round: int = 0
+    web_queries: list[str] = Field(default_factory=list)
+    web_searches: int = 0
+    candidates: list[StudyCandidateView] = Field(default_factory=list)
+    verified: int = 0
+    model: Optional[str] = None
+    cost_usd: Optional[float] = None
+    latency_ms: int = 0
+    error: Optional[str] = None
 
 
 class ReferenceItemView(BaseModel):
@@ -83,6 +144,8 @@ class SearchBudgetView(BaseModel):
     rounds_max: int
     exhausted: bool
     evidence_cap: int
+    # T50 d: the plan had no new query left, so the search stopped early.
+    ladder_exhausted: bool = False
     # Rounds asked for by the critic (§8 RETRIEVE_MORE) are part of the same budget.
 
 
@@ -96,3 +159,8 @@ class SearchTrailView(BaseModel):
     library: Optional[LibrarySearchView] = None
     counts: SearchCountsView
     budget: SearchBudgetView
+    planning: Optional[PlanningView] = None
+    find_study: Optional[FindStudyView] = None
+    # Up to MAX_SCREENED_OUT papers retrieved but not kept, in retrieval order.
+    screened_out: list[ScreenedOutView] = Field(default_factory=list)
+    screened_out_truncated: bool = False

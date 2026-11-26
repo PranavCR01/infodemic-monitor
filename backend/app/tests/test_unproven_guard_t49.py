@@ -38,7 +38,7 @@ from app.core.graph.unproven_guard import (
 from app.core.graph.validation import validate
 from app.core.schemas.pipeline import MisinfoLabel
 
-FIXTURE = Path(__file__).parent / "fixtures" / "prod_5cc07f48" / "vitamin_k_job.json"
+from app.tests.vitamin_k_fixture import evidence_of, load_real, stance_of, verifier_answer  # noqa: E402
 
 
 def rec(eid: str, title: str, abstract: str = "") -> EvidenceRecord:
@@ -58,10 +58,14 @@ UNS = VerificationResult(claim_id="c1", verdict=Verdict.UNSUPPORTED, explanation
 
 def test_vitamin_k_never_shrinks_to_vitamin():
     t = intervention_terms("Vitamin K helps keep calcium in your bones and prevents osteoporosis")
-    assert t.terms == ("vitamin k",) and t.source == "fallback"
+    # T50 added vitamin K to the MeSH lexicon: a concept now, with its other names.
+    assert t.terms[0] == "vitamin k" and t.source == "concept" and "vitamin" not in t.terms
+    assert "vitamins" not in t.terms  # never the parent heading
     assert not on_topic(rec("a", "Vitamin D supplementation and fracture risk in osteoporosis"), t)
     assert on_topic(rec("b", "Vitamin K2 and bone", "Menaquinone (vitamin K) intake and fractures."), t)
-    assert on_topic(rec("c", "Effects of vitamin-K antagonists on bone"), t)  # hyphen reads as a space
+    assert on_topic(rec("c", "Vitamin-K status and bone turnover"), t)  # hyphen reads as a space
+    # T50 review: vitamin K antagonists are warfarin-type drugs, not vitamin K.
+    assert not on_topic(rec("d", "Effects of vitamin-K antagonists on bone"), t)
 
 
 def test_recognised_concept_any_name_counts_but_not_its_parent_heading():
@@ -74,10 +78,15 @@ def test_recognised_concept_any_name_counts_but_not_its_parent_heading():
 
 
 def test_fallback_needs_every_intervention_word_and_drops_conditions():
-    t = intervention_terms("Irish Sea Moss: Cures Thyroid Issues")
-    assert t.terms == ("irish", "sea", "moss") and t.require_all
-    assert not on_topic(rec("a", "Iodine in seaweed and the thyroid"), t)
-    assert on_topic(rec("b", "Irish sea moss (Chondrus crispus) composition"), t)
+    # Mullein is not in the lexicon (sea moss was, until T50 added it), so the
+    # label's words are the terms and all of them must appear.
+    t = intervention_terms("Mullein Leaf: Cures Thyroid Issues")
+    assert t.terms == ("mullein", "leaf") and t.require_all
+    assert not on_topic(rec("a", "Leaf extracts and the thyroid"), t)
+    assert on_topic(rec("b", "Mullein (Verbascum thapsus) leaf composition"), t)
+    sea_moss = intervention_terms("Irish Sea Moss: Cures Thyroid Issues")
+    assert sea_moss.source == "concept" and "irish moss" in sea_moss.terms
+    assert not on_topic(rec("c", "Iodine in seaweed and the thyroid"), sea_moss)
     soap = intervention_terms("A soap that treats skin cancer")
     assert "cancer" not in " ".join(soap.terms)  # a condition is not the intervention
     assert not on_topic(rec("c", "Angiogenesis in cancer"), soap)
@@ -131,11 +140,11 @@ def test_other_verdicts_pass_through_untouched(verdict):
 
 
 def load_job() -> dict:
-    return json.loads(FIXTURE.read_text())
+    return load_real()
 
 
 class RecordedVerifier:
-    """Replays the verifier answers recorded in the fixture, keyed by claim id."""
+    """Replays the verifier answers stored in production, keyed by claim id."""
 
     def __init__(self, answers: dict[str, dict]):
         self.answers = answers
@@ -160,8 +169,8 @@ def job_state(job: dict) -> dict:
         ))
         transcript.append(TranscriptSegment(segment_id=f"t_{cid}", start=c["start_seconds"],
                                             end=c["end_seconds"], text=c["text"]))
-        stances[cid] = StanceResult(claim_id=cid, stance=Stance(c["stance"]), stance_segment_ids=[f"t_{cid}"])
-        evidence[cid] = [EvidenceRecord.model_validate(e) for e in c["evidence"]]
+        stances[cid] = StanceResult(claim_id=cid, stance=Stance(stance_of(c)), stance_segment_ids=[f"t_{cid}"])
+        evidence[cid] = evidence_of(c)
     s.update(
         claims=claims, stance_results=stances, retrieved_evidence=evidence, reranked_evidence=evidence,
         transcript_segments=transcript,
@@ -191,30 +200,38 @@ def without_guard(caller):
 
 
 def answers(job: dict) -> dict:
-    return {c["claim_id"]: c["verifier_answer"] for c in job["claims"] if c["verifier_answer"]}
+    return {c["claim_id"]: a for c in job["claims"] if (a := verifier_answer(c))}
 
 
-def test_fixture_is_marked_reconstructed_and_matches_the_reported_facts():
+def test_fixture_is_the_real_production_job():
     job = load_job()
-    assert job["_provenance"].startswith("RECONSTRUCTED")
+    assert job["_provenance"].startswith("COPIED FROM PRODUCTION")
     by = {c["claim_id"]: c for c in job["claims"]}
     assert len(by) == 13
-    assert by["c13"]["evidence"] == [] and all(t["retrieved"] == 0 for t in by["c13"]["search_trail"])
+    assert by["c13"]["evidence"] in (None, []) and by["c13"]["verdict"] == "UNSUPPORTED"
     titles = [e["title"].lower() for e in by["c11"]["evidence"]]
-    assert titles and all("vitamin d" in t and "vitamin k" not in t for t in titles)
-    assert {c["claim_id"] for c in job["claims"] if c["production_verdict"] == "UNSUPPORTED"} == {"c11", "c13"}
+    assert titles and not any("vitamin k" in t for t in titles)  # vitamin D, osteoporosis, falls ...
+    assert {c["claim_id"] for c in job["claims"] if c["verdict"] == "UNSUPPORTED"} == {"c11", "c13"}
+    assert (job["result"]["label"], job["result"]["misinfo_basis"]) == ("MISINFO", "unproven")
+    assert sorted(job["result"]["deciding_claim_ids"]) == ["c11", "c13"]
 
 
 def test_reproduces_the_production_label_without_the_guard():
     job = load_job()
     out = verify_and_judge(job_state(job), without_guard(RecordedVerifier(answers(job))))
     got = {cid: v.verdict.value for cid, v in out["verification_results"].items()}
-    assert got == {c["claim_id"]: c["production_verdict"] for c in job["claims"]}
+    assert got == {c["claim_id"]: c["verdict"] for c in job["claims"]}
     final = out["final_result"]
-    assert (final.classification.value, final.misinfo_basis) == (job["production_label"], job["production_misinfo_basis"])
+    assert (final.classification.value, final.misinfo_basis) == ("MISINFO", "unproven")
+    assert sorted(final.claim_ids) == ["c11", "c13"]
 
 
-def test_vitamin_k_video_is_cannot_recognize_with_the_guard():
+def test_vitamin_k_video_is_no_longer_misinfo_with_the_guard():
+    """T49 asserted CANNOT_RECOGNIZE on the reconstructed fixture. On the real rows the
+    guard still removes both UNSUPPORTED verdicts (c11's papers are vitamin D / falls /
+    osteoporosis; c13 retrieved nothing), and the stored SUPPORTED verdict on c8 ("bleeding
+    in the brain can cause permanent neurological damage or death", endorsed) then makes
+    the video NO_MISINFO under the unchanged §9 rules. Either way: not MISINFO (unproven)."""
     job = load_job()
     caller = RecordedVerifier(answers(job))
     out = verify_and_judge(job_state(job), vf.make_verify_claims(caller, prompt_version="verify_v3"))
@@ -222,10 +239,23 @@ def test_vitamin_k_video_is_cannot_recognize_with_the_guard():
     for cid in ("c11", "c13"):
         assert vr[cid].verdict == Verdict.INSUFFICIENT_EVIDENCE
         assert vr[cid].limitations[-1] == OFF_TOPIC_LIMITATION
-    assert sorted(caller.calls) == ["c1", "c11"]  # c13 had nothing to read: no model call
+    # Real rows: c1, c8, c10, c11 had papers; c13 had nothing to read (no model call).
+    assert sorted(caller.calls) == ["c1", "c10", "c11", "c8"]
     assert not any(v.verdict == Verdict.UNSUPPORTED for v in vr.values())
+    assert vr["c8"].verdict == Verdict.SUPPORTED
+    final = out["final_result"]
+    assert final.classification == MisinfoLabel.NO_MISINFO and final.misinfo_basis is None
+    assert not any("unproven_claim" in x for x in out["review_reasons"])
+
+
+def test_without_the_supported_claim_the_video_is_cannot_recognize():
+    """T49's original assertion, on the real rows minus c8: nothing judged → CANNOT_RECOGNIZE
+    with the nothing_judged review reason."""
+    job = load_job()
+    job = {**job, "claims": [c for c in job["claims"] if c["claim_id"] != "c8"]}
+    out = verify_and_judge(job_state(job), vf.make_verify_claims(RecordedVerifier(answers(job)),
+                                                                prompt_version="verify_v3"))
     final = out["final_result"]
     assert final.classification == MisinfoLabel.CANNOT_RECOGNIZE and final.misinfo_basis is None
     assert out["requires_human_review"] is True
     assert "judge:nothing_judged" in out["review_reasons"]
-    assert not any("unproven_claim" in x for x in out["review_reasons"])

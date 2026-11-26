@@ -279,9 +279,46 @@ def explanation_prompt(
     )
 
 
+def _claim_only_prompt(step: str, instructions: str, claim: GraphClaim, max_chars: int) -> GuardedPrompt:
+    return GuardedPrompt(
+        step=step,
+        system=guarded_system_prompt(_BASE_SYSTEM),
+        instructions=instructions,
+        blocks=(fence(claim.claim_text, kind="claim", item_id=claim.claim_id, max_chars=max_chars),),
+    )
+
+
+def search_assist_prompt(claim: GraphClaim, *, task: Optional[str] = None,
+                         max_chars: int = DEFAULT_MAX_BLOCK_CHARS) -> GuardedPrompt:
+    """§6 step 3 (T50 c): PubMed terms by PICO side, never identifiers or filler words."""
+    return _claim_only_prompt("plan_search", task or (
+        f"Give PubMed search terms for claim {claim.claim_id}: intervention, outcome and "
+        "population, each as a MeSH heading and short English [tiab] synonyms. No filler "
+        "words, numbers, identifiers or URLs."), claim, max_chars)
+
+
+def translation_prompt(claim: GraphClaim, *, task: Optional[str] = None,
+                       max_chars: int = DEFAULT_MAX_BLOCK_CHARS) -> GuardedPrompt:
+    """T50 h: the claim in English, faithfully, before planning."""
+    return _claim_only_prompt("translate_claim", task or (
+        f"Translate claim {claim.claim_id} into plain English, keeping every medical term, "
+        "number and qualifier. Return {\"english\": \"...\"}."), claim, max_chars)
+
+
+def find_study_prompt(claim: GraphClaim, *, task: Optional[str] = None,
+                      max_chars: int = DEFAULT_MAX_BLOCK_CHARS) -> GuardedPrompt:
+    """T50 i: candidate PMIDs/DOIs for the study the claim refers to; code verifies them."""
+    return _claim_only_prompt("find_study", task or (
+        f"Name the published study claim {claim.claim_id} refers to as candidate PMIDs or "
+        "DOIs only, at most 3. Return {\"candidates\": [...]}; an empty list if unsure."), claim, max_chars)
+
+
 PROMPT_BUILDERS = {
     "extract_claims": extraction_prompt,
     "analyze_stance": stance_prompt,
+    "plan_search": search_assist_prompt,
+    "translate_claim": translation_prompt,
+    "find_study": find_study_prompt,
     "verify_claims": verification_prompt,
     "critique": critic_prompt,
     "judge_explanation": explanation_prompt,

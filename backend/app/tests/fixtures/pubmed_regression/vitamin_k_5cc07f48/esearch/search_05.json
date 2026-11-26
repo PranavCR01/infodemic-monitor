@@ -1,0 +1,25 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "2046",
+  "retmax": "5",
+  "retstart": "0",
+  "idlist": [
+   "34496783",
+   "32187975",
+   "42440325",
+   "7823718",
+   "12892158"
+  ],
+  "translationset": [
+   {
+    "from": "Infant[MeSH Terms]",
+    "to": "\"infant\"[MeSH Terms]"
+   }
+  ],
+  "querytranslation": "(\"Vitamin K\"[MeSH Terms] OR \"Vitamin K\"[Title/Abstract] OR \"phytonadione\"[Title/Abstract] OR \"phylloquinone\"[Title/Abstract]) AND (\"infant\"[MeSH Terms] OR \"infants\"[Title/Abstract])"
+ }
+}

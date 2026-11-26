@@ -72,7 +72,8 @@ from app.tests.pubmed_fixtures import RecordedPubMed  # noqa: E402
 
 BACKEND = Path(__file__).resolve().parents[2]
 # search_02 in the recorded fixtures (search_01 is an empty result on purpose).
-HOT_WATER_QUERY = 'Beverages[MeSH Terms] AND "Respiratory Tract Infections"[MeSH Terms]'
+HOT_WATER_QUERY = ('("hot drinks"[tiab] OR "hot beverages"[tiab] OR "hot water"[tiab]) AND '
+                   '"Respiratory Tract Infections"[MeSH Terms]')  # the hot-water ladder's 2nd rung (T50)
 GARLIC_QUERY = (
     '(Garlic[MeSH Terms] OR garlic[tiab] OR allicin[tiab]) AND ("Common Cold"[MeSH Terms] OR "common cold"[tiab])'
 )

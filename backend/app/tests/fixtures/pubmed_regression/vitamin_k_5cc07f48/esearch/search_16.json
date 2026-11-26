@@ -1,0 +1,25 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "538000",
+  "retmax": "5",
+  "retstart": "0",
+  "idlist": [
+   "39125301",
+   "34472618",
+   "30791399",
+   "38071415",
+   "33190689"
+  ],
+  "translationset": [
+   {
+    "from": "Vaccines[MeSH Terms]",
+    "to": "\"vaccines\"[MeSH Terms]"
+   }
+  ],
+  "querytranslation": "\"Vitamin K\"[MeSH Terms] OR \"Vitamin K\"[Title/Abstract] OR \"phytonadione\"[Title/Abstract] OR \"phylloquinone\"[Title/Abstract] OR \"vaccines\"[MeSH Terms] OR \"vaccine\"[Title/Abstract] OR \"vaccination\"[Title/Abstract]"
+ }
+}

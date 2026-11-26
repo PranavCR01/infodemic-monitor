@@ -99,7 +99,7 @@ class ReviewContext:
         final = state.get("final_result")
         final = final if isinstance(final, FinalClassification) else None
         evidence: dict[str, dict[str, EvidenceRecord]] = {}
-        for key in ("retrieved_evidence", "library_evidence", "reranked_evidence"):
+        for key in ("retrieved_evidence", "library_evidence", "reranked_evidence", "found_study_evidence"):
             for cid, records in (state.get(key) or {}).items():
                 for e in records or []:
                     evidence.setdefault(cid, {})[e.evidence_id] = e  # reranked (scored) wins

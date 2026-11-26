@@ -26,9 +26,20 @@ class ExtractionOptions(_Strict):
     use_ocr: bool = True
 
 
+class RetrievalOptions(_Strict):
+    """T50 (§6). Each model helper also needs its step in config/routing.yaml; with
+    either off, retrieval runs on the rules alone for that part."""
+
+    search_assistant: bool = True   # plan_search: structured query when rules fall back to keywords
+    translate_claims: bool = True   # translate_claim: non-English claims before planning
+    find_study: bool = True         # find_study: web search proposes ids, code verifies them
+    crossref: bool = True           # DOI-only studies verified via api.crossref.org (journal_doi)
+
+
 class PipelineOptions(_Strict):
     version: str = "pipeline_v1"
     extraction: ExtractionOptions = ExtractionOptions()
+    retrieval: RetrievalOptions = RetrievalOptions()
 
 
 DEFAULT_OPTIONS = PipelineOptions()

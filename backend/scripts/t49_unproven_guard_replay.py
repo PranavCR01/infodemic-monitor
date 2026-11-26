@@ -15,6 +15,14 @@ Run from backend/:
 
     git fetch origin data/t38-frozen-evidence
     python scripts/t49_unproven_guard_replay.py --out ../evals/reports/T49
+
+T50 re-run: ``--t50-evidence <record.json>`` replays the same guard and judge on the
+evidence the rewritten planner's own retrieval kept (``scripts/t50_search_recall.py
+record``: live PubMed, rules only, full budget, reranked) instead of the T38 frozen
+evidence, so the effect of the search rewrite on the 5 tune unproven videos shows:
+
+    python scripts/t49_unproven_guard_replay.py --t50-evidence ../evals/reports/T50/after.json \
+        --out ../evals/reports/T50/t49_replay
 """
 from __future__ import annotations
 
@@ -97,6 +105,70 @@ def replay(tune: TuneSet, frozen_path: Path, mode: str) -> dict:
     return {"mode": mode, "videos": videos, "kept": sum(v["kept"] for v in videos), "total": len(videos)}
 
 
+class _RecordedEvidence:
+    """The T50 recall record as a ``FrozenEvidence``-like source: per claim, the
+    records the reranker kept from the rewritten planner's searches."""
+
+    def __init__(self, path: Path, mode: str):
+        from app.core.graph.state import EvidenceRecord
+
+        data = json.loads(Path(path).read_text())
+        if data.get("split") != "tune":
+            raise SystemExit("the T50 record is not a tune-split record")
+        self.meta = {"created_at": data.get("created_at"), "code_revision": data.get("code_revision")}
+        self.claims = {}
+        for key, c in data["claims"].items():
+            ids = c["kept"] if mode == "kept" else list(c["records"])
+            self.claims[key] = [EvidenceRecord(evidence_id=i, source="pubmed", pmid=c["records"][i]["pmid"],
+                                               title=c["records"][i]["title"], abstract=c["records"][i]["abstract"],
+                                               publication_year=c["records"][i]["year"])
+                                for i in ids if i in c["records"]]
+            self.claims[key + "#queries"] = [rnd.get("query") for rnd in c["rounds"] if rnd.get("query")]
+
+    def entry(self, key):
+        return type("Entry", (), {"evidence": self.claims.get(key, [])})()
+
+
+def replay_t50(tune: TuneSet, path: Path, mode: str) -> dict:
+    """``replay`` over the T50 recall record (``kept``: what the verifier would see)."""
+    rec = _RecordedEvidence(path, mode)
+    frozen_backup = FrozenEvidence.load
+    try:
+        FrozenEvidence.load = staticmethod(lambda _p, _m=None: rec)  # type: ignore[assignment]
+        out = replay(tune, path, mode)
+    finally:
+        FrozenEvidence.load = frozen_backup  # type: ignore[assignment]
+    out["mode"] = f"t50_{mode}"
+    for v in out["videos"]:
+        for d in v["unsupported_claims"]:
+            d["queries"] = rec.claims.get(d["claim"] + "#queries", [])
+    return out
+
+
+def render_t50(results: list[dict], meta: dict) -> str:
+    lines = ["# T49 replay after the T50 search rewrite", "",
+             f"Evidence: the rewritten planner's own retrieval on the tune split (`scripts/t50_search_recall.py "
+             f"record`, live PubMed, rules only, no model; recorded {meta.get('created_at')}, code "
+             f"{str(meta.get('code_revision'))[:12]}). `t50_kept` is what the reranker kept (what the verifier "
+             "would see); `t50_retrieved` is everything the searches returned. Guard and judge unchanged. "
+             "The find-the-study step and the search assistant need a model and are not in this replay.", ""]
+    for res in results:
+        lines += [f"## `{res['mode']}`: {res['kept']}/{res['total']} tune videos keep MISINFO (unproven)", "",
+                  "| video | label after | basis | UNSUPPORTED claims → after guard |", "| --- | --- | --- | --- |"]
+        for v in res["videos"]:
+            cl = "; ".join(f"{d['claim'].split(':')[1]} → {d['after_guard']} ({d['kept_records']} records, "
+                           f"{len(d['on_topic_ids'])} on topic)" for d in v["unsupported_claims"])
+            lines.append(f"| {v['video_id']} | {v['label_after']} | {v['basis_after'] or '-'} | {cl} |")
+        lines.append("")
+    lines += ["## Per claim (`t50_kept`)", ""]
+    for v in results[0]["videos"]:
+        for d in v["unsupported_claims"]:
+            lines.append(f"- **{d['claim']}** \"{d['text'][:90]}\": terms {d['terms'][:4]} ({d['terms_source']}); "
+                         f"queries {d.get('queries', [])[:2]}; on topic {d['on_topic_ids'][:3] or 'none'}"
+                         + (f"; first titles: {d['titles'][:2]}" if d["titles"] else ""))
+    return "\n".join(lines) + "\n"
+
+
 def render(results: list[dict], frozen_meta: dict) -> str:
     lines = ["# T49: unproven guard on the tune split's frozen evidence", "",
              f"Frozen evidence: `{FROZEN_REF}` (recorded {frozen_meta.get('created_at')}, "
@@ -141,8 +213,19 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--frozen", help="frozen_evidence_tune.json (default: git show from the data branch)")
     ap.add_argument("--out", help="directory for report.md and results.json")
+    ap.add_argument("--t50-evidence", help="T50 recall record (after.json) to replay instead of the frozen file")
     args = ap.parse_args(argv)
     tune = TuneSet(DirSource(DATASET))
+    if args.t50_evidence:
+        results = [replay_t50(tune, Path(args.t50_evidence), m) for m in ("kept", "retrieved")]
+        text = render_t50(results, _RecordedEvidence(Path(args.t50_evidence), "kept").meta)
+        print(text)
+        if args.out:
+            out = Path(args.out)
+            out.mkdir(parents=True, exist_ok=True)
+            (out / "report.md").write_text(text)
+            (out / "results.json").write_text(json.dumps(results, indent=1, ensure_ascii=False) + "\n")
+        return 0
     path = load_frozen(args.frozen)
     results = [replay(tune, path, m) for m in MODES]
     meta = FrozenEvidence.load(path).meta

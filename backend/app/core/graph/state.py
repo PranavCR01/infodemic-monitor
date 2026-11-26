@@ -262,6 +262,43 @@ class SearchRound(_Record):
     reference_passages: Optional[int] = None
     reference_error: Optional[str] = None
     new_records: int = 0
+    # T50 (§6 planning). ``query_kind``: which rung of the plan the query was
+    # (citation, pico, intervention_outcome, broader_outcome, intervention_only,
+    # assistant, keywords, critic ...). ``ladder_exhausted``: the plan had no query left
+    # that hadn't run, so the claim's search stopped here instead of repeating one.
+    # ``plan``: on the claim's first round, what planning decided (language, translation,
+    # carried-over context concept, citation cue, assistant use, the rungs). Optional and
+    # additive, so older checkpoints still load.
+    query_kind: Optional[str] = None
+    ladder_exhausted: bool = False
+    plan: Optional[dict] = None
+
+
+class FindStudyCandidate(_Record):
+    """One id the find-the-study model proposed and what verification made of it (T50 i)."""
+
+    pmid: Optional[str] = None
+    doi: Optional[str] = None
+    outcome: str  # verified_pubmed | verified_journal_doi | invalid_format | not_found | mismatch | error | duplicate
+    reason: str = ""
+    evidence_id: Optional[str] = None
+    via: Optional[str] = None  # efetch | esearch_doi | crossref
+
+
+class FindStudyTrail(_Record):
+    """What the find-the-study step did for one claim (T50 i). Web text never appears
+    here: only the searches the model ran, the ids it proposed and our verification."""
+
+    reason: str  # cites_study | nothing_on_topic
+    round: int = 0
+    web_queries: list[str] = Field(default_factory=list)
+    web_searches: int = 0
+    candidates: list[FindStudyCandidate] = Field(default_factory=list)
+    verified: int = 0
+    model: Optional[str] = None
+    cost_usd: Optional[float] = None
+    latency_ms: int = 0
+    error: Optional[str] = None
 
 
 class NodeError(_Record):
@@ -291,6 +328,8 @@ CHECKPOINT_TYPES: tuple[type, ...] = (
     VerificationResult,
     CriticResult,
     FinalClassification,
+    FindStudyCandidate,
+    FindStudyTrail,
     ReferenceConsulted,
     SearchRound,
     NodeError,
@@ -342,6 +381,11 @@ class PipelineState(TypedDict, total=False):
     # rerank_evidence, which decides when it fires. Kept across rounds, like
     # retrieved_evidence, so every cited library ID stays checkable.
     library_evidence: dict[str, list[EvidenceRecord]]
+    # Find-the-study (T50 i): verified records per claim (PubMed or journal_doi) and
+    # what the step did. Written by rerank_evidence, which decides when it runs; the
+    # records are kept through reranking. Optional and additive.
+    found_study_evidence: dict[str, list[EvidenceRecord]]
+    find_study_trail: dict[str, FindStudyTrail]
     verification_results: dict[str, VerificationResult]
     verification_revisions: dict[str, int]
     critic_results: dict[str, CriticResult]

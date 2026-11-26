@@ -12,3 +12,14 @@ extraction:
   # For the no-OCR ablation (T43), point the routing experiment at a copy of this file
   # with `--pipeline-options`; keep this file at true for live traffic.
   use_ocr: true
+
+retrieval:
+  # Retrieval helpers (T50, design §6). Each needs its step in config/routing.yaml too;
+  # set one to false (or remove its routing line) and that part runs on rules alone.
+  # OFF in production (lead, 2026-11-26) until the capped T50 paid run is reviewed;
+  # the lead turns them on. scripts/t50_paid_run_live.py builds them directly, so the
+  # paid run does not depend on these flags.
+  search_assistant: false  # a cheap model writes MeSH + [tiab] terms when the rules fall back to keywords
+  translate_claims: false  # non-English claims are translated before planning
+  find_study: false        # claims citing a study / with nothing on topic: web search proposes ids, we verify
+  crossref: false          # DOIs not in PubMed are verified with api.crossref.org (source journal_doi)

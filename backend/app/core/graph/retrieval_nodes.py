@@ -48,9 +48,17 @@ from urllib.parse import urlsplit
 from app.core.graph import routing as r
 from app.core.graph.nodes import NodeFn
 from app.core.graph.routing import Budgets, DEFAULT_BUDGETS
-from app.core.graph.state import NodeError, PipelineState, ReferenceConsulted, SearchRound
+from app.core.graph.state import (
+    FindStudyCandidate,
+    FindStudyTrail,
+    NodeError,
+    PipelineState,
+    ReferenceConsulted,
+    SearchRound,
+)
+from app.core.retrieval.find_study import FindStudyStep
 from app.core.retrieval.library.fallback import LibraryFallback, merge_library_evidence, should_fire
-from app.core.retrieval.planning import QueryPlanner
+from app.core.retrieval.planning import QueryPlanner, SearchPlan
 from app.core.retrieval.pubmed import PubMedClient
 from app.core.retrieval.references.search import ReferenceSearcher
 from app.core.retrieval.rerank import MAX_EVIDENCE_PER_CLAIM, Reranker
@@ -64,8 +72,15 @@ def make_retrieval_nodes(
     reranker: Optional[Reranker] = None,
     library: Optional[LibraryFallback] = None,
     references: Optional[ReferenceSearcher] = None,
+    find_study: Optional[FindStudyStep] = None,
 ) -> dict[str, NodeFn]:
     planner = planner or QueryPlanner()
+
+    def context_of(state: PipelineState) -> tuple[str, ...]:
+        return tuple(c.claim_text for c in state.get("claims", []))
+
+    def plan_for(state: PipelineState, claim) -> SearchPlan:
+        return planner.plan(claim.claim_text, claim_kind=claim.claim_kind, context=context_of(state))
 
     def plan_retrieval(state: PipelineState) -> dict:
         queries = {cid: list(qs) for cid, qs in state.get("retrieval_queries", {}).items()}
@@ -77,11 +92,16 @@ def make_retrieval_nodes(
             c = critic.get(cid)
             if c is not None and c.decision.value == "RETRIEVE_MORE":
                 suggestions = tuple(c.suggested_queries)
-            q = planner.next_query(claims[cid].claim_text, already, suggestions)
+            try:
+                plan = plan_for(state, claims[cid])
+            except Exception:  # noqa: BLE001 - planning helpers are optional; rules-only plan
+                plan = QueryPlanner().plan(claims[cid].claim_text, claim_kind=claims[cid].claim_kind,
+                                           context=context_of(state))
+            q = planner.next_query(claims[cid].claim_text, already, suggestions, plan=plan)
             if q is None:
-                # Every candidate has run: repeat the broadest one. It is served from
-                # the cache, and the round still counts toward the budget.
-                q = already[-1] if already else claims[cid].claim_text
+                # Every rung has run (T50 d): no query is added and retrieve_evidence
+                # records that the ladder ran out, instead of re-running one from cache.
+                continue
             queries[cid] = [*already, q]
         return {"retrieval_queries": queries}
 
@@ -132,12 +152,35 @@ def make_retrieval_nodes(
                     except Exception:  # noqa: BLE001
                         step["references"] = []
                     step["reference_passages"] = len(found.records)
+            plan: Optional[SearchPlan] = None
+            if claim is not None:
+                try:
+                    plan = plan_for(state, claim)
+                except Exception:  # noqa: BLE001 - the trail only observes
+                    plan = None
+            if first_round and plan is not None:
+                step["plan"] = plan.describe()
+            already_ran = [rnd.pubmed_query for rnd in trail.get(cid, []) if rnd.pubmed_query]
+            if planned and planned[-1] in already_ran and len(planned) <= len(already_ran):
+                # The plan ran out of new queries (T50 d): stop this claim's search and
+                # say so, rather than re-running the same query from the cache.
+                step["ladder_exhausted"] = True
+                attempts[cid] = max(attempts[cid], budgets.max_retrieval_attempts)
+                trail.setdefault(cid, []).append(SearchRound(**step, new_records=len(evidence[cid]) - before))
+                continue
             if not planned:
-                errors.append(NodeError(node=r.RETRIEVE_EVIDENCE, claim_id=cid, message="no query planned"))
+                why = plan.no_query_reason if plan is not None and plan.no_query_reason else None
+                errors.append(NodeError(node=r.RETRIEVE_EVIDENCE, claim_id=cid,
+                                        message="no query planned" + (f": {why}" if why else "")))
+                if why:
+                    step["ladder_exhausted"] = True  # nothing to search; recorded with the plan's reason
+                    attempts[cid] = max(attempts[cid], budgets.max_retrieval_attempts)
                 trail.setdefault(cid, []).append(SearchRound(**step, new_records=len(evidence[cid]) - before))
                 continue
             query = planned[-1]
             step["pubmed_query"] = query
+            kind = plan.kind_of(query) if plan is not None else None
+            step["query_kind"] = kind or ("critic" if plan is not None else None)
             try:
                 result = retriever.retrieve(query)
             except Exception as exc:  # noqa: BLE001 - recorded in state, not raised
@@ -167,13 +210,17 @@ def make_retrieval_nodes(
     return {
         r.PLAN_RETRIEVAL: plan_retrieval,
         r.RETRIEVE_EVIDENCE: retrieve_evidence,
-        **make_rerank_node(reranker, library),
+        **make_rerank_node(reranker, library, find_study=find_study, planner=planner, budgets=budgets),
     }
 
 
 def make_rerank_node(
     reranker: Optional[Reranker] = None,
     library: Optional[LibraryFallback] = None,
+    *,
+    find_study: Optional[FindStudyStep] = None,
+    planner: Optional[QueryPlanner] = None,
+    budgets: Budgets = DEFAULT_BUDGETS,
 ) -> dict[str, NodeFn]:
     """The real ``rerank_evidence`` node on its own, for graphs that keep other stubs.
 
@@ -225,14 +272,73 @@ def make_rerank_node(
                 NodeError(node=r.RERANK_EVIDENCE, claim_id=cid, message=f"library search degraded: {e}"[:500])
                 for e in outcome.errors
             ]
+        found = {cid: list(recs) for cid, recs in state.get("found_study_evidence", {}).items()}
+        study_trail = dict(state.get("find_study_trail", {}))
+        if find_study is not None:
+            context = tuple(c.claim_text for c in state.get("claims", []))
+            # An empty search with budget left is broadened next round (§6); the
+            # fallback waits for that rather than paying for a web search now.
+            broadening = set(r.claims_to_broaden(state, budgets))
+            for cid in list(reranked):
+                claim = claims.get(cid)
+                if claim is None or cid in study_trail:
+                    continue  # at most once per claim
+                reason = _find_study_reason(claim, reranked[cid], context, planner)
+                if reason is None or (reason == "nothing_on_topic" and cid in broadening):
+                    continue
+                outcome = find_study.run(claim.claim_text, reason)
+                found[cid] = merge_evidence(found.get(cid, []), outcome.records)
+                study_trail[cid] = FindStudyTrail(
+                    reason=reason, round=int(state.get("retrieval_attempts", {}).get(cid, 0)),
+                    web_queries=outcome.web_queries[:10], web_searches=outcome.web_searches,
+                    candidates=[FindStudyCandidate(**c.to_json()) for c in outcome.candidates],
+                    verified=len(outcome.records), model=outcome.model, cost_usd=outcome.cost_usd,
+                    latency_ms=outcome.latency_ms, error=outcome.error)
+                if outcome.error:
+                    errors.append(NodeError(node=r.RERANK_EVIDENCE, claim_id=cid,
+                                            message=f"find-the-study step failed: {outcome.error}"))
+        for cid, recs in found.items():
+            if cid in reranked and recs:
+                # Verified against the claim, so kept ahead of the reranker's picks (§6 cap).
+                pinned = [rec for rec in recs]
+                ids = {rec.evidence_id for rec in pinned}
+                reranked[cid] = (pinned + [rec for rec in reranked[cid] if rec.evidence_id not in ids
+                                           and not (rec.pmid and any(p.pmid == rec.pmid for p in pinned))]
+                                 )[:MAX_EVIDENCE_PER_CLAIM]
         update: dict = {"reranked_evidence": reranked}
         if library is not None:
             update["library_evidence"] = library_evidence
+        if find_study is not None or found:
+            update["found_study_evidence"] = found
+            update["find_study_trail"] = study_trail
         if errors:
             update["errors"] = errors
         return update
 
     return {r.RERANK_EVIDENCE: rerank_evidence}
+
+
+def _find_study_reason(claim, kept: list, context: tuple[str, ...],
+                       planner: Optional[QueryPlanner]) -> Optional[str]:
+    """Why the find-the-study step should run for this claim now, or None (T50 i):
+    ``cites_study`` when the claim names a study (journal, year, sample size,
+    institution); ``nothing_on_topic`` when nothing the reranker kept is on topic: for
+    a claim with a recognised intervention, the T49 deterministic check; otherwise one
+    of the claim's concepts (or most of its content words) in a title or abstract."""
+    from app.core.graph.unproven_guard import intervention_terms, on_topic_ids
+    from app.core.retrieval.citation import citation_cue
+    from app.core.retrieval.find_study import topic_match
+    from app.core.retrieval.planning import normalize_claim
+
+    if citation_cue(normalize_claim(claim.claim_text)).cites_study:
+        return "cites_study"
+    if intervention_terms(claim.claim_text).source == "concept":
+        on_topic = bool(on_topic_ids(claim, kept))
+    else:
+        # No recognised intervention ("This bleeding is called VKDB"): the T49 check
+        # would call every record off topic, so the claim's own concepts decide.
+        on_topic = any(topic_match(claim.claim_text, e.title, e.abstract) for e in kept)
+    return None if on_topic else "nothing_on_topic"
 
 
 def retriever_from_settings(cache=None) -> EvidenceRetriever:
