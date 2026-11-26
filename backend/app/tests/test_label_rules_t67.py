@@ -1,9 +1,11 @@
-"""T67: critic-budget verdicts and thin contradictions (design §8, §9, §11).
+"""T67: critic-budget verdicts, thin contradictions, analysis_incomplete (design §8, §9, §11).
 
-Both changes failed the T67 replay gate (evals/reports/T67/report.md) and ship OFF:
+Changes 1 and 2 failed the T67 replay gate (evals/reports/T67/report.md) and ship OFF:
 ``routing.KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED`` and ``judge.THIN_CONTRADICTION_RULE``
 are False. These tests pin the default (the T07 / T64 behaviour) and exercise each code
-path switched on, so a lead decision to turn one on is a one-line change. No model calls.
+path switched on, so a lead decision to turn one on is a one-line change. Change 3
+(``judge.ANALYSIS_INCOMPLETE_RULE``, lead addendum) passed and ships ON; its regression is
+production job 3d48e75e (verifier unreachable for 10 of 11 claims). No model calls.
 """
 from __future__ import annotations
 
@@ -206,3 +208,88 @@ def test_reason_text_calls_the_critic_a_second_automated_check():
     t = parse_reason("judge:thin_contradiction:c2")
     assert t.code == "thin_contradiction" and t.claim_id == "c2"
     assert "critic" not in jg.flag_text("thin_contradiction:c2").lower()
+
+
+# ------------------------------------------------------------------ change 3 (on): analysis_incomplete
+
+import json  # noqa: E402
+from pathlib import Path  # noqa: E402
+
+FIXTURE_3D48 = Path(__file__).parent / "fixtures" / "prod_3d48e75e" / "vitamin_k_verifier_down.report.json"
+
+
+def state_from_3d48e75e() -> dict:
+    """The coordinator's fixture of production job 3d48e75e (built from its exported report,
+    see ``_provenance``) as judge input. Only the fixture's own fields are used: claim text,
+    stance, verdict, cited records, and ``verification_failed`` as the pipeline records it
+    (a retryable ``verify_claims`` error for the claim)."""
+    raw = json.loads(FIXTURE_3D48.read_text())
+    claims, stances, verdicts, evidence, errors = [], {}, {}, {}, []
+    for c in raw["claims"]:
+        cid = c["claim_id"]
+        claims.append(GraphClaim(claim_id=cid, claim_text=c["text"], claim_category="unknown",
+                                 source_segment_ids=["t1"], start_seconds=c["start_seconds"],
+                                 end_seconds=c["end_seconds"]))
+        stances[cid] = StanceResult(claim_id=cid, stance=Stance(c["stance"]), stance_segment_ids=["t1"])
+        recs = [EvidenceRecord(evidence_id=f"ev_{e['pmid']}", source="pubmed", pmid=e["pmid"], title=e["title"],
+                               study_type=e.get("study_type") or "unknown") for e in c.get("evidence") or []]
+        evidence[cid] = recs
+        sup = [r.evidence_id for r, e in zip(recs, c.get("evidence") or []) if e.get("relation") == "SUPPORTS"]
+        con = [r.evidence_id for r, e in zip(recs, c.get("evidence") or []) if e.get("relation") == "CONTRADICTS"]
+        verdicts[cid] = VerificationResult(claim_id=cid, verdict=Verdict(c["verdict"]), limitations=c["limitations"],
+                                           supporting_evidence_ids=sup, contradicting_evidence_ids=con)
+        if c.get("verification_failed"):
+            errors.append(NodeError(node=r.VERIFY_CLAIMS, claim_id=cid, retryable=True,
+                                    message="model call failed: BadRequestError: credit balance too low"))
+    s = initial_state(job_id="3d48e75e", video_id="vk", media_uri="mem://vk", pipeline_version="test")
+    s.update(claims=claims, stance_results=stances, verification_results=verdicts, retrieved_evidence=evidence,
+             reranked_evidence=evidence, retrieval_attempts={c.claim_id: 1 for c in claims}, errors=errors)
+    return s, raw
+
+
+def test_3d48e75e_reproduces_production_without_the_rule(monkeypatch):
+    monkeypatch.setattr(jg, "ANALYSIS_INCOMPLETE_RULE", False)
+    s, raw = state_from_3d48e75e()
+    final, _ = jg.judge(s)
+    assert final.classification.value == raw["production_label"] == "NO_MISINFO"
+    assert final.decision_rule == raw["production_rule"]
+
+
+def test_3d48e75e_is_cannot_recognize_analysis_incomplete():
+    assert jg.ANALYSIS_INCOMPLETE_RULE is True  # passed the T67 gate; ships on
+    s, raw = state_from_3d48e75e()
+    final, errors = jg.judge(s)
+    assert not errors
+    assert raw["expected_after_T67"] == "CANNOT_RECOGNIZE (analysis_incomplete)"
+    assert final.classification == MisinfoLabel.CANNOT_RECOGNIZE
+    assert final.decision_rule == jg.RULE_ANALYSIS_INCOMPLETE and final.claim_ids == []
+    assert "analysis_incomplete" in final.review_flags
+    assert "10 of 11 claims" in final.explanation
+    s["final_result"], s["validation_errors"] = final, []
+    d = rp.evaluate(s)
+    assert d.requires_review and "judge:analysis_incomplete" in d.reasons
+    assert parse_reason("judge:analysis_incomplete").text == REASON_TEXT["analysis_incomplete"]
+
+
+def _failed_state(n_failed: int, n: int, extra_verdict=Verdict.CONTRADICTED) -> dict:
+    verdicts = {f"c{i}": VerificationResult(claim_id=f"c{i}", verdict=Verdict.INSUFFICIENT_EVIDENCE)
+                for i in range(1, n_failed + 1)}
+    for i in range(n_failed + 1, n + 1):
+        verdicts[f"c{i}"] = contradicted(f"c{i}", ["ev_1"])
+    errors = [NodeError(node=r.VERIFY_CLAIMS, claim_id=f"c{i}", message="model call failed", retryable=True)
+              for i in range(1, n_failed + 1)]
+    return state(verdicts, {cid: Stance.ENDORSES for cid in verdicts},
+                 {cid: [paper("ev_1")] for cid in verdicts}, errors=errors)
+
+
+@pytest.mark.parametrize("n_failed, n, incomplete", [(1, 2, True), (2, 4, True), (1, 3, False), (0, 2, False)])
+def test_analysis_incomplete_threshold_is_half(n_failed, n, incomplete):
+    final, _ = jg.judge(_failed_state(n_failed, n))
+    assert (final.decision_rule == jg.RULE_ANALYSIS_INCOMPLETE) is incomplete
+    assert final.classification == (MisinfoLabel.CANNOT_RECOGNIZE if incomplete else MisinfoLabel.MISINFO)
+
+
+def test_analysis_incomplete_ignores_a_repair_that_succeeded():
+    s = _failed_state(0, 2)
+    s["errors"] = [NodeError(node=r.VERIFY_CLAIMS, claim_id="c1", message="repair requested: x")]
+    assert jg.judge(s)[0].decision_rule != jg.RULE_ANALYSIS_INCOMPLETE

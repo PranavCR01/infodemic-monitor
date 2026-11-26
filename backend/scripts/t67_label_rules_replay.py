@@ -7,8 +7,11 @@ Change 2 (``judge.THIN_CONTRADICTION_RULE``): an ENDORSES / REFUTES + CONTRADICT
 decides only on >= 2 on-topic contradicting records or >= 1 systematic review / RCT /
 guideline; otherwise it can't decide (review reason ``thin_contradiction:<cid>``).
 
-Four configurations, each with the T64 guard as merged: (a) T64 only, (b) + change 1,
-(c) + change 2, (d) + both. Two inputs:
+Change 3 (``judge.ANALYSIS_INCOMPLETE_RULE``, lead addendum): the verifier failed for at least
+half of the verifiable claims → CANNOT_RECOGNIZE, rule and review reason ``analysis_incomplete``.
+
+Five configurations, each with the T64 guard as merged: (a) T64 only, (b) + change 1,
+(c) + change 2, (d) + changes 1 and 2, (e) + change 3. (a)-(d) run with change 3 off. Two inputs:
 
 A. ``--t66 <dir>``: the finished T66 videos' stored final states (``videos/<id>.json`` from
    ``origin/auto/T66``, PR #146, pipeline at 3372ef3, pre-T64 upstream). A video whose
@@ -69,8 +72,10 @@ REPO = BACKEND.parent
 DATASET = REPO / "research" / "claim-level" / "dataset"
 FROZEN_REF = "origin/data/t38-frozen-evidence:frozen_evidence_tune.json"
 LABELS = ("MISINFO", "NO_MISINFO", "DEBUNKING", "CANNOT_RECOGNIZE")
-CONFIGS = {"a": (False, False), "b": (True, False), "c": (False, True), "d": (True, True)}
-CONFIG_NAMES = {"a": "T64 only", "b": "T64 + change 1", "c": "T64 + change 2", "d": "T64 + both"}
+CONFIGS = {"a": (False, False, False), "b": (True, False, False), "c": (False, True, False),
+           "d": (True, True, False), "e": (False, False, True)}
+CONFIG_NAMES = {"a": "T64 only", "b": "T64 + change 1", "c": "T64 + change 2", "d": "T64 + changes 1 and 2",
+                "e": "T64 + change 3 (analysis_incomplete)"}
 EFFICACY = ("treatment_efficacy", "prevention")
 # "Further from MISINFO" (gate): MISINFO 0, CANNOT_RECOGNIZE 1 (undecided, goes to a
 # person), NO_MISINFO / DEBUNKING 2 (the video is cleared).
@@ -79,13 +84,14 @@ _STATE = TypeAdapter(PipelineState)
 
 
 @contextmanager
-def config(change1: bool, change2: bool):
-    old = rt.KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED, jg.THIN_CONTRADICTION_RULE
-    rt.KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED, jg.THIN_CONTRADICTION_RULE = change1, change2
+def config(change1: bool, change2: bool, change3: bool):
+    old = rt.KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED, jg.THIN_CONTRADICTION_RULE, jg.ANALYSIS_INCOMPLETE_RULE
+    rt.KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED, jg.THIN_CONTRADICTION_RULE, jg.ANALYSIS_INCOMPLETE_RULE = (
+        change1, change2, change3)
     try:
         yield
     finally:
-        rt.KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED, jg.THIN_CONTRADICTION_RULE = old
+        rt.KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED, jg.THIN_CONTRADICTION_RULE, jg.ANALYSIS_INCOMPLETE_RULE = old
 
 
 def code_revision() -> str:
@@ -295,16 +301,18 @@ def section(name: str, rows: list[dict]) -> tuple[list[str], dict]:
                         "reviewed": reviewed,
                         "second_check_disagreed": reasons.get("second_check_disagreed", 0),
                         "thin_contradiction": reasons.get("judge:thin_contradiction", 0),
+                        "analysis_incomplete": reasons.get("judge:analysis_incomplete", 0),
                         "matrix": m}
         lines += [f"**({key}) {CONFIG_NAMES[key]}**: accuracy {ok}/{len(rows)} = {ok / len(rows):.3f}; "
                   f"sent to review {reviewed}/{len(rows)}; reasons added: "
                   f"`second_check_disagreed` ×{summary[key]['second_check_disagreed']}, "
-                  f"`thin_contradiction` ×{summary[key]['thin_contradiction']}", "",
+                  f"`thin_contradiction` ×{summary[key]['thin_contradiction']}, "
+                  f"`analysis_incomplete` ×{summary[key]['analysis_incomplete']}", "",
                   "| gold \\ ours | " + " | ".join(LABELS) + " | n |", "|---" * 6 + "|"]
         lines += [f"| **{g}** | " + " | ".join(f"**{c}**" if i == j else str(c) for j, c in enumerate(m[i]))
                   + f" | {sum(m[i])} |" for i, g in enumerate(LABELS)]
         lines.append("")
-    for key in ("b", "c", "d"):
+    for key in ("b", "c", "d", "e"):
         changed = [r for r in rows if (r["a"]["label"], r["a"]["basis"]) != (r[key]["label"], r[key]["basis"])]
         bad = [r["video_id"] for r in changed if worse(r["gold"], r["a"]["label"], r[key]["label"])]
         summary[key]["changed"] = [r["video_id"] for r in changed]
@@ -336,7 +344,7 @@ def render(a_rows, excluded, b_rows, missing, rev) -> tuple[str, dict]:
     lines += ["## B. Golden claims, all in-scope tune videos", "",
               "Golden stances and verdicts; the T64 guard re-checks golden UNSUPPORTED claims on the T38 "
               "frozen evidence. Cited records come from the golden set's offline evidence cache. No critic, "
-              "so change 1 cannot fire here: (b) = (a), (d) = (c).",
+              "so change 1 cannot fire here: (b) = (a), (d) = (c). No verifier errors in the golden set, so change 3 cannot fire: (e) = (a).",
               f"Cited evidence IDs not in the offline cache (treated as empty records): {len(missing)}"
               + (f" ({', '.join(missing)})" if missing else ""), ""] + lb
     thin = [(r["video_id"], t) for r in b_rows for t in r["thin"]]

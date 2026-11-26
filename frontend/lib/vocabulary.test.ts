@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   claimMeaning,
+  DECISION_RULE_TEXT,
   displayText,
   JOB_STATES,
   LABELS,
@@ -182,6 +183,8 @@ describe("review reasons", () => {
     expect(reasonText("second_check_disagreed:c4")).not.toMatch(/critic/i);
     expect(reasonRule("judge:thin_contradiction:c2")).toBe("thin_contradiction");
     expect(reasonText("judge:thin_contradiction:c2")).toBe(REVIEW_REASONS.thin_contradiction);
+    expect(reasonText("judge:analysis_incomplete")).toBe(REVIEW_REASONS.analysis_incomplete);
+    expect(DECISION_RULE_TEXT.analysis_incomplete).toBeTruthy();
     const unknown = reasonText("brand_new_rule:c9");
     expect(unknown).not.toContain("brand_new_rule");
     expect(unknown).not.toContain("c9");

@@ -56,6 +56,9 @@ REASON_TEXT: dict[str, str] = {
     # T64 (f): video-level; the label is unchanged
     "main_claims_unchecked": "The label rests on side claims: at least half of the treatment and "
                              "prevention claims the speaker makes could not be checked against the evidence.",
+    # T67 (3): video-level; the label is CANNOT_RECOGNIZE
+    "analysis_incomplete": "The evidence check could not run for at least half of the claims, so the "
+                           "video could not be assessed. It should be checked or analysed again.",
     # T67 (2): per claim; the claim did not decide the label
     "thin_contradiction": "The evidence against {claim} is too thin to decide the label on its own: fewer "
                           "than two papers on its topic and no review, trial or guideline.",

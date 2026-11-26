@@ -520,6 +520,10 @@ def judge(claims):
         reasons.append("nothing_judged")
     return "CANNOT_RECOGNIZE", None, [], reasons
 
+# Analysis incomplete (T67): checked BEFORE the rules above.
+# failed = [c for c in claims if c.verification_failed]
+# if failed and len(failed) >= 0.5 * len(verifiable_claims):
+#     return "CANNOT_RECOGNIZE", None, [], [..., "analysis_incomplete"]
 # Review coverage (T64): applied after the rules above, label unchanged.
 # main = [c for c in claims if c.stance == "ENDORSES" and c.category in ("treatment_efficacy", "prevention")]
 # if label == "NO_MISINFO" and main and 2 * len([c for c in main if c.verdict == "INSUFFICIENT_EVIDENCE"]) >= len(main):
@@ -531,6 +535,8 @@ def judge(claims):
 The second value is the `misinfo_basis`, the third the deciding claims, and the fourth the list of review reasons the rule itself adds (section 11). Review reasons are collected from every claim, whichever rule decides the label: a refuted claim the evidence can't settle raises "possible debunk" even when another claim makes the video NO-MISINFO. Mixed videos (one false or unproven claim endorsed, another refuted) are labelled MISINFO and always sent to review.
 
 **Review coverage (T64):** when the label is NO-MISINFO but at least half of the speaker's endorsed treatment and prevention claims could not be checked (INSUFFICIENT\_EVIDENCE), the label rests on side claims. The judge adds the review reason `main_claims_unchecked`. The label does not change, and severity still comes from the claims (section 12), so the reason never lowers a case's priority. In the vitamin K re-analysis (job d2bf4179) the video is NO-MISINFO on supported side facts while its main prevention claim is unchecked, so a person sees it. The golden set has no claim categories, so the reason cannot fire in the judge cross-check, which is unchanged.
+
+**Analysis incomplete (T67, on).** Before rule 1, if the verifier failed (could not be reached, a recorded verifier error) for at least half of the claims that needed checking, the label is CANNOT RECOGNIZE with rule `analysis_incomplete`, and the case always goes to review with the reason of the same name. Production job 3d48e75e (vitamin K re-analysis) is the case this covers. The Anthropic account ran out of credit mid-run, the verifier failed on 10 of 11 claims, and one supported side statistic made the video NO-MISINFO. A label that rests on one claim out of eleven is not an assessment of the video. The gate passed trivially: no scored tune video had a verifier error, so no tune label changed.
 
 **Thin contradictions (T67, built but OFF).** Under this rule, an endorsed or refuted CONTRADICTED claim would decide MISINFO (rule 1), DEBUNKED (rule 4) or NO-MISINFO (rule 5) only if the evidence it cites against the claim contains at least 2 records on topic for the claim's intervention (section 7's on-topic check), or at least one systematic review, randomised trial or guideline. Otherwise the verdict would stay, but the claim could not decide, the label would fall through, and the claim would add `thin_contradiction:<claim>`. On the offline replay (`evals/reports/T67/`) it fixed T66 v65, where one side claim on one record decided MISINFO. But it made three gold-MISINFO videos worse: T66 v88, and golden v119 and v177. The on-topic check was built for "X cures Y" claims. On Spanish or non-intervention claims ("El Cancer es un hongo", "multiple personality") it finds no usable intervention words, so contradictions cited from relevant papers read as thin. The switch (`THIN_CONTRADICTION_RULE`) is off. A topic check that fits non-efficacy and non-English claims would come first.
 
@@ -613,6 +619,7 @@ A case goes to a person if **any** of these hold:
 - a deciding claim rests only on weak study types;
 - a deciding claim's stance is UNCLEAR;
 - the critic escalated;
+- (T67) the verifier failed for at least half of the claims that needed checking (`analysis_incomplete`; the label is CANNOT RECOGNIZE, section 9);
 - (T67, off) the budget ran out with the critic still objecting and the judge kept the stored verdict (`second_check_disagreed`), or a contradiction too thin to decide was set aside (`thin_contradiction`). Both changes are built but switched off after the T67 replay gate (sections 8 and 9);
 - a validation check failed after repair;
 - calibrated confidence is below the threshold (illustratively 0.70).

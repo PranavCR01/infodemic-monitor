@@ -7,6 +7,12 @@ give the same label. An LLM only writes the explanation; it never chooses the la
 **The policy (§9, checked in order).** Only claims in ``state["claims"]`` that have a
 verdict take part.
 
+0. ``analysis_incomplete`` (T67 change 3, lead 2026-11-26): the verifier failed
+   (``verification_failed``) for at least half of the verifiable claims → CANNOT_RECOGNIZE,
+   always reviewed (video-level reason ``analysis_incomplete``). T67's other two rules
+   (``THIN_CONTRADICTION_RULE``; routing's ``KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED``)
+   are built but off: they failed the T67 replay gate.
+
 1. ``endorsed_contradicted``: any claim is ENDORSES + CONTRADICTED → MISINFO.
 2. ``refuted_supported``: otherwise any claim is REFUTES + SUPPORTED (the speaker
    denies something true) → MISINFO, always sent to review (reason
@@ -142,6 +148,7 @@ RULE_JUDGED = "judged_nothing_false_endorsed"
 RULE_REFUTED_UNSETTLED = "refuted_unsettled"
 RULE_NOTHING_JUDGED = "nothing_judged"
 RULE_NO_CLAIMS = "no_claims"
+RULE_ANALYSIS_INCOMPLETE = "analysis_incomplete"  # T67 (3): checked before rule 1
 
 # Review flags (prefixes; per-claim flags end in ``:<claim_id>``).
 FLAG_MIXED_VIDEO = "mixed_video"
@@ -156,13 +163,14 @@ FLAG_UNPROVEN = "unproven_claim"  # T30
 FLAG_NOTHING_JUDGED = "nothing_judged"  # T37: video-level (§11)
 FLAG_MAIN_CLAIMS_UNCHECKED = "main_claims_unchecked"  # T64 (f): video-level, label unchanged
 FLAG_THIN_CONTRADICTION = "thin_contradiction"  # T67 (2): per claim; the claim can't decide
+FLAG_ANALYSIS_INCOMPLETE = "analysis_incomplete"  # T67 (3): video-level
 MAIN_CLAIM_CATEGORIES = frozenset({"treatment_efficacy", "prevention"})
 SIBLING_LIMITATION = "contradicted_by_sibling_claim"  # T64 (b), set by unproven_guard
 # Since T21 these are collected from every claim, not only when their rule fires, and a
 # mixed video is always reviewed (§9).
 RULE_REVIEW_FLAGS = frozenset({
     FLAG_DENIES_SUPPORTED, FLAG_POSSIBLE_DEBUNK, FLAG_UNPROVEN, FLAG_MIXED_VIDEO, FLAG_NOTHING_JUDGED,
-    FLAG_MAIN_CLAIMS_UNCHECKED, FLAG_THIN_CONTRADICTION,
+    FLAG_MAIN_CLAIMS_UNCHECKED, FLAG_THIN_CONTRADICTION, FLAG_ANALYSIS_INCOMPLETE,
 })
 
 # T67 (2), lead 2026-11-26: an ENDORSES / REFUTES + CONTRADICTED claim decides the label
@@ -178,6 +186,15 @@ RULE_REVIEW_FLAGS = frozenset({
 # (evals/reports/T67/report.md). Turning it on is a lead decision.
 THIN_CONTRADICTION_RULE = False
 MIN_CONTRADICTING_ON_TOPIC = 2
+
+# T67 (3), lead addendum 2026-11-26 ~23:00 UTC (production job 3d48e75e: the verifier was
+# unreachable for 10 of 11 claims and one SUPPORTED side claim made the video NO_MISINFO):
+# when the verifier failed (``verification_failed``: a retryable verify error) for at
+# least ``ANALYSIS_INCOMPLETE_SHARE`` of the verifiable claims, the label is
+# CANNOT_RECOGNIZE by rule ``analysis_incomplete``, checked before rule 1, with the
+# video-level review reason ``analysis_incomplete``. Other rule reasons are still collected.
+ANALYSIS_INCOMPLETE_RULE = True
+ANALYSIS_INCOMPLETE_SHARE = 0.5
 
 # ``misinfo_basis`` values (§9), set only when the label is MISINFO.
 BASIS_CONTRADICTED = "contradicted"
@@ -367,6 +384,13 @@ def thin_contradiction(view: ClaimView) -> bool:
     return len(ug.on_topic_ids(view.claim, cited)) < MIN_CONTRADICTING_ON_TOPIC
 
 
+def analysis_incomplete(views: Sequence[ClaimView]) -> bool:
+    """T67 (3): the verifier failed for at least half of the verifiable claims (and one)."""
+    checkable = [v for v in views if v.claim.requires_verification]
+    failed = [v for v in checkable if v.verification_failed]
+    return bool(failed) and len(failed) >= ANALYSIS_INCOMPLETE_SHARE * len(checkable)
+
+
 def decide(views: Sequence[ClaimView], *, has_claims: Optional[bool] = None) -> Decision:
     """Apply the §9 rules in order. Pure: no state, no model."""
     views = list(views)
@@ -403,7 +427,11 @@ def decide(views: Sequence[ClaimView], *, has_claims: Optional[bool] = None) -> 
     if (endorsed_false or unproven) and refuted_false:
         rule_flags.append(FLAG_MIXED_VIDEO)  # MISINFO, always reviewed
     basis: Optional[str] = None
-    if endorsed_false:
+    if ANALYSIS_INCOMPLETE_RULE and analysis_incomplete(views):
+        # T67 (3): too much of the analysis is missing for any rule below to be trusted.
+        label, rule, deciding = MisinfoLabel.CANNOT_RECOGNIZE, RULE_ANALYSIS_INCOMPLETE, []
+        rule_flags.append(FLAG_ANALYSIS_INCOMPLETE)
+    elif endorsed_false:
         label, rule, deciding = MisinfoLabel.MISINFO, RULE_ENDORSED_CONTRADICTED, endorsed_false
         basis = BASIS_CONTRADICTED
     elif denied_true:
@@ -535,6 +563,8 @@ _FLAG_TEXT = {
     FLAG_NOTHING_JUDGED: "no claim in this video could be checked against the evidence",
     FLAG_MAIN_CLAIMS_UNCHECKED: "at least half of the treatment and prevention claims the speaker "
                                 "makes could not be checked against the evidence",
+    FLAG_ANALYSIS_INCOMPLETE: "the evidence check could not run for at least half of the claims, so the "
+                              "video could not be assessed",
     FLAG_THIN_CONTRADICTION: "the evidence against {ref} is too thin to decide the label on its own "
                              "(fewer than two papers on its topic and no review, trial or guideline)",
 }
@@ -564,6 +594,13 @@ def template_explanation(d: Decision) -> str:
 
     if d.rule == RULE_NO_CLAIMS:
         text = "No checkable health claims were found in the video."
+    elif d.rule == RULE_ANALYSIS_INCOMPLETE:
+        failed = [v for v in d.all_claims if v.verification_failed]
+        text = (
+            f"The analysis is incomplete: the evidence check could not run for {len(failed)} of "
+            f"{len([v for v in d.all_claims if v.claim.requires_verification])} claims, so the "
+            "video could not be assessed. A person should check it, or it should be analysed again."
+        )
     elif d.rule == RULE_NOTHING_JUDGED:
         parts = [f"{names[v.claim_id]} {_VERDICT_TEXT[v.verdict]}" for v in d.all_claims]
         text = "No claim could be judged against the evidence: " + "; ".join(parts) + "."
