@@ -2378,8 +2378,9 @@ Regression data: the real rows of production job d2bf4179
   `source_meta` (evidence id → {journal, pub_date}; `SearchTrailView` ignores the key).
   API: `claims[].evidence[].journal` (string | null) and `.pub_date` (string | null). Rows
   before T65: `journal` null (journal_doi records: their Crossref journal, also in
-  `publisher`), `pub_date` = `year` as "YYYY". The MCP contract v1 record does not carry
-  the two fields (accepted as nulls, like T17's). `publisher` is unchanged.
+  `publisher`), `pub_date` = `year` as "YYYY". The MCP contract record carries the two
+  fields too (additive, optional; `contract/tools.json` refreshed), so `fetch_pubmed_records`
+  returns the retriever's records unchanged and `rerank_evidence` accepts them. `publisher` is unchanged.
 
 ## 8. Team
 

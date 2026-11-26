@@ -58,6 +58,18 @@
                 "title": "Evidence Id",
                 "type": "string"
               },
+              "journal": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Journal"
+              },
               "page": {
                 "anyOf": [
                   {
@@ -81,6 +93,18 @@
                 ],
                 "default": null,
                 "title": "Pmid"
+              },
+              "pub_date": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Pub Date"
               },
               "publication_type": {
                 "items": {
@@ -366,6 +390,18 @@
                 "title": "Evidence Id",
                 "type": "string"
               },
+              "journal": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Journal"
+              },
               "page": {
                 "anyOf": [
                   {
@@ -389,6 +425,18 @@
                 ],
                 "default": null,
                 "title": "Pmid"
+              },
+              "pub_date": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Pub Date"
               },
               "publication_type": {
                 "items": {
@@ -560,6 +608,18 @@
                 "title": "Evidence Id",
                 "type": "string"
               },
+              "journal": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Journal"
+              },
               "page": {
                 "anyOf": [
                   {
@@ -583,6 +643,18 @@
                 ],
                 "default": null,
                 "title": "Pmid"
+              },
+              "pub_date": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Pub Date"
               },
               "publication_type": {
                 "items": {
@@ -803,6 +875,18 @@
                 "title": "Evidence Id",
                 "type": "string"
               },
+              "journal": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Journal"
+              },
               "page": {
                 "anyOf": [
                   {
@@ -826,6 +910,18 @@
                 ],
                 "default": null,
                 "title": "Pmid"
+              },
+              "pub_date": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Pub Date"
               },
               "publication_type": {
                 "items": {

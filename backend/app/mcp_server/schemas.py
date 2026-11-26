@@ -56,8 +56,7 @@ class _Out(BaseModel):
 # record, and the contract only changes additively, under new tool names (§6
 # "Versioning"). No tool here returns references; exposing them would be a new tool.
 # The docstring is the published schema description: keep it as it was.
-_T17_FIELDS = frozenset({"publisher", "retrieved_at", "snapshot_sha256",
-                         "journal", "pub_date"})  # T65: pipeline-only, not in contract v1
+_T17_FIELDS = frozenset({"publisher", "retrieved_at", "snapshot_sha256"})
 
 
 class EvidenceRecord(BaseModel):
@@ -81,6 +80,10 @@ from the retrieval tool's response, never from a model."""
     relevance_score: Optional[float] = None
     study_type: Optional[str] = None
     quality_score: Optional[float] = None
+    # T65 (additive, optional): PubMed journal abbreviation (ISO / MedlineTA) and
+    # publication date, ISO "YYYY", "YYYY-MM" or "YYYY-MM-DD".
+    journal: Optional[str] = None
+    pub_date: Optional[str] = None
 
     @model_validator(mode="before")
     @classmethod
