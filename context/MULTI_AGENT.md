@@ -423,7 +423,8 @@ a little higher for MedCPT (P@10 0.35 vs 0.28) and it passes on half as many off
 −0.035 to +0.097). It loses strictly relevant papers (recall 9/16 vs 13/16; per-claim −0.39,
 CI −0.72 to −0.07). It also keeps nothing for the Spanish claims, because it reads the claim
 in its own language. The Hindi claim goes the other way: MedCPT keeps 8 of its 9 relevant
-records and lexical keeps none. Not clearly better, so the default stays lexical. Numbers,
+records and lexical keeps none. Not clearly better, and on CPU it costs 12.9 s per claim on 1 vCPU (6.7 s on 2) and
+about 1.6 GB RSS, against 11 ms for lexical; so the default stays lexical. Numbers,
 latency and image size: `evals/reports/T60/README.md`. If revisited: score the *translated*
 claim text (the planner already has it) and re-label with two people.
 
