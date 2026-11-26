@@ -12,7 +12,11 @@ version: routing_v1
 status: provisional
 
 routing:
-  extract_claims:    {provider: anthropic, model: claude-haiku-5-5,  prompt: extract_v2}   # small, fast, structured output
+  # T61 PROPOSAL (for the lead): model from T38 (sonnet beat haiku, +0.059 claim F1, no CI),
+  # prompt from T61 (extract_v3 vs v2 on sonnet, tune @ 92a731e: strict claim F1 +0.091,
+  # 95% CI [+0.040, +0.155]; meaning F1 +0.041, CI [-0.001, +0.092]). evals/reports/T61/.
+  extract_claims:    {provider: anthropic, model: claude-sonnet-5-5, prompt: extract_v3}
+  # T61: stance_v2 not adopted (macro-F1 -0.090, 95% CI [-0.270, +0.027] includes 0).
   analyze_stance:    {provider: anthropic, model: claude-sonnet-5-5, prompt: stance_v1}    # small or medium
   # Retrieval helpers (T50, section 6). Rules stay first; each step is optional and
   # retrieval degrades to rules-only without it (remove a line to switch it off).
