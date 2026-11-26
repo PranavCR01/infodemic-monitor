@@ -2381,6 +2381,49 @@ Regression data: the real rows of production job d2bf4179
   `publisher`), `pub_date` = `year` as "YYYY". The MCP contract record carries the two
   fields too (additive, optional; `contract/tools.json` refreshed), so `fetch_pubmed_records`
   returns the retriever's records unchanged and `rerank_evidence` accepts them. `publisher` is unchanged.
+## 7ai. Unproven-Label Fixes (T64; design §6, §7, §9)
+
+Production job d2bf4179 (vitamin K re-analysis, main 91a7a13) was still MISINFO (unproven).
+It was decided by c12 ("helps prevent a potentially devastating condition"), UNSUPPORTED on
+one kept case report, while c14 (preventive injection) was SUPPORTED by two systematic
+reviews. Lead decision 2026-11-26: build (a), (b), (c), (e), (f) before the demo; (d)
+extraction context resolution is deferred.
+
+- **Where the checks live.** (a), (c) are in `unproven_guard.apply_unproven_guard`, after
+  T49's on-topic check, in this order: on-topic → (c) → (a); the first that fires sets the
+  limitation. (b) is `apply_sibling_rule`, run at the end of every `verify_claims` pass over
+  all results. As with T49, nothing is in the judge, so §9 and the cross-check stay as they were.
+- **(a)** `MIN_ON_TOPIC_RECORDS = 3`, or one on-topic record with study type
+  `systematic_review` / `rct` / `guideline`. The study type is the stored one when it is a known
+  `StudyType` value, else `classify_study` on the publication type. Authoritative reference
+  passages (`reference`) do not count as strong; the row lists SR/RCT/guideline only.
+- **(c)** New optional tool field `outcome_unspecified` (the instructions text changed, the
+  prompt file did not, so the prompt version stays `verify_v3`). The code check is narrow:
+  after the last claim verb, no lexicon condition/outcome and only generic nouns with vague
+  modifiers. Unknown words count as a named outcome.
+- **(b) deviates from the row.** The row's rule (same intervention only) changes tune v22
+  MISINFO (unproven) → NO_MISINFO: "eggs prevent a fatty liver" (SUPPORTED) demoted "eggs
+  prevent macular degeneration" (UNSUPPORTED). As built, the sibling must also not name a
+  *different* outcome: the UNSUPPORTED claim names none, or they share an outcome word or
+  concept (`same_outcome`). Vitamin K c12 names none, so it is still demoted. Same
+  intervention means intervention terms overlap (`same_intervention`). The judge raises
+  `unproven_claim:<cid>` for an endorsed claim carrying `contradicted_by_sibling_claim`.
+- **(e)** In `rerank._coverage`, "<term> antagonist(s)/antagonism/antagonistic" is blanked
+  out before an intervention-kind concept (by kind, not frame side: c13's frame puts vitamin
+  K on the outcome side) is matched, parent heading included.
+- **(f)** `main_claims_unchecked` is a judge rule flag (video-level, in `RULE_REVIEW_FLAGS`).
+  It fires only on NO_MISINFO when ≥ 1 endorsed `treatment_efficacy`/`prevention` claim
+  exists and at least half are INSUFFICIENT_EVIDENCE. The label is unchanged and severity
+  does not read review reasons. Wording is in `review_reasons.REASON_TEXT`,
+  `frontend/lib/vocabulary.ts` and the judge's `_FLAG_TEXT`. Cross-check kind
+  `main_claims_unchecked_not_in_golden_judge` is documented; it cannot fire on the golden
+  set (no categories).
+- **Tests needing new fixtures.** Three existing fixtures had one on-topic record and now
+  hit (a), so each gained records: `test_graph_integration._on_topic_untested` (3 records),
+  T49 `test_on_topic_search_keeps_unsupported` (4), and verify eval v21/v22 (two synthetic
+  on-topic records each; heuristic baseline unchanged). In `test_judge.test_flag_verification_failed`,
+  one of two endorsed efficacy claims is unchecked, so the expected flags gain
+  `main_claims_unchecked`.
 
 ## 8. Team
 
@@ -2409,6 +2452,17 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   `study_type_counts`; titles without trailing full stop; `speaker_quote` = best-overlap segments;
   PubMed journal abbreviation and publication date to the verifier and the API (`journal`,
   `pub_date`, stored in the search trail JSON). Field note in §7ai.
+- **2026-11-26**: T64 (design §6, §7, §9) unproven-label fixes (a, b, c, e, f; (d) deferred),
+  no spend, no migration. Real rows of job d2bf4179: MISINFO (unproven) reproduced without T64,
+  NO_MISINFO with it (+ `main_claims_unchecked`). On rows treated as on topic, as in
+  production, each of (a), (b), (c) alone clears the label. Tune replay (T49 extended to
+  every tune video with a golden UNSUPPORTED claim, before = langgraph-build a67f8ca on the
+  same evidence): no tune label changes. 4/5 tune unproven videos keep the label on fresh
+  rules-only PubMed evidence, 0/5 on T38 frozen evidence, both unchanged. Only v36:c6 changes
+  verdict, to `search_too_thin`, and v36 stays MISINFO. The row's literal (b) would lose v22,
+  so (b) is narrowed (§7ai). Judge cross-check byte-identical, no re-pin. Report
+  `evals/reports/T64/`. Branch `auto/T64`.
+
 - **2026-11-26**: T63 (backend; design §13, §14, §15) evaluation registry and admin evals API, no
   spend. `evals/registry/<run_id>.json` per metric per run, Pydantic model + JSON schema + a test that
   validates every file; 32 records backfilled from existing reports (T05, T07 synthetic; T24, T38, T43,

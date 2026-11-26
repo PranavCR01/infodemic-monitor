@@ -40,6 +40,14 @@ How it fits:
   ``unproven_guard.apply_unproven_guard``: UNSUPPORTED stands only if the claim's
   reranked evidence holds a record on topic for the claim's intervention; an empty or
   off-topic search gives INSUFFICIENT_EVIDENCE with ``search_found_nothing_on_topic``.
+- **Unproven-label fixes (T64).** The guard also turns UNSUPPORTED into
+  INSUFFICIENT_EVIDENCE when the claim names no condition or outcome
+  (``outcome_unspecified``: the model's flag, enforced in code too) or the search kept
+  fewer than 3 on-topic records and no on-topic systematic review / RCT / guideline
+  (``search_too_thin``). After every pass, ``unproven_guard.apply_sibling_rule`` runs
+  over all results: an UNSUPPORTED claim whose sibling about the same intervention (a
+  prevention / efficacy claim) is SUPPORTED becomes INSUFFICIENT_EVIDENCE with
+  ``contradicted_by_sibling_claim``.
 - **Loop-aware.** Only ``routing.claims_to_verify`` claims are (re)judged; others keep
   their verdict. A REVISE_VERIFICATION re-run counts against the revision budget and
   shows the critic's notes; a RETRIEVE_MORE re-run judges the new evidence.
@@ -66,7 +74,12 @@ from app.core.graph.state import (
     VerificationResult,
 )
 from app.core.graph.stance import PromptNotFoundError, load_prompt  # shared prompt loader
-from app.core.graph.unproven_guard import apply_unproven_guard
+from app.core.graph.unproven_guard import (
+    OUTCOME_UNSPECIFIED_EXPLANATION,
+    OUTCOME_UNSPECIFIED_LIMITATION,
+    apply_sibling_rule,
+    apply_unproven_guard,
+)
 from app.core.guardrails.injection import GUARDRAIL_ERROR_PREFIX
 from app.core.guardrails.outputs import OutputViolation, VerificationOutput, _no_urls, parse_output
 from app.core.user_text import evidence_ids_in, reword_reviewer, render_evidence_ids, source_name
@@ -113,6 +126,8 @@ class VerifierToolOutput(VerificationOutput):
     """
 
     raw_confidence: Optional[float] = Field(default=None, ge=0.0, le=1.0)
+    # T64 (c): the claim names no condition or outcome, so it can't be UNSUPPORTED.
+    outcome_unspecified: bool = False
 
     @field_validator("limitations")
     @classmethod
@@ -158,6 +173,11 @@ VERIFY_TOOL: dict = {
             "raw_confidence": {
                 "type": "number", "minimum": 0, "maximum": 1,
                 "description": "Confidence in the verdict, 0 to 1 (raw; calibrated later).",
+            },
+            "outcome_unspecified": {
+                "type": "boolean",
+                "description": "True if the claim names no specific condition or outcome "
+                               "('a potentially devastating condition', 'many diseases').",
             },
         },
         "required": [
@@ -220,7 +240,10 @@ def _instructions(
 ) -> str:
     unsupported = (
         "UNSUPPORTED is allowed for this claim (a treatment or prevention claim): use it if no "
-        "paper tests the claim for or against, and cite nothing."
+        "paper tests the claim for or against, and cite nothing. If the claim names no specific "
+        "condition or outcome (for example 'a potentially devastating condition' or 'many "
+        "diseases'), set outcome_unspecified to true: such a claim cannot be UNSUPPORTED, so "
+        "the verdict is INSUFFICIENT_EVIDENCE."
         if allow_unsupported else
         "UNSUPPORTED is NOT allowed for this claim; if nothing tests it, the verdict is "
         "INSUFFICIENT_EVIDENCE."
@@ -475,6 +498,15 @@ def verify_claim(
                 raw_confidence=out.raw_confidence, model=model,
                 prompt_version=recorded_version or prompt_version,
             ), errors
+        if out.verdict == Verdict.UNSUPPORTED and out.outcome_unspecified:
+            # T64 (c): the model says the claim names no outcome; no study can test it.
+            return VerificationResult(
+                claim_id=claim.claim_id, verdict=Verdict.INSUFFICIENT_EVIDENCE,
+                explanation=OUTCOME_UNSPECIFIED_EXPLANATION,
+                limitations=[*(s[:MAX_LIMITATION_CHARS] for s in out.limitations), OUTCOME_UNSPECIFIED_LIMITATION],
+                raw_confidence=out.raw_confidence, model=model,
+                prompt_version=recorded_version or prompt_version,
+            ), errors
         return VerificationResult(
             claim_id=claim.claim_id,
             verdict=out.verdict,
@@ -537,6 +569,8 @@ def make_verify_claims(
             result = apply_unproven_guard(claims[cid], evidence, result)
             results[cid] = result
             errors += errs
+        # T64 (b): a SUPPORTED sibling about the same intervention outranks UNSUPPORTED.
+        results = apply_sibling_rule(list(claims.values()), results)
         update: dict = {"verification_results": results, "verification_revisions": revisions}
         if errors:
             update["errors"] = errors

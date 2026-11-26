@@ -126,7 +126,9 @@ def test_off_topic_search_unsupported_becomes_insufficient():
 
 
 def test_on_topic_search_keeps_unsupported():
-    ev = [rec("ev_1", "Vitamin D and influenza"), rec("ev_2", "Allicin content of garlic supplements")]
+    # T64 (a): at least three on-topic records (or one review / trial / guideline).
+    ev = [rec("ev_1", "Vitamin D and influenza"), rec("ev_2", "Allicin content of garlic supplements"),
+          rec("ev_3", "Garlic intake in older adults"), rec("ev_4", "Garlic storage and allicin loss")]
     assert apply_unproven_guard(gclaim("Garlic cures the flu"), ev, UNS) == UNS
 
 

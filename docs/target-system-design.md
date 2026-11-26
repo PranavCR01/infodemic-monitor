@@ -351,6 +351,7 @@ Search returns papers that *mention* the topic; reranking keeps the ones that *t
 - **Relevance:** does the paper address this intervention, this outcome and a similar population? Scored by a lightweight reranker; an LLM only if measured relevance is poor.
 - **Study type, scored separately from relevance:** systematic reviews and randomised trials in humans rank above observational studies, which rank above animal, lab and single-case studies. PubMed's publication type field makes this a lookup, not a judgment.
 - **Cap:** at most 10 papers per claim go forward to verification.
+- **"X antagonists" are not X (T64):** a mention of an intervention immediately followed by "antagonist(s)" does not count as matching it, and neither does its parent heading inside that phrase. "Vitamin K antagonists" are warfarin-type anticoagulants. In production job d2bf4179, three such papers were kept at the top for a vitamin K claim; they now score as if vitamin K were absent and are dropped. A paper that also names the intervention plainly still matches.
 
 **Probe: why not make the vector store the main search, or add a web search?** PubMed's own search plus reranking is designed for exactly this literature, and every result comes with a stable ID that can be checked. The vector store exists only for documents PubMed doesn't have, and only runs when PubMed comes up short. A general web search would bring in sources nobody can vouch for.
 
@@ -408,6 +409,14 @@ A record is on topic if the verifier cited it, or if its title or abstract conta
 
 - **A recognised intervention** (the section 6 planner's lexicon finds an intervention concept in the claim): any of the concept's names counts (the words matched in the claim, its label, MeSH heading and synonyms), never its parent heading ("Vitamins" would make every vitamin paper on topic).
 - **Otherwise**, the intervention-side words of the claim: the label before a colon ("Burdock Root: rids kidney stones"), else the content words before the first claim verb (cures, prevents, helps...), else those of the whole claim; stop words, filler words ("high", "natural", "drinking") and words the lexicon knows as a condition, outcome or population are dropped; a one-letter or short digit token stays glued to the word before it ("vitamin k", "omega 3"), so "vitamin K" never shrinks to "vitamin". **All** of the first four such words must appear. This is strict on purpose: when the system does not know what the intervention is, the safe error is CANNOT RECOGNIZE and review, not MISINFO.
+
+**Three more checks (T64, production job d2bf4179).** The re-analysis of the same vitamin K video was still MISINFO (unproven). It was decided by "vitamin K is a vitamin that helps prevent a potentially devastating condition", UNSUPPORTED on **one** kept record (a rat-poison case report), while another claim in the video, "the evidence supporting the preventive vitamin K injection for newborns is overwhelming", was SUPPORTED by two systematic reviews. After the on-topic check, an UNSUPPORTED verdict also becomes INSUFFICIENT\_EVIDENCE when any of these holds (code, no model; the first that fires sets the limitation):
+
+- **The claim names no condition or outcome** (`outcome_unspecified`): "a potentially devastating condition", "many diseases". No study can test it, so "nothing supports it" says nothing. The verifier prompt asks the model to set an `outcome_unspecified` flag. Code enforces it even if the model ignores the flag: after the last claim verb there is no condition or outcome the lexicon knows, only generic nouns ("condition", "diseases", "problems") with vague words around them. The rule is narrow on purpose: any other word ("heart disease", "kidney stones") counts as a named outcome.
+- **The search is too thin** (`search_too_thin`): fewer than **3** on-topic kept records, and none of them is a systematic review, randomised trial or guideline (study type from PubMed's publication type). One or two case reports are not "the full search found nothing".
+- **A sibling claim is supported** (`contradicted_by_sibling_claim`): another claim in the same video, about the same intervention, in a treatment or prevention category, is SUPPORTED, and the two don't name different outcomes (the UNSUPPORTED claim names none, or they share one). This runs over all of the video's verdicts after each verify pass. "Eggs prevent a fatty liver" being supported says nothing about "eggs prevent macular degeneration" (tune video v22), so the outcome condition is needed. The judge keeps the claim's `unproven_claim` review reason (section 9), so a person still sees it.
+
+On the vitamin K job each of the three, on its own, makes the video NO-MISINFO. On the tune split (`evals/reports/T64/`) no label changes, and 4 of the 5 tune MISINFO (unproven) videos keep the label on fresh rules-only evidence, the same as before. Extraction resolving vague references from the rest of the video ("a potentially devastating condition" → "vitamin K deficiency bleeding in newborns") is deferred until it can be measured.
 
 The check lives in the verify step, not the judge, so the section 9 rules are unchanged. Its cost, measured on the tune split's frozen evidence (T49): none of the 5 tune videos the golden set labels MISINFO (unproven) keeps that label with today's retrieval, because each of their unproven claims got an empty search, generic papers on the condition only (cancer papers for a "soap that treats skin cancer"), or no recorded search. Better search planning (T50) is what brings them back; the guard makes sure that, until it does, a failed search reads as "could not check", not "unproven".
 
@@ -508,9 +517,18 @@ def judge(claims):
     if any(c.verdict == "INSUFFICIENT_EVIDENCE" for c in claims):
         reasons.append("nothing_judged")
     return "CANNOT_RECOGNIZE", None, [], reasons
+
+# Review coverage (T64): applied after the rules above, label unchanged.
+# main = [c for c in claims if c.stance == "ENDORSES" and c.category in ("treatment_efficacy", "prevention")]
+# if label == "NO_MISINFO" and main and 2 * len([c for c in main if c.verdict == "INSUFFICIENT_EVIDENCE"]) >= len(main):
+#     reasons.append("main_claims_unchecked")
+# A claim the sibling rule (section 7) turned from UNSUPPORTED into INSUFFICIENT_EVIDENCE
+# still adds unproven_claim:<id> when endorsed; it no longer decides the label.
 ```
 
 The second value is the `misinfo_basis`, the third the deciding claims, and the fourth the list of review reasons the rule itself adds (section 11). Review reasons are collected from every claim, whichever rule decides the label: a refuted claim the evidence can't settle raises "possible debunk" even when another claim makes the video NO-MISINFO. Mixed videos (one false or unproven claim endorsed, another refuted) are labelled MISINFO and always sent to review.
+
+**Review coverage (T64):** when the label is NO-MISINFO but at least half of the speaker's endorsed treatment and prevention claims could not be checked (INSUFFICIENT\_EVIDENCE), the label rests on side claims. The judge adds the review reason `main_claims_unchecked`. The label does not change, and severity still comes from the claims (section 12), so the reason never lowers a case's priority. In the vitamin K re-analysis (job d2bf4179) the video is NO-MISINFO on supported side facts while its main prevention claim is unchecked, so a person sees it. The golden set has no claim categories, so the reason cannot fire in the judge cross-check, which is unchanged.
 
 **Probe: why MISINFO for an unproven claim?** In the golden set, 39 videos were rated false by fact-checkers while no study tested the specific claim ("sea moss cures thyroid disease"). Fact-checkers and WHO treat promoting an untested cure as misinformation, because the burden of proof is on the claim. Calling those videos CANNOT RECOGNIZE would hide the most common kind of health misinformation. The label is kept honest by three limits: it applies only to endorsed efficacy claims (never to harm or mechanism claims), only after the full retrieval budget finds nothing, and it is shown as "MISINFO (unproven)", never as "false", and always reviewed.
 

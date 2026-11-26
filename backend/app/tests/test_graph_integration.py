@@ -494,17 +494,19 @@ def test_abstention_is_not_replaced_by_the_single_call():
 
 
 def _on_topic_untested(s):
-    """Retrieval kept a record about each claim's intervention that doesn't test the claim."""
+    """Retrieval kept records about each claim's intervention that don't test the claim.
+    T64 (a): three of them, since one or two (with no systematic review, trial or
+    guideline) is now too thin a search for UNSUPPORTED."""
     from app.core.graph.state import EvidenceRecord
 
     out = {}
     for c in s["claims"]:
         topic = "Hot water" if "hot water" in c.claim_text.lower() else "Garlic"
         out[c.claim_id] = [EvidenceRecord(
-            evidence_id=f"ev_9{c.claim_id[1:]}", source="pubmed", pmid=f"9{c.claim_id[1:]}",
-            title=f"{topic} consumption habits: a cross-sectional survey",
+            evidence_id=f"ev_9{c.claim_id[1:]}{k}", source="pubmed", pmid=f"9{c.claim_id[1:]}{k}",
+            title=f"{topic} consumption habits: a cross-sectional survey ({year})",
             abstract=f"We surveyed {topic.lower()} habits in 500 adults. No clinical outcome was measured.",
-        )]
+        ) for k, year in enumerate((2019, 2021, 2023))]
     return out
 
 
