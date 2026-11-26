@@ -47,7 +47,7 @@ NODE_OUTPUTS: dict[str, frozenset[str]] = {
     r.PLAN_RETRIEVAL: frozenset({"retrieval_queries"}),
     r.RETRIEVE_EVIDENCE: frozenset({"retrieved_evidence", "retrieval_attempts", "search_trail"}),
     r.RERANK_EVIDENCE: frozenset({"reranked_evidence", "library_evidence", "found_study_evidence",
-                                  "find_study_trail"}),
+                                  "find_study_trail", "shared_study_trail"}),
     r.VERIFY_CLAIMS: frozenset({"verification_results", "verification_revisions"}),
     r.CRITIQUE_VERIFICATION: frozenset({"critic_results"}),
     r.JUDGE_CLASSIFICATION: frozenset({"final_result"}),

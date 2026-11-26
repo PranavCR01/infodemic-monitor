@@ -15,6 +15,7 @@ from app.core.retrieval.rerank import MAX_EVIDENCE_PER_CLAIM
 from app.core.schemas.search_trail import (
     MAX_SCREENED_OUT,
     FindStudyView,
+    SharedStudyView,
     LibrarySearchView,
     PlanningView,
     ScreenedOutView,
@@ -126,6 +127,8 @@ def build_search_trail(state: dict, claim_id: str, budgets: Budgets = DEFAULT_BU
             ladder_exhausted=any(getattr(rnd, "ladder_exhausted", False) for rnd in rounds)),
         planning=planning,
         find_study=find_study,
+        shared_studies=[SharedStudyView.model_validate(x.model_dump())
+                        for x in (state.get("shared_study_trail") or {}).get(claim_id, [])],
         screened_out=screened_out[:MAX_SCREENED_OUT],
         screened_out_truncated=len(screened_out) > MAX_SCREENED_OUT,
     )

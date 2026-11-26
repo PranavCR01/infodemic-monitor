@@ -32,6 +32,12 @@ rules find no concept in a claim.
   ``SearchRound`` per claim per round (the PubMed query run, hits, records after
   filters, whether it came from the cache, the references consulted, what the round
   added). It only observes: what is retrieved, merged and reranked is unchanged.
+- A study the video cites (T57, §6): after find_study, ``rerank_evidence`` offers every
+  verified cited-study record one claim holds (find_study's, or the citation lookup's
+  best) to the video's other claims. Their reranker and the T49 on-topic check decide
+  whether each keeps it; ``shared_study_trail`` records what was offered, from which
+  claim (``shared_from``) and the outcome. No model call, no web search
+  (``app.core.graph.shared_study``).
 
 Use them by overriding the stubs:
 
@@ -56,6 +62,7 @@ from app.core.graph.state import (
     ReferenceConsulted,
     SearchRound,
 )
+from app.core.graph.shared_study import share_cited_studies
 from app.core.retrieval.find_study import FindStudyStep
 from app.core.retrieval.library.fallback import LibraryFallback, merge_library_evidence, should_fire
 from app.core.retrieval.planning import QueryPlanner, SearchPlan
@@ -297,6 +304,19 @@ def make_rerank_node(
                 if outcome.error:
                     errors.append(NodeError(node=r.RERANK_EVIDENCE, claim_id=cid,
                                             message=f"find-the-study step failed: {outcome.error}"))
+        # T57: a study the video cites, verified for one claim, is offered to the others;
+        # their reranker and the T49 on-topic check decide (app.core.graph.shared_study).
+        shared_trail: dict = {}
+        try:
+            shared_trail = share_cited_studies(
+                claims, reranked, state.get("retrieved_evidence", {}), found, state.get("search_trail", {}),
+                lambda claim, recs: reranker.rerank(claim.claim_text, recs, claim.claim_kind).kept,
+                on_error=lambda cid, exc: errors.append(NodeError(
+                    node=r.RERANK_EVIDENCE, claim_id=cid,
+                    message=f"reranking shared cited studies failed: {type(exc).__name__}: {exc}"[:500])))
+        except Exception as exc:  # noqa: BLE001 - claims go on with their own evidence
+            errors.append(NodeError(node=r.RERANK_EVIDENCE,
+                                    message=f"sharing cited studies failed: {type(exc).__name__}: {exc}"[:500]))
         for cid, recs in found.items():
             if cid in reranked and recs:
                 # Verified against the claim, so kept ahead of the reranker's picks (§6 cap).
@@ -311,6 +331,8 @@ def make_rerank_node(
         if find_study is not None or found:
             update["found_study_evidence"] = found
             update["find_study_trail"] = study_trail
+        if shared_trail or "shared_study_trail" in state:
+            update["shared_study_trail"] = shared_trail
         if errors:
             update["errors"] = errors
         return update
