@@ -69,6 +69,7 @@ from app.core.graph.stance import PromptNotFoundError, load_prompt  # shared pro
 from app.core.graph.unproven_guard import apply_unproven_guard
 from app.core.guardrails.injection import GUARDRAIL_ERROR_PREFIX
 from app.core.guardrails.outputs import OutputViolation, VerificationOutput, _no_urls, parse_output
+from app.core.user_text import evidence_ids_in, reword_reviewer, render_evidence_ids, source_name
 from app.core.guardrails.untrusted import (
     DEFAULT_MAX_BLOCK_CHARS,
     GuardedPrompt,
@@ -199,6 +200,10 @@ def evidence_index(evidence: Sequence[EvidenceRecord]) -> str:
             parts.append("publication type: " + _meta(", ".join(e.publication_type)))
         if e.publication_year:
             parts.append(f"year: {int(e.publication_year)}")
+        if e.journal:
+            parts.append(f"journal: {_meta(e.journal)}")
+        if e.pub_date:
+            parts.append(f"published: {_meta(e.pub_date)}")
         if e.publisher:
             parts.append(f"publisher: {_meta(e.publisher)}")
         if e.retrieved_at:
@@ -225,6 +230,10 @@ def _instructions(
         f"Claim category: {_meta(claim.claim_category)}. {unsupported}\n\n"
         f"EVIDENCE INDEX (metadata from the retrieval tools; cite only these IDs):\n{evidence_index(evidence)}\n\n"
         "Each paper's title and abstract are in fenced blocks with the same id.\n"
+        "Cite papers by ID only in the two evidence-ID lists. In the explanation and limitations, "
+        "never write an evidence ID (ev_...): name a paper by its short title or its PMID. "
+        "When the claim names a journal or a publication date, check it against the journal and "
+        "published date in the index.\n"
     )
     if repair_note:
         text += (
@@ -251,7 +260,11 @@ def build_prompt(
     )
     blocks = list(prompt.blocks)
     if critic and critic.decision == CriticDecision.REVISE_VERIFICATION and critic.issues:
-        notes = "REVIEWER NOTES on the previous verdict:\n" + "\n".join(f"- {i}" for i in critic.issues)
+        notes = (
+            "NOTES FROM A SECOND AUTOMATED CHECK on the previous verdict (a model, not a person; if "
+            "you refer to them, call them 'a second automated check', never 'the reviewer'):\n"
+            + "\n".join(f"- {i}" for i in critic.issues)
+        )
         blocks.append(fence(notes, kind="model_output", item_id=f"{claim.claim_id}:critic", max_chars=max_chars))
     return prompt.model_copy(update={"system": guarded_system_prompt(system_prompt), "blocks": tuple(blocks)})
 
@@ -325,6 +338,26 @@ def parse_verification(raw: Any, allowed_ids: Iterable[str]) -> VerifierToolOutp
         raise InvalidVerification("output_rejected", exc.reason) from None
     check_citations(out, allowed_ids)  # type: ignore[arg-type]
     return out  # type: ignore[return-value]
+
+
+# ------------------------------------------------------------------ user-facing text (T65)
+
+
+def source_names(evidence: Sequence[EvidenceRecord]) -> dict[str, Optional[str]]:
+    """Evidence id → how user-facing text names the paper (short title, else PMID)."""
+    return {e.evidence_id: source_name(e.title, e.pmid) for e in evidence}
+
+
+def ids_in_text(out: VerifierToolOutput) -> list[str]:
+    """Evidence ids written into the explanation or limitations (T65 a): internal ids
+    must not reach the reader."""
+    return evidence_ids_in(" ".join([out.explanation, *out.limitations]))
+
+
+def clean_text(text: str, names: dict[str, Optional[str]]) -> str:
+    """Last line of the output check: ids rendered as source names, the critic called
+    "a second automated check" rather than "the reviewer"."""
+    return reword_reviewer(render_evidence_ids(text, names))
 
 
 # ------------------------------------------------------------------ node
@@ -416,6 +449,23 @@ def verify_claim(
                 f"verdict not determined: the verifier's answer was rejected ({exc.kind})",
                 model=model, version=recorded_version,
             ), errors
+        leaked = ids_in_text(out)
+        if leaked and attempt < max_repairs:
+            # T65 (a): one repair; if the answer still carries ids, they are rendered below.
+            repair_note = (
+                f"the explanation or limitations contain internal evidence IDs ({', '.join(leaked[:5])}); "
+                "keep IDs in the evidence-ID lists only and name papers by short title or PMID"
+            )
+            errors.append(NodeError(
+                node=r.VERIFY_CLAIMS, message=f"repair requested: evidence_id_in_text: {', '.join(leaked[:5])}",
+                claim_id=claim.claim_id,
+            ))
+            continue
+        names = source_names(evidence)
+        out = out.model_copy(update={
+            "explanation": clean_text(out.explanation, names),
+            "limitations": [t for t in (clean_text(x, names) for x in out.limitations) if t],
+        })
         if out.verdict == Verdict.UNSUPPORTED and not allow_unsupported:
             # Harm, mechanism and other claims with no evidence stay insufficient (§7).
             return VerificationResult(

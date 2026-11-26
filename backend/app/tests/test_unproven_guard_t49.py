@@ -240,7 +240,9 @@ def test_vitamin_k_video_is_no_longer_misinfo_with_the_guard():
         assert vr[cid].verdict == Verdict.INSUFFICIENT_EVIDENCE
         assert vr[cid].limitations[-1] == OFF_TOPIC_LIMITATION
     # Real rows: c1, c8, c10, c11 had papers; c13 had nothing to read (no model call).
-    assert sorted(caller.calls) == ["c1", "c10", "c11", "c8"]
+    # T65 (a): a stored explanation that names evidence ids (ev_...) gets one repair call,
+    # so a claim may appear twice; the set of claims called is unchanged.
+    assert sorted(set(caller.calls)) == ["c1", "c10", "c11", "c8"]
     assert not any(v.verdict == Verdict.UNSUPPORTED for v in vr.values())
     assert vr["c8"].verdict == Verdict.SUPPORTED
     final = out["final_result"]
