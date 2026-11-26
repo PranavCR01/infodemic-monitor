@@ -67,6 +67,7 @@ EVIDENCE_STATEMENTS = [
     "These studies on newborns are observational",
     "the sample was small",
     "it's only one study",
+    "there are only two small trials",
     "the trials weren't randomised",
     "the evidence that turmeric cures cancer is weak",
     "The research on turmeric is still very preliminary",
