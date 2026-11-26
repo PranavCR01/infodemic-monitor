@@ -1,6 +1,6 @@
 # PubMed fixtures (live captures, trimmed)
 
-Real E-utilities responses recorded on 2026-11-22 (T18) by
+Real E-utilities responses recorded on 2026-11-22 (T18; the fasting / type 2 diabetes claim re-recorded on 2026-11-26 for T50, whose lexicon maps "type 2 diabetes" to its own MeSH heading) by
 `scripts/record_pubmed_fixtures.py` against live NCBI, for the ten default claims in
 that script (first query of the ladder that found papers). Same layout as
 `../pubmed` (`esearch/index.json`, `esearch/*.json`, `efetch/<pmid>.xml`), so

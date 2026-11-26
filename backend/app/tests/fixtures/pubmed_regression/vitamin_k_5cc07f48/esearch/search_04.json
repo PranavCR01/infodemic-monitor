@@ -1,0 +1,20 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "75",
+  "retmax": "5",
+  "retstart": "0",
+  "idlist": [
+   "39680399",
+   "36194215",
+   "37950897",
+   "41359326",
+   "32207787"
+  ],
+  "translationset": [],
+  "querytranslation": "\"JAMA\"[Journal] AND (\"Vitamin K\"[MeSH Terms] OR \"Vitamin K\"[Title/Abstract] OR \"phytonadione\"[Title/Abstract] OR \"phylloquinone\"[Title/Abstract])"
+ }
+}

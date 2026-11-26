@@ -98,6 +98,13 @@ def default_script(step: str, inp: Any) -> Any:
         return {"decision": "APPROVE", "issues": [], "suggested_queries": [], "requires_review": False}
     if step == "judge_explanation":
         return {"explanation": "Written by the scripted test model."}
+    # T50 retrieval helpers: no extra terms, no translation needed, no study found.
+    if step == "plan_search":
+        return {"intervention": [], "outcome": [], "population": []}
+    if step == "translate_claim":
+        return "scripted translation"
+    if step == "find_study":
+        return {"text": '{"candidates": []}', "web_queries": [], "web_search_requests": 0}
     raise AssertionError(f"unexpected step {step}")
 
 

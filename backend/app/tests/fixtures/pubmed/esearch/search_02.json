@@ -12,6 +12,6 @@
    "99000102"
   ],
   "translationset": [],
-  "querytranslation": "Beverages[MeSH Terms] AND \"Respiratory Tract Infections\"[MeSH Terms]"
+  "querytranslation": "(\"hot drinks\"[tiab] OR \"hot beverages\"[tiab] OR \"hot water\"[tiab]) AND \"Respiratory Tract Infections\"[MeSH Terms]"
  }
 }

@@ -1,0 +1,18 @@
+{
+ "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Injections, Intramuscular\"[MeSH Terms] OR injection[tiab] OR intramuscular[tiab]) AND (Hemorrhage[MeSH Terms] OR bleeding[tiab] OR hemorrhage[tiab]) AND (\"Infant, Newborn\"[MeSH Terms] OR newborn[tiab] OR neonatal[tiab]) AND (Infant[MeSH Terms] OR infants[tiab])": "search_01.json",
+ "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Injections, Intramuscular\"[MeSH Terms] OR injection[tiab] OR intramuscular[tiab]) AND (Hemorrhage[MeSH Terms] OR bleeding[tiab] OR hemorrhage[tiab])": "search_02.json",
+ "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Injections, Intramuscular\"[MeSH Terms] OR injection[tiab] OR intramuscular[tiab])": "search_03.json",
+ "\"JAMA\"[ta] AND (\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab])": "search_04.json",
+ "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (Infant[MeSH Terms] OR infants[tiab])": "search_05.json",
+ "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab])": "search_06.json",
+ "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Infant, Newborn\"[MeSH Terms] OR newborn[tiab] OR neonatal[tiab])": "search_07.json",
+ "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (Hemorrhage[MeSH Terms] OR bleeding[tiab] OR hemorrhage[tiab]) AND (Infant[MeSH Terms] OR infants[tiab])": "search_08.json",
+ "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (Hemorrhage[MeSH Terms] OR bleeding[tiab] OR hemorrhage[tiab])": "search_09.json",
+ "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Blood Coagulation\"[MeSH Terms] OR coagulation[tiab] OR clotting[tiab]) AND (Infant[MeSH Terms] OR infants[tiab])": "search_10.json",
+ "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Blood Coagulation\"[MeSH Terms] OR coagulation[tiab] OR clotting[tiab])": "search_11.json",
+ "(\"Intracranial Hemorrhages\"[MeSH Terms] OR \"intracranial hemorrhage\"[tiab])": "search_12.json",
+ "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Injections, Intramuscular\"[MeSH Terms] OR injection[tiab] OR intramuscular[tiab]) AND (\"Infant, Newborn\"[MeSH Terms] OR newborn[tiab] OR neonatal[tiab])": "search_13.json",
+ "((\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) OR (\"Injections, Intramuscular\"[MeSH Terms] OR injection[tiab] OR intramuscular[tiab]))": "search_14.json",
+ "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab])": "search_15.json",
+ "((\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) OR (Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab]))": "search_16.json"
+}

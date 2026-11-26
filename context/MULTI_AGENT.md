@@ -2073,6 +2073,31 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-26**: T50 (design §6, §13) search planning rewrite and find-the-study step, no paid
+  calls. (a) term-aware content words (`vitamin k`, `type 2 diabetes`, never `vitamin`); (b) 88
+  lexicon entries added (vitamin K, VKDB, newborns, breast milk, coagulation, intracranial
+  haemorrhage + tune-split gaps, es/fr surface forms); (c) `plan_search` assistant wired behind
+  `config/routing.yaml` + `config/pipeline.yaml`, output sanitised; (d) each round a distinct,
+  broader rung, `ladder_exhausted` instead of repeats (intervention never broadened to its parent);
+  (e) citation lookup (`"JAMA"[ta] AND 2026[dp] AND topic`); (f) keyword fallback <= 3 terms, no
+  filler; (g) screened-out papers in the search trail / result API; (h) language detection +
+  `translate_claim`, rules-only fallback with that language's stop words; (i) `find_study`
+  (web-search model proposes ids; we verify via EFetch / ESearch `[doi]` / Crossref; only verified
+  PubMed or `journal_doi` records become evidence), run from `rerank_evidence`, records pinned.
+  JAMA DOI verified to PMID 42986716 via E-utilities. Crossref blocked from the build env
+  (synthetic fixture). D8 tune recall, rules only: strict (golden PMID kept) 4/118 → 16/118;
+  lenient 52/187 → 113/187 (T49 intervention yardstick) or 75/187 → 149/187 = 79.7% (claim-concept
+  yardstick): target 80% not met without the model helpers; non-English lenient 1/59 → 26/59 (42/59
+  claim yardstick); repeated rounds 253 → 0. D8 CI regression set: `fixtures/pubmed_regression/`
+  (job 5cc07f48, real E-utilities answers). After coordinator review: the T49 reconstructed fixture
+  is replaced by the real production rows (`vitamin_k_job.real.json`); on them the guard gives
+  NO_MISINFO, not CANNOT_RECOGNIZE (stored SUPPORTED c8 decides), and CANNOT_RECOGNIZE + nothing_judged
+  without c8. Real vitamin K claims: 8/8 expected (c1, c3-c7, c9, c12) keep vitamin K / VKDB papers;
+  c2's citation lookup retrieves the JAMA paper (PMID 42986716) but only find-the-study (paid) pins
+  it. "Vitamin K antagonist" no longer counts as on topic; non-Latin claims record
+  `no_query_reason: needs_translation`. T49 replay on T50 evidence: 4/5 tune unproven videos regain
+  MISINFO (unproven) (v120 stays CANNOT_RECOGNIZE: seawater not recognised as the intervention
+  rules-only). Dry-run paid estimate: vitamin K ~$0.12 (upper $0.39), tune ~$0.84 (upper $2.65). Cross-check unchanged. Report `evals/reports/T50/`. Branch `auto/T50`.
 - **2026-11-26**: T49 (design §7; §9 unchanged) unproven guard, urgent, no spend. After the vitamin K
   production job 5cc07f48 (accurate video labelled MISINFO (unproven) from an empty and an off-topic
   search), `app.core.graph.unproven_guard` runs in the `verify_claims` node right after each verdict

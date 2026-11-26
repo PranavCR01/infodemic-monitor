@@ -1,0 +1,20 @@
+{
+ "header": {
+  "type": "esearch",
+  "version": "0.3"
+ },
+ "esearchresult": {
+  "count": "729",
+  "retmax": "5",
+  "retstart": "0",
+  "idlist": [
+   "35190810",
+   "34496783",
+   "32187975",
+   "42440325",
+   "32019806"
+  ],
+  "translationset": [],
+  "querytranslation": "(\"Vitamin K\"[MeSH Terms] OR \"Vitamin K\"[Title/Abstract] OR \"phytonadione\"[Title/Abstract] OR \"phylloquinone\"[Title/Abstract]) AND (\"injections, intramuscular\"[MeSH Terms] OR \"injection\"[Title/Abstract] OR \"intramuscular\"[Title/Abstract])"
+ }
+}

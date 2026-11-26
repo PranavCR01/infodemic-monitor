@@ -90,7 +90,7 @@ def _evidence_for_claim(state: dict, cid: str) -> list:
     seen: dict[str, Any] = {}
     for rec in (state.get("reranked_evidence") or {}).get(cid, []):
         seen.setdefault(rec.evidence_id, rec)
-    for pool in ("retrieved_evidence", "library_evidence"):
+    for pool in ("retrieved_evidence", "library_evidence", "found_study_evidence"):
         v = (state.get("verification_results") or {}).get(cid)
         cited = set(v.supporting_evidence_ids + v.contradicting_evidence_ids) if v else set()
         for rec in (state.get(pool) or {}).get(cid, []):
