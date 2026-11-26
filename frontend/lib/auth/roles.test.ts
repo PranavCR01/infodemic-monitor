@@ -91,3 +91,10 @@ describe("safeNext", () => {
     expect(safeNext(input as string | null)).toBe(out);
   });
 });
+
+describe("/dashboard (T62)", () => {
+  it("is open to every signed-in role and sends signed-out users to sign in", () => {
+    for (const r of ["analyst", "reviewer", "admin", undefined]) expect(decideAccess("/dashboard", "", user(r))).toEqual({ kind: "allow" });
+    expect(decideAccess("/dashboard", "", null)).toEqual({ kind: "sign-in", next: "/dashboard" });
+  });
+});

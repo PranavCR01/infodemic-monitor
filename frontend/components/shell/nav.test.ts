@@ -20,3 +20,9 @@ describe("initials", () => {
     [null, "?"],
   ])("%s → %s", (email, out) => expect(initials(email)).toBe(out));
 });
+
+describe("dashboard nav (T62)", () => {
+  it("lists the Dashboard for every signed-in role", () => {
+    for (const r of ["analyst", "reviewer", "admin"] as const) expect(navFor(r).map((i) => i.href)).toContain("/dashboard");
+  });
+});
