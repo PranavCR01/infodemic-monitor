@@ -8,6 +8,7 @@ export const NAV: NavItem[] = [
   { href: "/jobs", label: "Videos", icon: "grid", role: "analyst", match: (p) => p === "/jobs" || p.startsWith("/jobs/") },
   { href: "/", label: "Submit", icon: "upload", role: "analyst", match: (p) => p === "/" },
   { href: "/review", label: "Review queue", icon: "inbox", role: "reviewer", match: (p) => p === "/review" || p.startsWith("/review/") },
+  { href: "/admin/evals", label: "Evaluations", icon: "chart", role: "admin", match: (p) => p === "/admin/evals" || p.startsWith("/admin/evals/") },
 ];
 
 export function navFor(role: Role | null): NavItem[] {

@@ -365,3 +365,40 @@ export function displayText(text: string | null | undefined): string {
   if (!text) return "";
   return ENUM_DISPLAY.reduce((s, [re, rep]) => s.replace(re, rep), text);
 }
+
+// ---------------------------------------------------------------- evaluations (T63, admin only)
+
+/** Plain names for the pipeline's graph steps (backend app/evaluation/registry.py PIPELINE_STEPS). */
+export const PIPELINE_STEP_DISPLAY: Record<string, string> = {
+  load_artifacts: "Load video",
+  transcribe_audio: "Transcribe speech",
+  extract_ocr: "Read on-screen text",
+  fuse_modalities: "Combine speech and text",
+  extract_claims: "Find health claims",
+  analyze_stance: "Read the speaker's stance",
+  plan_retrieval: "Plan the search",
+  retrieve_evidence: "Search for evidence",
+  rerank_evidence: "Rank the evidence",
+  verify_claims: "Check claims against evidence",
+  critique_verification: "Second check of the verdicts",
+  judge_classification: "Decide the video's label",
+  validate_result: "Validate the result",
+  route_for_review: "Send to a reviewer",
+  human_review: "Reviewer decision",
+  persist_result: "Save the result",
+};
+
+export function stepDisplay(step: string): string {
+  return PIPELINE_STEP_DISPLAY[step] ?? step.replace(/_/g, " ");
+}
+
+export type EvalSplit = "tune" | "test" | "none";
+
+/** Every tune-split result carries this label (T63): development numbers, not product accuracy. */
+export const EVAL_SPLIT_DISPLAY: Record<EvalSplit, { short: string; label: string }> = {
+  tune: { short: "Tune", label: "Development (tune split): not product accuracy" },
+  test: { short: "Test", label: "Held-out test split" },
+  none: { short: "Not a golden split", label: "Not one golden-set split (see notes)" },
+};
+
+export const SYNTHETIC_DISPLAY = "Synthetic data: shows how it works, not real accuracy";

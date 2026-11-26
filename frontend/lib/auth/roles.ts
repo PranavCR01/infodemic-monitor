@@ -41,6 +41,7 @@ export function hasRole(role: Role | null, required: Role): boolean {
 export const ROUTE_ROLES: { prefix: string; role: Role }[] = [
   { prefix: "/review", role: "reviewer" },
   { prefix: "/evaluation", role: "admin" },
+  { prefix: "/admin", role: "admin" },
 ];
 
 const matches = (path: string, prefix: string) => path === prefix || path.startsWith(prefix + "/");
