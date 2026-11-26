@@ -13,6 +13,7 @@ import { ClaimTimeline } from "./ClaimTimeline";
 import { HowWeSearched } from "./HowWeSearched";
 import { flaggedClaimIds } from "@/lib/search-finding";
 import { Transcript } from "./Transcript";
+import { VideoPlayer, type PlayerHandle } from "./VideoPlayer";
 
 type Props = {
   result: ResultModel;
@@ -31,7 +32,7 @@ type Props = {
 export function ResultView({ result: r, videoUrl = null, onVideoError, onRequestReview }: Props) {
   const flagged = useMemo(() => flaggedClaimIds(r), [r]);
   const [activeId, setActiveId] = useState<string | null>(r.decidingClaims[0]?.id ?? r.claims[0]?.id ?? null);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const playerRef = useRef<PlayerHandle>(null);
   // The open claim lives in the URL (?claim=c2), so a claim can be linked to.
   // history.replaceState keeps Next's useSearchParams in sync without a server round trip.
   const params = useSearchParams();
@@ -58,18 +59,14 @@ export function ResultView({ result: r, videoUrl = null, onVideoError, onRequest
   }, []);
 
   const seek = useCallback((t: number) => {
-    const v = videoRef.current;
-    if (v) {
-      v.currentTime = t;
-      void v.play().catch(() => {});
-    }
+    playerRef.current?.seek(t);
     const c = claimAt(r.claims, t);
     if (c) setActiveId(c.id);
   }, [r.claims]);
 
   // Playback selects the claim being spoken, at most 4 times a second.
   useEffect(() => {
-    const v = videoRef.current;
+    const v = playerRef.current?.video;
     if (!v) return;
     let last = 0;
     const onTime = () => {
@@ -114,14 +111,7 @@ export function ResultView({ result: r, videoUrl = null, onVideoError, onRequest
       ) : (
         <div className="grid items-start gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(380px,460px)]">
           <section aria-labelledby="transcript-h" className="flex flex-col gap-4 rounded-lg border border-line bg-surface p-4 shadow-1 lg:sticky lg:top-4">
-            {videoUrl ? (
-              // eslint-disable-next-line jsx-a11y/media-has-caption -- the transcript below is the text alternative
-              <video ref={videoRef} src={videoUrl} controls preload="metadata" onError={onVideoError} className="max-h-[360px] w-full rounded-md bg-black" />
-            ) : (
-              <p className="flex items-center gap-2 rounded-md bg-surface-sunken px-3 py-2 text-small text-ink-2">
-                <Icon name="play" /> Video playback isn&apos;t available for this video. The transcript and claims are complete.
-              </p>
-            )}
+            <VideoPlayer ref={playerRef} url={videoUrl} onError={onVideoError} />
             <ClaimTimeline claims={r.claims} duration={duration} activeId={activeId} onSelect={(c) => { select(c); seek(c.start); }} />
             <h2 id="transcript-h" className="text-h2 text-ink">
               Transcript and on-screen text

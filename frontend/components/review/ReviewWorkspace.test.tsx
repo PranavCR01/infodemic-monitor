@@ -15,12 +15,13 @@ const result = adaptResult(MOCK_MISINFO_PENDING);
 /** Stands in for WorkspaceClient: on a saved pre-reveal, the server's revealed case replaces the old one. */
 const BLIND = adaptBlindMaterial(MOCK_BLIND_MATERIAL);
 
-function Harness({ raw, onDecide, onPreReveal, blind = BLIND, blindFailed = false }: {
+function Harness({ raw, onDecide, onPreReveal, blind = BLIND, blindFailed = false, videoUrl = null }: {
   raw: RawCase;
   onDecide: ReturnType<typeof vi.fn>;
   onPreReveal: ReturnType<typeof vi.fn>;
   blind?: BlindMaterial | null;
   blindFailed?: boolean;
+  videoUrl?: string | null;
 }) {
   const [c, setC] = useState(raw);
   return (
@@ -29,6 +30,7 @@ function Harness({ raw, onDecide, onPreReveal, blind = BLIND, blindFailed = fals
       result={result}
       blindMaterial={blind}
       blindMaterialFailed={blindFailed}
+      videoUrl={videoUrl}
       onDecide={onDecide}
       onPreReveal={async (body) => {
         const r = await onPreReveal(body);
@@ -201,6 +203,43 @@ describe("ReviewWorkspace: how we searched (T52)", () => {
     setup();
     expect(screen.queryByRole("region", { name: "How we searched" })).not.toBeInTheDocument();
     expect(screen.queryByText("Technical details")).not.toBeInTheDocument();
+  });
+});
+
+describe("ReviewWorkspace: video (T56)", () => {
+  const URL_ = "https://storage.example/signed/video.mp4?token=x";
+  const video = () => document.querySelector("video") as HTMLVideoElement | null;
+
+  it("shows the player to a reviewer on another user's case, already in the blind step", () => {
+    // rev-1 was submitted by someone else (OTHER_A); the viewer is a reviewer judging it blind.
+    render(<Harness raw={MOCK_CASE_HIGH} onDecide={vi.fn()} onPreReveal={vi.fn()} videoUrl={URL_} />);
+    expect(screen.getByRole("heading", { name: "Your judgement first" })).toBeInTheDocument();
+    expect(video()).toHaveAttribute("src", URL_);
+    expect(screen.queryByText("System label:")).not.toBeInTheDocument();
+  });
+
+  it("seeks the video from a claim's time range and from a quoted line, by keyboard-reachable buttons", () => {
+    const play = vi.spyOn(HTMLMediaElement.prototype, "play").mockResolvedValue(undefined);
+    render(<Harness raw={MOCK_CASE_HIGH} onDecide={vi.fn()} onPreReveal={vi.fn()} videoUrl={URL_} />);
+    fireEvent.click(screen.getByRole("button", { name: /play claim 2/ }));
+    expect(video()!.currentTime).toBeCloseTo(8.1);
+    fireEvent.click(screen.getAllByRole("button", { name: /That's it, that's the secret.*play from 0:03/ })[0]);
+    expect(video()!.currentTime).toBeCloseTo(3.2);
+    expect(play).toHaveBeenCalledTimes(2);
+    play.mockRestore();
+  });
+
+  it("keeps the player and seeking after the reveal", () => {
+    render(<Harness raw={MOCK_CASE_NORMAL} onDecide={vi.fn()} onPreReveal={vi.fn()} videoUrl={URL_} />);
+    expect(video()).not.toBeNull();
+    expect(screen.getByRole("button", { name: /play claim 1/ })).toBeInTheDocument();
+  });
+
+  it("says when there's no playable video, and shows times as plain text", () => {
+    render(<Harness raw={MOCK_CASE_HIGH} onDecide={vi.fn()} onPreReveal={vi.fn()} videoUrl={null} />);
+    expect(video()).toBeNull();
+    expect(screen.getByText(/Video playback isn't available for this video/)).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /play claim/ })).not.toBeInTheDocument();
   });
 });
 
