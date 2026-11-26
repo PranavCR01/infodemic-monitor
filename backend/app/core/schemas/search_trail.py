@@ -68,6 +68,9 @@ class PlanningView(BaseModel):
     citation: Optional[dict] = None
     assistant_used: bool = False
     assistant_error: Optional[str] = None
+    # No query at all, and why: "needs_translation" (a script the rules can't read and no
+    # translator configured) or "no_terms".
+    no_query_reason: Optional[str] = None
 
 
 class ScreenedOutView(BaseModel):

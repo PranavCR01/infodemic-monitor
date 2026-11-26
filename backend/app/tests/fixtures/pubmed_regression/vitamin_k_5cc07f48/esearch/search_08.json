@@ -4,22 +4,26 @@
   "version": "0.3"
  },
  "esearchresult": {
-  "count": "625",
+  "count": "806",
   "retmax": "5",
   "retstart": "0",
   "idlist": [
-   "32187975",
    "35190810",
    "34496783",
-   "40269655",
-   "42440325"
+   "32187975",
+   "42440325",
+   "38057072"
   ],
   "translationset": [
    {
     "from": "Hemorrhage[MeSH Terms]",
     "to": "\"hemorrhage\"[MeSH Terms]"
+   },
+   {
+    "from": "Infant[MeSH Terms]",
+    "to": "\"infant\"[MeSH Terms]"
    }
   ],
-  "querytranslation": "(\"Vitamin K\"[MeSH Terms] OR \"Vitamin K\"[Title/Abstract] OR \"phytonadione\"[Title/Abstract] OR \"phylloquinone\"[Title/Abstract]) AND (\"hemorrhage\"[MeSH Terms] OR \"bleeding\"[Title/Abstract] OR \"hemorrhage\"[Title/Abstract]) AND \"Vitamin K Deficiency\"[MeSH Terms]"
+  "querytranslation": "(\"Vitamin K\"[MeSH Terms] OR \"Vitamin K\"[Title/Abstract] OR \"phytonadione\"[Title/Abstract] OR \"phylloquinone\"[Title/Abstract]) AND (\"hemorrhage\"[MeSH Terms] OR \"bleeding\"[Title/Abstract] OR \"hemorrhage\"[Title/Abstract]) AND (\"infant\"[MeSH Terms] OR \"infants\"[Title/Abstract])"
  }
 }

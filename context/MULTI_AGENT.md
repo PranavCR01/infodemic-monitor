@@ -2089,11 +2089,15 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
   lenient 52/187 → 113/187 (T49 intervention yardstick) or 75/187 → 149/187 = 79.7% (claim-concept
   yardstick): target 80% not met without the model helpers; non-English lenient 1/59 → 26/59 (42/59
   claim yardstick); repeated rounds 253 → 0. D8 CI regression set: `fixtures/pubmed_regression/`
-  (job 5cc07f48, real E-utilities answers, reconstructed claim texts). Vitamin K fixture: 9/9
-  expected claims keep vitamin K / VKDB papers. T49 replay on T50 evidence: 4/5 tune unproven
-  videos regain MISINFO (unproven) (v120 stays CANNOT_RECOGNIZE: seawater not recognised as the
-  intervention rules-only). Dry-run paid estimate: vitamin K ~$0.17 (upper $0.52), tune ~$0.80
-  (upper $2.52). Cross-check unchanged. Report `evals/reports/T50/`. Branch `auto/T50`.
+  (job 5cc07f48, real E-utilities answers). After coordinator review: the T49 reconstructed fixture
+  is replaced by the real production rows (`vitamin_k_job.real.json`); on them the guard gives
+  NO_MISINFO, not CANNOT_RECOGNIZE (stored SUPPORTED c8 decides), and CANNOT_RECOGNIZE + nothing_judged
+  without c8. Real vitamin K claims: 8/8 expected (c1, c3-c7, c9, c12) keep vitamin K / VKDB papers;
+  c2's citation lookup retrieves the JAMA paper (PMID 42986716) but only find-the-study (paid) pins
+  it. "Vitamin K antagonist" no longer counts as on topic; non-Latin claims record
+  `no_query_reason: needs_translation`. T49 replay on T50 evidence: 4/5 tune unproven videos regain
+  MISINFO (unproven) (v120 stays CANNOT_RECOGNIZE: seawater not recognised as the intervention
+  rules-only). Dry-run paid estimate: vitamin K ~$0.12 (upper $0.39), tune ~$0.84 (upper $2.65). Cross-check unchanged. Report `evals/reports/T50/`. Branch `auto/T50`.
 - **2026-11-26**: T49 (design §7; §9 unchanged) unproven guard, urgent, no spend. After the vitamin K
   production job 5cc07f48 (accurate video labelled MISINFO (unproven) from an empty and an off-topic
   search), `app.core.graph.unproven_guard` runs in the `verify_claims` node right after each verdict

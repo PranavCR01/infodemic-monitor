@@ -3745,7 +3745,7 @@
   }
  },
  "after": {
-  "code_revision": "95025fb99ab2b9bf58581602ee354993c9a93bef",
+  "code_revision": "ed5504c6ab49701e00bed4705fe1e26a5b72ab0a",
   "rows": {
    "v11:c1": {
     "on_topic": true,
@@ -4266,11 +4266,11 @@
     "strict": false,
     "lenient": false,
     "lenient_claim": true,
-    "retrieved": 39,
-    "kept": 10,
+    "retrieved": 38,
+    "kept": 9,
     "queries": [
-     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab]) AND (\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (Glucose[MeSH Terms] OR glucose[tiab])",
-     "(Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])"
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (Glucose[MeSH Terms] OR glucose[tiab]) AND (Neoplasms[MeSH Terms] OR cancer[tiab] OR neoplasm[tiab] OR tumor[tiab])",
+     "(\"Dietary Sugars\"[MeSH Terms] OR sugar[tiab]) AND (Glucose[MeSH Terms] OR glucose[tiab])"
     ],
     "repeats": 0,
     "stopped": true
@@ -4904,11 +4904,10 @@
     "kept": 0,
     "queries": [
      "(\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab]) AND (Testosterone[MeSH Terms] OR testosterone[tiab]) AND (Atrazine[MeSH Terms] OR atrazine[tiab])",
-     "(\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab]) AND (Testosterone[MeSH Terms] OR testosterone[tiab]) AND Herbicides[MeSH Terms]",
      "(\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab])"
     ],
     "repeats": 0,
-    "stopped": false
+    "stopped": true
    },
    "v68:c2": {
     "on_topic": true,
@@ -5490,15 +5489,14 @@
     "strict": false,
     "lenient": true,
     "lenient_claim": true,
-    "retrieved": 49,
+    "retrieved": 40,
     "kept": 10,
     "queries": [
      "(Fluorides[MeSH Terms] OR fluoride[tiab]) AND (\"Drinking Water\"[MeSH Terms] OR \"water intake\"[tiab])",
-     "(Fluorides[MeSH Terms] OR fluoride[tiab]) AND Beverages[MeSH Terms]",
      "(Fluorides[MeSH Terms] OR fluoride[tiab])"
     ],
     "repeats": 0,
-    "stopped": false
+    "stopped": true
    },
    "v87:c4": {
     "on_topic": true,

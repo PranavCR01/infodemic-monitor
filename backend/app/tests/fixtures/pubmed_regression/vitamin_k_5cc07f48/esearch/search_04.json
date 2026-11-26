@@ -4,22 +4,17 @@
   "version": "0.3"
  },
  "esearchresult": {
-  "count": "260",
+  "count": "75",
   "retmax": "5",
   "retstart": "0",
   "idlist": [
-   "32187975",
-   "29999981",
-   "36117074",
-   "35859253",
-   "34196053"
+   "39680399",
+   "36194215",
+   "37950897",
+   "41359326",
+   "32207787"
   ],
-  "translationset": [
-   {
-    "from": "Infant[MeSH Terms]",
-    "to": "\"infant\"[MeSH Terms]"
-   }
-  ],
-  "querytranslation": "(\"Vitamin K\"[MeSH Terms] OR \"Vitamin K\"[Title/Abstract] OR \"phytonadione\"[Title/Abstract] OR \"phylloquinone\"[Title/Abstract]) AND (\"Intracranial Hemorrhages\"[MeSH Terms] OR \"intracranial hemorrhage\"[Title/Abstract]) AND (\"infant\"[MeSH Terms] OR \"infants\"[Title/Abstract])"
+  "translationset": [],
+  "querytranslation": "\"JAMA\"[Journal] AND (\"Vitamin K\"[MeSH Terms] OR \"Vitamin K\"[Title/Abstract] OR \"phytonadione\"[Title/Abstract] OR \"phylloquinone\"[Title/Abstract])"
  }
 }

@@ -1,14 +1,16 @@
 """T50: the vitamin K job (5cc07f48) as a search regression, before vs after.
 
-For each of the job's 13 claims (the T49 fixture, ``app/tests/fixtures/prod_5cc07f48``;
-its claim texts are RECONSTRUCTED, see its ``_provenance``), run the planner's queries
+For each of the job's 13 claims (the real production rows,
+``app/tests/fixtures/prod_5cc07f48/vitamin_k_job.real.json``), run the planner's queries
 against live PubMed for the full budget (3 rounds), rerank, and report whether a
-vitamin K / VKDB paper was retrieved and kept. Expected after T50 (BUILD_QUEUE row):
-c1-c7, c9 and c12 find vitamin K / VKDB papers.
+vitamin K / VKDB paper was retrieved and kept, and whether the JAMA 2026 paper (PMID
+42986716) was. Expected (coordinator review of #124): c1, c3-c7, c9, c12 keep a
+vitamin K / VKDB paper; c2-c5 land on the JAMA paper once find-the-study runs (a model
+step, not run here).
 
-"before" is the production query trail recorded in the fixture (every query searched
-'vitamin'); "after" is the rewritten planner, rules only (no model: the search
-assistant, translator and find-the-study step are not used). Run from backend/:
+"before" is the production query trail stored with the job; "after" is the rewritten
+planner, rules only (no model: the search assistant, translator and find-the-study
+step are not used). Run from backend/:
 
     python scripts/t50_vitamin_k_regression.py --out ../evals/reports/T50/vitamin_k.md
 """
@@ -30,8 +32,16 @@ from app.core.retrieval.rerank import Reranker  # noqa: E402
 from app.core.retrieval.retriever import EvidenceRetriever, merge_evidence  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
-FIXTURE = HERE.parent / "app" / "tests" / "fixtures" / "prod_5cc07f48" / "vitamin_k_job.json"
-EXPECTED = {"c1", "c2", "c3", "c4", "c5", "c6", "c7", "c9", "c12"}
+FIXTURE = HERE.parent / "app" / "tests" / "fixtures" / "prod_5cc07f48" / "vitamin_k_job.real.json"
+EXPECTED = {"c1", "c3", "c4", "c5", "c6", "c7", "c9", "c12"}
+JAMA_PMID = "42986716"
+
+
+def load_claims() -> list[dict]:
+    sys.path.insert(0, str(HERE.parent))
+    from app.tests.vitamin_k_fixture import claims_as_job
+
+    return claims_as_job(json.loads(FIXTURE.read_text()))
 _VITK = re.compile(r"vitamin[\s-]*k(?![a-z])|phytonadione|phylloquinone|vkdb", re.I)
 
 
@@ -49,13 +59,13 @@ def record_fixture(out_dir: Path, top: int = 5) -> None:
 
     from app.core.retrieval.pubmed import EFETCH_URL, ESEARCH_URL, TOOL_NAME
 
-    job = json.loads(FIXTURE.read_text())
-    context = [c["text"] for c in job["claims"]]
+    claims = load_claims()
+    context = [c["text"] for c in claims]
     planner = QueryPlanner()
     (out_dir / "esearch").mkdir(parents=True, exist_ok=True)
     (out_dir / "efetch").mkdir(parents=True, exist_ok=True)
     index, pmids = {}, set()
-    for c in job["claims"]:
+    for c in claims:
         for q in planner.ladder(c["text"], claim_kind=c["claim_kind"], context=context)[:3]:
             if q in index:
                 continue
@@ -92,8 +102,7 @@ def main(argv=None) -> int:
     sys.path.insert(0, str(HERE))
     from t50_search_recall import FileCache  # noqa: E402
 
-    job = json.loads(FIXTURE.read_text())
-    claims = job["claims"]
+    claims = load_claims()
     context = [c["text"] for c in claims]
     cache = FileCache(Path(args.cache)) if args.cache else None
     retriever = EvidenceRetriever(PubMedClient(), cache)
@@ -117,16 +126,23 @@ def main(argv=None) -> int:
             "retrieved": len(evidence), "vitk_retrieved": sum(map(is_vitamin_k, evidence)),
             "kept": len(kept), "vitk_kept": sum(map(is_vitamin_k, kept)),
             "first_kept": [f"{r.title[:90]} (PMID {r.pmid})" for r in kept[:2]],
+            "jama_retrieved": any(r.pmid == JAMA_PMID for r in evidence),
+            "jama_kept": any(r.pmid == JAMA_PMID for r in kept),
         })
     if cache:
         cache.save()
     exp = [r for r in rows if r["expected"]]
     ok = [r for r in exp if r["vitk_kept"]]
+    jama = [r["claim"] for r in rows if r["jama_kept"]]
     lines = ["# T50: vitamin K job 5cc07f48, search regression (rules only, live PubMed)", "",
-             "Claim texts are the T49 RECONSTRUCTED fixture (no production DB access); before = the "
-             "fixture's production query trail, after = the rewritten planner with the video's claims as context.",
-             "", f"Expected claims (c1-c7, c9, c12) with a vitamin K / VKDB paper kept: **{len(ok)}/{len(exp)}** "
+             "Real production rows (copied from prod by the coordinator). Before = the production query trail "
+             "stored with the job; after = the rewritten planner with the video's claims as context. No model.",
+             "", f"Expected claims (c1, c3-c7, c9, c12) with a vitamin K / VKDB paper kept: **{len(ok)}/{len(exp)}** "
              f"(retrieved: {sum(1 for r in exp if r['vitk_retrieved'])}/{len(exp)}).", "",
+             f"JAMA 2026 paper (PMID {JAMA_PMID}) kept by rules alone for: {', '.join(jama) or 'none'} "
+             f"(retrieved for: {', '.join(r['claim'] for r in rows if r['jama_retrieved']) or 'none'}). "
+             "c2-c5 are meant to land on it through find-the-study, which needs the paid run; the offline "
+             "test with a mocked web model shows each of c2-c5 verifies to it.", "",
              "| claim | expected | before: queries | after: queries (kind) | retrieved (vit K) | kept (vit K) |",
              "| --- | --- | --- | --- | --- | --- |"]
     for r in rows:

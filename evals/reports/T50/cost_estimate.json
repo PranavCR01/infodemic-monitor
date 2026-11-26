@@ -12,13 +12,13 @@
     "upper": 0.0
    },
    "find_study": {
-    "calls": 8,
-    "expected": 0.166365,
-    "upper": 0.52433
+    "calls": 6,
+    "expected": 0.12478110000000002,
+    "upper": 0.3932622
    }
   },
-  "expected_usd": 0.166365,
-  "upper_usd": 0.52433,
+  "expected_usd": 0.12478110000000002,
+  "upper_usd": 0.3932622,
   "per_claim": [
    {
     "claim": "c1",
@@ -69,28 +69,28 @@
     "claim": "c6",
     "translate": false,
     "assistant": false,
+    "find_study": true,
+    "find_study_reason": "nothing_on_topic",
+    "expected_usd": 0.0208,
+    "upper_usd": 0.06554
+   },
+   {
+    "claim": "c7",
+    "translate": false,
+    "assistant": false,
     "find_study": false,
     "find_study_reason": null,
     "expected_usd": 0.0,
     "upper_usd": 0.0
    },
    {
-    "claim": "c7",
-    "translate": false,
-    "assistant": false,
-    "find_study": true,
-    "find_study_reason": "nothing_on_topic",
-    "expected_usd": 0.0208,
-    "upper_usd": 0.06554
-   },
-   {
     "claim": "c8",
     "translate": false,
     "assistant": false,
-    "find_study": true,
-    "find_study_reason": "nothing_on_topic",
-    "expected_usd": 0.0208,
-    "upper_usd": 0.06554
+    "find_study": false,
+    "find_study_reason": null,
+    "expected_usd": 0.0,
+    "upper_usd": 0.0
    },
    {
     "claim": "c9",
@@ -105,28 +105,28 @@
     "claim": "c10",
     "translate": false,
     "assistant": false,
-    "find_study": true,
-    "find_study_reason": "nothing_on_topic",
-    "expected_usd": 0.0208,
-    "upper_usd": 0.06554
-   },
-   {
-    "claim": "c11",
-    "translate": false,
-    "assistant": false,
     "find_study": false,
     "find_study_reason": null,
     "expected_usd": 0.0,
     "upper_usd": 0.0
    },
    {
-    "claim": "c12",
+    "claim": "c11",
     "translate": false,
     "assistant": false,
     "find_study": true,
     "find_study_reason": "nothing_on_topic",
     "expected_usd": 0.0208,
     "upper_usd": 0.06554
+   },
+   {
+    "claim": "c12",
+    "translate": false,
+    "assistant": false,
+    "find_study": false,
+    "find_study_reason": null,
+    "expected_usd": 0.0,
+    "upper_usd": 0.0
    },
    {
     "claim": "c13",

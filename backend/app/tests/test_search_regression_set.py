@@ -18,11 +18,12 @@ from app.core.graph.retrieval_nodes import make_retrieval_nodes
 from app.core.graph.state import GraphClaim
 from app.core.retrieval.retriever import EvidenceRetriever
 from app.tests.pubmed_fixtures import RecordedPubMed
+from app.tests.vitamin_k_fixture import claims_as_job, load_real
 
 FIX = Path(__file__).parent / "fixtures"
 VITK_DIR = FIX / "pubmed_regression" / "vitamin_k_5cc07f48"
-VITK_JOB = json.loads((FIX / "prod_5cc07f48" / "vitamin_k_job.json").read_text())
-EXPECTED_VITK = ("c1", "c2", "c3", "c4", "c5", "c6", "c7", "c9", "c12")  # BUILD_QUEUE T50
+VITK_JOB = {"claims": claims_as_job(load_real())}  # the real production rows
+EXPECTED_VITK = ("c1", "c3", "c4", "c5", "c6", "c7", "c9", "c12")  # coordinator review of #124
 _VITK = re.compile(r"vitamin[\s-]*k(?![a-z])|phytonadione|phylloquinone|vkdb", re.I)
 
 
@@ -74,8 +75,21 @@ def test_vitamin_k_job_never_searches_bare_vitamin_and_never_repeats(vitk):
             assert re.findall(r"vitamins?\b(?! k\b)", q.lower()) == [], (cid, q)
 
 
-def test_c11_osteoporosis_claim_keeps_vitamin_k_not_vitamin_d_papers(vitk):
-    """The production miss: c11 kept only vitamin D / osteoporosis papers."""
+def test_c11_keeps_vitamin_k_papers_not_the_vitamin_d_ones_production_kept(vitk):
+    """The production miss: c11 kept vitamin D / falls / osteoporosis papers. Now its
+    search returns vitamin K papers only; the reranker keeps none of them, because the
+    claim names no outcome they could test ("a potentially devastating condition"), so
+    nothing off topic reaches the verifier (find-the-study would run next)."""
     state, _ = vitk
+    retrieved = state["retrieved_evidence"]["c11"]
+    assert retrieved and all(_VITK.search(f"{e.title} {e.abstract}") or "anticoagulant" in e.title.lower()
+                             for e in retrieved)
     kept = state["reranked_evidence"]["c11"]
-    assert kept and all(_VITK.search(f"{e.title} {e.abstract}") for e in kept[:3])
+    prod = {f"ev_{e['pmid']}" for c in load_real()["claims"] if c["claim_id"] == "c11" for e in c["evidence"]}
+    assert not prod & {e.evidence_id for e in kept}
+
+
+def test_c2_named_study_gets_a_citation_lookup_in_jama(vitk):
+    state, _ = vitk
+    first = state["search_trail"]["c2"][0]
+    assert first.query_kind == "citation" and first.pubmed_query.startswith('"JAMA"[ta] AND ')

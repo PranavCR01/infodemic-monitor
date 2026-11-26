@@ -4,17 +4,22 @@
   "version": "0.3"
  },
  "esearchresult": {
-  "count": "937734",
+  "count": "538000",
   "retmax": "5",
   "retstart": "0",
   "idlist": [
-   "32187975",
-   "34496783",
-   "36462533",
-   "28917562",
-   "27706531"
+   "39125301",
+   "34472618",
+   "30791399",
+   "38071415",
+   "33190689"
   ],
-  "translationset": [],
-  "querytranslation": "\"administration, oral\"[MeSH Terms] OR \"oral\"[Title/Abstract] OR \"Vitamin K\"[MeSH Terms] OR \"Vitamin K\"[Title/Abstract] OR \"phytonadione\"[Title/Abstract] OR \"phylloquinone\"[Title/Abstract]"
+  "translationset": [
+   {
+    "from": "Vaccines[MeSH Terms]",
+    "to": "\"vaccines\"[MeSH Terms]"
+   }
+  ],
+  "querytranslation": "\"Vitamin K\"[MeSH Terms] OR \"Vitamin K\"[Title/Abstract] OR \"phytonadione\"[Title/Abstract] OR \"phylloquinone\"[Title/Abstract] OR \"vaccines\"[MeSH Terms] OR \"vaccine\"[Title/Abstract] OR \"vaccination\"[Title/Abstract]"
  }
 }

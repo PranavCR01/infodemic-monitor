@@ -4,17 +4,22 @@
   "version": "0.3"
  },
  "esearchresult": {
-  "count": "33868",
+  "count": "238",
   "retmax": "5",
   "retstart": "0",
   "idlist": [
-   "39125301",
-   "34472618",
-   "30791399",
-   "38071415",
-   "14127371"
+   "33567467",
+   "35190810",
+   "34496783",
+   "32187975",
+   "42440325"
   ],
-  "translationset": [],
-  "querytranslation": "\"Vitamin K\"[MeSH Terms] OR \"Vitamin K\"[Title/Abstract] OR \"phytonadione\"[Title/Abstract] OR \"phylloquinone\"[Title/Abstract]"
+  "translationset": [
+   {
+    "from": "Hemorrhage[MeSH Terms]",
+    "to": "\"hemorrhage\"[MeSH Terms]"
+   }
+  ],
+  "querytranslation": "(\"Vitamin K\"[MeSH Terms] OR \"Vitamin K\"[Title/Abstract] OR \"phytonadione\"[Title/Abstract] OR \"phylloquinone\"[Title/Abstract]) AND (\"injections, intramuscular\"[MeSH Terms] OR \"injection\"[Title/Abstract] OR \"intramuscular\"[Title/Abstract]) AND (\"hemorrhage\"[MeSH Terms] OR \"bleeding\"[Title/Abstract] OR \"hemorrhage\"[Title/Abstract])"
  }
 }

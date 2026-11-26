@@ -4,17 +4,22 @@
   "version": "0.3"
  },
  "esearchresult": {
-  "count": "151",
+  "count": "8768",
   "retmax": "5",
   "retstart": "0",
   "idlist": [
-   "32187975",
-   "29999981",
-   "10569231",
-   "20301428",
-   "36117074"
+   "38238225",
+   "29913536",
+   "36117074",
+   "37847277",
+   "14159598"
   ],
-  "translationset": [],
-  "querytranslation": "(\"milk, human\"[MeSH Terms] OR \"breast milk\"[Title/Abstract] OR \"human milk\"[Title/Abstract]) AND (\"Vitamin K\"[MeSH Terms] OR \"Vitamin K\"[Title/Abstract] OR \"phytonadione\"[Title/Abstract] OR \"phylloquinone\"[Title/Abstract])"
+  "translationset": [
+   {
+    "from": "Hemorrhage[MeSH Terms]",
+    "to": "\"hemorrhage\"[MeSH Terms]"
+   }
+  ],
+  "querytranslation": "(\"Vitamin K\"[MeSH Terms] OR \"Vitamin K\"[Title/Abstract] OR \"phytonadione\"[Title/Abstract] OR \"phylloquinone\"[Title/Abstract]) AND (\"hemorrhage\"[MeSH Terms] OR \"bleeding\"[Title/Abstract] OR \"hemorrhage\"[Title/Abstract])"
  }
 }

@@ -45,7 +45,7 @@ from app.core.routing.config import load_routing  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 PROMPTS = HERE.parent / "app" / "core" / "graph" / "prompts"
-VITK = HERE.parent / "app" / "tests" / "fixtures" / "prod_5cc07f48" / "vitamin_k_job.json"
+VITK = HERE.parent / "app" / "tests" / "fixtures" / "prod_5cc07f48" / "vitamin_k_job.real.json"
 FORCED_FIND_STUDY = ("c2", "c3", "c4", "c5")  # the lead's regression: must land on the JAMA paper
 
 # Output tokens per call: (expected, cap). Caps are the nodes' max_tokens.

@@ -1,6 +1,6 @@
 # T50: search recall on the tune split (rules only, no model)
 
-Before: code b52e9521935b; after: code 95025fb99ab2. Live PubMed, up to 3 rounds per claim. On topic = the T49 deterministic check (`unproven_guard.on_topic`, from the after code, for both runs).
+Before: code b52e9521935b; after: code ed5504c6ab49. Live PubMed, up to 3 rounds per claim. On topic = the T49 deterministic check (`unproven_guard.on_topic`, from the after code, for both runs).
 
 ## D8 search quality bar (lead, 2026-11-26)
 

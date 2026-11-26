@@ -38,7 +38,10 @@ from t50_paid_runs import FORCED_FIND_STUDY, VITK, BudgetExceeded, CappedCaller 
 
 def _claims(target: str) -> list[dict]:
     if target == "vitamin_k":
-        job = json.loads(VITK.read_text())
+        sys.path.insert(0, str(HERE.parent))
+        from app.tests.vitamin_k_fixture import claims_as_job
+
+        job = {"claims": claims_as_job(json.loads(VITK.read_text()))}
         ctx = [c["text"] for c in job["claims"]]
         return [{"key": c["claim_id"], "text": c["text"], "kind": c["claim_kind"], "context": ctx,
                  "golden_cited": [], "force": c["claim_id"] in FORCED_FIND_STUDY} for c in job["claims"]]

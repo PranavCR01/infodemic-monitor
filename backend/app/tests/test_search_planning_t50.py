@@ -42,7 +42,9 @@ from app.tests.pubmed_fixtures import RecordedPubMed
 
 FIX = Path(__file__).parent / "fixtures"
 FIND = FIX / "find_study"
-VITK_JOB = json.loads((FIX / "prod_5cc07f48" / "vitamin_k_job.json").read_text())
+from app.tests.vitamin_k_fixture import load_real  # noqa: E402
+
+VITK_JOB = load_real()  # the real production rows of job 5cc07f48
 VITK_CLAIMS = {c["claim_id"]: c["text"] for c in VITK_JOB["claims"]}
 VITK_CONTEXT = tuple(VITK_CLAIMS.values())
 JAMA_DOI = "10.1001/jama.2026.21764"
@@ -89,12 +91,13 @@ def test_lexicon_knows_vitamin_k_vkdb_and_newborns():
 
 
 def test_vitamin_k_ladder_is_distinct_broadening_and_never_just_vitamin():
-    p = plan(VITK_CLAIMS["c11"])
+    p = plan(VITK_CLAIMS["c4"])  # "babies who didn't receive vitamin K had a 47% higher risk of bleeding ..."
     queries = [x.query for x in p.rungs]
     assert len(queries) == len(set(queries)) >= 3
     assert all('"Vitamin K"[MeSH Terms]' in q for q in queries)
     assert not any(q.strip().lower() in ("vitamin", "vitamin osteoporosis") for q in queries)
     assert "Vitamins[MeSH Terms]" not in " ".join(queries)  # the intervention is never broadened
+    assert not any(w in " ".join(queries) for w in ("didn't", "47", "higher"))
     # each rung drops something: the last one is the intervention alone
     assert p.rungs[-1].kind == "intervention_only"
 
@@ -166,25 +169,41 @@ def test_keyword_fallback_never_ands_conversational_words():
 # ------------------------------------------------------------------ context carry-over
 
 
-def test_video_context_carries_the_main_intervention_to_anaphoric_claims():
+def test_video_context_carries_the_main_intervention_to_a_claim_that_does_not_name_it():
     assert dominant_intervention(VITK_CONTEXT).key == "vitamin_k"
-    for cid in ("c7", "c12"):  # "the shot", "these studies on newborns"
-        p = plan(VITK_CLAIMS[cid], context=VITK_CONTEXT)
-        assert p.context_concept == "vitamin_k"
-        assert '"Vitamin K"[MeSH Terms]' in p.rungs[0].query
-    # a claim that names its own intervention is left alone
+    # real c2: "a JAMA study published November 5th examined more than 5.2 million infants"
+    p = plan(VITK_CLAIMS["c2"], claim_kind="fact_of_record", context=VITK_CONTEXT)
+    assert p.context_concept == "vitamin_k" and p.cites_study and p.citation["journal"] == "JAMA"
+    assert p.rungs[0].kind == "citation"
+    assert p.rungs[0].query.startswith('"JAMA"[ta] AND ') and '"Vitamin K"[MeSH Terms]' in p.rungs[0].query
+    p = plan("These studies on newborns are observational", context=VITK_CONTEXT)
+    assert p.context_concept == "vitamin_k"
+    # a relative "that" mid-sentence is not a reference back; nor is a claim naming its own subject
+    assert plan("a colonoscopy is a test that can prevent cancer", context=VITK_CONTEXT).context_concept is None
     assert plan("Garlic stops colds", context=VITK_CONTEXT).context_concept is None
 
 
+def test_passive_voice_is_read_the_right_way_round_and_vitamin_k_is_never_broadened():
+    p = plan(VITK_CLAIMS["c12"])  # "... every bleeding event was caused by skipping vitamin K"
+    assert p.rungs[0].query.startswith('("Vitamin K"[MeSH Terms]')
+    assert "Vitamins[MeSH Terms]" not in " ".join(r.query for r in p.rungs)
+
+
+REAL_EXPECTED_VITK = ("c1", "c3", "c4", "c5", "c6", "c7", "c9", "c12")  # coordinator review of #124
+
+
 def test_vitamin_k_job_claims_all_plan_a_vitamin_k_search():
-    """Regression fixture (job 5cc07f48): every claim expected to find vitamin K / VKDB
-    papers (c1-c7, c9, c12) now searches for vitamin K or VKDB, never bare 'vitamin'."""
-    for cid in ("c1", "c2", "c3", "c4", "c5", "c6", "c7", "c9", "c12"):
-        p = plan(VITK_CLAIMS[cid], context=VITK_CONTEXT)
+    """Regression (real rows of job 5cc07f48): in production every one of these searched
+    'vitamin ...' keywords; now each plans a vitamin K (or VKDB) search, and c2 a citation
+    lookup in JAMA."""
+    for c in VITK_JOB["claims"]:
+        if c["claim_id"] not in (*REAL_EXPECTED_VITK, "c2", "c13"):
+            continue
+        p = plan(c["text"], claim_kind=c["claim_kind"], context=VITK_CONTEXT)
         first = p.rungs[0].query
-        assert ('"Vitamin K"[MeSH Terms]' in first or '"Vitamin K Deficiency Bleeding"[MeSH Terms]' in first), cid
-    c13 = plan(VITK_CLAIMS["c13"], context=VITK_CONTEXT)
-    assert c13.rungs[0].kind == "pico" and "Infant, Newborn" in c13.rungs[0].query
+        assert ('"Vitamin K"[MeSH Terms]' in first or '"Vitamin K Deficiency Bleeding"[MeSH Terms]' in first), c["claim_id"]
+        prod = [q["query"] for q in c["search_trail"]["pubmed_queries"]]
+        assert first not in prod
 
 
 # ------------------------------------------------------------------ (c) search assistant
@@ -516,8 +535,8 @@ def test_rerank_node_skips_find_study_when_something_on_topic_or_search_will_bro
     node({"claims": [_claim("c4", VITK_CLAIMS["c4"])], "retrieved_evidence": {"c4": [on_topic]},
           "retrieval_attempts": {"c4": 1}})
     # empty after round 1 with budget left: round 2 broadens first
-    node({"claims": [_claim("c2", VITK_CLAIMS["c2"])], "retrieved_evidence": {"c2": []},
-          "retrieval_attempts": {"c2": 1}})
+    node({"claims": [_claim("c6", VITK_CLAIMS["c6"])], "retrieved_evidence": {"c6": []},
+          "retrieval_attempts": {"c6": 1}})
     assert finder.calls == []
 
 
@@ -596,3 +615,39 @@ def test_dry_run_estimate_makes_no_model_call_and_prices_the_vitamin_k_fixture()
     assert est["steps"]["find_study"]["calls"] >= 4  # forced on c2-c5
     assert 0 < est["expected_usd"] <= est["upper_usd"]
     assert "no model was called" in text
+
+
+
+# ------------------------------------------------------------------ review of #124
+
+
+def test_vitamin_k_antagonist_papers_are_not_on_topic_for_vitamin_k():
+    """A VKA paper is about warfarin-type drugs, not vitamin K: it must not let an
+    UNSUPPORTED verdict stand, nor stop find-the-study from running."""
+    from app.core.graph.unproven_guard import intervention_terms, on_topic
+    from app.core.retrieval.find_study import topic_match
+
+    terms = intervention_terms(VITK_CLAIMS["c11"])
+    vka = EvidenceRecord(evidence_id="ev_1", source="pubmed",
+                         title="Drug-drug interactions between vitamin K antagonists and statins",
+                         abstract="Vitamin K antagonist therapy with warfarin; vitamin-K antagonism.")
+    assert not on_topic(vka, terms)
+    assert not topic_match(VITK_CLAIMS["c11"], vka.title, vka.abstract)
+    both = vka.model_copy(update={"abstract": "Vitamin K antagonists ... dietary vitamin K intake also mattered."})
+    assert on_topic(both, terms)  # a real vitamin K mention still counts
+
+
+def test_unreadable_script_records_needs_translation_instead_of_running_nothing():
+    nodes = make_retrieval_nodes(EvidenceRetriever(RecordedPubMed().client()))
+    claim = GraphClaim(claim_id="c1", claim_text="स्तेज फोर कंसर, मेटास्टिसिस", claim_category="other",
+                       source_segment_ids=["s1"], start_seconds=0, end_seconds=1)
+    state = {"claims": [claim]}
+    state.update(nodes[r.PLAN_RETRIEVAL](state))
+    out = nodes[r.RETRIEVE_EVIDENCE](state)
+    (rnd,) = out["search_trail"]["c1"]
+    assert rnd.pubmed_query is None and rnd.plan["no_query_reason"] == "needs_translation"
+    assert any("needs_translation" in e.message for e in out["errors"])
+    state.update(out)
+    assert r.claims_to_retrieve(state) == []  # it stops, it doesn't spin
+    view = build_search_trail({**state, "reranked_evidence": {"c1": []}}, "c1")
+    assert view["planning"]["no_query_reason"] == "needs_translation" and view["planning"]["language"] == "hi"

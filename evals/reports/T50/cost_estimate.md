@@ -10,12 +10,12 @@ Expected: one attempt, typical output, 2 searches x 3000 result tokens. Upper bo
 | --- | --- | --- | --- |
 | plan_search | 0 | 0.0000 | 0.0000 |
 | translate_claim | 0 | 0.0000 | 0.0000 |
-| find_study | 8 | 0.1664 | 0.5243 |
-| **total** | 8 | **0.1664** | **0.5243** |
+| find_study | 6 | 0.1248 | 0.3933 |
+| **total** | 6 | **0.1248** | **0.3933** |
 
-Per claim: expected 0.01280 USD, upper 0.04033 USD on average; max upper for one claim 0.06554 USD.
+Per claim: expected 0.00960 USD, upper 0.03025 USD on average; max upper for one claim 0.06554 USD.
 
-find_study triggers: {'forced': 4, 'nothing_on_topic': 4}.
+find_study triggers: {'forced': 4, 'nothing_on_topic': 2}.
 
 ## tune split recall (187 claims)
 

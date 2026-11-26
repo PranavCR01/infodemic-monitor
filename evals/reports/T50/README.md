@@ -40,4 +40,4 @@ the commands above rebuild them.
   the lexicon from the evaluation set). Expect a smaller gain on the test split, which was not read.
 - The recall run uses the full budget (3 rounds) for every claim; in the graph a claim gets
   rounds 2-3 only when its search was empty or the critic asks for more.
-- The vitamin K fixture's claim texts are RECONSTRUCTED (T49: no production DB access).
+- The vitamin K job uses the real production rows (`backend/app/tests/fixtures/prod_5cc07f48/vitamin_k_job.real.json`, copied from production by the coordinating session); the reconstructed T49 fixture was removed.

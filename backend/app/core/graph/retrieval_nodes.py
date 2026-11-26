@@ -169,7 +169,12 @@ def make_retrieval_nodes(
                 trail.setdefault(cid, []).append(SearchRound(**step, new_records=len(evidence[cid]) - before))
                 continue
             if not planned:
-                errors.append(NodeError(node=r.RETRIEVE_EVIDENCE, claim_id=cid, message="no query planned"))
+                why = plan.no_query_reason if plan is not None and plan.no_query_reason else None
+                errors.append(NodeError(node=r.RETRIEVE_EVIDENCE, claim_id=cid,
+                                        message="no query planned" + (f": {why}" if why else "")))
+                if why:
+                    step["ladder_exhausted"] = True  # nothing to search; recorded with the plan's reason
+                    attempts[cid] = max(attempts[cid], budgets.max_retrieval_attempts)
                 trail.setdefault(cid, []).append(SearchRound(**step, new_records=len(evidence[cid]) - before))
                 continue
             query = planned[-1]

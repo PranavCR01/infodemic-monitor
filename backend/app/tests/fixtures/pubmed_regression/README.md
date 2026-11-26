@@ -10,9 +10,9 @@ lexicon or the reranker loses what these searches find.
   MISINFO (unproven). **Real E-utilities responses**, recorded 2026-11-26 from the build
   environment by `scripts/t50_vitamin_k_regression.py --record-fixture` for every query
   the T50 planner runs on the job's 13 claims (first three rungs), trimmed to the top 5
-  PMIDs per search with `<ReferenceList>` removed. The claim texts are the T49 fixture's
-  (`fixtures/prod_5cc07f48`), which are RECONSTRUCTED (no production DB access): replace
-  them with the real rows and re-record when they are available.
+  PMIDs per search with `<ReferenceList>` removed. The claims are the **real production
+  rows** (`fixtures/prod_5cc07f48/vitamin_k_job.real.json`, copied from production by the
+  coordinating session; public video content only).
 
 Re-record after a planner change makes a query miss its fixture (the test lists unknown
 queries). Add a job here when a reviewer marks a source as missing (queued after T50).

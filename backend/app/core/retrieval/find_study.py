@@ -225,12 +225,15 @@ def topic_match(claim_text: str, title: str, abstract: str) -> bool:
     recognised, at least two of its content words (all of them if it has fewer)."""
     text = f" {_norm(title)} {_norm(abstract)} "
     frame = frame_claim(claim_text)
-    concepts = [*frame.intervention, *frame.outcome]
+    # The claim's intervention and outcome; with neither, its population ("a JAMA study
+    # examined 5.2 million infants": the journal and year checks carry the rest).
+    concepts = [*frame.intervention, *frame.outcome] or list(frame.population)
     if concepts:
         for c in concepts:
             for t in (c.matched_text, c.label, c.mesh or "", *c.synonyms):
                 t = _norm(t)
-                if len(t) >= 2 and re.search(r"(?<!\w)" + re.escape(t) + r"(?:s|es)?(?!\w)", text):
+                if len(t) >= 2 and re.search(r"(?<!\w)" + re.escape(t) + r"(?:s|es)?(?!\w)"
+                                             r"(?!\s+(?:antagonists?|antagonism)\b)", text):
                     return True
         return False
     words = content_words(frame.normalized_text)

@@ -348,6 +348,9 @@ class SearchPlan:
     assistant_used: bool = False
     assistant_error: Optional[str] = None
     rungs: tuple[PlannedQuery, ...] = ()
+    # Why there is no query at all (e.g. "needs_translation": a non-Latin script with no
+    # translator configured), recorded in the trail instead of silently running nothing.
+    no_query_reason: Optional[str] = None
 
     def kind_of(self, query: str) -> Optional[str]:
         return next((r.kind for r in self.rungs if r.query == query), None)
@@ -357,7 +360,7 @@ class SearchPlan:
                 "search_text": self.search_text if self.translated else None,
                 "translation_error": self.translation_error, "context_concept": self.context_concept,
                 "citation": self.citation, "assistant_used": self.assistant_used,
-                "assistant_error": self.assistant_error,
+                "assistant_error": self.assistant_error, "no_query_reason": self.no_query_reason,
                 "rungs": [{"kind": r.kind, "query": r.query} for r in self.rungs]}
 
 
@@ -389,7 +392,9 @@ def _with_context(frame: ClaimFrame, context: Sequence[str]) -> tuple[ClaimFrame
     generic_only = bool(own) and all(c.key in GENERIC_INTERVENTIONS for c in own)
     if own and not generic_only:
         return frame, None
-    if not own and not _ANAPHORA_RE.search(frame.normalized_text):
+    if not own and not _ANAPHORA_RE.search(frame.normalized_text) and not citation_cue(frame.normalized_text).cites_study:
+        # A claim citing a study without naming its subject ("a JAMA study examined
+        # 5.2 million infants") is about the video's topic too.
         return frame, None
     concept = dominant_intervention(context)
     if concept is None:
@@ -409,6 +414,9 @@ def _rule_rungs(frame: ClaimFrame) -> list[PlannedQuery]:
     vitamin paper a hit (the vitamin K → vitamin D failure in job 5cc07f48)."""
     I = [c for c in frame.intervention]
     O = [c for c in frame.outcome]
+    if I and O and all(c.kind != "intervention" for c in I) and any(c.kind == "intervention" for c in O):
+        # Passive voice ("bleeding caused by skipping vitamin K"): the sides read backwards.
+        I, O = O, I
     P = [c for c in frame.population]
     i_clause = _and([concept_clause(c) for c in I])
     o_clause = _and([concept_clause(c) for c in O])
@@ -418,8 +426,10 @@ def _rule_rungs(frame: ClaimFrame) -> list[PlannedQuery]:
         if P:
             out.append(PlannedQuery(_and([i_clause, o_clause, p_clause]), "pico"))
         out.append(PlannedQuery(_and([i_clause, o_clause]), "intervention_outcome"))
-        if any(c.parent_mesh for c in O):
-            broader = _and([concept_clause(c, use_parent=bool(c.parent_mesh)) for c in O])
+        # Only conditions and outcomes are broadened; an intervention-kind concept never is.
+        if any(c.parent_mesh and c.kind != "intervention" for c in O):
+            broader = _and([concept_clause(c, use_parent=bool(c.parent_mesh) and c.kind != "intervention")
+                            for c in O])
             out.append(PlannedQuery(_and([i_clause, broader]), "broader_outcome"))
         out.append(PlannedQuery(i_clause, "intervention_only"))
     elif I:
@@ -432,9 +442,10 @@ def _rule_rungs(frame: ClaimFrame) -> list[PlannedQuery]:
         if P:
             out.append(PlannedQuery(_and([o_clause, p_clause]), "outcome_population"))
         out.append(PlannedQuery(o_clause, "outcome_only"))
-        if any(c.parent_mesh for c in O):
+        if any(c.parent_mesh and c.kind != "intervention" for c in O):
             out.append(PlannedQuery(
-                _and([concept_clause(c, use_parent=bool(c.parent_mesh)) for c in O]), "broader_condition"))
+                _and([concept_clause(c, use_parent=bool(c.parent_mesh) and c.kind != "intervention") for c in O]),
+                "broader_condition"))
     return out
 
 
@@ -524,7 +535,8 @@ class QueryPlanner:
         frame = frame_claim(search_text)
         frame, context_concept = _with_context(frame, [c for c in context if c != claim_text])
         keywords = content_words(frame.normalized_text, rules_lang)
-        if not translated and lang in _NON_LATIN_LANGS:
+        unreadable = not translated and lang in _NON_LATIN_LANGS
+        if unreadable:
             # The rules can't read this script (normalisation even splits Devanagari
             # words at their vowel signs): no keyword query rather than a junk one.
             keywords = []
@@ -555,7 +567,8 @@ class QueryPlanner:
             claim_text=claim_text, language=lang, search_text=search_text, translated=translated,
             translation_error=translation_error, context_concept=context_concept,
             citation=cue.describe() if cue.cites_study else None, cites_study=cue.cites_study,
-            assistant_used=assistant_used, assistant_error=assistant_error, rungs=tuple(out))
+            assistant_used=assistant_used, assistant_error=assistant_error, rungs=tuple(out),
+            no_query_reason=("needs_translation" if unreadable else "no_terms") if not out else None)
 
     def _assist(self, text: str) -> tuple[list[PlannedQuery], Optional[str]]:
         if self.assistant is None:
