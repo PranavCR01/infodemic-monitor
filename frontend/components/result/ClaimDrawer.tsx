@@ -15,6 +15,8 @@ type Props = {
   onNavigate: (id: string) => void;
   onClose: () => void;
   onPlay: (seconds: number) => void;
+  /** Claims a review reason names, for the "sent to a reviewer" wording (T52). */
+  flagged?: Set<string>;
 };
 
 type Direction = "CONTRADICTS" | "SUPPORTS";
@@ -38,7 +40,7 @@ function quotesFor(c: Claim, transcript: Segment[]): Segment[] {
  * Claim detail (ClaimDetail.dc.html): a right-hand drawer up to 640 px, full width on
  * phones. Radix Dialog gives role="dialog", the focus trap and Esc to close.
  */
-export function ClaimDrawer({ claims, openId, transcript, onNavigate, onClose, onPlay }: Props) {
+export function ClaimDrawer({ claims, openId, transcript, onNavigate, onClose, onPlay, flagged }: Props) {
   const i = claims.findIndex((c) => c.id === openId);
   const c = i >= 0 ? claims[i] : null;
   const [dir, setDir] = useState<Direction>("CONTRADICTS");
@@ -193,20 +195,8 @@ export function ClaimDrawer({ claims, openId, transcript, onNavigate, onClose, o
                   )}
                 </section>
 
-                {c.search && <ClaimSearch s={c.search} />}
-
-                {c.criticNotes.length > 0 && (
-                  <details className="border-t border-line pt-3">
-                    <summary className="cursor-pointer text-small font-semibold text-ink-2">
-                      Critic&apos;s notes <span className="tabular-nums">({c.criticNotes.length})</span>
-                    </summary>
-                    <ul className="mt-2 list-disc pl-6 text-small text-ink-2">
-                      {c.criticNotes.map((n, k) => (
-                        <li key={k}>{n}</li>
-                      ))}
-                    </ul>
-                  </details>
-                )}
+                {/* T52: one plain finding; the critic's pipeline notes stay on the review screen. */}
+                <ClaimSearch claim={c} sentToReviewer={flagged?.has(c.id) ?? false} />
               </div>
 
               <div className="flex flex-wrap items-center gap-2 border-t border-line bg-surface-2 px-6 py-3">

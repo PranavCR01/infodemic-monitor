@@ -183,6 +183,27 @@ describe("ReviewWorkspace: decision form", () => {
   });
 });
 
+describe("ReviewWorkspace: how we searched (T52)", () => {
+  it("gives the plain finding, with the raw critic notes and every query behind Technical details", () => {
+    setup(MOCK_CASE_NORMAL);
+    const sections = screen.getAllByRole("region", { name: "How we searched" });
+    expect(sections).toHaveLength(3);
+    expect(sections[2]).toHaveTextContent(/No relevant study was found after 2 searches/);
+    const tech = within(sections[2]).getByText("Technical details").closest("details")!;
+    expect(tech).not.toHaveAttribute("open");
+    expect(within(tech).getAllByText("vitamin C prevention infection")).toHaveLength(2);
+    expect(within(tech).getByText(/repeated, not counted again/)).toBeInTheDocument();
+    const first = within(sections[0]).getByText("Technical details").closest("details")!;
+    expect(within(first).getByText(/The trial population was adults with common cold/)).toBeInTheDocument();
+  });
+
+  it("says nothing about the search during the blind step", () => {
+    setup();
+    expect(screen.queryByRole("region", { name: "How we searched" })).not.toBeInTheDocument();
+    expect(screen.queryByText("Technical details")).not.toBeInTheDocument();
+  });
+});
+
 describe("ReviewWorkspace: read-only cases", () => {
   it("doesn't let reviewers decide their own submission", () => {
     setup({ ...MOCK_CASE_OWN, severity: "MEDIUM", blind_step_required: false, system_view_withheld: false });

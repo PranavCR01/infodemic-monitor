@@ -13,7 +13,9 @@ import {
   buttonClass,
 } from "@/components/ui";
 import { TONE } from "@/components/ui/tone";
+import { ClaimSearch } from "@/components/result/ClaimSearch";
 import { SourceCard, sortSources } from "@/components/result/SourceCard";
+import { flaggedClaimIds } from "@/lib/search-finding";
 import { clock, type Claim, type ResultModel } from "@/lib/api/result-adapter";
 import type { BlindClaimMaterial, BlindMaterial } from "@/lib/api/blind-material";
 import type { CaseClaim, CaseModel } from "@/lib/api/review-adapter";
@@ -85,6 +87,7 @@ export function ReviewWorkspace({
   // Belt and braces: even if a result is passed, nothing from it shows while withheld.
   const claims = useMemo(() => (review.withheld ? [] : result?.claims ?? []), [result, review.withheld]);
   const preReveal: PreReveal[] | null = review.myPreReveal;
+  const flagged = useMemo(() => (result ? flaggedClaimIds(result) : new Set<string>()), [result]);
   const revealed = !review.withheld;
 
   const [mine, setMine] = useState<Record<string, { stance?: Stance; verdict?: Verdict }>>({});
@@ -243,7 +246,7 @@ export function ReviewWorkspace({
               {evidenceFailed && <p className="text-small text-ink-2">The claims and sources for this video couldn&apos;t be loaded.</p>}
               {!result && !evidenceFailed && <p className="text-small text-ink-2" aria-busy="true">Loading the evidence…</p>}
               {claims.map((c) => (
-                <EvidenceClaim key={c.id} claim={c} showSystem={revealed} />
+                <EvidenceClaim key={c.id} claim={c} showSystem={revealed} sentToReviewer={flagged.has(c.id)} />
               ))}
             </>
           )}
@@ -481,7 +484,7 @@ function BlindClaim({ claim: c, material, loaded }: { claim: CaseClaim; material
   );
 }
 
-function EvidenceClaim({ claim: c, showSystem }: { claim: Claim; showSystem: boolean }) {
+function EvidenceClaim({ claim: c, showSystem, sentToReviewer }: { claim: Claim; showSystem: boolean; sentToReviewer: boolean }) {
   const sources = sortSources(c.sources);
   return (
     <article aria-labelledby={`rv-${c.id}`} className="flex flex-col gap-3 rounded-lg border border-line bg-surface p-4 shadow-1">
@@ -516,6 +519,8 @@ function EvidenceClaim({ claim: c, showSystem }: { claim: Claim; showSystem: boo
           )}
         </div>
       </div>
+      {/* T52: how the search went, in plain words; raw notes and queries behind Technical details. */}
+      {showSystem && <ClaimSearch claim={c} sentToReviewer={sentToReviewer} technical />}
     </article>
   );
 }
