@@ -2,6 +2,8 @@ import { LabelBadge, ReviewStatusTag, StanceChip, VerdictChip, Icon, buttonClass
 import { evidenceText, clock, type Claim, type ResultModel } from "@/lib/api/result-adapter";
 import type { RequestOutcome } from "@/lib/api/review-request";
 import { DECISION_RULE_TEXT, EVIDENCE_LEVEL_DISPLAY, labelDisplay } from "@/lib/vocabulary";
+import type { ReanalyseOutcome } from "@/lib/api/reanalyse";
+import { Reanalyse } from "./Reanalyse";
 import { RequestReview } from "./RequestReview";
 
 function formatDate(iso: string | null): string {
@@ -41,7 +43,18 @@ function Chain({ claim, r }: { claim: Claim; r: ResultModel }) {
   );
 }
 
-export function Assessment({ r, onRequestReview }: { r: ResultModel; onRequestReview?: (note: string) => Promise<RequestOutcome> }) {
+export type ReanalyseControls = { onReanalyse: (reason: string) => Promise<ReanalyseOutcome>; onStarted: (jobId: string) => void };
+
+export function Assessment({
+  r,
+  onRequestReview,
+  reanalyse,
+}: {
+  r: ResultModel;
+  onRequestReview?: (note: string) => Promise<RequestOutcome>;
+  /** T55: present only for the video's owner or an admin. */
+  reanalyse?: ReanalyseControls;
+}) {
   const shown = r.correctedLabel ?? r.label;
   // Q6: CANNOT RECOGNIZE keeps its name, with the reason underneath. For the other
   // labels the description already says it, so the rule line would repeat it.
@@ -56,6 +69,7 @@ export function Assessment({ r, onRequestReview }: { r: ResultModel; onRequestRe
         <div className="flex flex-wrap items-start gap-2">
         {/* T32: only results nobody has been asked to check yet. */}
         {onRequestReview && r.reviewStatus === "NOT_REQUIRED" && <RequestReview onRequest={onRequestReview} />}
+        {reanalyse && r.videoId && <Reanalyse onReanalyse={reanalyse.onReanalyse} onStarted={reanalyse.onStarted} />}
         {r.label && (
           <a href={`/jobs/${encodeURIComponent(r.jobId)}/export`} className={buttonClass("secondary", "sm")}>
             <Icon name="download" className="!h-3.5 !w-3.5" /> Export report
@@ -76,6 +90,11 @@ export function Assessment({ r, onRequestReview }: { r: ResultModel; onRequestRe
           )}
           <Provenance r={r} />
           <ReviewStatusTag status={r.reviewStatus} />
+          {r.reviewStatus === "SUPERSEDED" && r.supersededByJobId && (
+            <a href={`/jobs/${encodeURIComponent(r.supersededByJobId)}`} className="text-small text-primary underline">
+              Open the newer analysis
+            </a>
+          )}
         </div>
         {shown && (
           <p className="text-small text-ink-2">

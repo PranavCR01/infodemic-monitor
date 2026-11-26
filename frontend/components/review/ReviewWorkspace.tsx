@@ -214,6 +214,18 @@ export function ReviewWorkspace({
         )}
       </header>
 
+      {review.supersededByJobId !== null && (
+        <section role="status" className="flex flex-wrap items-center gap-2 rounded-lg border border-line bg-surface-2 p-4 text-small text-ink">
+          <Icon name="refresh" className="!h-4 !w-4" />
+          <span className="font-semibold">Superseded by a newer analysis.</span>
+          <span className="text-ink-2">This case was closed when the video was analysed again, so it can&apos;t be decided.</span>
+          {review.supersededByJobId && (
+            <Link href={`/jobs/${encodeURIComponent(review.supersededByJobId)}`} className="text-primary underline">
+              Open the newer analysis
+            </Link>
+          )}
+        </section>
+      )}
       {review.isOwn && review.open && (
         <ErrorBanner title="Your submission. Another reviewer decides.">You can read this case, but you can&apos;t decide it.</ErrorBanner>
       )}

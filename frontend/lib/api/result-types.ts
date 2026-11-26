@@ -76,11 +76,11 @@ export type RawReason = {
 };
 
 export type RawReview = {
-  status: string; // REVIEW_REQUIRED | VERIFIED | CORRECTED | REJECTED | REANALYSIS_REQUESTED
+  status: string; // REVIEW_REQUIRED | VERIFIED | CORRECTED | REJECTED | REANALYSIS_REQUESTED | SUPERSEDED (T55)
   reasons: string[];
   // T26
   review_id?: string;
-  case_status?: "OPEN" | "RESOLVED";
+  case_status?: "OPEN" | "RESOLVED" | "SUPERSEDED";
   resolved?: boolean;
   action?: string | null;
   reason_details?: RawReason[];
@@ -90,7 +90,22 @@ export type RawReview = {
   decision_reason?: string | null;
   created_at?: string | null;
   decided_at?: string | null;
+  // T55: the re-analysis that superseded this case (case_status SUPERSEDED).
+  superseded_by_job_id?: string | null;
 };
+
+/** T55: an earlier finished analysis of the same video. */
+export type RawPreviousJob = {
+  job_id: string;
+  finished_at?: string | null;
+  label: string;
+  label_display?: string | null;
+  pipeline_version?: string | null;
+  status: string; // SUCCESS | REVIEW_REQUIRED | FAILED (rejected by a reviewer)
+};
+
+/** T55: the video's newest job when it isn't the one shown (still running, or failed). */
+export type RawLatestJob = { job_id: string; status: string; state: string; error_code?: string | null; created_at?: string | null };
 
 /** T31 (#84): backend/app/core/schemas/search_trail.py SearchTrailView (subset we read). */
 export type RawSearchTrail = {
@@ -131,4 +146,12 @@ export type RawResult = {
   misinfo_basis?: string | null;
   /** The backend's display text; the UI uses lib/vocabulary.ts instead, for one source of wording. */
   label_display?: string | null;
+  // T33: the job's owner (Supabase user id).
+  submitted_by?: string | null;
+  // T55: versions. previous_jobs is newest first; is_current is false on an older version.
+  previous_jobs?: RawPreviousJob[];
+  previous_job_id?: string | null;
+  current_job_id?: string | null;
+  is_current?: boolean;
+  latest_job?: RawLatestJob | null;
 };

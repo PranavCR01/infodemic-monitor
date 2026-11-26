@@ -12,7 +12,9 @@ import { usePlaybackUrl } from "@/lib/api/playback";
 import { requestReview } from "@/lib/api/review-request";
 import { adaptResult } from "@/lib/api/result-adapter";
 import type { RawResult } from "@/lib/api/result-types";
+import { requestReanalysis } from "@/lib/api/reanalyse";
 import { usePolling } from "@/lib/hooks/usePolling";
+import { mayReanalyse, useViewer } from "@/lib/hooks/useViewerId";
 import { toJobState } from "@/lib/vocabulary";
 
 type Props = { jobId: string; initialJob: RawJob; initialResult: RawResult | null; filename?: string | null };
@@ -43,6 +45,7 @@ export function JobDetailClient({ jobId, initialJob, initialResult, filename }: 
   const { lost, checkNow } = usePolling(poll, stop);
 
   const result = useMemo(() => (raw ? adaptResult(raw) : null), [raw]);
+  const viewer = useViewer();
   const playback = usePlaybackUrl(hasResult ? jobId : null);
 
   const reloadResult = useCallback(async () => {
@@ -56,6 +59,15 @@ export function JobDetailClient({ jobId, initialJob, initialResult, filename }: 
         result={result}
         videoUrl={playback.url}
         onVideoError={playback.onError}
+        reanalyse={
+          result.videoId && mayReanalyse(viewer, result.submittedBy)
+            ? {
+                onReanalyse: (reason) => requestReanalysis(result.videoId!, reason),
+                // The new job has its own page: follow its progress there.
+                onStarted: (newJobId) => router.push(`/jobs/${encodeURIComponent(newJobId)}`),
+              }
+            : undefined
+        }
         onRequestReview={async (note) => {
           const r = await requestReview(jobId, note);
           // The job is now in review: reload so the page shows "Pending review".
