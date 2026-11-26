@@ -1,0 +1,966 @@
+{
+ "method": "Labels by an AI assistant (the Claude Code session that ran T60), reading each claim and each record's title, publication types and abstract (first ~450 characters) once, with no model API call. Not human labels and not inter-annotator agreement: one labeller, to be spot-checked by the lead (start with least_sure). Scale: 2 = tests the claim (this intervention/exposure and this outcome, in humans); 1 = partly relevant human evidence the verifier could use (a close exposure or outcome, a narrower population, or a review that addresses the question); 0 = not evidence for the claim (off-topic, animal, cell or mechanistic work, chemistry, opinion without content). Labelled before either scorer's scores were looked at; the MedCPT weights were still downloading.",
+ "claims": {
+  "v119:c1": {
+   "text": "We're gonna starve that cancer. ... It loves glucose. And so we suggested six weeks no sugar, no honey, no sweet at all",
+   "labels": {
+    "21093229": 0,
+    "35495917": 0,
+    "20470973": 1,
+    "36771391": 0,
+    "34025176": 0,
+    "32938976": 0,
+    "32276821": 0,
+    "41383163": 0,
+    "23493541": 0,
+    "33000412": 0,
+    "36330953": 0,
+    "36849062": 0,
+    "35303439": 0,
+    "36084651": 0,
+    "37311455": 0,
+    "35163079": 0,
+    "31447391": 0,
+    "37063423": 0,
+    "35747168": 0,
+    "39225102": 0
+   }
+  },
+  "v131:c1": {
+   "text": "[Sugar in a baby's brain] is called ADHD",
+   "labels": {
+    "36282888": 1,
+    "38815568": 2,
+    "39442121": 1,
+    "38142720": 0,
+    "11235487": 0,
+    "27535767": 1,
+    "7474248": 2,
+    "33066852": 2,
+    "31246081": 0,
+    "40362805": 0,
+    "40507208": 0,
+    "8747098": 1,
+    "30986731": 1,
+    "8277958": 0,
+    "35780911": 0,
+    "30257225": 2,
+    "20632134": 0,
+    "11462750": 0,
+    "22232312": 1,
+    "42197085": 2
+   }
+  },
+  "v131:c5": {
+   "text": "Sugar on your skin is called aging",
+   "labels": {
+    "30089285": 0,
+    "37019448": 0,
+    "34014353": 0,
+    "36461393": 0,
+    "39480913": 0,
+    "30951762": 0,
+    "27372453": 0,
+    "36839247": 0,
+    "36041436": 0,
+    "34369326": 0,
+    "30447790": 0,
+    "32322067": 0,
+    "31125634": 0,
+    "41325059": 0,
+    "40122386": 0,
+    "33066852": 0,
+    "33227383": 0,
+    "39946455": 0,
+    "31060830": 0,
+    "35380611": 0
+   }
+  },
+  "v135:c1": {
+   "text": "it looks like most of them are quite low, but a few might have about 20 parts per million",
+   "labels": {
+    "18881156": 0,
+    "11440238": 0,
+    "8354177": 0,
+    "30346588": 0,
+    "15325320": 0,
+    "35484330": 0,
+    "26662563": 0,
+    "34718823": 0,
+    "2676498": 0,
+    "20070208": 0,
+    "3043738": 0,
+    "7703476": 0,
+    "36880454": 0,
+    "37004824": 0,
+    "37080132": 0,
+    "30411500": 0,
+    "42152223": 0,
+    "39901916": 0,
+    "26936331": 0,
+    "40885242": 0
+   }
+  },
+  "v176:c1": {
+   "text": "[a panic attack or an anxiety attack] that's actually not of God",
+   "labels": {
+    "37477800": 0,
+    "20677723": 0,
+    "16451880": 0,
+    "15264579": 0,
+    "33459551": 0,
+    "34871964": 0,
+    "21448113": 0,
+    "8979592": 0,
+    "37907373": 0,
+    "38361409": 0,
+    "8098164": 0,
+    "10698825": 0,
+    "9138941": 0,
+    "26635099": 0,
+    "31786029": 0,
+    "19954091": 0,
+    "10094243": 0,
+    "10335326": 0,
+    "9276785": 0,
+    "1590502": 0
+   }
+  },
+  "v180:c1": {
+   "text": "I regret getting the vaccine even though I'm a 52-year-old woman because I don't think I needed it. I think I would have been fine",
+   "labels": {
+    "25896383": 0,
+    "36841594": 0,
+    "30986133": 0,
+    "23584253": 0,
+    "31640882": 0,
+    "36866001": 0,
+    "33798403": 0,
+    "25373435": 0,
+    "30333279": 0,
+    "34105372": 0,
+    "34127299": 0,
+    "33326320": 0,
+    "36586639": 0,
+    "39078836": 0,
+    "25902360": 0,
+    "31313172": 0,
+    "30963866": 0,
+    "37608523": 0,
+    "36502671": 0,
+    "36841591": 0
+   }
+  },
+  "v21:c4": {
+   "text": "Almonds are an excellent source of magnesium, which plays an essential role in mood regulation and stress management",
+   "labels": {
+    "32767923": 1,
+    "22296169": 1,
+    "38794084": 0,
+    "39381350": 0,
+    "41267294": 0,
+    "28757219": 0,
+    "26080804": 0,
+    "37533790": 0,
+    "22701057": 0,
+    "40806348": 0,
+    "31525129": 0,
+    "40409246": 0,
+    "41830044": 0,
+    "37156442": 0,
+    "35791605": 0,
+    "41515204": 0,
+    "27540708": 0,
+    "41271345": 0,
+    "37768412": 0,
+    "32156408": 0
+   }
+  },
+  "v22:c2": {
+   "text": "Eggs are high in antioxidants, which is really good to prevent something called macular degeneration as well as cataracts",
+   "labels": {
+    "32526861": 1,
+    "40019526": 0,
+    "20355006": 1,
+    "27431371": 1,
+    "15949677": 0,
+    "34323086": 2,
+    "11023002": 1,
+    "38393321": 1,
+    "27080067": 0,
+    "42343583": 0,
+    "34071459": 1,
+    "39819528": 1,
+    "18293208": 0,
+    "26793307": 1,
+    "33027903": 1,
+    "37260421": 0,
+    "26042352": 1,
+    "16309738": 0,
+    "33595497": 0,
+    "15950595": 0
+   }
+  },
+  "v23:c1": {
+   "text": "[gluten] can cause everything from osteoporosis to autism",
+   "labels": {
+    "34836247": 1,
+    "34647492": 0,
+    "28244676": 0,
+    "31142014": 0,
+    "24365341": 1,
+    "31402697": 1,
+    "18787912": 0,
+    "38865028": 0,
+    "26209754": 0,
+    "28810029": 0,
+    "33518167": 0,
+    "32575561": 0,
+    "29102613": 0,
+    "29132529": 0,
+    "38397615": 0,
+    "41010485": 0,
+    "33837830": 0,
+    "35964884": 0,
+    "26208009": 1,
+    "26355401": 0
+   }
+  },
+  "v24:c2": {
+   "text": "when research actually studied this further and looked at glyphosate independently, it wasn't significantly associated with cancer at any site in a study of 54,000 people",
+   "labels": {
+    "38242772": 0,
+    "30185977": 0,
+    "29136183": 2,
+    "32897110": 1,
+    "31342895": 1,
+    "38626793": 0,
+    "15929876": 0,
+    "40490737": 0,
+    "30597056": 0,
+    "15055003": 0,
+    "37418114": 1,
+    "36829818": 0,
+    "38579817": 0,
+    "39812396": 0,
+    "34800193": 0,
+    "33672572": 0,
+    "38073334": 0,
+    "36116562": 0,
+    "29843257": 0,
+    "37205790": 0
+   }
+  },
+  "v27:c4": {
+   "text": "Cancer is not happy when you create an alkaline environment in the ... body",
+   "labels": {
+    "30269130": 0,
+    "26658103": 0,
+    "14184708": 0,
+    "39073542": 0,
+    "34030582": 0,
+    "24471965": 0,
+    "37330400": 0,
+    "14176027": 0,
+    "37883072": 0,
+    "40922085": 0,
+    "39665969": 0,
+    "38950698": 0,
+    "3123081": 0,
+    "9337527": 0,
+    "29632979": 0,
+    "12057158": 0,
+    "30098710": 0,
+    "32276263": 0,
+    "27926359": 0,
+    "38271945": 0
+   }
+  },
+  "v36:c14": {
+   "text": "Burdock Root: Assists with PMS Symptoms",
+   "labels": {
+    "11362284": 0,
+    "20981575": 0,
+    "20320691": 0,
+    "11365626": 0,
+    "5900499": 0,
+    "31338098": 0,
+    "37802844": 0,
+    "37382195": 0,
+    "38660399": 0,
+    "39396403": 0,
+    "39777584": 0,
+    "28912875": 0,
+    "31362372": 0,
+    "5300884": 0,
+    "37236381": 0,
+    "40177855": 0,
+    "36829899": 0,
+    "39049476": 0,
+    "38489894": 0,
+    "35975861": 0
+   }
+  },
+  "v39:c1": {
+   "text": "seed oils are unhealthy, leads to inflammation, heart disease, obesity",
+   "labels": {
+    "35889911": 0,
+    "30487558": 0,
+    "29141575": 0,
+    "34852755": 0,
+    "31817038": 0,
+    "30254287": 0,
+    "19916363": 1,
+    "34716791": 0,
+    "37570643": 0,
+    "40958692": 1,
+    "25240692": 2,
+    "32761736": 0,
+    "29253525": 0,
+    "22260859": 0,
+    "22279133": 0,
+    "35333119": 0,
+    "33909529": 0,
+    "42273523": 0,
+    "29763526": 0,
+    "29175142": 0
+   }
+  },
+  "v44:c1": {
+   "text": "This girl makes the last mistake of her life, drinking this clear glacial water in Antarctica. And three days later, she was urgently taken to the hospital, where she died",
+   "labels": {
+    "31516170": 0,
+    "31184127": 0,
+    "30982263": 0,
+    "32045491": 0,
+    "22696340": 0,
+    "35422491": 0,
+    "40844897": 0,
+    "31782865": 0,
+    "32297552": 0,
+    "30554325": 0,
+    "36114578": 0,
+    "34578876": 0,
+    "39240108": 0,
+    "42689820": 0,
+    "23121352": 0,
+    "35598691": 0,
+    "31409359": 0,
+    "35985594": 0,
+    "25773052": 0,
+    "39575559": 0
+   }
+  },
+  "v58:c1": {
+   "text": "[if you're] constipated, this works every time in about five minutes. Grab a navel orange, it must be navel ... Generously coat with cayenne pepper and cinnamon ... eat the entire wedge, skin and all",
+   "labels": {
+    "39159626": 0,
+    "37078654": 0,
+    "28274109": 0,
+    "21629626": 0,
+    "29746360": 0,
+    "14676918": 0,
+    "40510802": 1,
+    "21808283": 0,
+    "38783618": 0,
+    "9221542": 0,
+    "36735431": 0,
+    "39220833": 0,
+    "37985741": 0,
+    "29227175": 0,
+    "26597285": 0,
+    "9034942": 1,
+    "38391250": 0,
+    "38925548": 0,
+    "38115611": 0,
+    "40688492": 0
+   }
+  },
+  "v68:c1": {
+   "text": "does tap water lower testosterone ... [because it contains atrazine, an endocrine disruptor, and] do endocrine disruptors lower testosterone",
+   "labels": {
+    "31516170": 0,
+    "31184127": 0,
+    "30982263": 0,
+    "32045491": 0,
+    "22696340": 0,
+    "35422491": 0,
+    "40844897": 0,
+    "31782865": 0,
+    "32297552": 0,
+    "30554325": 0,
+    "36114578": 0,
+    "34578876": 0,
+    "39240108": 0,
+    "42689820": 0,
+    "23121352": 0,
+    "35598691": 0,
+    "31409359": 0,
+    "35985594": 0,
+    "25773052": 0,
+    "39575559": 0
+   }
+  },
+  "v69:c3": {
+   "text": "Excess body fat is second only to smoking as a modifiable cause of cancer. And it's linked to 13 of them",
+   "labels": {
+    "40163214": 0,
+    "37198015": 0,
+    "32803250": 0,
+    "31996850": 0,
+    "40366632": 0,
+    "38503267": 0,
+    "28543959": 0,
+    "36995722": 0,
+    "35199676": 0,
+    "29489473": 1,
+    "33990391": 0,
+    "38378225": 0,
+    "29957970": 0,
+    "31971226": 0,
+    "36691379": 0,
+    "34411510": 0,
+    "38564816": 0,
+    "35329179": 0,
+    "29410315": 0,
+    "37037345": 0
+   }
+  },
+  "v70:c2": {
+   "text": "in the context of non-dairy milk, a lot of the options are fortified with bone-supporting nutrients like calcium and vitamin D so that it can be more nutritionally comparable to dairy milk",
+   "labels": {
+    "33509400": 0,
+    "34959915": 0,
+    "31792679": 0,
+    "36843296": 0,
+    "32041090": 0,
+    "14281180": 0,
+    "12699298": 0,
+    "14219127": 0,
+    "34352758": 0,
+    "38778478": 0,
+    "37621239": 0,
+    "9932519": 0,
+    "19667165": 0,
+    "28350909": 0,
+    "38072394": 0,
+    "13427555": 0,
+    "28330910": 0,
+    "7839501": 0,
+    "25817876": 0,
+    "29549958": 0
+   }
+  },
+  "v71:c3": {
+   "text": "Birth control pills or hormone replacement therapy is another thing that can actually affect the arteries because of the hormonal interaction, increasing the risk of a stroke and heart attacks",
+   "labels": {
+    "27774589": 1,
+    "28806162": 1,
+    "8268884": 0,
+    "10935312": 0,
+    "26527416": 0,
+    "1874623": 0,
+    "29460580": 0,
+    "31573998": 1,
+    "42096712": 2,
+    "18991796": 1,
+    "27153744": 2,
+    "10652981": 1,
+    "29543620": 0,
+    "16413848": 2,
+    "25227335": 1,
+    "35870646": 1,
+    "29171361": 0,
+    "26783307": 0,
+    "3895946": 1,
+    "28562816": 1
+   }
+  },
+  "v78:c1": {
+   "text": "the vaccine and the booster was linked to miscarriages in pregnant women in the first trimester and Dr. Fauci knew it",
+   "labels": {
+    "37590852": 0,
+    "19995468": 0,
+    "37815640": 0,
+    "24888579": 0,
+    "26346481": 0,
+    "24553157": 0,
+    "7929729": 0,
+    "37864485": 1,
+    "18045699": 0,
+    "41232126": 1,
+    "29630014": 0,
+    "37260611": 0,
+    "12867910": 0,
+    "2547266": 0,
+    "25953990": 0,
+    "27172372": 0,
+    "36794918": 2,
+    "31426762": 0,
+    "16441503": 0,
+    "37946587": 2
+   }
+  },
+  "v86:c1": {
+   "text": "Of course we can reverse HIV",
+   "labels": {
+    "35967854": 1,
+    "31357813": 0,
+    "32158701": 0,
+    "37738247": 0,
+    "36225150": 0,
+    "19177760": 1,
+    "38264248": 0,
+    "33586773": 1,
+    "39227673": 0,
+    "7719634": 0,
+    "37487714": 0,
+    "35128949": 0,
+    "25093309": 0,
+    "38696265": 0,
+    "31482298": 0,
+    "25151559": 0,
+    "23605851": 0,
+    "38670690": 0,
+    "32167506": 0,
+    "8843815": 0
+   }
+  },
+  "v87:c2": {
+   "text": "do not buy this water for your babies. It is very dangerous ... This water has fluoride ... You do not want babies drinking water with fluoride",
+   "labels": {
+    "42690660": 1,
+    "29694589": 1,
+    "25432221": 1,
+    "36257112": 0,
+    "41026552": 1,
+    "38443989": 0,
+    "34822942": 0,
+    "37555277": 1,
+    "39223339": 0,
+    "38064923": 1,
+    "28284958": 0,
+    "29620825": 1,
+    "11474921": 0,
+    "31741219": 0,
+    "14356614": 0,
+    "40764642": 0,
+    "37659511": 0,
+    "33928508": 0,
+    "29478165": 0,
+    "35654157": 0
+   }
+  },
+  "v92:c2": {
+   "text": "A body that is consistently grounded cannot sustain chronic inflammation",
+   "labels": {
+    "36528336": 1,
+    "25848315": 1,
+    "31831261": 1,
+    "22291721": 1,
+    "36773844": 0,
+    "39337279": 0,
+    "19524846": 0,
+    "40507606": 2,
+    "38282542": 0,
+    "28987038": 1,
+    "41071041": 0,
+    "36336303": 1,
+    "27108163": 0,
+    "26586962": 0,
+    "17086777": 0,
+    "40083832": 0,
+    "23639523": 0,
+    "18047442": 1,
+    "40262107": 0,
+    "35327058": 0
+   }
+  },
+  "v95:c4": {
+   "text": "I do think that there is some type of commonality in an environmental exposure that may or may not be identified",
+   "labels": {
+    "16103423": 0,
+    "37397771": 0,
+    "36623980": 0,
+    "38962683": 0,
+    "29427981": 0,
+    "32125277": 0,
+    "37239493": 0,
+    "23380243": 0,
+    "24746870": 0,
+    "25445717": 0,
+    "39176508": 0,
+    "42867511": 0,
+    "29247715": 0,
+    "41708101": 0,
+    "28356035": 0,
+    "38940212": 0,
+    "35576883": 0,
+    "37690859": 0,
+    "32880755": 0,
+    "41110307": 0
+   }
+  },
+  "v100:c1": {
+   "text": "Logran revertir la diabetes tipo 1 ... mediante reprogramacion celular",
+   "labels": {
+    "40544428": 1,
+    "39326417": 2,
+    "40983070": 1,
+    "29769672": 1,
+    "40579550": 1,
+    "40398390": 0,
+    "37146579": 1,
+    "35674842": 0,
+    "33794915": 0,
+    "35028608": 1,
+    "33206261": 0,
+    "37861029": 1,
+    "29241729": 0,
+    "42385703": 0,
+    "37150985": 0,
+    "36754494": 1,
+    "35373526": 0,
+    "34480420": 0,
+    "35838597": 1,
+    "36229614": 0
+   }
+  },
+  "v111:c4": {
+   "text": "eso al final se pudre y se fermenta",
+   "labels": {
+    "40328215": 0,
+    "10582721": 0,
+    "12783766": 0,
+    "40673427": 0,
+    "31728491": 0,
+    "27927992": 0,
+    "28499041": 0,
+    "33299183": 0,
+    "1461268": 0,
+    "24805231": 0,
+    "20621211": 0,
+    "22905189": 0,
+    "33169614": 0,
+    "36156816": 0,
+    "36564874": 0,
+    "38683081": 0,
+    "25236855": 0,
+    "22404476": 0,
+    "38442360": 0,
+    "35042569": 0
+   }
+  },
+  "v122:c1": {
+   "text": "los medicamentos para el colesterol, los que llaman las famosas estatinas ... hacen daño al corazón",
+   "labels": {
+    "30198808": 1,
+    "30653440": 1,
+    "14727947": 0,
+    "22607822": 2,
+    "39565634": 1,
+    "35143133": 0,
+    "40208236": 0,
+    "33736827": 0,
+    "37318556": 0,
+    "24996502": 0,
+    "15182038": 0,
+    "36597731": 0,
+    "28859793": 0,
+    "15506961": 0,
+    "25786568": 0,
+    "32267116": 0,
+    "15815580": 1,
+    "28205165": 0,
+    "35451596": 0,
+    "37496276": 0
+   }
+  },
+  "v167:c2": {
+   "text": "कंसर को अगर गआप दो खाने में, शुगर नहीं दो ... काबोईढरेट्ट्ट नहीं दो रोटी, तो की सैल खुदब खुदम रहने लिए निंगात",
+   "labels": {
+    "33274644": 1,
+    "39166749": 0,
+    "37263858": 1,
+    "32669709": 0,
+    "30327499": 1,
+    "38147966": 0,
+    "36646607": 1,
+    "36577676": 0,
+    "34383300": 1,
+    "34788373": 1,
+    "38918380": 0,
+    "36835094": 1,
+    "40779172": 1,
+    "41372410": 0,
+    "39617882": 0,
+    "35848874": 1,
+    "36395769": 0,
+    "34731655": 0,
+    "37602826": 0,
+    "38718791": 0
+   }
+  },
+  "v96:c2": {
+   "text": "Comer el aceite de las conservas ... va a ser comer una concentración más alta de estos metales pesados",
+   "labels": {
+    "36981874": 0,
+    "24365357": 0,
+    "35748784": 0,
+    "24407787": 0,
+    "32526826": 0,
+    "38847096": 0,
+    "3285919": 0,
+    "38503128": 0,
+    "30743144": 0,
+    "28383805": 0,
+    "35090295": 0,
+    "36287331": 0,
+    "37572029": 0,
+    "15016455": 0,
+    "39928088": 0,
+    "4993039": 0,
+    "28719337": 0,
+    "35963399": 0,
+    "39486206": 0,
+    "38093551": 0
+   }
+  },
+  "vitk:c8": {
+   "text": "bleeding in the brain can cause permanent neurological damage or death",
+   "labels": {
+    "21631203": 0,
+    "24132564": 0,
+    "36422479": 1,
+    "19535956": 0,
+    "31900737": 0,
+    "30837832": 0,
+    "22381818": 0,
+    "22068993": 1,
+    "34289929": 1,
+    "2136174": 0,
+    "31068769": 0,
+    "28555270": 1,
+    "25795265": 0,
+    "19967531": 0,
+    "15679131": 1,
+    "31176061": 0,
+    "2012489": 0,
+    "25326333": 0,
+    "12137707": 1
+   }
+  }
+ },
+ "least_sure": [
+  {
+   "claim_id": "v119:c1",
+   "pmid": "20470973",
+   "label": 1,
+   "why": "dietary glycaemic load and pancreatic cancer *risk*; claim is about starving an existing cancer"
+  },
+  {
+   "claim_id": "v119:c1",
+   "pmid": "37311455",
+   "label": 0,
+   "why": "ketogenic diet slows tumour growth, but in mice (animal = 0 by rubric)"
+  },
+  {
+   "claim_id": "v131:c1",
+   "pmid": "36282888",
+   "label": 1,
+   "why": "free sugars in infants vs general psychopathology, not ADHD specifically"
+  },
+  {
+   "claim_id": "v131:c1",
+   "pmid": "8277958",
+   "label": 0,
+   "why": "editorial 'Sugar and the hyperactive child', no abstract; on point but opinion"
+  },
+  {
+   "claim_id": "v135:c1",
+   "pmid": "*",
+   "label": 0,
+   "why": "claim is a product-concentration fact ('about 20 ppm', benzene) without its context; no record measures product levels"
+  },
+  {
+   "claim_id": "v176:c1",
+   "pmid": "37477800",
+   "label": 0,
+   "why": "claim is religious ('not of God'); a neurobiology review of panic could be read as partly relevant"
+  },
+  {
+   "claim_id": "v21:c4",
+   "pmid": "32767923",
+   "label": 1,
+   "why": "nuts and memory: cognition, not mood/stress"
+  },
+  {
+   "claim_id": "v21:c4",
+   "pmid": "22296169",
+   "label": 1,
+   "why": "supports 'almonds are rich in magnesium' only"
+  },
+  {
+   "claim_id": "v22:c2",
+   "pmid": "34323086",
+   "label": 2,
+   "why": "egg antioxidants and macular protection, but untyped (likely narrative review in Spanish); 2 may be generous"
+  },
+  {
+   "claim_id": "v22:c2",
+   "pmid": "*lutein reviews*",
+   "label": 1,
+   "why": "lutein/zeaxanthin and AMD/cataract reviews that name egg yolk as a source: counted partly relevant"
+  },
+  {
+   "claim_id": "v23:c1",
+   "pmid": "28810029",
+   "label": 0,
+   "why": "coeliac/NCGS review; covers extraintestinal disease (bone) but not the claim directly; other gluten-disorder reviews in the pool were also left at 0"
+  },
+  {
+   "claim_id": "v24:c2",
+   "pmid": "15929876",
+   "label": 0,
+   "why": "letter 'Glyphosate results revisited', no abstract; may discuss the same cohort"
+  },
+  {
+   "claim_id": "v36:c14",
+   "pmid": "20981575",
+   "label": 0,
+   "why": "burdock pharmacology review; PMS not mentioned in the abstract we have"
+  },
+  {
+   "claim_id": "v39:c1",
+   "pmid": "25240692",
+   "label": 2,
+   "why": "canola/LA/ALA oils vs inflammatory markers RCT: tests seed oils on inflammation, but not heart disease or obesity"
+  },
+  {
+   "claim_id": "v39:c1",
+   "pmid": "30487558",
+   "label": 0,
+   "why": "olive-oil reviews counted 0: olive oil is not a seed oil, though they are comparators"
+  },
+  {
+   "claim_id": "v58:c1",
+   "pmid": "9034942",
+   "label": 1,
+   "why": "fibre/laxative SR: generic constipation treatment evidence; the claim is a specific orange/cayenne remedy"
+  },
+  {
+   "claim_id": "v68:c1",
+   "pmid": "*",
+   "label": 0,
+   "why": "pool is drinking-water/hydration papers only; nothing on atrazine or testosterone"
+  },
+  {
+   "claim_id": "v70:c2",
+   "pmid": "*",
+   "label": 0,
+   "why": "generic calcium/vitamin D reviews; none about fortification of plant milks"
+  },
+  {
+   "claim_id": "v71:c3",
+   "pmid": "42096712",
+   "label": 2,
+   "why": "COCs and stroke, but only in women with migraine with aura"
+  },
+  {
+   "claim_id": "v71:c3",
+   "pmid": "25227335",
+   "label": 1,
+   "why": "hormonal contraception and thrombosis: mostly venous, claim is arterial (stroke/MI)"
+  },
+  {
+   "claim_id": "v78:c1",
+   "pmid": "37864485",
+   "label": 1,
+   "why": "preconception (not first-trimester) vaccination and miscarriage"
+  },
+  {
+   "claim_id": "v78:c1",
+   "pmid": "41232126",
+   "label": 1,
+   "why": "decidual RNA-seq after vaccination: human tissue but mechanistic"
+  },
+  {
+   "claim_id": "v86:c1",
+   "pmid": "33586773",
+   "label": 1,
+   "why": "HIV remission review: directly addresses 'reverse HIV'; could be 2"
+  },
+  {
+   "claim_id": "v87:c2",
+   "pmid": "42690660",
+   "label": 1,
+   "why": "prenatal community-water fluoride and child behaviour (US levels): closest test, but exposure is prenatal, not babies drinking it; could be 2"
+  },
+  {
+   "claim_id": "v87:c2",
+   "pmid": "41026552",
+   "label": 1,
+   "why": "Indian endemic high-fluoride areas, not fluoridated bottled water"
+  },
+  {
+   "claim_id": "v92:c2",
+   "pmid": "40507606",
+   "label": 2,
+   "why": "earthing after spinal surgery, CK/inflammation: a small human study; strength not judged here"
+  },
+  {
+   "claim_id": "v92:c2",
+   "pmid": "*grounding reviews*",
+   "label": 1,
+   "why": "advocacy reviews by grounding proponents counted partly relevant (they address the claim)"
+  },
+  {
+   "claim_id": "v95:c4",
+   "pmid": "*",
+   "label": 0,
+   "why": "claim is vague without video context (an unidentified environmental exposure); everything labelled 0"
+  },
+  {
+   "claim_id": "v100:c1",
+   "pmid": "40544428",
+   "label": 1,
+   "why": "stem-cell islet trial (zimislecel) with insulin independence: ES-cell derived, not 'cell reprogramming'; could be 2"
+  },
+  {
+   "claim_id": "v111:c4",
+   "pmid": "*",
+   "label": 0,
+   "why": "'that rots and ferments in the end': fragment with no stated subject; pool is legume botany/allergy"
+  },
+  {
+   "claim_id": "v122:c1",
+   "pmid": "35451596",
+   "label": 0,
+   "why": "statin-intolerance reviews (muscle symptoms) left at 0: adverse effects, but not the heart"
+  },
+  {
+   "claim_id": "v167:c2",
+   "pmid": "*fasting reviews*",
+   "label": 1,
+   "why": "fasting/FMD reviews counted partly relevant to 'no sugar/carbs starves cancer'; ketogenic reviews are closer"
+  },
+  {
+   "claim_id": "vitk:c8",
+   "pmid": "*",
+   "label": 1,
+   "why": "no paper is about the prognosis of intracranial haemorrhage itself, so nothing got 2; the six 1s report death/permanent deficit after brain bleeds (AVM, SAH, IVH, neonatal IVH)"
+  },
+  {
+   "claim_id": "vitk:c8",
+   "pmid": "25795265",
+   "label": 0,
+   "why": "deep brain stimulation risks (production kept it): surgical haemorrhage is a complication there, not the claim"
+  },
+  {
+   "claim_id": "vitk:c8",
+   "pmid": "19535956",
+   "label": 0,
+   "why": "therapeutic hypothermia for acute liver failure (production kept it): cerebral oedema, not bleeding"
+  }
+ ]
+}

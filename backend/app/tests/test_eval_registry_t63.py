@@ -72,7 +72,11 @@ def test_pipeline_steps_match_graph_nodes():
 def test_backfill_covers_the_requested_tasks_and_not_running_ones():
     tasks = {reg.load_record(p).task for p in REGISTRY_FILES}
     assert {"T05", "T07", "T24", "T38", "T43", "T49", "T50", "T53"} <= tasks
-    assert not tasks & {"T60", "T61"}  # those tasks add their own records
+    # T60 and T61 add their own records; the T63 backfill must not have made any for them.
+    for p in REGISTRY_FILES:
+        rec = reg.load_record(p)
+        if rec.task in {"T60", "T61"}:
+            assert rec.run_group and rec.run_group.startswith(rec.task), p.name
 
 
 def test_synthetic_sets_are_flagged():

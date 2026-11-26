@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "run_id": "T60-rerank-lexical_t0.4-recall_strict",
+  "run_group": "T60-rerank-relevance",
+  "date": "2026-11-26",
+  "task": "T60",
+  "pipeline_step": "rerank_evidence",
+  "split": "tune",
+  "synthetic": false,
+  "golden_set_ref": "claims from evals/reports/T50/tune_paid.json (tune split); labels are T60's own, not golden",
+  "models": [],
+  "variant": "lexical_t0.4",
+  "metric_name": "recall_strict",
+  "value": 0.812,
+  "ci95": null,
+  "n_items": 16,
+  "n_unit": "relevant records (label 2) in 9 claims",
+  "cost_usd": 0.0,
+  "report_path": "evals/reports/T60/README.md",
+  "notes": "Tune split claims only (test split not read): 30 claims (25 en, 4 es, 1 hi; incl. vitamin K job c8 with production's records) x first 20 retrieved records = 599 PubMed records. Relevance labels (2/1/0) by an AI assistant (the Claude Code session that ran T60), one labeller, NOT human labels and NOT inter-annotator agreement; to be spot-checked by the lead (labels.json least_sure). synthetic=false because claims and records are real, but the labels are not golden-set labels. Real Reranker (0.7 relevance + 0.3 study quality, cap 10); only the relevance scorer differs. P@k over records kept (claims keeping nothing excluded); recall = relevant kept / relevant in pool, pooled over claims. Lenient = label>=1, strict = label 2 (16 records in 9 claims). No paid calls; MedCPT ran locally on CPU."
+}

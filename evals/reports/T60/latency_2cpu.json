@@ -1,0 +1,21 @@
+{
+ "threads": 2,
+ "affinity_cpus": 2,
+ "records_per_claim_mean": 20.0,
+ "model_load_s": 2.88,
+ "medcpt_ms_per_claim": {
+  "median": 6732.2,
+  "p95": 7445.5,
+  "max": 7594.2
+ },
+ "lexical_ms_per_claim": {
+  "median": 10.7,
+  "p95": 16.3
+ },
+ "peak_rss_mb": {
+  "python_start": 41,
+  "model_loaded": 1156,
+  "after_runs": 1586
+ },
+ "runs": 60
+}
