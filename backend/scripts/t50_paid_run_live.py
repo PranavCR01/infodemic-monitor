@@ -75,13 +75,37 @@ def run_live(target: str, max_usd: float, out: Path) -> None:  # pragma: no cove
     step = FindStudyStep(capped_finder, StudyVerifier(pubmed, CrossrefClient()))
     reranker = Reranker()
     claims_out, stopped = {}, None
+
+    def _write() -> None:
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(json.dumps({"split": "tune" if target == "tune" else "vitamin_k_fixture", "rounds": 3,
+                                   "created_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                                   "spent_usd": round(caller.spent, 4), "cap_usd": max_usd, "stopped": stopped,
+                                   "calls": [r.model_dump() for r in router.records], "claims": claims_out},
+                                  ensure_ascii=False))
+
+    try:
+        _run_claims(target, planner, retriever, step, reranker, claims_out)
+    except _Stop as exc:
+        stopped = str(exc)
+    except Exception as exc:  # noqa: BLE001 - keep what was paid for; the record says why it stopped
+        stopped = f"crashed: {type(exc).__name__}: {exc}"[:300]
+    _write()
+    print(f"spent {caller.spent:.4f} USD of {max_usd}; {len(claims_out)} claims; stopped: {stopped}")
+
+
+class _Stop(Exception):
+    pass
+
+
+def _run_claims(target, planner, retriever, step, reranker, claims_out) -> None:  # pragma: no cover - paid path
+    stopped = None
     for c in _claims(target):
         t0 = time.perf_counter()
         try:
             plan = planner.plan(c["text"], claim_kind=c["kind"], context=c["context"])
         except BudgetExceeded as exc:
-            stopped = str(exc)
-            break
+            raise _Stop(str(exc)) from exc
         evidence, rounds, already = [], [], []
         for i in range(1, 4):
             q = planner.next_query(c["text"], already, plan=plan)
@@ -89,7 +113,11 @@ def run_live(target: str, max_usd: float, out: Path) -> None:  # pragma: no cove
                 rounds.append({"round": i, "stopped": "ladder_exhausted"})
                 break
             already.append(q)
-            res = retriever.retrieve(q)
+            try:
+                res = retriever.retrieve(q)
+            except Exception as exc:  # noqa: BLE001 - as in record(): one failed round never stops the run
+                rounds.append({"round": i, "query": q, "error": type(exc).__name__})
+                continue
             evidence = merge_evidence(evidence, res.records)
             rounds.append({"round": i, "query": q, "hits": res.pmids_found, "ids": [r.evidence_id for r in res.records]})
         kept = reranker.rerank(c["text"], evidence, c["kind"]).kept if evidence else []
@@ -113,11 +141,4 @@ def run_live(target: str, max_usd: float, out: Path) -> None:  # pragma: no cove
                                         "year": r.publication_year} for r in evidence},
             "kept": [r.evidence_id for r in kept]}
         if stopped:
-            break
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps({"split": "tune" if target == "tune" else "vitamin_k_fixture", "rounds": 3,
-                               "created_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-                               "spent_usd": round(caller.spent, 4), "cap_usd": max_usd, "stopped": stopped,
-                               "calls": [r.model_dump() for r in router.records], "claims": claims_out},
-                              ensure_ascii=False))
-    print(f"spent {caller.spent:.4f} USD of {max_usd}; {len(claims_out)} claims; stopped: {stopped}")
+            raise _Stop(stopped)

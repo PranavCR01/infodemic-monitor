@@ -28,7 +28,8 @@ export type RawQueueItem = {
   // `system_view_withheld`, the proposed label, reasons and rules fired are empty.
   blind_step_required?: boolean;
   system_view_withheld?: boolean;
-  status: "OPEN" | "RESOLVED";
+  status: "OPEN" | "RESOLVED" | "SUPERSEDED"; // T55: SUPERSEDED = closed by a re-analysis, never decided
+  superseded_by_job_id?: string | null; // T55
   severity?: string | null;
   reasons: string[];
   rules_fired?: Record<string, unknown>[];

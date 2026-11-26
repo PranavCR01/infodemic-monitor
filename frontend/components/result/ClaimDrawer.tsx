@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { Icon, StanceChip, VerdictChip, buttonClass } from "@/components/ui";
 import { clock, type Claim, type Segment, type Source } from "@/lib/api/result-adapter";
 import { claimMeaning, STANCES } from "@/lib/vocabulary";
+import { unusedSources } from "@/lib/search-finding";
 import { ClaimSearch } from "./ClaimSearch";
 import { SourceCard, sortSources } from "./SourceCard";
 
@@ -64,6 +65,7 @@ export function ClaimDrawer({ claims, openId, transcript, onNavigate, onClose, o
 
   const modalities = c?.modality === "both" ? ["Speech", "On screen"] : c?.modality === "screen" ? ["On screen"] : c?.modality === "speech" ? ["Speech"] : [];
   const shown: Source[] = c ? sortSources(c.sources.filter((s) => s.relation === dir)) : [];
+  const unused: Source[] = c ? unusedSources(c) : [];
   const counts = c ? { CONTRADICTS: c.evidence.contradicts, SUPPORTS: c.evidence.supports } : { CONTRADICTS: 0, SUPPORTS: 0 };
 
   return (
@@ -192,6 +194,19 @@ export function ClaimDrawer({ claims, openId, transcript, onNavigate, onClose, o
                           ? "No source supports this claim."
                           : "No source contradicts this claim."}
                     </p>
+                  )}
+                  {/* T59: the sources the check saw but didn't use come after the cited ones, collapsed. */}
+                  {unused.length > 0 && (
+                    <details className="rounded-md border border-line px-3 py-2">
+                      <summary className="cursor-pointer text-small font-semibold text-ink-2">
+                        Also retrieved, not used <span className="tabular-nums">({unused.length})</span>
+                      </summary>
+                      <div className="mt-2 flex flex-col gap-2">
+                        {unused.map((s) => (
+                          <SourceCard key={s.id} s={s} />
+                        ))}
+                      </div>
+                    </details>
                   )}
                 </section>
 

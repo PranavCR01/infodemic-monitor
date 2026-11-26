@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import {
   ErrorBanner,
   Icon,
@@ -14,9 +14,11 @@ import {
 } from "@/components/ui";
 import { TONE } from "@/components/ui/tone";
 import { ClaimSearch } from "@/components/result/ClaimSearch";
-import { SourceCard, sortSources } from "@/components/result/SourceCard";
+import { VideoPlayer, type PlayerHandle } from "@/components/result/VideoPlayer";
+import { sortSources } from "@/components/result/SourceCard";
+import { SourceList } from "@/components/result/SourceList";
 import { flaggedClaimIds } from "@/lib/search-finding";
-import { clock, type Claim, type ResultModel } from "@/lib/api/result-adapter";
+import { clock, type Claim, type ResultModel, type Segment } from "@/lib/api/result-adapter";
 import type { BlindClaimMaterial, BlindMaterial } from "@/lib/api/blind-material";
 import type { CaseClaim, CaseModel } from "@/lib/api/review-adapter";
 import {
@@ -60,6 +62,9 @@ type Props = {
   /** T40: what a blind reviewer judges from (quotes and sources, no relations). */
   blindMaterial?: BlindMaterial | null;
   blindMaterialFailed?: boolean;
+  /** T56: signed playback URL for the job's video; null when there is none. */
+  videoUrl?: string | null;
+  onVideoError?: () => void;
   onDecide: (req: ReturnType<typeof decisionRequest>) => Promise<SubmitResult>;
   /** T34: record the reviewer's own judgement. On success the page swaps in the revealed case. */
   onPreReveal: (body: ReturnType<typeof preRevealRequest>) => Promise<SubmitResult>;
@@ -79,6 +84,8 @@ export function ReviewWorkspace({
   evidenceFailed = false,
   blindMaterial = null,
   blindMaterialFailed = false,
+  videoUrl = null,
+  onVideoError,
   onDecide,
   onPreReveal,
   onOverrideSeverity,
@@ -87,6 +94,11 @@ export function ReviewWorkspace({
   // Belt and braces: even if a result is passed, nothing from it shows while withheld.
   const claims = useMemo(() => (review.withheld ? [] : result?.claims ?? []), [result, review.withheld]);
   const preReveal: PreReveal[] | null = review.myPreReveal;
+  // T56: the video is evidence of what was said, not the system's reading, so it shows
+  // in the blind step too. Claim times and quotes seek it.
+  const playerRef = useRef<PlayerHandle>(null);
+  const seek = useCallback((t: number) => playerRef.current?.seek(t), []);
+  const onSeek = videoUrl ? seek : null;
   const flagged = useMemo(() => (result ? flaggedClaimIds(result) : new Set<string>()), [result]);
   const revealed = !review.withheld;
 
@@ -202,6 +214,18 @@ export function ReviewWorkspace({
         )}
       </header>
 
+      {review.supersededByJobId !== null && (
+        <section role="status" className="flex flex-wrap items-center gap-2 rounded-lg border border-line bg-surface-2 p-4 text-small text-ink">
+          <Icon name="refresh" className="!h-4 !w-4" />
+          <span className="font-semibold">Superseded by a newer analysis.</span>
+          <span className="text-ink-2">This case was closed when the video was analysed again, so it can&apos;t be decided.</span>
+          {review.supersededByJobId && (
+            <Link href={`/jobs/${encodeURIComponent(review.supersededByJobId)}`} className="text-primary underline">
+              Open the newer analysis
+            </Link>
+          )}
+        </section>
+      )}
       {review.isOwn && review.open && (
         <ErrorBanner title="Your submission. Another reviewer decides.">You can read this case, but you can&apos;t decide it.</ErrorBanner>
       )}
@@ -223,6 +247,9 @@ export function ReviewWorkspace({
         {/* Evidence first */}
         <section aria-labelledby="ev-h" className="flex flex-col gap-4">
           <h2 id="ev-h" className="text-h2 text-ink">The evidence</h2>
+          <section aria-label="Video" className="rounded-lg border border-line bg-surface p-3 shadow-1 xl:sticky xl:top-4 xl:z-10">
+            <VideoPlayer ref={playerRef} url={videoUrl} onError={onVideoError} />
+          </section>
           {review.withheld ? (
             <>
               <p className="rounded-lg border border-line bg-surface-2 p-4 text-small text-ink-2">
@@ -238,7 +265,7 @@ export function ReviewWorkspace({
                 <p className="text-small text-ink-2" aria-busy="true">Loading the quotes and sources…</p>
               )}
               {review.claims.map((c) => (
-                <BlindClaim key={c.id} claim={c} material={blindMaterial?.claims[c.id] ?? null} loaded={Boolean(blindMaterial)} />
+                <BlindClaim key={c.id} claim={c} material={blindMaterial?.claims[c.id] ?? null} loaded={Boolean(blindMaterial)} onSeek={onSeek} />
               ))}
             </>
           ) : (
@@ -246,7 +273,7 @@ export function ReviewWorkspace({
               {evidenceFailed && <p className="text-small text-ink-2">The claims and sources for this video couldn&apos;t be loaded.</p>}
               {!result && !evidenceFailed && <p className="text-small text-ink-2" aria-busy="true">Loading the evidence…</p>}
               {claims.map((c) => (
-                <EvidenceClaim key={c.id} claim={c} showSystem={revealed} sentToReviewer={flagged.has(c.id)} />
+                <EvidenceClaim key={c.id} claim={c} showSystem={revealed} sentToReviewer={flagged.has(c.id)} onSeek={onSeek} />
               ))}
             </>
           )}
@@ -443,21 +470,56 @@ export function ReviewWorkspace({
   );
 }
 
+/** A claim's time range; a button that plays it when there is a video (T56). */
+function TimeRange({ claimNumber, start, end, onSeek }: { claimNumber: number; start: number; end: number | null; onSeek: ((t: number) => void) | null }) {
+  const text = `${clock(start)}${end !== null ? `–${clock(end)}` : ""}`;
+  if (!onSeek) return <span className="font-mono text-small text-ink-2">{text}</span>;
+  return (
+    <button type="button" onClick={() => onSeek(start)} className={buttonClass("secondary", "sm")}>
+      <Icon name="play" className="!h-3.5 !w-3.5" />
+      <span className="font-mono">{text}</span>
+      <span className="sr-only">: play claim {claimNumber}</span>
+    </button>
+  );
+}
+
+/** A quoted transcript or on-screen line; seeks the video to it when there is one (T56). */
+function QuoteLine({ q, onSeek }: { q: Segment; onSeek: ((t: number) => void) | null }) {
+  const body = (
+    <>
+      <q>{q.text}</q> <span className="font-mono text-cap text-ink-3">{q.source === "screen" ? "on screen, " : ""}{clock(q.start)}</span>
+    </>
+  );
+  const box = "rounded-md border-l-2 border-line-input bg-surface-2 px-3 py-2 text-small text-ink";
+  if (!onSeek) return <p className={box}>{body}</p>;
+  return (
+    <button type="button" onClick={() => onSeek(q.start)} className={`${box} w-full text-left hover:bg-surface-sunken`}>
+      {body}
+      <span className="sr-only"> (play from {clock(q.start)})</span>
+    </button>
+  );
+}
+
 /**
  * A claim before the reveal: its words, what was said, and the sources in retrieval order (T40).
  * Nothing the system concluded: no relation, verdict, stance or deciding marker.
  */
-function BlindClaim({ claim: c, material, loaded }: { claim: CaseClaim; material: BlindClaimMaterial | null; loaded: boolean }) {
+function BlindClaim({
+  claim: c,
+  material,
+  loaded,
+  onSeek,
+}: {
+  claim: CaseClaim;
+  material: BlindClaimMaterial | null;
+  loaded: boolean;
+  onSeek: ((t: number) => void) | null;
+}) {
   return (
     <article aria-labelledby={`rv-${c.id}`} className="flex flex-col gap-3 rounded-lg border border-line bg-surface p-4 shadow-1">
       <header className="flex flex-wrap items-center gap-2">
         <h3 id={`rv-${c.id}`} className="text-h3 text-ink">Claim {c.number}</h3>
-        {c.start !== null && (
-          <span className="font-mono text-small text-ink-2">
-            {clock(c.start)}
-            {c.end !== null ? `–${clock(c.end)}` : ""}
-          </span>
-        )}
+        {c.start !== null && <TimeRange claimNumber={c.number} start={c.start} end={c.end} onSeek={onSeek} />}
       </header>
       <p className="font-serif text-[17px] leading-[26px] text-ink">{c.text}</p>
       {loaded && (
@@ -466,17 +528,14 @@ function BlindClaim({ claim: c, material, loaded }: { claim: CaseClaim; material
             <h4 className="text-cap font-semibold uppercase tracking-wider text-ink-3">What the speaker said</h4>
             {!material?.quotes.length && <p className="text-small text-ink-2">No quoted words were stored.</p>}
             {material?.quotes.map((q) => (
-              <p key={`${q.source}-${q.id}`} className="rounded-md border-l-2 border-line-input bg-surface-2 px-3 py-2 text-small text-ink">
-                <q>{q.text}</q> <span className="font-mono text-cap text-ink-3">{q.source === "screen" ? "on screen, " : ""}{clock(q.start)}</span>
-              </p>
+              <QuoteLine key={`${q.source}-${q.id}`} q={q} onSeek={onSeek} />
             ))}
           </div>
           <div className="flex flex-col gap-2">
             <h4 className="text-cap font-semibold uppercase tracking-wider text-ink-3">Sources the search found</h4>
             {!material?.sources.length && <p className="text-small text-ink-2">The search found no source for this claim.</p>}
-            {material?.sources.map((s) => (
-              <SourceCard key={s.id} s={s} />
-            ))}
+            {/* T59: the first 3, in retrieval order; the rest behind "Show N more sources". */}
+            {material && <SourceList sources={material.sources} />}
           </div>
         </div>
       )}
@@ -484,13 +543,24 @@ function BlindClaim({ claim: c, material, loaded }: { claim: CaseClaim; material
   );
 }
 
-function EvidenceClaim({ claim: c, showSystem, sentToReviewer }: { claim: Claim; showSystem: boolean; sentToReviewer: boolean }) {
-  const sources = sortSources(c.sources);
+function EvidenceClaim({
+  claim: c,
+  showSystem,
+  sentToReviewer,
+  onSeek,
+}: {
+  claim: Claim;
+  showSystem: boolean;
+  sentToReviewer: boolean;
+  onSeek: ((t: number) => void) | null;
+}) {
+  // T59: the sources the check cited first (strongest study first), then those it saw but didn't use.
+  const sources = [...sortSources(c.sources.filter((s) => s.relation !== "CONSIDERED")), ...c.sources.filter((s) => s.relation === "CONSIDERED")];
   return (
     <article aria-labelledby={`rv-${c.id}`} className="flex flex-col gap-3 rounded-lg border border-line bg-surface p-4 shadow-1">
       <header className="flex flex-wrap items-center gap-2">
         <h3 id={`rv-${c.id}`} className="text-h3 text-ink">Claim {c.number}</h3>
-        <span className="font-mono text-small text-ink-2">{clock(c.start)}–{clock(c.end)}</span>
+        <TimeRange claimNumber={c.number} start={c.start} end={c.end} onSeek={onSeek} />
         {/* Which claim decided the label is the system's reading too: hidden until the reveal. */}
         {showSystem && c.deciding && <span className="rounded-sm bg-ink px-1.5 text-cap font-semibold text-bg">Decided the label</span>}
       </header>
@@ -500,9 +570,7 @@ function EvidenceClaim({ claim: c, showSystem, sentToReviewer }: { claim: Claim;
           <h4 className="text-cap font-semibold uppercase tracking-wider text-ink-3">What the speaker said</h4>
           {c.quotes.length === 0 && <p className="text-small text-ink-2">No quoted words were stored.</p>}
           {c.quotes.map((q) => (
-            <p key={`${q.source}-${q.id}`} className="rounded-md border-l-2 border-line-input bg-surface-2 px-3 py-2 text-small text-ink">
-              <q>{q.text}</q> <span className="font-mono text-cap text-ink-3">{q.source === "screen" ? "on screen, " : ""}{clock(q.start)}</span>
-            </p>
+            <QuoteLine key={`${q.source}-${q.id}`} q={q} onSeek={onSeek} />
           ))}
           {showSystem && c.stance && (
             <p className="flex flex-wrap items-center gap-2 text-small text-ink-2">System: <StanceChip stance={c.stance} /></p>
@@ -511,9 +579,7 @@ function EvidenceClaim({ claim: c, showSystem, sentToReviewer }: { claim: Claim;
         <div className="flex flex-col gap-2">
           <h4 className="text-cap font-semibold uppercase tracking-wider text-ink-3">What the sources say</h4>
           {sources.length === 0 && <p className="text-small text-ink-2">No source was found that tests this claim.</p>}
-          {sources.map((s) => (
-            <SourceCard key={s.id} s={s} />
-          ))}
+          <SourceList sources={sources} />
           {showSystem && c.verdict && (
             <p className="flex flex-wrap items-center gap-2 text-small text-ink-2">System: <VerdictChip verdict={c.verdict} /></p>
           )}

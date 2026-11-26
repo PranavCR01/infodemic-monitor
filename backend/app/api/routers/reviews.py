@@ -512,7 +512,9 @@ def me(current_user: dict = Depends(get_current_user), db: Session = Depends(get
 
 @router.get("/reviews", response_model=ReviewQueuePage)
 def review_queue(
-    status: Literal["OPEN", "RESOLVED", "ALL"] = Query("OPEN"),
+    # T55: SUPERSEDED cases (the video was re-analysed while they were open) are not in
+    # the default OPEN queue; they can be listed on their own or with ALL.
+    status: Literal["OPEN", "RESOLVED", "SUPERSEDED", "ALL"] = Query("OPEN"),
     severity: Optional[list[str]] = Query(
         None, description="HIGH, MEDIUM, LOW or NONE; repeat or comma-separate for several"),
     reason: Optional[str] = Query(

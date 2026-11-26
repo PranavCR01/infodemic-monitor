@@ -1,7 +1,5 @@
-import { Icon } from "@/components/ui";
 import type { Claim } from "@/lib/api/result-adapter";
 import { searchFinding, unusedSources } from "@/lib/search-finding";
-import { studyTypeDisplay } from "@/lib/vocabulary";
 
 const n = (k: number, one: string, many: string) => `${k} ${k === 1 ? one : many}`;
 
@@ -14,14 +12,15 @@ type Props = {
 };
 
 /**
- * "How we searched" for one claim (T31 trail, T52 wording): one plain-language finding,
- * then the papers that were retrieved but not used, collapsed. The critic's pipeline
- * notes and the raw queries are never shown on the result page.
+ * "How we searched" for one claim (T31 trail, T52 wording): one plain-language finding.
+ * The papers retrieved but not used are listed with the sources (T59). The critic's
+ * pipeline notes and the raw queries are never shown on the result page.
  */
 export function ClaimSearch({ claim: c, sentToReviewer, technical = false }: Props) {
   const s = c.search;
   if (!s) return null;
   const finding = searchFinding(c, sentToReviewer);
+  // T59: papers retrieved but not used are listed with the sources ("Also retrieved, not used").
   const unused = unusedSources(c);
   const droppedUnlisted = unused.length === 0 && s.kept === 0 && (s.retrieved ?? s.screened) > 0;
 
@@ -37,31 +36,6 @@ export function ClaimSearch({ claim: c, sentToReviewer, technical = false }: Pro
       )}
       {s.libraryUsed && <p>The project&apos;s document library was searched too, because PubMed found little.</p>}
 
-      {unused.length > 0 && (
-        <details>
-          <summary className="cursor-pointer font-semibold text-ink-2">
-            Papers retrieved but not used <span className="tabular-nums">({unused.length})</span>
-          </summary>
-          <ul className="mt-2 flex flex-col gap-1.5">
-            {unused.map((p) => (
-              <li key={p.id} className="flex flex-col">
-                {p.url ? (
-                  <a href={p.url} target="_blank" rel="noreferrer" className="inline-flex w-fit items-center gap-1 text-primary underline">
-                    {p.title}
-                    <Icon name="ext" className="!h-3.5 !w-3.5" />
-                    <span className="sr-only">(opens in a new tab)</span>
-                  </a>
-                ) : (
-                  <span className="text-ink">{p.title}</span>
-                )}
-                <span className="text-cap text-ink-3">
-                  {[p.kind === "library" ? "Internal library" : studyTypeDisplay(p.studyType), p.year].filter(Boolean).join(" · ")}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </details>
-      )}
       {droppedUnlisted && (
         <p className="text-cap text-ink-3">The titles of the papers that weren&apos;t relevant enough to check weren&apos;t kept.</p>
       )}

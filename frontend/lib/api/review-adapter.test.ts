@@ -71,6 +71,12 @@ describe("review adapter", () => {
     expect(splitReason(null, "plain note")).toEqual({ code: null, note: "plain note" });
   });
 
+  it("treats a SUPERSEDED case as closed, never open, with a link to the newer job (T55)", () => {
+    const q = adaptQueueItem({ ...MOCK_CASE_NORMAL, status: "SUPERSEDED", superseded_by_job_id: "new-job" });
+    expect(q).toMatchObject({ open: false, supersededByJobId: "new-job" });
+    expect(adaptQueueItem(MOCK_CASE_NORMAL).supersededByJobId).toBeNull();
+  });
+
   it("names people, never by raw id, and describes decisions in words", () => {
     const c = adaptCase(MOCK_CASE_DECIDED);
     expect(c.decision?.by).toBe("Dr. B. Osei");

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { ReviewWorkspace } from "@/components/review/ReviewWorkspace";
 import { ErrorBanner } from "@/components/ui";
 import { fetchBlindMaterial, type BlindMaterial } from "@/lib/api/blind-material";
+import { usePlaybackUrl } from "@/lib/api/playback";
 import type { ResultModel } from "@/lib/api/result-adapter";
 import type { CaseModel } from "@/lib/api/review-adapter";
 import { fetchCase, fetchCaseEvidence, postDecision, postPreReveal, postSeverity } from "@/lib/api/reviews";
@@ -17,6 +18,8 @@ export function WorkspaceClient({ reviewId }: { reviewId: string }) {
   const [blindMaterialFailed, setBlindMaterialFailed] = useState(false);
   const [reloads, setReloads] = useState(0);
   const reloadedForBlind = useRef(false);
+  // T56: reviewers may play any case's video (ownership._row_visible); the server decides.
+  const playback = usePlaybackUrl(review?.jobId ?? null);
   const [error, setError] = useState<string | null>(null);
   const viewerId = useViewerId();
 
@@ -87,6 +90,8 @@ export function WorkspaceClient({ reviewId }: { reviewId: string }) {
       evidenceFailed={evidenceFailed}
       blindMaterial={blindMaterial}
       blindMaterialFailed={blindMaterialFailed}
+      videoUrl={playback.url}
+      onVideoError={playback.onError}
       onDecide={(req) => postDecision(reviewId, req)}
       onPreReveal={async (body) => {
         // T34: the server records the judgement and answers with the revealed case.

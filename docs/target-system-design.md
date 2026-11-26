@@ -71,6 +71,8 @@ A video becomes a job that survives crashes and retries without double work or d
 | Unsupported language | Abstain or send to review |
 | Scientific uncertainty | Abstain; never retried until it gives an answer |
 
+**Deliberate re-analysis.** Starting a job on a video that already has one returns that job (an accidental double run does no extra work), and a duplicate upload reuses the video. To check a pipeline change on an old video, the video's owner or an admin calls POST /v1/videos/{video\_id}/reanalyse instead: it always creates a new job, linked to the previous one (`previous_job_id`), with an optional reason in the audit log. Each user, admins included, may re-run one video at most 3 times and at most 20 videos in total in a rolling 24 hours (both configurable); over either limit the API answers 429 with Retry-After and says which limit was hit, because every re-run is a paid analysis. Results are versioned: the video's current result is its newest finished job, and the result lists the earlier ones (job, finish time, label, pipeline version).
+
 **Idempotency.** Celery delivers a task **at least once**, so any step may run twice. Every step is written so a second run does no harm: results are keyed by job and step, a finished step is marked complete and skipped on re-run, and the database rejects a second result for the same job. A crashed job is detected by its stale `updated_at` and requeued rather than left stuck.
 
 **Checkpointing.** The LangGraph run saves its state to Postgres after each node: which steps finished, each claim's progress, retrieval attempts, evidence references and review state. A worker that dies mid-run resumes from the last checkpoint instead of starting over. Large artefacts (the video, full transcripts, raw API responses) live in object storage; the checkpoint holds only references to them.
@@ -264,6 +266,25 @@ Some claims are about one paper ("a 2026 JAMA study of 5 million babies"), and a
 - **Only verified records become evidence:** a PubMed record, or a journal article cited by DOI with Crossref metadata (`source: journal_doi`, shown as such in the interface), whose metadata text is kept as a snapshot with its hash. Web page text, search snippets and the model's answer never become evidence or citations. Unverifiable ids are dropped.
 - **Untrusted input (§15).** The model's answer is parsed for ids only; nothing in a web page is followed.
 - **Recorded.** The web searches the model ran, each candidate and its verification outcome, cost and latency go into the claim's search trail. Verified records are kept ahead of the reranker's picks, within the cap of 10.
+
+### A cited study, shared across the video's claims (T57)
+
+A video that cites one study usually spreads its numbers over several claims, and only one of them may name the journal. In the vitamin K paid run, find_study verified the JAMA 2026 paper (PMID 42986716) for c2 ("a JAMA study ... 5.2 million infants") and c4, but proposed nothing for c3 ("... more than doubled from 3.1% in 2017 to 6.8% in 2025") or c5. The finder only sees each claim's own text.
+
+- **What is shared.** Once any claim of the video holds a verified record for a study it cites, that record is offered to the video's other claims inside `rerank_evidence`. A verified record means one find_study verified, or the citation lookup's best record: the top record the citing claim's reranker kept from its `"JAMA"[ta] AND 2026[dp] AND (topic)` query, on the claim's topic and within a year of the year the claim states. Only one such record per citing claim is shared, because the lookup can return many papers from the same journal. A claim's ordinary search results are never shared.
+- **Who decides.** Nothing is pinned. The receiving claim keeps a shared record only if all three hold:
+  - its own reranker keeps the record, scored against the claim's own papers under the same threshold and cap of 10;
+  - the record passes the §7 T49 on-topic check for that claim;
+  - if the claim names its own journal or year, the record agrees with it.
+- **No new cost and no shortcut.** The step makes no model call and no web search. It never bypasses verification, because only records our own checks verified are offered. A record that fails the on-topic check is never added, so an off-topic shared record can't decide a verdict.
+- **Deterministic.** Shared records are gathered in claim-id order (c2 before c10), so the result doesn't depend on the order claims are processed in. The trail is rebuilt each round.
+- **Recorded.** For each claim, the search trail (`shared_studies`, trail version 3) lists every record offered to it, with `shared_from` (the claim it came from), the outcome (`kept`, `not_kept_by_reranker`, `off_topic` or `citation_mismatch`) and the reason.
+
+**Vitamin K, replayed offline from the paid run.** c3 and c5 now keep PMID 42986716, shared from c2. c2 and c4 keep it as before. It also reaches c1, c7, c9, c10 and c13, which are all about vitamin K and newborn bleeding. It is refused for four claims:
+- c6 and c11: the reranker scored it below the threshold;
+- c8 ("bleeding in the brain ...") and c12 ("the studies are observational ..."): it failed the strict T49 on-topic check. Neither claim has a recognised intervention, and the paper doesn't contain their intervention words.
+
+The T49 replay and the judge cross-check are unchanged.
 
 **Screened-out papers.** The search trail also lists the papers the searches returned that the reranker did not keep (ID, PMID, title, year; up to 100), so the result page can show what was looked at when nothing was kept.
 
@@ -589,6 +610,8 @@ Review is a real step in the workflow, not a flag. A case in review has its own 
 - **Request re-analysis**, for example after the retrieval terms are fixed.
 - **Reject** the result.
 
+**Superseded cases.** If the owner or an admin deliberately re-analyses a video (section 1) while its case is open, the case is marked SUPERSEDED, linked to the new job, logged in the audit trail and taken out of the queue without a decision. The new result goes through the review rule (section 11) from scratch.
+
 Every action records who, when and why: a reason code (claim overgeneralised, evidence misread, stance misread, missing source, system correct, other) and a written note.
 
 **HIGH severity: your judgement first.** On a HIGH-severity case each reviewer first records their own stance and verdict for every claim; only then does the server show them the system's. A decision without that step is refused, and both are kept in the audit trail.
@@ -789,7 +812,7 @@ Calls to the MCP retrieval server are traced too, with the client ID, tool, late
 | --- | --- |
 | `users` | User ID, auth identity (email, display name); roles come from the verified token |
 | `videos` | Owner, storage location, SHA-256 hash, duration |
-| `jobs` | Video, state, pipeline version, attempts, error code |
+| `jobs` | Video, state, pipeline version, attempts, error code, previous job (a re-analysis) |
 | `job_events` | Every state change, with time |
 | `outbox_events` | Dispatch events written with the job, until published |
 | `transcript_segments` | Start, end, text |
@@ -801,7 +824,7 @@ Calls to the MCP retrieval server are traced too, with the client ID, tool, late
 | `verification_results` | Verdict, explanation, limitations, version |
 | `critic_reviews` | Decision and issues raised |
 | `classifications` | Video label, MISINFO basis (`contradicted` / `denies_supported` / `unproven`), deciding claims, confidence, version |
-| `human_reviews` | Reviewer, decision, reason, time |
+| `human_reviews` | Reviewer, decision, reason, time; the newer job that superseded an undecided case |
 | `model_runs` | Step, model, prompt version, tokens, cost, latency |
 | `audit_events` | Who did what to which record, and when |
 | `library_documents` | Title, authors, year, DOI/PMID, study type, storage key, SHA-256, OCR quality, uploaded by, ingested at |
@@ -818,7 +841,8 @@ Everything has stable IDs and foreign keys, and schema changes go through number
 | POST | `/v1/jobs` | Start an analysis (with an idempotency key) |
 | GET | `/v1/jobs/{job_id}` | Job state |
 | GET | `/v1/jobs/{job_id}/events` | Processing history |
-| GET | `/v1/videos/{video_id}/results` | Final label and explanation |
+| POST | `/v1/videos/{video_id}/reanalyse` | Analyse the video again on purpose (owner or admin; rate-limited) |
+| GET | `/v1/videos/{video_id}/results` | Current result (the newest finished job), its label and explanation, and earlier versions |
 | GET | `/v1/videos/{video_id}/claims` | Claims with stance and verdict |
 | GET | `/v1/claims/{claim_id}/evidence` | Papers for one claim |
 | POST | `/v1/reviews/{review_id}/pre-reveal` | A reviewer's own judgement on a HIGH case, before the system's is shown |

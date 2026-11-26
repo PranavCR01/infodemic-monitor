@@ -485,7 +485,7 @@ def start_reanalysis(
     # T28: the re-run belongs to whoever owned the original job, not the reviewer, so it
     # shows up in that user's job list.
     new_job = Job(id=str(uuid.uuid4()), video_id=old.video_id, status=JobStatus.PENDING,
-                  user_id=old.user_id)
+                  user_id=old.user_id, previous_job_id=old.id)  # T55: linked to the reviewed job
     db.add(new_job)
     db.add(AuditEvent(
         actor_id=reviewer_id,

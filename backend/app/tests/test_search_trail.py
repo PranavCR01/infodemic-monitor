@@ -311,7 +311,8 @@ def test_trail_is_returned_by_every_result_endpoint(persisted):
         for c in body:
             t = c["search_trail"]
             assert set(t) == {"version", "recorded", "pubmed_queries", "references", "library", "counts", "budget",
-                              "planning", "find_study", "screened_out", "screened_out_truncated"}  # T50
+                              "planning", "find_study", "shared_studies", "screened_out",
+                              "screened_out_truncated"}  # T50, T57
             assert set(t["counts"]) == {"retrieved", "screened", "kept"}
             assert t["pubmed_queries"] and t["pubmed_queries"][0]["query"]
     # existing T11/T26 claim fields are still there, unchanged

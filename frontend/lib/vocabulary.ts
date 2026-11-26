@@ -26,7 +26,7 @@ export type Stance = (typeof STANCE_VALUES)[number];
 export type Verdict = (typeof VERDICT_VALUES)[number];
 export type MisinfoBasis = (typeof MISINFO_BASES)[number];
 export type Severity = (typeof SEVERITIES)[number];
-export type ReviewStatus = "NOT_REQUIRED" | "PENDING" | "VERIFIED" | "CORRECTED" | "REJECTED" | "REANALYSIS";
+export type ReviewStatus = "NOT_REQUIRED" | "PENDING" | "VERIFIED" | "CORRECTED" | "REJECTED" | "REANALYSIS" | "SUPERSEDED";
 export type JobState = "QUEUED" | "RUNNING" | "RETRYING" | "NEEDS_REVIEW" | "COMPLETED" | "FAILED";
 
 /** Colour families. Each maps to one set of token classes in components/ui/tone.ts. */
@@ -101,13 +101,16 @@ export const REVIEW_STATUS: Record<ReviewStatus, { display: string; icon: string
   CORRECTED: { display: "Corrected", icon: "pencil" },
   REJECTED: { display: "Rejected", icon: "ban" },
   REANALYSIS: { display: "Re-analysis requested", icon: "refresh" },
+  // T55: a deliberate re-analysis closed the open case; the new result is reviewed afresh.
+  SUPERSEDED: { display: "Superseded by a newer analysis", icon: "refresh" },
 };
 
 /**
  * Backend review case → display status. No case on a finished job = "Not required".
  * T26 statuses: REVIEW_REQUIRED (open), VERIFIED, CORRECTED, REJECTED, REANALYSIS_REQUESTED.
  */
-export function toReviewStatus(review: { status?: string | null } | null | undefined): ReviewStatus {
+export function toReviewStatus(review: { status?: string | null; case_status?: string | null } | null | undefined): ReviewStatus {
+  if (review?.case_status === "SUPERSEDED") return "SUPERSEDED";
   switch (review?.status) {
     case undefined:
     case null:
@@ -120,6 +123,8 @@ export function toReviewStatus(review: { status?: string | null } | null | undef
       return "REJECTED";
     case "REANALYSIS_REQUESTED":
       return "REANALYSIS";
+    case "SUPERSEDED":
+      return "SUPERSEDED";
     default:
       // REVIEW_REQUIRED, and anything unknown: treat as still provisional.
       return "PENDING";

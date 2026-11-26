@@ -24,7 +24,7 @@ from typing import Literal, Optional
 from pydantic import BaseModel, Field
 
 MAX_SCREENED_OUT = 100
-SEARCH_TRAIL_VERSION = 2  # 2 (T50): kind, planning, ladder_exhausted, screened_out, find_study
+SEARCH_TRAIL_VERSION = 3  # 2 (T50): kind, planning, ladder_exhausted, screened_out, find_study; 3 (T57): shared_studies
 
 ReferenceOutcome = Literal["passage", "no_passage", "no_results", "skipped", "error"]
 
@@ -109,6 +109,21 @@ class FindStudyView(BaseModel):
     error: Optional[str] = None
 
 
+class SharedStudyView(BaseModel):
+    """A cited-study record another claim of the same video holds, offered to this
+    claim (T57). ``shared_from`` is the claim it came from; ``outcome`` is kept,
+    not_kept_by_reranker, off_topic or citation_mismatch."""
+
+    evidence_id: str
+    pmid: Optional[str] = None
+    doi: Optional[str] = None
+    title: str = ""
+    shared_from: str
+    outcome: str
+    reason: str = ""
+    relevance_score: Optional[float] = None
+
+
 class ReferenceItemView(BaseModel):
     item: str  # catalogue page id, NBK accession, or "search"
     url: Optional[str] = None  # the allow-listed page, never an API request URL
@@ -161,6 +176,8 @@ class SearchTrailView(BaseModel):
     budget: SearchBudgetView
     planning: Optional[PlanningView] = None
     find_study: Optional[FindStudyView] = None
+    # T57: cited-study records shared from the video's other claims (additive).
+    shared_studies: list[SharedStudyView] = Field(default_factory=list)
     # Up to MAX_SCREENED_OUT papers retrieved but not kept, in retrieval order.
     screened_out: list[ScreenedOutView] = Field(default_factory=list)
     screened_out_truncated: bool = False

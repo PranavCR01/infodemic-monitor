@@ -280,10 +280,35 @@ export const MOCK_LEGACY: RawResult = {
   review: null,
 };
 
+/** T55: a re-analysed video. Two earlier versions (one rejected) and a newer run still going. */
+export const MOCK_REANALYSED: RawResult = {
+  ...MOCK_UNPROVEN,
+  job_id: "mock-job-3b",
+  previous_job_id: "mock-job-3a",
+  current_job_id: "mock-job-3b",
+  is_current: true,
+  previous_jobs: [
+    { job_id: "mock-job-3a", finished_at: "2026-11-25T10:00:00Z", label: "MISINFO", label_display: "MISINFO (unproven)", pipeline_version: "graph_v1+1111111+p0000aaaa", status: "SUCCESS" },
+    { job_id: "mock-job-3z", finished_at: "2026-11-20T09:00:00Z", label: "NO_MISINFO", label_display: "NO MISINFO", pipeline_version: "graph_v1", status: "FAILED" },
+  ],
+  latest_job: { job_id: "mock-job-3c", status: "STARTED", state: "RUNNING", created_at: "2026-11-26T19:00:00Z" },
+};
+
+/** T55: an older version, opened from "Previous analyses". */
+export const MOCK_OLDER_VERSION: RawResult = {
+  ...MOCK_UNPROVEN,
+  job_id: "mock-job-3a",
+  current_job_id: "mock-job-3b",
+  is_current: false,
+  previous_jobs: [],
+};
+
 export const MOCK_RESULTS: Record<string, RawResult> = {
   pending: MOCK_MISINFO_PENDING,
   debunked: MOCK_DEBUNKED_VERIFIED,
   unproven: MOCK_UNPROVEN,
   "no-claims": MOCK_NO_CLAIMS,
   legacy: MOCK_LEGACY,
+  reanalysed: MOCK_REANALYSED,
+  "older-version": MOCK_OLDER_VERSION,
 };
