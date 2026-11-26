@@ -19,6 +19,10 @@ from app.db.base import Base
 class ReviewCaseStatus(str, enum.Enum):
     OPEN = "OPEN"
     RESOLVED = "RESOLVED"
+    # T55: the video was deliberately re-analysed while this case was open. The case
+    # leaves the queue without a decision; ``superseded_by_job_id`` names the new job,
+    # whose result goes through the review rule (§11) from scratch.
+    SUPERSEDED = "SUPERSEDED"
 
 
 class ReviewAction(str, enum.Enum):
@@ -82,6 +86,10 @@ class HumanReview(Base):
     severity: Mapped[Optional[str]] = mapped_column(String(8), nullable=True, index=True)
     claim_severities: Mapped[Optional[dict]] = mapped_column(JSON, nullable=True)
     severity_table_version: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
+    # T55 (migration 0017): set when the case is SUPERSEDED by a re-analysis.
+    superseded_by_job_id: Mapped[Optional[str]] = mapped_column(
+        String, ForeignKey("jobs.id"), nullable=True
+    )
 
 
 class AuditEvent(Base):

@@ -71,6 +71,8 @@ A video becomes a job that survives crashes and retries without double work or d
 | Unsupported language | Abstain or send to review |
 | Scientific uncertainty | Abstain; never retried until it gives an answer |
 
+**Deliberate re-analysis.** Starting a job on a video that already has one returns that job (an accidental double run does no extra work), and a duplicate upload reuses the video. To check a pipeline change on an old video, the video's owner or an admin calls POST /v1/videos/{video\_id}/reanalyse instead: it always creates a new job, linked to the previous one (`previous_job_id`), with an optional reason in the audit log. Each user may re-run one video at most 3 times in a rolling 24 hours (configurable); over that the API answers 429 with Retry-After, because every re-run is a paid analysis. Results are versioned: the video's current result is its newest finished job, and the result lists the earlier ones (job, finish time, label, pipeline version).
+
 **Idempotency.** Celery delivers a task **at least once**, so any step may run twice. Every step is written so a second run does no harm: results are keyed by job and step, a finished step is marked complete and skipped on re-run, and the database rejects a second result for the same job. A crashed job is detected by its stale `updated_at` and requeued rather than left stuck.
 
 **Checkpointing.** The LangGraph run saves its state to Postgres after each node: which steps finished, each claim's progress, retrieval attempts, evidence references and review state. A worker that dies mid-run resumes from the last checkpoint instead of starting over. Large artefacts (the video, full transcripts, raw API responses) live in object storage; the checkpoint holds only references to them.
@@ -589,6 +591,8 @@ Review is a real step in the workflow, not a flag. A case in review has its own 
 - **Request re-analysis**, for example after the retrieval terms are fixed.
 - **Reject** the result.
 
+**Superseded cases.** If the owner or an admin deliberately re-analyses a video (section 1) while its case is open, the case is marked SUPERSEDED, linked to the new job, logged in the audit trail and taken out of the queue without a decision. The new result goes through the review rule (section 11) from scratch.
+
 Every action records who, when and why: a reason code (claim overgeneralised, evidence misread, stance misread, missing source, system correct, other) and a written note.
 
 **HIGH severity: your judgement first.** On a HIGH-severity case each reviewer first records their own stance and verdict for every claim; only then does the server show them the system's. A decision without that step is refused, and both are kept in the audit trail.
@@ -789,7 +793,7 @@ Calls to the MCP retrieval server are traced too, with the client ID, tool, late
 | --- | --- |
 | `users` | User ID, auth identity (email, display name); roles come from the verified token |
 | `videos` | Owner, storage location, SHA-256 hash, duration |
-| `jobs` | Video, state, pipeline version, attempts, error code |
+| `jobs` | Video, state, pipeline version, attempts, error code, previous job (a re-analysis) |
 | `job_events` | Every state change, with time |
 | `outbox_events` | Dispatch events written with the job, until published |
 | `transcript_segments` | Start, end, text |
@@ -801,7 +805,7 @@ Calls to the MCP retrieval server are traced too, with the client ID, tool, late
 | `verification_results` | Verdict, explanation, limitations, version |
 | `critic_reviews` | Decision and issues raised |
 | `classifications` | Video label, MISINFO basis (`contradicted` / `denies_supported` / `unproven`), deciding claims, confidence, version |
-| `human_reviews` | Reviewer, decision, reason, time |
+| `human_reviews` | Reviewer, decision, reason, time; the newer job that superseded an undecided case |
 | `model_runs` | Step, model, prompt version, tokens, cost, latency |
 | `audit_events` | Who did what to which record, and when |
 | `library_documents` | Title, authors, year, DOI/PMID, study type, storage key, SHA-256, OCR quality, uploaded by, ingested at |
@@ -818,7 +822,8 @@ Everything has stable IDs and foreign keys, and schema changes go through number
 | POST | `/v1/jobs` | Start an analysis (with an idempotency key) |
 | GET | `/v1/jobs/{job_id}` | Job state |
 | GET | `/v1/jobs/{job_id}/events` | Processing history |
-| GET | `/v1/videos/{video_id}/results` | Final label and explanation |
+| POST | `/v1/videos/{video_id}/reanalyse` | Analyse the video again on purpose (owner or admin; rate-limited) |
+| GET | `/v1/videos/{video_id}/results` | Current result (the newest finished job), its label and explanation, and earlier versions |
 | GET | `/v1/videos/{video_id}/claims` | Claims with stance and verdict |
 | GET | `/v1/claims/{claim_id}/evidence` | Papers for one claim |
 | POST | `/v1/reviews/{review_id}/pre-reveal` | A reviewer's own judgement on a HIGH case, before the system's is shown |

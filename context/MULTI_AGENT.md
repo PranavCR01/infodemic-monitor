@@ -2052,6 +2052,107 @@ the candidates run with reasoning on. **No paid calls; mocked SDK only.**
   `truncated` errors (the allowances are T38's guesses) and that the Responses API accepts
   `reasoning.effort: medium` with forced function tools for both models.
 
+## 7af. Deliberate Re-Analysis and Versioned Results (T55, backend; design §1, §11, §12, §17)
+
+Built by the automated build on 2026-11-26 (lead approved). Backend only; the frontend
+session builds the UI from the API note below. Migration **0017** (single head).
+
+- **Why.** A video could only be re-run through a reviewer's REQUEST_REANALYSIS (blocked
+  for the uploader by the self-review rule), and POST /jobs/create returns the caller's
+  PENDING/STARTED/SUCCESS/REVIEW_REQUIRED job (T11/T28), so pipeline changes couldn't be
+  checked on old videos. That reuse and duplicate-upload reuse are **unchanged**: they
+  guard against accidental double runs. Re-analysis is a separate, deliberate route.
+- **Lineage.** A video's versions are the jobs on it owned by the video owner
+  (`jobs.user_id`). A re-run started by an admin still belongs to the owner (shows in
+  their job list), like `start_reanalysis`. Each re-run links to the newest job of that
+  lineage through `jobs.previous_job_id` (nullable FK, indexed). A reviewer's
+  REQUEST_REANALYSIS now also sets it.
+- **Who.** Video owner (`videos.user_id == sub`) or admin. A reviewer who may see the
+  video gets 403 `REANALYSIS_FORBIDDEN`; anyone who can't see it gets 404 (§15). Legacy
+  videos with no owner: admin only (with REQUIRE_AUTH off, the dev user). Classified in
+  T33's route table as `OWNER_OR_ADMIN`.
+- **Rate limit.** `REANALYSIS_MAX_PER_VIDEO` (3) per caller per video per rolling
+  `REANALYSIS_WINDOW_HOURS` (24), counted from `audit_events` (`reanalysis_requested`,
+  entity = the video, actor = the caller). Retry-After is when the request that frees a
+  slot leaves the window. A re-run whose dispatch failed doesn't count. 0 turns the route
+  off (403 `REANALYSIS_DISABLED`). The video row is locked (Postgres) while counting so
+  two requests can't both take the last slot.
+- **Open review case.** OPEN cases of the lineage become `SUPERSEDED` (new
+  `reviewcasestatus` value) with `human_reviews.superseded_by_job_id`, and a
+  `review_superseded` audit event (actor, reason, new job). They leave the default OPEN
+  queue (`GET /v1/reviews?status=SUPERSEDED` or `ALL` lists them) and can't be decided
+  (409). The old job keeps REVIEW_REQUIRED: its result was never reviewed. The new job
+  has no case; its result goes through §11 from scratch.
+- **Versions.** The video's current result is its **newest finished job** (SUCCESS,
+  REVIEW_REQUIRED, or rejected by a reviewer, with a stored result).
+  `GET /v1/videos/{id}/results` and `/claims` now pick that job, not the newest job.
+  **Behaviour change:** a newer job that is running or failed no longer turns that route
+  into 202/409; it's reported in `latest_job`. With no finished job, 202/409 as before
+  (T26's test updated).
+- **Downgrade** of 0017 rebuilds the Postgres enum; SUPERSEDED cases become RESOLVED
+  with no action (pre-0017 code shows that as REANALYSIS_REQUESTED) and the link to the
+  new job is lost.
+- **Not done / open:** a re-run is allowed while another run of the video is still
+  in flight (the spec says "always creates"; the rate limit bounds it). The frontend
+  confirm dialog should say it costs one more analysis.
+
+### API note for the frontend session
+
+**`POST /v1/videos/{video_id}/reanalyse`** (auth required)
+
+Request body (optional; `{}` or no body is fine):
+```json
+{"reason": "pipeline v2 shipped"}       // optional, at most 2000 characters
+```
+`202 Accepted`, header `X-Reanalyses-Remaining: <n>`:
+```json
+{
+  "job_id": "…", "video_id": "…",
+  "status": "PENDING",          // FAILED with error_code DISPATCH_FAILED if queuing failed
+  "state": "QUEUED",            // §1 state (FAILED if queuing failed)
+  "error_code": null,
+  "celery_task_id": "…",
+  "previous_job_id": "…",       // the job this re-runs (null if the video had none)
+  "superseded_review_ids": ["…"],  // open review cases closed by this re-run
+  "reanalyses_remaining": 2,    // left in the current window for this caller and video
+  "created_at": "…"
+}
+```
+Then poll `GET /v1/jobs/{job_id}` as for any job.
+
+| Status | When | Body |
+|---|---|---|
+| 401 | not signed in | |
+| 403 | caller may see the video but is neither its owner nor an admin | `detail.code = "REANALYSIS_FORBIDDEN"` |
+| 403 | re-analysis turned off (`REANALYSIS_MAX_PER_VIDEO=0`) | `detail.code = "REANALYSIS_DISABLED"` |
+| 404 | no such video, or the caller can't see it | `detail = "Video not found"` |
+| 422 | reason longer than 2000 characters | |
+| 429 | over the limit | header `Retry-After: <seconds>`; `detail = {code: "REANALYSIS_RATE_LIMITED", message, retry_after_seconds, limit, window_hours}` |
+
+Show the button when `GET /v1/me` says the caller is an admin, or the result's
+`submitted_by` is the caller (the server checks again).
+
+**Result payload additions** (`GET /v1/videos/{id}/results` and `GET /jobs/{job_id}/result`):
+```json
+{
+  "previous_jobs": [            // earlier finished analyses of this video, newest first
+    {"job_id": "…", "finished_at": "…", "label": "MISINFO", "label_display": "MISINFO (unproven)",
+     "pipeline_version": "graph_v1+abc1234+p…", "status": "SUCCESS"}   // status may be REVIEW_REQUIRED or FAILED (rejected)
+  ],
+  "previous_job_id": "…",       // the job this one re-analysed, or null
+  "current_job_id": "…",        // the video's current result (newest finished job)
+  "is_current": true,           // false on an older version: link to current_job_id
+  "latest_job": null            // or {job_id, status, state, error_code, created_at}: a newer run that is still running or failed
+}
+```
+Older versions open with `GET /jobs/{job_id}/result`; their `previous_jobs` lists only
+what came before them.
+
+**Review case** (`review` in the result payload, and the review API): new
+`status`/`case_status` value `"SUPERSEDED"`, `resolved: false`, and
+`review.superseded_by_job_id` → show "Superseded by a newer analysis" with a link.
+`GET /v1/reviews` takes `status=SUPERSEDED` (default `OPEN` leaves them out).
+
 ## 8. Team
 
 | Person | Current issue | Notes |

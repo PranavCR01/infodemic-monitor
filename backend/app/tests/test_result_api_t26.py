@@ -251,17 +251,31 @@ def test_v1_video_results_and_claims(env):
 
 
 def test_v1_video_results_uses_the_latest_owned_job(env):
+    """T55 changed this: the current result is the newest *finished* job, so a newer job
+    that is running or failed no longer hides it (it is named in ``latest_job``). Only a
+    video with no finished job answers 202 / 409."""
     db = env["db"]
     db.add(Job(user_id="alice", id="job-new", video_id="vid-1", status=JobStatus.PENDING,
                created_at=datetime(2026, 11, 22, tzinfo=timezone.utc)))
     db.commit()
     r = env["client"].get("/v1/videos/vid-1/results")
-    assert r.status_code == 202
+    assert r.status_code == 200 and r.json()["job_id"] == "job-a"
+    assert r.json()["latest_job"]["job_id"] == "job-new" and r.json()["latest_job"]["status"] == "PENDING"
     db.get(Job, "job-new").status = JobStatus.FAILED
     db.get(Job, "job-new").error_code = "PIPELINE_ERROR"
     db.commit()
     r = env["client"].get("/v1/videos/vid-1/results")
+    assert r.status_code == 200 and r.json()["job_id"] == "job-a"
+    assert r.json()["latest_job"]["error_code"] == "PIPELINE_ERROR"
+    # With no finished job left, the newest job's state is the answer, as before.
+    db.get(Job, "job-a").status = JobStatus.FAILED
+    db.get(Job, "job-a").error_code = "PIPELINE_ERROR"
+    db.commit()
+    r = env["client"].get("/v1/videos/vid-1/results")
     assert r.status_code == 409 and r.json()["detail"]["error_code"] == "PIPELINE_ERROR"
+    db.get(Job, "job-new").status = JobStatus.STARTED
+    db.commit()
+    assert env["client"].get("/v1/videos/vid-1/results").status_code == 202
 
 
 def test_single_call_result_has_empty_t26_fields():

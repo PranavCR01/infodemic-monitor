@@ -560,7 +560,8 @@ def test_migration_0011_upgrades_and_downgrades(tmp_path, monkeypatch):
     command.upgrade(cfg, "0011")
     insp = inspect(create_engine(url))
     assert {c.name for c in JobEvent.__table__.columns} <= {c["name"] for c in insp.get_columns("job_events")}
-    assert {c.name for c in Job.__table__.columns} <= {c["name"] for c in insp.get_columns("jobs")}
+    later = {"previous_job_id"}  # added by 0017 (T55)
+    assert {c.name for c in Job.__table__.columns} - later <= {c["name"] for c in insp.get_columns("jobs")}
     command.downgrade(cfg, "0010")
     insp = inspect(create_engine(url))
     assert "job_events" not in insp.get_table_names()

@@ -183,6 +183,8 @@ def claim_view(c: ClaimRow, index: dict[str, SegmentView], severity: Optional[di
 def review_status(case: HumanReview) -> str:
     if case.status == ReviewCaseStatus.OPEN:
         return "REVIEW_REQUIRED"
+    if case.status == ReviewCaseStatus.SUPERSEDED:
+        return "SUPERSEDED"
     action = ReviewAction(case.action) if case.action else None
     if action == ReviewAction.APPROVE:
         return "VERIFIED"
@@ -219,6 +221,7 @@ def review_view(case: Optional[HumanReview]) -> Optional[ReviewView]:
         decision_reason=case.decision_reason,
         created_at=case.created_at,
         decided_at=case.decided_at,
+        superseded_by_job_id=case.superseded_by_job_id,
     )
 
 
@@ -258,4 +261,30 @@ def job_result(db: Session, job: Job, result: Result) -> JobResultResponse:
         transcript_segments=transcript,
         ocr_segments=ocr,
         submitted_by=job.user_id,
+        **_versions(db, job),
     )
+
+
+def _versions(db: Session, job: Job) -> dict:
+    """T55: the other versions of this video's result (``reanalysis_service``)."""
+    from app.api.result_models import LatestJobView, PreviousJobView
+    from app.services.job_events import effective_state
+    from app.services.reanalysis_service import result_versions
+
+    v = result_versions(db, job)
+    latest = v.latest_job
+    return {
+        "previous_jobs": [
+            PreviousJobView(job_id=j.id, finished_at=r.created_at, label=r.label,
+                            label_display=display_label(r.label, r.misinfo_basis),
+                            pipeline_version=r.pipeline_version, status=j.status.value)
+            for j, r in v.previous
+        ],
+        "previous_job_id": job.previous_job_id,
+        "current_job_id": v.current_job_id,
+        "is_current": v.current_job_id in (None, job.id),
+        "latest_job": (LatestJobView(job_id=latest.id, status=latest.status.value,
+                                     state=effective_state(latest), error_code=latest.error_code,
+                                     created_at=latest.created_at)
+                       if latest is not None else None),
+    }
