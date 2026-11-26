@@ -485,11 +485,42 @@ def test_abstention_is_not_replaced_by_the_single_call():
     assert outcome.classification.label == MisinfoLabel.CANNOT_RECOGNIZE
 
 
+def _on_topic_untested(s):
+    """Retrieval kept a record about each claim's intervention that doesn't test the claim."""
+    from app.core.graph.state import EvidenceRecord
+
+    out = {}
+    for c in s["claims"]:
+        topic = "Hot water" if "hot water" in c.claim_text.lower() else "Garlic"
+        out[c.claim_id] = [EvidenceRecord(
+            evidence_id=f"ev_9{c.claim_id[1:]}", source="pubmed", pmid=f"9{c.claim_id[1:]}",
+            title=f"{topic} consumption habits: a cross-sectional survey",
+            abstract=f"We surveyed {topic.lower()} habits in 500 adults. No clinical outcome was measured.",
+        )]
+    return out
+
+
+ON_TOPIC_UNTESTED = {
+    r.RETRIEVE_EVIDENCE: lambda s: {"retrieved_evidence": _on_topic_untested(s),
+                                    "retrieval_attempts": {c.claim_id: 3 for c in s["claims"]}},
+    r.RERANK_EVIDENCE: lambda s: {"reranked_evidence": _on_topic_untested(s)},
+}
+
+
+def unproven_script(step: str, inp: Any) -> Any:
+    """The scripted model, except the verifier finds nothing that tests the claim."""
+    if step == "verify_claims":
+        return {"verdict": "UNSUPPORTED", "supporting_evidence_ids": [], "contradicting_evidence_ids": [],
+                "explanation": "No evidence supports this claim.", "limitations": [], "raw_confidence": 0.6}
+    return default_script(step, inp)
+
+
 def test_unproven_efficacy_claim_end_to_end_is_misinfo_unproven_and_reviewed():
     """T30 (D1 = B): endorsed treatment claims the full search found nothing for →
-    UNSUPPORTED → MISINFO with basis ``unproven``, always reviewed; not a failure."""
+    UNSUPPORTED → MISINFO with basis ``unproven``, always reviewed; not a failure.
+    T49: only when retrieval kept a record about the claim's intervention."""
     fallback = FakeSingleCall()
-    provider = make_provider(fallback=fallback, node_overrides=NOTHING_FOUND)
+    provider = make_provider(ScriptedClient(unproven_script), fallback=fallback, node_overrides=ON_TOPIC_UNTESTED)
     outcome = provider.run(fusion(), job_id="job-unproven")
     assert outcome.pipeline == "graph" and fallback.calls == 0
     assert outcome.classification.label == MisinfoLabel.MISINFO
@@ -498,6 +529,25 @@ def test_unproven_efficacy_claim_end_to_end_is_misinfo_unproven_and_reviewed():
     assert outcome.state["requires_human_review"]
     assert any(x.startswith("judge:unproven_claim:") for x in outcome.state["review_reasons"])
     assert "false" not in outcome.classification.explanation.lower()
+
+
+def test_empty_search_for_efficacy_claims_is_cannot_recognize_and_reviewed():
+    """T49 (§7): a search that kept nothing is not "nothing supports it": the efficacy
+    claims are INSUFFICIENT_EVIDENCE (search_found_nothing_on_topic) and the video is
+    CANNOT_RECOGNIZE, reviewed. (Here the refuted garlic claim makes it a possible
+    debunk; ``test_vitamin_k_t49`` covers the ``nothing_judged`` branch.)"""
+    from app.core.graph.unproven_guard import OFF_TOPIC_LIMITATION
+
+    fallback = FakeSingleCall()
+    provider = make_provider(ScriptedClient(unproven_script), fallback=fallback, node_overrides=NOTHING_FOUND)
+    outcome = provider.run(fusion(), job_id="job-empty-search")
+    assert outcome.pipeline == "graph" and fallback.calls == 0
+    assert outcome.classification.label == MisinfoLabel.CANNOT_RECOGNIZE
+    assert outcome.state["final_result"].misinfo_basis is None
+    for v in outcome.state["verification_results"].values():
+        assert v.verdict.value == "INSUFFICIENT_EVIDENCE" and OFF_TOPIC_LIMITATION in v.limitations
+    assert outcome.state["requires_human_review"]
+    assert not any("unproven_claim" in x for x in outcome.state["review_reasons"])
 
 
 def test_finished_run_is_reused_and_unfinished_run_resumes():

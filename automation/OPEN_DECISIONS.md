@@ -1,7 +1,7 @@
 # Project state and open decisions
 
 The working memory for the coordinating session. It is rewritten whenever something important changes, so any session (or person) can pick the project up from here.
-**Last updated:** 2026-11-24 (UTC), after D1, by the coordinating session.
+**Last updated:** 2026-11-26 (UTC), after T49 merged and the DOI-evidence decision, by the coordinating session.
 
 How to use it:
 - **Pick up work:** read this file first, then `automation/BUILD_QUEUE.md` (tasks) and `context/MULTI_AGENT.md` (decisions log).
@@ -14,10 +14,8 @@ How to use it:
 
 | # | Decision | Recommendation | Status |
 |---|---|---|---|
-| D2 | Golden set `annotator` column says `pranav` on rows drafted by the labelling session. It should be neutral (e.g. `labelling_pipeline_v1`), with people's names only in `reviewer` | Fix before the blind review | Prompt given to the lead for the local labelling session (combined with the D1 re-derivation) |
-| D3 | Exclude **M4Health** from the external-agreement number. Its "FALSE" credibility label covers memes and adverts, and agreement is 0/15 | Exclude, but report it separately | In the same local-session prompt |
-| D5 | Queue a **staging-prep task** for the demo to Dr. Brooks: Railway staging configuration, deploy checklist, script to pre-run demo videos | Yes, if the demo is in the next few days | Offered, not answered |
-| D6 | Frontend: Claude Design export goes into `design/claude-design/` on branch `design/frontend-v1` (brief: `design/BRIEF.md`). Frontend session `session_013cWxpynpigJCrZtXuYokiD` (env infodemic-video-sourcing, no keys) reviews, maps to the API, proposes a plan, then builds via PRs into `design/frontend-v1` (no self-merge) | Approve its plan; backend gaps it finds become queue tasks | Waiting on the lead's upload |
+| D2 | Golden-set `annotator` column names a person on model-drafted rows | Neutral value (`labelling_pipeline_v1`) | With the lead's local session |
+| D3 | Exclude M4Health from the external-agreement number | Exclude, report separately | With the lead's local session |
 
 Already decided (recorded here so they aren't asked again):
 - **Production, no staging (lead, 2026-11-25).** Supabase project 'sentinel' (kscfszhdrlsbpsqwfirv) was an unrelated app: exported (sent to the lead) and wiped, renamed **infodemic-prod**. Done: pgvector 0.8.2, private 'videos' bucket (100 MB, mp4/mov), sign-ups disabled, site URL https://infodemic-monitor.vercel.app, redirects <site>/auth/callback + localhost, lead invited as admin. Tables are created by the API's migrations on first start. Blocker: T48 (project signs ES256; backend accepted HS256 only). Lead to revoke the Supabase access token after the first deploy. Ops session runs in environment 'infodemic-monitor-ops' (api.supabase.com only).
@@ -31,64 +29,56 @@ Already decided (recorded here so they aren't asked again):
 - Whisper stays on the hosted API at current scale.
 - Calibration: Platt scaling (T15, after T14).
 - Separate API keys per place (prod on Railway, dev in local `.env`, eval in the `infodemic-monitor` environment). A $20 prepaid balance acts as the cap, with auto-recharge off.
+- **D8 search quality bar (lead, 2026-11-26):** T50 must report tune-split search recall (strict: golden-cited PMID kept; lenient: or an on-topic kept record), target lenient ≥ 80%, and add a CI regression set of real production misses. Still to queue after T50: production search-health metrics and reviewer MISSING_SOURCE → regression case.
+- **Evidence by DOI (lead, 2026-11-26):** when PubMed doesn't have a paper yet, a journal page cited by DOI (verified via Crossref, with a text snapshot) is acceptable evidence. Web search may *find* studies, but only records we verify (PMID via E-utilities, DOI via Crossref) become evidence; web text never does. T50 (i).
+- **Unproven guard (T49, merged #121, 2026-11-26):** UNSUPPORTED stands only if retrieval kept a record on topic for the claim's intervention; otherwise INSUFFICIENT_EVIDENCE → CANNOT_RECOGNIZE + nothing_judged. Cause: prod labelled an accurate vitamin K video MISINFO (unproven). Effect today: all 5 tune unproven videos lose the label because their searches were broken; T50 should restore real ones.
+- **Production deploy (lead, 2026-11-25):** directly on prod, no staging; Jared not involved.
 
+## 2. Waiting on the project lead
 
-Owner column gap (found by the frontend session, confirmed): videos/jobs had no owner_id, so ownership checks couldn't work. Assigned to T27; T26 and T28 told not to add one.
+- **Merge `langgraph-build` → `main`** to put T49 (unproven guard) and T52 (#119, plain-language "How we searched") in production before anyone uses the demo. Production runs from `main`.
+- **Revoke the temporary tokens** used for the deploy (Supabase PAT, Railway project token, Vercel token) once deploy work is finished.
+- T14 accuracy run on the test split (~$45–50): needs an Anthropic top-up and approval in the orchestrator. Better after T50, since search quality now dominates accuracy.
 
-## 2. Waiting on the project lead to merge
+## 3. Running / queued
 
-- **#94** T33 ownership (into `langgraph-build`): updated by the coordinating session (migration 0014 → 0013, one head).
-- **Frontend stack** into `design/frontend-v1`, **Create a merge commit** (stacked PRs): #79 → #82 → #85 → #87 → #88 → #89 → #90 → #91 → #92 → #93. #75 merged.
-- Merged 2026-11-24 (latest): #104, #110 (T38 routing results: Sonnet/Sonnet/Opus proposed, $14.00 of $40 spent; OpenAI won no step), #109 (T42 cross-check pinned to adjudicated golden dcf77b0). Pending: T43 error analysis; lead decisions on extraction Haiku→Sonnet (after T43) and the 8-item rule sweep.
-- Merged 2026-11-24 (later): #98, #100–#103, #105–#108 incl. #99 (T37, D4 dropped). Open follow-up: re-pin the judge cross-check fixture to the golden set after the blind-review corrections.
-- Merged 2026-11-24: #73, #74, #76, #77, #78, #80 (T29), #81 (T28), #83 (T32), #84 (T31), #86 (T30).
-- Migration chain on `langgraph-build`: 0011 T28 → 0012 T31 → 0013 T30 → 0014 T33 (#94) → 0015 T36 (running).
-- Vercel free plan hit 100 deployments/day; recommended Ignored Build Step `git diff HEAD^ HEAD --quiet -- .` (lead to set).
-- Lead to-do (Supabase): auth redirect URLs; own `app_metadata.role = admin`; storage bucket CORS for browser PUTs from the frontend origin.
-- Before merging to `main`: production jobs have no owner; run T33's `scripts/assign_owners.py` in the staging run plan.
-- Open question to the lead: add a review reason for "nothing could be judged" (27 golden-set videos left review after the judge change). Recommended yes, LOW priority.
+- **T50** search rewrite (todo, starts now T49 is merged): keep 'vitamin K'; MeSH gaps; LLM query assistant; distinct broader query per round; citation lookup; no 8-word AND fallback; (g) store screened-out papers; (h) translate non-English claims + re-run T49 replay; (i) web find-the-study with PMID/DOI verification. Paid calls need a cap approved in the orchestrator.
+- **T51** extraction: evidence-strength statements are not efficacy claims (todo, after T49).
+- Done today: T49 (#121), T52 (#119), /health Redis fix (#120, on `main`; prod /health = healthy).
 
-## 3. Running now
+## 4. Production (live since 2026-11-25)
 
-- **T36** (traceable analysis version). Queued: T34 (after #94).
-- **Frontend session**: holding; swaps adapters as backend tasks merge. Remaining plan items deferred (margin notes) or held (evaluation page until T14).
-
-## 4. Other open PRs
-
-- **#62 golden set** (`data/golden-label-set`): **181 videos (162 in scope, 19 out of scope), 534 claims.** Labels MISINFO 26 / NO_MISINFO 51 / DEBUNKING 17 / CANNOT_RECOGNIZE 68. All rows `pending`.
-  - Agreement with source labels: 21% (kappa 0.07).
-  - Before merging: D2 fix, the judge.py update to match revised §9 (prompt in the coordinating session's history; summary below), and the human blind review (16 batch-1 + 20 batch-2 videos in `REVIEW.md`).
-  - Merge with **Squash and merge**, because an early commit holds the lead's email.
-- **#65 candidates:** don't merge (its content is in #62's `sources/batch2/`). The lead keeps it open for now (2026-11-24); revisit after #62.
-
-Golden-set `judge.py` update (now part of the combined local-session prompt, which also adds UNSUPPORTED): collect `denies_supported` and `possible_debunk` from every claim; add a `mixed_video` reason; treat any MIXED claim as a review trigger; drop the `deciding or claims` fallback for UNCLEAR and conflict triggers. Then regenerate `review_reasons` and rerun `validate.py`. Labels must not change.
+- **Frontend:** Vercel `infodemic-monitor.vercel.app` (root `frontend`).
+- **API + worker:** Railway project `340ecd09…`, services `infodemic-monitor` (API, `infodemic-monitor-production.up.railway.app`, runs migrations on start) and `worker` (Celery, `RUN_MIGRATIONS=false`), plus Railway Redis (`REDIS_URL=${{Redis.REDIS_URL}}` on both). `USE_GRAPH_PIPELINE=true`.
+- **Supabase infodemic-prod** (`kscfszhdrlsbpsqwfirv`): Postgres + pgvector, migrations 0001–0016, private `videos` bucket, ES256 auth (T48 JWKS), sign-ups disabled; lead is admin.
+- `PUBMED_RESULTS_PER_CLAIM=2` on Railway is read only by the legacy single-call path; harmless, left as is.
+- First real runs (2026-11-26): `Download.mp4` and `Download (4).mp4` (vitamin K, job 5cc07f48). Both exposed search failures → T49–T52.
 
 ## 5. Project lead's own to-do list
 
 1. Rotate the OpenAI key that appeared in a local transcript.
-3. Send the design prompt to Claude Design (D6).
-4. Organise the blind review of the golden set (#62).
-5. Staging run before any demo: separate Railway environment and Supabase dev project (or the #47 isolated schema), migrations 0006–0011, pgvector, `USE_GRAPH_PIPELINE` on there only.
-6. Merge `langgraph-build` into `main` (not yet). Next: open a **draft** PR `langgraph-build` → `main` for Jared to review (one approving review is required); run staging first, because the API runs migrations on startup (`RUN_MIGRATIONS=true`), so merging to `main` would apply 0006–0011 to the production Supabase database; back up production; then merge with **Create a merge commit** (keeps per-task history).
-7. Refresh the CDC stored snapshots about monthly (T19).
+2. Revoke the deploy tokens (see §2).
+3. Refresh the CDC stored snapshots about monthly (T19).
+4. Severity table sign-off with Dr. Brooks (draft until then).
 
 ## 6. Blocked tasks
 
-- **T14** evaluation vs baseline: needs the reviewed golden set, re-derived with UNSUPPORTED, and T30.
+- **T14** evaluation vs baseline: needs funding approval; best run after T50.
 - **T15** calibration: needs T14.
 
 ## 7. Key facts and numbers
 
-- **Real cost and speed (T18):** graph median **$0.41 and 76 s per video**; single-call baseline $0.0026 and 1.5 s. A T14 run on the test split (~114 in-scope videos) is roughly $45–50, more than the $20 balance.
-- **Tests:** about 990 passing on `langgraph-build` (independently re-run). CI arrives with #72.
-- **Demo to Dr. Brooks:** feasible in 2–3 days as a progress demo (pipeline, real claims and evidence, basic job page). No accuracy numbers yet, and the full UI is not built.
-- **WHO demo:** first week of December. Needs the frontend and a first accuracy number.
+- **Golden set** (in `langgraph-build`, = data/golden-label-set @ 948b1c2, keep that branch): 162 in-scope videos, 550 claims; NO_MISINFO 47 / CANNOT_RECOGNIZE 59 / MISINFO 39 (26 contradicted, 12 unproven, 1 denies_supported) / DEBUNKING 17; 71 in review; tune 48 / test 114. 315 claims cite a PubMed paper (basis for search recall). Model-assisted review, never "human inter-annotator agreement".
+- **Routing (T38, tune):** extract Sonnet 0.42 > Haiku > Luna; stance Sonnet 0.64; verify Opus 0.68. Proposed routing_v2 Sonnet/Sonnet/Opus. T45 added extract_v3 / stance_v2 and a `use_ocr` switch.
+- **Cost/speed (T18):** graph median $0.41 and 76 s per video; vitamin K prod run 105 s.
+- **Tests:** ~1700 passing on `langgraph-build`; CI on every PR.
+- **WHO demo:** first week of December.
 
 ## 8. Where things are
 
 | Thing | Location |
 |---|---|
-| Repo | `PranavCR01/infodemic-monitor`; integration branch `langgraph-build` (never auto-merged to `main`) |
+| Repo | `PranavCR01/infodemic-monitor`; integration branch `langgraph-build` (never auto-merged to `main`); `main` = production, needs 1 approving review (lead merges with bypass) |
 | Design (source of truth) | `docs/target-system-design.md`; editable artifact https://claude.ai/artifact/SEYkNy1QMyqtix15pnmVYY (keep both in sync) |
 | Build queue / orchestrator rules | `automation/BUILD_QUEUE.md`, `automation/ORCHESTRATOR.md`, `automation/TASK_PROMPT.md` |
 | Orchestrator session | `session_013cWxq1xr2wMZ2m7f1Z5MU8` (hourly safety check, scheduled task `trig_01Rtmdgu8Bhq94pzYWvNdvvL`) |

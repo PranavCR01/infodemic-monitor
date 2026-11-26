@@ -59,7 +59,10 @@ export type EvidenceSummary = {
 
 /** "How we searched" for one claim (T31). */
 export type ClaimSearch = {
+  /** Distinct queries only: rounds that repeated an earlier query are left out. */
   queries: { query: string; results: number | null; failed: boolean }[];
+  /** Every round as run, repeats included, for the review screen's technical details. */
+  rounds: { round: number; query: string; results: number | null; failed: boolean; repeat: boolean }[];
   sources: { name: string; publisher: string; sites: string[] }[];
   libraryUsed: boolean;
   retrieved: number | null;
@@ -183,6 +186,13 @@ function toSearch(t: RawSearchTrail | null | undefined): ClaimSearch | null {
     queries: (t.pubmed_queries ?? [])
       .filter((q) => !q.repeat)
       .map((q) => ({ query: q.query, results: q.results ?? null, failed: Boolean(q.failed) })),
+    rounds: (t.pubmed_queries ?? []).map((q) => ({
+      round: q.round,
+      query: q.query,
+      results: q.results ?? null,
+      failed: Boolean(q.failed),
+      repeat: Boolean(q.repeat),
+    })),
     sources: (t.references ?? []).map((r) => ({ name: r.name, publisher: r.publisher ?? "", sites: r.sites ?? [] })),
     libraryUsed: Boolean(t.library?.fired),
     retrieved: t.counts.retrieved ?? null,

@@ -220,14 +220,45 @@ def test_missing_evidence_key_is_insufficient_too():
 
 @pytest.mark.parametrize("category", ["treatment_efficacy", "prevention"])
 def test_no_evidence_for_an_efficacy_claim_is_unsupported_without_a_model(category):
+    """``verify_claim`` itself (T30): no evidence for an efficacy claim is UNSUPPORTED."""
     c = claim().model_copy(update={"claim_category": category})
-    out, caller = run([answer("CONTRADICTED", con=["ev_1"])], state([c], evidence={"c1": []}))
-    res = out["verification_results"]["c1"]
+    caller = FakeCaller([answer("CONTRADICTED", con=["ev_1"])])
+    res, errs = vf.verify_claim(c, [], caller, "system", "verify_v3", allow_unsupported=True)
     assert res.verdict == Verdict.UNSUPPORTED
     assert res.supporting_evidence_ids == res.contradicting_evidence_ids == []
     assert "no evidence supports this claim" in res.explanation.lower()
     assert "false" not in res.explanation.lower()
+    assert caller.calls == [] and errs == []
+
+
+@pytest.mark.parametrize("category", ["treatment_efficacy", "prevention"])
+def test_no_evidence_for_an_efficacy_claim_is_insufficient_in_the_node(category):
+    """T49 (§7): in the node, the unproven guard turns an empty search into
+    INSUFFICIENT_EVIDENCE with ``search_found_nothing_on_topic``; no model call."""
+    from app.core.graph.unproven_guard import OFF_TOPIC_LIMITATION
+
+    c = claim().model_copy(update={"claim_category": category})
+    out, caller = run([answer("CONTRADICTED", con=["ev_1"])], state([c], evidence={"c1": []}))
+    res = out["verification_results"]["c1"]
+    assert res.verdict == Verdict.INSUFFICIENT_EVIDENCE
+    assert res.limitations[-1] == OFF_TOPIC_LIMITATION
+    assert res.supporting_evidence_ids == res.contradicting_evidence_ids == []
+    assert "false" not in res.explanation.lower()
     assert caller.calls == [] and "errors" not in out
+
+
+def test_model_unsupported_with_only_off_topic_evidence_is_insufficient():
+    """T49: the model's UNSUPPORTED doesn't stand when no record is about hot water."""
+    from app.core.graph.unproven_guard import OFF_TOPIC_LIMITATION
+
+    off = {"c1": [paper("ev_1", "Vitamin D and bone density in older women."), paper("ev_2")]}
+    out, caller = run([answer("UNSUPPORTED", explanation="No evidence supports this claim.")], state(evidence=off))
+    res = out["verification_results"]["c1"]
+    assert res.verdict == Verdict.INSUFFICIENT_EVIDENCE and res.limitations[-1] == OFF_TOPIC_LIMITATION
+    assert len(caller.calls) == 1
+
+
+ON_TOPIC = {"c1": [paper("ev_1", "Hot water intake and hydration in adults."), paper("ev_2")]}
 
 
 @pytest.mark.parametrize("category", ["side_effects", "mechanism", "health_claim", "nutrition"])
@@ -243,7 +274,7 @@ def test_non_efficacy_claims_never_get_unsupported(category):
 
 
 def test_model_may_answer_unsupported_for_an_efficacy_claim_and_the_prompt_says_so():
-    out, caller = run([answer("UNSUPPORTED", explanation="No evidence supports this claim.")])
+    out, caller = run([answer("UNSUPPORTED", explanation="No evidence supports this claim.")], state(evidence=ON_TOPIC))
     assert out["verification_results"]["c1"].verdict == Verdict.UNSUPPORTED
     text = content(caller.calls[0])
     assert "UNSUPPORTED is allowed for this claim" in text
@@ -252,7 +283,7 @@ def test_model_may_answer_unsupported_for_an_efficacy_claim_and_the_prompt_says_
 
 
 def test_unsupported_with_citations_is_rejected_then_repaired():
-    out, caller = run([answer("UNSUPPORTED", sup=["ev_2"]), answer("UNSUPPORTED")])
+    out, caller = run([answer("UNSUPPORTED", sup=["ev_2"]), answer("UNSUPPORTED")], state(evidence=ON_TOPIC))
     assert out["verification_results"]["c1"].verdict == Verdict.UNSUPPORTED
     assert len(caller.calls) == 2 and "cites no evidence IDs" in content(caller.calls[1])
 

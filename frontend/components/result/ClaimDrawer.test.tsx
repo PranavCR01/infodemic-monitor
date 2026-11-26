@@ -86,13 +86,13 @@ describe("ClaimDrawer", () => {
     expect(within(dialog).getByText(/Claim is broader than any study/)).toBeInTheDocument();
   });
 
-  it("shows quotes, the fixed meaning line and collapsed critic notes", () => {
+  it("shows quotes and the fixed meaning line, but not the critic's pipeline notes (T52)", () => {
     render(<ResultView result={adaptResult(MOCK_MISINFO_PENDING)} />);
     const dialog = open(1);
     expect(within(dialog).getByText("HOT WATER = NO MORE FLU")).toBeInTheDocument();
     expect(within(dialog).getByText("The speaker promotes a claim that the evidence contradicts.")).toBeInTheDocument();
-    const details = within(dialog).getByText(/Critic's notes/).closest("details")!;
-    expect(details).not.toHaveAttribute("open");
+    expect(within(dialog).queryByText(/Critic's notes/)).not.toBeInTheDocument();
+    expect(within(dialog).queryByText(/The trial population was adults with common cold/)).not.toBeInTheDocument();
   });
 
   it("links PubMed and official sources, and never links internal library documents", () => {
@@ -128,17 +128,39 @@ describe("ClaimDrawer", () => {
   });
 });
 
-describe("ClaimDrawer: how we searched (T31)", () => {
-  it("shows the claim's searches, collapsed, and says when the search ran out of rounds", () => {
+describe("ClaimDrawer: how we searched (T31, T52)", () => {
+  it("says in one plain finding how the search went, with no raw queries or technical details", () => {
     render(<ResultView result={adaptResult(MOCK_MISINFO_PENDING)} />);
     const dialog = open(3);
-    const details = within(dialog).getByText("How we searched for this claim").closest("details")!;
+    const section = within(dialog).getByRole("region", { name: "How we searched" });
+    expect(section).toHaveTextContent(
+      "No relevant study was found after 2 searches. 3 papers were retrieved and none was relevant enough to check the claim against, so this claim could not be checked and was sent to a reviewer.",
+    );
+    expect(section).toHaveTextContent(/document library was searched too/);
+    expect(within(section).getByText(/titles of the papers that weren't relevant enough to check weren't kept/)).toBeInTheDocument();
+    expect(within(dialog).queryByText("vitamin C megadose viral infection prevention")).not.toBeInTheDocument();
+    expect(within(dialog).queryByText("Technical details")).not.toBeInTheDocument();
+  });
+
+  it("lists papers retrieved but not used, collapsed, with PubMed links", () => {
+    const raw: RawResult = {
+      ...MOCK_MISINFO_PENDING,
+      claims: [
+        {
+          ...MOCK_MISINFO_PENDING.claims![0],
+          evidence: [
+            ...MOCK_MISINFO_PENDING.claims![0].evidence!,
+            { evidence_id: "off", title: "Vitamin D and bone density in older women", relation: "CONSIDERED", source_kind: "pubmed", pmid: "12345678", study_type: "cohort", year: 2017 },
+          ],
+        },
+      ],
+    };
+    render(<ResultView result={adaptResult(raw)} />);
+    const dialog = open(1);
+    const details = within(dialog).getByText(/Papers retrieved but not used/).closest("details")!;
     expect(details).not.toHaveAttribute("open");
-    expect(within(details).getByText("vitamin C megadose viral infection prevention")).toBeInTheDocument();
-    expect(within(details).getByText("0 results")).toBeInTheDocument();
-    expect(within(details).getByText(/used all 3 rounds allowed/)).toBeInTheDocument();
-    expect(within(details).getByText(/document library was searched too/)).toBeInTheDocument();
-    expect(within(details).getByText(/3 results found, 3 screened, 0 sources used/)).toBeInTheDocument();
+    expect(within(details).getByText(/\(1\)/)).toBeInTheDocument();
+    expect(within(details).getByRole("link", { name: /Vitamin D and bone density/ })).toHaveAttribute("href", "https://pubmed.ncbi.nlm.nih.gov/12345678/");
   });
 });
 

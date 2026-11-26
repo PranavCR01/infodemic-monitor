@@ -1,0 +1,492 @@
+[
+ {
+  "mode": "retrieved+cited",
+  "videos": [
+   {
+    "video_id": "v22",
+    "label_after": "NO_MISINFO",
+    "basis_after": "",
+    "kept": false,
+    "reasons_after": [],
+    "unsupported_claims": [
+     {
+      "claim": "v22:c2",
+      "text": "Eggs are high in antioxidants, which is really good to prevent something called macular degeneration as well as cataracts",
+      "frozen": true,
+      "kept_records": 1,
+      "terms": [
+       "eggs",
+       "antioxidants"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": [
+       "Lutein and Zeaxanthin and Their Roles in Age-Related Macular Degeneration-Neurodegenerative Disease."
+      ]
+     }
+    ]
+   },
+   {
+    "video_id": "v36",
+    "label_after": "CANNOT_RECOGNIZE",
+    "basis_after": "",
+    "kept": false,
+    "reasons_after": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v36:c6",
+      "text": "Irish Sea Moss: Cures Thyroid Issues",
+      "frozen": false,
+      "kept_records": 0,
+      "terms": [
+       "irish",
+       "sea",
+       "moss"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": []
+     },
+     {
+      "claim": "v36:c7",
+      "text": "Burdock Root: Rids Kidney & Gallbladder Stones",
+      "frozen": false,
+      "kept_records": 0,
+      "terms": [
+       "burdock",
+       "root"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": []
+     },
+     {
+      "claim": "v36:c10",
+      "text": "Irish Sea Moss: Building Muscles Mass",
+      "frozen": false,
+      "kept_records": 0,
+      "terms": [
+       "irish",
+       "sea",
+       "moss"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": []
+     },
+     {
+      "claim": "v36:c14",
+      "text": "Burdock Root: Assists with PMS Symptoms",
+      "frozen": false,
+      "kept_records": 0,
+      "terms": [
+       "burdock",
+       "root"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": []
+     }
+    ]
+   },
+   {
+    "video_id": "v120",
+    "label_after": "CANNOT_RECOGNIZE",
+    "basis_after": "",
+    "kept": false,
+    "reasons_after": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v120:c1",
+      "text": "los beneficios son muchísimo primero elimina los metales pesados del cuerpo",
+      "frozen": true,
+      "kept_records": 0,
+      "terms": [
+       "los",
+       "beneficios",
+       "son",
+       "muchísimo"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": []
+     }
+    ]
+   },
+   {
+    "video_id": "v141",
+    "label_after": "NO_MISINFO",
+    "basis_after": "",
+    "kept": false,
+    "reasons_after": [],
+    "unsupported_claims": [
+     {
+      "claim": "v141:c1",
+      "text": "Ce gamin de 15 ans a inventé un remède contre le cancer",
+      "frozen": true,
+      "kept_records": 10,
+      "terms": [
+       "ce",
+       "gamin",
+       "de 15",
+       "ans"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": [
+       "Familial Pancreatic Cancer.",
+       "Cancer cachexia.",
+       "Angiogenesis in cancer.",
+       "[Local treatment of penile cancer].",
+       "Papillary thyroid cancer."
+      ]
+     },
+     {
+      "claim": "v141:c2",
+      "text": "a fabriqué un savon qui prévient et traite le cancer de la peau",
+      "frozen": true,
+      "kept_records": 10,
+      "terms": [
+       "fabriqué",
+       "un",
+       "savon",
+       "qui"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": [
+       "Familial Pancreatic Cancer.",
+       "Cancer cachexia.",
+       "Angiogenesis in cancer.",
+       "[Local treatment of penile cancer].",
+       "Papillary thyroid cancer."
+      ]
+     }
+    ]
+   },
+   {
+    "video_id": "v143",
+    "label_after": "CANNOT_RECOGNIZE",
+    "basis_after": "",
+    "kept": false,
+    "reasons_after": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v143:c1",
+      "text": "il vient d'inventer un savon qui traite le cancer de la peau",
+      "frozen": true,
+      "kept_records": 10,
+      "terms": [
+       "il",
+       "vient",
+       "d'inventer",
+       "un"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": [
+       "Familial Pancreatic Cancer.",
+       "Cancer cachexia.",
+       "Angiogenesis in cancer.",
+       "[Local treatment of penile cancer].",
+       "Papillary thyroid cancer."
+      ]
+     },
+     {
+      "claim": "v143:c2",
+      "text": "Il a conçu un savon qui protège du cancer de la peau, avec de nombreuses propriétés qui persistent même après rinçage",
+      "frozen": true,
+      "kept_records": 10,
+      "terms": [
+       "il",
+       "conçu",
+       "un",
+       "savon"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": [
+       "Familial Pancreatic Cancer.",
+       "Cancer cachexia.",
+       "Angiogenesis in cancer.",
+       "[Local treatment of penile cancer].",
+       "Papillary thyroid cancer."
+      ]
+     }
+    ]
+   }
+  ],
+  "kept": 0,
+  "total": 5
+ },
+ {
+  "mode": "retrieved",
+  "videos": [
+   {
+    "video_id": "v22",
+    "label_after": "NO_MISINFO",
+    "basis_after": "",
+    "kept": false,
+    "reasons_after": [],
+    "unsupported_claims": [
+     {
+      "claim": "v22:c2",
+      "text": "Eggs are high in antioxidants, which is really good to prevent something called macular degeneration as well as cataracts",
+      "frozen": true,
+      "kept_records": 0,
+      "terms": [
+       "eggs",
+       "antioxidants"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": []
+     }
+    ]
+   },
+   {
+    "video_id": "v36",
+    "label_after": "CANNOT_RECOGNIZE",
+    "basis_after": "",
+    "kept": false,
+    "reasons_after": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v36:c6",
+      "text": "Irish Sea Moss: Cures Thyroid Issues",
+      "frozen": false,
+      "kept_records": 0,
+      "terms": [
+       "irish",
+       "sea",
+       "moss"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": []
+     },
+     {
+      "claim": "v36:c7",
+      "text": "Burdock Root: Rids Kidney & Gallbladder Stones",
+      "frozen": false,
+      "kept_records": 0,
+      "terms": [
+       "burdock",
+       "root"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": []
+     },
+     {
+      "claim": "v36:c10",
+      "text": "Irish Sea Moss: Building Muscles Mass",
+      "frozen": false,
+      "kept_records": 0,
+      "terms": [
+       "irish",
+       "sea",
+       "moss"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": []
+     },
+     {
+      "claim": "v36:c14",
+      "text": "Burdock Root: Assists with PMS Symptoms",
+      "frozen": false,
+      "kept_records": 0,
+      "terms": [
+       "burdock",
+       "root"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": []
+     }
+    ]
+   },
+   {
+    "video_id": "v120",
+    "label_after": "CANNOT_RECOGNIZE",
+    "basis_after": "",
+    "kept": false,
+    "reasons_after": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v120:c1",
+      "text": "los beneficios son muchísimo primero elimina los metales pesados del cuerpo",
+      "frozen": true,
+      "kept_records": 0,
+      "terms": [
+       "los",
+       "beneficios",
+       "son",
+       "muchísimo"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": []
+     }
+    ]
+   },
+   {
+    "video_id": "v141",
+    "label_after": "NO_MISINFO",
+    "basis_after": "",
+    "kept": false,
+    "reasons_after": [],
+    "unsupported_claims": [
+     {
+      "claim": "v141:c1",
+      "text": "Ce gamin de 15 ans a inventé un remède contre le cancer",
+      "frozen": true,
+      "kept_records": 10,
+      "terms": [
+       "ce",
+       "gamin",
+       "de 15",
+       "ans"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": [
+       "Familial Pancreatic Cancer.",
+       "Cancer cachexia.",
+       "Angiogenesis in cancer.",
+       "[Local treatment of penile cancer].",
+       "Papillary thyroid cancer."
+      ]
+     },
+     {
+      "claim": "v141:c2",
+      "text": "a fabriqué un savon qui prévient et traite le cancer de la peau",
+      "frozen": true,
+      "kept_records": 10,
+      "terms": [
+       "fabriqué",
+       "un",
+       "savon",
+       "qui"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": [
+       "Familial Pancreatic Cancer.",
+       "Cancer cachexia.",
+       "Angiogenesis in cancer.",
+       "[Local treatment of penile cancer].",
+       "Papillary thyroid cancer."
+      ]
+     }
+    ]
+   },
+   {
+    "video_id": "v143",
+    "label_after": "CANNOT_RECOGNIZE",
+    "basis_after": "",
+    "kept": false,
+    "reasons_after": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v143:c1",
+      "text": "il vient d'inventer un savon qui traite le cancer de la peau",
+      "frozen": true,
+      "kept_records": 10,
+      "terms": [
+       "il",
+       "vient",
+       "d'inventer",
+       "un"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": [
+       "Familial Pancreatic Cancer.",
+       "Cancer cachexia.",
+       "Angiogenesis in cancer.",
+       "[Local treatment of penile cancer].",
+       "Papillary thyroid cancer."
+      ]
+     },
+     {
+      "claim": "v143:c2",
+      "text": "Il a conçu un savon qui protège du cancer de la peau, avec de nombreuses propriétés qui persistent même après rinçage",
+      "frozen": true,
+      "kept_records": 10,
+      "terms": [
+       "il",
+       "conçu",
+       "un",
+       "savon"
+      ],
+      "terms_source": "fallback",
+      "require_all": true,
+      "on_topic_ids": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "titles": [
+       "Familial Pancreatic Cancer.",
+       "Cancer cachexia.",
+       "Angiogenesis in cancer.",
+       "[Local treatment of penile cancer].",
+       "Papillary thyroid cancer."
+      ]
+     }
+    ]
+   }
+  ],
+  "kept": 0,
+  "total": 5
+ }
+]
