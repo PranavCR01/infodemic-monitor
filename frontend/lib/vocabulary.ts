@@ -403,4 +403,3 @@ export function displayText(text: string | null | undefined): string {
   if (!text) return "";
   return ENUM_DISPLAY.reduce((s, [re, rep]) => s.replace(re, rep), text);
 }
-
