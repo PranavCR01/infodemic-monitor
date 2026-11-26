@@ -1,7 +1,7 @@
 import { Icon } from "@/components/ui";
 import { TONE } from "@/components/ui/tone";
 import type { BlindSource } from "@/lib/api/blind-material";
-import type { Source } from "@/lib/api/result-adapter";
+import { sourceMeta, type Source } from "@/lib/api/result-adapter";
 import { studyTypeDisplay } from "@/lib/vocabulary";
 
 const KIND: Record<Source["kind"], { icon: string; text: string }> = {
@@ -29,6 +29,8 @@ export function SourceCard({ s }: { s: Source | BlindSource }) {
   const typeTag = s.level === "GUIDANCE" ? "Official guidance" : studyTypeDisplay(s.studyType);
   const relation = "relation" in s ? s.relation : null;
   const supports = relation === "SUPPORTS";
+  // T65: journal and publication date when the result has them, else publisher and year.
+  const meta = sourceMeta(s);
   return (
     <article className={`flex flex-col gap-2 rounded-lg border bg-surface px-4 py-3.5 ${internal ? "border-dashed border-line-input" : "border-line"}`}>
       <div className="flex flex-wrap items-center gap-2">
@@ -46,10 +48,7 @@ export function SourceCard({ s }: { s: Source | BlindSource }) {
         )}
       </div>
       <h4 className="text-h3 text-ink">{s.title}</h4>
-      {(s.publisher || s.year) && s.kind !== "reference" && (
-        <p className="text-small text-ink-2">{[s.publisher, s.year].filter(Boolean).join(" · ")}</p>
-      )}
-      {s.kind === "reference" && s.year && <p className="text-small text-ink-2">{s.year}</p>}
+      {meta.length > 0 && <p className="text-small text-ink-2" data-source-meta>{meta.join(" · ")}</p>}
       {s.snippet && (
         <blockquote className="rounded-md border border-line bg-surface-2 px-3 py-2 text-small text-ink">
           “{s.snippet}”

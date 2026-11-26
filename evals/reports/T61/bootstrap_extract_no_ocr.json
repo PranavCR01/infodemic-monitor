@@ -1,0 +1,128 @@
+{
+  "B": 10000,
+  "seed": 61,
+  "method": "paired percentile bootstrap",
+  "comparisons": {
+    "run_extract_no_ocr:extract_claims": {
+      "a": "anthropic/claude-sonnet-5-5@extract_v2",
+      "b": "anthropic/claude-sonnet-5-5@extract_v3",
+      "golden": "git:92a731e@92a731e7f954:research/claim-level/dataset",
+      "pipeline_options": {
+        "version": "pipeline_v1",
+        "extraction": {
+          "use_ocr": false
+        },
+        "retrieval": {
+          "search_assistant": true,
+          "translate_claims": true,
+          "find_study": true,
+          "crossref": true
+        }
+      },
+      "n_items": 48,
+      "unit": "video",
+      "metrics": {
+        "strict_precision": {
+          "anthropic/claude-sonnet-5-5@extract_v2": 0.328125,
+          "anthropic/claude-sonnet-5-5@extract_v3": 0.35135135135135137,
+          "diff_b_minus_a": 0.02322635135135137,
+          "ci95": {
+            "lo": -0.08195754173728187,
+            "hi": 0.1592054099176039,
+            "n_defined": 10000,
+            "includes_zero": true
+          }
+        },
+        "strict_recall": {
+          "anthropic/claude-sonnet-5-5@extract_v2": 0.5614973262032086,
+          "anthropic/claude-sonnet-5-5@extract_v3": 0.20855614973262032,
+          "diff_b_minus_a": -0.35294117647058826,
+          "ci95": {
+            "lo": -0.5061747685185185,
+            "hi": -0.19417332952598518,
+            "n_defined": 10000,
+            "includes_zero": false
+          }
+        },
+        "strict_f1": {
+          "anthropic/claude-sonnet-5-5@extract_v2": 0.4142011834319527,
+          "anthropic/claude-sonnet-5-5@extract_v3": 0.26174496644295303,
+          "diff_b_minus_a": -0.1524562169889997,
+          "ci95": {
+            "lo": -0.2926483611698835,
+            "hi": -0.029055388553036177,
+            "n_defined": 10000,
+            "includes_zero": false
+          }
+        },
+        "strict_counts": {
+          "anthropic/claude-sonnet-5-5@extract_v2": [
+            105,
+            187,
+            320
+          ],
+          "anthropic/claude-sonnet-5-5@extract_v3": [
+            39,
+            187,
+            111
+          ],
+          "fields": [
+            "matched",
+            "n_gold",
+            "n_pred"
+          ]
+        },
+        "meaning_precision": {
+          "anthropic/claude-sonnet-5-5@extract_v2": 0.428125,
+          "anthropic/claude-sonnet-5-5@extract_v3": 0.4144144144144144,
+          "diff_b_minus_a": -0.013710585585585577,
+          "ci95": {
+            "lo": -0.10917260763271361,
+            "hi": 0.12976371106288825,
+            "n_defined": 10000,
+            "includes_zero": true
+          }
+        },
+        "meaning_recall": {
+          "anthropic/claude-sonnet-5-5@extract_v2": 0.732620320855615,
+          "anthropic/claude-sonnet-5-5@extract_v3": 0.24598930481283424,
+          "diff_b_minus_a": -0.4866310160427808,
+          "ci95": {
+            "lo": -0.6470588235294118,
+            "hi": -0.32758239243210263,
+            "n_defined": 10000,
+            "includes_zero": false
+          }
+        },
+        "meaning_f1": {
+          "anthropic/claude-sonnet-5-5@extract_v2": 0.5404339250493098,
+          "anthropic/claude-sonnet-5-5@extract_v3": 0.30872483221476515,
+          "diff_b_minus_a": -0.2317090928345446,
+          "ci95": {
+            "lo": -0.3770672993006294,
+            "hi": -0.12131291963512723,
+            "n_defined": 10000,
+            "includes_zero": false
+          }
+        },
+        "meaning_counts": {
+          "anthropic/claude-sonnet-5-5@extract_v2": [
+            137,
+            187,
+            320
+          ],
+          "anthropic/claude-sonnet-5-5@extract_v3": [
+            46,
+            187,
+            111
+          ],
+          "fields": [
+            "matched",
+            "n_gold",
+            "n_pred"
+          ]
+        }
+      }
+    }
+  }
+}

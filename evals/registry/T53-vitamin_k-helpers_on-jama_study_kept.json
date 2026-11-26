@@ -1,0 +1,28 @@
+{
+  "schema_version": "1",
+  "run_id": "T53-vitamin_k-helpers_on-jama_study_kept",
+  "run_group": "T53-vitamin-k-helpers-on",
+  "date": "2026-11-26",
+  "task": "T53",
+  "pipeline_step": "rerank_evidence",
+  "split": null,
+  "synthetic": false,
+  "golden_set_ref": null,
+  "models": [
+    {
+      "provider": "anthropic",
+      "model": "claude-haiku-5-5",
+      "prompt": null,
+      "role": "find_study"
+    }
+  ],
+  "variant": "helpers_on",
+  "metric_name": "jama_study_kept_c2_c5",
+  "value": 0.5,
+  "ci95": null,
+  "n_items": 4,
+  "n_unit": "claims (c2-c5)",
+  "cost_usd": 0.0903,
+  "report_path": "evals/reports/T50/paid_run.md",
+  "notes": "2/4: c2 and c4 PASS (PMID 42986716 proposed by find_study, verified, kept); c3 and c5 FAIL at proposal. Step is rerank_evidence because find-the-study output is written there. cost_usd = the whole vitamin K run ($0.0103 tokens + $0.08 web search). Prompt id not named in the report. Production job 5cc07f48 (vitamin K video, real production rows), used as a search regression; not golden-set data and not a split, so split and golden_set_ref are null. No CI."
+}

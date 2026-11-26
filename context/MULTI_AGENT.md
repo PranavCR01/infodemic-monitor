@@ -411,6 +411,23 @@ the lexicon's "antibiotic". Narrative reviews of cell and animal work ("citrus f
 in cancer biology") still pass. Fixes belong in the MeSH lexicon (which also changes T03's
 queries and fixtures) or in a learned relevance model, judged on the real labelled set.
 
+**T60: lexical vs MedCPT on real records (decision: keep lexical).** A real relevance set
+replaced the synthetic one for this decision: 30 tune-split claims (25 English, 4 Spanish,
+1 Hindi; includes the vitamin K job's c8) × their first 20 retrieved records (599 PubMed
+records), labelled 2/1/0 by an AI assistant, to be spot-checked by the lead (one labeller, not
+inter-annotator agreement). `ncbi/MedCPT-Cross-Encoder` ran locally through the
+`RelevanceModel` hook (`app/core/retrieval/cross_encoder.py`, opt-in, not wired in). At the
+current threshold (lexical 0.4) vs MedCPT at 0.5: precision on "partly relevant or better" is
+a little higher for MedCPT (P@10 0.35 vs 0.28) and it passes on half as many off-topic papers
+(76 vs 150), but the per-claim gain is inside noise (paired bootstrap, P@10 +0.025, 95% CI
+−0.035 to +0.097). It loses strictly relevant papers (recall 9/16 vs 13/16; per-claim −0.39,
+CI −0.72 to −0.07). It also keeps nothing for the Spanish claims, because it reads the claim
+in its own language. The Hindi claim goes the other way: MedCPT keeps 8 of its 9 relevant
+records and lexical keeps none. Not clearly better, and on CPU it costs 12.9 s per claim on 1 vCPU (6.7 s on 2) and
+about 1.6 GB RSS, against 11 ms for lexical; so the default stays lexical. Numbers,
+latency and image size: `evals/reports/T60/README.md`. If revisited: score the *translated*
+claim text (the planner already has it) and re-label with two people.
+
 ## 7g. Evidence Verifier Decisions (T06, #33)
 
 The node is `backend/app/core/graph/verifier.py` (`make_verify_claims(caller)`); the
@@ -2158,6 +2175,256 @@ what came before them.
 `review.superseded_by_job_id` → show "Superseded by a newer analysis" with a link.
 `GET /v1/reviews` takes `status=SUPERSEDED` (default `OPEN` leaves them out).
 
+## 7ag. Evaluation Registry and Admin Evals API (T63, backend; design §13, §14, §15)
+
+- **Record per measurement:** `evals/registry/<run_id>.json`, one metric of one run
+  (`app/evaluation/registry.py`, `EvalRecord`; JSON schema `evals/eval_record.schema.json`,
+  generated from the model: `python -m app.evaluation.registry schema`, a test keeps them in
+  step). Fields: `run_id`, `run_group` (records of one run; `cost_usd` is per group, so count
+  it once per group), `date`, `task`, `pipeline_step` (a graph node name; tested against
+  `NODE_OUTPUTS`), `split` (`tune` / `test` / `null` = not one golden split, notes say why),
+  `synthetic`, `golden_set_ref`, `models` (`[{provider, model, prompt, role}]`; `[]` = no
+  model, `null` = report doesn't say), `variant`, `metric_name`, `value`, `ci95`
+  (`{low, high, method}` or null), `n_items`, `n_unit`, `cost_usd` (0 = no paid call),
+  `report_path` (repo-relative, must exist), `notes`. Values are copied from reports, never
+  recomputed; anything a report lacks is `null` with the reason in `notes`.
+  `python -m app.evaluation.registry validate` checks a directory.
+- **Backfill (32 records):** T05 (2, synthetic), T07 (2, synthetic), T24 judge cross-check
+  (2, split null: whole golden set), T38 (9: 3 steps × 3 candidates, Claude + OpenAI), T43
+  blind extraction ceiling (2, with the report's bootstrap CIs), T49 guard on frozen evidence
+  (2), T50 T49 replay (2), T50 recall rules-only old/new (6), T50 vitamin K rules-only (1),
+  T53 recall helpers on (3) and vitamin K helpers on (1). No CI anywhere except T43 (T38 kept
+  no per-item outputs). Several reports don't record the golden commit (T49, T50, T53): the
+  ref says so. T60 and T61 add their own records; every evaluation task now does
+  (`automation/TASK_PROMPT.md`).
+- **Image:** `backend/Dockerfile` and `Dockerfile.gpu` copy `evals/registry/` to
+  `/app/evals/registry` (records only, not the reports). `EVALS_REGISTRY_DIR` overrides the
+  location.
+
+**API for the frontend (`/admin/evals`):** `GET /v1/admin/evals`, bearer token required.
+No token or bad token 401; any role below admin 403 (checked before the registry is read;
+`user_metadata.role` is ignored). Query (all optional): `split=tune|test|none`,
+`step=` (repeated or comma-separated graph node names; unknown = 422), `synthetic=true|false`,
+`task=T38`. Response:
+```json
+{
+  "total": 32,
+  "step_order": ["load_artifacts", "...", "extract_claims", "analyze_stance", "plan_retrieval",
+                 "retrieve_evidence", "rerank_evidence", "verify_claims", "critique_verification",
+                 "judge_classification", "...", "persist_result"],
+  "groups": [{"step": "extract_claims", "step_index": 4, "count": 5, "run_ids": ["…"]}],
+  "items": [{
+    "schema_version": "1", "run_id": "T38-verify_claims-claude-opus-5-5", "run_group": null,
+    "date": "2026-11-24", "task": "T38", "pipeline_step": "verify_claims", "step_index": 9,
+    "split": "tune", "synthetic": false, "golden_set_ref": "origin/data/golden-label-set@0fbc68a05a7d",
+    "models": [{"provider": "anthropic", "model": "claude-opus-5-5", "prompt": "verify_v3", "role": null}],
+    "variant": null, "metric_name": "verification_macro_f1", "value": 0.6759, "ci95": null,
+    "n_items": 174, "n_unit": "claims", "cost_usd": 5.9869,
+    "report_path": "evals/reports/T38_routing/combined/report.md",
+    "report_url": "https://github.com/PranavCR01/infodemic-monitor/blob/langgraph-build/evals/reports/T38_routing/combined/report.md",
+    "notes": "Tune split: development numbers, not product accuracy. …"
+  }]
+}
+```
+Items are sorted by `step_index`, then newest date, then `run_id`; `groups` follows the same
+order. `split: null` rows (synthetic sets, whole-golden-set checks, the vitamin K job) need
+their own filter value (`none`) and label; show `synthetic: true` rows as synthetic. The
+report base URL is `EVALS_REPORT_BASE_URL` (default the `langgraph-build` blob URL above).
+Records are read per request, so a deploy is all a new record needs. An invalid registry
+is a 500 (logged); the validation test stops that from merging.
+## 7ah. Research Dashboard Stats API (T62, backend; design §12, §16, §17)
+
+Built by the automated build on 2026-11-26 (lead approved). Backend only; the frontend
+session builds `/dashboard` from the API note below. **No migration**, no new table.
+(§7ag is taken by T63's open PR.)
+
+- **Route.** `GET /v1/stats?window=7d|30d|90d|all` (default `30d`; anything else 422).
+  Any signed-in user, any role (analyst, reviewer, admin) gets the **same** body; no
+  token or a bad one is 401. Classified in T33's route table as `AGGREGATE`. Code:
+  `app/services/stats_service.py`, `app/api/routers/stats.py`.
+- **Aggregates only.** The body holds counts, two shares/medians and category names.
+  No video, job, claim, review or user id, file name, hash or claim text (a test greps
+  the body for every such value in the database).
+- **Cache.** Per window, process-wide, `STATS_CACHE_SECONDS` (60; 0 = off); the figures
+  are the same for everyone, so one cache serves all callers. Response header
+  `Cache-Control: private, max-age=60`. With several API replicas each has its own cache.
+- **What is counted.**
+  - *Videos*: each video once, with its **newest result created in the window** (a
+    re-analysis replaces, doesn't add). Only the four canonical labels; a legacy row
+    with any other label is left out of the whole population.
+  - *Per week*: ISO weeks (Monday, UTC) from the window start's week (for `all`, the
+    first result's week) to the current week, empty weeks included; a video falls in
+    the week of the result counted, so the weeks add up to `videos.total`.
+  - *Labels*: the **system** label (`results.label`), not a reviewer's correction (that
+    is what `reviews.changed_label` measures). MISINFO split by `misinfo_basis`;
+    `unspecified` = no basis (rows before T30, single-call/fallback path).
+  - *Jobs*: `pending_now` (§1 state PENDING/QUEUED/RETRY_PENDING, or status PENDING on
+    pre-T28 rows) and `running_now` (RUNNING / STARTED) are **snapshots of now**, not
+    windowed, so a job stuck since before the window still shows. `failed` = status
+    FAILED created in the window, excluding reviewer rejections (`REVIEW_REJECTED`).
+  - *Reviews*: `backlog_now` = OPEN cases now. `decisions` = RESOLVED cases with
+    `decided_at` in the window (SUPERSEDED cases are not decisions). A decision
+    *changed the label* when `corrected_label` is set and differs from
+    `proposed_label`; every other decision (approve, claim-only correction, insufficient,
+    re-analysis request, reject) *kept* it. `median_hours_to_decision` = median of
+    `decided_at - created_at`.
+  - *Top categories*: up to 10 `claims.category` values (lower-cased), counted as
+    **videos** with at least one claim in the category, not claims, so one upload with
+    many claims can't reach the threshold alone.
+- **Small cells.** Every count under 5, **zero included**, is published as the string
+  `"<5"`. Zero is suppressed too because the queue row says "any count < 5", and a
+  visible 0 next to a `"<5"` would narrow the hidden cell.
+- **Differencing.** Groups whose cells add up to a published total: weeks and labels
+  (total `videos.total`), MISINFO basis (total: the MISINFO cell), changed/kept (total
+  `reviews.decisions`). In each group, after the primary suppression more cells are
+  hidden, smallest first (ties by name), until nothing is hidden or **at least two cells
+  are hidden and the hidden cells add up to 5 or more**; so total minus the shown cells
+  never pins one cell down and is never itself a small number. A hidden total hides its
+  whole group; a hidden MISINFO hides the whole basis split. `changed_label_share` is
+  null unless both changed and kept are shown; `median_hours_to_decision` is null under
+  5 decisions. Groups with no total (jobs, backlog, categories) get primary suppression
+  only; categories under 5 are **left out** of the list (their names are model text and
+  a rare one could describe a single video). Tested on fixed cases, a seeded sweep of
+  3000 random groups, and every group of real responses.
+- **Not covered (for the lead).** Differencing **between** responses: 30-day minus
+  7-day figures, or the figures just before and after one video finishes (someone who
+  knows a colleague just uploaded could see which label moved by one). Each response is
+  safe on its own; closing this needs rounding or noise on every figure, which the queue
+  row didn't ask for. The 60 s cache only coarsens the timing. Also not covered:
+  several videos from **one uploader** can together reach 5 (the unit is the upload, as
+  the queue row says, not the person).
+- **Deviations.** No `classifications` table exists (§7k), so labels come from
+  `results`. Aggregation runs in Python over the window's rows (cheap at this volume,
+  and the same on SQLite and Postgres); move it into SQL if the `all` window gets slow.
+
+**Response shape** (`StatsResponse` in `app/api/routers/stats.py`; a *cell* is an
+integer ≥ 5 or the string `"<5"`):
+
+```jsonc
+{
+  "window": "30d",
+  "window_start": "2026-10-27T12:00:00+00:00",   // null for "all"
+  "window_end": "2026-11-26T12:00:00+00:00",
+  "generated_at": "2026-11-26T12:00:00+00:00",
+  "cache_seconds": 60,
+  "min_cell": 5,
+  "note": "These figures describe videos uploaded to this tool, not how common misinformation is online.",
+  "videos": {
+    "total": 30,
+    "per_week": [{"week_start": "2026-10-26", "videos": "<5"}, {"week_start": "2026-11-23", "videos": 19}]
+  },
+  "jobs": {"pending_now": 5, "running_now": "<5", "failed": 6},
+  "labels": {
+    "MISINFO": 12, "NO_MISINFO": 7, "DEBUNKING": 5, "CANNOT_RECOGNIZE": 6,
+    "misinfo_basis": {"contradicted": 6, "unproven": "<5", "denies_supported": "<5", "unspecified": "<5"}
+  },
+  "reviews": {
+    "backlog_now": "<5", "decisions": 8, "changed_label": "<5", "kept_label": "<5",
+    "changed_label_share": null,          // 0..1, 3 decimals, or null
+    "median_hours_to_decision": 4.5       // hours, 1 decimal, or null
+  },
+  "top_categories": [{"category": "treatment_efficacy", "videos": 6}]
+}
+```
+
+Frontend notes: show `note` as the fixed caption; render `"<5"` as text (not 0) and
+leave it out of chart scales or draw it as a hatched "under 5" bar; `window` is the only
+query parameter; `pending_now`, `running_now` and `backlog_now` are "now" whatever the
+window.
+
+## 7ai. Report and Result Polish (T65, backend; design §7, §12, §17)
+
+Built by the automated build on 2026-11-26 (lead approved, before the 2026-11-27 demo);
+frontend/export part by the frontend session in parallel. **No migration**, no paid call.
+Regression data: the real rows of production job d2bf4179
+(`backend/app/tests/fixtures/prod_d2bf4179/vitamin_k_rerun.real.json`); tests in
+`app/tests/test_report_polish_t65.py`. One formatter for source text:
+`app/core/user_text.py`.
+
+- **(a) No evidence ids in user-facing text.** The verifier prompt says: ids only in the two
+  id lists; name papers by short title or PMID. Output check in `verify_claim`: an
+  explanation or limitation containing `ev_…` gets **one** repair (shared with the citation
+  repair budget; logged as `repair requested: evidence_id_in_text`, not a guardrail error);
+  if the answer still has ids they are rendered: short title in quotes (main title before
+  a subtitle, max 8 words), else `PMID n`; an id naming no known source is dropped (or
+  "a retrieved paper" mid-sentence). The result API applies the same rendering on read, so
+  rows stored before T65 (e.g. d2bf4179 c7) are clean too: `verdict_explanation`,
+  `limitations` and the video `explanation`.
+- **(b) "The reviewer".** Critic notes reach the verifier as "NOTES FROM A SECOND AUTOMATED
+  CHECK … never 'the reviewer'"; the verifier's text and the API's read path rewrite
+  "the reviewer" to "a second automated check" (`reword_reviewer`).
+- **(c) One study type.** `claims[].evidence[].study_type` is the single source (the
+  reranker's `StudyType` value; a row stored without one gets the same classifier on its
+  stored metadata, else `unknown`; never null in new responses). New
+  `claims[].study_type_counts: [{study_type, relation, count}]` counts the cited sources
+  (`relation` SUPPORTS | CONTRADICTS) by that same field. Frontend: build the summary
+  ("4 narrative reviews · 2 case reports") from `study_type_counts` and the list from
+  `study_type`; the old "N sources without a study type" came from counting only the
+  strip levels.
+- **(d) Titles.** `evidence[].title` has PubMed's trailing full stop stripped
+  (`clean_title`; '?' / '!' kept), so the export adds the only one. `source_line` is the
+  backend version of "Title. Journal, date.".
+- **(e) Speaker quote.** New `claims[].speaker_quote` (string | null) and
+  `speaker_quote_segment_ids`: the run of 1–3 adjacent speech segments inside the claim's
+  span (plus its source segments) covering the most distinct content words of the claim
+  (T45 `word_tokens`), shortest then earliest on ties; null when no segment shares a
+  content word. (There was no `speaker_quote` field before: the export quoted
+  `stance_quotes[0]`. `stance_quotes` is unchanged.) Code: `app/core/speaker_quote.py`.
+- **(f) Journal and date.** EFetch now parses `journal_abbrev` (ISOAbbreviation, else
+  MedlineTA) and `pub_date` (ISO "YYYY" / "YYYY-MM" / "YYYY-MM-DD"; the electronic
+  ArticleDate when it is more precise than the issue date) into `EvidenceRecord.journal`
+  / `.pub_date`, shown to the verifier in the evidence index (`journal: JAMA | published:
+  2026-11-05`). Stored without a column: in the claim's `search_trail` JSON under
+  `source_meta` (evidence id → {journal, pub_date}; `SearchTrailView` ignores the key).
+  API: `claims[].evidence[].journal` (string | null) and `.pub_date` (string | null). Rows
+  before T65: `journal` null (journal_doi records: their Crossref journal, also in
+  `publisher`), `pub_date` = `year` as "YYYY". The MCP contract record carries the two
+  fields too (additive, optional; `contract/tools.json` refreshed), so `fetch_pubmed_records`
+  returns the retriever's records unchanged and `rerank_evidence` accepts them. `publisher` is unchanged.
+## 7ai. Unproven-Label Fixes (T64; design §6, §7, §9)
+
+Production job d2bf4179 (vitamin K re-analysis, main 91a7a13) was still MISINFO (unproven).
+It was decided by c12 ("helps prevent a potentially devastating condition"), UNSUPPORTED on
+one kept case report, while c14 (preventive injection) was SUPPORTED by two systematic
+reviews. Lead decision 2026-11-26: build (a), (b), (c), (e), (f) before the demo; (d)
+extraction context resolution is deferred.
+
+- **Where the checks live.** (a), (c) are in `unproven_guard.apply_unproven_guard`, after
+  T49's on-topic check, in this order: on-topic → (c) → (a); the first that fires sets the
+  limitation. (b) is `apply_sibling_rule`, run at the end of every `verify_claims` pass over
+  all results. As with T49, nothing is in the judge, so §9 and the cross-check stay as they were.
+- **(a)** `MIN_ON_TOPIC_RECORDS = 3`, or one on-topic record with study type
+  `systematic_review` / `rct` / `guideline`. The study type is the stored one when it is a known
+  `StudyType` value, else `classify_study` on the publication type. Authoritative reference
+  passages (`reference`) do not count as strong; the row lists SR/RCT/guideline only.
+- **(c)** New optional tool field `outcome_unspecified` (the instructions text changed, the
+  prompt file did not, so the prompt version stays `verify_v3`). The code check is narrow:
+  after the last claim verb, no lexicon condition/outcome and only generic nouns with vague
+  modifiers. Unknown words count as a named outcome.
+- **(b) deviates from the row.** The row's rule (same intervention only) changes tune v22
+  MISINFO (unproven) → NO_MISINFO: "eggs prevent a fatty liver" (SUPPORTED) demoted "eggs
+  prevent macular degeneration" (UNSUPPORTED). As built, the sibling must also not name a
+  *different* outcome: the UNSUPPORTED claim names none, or they share an outcome word or
+  concept (`same_outcome`). Vitamin K c12 names none, so it is still demoted. Same
+  intervention means intervention terms overlap (`same_intervention`). The judge raises
+  `unproven_claim:<cid>` for an endorsed claim carrying `contradicted_by_sibling_claim`.
+- **(e)** In `rerank._coverage`, "<term> antagonist(s)/antagonism/antagonistic" is blanked
+  out before an intervention-kind concept (by kind, not frame side: c13's frame puts vitamin
+  K on the outcome side) is matched, parent heading included.
+- **(f)** `main_claims_unchecked` is a judge rule flag (video-level, in `RULE_REVIEW_FLAGS`).
+  It fires only on NO_MISINFO when ≥ 1 endorsed `treatment_efficacy`/`prevention` claim
+  exists and at least half are INSUFFICIENT_EVIDENCE. The label is unchanged and severity
+  does not read review reasons. Wording is in `review_reasons.REASON_TEXT`,
+  `frontend/lib/vocabulary.ts` and the judge's `_FLAG_TEXT`. Cross-check kind
+  `main_claims_unchecked_not_in_golden_judge` is documented; it cannot fire on the golden
+  set (no categories).
+- **Tests needing new fixtures.** Three existing fixtures had one on-topic record and now
+  hit (a), so each gained records: `test_graph_integration._on_topic_untested` (3 records),
+  T49 `test_on_topic_search_keeps_unsupported` (4), and verify eval v21/v22 (two synthetic
+  on-topic records each; heuristic baseline unchanged). In `test_judge.test_flag_verification_failed`,
+  one of two endorsed efficacy claims is unchecked, so the expected flags gain
+  `main_claims_unchecked`.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -2179,6 +2446,37 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-26**: T65 backend (report and result polish from production job d2bf4179; design §7,
+  §12, §17), no migration, no paid call. Evidence ids rendered as short titles/PMIDs with a
+  repair-once output check; critic notes called "a second automated check"; one study type with
+  `study_type_counts`; titles without trailing full stop; `speaker_quote` = best-overlap segments;
+  PubMed journal abbreviation and publication date to the verifier and the API (`journal`,
+  `pub_date`, stored in the search trail JSON). Field note in §7ai.
+- **2026-11-26**: T64 (design §6, §7, §9) unproven-label fixes (a, b, c, e, f; (d) deferred),
+  no spend, no migration. Real rows of job d2bf4179: MISINFO (unproven) reproduced without T64,
+  NO_MISINFO with it (+ `main_claims_unchecked`). On rows treated as on topic, as in
+  production, each of (a), (b), (c) alone clears the label. Tune replay (T49 extended to
+  every tune video with a golden UNSUPPORTED claim, before = langgraph-build a67f8ca on the
+  same evidence): no tune label changes. 4/5 tune unproven videos keep the label on fresh
+  rules-only PubMed evidence, 0/5 on T38 frozen evidence, both unchanged. Only v36:c6 changes
+  verdict, to `search_too_thin`, and v36 stays MISINFO. The row's literal (b) would lose v22,
+  so (b) is narrowed (§7ai). Judge cross-check byte-identical, no re-pin. Report
+  `evals/reports/T64/`. Branch `auto/T64`.
+
+- **2026-11-26**: T63 (backend; design §13, §14, §15) evaluation registry and admin evals API, no
+  spend. `evals/registry/<run_id>.json` per metric per run, Pydantic model + JSON schema + a test that
+  validates every file; 32 records backfilled from existing reports (T05, T07 synthetic; T24, T38, T43,
+  T49, T50, T53), numbers copied, missing fields null with the reason in notes. `GET /v1/admin/evals`
+  (admin only: 401/403 otherwise) reads the registry shipped in the image. Standing rule added to
+  TASK_PROMPT.md: every evaluation task adds its own record. Decisions and API shape in §7ag.
+- **2026-11-26**: T62 backend (research dashboard stats, design §12, §16, §17) built by the automated
+  build: `GET /v1/stats?window=7d|30d|90d|all` for any signed-in user, totals across all users only,
+  cached 60 s; videos per week, jobs pending/running/failed, label mix with the MISINFO basis split,
+  review backlog / median time to decision / share that changed the label, top claim categories.
+  Every count under 5 (zero included) is `"<5"`, with secondary suppression so no hidden cell can be
+  recovered from a total. No migration. 21 new tests; full suite 1909 passed, 198 skipped (stats
+  tests also pass on a local Postgres 16). Cross-window / before-and-after differencing is not
+  covered and needs a lead decision. Frontend next, from the §7ah API note.
 - **2026-11-26**: T51 (design §4, §7) design/quality/quantity statements are not efficacy claims, no
   spend. New claim_category `evidence_meta` (chosen over a claim_kind `not_verifiable`: claim_kind picks
   the sources, and the golden guide verifies such statements, e.g. tune v79 c3 SUPPORTED) for statements

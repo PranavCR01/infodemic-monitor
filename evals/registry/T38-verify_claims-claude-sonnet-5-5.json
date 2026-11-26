@@ -1,0 +1,28 @@
+{
+  "schema_version": "1",
+  "run_id": "T38-verify_claims-claude-sonnet-5-5",
+  "run_group": null,
+  "date": "2026-11-24",
+  "task": "T38",
+  "pipeline_step": "verify_claims",
+  "split": "tune",
+  "synthetic": false,
+  "golden_set_ref": "origin/data/golden-label-set@0fbc68a05a7d",
+  "models": [
+    {
+      "provider": "anthropic",
+      "model": "claude-sonnet-5-5",
+      "prompt": "verify_v3",
+      "role": null
+    }
+  ],
+  "variant": null,
+  "metric_name": "verification_macro_f1",
+  "value": 0.6073,
+  "ci95": null,
+  "n_items": 174,
+  "n_unit": "claims",
+  "cost_usd": 3.0919,
+  "report_path": "evals/reports/T38_routing/combined/report.md",
+  "notes": "Tune split: development numbers, not product accuracy. Run: evals/reports/T38_routing/claude/report.json. 0 failed items. No 95% CI: the T38 runner kept no per-item predictions (see T43). cost_usd is this candidate's spend on this step. Evidence: frozen tune evidence sha256 c4ff82bf69dc85c3b80503a2b7d559b820255b1a90ac3a3fc069593e8d4d4ca5, evidence mode retrieved+cited."
+}

@@ -466,7 +466,8 @@ def test_flag_verification_failed():
     s = make_state((E, SUP), (E, INS))
     s["errors"] = [NodeError(node=r.VERIFY_CLAIMS, message="model call failed", claim_id="c2", retryable=True)]
     final, _ = run_judge(s)
-    assert final.review_flags == [f"{jg.FLAG_VERIFICATION_FAILED}:c2"]
+    # T64 (f): one of the two endorsed efficacy claims is unchecked (half) → main_claims_unchecked.
+    assert final.review_flags == [jg.FLAG_MAIN_CLAIMS_UNCHECKED, f"{jg.FLAG_VERIFICATION_FAILED}:c2"]
 
 
 def test_a_clean_video_has_no_flags():

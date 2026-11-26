@@ -19,5 +19,8 @@ RUN pip install --no-cache-dir --no-deps -e ./backend
 
 COPY .env.example .env.example
 
+# Evaluation registry for GET /v1/admin/evals (T63). Only the records, not the reports.
+COPY evals/registry/ ./evals/registry/
+
 # CMD is overridden by railway.toml per-service — this is the fallback only
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

@@ -9,7 +9,7 @@ const base: ClaimSearch = {
 };
 const q = (query: string, failed = false) => ({ query, results: failed ? null : 3, failed });
 const src = (id: string, relation: Source["relation"]): Source => ({
-  id, title: `Paper ${id}`, relation, studyType: "rct", level: "RCT", kind: "pubmed", year: 2020, publisher: null, snippet: "", url: `https://pubmed.ncbi.nlm.nih.gov/${id}/`, pmid: id,
+  id, title: `Paper ${id}`, relation, studyType: "rct", level: "RCT", kind: "pubmed", year: 2020, publisher: null, snippet: "", url: `https://pubmed.ncbi.nlm.nih.gov/${id}/`, pmid: id, journal: null, pubDate: null,
 });
 const claim = (search: Partial<ClaimSearch>, sources: Source[] = [], verdict: Claim["verdict"] = "INSUFFICIENT_EVIDENCE"): Pick<Claim, "search" | "sources" | "verdict"> => ({
   search: { ...base, ...search },

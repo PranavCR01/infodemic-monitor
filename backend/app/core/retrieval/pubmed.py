@@ -116,12 +116,18 @@ class PubMedArticle:
     publication_year: Optional[int] = None
     journal: Optional[str] = None
     publication_types: tuple[str, ...] = field(default_factory=tuple)
+    # T65 (f): PubMed's journal abbreviation (ISOAbbreviation, else MedlineTA, e.g.
+    # "JAMA") and publication date as ISO "YYYY", "YYYY-MM" or "YYYY-MM-DD", as precise
+    # as the record gives. Optional, so records cached before T65 still load.
+    journal_abbrev: Optional[str] = None
+    pub_date: Optional[str] = None
 
     def to_json(self) -> dict[str, Any]:
         return {
             "pmid": self.pmid, "title": self.title, "abstract": self.abstract,
             "doi": self.doi, "publication_year": self.publication_year,
             "journal": self.journal, "publication_types": list(self.publication_types),
+            "journal_abbrev": self.journal_abbrev, "pub_date": self.pub_date,
         }
 
     @classmethod
@@ -130,6 +136,7 @@ class PubMedArticle:
             pmid=str(d["pmid"]), title=d["title"], abstract=d.get("abstract", ""),
             doi=d.get("doi"), publication_year=d.get("publication_year"),
             journal=d.get("journal"), publication_types=tuple(d.get("publication_types", ())),
+            journal_abbrev=d.get("journal_abbrev"), pub_date=d.get("pub_date"),
         )
 
 
@@ -179,6 +186,57 @@ def _year(article: ET.Element) -> Optional[int]:
         if m:
             return int(m.group(1))
     return None
+
+
+_MONTHS = {m: i for i, m in enumerate(
+    ("jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"), start=1)}
+
+
+def _month(text: str) -> Optional[int]:
+    t = text.strip().lower()
+    if t.isdigit() and 1 <= int(t) <= 12:
+        return int(t)
+    return _MONTHS.get(t[:3])
+
+
+def _iso_date(el: Optional[ET.Element]) -> Optional[str]:
+    """``<Year>/<Month>/<Day>`` (or a ``<MedlineDate>`` like "2016 Nov-Dec") as ISO
+    "YYYY", "YYYY-MM" or "YYYY-MM-DD"; None without a year."""
+    if el is None:
+        return None
+    year_text = _text(el.find("Year"))
+    medline = _text(el.find("MedlineDate"))
+    if not year_text and medline:
+        m = re.match(r"\s*(1[89]\d\d|20\d\d)(?:\s+([A-Za-z]{3}))?", medline)
+        if not m:
+            return None
+        month = _month(m.group(2) or "")
+        return f"{m.group(1)}-{month:02d}" if month else m.group(1)
+    if not _YEAR_RE.fullmatch(year_text):
+        return None
+    month = _month(_text(el.find("Month")))
+    if not month:
+        return year_text
+    day = _text(el.find("Day"))
+    if day.isdigit() and 1 <= int(day) <= 31:
+        return f"{year_text}-{month:02d}-{int(day):02d}"
+    return f"{year_text}-{month:02d}"
+
+
+def _pub_date(article: ET.Element) -> Optional[str]:
+    """The issue's publication date, or the electronic article date when that is more
+    precise (journals often date the issue by month only, while the paper was published
+    online on a given day: "a JAMA study published November 5th")."""
+    issue = _iso_date(article.find("MedlineCitation/Article/Journal/JournalIssue/PubDate"))
+    electronic = _iso_date(article.find("MedlineCitation/Article/ArticleDate"))
+    if electronic and (not issue or (len(electronic) > len(issue) and electronic.startswith(issue[:4]))):
+        return electronic
+    return issue
+
+
+def _journal_abbrev(article: ET.Element) -> Optional[str]:
+    return (_text(article.find("MedlineCitation/Article/Journal/ISOAbbreviation"))
+            or _text(article.find("MedlineCitation/MedlineJournalInfo/MedlineTA")) or None)
 
 
 def _doi(article: ET.Element) -> Optional[str]:
@@ -237,6 +295,8 @@ def parse_efetch(xml_text: str) -> list[PubMedArticle]:
                 publication_year=_year(art),
                 journal=_text(art.find("MedlineCitation/Article/Journal/Title")) or None,
                 publication_types=types,
+                journal_abbrev=(_journal_abbrev(art) or "")[:120] or None,
+                pub_date=_pub_date(art),
             )
         )
     return out

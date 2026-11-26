@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "run_id": "T50-vitamin_k-rules_only-expected_claims_kept",
+  "run_group": "T50-vitamin-k-rules-only",
+  "date": "2026-11-26",
+  "task": "T50",
+  "pipeline_step": "retrieve_evidence",
+  "split": null,
+  "synthetic": false,
+  "golden_set_ref": null,
+  "models": [],
+  "variant": "new_rules_only_ed5504c",
+  "metric_name": "expected_claims_with_vitamin_k_paper_kept",
+  "value": 1.0,
+  "ci95": null,
+  "n_items": 8,
+  "n_unit": "expected claims (c1, c3-c7, c9, c12)",
+  "cost_usd": 0.0,
+  "report_path": "evals/reports/T50/vitamin_k.md",
+  "notes": "8/8 expected claims keep a vitamin K / VKDB paper (rules only, live PubMed, no model). The JAMA 2026 paper (PMID 42986716) was kept by rules alone for none of c2-c5. Production job 5cc07f48 (vitamin K video, real production rows), used as a search regression; not golden-set data and not a split, so split and golden_set_ref are null. No CI."
+}

@@ -220,6 +220,34 @@ export function studyTypeDisplay(t: string | null | undefined): string {
   return STUDY_TYPE_DISPLAY[(t ?? "unknown").toLowerCase()] ?? STUDY_TYPE_DISPLAY.unknown;
 }
 
+/** Count wording per study type, for summaries built from the same field as the list (T65). */
+const STUDY_TYPE_COUNT: Record<string, { one: string; many: string }> = {
+  systematic_review: { one: "systematic review", many: "systematic reviews" },
+  meta_analysis: { one: "meta-analysis", many: "meta-analyses" },
+  rct: { one: "randomised trial", many: "randomised trials" },
+  guideline: { one: "guideline", many: "guidelines" },
+  clinical_trial: { one: "clinical trial", many: "clinical trials" },
+  observational: { one: "observational study", many: "observational studies" },
+  narrative_review: { one: "narrative review", many: "narrative reviews" },
+  case_report: { one: "case report", many: "case reports" },
+  animal: { one: "animal study", many: "animal studies" },
+  in_vitro: { one: "lab study", many: "lab studies" },
+  opinion: { one: "opinion piece", many: "opinion pieces" },
+  other: { one: "other source", many: "other sources" },
+  unknown: { one: "source without a recorded study type", many: "sources without a recorded study type" },
+};
+
+export function studyTypeCount(t: string | null | undefined, n: number): string {
+  const w = STUDY_TYPE_COUNT[(t ?? "unknown").toLowerCase()] ?? STUDY_TYPE_COUNT.unknown;
+  return `${n} ${n === 1 ? w.one : w.many}`;
+}
+
+/** The key a study type is counted under: unknown and unrecognised values together. */
+export function studyTypeKey(t: string | null | undefined): string {
+  const k = (t ?? "unknown").toLowerCase();
+  return k in STUDY_TYPE_COUNT ? k : "unknown";
+}
+
 // ---------------------------------------------------------------- parsing
 
 const has = <T extends string>(values: readonly T[], v: unknown): v is T =>
@@ -283,6 +311,9 @@ export const REVIEW_REASONS: Record<string, string> = {
   guardrail: "A safety check stopped part of the analysis.",
   // T37: video-level, no claim id. LOW priority.
   nothing_judged: "No claim in this video could be checked against the evidence.",
+  // T64 (f): video-level, no claim id; the label is unchanged.
+  main_claims_unchecked:
+    "The label rests on side claims: at least half of the treatment and prevention claims the speaker makes could not be checked against the evidence.",
   // judge:<flag>
   mixed_video: "The video both spreads and corrects false claims.",
   unclear_stance_contradicted: "A false claim is made, but the speaker's position on it is unclear.",
@@ -344,6 +375,44 @@ export function claimMeaning(stance: Stance, verdict: Verdict): string {
   return row[2];
 }
 
+// ---------------------------------------------------------------- research dashboard (T62)
+
+/** Always shown on the dashboard (queue row T62, §7ah `note`). */
+export const DASHBOARD_NOTE = "These figures describe videos uploaded to this tool, not how common misinformation is online.";
+
+export const STATS_WINDOWS = ["7d", "30d", "90d", "all"] as const;
+export type StatsWindow = (typeof STATS_WINDOWS)[number];
+export const STATS_WINDOW_DISPLAY: Record<StatsWindow, string> = { "7d": "7 days", "30d": "30 days", "90d": "90 days", all: "All time" };
+
+/** How a MISINFO label was reached, for the dashboard split. `unspecified` = not recorded (older results). */
+export const MISINFO_BASIS_DISPLAY: Record<MisinfoBasis | "unspecified", string> = {
+  contradicted: "Evidence contradicts the claim",
+  unproven: "Unproven remedy presented as working",
+  denies_supported: "Denies a claim the evidence supports",
+  unspecified: "Basis not recorded (older results)",
+};
+
+/** Claim categories from the extraction prompt (extract_v4). */
+export const CLAIM_CATEGORY_DISPLAY: Record<string, string> = {
+  treatment_efficacy: "Treatment works",
+  prevention: "Prevention",
+  causation: "Cause of illness",
+  safety: "Safety",
+  diagnosis: "Diagnosis",
+  nutrition: "Nutrition",
+  statistic: "Statistics",
+  evidence_meta: "About the evidence itself",
+  other: "Other",
+};
+
+export function categoryDisplay(c: string): string {
+  const k = c.toLowerCase();
+  if (CLAIM_CATEGORY_DISPLAY[k]) return CLAIM_CATEGORY_DISPLAY[k];
+  const words = k.replace(/[_-]+/g, " ").trim();
+  return words ? words[0].toUpperCase() + words.slice(1) : "Unnamed";
+}
+
+
 // ---------------------------------------------------------------- free text from the API
 
 const ENUM_DISPLAY: [RegExp, string][] = [
@@ -365,3 +434,40 @@ export function displayText(text: string | null | undefined): string {
   if (!text) return "";
   return ENUM_DISPLAY.reduce((s, [re, rep]) => s.replace(re, rep), text);
 }
+
+// ---------------------------------------------------------------- evaluations (T63, admin only)
+
+/** Plain names for the pipeline's graph steps (backend app/evaluation/registry.py PIPELINE_STEPS). */
+export const PIPELINE_STEP_DISPLAY: Record<string, string> = {
+  load_artifacts: "Load video",
+  transcribe_audio: "Transcribe speech",
+  extract_ocr: "Read on-screen text",
+  fuse_modalities: "Combine speech and text",
+  extract_claims: "Find health claims",
+  analyze_stance: "Read the speaker's stance",
+  plan_retrieval: "Plan the search",
+  retrieve_evidence: "Search for evidence",
+  rerank_evidence: "Rank the evidence",
+  verify_claims: "Check claims against evidence",
+  critique_verification: "Second check of the verdicts",
+  judge_classification: "Decide the video's label",
+  validate_result: "Validate the result",
+  route_for_review: "Send to a reviewer",
+  human_review: "Reviewer decision",
+  persist_result: "Save the result",
+};
+
+export function stepDisplay(step: string): string {
+  return PIPELINE_STEP_DISPLAY[step] ?? step.replace(/_/g, " ");
+}
+
+export type EvalSplit = "tune" | "test" | "none";
+
+/** Every tune-split result carries this label (T63): development numbers, not product accuracy. */
+export const EVAL_SPLIT_DISPLAY: Record<EvalSplit, { short: string; label: string }> = {
+  tune: { short: "Tune", label: "Development (tune split): not product accuracy" },
+  test: { short: "Test", label: "Held-out test split" },
+  none: { short: "Not a golden split", label: "Not one golden-set split (see notes)" },
+};
+
+export const SYNTHETIC_DISPLAY = "Synthetic data: shows how it works, not real accuracy";

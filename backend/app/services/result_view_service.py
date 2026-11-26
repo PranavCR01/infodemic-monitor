@@ -29,10 +29,21 @@ from app.api.result_models import (
     JobResultResponse,
     ReviewView,
     SegmentView,
+    StudyTypeCountView,
 )
+from app.core.retrieval.rerank import StudyType, classify_study
+from app.core.retrieval.schemas import EvidenceRecord
+from app.core.speaker_quote import QuoteSegment, best_overlap_quote
+from app.core.user_text import clean_title, source_name, user_text
 from app.core.schemas.pipeline import display_label
 from app.core.schemas.search_trail import SearchTrailView
-from app.db.models.claim import ClaimEvidenceRow, ClaimRow, OcrSegmentRow, TranscriptSegmentRow
+from app.db.models.claim import (
+    ClaimEvidenceRow,
+    ClaimRow,
+    EvidenceRecordRow,
+    OcrSegmentRow,
+    TranscriptSegmentRow,
+)
 from app.db.models.job import Job
 from app.db.models.result import Result
 from app.db.models.review import HumanReview, ReviewAction, ReviewCaseStatus
@@ -41,6 +52,9 @@ from app.services.review_reasons import parse_reasons
 
 ABSTRACT_SNIPPET_CHARS = 300
 SOURCE_KINDS = frozenset({"pubmed", "reference", "library", "journal_doi"})
+# T65 (f): per-claim journal / publication date, stored inside the claim's search_trail
+# JSON (no new column; ``SearchTrailView`` ignores the key, so it is not in search_trail).
+SOURCE_META_KEY = "source_meta"
 
 
 # ------------------------------------------------------------------ segments
@@ -90,11 +104,37 @@ def abstract_snippet(text: Optional[str], limit: int = ABSTRACT_SNIPPET_CHARS) -
     return cut.rstrip(" ,;:.") + "…"
 
 
-def evidence_view(link: ClaimEvidenceRow) -> EvidenceView:
+def study_type_of(ev: EvidenceRecordRow) -> str:
+    """The one study type a source has, for the source list and the counts alike
+    (T65 c): the reranker's stored type; for a row stored without one, the same
+    classifier run on the stored PubMed metadata; ``unknown`` if that finds nothing."""
+    if ev.study_type:
+        return ev.study_type
+    try:
+        rec = EvidenceRecord(
+            evidence_id=ev.evidence_id, source=ev.source if ev.source in SOURCE_KINDS else "pubmed",
+            title=ev.title or "", abstract=ev.abstract or "",
+            publication_type=[str(t) for t in (ev.publication_type or [])])
+        return classify_study(rec).value
+    except ValueError:
+        return StudyType.UNKNOWN.value
+
+
+def _source_meta(meta: Optional[dict], ev: EvidenceRecordRow) -> tuple[Optional[str], Optional[str]]:
+    """Journal and publication date: from the claim's stored source metadata (T65 f,
+    kept with the search trail), else the journal_doi record's journal and the year."""
+    m = (meta or {}).get(ev.evidence_id) or {}
+    journal = m.get("journal") or (ev.publisher if ev.source == "journal_doi" else None)
+    pub_date = m.get("pub_date") or (str(ev.publication_year) if ev.publication_year else None)
+    return journal, pub_date
+
+
+def evidence_view(link: ClaimEvidenceRow, meta: Optional[dict] = None) -> EvidenceView:
     ev = link.evidence
+    journal, pub_date = _source_meta(meta, ev)
     return EvidenceView(
-        evidence_id=ev.evidence_id, title=ev.title, pmid=ev.pmid, url=ev.source_url,
-        study_type=ev.study_type, relation=link.relation,
+        evidence_id=ev.evidence_id, title=clean_title(ev.title), pmid=ev.pmid, url=ev.source_url,
+        study_type=study_type_of(ev), relation=link.relation, journal=journal, pub_date=pub_date,
         source_kind=ev.source if ev.source in SOURCE_KINDS else "other",
         doi=ev.doi, year=ev.publication_year, publisher=ev.publisher,
         publication_type=list(ev.publication_type or []), abstract_snippet=abstract_snippet(ev.abstract),
@@ -103,9 +143,38 @@ def evidence_view(link: ClaimEvidenceRow) -> EvidenceView:
     )
 
 
+def source_meta_of(claim: ClaimRow) -> dict:
+    trail = claim.search_trail if isinstance(claim.search_trail, dict) else {}
+    meta = trail.get(SOURCE_META_KEY)
+    return meta if isinstance(meta, dict) else {}
+
+
 def evidence_views(claim: ClaimRow, *, cited_only: bool) -> list[EvidenceView]:
     links = sorted(claim.evidence_links, key=lambda l: l.rank or 0)
-    return [evidence_view(l) for l in links if not cited_only or l.relation != "CONSIDERED"]
+    meta = source_meta_of(claim)
+    return [evidence_view(l, meta) for l in links if not cited_only or l.relation != "CONSIDERED"]
+
+
+def study_type_counts(evidence: Iterable[EvidenceView]) -> list[StudyTypeCountView]:
+    counts: dict[tuple[str, str], int] = {}
+    for e in evidence:
+        if e.relation in ("SUPPORTS", "CONTRADICTS"):
+            key = (e.study_type or StudyType.UNKNOWN.value, e.relation)
+            counts[key] = counts.get(key, 0) + 1
+    return [StudyTypeCountView(study_type=t, relation=r, count=n)
+            for (t, r), n in sorted(counts.items(), key=lambda kv: (kv[0][1], -kv[1], kv[0][0]))]
+
+
+def source_names(claim: ClaimRow) -> dict[str, Optional[str]]:
+    """Every source shown to the verifier for this claim, by evidence id → its name in
+    user-facing text (short title, else PMID; T65 a)."""
+    return {l.evidence.evidence_id: source_name(l.evidence.title, l.evidence.pmid) for l in claim.evidence_links}
+
+
+def speaker_quote(c: ClaimRow, index: dict[str, SegmentView]):
+    speech = [QuoteSegment(s.segment_id, s.start_seconds, s.end_seconds, s.text)
+              for s in index.values() if s.source == "speech"]
+    return best_overlap_quote(c.text, speech, c.start_seconds, c.end_seconds, c.source_segment_ids or [])
 
 
 # ------------------------------------------------------------------ severity
@@ -155,14 +224,18 @@ def _search_trail(raw: Optional[dict]) -> Optional[SearchTrailView]:
 
 def claim_view(c: ClaimRow, index: dict[str, SegmentView], severity: Optional[dict] = None) -> ClaimView:
     stance_ids = list(c.stance.segment_ids) if c.stance else []
+    names = source_names(c)
+    evidence = evidence_views(c, cited_only=True)
+    quote = speaker_quote(c, index)
     return ClaimView(
         claim_id=c.claim_id, text=c.text, category=c.category,
         start_seconds=c.start_seconds, end_seconds=c.end_seconds, label=c.label, deciding=c.deciding,
         stance=c.stance.stance if c.stance else None,
         verdict=c.verification.verdict if c.verification else None,
-        verdict_explanation=c.verification.explanation if c.verification else "",
-        limitations=list(c.verification.limitations) if c.verification else [],
-        evidence=evidence_views(c, cited_only=True),
+        verdict_explanation=user_text(c.verification.explanation, names) if c.verification else "",
+        limitations=([t for t in (user_text(x, names) for x in c.verification.limitations) if t]
+                     if c.verification else []),
+        evidence=evidence,
         id=c.id, claim_kind=c.claim_kind, requires_verification=c.requires_verification,
         source_segment_ids=list(c.source_segment_ids or []),
         modality=modality(c.source_segment_ids or [], index),
@@ -174,6 +247,9 @@ def claim_view(c: ClaimRow, index: dict[str, SegmentView], severity: Optional[di
                            requires_review=c.critic.requires_review) if c.critic else None),
         severity=claim_severity_view(c.claim_id, severity),
         search_trail=_search_trail(c.search_trail),
+        speaker_quote=quote.text if quote else None,
+        speaker_quote_segment_ids=list(quote.segment_ids) if quote else [],
+        study_type_counts=study_type_counts(evidence),
     )
 
 
@@ -228,6 +304,11 @@ def review_view(case: Optional[HumanReview]) -> Optional[ReviewView]:
 # ------------------------------------------------------------------ whole result
 
 
+def job_source_names(db: Session, job_id: str) -> dict[str, Optional[str]]:
+    rows = db.query(EvidenceRecordRow).filter(EvidenceRecordRow.job_id == job_id).all()
+    return {r.evidence_id: source_name(r.title, r.pmid) for r in rows}
+
+
 def job_result(db: Session, job: Job, result: Result) -> JobResultResponse:
     video = db.get(Video, job.video_id) if job.video_id else None
     case = review_case(db, job.id)
@@ -238,7 +319,7 @@ def job_result(db: Session, job: Job, result: Result) -> JobResultResponse:
         filename=video.filename if video else None,
         label=result.label,
         confidence=result.confidence,
-        explanation=result.explanation,
+        explanation=user_text(result.explanation, job_source_names(db, job.id)),
         evidence_snippets=list(result.evidence_snippets or []),
         citations=result.citations,
         provider=result.provider,

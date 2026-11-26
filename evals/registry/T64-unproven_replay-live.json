@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "run_group": "T64-unproven-replay",
+  "date": "2026-11-26",
+  "task": "T64",
+  "pipeline_step": "verify_claims",
+  "split": "tune",
+  "synthetic": false,
+  "golden_set_ref": "in-repo research/claim-level/dataset @ 2de5e8f (last commit touching it)",
+  "models": [],
+  "metric_name": "unproven_videos_keeping_misinfo",
+  "ci95": null,
+  "n_items": 5,
+  "n_unit": "tune videos labelled MISINFO (unproven) in gold",
+  "cost_usd": 0.0,
+  "report_path": "evals/reports/T64/report.md",
+  "run_id": "T64-unproven_replay-live",
+  "variant": "live",
+  "value": 0.8,
+  "notes": "Tune split: development numbers, not product accuracy. 4/5 tune MISINFO (unproven) videos keep the label (v22, v36, v141, v143; v120 CANNOT_RECOGNIZE), the same as before T64 (langgraph-build a67f8ca, same evidence). No tune video changes label (0/55). Evidence: fresh rules-only live PubMed recording 2026-11-26T21:15:05Z, code 23f6f2ffb158, re-ranked by the code under test; no model. With rule (b) as literally written in the queue row it would be 3/5 (v22 lost); see the report. No CI."
+}

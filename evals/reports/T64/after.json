@@ -1,0 +1,1292 @@
+[
+ {
+  "source": "frozen",
+  "code_revision": "af6e54d5d27c19a5783246066f09fb61a1a68b2a",
+  "t64": true,
+  "videos": [
+   {
+    "video_id": "v01",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v05",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v08",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v10",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v11",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "mixed_evidence:c1",
+     "mixed_evidence:c2",
+     "mixed_evidence:c3"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v16",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v21",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v22",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [
+     "main_claims_unchecked"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v22:c2",
+      "text": "Eggs are high in antioxidants, which is really good to prevent something called macular degeneration as well as cataracts",
+      "recorded": true,
+      "kept": 0,
+      "on_topic": 0,
+      "kept_types": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "limitation": "search_found_nothing_on_topic"
+     }
+    ],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v23",
+    "label": "DEBUNKING",
+    "basis": "",
+    "reasons": [
+     "possible_debunk:c1"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v24",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [
+     "mixed_evidence:c1",
+     "mixed_evidence:c3",
+     "possible_debunk:c1"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v27",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v36",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v36:c6",
+      "text": "Irish Sea Moss: Cures Thyroid Issues",
+      "recorded": false,
+      "kept": 0,
+      "on_topic": 0,
+      "kept_types": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "limitation": "search_found_nothing_on_topic"
+     },
+     {
+      "claim": "v36:c7",
+      "text": "Burdock Root: Rids Kidney & Gallbladder Stones",
+      "recorded": false,
+      "kept": 0,
+      "on_topic": 0,
+      "kept_types": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "limitation": "search_found_nothing_on_topic"
+     },
+     {
+      "claim": "v36:c10",
+      "text": "Irish Sea Moss: Building Muscles Mass",
+      "recorded": false,
+      "kept": 0,
+      "on_topic": 0,
+      "kept_types": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "limitation": "search_found_nothing_on_topic"
+     },
+     {
+      "claim": "v36:c14",
+      "text": "Burdock Root: Assists with PMS Symptoms",
+      "recorded": false,
+      "kept": 0,
+      "on_topic": 0,
+      "kept_types": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "limitation": "search_found_nothing_on_topic"
+     }
+    ],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v39",
+    "label": "DEBUNKING",
+    "basis": "",
+    "reasons": [
+     "mixed_evidence:c3",
+     "possible_debunk:c2",
+     "possible_debunk:c3",
+     "possible_debunk:c4"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v44",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v45",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v47",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v51",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v58",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v65",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "conflicting_evidence:c2",
+     "mixed_evidence:c2",
+     "possible_debunk:c1",
+     "possible_debunk:c2",
+     "weak_evidence:c1",
+     "weak_evidence:c2"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v68",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [
+     "possible_debunk:c1"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v69",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v70",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [
+     "mixed_evidence:c4",
+     "possible_debunk:c3"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v71",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [
+     "mixed_evidence:c1"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v78",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v79",
+    "label": "DEBUNKING",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v86",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [
+     "denies_supported:c3"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v86:c1",
+      "text": "Of course we can reverse HIV",
+      "recorded": true,
+      "kept": 0,
+      "on_topic": 0,
+      "kept_types": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "limitation": "search_found_nothing_on_topic"
+     }
+    ],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v87",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v88",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v92",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v94",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v95",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v96",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v100",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v109",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v110",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v111",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v114",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [
+     "mixed_evidence:c2"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v119",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v120",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v120:c1",
+      "text": "los beneficios son muchísimo primero elimina los metales pesados del cuerpo",
+      "recorded": true,
+      "kept": 0,
+      "on_topic": 0,
+      "kept_types": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "limitation": "search_found_nothing_on_topic"
+     }
+    ],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v121",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v122",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [
+     "mixed_evidence:c9"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v123",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v131",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v135",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v141",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [
+     "main_claims_unchecked"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v141:c1",
+      "text": "Ce gamin de 15 ans a inventé un remède contre le cancer",
+      "recorded": true,
+      "kept": 10,
+      "on_topic": 0,
+      "kept_types": [
+       "narrative_review"
+      ],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "limitation": "search_found_nothing_on_topic"
+     },
+     {
+      "claim": "v141:c2",
+      "text": "a fabriqué un savon qui prévient et traite le cancer de la peau",
+      "recorded": true,
+      "kept": 0,
+      "on_topic": 0,
+      "kept_types": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "limitation": "search_found_nothing_on_topic"
+     }
+    ],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v143",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v143:c1",
+      "text": "il vient d'inventer un savon qui traite le cancer de la peau",
+      "recorded": true,
+      "kept": 0,
+      "on_topic": 0,
+      "kept_types": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "limitation": "search_found_nothing_on_topic"
+     },
+     {
+      "claim": "v143:c2",
+      "text": "Il a conçu un savon qui protège du cancer de la peau, avec de nombreuses propriétés qui persistent même après rinçage",
+      "recorded": true,
+      "kept": 0,
+      "on_topic": 0,
+      "kept_types": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "limitation": "search_found_nothing_on_topic"
+     }
+    ],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v144",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v146",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v150",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v152",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v160",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v167",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v176",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v177",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v180",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "mixed_evidence:c2"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   }
+  ]
+ },
+ {
+  "source": "live",
+  "code_revision": "af6e54d5d27c19a5783246066f09fb61a1a68b2a",
+  "t64": true,
+  "videos": [
+   {
+    "video_id": "v01",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v05",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v08",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v10",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v11",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "mixed_evidence:c1",
+     "mixed_evidence:c2",
+     "mixed_evidence:c3"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v16",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v21",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v22",
+    "label": "MISINFO",
+    "basis": "unproven",
+    "reasons": [
+     "unproven_claim:c2",
+     "weak_evidence:c2"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v22:c2",
+      "text": "Eggs are high in antioxidants, which is really good to prevent something called macular degeneration as well as cataracts",
+      "recorded": true,
+      "kept": 10,
+      "on_topic": 10,
+      "kept_types": [
+       "clinical_trial",
+       "narrative_review",
+       "observational",
+       "other"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "limitation": ""
+     }
+    ],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v23",
+    "label": "DEBUNKING",
+    "basis": "",
+    "reasons": [
+     "possible_debunk:c1"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v24",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [
+     "mixed_evidence:c1",
+     "mixed_evidence:c3",
+     "possible_debunk:c1"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v27",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v36",
+    "label": "MISINFO",
+    "basis": "unproven",
+    "reasons": [
+     "unproven_claim:c10",
+     "unproven_claim:c14",
+     "weak_evidence:c10",
+     "weak_evidence:c14"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v36:c6",
+      "text": "Irish Sea Moss: Cures Thyroid Issues",
+      "recorded": true,
+      "kept": 2,
+      "on_topic": 2,
+      "kept_types": [
+       "other"
+      ],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "limitation": "search_too_thin"
+     },
+     {
+      "claim": "v36:c7",
+      "text": "Burdock Root: Rids Kidney & Gallbladder Stones",
+      "recorded": true,
+      "kept": 0,
+      "on_topic": 0,
+      "kept_types": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "limitation": "search_found_nothing_on_topic"
+     },
+     {
+      "claim": "v36:c10",
+      "text": "Irish Sea Moss: Building Muscles Mass",
+      "recorded": true,
+      "kept": 10,
+      "on_topic": 10,
+      "kept_types": [
+       "narrative_review",
+       "other"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "limitation": ""
+     },
+     {
+      "claim": "v36:c14",
+      "text": "Burdock Root: Assists with PMS Symptoms",
+      "recorded": true,
+      "kept": 10,
+      "on_topic": 10,
+      "kept_types": [
+       "narrative_review",
+       "other"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "limitation": ""
+     }
+    ],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v39",
+    "label": "DEBUNKING",
+    "basis": "",
+    "reasons": [
+     "mixed_evidence:c3",
+     "possible_debunk:c2",
+     "possible_debunk:c3",
+     "possible_debunk:c4"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v44",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v45",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v47",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v51",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v58",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v65",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "conflicting_evidence:c2",
+     "mixed_evidence:c2",
+     "possible_debunk:c1",
+     "possible_debunk:c2",
+     "weak_evidence:c1",
+     "weak_evidence:c2"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v68",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [
+     "possible_debunk:c1"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v69",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v70",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [
+     "mixed_evidence:c4",
+     "possible_debunk:c3"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v71",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [
+     "mixed_evidence:c1"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v78",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v79",
+    "label": "DEBUNKING",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v86",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [
+     "denies_supported:c3"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v86:c1",
+      "text": "Of course we can reverse HIV",
+      "recorded": true,
+      "kept": 0,
+      "on_topic": 0,
+      "kept_types": [],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "limitation": "search_found_nothing_on_topic"
+     }
+    ],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v87",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v88",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v92",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v94",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v95",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v96",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v100",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v109",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v110",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v111",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v114",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [
+     "mixed_evidence:c2"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v119",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v120",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v120:c1",
+      "text": "los beneficios son muchísimo primero elimina los metales pesados del cuerpo",
+      "recorded": true,
+      "kept": 10,
+      "on_topic": 0,
+      "kept_types": [
+       "narrative_review",
+       "opinion",
+       "other"
+      ],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "limitation": "search_found_nothing_on_topic"
+     }
+    ],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v121",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v122",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [
+     "mixed_evidence:c9"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v123",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v131",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v135",
+    "label": "NO_MISINFO",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v141",
+    "label": "MISINFO",
+    "basis": "unproven",
+    "reasons": [
+     "unproven_claim:c2",
+     "weak_evidence:c2"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v141:c1",
+      "text": "Ce gamin de 15 ans a inventé un remède contre le cancer",
+      "recorded": true,
+      "kept": 10,
+      "on_topic": 0,
+      "kept_types": [
+       "case_report",
+       "narrative_review",
+       "other"
+      ],
+      "after_guard": "INSUFFICIENT_EVIDENCE",
+      "limitation": "search_found_nothing_on_topic"
+     },
+     {
+      "claim": "v141:c2",
+      "text": "a fabriqué un savon qui prévient et traite le cancer de la peau",
+      "recorded": true,
+      "kept": 6,
+      "on_topic": 6,
+      "kept_types": [
+       "narrative_review",
+       "observational",
+       "opinion",
+       "other"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "limitation": ""
+     }
+    ],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v143",
+    "label": "MISINFO",
+    "basis": "unproven",
+    "reasons": [
+     "unproven_claim:c1",
+     "unproven_claim:c2",
+     "weak_evidence:c1",
+     "weak_evidence:c2"
+    ],
+    "unsupported_claims": [
+     {
+      "claim": "v143:c1",
+      "text": "il vient d'inventer un savon qui traite le cancer de la peau",
+      "recorded": true,
+      "kept": 6,
+      "on_topic": 6,
+      "kept_types": [
+       "narrative_review",
+       "observational",
+       "opinion",
+       "other"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "limitation": ""
+     },
+     {
+      "claim": "v143:c2",
+      "text": "Il a conçu un savon qui protège du cancer de la peau, avec de nombreuses propriétés qui persistent même après rinçage",
+      "recorded": true,
+      "kept": 6,
+      "on_topic": 6,
+      "kept_types": [
+       "narrative_review",
+       "observational",
+       "opinion",
+       "other"
+      ],
+      "after_guard": "UNSUPPORTED",
+      "limitation": ""
+     }
+    ],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v144",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v146",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v150",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v152",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v160",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v167",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "nothing_judged"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v176",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v177",
+    "label": "MISINFO",
+    "basis": "contradicted",
+    "reasons": [],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   },
+   {
+    "video_id": "v180",
+    "label": "CANNOT_RECOGNIZE",
+    "basis": "",
+    "reasons": [
+     "mixed_evidence:c2"
+    ],
+    "unsupported_claims": [],
+    "with_sibling_limitations": []
+   }
+  ]
+ }
+]

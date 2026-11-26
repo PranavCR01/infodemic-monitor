@@ -47,6 +47,10 @@ class EvidenceRecord(_Record):
     publisher: Optional[str] = None
     retrieved_at: Optional[str] = None
     snapshot_sha256: Optional[str] = None
+    # T65 (f): PubMed journal abbreviation (ISO / MedlineTA, e.g. "JAMA") and
+    # publication date (ISO "YYYY", "YYYY-MM" or "YYYY-MM-DD"). Optional and additive.
+    journal: Optional[str] = None
+    pub_date: Optional[str] = None
 
 
 ClaimKind = Literal["research_question", "fact_of_record"]

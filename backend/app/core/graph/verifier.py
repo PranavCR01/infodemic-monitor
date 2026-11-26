@@ -40,6 +40,14 @@ How it fits:
   ``unproven_guard.apply_unproven_guard``: UNSUPPORTED stands only if the claim's
   reranked evidence holds a record on topic for the claim's intervention; an empty or
   off-topic search gives INSUFFICIENT_EVIDENCE with ``search_found_nothing_on_topic``.
+- **Unproven-label fixes (T64).** The guard also turns UNSUPPORTED into
+  INSUFFICIENT_EVIDENCE when the claim names no condition or outcome
+  (``outcome_unspecified``: the model's flag, enforced in code too) or the search kept
+  fewer than 3 on-topic records and no on-topic systematic review / RCT / guideline
+  (``search_too_thin``). After every pass, ``unproven_guard.apply_sibling_rule`` runs
+  over all results: an UNSUPPORTED claim whose sibling about the same intervention (a
+  prevention / efficacy claim) is SUPPORTED becomes INSUFFICIENT_EVIDENCE with
+  ``contradicted_by_sibling_claim``.
 - **Loop-aware.** Only ``routing.claims_to_verify`` claims are (re)judged; others keep
   their verdict. A REVISE_VERIFICATION re-run counts against the revision budget and
   shows the critic's notes; a RETRIEVE_MORE re-run judges the new evidence.
@@ -66,9 +74,15 @@ from app.core.graph.state import (
     VerificationResult,
 )
 from app.core.graph.stance import PromptNotFoundError, load_prompt  # shared prompt loader
-from app.core.graph.unproven_guard import apply_unproven_guard
+from app.core.graph.unproven_guard import (
+    OUTCOME_UNSPECIFIED_EXPLANATION,
+    OUTCOME_UNSPECIFIED_LIMITATION,
+    apply_sibling_rule,
+    apply_unproven_guard,
+)
 from app.core.guardrails.injection import GUARDRAIL_ERROR_PREFIX
 from app.core.guardrails.outputs import OutputViolation, VerificationOutput, _no_urls, parse_output
+from app.core.user_text import evidence_ids_in, reword_reviewer, render_evidence_ids, source_name
 from app.core.guardrails.untrusted import (
     DEFAULT_MAX_BLOCK_CHARS,
     GuardedPrompt,
@@ -112,6 +126,8 @@ class VerifierToolOutput(VerificationOutput):
     """
 
     raw_confidence: Optional[float] = Field(default=None, ge=0.0, le=1.0)
+    # T64 (c): the claim names no condition or outcome, so it can't be UNSUPPORTED.
+    outcome_unspecified: bool = False
 
     @field_validator("limitations")
     @classmethod
@@ -158,6 +174,11 @@ VERIFY_TOOL: dict = {
                 "type": "number", "minimum": 0, "maximum": 1,
                 "description": "Confidence in the verdict, 0 to 1 (raw; calibrated later).",
             },
+            "outcome_unspecified": {
+                "type": "boolean",
+                "description": "True if the claim names no specific condition or outcome "
+                               "('a potentially devastating condition', 'many diseases').",
+            },
         },
         "required": [
             "verdict", "supporting_evidence_ids", "contradicting_evidence_ids",
@@ -199,6 +220,10 @@ def evidence_index(evidence: Sequence[EvidenceRecord]) -> str:
             parts.append("publication type: " + _meta(", ".join(e.publication_type)))
         if e.publication_year:
             parts.append(f"year: {int(e.publication_year)}")
+        if e.journal:
+            parts.append(f"journal: {_meta(e.journal)}")
+        if e.pub_date:
+            parts.append(f"published: {_meta(e.pub_date)}")
         if e.publisher:
             parts.append(f"publisher: {_meta(e.publisher)}")
         if e.retrieved_at:
@@ -215,7 +240,10 @@ def _instructions(
 ) -> str:
     unsupported = (
         "UNSUPPORTED is allowed for this claim (a treatment or prevention claim): use it if no "
-        "paper tests the claim for or against, and cite nothing."
+        "paper tests the claim for or against, and cite nothing. If the claim names no specific "
+        "condition or outcome (for example 'a potentially devastating condition' or 'many "
+        "diseases'), set outcome_unspecified to true: such a claim cannot be UNSUPPORTED, so "
+        "the verdict is INSUFFICIENT_EVIDENCE."
         if allow_unsupported else
         "UNSUPPORTED is NOT allowed for this claim; if nothing tests it, the verdict is "
         "INSUFFICIENT_EVIDENCE."
@@ -225,6 +253,10 @@ def _instructions(
         f"Claim category: {_meta(claim.claim_category)}. {unsupported}\n\n"
         f"EVIDENCE INDEX (metadata from the retrieval tools; cite only these IDs):\n{evidence_index(evidence)}\n\n"
         "Each paper's title and abstract are in fenced blocks with the same id.\n"
+        "Cite papers by ID only in the two evidence-ID lists. In the explanation and limitations, "
+        "never write an evidence ID (ev_...): name a paper by its short title or its PMID. "
+        "When the claim names a journal or a publication date, check it against the journal and "
+        "published date in the index.\n"
     )
     if repair_note:
         text += (
@@ -251,7 +283,11 @@ def build_prompt(
     )
     blocks = list(prompt.blocks)
     if critic and critic.decision == CriticDecision.REVISE_VERIFICATION and critic.issues:
-        notes = "REVIEWER NOTES on the previous verdict:\n" + "\n".join(f"- {i}" for i in critic.issues)
+        notes = (
+            "NOTES FROM A SECOND AUTOMATED CHECK on the previous verdict (a model, not a person; if "
+            "you refer to them, call them 'a second automated check', never 'the reviewer'):\n"
+            + "\n".join(f"- {i}" for i in critic.issues)
+        )
         blocks.append(fence(notes, kind="model_output", item_id=f"{claim.claim_id}:critic", max_chars=max_chars))
     return prompt.model_copy(update={"system": guarded_system_prompt(system_prompt), "blocks": tuple(blocks)})
 
@@ -325,6 +361,26 @@ def parse_verification(raw: Any, allowed_ids: Iterable[str]) -> VerifierToolOutp
         raise InvalidVerification("output_rejected", exc.reason) from None
     check_citations(out, allowed_ids)  # type: ignore[arg-type]
     return out  # type: ignore[return-value]
+
+
+# ------------------------------------------------------------------ user-facing text (T65)
+
+
+def source_names(evidence: Sequence[EvidenceRecord]) -> dict[str, Optional[str]]:
+    """Evidence id → how user-facing text names the paper (short title, else PMID)."""
+    return {e.evidence_id: source_name(e.title, e.pmid) for e in evidence}
+
+
+def ids_in_text(out: VerifierToolOutput) -> list[str]:
+    """Evidence ids written into the explanation or limitations (T65 a): internal ids
+    must not reach the reader."""
+    return evidence_ids_in(" ".join([out.explanation, *out.limitations]))
+
+
+def clean_text(text: str, names: dict[str, Optional[str]]) -> str:
+    """Last line of the output check: ids rendered as source names, the critic called
+    "a second automated check" rather than "the reviewer"."""
+    return reword_reviewer(render_evidence_ids(text, names))
 
 
 # ------------------------------------------------------------------ node
@@ -416,12 +472,38 @@ def verify_claim(
                 f"verdict not determined: the verifier's answer was rejected ({exc.kind})",
                 model=model, version=recorded_version,
             ), errors
+        leaked = ids_in_text(out)
+        if leaked and attempt < max_repairs:
+            # T65 (a): one repair; if the answer still carries ids, they are rendered below.
+            repair_note = (
+                f"the explanation or limitations contain internal evidence IDs ({', '.join(leaked[:5])}); "
+                "keep IDs in the evidence-ID lists only and name papers by short title or PMID"
+            )
+            errors.append(NodeError(
+                node=r.VERIFY_CLAIMS, message=f"repair requested: evidence_id_in_text: {', '.join(leaked[:5])}",
+                claim_id=claim.claim_id,
+            ))
+            continue
+        names = source_names(evidence)
+        out = out.model_copy(update={
+            "explanation": clean_text(out.explanation, names),
+            "limitations": [t for t in (clean_text(x, names) for x in out.limitations) if t],
+        })
         if out.verdict == Verdict.UNSUPPORTED and not allow_unsupported:
             # Harm, mechanism and other claims with no evidence stay insufficient (§7).
             return VerificationResult(
                 claim_id=claim.claim_id, verdict=Verdict.INSUFFICIENT_EVIDENCE,
                 explanation=out.explanation[:MAX_EXPLANATION_CHARS],
                 limitations=[*(s[:MAX_LIMITATION_CHARS] for s in out.limitations), NOT_ELIGIBLE_LIMITATION],
+                raw_confidence=out.raw_confidence, model=model,
+                prompt_version=recorded_version or prompt_version,
+            ), errors
+        if out.verdict == Verdict.UNSUPPORTED and out.outcome_unspecified:
+            # T64 (c): the model says the claim names no outcome; no study can test it.
+            return VerificationResult(
+                claim_id=claim.claim_id, verdict=Verdict.INSUFFICIENT_EVIDENCE,
+                explanation=OUTCOME_UNSPECIFIED_EXPLANATION,
+                limitations=[*(s[:MAX_LIMITATION_CHARS] for s in out.limitations), OUTCOME_UNSPECIFIED_LIMITATION],
                 raw_confidence=out.raw_confidence, model=model,
                 prompt_version=recorded_version or prompt_version,
             ), errors
@@ -487,6 +569,8 @@ def make_verify_claims(
             result = apply_unproven_guard(claims[cid], evidence, result)
             results[cid] = result
             errors += errs
+        # T64 (b): a SUPPORTED sibling about the same intervention outranks UNSUPPORTED.
+        results = apply_sibling_rule(list(claims.values()), results)
         update: dict = {"verification_results": results, "verification_revisions": revisions}
         if errors:
             update["errors"] = errors

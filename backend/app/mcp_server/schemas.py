@@ -80,6 +80,10 @@ from the retrieval tool's response, never from a model."""
     relevance_score: Optional[float] = None
     study_type: Optional[str] = None
     quality_score: Optional[float] = None
+    # T65 (additive, optional): PubMed journal abbreviation (ISO / MedlineTA) and
+    # publication date, ISO "YYYY", "YYYY-MM" or "YYYY-MM-DD".
+    journal: Optional[str] = None
+    pub_date: Optional[str] = None
 
     @model_validator(mode="before")
     @classmethod

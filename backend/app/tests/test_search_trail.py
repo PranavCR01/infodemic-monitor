@@ -293,7 +293,9 @@ def test_trail_is_stored_with_the_claim_result(persisted):
     rows = persisted["db"].query(ClaimRow).filter_by(job_id="job-1").all()
     assert rows
     for row in rows:
-        assert row.search_trail == build_search_trail(persisted["state"], row.claim_id)
+        # T65 (f): the stored trail also carries the sources' journal / date ("source_meta").
+        stored = {k: v for k, v in row.search_trail.items() if k != "source_meta"}
+        assert stored == build_search_trail(persisted["state"], row.claim_id)
         trail = SearchTrailView.model_validate(row.search_trail)
         assert trail.recorded == "graph"
         assert [q.query for q in trail.pubmed_queries] == persisted["state"]["retrieval_queries"][row.claim_id]

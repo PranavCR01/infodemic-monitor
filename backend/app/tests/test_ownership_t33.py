@@ -236,6 +236,11 @@ STORAGE_KEY = "storage_key"  # register: the key must be under the caller's pref
 # T55: the video's owner or an admin; a reviewer who can see the video gets 403, anyone
 # who can't gets 404 (tested in test_reanalysis_t55).
 OWNER_OR_ADMIN = "owner_or_admin"
+# T63: admin only, no per-user data (401/403 tested in test_eval_registry_t63).
+ADMIN_ONLY = "admin_only"
+# T62: any signed-in user; totals across all users, no per-object data (tested in
+# test_stats_t62).
+AGGREGATE = "aggregate"
 
 DECISION = {"action": "APPROVE", "reason": "checked the papers", "reason_code": "SYSTEM_CORRECT"}
 
@@ -246,9 +251,11 @@ ROUTES: dict[tuple[str, str], object] = {
     ("POST", "/v1/videos/uploads"): CREATE,
     ("POST", "/v1/videos"): STORAGE_KEY,
     ("POST", "/v1/videos/{video_id}/reanalyse"): OWNER_OR_ADMIN,
+    ("GET", "/v1/stats"): AGGREGATE,
     ("GET", "/jobs"): LIST,
     ("GET", "/v1/jobs"): LIST,
     ("GET", "/v1/reviews"): REVIEWER_LIST,
+    ("GET", "/v1/admin/evals"): ADMIN_ONLY,
     ("POST", "/jobs/create"): ObjectRoute("POST", lambda t: "/jobs/create", body=lambda t: {"video_id": f"vid-{t}"}),
     ("GET", "/jobs/{job_id}"): ObjectRoute("GET", lambda t: f"/jobs/job-{t}"),
     ("GET", "/jobs/{job_id}/result"): ObjectRoute("GET", lambda t: f"/jobs/job-{t}/result"),

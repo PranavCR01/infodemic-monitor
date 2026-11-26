@@ -33,6 +33,14 @@ Task: <TASK>   Issue: <ISSUE>   Design sections: §<SECTIONS>
 - Don't change the live pipeline's behaviour unless the task is the integration
   task, and then only behind a flag that defaults to off.
 - Never commit secrets, videos, zips or large binaries.
+- Every evaluation task (any task that measures a pipeline step, a model, a prompt or a
+  search, paid or not) adds its own record(s) to evals/registry/<run_id>.json as part of
+  its deliverable: one file per metric per run, fields and rules in
+  backend/app/evaluation/registry.py and evals/eval_record.schema.json. Copy numbers
+  from your report; a field the report lacks is null with the reason in notes; mark
+  self-made data synthetic: true; split is tune or test (null only when the data is not
+  one golden split). Run python -m app.evaluation.registry validate and the
+  registry test before opening the PR.
 
 ## Finish
 1. Update context/MULTI_AGENT.md: add a dated check-in log line for this task and any

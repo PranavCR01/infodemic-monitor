@@ -1,0 +1,143 @@
+{
+  "B": 10000,
+  "seed": 61,
+  "method": "paired percentile bootstrap",
+  "comparisons": {
+    "run_stance:analyze_stance": {
+      "a": "anthropic/claude-sonnet-5-5@stance_v1",
+      "b": "anthropic/claude-sonnet-5-5@stance_v2",
+      "golden": "git:92a731e@92a731e7f954:research/claim-level/dataset",
+      "pipeline_options": {
+        "version": "pipeline_v1",
+        "extraction": {
+          "use_ocr": true
+        },
+        "retrieval": {
+          "search_assistant": false,
+          "translate_claims": false,
+          "find_study": false,
+          "crossref": false
+        }
+      },
+      "n_items": 187,
+      "unit": "claim",
+      "gold_support": {
+        "ENDORSES": 167,
+        "REFUTES": 16,
+        "QUOTES": 3,
+        "NEUTRAL": 0,
+        "UNCLEAR": 1
+      },
+      "failed_items": {
+        "anthropic/claude-sonnet-5-5@stance_v1": 0,
+        "anthropic/claude-sonnet-5-5@stance_v2": 0
+      },
+      "metrics": {
+        "macro_f1": {
+          "anthropic/claude-sonnet-5-5@stance_v1": 0.5462686567164179,
+          "anthropic/claude-sonnet-5-5@stance_v2": 0.4561331881691163,
+          "diff_b_minus_a": -0.09013546854730159,
+          "ci95": {
+            "lo": -0.2704941432045643,
+            "hi": 0.027499880970605448,
+            "n_defined": 10000,
+            "includes_zero": true
+          }
+        },
+        "recall_ENDORSES": {
+          "anthropic/claude-sonnet-5-5@stance_v1": 0.9880239520958084,
+          "anthropic/claude-sonnet-5-5@stance_v2": 0.9760479041916168,
+          "diff_b_minus_a": -0.0119760479041916,
+          "ci95": {
+            "lo": -0.036363636363636376,
+            "hi": 0.011764705882352903,
+            "n_defined": 10000,
+            "includes_zero": true
+          }
+        },
+        "recall_REFUTES": {
+          "anthropic/claude-sonnet-5-5@stance_v1": 0.8125,
+          "anthropic/claude-sonnet-5-5@stance_v2": 0.875,
+          "diff_b_minus_a": 0.0625,
+          "ci95": {
+            "lo": -0.15384615384615385,
+            "hi": 0.2857142857142857,
+            "n_defined": 10000,
+            "includes_zero": true
+          }
+        },
+        "recall_QUOTES": {
+          "anthropic/claude-sonnet-5-5@stance_v1": 0.3333333333333333,
+          "anthropic/claude-sonnet-5-5@stance_v2": 0.0,
+          "diff_b_minus_a": -0.3333333333333333,
+          "ci95": {
+            "lo": -1.0,
+            "hi": 0.0,
+            "n_defined": 9517,
+            "includes_zero": true
+          }
+        },
+        "recall_NEUTRAL": {
+          "anthropic/claude-sonnet-5-5@stance_v1": null,
+          "anthropic/claude-sonnet-5-5@stance_v2": null,
+          "diff_b_minus_a": null,
+          "ci95": null
+        },
+        "recall_UNCLEAR": {
+          "anthropic/claude-sonnet-5-5@stance_v1": 0.0,
+          "anthropic/claude-sonnet-5-5@stance_v2": 0.0,
+          "diff_b_minus_a": 0.0,
+          "ci95": {
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_defined": 6324,
+            "includes_zero": true
+          }
+        }
+      },
+      "confusion": {
+        "anthropic/claude-sonnet-5-5@stance_v1": {
+          "ENDORSES": {
+            "ENDORSES": 165,
+            "UNCLEAR": 2
+          },
+          "REFUTES": {
+            "REFUTES": 13,
+            "QUOTES": 2,
+            "ENDORSES": 1
+          },
+          "QUOTES": {
+            "ENDORSES": 2,
+            "QUOTES": 1
+          },
+          "UNCLEAR": {
+            "REFUTES": 1
+          }
+        },
+        "anthropic/claude-sonnet-5-5@stance_v2": {
+          "ENDORSES": {
+            "ENDORSES": 163,
+            "REFUTES": 2,
+            "UNCLEAR": 1,
+            "QUOTES": 1
+          },
+          "REFUTES": {
+            "REFUTES": 14,
+            "UNCLEAR": 1,
+            "ENDORSES": 1
+          },
+          "QUOTES": {
+            "ENDORSES": 3
+          },
+          "UNCLEAR": {
+            "REFUTES": 1
+          }
+        }
+      },
+      "discordant": {
+        "only_anthropic/claude-sonnet-5-5@stance_v1_correct": 5,
+        "only_anthropic/claude-sonnet-5-5@stance_v2_correct": 3
+      }
+    }
+  }
+}
