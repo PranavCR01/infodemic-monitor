@@ -1,0 +1,4314 @@
+{
+ "_provenance": "COPIED FROM PRODUCTION (Supabase infodemic-prod) by the coordinating session on 2026-11-26: re-analysis job d2bf4179 of the vitamin K video, main 91a7a13. Public video content only: no user ids, emails or storage paths.",
+ "job_id_prefix": "d2bf4179",
+ "previous_job_prefix": "5cc07f48",
+ "result": {
+  "label": "MISINFO",
+  "misinfo_basis": "unproven",
+  "decision_rule": "unproven",
+  "deciding_claim_ids": [
+   "c12"
+  ],
+  "explanation": "The video is labelled MISINFO (unproven) because the speaker endorses the claim that vitamin K is a vitamin that helps prevent a potentially devastating condition, presenting it as working. No evidence supports this claim. The verifier's notes say the only paper found was a case report of high-dose vitamin K used to treat a bleeding disorder caused by a rat poison, and it did not test prevention. This claim decided the label. Needs review: no evidence supports claim 12, which the speaker presents as working.",
+  "pipeline_version": "graph_v1+91a7a13+p3911088b"
+ },
+ "transcript_segments": [
+  {
+   "segment_id": "t1",
+   "start_seconds": 0,
+   "end_seconds": 2.6800000667572,
+   "text": "Like our folks we are now seeing newborn babies suffering from"
+  },
+  {
+   "segment_id": "t2",
+   "start_seconds": 2.6800000667572,
+   "end_seconds": 5.28000020980835,
+   "text": "potentially life threatening bleeding because fewer parents"
+  },
+  {
+   "segment_id": "t3",
+   "start_seconds": 5.28000020980835,
+   "end_seconds": 8.11999988555908,
+   "text": "are giving them a simple vitamin K injection. And the"
+  },
+  {
+   "segment_id": "t4",
+   "start_seconds": 8.11999988555908,
+   "end_seconds": 10.5200004577637,
+   "text": "latest research is very concerning. The new study"
+  },
+  {
+   "segment_id": "t5",
+   "start_seconds": 10.5200004577637,
+   "end_seconds": 13.8800001144409,
+   "text": "published November 5th in JAMA examined more than 5.2 million"
+  },
+  {
+   "segment_id": "t6",
+   "start_seconds": 13.8800001144409,
+   "end_seconds": 16.7199993133545,
+   "text": "infants in the United States. Researchers found that the"
+  },
+  {
+   "segment_id": "t7",
+   "start_seconds": 16.7199993133545,
+   "end_seconds": 19.6399993896484,
+   "text": "percentage of newborns not receiving vitamin K more than"
+  },
+  {
+   "segment_id": "t8",
+   "start_seconds": 19.6399993896484,
+   "end_seconds": 25.1200008392334,
+   "text": "doubled from 3.1% in 2017 to 6.8% in 2025. And the"
+  },
+  {
+   "segment_id": "t9",
+   "start_seconds": 25.1200008392334,
+   "end_seconds": 29.0799999237061,
+   "text": "consequences, babies who didn't receive vitamin K had a 47%"
+  },
+  {
+   "segment_id": "t10",
+   "start_seconds": 29.0799999237061,
+   "end_seconds": 31.9599990844727,
+   "text": "higher risk of bleeding during their first six months of life"
+  },
+  {
+   "segment_id": "t11",
+   "start_seconds": 31.9599990844727,
+   "end_seconds": 35.3199996948242,
+   "text": "and more than twice the risk of bleeding inside the brain."
+  },
+  {
+   "segment_id": "t12",
+   "start_seconds": 35.6399993896484,
+   "end_seconds": 38.2799987792969,
+   "text": "Researchers also found a higher risk of death associated with"
+  },
+  {
+   "segment_id": "t13",
+   "start_seconds": 38.2799987792969,
+   "end_seconds": 41.2000007629395,
+   "text": "bleeding during the birth hospitalization. So why does"
+  },
+  {
+   "segment_id": "t14",
+   "start_seconds": 41.2000007629395,
+   "end_seconds": 43.5999984741211,
+   "text": "this matter? Babies are naturally born with very low"
+  },
+  {
+   "segment_id": "t15",
+   "start_seconds": 43.5999984741211,
+   "end_seconds": 46.6800003051758,
+   "text": "levels of vitamin K, which is essential for blood clotting."
+  },
+  {
+   "segment_id": "t16",
+   "start_seconds": 46.7999992370605,
+   "end_seconds": 49.7200012207031,
+   "text": "Without enough of it, babies can develop spontaneous internal"
+  },
+  {
+   "segment_id": "t17",
+   "start_seconds": 49.7200012207031,
+   "end_seconds": 52.4000015258789,
+   "text": "bleeding, sometimes without any warning. And bleeding in the"
+  },
+  {
+   "segment_id": "t18",
+   "start_seconds": 52.4000015258789,
+   "end_seconds": 55.2400016784668,
+   "text": "brain can cause permanent neurological damage or death."
+  },
+  {
+   "segment_id": "t19",
+   "start_seconds": 55.439998626709,
+   "end_seconds": 58.6800003051758,
+   "text": "That's why we routinely give newborns a vitamin K injection"
+  },
+  {
+   "segment_id": "t20",
+   "start_seconds": 58.6800003051758,
+   "end_seconds": 61.5999984741211,
+   "text": "for more than 60 years. And here's something important,"
+  },
+  {
+   "segment_id": "t21",
+   "start_seconds": 61.6399993896484,
+   "end_seconds": 65.2399978637695,
+   "text": "vitamin K is not a vaccine. It's a vitamin that helps prevent a"
+  },
+  {
+   "segment_id": "t22",
+   "start_seconds": 65.2399978637695,
+   "end_seconds": 67.8399963378906,
+   "text": "potentially devastating condition. Unfortunately, we're"
+  },
+  {
+   "segment_id": "t23",
+   "start_seconds": 67.8399963378906,
+   "end_seconds": 69.879997253418,
+   "text": "seeing growing distrust of established medical"
+  },
+  {
+   "segment_id": "t24",
+   "start_seconds": 69.879997253418,
+   "end_seconds": 72.6800003051758,
+   "text": "interventions, and babies are paying the price. Now, these"
+  },
+  {
+   "segment_id": "t25",
+   "start_seconds": 72.6800003051758,
+   "end_seconds": 75.2399978637695,
+   "text": "studies are observational, so they cannot prove that every"
+  },
+  {
+   "segment_id": "t26",
+   "start_seconds": 75.2399978637695,
+   "end_seconds": 78.0800018310547,
+   "text": "bleeding event was caused by skipping vitamin K. But the"
+  },
+  {
+   "segment_id": "t27",
+   "start_seconds": 78.120002746582,
+   "end_seconds": 80.6399993896484,
+   "text": "evidence supporting this preventive injection is"
+  },
+  {
+   "segment_id": "t28",
+   "start_seconds": 80.6399993896484,
+   "end_seconds": 83.8399963378906,
+   "text": "overwhelming. Parents deserve accurate information, not fear"
+  },
+  {
+   "segment_id": "t29",
+   "start_seconds": 83.8399963378906,
+   "end_seconds": 86.9599990844727,
+   "text": "driven misinformation, because protecting newborn babies should"
+  },
+  {
+   "segment_id": "t30",
+   "start_seconds": 86.9599990844727,
+   "end_seconds": 90.0800018310547,
+   "text": "never be controversial. Please share this with someone who's"
+  },
+  {
+   "segment_id": "t31",
+   "start_seconds": 90.0800018310547,
+   "end_seconds": 91.2799987792969,
+   "text": "expecting a baby."
+  }
+ ],
+ "claims": [
+  {
+   "claim_id": "c1",
+   "text": "newborn babies are suffering from potentially life threatening bleeding because fewer parents are giving them a simple vitamin K injection",
+   "category": "causation",
+   "claim_kind": "research_question",
+   "label": "NO_MISINFO",
+   "deciding": false,
+   "start_seconds": 0,
+   "end_seconds": 8.11999988555908,
+   "search_trail": {
+    "version": 3,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Injections, Intramuscular\"[MeSH Terms] OR injection[tiab] OR intramuscular[tiab]) AND (Hemorrhage[MeSH Terms] OR bleeding[tiab] OR hemorrhage[tiab]) AND (\"Infant, Newborn\"[MeSH Terms] OR newborn[tiab] OR neonatal[tiab]) AND (Infant[MeSH Terms] OR infants[tiab])",
+      "results": 20,
+      "after_filters": 19,
+      "new_records": 19,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false,
+      "kind": "pico"
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 20,
+     "screened": 19,
+     "kept": 10
+    },
+    "budget": {
+     "rounds_used": 1,
+     "rounds_max": 3,
+     "exhausted": false,
+     "evidence_cap": 10,
+     "ladder_exhausted": false
+    },
+    "planning": {
+     "language": "en",
+     "translated": false,
+     "search_text": null,
+     "translation_error": null,
+     "context_concept": null,
+     "citation": null,
+     "assistant_used": false,
+     "assistant_error": null,
+     "no_query_reason": null
+    },
+    "find_study": null,
+    "shared_studies": [
+     {
+      "evidence_id": "ev_42986716",
+      "pmid": "42986716",
+      "doi": "10.1001/jama.2026.21764",
+      "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+      "shared_from": "c2",
+      "outcome": "kept",
+      "reason": "",
+      "relevance_score": 0.922
+     }
+    ],
+    "screened_out": [
+     {
+      "evidence_id": "ev_35190810",
+      "pmid": "35190810",
+      "title": "Vitamin K and the Newborn Infant.",
+      "year": 2022,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_34496783",
+      "pmid": "34496783",
+      "title": "Vitamin K prophylaxis in newborns.",
+      "year": 2021,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_32019806",
+      "pmid": "32019806",
+      "title": "Refusal of Intramuscular Vitamin K by Parents of Newborns: A Review.",
+      "year": 2020,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_22315277",
+      "pmid": "22315277",
+      "title": "Antithrombotic therapy in neonates and children: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines.",
+      "year": 2012,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_12892158",
+      "pmid": "12892158",
+      "title": "Weekly oral vitamin K prophylaxis in Denmark.",
+      "year": 2003,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_36707666",
+      "pmid": "36707666",
+      "title": "Neonatologists and vitamin K hesitancy.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_33910804",
+      "pmid": "33910804",
+      "title": "Spontaneous neonatal scrotal haematoma: an early manifestation of severe haemophilia.",
+      "year": 2021,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_11220402",
+      "pmid": "11220402",
+      "title": "Vitamin K in neonates: how to administer, when and to whom.",
+      "year": 2001,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_30593456",
+      "pmid": "30593456",
+      "title": "Newborn Vitamin K Prophylaxis: A Historical Perspective to Understand Modern Barriers to Uptake.",
+      "year": 2019,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_8937308",
+      "pmid": "8937308",
+      "title": "Oral vitamin K prophylaxis for newborn infants: safe enough?",
+      "year": 1996,
+      "source": "pubmed"
+     }
+    ],
+    "screened_out_truncated": false
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "Speaker states as fact \"we are now seeing newborn babies suffering from potentially life threatening bleeding because fewer parents are giving them a simple vitamin K injection,\" and calls the research \"very concerning.\""
+    }
+   ],
+   "verdict": "SUPPORTED",
+   "explanation": "Large cohort studies show vitamin K is being skipped more often: in the US the share of newborns who did not get it rose from 3.1% in 2017 to 6.8% in 2025, and in Sweden it more than doubled from 2006 to 2021. Babies who did not get the injection had a higher risk of bleeding in their first six months, two to three times the risk of bleeding in the brain, and (in the US) a higher risk of death with bleeding. Reviews and trials confirm that the injection prevents vitamin K deficiency bleeding, which can be life-threatening.",
+   "limitations": [
+    "The cohort studies are observational and use diagnosis codes, so they show a link and cannot fully prove cause and effect.",
+    "In the US data, bleeding rates also rose among babies who did get vitamin K, so the overall rise in bleeding is not entirely due to more parents refusing the shot.",
+    "The evidence comes from high-income countries (the US and Sweden).",
+    "Trial evidence for late-onset bleeding (from about week 2 onward) is limited; the reviews rate the evidence for that form as low quality and mostly observational."
+   ],
+   "retrieval_attempts": 1,
+   "evidence": [
+    {
+     "pmid": "27109090",
+     "doi": "10.1038/jp.2016.30",
+     "source": "pubmed",
+     "title": "Vitamin K prophylaxis for prevention of vitamin K deficiency bleeding: a systematic review.",
+     "year": 2016,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review"
+     ],
+     "study_type": "systematic_review",
+     "relation": "SUPPORTS",
+     "rank": 1,
+     "relevance": 0.922
+    },
+    {
+     "pmid": "11034761",
+     "doi": "10.1002/14651858.cd002776",
+     "source": "pubmed",
+     "title": "Prophylactic vitamin K for vitamin K deficiency bleeding in neonates.",
+     "year": 2000,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review"
+     ],
+     "study_type": "systematic_review",
+     "relation": "SUPPORTS",
+     "rank": 2,
+     "relevance": 0.922
+    },
+    {
+     "pmid": "21111646",
+     "doi": "10.1016/j.farma.2010.09.001",
+     "source": "pubmed",
+     "title": "[Prophylactic vitamin K for vitamin K deficiency bleeding of the newborn].",
+     "year": 2011,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review"
+     ],
+     "study_type": "systematic_review",
+     "relation": "CONSIDERED",
+     "rank": 3,
+     "relevance": 0.922
+    },
+    {
+     "pmid": "27050049",
+     "doi": "10.1097/mpg.0000000000001232",
+     "source": "pubmed",
+     "title": "Prevention of Vitamin K Deficiency Bleeding in Newborn Infants: A Position Paper by the ESPGHAN Committee on Nutrition.",
+     "year": 2016,
+     "publication_type": [
+      "Journal Article",
+      "Practice Guideline"
+     ],
+     "study_type": "guideline",
+     "relation": "SUPPORTS",
+     "rank": 4,
+     "relevance": 0.922
+    },
+    {
+     "pmid": "42440325",
+     "doi": "10.1001/jamapediatrics.2026.2606",
+     "source": "pubmed",
+     "title": "Vitamin K Prophylaxis in Newborns and Bleeding in Infancy.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "SUPPORTS",
+     "rank": 5,
+     "relevance": 0.922
+    },
+    {
+     "pmid": "40629667",
+     "doi": "10.1002/pbc.31889",
+     "source": "pubmed",
+     "title": "International Perspectives on Vitamin K Deficiency Bleeding in Infants: A Cross-Sectional Questionnaire-Based Survey.",
+     "year": 2025,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "SUPPORTS",
+     "rank": 6,
+     "relevance": 0.922
+    },
+    {
+     "pmid": "42986716",
+     "doi": "10.1001/jama.2026.21764",
+     "source": "pubmed",
+     "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "SUPPORTS",
+     "rank": 7,
+     "relevance": 0.922
+    },
+    {
+     "pmid": "32187975",
+     "doi": "10.3390/nu12030780",
+     "source": "pubmed",
+     "title": "Vitamin K Deficiency Bleeding in Infancy.",
+     "year": 2020,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 8,
+     "relevance": 0.922
+    },
+    {
+     "pmid": "38071415",
+     "doi": "10.1111/eci.14141",
+     "source": "pubmed",
+     "title": "Vitamin K insufficiency and the prophylaxis strategy in term healthy infants: A multicentre study.",
+     "year": 2024,
+     "publication_type": [
+      "Observational Study",
+      "Multicenter Study",
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 9,
+     "relevance": 0.7714
+    },
+    {
+     "pmid": "39743430",
+     "doi": "10.1016/j.jpurol.2024.12.014",
+     "source": "pubmed",
+     "title": "Neonatal circumcisions and parental refusal of intramuscular vitamin K: A review of the literature and current guidelines.",
+     "year": 2024,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 10,
+     "relevance": 0.8367
+    }
+   ]
+  },
+  {
+   "claim_id": "c2",
+   "text": "a JAMA study published November 5th examined more than 5.2 million infants in the United States",
+   "category": "statistic",
+   "claim_kind": "fact_of_record",
+   "label": "NO_MISINFO",
+   "deciding": false,
+   "start_seconds": 8.11999988555908,
+   "end_seconds": 16.7199993133545,
+   "search_trail": {
+    "version": 3,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "\"JAMA\"[ta] AND (\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab])",
+      "results": 20,
+      "after_filters": 20,
+      "new_records": 20,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false,
+      "kind": "citation"
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 20,
+     "screened": 20,
+     "kept": 1
+    },
+    "budget": {
+     "rounds_used": 1,
+     "rounds_max": 3,
+     "exhausted": false,
+     "evidence_cap": 10,
+     "ladder_exhausted": false
+    },
+    "planning": {
+     "language": "en",
+     "translated": false,
+     "search_text": null,
+     "translation_error": null,
+     "context_concept": "vitamin_k",
+     "citation": {
+      "journal": "JAMA",
+      "year": null,
+      "sample_size": "5.2 million infants",
+      "institution": null
+     },
+     "assistant_used": false,
+     "assistant_error": null,
+     "no_query_reason": null
+    },
+    "find_study": {
+     "reason": "cites_study",
+     "round": 1,
+     "web_queries": [
+      "JAMA study 5.2 million infants United States November",
+      "JAMA November 5 study infants 5.2 million"
+     ],
+     "web_searches": 2,
+     "candidates": [
+      {
+       "pmid": "42986716",
+       "doi": "10.1001/jama.2026.21764",
+       "outcome": "verified_pubmed",
+       "reason": "",
+       "evidence_id": "ev_42986716",
+       "via": "esearch_doi"
+      }
+     ],
+     "verified": 1,
+     "model": "claude-haiku-5-5",
+     "cost_usd": 0.022577,
+     "latency_ms": 3523,
+     "error": null
+    },
+    "shared_studies": [],
+    "screened_out": [
+     {
+      "evidence_id": "ev_39680399",
+      "pmid": "39680399",
+      "title": "Atrial Fibrillation: A Review.",
+      "year": 2025,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_36194215",
+      "pmid": "36194215",
+      "title": "Acute Pulmonary Embolism: A Review.",
+      "year": 2022,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_41359326",
+      "pmid": "41359326",
+      "title": "Trends in Vitamin K Administration Among Infants.",
+      "year": 2026,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_37950897",
+      "pmid": "37950897",
+      "title": "Aspirin and Hemocompatibility Events With a Left Ventricular Assist Device in Advanced Heart Failure: The ARIES-HM3 Randomized Clinical Trial.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_32207787",
+      "pmid": "32207787",
+      "title": "Confirming Point-of-Care INR Test Results.",
+      "year": 2020,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_24549552",
+      "pmid": "24549552",
+      "title": "Treatment of venous thromboembolism.",
+      "year": 2014,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_29710164",
+      "pmid": "29710164",
+      "title": "Effect of Ticagrelor Plus Aspirin, Ticagrelor Alone, or Aspirin Alone on Saphenous Vein Graft Patency 1 Year After Coronary Artery Bypass Grafting: A Randomized Clinical Trial.",
+      "year": 2018,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_37847280",
+      "pmid": "37847280",
+      "title": "Vitamin K Antagonists and Intracranial Hemorrhage After Endovascular Thrombectomy.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_37847277",
+      "pmid": "37847277",
+      "title": "Vitamin K Antagonists and Intracranial Hemorrhage After Endovascular Thrombectomy-Reply.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_6502865",
+      "pmid": "6502865",
+      "title": "Prolonged anticoagulation in rat poisoning.",
+      "year": 1984,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_37338878",
+      "pmid": "37338878",
+      "title": "Recent Vitamin K Antagonist Use and Intracranial Hemorrhage After Endovascular Thrombectomy for Acute Ischemic Stroke.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_12069675",
+      "pmid": "12069675",
+      "title": "Vitamins for chronic disease prevention in adults: scientific review.",
+      "year": 2002,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_42669043",
+      "pmid": "42669043",
+      "title": "Anticoagulation Monotherapy vs Antiplatelet Monotherapy After Transcatheter Aortic Valve Implant: The ACASA-TAVI Randomized Clinical Trial.",
+      "year": 2026,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_28510665",
+      "pmid": "28510665",
+      "title": "Antithrombotic Therapy for Venous Thromboembolic Disease.",
+      "year": 2017,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_29800198",
+      "pmid": "29800198",
+      "title": "Management of Bleeding in Patients Taking Oral Anticoagulants.",
+      "year": 2018,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_6071533",
+      "pmid": "6071533",
+      "title": "Down with motherhood?",
+      "year": 1967,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_14172291",
+      "pmid": "14172291",
+      "title": "HYPOPROTHROMBINEMIA AS A COMPLICATION OF PROPYLTHIOURACIL.",
+      "year": 1964,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_29486030",
+      "pmid": "29486030",
+      "title": "Drug Interactions With Non-Vitamin K Oral Anticoagulants.",
+      "year": 2018,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_29486028",
+      "pmid": "29486028",
+      "title": "Drug Interactions With Non-Vitamin K Oral Anticoagulants.",
+      "year": 2018,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_29486029",
+      "pmid": "29486029",
+      "title": "Drug Interactions With Non-Vitamin K Oral Anticoagulants.",
+      "year": 2018,
+      "source": "pubmed"
+     }
+    ],
+    "screened_out_truncated": false
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact that \"the new study published November 5th in JAMA examined more than 5.2 million infants in the United States,\" and calls the research \"very concerning.\""
+    }
+   ],
+   "verdict": "SUPPORTED",
+   "explanation": "The retrieved 2026 retrospective cohort study of newborn vitamin K nonreceipt included 5,240,780 infants born at hospitals in all 50 US states, which matches the claim of more than 5.2 million US infants.",
+   "limitations": [
+    "The retrieved metadata does not confirm that the study appeared in JAMA.",
+    "The retrieved metadata does not confirm the November 5th publication date; it gives only the year, 2026.",
+    "Only the population size and setting are directly checked."
+   ],
+   "retrieval_attempts": 1,
+   "evidence": [
+    {
+     "pmid": "42986716",
+     "doi": "10.1001/jama.2026.21764",
+     "source": "pubmed",
+     "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "SUPPORTS",
+     "rank": 1,
+     "relevance": null
+    }
+   ]
+  },
+  {
+   "claim_id": "c3",
+   "text": "the percentage of newborns not receiving vitamin K more than doubled from 3.1% in 2017 to 6.8% in 2025",
+   "category": "statistic",
+   "claim_kind": "fact_of_record",
+   "label": "NO_MISINFO",
+   "deciding": false,
+   "start_seconds": 13.8800001144409,
+   "end_seconds": 25.1200008392334,
+   "search_trail": {
+    "version": 3,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Infant, Newborn\"[MeSH Terms] OR newborn[tiab] OR neonatal[tiab])",
+      "results": 20,
+      "after_filters": 20,
+      "new_records": 20,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false,
+      "kind": "intervention_population"
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 20,
+     "screened": 20,
+     "kept": 10
+    },
+    "budget": {
+     "rounds_used": 1,
+     "rounds_max": 3,
+     "exhausted": false,
+     "evidence_cap": 10,
+     "ladder_exhausted": false
+    },
+    "planning": {
+     "language": "en",
+     "translated": false,
+     "search_text": null,
+     "translation_error": null,
+     "context_concept": null,
+     "citation": null,
+     "assistant_used": false,
+     "assistant_error": null,
+     "no_query_reason": null
+    },
+    "find_study": null,
+    "shared_studies": [
+     {
+      "evidence_id": "ev_42986716",
+      "pmid": "42986716",
+      "doi": "10.1001/jama.2026.21764",
+      "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+      "shared_from": "c2",
+      "outcome": "kept",
+      "reason": "",
+      "relevance_score": 1
+     }
+    ],
+    "screened_out": [
+     {
+      "evidence_id": "ev_35190810",
+      "pmid": "35190810",
+      "title": "Vitamin K and the Newborn Infant.",
+      "year": 2022,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_36117074",
+      "pmid": "36117074",
+      "title": "Hemorrhagic Disease of the Newborn: A Case Series Illustrating Preventable Harm.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_14203840",
+      "pmid": "14203840",
+      "title": "DEVELOPMENTAL PHARMACOLOGY.",
+      "year": 1964,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_1747572",
+      "pmid": "1747572",
+      "title": "Neonatal vitamin K.",
+      "year": 1991,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_34486992",
+      "pmid": "34486992",
+      "title": "Vitamin K deficient bleeding and COVID-19: How are they related?",
+      "year": 2021,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_32060031",
+      "pmid": "32060031",
+      "title": "Delivering neonatal vitamin K prophylaxis: the continuing need for surveillance and vigilance.",
+      "year": 2020,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_9468666",
+      "pmid": "9468666",
+      "title": "Neonatal vitamin K prophylaxis: the Gordian knot still awaits untying.",
+      "year": 1998,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_11339128",
+      "pmid": "11339128",
+      "title": "[Neonatal hemorrhagic syndromes].",
+      "year": 2001,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_10569231",
+      "pmid": "10569231",
+      "title": "Vitamin K status of lactating mothers and their infants.",
+      "year": 1999,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_23968273",
+      "pmid": "23968273",
+      "title": "Intraventricular haemorrhage in preterm infants--can we improve outcome by addressing coagulation?",
+      "year": 2015,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_13714318",
+      "pmid": "13714318",
+      "title": "Vitamin K administration and neonatal hyperbilirubinemia of unknown etiology; a double-blind study.",
+      "year": 1961,
+      "source": "pubmed"
+     }
+    ],
+    "screened_out_truncated": false
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact, citing a JAMA study, that \"the percentage of newborns not receiving vitamin K more than doubled from 3.1% in 2017 to 6.8% in 2025,\" and calls the research \"very concerning.\""
+    }
+   ],
+   "verdict": "SUPPORTED",
+   "explanation": "A US retrospective cohort of about 5.2 million infants in the Epic Cosmos dataset found that the rate of not receiving newborn intramuscular vitamin K rose from 3.1% in 2017 to 6.8% in 2025. That is more than double, exactly as the claim states.",
+   "limitations": [
+    "Only one study reports these exact figures, and it covers the US.",
+    "Nonreceipt is measured from health records in the Epic Cosmos dataset, which may not represent every US birth.",
+    "The figure refers to intramuscular vitamin K; infants given oral vitamin K may be counted as not receiving it."
+   ],
+   "retrieval_attempts": 1,
+   "evidence": [
+    {
+     "pmid": "11034761",
+     "doi": "10.1002/14651858.cd002776",
+     "source": "pubmed",
+     "title": "Prophylactic vitamin K for vitamin K deficiency bleeding in neonates.",
+     "year": 2000,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review"
+     ],
+     "study_type": "systematic_review",
+     "relation": "CONSIDERED",
+     "rank": 1,
+     "relevance": 1
+    },
+    {
+     "pmid": "27050049",
+     "doi": "10.1097/mpg.0000000000001232",
+     "source": "pubmed",
+     "title": "Prevention of Vitamin K Deficiency Bleeding in Newborn Infants: A Position Paper by the ESPGHAN Committee on Nutrition.",
+     "year": 2016,
+     "publication_type": [
+      "Journal Article",
+      "Practice Guideline"
+     ],
+     "study_type": "guideline",
+     "relation": "CONSIDERED",
+     "rank": 2,
+     "relevance": 1
+    },
+    {
+     "pmid": "42440325",
+     "doi": "10.1001/jamapediatrics.2026.2606",
+     "source": "pubmed",
+     "title": "Vitamin K Prophylaxis in Newborns and Bleeding in Infancy.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 3,
+     "relevance": 1
+    },
+    {
+     "pmid": "38071415",
+     "doi": "10.1111/eci.14141",
+     "source": "pubmed",
+     "title": "Vitamin K insufficiency and the prophylaxis strategy in term healthy infants: A multicentre study.",
+     "year": 2024,
+     "publication_type": [
+      "Observational Study",
+      "Multicenter Study",
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 4,
+     "relevance": 1
+    },
+    {
+     "pmid": "33761796",
+     "doi": "10.1177/02676591211003870",
+     "source": "pubmed",
+     "title": "Vitamin K and ECMO for neonatal hypoxic respiratory failure.",
+     "year": 2022,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 5,
+     "relevance": 1
+    },
+    {
+     "pmid": "42986716",
+     "doi": "10.1001/jama.2026.21764",
+     "source": "pubmed",
+     "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "SUPPORTS",
+     "rank": 6,
+     "relevance": 1
+    },
+    {
+     "pmid": "34496783",
+     "doi": "10.1186/s12887-021-02701-4",
+     "source": "pubmed",
+     "title": "Vitamin K prophylaxis in newborns.",
+     "year": 2021,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 7,
+     "relevance": 1
+    },
+    {
+     "pmid": "32187975",
+     "doi": "10.3390/nu12030780",
+     "source": "pubmed",
+     "title": "Vitamin K Deficiency Bleeding in Infancy.",
+     "year": 2020,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 8,
+     "relevance": 1
+    },
+    {
+     "pmid": "36707666",
+     "doi": "10.1038/s41372-023-01611-w",
+     "source": "pubmed",
+     "title": "Neonatologists and vitamin K hesitancy.",
+     "year": 2023,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 9,
+     "relevance": 1
+    },
+    {
+     "pmid": "11220402",
+     "doi": "10.2165/00128072-200103010-00001",
+     "source": "pubmed",
+     "title": "Vitamin K in neonates: how to administer, when and to whom.",
+     "year": 2001,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 10,
+     "relevance": 1
+    }
+   ]
+  },
+  {
+   "claim_id": "c4",
+   "text": "babies who didn't receive vitamin K had a 47% higher risk of bleeding during their first six months of life",
+   "category": "causation",
+   "claim_kind": "fact_of_record",
+   "label": "NO_MISINFO",
+   "deciding": false,
+   "start_seconds": 25.1200008392334,
+   "end_seconds": 31.9599990844727,
+   "search_trail": {
+    "version": 3,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (Hemorrhage[MeSH Terms] OR bleeding[tiab] OR hemorrhage[tiab]) AND (Infant[MeSH Terms] OR infants[tiab])",
+      "results": 20,
+      "after_filters": 20,
+      "new_records": 20,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false,
+      "kind": "pico"
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 20,
+     "screened": 20,
+     "kept": 10
+    },
+    "budget": {
+     "rounds_used": 1,
+     "rounds_max": 3,
+     "exhausted": false,
+     "evidence_cap": 10,
+     "ladder_exhausted": false
+    },
+    "planning": {
+     "language": "en",
+     "translated": false,
+     "search_text": null,
+     "translation_error": null,
+     "context_concept": null,
+     "citation": null,
+     "assistant_used": false,
+     "assistant_error": null,
+     "no_query_reason": null
+    },
+    "find_study": null,
+    "shared_studies": [
+     {
+      "evidence_id": "ev_42986716",
+      "pmid": "42986716",
+      "doi": "10.1001/jama.2026.21764",
+      "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+      "shared_from": "c2",
+      "outcome": "kept",
+      "reason": "",
+      "relevance_score": 1
+     }
+    ],
+    "screened_out": [
+     {
+      "evidence_id": "ev_34496783",
+      "pmid": "34496783",
+      "title": "Vitamin K prophylaxis in newborns.",
+      "year": 2021,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_32019806",
+      "pmid": "32019806",
+      "title": "Refusal of Intramuscular Vitamin K by Parents of Newborns: A Review.",
+      "year": 2020,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_22315277",
+      "pmid": "22315277",
+      "title": "Antithrombotic therapy in neonates and children: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines.",
+      "year": 2012,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_12892158",
+      "pmid": "12892158",
+      "title": "Weekly oral vitamin K prophylaxis in Denmark.",
+      "year": 2003,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_36117074",
+      "pmid": "36117074",
+      "title": "Hemorrhagic Disease of the Newborn: A Case Series Illustrating Preventable Harm.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_29913536",
+      "pmid": "29913536",
+      "title": "Hemostasis in the Very Young.",
+      "year": 2018,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_34486992",
+      "pmid": "34486992",
+      "title": "Vitamin K deficient bleeding and COVID-19: How are they related?",
+      "year": 2021,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_36707666",
+      "pmid": "36707666",
+      "title": "Neonatologists and vitamin K hesitancy.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_31502702",
+      "pmid": "31502702",
+      "title": "New ways of preventing vitamin K deficiency bleeding in infancy.",
+      "year": 2019,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_5165761",
+      "pmid": "5165761",
+      "title": "Vitamin K1.",
+      "year": 1971,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_38569860",
+      "pmid": "38569860",
+      "title": "[Perioperative management for fracture in a child with homozygous congenital protein C deficiency].",
+      "year": 2024,
+      "source": "pubmed"
+     }
+    ],
+    "screened_out_truncated": false
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker presents the study finding as fact: \"the consequences, babies who didn't receive vitamin K had a 47% higher risk of bleeding during their first six months of life\". They call the research \"very concerning\" and go on to explain why vitamin K matters."
+    }
+   ],
+   "verdict": "SUPPORTED",
+   "explanation": "A large US cohort study of more than 5.2 million infants found that infants who did not get vitamin K at birth had a 47% higher risk of a bleeding diagnosis by 6 months of age (adjusted risk ratio 1.47, 95% CI 1.43-1.51), which matches the claim exactly. A nationwide Swedish cohort found a similar link (adjusted odds ratio 1.52). A systematic review also found that preventive vitamin K reduces bleeding.",
+   "limitations": [
+    "Both cohorts are observational, so they show an association rather than proof of cause; parents who refuse vitamin K may differ in other ways",
+    "Bleeding was identified from diagnosis codes and includes bleeding from any cause, not only vitamin K deficiency bleeding",
+    "The 47% figure comes from a single US study"
+   ],
+   "retrieval_attempts": 1,
+   "evidence": [
+    {
+     "pmid": "27109090",
+     "doi": "10.1038/jp.2016.30",
+     "source": "pubmed",
+     "title": "Vitamin K prophylaxis for prevention of vitamin K deficiency bleeding: a systematic review.",
+     "year": 2016,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review"
+     ],
+     "study_type": "systematic_review",
+     "relation": "CONSIDERED",
+     "rank": 1,
+     "relevance": 1
+    },
+    {
+     "pmid": "27050049",
+     "doi": "10.1097/mpg.0000000000001232",
+     "source": "pubmed",
+     "title": "Prevention of Vitamin K Deficiency Bleeding in Newborn Infants: A Position Paper by the ESPGHAN Committee on Nutrition.",
+     "year": 2016,
+     "publication_type": [
+      "Journal Article",
+      "Practice Guideline"
+     ],
+     "study_type": "guideline",
+     "relation": "CONSIDERED",
+     "rank": 2,
+     "relevance": 1
+    },
+    {
+     "pmid": "42440325",
+     "doi": "10.1001/jamapediatrics.2026.2606",
+     "source": "pubmed",
+     "title": "Vitamin K Prophylaxis in Newborns and Bleeding in Infancy.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "SUPPORTS",
+     "rank": 3,
+     "relevance": 1
+    },
+    {
+     "pmid": "40629667",
+     "doi": "10.1002/pbc.31889",
+     "source": "pubmed",
+     "title": "International Perspectives on Vitamin K Deficiency Bleeding in Infants: A Cross-Sectional Questionnaire-Based Survey.",
+     "year": 2025,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 4,
+     "relevance": 1
+    },
+    {
+     "pmid": "42986716",
+     "doi": "10.1001/jama.2026.21764",
+     "source": "pubmed",
+     "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "SUPPORTS",
+     "rank": 5,
+     "relevance": 1
+    },
+    {
+     "pmid": "32187975",
+     "doi": "10.3390/nu12030780",
+     "source": "pubmed",
+     "title": "Vitamin K Deficiency Bleeding in Infancy.",
+     "year": 2020,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 6,
+     "relevance": 1
+    },
+    {
+     "pmid": "34196053",
+     "doi": "10.1111/apa.16011",
+     "source": "pubmed",
+     "title": "Intracranial haemorrhage associated with Vitamin K deficiency in Egyptian infants.",
+     "year": 2021,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 7,
+     "relevance": 1
+    },
+    {
+     "pmid": "38071415",
+     "doi": "10.1111/eci.14141",
+     "source": "pubmed",
+     "title": "Vitamin K insufficiency and the prophylaxis strategy in term healthy infants: A multicentre study.",
+     "year": 2024,
+     "publication_type": [
+      "Observational Study",
+      "Multicenter Study",
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 8,
+     "relevance": 0.8367
+    },
+    {
+     "pmid": "38057072",
+     "doi": "10.1016/j.jacc.2023.10.010",
+     "source": "pubmed",
+     "title": "Apixaban for Prevention of Thromboembolism in Pediatric Heart Disease.",
+     "year": 2023,
+     "publication_type": [
+      "Randomized Controlled Trial",
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Research Support, N.I.H., Extramural"
+     ],
+     "study_type": "rct",
+     "relation": "CONSIDERED",
+     "rank": 9,
+     "relevance": 0.56
+    },
+    {
+     "pmid": "35190810",
+     "doi": "10.1542/peds.2021-056036",
+     "source": "pubmed",
+     "title": "Vitamin K and the Newborn Infant.",
+     "year": 2022,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "other",
+     "relation": "CONSIDERED",
+     "rank": 10,
+     "relevance": 0.8367
+    }
+   ]
+  },
+  {
+   "claim_id": "c5",
+   "text": "there is a higher risk of death associated with bleeding during the birth hospitalization in babies who didn't receive vitamin K",
+   "category": "causation",
+   "claim_kind": "research_question",
+   "label": "NO_MISINFO",
+   "deciding": false,
+   "start_seconds": 35.6399993896484,
+   "end_seconds": 41.2000007629395,
+   "search_trail": {
+    "version": 3,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (Hemorrhage[MeSH Terms] OR bleeding[tiab] OR hemorrhage[tiab]) AND (Infant[MeSH Terms] OR infants[tiab])",
+      "results": 20,
+      "after_filters": 20,
+      "new_records": 20,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": false,
+      "kind": "pico"
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 20,
+     "screened": 20,
+     "kept": 10
+    },
+    "budget": {
+     "rounds_used": 1,
+     "rounds_max": 3,
+     "exhausted": false,
+     "evidence_cap": 10,
+     "ladder_exhausted": false
+    },
+    "planning": {
+     "language": "en",
+     "translated": false,
+     "search_text": null,
+     "translation_error": null,
+     "context_concept": null,
+     "citation": null,
+     "assistant_used": false,
+     "assistant_error": null,
+     "no_query_reason": null
+    },
+    "find_study": null,
+    "shared_studies": [
+     {
+      "evidence_id": "ev_42986716",
+      "pmid": "42986716",
+      "doi": "10.1001/jama.2026.21764",
+      "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+      "shared_from": "c2",
+      "outcome": "kept",
+      "reason": "",
+      "relevance_score": 1
+     }
+    ],
+    "screened_out": [
+     {
+      "evidence_id": "ev_34496783",
+      "pmid": "34496783",
+      "title": "Vitamin K prophylaxis in newborns.",
+      "year": 2021,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_32019806",
+      "pmid": "32019806",
+      "title": "Refusal of Intramuscular Vitamin K by Parents of Newborns: A Review.",
+      "year": 2020,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_22315277",
+      "pmid": "22315277",
+      "title": "Antithrombotic therapy in neonates and children: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines.",
+      "year": 2012,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_12892158",
+      "pmid": "12892158",
+      "title": "Weekly oral vitamin K prophylaxis in Denmark.",
+      "year": 2003,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_36117074",
+      "pmid": "36117074",
+      "title": "Hemorrhagic Disease of the Newborn: A Case Series Illustrating Preventable Harm.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_29913536",
+      "pmid": "29913536",
+      "title": "Hemostasis in the Very Young.",
+      "year": 2018,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_34486992",
+      "pmid": "34486992",
+      "title": "Vitamin K deficient bleeding and COVID-19: How are they related?",
+      "year": 2021,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_36707666",
+      "pmid": "36707666",
+      "title": "Neonatologists and vitamin K hesitancy.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_31502702",
+      "pmid": "31502702",
+      "title": "New ways of preventing vitamin K deficiency bleeding in infancy.",
+      "year": 2019,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_5165761",
+      "pmid": "5165761",
+      "title": "Vitamin K1.",
+      "year": 1971,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_38569860",
+      "pmid": "38569860",
+      "title": "[Perioperative management for fracture in a child with homozygous congenital protein C deficiency].",
+      "year": 2024,
+      "source": "pubmed"
+     }
+    ],
+    "screened_out_truncated": false
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact: \"Researchers also found a higher risk of death associated with bleeding during the birth hospitalization.\" They then use it to support routine vitamin K injections."
+    }
+   ],
+   "verdict": "SUPPORTED",
+   "explanation": "A large US cohort of more than 5.2 million infants looked at death with bleeding during the birth hospitalization. Infants who did not get intramuscular vitamin K at birth had a higher risk of this outcome than those who did (2.9 vs 1.1 per 10,000; adjusted risk ratio 2.69, 95% CI 2.09–3.47). The claim says \"associated with\", which matches what this study found.",
+   "limitations": [
+    "Only one retrospective observational study measures this outcome directly, so the result shows an association, not cause",
+    "The outcome is death that happened alongside bleeding, not death confirmed to be caused by bleeding",
+    "Bleeding was identified from ICD diagnosis codes in electronic health records, which can be miscoded",
+    "Families who decline vitamin K may differ in other ways that the adjustments did not capture"
+   ],
+   "retrieval_attempts": 1,
+   "evidence": [
+    {
+     "pmid": "27109090",
+     "doi": "10.1038/jp.2016.30",
+     "source": "pubmed",
+     "title": "Vitamin K prophylaxis for prevention of vitamin K deficiency bleeding: a systematic review.",
+     "year": 2016,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review"
+     ],
+     "study_type": "systematic_review",
+     "relation": "CONSIDERED",
+     "rank": 1,
+     "relevance": 1
+    },
+    {
+     "pmid": "27050049",
+     "doi": "10.1097/mpg.0000000000001232",
+     "source": "pubmed",
+     "title": "Prevention of Vitamin K Deficiency Bleeding in Newborn Infants: A Position Paper by the ESPGHAN Committee on Nutrition.",
+     "year": 2016,
+     "publication_type": [
+      "Journal Article",
+      "Practice Guideline"
+     ],
+     "study_type": "guideline",
+     "relation": "CONSIDERED",
+     "rank": 2,
+     "relevance": 1
+    },
+    {
+     "pmid": "42440325",
+     "doi": "10.1001/jamapediatrics.2026.2606",
+     "source": "pubmed",
+     "title": "Vitamin K Prophylaxis in Newborns and Bleeding in Infancy.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 3,
+     "relevance": 1
+    },
+    {
+     "pmid": "40629667",
+     "doi": "10.1002/pbc.31889",
+     "source": "pubmed",
+     "title": "International Perspectives on Vitamin K Deficiency Bleeding in Infants: A Cross-Sectional Questionnaire-Based Survey.",
+     "year": 2025,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 4,
+     "relevance": 1
+    },
+    {
+     "pmid": "42986716",
+     "doi": "10.1001/jama.2026.21764",
+     "source": "pubmed",
+     "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "SUPPORTS",
+     "rank": 5,
+     "relevance": 1
+    },
+    {
+     "pmid": "32187975",
+     "doi": "10.3390/nu12030780",
+     "source": "pubmed",
+     "title": "Vitamin K Deficiency Bleeding in Infancy.",
+     "year": 2020,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 6,
+     "relevance": 1
+    },
+    {
+     "pmid": "34196053",
+     "doi": "10.1111/apa.16011",
+     "source": "pubmed",
+     "title": "Intracranial haemorrhage associated with Vitamin K deficiency in Egyptian infants.",
+     "year": 2021,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 7,
+     "relevance": 1
+    },
+    {
+     "pmid": "38071415",
+     "doi": "10.1111/eci.14141",
+     "source": "pubmed",
+     "title": "Vitamin K insufficiency and the prophylaxis strategy in term healthy infants: A multicentre study.",
+     "year": 2024,
+     "publication_type": [
+      "Observational Study",
+      "Multicenter Study",
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 8,
+     "relevance": 0.8367
+    },
+    {
+     "pmid": "38057072",
+     "doi": "10.1016/j.jacc.2023.10.010",
+     "source": "pubmed",
+     "title": "Apixaban for Prevention of Thromboembolism in Pediatric Heart Disease.",
+     "year": 2023,
+     "publication_type": [
+      "Randomized Controlled Trial",
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Research Support, N.I.H., Extramural"
+     ],
+     "study_type": "rct",
+     "relation": "CONSIDERED",
+     "rank": 9,
+     "relevance": 0.56
+    },
+    {
+     "pmid": "35190810",
+     "doi": "10.1542/peds.2021-056036",
+     "source": "pubmed",
+     "title": "Vitamin K and the Newborn Infant.",
+     "year": 2022,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "other",
+     "relation": "CONSIDERED",
+     "rank": 10,
+     "relevance": 0.8367
+    }
+   ]
+  },
+  {
+   "claim_id": "c6",
+   "text": "babies are naturally born with very low levels of vitamin K",
+   "category": "other",
+   "claim_kind": "research_question",
+   "label": "NO_MISINFO",
+   "deciding": false,
+   "start_seconds": 41.2000007629395,
+   "end_seconds": 46.6800003051758,
+   "search_trail": {
+    "version": 3,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (Infant[MeSH Terms] OR infants[tiab])",
+      "results": 20,
+      "after_filters": 20,
+      "new_records": 20,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false,
+      "kind": "intervention_population"
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 20,
+     "screened": 20,
+     "kept": 10
+    },
+    "budget": {
+     "rounds_used": 1,
+     "rounds_max": 3,
+     "exhausted": false,
+     "evidence_cap": 10,
+     "ladder_exhausted": false
+    },
+    "planning": {
+     "language": "en",
+     "translated": false,
+     "search_text": null,
+     "translation_error": null,
+     "context_concept": null,
+     "citation": null,
+     "assistant_used": false,
+     "assistant_error": null,
+     "no_query_reason": null
+    },
+    "find_study": null,
+    "shared_studies": [
+     {
+      "evidence_id": "ev_42986716",
+      "pmid": "42986716",
+      "doi": "10.1001/jama.2026.21764",
+      "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+      "shared_from": "c2",
+      "outcome": "kept",
+      "reason": "",
+      "relevance_score": 1
+     }
+    ],
+    "screened_out": [
+     {
+      "evidence_id": "ev_7823718",
+      "pmid": "7823718",
+      "title": "Vitamin K.",
+      "year": 1995,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_12892158",
+      "pmid": "12892158",
+      "title": "Weekly oral vitamin K prophylaxis in Denmark.",
+      "year": 2003,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_29913536",
+      "pmid": "29913536",
+      "title": "Hemostasis in the Very Young.",
+      "year": 2018,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_11339128",
+      "pmid": "11339128",
+      "title": "[Neonatal hemorrhagic syndromes].",
+      "year": 2001,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_23968273",
+      "pmid": "23968273",
+      "title": "Intraventricular haemorrhage in preterm infants--can we improve outcome by addressing coagulation?",
+      "year": 2015,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_13714318",
+      "pmid": "13714318",
+      "title": "Vitamin K administration and neonatal hyperbilirubinemia of unknown etiology; a double-blind study.",
+      "year": 1961,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_8696177",
+      "pmid": "8696177",
+      "title": "Vitamin K at birth.",
+      "year": 1996,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_38195988",
+      "pmid": "38195988",
+      "title": "Range of protein induced by vitamin K absence or antagonist-II levels in neonates at birth.",
+      "year": 2024,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_3950274",
+      "pmid": "3950274",
+      "title": "Breast-feeding and evolution.",
+      "year": 1986,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_13912286",
+      "pmid": "13912286",
+      "title": "Oral vitamin K 1 (phytonadione) as prophylaxis for hypoprothrombinemia in full-term and premature infants.",
+      "year": 1962,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_7886607",
+      "pmid": "7886607",
+      "title": "Vitamin K deficiency.",
+      "year": 1993,
+      "source": "pubmed"
+     }
+    ],
+    "screened_out_truncated": false
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact: \"Babies are naturally born with very low levels of vitamin K, which is essential for blood clotting.\" They then use it to justify routine vitamin K injections."
+    }
+   ],
+   "verdict": "SUPPORTED",
+   "explanation": "The ESPGHAN position paper describes newborns as having physiologically low vitamin K plasma levels. Several reviews say this is because little vitamin K crosses the placenta, and one reports that newborn serum levels are undetectable. Reviews also note that vitamin K-dependent clotting factors are lower in newborns than in adults.",
+   "limitations": [
+    "The support comes mainly from narrative reviews and a guideline that describe newborn physiology, not from primary studies measuring vitamin K levels.",
+    "Some of these sources are old (1999, 2001)."
+   ],
+   "retrieval_attempts": 1,
+   "evidence": [
+    {
+     "pmid": "21111646",
+     "doi": "10.1016/j.farma.2010.09.001",
+     "source": "pubmed",
+     "title": "[Prophylactic vitamin K for vitamin K deficiency bleeding of the newborn].",
+     "year": 2011,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review"
+     ],
+     "study_type": "systematic_review",
+     "relation": "CONSIDERED",
+     "rank": 1,
+     "relevance": 1
+    },
+    {
+     "pmid": "27050049",
+     "doi": "10.1097/mpg.0000000000001232",
+     "source": "pubmed",
+     "title": "Prevention of Vitamin K Deficiency Bleeding in Newborn Infants: A Position Paper by the ESPGHAN Committee on Nutrition.",
+     "year": 2016,
+     "publication_type": [
+      "Journal Article",
+      "Practice Guideline"
+     ],
+     "study_type": "guideline",
+     "relation": "SUPPORTS",
+     "rank": 2,
+     "relevance": 1
+    },
+    {
+     "pmid": "42440325",
+     "doi": "10.1001/jamapediatrics.2026.2606",
+     "source": "pubmed",
+     "title": "Vitamin K Prophylaxis in Newborns and Bleeding in Infancy.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 3,
+     "relevance": 1
+    },
+    {
+     "pmid": "38071415",
+     "doi": "10.1111/eci.14141",
+     "source": "pubmed",
+     "title": "Vitamin K insufficiency and the prophylaxis strategy in term healthy infants: A multicentre study.",
+     "year": 2024,
+     "publication_type": [
+      "Observational Study",
+      "Multicenter Study",
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 4,
+     "relevance": 1
+    },
+    {
+     "pmid": "40629667",
+     "doi": "10.1002/pbc.31889",
+     "source": "pubmed",
+     "title": "International Perspectives on Vitamin K Deficiency Bleeding in Infants: A Cross-Sectional Questionnaire-Based Survey.",
+     "year": 2025,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "SUPPORTS",
+     "rank": 5,
+     "relevance": 1
+    },
+    {
+     "pmid": "42986716",
+     "doi": "10.1001/jama.2026.21764",
+     "source": "pubmed",
+     "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 6,
+     "relevance": 1
+    },
+    {
+     "pmid": "34496783",
+     "doi": "10.1186/s12887-021-02701-4",
+     "source": "pubmed",
+     "title": "Vitamin K prophylaxis in newborns.",
+     "year": 2021,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 7,
+     "relevance": 1
+    },
+    {
+     "pmid": "32187975",
+     "doi": "10.3390/nu12030780",
+     "source": "pubmed",
+     "title": "Vitamin K Deficiency Bleeding in Infancy.",
+     "year": 2020,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "SUPPORTS",
+     "rank": 8,
+     "relevance": 1
+    },
+    {
+     "pmid": "11220402",
+     "doi": "10.2165/00128072-200103010-00001",
+     "source": "pubmed",
+     "title": "Vitamin K in neonates: how to administer, when and to whom.",
+     "year": 2001,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "SUPPORTS",
+     "rank": 9,
+     "relevance": 1
+    },
+    {
+     "pmid": "10569231",
+     "doi": "10.1111/j.1651-2227.1999.tb01308.x",
+     "source": "pubmed",
+     "title": "Vitamin K status of lactating mothers and their infants.",
+     "year": 1999,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "SUPPORTS",
+     "rank": 10,
+     "relevance": 1
+    }
+   ]
+  },
+  {
+   "claim_id": "c7",
+   "text": "vitamin K is essential for blood clotting",
+   "category": "nutrition",
+   "claim_kind": "research_question",
+   "label": "NO_MISINFO",
+   "deciding": false,
+   "start_seconds": 43.5999984741211,
+   "end_seconds": 46.6800003051758,
+   "search_trail": {
+    "version": 3,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Blood Coagulation\"[MeSH Terms] OR coagulation[tiab] OR clotting[tiab])",
+      "results": 20,
+      "after_filters": 20,
+      "new_records": 20,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false,
+      "kind": "intervention_outcome"
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 20,
+     "screened": 20,
+     "kept": 10
+    },
+    "budget": {
+     "rounds_used": 1,
+     "rounds_max": 3,
+     "exhausted": false,
+     "evidence_cap": 10,
+     "ladder_exhausted": false
+    },
+    "planning": {
+     "language": "en",
+     "translated": false,
+     "search_text": null,
+     "translation_error": null,
+     "context_concept": null,
+     "citation": null,
+     "assistant_used": false,
+     "assistant_error": null,
+     "no_query_reason": null
+    },
+    "find_study": null,
+    "shared_studies": [
+     {
+      "evidence_id": "ev_42986716",
+      "pmid": "42986716",
+      "doi": "10.1001/jama.2026.21764",
+      "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+      "shared_from": "c2",
+      "outcome": "not_kept_by_reranker",
+      "reason": "below the relevance threshold or outside the cap of 10",
+      "relevance_score": null
+     }
+    ],
+    "screened_out": [
+     {
+      "evidence_id": "ev_27067969",
+      "pmid": "27067969",
+      "title": "Anticoagulants versus cancer.",
+      "year": 2016,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_7823718",
+      "pmid": "7823718",
+      "title": "Vitamin K.",
+      "year": 1995,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_11841335",
+      "pmid": "11841335",
+      "title": "Blood coagulation.",
+      "year": 2002,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_18841273",
+      "pmid": "18841273",
+      "title": "Vitamin K-dependent proteins: functions in blood coagulation and beyond.",
+      "year": 2008,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_4576124",
+      "pmid": "4576124",
+      "title": "Coagulation problems.",
+      "year": 1973,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_33650246",
+      "pmid": "33650246",
+      "title": "Targeting multiple enzymes in vitamin K metabolism for anticoagulation.",
+      "year": 2021,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_37427548",
+      "pmid": "37427548",
+      "title": "Management of major bleeding for anticoagulated patients in the Emergency Department: an European experts consensus statement.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_36014904",
+      "pmid": "36014904",
+      "title": "Role of Vitamin K in Selected Malignant Neoplasms in Women.",
+      "year": 2022,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_35057443",
+      "pmid": "35057443",
+      "title": "Biological Role of Vitamin K-With Particular Emphasis on Cardiovascular and Renal Aspects.",
+      "year": 2022,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_38945667",
+      "pmid": "38945667",
+      "title": "Time to simplify perioperative management of vitamin K antagonists.",
+      "year": 2024,
+      "source": "pubmed"
+     }
+    ],
+    "screened_out_truncated": false
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact that vitamin K \"is essential for blood clotting\" and goes on to explain the bleeding risk without it."
+    }
+   ],
+   "verdict": "SUPPORTED",
+   "explanation": "Several reviews describe vitamin K as an essential cofactor for γ-carboxylation of clotting factors (ev_37337123, ev_17143047, ev_30791399). Clinical reports back this up: when vitamin K-dependent carboxylation fails, through an inherited enzyme defect or vitamin E interference, patients bleed, and vitamin K treatment corrects the clotting problem (ev_40876756, ev_36949518).",
+   "limitations": [
+    "Mostly narrative reviews and case reports; this is established physiology rather than something tested in trials",
+    "No authoritative reference source among the retrieved items"
+   ],
+   "retrieval_attempts": 1,
+   "evidence": [
+    {
+     "pmid": "33895864",
+     "doi": "10.1007/s00228-020-03074-w",
+     "source": "pubmed",
+     "title": "Drug-drug interactions between vitamin K antagonists and statins: a systematic review.",
+     "year": 2021,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review"
+     ],
+     "study_type": "systematic_review",
+     "relation": "CONSIDERED",
+     "rank": 1,
+     "relevance": 0.8367
+    },
+    {
+     "pmid": "30791399",
+     "doi": "10.3390/ijms20040896",
+     "source": "pubmed",
+     "title": "Vitamin K: Double Bonds beyond Coagulation Insights into Differences between Vitamin K1 and K2 in Health and Disease.",
+     "year": 2019,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "SUPPORTS",
+     "rank": 2,
+     "relevance": 1
+    },
+    {
+     "pmid": "37337123",
+     "doi": "10.1038/s42255-023-00821-y",
+     "source": "pubmed",
+     "title": "Diverse biological functions of vitamin K: from coagulation to ferroptosis.",
+     "year": 2023,
+     "publication_type": [
+      "Journal Article",
+      "Review",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "study_type": "narrative_review",
+     "relation": "SUPPORTS",
+     "rank": 3,
+     "relevance": 1
+    },
+    {
+     "pmid": "23590754",
+     "doi": "10.1017/s0007114513001013",
+     "source": "pubmed",
+     "title": "The role of menaquinones (vitamin K₂) in human health.",
+     "year": 2013,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Research Support, U.S. Gov't, Non-P.H.S.",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 4,
+     "relevance": 0.8367
+    },
+    {
+     "pmid": "31295676",
+     "doi": "10.1016/j.rmed.2019.07.005",
+     "source": "pubmed",
+     "title": "Vitamin K and cystic fibrosis: A gordian knot that deserves our attention.",
+     "year": 2019,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "SUPPORTS",
+     "rank": 5,
+     "relevance": 0.8367
+    },
+    {
+     "pmid": "17143047",
+     "doi": "10.1097/mco.0b013e328011c46c",
+     "source": "pubmed",
+     "title": "Dietary vitamin K intake and anticoagulation in elderly patients.",
+     "year": 2007,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "SUPPORTS",
+     "rank": 6,
+     "relevance": 0.8367
+    },
+    {
+     "pmid": "40876756",
+     "doi": "10.1016/j.jtha.2025.08.011",
+     "source": "pubmed",
+     "title": "Molecular insights into the comorbidity of vitamin K-dependent clotting factor deficiency and chondrodysplasia punctata.",
+     "year": 2025,
+     "publication_type": [
+      "Journal Article",
+      "Case Reports",
+      "Research Support, N.I.H., Extramural"
+     ],
+     "study_type": "case_report",
+     "relation": "SUPPORTS",
+     "rank": 7,
+     "relevance": 0.8367
+    },
+    {
+     "pmid": "38795872",
+     "doi": "10.1016/j.jtha.2024.05.013",
+     "source": "pubmed",
+     "title": "The historical origins of modern international normalized ratio targets.",
+     "year": 2024,
+     "publication_type": [
+      "Journal Article",
+      "Historical Article",
+      "Review",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 8,
+     "relevance": 0.7
+    },
+    {
+     "pmid": "24515754",
+     "doi": "10.1007/s11239-014-1060-y",
+     "source": "pubmed",
+     "title": "Transitioning to and from the novel oral anticoagulants: a management strategy for clinicians.",
+     "year": 2014,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 9,
+     "relevance": 0.7
+    },
+    {
+     "pmid": "36949518",
+     "doi": "10.1186/s13256-023-03827-y",
+     "source": "pubmed",
+     "title": "Vitamin E-induced coagulopathy in a young patient: a case report.",
+     "year": 2023,
+     "publication_type": [
+      "Case Reports",
+      "Journal Article"
+     ],
+     "study_type": "case_report",
+     "relation": "SUPPORTS",
+     "rank": 10,
+     "relevance": 0.7
+    }
+   ]
+  },
+  {
+   "claim_id": "c8",
+   "text": "without enough vitamin K, babies can develop spontaneous internal bleeding, sometimes without any warning",
+   "category": "causation",
+   "claim_kind": "research_question",
+   "label": "NO_MISINFO",
+   "deciding": false,
+   "start_seconds": 46.7999992370605,
+   "end_seconds": 52.4000015258789,
+   "search_trail": {
+    "version": 3,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (Hemorrhage[MeSH Terms] OR bleeding[tiab] OR hemorrhage[tiab]) AND (Infant[MeSH Terms] OR infants[tiab])",
+      "results": 20,
+      "after_filters": 20,
+      "new_records": 20,
+      "from_cache": true,
+      "failed": false,
+      "error_type": null,
+      "repeat": false,
+      "kind": "pico"
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 20,
+     "screened": 20,
+     "kept": 10
+    },
+    "budget": {
+     "rounds_used": 1,
+     "rounds_max": 3,
+     "exhausted": false,
+     "evidence_cap": 10,
+     "ladder_exhausted": false
+    },
+    "planning": {
+     "language": "en",
+     "translated": false,
+     "search_text": null,
+     "translation_error": null,
+     "context_concept": null,
+     "citation": null,
+     "assistant_used": false,
+     "assistant_error": null,
+     "no_query_reason": null
+    },
+    "find_study": null,
+    "shared_studies": [
+     {
+      "evidence_id": "ev_42986716",
+      "pmid": "42986716",
+      "doi": "10.1001/jama.2026.21764",
+      "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+      "shared_from": "c2",
+      "outcome": "kept",
+      "reason": "",
+      "relevance_score": 1
+     }
+    ],
+    "screened_out": [
+     {
+      "evidence_id": "ev_34496783",
+      "pmid": "34496783",
+      "title": "Vitamin K prophylaxis in newborns.",
+      "year": 2021,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_32019806",
+      "pmid": "32019806",
+      "title": "Refusal of Intramuscular Vitamin K by Parents of Newborns: A Review.",
+      "year": 2020,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_22315277",
+      "pmid": "22315277",
+      "title": "Antithrombotic therapy in neonates and children: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines.",
+      "year": 2012,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_12892158",
+      "pmid": "12892158",
+      "title": "Weekly oral vitamin K prophylaxis in Denmark.",
+      "year": 2003,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_36117074",
+      "pmid": "36117074",
+      "title": "Hemorrhagic Disease of the Newborn: A Case Series Illustrating Preventable Harm.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_29913536",
+      "pmid": "29913536",
+      "title": "Hemostasis in the Very Young.",
+      "year": 2018,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_34486992",
+      "pmid": "34486992",
+      "title": "Vitamin K deficient bleeding and COVID-19: How are they related?",
+      "year": 2021,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_36707666",
+      "pmid": "36707666",
+      "title": "Neonatologists and vitamin K hesitancy.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_31502702",
+      "pmid": "31502702",
+      "title": "New ways of preventing vitamin K deficiency bleeding in infancy.",
+      "year": 2019,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_5165761",
+      "pmid": "5165761",
+      "title": "Vitamin K1.",
+      "year": 1971,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_38569860",
+      "pmid": "38569860",
+      "title": "[Perioperative management for fracture in a child with homozygous congenital protein C deficiency].",
+      "year": 2024,
+      "source": "pubmed"
+     }
+    ],
+    "screened_out_truncated": false
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact: \"Without enough of it, babies can develop spontaneous internal bleeding, sometimes without any warning.\" They then use it to justify routine vitamin K injections."
+    }
+   ],
+   "verdict": "SUPPORTED",
+   "explanation": "A position paper, a systematic review and several reviews describe vitamin K deficiency bleeding (VKDB) in infants as serious and sometimes life-threatening, including bleeding inside the skull. Two large cohort studies, one Swedish and one American, found that infants who did not get the vitamin K shot at birth had a higher risk of bleeding and of bleeding inside the skull. Vitamin K shots at birth greatly reduced the risk of VKDB.",
+   "limitations": [
+    "Abstracts do not explicitly describe bleeding as occurring 'without warning'; that part of the claim is inferred from general clinical knowledge.",
+    "Cohort data are observational and rely on diagnosis codes"
+   ],
+   "retrieval_attempts": 1,
+   "evidence": [
+    {
+     "pmid": "27109090",
+     "doi": "10.1038/jp.2016.30",
+     "source": "pubmed",
+     "title": "Vitamin K prophylaxis for prevention of vitamin K deficiency bleeding: a systematic review.",
+     "year": 2016,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review"
+     ],
+     "study_type": "systematic_review",
+     "relation": "SUPPORTS",
+     "rank": 1,
+     "relevance": 1
+    },
+    {
+     "pmid": "27050049",
+     "doi": "10.1097/mpg.0000000000001232",
+     "source": "pubmed",
+     "title": "Prevention of Vitamin K Deficiency Bleeding in Newborn Infants: A Position Paper by the ESPGHAN Committee on Nutrition.",
+     "year": 2016,
+     "publication_type": [
+      "Journal Article",
+      "Practice Guideline"
+     ],
+     "study_type": "guideline",
+     "relation": "SUPPORTS",
+     "rank": 2,
+     "relevance": 1
+    },
+    {
+     "pmid": "42440325",
+     "doi": "10.1001/jamapediatrics.2026.2606",
+     "source": "pubmed",
+     "title": "Vitamin K Prophylaxis in Newborns and Bleeding in Infancy.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "SUPPORTS",
+     "rank": 3,
+     "relevance": 1
+    },
+    {
+     "pmid": "40629667",
+     "doi": "10.1002/pbc.31889",
+     "source": "pubmed",
+     "title": "International Perspectives on Vitamin K Deficiency Bleeding in Infants: A Cross-Sectional Questionnaire-Based Survey.",
+     "year": 2025,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "SUPPORTS",
+     "rank": 4,
+     "relevance": 1
+    },
+    {
+     "pmid": "42986716",
+     "doi": "10.1001/jama.2026.21764",
+     "source": "pubmed",
+     "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "SUPPORTS",
+     "rank": 5,
+     "relevance": 1
+    },
+    {
+     "pmid": "32187975",
+     "doi": "10.3390/nu12030780",
+     "source": "pubmed",
+     "title": "Vitamin K Deficiency Bleeding in Infancy.",
+     "year": 2020,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "SUPPORTS",
+     "rank": 6,
+     "relevance": 1
+    },
+    {
+     "pmid": "34196053",
+     "doi": "10.1111/apa.16011",
+     "source": "pubmed",
+     "title": "Intracranial haemorrhage associated with Vitamin K deficiency in Egyptian infants.",
+     "year": 2021,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "SUPPORTS",
+     "rank": 7,
+     "relevance": 1
+    },
+    {
+     "pmid": "38071415",
+     "doi": "10.1111/eci.14141",
+     "source": "pubmed",
+     "title": "Vitamin K insufficiency and the prophylaxis strategy in term healthy infants: A multicentre study.",
+     "year": 2024,
+     "publication_type": [
+      "Observational Study",
+      "Multicenter Study",
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 8,
+     "relevance": 0.8367
+    },
+    {
+     "pmid": "38057072",
+     "doi": "10.1016/j.jacc.2023.10.010",
+     "source": "pubmed",
+     "title": "Apixaban for Prevention of Thromboembolism in Pediatric Heart Disease.",
+     "year": 2023,
+     "publication_type": [
+      "Randomized Controlled Trial",
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Research Support, N.I.H., Extramural"
+     ],
+     "study_type": "rct",
+     "relation": "CONSIDERED",
+     "rank": 9,
+     "relevance": 0.56
+    },
+    {
+     "pmid": "35190810",
+     "doi": "10.1542/peds.2021-056036",
+     "source": "pubmed",
+     "title": "Vitamin K and the Newborn Infant.",
+     "year": 2022,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "other",
+     "relation": "SUPPORTS",
+     "rank": 10,
+     "relevance": 0.8367
+    }
+   ]
+  },
+  {
+   "claim_id": "c9",
+   "text": "bleeding in the brain can cause permanent neurological damage or death",
+   "category": "causation",
+   "claim_kind": "research_question",
+   "label": "NO_MISINFO",
+   "deciding": false,
+   "start_seconds": 49.7200012207031,
+   "end_seconds": 55.2400016784668,
+   "search_trail": {
+    "version": 3,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "(\"Intracranial Hemorrhages\"[MeSH Terms] OR \"intracranial hemorrhage\"[tiab])",
+      "results": 20,
+      "after_filters": 20,
+      "new_records": 20,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false,
+      "kind": "intervention_only"
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 20,
+     "screened": 20,
+     "kept": 1
+    },
+    "budget": {
+     "rounds_used": 1,
+     "rounds_max": 3,
+     "exhausted": false,
+     "evidence_cap": 10,
+     "ladder_exhausted": false
+    },
+    "planning": {
+     "language": "en",
+     "translated": false,
+     "search_text": null,
+     "translation_error": null,
+     "context_concept": null,
+     "citation": null,
+     "assistant_used": false,
+     "assistant_error": null,
+     "no_query_reason": null
+    },
+    "find_study": null,
+    "shared_studies": [
+     {
+      "evidence_id": "ev_42986716",
+      "pmid": "42986716",
+      "doi": "10.1001/jama.2026.21764",
+      "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+      "shared_from": "c2",
+      "outcome": "off_topic",
+      "reason": "not on topic for this claim's intervention (T49 check)",
+      "relevance_score": null
+     }
+    ],
+    "screened_out": [
+     {
+      "evidence_id": "ev_39192020",
+      "pmid": "39192020",
+      "title": "Birth-related intracranial hemorrhage.",
+      "year": 2024,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_33168218",
+      "pmid": "33168218",
+      "title": "Intracranial Hemorrhage.",
+      "year": 2020,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_35900787",
+      "pmid": "35900787",
+      "title": "Fibrinolysis without intracranial hemorrhage.",
+      "year": 2022,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_35941231",
+      "pmid": "35941231",
+      "title": "Saccular intracranial neonatal aneurysm.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_22974648",
+      "pmid": "22974648",
+      "title": "Intracranial hemorrhage.",
+      "year": 2012,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_35202486",
+      "pmid": "35202486",
+      "title": "Intracranial haemorrhage in AML patients.",
+      "year": 2022,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_27052980",
+      "pmid": "27052980",
+      "title": "Intracranial Hemorrhage in the Neonate.",
+      "year": 2016,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_35032839",
+      "pmid": "35032839",
+      "title": "Nontraumatic brain parenchymal hemorrhage: The usual suspects and more.",
+      "year": 2022,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_28915173",
+      "pmid": "28915173",
+      "title": "Intracranial Hemorrhage and Extracorporeal Membrane Oxygenation: Chicken or the Egg?",
+      "year": 2017,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_34711548",
+      "pmid": "34711548",
+      "title": "Intracranial Hemorrhage on Prenatal MR Imaging.",
+      "year": 2021,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_36333038",
+      "pmid": "36333038",
+      "title": "Advances in Intracranial Hemorrhage: Subarachnoid Hemorrhage and Intracerebral Hemorrhage.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_24735739",
+      "pmid": "24735739",
+      "title": "Intracranial hemorrhage in neurosarcoidosis.",
+      "year": 2014,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_37755726",
+      "pmid": "37755726",
+      "title": "Tranexamic Acid, Mortality, and Intracranial Hemorrhage Type in Moderate or Severe Traumatic Brain Injury.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_37847277",
+      "pmid": "37847277",
+      "title": "Vitamin K Antagonists and Intracranial Hemorrhage After Endovascular Thrombectomy-Reply.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_13188006",
+      "pmid": "13188006",
+      "title": "Intracranial hemorrhage.",
+      "year": 1954,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_37879137",
+      "pmid": "37879137",
+      "title": "Intracranial Hemorrhage, Cerebral Venous Thrombosis, and Hypereosinophilia.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_29103866",
+      "pmid": "29103866",
+      "title": "\"An Uncommon Complication of Dengue\".",
+      "year": 2018,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_35109677",
+      "pmid": "35109677",
+      "title": "Association Between Systemic Amyloidosis and Intracranial Hemorrhage.",
+      "year": 2022,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_14914455",
+      "pmid": "14914455",
+      "title": "[Intracranial hemorrhage].",
+      "year": 1951,
+      "source": "pubmed"
+     }
+    ],
+    "screened_out_truncated": false
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact: \"bleeding in the brain can cause permanent neurological damage or death,\" and uses it to justify the newborn vitamin K injection."
+    }
+   ],
+   "verdict": "SUPPORTED",
+   "explanation": "The review says spontaneous intracranial hemorrhage makes up at least 10% of strokes and is a leading cause of death and disability in adults. That matches the claim that bleeding in the brain can cause lasting neurological damage or death.",
+   "limitations": [
+    "The only source is one narrative review that focuses on imaging, not outcomes",
+    "It covers only nontraumatic bleeding, not bleeding caused by injury",
+    "The abstract says 'disability' in general and does not specifically say 'permanent neurological damage'"
+   ],
+   "retrieval_attempts": 1,
+   "evidence": [
+    {
+     "pmid": "20974372",
+     "doi": "10.1016/j.nic.2010.07.003",
+     "source": "pubmed",
+     "title": "Nontraumatic intracranial hemorrhage.",
+     "year": 2010,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "SUPPORTS",
+     "rank": 1,
+     "relevance": 0.483
+    }
+   ]
+  },
+  {
+   "claim_id": "c10",
+   "text": "newborns have been routinely given a vitamin K injection for more than 60 years",
+   "category": "other",
+   "claim_kind": "research_question",
+   "label": "CANNOT_RECOGNIZE",
+   "deciding": false,
+   "start_seconds": 55.439998626709,
+   "end_seconds": 61.5999984741211,
+   "search_trail": {
+    "version": 3,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Injections, Intramuscular\"[MeSH Terms] OR injection[tiab] OR intramuscular[tiab]) AND (\"Infant, Newborn\"[MeSH Terms] OR newborn[tiab] OR neonatal[tiab])",
+      "results": 20,
+      "after_filters": 19,
+      "new_records": 19,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false,
+      "kind": "intervention_population"
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 20,
+     "screened": 19,
+     "kept": 10
+    },
+    "budget": {
+     "rounds_used": 1,
+     "rounds_max": 3,
+     "exhausted": false,
+     "evidence_cap": 10,
+     "ladder_exhausted": false
+    },
+    "planning": {
+     "language": "en",
+     "translated": false,
+     "search_text": null,
+     "translation_error": null,
+     "context_concept": null,
+     "citation": null,
+     "assistant_used": false,
+     "assistant_error": null,
+     "no_query_reason": null
+    },
+    "find_study": null,
+    "shared_studies": [
+     {
+      "evidence_id": "ev_42986716",
+      "pmid": "42986716",
+      "doi": "10.1001/jama.2026.21764",
+      "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+      "shared_from": "c2",
+      "outcome": "kept",
+      "reason": "",
+      "relevance_score": 0.85
+     }
+    ],
+    "screened_out": [
+     {
+      "evidence_id": "ev_35190810",
+      "pmid": "35190810",
+      "title": "Vitamin K and the Newborn Infant.",
+      "year": 2022,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_32019806",
+      "pmid": "32019806",
+      "title": "Refusal of Intramuscular Vitamin K by Parents of Newborns: A Review.",
+      "year": 2020,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_22315277",
+      "pmid": "22315277",
+      "title": "Antithrombotic therapy in neonates and children: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines.",
+      "year": 2012,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_12892158",
+      "pmid": "12892158",
+      "title": "Weekly oral vitamin K prophylaxis in Denmark.",
+      "year": 2003,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_30338695",
+      "pmid": "30338695",
+      "title": "Lotus Birth: A Case Series Report on Umbilical Nonseverance.",
+      "year": 2019,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_36707666",
+      "pmid": "36707666",
+      "title": "Neonatologists and vitamin K hesitancy.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_38161855",
+      "pmid": "38161855",
+      "title": "Case Series of Multisystem Inflammatory Syndrome in Neonates (MIS-N) With a Link to Coagulopathy.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_33910804",
+      "pmid": "33910804",
+      "title": "Spontaneous neonatal scrotal haematoma: an early manifestation of severe haemophilia.",
+      "year": 2021,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_11220402",
+      "pmid": "11220402",
+      "title": "Vitamin K in neonates: how to administer, when and to whom.",
+      "year": 2001,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_10569231",
+      "pmid": "10569231",
+      "title": "Vitamin K status of lactating mothers and their infants.",
+      "year": 1999,
+      "source": "pubmed"
+     }
+    ],
+    "screened_out_truncated": false
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact: \"That's why we routinely give newborns a vitamin K injection for more than 60 years,\" and defends the practice."
+    }
+   ],
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "explanation": "The retrieved papers show that newborns are routinely given intramuscular vitamin K now and that guidelines recommend it, and the Swedish cohort records this from 2003 onward. None of them says when routine use began, so the claim that it has been routine for more than 60 years is not tested.",
+   "limitations": [
+    "No paper gives the history or start date of routine newborn vitamin K injections",
+    "The evidence covers current practice and how well it works, not how long it has been in use",
+    "Practice differs by country: some countries use oral doses instead of the injection"
+   ],
+   "retrieval_attempts": 1,
+   "evidence": [
+    {
+     "pmid": "27109090",
+     "doi": "10.1038/jp.2016.30",
+     "source": "pubmed",
+     "title": "Vitamin K prophylaxis for prevention of vitamin K deficiency bleeding: a systematic review.",
+     "year": 2016,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review"
+     ],
+     "study_type": "systematic_review",
+     "relation": "CONSIDERED",
+     "rank": 1,
+     "relevance": 0.85
+    },
+    {
+     "pmid": "11034761",
+     "doi": "10.1002/14651858.cd002776",
+     "source": "pubmed",
+     "title": "Prophylactic vitamin K for vitamin K deficiency bleeding in neonates.",
+     "year": 2000,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review"
+     ],
+     "study_type": "systematic_review",
+     "relation": "CONSIDERED",
+     "rank": 2,
+     "relevance": 0.85
+    },
+    {
+     "pmid": "27050049",
+     "doi": "10.1097/mpg.0000000000001232",
+     "source": "pubmed",
+     "title": "Prevention of Vitamin K Deficiency Bleeding in Newborn Infants: A Position Paper by the ESPGHAN Committee on Nutrition.",
+     "year": 2016,
+     "publication_type": [
+      "Journal Article",
+      "Practice Guideline"
+     ],
+     "study_type": "guideline",
+     "relation": "CONSIDERED",
+     "rank": 3,
+     "relevance": 0.85
+    },
+    {
+     "pmid": "39743430",
+     "doi": "10.1016/j.jpurol.2024.12.014",
+     "source": "pubmed",
+     "title": "Neonatal circumcisions and parental refusal of intramuscular vitamin K: A review of the literature and current guidelines.",
+     "year": 2024,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 4,
+     "relevance": 1
+    },
+    {
+     "pmid": "42440325",
+     "doi": "10.1001/jamapediatrics.2026.2606",
+     "source": "pubmed",
+     "title": "Vitamin K Prophylaxis in Newborns and Bleeding in Infancy.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 5,
+     "relevance": 0.85
+    },
+    {
+     "pmid": "38071415",
+     "doi": "10.1111/eci.14141",
+     "source": "pubmed",
+     "title": "Vitamin K insufficiency and the prophylaxis strategy in term healthy infants: A multicentre study.",
+     "year": 2024,
+     "publication_type": [
+      "Observational Study",
+      "Multicenter Study",
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 6,
+     "relevance": 0.85
+    },
+    {
+     "pmid": "40629667",
+     "doi": "10.1002/pbc.31889",
+     "source": "pubmed",
+     "title": "International Perspectives on Vitamin K Deficiency Bleeding in Infants: A Cross-Sectional Questionnaire-Based Survey.",
+     "year": 2025,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 7,
+     "relevance": 0.85
+    },
+    {
+     "pmid": "42986716",
+     "doi": "10.1001/jama.2026.21764",
+     "source": "pubmed",
+     "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 8,
+     "relevance": 0.85
+    },
+    {
+     "pmid": "34496783",
+     "doi": "10.1186/s12887-021-02701-4",
+     "source": "pubmed",
+     "title": "Vitamin K prophylaxis in newborns.",
+     "year": 2021,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 9,
+     "relevance": 0.85
+    },
+    {
+     "pmid": "32187975",
+     "doi": "10.3390/nu12030780",
+     "source": "pubmed",
+     "title": "Vitamin K Deficiency Bleeding in Infancy.",
+     "year": 2020,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 10,
+     "relevance": 0.85
+    }
+   ]
+  },
+  {
+   "claim_id": "c11",
+   "text": "vitamin K is not a vaccine",
+   "category": "other",
+   "claim_kind": "research_question",
+   "label": "NO_MISINFO",
+   "deciding": false,
+   "start_seconds": 61.6399993896484,
+   "end_seconds": 65.2399978637695,
+   "search_trail": {
+    "version": 3,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (Vaccines[MeSH Terms] OR vaccine[tiab] OR vaccination[tiab])",
+      "results": 20,
+      "after_filters": 19,
+      "new_records": 19,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false,
+      "kind": "intervention_only"
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 20,
+     "screened": 19,
+     "kept": 10
+    },
+    "budget": {
+     "rounds_used": 1,
+     "rounds_max": 3,
+     "exhausted": false,
+     "evidence_cap": 10,
+     "ladder_exhausted": false
+    },
+    "planning": {
+     "language": "en",
+     "translated": false,
+     "search_text": null,
+     "translation_error": null,
+     "context_concept": null,
+     "citation": null,
+     "assistant_used": false,
+     "assistant_error": null,
+     "no_query_reason": null
+    },
+    "find_study": null,
+    "shared_studies": [
+     {
+      "evidence_id": "ev_42986716",
+      "pmid": "42986716",
+      "doi": "10.1001/jama.2026.21764",
+      "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+      "shared_from": "c2",
+      "outcome": "kept",
+      "reason": "",
+      "relevance_score": 0.5
+     }
+    ],
+    "screened_out": [
+     {
+      "evidence_id": "ev_33190689",
+      "pmid": "33190689",
+      "title": "Child Neglect by Any Other Name.",
+      "year": 2020,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_30800770",
+      "pmid": "30800770",
+      "title": "Newborn Care Curriculum: Newborn Medications.",
+      "year": 2017,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_34486992",
+      "pmid": "34486992",
+      "title": "Vitamin K deficient bleeding and COVID-19: How are they related?",
+      "year": 2021,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_36967461",
+      "pmid": "36967461",
+      "title": "Significance of Vitamin Supplementation in Reducing the Severity of COVID-19.",
+      "year": 2024,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_31660588",
+      "pmid": "31660588",
+      "title": "Interaction of adenovirus with antibodies, complement, and coagulation factors.",
+      "year": 2019,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_33817870",
+      "pmid": "33817870",
+      "title": "The precautionary principle, the AstraZeneca COVID-19 vaccine and mixed messaging.",
+      "year": 2021,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_21395600",
+      "pmid": "21395600",
+      "title": "Pharmacovigilance in veterinary medicine in Chile: a pilot study.",
+      "year": 2011,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_30053932",
+      "pmid": "30053932",
+      "title": "Parental Refusal for Treatments, Procedures, and Vaccines in the Newborn Nursery.",
+      "year": 2018,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_40125142",
+      "pmid": "40125142",
+      "title": "The Legality of Vitamin K Refusal in the United States.",
+      "year": 2025,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_41514043",
+      "pmid": "41514043",
+      "title": "Large intracerebral hemorrhage in the setting of vitamin K prophylaxis refusal.",
+      "year": 2026,
+      "source": "pubmed"
+     }
+    ],
+    "screened_out_truncated": false
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states as fact: \"vitamin K is not a vaccine. It's a vitamin that helps prevent a potentially devastating condition.\""
+    }
+   ],
+   "verdict": "SUPPORTED",
+   "explanation": "The retrieved papers describe newborn vitamin K as a vitamin shot given to prevent vitamin K deficiency bleeding. They treat it as separate from vaccines: one review contrasts vitamin K hesitancy with refusal of childhood vaccinations, and other papers list vitamin K and the hepatitis B vaccine as two different newborn interventions. None of the papers suggests vitamin K works by building immunity.",
+   "limitations": [
+    "No paper states outright that vitamin K is not a vaccine; the support comes from how the papers describe and categorise it",
+    "The reviewer was right that the evidence focuses on bleeding prevention rather than classification; it is cited because it consistently presents vitamin K as a vitamin preventing deficiency, as opposed to an immunisation",
+    "This is mostly a definitional fact, so it is better settled by basic pharmacology references than by research papers"
+   ],
+   "retrieval_attempts": 1,
+   "evidence": [
+    {
+     "pmid": "42295764",
+     "doi": "10.1001/jamanetworkopen.2026.18410",
+     "source": "pubmed",
+     "title": "Parental Decline of Newborn Vitamin K and Hepatitis B Vaccine Administration by Newborn Sex.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "other",
+     "relation": "SUPPORTS",
+     "rank": 1,
+     "relevance": 1
+    },
+    {
+     "pmid": "33013255",
+     "doi": "10.1007/s10989-020-10115-6",
+     "source": "pubmed",
+     "title": "Screening of FDA Approved Drugs Against SARS-CoV-2 Main Protease: Coronavirus Disease.",
+     "year": 2021,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "clinical_trial",
+     "relation": "CONSIDERED",
+     "rank": 2,
+     "relevance": 0.7
+    },
+    {
+     "pmid": "36707666",
+     "doi": "10.1038/s41372-023-01611-w",
+     "source": "pubmed",
+     "title": "Neonatologists and vitamin K hesitancy.",
+     "year": 2023,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "SUPPORTS",
+     "rank": 3,
+     "relevance": 0.85
+    },
+    {
+     "pmid": "32654527",
+     "doi": "10.1080/14779072.2020.1794820",
+     "source": "pubmed",
+     "title": "Utilization of percutaneous left atrial appendage closure in patients with atrial fibrillation: an update on patient outcomes.",
+     "year": 2020,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 4,
+     "relevance": 0.7
+    },
+    {
+     "pmid": "33910804",
+     "doi": "10.1136/bcr-2020-241482",
+     "source": "pubmed",
+     "title": "Spontaneous neonatal scrotal haematoma: an early manifestation of severe haemophilia.",
+     "year": 2021,
+     "publication_type": [
+      "Case Reports",
+      "Journal Article"
+     ],
+     "study_type": "case_report",
+     "relation": "CONSIDERED",
+     "rank": 5,
+     "relevance": 0.7
+    },
+    {
+     "pmid": "6366390",
+     "doi": null,
+     "source": "pubmed",
+     "title": "[Post-traumatic nodular scleroderma].",
+     "year": 1983,
+     "publication_type": [
+      "Case Reports",
+      "English Abstract",
+      "Journal Article"
+     ],
+     "study_type": "case_report",
+     "relation": "CONSIDERED",
+     "rank": 6,
+     "relevance": 0.7
+    },
+    {
+     "pmid": "30338695",
+     "doi": "10.1177/0009922818806843",
+     "source": "pubmed",
+     "title": "Lotus Birth: A Case Series Report on Umbilical Nonseverance.",
+     "year": 2019,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "other",
+     "relation": "CONSIDERED",
+     "rank": 7,
+     "relevance": 0.7
+    },
+    {
+     "pmid": "38637841",
+     "doi": "10.1186/s42466-024-00320-9",
+     "source": "pubmed",
+     "title": "New recommendations on cerebral venous and dural sinus thrombosis from the German consensus-based (S2k) guideline.",
+     "year": 2024,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "other",
+     "relation": "CONSIDERED",
+     "rank": 8,
+     "relevance": 0.7
+    },
+    {
+     "pmid": "42986716",
+     "doi": "10.1001/jama.2026.21764",
+     "source": "pubmed",
+     "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "SUPPORTS",
+     "rank": 9,
+     "relevance": 0.5
+    },
+    {
+     "pmid": "36647636",
+     "doi": "10.12182/20230160107",
+     "source": "pubmed",
+     "title": "[Vitamins and Immune System Health].",
+     "year": 2023,
+     "publication_type": [
+      "English Abstract",
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 10,
+     "relevance": 0.55
+    }
+   ]
+  },
+  {
+   "claim_id": "c12",
+   "text": "vitamin K is a vitamin that helps prevent a potentially devastating condition",
+   "category": "prevention",
+   "claim_kind": "research_question",
+   "label": "MISINFO",
+   "deciding": true,
+   "start_seconds": 61.6399993896484,
+   "end_seconds": 67.8399963378906,
+   "search_trail": {
+    "version": 3,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab])",
+      "results": 20,
+      "after_filters": 20,
+      "new_records": 20,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false,
+      "kind": "intervention_only"
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 20,
+     "screened": 20,
+     "kept": 1
+    },
+    "budget": {
+     "rounds_used": 3,
+     "rounds_max": 3,
+     "exhausted": true,
+     "evidence_cap": 10,
+     "ladder_exhausted": true
+    },
+    "planning": {
+     "language": "en",
+     "translated": false,
+     "search_text": null,
+     "translation_error": null,
+     "context_concept": null,
+     "citation": null,
+     "assistant_used": false,
+     "assistant_error": null,
+     "no_query_reason": null
+    },
+    "find_study": null,
+    "shared_studies": [
+     {
+      "evidence_id": "ev_42986716",
+      "pmid": "42986716",
+      "doi": "10.1001/jama.2026.21764",
+      "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+      "shared_from": "c2",
+      "outcome": "not_kept_by_reranker",
+      "reason": "below the relevance threshold or outside the cap of 10",
+      "relevance_score": null
+     }
+    ],
+    "screened_out": [
+     {
+      "evidence_id": "ev_39125301",
+      "pmid": "39125301",
+      "title": "The Importance of Vitamin K and the Combination of Vitamins K and D for Calcium Metabolism and Bone Health: A Review.",
+      "year": 2024,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_34472618",
+      "pmid": "34472618",
+      "title": "Vitamin K - sources, physiological role, kinetics, deficiency, detection, therapeutic use, and toxicity.",
+      "year": 2022,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_30791399",
+      "pmid": "30791399",
+      "title": "Vitamin K: Double Bonds beyond Coagulation Insights into Differences between Vitamin K1 and K2 in Health and Disease.",
+      "year": 2019,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_14127371",
+      "pmid": "14127371",
+      "title": "[ANTICOAGULANT TREATMENT].",
+      "year": 1964,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_27261231",
+      "pmid": "27261231",
+      "title": "Phytonadione oral liquid.",
+      "year": 2016,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_34751053",
+      "pmid": "34751053",
+      "title": "Intravenous phytonadione administered orally in reducing warfarin-related coagulopathy.",
+      "year": 2022,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_13665488",
+      "pmid": "13665488",
+      "title": "Oral phytonadione in neonatal hypoprothrombinemia.",
+      "year": 1959,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_26041821",
+      "pmid": "26041821",
+      "title": "Phytonadione Content in Branded Intravenous Fat Emulsions.",
+      "year": 2017,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_38071415",
+      "pmid": "38071415",
+      "title": "Vitamin K insufficiency and the prophylaxis strategy in term healthy infants: A multicentre study.",
+      "year": 2024,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_3686136",
+      "pmid": "3686136",
+      "title": "Hypoprothrombinemia associated with cefoperazone therapy.",
+      "year": 1987,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_32899501",
+      "pmid": "32899501",
+      "title": "Vitamin K and Kidney Transplantation.",
+      "year": 2020,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_41296108",
+      "pmid": "41296108",
+      "title": "Phylloquinone Attenuates Oxygen-Glucose Deprivation-induced Neuronal Injury by Inhibiting Ferroptosis via the xCT/GPX4 Pathway.",
+      "year": 2025,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_1346954",
+      "pmid": "1346954",
+      "title": "Fatal rodenticide poisoning with brodifacoum.",
+      "year": 1992,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_37660730",
+      "pmid": "37660730",
+      "title": "Phylloquinone is preferable over menadione as a growth factor for Porphyromonas gingivalis.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_14222261",
+      "pmid": "14222261",
+      "title": "FAT-SOLUBLE VITAMINS AND BIOLOGICAL MEMBRANES.",
+      "year": 1964,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_39557455",
+      "pmid": "39557455",
+      "title": "Successful oral phytonadione (vitamin K) challenge following an infusion-related reaction to intravenous phytonadione.",
+      "year": 2024,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_7605163",
+      "pmid": "7605163",
+      "title": "Subcutaneous or intravenous phytonadione?",
+      "year": 1995,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_36648304",
+      "pmid": "36648304",
+      "title": "Effect of phylloquinone on indomethacin-induced gastric ulceration in rats: Role of SIRT-1.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_27337968",
+      "pmid": "27337968",
+      "title": "Phylloquinone (Vitamin K1): Occurrence, Biosynthesis and Functions.",
+      "year": 2017,
+      "source": "pubmed"
+     }
+    ],
+    "screened_out_truncated": false
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "Speaker states as fact: \"vitamin K is not a vaccine. It's a vitamin that helps prevent a potentially devastating condition,\" and calls the evidence for the injection \"overwhelming.\""
+    }
+   ],
+   "verdict": "UNSUPPORTED",
+   "explanation": "None of the retrieved evidence shows that vitamin K helps prevent a condition. The only paper is a case report in which high-dose vitamin K (phytonadione) was used to treat a bleeding disorder caused by brodifacoum, a rat poison. It does not test prevention.",
+   "limitations": [
+    "The claim does not name the condition. It most likely means vitamin K deficiency bleeding in newborns, which none of the evidence covers.",
+    "The only evidence is a single case report about treating poisoning, not about preventing anything.",
+    "No official reference was retrieved, even though vitamin K's role in blood clotting is well documented elsewhere."
+   ],
+   "retrieval_attempts": 3,
+   "evidence": [
+    {
+     "pmid": "24688037",
+     "doi": "10.2146/ajhp130537",
+     "source": "pubmed",
+     "title": "Prolonged coagulopathy after brodifacoum exposure.",
+     "year": 2014,
+     "publication_type": [
+      "Case Reports",
+      "Journal Article"
+     ],
+     "study_type": "case_report",
+     "relation": "CONSIDERED",
+     "rank": 1,
+     "relevance": 0.4041
+    }
+   ]
+  },
+  {
+   "claim_id": "c13",
+   "text": "the studies are observational, so they cannot prove that every bleeding event was caused by skipping vitamin K",
+   "category": "evidence_meta",
+   "claim_kind": "research_question",
+   "label": "CANNOT_RECOGNIZE",
+   "deciding": false,
+   "start_seconds": 72.6800003051758,
+   "end_seconds": 78.0800018310547,
+   "search_trail": {
+    "version": 3,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (Hemorrhage[MeSH Terms] OR bleeding[tiab] OR hemorrhage[tiab])",
+      "results": 20,
+      "after_filters": 20,
+      "new_records": 20,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false,
+      "kind": "intervention_outcome"
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 20,
+     "screened": 20,
+     "kept": 10
+    },
+    "budget": {
+     "rounds_used": 1,
+     "rounds_max": 3,
+     "exhausted": false,
+     "evidence_cap": 10,
+     "ladder_exhausted": false
+    },
+    "planning": {
+     "language": "en",
+     "translated": false,
+     "search_text": null,
+     "translation_error": null,
+     "context_concept": null,
+     "citation": null,
+     "assistant_used": false,
+     "assistant_error": null,
+     "no_query_reason": null
+    },
+    "find_study": null,
+    "shared_studies": [
+     {
+      "evidence_id": "ev_42986716",
+      "pmid": "42986716",
+      "doi": "10.1001/jama.2026.21764",
+      "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+      "shared_from": "c2",
+      "outcome": "off_topic",
+      "reason": "not on topic for this claim's intervention (T49 check)",
+      "relevance_score": null
+     }
+    ],
+    "screened_out": [
+     {
+      "evidence_id": "ev_36117074",
+      "pmid": "36117074",
+      "title": "Hemorrhagic Disease of the Newborn: A Case Series Illustrating Preventable Harm.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_29913536",
+      "pmid": "29913536",
+      "title": "Hemostasis in the Very Young.",
+      "year": 2018,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_14159598",
+      "pmid": "14159598",
+      "title": "CIRRHOSIS: GENERAL CONSIDERATIONS.",
+      "year": 1964,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_32750627",
+      "pmid": "32750627",
+      "title": "A review of guidelines on anticoagulation reversal across different clinical scenarios - Is there a general consensus?",
+      "year": 2020,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_24948333",
+      "pmid": "24948333",
+      "title": "Rivaroxaban and stroke prevention in patients with atrial fibrillation: new evidence.",
+      "year": 2014,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_39283750",
+      "pmid": "39283750",
+      "title": "Clinical outcomes of patients receiving long-term fondaparinux for thrombotic antiphospholipid syndrome.",
+      "year": 2024,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_36949518",
+      "pmid": "36949518",
+      "title": "Vitamin E-induced coagulopathy in a young patient: a case report.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_25903533",
+      "pmid": "25903533",
+      "title": "Bleeding issues in neonates and infants - update 2015.",
+      "year": 2015,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_38388294",
+      "pmid": "38388294",
+      "title": "Association between direct oral anticoagulants and risk of gastrointestinal bleeding.",
+      "year": 2024,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_30152249",
+      "pmid": "30152249",
+      "title": "Non-vitamin-K oral anticoagulants (NOACs) for the prevention of secondary stroke.",
+      "year": 2018,
+      "source": "pubmed"
+     }
+    ],
+    "screened_out_truncated": false
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker says \"these studies are observational, so they cannot prove that every bleeding event was caused by skipping vitamin K.\" They state this as fact, then add that the evidence for the injection is still overwhelming."
+    }
+   ],
+   "verdict": "INSUFFICIENT_EVIDENCE",
+   "explanation": "None of the retrieved papers looks at the design of studies on skipping vitamin K prophylaxis, or at whether bleeding can be blamed on that choice. Most of the papers are about anticoagulant drugs that block vitamin K. The infant papers, a narrative review and a single case report, do not say what kinds of studies exist on vitamin K refusal. So the evidence here cannot confirm or refute the claim.",
+   "limitations": [
+    "Most retrieved papers are about anticoagulant drugs, not newborn vitamin K prophylaxis",
+    "No paper reviews studies of vitamin K refusal or how they were designed",
+    "The claim is about how to read evidence, not a direct medical fact; in general, observational studies cannot prove causation for each individual case"
+   ],
+   "retrieval_attempts": 1,
+   "evidence": [
+    {
+     "pmid": "29687299",
+     "doi": "10.1007/s11239-018-1667-5",
+     "source": "pubmed",
+     "title": "Anticoagulation reversal in vitamin K antagonist-associated intracerebral hemorrhage: a systematic review.",
+     "year": 2018,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review"
+     ],
+     "study_type": "systematic_review",
+     "relation": "CONSIDERED",
+     "rank": 1,
+     "relevance": 1
+    },
+    {
+     "pmid": "33279783",
+     "doi": "10.1016/j.cgh.2020.11.037",
+     "source": "pubmed",
+     "title": "Endoscopy-Related Bleeding and Thromboembolic Events in Patients on Direct Oral Anticoagulants or Vitamin K Antagonists.",
+     "year": 2022,
+     "publication_type": [
+      "Journal Article",
+      "Multicenter Study",
+      "Observational Study",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 2,
+     "relevance": 1
+    },
+    {
+     "pmid": "42123580",
+     "doi": "10.3390/ijms27094000",
+     "source": "pubmed",
+     "title": "Vitamin K Biochemistry and Pharmacokinetics: The Basis of Late Vitamin K Deficiency Intracranial Bleeding in Early Infancy.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 3,
+     "relevance": 1
+    },
+    {
+     "pmid": "37399842",
+     "doi": "10.1055/s-0043-1770724",
+     "source": "pubmed",
+     "title": "Effect of Oral Anticoagulants in Atrial Fibrillation Patients with Polypharmacy: A Meta-analysis.",
+     "year": 2025,
+     "publication_type": [
+      "Journal Article",
+      "Meta-Analysis",
+      "Systematic Review"
+     ],
+     "study_type": "systematic_review",
+     "relation": "CONSIDERED",
+     "rank": 4,
+     "relevance": 0.7
+    },
+    {
+     "pmid": "37847280",
+     "doi": "10.1001/jama.2023.15434",
+     "source": "pubmed",
+     "title": "Vitamin K Antagonists and Intracranial Hemorrhage After Endovascular Thrombectomy.",
+     "year": 2023,
+     "publication_type": [
+      "Letter",
+      "Comment"
+     ],
+     "study_type": "opinion",
+     "relation": "CONSIDERED",
+     "rank": 5,
+     "relevance": 1
+    },
+    {
+     "pmid": "38238225",
+     "doi": "10.1016/j.semnephrol.2023.151478",
+     "source": "pubmed",
+     "title": "Bleeding Risk in Hemodialysis Patients.",
+     "year": 2023,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 6,
+     "relevance": 0.8367
+    },
+    {
+     "pmid": "30559261",
+     "doi": "10.1182/blood-2018-06-820746",
+     "source": "pubmed",
+     "title": "Treatment of bleeding complications in patients on anticoagulant therapy.",
+     "year": 2019,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 7,
+     "relevance": 0.8367
+    },
+    {
+     "pmid": "41669972",
+     "doi": "10.1161/jaha.125.045998",
+     "source": "pubmed",
+     "title": "Efficacy and Safety of Direct-Acting Oral Anticoagulants in Atrial Fibrillation With Hypertrophic Cardiomyopathy.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 8,
+     "relevance": 0.7
+    },
+    {
+     "pmid": "39566681",
+     "doi": "10.1016/j.jaapos.2024.104055",
+     "source": "pubmed",
+     "title": "Orbital hematoma due to vitamin K deficiency in an infant.",
+     "year": 2025,
+     "publication_type": [
+      "Case Reports",
+      "Journal Article"
+     ],
+     "study_type": "case_report",
+     "relation": "CONSIDERED",
+     "rank": 9,
+     "relevance": 0.8367
+    },
+    {
+     "pmid": "26619030",
+     "doi": "10.5858/arpa.2014-0366-rs",
+     "source": "pubmed",
+     "title": "Clinical Applications of 4-Factor Prothrombin Complex Concentrate: A Practical Pathologist's Perspective.",
+     "year": 2015,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "CONSIDERED",
+     "rank": 10,
+     "relevance": 0.7
+    }
+   ]
+  },
+  {
+   "claim_id": "c14",
+   "text": "the evidence supporting the preventive vitamin K injection for newborns is overwhelming",
+   "category": "treatment_efficacy",
+   "claim_kind": "research_question",
+   "label": "NO_MISINFO",
+   "deciding": false,
+   "start_seconds": 78.120002746582,
+   "end_seconds": 83.8399963378906,
+   "search_trail": {
+    "version": 3,
+    "recorded": "graph",
+    "pubmed_queries": [
+     {
+      "round": 1,
+      "query": "(\"Vitamin K\"[MeSH Terms] OR \"vitamin k\"[tiab] OR phytonadione[tiab] OR phylloquinone[tiab]) AND (\"Injections, Intramuscular\"[MeSH Terms] OR injection[tiab] OR intramuscular[tiab]) AND (\"Infant, Newborn\"[MeSH Terms] OR newborn[tiab] OR neonatal[tiab])",
+      "results": 20,
+      "after_filters": 19,
+      "new_records": 19,
+      "from_cache": false,
+      "failed": false,
+      "error_type": null,
+      "repeat": false,
+      "kind": "intervention_population"
+     }
+    ],
+    "references": [],
+    "library": null,
+    "counts": {
+     "retrieved": 20,
+     "screened": 19,
+     "kept": 10
+    },
+    "budget": {
+     "rounds_used": 1,
+     "rounds_max": 3,
+     "exhausted": false,
+     "evidence_cap": 10,
+     "ladder_exhausted": false
+    },
+    "planning": {
+     "language": "en",
+     "translated": false,
+     "search_text": null,
+     "translation_error": null,
+     "context_concept": null,
+     "citation": null,
+     "assistant_used": false,
+     "assistant_error": null,
+     "no_query_reason": null
+    },
+    "find_study": null,
+    "shared_studies": [
+     {
+      "evidence_id": "ev_42986716",
+      "pmid": "42986716",
+      "doi": "10.1001/jama.2026.21764",
+      "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+      "shared_from": "c2",
+      "outcome": "kept",
+      "reason": "",
+      "relevance_score": 0.85
+     }
+    ],
+    "screened_out": [
+     {
+      "evidence_id": "ev_35190810",
+      "pmid": "35190810",
+      "title": "Vitamin K and the Newborn Infant.",
+      "year": 2022,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_32019806",
+      "pmid": "32019806",
+      "title": "Refusal of Intramuscular Vitamin K by Parents of Newborns: A Review.",
+      "year": 2020,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_22315277",
+      "pmid": "22315277",
+      "title": "Antithrombotic therapy in neonates and children: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines.",
+      "year": 2012,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_12892158",
+      "pmid": "12892158",
+      "title": "Weekly oral vitamin K prophylaxis in Denmark.",
+      "year": 2003,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_30338695",
+      "pmid": "30338695",
+      "title": "Lotus Birth: A Case Series Report on Umbilical Nonseverance.",
+      "year": 2019,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_36707666",
+      "pmid": "36707666",
+      "title": "Neonatologists and vitamin K hesitancy.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_38161855",
+      "pmid": "38161855",
+      "title": "Case Series of Multisystem Inflammatory Syndrome in Neonates (MIS-N) With a Link to Coagulopathy.",
+      "year": 2023,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_33910804",
+      "pmid": "33910804",
+      "title": "Spontaneous neonatal scrotal haematoma: an early manifestation of severe haemophilia.",
+      "year": 2021,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_11220402",
+      "pmid": "11220402",
+      "title": "Vitamin K in neonates: how to administer, when and to whom.",
+      "year": 2001,
+      "source": "pubmed"
+     },
+     {
+      "evidence_id": "ev_10569231",
+      "pmid": "10569231",
+      "title": "Vitamin K status of lactating mothers and their infants.",
+      "year": 1999,
+      "source": "pubmed"
+     }
+    ],
+    "screened_out_truncated": false
+   },
+   "stances": [
+    {
+     "stance": "ENDORSES",
+     "rationale": "The speaker states \"the evidence supporting this preventive injection is overwhelming\" and urges parents to get accurate information and share the video. This is a direct endorsement, even after the caveat that the studies are observational."
+    }
+   ],
+   "verdict": "SUPPORTED",
+   "explanation": "Every study points the same way. Randomised trials show a single injection of vitamin K into the muscle prevents bleeding in the first week of life. Pooled surveillance data show a very large drop in late vitamin K deficiency bleeding (relative risk 0.02), and two cohorts of about 2 and 5 million infants link going without the injection to more bleeding and brain bleeds (about 2.4 to 2.9 times as likely).",
+   "limitations": [
+    "No randomised trials test the injection against late vitamin K deficiency bleeding; for that outcome the evidence is observational, and one systematic review rates it as low quality.",
+    "The reviewer is right that these gaps make 'overwhelming' a strong word, but a missing trial is not a finding against the injection. No paper finds the injection ineffective, and the effect sizes are very large.",
+    "The large cohort studies show association, not proof of cause, and they use diagnostic codes for bleeding."
+   ],
+   "retrieval_attempts": 1,
+   "evidence": [
+    {
+     "pmid": "27109090",
+     "doi": "10.1038/jp.2016.30",
+     "source": "pubmed",
+     "title": "Vitamin K prophylaxis for prevention of vitamin K deficiency bleeding: a systematic review.",
+     "year": 2016,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review"
+     ],
+     "study_type": "systematic_review",
+     "relation": "SUPPORTS",
+     "rank": 1,
+     "relevance": 0.85
+    },
+    {
+     "pmid": "11034761",
+     "doi": "10.1002/14651858.cd002776",
+     "source": "pubmed",
+     "title": "Prophylactic vitamin K for vitamin K deficiency bleeding in neonates.",
+     "year": 2000,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review"
+     ],
+     "study_type": "systematic_review",
+     "relation": "SUPPORTS",
+     "rank": 2,
+     "relevance": 0.85
+    },
+    {
+     "pmid": "27050049",
+     "doi": "10.1097/mpg.0000000000001232",
+     "source": "pubmed",
+     "title": "Prevention of Vitamin K Deficiency Bleeding in Newborn Infants: A Position Paper by the ESPGHAN Committee on Nutrition.",
+     "year": 2016,
+     "publication_type": [
+      "Journal Article",
+      "Practice Guideline"
+     ],
+     "study_type": "guideline",
+     "relation": "SUPPORTS",
+     "rank": 3,
+     "relevance": 0.85
+    },
+    {
+     "pmid": "39743430",
+     "doi": "10.1016/j.jpurol.2024.12.014",
+     "source": "pubmed",
+     "title": "Neonatal circumcisions and parental refusal of intramuscular vitamin K: A review of the literature and current guidelines.",
+     "year": 2024,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "SUPPORTS",
+     "rank": 4,
+     "relevance": 1
+    },
+    {
+     "pmid": "42440325",
+     "doi": "10.1001/jamapediatrics.2026.2606",
+     "source": "pubmed",
+     "title": "Vitamin K Prophylaxis in Newborns and Bleeding in Infancy.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "SUPPORTS",
+     "rank": 5,
+     "relevance": 0.85
+    },
+    {
+     "pmid": "38071415",
+     "doi": "10.1111/eci.14141",
+     "source": "pubmed",
+     "title": "Vitamin K insufficiency and the prophylaxis strategy in term healthy infants: A multicentre study.",
+     "year": 2024,
+     "publication_type": [
+      "Observational Study",
+      "Multicenter Study",
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 6,
+     "relevance": 0.85
+    },
+    {
+     "pmid": "40629667",
+     "doi": "10.1002/pbc.31889",
+     "source": "pubmed",
+     "title": "International Perspectives on Vitamin K Deficiency Bleeding in Infants: A Cross-Sectional Questionnaire-Based Survey.",
+     "year": 2025,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "CONSIDERED",
+     "rank": 7,
+     "relevance": 0.85
+    },
+    {
+     "pmid": "42986716",
+     "doi": "10.1001/jama.2026.21764",
+     "source": "pubmed",
+     "title": "Nonreceipt of Newborn Vitamin K and Risk of Bleeding.",
+     "year": 2026,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "study_type": "observational",
+     "relation": "SUPPORTS",
+     "rank": 8,
+     "relevance": 0.85
+    },
+    {
+     "pmid": "34496783",
+     "doi": "10.1186/s12887-021-02701-4",
+     "source": "pubmed",
+     "title": "Vitamin K prophylaxis in newborns.",
+     "year": 2021,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "SUPPORTS",
+     "rank": 9,
+     "relevance": 0.85
+    },
+    {
+     "pmid": "32187975",
+     "doi": "10.3390/nu12030780",
+     "source": "pubmed",
+     "title": "Vitamin K Deficiency Bleeding in Infancy.",
+     "year": 2020,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "study_type": "narrative_review",
+     "relation": "SUPPORTS",
+     "rank": 10,
+     "relevance": 0.85
+    }
+   ]
+  }
+ ]
+}
