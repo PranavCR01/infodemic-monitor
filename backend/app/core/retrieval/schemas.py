@@ -23,7 +23,7 @@ class EvidenceRecord(_Record):
     reference allow-list in config, never from a model."""
 
     evidence_id: str
-    source: Literal["pubmed", "library", "reference"]
+    source: Literal["pubmed", "library", "reference", "journal_doi"]
     title: str
     abstract: str = ""
     pmid: Optional[str] = None

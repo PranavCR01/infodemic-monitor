@@ -58,7 +58,9 @@ UNS = VerificationResult(claim_id="c1", verdict=Verdict.UNSUPPORTED, explanation
 
 def test_vitamin_k_never_shrinks_to_vitamin():
     t = intervention_terms("Vitamin K helps keep calcium in your bones and prevents osteoporosis")
-    assert t.terms == ("vitamin k",) and t.source == "fallback"
+    # T50 added vitamin K to the MeSH lexicon: a concept now, with its other names.
+    assert t.terms[0] == "vitamin k" and t.source == "concept" and "vitamin" not in t.terms
+    assert "vitamins" not in t.terms  # never the parent heading
     assert not on_topic(rec("a", "Vitamin D supplementation and fracture risk in osteoporosis"), t)
     assert on_topic(rec("b", "Vitamin K2 and bone", "Menaquinone (vitamin K) intake and fractures."), t)
     assert on_topic(rec("c", "Effects of vitamin-K antagonists on bone"), t)  # hyphen reads as a space
@@ -74,10 +76,15 @@ def test_recognised_concept_any_name_counts_but_not_its_parent_heading():
 
 
 def test_fallback_needs_every_intervention_word_and_drops_conditions():
-    t = intervention_terms("Irish Sea Moss: Cures Thyroid Issues")
-    assert t.terms == ("irish", "sea", "moss") and t.require_all
-    assert not on_topic(rec("a", "Iodine in seaweed and the thyroid"), t)
-    assert on_topic(rec("b", "Irish sea moss (Chondrus crispus) composition"), t)
+    # Mullein is not in the lexicon (sea moss was, until T50 added it), so the
+    # label's words are the terms and all of them must appear.
+    t = intervention_terms("Mullein Leaf: Cures Thyroid Issues")
+    assert t.terms == ("mullein", "leaf") and t.require_all
+    assert not on_topic(rec("a", "Leaf extracts and the thyroid"), t)
+    assert on_topic(rec("b", "Mullein (Verbascum thapsus) leaf composition"), t)
+    sea_moss = intervention_terms("Irish Sea Moss: Cures Thyroid Issues")
+    assert sea_moss.source == "concept" and "irish moss" in sea_moss.terms
+    assert not on_topic(rec("c", "Iodine in seaweed and the thyroid"), sea_moss)
     soap = intervention_terms("A soap that treats skin cancer")
     assert "cancer" not in " ".join(soap.terms)  # a condition is not the intervention
     assert not on_topic(rec("c", "Angiogenesis in cancer"), soap)

@@ -12,3 +12,11 @@ extraction:
   # For the no-OCR ablation (T43), point the routing experiment at a copy of this file
   # with `--pipeline-options`; keep this file at true for live traffic.
   use_ocr: true
+
+retrieval:
+  # Retrieval helpers (T50, design §6). Each needs its step in config/routing.yaml too;
+  # set one to false (or remove its routing line) and that part runs on rules alone.
+  search_assistant: true   # a cheap model writes MeSH + [tiab] terms when the rules fall back to keywords
+  translate_claims: true   # non-English claims are translated before planning
+  find_study: true         # claims citing a study / with nothing on topic: web search proposes ids, we verify
+  crossref: true           # DOIs not in PubMed are verified with api.crossref.org (source journal_doi)

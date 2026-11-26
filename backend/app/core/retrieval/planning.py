@@ -26,8 +26,11 @@ from __future__ import annotations
 
 import re
 import unicodedata
-from typing import Iterable, Optional, Protocol
+from collections import OrderedDict
+from dataclasses import dataclass
+from typing import Any, Iterable, Optional, Protocol, Sequence
 
+from app.core.retrieval.citation import CitationCue, citation_cue
 from app.core.retrieval.mesh import Match, find_concepts
 from app.core.retrieval.schemas import ClaimFrame, Concept
 
@@ -157,13 +160,79 @@ def frame_claim(claim_text: str) -> ClaimFrame:
     )
 
 
-def content_words(normalized_text: str) -> list[str]:
+# Words that carry no search meaning in a spoken claim (T50 f): conversational
+# intensifiers, hedges and quantity words. "Babies who didn't get the shot are 81 times
+# more likely ..." must not become ``didn't 81 times higher likely`` in a keyword query.
+_CONVERSATIONAL = frozenset(
+    """didnt didn't doesnt doesn't isnt isn't arent aren't wasnt wasn't havent haven't hasnt
+    hasn't wouldnt wouldn't shouldnt shouldn't couldnt couldn't get gets got getting go goes
+    going gone gonna wanna gotta know knows think thinks thought want wants need needs needed
+    see seen look looks looking find finds found make makes made called call thing things stuff
+    way ways lot lots kind sort super pretty basically higher lower high low times likely
+    unlikely less much many overwhelming huge massive tiny small big little dangerous fine
+    okay ok yes number numbers percent amount evidence study studies research researchers show
+    shows showed shown proven proof claim claims tell tells told believe believes person guy
+    girl man woman everything nothing anything something someone anyone take takes taking""".split()
+)
+# Words a one-letter or short digit token belongs to ("vitamin k", "hepatitis b",
+# "type 2 diabetes", "covid 19", "omega 3"). Glued even when the short token is itself a
+# stop word ("vitamin a").
+_GLUE_HEADS = frozenset({"vitamin", "vitamins", "vitamina", "vitamine", "hepatitis", "type", "tipo",
+                         "stage", "grade", "phase", "covid", "omega", "group", "class", "factor",
+                         "complex", "coenzyme", "coenzima", "b", "q"})
+# A glued term that ends with a digit after one of these takes the next word too:
+# "type 2 diabetes", "stage 4 cancer".
+_GLUE_NEXT = frozenset({"type", "tipo", "stage", "grade", "phase"})
+
+
+def _is_short(tok: str) -> bool:
+    return len(tok) == 1 or (len(tok) <= 3 and any(ch.isdigit() for ch in tok))
+
+
+def term_tokens(normalized_text: str, stopwords: frozenset[str] = _STOPWORDS) -> list[str]:
+    """The text's tokens with a one-letter or short digit token glued to the word it
+    belongs to (§6, T50 a): ``vitamin k``, ``hepatitis b``, ``type 2 diabetes``,
+    ``covid 19``. Plain numbers ("81 times", "15 ans") stay separate tokens."""
+    out: list[str] = []
+    take_next = False
+    for raw in normalized_text.split():
+        tok = raw.strip("'.%+,")
+        if not tok:
+            continue
+        if take_next and out and tok not in stopwords:
+            out[-1] = f"{out[-1]} {tok}"
+            take_next = False
+            continue
+        take_next = False
+        prev = out[-1] if out else ""
+        head = prev.split(" ")[0] if prev else ""
+        glue = bool(prev) and _is_short(tok) and (
+            head in _GLUE_HEADS
+            or (" " not in prev and prev not in stopwords and not prev.isdigit() and tok not in stopwords
+                and not tok.isdigit()))
+        if glue:
+            out[-1] = f"{prev} {tok}"
+            take_next = head in _GLUE_NEXT and tok[-1:].isdigit()
+            continue
+        out.append(tok)
+    return out
+
+
+def content_words(normalized_text: str, lang: str = "en") -> list[str]:
+    """The claim's searchable words and terms, in order, without stop words, claim
+    verbs, qualifiers, plain numbers or conversational filler (T50 a, f). Terms keep
+    their one-letter or digit part (``vitamin k``, never ``vitamin``). For a claim in
+    another language, that language's stop words apply too (T50 h)."""
+    from app.core.retrieval.language import STOPWORDS
+
+    stop = _STOPWORDS | STOPWORDS.get(lang, frozenset())
     stripped = _QUALIFIER_RE.sub(" ", normalized_text)
     stripped = _VERB_RE.sub(" ", stripped)
-    words = [w.strip("'-.") for w in stripped.split()]
     out: list[str] = []
-    for w in words:
-        if len(w) < 2 or w in _STOPWORDS or w.isdigit() or w in out:
+    for w in term_tokens(stripped, stop):
+        w = w.strip("'-.")
+        if (len(w) < 2 or w in stop or w in _CONVERSATIONAL or w.replace(",", "").replace(".", "").isdigit()
+                or w in out):
             continue
         out.append(w)
     return out[:8]
@@ -213,80 +282,337 @@ def sanitize_query(text: str) -> str:
 
 
 class SearchAssistant(Protocol):
-    """Small-LLM helper used only when rules find nothing (§6 step 3). Returns search
-    terms, e.g. ``["hot drinks influenza"]``."""
+    """Small-LLM helper used only when the rules fall back to keywords (§6 step 3,
+    T50 c). Returns either plain search-term strings (legacy) or an ``AssistedQuery``
+    (``app.core.retrieval.assist``): intervention / outcome / population as MeSH
+    headings plus [tiab] synonyms. Whatever it returns is untrusted text and is
+    sanitised; it never supplies identifiers."""
 
-    def __call__(self, claim_text: str) -> list[str]: ...
+    def __call__(self, claim_text: str) -> Any: ...
+
+
+class Translator(Protocol):
+    """Translates a non-English claim to English before planning (T50 h). Returns the
+    English text; the output is untrusted and sanitised."""
+
+    def __call__(self, claim_text: str, language: str) -> str: ...
+
+
+# Delivery routes that say how something is given, not what is given: a claim whose
+# only intervention is one of these ("babies who don't get the shot") is about the
+# video's main substance (T50, context carry-over).
+GENERIC_INTERVENTIONS = frozenset({"injection", "oral_drops"})
+_ANAPHORA_RE = re.compile(r"(?<![\w-])(?:this|these|that|those|the shot|the injection|the drops|the jab)(?![\w-])")
+MAX_KEYWORD_TERMS = 3  # the keyword fallback never ANDs more than this many terms (T50 f)
+_PLAN_CACHE_SIZE = 512
+
+
+@dataclass(frozen=True)
+class PlannedQuery:
+    query: str
+    # citation | pico | intervention_outcome | broader_outcome | intervention_only |
+    # intervention_population | outcome_population | outcome_only | broader_condition |
+    # assistant | keywords | critic
+    kind: str
+
+
+@dataclass(frozen=True)
+class SearchPlan:
+    """Everything planning decided for one claim, recorded in the search trail.
+
+    ``rungs`` run in order, one per round, each different from and broader than the one
+    before (§6 "When nothing comes back", T50 d). When they run out the claim's search
+    stops; nothing is re-run from the cache."""
+
+    claim_text: str
+    language: str
+    search_text: str  # what the rules framed: the English translation when there is one
+    translated: bool = False
+    translation_error: Optional[str] = None
+    context_concept: Optional[str] = None  # the video's main intervention, carried over
+    citation: Optional[dict] = None
+    cites_study: bool = False
+    assistant_used: bool = False
+    assistant_error: Optional[str] = None
+    rungs: tuple[PlannedQuery, ...] = ()
+
+    def kind_of(self, query: str) -> Optional[str]:
+        return next((r.kind for r in self.rungs if r.query == query), None)
+
+    def describe(self) -> dict:
+        return {"language": self.language, "translated": self.translated,
+                "search_text": self.search_text if self.translated else None,
+                "translation_error": self.translation_error, "context_concept": self.context_concept,
+                "citation": self.citation, "assistant_used": self.assistant_used,
+                "assistant_error": self.assistant_error,
+                "rungs": [{"kind": r.kind, "query": r.query} for r in self.rungs]}
+
+
+def dominant_intervention(context: Sequence[str]) -> Optional[Concept]:
+    """The intervention concept named by the most claims of the video (at least two),
+    or None. Ties go to the one named first."""
+    counts: dict[str, int] = {}
+    first: dict[str, Concept] = {}
+    for text in context:
+        seen: set[str] = set()
+        for c in frame_claim(text).intervention:
+            if c.kind != "intervention" or c.key in GENERIC_INTERVENTIONS or c.key in seen:
+                continue
+            seen.add(c.key)
+            counts[c.key] = counts.get(c.key, 0) + 1
+            first.setdefault(c.key, c)
+    if not counts:
+        return None
+    best = max(counts, key=lambda k: (counts[k], -list(first).index(k)))
+    return first[best] if counts[best] >= 2 else None
+
+
+def _with_context(frame: ClaimFrame, context: Sequence[str]) -> tuple[ClaimFrame, Optional[str]]:
+    """Carry the video's main intervention over to a claim that refers to it without
+    naming it: "babies who don't get *the shot*", "*these studies* on newborns"."""
+    if not context:
+        return frame, None
+    own = [c for c in frame.intervention if c.kind == "intervention"]
+    generic_only = bool(own) and all(c.key in GENERIC_INTERVENTIONS for c in own)
+    if own and not generic_only:
+        return frame, None
+    if not own and not _ANAPHORA_RE.search(frame.normalized_text):
+        return frame, None
+    concept = dominant_intervention(context)
+    if concept is None:
+        return frame, None
+    outcome = tuple(c for c in frame.outcome if c.key != concept.key)
+    return frame.model_copy(update={"intervention": (concept,), "outcome": outcome}), concept.key
+
+
+def _or(clauses: list[str]) -> str:
+    clauses = [c for c in clauses if c]
+    return clauses[0] if len(clauses) == 1 else "(" + " OR ".join(clauses) + ")"
+
+
+def _rule_rungs(frame: ClaimFrame) -> list[PlannedQuery]:
+    """Narrow to broad, each rung dropping something the one before had. An
+    intervention is never broadened to its parent heading: ``Vitamins`` would make every
+    vitamin paper a hit (the vitamin K → vitamin D failure in job 5cc07f48)."""
+    I = [c for c in frame.intervention]
+    O = [c for c in frame.outcome]
+    P = [c for c in frame.population]
+    i_clause = _and([concept_clause(c) for c in I])
+    o_clause = _and([concept_clause(c) for c in O])
+    p_clause = _and([concept_clause(c) for c in P])
+    out: list[PlannedQuery] = []
+    if I and O:
+        if P:
+            out.append(PlannedQuery(_and([i_clause, o_clause, p_clause]), "pico"))
+        out.append(PlannedQuery(_and([i_clause, o_clause]), "intervention_outcome"))
+        if any(c.parent_mesh for c in O):
+            broader = _and([concept_clause(c, use_parent=bool(c.parent_mesh)) for c in O])
+            out.append(PlannedQuery(_and([i_clause, broader]), "broader_outcome"))
+        out.append(PlannedQuery(i_clause, "intervention_only"))
+    elif I:
+        if P:
+            out.append(PlannedQuery(_and([i_clause, p_clause]), "intervention_population"))
+        out.append(PlannedQuery(i_clause, "intervention_only"))
+        if len(I) > 1:
+            out.append(PlannedQuery(_or([concept_clause(c) for c in I]), "intervention_any"))
+    elif O:
+        if P:
+            out.append(PlannedQuery(_and([o_clause, p_clause]), "outcome_population"))
+        out.append(PlannedQuery(o_clause, "outcome_only"))
+        if any(c.parent_mesh for c in O):
+            out.append(PlannedQuery(
+                _and([concept_clause(c, use_parent=bool(c.parent_mesh)) for c in O]), "broader_condition"))
+    return out
+
+
+def keyword_rungs(keywords: Sequence[str]) -> list[PlannedQuery]:
+    """The keyword fallback (T50 f): at most ``MAX_KEYWORD_TERMS`` terms, the longer
+    (more specific) ones first, then one fewer. Never eight conversational words ANDed."""
+    terms = list(dict.fromkeys(keywords))
+    if not terms:
+        return []
+    ranked = sorted(terms, key=lambda w: (-(" " in w), -len(w)))
+    chosen = [w for w in terms if w in ranked[:MAX_KEYWORD_TERMS]]
+    out = [PlannedQuery(" ".join(_quote(w) for w in chosen), "keywords")]
+    if len(chosen) > 1:
+        fewer = [w for w in chosen if w in ranked[: len(chosen) - 1]]
+        out.append(PlannedQuery(" ".join(_quote(w) for w in fewer), "keywords"))
+    return out
+
+
+def citation_query(cue: CitationCue, frame: ClaimFrame, keywords: Sequence[str]) -> Optional[str]:
+    """``"JAMA"[ta] AND 2026[dp] AND (topic)``: the cited journal and year plus the
+    claim's topic terms. None without a journal or a year (a sample size alone can't be
+    searched)."""
+    if not (cue.journal or cue.year):
+        return None
+    if frame.intervention:
+        topic = _and([concept_clause(c) for c in frame.intervention])
+    elif frame.outcome:
+        topic = _and([concept_clause(c) for c in frame.outcome])
+    else:
+        topic = " ".join(_quote(w) for w in list(keywords)[:2])
+    if not topic:
+        return None
+    parts = []
+    if cue.journal:
+        parts.append(f'"{cue.journal}"[ta]')
+    if cue.year:
+        parts.append(f"{cue.year}[dp]")
+    parts.append(topic)
+    return _and(parts)
 
 
 class QueryPlanner:
-    """Deterministic query ladder for one claim (§6 "Planning", "When nothing comes back")."""
+    """Query ladder for one claim (§6 "Planning", "When nothing comes back"; T50).
 
-    def __init__(self, assistant: Optional[SearchAssistant] = None) -> None:
+    Rules-only unless a ``translator`` (non-English claims, T50 h) or an ``assistant``
+    (keyword fallback, T50 c) is injected; both degrade to the rules when they fail.
+    Plans are cached per claim, so a model is consulted at most once per claim per
+    process, whichever round asks."""
+
+    def __init__(self, assistant: Optional[SearchAssistant] = None,
+                 translator: Optional[Translator] = None) -> None:
         self.assistant = assistant
+        self.translator = translator
+        self._plans: "OrderedDict[tuple, SearchPlan]" = OrderedDict()
 
-    def ladder(self, claim_text: str) -> list[str]:
-        frame = frame_claim(claim_text)
-        candidates: list[str] = []
-        core = [*frame.intervention, *frame.outcome]
-        if core:
-            i_clause = _and([concept_clause(c) for c in frame.intervention])
-            o_clause = _and([concept_clause(c) for c in frame.outcome])
-            p_clause = _and([concept_clause(c) for c in frame.population])
-            candidates.append(_and([i_clause, o_clause, p_clause]))
-            candidates.append(_and([i_clause, o_clause]))
-            parents = [concept_clause(c, use_parent=True) for c in core]
-            candidates.append(_and(parents))
+    # -- planning --
+
+    def plan(self, claim_text: str, *, claim_kind: str = "research_question",
+             context: Sequence[str] = ()) -> SearchPlan:
+        key = (claim_text, claim_kind, tuple(context))
+        cached = self._plans.get(key)
+        if cached is not None:
+            self._plans.move_to_end(key)
+            return cached
+        plan = self._build(claim_text, claim_kind, tuple(context))
+        self._plans[key] = plan
+        if len(self._plans) > _PLAN_CACHE_SIZE:
+            self._plans.popitem(last=False)
+        return plan
+
+    def _build(self, claim_text: str, claim_kind: str, context: tuple[str, ...]) -> SearchPlan:
+        from app.core.retrieval.language import detect_language, is_english
+
+        lang = detect_language(claim_text)
+        search_text, translated, translation_error = claim_text, False, None
+        if not is_english(lang) and self.translator is not None:
+            try:
+                english = sanitize_text(self.translator(claim_text, lang) or "")
+            except Exception as exc:  # noqa: BLE001 - rules still run on the original
+                translation_error = type(exc).__name__
+            else:
+                if english:
+                    search_text, translated = english, True
+                else:
+                    translation_error = "empty"
+        rules_lang = "en" if translated else lang
+        frame = frame_claim(search_text)
+        frame, context_concept = _with_context(frame, [c for c in context if c != claim_text])
+        keywords = content_words(frame.normalized_text, rules_lang)
+        cue = citation_cue(frame.normalized_text)
+        rungs: list[PlannedQuery] = []
+        cq = citation_query(cue, frame, keywords) if cue.cites_study else None
+        if cq:
+            rungs.append(PlannedQuery(cq, "citation"))
+        rule = _rule_rungs(frame)
+        assistant_used, assistant_error = False, None
+        if rule:
+            rungs += rule
         else:
-            for terms in self._assist(claim_text):
-                candidates.append(terms)
-        if core:
-            # Last resort: the claim's own words for each concept, as free text.
-            candidates.append(" ".join(_quote(c.matched_text) for c in core))
-        elif frame.keywords:
-            candidates.append(" ".join(frame.keywords))
-        out: list[str] = []
-        for q in candidates:
-            q = sanitize_query(q)
-            if q and q not in out:
-                out.append(q)
-        return out
+            # The rules found nothing to frame and would fall back to keywords: the
+            # assistant (if configured) writes a structured query first.
+            assisted, assistant_error = self._assist(search_text)
+            assistant_used = bool(assisted)
+            rungs += assisted
+            rungs += keyword_rungs(keywords)
+        out: list[PlannedQuery] = []
+        seen: set[str] = set()
+        for r in rungs:
+            q = sanitize_query(r.query)
+            if q and q not in seen:
+                seen.add(q)
+                out.append(PlannedQuery(q, r.kind))
+        return SearchPlan(
+            claim_text=claim_text, language=lang, search_text=search_text, translated=translated,
+            translation_error=translation_error, context_concept=context_concept,
+            citation=cue.describe() if cue.cites_study else None, cites_study=cue.cites_study,
+            assistant_used=assistant_used, assistant_error=assistant_error, rungs=tuple(out))
 
-    def _assist(self, claim_text: str) -> list[str]:
+    def _assist(self, text: str) -> tuple[list[PlannedQuery], Optional[str]]:
         if self.assistant is None:
-            return []
+            return [], None
+        from app.core.retrieval.assist import assisted_rungs
+
         try:
-            return [t for t in (self.assistant(claim_text) or []) if isinstance(t, str)][:3]
-        except Exception:  # the helper is optional; rules still produce a keyword query
-            return []
+            raw = self.assistant(text)
+        except Exception as exc:  # noqa: BLE001 - the helper is optional; rules still run
+            return [], type(exc).__name__
+        try:
+            return assisted_rungs(raw), None
+        except Exception as exc:  # noqa: BLE001 - malformed output is dropped
+            return [], type(exc).__name__
+
+    # -- the ladder --
+
+    def ladder(self, claim_text: str, *, claim_kind: str = "research_question",
+               context: Sequence[str] = ()) -> list[str]:
+        return [r.query for r in self.plan(claim_text, claim_kind=claim_kind, context=context).rungs]
 
     def next_query(
         self,
         claim_text: str,
         already_run: list[str],
         suggestions: Iterable[str] = (),
+        *,
+        plan: Optional[SearchPlan] = None,
+        claim_kind: str = "research_question",
+        context: Sequence[str] = (),
     ) -> Optional[str]:
         """The query for the next search round of a claim.
 
         Critic suggestions (§8) come first, sanitised; otherwise the next rung of the
-        ladder that hasn't been run. ``None`` when every candidate has been tried.
+        ladder that hasn't been run. ``None`` when every candidate has been tried: the
+        caller stops the claim's search and records that, it never repeats a query.
         """
         for s in suggestions:
             q = sanitize_query(s)
             if q and q not in already_run:
                 return q
-        for q in self.ladder(claim_text):
-            if q not in already_run:
-                return q
+        plan = plan or self.plan(claim_text, claim_kind=claim_kind, context=context)
+        for r in plan.rungs:
+            if r.query not in already_run:
+                return r.query
         return None
 
 
+def sanitize_text(text: str, max_chars: int = 500) -> str:
+    """Untrusted model text used as a claim (a translation): printable characters only,
+    no URLs, bounded length."""
+    t = unicodedata.normalize("NFKC", text or "")
+    t = re.sub(r"https?://\S+", " ", t)
+    t = "".join(ch if ch.isprintable() else " " for ch in t)
+    t = re.sub(r"[<>{}`$\\|]", " ", t)
+    return re.sub(r"\s+", " ", t).strip()[:max_chars].strip()
+
+
 __all__ = [
+    "GENERIC_INTERVENTIONS",
+    "MAX_KEYWORD_TERMS",
+    "PlannedQuery",
     "QueryPlanner",
     "SearchAssistant",
+    "SearchPlan",
+    "Translator",
+    "citation_query",
     "concept_clause",
     "content_words",
+    "dominant_intervention",
     "frame_claim",
+    "keyword_rungs",
     "normalize_claim",
     "sanitize_query",
+    "sanitize_text",
+    "term_tokens",
 ]

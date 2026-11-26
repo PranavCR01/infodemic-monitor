@@ -40,7 +40,7 @@ from app.db.models.video import Video
 from app.services.review_reasons import parse_reasons
 
 ABSTRACT_SNIPPET_CHARS = 300
-SOURCE_KINDS = frozenset({"pubmed", "reference", "library"})
+SOURCE_KINDS = frozenset({"pubmed", "reference", "library", "journal_doi"})
 
 
 # ------------------------------------------------------------------ segments

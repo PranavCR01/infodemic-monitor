@@ -14,8 +14,17 @@ status: provisional
 routing:
   extract_claims:    {provider: anthropic, model: claude-haiku-5-5,  prompt: extract_v2}   # small, fast, structured output
   analyze_stance:    {provider: anthropic, model: claude-sonnet-5-5, prompt: stance_v1}    # small or medium
-  # plan_search is rules first (section 6); a model is only added if the rules
-  # prove insufficient, so it is deliberately absent from this table.
+  # Retrieval helpers (T50, section 6). Rules stay first; each step is optional and
+  # retrieval degrades to rules-only without it (remove a line to switch it off).
+  #   plan_search:     only when the rules fall back to keywords; writes MeSH + [tiab]
+  #                    terms by PICO side, sanitised as untrusted text.
+  #   translate_claim: non-English claims, before planning.
+  #   find_study:      claims that cite a study, and claims whose search kept nothing on
+  #                    topic; a web search tool proposes PMIDs/DOIs, code verifies them
+  #                    (E-utilities, Crossref) and only verified records become evidence.
+  plan_search:       {provider: anthropic, model: claude-haiku-5-5,  prompt: search_assist_v1}
+  translate_claim:   {provider: anthropic, model: claude-haiku-5-5,  prompt: translate_v1}
+  find_study:        {provider: anthropic, model: claude-haiku-5-5,  prompt: find_study_v1}
   verify_claims:     {provider: anthropic, model: claude-opus-5-5,   prompt: verify_v3}    # strong reasoning
   critique:          {provider: openai,    model: gpt-4o-2024-08-06, prompt: critic_v1}    # different provider from the verifier
   judge_explanation: {provider: anthropic, model: claude-sonnet-5-5, prompt: explain_v2}   # writing quality; label already decided

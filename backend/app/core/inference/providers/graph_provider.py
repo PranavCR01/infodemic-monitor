@@ -149,6 +149,31 @@ def fusion_nodes(transcript: list[TranscriptSegment], ocr: list[OcrSegment]) -> 
     return {r.TRANSCRIBE_AUDIO: transcribe_audio, r.EXTRACT_OCR: extract_ocr}
 
 
+def retrieval_helpers(caller: Any, retriever: Any, references: Any, options: PipelineOptions):
+    """The T50 retrieval helpers this deployment can use (§6, §13): a query planner with
+    the search assistant and translator, and the find-the-study step. Each one is on
+    only when ``config/pipeline.yaml`` allows it and ``config/routing.yaml`` routes its
+    step; otherwise that part of retrieval runs on rules alone."""
+    from app.core.retrieval.assist import (
+        PLAN_SEARCH_STEP, TRANSLATE_STEP, ModelSearchAssistant, ModelTranslator, has_route,
+    )
+    from app.core.retrieval.crossref import CrossrefClient
+    from app.core.retrieval.find_study import FIND_STUDY_STEP, FindStudyStep, StudyVerifier, WebStudyFinder
+    from app.core.retrieval.planning import QueryPlanner
+
+    opts = options.retrieval
+    assistant = ModelSearchAssistant(caller) if opts.search_assistant and has_route(caller, PLAN_SEARCH_STEP) else None
+    translator = ModelTranslator(caller) if opts.translate_claims and has_route(caller, TRANSLATE_STEP) else None
+    planner = QueryPlanner(assistant=assistant, translator=translator)
+    find_study = None
+    client = getattr(retriever, "client", None)
+    if opts.find_study and has_route(caller, FIND_STUDY_STEP) and client is not None:
+        crossref = CrossrefClient() if opts.crossref else None
+        snapshots = getattr(references, "snapshots", None)
+        find_study = FindStudyStep(WebStudyFinder(caller), StudyVerifier(client, crossref, snapshots))
+    return planner, find_study
+
+
 def build_nodes(caller: Any, retriever: Any, *, budgets: Budgets = DEFAULT_BUDGETS,
                 library: Any = None, references: Any = None,
                 pipeline_options: Optional[PipelineOptions] = None) -> dict[str, NodeFn]:
@@ -160,10 +185,12 @@ def build_nodes(caller: Any, retriever: Any, *, budgets: Budgets = DEFAULT_BUDGE
     ``pipeline_options`` (default: ``config/pipeline.yaml``) decides what extraction is
     given; with ``extraction.use_ocr: false`` its node sees the transcript alone (T43)."""
     options = pipeline_options if pipeline_options is not None else load_pipeline_options()
+    planner, find_study = retrieval_helpers(caller, retriever, references, options)
     return {
         r.EXTRACT_CLAIMS: wrap_extract_node(make_extract_claims(caller), options),
         r.ANALYZE_STANCE: make_analyze_stance(caller),
-        **make_retrieval_nodes(retriever, budgets=budgets, library=library, references=references),
+        **make_retrieval_nodes(retriever, planner=planner, budgets=budgets, library=library,
+                               references=references, find_study=find_study),
         r.VERIFY_CLAIMS: make_verify_claims(caller, budgets=budgets),
         r.CRITIQUE_VERIFICATION: make_critique_verification(caller, budgets=budgets),
         r.JUDGE_CLASSIFICATION: make_judge_classification(caller, budgets=budgets),

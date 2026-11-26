@@ -16,7 +16,7 @@ from app.core.schemas.search_trail import SearchTrailView
 from app.services.review_reasons import ReasonView
 
 Modality = Literal["speech", "screen", "both"]
-SourceKind = Literal["pubmed", "reference", "library", "other"]
+SourceKind = Literal["pubmed", "reference", "library", "journal_doi", "other"]
 # OPEN case → REVIEW_REQUIRED (what the current frontend checks). Resolved cases:
 # APPROVE → VERIFIED; CORRECT / MARK_INSUFFICIENT → CORRECTED; REJECT → REJECTED;
 # REQUEST_REANALYSIS → REANALYSIS_REQUESTED.

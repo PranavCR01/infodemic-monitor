@@ -151,7 +151,7 @@ def quoted_snippets(text: str) -> list[str]:
 
 def _evidence_by_claim(state: PipelineState) -> dict[str, set[str]]:
     out: dict[str, set[str]] = {}
-    for key in ("retrieved_evidence", "reranked_evidence", "library_evidence"):
+    for key in ("retrieved_evidence", "reranked_evidence", "library_evidence", "found_study_evidence"):
         for cid, records in (state.get(key) or {}).items():
             out.setdefault(cid, set()).update(e.evidence_id for e in records or [])
     return out
@@ -193,6 +193,7 @@ _FIELD_OWNER = {
     "retrieved_evidence": r.RETRIEVE_EVIDENCE,
     "reranked_evidence": r.RERANK_EVIDENCE,
     "library_evidence": r.RERANK_EVIDENCE,  # T12: the library fallback runs in rerank
+    "found_study_evidence": r.RERANK_EVIDENCE,  # T50: find-the-study runs in rerank
 }
 
 
@@ -229,7 +230,7 @@ def check_schema(state: PipelineState, limits: ValidationLimits = DEFAULT_LIMITS
                     CHECK_SCHEMA, _FIELD_OWNER[field],
                     f"stored under {key!r} but its claim_id is {rec.claim_id!r}", key,
                 ))
-    for field in ("retrieved_evidence", "reranked_evidence", "library_evidence"):
+    for field in ("retrieved_evidence", "reranked_evidence", "library_evidence", "found_study_evidence"):
         for cid, records in (state.get(field) or {}).items():
             for rec in records or []:
                 err = _revalidate(rec, EvidenceRecord)
