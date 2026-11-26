@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "run_id": "T05-rerank-precision_at_5-pubmed_order_baseline",
+  "run_group": "T05-rerank-relevance-set",
+  "date": "2026-11-22",
+  "task": "T05",
+  "pipeline_step": "rerank_evidence",
+  "split": null,
+  "synthetic": true,
+  "golden_set_ref": null,
+  "models": [],
+  "variant": "pubmed_order_baseline",
+  "metric_name": "precision_at_5_strict",
+  "value": 0.383,
+  "ci95": null,
+  "n_items": 12,
+  "n_unit": "claims",
+  "cost_usd": 0.0,
+  "report_path": "context/MULTI_AGENT.md",
+  "notes": "SYNTHETIC, self-labelled: 12 claims x 10 invented papers (PMIDs 98000xxx) in an invented PubMed order, papers and labels written by the agent that wrote the reranker (backend/app/tests/fixtures/rerank/relevance_set.jsonl). Shows the mechanics, not real precision. Report: context/MULTI_AGENT.md section 7f (T05). split and golden_set_ref are null: not golden-set data. No CI in the report. Deterministic lexical reranker, no model. Strict = label 2 (tests the claim)."
+}

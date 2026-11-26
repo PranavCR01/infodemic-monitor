@@ -1,0 +1,28 @@
+{
+  "schema_version": "1",
+  "run_id": "T38-analyze_stance-claude-haiku-5-5",
+  "run_group": null,
+  "date": "2026-11-24",
+  "task": "T38",
+  "pipeline_step": "analyze_stance",
+  "split": "tune",
+  "synthetic": false,
+  "golden_set_ref": "origin/data/golden-label-set@0fbc68a05a7d",
+  "models": [
+    {
+      "provider": "anthropic",
+      "model": "claude-haiku-5-5",
+      "prompt": "stance_v1",
+      "role": null
+    }
+  ],
+  "variant": null,
+  "metric_name": "stance_macro_f1",
+  "value": 0.523,
+  "ci95": null,
+  "n_items": 174,
+  "n_unit": "claims",
+  "cost_usd": 0.0694,
+  "report_path": "evals/reports/T38_routing/combined/report.md",
+  "notes": "Tune split: development numbers, not product accuracy. Run: evals/reports/T38_routing/claude/report.json. 0 failed items. No 95% CI: the T38 runner kept no per-item predictions (see T43). cost_usd is this candidate's spend on this step."
+}

@@ -88,7 +88,7 @@ def test_new_prompts_are_candidates_only_and_live_routing_is_unchanged():
     assert {("claude-sonnet-5-5", "extract_v2"), ("claude-sonnet-5-5", "extract_v3")} <= pairs["extract_claims"]
     assert {("claude-sonnet-5-5", "stance_v1"), ("claude-sonnet-5-5", "stance_v2")} <= pairs["analyze_stance"]
     routing = load_routing()
-    assert routing.route("extract_claims").prompt == "extract_v2"
+    assert routing.route("extract_claims").prompt == "extract_v3"  # T61 proposal
     assert routing.route("analyze_stance").prompt == "stance_v1"
     assert claims_mod.DEFAULT_PROMPT_VERSION == "extract_v2"
     assert stance_mod.DEFAULT_PROMPT_VERSION == "stance_v1"

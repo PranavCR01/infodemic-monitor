@@ -1,0 +1,28 @@
+{
+  "schema_version": "1",
+  "run_id": "T38-extract_claims-gpt-5.6-luna",
+  "run_group": null,
+  "date": "2026-11-24",
+  "task": "T38",
+  "pipeline_step": "extract_claims",
+  "split": "tune",
+  "synthetic": false,
+  "golden_set_ref": "origin/data/golden-label-set@0fbc68a05a7d",
+  "models": [
+    {
+      "provider": "openai",
+      "model": "gpt-5.6-luna",
+      "prompt": "extract_v2",
+      "role": null
+    }
+  ],
+  "variant": null,
+  "metric_name": "claim_f1",
+  "value": 0.3237,
+  "ci95": null,
+  "n_items": 48,
+  "n_unit": "videos (extraction items)",
+  "cost_usd": 0.0962,
+  "report_path": "evals/reports/T38_routing/combined/report.md",
+  "notes": "Tune split: development numbers, not product accuracy. Run: evals/reports/T38_routing/openai/full/report.json. 0 failed items. No 95% CI: the T38 runner kept no per-item predictions (see T43). cost_usd is this candidate's spend on this step."
+}
