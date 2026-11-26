@@ -1,0 +1,2413 @@
+{
+  "critic_same_provider": null,
+  "response_model_notes": [
+    "extract_claims: anthropic/claude-sonnet-5-5@extract_v3: 34 calls reported no model id"
+  ],
+  "mode": "live",
+  "golden": "git:92a731e@92a731e7f954:research/claim-level/dataset",
+  "split": "tune",
+  "evidence_mode": null,
+  "estimate": {
+    "mode": "dry_run",
+    "golden": "git:92a731e@92a731e7f954:research/claim-level/dataset",
+    "split": "tune",
+    "evidence_mode": null,
+    "evidence_assumed": false,
+    "use_ocr": false,
+    "steps": {
+      "extract_claims": {
+        "items": 48,
+        "metric": "claim_f1",
+        "candidates": [
+          {
+            "candidate": "anthropic/claude-sonnet-5-5@extract_v2",
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "prompt": "extract_v2",
+            "calls": 47,
+            "input_tokens": 144713,
+            "expected_output_tokens": 28200,
+            "max_output_tokens": 96256,
+            "reasoning_tokens": 0,
+            "output_cap_tokens": 96256,
+            "upper_bound_input_tokens": 361783,
+            "upper_bound_output_tokens": 192512,
+            "expected_usd": 0.5714,
+            "upper_bound_usd": 2.6487,
+            "priced": true,
+            "placeholder_id": false
+          },
+          {
+            "candidate": "anthropic/claude-sonnet-5-5@extract_v3",
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "prompt": "extract_v3",
+            "calls": 47,
+            "input_tokens": 180932,
+            "expected_output_tokens": 28200,
+            "max_output_tokens": 96256,
+            "reasoning_tokens": 0,
+            "output_cap_tokens": 96256,
+            "upper_bound_input_tokens": 452330,
+            "upper_bound_output_tokens": 192512,
+            "expected_usd": 0.6439,
+            "upper_bound_usd": 2.8298,
+            "priced": true,
+            "placeholder_id": false
+          }
+        ]
+      }
+    },
+    "total_expected_usd": 1.2153,
+    "total_upper_bound_usd": 5.4785,
+    "unpriced_candidates": [],
+    "placeholder_candidates": [],
+    "critic_provider_warnings": [],
+    "reasoning_config_problems": [],
+    "notes": []
+  },
+  "spend": {
+    "cap_usd": 4.1731,
+    "spent_usd": 2.141069,
+    "calls": 94,
+    "refused_calls": 0,
+    "stopped_at_cap": false,
+    "by_model": {
+      "claude-sonnet-5-5": 2.141069
+    }
+  },
+  "stopped": null,
+  "steps": {
+    "extract_claims": {
+      "items": 48,
+      "results": [
+        {
+          "candidate": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "prompt": "extract_v2",
+            "reasoning_tokens": 0,
+            "reasoning_effort": null
+          },
+          "step": "extract_claims",
+          "metric": "claim_f1",
+          "score": 0.4142011834319527,
+          "n_items": 48,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.015778,
+          "latency_p95_ms": 7540.9,
+          "response_models": {
+            "claude-sonnet-5-5": 47
+          },
+          "reasoning_tokens": 0,
+          "output_tokens": 33239,
+          "calls": [
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3071,
+              "input_tokens": 3719,
+              "output_tokens": 475,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6283,
+              "input_tokens": 4141,
+              "output_tokens": 1326,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4707,
+              "input_tokens": 3280,
+              "output_tokens": 948,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3163,
+              "input_tokens": 7691,
+              "output_tokens": 538,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3852,
+              "input_tokens": 6681,
+              "output_tokens": 741,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6064,
+              "input_tokens": 6679,
+              "output_tokens": 1202,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6439,
+              "input_tokens": 7475,
+              "output_tokens": 1242,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4714,
+              "input_tokens": 6044,
+              "output_tokens": 685,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3354,
+              "input_tokens": 3273,
+              "output_tokens": 644,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 7546,
+              "input_tokens": 5971,
+              "output_tokens": 1532,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3699,
+              "input_tokens": 3826,
+              "output_tokens": 576,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3637,
+              "input_tokens": 3343,
+              "output_tokens": 665,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2543,
+              "input_tokens": 3138,
+              "output_tokens": 327,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 7590,
+              "input_tokens": 11856,
+              "output_tokens": 1528,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4634,
+              "input_tokens": 5002,
+              "output_tokens": 795,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 7529,
+              "input_tokens": 7144,
+              "output_tokens": 1478,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6874,
+              "input_tokens": 8259,
+              "output_tokens": 1313,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 7451,
+              "input_tokens": 5338,
+              "output_tokens": 1491,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4818,
+              "input_tokens": 6307,
+              "output_tokens": 608,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2959,
+              "input_tokens": 3221,
+              "output_tokens": 461,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 5848,
+              "input_tokens": 6777,
+              "output_tokens": 1033,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4855,
+              "input_tokens": 3583,
+              "output_tokens": 719,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3072,
+              "input_tokens": 3538,
+              "output_tokens": 509,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3591,
+              "input_tokens": 3370,
+              "output_tokens": 472,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4673,
+              "input_tokens": 5607,
+              "output_tokens": 666,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 7256,
+              "input_tokens": 5343,
+              "output_tokens": 1501,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2192,
+              "input_tokens": 2739,
+              "output_tokens": 234,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 5538,
+              "input_tokens": 4226,
+              "output_tokens": 1103,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1515,
+              "input_tokens": 1975,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3506,
+              "input_tokens": 2685,
+              "output_tokens": 391,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 595,
+              "input_tokens": 1979,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1756,
+              "input_tokens": 3050,
+              "output_tokens": 241,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4295,
+              "input_tokens": 4673,
+              "output_tokens": 792,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1235,
+              "input_tokens": 2478,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4126,
+              "input_tokens": 2958,
+              "output_tokens": 531,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 565,
+              "input_tokens": 2127,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3804,
+              "input_tokens": 3134,
+              "output_tokens": 759,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 5871,
+              "input_tokens": 5241,
+              "output_tokens": 1143,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2886,
+              "input_tokens": 3054,
+              "output_tokens": 508,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3152,
+              "input_tokens": 3061,
+              "output_tokens": 449,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1291,
+              "input_tokens": 2243,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2144,
+              "input_tokens": 5196,
+              "output_tokens": 275,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 586,
+              "input_tokens": 1993,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 10362,
+              "input_tokens": 6188,
+              "output_tokens": 1518,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2730,
+              "input_tokens": 3320,
+              "output_tokens": 367,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4116,
+              "input_tokens": 5987,
+              "output_tokens": 786,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3920,
+              "input_tokens": 3564,
+              "output_tokens": 379,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            }
+          ]
+        },
+        {
+          "candidate": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "prompt": "extract_v3",
+            "reasoning_tokens": 0,
+            "reasoning_effort": null
+          },
+          "step": "extract_claims",
+          "metric": "claim_f1",
+          "score": 0.26174496644295303,
+          "n_items": 48,
+          "n_failed": 34,
+          "fallbacks_used": 0,
+          "cost_per_item": null,
+          "latency_p95_ms": 6184.3,
+          "response_models": {
+            "claude-sonnet-5-5": 13,
+            "unreported": 34
+          },
+          "reasoning_tokens": 0,
+          "output_tokens": 10560,
+          "calls": [
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2481,
+              "input_tokens": 4634,
+              "output_tokens": 363,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 5694,
+              "input_tokens": 5056,
+              "output_tokens": 1131,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4922,
+              "input_tokens": 4195,
+              "output_tokens": 978,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6244,
+              "input_tokens": 8606,
+              "output_tokens": 1009,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4237,
+              "input_tokens": 7596,
+              "output_tokens": 802,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6045,
+              "input_tokens": 7594,
+              "output_tokens": 1131,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6721,
+              "input_tokens": 8390,
+              "output_tokens": 1273,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3417,
+              "input_tokens": 6959,
+              "output_tokens": 624,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3119,
+              "input_tokens": 4188,
+              "output_tokens": 576,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6448,
+              "input_tokens": 6886,
+              "output_tokens": 1330,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3727,
+              "input_tokens": 4741,
+              "output_tokens": 568,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3175,
+              "input_tokens": 4258,
+              "output_tokens": 568,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1950,
+              "input_tokens": 4053,
+              "output_tokens": 207,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 129,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7p7owbGGjereGCCst5'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 140,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7p8MgkgZAxTVSA6eZ5'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 94,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7p8xeKXAk87WV5Z8UT'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 100,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7p9RS7u9qwJrfh1SbS'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 109,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7p9siWEsdCxZEMotYE'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 96,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pAKFYATtCfCqprSXt'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 99,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pAjZiTNYq8UeuFS9H'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 99,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pBBbAorjvjJY5GpnY'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 101,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pBaunkyMjGN1pxWpz'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 100,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pC3S8b834k6zGx56h'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 110,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pCUEMkNLj1KGkoSzn'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 104,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pCxzzwwC8GYLBArQD'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 95,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pDPoRV1HiywHyW85u'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 101,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pDpbnoFZkoXMBNUYz'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 128,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pEHsW2UKzNqGdtZ5g'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 97,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pEotAXdVgdRtCZ3BB'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 102,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pFDgUHoPc7r5cngat'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 104,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pFfUWGojhSnUxC3Ls'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 97,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pG7Fkoa6YPQAt36JH'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 92,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pGYZXy5JysePviKfo'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 98,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pGwdAg1RWvgL8rADN'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 108,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pHR8u8sKL9CPpmfbd'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 105,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pHrgENXbxyQe6xmjR'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 99,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pJHjLcLJeHA38YnU4'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 96,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pJjH3SAKLP393qrsd'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 100,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pKAK4MsvUJMJoLb2i'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 103,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pKbcfv3iQSjT13HjE'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 102,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pKzveyYGvpHJgYsQp'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 102,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pLUC66hxirm9QnqE6'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 108,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pLwUYwpKF7v3QJh9r'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 117,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pMPG5PNbxpatTofG9'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 100,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pMtGiRW5gPK1rnoLe'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 103,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pNLoxECmbbGV8JHkE'}"
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 130,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "reasoning_tokens": 0,
+              "response_model": null,
+              "reasoning_effort": null,
+              "error": "error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChS7pNobM9VZeqFzCZfvJ'}"
+            }
+          ]
+        }
+      ],
+      "extras": {
+        "anthropic/claude-sonnet-5-5@extract_v2": {
+          "strict": {
+            "precision": 0.328125,
+            "recall": 0.5614973262032086,
+            "f1": 0.4142011834319527,
+            "matched": 105,
+            "n_gold": 187,
+            "n_pred": 320
+          },
+          "meaning": {
+            "precision": 0.428125,
+            "recall": 0.732620320855615,
+            "f1": 0.5404339250493098,
+            "matched": 137,
+            "n_gold": 187,
+            "n_pred": 320
+          }
+        },
+        "anthropic/claude-sonnet-5-5@extract_v3": {
+          "strict": {
+            "precision": 0.35135135135135137,
+            "recall": 0.20855614973262032,
+            "f1": 0.26174496644295303,
+            "matched": 39,
+            "n_gold": 187,
+            "n_pred": 111
+          },
+          "meaning": {
+            "precision": 0.4144144144144144,
+            "recall": 0.24598930481283424,
+            "f1": 0.30872483221476515,
+            "matched": 46,
+            "n_gold": 187,
+            "n_pred": 111
+          }
+        }
+      },
+      "selection": {
+        "step": "extract_claims",
+        "winner": {
+          "candidate": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "prompt": "extract_v2",
+            "reasoning_tokens": 0,
+            "reasoning_effort": null
+          },
+          "step": "extract_claims",
+          "metric": "claim_f1",
+          "score": 0.4142011834319527,
+          "n_items": 48,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.015778,
+          "latency_p95_ms": 7540.9,
+          "response_models": {
+            "claude-sonnet-5-5": 47
+          },
+          "reasoning_tokens": 0,
+          "output_tokens": 33239,
+          "calls": [
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3071,
+              "input_tokens": 3719,
+              "output_tokens": 475,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6283,
+              "input_tokens": 4141,
+              "output_tokens": 1326,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4707,
+              "input_tokens": 3280,
+              "output_tokens": 948,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3163,
+              "input_tokens": 7691,
+              "output_tokens": 538,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3852,
+              "input_tokens": 6681,
+              "output_tokens": 741,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6064,
+              "input_tokens": 6679,
+              "output_tokens": 1202,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6439,
+              "input_tokens": 7475,
+              "output_tokens": 1242,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4714,
+              "input_tokens": 6044,
+              "output_tokens": 685,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3354,
+              "input_tokens": 3273,
+              "output_tokens": 644,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 7546,
+              "input_tokens": 5971,
+              "output_tokens": 1532,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3699,
+              "input_tokens": 3826,
+              "output_tokens": 576,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3637,
+              "input_tokens": 3343,
+              "output_tokens": 665,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2543,
+              "input_tokens": 3138,
+              "output_tokens": 327,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 7590,
+              "input_tokens": 11856,
+              "output_tokens": 1528,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4634,
+              "input_tokens": 5002,
+              "output_tokens": 795,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 7529,
+              "input_tokens": 7144,
+              "output_tokens": 1478,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6874,
+              "input_tokens": 8259,
+              "output_tokens": 1313,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 7451,
+              "input_tokens": 5338,
+              "output_tokens": 1491,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4818,
+              "input_tokens": 6307,
+              "output_tokens": 608,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2959,
+              "input_tokens": 3221,
+              "output_tokens": 461,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 5848,
+              "input_tokens": 6777,
+              "output_tokens": 1033,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4855,
+              "input_tokens": 3583,
+              "output_tokens": 719,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3072,
+              "input_tokens": 3538,
+              "output_tokens": 509,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3591,
+              "input_tokens": 3370,
+              "output_tokens": 472,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4673,
+              "input_tokens": 5607,
+              "output_tokens": 666,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 7256,
+              "input_tokens": 5343,
+              "output_tokens": 1501,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2192,
+              "input_tokens": 2739,
+              "output_tokens": 234,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 5538,
+              "input_tokens": 4226,
+              "output_tokens": 1103,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1515,
+              "input_tokens": 1975,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3506,
+              "input_tokens": 2685,
+              "output_tokens": 391,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 595,
+              "input_tokens": 1979,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1756,
+              "input_tokens": 3050,
+              "output_tokens": 241,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4295,
+              "input_tokens": 4673,
+              "output_tokens": 792,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1235,
+              "input_tokens": 2478,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4126,
+              "input_tokens": 2958,
+              "output_tokens": 531,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 565,
+              "input_tokens": 2127,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3804,
+              "input_tokens": 3134,
+              "output_tokens": 759,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 5871,
+              "input_tokens": 5241,
+              "output_tokens": 1143,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2886,
+              "input_tokens": 3054,
+              "output_tokens": 508,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3152,
+              "input_tokens": 3061,
+              "output_tokens": 449,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1291,
+              "input_tokens": 2243,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2144,
+              "input_tokens": 5196,
+              "output_tokens": 275,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 586,
+              "input_tokens": 1993,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 10362,
+              "input_tokens": 6188,
+              "output_tokens": 1518,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2730,
+              "input_tokens": 3320,
+              "output_tokens": 367,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4116,
+              "input_tokens": 5987,
+              "output_tokens": 786,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3920,
+              "input_tokens": 3564,
+              "output_tokens": 379,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            }
+          ]
+        },
+        "reason": "best claim_f1 (0.4142) within budget",
+        "ranked": [
+          {
+            "candidate": {
+              "provider": "anthropic",
+              "model": "claude-sonnet-5-5",
+              "prompt": "extract_v2",
+              "reasoning_tokens": 0,
+              "reasoning_effort": null
+            },
+            "step": "extract_claims",
+            "metric": "claim_f1",
+            "score": 0.4142011834319527,
+            "n_items": 48,
+            "n_failed": 0,
+            "fallbacks_used": 0,
+            "cost_per_item": 0.015778,
+            "latency_p95_ms": 7540.9,
+            "response_models": {
+              "claude-sonnet-5-5": 47
+            },
+            "reasoning_tokens": 0,
+            "output_tokens": 33239,
+            "calls": [
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3071,
+                "input_tokens": 3719,
+                "output_tokens": 475,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 6283,
+                "input_tokens": 4141,
+                "output_tokens": 1326,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4707,
+                "input_tokens": 3280,
+                "output_tokens": 948,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3163,
+                "input_tokens": 7691,
+                "output_tokens": 538,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3852,
+                "input_tokens": 6681,
+                "output_tokens": 741,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 6064,
+                "input_tokens": 6679,
+                "output_tokens": 1202,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 6439,
+                "input_tokens": 7475,
+                "output_tokens": 1242,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4714,
+                "input_tokens": 6044,
+                "output_tokens": 685,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3354,
+                "input_tokens": 3273,
+                "output_tokens": 644,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 7546,
+                "input_tokens": 5971,
+                "output_tokens": 1532,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3699,
+                "input_tokens": 3826,
+                "output_tokens": 576,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3637,
+                "input_tokens": 3343,
+                "output_tokens": 665,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 2543,
+                "input_tokens": 3138,
+                "output_tokens": 327,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 7590,
+                "input_tokens": 11856,
+                "output_tokens": 1528,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4634,
+                "input_tokens": 5002,
+                "output_tokens": 795,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 7529,
+                "input_tokens": 7144,
+                "output_tokens": 1478,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 6874,
+                "input_tokens": 8259,
+                "output_tokens": 1313,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 7451,
+                "input_tokens": 5338,
+                "output_tokens": 1491,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4818,
+                "input_tokens": 6307,
+                "output_tokens": 608,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 2959,
+                "input_tokens": 3221,
+                "output_tokens": 461,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 5848,
+                "input_tokens": 6777,
+                "output_tokens": 1033,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4855,
+                "input_tokens": 3583,
+                "output_tokens": 719,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3072,
+                "input_tokens": 3538,
+                "output_tokens": 509,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3591,
+                "input_tokens": 3370,
+                "output_tokens": 472,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4673,
+                "input_tokens": 5607,
+                "output_tokens": 666,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 7256,
+                "input_tokens": 5343,
+                "output_tokens": 1501,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 2192,
+                "input_tokens": 2739,
+                "output_tokens": 234,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 5538,
+                "input_tokens": 4226,
+                "output_tokens": 1103,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 1515,
+                "input_tokens": 1975,
+                "output_tokens": 48,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3506,
+                "input_tokens": 2685,
+                "output_tokens": 391,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 595,
+                "input_tokens": 1979,
+                "output_tokens": 48,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 1756,
+                "input_tokens": 3050,
+                "output_tokens": 241,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4295,
+                "input_tokens": 4673,
+                "output_tokens": 792,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 1235,
+                "input_tokens": 2478,
+                "output_tokens": 48,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4126,
+                "input_tokens": 2958,
+                "output_tokens": 531,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 565,
+                "input_tokens": 2127,
+                "output_tokens": 48,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3804,
+                "input_tokens": 3134,
+                "output_tokens": 759,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 5871,
+                "input_tokens": 5241,
+                "output_tokens": 1143,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 2886,
+                "input_tokens": 3054,
+                "output_tokens": 508,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3152,
+                "input_tokens": 3061,
+                "output_tokens": 449,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 1291,
+                "input_tokens": 2243,
+                "output_tokens": 48,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 2144,
+                "input_tokens": 5196,
+                "output_tokens": 275,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 586,
+                "input_tokens": 1993,
+                "output_tokens": 48,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 10362,
+                "input_tokens": 6188,
+                "output_tokens": 1518,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 2730,
+                "input_tokens": 3320,
+                "output_tokens": 367,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4116,
+                "input_tokens": 5987,
+                "output_tokens": 786,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3920,
+                "input_tokens": 3564,
+                "output_tokens": 379,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              }
+            ]
+          }
+        ],
+        "excluded": {
+          "anthropic/claude-sonnet-5-5@extract_v3": "failure rate 34/48 over budget (0 served by the fallback model)"
+        }
+      }
+    }
+  },
+  "proposed_routing": {
+    "version": "routing_v2",
+    "status": "provisional",
+    "routing": {
+      "extract_claims": {
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "extract_v2"
+      },
+      "analyze_stance": {
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "stance_v1"
+      },
+      "plan_search": {
+        "provider": "anthropic",
+        "model": "claude-haiku-5-5",
+        "prompt": "search_assist_v1"
+      },
+      "translate_claim": {
+        "provider": "anthropic",
+        "model": "claude-haiku-5-5",
+        "prompt": "translate_v1"
+      },
+      "find_study": {
+        "provider": "anthropic",
+        "model": "claude-haiku-5-5",
+        "prompt": "find_study_v1"
+      },
+      "verify_claims": {
+        "provider": "anthropic",
+        "model": "claude-opus-5-5",
+        "prompt": "verify_v3"
+      },
+      "critique": {
+        "provider": "openai",
+        "model": "gpt-4o-2024-08-06",
+        "prompt": "critic_v1"
+      },
+      "judge_explanation": {
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "explain_v2"
+      },
+      "fallback": {
+        "on": [
+          "timeout",
+          "5xx"
+        ],
+        "retries": 1,
+        "use": {
+          "provider": "openai",
+          "model": "gpt-4o-2024-08-06"
+        }
+      }
+    },
+    "pricing": {
+      "claude-haiku-5-5": {
+        "input": 0.1,
+        "output": 0.5
+      },
+      "claude-sonnet-5-5": {
+        "input": 2.0,
+        "output": 10.0
+      },
+      "claude-opus-5-5": {
+        "input": 4.0,
+        "output": 20.0
+      },
+      "gpt-4o-2024-08-06": {
+        "input": 2.5,
+        "output": 10.0
+      },
+      "gpt-5.6-luna": {
+        "input": 0.2,
+        "output": 1.2
+      },
+      "gpt-5.6-terra": {
+        "input": 2.0,
+        "output": 12.0
+      }
+    },
+    "models": {
+      "gpt-4o-2024-08-06": {
+        "reasoning": false
+      },
+      "gpt-5.6-luna": {
+        "reasoning": true,
+        "reasoning_effort": "medium"
+      },
+      "gpt-5.6-terra": {
+        "reasoning": true,
+        "reasoning_effort": "medium"
+      }
+    },
+    "reasoning_allowance": {
+      "extract_claims": 1500,
+      "analyze_stance": 800,
+      "verify_claims": 2500
+    }
+  },
+  "pipeline_options": {
+    "version": "pipeline_v1",
+    "extraction": {
+      "use_ocr": false
+    },
+    "retrieval": {
+      "search_assistant": true,
+      "translate_claims": true,
+      "find_study": true,
+      "crossref": true
+    }
+  },
+  "written_at": "2026-11-26T19:48:35+00:00"
+}

@@ -1,0 +1,3114 @@
+{
+  "critic_same_provider": null,
+  "response_model_notes": [],
+  "mode": "live",
+  "golden": "git:92a731e@92a731e7f954:research/claim-level/dataset",
+  "split": "tune",
+  "evidence_mode": null,
+  "estimate": {
+    "mode": "dry_run",
+    "golden": "git:92a731e@92a731e7f954:research/claim-level/dataset",
+    "split": "tune",
+    "evidence_mode": null,
+    "evidence_assumed": false,
+    "use_ocr": true,
+    "steps": {
+      "extract_claims": {
+        "items": 48,
+        "metric": "claim_f1",
+        "candidates": [
+          {
+            "candidate": "anthropic/claude-sonnet-5-5@extract_v2",
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "prompt": "extract_v2",
+            "calls": 50,
+            "input_tokens": 235832,
+            "expected_output_tokens": 30000,
+            "max_output_tokens": 102400,
+            "reasoning_tokens": 0,
+            "output_cap_tokens": 102400,
+            "upper_bound_input_tokens": 589580,
+            "upper_bound_output_tokens": 204800,
+            "expected_usd": 0.7717,
+            "upper_bound_usd": 3.2272,
+            "priced": true,
+            "placeholder_id": false
+          },
+          {
+            "candidate": "anthropic/claude-sonnet-5-5@extract_v3",
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "prompt": "extract_v3",
+            "calls": 50,
+            "input_tokens": 274360,
+            "expected_output_tokens": 30000,
+            "max_output_tokens": 102400,
+            "reasoning_tokens": 0,
+            "output_cap_tokens": 102400,
+            "upper_bound_input_tokens": 685900,
+            "upper_bound_output_tokens": 204800,
+            "expected_usd": 0.8487,
+            "upper_bound_usd": 3.4198,
+            "priced": true,
+            "placeholder_id": false
+          }
+        ]
+      }
+    },
+    "total_expected_usd": 1.6204,
+    "total_upper_bound_usd": 6.647,
+    "unpriced_candidates": [],
+    "placeholder_candidates": [],
+    "critic_provider_warnings": [],
+    "reasoning_config_problems": [],
+    "notes": []
+  },
+  "spend": {
+    "cap_usd": 6.6344,
+    "spent_usd": 2.46129,
+    "calls": 100,
+    "refused_calls": 0,
+    "stopped_at_cap": false,
+    "by_model": {
+      "claude-sonnet-5-5": 2.46129
+    }
+  },
+  "stopped": null,
+  "steps": {
+    "extract_claims": {
+      "items": 48,
+      "results": [
+        {
+          "candidate": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "prompt": "extract_v2",
+            "reasoning_tokens": 0,
+            "reasoning_effort": null
+          },
+          "step": "extract_claims",
+          "metric": "claim_f1",
+          "score": 0.4363636363636364,
+          "n_items": 48,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.02499208333333333,
+          "latency_p95_ms": 10043.65,
+          "response_models": {
+            "claude-sonnet-5-5": 50
+          },
+          "reasoning_tokens": 0,
+          "output_tokens": 43244,
+          "calls": [
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4327,
+              "input_tokens": 7136,
+              "output_tokens": 618,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 7291,
+              "input_tokens": 7564,
+              "output_tokens": 1549,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4981,
+              "input_tokens": 5531,
+              "output_tokens": 1020,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3423,
+              "input_tokens": 13443,
+              "output_tokens": 659,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 8125,
+              "input_tokens": 15105,
+              "output_tokens": 1217,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6144,
+              "input_tokens": 15797,
+              "output_tokens": 1220,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 8124,
+              "input_tokens": 16115,
+              "output_tokens": 1484,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4645,
+              "input_tokens": 10481,
+              "output_tokens": 830,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 9888,
+              "input_tokens": 6436,
+              "output_tokens": 1929,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 8805,
+              "input_tokens": 10632,
+              "output_tokens": 1809,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3479,
+              "input_tokens": 7297,
+              "output_tokens": 588,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4466,
+              "input_tokens": 6715,
+              "output_tokens": 791,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2273,
+              "input_tokens": 4029,
+              "output_tokens": 258,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 11392,
+              "input_tokens": 26491,
+              "output_tokens": 1820,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 5734,
+              "input_tokens": 9425,
+              "output_tokens": 1051,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 9224,
+              "input_tokens": 14645,
+              "output_tokens": 1838,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 7402,
+              "input_tokens": 17654,
+              "output_tokens": 1494,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 8789,
+              "input_tokens": 11282,
+              "output_tokens": 1754,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3284,
+              "input_tokens": 7451,
+              "output_tokens": 542,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3418,
+              "input_tokens": 5041,
+              "output_tokens": 565,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6944,
+              "input_tokens": 11202,
+              "output_tokens": 1215,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4936,
+              "input_tokens": 3971,
+              "output_tokens": 717,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3024,
+              "input_tokens": 4861,
+              "output_tokens": 573,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4995,
+              "input_tokens": 5317,
+              "output_tokens": 698,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3936,
+              "input_tokens": 10709,
+              "output_tokens": 720,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 8026,
+              "input_tokens": 12118,
+              "output_tokens": 1638,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2539,
+              "input_tokens": 4367,
+              "output_tokens": 260,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2584,
+              "input_tokens": 2086,
+              "output_tokens": 360,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 7298,
+              "input_tokens": 8583,
+              "output_tokens": 1455,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1071,
+              "input_tokens": 3372,
+              "output_tokens": 143,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4109,
+              "input_tokens": 4287,
+              "output_tokens": 457,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 5004,
+              "input_tokens": 2207,
+              "output_tokens": 782,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2432,
+              "input_tokens": 5537,
+              "output_tokens": 412,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4192,
+              "input_tokens": 4673,
+              "output_tokens": 779,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6185,
+              "input_tokens": 3191,
+              "output_tokens": 886,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6732,
+              "input_tokens": 6166,
+              "output_tokens": 1307,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1183,
+              "input_tokens": 2379,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4437,
+              "input_tokens": 4842,
+              "output_tokens": 838,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 11391,
+              "input_tokens": 11529,
+              "output_tokens": 2202,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3324,
+              "input_tokens": 4898,
+              "output_tokens": 583,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2982,
+              "input_tokens": 5009,
+              "output_tokens": 537,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1563,
+              "input_tokens": 3573,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1156,
+              "input_tokens": 2394,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 594,
+              "input_tokens": 2662,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3126,
+              "input_tokens": 8343,
+              "output_tokens": 390,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 607,
+              "input_tokens": 1993,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 10171,
+              "input_tokens": 6303,
+              "output_tokens": 1517,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3063,
+              "input_tokens": 5579,
+              "output_tokens": 440,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 5052,
+              "input_tokens": 9228,
+              "output_tokens": 777,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3213,
+              "input_tokens": 3941,
+              "output_tokens": 282,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            }
+          ]
+        },
+        {
+          "candidate": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "prompt": "extract_v3",
+            "reasoning_tokens": 0,
+            "reasoning_effort": null
+          },
+          "step": "extract_claims",
+          "metric": "claim_f1",
+          "score": 0.5275862068965517,
+          "n_items": 48,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.026284791666666668,
+          "latency_p95_ms": 8844.4,
+          "response_models": {
+            "claude-sonnet-5-5": 50
+          },
+          "reasoning_tokens": 0,
+          "output_tokens": 40299,
+          "calls": [
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2959,
+              "input_tokens": 8051,
+              "output_tokens": 497,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6936,
+              "input_tokens": 8479,
+              "output_tokens": 1440,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4174,
+              "input_tokens": 6446,
+              "output_tokens": 765,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3309,
+              "input_tokens": 14358,
+              "output_tokens": 616,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6086,
+              "input_tokens": 16020,
+              "output_tokens": 1111,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6275,
+              "input_tokens": 16712,
+              "output_tokens": 1209,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6811,
+              "input_tokens": 17030,
+              "output_tokens": 1309,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4513,
+              "input_tokens": 11396,
+              "output_tokens": 832,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 15305,
+              "input_tokens": 7351,
+              "output_tokens": 3371,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 9008,
+              "input_tokens": 11547,
+              "output_tokens": 1827,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3595,
+              "input_tokens": 8212,
+              "output_tokens": 493,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4409,
+              "input_tokens": 7630,
+              "output_tokens": 831,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 944,
+              "input_tokens": 4944,
+              "output_tokens": 134,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 7408,
+              "input_tokens": 27406,
+              "output_tokens": 1516,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3557,
+              "input_tokens": 10340,
+              "output_tokens": 668,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 8965,
+              "input_tokens": 15560,
+              "output_tokens": 1831,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 7298,
+              "input_tokens": 18569,
+              "output_tokens": 1282,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 8272,
+              "input_tokens": 12197,
+              "output_tokens": 1724,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3419,
+              "input_tokens": 8366,
+              "output_tokens": 398,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3281,
+              "input_tokens": 5956,
+              "output_tokens": 542,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 5453,
+              "input_tokens": 12117,
+              "output_tokens": 782,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3871,
+              "input_tokens": 4886,
+              "output_tokens": 710,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3138,
+              "input_tokens": 5776,
+              "output_tokens": 566,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3692,
+              "input_tokens": 6232,
+              "output_tokens": 456,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3969,
+              "input_tokens": 11624,
+              "output_tokens": 434,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 7916,
+              "input_tokens": 13033,
+              "output_tokens": 1595,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1632,
+              "input_tokens": 5282,
+              "output_tokens": 256,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2092,
+              "input_tokens": 3001,
+              "output_tokens": 238,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6510,
+              "input_tokens": 9498,
+              "output_tokens": 1312,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1568,
+              "input_tokens": 4287,
+              "output_tokens": 131,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2828,
+              "input_tokens": 5202,
+              "output_tokens": 426,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4355,
+              "input_tokens": 3122,
+              "output_tokens": 710,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6678,
+              "input_tokens": 6452,
+              "output_tokens": 973,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4929,
+              "input_tokens": 5588,
+              "output_tokens": 823,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4430,
+              "input_tokens": 4106,
+              "output_tokens": 657,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 5803,
+              "input_tokens": 7081,
+              "output_tokens": 1175,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 686,
+              "input_tokens": 3294,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3640,
+              "input_tokens": 5757,
+              "output_tokens": 731,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 8408,
+              "input_tokens": 12444,
+              "output_tokens": 1638,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2548,
+              "input_tokens": 5813,
+              "output_tokens": 458,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2621,
+              "input_tokens": 5924,
+              "output_tokens": 490,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 759,
+              "input_tokens": 4488,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 510,
+              "input_tokens": 3309,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1271,
+              "input_tokens": 3577,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2571,
+              "input_tokens": 9258,
+              "output_tokens": 358,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1270,
+              "input_tokens": 2908,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 8697,
+              "input_tokens": 7218,
+              "output_tokens": 1361,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3113,
+              "input_tokens": 6494,
+              "output_tokens": 429,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 5165,
+              "input_tokens": 10143,
+              "output_tokens": 693,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3213,
+              "input_tokens": 4856,
+              "output_tokens": 261,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            }
+          ]
+        }
+      ],
+      "extras": {
+        "anthropic/claude-sonnet-5-5@extract_v2": {
+          "strict": {
+            "precision": 0.3305785123966942,
+            "recall": 0.6417112299465241,
+            "f1": 0.4363636363636364,
+            "matched": 120,
+            "n_gold": 187,
+            "n_pred": 363
+          },
+          "meaning": {
+            "precision": 0.4132231404958678,
+            "recall": 0.8021390374331551,
+            "f1": 0.5454545454545455,
+            "matched": 150,
+            "n_gold": 187,
+            "n_pred": 363
+          }
+        },
+        "anthropic/claude-sonnet-5-5@extract_v3": {
+          "strict": {
+            "precision": 0.3893129770992366,
+            "recall": 0.8181818181818182,
+            "f1": 0.5275862068965517,
+            "matched": 153,
+            "n_gold": 187,
+            "n_pred": 393
+          },
+          "meaning": {
+            "precision": 0.43256997455470736,
+            "recall": 0.9090909090909091,
+            "f1": 0.5862068965517242,
+            "matched": 170,
+            "n_gold": 187,
+            "n_pred": 393
+          }
+        }
+      },
+      "selection": {
+        "step": "extract_claims",
+        "winner": {
+          "candidate": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "prompt": "extract_v3",
+            "reasoning_tokens": 0,
+            "reasoning_effort": null
+          },
+          "step": "extract_claims",
+          "metric": "claim_f1",
+          "score": 0.5275862068965517,
+          "n_items": 48,
+          "n_failed": 0,
+          "fallbacks_used": 0,
+          "cost_per_item": 0.026284791666666668,
+          "latency_p95_ms": 8844.4,
+          "response_models": {
+            "claude-sonnet-5-5": 50
+          },
+          "reasoning_tokens": 0,
+          "output_tokens": 40299,
+          "calls": [
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2959,
+              "input_tokens": 8051,
+              "output_tokens": 497,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6936,
+              "input_tokens": 8479,
+              "output_tokens": 1440,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4174,
+              "input_tokens": 6446,
+              "output_tokens": 765,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3309,
+              "input_tokens": 14358,
+              "output_tokens": 616,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6086,
+              "input_tokens": 16020,
+              "output_tokens": 1111,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6275,
+              "input_tokens": 16712,
+              "output_tokens": 1209,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6811,
+              "input_tokens": 17030,
+              "output_tokens": 1309,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4513,
+              "input_tokens": 11396,
+              "output_tokens": 832,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 15305,
+              "input_tokens": 7351,
+              "output_tokens": 3371,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 9008,
+              "input_tokens": 11547,
+              "output_tokens": 1827,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3595,
+              "input_tokens": 8212,
+              "output_tokens": 493,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4409,
+              "input_tokens": 7630,
+              "output_tokens": 831,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 944,
+              "input_tokens": 4944,
+              "output_tokens": 134,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 7408,
+              "input_tokens": 27406,
+              "output_tokens": 1516,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3557,
+              "input_tokens": 10340,
+              "output_tokens": 668,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 8965,
+              "input_tokens": 15560,
+              "output_tokens": 1831,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 7298,
+              "input_tokens": 18569,
+              "output_tokens": 1282,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 8272,
+              "input_tokens": 12197,
+              "output_tokens": 1724,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3419,
+              "input_tokens": 8366,
+              "output_tokens": 398,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3281,
+              "input_tokens": 5956,
+              "output_tokens": 542,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 5453,
+              "input_tokens": 12117,
+              "output_tokens": 782,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3871,
+              "input_tokens": 4886,
+              "output_tokens": 710,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3138,
+              "input_tokens": 5776,
+              "output_tokens": 566,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3692,
+              "input_tokens": 6232,
+              "output_tokens": 456,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3969,
+              "input_tokens": 11624,
+              "output_tokens": 434,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 7916,
+              "input_tokens": 13033,
+              "output_tokens": 1595,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1632,
+              "input_tokens": 5282,
+              "output_tokens": 256,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2092,
+              "input_tokens": 3001,
+              "output_tokens": 238,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6510,
+              "input_tokens": 9498,
+              "output_tokens": 1312,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1568,
+              "input_tokens": 4287,
+              "output_tokens": 131,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2828,
+              "input_tokens": 5202,
+              "output_tokens": 426,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4355,
+              "input_tokens": 3122,
+              "output_tokens": 710,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 6678,
+              "input_tokens": 6452,
+              "output_tokens": 973,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4929,
+              "input_tokens": 5588,
+              "output_tokens": 823,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 4430,
+              "input_tokens": 4106,
+              "output_tokens": 657,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 5803,
+              "input_tokens": 7081,
+              "output_tokens": 1175,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 686,
+              "input_tokens": 3294,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3640,
+              "input_tokens": 5757,
+              "output_tokens": 731,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 8408,
+              "input_tokens": 12444,
+              "output_tokens": 1638,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2548,
+              "input_tokens": 5813,
+              "output_tokens": 458,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2621,
+              "input_tokens": 5924,
+              "output_tokens": 490,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 759,
+              "input_tokens": 4488,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 510,
+              "input_tokens": 3309,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1271,
+              "input_tokens": 3577,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 2571,
+              "input_tokens": 9258,
+              "output_tokens": 358,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 1270,
+              "input_tokens": 2908,
+              "output_tokens": 48,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 8697,
+              "input_tokens": 7218,
+              "output_tokens": 1361,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3113,
+              "input_tokens": 6494,
+              "output_tokens": 429,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 5165,
+              "input_tokens": 10143,
+              "output_tokens": 693,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            },
+            {
+              "model": "claude-sonnet-5-5",
+              "fallback_used": false,
+              "latency_ms": 3213,
+              "input_tokens": 4856,
+              "output_tokens": 261,
+              "reasoning_tokens": 0,
+              "response_model": "claude-sonnet-5-5",
+              "reasoning_effort": null,
+              "error": null
+            }
+          ]
+        },
+        "reason": "best claim_f1 (0.5276) within budget",
+        "ranked": [
+          {
+            "candidate": {
+              "provider": "anthropic",
+              "model": "claude-sonnet-5-5",
+              "prompt": "extract_v3",
+              "reasoning_tokens": 0,
+              "reasoning_effort": null
+            },
+            "step": "extract_claims",
+            "metric": "claim_f1",
+            "score": 0.5275862068965517,
+            "n_items": 48,
+            "n_failed": 0,
+            "fallbacks_used": 0,
+            "cost_per_item": 0.026284791666666668,
+            "latency_p95_ms": 8844.4,
+            "response_models": {
+              "claude-sonnet-5-5": 50
+            },
+            "reasoning_tokens": 0,
+            "output_tokens": 40299,
+            "calls": [
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 2959,
+                "input_tokens": 8051,
+                "output_tokens": 497,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 6936,
+                "input_tokens": 8479,
+                "output_tokens": 1440,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4174,
+                "input_tokens": 6446,
+                "output_tokens": 765,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3309,
+                "input_tokens": 14358,
+                "output_tokens": 616,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 6086,
+                "input_tokens": 16020,
+                "output_tokens": 1111,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 6275,
+                "input_tokens": 16712,
+                "output_tokens": 1209,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 6811,
+                "input_tokens": 17030,
+                "output_tokens": 1309,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4513,
+                "input_tokens": 11396,
+                "output_tokens": 832,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 15305,
+                "input_tokens": 7351,
+                "output_tokens": 3371,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 9008,
+                "input_tokens": 11547,
+                "output_tokens": 1827,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3595,
+                "input_tokens": 8212,
+                "output_tokens": 493,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4409,
+                "input_tokens": 7630,
+                "output_tokens": 831,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 944,
+                "input_tokens": 4944,
+                "output_tokens": 134,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 7408,
+                "input_tokens": 27406,
+                "output_tokens": 1516,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3557,
+                "input_tokens": 10340,
+                "output_tokens": 668,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 8965,
+                "input_tokens": 15560,
+                "output_tokens": 1831,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 7298,
+                "input_tokens": 18569,
+                "output_tokens": 1282,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 8272,
+                "input_tokens": 12197,
+                "output_tokens": 1724,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3419,
+                "input_tokens": 8366,
+                "output_tokens": 398,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3281,
+                "input_tokens": 5956,
+                "output_tokens": 542,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 5453,
+                "input_tokens": 12117,
+                "output_tokens": 782,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3871,
+                "input_tokens": 4886,
+                "output_tokens": 710,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3138,
+                "input_tokens": 5776,
+                "output_tokens": 566,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3692,
+                "input_tokens": 6232,
+                "output_tokens": 456,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3969,
+                "input_tokens": 11624,
+                "output_tokens": 434,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 7916,
+                "input_tokens": 13033,
+                "output_tokens": 1595,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 1632,
+                "input_tokens": 5282,
+                "output_tokens": 256,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 2092,
+                "input_tokens": 3001,
+                "output_tokens": 238,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 6510,
+                "input_tokens": 9498,
+                "output_tokens": 1312,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 1568,
+                "input_tokens": 4287,
+                "output_tokens": 131,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 2828,
+                "input_tokens": 5202,
+                "output_tokens": 426,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4355,
+                "input_tokens": 3122,
+                "output_tokens": 710,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 6678,
+                "input_tokens": 6452,
+                "output_tokens": 973,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4929,
+                "input_tokens": 5588,
+                "output_tokens": 823,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4430,
+                "input_tokens": 4106,
+                "output_tokens": 657,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 5803,
+                "input_tokens": 7081,
+                "output_tokens": 1175,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 686,
+                "input_tokens": 3294,
+                "output_tokens": 48,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3640,
+                "input_tokens": 5757,
+                "output_tokens": 731,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 8408,
+                "input_tokens": 12444,
+                "output_tokens": 1638,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 2548,
+                "input_tokens": 5813,
+                "output_tokens": 458,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 2621,
+                "input_tokens": 5924,
+                "output_tokens": 490,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 759,
+                "input_tokens": 4488,
+                "output_tokens": 48,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 510,
+                "input_tokens": 3309,
+                "output_tokens": 48,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 1271,
+                "input_tokens": 3577,
+                "output_tokens": 48,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 2571,
+                "input_tokens": 9258,
+                "output_tokens": 358,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 1270,
+                "input_tokens": 2908,
+                "output_tokens": 48,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 8697,
+                "input_tokens": 7218,
+                "output_tokens": 1361,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3113,
+                "input_tokens": 6494,
+                "output_tokens": 429,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 5165,
+                "input_tokens": 10143,
+                "output_tokens": 693,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3213,
+                "input_tokens": 4856,
+                "output_tokens": 261,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              }
+            ]
+          },
+          {
+            "candidate": {
+              "provider": "anthropic",
+              "model": "claude-sonnet-5-5",
+              "prompt": "extract_v2",
+              "reasoning_tokens": 0,
+              "reasoning_effort": null
+            },
+            "step": "extract_claims",
+            "metric": "claim_f1",
+            "score": 0.4363636363636364,
+            "n_items": 48,
+            "n_failed": 0,
+            "fallbacks_used": 0,
+            "cost_per_item": 0.02499208333333333,
+            "latency_p95_ms": 10043.65,
+            "response_models": {
+              "claude-sonnet-5-5": 50
+            },
+            "reasoning_tokens": 0,
+            "output_tokens": 43244,
+            "calls": [
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4327,
+                "input_tokens": 7136,
+                "output_tokens": 618,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 7291,
+                "input_tokens": 7564,
+                "output_tokens": 1549,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4981,
+                "input_tokens": 5531,
+                "output_tokens": 1020,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3423,
+                "input_tokens": 13443,
+                "output_tokens": 659,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 8125,
+                "input_tokens": 15105,
+                "output_tokens": 1217,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 6144,
+                "input_tokens": 15797,
+                "output_tokens": 1220,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 8124,
+                "input_tokens": 16115,
+                "output_tokens": 1484,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4645,
+                "input_tokens": 10481,
+                "output_tokens": 830,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 9888,
+                "input_tokens": 6436,
+                "output_tokens": 1929,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 8805,
+                "input_tokens": 10632,
+                "output_tokens": 1809,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3479,
+                "input_tokens": 7297,
+                "output_tokens": 588,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4466,
+                "input_tokens": 6715,
+                "output_tokens": 791,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 2273,
+                "input_tokens": 4029,
+                "output_tokens": 258,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 11392,
+                "input_tokens": 26491,
+                "output_tokens": 1820,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 5734,
+                "input_tokens": 9425,
+                "output_tokens": 1051,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 9224,
+                "input_tokens": 14645,
+                "output_tokens": 1838,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 7402,
+                "input_tokens": 17654,
+                "output_tokens": 1494,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 8789,
+                "input_tokens": 11282,
+                "output_tokens": 1754,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3284,
+                "input_tokens": 7451,
+                "output_tokens": 542,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3418,
+                "input_tokens": 5041,
+                "output_tokens": 565,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 6944,
+                "input_tokens": 11202,
+                "output_tokens": 1215,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4936,
+                "input_tokens": 3971,
+                "output_tokens": 717,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3024,
+                "input_tokens": 4861,
+                "output_tokens": 573,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4995,
+                "input_tokens": 5317,
+                "output_tokens": 698,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3936,
+                "input_tokens": 10709,
+                "output_tokens": 720,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 8026,
+                "input_tokens": 12118,
+                "output_tokens": 1638,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 2539,
+                "input_tokens": 4367,
+                "output_tokens": 260,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 2584,
+                "input_tokens": 2086,
+                "output_tokens": 360,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 7298,
+                "input_tokens": 8583,
+                "output_tokens": 1455,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 1071,
+                "input_tokens": 3372,
+                "output_tokens": 143,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4109,
+                "input_tokens": 4287,
+                "output_tokens": 457,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 5004,
+                "input_tokens": 2207,
+                "output_tokens": 782,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 2432,
+                "input_tokens": 5537,
+                "output_tokens": 412,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4192,
+                "input_tokens": 4673,
+                "output_tokens": 779,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 6185,
+                "input_tokens": 3191,
+                "output_tokens": 886,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 6732,
+                "input_tokens": 6166,
+                "output_tokens": 1307,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 1183,
+                "input_tokens": 2379,
+                "output_tokens": 48,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 4437,
+                "input_tokens": 4842,
+                "output_tokens": 838,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 11391,
+                "input_tokens": 11529,
+                "output_tokens": 2202,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3324,
+                "input_tokens": 4898,
+                "output_tokens": 583,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 2982,
+                "input_tokens": 5009,
+                "output_tokens": 537,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 1563,
+                "input_tokens": 3573,
+                "output_tokens": 48,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 1156,
+                "input_tokens": 2394,
+                "output_tokens": 48,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 594,
+                "input_tokens": 2662,
+                "output_tokens": 48,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3126,
+                "input_tokens": 8343,
+                "output_tokens": 390,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 607,
+                "input_tokens": 1993,
+                "output_tokens": 48,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 10171,
+                "input_tokens": 6303,
+                "output_tokens": 1517,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3063,
+                "input_tokens": 5579,
+                "output_tokens": 440,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 5052,
+                "input_tokens": 9228,
+                "output_tokens": 777,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              },
+              {
+                "model": "claude-sonnet-5-5",
+                "fallback_used": false,
+                "latency_ms": 3213,
+                "input_tokens": 3941,
+                "output_tokens": 282,
+                "reasoning_tokens": 0,
+                "response_model": "claude-sonnet-5-5",
+                "reasoning_effort": null,
+                "error": null
+              }
+            ]
+          }
+        ],
+        "excluded": {}
+      }
+    }
+  },
+  "proposed_routing": {
+    "version": "routing_v2",
+    "status": "provisional",
+    "routing": {
+      "extract_claims": {
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "extract_v3"
+      },
+      "analyze_stance": {
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "stance_v1"
+      },
+      "plan_search": {
+        "provider": "anthropic",
+        "model": "claude-haiku-5-5",
+        "prompt": "search_assist_v1"
+      },
+      "translate_claim": {
+        "provider": "anthropic",
+        "model": "claude-haiku-5-5",
+        "prompt": "translate_v1"
+      },
+      "find_study": {
+        "provider": "anthropic",
+        "model": "claude-haiku-5-5",
+        "prompt": "find_study_v1"
+      },
+      "verify_claims": {
+        "provider": "anthropic",
+        "model": "claude-opus-5-5",
+        "prompt": "verify_v3"
+      },
+      "critique": {
+        "provider": "openai",
+        "model": "gpt-4o-2024-08-06",
+        "prompt": "critic_v1"
+      },
+      "judge_explanation": {
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "explain_v2"
+      },
+      "fallback": {
+        "on": [
+          "timeout",
+          "5xx"
+        ],
+        "retries": 1,
+        "use": {
+          "provider": "openai",
+          "model": "gpt-4o-2024-08-06"
+        }
+      }
+    },
+    "pricing": {
+      "claude-haiku-5-5": {
+        "input": 0.1,
+        "output": 0.5
+      },
+      "claude-sonnet-5-5": {
+        "input": 2.0,
+        "output": 10.0
+      },
+      "claude-opus-5-5": {
+        "input": 4.0,
+        "output": 20.0
+      },
+      "gpt-4o-2024-08-06": {
+        "input": 2.5,
+        "output": 10.0
+      },
+      "gpt-5.6-luna": {
+        "input": 0.2,
+        "output": 1.2
+      },
+      "gpt-5.6-terra": {
+        "input": 2.0,
+        "output": 12.0
+      }
+    },
+    "models": {
+      "gpt-4o-2024-08-06": {
+        "reasoning": false
+      },
+      "gpt-5.6-luna": {
+        "reasoning": true,
+        "reasoning_effort": "medium"
+      },
+      "gpt-5.6-terra": {
+        "reasoning": true,
+        "reasoning_effort": "medium"
+      }
+    },
+    "reasoning_allowance": {
+      "extract_claims": 1500,
+      "analyze_stance": 800,
+      "verify_claims": 2500
+    }
+  },
+  "pipeline_options": {
+    "version": "pipeline_v1",
+    "extraction": {
+      "use_ocr": true
+    },
+    "retrieval": {
+      "search_assistant": false,
+      "translate_claims": false,
+      "find_study": false,
+      "crossref": false
+    }
+  },
+  "written_at": "2026-11-26T19:43:53+00:00"
+}
