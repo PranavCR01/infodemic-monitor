@@ -1,0 +1,751 @@
+{
+ "n_declared": 48,
+ "status_counts": {
+  "finished": 1,
+  "not_run": 47
+ },
+ "finished": [
+  "v95"
+ ],
+ "graph_fallback": [],
+ "not_run": [
+  "v65",
+  "v176",
+  "v69",
+  "v109",
+  "v150",
+  "v11",
+  "v39",
+  "v23",
+  "v120",
+  "v92",
+  "v114",
+  "v71",
+  "v88",
+  "v122",
+  "v94",
+  "v78",
+  "v87",
+  "v21",
+  "v70",
+  "v79",
+  "v135",
+  "v110",
+  "v22",
+  "v100",
+  "v86",
+  "v167",
+  "v143",
+  "v177",
+  "v51",
+  "v141",
+  "v123",
+  "v180",
+  "v96",
+  "v121",
+  "v58",
+  "v36",
+  "v131",
+  "v44",
+  "v119",
+  "v68",
+  "v146",
+  "v152",
+  "v27",
+  "v144",
+  "v24",
+  "v160",
+  "v111"
+ ],
+ "confusion": {
+  "MISINFO": {
+   "MISINFO": 0,
+   "NO_MISINFO": 0,
+   "DEBUNKING": 0,
+   "CANNOT_RECOGNIZE": 0
+  },
+  "NO_MISINFO": {
+   "MISINFO": 0,
+   "NO_MISINFO": 0,
+   "DEBUNKING": 0,
+   "CANNOT_RECOGNIZE": 1
+  },
+  "DEBUNKING": {
+   "MISINFO": 0,
+   "NO_MISINFO": 0,
+   "DEBUNKING": 0,
+   "CANNOT_RECOGNIZE": 0
+  },
+  "CANNOT_RECOGNIZE": {
+   "MISINFO": 0,
+   "NO_MISINFO": 0,
+   "DEBUNKING": 0,
+   "CANNOT_RECOGNIZE": 0
+  }
+ },
+ "per_class": {
+  "MISINFO": {
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "support": 0
+  },
+  "NO_MISINFO": {
+   "precision": null,
+   "recall": 0.0,
+   "f1": null,
+   "support": 1
+  },
+  "DEBUNKING": {
+   "precision": null,
+   "recall": null,
+   "f1": null,
+   "support": 0
+  },
+  "CANNOT_RECOGNIZE": {
+   "precision": 0.0,
+   "recall": null,
+   "f1": null,
+   "support": 0
+  }
+ },
+ "accuracy": {
+  "point": 0.0,
+  "lo": 0.0,
+  "hi": 0.0,
+  "n_resamples": 10000,
+  "n_undefined": 0
+ },
+ "macro_f1": {
+  "point": 0.0,
+  "lo": 0.0,
+  "hi": 0.0,
+  "n_resamples": 10000,
+  "n_undefined": 0
+ },
+ "basis": [],
+ "basis_confusion": {},
+ "basis_agree_when_both_misinfo": [
+  0,
+  0
+ ],
+ "review": {
+  "agree": 0,
+  "n": 1,
+  "kappa": 0.0,
+  "gold_yes_ours_yes": 0,
+  "gold_yes_ours_no": 0,
+  "gold_no_ours_yes": 1,
+  "gold_no_ours_no": 0,
+  "agreement_ci": {
+   "point": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n_resamples": 10000,
+   "n_undefined": 0
+  }
+ },
+ "wrong": [
+  {
+   "video_id": "v95",
+   "gold": "NO_MISINFO",
+   "gold_basis": null,
+   "ours": "CANNOT_RECOGNIZE",
+   "ours_basis": null,
+   "rule": "nothing_judged",
+   "deciding": [],
+   "sent_to_review": true
+  }
+ ],
+ "gold_rule_label_mismatch_finished": [],
+ "gaps": {
+  "gold_on_finished": {
+   "e_claims_total": 0,
+   "e_deciding_total": 0,
+   "d_pairs_total": 0
+  },
+  "ours_on_finished": {
+   "e_claims_total": 0,
+   "e_deciding_total": 0,
+   "d_pairs_total": 0
+  },
+  "gold_on_all_48": {
+   "e_claims_total": 11,
+   "e_deciding_total": 10,
+   "d_pairs_total": 3,
+   "e": 6,
+   "d": 2
+  },
+  "detail_gold_finished": {},
+  "detail_ours_finished": {},
+  "detail_gold_all": {
+   "e": [
+    {
+     "video_id": "v120",
+     "e_claims": [
+      "c1"
+     ],
+     "e_deciding": [
+      "c1"
+     ]
+    },
+    {
+     "video_id": "v22",
+     "e_claims": [
+      "c2"
+     ],
+     "e_deciding": [
+      "c2"
+     ]
+    },
+    {
+     "video_id": "v86",
+     "e_claims": [
+      "c1"
+     ],
+     "e_deciding": []
+    },
+    {
+     "video_id": "v143",
+     "e_claims": [
+      "c1",
+      "c2"
+     ],
+     "e_deciding": [
+      "c1",
+      "c2"
+     ]
+    },
+    {
+     "video_id": "v141",
+     "e_claims": [
+      "c1",
+      "c2"
+     ],
+     "e_deciding": [
+      "c1",
+      "c2"
+     ]
+    },
+    {
+     "video_id": "v36",
+     "e_claims": [
+      "c6",
+      "c7",
+      "c10",
+      "c14"
+     ],
+     "e_deciding": [
+      "c6",
+      "c7",
+      "c10",
+      "c14"
+     ]
+    }
+   ],
+   "d": [
+    {
+     "video_id": "v122",
+     "d_pairs": [
+      [
+       "c1",
+       "c5",
+       "hydroxymethylglutaryl-coa reductase inhibitors"
+      ],
+      [
+       "c4",
+       "c5",
+       "hydroxymethylglutaryl-coa reductase inhibitors"
+      ]
+     ]
+    },
+    {
+     "video_id": "v79",
+     "d_pairs": [
+      [
+       "c1",
+       "c3",
+       "vaccines"
+      ]
+     ]
+    }
+   ]
+  }
+ },
+ "cost": {
+  "n": 1,
+  "median": 1.528017,
+  "p90": 1.528017,
+  "total_ran": 1.528017,
+  "max": 1.528017
+ },
+ "latency_s": {
+  "median": 181.764,
+  "p90": 181.764,
+  "total": 181.764,
+  "max": 181.764
+ },
+ "calls_per_video_median": 65,
+ "claims_per_video": {
+  "ours_median": 13,
+  "ours_total": 13,
+  "gold_total_same_videos": 4
+ },
+ "cost_by_step_model_calls": {
+  "extract_claims": 0.0387,
+  "analyze_stance": 0.1519,
+  "find_study": 0.0085,
+  "verify_claims": 0.9842,
+  "critique": 0.2816,
+  "judge_explanation": 0.0133
+ },
+ "spend": {
+  "cap_usd": 25.0,
+  "spent_usd": 1.528017,
+  "calls": 65,
+  "refused_calls": 0,
+  "stopped_at_cap": false,
+  "by_model": {
+   "claude-sonnet-5-5": 0.203804,
+   "claude-haiku-5-5": 0.008466,
+   "web_search_fees": 0.05,
+   "claude-opus-5-5": 0.984192,
+   "gpt-4o-2024-08-06": 0.281555
+  },
+  "billing_error": null
+ },
+ "per_video": {
+  "v95": {
+   "status": "finished",
+   "gold": "NO_MISINFO",
+   "ours": "CANNOT_RECOGNIZE",
+   "cost_usd": 1.528017,
+   "latency_s": 181.8,
+   "n_claims_ours": 13,
+   "n_claims_gold": 4
+  },
+  "v65": {
+   "status": "not_run",
+   "gold": "CANNOT_RECOGNIZE",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 3
+  },
+  "v176": {
+   "status": "not_run",
+   "gold": "CANNOT_RECOGNIZE",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 2
+  },
+  "v69": {
+   "status": "not_run",
+   "gold": "NO_MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 7
+  },
+  "v109": {
+   "status": "not_run",
+   "gold": "MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 11
+  },
+  "v150": {
+   "status": "not_run",
+   "gold": "CANNOT_RECOGNIZE",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 0
+  },
+  "v11": {
+   "status": "not_run",
+   "gold": "CANNOT_RECOGNIZE",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 3
+  },
+  "v39": {
+   "status": "not_run",
+   "gold": "DEBUNKING",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 5
+  },
+  "v23": {
+   "status": "not_run",
+   "gold": "DEBUNKING",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 3
+  },
+  "v120": {
+   "status": "not_run",
+   "gold": "MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 4
+  },
+  "v92": {
+   "status": "not_run",
+   "gold": "CANNOT_RECOGNIZE",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 3
+  },
+  "v114": {
+   "status": "not_run",
+   "gold": "MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 5
+  },
+  "v71": {
+   "status": "not_run",
+   "gold": "NO_MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 6
+  },
+  "v88": {
+   "status": "not_run",
+   "gold": "MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 3
+  },
+  "v122": {
+   "status": "not_run",
+   "gold": "MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 9
+  },
+  "v94": {
+   "status": "not_run",
+   "gold": "CANNOT_RECOGNIZE",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 2
+  },
+  "v78": {
+   "status": "not_run",
+   "gold": "MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 2
+  },
+  "v87": {
+   "status": "not_run",
+   "gold": "MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 4
+  },
+  "v21": {
+   "status": "not_run",
+   "gold": "MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 7
+  },
+  "v70": {
+   "status": "not_run",
+   "gold": "NO_MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 4
+  },
+  "v79": {
+   "status": "not_run",
+   "gold": "DEBUNKING",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 3
+  },
+  "v135": {
+   "status": "not_run",
+   "gold": "NO_MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 6
+  },
+  "v110": {
+   "status": "not_run",
+   "gold": "NO_MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 1
+  },
+  "v22": {
+   "status": "not_run",
+   "gold": "MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 6
+  },
+  "v100": {
+   "status": "not_run",
+   "gold": "NO_MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 3
+  },
+  "v86": {
+   "status": "not_run",
+   "gold": "MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 4
+  },
+  "v167": {
+   "status": "not_run",
+   "gold": "CANNOT_RECOGNIZE",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 4
+  },
+  "v143": {
+   "status": "not_run",
+   "gold": "MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 2
+  },
+  "v177": {
+   "status": "not_run",
+   "gold": "MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 4
+  },
+  "v51": {
+   "status": "not_run",
+   "gold": "NO_MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 3
+  },
+  "v141": {
+   "status": "not_run",
+   "gold": "MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 4
+  },
+  "v123": {
+   "status": "not_run",
+   "gold": "CANNOT_RECOGNIZE",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 1
+  },
+  "v180": {
+   "status": "not_run",
+   "gold": "CANNOT_RECOGNIZE",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 2
+  },
+  "v96": {
+   "status": "not_run",
+   "gold": "CANNOT_RECOGNIZE",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 2
+  },
+  "v121": {
+   "status": "not_run",
+   "gold": "NO_MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 3
+  },
+  "v58": {
+   "status": "not_run",
+   "gold": "CANNOT_RECOGNIZE",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 1
+  },
+  "v36": {
+   "status": "not_run",
+   "gold": "MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 17
+  },
+  "v131": {
+   "status": "not_run",
+   "gold": "MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 9
+  },
+  "v44": {
+   "status": "not_run",
+   "gold": "CANNOT_RECOGNIZE",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 2
+  },
+  "v119": {
+   "status": "not_run",
+   "gold": "MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 4
+  },
+  "v68": {
+   "status": "not_run",
+   "gold": "NO_MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 3
+  },
+  "v146": {
+   "status": "not_run",
+   "gold": "CANNOT_RECOGNIZE",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 0
+  },
+  "v152": {
+   "status": "not_run",
+   "gold": "CANNOT_RECOGNIZE",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 0
+  },
+  "v27": {
+   "status": "not_run",
+   "gold": "MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 7
+  },
+  "v144": {
+   "status": "not_run",
+   "gold": "CANNOT_RECOGNIZE",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 0
+  },
+  "v24": {
+   "status": "not_run",
+   "gold": "NO_MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 4
+  },
+  "v160": {
+   "status": "not_run",
+   "gold": "CANNOT_RECOGNIZE",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 0
+  },
+  "v111": {
+   "status": "not_run",
+   "gold": "MISINFO",
+   "ours": null,
+   "cost_usd": null,
+   "latency_s": null,
+   "n_claims_ours": null,
+   "n_claims_gold": 5
+  }
+ }
+}
