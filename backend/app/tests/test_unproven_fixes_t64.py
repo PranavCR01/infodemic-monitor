@@ -183,7 +183,7 @@ def test_flag_on_another_verdict_is_ignored():
 
 
 def test_sibling_supported_efficacy_claim_demotes_unsupported():
-    claims = [gclaim("Garlic cures the flu", "c1"), gclaim("Garlic prevents colds", "c2", "prevention")]
+    claims = [gclaim("Garlic cures the flu", "c1"), gclaim("Garlic prevents the flu in adults", "c2", "prevention")]
     results = {"c1": uns("c1"), "c2": VerificationResult(claim_id="c2", verdict=Verdict.SUPPORTED,
                                                           supporting_evidence_ids=["ev_1"])}
     out = ug.apply_sibling_rule(claims, results)
@@ -192,9 +192,10 @@ def test_sibling_supported_efficacy_claim_demotes_unsupported():
 
 
 @pytest.mark.parametrize("sibling, category, verdict", [
-    ("Turmeric cures arthritis", "treatment_efficacy", Verdict.SUPPORTED),  # other intervention
-    ("Garlic prevents colds", "mechanism", Verdict.SUPPORTED),  # not an efficacy category
-    ("Garlic prevents colds", "prevention", Verdict.INSUFFICIENT_EVIDENCE),  # not supported
+    ("Turmeric cures the flu", "treatment_efficacy", Verdict.SUPPORTED),  # other intervention
+    ("Garlic prevents the flu", "mechanism", Verdict.SUPPORTED),  # not an efficacy category
+    ("Garlic prevents the flu", "prevention", Verdict.INSUFFICIENT_EVIDENCE),  # not supported
+    ("Garlic prevents colds", "prevention", Verdict.SUPPORTED),  # a different named outcome
 ])
 def test_sibling_rule_needs_same_intervention_efficacy_and_supported(sibling, category, verdict):
     claims = [gclaim("Garlic cures the flu", "c1"), gclaim(sibling, "c2", category)]
@@ -203,8 +204,30 @@ def test_sibling_rule_needs_same_intervention_efficacy_and_supported(sibling, ca
     assert ug.apply_sibling_rule(claims, results)["c1"].verdict == Verdict.UNSUPPORTED
 
 
+def test_tune_v22_supported_claim_about_another_outcome_is_not_a_sibling():
+    """Tune v22 (golden MISINFO unproven): "eggs prevent fatty liver" being SUPPORTED says
+    nothing about "eggs prevent macular degeneration". The queue row's literal rule
+    (same intervention only) demoted it; the narrowed rule keeps it."""
+    claims = [
+        gclaim("Eggs are high in antioxidants, which is really good to prevent something called "
+               "macular degeneration", "c2", "prevention"),
+        gclaim("Eggs are also high in something called choline, which is really good to prevent a "
+               "fatty liver", "c3", "prevention"),
+    ]
+    assert ug.same_intervention(*claims) and not ug.same_outcome(*claims)
+    results = {"c2": uns("c2"), "c3": VerificationResult(claim_id="c3", verdict=Verdict.SUPPORTED,
+                                                          supporting_evidence_ids=["ev_1"])}
+    assert ug.apply_sibling_rule(claims, results)["c2"].verdict == Verdict.UNSUPPORTED
+
+
+def test_vitamin_k_c12_and_c14_are_siblings():
+    job = load_real()
+    by = {c["claim_id"]: gclaim(c["text"], c["claim_id"], c["category"]) for c in job["claims"]}
+    assert ug.same_intervention(by["c12"], by["c14"]) and ug.same_outcome(by["c12"], by["c14"])
+
+
 def test_sibling_demoted_claim_keeps_its_review_reason_but_no_longer_decides():
-    claims = [gclaim("Garlic cures the flu", "c1"), gclaim("Garlic prevents colds", "c2", "prevention")]
+    claims = [gclaim("Garlic cures the flu", "c1"), gclaim("Garlic prevents the flu", "c2", "prevention")]
     s = initial_state(job_id="j", video_id="v", media_uri="mem://v", pipeline_version="t")
     v1 = ug.apply_sibling_rule(claims, {"c1": uns("c1"), "c2": VerificationResult(
         claim_id="c2", verdict=Verdict.SUPPORTED, supporting_evidence_ids=["ev_1"])})

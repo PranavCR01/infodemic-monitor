@@ -70,7 +70,10 @@ limitation; the first that fires wins):
   from the record, else ``rerank.classify_study`` on its publication type). One or two
   case reports are not "the full search found nothing".
 - **(b) sibling claim** (``contradicted_by_sibling_claim``) needs the other claims, so it
-  runs once per verify pass over all results: :func:`apply_sibling_rule`.
+  runs once per verify pass over all results: :func:`apply_sibling_rule`. Narrowed from
+  the queue row (T64 decision): the sibling must also not name a *different* outcome,
+  since a supported claim about one outcome says nothing about another (tune v22: "eggs
+  prevent fatty liver" SUPPORTED vs "eggs prevent macular degeneration" UNSUPPORTED).
 """
 from __future__ import annotations
 
@@ -261,6 +264,26 @@ _VAGUE_MODIFIERS = frozenset(
 )
 
 
+def outcome_words(claim_text: str) -> frozenset[str]:
+    """The outcome the claim names: lexicon condition/outcome concepts (by key) and the
+    content words after its last claim verb, without stop words, vague modifiers and
+    generic nouns. Empty: the claim names no outcome."""
+    text = _norm(claim_text)
+    verbs = list(_VERB_RE.finditer(text))
+    if not verbs:
+        return frozenset()
+    tail = text[verbs[-1].end():]
+    out = {m.concept.key for m in find_concepts(tail) if m.concept.kind != "intervention"}
+    for m in sorted(find_concepts(tail), key=lambda m: -m.start):
+        tail = f"{tail[:m.start]} {tail[m.end:]}"
+    for w in tail.split():
+        w = w.strip("'.,;:!?()[]")
+        if (len(w) > 2 and w not in _STOPWORDS and w not in _VAGUE_MODIFIERS
+                and w not in _GENERIC_OUTCOME_NOUNS and w not in _FILLER):
+            out.add(w[:-1] if w.endswith("s") and len(w) > 3 else w)
+    return frozenset(out)
+
+
 def outcome_unspecified(claim_text: str) -> bool:
     """T64 (c): the claim names no condition or outcome: after its last claim verb there is
     no lexicon condition/outcome, and the words left are only generic nouns ("condition",
@@ -324,12 +347,22 @@ def same_intervention(a: GraphClaim, b: GraphClaim) -> bool:
     return bool(set(ta.terms) & set(tb.terms))
 
 
+def same_outcome(unsupported: GraphClaim, sibling: GraphClaim) -> bool:
+    """T64 (b), narrowed: the SUPPORTED sibling speaks to the UNSUPPORTED claim's outcome
+    only if the UNSUPPORTED claim names none ("a potentially devastating condition") or
+    the two name a common one. "Eggs prevent fatty liver" (SUPPORTED) says nothing about
+    "eggs prevent macular degeneration" (tune v22)."""
+    mine = outcome_words(unsupported.claim_text)
+    return not mine or outcome_unspecified(unsupported.claim_text) or bool(mine & outcome_words(sibling.claim_text))
+
+
 def apply_sibling_rule(
     claims: Sequence[GraphClaim], results: dict[str, VerificationResult]
 ) -> dict[str, VerificationResult]:
     """T64 (b): an UNSUPPORTED claim cannot decide the label when another claim in the
     same video about the same intervention, in a prevention / efficacy category, is
-    SUPPORTED: it becomes INSUFFICIENT_EVIDENCE with ``contradicted_by_sibling_claim``.
+    SUPPORTED, and the two don't name different outcomes (:func:`same_outcome`): it
+    becomes INSUFFICIENT_EVIDENCE with ``contradicted_by_sibling_claim``.
     The judge keeps its ``unproven_claim`` review reason (``judge.decide``), so a person
     still sees it. Returns a new dict; only changed entries differ."""
     by_id = {c.claim_id: c for c in claims}
@@ -345,6 +378,6 @@ def apply_sibling_rule(
         if v.verdict != Verdict.UNSUPPORTED or cid not in by_id:
             continue
         claim = by_id[cid]
-        if any(s.claim_id != cid and same_intervention(claim, s) for s in supported):
+        if any(s.claim_id != cid and same_intervention(claim, s) and same_outcome(claim, s) for s in supported):
             out[cid] = _insufficient(v, SIBLING_EXPLANATION, SIBLING_LIMITATION)
     return out
