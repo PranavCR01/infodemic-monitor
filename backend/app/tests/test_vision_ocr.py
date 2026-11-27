@@ -99,3 +99,19 @@ def test_real_ffmpeg_frame_grab(tmp_path):
     imgs = [b for b in client.calls[0]["messages"][0]["content"] if b["type"] == "image"]
     assert len(imgs) >= 2 and all(b["source"]["media_type"] == "image/jpeg" for b in imgs)
     assert segs and segs[0].text == "caption"
+
+
+@pytest.mark.parametrize("raw", [
+    {"frames": [{"index": 0, "text": "El Cáncer es un hongo"}, {"index": 1, "text": ""}]},
+    {"frames": '[{"index": 0, "text": "El Cáncer es un hongo"}, {"index": 1, "text": ""}]'},
+    {"frames": [{"index": "0", "text": "El Cáncer es un hongo"}]},
+    {"frames": {"0": "El Cáncer es un hongo", "1": ""}},
+    {"frames": ["El Cáncer es un hongo", ""]},
+    '{"frames": [{"index": 0, "text": "El Cáncer es un hongo"}]}',
+])
+def test_parse_frames_tolerates_model_shapes(raw):
+    assert vision_ocr.parse_frames(raw)[0] == "El Cáncer es un hongo"
+
+
+def test_parse_frames_garbage_is_empty():
+    assert vision_ocr.parse_frames(None) == {} and vision_ocr.parse_frames("not json") == {}

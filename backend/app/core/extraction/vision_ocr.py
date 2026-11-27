@@ -133,14 +133,49 @@ def _ask_model(frames: list[tuple[float, bytes]], client: Any) -> dict[int, str]
     )
     for block in resp.content:
         if getattr(block, "type", None) == "tool_use":
-            out: dict[int, str] = {}
-            for f in (block.input or {}).get("frames", []):
-                try:
-                    out[int(f["index"])] = str(f.get("text") or "").strip()
-                except (KeyError, TypeError, ValueError):
-                    continue
-            return out
+            return parse_frames(block.input)
+    log.warning("vision OCR: no tool call in the reply (stop_reason=%s)", getattr(resp, "stop_reason", None))
     return {}
+
+
+def parse_frames(raw: Any) -> dict[int, str]:
+    """Frame index -> text from the tool input. Tolerates the shapes models produce:
+    a list, a JSON string holding the list, a dict keyed by index, or index as a string."""
+    data = raw
+    if isinstance(data, str):
+        data = _loads(data)
+    if isinstance(data, dict):
+        data = data.get("frames", data)
+    if isinstance(data, str):
+        data = _loads(data)
+    out: dict[int, str] = {}
+    if isinstance(data, dict):  # {"0": "text", ...}
+        items = [{"index": k, "text": v} for k, v in data.items()]
+    elif isinstance(data, list):
+        items = data
+    else:
+        items = []
+    for i, f in enumerate(items):
+        if isinstance(f, str):
+            out[i] = f.strip()
+            continue
+        if not isinstance(f, dict):
+            continue
+        try:
+            idx = int(f.get("index", f.get("frame", i)))
+        except (TypeError, ValueError):
+            idx = i
+        out[idx] = str(f.get("text") or f.get("on_screen_text") or "").strip()
+    log.info("vision OCR reply: %d frames parsed, %d with text; raw starts %r",
+             len(out), sum(1 for t in out.values() if t), str(raw)[:300])
+    return out
+
+
+def _loads(text: str) -> Any:
+    try:
+        return json.loads(text)
+    except (TypeError, ValueError):
+        return None
 
 
 def collapse(times: list[float], texts: dict[int, str], duration: float) -> list[TimedText]:
@@ -172,6 +207,8 @@ def extract_on_screen_text(
         if not frames:
             return []
         times = [t for t, _ in frames]
+        log.info("vision OCR: %d frames grabbed over %.1fs, sizes %s bytes", len(frames), dur,
+                 [len(b) for _, b in frames][:16])
         texts = _ask_model(frames, client or _default_client())
         segs = collapse(times, texts, dur)
         log.info("vision OCR: %d frames, %d on-screen segments", len(frames), len(segs))
