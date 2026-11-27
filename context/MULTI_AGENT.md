@@ -118,6 +118,25 @@ _(Add a dated entry each week with what was done, what was found, and what's nex
 - **2026-10-28**: Moved the track to the LangGraph architecture. Added
   `docs/architecture.md`, opened #29–#39, closed the superseded issues, and rewrote this
   file (#43, #44).
+- **2026-11-26**: Implemented the LangGraph skeleton (#29) in
+  `backend/app/core/graph/`.
+
+  - Defined `PipelineState` and nested Pydantic schemas.
+  - Implemented all 15 stub nodes and conditional graph routing,
+    including parallel transcription and OCR execution.
+  - Added bounded retry logic allowing one initial retrieval,
+    two retrieval reformulations, and one verification revision.
+  - Added `verification_revision_attempts` to the state schema
+    to track the verification revision budget.
+  - Added PostgreSQL checkpointer support through `PostgresSaver`.
+  - Added tests for conditional routing, node field ownership,
+    end-to-end execution, retry limits, and checkpoint resumption.
+  - Backend test suite: 48 passed, 1 skipped.
+  - PostgreSQL checkpoint/resume verification remains pending
+    an approved test database and coordination with Pranav.
+  - Retry logic currently operates on the single-claim stub;
+    production multi-claim behavior will be handled by later issues.
+  - The existing `run_pipeline()` implementation remains unchanged.
 
 ## 11. PR Requirements
 

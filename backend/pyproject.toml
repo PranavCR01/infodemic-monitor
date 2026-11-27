@@ -28,7 +28,11 @@ dependencies = [
   # Utilities
   "requests>=2.31",
   "tenacity>=8.2",
+  "langgraph>=0.2",
+  "langgraph-checkpoint-postgres>=2.0",
 ]
+
+
 
 [project.optional-dependencies]
 # Heavy ML deps — only needed when WHISPER_PROVIDER=faster_whisper or OCR is enabled.
