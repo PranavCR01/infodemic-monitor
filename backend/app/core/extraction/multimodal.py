@@ -1,11 +1,10 @@
-"""Multimodal fusion — builds FusionResult from transcript only.
-
-OCR is disabled; the pipeline runs on transcript alone.
+"""Multimodal fusion — builds FusionResult from the transcript and, when
+``OCR_PROVIDER=vision``, the on-screen text read by ``vision_ocr`` (off by default).
 """
 from __future__ import annotations
 
 from app.core.config import settings
-from app.core.extraction import transcription
+from app.core.extraction import transcription, vision_ocr
 from app.core.extraction.transcription import transcribe
 from app.core.schemas.pipeline import FusionResult
 
@@ -29,7 +28,15 @@ class MultimodalFusion:
         else:
             transcript = transcribe(video_path)
 
-        combined = f"[AUDIO TRANSCRIPT]\n{transcript}" if transcript else ""
+        ocr_segs = vision_ocr.extract_on_screen_text(video_path) if vision_ocr.enabled() else []
+        visual_text = "\n".join(dict.fromkeys(s.text for s in ocr_segs))
+
+        parts = []
+        if transcript:
+            parts.append(f"[AUDIO TRANSCRIPT]\n{transcript}")
+        if visual_text:
+            parts.append(f"[ON-SCREEN TEXT]\n{visual_text}")
+        combined = "\n\n".join(parts)
 
         if len(combined) > settings.MAX_INPUT_CHARS:
             raise ContentTooLongError(
@@ -39,16 +46,19 @@ class MultimodalFusion:
 
         metadata = {
             "audio_length_chars": len(transcript),
-            "visual_length_chars": 0,
+            "visual_length_chars": len(visual_text),
             "frames_processed": 0,
-            "ocr_detection_count": 0,
-            "ocr_disabled": True,
+            "ocr_detection_count": len(ocr_segs),
+            "ocr_disabled": not vision_ocr.enabled(),
+            "ocr_provider": "vision" if vision_ocr.enabled() else "none",
         }
+        if ocr_segs:
+            metadata["ocr_segments"] = [{"start": s.start, "end": s.end, "text": s.text} for s in ocr_segs]
         if segments is not None:
             metadata["transcript_segments"] = segments
         return FusionResult(
             transcript=transcript,
-            visual_text="",
+            visual_text=visual_text,
             combined_content=combined,
             metadata=metadata,
         )

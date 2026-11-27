@@ -51,6 +51,13 @@ class Settings(BaseSettings):
 
     # Pipeline limits
     MAX_INPUT_CHARS: int = 128_000
+    # On-screen text (app.core.extraction.vision_ocr). "none" = off (transcript only);
+    # "vision" = sample frames and read captions with a small vision model. Rollback:
+    # unset OCR_PROVIDER on the API and worker services.
+    OCR_PROVIDER: str = "none"
+    OCR_VISION_MODEL: str = "claude-haiku-5-5"
+    OCR_MAX_FRAMES: int = 16
+    OCR_TIMEOUT_SECONDS: float = 60.0
     PUBMED_RESULTS_PER_CLAIM: int = 2
 
     # Evidence retrieval for the LangGraph pipeline (app/core/retrieval).
