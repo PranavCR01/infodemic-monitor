@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "run_group": "T67-label-rules-replay",
+  "date": "2026-11-26",
+  "task": "T67",
+  "pipeline_step": "judge_classification",
+  "split": "tune",
+  "synthetic": false,
+  "golden_set_ref": "origin/data/golden-label-set @ 92a731e (T66 run); labels from in-repo research/claim-level/dataset @ 2de5e8f",
+  "models": [],
+  "metric_name": "video_label_accuracy",
+  "ci95": null,
+  "n_items": 18,
+  "n_unit": "finished T66 tune videos (v21 excluded: partial, not run)",
+  "cost_usd": 0.0,
+  "report_path": "evals/reports/T67/report.md",
+  "run_id": "T67-label_rules-t66_states-t64_changes123",
+  "variant": "t64_changes123",
+  "value": 0.5556,
+  "notes": "Tune split: development numbers, not product accuracy. Config (e): T64 + changes 1, 2 and 3 (orchestrator's (e)). 10/18 correct; sent to review 17/18; worse vs t64_only: v114, v88 (all from changes 1 and 2; identical to config d, change 3 flips nothing). No CI (report gives none)."
+}

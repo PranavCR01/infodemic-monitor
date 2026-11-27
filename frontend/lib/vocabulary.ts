@@ -160,6 +160,8 @@ export const DECISION_RULE_TEXT: Record<string, string> = {
   refuted_unsettled: "The speaker rejects a claim the evidence can't settle, so it may be a correction.",
   nothing_judged: "No claim in the video could be settled by the evidence found.",
   no_claims: "No checkable health claims were found in the video.",
+  // T67 (3): the verifier failed for at least half of the checkable claims.
+  analysis_incomplete: "The evidence check could not run for most of the claims, so the video could not be assessed.",
 };
 
 // ---------------------------------------------------------------- evidence levels
@@ -314,6 +316,15 @@ export const REVIEW_REASONS: Record<string, string> = {
   // T64 (f): video-level, no claim id; the label is unchanged.
   main_claims_unchecked:
     "The label rests on side claims: at least half of the treatment and prevention claims the speaker makes could not be checked against the evidence.",
+  // T67 (1): per claim. Off by default (failed the T67 replay gate); text kept so the reason reads plainly if switched on.
+  second_check_disagreed:
+    "A second automated check still disagreed with this claim's verdict when its attempts ran out; the verdict was kept for a person to confirm.",
+  // T67 (3): video-level, no claim id; the label is CANNOT RECOGNIZE.
+  analysis_incomplete:
+    "The evidence check could not run for at least half of the claims, so the video could not be assessed. It should be checked or analysed again.",
+  // T67 (2): judge:thin_contradiction:<cid>. Off by default (failed the T67 replay gate).
+  thin_contradiction:
+    "The evidence against this claim is too thin to decide the label on its own: fewer than two papers on its topic and no review, trial or guideline.",
   // judge:<flag>
   mixed_video: "The video both spreads and corrects false claims.",
   unclear_stance_contradicted: "A false claim is made, but the speaker's position on it is unclear.",
