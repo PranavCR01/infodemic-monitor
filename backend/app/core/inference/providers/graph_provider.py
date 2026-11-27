@@ -127,8 +127,17 @@ def segments_from_fusion(fusion: FusionResult) -> tuple[list[TranscriptSegment],
                 segment_id=f"t{len(transcript) + 1}", start=round(t, 2), end=round(t + dur, 2), text=sentence))
             t += dur
     ocr: list[OcrSegment] = []
+    timed = (fusion.metadata or {}).get("ocr_segments")
     lines = [l.strip() for l in (fusion.visual_text or "").splitlines() if l.strip()]
-    if lines:
+    if timed:
+        # Vision OCR (app.core.extraction.vision_ocr) keeps each caption's time span.
+        for s in timed:
+            text = str(s.get("text", "")).strip()
+            if text:
+                start = max(0.0, float(s.get("start", 0.0)))
+                ocr.append(OcrSegment(segment_id=f"o{len(ocr) + 1}", start=start,
+                                      end=max(start, float(s.get("end", start))), text=text, confidence=1.0))
+    elif lines:
         estimated = True
         end = max((s.end for s in transcript), default=float(len(lines)))
         for line in dict.fromkeys(lines):
