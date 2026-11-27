@@ -74,11 +74,12 @@ def change2(monkeypatch):
     monkeypatch.setattr(jg, "THIN_CONTRADICTION_RULE", True)
 
 
-# ------------------------------------------------------------------ gate result: both off
+# ------------------------------------------------------------------ shipped state
 
 
-def test_both_changes_ship_off_after_the_replay_gate():
-    assert r.KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED is False
+def test_shipped_state_change1_on_change2_off():
+    # Change 1 on by lead decision (2026-11-27); change 2 off (made v88, v119, v177 worse).
+    assert r.KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED is True
     assert jg.THIN_CONTRADICTION_RULE is False
 
 
@@ -88,7 +89,8 @@ def exhausted_state(errors=(), con=("ev_1",), evidence=None) -> dict:
                  critic={"c1": CriticDecision.RETRIEVE_MORE}, errors=errors)
 
 
-def test_default_withdraws_the_objected_verdict_as_before():
+def test_withdrawal_mode_withdraws_the_objected_verdict_as_before(monkeypatch):
+    monkeypatch.setattr(r, "KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED", False)
     s = exhausted_state()
     v = r.verdicts_for_judge(s)["c1"]
     assert v.verdict == Verdict.INSUFFICIENT_EVIDENCE and r.ABSTENTION_LIMITATION in v.limitations

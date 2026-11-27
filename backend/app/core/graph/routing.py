@@ -236,12 +236,11 @@ ABSTENTION_LIMITATION = (
 # judge uses the verifier's stored verdict and the case goes to review
 # (``second_check_disagreed:<cid>``). Withdrawal (``ABSTENTION_LIMITATION``) is kept
 # only for hard failures (:func:`verdict_hard_failure`).
-# OFF (False): the T67 replay gate dropped this change. It made one tune label worse
-# (T66 v114: gold MISINFO, CANNOT_RECOGNIZE -> DEBUNKING, through a REFUTES stance error
-# on c1), although it fixed v71, v78, v87 and v122 (evals/reports/T67/report.md). With
-# False the T07 behaviour holds: every objected-to, cited verdict is withdrawn. Turning it
-# on is a lead decision, not a config default.
-KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED = False
+# ON (lead decision 2026-11-27 ~00:10 UTC, overriding the replay gate): it fixed v71, v78,
+# v87 and v122 and lost no correct tune label; T66 v114 (gold MISINFO) goes from one wrong
+# label to another (CANNOT_RECOGNIZE -> DEBUNKING, through a REFUTES stance error on c1)
+# and is sent to review with second_check_disagreed (evals/reports/T67/report.md).
+KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED = True
 SECOND_CHECK_REASON = "second_check_disagreed"
 SECOND_CHECK_LIMITATION = (
     "a second automated check still disagreed with this verdict when the review budget ran out; "
