@@ -9,6 +9,7 @@ from dataclasses import dataclass
 
 from app.core.claim_category import is_evidence_meta
 from app.core.graph.state import CriticDecision, PipelineState, Verdict, VerificationResult
+from app.core.guardrails.injection import GUARDRAIL_ERROR_PREFIX
 
 
 @dataclass(frozen=True)
@@ -231,6 +232,68 @@ ABSTENTION_LIMITATION = (
     "verdict withheld (insufficient evidence)"
 )
 
+# T67 (1), lead 2026-11-26: when the budget runs out and the critic still objects, the
+# judge uses the verifier's stored verdict and the case goes to review
+# (``second_check_disagreed:<cid>``). Withdrawal (``ABSTENTION_LIMITATION``) is kept
+# only for hard failures (:func:`verdict_hard_failure`).
+# ON (lead decision 2026-11-27 ~00:10 UTC, overriding the replay gate): it fixed v71, v78,
+# v87 and v122 and lost no correct tune label; T66 v114 (gold MISINFO) goes from one wrong
+# label to another (CANNOT_RECOGNIZE -> DEBUNKING, through a REFUTES stance error on c1)
+# and is sent to review with second_check_disagreed (evals/reports/T67/report.md).
+KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED = True
+SECOND_CHECK_REASON = "second_check_disagreed"
+SECOND_CHECK_LIMITATION = (
+    "a second automated check still disagreed with this verdict when the review budget ran out; "
+    "the verdict is kept and sent to a person"
+)
+_EVIDENCE_KEYS = ("retrieved_evidence", "reranked_evidence", "library_evidence", "found_study_evidence")
+
+
+def _claim_evidence_ids(state: PipelineState, claim_id: str) -> set[str]:
+    out: set[str] = set()
+    for key in _EVIDENCE_KEYS:
+        out.update(e.evidence_id for e in (state.get(key) or {}).get(claim_id) or [])
+    return out
+
+
+def verdict_hard_failure(state: PipelineState, v: VerificationResult) -> bool:
+    """T67 (1): the verdict can't be trusted whatever the critic said: it cites evidence
+    that was not retrieved for this claim (invalid / uncited evidence), a guardrail
+    rejected something for this claim, or the verifier failed on it (an unretried
+    model error). Repair requests that later succeeded are not failures."""
+    cited = {*v.supporting_evidence_ids, *v.contradicting_evidence_ids}
+    if cited - _claim_evidence_ids(state, v.claim_id):
+        return True
+    for e in state.get("errors") or []:
+        if e.claim_id != v.claim_id:
+            continue
+        if e.message.startswith(GUARDRAIL_ERROR_PREFIX):
+            return True
+        if e.node == VERIFY_CLAIMS and e.retryable:
+            return True
+    return False
+
+
+def _cites_something(v: VerificationResult) -> bool:
+    return bool(v.supporting_evidence_ids or v.contradicting_evidence_ids)
+
+
+def second_check_disagreed_ids(state: PipelineState, budgets: Budgets = DEFAULT_BUDGETS) -> list[str]:
+    """T67 (1): exhausted claims whose stored, cited verdict the judge keeps although the
+    critic (shown to users as "a second automated check") still objected."""
+    if not KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED:
+        return []
+    results = state.get("verification_results", {}) or {}
+    out = []
+    for cid in exhausted_claim_ids(state, budgets):
+        v = results.get(cid)
+        if v is None or not _cites_something(v) and v.verdict in (Verdict.INSUFFICIENT_EVIDENCE, Verdict.UNSUPPORTED):
+            continue  # nothing cited: nothing objected-to is being kept (unchanged since T07)
+        if verdict_hard_failure(state, v):
+            continue
+        out.append(cid)
+    return out
+
 
 def verdicts_for_judge(
     state: PipelineState, budgets: Budgets = DEFAULT_BUDGETS
@@ -238,25 +301,34 @@ def verdicts_for_judge(
     """The verdicts the judge may use (§8 "When the budget runs out, the claim ends as
     insufficient evidence or goes to review").
 
-    A claim whose critic still asked for more work when the budget ran out abstains:
-    the judge sees INSUFFICIENT_EVIDENCE with no citations, so an objected-to verdict
-    can never decide the video label. (It also goes to review:
-    ``critic_review_reasons``.) An ESCALATE keeps its verdict, so the reviewer sees a
-    proposed label (§12). The stored ``verification_results`` are not changed.
+    T67 (1), lead 2026-11-26: a claim whose critic still asked for more work when the
+    budget ran out keeps its stored verdict (with ``SECOND_CHECK_LIMITATION`` and the
+    critic's issues appended to its limitations) and the case goes to review
+    (``second_check_disagreed:<cid>``, from ``critic_review_reasons``). It abstains as
+    INSUFFICIENT_EVIDENCE with no citations (T07) only on a hard failure
+    (:func:`verdict_hard_failure`), or for every objected-to verdict when
+    ``KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED`` is False. An ESCALATE keeps its
+    verdict, so the reviewer sees a proposed label (§12). The stored
+    ``verification_results`` are not changed.
 
     T30: an UNSUPPORTED verdict that fails ``unproven_allowed`` (not an efficacy claim,
     something cited, search budget not used up, or a search error) is passed on as
     INSUFFICIENT_EVIDENCE.
     """
     out = dict(state.get("verification_results", {}))
+    kept = set(second_check_disagreed_ids(state, budgets))
+    critics = state.get("critic_results", {}) or {}
     for cid in exhausted_claim_ids(state, budgets):
         v = out.get(cid)
-        if v is None or v.verdict in (Verdict.INSUFFICIENT_EVIDENCE, Verdict.UNSUPPORTED) and not (
-            v.supporting_evidence_ids or v.contradicting_evidence_ids
-        ):
+        if v is None or v.verdict in (Verdict.INSUFFICIENT_EVIDENCE, Verdict.UNSUPPORTED) and not _cites_something(v):
             # Nothing cited: there is no objected-to evidence to withhold. An
             # UNSUPPORTED claim whose budget ran out is exactly "the full search found
             # nothing" (T30), so it keeps its verdict (gated below).
+            continue
+        if cid in kept:
+            issues = [i for i in (getattr(critics.get(cid), "issues", None) or []) if i]
+            note = SECOND_CHECK_LIMITATION + (": " + "; ".join(issues) if issues else "")
+            out[cid] = v.model_copy(update={"limitations": [*v.limitations, note]})
             continue
         out[cid] = v.model_copy(update={
             "verdict": Verdict.INSUFFICIENT_EVIDENCE,
@@ -277,13 +349,15 @@ def verdicts_for_judge(
 
 def critic_review_reasons(state: PipelineState, budgets: Budgets = DEFAULT_BUDGETS) -> list[str]:
     """Review reasons that come from the critic loop (§8, §12): an ESCALATE or a review
-    flag from the critic, and every claim whose budget ran out. T09: keep this call
-    when replacing the ``route_for_review`` stub."""
+    flag from the critic, every claim whose budget ran out, and (T67) every exhausted
+    claim whose verdict the judge kept although the critic still objected. T09: keep
+    this call when replacing the ``route_for_review`` stub."""
     reasons: list[str] = []
     for cid, c in state.get("critic_results", {}).items():
         if c.decision == CriticDecision.ESCALATE or c.requires_review:
             reasons.append(f"critic_escalated:{cid}")
     reasons += [f"budget_exhausted:{cid}" for cid in exhausted_claim_ids(state, budgets)]
+    reasons += [f"{SECOND_CHECK_REASON}:{cid}" for cid in second_check_disagreed_ids(state, budgets)]
     return list(dict.fromkeys(reasons))
 
 

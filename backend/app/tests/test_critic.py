@@ -356,7 +356,14 @@ def test_unchanged_since_review_needs_the_review_counts():
     assert not r.unchanged_since_review(state(critic_results={"c1": legacy}), "c1")
 
 
-def test_verdicts_for_judge_abstains_on_exhausted_claims_only():
+@pytest.fixture
+def withdrawal_mode(monkeypatch):
+    """T67: change 1 is on by default; these tests pin the withdrawal (T07) path,
+    which still applies to hard failures and stays selectable."""
+    monkeypatch.setattr(r, "KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED", False)
+
+
+def test_verdicts_for_judge_abstains_on_exhausted_claims_only(withdrawal_mode):
     rm = CriticResult(claim_id="c1", decision=CriticDecision.RETRIEVE_MORE)
     s = state(retrieval_attempts={"c1": 3}, critic_results={"c1": rm})
     judged = r.verdicts_for_judge(s)["c1"]
@@ -407,7 +414,7 @@ def test_retrieve_more_loops_back_to_retrieval_not_the_judge():
     assert not [x for x in out["review_reasons"] if x.startswith(("budget_exhausted", "critic_escalated"))]
 
 
-def test_exhausted_search_budget_abstains_and_goes_to_review():
+def test_exhausted_search_budget_abstains_and_goes_to_review(withdrawal_mode):
     caller = FakeCaller(critic=lambda cid, n: critique("RETRIEVE_MORE", queries=[f"query {n}"]))
     out, order = run_graph(caller)
     assert out["retrieval_attempts"] == {"c1": 3, "c2": 3}  # initial + 2 reformulations, no more
@@ -424,7 +431,7 @@ def test_exhausted_search_budget_abstains_and_goes_to_review():
     assert "judge:possible_debunk:c2" in out["review_reasons"]
 
 
-def test_exhausted_revision_budget_abstains_and_goes_to_review():
+def test_exhausted_revision_budget_abstains_and_goes_to_review(withdrawal_mode):
     caller = FakeCaller(critic=lambda cid, n: critique("REVISE_VERIFICATION", ["verdict too strong"]))
     out, order = run_graph(caller, real_verifier=True)
     assert out["verification_revisions"] == {"c1": 1, "c2": 1}

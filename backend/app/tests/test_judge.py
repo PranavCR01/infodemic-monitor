@@ -466,8 +466,16 @@ def test_flag_verification_failed():
     s = make_state((E, SUP), (E, INS))
     s["errors"] = [NodeError(node=r.VERIFY_CLAIMS, message="model call failed", claim_id="c2", retryable=True)]
     final, _ = run_judge(s)
-    # T64 (f): one of the two endorsed efficacy claims is unchecked (half) → main_claims_unchecked.
-    assert final.review_flags == [jg.FLAG_MAIN_CLAIMS_UNCHECKED, f"{jg.FLAG_VERIFICATION_FAILED}:c2"]
+    # T67 (3): the verifier failed for 1 of 2 verifiable claims (half) → analysis_incomplete,
+    # so the label is no longer NO_MISINFO and main_claims_unchecked (T64 f) does not apply.
+    assert final.classification == MisinfoLabel.CANNOT_RECOGNIZE
+    assert final.review_flags == [jg.FLAG_ANALYSIS_INCOMPLETE, f"{jg.FLAG_VERIFICATION_FAILED}:c2"]
+    # Below half (1 of 3), the T64 behaviour is unchanged.
+    s = make_state((E, SUP), (E, INS), (E, SUP))
+    s["errors"] = [NodeError(node=r.VERIFY_CLAIMS, message="model call failed", claim_id="c2", retryable=True)]
+    final, _ = run_judge(s)
+    assert final.classification == MisinfoLabel.NO_MISINFO
+    assert f"{jg.FLAG_VERIFICATION_FAILED}:c2" in final.review_flags
 
 
 def test_a_clean_video_has_no_flags():

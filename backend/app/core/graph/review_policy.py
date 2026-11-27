@@ -15,6 +15,7 @@ overturn them (§12 "what if review becomes a bottleneck?").
 | ``unclear_stance``       | ``unclear_stance:<cid>``       | §11: a deciding claim's stance is UNCLEAR (or missing) |
 | ``critic_escalated``     | ``critic_escalated:<cid>``     | §11: the critic escalated or marked the case for review |
 | ``budget_exhausted``     | ``budget_exhausted:<cid>``     | §11 "Effort": the critic wanted more work than the budget allowed |
+| ``second_check_disagreed`` | ``second_check_disagreed:<cid>`` | §8/§11 (T67 change 1, off by default): the budget ran out with the critic still objecting and the judge kept the stored verdict |
 | ``validation_failed``    | ``validation_failed:<check>[:<cid>]`` | §10/§11: a validation check failed after repair |
 | ``low_confidence``       | ``low_confidence``             | §11: calibrated confidence below the threshold (dormant until T15) |
 | ``high_risk_uncertain``  | ``high_risk_uncertain:<cid>``  | issue #36: an endorsed high-risk claim the evidence couldn't settle |
@@ -193,6 +194,12 @@ def rule_budget_exhausted(ctx: ReviewContext) -> list[str]:
     return _critic_reasons(ctx, "budget_exhausted")
 
 
+def rule_second_check_disagreed(ctx: ReviewContext) -> list[str]:
+    """T67 (1): the judge kept a verdict the critic still objected to when the budget ran
+    out (only while ``routing.KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED`` is on)."""
+    return _critic_reasons(ctx, r.SECOND_CHECK_REASON)
+
+
 def rule_validation_failed(ctx: ReviewContext) -> list[str]:
     """Validation still fails after the one repair (§10). Also fires when validation
     never ran, so invalid output can't bypass it by skipping the node."""
@@ -241,6 +248,7 @@ REVIEW_RULES: dict[str, RuleFn] = {
     "unclear_stance": rule_unclear_stance,
     "critic_escalated": rule_critic_escalated,
     "budget_exhausted": rule_budget_exhausted,
+    "second_check_disagreed": rule_second_check_disagreed,
     "low_confidence": rule_low_confidence,
     "high_risk_uncertain": rule_high_risk_uncertain,
     "judge_flags": rule_judge_flags,

@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "run_group": "T67-label-rules-replay",
+  "date": "2026-11-26",
+  "task": "T67",
+  "pipeline_step": "judge_classification",
+  "split": "tune",
+  "synthetic": false,
+  "golden_set_ref": "in-repo research/claim-level/dataset @ 2de5e8f (last commit touching it)",
+  "models": [],
+  "metric_name": "video_label_accuracy",
+  "ci95": null,
+  "n_items": 48,
+  "n_unit": "in-scope tune videos (golden claims)",
+  "cost_usd": 0.0,
+  "report_path": "evals/reports/T67/report.md",
+  "run_id": "T67-label_rules-golden_claims-t64_only",
+  "variant": "t64_only",
+  "value": 0.8958,
+  "notes": "Tune split: development numbers, not product accuracy. 43/48 correct; sent to review 24/48; second_check_disagreed x0, thin_contradiction x0. Golden stances/verdicts; T64 guard on T38 frozen evidence; cited records from the golden offline evidence cache. No critic, so change 1 cannot fire (b = a, d = c). No CI (report gives none). Both changes ship OFF (gate failed: change 1 v114; change 2 v88, v119, v177)."
+}
