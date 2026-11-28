@@ -48,6 +48,11 @@ How it fits:
   over all results: an UNSUPPORTED claim whose sibling about the same intervention (a
   prevention / efficacy claim) is SUPPORTED becomes INSUFFICIENT_EVIDENCE with
   ``contradicted_by_sibling_claim``.
+- **Evidence context (T69, switch ``routing.CONTEXT_MISMATCH_RULE``, off).** When on, the
+  tool gains the structured field ``evidence_context`` and a CONTRADICTED verdict whose
+  contradicting papers study another population or exposure setting carries the
+  limitation code ``evidence_context_mismatch:<kind>`` for the judge (§9). Off, the
+  request and results are unchanged.
 - **Loop-aware.** Only ``routing.claims_to_verify`` claims are (re)judged; others keep
   their verdict. A REVISE_VERIFICATION re-run counts against the revision budget and
   shows the critic's notes; a RETRIEVE_MORE re-run judges the new evidence.
@@ -57,7 +62,7 @@ How it fits:
 from __future__ import annotations
 
 import re
-from typing import Any, Callable, Iterable, Optional, Protocol, Sequence
+from typing import Any, Callable, Iterable, Literal, Optional, Protocol, Sequence
 
 from pydantic import Field, field_validator
 
@@ -128,6 +133,10 @@ class VerifierToolOutput(VerificationOutput):
     raw_confidence: Optional[float] = Field(default=None, ge=0.0, le=1.0)
     # T64 (c): the claim names no condition or outcome, so it can't be UNSUPPORTED.
     outcome_unspecified: bool = False
+    # T69: does the contradicting evidence study the claim's population and exposure
+    # setting? Asked for only when ``routing.CONTEXT_MISMATCH_RULE`` is on (see
+    # :func:`verify_tool`); recorded as a limitation code on a CONTRADICTED verdict.
+    evidence_context: Optional[Literal["matches", "different_population", "different_exposure_setting"]] = None
 
     @field_validator("limitations")
     @classmethod
@@ -188,6 +197,34 @@ VERIFY_TOOL: dict = {
     },
 }
 TOOL_CHOICE: dict = {"type": "tool", "name": TOOL_NAME}
+
+# T69: the structured field the judge's context-mismatch rule reads. Only offered when
+# ``routing.CONTEXT_MISMATCH_RULE`` is on, so with the switch off the request is unchanged.
+EVIDENCE_CONTEXT_PROPERTY: dict = {
+    "type": "string",
+    "enum": list(r.EVIDENCE_CONTEXT_VALUES),
+    "description": "For a CONTRADICTED verdict: do the contradicting papers study the claim's "
+                   "population and exposure setting ('matches'), or a different population "
+                   "('different_population') or exposure setting, route or dose "
+                   "('different_exposure_setting', e.g. occupational solvent exposure for a "
+                   "claim about a consumer product on skin)?",
+}
+EVIDENCE_CONTEXT_INSTRUCTION = (
+    "If the verdict is CONTRADICTED, set evidence_context: 'matches' if the contradicting papers "
+    "study the claim's population and exposure setting, 'different_population' if they study a "
+    "different population, or 'different_exposure_setting' if they study a different setting, "
+    "route or dose of exposure than the claim describes.\n"
+)
+
+
+def verify_tool() -> dict:
+    """The ``record_verdict`` tool for the current switches: ``VERIFY_TOOL`` unchanged,
+    plus ``evidence_context`` when ``routing.CONTEXT_MISMATCH_RULE`` is on (T69)."""
+    if not r.CONTEXT_MISMATCH_RULE:
+        return VERIFY_TOOL
+    schema = dict(VERIFY_TOOL["input_schema"])
+    schema["properties"] = {**schema["properties"], "evidence_context": EVIDENCE_CONTEXT_PROPERTY}
+    return {**VERIFY_TOOL, "input_schema": schema}
 
 
 class StepCaller(Protocol):
@@ -263,6 +300,8 @@ def _instructions(
             "\nYOUR PREVIOUS ANSWER WAS REJECTED by an automatic check: "
             f"{repair_note}\nAnswer again, following the citation rules exactly.\n"
         )
+    if r.CONTEXT_MISMATCH_RULE:
+        text += EVIDENCE_CONTEXT_INSTRUCTION  # T69
     return text + f"\nCall {TOOL_NAME} with your verdict."
 
 
@@ -296,7 +335,7 @@ def build_request(prompt: GuardedPrompt) -> dict:
     """Provider-neutral request body: one user message plus a forced tool call."""
     return {
         "messages": [{"role": "user", "content": prompt.render()}],
-        "tools": [VERIFY_TOOL],
+        "tools": [verify_tool()],
         "tool_choice": TOOL_CHOICE,
         "max_tokens": 1024,
         "temperature": 0,
@@ -513,12 +552,21 @@ def verify_claim(
             supporting_evidence_ids=list(out.supporting_evidence_ids),
             contradicting_evidence_ids=list(out.contradicting_evidence_ids),
             explanation=out.explanation[:MAX_EXPLANATION_CHARS],
-            limitations=[s[:MAX_LIMITATION_CHARS] for s in out.limitations],
+            limitations=[*(s[:MAX_LIMITATION_CHARS] for s in out.limitations), *_context_codes(out)],
             raw_confidence=out.raw_confidence,  # raw; calibration is T15 (§11)
             model=model,
             prompt_version=recorded_version or prompt_version,
         ), errors
     raise AssertionError("unreachable")  # pragma: no cover
+
+
+def _context_codes(out: VerifierToolOutput) -> list[str]:
+    """T69: the limitation code for a CONTRADICTED verdict whose evidence the model said
+    is about a different population or exposure setting (switch on only)."""
+    if (r.CONTEXT_MISMATCH_RULE and out.verdict == Verdict.CONTRADICTED
+            and out.evidence_context in r.CONTEXT_MISMATCH_KINDS):
+        return [f"{r.CONTEXT_MISMATCH_LIMITATION}:{out.evidence_context}"]
+    return []
 
 
 def resolve_prompt_version(caller: StepCaller, prompt_version: Optional[str]) -> str:

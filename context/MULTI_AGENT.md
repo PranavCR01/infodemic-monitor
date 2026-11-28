@@ -2463,7 +2463,40 @@ Full numbers are in `evals/reports/T67/report.md`.
   - Gate (e): no tune label changes, and the rule fires on no scored video, so the pass is vacuous.
 - **Why the cross-check is unchanged.** With both switches off it is byte-identical. Its stub evidence (`title = id`, `claim_text = claim_id`) would make every contradiction thin, so if change 2 is ever turned on, `judge_crosscheck` needs real evidence or the switch off.
 
-## 7ak. On-Screen Text Kinds and Routing (T68; design §2, §3, §15)
+## 7ak. Context-Mismatched Contradictions (T69; design §7, §9)
+
+Trigger: production jobs cf2ea579 / f85f2daa (tune v135, golden NO_MISINFO) were MISINFO on one
+claim contradicted by two narrative reviews of occupational solvent exposure. Built and shipped
+**off** (`routing.CONTEXT_MISMATCH_RULE = False`; "routing flag" read as a module switch in
+`routing.py`, as T67's change 1; there is no flags section in `config/routing.yaml`).
+Numbers: `evals/reports/T69/report.md`.
+
+- **Mismatch is a structured verifier field, never prose.** With the switch on, `record_verdict`
+  gains optional `evidence_context` (`matches` / `different_population` /
+  `different_exposure_setting`) plus one instruction line. A CONTRADICTED verdict with a
+  mismatch keeps the limitation code `evidence_context_mismatch:<kind>` (exact match in the
+  judge, as T64 codes are). With the switch off, the tool schema and prompt are byte-identical
+  (`verifier.verify_tool()` returns `VERIFY_TOOL` itself), so live behaviour is unchanged.
+- **Evidence condition is deterministic.** Every cited contradicting record (≥1) has study type
+  `narrative_review` or `in_vitro` (the reranker bucket for lab, cell and in-silico, used as
+  "modelling"; there is no separate modelling type). An untyped "Journal Article" is not
+  assumed narrative. Lead may drop `in_vitro` to restrict to narrative reviews.
+- **"Only deciding claim"** = exactly one ENDORSES + CONTRADICTED claim, counted before any
+  set-aside. Rule 4 (DEBUNKING) is untouched.
+- **Reconciled with T67 (2), not parallel.** `judge.set_aside_reason` is the one "verdict
+  stays, can't decide, label falls through" mechanism. T67's thin check (own switch, still off)
+  is applied first, then T69. Both use `judge.cited_contradicting`. The queue row's "T64(d)"
+  (extraction context resolution, deferred) has no code to reuse. The structured-flag pattern
+  reused is T64(c)'s `outcome_unspecified`.
+- **Gate:** stored data has no `evidence_context`, so switch on = 0 label changes (A 11/18, B
+  43/48). Counterfactual "verifier flags every contradiction": A unchanged, B v119 (gold
+  MISINFO) → CANNOT_RECOGNIZE. T67-fixed videos (v71, v78, v87, v122; 3d48e75e) and T64's
+  d2bf4179 are unchanged in every configuration.
+- **Gap:** the v135 production fixture was not in the repo. This session's message to the
+  coordinator was blocked by the environment's permission classifier, so the gate fell back
+  to the tune replay, plus a synthetic v135 stand-in in the unit tests only.
+
+## 7al. On-Screen Text Kinds and Routing (T68; design §2, §3, §15)
 
 Built by the automated build on 2026-11-28 (lead approved; no spend, no migrations). Only
 runs with `OCR_PROVIDER=vision`; with OCR off, fusion output and a full mocked graph run are
@@ -2539,13 +2572,21 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-28**: T69 (design §7, §9) `contradiction_context_mismatch` label rule, built and
+  **switched off** (`routing.CONTEXT_MISMATCH_RULE`). No spend, no migration, test split not
+  read. Verifier gets a structured `evidence_context` field (only when the switch is on); judge sets aside the
+  sole endorsed contradicted claim resting only on narrative reviews / modelling with a mismatch
+  code (same mechanism as T67's thin rule). Replay: 0 label changes on T66 states and golden tune
+  claims; the upper bound (mismatch assumed everywhere) flips only golden v119. T67-fixed videos unchanged.
+  v135 prod fixture missing (coordinator message blocked). Report `evals/reports/T69/`,
+  registry `T69-context_mismatch-*`, decisions §7ak. Branch `auto/T69`.
 - **2026-11-28**: T68 (design §2, §3, §15) on-screen text kinds and routing for vision OCR, PR to
   langgraph-build. Kinds in the OCR tool schema. Subtitles that repeat the speech are dropped.
   Documents and charts become notes and find_study hints, never extraction input. Cards go to
   extraction timed. Frames are sampled at scene changes. OCR off is byte-identical. Mocked
   sanity check: v36 12/12 screen-only claims reach extraction; v135's documents and subtitles
   no longer do, but one explainer card may still add a claim. (g) model comparison: harness and
-  estimate only (about $0.52, cap $2 proposed), awaiting the lead. Decisions in §7ak.
+  estimate only (about $0.52, cap $2 proposed), awaiting the lead. Decisions in §7al.
 - **2026-11-26**: T67 (design §8, §9, §11) critic-budget and thin-contradiction label rules, no
   spend, no migration, test split not read. Both rules built and **switched off** after the offline
   replay gate (no tune label worse).
