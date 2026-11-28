@@ -13,6 +13,14 @@ verdict take part.
    (``THIN_CONTRADICTION_RULE``; routing's ``KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED``)
    are built but off: they failed the T67 replay gate.
 
+   Set aside, not deciding (T67 (2) and T69, one mechanism: :func:`set_aside_reason`):
+   a CONTRADICTED claim can keep its verdict yet be unable to decide rules 1, 4 and 5;
+   it raises its own review reason and the label falls through. T69
+   (``routing.CONTEXT_MISMATCH_RULE``, off): the only ENDORSES + CONTRADICTED claim,
+   whose contradicting records are all narrative reviews or lab / modelling studies and
+   which the verifier's structured ``evidence_context`` field marked as another
+   population or exposure setting, raises ``contradiction_context_mismatch:<cid>``.
+
 1. ``endorsed_contradicted``: any claim is ENDORSES + CONTRADICTED → MISINFO.
 2. ``refuted_supported``: otherwise any claim is REFUTES + SUPPORTED (the speaker
    denies something true) → MISINFO, always sent to review (reason
@@ -164,13 +172,14 @@ FLAG_NOTHING_JUDGED = "nothing_judged"  # T37: video-level (§11)
 FLAG_MAIN_CLAIMS_UNCHECKED = "main_claims_unchecked"  # T64 (f): video-level, label unchanged
 FLAG_THIN_CONTRADICTION = "thin_contradiction"  # T67 (2): per claim; the claim can't decide
 FLAG_ANALYSIS_INCOMPLETE = "analysis_incomplete"  # T67 (3): video-level
+FLAG_CONTEXT_MISMATCH = "contradiction_context_mismatch"  # T69: per claim; the claim can't decide
 MAIN_CLAIM_CATEGORIES = frozenset({"treatment_efficacy", "prevention"})
 SIBLING_LIMITATION = "contradicted_by_sibling_claim"  # T64 (b), set by unproven_guard
 # Since T21 these are collected from every claim, not only when their rule fires, and a
 # mixed video is always reviewed (§9).
 RULE_REVIEW_FLAGS = frozenset({
     FLAG_DENIES_SUPPORTED, FLAG_POSSIBLE_DEBUNK, FLAG_UNPROVEN, FLAG_MIXED_VIDEO, FLAG_NOTHING_JUDGED,
-    FLAG_MAIN_CLAIMS_UNCHECKED, FLAG_THIN_CONTRADICTION, FLAG_ANALYSIS_INCOMPLETE,
+    FLAG_MAIN_CLAIMS_UNCHECKED, FLAG_THIN_CONTRADICTION, FLAG_ANALYSIS_INCOMPLETE, FLAG_CONTEXT_MISMATCH,
 })
 
 # T67 (2), lead 2026-11-26: an ENDORSES / REFUTES + CONTRADICTED claim decides the label
@@ -186,6 +195,24 @@ RULE_REVIEW_FLAGS = frozenset({
 # (evals/reports/T67/report.md). Turning it on is a lead decision.
 THIN_CONTRADICTION_RULE = False
 MIN_CONTRADICTING_ON_TOPIC = 2
+
+# T69 (switch: ``routing.CONTEXT_MISMATCH_RULE``, off). Production jobs cf2ea579 and
+# f85f2daa (tune v135, golden NO_MISINFO) were MISINFO, decided only by "Benzene doesn't
+# get through skin easily", contradicted by two narrative reviews of occupational solvent
+# exposure. The rule sets such a claim aside the same way T67 (2) sets a thin one aside
+# (one mechanism, :func:`set_aside_reason`), when all of these hold:
+#   - it is the ONLY ENDORSES + CONTRADICTED claim (rule 1 would rest on it alone);
+#   - every contradicting record it cites (and at least one) is a narrative review or a
+#     lab / in-silico / modelling study (``rerank.StudyType`` narrative_review, in_vitro):
+#     no primary human study, systematic review, RCT or guideline;
+#   - the verifier's structured ``evidence_context`` field said the contradicting
+#     evidence studies a different population or exposure setting (stored as the
+#     limitation code ``CONTEXT_MISMATCH_LIMITATION:<kind>``; never read from prose).
+# The verdict stays, the label falls through, and the claim raises
+# ``contradiction_context_mismatch:<cid>`` (always reviewed).
+CONTEXT_MISMATCH_LIMITATION = r.CONTEXT_MISMATCH_LIMITATION
+CONTEXT_MISMATCH_KINDS = r.CONTEXT_MISMATCH_KINDS
+NARRATIVE_OR_MODELLING_TYPES = frozenset({"narrative_review", "in_vitro"})
 
 # T67 (3), lead addendum 2026-11-26 ~23:00 UTC (production job 3d48e75e: the verifier was
 # unreachable for 10 of 11 claims and one SUPPORTED side claim made the video NO_MISINFO):
@@ -368,6 +395,12 @@ def main_claims_unchecked(views: Sequence[ClaimView]) -> bool:
     return bool(main) and 2 * len(unchecked) >= len(main)
 
 
+def cited_contradicting(view: ClaimView) -> list[EvidenceRecord]:
+    """The records a verdict cites against its claim, among those retrieved for it."""
+    by_id = {e.evidence_id: e for e in view.evidence}
+    return [by_id[eid] for eid in dict.fromkeys(view.verification.contradicting_evidence_ids) if eid in by_id]
+
+
 def thin_contradiction(view: ClaimView) -> bool:
     """T67 (2): a CONTRADICTED verdict whose contradicting evidence (among the records
     retrieved for the claim) has fewer than ``MIN_CONTRADICTING_ON_TOPIC`` records on
@@ -377,11 +410,53 @@ def thin_contradiction(view: ClaimView) -> bool:
 
     if view.verdict != Verdict.CONTRADICTED:
         return False
-    by_id = {e.evidence_id: e for e in view.evidence}
-    cited = [by_id[eid] for eid in dict.fromkeys(view.verification.contradicting_evidence_ids) if eid in by_id]
+    cited = cited_contradicting(view)
     if any(ug._study_type(e) in ug.STRONG_STUDY_TYPES for e in cited):
         return False
     return len(ug.on_topic_ids(view.claim, cited)) < MIN_CONTRADICTING_ON_TOPIC
+
+
+def context_mismatch_kind(verification: VerificationResult) -> Optional[str]:
+    """T69: the mismatch the verifier recorded in its structured ``evidence_context``
+    field (stored as ``CONTEXT_MISMATCH_LIMITATION:<kind>``, an exact code), or None.
+    Free-text limitations are never read."""
+    for lim in verification.limitations or []:
+        head, sep, kind = lim.partition(":")
+        if sep and head == CONTEXT_MISMATCH_LIMITATION and kind in CONTEXT_MISMATCH_KINDS:
+            return kind
+    return None
+
+
+def contradiction_rests_on_narrative_or_modelling(view: ClaimView) -> bool:
+    """T69: every contradicting record the verdict cites (at least one) is a narrative
+    review or a lab / modelling study (``NARRATIVE_OR_MODELLING_TYPES``; study type from
+    the record, else PubMed's publication type)."""
+    from app.core.graph import unproven_guard as ug  # avoid an import cycle at load time
+
+    cited = cited_contradicting(view)
+    return bool(cited) and all(ug._study_type(e) in NARRATIVE_OR_MODELLING_TYPES for e in cited)
+
+
+def context_mismatched_contradiction(view: ClaimView) -> bool:
+    """T69: an ENDORSES + CONTRADICTED verdict that rests only on narrative reviews or
+    modelling and that the verifier flagged as being about another population or
+    exposure setting. (Whether it is the *only* such claim is checked in ``decide``.)"""
+    return (
+        view.stance == Stance.ENDORSES and view.verdict == Verdict.CONTRADICTED
+        and context_mismatch_kind(view.verification) is not None
+        and contradiction_rests_on_narrative_or_modelling(view)
+    )
+
+
+def set_aside_reason(view: ClaimView, *, sole_endorsed_contradicted: bool) -> Optional[str]:
+    """One mechanism for "the verdict stays but the claim can't decide" (T67 (2), T69):
+    the review flag the claim raises, or None when it may decide. Each rule has its own
+    switch; T67's thin check is applied first."""
+    if THIN_CONTRADICTION_RULE and view.stance in (Stance.ENDORSES, Stance.REFUTES) and thin_contradiction(view):
+        return FLAG_THIN_CONTRADICTION
+    if r.CONTEXT_MISMATCH_RULE and sole_endorsed_contradicted and context_mismatched_contradiction(view):
+        return FLAG_CONTEXT_MISMATCH
+    return None
 
 
 def analysis_incomplete(views: Sequence[ClaimView]) -> bool:
@@ -396,12 +471,17 @@ def decide(views: Sequence[ClaimView], *, has_claims: Optional[bool] = None) -> 
     views = list(views)
     has_claims = bool(views) if has_claims is None else has_claims
 
-    # T67 (2): endorsed / refuted contradictions on thin evidence keep their verdict but
-    # can't decide (rules 1, 4 and 5); each raises thin_contradiction:<cid>.
-    thin = [
-        v for v in views if THIN_CONTRADICTION_RULE and v.stance in (Stance.ENDORSES, Stance.REFUTES)
-        and thin_contradiction(v)
+    # T67 (2) / T69: contradictions that keep their verdict but can't decide (rules 1, 4
+    # and 5); each raises its flag (thin_contradiction:<cid> or
+    # contradiction_context_mismatch:<cid>). T69 applies only to the sole endorsed
+    # contradicted claim, counted before any claim is set aside.
+    n_endorsed_contradicted = sum(
+        1 for v in views if v.stance == Stance.ENDORSES and v.verdict == Verdict.CONTRADICTED)
+    set_aside = [
+        (v, why) for v in views
+        if (why := set_aside_reason(v, sole_endorsed_contradicted=n_endorsed_contradicted == 1))
     ]
+    thin = [v for v, _ in set_aside]
     thin_ids = {v.claim_id for v in thin}
     endorsed_false = [v for v in views if v.stance == Stance.ENDORSES and v.verdict == Verdict.CONTRADICTED
                       and v.claim_id not in thin_ids]
@@ -422,7 +502,7 @@ def decide(views: Sequence[ClaimView], *, has_claims: Optional[bool] = None) -> 
         *(f"{FLAG_DENIES_SUPPORTED}:{v.claim_id}" for v in denied_true),
         *(f"{FLAG_UNPROVEN}:{v.claim_id}" for v in [*unproven, *sibling_demoted]),
         *(f"{FLAG_POSSIBLE_DEBUNK}:{v.claim_id}" for v in refuted_open),
-        *(f"{FLAG_THIN_CONTRADICTION}:{v.claim_id}" for v in thin),
+        *(f"{why}:{v.claim_id}" for v, why in set_aside),
     ]
     if (endorsed_false or unproven) and refuted_false:
         rule_flags.append(FLAG_MIXED_VIDEO)  # MISINFO, always reviewed
@@ -565,6 +645,8 @@ _FLAG_TEXT = {
                                 "makes could not be checked against the evidence",
     FLAG_ANALYSIS_INCOMPLETE: "the evidence check could not run for at least half of the claims, so the "
                               "video could not be assessed",
+    FLAG_CONTEXT_MISMATCH: "the evidence against {ref} comes only from reviews or modelling about a "
+                           "different population or exposure setting, so it does not decide the label on its own",
     FLAG_THIN_CONTRADICTION: "the evidence against {ref} is too thin to decide the label on its own "
                              "(fewer than two papers on its topic and no review, trial or guideline)",
 }

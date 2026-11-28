@@ -183,6 +183,8 @@ describe("review reasons", () => {
     expect(reasonText("second_check_disagreed:c4")).not.toMatch(/critic/i);
     expect(reasonRule("judge:thin_contradiction:c2")).toBe("thin_contradiction");
     expect(reasonText("judge:thin_contradiction:c2")).toBe(REVIEW_REASONS.thin_contradiction);
+    expect(reasonRule("judge:contradiction_context_mismatch:c4")).toBe("contradiction_context_mismatch");
+    expect(reasonText("judge:contradiction_context_mismatch:c4")).toBe(REVIEW_REASONS.contradiction_context_mismatch);
     expect(reasonText("judge:analysis_incomplete")).toBe(REVIEW_REASONS.analysis_incomplete);
     expect(DECISION_RULE_TEXT.analysis_incomplete).toBeTruthy();
     const unknown = reasonText("brand_new_rule:c9");
