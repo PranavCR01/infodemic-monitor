@@ -20,6 +20,10 @@ verdict take part.
    whose contradicting records are all narrative reviews or lab / modelling studies and
    which the verifier's structured ``evidence_context`` field marked as another
    population or exposure setting, raises ``contradiction_context_mismatch:<cid>``.
+   T70 (``routing.CLAIM_CONTEXT``, off): T69's rule also runs under T70's switch, and a
+   claim the verifier judged in its video context that is contradicted as stated but
+   not as meant (code ``softened_by_context``) is set aside too, whatever its verdict,
+   raising ``softened_by_context:<cid>``: context never changes a label without review.
 
 1. ``endorsed_contradicted``: any claim is ENDORSES + CONTRADICTED → MISINFO.
 2. ``refuted_supported``: otherwise any claim is REFUTES + SUPPORTED (the speaker
@@ -173,6 +177,7 @@ FLAG_MAIN_CLAIMS_UNCHECKED = "main_claims_unchecked"  # T64 (f): video-level, la
 FLAG_THIN_CONTRADICTION = "thin_contradiction"  # T67 (2): per claim; the claim can't decide
 FLAG_ANALYSIS_INCOMPLETE = "analysis_incomplete"  # T67 (3): video-level
 FLAG_CONTEXT_MISMATCH = "contradiction_context_mismatch"  # T69: per claim; the claim can't decide
+FLAG_SOFTENED_BY_CONTEXT = "softened_by_context"  # T70: per claim; the claim can't decide
 MAIN_CLAIM_CATEGORIES = frozenset({"treatment_efficacy", "prevention"})
 SIBLING_LIMITATION = "contradicted_by_sibling_claim"  # T64 (b), set by unproven_guard
 # Since T21 these are collected from every claim, not only when their rule fires, and a
@@ -180,6 +185,7 @@ SIBLING_LIMITATION = "contradicted_by_sibling_claim"  # T64 (b), set by unproven
 RULE_REVIEW_FLAGS = frozenset({
     FLAG_DENIES_SUPPORTED, FLAG_POSSIBLE_DEBUNK, FLAG_UNPROVEN, FLAG_MIXED_VIDEO, FLAG_NOTHING_JUDGED,
     FLAG_MAIN_CLAIMS_UNCHECKED, FLAG_THIN_CONTRADICTION, FLAG_ANALYSIS_INCOMPLETE, FLAG_CONTEXT_MISMATCH,
+    FLAG_SOFTENED_BY_CONTEXT,
 })
 
 # T67 (2), lead 2026-11-26: an ENDORSES / REFUTES + CONTRADICTED claim decides the label
@@ -448,14 +454,25 @@ def context_mismatched_contradiction(view: ClaimView) -> bool:
     )
 
 
+def softened_by_context(view: ClaimView) -> bool:
+    """T70: the verifier judged the claim in its video context and said the evidence
+    contradicts the claim's words alone but not the claim as meant (exact code
+    ``routing.SOFTENED_LIMITATION``; prose is never read)."""
+    return (view.stance in (Stance.ENDORSES, Stance.REFUTES)
+            and r.SOFTENED_LIMITATION in (view.verification.limitations or []))
+
+
 def set_aside_reason(view: ClaimView, *, sole_endorsed_contradicted: bool) -> Optional[str]:
-    """One mechanism for "the verdict stays but the claim can't decide" (T67 (2), T69):
-    the review flag the claim raises, or None when it may decide. Each rule has its own
-    switch; T67's thin check is applied first."""
+    """One mechanism for "the verdict stays but the claim can't decide" (T67 (2), T69,
+    T70): the review flag the claim raises, or None when it may decide. Each rule has its
+    own switch; T67's thin check is applied first. T69's rule runs under its own switch
+    or T70's (``routing.context_mismatch_rule_on``)."""
     if THIN_CONTRADICTION_RULE and view.stance in (Stance.ENDORSES, Stance.REFUTES) and thin_contradiction(view):
         return FLAG_THIN_CONTRADICTION
-    if r.CONTEXT_MISMATCH_RULE and sole_endorsed_contradicted and context_mismatched_contradiction(view):
+    if r.context_mismatch_rule_on() and sole_endorsed_contradicted and context_mismatched_contradiction(view):
         return FLAG_CONTEXT_MISMATCH
+    if r.CLAIM_CONTEXT and softened_by_context(view):
+        return FLAG_SOFTENED_BY_CONTEXT
     return None
 
 
@@ -485,8 +502,12 @@ def decide(views: Sequence[ClaimView], *, has_claims: Optional[bool] = None) -> 
     thin_ids = {v.claim_id for v in thin}
     endorsed_false = [v for v in views if v.stance == Stance.ENDORSES and v.verdict == Verdict.CONTRADICTED
                       and v.claim_id not in thin_ids]
-    denied_true = [v for v in views if v.stance == Stance.REFUTES and v.verdict == Verdict.SUPPORTED]
-    unproven = [v for v in views if v.stance == Stance.ENDORSES and v.verdict == Verdict.UNSUPPORTED]
+    # A set-aside claim decides nothing (T70: a softened claim can carry any verdict;
+    # T67/T69 set aside only CONTRADICTED ones, which these two lists never hold).
+    denied_true = [v for v in views if v.stance == Stance.REFUTES and v.verdict == Verdict.SUPPORTED
+                   and v.claim_id not in thin_ids]
+    unproven = [v for v in views if v.stance == Stance.ENDORSES and v.verdict == Verdict.UNSUPPORTED
+                and v.claim_id not in thin_ids]
     refuted_false = [v for v in views if v.stance == Stance.REFUTES and v.verdict == Verdict.CONTRADICTED
                      and v.claim_id not in thin_ids]
     judged = [v for v in views if v.verdict in JUDGED_VERDICTS and v.claim_id not in thin_ids]
@@ -647,6 +668,8 @@ _FLAG_TEXT = {
                               "video could not be assessed",
     FLAG_CONTEXT_MISMATCH: "the evidence against {ref} comes only from reviews or modelling about a "
                            "different population or exposure setting, so it does not decide the label on its own",
+    FLAG_SOFTENED_BY_CONTEXT: "the evidence contradicts {ref} as worded, but not as the video means it "
+                              "in context, so a person checks the context before it decides the label",
     FLAG_THIN_CONTRADICTION: "the evidence against {ref} is too thin to decide the label on its own "
                              "(fewer than two papers on its topic and no review, trial or guideline)",
 }

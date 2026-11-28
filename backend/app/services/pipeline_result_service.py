@@ -110,6 +110,23 @@ def _with_source_meta(trail: Optional[dict], records: list) -> Optional[dict]:
     return {**trail, "source_meta": meta}
 
 
+def _with_claim_context(trail: Optional[dict], state: dict, cid: str) -> Optional[dict]:
+    """T70: keep the claim's grounded context (and the video topic, and the search facets
+    the planner took from it) with the claim's search-trail JSON, as T65 (f) keeps
+    source_meta: no migration. Nothing is added when the run has no context (the switch
+    was off), so those rows are unchanged."""
+    from app.core.graph import claim_context as cx
+
+    payload = cx.context_payload((state.get("claim_contexts") or {}).get(cid), state.get("video_topic"))
+    if payload is None:
+        return trail
+    rounds = (state.get("search_trail") or {}).get(cid) or []
+    plan = next((rnd.plan for rnd in rounds if getattr(rnd, "plan", None)), None) or {}
+    if plan.get("claim_context"):
+        payload["search_facets"] = list(plan["claim_context"])
+    return {**(trail or {}), "claim_context": payload}
+
+
 def _write_claim_level(db: Session, job_id: str, state: dict) -> None:
     from app.core.graph.judge import claim_label
     from app.services.search_trail import build_search_trail
@@ -141,7 +158,8 @@ def _write_claim_level(db: Session, job_id: str, state: dict) -> None:
             claim_kind=claim.claim_kind,
             label=claim_label(stance.stance if stance else None, verdict.verdict).value if verdict else None,
             deciding=cid in deciding,
-            search_trail=_with_source_meta(build_search_trail(state, cid), _evidence_for_claim(state, cid)),
+            search_trail=_with_claim_context(
+                _with_source_meta(build_search_trail(state, cid), _evidence_for_claim(state, cid)), state, cid),
         )
         db.add(row)
         if stance is not None:

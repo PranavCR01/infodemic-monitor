@@ -2551,6 +2551,47 @@ Numbers: `evals/reports/T68/README.md`.
   among the synthetic tasks rather than that they are all of them, because T68's records are
   synthetic too.
 
+## 7am. Claim Context: Judge Each Claim as Meant (T70; design §4, §6, §7, §9)
+
+Built by the automated build on 2026-11-28 (lead approved; no spend, no migrations). It ships **off**: `routing.CLAIM_CONTEXT = False`. Turning it on also needs routing.yaml to route `extract_claims` to `extract_v5` and `verify_claims` to `verify_v4`; `claim_context.check_prompts` refuses to build the nodes otherwise. Numbers are in `evals/reports/T70/report.md`.
+
+- **Module.** `app/core/graph/claim_context.py` holds the extract_v5 schema, grounding, the scope guardrail, rendering, the planner hint and the stored payload.
+- **New state.** `ClaimContext`, `ContextItem` and `VideoTopic`, with the state fields `claim_contexts` and `video_topic`. Both are owned by `extract_claims` and written only when the switch is on and there is something to write.
+- **Grounding.** A context item is kept only if every cited block exists and at least half of its content words are in those blocks (the claim rule, `grounding_overlap`). A bad item is dropped without a repair round and named in `dropped`. The topic is grounded the same way and is asked exactly once (`WindowContext.topic_asked`).
+- **Scope.** A claim is `specific` only when the model says so and at least one item survives grounding. Otherwise it is `universal`. `context_of(state, cid)` returns context only for a specific claim with the switch on, so a universal claim reaches the planner and the verifier as stated.
+- **Dedup.** A merged claim takes the context of its first copy that has specific context (`dedup_with_members`).
+- **Planner.** `QueryPlanner.plan(claim_context=...)` runs `context_rungs` first:
+  - the claim's (or the subject's) intervention AND exposure facets from `CONTEXT_FACETS` (5 hand-made facets);
+  - plus the context population or outcome through the lexicon.
+  - An empty hint gives the same cache key, plan and `describe()` as before.
+- **One verifier field (reconciled with T69).**
+  - T69's `evidence_context` gains the value `partial` and is required for every verdict when T70 is on.
+  - `setting_match` is derived from it (`routing.SETTING_MATCH`) and stored as the limitation code `setting_match:<v>`.
+  - `contradicted_as_stated` (claims in context only) is about the verdict, not the evidence context. It is the only new model field, and it gives the code `softened_by_context`.
+  - With the switch off, `check_switches` rejects both T70 fields exactly as the pre-T70 strict schema did. `verify_tool()` with no arguments is still `VERIFY_TOOL`.
+- **Universal claims under T70** keep only `setting_match` (informational; the judge never reads it). They keep no T69 code. This is stricter than T69 alone, by design (row (e)).
+- **Judge.**
+  - `set_aside_reason` adds `softened_by_context`.
+  - T69's rule runs under `routing.context_mismatch_rule_on()` (T69's switch or T70's).
+  - Set-aside claims are now also excluded from `denied_true` and `unproven`. This is a no-op for T67 and T69, which only set aside CONTRADICTED claims.
+  - The new reason is in `REVIEW_REASONS`/`REASON_TEXT`, `_FLAG_TEXT` and `frontend/lib/vocabulary.ts`.
+- **Persistence and API (no migration).**
+  - The context payload, with the topic and the planner facets, goes into the claim's search-trail JSON under `claim_context`, as T65 (f) did for `source_meta`.
+  - `ClaimView` gains `context`, `context_text`, `quote_source` and `screen_quote`. These fields are dropped from the JSON when None (`model_serializer`).
+  - Screen-only claims get "On screen" only with the switch on or a stored context.
+  - T69/T70 codes are filtered out of the limitations shown to readers (`is_context_code`).
+- **Flag off is byte-identical.** `scripts/t70_off_fingerprint.py` was run in this tree and in a worktree of `origin/langgraph-build` @ c5fdec5, over two inputs. It covers requests, state, classification, persisted rows and API views: 10/10 fingerprints are identical.
+- **Gate** (`scripts/t70_claim_context_gate.py`; harness `app/evaluation/claim_context_gate.py`). The model replies are mocked.
+  - v135 ×3: NO_MISINFO + review when the verifier judges as meant or flags the setting; MISINFO when it ignores the context.
+  - Vitamin K ×3: unchanged.
+  - T66 A 11/18 and golden B 43/48: unchanged with the switch on.
+  - The softening upper bound (counterfactual) gives a milder label for 12 of 18 gold-MISINFO videos on B, every one sent to review.
+- **Deviations.**
+  - `outcome` is added to the context fields (needed to supersede T64(d)).
+  - `contradicted_as_stated` is added.
+  - The paid run is proposed only: `evals/reports/T70/run_t70.py`, estimate about $24-26 for 20 videos, cap $30 proposed, runner hard cap $35.
+- **Test changes.** New `test_claim_context_t70.py` (46 tests) and `frontend/lib/api/t70.test.tsx` (5 tests). No existing test changed.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -2572,6 +2613,7 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-28**: T70 (design §4, §6, §7, §9) claim context, built and **switched off** (`routing.CLAIM_CONTEXT`). No spend, no migration, test split not read. extract_v5 adds a grounded per-claim context and a one-line topic. The planner adds the context's route and setting facets. verify_v4 judges claims as meant, reusing T69's `evidence_context` (+`partial`; `setting_match` derived) and adding `contradicted_as_stated`; softened claims are set aside and reviewed, and universal claims are judged as stated. The report and API show "In context:" and "On screen:". Flag off is byte-identical to c5fdec5 (fingerprints). Gate, with mocked replies: v135 ×3 NO_MISINFO + review, and still MISINFO if the model ignores the context; vitamin K and T66 unchanged. Paid tune run proposed only (about $26, $30 cap), awaiting the lead. Decisions in §7am. Branch `auto/T70`.
 - **2026-11-28**: T69 (design §7, §9) `contradiction_context_mismatch` label rule, built and
   **switched off** (`routing.CONTEXT_MISMATCH_RULE`). No spend, no migration, test split not
   read. Verifier gets a structured `evidence_context` field (only when the switch is on); judge sets aside the

@@ -43,16 +43,24 @@ How it fits:
   of them: it keeps the implied efficacy category. The tool's category
   enum lists ``evidence_meta`` only from ``extract_v4`` on, so older prompts send the
   same request as before.
-- Writes only ``claims`` (plus the shared, append-only ``errors``).
+- **Claim context** (T70, switch ``routing.CLAIM_CONTEXT``, off; prompt ``extract_v5``):
+  each claim may carry a grounded, structured ``context`` (subject, exposure, amount,
+  population, outcome, scope) and the first window gives a one-line video topic, shown
+  fenced to later windows. Grounding and the scope guardrail are in
+  ``app.core.graph.claim_context``. ``claim_text`` stays verbatim. With the switch off
+  the request, the parse and the output are exactly as before.
+- Writes ``claims`` (plus the shared, append-only ``errors``); with T70's switch on,
+  also ``claim_contexts`` and ``video_topic`` when there is something to write.
 """
 from __future__ import annotations
 
 from typing import Any, Callable, Iterable, Optional, Protocol, Sequence
 
 from app.core.claim_category import EVIDENCE_META, resolve_claim_category
+from app.core.graph import claim_context as cx
 from app.core.graph import routing as r
 from app.core.graph.stance import load_prompt
-from app.core.graph.state import FusedSegment, GraphClaim, NodeError, PipelineState
+from app.core.graph.state import ClaimContext, FusedSegment, GraphClaim, NodeError, PipelineState, VideoTopic
 from app.core.guardrails.config import GuardrailConfig, load_guardrails
 from app.core.guardrails.injection import GUARDRAIL_ERROR_PREFIX
 from app.core.guardrails.limits import cap_claims
@@ -61,6 +69,7 @@ from app.core.guardrails.untrusted import (
     DEFAULT_MAX_BLOCK_CHARS,
     GuardedPrompt,
     extraction_prompt,
+    fence,
     guarded_system_prompt,
 )
 from app.core.retrieval.claim_kind import resolve_claim_kind
@@ -87,7 +96,7 @@ LEGACY_CATEGORIES = (
 # the model only from extract_v4 on.
 CATEGORIES = (*LEGACY_CATEGORIES[:-1], EVIDENCE_META, "other")
 # Prompt versions that describe evidence_meta and so get it in the tool's enum.
-EVIDENCE_META_PROMPTS = frozenset({"extract_v4"})
+EVIDENCE_META_PROMPTS = frozenset({"extract_v4", "extract_v5"})
 
 
 def extract_tool(categories: Sequence[str] = LEGACY_CATEGORIES) -> dict:
@@ -179,11 +188,11 @@ def segment_index(blocks: dict[str, dict]) -> str:
     return "\n".join(lines) or "(no segments)"
 
 
-def _instructions(blocks: dict[str, dict], repair_note: Optional[str]) -> str:
+def _instructions(blocks: dict[str, dict], repair_note: Optional[str], extra: str = "") -> str:
     text = (
         "List the health claims in the fenced material.\n\n"
         f"SEGMENT INDEX (cite only these IDs):\n{segment_index(blocks)}\n"
-    )
+    ) + extra
     if repair_note:
         text += (
             "\nYOUR PREVIOUS ANSWER WAS REJECTED by an automatic check: "
@@ -195,12 +204,16 @@ def _instructions(blocks: dict[str, dict], repair_note: Optional[str]) -> str:
 def build_prompt(
     segments: Sequence[FusedSegment], blocks: dict[str, dict], system_prompt: str,
     *, repair_note: Optional[str] = None, max_chars: int = DEFAULT_MAX_BLOCK_CHARS,
+    context_mode: bool = False, topic: Optional[VideoTopic] = None, ask_topic: bool = False,
 ) -> GuardedPrompt:
-    prompt = extraction_prompt(segments, task=_instructions(blocks, repair_note), max_chars=max_chars)
-    return prompt.model_copy(update={
-        "system": guarded_system_prompt(system_prompt),
-        "citable_ids": frozenset(blocks),
-    })
+    extra = cx.topic_instruction(topic, ask_topic=ask_topic) if context_mode else ""
+    prompt = extraction_prompt(segments, task=_instructions(blocks, repair_note, extra), max_chars=max_chars)
+    update: dict = {"system": guarded_system_prompt(system_prompt), "citable_ids": frozenset(blocks)}
+    if context_mode and topic is not None and not ask_topic:
+        # T70: later windows see the topic the first window produced, fenced (video words).
+        update["blocks"] = (*prompt.blocks, fence(topic.text, kind="model_output", item_id="video_topic",
+                                                  max_chars=max_chars))
+    return prompt.model_copy(update=update)
 
 
 def build_request(prompt: GuardedPrompt, tool: Optional[dict] = None) -> dict:
@@ -264,6 +277,18 @@ def lexical_similarity(a: str, b: str) -> float:
     return len(sa & sb) / len(sa | sb)
 
 
+def dedup_with_members(
+    claims: Sequence[GraphClaim], similarity: Similarity = lexical_similarity,
+    threshold: float = DEDUP_THRESHOLD,
+) -> tuple[list[GraphClaim], list[list[GraphClaim]]]:
+    """:func:`dedup_claims`, also returning, for each kept claim, the input claims it
+    stands for (the same similarity test). T70 uses them to carry a merged claim's
+    context."""
+    kept, _ = dedup_claims(claims, similarity, threshold)
+    members = [[c for c in claims if similarity(c.claim_text, k.claim_text) >= threshold] or [k] for k in kept]
+    return kept, members
+
+
 def dedup_claims(
     claims: Sequence[GraphClaim], similarity: Similarity = lexical_similarity,
     threshold: float = DEDUP_THRESHOLD,
@@ -299,9 +324,9 @@ class _Rejected(ValueError):
     pass
 
 
-def _parse(raw: Any, blocks: dict[str, dict]) -> ExtractionOutput:
+def _parse(raw: Any, blocks: dict[str, dict], schema: type = ExtractionOutput) -> ExtractionOutput:
     try:
-        out = parse_output(STEP, raw, ExtractionOutput)
+        out = parse_output(STEP, raw, schema)
     except OutputViolation as exc:
         raise _Rejected(exc.reason) from None
     unknown = sorted({s for c in out.claims for s in c.source_segment_ids if s not in blocks})
@@ -310,19 +335,43 @@ def _parse(raw: Any, blocks: dict[str, dict]) -> ExtractionOutput:
     return out  # type: ignore[return-value]
 
 
+class WindowContext:
+    """T70: what context extraction carries across windows. ``topic`` is produced once,
+    by the first window that grounds one; ``contexts`` is aligned with the claims each
+    window returns (the node takes them off after every window)."""
+
+    def __init__(self) -> None:
+        self.topic: Optional[VideoTopic] = None
+        self.topic_asked = False
+        self.contexts: list[ClaimContext] = []
+        self.dropped_items = 0
+
+
 def extract_window(
     segments: Sequence[FusedSegment], piece_ids: set[str], caller: StepCaller,
     system_prompt: str, *, max_chars: int = DEFAULT_MAX_BLOCK_CHARS, max_repairs: int = MAX_REPAIRS,
-    tool: Optional[dict] = None,
+    tool: Optional[dict] = None, context: Optional["WindowContext"] = None,
 ) -> tuple[list[GraphClaim], list[NodeError], bool]:
     """Claims from one window. Returns ``(claims, errors, unavailable)``; claim IDs are
-    provisional and renumbered by the node."""
+    provisional and renumbered by the node.
+
+    ``context`` (T70, switch on with extract_v5): the tool also asks for each claim's
+    context (and, in the first window, the video topic); the grounded results are put on
+    ``context.contexts`` (aligned with the returned claims) and ``context.topic``."""
     blocks = block_sources(segments, piece_ids)
     errors: list[NodeError] = []
     repair_note: Optional[str] = None
     out: Optional[ExtractionOutput] = None
+    schema: type = ExtractionOutput
+    if context is not None:
+        tool = cx.extract_tool_v5(tool or EXTRACT_TOOL, ask_topic=not context.topic_asked)
+        schema = cx.ExtractionOutputV5
     for attempt in range(max_repairs + 1):
-        prompt = build_prompt(segments, blocks, system_prompt, repair_note=repair_note, max_chars=max_chars)
+        if context is None:
+            prompt = build_prompt(segments, blocks, system_prompt, repair_note=repair_note, max_chars=max_chars)
+        else:
+            prompt = build_prompt(segments, blocks, system_prompt, repair_note=repair_note, max_chars=max_chars,
+                                  context_mode=True, topic=context.topic, ask_topic=not context.topic_asked)
         try:
             result = caller.call(STEP, build_request(prompt, tool), system=prompt.system)
         except Exception as exc:  # routing / provider errors
@@ -332,7 +381,7 @@ def extract_window(
             ))
             return [], errors, True
         try:
-            out = _parse(getattr(result, "output", None), blocks)
+            out = _parse(getattr(result, "output", None), blocks, schema)
             break
         except _Rejected as exc:
             if attempt < max_repairs:
@@ -344,12 +393,19 @@ def extract_window(
     assert out is not None
 
     claims: list[GraphClaim] = []
+    if context is not None and not context.topic_asked:
+        context.topic = cx.ground_topic(getattr(out, "video_topic", None), blocks)
+        context.topic_asked = True
     for item in out.claims:
         cited = list(dict.fromkeys(item.source_segment_ids))
         source_text = " ".join(blocks[b]["text"] for b in cited)
         if grounding_overlap(item.claim_text, source_text) < MIN_GROUNDING:
             errors.append(_gerr("claim_ungrounded", item.claim_text[:80]))
             continue
+        if context is not None:
+            ctx = cx.ground_context(f"w{len(claims) + 1}", getattr(item, "context", None), blocks)
+            context.contexts.append(ctx)
+            context.dropped_items += len(ctx.dropped)
         pieces = list(dict.fromkeys(p for b in cited for p in blocks[b]["pieces"]))
         # T51: a design / quality / quantity statement is evidence_meta whatever the model
         # said; a "the evidence for X is overwhelming" statement is never evidence_meta.
@@ -400,6 +456,8 @@ def make_extract_claims(
     system_prompt = load_prompt(version)
     tool = extract_tool(categories_for(version))
     g = guardrails or load_guardrails()
+    cx.check_prompts(extract_version=version)  # T70: switch on needs extract_v5
+    context_mode = r.CLAIM_CONTEXT and version in cx.CONTEXT_PROMPTS
 
     def extract_claims(state: PipelineState) -> dict:
         segments = list(state.get("fused_segments") or [])
@@ -407,23 +465,51 @@ def make_extract_claims(
             return {"claims": []}
         piece_ids = _piece_ids(state)
         found: list[GraphClaim] = []
+        contexts: dict[int, ClaimContext] = {}  # id(claim) -> its context (T70)
+        wctx = WindowContext() if context_mode else None
         errors: list[NodeError] = []
         for window in windows(segments, window_seconds, overlap_seconds):
             claims, errs, unavailable = extract_window(
                 window, piece_ids, caller, system_prompt, max_chars=g.input.max_segment_chars, tool=tool,
+                context=wctx,
             )
             errors += errs
             if unavailable:
                 # Partial claims would under-report the video; the provider falls back.
                 return {"claims": [], "errors": errors}
+            if wctx is not None:
+                contexts.update({id(c): x for c, x in zip(claims, wctx.contexts)})
+                wctx.contexts = []
             found += claims
         found.sort(key=lambda c: (c.start_seconds, c.end_seconds))
-        found, _merged = dedup_claims(found, similarity)
-        found = [c.model_copy(update={"claim_id": f"c{i}"}) for i, c in enumerate(found, start=1)]
+        if wctx is None:
+            found, _merged = dedup_claims(found, similarity)
+            found = [c.model_copy(update={"claim_id": f"c{i}"}) for i, c in enumerate(found, start=1)]
+        else:
+            # T70: a merged claim keeps a copy's context (specific first).
+            kept, members = dedup_with_members(found, similarity)
+            renumbered = []
+            claim_contexts: dict[str, ClaimContext] = {}
+            for i, (c, group) in enumerate(zip(kept, members), start=1):
+                cid = f"c{i}"
+                renumbered.append(c.model_copy(update={"claim_id": cid}))
+                found_ctx = [contexts[id(m)] for m in group if id(m) in contexts]
+                # The first copy with specific context wins, else the first copy's.
+                ctx = next((x for x in found_ctx if cx.is_specific(x)), found_ctx[0] if found_ctx else None)
+                if ctx is not None:
+                    claim_contexts[cid] = ctx.model_copy(update={"claim_id": cid})
+            found = renumbered
         found, dropped = cap_claims(found, g.input)
         if dropped:
             errors.append(_gerr("claims_capped", f"{dropped} claims over the limit"))
         update: dict = {"claims": found}
+        if wctx is not None:
+            kept_ids = {c.claim_id for c in found}
+            claim_contexts = {k: v for k, v in claim_contexts.items() if k in kept_ids}
+            if claim_contexts:
+                update["claim_contexts"] = claim_contexts
+            if wctx.topic is not None:
+                update["video_topic"] = wctx.topic
         if errors:
             update["errors"] = errors
         return update

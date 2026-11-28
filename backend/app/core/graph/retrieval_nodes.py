@@ -32,6 +32,10 @@ rules find no concept in a claim.
   ``SearchRound`` per claim per round (the PubMed query run, hits, records after
   filters, whether it came from the cache, the references consulted, what the round
   added). It only observes: what is retrieved, merged and reranked is unchanged.
+- Claim context (T70, switch ``routing.CLAIM_CONTEXT``, off): a claim with grounded,
+  specific context is planned with it (``QueryPlanner.plan(claim_context=...)``): its
+  exposure route / setting, population and condition become extra rungs run first, and
+  the plan in the search trail records which. A universal claim is planned as stated.
 - A study the video cites (T57, §6): after find_study, ``rerank_evidence`` offers every
   verified cited-study record one claim holds (find_study's, or the citation lookup's
   best) to the video's other claims. Their reranker and the T49 on-topic check decide
@@ -51,6 +55,7 @@ from __future__ import annotations
 from typing import Optional
 from urllib.parse import urlsplit
 
+from app.core.graph import claim_context as cx
 from app.core.graph import routing as r
 from app.core.graph.nodes import NodeFn
 from app.core.graph.routing import Budgets, DEFAULT_BUDGETS
@@ -87,6 +92,10 @@ def make_retrieval_nodes(
         return tuple(c.claim_text for c in state.get("claims", []))
 
     def plan_for(state: PipelineState, claim) -> SearchPlan:
+        hint = cx.planner_hint(cx.context_of(state, claim.claim_id))  # T70: empty unless the switch is on
+        if hint:
+            return planner.plan(claim.claim_text, claim_kind=claim.claim_kind, context=context_of(state),
+                                claim_context=hint)
         return planner.plan(claim.claim_text, claim_kind=claim.claim_kind, context=context_of(state))
 
     def plan_retrieval(state: PipelineState) -> dict:

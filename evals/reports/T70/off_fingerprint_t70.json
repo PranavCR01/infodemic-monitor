@@ -1,0 +1,22 @@
+{
+ "sample": {
+  "api_claim_views": "f0380f9125b47c2e74e78560d9e38d1669f0cae4931327a6553da8c80ca1b17d",
+  "classification": "fc69eba69bfbd058cc12153e1a43b0ebfe44257d6647c5666e106a997ea065d8",
+  "label": "MISINFO",
+  "n_claims": 2,
+  "n_requests": 8,
+  "persisted": "26c43ee051ea089ad1ad94c2739cb2d508d22f8aae89d7ed681e9687fcea0365",
+  "requests": "f19ef4f1c4eb2da112b362d4940d3355ef848c257e79f33e6b3bc53350eb71c2",
+  "state": "ebf3e938be5b00608cfd15a10c42a5f0e530e0c48fe9192b259898972260d4c8"
+ },
+ "v135_008c97a3": {
+  "api_claim_views": "238bba3ad874d40eae05c674d73f18a29654b118cff353ab9e63e0c8a80be0a8",
+  "classification": "9d42d6665c7f0d953dcb41c420576017bcc49c68edc148927005356c15a92902",
+  "label": "CANNOT_RECOGNIZE",
+  "n_claims": 30,
+  "n_requests": 62,
+  "persisted": "a203bb8d837f9a40f4fb4b79931a193e68052c54d33a99ccaf954cf16143d53b",
+  "requests": "65c054e2edbcfbd28a68d005bc6bc0dcc22c8d701eab2cac1b7a860ffce1368a",
+  "state": "e5718f17b99be841402fc27028c5bb1a85d639d2c493511a9ece86ac2a03b241"
+ }
+}

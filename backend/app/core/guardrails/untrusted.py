@@ -34,7 +34,7 @@ from app.core.guardrails.injection import InjectionFinding, neutralise
 
 BlockKind = Literal[
     "transcript", "on_screen", "fused_segment", "claim", "evidence_title",
-    "evidence_abstract", "model_output",
+    "evidence_abstract", "model_output", "claim_context",
 ]
 
 DEFAULT_MAX_BLOCK_CHARS = 4000

@@ -69,6 +69,22 @@ export type RawClaim = {
   search_trail?: RawSearchTrail | null;
   // T65: the transcript words that carry the claim (best-overlap segment text).
   speaker_quote?: string | null;
+  // T70 (backend switch CLAIM_CONTEXT): what the claim means in its video, and where the
+  // quote comes from. Absent on results without claim context.
+  context?: RawClaimContext | null;
+  context_text?: string | null;
+  quote_source?: "speech" | "screen" | null;
+  screen_quote?: string | null;
+};
+
+export type RawClaimContext = {
+  scope: "specific" | "universal";
+  items?: { field: string; label: string; text: string; segment_ids?: string[] }[];
+  dropped?: string[];
+  video_topic?: string | null;
+  setting_match?: "same" | "partial" | "different" | null;
+  softened?: boolean;
+  search_facets?: { field: string; facet: string }[];
 };
 
 export type RawReason = {

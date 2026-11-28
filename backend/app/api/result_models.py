@@ -10,7 +10,7 @@ from __future__ import annotations
 from datetime import datetime
 from typing import Any, Literal, Optional
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_serializer
 
 from app.core.schemas.search_trail import SearchTrailView
 from app.services.review_reasons import ReasonView
@@ -88,6 +88,35 @@ class ClaimSeverityView(BaseModel):
     override: Optional[dict[str, Any]] = None
 
 
+class ContextItemView(BaseModel):
+    """One grounded piece of a claim's context (T70)."""
+
+    field: Literal["subject", "exposure", "amount", "population", "outcome"]
+    label: str  # plain words for the field ("exposure route or setting")
+    text: str
+    segment_ids: list[str] = Field(default_factory=list)
+
+
+class ClaimContextView(BaseModel):
+    """What the claim means in its video (T70, switch CLAIM_CONTEXT). Only grounded items
+    are shown; a universal claim was judged as stated."""
+
+    scope: Literal["specific", "universal"]
+    items: list[ContextItemView] = Field(default_factory=list)
+    dropped: list[str] = Field(default_factory=list)  # items dropped as ungrounded
+    video_topic: Optional[str] = None
+    # The verifier's structured answer, derived from its evidence_context field: do the
+    # papers study the claim's setting as meant? same / partial / different.
+    setting_match: Optional[Literal["same", "partial", "different"]] = None
+    softened: bool = False  # contradicted as worded, not as meant: set aside and reviewed
+    search_facets: list[dict[str, str]] = Field(default_factory=list)
+
+
+# T70 fields, left out of the JSON when empty, so results without claim context (the
+# switch off) serialize exactly as before.
+_T70_OPTIONAL = ("context", "context_text", "quote_source", "screen_quote")
+
+
 class ClaimView(BaseModel):
     # unchanged fields (T11)
     claim_id: str
@@ -124,6 +153,21 @@ class ClaimView(BaseModel):
     speaker_quote_segment_ids: list[str] = Field(default_factory=list)
     # T65 (c): counts of the cited sources (``evidence``) by ``study_type`` and relation.
     study_type_counts: list[StudyTypeCountView] = Field(default_factory=list)
+    # T70 (switch CLAIM_CONTEXT): the claim's context and "In context: ..." line; and
+    # where the quote comes from: a screen-only claim is quoted from the screen ("On
+    # screen: ..."), never as "The speaker says". Omitted from the JSON when None.
+    context: Optional[ClaimContextView] = None
+    context_text: Optional[str] = None
+    quote_source: Optional[Literal["speech", "screen"]] = None
+    screen_quote: Optional[str] = None
+
+    @model_serializer(mode="wrap")
+    def _omit_empty_t70(self, handler):
+        data = handler(self)
+        for key in _T70_OPTIONAL:
+            if key in data and data[key] is None:
+                del data[key]
+        return data
 
 
 class ReviewView(BaseModel):

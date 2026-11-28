@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "date": "2026-11-28",
+  "task": "T70",
+  "split": "tune",
+  "ci95": null,
+  "cost_usd": 0.0,
+  "report_path": "evals/reports/T70/report.md",
+  "run_group": "T70-claim-context-v135",
+  "pipeline_step": "verify_claims",
+  "synthetic": true,
+  "golden_set_ref": "production fixtures prod_{cf2ea579,f85f2daa,008c97a3}/benzene_v135.real.json (tune v135, golden NO_MISINFO)",
+  "models": [],
+  "run_id": "T70-claim_context-v135-on_as_meant",
+  "variant": "on_as_meant",
+  "metric_name": "v135_jobs_not_misinfo",
+  "value": 3.0,
+  "n_items": 3,
+  "n_unit": "v135 production jobs",
+  "notes": "SYNTHETIC (mocked) model replies: extract_v5 context items/topic and mocked verify_v4: INSUFFICIENT_EVIDENCE as meant, different_exposure_setting, contradicted_as_stated; claims, stances, evidence and other verdicts recorded from production. Real code for extraction parsing/grounding, planner, verifier node, judge, review. Shows what the code does with such replies, NOT what a model replies. Off: 0/3 (MISINFO, skin claim decides)."
+}

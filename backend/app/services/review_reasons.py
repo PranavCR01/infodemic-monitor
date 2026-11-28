@@ -66,6 +66,9 @@ REASON_TEXT: dict[str, str] = {
     "contradiction_context_mismatch": "The evidence against {claim} comes only from reviews or modelling "
                                       "about a different population or exposure setting, so it did not "
                                       "decide the label on its own.",
+    # T70: per claim; the claim did not decide the label (switch off by default)
+    "softened_by_context": "The evidence contradicts {claim} as worded, but not as the video means it in "
+                           "context, so it did not decide the label. Check the context it was judged in.",
     # guardrails (§15)
     "prompt_injection_suspected": "Text in {source} looks like an attempt to instruct the system.",
     "guardrail": "A safety check stopped part of the analysis{on_claim}.",
