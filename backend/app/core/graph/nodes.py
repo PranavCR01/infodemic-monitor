@@ -42,7 +42,7 @@ NODE_OUTPUTS: dict[str, frozenset[str]] = {
     r.TRANSCRIBE_AUDIO: frozenset({"transcript_segments"}),
     r.EXTRACT_OCR: frozenset({"ocr_segments", "screen_documents"}),
     r.FUSE_MODALITIES: frozenset({"fused_segments"}),
-    r.EXTRACT_CLAIMS: frozenset({"claims"}),
+    r.EXTRACT_CLAIMS: frozenset({"claims", "claim_contexts", "video_topic"}),
     r.ANALYZE_STANCE: frozenset({"stance_results"}),
     r.PLAN_RETRIEVAL: frozenset({"retrieval_queries"}),
     r.RETRIEVE_EVIDENCE: frozenset({"retrieved_evidence", "retrieval_attempts", "search_trail"}),

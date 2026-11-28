@@ -351,6 +351,8 @@ class SearchPlan:
     # Why there is no query at all (e.g. "needs_translation": a non-Latin script with no
     # translator configured), recorded in the trail instead of silently running nothing.
     no_query_reason: Optional[str] = None
+    # T70: the claim's grounded context the plan used (field -> facet), when it used any.
+    claim_context: tuple[tuple[str, str], ...] = ()
 
     def kind_of(self, query: str) -> Optional[str]:
         return next((r.kind for r in self.rungs if r.query == query), None)
@@ -361,7 +363,10 @@ class SearchPlan:
                 "translation_error": self.translation_error, "context_concept": self.context_concept,
                 "citation": self.citation, "assistant_used": self.assistant_used,
                 "assistant_error": self.assistant_error, "no_query_reason": self.no_query_reason,
-                "rungs": [{"kind": r.kind, "query": r.query} for r in self.rungs]}
+                "rungs": [{"kind": r.kind, "query": r.query} for r in self.rungs],
+                # T70: only when the plan used claim context, so other trails are unchanged.
+                **({"claim_context": [{"field": f, "facet": t} for f, t in self.claim_context]}
+                   if self.claim_context else {})}
 
 
 def dominant_intervention(context: Sequence[str]) -> Optional[Concept]:
@@ -487,6 +492,79 @@ def citation_query(cue: CitationCue, frame: ClaimFrame, keywords: Sequence[str])
     return _and(parts)
 
 
+# T70 (§6 "Planning the search", switch ``routing.CLAIM_CONTEXT``): facets a claim's
+# grounded context adds to its search. Exposure routes and settings are not in the MeSH
+# lexicon (which maps what was used and what it did), so they have their own small table:
+# a facet fires when one of its cue words is a whole word of a context item's text.
+# Product, population and condition context goes through the ordinary lexicon.
+CONTEXT_FACETS: tuple[tuple[str, tuple[str, ...], str], ...] = (
+    ("dermal", ("skin", "dermal", "topical", "topically", "applied", "application", "applications",
+                "cream", "lotion", "gel", "ointment", "sunscreen", "percutaneous", "transdermal"),
+     '("Skin Absorption"[MeSH Terms] OR dermal[tiab] OR percutaneous[tiab] OR topical[tiab])'),
+    ("cosmetic", ("cosmetic", "cosmetics", "cream", "lotion", "sunscreen", "skincare", "acne",
+                  "makeup", "shampoo", "moisturiser", "moisturizer"),
+     '(Cosmetics[MeSH Terms] OR cosmetic[tiab] OR "personal care product"[tiab] OR sunscreen[tiab])'),
+    ("inhalation", ("inhaled", "inhalation", "breathe", "breathed", "breathing", "vapour", "vapor",
+                    "fumes", "air"),
+     '("Inhalation Exposure"[MeSH Terms] OR inhalation[tiab])'),
+    ("oral", ("eat", "eating", "eaten", "drink", "drinking", "swallow", "swallowed", "oral", "orally",
+              "diet", "dietary", "supplement", "supplements"),
+     '("Administration, Oral"[MeSH Terms] OR oral[tiab] OR dietary[tiab])'),
+    ("occupational", ("worker", "workers", "workplace", "occupational", "factory", "industrial"),
+     '("Occupational Exposure"[MeSH Terms] OR occupational[tiab])'),
+)
+_CONTEXT_FACET_FIELDS = ("subject", "exposure", "amount")
+
+
+def context_facets(hint: Sequence[tuple[str, str]]) -> list[tuple[str, str]]:
+    """``(facet name, clause)`` for the facets a claim's grounded context names, in
+    table order, each once."""
+    words: set[str] = set()
+    for field, text in hint:
+        if field in _CONTEXT_FACET_FIELDS:
+            words |= set(re.findall(r"[a-z]+", normalize_claim(text)))
+    return [(name, clause) for name, cues, clause in CONTEXT_FACETS if words & set(cues)]
+
+
+def context_rungs(frame: ClaimFrame, hint: Sequence[tuple[str, str]]) -> tuple[list[PlannedQuery], list[tuple[str, str]]]:
+    """T70: rungs for a claim with grounded, specific context, run before the ordinary
+    ladder. The claim's own intervention (else the context subject's) AND the context's
+    exposure facets, with the context's population / condition when the claim names
+    none: "Benzene doesn't get through skin easily" about one application of an acne
+    cream → benzene AND dermal AND cosmetic, then benzene AND dermal. Nothing when the
+    context adds no facet, population or condition, or there is no intervention."""
+    texts = dict(hint)
+    intervention = [c for c in frame.intervention if c.kind == "intervention"]
+    used: list[tuple[str, str]] = []
+    if not intervention and texts.get("subject"):
+        intervention = [c for c in frame_claim(texts["subject"]).intervention if c.kind == "intervention"]
+        if intervention:
+            used.append(("subject", intervention[0].key))
+    if not intervention:
+        return [], []
+    i_clause = _and([concept_clause(c) for c in intervention])
+    facets = context_facets(hint)
+    used += [("exposure", name) for name, _ in facets]
+    extra: list[str] = []
+    if not frame.population and texts.get("population"):
+        pop = frame_claim(texts["population"]).population
+        if pop:
+            extra.append(_and([concept_clause(c) for c in pop]))
+            used.append(("population", pop[0].key))
+    if not frame.outcome and texts.get("outcome"):
+        out = [c for c in frame_claim(texts["outcome"]).outcome] or [
+            c for c in frame_claim(texts["outcome"]).intervention if c.kind != "intervention"]
+        if out:
+            extra.append(_and([concept_clause(c) for c in out]))
+            used.append(("outcome", out[0].key))
+    if not facets and not extra:
+        return [], []
+    rungs = [PlannedQuery(_and([i_clause, *(c for _, c in facets), *extra]), "context")]
+    if len(facets) > 1 or (facets and extra):
+        rungs.append(PlannedQuery(_and([i_clause, facets[0][1]]), "context_route"))
+    return rungs, used
+
+
 class QueryPlanner:
     """Query ladder for one claim (§6 "Planning", "When nothing comes back"; T50).
 
@@ -504,19 +582,24 @@ class QueryPlanner:
     # -- planning --
 
     def plan(self, claim_text: str, *, claim_kind: str = "research_question",
-             context: Sequence[str] = ()) -> SearchPlan:
-        key = (claim_text, claim_kind, tuple(context))
+             context: Sequence[str] = (), claim_context: Sequence[tuple[str, str]] = ()) -> SearchPlan:
+        """``context``: the video's other claims (T50). ``claim_context`` (T70): this
+        claim's grounded, specific context as ``(field, text)`` pairs; empty unless the
+        CLAIM_CONTEXT switch is on, and then the cache key and plan are as before."""
+        hint = tuple(claim_context)
+        key = (claim_text, claim_kind, tuple(context), hint) if hint else (claim_text, claim_kind, tuple(context))
         cached = self._plans.get(key)
         if cached is not None:
             self._plans.move_to_end(key)
             return cached
-        plan = self._build(claim_text, claim_kind, tuple(context))
+        plan = self._build(claim_text, claim_kind, tuple(context), hint)
         self._plans[key] = plan
         if len(self._plans) > _PLAN_CACHE_SIZE:
             self._plans.popitem(last=False)
         return plan
 
-    def _build(self, claim_text: str, claim_kind: str, context: tuple[str, ...]) -> SearchPlan:
+    def _build(self, claim_text: str, claim_kind: str, context: tuple[str, ...],
+               hint: tuple[tuple[str, str], ...] = ()) -> SearchPlan:
         from app.core.retrieval.language import detect_language, is_english
 
         lang = detect_language(claim_text)
@@ -545,6 +628,10 @@ class QueryPlanner:
         cq = citation_query(cue, frame, keywords) if cue.cites_study else None
         if cq:
             rungs.append(PlannedQuery(cq, "citation"))
+        used_context: list[tuple[str, str]] = []
+        if hint:
+            ctx_rungs, used_context = context_rungs(frame, hint)
+            rungs += ctx_rungs
         rule = _rule_rungs(frame)
         assistant_used, assistant_error = False, None
         if rule:
@@ -568,7 +655,8 @@ class QueryPlanner:
             translation_error=translation_error, context_concept=context_concept,
             citation=cue.describe() if cue.cites_study else None, cites_study=cue.cites_study,
             assistant_used=assistant_used, assistant_error=assistant_error, rungs=tuple(out),
-            no_query_reason=("needs_translation" if unreadable else "no_terms") if not out else None)
+            no_query_reason=("needs_translation" if unreadable else "no_terms") if not out else None,
+            claim_context=tuple(used_context))
 
     def _assist(self, text: str) -> tuple[list[PlannedQuery], Optional[str]]:
         if self.assistant is None:

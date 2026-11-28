@@ -1,0 +1,238 @@
+{
+  "videos": [
+    "v135",
+    "v95",
+    "v65",
+    "v176",
+    "v69",
+    "v109",
+    "v150",
+    "v11",
+    "v39",
+    "v23",
+    "v120",
+    "v92",
+    "v114",
+    "v71",
+    "v88",
+    "v122",
+    "v94",
+    "v78",
+    "v87",
+    "v21"
+  ],
+  "n_videos": 20,
+  "calibration_ratio_actual_over_expected_t66": 3.526,
+  "total_expected_usd_t66_prompts": 6.78,
+  "total_expected_usd_t70_prompts": 6.88,
+  "total_calibrated_usd": 24.27,
+  "total_upper_usd": 73.34,
+  "t66_actual_usd_same_videos": 22.91,
+  "proposed_cap_usd": 30.0,
+  "hard_cap_in_runner_usd": 35.0,
+  "per_video": {
+    "v135": {
+      "t66_actual_usd": null,
+      "t66_status": null,
+      "expected_usd_t66_prompts": 0.4723,
+      "expected_usd_t70_prompts": 0.4787,
+      "calibrated_usd": 1.6877,
+      "upper_usd": 4.6509
+    },
+    "v95": {
+      "t66_actual_usd": 1.528017,
+      "t66_status": "finished",
+      "expected_usd_t66_prompts": 0.3132,
+      "expected_usd_t70_prompts": 0.3179,
+      "calibrated_usd": 1.1208,
+      "upper_usd": 3.0813
+    },
+    "v65": {
+      "t66_actual_usd": 2.39163,
+      "t66_status": "finished",
+      "expected_usd_t66_prompts": 0.2473,
+      "expected_usd_t70_prompts": 0.2513,
+      "calibrated_usd": 0.886,
+      "upper_usd": 2.7368
+    },
+    "v176": {
+      "t66_actual_usd": 0.152709,
+      "t66_status": "finished",
+      "expected_usd_t66_prompts": 0.1626,
+      "expected_usd_t70_prompts": 0.1658,
+      "calibrated_usd": 0.5846,
+      "upper_usd": 2.2924
+    },
+    "v69": {
+      "t66_actual_usd": 2.087611,
+      "t66_status": "finished",
+      "expected_usd_t66_prompts": 0.521,
+      "expected_usd_t70_prompts": 0.5282,
+      "calibrated_usd": 1.8623,
+      "upper_usd": 5.2918
+    },
+    "v109": {
+      "t66_actual_usd": 1.762264,
+      "t66_status": "finished",
+      "expected_usd_t66_prompts": 0.8021,
+      "expected_usd_t70_prompts": 0.8126,
+      "calibrated_usd": 2.865,
+      "upper_usd": 8.2566
+    },
+    "v150": {
+      "t66_actual_usd": 0.01268,
+      "t66_status": "finished",
+      "expected_usd_t66_prompts": 0.0231,
+      "expected_usd_t70_prompts": 0.0246,
+      "calibrated_usd": 0.0867,
+      "upper_usd": 1.5497
+    },
+    "v11": {
+      "t66_actual_usd": 0.522927,
+      "t66_status": "finished",
+      "expected_usd_t66_prompts": 0.2334,
+      "expected_usd_t70_prompts": 0.2374,
+      "calibrated_usd": 0.837,
+      "upper_usd": 2.6674
+    },
+    "v39": {
+      "t66_actual_usd": 2.25528,
+      "t66_status": "finished",
+      "expected_usd_t66_prompts": 0.38,
+      "expected_usd_t70_prompts": 0.3856,
+      "calibrated_usd": 1.3595,
+      "upper_usd": 3.8072
+    },
+    "v23": {
+      "t66_actual_usd": 0.700085,
+      "t66_status": "finished",
+      "expected_usd_t66_prompts": 0.2396,
+      "expected_usd_t70_prompts": 0.2436,
+      "calibrated_usd": 0.8589,
+      "upper_usd": 2.6982
+    },
+    "v120": {
+      "t66_actual_usd": 0.74192,
+      "t66_status": "finished",
+      "expected_usd_t66_prompts": 0.3032,
+      "expected_usd_t70_prompts": 0.308,
+      "calibrated_usd": 1.0859,
+      "upper_usd": 3.0364
+    },
+    "v92": {
+      "t66_actual_usd": 0.778289,
+      "t66_status": "finished",
+      "expected_usd_t66_prompts": 0.2326,
+      "expected_usd_t70_prompts": 0.2366,
+      "calibrated_usd": 0.8342,
+      "upper_usd": 2.6632
+    },
+    "v114": {
+      "t66_actual_usd": 0.350135,
+      "t66_status": "finished",
+      "expected_usd_t66_prompts": 0.369,
+      "expected_usd_t70_prompts": 0.3746,
+      "calibrated_usd": 1.3207,
+      "upper_usd": 3.7569
+    },
+    "v71": {
+      "t66_actual_usd": 3.065913,
+      "t66_status": "finished",
+      "expected_usd_t66_prompts": 0.4483,
+      "expected_usd_t70_prompts": 0.4547,
+      "calibrated_usd": 1.6031,
+      "upper_usd": 4.5391
+    },
+    "v88": {
+      "t66_actual_usd": 0.35676,
+      "t66_status": "finished",
+      "expected_usd_t66_prompts": 0.232,
+      "expected_usd_t70_prompts": 0.236,
+      "calibrated_usd": 0.8321,
+      "upper_usd": 2.6603
+    },
+    "v122": {
+      "t66_actual_usd": 1.50036,
+      "t66_status": "finished",
+      "expected_usd_t66_prompts": 0.6544,
+      "expected_usd_t70_prompts": 0.6633,
+      "calibrated_usd": 2.3386,
+      "upper_usd": 6.7403
+    },
+    "v94": {
+      "t66_actual_usd": 0.448256,
+      "t66_status": "finished",
+      "expected_usd_t66_prompts": 0.1668,
+      "expected_usd_t70_prompts": 0.1699,
+      "calibrated_usd": 0.599,
+      "upper_usd": 2.3167
+    },
+    "v78": {
+      "t66_actual_usd": 0.527991,
+      "t66_status": "finished",
+      "expected_usd_t66_prompts": 0.164,
+      "expected_usd_t70_prompts": 0.1672,
+      "calibrated_usd": 0.5895,
+      "upper_usd": 2.3007
+    },
+    "v87": {
+      "t66_actual_usd": 1.246437,
+      "t66_status": "finished",
+      "expected_usd_t66_prompts": 0.3018,
+      "expected_usd_t70_prompts": 0.3066,
+      "calibrated_usd": 1.081,
+      "upper_usd": 3.0302
+    },
+    "v21": {
+      "t66_actual_usd": 2.479389,
+      "t66_status": "not_run:budget_mid_video",
+      "expected_usd_t66_prompts": 0.5146,
+      "expected_usd_t70_prompts": 0.5218,
+      "calibrated_usd": 1.8397,
+      "upper_usd": 5.2618
+    }
+  },
+  "routing": {
+    "extract_claims": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-5-5",
+      "prompt": "extract_v5"
+    },
+    "analyze_stance": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-5-5",
+      "prompt": "stance_v1"
+    },
+    "plan_search": {
+      "provider": "anthropic",
+      "model": "claude-haiku-5-5",
+      "prompt": "search_assist_v1"
+    },
+    "translate_claim": {
+      "provider": "anthropic",
+      "model": "claude-haiku-5-5",
+      "prompt": "translate_v1"
+    },
+    "find_study": {
+      "provider": "anthropic",
+      "model": "claude-haiku-5-5",
+      "prompt": "find_study_v1"
+    },
+    "verify_claims": {
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "prompt": "verify_v4"
+    },
+    "critique": {
+      "provider": "openai",
+      "model": "gpt-4o-2024-08-06",
+      "prompt": "critic_v1"
+    },
+    "judge_explanation": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-5-5",
+      "prompt": "explain_v2"
+    }
+  },
+  "dataset_hash": "a776687a3991592f202d0ce7a63e56d98614b13da889226e7308ddfd8f32f470"
+}

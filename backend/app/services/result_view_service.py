@@ -22,6 +22,8 @@ from typing import Iterable, Optional
 from sqlalchemy.orm import Session
 
 from app.api.result_models import (
+    ClaimContextView,
+    ContextItemView,
     ClaimSeverityView,
     ClaimView,
     CriticView,
@@ -177,6 +179,40 @@ def speaker_quote(c: ClaimRow, index: dict[str, SegmentView]):
     return best_overlap_quote(c.text, speech, c.start_seconds, c.end_seconds, c.source_segment_ids or [])
 
 
+def screen_quote(c: ClaimRow, index: dict[str, SegmentView]):
+    """T70 (f): a screen-only claim's quote, from the on-screen segments it cites."""
+    ids = set(c.source_segment_ids or [])
+    screen = [QuoteSegment(s.segment_id, s.start_seconds, s.end_seconds, s.text)
+              for s in index.values() if s.source == "screen" and s.segment_id in ids]
+    return best_overlap_quote(c.text, screen, c.start_seconds, c.end_seconds, list(ids))
+
+
+def _split_trail(raw: Optional[dict]) -> tuple[Optional[dict], Optional[dict]]:
+    """T70: the stored search-trail JSON may carry the claim's context next to the trail."""
+    if not isinstance(raw, dict) or "claim_context" not in raw:
+        return raw, None
+    trail = {k: v for k, v in raw.items() if k != "claim_context"}
+    return (trail or None), raw.get("claim_context")
+
+
+def claim_context_view(payload: Optional[dict], limitations: Iterable[str]) -> Optional[ClaimContextView]:
+    from app.core.graph import claim_context as cx
+    from app.core.graph import routing as rt
+
+    ctx, topic = cx.payload_context(payload)
+    if ctx is None and topic is None:
+        return None
+    items = [ContextItemView(field=f, label=cx.FIELD_LABELS[f], text=i.text, segment_ids=list(i.segment_ids))
+             for f, i in (ctx.items() if ctx is not None else [])]
+    facets = [x for x in (payload or {}).get("search_facets") or [] if isinstance(x, dict)]
+    return ClaimContextView(
+        scope=ctx.scope if ctx is not None else "universal", items=items,
+        dropped=list(ctx.dropped) if ctx is not None else [], video_topic=topic.text if topic else None,
+        setting_match=cx.setting_match_of(limitations), softened=rt.SOFTENED_LIMITATION in list(limitations),
+        search_facets=[{"field": str(x.get("field")), "facet": str(x.get("facet"))} for x in facets],
+    )
+
+
 # ------------------------------------------------------------------ severity
 
 
@@ -223,17 +259,38 @@ def _search_trail(raw: Optional[dict]) -> Optional[SearchTrailView]:
 
 
 def claim_view(c: ClaimRow, index: dict[str, SegmentView], severity: Optional[dict] = None) -> ClaimView:
+    from app.core.graph import claim_context as cx
+    from app.core.graph import routing as rt
+
     stance_ids = list(c.stance.segment_ids) if c.stance else []
     names = source_names(c)
     evidence = evidence_views(c, cited_only=True)
     quote = speaker_quote(c, index)
+    trail_raw, context_raw = _split_trail(c.search_trail)
+    raw_limitations = list(c.verification.limitations or []) if c.verification else []
+    # T69/T70 structured codes are for code, not readers (absent unless a switch was on).
+    shown_limitations = [x for x in raw_limitations if not cx.is_context_code(x)]
+    t70: dict = {}
+    if rt.CLAIM_CONTEXT or context_raw is not None:
+        context = claim_context_view(context_raw, raw_limitations)
+        t70["context"] = context
+        t70["context_text"] = cx.context_line(cx.payload_context(context_raw)[0])
+        claim_modality = modality(c.source_segment_ids or [], index)
+        if claim_modality == "screen":
+            # T70 (f): never "The speaker says" for words only shown on screen.
+            sq = screen_quote(c, index)
+            quote = None
+            t70["quote_source"] = "screen"
+            t70["screen_quote"] = sq.text if sq else None
+        elif quote is not None:
+            t70["quote_source"] = "speech"
     return ClaimView(
         claim_id=c.claim_id, text=c.text, category=c.category,
         start_seconds=c.start_seconds, end_seconds=c.end_seconds, label=c.label, deciding=c.deciding,
         stance=c.stance.stance if c.stance else None,
         verdict=c.verification.verdict if c.verification else None,
         verdict_explanation=user_text(c.verification.explanation, names) if c.verification else "",
-        limitations=([t for t in (user_text(x, names) for x in c.verification.limitations) if t]
+        limitations=([t for t in (user_text(x, names) for x in shown_limitations) if t]
                      if c.verification else []),
         evidence=evidence,
         id=c.id, claim_kind=c.claim_kind, requires_verification=c.requires_verification,
@@ -246,10 +303,11 @@ def claim_view(c: ClaimRow, index: dict[str, SegmentView], severity: Optional[di
         critic=(CriticView(decision=c.critic.decision, issues=list(c.critic.issues or []),
                            requires_review=c.critic.requires_review) if c.critic else None),
         severity=claim_severity_view(c.claim_id, severity),
-        search_trail=_search_trail(c.search_trail),
+        search_trail=_search_trail(trail_raw),
         speaker_quote=quote.text if quote else None,
         speaker_quote_segment_ids=list(quote.segment_ids) if quote else [],
         study_type_counts=study_type_counts(evidence),
+        **t70,
     )
 
 

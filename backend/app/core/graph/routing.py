@@ -258,6 +258,33 @@ CONTEXT_MISMATCH_RULE = False
 CONTEXT_MISMATCH_LIMITATION = "evidence_context_mismatch"  # stored as "<code>:<kind>"
 CONTEXT_MISMATCH_KINDS = ("different_population", "different_exposure_setting")
 EVIDENCE_CONTEXT_VALUES = ("matches", *CONTEXT_MISMATCH_KINDS)
+
+# T70 (lead-approved queue row, 2026-11-28; design §4, §6, §7, §9): judge each claim as
+# meant in its video. When on: extraction (prompt extract_v5) adds a grounded, structured
+# ``context`` per claim and a one-line video topic; the query planner adds the claim's
+# grounded context to its searches; the verifier (prompt verify_v4) sees the context and
+# fills T69's ``evidence_context`` field (one more value, ``partial``) for every verdict,
+# from which code derives ``setting_match`` (same / partial / different); a claim the
+# context softened (contradicted as stated, not as meant) is set aside by the judge and
+# reviewed. Universal-scope claims are judged as stated. Turning it on also needs
+# routing.yaml to route extract_claims to extract_v5 and verify_claims to verify_v4
+# (checked when the nodes are built). OFF: every request, state and output is
+# byte-identical to before T70. Turning it on is a lead decision.
+CLAIM_CONTEXT = False
+# evidence_context values with CLAIM_CONTEXT on (T69's three plus ``partial``) and the
+# setting_match each maps to. One model field; setting_match is derived, never asked.
+CLAIM_CONTEXT_EVIDENCE_VALUES = ("matches", "partial", *CONTEXT_MISMATCH_KINDS)
+SETTING_MATCH = {"matches": "same", "partial": "partial",
+                 "different_population": "different", "different_exposure_setting": "different"}
+SETTING_MATCH_LIMITATION = "setting_match"  # stored as "setting_match:<same|partial|different>"
+SOFTENED_LIMITATION = "softened_by_context"  # contradicted as stated, not as meant
+
+
+def context_mismatch_rule_on() -> bool:
+    """T69's set-aside reads the mismatch code under its own switch or under T70's."""
+    return CONTEXT_MISMATCH_RULE or CLAIM_CONTEXT
+
+
 SECOND_CHECK_LIMITATION = (
     "a second automated check still disagreed with this verdict when the review budget ran out; "
     "the verdict is kept and sent to a person"

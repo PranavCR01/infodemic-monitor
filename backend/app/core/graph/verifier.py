@@ -53,6 +53,14 @@ How it fits:
   contradicting papers study another population or exposure setting carries the
   limitation code ``evidence_context_mismatch:<kind>`` for the judge (§9). Off, the
   request and results are unchanged.
+- **Claim context (T70, switch ``routing.CLAIM_CONTEXT``, off; prompt ``verify_v4``).** A
+  claim with grounded, specific context (``claim_context.context_of``) is judged as meant:
+  the context is fenced next to the claim, and the tool's ``evidence_context`` (T69's
+  field, plus the value ``partial``) is asked for every verdict, with
+  ``contradicted_as_stated``. Code derives ``setting_match`` (same / partial / different)
+  and stores it as the limitation code ``setting_match:<v>``; a claim contradicted as
+  stated but not as meant gets ``softened_by_context`` (the judge sets it aside and it is
+  reviewed). A universal claim gets no context and keeps no context-derived code.
 - **Loop-aware.** Only ``routing.claims_to_verify`` claims are (re)judged; others keep
   their verdict. A REVISE_VERIFICATION re-run counts against the revision budget and
   shows the critic's notes; a RETRIEVE_MORE re-run judges the new evidence.
@@ -66,9 +74,11 @@ from typing import Any, Callable, Iterable, Literal, Optional, Protocol, Sequenc
 
 from pydantic import Field, field_validator
 
+from app.core.graph import claim_context as cx
 from app.core.graph import routing as r
 from app.core.graph.routing import DEFAULT_BUDGETS, Budgets
 from app.core.graph.state import (
+    ClaimContext,
     CriticDecision,
     CriticResult,
     EvidenceRecord,
@@ -77,6 +87,7 @@ from app.core.graph.state import (
     PipelineState,
     Verdict,
     VerificationResult,
+    VideoTopic,
 )
 from app.core.graph.stance import PromptNotFoundError, load_prompt  # shared prompt loader
 from app.core.graph.unproven_guard import (
@@ -136,7 +147,12 @@ class VerifierToolOutput(VerificationOutput):
     # T69: does the contradicting evidence study the claim's population and exposure
     # setting? Asked for only when ``routing.CONTEXT_MISMATCH_RULE`` is on (see
     # :func:`verify_tool`); recorded as a limitation code on a CONTRADICTED verdict.
-    evidence_context: Optional[Literal["matches", "different_population", "different_exposure_setting"]] = None
+    evidence_context: Optional[Literal["matches", "partial", "different_population",
+                                       "different_exposure_setting"]] = None
+    # T70: would the evidence contradict the claim's words alone? Asked only with
+    # ``routing.CLAIM_CONTEXT`` on, for a claim judged in context. ``partial`` above is
+    # also T70-only; with the switch off both are rejected as before (``check_switches``).
+    contradicted_as_stated: Optional[bool] = None
 
     @field_validator("limitations")
     @classmethod
@@ -217,14 +233,47 @@ EVIDENCE_CONTEXT_INSTRUCTION = (
 )
 
 
-def verify_tool() -> dict:
+# T70: the same field with CLAIM_CONTEXT on: one more value and asked for every verdict.
+CLAIM_CONTEXT_EVIDENCE_PROPERTY: dict = {
+    "type": "string",
+    "enum": list(r.CLAIM_CONTEXT_EVIDENCE_VALUES),
+    "description": "Do the papers you relied on study the claim's population and exposure setting as "
+                   "meant: matches, partial (same route, much higher dose; a related population), "
+                   "different_population or different_exposure_setting (another setting, route or dose)?",
+}
+CONTRADICTED_AS_STATED_PROPERTY: dict = {
+    "type": "boolean",
+    "description": "Would the papers contradict the claim's words taken alone, without the context?",
+}
+
+
+def verify_tool(*, context_mode: bool = False, in_context: bool = False) -> dict:
     """The ``record_verdict`` tool for the current switches: ``VERIFY_TOOL`` unchanged,
-    plus ``evidence_context`` when ``routing.CONTEXT_MISMATCH_RULE`` is on (T69)."""
+    plus ``evidence_context`` when ``routing.CONTEXT_MISMATCH_RULE`` is on (T69). With
+    T70's ``context_mode`` the field takes ``partial`` too and is required, and a claim
+    judged ``in_context`` must also answer ``contradicted_as_stated``."""
+    if context_mode:
+        schema = dict(VERIFY_TOOL["input_schema"])
+        props = {**schema["properties"], "evidence_context": CLAIM_CONTEXT_EVIDENCE_PROPERTY}
+        required = [*schema["required"], "evidence_context"]
+        if in_context:
+            props["contradicted_as_stated"] = CONTRADICTED_AS_STATED_PROPERTY
+            required.append("contradicted_as_stated")
+        schema["properties"], schema["required"] = props, required
+        return {**VERIFY_TOOL, "input_schema": schema}
     if not r.CONTEXT_MISMATCH_RULE:
         return VERIFY_TOOL
     schema = dict(VERIFY_TOOL["input_schema"])
     schema["properties"] = {**schema["properties"], "evidence_context": EVIDENCE_CONTEXT_PROPERTY}
     return {**VERIFY_TOOL, "input_schema": schema}
+
+
+# T70 instruction lines (replace T69's line when the switch is on).
+CONTEXT_INSTRUCTION = (
+    "Scope: SPECIFIC. Judge the claim as meant in the fenced block \"{cid}:context\" (video material). "
+    "Answer evidence_context and contradicted_as_stated.\n"
+)
+AS_STATED_INSTRUCTION = "Scope: UNIVERSAL. Judge the claim exactly as stated. Answer evidence_context.\n"
 
 
 class StepCaller(Protocol):
@@ -274,6 +323,8 @@ def _instructions(
     evidence: Sequence[EvidenceRecord],
     repair_note: Optional[str],
     allow_unsupported: bool = False,
+    context_mode: bool = False,
+    in_context: bool = False,
 ) -> str:
     unsupported = (
         "UNSUPPORTED is allowed for this claim (a treatment or prevention claim): use it if no "
@@ -300,7 +351,9 @@ def _instructions(
             "\nYOUR PREVIOUS ANSWER WAS REJECTED by an automatic check: "
             f"{repair_note}\nAnswer again, following the citation rules exactly.\n"
         )
-    if r.CONTEXT_MISMATCH_RULE:
+    if context_mode:  # T70 (replaces T69's line: the same field, asked for every verdict)
+        text += CONTEXT_INSTRUCTION.format(cid=_meta(claim.claim_id)) if in_context else AS_STATED_INSTRUCTION
+    elif r.CONTEXT_MISMATCH_RULE:
         text += EVIDENCE_CONTEXT_INSTRUCTION  # T69
     return text + f"\nCall {TOOL_NAME} with your verdict."
 
@@ -314,13 +367,23 @@ def build_prompt(
     repair_note: Optional[str] = None,
     max_chars: int = DEFAULT_MAX_BLOCK_CHARS,
     allow_unsupported: bool = False,
+    context_mode: bool = False,
+    context: Optional[ClaimContext] = None,
+    topic: Optional[VideoTopic] = None,
 ) -> GuardedPrompt:
     """The fenced prompt: T10's verification builder with our instructions, plus the
-    critic's notes on a revision (fenced: they are a model's words about untrusted text)."""
+    critic's notes on a revision (fenced: they are a model's words about untrusted text).
+    T70: a claim judged in context gets its context fenced right after the claim."""
+    in_context = context_mode and cx.is_specific(context)
     prompt = verification_prompt(
-        claim, evidence, task=_instructions(claim, evidence, repair_note, allow_unsupported), max_chars=max_chars
+        claim, evidence, task=_instructions(claim, evidence, repair_note, allow_unsupported,
+                                            context_mode, in_context),
+        max_chars=max_chars,
     )
     blocks = list(prompt.blocks)
+    if in_context:
+        blocks.insert(1, fence(cx.verifier_block(context, topic), kind="claim_context",
+                               item_id=f"{claim.claim_id}:context", max_chars=max_chars))
     if critic and critic.decision == CriticDecision.REVISE_VERIFICATION and critic.issues:
         notes = (
             "NOTES FROM A SECOND AUTOMATED CHECK on the previous verdict (a model, not a person; if "
@@ -331,11 +394,11 @@ def build_prompt(
     return prompt.model_copy(update={"system": guarded_system_prompt(system_prompt), "blocks": tuple(blocks)})
 
 
-def build_request(prompt: GuardedPrompt) -> dict:
+def build_request(prompt: GuardedPrompt, *, context_mode: bool = False, in_context: bool = False) -> dict:
     """Provider-neutral request body: one user message plus a forced tool call."""
     return {
         "messages": [{"role": "user", "content": prompt.render()}],
-        "tools": [verify_tool()],
+        "tools": [verify_tool(context_mode=context_mode, in_context=in_context)],
         "tool_choice": TOOL_CHOICE,
         "max_tokens": 1024,
         "temperature": 0,
@@ -392,14 +455,37 @@ def check_citations(out: VerifierToolOutput, allowed_ids: Iterable[str]) -> None
         )
 
 
-def parse_verification(raw: Any, allowed_ids: Iterable[str]) -> VerifierToolOutput:
+def parse_verification(raw: Any, allowed_ids: Iterable[str], *, context_mode: bool = False,
+                       in_context: bool = False) -> VerifierToolOutput:
     """Parse and check one answer. Raises ``InvalidVerification``."""
     try:
         out = parse_output(STEP, raw, VerifierToolOutput)
     except OutputViolation as exc:
         raise InvalidVerification("output_rejected", exc.reason) from None
+    check_switches(out, context_mode=context_mode, in_context=in_context)  # type: ignore[arg-type]
     check_citations(out, allowed_ids)  # type: ignore[arg-type]
     return out  # type: ignore[return-value]
+
+
+def check_switches(out: VerifierToolOutput, *, context_mode: bool, in_context: bool) -> None:
+    """T70's fields exist only with its switch on: without it an answer carrying them is
+    rejected exactly as before T70 (unknown field / out-of-set value). With it on, a
+    claim judged in context must answer both structured questions."""
+    if not context_mode:
+        if out.contradicted_as_stated is not None:
+            raise InvalidVerification("output_rejected", "schema violation at contradicted_as_stated: "
+                                                         "Extra inputs are not permitted")
+        if out.evidence_context == "partial":
+            raise InvalidVerification("output_rejected", "schema violation at evidence_context: "
+                                                         "Input should be 'matches', 'different_population' "
+                                                         "or 'different_exposure_setting'")
+        return
+    if in_context and (out.evidence_context is None or out.contradicted_as_stated is None):
+        raise InvalidVerification("output_rejected", "evidence_context and contradicted_as_stated are "
+                                                     "required for a claim judged in its context")
+    if not in_context and out.contradicted_as_stated is not None:
+        raise InvalidVerification("output_rejected", "contradicted_as_stated is only for a claim judged "
+                                                     "in its context")
 
 
 # ------------------------------------------------------------------ user-facing text (T65)
@@ -447,15 +533,22 @@ def verify_claim(
     max_repairs: int = DEFAULT_MAX_REPAIRS,
     max_chars: int = DEFAULT_MAX_BLOCK_CHARS,
     allow_unsupported: bool = False,
+    context_mode: bool = False,
+    context: Optional[ClaimContext] = None,
+    topic: Optional[VideoTopic] = None,
 ) -> tuple[VerificationResult, list[NodeError]]:
     """Verify one claim. Never raises for model trouble: the safe default is
     INSUFFICIENT_EVIDENCE with the reason recorded.
+
+    ``context_mode`` (T70, switch on with verify_v4): ``context`` is the claim's grounded
+    specific context, or None for a universal claim (judged as stated).
 
     ``allow_unsupported`` (``routing.unproven_eligible``): the claim may be judged
     UNSUPPORTED (T30). Without it, a model's UNSUPPORTED becomes INSUFFICIENT_EVIDENCE."""
     evidence = list(evidence)[:MAX_EVIDENCE_PER_CLAIM]
     allowed = [e.evidence_id for e in evidence]
     errors: list[NodeError] = []
+    in_context = context_mode and cx.is_specific(context)
 
     def insufficient(limitation: str, *, model: Optional[str] = None, version: Optional[str] = None) -> VerificationResult:
         return VerificationResult(
@@ -483,12 +576,20 @@ def verify_claim(
     repair_note: Optional[str] = None
     model: Optional[str] = None
     for attempt in range(max_repairs + 1):
-        prompt = build_prompt(
-            claim, evidence, system_prompt, critic=critic, repair_note=repair_note, max_chars=max_chars,
-            allow_unsupported=allow_unsupported,
-        )
+        if context_mode:
+            prompt = build_prompt(
+                claim, evidence, system_prompt, critic=critic, repair_note=repair_note, max_chars=max_chars,
+                allow_unsupported=allow_unsupported, context_mode=True, context=context, topic=topic,
+            )
+            request = build_request(prompt, context_mode=True, in_context=in_context)
+        else:
+            prompt = build_prompt(
+                claim, evidence, system_prompt, critic=critic, repair_note=repair_note, max_chars=max_chars,
+                allow_unsupported=allow_unsupported,
+            )
+            request = build_request(prompt)
         try:
-            result = caller.call(STEP, build_request(prompt), system=prompt.system)
+            result = caller.call(STEP, request, system=prompt.system)
         except Exception as exc:  # routing / provider errors: don't guess a verdict
             errors.append(NodeError(
                 node=r.VERIFY_CLAIMS, message=f"model call failed: {type(exc).__name__}: {exc}",
@@ -497,7 +598,8 @@ def verify_claim(
             return insufficient("verdict not determined: the verifier model could not be reached", model=model), errors
         model, recorded_version = _record_meta(result)
         try:
-            out = parse_verification(getattr(result, "output", None), allowed)
+            out = parse_verification(getattr(result, "output", None), allowed,
+                                     context_mode=context_mode, in_context=in_context)
         except InvalidVerification as exc:
             if attempt < max_repairs:
                 repair_note = f"{exc.reason}. Allowed evidence IDs: {', '.join(allowed)}."
@@ -552,7 +654,8 @@ def verify_claim(
             supporting_evidence_ids=list(out.supporting_evidence_ids),
             contradicting_evidence_ids=list(out.contradicting_evidence_ids),
             explanation=out.explanation[:MAX_EXPLANATION_CHARS],
-            limitations=[*(s[:MAX_LIMITATION_CHARS] for s in out.limitations), *_context_codes(out)],
+            limitations=[*(s[:MAX_LIMITATION_CHARS] for s in out.limitations),
+                         *(_claim_context_codes(out, in_context) if context_mode else _context_codes(out))],
             raw_confidence=out.raw_confidence,  # raw; calibration is T15 (§11)
             model=model,
             prompt_version=recorded_version or prompt_version,
@@ -567,6 +670,26 @@ def _context_codes(out: VerifierToolOutput) -> list[str]:
             and out.evidence_context in r.CONTEXT_MISMATCH_KINDS):
         return [f"{r.CONTEXT_MISMATCH_LIMITATION}:{out.evidence_context}"]
     return []
+
+
+def _claim_context_codes(out: VerifierToolOutput, in_context: bool) -> list[str]:
+    """T70: the structured codes for a verdict, switch on. Every verdict keeps
+    ``setting_match:<v>`` (derived from ``evidence_context``; informational, the judge
+    does not read it). Only a claim judged in context can also keep T69's mismatch code
+    (a CONTRADICTED verdict about another setting or population) and
+    ``softened_by_context`` (contradicted as stated, not as meant): a universal claim is
+    judged as stated, and nothing context-derived softens it."""
+    codes: list[str] = []
+    setting = r.SETTING_MATCH.get(out.evidence_context or "")
+    if setting:
+        codes.append(f"{r.SETTING_MATCH_LIMITATION}:{setting}")
+    if not in_context:
+        return codes
+    if out.verdict == Verdict.CONTRADICTED and out.evidence_context in r.CONTEXT_MISMATCH_KINDS:
+        codes.append(f"{r.CONTEXT_MISMATCH_LIMITATION}:{out.evidence_context}")
+    if out.contradicted_as_stated and out.verdict != Verdict.CONTRADICTED:
+        codes.append(r.SOFTENED_LIMITATION)
+    return codes
 
 
 def resolve_prompt_version(caller: StepCaller, prompt_version: Optional[str]) -> str:
@@ -595,6 +718,8 @@ def make_verify_claims(
     """
     version = resolve_prompt_version(caller, prompt_version)
     system_prompt = load_prompt(version)
+    cx.check_prompts(verify_version=version)  # T70: switch on needs verify_v4
+    context_mode = r.CLAIM_CONTEXT and version in cx.VERIFY_CONTEXT_PROMPTS
 
     def verify_claims(state: PipelineState) -> dict:
         claims = {c.claim_id: c for c in state.get("claims", []) or []}
@@ -608,11 +733,19 @@ def make_verify_claims(
             if critic and critic.decision == CriticDecision.REVISE_VERIFICATION:
                 revisions[cid] = revisions.get(cid, 0) + 1
             evidence = list(reranked.get(cid, []))[:MAX_EVIDENCE_PER_CLAIM]
-            result, errs = verify_claim(
-                claims[cid], evidence, caller, system_prompt, version,
-                critic=critic, max_repairs=max_repairs, max_chars=max_chars,
-                allow_unsupported=r.unproven_eligible(state, cid),
-            )
+            if context_mode:
+                result, errs = verify_claim(
+                    claims[cid], evidence, caller, system_prompt, version,
+                    critic=critic, max_repairs=max_repairs, max_chars=max_chars,
+                    allow_unsupported=r.unproven_eligible(state, cid),
+                    context_mode=True, context=cx.context_of(state, cid), topic=state.get("video_topic"),
+                )
+            else:
+                result, errs = verify_claim(
+                    claims[cid], evidence, caller, system_prompt, version,
+                    critic=critic, max_repairs=max_repairs, max_chars=max_chars,
+                    allow_unsupported=r.unproven_eligible(state, cid),
+                )
             # T49 (§7): UNSUPPORTED only with an on-topic record in what retrieval kept.
             result = apply_unproven_guard(claims[cid], evidence, result)
             results[cid] = result

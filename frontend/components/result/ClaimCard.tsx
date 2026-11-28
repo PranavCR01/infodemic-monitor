@@ -55,6 +55,7 @@ export const ClaimCard = forwardRef<HTMLElement, Props>(function ClaimCard({ cla
       </header>
 
       <p className="font-serif text-[17px] leading-[26px] text-ink">{c.text}</p>
+      {c.contextText && <p className="text-small text-ink-2">{c.contextText}</p>}
 
       <div className="flex flex-col gap-1.5">
         <p className="text-cap font-semibold uppercase tracking-wider text-ink-3">What the speaker does</p>

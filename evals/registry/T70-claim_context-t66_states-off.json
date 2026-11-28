@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "date": "2026-11-28",
+  "task": "T70",
+  "split": "tune",
+  "ci95": null,
+  "cost_usd": 0.0,
+  "report_path": "evals/reports/T70/report.md",
+  "run_group": "T70-claim-context-replay",
+  "pipeline_step": "judge_classification",
+  "synthetic": false,
+  "golden_set_ref": "origin/data/golden-label-set @ 92a731e (T66 run); labels from in-repo research/claim-level/dataset",
+  "models": [],
+  "run_id": "T70-claim_context-t66_states-off",
+  "variant": "off",
+  "metric_name": "video_label_accuracy",
+  "value": 0.6111,
+  "n_items": 18,
+  "n_unit": "finished T66 tune videos (v21 excluded: partial)",
+  "notes": "Tune split: development numbers, not product accuracy. 11/18 correct; sent to review 17/18; labels changed vs off: none. Config: as shipped (T70 off). Judge + review replay on stored verdicts; extraction/verification not re-run (no model calls). Every softened MISINFO video is sent to review (softened_by_context / contradiction_context_mismatch). No CI (report gives none)."
+}

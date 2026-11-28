@@ -328,6 +328,9 @@ export const REVIEW_REASONS: Record<string, string> = {
   // T69: judge:contradiction_context_mismatch:<cid>. Off by default (routing.CONTEXT_MISMATCH_RULE).
   contradiction_context_mismatch:
     "The evidence against this claim comes only from reviews or modelling about a different population or exposure setting, so it did not decide the label on its own.",
+  // T70: judge:softened_by_context:<cid>. Off by default (routing.CLAIM_CONTEXT).
+  softened_by_context:
+    "The evidence contradicts this claim as worded, but not as the video means it in context, so it did not decide the label. Check the context it was judged in.",
   // judge:<flag>
   mixed_video: "The video both spreads and corrects false claims.",
   unclear_stance_contradicted: "A false claim is made, but the speaker's position on it is unclear.",

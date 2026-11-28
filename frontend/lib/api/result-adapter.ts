@@ -102,6 +102,12 @@ export type Claim = {
   stanceRationale: string;
   quotes: Segment[];
   speakerQuote: SpeakerQuote | null;
+  /** T70: "screen" when the backend quotes a screen-only claim from the screen ("On screen:"). */
+  quoteSource: "speech" | "screen" | null;
+  /** T70: "In context: ..." (grounded context the claim was judged in), when there is any. */
+  contextText: string | null;
+  /** T70: do the papers study the claim's setting as meant? */
+  settingMatch: "same" | "partial" | "different" | null;
   modality: "speech" | "screen" | "both" | null;
   sourceSegmentIds: string[];
   sources: Source[];
@@ -212,6 +218,14 @@ function toSpeakerQuote(raw: string | null | undefined, quotes: Segment[]): Spea
   }
   const q = quotes[0];
   return q ? { text: q.text, at: q.start, source: q.source } : null;
+}
+
+/** T70: a screen-only claim is quoted from the screen, never from a speech segment. */
+function toScreenQuote(raw: string | null | undefined, quotes: Segment[], start: number): SpeakerQuote | null {
+  const text = raw?.trim();
+  if (!text) return null;
+  const seg = quotes.find((q) => q.text.trim() === text) ?? null;
+  return { text, at: seg?.start ?? start, source: "screen" };
 }
 
 export function summariseEvidence(sources: Source[]): EvidenceSummary {
@@ -332,7 +346,13 @@ function toClaim(c: RawClaim, number: number): Claim {
     limitations: (c.limitations ?? []).map(clean),
     stanceRationale: clean(c.stance_rationale),
     quotes,
-    speakerQuote: toSpeakerQuote(c.speaker_quote, quotes),
+    speakerQuote:
+      c.quote_source === "screen"
+        ? toScreenQuote(c.screen_quote, quotes, c.start_seconds)
+        : toSpeakerQuote(c.speaker_quote, quotes),
+    quoteSource: c.quote_source ?? null,
+    contextText: c.context_text?.trim() || null,
+    settingMatch: c.context?.setting_match ?? null,
     modality: c.modality ?? null,
     sourceSegmentIds: c.source_segment_ids ?? [],
     sources,

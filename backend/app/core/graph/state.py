@@ -152,6 +152,47 @@ class GraphClaim(_Record):
     claim_kind: ClaimKind = "research_question"
 
 
+CONTEXT_FIELDS = ("subject", "exposure", "amount", "population", "outcome")
+
+
+class ContextItem(_Record):
+    """One piece of a claim's context (T70), as the video states it elsewhere: its words
+    and the transcript / OCR pieces (``t*`` / ``o*``) they come from. Kept only when
+    grounded in the pieces it cites. Untrusted video content (§15)."""
+
+    text: str
+    segment_ids: list[str]
+
+
+class ClaimContext(_Record):
+    """What a claim means in its video (T70, prompt ``extract_v5``): the subject or
+    product, exposure route or setting, amount or dose, population and outcome the video
+    attaches to it elsewhere, each grounded in cited segments. ``claim_text`` stays the
+    verbatim claim. ``scope`` is ``specific`` only when the model said so and at least one
+    item survived grounding; a ``universal`` claim is judged as stated. ``dropped`` names
+    items removed as ungrounded."""
+
+    claim_id: str
+    subject: Optional[ContextItem] = None
+    exposure: Optional[ContextItem] = None
+    amount: Optional[ContextItem] = None
+    population: Optional[ContextItem] = None
+    outcome: Optional[ContextItem] = None
+    scope: Literal["specific", "universal"] = "universal"
+    dropped: list[str] = Field(default_factory=list)
+
+    def items(self) -> list[tuple[str, ContextItem]]:
+        return [(f, getattr(self, f)) for f in CONTEXT_FIELDS if getattr(self, f) is not None]
+
+
+class VideoTopic(_Record):
+    """The video's topic in one line (T70), produced once by extraction and grounded in
+    the segments it cites. Claim context is read against it. Untrusted video content."""
+
+    text: str
+    segment_ids: list[str]
+
+
 class StanceResult(_Record):
     """The speaker's stance on one claim (§5). ``confidence`` stays empty until
     calibrated (§5, §11)."""
@@ -349,6 +390,9 @@ CHECKPOINT_TYPES: tuple[type, ...] = (
     ScreenDocument,
     FusedSegment,
     GraphClaim,
+    ContextItem,
+    ClaimContext,
+    VideoTopic,
     StanceResult,
     EvidenceRecord,
     VerificationResult,
@@ -395,6 +439,11 @@ class PipelineState(TypedDict, total=False):
 
     # Claims and stance (§4–§5).
     claims: list[GraphClaim]
+    # Claim context (T70, switch ``routing.CLAIM_CONTEXT``): per claim, what it means in the
+    # video, and the video's one-line topic. Optional and additive: written by
+    # extract_claims only when the switch is on and there is something to write.
+    claim_contexts: dict[str, ClaimContext]
+    video_topic: VideoTopic
     stance_results: dict[str, StanceResult]
 
     # Retrieval loop (§6–§8).

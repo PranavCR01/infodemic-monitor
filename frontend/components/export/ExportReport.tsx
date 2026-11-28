@@ -97,8 +97,13 @@ export function ExportReport({ r, recordUrl }: { r: ResultModel; recordUrl: stri
                 </p>
                 <p className="text-small">
                   <strong>{c.stance ? STANCES[c.stance].display : "Stance not assessed"}</strong>
-                  {c.speakerQuote ? <> · The speaker says: <q>{c.speakerQuote.text}</q></> : null}
+                  {c.speakerQuote ? (
+                    <>
+                      {" "}· {c.quoteSource === "screen" ? "On screen" : "The speaker says"}: <q>{c.speakerQuote.text}</q>
+                    </>
+                  ) : null}
                 </p>
+                {c.contextText && <p className="text-small">{c.contextText}</p>}
                 <p className="text-small">
                   <strong>{c.verdict ? VERDICTS[c.verdict].display : "Not checked"}</strong> · {evidenceText(c.evidence, EVIDENCE_LEVEL_DISPLAY)}.
                 </p>

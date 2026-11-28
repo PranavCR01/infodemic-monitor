@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "date": "2026-11-28",
+  "task": "T70",
+  "split": "tune",
+  "ci95": null,
+  "cost_usd": 0.0,
+  "report_path": "evals/reports/T70/report.md",
+  "run_group": "T70-claim-context-tokens",
+  "pipeline_step": "extract_claims",
+  "synthetic": true,
+  "golden_set_ref": "production fixtures prod_008c97a3 and prod_cf2ea579 (tune v135)",
+  "models": [],
+  "run_id": "T70-claim_context-tokens-extraction_input_tokens_per_claim_increase",
+  "variant": "extract_v5_verify_v4_vs_v4_v3",
+  "metric_name": "extraction_input_tokens_per_claim_increase",
+  "value": 80.2,
+  "n_items": 2,
+  "n_unit": "v135 production jobs (mean of per-job values)",
+  "notes": "SYNTHETIC inputs (mocked context / scripted models). ESTIMATE: characters/4 (no tokenizer offline), on requests built by the real code for v135 (008c97a3: 65.1, cf2ea579: 95.2). Context items are mocked, so per-claim context size is an assumption. Includes the longer verify_v4 system prompt (+203 per call) for the verifier rows."
+}

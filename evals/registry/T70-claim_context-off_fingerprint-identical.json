@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "date": "2026-11-28",
+  "task": "T70",
+  "split": null,
+  "ci95": null,
+  "cost_usd": 0.0,
+  "report_path": "evals/reports/T70/report.md",
+  "run_group": "T70-claim-context-off-fingerprint",
+  "pipeline_step": "persist_result",
+  "synthetic": true,
+  "golden_set_ref": null,
+  "models": [],
+  "run_id": "T70-claim_context-off_fingerprint-identical",
+  "variant": "off_vs_base_c5fdec5",
+  "metric_name": "off_fingerprints_identical_share",
+  "value": 1.0,
+  "n_items": 10,
+  "n_unit": "sha256 fingerprints (5 kinds x 2 inputs)",
+  "notes": "SYNTHETIC inputs (mocked context / scripted models). Not a golden split measurement: scripted models (test suite's ScriptedClient) and recorded PubMed fixtures over the test sample and the v135 008c97a3 transcript. Switch off vs origin/langgraph-build @ c5fdec5 (worktree): requests, state, classification, persisted rows, API claim views all identical."
+}
