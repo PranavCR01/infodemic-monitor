@@ -58,6 +58,11 @@ class Settings(BaseSettings):
     OCR_VISION_MODEL: str = "claude-haiku-5-5"
     OCR_MAX_FRAMES: int = 16
     OCR_TIMEOUT_SECONDS: float = 60.0
+    # Frames per vision request and the reply cap. Text-dense frames (a document on
+    # screen) overflowed a 2000-token reply on 16 frames and came back as an empty
+    # tool input; small batches keep each reply well under the cap.
+    OCR_BATCH_SIZE: int = 4
+    OCR_MAX_TOKENS: int = 8000
     PUBMED_RESULTS_PER_CLAIM: int = 2
 
     # Evidence retrieval for the LangGraph pipeline (app/core/retrieval).

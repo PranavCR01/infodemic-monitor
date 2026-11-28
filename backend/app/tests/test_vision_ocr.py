@@ -14,16 +14,26 @@ from app.core.inference.providers.graph_provider import segments_from_fusion
 
 
 class FakeClient:
-    def __init__(self, texts=None, exc=None):
-        self.texts, self.exc, self.calls = texts or {}, exc, []
+    """Answers each request with the texts of the frames it was shown ("Frame N:" labels).
+    ``overflow_over``: a request with more frames than this hits max_tokens with an empty input."""
+
+    def __init__(self, texts=None, exc=None, overflow_over=None):
+        self.texts, self.exc, self.calls, self.overflow_over = texts or {}, exc, [], overflow_over
         self.messages = self
 
     def create(self, **kw):
         self.calls.append(kw)
         if self.exc:
             raise self.exc
-        frames = [{"index": i, "text": t} for i, t in self.texts.items()]
-        return SimpleNamespace(content=[SimpleNamespace(type="tool_use", input={"frames": frames})])
+        shown = [int(b["text"].split()[1].rstrip(":")) for b in kw["messages"][0]["content"]
+                 if b["type"] == "text" and b["text"].startswith("Frame ")]
+        usage = SimpleNamespace(input_tokens=100, output_tokens=10)
+        if self.overflow_over is not None and len(shown) > self.overflow_over:
+            return SimpleNamespace(stop_reason="max_tokens", usage=usage,
+                                   content=[SimpleNamespace(type="tool_use", input={})])
+        frames = [{"index": i, "text": self.texts[i]} for i in shown if i in self.texts]
+        return SimpleNamespace(stop_reason="tool_use", usage=usage,
+                               content=[SimpleNamespace(type="tool_use", input={"frames": frames})])
 
 
 def fake_grab(video, times, tmp):
@@ -99,3 +109,59 @@ def test_real_ffmpeg_frame_grab(tmp_path):
     imgs = [b for b in client.calls[0]["messages"][0]["content"] if b["type"] == "image"]
     assert len(imgs) >= 2 and all(b["source"]["media_type"] == "image/jpeg" for b in imgs)
     assert segs and segs[0].text == "caption"
+
+
+@pytest.mark.parametrize("raw", [
+    {"frames": [{"index": 0, "text": "El Cáncer es un hongo"}, {"index": 1, "text": ""}]},
+    {"frames": '[{"index": 0, "text": "El Cáncer es un hongo"}, {"index": 1, "text": ""}]'},
+    {"frames": [{"index": "0", "text": "El Cáncer es un hongo"}]},
+    {"frames": {"0": "El Cáncer es un hongo", "1": ""}},
+    {"frames": ["El Cáncer es un hongo", ""]},
+    '{"frames": [{"index": 0, "text": "El Cáncer es un hongo"}]}',
+])
+def test_parse_frames_tolerates_model_shapes(raw):
+    assert vision_ocr.parse_frames(raw)[0] == "El Cáncer es un hongo"
+
+
+def test_parse_frames_garbage_is_empty():
+    assert vision_ocr.parse_frames(None) == {} and vision_ocr.parse_frames("not json") == {}
+
+
+def test_frames_are_asked_in_batches_with_global_labels(monkeypatch):
+    monkeypatch.setattr(settings, "OCR_BATCH_SIZE", 4)
+    texts = {i: f"card {i}" for i in range(10)}
+    client = FakeClient(texts)
+    got = vision_ocr._ask_model([(float(i), b"j") for i in range(10)], client)
+    assert got == texts
+    assert [sum(1 for b in c["messages"][0]["content"] if b["type"] == "image") for c in client.calls] == [4, 4, 2]
+    assert all(c["max_tokens"] == settings.OCR_MAX_TOKENS for c in client.calls)
+
+
+def test_overflowing_reply_is_split_and_retried(monkeypatch):
+    # Production job f85f2daa: 16 text-dense frames in one request came back as '{}'.
+    monkeypatch.setattr(settings, "OCR_BATCH_SIZE", 4)
+    texts = {i: f"page {i}" for i in range(4)}
+    client = FakeClient(texts, overflow_over=1)
+    assert vision_ocr._ask_model([(float(i), b"j") for i in range(4)], client) == texts
+    assert client.calls[0]["messages"][0]["content"][0]["text"] == "Frame 0:"
+    assert len(client.calls) == 1 + 2 + 4  # 4 overflows -> 2+2 overflow -> 1+1+1+1
+
+
+def test_single_frame_overflow_gives_nothing_for_it_not_a_crash(monkeypatch):
+    monkeypatch.setattr(settings, "OCR_BATCH_SIZE", 2)
+    client = FakeClient({0: "a", 1: "b"}, overflow_over=0)
+    assert vision_ocr._ask_model([(0.0, b"j"), (1.0, b"j")], client) == {}
+
+
+def test_batch_numbered_from_zero_is_mapped_to_global_frames(monkeypatch):
+    monkeypatch.setattr(settings, "OCR_BATCH_SIZE", 2)
+
+    class LocalIndexClient(FakeClient):
+        def create(self, **kw):
+            self.calls.append(kw)
+            n = sum(1 for b in kw["messages"][0]["content"] if b["type"] == "image")
+            return SimpleNamespace(stop_reason="tool_use", usage=None, content=[SimpleNamespace(
+                type="tool_use", input={"frames": [f"text {len(self.calls)}-{j}" for j in range(n)]})])
+
+    got = vision_ocr._ask_model([(float(i), b"j") for i in range(4)], LocalIndexClient())
+    assert got == {0: "text 1-0", 1: "text 1-1", 2: "text 2-0", 3: "text 2-1"}

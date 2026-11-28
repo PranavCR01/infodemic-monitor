@@ -120,27 +120,85 @@ def _default_client():
 
 
 def _ask_model(frames: list[tuple[float, bytes]], client: Any) -> dict[int, str]:
+    """Frame index -> text for all frames, asked in batches of ``OCR_BATCH_SIZE``.
+    Frames keep their global label ("Frame 5:"), so replies map back directly."""
+    size = max(1, settings.OCR_BATCH_SIZE)
+    out: dict[int, str] = {}
+    for start in range(0, len(frames), size):
+        out.update(_ask_batch(list(range(start, min(start + size, len(frames)))), frames, client))
+    return out
+
+
+def _ask_batch(idx: list[int], frames: list[tuple[float, bytes]], client: Any) -> dict[int, str]:
     content: list[dict] = []
-    for i, (_, jpg) in enumerate(frames):
+    for i in idx:
         content.append({"type": "text", "text": f"Frame {i}:"})
         content.append({"type": "image", "source": {
-            "type": "base64", "media_type": "image/jpeg", "data": base64.b64encode(jpg).decode()}})
+            "type": "base64", "media_type": "image/jpeg", "data": base64.b64encode(frames[i][1]).decode()}})
     content.append({"type": "text", "text": "Report the on-screen text of every frame with the tool."})
     resp = client.messages.create(
-        model=settings.OCR_VISION_MODEL, max_tokens=2000, system=SYSTEM,
+        model=settings.OCR_VISION_MODEL, max_tokens=settings.OCR_MAX_TOKENS, system=SYSTEM,
         tools=[OCR_TOOL], tool_choice={"type": "tool", "name": OCR_TOOL["name"]},
         messages=[{"role": "user", "content": content}],
     )
+    stop = getattr(resp, "stop_reason", None)
+    usage = getattr(resp, "usage", None)
+    log.info("vision OCR batch frames %s: stop_reason=%s input_tokens=%s output_tokens=%s",
+             idx, stop, getattr(usage, "input_tokens", None), getattr(usage, "output_tokens", None))
+    if stop == "max_tokens":
+        if len(idx) > 1:  # reply overflowed: split the batch and ask again
+            half = len(idx) // 2
+            log.warning("vision OCR: reply hit max_tokens on frames %s; splitting the batch", idx)
+            return {**_ask_batch(idx[:half], frames, client), **_ask_batch(idx[half:], frames, client)}
+        log.warning("vision OCR: reply hit max_tokens on single frame %s; keeping what parsed", idx)
     for block in resp.content:
         if getattr(block, "type", None) == "tool_use":
-            out: dict[int, str] = {}
-            for f in (block.input or {}).get("frames", []):
-                try:
-                    out[int(f["index"])] = str(f.get("text") or "").strip()
-                except (KeyError, TypeError, ValueError):
-                    continue
-            return out
+            parsed = parse_frames(block.input)
+            if parsed and not set(parsed) <= set(idx) and all(0 <= k < len(idx) for k in parsed):
+                parsed = {idx[k]: v for k, v in parsed.items()}  # numbered from 0 within the batch
+            return {k: v for k, v in parsed.items() if k in idx}
+    log.warning("vision OCR: no tool call in the reply (stop_reason=%s)", stop)
     return {}
+
+
+def parse_frames(raw: Any) -> dict[int, str]:
+    """Frame index -> text from the tool input. Tolerates the shapes models produce:
+    a list, a JSON string holding the list, a dict keyed by index, or index as a string."""
+    data = raw
+    if isinstance(data, str):
+        data = _loads(data)
+    if isinstance(data, dict):
+        data = data.get("frames", data)
+    if isinstance(data, str):
+        data = _loads(data)
+    out: dict[int, str] = {}
+    if isinstance(data, dict):  # {"0": "text", ...}
+        items = [{"index": k, "text": v} for k, v in data.items()]
+    elif isinstance(data, list):
+        items = data
+    else:
+        items = []
+    for i, f in enumerate(items):
+        if isinstance(f, str):
+            out[i] = f.strip()
+            continue
+        if not isinstance(f, dict):
+            continue
+        try:
+            idx = int(f.get("index", f.get("frame", i)))
+        except (TypeError, ValueError):
+            idx = i
+        out[idx] = str(f.get("text") or f.get("on_screen_text") or "").strip()
+    log.info("vision OCR reply: %d frames parsed, %d with text; raw starts %r",
+             len(out), sum(1 for t in out.values() if t), str(raw)[:300])
+    return out
+
+
+def _loads(text: str) -> Any:
+    try:
+        return json.loads(text)
+    except (TypeError, ValueError):
+        return None
 
 
 def collapse(times: list[float], texts: dict[int, str], duration: float) -> list[TimedText]:
@@ -172,6 +230,8 @@ def extract_on_screen_text(
         if not frames:
             return []
         times = [t for t, _ in frames]
+        log.info("vision OCR: %d frames grabbed over %.1fs, sizes %s bytes", len(frames), dur,
+                 [len(b) for _, b in frames][:16])
         texts = _ask_model(frames, client or _default_client())
         segs = collapse(times, texts, dur)
         log.info("vision OCR: %d frames, %d on-screen segments", len(frames), len(segs))
