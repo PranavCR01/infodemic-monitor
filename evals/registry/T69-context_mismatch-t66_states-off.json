@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "run_group": "T69-context-mismatch-replay",
+  "date": "2026-11-28",
+  "task": "T69",
+  "pipeline_step": "judge_classification",
+  "split": "tune",
+  "synthetic": false,
+  "golden_set_ref": "origin/data/golden-label-set @ 92a731e (T66 run); labels from in-repo research/claim-level/dataset @ 2de5e8f",
+  "models": [],
+  "metric_name": "video_label_accuracy",
+  "ci95": null,
+  "n_items": 18,
+  "n_unit": "finished T66 tune videos (v21 excluded: partial, not run)",
+  "cost_usd": 0.0,
+  "report_path": "evals/reports/T69/report.md",
+  "run_id": "T69-context_mismatch-t66_states-off",
+  "variant": "off",
+  "value": 0.6111,
+  "notes": "Tune split: development numbers, not product accuracy. 11/18 correct; sent to review 17/18; contradiction_context_mismatch fired on 0; worse vs off: none. Config: as shipped, T69 switch off. Baseline T64 + T67 change 1 on, 2 off, 3 on. Judge + review rule replay; extraction/verification/critic not re-run. No CI (report gives none). v135 production fixture not available; switch ships OFF."
+}

@@ -1,0 +1,62 @@
+{
+ "frames": 20,
+ "batch_size": 4,
+ "runs": 1,
+ "candidates": [
+  {
+   "id": "haiku-5-5",
+   "model": "claude-haiku-5-5",
+   "provider": "anthropic",
+   "requests": 5,
+   "image_tokens_per_frame": 1229,
+   "input_tokens": 30010,
+   "output_tokens_expected": 5000,
+   "output_tokens_upper": 40000,
+   "usd_expected": 0.0055,
+   "usd_upper": 0.023,
+   "price_source": "config/routing.yaml"
+  },
+  {
+   "id": "sonnet-5-5",
+   "model": "claude-sonnet-5-5",
+   "provider": "anthropic",
+   "requests": 5,
+   "image_tokens_per_frame": 1229,
+   "input_tokens": 30010,
+   "output_tokens_expected": 5000,
+   "output_tokens_upper": 40000,
+   "usd_expected": 0.11,
+   "usd_upper": 0.46,
+   "price_source": "config/routing.yaml"
+  },
+  {
+   "id": "gpt-6.1-terra",
+   "model": "gpt-6.1-terra",
+   "provider": "openai",
+   "requests": 5,
+   "image_tokens_per_frame": 1105,
+   "input_tokens": 27530,
+   "output_tokens_expected": 12500,
+   "output_tokens_upper": 47500,
+   "usd_expected": 0.2051,
+   "usd_upper": 0.6251,
+   "price_source": "ASSUMED (proxy: gpt-5.6-terra prices)"
+  },
+  {
+   "id": "gpt-6-luna",
+   "model": "gpt-6-luna",
+   "provider": "openai",
+   "requests": 5,
+   "image_tokens_per_frame": 1105,
+   "input_tokens": 27530,
+   "output_tokens_expected": 12500,
+   "output_tokens_upper": 47500,
+   "usd_expected": 0.0205,
+   "usd_upper": 0.0625,
+   "price_source": "ASSUMED (proxy: gpt-5.6-luna prices)"
+  }
+ ],
+ "total_usd_expected": 0.3411,
+ "total_usd_upper": 1.1706,
+ "unpriced": []
+}

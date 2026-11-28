@@ -1,0 +1,165 @@
+{
+  "run_id": "T66-graph-tune-20261126T205038Z-a7b4d9",
+  "benchmark": "T66-graph-tune",
+  "system": "graph",
+  "split": "tune",
+  "started_at": "2026-11-26T20:47:36+00:00",
+  "finished_at": "2026-11-26T20:50:38+00:00",
+  "config_hash": "c80ba01e17786fb980a376d35e1827ea398e1ba9e382c9bb5a888715bf064a71",
+  "code_revision": "3372ef33460eb7ff78c5e2989767905b68daddf2",
+  "dataset_name": "golden-tune",
+  "dataset_version": "golden@92a731e+tune-only",
+  "dataset_hash": "a776687a3991592f202d0ce7a63e56d98614b13da889226e7308ddfd8f32f470",
+  "routing_version": "routing_v1",
+  "routing_hash": "56d5a07ede024aded995e740c8c888f0059be89bc8ab764d315d487b08ab2069",
+  "model_versions": {
+    "routing": {
+      "extract_claims": {
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "extract_v3"
+      },
+      "analyze_stance": {
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "stance_v1"
+      },
+      "plan_search": {
+        "provider": "anthropic",
+        "model": "claude-haiku-5-5",
+        "prompt": "search_assist_v1"
+      },
+      "translate_claim": {
+        "provider": "anthropic",
+        "model": "claude-haiku-5-5",
+        "prompt": "translate_v1"
+      },
+      "find_study": {
+        "provider": "anthropic",
+        "model": "claude-haiku-5-5",
+        "prompt": "find_study_v1"
+      },
+      "verify_claims": {
+        "provider": "anthropic",
+        "model": "claude-opus-5-5",
+        "prompt": "verify_v3"
+      },
+      "critique": {
+        "provider": "openai",
+        "model": "gpt-4o-2024-08-06",
+        "prompt": "critic_v1"
+      },
+      "judge_explanation": {
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "explain_v2"
+      }
+    },
+    "pipeline_version": "graph_v1+3372ef3+p70b785e4",
+    "routing_snapshot": {
+      "schema": 1,
+      "routing_version": "routing_v1",
+      "routing_status": "provisional",
+      "steps": {
+        "analyze_stance": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "prompt": "stance_v1"
+        },
+        "critique": {
+          "provider": "openai",
+          "model": "gpt-4o-2024-08-06",
+          "prompt": "critic_v1"
+        },
+        "extract_claims": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "prompt": "extract_v3"
+        },
+        "find_study": {
+          "provider": "anthropic",
+          "model": "claude-haiku-5-5",
+          "prompt": "find_study_v1"
+        },
+        "judge_explanation": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "prompt": "explain_v2"
+        },
+        "plan_search": {
+          "provider": "anthropic",
+          "model": "claude-haiku-5-5",
+          "prompt": "search_assist_v1"
+        },
+        "translate_claim": {
+          "provider": "anthropic",
+          "model": "claude-haiku-5-5",
+          "prompt": "translate_v1"
+        },
+        "verify_claims": {
+          "provider": "anthropic",
+          "model": "claude-opus-5-5",
+          "prompt": "verify_v3"
+        }
+      },
+      "fallback": {
+        "on": [
+          "5xx",
+          "timeout"
+        ],
+        "retries": 1,
+        "use": {
+          "provider": "openai",
+          "model": "gpt-4o-2024-08-06"
+        }
+      },
+      "hash": "70b785e4"
+    }
+  },
+  "n_videos": 1,
+  "n_errors": 1,
+  "metrics": {
+    "accuracy": 0.0,
+    "macro_f1": 0.0
+  },
+  "tracked_failures": {
+    "debunking_as_promotion": {
+      "claims": {
+        "count": 0,
+        "of": 0,
+        "items": []
+      },
+      "videos": {
+        "count": 0,
+        "of": 0,
+        "items": []
+      }
+    },
+    "citation_laundering": {
+      "count": 0,
+      "of": 0,
+      "items": []
+    },
+    "insufficient_called_contradicted": {
+      "count": 0,
+      "of": 0,
+      "items": []
+    },
+    "speech_screen_disagreement": {
+      "count": 0,
+      "of": 0,
+      "items": []
+    },
+    "prompt_injection": {
+      "count": 0,
+      "of": 0,
+      "items": []
+    },
+    "critic_ignored": {
+      "count": 0,
+      "of": 0,
+      "items": []
+    }
+  },
+  "output_dir": "/home/user/infodemic-monitor/evals/reports/T66/runs/T66-graph-tune-20261126T205038Z-a7b4d9"
+}

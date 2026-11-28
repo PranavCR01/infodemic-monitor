@@ -242,6 +242,22 @@ ABSTENTION_LIMITATION = (
 # and is sent to review with second_check_disagreed (evals/reports/T67/report.md).
 KEEP_VERDICT_WHEN_CRITIC_BUDGET_EXHAUSTED = True
 SECOND_CHECK_REASON = "second_check_disagreed"
+
+# T69 (lead-approved queue row, 2026-11-28; design §7 and §9): a context-mismatched
+# contradiction can't decide MISINFO alone. When on, (1) the verifier's tool schema gains
+# the structured field ``evidence_context`` (does the contradicting evidence study the
+# claim's population and exposure setting?), recorded as a limitation code
+# (``judge.CONTEXT_MISMATCH_LIMITATION``), and (2) the judge sets aside the only
+# ENDORSES + CONTRADICTED claim when that code is present and every contradicting record
+# it cites is a narrative review or a lab / modelling study: review reason
+# ``contradiction_context_mismatch:<cid>`` and the label falls through (as T67's
+# ``thin_contradiction`` does). Trigger: production jobs cf2ea579 / f85f2daa (tune v135,
+# golden NO_MISINFO). OFF: with it off, the verifier's schema and prompt and every label
+# are byte-identical to before T69. Turning it on is a lead decision.
+CONTEXT_MISMATCH_RULE = False
+CONTEXT_MISMATCH_LIMITATION = "evidence_context_mismatch"  # stored as "<code>:<kind>"
+CONTEXT_MISMATCH_KINDS = ("different_population", "different_exposure_setting")
+EVIDENCE_CONTEXT_VALUES = ("matches", *CONTEXT_MISMATCH_KINDS)
 SECOND_CHECK_LIMITATION = (
     "a second automated check still disagreed with this verdict when the review budget ran out; "
     "the verdict is kept and sent to a person"

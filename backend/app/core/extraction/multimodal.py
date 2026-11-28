@@ -1,10 +1,16 @@
 """Multimodal fusion — builds FusionResult from the transcript and, when
 ``OCR_PROVIDER=vision``, the on-screen text read by ``vision_ocr`` (off by default).
+
+With OCR on, the on-screen text is routed by kind (T68, ``screen_text``): title and
+claim cards (and subtitles that match nothing said) reach extraction; subtitles that
+repeat the speech are dropped; documents and charts become one-line notes in
+``metadata["ocr_documents"]``, never extraction input. With OCR off nothing here runs
+and the result is byte-identical to before.
 """
 from __future__ import annotations
 
 from app.core.config import settings
-from app.core.extraction import transcription, vision_ocr
+from app.core.extraction import screen_text, transcription, vision_ocr
 from app.core.extraction.transcription import transcribe
 from app.core.schemas.pipeline import FusionResult
 
@@ -29,6 +35,10 @@ class MultimodalFusion:
             transcript = transcribe(video_path)
 
         ocr_segs = vision_ocr.extract_on_screen_text(video_path) if vision_ocr.enabled() else []
+        routed = None
+        if ocr_segs:
+            routed = screen_text.route(ocr_segs, screen_text.spoken_from(segments, transcript))
+            ocr_segs = routed.to_extraction
         visual_text = "\n".join(dict.fromkeys(s.text for s in ocr_segs))
 
         parts = []
@@ -53,7 +63,13 @@ class MultimodalFusion:
             "ocr_provider": "vision" if vision_ocr.enabled() else "none",
         }
         if ocr_segs:
-            metadata["ocr_segments"] = [{"start": s.start, "end": s.end, "text": s.text} for s in ocr_segs]
+            metadata["ocr_segments"] = [{"start": s.start, "end": s.end, "text": s.text, "kind": s.kind}
+                                        for s in ocr_segs]
+        if routed is not None:
+            metadata["ocr_routing"] = routed.counts()
+            if routed.documents:
+                metadata["ocr_documents"] = [{"start": d.start, "end": d.end, "note": d.text}
+                                             for d in routed.documents]
         if segments is not None:
             metadata["transcript_segments"] = segments
         return FusionResult(

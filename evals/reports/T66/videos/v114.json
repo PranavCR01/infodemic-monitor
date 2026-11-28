@@ -1,0 +1,2534 @@
+{
+ "video_id": "v114",
+ "status": "finished",
+ "pipeline": "graph",
+ "fallback_reason": null,
+ "label": "CANNOT_RECOGNIZE",
+ "cost_usd": 0.350135,
+ "latency_ms": 47748,
+ "guarded_calls": 14,
+ "pipeline_version": "graph_v1+3372ef3+p70b785e4",
+ "segment_counts_omitted": {
+  "transcript_segments": 1,
+  "ocr_segments": 1,
+  "fused_segments": 1
+ },
+ "model_calls": [
+  {
+   "step": "extract_claims",
+   "provider": "anthropic",
+   "model": "claude-sonnet-5-5",
+   "prompt_version": "extract_v3",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 5618,
+   "input_tokens": 3122,
+   "output_tokens": 873,
+   "reasoning_tokens": 0,
+   "response_model": "claude-sonnet-5-5",
+   "reasoning_effort": null,
+   "cost_usd": 0.014974,
+   "error": null
+  },
+  {
+   "step": "analyze_stance",
+   "provider": "anthropic",
+   "model": "claude-sonnet-5-5",
+   "prompt_version": "stance_v1",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 3029,
+   "input_tokens": 2092,
+   "output_tokens": 197,
+   "reasoning_tokens": 0,
+   "response_model": "claude-sonnet-5-5",
+   "reasoning_effort": null,
+   "cost_usd": 0.006154,
+   "error": null
+  },
+  {
+   "step": "analyze_stance",
+   "provider": "anthropic",
+   "model": "claude-sonnet-5-5",
+   "prompt_version": "stance_v1",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 1229,
+   "input_tokens": 2085,
+   "output_tokens": 188,
+   "reasoning_tokens": 0,
+   "response_model": "claude-sonnet-5-5",
+   "reasoning_effort": null,
+   "cost_usd": 0.00605,
+   "error": null
+  },
+  {
+   "step": "analyze_stance",
+   "provider": "anthropic",
+   "model": "claude-sonnet-5-5",
+   "prompt_version": "stance_v1",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 2556,
+   "input_tokens": 2081,
+   "output_tokens": 183,
+   "reasoning_tokens": 0,
+   "response_model": "claude-sonnet-5-5",
+   "reasoning_effort": null,
+   "cost_usd": 0.005992,
+   "error": null
+  },
+  {
+   "step": "find_study",
+   "provider": "anthropic",
+   "model": "claude-haiku-5-5",
+   "prompt_version": "find_study_v1",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 4213,
+   "input_tokens": 22614,
+   "output_tokens": 653,
+   "reasoning_tokens": 0,
+   "response_model": "claude-haiku-5-5",
+   "reasoning_effort": null,
+   "cost_usd": 0.0025879,
+   "error": null
+  },
+  {
+   "step": "verify_claims",
+   "provider": "anthropic",
+   "model": "claude-opus-5-5",
+   "prompt_version": "verify_v3",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 7414,
+   "input_tokens": 10153,
+   "output_tokens": 800,
+   "reasoning_tokens": 0,
+   "response_model": "claude-opus-5-5",
+   "reasoning_effort": null,
+   "cost_usd": 0.056612,
+   "error": null
+  },
+  {
+   "step": "verify_claims",
+   "provider": "anthropic",
+   "model": "claude-opus-5-5",
+   "prompt_version": "verify_v3",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 3725,
+   "input_tokens": 11686,
+   "output_tokens": 388,
+   "reasoning_tokens": 0,
+   "response_model": "claude-opus-5-5",
+   "reasoning_effort": null,
+   "cost_usd": 0.054504,
+   "error": null
+  },
+  {
+   "step": "critique",
+   "provider": "openai",
+   "model": "gpt-4o-2024-08-06",
+   "prompt_version": "critic_v1",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 1754,
+   "input_tokens": 5686,
+   "output_tokens": 128,
+   "reasoning_tokens": 0,
+   "response_model": "gpt-4o-2024-08-06",
+   "reasoning_effort": null,
+   "cost_usd": 0.015495,
+   "error": null
+  },
+  {
+   "step": "critique",
+   "provider": "openai",
+   "model": "gpt-4o-2024-08-06",
+   "prompt_version": "critic_v1",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 1068,
+   "input_tokens": 6263,
+   "output_tokens": 71,
+   "reasoning_tokens": 0,
+   "response_model": "gpt-4o-2024-08-06",
+   "reasoning_effort": null,
+   "cost_usd": 0.0163675,
+   "error": null
+  },
+  {
+   "step": "verify_claims",
+   "provider": "anthropic",
+   "model": "claude-opus-5-5",
+   "prompt_version": "verify_v3",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 6722,
+   "input_tokens": 10443,
+   "output_tokens": 705,
+   "reasoning_tokens": 0,
+   "response_model": "claude-opus-5-5",
+   "reasoning_effort": null,
+   "cost_usd": 0.055872,
+   "error": null
+  },
+  {
+   "step": "verify_claims",
+   "provider": "anthropic",
+   "model": "claude-opus-5-5",
+   "prompt_version": "verify_v3",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 3412,
+   "input_tokens": 11874,
+   "output_tokens": 370,
+   "reasoning_tokens": 0,
+   "response_model": "claude-opus-5-5",
+   "reasoning_effort": null,
+   "cost_usd": 0.054896,
+   "error": null
+  },
+  {
+   "step": "critique",
+   "provider": "openai",
+   "model": "gpt-4o-2024-08-06",
+   "prompt_version": "critic_v1",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 1672,
+   "input_tokens": 5672,
+   "output_tokens": 140,
+   "reasoning_tokens": 0,
+   "response_model": "gpt-4o-2024-08-06",
+   "reasoning_effort": null,
+   "cost_usd": 0.01558,
+   "error": null
+  },
+  {
+   "step": "critique",
+   "provider": "openai",
+   "model": "gpt-4o-2024-08-06",
+   "prompt_version": "critic_v1",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 913,
+   "input_tokens": 6253,
+   "output_tokens": 85,
+   "reasoning_tokens": 0,
+   "response_model": "gpt-4o-2024-08-06",
+   "reasoning_effort": null,
+   "cost_usd": 0.0164825,
+   "error": null
+  },
+  {
+   "step": "judge_explanation",
+   "provider": "anthropic",
+   "model": "claude-sonnet-5-5",
+   "prompt_version": "explain_v2",
+   "attempts": 1,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "latency_ms": 3920,
+   "input_tokens": 2264,
+   "output_tokens": 404,
+   "reasoning_tokens": 0,
+   "response_model": "claude-sonnet-5-5",
+   "reasoning_effort": null,
+   "cost_usd": 0.008568,
+   "error": null
+  }
+ ],
+ "state": {
+  "state_schema_version": "1.0.0",
+  "job_id": "t66-v114",
+  "video_id": "v114",
+  "pipeline_version": "graph_v1+3372ef3+p70b785e4",
+  "media_uri": "fusion://t66-v114",
+  "artifacts": [
+   {
+    "kind": "video",
+    "uri": "fusion://t66-v114",
+    "sha256": null
+   }
+  ],
+  "claims": [
+   {
+    "claim_id": "c1",
+    "claim_text": "Eliminar toda Ia sal sube la presion arterial,Y se tiene incidencia a infarto de meocardio",
+    "claim_category": "causation",
+    "source_segment_ids": [
+     "o1"
+    ],
+    "start_seconds": 0.4,
+    "end_seconds": 5.54,
+    "requires_verification": true,
+    "claim_kind": "research_question"
+   },
+   {
+    "claim_id": "c2",
+    "claim_text": "La causa de hipertension prediabetes, el es Ja azucar de los carbohidratos refinados",
+    "claim_category": "causation",
+    "source_segment_ids": [
+     "o1"
+    ],
+    "start_seconds": 0.4,
+    "end_seconds": 5.54,
+    "requires_verification": true,
+    "claim_kind": "research_question"
+   },
+   {
+    "claim_id": "c3",
+    "claim_text": "el cuerpo [no] puede fabricar [sal], sinembargo el azucar si",
+    "claim_category": "other",
+    "source_segment_ids": [
+     "o1"
+    ],
+    "start_seconds": 0.4,
+    "end_seconds": 5.54,
+    "requires_verification": true,
+    "claim_kind": "fact_of_record"
+   }
+  ],
+  "stance_results": {
+   "c1": {
+    "claim_id": "c1",
+    "stance": "REFUTES",
+    "stance_segment_ids": [
+     "o1"
+    ],
+    "rationale": "The caption opens with \"NOS MINTIERON\" (\"they lied to us\") before the claim. It then says sugar from refined carbohydrates causes hypertension and \"La sal es vida\". The speaker rejects the claim that eliminating salt raises blood pressure and heart attack risk.",
+    "confidence": null,
+    "model": "claude-sonnet-5-5",
+    "prompt_version": "stance_v1"
+   },
+   "c2": {
+    "claim_id": "c2",
+    "stance": "ENDORSES",
+    "stance_segment_ids": [
+     "o1"
+    ],
+    "rationale": "On-screen text, framed as \"NOS MINTIERON\" (we were lied to), states as fact that \"La causa de hipertension prediabetes, el es Ja azucar de los carbohidratos refinados\", and that salt is life while sugar is the problem.",
+    "confidence": null,
+    "model": "claude-sonnet-5-5",
+    "prompt_version": "stance_v1"
+   },
+   "c3": {
+    "claim_id": "c3",
+    "stance": "ENDORSES",
+    "stance_segment_ids": [
+     "o1"
+    ],
+    "rationale": "On-screen text states as fact \"La sal es vida, el cuerpo [no] puede fabricar, sinembargo el azucar si\" under a \"NOS MINTIERON\" (they lied to us) framing. The text presents the claim as true.",
+    "confidence": null,
+    "model": "claude-sonnet-5-5",
+    "prompt_version": "stance_v1"
+   }
+  },
+  "retrieval_queries": {
+   "c1": [
+    "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])"
+   ],
+   "c2": [
+    "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])"
+   ],
+   "c3": [
+    "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])"
+   ]
+  },
+  "retrieved_evidence": {
+   "c1": [
+    {
+     "evidence_id": "ev_32635265",
+     "source": "pubmed",
+     "title": "Sodium Intake and Chronic Kidney Disease.",
+     "abstract": "In Chronic Kidney Disease (CKD) patients, elevated blood pressure (BP) is a frequent finding and is traditionally considered a direct consequence of their sodium sensitivity. Indeed, sodium and fluid retention, causing hypervolemia, leads to the development of hypertension in CKD. On the other hand, in non-dialysis CKD patients, salt restriction reduces BP levels and enhances anti-proteinuric effect of renin-angiotensin-aldosterone system inhibitors in non-dialysis CKD patients. However, studies on the long-term effect of low salt diet (LSD) on cardio-renal prognosis showed controversial findings. The negative results might be the consequence of measurement bias (spot urine and/or single measurement), reverse epidemiology, as well as poor adherence to diet. In end-stage kidney disease (ESKD), dialysis remains the only effective means to remove dietary sodium intake. The mismatch between intake and removal of sodium leads to fluid overload, hypertension and left ventricular hypertrophy, therefore worsening the prognosis of ESKD patients. This imposes the implementation of a LSD in these patients, irrespective of the lack of trials proving the efficacy of this measure in these patients. LSD is, therefore, a rational and basic tool to correct fluid overload and hypertension in all CKD stages. The implementation of LSD should be personalized, similarly to diuretic treatment, keeping into account the volume status and true burden of hypertension evaluated by ambulatory BP monitoring.",
+     "pmid": "32635265",
+     "doi": "10.3390/ijms21134744",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2020,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/32635265/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_32057379",
+     "source": "pubmed",
+     "title": "Salt Reduction to Prevent Hypertension and Cardiovascular Disease: JACC State-of-the-Art Review.",
+     "abstract": "There is strong evidence for a causal relationship between salt intake and blood pressure. Randomized trials demonstrate that salt reduction lowers blood pressure in both individuals who are hypertensive and those who are normotensive, additively to antihypertensive treatments. Methodologically robust studies with accurate salt intake assessment have shown that a lower salt intake is associated with a reduced risk of cardiovascular disease, all-cause mortality, and other conditions, such as kidney disease, stomach cancer, and osteoporosis. Multiple complex and interconnected physiological mechanisms are implicated, including fluid homeostasis, hormonal and inflammatory mechanisms, as well as more novel pathways such as the immune response and the gut microbiome. High salt intake is a top dietary risk factor. Salt reduction programs are cost-effective and should be implemented or accelerated in all countries. This review provides an update on the evidence relating salt to health, with a particular focus on blood pressure and cardiovascular disease, as well as the potential mechanisms.",
+     "pmid": "32057379",
+     "doi": "10.1016/j.jacc.2019.11.055",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2020,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/32057379/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_27757935",
+     "source": "pubmed",
+     "title": "Impact of Salt Intake on the Pathogenesis and Treatment of Hypertension.",
+     "abstract": "Excessive dietary salt (sodium chloride) intake is associated with an increased risk for hypertension, which in turn is especially a major risk factor for stroke and other cardiovascular pathologies, but also kidney diseases. Besides, high salt intake or preference for salty food is discussed to be positive associated with stomach cancer, and according to recent studies probably also obesity risk. On the other hand a reduction of dietary salt intake leads to a considerable reduction in blood pressure, especially in hypertensive patients but to a lesser extent also in normotensives as several meta-analyses of interventional studies have shown. Various mechanisms for salt-dependent hypertension have been put forward including volume expansion, modified renal functions and disorders in sodium balance, impaired reaction of the renin-angiotensin-aldosterone-system and the associated receptors, central stimulation of the activity of the sympathetic nervous system, and possibly also inflammatory processes.Not every person reacts to changes in dietary salt intake with alterations in blood pressure, dividing people in salt sensitive and insensitive groups. It is estimated that about 50-60 % of hypertensives are salt sensitive. In addition to genetic polymorphisms, salt sensitivity is increased in aging, in black people, and in persons with metabolic syndrome or obesity. However, although mechanisms of salt-dependent hypertensive effects are increasingly known, more research on measurement, storage and kinetics of sodium, on physiological properties, and genetic determinants of salt sensitivity are necessary to harden the basis for salt reduction recommendations.Currently estimated dietary intake of salt is about 9-12 g per day in most countries of the world. These amounts are significantly above the WHO recommended level of less than 5 g salt per day. According to recent research results a moderate reduction of daily salt intake from current intakes to 5-6 g can reduce morbidity rates. Potential risks of salt reduction, like suboptimal iodine supply, are limited and manageable. Concomitant to salt reduction, potassium intake by higher intake of fruits and vegetables should be optimised, since several studies have provided evidence that potassium rich diets or interventions with potassium can lower blood pressure, especially in hypertensives.In addition to dietary assessment the gold standard for measuring salt intake is the analysis of sodium excretion in the 24 h urine. Spot urine samples are appropriate alternatives for monitoring sodium intake. A weakness of dietary evaluations is that the salt content of many foods is not precisely known and information in nutrient databases are limited. A certain limitation of the urine assessment is that dietary sources contributing to salt intake cannot be identified.Salt reduction strategies include nutritional education, improving environmental conditions (by product reformulation and optimization of communal catering) up to mandatory nutrition labeling and regulated nutrition/health claims, as well as legislated changes in the form of taxation.Regarding dietary interventions for the reduction of blood pressure the Dietary Approaches to Stop Hypertension (DASH) diet can be recommended. In addition, body weight should be normalized in overweight and obese people (BMI less than 25 kg/m2), salt intake should not exceed 5 g/day according to WHO recommendations (<2 g sodium/day), no more than 1.5 g sodium/d in blacks, middle- and older-aged persons, and individuals with hypertension, diabetes, or chronic kidney disease, intake of potassium (~4.7 g/day) should be increased and alcohol consumption limited. In addition, regular physical activity (endurance, dynamic resistance, and isometric resistance training) is very important.",
+     "pmid": "27757935",
+     "doi": "10.1007/5584_2016_147",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2017,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/27757935/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_37721034",
+     "source": "pubmed",
+     "title": "Salt Sensitivity: Causes, Consequences, and Recent Advances.",
+     "abstract": "Salt (sodium chloride) is an essential nutrient required to maintain physiological functions. However, for most people, daily salt intake far exceeds their physiological need and is habitually greater than recommended upper thresholds. Excess salt intake leads to elevation in blood pressure which drives cardiovascular morbidity and mortality. Indeed, excessive salt intake is estimated to be responsible for \u22485 million deaths per year globally. For approximately one-third of otherwise healthy individuals (and >50% of those with hypertension), the effect of salt intake on blood pressure elevation is exaggerated; such people are categorized as salt sensitive and salt sensitivity of blood pressure is considered an independent risk factor for cardiovascular disease and death. The prevalence of salt sensitivity is higher in women than in men and, in both, increases with age. This narrative review considers the foundational concepts of salt sensitivity and the underlying effector systems that cause salt sensitivity. We also consider recent updates in preclinical and clinical research that are revealing new modifying factors that determine the blood pressure response to high salt intake.",
+     "pmid": "37721034",
+     "doi": "10.1161/hypertensionaha.123.17959",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2024,
+     "publication_type": [
+      "Journal Article",
+      "Review",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/37721034/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_40086509",
+     "source": "pubmed",
+     "title": "Sodium.",
+     "abstract": "Sodium is the major cation of extracellular fluid (ECF) and, because of its osmotic action, is involved in the regulation of ECF volume and blood pressure. The ingested sodium is almost completely absorbed by the intestine. Circulating sodium is filtered by the glomeruli and its renal tubular handling is responsible for the maintenance of sodium and water balance. Sodium deficiency is rare and occurs only in some medical conditions. High dietary sodium intake is associated with ECF volume expansion and is a leading risk factor for hypertension and cardiovascular diseases; it also adds to risk of gastric cancer, nephrolithiasis, reduced bone mineral density, and osteoporosis. Salt added while cooking and eating, the amount added during food transformation, and that occurring naturally in foods contribute to the dietary sodium intake. Additional small amounts of sodium may be occasionally acquired through oral or parenteral medications. The National Academy of Science, Engineering and Medicine set an adequate intake of 1.5 g and a chronic disease risk reduction intake of 2.3 g of sodium per day for the adult population. The European Food Safety Authority and the World Health Organization set a standard dietary target for sodium of 2 g/d (5 g of salt). Recent studies highlighted the relevance of salt intake reduction for all-cause mortality risk and, in particular, for stroke. Sodium also appears to affect the activity of the immune system by influencing the gut microbiota composition and the macrophage and lymphocyte differentiation.",
+     "pmid": "40086509",
+     "doi": "10.1016/j.advnut.2025.100409",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2025,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/40086509/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_35058650",
+     "source": "pubmed",
+     "title": "The impact of excessive salt intake on human health.",
+     "abstract": "Intake of salt is a biological imperative, inextricably woven into physiological systems, human societies and global culture. However, excessive salt intake is associated with high blood pressure. As this effect likely drives cardiovascular morbidity and mortality, excessive salt intake is estimated to cause ~5 million deaths per annum worldwide. Animal research has identified various mechanisms by which high salt intake drives disease in the kidney, brain, vasculature and immune system. The potential for therapeutic interventions in many of these pathways has yet to be tested. Salt-reduction interventions lower blood pressure, but for most individuals, 'hidden' salt in processed foods disconnects salt intake from discretionary control. This problem is compounded by growing inequalities in food systems, which form another hurdle to sustaining individual dietary control of salt intake. The most effective salt-reduction interventions have been implemented at the population level and comprise multi-component approaches, involving government, education and the food industry.",
+     "pmid": "35058650",
+     "doi": "10.1038/s41581-021-00533-0",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2022,
+     "publication_type": [
+      "Journal Article",
+      "Review",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/35058650/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_36456046",
+     "source": "pubmed",
+     "title": "Dietary Salt Intake Preferences and the Risk of Cardiovascular Disease.",
+     "abstract": "",
+     "pmid": "36456046",
+     "doi": "10.1016/j.jacc.2022.10.005",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2022,
+     "publication_type": [
+      "Editorial",
+      "Comment"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/36456046/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_35092228",
+     "source": "pubmed",
+     "title": "Overview of salt restriction in the Dietary Approaches to Stop Hypertension (DASH) and the Mediterranean diet for blood pressure reduction.",
+     "abstract": "Despite considerable advances in pharmacological treatments, hypertension remains a major cause of premature morbidity and mortality worldwide since elevated blood pressure (BP) adversely influences cardiovascular and renal outcomes. Accordingly, the current hypertension guidelines recommend the adoption of dietary modifications in all subjects with suboptimal BP levels. These modifications include salt intake reduction and a healthy diet, such as the Dietary Approaches to Stop Hypertension (DASH) diet or the Mediterranean diet (MedDiet), independently of the underlying antihypertensive drug treatment. However, dietary modifications for BP reduction in adults with prehypertension or hypertension are usually examined as stand-alone interventions and, to a lesser extent, in combination with other dietary changes. The purpose of the present review was to summarize the evidence regarding the BP effect of salt restriction in the context of the DASH diet and the MedDiet. We also summarize the literature regarding the effects of these dietary modifications when they are applied as the only intervention for BP reduction in adults with and without hypertension and the potent physiological mechanisms underlying their beneficial effects on BP levels. Available data of randomized controlled trials (RCTs) provided evidence about the significant BP-lowering effect of each one of these dietary strategies, especially among subjects with hypertension since they modulate various physiological mechanisms controlling BP. Salt reduction by 2.3 g per day in the DASH diet produces less than half of the effect on systolic blood pressure (SBP)/diastolic blood pressure (DBP) (-3.0/-1.6 mmHg) as it does without the DASH diet (-6.7/-3.5 mmHg). Although their combined effect is not fully additive, low sodium intake and the DASH diet produce higher SBP/DBP reduction (-8.9/-4.5 mmHg) than each of these dietary regimens alone. It is yet unsettled whether this finding is also true for salt reduction in the MedDiet.",
+     "pmid": "35092228",
+     "doi": "10.31083/j.rcm2301036",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2022,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/35092228/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_35057427",
+     "source": "pubmed",
+     "title": "The Effect of Diet on Cardiovascular Disease, Heart Disease, and Blood Vessels.",
+     "abstract": "The Effect of Diet on Cardiovascular Disease, Heart Disease, and Blood Vessels [...].",
+     "pmid": "35057427",
+     "doi": "10.3390/nu14020246",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2022,
+     "publication_type": [
+      "Editorial",
+      "Introductory Journal Article"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/35057427/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_38355241",
+     "source": "pubmed",
+     "title": "Salt Intake: Reduce or Substitute?",
+     "abstract": "",
+     "pmid": "38355241",
+     "doi": "10.1016/j.jacc.2023.12.026",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2024,
+     "publication_type": [
+      "Editorial",
+      "Comment"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/38355241/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_33011774",
+     "source": "pubmed",
+     "title": "Salt and cardiovascular disease: insufficient evidence to recommend low sodium intake.",
+     "abstract": "Several blood pressure guidelines recommend low sodium intake (<2.3 g/day, 100 mmol, 5.8 g/day of salt) for the entire population, on the premise that reductions in sodium intake, irrespective of the levels, will lower blood pressure, and, in turn, reduce cardiovascular disease occurrence. These guidelines have been developed without effective interventions to achieve sustained low sodium intake in free-living individuals, without a feasible method to estimate sodium intake reliably in individuals, and without high-quality evidence that low sodium intake reduces cardiovascular events (compared with moderate intake). In this review, we examine whether the recommendation for low sodium intake, reached by current guideline panels, is supported by robust evidence. Our review provides a counterpoint to the current recommendation for low sodium intake and suggests that a specific low sodium intake target (e.g. <2.3 g/day) for individuals may be unfeasible, of uncertain effect on other dietary factors and of unproven effectiveness in reducing cardiovascular disease. We contend that current evidence, despite methodological limitations, suggests that most of the world's population consume a moderate range of dietary sodium (2.3-4.6g/day; 1-2 teaspoons of salt) that is not associated with increased cardiovascular risk, and that the risk of cardiovascular disease increases when sodium intakes exceed 5 g/day. While current evidence has limitations, and there are differences of opinion in interpretation of existing evidence, it is reasonable, based upon observational studies, to suggest a population-level mean target of <5 g/day in populations with mean sodium intake of >5 g/day, while awaiting the results of large randomized controlled trials of sodium reduction on incidence of cardiovascular events and mortality.",
+     "pmid": "33011774",
+     "doi": "10.1093/eurheartj/ehaa586",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2020,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/33011774/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_41243115",
+     "source": "pubmed",
+     "title": "Dietary salt intake and cardiovascular outcomes: an umbrella review of meta-analyses and dose-response evidence.",
+     "abstract": "BACKGROUND: Excessive salt intake is a known cardiovascular disease (CVD) risk factor, but the health impacts of both high and low sodium intake remain debated. This study synthesize meta-analytic evidence on dietary salt intake and cardiovascular outcomes, including subgroup and dose-response analyses.\nMETHODS: PubMed, Embase, Web of Science, and Cochrane Library were searched through August 28, 2024, for meta-analyses of randomized controlled trials and observational studies.\nRESULTS: 21 meta-analyses comprising 91 outcomes were included. Low sodium intake was associated with reduced risks of CVD mortality (RR = 0.83, 95% CI: 0.73-0.95), stroke mortality (RR = 0.74, 95% CI: 0.57-0.95), and all-cause mortality (RR = 0.88, 95% CI: 0.82-0.93), as well as systolic blood pressure (MD = -3.39 mmHg) and diastolic blood pressure (MD = -1.54 mmHg), improved vascular elasticity, and increased heart rate. Urinary sodium excretion and Na/K ratio decreased, while urinary potassium, calcium, and serum potassium increased. No adverse effects on lipid profiles were observed. High salt intake was associated with increased risks of CVD (RR = 1.13, 95% CI: 1.06-1.20), hypertension (OR = 1.33, 95% CI: 1.24-1.42), stroke (OR = 1.34, 95% CI: 1.19-1.51), and stroke mortality (OR = 1.40, 95% CI: 1.21-1.63). Each 1 g/day sodium increase raised systolic blood pressure by 0.60 mmHg and CVD and stroke risks by 4% and 6%, respectively.\nCONCLUSION: High salt intake increases cardiovascular risk, while moderate reduction provides protective benefits without adverse lipid effects. Tailored strategies are needed based on regional, sex-specific, and methodological differences.",
+     "pmid": "41243115",
+     "doi": "10.1080/07853890.2025.2582065",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2025,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/41243115/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_37311593",
+     "source": "pubmed",
+     "title": "High salt intake and hypertension.",
+     "abstract": "",
+     "pmid": "37311593",
+     "doi": "10.1136/bmj.p1312",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2023,
+     "publication_type": [
+      "Letter",
+      "Comment"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/37311593/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_35296804",
+     "source": "pubmed",
+     "title": "Dietary salt intake in Japan - past, present, and future.",
+     "abstract": "Salt reduction is the most important lifestyle modification, especially in Japanese individuals who still consume a significant amount of salt. The Dietary Reference Intakes for Japanese 2020, issued by the Ministry of Health, Labour and Welfare, propose a salt intake goal of <7.5 g/day for men and <6.5 g/day for women. Regarding the goal of salt reduction in hypertensive patients, the hypertension guideline by the Japanese Society of Hypertension 2019 (JSH2019) proposes a goal of <6 g/day. Although the average salt intake in Japan gradually decreased in the early 2000s, the declining trend has not been seen in recent years, and thus, it seems difficult to achieve these target salt intake levels. To overcome this challenge, the JSH announced the 'JSH Tokyo Declaration' and pledged to create a specific action plan to achieve the target salt intake level of <6 g/day. The six strategies to achieve the target salt intake level are as follows: (1) educating citizens on the harms of excessive salt intake and the importance of reducing salt intake; (2) recommending the assessment of the salt intake of individuals or populations and proposing adequate methods to reduce salt intake; (3) promoting salt reduction for children as a part of dietary education at school; (4) promoting salt reduction in takeout food, prepared dishes, canteens, and school lunches; (5) encouraging companies to develop and promote low-salt foods; and (6) encouraging the government to take measures to promote salt reduction. Through these activities, a society with a low salt intake will be expected in the near future.",
+     "pmid": "35296804",
+     "doi": "10.1038/s41440-022-00888-2",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2022,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/35296804/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_38676382",
+     "source": "pubmed",
+     "title": "The best of 'best buys': public health values of potassium-enriched salt substitute.",
+     "abstract": "",
+     "pmid": "38676382",
+     "doi": "10.1080/14779072.2024.2349105",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2024,
+     "publication_type": [
+      "Editorial"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/38676382/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_40613399",
+     "source": "pubmed",
+     "title": "Lowering Sodium Intake: Reduction and Substitution for Cardiovascular Health.",
+     "abstract": "Clinical and epidemiological evidence supports sodium reduction as an effective strategy to lower blood pressure and reduce the risk of stroke, cardiovascular disease, and overall mortality. High sodium (salt) intake is a well-established contributor to elevated blood pressure and adverse cardiovascular outcomes. The World Health Organization (WHO) recommends that adults should consume less than 5 g of table salt per day; however, the global average intake is estimated at around 10.78 g/day. The primary sources of dietary sodium vary by region: in high-income countries, the majority of salt intake comes from processed foods and meals prepared outside the home, while in many low-and middle-income countries, sodium is mainly added during home cooking or comes from condiments such as soy sauce and fish sauce. This review discusses the effects of high dietary sodium on blood pressure and vascular health, along with global consumption trends, regional disparities, and key nutritional sources. In addition to reducing sodium, adopting a salt-sensitive, whole-diet approach, such as increasing fruit and vegetable intake to boost potassium, can further protect cardiovascular health. Potassium-enriched, low-sodium salt substitutes are increasingly used in food production. Emerging strategies, including flavor enhancers, bitter blockers, spatial salt distribution, and microencapsulation, also help enhance saltiness perception while lowering sodium content. The review also summarizes national guidelines and those by the WHO, highlights selected country strategies, and calls for coordinated global and national efforts to reduce sodium intake and improve cardiovascular health worldwide.",
+     "pmid": "40613399",
+     "doi": "10.31083/ijvnr36289",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2025,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/40613399/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_25826317",
+     "source": "pubmed",
+     "title": "Health gain by salt reduction in europe: a modelling study.",
+     "abstract": "Excessive salt intake is associated with hypertension and cardiovascular diseases. Salt intake exceeds the World Health Organization population nutrition goal of 5 grams per day in the European region. We assessed the health impact of salt reduction in nine European countries (Finland, France, Ireland, Italy, Netherlands, Poland, Spain, Sweden and United Kingdom). Through literature research we obtained current salt intake and systolic blood pressure levels of the nine countries. The population health modeling tool DYNAMO-HIA including country-specific disease data was used to predict the changes in prevalence of ischemic heart disease and stroke for each country estimating the effect of salt reduction through its effect on blood pressure levels. A 30% salt reduction would reduce the prevalence of stroke by 6.4% in Finland to 13.5% in Poland. Ischemic heart disease would be decreased by 4.1% in Finland to 8.9% in Poland. When salt intake is reduced to the WHO population nutrient goal, it would reduce the prevalence of stroke from 10.1% in Finland to 23.1% in Poland. Ischemic heart disease would decrease by 6.6% in Finland to 15.5% in Poland. The number of postponed deaths would be 102,100 (0.9%) in France, and 191,300 (2.3%) in Poland. A reduction of salt intake to 5 grams per day is expected to substantially reduce the burden of cardiovascular disease and mortality in several European countries.",
+     "pmid": "25826317",
+     "doi": "10.1371/journal.pone.0118873",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2015,
+     "publication_type": [
+      "Journal Article",
+      "Meta-Analysis",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/25826317/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_38126623",
+     "source": "pubmed",
+     "title": "Management of nocturnal hypertension: An expert consensus document from Chinese Hypertension League.",
+     "abstract": "Nocturnal hypertension is highly prevalent among Chinese and Asian populations, which is mainly attributed to high salt intake and high salt sensitivity. Nocturnal hypertension increases the risk of cardiovascular and all-cause mortality, independent of daytime blood pressure (BP). However, it can usually be detected by 24-h ambulatory BP monitoring, rather than routine office or home BP measurement, thus is often underdiagnosed in clinical practice. Currently, no specific guidance is available for the management of nocturnal hypertension in China or worldwide. Experts from the Chinese Hypertension League summarized the epidemiologic and pathophysiologic characteristics and clinical phenotype of nocturnal hypertension and provided consensus recommendations on optimal management of nocturnal hypertension, with the goal of maximally reducing the cardiovascular disease risks. In this consensus document, 24-h ABPM is recommended for screening and diagnosis of nocturnal hypertension, especially in the elderly, patients with diabetes, chronic kidney diseases, obstructive sleep apnea and other conditions prone to high nocturnal BP. Lifestyle modifications including salt intake restriction, exercise, weight loss, sleep improvement, and mental stress relief are recommended. Long-acting antihypertensive medications are preferred for nocturnal and 24-h BP control. Some newly developed agents, renal denervation, and other device-based therapy on nocturnal BP reduction are evaluated.",
+     "pmid": "38126623",
+     "doi": "10.1111/jch.14757",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2024,
+     "publication_type": [
+      "Journal Article",
+      "Consensus Statement"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/38126623/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_38739172",
+     "source": "pubmed",
+     "title": "Metabolomics signature of blood pressure salt sensitivity and its link to cardiovascular disease: A dietary salt-intervention trial.",
+     "abstract": "Individuals with a high degree of salt sensitivity (SS) have a greater risk of cardiovascular disease (CVD), but whether SS fosters CVD by influencing metabolomics homeostasis remains unclear. This study aimed to reveal the role of the SS-related metabolomics signature in the development of CVDs, based on the MetaSalt study, which was a dietary salt-intervention trial conducted at four centers in China in 2019. A total of 528 participants were recruited and underwent 3 days of baseline observations, a 10-day low-salt intervention, and a 10-day high-salt intervention. Plasma untargeted metabolomics, lipidomics, and BP measurements were scheduled at each stage. Participants were grouped into extreme SS, moderate SS, and salt-resistant (SR) individuals according to their BP responses to salt. Linear mixed models were used to identify SS-related metabolites and determine the relationship between the SS-related metabolomics signature and arterial stiffness. Mendelian randomization (MR) analyses were applied to establish the causal pathways among the SS-related metabolites, BP, and CVDs. Among the 713 metabolites, 467 were significantly changed after the high-salt intervention. Among them, the changes in 30 metabolites from the low-salt to the high-salt intervention differed among the SS groups. Of the remaining nonsalt-related metabolites, the baseline levels of 11 metabolites were related to SS. These 41 metabolites explained 23% of the variance in SS. Moreover, SS and its metabolomics signature were positively correlated with arterial stiffness. MR analyses demonstrated that the SS-related metabolites may affect CVD risk by altering BP, indicating that the increase in BP was the consequence of the changes in SS-related metabolites rather than the cause. Our study revealed that the metabolomics signature of SS individuals differs from that of SR individuals and that the changes in SS-related metabolites may increase arterial stiffness and foster CVDs. This study provides insight into understanding the biology and targets of SS and its role in CVDs.",
+     "pmid": "38739172",
+     "doi": "10.1007/s11427-023-2507-9",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2024,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/38739172/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_29760151",
+     "source": "pubmed",
+     "title": "Salt Intake and Immunity.",
+     "abstract": "",
+     "pmid": "29760151",
+     "doi": "10.1161/hypertensionaha.118.11128",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2018,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/29760151/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    }
+   ],
+   "c2": [
+    {
+     "evidence_id": "ev_21660838",
+     "source": "pubmed",
+     "title": "Carbohydrates for training and competition.",
+     "abstract": "An athlete's carbohydrate intake can be judged by whether total daily intake and the timing of consumption in relation to exercise maintain adequate carbohydrate substrate for the muscle and central nervous system (\"high carbohydrate availability\") or whether carbohydrate fuel sources are limiting for the daily exercise programme (\"low carbohydrate availability\"). Carbohydrate availability is increased by consuming carbohydrate in the hours or days prior to the session, intake during exercise, and refuelling during recovery between sessions. This is important for the competition setting or for high-intensity training where optimal performance is desired. Carbohydrate intake during exercise should be scaled according to the characteristics of the event. During sustained high-intensity sports lasting ~1 h, small amounts of carbohydrate, including even mouth-rinsing, enhance performance via central nervous system effects. While 30-60 g \u00b7 h(-1) is an appropriate target for sports of longer duration, events >2.5 h may benefit from higher intakes of up to 90 g \u00b7 h(-1). Products containing special blends of different carbohydrates may maximize absorption of carbohydrate at such high rates. In real life, athletes undertake training sessions with varying carbohydrate availability. Whether implementing additional \"train-low\" strategies to increase the training adaptation leads to enhanced performance in well-trained individuals is unclear.",
+     "pmid": "21660838",
+     "doi": "10.1080/02640414.2011.585473",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2011,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/21660838/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_36173597",
+     "source": "pubmed",
+     "title": "New Horizons in Carbohydrate Research and Application for Endurance Athletes.",
+     "abstract": "The importance of carbohydrate as a fuel source for exercise and athletic performance is well established. Equally well developed are dietary carbohydrate intake guidelines for endurance athletes seeking to optimize their performance. This narrative review provides a contemporary perspective on research into the role of, and application of, carbohydrate in the diet of endurance athletes. The review discusses how recommendations could become increasingly refined and what future research would further our understanding of how to optimize dietary carbohydrate intake to positively impact endurance performance. High carbohydrate availability for prolonged intense exercise and competition performance remains a priority. Recent advances have been made on the recommended type and quantity of carbohydrates to be ingested before, during and after intense exercise bouts. Whilst reducing carbohydrate availability around selected exercise bouts to augment metabolic adaptations to training is now widely recommended, a contemporary view of the so-called train-low approach based on the totality of the current evidence suggests limited utility for enhancing performance benefits from training. Nonetheless, such studies have focused importance on periodizing carbohydrate intake based on, among other factors, the goal and demand of training or competition. This calls for a much more personalized approach to carbohydrate recommendations that could be further supported through future research and technological innovation (e.g., continuous glucose monitoring). Despite more than a century of investigations into carbohydrate nutrition, exercise metabolism and endurance performance, there are numerous new important discoveries, both from an applied and mechanistic perspective, on the horizon.",
+     "pmid": "36173597",
+     "doi": "10.1007/s40279-022-01757-1",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2022,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/36173597/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_35215506",
+     "source": "pubmed",
+     "title": "The Effect of Carbohydrate Intake on Strength and Resistance Training Performance: A Systematic Review.",
+     "abstract": "High carbohydrate intakes are commonly recommended for athletes of various sports, including strength trainees, to optimize performance. However, the effect of carbohydrate intake on strength training performance has not been systematically analyzed. A systematic literature search was conducted for trials that manipulated carbohydrate intake, including supplements, and measured strength, resistance training or power either acutely or after a diet and strength training program. Studies were categorized as either (1) acute supplementation, (2) exercise-induced glycogen depletion with subsequent carbohydrate manipulation, (3) short-term (2-7 days) carbohydrate manipulation or (4) changes in performance after longer-term diet manipulation and strength training. Forty-nine studies were included: 19 acute, six glycogen depletion, seven short-term and 17 long-term studies. Participants were strength trainees or athletes (39 studies), recreationally active (six studies) or untrained (four studies). Acutely, higher carbohydrate intake did not improve performance in 13 studies and enhanced performance in six studies, primarily in those with fasted control groups and workouts with over 10 sets per muscle group. One study found that a carbohydrate meal improved performance compared to water but not in comparison to a sensory-matched placebo breakfast. There was no evidence of a dose-response effect. After glycogen depletion, carbohydrate supplementation improved performance in three studies compared to placebo, in particular during bi-daily workouts, but not in research with isocaloric controls. None of the seven short-term studies found beneficial effects of carbohydrate manipulation. Longer-term changes in performance were not influenced by carbohydrate intake in 15 studies; one study favored the higher- and one the lower-carbohydrate condition. Carbohydrate intake per se is unlikely to strength training performance in a fed state in workouts consisting of up to 10 sets per muscle group. Performance during higher volumes may benefit from carbohydrates, but more studies with isocaloric control groups, sensory-matched placebos and locally measured glycogen depletion are needed.",
+     "pmid": "35215506",
+     "doi": "10.3390/nu14040856",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2022,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/35215506/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_24791914",
+     "source": "pubmed",
+     "title": "A step towards personalized sports nutrition: carbohydrate intake during exercise.",
+     "abstract": "There have been significant changes in the understanding of the role of carbohydrates during endurance exercise in recent years, which allows for more specific and more personalized advice with regard to carbohydrate ingestion during exercise. The new proposed guidelines take into account the duration (and intensity) of exercise and advice is not restricted to the amount of carbohydrate; it also gives direction with respect to the type of carbohydrate. Studies have shown that during exercise lasting approximately 1 h in duration, a mouth rinse or small amounts of carbohydrate can result in a performance benefit. A single carbohydrate source can be oxidized at rates up to approximately 60 g/h and this is the recommendation for exercise that is more prolonged (2-3 h). For ultra-endurance events, the recommendation is higher at approximately 90 g/h. Carbohydrate ingested at such high ingestion rates must be a multiple transportable carbohydrates to allow high oxidation rates and prevent the accumulation of carbohydrate in the intestine. The source of the carbohydrate may be a liquid, semisolid, or solid, and the recommendations may need to be adjusted downward when the absolute exercise intensity is low and thus carbohydrate oxidation rates are also low. Carbohydrate intake advice is independent of body weight as well as training status. Therefore, although these guidelines apply to most athletes, they are highly dependent on the type and duration of activity. These new guidelines may replace the generic existing guidelines for carbohydrate intake during endurance exercise.",
+     "pmid": "24791914",
+     "doi": "10.1007/s40279-014-0148-z",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2014,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/24791914/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_28924296",
+     "source": "pubmed",
+     "title": "Applied carbohydrate counting.",
+     "abstract": "Carbohydrate counting or \"carb counting\" is a meal planning technique for persons with diabetes for managing blood glucose levels by tracking the grams of carbohydrate consumed at meals. With better patient education and awareness, carb counting has become an important step in diabetes management. People with all types of diabetes can be benefited with this approach via improved glycaemic control and quality of life. In the first part of this review basic principles of carbohydrate counting, its application in clinical practice and exchange lists pertaining primarily to South Asian populations have been discussed. Advanced carb counting involving equations which help in better understanding of insulin-to-carbohydrate ratio and insulin dose adjustment are also included in this review.",
+     "pmid": "28924296",
+     "doi": null,
+     "document_id": null,
+     "page": null,
+     "publication_year": 2017,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/28924296/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_30122560",
+     "source": "pubmed",
+     "title": "Dietary carbohydrate intake and mortality: a prospective cohort study and meta-analysis.",
+     "abstract": "BACKGROUND: Low carbohydrate diets, which restrict carbohydrate in favour of increased protein or fat intake, or both, are a popular weight-loss strategy. However, the long-term effect of carbohydrate restriction on mortality is controversial and could depend on whether dietary carbohydrate is replaced by plant-based or animal-based fat and protein. We aimed to investigate the association between carbohydrate intake and mortality.\nMETHODS: We studied 15 428 adults aged 45-64 years, in four US communities, who completed a dietary questionnaire at enrolment in the Atherosclerosis Risk in Communities (ARIC) study (between 1987 and 1989), and who did not report extreme caloric intake (<600 kcal or >4200 kcal per day for men and <500 kcal or >3600 kcal per day for women). The primary outcome was all-cause mortality. We investigated the association between the percentage of energy from carbohydrate intake and all-cause mortality, accounting for possible non-linear relationships in this cohort. We further examined this association, combining ARIC data with data for carbohydrate intake reported from seven multinational prospective studies in a meta-analysis. Finally, we assessed whether the substitution of animal or plant sources of fat and protein for carbohydrate affected mortality.\nFINDINGS: During a median follow-up of 25 years there were 6283 deaths in the ARIC cohort, and there were 40 181 deaths across all cohort studies. In the ARIC cohort, after multivariable adjustment, there was a U-shaped association between the percentage of energy consumed from carbohydrate (mean 48\u00b79%, SD 9\u00b74) and mortality: a percentage of 50-55% energy from carbohydrate was associated with the lowest risk of mortality. In the meta-analysis of all cohorts (432 179 participants), both low carbohydrate consumption (<40%) and high carbohydrate consumption (>70%) conferred greater mortality risk than did moderate intake, which was consistent with a U-shaped association (pooled hazard ratio 1\u00b720, 95% CI 1\u00b709-1\u00b732 for low carbohydrate consumption; 1\u00b723, 1\u00b711-1\u00b736 for high carbohydrate consumption). However, results varied by the source of macronutrients: mortality increased when carbohydrates were exchanged for animal-derived fat or protein (1\u00b718, 1\u00b708-1\u00b729) and mortality decreased when the substitutions were plant-based (0\u00b782, 0\u00b778-0\u00b787).\nINTERPRETATION: Both high and low percentages of carbohydrate diets were associated with increased mortality, with minimal risk observed at 50-55% carbohydrate intake. Low carbohydrate dietary patterns favouring animal-derived protein and fat sources, from sources such as lamb, beef, pork, and chicken, were associated with higher mortality, whereas those that favoured plant-derived protein and fat intake, from sources such as vegetables, nuts, peanut butter, and whole-grain breads, were associated with lower mortality, suggesting that the source of food notably modifies the association between carbohydrate intake and mortality.\nFUNDING: National Institutes of Health.",
+     "pmid": "30122560",
+     "doi": "10.1016/s2468-2667(18)30135-x",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2018,
+     "publication_type": [
+      "Journal Article",
+      "Meta-Analysis",
+      "Research Support, N.I.H., Extramural"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/30122560/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_37057671",
+     "source": "pubmed",
+     "title": "Low carbohydrate availability impairs hypertrophy and anaerobic performance.",
+     "abstract": "PURPOSE OF REVIEW: Highlight contemporary evidence examining the effects of carbohydrate restriction on the intracellular regulation of muscle mass and anaerobic performance.\nRECENT FINDINGS: Low carbohydrate diets increase fat oxidation and decrease fat mass. Emerging evidence suggests that dietary carbohydrate restriction increases protein oxidation, thereby limiting essential amino acid availability necessary to stimulate optimal muscle protein synthesis and promote muscle recovery. Low carbohydrate feeding for 24 h increases branched-chain amino acid (BCAA) oxidation and reduces myogenic regulator factor transcription compared to mixed-macronutrient feeding. When carbohydrate restriction is maintained for 8 to 12 weeks, the alterations in anabolic signaling, protein synthesis, and myogenesis likely contribute to limited hypertrophic responses to resistance training. The blunted hypertrophic response to resistance training when carbohydrate availability is low does not affect muscle strength, whereas persistently low muscle glycogen does impair anaerobic output during high-intensity sprint and time to exhaustion tests.\nSUMMARY: Dietary carbohydrate restriction increases BCAA oxidation and impairs muscle hypertrophy and anaerobic performance, suggesting athletes who need to perform high-intensity exercise should consider avoiding dietary strategies that restrict carbohydrate.",
+     "pmid": "37057671",
+     "doi": "10.1097/mco.0000000000000934",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2023,
+     "publication_type": [
+      "Review",
+      "Journal Article"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/37057671/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_40077786",
+     "source": "pubmed",
+     "title": "A Review of Carbohydrate Supplementation Approaches and Strategies for Optimizing Performance in Elite Long-Distance Endurance.",
+     "abstract": "Carbohydrate supplementation is a common practice among endurance athletes participating in long-distance competitions. However, glycogen storage regulation, in-competition blood glucose levels, and their relationship with athletic performance are influenced by multiple factors. This review summarizes the recent research progress on carbohydrate supplementation, addressing its applications in the pre-, during-, and post-competition phases. It explores variables that influence the effectiveness of carbohydrate supplementation and provides a summary of strategies, based on six key aspects: carbohydrate properties, multi-nutrient interactions, gastrointestinal function, individual differences (such as age and gender), environmental conditions, and psychological factors. The combination of different types, ratios, and concentrations of carbohydrates has been demonstrated to enhance the efficiency of carbohydrate digestion and absorption. The synergistic combination of protein, sodium, and caffeine intake demonstrates enhanced efficacy in carbohydrate supplementation strategies. Gastrointestinal tolerance training for carbohydrate supplementation has been identified as an effective measure to alleviate gastrointestinal discomfort during high-dose carbohydrate intake. The adjustment of the carbohydrate-to-fat ratio and the type of carbohydrate intake has been found to mitigate the impact of gender and menstrual cycles on glycogen storage and substrate utilization. Modifying the timing of glycogen storage and regulating the concentration and temperature of carbohydrate solutions during competition have been demonstrated to facilitate coping with the elevated energy expenditure and metabolic substrate shift from fat to carbohydrates, triggered by a combination of environmental and psychological factors, including special environmental and climatic conditions (e.g., high altitude, high temperature, high humidity, and cold) and emotional states (e.g., pre-competition stress and anxiety during the competition). To achieve precise carbohydrate supplementation for athletes in major events under various competitive environments, it is necessary to quantitatively assess the effects of carbohydrate supplementation, supported by mechanistic studies. This can be achieved by utilizing wearable devices to monitor the entire competition, coupled with data collection technologies, such as high-throughput profiling. Furthermore, emerging data analytics techniques, such as machine learning and causal inference, should be leveraged to refine supplementation strategies.",
+     "pmid": "40077786",
+     "doi": "10.3390/nu17050918",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2025,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/40077786/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_20574242",
+     "source": "pubmed",
+     "title": "Carbohydrate and exercise performance: the role of multiple transportable carbohydrates.",
+     "abstract": "PURPOSE OF REVIEW: Carbohydrate feeding has been shown to be ergogenic, but recently substantial advances have been made in optimizing the guidelines for carbohydrate intake during prolonged exercise.\nRECENT FINDINGS: It was found that limitations to carbohydrate oxidation were in the absorptive process most likely because of a saturation of carbohydrate transporters. By using a combination of carbohydrates that use different intestinal transporters for absorption it was shown that carbohydrate delivery and oxidation could be increased. Studies demonstrated increases in exogenous carbohydrate oxidation rates of up to 65% of glucose: fructose compared with glucose only. Exogenous carbohydrate oxidation rates reach values of 1.75 g/min whereas previously it was thought that 1 g/min was the absolute maximum. The increased carbohydrate oxidation with multiple transportable carbohydrates was accompanied by increased fluid delivery and improved oxidation efficiency, and thus the likelihood of gastrointestinal distress may be diminished. Studies also demonstrated reduced fatigue and improved exercise performance with multiple transportable carbohydrates compared with a single carbohydrate.\nSUMMARY: Multiple transportable carbohydrates, ingested at high rates, can be beneficial during endurance sports in which the duration of exercise is 3 h or more.",
+     "pmid": "20574242",
+     "doi": "10.1097/mco.0b013e328339de9f",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2010,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/20574242/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_23846824",
+     "source": "pubmed",
+     "title": "The use of carbohydrates during exercise as an ergogenic aid.",
+     "abstract": "Carbohydrate and fat are the two primary fuel sources oxidized by skeletal muscle tissue during prolonged (endurance-type) exercise. The relative contribution of these fuel sources largely depends on the exercise intensity and duration, with a greater contribution from carbohydrate as exercise intensity is increased. Consequently, endurance performance and endurance capacity are largely dictated by endogenous carbohydrate availability. As such, improving carbohydrate availability during prolonged exercise through carbohydrate ingestion has dominated the field of sports nutrition research. As a result, it has been well-established that carbohydrate ingestion during prolonged (>2 h) moderate-to-high intensity exercise can significantly improve endurance performance. Although the precise mechanism(s) responsible for the ergogenic effects are still unclear, they are likely related to the sparing of skeletal muscle glycogen, prevention of liver glycogen depletion and subsequent development of hypoglycemia, and/or allowing high rates of carbohydrate oxidation. Currently, for prolonged exercise lasting 2-3 h, athletes are advised to ingest carbohydrates at a rate of 60 g\u00b7h\u207b\u00b9 (~1.0-1.1 g\u00b7min\u207b\u00b9) to allow for maximal exogenous glucose oxidation rates. However, well-trained endurance athletes competing longer than 2.5 h can metabolize carbohydrate up to 90 g\u00b7h\u207b\u00b9 (~1.5-1.8 g\u00b7min\u207b\u00b9) provided that multiple transportable carbohydrates are ingested (e.g. 1.2 g\u00b7min\u207b\u00b9 glucose plus 0.6 g\u00b7min\u207b\u00b9 of fructose). Surprisingly, small amounts of carbohydrate ingestion during exercise may also enhance the performance of shorter (45-60 min), more intense (>75 % peak oxygen uptake; VO(\u2082peak)) exercise bouts, despite the fact that endogenous carbohydrate stores are unlikely to be limiting. The mechanism(s) responsible for such ergogenic properties of carbohydrate ingestion during short, more intense exercise bouts has been suggested to reside in the central nervous system. Carbohydrate ingestion during exercise also benefits athletes involved in intermittent/team sports. These athletes are advised to follow similar carbohydrate feeding strategies as the endurance athletes, but need to modify exogenous carbohydrate intake based upon the intensity and duration of the game and the available endogenous carbohydrate stores. Ample carbohydrate intake is also important for those athletes who need to compete twice within 24 h, when rapid repletion of endogenous glycogen stores is required to prevent a decline in performance. To support rapid post-exercise glycogen repletion, large amounts of exogenous carbohydrate (1.2 g\u00b7kg\u207b\u00b9\u00b7h\u207b\u00b9) should be provided during the acute recovery phase from exhaustive exercise. For those athletes with a lower gastrointestinal threshold for carbohydrate ingestion immediately post-exercise, and/or to support muscle re-conditioning, co-ingesting a small amount of protein (0.2-0.4 g\u00b7kg\u207b\u00b9\u00b7h\u207b\u00b9) with less carbohydrate (0.8 g\u00b7kg\u207b\u00b9\u00b7h\u207b\u00b9) may provide a feasible option to achieve similar muscle glycogen repletion rates.",
+     "pmid": "23846824",
+     "doi": "10.1007/s40279-013-0079-0",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2013,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/23846824/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_33479499",
+     "source": "pubmed",
+     "title": "Effect of a plant-based, low-fat diet versus an animal-based, ketogenic diet on ad libitum energy intake.",
+     "abstract": "The carbohydrate-insulin model of obesity posits that high-carbohydrate diets lead to excess insulin secretion, thereby promoting fat accumulation and increasing energy intake. Thus, low-carbohydrate diets are predicted to reduce ad libitum energy intake as compared to low-fat, high-carbohydrate diets. To test this hypothesis, 20 adults aged 29.9 \u00b1 1.4 (mean \u00b1 s.e.m.) years with body mass index of 27.8 \u00b1 1.3 kg m-2 were admitted as inpatients to the National Institutes of Health Clinical Center and randomized to consume ad libitum either a minimally processed, plant-based, low-fat diet (10.3% fat, 75.2% carbohydrate) with high glycemic load (85 g 1,000 kcal-1) or a minimally processed, animal-based, ketogenic, low-carbohydrate diet (75.8% fat, 10.0% carbohydrate) with low glycemic load (6 g 1,000 kcal-1) for 2 weeks followed immediately by the alternate diet for 2 weeks. One participant withdrew due to hypoglycemia during the low-carbohydrate diet. The primary outcomes compared mean daily ad libitum energy intake between each 2-week diet period as well as between the final week of each diet. We found that the low-fat diet led to 689 \u00b1 73 kcal d-1 less energy intake than the low-carbohydrate diet over 2 weeks (P < 0.0001) and 544 \u00b1 68 kcal d-1 less over the final week (P < 0.0001). Therefore, the predictions of the carbohydrate-insulin model were inconsistent with our observations. This study was registered on ClinicalTrials.gov as NCT03878108 .",
+     "pmid": "33479499",
+     "doi": "10.1038/s41591-020-01209-1",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2021,
+     "publication_type": [
+      "Journal Article",
+      "Randomized Controlled Trial",
+      "Research Support, N.I.H., Extramural",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/33479499/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_33871420",
+     "source": "pubmed",
+     "title": "Physiological responses to carbohydrate overfeeding.",
+     "abstract": "PURPOSE OF REVIEW: To consider emerging research into the physiological effects of excessive dietary carbohydrate intake, with a particular focus on interactions with physical activity.\nRECENT FINDINGS: A single episode of massive carbohydrate overload initiates physiological responses to stimulate additional peptide hormone secretion by the gut and the conversion of carbohydrate into lipid by the intestine, liver and adipose tissue. These acute responses maintain glycaemic control both via increased oxidation of carbohydrate (rather than lipid) and via nonoxidative disposal of surplus carbohydrate into endogenous glycogen and lipid storage depots. Sustained carbohydrate overfeeding therefore results in a chronic accumulation of lipid in the liver, skeletal muscle and adipose tissue, which can impair insulin sensitivity and cardiometabolic health in general. Beyond any direct effect of such lipid deposition on body mass/composition, there is not yet clear evidence of physiologically meaningful metabolic or behavioural adaptations to carbohydrate overfeeding in terms of other components of energy balance. However, regular physical exercise can mitigate the negative health effects of carbohydrate overfeeding, independent of any effect on the net carbohydrate surplus.\nSUMMARY: Research in this area has advanced understanding regarding the mechanisms of weight gain and associated health outcomes within the modern context of an abundant supply of dietary carbohydrate.",
+     "pmid": "33871420",
+     "doi": "10.1097/mco.0000000000000755",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2021,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/33871420/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_39786965",
+     "source": "pubmed",
+     "title": "Carbohydrate ingestion eliminates hypoglycemia and improves endurance exercise performance in triathletes adapted to very low- and high-carbohydrate isocaloric diets.",
+     "abstract": "Very-low-carbohydrate diets (LCHF; <50 g/day) have been debated for their potential to lower pre-exercise muscle and liver glycogen stores and metabolic efficiency, risking premature fatigue. It is also hypothesized that carbohydrate ingestion during prolonged exercise delays fatigue by increasing carbohydrate oxidation, thereby sparing muscle glycogen. Leveraging a randomized crossover design, we evaluated performance during strenuous time-to-exhaustion (70% V\u0307o2max) tests in trained triathletes following 6-wk high-carbohydrate (HCLF, 380 g/day) or very-low-carbohydrate (LCHF, 40 g/day) diets to determine 1) if adoption of the LCHF diet impairs time-to-exhaustion performance, 2) whether carbohydrate ingestion (10 g/h) 6-12\u00d7 lower than current CHO fueling recommendations during low glycogen availability (>15-h pre-exercise overnight fast and/or LCHF diet) improves time to exhaustion by preventing exercise-induced hypoglycemia (EIH; <3.9 mmol/L; <70 mg/dL), and 3) the \"keto-adaptation\" time course through continuous substrate monitoring while caloric intake, physical activity, and fat-free mass are maintained. Time-to-exhaustion performance was similar across both dietary interventions. Minimal carbohydrate supplementation prevented EIH and significantly increased time to exhaustion equivalently in LCHF and HCLF interventions (22%). The LCHF diet significantly lowered 24-h glucose concentrations, which normalized after 4 wk, at the same timepoint peak blood ketone (R-\u03b2-hydroxybutyrate) concentrations normalized. These findings 1) demonstrate that an LCHF diet sustains strenuous endurance performance, 2) establish that minimal carbohydrate supplementation was sufficient to enhance exercise performance on LCHF and HCLF diets by mitigating EIH, and 3) indicate that a minimum 4-wk adaptation period to an LCHF diet is required to ensure normalization of metabolic homeostasis, glycemic control, and exercise performance.NEW & NOTEWORTHY This study examines the belief that very-low-carbohydrate diets (LCHF) impair prolonged exercise performance during strenuous exercise by comparing it with high-carbohydrate diets in competitive triathletes. After 6-wk diet adaptation, time-to-exhaustion (TTE) performance was similar across both diets. Minimal carbohydrate supplementation (10 g/h) during exercise eliminated exercise-induced hypoglycemia and improved TTE by 22% on both diets. These findings suggest that LCHF diets do not impair exercise performance and require a 4-wk adaptation period for metabolic homeostasis.",
+     "pmid": "39786965",
+     "doi": "10.1152/ajpcell.00583.2024",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2025,
+     "publication_type": [
+      "Journal Article",
+      "Randomized Controlled Trial",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/39786965/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_10678682",
+     "source": "pubmed",
+     "title": "Carbohydrate and exercise.",
+     "abstract": "Total body carbohydrate stores are limited, and are often less than the carbohydrate requirements of athletic training and competition. However, the availability of carbohydrate as a substrate for muscle metabolism is a critical factor in the performance of both high-intensity intermittent work and prolonged aerobic exercise. The rate of carbohydrate oxidation during exercise is tightly regulated, with glucose availability closely matching the needs of the working muscles. Both the absolute and relative work rate play important roles in the regulation of substrate metabolism: carbohydrate-based fuels predominate at moderate to high power outputs, with muscle glycogen and glucose utilization scaling exponentially to the relative work rate. As such, strategies to maintain or enhance carbohydrate availability, such as the ingestion of carbohydrate before, during and after exercise, are critical to the performance of a variety of sports events, and are a key recommendation in current sports nutrition guidelines.",
+     "pmid": "10678682",
+     "doi": "10.1097/00075197-199911000-00015",
+     "document_id": null,
+     "page": null,
+     "publication_year": 1999,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/10678682/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_447980",
+     "source": "pubmed",
+     "title": "Carbohydrate loading--a review.",
+     "abstract": "The purpose of carbohydrate loading is to supersaturate with glycogen the muscles to be used in competition. The competition should be longer than 30 to 60 min. to fully utilize the glycogen stores. An exhausting exercise is first performed to deplete the glycogen stores, and a high-fat, high-protein diet is followed for three days to keep the glycogen stores low. After depletion of the muscles, a high-carbohydrate diet is followed for two to three days to restore and supersaturate the muscles with glycogen. The most important point to impress on the athlete is the nutritional adequacy of the entire diet. Though the technique of carbohydrate loading is a dietary manipulation emphasizing the intake of carbohydrate, the diet can be adequate with sound dietary planning.",
+     "pmid": "447980",
+     "doi": null,
+     "document_id": null,
+     "page": null,
+     "publication_year": 1979,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/447980/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_7610019",
+     "source": "pubmed",
+     "title": "Carbohydrate malabsorption.",
+     "abstract": "Carbohydrate malabsorption is a very important clinical entity, particularly in pediatrics, where, if untreated, it can lead to malnutrition and failure to thrive. Malabsorption that can be treated readily with elimination of the offending carbohydrate. Knowledge by the physician of the specific mechanisms involved in the physiology of carbohydrate absorption and digestion will help in the handling of the clinical situation of malabsorption.",
+     "pmid": "7610019",
+     "doi": "10.1016/s0031-3955(16)39023-x",
+     "document_id": null,
+     "page": null,
+     "publication_year": 1995,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Research Support, U.S. Gov't, P.H.S.",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/7610019/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_28839326",
+     "source": "pubmed",
+     "title": "Carbohydrate counting-1: South Asian framework.",
+     "abstract": "Carbohydrate counting or \"carb counting\" is a meal planning technique for persons with diabetes for managing blood glucose levels by tracking the grams of carbohydrate consumed at meals. It has shown to improve glycaemic control and glycaemic variability and decreases risk of hypoglycaemia in persons with diabetes especially on insulins. It needs basic education of the patient regarding meal plan, assessment of carbohydrate content of various foods and also exchange lists. It also gives flexibility of food choice, helps to identify patterns in blood glucose levels and adjustment of pre meals short acting insulins as related to food intake. In this short review we have summarised basic principles of carbohydrate counting, its application in clinical practice and also exchange lists primarily pertaining to South Asian population.",
+     "pmid": "28839326",
+     "doi": null,
+     "document_id": null,
+     "page": null,
+     "publication_year": 2017,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/28839326/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_22917167",
+     "source": "pubmed",
+     "title": "Diarrhea caused by carbohydrate malabsorption.",
+     "abstract": "This article will focus on the role of the colon in the pathogenesis of diarrhea in carbohydrate malabsorption or physiologically incomplete absorption of carbohydrates, and on the most common manifestation of carbohydrate malabsorption, lactose malabsorption. In addition, incomplete fructose absorption, the role of carbohydrate malabsorption in other malabsorptive diseases, and congenital defects that lead to malabsorption will be covered. The article concludes with a section on diagnostic tools to evaluate carbohydrate malabsorption.",
+     "pmid": "22917167",
+     "doi": "10.1016/j.gtc.2012.06.003",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2012,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/22917167/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_31468779",
+     "source": "pubmed",
+     "title": "Understanding the role of carbohydrates in optimal nutrition.",
+     "abstract": "In recent years, the regulation of carbohydrate intake has become regarded as essential to achieve a balanced diet, with a range of health benefits attributed to low-carbohydrate diets. However, much of the advice on reduced carbohydrate intake does not reflect government-led dietary guidelines. As a result of this conflicting information, patients requiring assistance with weight management or glycaemic control may become confused about the appropriate carbohydrate intake, or be encouraged to experiment with 'fad' diets. As front-line healthcare professionals, nurses are in a prime position to advise patients on carbohydrate intake, as well as signposting them to evidence-based dietary resources. This article outlines the constituents of dietary carbohydrate, considers the health benefits of carbohydrates, and explains their importance as part of a healthy and balanced diet.",
+     "pmid": "31468779",
+     "doi": "10.7748/ns.2019.e11323",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2019,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/31468779/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_12430970",
+     "source": "pubmed",
+     "title": "Very-low-carbohydrate weight-loss diets revisited.",
+     "abstract": "Much scientific and anecdotal data demonstrate favorable metabolic responses to very-low-carbohydrate diets. We believe that very-low-carbohydrate diets merit further study for weight loss, and that criticisms of these diets lack scientific evidence.",
+     "pmid": "12430970",
+     "doi": "10.3949/ccjm.69.11.849",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2002,
+     "publication_type": [
+      "Comment",
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/12430970/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    }
+   ],
+   "c3": [
+    {
+     "evidence_id": "ev_37427647",
+     "source": "pubmed",
+     "title": "Sodium Literacy.",
+     "abstract": "This communication describes the concept of sodium literacy as means of optimizing sodium intake and achieving better cardiovascular health. It also highlights the sources of sodium in South Asian cuisine which can be avoided or minimized.",
+     "pmid": "37427647",
+     "doi": "10.47391/jpma.23-42",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2023,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/37427647/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_32635265",
+     "source": "pubmed",
+     "title": "Sodium Intake and Chronic Kidney Disease.",
+     "abstract": "In Chronic Kidney Disease (CKD) patients, elevated blood pressure (BP) is a frequent finding and is traditionally considered a direct consequence of their sodium sensitivity. Indeed, sodium and fluid retention, causing hypervolemia, leads to the development of hypertension in CKD. On the other hand, in non-dialysis CKD patients, salt restriction reduces BP levels and enhances anti-proteinuric effect of renin-angiotensin-aldosterone system inhibitors in non-dialysis CKD patients. However, studies on the long-term effect of low salt diet (LSD) on cardio-renal prognosis showed controversial findings. The negative results might be the consequence of measurement bias (spot urine and/or single measurement), reverse epidemiology, as well as poor adherence to diet. In end-stage kidney disease (ESKD), dialysis remains the only effective means to remove dietary sodium intake. The mismatch between intake and removal of sodium leads to fluid overload, hypertension and left ventricular hypertrophy, therefore worsening the prognosis of ESKD patients. This imposes the implementation of a LSD in these patients, irrespective of the lack of trials proving the efficacy of this measure in these patients. LSD is, therefore, a rational and basic tool to correct fluid overload and hypertension in all CKD stages. The implementation of LSD should be personalized, similarly to diuretic treatment, keeping into account the volume status and true burden of hypertension evaluated by ambulatory BP monitoring.",
+     "pmid": "32635265",
+     "doi": "10.3390/ijms21134744",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2020,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/32635265/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_40086509",
+     "source": "pubmed",
+     "title": "Sodium.",
+     "abstract": "Sodium is the major cation of extracellular fluid (ECF) and, because of its osmotic action, is involved in the regulation of ECF volume and blood pressure. The ingested sodium is almost completely absorbed by the intestine. Circulating sodium is filtered by the glomeruli and its renal tubular handling is responsible for the maintenance of sodium and water balance. Sodium deficiency is rare and occurs only in some medical conditions. High dietary sodium intake is associated with ECF volume expansion and is a leading risk factor for hypertension and cardiovascular diseases; it also adds to risk of gastric cancer, nephrolithiasis, reduced bone mineral density, and osteoporosis. Salt added while cooking and eating, the amount added during food transformation, and that occurring naturally in foods contribute to the dietary sodium intake. Additional small amounts of sodium may be occasionally acquired through oral or parenteral medications. The National Academy of Science, Engineering and Medicine set an adequate intake of 1.5 g and a chronic disease risk reduction intake of 2.3 g of sodium per day for the adult population. The European Food Safety Authority and the World Health Organization set a standard dietary target for sodium of 2 g/d (5 g of salt). Recent studies highlighted the relevance of salt intake reduction for all-cause mortality risk and, in particular, for stroke. Sodium also appears to affect the activity of the immune system by influencing the gut microbiota composition and the macrophage and lymphocyte differentiation.",
+     "pmid": "40086509",
+     "doi": "10.1016/j.advnut.2025.100409",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2025,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/40086509/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_35058650",
+     "source": "pubmed",
+     "title": "The impact of excessive salt intake on human health.",
+     "abstract": "Intake of salt is a biological imperative, inextricably woven into physiological systems, human societies and global culture. However, excessive salt intake is associated with high blood pressure. As this effect likely drives cardiovascular morbidity and mortality, excessive salt intake is estimated to cause ~5 million deaths per annum worldwide. Animal research has identified various mechanisms by which high salt intake drives disease in the kidney, brain, vasculature and immune system. The potential for therapeutic interventions in many of these pathways has yet to be tested. Salt-reduction interventions lower blood pressure, but for most individuals, 'hidden' salt in processed foods disconnects salt intake from discretionary control. This problem is compounded by growing inequalities in food systems, which form another hurdle to sustaining individual dietary control of salt intake. The most effective salt-reduction interventions have been implemented at the population level and comprise multi-component approaches, involving government, education and the food industry.",
+     "pmid": "35058650",
+     "doi": "10.1038/s41581-021-00533-0",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2022,
+     "publication_type": [
+      "Journal Article",
+      "Review",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/35058650/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_27757935",
+     "source": "pubmed",
+     "title": "Impact of Salt Intake on the Pathogenesis and Treatment of Hypertension.",
+     "abstract": "Excessive dietary salt (sodium chloride) intake is associated with an increased risk for hypertension, which in turn is especially a major risk factor for stroke and other cardiovascular pathologies, but also kidney diseases. Besides, high salt intake or preference for salty food is discussed to be positive associated with stomach cancer, and according to recent studies probably also obesity risk. On the other hand a reduction of dietary salt intake leads to a considerable reduction in blood pressure, especially in hypertensive patients but to a lesser extent also in normotensives as several meta-analyses of interventional studies have shown. Various mechanisms for salt-dependent hypertension have been put forward including volume expansion, modified renal functions and disorders in sodium balance, impaired reaction of the renin-angiotensin-aldosterone-system and the associated receptors, central stimulation of the activity of the sympathetic nervous system, and possibly also inflammatory processes.Not every person reacts to changes in dietary salt intake with alterations in blood pressure, dividing people in salt sensitive and insensitive groups. It is estimated that about 50-60 % of hypertensives are salt sensitive. In addition to genetic polymorphisms, salt sensitivity is increased in aging, in black people, and in persons with metabolic syndrome or obesity. However, although mechanisms of salt-dependent hypertensive effects are increasingly known, more research on measurement, storage and kinetics of sodium, on physiological properties, and genetic determinants of salt sensitivity are necessary to harden the basis for salt reduction recommendations.Currently estimated dietary intake of salt is about 9-12 g per day in most countries of the world. These amounts are significantly above the WHO recommended level of less than 5 g salt per day. According to recent research results a moderate reduction of daily salt intake from current intakes to 5-6 g can reduce morbidity rates. Potential risks of salt reduction, like suboptimal iodine supply, are limited and manageable. Concomitant to salt reduction, potassium intake by higher intake of fruits and vegetables should be optimised, since several studies have provided evidence that potassium rich diets or interventions with potassium can lower blood pressure, especially in hypertensives.In addition to dietary assessment the gold standard for measuring salt intake is the analysis of sodium excretion in the 24 h urine. Spot urine samples are appropriate alternatives for monitoring sodium intake. A weakness of dietary evaluations is that the salt content of many foods is not precisely known and information in nutrient databases are limited. A certain limitation of the urine assessment is that dietary sources contributing to salt intake cannot be identified.Salt reduction strategies include nutritional education, improving environmental conditions (by product reformulation and optimization of communal catering) up to mandatory nutrition labeling and regulated nutrition/health claims, as well as legislated changes in the form of taxation.Regarding dietary interventions for the reduction of blood pressure the Dietary Approaches to Stop Hypertension (DASH) diet can be recommended. In addition, body weight should be normalized in overweight and obese people (BMI less than 25 kg/m2), salt intake should not exceed 5 g/day according to WHO recommendations (<2 g sodium/day), no more than 1.5 g sodium/d in blacks, middle- and older-aged persons, and individuals with hypertension, diabetes, or chronic kidney disease, intake of potassium (~4.7 g/day) should be increased and alcohol consumption limited. In addition, regular physical activity (endurance, dynamic resistance, and isometric resistance training) is very important.",
+     "pmid": "27757935",
+     "doi": "10.1007/5584_2016_147",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2017,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/27757935/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_38355241",
+     "source": "pubmed",
+     "title": "Salt Intake: Reduce or Substitute?",
+     "abstract": "",
+     "pmid": "38355241",
+     "doi": "10.1016/j.jacc.2023.12.026",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2024,
+     "publication_type": [
+      "Editorial",
+      "Comment"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/38355241/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_41243115",
+     "source": "pubmed",
+     "title": "Dietary salt intake and cardiovascular outcomes: an umbrella review of meta-analyses and dose-response evidence.",
+     "abstract": "BACKGROUND: Excessive salt intake is a known cardiovascular disease (CVD) risk factor, but the health impacts of both high and low sodium intake remain debated. This study synthesize meta-analytic evidence on dietary salt intake and cardiovascular outcomes, including subgroup and dose-response analyses.\nMETHODS: PubMed, Embase, Web of Science, and Cochrane Library were searched through August 28, 2024, for meta-analyses of randomized controlled trials and observational studies.\nRESULTS: 21 meta-analyses comprising 91 outcomes were included. Low sodium intake was associated with reduced risks of CVD mortality (RR = 0.83, 95% CI: 0.73-0.95), stroke mortality (RR = 0.74, 95% CI: 0.57-0.95), and all-cause mortality (RR = 0.88, 95% CI: 0.82-0.93), as well as systolic blood pressure (MD = -3.39 mmHg) and diastolic blood pressure (MD = -1.54 mmHg), improved vascular elasticity, and increased heart rate. Urinary sodium excretion and Na/K ratio decreased, while urinary potassium, calcium, and serum potassium increased. No adverse effects on lipid profiles were observed. High salt intake was associated with increased risks of CVD (RR = 1.13, 95% CI: 1.06-1.20), hypertension (OR = 1.33, 95% CI: 1.24-1.42), stroke (OR = 1.34, 95% CI: 1.19-1.51), and stroke mortality (OR = 1.40, 95% CI: 1.21-1.63). Each 1 g/day sodium increase raised systolic blood pressure by 0.60 mmHg and CVD and stroke risks by 4% and 6%, respectively.\nCONCLUSION: High salt intake increases cardiovascular risk, while moderate reduction provides protective benefits without adverse lipid effects. Tailored strategies are needed based on regional, sex-specific, and methodological differences.",
+     "pmid": "41243115",
+     "doi": "10.1080/07853890.2025.2582065",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2025,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/41243115/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_37311593",
+     "source": "pubmed",
+     "title": "High salt intake and hypertension.",
+     "abstract": "",
+     "pmid": "37311593",
+     "doi": "10.1136/bmj.p1312",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2023,
+     "publication_type": [
+      "Letter",
+      "Comment"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/37311593/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_29760151",
+     "source": "pubmed",
+     "title": "Salt Intake and Immunity.",
+     "abstract": "",
+     "pmid": "29760151",
+     "doi": "10.1161/hypertensionaha.118.11128",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2018,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/29760151/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_20586949",
+     "source": "pubmed",
+     "title": "Salt and hypertension.",
+     "abstract": "Current salt intake is too high. Current evidence documents that salt is crucial to the genesis of hypertension.",
+     "pmid": "20586949",
+     "doi": "10.1111/j.1440-1797.2010.01311.x",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2010,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/20586949/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_19075088",
+     "source": "pubmed",
+     "title": "Sensing salt intake.",
+     "abstract": "",
+     "pmid": "19075088",
+     "doi": "10.1161/hypertensionaha.108.125310",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2009,
+     "publication_type": [
+      "Editorial",
+      "Research Support, N.I.H., Extramural",
+      "Comment"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/19075088/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_27581349",
+     "source": "pubmed",
+     "title": "Proper Salt Intake During Pregnancy.",
+     "abstract": "",
+     "pmid": "27581349",
+     "doi": "10.1253/circj.cj-16-0859",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2016,
+     "publication_type": [
+      "Editorial"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/27581349/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_38876587",
+     "source": "pubmed",
+     "title": "Synergistic effect of combining umami substances enhances perceived saltiness.",
+     "abstract": "Umami substances have the potential to enhance the perception of saltiness and thus reduce sodium intake. Two sensory evaluation experiments were conducted, involving participants tasting salt solutions, and solutions with added umami substances at equal sodium concentrations. Umami substances included sodium glutamate (MSG), disodium inosinate (IMP), and the combination of them which has a synergistic effect and is a closer match to commonly-consumed foods. In Experiment 1, using the two-alternative forced-choice (2-AFC) method by 330 consumers, paired comparisons were conducted at three different sodium concentrations. The combination of MSG and IMP enhanced the perception of saltiness (p < .001 in the difference test), whereas presenting either umami substance in isolation failed to do so (p > .05 in the similarity test). Significant order effects occurred in paired comparisons. In Experiment 2, a two-sip time-intensity (TI) analysis with trained panellists verified these results and found that tasting MSG and IMP either simultaneously or successively enhanced saltiness perception at equal sodium concentrations. These findings indicate that the synergistic effect of umami substances may be the cause of saltiness enhancement, and represents a potential strategy for sodium reduction while satisfying the consumer demand for saltiness perception. Considering the application in food processing and in food pairing, umami substances can potentially be used to help to reduce salt intake in food consumption.",
+     "pmid": "38876587",
+     "doi": "10.1016/j.foodres.2024.114516",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2024,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/38876587/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_34166494",
+     "source": "pubmed",
+     "title": "Circadian Control of Sodium and Blood Pressure Regulation.",
+     "abstract": "The attention for the control of dietary risk factors involved in the development of hypertension, includes a large effort on dietary salt restrictions. Ample studies show the beneficial role of limiting dietary sodium as a lifestyle modification in the prevention and management of essential hypertension. Not until the past decade or so have studies more specifically investigated diurnal variations in renal electrolyte excretion, which led us to the hypothesis that timing of salt intake may impact cardiovascular health and blood pressure regulation. Cell autonomous molecular clocks as the name implies, function independently to maintain optimum functional rhythmicity in the face of environmental stressors such that cellular homeostasis is maintained at all times. Our understanding of mechanisms influencing diurnal patterns of sodium excretion and blood pressure has expanded with the discovery of the circadian clock genes. In this review, we discuss what is known about circadian regulation of renal sodium handling machinery and its influence on blood pressure regulation, with timing of sodium intake as a potential modulator of the kidney clock.",
+     "pmid": "34166494",
+     "doi": "10.1093/ajh/hpab100",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2021,
+     "publication_type": [
+      "Journal Article",
+      "Review",
+      "Research Support, Non-U.S. Gov't",
+      "Research Support, N.I.H., Extramural"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/34166494/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_34299228",
+     "source": "pubmed",
+     "title": "Sodium Intake and Related Diseases.",
+     "abstract": "Moderation in the use of salt (sodium chloride) in food and food preparations prevents the tendency of blood pressure to increase with age, and this is documented by many studies in current literature [...].",
+     "pmid": "34299228",
+     "doi": "10.3390/ijms22147608",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2021,
+     "publication_type": [
+      "Editorial"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/34299228/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_35613187",
+     "source": "pubmed",
+     "title": "Himalayan Salt and Table Salt Intake among Hypertensive Individuals.",
+     "abstract": "",
+     "pmid": "35613187",
+     "doi": "10.36660/abc.20220243",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2022,
+     "publication_type": [
+      "Editorial",
+      "Comment"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/35613187/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_36456046",
+     "source": "pubmed",
+     "title": "Dietary Salt Intake Preferences and the Risk of Cardiovascular Disease.",
+     "abstract": "",
+     "pmid": "36456046",
+     "doi": "10.1016/j.jacc.2022.10.005",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2022,
+     "publication_type": [
+      "Editorial",
+      "Comment"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/36456046/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_38158452",
+     "source": "pubmed",
+     "title": "Salt: a narrative review and local policy initiatives in Israel.",
+     "abstract": "High salt intake is a well-known risk factor for cardiovascular disease (CVD). Some recent prospective studies have challenged the salt-CVD link. We conducted a narrative review based on a systematic search and provided a national policy update. We reviewed 14 observational prospective studies in healthy adults, reporting the association between sodium intake and excretion or reduction and CVD incidence. Validated by cohort studies, recommended sodium consumption levels (< 1.5-2 gram per day) are still relevant for the prevention of CVD in adults. We discussed the findings and policy initiatives implemented in Israel. Such initiatives included voluntary and mandatory food labeling, and culturally tailored educational programs. The Ministry of Health in Israel initiated a salt reduction policy in recent years-aimed for the future of the industry as well as the population.",
+     "pmid": "38158452",
+     "doi": "10.1057/s41271-023-00457-y",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2024,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/38158452/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_35008596",
+     "source": "pubmed",
+     "title": "Sodium Intake and Related Diseases 2.0.",
+     "abstract": "Many statements have been reported in literature from various sources warning of the possible risk to health connected to high salt (as sodium chloride) intake in the everyday diet, and it is increasingly pressing [...].",
+     "pmid": "35008596",
+     "doi": "10.3390/ijms23010170",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2021,
+     "publication_type": [
+      "Editorial"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/35008596/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_26194154",
+     "source": "pubmed",
+     "title": "Salt Restriction in Diabetes.",
+     "abstract": "There are no long-term interventions examining the effects of salt reduction in people with diabetes, and these are urgently required. Sodium reduction is controversial as it appears that an intake below 2.5 g and above 6 g/day of salt is associated with increased cardiovascular disease risk. However, pre-existing illness leading to a lower salt intake may confound the findings. Only a few studies have prospectively collected data on the sodium intake and excretion of people with diabetes and examined hard end points. In addition, future studies need to collect more data on food intake as well as coexistent illnesses to address potential confounding. The World Health Organization recommends a reduction to less than 5 g/day salt in adults. Given that the available evidence suggests that the salt intake of people with type 2 diabetes is generally well above 6 g/day it seems reasonable to ensure individuals with diabetes have an intake below 6 g/day. However, such recommendations need to be individualized.",
+     "pmid": "26194154",
+     "doi": "10.1007/s11892-015-0629-y",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2015,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/26194154/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "relevance_score": null,
+     "study_type": null,
+     "quality_score": null,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    }
+   ]
+  },
+  "retrieval_attempts": {
+   "c1": 1,
+   "c2": 1,
+   "c3": 3
+  },
+  "reranked_evidence": {
+   "c1": [
+    {
+     "evidence_id": "ev_41243115",
+     "source": "pubmed",
+     "title": "Dietary salt intake and cardiovascular outcomes: an umbrella review of meta-analyses and dose-response evidence.",
+     "abstract": "BACKGROUND: Excessive salt intake is a known cardiovascular disease (CVD) risk factor, but the health impacts of both high and low sodium intake remain debated. This study synthesize meta-analytic evidence on dietary salt intake and cardiovascular outcomes, including subgroup and dose-response analyses.\nMETHODS: PubMed, Embase, Web of Science, and Cochrane Library were searched through August 28, 2024, for meta-analyses of randomized controlled trials and observational studies.\nRESULTS: 21 meta-analyses comprising 91 outcomes were included. Low sodium intake was associated with reduced risks of CVD mortality (RR = 0.83, 95% CI: 0.73-0.95), stroke mortality (RR = 0.74, 95% CI: 0.57-0.95), and all-cause mortality (RR = 0.88, 95% CI: 0.82-0.93), as well as systolic blood pressure (MD = -3.39 mmHg) and diastolic blood pressure (MD = -1.54 mmHg), improved vascular elasticity, and increased heart rate. Urinary sodium excretion and Na/K ratio decreased, while urinary potassium, calcium, and serum potassium increased. No adverse effects on lipid profiles were observed. High salt intake was associated with increased risks of CVD (RR = 1.13, 95% CI: 1.06-1.20), hypertension (OR = 1.33, 95% CI: 1.24-1.42), stroke (OR = 1.34, 95% CI: 1.19-1.51), and stroke mortality (OR = 1.40, 95% CI: 1.21-1.63). Each 1 g/day sodium increase raised systolic blood pressure by 0.60 mmHg and CVD and stroke risks by 4% and 6%, respectively.\nCONCLUSION: High salt intake increases cardiovascular risk, while moderate reduction provides protective benefits without adverse lipid effects. Tailored strategies are needed based on regional, sex-specific, and methodological differences.",
+     "pmid": "41243115",
+     "doi": "10.1080/07853890.2025.2582065",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2025,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/41243115/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": 0.8367,
+     "study_type": "systematic_review",
+     "quality_score": 1.0,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_25826317",
+     "source": "pubmed",
+     "title": "Health gain by salt reduction in europe: a modelling study.",
+     "abstract": "Excessive salt intake is associated with hypertension and cardiovascular diseases. Salt intake exceeds the World Health Organization population nutrition goal of 5 grams per day in the European region. We assessed the health impact of salt reduction in nine European countries (Finland, France, Ireland, Italy, Netherlands, Poland, Spain, Sweden and United Kingdom). Through literature research we obtained current salt intake and systolic blood pressure levels of the nine countries. The population health modeling tool DYNAMO-HIA including country-specific disease data was used to predict the changes in prevalence of ischemic heart disease and stroke for each country estimating the effect of salt reduction through its effect on blood pressure levels. A 30% salt reduction would reduce the prevalence of stroke by 6.4% in Finland to 13.5% in Poland. Ischemic heart disease would be decreased by 4.1% in Finland to 8.9% in Poland. When salt intake is reduced to the WHO population nutrient goal, it would reduce the prevalence of stroke from 10.1% in Finland to 23.1% in Poland. Ischemic heart disease would decrease by 6.6% in Finland to 15.5% in Poland. The number of postponed deaths would be 102,100 (0.9%) in France, and 191,300 (2.3%) in Poland. A reduction of salt intake to 5 grams per day is expected to substantially reduce the burden of cardiovascular disease and mortality in several European countries.",
+     "pmid": "25826317",
+     "doi": "10.1371/journal.pone.0118873",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2015,
+     "publication_type": [
+      "Journal Article",
+      "Meta-Analysis",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/25826317/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": 0.8367,
+     "study_type": "systematic_review",
+     "quality_score": 1.0,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_32057379",
+     "source": "pubmed",
+     "title": "Salt Reduction to Prevent Hypertension and Cardiovascular Disease: JACC State-of-the-Art Review.",
+     "abstract": "There is strong evidence for a causal relationship between salt intake and blood pressure. Randomized trials demonstrate that salt reduction lowers blood pressure in both individuals who are hypertensive and those who are normotensive, additively to antihypertensive treatments. Methodologically robust studies with accurate salt intake assessment have shown that a lower salt intake is associated with a reduced risk of cardiovascular disease, all-cause mortality, and other conditions, such as kidney disease, stomach cancer, and osteoporosis. Multiple complex and interconnected physiological mechanisms are implicated, including fluid homeostasis, hormonal and inflammatory mechanisms, as well as more novel pathways such as the immune response and the gut microbiome. High salt intake is a top dietary risk factor. Salt reduction programs are cost-effective and should be implemented or accelerated in all countries. This review provides an update on the evidence relating salt to health, with a particular focus on blood pressure and cardiovascular disease, as well as the potential mechanisms.",
+     "pmid": "32057379",
+     "doi": "10.1016/j.jacc.2019.11.055",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2020,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/32057379/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "narrative_review",
+     "quality_score": 0.35,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_33011774",
+     "source": "pubmed",
+     "title": "Salt and cardiovascular disease: insufficient evidence to recommend low sodium intake.",
+     "abstract": "Several blood pressure guidelines recommend low sodium intake (<2.3 g/day, 100 mmol, 5.8 g/day of salt) for the entire population, on the premise that reductions in sodium intake, irrespective of the levels, will lower blood pressure, and, in turn, reduce cardiovascular disease occurrence. These guidelines have been developed without effective interventions to achieve sustained low sodium intake in free-living individuals, without a feasible method to estimate sodium intake reliably in individuals, and without high-quality evidence that low sodium intake reduces cardiovascular events (compared with moderate intake). In this review, we examine whether the recommendation for low sodium intake, reached by current guideline panels, is supported by robust evidence. Our review provides a counterpoint to the current recommendation for low sodium intake and suggests that a specific low sodium intake target (e.g. <2.3 g/day) for individuals may be unfeasible, of uncertain effect on other dietary factors and of unproven effectiveness in reducing cardiovascular disease. We contend that current evidence, despite methodological limitations, suggests that most of the world's population consume a moderate range of dietary sodium (2.3-4.6g/day; 1-2 teaspoons of salt) that is not associated with increased cardiovascular risk, and that the risk of cardiovascular disease increases when sodium intakes exceed 5 g/day. While current evidence has limitations, and there are differences of opinion in interpretation of existing evidence, it is reasonable, based upon observational studies, to suggest a population-level mean target of <5 g/day in populations with mean sodium intake of >5 g/day, while awaiting the results of large randomized controlled trials of sodium reduction on incidence of cardiovascular events and mortality.",
+     "pmid": "33011774",
+     "doi": "10.1093/eurheartj/ehaa586",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2020,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/33011774/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "narrative_review",
+     "quality_score": 0.35,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_36456046",
+     "source": "pubmed",
+     "title": "Dietary Salt Intake Preferences and the Risk of Cardiovascular Disease.",
+     "abstract": "",
+     "pmid": "36456046",
+     "doi": "10.1016/j.jacc.2022.10.005",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2022,
+     "publication_type": [
+      "Editorial",
+      "Comment"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/36456046/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "opinion",
+     "quality_score": 0.1,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_38739172",
+     "source": "pubmed",
+     "title": "Metabolomics signature of blood pressure salt sensitivity and its link to cardiovascular disease: A dietary salt-intervention trial.",
+     "abstract": "Individuals with a high degree of salt sensitivity (SS) have a greater risk of cardiovascular disease (CVD), but whether SS fosters CVD by influencing metabolomics homeostasis remains unclear. This study aimed to reveal the role of the SS-related metabolomics signature in the development of CVDs, based on the MetaSalt study, which was a dietary salt-intervention trial conducted at four centers in China in 2019. A total of 528 participants were recruited and underwent 3 days of baseline observations, a 10-day low-salt intervention, and a 10-day high-salt intervention. Plasma untargeted metabolomics, lipidomics, and BP measurements were scheduled at each stage. Participants were grouped into extreme SS, moderate SS, and salt-resistant (SR) individuals according to their BP responses to salt. Linear mixed models were used to identify SS-related metabolites and determine the relationship between the SS-related metabolomics signature and arterial stiffness. Mendelian randomization (MR) analyses were applied to establish the causal pathways among the SS-related metabolites, BP, and CVDs. Among the 713 metabolites, 467 were significantly changed after the high-salt intervention. Among them, the changes in 30 metabolites from the low-salt to the high-salt intervention differed among the SS groups. Of the remaining nonsalt-related metabolites, the baseline levels of 11 metabolites were related to SS. These 41 metabolites explained 23% of the variance in SS. Moreover, SS and its metabolomics signature were positively correlated with arterial stiffness. MR analyses demonstrated that the SS-related metabolites may affect CVD risk by altering BP, indicating that the increase in BP was the consequence of the changes in SS-related metabolites rather than the cause. Our study revealed that the metabolomics signature of SS individuals differs from that of SR individuals and that the changes in SS-related metabolites may increase arterial stiffness and foster CVDs. This study provides insight into understanding the biology and targets of SS and its role in CVDs.",
+     "pmid": "38739172",
+     "doi": "10.1007/s11427-023-2507-9",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2024,
+     "publication_type": [
+      "Journal Article"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/38739172/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "other",
+     "quality_score": 0.1,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_37721034",
+     "source": "pubmed",
+     "title": "Salt Sensitivity: Causes, Consequences, and Recent Advances.",
+     "abstract": "Salt (sodium chloride) is an essential nutrient required to maintain physiological functions. However, for most people, daily salt intake far exceeds their physiological need and is habitually greater than recommended upper thresholds. Excess salt intake leads to elevation in blood pressure which drives cardiovascular morbidity and mortality. Indeed, excessive salt intake is estimated to be responsible for \u22485 million deaths per year globally. For approximately one-third of otherwise healthy individuals (and >50% of those with hypertension), the effect of salt intake on blood pressure elevation is exaggerated; such people are categorized as salt sensitive and salt sensitivity of blood pressure is considered an independent risk factor for cardiovascular disease and death. The prevalence of salt sensitivity is higher in women than in men and, in both, increases with age. This narrative review considers the foundational concepts of salt sensitivity and the underlying effector systems that cause salt sensitivity. We also consider recent updates in preclinical and clinical research that are revealing new modifying factors that determine the blood pressure response to high salt intake.",
+     "pmid": "37721034",
+     "doi": "10.1161/hypertensionaha.123.17959",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2024,
+     "publication_type": [
+      "Journal Article",
+      "Review",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/37721034/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": 0.8367,
+     "study_type": "narrative_review",
+     "quality_score": 0.35,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_40086509",
+     "source": "pubmed",
+     "title": "Sodium.",
+     "abstract": "Sodium is the major cation of extracellular fluid (ECF) and, because of its osmotic action, is involved in the regulation of ECF volume and blood pressure. The ingested sodium is almost completely absorbed by the intestine. Circulating sodium is filtered by the glomeruli and its renal tubular handling is responsible for the maintenance of sodium and water balance. Sodium deficiency is rare and occurs only in some medical conditions. High dietary sodium intake is associated with ECF volume expansion and is a leading risk factor for hypertension and cardiovascular diseases; it also adds to risk of gastric cancer, nephrolithiasis, reduced bone mineral density, and osteoporosis. Salt added while cooking and eating, the amount added during food transformation, and that occurring naturally in foods contribute to the dietary sodium intake. Additional small amounts of sodium may be occasionally acquired through oral or parenteral medications. The National Academy of Science, Engineering and Medicine set an adequate intake of 1.5 g and a chronic disease risk reduction intake of 2.3 g of sodium per day for the adult population. The European Food Safety Authority and the World Health Organization set a standard dietary target for sodium of 2 g/d (5 g of salt). Recent studies highlighted the relevance of salt intake reduction for all-cause mortality risk and, in particular, for stroke. Sodium also appears to affect the activity of the immune system by influencing the gut microbiota composition and the macrophage and lymphocyte differentiation.",
+     "pmid": "40086509",
+     "doi": "10.1016/j.advnut.2025.100409",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2025,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/40086509/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": 0.8367,
+     "study_type": "narrative_review",
+     "quality_score": 0.35,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_40613399",
+     "source": "pubmed",
+     "title": "Lowering Sodium Intake: Reduction and Substitution for Cardiovascular Health.",
+     "abstract": "Clinical and epidemiological evidence supports sodium reduction as an effective strategy to lower blood pressure and reduce the risk of stroke, cardiovascular disease, and overall mortality. High sodium (salt) intake is a well-established contributor to elevated blood pressure and adverse cardiovascular outcomes. The World Health Organization (WHO) recommends that adults should consume less than 5 g of table salt per day; however, the global average intake is estimated at around 10.78 g/day. The primary sources of dietary sodium vary by region: in high-income countries, the majority of salt intake comes from processed foods and meals prepared outside the home, while in many low-and middle-income countries, sodium is mainly added during home cooking or comes from condiments such as soy sauce and fish sauce. This review discusses the effects of high dietary sodium on blood pressure and vascular health, along with global consumption trends, regional disparities, and key nutritional sources. In addition to reducing sodium, adopting a salt-sensitive, whole-diet approach, such as increasing fruit and vegetable intake to boost potassium, can further protect cardiovascular health. Potassium-enriched, low-sodium salt substitutes are increasingly used in food production. Emerging strategies, including flavor enhancers, bitter blockers, spatial salt distribution, and microencapsulation, also help enhance saltiness perception while lowering sodium content. The review also summarizes national guidelines and those by the WHO, highlights selected country strategies, and calls for coordinated global and national efforts to reduce sodium intake and improve cardiovascular health worldwide.",
+     "pmid": "40613399",
+     "doi": "10.31083/ijvnr36289",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2025,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/40613399/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": 0.8367,
+     "study_type": "narrative_review",
+     "quality_score": 0.35,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_38126623",
+     "source": "pubmed",
+     "title": "Management of nocturnal hypertension: An expert consensus document from Chinese Hypertension League.",
+     "abstract": "Nocturnal hypertension is highly prevalent among Chinese and Asian populations, which is mainly attributed to high salt intake and high salt sensitivity. Nocturnal hypertension increases the risk of cardiovascular and all-cause mortality, independent of daytime blood pressure (BP). However, it can usually be detected by 24-h ambulatory BP monitoring, rather than routine office or home BP measurement, thus is often underdiagnosed in clinical practice. Currently, no specific guidance is available for the management of nocturnal hypertension in China or worldwide. Experts from the Chinese Hypertension League summarized the epidemiologic and pathophysiologic characteristics and clinical phenotype of nocturnal hypertension and provided consensus recommendations on optimal management of nocturnal hypertension, with the goal of maximally reducing the cardiovascular disease risks. In this consensus document, 24-h ABPM is recommended for screening and diagnosis of nocturnal hypertension, especially in the elderly, patients with diabetes, chronic kidney diseases, obstructive sleep apnea and other conditions prone to high nocturnal BP. Lifestyle modifications including salt intake restriction, exercise, weight loss, sleep improvement, and mental stress relief are recommended. Long-acting antihypertensive medications are preferred for nocturnal and 24-h BP control. Some newly developed agents, renal denervation, and other device-based therapy on nocturnal BP reduction are evaluated.",
+     "pmid": "38126623",
+     "doi": "10.1111/jch.14757",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2024,
+     "publication_type": [
+      "Journal Article",
+      "Consensus Statement"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/38126623/",
+     "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "relevance_score": 0.7,
+     "study_type": "other",
+     "quality_score": 0.1,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    }
+   ],
+   "c2": [
+    {
+     "evidence_id": "ev_35215506",
+     "source": "pubmed",
+     "title": "The Effect of Carbohydrate Intake on Strength and Resistance Training Performance: A Systematic Review.",
+     "abstract": "High carbohydrate intakes are commonly recommended for athletes of various sports, including strength trainees, to optimize performance. However, the effect of carbohydrate intake on strength training performance has not been systematically analyzed. A systematic literature search was conducted for trials that manipulated carbohydrate intake, including supplements, and measured strength, resistance training or power either acutely or after a diet and strength training program. Studies were categorized as either (1) acute supplementation, (2) exercise-induced glycogen depletion with subsequent carbohydrate manipulation, (3) short-term (2-7 days) carbohydrate manipulation or (4) changes in performance after longer-term diet manipulation and strength training. Forty-nine studies were included: 19 acute, six glycogen depletion, seven short-term and 17 long-term studies. Participants were strength trainees or athletes (39 studies), recreationally active (six studies) or untrained (four studies). Acutely, higher carbohydrate intake did not improve performance in 13 studies and enhanced performance in six studies, primarily in those with fasted control groups and workouts with over 10 sets per muscle group. One study found that a carbohydrate meal improved performance compared to water but not in comparison to a sensory-matched placebo breakfast. There was no evidence of a dose-response effect. After glycogen depletion, carbohydrate supplementation improved performance in three studies compared to placebo, in particular during bi-daily workouts, but not in research with isocaloric controls. None of the seven short-term studies found beneficial effects of carbohydrate manipulation. Longer-term changes in performance were not influenced by carbohydrate intake in 15 studies; one study favored the higher- and one the lower-carbohydrate condition. Carbohydrate intake per se is unlikely to strength training performance in a fed state in workouts consisting of up to 10 sets per muscle group. Performance during higher volumes may benefit from carbohydrates, but more studies with isocaloric control groups, sensory-matched placebos and locally measured glycogen depletion are needed.",
+     "pmid": "35215506",
+     "doi": "10.3390/nu14040856",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2022,
+     "publication_type": [
+      "Journal Article",
+      "Systematic Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/35215506/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "systematic_review",
+     "quality_score": 1.0,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_30122560",
+     "source": "pubmed",
+     "title": "Dietary carbohydrate intake and mortality: a prospective cohort study and meta-analysis.",
+     "abstract": "BACKGROUND: Low carbohydrate diets, which restrict carbohydrate in favour of increased protein or fat intake, or both, are a popular weight-loss strategy. However, the long-term effect of carbohydrate restriction on mortality is controversial and could depend on whether dietary carbohydrate is replaced by plant-based or animal-based fat and protein. We aimed to investigate the association between carbohydrate intake and mortality.\nMETHODS: We studied 15 428 adults aged 45-64 years, in four US communities, who completed a dietary questionnaire at enrolment in the Atherosclerosis Risk in Communities (ARIC) study (between 1987 and 1989), and who did not report extreme caloric intake (<600 kcal or >4200 kcal per day for men and <500 kcal or >3600 kcal per day for women). The primary outcome was all-cause mortality. We investigated the association between the percentage of energy from carbohydrate intake and all-cause mortality, accounting for possible non-linear relationships in this cohort. We further examined this association, combining ARIC data with data for carbohydrate intake reported from seven multinational prospective studies in a meta-analysis. Finally, we assessed whether the substitution of animal or plant sources of fat and protein for carbohydrate affected mortality.\nFINDINGS: During a median follow-up of 25 years there were 6283 deaths in the ARIC cohort, and there were 40 181 deaths across all cohort studies. In the ARIC cohort, after multivariable adjustment, there was a U-shaped association between the percentage of energy consumed from carbohydrate (mean 48\u00b79%, SD 9\u00b74) and mortality: a percentage of 50-55% energy from carbohydrate was associated with the lowest risk of mortality. In the meta-analysis of all cohorts (432 179 participants), both low carbohydrate consumption (<40%) and high carbohydrate consumption (>70%) conferred greater mortality risk than did moderate intake, which was consistent with a U-shaped association (pooled hazard ratio 1\u00b720, 95% CI 1\u00b709-1\u00b732 for low carbohydrate consumption; 1\u00b723, 1\u00b711-1\u00b736 for high carbohydrate consumption). However, results varied by the source of macronutrients: mortality increased when carbohydrates were exchanged for animal-derived fat or protein (1\u00b718, 1\u00b708-1\u00b729) and mortality decreased when the substitutions were plant-based (0\u00b782, 0\u00b778-0\u00b787).\nINTERPRETATION: Both high and low percentages of carbohydrate diets were associated with increased mortality, with minimal risk observed at 50-55% carbohydrate intake. Low carbohydrate dietary patterns favouring animal-derived protein and fat sources, from sources such as lamb, beef, pork, and chicken, were associated with higher mortality, whereas those that favoured plant-derived protein and fat intake, from sources such as vegetables, nuts, peanut butter, and whole-grain breads, were associated with lower mortality, suggesting that the source of food notably modifies the association between carbohydrate intake and mortality.\nFUNDING: National Institutes of Health.",
+     "pmid": "30122560",
+     "doi": "10.1016/s2468-2667(18)30135-x",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2018,
+     "publication_type": [
+      "Journal Article",
+      "Meta-Analysis",
+      "Research Support, N.I.H., Extramural"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/30122560/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "systematic_review",
+     "quality_score": 1.0,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_39786965",
+     "source": "pubmed",
+     "title": "Carbohydrate ingestion eliminates hypoglycemia and improves endurance exercise performance in triathletes adapted to very low- and high-carbohydrate isocaloric diets.",
+     "abstract": "Very-low-carbohydrate diets (LCHF; <50 g/day) have been debated for their potential to lower pre-exercise muscle and liver glycogen stores and metabolic efficiency, risking premature fatigue. It is also hypothesized that carbohydrate ingestion during prolonged exercise delays fatigue by increasing carbohydrate oxidation, thereby sparing muscle glycogen. Leveraging a randomized crossover design, we evaluated performance during strenuous time-to-exhaustion (70% V\u0307o2max) tests in trained triathletes following 6-wk high-carbohydrate (HCLF, 380 g/day) or very-low-carbohydrate (LCHF, 40 g/day) diets to determine 1) if adoption of the LCHF diet impairs time-to-exhaustion performance, 2) whether carbohydrate ingestion (10 g/h) 6-12\u00d7 lower than current CHO fueling recommendations during low glycogen availability (>15-h pre-exercise overnight fast and/or LCHF diet) improves time to exhaustion by preventing exercise-induced hypoglycemia (EIH; <3.9 mmol/L; <70 mg/dL), and 3) the \"keto-adaptation\" time course through continuous substrate monitoring while caloric intake, physical activity, and fat-free mass are maintained. Time-to-exhaustion performance was similar across both dietary interventions. Minimal carbohydrate supplementation prevented EIH and significantly increased time to exhaustion equivalently in LCHF and HCLF interventions (22%). The LCHF diet significantly lowered 24-h glucose concentrations, which normalized after 4 wk, at the same timepoint peak blood ketone (R-\u03b2-hydroxybutyrate) concentrations normalized. These findings 1) demonstrate that an LCHF diet sustains strenuous endurance performance, 2) establish that minimal carbohydrate supplementation was sufficient to enhance exercise performance on LCHF and HCLF diets by mitigating EIH, and 3) indicate that a minimum 4-wk adaptation period to an LCHF diet is required to ensure normalization of metabolic homeostasis, glycemic control, and exercise performance.NEW & NOTEWORTHY This study examines the belief that very-low-carbohydrate diets (LCHF) impair prolonged exercise performance during strenuous exercise by comparing it with high-carbohydrate diets in competitive triathletes. After 6-wk diet adaptation, time-to-exhaustion (TTE) performance was similar across both diets. Minimal carbohydrate supplementation (10 g/h) during exercise eliminated exercise-induced hypoglycemia and improved TTE by 22% on both diets. These findings suggest that LCHF diets do not impair exercise performance and require a 4-wk adaptation period for metabolic homeostasis.",
+     "pmid": "39786965",
+     "doi": "10.1152/ajpcell.00583.2024",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2025,
+     "publication_type": [
+      "Journal Article",
+      "Randomized Controlled Trial",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/39786965/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "rct",
+     "quality_score": 0.9,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_21660838",
+     "source": "pubmed",
+     "title": "Carbohydrates for training and competition.",
+     "abstract": "An athlete's carbohydrate intake can be judged by whether total daily intake and the timing of consumption in relation to exercise maintain adequate carbohydrate substrate for the muscle and central nervous system (\"high carbohydrate availability\") or whether carbohydrate fuel sources are limiting for the daily exercise programme (\"low carbohydrate availability\"). Carbohydrate availability is increased by consuming carbohydrate in the hours or days prior to the session, intake during exercise, and refuelling during recovery between sessions. This is important for the competition setting or for high-intensity training where optimal performance is desired. Carbohydrate intake during exercise should be scaled according to the characteristics of the event. During sustained high-intensity sports lasting ~1 h, small amounts of carbohydrate, including even mouth-rinsing, enhance performance via central nervous system effects. While 30-60 g \u00b7 h(-1) is an appropriate target for sports of longer duration, events >2.5 h may benefit from higher intakes of up to 90 g \u00b7 h(-1). Products containing special blends of different carbohydrates may maximize absorption of carbohydrate at such high rates. In real life, athletes undertake training sessions with varying carbohydrate availability. Whether implementing additional \"train-low\" strategies to increase the training adaptation leads to enhanced performance in well-trained individuals is unclear.",
+     "pmid": "21660838",
+     "doi": "10.1080/02640414.2011.585473",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2011,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/21660838/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "narrative_review",
+     "quality_score": 0.35,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_36173597",
+     "source": "pubmed",
+     "title": "New Horizons in Carbohydrate Research and Application for Endurance Athletes.",
+     "abstract": "The importance of carbohydrate as a fuel source for exercise and athletic performance is well established. Equally well developed are dietary carbohydrate intake guidelines for endurance athletes seeking to optimize their performance. This narrative review provides a contemporary perspective on research into the role of, and application of, carbohydrate in the diet of endurance athletes. The review discusses how recommendations could become increasingly refined and what future research would further our understanding of how to optimize dietary carbohydrate intake to positively impact endurance performance. High carbohydrate availability for prolonged intense exercise and competition performance remains a priority. Recent advances have been made on the recommended type and quantity of carbohydrates to be ingested before, during and after intense exercise bouts. Whilst reducing carbohydrate availability around selected exercise bouts to augment metabolic adaptations to training is now widely recommended, a contemporary view of the so-called train-low approach based on the totality of the current evidence suggests limited utility for enhancing performance benefits from training. Nonetheless, such studies have focused importance on periodizing carbohydrate intake based on, among other factors, the goal and demand of training or competition. This calls for a much more personalized approach to carbohydrate recommendations that could be further supported through future research and technological innovation (e.g., continuous glucose monitoring). Despite more than a century of investigations into carbohydrate nutrition, exercise metabolism and endurance performance, there are numerous new important discoveries, both from an applied and mechanistic perspective, on the horizon.",
+     "pmid": "36173597",
+     "doi": "10.1007/s40279-022-01757-1",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2022,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/36173597/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "narrative_review",
+     "quality_score": 0.35,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_24791914",
+     "source": "pubmed",
+     "title": "A step towards personalized sports nutrition: carbohydrate intake during exercise.",
+     "abstract": "There have been significant changes in the understanding of the role of carbohydrates during endurance exercise in recent years, which allows for more specific and more personalized advice with regard to carbohydrate ingestion during exercise. The new proposed guidelines take into account the duration (and intensity) of exercise and advice is not restricted to the amount of carbohydrate; it also gives direction with respect to the type of carbohydrate. Studies have shown that during exercise lasting approximately 1 h in duration, a mouth rinse or small amounts of carbohydrate can result in a performance benefit. A single carbohydrate source can be oxidized at rates up to approximately 60 g/h and this is the recommendation for exercise that is more prolonged (2-3 h). For ultra-endurance events, the recommendation is higher at approximately 90 g/h. Carbohydrate ingested at such high ingestion rates must be a multiple transportable carbohydrates to allow high oxidation rates and prevent the accumulation of carbohydrate in the intestine. The source of the carbohydrate may be a liquid, semisolid, or solid, and the recommendations may need to be adjusted downward when the absolute exercise intensity is low and thus carbohydrate oxidation rates are also low. Carbohydrate intake advice is independent of body weight as well as training status. Therefore, although these guidelines apply to most athletes, they are highly dependent on the type and duration of activity. These new guidelines may replace the generic existing guidelines for carbohydrate intake during endurance exercise.",
+     "pmid": "24791914",
+     "doi": "10.1007/s40279-014-0148-z",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2014,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/24791914/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "narrative_review",
+     "quality_score": 0.35,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_28924296",
+     "source": "pubmed",
+     "title": "Applied carbohydrate counting.",
+     "abstract": "Carbohydrate counting or \"carb counting\" is a meal planning technique for persons with diabetes for managing blood glucose levels by tracking the grams of carbohydrate consumed at meals. With better patient education and awareness, carb counting has become an important step in diabetes management. People with all types of diabetes can be benefited with this approach via improved glycaemic control and quality of life. In the first part of this review basic principles of carbohydrate counting, its application in clinical practice and exchange lists pertaining primarily to South Asian populations have been discussed. Advanced carb counting involving equations which help in better understanding of insulin-to-carbohydrate ratio and insulin dose adjustment are also included in this review.",
+     "pmid": "28924296",
+     "doi": null,
+     "document_id": null,
+     "page": null,
+     "publication_year": 2017,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/28924296/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "narrative_review",
+     "quality_score": 0.35,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_37057671",
+     "source": "pubmed",
+     "title": "Low carbohydrate availability impairs hypertrophy and anaerobic performance.",
+     "abstract": "PURPOSE OF REVIEW: Highlight contemporary evidence examining the effects of carbohydrate restriction on the intracellular regulation of muscle mass and anaerobic performance.\nRECENT FINDINGS: Low carbohydrate diets increase fat oxidation and decrease fat mass. Emerging evidence suggests that dietary carbohydrate restriction increases protein oxidation, thereby limiting essential amino acid availability necessary to stimulate optimal muscle protein synthesis and promote muscle recovery. Low carbohydrate feeding for 24 h increases branched-chain amino acid (BCAA) oxidation and reduces myogenic regulator factor transcription compared to mixed-macronutrient feeding. When carbohydrate restriction is maintained for 8 to 12 weeks, the alterations in anabolic signaling, protein synthesis, and myogenesis likely contribute to limited hypertrophic responses to resistance training. The blunted hypertrophic response to resistance training when carbohydrate availability is low does not affect muscle strength, whereas persistently low muscle glycogen does impair anaerobic output during high-intensity sprint and time to exhaustion tests.\nSUMMARY: Dietary carbohydrate restriction increases BCAA oxidation and impairs muscle hypertrophy and anaerobic performance, suggesting athletes who need to perform high-intensity exercise should consider avoiding dietary strategies that restrict carbohydrate.",
+     "pmid": "37057671",
+     "doi": "10.1097/mco.0000000000000934",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2023,
+     "publication_type": [
+      "Review",
+      "Journal Article"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/37057671/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "narrative_review",
+     "quality_score": 0.35,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_40077786",
+     "source": "pubmed",
+     "title": "A Review of Carbohydrate Supplementation Approaches and Strategies for Optimizing Performance in Elite Long-Distance Endurance.",
+     "abstract": "Carbohydrate supplementation is a common practice among endurance athletes participating in long-distance competitions. However, glycogen storage regulation, in-competition blood glucose levels, and their relationship with athletic performance are influenced by multiple factors. This review summarizes the recent research progress on carbohydrate supplementation, addressing its applications in the pre-, during-, and post-competition phases. It explores variables that influence the effectiveness of carbohydrate supplementation and provides a summary of strategies, based on six key aspects: carbohydrate properties, multi-nutrient interactions, gastrointestinal function, individual differences (such as age and gender), environmental conditions, and psychological factors. The combination of different types, ratios, and concentrations of carbohydrates has been demonstrated to enhance the efficiency of carbohydrate digestion and absorption. The synergistic combination of protein, sodium, and caffeine intake demonstrates enhanced efficacy in carbohydrate supplementation strategies. Gastrointestinal tolerance training for carbohydrate supplementation has been identified as an effective measure to alleviate gastrointestinal discomfort during high-dose carbohydrate intake. The adjustment of the carbohydrate-to-fat ratio and the type of carbohydrate intake has been found to mitigate the impact of gender and menstrual cycles on glycogen storage and substrate utilization. Modifying the timing of glycogen storage and regulating the concentration and temperature of carbohydrate solutions during competition have been demonstrated to facilitate coping with the elevated energy expenditure and metabolic substrate shift from fat to carbohydrates, triggered by a combination of environmental and psychological factors, including special environmental and climatic conditions (e.g., high altitude, high temperature, high humidity, and cold) and emotional states (e.g., pre-competition stress and anxiety during the competition). To achieve precise carbohydrate supplementation for athletes in major events under various competitive environments, it is necessary to quantitatively assess the effects of carbohydrate supplementation, supported by mechanistic studies. This can be achieved by utilizing wearable devices to monitor the entire competition, coupled with data collection technologies, such as high-throughput profiling. Furthermore, emerging data analytics techniques, such as machine learning and causal inference, should be leveraged to refine supplementation strategies.",
+     "pmid": "40077786",
+     "doi": "10.3390/nu17050918",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2025,
+     "publication_type": [
+      "Journal Article",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/40077786/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "narrative_review",
+     "quality_score": 0.35,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    },
+    {
+     "evidence_id": "ev_20574242",
+     "source": "pubmed",
+     "title": "Carbohydrate and exercise performance: the role of multiple transportable carbohydrates.",
+     "abstract": "PURPOSE OF REVIEW: Carbohydrate feeding has been shown to be ergogenic, but recently substantial advances have been made in optimizing the guidelines for carbohydrate intake during prolonged exercise.\nRECENT FINDINGS: It was found that limitations to carbohydrate oxidation were in the absorptive process most likely because of a saturation of carbohydrate transporters. By using a combination of carbohydrates that use different intestinal transporters for absorption it was shown that carbohydrate delivery and oxidation could be increased. Studies demonstrated increases in exogenous carbohydrate oxidation rates of up to 65% of glucose: fructose compared with glucose only. Exogenous carbohydrate oxidation rates reach values of 1.75 g/min whereas previously it was thought that 1 g/min was the absolute maximum. The increased carbohydrate oxidation with multiple transportable carbohydrates was accompanied by increased fluid delivery and improved oxidation efficiency, and thus the likelihood of gastrointestinal distress may be diminished. Studies also demonstrated reduced fatigue and improved exercise performance with multiple transportable carbohydrates compared with a single carbohydrate.\nSUMMARY: Multiple transportable carbohydrates, ingested at high rates, can be beneficial during endurance sports in which the duration of exercise is 3 h or more.",
+     "pmid": "20574242",
+     "doi": "10.1097/mco.0b013e328339de9f",
+     "document_id": null,
+     "page": null,
+     "publication_year": 2010,
+     "publication_type": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Review"
+     ],
+     "source_url": "https://pubmed.ncbi.nlm.nih.gov/20574242/",
+     "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "relevance_score": 1.0,
+     "study_type": "narrative_review",
+     "quality_score": 0.35,
+     "publisher": null,
+     "retrieved_at": null,
+     "snapshot_sha256": null
+    }
+   ],
+   "c3": []
+  },
+  "search_trail": {
+   "c1": [
+    {
+     "round": 1,
+     "pubmed_query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])",
+     "pubmed_hits": 20,
+     "pubmed_records": 20,
+     "from_cache": true,
+     "pubmed_error": null,
+     "references": [],
+     "reference_passages": null,
+     "reference_error": null,
+     "new_records": 20,
+     "query_kind": "intervention_outcome",
+     "ladder_exhausted": false,
+     "plan": {
+      "language": "es",
+      "translated": false,
+      "search_text": null,
+      "translation_error": null,
+      "context_concept": null,
+      "citation": null,
+      "assistant_used": false,
+      "assistant_error": null,
+      "no_query_reason": null,
+      "rungs": [
+       {
+        "kind": "intervention_outcome",
+        "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab]) AND (\"Cardiovascular Diseases\"[MeSH Terms] OR \"cardiovascular disease\"[tiab] OR \"heart disease\"[tiab])"
+       },
+       {
+        "kind": "intervention_only",
+        "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])"
+       }
+      ]
+     }
+    }
+   ],
+   "c2": [
+    {
+     "round": 1,
+     "pubmed_query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])",
+     "pubmed_hits": 20,
+     "pubmed_records": 20,
+     "from_cache": true,
+     "pubmed_error": null,
+     "references": [],
+     "reference_passages": null,
+     "reference_error": null,
+     "new_records": 20,
+     "query_kind": "intervention_only",
+     "ladder_exhausted": false,
+     "plan": {
+      "language": "es",
+      "translated": false,
+      "search_text": null,
+      "translation_error": null,
+      "context_concept": null,
+      "citation": null,
+      "assistant_used": false,
+      "assistant_error": null,
+      "no_query_reason": null,
+      "rungs": [
+       {
+        "kind": "intervention_only",
+        "query": "(\"Dietary Carbohydrates\"[MeSH Terms] OR carbohydrate[tiab])"
+       }
+      ]
+     }
+    }
+   ],
+   "c3": [
+    {
+     "round": 1,
+     "pubmed_query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])",
+     "pubmed_hits": 20,
+     "pubmed_records": 20,
+     "from_cache": true,
+     "pubmed_error": null,
+     "references": [
+      {
+       "source_id": "ncbi_bookshelf",
+       "source_name": "NCBI Bookshelf",
+       "publisher": "NCBI (U.S. National Library of Medicine)",
+       "site": "eutils.ncbi.nlm.nih.gov",
+       "item": "search",
+       "mode": "search",
+       "outcome": "no_results",
+       "url": null
+      }
+     ],
+     "reference_passages": 0,
+     "reference_error": null,
+     "new_records": 20,
+     "query_kind": "intervention_only",
+     "ladder_exhausted": false,
+     "plan": {
+      "language": "es",
+      "translated": false,
+      "search_text": null,
+      "translation_error": null,
+      "context_concept": null,
+      "citation": null,
+      "assistant_used": false,
+      "assistant_error": null,
+      "no_query_reason": null,
+      "rungs": [
+       {
+        "kind": "intervention_only",
+        "query": "(\"Sodium Chloride, Dietary\"[MeSH Terms] OR \"salt intake\"[tiab] OR \"sodium intake\"[tiab])"
+       }
+      ]
+     }
+    },
+    {
+     "round": 2,
+     "pubmed_query": null,
+     "pubmed_hits": null,
+     "pubmed_records": null,
+     "from_cache": null,
+     "pubmed_error": null,
+     "references": [],
+     "reference_passages": null,
+     "reference_error": null,
+     "new_records": 0,
+     "query_kind": null,
+     "ladder_exhausted": true,
+     "plan": null
+    }
+   ]
+  },
+  "found_study_evidence": {
+   "c3": []
+  },
+  "find_study_trail": {
+   "c3": {
+    "reason": "nothing_on_topic",
+    "round": 1,
+    "web_queries": [
+     "el cuerpo no puede fabricar sal, az\u00facar estudio",
+     "body cannot synthesize sodium but can produce glucose endogenous study"
+    ],
+    "web_searches": 2,
+    "candidates": [],
+    "verified": 0,
+    "model": "claude-haiku-5-5",
+    "cost_usd": 0.022588,
+    "latency_ms": 4213,
+    "error": null
+   }
+  },
+  "verification_results": {
+   "c1": {
+    "claim_id": "c1",
+    "verdict": "CONTRADICTED",
+    "supporting_evidence_ids": [],
+    "contradicting_evidence_ids": [
+     "ev_41243115",
+     "ev_32057379",
+     "ev_40613399"
+    ],
+    "explanation": "An umbrella review of meta-analyses and randomised trials found that eating less salt lowers blood pressure rather than raising it (systolic about \u22123.4 mmHg). It also found that lower sodium intake was linked to lower cardiovascular and all-cause mortality, with no sign of extra heart risk. One review (ev_33011774) argues that the benefit of very low sodium targets over moderate intake is unproven, but it does not show that cutting salt raises blood pressure or causes heart attacks.",
+    "limitations": [
+     "No study tests removing salt completely; the trials test reducing it to low or moderate levels",
+     "Evidence that low sodium may carry its own risk (a J-shaped curve) is debated and is not directly covered in the retrieved papers",
+     "The cardiovascular findings come mostly from observational studies, not trials measuring heart-attack outcomes"
+    ],
+    "raw_confidence": 0.65,
+    "model": "claude-opus-5-5",
+    "prompt_version": "verify_v3"
+   },
+   "c2": {
+    "claim_id": "c2",
+    "verdict": "INSUFFICIENT_EVIDENCE",
+    "supporting_evidence_ids": [],
+    "contradicting_evidence_ids": [],
+    "explanation": "None of the retrieved papers tests whether sugar from refined carbohydrates causes hypertension or prediabetes. Most cover carbohydrates and athletic performance. One looks at total carbohydrate intake and death rates, and one covers carb counting in diabetes management.",
+    "limitations": [
+     "No paper looks at blood pressure or prediabetes as an outcome",
+     "No paper separates refined carbohydrates or added sugar from total carbohydrate intake",
+     "The retrieved evidence is mostly about sports nutrition and is off-topic"
+    ],
+    "raw_confidence": 0.85,
+    "model": "claude-opus-5-5",
+    "prompt_version": "verify_v3"
+   },
+   "c3": {
+    "claim_id": "c3",
+    "verdict": "INSUFFICIENT_EVIDENCE",
+    "supporting_evidence_ids": [],
+    "contradicting_evidence_ids": [],
+    "explanation": "",
+    "limitations": [
+     "no evidence was retrieved for this claim"
+    ],
+    "raw_confidence": null,
+    "model": null,
+    "prompt_version": "verify_v3"
+   }
+  },
+  "verification_revisions": {
+   "c1": 1,
+   "c2": 1
+  },
+  "critic_results": {
+   "c1": {
+    "claim_id": "c1",
+    "decision": "REVISE_VERIFICATION",
+    "issues": [
+     "Claim fidelity issue: The claim is about eliminating all salt, not just reducing it, which is not directly addressed by the evidence.",
+     "Relevance issue: None of the cited evidence directly addresses the complete elimination of salt and its effects on blood pressure and myocardial infarction.",
+     "Citation integrity issue: ev_41243115, ev_32057379, and ev_40613399 discuss salt reduction, not elimination, and do not support the claim that eliminating salt raises blood pressure or increases heart attack risk.",
+     "Strength issue: The verdict of CONTRADICTED is too strong given the evidence does not directly address the claim of complete salt elimination.",
+     "revision budget exhausted (1 of 1): the claim abstains and goes to review"
+    ],
+    "suggested_queries": [],
+    "requires_review": false,
+    "reviewed_attempt": 1,
+    "reviewed_revision": 1,
+    "checks": [
+     "model"
+    ],
+    "model": "gpt-4o-2024-08-06",
+    "prompt_version": "critic_v1"
+   },
+   "c2": {
+    "claim_id": "c2",
+    "decision": "REVISE_VERIFICATION",
+    "issues": [
+     "Claim fidelity issue: The claim is about sugar from refined carbohydrates causing hypertension or prediabetes, but the explanation and evidence focus on carbohydrates and athletic performance, not the specific health conditions mentioned.",
+     "Relevance issue: None of the cited papers directly address the claim about sugar from refined carbohydrates causing hypertension or prediabetes.",
+     "revision budget exhausted (1 of 1): the claim abstains and goes to review"
+    ],
+    "suggested_queries": [],
+    "requires_review": false,
+    "reviewed_attempt": 1,
+    "reviewed_revision": 1,
+    "checks": [
+     "model"
+    ],
+    "model": "gpt-4o-2024-08-06",
+    "prompt_version": "critic_v1"
+   },
+   "c3": {
+    "claim_id": "c3",
+    "decision": "RETRIEVE_MORE",
+    "issues": [
+     "every retrieved paper was filtered out as off-topic; search again",
+     "search budget exhausted (3 of 3 rounds): the claim abstains and goes to review"
+    ],
+    "suggested_queries": [],
+    "requires_review": false,
+    "reviewed_attempt": 3,
+    "reviewed_revision": 0,
+    "checks": [
+     "code:relevance"
+    ],
+    "model": null,
+    "prompt_version": "critic_v1"
+   }
+  },
+  "final_result": {
+   "video_id": "v114",
+   "classification": "CANNOT_RECOGNIZE",
+   "claim_ids": [
+    "c1"
+   ],
+   "evidence_ids": [],
+   "explanation": "The label is CANNOT RECOGNIZE. The deciding claim is the first claim, that eliminating all salt raises blood pressure and increases the chance of a heart attack. The speaker refutes this claim, but the evidence verdict is insufficient evidence. That means no cited evidence settles whether it is true, so the rules cannot confirm whether the speaker is correcting it or spreading it. No evidence IDs are cited for or against it. Needs review: the speaker may be debunking the first claim, which the evidence can't settle.",
+   "limitations": [
+    "c1: No study tests removing salt completely; the trials test reducing it to low or moderate levels",
+    "c1: Evidence that low sodium may carry its own risk (a J-shaped curve) is debated and is not directly covered in the retrieved papers",
+    "c1: The cardiovascular findings come mostly from observational studies, not trials measuring heart-attack outcomes",
+    "c1: the critic's objection was not resolved within the loop budget; verdict withheld (insufficient evidence)"
+   ],
+   "confidence": null,
+   "decision_rule": "refuted_unsettled",
+   "review_flags": [
+    "possible_debunk:c1"
+   ],
+   "model": "claude-sonnet-5-5",
+   "prompt_version": "explain_v2",
+   "misinfo_basis": null
+  },
+  "validation_errors": [
+   "quote_membership:analyze_stance:c1: stance rationale quotes 'they lied to us', which is not in the video",
+   "quote_membership:analyze_stance:c3: stance rationale quotes 'La sal es vida, el cuerpo [no] puede fabricar, sinembargo el azucar si', which is not in the video"
+  ],
+  "validation_attempts": 1,
+  "requires_human_review": true,
+  "review_reasons": [
+   "validation_failed:quote_membership:c1",
+   "validation_failed:quote_membership:c3",
+   "weak_evidence:c1",
+   "budget_exhausted:c1",
+   "budget_exhausted:c2",
+   "budget_exhausted:c3",
+   "judge:possible_debunk:c1"
+  ],
+  "review_status": "REVIEW_REQUIRED",
+  "persisted_result_ref": "artifacts/t66-v114/result.json",
+  "errors": []
+ }
+}

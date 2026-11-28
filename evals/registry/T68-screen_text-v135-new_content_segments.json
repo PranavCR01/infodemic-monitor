@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "run_group": "T68-screen-text-sanity",
+  "date": "2026-11-28",
+  "task": "T68",
+  "pipeline_step": "extract_ocr",
+  "split": "tune",
+  "synthetic": true,
+  "golden_set_ref": "research/claim-level/dataset/claims.csv (claim_source, start/end seconds) and transcripts/<id>.json (Whisper); tune videos v36, v135",
+  "models": [],
+  "ci95": null,
+  "cost_usd": 0.0,
+  "report_path": "evals/reports/T68/README.md",
+  "run_id": "T68-screen_text-v135-new_content_segments",
+  "variant": "as_labelled",
+  "metric_name": "new_content_segments_to_extraction",
+  "value": 2.0,
+  "n_items": 3,
+  "n_unit": "OCR segments sent to extraction (v135)",
+  "notes": "SYNTHETIC vision replies (mocked, hand-labelled). Sanity check on 2 tune videos, NOT an accuracy figure. Vision replies are mocked (backend/app/tests/fixtures/vision_ocr, synthetic, kinds assigned by hand by the T68 build), so this measures the routing code (frame planning, parser, collapse, subtitle match), not a model's labelling. models=[]: no model was called. No CI: 2 videos. v135 must gain no new claims: OCR segments bound for extraction whose words are not spoken in their window (<60% containment). After: 2 of 3 (cards '1% = 1000 ppm' and the 'Known carcinogen' explainer); pre-T68 reading of the same replies: 10 of 14. 11 documents and 15 subtitles no longer reach extraction; screen chars to extraction 4292 -> 238. Whether extraction turns the explainer card into a claim is untested."
+}

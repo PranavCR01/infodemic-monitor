@@ -62,6 +62,10 @@ REASON_TEXT: dict[str, str] = {
     # T67 (2): per claim; the claim did not decide the label
     "thin_contradiction": "The evidence against {claim} is too thin to decide the label on its own: fewer "
                           "than two papers on its topic and no review, trial or guideline.",
+    # T69: per claim; the claim did not decide the label (switch off by default)
+    "contradiction_context_mismatch": "The evidence against {claim} comes only from reviews or modelling "
+                                      "about a different population or exposure setting, so it did not "
+                                      "decide the label on its own.",
     # guardrails (§15)
     "prompt_injection_suspected": "Text in {source} looks like an attempt to instruct the system.",
     "guardrail": "A safety check stopped part of the analysis{on_claim}.",

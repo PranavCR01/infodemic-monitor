@@ -212,7 +212,7 @@ def test_filters(client):
     none = client.get("/v1/admin/evals?split=none", headers=ADMIN).json()
     assert none["total"] > 0 and all(it["split"] is None for it in none["items"])
     syn = client.get("/v1/admin/evals?synthetic=true", headers=ADMIN).json()
-    assert {it["task"] for it in syn["items"]} == {"T05", "T07"}
+    assert {"T05", "T07"} <= {it["task"] for it in syn["items"]}  # T68 adds synthetic-reply records
     steps = client.get("/v1/admin/evals?step=extract_claims,verify_claims", headers=ADMIN).json()
     assert {it["pipeline_step"] for it in steps["items"]} == {"extract_claims", "verify_claims"}
     t38 = client.get("/v1/admin/evals?task=T38", headers=ADMIN).json()

@@ -40,7 +40,7 @@ NodeFn = Callable[[PipelineState], dict]
 NODE_OUTPUTS: dict[str, frozenset[str]] = {
     r.LOAD_ARTIFACTS: frozenset({"artifacts"}),
     r.TRANSCRIBE_AUDIO: frozenset({"transcript_segments"}),
-    r.EXTRACT_OCR: frozenset({"ocr_segments"}),
+    r.EXTRACT_OCR: frozenset({"ocr_segments", "screen_documents"}),
     r.FUSE_MODALITIES: frozenset({"fused_segments"}),
     r.EXTRACT_CLAIMS: frozenset({"claims"}),
     r.ANALYZE_STANCE: frozenset({"stance_results"}),

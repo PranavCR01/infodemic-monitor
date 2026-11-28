@@ -293,7 +293,11 @@ def make_rerank_node(
                 reason = _find_study_reason(claim, reranked[cid], context, planner)
                 if reason is None or (reason == "nothing_on_topic" and cid in broadening):
                     continue
-                outcome = find_study.run(claim.claim_text, reason)
+                hints = _screen_hints(claim, state, reason)
+                # T68: documents shown on screen are a search hint, only when there are some,
+                # so a run without OCR documents makes the same call as before.
+                outcome = (find_study.run(claim.claim_text, reason, hints=hints) if hints
+                           else find_study.run(claim.claim_text, reason))
                 found[cid] = merge_evidence(found.get(cid, []), outcome.records)
                 study_trail[cid] = FindStudyTrail(
                     reason=reason, round=int(state.get("retrieval_attempts", {}).get(cid, 0)),
@@ -338,6 +342,17 @@ def make_rerank_node(
         return update
 
     return {r.RERANK_EVIDENCE: rerank_evidence}
+
+
+def _screen_hints(claim, state: PipelineState, reason: Optional[str] = None) -> list[str]:
+    """Notes of the documents shown on screen near the claim (T68; ``screen_text.hints_for``);
+    a claim that cites a study may use any document the video shows."""
+    docs = state.get("screen_documents") or []
+    if not docs:
+        return []
+    from app.core.extraction.screen_text import hints_for
+
+    return hints_for(claim.start_seconds, claim.end_seconds, docs, fallback_all=reason == "cites_study")
 
 
 def _find_study_reason(claim, kept: list, context: tuple[str, ...],
