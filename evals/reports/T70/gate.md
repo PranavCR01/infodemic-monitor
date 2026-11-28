@@ -1,6 +1,6 @@
 # T70 gate: claim context (offline, no model calls, $0)
 
-Code: `c5fdec5260990df4fcc60d10841f8da9817b6b2a`. Tune split only. Baseline = as shipped (T64; T67 change 1 on, 2 off, 3 on; T69 off).
+Code: `ca89eae29475218869bee5c49afcacfc782e2f68`. Tune split only. Baseline = as shipped (T64; T67 change 1 on, 2 off, 3 on; T69 off).
 A excluded: v21 (status 'not_run:budget_mid_video'). B evidence IDs not in the offline cache: 5.
 
 **Mocked:** the extract_v5 context items and topic, and the verify_v4 structured answers and the skin claim's verdict as meant are hand-written. **Recorded:** claims, stances, kept evidence, stored verdicts. **Real code:** extraction parsing and grounding, planner, verifier node, judge, review policy. PubMed is not called. None of this shows what a model would answer.
@@ -163,6 +163,6 @@ A excluded: v21 (status 'not_run:budget_mid_video'). B evidence IDs not in the o
 | 008c97a3 | 19 | 65.1 | 7.8 | 483.2 / 325.0 | ≤ 20.5 |
 | cf2ea579 | 13 | 95.2 | 8.9 | 462.8 / 325.0 | ≤ 20.5 |
 
-- 008c97a3: extraction request 6067 → 7304 tokens per video (+20%); verifier request 4798.3 tokens on average per claim, of which the verify_v4 system prompt and tool schema add 203.2 to every call (+7% as stated, +10% in context).
-- cf2ea579: extraction request 3993 → 5230 tokens per video (+31%); verifier request 5379.2 tokens on average per claim, of which the verify_v4 system prompt and tool schema add 203.2 to every call (+6% as stated, +9% in context).
+- 008c97a3: extraction request 6067 → 7304 tokens per video (+20%); verifier request 4798.3 tokens on average per claim; the longer verify_v4 system prompt alone adds 203.2 to every call (+7% as stated, +10% in context).
+- cf2ea579: extraction request 3993 → 5230 tokens per video (+31%); verifier request 5379.2 tokens on average per claim; the longer verify_v4 system prompt alone adds 203.2 to every call (+6% as stated, +9% in context).
 
