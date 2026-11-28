@@ -1,242 +1,148 @@
 # WHO Infodemic Monitor
 
-**Production-grade multimodal health misinformation detection for short-form video.**
+**Claim-level health misinformation checking for short-form video, with evidence from published research and a human in the loop.**
 
-![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Celery](https://img.shields.io/badge/Celery-5.3-37814A?style=flat-square&logo=celery&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Supabase-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-Upstash-DC382D?style=flat-square&logo=redis&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-14-000000?style=flat-square&logo=next.js&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-Auth_+_Storage-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
-![Railway](https://img.shields.io/badge/Railway-Deploy-0B0D0E?style=flat-square&logo=railway&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-Deploy-000000?style=flat-square&logo=vercel&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o-412991?style=flat-square&logo=openai&logoColor=white)
-![Anthropic](https://img.shields.io/badge/Anthropic-Claude-D4A843?style=flat-square&logo=anthropic&logoColor=white)
+Upload a TikTok, Reel or Short. The system finds the health claims the video makes, works out whether the speaker promotes or refutes each one, checks each claim against PubMed and trusted health sources, and turns those findings into one label for the video. When the evidence is too thin to decide, it says so and sends the case to a reviewer instead of guessing.
+
+Built for WHO representatives and public-health researchers who need fast, evidence-backed triage of viral health content.
+
+**Live:** [infodemic-monitor.vercel.app](https://infodemic-monitor.vercel.app) (sign-in required)
 
 ---
 
-## Overview
+## What a result looks like
 
-The WHO Infodemic Monitor analyses short-form videos (TikTok, Instagram Reels, YouTube Shorts) for health misinformation using a multimodal pipeline:
+For each video you get:
 
-1. **Transcription** — audio extracted via OpenAI Whisper or faster-whisper
-2. **OCR** — on-screen text captured via EasyOCR (optional, GPU)
-3. **Multimodal fusion** — transcript and visual text combined into a single grounded context
-4. **LLM classification** — GPT-4o or Claude reasons over the fused content and returns a structured verdict
-5. **PubMed grounding** — health claims in the transcript are queried against PubMed in parallel; supporting literature is attached to the result
+- **One label**, decided by written rules, never by a single model call:
 
-Results are stored in Supabase PostgreSQL, accessible through a Next.js dashboard with JWT-authenticated access.
+  | Label | Meaning |
+  |---|---|
+  | `MISINFO` | The video promotes a health claim the evidence contradicts, denies one it supports, or promotes an unproven remedy (shown as *MISINFO (unproven)*) |
+  | `NO_MISINFO` | At least one claim was checked and nothing false is promoted |
+  | `DEBUNKING` | The video raises a false claim in order to correct it |
+  | `CANNOT_RECOGNIZE` | The system can't reach a reliable label |
 
-Built for **WHO representatives and public health researchers** who need a rapid, evidence-backed triage tool for viral health content.
+- **Every claim**, with its timestamp, where it came from (speech or on-screen text), the speaker's stance (endorses, refutes, neutral) and a verdict (supported, contradicted, unsupported, mixed, insufficient evidence, not verifiable).
+- **The evidence behind each verdict**: the papers or official sources used, with study type, a plain-language explanation and the verdict's stated limitations.
+- **How the search was done**, per claim: the queries run, and the papers found and set aside.
+- **Review status.** Uncertain or high-risk results go to a reviewer queue. A label stays provisional until a person confirms or corrects it.
+
+There is no confidence percentage yet: the report says *Not yet calibrated* until calibration is measured on held-out data.
 
 ---
 
-## Key Features
+## How it works
 
-| Feature | Detail |
-|---|---|
-| **4-class label** | `MISINFO` · `NO_MISINFO` · `DEBUNKING` · `CANNOT_RECOGNIZE` |
-| **Confidence score** | 0–100% numeric confidence from the LLM |
-| **Natural language explanation** | Plain-English reasoning for every verdict |
-| **Evidence snippets** | Verbatim quotes from the transcript that drove the classification |
-| **PubMed citations** | Peer-reviewed papers linked to specific health claims, with direct PubMed URLs |
-| **Provider-agnostic** | Toggle between OpenAI and Anthropic via a single env var |
-| **JWT authentication** | Supabase Auth; all API routes require a valid Bearer token |
-| **Async job queue** | Celery + Upstash Redis; upload returns immediately, analysis runs in background |
-| **Polling dashboard** | Frontend polls every 5 s while a job is active, stops on terminal state |
+![The pipeline: 14 steps, 1 bounded loop, 2 supporting services](docs/images/target-pipeline.png)
+
+The pipeline is a LangGraph state graph (`backend/app/core/graph/`). It follows three rules: **code for facts, a model for judgment, a person when unsure.**
+
+| Step | Done by | What it does |
+|---|---|---|
+| Transcribe | Whisper | Timed speech segments |
+| On-screen text | Vision model, **off by default** | Frames sampled at scene changes. Text is sorted into subtitles, documents, claim cards and app interface, and only claim cards become claims |
+| Fuse | Code | One timeline of speech and on-screen text |
+| Extract claims | LLM | Every distinct, checkable health claim, once |
+| Stance | LLM | Does the speaker endorse, refute or just mention each claim? |
+| Plan and retrieve | Code (+ small LLM helper) | PubMed queries, trusted reference sources, find-the-cited-study, offline library fallback |
+| Rerank | Code | Keep the records that actually test the claim; study-type lookup |
+| Verify | LLM | Verdict per claim, citing only the retrieved evidence |
+| Critic | LLM + code checks | Challenges weak verdicts; a bounded loop back to retrieval |
+| Judge | Code (rules) | One video label from the claim stances and verdicts, plus review reasons |
+| Validate | Code | Schema, citation and consistency checks |
+| Human review | Person | Reviewer queue ordered by severity, with a blind first look for high-severity cases |
+
+The judge's rules are written down and tested. For example, *any claim the speaker endorses and the evidence contradicts → MISINFO*. The full rule table is in [`docs/target-system-design.md` §9](docs/target-system-design.md).
+
+Models are chosen per step in `backend/config/routing.yaml`, and the exact routing is stored with every result. New behaviour ships behind switches that default to off, so turning one on is a setting change and turning it off is a rollback.
 
 ---
 
 ## Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                         User (Browser)                          │
-└───────────────────────────┬─────────────────────────────────────┘
-                            │ HTTPS
-                            ▼
-┌───────────────────────────────────────┐
-│             Vercel (Frontend)         │
-│  Next.js 14 · App Router · Tailwind   │
-│                                       │
-│  /              Upload page           │
-│  /jobs          Job history dashboard │
-│  /jobs/[id]     Result detail         │
-└───────────────────────┬───────────────┘
-                        │ REST (Bearer JWT)
-                        ▼
-┌───────────────────────────────────────┐    ┌──────────────────────────┐
-│          Railway — API service        │    │   Railway — Worker svc   │
-│  FastAPI · Uvicorn · Alembic          │    │   Celery · faster-whisper│
-│                                       │───▶│   EasyOCR · OpenAI API   │
-│  POST /videos/upload                  │    │   Anthropic API          │
-│  POST /jobs/create                    │    │   PubMed E-utilities     │
-│  GET  /jobs                           │    └──────────┬───────────────┘
-│  GET  /jobs/{id}/result               │               │
-│  GET  /health                         │    ┌──────────▼───────────────┐
-└───────────────┬───────────────────────┘    │   Upstash Redis (TLS)    │
-                │                            │   Celery broker + backend│
-                │                            └──────────────────────────┘
-                │ asyncpg / psycopg2
-                ▼
-┌───────────────────────────────────────┐
-│            Supabase                   │
-│  PostgreSQL  — jobs, videos, results  │
-│  Storage     — raw video files        │
-│  Auth        — JWT issuer             │
-└───────────────────────────────────────┘
-```
-
-### Service responsibilities
-
-| Service | Platform | Role |
+| Component | Platform | Role |
 |---|---|---|
-| **Frontend** | Vercel | Next.js SSR dashboard + Supabase Auth |
-| **API** | Railway | FastAPI REST, DB migrations on startup |
-| **Worker** | Railway | Celery consumer — runs the full pipeline |
-| **Database + Storage + Auth** | Supabase | PostgreSQL, video blob storage, JWT |
-| **Message broker** | Upstash | Redis (TLS) — job queue between API and Worker |
+| Frontend | Vercel | Next.js 14 (App Router, TypeScript, Tailwind): upload, job list, result report, reviewer queue, research dashboard, admin evaluations page |
+| API | Railway | FastAPI: uploads, jobs, results, reviews, stats |
+| Worker | Railway | Celery: runs the pipeline graph |
+| Queue | Redis | Celery broker between the API and the worker |
+| Database, storage, auth | Supabase | Postgres (Alembic migrations), video storage, JWT auth |
+| Retrieval MCP server | Optional service | The same retrieval tools, shared with other teams |
 
----
-
-## Contributing
-
-If you are a team member joining this project, start here:
-
-**[CONTRIBUTING.md](CONTRIBUTING.md)** — setup instructions, branch and PR workflow, and rules every contributor must follow.
-
-**[context/PROJECT_CONTEXT.md](context/PROJECT_CONTEXT.md)** — full system context, team structure, and how the codebase is organized.
-
-Read both before touching anything.
-
----
-
-## Environment Variables
-
-Copy `.env.example` and fill in your values:
-
-```bash
-cp .env.example .env          # backend
-cp frontend/.env.example frontend/.env.local   # frontend
+```
+backend/
+  app/
+    api/            FastAPI routers
+    core/
+      graph/        LangGraph pipeline: nodes, prompts/, judge rules, critic, routing
+      extraction/   transcription, fusion, vision OCR, on-screen text routing
+      retrieval/    PubMed, reference sources, find-the-study, library
+    db/             SQLAlchemy models and Alembic migrations
+    evaluation/     evaluation runner, metrics, eval registry
+    services/       result view, review queue, severity
+    worker/         Celery app and tasks
+    tests/          pytest suite (fixtures include real production runs)
+  config/           routing.yaml (per-step models), review policy, severity table, guardrails
+  scripts/          operational scripts and one-off evaluation replays
+frontend/           Next.js app
+docs/               design doc, architecture, operations guide, presentations
+context/            working context for contributors and build sessions
+evals/              evaluation reports and the eval registry
+research/           claim-level golden label set and dataset tooling
+automation/         build queue and decisions log
 ```
 
-### Backend (`.env`)
+---
 
-| Variable | Description |
-|---|---|
-| `DATABASE_URL` | Supabase pooler URL (`postgresql+asyncpg://...`) |
-| `DATABASE_URL_SYNC` | Supabase direct URL (`postgresql://...`) |
-| `REDIS_URL` | Upstash Redis URL (`rediss://...`) |
-| `SUPABASE_URL` | Supabase project URL |
-| `SUPABASE_SERVICE_KEY` | Supabase service role key |
-| `SUPABASE_JWT_SECRET` | Optional legacy HS256 secret; access tokens are verified via the project's JWKS (`SUPABASE_URL` + `/auth/v1/.well-known/jwks.json`) |
-| `SUPABASE_STORAGE_BUCKET` | Storage bucket name (default: `videos`) |
-| `INFERENCE_PROVIDER` | `openai` or `anthropic` |
-| `WHISPER_PROVIDER` | `openai` or `faster_whisper` |
-| `OPENAI_API_KEY` | OpenAI API key |
-| `ANTHROPIC_API_KEY` | Anthropic API key |
-| `REQUIRE_AUTH` | `true` in production, `false` for local dev |
-| `ALLOWED_ORIGINS` | Comma-separated CORS origins |
-| `RUN_MIGRATIONS` | `true` on API service, `false` on Worker |
-| `CELERY_CONCURRENCY` | Worker concurrency (recommend `4` on Railway) |
+## Evaluation
 
-### Frontend (`frontend/.env.local`)
+Every step has its own test set and metric, and every change is compared against a baseline. Results are recorded in `evals/registry/` and shown on the admin evaluations page.
 
-| Variable | Description |
-|---|---|
-| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anon/public key |
-| `NEXT_PUBLIC_API_URL` | Railway API service URL |
+- **Golden label set:** 181 short health videos with claim-level labels (claims, stance, verdict, evidence), split into *tune* (development) and *test* (held out, not yet used).
+- **Current development numbers (tune split, not product accuracy):** end-to-end video label accuracy 7/18 on the first full run (T66). Replaying the stored runs with the later rule fixes (T67) gives 11/18. The reports are in `evals/reports/`.
 
-Per-service env var templates are in `.railway/api.env.example` and `.railway/worker.env.example`.
+These numbers are early and the sample is small. They are reported as they are.
 
 ---
 
-## Deployment
-
-### Prerequisites
-
-- [Supabase](https://supabase.com) project with Auth enabled and a `videos` storage bucket
-- [Upstash](https://upstash.com) Redis database (TLS enabled)
-- [Railway](https://railway.app) account
-- [Vercel](https://vercel.com) account
-
-### 1 — Supabase
-
-1. Create a new project
-2. Enable **Email** auth provider (Auth → Providers)
-3. Create a storage bucket named `videos` (Storage → New bucket, public: off)
-4. Copy **Project URL**, **anon key**, **service role key**, and **JWT secret** from Settings → API
-
-### 2 — Upstash
-
-1. Create a Redis database, enable TLS
-2. Copy the `rediss://` connection string
-
-### 3 — Railway (API + Worker)
-
-```bash
-# Install Railway CLI
-npm install -g @railway/cli
-railway login
-
-# Deploy from repo root
-railway up
-```
-
-Railway reads `railway.toml` at the repo root and deploys two services:
-- **api** — `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-- **worker** — `celery -A app.worker.celery_app worker --concurrency=$CELERY_CONCURRENCY`
-
-Set env vars for each service using `.railway/api.env.example` and `.railway/worker.env.example` as reference. The Dockerfile is at `backend/Dockerfile` and installs only base deps (no PyTorch/EasyOCR) — set `WHISPER_PROVIDER=openai`.
-
-### 4 — Vercel (Frontend)
-
-```bash
-cd frontend
-vercel deploy --prod
-```
-
-Set the three `NEXT_PUBLIC_*` env vars in the Vercel dashboard. Point `NEXT_PUBLIC_API_URL` to the Railway API service URL and `ALLOWED_ORIGINS` on Railway to the Vercel deployment URL.
-
----
-
-## Local Development
+## Getting started
 
 ```bash
 # Backend
 cd backend
-python -m venv .venv && source .venv/bin/activate   # or .venv\Scripts\activate on Windows
-pip install -e ".[ml]"                               # includes faster-whisper + EasyOCR
-cp ../.env.example ../.env && edit ../.env
+python -m venv .venv && source .venv/bin/activate
+pip install -e .
+cp ../.env.example ../.env          # fill in your values
 uvicorn app.main:app --reload
 
-# Worker (separate terminal)
+# Worker (separate terminal, from backend/)
 celery -A app.worker.celery_app worker --concurrency=1 --loglevel=info
 
 # Frontend
 cd frontend
 npm install
-cp .env.example .env.local && edit .env.local
+cp .env.example .env.local          # fill in your values
 npm run dev
 ```
 
-Set `REQUIRE_AUTH=false` and `WHISPER_PROVIDER=faster_whisper` in `.env` for local development without Supabase Auth.
+**Tests:**
+- Backend: `cd backend && python -m pytest`. Some tests need Postgres or ffmpeg and are skipped locally without them; CI runs them all and fails on any skip.
+- Frontend: `cd frontend && npm test && npm run typecheck`.
+
+**Accounts, environment variables, deployment and migrations:** see [`docs/operations.md`](docs/operations.md).
 
 ---
 
-## Pipeline Labels
+## Contributing
 
-| Label | Meaning |
-|---|---|
-| `MISINFO` | Content contains health misinformation |
-| `NO_MISINFO` | Content is accurate or neutral |
-| `DEBUNKING` | Content actively debunks misinformation |
-| `CANNOT_RECOGNIZE` | Insufficient signal to classify |
+- [`CONTRIBUTING.md`](CONTRIBUTING.md): branch and PR workflow.
+- [`CLAUDE.md`](CLAUDE.md): repository rules for contributors and coding agents.
+- [`context/PROJECT_CONTEXT.md`](context/PROJECT_CONTEXT.md): system context and team structure.
+- [`docs/target-system-design.md`](docs/target-system-design.md): the design, step by step, with the reasoning behind each choice.
+
+**Branches:** `main` is production; both Railway services auto-deploy from it. `langgraph-build` is the integration branch for feature work, released to `main` through reviewed pull requests.
 
 ---
 
-*Built for WHO representatives and public health researchers as a rapid evidence-backed triage tool for viral health content.*
+*This repository replaces the original Streamlit research prototype ([who-infodemic-monitor](https://github.com/PranavCR01/who-infodemic-monitor)).*

@@ -11,7 +11,7 @@ Treat schema changes, config changes, and deploy changes with the caution that i
 
 ## 2. Read These First
 
-1. `HANDOFF.md`
+1. `docs/operations.md`
 2. `context/PROJECT_CONTEXT.md`
 3. This file, in full
 4. The key files listed in Section 3, in order
@@ -51,7 +51,7 @@ Treat schema changes, config changes, and deploy changes with the caution that i
 - **Inference provider** — Anthropic `claude-opus-4-6`
 - **Transcription** — OpenAI `whisper-1` (Railway deploys use the OpenAI Whisper API, not
   `faster_whisper`, because bundling PyTorch bloats the Docker image past Railway's build
-  timeout — see `HANDOFF.md` §10)
+  timeout — see `docs/operations.md` §10)
 
 ## 5. Known Gaps To Fix — Hardening Sprint First
 
