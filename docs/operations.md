@@ -1,69 +1,17 @@
-# WHO Infodemic Monitor — Team Handoff Guide
+# Operations Guide
 
-This document is the complete setup guide for an incoming team with no prior context.
-Read it top to bottom before touching any code or creating any accounts.
+Accounts, environment variables, deployment, migrations and common errors for the WHO
+Infodemic Monitor. For what the system does and how the pipeline works, read the
+[README](../README.md) and [`docs/target-system-design.md`](target-system-design.md) first.
 
----
+This guide began as the original team handoff (`HANDOFF.md`). Sections 3–10 are the
+operational steps and are kept current. Sections 11–13 are kept for history and are marked
+as such.
 
-## 1. Project Overview
-
-**WHO Infodemic Monitor** is a production-grade web application that detects health
-misinformation in short-form videos (TikTok, Instagram Reels, YouTube Shorts).
-
-**Audience:** WHO representatives and public health researchers who need a rapid,
-evidence-backed triage tool for viral health content.
-
-**Pipeline:**
-1. User uploads a video through the Next.js web interface
-2. The backend API stores the video in Supabase Storage and queues a Celery job
-3. The Celery worker downloads the video, transcribes it (Whisper), optionally runs
-   OCR (EasyOCR), and fuses the content
-4. An LLM (GPT-4o or Claude) classifies the content and returns a structured verdict
-5. PubMed is queried in parallel for supporting literature; citations are attached
-6. The result (label, confidence, explanation, evidence quotes, citations) is stored
-   in Supabase PostgreSQL and displayed in the dashboard
-
-**Classification labels:**
-
-| Label | Meaning |
-|---|---|
-| `MISINFO` | Contains health misinformation |
-| `NO_MISINFO` | Accurate or neutral content |
-| `DEBUNKING` | Actively corrects misinformation |
-| `CANNOT_RECOGNIZE` | Insufficient signal to classify |
-
----
-
-## 2. Architecture Overview
-
-```
-Browser
-  │ HTTPS
-  ▼
-Vercel (Frontend — Next.js 14)
-  │ REST + Bearer JWT
-  ▼
-Railway — API service (FastAPI + Uvicorn)
-  │                        │
-  │ Celery task queue       │ asyncpg / psycopg2
-  ▼                        ▼
-Railway — Worker service    Supabase
-  (Celery + Whisper)          PostgreSQL (jobs, videos, results)
-                              Storage    (raw video files)
-                              Auth       (JWT issuer)
-  │
-  ▼
-Upstash Redis (TLS)   ← Celery broker + result backend
-```
-
-**What each platform does:**
-
-| Platform | Role | Tier needed |
-|---|---|---|
-| **Supabase** | PostgreSQL DB, file storage, user auth (JWT) | Free tier is fine to start |
-| **Upstash** | Managed Redis — Celery job queue over TLS | Free tier (10,000 req/day) |
-| **Railway** | Hosts two Docker containers: API + Worker | Hobby plan ($5/mo) |
-| **Vercel** | Hosts the Next.js frontend | Free tier |
+**Production today:** the frontend is on Vercel; the API and Celery worker are two Railway
+services that auto-deploy from `main`; Postgres, storage and auth are on Supabase; Redis is
+the Celery broker. The analysis pipeline is the LangGraph claim-level graph
+(`backend/app/core/graph/`), not the single-call classifier the original handoff described.
 
 ---
 
@@ -401,7 +349,10 @@ logs for `Rejected bearer token: <reason>` / `JWKS fetch failed`, and redeploy. 
 
 ---
 
-## 11. Slice Files Reference
+## 11. Slice Files Reference (historical)
+
+> The `slices/` specs described here are no longer in the repository; this section is kept
+> only as a record of the original build.
 
 The `slices/` directory contains detailed implementation specs for every feature:
 
@@ -421,7 +372,10 @@ Read the relevant slice before modifying any feature.
 
 ---
 
-## 13. Future Work and Roadmap for Incoming Teams
+## 13. Future Work and Roadmap for Incoming Teams (historical)
+
+> Written for the original handoff. Several items have since been built or superseded;
+> current work is tracked in `automation/BUILD_QUEUE.md`.
 
 The items below are the highest-value improvements identified during development.
 They are ordered roughly by impact and implementation complexity. Each includes
@@ -647,7 +601,9 @@ summary. Option (a) is cleaner and requires no additional services.
 
 ---
 
-## 12. Repo Notes
+## 12. Repo Notes (partly historical)
+
+> The provider note below predates per-step model routing (`backend/config/routing.yaml`).
 
 - **Branch:** `main` is the production branch. All slices A–H are merged and complete.
 - **No Docker for local dev** — Railway runs the container; local dev uses a Python venv.
