@@ -325,6 +325,9 @@ export const REVIEW_REASONS: Record<string, string> = {
   // T67 (2): judge:thin_contradiction:<cid>. Off by default (failed the T67 replay gate).
   thin_contradiction:
     "The evidence against this claim is too thin to decide the label on its own: fewer than two papers on its topic and no review, trial or guideline.",
+  // T69: judge:contradiction_context_mismatch:<cid>. Off by default (routing.CONTEXT_MISMATCH_RULE).
+  contradiction_context_mismatch:
+    "The evidence against this claim comes only from reviews or modelling about a different population or exposure setting, so it did not decide the label on its own.",
   // judge:<flag>
   mixed_video: "The video both spreads and corrects false claims.",
   unclear_stance_contradicted: "A false claim is made, but the speaker's position on it is unclear.",
