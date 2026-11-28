@@ -59,6 +59,10 @@ Go to the [Project board](https://github.com/users/PranavCR01/projects/1) or the
 
 ### Step 2 — Start from a clean main
 
+> Pipeline work (anything under `backend/app/core/graph/` or the build queue) branches from
+> and merges into the integration branch `langgraph-build` instead; it reaches `main` through a
+> reviewed release PR. See [`CLAUDE.md`](CLAUDE.md).
+
 ```bash
 git checkout main
 git pull origin main
