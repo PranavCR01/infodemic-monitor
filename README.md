@@ -145,4 +145,4 @@ npm run dev
 
 ---
 
-*This repository replaces the original Streamlit research prototype ([who-infodemic-monitor](https://github.com/PranavCR01/who-infodemic-monitor)).*
+*This repository grew out of a Streamlit research prototype and an early backend scaffold ([who-infodemic-monitor](https://github.com/PranavCR01/who-infodemic-monitor), no longer developed).*
