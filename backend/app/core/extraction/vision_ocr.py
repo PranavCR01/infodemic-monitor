@@ -120,21 +120,44 @@ def _default_client():
 
 
 def _ask_model(frames: list[tuple[float, bytes]], client: Any) -> dict[int, str]:
+    """Frame index -> text for all frames, asked in batches of ``OCR_BATCH_SIZE``.
+    Frames keep their global label ("Frame 5:"), so replies map back directly."""
+    size = max(1, settings.OCR_BATCH_SIZE)
+    out: dict[int, str] = {}
+    for start in range(0, len(frames), size):
+        out.update(_ask_batch(list(range(start, min(start + size, len(frames)))), frames, client))
+    return out
+
+
+def _ask_batch(idx: list[int], frames: list[tuple[float, bytes]], client: Any) -> dict[int, str]:
     content: list[dict] = []
-    for i, (_, jpg) in enumerate(frames):
+    for i in idx:
         content.append({"type": "text", "text": f"Frame {i}:"})
         content.append({"type": "image", "source": {
-            "type": "base64", "media_type": "image/jpeg", "data": base64.b64encode(jpg).decode()}})
+            "type": "base64", "media_type": "image/jpeg", "data": base64.b64encode(frames[i][1]).decode()}})
     content.append({"type": "text", "text": "Report the on-screen text of every frame with the tool."})
     resp = client.messages.create(
-        model=settings.OCR_VISION_MODEL, max_tokens=2000, system=SYSTEM,
+        model=settings.OCR_VISION_MODEL, max_tokens=settings.OCR_MAX_TOKENS, system=SYSTEM,
         tools=[OCR_TOOL], tool_choice={"type": "tool", "name": OCR_TOOL["name"]},
         messages=[{"role": "user", "content": content}],
     )
+    stop = getattr(resp, "stop_reason", None)
+    usage = getattr(resp, "usage", None)
+    log.info("vision OCR batch frames %s: stop_reason=%s input_tokens=%s output_tokens=%s",
+             idx, stop, getattr(usage, "input_tokens", None), getattr(usage, "output_tokens", None))
+    if stop == "max_tokens":
+        if len(idx) > 1:  # reply overflowed: split the batch and ask again
+            half = len(idx) // 2
+            log.warning("vision OCR: reply hit max_tokens on frames %s; splitting the batch", idx)
+            return {**_ask_batch(idx[:half], frames, client), **_ask_batch(idx[half:], frames, client)}
+        log.warning("vision OCR: reply hit max_tokens on single frame %s; keeping what parsed", idx)
     for block in resp.content:
         if getattr(block, "type", None) == "tool_use":
-            return parse_frames(block.input)
-    log.warning("vision OCR: no tool call in the reply (stop_reason=%s)", getattr(resp, "stop_reason", None))
+            parsed = parse_frames(block.input)
+            if parsed and not set(parsed) <= set(idx) and all(0 <= k < len(idx) for k in parsed):
+                parsed = {idx[k]: v for k, v in parsed.items()}  # numbered from 0 within the batch
+            return {k: v for k, v in parsed.items() if k in idx}
+    log.warning("vision OCR: no tool call in the reply (stop_reason=%s)", stop)
     return {}
 
 
