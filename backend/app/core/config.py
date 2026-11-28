@@ -63,6 +63,12 @@ class Settings(BaseSettings):
     # tool input; small batches keep each reply well under the cap.
     OCR_BATCH_SIZE: int = 4
     OCR_MAX_TOKENS: int = 8000
+    # Frame sampling (T68): "scene" = one frame after each ffmpeg scene change
+    # (select='gt(scene,OCR_SCENE_THRESHOLD)'), gaps filled evenly, capped at
+    # OCR_MAX_FRAMES; falls back to even spacing when ffmpeg finds no cut. "even" = the
+    # pre-T68 even spacing. Only read when OCR_PROVIDER=vision.
+    OCR_SAMPLING: str = "scene"
+    OCR_SCENE_THRESHOLD: float = 0.3
     PUBMED_RESULTS_PER_CLAIM: int = 2
 
     # Evidence retrieval for the LangGraph pipeline (app/core/retrieval).

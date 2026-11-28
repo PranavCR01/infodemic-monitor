@@ -111,6 +111,16 @@ class OcrSegment(_Record):
     confidence: float
 
 
+class ScreenDocument(_Record):
+    """A document or chart shown on screen (T68): a one-line note written by the vision
+    model, never its text. Not claim-extraction input; offered to find_study as a
+    search hint. Untrusted video content (§15)."""
+
+    start: float
+    end: float
+    note: str
+
+
 class FusedSegment(_Record):
     """One fused timeline segment (§3)."""
 
@@ -336,6 +346,7 @@ CHECKPOINT_TYPES: tuple[type, ...] = (
     ArtifactRef,
     TranscriptSegment,
     OcrSegment,
+    ScreenDocument,
     FusedSegment,
     GraphClaim,
     StanceResult,
@@ -377,6 +388,9 @@ class PipelineState(TypedDict, total=False):
     artifacts: list[ArtifactRef]
     transcript_segments: list[TranscriptSegment]
     ocr_segments: list[OcrSegment]
+    # Documents and charts shown on screen (T68), as notes. Optional and additive:
+    # written only when vision OCR is on and saw one.
+    screen_documents: list[ScreenDocument]
     fused_segments: list[FusedSegment]
 
     # Claims and stance (§4–§5).

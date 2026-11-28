@@ -2463,6 +2463,61 @@ Full numbers are in `evals/reports/T67/report.md`.
   - Gate (e): no tune label changes, and the rule fires on no scored video, so the pass is vacuous.
 - **Why the cross-check is unchanged.** With both switches off it is byte-identical. Its stub evidence (`title = id`, `claim_text = claim_id`) would make every contradiction thin, so if change 2 is ever turned on, `judge_crosscheck` needs real evidence or the switch off.
 
+## 7ak. On-Screen Text Kinds and Routing (T68; design §2, §3, §15)
+
+Built by the automated build on 2026-11-28 (lead approved; no spend, no migrations). Only
+runs with `OCR_PROVIDER=vision`; with OCR off, fusion output and a full mocked graph run are
+byte-identical to `origin/langgraph-build` (sha256 fingerprint compared across both trees).
+Numbers: `evals/reports/T68/README.md`.
+
+- **Kinds in the tool schema.** Each frame reports `boxes: [{kind, text, note}]`, where kind is
+  `subtitle`, `document_or_chart`, `title_or_claim_card` or `interface`.
+  - A reply in the old shape (`{index, text}`) reads as one `title_or_claim_card`. So does an
+    unknown kind. Both keep their pre-T68 meaning.
+  - A document's `text` is always discarded by the parser, even when the model sends it.
+- **Routing is code** (`app/core/extraction/screen_text.py`), in `MultimodalFusion.fuse`:
+  - **Cards** go to extraction, joined per frame with " / " (the old shape).
+  - **Subtitles** are dropped when ≥60% of their words appear in speech within ±2 s. A
+    misread word still counts when it is a close match (difflib ≥0.8). Subtitles of one or two
+    words need every word.
+  - **Documents** go to `metadata["ocr_documents"]`, then to the `screen_documents` state field
+    (new, optional, owned by `extract_ocr`, written only when non-empty).
+  - **Interface** text is dropped.
+  - Without timed segments (the single-call path), the whole transcript is one window.
+- **Cards are never matched against speech.** A card repeating the speech still goes to
+  extraction, because the T43 extraction-ceiling work counts on screen captions.
+- **Hints.** `rerank_evidence` passes find_study the notes of documents near the claim.
+  - "Near" means within 5 s, overlapping documents first.
+  - If none is near, a claim citing a study gets every note. At most 3 notes, sanitized and
+    fenced as untrusted.
+  - No hint means the call is identical to before. Hints add no find_study trigger and no
+    spend.
+  - Hints are **not** recorded in `FindStudyTrail`: a new field would change every search-trail
+    JSON. The state's `screen_documents` shows what was offered.
+- **Claims from cards** cite `o*` pieces, so `result_view_service.modality` already gives
+  `screen`, and the claim's time is the card's span. No schema change.
+- **Sampling.** `OCR_SAMPLING=scene` (default; `even` = pre-T68), with
+  `OCR_SCENE_THRESHOLD=0.3`.
+  - One frame 0.5 s after each cut, plus an opening frame. Gaps longer than
+    max(4 s, duration/OCR_MAX_FRAMES) are filled evenly.
+  - When capped, cut frames are kept first. With no cut, or an ffmpeg failure, sampling is
+    even.
+- **Sanity check (f), mocked replies.** These are synthetic replies with kinds assigned by
+  hand, so the check tests the routing code, not a model.
+  - v36: 12/12 screen-only claims reach extraction. If the Pinterest infographic is labelled a
+    document, 9/12.
+  - v135: the 11 documents and 15 subtitles no longer reach extraction (screen characters to
+    extraction go from 4292 to 238).
+  - v135 is **not guaranteed** to gain no claims: the "Known carcinogen / bacon, alcohol and
+    sunlight" explainer card is a real card. This is left for the lead.
+- **(g) is proposed only.** `app/evaluation/vision_ocr_compare.py` estimates about $0.52
+  (upper bound $1.86) for 30 frames × 4 models. GPT-6.x prices are assumed.
+  - A live run is refused without `--live --approved-by --max-usd`, and needs prices in
+    routing.yaml.
+- **Test changes.** `test_eval_registry_t63.test_filters` now checks that T05 and T07 are
+  among the synthetic tasks rather than that they are all of them, because T68's records are
+  synthetic too.
+
 ## 8. Team
 
 | Person | Current issue | Notes |
@@ -2484,6 +2539,13 @@ replacement.
 
 _(Add a dated entry each week with what was done, what was found, and what's next.)_
 
+- **2026-11-28**: T68 (design §2, §3, §15) on-screen text kinds and routing for vision OCR, PR to
+  langgraph-build. Kinds in the OCR tool schema. Subtitles that repeat the speech are dropped.
+  Documents and charts become notes and find_study hints, never extraction input. Cards go to
+  extraction timed. Frames are sampled at scene changes. OCR off is byte-identical. Mocked
+  sanity check: v36 12/12 screen-only claims reach extraction; v135's documents and subtitles
+  no longer do, but one explainer card may still add a claim. (g) model comparison: harness and
+  estimate only (about $0.52, cap $2 proposed), awaiting the lead. Decisions in §7ak.
 - **2026-11-26**: T67 (design §8, §9, §11) critic-budget and thin-contradiction label rules, no
   spend, no migration, test split not read. Both rules built and **switched off** after the offline
   replay gate (no tune label worse).
