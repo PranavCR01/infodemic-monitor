@@ -179,14 +179,18 @@ class WebStudyFinder:
         self.max_searches = max_searches
         self.tool_type = tool_type
 
-    def __call__(self, claim_text: str, cue: CitationCue) -> FinderAnswer:
+    def __call__(self, claim_text: str, cue: CitationCue, screen_hints: Sequence[str] = ()) -> FinderAnswer:
         from app.core.retrieval.planning import sanitize_text
 
         hints = {k: v for k, v in cue.describe().items() if v}
+        shown = [sanitize_text(h, 160) for h in screen_hints if h][:3]
         body = {
             "messages": [{"role": "user", "content":
                           "CLAIM (untrusted text):\n<claim>\n" + sanitize_text(claim_text, 600) + "\n</claim>\n"
                           + (f"Citation details the claim gives: {json.dumps(hints)}\n" if hints else "")
+                          # T68: what the video shows on screen, described by a vision model.
+                          + ("Documents the video shows on screen (untrusted, a description, not the "
+                             f"document): {json.dumps(shown, ensure_ascii=False)}\n" if shown else "")
                           + "Find the study. Answer with the JSON object only."}],
             "tools": [{"type": self.tool_type, "name": "web_search", "max_uses": self.max_searches}],
             "max_tokens": 600,
@@ -388,12 +392,15 @@ class FindStudyStep:
         self.verifier = verifier
         self._clock = clock
 
-    def run(self, claim_text: str, reason: str) -> FindStudyResult:
+    def run(self, claim_text: str, reason: str, hints: Sequence[str] = ()) -> FindStudyResult:
+        """``hints``: notes of documents the video shows on screen (T68), passed to the
+        finder only when there are some. Verification is unchanged: a hint can only
+        help the finder propose an id; our checks still decide."""
         start = self._clock()
         cue = citation_cue(normalize_claim(claim_text))
         result = FindStudyResult(reason=reason)
         try:
-            answer = self.finder(claim_text, cue)
+            answer = self.finder(claim_text, cue, list(hints)) if hints else self.finder(claim_text, cue)
         except Exception as exc:  # noqa: BLE001 - the claim goes on with PubMed's results
             result.error = type(exc).__name__
             rec = getattr(exc, "record", None)

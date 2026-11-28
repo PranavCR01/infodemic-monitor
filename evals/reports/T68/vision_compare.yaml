@@ -1,0 +1,26 @@
+# T68 (g): frame-level vision-OCR model comparison. PROPOSED ONLY: nothing here has run.
+# A live run needs the lead's direct approval (--live --approved-by <name> --max-usd <cap>).
+#
+# Frames: 20-30 saved JPEG frames listed in frames.jsonl (one {"frame_id", "video_id",
+# "time", "path", "expected": [{"kind", "text"|"note"}]} per line). The frames themselves
+# are NOT committed (binaries; video content): a person extracts them locally with
+#   python -m app.evaluation.vision_ocr_compare extract --videos <dir> --out <frames dir>
+# and labels "expected" by hand (kinds and verbatim card/subtitle text).
+batch_size: 4            # frames per request, as production (OCR_BATCH_SIZE)
+expected_output_tokens_per_frame: 250
+frame_width: 720         # production scales frames to at most 720 px wide
+frame_height: 1280
+runs: 1
+candidates:
+  - {id: haiku-5-5,  provider: anthropic, model: claude-haiku-5-5}
+  - {id: sonnet-5-5, provider: anthropic, model: claude-sonnet-5-5}
+  # Model ids as the lead named them; confirm the exact API ids before a run.
+  - {id: gpt-6.1-terra, provider: openai, model: gpt-6.1-terra, reasoning: true}
+  - {id: gpt-6-luna,    provider: openai, model: gpt-6-luna,    reasoning: true}
+# Prices for models config/routing.yaml does not price yet. ASSUMED, for the estimate
+# only: the GPT-5.6 tier prices from routing.yaml (terra = "mini", luna = "nano").
+# A live run refuses any model priced only here; add real prices to routing.yaml first.
+assumed_pricing:
+  gpt-6.1-terra: {input: 2.00, output: 12.00, proxy_for: gpt-5.6-terra}
+  gpt-6-luna:    {input: 0.20, output: 1.20,  proxy_for: gpt-5.6-luna}
+reasoning_allowance_per_request: 1500   # reasoning tokens billed as output (routing.yaml T39 scale)

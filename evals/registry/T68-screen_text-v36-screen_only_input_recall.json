@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "run_group": "T68-screen-text-sanity",
+  "date": "2026-11-28",
+  "task": "T68",
+  "pipeline_step": "extract_ocr",
+  "split": "tune",
+  "synthetic": true,
+  "golden_set_ref": "research/claim-level/dataset/claims.csv (claim_source, start/end seconds) and transcripts/<id>.json (Whisper); tune videos v36, v135",
+  "models": [],
+  "ci95": null,
+  "cost_usd": 0.0,
+  "report_path": "evals/reports/T68/README.md",
+  "run_id": "T68-screen_text-v36-screen_only_input_recall",
+  "variant": "as_labelled",
+  "metric_name": "screen_only_input_recall",
+  "value": 1.0,
+  "n_items": 12,
+  "n_unit": "golden claim_source=screen claims (v36)",
+  "notes": "SYNTHETIC vision replies (mocked, hand-labelled). Sanity check on 2 tune videos, NOT an accuracy figure. Vision replies are mocked (backend/app/tests/fixtures/vision_ocr, synthetic, kinds assigned by hand by the T68 build), so this measures the routing code (frame planning, parser, collapse, subtitle match), not a model's labelling. models=[]: no model was called. No CI: 2 videos. Share of v36's 12 golden screen-only claims whose words (>=75% containment) appear in an extraction-bound OCR segment shown at the claim's time (+-2 s): 12/12 (pre-T68 reading of the same replies: 12/12). A ceiling for extraction; no extraction model ran."
+}

@@ -1,0 +1,408 @@
+{
+ "task": "T68",
+ "synthetic_replies": true,
+ "model_calls": 0,
+ "cost_usd": 0.0,
+ "claim_match": 0.75,
+ "time_pad_seconds": 2.0,
+ "max_frames": 16,
+ "videos": [
+  {
+   "video_id": "v36",
+   "variant": "as_labelled",
+   "split": "tune",
+   "golden_claims": 17,
+   "golden_screen_claims": 12,
+   "frames": 16,
+   "frame_times": [
+    0.5,
+    3.17,
+    5.83,
+    8.5,
+    13.83,
+    16.5,
+    22.5,
+    28.5,
+    31.5,
+    34.5,
+    39.83,
+    42.5,
+    44.5,
+    50.5,
+    53.17,
+    58.5
+   ],
+   "vision_requests": 4,
+   "routing": {
+    "title_or_claim_card": 7,
+    "subtitle_kept": 0,
+    "subtitle_dropped": 0,
+    "document_or_chart": 1
+   },
+   "after": {
+    "segments_to_extraction": 7,
+    "chars_to_extraction": 1439,
+    "screen_only_recall": {
+     "found": 12,
+     "of": 12,
+     "missed": []
+    },
+    "new_content_segments": [
+     {
+      "start": 28.5,
+      "end": 34.5,
+      "kind": "title_or_claim_card",
+      "text": "102 minerals / 10 Health Benefits of Burdock Root / 1. Rids Kidney & Gallbladder Stones / 2. Lowers Blood-Sugar levels / 3. Assists with PMS Symptoms / 4. Increases Perspiration / 5. Assists Indigesti"
+     },
+     {
+      "start": 34.5,
+      "end": 42.5,
+      "kind": "title_or_claim_card",
+      "text": "Irish Sea Moss / 92 of 102 minerals / 1. Boost Mens Sexual Wellness / 2. Cures Thyroid Issues / 3. Building Muscles Mass / 4. Prevents Laziness / 5. Reduces Diseases Risk"
+     },
+     {
+      "start": 44.5,
+      "end": 50.5,
+      "kind": "title_or_claim_card",
+      "text": "Bladderwrack / Makes up for missing 10 minerals"
+     },
+     {
+      "start": 50.5,
+      "end": 58.5,
+      "kind": "title_or_claim_card",
+      "text": "MORINGA / 7x Vitamin C in Oranges / 4x Calcium in Milk / 3x Potassium in Bananas / 3x Vitamin E in Almonds / 3x Iron in Spinach / Promotes Liver Protection / Beautiful Skin / Treats Urinary Disorders "
+     },
+     {
+      "start": 58.5,
+      "end": 59.0,
+      "kind": "title_or_claim_card",
+      "text": "Zinc: Brain Function and Alertness / Lithium: Stabilization of Serotonin / Potassium: Oxygenize the brain / Phosphorus, Calcium: Relieves Anxiety and Insomnia / Iodine: Thyroid Function / Copper: Impr"
+     }
+    ],
+    "documents": [
+     {
+      "start": 8.5,
+      "end": 16.5,
+      "note": "shows a chart listing 102 numbered elements titled 'the 102 minerals that make up the human body'"
+     }
+    ],
+    "subtitles_dropped": 0
+   },
+   "before": {
+    "segments_to_extraction": 9,
+    "chars_to_extraction": 2439,
+    "screen_only_recall": {
+     "found": 12,
+     "of": 12,
+     "missed": []
+    },
+    "new_content_segments": 7
+   },
+   "hints_for_golden_claims": {
+    "c1": [
+     "shows a chart listing 102 numbered elements titled 'the 102 minerals that make up the human body'"
+    ],
+    "c2": [
+     "shows a chart listing 102 numbered elements titled 'the 102 minerals that make up the human body'"
+    ],
+    "c3": [],
+    "c4": [],
+    "c5": [],
+    "c6": [],
+    "c7": [],
+    "c8": [],
+    "c9": [],
+    "c10": [],
+    "c11": [],
+    "c12": [],
+    "c13": [],
+    "c14": [],
+    "c15": [],
+    "c16": [],
+    "c17": []
+   }
+  },
+  {
+   "video_id": "v36",
+   "variant": "pinterest_as_document",
+   "split": "tune",
+   "golden_claims": 17,
+   "golden_screen_claims": 12,
+   "frames": 16,
+   "frame_times": [
+    0.5,
+    3.17,
+    5.83,
+    8.5,
+    13.83,
+    16.5,
+    22.5,
+    28.5,
+    31.5,
+    34.5,
+    39.83,
+    42.5,
+    44.5,
+    50.5,
+    53.17,
+    58.5
+   ],
+   "vision_requests": 4,
+   "routing": {
+    "title_or_claim_card": 6,
+    "subtitle_kept": 0,
+    "subtitle_dropped": 0,
+    "document_or_chart": 2
+   },
+   "after": {
+    "segments_to_extraction": 6,
+    "chars_to_extraction": 1006,
+    "screen_only_recall": {
+     "found": 9,
+     "of": 12,
+     "missed": [
+      "c15",
+      "c16",
+      "c17"
+     ]
+    },
+    "new_content_segments": [
+     {
+      "start": 28.5,
+      "end": 34.5,
+      "kind": "title_or_claim_card",
+      "text": "102 minerals / 10 Health Benefits of Burdock Root / 1. Rids Kidney & Gallbladder Stones / 2. Lowers Blood-Sugar levels / 3. Assists with PMS Symptoms / 4. Increases Perspiration / 5. Assists Indigesti"
+     },
+     {
+      "start": 34.5,
+      "end": 42.5,
+      "kind": "title_or_claim_card",
+      "text": "Irish Sea Moss / 92 of 102 minerals / 1. Boost Mens Sexual Wellness / 2. Cures Thyroid Issues / 3. Building Muscles Mass / 4. Prevents Laziness / 5. Reduces Diseases Risk"
+     },
+     {
+      "start": 44.5,
+      "end": 50.5,
+      "kind": "title_or_claim_card",
+      "text": "Bladderwrack / Makes up for missing 10 minerals"
+     },
+     {
+      "start": 58.5,
+      "end": 59.0,
+      "kind": "title_or_claim_card",
+      "text": "Zinc: Brain Function and Alertness / Lithium: Stabilization of Serotonin / Potassium: Oxygenize the brain / Phosphorus, Calcium: Relieves Anxiety and Insomnia / Iodine: Thyroid Function / Copper: Impr"
+     }
+    ],
+    "documents": [
+     {
+      "start": 8.5,
+      "end": 16.5,
+      "note": "shows a chart listing 102 numbered elements titled 'the 102 minerals that make up the human body'"
+     },
+     {
+      "start": 50.5,
+      "end": 58.5,
+      "note": "shows a Pinterest infographic on moringa nutrients and health benefits"
+     }
+    ],
+    "subtitles_dropped": 0
+   },
+   "before": {
+    "segments_to_extraction": 9,
+    "chars_to_extraction": 2459,
+    "screen_only_recall": {
+     "found": 10,
+     "of": 12,
+     "missed": [
+      "c16",
+      "c17"
+     ]
+    },
+    "new_content_segments": 7
+   },
+   "hints_for_golden_claims": {
+    "c1": [
+     "shows a chart listing 102 numbered elements titled 'the 102 minerals that make up the human body'"
+    ],
+    "c2": [
+     "shows a chart listing 102 numbered elements titled 'the 102 minerals that make up the human body'"
+    ],
+    "c3": [],
+    "c4": [],
+    "c5": [
+     "shows a Pinterest infographic on moringa nutrients and health benefits"
+    ],
+    "c6": [],
+    "c7": [],
+    "c8": [],
+    "c9": [],
+    "c10": [],
+    "c11": [],
+    "c12": [],
+    "c13": [],
+    "c14": [],
+    "c15": [
+     "shows a Pinterest infographic on moringa nutrients and health benefits"
+    ],
+    "c16": [
+     "shows a Pinterest infographic on moringa nutrients and health benefits"
+    ],
+    "c17": [
+     "shows a Pinterest infographic on moringa nutrients and health benefits"
+    ]
+   }
+  },
+  {
+   "video_id": "v135",
+   "variant": "as_labelled",
+   "split": "tune",
+   "golden_claims": 6,
+   "golden_screen_claims": 0,
+   "frames": 16,
+   "frame_times": [
+    0.5,
+    4.5,
+    8.5,
+    12.5,
+    18.5,
+    26.5,
+    28.5,
+    34.5,
+    36.5,
+    44.5,
+    50.5,
+    54.5,
+    74.5,
+    80.5,
+    84.5,
+    88.5
+   ],
+   "vision_requests": 4,
+   "routing": {
+    "title_or_claim_card": 3,
+    "subtitle_kept": 0,
+    "subtitle_dropped": 15,
+    "document_or_chart": 11
+   },
+   "after": {
+    "segments_to_extraction": 3,
+    "chars_to_extraction": 238,
+    "screen_only_recall": {
+     "found": 0,
+     "of": 0,
+     "missed": []
+    },
+    "new_content_segments": [
+     {
+      "start": 28.5,
+      "end": 34.5,
+      "kind": "title_or_claim_card",
+      "text": "1% = 1000 ppm"
+     },
+     {
+      "start": 36.5,
+      "end": 44.5,
+      "kind": "title_or_claim_card",
+      "text": "\"Known carcinogen\": evidence of link is certain, whether cancer develops still depends on exposure e.g. dose / Bacon, alcohol and sunlight are known carcinogens / \"No safe level\": small exposures stil"
+     }
+    ],
+    "documents": [
+     {
+      "start": 0.5,
+      "end": 8.5,
+      "note": "shows CNN article (March 2024): cancer-causing chemical can form in certain acne products, independent lab claims"
+     },
+     {
+      "start": 8.5,
+      "end": 12.5,
+      "note": "shows Valisure report page, Figure 4, benzene levels in benzoyl peroxide acne products"
+     },
+     {
+      "start": 12.5,
+      "end": 18.5,
+      "note": "shows Valisure report Figures 4D-4F, benzene ppm in benzoyl peroxide products over time"
+     },
+     {
+      "start": 18.5,
+      "end": 26.5,
+      "note": "shows chart line marking a 2 ppm benzene limit"
+     },
+     {
+      "start": 26.5,
+      "end": 28.5,
+      "note": "shows WHO text on health effects of human exposure to benzene"
+     },
+     {
+      "start": 44.5,
+      "end": 50.5,
+      "note": "shows American Cancer Society web page: benzene exposure linked with leukemia and blood cancers"
+     },
+     {
+      "start": 50.5,
+      "end": 54.5,
+      "note": "shows CNN article (March 2024) on benzene in acne products again"
+     },
+     {
+      "start": 54.5,
+      "end": 74.5,
+      "note": "shows table: worst-case benzene from one benzoyl peroxide application vs cooking and other sources (Kashtan 2023)"
+     },
+     {
+      "start": 80.5,
+      "end": 84.5,
+      "note": "shows YouTube video page 'Is Benzene in Sunscreen Giving You Cancer?' by Lab Muffin Beauty Science"
+     },
+     {
+      "start": 84.5,
+      "end": 88.5,
+      "note": "shows Washington Post article on a lab finding a carcinogen in dozens of sunscreens"
+     },
+     {
+      "start": 88.5,
+      "end": 90.91,
+      "note": "shows JAAD article (vol 87, Aug 2022): sunscreen use not associated with increased blood benzene in US adults (NHANES)"
+     }
+    ],
+    "subtitles_dropped": 15
+   },
+   "before": {
+    "segments_to_extraction": 14,
+    "chars_to_extraction": 4292,
+    "screen_only_recall": {
+     "found": 0,
+     "of": 0,
+     "missed": []
+    },
+    "new_content_segments": 10
+   },
+   "hints_for_golden_claims": {
+    "c1": [
+     "shows Valisure report page, Figure 4, benzene levels in benzoyl peroxide acne products",
+     "shows Valisure report Figures 4D-4F, benzene ppm in benzoyl peroxide products over time",
+     "shows chart line marking a 2 ppm benzene limit"
+    ],
+    "c2": [
+     "shows Valisure report Figures 4D-4F, benzene ppm in benzoyl peroxide products over time",
+     "shows chart line marking a 2 ppm benzene limit",
+     "shows WHO text on health effects of human exposure to benzene"
+    ],
+    "c3": [
+     "shows American Cancer Society web page: benzene exposure linked with leukemia and blood cancers"
+    ],
+    "c4": [
+     "shows CNN article (March 2024) on benzene in acne products again",
+     "shows table: worst-case benzene from one benzoyl peroxide application vs cooking and other sources (Kashtan 2023)",
+     "shows American Cancer Society web page: benzene exposure linked with leukemia and blood cancers"
+    ],
+    "c5": [
+     "shows table: worst-case benzene from one benzoyl peroxide application vs cooking and other sources (Kashtan 2023)",
+     "shows YouTube video page 'Is Benzene in Sunscreen Giving You Cancer?' by Lab Muffin Beauty Science"
+    ],
+    "c6": [
+     "shows YouTube video page 'Is Benzene in Sunscreen Giving You Cancer?' by Lab Muffin Beauty Science",
+     "shows Washington Post article on a lab finding a carcinogen in dozens of sunscreens",
+     "shows JAAD article (vol 87, Aug 2022): sunscreen use not associated with increased blood benzene in US adults (NHANES)"
+    ]
+   }
+  }
+ ]
+}

@@ -129,6 +129,15 @@ Fusion is plain code. It lines speech and on-screen text up by time so later ste
 - **Near-identical captions** (an OCR misread on one frame, e.g. "FLU" vs "FIU") are merged if they're very similar and adjacent in time; otherwise kept separate.
 - **Usernames, watermarks and "follow for more"** are kept. Fusion doesn't judge content; claim extraction ignores them.
 
+**On-screen text kinds (T68, vision OCR only).** Production reads on-screen text with a small vision model (`vision_ocr`, off unless `OCR_PROVIDER=vision`), which reports each text box with a kind, and code (`screen_text`) routes it before fusion:
+
+- **Title or claim card** (text made for the video: a title, a claim, a list of benefits, an infographic). Copied verbatim and fused as a caption; a claim from it cites the OCR piece, so it is a screen claim with the card's time on screen.
+- **Subtitle.** Dropped when its words are spoken in the same window (±2 s, ≥60% of its words, misreads tolerated); kept like a card otherwise.
+- **Document or chart** (a report, paper, article, web page, table or chart shown as a source). Not transcribed and never sent to extraction: the model writes a one-line note ("shows Valisure report, Figure 4, benzene in BPO products"), kept in the fusion metadata and the `screen_documents` state field, and offered to find_study as a search hint for claims shown near it.
+- **Interface** (platform UI, @handles, watermarks). Dropped.
+
+Frames are sampled after each scene change (`ffmpeg select='gt(scene,0.3)'`), with long takes filled by even spacing, capped at `OCR_MAX_FRAMES`; with no detected cut, sampling is even. This departs from "fusion keeps usernames and watermarks" below: with vision OCR the model, not fusion, drops interface text.
+
 **Probe: who decides that a caption and a sentence are the same claim?** Not fusion. "HOT WATER = NO FLU" and "Drinking hot water cures the flu" share almost no words, so no string comparison can match them. Fusion only puts them side by side; claim extraction (an LLM) decides they're one claim, and validation checks that the pieces it merged overlap in time.
 
 ## 4. Claim extraction (LLM)

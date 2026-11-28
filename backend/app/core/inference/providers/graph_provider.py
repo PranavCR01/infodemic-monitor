@@ -47,7 +47,7 @@ from app.core.graph.nodes import NodeFn
 from app.core.graph.retrieval_nodes import make_retrieval_nodes
 from app.core.graph.routing import DEFAULT_BUDGETS, Budgets
 from app.core.graph.stance import make_analyze_stance
-from app.core.graph.state import OcrSegment, PipelineState, TranscriptSegment, initial_state
+from app.core.graph.state import OcrSegment, PipelineState, ScreenDocument, TranscriptSegment, initial_state
 from app.core.graph.verifier import make_verify_claims
 from app.core.inference.classifier import InferenceProvider
 from app.core.pipeline_options import PipelineOptions, load_pipeline_options, wrap_extract_node
@@ -145,14 +145,30 @@ def segments_from_fusion(fusion: FusionResult) -> tuple[list[TranscriptSegment],
     return transcript, ocr, estimated
 
 
-def fusion_nodes(transcript: list[TranscriptSegment], ocr: list[OcrSegment]) -> dict[str, NodeFn]:
+def screen_documents_from_fusion(fusion: FusionResult) -> list[ScreenDocument]:
+    """Documents and charts the vision OCR saw (T68, ``metadata["ocr_documents"]``),
+    as notes; empty when OCR is off or saw none."""
+    out: list[ScreenDocument] = []
+    for d in (fusion.metadata or {}).get("ocr_documents") or []:
+        note = " ".join(str(d.get("note", "")).split())
+        if note:
+            start = max(0.0, float(d.get("start", 0.0)))
+            out.append(ScreenDocument(start=start, end=max(start, float(d.get("end", start))), note=note[:200]))
+    return out
+
+
+def fusion_nodes(transcript: list[TranscriptSegment], ocr: list[OcrSegment],
+                 documents: Optional[list[ScreenDocument]] = None) -> dict[str, NodeFn]:
     """``transcribe_audio`` / ``extract_ocr`` that hand the graph the pieces the worker
     already extracted (the single-call path's ``MultimodalFusion``), so the media is
-    transcribed once whichever path runs."""
+    transcribed once whichever path runs. ``screen_documents`` is written only when
+    there are some, so a run without them has the same state as before T68."""
     def transcribe_audio(state: PipelineState) -> dict:
         return {"transcript_segments": list(transcript)}
 
     def extract_ocr(state: PipelineState) -> dict:
+        if documents:
+            return {"ocr_segments": list(ocr), "screen_documents": list(documents)}
         return {"ocr_segments": list(ocr)}
 
     return {r.TRANSCRIBE_AUDIO: transcribe_audio, r.EXTRACT_OCR: extract_ocr}
@@ -272,7 +288,8 @@ class GraphProvider:
         resumed = False
         try:
             graph = compile_graph(
-                {**self._nodes, **fusion_nodes(transcript, ocr), **self._overrides},
+                {**self._nodes, **fusion_nodes(transcript, ocr, screen_documents_from_fusion(fusion)),
+                 **self._overrides},
                 checkpointer=self.checkpointer, budgets=self.budgets,
             )
             config = run_config(job_id, self.budgets)
